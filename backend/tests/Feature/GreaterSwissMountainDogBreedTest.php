@@ -48,7 +48,7 @@ beforeEach(function () {
 });
 
 /** A value at a dotted path of the dog data.json. */
-function gsData(string $path): mixed
+function gsmdData(string $path): mixed
 {
     static $data = null;
     $data ??= json_decode((string) file_get_contents(base_path('../docs/research/dog-data/data.json')), true, flags: JSON_THROW_ON_ERROR);
@@ -63,7 +63,7 @@ function gsData(string $path): mixed
 }
 
 /** @return array<string, mixed> the Greater Swiss Mountain Dog seeder row of (stage, from, key) */
-function gsRow(string $stage, int $from, StageParamKey $key): array
+function gsmdRow(string $stage, int $from, StageParamKey $key): array
 {
     $row = collect(BreedStageParamsSeeder::rows())->first(fn (array $r) => $r['breed_slug'] === 'greater-swiss-mountain-dog'
         && $r['stage'] === $stage && $r['age_from_months'] === $from && $r['key'] === $key->value);
@@ -72,7 +72,7 @@ function gsRow(string $stage, int $from, StageParamKey $key): array
     return $row;
 }
 
-function gsPet(int $arrivalMonths, array $attributes = []): Pet
+function gsmdPet(int $arrivalMonths, array $attributes = []): Pet
 {
     $child = User::factory()->child()->create();
 
@@ -84,7 +84,7 @@ function gsPet(int $arrivalMonths, array $attributes = []): Pet
 }
 
 /** @param array<string, mixed> $body */
-function gsPin(User $parent, array $body): TestResponse
+function gsmdPin(User $parent, array $body): TestResponse
 {
     $child = app(ChildProfileService::class)->createChild($parent, 'Kid'.random_int(100, 999), null);
     app('auth')->forgetGuards();
@@ -93,7 +93,7 @@ function gsPin(User $parent, array $body): TestResponse
     return postJson('/api/parent/generate-pin', array_merge(['child_id' => $child->id], $body));
 }
 
-function gsLogin(string $pin): TestResponse
+function gsmdLogin(string $pin): TestResponse
 {
     app('auth')->forgetGuards();
     test()->withHeaders(['Authorization' => '']);
@@ -116,7 +116,7 @@ describe('breed, config and database', function () {
             ->toBe([Species::Dog, true, 800, 'breeds.greater_swiss_mountain_dog'])
             ->and($config->search_keywords)->toBe(['greater swiss mountain dog', 'great swiss mountain dog', 'swissy', 'grosser schweizer sennenhund', 'veliki švicarski planšarski pes', 'veliki svicarski plansarski pes', 'švicarski planšar', 'svicarski plansar'])
             // Legacy fallback = the adult step goal (60 min × 100 steps).
-            ->and($config->daily_steps_required)->toBe((int) gsData('proposed_game_parameters.greater_swiss_mountain_dog.step_goal_adult.value'))
+            ->and($config->daily_steps_required)->toBe((int) gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.step_goal_adult.value'))
             ->and($config->daily_steps_required)->toBe(6000);
 
         // No per-breed hunger / thirst / water data → the Border Collie's paid-breed rhythm.
@@ -124,13 +124,13 @@ describe('breed, config and database', function () {
         foreach (['hunger_decay_rate', 'thirst_decay_rate', 'poops_per_day', 'water_times_per_day', 'water_min_gap_minutes', 'feed_windows'] as $field) {
             expect($config->{$field})->toBe($collie->{$field}, $field);
         }
-        $care = gsData('proposed_game_parameters.greater_swiss_mountain_dog.care_rates.value');
+        $care = gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.care_rates.value');
         expect([$config->hunger_decay_rate, $config->thirst_decay_rate, $config->poops_per_day, $config->water_times_per_day, $config->water_min_gap_minutes])
             ->toBe([(float) $care['hunger_decay_per_hour'], (float) $care['thirst_decay_per_hour'], $care['poops_per_day'], $care['water_per_day'], $care['water_min_gap_minutes']]);
     });
 
     it('accepts a Greater Swiss Mountain Dog pet only as a dog (breed / species CHECKs) and the migration is reversible', function () {
-        $pet = gsPet(36);
+        $pet = gsmdPet(36);
         expect($pet->species)->toBe(Species::Dog)
             ->and(DB::table('pets')->where('id', $pet->id)->value('breed_type'))->toBe('greater_swiss_mountain_dog');
 
@@ -187,34 +187,34 @@ describe('life-stage data against data.json', function () {
         $pgp = 'proposed_game_parameters.greater_swiss_mountain_dog';
 
         foreach (['young', 'adult', 'senior'] as $stage) {
-            expect(gsRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData("{$pgp}.stage_boundaries_months.value.{$stage}"))
-                ->and(gsRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.{$stage}"));
+            expect(gsmdRow($stage, 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsmdData("{$pgp}.stage_boundaries_months.value.{$stage}"))
+                ->and(gsmdRow($stage, 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsmdData("{$pgp}.arrival_age_months.value.{$stage}"));
         }
-        expect(gsRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsData("{$pgp}.arrival_age_months.value.puppy"))
+        expect(gsmdRow('puppy', 0, StageParamKey::ArrivalAgeMonths)['value'])->toBe(gsmdData("{$pgp}.arrival_age_months.value.puppy"))
             // Senior = 0.75 × 10 y (RKC lower bound "Over 10 years", S654) = 90 — the runbook's third lifespan source, verified.
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData('greater_swiss_mountain_dog.lifespan.senior_from.months'))
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsData("{$pgp}.senior_boundary_months.value"))
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gsRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
-            ->and(gsData('greater_swiss_mountain_dog.lifespan.senior_from.derived_from'))->toBe(['S11', 'S654'])
-            ->and(gsData('greater_swiss_mountain_dog.lifespan.mcmillan_2024.value'))->toBeNull()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S10,S654')
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_GREATER_SWISS_MOUNTAIN_DOG)
-            ->and(gsRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsmdData('greater_swiss_mountain_dog.lifespan.senior_from.months'))
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(gsmdData("{$pgp}.senior_boundary_months.value"))
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe((int) round(0.75 * gsmdRow('all', 0, StageParamKey::LifespanYears)['value'] * 12))
+            ->and(gsmdData('greater_swiss_mountain_dog.lifespan.senior_from.derived_from'))->toBe(['S11', 'S654'])
+            ->and(gsmdData('greater_swiss_mountain_dog.lifespan.mcmillan_2024.value'))->toBeNull()
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['source_id'])->toBe('S11,S10,S654')
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['verified'])->toBeTrue()
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R10_GREATER_SWISS_MOUNTAIN_DOG)
+            ->and(gsmdRow('senior', 0, StageParamKey::StartsAtMonths)['value'])->toBe(90);
 
-        expect(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_adult.value"))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gsData('greater_swiss_mountain_dog.exercise.adult.quote'))
-            ->and(gsRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S654')
-            ->and(gsRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+        expect(gsmdRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsmdData("{$pgp}.exercise_minutes_adult.value"))
+            ->and(gsmdRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
+            ->and(gsmdRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['quote'])->toBe(gsmdData('greater_swiss_mountain_dog.exercise.adult.quote'))
+            ->and(gsmdRow('adult', 0, StageParamKey::ExerciseMinutesPerDay)['source_id'])->toBe('S654')
+            ->and(gsmdRow('young', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(60)
             // 75 % of 60 = 45.
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsData("{$pgp}.exercise_minutes_senior.value"))
-            ->and(gsRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
+            ->and(gsmdRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(gsmdData("{$pgp}.exercise_minutes_senior.value"))
+            ->and(gsmdRow('senior', 0, StageParamKey::ExerciseMinutesPerDay)['value'])->toBe(45)
             // Puppy rule 10 min × age, capped at the adult minutes.
-            ->and(gsRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
-            ->and(gsData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gsData("{$pgp}.learning_multiplier.value"))
-            ->and(gsRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
+            ->and(gsmdRow('puppy', 0, StageParamKey::ExerciseMinutesPerAgeMonth)['value'])->toBe(10)
+            ->and(gsmdData("{$pgp}.walk_minutes_puppy_cap.value"))->toBe(60)
+            ->and(gsmdRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(gsmdData("{$pgp}.learning_multiplier.value"))
+            ->and(gsmdRow('all', 0, StageParamKey::TrainingLearningMultiplier)['value'])->toBe(1.0);
 
         // Every decision row of this breed cites the data.json entry that records it.
         $decided = 0;
@@ -224,55 +224,55 @@ describe('life-stage data against data.json', function () {
                 expect($row['breed_slug'])->toBe('greater-swiss-mountain-dog')
                     ->and($row['ref'])->toStartWith('proposed_game_parameters.greater_swiss_mountain_dog.')
                     ->and($row['verified'])->toBeTrue()
-                    ->and((string) gsData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
+                    ->and((string) gsmdData($row['ref'])['decision'])->toStartWith('potrdil David 2026-10-10 (pravilo runbooka)');
             }
         }
         expect($decided)->toBeGreaterThan(0);
 
         // No "proposal, not built" left in the research; every sourced need with a frequency is built (brushing M5-R13,
         // socialisation M5-R17, meal gap M5-R16, teeth M5-R15, ears M5-R20, nails M5-R19); no bath / groomer task.
-        expect(json_encode([gsData('greater_swiss_mountain_dog'), gsData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')->not->toContain('čaka Davida')
-            ->and(gsData("{$pgp}.grooming.value"))->toBe(1)
-            ->and(gsData("{$pgp}.grooming.decision"))->toContain('M5-R13')
-            ->and(gsData("{$pgp}.tooth_brushing.decision"))->toContain('M5-R15')
-            ->and(gsData("{$pgp}.ear_care.decision"))->toContain('M5-R20')
-            ->and(gsData("{$pgp}.nail_trimming.decision"))->toContain('M5-R19')
-            ->and(gsData("{$pgp}.socialisation.decision"))->toContain('M5-R17')
-            ->and(gsData("{$pgp}.meal_exercise_gap.decision"))->toContain('M5-R16')
-            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['greater_swiss_mountain_dog'])->toBe(['S656', gsData('greater_swiss_mountain_dog.exercise.after_meals.quote')])
-            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['greater_swiss_mountain_dog'][1])->toBe(gsData("{$pgp}.meal_exercise_gap.quote"))
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['greater_swiss_mountain_dog'])->toBe(['S656', gsData('greater_swiss_mountain_dog.behaviour.socialisation.quote')])
-            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['greater_swiss_mountain_dog'][1])->toBe(gsData("{$pgp}.socialisation.quote"));
+        expect(json_encode([gsmdData('greater_swiss_mountain_dog'), gsmdData($pgp)], JSON_UNESCAPED_UNICODE))->not->toContain('awaiting David')->not->toContain('PROPOSAL')->not->toContain('not built"')->not->toContain('čaka Davida')
+            ->and(gsmdData("{$pgp}.grooming.value"))->toBe(1)
+            ->and(gsmdData("{$pgp}.grooming.decision"))->toContain('M5-R13')
+            ->and(gsmdData("{$pgp}.tooth_brushing.decision"))->toContain('M5-R15')
+            ->and(gsmdData("{$pgp}.ear_care.decision"))->toContain('M5-R20')
+            ->and(gsmdData("{$pgp}.nail_trimming.decision"))->toContain('M5-R19')
+            ->and(gsmdData("{$pgp}.socialisation.decision"))->toContain('M5-R17')
+            ->and(gsmdData("{$pgp}.meal_exercise_gap.decision"))->toContain('M5-R16')
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['greater_swiss_mountain_dog'])->toBe(['S656', gsmdData('greater_swiss_mountain_dog.exercise.after_meals.quote')])
+            ->and(BreedStageParamsSeeder::MEAL_EXERCISE_GAP['greater_swiss_mountain_dog'][1])->toBe(gsmdData("{$pgp}.meal_exercise_gap.quote"))
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['greater_swiss_mountain_dog'])->toBe(['S656', gsmdData('greater_swiss_mountain_dog.behaviour.socialisation.quote')])
+            ->and(BreedStageParamsSeeder::DOG_SOCIALISATION['greater_swiss_mountain_dog'][1])->toBe(gsmdData("{$pgp}.socialisation.quote"));
     });
 
     it('takes the breed-level numbers from the sourced greater_swiss_mountain_dog entries', function () {
         // WebMD (S658) males 115–140 lb, females 85–110 lb — no standard gives a weight.
-        expect(gsRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([39, 64])
-            ->and(gsData('greater_swiss_mountain_dog.adult_weight.webmd.value'))->toEqual(['male' => [52, 64], 'female' => [39, 50]])
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gsData('greater_swiss_mountain_dog.adult_weight.webmd.source_id'))
-            ->and(gsRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gsData('greater_swiss_mountain_dog.adult_weight.webmd.quote'))
-            ->and(gsRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([18, 24])
-            ->and(gsData('greater_swiss_mountain_dog.growth.adult_weight_reached.value'))->toStartWith('18–24 months')
+        expect(gsmdRow('all', 0, StageParamKey::AdultWeightKg)['value'])->toEqual([39, 64])
+            ->and(gsmdData('greater_swiss_mountain_dog.adult_weight.webmd.value'))->toEqual(['male' => [52, 64], 'female' => [39, 50]])
+            ->and(gsmdRow('all', 0, StageParamKey::AdultWeightKg)['source_id'])->toBe(gsmdData('greater_swiss_mountain_dog.adult_weight.webmd.source_id'))
+            ->and(gsmdRow('all', 0, StageParamKey::AdultWeightKg)['quote'])->toBe(gsmdData('greater_swiss_mountain_dog.adult_weight.webmd.quote'))
+            ->and(gsmdRow('all', 0, StageParamKey::GrowthEndMonths)['value'])->toBe([18, 24])
+            ->and(gsmdData('greater_swiss_mountain_dog.growth.adult_weight_reached.value'))->toStartWith('18–24 months')
             // Not in Coren's ranking (S35) → unranked → learning 1.0.
-            ->and(gsRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
-            ->and(gsData('greater_swiss_mountain_dog.trainability.coren_rank.value'))->toBeNull()
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('greater_swiss_mountain_dog.lifespan.rkc')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S654')
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
-            ->and(gsRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gsData('greater_swiss_mountain_dog.lifespan.rkc.quote'));
+            ->and(gsmdRow('all', 0, StageParamKey::CorenRank)['value'])->toBeNull()
+            ->and(gsmdData('greater_swiss_mountain_dog.trainability.coren_rank.value'))->toBeNull()
+            ->and(gsmdRow('all', 0, StageParamKey::LifespanYears)['ref'])->toBe('greater_swiss_mountain_dog.lifespan.rkc')
+            ->and(gsmdRow('all', 0, StageParamKey::LifespanYears)['source_id'])->toBe('S654')
+            ->and(gsmdRow('all', 0, StageParamKey::LifespanYears)['value'])->toBe(10.0)
+            ->and(gsmdRow('all', 0, StageParamKey::LifespanYears)['quote'])->toBe(gsmdData('greater_swiss_mountain_dog.lifespan.rkc.quote'));
 
         // Brushing once a week (RKC "Once a week" → 1) — the rule, verified.
-        $grooming = gsRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
+        $grooming = gsmdRow('all', 0, StageParamKey::GroomingSessionsPerWeek);
         expect($grooming['value'])->toBe(1)
             ->and($grooming['source_id'])->toBe('S654')
-            ->and($grooming['quote'])->toBe(gsData('greater_swiss_mountain_dog.suitability.rkc_grooming.quote'))
-            ->and($grooming['quote'])->toBe(gsData('proposed_game_parameters.greater_swiss_mountain_dog.grooming.quote'))
+            ->and($grooming['quote'])->toBe(gsmdData('greater_swiss_mountain_dog.suitability.rkc_grooming.quote'))
+            ->and($grooming['quote'])->toBe(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.grooming.quote'))
             ->and($grooming['verified'])->toBeTrue()
             ->and($grooming['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R13_DOG_GROOMING)
             // The puppy's weekly "new experience" (M5-R17) with the PetMD quote.
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S656')
-            ->and(gsRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R17_SOCIALISATION);
+            ->and(gsmdRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['value'])->toBe(1)
+            ->and(gsmdRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['source_id'])->toBe('S656')
+            ->and(gsmdRow('puppy', 0, StageParamKey::SocialisationTasksPerWeek)['decision'])->toBe(BreedStageParamsSeeder::CONFIRMED_R17_SOCIALISATION);
 
         // The digestion warning (M5-R16): 60 minutes, PetMD "do not exercise your dog directly before or after mealtimes".
         $gap = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'greater-swiss-mountain-dog')->where('key', StageParamKey::MealExerciseGapMinutes->value)->values();
@@ -291,9 +291,9 @@ describe('life-stage data against data.json', function () {
             StageParamKey::ToothBrushingFrequency->value => [7, 7],
         ])
             ->and($tasks->pluck('source_id')->unique()->sort()->values()->all())->toBe(['S656', 'S657', 'S658'])
-            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['tooth_brushing'][3])->toBe(gsData('proposed_game_parameters.greater_swiss_mountain_dog.tooth_brushing.quote'))
-            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['ear_cleaning'][3])->toBe(gsData('proposed_game_parameters.greater_swiss_mountain_dog.ear_care.quote'))
-            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['nail_trim'][3])->toBe(gsData('proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming.quote'));
+            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['tooth_brushing'][3])->toBe(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.tooth_brushing.quote'))
+            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['ear_cleaning'][3])->toBe(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.ear_care.quote'))
+            ->and(BreedStageParamsSeeder::DOG_CARE_TASKS['greater_swiss_mountain_dog']['nail_trim'][3])->toBe(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming.quote'));
 
         $mine = collect(BreedStageParamsSeeder::rows())->where('breed_slug', 'greater-swiss-mountain-dog');
         // Like the other pedigree breeds: no individual variation row.
@@ -328,7 +328,7 @@ describe('life-stage data against data.json', function () {
 
 describe('stage rules', function () {
     it('walks 10 min × age up to 60 minutes = 6,000 steps and 45 minutes = 4,500 steps as senior', function (int $arrival, LifeStage $stage, int $minutes, int $steps) {
-        $pet = gsPet($arrival);
+        $pet = gsmdPet($arrival);
         $rules = app(LifeStageService::class)->rulesOn($pet, $pet->localDate(now()));
 
         expect($rules->lifeStage)->toBe($stage)
@@ -356,7 +356,7 @@ describe('stage rules', function () {
 
     it('learns at the mixed-breed speed (not ranked by Coren, × 1.0) with no individual factor', function () {
         $training = app(TrainingService::class);
-        $dog = gsPet(36);
+        $dog = gsmdPet(36);
         $date = $dog->localDate(now());
 
         // learningFactor() is the individual factor (none for a pedigree breed); the breed multiplier is in the gain.
@@ -373,7 +373,7 @@ describe('generate-pin: paid like the Border Collie', function () {
             $body['plan'] = $plan;
         }
 
-        $response = gsPin($parent, $body);
+        $response = gsmdPin($parent, $body);
 
         if ($reason !== null) {
             $response->assertStatus(422)->assertJsonPath('reason', $reason);
@@ -382,7 +382,7 @@ describe('generate-pin: paid like the Border Collie', function () {
         }
 
         $response->assertOk()->assertJsonPath('plan', $petPlan);
-        $pet = Pet::findOrFail(gsLogin($response->json('pin'))->assertOk()->json('pet.id'));
+        $pet = Pet::findOrFail(gsmdLogin($response->json('pin'))->assertOk()->json('pet.id'));
         expect($pet->plan->value)->toBe($petPlan)
             ->and($pet->breed_type)->toBe(BreedType::GreaterSwissMountainDog)
             ->and($pet->species)->toBe(Species::Dog)
@@ -397,8 +397,8 @@ describe('generate-pin: paid like the Border Collie', function () {
         $parent = User::factory()->parent()->create();
         $pets = [];
         foreach (['border_collie', 'greater_swiss_mountain_dog'] as $breed) {
-            $pin = gsPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
-            $pets[$breed] = Pet::findOrFail(gsLogin($pin)->assertOk()->json('pet.id'));
+            $pin = gsmdPin($parent, ['breed' => $breed, 'origin' => 'adopted', 'age_stage' => 'senior', 'plan' => 'challenge'])->assertOk()->json('pin');
+            $pets[$breed] = Pet::findOrFail(gsmdLogin($pin)->assertOk()->json('pet.id'));
         }
 
         $dog = $pets['greater_swiss_mountain_dog'];
@@ -412,7 +412,7 @@ describe('generate-pin: paid like the Border Collie', function () {
     });
 
     it('gets the full media set once the challenge is bought', function () {
-        $pet = gsPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
+        $pet = gsmdPet(36, ['plan' => PetPlan::Challenge, 'challenge_paid_source' => ChallengePaidSource::Purchase]);
         $entitlement = app(MediaEntitlementService::class);
 
         expect($entitlement->tierFor($pet))->toBe(MediaEntitlementService::TIER_FULL)
@@ -473,7 +473,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->and(array_keys($colours))->toBe($standard)
             ->and(array_column(config('breed_colours.greater_swiss_mountain_dog'), 'value'))->toBe($standard)
             ->and(array_column(config('breed_colours.greater_swiss_mountain_dog'), 'key'))->toBe(['tricolour'])
-            ->and(gsData('greater_swiss_mountain_dog.appearance.colours.value'))->toBe(['black, tan and white (tricolour)']);
+            ->and(gsmdData('greater_swiss_mountain_dog.appearance.colours.value'))->toBe(['black, tan and white (tricolour)']);
     });
 
     it('draws the register portrait black, tan and white', function () {
@@ -492,7 +492,7 @@ describe('AI appearance (runbook rule: standard colours only — FCI-Standard N�
             ->and($v1['visual_traits']['eye_color'])->toBe('hazel to chestnut brown')
             ->and($v1['visual_traits']['color_scheme'])->toBe('black, tan and white tricolour');
 
-        $pet = gsPet(90, ['origin' => PetOrigin::Adopted]);
+        $pet = gsmdPet(90, ['origin' => PetOrigin::Adopted]);
         $prompt = app(PetAppearancePrompt::class)->imagePromptForPet($pet->forceFill(['pet_dna' => app(PetDnaService::class)->forNewPet($pet)]), LifeStage::Senior);
         expect($prompt)->toContain('Greater Swiss Mountain Dog')->toContain(PetAppearancePrompt::ADOPTED_AVOID)->toContain(PetAppearancePrompt::STYLE);
     });
@@ -513,8 +513,8 @@ describe('no health statistics in the app; no welfare chip, in marketing (runboo
         expect(array_keys(config('breed_suitability.vocabulary')))->not->toContain('hypoallergenic')
             // RKC Breed Watch Category 1 → no welfare chip; RKC "Over 10 years" → no shorter_lifespan.
             ->and(array_intersect($tags['consider'], ['brachycephalic_breathing', 'short_muzzle_breathing', 'back_spine', 'hips_hind_legs', 'heart_and_spine', 'sensitive_skin', 'eyelid_problems', 'shorter_lifespan']))->toBe([])
-            ->and(gsData('proposed_game_parameters.greater_swiss_mountain_dog.marketing.source_id'))->toBe('S654')
-            ->and(gsData('proposed_game_parameters.greater_swiss_mountain_dog.marketing.value'))->toContain('in marketing: yes')
+            ->and(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.marketing.source_id'))->toBe('S654')
+            ->and(gsmdData('proposed_game_parameters.greater_swiss_mountain_dog.marketing.value'))->toContain('in marketing: yes')
             // Never hypoallergenic; RKC "Sheds: Yes" → never low_shedding.
             ->and($tags['suits'])->not->toContain('low_shedding')
             // The alternatives (84 Dogs Trust, 72 PetMD) are never seeded.
@@ -530,9 +530,9 @@ describe('suitability tags (own file, runbook "Own files only")', function () {
             ->and($tags['suits'])->not->toContain('apartment')->not->toContain('small_children')->not->toContain('low_shedding')
             ->and($tags['consider'])->not->toContain('chases_small_pets')->not->toContain('long_daily_exercise')->not->toContain('needs_company');
 
-        expect(gsData('greater_swiss_mountain_dog.exercise.adult.quote'))->toBe('Up to 1 hour per day')
-            ->and(gsData('greater_swiss_mountain_dog.behaviour.family.quote'))->toContain('gentle with children')
-            ->and(gsData('greater_swiss_mountain_dog.suitability.rkc_size_of_home.quote'))->toBe('Large house')
-            ->and(gsData('greater_swiss_mountain_dog.behaviour.other_pets.quote'))->not->toMatch('/(high|strong) prey drive/');
+        expect(gsmdData('greater_swiss_mountain_dog.exercise.adult.quote'))->toBe('Up to 1 hour per day')
+            ->and(gsmdData('greater_swiss_mountain_dog.behaviour.family.quote'))->toContain('gentle with children')
+            ->and(gsmdData('greater_swiss_mountain_dog.suitability.rkc_size_of_home.quote'))->toBe('Large house')
+            ->and(gsmdData('greater_swiss_mountain_dog.behaviour.other_pets.quote'))->not->toMatch('/(high|strong) prey drive/');
     });
 });
