@@ -22,12 +22,26 @@ First `[ ]` line of `LANGUAGE_QUEUE.md` (e.g. `de German`). Branch `feat/L-<code
 When every line is `[x]`, the run is a **top-up run**: find texts that exist in EN but not in a live language
 (new care foods from the nightly food run, new breeds from the breed run, new website copy) and translate +
 review those the same way (one language per run, round-robin from the oldest top-up).
+A `[ ] review <code>` line (section "Review" of the queue) is a **review run** — see §3R; it comes before top-ups.
 
 ## 2. Translate (agent A — translator)
 
 Native-level, natural, never word-for-word; the brand voice of `brand/README.md` (calm, warm, precise, playful
 only in the child texts); formal or informal address as is usual for consumer family apps in that language — decide once per
 language, write it in the queue line and keep it everywhere. Keep product names (PetPrep, Curio, #walkyourpet) and URLs; units and number/date formats of the language.
+
+**Meaning, not words (David 2026-11-02: "ne prevajaš gluposti, ampak slovnično smiselnost").** Translate what a
+sentence *means* for a parent or child, then write it the way a native copywriter in that country would — change
+word order, split or merge sentences, swap the image for a local idiom. Each string must pass the test "would a
+native parent write or say exactly this?"; a correct-but-foreign sentence fails. Core glossary — the same everywhere:
+
+| EN | Meaning | sl | hr |
+|---|---|---|---|
+| pet / a pet (to want, get, be ready for) | a companion animal at home, not "an animal" | hišni ljubljenček (*žival* only for species/biology) | kućni ljubimac / ljubimac (*životinja* only for species/biology) |
+| pet care | | skrb za hišnega ljubljenčka / za živali | briga za ljubimca / za životinje |
+| colouring page | | pobarvanka | bojanka |
+
+Add a line for every new language to this table (the queue line's glossary points here).
 
 Website repo (`DataVallis/pet-prep-website`, branch `feat/L-<code>`):
 1. `src/i18n/config.ts`: add the code to `locales`, `localeMeta` (htmlLang, og, label in its own language, short,
@@ -52,13 +66,30 @@ quotes**, never adding claims; verification `<code>: draft`.
 - **B — native grammar & style reviewer** for that language: reads every changed string (site, register, care
   copy, emergency, every food) and fixes grammar, spelling, punctuation, agreement, case, gender, idiom, typography
   (quotes, dashes, non-breaking spaces as the language uses them), consistent terminology (one word per concept,
-  glossary at the top of the queue line notes). Lists every fix.
+  glossary at the top of the queue line notes and the core glossary in §2). **Rewrites every string that reads as
+  a translation** (calques, English word order, a literal word where the language uses another, e.g. sl "žival"
+  for "pet") — fixing grammar alone is not enough. Lists every fix.
 - **C — meaning & safety reviewer**: compares the translation with EN (and for foods with the quotes): no meaning
   drift, no stronger claims, no doses, warnings intact, child texts kind. For each food locale it passes it sets
   `verification[<code>] = verified` with the hash from `node scripts/export-care-knowledge.mjs --hashes <file>`
   after B's and its own last edit.
 - If B or C finds more than 5 % of strings needing a meaning fix, A re-translates those parts and B + C run again
   (max. 2 rounds), else the line is marked `[!]`.
+
+## 3R. Review run — re-read a live language (David 2026-11-02: "vse je treba pregledat")
+
+For a `[ ] review <code>` line. Branch `feat/L-<code>-review` in both repos (the §0 lock still applies). No
+translator: two fresh agents who did not translate the language.
+1. **B (native copywriter + grammar)** reads **every** string of that locale in context, page by page: website
+   `src/content/<code>.ts`, every `Record<Locale, …>` entry (kids, colouring, care copy, emergency, register words,
+   `registry/locales/<code>.json` labels), then every food text in `docs/research/care/foods/*/*.json`. Applies §2
+   "Meaning, not words" and the core glossary: rewrites every sentence a native parent would not write, fixes
+   grammar, consistency and typography. Does not change facts, numbers, slugs or URLs (a wrong slug → note only).
+2. **C (meaning & safety)** checks every changed string against EN (foods also against the quotes) and re-sets
+   `verification[<code>] = verified` with the new hash for every food it passes.
+3. Ship as §4 with PR titles `fix(i18n): <language> review [L-review]`; queue line →
+   `[x] review <code> — <n> strings rewritten (B) / <n> meaning fixes (C), PRs #…, <date>` + any new glossary terms
+   on the language's main queue line. The summary lists 3–5 typical before → after examples.
 
 ## 4. Ship
 
