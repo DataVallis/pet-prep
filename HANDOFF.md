@@ -118,8 +118,6 @@
     4. `cd .. && git add backend/composer.lock && git commit -m "chore(backend): lock Laravel 12 dependencies [M0-07]" && git push`
     5. Če Composer javi napako (»Your requirements could not be resolved…«, konflikt) — **nič ne popravljaj ročno**, celoten izpis ukaza pošlji Claudu. Po pushu Claude počaka zeleni CI (celoten Pest na PHP 8.3 + produkcijska slika), naredi en krog QA (avtentikacija, podpisani URL-ji, Sanctum) in PR združi; v produkcijo gre z naslednjim dnevnim deployem (Reverb in Caddy se enkrat znova zaženeta — aplikacije se same znova povežejo).
 
-18. **Hiter deploy (D28, PR `ci/D28-fast-deploy`) — enkrat, po prvem PR runu, ki pusha image v GHCR:** GitHub → organizacija **DataVallis** → zavihek **Packages** → **petprep-app** → *Package settings* (desno spodaj) → *Danger Zone* → **Change visibility** → **Public** → potrdi z imenom. Isto za **petprep-web**. Zakaj: repo je javen; zasebni paketi štejejo v brezplačnih 500 MB in ko jih zmanjka, push pade in deploy se vrne na počasen build na strežniku (deploy še vedno uspe, le ~5 min dlje). Nič drugega ni treba — strežnik se prijavi z žetonom deploy joba.
-
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:
