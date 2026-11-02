@@ -14,7 +14,8 @@
     "cs": "Tepelně upravená vejce",
     "hr": "Kuhana jaja",
     "sv": "Kokta ägg",
-    "da": "Kogte æg"
+    "da": "Kogte æg",
+    "fi": "Keitetyt kananmunat"
   },
   "question": {
     "en": "Can dogs eat cooked eggs?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst tepelně upravená vejce?",
     "hr": "Smiju li psi jesti kuhana jaja?",
     "sv": "Får hundar äta kokta ägg?",
-    "da": "Må hunde spise kogte æg?"
+    "da": "Må hunde spise kogte æg?",
+    "fi": "Saako koira syödä keitettyjä kananmunia?"
   },
   "url_slug": {
     "en": "cooked-eggs",
@@ -44,7 +46,8 @@
     "cs": "tepelne-upravena-vejce",
     "hr": "kuhana-jaja",
     "sv": "kokta-agg",
-    "da": "kogte-aeg"
+    "da": "kogte-aeg",
+    "fi": "keitetyt-kananmunat"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano. Důkladně tepelně upravená vejce jsou pro psy s mírou bezpečná a výživná, pokud jsou bez přísad: bez oleje, másla, soli a koření. Dobře se hodí vejce natvrdo nebo míchaná vejce. Příliš mnoho vajec může vést k přibírání na váze.",
     "hr": "Da. Potpuno termički obrađena jaja sigurna su i hranjiva za pse u umjerenim količinama, ako su obična: bez ulja, maslaca, soli ili začina. Tvrdo kuhana jaja ili kajgana dobar su izbor. Previše jaja može dovesti do debljanja.",
     "sv": "Ja. Genomkokta eller genomstekta ägg är säkra och näringsrika för hundar med måtta, så länge de är naturella: utan olja, smör, salt eller kryddor. Hårdkokta ägg eller äggröra passar bra. För många kan leda till viktökning.",
-    "da": "Ja. Gennemtilberedte æg er sikre og nærende for hunde med måde, så længe de er rene: uden olie, smør, salt eller krydderier. Hårdkogte æg og røræg er gode valg. For mange kan føre til vægtøgning."
+    "da": "Ja. Gennemtilberedte æg er sikre og nærende for hunde med måde, så længe de er rene: uden olie, smør, salt eller krydderier. Hårdkogte æg og røræg er gode valg. For mange kan føre til vægtøgning.",
+    "fi": "Saa. Kokonaan kypsennetyt kananmunat ovat koirille turvallisia ja ravitsevia kohtuudella annettuina, kunhan ne ovat maustamattomia: ei öljyä, voita, suolaa eikä mausteita. Kovaksi keitetyt munat ja munakokkeli sopivat hyvin. Liian monet munat voivat lihottaa."
   },
   "why": {
     "en": "Cooked eggs provide protein, vitamins and healthy fats, but they are not essential to a balanced diet. Vets advise always cooking eggs before giving them to a dog. Egg shells have sharp edges that can hurt a dog's throat, and like any treat, eggs add calories.",
@@ -75,7 +79,8 @@
     "cs": "Tepelně upravená vejce dodávají bílkoviny, vitaminy a zdravé tuky, ale pro vyváženou stravu nejsou nezbytná. Veterináři doporučují vejce před podáním psovi vždy tepelně upravit. Vaječné skořápky mají ostré hrany, které mohou psovi poranit krk, a jako každý pamlsek přidávají vejce kalorie.",
     "hr": "Termički obrađena jaja daju bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti psu grlo, a kao i svaka poslastica, jaja donose kalorije.",
     "sv": "Tillagade ägg ger protein, vitaminer och nyttiga fetter, men de är inte nödvändiga i en balanserad kost. Veterinärer råder att alltid tillaga ägg innan hunden får dem. Äggskal har vassa kanter som kan skada hundens hals, och som alla godbitar ger ägg extra kalorier.",
-    "da": "Tilberedte æg giver protein, vitaminer og sunde fedtstoffer, men de er ikke nødvendige i en afbalanceret kost. Dyrlæger anbefaler altid at tilberede æg, før de gives til en hund. Æggeskaller har skarpe kanter, som kan skade hundens hals, og som alle godbidder giver æg ekstra kalorier."
+    "da": "Tilberedte æg giver protein, vitaminer og sunde fedtstoffer, men de er ikke nødvendige i en afbalanceret kost. Dyrlæger anbefaler altid at tilberede æg, før de gives til en hund. Æggeskaller har skarpe kanter, som kan skade hundens hals, og som alle godbidder giver æg ekstra kalorier.",
+    "fi": "Kypsennetyistä kananmunista saa proteiinia, vitamiineja ja terveellisiä rasvoja, mutta ne eivät ole välttämättömiä tasapainoisessa ruokavaliossa. Eläinlääkärit neuvovat kypsentämään kananmunat aina, ennen kuin niitä annetaan koiralle. Munankuorissa on teräviä reunoja, jotka voivat vahingoittaa koiran kurkkua, ja minkä tahansa herkun tavoin kananmunat lisäävät kaloreita."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud váš pes snědl vejce připravená s máslem, solí nebo kořením nebo hodně vajec, sledujte, zda nemá zažívací potíže, a pokud je zvracení nebo průjem silný či neustává, zavolejte veterináři.",
     "hr": "Ako je pas pojeo jaja pripremljena s maslacem, soli ili začinima, ili mnogo jaja, prati ima li probavnih smetnji i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju.",
     "sv": "Om hunden har ätit ägg tillagade med smör, salt eller kryddor, eller många ägg: håll utkik efter magbesvär och ring veterinären om kräkningarna eller diarrén är kraftig eller inte går över.",
-    "da": "Hvis hunden har spist mange æg eller æg tilberedt med smør, salt eller krydderier, skal du holde øje med dårlig mave og ringe til din dyrlæge hvis opkast eller diarré er voldsom eller ikke går over."
+    "da": "Hvis hunden har spist mange æg eller æg tilberedt med smør, salt eller krydderier, skal du holde øje med dårlig mave og ringe til din dyrlæge hvis opkast eller diarré er voldsom eller ikke går over.",
+    "fi": "Jos koirasi söi voissa, suolalla tai mausteilla valmistettuja kananmunia tai paljon kananmunia, seuraa, tuleeko vatsavaivoja, ja soita eläinlääkärille, jos oksentelu tai ripuli on voimakasta tai ei lopu."
   },
   "serving": {
     "en": "Fully cooked (hard-boiled or scrambled), plain, without oil, butter, salt, seasonings or other additives; as an occasional treat.",
@@ -106,7 +112,8 @@
     "cs": "Důkladně tepelně upravená (natvrdo nebo míchaná), bez oleje, másla, soli, koření a dalších přísad; jako občasný pamlsek.",
     "hr": "Potpuno termički obrađena (tvrdo kuhana ili kao kajgana), obična, bez ulja, maslaca, soli, začina ili drugih dodataka; kao povremena poslastica.",
     "sv": "Helt genomtillagade (hårdkokta eller äggröra), naturella, utan olja, smör, salt, kryddor eller andra tillsatser; som en godbit ibland.",
-    "da": "Gennemtilberedte (hårdkogte eller som røræg), rene, uden olie, smør, salt, krydderier eller andre tilsætninger; som en godbid en gang imellem."
+    "da": "Gennemtilberedte (hårdkogte eller som røræg), rene, uden olie, smør, salt, krydderier eller andre tilsætninger; som en godbid en gang imellem.",
+    "fi": "Kokonaan kypsennettyinä (kovaksi keitettyinä tai munakokkelina), maustamattomina, ilman öljyä, voita, suolaa, mausteita tai muita lisäaineita; satunnaisena herkkuna."
   },
   "child": {
     "en": "A plain cooked egg can be a yummy treat for a dog. No salt or butter, please!",
@@ -121,7 +128,8 @@
     "cs": "Obyčejné uvařené vajíčko může být pro psa dobrý pamlsek. Ale bez soli a másla, prosím!",
     "hr": "Obično kuhano jaje može biti fina poslastica za psa. Bez soli i maslaca, molim!",
     "sv": "Ett kokt ägg kan vara en smaskig godbit för en hund. Inget salt eller smör, tack!",
-    "da": "Et almindeligt kogt æg kan være en lækker godbid til en hund. Uden salt og smør, tak!"
+    "da": "Et almindeligt kogt æg kan være en lækker godbid til en hund. Uden salt og smør, tak!",
+    "fi": "Maustamaton keitetty kananmuna voi olla koiralle maistuva herkku. Ei suolaa eikä voita, kiitos!"
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou psi jíst vaječné skořápky?",
         "hr": "Smiju li psi jesti ljuske jaja?",
         "sv": "Får hundar äta äggskal?",
-        "da": "Må hunde spise æggeskaller?"
+        "da": "Må hunde spise æggeskaller?",
+        "fi": "Saako koira syödä munankuoria?"
       },
       "a": {
         "en": "Sources differ: Dogs Trust lists cooked eggshells as usually fine, while the AKC warns that shells have sharp edges. Leaving them out is the safer choice.",
@@ -153,7 +162,8 @@
         "cs": "Zdroje se liší: Dogs Trust uvádí, že tepelně upravené skořápky jsou obvykle v pořádku, zatímco AKC upozorňuje, že skořápky mají ostré hrany. Bezpečnější je skořápky vynechat.",
         "hr": "Izvori se razlikuju: Dogs Trust navodi da su termički obrađene ljuske obično u redu, a AKC upozorava da ljuske imaju oštre rubove. Sigurnije je izostaviti ih.",
         "sv": "Källorna skiljer sig åt: Dogs Trust anger att tillagade äggskal oftast går bra, medan AKC varnar för att skalen har vassa kanter. Det säkrare valet är att låta bli.",
-        "da": "Kilderne er uenige: Dogs Trust skriver at tilberedte æggeskaller som regel er fine, mens AKC advarer om at skallerne har skarpe kanter. Det sikreste er at lade dem være."
+        "da": "Kilderne er uenige: Dogs Trust skriver at tilberedte æggeskaller som regel er fine, mens AKC advarer om at skallerne har skarpe kanter. Det sikreste er at lade dem være.",
+        "fi": "Lähteet ovat eri mieltä: Dogs Trust pitää kypsennettyjä munankuoria yleensä sopivina, kun taas AKC varoittaa kuorten terävistä reunoista. Kuorten jättäminen pois on turvallisempi valinta."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Jak mám vejce pro psa připravit?",
         "hr": "Kako pripremiti jaja za psa?",
         "sv": "Hur ska jag tillaga ägg till hunden?",
-        "da": "Hvordan skal jeg tilberede æg til min hund?"
+        "da": "Hvordan skal jeg tilberede æg til min hund?",
+        "fi": "Miten kananmunat kannattaa valmistaa koiralle?"
       },
       "a": {
         "en": "Hard-boiled or scrambled, fully cooked and plain, with no salt, butter or seasonings.",
@@ -185,7 +196,8 @@
         "cs": "Natvrdo nebo jako míchaná vejce, důkladně tepelně upravená a bez přísad, bez soli, másla a koření.",
         "hr": "Tvrdo kuhana ili kao kajgana, potpuno termički obrađena i obična, bez soli, maslaca ili začina.",
         "sv": "Hårdkokta eller som äggröra, helt genomtillagade och naturella, utan salt, smör eller kryddor.",
-        "da": "Hårdkogte eller som røræg, gennemtilberedte og rene, uden salt, smør eller krydderier."
+        "da": "Hårdkogte eller som røræg, gennemtilberedte og rene, uden salt, smør eller krydderier.",
+        "fi": "Kovaksi keitettyinä tai munakokkelina, kokonaan kypsennettyinä ja maustamattomina, ilman suolaa, voita ja mausteita."
       }
     }
   ],
@@ -306,6 +318,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "96200e9de00f24b88030fac02369f7a61f6e7d0c40b8d369aa3d42010d20cdaf"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b795850c4df17c73a517adf106a2ae6ea94d9797b5886fe208caa90bb16e9de5"
     }
   }
 }

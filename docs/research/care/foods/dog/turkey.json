@@ -14,7 +14,8 @@
     "cs": "Krůtí maso",
     "hr": "Puretina",
     "sv": "Kalkon",
-    "da": "Kalkun"
+    "da": "Kalkun",
+    "fi": "Kalkkuna"
   },
   "question": {
     "en": "Can dogs eat turkey?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst krůtí maso?",
     "hr": "Smiju li psi jesti puretinu?",
     "sv": "Får hundar äta kalkon?",
-    "da": "Må hunde spise kalkun?"
+    "da": "Må hunde spise kalkun?",
+    "fi": "Saako koira syödä kalkkunaa?"
   },
   "url_slug": {
     "en": "turkey",
@@ -44,7 +46,8 @@
     "cs": "kruti-maso",
     "hr": "puretina",
     "sv": "kalkon",
-    "da": "kalkun"
+    "da": "kalkun",
+    "fi": "kalkkuna"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, trocha obyčejného tepelně upraveného krůtího masa je pro většinu psů bezpečná. Nejdřív odstraňte kůži, přebytečný tuk a všechny kosti. Krůtí maso s kořením, cibulí nebo česnekem, cibulová omáčka ani nádivka pro psy nejsou.",
     "hr": "Da, malo obične termički obrađene puretine sigurno je za većinu pasa. Prije toga ukloni kožu, višak masnoće i sve kosti. Puretina pripremljena sa začinima, lukom ili češnjakom te umak od luka ili nadjev nisu za pse.",
     "sv": "Ja, lite naturellt, tillagat kalkonkött är ofarligt för de flesta hundar. Ta först bort skinnet, överflödigt fett och alla ben. Kalkon tillagad med kryddor, lök eller vitlök samt löksky eller fyllning är inte för hundar.",
-    "da": "Ja, lidt almindeligt tilberedt kalkunkød er sikkert for de fleste hunde. Fjern først skind, overskydende fedt og alle knogler. Kalkun tilberedt med krydderier, løg eller hvidløg samt løgsovs og fyld er ikke til hunde."
+    "da": "Ja, lidt almindeligt tilberedt kalkunkød er sikkert for de fleste hunde. Fjern først skind, overskydende fedt og alle knogler. Kalkun tilberedt med krydderier, løg eller hvidløg samt løgsovs og fyld er ikke til hunde.",
+    "fi": "Saa, vähän maustamatonta kypsennettyä kalkkunanlihaa on turvallista useimmille koirille. Poista ensin nahka, ylimääräinen rasva ja kaikki luut. Mausteilla, sipulilla tai valkosipulilla kypsennetty kalkkuna sekä sipulipohjainen kastike tai täyte eivät sovi koirille."
   },
   "why": {
     "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
@@ -75,7 +79,8 @@
     "cs": "Krůtí maso není jedovaté, záleží ale na tom, jak je připravené. Kůže a tuk jsou těžké a mohou způsobit zánět slinivky břišní, zatímco koření navíc může podráždit psí žaludek. Cibule a česnek mohou být pro psy jedovaté. Tepelně upravené drůbeží kosti jsou křehké a mohou se tříštit. Bílé maso je libovější než tmavé.",
     "hr": "Puretina nije otrovna, ali važno je kako je pripremljena. Koža i masnoća vrlo su masne i mogu izazvati upalu gušterače, a dodatni začini mogu nadražiti pseći želudac. Luk i češnjak mogu biti otrovni za pse. Termički obrađene kosti peradi krhke su i mogu se raspucati na oštre komadiće. Bijelo meso posnije je od tamnog.",
     "sv": "Kalkon är inte giftig, men tillagningen spelar roll. Skinn och fett är mäktiga och kan orsaka bukspottkörtelinflammation (pankreatit), och extra kryddor kan irritera hundens mage. Lök och vitlök kan vara giftiga för hundar. Tillagade fågelben är sköra och kan splittras. Ljust kött är magrare än mörkt.",
-    "da": "Kalkun er ikke giftig, men tilberedningen betyder noget. Skind og fedt er meget fedtrige og kan give betændelse i bugspytkirtlen, mens ekstra krydderier kan irritere hundens mave. Løg og hvidløg kan være giftige for hunde. Tilberedte fjerkræknogler er skøre og kan splintre. Lyst kød er magrere end mørkt kød."
+    "da": "Kalkun er ikke giftig, men tilberedningen betyder noget. Skind og fedt er meget fedtrige og kan give betændelse i bugspytkirtlen, mens ekstra krydderier kan irritere hundens mave. Løg og hvidløg kan være giftige for hunde. Tilberedte fjerkræknogler er skøre og kan splintre. Lyst kød er magrere end mørkt kød.",
+    "fi": "Kalkkuna ei ole myrkyllistä, mutta valmistustapa ratkaisee. Nahka ja rasva ovat raskaita ja voivat aiheuttaa haimatulehduksen, ja ylimääräiset mausteet voivat ärsyttää koiran vatsaa. Sipuli ja valkosipuli voivat olla koirille myrkyllisiä. Kypsennetyt siipikarjan luut ovat hauraita ja voivat sirpaloitua. Vaalea liha on vähärasvaisempaa kuin tumma."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud váš pes snědl krůtí kůži, tučné zbytky nebo kořeněné maso, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví, zavolejte veterináři. Pokud snědl kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
     "hr": "Ako je tvoj pas pojeo pureću kožu, masne ostatke ili začinjeno meso, sljedećih nekoliko dana prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Om hunden ätit kalkonskinn, feta rester eller kryddat kött, håll utkik efter kräkningar, diarré eller ont i magen de närmaste dagarna och ring veterinären om de dyker upp. Om den ätit ben eller mat med lök eller vitlök, ring veterinären direkt.",
-    "da": "Hvis din hund har spist kalkunskind, fede rester eller krydret kød, så hold øje med opkast, diarré eller mavesmerter de næste dage, og kontakt din dyrlæge hvis de opstår. Hvis den har spist knogler eller mad med løg eller hvidløg, skal du kontakte din dyrlæge med det samme."
+    "da": "Hvis din hund har spist kalkunskind, fede rester eller krydret kød, så hold øje med opkast, diarré eller mavesmerter de næste dage, og kontakt din dyrlæge hvis de opstår. Hvis den har spist knogler eller mad med løg eller hvidløg, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos koirasi söi kalkkunan nahkaa, rasvaisia tähteitä tai maustettua lihaa, seuraa muutaman seuraavan päivän ajan, ilmeneekö oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee. Jos koira söi luita tai sipulia tai valkosipulia sisältävää ruokaa, soita eläinlääkärille heti."
   },
   "serving": {
     "en": "Plain cooked turkey meat, ideally white meat, with no skin, excess fat or bones, no seasoning; a small amount.",
@@ -106,7 +112,8 @@
     "cs": "Obyčejné tepelně upravené krůtí maso, ideálně bílé, bez kůže, přebytečného tuku a kostí, bez koření; malé množství.",
     "hr": "Obična termički obrađena puretina, po mogućnosti bijelo meso, bez kože, viška masnoće i kostiju, bez začina; mala količina.",
     "sv": "Naturellt, tillagat kalkonkött, helst ljust kött, utan skinn, överflödigt fett, ben och kryddor; en liten mängd.",
-    "da": "Almindeligt tilberedt kalkunkød, helst lyst kød, uden skind, overskydende fedt eller knogler og uden krydderier; en lille mængde."
+    "da": "Almindeligt tilberedt kalkunkød, helst lyst kød, uden skind, overskydende fedt eller knogler og uden krydderier; en lille mængde.",
+    "fi": "Maustamatonta kypsennettyä kalkkunanlihaa, mieluiten vaaleaa lihaa, ilman nahkaa, ylimääräistä rasvaa ja luita, ilman mausteita; pieni määrä."
   },
   "child": {
     "en": "A little plain turkey with no skin or bones is a nice dog treat. Turkey bones are never for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Kousek obyčejného krůtího masa bez kůže a kostí je pro psa fajn pamlsek. Krůtí kosti ale pes nesmí dostat nikdy.",
     "hr": "Malo obične puretine bez kože i kostiju fina je poslastica za psa. Pureće kosti nikad nisu za pse.",
     "sv": "Lite kalkon utan kryddor, skinn och ben är en fin godbit för hundar. Kalkonben är aldrig för hundar.",
-    "da": "Lidt almindelig kalkun uden skind og knogler er en dejlig godbid til en hund. Kalkunknogler er aldrig til hunde."
+    "da": "Lidt almindelig kalkun uden skind og knogler er en dejlig godbid til en hund. Kalkunknogler er aldrig til hunde.",
+    "fi": "Vähän maustamatonta kalkkunaa ilman nahkaa ja luita on kiva herkku koiralle. Kalkkunan luut eivät koskaan sovi koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohu psovi dát zbytky ze sváteční krůty?",
         "hr": "Smijem li psu dati ostatke blagdanske purice?",
         "sv": "Kan jag ge hunden rester av julkalkonen?",
-        "da": "Må jeg give min hund rester fra en julekalkun?"
+        "da": "Må jeg give min hund rester fra en julekalkun?",
+        "fi": "Voinko antaa koiralleni juhlakalkkunan tähteitä?"
       },
       "a": {
         "en": "Only plain meat without skin or bones. Keep stuffing and onion-based gravy away from your dog.",
@@ -153,7 +162,8 @@
         "cs": "Jen obyčejné maso bez kůže a kostí. Nádivku a cibulovou omáčku držte od psa dál.",
         "hr": "Samo obično meso bez kože i kostiju. Nadjev i umak na bazi luka drži podalje od psa.",
         "sv": "Bara naturellt kött utan skinn och ben. Håll fyllning och sky med lök borta från hunden.",
-        "da": "Kun almindeligt kød uden skind og knogler. Hold fyld og løgsovs væk fra din hund."
+        "da": "Kun almindeligt kød uden skind og knogler. Hold fyld og løgsovs væk fra din hund.",
+        "fi": "Vain maustamatonta lihaa ilman nahkaa ja luita. Pidä täyte ja sipulipohjainen kastike poissa koirasi ulottuvilta."
       }
     }
   ],
@@ -289,6 +299,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "547104a719ec04c97f1ce8026a567a9fafdcb30942820c06505278b0a499efea"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b1e3bb113fe9c6c0c49f515f44243d1b85f3f9d7cf40fe9d854f94fd804de878"
     }
   }
 }

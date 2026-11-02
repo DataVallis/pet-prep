@@ -14,7 +14,8 @@
     "cs": "Třešně",
     "hr": "Trešnje",
     "sv": "Körsbär",
-    "da": "Kirsebær"
+    "da": "Kirsebær",
+    "fi": "Kirsikat"
   },
   "question": {
     "en": "Can dogs eat cherries?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst třešně?",
     "hr": "Smiju li psi jesti trešnje?",
     "sv": "Får hundar äta körsbär?",
-    "da": "Må hunde spise kirsebær?"
+    "da": "Må hunde spise kirsebær?",
+    "fi": "Saako koira syödä kirsikoita?"
   },
   "url_slug": {
     "en": "cherries",
@@ -44,7 +46,8 @@
     "cs": "tresne",
     "hr": "tresnje",
     "sv": "korsbar",
-    "da": "kirsebaer"
+    "da": "kirsebaer",
+    "fi": "kirsikat"
   },
   "level": "dangerous",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne, třešním je lepší se vyhnout. Zralá dužnina sama jedovatá není, ale pecky, stopky a listy obsahují látky, ze kterých se může uvolnit kyanid, a pecky mohou psovi ucpat střeva. Podle Pet Poison Helpline riziko převažuje nad jakýmkoli přínosem.",
     "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist.",
     "sv": "Nej, körsbär är bäst att undvika. Det mogna fruktköttet är inte den giftiga delen, men kärnor, skaft och blad innehåller ämnen som kan frigöra cyanid, och kärnorna kan ge stopp i hundens tarmar. Pet Poison Helpline menar att risken väger tyngre än nyttan.",
-    "da": "Nej, kirsebær er bedst at undgå. Det modne frugtkød er ikke den giftige del, men stenene, stilkene og bladene indeholder stoffer der kan frigive cyanid, og stenene kan blokere hundens tarme. Pet Poison Helpline siger at risikoen overstiger enhver fordel."
+    "da": "Nej, kirsebær er bedst at undgå. Det modne frugtkød er ikke den giftige del, men stenene, stilkene og bladene indeholder stoffer der kan frigive cyanid, og stenene kan blokere hundens tarme. Pet Poison Helpline siger at risikoen overstiger enhver fordel.",
+    "fi": "Ei, kirsikoita on parasta välttää. Kypsä hedelmäliha ei ole kirsikan myrkyllinen osa, mutta kivet, varret ja lehdet sisältävät yhdisteitä, joista voi vapautua syanidia, ja kivet voivat tukkia koiran suoliston. Pet Poison Helplinen mukaan riski on hyötyä suurempi."
   },
   "why": {
     "en": "Cherry pits, stems and leaves contain cyanogenic glycosides, which can turn into cyanide. Cyanide is released when a pit is chewed and broken; a pit swallowed whole is not expected to poison, but it can get stuck and cause a blockage. One cherry will not cause cyanide poisoning, yet the risk is not worth it.",
@@ -75,7 +79,8 @@
     "cs": "Třešňové pecky, stopky a listy obsahují kyanogenní glykosidy, ze kterých může vznikat kyanid. Kyanid se uvolní, když pes pecku rozkouše nebo rozlomí; u celé spolknuté pecky se otrava nepředpokládá, ale pecka může uvíznout a způsobit ucpání. Jedna třešeň otravu kyanidem nezpůsobí, přesto riziko nestojí za to.",
     "hr": "Koštice, peteljke i listovi trešnje sadrže cijanogene glikozide, koji se mogu pretvoriti u cijanid. Cijanid se oslobađa kad se koštica sažvače i razbije; od cijele progutane koštice ne očekuje se otrovanje, ali ona može zapeti i izazvati začepljenje. Jedna trešnja neće izazvati otrovanje cijanidom, no rizik se ne isplati.",
     "sv": "Körsbärens kärnor, skaft och blad innehåller cyanogena glykosider, som kan omvandlas till cyanid. Cyanid frigörs när en kärna tuggas sönder; en kärna som sväljs hel väntas inte ge förgiftning, men den kan fastna och orsaka stopp. Ett körsbär ger ingen cyanidförgiftning, men risken är inte värd det.",
-    "da": "Kirsebærsten, -stilke og -blade indeholder cyanogene glykosider, som kan omdannes til cyanid. Cyanid frigives når en sten tygges og knækkes; en sten der sluges hel, forventes ikke at give forgiftning, men den kan sætte sig fast og give blokering. Ét kirsebær giver ikke cyanidforgiftning, men risikoen er ikke det værd."
+    "da": "Kirsebærsten, -stilke og -blade indeholder cyanogene glykosider, som kan omdannes til cyanid. Cyanid frigives når en sten tygges og knækkes; en sten der sluges hel, forventes ikke at give forgiftning, men den kan sætte sig fast og give blokering. Ét kirsebær giver ikke cyanidforgiftning, men risikoen er ikke det værd.",
+    "fi": "Kirsikan kivet, varret ja lehdet sisältävät syanogeenisia glykosideja, jotka voivat muuttua syanidiksi. Syanidia vapautuu, kun kivi pureskellaan rikki; kokonaisena nielaistun kiven ei odoteta aiheuttavan myrkytystä, mutta se voi juuttua kiinni ja aiheuttaa tukoksen. Yksi kirsikka ei aiheuta syanidimyrkytystä, mutta riski ei ole sen arvoinen."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Vejrtrækningsbesvær, hiven efter vejret",
       "Dårlig mave eller diarré",
       "Chok"
+    ],
+    "fi": [
+      "Laajentuneet pupillit",
+      "Tiilenpunaiset ikenet",
+      "Hengitysvaikeudet, läähätys",
+      "Vatsavaivat tai ripuli",
+      "Sokki"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "cs": "Pokud váš pes snědl třešňové pecky, stopky nebo listy nebo hodně třešní, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, zhruba kolik jich snědl a zda pecky rozkousal. Nečekejte, až se objeví příznaky.",
     "hr": "Ako je pas pojeo koštice, peteljke ili listove trešnje ili mnogo trešanja, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši otprilike koliko ih je pojeo i je li žvakao koštice. Ne čekaj da se pojave znakovi.",
     "sv": "Om hunden har ätit körsbärskärnor, skaft eller blad, eller många körsbär, kontakta veterinären eller en giftrådgivning för djur direkt. Notera ungefär hur många den åt och om kärnorna tuggades sönder. Vänta inte på symtom.",
-    "da": "Hvis hunden har spist kirsebærsten, -stilke eller -blade eller mange kirsebær, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned omtrent hvor mange hunden har spist og om stenene er blevet tygget. Vent ikke på symptomer."
+    "da": "Hvis hunden har spist kirsebærsten, -stilke eller -blade eller mange kirsebær, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned omtrent hvor mange hunden har spist og om stenene er blevet tygget. Vent ikke på symptomer.",
+    "fi": "Jos koirasi söi kirsikan kiviä, varsia tai lehtiä tai paljon kirsikoita, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, suunnilleen kuinka monta koira söi ja pureskeliko se kiviä. Älä odota oireita."
   },
   "serving": null,
   "child": {
@@ -199,7 +212,8 @@
     "cs": "Třešně mají uvnitř tvrdé pecky, které psům škodí. Třešně nech pro lidi, a když je pes sní, řekni to dospělému.",
     "hr": "Trešnje u sebi imaju tvrde koštice koje štete psima. Trešnje ostavi ljudima, a ako ih pas pojede, reci odrasloj osobi.",
     "sv": "Körsbär har hårda kärnor inuti som är dåliga för hundar. Spara körsbär till människor och säg till en vuxen om hunden äter några.",
-    "da": "Kirsebær har hårde sten indeni, som er dårlige for hunde. Lad kirsebærrene være til mennesker, og sig det til en voksen hvis din hund spiser nogle."
+    "da": "Kirsebær har hårde sten indeni, som er dårlige for hunde. Lad kirsebærrene være til mennesker, og sig det til en voksen hvis din hund spiser nogle.",
+    "fi": "Kirsikoiden sisällä on kovia kiviä, jotka ovat koirille pahasta. Jätä kirsikat ihmisille ja kerro aikuiselle, jos koirasi syö niitä."
   },
   "faq": [
     {
@@ -216,7 +230,8 @@
         "cs": "Je jedna třešeň důvod k pohotovosti?",
         "hr": "Je li jedna trešnja hitan slučaj?",
         "sv": "Är ett körsbär akut?",
-        "da": "Er ét kirsebær akut?"
+        "da": "Er ét kirsebær akut?",
+        "fi": "Onko yksi kirsikka hätätilanne?"
       },
       "a": {
         "en": "One cherry will not cause cyanide poisoning, and a healthy dog that eats one or two does not need panic. Still, pits can cause blockages, so ask your vet if you are unsure.",
@@ -231,7 +246,8 @@
         "cs": "Jedna třešeň otravu kyanidem nezpůsobí a u zdravého psa, který sní jednu nebo dvě, není třeba panikařit. Pecky ale mohou způsobit ucpání, proto se v případě nejistoty zeptejte veterináře.",
         "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi siguran.",
         "sv": "Ett körsbär ger ingen cyanidförgiftning, och om en frisk hund äter ett eller två finns ingen anledning till panik. Kärnor kan ändå orsaka stopp, så fråga veterinären om du är osäker.",
-        "da": "Ét kirsebær giver ikke cyanidforgiftning, og der er ingen grund til panik hvis en rask hund spiser et eller to. Stenene kan dog give blokering, så spørg din dyrlæge hvis du er i tvivl."
+        "da": "Ét kirsebær giver ikke cyanidforgiftning, og der er ingen grund til panik hvis en rask hund spiser et eller to. Stenene kan dog give blokering, så spørg din dyrlæge hvis du er i tvivl.",
+        "fi": "Yksi kirsikka ei aiheuta syanidimyrkytystä, eikä tarvitse panikoida, jos terve koira syö yhden tai kaksi. Kivet voivat silti aiheuttaa tukoksia, joten kysy eläinlääkäriltä, jos olet epävarma."
       }
     },
     {
@@ -248,7 +264,8 @@
         "cs": "Mohu dát třešně bez pecek?",
         "hr": "Smijem li psu dati trešnje bez koštica?",
         "sv": "Kan jag ge urkärnade körsbär?",
-        "da": "Må jeg give udstenede kirsebær?"
+        "da": "Må jeg give udstenede kirsebær?",
+        "fi": "Voinko antaa kivettömiä kirsikoita?"
       },
       "a": {
         "en": "The ripe pulp is not the toxic part, but Pet Poison Helpline advises that the risk of feeding cherries outweighs the benefits.",
@@ -263,7 +280,8 @@
         "cs": "Zralá dužnina sama jedovatá není, ale podle Pet Poison Helpline riziko krmení třešněmi převažuje nad přínosem.",
         "hr": "Zrelo meso ploda nije otrovni dio, ali Pet Poison Helpline upozorava da rizik od davanja trešanja psu nadmašuje koristi.",
         "sv": "Det mogna fruktköttet är inte den giftiga delen, men Pet Poison Helpline menar att risken med att ge körsbär väger tyngre än nyttan.",
-        "da": "Det modne frugtkød er ikke den giftige del, men Pet Poison Helpline vurderer at risikoen ved at give kirsebær overstiger fordelene."
+        "da": "Det modne frugtkød er ikke den giftige del, men Pet Poison Helpline vurderer at risikoen ved at give kirsebær overstiger fordelene.",
+        "fi": "Kypsä hedelmäliha ei ole kirsikan myrkyllinen osa, mutta Pet Poison Helplinen mukaan kirsikoiden antamisen riski on hyötyjä suurempi."
       }
     }
   ],
@@ -393,6 +411,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e74c14c34e17735b845e0e539480a40e353de87fb77f2a969d6b2ec89abbbf15"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3863721f6d2c748af33c7749e1a9e7b9f124e39901089561afc368876cad28c"
     }
   }
 }

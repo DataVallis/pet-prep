@@ -7,7 +7,8 @@
     "cs": "Jablka",
     "hr": "Jabuke",
     "sv": "Äpplen",
-    "da": "Æbler"
+    "da": "Æbler",
+    "fi": "Omenat"
   },
   "question": {
     "en": "Can dogs eat apples?",
@@ -15,7 +16,8 @@
     "cs": "Mohou psi jíst jablka?",
     "hr": "Smiju li psi jesti jabuke?",
     "sv": "Får hundar äta äpplen?",
-    "da": "Må hunde spise æbler?"
+    "da": "Må hunde spise æbler?",
+    "fi": "Saako koira syödä omenaa?"
   },
   "url_slug": {
     "en": "apples",
@@ -23,7 +25,8 @@
     "cs": "jablka",
     "hr": "jabuke",
     "sv": "applen",
-    "da": "aebler"
+    "da": "aebler",
+    "fi": "omenat"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, s mírou. Jablka jsou pro psy bezpečný a výživný pamlsek, ale nejdřív odstraňte jádra, ohryzek a stopku: jádra obsahují kyanid a ohryzek se stopkou by mohl způsobit dušení.",
     "hr": "Da, umjereno. Jabuke su sigurna i hranjiva poslastica za pse, ali prvo ukloni sjemenke, sjemenu kućicu i peteljku, jer sjemenke sadrže cijanid, a sjemena kućica i peteljka mogu izazvati gušenje.",
     "sv": "Ja, med måtta. Äpplen är en säker och näringsrik godbit för hundar, men ta först bort kärnor, kärnhus och skaft, eftersom kärnorna innehåller cyanid och kärnhuset och skaftet kan få hunden att sätta i halsen.",
-    "da": "Ja, med måde. Æbler er en sikker og nærende godbid til hunde, men fjern først kerner, kernehus og stilk, fordi kernerne indeholder cyanid, og kernehuset og stilken kan sætte sig fast i halsen på hunden."
+    "da": "Ja, med måde. Æbler er en sikker og nærende godbid til hunde, men fjern først kerner, kernehus og stilk, fordi kernerne indeholder cyanid, og kernehuset og stilken kan sætte sig fast i halsen på hunden.",
+    "fi": "Kyllä, kohtuudella. Omena on koiralle turvallinen ja ravitseva herkku, mutta poista ensin siemenet, siemenkota ja varsi, koska siemenet sisältävät syanidia ja siemenkota ja varsi voivat tukehduttaa koirasi."
   },
   "why": {
     "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
@@ -40,7 +44,8 @@
     "cs": "Jablka jsou nízkokalorický pamlsek s vitaminy A a C, draslíkem, antioxidanty a vlákninou, hlavně ve slupce. Kvůli obsahu cukru je celé jablko pro psa nejspíš příliš mnoho a velké množství jablek může způsobit bolest břicha nebo průjem.",
     "hr": "Jabuke su niskokalorična poslastica s vitaminima A i C, kalijem, antioksidansima i vlaknima, osobito u kori. Zbog šećera u svakoj jabuci cijela je jabuka vjerojatno previše za tvog psa, a previše jabuka može izazvati bolove u trbuhu ili proljev.",
     "sv": "Äpplen är en kalorisnål godbit med A- och C-vitamin, kalium, antioxidanter och fibrer, särskilt i skalet. Eftersom varje äpple innehåller socker är ett helt äpple troligen för mycket för hunden, och för många äpplen kan ge ont i magen eller diarré.",
-    "da": "Æbler er en kaloriefattig godbid med A- og C-vitamin, kalium, antioxidanter og fibre, især i skrællen. På grund af sukkeret i hvert æble er et helt æble sandsynligvis for meget for din hund, og for mange æbler kan give dårlig mave eller diarré."
+    "da": "Æbler er en kaloriefattig godbid med A- og C-vitamin, kalium, antioxidanter og fibre, især i skrællen. På grund af sukkeret i hvert æble er et helt æble sandsynligvis for meget for din hund, og for mange æbler kan give dårlig mave eller diarré.",
+    "fi": "Omena on vähäkalorinen herkku, jossa on A- ja C-vitamiinia, kaliumia, antioksidantteja ja kuitua, etenkin kuoressa. Omenan sokerin vuoksi kokonainen omena on koirallesi todennäköisesti liikaa, ja liian monen omenan syöminen voi aiheuttaa vatsakipua tai ripulia."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání. Pokud má pes potíže, přestaňte mu jablka dávat a obraťte se na veterináře.",
     "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja. Ako pas ima tegobe, prestani mu davati jabuke i obrati se veterinaru.",
     "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp. Om hunden får problem, sluta ge äpple och kontakta en veterinär.",
-    "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering. Hvis hunden får problemer, skal du stoppe med at give den æble og kontakte en dyrlæge."
+    "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering. Hvis hunden får problemer, skal du stoppe med at give den æble og kontakte en dyrlæge.",
+    "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä. Jos koiralla on ongelmia, lopeta omenan antaminen ja ota yhteyttä eläinlääkäriin."
   },
   "serving": {
     "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
@@ -57,7 +63,8 @@
     "cs": "Jablko umyjte a očistěte kartáčkem, odstraňte jádra, ohryzek a stopku a nakrájejte ho na plátky nebo malé kostičky; s mírou, ne celé jablko.",
     "hr": "Jabuku operi i dobro istrljaj, ukloni sjemenke, sjemenu kućicu i peteljku te je nareži na kriške ili male kockice; umjereno, ne cijelu jabuku.",
     "sv": "Tvätta och skrubba äpplet, ta bort kärnor, kärnhus och skaft och skär det i klyftor eller små tärningar; med måtta, inte ett helt äpple.",
-    "da": "Vask og skrub æblet, fjern kerner, kernehus og stilk, og skær det i både eller små tern; med måde, ikke et helt æble."
+    "da": "Vask og skrub æblet, fjern kerner, kernehus og stilk, og skær det i både eller små tern; med måde, ikke et helt æble.",
+    "fi": "Pese ja harjaa omena, poista siemenet, siemenkota ja varsi ja leikkaa se viipaleiksi tai pieniksi kuutioiksi; kohtuudella, ei kokonaista omenaa."
   },
   "child": {
     "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
@@ -65,7 +72,8 @@
     "cs": "Psi si můžou pochutnat na pár plátcích jablka! Dospělý je nakrájí a předtím vyřízne ohryzek a jádra.",
     "hr": "Psi mogu uživati u nekoliko kriški jabuke! Odrasla osoba ih treba narezati i prvo izvaditi sjemenu kućicu i sjemenke.",
     "sv": "Hundar kan få några äppelbitar! En vuxen ska skära dem och ta bort kärnhuset och kärnorna först.",
-    "da": "Hunde kan godt få et par æblebåde! En voksen skal skære dem og fjerne kernehuset og kernerne først."
+    "da": "Hunde kan godt få et par æblebåde! En voksen skal skære dem og fjerne kernehuset og kernerne først.",
+    "fi": "Koira voi nauttia muutamasta omenaviipaleesta! Aikuisen pitää ensin leikata ne ja poistaa siemenkota ja siemenet."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Mohou psi jíst jablečné pyré?",
         "hr": "Smiju li psi jesti pire od jabuka?",
         "sv": "Får hundar äta äppelmos?",
-        "da": "Må hunde spise æblemos?"
+        "da": "Må hunde spise æblemos?",
+        "fi": "Saako koira syödä omenasosetta?"
       },
       "a": {
         "en": "Plain applesauce is fine in moderation, but most applesauce has added sugar, so always choose unsweetened.",
@@ -83,7 +92,8 @@
         "cs": "Čisté jablečné pyré je s mírou v pořádku, ale většina pyré má přidaný cukr, proto vždy volte neslazené.",
         "hr": "Obični pire od jabuka u redu je u umjerenim količinama, ali većina ima dodani šećer, zato uvijek biraj nezaslađeni.",
         "sv": "Osötat äppelmos går bra med måtta, men det mesta äppelmoset har tillsatt socker, så välj alltid osötat.",
-        "da": "Almindelig æblemos er fint med måde, men det meste æblemos er tilsat sukker, så vælg altid usødet."
+        "da": "Almindelig æblemos er fint med måde, men det meste æblemos er tilsat sukker, så vælg altid usødet.",
+        "fi": "Tavallinen omenasose sopii kohtuudella, mutta useimpiin omenasoseisiin on lisätty sokeria, joten valitse aina makeuttamaton."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Mohou psi jíst jablečný koláč?",
         "hr": "Smiju li psi jesti pitu od jabuka?",
         "sv": "Får hundar äta äppelpaj?",
-        "da": "Må hunde spise æbletærte?"
+        "da": "Må hunde spise æbletærte?",
+        "fi": "Saako koira syödä omenapiirakkaa?"
       },
       "a": {
         "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
@@ -101,7 +112,8 @@
         "cs": "Ne. Přidaný cukr a těsto jsou pro psy příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem.",
         "hr": "Ne. Dodani šećer i tijesto previše su za pse; izbjegavaj jela od jabuka s dodanim šećerom ili začinima poput muškatnog oraščića.",
         "sv": "Nej. Det tillsatta sockret och pajskalet är för mycket för hundar; undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
-        "da": "Nej. Det tilsatte sukker og dejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød."
+        "da": "Nej. Det tilsatte sukker og dejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
+        "fi": "Ei saa. Lisätty sokeri ja piirakkapohja ovat koirille liikaa; vältä omenaruokia, joissa on lisättyä sokeria tai mausteita, kuten muskottipähkinää."
       }
     }
   ],
@@ -215,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3320cbd2aa55291130e020b825f8faa84fee79e5e28364a18f624ddb898301ae"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8af81462bec46f761140f5290175e3fb2e018dc1160984665d351cf4b600dec"
     }
   }
 }

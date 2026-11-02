@@ -14,7 +14,8 @@
     "cs": "Broskve",
     "hr": "Breskve",
     "sv": "Persikor",
-    "da": "Ferskner"
+    "da": "Ferskner",
+    "fi": "Persikat"
   },
   "question": {
     "en": "Can dogs eat peaches?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst broskve?",
     "hr": "Smiju li psi jesti breskve?",
     "sv": "Får hundar äta persikor?",
-    "da": "Må hunde spise ferskner?"
+    "da": "Må hunde spise ferskner?",
+    "fi": "Saako koira syödä persikoita?"
   },
   "url_slug": {
     "en": "peaches",
@@ -44,7 +46,8 @@
     "cs": "broskve",
     "hr": "breskve",
     "sv": "persikor",
-    "da": "ferskner"
+    "da": "ferskner",
+    "fi": "persikat"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Nedoporučuje se. Někteří veterináři povolují čerstvou dužinu broskve nakrájenou na malé kostičky bez stopky a pecky, pecka je ale skutečné nebezpečí: může způsobit dušení nebo ucpání střev a obsahuje formu kyanidu.",
     "hr": "Ne preporučuje se. Neki veterinari dopuštaju svježe meso breskve narezano na male kockice, bez peteljke i koštice, ali koštica je stvarna opasnost: može izazvati gušenje ili začepljenje crijeva i sadrži oblik cijanida.",
     "sv": "Nej, det rekommenderas inte. Vissa veterinärer tillåter färskt persikokött i små tärningar utan stjälk och kärna, men kärnan är en verklig fara: den kan orsaka kvävning eller tarmstopp och innehåller en form av cyanid.",
-    "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: Den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid."
+    "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: Den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid.",
+    "fi": "Ei suositella. Jotkut eläinlääkärit sallivat tuoretta persikan hedelmälihaa pieninä kuutioina, kun varsi ja kivi on poistettu, mutta kivi on todellinen vaara: se voi aiheuttaa tukehtumisen tai suolitukoksen, ja siinä on syanidiyhdistettä."
   },
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -75,7 +79,8 @@
     "cs": "Stopky, listy a semena broskvoně obsahují kyanogenní glykosidy. Pokud pes pecku důkladně rozkouše, může se uvolnit kyanid, a spolknutá pecka může ucpat střeva, zejména u malých psů. Broskve z konzervy nebo sušené často obsahují přidaný cukr. Protože je rostlina vedena jako pro psy jedovatá, hodnotíme broskve jako nedoporučené, nikoli jako bezpečný pamlsek.",
     "hr": "Peteljke, listovi i sjemenke breskve sadrže cijanogene glikozide. Ako pas temeljito sažvače košticu, može se osloboditi cijanid, a progutana koštica može začepiti crijeva, osobito kod malih pasa. Breskve iz konzerve i sušene breskve često sadrže dodani šećer. Budući da se biljka navodi kao otrovna za pse, breskve ocjenjujemo kao nepreporučljive, a ne kao sigurnu poslasticu.",
     "sv": "Persikans stjälkar, blad och frön innehåller cyanogena glykosider. Om en kärna tuggas sönder ordentligt kan cyanid frigöras, och en nedsvald kärna kan orsaka tarmstopp, särskilt hos små hundar. Persikor på burk och torkade persikor innehåller ofta tillsatt socker. Eftersom växten anges som giftig för hundar klassar vi persikor som ”rekommenderas inte” snarare än som en ofarlig godbit.",
-    "da": "Ferskentræets stilke, blade og kerner indeholder cyanogene glykosider. Hvis en sten bliver tygget grundigt, kan der frigives cyanid, og en slugt sten kan blokere tarmen, især hos små hunde. Ferskner på dåse og tørrede ferskner indeholder ofte ekstra sukker. Fordi planten står opført som giftig for hunde, vurderer vi ferskner som frarådede frem for som en sikker godbid."
+    "da": "Ferskentræets stilke, blade og kerner indeholder cyanogene glykosider. Hvis en sten bliver tygget grundigt, kan der frigives cyanid, og en slugt sten kan blokere tarmen, især hos små hunde. Ferskner på dåse og tørrede ferskner indeholder ofte ekstra sukker. Fordi planten står opført som giftig for hunde, vurderer vi ferskner som frarådede frem for som en sikker godbid.",
+    "fi": "Persikan varressa, lehdissä ja siemenissä on syanogeenisia glykosideja. Jos kiveä pureskellaan perusteellisesti, siitä voi vapautua syanidia, ja nielty kivi voi tukkia suoliston etenkin pienillä koirilla. Säilykepersikoissa ja kuivatuissa persikoissa on usein lisättyä sokeria. Koska kasvi on luokiteltu koiralle myrkylliseksi, emme suosittele persikoita emmekä pidä niitä turvallisena herkkuna."
   },
   "signs": {
     "en": [
@@ -142,6 +147,11 @@
       "Tegn på kvælning eller brækfornemmelser",
       "Tegn på blokering: gentagne opkast, spiser ikke, træthed",
       "Udvidede pupiller, teglstensrødt tandkød, vejrtrækningsbesvær (cyanid)"
+    ],
+    "fi": [
+      "Tukehtuminen tai yökkäily",
+      "Tukoksen oireet: toistuva oksentelu, syömättömyys, väsymys",
+      "Laajentuneet pupillit, tiilenpunaiset ikenet, hengitysvaikeudet (syanidi)"
     ]
   },
   "what_to_do": {
@@ -157,7 +167,8 @@
     "cs": "Pokud váš pes spolkl nebo rozkousal broskvovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl.",
     "hr": "Ako je tvoj pas progutao ili sažvakao košticu breskve, odmah se obrati veterinaru za savjet. Zapiši kada se to dogodilo i koliko je koštica pojeo.",
     "sv": "Om hunden har svalt eller tuggat på en persikokärna, kontakta veterinären direkt för råd. Notera när det hände och hur många kärnor den åt.",
-    "da": "Kontakt straks din dyrlæge for at få råd hvis din hund har slugt eller tygget på en ferskensten. Skriv ned hvornår det skete, og hvor mange sten hunden har spist."
+    "da": "Kontakt straks din dyrlæge for at få råd hvis din hund har slugt eller tygget på en ferskensten. Skriv ned hvornår det skete, og hvor mange sten hunden har spist.",
+    "fi": "Jos koirasi nieli tai pureskeli persikan kiven, ota heti yhteyttä eläinlääkäriin ja kysy neuvoa. Kirjaa ylös, milloin se tapahtui ja montako kiveä koira söi."
   },
   "serving": {
     "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches.",
@@ -172,7 +183,8 @@
     "cs": "Jen čerstvá dužina nakrájená na malé kostičky, bez stopky a pecky. Broskve z konzervy a sušené vynechte.",
     "hr": "Samo svježe meso ploda, narezano na male kockice, bez peteljke i koštice. Preskoči breskve iz konzerve i sušene breskve.",
     "sv": "Bara färskt fruktkött, i små tärningar, utan stjälk och kärna. Hoppa över persikor på burk och torkade persikor.",
-    "da": "Kun frisk frugtkød i små tern uden stilk og sten. Undgå ferskner på dåse og tørrede ferskner."
+    "da": "Kun frisk frugtkød i små tern uden stilk og sten. Undgå ferskner på dåse og tørrede ferskner.",
+    "fi": "Vain tuoretta hedelmälihaa pieninä kuutioina, varsi ja kivi poistettuina. Jätä säilykepersikat ja kuivatut persikat väliin."
   },
   "child": {
     "en": "Peach stones are dangerous for dogs. Never give your dog a peach stone, and ask a grown-up before sharing any peach.",
@@ -187,7 +199,8 @@
     "cs": "Broskvové pecky jsou pro psy nebezpečné. Nikdy psovi pecku nedávej, a než se s ním o broskev rozdělíš, zeptej se dospělého.",
     "hr": "Koštice breskve opasne su za pse. Nikad ne daj psu košticu breskve i pitaj odraslu osobu prije nego što s njim podijeliš komadić breskve.",
     "sv": "Persikokärnor är farliga för hundar. Ge aldrig din hund en persikokärna, och fråga en vuxen innan du delar med dig av en persika.",
-    "da": "Ferskensten er farlige for hunde. Giv aldrig din hund en ferskensten, og spørg en voksen før du deler en fersken med den."
+    "da": "Ferskensten er farlige for hunde. Giv aldrig din hund en ferskensten, og spørg en voksen før du deler en fersken med den.",
+    "fi": "Persikan kivet ovat vaarallisia koirille. Älä koskaan anna koirallesi persikan kiveä, ja kysy aikuiselta ennen kuin jaat persikkaa."
   },
   "faq": [
     {
@@ -204,7 +217,8 @@
         "cs": "Jsou v pořádku broskve z konzervy?",
         "hr": "Jesu li breskve iz konzerve u redu?",
         "sv": "Går det bra med persikor på burk?",
-        "da": "Er ferskner på dåse i orden?"
+        "da": "Er ferskner på dåse i orden?",
+        "fi": "Sopivatko säilykepersikat?"
       },
       "a": {
         "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
@@ -219,7 +233,8 @@
         "cs": "Nedoporučujeme je, protože broskve z konzervy nebo sušené často obsahují přidaný cukr a další přísady.",
         "hr": "Ne preporučuju se jer breskve iz konzerve i sušene breskve često sadrže dodani šećer i druge sastojke.",
         "sv": "De rekommenderas inte, eftersom persikor på burk och torkade persikor ofta innehåller tillsatt socker och andra ingredienser.",
-        "da": "De frarådes, fordi ferskner på dåse og tørrede ferskner ofte indeholder ekstra sukker og andre ingredienser."
+        "da": "De frarådes, fordi ferskner på dåse og tørrede ferskner ofte indeholder ekstra sukker og andre ingredienser.",
+        "fi": "Niitä ei suositella, koska säilykepersikoissa ja kuivatuissa persikoissa on usein lisättyä sokeria ja muita ainesosia."
       }
     },
     {
@@ -236,7 +251,8 @@
         "cs": "Proč je pecka tak riziková?",
         "hr": "Zašto je koštica tako rizična?",
         "sv": "Varför är kärnan så riskabel?",
-        "da": "Hvorfor er stenen så risikabel?"
+        "da": "Hvorfor er stenen så risikabel?",
+        "fi": "Miksi kivi on niin riskialtis?"
       },
       "a": {
         "en": "It is a choking hazard, can block the intestines, and its seed contains cyanide-releasing compounds.",
@@ -251,7 +267,8 @@
         "cs": "Pecka může způsobit dušení nebo ucpat střeva a její semeno obsahuje látky, ze kterých se uvolňuje kyanid.",
         "hr": "Može izazvati gušenje i začepiti crijeva, a sjemenka u njoj sadrži spojeve koji oslobađaju cijanid.",
         "sv": "Den kan orsaka kvävning och tarmstopp, och fröet i den innehåller ämnen som frigör cyanid.",
-        "da": "Den kan sætte sig fast i halsen og blokere tarmen, og kernen indeholder stoffer der frigiver cyanid."
+        "da": "Den kan sætte sig fast i halsen og blokere tarmen, og kernen indeholder stoffer der frigiver cyanid.",
+        "fi": "Kivi aiheuttaa tukehtumisvaaran, voi tukkia suoliston, ja sen siemenessä on yhdisteitä, joista voi vapautua syanidia."
       }
     }
   ],
@@ -389,6 +406,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f037d470413394d880282db04fee9a8e407a4badfc8c3cab8b3daa999bbb5ef5"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "55dc73eadb1e80300104165b4eb9d944df7f92cbcb683722f22d8224ffcd3afe"
     }
   }
 }

@@ -14,7 +14,8 @@
     "cs": "Losos",
     "hr": "Losos",
     "sv": "Lax",
-    "da": "Laks"
+    "da": "Laks",
+    "fi": "Lohi"
   },
   "question": {
     "en": "Can dogs eat salmon?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst lososa?",
     "hr": "Smiju li psi jesti lososa?",
     "sv": "Får hundar äta lax?",
-    "da": "Må hunde spise laks?"
+    "da": "Må hunde spise laks?",
+    "fi": "Saako koira syödä lohta?"
   },
   "url_slug": {
     "en": "salmon",
@@ -44,7 +46,8 @@
     "cs": "losos",
     "hr": "losos",
     "sv": "lax",
-    "da": "laks"
+    "da": "laks",
+    "fi": "lohi"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, pokud je důkladně tepelně upravený, bez přísad a bez kostí. Tepelně upravený losos je dobrým zdrojem bílkovin a omega-3 mastných kyselin. Syrový nebo nedostatečně tepelně upravený losos bezpečný není a uzený losos je příliš slaný, proto je psovi nedávejte.",
     "hr": "Da, ako je potpuno termički obrađen, bez dodataka i bez kostiju. Termički obrađen losos dobar je izvor bjelančevina i omega-3 masti. Sirov ili nedovoljno termički obrađen losos nije siguran, a dimljeni losos je preslan, zato ih drži podalje od psa.",
     "sv": "Ja, om den är helt tillagad, utan kryddor och utan ben. Tillagad lax är en bra källa till protein och omega-3-fetter. Rå eller otillräckligt tillagad lax är inte ofarlig, och rökt lax är för salt, så håll dem borta från hunden.",
-    "da": "Ja, hvis den er gennemtilberedt, uden tilsætning og uden ben. Tilberedt laks er en god kilde til protein og omega-3-fedtsyrer. Rå eller ikke gennemtilberedt laks er ikke sikker, og røget laks er for salt, så hold dem væk fra din hund."
+    "da": "Ja, hvis den er gennemtilberedt, uden tilsætning og uden ben. Tilberedt laks er en god kilde til protein og omega-3-fedtsyrer. Rå eller ikke gennemtilberedt laks er ikke sikker, og røget laks er for salt, så hold dem væk fra din hund.",
+    "fi": "Saa, jos lohi on täysin kypsennettyä, maustamatonta ja ruodotonta. Kypsennetty lohi on hyvä proteiinin ja omega-3-rasvojen lähde. Raaka tai vajaasti kypsennetty lohi ei ole turvallista, ja savulohi on liian suolaista, joten pidä ne poissa koirasi ulottuvilta."
   },
   "why": {
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
@@ -75,7 +79,8 @@
     "cs": "Syrový losos může obsahovat parazity a bakterie; na tichomořském severozápadě USA může způsobit otravu lososem, která je bez léčby vážná. Losos má drobné, křehké kosti, které mohou způsobit dušení. Uzený a nakládaný losos (lox) obsahuje hodně soli. Koření, oleje a omáčky do psí porce nepatří.",
     "hr": "Sirovi losos može sadržavati parazite i bakterije; na pacifičkom sjeverozapadu SAD-a može izazvati bolest trovanja lososom, koja je ozbiljna ako se ne liječi. Losos ima sitne, krhke kosti koje mogu izazvati gušenje. Dimljeni i soljeni losos imaju puno soli. Začini, ulja i umaci ne pripadaju u pseću porciju.",
     "sv": "Rå lax kan bära på parasiter och bakterier; i nordvästra USA kan den orsaka laxförgiftning (salmon poisoning disease), som är allvarlig om den inte behandlas. Lax har små, sköra ben som kan orsaka kvävning. Rökt och gravad lax innehåller mycket salt. Kryddor, olja och såser hör inte hemma på hundens portion.",
-    "da": "Rå laks kan indeholde parasitter og bakterier; i det nordvestlige USA ved Stillehavet kan den give lakseforgiftning (salmon poisoning disease), som er alvorlig hvis den ikke behandles. Laks har små, skøre ben, der kan sætte sig fast i halsen. Røget og saltet laks indeholder meget salt. Krydderier, olie og saucer hører ikke hjemme i hundens portion."
+    "da": "Rå laks kan indeholde parasitter og bakterier; i det nordvestlige USA ved Stillehavet kan den give lakseforgiftning (salmon poisoning disease), som er alvorlig hvis den ikke behandles. Laks har små, skøre ben, der kan sætte sig fast i halsen. Røget og saltet laks indeholder meget salt. Krydderier, olie og saucer hører ikke hjemme i hundens portion.",
+    "fi": "Raa’assa lohessa voi olla loisia ja bakteereja; Yhdysvaltain Tyynenmeren luoteisrannikolla se voi aiheuttaa lohimyrkytystaudin, joka on vakava, jos sitä ei hoideta. Lohessa on pieniä, hauraita ruotoja, jotka voivat aiheuttaa tukehtumisen. Savulohessa ja graavilohessa on paljon suolaa. Mausteet, öljyt ja kastikkeet eivät kuulu koiran annokseen."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud váš pes snědl syrového lososa, zejména z tichomořského severozápadu USA, zavolejte veterináři a řekněte mu to; sledujte, zda nemá horečku, není slabý, nemá nechuť k jídlu, nezvrací nebo nemá průjem. Pokud pes spolkl kosti a dusí se, zavolejte veterináři hned.",
     "hr": "Ako je tvoj pas pojeo sirovog lososa, osobito s pacifičkog sjeverozapada SAD-a, nazovi veterinara i spomeni to; prati pojavljuju li se vrućica, slabost, gubitak apetita, povraćanje ili proljev. Ako je pas progutao kosti i guši se, odmah nazovi veterinara.",
     "sv": "Om hunden ätit rå lax, särskilt från nordvästra USA, ring veterinären och berätta det; håll utkik efter feber, svaghet, aptitlöshet, kräkningar eller diarré. Om hunden svalt ben och håller på att kvävas, ring veterinären direkt.",
-    "da": "Hvis din hund har spist rå laks, især fra det nordvestlige USA ved Stillehavet, så kontakt din dyrlæge og fortæl om det; hold øje med feber, svaghed, appetitløshed, opkast eller diarré. Hvis din hund har slugt ben og er ved at blive kvalt, skal du kontakte din dyrlæge med det samme."
+    "da": "Hvis din hund har spist rå laks, især fra det nordvestlige USA ved Stillehavet, så kontakt din dyrlæge og fortæl om det; hold øje med feber, svaghed, appetitløshed, opkast eller diarré. Hvis din hund har slugt ben og er ved at blive kvalt, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos koirasi söi raakaa lohta, etenkin Yhdysvaltain Tyynenmeren luoteisrannikolta, soita eläinlääkärille ja kerro siitä; seuraa, ilmeneekö kuumetta, heikkoutta, ruokahaluttomuutta, oksentelua tai ripulia. Jos koirasi nieli ruotoja ja on tukehtumassa, soita eläinlääkärille heti."
   },
   "serving": {
     "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
@@ -106,7 +112,8 @@
     "cs": "Důkladně tepelně upravený (pečený, dušený v páře nebo grilovaný), bez koření, olejů a omáček, filet bez kostí; nikdy syrový ani uzený.",
     "hr": "Potpuno termički obrađen (pečen u pećnici, kuhan na pari ili na roštilju), bez začina, ulja i umaka, file bez kostiju; nikad sirov ili dimljen.",
     "sv": "Helt tillagad (ugnsbakad, ångkokt eller grillad), utan kryddor, olja eller såser, benfri filé; aldrig rå eller rökt.",
-    "da": "Gennemtilberedt (bagt, dampet eller grillet), uden krydderier, olie eller saucer, som filet uden ben; aldrig rå eller røget."
+    "da": "Gennemtilberedt (bagt, dampet eller grillet), uden krydderier, olie eller saucer, som filet uden ben; aldrig rå eller røget.",
+    "fi": "Täysin kypsennettynä (uunissa, höyryssä tai grillissä), maustamatta, ilman öljyjä tai kastikkeita, ruodottomana fileenä; ei koskaan raakana tai savustettuna."
   },
   "child": {
     "en": "Cooked salmon without bones can be a healthy treat for a dog. Raw or smoked salmon is not for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Uvařený losos bez kostí může být pro psa zdravý pamlsek. Syrový nebo uzený losos pro psy není.",
     "hr": "Kuhani losos bez kostiju može biti zdrava poslastica za psa. Sirovi ili dimljeni losos nije za pse.",
     "sv": "Tillagad lax utan ben kan vara en nyttig godbit för en hund. Rå eller rökt lax är inte för hundar.",
-    "da": "Kogt laks uden ben kan være en sund godbid til en hund. Rå eller røget laks er ikke til hunde."
+    "da": "Kogt laks uden ben kan være en sund godbid til en hund. Rå eller røget laks er ikke til hunde.",
+    "fi": "Keitetty lohi ilman ruotoja voi olla koiralle terveellinen herkku. Raaka lohi tai savulohi ei sovi koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou psi jíst uzeného lososa?",
         "hr": "Smiju li psi jesti dimljeni losos?",
         "sv": "Får hundar äta rökt lax?",
-        "da": "Må hunde spise røget laks?"
+        "da": "Må hunde spise røget laks?",
+        "fi": "Saako koira syödä savulohta?"
       },
       "a": {
         "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
@@ -153,7 +162,8 @@
         "cs": "Není to dobrá volba: uzený a nakládaný losos (lox) obsahuje hodně soli.",
         "hr": "To nije dobar izbor: dimljeni i soljeni losos imaju puno soli.",
         "sv": "Det är inget bra val: rökt och gravad lax innehåller mycket salt.",
-        "da": "Det er ikke et godt valg: Røget og saltet laks indeholder meget salt."
+        "da": "Det er ikke et godt valg: Røget og saltet laks indeholder meget salt.",
+        "fi": "Se ei ole hyvä valinta: savulohessa ja graavilohessa on paljon suolaa."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Je losos v krmivu pro psy bezpečný?",
         "hr": "Je li losos u hrani za pse siguran?",
         "sv": "Är lax i hundfoder ofarlig?",
-        "da": "Er laks i hundefoder sikker?"
+        "da": "Er laks i hundefoder sikker?",
+        "fi": "Onko koiranruoan lohi turvallista?"
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
@@ -185,7 +196,8 @@
         "cs": "Losos v komerčních krmivech je obvykle bezpečný, protože je tepelně upravený.",
         "hr": "Losos u gotovoj hrani za pse obično je siguran jer je termički obrađen.",
         "sv": "Lax i färdigfoder är oftast ofarlig eftersom den är tillagad.",
-        "da": "Laks i færdigfoder er som regel sikker, fordi den er tilberedt."
+        "da": "Laks i færdigfoder er som regel sikker, fordi den er tilberedt.",
+        "fi": "Valmisruokien lohi on yleensä turvallista, koska se on kypsennetty."
       }
     }
   ],
@@ -315,6 +327,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8c92a018276d5a0f059056c648f11be026905fe32847cb81cf0d32b624f41dc6"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c41f09135de86274e67380d02abdfaf8c17e0bc8fa396993779a34ce85e285a8"
     }
   }
 }

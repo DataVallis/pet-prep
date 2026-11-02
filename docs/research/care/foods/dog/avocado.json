@@ -14,7 +14,8 @@
     "cs": "Avokádo",
     "hr": "Avokado",
     "sv": "Avokado",
-    "da": "Avocado"
+    "da": "Avocado",
+    "fi": "Avokado"
   },
   "question": {
     "en": "Can dogs eat avocado?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst avokádo?",
     "hr": "Smiju li psi jesti avokado?",
     "sv": "Får hundar äta avokado?",
-    "da": "Må hunde spise avocado?"
+    "da": "Må hunde spise avocado?",
+    "fi": "Saako koira syödä avokadoa?"
   },
   "url_slug": {
     "en": "avocado",
@@ -44,7 +46,8 @@
     "cs": "avokado",
     "hr": "avokado",
     "sv": "avokado",
-    "da": "avocado"
+    "da": "avocado",
+    "fi": "avokado"
   },
   "level": "dangerous",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne, bezpečnější je držet avokádo mimo dosah psů. Někteří veterináři uvádějí, že dužnina jedovatá není, ale slupka, pecka a listy obsahují persin a velká pecka může psa dusit nebo mu ucpat střeva. Avokádo je také velmi tučné, což může vést k zánětu slinivky břišní.",
     "hr": "Ne, sigurnije je držati avokado podalje od pasa. Neki veterinari kažu da meso ploda nije otrovno, ali kora, koštica i listovi sadrže persin, a velika koštica može izazvati gušenje ili začepljenje crijeva. Avokado je i vrlo mastan, što može dovesti do upale gušterače.",
     "sv": "Nej, det är säkrast att hålla avokado borta från hundar. Vissa veterinärer säger att fruktköttet inte är giftigt, men skal, kärna och blad innehåller persin, och den stora kärnan kan få hunden att kvävas eller ge stopp i tarmen. Avokado är också mycket fet, vilket kan leda till bukspottkörtelinflammation.",
-    "da": "Nej, det er sikrest at holde avocado væk fra hunde. Nogle dyrlæger siger at frugtkødet ikke er giftigt, men skallen, stenen og bladene indeholder persin, og den store sten kan sætte sig fast i halsen eller blokere tarmen. Avocado er også meget fed, hvilket kan føre til betændelse i bugspytkirtlen (pankreatitis)."
+    "da": "Nej, det er sikrest at holde avocado væk fra hunde. Nogle dyrlæger siger at frugtkødet ikke er giftigt, men skallen, stenen og bladene indeholder persin, og den store sten kan sætte sig fast i halsen eller blokere tarmen. Avocado er også meget fed, hvilket kan føre til betændelse i bugspytkirtlen (pankreatitis).",
+    "fi": "Ei, avokado on turvallisinta pitää poissa koiran ulottuvilta. Joidenkin eläinlääkärien mukaan hedelmäliha ei ole myrkyllistä, mutta kuori, kivi ja lehdet sisältävät persiiniä, ja iso kivi voi tukehduttaa koiran tai tukkia sen suoliston. Avokado on myös hyvin rasvainen, mikä voi johtaa haimatulehdukseen."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
@@ -75,7 +79,8 @@
     "cs": "Zdroje se neshodují, a proto používáme přísnější úroveň. Podle Merck Veterinary Manual se psi ve srovnání s jinými druhy zdají poměrně odolní, ASPCA za nejohroženější považuje ptáky a králíky a AKC uvádí, že dužnina jedovatá není. Blue Cross označuje persin za jedovatý pro psy. Všechny zdroje se shodují, že pecka může psa dusit nebo způsobit ucpání a že vysoký obsah tuku může vyvolat zánět slinivky břišní.",
     "hr": "Izvori se ne slažu, zato primjenjujemo strožu razinu. Merck Veterinary Manual navodi da su psi naizgled razmjerno otporni u usporedbi s drugim vrstama, ASPCA kao najveću brigu navodi ptice i kuniće, a AKC kaže da meso ploda nije otrovno. Blue Cross persin naziva otrovnim za pse. Svi se slažu da koštica može izazvati gušenje ili začepljenje i da velika količina masti može izazvati upalu gušterače.",
     "sv": "Källorna är oense, så vi använder den strängare nivån. Merck Veterinary Manual skriver att hundar verkar relativt motståndskraftiga jämfört med andra arter, ASPCA pekar ut fåglar och kaniner som mest utsatta, och AKC skriver att fruktköttet inte är giftigt. Blue Cross kallar persin giftigt för hundar. Alla är överens om att kärnan kan få hunden att kvävas eller orsaka stopp och att den höga fetthalten kan ge bukspottkörtelinflammation (pankreatit).",
-    "da": "Kilderne er uenige, så vi følger den strengere vurdering. Merck Veterinary Manual skriver at hunde ser ud til at være forholdsvis modstandsdygtige sammenlignet med andre arter, ASPCA nævner fugle og kaniner som den største bekymring, og AKC skriver at frugtkødet ikke er giftigt. Blue Cross kalder persin giftigt for hunde. Alle er enige om at stenen kan sætte sig fast i halsen eller give blokering, og at det høje fedtindhold kan give betændelse i bugspytkirtlen."
+    "da": "Kilderne er uenige, så vi følger den strengere vurdering. Merck Veterinary Manual skriver at hunde ser ud til at være forholdsvis modstandsdygtige sammenlignet med andre arter, ASPCA nævner fugle og kaniner som den største bekymring, og AKC skriver at frugtkødet ikke er giftigt. Blue Cross kalder persin giftigt for hunde. Alle er enige om at stenen kan sætte sig fast i halsen eller give blokering, og at det høje fedtindhold kan give betændelse i bugspytkirtlen.",
+    "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. Merck Veterinary Manualin mukaan koirat vaikuttavat muihin lajeihin verrattuna melko vastustuskykyisiltä, ASPCA pitää suurimpana huolena lintuja ja kaneja, ja AKC:n mukaan hedelmäliha ei ole myrkyllistä. Blue Cross kutsuu persiiniä koirille myrkylliseksi. Kaikki ovat yhtä mieltä siitä, että kivi voi tukehduttaa koiran tai aiheuttaa tukoksen ja että runsas rasva voi aiheuttaa haimatulehduksen."
   },
   "signs": {
     "en": [
@@ -142,6 +147,11 @@
       "Stenen sætter sig fast i halsen",
       "Tegn på blokering efter at hunden har slugt stenen: gentagne opkast, vil ikke spise, træthed",
       "Utilpashed på grund af det høje fedtindhold, som kan føre til betændelse i bugspytkirtlen"
+    ],
+    "fi": [
+      "Tukehtuminen kiveen",
+      "Tukoksen merkit kiven nielemisen jälkeen: toistuva oksentelu, syömättömyys, väsymys",
+      "Runsaasta rasvasta johtuva huonovointisuus, joka voi johtaa haimatulehdukseen"
     ]
   },
   "what_to_do": {
@@ -157,7 +167,8 @@
     "cs": "Pokud váš pes kousal nebo spolkl avokádovou pecku, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky. Pokud snědl guacamole, zavolejte také veterináři nebo na toxikologickou linku pro zvířata, protože guacamole obvykle obsahuje cibuli a česnek. Poznamenejte si, co a kolik pes snědl.",
     "hr": "Ako je pas žvakao ili progutao košticu avokada, odmah se obrati veterinaru i ne čekaj da se pojave znakovi. Ako je pojeo guacamole, također nazovi veterinara ili telefonsku liniju za otrovanja životinja, jer guacamole obično sadrži luk i češnjak. Zapiši što je pojeo i koliko.",
     "sv": "Om hunden har tuggat på eller svalt en avokadokärna, kontakta veterinären direkt och vänta inte på symtom. Om den har ätit guacamole, ring också veterinären eller en giftrådgivning för djur, eftersom guacamole oftast innehåller lök och vitlök. Notera vad och hur mycket den åt.",
-    "da": "Hvis hunden har tygget på eller slugt en avocadosten, skal du kontakte din dyrlæge med det samme og ikke vente på symptomer. Hvis den har spist guacamole, skal du også ringe til din dyrlæge eller en giftrådgivning for dyr, fordi guacamole som regel indeholder løg og hvidløg. Skriv ned hvad og hvor meget hunden har spist."
+    "da": "Hvis hunden har tygget på eller slugt en avocadosten, skal du kontakte din dyrlæge med det samme og ikke vente på symptomer. Hvis den har spist guacamole, skal du også ringe til din dyrlæge eller en giftrådgivning for dyr, fordi guacamole som regel indeholder løg og hvidløg. Skriv ned hvad og hvor meget hunden har spist.",
+    "fi": "Jos koirasi pureskeli tai nieli avokadon kiven, ota heti yhteyttä eläinlääkäriin äläkä odota oireita. Jos se söi guacamolea, soita myös eläinlääkärille tai eläinten myrkytysneuvontaan, koska guacamolessa on yleensä sipulia ja valkosipulia. Kirjaa ylös, mitä ja kuinka paljon koira söi."
   },
   "serving": null,
   "child": {
@@ -173,7 +184,8 @@
     "cs": "Avokádo není dobrá svačinka pro psa. Velká pecka uvnitř mu může uvíznout v bříšku, a tak avokádo schovej, aby na něj pes nedosáhl.",
     "hr": "Avokado nije dobra grickalica za pse. Velika koštica u njemu može psu zapeti u trbuščiću, zato drži avokado podalje.",
     "sv": "Avokado är inget bra mellanmål för hundar. Den stora kärnan kan fastna i hundens mage, så håll avokado borta.",
-    "da": "Avocado er ikke en god hundesnack. Den store sten indeni kan sætte sig fast i hundens mave, så hold avocadoer væk."
+    "da": "Avocado er ikke en god hundesnack. Den store sten indeni kan sætte sig fast i hundens mave, så hold avocadoer væk.",
+    "fi": "Avokado ei ole hyvä koiran välipala. Sen sisällä oleva iso kivi voi juuttua koiran mahaan, joten pidä avokadot poissa koiran luota."
   },
   "faq": [
     {
@@ -190,7 +202,8 @@
         "cs": "Je guacamole pro psy bezpečné?",
         "hr": "Je li guacamole siguran za pse?",
         "sv": "Är guacamole säkert för hundar?",
-        "da": "Er guacamole sikkert for hunde?"
+        "da": "Er guacamole sikkert for hunde?",
+        "fi": "Onko guacamole koirille turvallista?"
       },
       "a": {
         "en": "No. Guacamole usually contains onion and garlic, which are toxic to dogs.",
@@ -205,7 +218,8 @@
         "cs": "Ne. Guacamole obvykle obsahuje cibuli a česnek, které jsou pro psy jedovaté.",
         "hr": "Nije. Guacamole obično sadrži luk i češnjak, koji su otrovni za pse.",
         "sv": "Nej. Guacamole innehåller oftast lök och vitlök, som är giftiga för hundar.",
-        "da": "Nej. Guacamole indeholder som regel løg og hvidløg, som er giftige for hunde."
+        "da": "Nej. Guacamole indeholder som regel løg og hvidløg, som er giftige for hunde.",
+        "fi": "Ei ole. Guacamolessa on yleensä sipulia ja valkosipulia, jotka ovat koirille myrkyllisiä."
       }
     },
     {
@@ -222,7 +236,8 @@
         "cs": "Co když pes spolkl pecku?",
         "hr": "Što ako je moj pas progutao košticu?",
         "sv": "Vad gör jag om hunden har svalt kärnan?",
-        "da": "Hvad hvis min hund har slugt stenen?"
+        "da": "Hvad hvis min hund har slugt stenen?",
+        "fi": "Entä jos koirani nieli kiven?"
       },
       "a": {
         "en": "Contact your vet right away. The pit can cause a blockage in the gut.",
@@ -237,7 +252,8 @@
         "cs": "Okamžitě se obraťte na veterináře. Pecka může ucpat střeva.",
         "hr": "Odmah se obrati veterinaru. Koštica može izazvati začepljenje crijeva.",
         "sv": "Kontakta veterinären direkt. Kärnan kan orsaka stopp i tarmen.",
-        "da": "Kontakt din dyrlæge med det samme. Stenen kan give tarmblokering."
+        "da": "Kontakt din dyrlæge med det samme. Stenen kan give tarmblokering.",
+        "fi": "Ota heti yhteyttä eläinlääkäriin. Kivi voi aiheuttaa suolitukoksen."
       }
     },
     {
@@ -254,7 +270,8 @@
         "cs": "Je dužnina avokáda pro psy jedovatá?",
         "hr": "Je li meso avokada otrovno za pse?",
         "sv": "Är avokadons fruktkött giftigt för hundar?",
-        "da": "Er avocadoens frugtkød giftigt for hunde?"
+        "da": "Er avocadoens frugtkød giftigt for hunde?",
+        "fi": "Onko avokadon hedelmäliha koirille myrkyllistä?"
       },
       "a": {
         "en": "Sources disagree: some say the flesh is not toxic, others call avocado poisonous to dogs. Because it is also very fatty and the pit is a hazard, we advise keeping it away.",
@@ -269,7 +286,8 @@
         "cs": "Zdroje se neshodují: některé uvádějí, že dužnina jedovatá není, jiné označují avokádo za jedovaté pro psy. Protože je navíc velmi tučné a pecka je nebezpečná, doporučujeme držet ho mimo dosah psa.",
         "hr": "Izvori se ne slažu: neki kažu da meso ploda nije otrovno, drugi avokado nazivaju otrovnim za pse. Budući da je i vrlo mastan, a koštica je opasna, savjetujemo da ga držiš podalje.",
         "sv": "Källorna är oense: vissa säger att fruktköttet inte är giftigt, andra kallar avokado giftig för hundar. Eftersom den också är mycket fet och kärnan är en fara råder vi dig att hålla den borta.",
-        "da": "Kilderne er uenige: nogle siger at frugtkødet ikke er giftigt, andre kalder avocado giftig for hunde. Fordi avocado også er meget fed og stenen er en risiko, råder vi til at holde den væk."
+        "da": "Kilderne er uenige: nogle siger at frugtkødet ikke er giftigt, andre kalder avocado giftig for hunde. Fordi avocado også er meget fed og stenen er en risiko, råder vi til at holde den væk.",
+        "fi": "Lähteet ovat eri mieltä: joidenkin mukaan hedelmäliha ei ole myrkyllistä, toisten mukaan avokado on koirille myrkyllinen. Koska se on myös hyvin rasvainen ja kivi on vaarallinen, suosittelemme pitämään sen poissa koiran ulottuvilta."
       }
     }
   ],
@@ -419,6 +437,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "270ead723eb347e7893c4441ec83bd8b24487f991eba0c15239e99debefcaea9"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "aeef80895ee191e4a5ca67e1c22d04278927d1dd085b939b0360e172ea4f30c2"
     }
   }
 }

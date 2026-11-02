@@ -14,7 +14,8 @@
     "cs": "Švestky",
     "hr": "Šljive",
     "sv": "Plommon",
-    "da": "Blommer"
+    "da": "Blommer",
+    "fi": "Luumut"
   },
   "question": {
     "en": "Can dogs eat plums?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst švestky?",
     "hr": "Smiju li psi jesti šljive?",
     "sv": "Får hundar äta plommon?",
-    "da": "Må hunde spise blommer?"
+    "da": "Må hunde spise blommer?",
+    "fi": "Saako koira syödä luumuja?"
   },
   "url_slug": {
     "en": "plums",
@@ -44,7 +46,8 @@
     "cs": "svestky",
     "hr": "sljive",
     "sv": "plommon",
-    "da": "blommer"
+    "da": "blommer",
+    "fi": "luumut"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Nedoporučuje se. Trocha švestkové dužiny bez pecky není hlavní problém, švestkové pecky jsou ale pro psy jedovaté a mohou způsobit dušení nebo ucpání střev. Stopky, listy a semena švestky obsahují kyanid.",
     "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse, a mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid.",
     "sv": "Nej, det rekommenderas inte. Lite plommonkött utan kärna är inte det stora problemet, men plommonkärnor är giftiga för hundar och kan orsaka kvävning eller tarmstopp. Plommonträdets stjälkar, blad och frön innehåller cyanid.",
-    "da": "Det frarådes. Lidt blommekød uden sten er ikke den største bekymring, men blommesten er giftige for hunde og kan sætte sig fast i halsen eller give tarmblokering. Blommetræets stilke, blade og kerner indeholder cyanid."
+    "da": "Det frarådes. Lidt blommekød uden sten er ikke den største bekymring, men blommesten er giftige for hunde og kan sætte sig fast i halsen eller give tarmblokering. Blommetræets stilke, blade og kerner indeholder cyanid.",
+    "fi": "Ei suositella. Vähäinen määrä luumun hedelmälihaa ilman kiveä ei ole suurin huoli, mutta luumun kivet ovat koiralle myrkyllisiä ja voivat aiheuttaa tukehtumisen tai suolitukoksen. Luumukasvin varsissa, lehdissä ja siemenissä on syanidia."
   },
   "why": {
     "en": "The plum plant is listed as toxic to dogs because its stems, leaves and seeds contain cyanogenic glycosides. A pit can also be swallowed and get stuck. Some vets allow plum flesh as an occasional treat with the pit removed; because the plant itself is listed as toxic, we use the stricter rating. Prunes are even higher in sugar.",
@@ -75,7 +79,8 @@
     "cs": "Švestka je vedena jako rostlina jedovatá pro psy, protože její stopky, listy a semena obsahují kyanogenní glykosidy. Pes může pecku také spolknout a ta mu může někde uvíznout. Někteří veterináři povolují švestkovou dužinu bez pecky jako občasný pamlsek; protože je ale samotná rostlina vedena jako jedovatá, používáme přísnější hodnocení. Sušené švestky mají ještě více cukru.",
     "hr": "Šljiva se navodi kao otrovna za pse jer njezine peteljke, listovi i sjemenke sadrže cijanogene glikozide. Pas može progutati i košticu koja mu zapne. Neki veterinari dopuštaju meso šljive kao povremenu poslasticu, bez koštice; budući da se sama biljka navodi kao otrovna, koristimo strožu ocjenu. Suhe šljive imaju još više šećera.",
     "sv": "Plommonträdet anges som giftigt för hundar eftersom dess stjälkar, blad och frön innehåller cyanogena glykosider. En kärna kan också sväljas och fastna. Vissa veterinärer tillåter plommonkött utan kärna som en godbit ibland; eftersom själva växten anges som giftig använder vi den strängare klassningen. Katrinplommon innehåller ännu mer socker.",
-    "da": "Blommetræet står opført som giftigt for hunde, fordi stilke, blade og kerner indeholder cyanogene glykosider. En sten kan også blive slugt og sætte sig fast. Nogle dyrlæger tillader blommekød uden sten som en godbid en gang imellem; fordi selve planten står opført som giftig, bruger vi den strengere vurdering. Svesker indeholder endnu mere sukker."
+    "da": "Blommetræet står opført som giftigt for hunde, fordi stilke, blade og kerner indeholder cyanogene glykosider. En sten kan også blive slugt og sætte sig fast. Nogle dyrlæger tillader blommekød uden sten som en godbid en gang imellem; fordi selve planten står opført som giftig, bruger vi den strengere vurdering. Svesker indeholder endnu mere sukker.",
+    "fi": "Luumukasvi on luokiteltu koiralle myrkylliseksi, koska sen varsissa, lehdissä ja siemenissä on syanogeenisia glykosideja. Koira voi myös niellä kiven, joka voi juuttua kiinni. Jotkut eläinlääkärit sallivat luumun hedelmälihaa satunnaisena herkkuna, kun kivi on poistettu; koska itse kasvi on luokiteltu myrkylliseksi, käytämme tiukempaa luokitusta. Kuivatuissa luumuissa on vielä enemmän sokeria."
   },
   "signs": {
     "en": [
@@ -142,6 +147,11 @@
       "Tegn på kvælning eller brækfornemmelser",
       "Tegn på blokering: gentagne opkast, spiser ikke, træthed",
       "Udvidede pupiller, teglstensrødt tandkød, vejrtrækningsbesvær (cyanid)"
+    ],
+    "fi": [
+      "Tukehtuminen tai yökkäily",
+      "Tukoksen oireet: toistuva oksentelu, syömättömyys, väsymys",
+      "Laajentuneet pupillit, tiilenpunaiset ikenet, hengitysvaikeudet (syanidi)"
     ]
   },
   "what_to_do": {
@@ -157,7 +167,8 @@
     "cs": "Pokud váš pes snědl švestkovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl.",
     "hr": "Ako je tvoj pas pojeo košticu šljive, odmah se obrati veterinaru. Zapiši kada se to dogodilo i koliko je koštica pojeo.",
     "sv": "Om hunden ätit en plommonkärna, kontakta veterinären direkt. Notera när det hände och hur många kärnor den åt.",
-    "da": "Kontakt straks din dyrlæge hvis din hund har spist en blommesten. Skriv ned hvornår det skete, og hvor mange sten hunden har spist."
+    "da": "Kontakt straks din dyrlæge hvis din hund har spist en blommesten. Skriv ned hvornår det skete, og hvor mange sten hunden har spist.",
+    "fi": "Jos koirasi söi luumun kiven, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, milloin se tapahtui ja montako kiveä koira söi."
   },
   "serving": {
     "en": "If you share any, give only a little fresh flesh with the pit and stem removed. Skip prunes. Check with your vet first.",
@@ -172,7 +183,8 @@
     "cs": "Pokud se o švestku rozdělíte, dejte jen trochu čerstvé dužiny bez pecky a stopky. Sušené švestky vynechte. Nejdřív se poraďte s veterinářem.",
     "hr": "Ako uopće daješ šljivu, daj samo malo svježeg mesa ploda bez koštice i peteljke. Preskoči suhe šljive. Prije toga se posavjetuj s veterinarom.",
     "sv": "Om du delar med dig: bara lite färskt fruktkött utan kärna och stjälk. Hoppa över katrinplommon. Fråga veterinären först.",
-    "da": "Hvis du deler, så giv kun lidt frisk frugtkød uden sten og stilk. Undgå svesker. Spørg din dyrlæge først."
+    "da": "Hvis du deler, så giv kun lidt frisk frugtkød uden sten og stilk. Undgå svesker. Spørg din dyrlæge først.",
+    "fi": "Jos jaat luumua, anna vain vähän tuoretta hedelmälihaa kivi ja varsi poistettuina. Jätä kuivatut luumut väliin. Kysy ensin eläinlääkäriltä."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -187,7 +199,8 @@
     "cs": "Švestkové pecky psům škodí. Nikdy psovi pecku nedávej, a než se s ním o švestku rozdělíš, zeptej se dospělého.",
     "hr": "Koštice šljive loše su za pse. Nikad ne daj psu košticu šljive i pitaj odraslu osobu prije nego što s njim podijeliš komadić šljive.",
     "sv": "Plommonkärnor är dåliga för hundar. Ge aldrig din hund en plommonkärna, och fråga en vuxen innan du delar med dig av ett plommon.",
-    "da": "Blommesten er skadelige for hunde. Giv aldrig din hund en blommesten, og spørg en voksen før du deler en blomme med den."
+    "da": "Blommesten er skadelige for hunde. Giv aldrig din hund en blommesten, og spørg en voksen før du deler en blomme med den.",
+    "fi": "Luumun kivet ovat pahaksi koirille. Älä koskaan anna koirallesi luumun kiveä, ja kysy aikuiselta ennen kuin jaat luumua."
   },
   "faq": [
     {
@@ -204,7 +217,8 @@
         "cs": "Mohou psi jíst sušené švestky?",
         "hr": "Jesu li suhe šljive u redu za pse?",
         "sv": "Går det bra att ge hundar katrinplommon?",
-        "da": "Må hunde få svesker?"
+        "da": "Må hunde få svesker?",
+        "fi": "Sopivatko kuivatut luumut koirille?"
       },
       "a": {
         "en": "Prunes are even higher in sugar than fresh plums, so they are not a great option for dogs.",
@@ -219,7 +233,8 @@
         "cs": "Sušené švestky mají ještě více cukru než čerstvé, takže pro psy nejsou dobrou volbou.",
         "hr": "Suhe šljive imaju još više šećera od svježih, pa nisu dobar izbor za pse.",
         "sv": "Katrinplommon innehåller ännu mer socker än färska plommon, så de är inget bra val för hundar.",
-        "da": "Svesker indeholder endnu mere sukker end friske blommer, så de er ikke et godt valg til hunde."
+        "da": "Svesker indeholder endnu mere sukker end friske blommer, så de er ikke et godt valg til hunde.",
+        "fi": "Kuivatuissa luumuissa on vielä enemmän sokeria kuin tuoreissa, joten ne eivät ole hyvä vaihtoehto koirille."
       }
     }
   ],
@@ -349,6 +364,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "749dd108e6b92880e5079a8b93df7bf661948a85803686f69352886146a41a5e"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "547fcdbf48c8670265495f35ca59597db5f46116faedc0f818129abbb58490ed"
     }
   }
 }

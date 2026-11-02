@@ -14,7 +14,8 @@
     "cs": "Šunka",
     "hr": "Šunka",
     "sv": "Skinka",
-    "da": "Skinke"
+    "da": "Skinke",
+    "fi": "Kinkku"
   },
   "question": {
     "en": "Can dogs eat ham?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst šunku?",
     "hr": "Smiju li psi jesti šunku?",
     "sv": "Får hundar äta skinka?",
-    "da": "Må hunde spise skinke?"
+    "da": "Må hunde spise skinke?",
+    "fi": "Saako koira syödä kinkkua?"
   },
   "url_slug": {
     "en": "ham",
@@ -44,7 +46,8 @@
     "cs": "sunka",
     "hr": "sunka",
     "sv": "skinka",
-    "da": "skinke"
+    "da": "skinke",
+    "fi": "kinkku"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
     "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Kupovna šunka sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
     "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
-    "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg."
+    "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
+    "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta."
   },
   "why": {
     "en": "Ham has a higher fat content than many other meats, and fatty meals are a known trigger of pancreatitis. Most ham is also very salty, and excess salt can be harmful to dogs.",
@@ -75,7 +79,8 @@
     "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit.",
     "hr": "Šunka ima više masti od mnogih drugih vrsta mesa, a masni obroci poznati su okidač upale gušterače. Većina šunke uz to je vrlo slana, a višak soli može psima naštetiti.",
     "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider är en känd utlösande faktor för bukspottkörtelinflammation. Den mesta skinkan är dessutom mycket salt, och för mycket salt kan skada hundar.",
-    "da": "Skinke har et højere fedtindhold end mange andre kødtyper, og fede måltider er en kendt udløser af betændelse i bugspytkirtlen. Det meste skinke er også meget salt, og for meget salt kan være skadeligt for hunde."
+    "da": "Skinke har et højere fedtindhold end mange andre kødtyper, og fede måltider er en kendt udløser af betændelse i bugspytkirtlen. Det meste skinke er også meget salt, og for meget salt kan være skadeligt for hunde.",
+    "fi": "Kinkussa on enemmän rasvaa kuin monessa muussa lihassa, ja rasvaiset ateriat ovat tunnettu haimatulehduksen laukaisija. Useimmat kinkut ovat myös hyvin suolaisia, ja liika suola voi olla koirille haitallista."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Diarré",
       "Vil ikke spise",
       "Træthed, feber"
+    ],
+    "fi": [
+      "Oksentelu, joka voi alkaa vasta 1–4 päivää rasvaisen aterian jälkeen",
+      "Vatsakipu (koira saattaa venyttäytyä ”rukousasentoon”)",
+      "Ripuli",
+      "Haluttomuus syödä",
+      "Väsymys, kuume"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později.",
     "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären om hunden ätit mycket fet mat eller får kräkningar, ont i magen eller blir trött under de följande dagarna. Notera vad den åt och ungefär hur mycket. Tecken på bukspottkörtelinflammation (pankreatit) kan dröja några dagar.",
-    "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere."
+    "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere.",
+    "fi": "Jos koirasi söi paljon rasvaista ruokaa tai jos sillä on seuraavina päivinä oksentelua, vatsakipua tai väsymystä, ota yhteyttä eläinlääkäriin. Kirjaa ylös, mitä koira söi ja suunnilleen kuinka paljon. Haimatulehduksen oireet voivat ilmaantua vasta muutaman päivän viiveellä."
   },
   "serving": null,
   "child": {
@@ -199,7 +212,8 @@
     "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek.",
     "hr": "Šunka je hrana za ljude i preslana je i premasna za pse. Ostavi je za svoj sendvič, a psu daj pseću poslasticu.",
     "sv": "Skinka är människomat som är för salt och fet för hundar. Spara den till din smörgås och ge hunden en hundgodbit.",
-    "da": "Skinke er menneskemad, der er for salt og fed til hunde. Gem den til din sandwich, og giv din hund en hundegodbid."
+    "da": "Skinke er menneskemad, der er for salt og fed til hunde. Gem den til din sandwich, og giv din hund en hundegodbid.",
+    "fi": "Kinkku on ihmisten ruokaa, ja se on koirille liian suolaista ja rasvaista. Pidä se omassa voileivässäsi ja anna koirallesi koiranherkku."
   },
   "faq": [
     {
@@ -216,7 +230,8 @@
         "cs": "Proč je šunka horší než jiné maso?",
         "hr": "Zašto je šunka gora od drugog mesa?",
         "sv": "Varför är skinka sämre än annat kött?",
-        "da": "Hvorfor er skinke værre end andet kød?"
+        "da": "Hvorfor er skinke værre end andet kød?",
+        "fi": "Miksi kinkku on huonompi kuin muu liha?"
       },
       "a": {
         "en": "It has more fat than many meats and store-bought ham contains a great deal of sodium.",
@@ -231,7 +246,8 @@
         "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
         "hr": "Ima više masti od mnogih vrsta mesa, a kupovna šunka sadrži jako mnogo natrija.",
         "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium.",
-        "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium."
+        "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium.",
+        "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia."
       }
     }
   ],
@@ -365,6 +381,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "40eaaa77f6140d7a34856e40e7eaeaff5bb3ba803d6e511c8f0b4ff70ddef50d"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b5a1002909d4f6d75ace1a828ceea1f61028df8cc51f55d2790748987ac44626"
     }
   }
 }

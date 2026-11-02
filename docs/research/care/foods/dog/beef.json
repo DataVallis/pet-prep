@@ -14,7 +14,8 @@
     "cs": "Hovězí maso",
     "hr": "Govedina",
     "sv": "Nötkött",
-    "da": "Oksekød"
+    "da": "Oksekød",
+    "fi": "Naudanliha"
   },
   "question": {
     "en": "Can dogs eat beef?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst hovězí maso?",
     "hr": "Smiju li psi jesti govedinu?",
     "sv": "Får hundar äta nötkött?",
-    "da": "Må hunde spise oksekød?"
+    "da": "Må hunde spise oksekød?",
+    "fi": "Saako koira syödä naudanlihaa?"
   },
   "url_slug": {
     "en": "beef",
@@ -44,7 +46,8 @@
     "cs": "hovezi-maso",
     "hr": "govedina",
     "sv": "notkott",
-    "da": "oksekoed"
+    "da": "oksekoed",
+    "fi": "naudanliha"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, čisté tepelně upravené hovězí maso bez tuku může být zdravým zdrojem bílkovin. Vynechte sůl, koření a přísady jako cibuli a česnek, nikdy nedávejte tepelně upravené kosti a vyhněte se syrovému hovězímu, které může přenášet bakterie.",
     "hr": "Da, obična termički obrađena govedina bez masnoće može biti zdrav izvor bjelančevina. Izostavi sol, začine i dodatke poput luka i češnjaka, nikad ne daj termički obrađene kosti i izbjegavaj sirovu govedinu, koja može prenositi bakterije.",
     "sv": "Ja, naturellt tillagat nötkött med fettet bortskuret kan vara en nyttig proteinkälla. Hoppa över salt, kryddor och tillbehör som lök och vitlök, ge aldrig tillagade ben, och undvik rått nötkött, som kan bära på bakterier.",
-    "da": "Ja, rent, tilberedt oksekød, hvor fedtet er skåret af, kan være en sund proteinkilde. Udelad salt, krydderier og tilbehør som løg og hvidløg, giv aldrig tilberedte knogler, og undgå råt oksekød, som kan indeholde bakterier."
+    "da": "Ja, rent, tilberedt oksekød, hvor fedtet er skåret af, kan være en sund proteinkilde. Udelad salt, krydderier og tilbehør som løg og hvidløg, giv aldrig tilberedte knogler, og undgå råt oksekød, som kan indeholde bakterier.",
+    "fi": "Kyllä, maustamaton kypsennetty naudanliha, josta rasva on leikattu pois, voi olla terveellinen proteiininlähde. Jätä pois suola, mausteet ja täytteet, kuten sipuli ja valkosipuli, älä koskaan anna kypsennettyjä luita ja vältä raakaa naudanlihaa, jossa voi olla bakteereja."
   },
   "why": {
     "en": "Unseasoned, cooked beef can be a healthy protein, cut into bite-sized pieces with the fat trimmed. Burgers and steaks often contain salt, spices and toppings that can be dangerous; onions and garlic are toxic to dogs. Raw steak or burger can carry Salmonella and E. coli, and cooked bones of any kind should never be given.",
@@ -75,7 +79,8 @@
     "cs": "Nekořeněné, tepelně upravené hovězí maso nakrájené na malé kousky a zbavené tuku může být zdravou bílkovinou. Burgery a steaky často obsahují sůl, koření a přísady, které mohou být nebezpečné; cibule a česnek jsou pro psy jedovaté. Syrový steak nebo burger může přenášet salmonelu a E. coli a tepelně upravené kosti jakéhokoli druhu se nikdy nesmějí dávat.",
     "hr": "Nezačinjena, termički obrađena govedina može biti zdrav izvor bjelančevina, narezana na komadiće za jedan zalogaj i bez masnoće. Pljeskavice i odresci često sadrže sol, začine i dodatke koji mogu biti opasni; luk i češnjak otrovni su za pse. Sirovi odrezak ili pljeskavica mogu prenositi salmonelu i E. coli, a termički obrađene kosti bilo koje vrste nikad se ne smiju davati.",
     "sv": "Okryddat, tillagat nötkött kan vara ett nyttigt protein, skuret i små bitar med fettet bortskuret. Hamburgare och biffar innehåller ofta salt, kryddor och tillbehör som kan vara farliga; lök och vitlök är giftiga för hundar. Rå biff eller hamburgare kan bära på salmonella och E. coli, och tillagade ben av något slag ska aldrig ges.",
-    "da": "Ukrydret, tilberedt oksekød kan være en sund proteinkilde, skåret i mundrette stykker og med fedtet skåret af. Burgere og bøffer indeholder ofte salt, krydderier og tilbehør, som kan være farlige; løg og hvidløg er giftige for hunde. Rå bøf eller burger kan indeholde salmonella og E. coli, og tilberedte knogler af nogen art må aldrig gives."
+    "da": "Ukrydret, tilberedt oksekød kan være en sund proteinkilde, skåret i mundrette stykker og med fedtet skåret af. Burgere og bøffer indeholder ofte salt, krydderier og tilbehør, som kan være farlige; løg og hvidløg er giftige for hunde. Rå bøf eller burger kan indeholde salmonella og E. coli, og tilberedte knogler af nogen art må aldrig gives.",
+    "fi": "Maustamaton, kypsennetty naudanliha voi olla terveellinen proteiininlähde, kun se leikataan suupalan kokoisiksi paloiksi ja rasva poistetaan. Hampurilaisissa ja pihveissä on usein suolaa, mausteita ja täytteitä, jotka voivat olla vaarallisia; sipuli ja valkosipuli ovat koirille myrkyllisiä. Raa’assa pihvissä tai jauhelihapihvissä voi olla salmonellaa ja E. coli -bakteeria, eikä minkäänlaisia kypsennettyjä luita saa koskaan antaa."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud váš pes snědl tučné nebo kořeněné hovězí, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
     "hr": "Ako je pas pojeo masnu ili začinjenu govedinu, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Om hunden har ätit fett eller kryddat nötkött: håll utkik efter kräkningar, diarré eller ont i magen och ring veterinären om det dyker upp. Om den har ätit tillagade ben eller mat med lök eller vitlök, ring veterinären direkt.",
-    "da": "Hvis hunden har spist fedt eller krydret oksekød, skal du holde øje med opkast, diarré eller mavesmerter og ringe til din dyrlæge hvis de opstår. Hvis den har spist tilberedte knogler eller mad med løg eller hvidløg, skal du ringe til din dyrlæge med det samme."
+    "da": "Hvis hunden har spist fedt eller krydret oksekød, skal du holde øje med opkast, diarré eller mavesmerter og ringe til din dyrlæge hvis de opstår. Hvis den har spist tilberedte knogler eller mad med løg eller hvidløg, skal du ringe til din dyrlæge med det samme.",
+    "fi": "Jos koirasi söi rasvaista tai maustettua naudanlihaa, seuraa, ilmeneekö oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee. Jos se söi kypsennettyjä luita tai ruokaa, jossa oli sipulia tai valkosipulia, soita heti eläinlääkärille."
   },
   "serving": {
     "en": "Plain, unseasoned, fully cooked beef, fat trimmed, boneless, in bite-sized pieces.",
@@ -106,7 +112,8 @@
     "cs": "Čisté, nekořeněné, důkladně tepelně upravené hovězí maso bez tuku a bez kostí, v malých kouscích.",
     "hr": "Obična, nezačinjena, potpuno termički obrađena govedina, bez masnoće i kostiju, u komadićima za jedan zalogaj.",
     "sv": "Naturellt, okryddat, genomstekt eller genomkokt nötkött, med fettet bortskuret, benfritt, i små bitar.",
-    "da": "Rent, ukrydret, gennemtilberedt oksekød med fedtet skåret af, uden ben, i mundrette stykker."
+    "da": "Rent, ukrydret, gennemtilberedt oksekød med fedtet skåret af, uden ben, i mundrette stykker.",
+    "fi": "Maustamaton, täysin kypsennetty naudanliha ilman rasvaa ja luita, suupalan kokoisina paloina."
   },
   "child": {
     "en": "A few bites of plain cooked beef can be a treat. Burgers with onions or sauce are only for people.",
@@ -121,7 +128,8 @@
     "cs": "Pár soust čistého tepelně upraveného hovězího může být pamlsek. Burgery s cibulí nebo omáčkou jsou jen pro lidi.",
     "hr": "Nekoliko zalogaja obične kuhane govedine može biti poslastica. Pljeskavice s lukom ili umakom samo su za ljude.",
     "sv": "Några bitar kokt nötkött utan kryddor kan vara en godbit. Hamburgare med lök eller sås är bara för människor.",
-    "da": "Et par mundfulde almindeligt kogt oksekød kan være en godbid. Burgere med løg eller sovs er kun til mennesker."
+    "da": "Et par mundfulde almindeligt kogt oksekød kan være en godbid. Burgere med løg eller sovs er kun til mennesker.",
+    "fi": "Muutama suupala maustamatonta keitettyä naudanlihaa voi olla herkku. Hampurilaiset, joissa on sipulia tai kastiketta, ovat vain ihmisille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Může můj pes kousnout do mého burgeru?",
         "hr": "Smije li moj pas dobiti zalogaj moje pljeskavice?",
         "sv": "Får hunden ta en tugga av min hamburgare?",
-        "da": "Må min hund få en bid af min burger?"
+        "da": "Må min hund få en bid af min burger?",
+        "fi": "Saako koirani haukata palan hampurilaisestani?"
       },
       "a": {
         "en": "Better not: burgers often contain salt, spices and toppings such as onion that can be dangerous. Plain cooked meat is the safer choice.",
@@ -153,7 +162,8 @@
         "cs": "Raději ne: burgery často obsahují sůl, koření a přísady jako cibuli, které mohou být nebezpečné. Čisté tepelně upravené maso je bezpečnější volba.",
         "hr": "Bolje ne: pljeskavice često sadrže sol, začine i dodatke poput luka, koji mogu biti opasni. Nezačinjeno termički obrađeno meso sigurniji je izbor.",
         "sv": "Helst inte: hamburgare innehåller ofta salt, kryddor och tillbehör som lök, som kan vara farliga. Naturellt tillagat kött är ett säkrare val.",
-        "da": "Helst ikke: burgere indeholder ofte salt, krydderier og tilbehør som løg, der kan være farlige. Almindeligt tilberedt kød er det sikrere valg."
+        "da": "Helst ikke: burgere indeholder ofte salt, krydderier og tilbehør som løg, der kan være farlige. Almindeligt tilberedt kød er det sikrere valg.",
+        "fi": "Mieluummin ei: hampurilaisissa on usein suolaa, mausteita ja täytteitä, kuten sipulia, jotka voivat olla vaarallisia. Maustamaton kypsennetty liha on turvallisempi valinta."
       }
     }
   ],
@@ -269,6 +279,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d315da9bfec91985bc1030bc64a9a373c7b70e709ea1ab7e7d2030db3ca3ffc6"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "24819f5cc2f0204318f42fa8ad4f2583e473141a14a5db04ddda48d1292f4071"
     }
   }
 }

@@ -7,7 +7,8 @@
     "cs": "Brusinky",
     "hr": "Brusnice",
     "sv": "Tranbär",
-    "da": "Tranebær"
+    "da": "Tranebær",
+    "fi": "Karpalot"
   },
   "question": {
     "en": "Can cats eat cranberries?",
@@ -15,7 +16,8 @@
     "cs": "Mohou kočky jíst brusinky?",
     "hr": "Smiju li mačke jesti brusnice?",
     "sv": "Får katter äta tranbär?",
-    "da": "Må katte spise tranebær?"
+    "da": "Må katte spise tranebær?",
+    "fi": "Saako kissa syödä karpaloita?"
   },
   "url_slug": {
     "en": "cranberries",
@@ -23,7 +25,8 @@
     "cs": "brusinky",
     "hr": "brusnice",
     "sv": "tranbar",
-    "da": "tranebaer"
+    "da": "tranebaer",
+    "fi": "karpalot"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "cs": "Ano, pár brusinek je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje brusinky za bezpečné pro zvířata, syrové i zpracované. Sušené brusinky, džus, omáčka a želé však často obsahují přidaný cukr nebo sladidla, proto nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
     "hr": "Da, nekoliko brusnica u redu je kao povremena poslastica. Pet Poison Helpline navodi da su brusnice sigurne za ljubimce, sirove ili prerađene, ali sušene brusnice, sok, umak i žele često imaju dodan šećer ili sladila, pa najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
     "sv": "Ja, några tranbär går bra som godbit någon gång ibland. Pet Poison Helpline kallar tranbär säkra för husdjur, råa eller bearbetade, men torkade tranbär, juice, sås och gelé har ofta tillsatt socker eller sötningsmedel, så kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor.",
-    "da": "Ja, nogle få tranebær er fine som en godbid en gang imellem. Pet Poison Helpline kalder tranebær sikre for kæledyr, både rå og forarbejdede, men tørrede tranebær, juice, sauce og gelé har ofte tilsat sukker eller sødestoffer, så tjek først varedeklarationen for xylitol eller ingredienser fra vindruer."
+    "da": "Ja, nogle få tranebær er fine som en godbid en gang imellem. Pet Poison Helpline kalder tranebær sikre for kæledyr, både rå og forarbejdede, men tørrede tranebær, juice, sauce og gelé har ofte tilsat sukker eller sødestoffer, så tjek først varedeklarationen for xylitol eller ingredienser fra vindruer.",
+    "fi": "Saa, muutama karpalo sopii satunnaiseksi herkuksi. Pet Poison Helplinen mukaan karpalot ovat lemmikeille turvallisia sekä raakoina että jalostettuina, mutta kuivatuissa karpaloissa, mehussa, kastikkeessa ja hyytelössä on usein lisättyä sokeria tai makeutusaineita, joten tarkista ensin pakkausmerkinnöistä, ettei niissä ole ksylitolia tai viinirypäleestä peräisin olevia ainesosia."
   },
   "why": {
     "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "cs": "Pet Poison Helpline na stránce o podzimních potravinách bezpečných pro zvířata, která zmiňuje i kočky, uvádí, že brusinky jsou pro zvířata bezpečné syrové i zpracované. Sušené brusinky, džus, omáčka a želé často obsahují přidaný cukr nebo jiná sladidla a některé výrobky mohou obsahovat toxické složky, jako je xylitol nebo deriváty hroznů. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Pet Poison Helpline na stranici o jesenskim namirnicama sigurnima za ljubimce, koja spominje i mačke, navodi da su brusnice sigurne za ljubimce i sirove i prerađene. Sušene brusnice, sok, umak i žele često sadrže dodan šećer ili druga sladila, a neki proizvodi mogu sadržavati otrovne sastojke poput ksilitola ili derivata grožđa. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "Pet Poison Helpline skriver på en sida om höstens husdjurssäkra mat, som även nämner katter, att tranbär är säkra för husdjur både råa och bearbetade. Torkade tranbär, juice, sås och gelé innehåller ofta tillsatt socker eller andra sötningsmedel, och vissa produkter kan innehålla giftiga ingredienser som xylitol eller ingredienser från vindruvor. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "På en side om efterårsmad der er sikker for kæledyr, og som også nævner katte, skriver Pet Poison Helpline at tranebær er sikre for kæledyr, både rå og forarbejdede. Tørrede tranebær, juice, sauce og gelé indeholder ofte tilsat sukker eller andre sødestoffer, og nogle produkter kan indeholde giftige ingredienser som xylitol eller ingredienser fra vindruer. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave."
+    "da": "På en side om efterårsmad der er sikker for kæledyr, og som også nævner katte, skriver Pet Poison Helpline at tranebær er sikre for kæledyr, både rå og forarbejdede. Tørrede tranebær, juice, sauce og gelé indeholder ofte tilsat sukker eller andre sødestoffer, og nogle produkter kan indeholde giftige ingredienser som xylitol eller ingredienser fra vindruer. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "fi": "Pet Poison Helpline kertoo lemmikeille turvallisia syysruokia käsittelevällä sivullaan, joka mainitsee myös kissat, että karpalot ovat lemmikeille turvallisia sekä raakoina että jalostettuina. Kuivatuissa karpaloissa, mehussa, kastikkeessa ja hyytelössä on usein lisättyä sokeria tai muita makeutusaineita, ja joissakin tuotteissa voi olla myrkyllisiä ainesosia, kuten ksylitolia tai viinirypäleestä peräisin olevia aineita. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitäisi olla vain pieni osa päivittäisestä ruoasta, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
-    "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge."
+    "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
+    "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
@@ -57,7 +63,8 @@
     "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky. U sušených brusinek, džusu, omáčky nebo želé nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
     "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke. Kod sušenih brusnica, soka, umaka ili želea najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
     "sv": "Några bär då och då, inräknade i kattens dagliga matranson. För torkade tranbär, juice, sås eller gelé: kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor.",
-    "da": "Nogle få bær en gang imellem, regnet med i kattens daglige mad. Ved tørrede tranebær, juice, sauce eller gelé skal du først tjekke varedeklarationen for xylitol eller ingredienser fra vindruer."
+    "da": "Nogle få bær en gang imellem, regnet med i kattens daglige mad. Ved tørrede tranebær, juice, sauce eller gelé skal du først tjekke varedeklarationen for xylitol eller ingredienser fra vindruer.",
+    "fi": "Muutama marja silloin tällöin, osana kissasi päivittäistä ruoka-annosta. Tarkista kuivattujen karpaloiden, mehun, kastikkeen tai hyytelön pakkausmerkinnöistä ensin, ettei niissä ole ksylitolia tai viinirypäleestä peräisin olevia ainesosia."
   },
   "child": {
     "en": "A few cranberries can be a cat treat now and then. Ask a grown-up to check sweet cranberry snacks first.",
@@ -65,7 +72,8 @@
     "cs": "Pár brusinek může být pro kočku občas pamlsek. Sladké brusinkové dobroty ať nejdřív zkontroluje dospělý.",
     "hr": "Nekoliko brusnica povremeno može biti poslastica za macu. Zamoli odraslu osobu da najprije provjeri slatke grickalice od brusnica.",
     "sv": "Några tranbär kan bli en godbit för katten då och då. Be en vuxen att först kolla söta tranbärsprodukter.",
-    "da": "Nogle få tranebær kan være en godbid til en kat en gang imellem. Bed en voksen om at tjekke søde tranebærsnacks først."
+    "da": "Nogle få tranebær kan være en godbid til en kat en gang imellem. Bed en voksen om at tjekke søde tranebærsnacks først.",
+    "fi": "Muutama karpalo voi olla kissan herkku silloin tällöin. Pyydä aikuista tarkistamaan makeat karpalonaposteltavat ensin."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "cs": "Jsou sušené brusinky pro kočky v pořádku?",
         "hr": "Jesu li sušene brusnice u redu za mačke?",
         "sv": "Går torkade tranbär bra för katter?",
-        "da": "Er tørrede tranebær okay for katte?"
+        "da": "Er tørrede tranebær okay for katte?",
+        "fi": "Sopivatko kuivatut karpalot kissoille?"
       },
       "a": {
         "en": "Dried cranberries often have added sugar or sweeteners. Check the label first and skip any product with xylitol or grape ingredients.",
@@ -83,7 +92,8 @@
         "cs": "Sušené brusinky často obsahují přidaný cukr nebo sladidla. Nejdřív zkontrolujte etiketu a vyhněte se všem výrobkům s xylitolem nebo se složkami z hroznů.",
         "hr": "Sušene brusnice često imaju dodan šećer ili sladila. Najprije provjeri deklaraciju i preskoči svaki proizvod s ksilitolom ili sastojcima od grožđa.",
         "sv": "Torkade tranbär har ofta tillsatt socker eller sötningsmedel. Kolla först innehållsförteckningen och hoppa över produkter med xylitol eller ingredienser från vindruvor.",
-        "da": "Tørrede tranebær har ofte tilsat sukker eller sødestoffer. Tjek først varedeklarationen, og spring ethvert produkt med xylitol eller ingredienser fra vindruer over."
+        "da": "Tørrede tranebær har ofte tilsat sukker eller sødestoffer. Tjek først varedeklarationen, og spring ethvert produkt med xylitol eller ingredienser fra vindruer over.",
+        "fi": "Kuivatuissa karpaloissa on usein lisättyä sokeria tai makeutusaineita. Tarkista ensin pakkausmerkinnät ja jätä väliin tuotteet, joissa on ksylitolia tai viinirypäleestä peräisin olevia ainesosia."
       }
     },
     {
@@ -93,7 +103,8 @@
         "cs": "Potřebují kočky ovoce?",
         "hr": "Trebaju li mačke voće?",
         "sv": "Behöver katter frukt?",
-        "da": "Har katte brug for frugt?"
+        "da": "Har katte brug for frugt?",
+        "fi": "Tarvitsevatko kissat hedelmiä?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -101,7 +112,8 @@
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
-        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
+        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
+        "fi": "Eivät tarvitse. Kissat ovat lihansyöjiä: ne tarvitsevat lihassa olevia ravintoaineita eivätkä tarvitse ruokavalioonsa hedelmiä tai vihanneksia. Hedelmät voivat olla vain pieni lisä."
       }
     }
   ],
@@ -196,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "addf0ce6850aef0d730601193992010324a41dd837a649f7dd16d37fc6951dae"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4b1c83359ffe8d7dc7866cfd7b58d7dfe698ddd5f144f64f3b786f5ef1e12221"
     }
   }
 }

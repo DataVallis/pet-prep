@@ -14,7 +14,8 @@
     "cs": "Hrozny",
     "hr": "Grožđe",
     "sv": "Vindruvor",
-    "da": "Vindruer"
+    "da": "Vindruer",
+    "fi": "Viinirypäleet"
   },
   "question": {
     "en": "Can cats eat grapes?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst hrozny?",
     "hr": "Smiju li mačke jesti grožđe?",
     "sv": "Får katter äta vindruvor?",
-    "da": "Må katte spise vindruer?"
+    "da": "Må katte spise vindruer?",
+    "fi": "Saako kissa syödä viinirypäleitä?"
   },
   "url_slug": {
     "en": "grapes",
@@ -44,7 +46,8 @@
     "cs": "hrozny",
     "hr": "grozde",
     "sv": "vindruvor",
-    "da": "vindruer"
+    "da": "vindruer",
+    "fi": "viinirypaleet"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Hrozny patří mezi potraviny toxické pro kočky a mohou způsobit selhání ledvin. Úplně se jim vyhněte, i v malém množství, a pokud je kočka sní, zavolejte veterináři.",
     "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke, a može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
     "sv": "Nej. Vindruvor finns på listan över livsmedel som är giftiga för katter, och de kan orsaka njursvikt. Undvik dem helt, även i små mängder, och ring veterinären om katten äter någon.",
-    "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogen."
+    "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogen.",
+    "fi": "Ei saa. Viinirypäleet kuuluvat kissoille myrkyllisiin ruokiin, ja niiden syöminen voi aiheuttaa munuaisten vajaatoiminnan. Vältä niitä kokonaan, pieniäkin määriä, ja soita eläinlääkärille, jos kissasi syö niitä."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes can cause kidney failure in cats, and that cats with chronic kidney disease may be at greater risk. Grape poisoning in cats is rare and not well understood, and some sources only describe it in dogs, so we use the stricter level: treat any amount as an emergency.",
@@ -75,7 +79,8 @@
     "cs": "Organizace na ochranu koček varují, že hrozny mohou u koček způsobit selhání ledvin a že kočky s chronickým onemocněním ledvin mohou být ohroženy víc. Otrava hrozny je u koček vzácná a není dobře prozkoumaná a některé zdroje ji popisují jen u psů, proto používáme přísnější hodnocení: jakékoli množství berte jako naléhavý stav.",
     "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe kod mačaka može izazvati zatajenje bubrega te da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku. Otrovanje grožđem kod mačaka rijetko je i nije dobro istraženo, a neki ga izvori opisuju samo kod pasa, pa se držimo strože razine: svaku količinu smatraj hitnim slučajem.",
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall.",
-    "da": "Organisationer for kattevelfærd advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være i større risiko. Vindrueforgiftning hos katte er sjælden, og man ved ikke meget om den, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en akut situation."
+    "da": "Organisationer for kattevelfærd advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være i større risiko. Vindrueforgiftning hos katte er sjælden, og man ved ikke meget om den, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en akut situation.",
+    "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "da": [
       "Opkast, ofte inden for et døgn"
+    ],
+    "fi": [
+      "Oksentelu, usein vuorokauden kuluessa"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik kuliček hroznů kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je bobica grožđa mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera hur många vindruvor katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange vindruer din kat har spist, og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange vindruer din kat har spist, og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, kuinka monta viinirypälettä kissasi söi ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "cs": "Hrozny nám chutnají, ale pro kočky nejsou bezpečné. Nech si je na talíři, a když kočička nějakou kuličku sní, řekni to dospělému.",
     "hr": "Grožđe je nama fino, ali za mace nije sigurno. Drži ga na svom tanjuru i reci odrasloj osobi ako maca pojede bobicu grožđa.",
     "sv": "Vindruvor är goda för oss men inte säkra för katter. Låt dem ligga kvar på din tallrik och säg till en vuxen om katten äter en.",
-    "da": "Vindruer smager godt for os, men de er ikke sikre for katte. Lad dem blive på din tallerken, og sig det til en voksen hvis din kat spiser en."
+    "da": "Vindruer smager godt for os, men de er ikke sikre for katte. Lad dem blive på din tallerken, og sig det til en voksen hvis din kat spiser en.",
+    "fi": "Viinirypäleet ovat meistä herkullisia, mutta ne eivät ole turvallisia kissoille. Pidä ne lautasellasi ja kerro aikuiselle, jos kisu syö sellaisen."
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "cs": "Jsou kočky s onemocněním ledvin ohroženy víc?",
         "hr": "Jesu li mačke s bolešću bubrega izložene većem riziku?",
         "sv": "Löper katter med njursjukdom större risk?",
-        "da": "Er katte med nyresygdom i større risiko?"
+        "da": "Er katte med nyresygdom i større risiko?",
+        "fi": "Ovatko munuaissairaat kissat suuremmassa vaarassa?"
       },
       "a": {
         "en": "Cats Protection says cats with chronic kidney disease may be at greater risk from grapes.",
@@ -179,7 +190,8 @@
         "cs": "Podle Cats Protection mohou být kočky s chronickým onemocněním ledvin hrozny ohroženy víc.",
         "hr": "Cats Protection navodi da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku od grožđa.",
         "sv": "Enligt Cats Protection kan katter med kronisk njursjukdom löpa större risk att bli sjuka av vindruvor.",
-        "da": "Cats Protection skriver at katte med kronisk nyresygdom kan være i større risiko ved vindruer."
+        "da": "Cats Protection skriver at katte med kronisk nyresygdom kan være i større risiko ved vindruer.",
+        "fi": "Cats Protectionin mukaan kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa viinirypäleiden vuoksi."
       }
     }
   ],
@@ -297,6 +309,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "516dbad434bdaa9c75fd5f745436247514a7f4d7bdfccd4d2a3e67b0e85b03fa"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16a922d7280dd5f1f1a00ffa96f9c5153b70252847e791097562f4b8b889dd8a"
     }
   }
 }

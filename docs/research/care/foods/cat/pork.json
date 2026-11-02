@@ -14,7 +14,8 @@
     "cs": "Vepřové maso",
     "hr": "Svinjetina",
     "sv": "Fläskkött",
-    "da": "Svinekød"
+    "da": "Svinekød",
+    "fi": "Sianliha"
   },
   "question": {
     "en": "Can cats eat pork?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst vepřové maso?",
     "hr": "Smiju li mačke jesti svinjetinu?",
     "sv": "Får katter äta fläskkött?",
-    "da": "Må katte spise svinekød?"
+    "da": "Må katte spise svinekød?",
+    "fi": "Saako kissa syödä sianlihaa?"
   },
   "url_slug": {
     "en": "pork",
@@ -44,7 +46,8 @@
     "cs": "veprove-maso",
     "hr": "svinjetina",
     "sv": "flaskkott",
-    "da": "svinekoed"
+    "da": "svinekoed",
+    "fi": "sianliha"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného vepřového masa je v pořádku jako občasný pamlsek. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové vepřové se nedoporučuje.",
     "hr": "Da, malo obične, dobro termički obrađene svinjetine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se svinjetina ne preporučuje.",
     "sv": "Ja, lite naturellt, ordentligt tillagat fläskkött går bra som godbit någon gång ibland. Skär bort fettet, ta bort alla ben och krydda inte. Rått fläskkött rekommenderas inte.",
-    "da": "Ja, lidt naturelt, gennemtilberedt svinekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt svinekød anbefales ikke."
+    "da": "Ja, lidt naturelt, gennemtilberedt svinekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt svinekød anbefales ikke.",
+    "fi": "Saa. Vähän maustamatonta, hyvin kypsennettyä sianlihaa sopii satunnaiseksi herkuksi. Leikkaa rasva pois, poista kaikki luut äläkä lisää mausteita. Raakaa sianlihaa ei suositella."
   },
   "why": {
     "en": "Pork is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter. Ham is a different food and is covered separately.",
@@ -75,7 +79,8 @@
     "cs": "Vepřové patří k nejběžnějším zdrojům bílkovin v krmivech pro kočky. Jako domácí pamlsek musí být řádně tepelně upravené: International Cat Care varuje, že syrové nebo nedostatečně tepelně upravené maso, například hovězí, jehněčí a vepřové, může přenášet toxoplazmu, a doporučuje krmit jen řádně tepelně upravenou potravu. Tučné odřezky RSPCA Australia řadí mezi potraviny, které se kočkám nemají dávat, a tepelně upravené kosti se mohou roztříštit. Šunka je jiná potravina a věnujeme se jí zvlášť.",
     "hr": "Svinjetina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davati samo dobro termički obrađenu hranu. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti. Šunka je druga namirnica i opisana je zasebno.",
     "sv": "Fläskkött är ett av de vanligaste proteinerna i kattmat. Som godbit hemma måste det vara ordentligt tillagat: International Cat Care varnar för att rått eller otillräckligt tillagat kött, som nöt-, lamm- och fläskkött, kan bära på toxoplasma och råder till att bara ge ordentligt tillagad mat. Fettrester från kött finns på RSPCA Australias lista över sådant man inte ska ge, och tillagade ben kan splittras. Skinka är ett annat livsmedel och beskrivs separat.",
-    "da": "Svinekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som oksekød, lammekød og svinekød kan indeholde Toxoplasma, og anbefaler kun at give ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre. Skinke er en anden fødevare og behandles for sig."
+    "da": "Svinekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som oksekød, lammekød og svinekød kan indeholde Toxoplasma, og anbefaler kun at give ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre. Skinke er en anden fødevare og behandles for sig.",
+    "fi": "Sianliha on yksi kissanruokien yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen on oltava kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai riittämättömästi kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla toksoplasmaa, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset leikkuutähteet ovat RSPCA Australian listalla ruoista, joita ei pidä antaa, ja kypsennetyt luut voivat sirpaloitua. Kinkku on eri ruoka, ja sitä käsitellään erikseen."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka spolkla tepelně upravenou kost, zavolejte veterináři.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka progutala termički obrađenu kost, nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
-    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge."
+    "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge.",
+    "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai saa ripulin sen jälkeen, lopeta ja kysy eläinlääkäriltä. Jos kissasi nieli kypsennetyn luun, soita eläinlääkärille."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -106,7 +112,8 @@
     "cs": "Důkladně tepelně upravené, bez přísad, libové, bez kostí a nekořeněné; občas několik malých kousků.",
     "hr": "Dobro termički obrađena, obična, nemasna, bez kostiju i bez začina; nekoliko malih komadića povremeno.",
     "sv": "Ordentligt tillagat, naturellt, magert, utan ben och okryddat; några små bitar då och då.",
-    "da": "Gennemtilberedt, naturelt, magert, uden knogler og uden krydderier; et par små stykker en gang imellem."
+    "da": "Gennemtilberedt, naturelt, magert, uden knogler og uden krydderier; et par små stykker en gang imellem.",
+    "fi": "Hyvin kypsennettynä, pelkkänä, vähärasvaisena, luuttomana ja maustamattomana; muutama pieni pala silloin tällöin."
   },
   "child": {
     "en": "A tiny bit of plain cooked pork can be a treat. A grown-up should cook it and take out the bones.",
@@ -121,7 +128,8 @@
     "cs": "Malinký kousek obyčejného, dobře propečeného vepřového může být pamlsek. Připravit ho a vyndat z něj kosti by měl dospělý.",
     "hr": "Mrvica obične kuhane svinjetine može biti poslastica. Neka je odrasla osoba skuha i izvadi kosti.",
     "sv": "En pytteliten bit kokt fläskkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
-    "da": "En lille smule almindeligt kogt svinekød kan være en godbid. En voksen skal lave kødet og tage knoglerne ud."
+    "da": "En lille smule almindeligt kogt svinekød kan være en godbid. En voksen skal lave kødet og tage knoglerne ud.",
+    "fi": "Pikkuinen pala maustamatonta keitettyä sianlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut."
   },
   "faq": [],
   "sources": [
@@ -242,6 +250,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "26409a9f8be87e20608b08bba5dde62e4660dd66b68c8b0be663140e6912a04a"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8eadbc890763d548f81646ac4541c1e09496f7dc169f356a68cd6ee10760d139"
     }
   }
 }

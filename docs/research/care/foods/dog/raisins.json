@@ -14,7 +14,8 @@
     "cs": "Rozinky",
     "hr": "Grožđice",
     "sv": "Russin",
-    "da": "Rosiner"
+    "da": "Rosiner",
+    "fi": "Rusinat"
   },
   "question": {
     "en": "Can dogs eat raisins?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst rozinky?",
     "hr": "Smiju li psi jesti grožđice?",
     "sv": "Får hundar äta russin?",
-    "da": "Må hunde spise rosiner?"
+    "da": "Må hunde spise rosiner?",
+    "fi": "Saako koira syödä rusinoita?"
   },
   "url_slug": {
     "en": "raisins",
@@ -44,7 +46,8 @@
     "cs": "rozinky",
     "hr": "grozdice",
     "sv": "russin",
-    "da": "rosiner"
+    "da": "rosiner",
+    "fi": "rusinat"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Rozinky jsou sušené hrozny a psi by je nikdy neměli jíst. Mohou způsobit selhání ledvin a i malé množství může psovi vážně uškodit. Nedá se předem odhadnout, kterého psa zasáhnou.",
     "hr": "Ne. Grožđice su sušeno grožđe i psi ih nikad ne smiju jesti. Mogu izazvati zatajenje bubrega, a već mala količina može psa ozbiljno razboljeti. Ne može se predvidjeti kojim će psima naštetiti.",
     "sv": "Nej. Russin är torkade vindruvor, och hundar ska aldrig äta dem. De kan orsaka njursvikt, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas.",
-    "da": "Nej. Rosiner er tørrede vindruer, og hunde må aldrig spise dem. De kan give nyresvigt, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket."
+    "da": "Nej. Rosiner er tørrede vindruer, og hunde må aldrig spise dem. De kan give nyresvigt, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket.",
+    "fi": "Ei saa. Rusinat ovat kuivattuja viinirypäleitä, eikä koiran pidä koskaan syödä niitä. Ne voivat aiheuttaa munuaisten vajaatoiminnan, ja pienikin määrä voi sairastuttaa koiran vakavasti. Ei ole keinoa ennustaa, mitkä koirat sairastuvat."
   },
   "why": {
     "en": "Raisins, grapes and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part; its amount varies, so effects are unpredictable, and there is no way to tell which dogs are more sensitive. Because the cause is uncertain, any amount is treated as a concern.",
@@ -75,7 +79,8 @@
     "cs": "Rozinky, hrozny a korintky mohou poškodit psí ledviny. Jako jedovatá složka je podezřelá kyselina vinná; její množství se liší, takže účinky jsou nepředvídatelné a nelze poznat, kteří psi jsou citlivější. Protože příčina není jistá, považuje se za problém jakékoli množství.",
     "hr": "Grožđice, grožđe i korintsko grožđe mogu oštetiti pseće bubrege. Pretpostavlja se da je otrovni sastojak vinska kiselina; njezina se količina razlikuje, pa su učinci nepredvidljivi i ne može se znati koji su psi osjetljiviji. Budući da uzrok nije siguran, svaka se količina smatra razlogom za zabrinutost.",
     "sv": "Russin, vindruvor och korinter kan skada hundens njurar. Man misstänker att vinsyra är det giftiga ämnet; mängden varierar, så effekten är oförutsägbar, och det går inte att avgöra vilka hundar som är känsligare. Eftersom orsaken är osäker ser man allvarligt på varje mängd.",
-    "da": "Rosiner, vindruer og korender kan skade hundens nyrer. Man mistænker vinsyre for at være det giftige stof; mængden varierer, så virkningen er uforudsigelig, og man kan ikke se hvilke hunde der er mest følsomme. Fordi årsagen er usikker, betragtes enhver mængde som bekymrende."
+    "da": "Rosiner, vindruer og korender kan skade hundens nyrer. Man mistænker vinsyre for at være det giftige stof; mængden varierer, så virkningen er uforudsigelig, og man kan ikke se hvilke hunde der er mest følsomme. Fordi årsagen er usikker, betragtes enhver mængde som bekymrende.",
+    "fi": "Rusinat, viinirypäleet ja korintit voivat vaurioittaa koiran munuaisia. Myrkyllisen aineen epäillään olevan viinihappo; sen määrä vaihtelee, joten vaikutukset ovat arvaamattomia, eikä voida tietää, mitkä koirat ovat herkempiä. Koska syy on epävarma, mikä tahansa määrä katsotaan huolestuttavaksi."
   },
   "signs": {
     "en": [
@@ -181,6 +186,14 @@
       "Mavesmerter",
       "Dehydrering og stor tørst",
       "Rysten"
+    ],
+    "fi": [
+      "Oksentelu tai ripuli, usein 6–24 tunnin kuluessa",
+      "Väsymys ja heikkous",
+      "Haluttomuus syödä",
+      "Vatsakipu",
+      "Nestehukka ja runsas juominen",
+      "Vapina"
     ]
   },
   "what_to_do": {
@@ -196,7 +209,8 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když pes snědl jen pár rozinek. Poznamenejte si, kolik jich zhruba snědl. Nečekejte, až se objeví příznaky: čím dříve léčba začne, tím lépe.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što prije liječenje počne, to bolje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: Jo før behandlingen starter, jo bedre."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: Jo før behandlingen starter, jo bedre.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koira olisi syönyt vain muutaman rusinan. Kirjaa ylös, suunnilleen montako rusinaa koira söi. Älä odota oireita: mitä aikaisemmin hoito alkaa, sitä parempi."
   },
   "serving": null,
   "child": {
@@ -212,7 +226,8 @@
     "cs": "Rozinky jsou malinké sušené hrozny a pro psy nejsou. Když je pes sní, řekni to hned dospělému.",
     "hr": "Grožđice su sitne sušene bobice grožđa i nisu za pse. Ako ih tvoj pas pojede, odmah reci odrasloj osobi.",
     "sv": "Russin är små torkade vindruvor, och de är inte för hundar. Om din hund äter några, säg till en vuxen direkt.",
-    "da": "Rosiner er små tørrede vindruer, og de er ikke til hunde. Hvis din hund spiser nogle, så sig det til en voksen med det samme."
+    "da": "Rosiner er små tørrede vindruer, og de er ikke til hunde. Hvis din hund spiser nogle, så sig det til en voksen med det samme.",
+    "fi": "Rusinat ovat pikkuruisia kuivattuja viinirypäleitä, eivätkä ne sovi koirille. Jos koirasi syö niitä, kerro heti aikuiselle."
   },
   "faq": [
     {
@@ -229,7 +244,8 @@
         "cs": "Jsou rozinky horší než hrozny?",
         "hr": "Jesu li grožđice gore od grožđa?",
         "sv": "Är russin värre än vindruvor?",
-        "da": "Er rosiner værre end vindruer?"
+        "da": "Er rosiner værre end vindruer?",
+        "fi": "Ovatko rusinat vaarallisempia kuin viinirypäleet?"
       },
       "a": {
         "en": "Both are dangerous. Sources treat grapes, raisins and currants as the same risk and advise calling the vet after any amount.",
@@ -244,7 +260,8 @@
         "cs": "Nebezpečné jsou obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři.",
         "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine.",
         "sv": "Båda är farliga. Källorna ser vindruvor, russin och korinter som samma risk och råder dig att ringa veterinären efter vilken mängd som helst.",
-        "da": "Begge dele er farlige. Kilderne behandler vindruer, rosiner og korender som samme risiko og råder til at kontakte dyrlægen uanset mængden."
+        "da": "Begge dele er farlige. Kilderne behandler vindruer, rosiner og korender som samme risiko og råder til at kontakte dyrlægen uanset mængden.",
+        "fi": "Molemmat ovat vaarallisia. Lähteet pitävät viinirypäleitä, rusinoita ja korintteja yhtä suurena riskinä ja neuvovat soittamaan eläinlääkärille, olipa syöty määrä mikä tahansa."
       }
     },
     {
@@ -261,7 +278,8 @@
         "cs": "A co korintky?",
         "hr": "A korintsko grožđe?",
         "sv": "Hur är det med korinter?",
-        "da": "Hvad med korender?"
+        "da": "Hvad med korender?",
+        "fi": "Entä korintit?"
       },
       "a": {
         "en": "Currants are named in the same warnings as grapes and raisins, so they are not safe for dogs either.",
@@ -276,7 +294,8 @@
         "cs": "Korintky jsou uváděny ve stejných varováních jako hrozny a rozinky, takže ani ony nejsou pro psy bezpečné.",
         "hr": "Korintsko grožđe navodi se u istim upozorenjima kao grožđe i grožđice, pa ni ono nije sigurno za pse.",
         "sv": "Korinter nämns i samma varningar som vindruvor och russin, så de är inte heller ofarliga för hundar.",
-        "da": "Korender nævnes i de samme advarsler som vindruer og rosiner, så de er heller ikke sikre for hunde."
+        "da": "Korender nævnes i de samme advarsler som vindruer og rosiner, så de er heller ikke sikre for hunde.",
+        "fi": "Korintit mainitaan samoissa varoituksissa kuin viinirypäleet ja rusinat, joten nekään eivät ole koirille turvallisia."
       }
     }
   ],
@@ -402,6 +421,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6f5f2c2d3f6e79527006622b04977f491ca45c95682e1a6da52a83d5d351a987"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b92f14ce760e67d678b82be59f473ca637c02c8ee19da36f92ac00ae89dd09e"
     }
   }
 }

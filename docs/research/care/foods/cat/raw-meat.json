@@ -14,7 +14,8 @@
     "cs": "Syrové maso",
     "hr": "Sirovo meso",
     "sv": "Rått kött",
-    "da": "Råt kød"
+    "da": "Råt kød",
+    "fi": "Raaka liha"
   },
   "question": {
     "en": "Can cats eat raw meat?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst syrové maso?",
     "hr": "Smiju li mačke jesti sirovo meso?",
     "sv": "Får katter äta rått kött?",
-    "da": "Må katte spise råt kød?"
+    "da": "Må katte spise råt kød?",
+    "fi": "Saako kissa syödä raakaa lihaa?"
   },
   "url_slug": {
     "en": "raw-meat",
@@ -44,7 +46,8 @@
     "cs": "syrove-maso",
     "hr": "sirovo-meso",
     "sv": "ratt-kott",
-    "da": "raat-koed"
+    "da": "raat-koed",
+    "fi": "raaka-liha"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne, syrové maso se kočkám nedoporučuje. Přestože divoké kočky jedí syrovou kořist, syrové maso může přenášet choroboplodné zárodky, jako jsou salmonely, listerie a E. coli, a parazity, jako je toxoplazma, které mohou způsobit onemocnění koček i lidí.",
     "hr": "Ne, sirovo se meso ne preporučuje za mačke. Iako divlje mačke jedu sirov plijen, sirovo meso može prenositi klice poput salmonele (Salmonella), listerije (Listeria) i bakterije E. coli te parazite poput toksoplazme (Toxoplasma), od kojih se mogu razboljeti mačke i ljudi.",
     "sv": "Nej, rått kött rekommenderas inte för katter. Även om vilda katter äter råa bytesdjur kan rått kött bära på bakterier som salmonella, listeria och E. coli och parasiter som toxoplasma, som kan göra både katter och människor sjuka.",
-    "da": "Nej, råt kød anbefales ikke til katte. Selvom vilde katte spiser rå byttedyr, kan råt kød indeholde bakterier som salmonella, listeria og E. coli og parasitter som Toxoplasma, der kan gøre både katte og mennesker syge."
+    "da": "Nej, råt kød anbefales ikke til katte. Selvom vilde katte spiser rå byttedyr, kan råt kød indeholde bakterier som salmonella, listeria og E. coli og parasitter som Toxoplasma, der kan gøre både katte og mennesker syge.",
+    "fi": "Ei, raakaa lihaa ei suositella kissoille. Vaikka luonnossa elävät kissat syövät raakaa saalista, raa’assa lihassa voi olla taudinaiheuttajia, kuten salmonellaa, listeriaa ja E. coli -bakteeria, sekä loisia, kuten toksoplasmaa, jotka voivat sairastuttaa kissoja ja ihmisiä."
   },
   "why": {
     "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
@@ -75,7 +79,8 @@
     "cs": "Cornellova univerzita i Merck Veterinary Manual nedoporučují dávat kočkám syrové maso, ať už jako krmivo, nebo jako pamlsek, protože může šířit toxoplazmózu a další infekce. Kontaminace syrového masa bakteriemi je běžná a některé kočky se zdají v pořádku, ale bakterie vylučují trusem, odkud se mohou přenést na lidi i další zvířata. Maso pro lidi ze supermarketu je určeno k tepelné úpravě.",
     "hr": "Cornell i priručnik Merck Veterinary Manual savjetuju da se mačkama ne daje sirovo meso, ni kao hrana ni kao poslastica, jer može širiti toksoplazmozu i druge infekcije. Onečišćenje sirovog mesa bakterijama je često, a neke mačke djeluju zdravo, ali izlučuju bakterije izmetom, odakle se one mogu proširiti na ljude i druge ljubimce. Meso iz trgovine namijenjeno ljudima predviđeno je za termičku obradu.",
     "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik för människor är tänkt att tillagas.",
-    "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt."
+    "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt.",
+    "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raa’an lihan bakteerikontaminaatio on yleistä, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Feber",
       "Vil ikke spise",
       "Sløvhed"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli, joskus verinen",
+      "Kuume",
+      "Haluttomuus syödä",
+      "Väsymys"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "cs": "Pokud vaše kočka snědla kousek syrového masa, sledujte, zda se neobjeví zvracení, průjem, horečka, nechuť k jídlu nebo únava, a pokud ano, zavolejte veterináři. Důkladně si umyjte ruce a vyčistěte povrchy i misky.",
     "hr": "Ako je mačka pojela malo sirovog mesa, prati pojavu povraćanja, proljeva, vrućice, odbijanja hrane ili umora i nazovi veterinara ako se išta od toga pojavi. Dobro operi ruke te temeljito očisti površine i zdjelice.",
     "sv": "Om katten har ätit lite rått kött: håll utkik efter kräkningar, diarré, feber, att den slutar äta eller blir trött, och ring veterinären om något av detta dyker upp. Tvätta händerna och rengör ytor och skålar noga.",
-    "da": "Hvis din kat har spist lidt råt kød, så hold øje med opkast, diarré, feber, manglende lyst til at spise eller træthed, og ring til din dyrlæge hvis noget af det viser sig. Vask hænderne, og rengør overflader og skåle grundigt."
+    "da": "Hvis din kat har spist lidt råt kød, så hold øje med opkast, diarré, feber, manglende lyst til at spise eller træthed, og ring til din dyrlæge hvis noget af det viser sig. Vask hænderne, og rengør overflader og skåle grundigt.",
+    "fi": "Jos kissasi söi vähän raakaa lihaa, seuraa, oksenteleeko se, onko sillä ripulia tai kuumetta, jättääkö se syömättä tai onko se väsynyt, ja soita eläinlääkärille, jos jokin näistä ilmenee. Pese kädet ja puhdista pinnat ja kupit hyvin."
   },
   "serving": null,
   "child": {
@@ -199,7 +212,8 @@
     "cs": "Na syrovém mase můžou být bacily. Kočky smějí dostat jen maso, které dospělý pořádně uvařil nebo upekl.",
     "hr": "Sirovo meso može nositi klice. Mace smiju dobiti samo meso koje je skuhala odrasla osoba.",
     "sv": "Rått kött kan ha bakterier. Katter ska bara få kött som en vuxen har kokat.",
-    "da": "Råt kød kan have bakterier. Katte skal kun have kød som en voksen har kogt."
+    "da": "Råt kød kan have bakterier. Katte skal kun have kød som en voksen har kogt.",
+    "fi": "Raa’assa lihassa voi olla pöpöjä. Kissa saa vain sellaista lihaa, jonka aikuinen on keittänyt."
   },
   "faq": [
     {
@@ -216,7 +230,8 @@
         "cs": "Kočky v přírodě jedí syrovou kořist, tak proč ne?",
         "hr": "Mačke u prirodi jedu sirov plijen, pa zašto ne bi smjele?",
         "sv": "Vilda katter äter ju råa bytesdjur – varför inte min katt?",
-        "da": "Katte spiser rå byttedyr i naturen – hvorfor så ikke?"
+        "da": "Katte spiser rå byttedyr i naturen – hvorfor så ikke?",
+        "fi": "Kissat syövät luonnossa raakaa saalista, joten miksi ei?"
       },
       "a": {
         "en": "Raw meat can carry bacteria and parasites that infect cats and their owners, and Cornell says raw diets have no clear health benefit for cats.",
@@ -231,7 +246,8 @@
         "cs": "Syrové maso může přenášet bakterie a parazity, kterými se mohou nakazit kočky i jejich majitelé, a podle Cornellovy univerzity nemá syrová strava pro kočky žádný jasný zdravotní přínos.",
         "hr": "Sirovo meso može prenositi bakterije i parazite koji mogu zaraziti mačke i njihove vlasnike, a Cornell navodi da sirova prehrana mačkama ne donosi jasnu korist za zdravlje.",
         "sv": "Rått kött kan bära på bakterier och parasiter som smittar katter och deras ägare, och enligt Cornell ger rå kost ingen tydlig hälsovinst för katter.",
-        "da": "Råt kød kan indeholde bakterier og parasitter som kan smitte katte og deres ejere, og ifølge Cornell har råfoder ingen klar sundhedsmæssig fordel for katte."
+        "da": "Råt kød kan indeholde bakterier og parasitter som kan smitte katte og deres ejere, og ifølge Cornell har råfoder ingen klar sundhedsmæssig fordel for katte.",
+        "fi": "Raa’assa lihassa voi olla bakteereja ja loisia, jotka tarttuvat kissoihin ja niiden omistajiin, eikä Cornellin mukaan raakaruokavaliosta ole kissoille selvää terveyshyötyä."
       }
     },
     {
@@ -248,7 +264,8 @@
         "cs": "Kdo je nejvíce ohrožen?",
         "hr": "Tko je najugroženiji?",
         "sv": "Vilka löper störst risk?",
-        "da": "Hvem er mest udsat?"
+        "da": "Hvem er mest udsat?",
+        "fi": "Kuka on suurimmassa vaarassa?"
       },
       "a": {
         "en": "People at highest risk of serious illness are the very old, the very young and people with weak immune systems.",
@@ -263,7 +280,8 @@
         "cs": "Nejvyšší riziko vážného onemocnění mají velmi staří lidé, malé děti a lidé s oslabenou imunitou.",
         "hr": "Najveći rizik od ozbiljne bolesti imaju vrlo stari ljudi, vrlo mala djeca i osobe s oslabljenim imunitetom.",
         "sv": "Störst risk att bli allvarligt sjuka har mycket gamla människor, mycket små barn och personer med försvagat immunförsvar.",
-        "da": "De mennesker der har størst risiko for alvorlig sygdom, er meget gamle, meget unge og personer med svækket immunforsvar."
+        "da": "De mennesker der har størst risiko for alvorlig sygdom, er meget gamle, meget unge og personer med svækket immunforsvar.",
+        "fi": "Vakavan sairauden riski on suurin hyvin iäkkäillä, hyvin pienillä lapsilla ja ihmisillä, joiden vastustuskyky on heikentynyt."
       }
     }
   ],
@@ -414,6 +432,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "22a5859c62c39d71ed5ef70118c87d11557343b323304eb27defa6947e6bba43"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50e7766b34c7a03713ecef18722be01811c72a808a6d1dabdd4e4ac92155f183"
     }
   }
 }
