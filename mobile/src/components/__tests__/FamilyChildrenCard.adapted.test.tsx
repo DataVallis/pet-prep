@@ -62,14 +62,14 @@ describe('FamilyChildrenCard — adapted mode', () => {
     expect(screen.getByTestId('adapted-mode-native-2')).toBeTruthy();
   });
 
-  it('on (David 2026-10-26): says clearly that on iPhone only an Apple Watch counts pushes, Android needs Health Connect, and leads to »Vpiši sprehod«', () => {
+  it('on (David 2026-10-26): says clearly that on iPhone only an Apple Watch counts pushes, Android reads no pushes (log minutes), and leads to »Vpiši sprehod«', () => {
     const onLogWalk = jest.fn();
     const fam = family(true);
     renderWithQuery(<FamilyChildrenCard family={fam} onAddChild={jest.fn()} onChildPin={jest.fn()} onLogWalk={onLogWalk} />);
     expect(screen.getByTestId('adapted-mode-sources-2')).toBeTruthy();
     expect(screen.getByText('Kdo šteje potiske')).toBeTruthy();
     expect(screen.getByText(/^Na iPhonu potiske šteje samo Apple Watch \(v aplikaciji Zdravje: Podatki o zdravju → Invalidski voziček = Da\)/)).toBeTruthy();
-    expect(screen.getByText(/^Na Androidu potrebujete napravo ali aplikacijo, ki zapisuje potiske invalidskega vozička v Health Connect/)).toBeTruthy();
+    expect(screen.getByText(/^Na Androidu PetPrep potiskov ne bere — namesto tega vpišite minute sprehoda/)).toBeTruthy();
     expect(screen.getByText(/^Brez ure lahko vpišete minute sprehoda/)).toBeTruthy();
     fireEvent.press(screen.getByTestId('adapted-mode-log-walk-2'));
     expect(onLogWalk).toHaveBeenCalledWith(fam.children[0]);

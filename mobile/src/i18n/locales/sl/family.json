@@ -245,12 +245,12 @@
       "sources": {
         "title": "Kdo šteje potiske",
         "ios": "Na iPhonu potiske šteje samo Apple Watch (v aplikaciji Zdravje: Podatki o zdravju → Invalidski voziček = Da). Sam iPhone potiskov ne šteje.",
-        "android": "Na Androidu potrebujete napravo ali aplikacijo, ki zapisuje potiske invalidskega vozička v Health Connect.",
+        "android": "Na Androidu PetPrep potiskov ne bere — namesto tega vpišite minute sprehoda.",
         "noWatch": "Brez ure lahko vpišete minute sprehoda na strani otroka (Pregled → otrok → Vpiši sprehod).",
         "logWalk": "Vpiši sprehod"
       },
       "noPushesToday": {
-        "text": "Danes še ni potiskov. Brez Apple Watch (ali naprave za Health Connect) vpišite minute sprehoda.",
+        "text": "Danes še ni potiskov. Brez Apple Watch (na Androidu vedno) vpišite minute sprehoda.",
         "button": "Vpiši sprehod"
       }
     },

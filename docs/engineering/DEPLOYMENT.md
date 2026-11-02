@@ -102,7 +102,7 @@ An installed build only ever accepts updates for its own runtime version, so a w
 **Product rule (Apple / Google):** OTA is for fixes, texts, translations, small UI changes and new breeds. Big new features (a new species, a new payment flow, a large new screen) go through store review even when the fingerprint would allow OTA — merge them together with a native change or ship a store build first.
 
 **Next store release — checklist (David 2026-10-21):**
-- [ ] Google Play Console → App content → **Health apps declaration**: add `READ_WHEELCHAIR_PUSHES` (wheelchair pushes, M5-T12) next to `READ_STEPS` (read only; purpose: the child's daily walk in adapted mode).
+- [ ] Google Play Console → App content → **Health apps declaration**: `READ_STEPS` (+ `ACTIVITY_RECOGNITION`) only. ~~`READ_WHEELCHAIR_PUSHES`~~ was removed from the Android build on 2026-11-02 after Play rejected version code 6 (Health Connect minimum scope: the reviewer couldn't verify the WheelchairPushes feature) — don't declare it.
 - [ ] App Store Connect: the **Health permission text changed** (`NSHealthShareUsageDescription` EN + SL now mention wheelchair pushes, M5-T12) — re-check the App Privacy answers (Health & Fitness, read only, not linked to tracking).
 - [ ] M5-T12 changes both native fingerprints (ios `18c9650c…`, android `9a1b20a5…`; main before it: ios `bc3f9402…`, android `26425689…`): after it is merged **no JS OTA reaches the current store builds** until this store release ships. *(2026-10-24: iOS has a production build with the new fingerprint and receives OTA again; Android still needs its new production build.)*
 

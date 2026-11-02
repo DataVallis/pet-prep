@@ -34,7 +34,7 @@ describe('ChildOverviewCard — no pushes today (M5-T12)', () => {
         onLogWalk={onLogWalk}
       />,
     );
-    expect(screen.getByText('Danes še ni potiskov. Brez Apple Watch (ali naprave za Health Connect) vpišite minute sprehoda.')).toBeTruthy();
+    expect(screen.getByText('Danes še ni potiskov. Brez Apple Watch (na Androidu vedno) vpišite minute sprehoda.')).toBeTruthy();
     fireEvent.press(screen.getByTestId(`child-no-pushes-${child.id}-log-walk`));
     expect(onLogWalk).toHaveBeenCalledWith(child);
   });
