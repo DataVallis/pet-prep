@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "1342ed29b975ede730268e334935e64ffadeff17ec07b9c086eea53b28f548e0"
+      "sha256": "f9070f9af166aab92d4c93af55767995287c21906f47dfc0ac2e90680b3db58b"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -47150,7 +47150,7 @@
       "id": "rat_terrier",
       "species": "dog",
       "order": 78,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Rat Terrier",
         "sl": "Rat terier"
@@ -47733,7 +47733,7 @@
       "id": "greater_swiss_mountain_dog",
       "species": "dog",
       "order": 79,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Greater Swiss Mountain Dog",
         "sl": "Veliki švicarski planšarski pes"
@@ -48369,7 +48369,7 @@
       "id": "shar_pei",
       "species": "dog",
       "order": 80,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Shar Pei",
         "sl": "Šarpej"
