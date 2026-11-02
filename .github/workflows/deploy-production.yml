@@ -408,9 +408,7 @@ jobs:
           target: app
           push: ${{ steps.img.outputs.push == 'true' }}
           load: true
-          tags: |
-            petprep-app:ci
-            ${{ steps.img.outputs.registry }}/petprep-app:${{ steps.img.outputs.tag }}
+          tags: ${{ steps.img.outputs.registry }}/petprep-app:${{ steps.img.outputs.tag }}
           labels: |
             org.petprep.base-id=${{ steps.base.outputs.app }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
@@ -425,13 +423,21 @@ jobs:
           target: web
           push: ${{ steps.img.outputs.push == 'true' }}
           load: true
-          tags: |
-            petprep-web:ci
-            ${{ steps.img.outputs.registry }}/petprep-web:${{ steps.img.outputs.tag }}
+          tags: ${{ steps.img.outputs.registry }}/petprep-web:${{ steps.img.outputs.tag }}
           labels: |
             org.petprep.base-id=${{ steps.base.outputs.web }}
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
           cache-from: type=gha,scope=petprep-production
+
+      # Only the GHCR name goes to build-push-action (with push every tag is pushed — a bare
+      # petprep-app:ci would go to Docker Hub); the local :ci names for the checks below.
+      - name: Local tags for the checks
+        env:
+          REG: ${{ steps.img.outputs.registry }}
+          TAG: ${{ steps.img.outputs.tag }}
+        run: |
+          docker tag "${REG}/petprep-app:${TAG}" petprep-app:ci
+          docker tag "${REG}/petprep-web:${TAG}" petprep-web:ci
 
       # D18: one Caddyfile for both servers. Production = the defaults (no env), exactly as
       # compose passes them on api.petprep.si; a second API-only server (dev server, postponed)
