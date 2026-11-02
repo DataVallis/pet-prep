@@ -55,6 +55,7 @@ jobs:
     timeout-minutes: 5
     outputs:
       tree: ${{ steps.plan.outputs.tree }}
+      base: ${{ steps.plan.outputs.base }}
       backend: ${{ steps.plan.outputs.backend }}
       mobile: ${{ steps.plan.outputs.mobile }}
       scripts: ${{ steps.plan.outputs.scripts }}
@@ -133,14 +134,19 @@ jobs:
           retention-days: 14
           overwrite: true
 
+  # D28b (David 2026-11-02): 6 shards (scripts/ci-pest-shard.mjs, balanced by the measured
+  # backend/tests/durations.json) — one runner took 26–28 min. The marker for this tree is
+  # uploaded by the job "backend-green" only after EVERY shard passed.
   backend-tests:
-    name: Backend tests (Pest on PostgreSQL)
+    name: Backend tests (Pest on PostgreSQL) ${{ matrix.shard }}/6
     needs: plan
     if: needs.plan.outputs.backend == 'true'
     runs-on: ubuntu-latest
-    # 20 → 30 min (M5-R10-32, 2026-10-13): the suite grows with every breed — the Boston Terrier run
-    # took 19.5 min and the Miniature American Shepherd PR run was cancelled at the 20-minute limit.
-    timeout-minutes: 30
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6]
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:18-alpine
@@ -221,28 +227,36 @@ jobs:
           composer install --prefer-dist --no-progress --no-interaction
           php artisan key:generate
 
+      - name: Shard plan
+        run: node scripts/ci-pest-shard.mjs "${{ matrix.shard }}" 6
+
       # One process per vCPU, each on its own database testing_test_<N> (Laravel
       # ParallelTesting creates and migrates them; Storage::fake() disks are per process too).
-      - name: Run Pest (parallel)
+      - name: Run Pest (parallel, this shard)
         working-directory: backend
-        run: php artisan test --parallel
+        run: php artisan test --parallel --configuration=phpunit.shard.xml
 
+  # Marker for this tree only when every shard of backend-tests passed (D28b).
+  backend-green:
+    name: Backend tests (all shards)
+    needs: [plan, backend-tests]
+    if: needs.backend-tests.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
       - name: Record green tree
-        id: green
+        env:
+          TREE: ${{ needs.plan.outputs.tree }}
+          PR_BASE: ${{ github.event_name == 'pull_request' && needs.plan.outputs.base || '' }}
         run: |
-          tree="$(git rev-parse 'HEAD^{tree}')"
-          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
-          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
-          # D28b: the PR merge commit's first parent = the main the PR was tested on
-          # (cat-file: the raw parent line also exists in a depth-1 checkout).
-          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
-            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
-          fi
+          echo "${TREE} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D28b: the PR merge commit's first parent (plan's base in PR mode).
+          if [ -n "$PR_BASE" ]; then echo "base=${PR_BASE}" >> "${RUNNER_TEMP}/ci-green.txt"; fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
         with:
-          name: ci-green-backend-${{ steps.green.outputs.tree }}
+          name: ci-green-backend-${{ needs.plan.outputs.tree }}
           path: ${{ runner.temp }}/ci-green.txt
           retention-days: 14
           overwrite: true
@@ -357,6 +371,10 @@ jobs:
       # published, committed docs/research/care-knowledge.json up to date).
       - name: Care knowledge export (node --test)
         run: node --test scripts/tests/export-care-knowledge.test.mjs
+
+      # D28b: Pest shard planner (every test file in exactly one shard).
+      - name: Pest shard plan (node --test)
+        run: node --test scripts/tests/ci-pest-shard.test.mjs
 
       # docs/breeds/README.md index current (one doc per breed, David 2026-10-15).
       - name: Breed docs index (node --test)
@@ -598,7 +616,7 @@ jobs:
   ci-ok:
     name: CI OK
     if: always()
-    needs: [plan, backend-tests, mobile-checks, deploy-script-tests, production-image]
+    needs: [plan, backend-tests, backend-green, mobile-checks, deploy-script-tests, production-image]
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
@@ -609,7 +627,8 @@ jobs:
           PLAN_MOBILE: ${{ needs.plan.outputs.mobile }}
           PLAN_SCRIPTS: ${{ needs.plan.outputs.scripts }}
           PLAN_IMAGE: ${{ needs.plan.outputs.image }}
-          BACKEND_RESULT: ${{ needs.backend-tests.result }}
+          # Matrix result = failure if any shard failed; the marker job must have run too.
+          BACKEND_RESULT: ${{ needs.backend-tests.result == 'success' && needs.backend-green.result || needs.backend-tests.result }}
           MOBILE_RESULT: ${{ needs.mobile-checks.result }}
           SCRIPTS_RESULT: ${{ needs.deploy-script-tests.result }}
           IMAGE_RESULT: ${{ needs.production-image.result }}

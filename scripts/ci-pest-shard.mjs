@@ -8,17 +8,38 @@
 // Every test file lands in exactly one shard (the harness checks the union).
 //
 // Usage: node scripts/ci-pest-shard.mjs <shard> <total> [--backend DIR] [--list]
+//        node scripts/ci-pest-shard.mjs --update-durations JUNIT.xml [--backend DIR]
+//          (re-measure: php artisan test --parallel --log-junit JUNIT.xml)
 //   writes DIR/phpunit.shard.xml (same <php>/<source> as phpunit.xml, <testsuites> replaced)
 //   --list: print the shard's files (one per line) instead of writing the config.
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 
 const args = process.argv.slice(2);
+const ui = args.indexOf('--update-durations');
 const shard = Number(args[0]);
 const total = Number(args[1]);
 const bi = args.indexOf('--backend');
 const backend = bi >= 0 ? args[bi + 1] : join(import.meta.dirname, '..', 'backend');
 const listOnly = args.includes('--list');
+
+if (ui >= 0) {
+  const xml = readFileSync(args[ui + 1], 'utf8');
+  const per = {};
+  for (const m of xml.matchAll(/<testcase\b[^>]*>/g)) {
+    const file = /\bfile="([^"]*)"/.exec(m[0])?.[1];
+    const time = Number(/\btime="([^"]*)"/.exec(m[0])?.[1]);
+    if (!file || !Number.isFinite(time)) continue;
+    const rel = file.split('::')[0].split('/backend/').pop();
+    per[rel] = (per[rel] ?? 0) + time;
+  }
+  const out = Object.fromEntries(Object.keys(per).sort().map((k) => [k, Math.round(per[k] * 10) / 10]));
+  const path = join(backend, 'tests', 'durations.json');
+  const old = existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : {};
+  writeFileSync(path, `${JSON.stringify({ _comment: old._comment, files: out }, null, 1)}\n`);
+  console.log(`durations: ${Object.keys(out).length} files → ${path}`);
+  process.exit(0);
+}
 
 if (!Number.isInteger(shard) || !Number.isInteger(total) || total < 1 || shard < 1 || shard > total) {
   console.error('usage: ci-pest-shard.mjs <shard 1..N> <N> [--backend DIR] [--list]');
