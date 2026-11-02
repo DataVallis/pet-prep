@@ -57,7 +57,7 @@
     "en": "No, it is best not to. Ice cream is full of lactose, fat and sugar, which can upset a dog's tummy, and some flavours contain chocolate or the sweetener xylitol, which are toxic to dogs.",
     "sl": "Ne, bolje ne. Sladoled je poln laktoze, maščobe in sladkorja, ki lahko psu razdražijo prebavo, nekateri okusi pa vsebujejo čokolado ali sladilo ksilitol, ki sta za pse strupena.",
     "de": "Nein, besser nicht. Eis steckt voller Laktose, Fett und Zucker, die einem Hund auf den Magen schlagen können, und manche Sorten enthalten Schokolade oder den Süßstoff Xylit, die für Hunde giftig sind.",
-    "fr": "Non, mieux vaut éviter. La glace est pleine de lactose, de graisses et de sucre, qui peuvent dérégler l’estomac d’un chien, et certains parfums contiennent du chocolat ou un édulcorant, le xylitol, toxiques pour les chiens.",
+    "fr": "Non, mieux vaut éviter. La glace est pleine de lactose, de graisses et de sucre, qui peuvent déranger l’estomac d’un chien, et certains parfums contiennent du chocolat ou un édulcorant, le xylitol, toxiques pour les chiens.",
     "es": "No, mejor que no. El helado está lleno de lactosa, grasa y azúcar, que pueden sentarle mal a la barriga de un perro, y algunos sabores llevan chocolate o el edulcorante xilitol, que son tóxicos para los perros.",
     "it": "Meglio di no. Il gelato è pieno di lattosio, grassi e zuccheri, che possono disturbare la pancia del cane, e alcuni gusti contengono cioccolato o il dolcificante xilitolo, tossici per i cani.",
     "pt": "Não, é melhor não. O gelado está cheio de lactose, gordura e açúcar, que podem fazer mal à barriga do cão, e alguns sabores contêm chocolate ou o adoçante xilitol, que são tóxicos para os cães.",
@@ -326,7 +326,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "39a8be60eb72ab8a3ba9a248031f9a9fef492d89c67581f093f94f78576a7ec7"
+      "verified_hash": "d34b01e60a78e37602ac592a28b0ea63b67bf4f9bbbf388a3298ada23cad5eb7"
     },
     "es": {
       "status": "verified",

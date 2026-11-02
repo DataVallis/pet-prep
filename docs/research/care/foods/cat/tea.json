@@ -237,7 +237,7 @@
         "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
         "sl": "Da. Pet Poison Helpline opozarja, da lahko zaužitje čajnih vrečk pri mačkah povzroči resno zastrupitev. Uporabljene vrečke zavrzite tam, kamor mačka ne seže.",
         "de": "Ja. Die Pet Poison Helpline warnt, dass das Fressen von Teebeuteln bei Katzen zu einer schweren Vergiftung führen könnte. Werfen Sie benutzte Teebeutel so weg, dass Ihre Katze nicht herankommt.",
-        "fr": "Oui. Pet Poison Helpline avertit que manger des sachets de thé peut provoquer une intoxication grave chez le chat. Jetez les sachets usagés là où votre chat ne peut pas les atteindre.",
+        "fr": "Oui. Le Pet Poison Helpline avertit que manger des sachets de thé peut provoquer une intoxication grave chez le chat. Jetez les sachets usagés là où votre chat ne peut pas les atteindre.",
         "es": "Sí. Pet Poison Helpline advierte de que comerse bolsitas de té podría causar una intoxicación grave en los gatos. Tira las bolsitas usadas donde tu gato no pueda alcanzarlas.",
         "it": "Sì. Pet Poison Helpline avverte che mangiare bustine di tè potrebbe causare un’intossicazione grave nei gatti. Getta le bustine usate dove il tuo gatto non può arrivare.",
         "pt": "Sim. A Pet Poison Helpline avisa que comer saquetas de chá pode causar uma intoxicação grave nos gatos. Deita as saquetas usadas fora num sítio onde o teu gato não lhes chegue.",
@@ -336,7 +336,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cc11fae411cae67aeccc2e4d081fa0edd6de8e1e745cd66acc8a895733f6daf5"
+      "verified_hash": "40963d710fc5cfe6f91c4fdbde883415c7d42bdfc4bcc29bf92dfef2bd519a9b"
     },
     "es": {
       "status": "verified",

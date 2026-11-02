@@ -74,7 +74,7 @@
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
     "sl": "Nezačinjenega piščanca, ki je pečen, poširan ali pripravljen na žaru ali v pečici, lahko psu daste samega. Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil. Surov piščanec ni priporočljiv zaradi salmonele in drugih bakterij. Piščančja bedra vsebujejo približno dvakrat več maščobe kot prsi, mastna hrana pa lahko draži prebavila.",
     "de": "Ungewürztes gebratenes, pochiertes, gegrilltes oder im Ofen gegartes Hähnchen ist für sich allein in Ordnung. Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren. Von rohem Hähnchen wird wegen Salmonellen und anderer Bakterien abgeraten. Schenkelfleisch hat etwa doppelt so viel Fett wie Brust, und fettreiches Futter kann auf den Magen schlagen.",
-    "fr": "Le poulet rôti, poché, grillé ou cuit au four sans assaisonnement convient tel quel. Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou perforer l’intestin. Le poulet cru est déconseillé à cause des salmonelles et d’autres bactéries. La cuisse contient environ deux fois plus de graisses que le blanc, et les aliments gras peuvent dérégler l’estomac.",
+    "fr": "Le poulet rôti, poché, grillé ou cuit au four sans assaisonnement convient tel quel. Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou perforer l’intestin. Le poulet cru est déconseillé à cause des salmonelles et d’autres bactéries. La cuisse contient environ deux fois plus de graisses que le blanc, et les aliments gras peuvent déranger l’estomac.",
     "es": "El pollo asado, escalfado, a la plancha o al horno sin condimentos se puede dar tal cual. Los huesos de pollo cocinados se astillan con facilidad y pueden provocar atragantamiento o perforar el intestino. No se recomienda el pollo crudo por la salmonela y otras bacterias. El muslo tiene aproximadamente el doble de grasa que la pechuga, y los alimentos grasos pueden sentar mal al estómago.",
     "it": "Il pollo arrosto, lesso, alla griglia o al forno senza condimenti va bene da solo. Le ossa di pollo cotte si scheggiano facilmente e possono causare soffocamento o perforare l’intestino. Il pollo crudo è sconsigliato per il rischio di Salmonella e altri batteri. La coscia ha circa il doppio dei grassi del petto, e i cibi grassi possono disturbare lo stomaco.",
     "pt": "O frango assado, cozido, grelhado ou no forno, sem temperos, pode ser dado sem acompanhamentos. Os ossos de frango cozinhados lascam com facilidade e podem causar engasgamento ou perfurar o intestino. O frango cru não é recomendado por causa da Salmonella e de outras bactérias. A carne da coxa tem cerca do dobro da gordura do peito, e os alimentos gordos podem perturbar o estômago.",
@@ -255,7 +255,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d0804881da768a320cf0cf3ae3d42197a08aeebba3ed03b4d7a834b4ef3a0b54"
+      "verified_hash": "489be4fe5460b688e7597fe40efeb13af980399d082895985f47a73a7aa6a85a"
     },
     "es": {
       "status": "verified",

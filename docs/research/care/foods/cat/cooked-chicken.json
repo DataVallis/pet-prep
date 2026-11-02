@@ -162,7 +162,7 @@
         "en": "No. Feeding only cooked chicken long-term can lead to nutritional deficiencies. Keep it as an extra.",
         "sl": "Ne. Če mačko dolgo hranite samo s kuhanim piščancem, lahko pride do pomanjkanja hranil. Naj ostane le dodatek.",
         "de": "Nein. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel. Geben Sie es nur als Extra.",
-        "fr": "Non. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences. Il doit rester un petit extra.",
+        "fr": "Non. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences. Gardez-le comme un petit plus.",
         "es": "No. Dar solo pollo cocinado durante mucho tiempo puede provocar carencias nutricionales. Que sea un extra.",
         "it": "No. Dare solo pollo cotto a lungo termine può causare carenze nutrizionali. Tienilo come extra.",
         "pt": "Não. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais. Mantém-no como um extra.",
@@ -241,7 +241,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c154ceb9a56c924388e6140a2595937b9e5a43616ae9b9fd09982fc0f79cd0a4"
+      "verified_hash": "31576d37b5981594790826c741d6dedb38dcb9667d3b87e89198c7d7a3676b9d"
     },
     "es": {
       "status": "verified",

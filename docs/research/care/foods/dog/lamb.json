@@ -74,7 +74,7 @@
     "en": "Lamb meat itself is listed as safe for dogs in small amounts. All bones become brittle when cooked and can splinter. High-fat foods can trigger vomiting, diarrhoea or even pancreatitis, and foods high in fat or salt are best avoided. Onion-based gravies are not safe for dogs.",
     "sl": "Jagnječje meso samo po sebi je na seznamu varnih za pse v majhnih količinah. Vse kosti s kuhanjem postanejo krhke in se lahko razcepijo. Mastna hrana lahko sproži bruhanje, drisko ali celo vnetje trebušne slinavke, hrani z veliko maščobe ali soli pa se je bolje izogniti. Omake s čebulo za pse niso varne.",
     "de": "Lammfleisch selbst gilt in kleinen Mengen als unbedenklich für Hunde. Alle Knochen werden beim Garen spröde und können splittern. Fettreiche Lebensmittel können Erbrechen, Durchfall oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und sehr fett- oder salzreiche Lebensmittel sollten besser gemieden werden. Soßen auf Zwiebelbasis sind für Hunde nicht sicher.",
-    "fr": "La viande d’agneau elle-même est indiquée comme sans danger pour les chiens en petite quantité. Tous les os deviennent cassants à la cuisson et peuvent éclater. Les aliments gras peuvent provoquer vomissements, diarrhée, voire une pancréatite, et mieux vaut éviter les aliments riches en graisses ou en sel. Les sauces à base d’oignon ne sont pas sans danger pour les chiens.",
+    "fr": "La viande d’agneau elle-même est considérée comme sans danger pour les chiens en petite quantité. Tous les os deviennent cassants à la cuisson et peuvent éclater. Les aliments gras peuvent provoquer vomissements, diarrhée, voire une pancréatite, et mieux vaut éviter les aliments riches en graisses ou en sel. Les sauces à base d’oignon ne sont pas sans danger pour les chiens.",
     "es": "La carne de cordero en sí figura como segura para los perros en pequeñas cantidades. Todos los huesos se vuelven frágiles al cocinarlos y pueden astillarse. Los alimentos con mucha grasa pueden desencadenar vómitos, diarrea o incluso una pancreatitis, y es mejor evitar los alimentos con mucha grasa o sal. Las salsas a base de cebolla no son seguras para los perros.",
     "it": "La carne d’agnello in sé è indicata come sicura per i cani in piccole quantità. Con la cottura tutte le ossa diventano fragili e possono scheggiarsi. I cibi grassi possono scatenare vomito, diarrea o persino una pancreatite, ed è meglio evitare i cibi ricchi di grassi o di sale. I sughi a base di cipolla non sono sicuri per i cani.",
     "pt": "A carne de borrego em si é considerada segura para os cães em pequenas quantidades. Todos os ossos ficam quebradiços quando cozinhados e podem lascar. Os alimentos ricos em gordura podem provocar vómitos, diarreia ou até pancreatite, e é melhor evitar alimentos com muita gordura ou sal. Os molhos à base de cebola não são seguros para os cães.",
@@ -246,7 +246,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1f653ef3b5b62c809941cb92e7b254f1b53f759fd37c4846c8900722a72b0c77"
+      "verified_hash": "cc02bdc9a678e70638b376e3bb7d092ac43321bfcb6779672e6317391588ab8d"
     },
     "es": {
       "status": "verified",

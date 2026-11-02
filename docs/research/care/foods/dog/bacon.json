@@ -252,7 +252,7 @@
         "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
         "sl": "Slanina ni strupena, a mastna hrana z mize lahko psu povzroči prebavne težave ali vnetje trebušne slinavke, zato je raje ne delite.",
         "de": "Speck ist nicht giftig, aber fettes Essen vom Tisch kann einem Hund auf den Magen schlagen oder eine Pankreatitis auslösen – teilen Sie es deshalb besser nicht.",
-        "fr": "Le bacon n’est pas toxique, mais les aliments de table gras peuvent dérégler l’estomac d’un chien ou déclencher une pancréatite : mieux vaut ne pas en partager.",
+        "fr": "Le bacon n’est pas toxique, mais les aliments de table gras peuvent déranger l’estomac d’un chien ou déclencher une pancréatite : mieux vaut ne pas en partager.",
         "es": "El beicon no es tóxico, pero la comida de mesa grasa puede sentar mal al estómago del perro o desencadenar una pancreatitis, así que es mejor no compartirlo.",
         "it": "Il bacon non è tossico, ma il cibo grasso della tavola può disturbare lo stomaco del cane o scatenare una pancreatite, quindi è meglio non condividerlo.",
         "pt": "O bacon não é tóxico, mas a comida gorda da mesa pode perturbar o estômago do cão ou desencadear uma pancreatite, por isso é melhor não o partilhar.",
@@ -343,7 +343,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "64f396057616549cb594e07596429817aefa96d25b0afc836f3269e6b5d86784"
+      "verified_hash": "ac5291e52a79c3d76ce8e2a54227bc8eb4aab7b94cd75e4eb7a9d2df2d1be7ed"
     },
     "es": {
       "status": "verified",

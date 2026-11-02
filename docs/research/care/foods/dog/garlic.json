@@ -309,7 +309,7 @@
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele čez nekaj dni; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, treten aber häufiger erst nach einigen Tagen auf; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
-        "fr": "Les symptômes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
+        "fr": "Les signes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
         "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
@@ -432,7 +432,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3f01162bacbcee5c60d069615e3b617ad1a03f980c92380a20a93d803e6fa55a"
+      "verified_hash": "b0058504d2fe81f5a5faa6d7e77e50f66f2c163d52744deaa1a7774a7da6393e"
     },
     "es": {
       "status": "verified",

@@ -74,7 +74,7 @@
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
     "sl": "Surov losos lahko vsebuje zajedavce in bakterije; na pacifiškem severozahodu ZDA lahko povzroči zastrupitev z lososom, bolezen, ki je brez zdravljenja resna. Losos ima drobne, krhke kosti, ki lahko povzročijo dušenje. Dimljen losos vsebuje veliko soli. Začimbe, olja in omake ne sodijo na pasji obrok.",
     "de": "Roher Lachs kann Parasiten und Bakterien übertragen; im pazifischen Nordwesten der USA kann er die Lachsvergiftung (Salmon Poisoning Disease) auslösen, die unbehandelt schwer verläuft. Lachs hat kleine, brüchige Gräten, an denen ein Hund ersticken kann. Räucherlachs und Lox sind sehr salzig. Gewürze, Öle und Soßen gehören nicht auf die Portion eines Hundes.",
-    "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien.",
+    "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox (saumon salé) sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien.",
     "es": "El salmón crudo puede llevar parásitos y bacterias; en el noroeste del Pacífico de Estados Unidos puede causar la enfermedad por intoxicación del salmón, que es grave si no se trata. El salmón tiene espinas pequeñas y quebradizas que pueden provocar atragantamiento. El salmón ahumado y el lox tienen mucha sal. Los condimentos, aceites y salsas no deben estar en la ración del perro.",
     "it": "Il salmone crudo può portare parassiti e batteri; nel Pacifico nord-occidentale degli Stati Uniti può causare la malattia da avvelenamento da salmone, grave se non curata. Il salmone ha lische piccole e fragili che possono causare soffocamento. Il salmone affumicato e il lox sono molto salati. Condimenti, oli e salse non vanno nella porzione del cane.",
     "pt": "O salmão cru pode ter parasitas e bactérias; no noroeste do Pacífico, nos EUA, pode causar a doença do envenenamento por salmão, que é grave se não for tratada. O salmão tem espinhas pequenas e quebradiças que podem causar engasgamento. O salmão fumado e o lox têm muito sal. Temperos, óleos e molhos não devem ir para a porção do cão.",
@@ -162,7 +162,7 @@
         "en": "It isn't a good choice: smoked salmon and lox are high in salt.",
         "sl": "Ni dobra izbira: dimljen losos in loks vsebujeta veliko soli.",
         "de": "Er ist keine gute Wahl: Räucherlachs und Lox sind sehr salzig.",
-        "fr": "Ce n’est pas un bon choix : le saumon fumé et le lox sont très salés.",
+        "fr": "Ce n’est pas un bon choix : le saumon fumé et le lox (saumon salé) sont très salés.",
         "es": "No es una buena opción: el salmón ahumado y el lox tienen mucha sal.",
         "it": "Non è una buona scelta: il salmone affumicato e il lox sono molto salati.",
         "pt": "Não é uma boa escolha: o salmão fumado e o lox têm muito sal.",
@@ -293,7 +293,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9d172cc43c05789b0255f119e90dd1ff565df3cef86d151c074c6befa7a0eac2"
+      "verified_hash": "a47bbad1c12d44c3145ba0eaad4a683e53ddf9b29757eb3a81791e56f113a36a"
     },
     "es": {
       "status": "verified",

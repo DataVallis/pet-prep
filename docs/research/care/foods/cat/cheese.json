@@ -237,7 +237,7 @@
         "en": "Treats made for cats with a little cheese are fine in small amounts now and then. If your cat gets an upset stomach, choose a different treat next time.",
         "sl": "Priboljški, narejeni za mačke, z malo sira so v majhnih količinah občasno v redu. Če ima mačka po njih prebavne težave, naslednjič izberite drug priboljšek.",
         "de": "Leckerlis für Katzen mit etwas Käse sind in kleinen Mengen ab und zu in Ordnung. Bekommt Ihre Katze davon Magenprobleme, wählen Sie beim nächsten Mal ein anderes Leckerli.",
-        "fr": "Les friandises conçues pour les chats contenant un peu de fromage conviennent en petite quantité, de temps en temps. Si votre chat a l’estomac dérangé, choisissez une autre friandise la prochaine fois.",
+        "fr": "Les friandises pour chats contenant un peu de fromage conviennent en petite quantité, de temps en temps. Si votre chat a l’estomac dérangé, choisissez une autre friandise la prochaine fois.",
         "es": "Los premios hechos para gatos con un poco de queso están bien en pequeñas cantidades de vez en cuando. Si a tu gato le sientan mal al estómago, la próxima vez elige otro premio.",
         "it": "I premi per gatti che contengono un po’ di formaggio vanno bene in piccole quantità, ogni tanto. Se il tuo gatto ha mal di stomaco, la prossima volta scegli un premio diverso.",
         "pt": "As guloseimas feitas para gatos com um pouco de queijo não fazem mal em pequenas quantidades, de vez em quando. Se o teu gato ficar com o estômago irritado, escolhe outra guloseima da próxima vez.",
@@ -388,7 +388,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "06b3f3a6327a20098342752cc07df4613de3c190f7ddfd3703f2f9d0e909dc3d"
+      "verified_hash": "141a981004bb694b147e2b0cca7e3c5dc95abc0e6f2a87b6b737e00a2a11497d"
     },
     "es": {
       "status": "verified",

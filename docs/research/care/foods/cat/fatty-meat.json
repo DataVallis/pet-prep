@@ -106,7 +106,7 @@
     "fr": [
       "Vomissements",
       "Diarrhée",
-      "Ventre dérangé"
+      "Troubles digestifs"
     ],
     "es": [
       "Vómitos",
@@ -306,7 +306,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f35e677d6ef519c422d4359b5e8577422f27ecd69841e86591e1b2e94299cf39"
+      "verified_hash": "a452b4bae5db69b599b747ce43dcc2077c5356d1ac87994f295360e04b5b47ba"
     },
     "es": {
       "status": "verified",

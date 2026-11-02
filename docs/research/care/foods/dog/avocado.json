@@ -74,7 +74,7 @@
     "en": "Sources disagree, so we use the stricter level. The Merck Veterinary Manual says dogs seem relatively resistant compared with other species, the ASPCA names birds and rabbits as the biggest concern, and AKC says the flesh is not toxic. Blue Cross calls persin poisonous to dogs. All agree that the pit can choke a dog or cause a blockage and that the high fat can cause pancreatitis.",
     "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. Veterinarski priročnik Merck pravi, da so psi v primerjavi z drugimi vrstami razmeroma odporni, ASPCA kot največjo skrb navaja ptice in kunce, AKC pa pravi, da meso ni strupeno. Blue Cross persin označuje kot strupen za pse. Vsi se strinjajo, da lahko koščica psa zaduši ali povzroči zaporo in da lahko obilo maščobe povzroči vnetje trebušne slinavke.",
     "de": "Die Quellen sind sich nicht einig, deshalb verwenden wir die strengere Stufe. Laut Merck Veterinary Manual scheinen Hunde im Vergleich zu anderen Arten relativ widerstandsfähig zu sein, die ASPCA sieht bei Vögeln und Kaninchen die größte Gefahr, und laut AKC ist das Fruchtfleisch nicht giftig. Blue Cross bezeichnet Persin als giftig für Hunde. Alle sind sich einig, dass der Kern zum Ersticken oder zu einer Blockade führen und der hohe Fettgehalt eine Pankreatitis auslösen kann.",
-    "fr": "Les sources ne sont pas d’accord, nous retenons donc le niveau le plus strict. Le Merck Veterinary Manual indique que les chiens semblent relativement résistants par rapport à d’autres espèces, l’ASPCA cite les oiseaux et les lapins comme les plus concernés, et l’AKC affirme que la chair n’est pas toxique. Blue Cross qualifie la persine de toxique pour les chiens. Toutes s’accordent : le noyau peut étouffer un chien ou provoquer une obstruction, et la forte teneur en graisses peut causer une pancréatite.",
+    "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. Le Merck Veterinary Manual indique que les chiens semblent relativement résistants par rapport à d’autres espèces, l’ASPCA cite les oiseaux et les lapins comme les plus concernés, et l’AKC affirme que la chair n’est pas toxique. Blue Cross qualifie la persine de toxique pour les chiens. Elles s’accordent toutes sur un point : le noyau peut étouffer un chien ou provoquer une obstruction, et la forte teneur en graisses peut causer une pancréatite.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. El Manual Merck de Veterinaria dice que los perros parecen relativamente resistentes en comparación con otras especies, la ASPCA señala a las aves y los conejos como la mayor preocupación y el AKC dice que la pulpa no es tóxica. Blue Cross considera la persina venenosa para los perros. Todas coinciden en que el hueso puede atragantar al perro o causar una obstrucción y en que su alto contenido en grasa puede causar pancreatitis.",
     "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. Il Merck Veterinary Manual afferma che i cani sembrano relativamente resistenti rispetto ad altre specie, l’ASPCA indica uccelli e conigli come la preoccupazione maggiore e l’AKC afferma che la polpa non è tossica. Blue Cross definisce la persina velenosa per i cani. Tutte concordano sul fatto che il nocciolo può soffocare il cane o causare un’ostruzione e che l’alto contenuto di grassi può causare pancreatite.",
     "pt": "As fontes não estão de acordo, por isso seguimos a mais rigorosa. O Merck Veterinary Manual diz que os cães parecem relativamente resistentes em comparação com outras espécies, a ASPCA aponta as aves e os coelhos como a maior preocupação e o AKC diz que a polpa não é tóxica. A Blue Cross considera a persina venenosa para os cães. Todos concordam que o caroço pode engasgar o cão ou causar uma obstrução e que a gordura elevada pode causar pancreatite.",
@@ -106,7 +106,7 @@
     "fr": [
       "Étouffement avec le noyau",
       "Signes d’obstruction après avoir avalé le noyau : vomissements répétés, refus de manger, fatigue",
-      "Malaise dû à la richesse en graisses, pouvant mener à une pancréatite"
+      "Malaise lié à la forte teneur en graisses, pouvant mener à une pancréatite"
     ],
     "es": [
       "Atragantamiento con el hueso",
@@ -294,7 +294,7 @@
         "en": "Sources disagree: some say the flesh is not toxic, others call avocado poisonous to dogs. Because it is also very fatty and the pit is a hazard, we advise keeping it away.",
         "sl": "Viri se razlikujejo: nekateri pravijo, da meso ni strupeno, drugi avokado označujejo kot strupen za pse. Ker je tudi zelo masten in je koščica nevarna, svetujemo, da ga psu ne dajete.",
         "de": "Die Quellen sind sich nicht einig: Manche sagen, das Fruchtfleisch sei nicht giftig, andere bezeichnen Avocado als giftig für Hunde. Weil sie außerdem sehr fettreich ist und der Kern eine Gefahr darstellt, raten wir, sie von Hunden fernzuhalten.",
-        "fr": "Les sources ne sont pas d’accord : certaines disent que la chair n’est pas toxique, d’autres qualifient l’avocat de toxique pour les chiens. Comme il est aussi très gras et que le noyau est dangereux, nous conseillons de le tenir à l’écart.",
+        "fr": "Les sources divergent : certaines disent que la chair n’est pas toxique, d’autres qualifient l’avocat de toxique pour les chiens. Comme il est aussi très gras et que le noyau est dangereux, nous conseillons de le tenir à l’écart.",
         "es": "Las fuentes no coinciden: algunas dicen que la pulpa no es tóxica y otras consideran el aguacate venenoso para los perros. Como además es muy graso y el hueso es un peligro, aconsejamos mantenerlo lejos.",
         "it": "Le fonti non concordano: alcune dicono che la polpa non è tossica, altre definiscono l’avocado velenoso per i cani. Poiché è anche molto grasso e il nocciolo è un pericolo, ti consigliamo di tenerlo lontano.",
         "pt": "As fontes não estão de acordo: umas dizem que a polpa não é tóxica, outras consideram o abacate venenoso para os cães. Como também é muito gordo e o caroço é um perigo, aconselhamos a mantê-lo longe.",
@@ -409,7 +409,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "255638d25c6fd4d2470686a7de80449201cd554b3758232fb5e04e6c614597eb"
+      "verified_hash": "7140f74f3819628bea4b8065d928bde7769c30dfea541ea10b39741ddb8c8359"
     },
     "es": {
       "status": "verified",
