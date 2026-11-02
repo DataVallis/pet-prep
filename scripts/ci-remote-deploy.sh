@@ -8,6 +8,13 @@
 # would switch them before maintenance mode / migrations. deploy-production.sh syncs
 # incoming/ → repo/ itself and reverts on a pre-migration failure (DEPLOYMENT.md D10).
 #
+# Prebuilt images (D28): with APP_IMAGE + WEB_IMAGE (digest refs from
+# scripts/ci-image-refs.sh) + REGISTRY_USER + REGISTRY_TOKEN (the job's GITHUB_TOKEN,
+# packages: read) the server logs in to ghcr.io over ssh stdin (the token never appears in
+# a command line), deploy-production.sh pulls exactly those digests and logs out right
+# after the pull; the ssh command logs out again at the end. Missing / malformed refs or a
+# failed login → the server builds the images itself (old behaviour).
+#
 # Env: SSH_PRIVATE_KEY, SSH_HOST, SSH_USER (default deploy), COMMIT_SHA, EXPECT_DOMAIN
 #      (the API domain the server must have — deploy-production.sh --expect-domain),
 #      KEY_SECRET (name of the GitHub secret, for the error message), TARGET (label).
@@ -55,7 +62,28 @@ rsync -az --delete \
   -e "ssh ${SSH_OPTS[*]}" \
   ./ "${SSH_USER}@${SSH_HOST}:/opt/petprep/incoming/"
 
+IMAGE_ARGS=""
+LOGIN_CMD=""
+if [ -n "${APP_IMAGE:-}" ] && [ -n "${WEB_IMAGE:-}" ] && [ -n "${REGISTRY_USER:-}" ] && [ -n "${REGISTRY_TOKEN:-}" ]; then
+    ref_re='^ghcr\.io/[a-z0-9-]+/petprep-(app|web)@sha256:[0-9a-f]{64}$'
+    user_re='^[][A-Za-z0-9_.-]+$' # also "github-actions[bot]" (the daily deploy's dispatch)
+    if ! [[ "$APP_IMAGE" =~ $ref_re ]] || ! [[ "$WEB_IMAGE" =~ $ref_re ]] || ! [[ "$REGISTRY_USER" =~ $user_re ]]; then
+        echo "ERROR: APP_IMAGE / WEB_IMAGE / REGISTRY_USER have unexpected characters."
+        exit 1
+    fi
+    IMAGE_ARGS="--app-image ${APP_IMAGE} --web-image ${WEB_IMAGE}"
+    LOGIN_CMD="docker login ghcr.io -u '${REGISTRY_USER}' --password-stdin > /dev/null 2>&1 || echo 'WARNING: ghcr.io login failed - the images are built on the server.'; "
+    echo "   CI images: ${APP_IMAGE} ${WEB_IMAGE}"
+else
+    echo "   No CI image digests — the server builds the images."
+fi
+
 echo "2. Triggering the deployment script on the ${TARGET} server for commit: ${COMMIT_SHA}..."
+DEPLOY_CMD="/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --expect-domain ${EXPECT_DOMAIN}${IMAGE_ARGS:+ ${IMAGE_ARGS}} ${COMMIT_SHA}"
 # shellcheck disable=SC2029  # expanded here on purpose (validated tokens above)
-ssh "${SSH_OPTS[@]}" "${SSH_USER}@${SSH_HOST}" \
-  "/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --expect-domain ${EXPECT_DOMAIN} ${COMMIT_SHA}"
+if [ -n "$LOGIN_CMD" ]; then
+  printf '%s\n' "$REGISTRY_TOKEN" | ssh "${SSH_OPTS[@]}" "${SSH_USER}@${SSH_HOST}" \
+    "${LOGIN_CMD}${DEPLOY_CMD} < /dev/null; rc=\$?; docker logout ghcr.io > /dev/null 2>&1; exit \$rc"
+else
+  ssh "${SSH_OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "$DEPLOY_CMD"
+fi
