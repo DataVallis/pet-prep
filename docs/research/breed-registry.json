@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8e87a6fa7101477da79033e073616c571e63331cef0c5b13df5f72301ae93051"
+      "sha256": "e449449b2420957205f4f86e3f93d07629b93dbc1e5ee4db63992965c882dca9"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "46d959c1c95af6272aff13cc1152d1cc2b5558823d4b8cc2ef2b6b455823e43b"
+      "sha256": "ac4faa08d560cf91428d3500dcbab58420daa2c18154b8ef10c2dda359559fb6"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,31 +25,31 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "92ce55a7f99864aaf2eff217f9a106b98b35d91d2f450a41bdd72408120aa632"
+      "sha256": "bb54df849d0b464dcc779647795ed35c12349268f0eddf44ae9b96f21fbb03fe"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "53b177fa2df1300ddb372367ea5b4c59ea8d2d288a1604fd75ac41d11abde771"
+      "sha256": "db00021836f81b7e5eb0693648c82402183ac241c70ba03bb860f71e4104bc58"
     },
     "labels_sl": {
       "path": "mobile/src/i18n/locales/sl/pet.json",
       "covers": "breedSuitability: suitsTitle, considerTitle and the label of every vocabulary tag",
-      "sha256": "b3bb82f19019cee22b66768af98ad3ef32da42d12c97f81ddd68c72868ffd7a2"
+      "sha256": "1ac957cc4277c7a4997aa74641d2924ffd9578cf4415da86fa137c6aa071a060"
     },
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "fc2d9476ae6cf9c47fb45bdeb8904fd2d018f29a65e493ff69acd2c2f11c0f36"
+      "sha256": "9daf669df3ceecdac3f1b3ac66dc6d6504a7d0d7ccaf834884dd565379aad35b"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9cc3a5339179208329f2d985e192c3da0e656d7938ed9a60d9d7ebcf0c86ff99"
+      "sha256": "1d33a1b5af119dd2e67295f218248b6b12185f8402ac59d2dd58b23eb556eadf"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "a964367c257df5429dfa46b9cd5283413854ca9b199787e4dce5254c33f5afc6"
+      "sha256": "26b34aba53db37f3d3f443437112ef591f25aa31c769c959fee33d19611cb81f"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "cc9f2a793c0dca9d35996f03b71cbd66e6fabff9c6e09ecc459b96a5c48aa99f"
+      "sha256": "50f7db06da25b2d629f8c19f1a4f4e913c00b9015e052c15956c8f3e1ed233fe"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -89,6 +89,7 @@
     "heat_sensitive": "consider",
     "hips_hind_legs": "consider",
     "independent_experienced_owner": "consider",
+    "independent_older_children": "consider",
     "large_home": "suits",
     "lively_older_children": "consider",
     "long_daily_exercise": "consider",
@@ -135,6 +136,7 @@
         "heat_sensitive": "thick coat — struggles in hot weather",
         "hips_hind_legs": "hips and hind legs — check joint health",
         "independent_experienced_owner": "independent and stubborn — best with an experienced owner",
+        "independent_older_children": "independent dog — better with older children",
         "large_home": "a large house and garden",
         "lively_older_children": "lively dog — better with older children",
         "long_daily_exercise": "needs lots of exercise every day",
@@ -181,6 +183,7 @@
         "heat_sensitive": "gost kožuh — slabo prenaša vročino",
         "hips_hind_legs": "kolki in zadnje noge — preverite zdravje sklepov",
         "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom",
+        "independent_older_children": "samosvoj pes — bolje za starejše otroke",
         "large_home": "veliko hišo z vrtom",
         "lively_older_children": "živahen pes — bolje za starejše otroke",
         "long_daily_exercise": "vsak dan potrebuje veliko gibanja",
@@ -222,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 80,
+      "breed_count": 81,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -48363,6 +48366,638 @@
       ]
     },
     {
+      "id": "shar_pei",
+      "species": "dog",
+      "order": 80,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Shar Pei",
+        "sl": "Šarpej"
+      },
+      "slug": {
+        "en": "shar-pei",
+        "sl": "sarpej"
+      },
+      "synonyms": {
+        "en": [
+          "Chinese Shar-Pei",
+          "Shar-Pei",
+          "Sharpei"
+        ],
+        "sl": [
+          "šar pej",
+          "shar pei",
+          "kitajski šarpej"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              46,
+              51
+            ],
+            "female": [
+              46,
+              51
+            ]
+          },
+          "source_ids": [
+            "S665"
+          ],
+          "ref": "shar_pei.height.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20,
+              27
+            ],
+            "female": [
+              20,
+              27
+            ]
+          },
+          "source_ids": [
+            "S660"
+          ],
+          "ref": "shar_pei.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "shar_pei.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "median",
+          "value": 7.28,
+          "source_ids": [
+            "S667"
+          ],
+          "ref": "shar_pei.lifespan.median_uk",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.lifespan.rkc",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            8,
+            10
+          ],
+          "source_ids": [
+            "S661"
+          ],
+          "ref": "shar_pei.lifespan.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "once_a_week",
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 51,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "shar_pei.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 309,
+            "group": 2,
+            "section": 2,
+            "origin": "CN"
+          },
+          "source_ids": [
+            "S662"
+          ],
+          "ref": "shar_pei.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 7,
+        "grooming_frequency": 9,
+        "shedding": 10,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S668"
+          ],
+          "ref": "shar_pei.health.entropion",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_ear_problems",
+          "source_ids": [
+            "S660"
+          ],
+          "ref": "shar_pei.health.skin_folds",
+          "confidence": "high"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S660"
+          ],
+          "ref": "shar_pei.health.atopy",
+          "confidence": "medium"
+        },
+        {
+          "key": "shorter_face_boas",
+          "source_ids": [
+            "S660"
+          ],
+          "ref": "shar_pei.health.boas",
+          "confidence": "high"
+        },
+        {
+          "key": "shar_pei_fever",
+          "source_ids": [
+            "S660"
+          ],
+          "ref": "shar_pei.health.shar_pei_fever",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S664"
+          ],
+          "ref": "shar_pei.health.hip_elbow",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.family",
+              "shar_pei.suitability.pdsa_children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "independent_older_children",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.family",
+              "shar_pei.suitability.pdsa_children"
+            ]
+          },
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.experienced_owner"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S664"
+            ],
+            "refs": [
+              "shar_pei.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.health.boas"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S666",
+              "S668"
+            ],
+            "refs": [
+              "shar_pei.health.breed_watch",
+              "shar_pei.health.entropion"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.health.skin_folds"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S661",
+              "S667"
+            ],
+            "refs": [
+              "shar_pei.lifespan.median_uk",
+              "shar_pei.lifespan.vca"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 66
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 66
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.shar_pei.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S664"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S664 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.shar_pei.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.shar_pei.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S667"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 66 (0.75 × 7.28 y, VetCompass median S667)"
+          },
+          {
+            "ref": "proposed_game_parameters.shar_pei.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 51, Average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.shar_pei.grooming",
+            "basis_source_ids": [
+              "S664"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S664",
+          "S667"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "eye_scheme",
+            "level": "minimum",
+            "source_ids": [
+              "S664"
+            ]
+          },
+          {
+            "key": "dna_poag_pll",
+            "level": "best_practice",
+            "source_ids": [
+              "S664"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S664"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S664"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S664"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S660",
+        "S661",
+        "S662",
+        "S664",
+        "S665",
+        "S666",
+        "S667",
+        "S668",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -53702,6 +54337,62 @@
       "publisher": "WebMD Pets — Alyssa Anderson, medically reviewed by Vanesa Farmer, DVM (June 2, 2024)",
       "title": "What to Know About Greater Swiss Mountain Dogs",
       "url": "https://www.webmd.com/pets/dogs/what-to-know-greater-swiss-mountain-dog"
+    },
+    {
+      "id": "S660",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Shar Pei breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/shar-pei"
+    },
+    {
+      "id": "S661",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn)",
+      "title": "Chinese Shar-Pei",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/chinese-shar-pei"
+    },
+    {
+      "id": "S662",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature: Shar Pei (309)",
+      "url": "https://www.fci.be/en/nomenclature/SHAR-PEI-309.html"
+    },
+    {
+      "id": "S664",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breeds A–Z: Shar Pei",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/shar-pei/"
+    },
+    {
+      "id": "S665",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Shar Pei breed standard",
+      "url": "https://www.royalkennelclub.com/breed-standards/utility/shar-pei/"
+    },
+    {
+      "id": "S666",
+      "tier": "A",
+      "publisher": "The Royal Kennel Club (UK)",
+      "title": "Breed Watch: Shar Pei — Category 2",
+      "url": "https://www.royalkennelclub.com/activities/heritage-sports/dog-showing/judging-dog-shows/breed-watch-health-and-welfare-of-show-dogs/shar-pei-category-2/"
+    },
+    {
+      "id": "S667",
+      "tier": "A",
+      "publisher": "Canine Medicine and Genetics (PubMed abstract) — O'Neill, Engdahl, Leach, Packer, Church, Brodbelt (2023) 10:11",
+      "title": "Is it now time to iron out the wrinkles? Health of Shar Pei dogs under primary veterinary care in the UK",
+      "url": "https://www.pubmed.gov/38093396/"
+    },
+    {
+      "id": "S668",
+      "tier": "A",
+      "publisher": "Royal Veterinary College (VetCompass)",
+      "title": "Shar Pei infographic (2024-01-07) (PDF)",
+      "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/240107%20VetCompass%20-%20Shar%20Pei%20infographic%20PDF.pdf"
     },
     {
       "id": "C1",
