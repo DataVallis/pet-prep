@@ -95,11 +95,11 @@ describe('texts (sl + en)', () => {
   it('Slovenian: both phones (OS unknown), then the no-watch way', () => {
     expect(pushSourceLines()).toEqual([
       'Na iPhonu potiske šteje samo Apple Watch (v aplikaciji Zdravje: Podatki o zdravju → Invalidski voziček = Da). Sam iPhone potiskov ne šteje.',
-      'Na Androidu potrebujete napravo ali aplikacijo, ki zapisuje potiske invalidskega vozička v Health Connect.',
+      'Na Androidu PetPrep potiskov ne bere — namesto tega vpišite minute sprehoda.',
       'Brez ure lahko vpišete minute sprehoda na strani otroka (Pregled → otrok → Vpiši sprehod).',
     ]);
     expect(ADAPTED_PUSH_STRINGS.adapted.noPushesToday.text).toBe(
-      'Danes še ni potiskov. Brez Apple Watch (ali naprave za Health Connect) vpišite minute sprehoda.',
+      'Danes še ni potiskov. Brez Apple Watch (na Androidu vedno) vpišite minute sprehoda.',
     );
     expect(ADAPTED_PUSH_STRINGS.adapted.noPushesToday.button).toBe('Vpiši sprehod');
   });
@@ -114,11 +114,11 @@ describe('texts (sl + en)', () => {
     await i18n.changeLanguage('en');
     expect(pushSourceLines()).toEqual([
       'On iPhone, only an Apple Watch counts pushes (in the Health app: Health Details → Wheelchair = Yes). The iPhone alone doesn\'t count pushes.',
-      'On Android, you need a device or an app that records wheelchair pushes in Health Connect.',
+      "On Android, PetPrep doesn't read pushes — log the walk minutes instead.",
       'Without a watch you can log walk minutes on your child\'s page (Overview → child → Log a walk).',
     ]);
     expect(ADAPTED_PUSH_STRINGS.adapted.noPushesToday.text).toBe(
-      'No pushes yet today. Without an Apple Watch (or a Health Connect device), log the walk minutes.',
+      'No pushes yet today. Without an Apple Watch (and always on Android), log the walk minutes.',
     );
     expect(ADAPTED_PUSH_STRINGS.adapted.noPushesToday.button).toBe('Log a walk');
   });

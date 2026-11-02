@@ -210,6 +210,7 @@
       "mine": "Tvoji potiski danes: {{steps}}",
       "refresh": "Osveži potiske",
       "unavailable": "Potiske štejeta aplikacija Zdravje ali Health Connect. Ta telefon nima nobene od njiju.",
+      "unavailableAndroid": "Na tem telefonu sprehod v PetPrep vpiše starš — minute štejejo za tvojega kužka.",
       "health": {
         "title": {
           "ios": "Štej potiske z aplikacijo Zdravje",

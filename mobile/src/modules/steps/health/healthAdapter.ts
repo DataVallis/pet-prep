@@ -20,6 +20,9 @@ function create(measure: HealthMeasure): HealthStepsAdapter | null {
       return createHealthKitAdapter(measure);
     }
     if (Platform.OS === 'android') {
+      // Google Play (2026-11-02, Health Connect minimum scope): PetPrep no longer requests
+      // READ_WHEELCHAIR_PUSHES — on Android adapted mode counts parent-logged walk minutes only.
+      if (measure === 'pushes') return null;
       const { createHealthConnectAdapter } = require('./healthConnectAdapter') as typeof import('./healthConnectAdapter');
       return createHealthConnectAdapter(undefined, measure);
     }
@@ -29,7 +32,10 @@ function create(measure: HealthMeasure): HealthStepsAdapter | null {
   return null;
 }
 
-/** M5-T12: `pushes` = the wheelchair-push source of the same health store (adapted mode). */
+/**
+ * M5-T12: `pushes` = the wheelchair-push source of the same health store (adapted mode).
+ * iOS only — on Android it is always null (no Health Connect push permission since 2026-11-02).
+ */
 export function getHealthAdapter(measure: HealthMeasure = 'steps'): HealthStepsAdapter | null {
   if (!(measure in cached)) cached[measure] = create(measure);
   return cached[measure] ?? null;

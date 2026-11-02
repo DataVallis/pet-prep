@@ -210,6 +210,7 @@
       "mine": "Your pushes today: {{steps}}",
       "refresh": "Refresh pushes",
       "unavailable": "Pushes are counted by Apple Health or Health Connect. This phone has neither.",
+      "unavailableAndroid": "On this phone a parent logs your walk in PetPrep — the minutes count for your pup.",
       "health": {
         "title": {
           "ios": "Count pushes with Apple Health",

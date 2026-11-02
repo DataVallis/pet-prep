@@ -223,7 +223,11 @@ export default function WalkTrackerOverlay({ view, stepSync, onClose }: WalkTrac
             </>
           ) : adapted ? (
             // Pushes come only from the health store: nothing to count without it.
-            healthOffered ? null : <Text style={styles.note}>{words.unavailable}</Text>
+            healthOffered ? null : (
+              <Text style={styles.note}>
+                {Platform.OS === 'android' ? WALK_STRINGS.pushes.unavailableAndroid : words.unavailable}
+              </Text>
+            )
           ) : permission === 'unavailable' ? (
             healthOffered ? null : <Text style={styles.note}>{words.unavailable}</Text>
           ) : permission === 'denied' ? (

@@ -232,4 +232,17 @@ describe('WalkTrackerOverlay — M5-T12 adapted mode (wheelchair pushes)', () =>
     renderOverlay('granted', { sync: { adaptedMode: true, canSync: false, health: makeHealth('unavailable', null, 'pushes') } });
     expect(screen.getByText(/Potiske štejeta aplikacija Zdravje ali Health Connect/)).toBeTruthy();
   });
+
+  it('Android: no pushes source — tells the child a parent logs the walk', () => {
+    const { Platform } = jest.requireActual<typeof import('react-native')>('react-native');
+    const original = Platform.OS;
+    Object.defineProperty(Platform, 'OS', { value: 'android', configurable: true });
+    try {
+      renderOverlay('granted', { sync: { adaptedMode: true, canSync: false, health: makeHealth('unavailable', null, 'pushes') } });
+      expect(screen.getByText(WALK_STRINGS.pushes.unavailableAndroid)).toBeTruthy();
+      expect(screen.queryByText(/Potiske štejeta/)).toBeNull();
+    } finally {
+      Object.defineProperty(Platform, 'OS', { value: original, configurable: true });
+    }
+  });
 });
