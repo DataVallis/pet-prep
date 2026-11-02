@@ -3224,6 +3224,47 @@
         }
       ],
       "notes": "RKC breed page (dog-data S654, 2026-11-02, UK name 'Great Swiss Mountain Dog'): minimum 'Prioritising genetic diversity'; Best Practice BVA/KC elbow and hip schemes. No new test key."
+    },
+    "shar_pei": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S664",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "These tests address conditions that are still significant for the breed"
+        }
+      },
+      "tests": [
+        {
+          "key": "eye_scheme",
+          "level": "minimum",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S664",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "dna_poag_pll",
+          "level": "best_practice",
+          "name": "DNA test for primary open angle glaucoma/ primary lens luxation (POAG/PLL)",
+          "source_id": "S664",
+          "quote": "DNA test for primary open angle glaucoma/ primary lens luxation (POAG/PLL)"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S664",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Sheme",
+          "source_id": "S664",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Sheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S664, 2026-11-02; the page heads the first group 'Good Practice'): minimum the BVA/KC/ISDS eye scheme; Best Practice the POAG/PLL DNA test, BVA/KC elbow and hip schemes ('Sheme' sic, as returned). New test key dna_poag_pll (one combined RKC DNA test; dna_poag and dna_pll exist separately for other breeds)."
     }
   }
 }
