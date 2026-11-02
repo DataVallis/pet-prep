@@ -44225,6 +44225,560 @@
       }
     }
   },
+  "greater_swiss_mountain_dog": {
+    "_note": "Added 2026-11-02 (M5-R10-86, unattended run — appended after the Rat Terrier: AKC 2024 No. 82 'Greater Swiss Mountain Dog', S174 full-list table fetched 2026-11-02 '82 | Greater Swiss Mountain Dog'). Quotes as returned by the web-fetch tool on 2026-11-02 (short quotes; paraphrase only in notes). Sources S652–S659 (reused S10, S11, S14, S35, S45, S174). No health percentages anywhere. Identity from the FCI nomenclature (S652, No. 58, Switzerland); appearance, colour and height from FCI-Standard N° 58 (S653, 25.03.2003); the RKC Breeds A–Z page (S654, UK name 'Great Swiss Mountain Dog') was reached this time (royalkennelclub.com URL with a trailing slash): key facts, Breed Watch Category 1 and the health-testing list. No standard gives a weight (FCI S653, AKC S655 — 'The standard gives no weight figure', paraphrase) → weight from WebMD (S658, medically reviewed by Vanesa Farmer, DVM, June 2, 2024); PetMD (S656) and VCA (S657) as alternatives. No PDSA / Woodgreen page found. Lifespan: no McMillan 2024 / VetCompass breed median found → the RKC lower bound 'Over 10 years' (runbook order, German Wirehaired Pointer precedent). Not in Coren's ranking (S35, checked 2026-11-02 — no 'Swiss' row). Never hypoallergenic (sheds). Names: FCI 'Great Swiss Mountain Dog' / 'Grosser Schweizer Sennenhund' (S652), AKC 'Greater Swiss Mountain Dog' (S655), nickname 'Swissy' (S656); Slovenian »veliki švicarski planšarski pes« (used in the Slovenian press, Žurnal24; no KZS page checked — open for David).",
+    "identity": {
+      "value": "FCI No. 58, Group 2 Section 3 (Swiss Mountain and Cattle Dogs), Switzerland",
+      "unit": "—",
+      "source_id": "S652",
+      "quote": "GREAT SWISS MOUNTAIN DOG",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S652, as returned): 'GROSSER SCHWEIZER SENNENHUND (58)', EN 'GREAT SWISS MOUNTAIN DOG', FR 'GRAND BOUVIER SUISSE', ES 'GRAN BOYERO SUIZO'; section 'Chiens de montagne et de bouvier suisses', country of origin 'SUISSE', definitive acceptance 13/08/1954, no working trial. FCI-Standard N° 58 (S653): origin 'Switzerland.', 'Section 3 Swiss Mountain- and Cattle Dogs.' Switzerland is already in FCI_ORIGINS (CH, Bernese Mountain Dog)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S654",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S654). WebMD 52–64 kg males (S658) = 115–140 lb → the 'Giant' class of S10 for growth only."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            65,
+            72
+          ],
+          "female": [
+            60,
+            68
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S653",
+        "quote": "Height at withers for males: 65 – 72 cm,",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); bitches 'Height at withers for bitches: 60 – 68 cm.' AKC standard (S655): 'Dogs 25½ to 28½ inches. Bitches 23½ to 27 inches.' (65–72 / 60–69 cm, agrees)."
+      }
+    },
+    "adult_weight": {
+      "webmd": {
+        "value": {
+          "male": [
+            52,
+            64
+          ],
+          "female": [
+            39,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S658",
+        "quote": "Healthy males can weigh anywhere from 115 to 140 pounds.",
+        "confidence": "medium",
+        "notes": "WebMD (S658, medically reviewed by Vanesa Farmer, DVM): males 115–140 lb = 52.2–63.5 kg, females 'Healthy females weigh anywhere from 85 to 110 pounds.' = 38.6–49.9 kg (our conversion, rounded to whole kg) — the game / register range. No standard gives a weight: FCI-Standard N° 58 (S653) none, AKC standard (S655) none. PetMD (S656) males 115–140 lb, females 'up to 110 pounds' and VCA (S657) '90 and 130 pounds' (both sexes) are alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                52,
+                64
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S656",
+            "quote": "Males generally stand 25.5–28.5 inches tall and weigh 115–140 pounds.",
+            "notes": "PetMD (S656); females 'weighing up to 110 pounds' (no lower bound)."
+          },
+          {
+            "value": {
+              "male": [
+                41,
+                59
+              ],
+              "female": [
+                41,
+                59
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S657",
+            "quote": "These dogs are very large, ranging in height from 23.5 to 28.5 inches, and weigh between 90 and 130 pounds.",
+            "notes": "VCA (S657), both sexes; 90–130 lb = 40.8–59.0 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "VI (>40 kg, no curve)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 39–64 kg is mostly in the band '>40 (no curve)'. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. WebMD males 115–140 lb (S658) → 'Giant'. Same 18–24 months as the Saint Bernard and the Newfoundland. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Greater Swiss Mountain Dog growth curve found. PetMD (S656): puppies need to eat three to four times a day to support their rapid growth (paraphrase)."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S654",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact 'Lifespan' (S654). PetMD (S656) 'Greater Swiss Mountain Dogs have an average lifespan of 8–11 years.', WebMD (S658) 'On average, these dogs live for eight to 11 years.', VCA (S657) '10 to 11 years' — spans without a median. Wikipedia (S659, tier C): a US breed-club survey of 2000–2001 with a median of 6.75 years — background only, not used."
+      },
+      "petmd": {
+        "value": "8–11",
+        "unit": "years",
+        "source_id": "S656",
+        "quote": "Greater Swiss Mountain Dogs have an average lifespan of 8–11 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S656). WebMD (S658) 'eight to 11 years' agrees. Exported as the span next to the RKC lower bound; not used for the senior boundary (upper bound 11 > 10 → no shorter_lifespan chip)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "No McMillan et al. 2024 / VetCompass breed median found for this breed (web search 2026-11-02; the Dogs Trust table S123 is not in the fetch tool's provenance, as on earlier runs). UNSOURCED value → open for David (check the S123 row)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S654) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (none found) → VetCompass median (none found) → RKC lower bound. Alternatives: 84 (Dogs Trust > 7 y, S14); 72 (0.75 × PetMD / WebMD lower bound 8 y — not chosen, not the rule's source).",
+        "derived_from": [
+          "S11",
+          "S654"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S654",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S654) — the runbook's preferred source. WebMD (S658): 'Greater Swiss Mountain Dogs only need a moderate amount of exercise.'; VCA (S657): 'Moderate - needs to walk or play every day.'; PetMD (S656) gives no minutes."
+      },
+      "heat": {
+        "value": "tolerates heat poorly — exercise in the coolest times of day",
+        "unit": "—",
+        "source_id": "S657",
+        "quote": "Care must be taken during even mild weather to limit exercise to the coolest times of day.",
+        "confidence": "high",
+        "notes": "VCA (S657). Basis of heat_sensitive. No heat task: no frequency, and the M5-R14 heat rule is for flat-faced breeds only."
+      },
+      "after_meals": {
+        "value": "do not exercise directly before or after mealtimes (bloat / GDV)",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "avoid using elevated food bowls and do not exercise your dog directly before or after mealtimes",
+        "confidence": "high",
+        "notes": "PetMD (S656, fragment as returned); also 'Smaller feedings help reduce the likelihood of bloat and GDV,' (fragment). → proposed_game_parameters.greater_swiss_mountain_dog.meal_exercise_gap (M5-R16)."
+      },
+      "mental": {
+        "value": "needs to stay active and mentally stimulated",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "Swissies need to stay active and mentally stimulated thanks to their hardworking history.",
+        "confidence": "high",
+        "notes": "PetMD (S656). VCA (S657) Quick Facts 'Needs an assertive owner and a job to do.' Basis of needs_mental_stimulation."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "self-confident, alert, watchful, fearless; good-natured and devoted to familiar people; medium temperament",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Self-confident, alert, watchful and fearless in everyday situations.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'Good-natured and devoted towards people familiar to him.', 'Self-assured with strangers.', 'Medium temperament.' AKC standard (S655): 'Bold, faithful, willing worker. Alert and vigilant.' VCA (S657): 'He's generally placid and eager to please.'"
+      },
+      "family": {
+        "value": "great family dogs, gentle with children; supervise every interaction",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "This makes them great family dogs who are gentle with children.",
+        "confidence": "high",
+        "notes": "PetMD (S656). Supervision caveat: 'However, all interactions between kids and dogs should be supervised, regardless of the dog's breed.' WebMD (S658): 'Greater Swiss Mountain Dogs are good with strangers and young children, but they don't always like other dogs.' VCA (S657) Quick Facts: ideal with 'Older kids' (a rating). Basis of family_pet and children; not small_children (VCA older kids, PetMD caveat)."
+      },
+      "time_alone": {
+        "value": "fine at home alone as a trained adult; wants to be with the family",
+        "unit": "—",
+        "source_id": "S657",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "VCA (S657) Quick Facts 'Fine as a trained adult' (home alone; table cell as returned); ideal owner 'Work from home or willing to use a doggy daycare service.' PetMD (S656): 'More than anything, this breed wants to be with their family and involved in their activities.' No statement against being left alone → no needs_company chip."
+      },
+      "other_pets": {
+        "value": "strong herding instinct — teach puppies early not to chase smaller animals; may not like other dogs",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "so Greater Swiss Mountain Dog puppies need to be taught early that they should not chase smaller animals, such as cats.",
+        "confidence": "high",
+        "notes": "PetMD (S656, fragment), preceded by 'Due to their history, these dogs can have a strong herding instinct,'. WebMD (S658): 'they don't always like other dogs.' and 'Make sure that your dog is comfortable with any new animals before leaving them alone together.' No verbatim prey-drive statement → no chases_small_pets chip."
+      },
+      "socialisation": {
+        "value": "early and consistent socialisation",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "Early and consistent socialization is equally important for them to grow into well-mannered companions.",
+        "confidence": "high",
+        "notes": "PetMD (S656); also 'this friendly breed is accepting of new people if they've been well-socialized as puppies.' VCA (S657): 'Early socialization is very important.' → proposed_game_parameters.greater_swiss_mountain_dog.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "start early; consistent positive training throughout life; takes patience",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "Greater Swiss Mountain Dogs should be consistently trained with positive reinforcement methods throughout their lives.",
+        "confidence": "high",
+        "notes": "PetMD (S656); 'Training a Swissy will take some patience' (fragment). WebMD (S658): 'For the best results, start training your pet as soon as possible.' VCA (S657): can be slow to learn housetraining (paraphrase). The game uses Coren's rank only."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": "problems with obesity — keep treats to a minimum",
+        "unit": "—",
+        "source_id": "S658",
+        "quote": "The breed does have problems with obesity, so keep treats to a minimum and pay attention to how your dog grows.",
+        "confidence": "high",
+        "notes": "WebMD (S658). Basis of food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not a welfare-concern breed: RKC Breed Watch Category 1 (S654; no breed-specific points of concern for judges, paraphrase) → no welfare chip. PetMD (S656) names epilepsy, distichiasis, entropion, urinary incontinence, GDV, hip and elbow dysplasia and arthritis (headings); VCA (S657) elbow and hip dysplasia, bloat, eye abnormalities, hypothyroidism; WebMD (S658) splenic torsion and bloat.",
+      "hip_elbow": {
+        "value": "hip and elbow dysplasia — parents hip- and elbow-scored (BVA/KC schemes, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+        "confidence": "high",
+        "notes": "RKC breed page (S654) Best Practice: also 'Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme'. PetMD (S656) and VCA (S657) list hip and elbow dysplasia. Not a Breed Watch point → no hips_hind_legs chip. Register key hip_elbow_dysplasia."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat) — a life-threatening emergency",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "GDV is a life-threatening emergency, and your dog must receive veterinary care as soon as possible.",
+        "confidence": "high",
+        "notes": "PetMD (S656); smaller feedings, no elevated bowls, no exercise directly before or after meals (meal_exercise_gap). WebMD (S658): 'It can be life-threatening.' Register key bloat_gdv."
+      },
+      "splenic_torsion": {
+        "value": "splenic torsion — a twisted spleen, more common in this breed than in other large breeds",
+        "unit": "—",
+        "source_id": "S658",
+        "quote": "This condition is more common in this breed than in other large dog breeds.",
+        "confidence": "medium",
+        "notes": "WebMD (S658, medically reviewed by a DVM) under the heading splenic torsion. No number → none in the register. New register health key splenic_torsion."
+      },
+      "epilepsy": {
+        "value": "epilepsy — seizures",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S656) heading 'Epilepsy' (name only, paraphrase). Register key epilepsy."
+      },
+      "eyelids": {
+        "value": "eyelid problems — distichiasis (extra eyelashes) and entropion (eyelids rolling inwards)",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S656) headings 'Distichiasis' and 'Entropion' (names only, paraphrase); VCA (S657) eye abnormalities. Register key eyelid_problems."
+      },
+      "urinary_incontinence": {
+        "value": "urinary incontinence",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S656) heading 'Urinary incontinence' (name only). Register key urinary_incontinence."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S657",
+        "quote": null,
+        "confidence": "low",
+        "notes": "VCA (S657) list (name only). Not exported (one source, name only)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-02) has no 'Greater Swiss Mountain Dog' / 'Great Swiss Mountain Dog' / 'Swiss' row (the Bernese Mountain Dog is rank 22)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Unranked → no tier."
+      },
+      "training_notes": {
+        "value": "consistent positive training; start early; takes patience",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "Greater Swiss Mountain Dogs should be consistently trained with positive reinforcement methods throughout their lives.",
+        "confidence": "medium",
+        "notes": "PetMD (S656). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.greater_swiss_mountain_dog.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "tricolour, sturdy, heavy-boned, well-muscled draught dog; endurance and agility despite size",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "A tricolour, sturdy, heavy boned and well-muscled dog.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'In spite of his size and weight, he presents endurance and agility.' Proportions: body length to height 10 : 9 (S653). AKC (S655): 'a Draft and Drover breed'."
+      },
+      "colours": {
+        "value": [
+          "black, tan and white (tricolour)"
+        ],
+        "unit": "list",
+        "source_id": "S653",
+        "quote": "Typically tricolour. Main colour black with symmetrical, reddish-brown (tan) markings and clean white markings.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); disqualifying 'Other than tricolour coat.' and 'Main colour other than black.' AKC (S655): 'The topcoat is black. The markings are rich rust and white.' Markings (S653): tan on the cheeks, above the eyes, inside the ears, both sides of the forechest, all four legs and under the tail; white blaze and muzzle, unbroken from throat to chest, feet and tail tip; a band of black between the blaze and the tan above the eyes. One colour only."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — one standard colour (weight 100, verified=false in breed_appearance.php)."
+      },
+      "coat": {
+        "value": "double coat: thick outer coat of medium length (short permissible) over a dense dark grey or black undercoat",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Double coat consisting of thick, outer coat of medium length and dense undercoat.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'Short outer coat permissible if there is undercoat.' AKC (S655): 'Topcoat is dense, approximately 1-1/4 to 2 inches in length.' RKC (S654) 'Coat length: Short'."
+      },
+      "head": {
+        "value": "flat, broad skull; hardly pronounced stop; strong, straight muzzle as long as the skull, never pointed",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Strong, longer than its depth. Must not be pointed, seen either from above or in profile.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653) muzzle; skull 'Flat and broad.', stop 'Hardly pronounced.', 'Length of skull to length of muzzle = 1: 1.'"
+      },
+      "ears": {
+        "value": "medium, triangular, set fairly high, hanging flat close to the cheeks",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Of medium size, triangular and set on fairly high.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'In repose hanging flat and close to the cheeks but raised forward when attentive.'"
+      },
+      "eyes": {
+        "value": "almond-shaped, medium, hazel to chestnut brown, dark rims",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Hazel to chestnut brown, with alert, friendly expression.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'Almond-shaped, of medium size, neither deep set nor protruding.' Light eyes are a fault."
+      },
+      "tail": {
+        "value": "fairly heavy, reaching the hocks, hanging in repose, never curled over the back",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Set-on harmoniously following the croup, fairly heavy and reaching to the hocks.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653); 'but never curled or tilted over the back.'"
+      },
+      "nose": {
+        "value": "black",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Black.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 58 (S653) 'Nose: Black.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S654, returned as label: value), PetMD (S656), VCA (S657), WebMD (S658). No PDSA / Woodgreen page found. The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size' (S654). "
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S654). "
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size of home' (S654). Basis of the large_home tag (with the garden)."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size of garden' (S654). "
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Grooming' (S654). Brushing 1× a week (M5-R13 rule \"Once a week\" → 1). VCA (S657) Quick Facts \"Brush a few times a week.\" (no number) — alternative; not frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Coat length' (S654). "
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Sheds' (S654). Basis of the sheds tag. WebMD (S658): \"About twice a year, the dog's undercoat will shed.\""
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Lifespan' (S654). Not shorter_lifespan (that needs \"Under 10 years\")."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Town or country' (S654). "
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Vulnerable native breed' (S654). "
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch (S654): Category 1 — no points of concern specific to the breed for judges (paraphrase) → no welfare chip."
+      },
+      "petmd_ears": {
+        "value": "weekly ear cleanings to prevent infections",
+        "unit": "—",
+        "source_id": "S656",
+        "quote": "Greater Swiss Mountain Dogs require weekly ear cleanings to prevent infections from developing.",
+        "confidence": "high",
+        "notes": "PetMD (S656). VCA (S657) 'Weekly ear cleanings and pedicures' agrees. → ear cleaning once a week (M5-R20)."
+      },
+      "vca_grooming": {
+        "value": "brush a few times a week; weekly ear cleanings and pedicures, periodic baths",
+        "unit": "—",
+        "source_id": "S657",
+        "quote": "Weekly ear cleanings and pedicures, plus periodic baths, will keep this dog looking his very best.",
+        "confidence": "high",
+        "notes": "VCA (S657); Quick Facts grooming 'Brush a few times a week.' (no number). → nail trim once a week (M5-R19, Pyrenean Mountain Dog precedent 'weekly pedicure'); baths 'periodic' (no number → no bath reminder)."
+      },
+      "webmd_teeth": {
+        "value": "brush their teeth daily",
+        "unit": "—",
+        "source_id": "S658",
+        "quote": "Brush their teeth daily",
+        "confidence": "high",
+        "notes": "WebMD (S658, as returned). → tooth brushing every day (M5-R15). Nails 'Trim their nails as needed' (WebMD — alternative to VCA weekly); bath 'whenever you think that they're too dirty or smelly' (no frequency)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-11-02)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -66264,6 +66818,310 @@
         "confidence": "high",
         "notes": "Colours of the AKC standard (S650): pied — black, chocolate, red, apricot, blue, fawn, tan or lemon patches with white, with or without tan points; never brindle, merle or a solid colour without white; blue eyes disqualify. Weights unsourced in prompts. Black, tan and white as the portrait default (Claude: 'predominate Black', dark shades preferred). Natural long tail (accepted by the standard) — docking is not shown.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black, tan and white is the portrait default; standard colours only, never brindle or merle, natural tail"
+      }
+    },
+    "greater_swiss_mountain_dog": {
+      "_note": "Unattended run M5-R10-86 (2026-11-02): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S654 'Up to 1 hour per day' → 60). Senior 90 from the RKC lower bound 'Over 10 years' (no McMillan 2024 / VetCompass median; German Wirehaired Pointer precedent). Built: weekly brushing (RKC 'Once a week' → 1, M5-R13), puppy socialisation with the PetMD quote (S656, M5-R17), the 60-minute meal / exercise warning (PetMD S656, M5-R16), the child's tooth brushing every day (WebMD S658, M5-R15), ear cleaning once a week (PetMD S656, M5-R20) and nail trim once a week (VCA S657 'weekly … pedicures', M5-R19). No bath / groomer reminder (no frequency), no heat task (not a flat-faced breed). New register health key splenic_torsion; no new vocabulary key; no chases_small_pets chip (herding instinct, no verbatim prey drive). In marketing (not a welfare breed). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S654",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S654) → rule 'up to N' → 60. WebMD (S658) / VCA (S657) 'moderate' (no number).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S654 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S654",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S654 — no McMillan 2024 / VetCompass median found).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S654"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_8_y": 72
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × RKC lower bound 10 y)"
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × RKC lower bound 'Over 10 years' S654). The runbook's third lifespan source (McMillan 2024 and a VetCompass median not found). Alternatives: Dogs Trust > 7 y (S14) = 84; PetMD / WebMD lower bound 8 y (S656 / S658) = 72 — not the rule's source.",
+        "derived_from": [
+          "S11",
+          "S654"
+        ],
+        "alternatives": {
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_8_y": 72
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 (RKC lower bound 'Over 10 years', S654)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35, checked 2026-11-02) → unranked → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S654",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "greater_swiss_mountain_dog.suitability.rkc_grooming. RKC 'Grooming: Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1). VCA (S657) 'Brush a few times a week.' has no number (alternative); WebMD (S658) 'very little grooming for most of the year'. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S657",
+            "quote": "Brush a few times a week.",
+            "notes": "VCA Quick Facts — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S656",
+        "quote": "Early and consistent socialization is equally important for them to grow into well-mannered companions.",
+        "confidence": "high",
+        "notes": "greater_swiss_mountain_dog.behaviour.socialisation (PetMD S656). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S656)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S656",
+        "quote": "avoid using elevated food bowls and do not exercise your dog directly before or after mealtimes",
+        "confidence": "high",
+        "notes": "PetMD (S656), greater_swiss_mountain_dog.exercise.after_meals; the same page describes GDV (health.gdv). Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "tooth_brushing": {
+        "value": "brush their teeth daily",
+        "unit": "tooth brushing (sourced need)",
+        "source_id": "S658",
+        "quote": "Brush their teeth daily",
+        "confidence": "high",
+        "notes": "WebMD (S658), greater_swiss_mountain_dog.suitability.webmd_teeth. Built: the child's tooth-brushing mini-game every day (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »Brush their teeth daily« → vsak dan"
+      },
+      "ear_care": {
+        "value": "weekly ear cleanings",
+        "unit": "ear cleaning (sourced need)",
+        "source_id": "S656",
+        "quote": "Greater Swiss Mountain Dogs require weekly ear cleanings to prevent infections from developing.",
+        "confidence": "high",
+        "notes": "PetMD (S656), greater_swiss_mountain_dog.suitability.petmd_ears; VCA (S657) 'Weekly ear cleanings' agrees. Built: the child's ear-cleaning mini-game once a program week (DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »weekly ear cleanings« → 1× na teden"
+      },
+      "nail_trimming": {
+        "value": "weekly pedicures",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S657",
+        "quote": "Weekly ear cleanings and pedicures, plus periodic baths, will keep this dog looking his very best.",
+        "confidence": "high",
+        "notes": "VCA (S657), greater_swiss_mountain_dog.suitability.vca_grooming — 'weekly … pedicures' (Pyrenean Mountain Dog precedent). Built: the child's nail-trim mini-game once a program week (DOG_CARE_TASKS, M5-R19). WebMD (S658) 'Trim their nails as needed' — alternative (conditional). Baths 'periodic' → no bath reminder.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »weekly … pedicures« → 1× na teden"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-86); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S656"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.behaviour.family"
+            ],
+            "quote": "S656 'This makes them great family dogs who are gentle with children.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S656"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.behaviour.family"
+            ],
+            "quote": "S656 'This makes them great family dogs who are gentle with children.' (supervision caveat kept in notes)"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S654"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.suitability.rkc_size_of_home"
+            ],
+            "quote": "S654 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S656"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.exercise.mental"
+            ],
+            "quote": "S656 'Swissies need to stay active and mentally stimulated thanks to their hardworking history.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S654"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.suitability.rkc_shedding"
+            ],
+            "quote": "S654 'Yes'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S658"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.behaviour.food_motivation"
+            ],
+            "quote": "S658 'The breed does have problems with obesity, so keep treats to a minimum and pay attention to how your dog grows.'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S657"
+            ],
+            "refs": [
+              "greater_swiss_mountain_dog.exercise.heat"
+            ],
+            "quote": "S657 'Care must be taken during even mild weather to limit exercise to the coolest times of day.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "VCA rates the breed for 'Older kids' (S657) and PetMD adds a supervision caveat (S656) → no small_children; WebMD 'good with … young children' (S658) is not a rating.",
+          "older_children": "That chip names a small dog; no other older-children chip reason is sourced.",
+          "active_family": "Up to 1 hour a day (S654) — the chip is for 2 hours or more.",
+          "long_daily_exercise": "Up to 1 hour a day (S654) — the chip is for 2 hours or more.",
+          "apartment": "RKC 'Large house' (S654).",
+          "other_pets": "WebMD: 'they don't always like other dogs' (S658) → no other_pets chip.",
+          "low_shedding": "RKC 'Sheds: Yes' (S654).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "frequent_grooming": "RKC 'Once a week' (S654).",
+          "experienced_owner": "VCA 'Needs an assertive owner and a job to do.' (S657, Quick Facts) does not say 'powerful dog' / experience → no chip (open for David).",
+          "needs_company": "VCA 'Fine as a trained adult' at home alone (S657); PetMD only says the breed wants to be with the family (S656) → no chip.",
+          "chews_when_bored": "No source.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S654); PetMD / WebMD upper bound 11 y (> 10).",
+          "welfare": "RKC Breed Watch Category 1 (S654); no veterinary association names the breed for conformation-related welfare problems → no welfare chip.",
+          "chases_small_pets": "PetMD 'strong herding instinct … should not chase smaller animals, such as cats' (S656) — no verbatim prey-drive sentence; the runbook rule needs one → no chip; the fact stays in the register text."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, large_home; consider needs_mental_stimulation, sheds, food_motivated_weight, heat_sensitive"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S654",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); RKC Breed Watch Category 1 (S654). Marketing never presents the breed as hypoallergenic, as low-shedding or as a dog for small flats (S654).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Greater Swiss Mountain Dog, black, tan and white (the only standard colour): black main colour with symmetrical rich tan markings above the eyes, on the cheeks, forechest and legs and clean white blaze, muzzle, chest, feet and tail tip; large, sturdy, heavy-boned, well-muscled draught dog; short-to-medium dense double coat; flat broad skull, strong straight muzzle; almond hazel-to-brown eyes; medium triangular drop ears; heavy tail hanging to the hocks; black nose",
+        "unit": "—",
+        "source_id": "S653",
+        "quote": "Typically tricolour. Main colour black with symmetrical, reddish-brown (tan) markings and clean white markings.",
+        "confidence": "high",
+        "notes": "Colour of FCI-Standard N° 58 (S653) and AKC (S655): tricolour only — any other colour disqualifies. Weight unsourced in prompts. Short coat (not the Bernese's long coat).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black, tan and white is the only standard colour and the portrait default; never another colour, never a long coat"
       }
     }
   }

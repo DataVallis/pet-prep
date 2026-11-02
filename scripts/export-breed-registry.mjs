@@ -469,6 +469,7 @@ const SPECIES = [
       { id: 'alaskan_malamute', synonyms: { en: ['Malamute', 'Mal'], sl: ['malamut', 'aljaski malamut', 'malamute'] } },
       { id: 'basenji', synonyms: { en: ['African Barkless Dog', 'Congo Dog', 'barkless dog'], sl: ['basendži', 'basendzi', 'pes, ki ne laja'] } },
       { id: 'rat_terrier', synonyms: { en: ['Rattie', 'Ratty', 'American Rat Terrier'], sl: ['rattie', 'ameriški rat terier', 'terier za podgane'] } },
+      { id: 'greater_swiss_mountain_dog', synonyms: { en: ['Great Swiss Mountain Dog', 'Swissy', 'Grosser Schweizer Sennenhund'], sl: ['švicarski planšar', 'veliki švicarski planšar', 'grosser schweizer sennenhund'] } },
     ],
   },
   {
@@ -2281,6 +2282,30 @@ const DOG_FACTS = {
       ['skin_allergies', 'health.skin_allergies'],
     ],
   },
+  // M5-R10-86. Height = FCI 58 per sex (S653), weight = WebMD by sex (S658; no standard gives a weight), lifespan = the RKC band
+  // 'Over 10 years' (S654) + the PetMD span 8–11 y (S656), exercise = RKC 'Up to 1 hour per day' (S654), coat / grooming /
+  // shedding = RKC key facts (S654). Not ranked by Coren. FCI origin Switzerland (CH). Not exported: adult_weight alternatives
+  // (PetMD / VCA) and salt_category, lifespan.mcmillan_2024 (null) / senior_from, health.hypothyroidism (one source, name only).
+  // New health key: splenic_torsion.
+  greater_swiss_mountain_dog: {
+    height: ['height.fci'],
+    weight: [['adult_weight.webmd', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: 'behaviour.food_motivation',
+    coren_rank: false,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hip_elbow'],
+      ['bloat_gdv', 'health.gdv'],
+      ['splenic_torsion', 'health.splenic_torsion'],
+      ['epilepsy', 'health.epilepsy'],
+      ['eyelid_problems', 'health.eyelids'],
+      ['urinary_incontinence', 'health.urinary_incontinence'],
+    ],
+  },
 
 
 };
@@ -2333,6 +2358,7 @@ export const DOG_CARE_TASKS = {
   alaskan_malamute: [['ear_cleaning', 1, 7, 'proposed_game_parameters.alaskan_malamute.ear_care'], ['bath', 1, 42, 'proposed_game_parameters.alaskan_malamute.bathing']],
   basenji: [['tooth_brushing', 2, 7, 'proposed_game_parameters.basenji.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.basenji.ear_care']],
   rat_terrier: [['nail_trim', 1, 7, 'proposed_game_parameters.rat_terrier.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.rat_terrier.bathing']],
+  greater_swiss_mountain_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2984,6 +3010,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.rat_terrier.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.rat_terrier.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.rat_terrier.exercise_minutes_senior',
+  },
+  greater_swiss_mountain_dog: {
+    adult_minutes: ['proposed_game_parameters.greater_swiss_mountain_dog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.greater_swiss_mountain_dog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.greater_swiss_mountain_dog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.greater_swiss_mountain_dog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.greater_swiss_mountain_dog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.greater_swiss_mountain_dog.exercise_minutes_senior',
   },
 
 

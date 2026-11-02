@@ -556,6 +556,10 @@ return [
         ['key' => 'blue-tan-white', 'value' => 'blue, tan and white pied: large slate blue-grey patches with tan points on a white body', 'en' => 'Blue, tan and white', 'sl' => 'Modro-rjavkasto-bel'],
         ['key' => 'fawn-white', 'value' => 'fawn and white pied: large fawn patches on a white body', 'en' => 'Fawn and white', 'sl' => 'Plavo-bel'],
     ],
+    // M5-R10-86: FCI-Standard N° 58 (S653) — tricolour only (the portrait default).
+    'greater_swiss_mountain_dog' => [
+        ['key' => 'tricolour', 'value' => 'tricolour: black main colour with symmetrical rich tan markings above the eyes, on the cheeks, forechest and legs and a white blaze, muzzle, chest, feet and tail tip', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

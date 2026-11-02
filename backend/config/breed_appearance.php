@@ -701,6 +701,12 @@
 | bobtail or natural (the portrait shows a natural tail). Black, tan and white first with the highest weight (the portrait
 | default, Claude's choice); weights unsourced → `verified => false`.
 |
+| Greater Swiss Mountain Dog (M5-R10-86, docs/research/dog-data greater_swiss_mountain_dog.appearance):
+| "A tricolour, sturdy, heavy boned and well-muscled dog." (FCI-Standard N° 58, S653); double coat, thick outer coat of
+| medium length (short permissible) over a dense dark undercoat; tricolour only — black with symmetrical tan and clean white
+| markings (any other colour disqualifies, S653 / AKC S655); flat broad skull, strong straight muzzle, hazel to chestnut eyes,
+| medium triangular drop ears, heavy tail reaching the hocks. One colour (weight unsourced → `verified => false`).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3762,6 +3768,38 @@ return [
             'ear_carriage' => ['upright ears'],
             'eye_color' => ['small oval dark brown eyes set obliquely and wide apart'],
             'tail' => ['natural long tail, not docked'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-86 (docs/research/dog-data/data.json greater_swiss_mountain_dog.appearance; runbook rules 2026-10-10: the one colour
+    // the standard allows — S653 tricolour, black main colour with tan and white markings).
+    'greater_swiss_mountain_dog' => [
+        'display_name' => 'Greater Swiss Mountain Dog',
+        // One standard colour; its weight is in no source (greater_swiss_mountain_dog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 58 Great Swiss Mountain Dog, 25.03.2003 (S653, https://WWW.FCI.BE/Nomenclature/Standards/058g02-en.pdf) and the AKC standard (S655) — for the traits listed in `sources`. Colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S653 "Height at withers for males: 65 – 72 cm," "Height at withers for bitches: 60 – 68 cm."; RKC S654 "Size: Large"',
+            'build' => 'S653 "A tricolour, sturdy, heavy boned and well-muscled dog."',
+            'coat_length' => 'S653 "Double coat consisting of thick, outer coat of medium length and dense undercoat." "Short outer coat permissible if there is undercoat."',
+            'coat_color' => 'S653 "Typically tricolour. Main colour black with symmetrical, reddish-brown (tan) markings and clean white markings." (weight unsourced)',
+            'head' => 'S653 skull "Flat and broad."; muzzle "Strong, longer than its depth. Must not be pointed, seen either from above or in profile."',
+            'ear_carriage' => 'S653 "Of medium size, triangular and set on fairly high." "In repose hanging flat and close to the cheeks"',
+            'eye_color' => 'S653 "Hazel to chestnut brown, with alert, friendly expression."',
+            'tail' => 'S653 "Set-on harmoniously following the croup, fairly heavy and reaching to the hocks."',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'sturdy, heavy-boned, well-muscled draught dog with a deep chest', 'weight' => 3], 'powerful, heavy-boned working build'],
+            'coat_length' => ['short-to-medium, dense, glossy double coat'],
+            // The only standard colour (S653, S655) → the register portrait.
+            'coat_color' => [
+                ['value' => 'tricolour: black main colour with symmetrical rich tan markings above the eyes, on the cheeks, forechest and legs and a white blaze, muzzle, chest, feet and tail tip', 'weight' => 100],
+            ],
+            'head' => ['flat, broad skull with a hardly pronounced stop and a strong, straight, blunt muzzle'],
+            'ear_carriage' => ['medium triangular ears hanging flat close to the cheeks'],
+            'eye_color' => ['almond-shaped hazel to chestnut brown eyes with dark rims'],
+            'tail' => ['fairly heavy tail hanging down to the hocks'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

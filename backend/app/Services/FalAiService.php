@@ -711,6 +711,14 @@ class FalAiService
                 .'a smooth blunt wedge-shaped head, upright ears, small oval dark brown eyes, a natural long tail, '
                 .'keen and alert expression, photorealistic, studio quality, natural lighting',
 
+            // M5-R10-86: FCI-Standard N° 58 (S653) — a sturdy, heavy-boned tricolour draught dog; short-to-medium double coat;
+            // black with symmetrical tan and white markings (the only standard colour).
+            BreedType::GreaterSwissMountainDog => 'A large, sturdy, heavy-boned and well-muscled Greater Swiss Mountain Dog with a deep chest, '
+                .'a short-to-medium dense glossy double coat, tricolour: black with symmetrical rich tan markings above the eyes, on the cheeks, forechest and legs '
+                .'and a white blaze, muzzle, chest, feet and tail tip, a flat broad skull with a strong straight muzzle, almond-shaped hazel brown eyes, '
+                .'medium triangular ears hanging close to the cheeks, a heavy tail hanging to the hocks, '
+                .'calm and friendly expression, photorealistic, studio quality, natural lighting',
+
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
         };
@@ -1720,6 +1728,15 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short, close-lying, smooth and shiny coat',
                 'markings' => 'large patches of colour on a white body, upright ears, natural long tail, never brindle or merle',
+            ],
+            // M5-R10-86: the only standard colour (S653), the same tricolour in every variant.
+            BreedType::GreaterSwissMountainDog => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1, 2 => 'black, tan and white tricolour',
+                },
+                'eye_color' => 'hazel to chestnut brown',
+                'fur_texture' => 'short-to-medium, dense, glossy double coat',
+                'markings' => 'symmetrical tan above the eyes, on the cheeks, chest and legs; white blaze, muzzle, chest, feet and tail tip',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

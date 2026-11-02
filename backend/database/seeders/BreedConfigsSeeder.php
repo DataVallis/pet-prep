@@ -1752,6 +1752,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.rat_terrier',
                 'search_keywords' => ['rat terrier', 'rat terier', 'rattie', 'ratty', 'american rat terrier', 'ameriški rat terier', 'ameriski rat terier', 'terier za podgane'],
             ],
+            // M5-R10-86 Greater Swiss Mountain Dog (docs/research/dog-data/data.json greater_swiss_mountain_dog, sources
+            // S652–S659; runbook rules confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.greater_swiss_mountain_dog.step_goal_adult: 60 min × 100 steps/min — RKC S654 "Up to 1
+            // hour per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::GreaterSwissMountainDog->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 800,
+                'label_key' => 'breeds.greater_swiss_mountain_dog',
+                'search_keywords' => ['greater swiss mountain dog', 'great swiss mountain dog', 'swissy', 'grosser schweizer sennenhund', 'veliki švicarski planšarski pes', 'veliki svicarski plansarski pes', 'švicarski planšar', 'svicarski plansar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
