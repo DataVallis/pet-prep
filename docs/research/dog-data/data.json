@@ -43713,6 +43713,518 @@
       }
     }
   },
+  "rat_terrier": {
+    "_note": "Added 2026-11-02 (M5-R10-85, unattended run — appended after the Basenji: AKC 2024 No. 81 'Rat Terrier', S174 full-list table fetched 2026-11-02 '81 | Rat Terrier'). Quotes as returned by the web-fetch tool on 2026-11-02 (short quotes, 125-character limit; fragments marked as such); paraphrase only in notes. Sources S647–S651 (reused S8, S10, S11, S14, S24, S35, S45, S174). No health percentages anywhere. An American breed: no RKC Breeds A–Z page (not RKC-recognised), no PDSA / Woodgreen / Dogs Trust breed page, no McMillan 2024 / VetCompass value, not in Coren's ranking; no FCI standard found (the FCI nomenclature was not checked this run — open for David). Standard: the Rat Terrier Club of America's AKC judges' presentation of the AKC standard 'Ratified and adopted May 22, 2009' (S650) — two size varieties, Miniature 10–13 in and Standard over 13 to 18 in, no weight in the standard; AKC Terrier Group standards (S651, disqualification under 10 / over 18 in). Exercise 30 min from the breed club (S650 'at least 30 minutes'); weight from PetMD (S648, 10–25 lb, both sizes); lifespan bands VCA 12–16 y (S647), PetMD 12–18 y (S648), WebMD 15–18 y (S649), RTCA 15–18 y (S650) — no median → senior boundary from the vet-sourced lower bound 12 y, seeded verified=false (Basenji / Alaskan Malamute precedent). The game covers both size varieties as one breed (one AKC breed). Never hypoallergenic. Names: AKC 'Rat Terrier' (S174); nickname 'Rattie' (PetMD S648 'Ratties'); Slovenian »rat terier« (no Slovenian common name found; no KZS page — open for David).",
+    "identity": {
+      "value": "AKC Terrier Group (standard ratified 2009), USA — not FCI",
+      "unit": "—",
+      "source_id": "S650",
+      "quote": "(Ratified and adopted May 22, 2009)",
+      "confidence": "medium",
+      "notes": "RTCA judges' presentation of the AKC standard (S650): 'Presented by Rat Terrier Club of America (RTCA)', standard '(Ratified and adopted May 22, 2009)'. AKC Terrier Group standards PDF (S651): the Rat Terrier standard is listed in the index as effective July 1, 2010 (paraphrase). No FCI standard number: no FCI standard found (FCI nomenclature not checked this run — Claude, open for David). The export carries no fci_standard fact for this breed (DOG_FACTS fci_standard: false)."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S648",
+      "quote": "This is a relatively small dog that reaches only 10–25 pounds, both in the standard and the miniature size.",
+      "confidence": "high",
+      "notes": "PetMD (S648). Two size varieties (S650): Miniature 10–13 in, Standard over 13 to 18 in at the withers. No RKC / PDSA size key fact (no such pages)."
+    },
+    "height": {
+      "akc": {
+        "value": {
+          "male": [
+            25.4,
+            45.7
+          ],
+          "female": [
+            25.4,
+            45.7
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S650",
+        "quote": "STANDARD – over 13 inches, and up to and including 18 inches in height measured at the withers.",
+        "confidence": "high",
+        "notes": "AKC standard as presented by the RTCA (S650): 'MINIATURE – At least 10 inches, not to exceed 13 inches.' and the Standard sentence (quote); both varieties together = 10–18 in = 25.4–45.7 cm (our conversion), one range for both sexes, stored per sex. AKC Terrier Group standards (S651) disqualification: 'Any dog over six months of age measuring less than 10 inches, or over 18 inches.'",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                25.4,
+                33.0
+              ],
+              "female": [
+                25.4,
+                33.0
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S650",
+            "quote": "MINIATURE – At least 10 inches, not to exceed 13 inches.",
+            "notes": "Miniature variety only; 10–13 in = 25.4–33.0 cm (our conversion)."
+          },
+          {
+            "value": {
+              "male": [
+                25.4,
+                45.7
+              ],
+              "female": [
+                25.4,
+                45.7
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S651",
+            "quote": "Any dog over six months of age measuring less than 10 inches, or over 18 inches.",
+            "notes": "AKC Terrier Group standards (S651), disqualification sentence (the same 10–18 in limits)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "petmd": {
+        "value": {
+          "male": [
+            4.5,
+            11.3
+          ],
+          "female": [
+            4.5,
+            11.3
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S648",
+        "quote": "This is a relatively small dog that reaches only 10–25 pounds, both in the standard and the miniature size.",
+        "confidence": "medium",
+        "notes": "PetMD (S648): 10–25 lb = 4.5–11.3 kg (our conversion), both size varieties, one range for both sexes (stored per sex) — the game / register range. The AKC standard (S650) gives no weight. WebMD (S649) 8–35 lb — alternative.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                3.6,
+                15.9
+              ],
+              "female": [
+                3.6,
+                15.9
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S649",
+            "quote": "the average rat terrier size ranges from 10 to 18 inches in length and from 8 to 35 pounds in weight",
+            "notes": "WebMD (S649, fragment); 8–35 lb = 3.6–15.9 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I (< 6.5 kg) / II (6.5–9 kg) / III (9–15 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 4.5–11.3 kg spans three bands (two size varieties). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "9–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Small (12–24 pounds): 9–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PetMD 10–25 lb (S648) → mostly 'Small (12–24 pounds)'; a Miniature under 12 lb would be 'Toy' (earlier). The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Rat Terrier growth curve found."
+      }
+    },
+    "lifespan": {
+      "vca": {
+        "value": "12–16",
+        "unit": "years",
+        "source_id": "S647",
+        "quote": "12 - 16 years",
+        "confidence": "medium",
+        "notes": "VCA Animal Hospitals breed page (S647) life-expectancy field. The lower bound 12 y is the basis of the senior boundary (closest rule row, verified=false)."
+      },
+      "petmd": {
+        "value": "12–18",
+        "unit": "years",
+        "source_id": "S648",
+        "quote": "The Rat Terrier lifespan is generally 12–18 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S648, vet-reviewed). Exported as a span next to VCA."
+      },
+      "webmd": {
+        "value": "15–18",
+        "unit": "years",
+        "source_id": "S649",
+        "quote": "An average rat terrier's life expectancy is 15 to 18 years.",
+        "confidence": "medium",
+        "notes": "WebMD (S649, medically reviewed by a DVM). Not used for the senior boundary (a span, not a breed study)."
+      },
+      "rtca": {
+        "value": "15–18",
+        "unit": "years",
+        "source_id": "S650",
+        "quote": "The Rat Terrier is a hardy breed, and long lived, living an average of 15 to 18 years.",
+        "confidence": "medium",
+        "notes": "Rat Terrier Club of America (S650, breed club). Not used for the senior boundary (a breed club's span, no study)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "McMillan et al. 2024 (S54) / Dogs Trust table (S123): no Rat Terrier row expected (a UK study; the breed is not RKC-registered) — not fetched this run. UNSOURCED value."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × the vet-sourced lower bound 12 y (VCA S647; PetMD S648 also starts at 12) → 0.75 × 12 = 9 y = 108 months. The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value: no McMillan / VetCompass row, no RKC page → closest row (Basenji / Alaskan Malamute precedent): a lower bound of the same form, seeded verified=false (Claude's suggestion, open for David). Alternatives: the breed club's / WebMD's 15 y lower bound → 135; Dogs Trust > 7 y (S14) = 84.",
+        "derived_from": [
+          "S11",
+          "S647"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 30",
+        "unit": "minutes/day",
+        "source_id": "S650",
+        "quote": "Rat Terriers do ok in an apartment but need at least 30 minutes of exercise a day.",
+        "confidence": "medium",
+        "notes": "Rat Terrier Club of America (S650) — no RKC / PDSA page exists for this breed, so the breed club is the strongest source with a number. WebMD (S649) 'need at least 20 to 30 minutes of moderate-intensity exercise' → range rule 20 (alternative); PetMD (S648) 'Regular exercise is non-negotiable' (no minutes); VCA (S647) a daily walk plus several play sessions (paraphrase, no minutes).",
+        "alternatives": [
+          {
+            "value": "20–30",
+            "unit": "minutes/day",
+            "source_id": "S649",
+            "quote": "need at least 20 to 30 minutes of moderate-intensity exercise",
+            "notes": "WebMD (S649, fragment); runbook range rule → 20."
+          }
+        ]
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "keenly observant, devoted, full of energy, easily trained; persistent and tenacious",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Keenly observant, devoted, full of energy, yet easily trained and obedient to command.",
+        "confidence": "high",
+        "notes": "AKC standard as presented by the RTCA (S650). PetMD (S648): 'Rat Terriers are persistent and tenacious when it comes to problem-solving and getting a job done.' RTCA: 'generally friendly with other dogs, but may be reserved with strangers' (fragment)."
+      },
+      "family": {
+        "value": "good with children, especially when raised with them; affectionate",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Rat Terriers are good with children, especially if they are raised with them from puppyhood.",
+        "confidence": "high",
+        "notes": "RTCA (S650). VCA (S647): 'Playful and very good with children.' PetMD (S648): 'Rat Terriers can be very affectionate and good with children' (supervision recommended — paraphrase). Basis of the children chip (explicit statement; caveat kept here). No small_children chip (no explicit rating without a caveat)."
+      },
+      "time_alone": {
+        "value": "does not enjoy being left alone for long periods",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "this is not a breed that enjoys being left alone for long periods",
+        "confidence": "high",
+        "notes": "PetMD (S648, fragment). Basis of needs_company."
+      },
+      "other_pets": {
+        "value": "strong prey instinct — may not be good with small pets, especially rodents; gets on with dogs and cats raised with it",
+        "unit": "—",
+        "source_id": "S647",
+        "quote": "May not be good with small pets, and is especially ill-advised around rodents.",
+        "confidence": "high",
+        "notes": "VCA (S647). PetMD (S648): 'their natural prey drive reflects that' (fragment, ratting history); 'typically get along well with other pets (including cats!) if they're raised with them' (paraphrase). No chases_small_pets chip: no verbatim high / strong prey-drive sentence (runbook rule, David 2026-10-12); the fact stays in the register text."
+      },
+      "mental_stimulation": {
+        "value": "needs plenty of physical and mental stimulation",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Ratties need plenty of physical and mental stimulation",
+        "confidence": "high",
+        "notes": "PetMD (S648, fragment). Basis of needs_mental_stimulation."
+      },
+      "socialisation": {
+        "value": "early and consistent socialisation and training is a must",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Early (and consistent!) socialization and training is a must.",
+        "confidence": "high",
+        "notes": "PetMD (S648). Also 'If a Rat Terrier is introduced to new people (including children), other dogs, and cats early on' (fragment). → breed DOG_SOCIALISATION entry (M5-R17)."
+      },
+      "digging": {
+        "value": "may dig",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Rat Terriers can have a propensity to dig",
+        "confidence": "medium",
+        "notes": "PetMD (S648, fragment). A fact in the register text; no chip (no vocabulary key). PetMD: 'They're not generally nuisance barkers' (fragment)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B statement on chewing found → no chews_when_bored chip."
+      },
+      "food_motivation": {
+        "value": "good eaters, prone to obesity — measured meals",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Rat Terriers tend to be good eaters, so feed them a measured amount of a food appropriate for their life stage",
+        "confidence": "high",
+        "notes": "PetMD (S648, fragment; continues '(puppy, adult, or senior) twice a day.'); health: 'Although they're small and active, Rat Terriers are prone to obesity, says Iram Sharma, DVM and veterinary writer.' Basis of food_motivated_weight."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Not RKC-registered → no Breed Watch category; no veterinary association names the breed for conformation-related welfare problems → no welfare chip. Breeder checklist: AKC Terrier Group health-testing page (K38) and the RTCA health statement 2025 (K39): cardiac, hips, patellas, PLL DNA. PetMD (S648) also names heart disease with age (no register key — unspecific) and skin allergies; VCA (S647) puppy hypoglycaemia and chilling (background).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia — a loose, abnormally developed hip joint",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Hip dysplasia occurs when the hip joint has developed abnormally and creates a loose joint.",
+        "confidence": "high",
+        "notes": "PetMD (S648). RTCA health statement (K39) 'Hip Dysplasia'. Register health key hip_dysplasia."
+      },
+      "luxating_patella": {
+        "value": "patellar luxation — the kneecap shifts out of place",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "This condition, where the kneecap (or patella) shifts out of place, is common in Rat Terriers and other small dog breeds.",
+        "confidence": "high",
+        "notes": "PetMD (S648). RTCA (K39) 'Patellar Luxation'. Register health key kneecap_luxation."
+      },
+      "legg_perthes": {
+        "value": "Legg-Calvé-Perthes disease — the head of the thigh bone breaks down",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Dogs with Legg-Calvé-Perthes disease experience a disintegration of their hip joint at the head of their femur bone.",
+        "confidence": "high",
+        "notes": "PetMD (S648). Register health key legg_perthes."
+      },
+      "primary_lens_luxation": {
+        "value": "primary lens luxation — the lens of the eye slips out of place; DNA test of breeding dogs",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "lens luxation may have painful, reddened eyes; iris or lens trembling",
+        "confidence": "high",
+        "notes": "PetMD (S648, fragment; the article names primary lens luxation, which can lead to glaucoma — paraphrase). RTCA (K39) 'Primary Lens Luxation (DNA)'. Register health key primary_lens_luxation."
+      },
+      "obesity": {
+        "value": "prone to obesity",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Although they're small and active, Rat Terriers are prone to obesity, says Iram Sharma, DVM and veterinary writer.",
+        "confidence": "high",
+        "notes": "PetMD (S648). Register health key weight_gain."
+      },
+      "skin_allergies": {
+        "value": "skin allergies",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Rat Terriers can be prone to skin allergies from various causes",
+        "confidence": "medium",
+        "notes": "PetMD (S648, fragment). Register health key skin_allergies."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Wikipedia table of Coren's ranking (S35, checked 2026-11-02) does not list 'Rat Terrier'. Runbook rule: unranked → 1.0."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "low",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "easily trained and obedient to command",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Keenly observant, devoted, full of energy, yet easily trained and obedient to command.",
+        "confidence": "medium",
+        "notes": "AKC standard (S650). The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.rat_terrier.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "compact, well-muscled small terrier with a deep chest, strong shoulders and powerful legs; smooth short coat; pied pattern",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "The Rat Terrier is a well-muscled dog with a deep chest, strong shoulders, solid neck, and powerful legs.",
+        "confidence": "high",
+        "notes": "RTCA presentation of the AKC standard (S650); 'Their bodies are compact but meaty.' Two size varieties (Miniature / Standard) — the portrait shows an adult of the Standard variety (Claude)."
+      },
+      "colours": {
+        "value": [
+          "black, tan and white (tricolour)",
+          "red and white",
+          "chocolate, tan and white",
+          "black and white",
+          "apricot and white",
+          "lemon and white",
+          "blue, tan and white",
+          "fawn and white"
+        ],
+        "unit": "list",
+        "source_id": "S650",
+        "quote": "Acceptable colors with or without \"tan points\", include the predominate Black: or Chocolate, Red, Apricot, Blue, Fawn, Tan, Lemon, or White.",
+        "confidence": "high",
+        "notes": "AKC standard (S650): 'Any variation of Pied patterning is acceptable.', 'Pied is described as comparatively large patches of one or more colors in combination with white.', 'Brindle or Merle color patterns are disqualifications.'; solid colours without white not permitted (paraphrase); 'Intense, dark shades of color with clearly defined and delineated coloration is preferred.' Listed in game order — black, tan and white first = the portrait default (Claude: 'predominate Black', tan points, white patches; dark shades preferred). Never brindle, never merle, never a solid colour without white."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Black, tan and white first with the highest weight (the portrait default), then the other pied colours."
+      },
+      "coat": {
+        "value": "short, close lying, smooth and shiny",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Short, close lying, smooth and shiny coat.",
+        "confidence": "high",
+        "notes": "AKC standard (S650)."
+      },
+      "head": {
+        "value": "a smooth, blunt wedge; strong muzzle slightly shorter than the skull",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "The HEAD resembles a smooth, blunt wedge from a front or profile view.",
+        "confidence": "high",
+        "notes": "AKC standard (S650); 'The MUZZLE is strong, just slightly shorter in length than the skull and tapers smoothly along the sides to the nose.' 'Whiskers must not be removed.'"
+      },
+      "ears": {
+        "value": "upright, button or tipped",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "The ears can be upright, button or tipped.",
+        "confidence": "high",
+        "notes": "AKC standard (S650). Portrait: upright ears (Claude)."
+      },
+      "eyes": {
+        "value": "not large, oval, obliquely set wide apart; dark brown to hazel with the coat colour",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "They are obliquely set wide apart and are oval in shape.",
+        "confidence": "high",
+        "notes": "AKC standard (S650): 'The EYES are not large.', 'Eye color varies with coat color from darkest brown to hazel.' Blue eyes are a disqualification (S651 list, paraphrase)."
+      },
+      "tail": {
+        "value": "customarily docked; natural bobtail or natural long tail accepted",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Tails are customarily docked between the second and third joint.",
+        "confidence": "high",
+        "notes": "AKC standard (S650); natural bobtails and natural long tails are also accepted (paraphrase). Portrait: natural long tail (Claude — the Dobermann / German Shorthaired Pointer natural-tail precedent; docking is not shown)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = VCA (S647), PetMD (S648), WebMD (S649), RTCA (S650). No RKC / PDSA / Woodgreen page exists for this breed → no rkc_* / pdsa_* rows.",
+      "vca_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S647",
+        "quote": "Brushing once a week will remove dead hair.",
+        "confidence": "high",
+        "notes": "VCA (S647) — read as the category 'Once a week' (our wording; quote verbatim). PetMD (S648) 'A quick brushing every week or so will help remove dead hairs and reduce shedding.' and WebMD (S649) 'once a week is likely enough' agree. → brushing 1× a week (M5-R13 rule 'once a week' → 1)."
+      },
+      "rtca_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Short, close lying, smooth and shiny coat.",
+        "confidence": "high",
+        "notes": "AKC standard (S650) — read as the coat-length category 'Short' (our wording)."
+      },
+      "rtca_apartment": {
+        "value": "does ok in an apartment",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Rat Terriers do ok in an apartment but need at least 30 minutes of exercise a day.",
+        "confidence": "medium",
+        "notes": "RTCA (S650). Not the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "petmd_shedding": {
+        "value": "Yes — mildly all year, more in spring and autumn",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "But it should be noted that they shed mildly throughout the year, with a heavier seasonal shed in the spring and fall.",
+        "confidence": "high",
+        "notes": "PetMD (S648); 'be aware that they do still shed' (fragment). No contrary source → sheds chip."
+      },
+      "petmd_nails": {
+        "value": "weekly nail trims",
+        "unit": "—",
+        "source_id": "S648",
+        "quote": "Pet parents need to keep up with weekly nail trims, and Kallas recommends annual dental cleanings.",
+        "confidence": "high",
+        "notes": "PetMD (S648). → the child's nail-trim mini-game once a week (M5-R19). WebMD (S649) 'monthly or as needed' — alternative. Annual dental cleaning = a vet visit (no home tooth-brushing frequency) → no tooth task."
+      },
+      "webmd_bath": {
+        "value": "a monthly bath",
+        "unit": "—",
+        "source_id": "S649",
+        "quote": "a monthly bath is typically enough for most",
+        "confidence": "medium",
+        "notes": "WebMD (S649, fragment). PetMD (S648) 'you should not bathe them more frequently than once a month' (an upper limit). → the parent's bath reminder every 4 program weeks (M5-R19)."
+      },
+      "webmd_nails": {
+        "value": "monthly or as needed",
+        "unit": "—",
+        "source_id": "S649",
+        "quote": "monthly or as needed",
+        "confidence": "medium",
+        "notes": "WebMD (S649, fragment) — alternative to PetMD's weekly trims."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -65486,6 +65998,272 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S643) / AKC standard (S645): red and white, black and white, black-tan-white, brindle and white — white on feet, chest and tail tip. Weights unsourced in prompts. Red and white as the portrait default (Claude: the first colour of the AKC list).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red and white is the portrait default; standard colours only"
+      }
+    },
+    "rat_terrier": {
+      "_note": "Unattended run M5-R10-85 (2026-11-02): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry — except the senior boundary (closest row, Claude's suggestion, seeded verified=false). No RKC / PDSA page exists → exercise from the breed club (S650 'at least 30 minutes'). Built: weekly brushing (VCA S647 'once a week' → 1, M5-R13), puppy socialisation with the PetMD quote (S648, M5-R17), the child's nail-trim mini-game once a week (PetMD S648 'weekly nail trims', M5-R19) and the parent's bath reminder every 4 weeks (WebMD S649 'a monthly bath', M5-R19). No meal gap (no source), no tooth / ear / groomer task (no home frequency), no heat task. No new register health key, no new vocabulary key; no chases_small_pets chip (no verbatim high prey drive). In marketing (not a welfare breed). Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S650",
+        "quote": "Rat Terriers do ok in an apartment but need at least 30 minutes of exercise a day.",
+        "confidence": "medium",
+        "notes": "Rat Terrier Club of America (S650): 'need at least 30 minutes of exercise a day' → rule 'at least N' → 30. No RKC / PDSA page exists for this breed. WebMD (S649) 'at least 20 to 30 minutes' → range rule 20 (alternative, a weaker general pet site).",
+        "alternatives": [
+          {
+            "value": 20,
+            "source_id": "S649",
+            "quote": "need at least 20 to 30 minutes of moderate-intensity exercise",
+            "notes": "Range 20–30 → lower bound 20."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RTCA S650 'at least 30 minutes'; no RKC / PDSA page)"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S650",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = 22.5 → 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + the VCA lower bound '12 - 16 years', S647 — no McMillan 2024 / VetCompass row, no RKC page). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S647"
+        ],
+        "alternatives": {
+          "senior_breed_club_15_y": 135,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × the vet-sourced lower bound 12 y: VCA S647 '12 - 16 years', PetMD S648 '12–18 years'). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value: the breed is not RKC-registered, no McMillan 2024 / VetCompass row. Closest rule row (Basenji / Alaskan Malamute precedent) = a lower bound of the same form as the RKC band. Alternatives: the breed club / WebMD lower bound 15 y (S650 / S649) → 135; Dogs Trust > 7 y (S14) = 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S647"
+        ],
+        "alternatives": {
+          "senior_breed_club_15_y": 135,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-11-02 (najbližja vrstica pravila runbooka, M5-R10-85) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36); senior 108 follows the unconfirmed senior boundary (senior_boundary_months)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35) → unranked → 1.0. AKC standard 'easily trained and obedient to command' (S650) — no rule change. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35 — unranked rule)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S647",
+        "quote": "Brushing once a week will remove dead hair.",
+        "confidence": "high",
+        "notes": "rat_terrier.suitability.vca_grooming. VCA 'Brushing once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1); PetMD (S648) 'every week or so' and WebMD (S649) 'once a week' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (VCA »Brushing once a week«; PetMD, WebMD enako); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S648",
+        "quote": "Early (and consistent!) socialization and training is a must.",
+        "confidence": "high",
+        "notes": "rat_terrier.behaviour.socialisation (PetMD S648). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S648)"
+      },
+      "nail_trimming": {
+        "value": "weekly nail trims",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S648",
+        "quote": "Pet parents need to keep up with weekly nail trims, and Kallas recommends annual dental cleanings.",
+        "confidence": "high",
+        "notes": "PetMD (S648), rat_terrier.suitability.petmd_nails. Built: the child's nail-trim mini-game once a program week (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19). WebMD (S649) 'monthly or as needed' — alternative (a weaker, conditional wording).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »weekly nail trims« → 1× na teden"
+      },
+      "bathing": {
+        "value": "a monthly bath → every 4 weeks",
+        "unit": "baths (sourced need)",
+        "source_id": "S649",
+        "quote": "a monthly bath is typically enough for most",
+        "confidence": "medium",
+        "notes": "WebMD (S649), rat_terrier.suitability.webmd_bath; PetMD (S648) 'not … more frequently than once a month' (an upper limit, the same rhythm). Built: the parent's bath reminder every 4 program weeks (BreedStageParamsSeeder::DOG_CARE_TASKS, M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »a monthly bath« → vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-85); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "children",
+            "source_ids": [
+              "S650"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.family"
+            ],
+            "quote": "S650 'Rat Terriers are good with children, especially if they are raised with them from puppyhood.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.mental_stimulation"
+            ],
+            "quote": "S648 'Ratties need plenty of physical and mental stimulation'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.time_alone"
+            ],
+            "quote": "S648 'this is not a breed that enjoys being left alone for long periods'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.suitability.petmd_shedding"
+            ],
+            "quote": "S648 'But it should be noted that they shed mildly throughout the year, with a heavier seasonal shed in the spring and fall.'"
+          },
+          {
+            "tag": "food_motivated_weight",
+            "source_ids": [
+              "S648"
+            ],
+            "refs": [
+              "rat_terrier.behaviour.food_motivation"
+            ],
+            "quote": "S648 'Rat Terriers tend to be good eaters, so feed them a measured amount of a food appropriate for their life stage'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No PDSA-style family-pet statement (RTCA / VCA / PetMD speak of children) → children chip only.",
+          "small_children": "No explicit rating without a caveat (RTCA 'especially if they are raised with them', PetMD supervision).",
+          "active_family": "30 minutes a day (S650) — the chip is for 2 hours or more.",
+          "long_daily_exercise": "30 minutes a day (S650) — the chip is for 2 hours or more.",
+          "apartment": "RTCA 'do ok in an apartment' (S650) — the runbook allows the chip only from RKC 'Flat/ Apartment' (no RKC page).",
+          "large_home": "Only from the RKC key fact 'Large house' (no RKC page).",
+          "other_pets": "VCA 'May not be good with small pets' (S647) → no other_pets chip.",
+          "low_shedding": "PetMD: sheds mildly all year (S648) → sheds, not low_shedding.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "first_time_owner": "No source names owner experience.",
+          "chews_when_bored": "No source.",
+          "shorter_lifespan": "12–16 / 12–18 years (S647 / S648) — criterion is 'Under 10 years'.",
+          "welfare": "Not RKC-registered (no Breed Watch); no veterinary association names the breed for conformation-related welfare problems → no welfare chip.",
+          "chases_small_pets": "PetMD 'their natural prey drive reflects that' (S648, fragment) and VCA 'especially ill-advised around rodents' (S647) — no verbatim high / strong prey-drive sentence; the runbook rule (David 2026-10-12, BreedSuitabilityTest) needs one → no chip; the fact stays in the register text."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits children; consider needs_mental_stimulation, needs_company, sheds, food_motivated_weight"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S647",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "No veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92); not RKC-registered (no Breed Watch). Marketing never presents the Rat Terrier as hypoallergenic, as a dog for homes with small pets / rodents, or with a docked tail (S647, S648, S650).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Rat Terrier (Standard variety), black, tan and white (default): pied — large black patches with tan points on white; compact, well-muscled small terrier with a deep chest; short, smooth, shiny coat; smooth blunt wedge-shaped head; upright ears; oval dark eyes; natural long tail",
+        "unit": "—",
+        "source_id": "S650",
+        "quote": "Acceptable colors with or without \"tan points\", include the predominate Black: or Chocolate, Red, Apricot, Blue, Fawn, Tan, Lemon, or White.",
+        "confidence": "high",
+        "notes": "Colours of the AKC standard (S650): pied — black, chocolate, red, apricot, blue, fawn, tan or lemon patches with white, with or without tan points; never brindle, merle or a solid colour without white; blue eyes disqualify. Weights unsourced in prompts. Black, tan and white as the portrait default (Claude: 'predominate Black', dark shades preferred). Natural long tail (accepted by the standard) — docking is not shown.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): black, tan and white is the portrait default; standard colours only, never brindle or merle, natural tail"
       }
     }
   }
