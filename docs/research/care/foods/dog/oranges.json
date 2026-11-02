@@ -1,0 +1,160 @@
+{
+  "slug": "oranges",
+  "species": "dog",
+  "name": {
+    "en": "Oranges",
+    "sl": "Pomaranče"
+  },
+  "question": {
+    "en": "Can dogs eat oranges?",
+    "sl": "Ali lahko psi jedo pomaranče?"
+  },
+  "url_slug": {
+    "en": "oranges",
+    "sl": "pomarance"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, dogs can eat the flesh of an orange in limited amounts, without the peel and seeds. Oranges are high in natural sugar, so keep them an occasional treat; many dogs dislike the strong citrus smell anyway.",
+    "sl": "Da, psi lahko v omejenih količinah jedo meso pomaranče, brez lupine in pečk. Pomaranče imajo veliko naravnega sladkorja, zato naj ostanejo občasen priboljšek; mnogim psom močan vonj citrusov tako ali tako ni všeč."
+  },
+  "why": {
+    "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
+    "sl": "ASPCA pomarančevec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC, PDSA in Blue Cross pravijo, da je meso v zmernih količinah v redu. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo; s pečkami se pes lahko zaduši. Preveč pomaranče lahko povzroči prebavne težave, tudi drisko."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Don't give your dog the peel: it is hard to digest and can raise the risk of a blockage in the gut, which in some cases needs veterinary help.",
+    "sl": "Psu ne dajajte lupine: težko je prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč."
+  },
+  "serving": {
+    "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
+    "sl": "Samo meso, brez lupine in pečk, narezano na majhne koščke; kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
+    "sl": "Nekaterim psom je košček pomaranče všeč, drugim pa vonj ne diši! Odrasel jo olupi in odstrani pečke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat orange peel?",
+        "sl": "Ali lahko psi jedo pomarančno lupino?"
+      },
+      "a": {
+        "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
+        "sl": "Ne. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo. ASPCA navaja, da težave povzročajo prav lupine in drugi deli rastline."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs drink orange juice?",
+        "sl": "Ali lahko psi pijejo pomarančni sok?"
+      },
+      "a": {
+        "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
+        "sl": "Pomarančni sok ni strupen, a na splošno ni dobra izbira: ima zgoščene naravne sladkorje in nima vlaknin celega sadeža."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD101",
+      "quote": "Yes, dogs can eat oranges, but only in limited amounts."
+    },
+    {
+      "id": "KD101",
+      "quote": "they also contain natural sugars that can add up quickly."
+    },
+    {
+      "id": "KD101",
+      "quote": "eating too much can lead to digestive upset, including diarrhea"
+    },
+    {
+      "id": "KD101",
+      "quote": "The peel is tough, fibrous, and difficult to digest, which can increase the risk of gastrointestinal blockage."
+    },
+    {
+      "id": "KD101",
+      "quote": "Be sure to also remove orange seeds before serving."
+    },
+    {
+      "id": "KD101",
+      "quote": "Seeds can pose a choking hazard, particularly for smaller dogs."
+    },
+    {
+      "id": "KD101",
+      "quote": "cut the fruit into small, manageable pieces."
+    },
+    {
+      "id": "KD101",
+      "quote": "Orange juice isn’t toxic to dogs, but it’s generally not a good choice."
+    },
+    {
+      "id": "KD101",
+      "quote": "Juice contains concentrated natural sugars and lacks the fiber found in whole oranges."
+    },
+    {
+      "id": "KD101",
+      "quote": "In some cases, this could require veterinary intervention."
+    },
+    {
+      "id": "KD89",
+      "quote": "Oranges are fine for dogs to eat, according to veterinarians, but"
+    },
+    {
+      "id": "KD89",
+      "quote": "it’s common for dogs to be turned off by any kind of strong citrus smells or tastes."
+    },
+    {
+      "id": "KD89",
+      "quote": "In small quantities, the juicy flesh of an orange can be a tasty treat for your dog."
+    },
+    {
+      "id": "KD89",
+      "quote": "Vets do recommend tossing the orange peel and only offering your dog the flesh of the orange, minus any seeds."
+    },
+    {
+      "id": "KD107",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD107",
+      "quote": "Essential oils and psoralens"
+    },
+    {
+      "id": "KD107",
+      "quote": "Vomiting, diarrhea, depression; potential dermatitis. Fruit is edible, skins and plant material can cause problems."
+    },
+    {
+      "id": "KD112",
+      "quote": "Orange – remove the skin and any seeds. Some dogs don’t like the taste but oranges are safe"
+    },
+    {
+      "id": "KD113",
+      "quote": "Dogs can eat oranges, but they are high in sugar and should be fed in moderation."
+    },
+    {
+      "id": "KD113",
+      "quote": "You should also avoid feeding the orange peel as this can upset your dog's stomach."
+    }
+  ],
+  "related": [
+    "mandarins",
+    "lemons",
+    "grapefruit"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "18495c847cc9ed9c8614f68d4b425620e3548660eaffa0c016ae2cbd152ff42c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "be88a56c3eefdc826dd211536f7922406926986635585b616b038122e7da059d"
+    }
+  }
+}

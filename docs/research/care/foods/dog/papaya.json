@@ -1,0 +1,144 @@
+{
+  "slug": "papaya",
+  "species": "dog",
+  "name": {
+    "en": "Papaya",
+    "sl": "Papaja"
+  },
+  "question": {
+    "en": "Can dogs eat papaya?",
+    "sl": "Ali lahko psi jedo papajo?"
+  },
+  "url_slug": {
+    "en": "papaya",
+    "sl": "papaja"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, dogs can eat small amounts of fresh papaya, as long as the seeds and the skin are removed first. Papaya is naturally high in sugar, so keep it an occasional treat.",
+    "sl": "Da, psi lahko jedo majhne količine sveže papaje, če prej odstranite pečke in lupino. Papaja ima naravno veliko sladkorja, zato naj ostane občasen priboljšek."
+  },
+  "why": {
+    "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
+    "sl": "Pečke papaje vsebujejo majhne količine cianogenih spojin, ki so v večjih količinah lahko škodljive. Lupina je trda in težko prebavljiva ter lahko povzroči želodčne težave. Papaja ima naravno veliko sladkorja in vlaknin, zato lahko preveč papaje povzroči prebavne težave ali drisko; pri psih s sladkorno boleznijo je treba količino sadja skrbno uravnavati. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Talk to your vet before adding papaya to your dog's diet, especially if your dog has a health condition such as diabetes.",
+    "sl": "Preden psu ponudite papajo, se posvetujte z veterinarjem, zlasti če ima pes zdravstvene težave, na primer sladkorno bolezen."
+  },
+  "serving": {
+    "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
+    "sl": "Sveža, ne suha: prerežite jo na pol, izdolbite pečke, odstranite lupino in meso narežite na majhne kocke za en grižljaj."
+  },
+  "child": {
+    "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
+    "sl": "Psi lahko poskusijo malo papaje! Odrasel izdolbe pečke, odreže lupino in jo nareže na drobne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat papaya seeds?",
+        "sl": "Ali lahko psi jedo pečke papaje?"
+      },
+      "a": {
+        "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
+        "sl": "Ne. Pečke papaje vsebujejo majhne količine cianogenih spojin, zato jih pred serviranjem odstranite."
+      }
+    },
+    {
+      "q": {
+        "en": "Is dried papaya okay for dogs?",
+        "sl": "Je suha papaja primerna za pse?"
+      },
+      "a": {
+        "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
+        "sl": "Bolje je dati svežo. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse, ki za pse niso primerni."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD114",
+      "quote": "Yes, dogs can eat papaya in small, prepared amounts, as long as the seeds, skin, and rind are removed first."
+    },
+    {
+      "id": "KD114",
+      "quote": "Dogs should not eat papaya seeds or the tough outer skin."
+    },
+    {
+      "id": "KD114",
+      "quote": "The skin is fibrous and difficult to digest, which can also lead to stomach discomfort."
+    },
+    {
+      "id": "KD114",
+      "quote": "Dogs with diabetes should have fruit intake carefully managed due to natural sugar content."
+    },
+    {
+      "id": "KD114",
+      "quote": "Serve fresh rather than dried, which can be higher in concentrated sugar."
+    },
+    {
+      "id": "KD114",
+      "quote": "Always cut the papaya in half, scoop out the seeds, remove the skin, and cut the flesh"
+    },
+    {
+      "id": "KD114",
+      "quote": "If your dog has any underlying health conditions, it's worth checking with your veterinarian before adding any new food to their routine."
+    },
+    {
+      "id": "KD115",
+      "quote": "Most dogs can eat papayas safely in moderation, but there are some important caveats to consider."
+    },
+    {
+      "id": "KD115",
+      "quote": "Papayas are naturally high in sugar."
+    },
+    {
+      "id": "KD115",
+      "quote": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities."
+    },
+    {
+      "id": "KD115",
+      "quote": "The skin of a papaya is tough and difficult to digest."
+    },
+    {
+      "id": "KD115",
+      "quote": "Chop the papaya into small, bite-sized cubes that are easy for your dog to chew and swallow."
+    },
+    {
+      "id": "KD115",
+      "quote": "Dried papaya often contains added sugars or preservatives that aren’t suitable for dogs."
+    },
+    {
+      "id": "KD115",
+      "quote": "Before adding papaya or any new food to your dog’s diet, you should always talk to your veterinarian."
+    },
+    {
+      "id": "KD116",
+      "quote": "Papaya is safe for dogs to eat."
+    },
+    {
+      "id": "KD116",
+      "quote": "As with any fiber-rich, sugary fruit, too much could cause an upset stomach or diarrhea."
+    }
+  ],
+  "related": [
+    "mango",
+    "pineapple",
+    "bananas"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b181ac0cc28bba7d104014810c104a535bc605fc8d164b7b6418c17185496a44"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8a37b4cb23b34851da84750f437d210323ad8fc9813b36274d8789ac22cf5cd"
+    }
+  }
+}

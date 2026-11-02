@@ -1,0 +1,167 @@
+{
+  "slug": "oranges",
+  "species": "cat",
+  "name": {
+    "en": "Oranges",
+    "sl": "Pomaranče"
+  },
+  "question": {
+    "en": "Can cats eat oranges?",
+    "sl": "Ali lahko mačke jedo pomaranče?"
+  },
+  "url_slug": {
+    "en": "oranges",
+    "sl": "pomarance"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No, it's best not to. The ASPCA lists the orange plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep oranges for people.",
+    "sl": "Ne, raje ne. ASPCA navaja pomarančevec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo pomaranče le za ljudi."
+  },
+  "why": {
+    "en": "The ASPCA lists the orange plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
+    "sl": "ASPCA navaja pomarančevec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Stomach discomfort",
+      "Depression",
+      "Possible skin irritation (dermatitis)"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Neugodje v trebuhu",
+      "Potrtost",
+      "Možno vnetje kože (dermatitis)"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
+    "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+  },
+  "serving": null,
+  "child": {
+    "en": "Oranges are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep oranges for people.",
+    "sl": "Pomaranče so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which part is the problem?",
+        "sl": "Kateri del je težava?"
+      },
+      "a": {
+        "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+        "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+      }
+    },
+    {
+      "q": {
+        "en": "My cat had a tiny taste. Is that an emergency?",
+        "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+      },
+      "a": {
+        "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+        "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why do cats usually avoid citrus?",
+        "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+      },
+      "a": {
+        "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+        "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC67",
+      "quote": "Citrus sinensis"
+    },
+    {
+      "id": "KC67",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC67",
+      "quote": "Essential oils and psoralens"
+    },
+    {
+      "id": "KC67",
+      "quote": "Vomiting, diarrhea, depression; potential dermatitis."
+    },
+    {
+      "id": "KC67",
+      "quote": "Fruit is edible, skins and plant material can cause problems."
+    },
+    {
+      "id": "KC67",
+      "quote": "call the ASPCA Poison Control at (888) 426-4435 or contact your local veterinarian as soon as possible."
+    },
+    {
+      "id": "KC71",
+      "quote": "A cat’s natural aversion to strong, citrusy smells means that they tend to avoid eating citrus fruits."
+    },
+    {
+      "id": "KC71",
+      "quote": "This is fortunate because eating citrus fruits is bad for cats."
+    },
+    {
+      "id": "KC71",
+      "quote": "It can cause cats to experience gastrointestinal discomfort, vomiting and diarrhoea."
+    },
+    {
+      "id": "KC71",
+      "quote": "But don’t panic if your cat does sample a segment or have a lick of your fingers"
+    },
+    {
+      "id": "KC71",
+      "quote": "Cats would need to eat an excessive amount to be in danger of any severe reactions."
+    },
+    {
+      "id": "KC71",
+      "quote": "citrus fruits, such as lemons, limes and oranges."
+    },
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Foods That May Cause Vomiting/Diarrhea (indigestion)"
+    },
+    {
+      "id": "KC63",
+      "quote": "Citrus fruits"
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    }
+  ],
+  "related": [
+    "mandarins",
+    "lemons",
+    "limes",
+    "grapefruit"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "87be6eb1803bfab1e8de1996e29ce630b48bf01aded989003843c02101efaa64"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d3ea1e831470e6f2a7bd124f5f010e8eb71afa33a7db68efdbee920fdeeb9ca4"
+    }
+  }
+}

@@ -78,8 +78,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] cranberries
 - [x] watermelon
 - [x] cantaloupe
-- [ ] honeydew · pineapple · mango · papaya · kiwi · oranges · mandarins · lemons
-- [ ] limes · grapefruit · pears · figs · dates · pomegranate · coconut · coconut-oil · lychee · persimmon
+- [x] honeydew
+- [d] pineapple — no source cat 2026-11-02
+- [d] mango — no source cat 2026-11-02
+- [d] papaya — no source cat 2026-11-02
+- [d] kiwi — no source cat 2026-11-02
+- [x] oranges
+- [x] mandarins
+- [x] lemons
+- [x] limes
+- [x] grapefruit
+- [ ] pears · figs · dates · pomegranate · coconut · coconut-oil · lychee · persimmon
 - [ ] dried-fruit · fruit-pits · rhubarb · star-fruit · passion-fruit · olives
 
 ## W3 — vegetables and plants we eat

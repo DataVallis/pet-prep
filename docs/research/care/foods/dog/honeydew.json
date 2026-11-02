@@ -1,0 +1,120 @@
+{
+  "slug": "honeydew",
+  "species": "dog",
+  "name": {
+    "en": "Honeydew melon",
+    "sl": "Medena melona"
+  },
+  "question": {
+    "en": "Can dogs eat honeydew melon?",
+    "sl": "Ali lahko psi jedo medeno melono?"
+  },
+  "url_slug": {
+    "en": "honeydew",
+    "sl": "medena-melona"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, sparingly. Honeydew is not toxic to dogs, but it is high in sugar, so give only a little as an occasional treat, and ask your vet first if your dog has diabetes. Remove the rind and seeds.",
+    "sl": "Da, v majhnih količinah. Medena melona za pse ni strupena, a vsebuje veliko sladkorja, zato je dajajte le malo kot občasen priboljšek; če ima pes sladkorno bolezen, najprej vprašajte veterinarja. Odstranite lupino in pečke."
+  },
+  "why": {
+    "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
+    "sl": "ASPCA medeno melono uvršča med rastline, ki za pse niso strupene, glavni veterinar AKC pa jo med melonami predlaga za zamrznjene priboljške. Plod vsebuje veliko sladkorja, zato morda ni primeren za pse s sladkorno boleznijo. Lupina lahko povzroči prebavne težave ali zaporo črevesja, pečke pa niso strupene, a se pes z njimi lahko zaduši."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Talk to your vet before adding honeydew to your dog's diet, especially if your dog has diabetes.",
+    "sl": "Preden psu ponudite medeno melono, se posvetujte z veterinarjem, zlasti če ima pes sladkorno bolezen."
+  },
+  "serving": {
+    "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
+    "sl": "Samo meso, brez lupine in pečk, narezano na majhne kocke; lahko ga tudi zmeljete v pire in zamrznete kot priboljšek."
+  },
+  "child": {
+    "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
+    "sl": "Psi se lahko posladkajo s koščkom medene melone! Odrasel najprej odstrani trdo lupino in pečke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is honeydew okay for a dog with diabetes?",
+        "sl": "Je medena melona primerna za psa s sladkorno boleznijo?"
+      },
+      "a": {
+        "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
+        "sl": "Morda ne, ker medena melona vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+      }
+    },
+    {
+      "q": {
+        "en": "What if my dog swallowed a seed?",
+        "sl": "Kaj, če je pes pogoltnil pečko?"
+      },
+      "a": {
+        "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
+        "sl": "Pečke medene melone niso strupene in ena pečka verjetno ni razlog za skrb, a se pes z njimi lahko zaduši, zato jih pred serviranjem odstranite."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD109",
+      "quote": "Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KD111",
+      "quote": "Or use a blender or food processor to puree watermelon, cantaloupe, or honeydew."
+    },
+    {
+      "id": "KD110",
+      "quote": "You’re in luck—honeydew is non-toxic for dogs."
+    },
+    {
+      "id": "KD110",
+      "quote": "honeydew is also high in sugar, so it should be fed sparingly."
+    },
+    {
+      "id": "KD110",
+      "quote": "Because honeydew is so high in sugar, it might not be safe to feed it to dogs with diabetes."
+    },
+    {
+      "id": "KD110",
+      "quote": "Another major concern about honeydew is the rind, which can cause an intestinal blockage as well as digestive upset."
+    },
+    {
+      "id": "KD110",
+      "quote": "The seeds should also be avoided—while they’re non-toxic, they can pose a choking hazard"
+    },
+    {
+      "id": "KD110",
+      "quote": "If a honeydew seed does slip past you, you probably don’t need to worry."
+    },
+    {
+      "id": "KD110",
+      "quote": "Before feeding your dog honeydew, remove the seeds and the rind. Cut the honeydew into small cubes."
+    },
+    {
+      "id": "KD110",
+      "quote": "Talk to your veterinarian before adding honeydew to your dog’s diet to make sure it’s appropriate for your pet."
+    }
+  ],
+  "related": [
+    "cantaloupe",
+    "watermelon",
+    "bananas"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "817232a77d69013fb5d3c62be6c9e1299948965982c2105c6c6846f66a1d2ec9"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "726153a2467e8d7eeed8fffa2e6d688f270da5cb51bdc9030176fbffbbe588c0"
+    }
+  }
+}

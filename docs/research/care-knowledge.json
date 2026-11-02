@@ -6370,6 +6370,116 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "grapefruit",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Grapefruit",
+        "sl": "Grenivka"
+      },
+      "question": {
+        "en": "Can cats eat grapefruit?",
+        "sl": "Ali lahko mačke jedo grenivko?"
+      },
+      "url_slug": {
+        "en": "grapefruit",
+        "sl": "grenivka"
+      },
+      "answer": {
+        "en": "No, it's best not to. The ASPCA lists the grapefruit plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep grapefruit for people.",
+        "sl": "Ne, raje ne. ASPCA navaja grenivkovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo grenivke le za ljudi."
+      },
+      "why": {
+        "en": "The ASPCA lists the grapefruit plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
+        "sl": "ASPCA navaja grenivkovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Stomach discomfort",
+          "Depression",
+          "Possible skin irritation (dermatitis)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Neugodje v trebuhu",
+          "Potrtost",
+          "Možno vnetje kože (dermatitis)"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
+        "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+      },
+      "serving": null,
+      "child": {
+        "en": "Grapefruit is a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep grapefruit for people.",
+        "sl": "Grenivke so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which part is the problem?",
+            "sl": "Kateri del je težava?"
+          },
+          "a": {
+            "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+            "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+          }
+        },
+        {
+          "q": {
+            "en": "My cat had a tiny taste. Is that an emergency?",
+            "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+          },
+          "a": {
+            "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+            "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+          }
+        },
+        {
+          "q": {
+            "en": "Why do cats usually avoid citrus?",
+            "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+          },
+          "a": {
+            "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+            "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC70",
+        "KC70",
+        "KC70",
+        "KC70",
+        "KC70",
+        "KC70",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC8"
+      ],
+      "related": [
+        "oranges",
+        "mandarins",
+        "lemons",
+        "limes"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
       "slug": "grapes",
       "species": "cat",
       "level": "toxic",
@@ -6891,6 +7001,79 @@
         "pork"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "honeydew",
+      "species": "cat",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Honeydew melon",
+        "sl": "Medena melona"
+      },
+      "question": {
+        "en": "Can cats eat honeydew melon?",
+        "sl": "Ali lahko mačke jedo medeno melono?"
+      },
+      "url_slug": {
+        "en": "honeydew",
+        "sl": "medena-melona"
+      },
+      "answer": {
+        "en": "Yes, a small piece of honeydew melon is fine as an occasional treat. The ASPCA lists honeydew as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
+        "sl": "Da, majhen košček medene melone je v redu kot občasen priboljšek. ASPCA medeno melono navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči želodčne težave, zato naj bo le majhen dodatek."
+      },
+      "why": {
+        "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+        "sl": "ASPCA medeno melono (Cucumis melo) navaja kot nestrupeno za mačke, veterinarska bolnišnica NC State pa jo uvršča med sadne priboljške za mačke in pse. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Offer only a small piece. Any plant material can cause vomiting or stomach upset in cats.",
+        "sl": "Ponudite le majhen košček. Vsaka rastlinska hrana lahko pri mačkah povzroči bruhanje ali želodčne težave."
+      },
+      "serving": {
+        "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
+        "sl": "Občasno majhen košček sadeža, všteti ga je treba v dnevno količino hrane."
+      },
+      "child": {
+        "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+        "sl": "Majhen košček medene melone je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do cats need fruit?",
+            "sl": "Ali mačke potrebujejo sadje?"
+          },
+          "a": {
+            "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+            "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC65",
+        "KC65",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC33",
+        "KC49",
+        "KC49",
+        "KC49",
+        "KC62"
+      ],
+      "related": [
+        "cantaloupe",
+        "watermelon",
+        "bananas",
+        "strawberries"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "ice-cream",
@@ -7696,6 +7879,228 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "lemons",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lemons",
+        "sl": "Limone"
+      },
+      "question": {
+        "en": "Can cats eat lemons?",
+        "sl": "Ali lahko mačke jedo limone?"
+      },
+      "url_slug": {
+        "en": "lemons",
+        "sl": "limone"
+      },
+      "answer": {
+        "en": "No, it's best not to. The ASPCA lists the lemon plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep lemons for people.",
+        "sl": "Ne, raje ne. ASPCA navaja limonovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo limone le za ljudi."
+      },
+      "why": {
+        "en": "The ASPCA lists the lemon plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
+        "sl": "ASPCA navaja limonovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Stomach discomfort",
+          "Depression",
+          "Possible skin irritation (dermatitis)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Neugodje v trebuhu",
+          "Potrtost",
+          "Možno vnetje kože (dermatitis)"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
+        "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+      },
+      "serving": null,
+      "child": {
+        "en": "Lemons are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep lemons for people.",
+        "sl": "Limone so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which part is the problem?",
+            "sl": "Kateri del je težava?"
+          },
+          "a": {
+            "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+            "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+          }
+        },
+        {
+          "q": {
+            "en": "My cat had a tiny taste. Is that an emergency?",
+            "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+          },
+          "a": {
+            "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+            "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+          }
+        },
+        {
+          "q": {
+            "en": "Why do cats usually avoid citrus?",
+            "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+          },
+          "a": {
+            "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+            "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC68",
+        "KC68",
+        "KC68",
+        "KC68",
+        "KC68",
+        "KC68",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC8"
+      ],
+      "related": [
+        "oranges",
+        "mandarins",
+        "limes",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
+      "slug": "limes",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Limes",
+        "sl": "Limete"
+      },
+      "question": {
+        "en": "Can cats eat limes?",
+        "sl": "Ali lahko mačke jedo limete?"
+      },
+      "url_slug": {
+        "en": "limes",
+        "sl": "limete"
+      },
+      "answer": {
+        "en": "No, it's best not to. The ASPCA lists the lime plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep limes for people.",
+        "sl": "Ne, raje ne. ASPCA navaja limetovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo limete le za ljudi."
+      },
+      "why": {
+        "en": "The ASPCA lists the lime plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
+        "sl": "ASPCA navaja limetovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Stomach discomfort",
+          "Depression",
+          "Possible skin irritation (dermatitis)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Neugodje v trebuhu",
+          "Potrtost",
+          "Možno vnetje kože (dermatitis)"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
+        "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+      },
+      "serving": null,
+      "child": {
+        "en": "Limes are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep limes for people.",
+        "sl": "Limete so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which part is the problem?",
+            "sl": "Kateri del je težava?"
+          },
+          "a": {
+            "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+            "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+          }
+        },
+        {
+          "q": {
+            "en": "My cat had a tiny taste. Is that an emergency?",
+            "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+          },
+          "a": {
+            "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+            "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+          }
+        },
+        {
+          "q": {
+            "en": "Why do cats usually avoid citrus?",
+            "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+          },
+          "a": {
+            "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+            "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC69",
+        "KC69",
+        "KC69",
+        "KC69",
+        "KC69",
+        "KC69",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC8"
+      ],
+      "related": [
+        "oranges",
+        "mandarins",
+        "lemons",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
       "slug": "liver",
       "species": "cat",
       "level": "not_recommended",
@@ -8285,6 +8690,112 @@
         "avocado"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "mandarins",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Mandarins",
+        "sl": "Mandarine"
+      },
+      "question": {
+        "en": "Can cats eat mandarins?",
+        "sl": "Ali lahko mačke jedo mandarine?"
+      },
+      "url_slug": {
+        "en": "mandarins",
+        "sl": "mandarine"
+      },
+      "answer": {
+        "en": "No, it's best not to. Mandarins are citrus fruits, and Cats Protection says eating citrus fruits is bad for cats. The ASPCA lists the orange plant as toxic to cats, mainly because of the peel and plant parts, so keep mandarins for people.",
+        "sl": "Ne, raje ne. Mandarine so citrusi, Cats Protection pa navaja, da citrusi mačkam škodijo. ASPCA navaja pomarančevec kot rastlino, strupeno za mačke, predvsem zaradi olupka in delov rastline, zato naj bodo mandarine le za ljudi."
+      },
+      "why": {
+        "en": "We found no vet source that names mandarins on their own, so this answer relies on what the sources say about citrus fruits in general. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. The ASPCA lists the orange plant as toxic to cats because of essential oils and psoralens: the fruit is edible, but the skins and plant material can cause problems. Cats Protection adds that a small taste is unlikely to cause a severe reaction. We follow the stricter advice and do not recommend sharing mandarins.",
+        "sl": "Nismo našli veterinarskega vira, ki bi posebej omenjal mandarine, zato ta odgovor temelji na tem, kar viri pravijo o citrusih nasploh. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. ASPCA pomarančevec navaja kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov: sadež je užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Upoštevamo strožji nasvet in deljenja mandarin ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Stomach discomfort"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Neugodje v trebuhu"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat shows signs such as vomiting or diarrhoea after eating mandarin, contact your vet as soon as possible. Note what was eaten and when.",
+        "sl": "Če opazite, da ima mačka po zaužitju mandarine znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja. Zapišite si, kaj je pojedla in kdaj."
+      },
+      "serving": null,
+      "child": {
+        "en": "Mandarins are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep mandarins for people.",
+        "sl": "Mandarine so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which part of an orange is the problem?",
+            "sl": "Kateri del pomaranče je težava?"
+          },
+          "a": {
+            "en": "For oranges, the ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+            "sl": "Za pomaranče ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+          }
+        },
+        {
+          "q": {
+            "en": "My cat had a tiny taste. Is that an emergency?",
+            "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+          },
+          "a": {
+            "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+            "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+          }
+        },
+        {
+          "q": {
+            "en": "Why do cats usually avoid citrus?",
+            "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+          },
+          "a": {
+            "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+            "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC8"
+      ],
+      "related": [
+        "oranges",
+        "lemons",
+        "limes",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "milk",
@@ -9035,6 +9546,117 @@
         "ham"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "oranges",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Oranges",
+        "sl": "Pomaranče"
+      },
+      "question": {
+        "en": "Can cats eat oranges?",
+        "sl": "Ali lahko mačke jedo pomaranče?"
+      },
+      "url_slug": {
+        "en": "oranges",
+        "sl": "pomarance"
+      },
+      "answer": {
+        "en": "No, it's best not to. The ASPCA lists the orange plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep oranges for people.",
+        "sl": "Ne, raje ne. ASPCA navaja pomarančevec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo pomaranče le za ljudi."
+      },
+      "why": {
+        "en": "The ASPCA lists the orange plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
+        "sl": "ASPCA navaja pomarančevec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Stomach discomfort",
+          "Depression",
+          "Possible skin irritation (dermatitis)"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Neugodje v trebuhu",
+          "Potrtost",
+          "Možno vnetje kože (dermatitis)"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
+        "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+      },
+      "serving": null,
+      "child": {
+        "en": "Oranges are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep oranges for people.",
+        "sl": "Pomaranče so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which part is the problem?",
+            "sl": "Kateri del je težava?"
+          },
+          "a": {
+            "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
+            "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+          }
+        },
+        {
+          "q": {
+            "en": "My cat had a tiny taste. Is that an emergency?",
+            "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+          },
+          "a": {
+            "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
+            "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+          }
+        },
+        {
+          "q": {
+            "en": "Why do cats usually avoid citrus?",
+            "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+          },
+          "a": {
+            "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
+            "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC67",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC71",
+        "KC63",
+        "KC63",
+        "KC63",
+        "KC8"
+      ],
+      "related": [
+        "mandarins",
+        "lemons",
+        "limes",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "peaches",
@@ -22765,6 +23387,92 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "grapefruit",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Grapefruit",
+        "sl": "Grenivka"
+      },
+      "question": {
+        "en": "Can dogs eat grapefruit?",
+        "sl": "Ali lahko psi jedo grenivko?"
+      },
+      "url_slug": {
+        "en": "grapefruit",
+        "sl": "grenivka"
+      },
+      "answer": {
+        "en": "No, it's best not to feed grapefruit to dogs. The flesh isn't toxic, but its high citric acid can upset a dog's stomach, and the skin and rind are toxic to dogs because of their essential oils.",
+        "sl": "Ne, grenivke je bolje psom ne dajati. Meso ni strupeno, a veliko citronske kisline lahko psu razburi želodec, lupina pa je za pse strupena zaradi eteričnih olj, ki jih vsebuje."
+      },
+      "why": {
+        "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
+        "sl": "ASPCA grenivko zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da meso ni strupeno, a se mu je bolje izogniti, deloma zaradi veliko citronske kisline, lupina pa je strupena zaradi naravnih eteričnih olj. PDSA grenivko navaja kot neprimerno, ker je zelo kisla. Izbrali smo stopnjo »ni priporočljivo«, ker meso samo ni strupeno, nevarna pa je lupina."
+      },
+      "signs": {
+        "en": [
+          "Upset stomach",
+          "Vomiting",
+          "Diarrhoea",
+          "Depression (low energy, seems down)",
+          "Skin irritation"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Bruhanje",
+          "Driska",
+          "Potrtost (malo energije, slaba volja)",
+          "Draženje kože"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate grapefruit skin or rind, call your vet or an emergency vet clinic right away. If it ate a large amount of the flesh, contact your vet too.",
+        "sl": "Če je pes pojedel lupino grenivke, takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Če je pojedel veliko mesa, prav tako pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Grapefruit is too sour for dogs and can give them a tummy ache. Keep grapefruit and its peel for people.",
+        "sl": "Grenivka je za pse prekisla in jih lahko boli trebušček. Grenivka in njena lupina sta za ljudi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What if my dog ate grapefruit peel?",
+            "sl": "Kaj, če je pes pojedel lupino grenivke?"
+          },
+          "a": {
+            "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
+            "sl": "Takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Lupina je za pse strupena zaradi eteričnih olj."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD104",
+        "KD104",
+        "KD104",
+        "KD104",
+        "KD104",
+        "KD104",
+        "KD104",
+        "KD108",
+        "KD108",
+        "KD108",
+        "KD108",
+        "KD112"
+      ],
+      "related": [
+        "lemons",
+        "limes",
+        "oranges"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
       "slug": "grapes",
       "species": "dog",
       "level": "toxic",
@@ -23709,6 +24417,88 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "honeydew",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Honeydew melon",
+        "sl": "Medena melona"
+      },
+      "question": {
+        "en": "Can dogs eat honeydew melon?",
+        "sl": "Ali lahko psi jedo medeno melono?"
+      },
+      "url_slug": {
+        "en": "honeydew",
+        "sl": "medena-melona"
+      },
+      "answer": {
+        "en": "Yes, sparingly. Honeydew is not toxic to dogs, but it is high in sugar, so give only a little as an occasional treat, and ask your vet first if your dog has diabetes. Remove the rind and seeds.",
+        "sl": "Da, v majhnih količinah. Medena melona za pse ni strupena, a vsebuje veliko sladkorja, zato je dajajte le malo kot občasen priboljšek; če ima pes sladkorno bolezen, najprej vprašajte veterinarja. Odstranite lupino in pečke."
+      },
+      "why": {
+        "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
+        "sl": "ASPCA medeno melono uvršča med rastline, ki za pse niso strupene, glavni veterinar AKC pa jo med melonami predlaga za zamrznjene priboljške. Plod vsebuje veliko sladkorja, zato morda ni primeren za pse s sladkorno boleznijo. Lupina lahko povzroči prebavne težave ali zaporo črevesja, pečke pa niso strupene, a se pes z njimi lahko zaduši."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Talk to your vet before adding honeydew to your dog's diet, especially if your dog has diabetes.",
+        "sl": "Preden psu ponudite medeno melono, se posvetujte z veterinarjem, zlasti če ima pes sladkorno bolezen."
+      },
+      "serving": {
+        "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
+        "sl": "Samo meso, brez lupine in pečk, narezano na majhne kocke; lahko ga tudi zmeljete v pire in zamrznete kot priboljšek."
+      },
+      "child": {
+        "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
+        "sl": "Psi se lahko posladkajo s koščkom medene melone! Odrasel najprej odstrani trdo lupino in pečke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is honeydew okay for a dog with diabetes?",
+            "sl": "Je medena melona primerna za psa s sladkorno boleznijo?"
+          },
+          "a": {
+            "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
+            "sl": "Morda ne, ker medena melona vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+          }
+        },
+        {
+          "q": {
+            "en": "What if my dog swallowed a seed?",
+            "sl": "Kaj, če je pes pogoltnil pečko?"
+          },
+          "a": {
+            "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
+            "sl": "Pečke medene melone niso strupene in ena pečka verjetno ni razlog za skrb, a se pes z njimi lahko zaduši, zato jih pred serviranjem odstranite."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD109",
+        "KD111",
+        "KD110",
+        "KD110",
+        "KD110",
+        "KD110",
+        "KD110",
+        "KD110",
+        "KD110",
+        "KD110"
+      ],
+      "related": [
+        "cantaloupe",
+        "watermelon",
+        "bananas"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
       "slug": "ice-cream",
       "species": "dog",
       "level": "not_recommended",
@@ -24001,6 +24791,77 @@
         "xylitol"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "kiwi",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Kiwi",
+        "sl": "Kivi"
+      },
+      "question": {
+        "en": "Can dogs eat kiwi?",
+        "sl": "Ali lahko psi jedo kivi?"
+      },
+      "url_slug": {
+        "en": "kiwi",
+        "sl": "kivi"
+      },
+      "answer": {
+        "en": "Yes, dogs can have small amounts of kiwi as an occasional treat. Peel it and cut it into small pieces or slices, and never give a whole kiwi, because it can be a choking hazard.",
+        "sl": "Da, psi lahko kot občasen priboljšek dobijo malo kivija. Olupite ga in narežite na majhne koščke ali rezine; celega kivija nikoli ne dajajte, ker se pes z njim lahko zaduši."
+      },
+      "why": {
+        "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
+        "sl": "Kivi je sladek sadež, bogat z vitaminom C in kalijem, vsebuje pa tudi veliko vlaknin, zlasti netopnih. Preveč kivija lahko povzroči prebavne težave, tudi drisko. Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec. Cel kivi je dovolj majhen, da se pes z njim lahko zaduši."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Feed only a little at a time. Too much kiwi can cause digestive issues such as diarrhoea, and kiwi should never replace a complete and balanced dog food.",
+        "sl": "Dajajte ga le malo naenkrat. Preveč kivija lahko povzroči prebavne težave, kot je driska, in kivi nikoli ne sme nadomestiti popolne in uravnotežene pasje hrane."
+      },
+      "serving": {
+        "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
+        "sl": "Olupljen in narezan na majhne koščke ali rezine; malo naenkrat, kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
+        "sl": "Psi lahko poskusijo malo kivija! Odrasel ga olupi in nareže na drobne koščke, da ga pes lažje poje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat kiwi skin?",
+            "sl": "Ali lahko psi jedo lupino kivija?"
+          },
+          "a": {
+            "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
+            "sl": "Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec, zato jo je bolje odstraniti."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100",
+        "KD100"
+      ],
+      "related": [
+        "strawberries",
+        "bananas",
+        "blueberries"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "lamb",
@@ -24552,6 +25413,189 @@
         "chives"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "lemons",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Lemons",
+        "sl": "Limone"
+      },
+      "question": {
+        "en": "Can dogs eat lemons?",
+        "sl": "Ali lahko psi jedo limone?"
+      },
+      "url_slug": {
+        "en": "lemons",
+        "sl": "limone"
+      },
+      "answer": {
+        "en": "No, lemons are not something to feed your dog. The flesh isn't toxic, but lemon juice is very acidic and the rind contains psoralen, which is toxic to dogs. If your dog ate a whole lemon or a rind, contact your vet right away.",
+        "sl": "Ne, limon psu ne dajajte. Meso ni strupeno, vendar je limonin sok zelo kisel, lupina pa vsebuje psoralen, ki je za pse strupen. Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja."
+      },
+      "why": {
+        "en": "The ASPCA lists the lemon plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC agrees the flesh isn't toxic but advises against feeding lemons, and PDSA lists them as unsafe because they are very acidic and can upset the stomach. Lemon juice contains a lot of citric acid, the rind contains psoralen and, if swallowed, can cause a stomach obstruction. We use 'not recommended' rather than a stricter level because the flesh itself is not toxic and the danger lies in the rind, juice and plant; most dogs avoid lemons because of the strong smell.",
+        "sl": "ASPCA limonovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC se strinja, da meso ni strupeno, a odsvetuje dajanje limon, PDSA pa jih navaja kot neprimerne, ker so zelo kisle in lahko razburijo želodec. Limonin sok vsebuje veliko citronske kisline, lupina vsebuje psoralen in lahko, če jo pes pogoltne, povzroči zaporo v želodcu. Izbrali smo stopnjo »ni priporočljivo« in ne strožje, ker meso samo ni strupeno, nevarnost pa so lupina, sok in rastlina; večina psov se limonam izogiba zaradi močnega vonja."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Depression (low energy, seems down)",
+          "Skin irritation"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Potrtost (malo energije, slaba volja)",
+          "Draženje kože"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog has eaten a whole lemon or a rind, contact your vet right away. Keep lemonade and lemon sweets away from your dog too, because of the sugar.",
+        "sl": "Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja. Psu ne dajajte niti limonade in limoninih sladic, ker vsebujejo veliko sladkorja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Lemons are too sour for dogs and can give them a tummy ache. Keep lemons for people.",
+        "sl": "Limone so za pse prekisle in jih lahko boli trebušček. Limone so za ljudi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs have lemon juice or lemonade?",
+            "sl": "Ali lahko psi pijejo limonin sok ali limonado?"
+          },
+          "a": {
+            "en": "No. Lemon juice contains a lot of citric acid, and sweet lemon products like lemonade are not recommended because too much sugar can lead to obesity.",
+            "sl": "Ne. Limonin sok vsebuje veliko citronske kisline, sladki limonini izdelki, kot je limonada, pa niso priporočljivi, ker lahko preveč sladkorja vodi v debelost."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD102",
+        "KD105",
+        "KD105",
+        "KD105",
+        "KD112"
+      ],
+      "related": [
+        "limes",
+        "grapefruit",
+        "oranges"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
+      "slug": "limes",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Limes",
+        "sl": "Limete"
+      },
+      "question": {
+        "en": "Can dogs eat limes?",
+        "sl": "Ali lahko psi jedo limete?"
+      },
+      "url_slug": {
+        "en": "limes",
+        "sl": "limete"
+      },
+      "answer": {
+        "en": "No, it's best not to feed limes to dogs. The fruit itself is not toxic, but lime rinds and their oils are dangerous for dogs, and the acid can upset the stomach. Most dogs dislike the taste and smell anyway.",
+        "sl": "Ne, limet je bolje psom ne dajati. Sadež sam ni strupen, lupine limet in njihova olja pa so za pse nevarna, kislina pa lahko razburi želodec. Večini psov okus in vonj limet tako ali tako nista všeč."
+      },
+      "why": {
+        "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
+        "sl": "ASPCA limetovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da limete niso strupene, a odsvetuje dajanje, PDSA pa jih navaja kot neprimerne, ker so zelo kisle. V velikih količinah lahko citronska kislina povzroči prebavne težave in celo upočasnjeno delovanje živčevja ter izgubo koordinacije. Limetin sok je zgoščen in ga psom ne dajajte. Izbrali smo stopnjo »ni priporočljivo«, ker meso ni strupeno, nevarne pa so lupina, olja in velike količine."
+      },
+      "signs": {
+        "en": [
+          "Tiredness, lethargy",
+          "Vomiting",
+          "Diarrhoea",
+          "Loss of appetite",
+          "Signs of a blockage in the gut",
+          "Trembling or shaking",
+          "Excessive drooling"
+        ],
+        "sl": [
+          "Utrujenost, brezvoljnost",
+          "Bruhanje",
+          "Driska",
+          "Izguba apetita",
+          "Znaki zapore v prebavilih",
+          "Tresenje",
+          "Močno slinjenje"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate a lot of limes, watch for these signs and contact your vet right away. Throw away rinds where your dog can't reach them, and don't encourage it to play with fallen limes.",
+        "sl": "Če je pes pojedel veliko limet, bodite pozorni na te znake in takoj pokličite veterinarja. Lupine odvrzite tja, kamor jih pes ne more doseči, in ga ne spodbujajte k igri s padlimi limetami."
+      },
+      "serving": null,
+      "child": {
+        "en": "Limes are too sour for dogs and can upset their tummy. Keep limes and their peels away from your dog.",
+        "sl": "Limete so za pse prekisle in jim lahko razburijo trebušček. Limete in njihove lupine pospravi stran od psa."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs have lime juice?",
+            "sl": "Ali lahko psi pijejo limetin sok?"
+          },
+          "a": {
+            "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
+            "sl": "Ne. Limetin sok je zgoščena oblika mesa sadeža, zato ga psom ne dajajte."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD103",
+        "KD106",
+        "KD106",
+        "KD106",
+        "KD106",
+        "KD112"
+      ],
+      "related": [
+        "lemons",
+        "grapefruit",
+        "oranges"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "liver",
@@ -25172,6 +26216,160 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "mandarins",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Mandarins",
+        "sl": "Mandarine"
+      },
+      "question": {
+        "en": "Can dogs eat mandarins?",
+        "sl": "Ali lahko psi jedo mandarine?"
+      },
+      "url_slug": {
+        "en": "mandarins",
+        "sl": "mandarine"
+      },
+      "answer": {
+        "en": "Yes, mandarins aren't toxic to dogs and can be given in small amounts, much like oranges. Remove the peel and any seeds first, and keep portions small, because mandarins contain natural sugars.",
+        "sl": "Da, mandarine za pse niso strupene in jih lahko, podobno kot pomaranče, dajete v majhnih količinah. Najprej odstranite lupino in morebitne pečke, porcije pa naj bodo majhne, ker mandarine vsebujejo naravne sladkorje."
+      },
+      "why": {
+        "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
+        "sl": "Mandarine vsebujejo podobna hranila kot pomaranče, med drugim vitamin C in vlaknine, a tudi naravne sladkorje. Tako kot pri pomarančah je lupina trda in težko prebavljiva ter lahko poveča tveganje za zaporo, s pečkami pa se pes lahko zaduši, zlasti če je manjši. Tako kot pri pomarančah lahko preveč sadeža povzroči prebavne težave, tudi drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Don't give your dog the peel: as with oranges, it is hard to digest and can raise the risk of a blockage in the gut, which in some cases needs veterinary help.",
+        "sl": "Psu ne dajajte lupine: tako kot pri pomarančah je težko prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč."
+      },
+      "serving": {
+        "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
+        "sl": "Olupljene, brez pečk, v majhnih koščkih; majhne porcije kot občasen priboljšek."
+      },
+      "child": {
+        "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
+        "sl": "Pes lahko dobi droben košček mandarine! Odrasel najprej odstrani lupino in pečke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are mandarins different from oranges for dogs?",
+            "sl": "Ali so mandarine za pse drugačne od pomaranč?"
+          },
+          "a": {
+            "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
+            "sl": "Ne kaj dosti: imajo podobna hranila in naravne sladkorje, veljajo pa enaka pravila – odstranite lupino in pečke ter dajajte majhne porcije."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101"
+      ],
+      "related": [
+        "oranges",
+        "lemons",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
+      "slug": "mango",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Mango",
+        "sl": "Mango"
+      },
+      "question": {
+        "en": "Can dogs eat mango?",
+        "sl": "Ali lahko psi jedo mango?"
+      },
+      "url_slug": {
+        "en": "mango",
+        "sl": "mango"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat mango in moderation, as long as it is properly prepared: peel it and remove the pit. Mango is high in sugar, so keep it an occasional treat, especially for dogs who struggle with their weight.",
+        "sl": "Da, psi lahko zmerno jedo mango, če je pravilno pripravljen: olupite ga in odstranite koščico. Mango vsebuje veliko sladkorja, zato naj ostane občasen priboljšek, zlasti za pse, ki imajo težave s težo."
+      },
+      "why": {
+        "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
+        "sl": "Mango vsebuje vlaknine ter vitamine A, B6, C in E. Koščica je resna nevarnost, da se pes zaduši, lahko se zagozdi v prebavilih in vsebuje majhne količine cianida. Lupina je težko prebavljiva. Preveč sadja lahko povzroči bolečine v trebuhu in drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If you have questions or concerns about feeding your dog mango, ask your vet.",
+        "sl": "Če imate vprašanja ali pomisleke glede dajanja manga psu, se posvetujte z veterinarjem."
+      },
+      "serving": {
+        "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
+        "sl": "Olupljen, brez koščice, narezan na majhne koščke; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
+        "sl": "Psi lahko poskusijo malo manga! Odrasel ga najprej olupi in odstrani veliko koščico."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Why must the mango pit be removed?",
+            "sl": "Zakaj je treba odstraniti koščico manga?"
+          },
+          "a": {
+            "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
+            "sl": "Pes se lahko s koščico zaduši ali se mu ta zagozdi v prebavilih, poleg tega vsebuje majhne količine cianida."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat mango skin?",
+            "sl": "Ali lahko psi jedo lupino manga?"
+          },
+          "a": {
+            "en": "It is difficult to digest, so it is best to remove it before serving.",
+            "sl": "Težko je prebavljiva, zato jo je najbolje odstraniti pred serviranjem."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD99",
+        "KD89",
+        "KD112"
+      ],
+      "related": [
+        "pineapple",
+        "papaya",
+        "peaches"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
       "slug": "milk",
       "species": "dog",
       "level": "small_amounts",
@@ -25724,6 +26922,186 @@
         "salty-snacks"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "oranges",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Oranges",
+        "sl": "Pomaranče"
+      },
+      "question": {
+        "en": "Can dogs eat oranges?",
+        "sl": "Ali lahko psi jedo pomaranče?"
+      },
+      "url_slug": {
+        "en": "oranges",
+        "sl": "pomarance"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat the flesh of an orange in limited amounts, without the peel and seeds. Oranges are high in natural sugar, so keep them an occasional treat; many dogs dislike the strong citrus smell anyway.",
+        "sl": "Da, psi lahko v omejenih količinah jedo meso pomaranče, brez lupine in pečk. Pomaranče imajo veliko naravnega sladkorja, zato naj ostanejo občasen priboljšek; mnogim psom močan vonj citrusov tako ali tako ni všeč."
+      },
+      "why": {
+        "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
+        "sl": "ASPCA pomarančevec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC, PDSA in Blue Cross pravijo, da je meso v zmernih količinah v redu. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo; s pečkami se pes lahko zaduši. Preveč pomaranče lahko povzroči prebavne težave, tudi drisko."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Don't give your dog the peel: it is hard to digest and can raise the risk of a blockage in the gut, which in some cases needs veterinary help.",
+        "sl": "Psu ne dajajte lupine: težko je prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč."
+      },
+      "serving": {
+        "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
+        "sl": "Samo meso, brez lupine in pečk, narezano na majhne koščke; kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
+        "sl": "Nekaterim psom je košček pomaranče všeč, drugim pa vonj ne diši! Odrasel jo olupi in odstrani pečke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat orange peel?",
+            "sl": "Ali lahko psi jedo pomarančno lupino?"
+          },
+          "a": {
+            "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
+            "sl": "Ne. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo. ASPCA navaja, da težave povzročajo prav lupine in drugi deli rastline."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs drink orange juice?",
+            "sl": "Ali lahko psi pijejo pomarančni sok?"
+          },
+          "a": {
+            "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
+            "sl": "Pomarančni sok ni strupen, a na splošno ni dobra izbira: ima zgoščene naravne sladkorje in nima vlaknin celega sadeža."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD101",
+        "KD89",
+        "KD89",
+        "KD89",
+        "KD89",
+        "KD107",
+        "KD107",
+        "KD107",
+        "KD112",
+        "KD113",
+        "KD113"
+      ],
+      "related": [
+        "mandarins",
+        "lemons",
+        "grapefruit"
+      ],
+      "updated": "2026-11-02"
+    },
+    {
+      "slug": "papaya",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Papaya",
+        "sl": "Papaja"
+      },
+      "question": {
+        "en": "Can dogs eat papaya?",
+        "sl": "Ali lahko psi jedo papajo?"
+      },
+      "url_slug": {
+        "en": "papaya",
+        "sl": "papaja"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat small amounts of fresh papaya, as long as the seeds and the skin are removed first. Papaya is naturally high in sugar, so keep it an occasional treat.",
+        "sl": "Da, psi lahko jedo majhne količine sveže papaje, če prej odstranite pečke in lupino. Papaja ima naravno veliko sladkorja, zato naj ostane občasen priboljšek."
+      },
+      "why": {
+        "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
+        "sl": "Pečke papaje vsebujejo majhne količine cianogenih spojin, ki so v večjih količinah lahko škodljive. Lupina je trda in težko prebavljiva ter lahko povzroči želodčne težave. Papaja ima naravno veliko sladkorja in vlaknin, zato lahko preveč papaje povzroči prebavne težave ali drisko; pri psih s sladkorno boleznijo je treba količino sadja skrbno uravnavati. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Talk to your vet before adding papaya to your dog's diet, especially if your dog has a health condition such as diabetes.",
+        "sl": "Preden psu ponudite papajo, se posvetujte z veterinarjem, zlasti če ima pes zdravstvene težave, na primer sladkorno bolezen."
+      },
+      "serving": {
+        "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
+        "sl": "Sveža, ne suha: prerežite jo na pol, izdolbite pečke, odstranite lupino in meso narežite na majhne kocke za en grižljaj."
+      },
+      "child": {
+        "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
+        "sl": "Psi lahko poskusijo malo papaje! Odrasel izdolbe pečke, odreže lupino in jo nareže na drobne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat papaya seeds?",
+            "sl": "Ali lahko psi jedo pečke papaje?"
+          },
+          "a": {
+            "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
+            "sl": "Ne. Pečke papaje vsebujejo majhne količine cianogenih spojin, zato jih pred serviranjem odstranite."
+          }
+        },
+        {
+          "q": {
+            "en": "Is dried papaya okay for dogs?",
+            "sl": "Je suha papaja primerna za pse?"
+          },
+          "a": {
+            "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
+            "sl": "Bolje je dati svežo. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse, ki za pse niso primerni."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD114",
+        "KD114",
+        "KD114",
+        "KD114",
+        "KD114",
+        "KD114",
+        "KD114",
+        "KD115",
+        "KD115",
+        "KD115",
+        "KD115",
+        "KD115",
+        "KD115",
+        "KD115",
+        "KD116",
+        "KD116"
+      ],
+      "related": [
+        "mango",
+        "pineapple",
+        "bananas"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "peaches",
@@ -26824,6 +28202,90 @@
         "hazelnuts"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "pineapple",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pineapple",
+        "sl": "Ananas"
+      },
+      "question": {
+        "en": "Can dogs eat pineapple?",
+        "sl": "Ali lahko psi jedo ananas?"
+      },
+      "url_slug": {
+        "en": "pineapple",
+        "sl": "ananas"
+      },
+      "answer": {
+        "en": "Yes, raw pineapple in small amounts is a good snack for dogs, as long as the spiny skin, the crown and the hard core are removed. Avoid canned pineapple, because the syrup has too much sugar.",
+        "sl": "Da, surov ananas je v majhnih količinah dober prigrizek za pse, če odstranite bodičasto lupino, krono in trdo sredico. Ananasa iz pločevinke ne dajajte, ker ima sirup preveč sladkorja."
+      },
+      "why": {
+        "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
+        "sl": "Ananas je poln vitaminov, mineralov in vlaknin, vsebuje pa tudi veliko naravnega sladkorja. Trda sredica in bodičasta lupina lahko povzročita zaporo. Ananasu iz pločevinke se raje izognite, ker ima njegov sirup preveč sladkorja za prebavo večine psov. Nekateri psi imajo po ananasu drisko ali prebavne težave."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog gets diarrhoea or an upset stomach after eating pineapple, pineapple may not be the right snack for it.",
+        "sl": "Če ima pes po ananasu drisko ali prebavne težave, ananas morda ni pravi prigrizek zanj."
+      },
+      "serving": {
+        "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
+        "sl": "Svež in olupljen, brez krone in sredice, narezan na koščke za en grižljaj; zamrznjeni koščki svežega ananasa so poletni priboljšek."
+      },
+      "child": {
+        "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
+        "sl": "Psi lahko dobijo košček svežega ananasa! Odrasel najprej odreže bodičasto lupino in trdo sredino."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat canned pineapple?",
+            "sl": "Ali lahko psi jedo ananas iz pločevinke?"
+          },
+          "a": {
+            "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
+            "sl": "Raje ne. Sirup v sadju iz pločevinke vsebuje preveč sladkorja za prebavo večine psov."
+          }
+        },
+        {
+          "q": {
+            "en": "Why remove the core and skin?",
+            "sl": "Zakaj odstraniti sredico in lupino?"
+          },
+          "a": {
+            "en": "The tough core and the spiny skin can cause a blockage in the gut.",
+            "sl": "Trda sredica in bodičasta lupina lahko povzročita zaporo v prebavilih."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD98",
+        "KD89",
+        "KD89",
+        "KD112"
+      ],
+      "related": [
+        "mango",
+        "bananas",
+        "strawberries"
+      ],
+      "updated": "2026-11-02"
     },
     {
       "slug": "pistachios",
@@ -34070,11 +35532,59 @@
     },
     {
       "species": "cat",
+      "id": "KC65",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Honeydew Melon",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/honeydew-melon"
+    },
+    {
+      "species": "cat",
+      "id": "KC67",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Orange",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/orange"
+    },
+    {
+      "species": "cat",
+      "id": "KC68",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Lemon",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lemon"
+    },
+    {
+      "species": "cat",
+      "id": "KC69",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Lime",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lime"
+    },
+    {
+      "species": "cat",
       "id": "KC7",
       "tier": "B",
       "publisher": "VCA Animal Hospitals (R. Schmid, DVM, DABT, for Pet Poison Helpline)",
       "title": "Chocolate Poisoning in Cats",
       "url": "https://vcahospitals.com/know-your-pet/chocolate-poisoning-in-cats"
+    },
+    {
+      "species": "cat",
+      "id": "KC70",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control (no date shown)",
+      "title": "Toxic and Non-toxic Plants: Grapefruit",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/grapefruit"
+    },
+    {
+      "species": "cat",
+      "id": "KC71",
+      "tier": "B",
+      "publisher": "Cats Protection blog (2018-12-18)",
+      "title": "Why do cats hate citrus fruit?",
+      "url": "https://www.cats.org.uk/cats-blog/why-do-cats-hate-citrus-fruit"
     },
     {
       "species": "cat",
@@ -34110,11 +35620,147 @@
     },
     {
       "species": "dog",
+      "id": "KD100",
+      "tier": "B",
+      "publisher": "American Kennel Club, Alexandra Anastasio (updated 2026-06-22)",
+      "title": "Can Dogs Eat Kiwi? Here's What You Should Know About the Sweet, Green Fruit",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-kiwi/"
+    },
+    {
+      "species": "dog",
+      "id": "KD101",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-10-29)",
+      "title": "Can Dogs Eat Oranges? Benefits, Risks, and Serving Tips",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-oranges/"
+    },
+    {
+      "species": "dog",
+      "id": "KD102",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-07-29)",
+      "title": "Can Dogs Eat Lemons?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-lemons/"
+    },
+    {
+      "species": "dog",
+      "id": "KD103",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-08-08)",
+      "title": "Can Dogs Eat Limes?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-limes/"
+    },
+    {
+      "species": "dog",
+      "id": "KD104",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-07-31)",
+      "title": "Can Dogs Eat Grapefruit?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-grapefruit/"
+    },
+    {
+      "species": "dog",
+      "id": "KD105",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Lemon",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lemon"
+    },
+    {
+      "species": "dog",
+      "id": "KD106",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Lime",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/lime"
+    },
+    {
+      "species": "dog",
+      "id": "KD107",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Orange",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/orange"
+    },
+    {
+      "species": "dog",
+      "id": "KD108",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Grapefruit",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/grapefruit"
+    },
+    {
+      "species": "dog",
+      "id": "KD109",
+      "tier": "B",
+      "publisher": "ASPCA Animal Poison Control",
+      "title": "Toxic and Non-toxic Plants: Honeydew Melon",
+      "url": "https://www.aspca.org/pet-care/aspca-poison-control/toxic-and-non-toxic-plants/honeydew-melon"
+    },
+    {
+      "species": "dog",
       "id": "KD11",
       "tier": "B",
       "publisher": "VCA Animal Hospitals",
       "title": "Alcohol Poisoning",
       "url": "https://vcahospitals.com/know-your-pet/alcohol-poisoning"
+    },
+    {
+      "species": "dog",
+      "id": "KD110",
+      "tier": "C",
+      "publisher": "PetMD, Sandra C. Mitchell, DVM, DABVP (published 2023-11-08)",
+      "title": "Can Dogs Eat Honeydew?",
+      "url": "https://www.petmd.com/dog/nutrition/can-dogs-eat-honeydew"
+    },
+    {
+      "species": "dog",
+      "id": "KD111",
+      "tier": "B",
+      "publisher": "American Kennel Club, Dr. Jerry Klein (updated 2026-02-18)",
+      "title": "Frozen Summer Treats for Dogs: Vet-Approved Snacks for Pups",
+      "url": "https://www.akc.org/expert-advice/vets-corner/frozen-summer-treats-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD112",
+      "tier": "B",
+      "publisher": "PDSA (no date)",
+      "title": "Safe fruit and veg for dogs",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/safe-fruit-and-veg-for-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD113",
+      "tier": "B",
+      "publisher": "Blue Cross (published 2024-02-27)",
+      "title": "Can dogs eat apples, grapes, potatoes and other fruit and veg?",
+      "url": "https://www.bluecross.org.uk/advice/dog/can-dogs-eat-apples-grapes-potatoes-and-other-fruit-and-veg"
+    },
+    {
+      "species": "dog",
+      "id": "KD114",
+      "tier": "B",
+      "publisher": "Campus Commons Pet Hospital, Sacramento (2026-10-12)",
+      "title": "Can Dogs Eat Papaya?",
+      "url": "https://campuscommonspethospital.com/blog/can-dogs-eat-papaya/"
+    },
+    {
+      "species": "dog",
+      "id": "KD115",
+      "tier": "B",
+      "publisher": "Parrish Veterinary Clinic, Florida (published 2025-07-09)",
+      "title": "Can Dogs Eat Papayas?",
+      "url": "https://parrishvetclinic.com/blog/can-dogs-eat-papayas/"
+    },
+    {
+      "species": "dog",
+      "id": "KD116",
+      "tier": "C",
+      "publisher": "PetMD, April Saylor; reviewed by Sandra C. Mitchell, DVM, DABVP (updated 2023-07-03)",
+      "title": "Can Dogs Eat Papaya?",
+      "url": "https://www.petmd.com/dog/nutrition/can-dogs-eat-papaya"
     },
     {
       "species": "dog",
@@ -34867,6 +36513,22 @@
       "publisher": "American Kennel Club, Anna Burke (updated 2026-03-25)",
       "title": "Can Dogs Eat Cantaloupe? Is Cantaloupe Good For Dogs?",
       "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-cantaloupe/"
+    },
+    {
+      "species": "dog",
+      "id": "KD98",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2026-04-30)",
+      "title": "Can Dogs Eat Pineapple?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pineapple/"
+    },
+    {
+      "species": "dog",
+      "id": "KD99",
+      "tier": "B",
+      "publisher": "American Kennel Club, Katherine Ripley (updated 2026-04-27)",
+      "title": "Can Dogs Eat Mango? Are Mangoes Good For Dogs?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-mango/"
     }
   ],
   "vets": [

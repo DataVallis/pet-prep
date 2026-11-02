@@ -1,0 +1,170 @@
+{
+  "slug": "limes",
+  "species": "dog",
+  "name": {
+    "en": "Limes",
+    "sl": "Limete"
+  },
+  "question": {
+    "en": "Can dogs eat limes?",
+    "sl": "Ali lahko psi jedo limete?"
+  },
+  "url_slug": {
+    "en": "limes",
+    "sl": "limete"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, it's best not to feed limes to dogs. The fruit itself is not toxic, but lime rinds and their oils are dangerous for dogs, and the acid can upset the stomach. Most dogs dislike the taste and smell anyway.",
+    "sl": "Ne, limet je bolje psom ne dajati. Sadež sam ni strupen, lupine limet in njihova olja pa so za pse nevarna, kislina pa lahko razburi želodec. Večini psov okus in vonj limet tako ali tako nista všeč."
+  },
+  "why": {
+    "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
+    "sl": "ASPCA limetovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da limete niso strupene, a odsvetuje dajanje, PDSA pa jih navaja kot neprimerne, ker so zelo kisle. V velikih količinah lahko citronska kislina povzroči prebavne težave in celo upočasnjeno delovanje živčevja ter izgubo koordinacije. Limetin sok je zgoščen in ga psom ne dajajte. Izbrali smo stopnjo »ni priporočljivo«, ker meso ni strupeno, nevarne pa so lupina, olja in velike količine."
+  },
+  "signs": {
+    "en": [
+      "Tiredness, lethargy",
+      "Vomiting",
+      "Diarrhoea",
+      "Loss of appetite",
+      "Signs of a blockage in the gut",
+      "Trembling or shaking",
+      "Excessive drooling"
+    ],
+    "sl": [
+      "Utrujenost, brezvoljnost",
+      "Bruhanje",
+      "Driska",
+      "Izguba apetita",
+      "Znaki zapore v prebavilih",
+      "Tresenje",
+      "Močno slinjenje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate a lot of limes, watch for these signs and contact your vet right away. Throw away rinds where your dog can't reach them, and don't encourage it to play with fallen limes.",
+    "sl": "Če je pes pojedel veliko limet, bodite pozorni na te znake in takoj pokličite veterinarja. Lupine odvrzite tja, kamor jih pes ne more doseči, in ga ne spodbujajte k igri s padlimi limetami."
+  },
+  "serving": null,
+  "child": {
+    "en": "Limes are too sour for dogs and can upset their tummy. Keep limes and their peels away from your dog.",
+    "sl": "Limete so za pse prekisle in jim lahko razburijo trebušček. Limete in njihove lupine pospravi stran od psa."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs have lime juice?",
+        "sl": "Ali lahko psi pijejo limetin sok?"
+      },
+      "a": {
+        "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
+        "sl": "Ne. Limetin sok je zgoščena oblika mesa sadeža, zato ga psom ne dajajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD103",
+      "quote": "It's best to not feed limes to dogs."
+    },
+    {
+      "id": "KD103",
+      "quote": "Limes are not toxic to dogs, but dogs do not like the taste or smell of limes,"
+    },
+    {
+      "id": "KD103",
+      "quote": "Similar to other citrus fruits like lemons, lime rinds and their oils are dangerous for dogs."
+    },
+    {
+      "id": "KD103",
+      "quote": "In large amounts, citric acid can cause gastrointestinal upsets for dogs or even central nervous depression"
+    },
+    {
+      "id": "KD103",
+      "quote": "and loss of coordination."
+    },
+    {
+      "id": "KD103",
+      "quote": "Since lime juice is extracted from the fruit's flesh in its concentrated form, it shouldn't be given to dogs."
+    },
+    {
+      "id": "KD103",
+      "quote": "If your dog eats large amounts of limes, watch for the following signs and consult your veterinarian right away:"
+    },
+    {
+      "id": "KD103",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD103",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD103",
+      "quote": "Diarrhea"
+    },
+    {
+      "id": "KD103",
+      "quote": "Lack of appetite"
+    },
+    {
+      "id": "KD103",
+      "quote": "Intestinal obstruction"
+    },
+    {
+      "id": "KD103",
+      "quote": "Tremors or shaking"
+    },
+    {
+      "id": "KD103",
+      "quote": "Excessive drooling"
+    },
+    {
+      "id": "KD103",
+      "quote": "Similarly, if you live in an area of the country where limes grow, don’t encourage your dog to play with fallen fruits."
+    },
+    {
+      "id": "KD103",
+      "quote": "make sure you dispose of the rinds in such a way that prevents your dog from eating them."
+    },
+    {
+      "id": "KD106",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD106",
+      "quote": "Essential oils and psoralens"
+    },
+    {
+      "id": "KD106",
+      "quote": "Vomiting, diarrhea, depression; potential dermatitis."
+    },
+    {
+      "id": "KD106",
+      "quote": "Fruit is edible, skins and plant material can cause problems."
+    },
+    {
+      "id": "KD112",
+      "quote": "Lime – very acidic and can upset your dog’s stomach"
+    }
+  ],
+  "related": [
+    "lemons",
+    "grapefruit",
+    "oranges"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a924d5a3abae7b85df69e5be032352cbf54697a7c657b8cea2cb891a4ce92437"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "dbba63f3d28b840912170eb31224fa5a565be57aef0d6e4227a430c786d3d09e"
+    }
+  }
+}

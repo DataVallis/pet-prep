@@ -1,0 +1,128 @@
+{
+  "slug": "lemons",
+  "species": "dog",
+  "name": {
+    "en": "Lemons",
+    "sl": "Limone"
+  },
+  "question": {
+    "en": "Can dogs eat lemons?",
+    "sl": "Ali lahko psi jedo limone?"
+  },
+  "url_slug": {
+    "en": "lemons",
+    "sl": "limone"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, lemons are not something to feed your dog. The flesh isn't toxic, but lemon juice is very acidic and the rind contains psoralen, which is toxic to dogs. If your dog ate a whole lemon or a rind, contact your vet right away.",
+    "sl": "Ne, limon psu ne dajajte. Meso ni strupeno, vendar je limonin sok zelo kisel, lupina pa vsebuje psoralen, ki je za pse strupen. Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja."
+  },
+  "why": {
+    "en": "The ASPCA lists the lemon plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC agrees the flesh isn't toxic but advises against feeding lemons, and PDSA lists them as unsafe because they are very acidic and can upset the stomach. Lemon juice contains a lot of citric acid, the rind contains psoralen and, if swallowed, can cause a stomach obstruction. We use 'not recommended' rather than a stricter level because the flesh itself is not toxic and the danger lies in the rind, juice and plant; most dogs avoid lemons because of the strong smell.",
+    "sl": "ASPCA limonovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC se strinja, da meso ni strupeno, a odsvetuje dajanje limon, PDSA pa jih navaja kot neprimerne, ker so zelo kisle in lahko razburijo želodec. Limonin sok vsebuje veliko citronske kisline, lupina vsebuje psoralen in lahko, če jo pes pogoltne, povzroči zaporo v želodcu. Izbrali smo stopnjo »ni priporočljivo« in ne strožje, ker meso samo ni strupeno, nevarnost pa so lupina, sok in rastlina; večina psov se limonam izogiba zaradi močnega vonja."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Depression (low energy, seems down)",
+      "Skin irritation"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Potrtost (malo energije, slaba volja)",
+      "Draženje kože"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog has eaten a whole lemon or a rind, contact your vet right away. Keep lemonade and lemon sweets away from your dog too, because of the sugar.",
+    "sl": "Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja. Psu ne dajajte niti limonade in limoninih sladic, ker vsebujejo veliko sladkorja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Lemons are too sour for dogs and can give them a tummy ache. Keep lemons for people.",
+    "sl": "Limone so za pse prekisle in jih lahko boli trebušček. Limone so za ljudi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs have lemon juice or lemonade?",
+        "sl": "Ali lahko psi pijejo limonin sok ali limonado?"
+      },
+      "a": {
+        "en": "No. Lemon juice contains a lot of citric acid, and sweet lemon products like lemonade are not recommended because too much sugar can lead to obesity.",
+        "sl": "Ne. Limonin sok vsebuje veliko citronske kisline, sladki limonini izdelki, kot je limonada, pa niso priporočljivi, ker lahko preveč sladkorja vodi v debelost."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD102",
+      "quote": "While the fleshy part of lemons isn't toxic to dogs, this fruit still isn't something to feed to your dog."
+    },
+    {
+      "id": "KD102",
+      "quote": "Dogs can eat lemons, though they do not eat them voluntarily, as they do not like the pungent citrus smell."
+    },
+    {
+      "id": "KD102",
+      "quote": "Lemon juice, which is a more concentrated version of the fruit, contains high amounts of citric acid, which is toxic to dogs."
+    },
+    {
+      "id": "KD102",
+      "quote": "The rinds of lemons contain psoralen, which is also toxic to dogs."
+    },
+    {
+      "id": "KD102",
+      "quote": "If swallowed, lemon rinds could cause gastric obstruction."
+    },
+    {
+      "id": "KD102",
+      "quote": "If eaten, lemons could make your dog sick."
+    },
+    {
+      "id": "KD102",
+      "quote": "If your dog has eaten a whole lemon or a rind, contact your veterinarian right away."
+    },
+    {
+      "id": "KD102",
+      "quote": "We recommend not giving these products to your dog, as too much sugar can lead to obesity."
+    },
+    {
+      "id": "KD105",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD105",
+      "quote": "Essential oils and psoralens"
+    },
+    {
+      "id": "KD105",
+      "quote": "Vomiting, diarrhea, depression; potential dermatitis. Fruit is edible, skins and plant material can cause problems."
+    },
+    {
+      "id": "KD112",
+      "quote": "Lemon – very acidic and can upset your dog’s stomach"
+    }
+  ],
+  "related": [
+    "limes",
+    "grapefruit",
+    "oranges"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7c9fbd9fe66eeceb5209936c937f6c594cae3d3a3cb6cbe3779bdbbebd98ed28"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9ab43a1b976db0aa39f9a978a1b0186491c799026d55c31d2c77ede17dc0ca3d"
+    }
+  }
+}
