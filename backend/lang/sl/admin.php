@@ -565,7 +565,7 @@ return [
     ],
     'activity_media' => [
         'discord' => [
-            'title' => ':count posnetkov šole / igre potrebuje skrbnika',
+            'title' => 'Posnetki šole / igre: :count dokončno neuspelih, :simple ljubljenčkov v preprostem načinu',
             'body' => 'Posnetek šole / igre (ali referenčna slika, ki jo potrebuje) ni uspel niti po vseh samodejnih poskusih (ponovitve, različice poziva), je potekel ali čaka pregled. Ljubljenčkov preklopljenih v PREPROSTI način: :simple — dejavnost ostane igralna s klasičnim prizorom (skrbnik ni potreben) in se sama vrne v polni način, ko so posnetki narejeni. Po želji: Ljubljenčki → AI mediji → »Generate missing« / Regenerate / »Approve anyway«. Seznam: php artisan media:retry-activity-clips --dry-run',
         ],
     ],

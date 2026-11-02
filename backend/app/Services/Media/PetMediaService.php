@@ -272,7 +272,8 @@ class PetMediaService
      * then transitions) → 2. the pose images of the school / game clips (dispatched
      * at once, behind the home key images) → 3. the game clips, then the school clips,
      * submitted only once no home key image is on its way. The games and the school
-     * stay locked until their own clips are shown (GameMediaReadiness).
+     * stay locked until their own clips are shown (GameMediaReadiness) — or, once their
+     * automatic recovery is exhausted, run in simple mode (David 2026-11-02).
      */
     public function queueStateVideos(Pet $pet, bool $includeFailed = false): int
     {
@@ -1565,7 +1566,8 @@ class PetMediaService
                     ? ['auto_retries' => DB::raw('auto_retries + 1'), 'prompt_variant' => DB::raw('prompt_variant + 1')]
                     : ($autoRetryBelow !== null
                         ? ['auto_retries' => DB::raw('auto_retries + 1')]
-                        : ['auto_retries' => 0, 'auto_alerted_at' => null])),
+                        // A new chain (admin / stage remake / quality retry) starts at prompt variant 0 again (QA #547 m2).
+                        : ['auto_retries' => 0, 'auto_alerted_at' => null, 'prompt_variant' => 0])),
                 'status' => PetMedia::STATUS_PENDING,
                 'generation' => DB::raw('generation + '.($bump ? 1 : 0)),
                 'request_id' => null,

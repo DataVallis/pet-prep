@@ -245,7 +245,7 @@ class ActivityClipRetryService
                     ->update(['auto_alerted_at' => now(), 'recovery_version' => self::RECOVERY_VERSION]) === 1) {
                     $out['reported']++;
                     // David 2026-11-02: automatic recovery exhausted → the activity plays in simple mode.
-                    if ($this->enterSimpleMode($pet)) {
+                    if ($this->enterSimpleMode($pet, $slot)) {
                         $out['simple']++;
                     }
                     Log::warning('Activity clip recovery exhausted — the activity runs in simple mode', [
@@ -282,15 +282,18 @@ class ActivityClipRetryService
     }
 
     /**
-     * Switch the activities this pet cannot show fully because of failed / flagged media to
-     * simple mode (David 2026-11-02). True when at least one activity was newly switched (then
-     * one `media_mode_changed` PetUpdated — the app refetches and shows the activity).
+     * Switch to simple mode (David 2026-11-02) the activities of this pet that the EXHAUSTED
+     * row $slot keeps from showing (QA #547 m1 — only the activities whose failed list holds
+     * this row's clip / pose, or `reference` for the reference image). Only ADDS activities —
+     * an earlier switch is never dropped here (QA #547 M1). True when at least one activity was
+     * newly switched (then one `media_mode_changed` PetUpdated — the app refetches).
      */
-    public function enterSimpleMode(Pet $pet): bool
+    public function enterSimpleMode(Pet $pet, PetMedia $slot): bool
     {
+        $key = $slot->isImage() ? 'reference' : (string) $slot->state;
         $games = [];
         foreach ($this->readiness()->activities($pet, $pet->media()->get()) as $game => $state) {
-            if (! $state['ready'] && $state['failed'] !== []) {
+            if (! $state['ready'] && in_array($key, $state['failed'], true)) {
                 $games[] = $game;
             }
         }
@@ -298,30 +301,42 @@ class ActivityClipRetryService
             return false;
         }
 
-        $switched = DB::transaction(function () use ($pet, $games): bool {
-            $current = Pet::query()->whereKey($pet->id)->lockForUpdate()->value('simple_activities');
-            $map = is_string($current) ? (array) json_decode($current, true) : [];
+        $new = DB::transaction(function () use ($pet, $games): array {
+            $map = self::simpleMapOf(DB::table('pets')->where('id', $pet->id)->lockForUpdate()->value('simple_activities'));
             $new = array_values(array_diff($games, array_keys($map)));
             if ($new === []) {
-                return false;
+                return [];
             }
             foreach ($new as $game) {
                 $map[$game] = now()->toIso8601String();
             }
-            Pet::query()->whereKey($pet->id)->update(['simple_activities' => json_encode($map)]);
+            DB::table('pets')->where('id', $pet->id)->update(['simple_activities' => json_encode($map)]);
 
-            return true;
+            return $new;
         });
 
-        if ($switched) {
+        if ($new !== []) {
             $fresh = $pet->fresh();
-            Log::warning('Activity switched to simple mode (automatic clip recovery exhausted)', ['pet_id' => $pet->id, 'activities' => $games]);
+            Log::warning('Activity switched to simple mode (automatic clip recovery exhausted)', ['pet_id' => $pet->id, 'activities' => $new]);
             if ($fresh !== null) {
                 PetUpdated::afterCommit($fresh, 'media_mode_changed');
             }
         }
 
-        return $switched;
+        return $new !== [];
+    }
+
+    /**
+     * The `pets.simple_activities` map from a raw column value (JSON string) or an already
+     * cast array (QA #547 M1: never assume one form).
+     *
+     * @return array<string, string>
+     */
+    private static function simpleMapOf(mixed $raw): array
+    {
+        $map = is_string($raw) ? json_decode($raw, true) : $raw;
+
+        return is_array($map) ? $map : [];
     }
 
     /**
@@ -335,17 +350,23 @@ class ActivityClipRetryService
         Pet::query()->whereNotNull('simple_activities')->chunkById(100, function ($pets) use (&$changed, $dryRun): void {
             foreach ($pets as $pet) {
                 /** @var Pet $pet */
-                $map = is_array($pet->simple_activities) ? $pet->simple_activities : [];
                 $slots = $pet->media()->get();
-                $keep = array_filter($map, fn ($at, string $game) => $this->readiness()->phaseClipsOf($pet, $game) === []
-                    || $this->readiness()->phasesMissing($pet, $game, $slots) !== [], ARRAY_FILTER_USE_BOTH);
-                if (count($keep) === count($map)) {
+                // Which switched activities are full again (read-only, outside the lock).
+                $restored = array_keys(array_filter(self::simpleMapOf($pet->simple_activities), fn ($at, string $game) => $this->readiness()->phaseClipsOf($pet, $game) !== []
+                    && $this->readiness()->phasesMissing($pet, $game, $slots) === [], ARRAY_FILTER_USE_BOTH));
+                if ($restored === []) {
                     continue;
                 }
                 $changed++;
-                if (! $dryRun) {
-                    Pet::query()->whereKey($pet->id)->update(['simple_activities' => $keep === [] ? null : json_encode($keep)]);
+                if ($dryRun) {
+                    continue;
                 }
+                // QA #547 m4: drop only those keys from the LOCKED current value (a concurrent switch survives).
+                DB::transaction(function () use ($pet, $restored): void {
+                    $map = self::simpleMapOf(DB::table('pets')->where('id', $pet->id)->lockForUpdate()->value('simple_activities'));
+                    $keep = array_diff_key($map, array_flip($restored));
+                    DB::table('pets')->where('id', $pet->id)->update(['simple_activities' => $keep === [] ? null : json_encode($keep)]);
+                });
             }
         });
 
@@ -374,18 +395,18 @@ class ActivityClipRetryService
             ->whereHas('pet', fn (Builder $q) => $q->where('is_active', true)
                 ->where('state_media_version', '>=', MediaEntitlementService::PHASE_CLIPS_VERSION));
 
-        if ($dryRun) {
-            $out['legacy'] = $query->count();
-
-            return;
-        }
-
-        $query->chunkById(100, function ($rows) use (&$out, $retry): void {
+        $query->chunkById(100, function ($rows) use (&$out, $retry, $dryRun): void {
             foreach ($rows as $slot) {
                 /** @var PetMedia $slot */
                 $pet = Pet::find($slot->pet_id);
                 // Only a row that keeps an activity of the pet from showing now (else it waits).
                 if ($pet === null || ! $this->locksActivity($pet, $slot)) {
+                    continue;
+                }
+                // QA #547 m5: the dry run counts with the same filters, changes nothing.
+                if ($dryRun) {
+                    $out['legacy']++;
+
                     continue;
                 }
                 // Once per chain, atomically (two overlapping runs never both reopen it).
@@ -394,7 +415,7 @@ class ActivityClipRetryService
                     continue;
                 }
                 $out['legacy']++;
-                if ($this->enterSimpleMode($pet)) {
+                if ($this->enterSimpleMode($pet, $slot)) {
                     $out['simple']++;
                 }
 

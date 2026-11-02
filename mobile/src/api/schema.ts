@@ -2600,6 +2600,9 @@ export interface components {
                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                  *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                 *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                 *     is left out until all its clips are shown — the app then plays its stage without
+                 *     phase clips (state loops), and the activity is ready.
                  */
                 phase_groups: ("school" | "ball" | "wand")[];
                 /**
@@ -4449,6 +4452,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -4505,7 +4511,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -4777,7 +4785,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -5424,6 +5434,9 @@ export interface operations {
                                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                  *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                 *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                 *     is left out until all its clips are shown — the app then plays its stage without
+                                 *     phase clips (state loops), and the activity is ready.
                                  */
                                 phase_groups: ("school" | "ball" | "wand")[];
                                 /**
@@ -5480,7 +5493,9 @@ export interface operations {
                                 /**
                                  * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                  *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                 *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                 *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                 *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (no `school` phase group) and this is false.
                                  *     Independent of `running`: the school clips come after the preparation ended.
                                  */
                                 school_pending: boolean;
@@ -5752,7 +5767,9 @@ export interface operations {
                              * @description M5-T02: why a start would be refused now (null = it may start, or training
                              *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                              *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                             *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                             *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                             *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                             *     school is ready in simple mode (`media.phase_groups` without `school`).
                              * @enum {string|null}
                              */
                             blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -6419,6 +6436,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -6475,7 +6495,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -6747,7 +6769,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -7412,6 +7436,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -7468,7 +7495,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -7740,7 +7769,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -8405,6 +8436,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -8461,7 +8495,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -8733,7 +8769,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -9398,6 +9436,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -9454,7 +9495,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -9726,7 +9769,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -10391,6 +10436,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -10447,7 +10495,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -10719,7 +10769,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -11388,6 +11440,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -11444,7 +11499,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -11716,7 +11773,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -12385,6 +12444,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -12441,7 +12503,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -12713,7 +12777,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -13382,6 +13448,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -13438,7 +13507,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -13710,7 +13781,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -14379,6 +14452,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -14435,7 +14511,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -14707,7 +14785,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -15376,6 +15456,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -15432,7 +15515,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -15704,7 +15789,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -16369,6 +16456,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -16425,7 +16515,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -16697,7 +16789,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -17362,6 +17456,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -17418,7 +17515,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -17690,7 +17789,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -18359,6 +18460,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -18415,7 +18519,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -18687,7 +18793,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -19352,6 +19460,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -19408,7 +19519,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -19680,7 +19793,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -20349,6 +20464,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -20405,7 +20523,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -20677,7 +20797,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -21342,6 +21464,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -21398,7 +21523,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -21670,7 +21797,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -22339,6 +22468,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -22395,7 +22527,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -22667,7 +22801,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -23336,6 +23472,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -23392,7 +23531,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -23664,7 +23805,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -24333,6 +24476,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -24389,7 +24535,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -24661,7 +24809,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -25330,6 +25480,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -25386,7 +25539,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -25658,7 +25813,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -26327,6 +26484,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -26383,7 +26543,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -26655,7 +26817,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -27966,6 +28130,9 @@ export interface operations {
                                  * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                  *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                  *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                 *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                 *     is left out until all its clips are shown — the app then plays its stage without
+                                 *     phase clips (state loops), and the activity is ready.
                                  */
                                 phase_groups: ("school" | "ball" | "wand")[];
                                 /**
@@ -28279,6 +28446,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -28438,7 +28608,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -28797,6 +28969,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -28956,7 +29131,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -30058,6 +30235,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -30114,7 +30294,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -30386,7 +30568,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;
@@ -31033,6 +31217,9 @@ export interface operations {
                                      * @description M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
                                      *     `state_media`). For a listed group the app shows the phase clip — or, while it is
                                      *     missing, the phase's pose image — never a state clip instead (§0 rule 1).
+                                     *     David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+                                     *     is left out until all its clips are shown — the app then plays its stage without
+                                     *     phase clips (state loops), and the activity is ready.
                                      */
                                     phase_groups: ("school" | "ball" | "wand")[];
                                     /**
@@ -31089,7 +31276,9 @@ export interface operations {
                                     /**
                                      * @description M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
                                      *     failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+                                     *     all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+                                     *     since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                     *     school is ready in simple mode (no `school` phase group) and this is false.
                                      *     Independent of `running`: the school clips come after the preparation ended.
                                      */
                                     school_pending: boolean;
@@ -31361,7 +31550,9 @@ export interface operations {
                                  * @description M5-T02: why a start would be refused now (null = it may start, or training
                                  *     is off; lock reasons are in `lock`). `training_pet_sleeping` while the pet
                                  *     sleeps (next_allowed_at = when it wakes). David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                                 *     (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                                 *     2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                                 *     school is ready in simple mode (`media.phase_groups` without `school`).
                                  * @enum {string|null}
                                  */
                                 blocked_reason: "training_not_available" | "training_pet_sleeping" | "training_session_active" | "media_not_ready" | "training_day_ending" | "training_daily_budget_used" | "training_child_share_used" | null;

@@ -40,7 +40,7 @@ class SendActivityMediaAlert implements ShouldQueue
         try {
             $discord->send(new AdminAlert(
                 AdminAlertKind::ActivityMediaStuck,
-                __('admin.activity_media.discord.title', ['count' => $this->count]),
+                __('admin.activity_media.discord.title', ['count' => $this->count, 'simple' => $this->simple]),
                 __('admin.activity_media.discord.body', ['simple' => $this->simple]),
                 [],
             ));

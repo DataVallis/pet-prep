@@ -157,7 +157,8 @@ return [
         | from / to POSE images (Nano Banana Pro Edit of the reference image). Order =
         | queue order after every home item (David 2026-10-28: home first — pose images
         | right behind the home key images, the clips once no home key image is on its way):
-        | the games first, then the school; both stay locked until their clips are shown. A group a pet cannot use
+        | the games first, then the school; both stay locked until their clips are shown (2026-11-02: or
+    | run in simple mode once their automatic recovery is exhausted). A group a pet cannot use
         | is skipped (school: training on; ball: dog; wand: cat) —
         | MediaEntitlementService::phaseClipsFor(). Remove a group here = it is not made.
         | On / off: the superadmin switch »School & game clips« (`app_settings.phase_clips`).

@@ -160,6 +160,9 @@ final class PetMediaPayload
              * M5-T09 / T10: the phase clip groups this pet's set has (switch-independent, like
              * `state_media`). For a listed group the app shows the phase clip — or, while it is
              * missing, the phase's pose image — never a state clip instead (§0 rule 1).
+             * David 2026-11-02 (simple mode): a group whose automatic clip recovery is exhausted
+             * is left out until all its clips are shown — the app then plays its stage without
+             * phase clips (state loops), and the activity is ready.
              *
              * @var list<'school'|'ball'|'wand'>
              */

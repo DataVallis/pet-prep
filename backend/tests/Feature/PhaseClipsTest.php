@@ -49,6 +49,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Storage;
@@ -1143,6 +1144,46 @@ describe('self-healing activity clips, simple mode as the last resort (David 202
             ->and(app(TrainingService::class)->mediaReady($pet->fresh()))->toBeTrue()
             ->and(shGroups($pet))->not->toContain('school')
             ->and(app(PetPreparationService::class)->schoolPending($pet->fresh(), $pet->media()->get()))->toBeFalse();
+    });
+
+    it('QA #547 M1 / m1: two exhausted chains on one pet switch play once (one event); only the activities of the exhausted row; an earlier switch survives', function () {
+        phcFakeFal();
+        Event::fake([PetUpdated::class]);
+        $media = app(PetMediaService::class);
+        $refused = ['status' => 'failed', 'error_reason' => 'generation_failed', 'error' => 'fal.ai no_media_generated: nope', 'completed_at' => now()->subHour()];
+
+        // m1: a ball failure switches play only (the school's clips are still coming).
+        $solo = phcBirth(phcPet());
+        $media->slot($solo, PetMedia::KIND_PHASE, PetPhaseClip::BallWaiting)->update($refused);
+        expect(app(ActivityClipRetryService::class)->run()['simple'])->toBe(1)
+            ->and(array_keys($solo->fresh()->simple_activities))->toBe(['play']);
+
+        // M1: an earlier switch (school) is kept, two chains on one pet count once.
+        $pet = phcBirth(phcPet());
+        DB::table('pets')->where('id', $pet->id)->update(['simple_activities' => json_encode(['school' => '2026-11-01T00:00:00+00:00'])]);
+        $media->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallWaiting)->update($refused);
+        $media->slot($pet, PetMedia::KIND_PHASE, PetPhaseClip::BallFetching)->update($refused);
+        Event::fake([PetUpdated::class]);
+
+        $result = app(ActivityClipRetryService::class)->run();
+        expect($result['reported'])->toBe(2)
+            ->and($result['simple'])->toBe(1)
+            ->and($pet->fresh()->simple_activities)->toHaveKeys(['school', 'play'])
+            ->and($pet->fresh()->simple_activities['school'])->toBe('2026-11-01T00:00:00+00:00');
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'media_mode_changed');
+        expect(collect(Event::dispatched(PetUpdated::class))->filter(fn ($e) => $e[0]->petId === $pet->id && $e[0]->eventType === 'media_mode_changed'))->toHaveCount(1);
+    });
+
+    it('QA #547 m2: a new chain (admin Regenerate) starts at prompt variant 0 again', function () {
+        phcFakeFal();
+        $pet = phcBirth(phcPet());
+        $media = app(PetMediaService::class);
+        $pose = $media->slot($pet, PetMedia::KIND_POSE, PetPose::Empty);
+        $pose->update(['status' => 'failed', 'error_reason' => 'generation_failed', 'prompt_variant' => 1, 'auto_retries' => 2, 'completed_at' => now()->subHour()]);
+
+        expect($media->resetForNewGeneration($pose->fresh(), bump: true))->toBeTrue()
+            ->and($pose->fresh()->prompt_variant)->toBe(0)
+            ->and($pose->fresh()->auto_retries)->toBe(0);
     });
 
     it('chains reported before the change are picked up once by the hourly run: simple mode at once, one more try, a shared look counted once', function () {
