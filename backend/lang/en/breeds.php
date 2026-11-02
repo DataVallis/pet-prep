@@ -88,6 +88,7 @@ return [
     'basenji' => 'Basenji',
     'rat_terrier' => 'Rat Terrier',
     'greater_swiss_mountain_dog' => 'Greater Swiss Mountain Dog',
+    'shar_pei' => 'Shar Pei',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

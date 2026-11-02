@@ -470,6 +470,7 @@ const SPECIES = [
       { id: 'basenji', synonyms: { en: ['African Barkless Dog', 'Congo Dog', 'barkless dog'], sl: ['basendži', 'basendzi', 'pes, ki ne laja'] } },
       { id: 'rat_terrier', synonyms: { en: ['Rattie', 'Ratty', 'American Rat Terrier'], sl: ['rattie', 'ameriški rat terier', 'terier za podgane'] } },
       { id: 'greater_swiss_mountain_dog', synonyms: { en: ['Great Swiss Mountain Dog', 'Swissy', 'Grosser Schweizer Sennenhund'], sl: ['švicarski planšar', 'veliki švicarski planšar', 'grosser schweizer sennenhund'] } },
+      { id: 'shar_pei', synonyms: { en: ['Chinese Shar-Pei', 'Shar-Pei', 'Sharpei'], sl: ['šar pej', 'shar pei', 'kitajski šarpej'] } },
     ],
   },
   {
@@ -2306,6 +2307,30 @@ const DOG_FACTS = {
       ['urinary_incontinence', 'health.urinary_incontinence'],
     ],
   },
+  // M5-R10-87. Height = RKC standard 46–51 cm (S665, one range for both sexes), weight = PDSA 20–27 kg (S660; no standard
+  // gives a weight), lifespan = the VetCompass median 7.28 y (S667) + the RKC band 'Over 10 years' (S664) + the VCA span
+  // 8–10 y (S661), exercise = RKC 'Up to 1 hour per day' (S664), coat / grooming / shedding = RKC key facts (S664). Coren
+  // rank 51. FCI origin China (CN). Not exported: adult_weight alternatives / salt_category, lifespan.mcmillan_2024 (null) /
+  // senior_from, health.breed_watch (chips), health.glaucoma_lens (breeder checklist), health.causes_of_death (percentages).
+  // New health key: shar_pei_fever.
+  shar_pei: {
+    height: ['height.rkc'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.median_uk', 'median'], ['lifespan.rkc', 'more_than'], ['lifespan.vca', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['entropion', 'health.entropion'],
+      ['skin_fold_ear_problems', 'health.skin_folds'],
+      ['itchy_skin_allergy', 'health.atopy'],
+      ['shorter_face_boas', 'health.boas'],
+      ['shar_pei_fever', 'health.shar_pei_fever'],
+      ['hip_elbow_dysplasia', 'health.hip_elbow'],
+    ],
+  },
 
 
 };
@@ -3018,6 +3043,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.greater_swiss_mountain_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.greater_swiss_mountain_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.greater_swiss_mountain_dog.exercise_minutes_senior',
+  },
+  shar_pei: {
+    adult_minutes: ['proposed_game_parameters.shar_pei.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.shar_pei.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.shar_pei.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.shar_pei.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.shar_pei.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.shar_pei.exercise_minutes_senior',
   },
 
 

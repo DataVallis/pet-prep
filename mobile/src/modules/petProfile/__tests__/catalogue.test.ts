@@ -471,7 +471,9 @@ describe('suitability tags (M5-R10)', () => {
     expect(SUITS_TAGS).toHaveLength(11);
     expect(SUITS_TAGS).toEqual(expect.arrayContaining(['family_pet', 'large_home', 'children', 'small_children']));
     expect(SUITS_TAGS).not.toContain('house_with_garden');
-    expect(CONSIDER_TAGS).toHaveLength(29);
+    expect(CONSIDER_TAGS).toHaveLength(30);
+    // M5-R10-87 (runbook new-tag rule): independent dog — better with older children (the Shar Pei, PDSA S660); no numbers.
+    expect(CONSIDER_TAGS).toContain('independent_older_children');
     // M5-R10-76 (runbook new-tag rule): lively dog — better with older children (the Bull Terrier, PDSA S591); no numbers.
     expect(CONSIDER_TAGS).toContain('lively_older_children');
     // M5-R10-72 (runbook new-tag rule): bare skin — needs sun protection (the Chinese Crested, PetMD S574); no numbers.

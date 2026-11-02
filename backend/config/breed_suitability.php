@@ -181,6 +181,13 @@ return [
         // `older_children` (a small dog), `fragile_older_children` (fragile bones), `sensitive_older_children` (a sensitive
         // dog) or `not_for_small_children` (a large dog) — none of those reasons is sourced for this breed. A calm chip, never a number.
         'lively_older_children' => 'consider',
+        // M5-R10-87 (runbook "new tag" rule, 2026-11-02): an independent dog that is better with older children (Shar Pei: PDSA
+        // S660 "Shar Peis are devoted and loyal family pets and can get along well with older children given the right
+        // socialisation." / "We wouldn't recommend getting a Shar Pei if you have younger children" — they are independent dogs
+        // who prefer to do their own thing at times). Not `older_children` (a small dog), `fragile_older_children` (fragile
+        // bones), `sensitive_older_children` (a sensitive dog), `lively_older_children` (an excitable dog) or
+        // `not_for_small_children` (a large dog). A calm chip, never a number.
+        'independent_older_children' => 'consider',
     ],
 
     'breeds' => [
@@ -2201,6 +2208,30 @@ return [
                 ['tag' => 'food_motivated_weight', 'source_ids' => ['S658'], 'refs' => ['greater_swiss_mountain_dog.behaviour.food_motivation']],
                 // S657 "Care must be taken during even mild weather to limit exercise to the coolest times of day."
                 ['tag' => 'heat_sensitive', 'source_ids' => ['S657'], 'refs' => ['greater_swiss_mountain_dog.exercise.heat']],
+            ],
+        ],
+        // M5-R10-87 Shar Pei — welfare breed (RKC Breed Watch Category 2, S666; PDSA BOAS, S660): eyelid_problems,
+        // sensitive_skin, short_muzzle_breathing; shorter_lifespan from the VetCompass median 7.28 y (S667) + VCA 8–10 y (S661).
+        'shar_pei' => [
+            'suits' => [
+                // S660 "Shar Peis are devoted and loyal family pets and can get along well with older children given the right socialisation."
+                ['tag' => 'family_pet', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.family', 'shar_pei.suitability.pdsa_children']],
+            ],
+            'consider' => [
+                // S660 same sentence + "We wouldn't recommend getting a Shar Pei if you have younger children" (independent dogs).
+                ['tag' => 'independent_older_children', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.family', 'shar_pei.suitability.pdsa_children']],
+                // S664 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S664'], 'refs' => ['shar_pei.suitability.rkc_shedding']],
+                // S660 BOAS "this can cause severe breathing problems and is caused by their flatter face."
+                ['tag' => 'short_muzzle_breathing', 'source_ids' => ['S660'], 'refs' => ['shar_pei.health.boas']],
+                // S666 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; S668 entropion most common.
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S666', 'S668'], 'refs' => ['shar_pei.health.breed_watch', 'shar_pei.health.entropion']],
+                // S660 "They need to be kept clean and dry to stop them developing something called skin fold dermatitis."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S660'], 'refs' => ['shar_pei.health.skin_folds']],
+                // S667 median longevity 7.28 years; S661 "8 - 10 years".
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S667', 'S661'], 'refs' => ['shar_pei.lifespan.median_uk', 'shar_pei.lifespan.vca']],
+                // S660 "Shar Peis have a really high prey drive, so we wouldn't recommend keeping one with smaller pets."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.other_pets']],
             ],
         ],
     ],

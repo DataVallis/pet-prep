@@ -185,6 +185,7 @@
       "basenji": "Del 12-tedenskega izziva · česanje 1× na teden",
       "rat_terrier": "Del 12-tedenskega izziva · česanje 1× na teden",
       "greater_swiss_mountain_dog": "Del 12-tedenskega izziva · česanje 1× na teden",
+      "shar_pei": "Del 12-tedenskega izziva · česanje 1× na teden",
       "domestic_cat": "Kratka dlaka · brezplačna",
       "maine_coon": "Dolga dlaka · česanje 3× na teden",
       "british_shorthair": "Kratka, gosta dlaka · česanje 1× na teden",
@@ -535,6 +536,12 @@
         "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
         "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
       },
+      "shar_pei": {
+        "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 6.000 pri 6 mesecih.",
+        "young": "2 obroka na dan; sprehod 6.000 korakov na dan (kot odrasel pes).",
+        "adult": "2 obroka na dan; sprehod 6.000 korakov na dan.",
+        "senior": "2 obroka na dan; krajši sprehod — 4.500 korakov na dan."
+      },
       "alaskan_malamute": {
         "puppy": "Pride star 2 meseca. 4 obroki na dan (nato 3, od 6. meseca 2); sprehod 2.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
         "young": "2 obroka na dan; sprehod 9.000 korakov na dan, vsak teden več do 12.000 pri 12 mesecih.",
@@ -852,6 +859,7 @@
       "cold_sensitive": "tanka dlaka — občutljiv na mraz",
       "sun_protection": "gola koža — potrebuje zaščito pred soncem",
       "lively_older_children": "živahen pes — bolje za starejše otroke",
+      "independent_older_children": "samosvoj pes — bolje za starejše otroke",
       "independent_experienced_owner": "samostojen in trmast — najbolje z izkušenim lastnikom"
     }
   },

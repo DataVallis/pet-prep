@@ -44779,6 +44779,603 @@
       }
     }
   },
+  "shar_pei": {
+    "_note": "Added 2026-11-02 (M5-R10-87, unattended run — appended after the Greater Swiss Mountain Dog: AKC 2024 No. 83 'Chinese Shar-Pei', S174 full-list table fetched 2026-11-02 '83 | Chinese Shar-Pei'). Quotes as returned by the web-fetch tool on 2026-11-02 (some are fragments, marked). UK / FCI name 'Shar Pei'; AKC 'Chinese Shar-Pei'. Welfare-concern breed: RKC Breed Watch Category 2 (eyelids, skin-fold dermatitis, tight lip; S666), PDSA BOAS 'caused by their flatter face' (S660), VetCompass 2023 'Urgent action is needed to reform the breed' (S668).",
+    "identity": {
+      "value": "FCI No. 309, Group 2 Section 2.1 (Molossian type, Mastiff type), China",
+      "unit": "—",
+      "source_id": "S662",
+      "quote": "SHAR PEI",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S662, as returned): name 'SHAR PEI' in EN / FR / DE / ES, group 2, section 'Molossian type (Subsection: Mastiff type)', country of origin 'CHINA', patronage FCI, standard published 1999-08-09 (most recent changes effective 01/01/2020, S663), definitive recognition 1981-06-30."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S664",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key fact 'Size' (S664); PDSA (S660) 'Medium'."
+    },
+    "height": {
+      "rkc": {
+        "value": {
+          "male": [
+            46,
+            51
+          ],
+          "female": [
+            46,
+            51
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S665",
+        "quote": "Height: 46-51 cms (18-20 ins) at withers.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S665), one range for both sexes. FCI-Standard N° 309 (S663, KUSA copy of the 01/2020 text): '44cm – 51cm (approx. 17” – 20”).' (alternative). PDSA (S660) '46-51 cm' agrees with the RKC.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                44,
+                51
+              ],
+              "female": [
+                44,
+                51
+              ]
+            },
+            "unit": "cm",
+            "source_id": "S663",
+            "quote": "44cm – 51cm (approx. 17” – 20”).",
+            "notes": "FCI-Standard N° 309 (S663, KUSA copy)."
+          }
+        ]
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            20,
+            27
+          ],
+          "female": [
+            20,
+            27
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S660",
+        "quote": "20-27 kg",
+        "confidence": "medium",
+        "notes": "PDSA breed page key facts (S660), no split by sex → the same range for both. No weight in the FCI standard (S663) or the RKC standard (S665). VCA (S661) '45 - 60 pounds' = 20.4–27.2 kg agrees (our conversion).",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                20,
+                27
+              ],
+              "female": [
+                20,
+                27
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S661",
+            "quote": "45 - 60 pounds",
+            "notes": "VCA Quick Facts (S661); 45–60 lb = 20.4–27.2 kg (our conversion)."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "III–IV (20–27 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. PDSA 20–27 kg (S660) = 44–60 lb → mostly 'Medium'. The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Shar Pei growth curve found."
+      }
+    },
+    "lifespan": {
+      "median_uk": {
+        "value": 7.28,
+        "unit": "years",
+        "source_id": "S667",
+        "quote": "The median longevity of 190 Shar Pei that died during the study period was 7.28 years (IQR 5.04-10.05, range 0.04-15.04).",
+        "confidence": "medium",
+        "notes": "O'Neill et al. 2023 (S667), VetCompass UK primary care 2013, 190 deaths. RVC infographic (S668): 'The average age at death in Shar Pei was 7.3 years.' and 'This is substantially shorter than the 11.2 years longevity reported for dogs overall in the UK' (fragment). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (this) → RKC lower bound. Provisional until McMillan 2024 is checked."
+      },
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S664",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "RKC breed page key fact 'Lifespan' (S664); PDSA (S660) 'Over 10 years' — both contradict the VetCompass median 7.28 y (S667, peer-reviewed). Exported next to the median."
+      },
+      "vca": {
+        "value": "8–10",
+        "unit": "years",
+        "source_id": "S661",
+        "quote": "8 - 10 years",
+        "confidence": "medium",
+        "notes": "VCA Quick Facts (S661). Upper bound 10 y (≤ 10) → basis of shorter_lifespan together with the VetCompass median (S667)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "No McMillan et al. 2024 breed value reached (the Nature PDF names breeds in figures only; the Dogs Trust table S123 is not in the fetch tool's provenance, 2026-11-02). UNSOURCED value → open for David."
+      },
+      "senior_from": {
+        "value": 5.46,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × VetCompass median 7.28 y (S667) → 0.75 × 7.28 = 5.46 y = 65.52 → 66 months. Alternatives: 90 (RKC lower bound 'Over 10 years' × 0.75, S664), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S667"
+        ],
+        "months": 66,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S664",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S664) — the runbook's preferred source. PDSA (S660): 'Your Shar Pei will need a minimum of an hour exercise every day.' (60 as well). VCA (S661): 'Requires daily exercise in the form of a leisurely walk, short jog, or quick game.'",
+        "alternatives": [
+          {
+            "value": "≥ 60",
+            "source_id": "S660",
+            "quote": "Your Shar Pei will need a minimum of an hour exercise every day.",
+            "notes": "PDSA (S660) — same 60 minutes."
+          }
+        ]
+      },
+      "heat": {
+        "value": "becomes overheated fairly easily",
+        "unit": "—",
+        "source_id": "S661",
+        "quote": "Becomes overheated fairly easily.",
+        "confidence": "high",
+        "notes": "VCA (S661); Quick Facts 'Warm Weather: 2 out of 5'. No heat task (no 'do not exercise in the heat' sentence; M5-R14 heat rule). Not heat_sensitive (that chip names a thick coat — the Shar Pei coat is short)."
+      },
+      "after_meals": {
+        "value": "leave a gap between eating and exercising",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S660). → proposed_game_parameters.shar_pei.meal_exercise_gap (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "calm, independent, loyal, affectionate to the family; strong-willed",
+        "unit": "—",
+        "source_id": "S665",
+        "quote": "Calm, independent, very affectionate, and devoted to people.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S665). FCI (S663): 'Calm, independent, loyal, affectionate to his family.' PDSA (S660): 'Shar Peis are loyal and calm dogs with a natural talent for watching and protecting their family and home.' VCA (S661): 'Reserved toward, and even wary of, strangers.'"
+      },
+      "family": {
+        "value": "devoted family pets; better with older children — not recommended with younger children",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "Shar Peis are devoted and loyal family pets and can get along well with older children given the right socialisation.",
+        "confidence": "high",
+        "notes": "PDSA (S660); next: 'We wouldn't recommend getting a Shar Pei if you have younger children' (fragment) — 'they can be such independent dogs who prefer to do their own thing at times' (fragment). 'Always supervise your dog with children and vulnerable adults.' VCA (S661): 'Generally tolerant of children, but may not be playful enough for them.'; Quick Facts 'Good With Children: 1 out of 5'. Basis of family_pet and independent_older_children; no children / small_children."
+      },
+      "experienced_owner": {
+        "value": "strong-willed — better with experienced owners",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed.",
+        "confidence": "high",
+        "notes": "PDSA (S660); also 'Because of this they're better suited to more experienced owners familiar with their personality quirks.' VCA (S661): 'Tends to be independent and stubborn. Rebels against forceful methods.' Would be the basis of independent_experienced_owner — not given (Shiba-only by its own test; open for David)."
+      },
+      "time_alone": {
+        "value": "never alone for more than four hours (general PDSA rule)",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "you should never leave them alone for more than four hours",
+        "confidence": "medium",
+        "notes": "PDSA (S660, fragment) — the PDSA's general rule for every dog → no often_alone / needs_company tag."
+      },
+      "other_pets": {
+        "value": "really high prey drive — not with smaller pets",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "Shar Peis have a really high prey drive, so we wouldn't recommend keeping one with smaller pets.",
+        "confidence": "high",
+        "notes": "PDSA (S660). VCA (S661): 'Usually good with small family pets, but may chase livestock and other animals.' and 'Not friendly towards strange dogs.' Basis of chases_small_pets (verbatim prey-drive sentence)."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with people, experiences and other dogs",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "socialise your Shar Pei from a young age with lots of different people, experiences and other dogs",
+        "confidence": "high",
+        "notes": "PDSA (S660, fragment as returned). → proposed_game_parameters.shar_pei.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "training": {
+        "value": "intelligent but independent; patience, consistency, clear boundaries",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "They need a lot of patience and consistency from their owners with clear boundaries from day one",
+        "confidence": "high",
+        "notes": "PDSA (S660, fragment); 'Shar Peis are known for being very intelligent dogs, but they are also very independent thinkers' (fragment). VCA (S661): 'Does best with a firm owner who can combine reward-based training with good control and leadership.' The game uses Coren's rank only."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S660",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S660): 'You'll need to feed them a complete, balanced dog food to keep them slim and healthy.' — general advice, no breed-specific obesity statement → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. Welfare-concern breed: RKC Breed Watch Category 2 (S666) with three points of concern (eyelids turned inwards or outwards, dermatitis in skin folds, tight lip); PDSA (S660) names BOAS from the flatter face; VetCompass 2023 (S667 / S668) links the breed's skin conformation (hyaluronosis) to its disorders and calls for urgent reform. → welfare chips eyelid_problems, sensitive_skin, short_muzzle_breathing; not in marketing (BVA S92).",
+      "entropion": {
+        "value": "entropion — eyelids rolling inwards; the most common disorder",
+        "unit": "—",
+        "source_id": "S668",
+        "quote": "The most common disorder of Shar Pei dogs was entropion (in-turned eyelids)",
+        "confidence": "high",
+        "notes": "RVC infographic of O'Neill et al. 2023 (S668); PubMed abstract (S667) conclusions 'Almost one fifth of Shar Pei receive veterinary care each year for entropion' (fragment, no percentage exported). PDSA (S660): 'Eye problems – where the eyelids can roll inwards' (fragment). FCI (S663) / RKC standard (S665): 'Free from entropion.' Register key entropion."
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2 — eyelids, skin-fold dermatitis, tight lip",
+        "unit": "—",
+        "source_id": "S666",
+        "quote": "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S666) points of concern: also 'Signs of dermatitis irritation in skin folds, and/or hair loss or scarring from previous dermatitis' and 'Lower lip folding over lower incisors (Tight lip)'. Basis of eyelid_problems and sensitive_skin."
+      },
+      "skin_folds": {
+        "value": "skin-fold dermatitis — keep the folds clean and dry; ear infections (small ear canals)",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "They need to be kept clean and dry to stop them developing something called skin fold dermatitis.",
+        "confidence": "high",
+        "notes": "PDSA (S660); 'It's best to clean them with a damp cotton wool pad then dry them thoroughly afterwards.' No frequency → no fold-cleaning task (M5-R14 needs a frequency). Ears (S660): 'Ear infections due to their small ear canals.' (fragment); 'regularly monitor their ears to check they're clean' (no frequency → no ear task). Register key skin_fold_ear_problems."
+      },
+      "atopy": {
+        "value": "atopy — itchy skin from environmental allergens",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "itchy skin caused by sensitivity to things in the environment",
+        "confidence": "medium",
+        "notes": "PDSA (S660, fragment: '(such as pollen, grass and dust mites)'). Register key itchy_skin_allergy."
+      },
+      "boas": {
+        "value": "BOAS — breathing problems caused by the flatter face",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "this can cause severe breathing problems and is caused by their flatter face.",
+        "confidence": "high",
+        "notes": "PDSA (S660, fragment under the BOAS heading). The VetCompass paper (S667) does not classify the skull shape (as returned). Basis of short_muzzle_breathing (Boxer / Shih Tzu precedent). Register key shorter_face_boas."
+      },
+      "shar_pei_fever": {
+        "value": "familial Shar Pei fever — bouts of high temperature, painful swollen joints and a swollen face",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "a disorder which causes a high temperature, painful swollen joints, swollen face",
+        "confidence": "high",
+        "notes": "PDSA (S660, fragment under 'Familial Shar Pei Fever'); 'If your Shar Pei shows any unusual symptoms you should seek veterinary advice straight away.' New register health key shar_pei_fever."
+      },
+      "hip_elbow": {
+        "value": "hip and elbow dysplasia — parents hip- and elbow-scored (BVA/KC schemes, RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+        "confidence": "medium",
+        "notes": "RKC breed page (S664) Best Practice; also 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Sheme' (sic, as returned). Register key hip_elbow_dysplasia."
+      },
+      "glaucoma_lens": {
+        "value": "primary open angle glaucoma / primary lens luxation — DNA test for the parents (RKC Best Practice)",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "DNA test for primary open angle glaucoma/ primary lens luxation (POAG/PLL)",
+        "confidence": "medium",
+        "notes": "RKC breed page (S664) Best Practice. Breeder checklist only (new key dna_poag_pll); not exported as a health key."
+      },
+      "causes_of_death": {
+        "value": "most common causes of death: cancer, kidney disorders, behavioural disorders",
+        "unit": "—",
+        "source_id": "S668",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RVC infographic (S668, paraphrase; the percentages stay here only and are never exported). Not exported."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 51,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, checked 2026-11-02): rank 51 'Shar Pei' (with Whippet and Wire Fox Terrier), heading 'Average Working/Obedience Intelligence' (from rank 40)."
+      },
+      "coren_tier": {
+        "value": "Average Working/Obedience Intelligence",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Ranks 40–54 (S35)."
+      },
+      "training_notes": {
+        "value": "independent thinkers; patience, consistency, clear boundaries",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "They need a lot of patience and consistency from their owners with clear boundaries from day one",
+        "confidence": "medium",
+        "notes": "PDSA (S660, fragment). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.shar_pei.learning_multiplier (1.0, runbook rule: Average tier).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "active, compact, short-coupled, squarely built medium dog; wrinkles on skull and withers, small ears, broad 'hippopotamus' muzzle",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "Active, compact, short-coupled, and squarely built dog of medium size.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663, KUSA copy); RKC standard (S665): 'Alert, active, compact, short-coupled, squarely built.' Heavy skin folds on the body (except withers and tail base) and limbs are disqualifying (S663, paraphrase) → the portrait shows moderate wrinkles only."
+      },
+      "colours": {
+        "value": [
+          "fawn",
+          "red",
+          "cream",
+          "black",
+          "chocolate",
+          "blue"
+        ],
+        "unit": "list",
+        "source_id": "S663",
+        "quote": "All solid colours acceptable except white.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663); RKC (S665): 'All solid colours except white are acceptable.' and 'Any combination of colours unacceptable'. Disqualifying (S663, paraphrase): albino, brindle, patches, spots, black and tan, saddled pattern. The list names common solid colours only (our choice of which solid colours to offer); fawn first = the portrait default."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — weights for the solid colours (verified=false in breed_appearance.php)."
+      },
+      "coat": {
+        "value": "short, harsh, bristly, straight and off-standing; no undercoat; never trimmed",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "A distinctive feature of the breed: short, harsh, and bristly.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663); RKC (S665): 'Extremely harsh coat straight and off-standing on the body but flatter on the limbs.' RKC (S664) 'Coat length: Short'."
+      },
+      "head": {
+        "value": "flat broad skull, moderate stop; broad, well-padded muzzle without taper; bluish-black tongue preferred",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "A distinctive feature of the breed.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663) muzzle (as returned; paraphrase: broad from root to tip, no taper, lips well padded); bluish-black tongue preferred, solid pink tongue highly undesirable (paraphrase). Nose (S663): 'Large and wide, preferably black, but any colour conforming to general coat colour permissible.'"
+      },
+      "ears": {
+        "value": "very small, rather thick, triangular, set high, tips pointing to the eyes",
+        "unit": "—",
+        "source_id": "S665",
+        "quote": "Very small, rather thick, equilaterally triangular in shape, slightly rounded at tip",
+        "confidence": "high",
+        "notes": "RKC standard (S665, truncated by the tool); FCI (S663) the same; pricked ears disqualify (S663, paraphrase)."
+      },
+      "eyes": {
+        "value": "dark, almond-shaped, scowling expression; free from entropion",
+        "unit": "—",
+        "source_id": "S665",
+        "quote": "Free from entropion.",
+        "confidence": "high",
+        "notes": "RKC standard (S665); FCI (S663): 'Free from entropion.'; skin, folds or hair must not disturb the eye (paraphrase)."
+      },
+      "tail": {
+        "value": "thick and round at the root, tapering to a fine point, set very high, curled",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "Thick and round at the root, tapering to a fine point.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663); RKC (S665): 'Rounded, narrowing to fine point, base set very high.'"
+      },
+      "nose": {
+        "value": "large and wide, preferably black",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "Large and wide, preferably black, but any colour conforming to general coat colour permissible.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 309 (S663)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed-page key facts (S664, returned as label: value), PDSA (S660), VCA (S661). The RKC page shows no 'Good with children' field; PDSA has no such table row.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size' (S664)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise' (S664)."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Small house",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size of home' (S664). Not apartment (needs 'Flat/ Apartment'), not large_home."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Size of garden' (S664)."
+      },
+      "rkc_grooming": {
+        "value": "Once a week",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Grooming' (S664). Brushing 1× a week (M5-R13 rule 'Once a week' → 1). PDSA (S660) 'A weekly brush should keep on top of the dead hairs' and VCA (S661) 'The coat needs brushing every week to remove dead hair.' agree."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Coat length' (S664)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Sheds' (S664). Basis of the sheds tag. VCA (S661) 'Shedding is average.'"
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Lifespan' (S664). Contradicted by the VetCompass median 7.28 y (S667)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Town or country' (S664)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Vulnerable native breed' (S664)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S664",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC breed page (S664) 'Breed Watch category: Category 2'; points of concern on the Breed Watch page (S666)."
+      },
+      "pdsa_children": {
+        "value": "devoted family pets; older children only",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "Shar Peis are devoted and loyal family pets and can get along well with older children given the right socialisation.",
+        "confidence": "high",
+        "notes": "PDSA (S660); 'We wouldn't recommend getting a Shar Pei if you have younger children' (fragment)."
+      },
+      "pdsa_bath": {
+        "value": "unlikely to need a bath",
+        "unit": "—",
+        "source_id": "S660",
+        "quote": "In general, Shar Peis are clean dogs so you're unlikely to need to give them a bath.",
+        "confidence": "high",
+        "notes": "PDSA (S660) → no bath reminder."
+      },
+      "vca_heat": {
+        "value": "becomes overheated fairly easily",
+        "unit": "—",
+        "source_id": "S661",
+        "quote": "Becomes overheated fairly easily.",
+        "confidence": "high",
+        "notes": "VCA (S661)."
+      },
+      "rkc_good_with_children": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "The RKC breed page shows no 'Good with children' field (as returned 2026-11-02)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -67122,6 +67719,292 @@
         "confidence": "high",
         "notes": "Colour of FCI-Standard N° 58 (S653) and AKC (S655): tricolour only — any other colour disqualifies. Weight unsourced in prompts. Short coat (not the Bernese's long coat).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): black, tan and white is the only standard colour and the portrait default; never another colour, never a long coat"
+      }
+    },
+    "shar_pei": {
+      "_note": "Unattended run M5-R10-87 (2026-11-02): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S664 'Up to 1 hour per day' → 60; PDSA S660 'a minimum of an hour' agrees). Senior 66 from the VetCompass median 7.28 y (O'Neill et al. 2023, S667 — 190 deaths; McMillan 2024 not reachable → provisional). Coren rank 51 (Average) → 1.0. Built: weekly brushing (RKC 'Once a week' → 1, M5-R13), puppy socialisation with the PDSA quote (S660, M5-R17), the 60-minute meal / exercise warning (PDSA S660, M5-R16). No care task: fold cleaning and ear checks have no frequency (PDSA / VCA 'regularly'), no bath ('unlikely to need'), no teeth / nail statement. Welfare breed (RKC Breed Watch Category 2, S666; PDSA BOAS, S660) → chips eyelid_problems, sensitive_skin, short_muzzle_breathing; not in marketing (BVA S92). New vocabulary key independent_older_children (independent_experienced_owner not given — Shiba-only by its own test, open for David); new register health key shar_pei_fever; new breeder-checklist key dna_poag_pll. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S664",
+        "quote": "Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 1 hour per day' (S664) → rule 'up to N' → 60. PDSA (S660) 'a minimum of an hour exercise every day' → 60 as well.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S664 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S664",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 66
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 66 = round(0.75 × 7.28 y × 12) = round(65.52) (S11 + VetCompass median 7.28 y, O'Neill et al. 2023, S667 — 190 deaths). McMillan 2024 not reachable; RKC / PDSA 'Over 10 years' (S664 / S660) would give 90. Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S667"
+        ],
+        "alternatives": {
+          "senior_rkc_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 66 (0.75 × 7.28 y, VetCompass median S667)"
+      },
+      "senior_boundary_months": {
+        "value": 66,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 7.28 y × 12) = 66 (AAHA last 25 % of lifespan S11 × VetCompass median S667). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (this). Alternatives: RKC lower bound 10 y → 90 (S664); Dogs Trust > 7 y (S14) → 84.",
+        "derived_from": [
+          "S11",
+          "S667"
+        ],
+        "alternatives": {
+          "senior_rkc_10_y": 90,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 66 (VetCompass median 7.28 y, S667)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 66
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 66)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 51 'Shar Pei' (S35, checked 2026-11-02) → tier Average (40–54) → 1.0. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (Coren rank 51, Average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S664",
+        "quote": "Once a week",
+        "confidence": "high",
+        "notes": "shar_pei.suitability.rkc_grooming. RKC 'Grooming: Once a week' → 1 (runbook dog-grooming rule 'Once a week' → 1). PDSA (S660) 'A weekly brush should keep on top of the dead hairs' and VCA (S661) 'The coat needs brushing every week to remove dead hair.' agree. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »Once a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S660",
+        "quote": "socialise your Shar Pei from a young age with lots of different people, experiences and other dogs",
+        "confidence": "high",
+        "notes": "shar_pei.behaviour.socialisation (PDSA S660, fragment as returned). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S660)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S660",
+        "quote": "Remember to leave a gap between eating and exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S660), shar_pei.exercise.after_meals. Built in M5-R16: 60 minutes of the 'wait with the walk, the dog is digesting' warning after a meal; steps still count, no penalty, no score.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "suitability_tags": {
+        "_note": "Tags for backend/config/breed_suitability.php (M5-R10-87); refs = JSON paths in this file. New vocabulary key independent_older_children. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.family",
+              "shar_pei.suitability.pdsa_children"
+            ],
+            "quote": "S660 'Shar Peis are devoted and loyal family pets and can get along well with older children given the right socialisation.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "independent_older_children",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.family",
+              "shar_pei.suitability.pdsa_children"
+            ],
+            "quote": "S660 'We wouldn't recommend getting a Shar Pei if you have younger children' — 'they can be such independent dogs who prefer to do their own thing at times' (fragments)"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S664"
+            ],
+            "refs": [
+              "shar_pei.suitability.rkc_shedding"
+            ],
+            "quote": "S664 'Yes'"
+          },
+          {
+            "tag": "short_muzzle_breathing",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.health.boas"
+            ],
+            "quote": "S660 'this can cause severe breathing problems and is caused by their flatter face.'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S666",
+              "S668"
+            ],
+            "refs": [
+              "shar_pei.health.breed_watch",
+              "shar_pei.health.entropion"
+            ],
+            "quote": "S666 'Eyelids not in normal contact with the eyeball, they are turned inwards or outwards'; S668 'The most common disorder of Shar Pei dogs was entropion (in-turned eyelids)'"
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.health.skin_folds"
+            ],
+            "quote": "S660 'They need to be kept clean and dry to stop them developing something called skin fold dermatitis.' (+ RKC Breed Watch S666 dermatitis in skin folds, notes)"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S667",
+              "S661"
+            ],
+            "refs": [
+              "shar_pei.lifespan.median_uk",
+              "shar_pei.lifespan.vca"
+            ],
+            "quote": "S667 median longevity 7.28 years; S661 '8 - 10 years'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S660"
+            ],
+            "refs": [
+              "shar_pei.behaviour.other_pets"
+            ],
+            "quote": "S660 'Shar Peis have a really high prey drive, so we wouldn't recommend keeping one with smaller pets.'"
+          }
+        ],
+        "not_proposed": {
+          "children": "PDSA: older children only, not younger ones (S660); VCA 'Good With Children: 1 out of 5' (S661) → no children / small_children.",
+          "older_children": "That chip names a small dog; the PDSA reason is the dog's independence → new key independent_older_children.",
+          "not_for_small_children": "That chip names a large dog.",
+          "apartment": "RKC 'Small house' (S664), not 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S664).",
+          "active_family": "Up to 1 hour a day (S664).",
+          "other_pets": "PDSA: not with smaller pets (S660); VCA 'Not friendly towards strange dogs.' (S661).",
+          "needs_company": "PDSA's four-hour line is its general rule for every dog (S660).",
+          "heat_sensitive": "VCA 'Becomes overheated fairly easily.' (S661) — but the chip names a thick coat; the Shar Pei coat is short → no chip; the fact stays in the register text (open for David).",
+          "brachycephalic_breathing": "No source names the flat face together with heat → short_muzzle_breathing (Shih Tzu precedent).",
+          "food_motivated_weight": "No breed-specific statement.",
+          "hypoallergenic": "Never a tag (runbook).",
+          "frequent_grooming": "RKC 'Once a week' (S664).",
+          "shorter_lifespan_conflict": "RKC / PDSA 'Over 10 years' (S664 / S660) contradict the peer-reviewed VetCompass median 7.28 y (S667) and VCA '8 - 10 years' (S661); the A-tier median and the VCA upper bound ≤ 10 (the runbook trigger) decide → chip given (open for David).",
+          "independent_experienced_owner": "PDSA 'Shar Peis tend to do really well in an experienced household with owners used to the breed as they can be strong-willed.' (S660) would fit, but the chip is Shiba-only by its own test (ShibaInuBreedTest 'Only the Shiba Inu carries the new key') and a breed run never edits another breed's test → not given; open for David."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet; consider independent_older_children, sheds, short_muzzle_breathing, eyelid_problems, sensitive_skin, shorter_lifespan, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). PDSA (S660) names BOAS 'caused by their flatter face' → the rule's brachycephalic exclusion (Boxer / Shih Tzu precedent); RKC Breed Watch Category 2 (S666) and VetCompass 'Urgent action is needed to reform the breed' (S668). Marketing never shows the breed's wrinkles as cute or desirable. Open for David whether he wants it in marketing anyway.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; BOAS PDSA S660); izjema odprta za Davida"
+      },
+      "ai_appearance": {
+        "value": "adult Shar Pei, solid fawn: compact, square, medium-sized dog; short, harsh, bristly off-standing coat; moderate loose skin with wrinkles on the forehead and withers only (no heavy folds on the body or legs, eyes clearly open and free); broad padded muzzle; small thick triangular ears folded forward; dark almond eyes; thick high-set curled tail; large black nose; bluish-black tongue if visible",
+        "unit": "—",
+        "source_id": "S663",
+        "quote": "All solid colours acceptable except white.",
+        "confidence": "high",
+        "notes": "Colours of FCI-Standard N° 309 (S663) / RKC (S665): any solid colour except white; never brindle, patches, spots, black and tan or white. Welfare breed: moderate wrinkles only, eyes open (entropion and heavy body folds disqualify, S663). Weights unsourced in prompts.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default (most typical solid colour); moderate, non-exaggerated wrinkles; never white, brindle, spotted, patched or black-and-tan"
       }
     }
   }

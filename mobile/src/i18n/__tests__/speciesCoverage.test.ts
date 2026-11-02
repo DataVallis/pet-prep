@@ -89,6 +89,7 @@ const DOG_ONLY: Readonly<Record<string, string>> = {
   'pet:breedSuitability.consider.older_children': 'chip of a dog breed only (Pomeranian, AKC "small dog", M5-R10-30)',
   'pet:breedSuitability.consider.sensitive_older_children': 'chip of a dog breed only (Whippet, PDSA / PetMD "sensitive" dog, M5-R10-54)',
   'pet:breedSuitability.consider.lively_older_children': 'chip of a dog breed only (Bull Terrier, PDSA "a bit excitable", M5-R10-76)',
+  'pet:breedSuitability.consider.independent_older_children': 'chip of a dog breed only (Shar Pei, PDSA independent dogs — older children, M5-R10-87)',
   'family:breeds.bernese_mountain_dog': 'the breed name itself contains "Dog" / "pes" (M5-R10-12)',
   // ── Names the species on purpose ──
   'family:species.dog': 'the species name "Dog" / "Pes"',

@@ -707,6 +707,14 @@
 | markings (any other colour disqualifies, S653 / AKC S655); flat broad skull, strong straight muzzle, hazel to chestnut eyes,
 | medium triangular drop ears, heavy tail reaching the hocks. One colour (weight unsourced → `verified => false`).
 |
+| Shar Pei (M5-R10-87, docs/research/dog-data shar_pei.appearance):
+| "Active, compact, short-coupled, and squarely built dog of medium size." (FCI-Standard N° 309, S663); short, harsh,
+| bristly, off-standing coat, never trimmed; "All solid colours acceptable except white." (S663; never white, brindle,
+| patches, spots, black and tan); very small thick triangular ears, broad padded muzzle, high-set curled tail. Welfare breed
+| (RKC Breed Watch Category 2, S666; entropion and heavy body folds disqualify, S663): moderate wrinkles on the forehead and
+| withers only, eyes clearly open — the dog trait `muzzle` carries it. Fawn first with the highest weight (the portrait
+| default, Claude's choice); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3802,6 +3810,45 @@ return [
             'tail' => ['fairly heavy tail hanging down to the hocks'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-87 (docs/research/dog-data/data.json shar_pei.appearance; runbook rules 2026-10-10: solid colours of the standard
+    // — S663 "All solid colours acceptable except white."; fawn = the portrait default; welfare breed → moderate `muzzle`).
+    'shar_pei' => [
+        'display_name' => 'Shar Pei',
+        // Six common solid colours; their weights are in no source (shar_pei.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 309 Shar Pei, changes effective 01/01/2020 (S663, KUSA copy) and the RKC breed standard (S665) — for the traits listed in `sources`. The choice of solid colours and their weights is unsourced.',
+        'sources' => [
+            'size' => 'S665 "Height: 46-51 cms (18-20 ins) at withers."; RKC S664 "Size: Medium"',
+            'build' => 'S663 "Active, compact, short-coupled, and squarely built dog of medium size."',
+            'coat_length' => 'S663 "A distinctive feature of the breed: short, harsh, and bristly."; S665 "Extremely harsh coat straight and off-standing on the body but flatter on the limbs."',
+            'coat_color' => 'S663 "All solid colours acceptable except white." (which solid colours and their weights: unsourced)',
+            'head' => 'S663 nose "Large and wide, preferably black, but any colour conforming to general coat colour permissible."; muzzle "A distinctive feature of the breed." (broad, no taper — paraphrase)',
+            'muzzle' => 'Welfare rule (RKC Breed Watch S666 "Eyelids not in normal contact with the eyeball, they are turned inwards or outwards"; S665 eyes "Free from entropion."): moderate wrinkles only, eyes clearly open',
+            'ear_carriage' => 'S665 "Very small, rather thick, equilaterally triangular in shape, slightly rounded at tip"',
+            'eye_color' => 'S663 eyes dark, almond-shaped (paraphrase); S665 "Free from entropion."',
+            'tail' => 'S663 "Thick and round at the root, tapering to a fine point."; S665 "Rounded, narrowing to fine point, base set very high."',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'compact, square, short-coupled medium-sized dog', 'weight' => 3], 'sturdy, square, compact build'],
+            'coat_length' => ['very short, harsh, bristly coat standing off the body'],
+            // Fawn first, highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'solid fawn', 'weight' => 30],
+                ['value' => 'solid red', 'weight' => 20],
+                ['value' => 'solid cream', 'weight' => 15],
+                ['value' => 'solid black', 'weight' => 15],
+                ['value' => 'solid chocolate brown', 'weight' => 10],
+                ['value' => 'solid blue (dilute slate blue-grey)', 'weight' => 10],
+            ],
+            'head' => ['broad, flat skull and a broad, well-padded muzzle without taper, large black nose'],
+            'muzzle' => ['moderate loose skin with a few wrinkles on the forehead and withers only, no heavy folds on the body or legs, eyes clearly open and unobstructed'],
+            'ear_carriage' => ['very small, thick triangular ears folded forward close to the head'],
+            'eye_color' => ['dark almond-shaped eyes'],
+            'tail' => ['thick, high-set tail tapering to a fine point, curled over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
