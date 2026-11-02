@@ -177,6 +177,7 @@
       "basenji": "Part of the 12-week challenge · brushing 1× a week",
       "rat_terrier": "Part of the 12-week challenge · brushing 1× a week",
       "greater_swiss_mountain_dog": "Part of the 12-week challenge · brushing 1× a week",
+      "shar_pei": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -527,6 +528,12 @@
         "adult": "2 meals a day; walks of 6,000 steps a day.",
         "senior": "2 meals a day; shorter walks — 4,500 steps a day."
       },
+      "shar_pei": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 6,000 at 6 months.",
+        "young": "2 meals a day; walks of 6,000 steps a day (like an adult dog).",
+        "adult": "2 meals a day; walks of 6,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 4,500 steps a day."
+      },
       "alaskan_malamute": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
@@ -844,6 +851,7 @@
       "cold_sensitive": "thin coat — feels the cold",
       "sun_protection": "bare skin — needs sun protection",
       "lively_older_children": "lively dog — better with older children",
+      "independent_older_children": "independent dog — better with older children",
       "independent_experienced_owner": "independent and stubborn — best with an experienced owner"
     }
   },
