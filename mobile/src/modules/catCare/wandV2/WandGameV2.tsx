@@ -126,6 +126,16 @@ function featherAt(size: FieldSizeValue, x: number, y: number): Point {
   return { x: z.x + z.width / 2, y: z.y + z.height * 0.6 };
 }
 
+/**
+ * Colours used inside UI-thread worklets are computed HERE, on the JS thread: `alpha()` is not a
+ * worklet, and calling it from a `useDerivedValue` on the UI runtime is a fatal crash of the
+ * whole app in a release build (the cat wand crash, David 2026-11-02). Never call a non-worklet
+ * helper inside a worklet — the reanimated Jest mock (`assertUiWorklet`) now fails such a test.
+ */
+const ZONE_ON = alpha(palette.mint, 0.55);
+const ZONE_OFF = alpha(palette.white, 0.3);
+const ZONE_FILL = alpha(palette.white, 0.06);
+
 function ZoneRing({ size, fx, fy }: { size: SharedValue<FieldSizeValue>; fx: SharedValue<number>; fy: SharedValue<number> }) {
   const x = useDerivedValue(() => wandZone(size.value).x);
   const y = useDerivedValue(() => wandZone(size.value).y);
@@ -133,11 +143,11 @@ function ZoneRing({ size, fx, fy }: { size: SharedValue<FieldSizeValue>; fx: Sha
   const h = useDerivedValue(() => wandZone(size.value).height);
   const color = useDerivedValue(() => {
     const p = featherAt(size.value, fx.value, fy.value);
-    return inZone(p, wandZone(size.value)) ? alpha(palette.mint, 0.55) : alpha(palette.white, 0.3);
+    return inZone(p, wandZone(size.value)) ? ZONE_ON : ZONE_OFF;
   });
   return (
     <Group>
-      <RoundedRect x={x} y={y} width={w} height={h} r={28} color={alpha(palette.white, 0.06)} />
+      <RoundedRect x={x} y={y} width={w} height={h} r={28} color={ZONE_FILL} />
       <RoundedRect x={x} y={y} width={w} height={h} r={28} color={color} style="stroke" strokeWidth={3} />
     </Group>
   );

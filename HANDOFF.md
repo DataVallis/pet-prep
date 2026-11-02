@@ -188,6 +188,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-02 (cloud, mobile) — fix: cat wand v2 closed the whole app (`fix/cat-wand-crash`, JS only → OTA)
+David's iPhone (store 3.1.10 (8)): ~1 s after the wand card opened (»Muca se pripravlja …«) the app quit. Cause: `WandGameV2#ZoneRing`'s `useDerivedValue` called `alpha()` (theme, not a worklet) on the UI runtime → react-native-worklets »remote function« error → `ErrorUtils.reportFatalError` = native-level fatal in release (no `LayerBoundary` can catch it). Fix: the colours are module constants. Guard: the reanimated Jest mock (`assertUiWorklet`) now fails any `useDerivedValue` / `useAnimatedStyle` / `useAnimatedProps` updater (or worklet it calls) that captures a non-worklet function — it flagged only the wand across every game test. New wand tests: phase group present / absent (simple mode) / partly missing / none, picture mode, 422 start refusal. **Debt:** gesture-handler worklets (`onPan*`) are not guarded (they may legally capture JS callbacks for `scheduleOnRN`) — audited by hand 2026-11-02, all clean.
+
 ### 2026-11-02 (cloud, mobile) — Android drops READ_WHEELCHAIR_PUSHES (`fix/android-drop-wheelchair-pushes`)
 Google Play rejected version code 6 (Health Connect »Excessive Data Access — WheelchairPushes«: the reviewer couldn't find the feature behind the parent's adapted-mode switch). The permission is removed from `app.json`; `getHealthAdapter('pushes')` is null on Android, so adapted mode there counts parent-logged walk minutes only (child sees »a parent logs your walk«, parent hints updated). iOS unchanged. Native change → new Android build (version code 7) needed; Play health declaration = READ_STEPS only.
 
