@@ -1,0 +1,128 @@
+{
+  "slug": "pineapple",
+  "species": "dog",
+  "name": {
+    "en": "Pineapple",
+    "sl": "Ananas"
+  },
+  "question": {
+    "en": "Can dogs eat pineapple?",
+    "sl": "Ali lahko psi jedo ananas?"
+  },
+  "url_slug": {
+    "en": "pineapple",
+    "sl": "ananas"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, raw pineapple in small amounts is a good snack for dogs, as long as the spiny skin, the crown and the hard core are removed. Avoid canned pineapple, because the syrup has too much sugar.",
+    "sl": "Da, surov ananas je v majhnih količinah dober prigrizek za pse, če odstranite bodičasto lupino, krono in trdo sredico. Ananasa iz pločevinke ne dajajte, ker ima sirup preveč sladkorja."
+  },
+  "why": {
+    "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
+    "sl": "Ananas je poln vitaminov, mineralov in vlaknin, vsebuje pa tudi veliko naravnega sladkorja. Trda sredica in bodičasta lupina lahko povzročita zaporo. Ananasu iz pločevinke se raje izognite, ker ima njegov sirup preveč sladkorja za prebavo večine psov. Nekateri psi imajo po ananasu drisko ali prebavne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog gets diarrhoea or an upset stomach after eating pineapple, pineapple may not be the right snack for it.",
+    "sl": "Če ima pes po ananasu drisko ali prebavne težave, ananas morda ni pravi prigrizek zanj."
+  },
+  "serving": {
+    "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
+    "sl": "Svež in olupljen, brez krone in sredice, narezan na koščke za en grižljaj; zamrznjeni koščki svežega ananasa so poletni priboljšek."
+  },
+  "child": {
+    "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
+    "sl": "Psi lahko dobijo košček svežega ananasa! Odrasel najprej odreže bodičasto lupino in trdo sredino."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat canned pineapple?",
+        "sl": "Ali lahko psi jedo ananas iz pločevinke?"
+      },
+      "a": {
+        "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
+        "sl": "Raje ne. Sirup v sadju iz pločevinke vsebuje preveč sladkorja za prebavo večine psov."
+      }
+    },
+    {
+      "q": {
+        "en": "Why remove the core and skin?",
+        "sl": "Zakaj odstraniti sredico in lupino?"
+      },
+      "a": {
+        "en": "The tough core and the spiny skin can cause a blockage in the gut.",
+        "sl": "Trda sredica in bodičasta lupina lahko povzročita zaporo v prebavilih."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD98",
+      "quote": "Yes. Raw pineapple, in small amounts, is an excellent snack for dogs."
+    },
+    {
+      "id": "KD98",
+      "quote": "Pineapple is high in fiber and contains a significant amount of natural sugar."
+    },
+    {
+      "id": "KD98",
+      "quote": "The tough, central core of the pineapple has the potential to cause obstructions, as does the spiny skin."
+    },
+    {
+      "id": "KD98",
+      "quote": "Always remove the skin and core before feeding."
+    },
+    {
+      "id": "KD98",
+      "quote": "Canned pineapple, on the other hand, should be avoided."
+    },
+    {
+      "id": "KD98",
+      "quote": "The syrup in canned fruits contains too much sugar for most dogs’ digestive tracts to handle."
+    },
+    {
+      "id": "KD98",
+      "quote": "frozen pieces of fresh pineapple make a delicious treat in the summer."
+    },
+    {
+      "id": "KD98",
+      "quote": "provided they’re peeled and sliced into bite-sized pieces."
+    },
+    {
+      "id": "KD98",
+      "quote": "If they get diarrhea or show signs of an upset stomach, then pineapple might not be the fruit snack for them."
+    },
+    {
+      "id": "KD89",
+      "quote": "A few chunks of pineapple are a great sweet treat for dogs, as long as the prickly outside peel and crown are removed first."
+    },
+    {
+      "id": "KD89",
+      "quote": "The tropical fruit is full of vitamins, minerals, and fiber."
+    },
+    {
+      "id": "KD112",
+      "quote": "Pineapple – remove the skin"
+    }
+  ],
+  "related": [
+    "mango",
+    "bananas",
+    "strawberries"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9d0c1e09080f41b6c2ecb498b758655040213458362672b3c9c9da396a0e3e8f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1877c2cab5dc27c003d2f0fd91a6aac7f12735101a9ed336da1f231429b997d8"
+    }
+  }
+}

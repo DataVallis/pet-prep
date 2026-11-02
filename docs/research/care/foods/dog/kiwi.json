@@ -1,0 +1,106 @@
+{
+  "slug": "kiwi",
+  "species": "dog",
+  "name": {
+    "en": "Kiwi",
+    "sl": "Kivi"
+  },
+  "question": {
+    "en": "Can dogs eat kiwi?",
+    "sl": "Ali lahko psi jedo kivi?"
+  },
+  "url_slug": {
+    "en": "kiwi",
+    "sl": "kivi"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, dogs can have small amounts of kiwi as an occasional treat. Peel it and cut it into small pieces or slices, and never give a whole kiwi, because it can be a choking hazard.",
+    "sl": "Da, psi lahko kot občasen priboljšek dobijo malo kivija. Olupite ga in narežite na majhne koščke ali rezine; celega kivija nikoli ne dajajte, ker se pes z njim lahko zaduši."
+  },
+  "why": {
+    "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
+    "sl": "Kivi je sladek sadež, bogat z vitaminom C in kalijem, vsebuje pa tudi veliko vlaknin, zlasti netopnih. Preveč kivija lahko povzroči prebavne težave, tudi drisko. Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec. Cel kivi je dovolj majhen, da se pes z njim lahko zaduši."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Feed only a little at a time. Too much kiwi can cause digestive issues such as diarrhoea, and kiwi should never replace a complete and balanced dog food.",
+    "sl": "Dajajte ga le malo naenkrat. Preveč kivija lahko povzroči prebavne težave, kot je driska, in kivi nikoli ne sme nadomestiti popolne in uravnotežene pasje hrane."
+  },
+  "serving": {
+    "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
+    "sl": "Olupljen in narezan na majhne koščke ali rezine; malo naenkrat, kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
+    "sl": "Psi lahko poskusijo malo kivija! Odrasel ga olupi in nareže na drobne koščke, da ga pes lažje poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat kiwi skin?",
+        "sl": "Ali lahko psi jedo lupino kivija?"
+      },
+      "a": {
+        "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
+        "sl": "Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec, zato jo je bolje odstraniti."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD100",
+      "quote": "The answer is yes—dogs can have small amounts of kiwi as an occasional treat"
+    },
+    {
+      "id": "KD100",
+      "quote": "Available all year-round and packed with vitamin C and potassium, kiwi is a sweet, nutrient-rich fruit"
+    },
+    {
+      "id": "KD100",
+      "quote": "Kiwi contains a significant amount of fiber, particularly insoluble fiber, also known as roughage."
+    },
+    {
+      "id": "KD100",
+      "quote": "While small amounts are usually fine, too much kiwi may lead to digestive issues, including diarrhea."
+    },
+    {
+      "id": "KD100",
+      "quote": "Removing the skin before feeding is recommended."
+    },
+    {
+      "id": "KD100",
+      "quote": "While kiwi skin is not toxic, it's tough and high in fiber, which can upset your dog's stomach."
+    },
+    {
+      "id": "KD100",
+      "quote": "To avoid a choking hazard, cut the kiwi into small pieces or slices and feed your dog a little bit at a time."
+    },
+    {
+      "id": "KD100",
+      "quote": "Because they are somewhat small in size, you should never feed your dog a whole kiwi."
+    },
+    {
+      "id": "KD100",
+      "quote": "should never replace a complete and balanced dog food diet."
+    }
+  ],
+  "related": [
+    "strawberries",
+    "bananas",
+    "blueberries"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "596f67f36f5a89652814094e1f2d790d8a8a5b6447abb670a75f2d5a069e79c8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d98b97fef7ae3da383568398f3197a327b4f35f3c1476f662f274e453fc65c6c"
+    }
+  }
+}

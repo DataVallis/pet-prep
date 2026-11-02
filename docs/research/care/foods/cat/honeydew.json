@@ -1,0 +1,111 @@
+{
+  "slug": "honeydew",
+  "species": "cat",
+  "name": {
+    "en": "Honeydew melon",
+    "sl": "Medena melona"
+  },
+  "question": {
+    "en": "Can cats eat honeydew melon?",
+    "sl": "Ali lahko mačke jedo medeno melono?"
+  },
+  "url_slug": {
+    "en": "honeydew",
+    "sl": "medena-melona"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of honeydew melon is fine as an occasional treat. The ASPCA lists honeydew as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
+    "sl": "Da, majhen košček medene melone je v redu kot občasen priboljšek. ASPCA medeno melono navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči želodčne težave, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
+    "sl": "ASPCA medeno melono (Cucumis melo) navaja kot nestrupeno za mačke, veterinarska bolnišnica NC State pa jo uvršča med sadne priboljške za mačke in pse. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Offer only a small piece. Any plant material can cause vomiting or stomach upset in cats.",
+    "sl": "Ponudite le majhen košček. Vsaka rastlinska hrana lahko pri mačkah povzroči bruhanje ali želodčne težave."
+  },
+  "serving": {
+    "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen košček sadeža, všteti ga je treba v dnevno količino hrane."
+  },
+  "child": {
+    "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
+    "sl": "Majhen košček medene melone je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need fruit?",
+        "sl": "Ali mačke potrebujejo sadje?"
+      },
+      "a": {
+        "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC65",
+      "quote": "Scientific Name: Cucumis melo"
+    },
+    {
+      "id": "KC65",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC63",
+      "quote": "Cats and Dogs"
+    },
+    {
+      "id": "KC63",
+      "quote": "Honeydew"
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC33",
+      "quote": "Cats are obligate carnivores, which means that they rely on nutrients found only in animal products."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet, but many can be given in very small quantities"
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "cantaloupe",
+    "watermelon",
+    "bananas",
+    "strawberries"
+  ],
+  "updated": "2026-11-02",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "19a5c4b7bd4913ab682fd0f79eaeb36bc9321cb278f60c4c23ea6bba751082dc"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df0d0df6665ed439f772d8624691668c35a39d49f3a525dd9b2361dbd045b61b"
+    }
+  }
+}
