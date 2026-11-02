@@ -91,6 +91,8 @@ Run everything through Sail: `./vendor/bin/sail artisan …`, `./vendor/bin/sail
 ## Testing
 - Parallel agents/worktrees: run Pest on your own PostgreSQL database (e.g. `createdb testing_<branch>`), never the shared `testing` DB — other sessions migrate it concurrently.
 - Pest feature tests in `tests/Feature`, unit tests in `tests/Unit` (create the folder when needed).
+- **CI runs Pest in 6 shards** (D29, `scripts/ci-pest-shard.mjs`, weights `tests/durations.json` — new files weigh the median; refresh the weights with `--update-durations` after big suite changes). Locally a shard: `node ../scripts/ci-pest-shard.mjs <i> 6 && php artisan test --parallel --configuration=phpunit.shard.xml`.
+- **Filament table tests: narrow first, then `tableRecordsPerPage = all`** (search / filter before `set('tableRecordsPerPage', 'all')`) — rendering all ~4,300 `breed_stage_params` rows cost 280–300 s per test (D29).
 - `php artisan test --parallel` / `pest --parallel` creates `<DB_DATABASE>_test_N` per process; agents use their own base DB (`DB_DATABASE=testing_<branch>`); add `--recreate-databases` after migration changes.
 - `RefreshDatabase`; call `seedBreedConfigs()` (helper in `tests/Pest.php`) when a test needs breed data. `Pet::factory()` creates legacy pets; pass `arrival_age_months` (e.g. `lsFamily()`) for stage rules.
 - `breed_stage_params` is seeded from `docs/research/dog-data/data.json` by `BreedStageParamsSeeder` — insert-only, skips every tuple with a `breed_stage_param_changes` row (Filament edits/deletes win). Every runtime number must trace to that file; unconfirmed choices are `verified=false`.

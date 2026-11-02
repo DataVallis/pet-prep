@@ -188,6 +188,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-02 (cloud) — fast CI: Pest shards + merged-PR proof (`ci/D29-fast-ci`, DEPLOYMENT.md D29)
+Profile (local junit, 5,213 tests): two Filament tests 575 s (»all« rendered 4,300 rows) → fixed (35 s / 22 s). Backend now 6 shards (`scripts/ci-pest-shard.mjs`, `backend/tests/durations.json`), marker job `backend-green`. Pushes to `main` skip suites proven by the merged PR's green run when `main` moved only elsewhere (21 of the last 30 pushes re-ran the full backend); production dispatch diffs against the last deploy. Next: seed breed data once per process (~790 s CPU) in its own PR.
+
 ### 2026-11-02 (cloud) — deploy ≤ 10 min (`ci/D28-fast-deploy`, DEPLOYMENT.md D28)
 Measured run 41454460832 (37 min): Pest 27.7 min re-run on a tree already green, server image build 5 min 24 s. Now a production dispatch reuses green markers (any event, same tree; `force_tests` overrides) and the server pulls the image **digests** CI pushed after its image checks (recorded in the green marker; fallback: build). QA round found a mutable-tag risk (tag pushed before the smoke test, overwritable by any PR) → fixed by digest pinning. Harnesses: ci-plan 330/330, deploy-production 356/356. Next (C + D): Pest 28 min itself (per-test breed seeding, sharding), merge-to-main re-test when main moved. David step: HANDOFF §1b item 18.
 

@@ -372,10 +372,14 @@ describe('Filament life-stage data for cats', function () {
         seedLifeStageData();
         actingAs(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]));
 
-        $catRows = BreedStageParam::whereIn('breed_slug', ['domestic-cat', 'maine-coon'])->get();
-        $dogRows = BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->get();
+        // One key both species have (D28b): "all" over every one of the ~4,300 rows took 296 s
+        // of the CI suite; the species filter is checked the same way on the sleep_hours rows.
+        $catRows = BreedStageParam::whereIn('breed_slug', ['domestic-cat', 'maine-coon'])->where('key', 'sleep_hours')->get();
+        $dogRows = BreedStageParam::whereIn('breed_slug', ['mutt', 'border-collie'])->where('key', 'sleep_hours')->get();
+        expect($catRows)->not->toBeEmpty()->and($dogRows)->not->toBeEmpty();
 
         Livewire::test(ListBreedStageParams::class)
+            ->searchTable('sleep_hours')
             ->set('tableRecordsPerPage', 'all')
             ->filterTable('species', 'cat')
             ->assertCanSeeTableRecords($catRows)

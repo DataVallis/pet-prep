@@ -7,8 +7,9 @@ name: CI & Deploy
 #         └─ production-image ────┘
 # `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
 # main, skips a suite that already passed in a successful PR run on the identical git
-# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded below on every event); a production
-# "Run workflow" skips every suite already green on its tree (D28, ci-plan.sh §4).
+# tree (marker artifacts "ci-green-<suite>-<tree>", uploaded on every event) or proven by the merged
+# PR's green run when main moved only elsewhere (D29, ci-plan.sh §3b); a production "Run workflow"
+# diffs against the last production deploy and skips every suite green on its tree (D28/D29, §4).
 # `ci-ok` fails unless every suite either passed or was skipped because plan said so.
 # A push / merge to main runs CI only and deploys NOTHING (David 2026-10-14). Production is
 # deployed only by "Run workflow" on main with target = production (scripts/ci-deploy-target.sh),
@@ -46,6 +47,7 @@ concurrency:
 permissions:
   contents: read
   actions: read # plan: read runs + marker artifacts of this repository
+  pull-requests: read # plan (D29): the merged PR of a push to main
 
 jobs:
   plan:
@@ -54,6 +56,7 @@ jobs:
     timeout-minutes: 5
     outputs:
       tree: ${{ steps.plan.outputs.tree }}
+      base: ${{ steps.plan.outputs.base }}
       backend: ${{ steps.plan.outputs.backend }}
       mobile: ${{ steps.plan.outputs.mobile }}
       scripts: ${{ steps.plan.outputs.scripts }}
@@ -92,14 +95,59 @@ jobs:
           FORCE_TESTS: ${{ inputs.force_tests == true }}
         run: bash scripts/ci-plan.sh
 
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (backend)
+        if: steps.plan.outputs.derived_backend == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-backend-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/backend/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (mobile)
+        if: steps.plan.outputs.derived_mobile == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-mobile-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/mobile/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (scripts)
+        if: steps.plan.outputs.derived_scripts == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-scripts-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/scripts/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+      # D29: this tree is proven by the merged PR's green run (main moved only elsewhere).
+      - name: Upload derived marker (image)
+        if: steps.plan.outputs.derived_image == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-green-image-${{ steps.plan.outputs.tree }}
+          path: ${{ steps.plan.outputs.derived_dir }}/image/ci-green.txt
+          retention-days: 14
+          overwrite: true
+
+  # D29 (David 2026-11-02): 6 shards (scripts/ci-pest-shard.mjs, balanced by the measured
+  # backend/tests/durations.json) — one runner took 26–28 min. The marker for this tree is
+  # uploaded by the job "backend-green" only after EVERY shard passed.
   backend-tests:
-    name: Backend tests (Pest on PostgreSQL)
+    name: Backend tests (Pest on PostgreSQL) ${{ matrix.shard }}/6
     needs: plan
     if: needs.plan.outputs.backend == 'true'
     runs-on: ubuntu-latest
-    # 20 → 30 min (M5-R10-32, 2026-10-13): the suite grows with every breed — the Boston Terrier run
-    # took 19.5 min and the Miniature American Shepherd PR run was cancelled at the 20-minute limit.
-    timeout-minutes: 30
+    strategy:
+      fail-fast: true
+      matrix:
+        shard: [1, 2, 3, 4, 5, 6]
+    timeout-minutes: 20
     services:
       postgres:
         image: postgres:18-alpine
@@ -180,23 +228,36 @@ jobs:
           composer install --prefer-dist --no-progress --no-interaction
           php artisan key:generate
 
+      - name: Shard plan
+        run: node scripts/ci-pest-shard.mjs "${{ matrix.shard }}" 6
+
       # One process per vCPU, each on its own database testing_test_<N> (Laravel
       # ParallelTesting creates and migrates them; Storage::fake() disks are per process too).
-      - name: Run Pest (parallel)
+      - name: Run Pest (parallel, this shard)
         working-directory: backend
-        run: php artisan test --parallel
+        run: php artisan test --parallel --configuration=phpunit.shard.xml
 
+  # Marker for this tree only when every shard of backend-tests passed (D29).
+  backend-green:
+    name: Backend tests (all shards)
+    needs: [plan, backend-tests]
+    if: needs.backend-tests.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
       - name: Record green tree
-        id: green
+        env:
+          TREE: ${{ needs.plan.outputs.tree }}
+          PR_BASE: ${{ github.event_name == 'pull_request' && needs.plan.outputs.base || '' }}
         run: |
-          tree="$(git rev-parse 'HEAD^{tree}')"
-          echo "tree=${tree}" >> "$GITHUB_OUTPUT"
-          echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          echo "${TREE} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D29: the PR merge commit's first parent (plan's base in PR mode).
+          if [ -n "$PR_BASE" ]; then echo "base=${PR_BASE}" >> "${RUNNER_TEMP}/ci-green.txt"; fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
         with:
-          name: ci-green-backend-${{ steps.green.outputs.tree }}
+          name: ci-green-backend-${{ needs.plan.outputs.tree }}
           path: ${{ runner.temp }}/ci-green.txt
           retention-days: 14
           overwrite: true
@@ -236,6 +297,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D29: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -307,6 +373,10 @@ jobs:
       - name: Care knowledge export (node --test)
         run: node --test scripts/tests/export-care-knowledge.test.mjs
 
+      # D29: Pest shard planner (every test file in exactly one shard).
+      - name: Pest shard plan (node --test)
+        run: node --test scripts/tests/ci-pest-shard.test.mjs
+
       # docs/breeds/README.md index current (one doc per breed, David 2026-10-15).
       - name: Breed docs index (node --test)
         run: node --test scripts/tests/breeds-index.test.mjs
@@ -317,6 +387,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D29: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
 
       - name: Upload green-tree marker
         uses: actions/upload-artifact@v4
@@ -520,6 +595,11 @@ jobs:
           tree="$(git rev-parse 'HEAD^{tree}')"
           echo "tree=${tree}" >> "$GITHUB_OUTPUT"
           echo "${tree} ${GITHUB_RUN_ID}" > "${RUNNER_TEMP}/ci-green.txt"
+          # D29: the PR merge commit's first parent = the main the PR was tested on
+          # (cat-file: the raw parent line also exists in a depth-1 checkout).
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then
+            echo "base=$(git cat-file -p HEAD | sed -n 's/^parent //p' | head -n1)" >> "${RUNNER_TEMP}/ci-green.txt"
+          fi
           # D28: the deploy reads the digests from this marker (empty for fork PRs → server build).
           printf 'app=%s\nweb=%s\n' "$APP_DIGEST" "$WEB_DIGEST" >> "${RUNNER_TEMP}/ci-green.txt"
 
@@ -537,7 +617,7 @@ jobs:
   ci-ok:
     name: CI OK
     if: always()
-    needs: [plan, backend-tests, mobile-checks, deploy-script-tests, production-image]
+    needs: [plan, backend-tests, backend-green, mobile-checks, deploy-script-tests, production-image]
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
@@ -548,7 +628,8 @@ jobs:
           PLAN_MOBILE: ${{ needs.plan.outputs.mobile }}
           PLAN_SCRIPTS: ${{ needs.plan.outputs.scripts }}
           PLAN_IMAGE: ${{ needs.plan.outputs.image }}
-          BACKEND_RESULT: ${{ needs.backend-tests.result }}
+          # Matrix result = failure if any shard failed; the marker job must have run too.
+          BACKEND_RESULT: ${{ needs.backend-tests.result == 'success' && needs.backend-green.result || needs.backend-tests.result }}
           MOBILE_RESULT: ${{ needs.mobile-checks.result }}
           SCRIPTS_RESULT: ${{ needs.deploy-script-tests.result }}
           IMAGE_RESULT: ${{ needs.production-image.result }}

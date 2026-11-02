@@ -282,10 +282,11 @@ describe('edits', function () {
             ->assertOk()
             // One sleep_hours row per breed × stage (more than a page since M5-R10-06; more
             // than 50 rows before the mutt's since M5-R10-24): all rows on one page, so the
-            // planted mutt senior row is always visible.
+            // planted mutt senior row is always visible. Search BEFORE "all" (D28b): "all"
+            // first rendered every one of the ~4,300 rows — 280 s of the CI suite.
+            ->searchTable('sleep_hours')
             ->set('tableRecordsPerPage', 'all')
             ->sortTable('breed_slug', 'desc')
-            ->searchTable('sleep_hours')
             ->assertSee('UNSOURCED — proposal')
             ->searchTable('feed_windows')
             ->assertSee('verified — decision')

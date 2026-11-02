@@ -45,6 +45,11 @@ echo "$path" >> "$FIX/gh.log"
 [ "${GH_FAIL:-0}" = 1 ] && { echo "gh shim: forced failure" >&2; exit 1; }
 if [ -n "${GH_FAIL_MATCH:-}" ] && [[ "$path" =~ $GH_FAIL_MATCH ]]; then echo "gh shim: forced failure" >&2; exit 1; fi
 case "$path" in
+  https://zip/*) cat "$FIX/zip/${path##*/}.zip"; exit 0 ;; # D28b marker archives (raw)
+  */commits/*/pulls) file="$FIX/pulls.json"; [ -f "$file" ] || echo '[]' > "$file" ;;
+  */actions/workflows/*/runs\?event=pull_request*) file="$FIX/prruns.json"; [ -f "$file" ] || echo '{"workflow_runs":[]}' > "$file" ;;
+  */actions/runs/*/artifacts\?*) id="${path%/artifacts*}"; id="${id##*/}"; file="$FIX/runarts-${id}.json"
+    [ -f "$file" ] || echo '{"artifacts":[]}' > "$file" ;;
   */actions/workflows/*/runs\?*) file="$FIX/runs.json" ;;
   */actions/artifacts\?name=*)
     name="${path#*name=}"; name="${name%%&*}"
@@ -133,7 +138,9 @@ run_json() { # run_json ID EVENT CONCLUSION [PATH]
 plan() {
   local out="$FIX/out" rc=0 fix="$FIX"
   : > "$out"
+  rm -rf "$fix/derived"
   ( cd "$W" && PATH="$TMP/bin:$PATH" FIX="$fix" EVENT_NAME="$1" GIT_REF="$2" RUN_ATTEMPT="${3:-1}" \
+      CI_PLAN_DERIVED_DIR="$fix/derived" GITHUB_RUN_ID=900 \
       DEPLOY_TARGET="${P_TARGET:-none}" FORCE_TESTS="${P_FORCE:-false}" \
       REPO="$REPO_NAME" WORKFLOW_FILE=deploy-production.yml GITHUB_OUTPUT="$out" \
       GITHUB_STEP_SUMMARY="$fix/summary" bash "$SCRIPT" >"$fix/stdout" 2>"$fix/stderr" ) || rc=$?
@@ -170,6 +177,7 @@ pr_case "dog research sources: backend + scripts tests only" "$S_BTSCRIPTS" docs
 pr_case "breed registry export: scripts tests only" "$S_SCRIPTS" scripts/export-breed-registry.mjs scripts/tests/export-breed-registry.test.mjs
 pr_case "daily deploy trigger: scripts tests only" "$S_SCRIPTS" scripts/daily-deploy.sh scripts/tests/daily-deploy.test.sh .github/workflows/daily-deploy.yml
 pr_case "CI ffmpeg installer: backend + scripts tests only" "$S_BTSCRIPTS" scripts/ci-install-ffmpeg.sh scripts/tests/ci-install-ffmpeg.test.sh
+pr_case "Pest shard planner: backend + scripts tests only" "$S_BTSCRIPTS" scripts/ci-pest-shard.mjs scripts/tests/ci-pest-shard.test.mjs
 pr_case "breed docs index: scripts tests only" "$S_SCRIPTS" scripts/breeds-index.mjs scripts/tests/breeds-index.test.mjs docs/breeds/hungarian-vizsla.md
 pr_case "breed registry output: backend + scripts tests only" "$S_BTSCRIPTS" docs/research/breed-registry.json
 pr_case "breeder checklist: scripts tests only" "$S_SCRIPTS" docs/research/breeder-checklist/data.json docs/research/breeder-checklist/sources.md
@@ -651,9 +659,9 @@ check "production: green PR run on the tree → no tests" "$S_NONE" "$o_suites"
 setup_green; marker mobile "$t" 77; run_json 77 workflow_dispatch success; P_TARGET=production plan workflow_dispatch refs/heads/main
 check "production: earlier green dispatch on the tree → no tests" "$S_NONE" "$o_suites"
 setup_green; run_json 77 push success; P_TARGET=production plan workflow_dispatch refs/heads/main
-check "production: suite without marker still runs" "backend=false mobile=true scripts=false image=false " "$o_suites"
+check "production: mobile unchanged since the deploy → not needed (D28b diff mode)" "$S_NONE" "$o_suites"
 setup_green; marker mobile "$t" 77; run_json 77 push failure; P_TARGET=production plan workflow_dispatch refs/heads/main
-check "production: failed run's markers ignored" "$S_ALL" "$o_suites"
+check "production: failed run's markers ignored" "$S_BSCRIPTS" "$o_suites"
 setup_green; marker mobile "$t" 77; run_json 77 push success; P_TARGET=production P_FORCE=true plan workflow_dispatch refs/heads/main
 check "production + force_tests → everything" "$S_ALL" "$o_suites"
 check "… image_run empty when the image job runs here" "" "$(sed -n 's/^image_run=//p' "$FIX/out")"
@@ -662,9 +670,105 @@ check "target none (test button) → everything" "$S_ALL" "$o_suites"
 setup_green; marker mobile "$t" 77; run_json 77 push success; P_TARGET=production plan workflow_dispatch refs/heads/main 2
 check "production re-run → everything" "$S_ALL" "$o_suites"
 setup_green; marker mobile "$t" 77; run_json 77 push success; GH_FAIL_MATCH='artifacts' P_TARGET=production plan workflow_dispatch refs/heads/main
-check "production: artifact API error → everything" "$S_ALL" "$o_suites"; check "production: API error exit 0" 0 "$o_rc"
+check "production: artifact API error → every needed suite" "$S_BSCRIPTS" "$o_suites"; check "production: API error exit 0" 0 "$o_rc"
 setup_green; marker mobile "$t" 77; run_json 77 push success ".github/workflows/other.yml"; P_TARGET=production plan workflow_dispatch refs/heads/main
-check "production: marker from another workflow → everything" "$S_ALL" "$o_suites"
+check "production: marker from another workflow → every needed suite" "$S_BSCRIPTS" "$o_suites"
+
+echo "== push to main: merged PR proof when main moved (D28b) =="
+zipmk() { # zipmk NAME CONTENT → $FIX/zip/NAME.zip with ci-green.txt
+  mkdir -p "$FIX/zip/src-$1"; printf '%s' "$2" > "$FIX/zip/src-$1/ci-green.txt"
+  python3 - "$FIX/zip/$1.zip" "$FIX/zip/src-$1/ci-green.txt" <<'PY'
+import sys, zipfile
+with zipfile.ZipFile(sys.argv[1], 'w') as z: z.write(sys.argv[2], 'ci-green.txt')
+PY
+}
+# derive_setup BETWEEN_FILE [MARKER_BASE]: deployed base0; PR (backend/app/A.php) tested on B;
+# main moves by BETWEEN_FILE; squash commit H. PR run 77 green with backend/image/scripts markers.
+derive_setup() {
+  new_repo; local base0; base0="$(sha)"; green_runs "$base0"
+  B="$(sha)"
+  git -C "$W" checkout -q -b feature; commit backend/app/A.php; PRHEAD="$(sha)"; git -C "$W" checkout -q main
+  commit "$1"
+  git -C "$W" checkout -q feature -- backend/app/A.php; git -C "$W" commit -qm squash
+  t="$(tree)"
+  TT="$(git -C "$W" merge-tree --write-tree --no-messages "$B" "$PRHEAD")" # what the PR run tested
+  jq -n --arg h "$PRHEAD" --arg r "$REPO_NAME" '[{number:5,merged_at:"2026-11-02T20:00:00Z",base:{ref:"main"},head:{sha:$h,repo:{full_name:$r}}}]' > "$FIX/pulls.json"
+  jq -n --arg r "$REPO_NAME" '{workflow_runs:[{id:77,event:"pull_request",conclusion:"success",head_repository:{full_name:$r}}]}' > "$FIX/prruns.json"
+  jq -n '{artifacts:[{name:"ci-green-backend-x",expired:false,archive_download_url:"https://zip/backend"},
+    {name:"ci-green-image-x",expired:false,archive_download_url:"https://zip/image"},
+    {name:"ci-green-scripts-x",expired:false,archive_download_url:"https://zip/scripts"}]}' > "$FIX/runarts-77.json"
+  local mb="${2:-$B}" mt="${3:-$TT}"
+  zipmk backend "$mt 77
+base=$mb
+"
+  zipmk scripts "$mt 77
+base=$mb
+"
+  zipmk image "$mt 77
+base=$mb
+app=ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+web=ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+"
+}
+out_of() { sed -n "s/^$1=//p" "$FIX/out"; }
+derive_setup docs/X.md; plan push refs/heads/main
+check "main moved by docs only → backend + image proven by the PR run" "$S_NONE" "$o_suites"
+check "… derived markers for backend + image" "true true" "$(out_of derived_backend) $(out_of derived_image)"
+check "… derived backend marker names this tree + the PR run" "$t 900|derived-from=77 tested=$TT" "$(sed -n 1,2p "$FIX/derived/backend/ci-green.txt" | paste -sd'|')"
+check "… image digests copied" "app=ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa|web=ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" "$(grep -E '^(app|web)=' "$FIX/derived/image/ci-green.txt" | paste -sd'|')"
+check "… image_run = this push run (its derived marker)" 900 "$(out_of image_run)"
+derive_setup backend/app/B.php; plan push refs/heads/main
+check "main moved by another backend change → backend + image run" "$S_BACKEND" "$o_suites"
+check "… nothing derived" "" "$(out_of derived_backend)"
+derive_setup mobile/src/a.ts; plan push refs/heads/main
+check "main moved by mobile only → backend proven, mobile runs (needed since deploy)" "backend=false mobile=true scripts=false image=false " "$o_suites"
+derive_setup docs/X.md "$(printf 'f%.0s' $(seq 40))"; plan push refs/heads/main
+check "marker base not in the clone → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md "" "$(printf 'e%.0s' $(seq 40))"; plan push refs/heads/main
+check "base + PR head does not rebuild the marker's tree → run" "$S_BACKEND" "$o_suites"
+# QA #573 B1: a merge commit with an extra backend change on top of the tested PR.
+derive_setup docs/X.md; git -C "$W" reset -q --hard HEAD~1
+git -C "$W" merge -q --no-ff --no-commit feature; echo extra > "$W/backend/app/Extra.php"
+git -C "$W" add -A; git -C "$W" commit -qm "merge PR + extra"; plan push refs/heads/main
+check "merge commit with an extra backend change → backend + image run" "$S_BACKEND" "$o_suites"
+check "… nothing derived for backend" "" "$(out_of derived_backend)"
+derive_setup docs/X.md; plan push refs/heads/main 2
+check "push re-run → no PR proof" "" "$(out_of derived_backend)"
+derive_setup docs/X.md; zipmk backend "$TT 77
+"; zipmk image "$TT 77
+"; zipmk scripts "$TT 77
+"; plan push refs/heads/main
+check "pre-D28b marker without base line → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md; echo '[]' > "$FIX/pulls.json"; plan push refs/heads/main
+check "no merged PR (direct push) → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md; jq '.[0].head.repo.full_name = "someone/fork"' "$FIX/pulls.json" > "$FIX/p" && mv "$FIX/p" "$FIX/pulls.json"; plan push refs/heads/main
+check "fork PR → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md; jq '.workflow_runs[0].conclusion = "failure"' "$FIX/prruns.json" > "$FIX/p" && mv "$FIX/p" "$FIX/prruns.json"; plan push refs/heads/main
+check "PR run not successful → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md; GH_FAIL_MATCH='/pulls$' plan push refs/heads/main
+check "PR lookup API error → run, exit 0" "$S_BACKEND 0" "$o_suites $o_rc"
+derive_setup docs/X.md; GH_FAIL_MATCH='^https://zip/' plan push refs/heads/main
+check "marker download error → run" "$S_BACKEND" "$o_suites"
+derive_setup docs/X.md; jq '.artifacts |= map(select(.name | startswith("ci-green-image") | not))' "$FIX/runarts-77.json" > "$FIX/p" && mv "$FIX/p" "$FIX/runarts-77.json"
+plan push refs/heads/main
+check "PR run without image marker → only backend derived" "backend=false mobile=false scripts=false image=true " "$o_suites"
+derive_setup docs/X.md; plan pull_request refs/pull/1/merge
+check "pull_request never derives" "" "$(out_of derived_backend)"
+
+echo "== production dispatch: diff against the last deploy, image always (D28b) =="
+new_repo; base0="$(sha)"; commit docs/X.md; green_runs "$base0"
+P_TARGET=production plan workflow_dispatch refs/heads/main
+check "docs-only since the deploy → only the image (digests)" "diff backend=false mobile=false scripts=false image=true " "$o_mode $o_suites"
+check "… still deploys" true "$o_deploy"
+new_repo; base0="$(sha)"; commit mobile/src/a.ts; green_runs "$base0"
+P_TARGET=production plan workflow_dispatch refs/heads/main
+check "mobile change since the deploy → mobile + image" "backend=false mobile=true scripts=false image=true " "$o_suites"
+new_repo; commit docs/X.md; P_TARGET=production plan workflow_dispatch refs/heads/main
+check "no earlier deploy → full" "full $S_ALL" "$o_mode $o_suites"
+new_repo; base0="$(sha)"; commit docs/X.md; green_runs "$base0"; P_TARGET=production P_FORCE=true plan workflow_dispatch refs/heads/main
+check "force_tests → full" "full $S_ALL" "$o_mode $o_suites"
+new_repo; base0="$(sha)"; commit docs/X.md; green_runs "$base0"; plan workflow_dispatch refs/heads/main
+check "target none → full" "full $S_ALL" "$o_mode $o_suites"
 
 echo "== deploy guard (scripts/ci-deploy-guard.sh) =="
 GUARD="${HERE}/../ci-deploy-guard.sh"
