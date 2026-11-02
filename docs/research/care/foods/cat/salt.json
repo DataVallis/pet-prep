@@ -282,7 +282,7 @@
         "en": "It can be. Pet Poison Helpline lists rock salt used as a de-icer in winter among the salt sources that can harm cats, so keep bags of it out of reach.",
         "sl": "Lahko je. Pet Poison Helpline sol za posipanje pozimi navaja med viri soli, ki lahko škodijo mačkam, zato vreče s to soljo hranite zunaj mačjega dosega.",
         "de": "Ja, das kann es. Pet Poison Helpline zählt Streusalz, das im Winter gegen Glätte eingesetzt wird, zu den Salzquellen, die Katzen schaden können. Bewahren Sie Streusalzsäcke deshalb außer Reichweite auf.",
-        "fr": "C’est possible. Pet Poison Helpline cite le sel de déneigement utilisé l’hiver parmi les sources de sel qui peuvent nuire aux chats : rangez les sacs hors de portée.",
+        "fr": "C’est possible. Le Pet Poison Helpline cite le sel de déneigement utilisé l’hiver parmi les sources de sel qui peuvent nuire aux chats : rangez les sacs hors de portée.",
         "es": "Puede serlo. Pet Poison Helpline incluye la sal gorda que se usa en invierno para deshacer el hielo entre las fuentes de sal que pueden hacer daño a los gatos, así que guarda los sacos fuera de su alcance.",
         "it": "Può esserlo. Pet Poison Helpline elenca il sale grosso usato d’inverno come antighiaccio tra le fonti di sale che possono nuocere ai gatti, quindi tieni i sacchi fuori dalla loro portata.",
         "pt": "Pode ser. A Pet Poison Helpline inclui o sal-gema usado no inverno para derreter o gelo entre as fontes de sal que podem fazer mal aos gatos, por isso guarda os sacos fora do alcance.",
@@ -392,7 +392,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e8d489536ad34aa5029646e96b70a05e902da5d41a22bbffacd21dbd5fcdfd5a"
+      "verified_hash": "609231a28f881dc49c6e53ad024d556a45d2a7f5b986b84dfbc0fb3fd5a8819f"
     },
     "es": {
       "status": "verified",

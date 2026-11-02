@@ -74,7 +74,7 @@
     "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
     "sl": "Lupina kantalupe lahko tako kot lupina lubenice povzroči prebavne težave, se zagozdi v prebavilih in je nevarna, ker se pes lahko zaduši. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
     "de": "Die Schale der Cantaloupe-Melone kann – wie die der Wassermelone – den Magen verstimmen, sich im Verdauungstrakt festsetzen und zum Ersticken führen. Die Kerne sind harmlos, können aber ebenfalls zur Erstickungsgefahr werden. Zu viele Leckerlis zusätzlich zu einer gesunden Ernährung können zu Fettleibigkeit führen.",
-    "fr": "L’écorce du melon cantaloup, comme celle de la pastèque, peut déranger l’estomac, se bloquer dans le tube digestif, et elle présente un risque d’étouffement. Les graines sont inoffensives mais peuvent elles aussi présenter un risque d’étouffement. Trop de friandises en plus d’une alimentation équilibrée peuvent mener à l’obésité.",
+    "fr": "L’écorce du melon cantaloup, comme celle de la pastèque, peut déranger l’estomac, rester bloquée dans le tube digestif et présenter un risque d’étouffement. Les graines sont inoffensives mais peuvent elles aussi présenter un risque d’étouffement. Trop de friandises en plus d’une alimentation équilibrée peuvent mener à l’obésité.",
     "es": "La corteza del melón cantalupo, como la de la sandía, puede sentar mal al estómago, quedarse atascada en el aparato digestivo y provocar atragantamiento. Las semillas son inofensivas, pero también pueden provocar atragantamiento. Demasiados premios, sumados a una dieta sana, pueden llevar a la obesidad.",
     "it": "La buccia del melone, come quella dell’anguria, può causare mal di stomaco, può bloccarsi nell’apparato digerente e comporta un rischio di soffocamento. I semi sono innocui, ma possono anch’essi far soffocare. Troppi premi in aggiunta a una dieta sana possono portare all’obesità.",
     "pt": "A casca da meloa, tal como a da melancia, pode causar mal-estar de estômago, ficar presa no tubo digestivo e provocar engasgamento. As sementes são inofensivas, mas também podem provocar engasgamento. Guloseimas a mais, para além de uma alimentação saudável, podem levar à obesidade.",
@@ -244,7 +244,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4de0a6a19e89cb1453c4c64f4d4bb2de437cedf8fcd4ae1d2bc6d96ae20b2fac"
+      "verified_hash": "900412f43b8b47d59c8e1188bacd2eaafcaa5947e71211f242e2a9cbf539cdd9"
     },
     "es": {
       "status": "verified",

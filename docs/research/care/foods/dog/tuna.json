@@ -57,7 +57,7 @@
     "en": "Yes, occasionally and in small amounts. Tuna isn't toxic to dogs, but it is high in mercury, so it shouldn't be a regular food. Choose cooked tuna or 'light' (skipjack) canned tuna packed only in water, without added salt or oil.",
     "sl": "Da, občasno in v majhnih količinah. Tuna za pse ni strupena, vsebuje pa veliko živega srebra, zato ne sme biti redna hrana. Izberite kuhano tuno ali konzervirano „svetlo“ tuno (črtasti tun), ki je vložena samo v vodi, brez dodane soli ali olja.",
     "de": "Ja, gelegentlich und in kleinen Mengen. Thunfisch ist für Hunde nicht giftig, enthält aber viel Quecksilber und sollte daher nicht regelmäßig gefüttert werden. Wählen Sie gegarten Thunfisch oder Dosenthunfisch vom Skipjack (Echter Bonito; in den USA als „light“ verkauft), nur in Wasser, ohne zugesetztes Salz oder Öl.",
-    "fr": "Oui, de temps en temps et en petite quantité. Le thon n’est pas toxique pour les chiens, mais il est riche en mercure : il ne doit donc pas être un aliment régulier. Choisissez du thon cuit ou du thon « light » (listao) en conserve, uniquement au naturel (dans l’eau), sans sel ni huile ajoutés.",
+    "fr": "Oui, de temps en temps et en petite quantité. Le thon n’est pas toxique pour les chiens, mais il est riche en mercure : il ne doit donc pas être un aliment régulier. Choisissez du thon cuit ou du thon « light » (listao) en conserve, uniquement au naturel (à l’eau), sans sel ni huile ajoutés.",
     "es": "Sí, de vez en cuando y en pequeñas cantidades. El atún no es tóxico para los perros, pero tiene mucho mercurio, así que no debería ser una comida habitual. Elige atún cocinado o atún listado (skipjack) en lata, solo al natural (en agua), sin sal ni aceite añadidos.",
     "it": "Sì, ogni tanto e in piccole quantità. Il tonno non è tossico per i cani, ma contiene molto mercurio, quindi non deve essere un cibo abituale. Scegli tonno cotto o tonno in scatola «light» (tonnetto striato) solo in acqua, senza sale né olio aggiunti.",
     "pt": "Sim, de vez em quando e em pequenas quantidades. O atum não é tóxico para os cães, mas tem muito mercúrio, por isso não deve ser um alimento habitual. Escolhe atum cozinhado ou atum em lata «light» (gaiado) só em água, sem sal nem óleo adicionados.",
@@ -305,7 +305,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fc6094782b1005411b43f9097bf64bffe02ec7ad931390ada278f3d6e46688fd"
+      "verified_hash": "d0a6140bf298dd4f6e293165bc8def6fba8ca9f77201f5d44c1d1b727506c89a"
     },
     "es": {
       "status": "verified",

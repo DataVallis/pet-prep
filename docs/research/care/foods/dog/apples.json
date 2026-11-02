@@ -74,7 +74,7 @@
     "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
     "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko.",
     "de": "Äpfel sind ein kalorienarmes Leckerli mit den Vitaminen A und C, Kalium, Antioxidantien und Ballaststoffen – besonders in der Schale. Wegen des Zuckers in jedem Apfel ist ein ganzer Apfel für Ihren Hund wahrscheinlich zu viel, und zu viele Äpfel können Bauchweh oder Durchfall verursachen.",
-    "fr": "Les pommes sont une friandise peu calorique qui apporte des vitamines A et C, du potassium, des antioxydants et des fibres, surtout dans la peau. En raison du sucre qu’elle contient, une pomme entière est probablement trop pour votre chien, et trop de pommes peuvent provoquer des maux de ventre ou une diarrhée.",
+    "fr": "Les pommes sont une friandise peu calorique qui apporte des vitamines A et C, du potassium, des antioxydants et des fibres, surtout dans la peau. En raison du sucre qu’elle contient, une pomme entière est probablement une trop grosse portion pour votre chien, et trop de pommes peuvent provoquer des maux de ventre ou de la diarrhée.",
     "es": "La manzana es un premio bajo en calorías con vitaminas A y C, potasio, antioxidantes y fibra, sobre todo en la piel. Por el azúcar que lleva cada manzana, una manzana entera probablemente sea demasiado para tu perro, y comer demasiada manzana puede provocar dolor de barriga o diarrea.",
     "it": "Le mele sono un premio con poche calorie che contiene vitamine A e C, potassio, antiossidanti e fibre, soprattutto nella buccia. Per via dello zucchero che contiene, una mela intera è probabilmente troppo per il tuo cane, e mangiare troppe mele può causare mal di pancia o diarrea.",
     "pt": "As maçãs são uma guloseima pouco calórica, com vitaminas A e C, potássio, antioxidantes e fibra, sobretudo na casca. Por causa do açúcar de cada maçã, uma maçã inteira é provavelmente demasiado para o teu cão, e comer maçã a mais pode causar dor de barriga ou diarreia.",
@@ -92,7 +92,7 @@
     "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
     "sl": "Če pes poje ogrizek ali pečke, opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja.",
     "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss. Hat Ihr Hund Beschwerden, geben Sie ihm keine Äpfel mehr und wenden Sie sich an einen Tierarzt.",
-    "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction. S’il a des problèmes, arrêtez de lui donner des pommes et contactez un vétérinaire.",
+    "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction. S’il présente des troubles, arrêtez de lui donner des pommes et contactez un vétérinaire.",
     "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción. Si tiene algún problema, deja de darle manzana y contacta con un veterinario.",
     "it": "Se il tuo cane mangia un torsolo o dei semi di mela, tieni d’occhio eventuali segni di disturbi digestivi o di un’ostruzione. Se ha dei problemi, smetti di dargli mele e contatta il veterinario.",
     "pt": "Se o teu cão comer um carolo ou sementes de maçã, vigia se aparecem sinais de problemas digestivos ou de obstrução. Se o teu cão tiver problemas, deixa de lhe dar maçã e contacta um veterinário.",
@@ -312,7 +312,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ffcbfc335e02f7861d181dc008bd1e8cca42979e6e6afd7cc35c50e2276bbc52"
+      "verified_hash": "e312a2ed905bf34661bde9be6a7ead94022bed7243b5d28b0aeef79768d467d2"
     },
     "es": {
       "status": "verified",

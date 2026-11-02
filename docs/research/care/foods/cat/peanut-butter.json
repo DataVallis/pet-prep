@@ -74,7 +74,7 @@
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
     "sl": "Viri se razlikujejo. VCA naravno arašidovo maslo opisuje kot priboljšek, ki ga mačke imajo rade, če ne vsebuje konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol. Cats Protection svetuje priboljške za mačke namesto hrane za ljudi in opozarja, da oreščki mačkam lahko povzročajo težave. Uporabljamo strožjo stopnjo.",
     "de": "Die Quellen sind sich nicht einig. VCA beschreibt naturbelassene Erdnussbutter als Leckerli, das Katzen lieben, solange sie frei von Konservierungsstoffen und lebensgefährlichen Zusätzen wie Xylit ist. Cats Protection rät, bei Katzenleckerlis zu bleiben, statt Lebensmittel für Menschen zu geben, und warnt, dass Nüsse bei Katzen Probleme verursachen können. Wir verwenden die strengere Stufe.",
-    "fr": "Les sources ne sont pas d’accord. VCA présente le beurre de cacahuète naturel comme une friandise que les chats adorent, à condition qu’il soit sans conservateurs ni additifs potentiellement mortels comme le xylitol. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains et avertit que les fruits à coque peuvent poser problème aux chats. Nous retenons le niveau le plus prudent.",
+    "fr": "Les sources divergent. VCA présente le beurre de cacahuète naturel comme une friandise que les chats adorent, à condition qu’il soit sans conservateurs ni additifs potentiellement mortels comme le xylitol. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains et avertit que les fruits à coque peuvent poser problème aux chats. Nous retenons le niveau le plus prudent.",
     "es": "Las fuentes no coinciden. VCA describe la crema de cacahuete natural como un premio que encanta a los gatos, siempre que no lleve conservantes ni aditivos potencialmente mortales como el xilitol. Cats Protection aconseja limitarse a premios para gatos en lugar de alimentos para personas y advierte de que los frutos secos pueden causar problemas a los gatos. Nosotros aplicamos el nivel más estricto.",
     "it": "Le fonti non sono concordi. VCA descrive il burro di arachidi naturale come un premio che i gatti adorano, purché sia privo di conservanti e di additivi potenzialmente letali come lo xilitolo. Cats Protection consiglia di limitarsi ai premi per gatti invece che ai cibi per le persone e avverte che la frutta a guscio può causare problemi ai gatti. Applichiamo il livello più severo.",
     "pt": "As fontes não estão de acordo. A VCA descreve a manteiga de amendoim natural como uma guloseima de que os gatos gostam muito, desde que não tenha conservantes nem aditivos que põem a vida em risco, como o xilitol. A Cats Protection aconselha a ficar pelas guloseimas para gatos em vez de comida de pessoas e avisa que os frutos secos podem causar problemas aos gatos. Seguimos o nível mais rigoroso.",
@@ -299,7 +299,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c3c3c45bfbe1439cecaf65a78a5a5fd2166d3e2f01cb2fdc4daf2e10bf8dd4aa"
+      "verified_hash": "95ee00ec83a424028d93e8eb00c3d873e306b6ba538f73233fd261aa3902bc3a"
     },
     "es": {
       "status": "verified",

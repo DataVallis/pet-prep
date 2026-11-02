@@ -231,7 +231,7 @@
     "en": "Liver has lots of one vitamin, and too much isn't good for cats. Their cat food already has the right amount.",
     "sl": "Jetra imajo veliko enega vitamina, preveč pa za mucke ni dobro. Njihova mačja hrana ga že ima ravno prav.",
     "de": "Leber hat sehr viel von einem Vitamin, und zu viel davon ist nicht gut für Katzen. Im Katzenfutter ist schon die richtige Menge drin.",
-    "fr": "Le foie est plein d’une certaine vitamine, et trop, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut.",
+    "fr": "Le foie contient beaucoup d’une certaine vitamine, et en trop grande quantité, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut.",
     "es": "El hígado tiene muchísimo de una vitamina, y demasiada no es buena para los gatos. Su comida para gatos ya lleva la cantidad justa.",
     "it": "Il fegato è pieno di una vitamina che, se è troppa, non fa bene ai gatti. Il loro cibo per gatti ne contiene già la giusta quantità.",
     "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida de gato já tem a quantidade certa.",
@@ -337,7 +337,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "09622840087446e54655fab9f261637b699d8530f6b26d7478ef4e0575123830"
+      "verified_hash": "802026703da0f79cee4b1d10925a0eaf42986ca8d3e37707a7f7659c527f2585"
     },
     "es": {
       "status": "verified",

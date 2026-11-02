@@ -74,7 +74,7 @@
     "en": "Chocolate contains methylxanthines, mainly theobromine and caffeine, which are toxic to dogs. Dark chocolate, cooking chocolate and cocoa powder contain more of them than milk chocolate. Dogs are affected most often because they eat whatever they find and can easily reach chocolate. Sweets and baked goods may also contain other harmful ingredients.",
     "sl": "Čokolada vsebuje metilksantine, predvsem teobromin in kofein, ki so za pse strupeni. Temna čokolada, čokolada za kuhanje in kakav v prahu jih vsebujejo več kot mlečna čokolada. Najpogosteje so prizadeti psi, ker pojedo vse, kar najdejo, in do čokolade zlahka pridejo. Sladkarije in pecivo lahko vsebujejo še druge škodljive sestavine.",
     "de": "Schokolade enthält Methylxanthine, vor allem Theobromin und Koffein, die für Hunde giftig sind. Zartbitterschokolade, Kochschokolade und Kakaopulver enthalten mehr davon als Milchschokolade. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden, und leicht an Schokolade kommen. Süßigkeiten und Gebäck können außerdem weitere schädliche Zutaten enthalten.",
-    "fr": "Le chocolat contient des méthylxanthines, surtout de la théobromine et de la caféine, toxiques pour les chiens. Le chocolat noir, le chocolat pâtissier et le cacao en poudre en contiennent plus que le chocolat au lait. Les chiens sont les plus souvent touchés, car ils mangent tout ce qu’ils trouvent et accèdent facilement au chocolat. Les confiseries et les pâtisseries peuvent aussi contenir d’autres ingrédients nocifs.",
+    "fr": "Le chocolat contient des méthylxanthines, surtout de la théobromine et de la caféine, toxiques pour les chiens. Le chocolat noir, le chocolat pâtissier et le cacao en poudre en contiennent plus que le chocolat au lait. Les chiens sont les plus souvent touchés, car ils mangent n’importe quoi et ont facilement accès au chocolat. Les confiseries et les pâtisseries peuvent aussi contenir d’autres ingrédients nocifs.",
     "es": "El chocolate contiene metilxantinas, sobre todo teobromina y cafeína, que son tóxicas para los perros. El chocolate negro, el chocolate para repostería y el cacao en polvo contienen más que el chocolate con leche. Los perros son los más afectados porque se comen lo que encuentran y llegan con facilidad al chocolate. Los dulces y la bollería también pueden llevar otros ingredientes perjudiciales.",
     "it": "Il cioccolato contiene metilxantine, soprattutto teobromina e caffeina, che sono tossiche per i cani. Il cioccolato fondente, quello da cucina e il cacao in polvere ne contengono più del cioccolato al latte. I cani sono i più colpiti perché mangiano tutto ciò che trovano e arrivano facilmente al cioccolato. Dolci e prodotti da forno possono contenere anche altri ingredienti dannosi.",
     "pt": "O chocolate contém metilxantinas, sobretudo teobromina e cafeína, que são tóxicas para os cães. O chocolate preto, o chocolate de culinária e o cacau em pó têm mais destas substâncias do que o chocolate de leite. Os cães são os mais afetados porque comem tudo o que encontram e chegam facilmente ao chocolate. Os doces e os bolos podem ter também outros ingredientes nocivos.",
@@ -443,7 +443,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "82a1119809e3e415681b878ccb2c30132ec7100d873f313a3025b13332b62820"
+      "verified_hash": "1ae880fa5b844a143739cd7cac6c058d989811e64d11401d3d3d444c0b720056"
     },
     "es": {
       "status": "verified",

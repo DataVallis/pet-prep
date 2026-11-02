@@ -92,7 +92,7 @@
     "en": "The first time, give a small amount and watch for digestive upset. Contact your vet if your dog shows symptoms after eating watermelon.",
     "sl": "Prvič dajte majhno količino in opazujte, ali se pojavijo prebavne težave. Če ima pes po lubenici znake težav, se obrnite na veterinarja.",
     "de": "Geben Sie beim ersten Mal eine kleine Menge und achten Sie auf Verdauungsbeschwerden. Wenden Sie sich an Ihren Tierarzt, wenn Ihr Hund nach dem Fressen von Wassermelone Symptome zeigt.",
-    "fr": "La première fois, donnez-en une petite quantité et surveillez l’apparition de troubles digestifs. Contactez votre vétérinaire si votre chien présente des symptômes après avoir mangé de la pastèque.",
+    "fr": "La première fois, donnez-en une petite quantité et surveillez l’apparition de troubles digestifs. Contactez votre vétérinaire si votre chien présente des signes après avoir mangé de la pastèque.",
     "es": "La primera vez, dale poca cantidad y vigila si aparece malestar digestivo. Contacta con tu veterinario si tu perro tiene síntomas después de comer sandía.",
     "it": "La prima volta dagliene poca e osserva se compaiono disturbi digestivi. Contatta il veterinario se il tuo cane mostra sintomi dopo aver mangiato anguria.",
     "pt": "Da primeira vez, dá uma pequena quantidade e vigia se há problemas digestivos. Contacta o teu veterinário se o teu cão tiver sintomas depois de comer melancia.",
@@ -260,7 +260,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "aa484ecded69b958076f862c659aa101097eaa1145212e46beea8bcd68f6636e"
+      "verified_hash": "0e5540b630f8930f3d29af64ff23ef314b461965f0570ccd856335f785329e10"
     },
     "es": {
       "status": "verified",

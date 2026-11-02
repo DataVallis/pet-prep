@@ -57,7 +57,7 @@
     "en": "No, it is best not to. Hazelnuts aren't toxic, but their very hard shells can cause choking and blockages, and like other nuts they are high in fat, which can upset a dog's stomach and may lead to pancreatitis.",
     "sl": "Ne, raje ne. Lešniki niso strupeni, a njihove zelo trde lupine lahko povzročijo dušenje in zaporo, tako kot drugi oreščki pa so zelo mastni, kar lahko psu razdraži prebavila in morda vodi do vnetja trebušne slinavke.",
     "de": "Nein, besser nicht. Haselnüsse sind nicht giftig, aber ihre sehr harten Schalen können zum Ersticken und zu Blockaden führen, und wie andere Nüsse sind sie fettreich, was einem Hund auf den Magen schlagen und zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen kann.",
-    "fr": "Non, mieux vaut éviter. Les noisettes ne sont pas toxiques, mais leur coque très dure peut provoquer un étouffement et des obstructions et, comme les autres fruits à coque, elles sont riches en graisses, ce qui peut dérégler l’estomac d’un chien et parfois mener à une pancréatite.",
+    "fr": "Non, mieux vaut éviter. Les noisettes ne sont pas toxiques, mais leur coque très dure peut provoquer un étouffement et des obstructions et, comme les autres fruits à coque, elles sont riches en graisses, ce qui peut déranger l’estomac d’un chien et parfois mener à une pancréatite.",
     "es": "No, mejor que no. Las avellanas no son tóxicas, pero su cáscara, muy dura, puede provocar atragantamiento y obstrucciones y, como otros frutos secos, tienen mucha grasa, que puede sentarle mal al estómago de un perro y llegar a provocar una pancreatitis.",
     "it": "Meglio di no. Le nocciole non sono tossiche, ma il loro guscio durissimo può causare soffocamento e ostruzioni e, come altra frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco del cane e portare alla pancreatite.",
     "pt": "Não, é melhor não. As avelãs não são tóxicas, mas as cascas muito duras podem causar engasgamento e obstruções e, como outros frutos secos, têm muita gordura, o que pode fazer mal ao estômago do cão e levar a pancreatite.",
@@ -186,7 +186,7 @@
     "en": "Hazelnuts are a people snack. Their hard shells can get stuck in a dog, so keep them away from your pet.",
     "sl": "Lešniki so prigrizek za ljudi. Trde lupine se lahko psu zataknejo, zato jih drži stran od svojega ljubljenčka.",
     "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern.",
-    "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton animal.",
+    "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton chien.",
     "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
     "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale.",
     "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu animal.",
@@ -297,7 +297,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a40a692928134ff8c1ade22ad5a334160167b80877124d7c55ab079f6460061d"
+      "verified_hash": "e92c03a6b85365642e00ee4c75b94d68b94d429e57171261cfdfbd55df897dff"
     },
     "es": {
       "status": "verified",

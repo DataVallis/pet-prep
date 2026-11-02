@@ -110,7 +110,7 @@
       "Vomissements",
       "Diarrhée",
       "Maux de ventre",
-      "Air malade"
+      "Chat qui paraît malade"
     ],
     "es": [
       "Vómitos",
@@ -294,7 +294,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ce38b04d9edfae5129b8edc2662f9f0bd8fcfe26f197f83c7bf7d5910e358dc"
+      "verified_hash": "721249d0102b943fc6d7e0d9e23e56126b5e5be48fd05338fc5963d8aada1d15"
     },
     "es": {
       "status": "verified",

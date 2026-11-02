@@ -198,7 +198,7 @@
     "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage, and contact a vet if your dog has problems.",
     "sl": "Če pes poje ogrizek ali pečke, opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, se obrnite na veterinarja.",
     "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
-    "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction, et contactez un vétérinaire si votre chien a des problèmes.",
+    "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction, et contactez un vétérinaire si votre chien présente des troubles.",
     "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción y contacta con un veterinario si tiene algún problema.",
     "it": "Se il tuo cane mangia un torsolo o dei semi di mela, tieni d’occhio eventuali segni di disturbi digestivi o di un’ostruzione e contatta il veterinario se ha dei problemi.",
     "pt": "Se o teu cão comer um carolo ou sementes de maçã, vigia se aparecem sinais de problemas digestivos ou de obstrução e contacta um veterinário se o teu cão tiver problemas.",
@@ -252,7 +252,7 @@
         "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
         "sl": "Majhno število pečk verjetno ne bo škodilo. Opazujte, ali se pri psu pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
         "de": "Wenige Kerne richten wahrscheinlich keinen Schaden an. Achten Sie bei Ihrem Hund auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss durch das Kerngehäuse, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
-        "fr": "Un petit nombre de pépins ne devrait pas lui faire de mal. Surveillez chez votre chien l’apparition de troubles digestifs ou de signes d’obstruction dus au trognon, et contactez un vétérinaire s’il a des problèmes.",
+        "fr": "Un petit nombre de pépins ne devrait pas lui faire de mal. Surveillez chez votre chien l’apparition de troubles digestifs ou de signes d’obstruction dus au trognon, et contactez un vétérinaire s’il présente des troubles.",
         "es": "Es poco probable que unas pocas semillas le hagan daño. Vigila si tu perro muestra signos de problemas digestivos o de obstrucción por el corazón y contacta con un veterinario si tiene algún problema.",
         "it": "È improbabile che pochi semi facciano male. Tieni d’occhio il tuo cane per eventuali segni di disturbi digestivi o di un’ostruzione causata dal torsolo e contatta il veterinario se ha dei problemi.",
         "pt": "Um pequeno número de sementes dificilmente fará mal. Vigia se o teu cão mostra sinais de problemas digestivos ou de obstrução causada pelo carolo e contacta um veterinário se o teu cão tiver problemas.",
@@ -344,7 +344,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cbf157941397643ba744847fb60498543bd3a137d3d772ac6584fb2b7dd30770"
+      "verified_hash": "d127bc34c9de81069901a7d8cb491ecf68543ac27f4960c91790e038f0d749fe"
     },
     "es": {
       "status": "verified",

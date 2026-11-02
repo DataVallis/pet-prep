@@ -318,7 +318,7 @@
         "en": "Don't give garlic to your cat for any reason. All forms are poisonous to cats, and Blue Cross notes there is also concern that long-term use of garlic may cause problems. Ask your vet about safe flea treatment.",
         "sl": "Mački ne dajajte česna iz nobenega razloga. Za mačke so strupene vse oblike, Blue Cross pa dodaja, da obstaja tudi skrb, da lahko dolgotrajno uživanje česna povzroča težave. O varnem zdravljenju bolh se posvetujte z veterinarjem.",
         "de": "Geben Sie Ihrer Katze aus keinem Grund Knoblauch. Alle Formen sind für Katzen giftig, und laut Blue Cross gibt es zudem Bedenken, dass die längere Gabe von Knoblauch Probleme verursachen kann. Fragen Sie Ihren Tierarzt nach einer sicheren Flohbehandlung.",
-        "fr": "Ne donnez de l’ail à votre chat sous aucun prétexte. Il est toxique pour les chats sous toutes ses formes, et Blue Cross souligne qu’on craint aussi que l’usage prolongé de l’ail pose problème. Demandez à votre vétérinaire un traitement antipuces sans danger.",
+        "fr": "Ne donnez de l’ail à votre chat sous aucun prétexte. Il est toxique pour les chats sous toutes ses formes, et Blue Cross signale aussi des inquiétudes quant à un usage prolongé de l’ail. Demandez à votre vétérinaire un traitement antipuces sans danger.",
         "es": "No le des ajo a tu gato por ningún motivo. Todas las formas son venenosas para los gatos, y Blue Cross señala que también preocupa que el uso prolongado del ajo pueda causar problemas. Pregunta a tu veterinario por un tratamiento antipulgas seguro.",
         "it": "Non dare aglio al tuo gatto per nessun motivo. Tutte le forme sono velenose per i gatti, e Blue Cross osserva che si teme anche che l’uso prolungato di aglio possa causare problemi. Chiedi al veterinario un trattamento antipulci sicuro.",
         "pt": "Não dês alho ao teu gato por nenhum motivo. Todas as formas são venenosas para gatos, e a Blue Cross refere que também há a preocupação de que o uso prolongado de alho possa causar problemas. Pede ao teu veterinário um tratamento seguro contra as pulgas.",
@@ -444,7 +444,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "deeb377ed01a0038f31c67a29c52f66a103b76ff8ce0ed0618c3228b932644b4"
+      "verified_hash": "5b2bba22734dd7bafbe80fa80446f83163e72713194e7b33fa8743787f8e4506"
     },
     "es": {
       "status": "verified",

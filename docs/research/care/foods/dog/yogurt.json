@@ -74,7 +74,7 @@
     "en": "Many dogs have trouble digesting lactose, which can cause gas, diarrhoea or vomiting. Greek-style yogurt has less lactose, so it is usually the better choice. Some sweeteners, especially xylitol, are toxic to dogs, and too much dairy fat can upset the stomach or cause pancreatitis.",
     "sl": "Mnogi psi laktozo težko prebavljajo, kar lahko povzroči napenjanje, drisko ali bruhanje. Grški jogurt ima manj laktoze, zato je običajno boljša izbira. Nekatera sladila, predvsem ksilitol, so za pse strupena, preveč mlečne maščobe pa lahko razdraži želodec ali povzroči vnetje trebušne slinavke.",
     "de": "Viele Hunde können Laktose schlecht verdauen, was Blähungen, Durchfall oder Erbrechen verursachen kann. Joghurt nach griechischer Art enthält weniger Laktose und ist daher meist die bessere Wahl. Manche Süßstoffe, vor allem Xylit, sind für Hunde giftig, und zu viel Milchfett kann auf den Magen schlagen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen.",
-    "fr": "Beaucoup de chiens digèrent mal le lactose, ce qui peut provoquer gaz, diarrhée ou vomissements. Le yaourt à la grecque contient moins de lactose : c’est donc généralement le meilleur choix. Certains édulcorants, en particulier le xylitol, sont toxiques pour les chiens, et trop de matières grasses laitières peuvent dérégler l’estomac ou provoquer une pancréatite.",
+    "fr": "Beaucoup de chiens digèrent mal le lactose, ce qui peut provoquer gaz, diarrhée ou vomissements. Le yaourt à la grecque contient moins de lactose : c’est donc généralement le meilleur choix. Certains édulcorants, en particulier le xylitol, sont toxiques pour les chiens, et trop de matières grasses laitières peuvent déranger l’estomac ou provoquer une pancréatite.",
     "es": "A muchos perros les cuesta digerir la lactosa, lo que puede causar gases, diarrea o vómitos. El yogur de tipo griego tiene menos lactosa, así que suele ser la mejor opción. Algunos edulcorantes, sobre todo el xilitol, son tóxicos para los perros, y demasiada grasa láctea puede sentar mal al estómago o provocar pancreatitis.",
     "it": "Molti cani digeriscono con difficoltà il lattosio, che può causare gas intestinali, diarrea o vomito. Lo yogurt greco contiene meno lattosio, quindi di solito è la scelta migliore. Alcuni dolcificanti, soprattutto lo xilitolo, sono tossici per i cani, e troppi grassi del latte possono disturbare lo stomaco o causare una pancreatite.",
     "pt": "Muitos cães têm dificuldade em digerir a lactose, o que pode causar gases, diarreia ou vómitos. O iogurte de estilo grego tem menos lactose, por isso costuma ser a melhor escolha. Alguns adoçantes, sobretudo o xilitol, são tóxicos para os cães, e demasiada gordura láctea pode fazer mal ao estômago ou causar pancreatite.",
@@ -293,7 +293,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b310b01b01adbf50c7c2d6e9eca4ac5482db0a076b43fa48a826bee254e3daa0"
+      "verified_hash": "542b8d4e595a7d45a83a49a8548f8c76d25bfe7832bf80a0837c2af4fbec7288"
     },
     "es": {
       "status": "verified",

@@ -22,7 +22,7 @@
     "en": "Can dogs eat raw yeast dough?",
     "sl": "Ali lahko psi jedo surovo kvašeno testo?",
     "de": "Dürfen Hunde rohen Hefeteig fressen?",
-    "fr": "Les chiens peuvent-ils manger de la pâte levée crue ?",
+    "fr": "Les chiens peuvent-ils manger de la pâte à pain crue ?",
     "es": "¿Pueden los perros comer masa cruda con levadura?",
     "it": "I cani possono mangiare l’impasto lievitato crudo?",
     "pt": "Os cães podem comer massa crua com fermento?",
@@ -359,7 +359,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8f9e52d38033500fc2ca70c27c713d86db66fc495d71b74f87e54eecaf78db9c"
+      "verified_hash": "00b0afd2134f24543ddcfb847b6178fc5d24ef19295364a3c2b3b556082fedd2"
     },
     "es": {
       "status": "verified",

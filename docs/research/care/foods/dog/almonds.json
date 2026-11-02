@@ -74,7 +74,7 @@
     "en": "Almonds, like most nuts, are high in fat, which can upset the stomach and put a dog at risk of pancreatitis. Whole almonds can block the food pipe, intestines or windpipe, especially in small breeds. Salted and flavoured almonds bring extra risks from salt and seasonings.",
     "sl": "Mandlji so kot večina oreščkov zelo mastni, zato lahko dražijo prebavila in povečajo tveganje za vnetje trebušne slinavke. Celi mandlji lahko zamašijo požiralnik, črevesje ali sapnik, zlasti pri majhnih pasmah. Pri soljenih in začinjenih mandljih se tveganje poveča še zaradi soli in začimb.",
     "de": "Mandeln sind wie die meisten Nüsse sehr fettreich; das kann den Magen verstimmen und das Risiko einer Pankreatitis erhöhen. Ganze Mandeln können Speiseröhre, Darm oder Luftröhre blockieren, besonders bei kleinen Rassen. Gesalzene und aromatisierte Mandeln bringen zusätzliche Risiken durch Salz und Gewürze mit sich.",
-    "fr": "Comme la plupart des fruits à coque, les amandes sont riches en graisses, ce qui peut dérégler l’estomac et exposer le chien à une pancréatite. Entières, elles peuvent obstruer l’œsophage, l’intestin ou la trachée, surtout chez les petites races. Les amandes salées ou aromatisées ajoutent les risques liés au sel et aux assaisonnements.",
+    "fr": "Comme la plupart des fruits à coque, les amandes sont riches en graisses, ce qui peut déranger l’estomac et exposer le chien à une pancréatite. Entières, elles peuvent obstruer l’œsophage, l’intestin ou la trachée, surtout chez les petites races. Les amandes salées ou aromatisées ajoutent les risques liés au sel et aux assaisonnements.",
     "es": "Las almendras, como la mayoría de los frutos secos, tienen mucha grasa, que puede sentar mal al estómago y exponer al perro a una pancreatitis. Las almendras enteras pueden obstruir el esófago, el intestino o la tráquea, sobre todo en razas pequeñas. Las almendras saladas y aromatizadas suponen riesgos añadidos por la sal y los condimentos.",
     "it": "Le mandorle, come la maggior parte della frutta a guscio, sono ricche di grassi, che possono disturbare lo stomaco ed esporre il cane al rischio di pancreatite. Le mandorle intere possono ostruire l’esofago, l’intestino o la trachea, soprattutto nelle razze piccole. Le mandorle salate e aromatizzate comportano rischi in più per il sale e i condimenti.",
     "pt": "As amêndoas, como a maioria dos frutos secos, têm muita gordura, que pode perturbar o estômago e pôr o cão em risco de pancreatite. As amêndoas inteiras podem obstruir o esófago, os intestinos ou a traqueia, sobretudo nas raças pequenas. As amêndoas salgadas ou aromatizadas trazem riscos extra por causa do sal e dos temperos.",
@@ -183,7 +183,7 @@
     "en": "One or two almonds are usually no cause for panic: watch your dog for vomiting, diarrhoea or belly pain. Call your vet if your dog ate a lot of almonds or flavoured almonds, seems to be choking, or shows any of these signs.",
     "sl": "En ali dva mandlja običajno nista razlog za paniko: opazujte, ali pes bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če je pes pojedel veliko mandljev ali začinjene mandlje, se duši ali kaže katerega od teh znakov.",
     "de": "Ein oder zwei Mandeln sind meist kein Grund zur Panik: Achten Sie bei Ihrem Hund auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viele Mandeln oder aromatisierte Mandeln gefressen hat, zu ersticken scheint oder eines dieser Anzeichen zeigt.",
-    "fr": "Une ou deux amandes ne justifient généralement pas de paniquer : surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a mangé beaucoup d’amandes ou des amandes aromatisées, semble s’étouffer ou présente l’un de ces signes.",
+    "fr": "Une ou deux amandes ne sont généralement pas une raison de paniquer : surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire si votre chien a mangé beaucoup d’amandes ou des amandes aromatisées, semble s’étouffer ou présente l’un de ces signes.",
     "es": "Una o dos almendras no suelen ser motivo de pánico: vigila si tu perro tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si tu perro ha comido muchas almendras o almendras aromatizadas, parece estar atragantándose o muestra alguno de estos síntomas.",
     "it": "Una o due mandorle di solito non sono motivo di panico: controlla se il tuo cane ha vomito, diarrea o mal di pancia. Chiama il veterinario se ha mangiato molte mandorle o mandorle aromatizzate, se sembra soffocare o se mostra uno di questi sintomi.",
     "pt": "Uma ou duas amêndoas normalmente não são motivo para pânico: vigia se o teu cão tem vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitas amêndoas ou amêndoas aromatizadas, parecer estar engasgado ou mostrar algum destes sinais.",
@@ -365,7 +365,7 @@
     "fr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ec199399e463d3403b46295b88e9dd3c1d398caacaa3c6db73be37e69410135c"
+      "verified_hash": "41b0feec49886d85a5d308799d9be185853616cab07cb14cf47c394676b5b585"
     },
     "es": {
       "status": "verified",
