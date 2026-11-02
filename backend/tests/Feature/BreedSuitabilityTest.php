@@ -298,7 +298,7 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
     // skin-fold dermatitis, M5-R10-39), the Pug (Breed Watch skin-fold dermatitis, M5-R10-43) and the Mastiff (PDSA atopy S370,
     // Breed Watch skin-fold dermatitis S375, M5-R10-45) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff], true)) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff, BreedType::SharPei], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -323,7 +323,7 @@ it('gives the Bernese Mountain Dog the new shorter_lifespan tag, family_pet, lar
     // Cane Corso (PDSA "Under 10 years", M5-R10-23), the Great Dane (RKC "Under 10 years", M5-R10-29) and the Mastiff
     // (PDSA "Under 10 years", M5-R10-45), the Newfoundland (PDSA "Under 10 years", M5-R10-51), the Bloodhound (RKC "Under 10 years", M5-R10-62), the Pyrenean Mountain Dog (RKC "Under 10 years", M5-R10-78) and the Irish Wolfhound (RKC "Under 10 years", M5-R10-80) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound], true)) {
+        if (! in_array($breed, [BreedType::BerneseMountainDog, BreedType::Rottweiler, BreedType::Bulldog, BreedType::CaneCorso, BreedType::GreatDane, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::SharPei], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('shorter_lifespan');
         }
     }
@@ -536,8 +536,9 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
         if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::Whippet, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Akita, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::Bullmastiff, BreedType::BullTerrier, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::RatTerrier], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
-        // M5-R10-71: the Bullmastiff (PDSA S568 BOAS "caused by their shorter faces").
-        if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu, BreedType::Bullmastiff], true)) {
+        // M5-R10-71: the Bullmastiff (PDSA S568 BOAS "caused by their shorter faces"); M5-R10-87: the Shar Pei (PDSA S660 BOAS
+        // "caused by their flatter face").
+        if (! in_array($breed, [BreedType::Boxer, BreedType::ShihTzu, BreedType::Bullmastiff, BreedType::SharPei], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('short_muzzle_breathing');
         }
     }
@@ -617,6 +618,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::AmericanStaffordshireTerrier->value => 'american_staffordshire_terrier.behaviour.other_pets',
         // M5-R10-83: PDSA S639 "Malamutes have a very strong prey drive so you need to be careful with them around smaller animals."
         BreedType::AlaskanMalamute->value => 'alaskan_malamute.behaviour.other_pets',
+        // M5-R10-87: PDSA S660 "Shar Peis have a really high prey drive, so we wouldn't recommend keeping one with smaller pets."
+        BreedType::SharPei->value => 'shar_pei.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -680,7 +683,7 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
     // Newfoundland (Breed Watch point via the Kennel Club BHCP S425, M5-R10-51) and the Bloodhound (RKC Breed Watch Category 2 S502,
     // PDSA eye problems S503, M5-R10-62) carry eyelid_problems so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard], true)) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::SharPei], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }

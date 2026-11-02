@@ -88,6 +88,7 @@ return [
     'basenji' => 'Basenji',
     'rat_terrier' => 'Rat terier',
     'greater_swiss_mountain_dog' => 'Veliki švicarski planšarski pes',
+    'shar_pei' => 'Šarpej',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

@@ -560,6 +560,15 @@ return [
     'greater_swiss_mountain_dog' => [
         ['key' => 'tricolour', 'value' => 'tricolour: black main colour with symmetrical rich tan markings above the eyes, on the cheeks, forechest and legs and a white blaze, muzzle, chest, feet and tail tip', 'en' => 'Tricolour (black, tan, white)', 'sl' => 'Trobarven (črn, rjavkast, bel)'],
     ],
+    // M5-R10-87: FCI-Standard N° 309 (S663) — any solid colour except white; fawn = the portrait default.
+    'shar_pei' => [
+        ['key' => 'fawn', 'value' => 'solid fawn', 'en' => 'Fawn', 'sl' => 'Plavo rjav'],
+        ['key' => 'red', 'value' => 'solid red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'cream', 'value' => 'solid cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'chocolate', 'value' => 'solid chocolate brown', 'en' => 'Chocolate', 'sl' => 'Čokoladno rjav'],
+        ['key' => 'blue', 'value' => 'solid blue (dilute slate blue-grey)', 'en' => 'Blue', 'sl' => 'Moder (modro siv)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

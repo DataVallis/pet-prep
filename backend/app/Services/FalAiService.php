@@ -718,6 +718,12 @@ class FalAiService
                 .'and a white blaze, muzzle, chest, feet and tail tip, a flat broad skull with a strong straight muzzle, almond-shaped hazel brown eyes, '
                 .'medium triangular ears hanging close to the cheeks, a heavy tail hanging to the hocks, '
                 .'calm and friendly expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-87: FCI-Standard N° 309 (S663) — a compact, square, medium-sized dog with a short, harsh, bristly coat in
+            // one solid colour; welfare breed (Breed Watch S666) → moderate wrinkles, eyes open.
+            BreedType::SharPei => 'A compact, square, medium-sized Shar Pei with a very short, harsh, bristly coat in one solid colour, '
+                .'moderate loose skin with a few wrinkles on the forehead and withers only, eyes clearly open, '
+                .'a broad flat skull with a broad, padded muzzle and a large nose, very small thick triangular ears folded forward, '
+                .'a thick high-set tail curled over the back, calm and alert expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1737,6 +1743,17 @@ class FalAiService
                 'eye_color' => 'hazel to chestnut brown',
                 'fur_texture' => 'short-to-medium, dense, glossy double coat',
                 'markings' => 'symmetrical tan above the eyes, on the cheeks, chest and legs; white blaze, muzzle, chest, feet and tail tip',
+            ],
+            // M5-R10-87: solid colours only (S663); never white, brindle, patches or black and tan.
+            BreedType::SharPei => [
+                'color_scheme' => match ($variantIndex) {
+                    0 => 'solid fawn',
+                    1 => 'solid red',
+                    2 => 'solid black',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'very short, harsh, bristly coat',
+                'markings' => 'one solid colour, moderate wrinkles on the forehead and withers only, eyes clearly open, never white, brindle or patches',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
