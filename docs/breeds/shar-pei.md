@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `shar_pei` (viri S660–S668; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: stran RKC (S664) |
 | Izvor | FCI št. 309, skupina 2, sekcija 2.1 (molosi, mastifski tip), Kitajska (S662, S663); v ZDA »Chinese Shar-Pei« (S174) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 83. mesto »Chinese Shar-Pei« (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #529 (pasma) · portret: glej spodaj · spletna stran: šele s portretom |
+| PR-ji | pet-prep #529 (pasma, združen `c078fd4`) · portret: čaka produkcijsko namestitev (zagon 41426135891 zavrnjen) · spletna stran: šele s portretom (besedila na veji `feat/register-shar-pei`, brez PR) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -40,7 +40,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 66. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-87 | 2026-11-02 |
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-02 |
 | Barva (izbirnik: 6 enobarvnih barv) | 🛠 | 💶 izziv | M5-R21 | 2026-11-02 |
-| AI portret v registru | 🗓 glej »Odprto za Davida« | — | M5-R11-04 | — |
+| AI portret v registru | 🗓 čaka produkcijsko namestitev (Laravel 12) | — | M5-R11-04 | — |
 | Stran na petprep.si (`/animals/dogs/shar-pei`, `/sl/zivali/psi/sarpej`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -60,3 +60,4 @@
 - **Nova oznaka `independent_older_children`** (»samosvoj pes — bolje za starejše otroke«), **nov zdravstveni ključ `shar_pei_fever`** in **nov ključ testa `dna_poag_pll`** — besedila na spletni strani so v PR spletne strani.
 - **Ime:** »Šarpej« je ustaljeno slovensko ime; strani KZS nisem našel. Potrdite ali popravite.
 - **Barve:** standard dovoli vse enobarvne razen bele; izbor šestih barv (plavo rjava, rdeča, kremasta, črna, čokoladna, modra) in uteži sta moja izbira.
+- **Portret čaka produkcijsko namestitev:** zagon `breed-portraits.yml` 41426135891 (koda `2cc46b6`, skupaj z rat terierjem in velikim švicarskim planšarskim psom) je zavrnil delo, ker se `composer.lock` na `main` (Laravel 12, PR #496) razlikuje od produkcije; dnevna namestitev 2. 11. (zagon 41421761459) je po 30 minutah čakanja na CI za `main` odnehala. Brez portreta ni strani na petprep.si. Besedila za spletno stran za vse tri pasme (uvodi v 15 jezikih, imena, novi ključi) so pripravljena na veji `feat/register-shar-pei` v pet-prep-website (gradnja preverjena z nadomestnimi slikami, brez PR). Po ročni ali naslednji dnevni namestitvi naslednji nočni zagon portrete naredi sam (korak »catch-up«).
