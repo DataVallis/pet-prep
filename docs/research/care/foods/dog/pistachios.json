@@ -11,7 +11,8 @@
     "pt": "Pistácios",
     "nl": "Pistachenoten",
     "pl": "Pistacje",
-    "cs": "Pistácie"
+    "cs": "Pistácie",
+    "hr": "Pistacije"
   },
   "question": {
     "en": "Can dogs eat pistachios?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer pistácios?",
     "nl": "Mogen honden pistachenoten eten?",
     "pl": "Czy psy mogą jeść pistacje?",
-    "cs": "Mohou psi jíst pistácie?"
+    "cs": "Mohou psi jíst pistácie?",
+    "hr": "Smiju li psi jesti pistacije?"
   },
   "url_slug": {
     "en": "pistachios",
@@ -35,7 +37,8 @@
     "pt": "pistacios",
     "nl": "pistachenoten",
     "pl": "pistacje",
-    "cs": "pistacie"
+    "cs": "pistacie",
+    "hr": "pistacije"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, é melhor evitar. Os pistácios não são tóxicos em si, mas são gordos e normalmente salgados, podem fazer mal ao estômago ou levar a pancreatite, e os frutos ou as cascas podem causar engasgamento. Também podem ganhar bolor nocivo.",
     "nl": "Nee, die kun je beter vermijden. Pistachenoten zijn op zich niet giftig, maar ze zijn vet en meestal zout, kunnen de maag van streek maken of tot alvleesklierontsteking leiden, en een hond kan stikken in de noten of doppen. Er kan ook schadelijke schimmel op groeien.",
     "pl": "Lepiej ich unikać. Pistacje same w sobie nie są toksyczne, ale są tłuste i zwykle słone, mogą podrażnić żołądek lub prowadzić do zapalenia trzustki, a orzechy lub łupiny mogą spowodować zadławienie. Mogą też porastać szkodliwą pleśnią.",
-    "cs": "Ne, raději se jim vyhněte. Pistácie samy o sobě jedovaté nejsou, jsou ale tučné a obvykle slané, mohou podráždit žaludek nebo vést k zánětu slinivky břišní a ořechy i skořápky mohou způsobit dušení. Mohou na nich také růst škodlivé plísně."
+    "cs": "Ne, raději se jim vyhněte. Pistácie samy o sobě jedovaté nejsou, jsou ale tučné a obvykle slané, mohou podráždit žaludek nebo vést k zánětu slinivky břišní a ořechy i skořápky mohou způsobit dušení. Mohou na nich také růst škodlivé plísně.",
+    "hr": "Ne, najbolje ih je izbjegavati. Pistacije same po sebi nisu otrovne, ali masne su i obično slane, mogu izazvati probavne tegobe ili upalu gušterače, a plodovi ili ljuske mogu izazvati gušenje. Na njima se može razviti i štetna plijesan."
   },
   "why": {
     "en": "Pistachios are high in fat and salt, which can cause stomach problems, and fatty, salty snacks can lead to pancreatitis. Even shelled nuts can be a choking hazard. Mould on nut shells can produce aflatoxin, which can make dogs weak and lethargic, upset the stomach and even cause seizures.",
@@ -60,7 +64,8 @@
     "pt": "Os pistácios têm muita gordura e sal, o que pode causar problemas de estômago, e os petiscos gordos e salgados podem levar a pancreatite. Mesmo sem casca podem causar engasgamento. O bolor nas cascas dos frutos secos pode produzir aflatoxina, que pode deixar os cães fracos e prostrados, fazer mal ao estômago e até causar convulsões.",
     "nl": "Pistachenoten bevatten veel vet en zout, wat maagproblemen kan veroorzaken, en vette, zoute snacks kunnen tot alvleesklierontsteking leiden. Zelfs gepelde noten kunnen verstikking veroorzaken. Schimmel op notendoppen kan aflatoxine maken; daar kunnen honden zwak en lusteloos van worden, het kan de maag van streek maken en zelfs toevallen veroorzaken.",
     "pl": "Pistacje mają dużo tłuszczu i soli, które mogą wywołać problemy z żołądkiem, a tłuste, słone przekąski mogą prowadzić do zapalenia trzustki. Nawet łuskane orzechy mogą grozić zadławieniem. Pleśń na łupinach orzechów może wytwarzać aflatoksynę, przez którą pies może stać się słaby i ospały, mieć rozstrój żołądka, a nawet drgawki.",
-    "cs": "Pistácie mají hodně tuku a soli, což může způsobit žaludeční potíže, a tučné, slané pochutiny mohou vést k zánětu slinivky břišní. I vyloupané ořechy mohou způsobit dušení. Plíseň na skořápkách ořechů může produkovat aflatoxin, po kterém mohou být psi slabí a malátní, může podráždit žaludek, a dokonce způsobit záchvaty."
+    "cs": "Pistácie mají hodně tuku a soli, což může způsobit žaludeční potíže, a tučné, slané pochutiny mohou vést k zánětu slinivky břišní. I vyloupané ořechy mohou způsobit dušení. Plíseň na skořápkách ořechů může produkovat aflatoxin, po kterém mohou být psi slabí a malátní, může podráždit žaludek, a dokonce způsobit záchvaty.",
+    "hr": "Pistacije imaju puno masti i soli, što može izazvati probavne tegobe, a masne i slane grickalice mogu dovesti do upale gušterače. Čak i oljušteni plodovi mogu izazvati gušenje. Plijesan na ljuskama orašastih plodova može stvarati aflatoksin, od kojeg pas može postati slab i bezvoljan, a može izazvati i probavne tegobe, pa čak i napadaje."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Bolest břicha, nevolnost nebo malátnost (možný zánět slinivky břišní)",
       "Slabost a malátnost",
       "Dušení"
+    ],
+    "hr": [
+      "Povraćanje ili proljev",
+      "Bolovi u trbuhu, mučnina ili malaksalost (moguća upala gušterače)",
+      "Slabost i umor",
+      "Gušenje"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Se o teu cão comeu alguns pistácios, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitos pistácios ou as cascas, parecer estar a engasgar-se ou mostrar fraqueza, cansaço ou algum destes sinais.",
     "nl": "Heeft je hond een paar pistachenoten gegeten? Let dan op braken, diarree of buikpijn. Bel je dierenarts als je hond er veel of de doppen heeft gegeten, lijkt te stikken, of zwak of moe is of een van deze verschijnselen heeft.",
     "pl": "Jeśli twój pies zjadł kilka pistacji, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli zjadł ich dużo albo zjadł łupiny, wygląda, jakby się dławił, albo jest słaby, zmęczony lub ma któryś z tych objawów.",
-    "cs": "Pokud váš pes snědl pár pistácií, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha. Zavolejte veterináři, pokud jich snědl hodně nebo snědl skořápky, zdá se, že se dusí, nebo je slabý, malátný či má některý z těchto příznaků."
+    "cs": "Pokud váš pes snědl pár pistácií, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha. Zavolejte veterináři, pokud jich snědl hodně nebo snědl skořápky, zdá se, že se dusí, nebo je slabý, malátný či má některý z těchto příznaků.",
+    "hr": "Ako je tvoj pas pojeo nekoliko pistacija, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pojeo puno pistacija ili ljuski, ako se čini da se guši ili ako pokazuje slabost, umor ili bilo koji od ovih znakova."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "Os pistácios e as cascas não são para cães. Podem fazer mal à barriga de um cão, por isso põe a taça num sítio alto.",
     "nl": "Pistachenoten en hun doppen zijn niet voor honden. Ze kunnen het buikje van een hond van streek maken, dus zet de schaal hoog weg.",
     "pl": "Pistacje i ich łupinki nie są dla psów. Może psa od nich rozboleć brzuszek, więc trzymaj miseczkę wysoko.",
-    "cs": "Pistácie ani jejich skořápky nejsou pro psy. Psa z nich může rozbolet bříško, tak dej misku vysoko."
+    "cs": "Pistácie ani jejich skořápky nejsou pro psy. Psa z nich může rozbolet bříško, tak dej misku vysoko.",
+    "hr": "Pistacije i njihove ljuske nisu za pse. Od njih psa može zaboljeti trbuh, zato zdjelicu drži visoko."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "As cascas de pistácio são perigosas?",
         "nl": "Zijn pistachedoppen gevaarlijk?",
         "pl": "Czy łupiny pistacji są niebezpieczne?",
-        "cs": "Jsou skořápky pistácií nebezpečné?"
+        "cs": "Jsou skořápky pistácií nebezpečné?",
+        "hr": "Jesu li ljuske pistacija opasne?"
       },
       "a": {
         "en": "Yes. Pistachios and their shells can get lodged in a dog's throat, and mould can grow on nut shells.",
@@ -173,7 +187,8 @@
         "pt": "Sim. Os pistácios e as cascas podem ficar presos na garganta de um cão, e as cascas dos frutos secos podem ganhar bolor.",
         "nl": "Ja. Pistachenoten en hun doppen kunnen in de keel van een hond vast komen te zitten, en op notendoppen kan schimmel groeien.",
         "pl": "Tak. Pistacje i ich łupiny mogą utknąć psu w gardle, a na łupinach orzechów może rosnąć pleśń.",
-        "cs": "Ano. Pistácie i jejich skořápky mohou psovi uvíznout v krku a na skořápkách ořechů může růst plíseň."
+        "cs": "Ano. Pistácie i jejich skořápky mohou psovi uvíznout v krku a na skořápkách ořechů může růst plíseň.",
+        "hr": "Jesu. Pistacije i njihove ljuske mogu zapeti psu u grlu, a na ljuskama orašastih plodova može rasti plijesan."
       }
     }
   ],
@@ -281,6 +296,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "380758d8a7f8240868a172e845a8f77edec89ec571260efa0614734240ad427b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b827396e51862774075ce091d9feb6dfa95ed77cdb91b053cbcc1aaf651db1b2"
     }
   }
 }

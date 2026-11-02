@@ -4,68 +4,80 @@
   "name": {
     "en": "Cranberries",
     "sl": "Brusnice",
-    "cs": "Brusinky"
+    "cs": "Brusinky",
+    "hr": "Brusnice"
   },
   "question": {
     "en": "Can dogs eat cranberries?",
     "sl": "Ali lahko psi jedo brusnice?",
-    "cs": "Mohou psi jíst brusinky?"
+    "cs": "Mohou psi jíst brusinky?",
+    "hr": "Smiju li psi jesti brusnice?"
   },
   "url_slug": {
     "en": "cranberries",
     "sl": "brusnice",
-    "cs": "brusinky"
+    "cs": "brusinky",
+    "hr": "brusnice"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
     "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine.",
-    "cs": "Ano, v malém množství. Čisté čerstvé, tepelně upravené nebo sušené brusinky nejsou pro psy jedovaté, ale příliš mnoho jich může podráždit žaludek. Vyhněte se brusinkové omáčce a směsím sušeného ovoce, které mohou obsahovat cukr, rozinky nebo jiné škodlivé přísady."
+    "cs": "Ano, v malém množství. Čisté čerstvé, tepelně upravené nebo sušené brusinky nejsou pro psy jedovaté, ale příliš mnoho jich může podráždit žaludek. Vyhněte se brusinkové omáčce a směsím sušeného ovoce, které mohou obsahovat cukr, rozinky nebo jiné škodlivé přísady.",
+    "hr": "Da, u malim količinama. Obične svježe, termički obrađene ili sušene brusnice nisu otrovne za pse, ali previše njih može uznemiriti želudac. Izbjegavaj umak od brusnica i mješavine sušenog voća, koje mogu sadržavati šećer, grožđice ili druge štetne sastojke."
   },
   "why": {
     "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
     "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor.",
-    "cs": "Sušené brusinky se někdy prodávají ve směsi s rozinkami, a hrozny i rozinky jsou pro psy velmi jedovaté. Brusinková omáčka obsahuje hodně cukru, který může podráždit žaludek, a některé recepty obsahují hrozny, rozinky, korintky nebo alkohol. Mnoho sušených brusinek určených pro lidi je slazených, což přidává zbytečný cukr."
+    "cs": "Sušené brusinky se někdy prodávají ve směsi s rozinkami, a hrozny i rozinky jsou pro psy velmi jedovaté. Brusinková omáčka obsahuje hodně cukru, který může podráždit žaludek, a některé recepty obsahují hrozny, rozinky, korintky nebo alkohol. Mnoho sušených brusinek určených pro lidi je slazených, což přidává zbytečný cukr.",
+    "hr": "Sušene brusnice ponekad dolaze pomiješane s grožđicama, a grožđe i grožđice vrlo su otrovni za pse. Umak od brusnica sadrži mnogo šećera, koji može uznemiriti želudac, a neki recepti sadrže grožđe, grožđice, korintsko grožđe ili alkohol. Mnoge sušene brusnice koje se prodaju za ljude zaslađene su, što psu donosi nepotreban šećer."
   },
   "signs": null,
   "what_to_do": {
     "en": "Feed cranberries in moderation and under the guidance of a vet. Grapes and raisins are very toxic to dogs, so avoid cranberry mixes that contain raisins.",
     "sl": "Brusnice dajajte zmerno in po nasvetu veterinarja. Grozdje in rozine so za pse zelo strupeni, zato se izogibajte mešanicam brusnic z rozinami.",
-    "cs": "Brusinky dávejte s mírou a podle doporučení veterináře. Hrozny a rozinky jsou pro psy velmi jedovaté, proto se vyhněte brusinkovým směsím s rozinkami."
+    "cs": "Brusinky dávejte s mírou a podle doporučení veterináře. Hrozny a rozinky jsou pro psy velmi jedovaté, proto se vyhněte brusinkovým směsím s rozinkami.",
+    "hr": "Brusnice daj umjereno i uz savjet veterinara. Grožđe i grožđice vrlo su otrovni za pse, zato izbjegavaj mješavine brusnica s grožđicama."
   },
   "serving": {
     "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
     "sl": "Navadne sveže, kuhane ali suhe brusnice brez dodanega sladkorja in brez rozin; v majhnih količinah.",
-    "cs": "Čisté čerstvé, tepelně upravené nebo sušené brusinky bez přidaného cukru a bez rozinek; v malém množství."
+    "cs": "Čisté čerstvé, tepelně upravené nebo sušené brusinky bez přidaného cukru a bez rozinek; v malém množství.",
+    "hr": "Obične svježe, termički obrađene ili sušene brusnice bez dodanog šećera i bez grožđica; u malim količinama."
   },
   "child": {
     "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
     "sl": "Nekaj navadnih brusnic je za pse v redu. Brusnična omaka in mešanice sadja so za ljudi, zato najprej vprašaj odraslega.",
-    "cs": "Pár obyčejných brusinek je pro psy v pořádku. Brusinková omáčka a ovocné směsi jsou pro lidi, a tak se nejdřív zeptej dospělého."
+    "cs": "Pár obyčejných brusinek je pro psy v pořádku. Brusinková omáčka a ovocné směsi jsou pro lidi, a tak se nejdřív zeptej dospělého.",
+    "hr": "Nekoliko običnih brusnica u redu je za pse. Umak od brusnica i voćne mješavine su za ljude, zato prvo pitaj odraslu osobu."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat cranberry sauce?",
         "sl": "Ali lahko psi jedo brusnično omako?",
-        "cs": "Mohou psi jíst brusinkovou omáčku?"
+        "cs": "Mohou psi jíst brusinkovou omáčku?",
+        "hr": "Smiju li psi jesti umak od brusnica?"
       },
       "a": {
         "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
         "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen.",
-        "cs": "Raději ne. Brusinková omáčka obsahuje hodně cukru a některé recepty obsahují hrozny, rozinky nebo korintky, které jsou pro psy jedovaté, nebo brandy – a alkohol je pro psy také jedovatý."
+        "cs": "Raději ne. Brusinková omáčka obsahuje hodně cukru a některé recepty obsahují hrozny, rozinky nebo korintky, které jsou pro psy jedovaté, nebo brandy – a alkohol je pro psy také jedovatý.",
+        "hr": "Bolje ga je izbjegavati. Umak od brusnica sadrži mnogo šećera, a neki recepti sadrže grožđe, grožđice ili korintsko grožđe, koji su otrovni za pse, ili brendi, a i alkohol je otrovan za pse."
       }
     },
     {
       "q": {
         "en": "Do cranberries help with urinary tract infections in dogs?",
         "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?",
-        "cs": "Pomáhají brusinky psům při infekcích močových cest?"
+        "cs": "Pomáhají brusinky psům při infekcích močových cest?",
+        "hr": "Pomažu li brusnice psima kod infekcija mokraćnog sustava?"
       },
       "a": {
         "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
         "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile.",
-        "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily."
+        "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily.",
+        "hr": "Mnogi ljudi tako misle, ali nema dovoljno istraživanja na psima koja bi to potvrdila."
       }
     }
   ],
@@ -157,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35db9fadf883815227835a451ac6b0adf84e2aba4ce2442f0cf15a53d01d0a96"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8a8d0f5772ea2fc4ccc7f88ddf23e91888599920c5d3b698aa18612f41e2d1c4"
     }
   }
 }

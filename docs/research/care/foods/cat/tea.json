@@ -11,7 +11,8 @@
     "pt": "Chá",
     "nl": "Thee",
     "pl": "Herbata",
-    "cs": "Čaj"
+    "cs": "Čaj",
+    "hr": "Čaj"
   },
   "question": {
     "en": "Can cats drink tea?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem beber chá?",
     "nl": "Mogen katten thee drinken?",
     "pl": "Czy koty mogą pić herbatę?",
-    "cs": "Mohou kočky pít čaj?"
+    "cs": "Mohou kočky pít čaj?",
+    "hr": "Smiju li mačke piti čaj?"
   },
   "url_slug": {
     "en": "tea",
@@ -35,7 +37,8 @@
     "pt": "cha",
     "nl": "thee",
     "pl": "herbata",
-    "cs": "caj"
+    "cs": "caj",
+    "hr": "caj"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. Muitos chás contêm cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. As saquetas de chá são especialmente perigosas. Não partilhes o teu chá e liga ao teu veterinário se o teu gato mastigar uma saqueta ou beber chá com cafeína.",
     "nl": "Nee. Veel soorten thee bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Vooral theezakjes zijn riskant. Deel je thee niet, en bel je dierenarts als je kat op een theezakje kauwt of thee met cafeïne drinkt.",
     "pl": "Nie. Wiele herbat zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Szczególnie ryzykowne są torebki herbaty. Nie dziel się z kotem herbatą i zadzwoń do weterynarza, jeśli kot pogryzie torebkę herbaty lub wypije herbatę z kofeiną.",
-    "cs": "Ne. Mnoho čajů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Zvlášť rizikové jsou čajové sáčky. O čaj se s kočkou nedělte, a pokud vaše kočka okouše čajový sáček nebo se napije čaje s kofeinem, zavolejte veterináři."
+    "cs": "Ne. Mnoho čajů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Zvlášť rizikové jsou čajové sáčky. O čaj se s kočkou nedělte, a pokud vaše kočka okouše čajový sáček nebo se napije čaje s kofeinem, zavolejte veterináři.",
+    "hr": "Ne. Mnogi čajevi sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Vrećice čaja posebno su rizične. Ne dijeli svoj čaj s mačkom i nazovi veterinara ako mačka sažvače vrećicu čaja ili popije čaj s kofeinom."
   },
   "why": {
     "en": "Many teas contain caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -60,7 +64,8 @@
     "pt": "Muitos chás contêm cafeína. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago.",
     "nl": "Veel soorten thee bevatten cafeïne. Katten zijn gevoeliger voor cafeïne dan mensen. Net als chocolade bevatten koffie en andere producten met cafeïne veel stimulerende stoffen, methylxanthinen genoemd; cafeïne laat het hart sneller kloppen, maakt katten onrustig en geeft maagklachten.",
     "pl": "Wiele herbat zawiera kofeinę. Koty są bardziej wrażliwe na kofeinę niż ludzie. Kawa i inne produkty z kofeiną, podobnie jak czekolada, zawierają dużo substancji pobudzających zwanych metyloksantynami; kofeina przyspiesza pracę serca, wywołuje u kota niepokój i rozstrój żołądka.",
-    "cs": "Mnoho čajů obsahuje kofein. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek."
+    "cs": "Mnoho čajů obsahuje kofein. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek.",
+    "hr": "Mnogi čajevi sadrže kofein. Mačke su na kofein osjetljivije od ljudi. Kao i čokolada, kava i druge namirnice s kofeinom sadrže mnogo stimulansa koji se zovu metilksantini; kofein ubrzava rad srca, čini mačke nemirnima i izaziva želučane tegobe."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Hyperaktivita",
       "Podrážděný žaludek",
       "Zrychlený tep nebo změny srdečního rytmu"
+    ],
+    "hr": [
+      "Nemir, nervoza, ne želi mirno ležati",
+      "Hiperaktivnost",
+      "Želučane tegobe",
+      "Ubrzan rad srca ili promjene srčanog ritma"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu (bebida, borras, grãos, saqueta de chá ou comprimidos), da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (napitak, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "O chá é para as pessoas. Mantém as chávenas e as saquetas usadas longe do gatinho e avisa um adulto se ele mexer nelas.",
     "nl": "Thee is voor mensen. Houd kopjes en gebruikte theezakjes weg bij je poes. Komt ze er toch aan? Vertel het meteen aan een volwassene.",
     "pl": "Herbata jest dla ludzi. Trzymaj kubki i zużyte torebki herbaty z dala od kotka i powiedz dorosłemu, jeśli kotek się do nich dobierze.",
-    "cs": "Čaj je pro lidi. Hrnky a použité čajové sáčky drž daleko od kočičky, a když se k nim dostane, řekni to dospělému."
+    "cs": "Čaj je pro lidi. Hrnky a použité čajové sáčky drž daleko od kočičky, a když se k nim dostane, řekni to dospělému.",
+    "hr": "Čaj je za ljude. Šalice i iskorištene vrećice čaja drži daleko od mace i reci odrasloj osobi ako ih maca dohvati."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "As saquetas de chá são perigosas?",
         "nl": "Zijn theezakjes gevaarlijk?",
         "pl": "Czy torebki herbaty są niebezpieczne?",
-        "cs": "Jsou čajové sáčky nebezpečné?"
+        "cs": "Jsou čajové sáčky nebezpečné?",
+        "hr": "Jesu li vrećice čaja opasne?"
       },
       "a": {
         "en": "Yes. Pet Poison Helpline warns that eating tea bags could cause serious toxicity in cats. Throw used tea bags away where your cat can't reach them.",
@@ -173,7 +187,8 @@
         "pt": "Sim. A Pet Poison Helpline avisa que comer saquetas de chá pode causar uma intoxicação grave nos gatos. Deita as saquetas usadas fora num sítio onde o teu gato não lhes chegue.",
         "nl": "Ja. Pet Poison Helpline waarschuwt dat het eten van theezakjes een ernstige vergiftiging kan veroorzaken bij katten. Gooi gebruikte theezakjes weg waar je kat er niet bij kan.",
         "pl": "Tak. Pet Poison Helpline ostrzega, że zjedzenie torebek herbaty może wywołać u kotów poważne zatrucie. Zużyte torebki wyrzucaj tam, gdzie kot ich nie dosięgnie.",
-        "cs": "Ano. Pet Poison Helpline varuje, že snědení čajových sáčků by mohlo kočkám způsobit vážnou otravu. Použité čajové sáčky vyhazujte tam, kam kočka nedosáhne."
+        "cs": "Ano. Pet Poison Helpline varuje, že snědení čajových sáčků by mohlo kočkám způsobit vážnou otravu. Použité čajové sáčky vyhazujte tam, kam kočka nedosáhne.",
+        "hr": "Jesu. Pet Poison Helpline upozorava da jedenje vrećica čaja kod mačaka može izazvati ozbiljno otrovanje. Iskorištene vrećice čaja baci tamo gdje ih mačka ne može dohvatiti."
       }
     }
   ],
@@ -292,6 +307,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "97f339266e6a80a8b4a5ab228f717562b394f2726066944326e68a4fd7e06c20"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "775d700a27387112d8c876bf9f468bde4e4c35723301224e026d6ce765661e21"
     }
   }
 }

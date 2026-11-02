@@ -11,7 +11,8 @@
     "pt": "Massa crua com fermento",
     "nl": "Rauw gistdeeg",
     "pl": "Surowe ciasto drożdżowe",
-    "cs": "Syrové kynuté těsto"
+    "cs": "Syrové kynuté těsto",
+    "hr": "Sirovo tijesto s kvascem"
   },
   "question": {
     "en": "Can dogs eat raw yeast dough?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer massa crua com fermento?",
     "nl": "Mogen honden rauw gistdeeg eten?",
     "pl": "Czy psy mogą jeść surowe ciasto drożdżowe?",
-    "cs": "Mohou psi jíst syrové kynuté těsto?"
+    "cs": "Mohou psi jíst syrové kynuté těsto?",
+    "hr": "Smiju li psi jesti sirovo tijesto s kvascem?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -35,7 +37,8 @@
     "pt": "massa-crua-com-fermento",
     "nl": "rauw-gistdeeg",
     "pl": "surowe-ciasto-drozdzowe",
-    "cs": "syrove-kynute-testo"
+    "cs": "syrove-kynute-testo",
+    "hr": "sirovo-tijesto-s-kvascem"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. A massa crua com fermento, por cozer, é perigosa para os cães. Continua a crescer no estômago quente e causa um inchaço que pode levar a uma torção do estômago. O fermento também produz álcool, que pode causar intoxicação alcoólica. O perigo é a massa por cozer.",
     "nl": "Nee. Rauw, ongebakken gistdeeg is gevaarlijk voor honden. Het blijft rijzen in de warme maag en veroorzaakt een opgezette buik, wat tot een maagtorsie kan leiden. De gist maakt ook alcohol, wat alcoholvergiftiging kan veroorzaken. Het gevaar zit in het ongebakken deeg.",
     "pl": "Nie. Surowe, niewypieczone ciasto drożdżowe jest niebezpieczne dla psów. Nadal rośnie w ciepłym żołądku i powoduje wzdęcie, które może doprowadzić do skrętu żołądka. Drożdże wytwarzają też alkohol, który może wywołać zatrucie alkoholem. Zagrożeniem jest niewypieczone ciasto.",
-    "cs": "Ne. Syrové, nepečené kynuté těsto je pro psy nebezpečné. V teplém žaludku dál kyne a způsobuje nadmutí, které může vést až k torzi žaludku. Kvasinky navíc vytvářejí alkohol, který může způsobit otravu alkoholem. Nebezpečné je právě nepečené těsto."
+    "cs": "Ne. Syrové, nepečené kynuté těsto je pro psy nebezpečné. V teplém žaludku dál kyne a způsobuje nadmutí, které může vést až k torzi žaludku. Kvasinky navíc vytvářejí alkohol, který může způsobit otravu alkoholem. Nebezpečné je právě nepečené těsto.",
+    "hr": "Ne. Sirovo, nepečeno tijesto s kvascem opasno je za pse. U toplom želucu nastavlja rasti i nadima ga, što može dovesti do torzije želuca. Kvasac stvara i alkohol, koji može izazvati trovanje alkoholom. Opasno je nepečeno tijesto."
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
@@ -60,7 +64,8 @@
     "pt": "O fermento continua a trabalhar no estômago quente e húmido: a massa expande-se e acumulam-se gases, o que pode obstruir o intestino ou, menos vezes, torcer o estômago (dilatação gástrica). Ao mesmo tempo, o fermento produz álcool, que é rapidamente absorvido para o sangue. Os cães são os mais afetados porque comem tudo o que encontram.",
     "nl": "Gist blijft werken in de warme, vochtige maag: het deeg zet uit en er hoopt zich gas op, wat de darmen kan verstoppen of, minder vaak, de maag kan laten draaien (maagtorsie). Tegelijk maakt de gist alcohol, die snel in het bloed wordt opgenomen. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden.",
     "pl": "Drożdże pracują dalej w ciepłym, wilgotnym żołądku: ciasto się powiększa i gromadzą się gazy, co może zatkać przewód pokarmowy lub, rzadziej, doprowadzić do skrętu żołądka. Jednocześnie drożdże wytwarzają alkohol, który szybko wchłania się do krwi. Najczęściej dotyczy to psów, bo jedzą wszystko, co znajdą.",
-    "cs": "Kvasinky v teplém, vlhkém žaludku dál pracují: těsto se zvětšuje a hromadí se plyn, který může ucpat trávicí trakt nebo vzácněji způsobit otočení žaludku (torzi žaludku). Kvasinky zároveň produkují alkohol, který se rychle vstřebává do krve. Nejčastěji to postihuje psy, protože sežerou, co najdou."
+    "cs": "Kvasinky v teplém, vlhkém žaludku dál pracují: těsto se zvětšuje a hromadí se plyn, který může ucpat trávicí trakt nebo vzácněji způsobit otočení žaludku (torzi žaludku). Kvasinky zároveň produkují alkohol, který se rychle vstřebává do krve. Nejčastěji to postihuje psy, protože sežerou, co najdou.",
+    "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti probavni sustav ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Zvracení nebo dávení naprázdno",
       "Vrávorání a dezorientace",
       "Ospalost nebo skleslost"
+    ],
+    "hr": [
+      "Natečen, napet trbuh",
+      "Povraćanje ili nagon na povraćanje bez izbacivanja sadržaja",
+      "Teturanje i dezorijentiranost",
+      "Pospanost ili potištenost"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário. Anota mais ou menos quanta massa comeu e quando. Não esperes pelos sinais: um estômago a inchar e a intoxicação alcoólica precisam ambos de cuidados rápidos.",
     "nl": "Neem meteen contact op met je dierenarts. Schrijf op hoeveel deeg er ongeveer is gegeten en wanneer. Wacht niet op verschijnselen: een opzwellende maag en alcoholvergiftiging moeten allebei snel worden behandeld.",
     "pl": "Od razu skontaktuj się z weterynarzem. Zanotuj, ile mniej więcej ciasta pies zjadł i kiedy. Nie czekaj na objawy: powiększający się żołądek i zatrucie alkoholem wymagają szybkiej pomocy.",
-    "cs": "Okamžitě se obraťte na veterináře. Poznamenejte si, kolik těsta pes zhruba snědl a kdy. Nečekejte, až se objeví příznaky: nafukující se žaludek i otrava alkoholem vyžadují rychlou péči."
+    "cs": "Okamžitě se obraťte na veterináře. Poznamenejte si, kolik těsta pes zhruba snědl a kdy. Nečekejte, až se objeví příznaky: nafukující se žaludek i otrava alkoholem vyžadují rychlou péči.",
+    "hr": "Odmah se obrati veterinaru. Zapiši otprilike koliko je tijesta pas pojeo i kada. Ne čekaj da se pojave znakovi: i želudac koji se nadima i trovanje alkoholom zahtijevaju brzu pomoć."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "A massa do pão que ainda está a crescer não é para cães. Continua a crescer dentro da barriga deles. Avisa um adulto se o teu cão comer alguma.",
     "nl": "Brooddeeg dat nog rijst, is niet voor honden. Het blijft groeien in hun buikje. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Ciasto na chleb, które jeszcze rośnie, nie jest dla psów. Rośnie dalej w ich brzuszku. Powiedz dorosłemu, jeśli twój pies trochę go zje.",
-    "cs": "Těsto na chleba, které ještě kyne, není pro psy. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému."
+    "cs": "Těsto na chleba, které ještě kyne, není pro psy. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému.",
+    "hr": "Tijesto za kruh koje još raste nije za pse. U njihovu trbuhu nastavi rasti. Reci odrasloj osobi ako ga tvoj pas pojede."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "O pão cozido também é perigoso?",
         "nl": "Is gebakken brood ook gevaarlijk?",
         "pl": "Czy upieczony chleb też jest niebezpieczny?",
-        "cs": "Je nebezpečný i upečený chléb?"
+        "cs": "Je nebezpečný i upečený chléb?",
+        "hr": "Je li i pečeni kruh opasan?"
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
@@ -173,7 +187,8 @@
         "pt": "O perigo aqui descrito é a massa crua com fermento, por cozer, porque o fermento ainda está vivo e continua a trabalhar no estômago.",
         "nl": "Het gevaar dat hier wordt beschreven, gaat over rauw, ongebakken gistdeeg, omdat de gist dan nog leeft en in de maag blijft werken.",
         "pl": "Opisane tu zagrożenie dotyczy surowego, niewypieczonego ciasta drożdżowego, bo drożdże są wciąż żywe i dalej pracują w żołądku.",
-        "cs": "Nebezpečí, které tu popisujeme, se týká syrového, nepečeného kynutého těsta, protože kvasinky jsou v něm ještě živé a v žaludku dál pracují."
+        "cs": "Nebezpečí, které tu popisujeme, se týká syrového, nepečeného kynutého těsta, protože kvasinky jsou v něm ještě živé a v žaludku dál pracují.",
+        "hr": "Ovdje opisana opasnost odnosi se na sirovo, nepečeno tijesto s kvascem, jer je kvasac još živ i nastavlja djelovati u želucu."
       }
     },
     {
@@ -187,7 +202,8 @@
         "pt": "Porque é que a massa causa intoxicação alcoólica?",
         "nl": "Waarom veroorzaakt deeg alcoholvergiftiging?",
         "pl": "Dlaczego ciasto wywołuje zatrucie alkoholem?",
-        "cs": "Proč těsto způsobuje otravu alkoholem?"
+        "cs": "Proč těsto způsobuje otravu alkoholem?",
+        "hr": "Zašto tijesto izaziva trovanje alkoholom?"
       },
       "a": {
         "en": "Fermenting yeast produces alcohol in the stomach, and it is rapidly absorbed into the bloodstream.",
@@ -199,7 +215,8 @@
         "pt": "O fermento, ao fermentar, produz álcool no estômago, que é rapidamente absorvido para a corrente sanguínea.",
         "nl": "Actieve gist maakt alcohol in de maag, en die wordt snel in het bloed opgenomen.",
         "pl": "Fermentujące drożdże wytwarzają w żołądku alkohol, który szybko wchłania się do krwiobiegu.",
-        "cs": "Kvasící kvasinky produkují v žaludku alkohol, který se rychle vstřebává do krevního oběhu."
+        "cs": "Kvasící kvasinky produkují v žaludku alkohol, který se rychle vstřebává do krevního oběhu.",
+        "hr": "Kvasac koji fermentira stvara alkohol u želucu, a on se brzo upija u krvotok."
       }
     }
   ],
@@ -305,6 +322,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6cb7ff5645d6c6a6228acbaf0f3ced21fabe18faedee7f9100e5089c06c1ff13"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c9b412aac08afb944f29801c8ec06707dae989f497002b391a52c9df2e4d33a6"
     }
   }
 }

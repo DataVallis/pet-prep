@@ -11,7 +11,8 @@
     "pt": "Ossos cozinhados",
     "nl": "Gekookte botten",
     "pl": "Gotowane kości",
-    "cs": "Tepelně upravené kosti"
+    "cs": "Tepelně upravené kosti",
+    "hr": "Kuhane kosti"
   },
   "question": {
     "en": "Can dogs eat cooked bones?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer ossos cozinhados?",
     "nl": "Mogen honden gekookte botten eten?",
     "pl": "Czy psy mogą jeść gotowane kości?",
-    "cs": "Mohou psi jíst tepelně upravené kosti?"
+    "cs": "Mohou psi jíst tepelně upravené kosti?",
+    "hr": "Smiju li psi jesti kuhane kosti?"
   },
   "url_slug": {
     "en": "cooked-bones",
@@ -35,7 +37,8 @@
     "pt": "ossos-cozinhados",
     "nl": "gekookte-botten",
     "pl": "gotowane-kosci",
-    "cs": "tepelne-upravene-kosti"
+    "cs": "tepelne-upravene-kosti",
+    "hr": "kuhane-kosti"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. Nunca dês ossos cozinhados a um cão. Os ossos cozinhados partem-se em lascas afiadas que podem cortar a boca, causar engasgamento ou obstruir o intestino. Os ossos de aves cozinhados são especialmente quebradiços e podem tornar-se uma emergência veterinária.",
     "nl": "Nee. Geef een hond nooit gekookte botten. Gekookte botten splinteren in scherpe stukjes die de bek kunnen verwonden, verstikking kunnen veroorzaken of de darmen kunnen verstoppen. Gekookte botten van gevogelte zijn extra broos en kunnen tot een spoedgeval bij de dierenarts leiden.",
     "pl": "Nie. Nigdy nie dawaj psu gotowanych kości. Gotowane kości rozpadają się na ostre odłamki, które mogą skaleczyć pysk, spowodować zadławienie lub zatkać przewód pokarmowy. Gotowane kości drobiowe są szczególnie kruche i mogą sprawić, że pies będzie potrzebował pilnej pomocy weterynarza.",
-    "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou si vyžádat návštěvu veterinární pohotovosti."
+    "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou si vyžádat návštěvu veterinární pohotovosti.",
+    "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu dovesti do hitnog slučaja kod veterinara."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -60,7 +64,8 @@
     "pt": "A cozedura torna os ossos quebradiços, por isso partem-se em lascas afiadas. Os ossos de frango e de peru são o exemplo clássico, mas quaisquer ossos da mesa podem ferir um cão. A FDA recebeu relatos de engasgamento, feridas na boca, vómitos, diarreia, hemorragia retal e obstruções intestinais em cães que comeram ossos ou guloseimas de osso.",
     "nl": "Door koken worden botten broos, zodat ze in scherpe splinters breken. Kippen- en kalkoenbotten zijn het bekende voorbeeld, maar alle botten van de eettafel kunnen een hond verwonden. De FDA heeft meldingen gekregen van verstikking, wonden in de bek, braken, diarree, bloedingen uit de anus en darmverstoppingen bij honden die botten of botsnacks hadden gegeten.",
     "pl": "Gotowanie sprawia, że kości stają się kruche i łamią się na ostre odłamki. Kości kurczaka i indyka to klasyczny przykład, ale każda kość ze stołu może zranić psa. Do FDA wpłynęły zgłoszenia zadławień, ran w pysku, wymiotów, biegunki, krwawienia z odbytu i niedrożności jelit u psów, które zjadły kości lub gryzaki z kości.",
-    "cs": "Tepelnou úpravou kosti zkřehnou, takže se lámou na ostré střípky. Typickým příkladem jsou kuřecí a krůtí kosti, ale psa může poranit jakákoli kost ze stolu. FDA obdržela hlášení o dušení, poraněních tlamy, zvracení, průjmu, krvácení z konečníku a ucpání střev u psů, kteří snědli kosti nebo kostěné pamlsky."
+    "cs": "Tepelnou úpravou kosti zkřehnou, takže se lámou na ostré střípky. Typickým příkladem jsou kuřecí a krůtí kosti, ale psa může poranit jakákoli kost ze stolu. FDA obdržela hlášení o dušení, poraněních tlamy, zvracení, průjmu, krvácení z konečníku a ucpání střev u psů, kteří snědli kosti nebo kostěné pamlsky.",
+    "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, krvarenja iz rektuma i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Zvracení",
       "Průjem",
       "Krvácení z konečníku"
+    ],
+    "hr": [
+      "Gušenje ili nagon na povraćanje",
+      "Posjekotine ili krvarenje u ustima",
+      "Povraćanje",
+      "Proljev",
+      "Krvarenje iz anusa"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Contacta imediatamente o teu veterinário se o teu cão comeu ossos cozinhados, mesmo que pareça estar bem. Anota que tipo de osso era e mais ou menos quanto comeu. Não esperes por sinais de obstrução.",
     "nl": "Neem meteen contact op met je dierenarts als je hond gekookte botten heeft gegeten, ook als hij in orde lijkt. Schrijf op wat voor bot het was en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies zjadł gotowane kości, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, jaka to była kość i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności.",
-    "cs": "Pokud váš pes snědl tepelně upravené kosti, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, o jakou kost šlo a zhruba kolik pes snědl. Nečekejte na známky ucpání."
+    "cs": "Pokud váš pes snědl tepelně upravené kosti, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, o jakou kost šlo a zhruba kolik pes snědl. Nečekejte na známky ucpání.",
+    "hr": "Odmah se obrati veterinaru ako je pas pojeo termički obrađene kosti, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "pt": "Os ossos dos nossos pratos não são para cães. Partem-se em pedacinhos afiados. Avisa um adulto se o teu cão encontrar um.",
     "nl": "Botten van ons bord zijn niet voor honden. Ze breken in scherpe stukjes. Vertel het aan een volwassene als je hond er een vindt.",
     "pl": "Kości z naszych talerzy nie są dla psów. Łamią się na ostre kawałki. Powiedz dorosłemu, jeśli twój pies jakąś znajdzie.",
-    "cs": "Kosti z našich talířů nejsou pro psy. Lámou se na ostré kousky. Když pes nějakou najde, řekni to dospělému."
+    "cs": "Kosti z našich talířů nejsou pro psy. Lámou se na ostré kousky. Když pes nějakou najde, řekni to dospělému.",
+    "hr": "Kosti s naših tanjura nisu za pse. Lome se na oštre komadiće. Ako pas nađe kost, reci odrasloj osobi."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "pt": "Os ossos de frango são os piores?",
         "nl": "Zijn kippenbotten het ergst?",
         "pl": "Czy kości kurczaka są najgorsze?",
-        "cs": "Jsou nejhorší kuřecí kosti?"
+        "cs": "Jsou nejhorší kuřecí kosti?",
+        "hr": "Jesu li pileće kosti najgore?"
       },
       "a": {
         "en": "Cooked poultry bones are especially brittle and splinter easily, but any cooked bone from the table can cause injury.",
@@ -183,7 +198,8 @@
         "pt": "Os ossos de aves cozinhados são especialmente quebradiços e lascam com facilidade, mas qualquer osso cozinhado da mesa pode causar ferimentos.",
         "nl": "Gekookte botten van gevogelte zijn extra broos en splinteren makkelijk, maar elk gekookt bot van tafel kan letsel veroorzaken.",
         "pl": "Gotowane kości drobiowe są szczególnie kruche i łatwo się łamią na odłamki, ale każda gotowana kość ze stołu może spowodować uraz.",
-        "cs": "Tepelně upravené drůbeží kosti jsou zvlášť křehké a snadno se tříští, ale poranit může jakákoli tepelně upravená kost ze stolu."
+        "cs": "Tepelně upravené drůbeží kosti jsou zvlášť křehké a snadno se tříští, ale poranit může jakákoli tepelně upravená kost ze stolu.",
+        "hr": "Termički obrađene kosti peradi osobito su krhke i lako se lome u krhotine, ali svaka termički obrađena kost sa stola može izazvati ozljedu."
       }
     },
     {
@@ -197,7 +213,8 @@
         "pt": "Como evito que o meu cão apanhe ossos?",
         "nl": "Hoe voorkom ik dat mijn hond aan botten komt?",
         "pl": "Jak sprawić, żeby pies nie dobierał się do kości?",
-        "cs": "Jak zabránit tomu, aby se pes ke kostem dostal?"
+        "cs": "Jak zabránit tomu, aby se pes ke kostem dostal?",
+        "hr": "Kako spriječiti da pas dođe do kostiju?"
       },
       "a": {
         "en": "Keep platters out of reach while cooking and eating, and be careful what goes in the bin: dogs often raid the trash for carcasses and steak bones.",
@@ -209,7 +226,8 @@
         "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife.",
         "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat je in de vuilnisbak gooit: honden plunderen vaak de vuilnisbak op zoek naar karkassen en biefstukbotten.",
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często przeszukują śmieci w poszukiwaniu resztek drobiu i kości ze steków.",
-        "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi často vybírají odpadky kvůli zbytkům drůbeže a kostem ze steaků."
+        "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi často vybírají odpadky kvůli zbytkům drůbeže a kostem ze steaků.",
+        "hr": "Dok se kuha i jede, drži pladnjeve izvan njegova dosega i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka."
       }
     }
   ],
@@ -340,6 +358,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "71689d9c4c6ec8437990b8af7e0bb5663029bfdfeb255ae20d231df25bdbc6ac"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3c4acaacae084b2f026c1109559de5fb773642760edc83d59a12fdeb1eea530b"
     }
   }
 }

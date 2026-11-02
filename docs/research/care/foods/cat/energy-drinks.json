@@ -11,7 +11,8 @@
     "pt": "Bebidas energéticas",
     "nl": "Energiedrankjes",
     "pl": "Napoje energetyczne",
-    "cs": "Energetické nápoje"
+    "cs": "Energetické nápoje",
+    "hr": "Energetska pića"
   },
   "question": {
     "en": "Can cats drink energy drinks?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem beber bebidas energéticas?",
     "nl": "Mogen katten energiedrankjes drinken?",
     "pl": "Czy koty mogą pić napoje energetyczne?",
-    "cs": "Mohou kočky pít energetické nápoje?"
+    "cs": "Mohou kočky pít energetické nápoje?",
+    "hr": "Smiju li mačke piti energetska pića?"
   },
   "url_slug": {
     "en": "energy-drinks",
@@ -35,7 +37,8 @@
     "pt": "bebidas-energeticas",
     "nl": "energiedrankjes",
     "pl": "napoje-energetyczne",
-    "cs": "energeticke-napoje"
+    "cs": "energeticke-napoje",
+    "hr": "energetska-pica"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. As bebidas energéticas têm muitas vezes muita cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. Nunca deixes o teu gato beber de uma lata ou de um copo e liga ao teu veterinário se ele engolir alguma.",
     "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Laat je kat nooit uit een blikje of glas drinken, en bel je dierenarts als je kat er iets van binnenkrijgt.",
     "pl": "Nie. Napoje energetyczne często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Nigdy nie pozwalaj kotu pić z puszki ani szklanki i zadzwoń do weterynarza, jeśli kot choć trochę połknie.",
-    "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud nějaký nápoj spolkne, zavolejte veterináři."
+    "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud nějaký nápoj spolkne, zavolejte veterináři.",
+    "hr": "Ne. Energetska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nikad ne dopusti mački da pije iz limenke ili čaše i nazovi veterinara ako mačka išta od toga popije."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine. Cats are more sensitive to caffeine than people. Like chocolate, coffee and other caffeine-containing foods have high levels of stimulants called methylxanthines; caffeine speeds up the heart, makes cats restless and upsets the stomach.",
@@ -60,7 +64,8 @@
     "pt": "As bebidas energéticas e desportivas contêm muitas vezes muita cafeína. Os gatos são mais sensíveis à cafeína do que as pessoas. Tal como o chocolate, o café e outros alimentos com cafeína têm níveis elevados de estimulantes chamados metilxantinas; a cafeína acelera o coração, deixa os gatos agitados e faz mal ao estômago.",
     "nl": "Energie- en sportdrankjes bevatten vaak veel cafeïne. Katten zijn gevoeliger voor cafeïne dan mensen. Net als chocolade bevatten koffie en andere producten met cafeïne veel stimulerende stoffen, methylxanthinen genoemd; cafeïne laat het hart sneller kloppen, maakt katten onrustig en geeft maagklachten.",
     "pl": "Napoje energetyczne i izotoniczne często zawierają dużo kofeiny. Koty są bardziej wrażliwe na kofeinę niż ludzie. Kawa i inne produkty z kofeiną, podobnie jak czekolada, zawierają dużo substancji pobudzających zwanych metyloksantynami; kofeina przyspiesza pracę serca, wywołuje u kota niepokój i rozstrój żołądka.",
-    "cs": "Energetické a sportovní nápoje často obsahují hodně kofeinu. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek."
+    "cs": "Energetické a sportovní nápoje často obsahují hodně kofeinu. Kočky jsou na kofein citlivější než lidé. Káva a další potraviny s kofeinem obsahují stejně jako čokoláda velké množství stimulačních látek zvaných methylxanthiny; kofein zrychluje tep, způsobuje u koček neklid a dráždí žaludek.",
+    "hr": "Energetska i sportska pića često sadrže mnogo kofeina. Mačke su na kofein osjetljivije od ljudi. Kao i čokolada, kava i druge namirnice s kofeinom sadrže mnogo stimulansa koji se zovu metilksantini; kofein ubrzava rad srca, čini mačke nemirnima i izaziva želučane tegobe."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Hyperaktivita",
       "Podrážděný žaludek",
       "Zrychlený tep nebo změny srdečního rytmu"
+    ],
+    "hr": [
+      "Nemir, nervoza, ne želi mirno ležati",
+      "Hiperaktivnost",
+      "Želučane tegobe",
+      "Ubrzan rad srca ili promjene srčanog ritma"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato bebeu, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gedronken, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co wypił twój kot, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka vypila, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka vypila, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka popila, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "As bebidas energéticas são para adultos, não para gatos. O gatinho só precisa de água fresca. Avisa um adulto se ele beber alguma.",
     "nl": "Energiedrankjes zijn voor volwassenen, niet voor katten. Je poes heeft alleen vers water nodig. Drinkt ze er toch van? Vertel het meteen aan een volwassene.",
     "pl": "Napoje energetyczne są dla dorosłych, nie dla kotów. Kotek potrzebuje tylko świeżej wody. Powiedz dorosłemu, jeśli kotek trochę wypije.",
-    "cs": "Energetické nápoje jsou pro dospělé, ne pro kočky. Kočička potřebuje jen čerstvou vodu. Když se trochu napije, řekni to dospělému."
+    "cs": "Energetické nápoje jsou pro dospělé, ne pro kočky. Kočička potřebuje jen čerstvou vodu. Když se trochu napije, řekni to dospělému.",
+    "hr": "Energetska pića su za odrasle, a ne za mace. Maci treba samo svježa voda. Reci odrasloj osobi ako je malo popila."
   },
   "faq": [],
   "sources": [
@@ -265,6 +278,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "544112ca2ee68c14d509e1eaa9982dbdcecacccf2c1d9e596289b313ec13b555"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a34ab57a4113bb6f702b9483ff3846506584bee26fdd119b01aa57e7630f5ce4"
     }
   }
 }

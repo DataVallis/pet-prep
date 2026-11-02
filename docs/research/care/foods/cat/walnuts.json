@@ -11,7 +11,8 @@
     "pt": "Nozes",
     "nl": "Walnoten",
     "pl": "Orzechy włoskie",
-    "cs": "Vlašské ořechy"
+    "cs": "Vlašské ořechy",
+    "hr": "Orasi"
   },
   "question": {
     "en": "Can cats eat walnuts?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer nozes?",
     "nl": "Mogen katten walnoten eten?",
     "pl": "Czy koty mogą jeść orzechy włoskie?",
-    "cs": "Mohou kočky jíst vlašské ořechy?"
+    "cs": "Mohou kočky jíst vlašské ořechy?",
+    "hr": "Smiju li mačke jesti orahe?"
   },
   "url_slug": {
     "en": "walnuts",
@@ -35,7 +37,8 @@
     "pt": "nozes",
     "nl": "walnoten",
     "pl": "orzechy-wloskie",
-    "cs": "vlasske-orechy"
+    "cs": "vlasske-orechy",
+    "hr": "orasi"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, é melhor manter as nozes longe dos gatos. Têm muitos óleos e gorduras, que podem pôr o gato doente e causar vómitos ou diarreia.",
     "nl": "Nee, houd walnoten liever bij katten uit de buurt. Ze bevatten veel olie en vet, waar een kat ziek van kan worden en die braken of diarree kunnen veroorzaken.",
     "pl": "Nie, orzechy włoskie lepiej trzymać z dala od kota. Zawierają dużo olejów i tłuszczu, które mogą zaszkodzić kotu i wywołać wymioty lub biegunkę.",
-    "cs": "Ne, vlašské ořechy je lepší držet mimo dosah koček. Obsahují hodně olejů a tuků, které mohou kočce uškodit a mohou způsobit zvracení nebo průjem."
+    "cs": "Ne, vlašské ořechy je lepší držet mimo dosah koček. Obsahují hodně olejů a tuků, které mohou kočce uškodit a mohou způsobit zvracení nebo průjem.",
+    "hr": "Ne, orahe je bolje držati daleko od mačaka. Sadrže puno ulja i masti, zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev."
   },
   "why": {
     "en": "Cats Protection names walnuts among nuts with high amounts of oils and fats that can make a cat unwell. VCA adds that most nuts are very fatty and can cause vomiting and diarrhoea.",
@@ -60,7 +64,8 @@
     "pt": "A Cats Protection inclui as nozes entre os frutos secos com grande quantidade de óleos e gorduras que podem pôr um gato doente. A VCA acrescenta que a maioria dos frutos secos é muito gorda e pode causar vómitos e diarreia.",
     "nl": "Cats Protection noemt walnoten bij de noten met veel olie en vet die een kat ziek kunnen maken. VCA voegt daaraan toe dat de meeste noten erg vet zijn en braken en diarree kunnen veroorzaken.",
     "pl": "Cats Protection wymienia orzechy włoskie wśród orzechów z dużą zawartością olejów i tłuszczu, które mogą zaszkodzić kotu. VCA dodaje, że większość orzechów jest bardzo tłusta i może wywołać wymioty i biegunkę.",
-    "cs": "Cats Protection uvádí vlašské ořechy mezi ořechy s vysokým obsahem olejů a tuků, které mohou kočce uškodit. VCA dodává, že většina ořechů je velmi tučná a může způsobit zvracení a průjem."
+    "cs": "Cats Protection uvádí vlašské ořechy mezi ořechy s vysokým obsahem olejů a tuků, které mohou kočce uškodit. VCA dodává, že většina ořechů je velmi tučná a může způsobit zvracení a průjem.",
+    "hr": "Cats Protection navodi orahe među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA dodaje da je većina orašastih plodova vrlo masna i da mogu izazvati povraćanje i proljev."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Průjem",
       "Podrážděný žaludek",
       "Kočka působí nemocně"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Želučane tegobe",
+      "Djeluje kao da joj nije dobro"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Se o teu gato comeu nozes, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Toma nota do que comeu, da quantidade e de quando.",
     "nl": "Heeft je kat walnoten gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer.",
     "pl": "Jeśli twój kot zjadł orzechy włoskie, poradź się weterynarza, zwłaszcza jeśli zjadł ich dużo lub źle się czuje. Zapisz, co zjadł, ile i kiedy.",
-    "cs": "Pokud vaše kočka snědla vlašské ořechy, obraťte se o radu na veterináře, zvlášť pokud jich snědla hodně nebo se nezdá v pořádku. Poznamenejte si, co snědla, kolik a kdy."
+    "cs": "Pokud vaše kočka snědla vlašské ořechy, obraťte se o radu na veterináře, zvlášť pokud jich snědla hodně nebo se nezdá v pořádku. Poznamenejte si, co snědla, kolik a kdy.",
+    "hr": "Ako je mačka pojela orahe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "As nozes são demasiado gordurosas para a barriga de um gato. Ficam para as pessoas; dá ao teu gato as guloseimas dele.",
     "nl": "Walnoten zijn te vet voor de buik van een kat. Houd ze voor mensen en geef je kat haar eigen snoepjes.",
     "pl": "Orzechy włoskie są za tłuste dla kociego brzuszka. Zostaw je dla ludzi, a kotu daj jego własne smakołyki.",
-    "cs": "Vlašské ořechy jsou na kočičí bříško moc mastné. Nech je lidem a dej kočce její vlastní pamlsky."
+    "cs": "Vlašské ořechy jsou na kočičí bříško moc mastné. Nech je lidem a dej kočce její vlastní pamlsky.",
+    "hr": "Orasi su previše masni za macin trbuščić. Ostavi ih ljudima, a maci daj njezine poslastice."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "Há frutos secos piores do que outros?",
         "nl": "Zijn sommige noten erger dan andere?",
         "pl": "Czy niektóre orzechy są gorsze od innych?",
-        "cs": "Jsou některé ořechy horší než jiné?"
+        "cs": "Jsou některé ořechy horší než jiné?",
+        "hr": "Jesu li neki orašasti plodovi opasniji od drugih?"
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
@@ -173,7 +187,8 @@
         "pt": "Sim. As nozes de macadâmia são gordas e também tóxicas para os gatos, por isso são as que exigem mais cuidado.",
         "nl": "Ja. Macadamianoten zijn vet en ook giftig voor katten, dus daarmee moet je het meest oppassen.",
         "pl": "Tak. Orzechy makadamia są tłuste, a do tego toksyczne dla kotów, więc z nimi trzeba uważać najbardziej.",
-        "cs": "Ano. Makadamové ořechy jsou tučné a pro kočky navíc toxické, takže právě s nimi je třeba být nejopatrnější."
+        "cs": "Ano. Makadamové ořechy jsou tučné a pro kočky navíc toxické, takže právě s nimi je třeba být nejopatrnější.",
+        "hr": "Jesu. Makadamija je masna i uz to otrovna za mačke, pa na nju treba najviše paziti."
       }
     }
   ],
@@ -250,6 +265,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fc39caabd28e1f60bf879e23e8e8cbf1371ece6fe601a985259cf67c28f5a76f"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "71fadd94cb5c9d4c6446b443368939cdcab836acba3b5b6539b40d179925ed98"
     }
   }
 }

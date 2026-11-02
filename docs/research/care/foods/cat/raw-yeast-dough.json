@@ -11,7 +11,8 @@
     "pt": "Massa crua com fermento",
     "nl": "Rauw gistdeeg",
     "pl": "Surowe ciasto drożdżowe",
-    "cs": "Syrové kynuté těsto"
+    "cs": "Syrové kynuté těsto",
+    "hr": "Sirovo tijesto s kvascem"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer massa crua com fermento?",
     "nl": "Mogen katten rauw gistdeeg eten?",
     "pl": "Czy koty mogą jeść surowe ciasto drożdżowe?",
-    "cs": "Mohou kočky jíst syrové kynuté těsto?"
+    "cs": "Mohou kočky jíst syrové kynuté těsto?",
+    "hr": "Smiju li mačke jesti sirovo tijesto s kvascem?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -35,7 +37,8 @@
     "pt": "massa-crua-com-fermento",
     "nl": "rauw-gistdeeg",
     "pl": "surowe-ciasto-drozdzowe",
-    "cs": "syrove-kynute-testo"
+    "cs": "syrove-kynute-testo",
+    "hr": "sirovo-tijesto-s-kvascem"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma.",
     "nl": "Nee. Rauw gistdeeg is op twee manieren gevaarlijk voor katten: het kan in de maag blijven uitzetten en een verstopping veroorzaken, en de gist maakt alcohol aan, die giftig is voor katten. Houd rijzend deeg buiten bereik en bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Surowe ciasto drożdżowe jest dla kotów niebezpieczne na dwa sposoby: może dalej rosnąć w żołądku i spowodować niedrożność, a drożdże wytwarzają alkohol, który jest dla kotów toksyczny. Trzymaj rosnące ciasto poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot trochę zje.",
-    "cs": "Ne. Syrové kynuté těsto je pro kočky nebezpečné dvojím způsobem: v žaludku může dál nabývat na objemu a způsobit ucpání a kvasinky vytvářejí alkohol, který je pro kočky toxický. Kynoucí těsto mějte mimo dosah kočky, a pokud ho vaše kočka sní, zavolejte veterináři."
+    "cs": "Ne. Syrové kynuté těsto je pro kočky nebezpečné dvojím způsobem: v žaludku může dál nabývat na objemu a způsobit ucpání a kvasinky vytvářejí alkohol, který je pro kočky toxický. Kynoucí těsto mějte mimo dosah kočky, a pokud ho vaše kočka sní, zavolejte veterináři.",
+    "hr": "Ne. Sirovo tijesto s kvascem opasno je za mačke na dva načina: može se nastaviti širiti u želucu i izazvati začepljenje, a kvasac stvara alkohol, koji je otrovan za mačke. Tijesto koje se diže drži izvan dosega mačke i nazovi veterinara ako ga mačka pojede makar malo."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
@@ -60,7 +64,8 @@
     "pt": "A massa crua contém algum álcool e produz dióxido de carbono. Depois de a massa ser engolida, o fermento continua a trabalhar no estômago: a massa cresce e pode causar uma obstrução, enquanto o álcool produzido é absorvido para o sangue. Os gatos são especialmente sensíveis ao álcool.",
     "nl": "Rauw deeg bevat wat alcohol en produceert koolstofdioxide. Na het inslikken blijft de gist in de maag actief: het deeg zet uit en kan een verstopping veroorzaken, terwijl de alcohol die ontstaat in het bloed wordt opgenomen. Katten zijn bijzonder gevoelig voor alcohol.",
     "pl": "Surowe ciasto zawiera trochę alkoholu i wytwarza dwutlenek węgla. Po połknięciu drożdże dalej pracują w żołądku: ciasto rośnie i może spowodować niedrożność, a wytwarzany alkohol wchłania się do krwi. Koty są szczególnie wrażliwe na alkohol.",
-    "cs": "Syrové těsto obsahuje trochu alkoholu a vytváří oxid uhličitý. Po spolknutí kvasinky v žaludku dál pracují: těsto zvětšuje objem a může způsobit ucpání, zatímco vznikající alkohol se vstřebává do krve. Kočky jsou na alkohol obzvlášť citlivé."
+    "cs": "Syrové těsto obsahuje trochu alkoholu a vytváří oxid uhličitý. Po spolknutí kvasinky v žaludku dál pracují: těsto zvětšuje objem a může způsobit ucpání, zatímco vznikající alkohol se vstřebává do krve. Kočky jsou na alkohol obzvlášť citlivé.",
+    "hr": "Sirovo tijesto sadrži nešto alkohola i stvara ugljikov dioksid. Nakon što ga mačka proguta, kvasac nastavlja djelovati u želucu: tijesto se širi i može izazvati začepljenje, a alkohol koji pritom nastaje upija se u krv. Mačke su posebno osjetljive na alkohol."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Pokusy o zvracení, při kterých nic nevyjde",
       "Vrávoravá chůze nebo zmatenost",
       "Neobvyklá slabost nebo ospalost"
+    ],
+    "hr": [
+      "Natečen, napuhnut trbuh",
+      "Pokušaji povraćanja bez izbacivanja sadržaja",
+      "Teturav hod ili zbunjenost",
+      "Neuobičajena slabost ili pospanost"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quanta massa o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile ciasta zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta vaše kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta vaše kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je tijesta mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho.",
     "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg weg bij je poes. Eet ze er toch van? Vertel het meteen aan een volwassene.",
     "pl": "Ciasto na chleb ma rosnąć w misce, a nie w brzuszku. Trzymaj ciasto z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
-    "cs": "Těsto na chleba má kynout v míse, ne v bříšku. Drž těsto daleko od kočičky, a když ho sní, řekni to dospělému."
+    "cs": "Těsto na chleba má kynout v míse, ne v bříšku. Drž těsto daleko od kočičky, a když ho sní, řekni to dospělému.",
+    "hr": "Tijesto za kruh treba se dizati u zdjeli, a ne u trbuščiću. Drži tijesto daleko od mace i reci odrasloj osobi ako ga maca pojede."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "Porque é que a massa crua é perigosa, se não é um veneno?",
         "nl": "Waarom is rauw deeg gevaarlijk als het zelf geen gif is?",
         "pl": "Dlaczego surowe ciasto jest niebezpieczne, skoro samo nie jest trucizną?",
-        "cs": "Proč je syrové těsto nebezpečné, když samo o sobě není jed?"
+        "cs": "Proč je syrové těsto nebezpečné, když samo o sobě není jed?",
+        "hr": "Zašto je sirovo tijesto opasno ako samo po sebi nije otrov?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
@@ -173,7 +187,8 @@
         "pt": "A massa crua tem fermento vivo. No estômago continua a crescer e a produzir álcool, por isso pode causar uma obstrução e também uma intoxicação por álcool.",
         "nl": "Rauw deeg bevat levende gist. In de maag blijft het rijzen en alcohol aanmaken, dus het kan zowel een verstopping veroorzaken als tot een alcoholvergiftiging leiden.",
         "pl": "Surowe ciasto zawiera żywe drożdże. W żołądku dalej rośnie i wytwarza alkohol, więc może zarówno spowodować niedrożność, jak i doprowadzić do zatrucia alkoholem.",
-        "cs": "Syrové těsto obsahuje živé kvasinky. V žaludku dál kyne a vytváří alkohol, takže může způsobit ucpání i otravu alkoholem."
+        "cs": "Syrové těsto obsahuje živé kvasinky. V žaludku dál kyne a vytváří alkohol, takže může způsobit ucpání i otravu alkoholem.",
+        "hr": "Sirovo tijesto sadrži živi kvasac. U želucu se nastavlja dizati i stvarati alkohol, pa može izazvati i začepljenje i otrovanje alkoholom."
       }
     }
   ],
@@ -291,6 +306,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2bcd18ae55b2daa7f4eeefea85f14d5c83c4018b0b1be8c19a8c1b0e3b923ded"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "64635a140613588c34c7e2fe7adccec553c6dc986ed1322555daf533bfb13cb0"
     }
   }
 }

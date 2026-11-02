@@ -11,7 +11,8 @@
     "pt": "Alho",
     "nl": "Knoflook",
     "pl": "Czosnek",
-    "cs": "Česnek"
+    "cs": "Česnek",
+    "hr": "Češnjak"
   },
   "question": {
     "en": "Can dogs eat garlic?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer alho?",
     "nl": "Mogen honden knoflook eten?",
     "pl": "Czy psy mogą jeść czosnek?",
-    "cs": "Mohou psi jíst česnek?"
+    "cs": "Mohou psi jíst česnek?",
+    "hr": "Smiju li psi jesti češnjak?"
   },
   "url_slug": {
     "en": "garlic",
@@ -35,7 +37,8 @@
     "pt": "alho",
     "nl": "knoflook",
     "pl": "czosnek",
-    "cs": "cesnek"
+    "cs": "cesnek",
+    "hr": "cesnjak"
   },
   "level": "toxic",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. O alho é tóxico para os cães e cerca de 3–5 vezes mais tóxico do que a cebola. O alho cru, cozinhado, seco ou em pó pode danificar os glóbulos vermelhos e causar anemia. Os sinais muitas vezes só aparecem alguns dias depois.",
     "nl": "Nee. Knoflook is giftig voor honden en ongeveer 3 tot 5 keer giftiger dan ui. Rauwe, gekookte, gedroogde knoflook en knoflookpoeder kunnen allemaal rode bloedcellen beschadigen en bloedarmoede veroorzaken. Verschijnselen komen vaak pas een paar dagen na het eten.",
     "pl": "Nie. Czosnek jest toksyczny dla psów i około 3–5 razy bardziej toksyczny niż cebula. Surowy, gotowany, suszony i sproszkowany czosnek może uszkadzać czerwone krwinki i wywołać anemię. Objawy często pojawiają się dopiero kilka dni po zjedzeniu.",
-    "cs": "Ne. Česnek je pro psy jedovatý a je zhruba 3–5krát jedovatější než cibule. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Příznaky se často objeví až několik dní po snědení."
+    "cs": "Ne. Česnek je pro psy jedovatý a je zhruba 3–5krát jedovatější než cibule. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Příznaky se často objeví až několik dní po snědení.",
+    "hr": "Ne. Češnjak je otrovan za pse i otprilike 3 do 5 puta otrovniji od luka. Češnjak u svakom obliku – sirov, termički obrađen, sušen ili u prahu – može oštetiti crvene krvne stanice i izazvati anemiju. Znakovi se često pojave tek nekoliko dana nakon jedenja."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -60,7 +64,8 @@
     "pt": "O alho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
     "nl": "Knoflook hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Czosnek należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
-    "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev."
+    "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
+    "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Nechuť k jídlu",
       "Podrážděný žaludek, i po malém množství",
       "Známky chudokrevnosti (poškozené červené krvinky), obvykle o několik dní později"
+    ],
+    "hr": [
+      "Povraćanje i proljev",
+      "Pas jede manje nego inače",
+      "Probavne tegobe, čak i nakon malih količina",
+      "Znakovi anemije (oštećene crvene krvne stanice), obično nekoliko dana kasnije"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que comeu (alho) e mais ou menos quanto. Não esperes pelos sinais: os danos no sangue normalmente só se veem alguns dias depois.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten (knoflook) en ongeveer hoeveel. Wacht niet op verschijnselen: schade aan het bloed is meestal pas een paar dagen later te zien.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (czosnek) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (česnek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech."
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (česnek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (češnjak) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "O alho tem um cheiro forte e as pessoas gostam do sabor, mas não é para cães. Avisa um adulto se o teu cão comer um bocadinho.",
     "nl": "Knoflook ruikt sterk en mensen vinden het lekker, maar het is niet voor honden. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Czosnek mocno pachnie i ludziom smakuje, ale nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
-    "cs": "Česnek silně voní a lidem chutná, ale pro psy není. Když ho pes sní, řekni to dospělému."
+    "cs": "Česnek silně voní a lidem chutná, ale pro psy není. Když ho pes sní, řekni to dospělému.",
+    "hr": "Češnjak jako miriše i ljudima je fin, ali nije za pse. Ako ga pas pojede, reci odrasloj osobi."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "O alho é pior do que a cebola?",
         "nl": "Is knoflook erger dan ui?",
         "pl": "Czy czosnek jest gorszy niż cebula?",
-        "cs": "Je česnek horší než cibule?"
+        "cs": "Je česnek horší než cibule?",
+        "hr": "Je li češnjak gori od luka?"
       },
       "a": {
         "en": "Yes. Garlic is described as about 3 to 5 times more toxic to dogs than onion.",
@@ -173,7 +187,8 @@
         "pt": "Sim. O alho é descrito como cerca de 3–5 vezes mais tóxico para os cães do que a cebola.",
         "nl": "Ja. Knoflook wordt beschreven als ongeveer 3 tot 5 keer giftiger voor honden dan ui.",
         "pl": "Tak. Czosnek opisuje się jako około 3–5 razy bardziej toksyczny dla psów niż cebula.",
-        "cs": "Ano. Česnek je pro psy popisován jako zhruba 3–5krát jedovatější než cibule."
+        "cs": "Ano. Česnek je pro psy popisován jako zhruba 3–5krát jedovatější než cibule.",
+        "hr": "Da. Za češnjak se navodi da je za pse otprilike 3 do 5 puta otrovniji od luka."
       }
     },
     {
@@ -187,7 +202,8 @@
         "pt": "É seguro cozinhado ou em pó?",
         "nl": "Is het veilig als het gekookt is of als poeder?",
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?",
-        "cs": "Je bezpečný tepelně upravený česnek nebo česnek v prášku?"
+        "cs": "Je bezpečný tepelně upravený česnek nebo česnek v prášku?",
+        "hr": "Je li siguran kad je termički obrađen ili u prahu?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -199,7 +215,8 @@
         "pt": "Não. As formas cruas, cozinhadas, secas, em pó e líquidas são todas venenosas para os cães.",
         "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden.",
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
-        "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá."
+        "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
+        "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku."
       }
     },
     {
@@ -213,7 +230,8 @@
         "pt": "Porque é que os sinais não aparecem logo?",
         "nl": "Waarom zie je niet meteen verschijnselen?",
         "pl": "Dlaczego objawy nie pojawiają się od razu?",
-        "cs": "Proč se příznaky neobjeví hned?"
+        "cs": "Proč se příznaky neobjeví hned?",
+        "hr": "Zašto se znakovi ne pokažu odmah?"
       },
       "a": {
         "en": "Symptoms can start within 24 hours but more often take a few days to appear; signs of anaemia typically develop several days after eating.",
@@ -225,7 +243,8 @@
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
-        "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení."
+        "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
+        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon jedenja."
       }
     }
   ],
@@ -368,6 +387,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "13d03797e61b3a3d8c8c8db433214f0514eb6154bf6288a13d13f2fda2bda832"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d6b71b165723807a447eae7a7873d4bc7f63236451023978ea96917e53a2c917"
     }
   }
 }

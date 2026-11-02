@@ -11,7 +11,8 @@
     "pt": "Leite",
     "nl": "Melk",
     "pl": "Mleko",
-    "cs": "Mléko"
+    "cs": "Mléko",
+    "hr": "Mlijeko"
   },
   "question": {
     "en": "Can cats drink milk?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem beber leite?",
     "nl": "Mogen katten melk drinken?",
     "pl": "Czy koty mogą pić mleko?",
-    "cs": "Mohou kočky pít mléko?"
+    "cs": "Mohou kočky pít mléko?",
+    "hr": "Smiju li mačke piti mlijeko?"
   },
   "url_slug": {
     "en": "milk",
@@ -35,7 +37,8 @@
     "pt": "leite",
     "nl": "melk",
     "pl": "mleko",
-    "cs": "mleko"
+    "cs": "mleko",
+    "hr": "mlijeko"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "É melhor não. A maioria dos gatos adultos é intolerante à lactose, por isso o leite de vaca pode causar vómitos, diarreia e dores de estômago. Os gatos não ganham nada com o leite; a água fresca é tudo o que precisam de beber.",
     "nl": "Liever niet. De meeste volwassen katten zijn lactose-intolerant, dus koemelk kan braken, diarree en buikpijn veroorzaken. Katten hebben niets aan melk; vers water is het enige wat ze hoeven te drinken.",
     "pl": "Lepiej nie. Większość dorosłych kotów nie toleruje laktozy, więc mleko krowie może wywołać wymioty, biegunkę i ból brzucha. Mleko nie daje kotom żadnych korzyści; do picia potrzebują tylko świeżej wody.",
-    "cs": "Raději ne. Většina dospělých koček nesnáší laktózu, takže kravské mléko může způsobit zvracení, průjem a bolest břicha. Kočkám mléko nic nepřináší; k pití potřebují jen čerstvou vodu."
+    "cs": "Raději ne. Většina dospělých koček nesnáší laktózu, takže kravské mléko může způsobit zvracení, průjem a bolest břicha. Kočkám mléko nic nepřináší; k pití potřebují jen čerstvou vodu.",
+    "hr": "Bolje ne. Većina odraslih mačaka ne podnosi laktozu, pa kravlje mlijeko može izazvati povraćanje, proljev i bol u trbuhu. Mlijeko mačkama ne donosi nikakvu korist; za piće im treba samo svježa voda."
   },
   "why": {
     "en": "Milk contains lactose, a sugar that needs the enzyme lactase to be digested. Cats have very little lactase, so most are lactose intolerant and dairy often upsets their stomach. Kittens drink their mother's milk, but orphaned kittens need special kitten milk, not cow's milk.",
@@ -60,7 +64,8 @@
     "pt": "O leite contém lactose, um açúcar que precisa da enzima lactase para ser digerido. Os gatos têm muito pouca lactase, por isso a maioria é intolerante à lactose e os laticínios fazem-lhes muitas vezes mal ao estômago. Os gatinhos bebem o leite da mãe, mas os gatinhos órfãos precisam de leite especial para gatinhos, e não de leite de vaca.",
     "nl": "Melk bevat lactose, een suiker die het enzym lactase nodig heeft om verteerd te worden. Katten hebben heel weinig lactase, dus de meeste zijn lactose-intolerant en zuivel maakt hun maag vaak van streek. Kittens drinken de melk van hun moeder, maar moederloze kittens hebben speciale kittenmelk nodig, geen koemelk.",
     "pl": "Mleko zawiera laktozę, cukier, do którego strawienia potrzebny jest enzym laktaza. Koty mają bardzo mało laktazy, więc większość z nich nie toleruje laktozy, a nabiał często wywołuje u nich rozstrój żołądka. Kocięta piją mleko matki, ale osierocone kocięta potrzebują specjalnego mleka dla kociąt, a nie mleka krowiego.",
-    "cs": "Mléko obsahuje laktózu, cukr, k jehož trávení je potřeba enzym laktáza. Kočky mají laktázy velmi málo, takže většina z nich laktózu nesnáší a mléčné výrobky jim často podráždí žaludek. Koťata pijí mléko své matky, ale osiřelá koťata potřebují speciální mléko pro koťata, ne kravské."
+    "cs": "Mléko obsahuje laktózu, cukr, k jehož trávení je potřeba enzym laktáza. Kočky mají laktázy velmi málo, takže většina z nich laktózu nesnáší a mléčné výrobky jim často podráždí žaludek. Koťata pijí mléko své matky, ale osiřelá koťata potřebují speciální mléko pro koťata, ne kravské.",
+    "hr": "Mlijeko sadrži laktozu, šećer za čiju je probavu potreban enzim laktaza. Mačke imaju vrlo malo laktaze, pa većina ne podnosi laktozu, a mliječni proizvodi često im izazivaju probavne smetnje. Mačići piju majčino mlijeko, ali mačićima bez majke potrebno je posebno mlijeko za mačiće, a ne kravlje mlijeko."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Zvracení",
       "Průjem",
       "Bolest břicha"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Bol u trbuhu"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Se o teu gato bebeu leite e tem vómitos ou diarreia que não passam, ou parece doente, contacta o teu veterinário para pedir conselho.",
     "nl": "Heeft je kat melk gedronken en heeft ze braken of diarree die niet overgaat, of lijkt ze ziek? Vraag dan je dierenarts om advies.",
     "pl": "Jeśli twój kot wypił mleko i ma wymioty lub biegunkę, które nie mijają, albo źle się czuje, poradź się weterynarza.",
-    "cs": "Pokud vaše kočka vypila mléko a zvracení nebo průjem neustupují, případně se zdá nemocná, obraťte se o radu na veterináře."
+    "cs": "Pokud vaše kočka vypila mléko a zvracení nebo průjem neustupují, případně se zdá nemocná, obraťte se o radu na veterináře.",
+    "hr": "Ako je mačka popila mlijeko pa povraća ili ima proljev koji ne prolazi ili ti se čini da joj nije dobro, obrati se veterinaru za savjet."
   },
   "serving": {
     "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
@@ -136,7 +147,8 @@
     "pt": "Se quiseres oferecer leite, escolhe um leite próprio para gatos (normalmente com pouca ou nenhuma lactose) e conta as calorias dele na comida diária do teu gato.",
     "nl": "Wil je toch melk geven, kies dan melk die voor katten is gemaakt (meestal lactosearm of lactosevrij) en tel de calorieën mee bij het dagelijkse eten van je kat.",
     "pl": "Jeśli chcesz dać kotu mleko, wybierz mleko dla kotów (zwykle o obniżonej zawartości laktozy lub bez laktozy) i wliczaj jego kalorie do dziennej porcji jedzenia kota.",
-    "cs": "Pokud chcete mléko nabídnout, zvolte mléko určené pro kočky (obvykle se sníženým obsahem laktózy nebo bez laktózy) a jeho kalorie započítejte do denní dávky krmiva vaší kočky."
+    "cs": "Pokud chcete mléko nabídnout, zvolte mléko určené pro kočky (obvykle se sníženým obsahem laktózy nebo bez laktózy) a jeho kalorie započítejte do denní dávky krmiva vaší kočky.",
+    "hr": "Ako joj želiš ponuditi mlijeko, odaberi mlijeko namijenjeno mačkama (obično sa smanjenim udjelom laktoze ili bez laktoze) i uračunaj njegove kalorije u mačkin dnevni obrok."
   },
   "child": {
     "en": "Cartoon cats love milk, but real cats get a sore tummy from it. Fresh water is kitty's best drink!",
@@ -148,7 +160,8 @@
     "pt": "Os gatos dos desenhos animados adoram leite, mas os gatos a sério ficam com dor de barriga. A água fresca é a melhor bebida para o gatinho!",
     "nl": "Katten in tekenfilms zijn dol op melk, maar echte katten krijgen er buikpijn van. Vers water is het beste drankje voor je poes!",
     "pl": "Koty z bajek uwielbiają mleko, ale prawdziwe koty boli od niego brzuszek. Świeża woda to najlepszy napój dla kotka!",
-    "cs": "Kočky v kreslených pohádkách mléko milují, ale skutečné kočky z něj může bolet bříško. Nejlepší pití pro kočičku je čerstvá voda!"
+    "cs": "Kočky v kreslených pohádkách mléko milují, ale skutečné kočky z něj může bolet bříško. Nejlepší pití pro kočičku je čerstvá voda!",
+    "hr": "Mačke iz crtića obožavaju mlijeko, ali prave mace od njega zaboli trbuščić. Svježa voda macino je najbolje piće!"
   },
   "faq": [
     {
@@ -162,7 +175,8 @@
         "pt": "Os gatos adultos são intolerantes à lactose?",
         "nl": "Zijn volwassen katten lactose-intolerant?",
         "pl": "Czy dorosłe koty nie tolerują laktozy?",
-        "cs": "Nesnášejí dospělé kočky laktózu?"
+        "cs": "Nesnášejí dospělé kočky laktózu?",
+        "hr": "Podnose li odrasle mačke laktozu?"
       },
       "a": {
         "en": "Yes, most are. Cats lack significant amounts of lactase, the enzyme that breaks down lactose in milk, so milk can cause vomiting, diarrhoea and stomach pain.",
@@ -174,7 +188,8 @@
         "pt": "Sim, a maioria é. Os gatos não têm quantidades significativas de lactase, a enzima que decompõe a lactose do leite, por isso o leite pode causar vómitos, diarreia e dores de estômago.",
         "nl": "Ja, de meeste wel. Katten hebben weinig lactase, het enzym dat lactose in melk afbreekt, dus melk kan braken, diarree en buikpijn veroorzaken.",
         "pl": "Tak, większość z nich. Koty mają bardzo mało laktazy, czyli enzymu rozkładającego laktozę z mleka, więc mleko może wywołać wymioty, biegunkę i ból brzucha.",
-        "cs": "Ano, většina z nich. Kočky nemají dostatek laktázy, enzymu, který štěpí laktózu v mléce, a proto jim mléko může způsobit zvracení, průjem a bolest břicha."
+        "cs": "Ano, většina z nich. Kočky nemají dostatek laktázy, enzymu, který štěpí laktózu v mléce, a proto jim mléko může způsobit zvracení, průjem a bolest břicha.",
+        "hr": "Većina ih ne podnosi. Mačke nemaju znatnije količine laktaze, enzima koji razgrađuje laktozu u mlijeku, pa mlijeko može izazvati povraćanje, proljev i bol u trbuhu."
       }
     },
     {
@@ -188,7 +203,8 @@
         "pt": "O que devem beber os gatinhos?",
         "nl": "Wat moeten kittens drinken?",
         "pl": "Co powinny pić kocięta?",
-        "cs": "Co by měla pít koťata?"
+        "cs": "Co by měla pít koťata?",
+        "hr": "Što bi mačići trebali piti?"
       },
       "a": {
         "en": "Kittens need their mother's milk. If a kitten has to be bottle-fed, give only special kitten milk, because other milks don't have the right balance of nutrients.",
@@ -200,7 +216,8 @@
         "pt": "Os gatinhos precisam do leite da mãe. Se um gatinho tiver de ser alimentado a biberão, dá-lhe apenas leite especial para gatinhos, porque os outros leites não têm o equilíbrio certo de nutrientes.",
         "nl": "Kittens hebben de melk van hun moeder nodig. Moet een kitten met de fles worden gevoed, geef dan alleen speciale kittenmelk, want andere soorten melk hebben niet de juiste balans aan voedingsstoffen.",
         "pl": "Kocięta potrzebują mleka matki. Jeśli kocię trzeba karmić butelką, dawaj mu tylko specjalne mleko dla kociąt, bo inne rodzaje mleka nie mają odpowiednich proporcji składników odżywczych.",
-        "cs": "Koťata potřebují mléko své matky. Pokud musí být kotě krmeno z lahve, dávejte mu jen speciální mléko pro koťata, protože jiná mléka nemají správný poměr živin."
+        "cs": "Koťata potřebují mléko své matky. Pokud musí být kotě krmeno z lahve, dávejte mu jen speciální mléko pro koťata, protože jiná mléka nemají správný poměr živin.",
+        "hr": "Mačićima je potrebno majčino mlijeko. Ako mačića moraš hraniti na bočicu, daj mu samo posebno mlijeko za mačiće jer druge vrste mlijeka nemaju pravi omjer hranjivih tvari."
       }
     },
     {
@@ -214,7 +231,8 @@
         "pt": "Posso dar o leite para gatos que se vende nas lojas?",
         "nl": "Is kattenmelk uit de winkel oké?",
         "pl": "Czy mleko dla kotów ze sklepu jest w porządku?",
-        "cs": "Je kočičí mléko z obchodu v pořádku?"
+        "cs": "Je kočičí mléko z obchodu v pořádku?",
+        "hr": "Je li mlijeko za mačke iz trgovine u redu?"
       },
       "a": {
         "en": "Milk made for cats usually has much less lactose or none. It still has calories, so count it in your cat's daily food. Your cat only needs water to drink.",
@@ -226,7 +244,8 @@
         "pt": "O leite próprio para gatos tem normalmente muito menos lactose ou nenhuma. Mesmo assim, tem calorias, por isso conta-o na comida diária do teu gato. O teu gato só precisa de beber água.",
         "nl": "Melk die voor katten is gemaakt, bevat meestal veel minder lactose of helemaal geen. Er zitten wel calorieën in, dus tel het mee bij het dagelijkse eten van je kat. Je kat hoeft alleen water te drinken.",
         "pl": "Mleko dla kotów zwykle zawiera dużo mniej laktozy albo nie zawiera jej wcale. Ma jednak kalorie, więc wliczaj je do dziennej porcji jedzenia kota. Do picia kot potrzebuje tylko wody.",
-        "cs": "Mléko určené pro kočky má obvykle mnohem méně laktózy, nebo žádnou. Stále však obsahuje kalorie, proto ho započítejte do denní dávky krmiva. K pití vaše kočka potřebuje jen vodu."
+        "cs": "Mléko určené pro kočky má obvykle mnohem méně laktózy, nebo žádnou. Stále však obsahuje kalorie, proto ho započítejte do denní dávky krmiva. K pití vaše kočka potřebuje jen vodu.",
+        "hr": "Mlijeko namijenjeno mačkama obično ima mnogo manje laktoze ili je uopće nema. Ipak ima kalorije, pa ih uračunaj u mačkin dnevni obrok. Za piće tvojoj mački treba samo voda."
       }
     }
   ],
@@ -338,6 +357,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dc61ddc0cbad8016fb15cad46c29b69ea76e89c695722cb59ffc078374f8bf27"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c71a448c2410b16f016d66feab8a2b2065a78006ac8ea2736aac95c283a4dcbc"
     }
   }
 }

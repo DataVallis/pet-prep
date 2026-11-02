@@ -11,7 +11,8 @@
     "pt": "Nozes-pecã",
     "nl": "Pecannoten",
     "pl": "Orzechy pekan",
-    "cs": "Pekanové ořechy"
+    "cs": "Pekanové ořechy",
+    "hr": "Pekan orasi"
   },
   "question": {
     "en": "Can dogs eat pecans?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer nozes-pecã?",
     "nl": "Mogen honden pecannoten eten?",
     "pl": "Czy psy mogą jeść orzechy pekan?",
-    "cs": "Mohou psi jíst pekanové ořechy?"
+    "cs": "Mohou psi jíst pekanové ořechy?",
+    "hr": "Smiju li psi jesti pekan orahe?"
   },
   "url_slug": {
     "en": "pecans",
@@ -35,7 +37,8 @@
     "pt": "nozes-peca",
     "nl": "pecannoten",
     "pl": "orzechy-pekan",
-    "cs": "pekanove-orechy"
+    "cs": "pekanove-orechy",
+    "hr": "pekan-orasi"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não. As nozes-pecã não fazem bem aos cães: mesmo poucas podem pôr um cão muito doente. Contêm juglona, podem ter bolor tóxico, são gordas e as cascas duras podem causar engasgamento ou obstruções. Liga ao teu veterinário se o teu cão comer alguma.",
     "nl": "Nee. Pecannoten zijn niet goed voor honden: zelfs een klein aantal kan een hond erg ziek maken. Ze bevatten juglon, er kan giftige schimmel op zitten, ze zijn vet en een hond kan stikken in de harde doppen of er een verstopping door krijgen. Bel je dierenarts als je hond ervan heeft gegeten.",
     "pl": "Nie. Orzechy pekan nie są dobre dla psów: nawet kilka może sprawić, że pies bardzo się rozchoruje. Zawierają juglon, mogą być skażone toksyczną pleśnią, są tłuste, a ich twarde łupiny mogą spowodować zadławienie lub niedrożność. Zadzwoń do weterynarza, jeśli pies jakieś zje.",
-    "cs": "Ne. Pekanové ořechy psům neprospívají: i malé množství může psovi vážně uškodit. Obsahují juglon, mohou na nich být jedovaté plísně, jsou tučné a jejich tvrdé skořápky mohou způsobit dušení nebo ucpání střev. Pokud pes nějaké sní, zavolejte veterináři."
+    "cs": "Ne. Pekanové ořechy psům neprospívají: i malé množství může psovi vážně uškodit. Obsahují juglon, mohou na nich být jedovaté plísně, jsou tučné a jejich tvrdé skořápky mohou způsobit dušení nebo ucpání střev. Pokud pes nějaké sní, zavolejte veterináři.",
+    "hr": "Ne. Pekan orasi nisu dobri za pse: već nekoliko njih može psa ozbiljno razboljeti. Sadrže juglon, na njima se može razviti otrovna plijesan, masni su, a njihova tvrda ljuska može izazvati gušenje ili začepiti crijeva. Nazovi veterinara ako ih tvoj pas pojede."
   },
   "why": {
     "en": "Pecans contain juglone, which can cause digestive problems, and they are very prone to moulds that produce mycotoxins such as aflatoxin, which can cause serious illness, including neurological problems. Their fat raises the risk of pancreatitis, and the hard shells can block the gut. Sources range from 'not good' to 'can make very sick'; we use the stricter level.",
@@ -60,7 +64,8 @@
     "pt": "As nozes-pecã contêm juglona, que pode causar problemas digestivos, e ganham bolor com muita facilidade; esses bolores produzem micotoxinas como a aflatoxina, que podem causar doença grave, incluindo problemas neurológicos. A gordura aumenta o risco de pancreatite, e as cascas duras podem obstruir o intestino. As fontes vão de «não fazem bem» a «podem pôr muito doente»; usamos o nível mais rigoroso.",
     "nl": "Pecannoten bevatten juglon, dat spijsverteringsproblemen kan veroorzaken, en ze zijn erg gevoelig voor schimmels die mycotoxinen zoals aflatoxine maken, die ernstige ziekte kunnen veroorzaken, waaronder neurologische problemen. Het vet verhoogt het risico op alvleesklierontsteking, en de harde doppen kunnen de darmen verstoppen. De bronnen lopen uiteen van “niet goed” tot “kan erg ziek maken”; wij kiezen het strengere niveau.",
     "pl": "Orzechy pekan zawierają juglon, który może wywołać problemy trawienne, i bardzo łatwo porastają pleśnią wytwarzającą mykotoksyny, takie jak aflatoksyna, które mogą wywołać poważną chorobę, w tym problemy neurologiczne. Ich tłuszcz zwiększa ryzyko zapalenia trzustki, a twarde łupiny mogą zatkać przewód pokarmowy. Źródła różnie je oceniają – od „niedobre” po „mogą wywołać ciężką chorobę”; przyjmujemy surowszą ocenę.",
-    "cs": "Pekanové ořechy obsahují juglon, který může způsobit zažívací potíže, a velmi snadno na nich rostou plísně produkující mykotoxiny, například aflatoxin, které mohou způsobit vážné onemocnění včetně neurologických potíží. Jejich tuk zvyšuje riziko zánětu slinivky břišní a tvrdé skořápky mohou ucpat střeva. Hodnocení zdrojů sahá od „neprospívají“ po „mohou vážně uškodit“; používáme přísnější úroveň."
+    "cs": "Pekanové ořechy obsahují juglon, který může způsobit zažívací potíže, a velmi snadno na nich rostou plísně produkující mykotoxiny, například aflatoxin, které mohou způsobit vážné onemocnění včetně neurologických potíží. Jejich tuk zvyšuje riziko zánětu slinivky břišní a tvrdé skořápky mohou ucpat střeva. Hodnocení zdrojů sahá od „neprospívají“ po „mohou vážně uškodit“; používáme přísnější úroveň.",
+    "hr": "Pekan orasi sadrže juglon, koji može izazvati probavne tegobe, a na njima se vrlo lako razvijaju plijesni koje stvaraju mikotoksine poput aflatoksina, a oni mogu izazvati ozbiljnu bolest, uključujući neurološke tegobe. Zbog masti povećavaju rizik od upale gušterače, a tvrda ljuska može začepiti crijeva. Izvori se kreću od „nisu dobri“ do „mogu ozbiljno razboljeti“; mi koristimo strožu ocjenu."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Průjem",
       "Nechuť k jídlu a malátnost",
       "Známky neurologických potíží"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Gubitak apetita i umor",
+      "Znakovi tegoba sa živčanim sustavom"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Contacta imediatamente o teu veterinário, mesmo que o teu cão tenha comido só algumas nozes-pecã. Anota quantas comeu e se eram velhas ou tinham bolor, e não esperes pelos sinais.",
     "nl": "Neem meteen contact op met je dierenarts, ook als je hond maar een paar pecannoten heeft gegeten. Schrijf op hoeveel er zijn gegeten en of ze oud of beschimmeld waren, en wacht niet op verschijnselen.",
     "pl": "Od razu skontaktuj się z weterynarzem, nawet jeśli twój pies zjadł tylko kilka orzechów pekan. Zanotuj, ile ich zjadł i czy były stare lub spleśniałe, i nie czekaj na objawy.",
-    "cs": "Okamžitě se obraťte na veterináře, i když pes snědl jen pár pekanových ořechů. Poznamenejte si, kolik jich snědl a zda byly staré nebo plesnivé, a nečekejte, až se objeví příznaky."
+    "cs": "Okamžitě se obraťte na veterináře, i když pes snědl jen pár pekanových ořechů. Poznamenejte si, kolik jich snědl a zda byly staré nebo plesnivé, a nečekejte, až se objeví příznaky.",
+    "hr": "Odmah se obrati veterinaru, čak i ako je tvoj pas pojeo samo nekoliko pekan oraha. Zapiši koliko ih je pojeo i jesu li bili stari ili pljesnivi i ne čekaj da se pojave znakovi."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "pt": "As nozes-pecã não são para cães. Se um cão comer alguma, avisa logo um adulto para ele ligar ao veterinário.",
     "nl": "Pecannoten zijn niet voor honden. Eet een hond ervan? Vertel het meteen aan een volwassene, zodat die de dierenarts kan bellen.",
     "pl": "Orzechy pekan nie są dla psów. Jeśli pies jakieś zje, od razu powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
-    "cs": "Pekanové ořechy nejsou pro psy. Když je pes sní, řekni to hned dospělému, aby mohl zavolat veterináři."
+    "cs": "Pekanové ořechy nejsou pro psy. Když je pes sní, řekni to hned dospělému, aby mohl zavolat veterináři.",
+    "hr": "Pekan orasi nisu za pse. Ako ih pas pojede, odmah reci odrasloj osobi da može nazvati veterinara."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "pt": "Porque é que as nozes-pecã são mais arriscadas do que outros frutos secos?",
         "nl": "Waarom zijn pecannoten riskanter dan sommige andere noten?",
         "pl": "Dlaczego orzechy pekan są bardziej ryzykowne niż niektóre inne orzechy?",
-        "cs": "Proč jsou pekanové ořechy rizikovější než některé jiné ořechy?"
+        "cs": "Proč jsou pekanové ořechy rizikovější než některé jiné ořechy?",
+        "hr": "Zašto su pekan orasi rizičniji od nekih drugih orašastih plodova?"
       },
       "a": {
         "en": "Every part of the pecan contains juglone, and pecans easily grow mould that produces mycotoxins.",
@@ -173,7 +187,8 @@
         "pt": "Todas as partes da noz-pecã contêm juglona, e as nozes-pecã ganham facilmente bolor, que produz micotoxinas.",
         "nl": "Elk deel van de pecannoot bevat juglon, en op pecannoten groeit makkelijk schimmel die mycotoxinen maakt.",
         "pl": "Każda część orzecha pekan zawiera juglon, a orzechy pekan łatwo porastają pleśnią wytwarzającą mykotoksyny.",
-        "cs": "Všechny části pekanového ořechu obsahují juglon a pekanové ořechy snadno plesniví, přičemž plísně produkují mykotoxiny."
+        "cs": "Všechny části pekanového ořechu obsahují juglon a pekanové ořechy snadno plesniví, přičemž plísně produkují mykotoxiny.",
+        "hr": "Svaki dio pekan oraha sadrži juglon, a na pekan orasima lako raste plijesan koja stvara mikotoksine."
       }
     }
   ],
@@ -276,6 +291,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c80ab21d376840e2296c75196b9c7bbd35178fc2b8e0f4de74878c79ad433254"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c3bc12b71806e47d2d678e527001302938f24531b5e9fca7a7580fc769ebbab"
     }
   }
 }

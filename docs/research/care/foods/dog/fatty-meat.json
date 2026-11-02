@@ -11,7 +11,8 @@
     "pt": "Carne gorda",
     "nl": "Vet vlees",
     "pl": "Tłuste mięso",
-    "cs": "Tučné maso"
+    "cs": "Tučné maso",
+    "hr": "Masno meso"
   },
   "question": {
     "en": "Can dogs eat fatty meat?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer carne gorda?",
     "nl": "Mogen honden vet vlees eten?",
     "pl": "Czy psy mogą jeść tłuste mięso?",
-    "cs": "Mohou psi jíst tučné maso?"
+    "cs": "Mohou psi jíst tučné maso?",
+    "hr": "Smiju li psi jesti masno meso?"
   },
   "url_slug": {
     "en": "fatty-meat",
@@ -35,7 +37,8 @@
     "pt": "carne-gorda",
     "nl": "vet-vlees",
     "pl": "tluste-mieso",
-    "cs": "tucne-maso"
+    "cs": "tucne-maso",
+    "hr": "masno-meso"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não é recomendado. A carne gorda, a pele das aves e as cartilagens não são tóxicas, mas podem causar vómitos e diarreia ou desencadear uma pancreatite, uma inflamação dolorosa e por vezes grave. Algumas raças, como o schnauzer miniatura, são mais propensas.",
     "nl": "Niet aan te raden. Vet vlees, vel van gevogelte en zeen zijn niet giftig, maar ze kunnen braken en diarree veroorzaken of alvleesklierontsteking uitlokken, een pijnlijke en soms ernstige ontsteking. Sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor.",
     "pl": "Nie zaleca się. Tłuste mięso, skóra drobiu i chrząstki nie są toksyczne, ale mogą wywołać wymioty i biegunkę albo zapalenie trzustki – bolesny, czasem ciężki stan zapalny. Niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
-    "cs": "Nedoporučuje se. Tučné maso, drůbeží kůže a chrupavky nejsou jedovaté, ale mohou vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, bolestivý a někdy těžký zánět. Některá plemena, například knírač malý, jsou k němu náchylnější."
+    "cs": "Nedoporučuje se. Tučné maso, drůbeží kůže a chrupavky nejsou jedovaté, ale mohou vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, bolestivý a někdy těžký zánět. Některá plemena, například knírač malý, jsou k němu náchylnější.",
+    "hr": "Ne preporučuje se. Masno meso, koža peradi i hrskavica nisu otrovni, ali mogu izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja je bolna i ponekad teška. Neke su joj pasmine, poput patuljastog šnaucera, sklonije."
   },
   "why": {
     "en": "A fatty meal is a known trigger of pancreatitis in dogs. Effects range from a mild upset stomach to a severe, even life-threatening pancreatitis. Dogs that have had pancreatitis before should avoid fatty foods.",
@@ -60,7 +64,8 @@
     "pt": "Uma refeição gorda é um desencadeador conhecido de pancreatite nos cães. Os efeitos vão de uma ligeira perturbação do estômago a uma pancreatite grave, que pode até pôr a vida em risco. Os cães que já tiveram pancreatite devem evitar alimentos gordos.",
     "nl": "Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking bij honden. De gevolgen lopen uiteen van een lichte maagstoornis tot een ernstige, zelfs levensbedreigende alvleesklierontsteking. Honden die eerder alvleesklierontsteking hebben gehad, moeten vet eten vermijden.",
     "pl": "Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki u psów. Skutki wahają się od łagodnego rozstroju żołądka po ciężkie, a nawet zagrażające życiu zapalenie trzustki. Psy, które już przeszły zapalenie trzustki, powinny unikać tłustego jedzenia.",
-    "cs": "Tučné jídlo je u psů známým spouštěčem zánětu slinivky břišní. Následky sahají od lehce podrážděného žaludku až po těžký, dokonce život ohrožující zánět slinivky břišní. Psi, kteří už zánět slinivky břišní prodělali, by se tučným jídlům měli vyhýbat."
+    "cs": "Tučné jídlo je u psů známým spouštěčem zánětu slinivky břišní. Následky sahají od lehce podrážděného žaludku až po těžký, dokonce život ohrožující zánět slinivky břišní. Psi, kteří už zánět slinivky břišní prodělali, by se tučným jídlům měli vyhýbat.",
+    "hr": "Masan obrok poznat je okidač upale gušterače kod pasa. Posljedice sežu od blagih želučanih smetnji do teške, čak i po život opasne upale gušterače. Psi koji su već imali upalu gušterače trebaju izbjegavati masnu hranu."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Průjem",
       "Nechuť k jídlu",
       "Malátnost, horečka"
+    ],
+    "hr": [
+      "Povraćanje, ponekad tek 1–4 dana nakon masnog obroka",
+      "Bolovi u trbuhu (pas se može ispružiti u „molitveni“ položaj)",
+      "Proljev",
+      "Odbijanje hrane",
+      "Umor, vrućica"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Se o teu cão comeu muita comida gorda, ou se nos dias seguintes tiver vómitos, dor de barriga ou cansaço, contacta o teu veterinário. Anota o que comeu e mais ou menos quanto. Os sinais de pancreatite podem demorar alguns dias a aparecer.",
     "nl": "Heeft je hond veel vet eten gegeten, of braakt hij, heeft hij buikpijn of is hij moe in de dagen erna? Neem dan contact op met je dierenarts. Schrijf op wat er is gegeten en ongeveer hoeveel. Verschijnselen van alvleesklierontsteking kunnen een paar dagen later komen.",
     "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni.",
-    "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později."
+    "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později.",
+    "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana."
   },
   "serving": {
     "en": "If you share meat, choose plain, lean, cooked meat without skin, fat or seasoning, and no bones.",
@@ -156,7 +169,8 @@
     "pt": "Se partilhares carne, escolhe carne cozinhada simples e magra, sem pele, gordura nem temperos, e sem ossos.",
     "nl": "Deel je vlees, kies dan gewoon, mager, gekookt vlees zonder vel, vet of kruiden, en zonder botten.",
     "pl": "Jeśli dzielisz się mięsem, wybierz zwykłe, chude, gotowane mięso bez skóry, tłuszczu, przypraw i kości.",
-    "cs": "Pokud se o maso dělíte, zvolte čisté, libové, tepelně upravené maso bez kůže, tuku a koření a bez kostí."
+    "cs": "Pokud se o maso dělíte, zvolte čisté, libové, tepelně upravené maso bez kůže, tuku a koření a bez kostí.",
+    "hr": "Ako dijeliš meso, izaberi obično, posno, termički obrađeno meso bez kože, masnoće i začina, i bez kostiju."
   },
   "child": {
     "en": "Fatty bits of meat can give dogs a sore tummy. Leave the fat on your plate and give your dog its own food.",
@@ -168,7 +182,8 @@
     "pt": "Os pedaços de gordura da carne podem fazer doer a barriga dos cães. Deixa a gordura no teu prato e dá ao teu cão a comida dele.",
     "nl": "Vette stukjes vlees kunnen het buikje van een hond pijn doen. Laat het vet op je bord liggen en geef je hond zijn eigen eten.",
     "pl": "Od tłustych kawałków mięsa może psa rozboleć brzuszek. Zostaw tłuszcz na swoim talerzu i daj psu jego własne jedzenie.",
-    "cs": "Tučné kousky masa můžou psa rozbolet bříško. Tuk nech na talíři a dej psovi jeho vlastní jídlo."
+    "cs": "Tučné kousky masa můžou psa rozbolet bříško. Tuk nech na talíři a dej psovi jeho vlastní jídlo.",
+    "hr": "Masni komadići mesa mogu psa zaboljeti u trbuščiću. Masnoću ostavi na tanjuru, a psu daj njegovu hranu."
   },
   "faq": [
     {
@@ -182,7 +197,8 @@
         "pt": "O que é a pancreatite?",
         "nl": "Wat is alvleesklierontsteking?",
         "pl": "Co to jest zapalenie trzustki?",
-        "cs": "Co je zánět slinivky břišní?"
+        "cs": "Co je zánět slinivky břišní?",
+        "hr": "Što je upala gušterače?"
       },
       "a": {
         "en": "An inflammation of the pancreas that causes vomiting, nausea and pain. In dogs it can be triggered by a fatty meal.",
@@ -194,7 +210,8 @@
         "pt": "Uma inflamação do pâncreas que causa vómitos, náuseas e dor. Nos cães pode ser desencadeada por uma refeição gorda.",
         "nl": "Een ontsteking van de alvleesklier (pancreatitis) die braken, misselijkheid en pijn veroorzaakt. Bij honden kan een vette maaltijd die uitlokken.",
         "pl": "Stan zapalny trzustki, który powoduje wymioty, nudności i ból. U psów może go wywołać tłusty posiłek.",
-        "cs": "Zánět slinivky břišní, který způsobuje zvracení, nevolnost a bolest. U psů ho může spustit tučné jídlo."
+        "cs": "Zánět slinivky břišní, který způsobuje zvracení, nevolnost a bolest. U psů ho může spustit tučné jídlo.",
+        "hr": "Gušterača se upali, što izaziva povraćanje, mučninu i bolove. Kod pasa upalu može potaknuti masan obrok."
       }
     },
     {
@@ -208,7 +225,8 @@
         "pt": "Posso dar pele de peru ao meu cão no Natal?",
         "nl": "Is kalkoenvel met kerst oké?",
         "pl": "Czy skóra z indyka na święta jest w porządku?",
-        "cs": "Smí pes o Vánocích dostat krůtí kůži?"
+        "cs": "Smí pes o Vánocích dostat krůtí kůži?",
+        "hr": "Smije li pas za Božić dobiti pureću kožu?"
       },
       "a": {
         "en": "No. Turkey skin and other fatty table foods can cause anything from stomach upset to severe pancreatitis.",
@@ -220,7 +238,8 @@
         "pt": "Não. A pele do peru e outros alimentos gordos da mesa podem causar desde uma perturbação do estômago até uma pancreatite grave.",
         "nl": "Nee. Kalkoenvel en ander vet tafelvoedsel kunnen van alles veroorzaken, van een maagstoornis tot ernstige alvleesklierontsteking.",
         "pl": "Nie. Skóra z indyka i inne tłuste jedzenie ze stołu mogą wywołać różne problemy – od rozstroju żołądka po ciężkie zapalenie trzustki.",
-        "cs": "Ne. Krůtí kůže a další tučná jídla ze stolu mohou způsobit cokoli od podrážděného žaludku až po těžký zánět slinivky břišní."
+        "cs": "Ne. Krůtí kůže a další tučná jídla ze stolu mohou způsobit cokoli od podrážděného žaludku až po těžký zánět slinivky břišní.",
+        "hr": "Ne. Pureća koža i druga masna hrana sa stola mogu izazvati sve od želučanih smetnji do teške upale gušterače."
       }
     }
   ],
@@ -339,6 +358,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "05f401f16e103475e344e3a181a7e7bc31c67f157b0d41261bc9bedc6e3233d0"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "aa821df6a9d744038d714207bc337a2678d8d3b12346f06cd41873ede6bffa26"
     }
   }
 }

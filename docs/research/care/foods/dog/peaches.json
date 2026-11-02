@@ -11,7 +11,8 @@
     "pt": "Pêssegos",
     "nl": "Perziken",
     "pl": "Brzoskwinie",
-    "cs": "Broskve"
+    "cs": "Broskve",
+    "hr": "Breskve"
   },
   "question": {
     "en": "Can dogs eat peaches?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer pêssegos?",
     "nl": "Mogen honden perziken eten?",
     "pl": "Czy psy mogą jeść brzoskwinie?",
-    "cs": "Mohou psi jíst broskve?"
+    "cs": "Mohou psi jíst broskve?",
+    "hr": "Smiju li psi jesti breskve?"
   },
   "url_slug": {
     "en": "peaches",
@@ -35,7 +37,8 @@
     "pt": "pessegos",
     "nl": "perziken",
     "pl": "brzoskwinie",
-    "cs": "broskve"
+    "cs": "broskve",
+    "hr": "breskve"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não é recomendado. Alguns veterinários permitem a polpa de pêssego fresco em cubinhos, sem o pé e sem o caroço, mas o caroço é um perigo real: pode causar engasgamento ou uma obstrução intestinal e contém uma forma de cianeto.",
     "nl": "Niet aan te raden. Sommige dierenartsen staan vers perzikvruchtvlees toe in kleine blokjes, zonder steel en pit, maar de pit is een echt gevaar: die kan verstikking of een darmverstopping veroorzaken en bevat een vorm van cyanide.",
     "pl": "Nie zaleca się. Niektórzy weterynarze dopuszczają świeży miąższ brzoskwini w małych kostkach, bez szypułki i pestki, ale pestka to realne zagrożenie: może spowodować zadławienie lub niedrożność przewodu pokarmowego i zawiera pewną postać cyjanku.",
-    "cs": "Nedoporučuje se. Někteří veterináři povolují čerstvou dužinu broskve nakrájenou na malé kostičky bez stopky a pecky, pecka je ale skutečné nebezpečí: může způsobit dušení nebo ucpání střev a obsahuje formu kyanidu."
+    "cs": "Nedoporučuje se. Někteří veterináři povolují čerstvou dužinu broskve nakrájenou na malé kostičky bez stopky a pecky, pecka je ale skutečné nebezpečí: může způsobit dušení nebo ucpání střev a obsahuje formu kyanidu.",
+    "hr": "Ne preporučuje se. Neki veterinari dopuštaju svježe meso breskve narezano na male kockice, bez peteljke i koštice, ali koštica je stvarna opasnost: može izazvati gušenje ili začepljenje crijeva i sadrži oblik cijanida."
   },
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -60,7 +64,8 @@
     "pt": "Os caules, as folhas e as sementes do pessegueiro contêm glicosídeos cianogénicos. Se um caroço for bem mastigado, pode libertar cianeto, e um caroço engolido pode obstruir o intestino, sobretudo em cães pequenos. Os pêssegos em calda ou secos têm muitas vezes açúcar adicionado. Como a planta está classificada como tóxica para os cães, classificamos os pêssegos como não recomendados e não como uma guloseima segura.",
     "nl": "Stelen, bladeren en pitten van de perzik bevatten cyanogene glycosiden. Als een pit grondig wordt stukgekauwd, kan er cyanide vrijkomen, en een ingeslikte pit kan de darmen verstoppen, vooral bij kleine honden. Perziken uit blik of gedroogde perziken bevatten vaak extra suiker. Omdat de plant als giftig voor honden staat vermeld, beoordelen wij perziken als niet aan te raden in plaats van als een veilig snoepje.",
     "pl": "Szypułki, liście i nasiona brzoskwini zawierają glikozydy cyjanogenne. Gdy pestka zostanie dokładnie rozgryziona, może uwolnić się cyjanek, a połknięta pestka może zatkać przewód pokarmowy, zwłaszcza u małych psów. Brzoskwinie z puszki lub suszone często zawierają dodatkowy cukier. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, uznajemy brzoskwinie za niezalecane, a nie za bezpieczny smakołyk.",
-    "cs": "Stopky, listy a semena broskvoně obsahují kyanogenní glykosidy. Pokud pes pecku důkladně rozkouše, může se uvolnit kyanid, a spolknutá pecka může ucpat střeva, zejména u malých psů. Broskve z konzervy nebo sušené často obsahují přidaný cukr. Protože je rostlina vedena jako pro psy jedovatá, hodnotíme broskve jako nedoporučené, nikoli jako bezpečný pamlsek."
+    "cs": "Stopky, listy a semena broskvoně obsahují kyanogenní glykosidy. Pokud pes pecku důkladně rozkouše, může se uvolnit kyanid, a spolknutá pecka může ucpat střeva, zejména u malých psů. Broskve z konzervy nebo sušené často obsahují přidaný cukr. Protože je rostlina vedena jako pro psy jedovatá, hodnotíme broskve jako nedoporučené, nikoli jako bezpečný pamlsek.",
+    "hr": "Peteljke, listovi i sjemenke breskve sadrže cijanogene glikozide. Ako pas temeljito sažvače košticu, može se osloboditi cijanid, a progutana koštica može začepiti crijeva, osobito kod malih pasa. Breskve iz konzerve i sušene breskve često sadrže dodani šećer. Budući da se biljka navodi kao otrovna za pse, breskve ocjenjujemo kao nepreporučljive, a ne kao sigurnu poslasticu."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Dušení nebo dávení",
       "Známky ucpání střev: opakované zvracení, nechuť k jídlu, malátnost",
       "Rozšířené zorničky, cihlově červené dásně, potíže s dýcháním (kyanid)"
+    ],
+    "hr": [
+      "Gušenje ili nagon na povraćanje",
+      "Znakovi začepljenja: ponavljano povraćanje, odbijanje hrane, umor",
+      "Proširene zjenice, ciglastocrvene desni, otežano disanje (cijanid)"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Se o teu cão engoliu ou mastigou um caroço de pêssego, contacta imediatamente o teu veterinário para te aconselhar. Anota quando aconteceu e quantos caroços comeu.",
     "nl": "Heeft je hond een perzikpit ingeslikt of erop gekauwd? Neem dan meteen contact op met je dierenarts voor advies. Schrijf op wanneer het gebeurde en hoeveel pitten er zijn gegeten.",
     "pl": "Jeśli twój pies połknął lub gryzł pestkę brzoskwini, od razu poradź się weterynarza. Zanotuj, kiedy to się stało i ile pestek zjadł.",
-    "cs": "Pokud váš pes spolkl nebo rozkousal broskvovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl."
+    "cs": "Pokud váš pes spolkl nebo rozkousal broskvovou pecku, okamžitě se obraťte na veterináře. Poznamenejte si, kdy se to stalo a kolik pecek snědl.",
+    "hr": "Ako je tvoj pas progutao ili sažvakao košticu breskve, odmah se obrati veterinaru za savjet. Zapiši kada se to dogodilo i koliko je koštica pojeo."
   },
   "serving": {
     "en": "Fresh flesh only, in small cubes, with the stem and pit removed. Skip canned and dried peaches.",
@@ -136,7 +147,8 @@
     "pt": "Só polpa fresca, em cubinhos, sem o pé e sem o caroço. Evita pêssegos em calda e secos.",
     "nl": "Alleen vers vruchtvlees, in kleine blokjes, zonder steel en pit. Sla perziken uit blik en gedroogde perziken over.",
     "pl": "Tylko świeży miąższ, w małych kostkach, bez szypułki i pestki. Pomiń brzoskwinie z puszki i suszone.",
-    "cs": "Jen čerstvá dužina nakrájená na malé kostičky, bez stopky a pecky. Broskve z konzervy a sušené vynechte."
+    "cs": "Jen čerstvá dužina nakrájená na malé kostičky, bez stopky a pecky. Broskve z konzervy a sušené vynechte.",
+    "hr": "Samo svježe meso ploda, narezano na male kockice, bez peteljke i koštice. Preskoči breskve iz konzerve i sušene breskve."
   },
   "child": {
     "en": "Peach stones are dangerous for dogs. Never give your dog a peach stone, and ask a grown-up before sharing any peach.",
@@ -148,7 +160,8 @@
     "pt": "Os caroços de pêssego são perigosos para os cães. Nunca dês um caroço ao teu cão e pergunta a um adulto antes de partilhares pêssego.",
     "nl": "Perzikpitten zijn gevaarlijk voor honden. Geef je hond nooit een perzikpit, en vraag het eerst aan een volwassene voordat je een stukje perzik deelt.",
     "pl": "Pestki brzoskwini są niebezpieczne dla psów. Nigdy nie dawaj psu pestki i zanim podzielisz się brzoskwinią, zapytaj dorosłego.",
-    "cs": "Broskvové pecky jsou pro psy nebezpečné. Nikdy psovi pecku nedávej, a než se s ním o broskev rozdělíš, zeptej se dospělého."
+    "cs": "Broskvové pecky jsou pro psy nebezpečné. Nikdy psovi pecku nedávej, a než se s ním o broskev rozdělíš, zeptej se dospělého.",
+    "hr": "Koštice breskve opasne su za pse. Nikad ne daj psu košticu breskve i pitaj odraslu osobu prije nego što s njim podijeliš komadić breskve."
   },
   "faq": [
     {
@@ -162,7 +175,8 @@
         "pt": "Os pêssegos em calda são adequados?",
         "nl": "Zijn perziken uit blik oké?",
         "pl": "Czy brzoskwinie z puszki są w porządku?",
-        "cs": "Jsou v pořádku broskve z konzervy?"
+        "cs": "Jsou v pořádku broskve z konzervy?",
+        "hr": "Jesu li breskve iz konzerve u redu?"
       },
       "a": {
         "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
@@ -174,7 +188,8 @@
         "pt": "Não são recomendados, porque os pêssegos em calda ou secos têm muitas vezes açúcar adicionado e outros ingredientes.",
         "nl": "Die zijn niet aan te raden, omdat perziken uit blik of gedroogde perziken vaak extra suiker en andere ingrediënten bevatten.",
         "pl": "Nie są zalecane, bo brzoskwinie z puszki lub suszone często zawierają dodatkowy cukier i inne składniki.",
-        "cs": "Nedoporučujeme je, protože broskve z konzervy nebo sušené často obsahují přidaný cukr a další přísady."
+        "cs": "Nedoporučujeme je, protože broskve z konzervy nebo sušené často obsahují přidaný cukr a další přísady.",
+        "hr": "Ne preporučuju se jer breskve iz konzerve i sušene breskve često sadrže dodani šećer i druge sastojke."
       }
     },
     {
@@ -188,7 +203,8 @@
         "pt": "Porque é que o caroço é tão arriscado?",
         "nl": "Waarom is de pit zo riskant?",
         "pl": "Dlaczego pestka jest tak ryzykowna?",
-        "cs": "Proč je pecka tak riziková?"
+        "cs": "Proč je pecka tak riziková?",
+        "hr": "Zašto je koštica tako rizična?"
       },
       "a": {
         "en": "It is a choking hazard, can block the intestines, and its seed contains cyanide-releasing compounds.",
@@ -200,7 +216,8 @@
         "pt": "Pode causar engasgamento, pode obstruir o intestino e a sua semente contém compostos que libertam cianeto.",
         "nl": "Een hond kan erin stikken, de pit kan de darmen verstoppen, en de kern bevat stoffen waaruit cyanide vrijkomt.",
         "pl": "Grozi zadławieniem, może zatkać jelita, a jej nasiono zawiera związki uwalniające cyjanek.",
-        "cs": "Pecka může způsobit dušení nebo ucpat střeva a její semeno obsahuje látky, ze kterých se uvolňuje kyanid."
+        "cs": "Pecka může způsobit dušení nebo ucpat střeva a její semeno obsahuje látky, ze kterých se uvolňuje kyanid.",
+        "hr": "Može izazvati gušenje i začepiti crijeva, a sjemenka u njoj sadrži spojeve koji oslobađaju cijanid."
       }
     }
   ],
@@ -323,6 +340,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c4cf5c2233b88a262e314425f73abbcbd12326b25cfeba8a5390cd3690f1926e"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33c06c3ffa2f40f70c10e1483351696a63d92e212352ed4e569d52abceaebfeb"
     }
   }
 }

@@ -4,56 +4,66 @@
   "name": {
     "en": "Raspberries",
     "sl": "Maline",
-    "cs": "Maliny"
+    "cs": "Maliny",
+    "hr": "Maline"
   },
   "question": {
     "en": "Can dogs eat raspberries?",
     "sl": "Ali lahko psi jedo maline?",
-    "cs": "Mohou psi jíst maliny?"
+    "cs": "Mohou psi jíst maliny?",
+    "hr": "Smiju li psi jesti maline?"
   },
   "url_slug": {
     "en": "raspberries",
     "sl": "maline",
-    "cs": "maliny"
+    "cs": "maliny",
+    "hr": "maline"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Raspberries can be a healthy occasional treat and are relatively low in sugar and calories, but they contain naturally occurring xylitol, so give them only in moderation. Fresh or frozen raspberries are best.",
     "sl": "Da, zmerno. Maline so lahko zdrav občasen priboljšek in imajo razmeroma malo sladkorja in kalorij, a vsebujejo naravni ksilitol, zato jih dajajte le zmerno. Najboljše so sveže ali zamrznjene maline.",
-    "cs": "Ano, s mírou. Maliny mohou být zdravým občasným pamlskem a mají poměrně málo cukru a kalorií, obsahují ale přirozeně se vyskytující xylitol, proto je dávejte jen s mírou. Nejlepší jsou čerstvé nebo mražené maliny."
+    "cs": "Ano, s mírou. Maliny mohou být zdravým občasným pamlskem a mají poměrně málo cukru a kalorií, obsahují ale přirozeně se vyskytující xylitol, proto je dávejte jen s mírou. Nejlepší jsou čerstvé nebo mražené maliny.",
+    "hr": "Da, umjereno. Maline mogu biti zdrava povremena poslastica i imaju relativno malo šećera i kalorija, ali prirodno sadrže ksilitol, pa ih daj samo umjereno. Najbolje su svježe ili smrznute maline."
   },
   "why": {
     "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
     "sl": "Maline vsebujejo naravni ksilitol, in sicer več kot večina drugih vrst sadja, čeprav je te količine malo v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte.",
-    "cs": "Maliny obsahují přirozeně se vyskytující xylitol ve větším množství než většina ostatního ovoce, i když je to málo ve srovnání s množstvím, o kterém je známo, že psům škodí. Příliš mnoho malin může způsobit zvracení, průjem, zácpu nebo jiné zažívací potíže. Slazeným malinovým výrobkům se vyhněte."
+    "cs": "Maliny obsahují přirozeně se vyskytující xylitol ve větším množství než většina ostatního ovoce, i když je to málo ve srovnání s množstvím, o kterém je známo, že psům škodí. Příliš mnoho malin může způsobit zvracení, průjem, zácpu nebo jiné zažívací potíže. Slazeným malinovým výrobkům se vyhněte.",
+    "hr": "Maline prirodno sadrže više ksilitola nego većina drugog voća, iako je ta količina mala u usporedbi s onom za koju se zna da šteti psima. Previše malina može izazvati povraćanje, proljev, zatvor ili druge probavne tegobe. Zaslađene proizvode od malina treba izbjegavati."
   },
   "signs": null,
   "what_to_do": {
     "en": "Give raspberries only in moderation, because overfeeding may upset digestion. Owners of diabetic dogs should ask their vet before giving any new treats.",
     "sl": "Maline dajajte le zmerno, ker lahko preveč malin povzroči prebavne težave. Lastniki psov s sladkorno boleznijo naj pred vsakim novim priboljškom vprašajo veterinarja.",
-    "cs": "Maliny dávejte jen s mírou, protože příliš velké množství může podráždit trávení. Majitelé psů s cukrovkou by se měli před podáním jakéhokoli nového pamlsku poradit s veterinářem."
+    "cs": "Maliny dávejte jen s mírou, protože příliš velké množství může podráždit trávení. Majitelé psů s cukrovkou by se měli před podáním jakéhokoli nového pamlsku poradit s veterinářem.",
+    "hr": "Daj maline samo umjereno jer previše malina može izazvati probavne tegobe. Ako tvoj pas ima šećernu bolest, pitaj veterinara prije nego što mu daš bilo koju novu poslasticu."
   },
   "serving": {
     "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
     "sl": "Navadne sveže ali zamrznjene maline, nikoli sladkani izdelki; kot občasen priboljšek.",
-    "cs": "Obyčejné čerstvé nebo mražené maliny, nikdy slazené výrobky; jako občasný pamlsek."
+    "cs": "Obyčejné čerstvé nebo mražené maliny, nikdy slazené výrobky; jako občasný pamlsek.",
+    "hr": "Obične svježe ili smrznute maline, nikad zaslađeni proizvodi; kao povremena poslastica."
   },
   "child": {
     "en": "Dogs can have a few raspberries as a treat! A grown-up decides how many, because too many can upset a tummy.",
     "sl": "Psi lahko kot priboljšek dobijo nekaj malin! Odrasel odloči, koliko, ker lahko preveč malin povzroči težave s trebuščkom.",
-    "cs": "Pejsci si můžou dát pár malin jako pamlsek! Kolik, rozhodne dospělý, protože moc malin může rozbolet bříško."
+    "cs": "Pejsci si můžou dát pár malin jako pamlsek! Kolik, rozhodne dospělý, protože moc malin může rozbolet bříško.",
+    "hr": "Psi smiju pojesti nekoliko malina kao poslasticu! Odrasla osoba odlučuje koliko, jer od previše malina može zaboljeti trbuh."
   },
   "faq": [
     {
       "q": {
         "en": "Is the xylitol in raspberries a problem?",
         "sl": "Je ksilitol v malinah težava?",
-        "cs": "Je xylitol v malinách problém?"
+        "cs": "Je xylitol v malinách problém?",
+        "hr": "Je li ksilitol u malinama problem?"
       },
       "a": {
         "en": "The amount of xylitol in raspberries is low relative to the amount known to harm dogs, but give raspberries only in moderation.",
         "sl": "Količina ksilitola v malinah je majhna v primerjavi s količino, za katero je znano, da psom škoduje, a maline dajajte le zmerno.",
-        "cs": "Množství xylitolu v malinách je malé v porovnání s množstvím, o kterém je známo, že psům škodí, maliny ale přesto dávejte jen s mírou."
+        "cs": "Množství xylitolu v malinách je malé v porovnání s množstvím, o kterém je známo, že psům škodí, maliny ale přesto dávejte jen s mírou.",
+        "hr": "Količina ksilitola u malinama mala je u usporedbi s količinom za koju se zna da šteti psima, ali maline svejedno daj samo umjereno."
       }
     }
   ],
@@ -125,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0d0a95858f090cd52c2deb201093016587a861c76070090d3a8d4ce853bb3938"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8e7bd5758d2eaf7dc3bc8c167b85d89d487cd8fe92f7f71eb4ef6db4b7f5046"
     }
   }
 }

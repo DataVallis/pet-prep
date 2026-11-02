@@ -4,56 +4,66 @@
   "name": {
     "en": "Blackberries",
     "sl": "Robide",
-    "cs": "Ostružiny"
+    "cs": "Ostružiny",
+    "hr": "Kupine"
   },
   "question": {
     "en": "Can dogs eat blackberries?",
     "sl": "Ali lahko psi jedo robide?",
-    "cs": "Mohou psi jíst ostružiny?"
+    "cs": "Mohou psi jíst ostružiny?",
+    "hr": "Smiju li psi jesti kupine?"
   },
   "url_slug": {
     "en": "blackberries",
     "sl": "robide",
-    "cs": "ostruziny"
+    "cs": "ostruziny",
+    "hr": "kupine"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Blackberries contain lots of vitamins and nutrients and are lower in sugar and calories than some other fruits. Wash them first, and avoid frozen berries, which usually have added sugar or xylitol.",
     "sl": "Da, zmerno. Robide vsebujejo veliko vitaminov in hranil ter imajo manj sladkorja in kalorij kot nekatere druge vrste sadja. Najprej jih operite in se izogibajte zamrznjenemu jagodičju, ki ima običajno dodan sladkor ali ksilitol.",
-    "cs": "Ano, s mírou. Ostružiny obsahují spoustu vitaminů a živin a mají méně cukru a kalorií než některé jiné druhy ovoce. Nejdřív je omyjte a vyhněte se mraženým bobulím, které mívají přidaný cukr nebo xylitol."
+    "cs": "Ano, s mírou. Ostružiny obsahují spoustu vitaminů a živin a mají méně cukru a kalorií než některé jiné druhy ovoce. Nejdřív je omyjte a vyhněte se mraženým bobulím, které mívají přidaný cukr nebo xylitol.",
+    "hr": "Da, umjereno. Kupine sadrže mnogo vitamina i hranjivih tvari, a imaju manje šećera i kalorija od nekih drugih vrsta voća. Prvo ih operi i izbjegavaj zamrznute bobice, koje obično imaju dodani šećer ili ksilitol."
   },
   "why": {
     "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
     "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane.",
-    "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy."
+    "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy.",
+    "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može uznemiriti želudac, a poslastice trebaju činiti samo mali dio pseće prehrane."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
     "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja.",
-    "cs": "Pokud má váš pes po snědení ostružin nějakou reakci, okamžitě zavolejte veterináři."
+    "cs": "Pokud má váš pes po snědení ostružin nějakou reakci, okamžitě zavolejte veterináři.",
+    "hr": "Ako pas nakon jedenja kupina ima neku reakciju, odmah nazovi veterinara."
   },
   "serving": {
     "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
     "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide.",
-    "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny."
+    "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny.",
+    "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako si siguran da su kupine."
   },
   "child": {
     "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
     "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi.",
-    "cs": "O pár omytých ostružin se se psem můžeš rozdělit! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku."
+    "cs": "O pár omytých ostružin se se psem můžeš rozdělit! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku.",
+    "hr": "Psi smiju pojesti nekoliko opranih kupina! Prvo pitaj odraslu osobu, osobito za bobice ubrane vani."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat wild blackberries?",
         "sl": "Ali lahko psi jedo divje robide?",
-        "cs": "Mohou psi jíst lesní ostružiny?"
+        "cs": "Mohou psi jíst lesní ostružiny?",
+        "hr": "Smiju li psi jesti divlje kupine?"
       },
       "a": {
         "en": "Yes, as long as you are sure they are blackberries.",
         "sl": "Da, če ste prepričani, da so to robide.",
-        "cs": "Ano, pokud víte jistě, že jsou to ostružiny."
+        "cs": "Ano, pokud víte jistě, že jsou to ostružiny.",
+        "hr": "Da, ako si siguran da su to kupine."
       }
     }
   ],
@@ -125,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1cc2a908957cceb2814077b86a14764bb7094d530428723987ebca70cc09d97b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "06bb7c1951aa32865bd1663eff081236c4c56b19d5d206b76ac988fc9831040b"
     }
   }
 }

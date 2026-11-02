@@ -11,7 +11,8 @@
     "pt": "Pêssegos",
     "nl": "Perziken",
     "pl": "Brzoskwinie",
-    "cs": "Broskve"
+    "cs": "Broskve",
+    "hr": "Breskve"
   },
   "question": {
     "en": "Can cats eat peaches?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer pêssegos?",
     "nl": "Mogen katten perziken eten?",
     "pl": "Czy koty mogą jeść brzoskwinie?",
-    "cs": "Mohou kočky jíst broskve?"
+    "cs": "Mohou kočky jíst broskve?",
+    "hr": "Smiju li mačke jesti breskve?"
   },
   "url_slug": {
     "en": "peaches",
@@ -35,7 +37,8 @@
     "pt": "pessegos",
     "nl": "perziken",
     "pl": "brzoskwinie",
-    "cs": "broskve"
+    "cs": "broskve",
+    "hr": "breskve"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, é melhor não. A ASPCA classifica o pessegueiro como tóxico para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças pêssegos ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma.",
     "nl": "Nee, liever niet. De ASPCA noemt de perzikplant giftig voor katten: de stelen, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen perziken, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt.",
     "pl": "Nie, lepiej nie. ASPCA uznaje brzoskwinię za roślinę toksyczną dla kotów: jej łodygi, liście i nasiona (pestka) zawierają cyjanek. Nie dawaj kotu brzoskwiń, trzymaj pestki i części rośliny poza jego zasięgiem i zadzwoń do weterynarza, jeśli kot coś z nich pogryzie.",
-    "cs": "Ne, raději ne. ASPCA uvádí broskvoň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Broskve kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři."
+    "cs": "Ne, raději ne. ASPCA uvádí broskvoň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Broskve kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
+    "hr": "Ne, bolje ne. ASPCA navodi biljku breskve kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi mački breskve, koštice i dijelove biljke drži izvan njezina dosega i nazovi veterinara ako mačka išta od toga sažvače."
   },
   "why": {
     "en": "The stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting. The sources we found describe the risk from these plant parts and do not say the fruit flesh is safe for cats, so we do not recommend sharing it.",
@@ -60,7 +64,8 @@
     "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la.",
     "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen.",
     "pl": "Łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne podczas więdnięcia. Źródła, które znaleźliśmy, opisują ryzyko związane z tymi częściami rośliny i nie podają, że miąższ owocu jest bezpieczny dla kotów, dlatego nie zalecamy dzielenia się nim.",
-    "cs": "Stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a zvlášť toxické jsou při vadnutí. Zdroje, které jsme našli, popisují riziko těchto částí rostliny a neuvádějí, že by dužina plodu byla pro kočky bezpečná, proto ji kočkám nedoporučujeme."
+    "cs": "Stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a zvlášť toxické jsou při vadnutí. Zdroje, které jsme našli, popisují riziko těchto částí rostliny a neuvádějí, že by dužina plodu byla pro kočky bezpečná, proto ji kočkám nedoporučujeme.",
+    "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ga ne preporučujemo dijeliti s mačkom."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Dýchací potíže",
       "Dýchání s otevřenou tlamou",
       "Šok"
+    ],
+    "hr": [
+      "Ciglastocrvene desni",
+      "Proširene zjenice",
+      "Otežano disanje",
+      "Dahtanje",
+      "Šok"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot pogryzł pestkę, łodygę lub liście. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka okousala pecku, stonek nebo listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+    "cs": "Pokud vaše kočka okousala pecku, stonek nebo listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka žvakala košticu, peteljku ili listove. Zapiši što je pojedeno, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "pt": "Os pêssegos são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
     "nl": "Perziken zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het meteen aan een volwassene.",
     "pl": "Brzoskwinie to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
-    "cs": "Broskve jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže když nějakou kočička okouše, řekni to dospělému."
+    "cs": "Broskve jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže když nějakou kočička okouše, řekni to dospělému.",
+    "hr": "Breskve su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "pt": "Qual é a parte problemática?",
         "nl": "Welk deel is het probleem?",
         "pl": "Która część jest problemem?",
-        "cs": "Které části jsou nebezpečné?"
+        "cs": "Které části jsou nebezpečné?",
+        "hr": "Koji je dio problem?"
       },
       "a": {
         "en": "The ASPCA says the stems, leaves and seeds contain cyanide, and that they are particularly toxic while wilting.",
@@ -183,7 +198,8 @@
         "pt": "A ASPCA diz que os caules, as folhas e as sementes contêm cianeto e que são particularmente tóxicos quando estão a murchar.",
         "nl": "Volgens de ASPCA bevatten de stelen, bladeren en zaden cyanide en zijn ze vooral giftig als ze verwelken.",
         "pl": "Według ASPCA łodygi, liście i nasiona zawierają cyjanek i są szczególnie toksyczne podczas więdnięcia.",
-        "cs": "Podle ASPCA obsahují stonky, listy a semena kyanid a zvlášť toxické jsou při vadnutí."
+        "cs": "Podle ASPCA obsahují stonky, listy a semena kyanid a zvlášť toxické jsou při vadnutí.",
+        "hr": "ASPCA navodi da peteljke, listovi i sjemenke sadrže cijanid te da su posebno otrovni dok venu."
       }
     }
   ],
@@ -274,6 +290,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7eb8906a3daf3258258310ee714098c5aeb6aaac4bbf7ec472558f8df6bb8f15"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7cc0e45490fc3c01572fe10202cefb6fc3d1ad7334aa07945234e2c3061b4acf"
     }
   }
 }

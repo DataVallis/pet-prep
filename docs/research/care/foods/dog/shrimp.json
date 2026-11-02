@@ -11,7 +11,8 @@
     "pt": "Camarão",
     "nl": "Garnalen",
     "pl": "Krewetki",
-    "cs": "Krevety"
+    "cs": "Krevety",
+    "hr": "Kozice"
   },
   "question": {
     "en": "Can dogs eat shrimp?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer camarão?",
     "nl": "Mogen honden garnalen eten?",
     "pl": "Czy psy mogą jeść krewetki?",
-    "cs": "Mohou psi jíst krevety?"
+    "cs": "Mohou psi jíst krevety?",
+    "hr": "Smiju li psi jesti kozice?"
   },
   "url_slug": {
     "en": "shrimp",
@@ -35,7 +37,8 @@
     "pt": "camarao",
     "nl": "garnalen",
     "pl": "krewetki",
-    "cs": "krevety"
+    "cs": "krevety",
+    "hr": "kozice"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, alguns pedaços de camarão simples e bem cozinhado não fazem mal aos cães. Tira primeiro a casca, a cabeça, as patas e a cauda. O camarão cru pode ter germes nocivos, e o camarão frito, panado ou temperado não é adequado.",
     "nl": "Ja, een paar stukjes gewone, helemaal gare garnalen zijn prima voor honden. Haal eerst de schaal, kop, pootjes en staart eraf. Rauwe garnalen kunnen schadelijke bacteriën bevatten, en gefrituurde, gepaneerde of gekruide garnalen zijn niet geschikt.",
     "pl": "Tak, kilka kawałków zwykłych, dobrze ugotowanych krewetek jest dla psów w porządku. Najpierw usuń pancerz, głowę, odnóża i ogon. Surowe krewetki mogą przenosić szkodliwe zarazki, a krewetki smażone, panierowane lub przyprawione się nie nadają.",
-    "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou."
+    "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou.",
+    "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
@@ -60,7 +64,8 @@
     "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura evita. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial.",
     "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je met koken vermijdt. Een hond kan stikken in garnalenschalen, en ze kunnen verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus met mate is het devies.",
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których pozwala uniknąć gotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
-    "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost."
+    "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
+    "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uklanja. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Deixa de dar camarão se o teu cão mostrar desconforto na barriga ou parecer adoentado, e liga ao teu veterinário se os sinais piorarem. Liga também ao teu veterinário se o teu cão engoliu cascas e parecer estar a engasgar-se.",
     "nl": "Geef geen garnalen meer als je hond last van zijn buik heeft of zich niet lekker lijkt te voelen, en bel je dierenarts als de verschijnselen erger worden. Bel ook je dierenarts als je hond schalen heeft ingeslikt en lijkt te stikken.",
     "pl": "Przestań dawać krewetki, jeśli twój pies ma dolegliwości żołądkowe lub wydaje się chory, i zadzwoń do weterynarza, jeśli objawy się nasilą. Zadzwoń też, jeśli pies połknął pancerze i wygląda, jakby się dławił.",
-    "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí."
+    "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí.",
+    "hr": "Prestani davati kozice ako pas pokazuje nelagodu u trbuhu ili se čini da mu nije dobro i nazovi veterinara ako se znakovi pogoršaju. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -85,7 +91,8 @@
     "pt": "Alguns pedaços, bem cozinhados (a vapor é o melhor), simples, sem casca, cabeça, patas e cauda; nem frito, nem panado, nem temperado.",
     "nl": "Een paar stukjes, helemaal gaar (gestoomd is het best), puur, zonder schaal, kop, pootjes en staart; niet gefrituurd, gepaneerd of gekruid.",
     "pl": "Kilka kawałków dobrze ugotowanych (najlepiej na parze), zwykłych, bez pancerza, głowy, odnóży i ogona; nie smażonych, panierowanych ani przyprawionych.",
-    "cs": "Pár kousků, důkladně tepelně upravených (nejlépe v páře), bez přísad, bez krunýře, hlavy, nožiček a ocásku; ne smažené, obalované ani kořeněné."
+    "cs": "Pár kousků, důkladně tepelně upravených (nejlépe v páře), bez přísad, bez krunýře, hlavy, nožiček a ocásku; ne smažené, obalované ani kořeněné.",
+    "hr": "Nekoliko komada, potpuno termički obrađenih (najbolje kuhanih na pari), bez dodataka, bez oklopa, glave, nožica i repa; ne pržene, pohane ni začinjene."
   },
   "child": {
     "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
@@ -97,7 +104,8 @@
     "pt": "Um cão pode comer um ou dois camarões cozinhados e descascados. As cascas e as caudas não são para cães.",
     "nl": "Een hond mag een paar gekookte, gepelde garnalen. De schalen en staartjes zijn niet voor honden.",
     "pl": "Pies może dostać jedną czy dwie ugotowane, obrane krewetki. Pancerzyki i ogonki nie są dla psów.",
-    "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky pro psy nejsou."
+    "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky pro psy nejsou.",
+    "hr": "Pas smije pojesti jednu ili dvije kuhane, očišćene kozice. Oklopi i repovi nisu za pse."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Os cães podem comer a cauda do camarão?",
         "nl": "Mogen honden garnalenstaartjes eten?",
         "pl": "Czy psy mogą jeść ogony krewetek?",
-        "cs": "Mohou psi jíst ocásky krevet?"
+        "cs": "Mohou psi jíst ocásky krevet?",
+        "hr": "Smiju li psi jesti repove kozica?"
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
@@ -123,7 +132,8 @@
         "pt": "Não. Tira a casca, a cabeça, as patas e a cauda, porque as cascas podem causar engasgamento e obstruções.",
         "nl": "Nee. Haal de schaal, kop, pootjes en staart eraf, want een hond kan stikken in schalen en ze kunnen verstoppingen veroorzaken.",
         "pl": "Nie. Usuń pancerz, głowę, odnóża i ogon, bo pancerze grożą zadławieniem i mogą powodować niedrożność.",
-        "cs": "Ne. Odstraňte krunýř, hlavu, nožičky i ocásek, protože krunýře mohou způsobit dušení a ucpání střev."
+        "cs": "Ne. Odstraňte krunýř, hlavu, nožičky i ocásek, protože krunýře mohou způsobit dušení a ucpání střev.",
+        "hr": "Ne smiju. Ukloni oklop, glavu, nožice i rep jer oklop može izazvati gušenje i začepljenje."
       }
     }
   ],
@@ -228,6 +238,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e84cf97ea5eacd8d5fb74f40b5f04f80a29fd609490111d364b94a79499ffa44"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b54acf3ad33d2e03a284efab92828d555b05ed635846ba9fcd26414363895550"
     }
   }
 }

@@ -11,7 +11,8 @@
     "pt": "Queijo",
     "nl": "Kaas",
     "pl": "Ser",
-    "cs": "Sýr"
+    "cs": "Sýr",
+    "hr": "Sir"
   },
   "question": {
     "en": "Can dogs eat cheese?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer queijo?",
     "nl": "Mogen honden kaas eten?",
     "pl": "Czy psy mogą jeść ser?",
-    "cs": "Mohou psi jíst sýr?"
+    "cs": "Mohou psi jíst sýr?",
+    "hr": "Smiju li psi jesti sir?"
   },
   "url_slug": {
     "en": "cheese",
@@ -35,7 +37,8 @@
     "pt": "queijo",
     "nl": "kaas",
     "pl": "ser",
-    "cs": "syr"
+    "cs": "syr",
+    "hr": "sir"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não como guloseima habitual. Algumas fontes veterinárias aceitam pedacinhos de queijo simples e com menos gordura, mas o queijo é gordo, muitos cães digerem mal os laticínios e alguns queijos têm cebola, alho ou cebolinho. Os queijos azuis são uma preocupação especial.",
     "nl": "Niet als vast snoepje. Sommige veterinaire bronnen staan kleine stukjes gewone, minder vette kaas toe, maar kaas is vet, veel honden verteren zuivel slecht en sommige kazen bevatten ui, knoflook of bieslook. Vooral blauwe kaas baart zorgen.",
     "pl": "Nie jako stały smakołyk. Niektóre źródła weterynaryjne dopuszczają małe kawałki zwykłego, chudszego sera, ale ser jest tłusty, wiele psów słabo trawi nabiał, a niektóre sery zawierają cebulę, czosnek lub szczypiorek. Szczególnie niepokojące są sery pleśniowe.",
-    "cs": "Ne jako pravidelný pamlsek. Některé veterinární zdroje připouštějí malé kousky čistého, méně tučného sýra, ale sýr je tučný, mnoho psů špatně tráví mléčné výrobky a některé sýry obsahují cibuli, česnek nebo pažitku. Zvláštní obavy vzbuzují plísňové sýry."
+    "cs": "Ne jako pravidelný pamlsek. Některé veterinární zdroje připouštějí malé kousky čistého, méně tučného sýra, ale sýr je tučný, mnoho psů špatně tráví mléčné výrobky a některé sýry obsahují cibuli, česnek nebo pažitku. Zvláštní obavy vzbuzují plísňové sýry.",
+    "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju komadiće običnog sira s manje masti, ali sir je mastan, mnogi psi slabo probavljaju mliječne proizvode, a neki sirevi sadrže luk, češnjak ili vlasac. Posebno su zabrinjavajući sirevi s plavom plijesni."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -60,7 +64,8 @@
     "pt": "Os cães têm pouca lactase, a enzima que digere o açúcar do leite, por isso os laticínios podem perturbar o estômago. O queijo tem muita gordura: em excesso faz engordar e pode desencadear uma pancreatite. Os queijos aromatizados podem ter cebola, alho ou cebolinho, e os queijos azuis, como o Roquefort, contêm roquefortina C, à qual os cães parecem ser sensíveis. As fontes divergem: o AKC e a Dogs Trust aceitam pequenas quantidades, enquanto a Cornell inclui o queijo entre os alimentos gordos a evitar, por isso seguimos a mais rigorosa.",
     "nl": "Honden hebben weinig lactase, het enzym dat melksuiker verteert, dus zuivel kan de maag van streek maken. Kaas bevat veel vet: te veel leidt tot overgewicht en kan alvleesklierontsteking uitlokken. Kaas met smaakjes kan ui, knoflook of bieslook bevatten, en blauwe kazen zoals roquefort bevatten roquefortine C, waarvoor honden gevoelig lijken. De bronnen verschillen: de AKC en Dogs Trust staan kleine hoeveelheden toe, terwijl Cornell kaas rekent tot het vette eten dat je moet vermijden, dus kiezen we het strengere niveau.",
     "pl": "Psy mają mało laktazy, enzymu trawiącego cukier mleczny, więc nabiał może podrażnić żołądek. Ser zawiera dużo tłuszczu: jego nadmiar prowadzi do przybierania na wadze i może wywołać zapalenie trzustki. Sery smakowe mogą zawierać cebulę, czosnek lub szczypiorek, a sery pleśniowe, takie jak roquefort, zawierają roquefortynę C, na którą psy wydają się wrażliwe. Źródła się różnią: AKC i Dogs Trust dopuszczają małe ilości, a Cornell wymienia ser wśród tłustych produktów, których należy unikać, dlatego przyjmujemy surowszą ocenę.",
-    "cs": "Psi mají málo laktázy, enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou podráždit žaludek. Sýr má hodně tuku: příliš mnoho vede k přibírání na váze a může spustit zánět slinivky břišní. Ochucené sýry mohou obsahovat cibuli, česnek nebo pažitku a modré plísňové sýry, například rokfór, obsahují roquefortin C, na který jsou psi zřejmě citliví. Zdroje se liší: AKC a Dogs Trust povolují malé množství, zatímco Cornell řadí sýr mezi tučná jídla, kterým je dobré se vyhnout, proto používáme přísnější úroveň."
+    "cs": "Psi mají málo laktázy, enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou podráždit žaludek. Sýr má hodně tuku: příliš mnoho vede k přibírání na váze a může spustit zánět slinivky břišní. Ochucené sýry mohou obsahovat cibuli, česnek nebo pažitku a modré plísňové sýry, například rokfór, obsahují roquefortin C, na který jsou psi zřejmě citliví. Zdroje se liší: AKC a Dogs Trust povolují malé množství, zatímco Cornell řadí sýr mezi tučná jídla, kterým je dobré se vyhnout, proto používáme přísnější úroveň.",
+    "hr": "Psi imaju malo laktaze, enzima koji razgrađuje mliječni šećer, pa mliječni proizvodi mogu uznemiriti želudac. Sir sadrži mnogo masti: previše sira dovodi do debljanja i može potaknuti upalu gušterače. Sirevi s dodacima mogu sadržavati luk, češnjak ili vlasac, a sirevi s plavom plijesni, poput roqueforta, sadrže roquefortin C, na koji su psi naizgled osjetljivi. Izvori se razlikuju: AKC i Dogs Trust dopuštaju male količine, a Cornell sir ubraja u masnu hranu koju treba izbjegavati, zato primjenjujemo strožu razinu."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Zvracení",
       "Bolest břicha, nevolnost, malátnost nebo nechuť k jídlu (možný zánět slinivky břišní)",
       "Svalový třes po plísňovém sýru"
+    ],
+    "hr": [
+      "Proljev ili druge probavne smetnje",
+      "Povraćanje",
+      "Bolovi u trbuhu, mučnina, malaksalost ili slab apetit (moguća upala gušterače)",
+      "Drhtanje mišića nakon sira s plavom plijesni"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "pt": "Um pedacinho simples normalmente só exige que vigies se há mal-estar de barriga. Liga ao teu veterinário se o teu cão comeu muito queijo, comeu queijo azul ou queijo com cebola, alho ou cebolinho, ou se tiver vómitos, dor de barriga ou tremores.",
     "nl": "Na een klein, gewoon stukje is het meestal genoeg om op maag-darmklachten te letten. Bel je dierenarts als je hond veel kaas, blauwe kaas of kaas met ui, knoflook of bieslook heeft gegeten, of als hij braakt, buikpijn heeft of trilt.",
     "pl": "Po małym kawałku zwykłego sera zazwyczaj wystarczy obserwować, czy nie pojawiają się dolegliwości żołądkowe. Zadzwoń do weterynarza, jeśli twój pies zjadł dużo sera, zjadł ser pleśniowy albo ser z cebulą, czosnkiem lub szczypiorkiem, albo jeśli wymiotuje, boli go brzuch lub drżą mu mięśnie.",
-    "cs": "Po malém kousku čistého sýra obvykle stačí sledovat, zda se neobjeví zažívací potíže. Zavolejte veterináři, pokud váš pes snědl hodně sýra, plísňový sýr nebo sýr s cibulí, česnekem či pažitkou, nebo pokud zvrací, má bolest břicha či třes."
+    "cs": "Po malém kousku čistého sýra obvykle stačí sledovat, zda se neobjeví zažívací potíže. Zavolejte veterináři, pokud váš pes snědl hodně sýra, plísňový sýr nebo sýr s cibulí, česnekem či pažitkou, nebo pokud zvrací, má bolest břicha či třes.",
+    "hr": "Za mali komadić običnog sira obično je dovoljno pratiti ima li pas probavnih smetnji. Nazovi veterinara ako je pas pojeo mnogo sira, sir s plavom plijesni ili sir s lukom, češnjakom ili vlascem, ili ako povraća, ima bolove u trbuhu ili drhti."
   },
   "serving": {
     "en": "If you share at all: a tiny piece of plain, lower-fat cheese such as mozzarella or cottage cheese, never flavoured or blue cheese.",
@@ -146,7 +158,8 @@
     "pt": "Se partilhares: um pedacinho de queijo simples e com menos gordura, como mozzarella ou queijo cottage, nunca queijo aromatizado ou azul.",
     "nl": "Als je al iets deelt: een heel klein stukje gewone, minder vette kaas zoals mozzarella of hüttenkäse, nooit kaas met smaakjes of blauwe kaas.",
     "pl": "Jeśli już się dzielisz: malutki kawałek zwykłego, chudszego sera, np. mozzarelli lub serka wiejskiego, nigdy sera smakowego ani pleśniowego.",
-    "cs": "Pokud se vůbec dělíte: malinký kousek čistého, méně tučného sýra, například mozzarelly nebo tvarohového sýra (cottage), nikdy ochucený ani plísňový sýr."
+    "cs": "Pokud se vůbec dělíte: malinký kousek čistého, méně tučného sýra, například mozzarelly nebo tvarohového sýra (cottage), nikdy ochucený ani plísňový sýr.",
+    "hr": "Ako ga uopće dijeliš: maleni komadić običnog sira s manje masti, poput mozzarelle ili zrnatog svježeg sira, nikad sir s dodacima ili s plavom plijesni."
   },
   "child": {
     "en": "Cheese is very fatty for a dog's tummy. A tiny plain piece now and then is plenty — ask a grown-up first.",
@@ -158,7 +171,8 @@
     "pt": "O queijo é muito gordo para a barriga de um cão. Um pedacinho simples de vez em quando chega – pergunta primeiro a um adulto.",
     "nl": "Kaas is erg vet voor het buikje van een hond. Af en toe een heel klein, gewoon stukje is genoeg – vraag het eerst aan een volwassene.",
     "pl": "Ser jest bardzo tłusty dla psiego brzuszka. Malutki zwykły kawałek od czasu do czasu w zupełności wystarczy – najpierw zapytaj dorosłego.",
-    "cs": "Sýr je pro psí bříško hodně tučný. Malinký kousek obyčejného sýra jednou za čas úplně stačí – nejdřív se zeptej dospělého."
+    "cs": "Sýr je pro psí bříško hodně tučný. Malinký kousek obyčejného sýra jednou za čas úplně stačí – nejdřív se zeptej dospělého.",
+    "hr": "Sir je jako mastan za pseći trbuščić. Maleni komadić običnog sira tu i tamo sasvim je dovoljan – prvo pitaj odraslu osobu."
   },
   "faq": [
     {
@@ -172,7 +186,8 @@
         "pt": "O queijo azul é pior do que outros queijos para os cães?",
         "nl": "Is blauwe kaas erger dan andere kaas voor honden?",
         "pl": "Czy ser pleśniowy jest gorszy dla psów niż inne sery?",
-        "cs": "Je plísňový sýr pro psy horší než jiné sýry?"
+        "cs": "Je plísňový sýr pro psy horší než jiné sýry?",
+        "hr": "Je li sir s plavom plijesni za pse gori od drugih sireva?"
       },
       "a": {
         "en": "Yes. Roquefort and other blue cheeses contain roquefortine C, and dogs appear sensitive to it; severe cases can bring muscle tremors.",
@@ -184,7 +199,8 @@
         "pt": "Sim. O Roquefort e outros queijos azuis contêm roquefortina C, à qual os cães parecem ser sensíveis; os casos graves podem causar tremores musculares.",
         "nl": "Ja. Roquefort en andere blauwe kazen bevatten roquefortine C, en honden lijken daar gevoelig voor; in ernstige gevallen kunnen spiertrillingen optreden.",
         "pl": "Tak. Roquefort i inne sery pleśniowe zawierają roquefortynę C, na którą psy wydają się wrażliwe; w ciężkich przypadkach może wystąpić drżenie mięśni.",
-        "cs": "Ano. Rokfór a další modré plísňové sýry obsahují roquefortin C, na který jsou psi zřejmě citliví; v těžkých případech může vyvolat svalový třes."
+        "cs": "Ano. Rokfór a další modré plísňové sýry obsahují roquefortin C, na který jsou psi zřejmě citliví; v těžkých případech může vyvolat svalový třes.",
+        "hr": "Da. Roquefort i drugi sirevi s plavom plijesni sadrže roquefortin C, na koji su psi naizgled osjetljivi; u težim slučajevima može se pojaviti drhtanje mišića."
       }
     },
     {
@@ -198,7 +214,8 @@
         "pt": "Qual é o queijo menos arriscado?",
         "nl": "Welke kaas is het minst riskant?",
         "pl": "Który ser jest najmniej ryzykowny?",
-        "cs": "Který sýr je nejméně rizikový?"
+        "cs": "Který sýr je nejméně rizikový?",
+        "hr": "Koji je sir najmanje rizičan?"
       },
       "a": {
         "en": "Lower-fat plain cheeses such as mozzarella, cottage cheese or soft goat cheese, in a small amount.",
@@ -210,7 +227,8 @@
         "pt": "Os queijos simples com menos gordura, como mozzarella, queijo cottage ou queijo de cabra fresco, em pequena quantidade.",
         "nl": "Gewone, minder vette kazen zoals mozzarella, hüttenkäse of zachte geitenkaas, in een kleine hoeveelheid.",
         "pl": "Chudsze zwykłe sery, takie jak mozzarella, serek wiejski lub miękki ser kozi, w małej ilości.",
-        "cs": "Méně tučné čisté sýry, například mozzarella, tvarohový sýr (cottage) nebo měkký kozí sýr, v malém množství."
+        "cs": "Méně tučné čisté sýry, například mozzarella, tvarohový sýr (cottage) nebo měkký kozí sýr, v malém množství.",
+        "hr": "Obični sirevi s manje masti, poput mozzarelle, zrnatog svježeg sira ili mekog kozjeg sira, u maloj količini."
       }
     }
   ],
@@ -336,6 +354,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d280d9a6057ba30b663e2c8099d6dc81c668786b0bdb8f3228e1ea73421e89e"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ff6b08051e55a3b84dce210f852590487ce5b91a3e62d5d257369a083ffc5da7"
     }
   }
 }

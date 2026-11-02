@@ -11,7 +11,8 @@
     "pt": "Atum",
     "nl": "Tonijn",
     "pl": "Tuńczyk",
-    "cs": "Tuňák"
+    "cs": "Tuňák",
+    "hr": "Tuna"
   },
   "question": {
     "en": "Can cats eat tuna?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer atum?",
     "nl": "Mogen katten tonijn eten?",
     "pl": "Czy koty mogą jeść tuńczyka?",
-    "cs": "Mohou kočky jíst tuňáka?"
+    "cs": "Mohou kočky jíst tuňáka?",
+    "hr": "Smiju li mačke jesti tunu?"
   },
   "url_slug": {
     "en": "tuna",
@@ -35,7 +37,8 @@
     "pt": "atum",
     "nl": "tonijn",
     "pl": "tunczyk",
-    "cs": "tunak"
+    "cs": "tunak",
+    "hr": "tuna"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não com regularidade. Uma pequena quantidade de atum pode não fazer mal, mas o atum em lata para pessoas não tem nutrientes de que os gatos precisam, pode ter muito sal e mercúrio, e alguns veterinários desaconselham-no mesmo como guloseima. Nunca é uma alimentação completa.",
     "nl": "Niet regelmatig. Een kleine hoeveelheid tonijn kan misschien geen kwaad, maar tonijn uit blik voor mensen mist voedingsstoffen die katten nodig hebben, kan veel zout en kwik bevatten, en sommige dierenartsen raden het zelfs als snoepje af. Het is nooit een complete voeding.",
     "pl": "Nie regularnie. Niewielka ilość tuńczyka może nie zaszkodzić, ale tuńczykowi z puszki dla ludzi brakuje składników odżywczych potrzebnych kotom, a do tego może on zawierać dużo soli i rtęci, a niektórzy weterynarze odradzają go nawet jako smakołyk. Nigdy nie jest pełnowartościową dietą.",
-    "cs": "Ne pravidelně. Malé množství tuňáka nemusí uškodit, ale tuňák v konzervě pro lidi postrádá živiny, které kočky potřebují, může obsahovat hodně soli a rtuti a někteří veterináři ho nedoporučují ani jako pamlsek. Kompletní stravou není nikdy."
+    "cs": "Ne pravidelně. Malé množství tuňáka nemusí uškodit, ale tuňák v konzervě pro lidi postrádá živiny, které kočky potřebují, může obsahovat hodně soli a rtuti a někteří veterináři ho nedoporučují ani jako pamlsek. Kompletní stravou není nikdy.",
+    "hr": "Ne redovito. Malo tune možda neće naškoditi, ali tuna iz konzerve namijenjena ljudima nema hranjive tvari koje mačke trebaju, može imati puno soli i žive, a neki veterinari ne savjetuju je ni kao poslasticu. Nikad nije potpuna prehrana."
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. RSPCA Australia allows tinned tuna in spring water as an occasional treat. VCA says cats shouldn't eat tuna, not even as a treat, because it lacks essential nutrients and has too much unsaturated fat. Cats Protection warns it can be high in salt and mercury and cause weight gain. The Merck Veterinary Manual notes vitamin E deficiency in cats given large quantities of canned tuna.",
@@ -60,7 +64,8 @@
     "pt": "As fontes não estão de acordo, por isso seguimos o nível mais rigoroso. A RSPCA Australia aceita atum em lata ao natural (em água) como guloseima ocasional. A VCA diz que os gatos não devem comer atum, nem como guloseima, porque lhe faltam nutrientes essenciais e tem demasiada gordura insaturada. A Cats Protection avisa que pode ter muito sal e mercúrio e fazer engordar. O Merck Veterinary Manual refere carência de vitamina E em gatos alimentados com grandes quantidades de atum em lata.",
     "nl": "De bronnen zijn het niet met elkaar eens. Daarom volgen wij het strengste niveau. RSPCA Australia staat tonijn uit blik in bronwater af en toe als snoepje toe. Volgens VCA horen katten geen tonijn te eten, zelfs niet als snoepje, omdat het essentiële voedingsstoffen mist en te veel onverzadigd vet bevat. Cats Protection waarschuwt dat het veel zout en kwik kan bevatten en tot gewichtstoename kan leiden. De Merck Veterinary Manual vermeldt vitamine E-tekort bij katten die grote hoeveelheden tonijn uit blik kregen.",
     "pl": "Źródła się różnią, więc przyjmujemy surowszą ocenę. RSPCA Australia dopuszcza tuńczyka z puszki w wodzie źródlanej jako okazjonalny smakołyk. Według VCA koty nie powinny jeść tuńczyka, nawet jako smakołyk, bo brakuje mu niezbędnych składników odżywczych i ma za dużo tłuszczów nienasyconych. Cats Protection ostrzega, że może zawierać dużo soli i rtęci i powodować tycie. Merck Veterinary Manual opisuje niedobór witaminy E u kotów, które dostawały duże ilości tuńczyka z puszki.",
-    "cs": "Zdroje se rozcházejí, proto používáme přísnější hodnocení. RSPCA Australia připouští tuňáka z konzervy v pramenité vodě jako občasný pamlsek. Podle VCA by kočky tuňáka jíst neměly, a to ani jako pamlsek, protože postrádá nezbytné živiny a obsahuje příliš mnoho nenasycených tuků. Cats Protection varuje, že může obsahovat hodně soli a rtuti a vést k přibírání na váze. Merck Veterinary Manual uvádí nedostatek vitaminu E u koček, které dostávaly velké množství konzervovaného tuňáka."
+    "cs": "Zdroje se rozcházejí, proto používáme přísnější hodnocení. RSPCA Australia připouští tuňáka z konzervy v pramenité vodě jako občasný pamlsek. Podle VCA by kočky tuňáka jíst neměly, a to ani jako pamlsek, protože postrádá nezbytné živiny a obsahuje příliš mnoho nenasycených tuků. Cats Protection varuje, že může obsahovat hodně soli a rtuti a vést k přibírání na váze. Merck Veterinary Manual uvádí nedostatek vitaminu E u koček, které dostávaly velké množství konzervovaného tuňáka.",
+    "hr": "Izvori se ne slažu, pa primjenjujemo strožu razinu. RSPCA Australia dopušta tunu iz konzerve u izvorskoj vodi kao povremenu poslasticu. VCA navodi da mačke ne bi smjele jesti tunu, čak ni kao poslasticu, jer joj nedostaju esencijalne hranjive tvari i ima previše nezasićenih masti. Cats Protection upozorava da može imati puno soli i žive te uzrokovati debljanje. Priručnik Merck Veterinary Manual navodi nedostatak vitamina E kod mačaka koje su dobivale velike količine tune iz konzerve."
   },
   "signs": {
     "en": [
@@ -92,6 +97,9 @@
     ],
     "cs": [
       "Přibírání na váze při častém krmení"
+    ],
+    "hr": [
+      "Debljanje ako se daje često"
     ]
   },
   "what_to_do": {
@@ -104,7 +112,8 @@
     "pt": "Uma dentada de atum dificilmente será um problema. Não o tornes um hábito nem uma refeição principal. Se o teu gato parecer doente depois de comer atum, ou se come muito atum com frequência, fala com o teu veterinário.",
     "nl": "Eén hapje tonijn is waarschijnlijk geen probleem. Maak er geen gewoonte of hoofdmaaltijd van. Lijkt je kat ziek na het eten van tonijn, of eet ze er vaak veel van, overleg dan met je dierenarts.",
     "pl": "Kęs tuńczyka raczej nie zaszkodzi. Nie rób z niego zwyczaju ani głównego posiłku. Jeśli twój kot po zjedzeniu tuńczyka źle się czuje albo często zjada go dużo, porozmawiaj z weterynarzem.",
-    "cs": "Sousto tuňáka pravděpodobně problém nezpůsobí. Nedělejte z něj však zvyk ani hlavní jídlo. Pokud se vaše kočka po tuňákovi nezdá v pořádku nebo ho často jí ve větším množství, poraďte se s veterinářem."
+    "cs": "Sousto tuňáka pravděpodobně problém nezpůsobí. Nedělejte z něj však zvyk ani hlavní jídlo. Pokud se vaše kočka po tuňákovi nezdá v pořádku nebo ho často jí ve větším množství, poraďte se s veterinářem.",
+    "hr": "Zalogaj tune vjerojatno neće biti problem. Neka to ne postane navika ni glavni obrok. Ako mački nakon tune nije dobro ili često jede mnogo tune, razgovaraj s veterinarom."
   },
   "serving": {
     "en": "If at all: tinned in spring water with no added salt, a little, rarely, and never instead of cat food.",
@@ -116,7 +125,8 @@
     "pt": "Se chegares a dar atum: em lata ao natural (em água), sem sal adicionado, pouco, raramente e nunca em vez da comida para gatos.",
     "nl": "Als je het al geeft: uit blik in bronwater zonder toegevoegd zout, een klein beetje, zelden, en nooit in plaats van kattenvoer.",
     "pl": "Jeśli już: z puszki w wodzie źródlanej, bez dodatku soli, odrobina, rzadko i nigdy zamiast karmy dla kota.",
-    "cs": "Pokud vůbec, pak z konzervy v pramenité vodě bez přidané soli, trochu, výjimečně a nikdy místo krmiva pro kočky."
+    "cs": "Pokud vůbec, pak z konzervy v pramenité vodě bez přidané soli, trochu, výjimečně a nikdy místo krmiva pro kočky.",
+    "hr": "Ako uopće: iz konzerve u izvorskoj vodi bez dodane soli, malo, rijetko i nikad umjesto hrane za mačke."
   },
   "child": {
     "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
@@ -128,7 +138,8 @@
     "pt": "Os gatos adoram atum, mas demasiado não é saudável. A comida própria para gatos é que os mantém fortes.",
     "nl": "Katten zijn dol op tonijn, maar te veel is niet gezond. Van hun eigen kattenvoer blijven ze sterk.",
     "pl": "Koty uwielbiają tuńczyka, ale jego nadmiar nie jest zdrowy. Ich własna kocia karma daje im siłę.",
-    "cs": "Kočky tuňáka milují, ale moc tuňáka není zdravé. Silné je udržuje jejich vlastní kočičí krmivo."
+    "cs": "Kočky tuňáka milují, ale moc tuňáka není zdravé. Silné je udržuje jejich vlastní kočičí krmivo.",
+    "hr": "Mace obožavaju tunu, ali previše tune nije zdravo. Njihova hrana za mačke čini ih jakima."
   },
   "faq": [
     {
@@ -142,7 +153,8 @@
         "pt": "O meu gato pode viver só de atum?",
         "nl": "Kan mijn kat van tonijn leven?",
         "pl": "Czy mój kot może żywić się tylko tuńczykiem?",
-        "cs": "Může moje kočka žít jen na tuňákovi?"
+        "cs": "Může moje kočka žít jen na tuňákovi?",
+        "hr": "Može li moja mačka živjeti samo na tuni?"
       },
       "a": {
         "en": "No. Tuna lacks essential nutrients cats need, and cats given large amounts of canned tuna have developed vitamin E deficiency.",
@@ -154,7 +166,8 @@
         "pt": "Não. Ao atum faltam nutrientes essenciais de que os gatos precisam, e gatos alimentados com grandes quantidades de atum em lata desenvolveram carência de vitamina E.",
         "nl": "Nee. Tonijn mist essentiële voedingsstoffen die katten nodig hebben, en katten die grote hoeveelheden tonijn uit blik kregen, hebben een vitamine E-tekort ontwikkeld.",
         "pl": "Nie. Tuńczykowi brakuje niezbędnych składników odżywczych, których potrzebują koty, a u kotów dostających duże ilości tuńczyka z puszki rozwijał się niedobór witaminy E.",
-        "cs": "Ne. Tuňák postrádá nezbytné živiny, které kočky potřebují, a u koček, které dostávaly velké množství konzervovaného tuňáka, se objevil nedostatek vitaminu E."
+        "cs": "Ne. Tuňák postrádá nezbytné živiny, které kočky potřebují, a u koček, které dostávaly velké množství konzervovaného tuňáka, se objevil nedostatek vitaminu E.",
+        "hr": "Ne može. Tuni nedostaju esencijalne hranjive tvari koje mačke trebaju, a kod mačaka koje su dobivale velike količine tune iz konzerve razvio se nedostatak vitamina E."
       }
     }
   ],
@@ -261,6 +274,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0922be12716c8bd6eafab1e28a8c7a8323291f5dfa91cc2d990f4a1eaff7269b"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4b2d099b4c241735004ba90cf9f9d6f9de600c983de0d26ba95e72bda15686d9"
     }
   }
 }

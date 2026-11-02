@@ -11,7 +11,8 @@
     "pt": "Manteiga",
     "nl": "Boter",
     "pl": "Masło",
-    "cs": "Máslo"
+    "cs": "Máslo",
+    "hr": "Maslac"
   },
   "question": {
     "en": "Can cats eat butter?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer manteiga?",
     "nl": "Mogen katten boter eten?",
     "pl": "Czy koty mogą jeść masło?",
-    "cs": "Mohou kočky jíst máslo?"
+    "cs": "Mohou kočky jíst máslo?",
+    "hr": "Smiju li mačke jesti maslac?"
   },
   "url_slug": {
     "en": "butter",
@@ -35,7 +37,8 @@
     "pt": "manteiga",
     "nl": "boter",
     "pl": "maslo",
-    "cs": "maslo"
+    "cs": "maslo",
+    "hr": "maslac"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Não, é melhor evitar a manteiga. É um laticínio gordo: os guias de cuidados com gatos incluem os alimentos gordos entre o que nunca se deve dar a gatos, os laticínios podem fazer mal ao estômago do gato e a gordura que têm faz engordar.",
     "nl": "Nee, boter kun je beter vermijden. Het is een vet zuivelproduct: kattenverzorgingsgidsen noemen vet voedsel bij de dingen die je katten nooit moet geven, zuivel kan de maag van een kat van streek maken en het vet zorgt voor extra gewicht.",
     "pl": "Nie, lepiej unikać masła. To tłusty produkt mleczny: poradniki o opiece nad kotami wymieniają tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, produkty mleczne mogą wywołać u kota rozstrój żołądka, a ich tłuszcz sprzyja tyciu.",
-    "cs": "Ne, máslu je lepší se vyhnout. Je to tučná mléčná potravina: příručky o péči o kočky řadí tučná jídla mezi to, čím kočky nikdy nekrmit, mléčné výrobky mohou kočce podráždit žaludek a jejich tuk přispívá k přibírání na váze."
+    "cs": "Ne, máslu je lepší se vyhnout. Je to tučná mléčná potravina: příručky o péči o kočky řadí tučná jídla mezi to, čím kočky nikdy nekrmit, mléčné výrobky mohou kočce podráždit žaludek a jejich tuk přispívá k přibírání na váze.",
+    "hr": "Ne, maslac je najbolje izbjegavati. To je masna mliječna namirnica: vodiči za njegu mačaka navode masnu hranu među onim što mačkama nikad ne treba davati, mliječni proizvodi mogu mački izazvati želučane tegobe, a njihova masnoća pridonosi debljanju."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -60,7 +64,8 @@
     "pt": "A RSPCA Australia inclui as aparas de gordura e os alimentos gordos entre o que nunca se deve dar a gatos, e a gordura a mais pode levar a uma doença dolorosa chamada pancreatite. A manteiga é também um laticínio: muitos gatos são intolerantes à lactose, os produtos à base de leite podem causar vómitos ou diarreia, e os laticínios são ricos em gordura e contribuem para o aumento de peso.",
     "nl": "RSPCA Australia noemt vette afsnijdsels en vet voedsel bij de dingen die je katten nooit moet geven, en toegevoegd vet kan leiden tot een pijnlijke aandoening: alvleesklierontsteking (pancreatitis). Boter is ook een zuivelproduct: veel katten zijn lactose-intolerant, melkproducten kunnen braken of diarree veroorzaken, en zuivelproducten bevatten veel vet en dragen bij aan gewichtstoename.",
     "pl": "RSPCA Australia wymienia tłuste ścinki i tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, a dodatkowy tłuszcz może prowadzić do bolesnej choroby – zapalenia trzustki. Masło jest też produktem mlecznym: wiele kotów nie toleruje laktozy, produkty na bazie mleka mogą wywołać wymioty lub biegunkę, a produkty mleczne zawierają dużo tłuszczu i sprzyjają tyciu.",
-    "cs": "RSPCA Australia uvádí tučné odřezky a tučná jídla mezi to, čím kočky nikdy nekrmit, a přidaný tuk může vést k bolestivému onemocnění zvanému zánět slinivky břišní. Máslo je navíc mléčný výrobek: mnoho koček nesnáší laktózu, výrobky z mléka mohou způsobit zvracení nebo průjem a mléčné výrobky mají vysoký obsah tuku a přispívají k přibírání na váze."
+    "cs": "RSPCA Australia uvádí tučné odřezky a tučná jídla mezi to, čím kočky nikdy nekrmit, a přidaný tuk může vést k bolestivému onemocnění zvanému zánět slinivky břišní. Máslo je navíc mléčný výrobek: mnoho koček nesnáší laktózu, výrobky z mléka mohou způsobit zvracení nebo průjem a mléčné výrobky mají vysoký obsah tuku a přispívají k přibírání na váze.",
+    "hr": "RSPCA Australia navodi masne obreske i masnu hranu među onim što mačkama nikad ne treba davati, a dodana mast može dovesti do bolnog stanja koje se zove upala gušterače. Maslac je ujedno mliječni proizvod: mnoge mačke ne podnose laktozu, proizvodi na bazi mlijeka mogu izazvati povraćanje ili proljev, a mliječni proizvodi imaju mnogo masti i pridonose debljanju."
   },
   "signs": {
     "en": [
@@ -112,6 +117,11 @@
       "Zvracení",
       "Průjem",
       "Podrážděný žaludek"
+    ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Želučane tegobe"
     ]
   },
   "what_to_do": {
@@ -124,7 +134,8 @@
     "pt": "Se o teu gato comeu manteiga, vigia se aparecem vómitos ou diarreia e contacta o teu veterinário para pedir conselho se ele parecer doente ou tiver comido muita.",
     "nl": "Heeft je kat boter gegeten? Let op braken of diarree en vraag je dierenarts om advies als ze ziek lijkt of er veel van heeft gegeten.",
     "pl": "Jeśli twój kot zjadł masło, obserwuj, czy nie wymiotuje i nie ma biegunki, i poradź się weterynarza, jeśli źle się czuje lub zjadł dużo.",
-    "cs": "Pokud kočka snědla máslo, sledujte, zda nezvrací nebo nemá průjem, a pokud se zdá, že jí není dobře, nebo ho snědla hodně, poraďte se s veterinářem."
+    "cs": "Pokud kočka snědla máslo, sledujte, zda nezvrací nebo nemá průjem, a pokud se zdá, že jí není dobře, nebo ho snědla hodně, poraďte se s veterinářem.",
+    "hr": "Ako je tvoja mačka pojela maslac, pripazi na povraćanje ili proljev i obrati se veterinaru za savjet ako se čini da joj nije dobro ili ako je pojela mnogo."
   },
   "serving": null,
   "child": {
@@ -137,7 +148,8 @@
     "pt": "A manteiga tem demasiada gordura para gatos. Deixa-a na tua torrada e dá ao teu gato a comida dele.",
     "nl": "Boter is te vet voor katten. Houd het op je boterham en geef je kat haar eigen eten.",
     "pl": "Masło jest za tłuste dla kotów. Zostaw je na swoim tościku, a kotu daj jego własne jedzenie.",
-    "cs": "Máslo je pro kočky moc tučné. Nech si ho na chlebu a kočce dej její vlastní jídlo."
+    "cs": "Máslo je pro kočky moc tučné. Nech si ho na chlebu a kočce dej její vlastní jídlo.",
+    "hr": "Maslac je premastan za mace. Neka ostane na tvom tostu, a mački daj njezinu hranu."
   },
   "faq": [],
   "sources": [
@@ -230,6 +242,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7a9c16fa0e83f804245f6f8436e5218a0ffbd78f6a977cd2c6cccce9a1dbfd1a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b3336f8500ea406b32654435a38d773644c22fa76790817a34cfca10425cb870"
     }
   }
 }
