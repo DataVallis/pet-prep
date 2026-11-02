@@ -4,6 +4,7 @@
   "name": {
     "en": "Raspberries",
     "sl": "Maline",
+    "de": "Himbeeren",
     "cs": "Maliny",
     "hr": "Maline",
     "sv": "Hallon",
@@ -14,6 +15,7 @@
   "question": {
     "en": "Can dogs eat raspberries?",
     "sl": "Ali lahko psi jedo maline?",
+    "de": "Dürfen Hunde Himbeeren fressen?",
     "cs": "Mohou psi jíst maliny?",
     "hr": "Smiju li psi jesti maline?",
     "sv": "Får hundar äta hallon?",
@@ -24,6 +26,7 @@
   "url_slug": {
     "en": "raspberries",
     "sl": "maline",
+    "de": "himbeeren",
     "cs": "maliny",
     "hr": "maline",
     "sv": "hallon",
@@ -35,6 +38,7 @@
   "answer": {
     "en": "Yes, in moderation. Raspberries can be a healthy occasional treat and are relatively low in sugar and calories, but they contain naturally occurring xylitol, so give them only in moderation. Fresh or frozen raspberries are best.",
     "sl": "Da, zmerno. Maline so lahko zdrav občasen priboljšek in imajo razmeroma malo sladkorja in kalorij, a vsebujejo naravni ksilitol, zato jih dajajte le zmerno. Najboljše so sveže ali zamrznjene maline.",
+    "de": "Ja, in Maßen. Himbeeren können ein gesundes gelegentliches Leckerli sein und haben relativ wenig Zucker und Kalorien. Sie enthalten aber natürlich vorkommendes Xylit – geben Sie sie daher nur in Maßen. Am besten sind frische oder tiefgekühlte Himbeeren.",
     "cs": "Ano, s mírou. Maliny mohou být zdravým občasným pamlskem a mají poměrně málo cukru a kalorií, obsahují ale přirozeně se vyskytující xylitol, proto je dávejte jen s mírou. Nejlepší jsou čerstvé nebo mražené maliny.",
     "hr": "Da, umjereno. Maline mogu biti zdrava povremena poslastica i imaju relativno malo šećera i kalorija, ali prirodno sadrže ksilitol, pa ih daj samo umjereno. Najbolje su svježe ili smrznute maline.",
     "sv": "Ja, med måtta. Hallon kan vara en nyttig godbit ibland och innehåller relativt lite socker och kalorier, men de innehåller naturligt xylitol, så ge dem bara med måtta. Färska eller frysta hallon är bäst.",
@@ -45,6 +49,7 @@
   "why": {
     "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
     "sl": "Maline vsebujejo naravni ksilitol, in sicer več kot večina drugih vrst sadja, čeprav je te količine malo v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte.",
+    "de": "Himbeeren enthalten mehr natürlich vorkommendes Xylit als die meisten anderen Obstsorten, auch wenn diese Menge im Vergleich zu dem, was Hunden bekanntermaßen schadet, gering ist. Zu viele Himbeeren können Erbrechen, Durchfall, Verstopfung oder andere Verdauungsbeschwerden verursachen. Gesüßte Himbeerprodukte sollten Sie meiden.",
     "cs": "Maliny obsahují přirozeně se vyskytující xylitol ve větším množství než většina ostatního ovoce, i když je to málo ve srovnání s množstvím, o kterém je známo, že psům škodí. Příliš mnoho malin může způsobit zvracení, průjem, zácpu nebo jiné zažívací potíže. Slazeným malinovým výrobkům se vyhněte.",
     "hr": "Maline prirodno sadrže više ksilitola nego većina drugog voća, iako je ta količina mala u usporedbi s onom za koju se zna da šteti psima. Previše malina može izazvati povraćanje, proljev, zatvor ili druge probavne tegobe. Zaslađene proizvode od malina treba izbjegavati.",
     "sv": "Hallon innehåller naturligt xylitol i högre halter än de flesta andra frukter, även om mängden är låg jämfört med den som man vet skadar hundar. För mycket hallon kan orsaka kräkningar, diarré, förstoppning eller andra matsmältningsbesvär. Sötade hallonprodukter bör undvikas.",
@@ -56,6 +61,7 @@
   "what_to_do": {
     "en": "Give raspberries only in moderation, because overfeeding may upset digestion. Owners of diabetic dogs should ask their vet before giving any new treats.",
     "sl": "Maline dajajte le zmerno, ker lahko preveč malin povzroči prebavne težave. Lastniki psov s sladkorno boleznijo naj pred vsakim novim priboljškom vprašajo veterinarja.",
+    "de": "Geben Sie Himbeeren nur in Maßen, denn zu viele können die Verdauung stören. Hat Ihr Hund Diabetes, fragen Sie vor jedem neuen Leckerli Ihren Tierarzt.",
     "cs": "Maliny dávejte jen s mírou, protože příliš velké množství může podráždit trávení. Majitelé psů s cukrovkou by se měli před podáním jakéhokoli nového pamlsku poradit s veterinářem.",
     "hr": "Daj maline samo umjereno jer previše malina može izazvati probavne tegobe. Ako tvoj pas ima šećernu bolest, pitaj veterinara prije nego što mu daš bilo koju novu poslasticu.",
     "sv": "Ge hallon bara med måtta, eftersom för mycket kan ge matsmältningsbesvär. Har du en hund med diabetes, fråga veterinären innan du ger nya godbitar.",
@@ -66,6 +72,7 @@
   "serving": {
     "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
     "sl": "Navadne sveže ali zamrznjene maline, nikoli sladkani izdelki; kot občasen priboljšek.",
+    "de": "Frische oder tiefgekühlte Himbeeren ohne Zusätze, niemals gesüßte Produkte; als gelegentliches Leckerli.",
     "cs": "Obyčejné čerstvé nebo mražené maliny, nikdy slazené výrobky; jako občasný pamlsek.",
     "hr": "Obične svježe ili smrznute maline, nikad zaslađeni proizvodi; kao povremena poslastica.",
     "sv": "Färska eller frysta hallon utan tillsatser, aldrig sötade produkter; som en godbit ibland.",
@@ -76,6 +83,7 @@
   "child": {
     "en": "Dogs can have a few raspberries as a treat! A grown-up decides how many, because too many can upset a tummy.",
     "sl": "Psi lahko kot priboljšek dobijo nekaj malin! Odrasel odloči, koliko, ker lahko preveč malin povzroči težave s trebuščkom.",
+    "de": "Hunde dürfen ein paar Himbeeren als Leckerli bekommen! Ein Erwachsener entscheidet, wie viele, denn zu viele können Bauchweh machen.",
     "cs": "Pejsci si můžou dát pár malin jako pamlsek! Kolik, rozhodne dospělý, protože moc malin může rozbolet bříško.",
     "hr": "Psi smiju pojesti nekoliko malina kao poslasticu! Odrasla osoba odlučuje koliko, jer od previše malina može zaboljeti trbuh.",
     "sv": "Hundar får äta några hallon som godbit! En vuxen bestämmer hur många, eftersom för många kan ge ont i magen.",
@@ -88,6 +96,7 @@
       "q": {
         "en": "Is the xylitol in raspberries a problem?",
         "sl": "Je ksilitol v malinah težava?",
+        "de": "Ist das Xylit in Himbeeren ein Problem?",
         "cs": "Je xylitol v malinách problém?",
         "hr": "Je li ksilitol u malinama problem?",
         "sv": "Är xylitolet i hallon ett problem?",
@@ -98,6 +107,7 @@
       "a": {
         "en": "The amount of xylitol in raspberries is low relative to the amount known to harm dogs, but give raspberries only in moderation.",
         "sl": "Količina ksilitola v malinah je majhna v primerjavi s količino, za katero je znano, da psom škoduje, a maline dajajte le zmerno.",
+        "de": "Die Xylitmenge in Himbeeren ist gering im Vergleich zu der Menge, die Hunden bekanntermaßen schadet – geben Sie Himbeeren aber trotzdem nur in Maßen.",
         "cs": "Množství xylitolu v malinách je malé v porovnání s množstvím, o kterém je známo, že psům škodí, maliny ale přesto dávejte jen s mírou.",
         "hr": "Količina ksilitola u malinama mala je u usporedbi s količinom za koju se zna da šteti psima, ali maline svejedno daj samo umjereno.",
         "sv": "Mängden xylitol i hallon är låg jämfört med den mängd man vet skadar hundar, men ge ändå hallon bara med måtta.",
@@ -170,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e2164a22d59d56824c3d83bd021a111e2579441a2a7998c351f836753a6c1050"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c371e1b2e8adbee972d5b28e910f50dbec7fad315a536a3e380873e88dc5a615"
     },
     "cs": {
       "status": "verified",

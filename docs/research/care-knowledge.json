@@ -637,6 +637,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -647,6 +648,7 @@
       "name": {
         "en": "Apple seeds",
         "sl": "Jabolčne pečke",
+        "de": "Apfelkerne",
         "cs": "Jablečná jádra",
         "hr": "Sjemenke jabuke",
         "sv": "Äppelkärnor",
@@ -657,6 +659,7 @@
       "question": {
         "en": "Can cats eat apple seeds?",
         "sl": "Ali lahko mačke jedo jabolčne pečke?",
+        "de": "Dürfen Katzen Apfelkerne fressen?",
         "cs": "Mohou kočky jíst jablečná jádra?",
         "hr": "Smiju li mačke jesti sjemenke jabuke?",
         "sv": "Får katter äta äppelkärnor?",
@@ -667,6 +670,7 @@
       "url_slug": {
         "en": "apple-seeds",
         "sl": "jabolcne-pecke",
+        "de": "apfelkerne",
         "cs": "jablecna-jadra",
         "hr": "sjemenke-jabuke",
         "sv": "appelkarnor",
@@ -677,6 +681,7 @@
       "answer": {
         "en": "No. Apple seeds should not be given to cats: they contain cyanide, and seeds and cores can cause choking or a gut blockage. Poisoning mainly matters when many seeds are eaten, so call your vet if your cat ate many seeds or chewed apple stems or leaves.",
         "sl": "Ne. Jabolčnih pečk mačkam ne dajajte: vsebujejo cianid, pečke in peščišče pa lahko povzročijo dušenje ali zamašitev črevesja. Zastrupitev je predvsem skrb, ko žival poje veliko pečk, zato pokličite veterinarja, če je mačka pojedla veliko pečk ali grizljala peclje ali liste jablane.",
+        "de": "Nein. Katzen sollten keine Apfelkerne bekommen: Sie enthalten Cyanid, und Kerne und Kerngehäuse können zum Ersticken oder zu einem Darmverschluss führen. Eine Vergiftung spielt vor allem dann eine Rolle, wenn viele Kerne gefressen werden – rufen Sie also Ihren Tierarzt an, wenn Ihre Katze viele Kerne gefressen oder auf Apfelstielen oder -blättern gekaut hat.",
         "cs": "Ne. Jablečná jádra kočkám nedávejte: obsahují kyanid a jádra i ohryzky mohou způsobit dušení nebo ucpání střev. Otrava hrozí hlavně tehdy, když kočka sní hodně jader, proto zavolejte veterináři, pokud kočka snědla hodně jader nebo okusovala jablečné stopky či listy.",
         "hr": "Ne. Sjemenke jabuke ne treba davati mačkama: sadrže cijanid, a sjemenke i sredina jabuke mogu izazvati gušenje ili začepljenje crijeva. Otrovanje je uglavnom problem kad mačka pojede mnogo sjemenki, zato nazovi veterinara ako je tvoja mačka pojela mnogo sjemenki ili žvakala peteljke ili listove jabuke.",
         "sv": "Nej. Ge inte katter äppelkärnor: de innehåller cyanid, och kärnor och kärnhus kan orsaka kvävning eller tarmstopp. Förgiftning är främst ett problem när katten äter många kärnor, så ring veterinären om katten har ätit många kärnor eller tuggat på äppelskaft eller äppelblad.",
@@ -687,6 +692,7 @@
       "why": {
         "en": "NC State's veterinary hospital lists apple seeds under \"Toxic to pets: do not feed!\" on its page for cats and dogs, and the ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide (as cyanogenic glycosides). Pet Poison Helpline adds that the core and seeds can cause choking and intestinal obstruction, but that a pet would need to eat massive amounts of seeds for the cyanide to be a concern. We follow the stricter advice: don't give them.",
         "sl": "Veterinarska bolnišnica univerze NC State na svoji strani za mačke in pse navaja jabolčne pečke pod »Strupeno za živali: ne hranite!«, ASPCA pa rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid (v obliki cianogenih glikozidov). Pet Poison Helpline dodaja, da lahko peščišče in pečke povzročijo dušenje in zamašitev črevesja, za zastrupitev s cianidom pa bi morala žival pojesti ogromno pečk. Sledimo strožjemu nasvetu: ne dajajte jih.",
+        "de": "Die Tierklinik der NC State University führt Apfelkerne auf ihrer Seite für Katzen und Hunde unter „Giftig für Haustiere – nicht füttern!“, und die ASPCA stuft die Apfelpflanze als giftig für Katzen ein, weil Stiele, Blätter und Kerne Cyanid (in Form cyanogener Glykoside) enthalten. Pet Poison Helpline ergänzt, dass Kerngehäuse und Kerne zum Ersticken und zu einem Darmverschluss führen können, ein Tier aber riesige Mengen Kerne fressen müsste, damit das Cyanid bedenklich wird. Wir folgen dem strengeren Rat: nicht füttern.",
         "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablečná jádra na své stránce pro kočky a psy v části „Toxické pro zvířata: nekrmte!“ a ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů). Pet Poison Helpline dodává, že ohryzek a jádra mohou způsobit dušení a ucpání střev, ale aby byl kyanid problémem, muselo by zvíře sníst obrovské množství jader. Držíme se přísnějšího doporučení: nedávejte je.",
         "hr": "Veterinarska bolnica sveučilišta NC State na svojoj stranici za mačke i pse navodi sjemenke jabuke pod „Otrovno za ljubimce: ne davati!“, a ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida). Pet Poison Helpline dodaje da sredina i sjemenke mogu izazvati gušenje i začepljenje crijeva, ali da bi ljubimac morao pojesti golemu količinu sjemenki da bi cijanid bio razlog za brigu. Mi se držimo strožeg savjeta: ne daj ih mački.",
         "sv": "NC States djursjukhus listar äppelkärnor under ”Giftigt för husdjur: ge inte!” på sin sida för katter och hundar, och ASPCA anger att äppelträdet är giftigt för katter eftersom skaft, blad och kärnor innehåller cyanid (i form av cyanogena glykosider). Pet Poison Helpline tillägger att kärnhus och kärnor kan orsaka kvävning och tarmstopp, men att ett husdjur måste äta väldigt stora mängder kärnor för att cyaniden ska vara ett problem. Vi följer det strängare rådet: ge dem inte.",
@@ -708,6 +714,13 @@
           "Težave z dihanjem",
           "Sopihanje",
           "Šok"
+        ],
+        "de": [
+          "Ziegelrotes Zahnfleisch",
+          "Erweiterte Pupillen",
+          "Atembeschwerden",
+          "Hecheln",
+          "Schock"
         ],
         "cs": [
           "Cihlově červené dásně",
@@ -755,6 +768,7 @@
       "what_to_do": {
         "en": "Contact your vet or a pet poison helpline as soon as possible if your cat ate many apple seeds, chewed apple stems or leaves, or shows any of these signs.",
         "sl": "Čim prej se obrnite na veterinarja ali center za zastrupitve živali, če je mačka pojedla veliko jabolčnih pečk, grizljala peclje ali liste jablane ali kaže katerega od teh znakov.",
+        "de": "Wenden Sie sich so schnell wie möglich an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze viele Apfelkerne gefressen oder auf Apfelstielen oder -blättern gekaut hat oder eines dieser Anzeichen zeigt.",
         "cs": "Co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata, pokud kočka snědla hodně jablečných jader, okusovala jablečné stopky nebo listy nebo má některý z těchto příznaků.",
         "hr": "Što prije se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je tvoja mačka pojela mnogo sjemenki jabuke, žvakala peteljke ili listove jabuke ili pokazuje bilo koji od ovih znakova.",
         "sv": "Kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt om katten har ätit många äppelkärnor, tuggat på äppelskaft eller äppelblad eller visar något av dessa symtom.",
@@ -766,6 +780,7 @@
       "child": {
         "en": "Apple seeds are not for cats. If kitty finds some, tell a grown-up.",
         "sl": "Jabolčne pečke niso za muce. Če jih muca najde, povej odraslemu.",
+        "de": "Apfelkerne sind nichts für Katzen. Wenn deine Katze welche findet, sag einem Erwachsenen Bescheid.",
         "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému.",
         "hr": "Sjemenke jabuke nisu za mace. Ako ih maca pronađe, reci odrasloj osobi.",
         "sv": "Äppelkärnor är inte för katter. Om katten hittar några, säg till en vuxen.",
@@ -778,6 +793,7 @@
           "q": {
             "en": "My cat swallowed one apple seed. What now?",
             "sl": "Muca je pogoltnila eno jabolčno pečko. Kaj zdaj?",
+            "de": "Meine Katze hat einen einzigen Apfelkern verschluckt. Was nun?",
             "cs": "Moje kočka spolkla jedno jablečné jádro. Co teď?",
             "hr": "Moja je mačka progutala jednu sjemenku jabuke. Što sad?",
             "sv": "Min katt svalde en äppelkärna. Vad gör jag nu?",
@@ -788,6 +804,7 @@
           "a": {
             "en": "Pet Poison Helpline says a pet would need to eat massive amounts of apple seeds for them to be a concern. If you are unsure or see any signs, contact your vet.",
             "sl": "Pet Poison Helpline navaja, da bi morala žival pojesti ogromno jabolčnih pečk, da bi bile skrb vzbujajoče. Če niste prepričani ali opazite znake, se obrnite na veterinarja.",
+            "de": "Laut Pet Poison Helpline müsste ein Tier riesige Mengen Apfelkerne fressen, damit sie bedenklich werden. Wenn Sie unsicher sind oder Anzeichen bemerken, wenden Sie sich an Ihren Tierarzt.",
             "cs": "Podle Pet Poison Helpline by zvíře muselo sníst obrovské množství jablečných jader, aby byla problémem. Pokud si nejste jistí nebo si všimnete jakýchkoli příznaků, obraťte se na veterináře.",
             "hr": "Pet Poison Helpline navodi da bi ljubimac morao pojesti golemu količinu sjemenki jabuke da bi one bile razlog za brigu. U slučaju dvojbe ili ako primijetiš bilo kakve znakove, obrati se veterinaru.",
             "sv": "Enligt Pet Poison Helpline måste ett husdjur äta väldigt stora mängder äppelkärnor för att de ska vara ett problem. Om du är osäker eller ser några symtom, kontakta veterinären.",
@@ -828,6 +845,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -838,6 +856,7 @@
       "name": {
         "en": "Apples",
         "sl": "Jabolka",
+        "de": "Äpfel",
         "cs": "Jablka",
         "hr": "Jabuke",
         "sv": "Äpplen",
@@ -848,6 +867,7 @@
       "question": {
         "en": "Can cats eat apples?",
         "sl": "Ali lahko mačke jedo jabolka?",
+        "de": "Dürfen Katzen Äpfel fressen?",
         "cs": "Mohou kočky jíst jablka?",
         "hr": "Smiju li mačke jesti jabuke?",
         "sv": "Får katter äta äpplen?",
@@ -858,6 +878,7 @@
       "url_slug": {
         "en": "apples",
         "sl": "jabolka",
+        "de": "aepfel",
         "cs": "jablka",
         "hr": "jabuke",
         "sv": "applen",
@@ -868,6 +889,7 @@
       "answer": {
         "en": "Yes, a small piece of apple is fine now and then, as long as you remove the core, seeds and stem first. Cats are meat eaters and don't need fruit, so apple is only an occasional extra.",
         "sl": "Da, majhen košček jabolka je občasno v redu, če prej odstranite peščišče, pečke in pecelj. Mačke so mesojede in sadja ne potrebujejo, zato je jabolko le občasen dodatek.",
+        "de": "Ja, ein kleines Stück Apfel ab und zu ist in Ordnung, sofern Sie vorher Kerngehäuse, Kerne und Stiel entfernen. Katzen sind Fleischfresser und brauchen kein Obst – Apfel ist also nur eine gelegentliche Kleinigkeit.",
         "cs": "Ano, malý kousek jablka je občas v pořádku, pokud předem odstraníte ohryzek, jádra a stopku. Kočky jsou masožravci a ovoce nepotřebují, takže jablko je jen občasný doplněk.",
         "hr": "Da, mali komadić jabuke povremeno je u redu, ako prije toga ukloniš sredinu, sjemenke i peteljku. Mačke su mesojedi i ne trebaju voće, pa je jabuka samo povremeni dodatak.",
         "sv": "Ja, en liten bit äpple då och då går bra, så länge du först tar bort kärnhus, kärnor och skaft. Katter är köttätare och behöver inte frukt, så äpple är bara något extra någon gång ibland.",
@@ -878,6 +900,7 @@
       "why": {
         "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
         "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die Tierklinik der NC State University zählt Apfel ohne Kerne zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde, und laut Pet Poison Helpline sind Äpfel roh oder gekocht unbedenklich, sobald Kerngehäuse und Kerne entfernt sind. Die ASPCA stuft die Apfelpflanze als giftig für Katzen ein, weil ihre Stiele, Blätter und Kerne Cyanid enthalten. Katzen sind obligate Fleischfresser, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablko bez jader mezi zdravými pamlsky z lidské stravy pro kočky a psy a podle Pet Poison Helpline jsou jablka bezpečná syrová i tepelně upravená, jakmile se odstraní ohryzek a jádra. ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid. Kočky jsou obligátní masožravci a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Veterinarska bolnica sveučilišta NC State navodi jabuku bez sjemenki među zdravim poslasticama iz ljudske hrane za mačke i pse, a Pet Poison Helpline navodi da su jabuke sigurne sirove ili termički obrađene kad se uklone sredina i sjemenke. ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid. Mačke su obligatni mesojedi, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "NC States djursjukhus räknar äpple utan kärnor till de hälsosamma godbitarna från människomat för katter och hundar, och Pet Poison Helpline skriver att äpplen är säkra råa eller tillagade när kärnhus och kärnor är borttagna. ASPCA anger att äppelträdet är giftigt för katter eftersom skaft, blad och kärnor innehåller cyanid. Katter är obligata köttätare, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -889,6 +912,7 @@
       "what_to_do": {
         "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet. If your cat chewed apple seeds, stems or leaves, contact your vet or a pet poison helpline as soon as possible.",
         "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali.",
+        "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze auf Apfelkernen, -stielen oder -blättern gekaut, wenden Sie sich so schnell wie möglich an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
         "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem. Pokud kočka okusovala jablečná jádra, stopky nebo listy, co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
         "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara. Ako je mačka žvakala sjemenke, peteljke ili listove jabuke, što prije se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären. Om katten har tuggat på äppelkärnor, skaft eller blad, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt.",
@@ -899,6 +923,7 @@
       "serving": {
         "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
         "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku.",
+        "de": "Nur das Fruchtfleisch, roh oder gekocht, ohne Kerngehäuse, Kerne und Stiel; ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
         "cs": "Pouze dužina jablka, syrová nebo tepelně upravená, bez ohryzku, jader a stopky; občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Samo meso jabuke, sirovo ili termički obrađeno, bez sredine, sjemenki i peteljke; mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
         "sv": "Bara fruktköttet, rått eller tillagat, med kärnhus, kärnor och skaft borttagna; en liten bit då och då, inräknad i kattens dagliga matranson.",
@@ -909,6 +934,7 @@
       "child": {
         "en": "A tiny piece of apple with no seeds can be a cat treat. Cats mostly need meat, so fruit is just a little extra.",
         "sl": "Majhen košček jabolka brez pečk je lahko priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein winziges Stück Apfel ohne Kerne kann ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Malinký kousek jablka bez jadérek může být pro kočku pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Sićušan komadić jabuke bez sjemenki može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
         "sv": "En pytteliten bit äpple utan kärnor kan bli en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -921,6 +947,7 @@
           "q": {
             "en": "Why remove the core and seeds?",
             "sl": "Zakaj odstraniti peščišče in pečke?",
+            "de": "Warum Kerngehäuse und Kerne entfernen?",
             "cs": "Proč odstranit ohryzek a jádra?",
             "hr": "Zašto treba ukloniti sredinu i sjemenke?",
             "sv": "Varför ska kärnhus och kärnor tas bort?",
@@ -931,6 +958,7 @@
           "a": {
             "en": "The core and seeds can cause choking or a blockage in the gut, and the seeds contain a small amount of cyanide.",
             "sl": "Peščišče in pečke lahko povzročijo dušenje ali zamašitev črevesja, pečke pa vsebujejo tudi majhno količino cianida.",
+            "de": "Kerngehäuse und Kerne können zum Ersticken oder zu einem Darmverschluss führen, und die Kerne enthalten eine kleine Menge Cyanid.",
             "cs": "Ohryzek a jádra mohou způsobit dušení nebo ucpání střev a jádra obsahují malé množství kyanidu.",
             "hr": "Sredina i sjemenke mogu izazvati gušenje ili začepljenje crijeva, a sjemenke sadrže malu količinu cijanida.",
             "sv": "Kärnhus och kärnor kan orsaka kvävning eller tarmstopp, och kärnorna innehåller en liten mängd cyanid.",
@@ -943,6 +971,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -953,6 +982,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
@@ -1539,6 +1569,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -1549,6 +1580,7 @@
       "name": {
         "en": "Bananas",
         "sl": "Banane",
+        "de": "Bananen",
         "cs": "Banány",
         "hr": "Banane",
         "sv": "Bananer",
@@ -1559,6 +1591,7 @@
       "question": {
         "en": "Can cats eat bananas?",
         "sl": "Ali lahko mačke jedo banane?",
+        "de": "Dürfen Katzen Bananen fressen?",
         "cs": "Mohou kočky jíst banány?",
         "hr": "Smiju li mačke jesti banane?",
         "sv": "Får katter äta bananer?",
@@ -1569,6 +1602,7 @@
       "url_slug": {
         "en": "bananas",
         "sl": "banane",
+        "de": "bananen",
         "cs": "banany",
         "hr": "banane",
         "sv": "bananer",
@@ -1579,6 +1613,7 @@
       "answer": {
         "en": "Yes, a small piece of banana is fine as an occasional treat. The ASPCA lists banana as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
         "sl": "Da, majhen košček banane je v redu kot občasen priboljšek. ASPCA banano navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek.",
+        "de": "Ja, ein kleines Stück Banane ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Banane als ungiftig für Katzen ein, aber Katzen sind Fleischfresser und brauchen kein Obst – bleiben Sie also bei einer winzigen Kleinigkeit.",
         "cs": "Ano, malý kousek banánu je jako občasný pamlsek v pořádku. ASPCA uvádí banán jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují, takže ať je to jen malinký doplněk.",
         "hr": "Da, mali komadić banane u redu je kao povremena poslastica. ASPCA navodi bananu kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, pa neka ostane samo sitan dodatak.",
         "sv": "Ja, en liten bit banan går bra som godbit någon gång ibland. ASPCA anger att banan inte är giftig för katter, men katter är köttätare och behöver inte frukt, så låt det bara vara något pyttelitet extra.",
@@ -1589,6 +1624,7 @@
       "why": {
         "en": "The ASPCA lists the banana plant as non-toxic to cats, and NC State's veterinary hospital lists banana among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "ASPCA rastlino banane navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa banano navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die ASPCA stuft die Bananenpflanze als ungiftig für Katzen ein, und die Tierklinik der NC State University zählt Banane zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde – in abgemessenen Mengen und angerechnet auf die tägliche Kalorienmenge. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "ASPCA uvádí banánovník jako rostlinu netoxickou pro kočky a veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí banán mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "ASPCA navodi biljku banane kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi bananu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "ASPCA anger att bananväxten inte är giftig för katter, och NC States djursjukhus räknar banan till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -1600,6 +1636,7 @@
       "what_to_do": {
         "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -1610,6 +1647,7 @@
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
         "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+        "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
         "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
         "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
@@ -1620,6 +1658,7 @@
       "child": {
         "en": "A tiny bit of banana is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
         "sl": "Majhen košček banane je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein kleines bisschen Banane ist für eine Katze ab und zu okay. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Kousíček banánu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Malo banane povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
         "sv": "Lite banan går bra för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -1632,6 +1671,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -1642,6 +1682,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
@@ -1859,6 +1900,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -1869,6 +1911,7 @@
       "name": {
         "en": "Blueberries",
         "sl": "Borovnice",
+        "de": "Heidelbeeren",
         "cs": "Borůvky",
         "hr": "Borovnice",
         "sv": "Blåbär",
@@ -1879,6 +1922,7 @@
       "question": {
         "en": "Can cats eat blueberries?",
         "sl": "Ali lahko mačke jedo borovnice?",
+        "de": "Dürfen Katzen Heidelbeeren fressen?",
         "cs": "Mohou kočky jíst borůvky?",
         "hr": "Smiju li mačke jesti borovnice?",
         "sv": "Får katter äta blåbär?",
@@ -1889,6 +1933,7 @@
       "url_slug": {
         "en": "blueberries",
         "sl": "borovnice",
+        "de": "heidelbeeren",
         "cs": "boruvky",
         "hr": "borovnice",
         "sv": "blabar",
@@ -1899,6 +1944,7 @@
       "answer": {
         "en": "Yes, a few blueberries are fine as an occasional treat. A university vet hospital lists them among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
         "sl": "Da, nekaj borovnic je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jih navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bodo le majhen dodatek.",
+        "de": "Ja, ein paar Heidelbeeren sind als gelegentliches Leckerli in Ordnung. Eine Universitäts-Tierklinik zählt sie zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde, aber Katzen sind Fleischfresser und brauchen kein Obst – bleiben Sie also bei einem kleinen Extra.",
         "cs": "Ano, pár borůvek je jako občasný pamlsek v pořádku. Jedna univerzitní veterinární nemocnice je řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, kočky jsou ale masožravci a ovoce nepotřebují, takže ať jsou jen malým doplňkem.",
         "hr": "Da, nekoliko borovnica u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi ih među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka ostanu mali dodatak.",
         "sv": "Ja, några blåbär går bra som godbit någon gång ibland. Ett universitetsdjursjukhus räknar dem till de hälsosamma godbitarna från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
@@ -1909,6 +1955,7 @@
       "why": {
         "en": "NC State's veterinary hospital lists blueberries among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "Veterinarska bolnišnica univerze NC State borovnice navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die Tierklinik der NC State University zählt Heidelbeeren zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde – in abgemessenen Mengen und angerechnet auf die tägliche Kalorienmenge. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí borůvky mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "NC States djursjukhus räknar blåbär till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -1920,6 +1967,7 @@
       "what_to_do": {
         "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst nur ein wenig an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -1930,6 +1978,7 @@
       "serving": {
         "en": "A few berries now and then, counted in your cat's daily food.",
         "sl": "Občasno nekaj borovnic, upoštevanih v dnevnem obroku.",
+        "de": "Ab und zu ein paar Beeren, die zur täglichen Futtermenge Ihrer Katze zählen.",
         "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky.",
         "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke.",
         "sv": "Några bär då och då, inräknade i kattens dagliga matranson.",
@@ -1940,6 +1989,7 @@
       "child": {
         "en": "A few blueberries can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
         "sl": "Nekaj borovnic je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein paar Heidelbeeren können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Pár borůvek může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Nekoliko borovnica povremeno može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
         "sv": "Några blåbär kan bli en godbit för katten då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -1952,6 +2002,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -1962,6 +2013,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
@@ -2232,6 +2284,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -2242,6 +2295,7 @@
       "name": {
         "en": "Cantaloupe",
         "sl": "Kantalupa",
+        "de": "Cantaloupe-Melone",
         "cs": "Cukrový meloun",
         "hr": "Dinja",
         "sv": "Cantaloupemelon",
@@ -2252,6 +2306,7 @@
       "question": {
         "en": "Can cats eat cantaloupe?",
         "sl": "Ali lahko mačke jedo melono kantalupo?",
+        "de": "Dürfen Katzen Cantaloupe-Melone fressen?",
         "cs": "Mohou kočky jíst cukrový meloun?",
         "hr": "Smiju li mačke jesti dinju?",
         "sv": "Får katter äta cantaloupemelon?",
@@ -2262,6 +2317,7 @@
       "url_slug": {
         "en": "cantaloupe",
         "sl": "kantalupa",
+        "de": "cantaloupe-melone",
         "cs": "cukrovy-meloun",
         "hr": "dinja",
         "sv": "cantaloupemelon",
@@ -2272,6 +2328,7 @@
       "answer": {
         "en": "Yes, a small piece of cantaloupe is fine as an occasional treat. The ASPCA lists cantaloupe as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
         "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlina pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
+        "de": "Ja, ein kleines Stück Cantaloupe-Melone ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft die Cantaloupe-Melone als ungiftig für Katzen ein, aber Katzen sind Fleischfresser und brauchen kein Obst, und jede Pflanze kann den Magen verstimmen – bleiben Sie also bei einer winzigen Kleinigkeit.",
         "cs": "Ano, malý kousek cukrového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí cukrový meloun jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk.",
         "hr": "Da, mali komadić dinje u redu je kao povremena poslastica. ASPCA navodi dinju kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, a bilo koja biljka može izazvati želučane tegobe, pa neka ostane samo sitan dodatak.",
         "sv": "Ja, en liten bit cantaloupemelon går bra som godbit någon gång ibland. ASPCA anger att cantaloupemelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och alla växter kan ge orolig mage, så låt det bara vara något pyttelitet extra.",
@@ -2282,6 +2339,7 @@
       "why": {
         "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die ASPCA stuft die echte Cantaloupe-Melone (Cucumis melo) als ungiftig für Katzen ein. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "ASPCA uvádí pravý cukrový meloun (Cucumis melo) jako netoxický pro kočky. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "ASPCA navodi pravu dinju kantalupu (Cucumis melo) kao neotrovnu za mačke. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "ASPCA anger att äkta cantaloupemelon (Cucumis melo) inte är giftig för katter. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -2293,6 +2351,7 @@
       "what_to_do": {
         "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -2303,6 +2362,7 @@
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
         "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+        "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
         "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
         "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
@@ -2313,6 +2373,7 @@
       "child": {
         "en": "A tiny piece of cantaloupe is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
         "sl": "Majhen košček kantalupe je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein winziges Stück Cantaloupe-Melone ist für eine Katze ab und zu okay. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Kousíček cukrového melounu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Sićušan komadić dinje povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
         "sv": "En pytteliten bit melon går bra för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -2325,6 +2386,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -2335,6 +2397,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
@@ -4751,6 +4814,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -4761,6 +4825,7 @@
       "name": {
         "en": "Cranberries",
         "sl": "Brusnice",
+        "de": "Cranberrys",
         "cs": "Brusinky",
         "hr": "Brusnice",
         "sv": "Tranbär",
@@ -4771,6 +4836,7 @@
       "question": {
         "en": "Can cats eat cranberries?",
         "sl": "Ali lahko mačke jedo brusnice?",
+        "de": "Dürfen Katzen Cranberrys fressen?",
         "cs": "Mohou kočky jíst brusinky?",
         "hr": "Smiju li mačke jesti brusnice?",
         "sv": "Får katter äta tranbär?",
@@ -4781,6 +4847,7 @@
       "url_slug": {
         "en": "cranberries",
         "sl": "brusnice",
+        "de": "cranberrys",
         "cs": "brusinky",
         "hr": "brusnice",
         "sv": "tranbar",
@@ -4791,6 +4858,7 @@
       "answer": {
         "en": "Yes, a few cranberries are fine as an occasional treat. Pet Poison Helpline calls cranberries pet safe, raw or processed, but dried cranberries, juice, sauce and jelly often have added sugar or sweeteners, so check the label for xylitol or grape ingredients first.",
         "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za živali, surove ali predelane, vendar imajo suhe brusnice, sok, omaka in žele pogosto dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
+        "de": "Ja, ein paar Cranberrys sind als gelegentliches Leckerli in Ordnung. Laut Pet Poison Helpline sind Cranberrys roh wie verarbeitet unbedenklich für Haustiere, doch getrocknete Cranberrys, Saft, Soße und Gelee enthalten oft zugesetzten Zucker oder Süßungsmittel – prüfen Sie also zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
         "cs": "Ano, pár brusinek je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje brusinky za bezpečné pro zvířata, syrové i zpracované. Sušené brusinky, džus, omáčka a želé však často obsahují přidaný cukr nebo sladidla, proto nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
         "hr": "Da, nekoliko brusnica u redu je kao povremena poslastica. Pet Poison Helpline navodi da su brusnice sigurne za ljubimce, sirove ili prerađene, ali sušene brusnice, sok, umak i žele često imaju dodan šećer ili sladila, pa najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
         "sv": "Ja, några tranbär går bra som godbit någon gång ibland. Pet Poison Helpline kallar tranbär säkra för husdjur, råa eller bearbetade, men torkade tranbär, juice, sås och gelé har ofta tillsatt socker eller sötningsmedel, så kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor.",
@@ -4801,6 +4869,7 @@
       "why": {
         "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za živali, kjer omenja tudi mačke, navaja, da so brusnice za živali varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Auf einer Seite über herbstliche Lebensmittel, die für Haustiere unbedenklich sind, nennt Pet Poison Helpline auch Katzen und schreibt, dass Cranberrys roh wie verarbeitet unbedenklich sind. Getrocknete Cranberrys, Saft, Soße und Gelee enthalten oft zugesetzten Zucker oder andere Süßungsmittel, und manche Produkte können giftige Zutaten wie Xylit oder Bestandteile von Weintrauben enthalten. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "Pet Poison Helpline na stránce o podzimních potravinách bezpečných pro zvířata, která zmiňuje i kočky, uvádí, že brusinky jsou pro zvířata bezpečné syrové i zpracované. Sušené brusinky, džus, omáčka a želé často obsahují přidaný cukr nebo jiná sladidla a některé výrobky mohou obsahovat toxické složky, jako je xylitol nebo deriváty hroznů. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Pet Poison Helpline na stranici o jesenskim namirnicama sigurnima za ljubimce, koja spominje i mačke, navodi da su brusnice sigurne za ljubimce i sirove i prerađene. Sušene brusnice, sok, umak i žele često sadrže dodan šećer ili druga sladila, a neki proizvodi mogu sadržavati otrovne sastojke poput ksilitola ili derivata grožđa. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "Pet Poison Helpline skriver på en sida om höstens husdjurssäkra mat, som även nämner katter, att tranbär är säkra för husdjur både råa och bearbetade. Torkade tranbär, juice, sås och gelé innehåller ofta tillsatt socker eller andra sötningsmedel, och vissa produkter kan innehålla giftiga ingredienser som xylitol eller ingredienser från vindruvor. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -4812,6 +4881,7 @@
       "what_to_do": {
         "en": "Offer just a little first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst nur ein wenig an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -4822,6 +4892,7 @@
       "serving": {
         "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
         "sl": "Občasno nekaj brusnic, upoštevanih v dnevnem obroku. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
+        "de": "Ab und zu ein paar Beeren, die zur täglichen Futtermenge Ihrer Katze zählen. Bei getrockneten Cranberrys, Saft, Soße oder Gelee prüfen Sie zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
         "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky. U sušených brusinek, džusu, omáčky nebo želé nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
         "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke. Kod sušenih brusnica, soka, umaka ili želea najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
         "sv": "Några bär då och då, inräknade i kattens dagliga matranson. För torkade tranbär, juice, sås eller gelé: kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor.",
@@ -4832,6 +4903,7 @@
       "child": {
         "en": "A few cranberries can be a cat treat now and then. Ask a grown-up to check sweet cranberry snacks first.",
         "sl": "Nekaj brusnic je lahko občasno priboljšek za muco. Sladke brusnične prigrizke naj najprej preveri odrasla oseba.",
+        "de": "Ein paar Cranberrys können ab und zu ein Leckerli für Katzen sein. Bitte einen Erwachsenen, süße Cranberry-Snacks vorher zu prüfen.",
         "cs": "Pár brusinek může být pro kočku občas pamlsek. Sladké brusinkové dobroty ať nejdřív zkontroluje dospělý.",
         "hr": "Nekoliko brusnica povremeno može biti poslastica za macu. Zamoli odraslu osobu da najprije provjeri slatke grickalice od brusnica.",
         "sv": "Några tranbär kan bli en godbit för katten då och då. Be en vuxen att först kolla söta tranbärsprodukter.",
@@ -4844,6 +4916,7 @@
           "q": {
             "en": "Are dried cranberries OK for cats?",
             "sl": "Ali so suhe brusnice primerne za mačke?",
+            "de": "Sind getrocknete Cranberrys für Katzen in Ordnung?",
             "cs": "Jsou sušené brusinky pro kočky v pořádku?",
             "hr": "Jesu li sušene brusnice u redu za mačke?",
             "sv": "Går torkade tranbär bra för katter?",
@@ -4854,6 +4927,7 @@
           "a": {
             "en": "Dried cranberries often have added sugar or sweeteners. Check the label first and skip any product with xylitol or grape ingredients.",
             "sl": "Suhe brusnice imajo pogosto dodan sladkor ali sladila. Najprej preverite deklaracijo in ne dajajte izdelkov s ksilitolom ali sestavinami iz grozdja.",
+            "de": "Getrocknete Cranberrys enthalten oft zugesetzten Zucker oder Süßungsmittel. Prüfen Sie zuerst das Etikett und verzichten Sie auf jedes Produkt mit Xylit oder Zutaten aus Weintrauben.",
             "cs": "Sušené brusinky často obsahují přidaný cukr nebo sladidla. Nejdřív zkontrolujte etiketu a vyhněte se všem výrobkům s xylitolem nebo se složkami z hroznů.",
             "hr": "Sušene brusnice često imaju dodan šećer ili sladila. Najprije provjeri deklaraciju i preskoči svaki proizvod s ksilitolom ili sastojcima od grožđa.",
             "sv": "Torkade tranbär har ofta tillsatt socker eller sötningsmedel. Kolla först innehållsförteckningen och hoppa över produkter med xylitol eller ingredienser från vindruvor.",
@@ -4866,6 +4940,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -4876,6 +4951,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
@@ -12070,6 +12146,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -12080,6 +12157,7 @@
       "name": {
         "en": "Strawberries",
         "sl": "Jagode",
+        "de": "Erdbeeren",
         "cs": "Jahody",
         "hr": "Jagode",
         "sv": "Jordgubbar",
@@ -12090,6 +12168,7 @@
       "question": {
         "en": "Can cats eat strawberries?",
         "sl": "Ali lahko mačke jedo jagode?",
+        "de": "Dürfen Katzen Erdbeeren fressen?",
         "cs": "Mohou kočky jíst jahody?",
         "hr": "Smiju li mačke jesti jagode?",
         "sv": "Får katter äta jordgubbar?",
@@ -12100,6 +12179,7 @@
       "url_slug": {
         "en": "strawberries",
         "sl": "jagode",
+        "de": "erdbeeren",
         "cs": "jahody",
         "hr": "jagode",
         "sv": "jordgubbar",
@@ -12110,6 +12190,7 @@
       "answer": {
         "en": "Yes, a small piece of strawberry is fine as an occasional treat. The ASPCA lists strawberry as non-toxic to cats, but cats are meat eaters and don't need fruit, so keep it to a tiny extra.",
         "sl": "Da, majhen košček jagode je v redu kot občasen priboljšek. ASPCA jagodo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek.",
+        "de": "Ja, ein kleines Stück Erdbeere ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft die Erdbeere als ungiftig für Katzen ein, aber Katzen sind Fleischfresser und brauchen kein Obst – bleiben Sie also bei einer winzigen Kleinigkeit.",
         "cs": "Ano, malý kousek jahody je v pořádku jako občasný pamlsek. ASPCA uvádí jahodník jako netoxický pro kočky, ale kočky jsou masožravci a ovoce nepotřebují, takže ho nabízejte jen jako malý doplněk.",
         "hr": "Da, mali komadić jagode u redu je kao povremena poslastica. ASPCA navodi jagodu kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, pa neka to ostane tek mali dodatak.",
         "sv": "Ja, en liten bit jordgubbe går bra som en godbit ibland. ASPCA anger att jordgubbar inte är giftiga för katter, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
@@ -12120,6 +12201,7 @@
       "why": {
         "en": "The ASPCA lists the strawberry plant as non-toxic to cats, and NC State's veterinary hospital lists strawberry among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "ASPCA rastlino jagode navaja kot nestrupeno za mačke, veterinarska bolnišnica univerze NC State pa jagodo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die ASPCA stuft die Erdbeerpflanze als ungiftig für Katzen ein, und die Tierklinik der NC State University zählt Erdbeeren zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde – in abgemessenen Mengen und angerechnet auf die tägliche Kalorienmenge. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "ASPCA uvádí jahodník jako rostlinu netoxickou pro kočky a veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí jahody mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "ASPCA navodi biljku jagode kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi jagodu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "ASPCA anger att jordgubbsplantan inte är giftig för katter, och djursjukhuset vid NC State räknar jordgubbar till nyttiga godbitar från människomat för katter och hundar, i avvägda mängder och inräknade i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -12131,6 +12213,7 @@
       "what_to_do": {
         "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -12141,6 +12224,7 @@
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
         "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+        "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
         "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
         "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
@@ -12151,6 +12235,7 @@
       "child": {
         "en": "A little piece of strawberry can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
         "sl": "Majhen košček jagode je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein kleines Stück Erdbeere kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Malý kousek jahody může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Komadić jagode ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak.",
         "sv": "En liten bit jordgubbe kan ibland vara en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -12163,6 +12248,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -12173,6 +12259,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i kosten. Frukt kan bara vara något litet extra.",
@@ -13268,6 +13355,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -13278,6 +13366,7 @@
       "name": {
         "en": "Watermelon",
         "sl": "Lubenica",
+        "de": "Wassermelone",
         "cs": "Vodní meloun",
         "hr": "Lubenica",
         "sv": "Vattenmelon",
@@ -13288,6 +13377,7 @@
       "question": {
         "en": "Can cats eat watermelon?",
         "sl": "Ali lahko mačke jedo lubenico?",
+        "de": "Dürfen Katzen Wassermelone fressen?",
         "cs": "Mohou kočky jíst vodní meloun?",
         "hr": "Smiju li mačke jesti lubenicu?",
         "sv": "Får katter äta vattenmelon?",
@@ -13298,6 +13388,7 @@
       "url_slug": {
         "en": "watermelon",
         "sl": "lubenica",
+        "de": "wassermelone",
         "cs": "vodni-meloun",
         "hr": "lubenica",
         "sv": "vattenmelon",
@@ -13308,6 +13399,7 @@
       "answer": {
         "en": "Yes, a small piece of watermelon is fine as an occasional treat. A university vet hospital lists it among healthy human-food treats for cats and dogs, but cats are meat eaters and don't need fruit, so keep it to a small extra.",
         "sl": "Da, majhen košček lubenice je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jo navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bo le majhen dodatek.",
+        "de": "Ja, ein kleines Stück Wassermelone ist als gelegentliches Leckerli in Ordnung. Eine Universitäts-Tierklinik zählt sie zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde, aber Katzen sind Fleischfresser und brauchen kein Obst – bleiben Sie also bei einem kleinen Extra.",
         "cs": "Ano, malý kousek vodního melounu je v pořádku jako občasný pamlsek. Jedna univerzitní veterinární nemocnice ho řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, ale kočky jsou masožravci a ovoce nepotřebují, takže ho nabízejte jen jako malý doplněk.",
         "hr": "Da, mali komadić lubenice u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi je među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka to ostane tek mali dodatak.",
         "sv": "Ja, en liten bit vattenmelon går bra som en godbit ibland. Ett universitetsdjursjukhus räknar den till nyttiga godbitar från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
@@ -13318,6 +13410,7 @@
       "why": {
         "en": "NC State's veterinary hospital lists watermelon among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
         "sl": "Veterinarska bolnišnica univerze NC State lubenico navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+        "de": "Die Tierklinik der NC State University zählt Wassermelone zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde – in abgemessenen Mengen und angerechnet auf die tägliche Kalorienmenge. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
         "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí vodní meloun mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Veterinarska bolnica sveučilišta NC State navodi lubenicu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
         "sv": "Djursjukhuset vid NC State räknar vattenmelon till nyttiga godbitar från människomat för katter och hundar, i avvägda mängder och inräknade i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
@@ -13329,6 +13422,7 @@
       "what_to_do": {
         "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+        "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt.",
         "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
@@ -13339,6 +13433,7 @@
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
         "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+        "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
         "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
         "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
@@ -13349,6 +13444,7 @@
       "child": {
         "en": "A little piece of watermelon can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
         "sl": "Majhen košček lubenice je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+        "de": "Ein kleines Stück Wassermelone kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch, Obst ist also nur ein kleines Extra.",
         "cs": "Malý kousek vodního melounu může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
         "hr": "Komadić lubenice ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak.",
         "sv": "En liten bit vattenmelon kan ibland vara en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
@@ -13361,6 +13457,7 @@
           "q": {
             "en": "Do cats need fruit?",
             "sl": "Ali mačke potrebujejo sadje?",
+            "de": "Brauchen Katzen Obst?",
             "cs": "Potřebují kočky ovoce?",
             "hr": "Trebaju li mačke voće?",
             "sv": "Behöver katter frukt?",
@@ -13371,6 +13468,7 @@
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
             "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+            "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
             "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
             "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i kosten. Frukt kan bara vara något litet extra.",
@@ -14386,6 +14484,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -14396,6 +14495,7 @@
       "name": {
         "en": "Apple seeds",
         "sl": "Jabolčne pečke",
+        "de": "Apfelkerne",
         "cs": "Jablečná jádra",
         "hr": "Sjemenke jabuke",
         "sv": "Äppelkärnor",
@@ -14406,6 +14506,7 @@
       "question": {
         "en": "Can dogs eat apple seeds?",
         "sl": "Ali lahko psi jedo jabolčne pečke?",
+        "de": "Dürfen Hunde Apfelkerne fressen?",
         "cs": "Mohou psi jíst jablečná jádra?",
         "hr": "Smiju li psi jesti sjemenke jabuke?",
         "sv": "Får hundar äta äppelkärnor?",
@@ -14416,6 +14517,7 @@
       "url_slug": {
         "en": "apple-seeds",
         "sl": "jabolcne-pecke",
+        "de": "apfelkerne",
         "cs": "jablecna-jadra",
         "hr": "sjemenke-jabuke",
         "sv": "appelkarnor",
@@ -14426,6 +14528,7 @@
       "answer": {
         "en": "No, apple seeds should be avoided. They contain cyanide, and the core and stem around them could choke your dog. A small number of seeds is unlikely to cause harm, but remove the seeds and core before sharing apple.",
         "sl": "Ne, jabolčnim pečkam se izogibajte. Vsebujejo cianid, ogrizek in pecelj okoli njih pa se lahko psu zataknejo v grlu. Majhno število pečk verjetno ne bo škodilo, a preden psu daste jabolko, odstranite pečke in ogrizek.",
+        "de": "Nein, Apfelkerne sollten Sie meiden. Sie enthalten Cyanid, und an Kerngehäuse und Stiel, die sie umgeben, könnte Ihr Hund ersticken. Wenige Kerne richten wahrscheinlich keinen Schaden an, aber entfernen Sie Kerne und Kerngehäuse, bevor Sie Apfel mit Ihrem Hund teilen.",
         "cs": "Ne, jablečným jádrům je lepší se vyhnout. Obsahují kyanid a ohryzek se stopkou, ve kterých jsou, by mohl způsobit dušení. Malé množství jader pravděpodobně neublíží, ale než se o jablko podělíte, odstraňte jádra i ohryzek.",
         "hr": "Ne, sjemenke jabuke treba izbjegavati. Sadrže cijanid, a sjemena kućica i peteljka oko njih mogu izazvati gušenje. Malo sjemenki vjerojatno neće naštetiti, ali prije nego što psu daš jabuku, ukloni sjemenke i sjemenu kućicu.",
         "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet.",
@@ -14436,6 +14539,7 @@
       "why": {
         "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
         "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral ljubljenček pojesti ogromne količine, da bi bilo zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
+        "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Tier riesige Mengen Kerne fressen, damit sie bedenklich werden. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
         "cs": "ASPCA uvádí jabloň jako rostlinu jedovatou pro psy: její stonky, listy a semena obsahují kyanid (z kyanogenních glykosidů). Podle AKC malé množství jader pravděpodobně neublíží a podle Pet Poison Helpline by zvíře muselo sníst obrovské množství, aby to bylo znepokojivé. Řídíme se přísnějším pohledem, protože jádra obsahují kyanid a ohryzek může navíc způsobit dušení nebo ucpání střev.",
         "hr": "ASPCA navodi da je jabuka kao biljka otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid (iz cijanogenih glikozida). AKC navodi da malo sjemenki vjerojatno neće naštetiti, a Pet Poison Helpline da bi ljubimac morao pojesti ogromne količine da bi to bilo zabrinjavajuće. Držimo se strožeg stajališta jer sjemenke sadrže cijanid, a sjemena kućica može izazvati i gušenje ili začepljenje crijeva.",
         "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska vara oroande. Vi följer den strängare hållningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp.",
@@ -14457,6 +14561,13 @@
           "Težko dihanje, sopihanje",
           "Šok",
           "Znaki prebavnih težav ali zapore"
+        ],
+        "de": [
+          "Ziegelrotes Zahnfleisch oder andere ziegelrote Schleimhäute",
+          "Erweiterte Pupillen",
+          "Atembeschwerden, Hecheln",
+          "Schock",
+          "Anzeichen von Verdauungsproblemen oder einem Darmverschluss"
         ],
         "cs": [
           "Cihlově červené dásně nebo jiné sliznice",
@@ -14504,6 +14615,7 @@
       "what_to_do": {
         "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage, and contact a vet if your dog has problems.",
         "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore, in se obrnite na veterinarja, če ima težave.",
+        "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
         "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání, a pokud má pes potíže, obraťte se na veterináře.",
         "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja i obrati se veterinaru ako pas ima tegobe.",
         "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
@@ -14515,6 +14627,7 @@
       "child": {
         "en": "Apple seeds are not for dogs. A grown-up takes out the core and seeds before your dog gets a piece of apple.",
         "sl": "Jabolčne pečke niso za pse. Odrasel odstrani ogrizek in pečke, preden pes dobi košček jabolka.",
+        "de": "Apfelkerne sind nichts für Hunde. Ein Erwachsener entfernt Kerngehäuse und Kerne, bevor dein Hund ein Stück Apfel bekommt.",
         "cs": "Jablečná jádra nejsou pro psy. Než pes dostane kousek jablka, dospělý z něj vyřízne ohryzek a jádra.",
         "hr": "Sjemenke jabuke nisu za pse. Odrasla osoba izvadi sjemenu kućicu i sjemenke prije nego što tvoj pas dobije komadić jabuke.",
         "sv": "Äppelkärnor är inte för hundar. En vuxen tar bort kärnhuset och kärnorna innan hunden får en bit äpple.",
@@ -14527,6 +14640,7 @@
           "q": {
             "en": "My dog ate a whole apple with the seeds. Is that an emergency?",
             "sl": "Pes je pojedel celo jabolko s pečkami. Je to nujen primer?",
+            "de": "Mein Hund hat einen ganzen Apfel samt Kernen gefressen. Ist das ein Notfall?",
             "cs": "Můj pes snědl celé jablko i s jádry. Je to pohotovost?",
             "hr": "Moj je pas pojeo cijelu jabuku sa sjemenkama. Je li to hitan slučaj?",
             "sv": "Min hund åt ett helt äpple med kärnor. Är det akut?",
@@ -14537,6 +14651,7 @@
           "a": {
             "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
             "sl": "Majhno število pečk verjetno ne bo škodilo. Psa opazujte, ali se pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
+            "de": "Wenige Kerne richten wahrscheinlich keinen Schaden an. Achten Sie bei Ihrem Hund auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss durch das Kerngehäuse, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
             "cs": "Malé množství jader pravděpodobně neublíží. Sledujte, zda se u psa neobjeví známky zažívacích potíží nebo ucpání způsobeného ohryzkem, a pokud má potíže, obraťte se na veterináře.",
             "hr": "Malo sjemenki vjerojatno neće naštetiti. Prati ima li pas znakove probavnih tegoba ili začepljenja zbog sjemene kućice i obrati se veterinaru ako pas ima tegobe.",
             "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
@@ -14576,6 +14691,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -14586,6 +14702,7 @@
       "name": {
         "en": "Apples",
         "sl": "Jabolka",
+        "de": "Äpfel",
         "cs": "Jablka",
         "hr": "Jabuke",
         "sv": "Äpplen",
@@ -14596,6 +14713,7 @@
       "question": {
         "en": "Can dogs eat apples?",
         "sl": "Ali lahko psi jedo jabolka?",
+        "de": "Dürfen Hunde Äpfel fressen?",
         "cs": "Mohou psi jíst jablka?",
         "hr": "Smiju li psi jesti jabuke?",
         "sv": "Får hundar äta äpplen?",
@@ -14606,6 +14724,7 @@
       "url_slug": {
         "en": "apples",
         "sl": "jabolka",
+        "de": "aepfel",
         "cs": "jablka",
         "hr": "jabuke",
         "sv": "applen",
@@ -14616,6 +14735,7 @@
       "answer": {
         "en": "Yes, in moderation. Apples are a safe, nutritious treat for dogs, but remove the seeds, core and stem first, because the seeds contain cyanide and the core and stem could choke your dog.",
         "sl": "Da, zmerno. Jabolka so za pse varen in hranljiv priboljšek, a najprej odstranite pečke, ogrizek in pecelj, ker pečke vsebujejo cianid, ogrizek in pecelj pa se lahko psu zataknejo v grlu.",
+        "de": "Ja, in Maßen. Äpfel sind ein unbedenkliches, nahrhaftes Leckerli für Hunde. Entfernen Sie aber vorher Kerne, Kerngehäuse und Stiel, denn die Kerne enthalten Cyanid, und an Kerngehäuse und Stiel könnte Ihr Hund ersticken.",
         "cs": "Ano, s mírou. Jablka jsou pro psy bezpečný a výživný pamlsek, ale nejdřív odstraňte jádra, ohryzek a stopku: jádra obsahují kyanid a ohryzek se stopkou by mohl způsobit dušení.",
         "hr": "Da, umjereno. Jabuke su sigurna i hranjiva poslastica za pse, ali prvo ukloni sjemenke, sjemenu kućicu i peteljku, jer sjemenke sadrže cijanid, a sjemena kućica i peteljka mogu izazvati gušenje.",
         "sv": "Ja, med måtta. Äpplen är en säker och näringsrik godbit för hundar, men ta först bort kärnor, kärnhus och skaft, eftersom kärnorna innehåller cyanid och kärnhuset och skaftet kan få hunden att sätta i halsen.",
@@ -14626,6 +14746,7 @@
       "why": {
         "en": "Apples are a low-calorie treat with vitamins A and C, potassium, antioxidants and fibre, especially in the peel. Because of the sugar in each apple, a whole apple is likely too much for your dog, and eating too many apples can cause bellyache or diarrhoea.",
         "sl": "Jabolka so nizkokaloričen priboljšek z vitaminoma A in C, kalijem, antioksidanti in vlakninami, zlasti v lupini. Zaradi sladkorja v vsakem jabolku je celo jabolko za psa verjetno preveč, preveč jabolk pa lahko povzroči bolečine v trebuhu ali drisko.",
+        "de": "Äpfel sind ein kalorienarmes Leckerli mit den Vitaminen A und C, Kalium, Antioxidantien und Ballaststoffen – besonders in der Schale. Wegen des Zuckers in jedem Apfel ist ein ganzer Apfel für Ihren Hund wahrscheinlich zu viel, und zu viele Äpfel können Bauchweh oder Durchfall verursachen.",
         "cs": "Jablka jsou nízkokalorický pamlsek s vitaminy A a C, draslíkem, antioxidanty a vlákninou, hlavně ve slupce. Kvůli obsahu cukru je celé jablko pro psa nejspíš příliš mnoho a velké množství jablek může způsobit bolest břicha nebo průjem.",
         "hr": "Jabuke su niskokalorična poslastica s vitaminima A i C, kalijem, antioksidansima i vlaknima, osobito u kori. Zbog šećera u svakoj jabuci cijela je jabuka vjerojatno previše za tvog psa, a previše jabuka može izazvati bolove u trbuhu ili proljev.",
         "sv": "Äpplen är en kalorisnål godbit med A- och C-vitamin, kalium, antioxidanter och fibrer, särskilt i skalet. Eftersom varje äpple innehåller socker är ett helt äpple troligen för mycket för hunden, och för många äpplen kan ge ont i magen eller diarré.",
@@ -14637,6 +14758,7 @@
       "what_to_do": {
         "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage. If your dog has problems, stop giving apples and contact a vet.",
         "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, mu jabolk ne dajajte več in se obrnite na veterinarja.",
+        "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss. Hat Ihr Hund Beschwerden, geben Sie ihm keine Äpfel mehr und wenden Sie sich an einen Tierarzt.",
         "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání. Pokud má pes potíže, přestaňte mu jablka dávat a obraťte se na veterináře.",
         "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja. Ako pas ima tegobe, prestani mu davati jabuke i obrati se veterinaru.",
         "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp. Om hunden får problem, sluta ge äpple och kontakta en veterinär.",
@@ -14647,6 +14769,7 @@
       "serving": {
         "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
         "sl": "Jabolko operite in očistite, odstranite pečke, ogrizek in pecelj ter ga narežite na krhlje ali majhne kocke; zmerno, ne celo jabolko.",
+        "de": "Waschen Sie den Apfel und reiben Sie ihn gründlich ab, entfernen Sie Kerne, Kerngehäuse und Stiel und schneiden Sie ihn in Scheiben oder kleine Würfel; in Maßen, keinen ganzen Apfel.",
         "cs": "Jablko umyjte a očistěte kartáčkem, odstraňte jádra, ohryzek a stopku a nakrájejte ho na plátky nebo malé kostičky; s mírou, ne celé jablko.",
         "hr": "Jabuku operi i dobro istrljaj, ukloni sjemenke, sjemenu kućicu i peteljku te je nareži na kriške ili male kockice; umjereno, ne cijelu jabuku.",
         "sv": "Tvätta och skrubba äpplet, ta bort kärnor, kärnhus och skaft och skär det i klyftor eller små tärningar; med måtta, inte ett helt äpple.",
@@ -14657,6 +14780,7 @@
       "child": {
         "en": "Dogs can enjoy a few apple slices! A grown-up should cut them and take out the core and seeds first.",
         "sl": "Psi lahko uživajo v nekaj krhljih jabolka! Odrasel naj jih nareže in najprej odstrani ogrizek in pečke.",
+        "de": "Hunde dürfen ein paar Apfelscheiben naschen! Ein Erwachsener sollte sie vorher schneiden und Kerngehäuse und Kerne entfernen.",
         "cs": "Psi si můžou pochutnat na pár plátcích jablka! Dospělý je nakrájí a předtím vyřízne ohryzek a jádra.",
         "hr": "Psi mogu uživati u nekoliko kriški jabuke! Odrasla osoba ih treba narezati i prvo izvaditi sjemenu kućicu i sjemenke.",
         "sv": "Hundar kan få några äppelbitar! En vuxen ska skära dem och ta bort kärnhuset och kärnorna först.",
@@ -14669,6 +14793,7 @@
           "q": {
             "en": "Can dogs eat applesauce?",
             "sl": "Ali lahko psi jedo jabolčno čežano?",
+            "de": "Dürfen Hunde Apfelmus fressen?",
             "cs": "Mohou psi jíst jablečné pyré?",
             "hr": "Smiju li psi jesti pire od jabuka?",
             "sv": "Får hundar äta äppelmos?",
@@ -14679,6 +14804,7 @@
           "a": {
             "en": "Plain applesauce is fine in moderation, but most applesauce has added sugar, so always choose unsweetened.",
             "sl": "Navadna jabolčna čežana je v zmernih količinah v redu, a večina ima dodan sladkor, zato vedno izberite nesladkano.",
+            "de": "Apfelmus ohne Zusätze ist in Maßen in Ordnung, aber das meiste Apfelmus enthält zugesetzten Zucker – wählen Sie also immer ungesüßtes.",
             "cs": "Čisté jablečné pyré je s mírou v pořádku, ale většina pyré má přidaný cukr, proto vždy volte neslazené.",
             "hr": "Obični pire od jabuka u redu je u umjerenim količinama, ali većina ima dodani šećer, zato uvijek biraj nezaslađeni.",
             "sv": "Osötat äppelmos går bra med måtta, men det mesta äppelmoset har tillsatt socker, så välj alltid osötat.",
@@ -14691,6 +14817,7 @@
           "q": {
             "en": "Can dogs eat apple pie?",
             "sl": "Ali lahko psi jedo jabolčno pito?",
+            "de": "Dürfen Hunde Apfelkuchen fressen?",
             "cs": "Mohou psi jíst jablečný koláč?",
             "hr": "Smiju li psi jesti pitu od jabuka?",
             "sv": "Får hundar äta äppelpaj?",
@@ -14701,6 +14828,7 @@
           "a": {
             "en": "No. The added sugar and crust are too much for dogs; avoid apple foods with added sugar or spices such as nutmeg.",
             "sl": "Ne. Dodani sladkor in testo sta za pse preveč; izogibajte se jabolčnim jedem z dodanim sladkorjem ali začimbami, kot je muškatni orešček.",
+            "de": "Nein. Der zugesetzte Zucker und der Teig sind zu viel für Hunde; meiden Sie Apfelspeisen mit zugesetztem Zucker oder Gewürzen wie Muskatnuss.",
             "cs": "Ne. Přidaný cukr a těsto jsou pro psy příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem.",
             "hr": "Ne. Dodani šećer i tijesto previše su za pse; izbjegavaj jela od jabuka s dodanim šećerom ili začinima poput muškatnog oraščića.",
             "sv": "Nej. Det tillsatta sockret och pajskalet är för mycket för hundar; undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
@@ -15694,6 +15822,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -15704,6 +15833,7 @@
       "name": {
         "en": "Bananas",
         "sl": "Banane",
+        "de": "Bananen",
         "cs": "Banány",
         "hr": "Banane",
         "sv": "Bananer",
@@ -15714,6 +15844,7 @@
       "question": {
         "en": "Can dogs eat bananas?",
         "sl": "Ali lahko psi jedo banane?",
+        "de": "Dürfen Hunde Bananen fressen?",
         "cs": "Mohou psi jíst banány?",
         "hr": "Smiju li psi jesti banane?",
         "sv": "Får hundar äta bananer?",
@@ -15724,6 +15855,7 @@
       "url_slug": {
         "en": "bananas",
         "sl": "banane",
+        "de": "bananen",
         "cs": "banany",
         "hr": "banane",
         "sv": "bananer",
@@ -15734,6 +15866,7 @@
       "answer": {
         "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
         "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek.",
+        "de": "Ja, als gelegentliches Leckerli. Bananen enthalten viel Kalium, Vitamin B6 und Vitamin C, aber auch viel Zucker – sie sollten daher ein Leckerli bleiben und nicht zum täglichen Futter Ihres Hundes gehören. Entfernen Sie immer die Schale.",
         "cs": "Ano, jako občasný pamlsek. Banány mají hodně draslíku, vitaminu B6 a vitaminu C, ale také hodně cukru, proto je nechte jako pamlsek, ne jako součást každodenní stravy vašeho psa. Vždy odstraňte slupku.",
         "hr": "Da, kao povremenu poslasticu. Banane su bogate kalijem, vitaminom B6 i vitaminom C, ali sadrže mnogo šećera, pa je bolje da budu poslastica, a ne dio svakodnevne prehrane tvog psa. Koru uvijek ukloni.",
         "sv": "Ja, som en godbit ibland. Bananer innehåller mycket kalium, B6-vitamin och C-vitamin, men också mycket socker, så de passar bäst som godbit och inte som en del av hundens dagliga kost. Ta alltid bort skalet.",
@@ -15744,6 +15877,7 @@
       "why": {
         "en": "Too much banana can add extra calories and may cause digestive upset in some dogs. Banana peels are not toxic to dogs, but they are hard to digest and could cause stomach discomfort or, in some cases, an intestinal blockage.",
         "sl": "Preveč banane lahko doda odvečne kalorije in pri nekaterih psih povzroči prebavne težave. Bananin olupek za pse ni strupen, a je težko prebavljiv in lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja.",
+        "de": "Zu viel Banane kann zusätzliche Kalorien liefern und bei manchen Hunden Verdauungsbeschwerden verursachen. Bananenschalen sind für Hunde nicht giftig, aber schwer verdaulich und könnten Magenbeschwerden oder in manchen Fällen einen Darmverschluss verursachen.",
         "cs": "Příliš mnoho banánu může přidat kalorie navíc a u některých psů může způsobit zažívací potíže. Banánové slupky nejsou pro psy jedovaté, ale špatně se tráví a mohly by způsobit žaludeční potíže nebo v některých případech ucpání střev.",
         "hr": "Previše banane može donijeti višak kalorija i kod nekih pasa izazvati probavne smetnje. Kora banane nije otrovna za pse, ali se teško probavlja i može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva.",
         "sv": "För mycket banan kan ge extra kalorier och hos vissa hundar orsaka magbesvär. Bananskal är inte giftiga för hundar, men de är svåra att smälta och kan ge obehag i magen eller i vissa fall tarmstopp.",
@@ -15755,6 +15889,7 @@
       "what_to_do": {
         "en": "A banana peel could cause stomach discomfort or, in some cases, an intestinal blockage, so always remove it. If you are unsure how much banana suits your dog's size, age or health, ask your vet.",
         "sl": "Bananin olupek lahko povzroči neugodje v prebavilih ali v nekaterih primerih zaporo črevesja, zato ga vedno odstranite. Če niste prepričani, koliko banane je primerno za velikost, starost ali zdravje vašega psa, vprašajte veterinarja.",
+        "de": "Eine Bananenschale könnte Magenbeschwerden oder in manchen Fällen einen Darmverschluss verursachen – entfernen Sie sie also immer. Wenn Sie unsicher sind, wie viel Banane zur Größe, zum Alter oder zur Gesundheit Ihres Hundes passt, fragen Sie Ihren Tierarzt.",
         "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
         "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako nisi siguran koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
         "sv": "Ett bananskal kan ge obehag i magen eller i vissa fall tarmstopp, så ta alltid bort det. Om du är osäker på hur mycket banan som passar hundens storlek, ålder eller hälsa, fråga veterinären.",
@@ -15765,6 +15900,7 @@
       "serving": {
         "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
         "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek.",
+        "de": "Geschält, in mundgerechten Stücken, zerdrückt unter das Futter gemischt oder gefroren; als gelegentliches Leckerli.",
         "cs": "Oloupané, v malých kouscích, rozmačkané do krmiva nebo zmražené; jako občasný pamlsek.",
         "hr": "Oguljena, u komadićima za jedan zalogaj, zgnječena i umiješana u hranu ili zamrznuta; kao povremena poslastica.",
         "sv": "Skalad, i små bitar, mosad i maten eller fryst; som en godbit ibland.",
@@ -15775,6 +15911,7 @@
       "child": {
         "en": "Dogs can have a small piece of banana as a treat! A grown-up takes the peel off first.",
         "sl": "Psi lahko kot priboljšek dobijo košček banane! Odrasel najprej odstrani olupek.",
+        "de": "Hunde dürfen ein kleines Stück Banane als Leckerli bekommen! Ein Erwachsener macht vorher die Schale ab.",
         "cs": "Psi můžou dostat malý kousek banánu jako pamlsek! Dospělý ho nejdřív oloupe.",
         "hr": "Psi smiju dobiti komadić banane kao poslasticu! Odrasla osoba prvo skine koru.",
         "sv": "Hundar kan få en liten bit banan som godbit! En vuxen tar bort skalet först.",
@@ -15787,6 +15924,7 @@
           "q": {
             "en": "Can dogs eat banana peels?",
             "sl": "Ali lahko psi jedo bananine olupke?",
+            "de": "Dürfen Hunde Bananenschalen fressen?",
             "cs": "Mohou psi jíst banánové slupky?",
             "hr": "Smiju li psi jesti koru banane?",
             "sv": "Får hundar äta bananskal?",
@@ -15797,6 +15935,7 @@
           "a": {
             "en": "No. Peels are not toxic, but they are hard to digest, so always remove the peel first.",
             "sl": "Ne. Olupki niso strupeni, a so težko prebavljivi, zato vedno najprej odstranite olupek.",
+            "de": "Nein. Die Schalen sind nicht giftig, aber schwer verdaulich – entfernen Sie die Schale also immer vorher.",
             "cs": "Ne. Slupky nejsou jedovaté, ale špatně se tráví, proto je vždy nejdřív odstraňte.",
             "hr": "Ne. Kora nije otrovna, ali se teško probavlja, zato je uvijek prvo ukloni.",
             "sv": "Nej. Skalen är inte giftiga, men de är svåra att smälta, så ta alltid bort skalet först.",
@@ -16050,6 +16189,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -16060,6 +16200,7 @@
       "name": {
         "en": "Blackberries",
         "sl": "Robide",
+        "de": "Brombeeren",
         "cs": "Ostružiny",
         "hr": "Kupine",
         "sv": "Björnbär",
@@ -16070,6 +16211,7 @@
       "question": {
         "en": "Can dogs eat blackberries?",
         "sl": "Ali lahko psi jedo robide?",
+        "de": "Dürfen Hunde Brombeeren fressen?",
         "cs": "Mohou psi jíst ostružiny?",
         "hr": "Smiju li psi jesti kupine?",
         "sv": "Får hundar äta björnbär?",
@@ -16080,6 +16222,7 @@
       "url_slug": {
         "en": "blackberries",
         "sl": "robide",
+        "de": "brombeeren",
         "cs": "ostruziny",
         "hr": "kupine",
         "sv": "bjornbar",
@@ -16090,6 +16233,7 @@
       "answer": {
         "en": "Yes, in moderation. Blackberries contain lots of vitamins and nutrients and are lower in sugar and calories than some other fruits. Wash them first, and avoid frozen berries, which usually have added sugar or xylitol.",
         "sl": "Da, zmerno. Robide vsebujejo veliko vitaminov in hranil ter imajo manj sladkorja in kalorij kot nekatere druge vrste sadja. Najprej jih operite in se izogibajte zamrznjenemu jagodičju, ki ima običajno dodan sladkor ali ksilitol.",
+        "de": "Ja, in Maßen. Brombeeren enthalten viele Vitamine und Nährstoffe und haben weniger Zucker und Kalorien als manche andere Obstsorten. Waschen Sie sie vorher und verzichten Sie auf tiefgekühlte Beeren, die meist zugesetzten Zucker oder Xylit enthalten.",
         "cs": "Ano, s mírou. Ostružiny obsahují spoustu vitaminů a živin a mají méně cukru a kalorií než některé jiné druhy ovoce. Nejdřív je omyjte a vyhněte se mraženým bobulím, které mívají přidaný cukr nebo xylitol.",
         "hr": "Da, umjereno. Kupine sadrže mnogo vitamina i hranjivih tvari, a imaju manje šećera i kalorija od nekih drugih vrsta voća. Prvo ih operi i izbjegavaj zamrznute bobice, koje obično imaju dodani šećer ili ksilitol.",
         "sv": "Ja, med måtta. Björnbär innehåller många vitaminer och näringsämnen och har mindre socker och färre kalorier än vissa andra frukter. Skölj dem först, och undvik frysta bär, som oftast har tillsatt socker eller xylitol.",
@@ -16100,6 +16244,7 @@
       "why": {
         "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
         "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane.",
+        "de": "Brombeeren enthalten – wie andere Obst- und Gemüsesorten auch – natürlich vorkommendes Xylit in Spuren. Wie bei jedem Lebensmittel können zu viele Brombeeren den Magen verstimmen, und Leckerlis sollten nur einen kleinen Teil der Ernährung eines Hundes ausmachen.",
         "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy.",
         "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može uznemiriti želudac, a poslastice trebaju činiti samo mali dio pseće prehrane.",
         "sv": "Björnbär innehåller naturligt xylitol i spårmängder, liksom andra frukter och grönsaker. Som med all mat kan för många björnbär ge orolig mage, och godbitar ska bara vara en liten del av hundens kost.",
@@ -16111,6 +16256,7 @@
       "what_to_do": {
         "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
         "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja.",
+        "de": "Zeigt Ihr Hund nach dem Fressen von Brombeeren eine Reaktion, rufen Sie sofort Ihren Tierarzt an.",
         "cs": "Pokud má váš pes po snědení ostružin nějakou reakci, okamžitě zavolejte veterináři.",
         "hr": "Ako pas nakon jedenja kupina ima neku reakciju, odmah nazovi veterinara.",
         "sv": "Om hunden reagerar efter att ha ätit björnbär, ring veterinären omedelbart.",
@@ -16121,6 +16267,7 @@
       "serving": {
         "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
         "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide.",
+        "de": "Gewaschene, frische Brombeeren ohne Zusätze; keine tiefgekühlten Beeren, die meist zugesetzten Zucker oder Xylit enthalten; wild gepflückte Beeren nur, wenn Sie sicher sind, dass es Brombeeren sind.",
         "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny.",
         "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako si siguran da su kupine.",
         "sv": "Sköljda, naturella färska björnbär; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
@@ -16131,6 +16278,7 @@
       "child": {
         "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
         "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi.",
+        "de": "Hunde dürfen ein paar gewaschene Brombeeren mitnaschen! Frag vorher einen Erwachsenen, vor allem bei Beeren, die draußen gepflückt wurden.",
         "cs": "O pár omytých ostružin se se psem můžeš rozdělit! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku.",
         "hr": "Psi smiju pojesti nekoliko opranih kupina! Prvo pitaj odraslu osobu, osobito za bobice ubrane vani.",
         "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
@@ -16143,6 +16291,7 @@
           "q": {
             "en": "Can dogs eat wild blackberries?",
             "sl": "Ali lahko psi jedo divje robide?",
+            "de": "Dürfen Hunde wilde Brombeeren fressen?",
             "cs": "Mohou psi jíst lesní ostružiny?",
             "hr": "Smiju li psi jesti divlje kupine?",
             "sv": "Får hundar äta vilda björnbär?",
@@ -16153,6 +16302,7 @@
           "a": {
             "en": "Yes, as long as you are sure they are blackberries.",
             "sl": "Da, če ste prepričani, da so to robide.",
+            "de": "Ja, solange Sie sicher sind, dass es Brombeeren sind.",
             "cs": "Ano, pokud víte jistě, že jsou to ostružiny.",
             "hr": "Da, ako si siguran da su to kupine.",
             "sv": "Ja, så länge du är säker på att det är björnbär.",
@@ -16190,6 +16340,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -16200,6 +16351,7 @@
       "name": {
         "en": "Blueberries",
         "sl": "Borovnice",
+        "de": "Heidelbeeren",
         "cs": "Borůvky",
         "hr": "Borovnice",
         "sv": "Blåbär",
@@ -16210,6 +16362,7 @@
       "question": {
         "en": "Can dogs eat blueberries?",
         "sl": "Ali lahko psi jedo borovnice?",
+        "de": "Dürfen Hunde Heidelbeeren fressen?",
         "cs": "Mohou psi jíst borůvky?",
         "hr": "Smiju li psi jesti borovnice?",
         "sv": "Får hundar äta blåbär?",
@@ -16220,6 +16373,7 @@
       "url_slug": {
         "en": "blueberries",
         "sl": "borovnice",
+        "de": "heidelbeeren",
         "cs": "boruvky",
         "hr": "borovnice",
         "sv": "blabar",
@@ -16230,6 +16384,7 @@
       "answer": {
         "en": "Yes, in moderation. Blueberries are low in calories and provide fibre, vitamin C and antioxidants, but they should be an occasional treat rather than a big part of your dog's diet.",
         "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane.",
+        "de": "Ja, in Maßen. Heidelbeeren sind kalorienarm und liefern Ballaststoffe, Vitamin C und Antioxidantien. Sie sollten aber ein gelegentliches Leckerli bleiben und keinen großen Teil der Ernährung Ihres Hundes ausmachen.",
         "cs": "Ano, s mírou. Borůvky mají málo kalorií a obsahují vlákninu, vitamin C a antioxidanty, ale měly by být spíš občasným pamlskem než velkou součástí psí stravy.",
         "hr": "Da, umjereno. Borovnice imaju malo kalorija i daju vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
         "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost.",
@@ -16240,6 +16395,7 @@
       "why": {
         "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
         "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove.",
+        "de": "Wegen ihrer Größe und Form können sie zur Erstickungsgefahr werden, besonders für sehr kleine Hunde. Wie bei jedem neuen Lebensmittel sollten Sie mit einer kleinen Menge beginnen und beobachten, wie Ihr Hund reagiert.",
         "cs": "Kvůli své velikosti a tvaru mohou představovat riziko dušení, zvlášť u velmi malých psů. Jako u každé nové potraviny začněte malým množstvím a sledujte, jak pes reaguje.",
         "hr": "Zbog veličine i oblika mogu izazvati gušenje, osobito kod vrlo malih pasa. Kao i kod svake nove hrane, počni s malom količinom i prati kako pas reagira.",
         "sv": "Storleken och formen kan ge kvävningsrisk, särskilt för mycket små hundar. Som med all ny mat: börja med en liten mängd och se hur hunden reagerar.",
@@ -16251,6 +16407,7 @@
       "what_to_do": {
         "en": "Start with a small amount and observe your dog. If you are unsure whether blueberries are right for your dog, ask your vet.",
         "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja.",
+        "de": "Beginnen Sie mit einer kleinen Menge und beobachten Sie Ihren Hund. Wenn Sie unsicher sind, ob Heidelbeeren das Richtige für Ihren Hund sind, fragen Sie Ihren Tierarzt.",
         "cs": "Začněte malým množstvím a psa pozorujte. Pokud si nejste jistí, zda jsou borůvky pro vašeho psa vhodné, zeptejte se veterináře.",
         "hr": "Počni s malom količinom i promatraj psa. Ako nisi siguran jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
         "sv": "Börja med en liten mängd och håll koll på hunden. Om du är osäker på om blåbär passar din hund, fråga veterinären.",
@@ -16261,6 +16418,7 @@
       "serving": {
         "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
         "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek.",
+        "de": "Gründlich gewaschen, frisch oder tiefgekühlt; für sehr kleine Hunde halbiert; als gelegentliches Leckerli.",
         "cs": "Důkladně omyté, čerstvé nebo mražené; pro velmi malé psy rozpůlené; jako občasný pamlsek.",
         "hr": "Dobro oprane, svježe ili zamrznute; za vrlo male pse prepolovljene; kao povremena poslastica.",
         "sv": "Ordentligt sköljda, färska eller frysta; halverade för mycket små hundar; som en godbit ibland.",
@@ -16271,6 +16429,7 @@
       "child": {
         "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
         "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj.",
+        "de": "Heidelbeeren können ein leckerer kleiner Snack für Hunde sein! Ein Erwachsener wäscht sie vorher und gibt nur ein paar davon.",
         "cs": "Borůvky můžou být pro psy dobrý malý pamlsek! Dospělý je nejdřív omyje a dá jich jen pár.",
         "hr": "Borovnice mogu biti fina mala poslastica za pse! Odrasla osoba ih prvo opere i ponudi samo nekoliko.",
         "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få.",
@@ -16283,6 +16442,7 @@
           "q": {
             "en": "Fresh or frozen blueberries?",
             "sl": "Sveže ali zamrznjene borovnice?",
+            "de": "Frische oder tiefgekühlte Heidelbeeren?",
             "cs": "Čerstvé, nebo mražené borůvky?",
             "hr": "Svježe ili zamrznute borovnice?",
             "sv": "Färska eller frysta blåbär?",
@@ -16293,6 +16453,7 @@
           "a": {
             "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
             "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice.",
+            "de": "Beides ist in Ordnung. Sie können Ihrem Hund frische oder tiefgekühlte Heidelbeeren anbieten.",
             "cs": "Obojí je v pořádku. Psovi můžete nabídnout čerstvé i mražené borůvky.",
             "hr": "Obje su u redu. Psu možeš ponuditi svježe ili zamrznute borovnice.",
             "sv": "Båda går bra. Du kan ge hunden antingen färska eller frysta blåbär.",
@@ -16618,6 +16779,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -16628,6 +16790,7 @@
       "name": {
         "en": "Cantaloupe",
         "sl": "Melona kantalupa",
+        "de": "Cantaloupe-Melone",
         "cs": "Cukrový meloun",
         "hr": "Dinja",
         "sv": "Cantaloupemelon",
@@ -16638,6 +16801,7 @@
       "question": {
         "en": "Can dogs eat cantaloupe?",
         "sl": "Ali lahko psi jedo melono kantalupo?",
+        "de": "Dürfen Hunde Cantaloupe-Melone fressen?",
         "cs": "Mohou psi jíst cukrový meloun?",
         "hr": "Smiju li psi jesti dinju?",
         "sv": "Får hundar äta cantaloupemelon?",
@@ -16648,6 +16812,7 @@
       "url_slug": {
         "en": "cantaloupe",
         "sl": "melona-kantalupa",
+        "de": "cantaloupe-melone",
         "cs": "cukrovy-meloun",
         "hr": "dinja",
         "sv": "cantaloupemelon",
@@ -16658,6 +16823,7 @@
       "answer": {
         "en": "Yes, in moderation. Cantaloupe is low in calories and a good source of water and fibre, but it is high in sugar, so share it sparingly, especially with dogs who are overweight or diabetic. Do not give the rind or seeds.",
         "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk.",
+        "de": "Ja, in Maßen. Cantaloupe-Melone ist kalorienarm und liefert viel Wasser und Ballaststoffe, enthält aber viel Zucker – teilen Sie sie also sparsam, besonders mit übergewichtigen Hunden oder Hunden mit Diabetes. Geben Sie weder Schale noch Kerne.",
         "cs": "Ano, s mírou. Cukrový meloun má málo kalorií a je dobrým zdrojem vody a vlákniny, ale obsahuje hodně cukru, proto ho dávejte střídmě, zvlášť psům s nadváhou nebo cukrovkou. Nedávejte slupku ani semínka.",
         "hr": "Da, umjereno. Dinja ima malo kalorija i dobar je izvor vode i vlakana, ali sadrži mnogo šećera, zato je dijeli štedljivo, osobito sa psima koji imaju prekomjernu težinu ili dijabetes. Ne daj koru ni sjemenke.",
         "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och ger vätska och fibrer, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
@@ -16668,6 +16834,7 @@
       "why": {
         "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
         "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
+        "de": "Die Schale der Cantaloupe-Melone kann – wie die der Wassermelone – den Magen verstimmen, sich im Verdauungstrakt festsetzen und zum Ersticken führen. Die Kerne sind harmlos, können aber ebenfalls zur Erstickungsgefahr werden. Zu viele Leckerlis zusätzlich zu einer gesunden Ernährung können zu Fettleibigkeit führen.",
         "cs": "Slupka cukrového melounu může stejně jako slupka vodního melounu podráždit žaludek, uvíznout v trávicím traktu nebo způsobit dušení. Semínka jsou neškodná, ale také mohou způsobit dušení. Příliš mnoho pamlsků navíc ke zdravé stravě může vést k obezitě.",
         "hr": "Kora dinje, kao i kora lubenice, može uznemiriti želudac, zaglaviti se u probavnom sustavu i izazvati gušenje. Sjemenke su bezopasne, ali i one mogu izazvati gušenje. Previše poslastica uz zdravu prehranu može dovesti do pretilosti.",
         "sv": "Melonskal kan, precis som vattenmelonskal, ge orolig mage, fastna i matsmältningskanalen och ge kvävningsrisk. Kärnorna är ofarliga men kan också ge kvävningsrisk. För många godbitar utöver en hälsosam kost kan leda till fetma.",
@@ -16679,6 +16846,7 @@
       "what_to_do": {
         "en": "If you have questions or concerns about feeding your dog cantaloupe, for example if your dog is diabetic, ask your vet.",
         "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja.",
+        "de": "Wenn Sie Fragen oder Bedenken dazu haben, Ihrem Hund Cantaloupe-Melone zu geben – etwa wenn er Diabetes hat –, fragen Sie Ihren Tierarzt.",
         "cs": "Pokud máte otázky nebo obavy ohledně krmení psa cukrovým melounem, například pokud má váš pes cukrovku, zeptejte se veterináře.",
         "hr": "Ako imaš pitanja ili nedoumica u vezi s davanjem dinje psu, na primjer ako pas ima dijabetes, pitaj veterinara.",
         "sv": "Om du har frågor eller funderingar kring att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
@@ -16689,6 +16857,7 @@
       "serving": {
         "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
         "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek.",
+        "de": "Nur das Fruchtfleisch, ohne Schale und Kerne; als gelegentliches Leckerli.",
         "cs": "Jen dužnina, bez slupky a semínek; jako občasný pamlsek.",
         "hr": "Samo meso ploda, bez kore i sjemenki; kao povremena poslastica.",
         "sv": "Bara fruktköttet, utan skal och kärnor; som en godbit ibland.",
@@ -16699,6 +16868,7 @@
       "child": {
         "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
         "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke.",
+        "de": "Hunde dürfen ein kleines Stück Melone genießen! Ein Erwachsener schneidet die harte Schale ab und entfernt die Kerne.",
         "cs": "Psi si můžou pochutnat na kousku melounu! Dospělý odkrojí tvrdou slupku a vybere semínka.",
         "hr": "Psi mogu uživati u komadiću dinje! Odrasla osoba odreže tvrdu koru i izvadi sjemenke.",
         "sv": "Hundar kan få en liten bit melon! En vuxen skär bort det hårda skalet och tar ut kärnorna.",
@@ -16711,6 +16881,7 @@
           "q": {
             "en": "Is cantaloupe okay for a diabetic dog?",
             "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?",
+            "de": "Ist Cantaloupe-Melone für einen Hund mit Diabetes in Ordnung?",
             "cs": "Hodí se cukrový meloun pro psa s cukrovkou?",
             "hr": "Je li dinja u redu za psa s dijabetesom?",
             "sv": "Passar cantaloupemelon för en hund med diabetes?",
@@ -16721,6 +16892,7 @@
           "a": {
             "en": "It may not be a good choice, because it is high in sugar. Ask your vet first.",
             "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja.",
+            "de": "Sie ist vielleicht keine gute Wahl, weil sie viel Zucker enthält. Fragen Sie zuerst Ihren Tierarzt.",
             "cs": "Nemusí to být dobrá volba, protože obsahuje hodně cukru. Nejdřív se zeptejte veterináře.",
             "hr": "Možda nije dobar izbor jer sadrži mnogo šećera. Prvo pitaj veterinara.",
             "sv": "Det är kanske inget bra val, eftersom den innehåller mycket socker. Fråga veterinären först.",
@@ -20248,6 +20420,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -20258,6 +20431,7 @@
       "name": {
         "en": "Cranberries",
         "sl": "Brusnice",
+        "de": "Cranberrys",
         "cs": "Brusinky",
         "hr": "Brusnice",
         "sv": "Tranbär",
@@ -20268,6 +20442,7 @@
       "question": {
         "en": "Can dogs eat cranberries?",
         "sl": "Ali lahko psi jedo brusnice?",
+        "de": "Dürfen Hunde Cranberrys fressen?",
         "cs": "Mohou psi jíst brusinky?",
         "hr": "Smiju li psi jesti brusnice?",
         "sv": "Får hundar äta tranbär?",
@@ -20278,6 +20453,7 @@
       "url_slug": {
         "en": "cranberries",
         "sl": "brusnice",
+        "de": "cranberrys",
         "cs": "brusinky",
         "hr": "brusnice",
         "sv": "tranbar",
@@ -20288,6 +20464,7 @@
       "answer": {
         "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
         "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine.",
+        "de": "Ja, in kleinen Mengen. Frische, gekochte oder getrocknete Cranberrys ohne Zusätze sind für Hunde nicht giftig, aber zu viele können den Magen verstimmen. Meiden Sie Cranberrysoße und getrocknete Fruchtmischungen, die Zucker, Rosinen oder andere schädliche Zutaten enthalten können.",
         "cs": "Ano, v malém množství. Čisté čerstvé, tepelně upravené nebo sušené brusinky nejsou pro psy jedovaté, ale příliš mnoho jich může podráždit žaludek. Vyhněte se brusinkové omáčce a směsím sušeného ovoce, které mohou obsahovat cukr, rozinky nebo jiné škodlivé přísady.",
         "hr": "Da, u malim količinama. Obične svježe, termički obrađene ili sušene brusnice nisu otrovne za pse, ali previše njih može uznemiriti želudac. Izbjegavaj umak od brusnica i mješavine sušenog voća, koje mogu sadržavati šećer, grožđice ili druge štetne sastojke.",
         "sv": "Ja, i små mängder. Naturella färska, tillagade eller torkade tranbär är inte giftiga för hundar, men för många kan ge orolig mage. Undvik tranbärssås och torkade fruktblandningar, som kan innehålla socker, russin eller andra skadliga ingredienser.",
@@ -20298,6 +20475,7 @@
       "why": {
         "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
         "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor.",
+        "de": "Getrocknete Cranberrys werden manchmal mit Rosinen gemischt verkauft, und Weintrauben und Rosinen sind für Hunde sehr giftig. Cranberrysoße enthält viel Zucker, der den Magen verstimmen kann, und manche Rezepte enthalten Weintrauben, Rosinen, Korinthen oder Alkohol. Viele getrocknete Cranberrys für Menschen sind gesüßt und liefern so unnötigen Zucker.",
         "cs": "Sušené brusinky se někdy prodávají ve směsi s rozinkami, a hrozny i rozinky jsou pro psy velmi jedovaté. Brusinková omáčka obsahuje hodně cukru, který může podráždit žaludek, a některé recepty obsahují hrozny, rozinky, korintky nebo alkohol. Mnoho sušených brusinek určených pro lidi je slazených, což přidává zbytečný cukr.",
         "hr": "Sušene brusnice ponekad dolaze pomiješane s grožđicama, a grožđe i grožđice vrlo su otrovni za pse. Umak od brusnica sadrži mnogo šećera, koji može uznemiriti želudac, a neki recepti sadrže grožđe, grožđice, korintsko grožđe ili alkohol. Mnoge sušene brusnice koje se prodaju za ljude zaslađene su, što psu donosi nepotreban šećer.",
         "sv": "Torkade tranbär säljs ibland blandade med russin, och vindruvor och russin är mycket giftiga för hundar. Tranbärssås innehåller mycket socker, som kan ge orolig mage, och vissa recept innehåller vindruvor, russin, korinter eller alkohol. Många torkade tranbär för människor är sötade, vilket ger onödigt socker.",
@@ -20309,6 +20487,7 @@
       "what_to_do": {
         "en": "Feed cranberries in moderation and under the guidance of a vet. Grapes and raisins are very toxic to dogs, so avoid cranberry mixes that contain raisins.",
         "sl": "Brusnice dajajte zmerno in po nasvetu veterinarja. Grozdje in rozine so za pse zelo strupeni, zato se izogibajte mešanicam brusnic z rozinami.",
+        "de": "Füttern Sie Cranberrys in Maßen und nach Rücksprache mit einem Tierarzt. Weintrauben und Rosinen sind für Hunde sehr giftig – meiden Sie daher Cranberry-Mischungen mit Rosinen.",
         "cs": "Brusinky dávejte s mírou a podle doporučení veterináře. Hrozny a rozinky jsou pro psy velmi jedovaté, proto se vyhněte brusinkovým směsím s rozinkami.",
         "hr": "Brusnice daj umjereno i uz savjet veterinara. Grožđe i grožđice vrlo su otrovni za pse, zato izbjegavaj mješavine brusnica s grožđicama.",
         "sv": "Ge tranbär med måtta och enligt veterinärens råd. Vindruvor och russin är mycket giftiga för hundar, så undvik tranbärsblandningar som innehåller russin.",
@@ -20319,6 +20498,7 @@
       "serving": {
         "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
         "sl": "Navadne sveže, kuhane ali suhe brusnice brez dodanega sladkorja in brez rozin; v majhnih količinah.",
+        "de": "Frische, gekochte oder getrocknete Cranberrys ohne Zusätze, ohne zugesetzten Zucker und ohne Rosinen; in kleinen Mengen.",
         "cs": "Čisté čerstvé, tepelně upravené nebo sušené brusinky bez přidaného cukru a bez rozinek; v malém množství.",
         "hr": "Obične svježe, termički obrađene ili sušene brusnice bez dodanog šećera i bez grožđica; u malim količinama.",
         "sv": "Naturella färska, tillagade eller torkade tranbär utan tillsatt socker och utan russin; i små mängder.",
@@ -20329,6 +20509,7 @@
       "child": {
         "en": "A few plain cranberries are okay for dogs. Cranberry sauce and fruit mixes are for people, so ask a grown-up first.",
         "sl": "Nekaj navadnih brusnic je za pse v redu. Brusnična omaka in mešanice sadja so za ljudi, zato najprej vprašaj odraslega.",
+        "de": "Ein paar Cranberrys ohne Zusätze sind für Hunde okay. Cranberrysoße und Fruchtmischungen sind für Menschen – frag also vorher einen Erwachsenen.",
         "cs": "Pár obyčejných brusinek je pro psy v pořádku. Brusinková omáčka a ovocné směsi jsou pro lidi, a tak se nejdřív zeptej dospělého.",
         "hr": "Nekoliko običnih brusnica u redu je za pse. Umak od brusnica i voćne mješavine su za ljude, zato prvo pitaj odraslu osobu.",
         "sv": "Några vanliga tranbär går bra för hundar. Tranbärssås och fruktblandningar är för människor, så fråga en vuxen först.",
@@ -20341,6 +20522,7 @@
           "q": {
             "en": "Can dogs eat cranberry sauce?",
             "sl": "Ali lahko psi jedo brusnično omako?",
+            "de": "Dürfen Hunde Cranberrysoße fressen?",
             "cs": "Mohou psi jíst brusinkovou omáčku?",
             "hr": "Smiju li psi jesti umak od brusnica?",
             "sv": "Får hundar äta tranbärssås?",
@@ -20351,6 +20533,7 @@
           "a": {
             "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
             "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen.",
+            "de": "Besser nicht. Cranberrysoße enthält viel Zucker, und manche Rezepte enthalten Weintrauben, Rosinen oder Korinthen, die für Hunde giftig sind, oder Brandy – und auch Alkohol ist für Hunde giftig.",
             "cs": "Raději ne. Brusinková omáčka obsahuje hodně cukru a některé recepty obsahují hrozny, rozinky nebo korintky, které jsou pro psy jedovaté, nebo brandy – a alkohol je pro psy také jedovatý.",
             "hr": "Bolje ga je izbjegavati. Umak od brusnica sadrži mnogo šećera, a neki recepti sadrže grožđe, grožđice ili korintsko grožđe, koji su otrovni za pse, ili brendi, a i alkohol je otrovan za pse.",
             "sv": "Den är bäst att undvika. Tranbärssås innehåller mycket socker, och vissa recept innehåller vindruvor, russin eller korinter, som är giftiga för hundar, eller konjak, och alkohol är också giftig för hundar.",
@@ -20363,6 +20546,7 @@
           "q": {
             "en": "Do cranberries help with urinary tract infections in dogs?",
             "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?",
+            "de": "Helfen Cranberrys Hunden bei Harnwegsinfekten?",
             "cs": "Pomáhají brusinky psům při infekcích močových cest?",
             "hr": "Pomažu li brusnice psima kod infekcija mokraćnog sustava?",
             "sv": "Hjälper tranbär mot urinvägsinfektion hos hundar?",
@@ -20373,6 +20557,7 @@
           "a": {
             "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
             "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile.",
+            "de": "Viele glauben das, aber es gibt noch nicht genug Studien an Hunden, um es zu bestätigen.",
             "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily.",
             "hr": "Mnogi ljudi tako misle, ali nema dovoljno istraživanja na psima koja bi to potvrdila.",
             "sv": "Många tror det, men det finns inte tillräckligt med studier på hundar för att bekräfta det.",
@@ -26798,6 +26983,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -26808,6 +26994,7 @@
       "name": {
         "en": "Raspberries",
         "sl": "Maline",
+        "de": "Himbeeren",
         "cs": "Maliny",
         "hr": "Maline",
         "sv": "Hallon",
@@ -26818,6 +27005,7 @@
       "question": {
         "en": "Can dogs eat raspberries?",
         "sl": "Ali lahko psi jedo maline?",
+        "de": "Dürfen Hunde Himbeeren fressen?",
         "cs": "Mohou psi jíst maliny?",
         "hr": "Smiju li psi jesti maline?",
         "sv": "Får hundar äta hallon?",
@@ -26828,6 +27016,7 @@
       "url_slug": {
         "en": "raspberries",
         "sl": "maline",
+        "de": "himbeeren",
         "cs": "maliny",
         "hr": "maline",
         "sv": "hallon",
@@ -26838,6 +27027,7 @@
       "answer": {
         "en": "Yes, in moderation. Raspberries can be a healthy occasional treat and are relatively low in sugar and calories, but they contain naturally occurring xylitol, so give them only in moderation. Fresh or frozen raspberries are best.",
         "sl": "Da, zmerno. Maline so lahko zdrav občasen priboljšek in imajo razmeroma malo sladkorja in kalorij, a vsebujejo naravni ksilitol, zato jih dajajte le zmerno. Najboljše so sveže ali zamrznjene maline.",
+        "de": "Ja, in Maßen. Himbeeren können ein gesundes gelegentliches Leckerli sein und haben relativ wenig Zucker und Kalorien. Sie enthalten aber natürlich vorkommendes Xylit – geben Sie sie daher nur in Maßen. Am besten sind frische oder tiefgekühlte Himbeeren.",
         "cs": "Ano, s mírou. Maliny mohou být zdravým občasným pamlskem a mají poměrně málo cukru a kalorií, obsahují ale přirozeně se vyskytující xylitol, proto je dávejte jen s mírou. Nejlepší jsou čerstvé nebo mražené maliny.",
         "hr": "Da, umjereno. Maline mogu biti zdrava povremena poslastica i imaju relativno malo šećera i kalorija, ali prirodno sadrže ksilitol, pa ih daj samo umjereno. Najbolje su svježe ili smrznute maline.",
         "sv": "Ja, med måtta. Hallon kan vara en nyttig godbit ibland och innehåller relativt lite socker och kalorier, men de innehåller naturligt xylitol, så ge dem bara med måtta. Färska eller frysta hallon är bäst.",
@@ -26848,6 +27038,7 @@
       "why": {
         "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
         "sl": "Maline vsebujejo naravni ksilitol, in sicer več kot večina drugih vrst sadja, čeprav je te količine malo v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte.",
+        "de": "Himbeeren enthalten mehr natürlich vorkommendes Xylit als die meisten anderen Obstsorten, auch wenn diese Menge im Vergleich zu dem, was Hunden bekanntermaßen schadet, gering ist. Zu viele Himbeeren können Erbrechen, Durchfall, Verstopfung oder andere Verdauungsbeschwerden verursachen. Gesüßte Himbeerprodukte sollten Sie meiden.",
         "cs": "Maliny obsahují přirozeně se vyskytující xylitol ve větším množství než většina ostatního ovoce, i když je to málo ve srovnání s množstvím, o kterém je známo, že psům škodí. Příliš mnoho malin může způsobit zvracení, průjem, zácpu nebo jiné zažívací potíže. Slazeným malinovým výrobkům se vyhněte.",
         "hr": "Maline prirodno sadrže više ksilitola nego većina drugog voća, iako je ta količina mala u usporedbi s onom za koju se zna da šteti psima. Previše malina može izazvati povraćanje, proljev, zatvor ili druge probavne tegobe. Zaslađene proizvode od malina treba izbjegavati.",
         "sv": "Hallon innehåller naturligt xylitol i högre halter än de flesta andra frukter, även om mängden är låg jämfört med den som man vet skadar hundar. För mycket hallon kan orsaka kräkningar, diarré, förstoppning eller andra matsmältningsbesvär. Sötade hallonprodukter bör undvikas.",
@@ -26859,6 +27050,7 @@
       "what_to_do": {
         "en": "Give raspberries only in moderation, because overfeeding may upset digestion. Owners of diabetic dogs should ask their vet before giving any new treats.",
         "sl": "Maline dajajte le zmerno, ker lahko preveč malin povzroči prebavne težave. Lastniki psov s sladkorno boleznijo naj pred vsakim novim priboljškom vprašajo veterinarja.",
+        "de": "Geben Sie Himbeeren nur in Maßen, denn zu viele können die Verdauung stören. Hat Ihr Hund Diabetes, fragen Sie vor jedem neuen Leckerli Ihren Tierarzt.",
         "cs": "Maliny dávejte jen s mírou, protože příliš velké množství může podráždit trávení. Majitelé psů s cukrovkou by se měli před podáním jakéhokoli nového pamlsku poradit s veterinářem.",
         "hr": "Daj maline samo umjereno jer previše malina može izazvati probavne tegobe. Ako tvoj pas ima šećernu bolest, pitaj veterinara prije nego što mu daš bilo koju novu poslasticu.",
         "sv": "Ge hallon bara med måtta, eftersom för mycket kan ge matsmältningsbesvär. Har du en hund med diabetes, fråga veterinären innan du ger nya godbitar.",
@@ -26869,6 +27061,7 @@
       "serving": {
         "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
         "sl": "Navadne sveže ali zamrznjene maline, nikoli sladkani izdelki; kot občasen priboljšek.",
+        "de": "Frische oder tiefgekühlte Himbeeren ohne Zusätze, niemals gesüßte Produkte; als gelegentliches Leckerli.",
         "cs": "Obyčejné čerstvé nebo mražené maliny, nikdy slazené výrobky; jako občasný pamlsek.",
         "hr": "Obične svježe ili smrznute maline, nikad zaslađeni proizvodi; kao povremena poslastica.",
         "sv": "Färska eller frysta hallon utan tillsatser, aldrig sötade produkter; som en godbit ibland.",
@@ -26879,6 +27072,7 @@
       "child": {
         "en": "Dogs can have a few raspberries as a treat! A grown-up decides how many, because too many can upset a tummy.",
         "sl": "Psi lahko kot priboljšek dobijo nekaj malin! Odrasel odloči, koliko, ker lahko preveč malin povzroči težave s trebuščkom.",
+        "de": "Hunde dürfen ein paar Himbeeren als Leckerli bekommen! Ein Erwachsener entscheidet, wie viele, denn zu viele können Bauchweh machen.",
         "cs": "Pejsci si můžou dát pár malin jako pamlsek! Kolik, rozhodne dospělý, protože moc malin může rozbolet bříško.",
         "hr": "Psi smiju pojesti nekoliko malina kao poslasticu! Odrasla osoba odlučuje koliko, jer od previše malina može zaboljeti trbuh.",
         "sv": "Hundar får äta några hallon som godbit! En vuxen bestämmer hur många, eftersom för många kan ge ont i magen.",
@@ -26891,6 +27085,7 @@
           "q": {
             "en": "Is the xylitol in raspberries a problem?",
             "sl": "Je ksilitol v malinah težava?",
+            "de": "Ist das Xylit in Himbeeren ein Problem?",
             "cs": "Je xylitol v malinách problém?",
             "hr": "Je li ksilitol u malinama problem?",
             "sv": "Är xylitolet i hallon ett problem?",
@@ -26901,6 +27096,7 @@
           "a": {
             "en": "The amount of xylitol in raspberries is low relative to the amount known to harm dogs, but give raspberries only in moderation.",
             "sl": "Količina ksilitola v malinah je majhna v primerjavi s količino, za katero je znano, da psom škoduje, a maline dajajte le zmerno.",
+            "de": "Die Xylitmenge in Himbeeren ist gering im Vergleich zu der Menge, die Hunden bekanntermaßen schadet – geben Sie Himbeeren aber trotzdem nur in Maßen.",
             "cs": "Množství xylitolu v malinách je malé v porovnání s množstvím, o kterém je známo, že psům škodí, maliny ale přesto dávejte jen s mírou.",
             "hr": "Količina ksilitola u malinama mala je u usporedbi s količinom za koju se zna da šteti psima, ali maline svejedno daj samo umjereno.",
             "sv": "Mängden xylitol i hallon är låg jämfört med den mängd man vet skadar hundar, men ge ändå hallon bara med måtta.",
@@ -29988,6 +30184,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -29998,6 +30195,7 @@
       "name": {
         "en": "Strawberries",
         "sl": "Jagode",
+        "de": "Erdbeeren",
         "cs": "Jahody",
         "hr": "Jagode",
         "sv": "Jordgubbar",
@@ -30008,6 +30206,7 @@
       "question": {
         "en": "Can dogs eat strawberries?",
         "sl": "Ali lahko psi jedo jagode?",
+        "de": "Dürfen Hunde Erdbeeren fressen?",
         "cs": "Mohou psi jíst jahody?",
         "hr": "Smiju li psi jesti jagode?",
         "sv": "Får hundar äta jordgubbar?",
@@ -30018,6 +30217,7 @@
       "url_slug": {
         "en": "strawberries",
         "sl": "jagode",
+        "de": "erdbeeren",
         "cs": "jahody",
         "hr": "jagode",
         "sv": "jordgubbar",
@@ -30028,6 +30228,7 @@
       "answer": {
         "en": "Yes, in moderation. Strawberries are full of antioxidants, fibre and vitamin C, but they contain natural sugar, and too many at once can cause loose stools or diarrhoea. Wash them, remove the stems and leaves, and cut them small.",
         "sl": "Da, zmerno. Jagode so polne antioksidantov, vlaknin in vitamina C, a vsebujejo naravni sladkor, preveč naenkrat pa lahko povzroči mehko blato ali drisko. Operite jih, odstranite peclje in liste ter jih narežite na majhne koščke.",
+        "de": "Ja, in Maßen. Erdbeeren stecken voller Antioxidantien, Ballaststoffe und Vitamin C, enthalten aber natürlichen Zucker, und zu viele auf einmal können weichen Kot oder Durchfall verursachen. Waschen Sie sie, entfernen Sie Stiele und Blätter und schneiden Sie sie klein.",
         "cs": "Ano, s mírou. Jahody jsou plné antioxidantů, vlákniny a vitaminu C, obsahují ale přirozený cukr a příliš mnoho najednou může způsobit řidší stolici nebo průjem. Omyjte je, odstraňte stopky a lístky a nakrájejte je na malé kousky.",
         "hr": "Da, umjereno. Jagode su pune antioksidansa, vlakana i vitamina C, ali sadrže prirodni šećer, a previše njih odjednom može izazvati mekanu stolicu ili proljev. Operi ih, ukloni peteljke i listiće i nareži ih na male komadiće.",
         "sv": "Ja, med måtta. Jordgubbar är fulla av antioxidanter, fibrer och C-vitamin, men de innehåller naturligt socker, och för många på en gång kan ge lös avföring eller diarré. Skölj dem, ta bort stjälkar och blad och skär dem i små bitar.",
@@ -30038,6 +30239,7 @@
       "why": {
         "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
         "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse.",
+        "de": "Stiele und Blätter sind nicht giftig, können aber den Magen verstimmen, und ganze Erdbeeren können zur Erstickungsgefahr werden, besonders bei kleineren Rassen. Meiden Sie Erdbeeren in Sirup oder aus der Dose: Sie enthalten zu viel Zucker und womöglich sogar künstliche Süßstoffe, die für Hunde giftig sind.",
         "cs": "Stopky a lístky nejsou jedovaté, mohou ale podráždit žaludek, a celé jahody mohou způsobit dušení, zejména u menších plemen. Vyhněte se jahodám v sirupu nebo z konzervy, které mají příliš mnoho cukru a mohou dokonce obsahovat umělá sladidla, která jsou pro psy jedovatá.",
         "hr": "Peteljke i listići nisu otrovni, ali mogu izazvati probavne tegobe, a cijela jagoda može izazvati gušenje, osobito kod manjih pasmina. Izbjegavaj jagode u sirupu ili iz konzerve jer imaju previše šećera i mogu sadržavati čak i umjetna sladila koja su otrovna za pse.",
         "sv": "Stjälkarna och bladen är inte giftiga men kan ge magbesvär, och hela jordgubbar kan orsaka kvävning, särskilt hos mindre raser. Undvik jordgubbar i sockerlag eller på burk, som innehåller för mycket socker och till och med kan innehålla konstgjorda sötningsmedel som är giftiga för hundar.",
@@ -30049,6 +30251,7 @@
       "what_to_do": {
         "en": "If you notice anything different after your dog eats strawberries, stop giving them and check with your vet.",
         "sl": "Če po jagodah pri psu opazite kaj nenavadnega, mu jih ne dajajte več in se posvetujte z veterinarjem.",
+        "de": "Wenn Ihnen nach dem Fressen von Erdbeeren etwas Ungewöhnliches an Ihrem Hund auffällt, geben Sie ihm keine mehr und fragen Sie Ihren Tierarzt.",
         "cs": "Pokud si po jahodách u svého psa všimnete jakékoli změny, přestaňte mu je dávat a poraďte se s veterinářem.",
         "hr": "Ako primijetiš bilo kakvu promjenu nakon što tvoj pas pojede jagode, prestani mu ih davati i posavjetuj se s veterinarom.",
         "sv": "Om du märker något annorlunda efter att hunden ätit jordgubbar, sluta ge dem och rådfråga veterinären.",
@@ -30059,6 +30262,7 @@
       "serving": {
         "en": "Washed thoroughly, stems and leaves removed, cut into small pieces, or mashed for small dogs; fresh or frozen, never in syrup or canned.",
         "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve.",
+        "de": "Gründlich gewaschen, ohne Stiele und Blätter, in kleine Stücke geschnitten oder für kleine Hunde zerdrückt; frisch oder tiefgekühlt, niemals in Sirup oder aus der Dose.",
         "cs": "Důkladně omyté, bez stopek a lístků, nakrájené na malé kousky, pro malé psy rozmačkané; čerstvé nebo mražené, nikdy v sirupu ani z konzervy.",
         "hr": "Temeljito oprane, bez peteljki i listića, narezane na male komadiće ili zgnječene za male pse; svježe ili smrznute, nikad u sirupu ili iz konzerve.",
         "sv": "Noga sköljda, utan stjälkar och blad, skurna i små bitar eller mosade till små hundar; färska eller frysta, aldrig i sockerlag eller på burk.",
@@ -30069,6 +30273,7 @@
       "child": {
         "en": "Dogs can have a little strawberry! A grown-up washes it, takes off the green leaves and cuts it small.",
         "sl": "Psi lahko dobijo malo jagode! Odrasel jo opere, odstrani zelene liste in jo nareže na majhne koščke.",
+        "de": "Hunde dürfen ein bisschen Erdbeere naschen! Ein Erwachsener wäscht sie, entfernt die grünen Blätter und schneidet sie klein.",
         "cs": "Pejsci můžou dostat kousek jahody! Dospělý ji omyje, utrhne zelené lístky a nakrájí ji na malé kousky.",
         "hr": "Psi smiju pojesti malo jagode! Odrasla osoba je opere, skine zelene listiće i nareže je na male komadiće.",
         "sv": "Hundar får äta lite jordgubbe! En vuxen sköljer den, tar bort de gröna bladen och skär den i små bitar.",
@@ -30081,6 +30286,7 @@
           "q": {
             "en": "Can dogs eat frozen strawberries?",
             "sl": "Ali lahko psi jedo zamrznjene jagode?",
+            "de": "Dürfen Hunde tiefgekühlte Erdbeeren fressen?",
             "cs": "Mohou psi jíst mražené jahody?",
             "hr": "Smiju li psi jesti smrznute jagode?",
             "sv": "Får hundar äta frysta jordgubbar?",
@@ -30091,6 +30297,7 @@
           "a": {
             "en": "Yes. Frozen strawberries cut into suitably sized pieces can be a safe, refreshing treat.",
             "sl": "Da. Zamrznjene jagode, narezane na primerno velike koščke, so lahko varen in osvežilen priboljšek.",
+            "de": "Ja. In passend große Stücke geschnitten, können tiefgekühlte Erdbeeren ein unbedenkliches, erfrischendes Leckerli sein.",
             "cs": "Ano. Mražené jahody nakrájené na vhodně velké kousky mohou být bezpečným, osvěžujícím pamlskem.",
             "hr": "Smiju. Smrznute jagode narezane na komadiće prikladne veličine mogu biti sigurna i osvježavajuća poslastica.",
             "sv": "Ja. Frysta jordgubbar i lagom stora bitar kan vara en ofarlig och svalkande godbit.",
@@ -30103,6 +30310,7 @@
           "q": {
             "en": "Should I ask my vet first?",
             "sl": "Naj najprej vprašam veterinarja?",
+            "de": "Sollte ich vorher meinen Tierarzt fragen?",
             "cs": "Mám se nejdřív zeptat veterináře?",
             "hr": "Trebam li prvo pitati veterinara?",
             "sv": "Ska jag fråga veterinären först?",
@@ -30113,6 +30321,7 @@
           "a": {
             "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
             "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem.",
+            "de": "Wenn Sie ein neues Lebensmittel in die Ernährung Ihres Hundes aufnehmen, sprechen Sie am besten vorher mit Ihrem Tierarzt.",
             "cs": "Kdykoli zařazujete do jídelníčku psa novou potravinu, je nejlepší se nejdřív poradit s veterinářem.",
             "hr": "Kad god psu u prehranu uvodiš novu namirnicu, najbolje je da prvo razgovaraš s veterinarom.",
             "sv": "När du inför ett nytt livsmedel i hundens kost är det bäst att prata med veterinären först.",
@@ -31324,6 +31533,7 @@
       "locales": [
         "en",
         "sl",
+        "de",
         "cs",
         "hr",
         "sv",
@@ -31334,6 +31544,7 @@
       "name": {
         "en": "Watermelon",
         "sl": "Lubenica",
+        "de": "Wassermelone",
         "cs": "Vodní meloun",
         "hr": "Lubenica",
         "sv": "Vattenmelon",
@@ -31344,6 +31555,7 @@
       "question": {
         "en": "Can dogs eat watermelon?",
         "sl": "Ali lahko psi jedo lubenico?",
+        "de": "Dürfen Hunde Wassermelone fressen?",
         "cs": "Mohou psi jíst vodní meloun?",
         "hr": "Smiju li psi jesti lubenicu?",
         "sv": "Får hundar äta vattenmelon?",
@@ -31354,6 +31566,7 @@
       "url_slug": {
         "en": "watermelon",
         "sl": "lubenica",
+        "de": "wassermelone",
         "cs": "vodni-meloun",
         "hr": "lubenica",
         "sv": "vattenmelon",
@@ -31364,6 +31577,7 @@
       "answer": {
         "en": "Yes, if you prepare it correctly. Watermelon is a low-calorie fruit with a high water content, but remove all seeds and the rind first, because both can cause digestive upset or an intestinal blockage.",
         "sl": "Da, če jo pravilno pripravite. Lubenica je nizkokalorično sadje z veliko vode, a najprej odstranite vse pečke in lupino, ker lahko oboje povzroči prebavne težave ali zaporo črevesja.",
+        "de": "Ja, wenn Sie sie richtig zubereiten. Wassermelone ist eine kalorienarme Frucht mit hohem Wassergehalt. Entfernen Sie aber vorher alle Kerne und die Schale, denn beides kann Verdauungsbeschwerden oder einen Darmverschluss verursachen.",
         "cs": "Ano, pokud ho správně připravíte. Vodní meloun je nízkokalorické ovoce s vysokým obsahem vody, nejdřív ale odstraňte všechna semínka a kůru, protože obojí může způsobit zažívací potíže nebo ucpání střev.",
         "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva.",
         "sv": "Ja, om du förbereder den rätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
@@ -31374,6 +31588,7 @@
       "why": {
         "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
         "sl": "Pečke lahko povzročijo zaporo črevesja, zlasti če jih pes poje veliko, majhnim psom pa se lahko zataknejo v grlu. Lupina lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja, če jo pes poje v velikih kosih. Preveč lubenice lahko zaradi naravnega sladkorja in vlaknin povzroči neugodje v trebuhu ali drisko.",
+        "de": "Kerne können einen Darmverschluss verursachen, besonders wenn ein Hund viele davon frisst, und für kleine Hunde zur Erstickungsgefahr werden. Die Schale kann in großen Stücken Magenverstimmung, Erbrechen, Durchfall oder einen Darmverschluss verursachen. Zu viel Wassermelone kann wegen ihres natürlichen Zuckers und ihrer Ballaststoffe zu Magenbeschwerden oder Durchfall führen.",
         "cs": "Semínka mohou způsobit ucpání střev, zejména když jich pes sní hodně, a malí psi se jimi mohou udusit. Kůra může při snědení ve velkých kusech způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev. Příliš mnoho melounu může kvůli přirozenému cukru a vláknině způsobit žaludeční potíže nebo průjem.",
         "hr": "Sjemenke mogu izazvati začepljenje crijeva, osobito ako ih pas pojede puno, a kod malih pasa mogu izazvati gušenje. Kora može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva ako pas pojede velike komade. Previše lubenice može izazvati nelagodu u trbuhu ili proljev zbog prirodnog šećera i vlakana.",
         "sv": "Kärnorna kan orsaka tarmstopp, särskilt om hunden äter många, och kan orsaka kvävning hos små hundar. Skalet kan ge magbesvär, kräkningar, diarré eller tarmstopp om hunden äter stora bitar. För mycket vattenmelon kan ge obehag i magen eller diarré på grund av det naturliga sockret och fibrerna.",
@@ -31385,6 +31600,7 @@
       "what_to_do": {
         "en": "The first time, give a small amount and watch for digestive upset. Contact your vet if your dog shows symptoms after eating watermelon.",
         "sl": "Prvič dajte majhno količino in opazujte, ali se pojavijo prebavne težave. Če ima pes po lubenici znake težav, se obrnite na veterinarja.",
+        "de": "Geben Sie beim ersten Mal eine kleine Menge und achten Sie auf Verdauungsbeschwerden. Wenden Sie sich an Ihren Tierarzt, wenn Ihr Hund nach dem Fressen von Wassermelone Symptome zeigt.",
         "cs": "Poprvé dejte malé množství a sledujte, zda se neobjeví zažívací potíže. Pokud má váš pes po snědení melounu nějaké příznaky, obraťte se na veterináře.",
         "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokazuje simptome.",
         "sv": "Ge en liten mängd första gången och håll utkik efter matsmältningsbesvär. Kontakta veterinären om hunden får symtom efter att ha ätit vattenmelon.",
@@ -31395,6 +31611,7 @@
       "serving": {
         "en": "Bite-sized pieces with all seeds and the rind removed; seedless pieces can also be frozen as a cooling treat.",
         "sl": "Majhni koščki brez vseh pečk in lupine; koščke brez pečk lahko tudi zamrznete kot osvežilen priboljšek.",
+        "de": "Mundgerechte Stücke ohne Kerne und Schale; kernlose Stücke lassen sich auch als kühlendes Leckerli einfrieren.",
         "cs": "Kousky na jedno kousnutí, bez všech semínek a kůry; kousky bez semínek můžete také zamrazit jako osvěžující pamlsek.",
         "hr": "Komadići veličine zalogaja, bez ijedne sjemenke i bez kore; komadiće bez sjemenki možeš i zamrznuti kao osvježavajuću poslasticu.",
         "sv": "Lagom stora bitar utan kärnor och skal; kärnfria bitar kan också frysas som en svalkande godbit.",
@@ -31405,6 +31622,7 @@
       "child": {
         "en": "On a hot day, dogs can enjoy small pieces of watermelon! A grown-up removes the seeds and the green skin.",
         "sl": "Na vroč dan lahko psi uživajo v majhnih koščkih lubenice! Odrasel odstrani pečke in zeleno lupino.",
+        "de": "An heißen Tagen dürfen Hunde kleine Stücke Wassermelone genießen! Ein Erwachsener entfernt die Kerne und die grüne Schale.",
         "cs": "Za horkého dne si psi můžou pochutnat na kouscích melounu! Dospělý odstraní semínka a zelenou slupku.",
         "hr": "Za vrućeg dana psi mogu uživati u malim komadićima lubenice! Odrasla osoba ukloni sjemenke i zelenu koru.",
         "sv": "En varm dag kan hundar njuta av små bitar vattenmelon! En vuxen tar bort kärnorna och det gröna skalet.",
@@ -31417,6 +31635,7 @@
           "q": {
             "en": "Can dogs eat watermelon rind?",
             "sl": "Ali lahko psi jedo lubenično lupino?",
+            "de": "Dürfen Hunde Wassermelonenschale fressen?",
             "cs": "Mohou psi jíst kůru vodního melounu?",
             "hr": "Smiju li psi jesti koru lubenice?",
             "sv": "Får hundar äta vattenmelonskal?",
@@ -31427,6 +31646,7 @@
           "a": {
             "en": "No, the rind is not recommended. In large pieces it may cause stomach upset, vomiting, diarrhoea or intestinal obstruction.",
             "sl": "Ne, lupina ni priporočljiva. V velikih kosih lahko povzroči prebavne težave, bruhanje, drisko ali zaporo črevesja.",
+            "de": "Nein, die Schale ist nicht zu empfehlen. In großen Stücken kann sie Magenverstimmung, Erbrechen, Durchfall oder einen Darmverschluss verursachen.",
             "cs": "Ne, kůru nedoporučujeme. Ve velkých kusech může způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev.",
             "hr": "Ne, kora se ne preporučuje. U velikim komadima može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva.",
             "sv": "Nej, skalet rekommenderas inte. I stora bitar kan det ge magbesvär, kräkningar, diarré eller tarmstopp.",
