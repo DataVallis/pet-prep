@@ -8,6 +8,7 @@
     "fr": "Pépins de pomme",
     "es": "Semillas de manzana",
     "it": "Semi di mela",
+    "pt": "Sementes de maçã",
     "cs": "Jablečná jádra",
     "hr": "Sjemenke jabuke",
     "sv": "Äppelkärnor",
@@ -22,6 +23,7 @@
     "fr": "Les chiens peuvent-ils manger des pépins de pomme ?",
     "es": "¿Pueden los perros comer semillas de manzana?",
     "it": "I cani possono mangiare i semi di mela?",
+    "pt": "Os cães podem comer sementes de maçã?",
     "cs": "Mohou psi jíst jablečná jádra?",
     "hr": "Smiju li psi jesti sjemenke jabuke?",
     "sv": "Får hundar äta äppelkärnor?",
@@ -36,6 +38,7 @@
     "fr": "pepins-de-pomme",
     "es": "semillas-de-manzana",
     "it": "semi-di-mela",
+    "pt": "sementes-de-maca",
     "cs": "jablecna-jadra",
     "hr": "sjemenke-jabuke",
     "sv": "appelkarnor",
@@ -51,6 +54,7 @@
     "fr": "Non, il faut éviter les pépins de pomme. Ils contiennent du cyanure, et le trognon et la queue qui les entourent pourraient étouffer votre chien. Quelques pépins ne devraient pas lui faire de mal, mais retirez les pépins et le trognon avant de partager une pomme avec lui.",
     "es": "No, hay que evitar las semillas de manzana. Contienen cianuro, y el corazón y el tallo que las rodean podrían hacer que tu perro se atragante. Es poco probable que unas pocas semillas le hagan daño, pero quita las semillas y el corazón antes de compartir manzana con él.",
     "it": "No, i semi di mela vanno evitati. Contengono cianuro, e il torsolo e il picciolo che li circondano potrebbero far soffocare il tuo cane. È improbabile che pochi semi facciano male, ma togli semi e torsolo prima di dare la mela al tuo cane.",
+    "pt": "Não, é melhor evitar as sementes de maçã. Contêm cianeto, e o carolo e o pé à volta delas podem fazer o teu cão engasgar-se. Um pequeno número de sementes dificilmente fará mal, mas retira as sementes e o carolo antes de dares maçã ao teu cão.",
     "cs": "Ne, jablečným jádrům je lepší se vyhnout. Obsahují kyanid a ohryzek se stopkou, ve kterých jsou, by mohl způsobit dušení. Malé množství jader pravděpodobně neublíží, ale než se o jablko podělíte, odstraňte jádra i ohryzek.",
     "hr": "Ne, sjemenke jabuke treba izbjegavati. Sadrže cijanid, a sjemena kućica i peteljka oko njih mogu izazvati gušenje. Malo sjemenki vjerojatno neće naštetiti, ali prije nego što psu daš jabuku, ukloni sjemenke i sjemenu kućicu.",
     "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet.",
@@ -65,6 +69,7 @@
     "fr": "L’ASPCA répertorie le pommier comme toxique pour les chiens : ses tiges, ses feuilles et ses pépins contiennent du cyanure (issu de glycosides cyanogènes). Selon l’AKC, un petit nombre de pépins ne devrait pas faire de mal, et selon le Pet Poison Helpline, il faudrait qu’un animal en mange des quantités massives pour que cela pose problème. Nous suivons l’avis le plus strict, car les pépins contiennent du cyanure et le trognon peut aussi provoquer un étouffement ou une obstruction intestinale.",
     "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera preocupante. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
     "it": "L’ASPCA classifica il melo come tossico per i cani: piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Secondo l’AKC è improbabile che pochi semi facciano male, e secondo Pet Poison Helpline un animale dovrebbe mangiarne quantità enormi perché diventino preoccupanti. Noi seguiamo la posizione più prudente, perché i semi contengono cianuro e il torsolo può anche causare soffocamento o un’ostruzione intestinale.",
+    "pt": "A ASPCA classifica a macieira como tóxica para cães: os caules, as folhas e as sementes contêm cianeto (proveniente de glicosídeos cianogénicos). O AKC diz que um pequeno número de sementes dificilmente fará mal, e a Pet Poison Helpline diz que um animal teria de comer quantidades enormes para haver motivo de preocupação. Seguimos a posição mais rigorosa porque as sementes contêm cianeto e o carolo também pode causar engasgamento ou obstrução intestinal.",
     "cs": "ASPCA uvádí jabloň jako rostlinu jedovatou pro psy: její stonky, listy a semena obsahují kyanid (z kyanogenních glykosidů). Podle AKC malé množství jader pravděpodobně neublíží a podle Pet Poison Helpline by zvíře muselo sníst obrovské množství, aby to bylo znepokojivé. Řídíme se přísnějším pohledem, protože jádra obsahují kyanid a ohryzek může navíc způsobit dušení nebo ucpání střev.",
     "hr": "ASPCA navodi da je jabuka kao biljka otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid (iz cijanogenih glikozida). AKC navodi da malo sjemenki vjerojatno neće naštetiti, a Pet Poison Helpline da bi ljubimac morao pojesti ogromne količine da bi to bilo zabrinjavajuće. Držimo se strožeg stajališta jer sjemenke sadrže cijanid, a sjemena kućica može izazvati i gušenje ili začepljenje crijeva.",
     "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska vara oroande. Vi följer den strängare hållningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp.",
@@ -114,6 +119,13 @@
       "Difficoltà a respirare, respiro affannoso",
       "Shock",
       "Segni di disturbi digestivi o di un’ostruzione"
+    ],
+    "pt": [
+      "Gengivas ou outras mucosas vermelho-tijolo",
+      "Pupilas dilatadas",
+      "Dificuldade em respirar, respiração ofegante",
+      "Choque",
+      "Sinais de problemas digestivos ou de obstrução"
     ],
     "cs": [
       "Cihlově červené dásně nebo jiné sliznice",
@@ -165,6 +177,7 @@
     "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction, et contactez un vétérinaire si votre chien a des problèmes.",
     "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción y contacta con un veterinario si tiene algún problema.",
     "it": "Se il tuo cane mangia un torsolo o dei semi di mela, tieni d’occhio eventuali segni di disturbi digestivi o di un’ostruzione e contatta il veterinario se ha dei problemi.",
+    "pt": "Se o teu cão comer um carolo ou sementes de maçã, vigia se aparecem sinais de problemas digestivos ou de obstrução e contacta um veterinário se o teu cão tiver problemas.",
     "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání, a pokud má pes potíže, obraťte se na veterináře.",
     "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja i obrati se veterinaru ako pas ima tegobe.",
     "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
@@ -180,6 +193,7 @@
     "fr": "Les pépins de pomme ne sont pas pour les chiens. Un adulte retire le trognon et les pépins avant de donner un morceau de pomme à ton chien.",
     "es": "Las semillas de manzana no son para perros. Un adulto quita el corazón y las semillas antes de darle a tu perro un trozo de manzana.",
     "it": "I semi di mela non sono per i cani. Prima di dare un pezzo di mela al tuo cane, un adulto toglie il torsolo e i semi.",
+    "pt": "As sementes de maçã não são para cães. Um adulto tira o carolo e as sementes antes de o teu cão comer um pedaço de maçã.",
     "cs": "Jablečná jádra nejsou pro psy. Než pes dostane kousek jablka, dospělý z něj vyřízne ohryzek a jádra.",
     "hr": "Sjemenke jabuke nisu za pse. Odrasla osoba izvadi sjemenu kućicu i sjemenke prije nego što tvoj pas dobije komadić jabuke.",
     "sv": "Äppelkärnor är inte för hundar. En vuxen tar bort kärnhuset och kärnorna innan hunden får en bit äpple.",
@@ -196,6 +210,7 @@
         "fr": "Mon chien a mangé une pomme entière avec les pépins. Est-ce une urgence ?",
         "es": "Mi perro se ha comido una manzana entera con las semillas. ¿Es una urgencia?",
         "it": "Il mio cane ha mangiato una mela intera con i semi. È un’emergenza?",
+        "pt": "O meu cão comeu uma maçã inteira com as sementes. É uma emergência?",
         "cs": "Můj pes snědl celé jablko i s jádry. Je to pohotovost?",
         "hr": "Moj je pas pojeo cijelu jabuku sa sjemenkama. Je li to hitan slučaj?",
         "sv": "Min hund åt ett helt äpple med kärnor. Är det akut?",
@@ -210,6 +225,7 @@
         "fr": "Un petit nombre de pépins ne devrait pas lui faire de mal. Surveillez chez votre chien l’apparition de troubles digestifs ou de signes d’obstruction dus au trognon, et contactez un vétérinaire s’il a des problèmes.",
         "es": "Es poco probable que unas pocas semillas le hagan daño. Vigila si tu perro muestra signos de problemas digestivos o de obstrucción por el corazón y contacta con un veterinario si tiene algún problema.",
         "it": "È improbabile che pochi semi facciano male. Tieni d’occhio il tuo cane per eventuali segni di disturbi digestivi o di un’ostruzione causata dal torsolo e contatta il veterinario se ha dei problemi.",
+        "pt": "Um pequeno número de sementes dificilmente fará mal. Vigia se o teu cão mostra sinais de problemas digestivos ou de obstrução causada pelo carolo e contacta um veterinário se o teu cão tiver problemas.",
         "cs": "Malé množství jader pravděpodobně neublíží. Sledujte, zda se u psa neobjeví známky zažívacích potíží nebo ucpání způsobeného ohryzkem, a pokud má potíže, obraťte se na veterináře.",
         "hr": "Malo sjemenki vjerojatno neće naštetiti. Prati ima li pas znakove probavnih tegoba ili začepljenja zbog sjemene kućice i obrati se veterinaru ako pas ima tegobe.",
         "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
@@ -307,6 +323,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9cdb56261d94692c4cdeeb44ad2152ea55290556e88779daa82e7b16ac26bb99"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "010971028c0fc5b4e5c72fb00652d913e5f56d6f7388522d90c094ed3f4601e8"
     },
     "cs": {
       "status": "verified",
