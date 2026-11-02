@@ -253,7 +253,7 @@
     "nl": "Bieslook lijkt op gras, maar het is geen kattengras! Houd het uit de buurt van je poes. Kauwt ze erop? Vertel het meteen aan een volwassene.",
     "pl": "Szczypiorek wygląda jak trawa, ale to nie jest kocia trawka! Trzymaj go z dala od kotka i powiedz dorosłemu, jeśli kotek trochę go pogryzie.",
     "cs": "Pažitka vypadá jako tráva, ale kočičí tráva to není! Drž ji od kočičky dál, a když ji kočička okusuje, řekni to dospělému.",
-    "hr": "Vlasac izgleda kao trava, ali nije trava za mace! Drži ga podalje od mace i reci odrasloj osobi ako ga malo prožvače.",
+    "hr": "Vlasac izgleda kao trava, ali nije trava za mace! Drži ga podalje od mace i reci odrasloj osobi ako ga maca malo požvače.",
     "sv": "Gräslök ser ut som gräs, men det är inte kattgräs! Håll den borta från katten och säg till en vuxen om katten tuggar på den.",
     "da": "Purløg ligner græs, men det er ikke kattegræs! Hold det væk fra din kat, og sig det til en voksen hvis den tygger på det.",
     "fi": "Ruohosipuli näyttää ruoholta, mutta se ei ole kissanruohoa! Pidä se kaukana kisusta ja kerro aikuiselle, jos kisu pureskelee sitä.",
@@ -443,7 +443,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9340160470059005331b2452594abe1d35d0db35afbf16dfa1d3d84836ec8b91"
+      "verified_hash": "7b1894bbfaa06e009f18d31d5a747c1d7a484b54767d38b9795219c82e6b567c"
     },
     "sv": {
       "status": "verified",

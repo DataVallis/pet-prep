@@ -99,7 +99,7 @@
     "nl": "Een bananenschil kan maagklachten of in sommige gevallen een darmverstopping veroorzaken, dus haal hem altijd eraf. Twijfel je hoeveel banaan past bij het formaat, de leeftijd of de gezondheid van je hond, vraag het dan je dierenarts.",
     "pl": "Skórka banana może wywołać dolegliwości żołądkowe, a w niektórych przypadkach niedrożność jelit, więc zawsze ją usuwaj. Jeśli nie wiesz, ile banana możesz dać psu, biorąc pod uwagę jego wielkość, wiek i stan zdrowia, zapytaj weterynarza.",
     "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
-    "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako nisi siguran koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
+    "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako ne znaš koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
     "sv": "Ett bananskal kan ge obehag i magen eller i vissa fall tarmstopp, så ta alltid bort det. Om du är osäker på hur mycket banan som passar hundens storlek, ålder eller hälsa, fråga veterinären.",
     "da": "En bananskræl kan give ubehag i maven eller i nogle tilfælde tarmblokering, så fjern den altid. Spørg din dyrlæge hvis du er i tvivl om hvor meget banan der passer til din hunds størrelse, alder eller helbred.",
     "fi": "Banaanin kuori voi aiheuttaa vatsavaivoja tai joissakin tapauksissa suolitukoksen, joten poista se aina. Jos et ole varma, kuinka paljon banaania sopii koirasi koolle, iälle tai terveydentilalle, kysy eläinlääkäriltä.",
@@ -283,7 +283,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6589f6e92c86b79143a6a7dca058ac32c6f0c2d920affb12fd9f8d8f83ff6c91"
+      "verified_hash": "85618a1135d90b6183b88f4518271f74158ab2850e50c9d6899028339f8b1690"
     },
     "sv": {
       "status": "verified",

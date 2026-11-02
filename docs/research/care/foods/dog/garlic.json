@@ -64,7 +64,7 @@
     "nl": "Nee. Knoflook is giftig voor honden en ongeveer 3 tot 5 keer giftiger dan ui. Rauwe, gekookte, gedroogde knoflook en knoflookpoeder kunnen allemaal rode bloedcellen beschadigen en bloedarmoede veroorzaken. Verschijnselen komen vaak pas een paar dagen na het eten.",
     "pl": "Nie. Czosnek jest toksyczny dla psów i około 3–5 razy bardziej toksyczny niż cebula. Surowy, gotowany, suszony i sproszkowany czosnek może uszkadzać czerwone krwinki i wywołać anemię. Objawy często pojawiają się dopiero kilka dni po zjedzeniu.",
     "cs": "Ne. Česnek je pro psy jedovatý a je zhruba 3–5krát jedovatější než cibule. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Příznaky se často objeví až několik dní po snědení.",
-    "hr": "Ne. Češnjak je otrovan za pse i otprilike 3 do 5 puta otrovniji od luka. Češnjak u svakom obliku – sirov, termički obrađen, sušen ili u prahu – može oštetiti crvene krvne stanice i izazvati anemiju. Znakovi se često pojave tek nekoliko dana nakon jedenja.",
+    "hr": "Ne. Češnjak je otrovan za pse i otprilike 3 do 5 puta otrovniji od luka. Češnjak u svakom obliku – sirov, termički obrađen, sušen ili u prahu – može oštetiti crvene krvne stanice i izazvati anemiju. Znakovi se često pojave tek nekoliko dana nakon što pas pojede češnjak.",
     "sv": "Nej. Vitlök är giftig för hundar och ungefär 3 till 5 gånger giftigare än lök. Vitlök kan skada de röda blodkropparna och orsaka blodbrist (anemi), oavsett om den är rå, tillagad, torkad eller i pulverform. Symtomen visar sig ofta först några dagar efter att hunden ätit.",
     "da": "Nej. Hvidløg er giftigt for hunde og omtrent 3 til 5 gange mere giftigt end løg. Råt, tilberedt, tørret og pulveriseret hvidløg kan alt sammen skade de røde blodlegemer og give blodmangel (anæmi). Symptomerne viser sig ofte først nogle dage efter at hunden har spist det.",
     "fi": "Ei saa. Valkosipuli on koirille myrkyllistä, ja se on noin 3–5 kertaa myrkyllisempää kuin sipuli. Raaka, kypsennetty, kuivattu ja jauhettu valkosipuli voivat kaikki vaurioittaa punasoluja ja aiheuttaa anemiaa. Oireet ilmaantuvat usein vasta muutaman päivän kuluttua syömisestä.",
@@ -316,7 +316,7 @@
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
-        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon jedenja.",
+        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što pas pojede češnjak.",
         "sv": "Symtomen kan börja inom 24 timmar men dröjer oftare några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit.",
         "da": "Symptomerne kan begynde inden for 24 timer, men viser sig oftere først efter nogle dage; tegn på blodmangel udvikler sig typisk flere dage efter at hunden har spist det.",
         "fi": "Oireet voivat alkaa 24 tunnin kuluessa, mutta useammin niiden ilmaantuminen kestää muutaman päivän; anemian oireet kehittyvät tyypillisesti useita päiviä syömisen jälkeen.",
@@ -467,7 +467,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d6b71b165723807a447eae7a7873d4bc7f63236451023978ea96917e53a2c917"
+      "verified_hash": "bfc9dc68e02b9094616307f64f9bc0ce629c15b01ed3f2eb27addca60bc1c094"
     },
     "sv": {
       "status": "verified",

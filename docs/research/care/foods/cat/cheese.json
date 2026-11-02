@@ -152,7 +152,7 @@
       "Povraćanje",
       "Proljev",
       "Tromost ili manjak energije",
-      "Vjetrovi ili nadutost"
+      "Nadutost ili plinovi"
     ],
     "sv": [
       "Kräkningar",
@@ -190,7 +190,7 @@
     "nl": "Heeft je kat een beetje kaas gegeten? Dan hoef je niet meteen naar de dierenarts. Houd je kat goed in de gaten. Wordt ze ziek of gedraagt ze zich anders, bel dan je dierenarts en vertel hoeveel kaas je kat heeft gegeten.",
     "pl": "Jeśli twój kot zjadł odrobinę sera, nie musisz pędzić do weterynarza. Obserwuj go. Jeśli źle się poczuje lub zacznie się zachowywać inaczej, zadzwoń do weterynarza i powiedz, ile sera zjadł.",
     "cs": "Pokud kočka snědla trochu sýra, není třeba spěchat k veterináři. Sledujte ji. Pokud se jí udělá špatně nebo se začne chovat jinak, zavolejte veterináři a řekněte mu, kolik sýra kočka snědla.",
-    "hr": "Ako je tvoja mačka pojela malo sira, ne moraš žuriti veterinaru. Pripazi na nju. Ako joj pozli ili se počne ponašati drukčije, nazovi veterinara i reci koliko je sira pojela.",
+    "hr": "Ako je tvoja mačka pojela malo sira, ne moraš žuriti k veterinaru. Pripazi na nju. Ako joj pozli ili se počne ponašati drukčije, nazovi veterinara i reci koliko je sira pojela.",
     "sv": "Om katten har ätit lite ost behöver du inte skynda till veterinären. Håll ett öga på katten. Om den börjar må dåligt eller beter sig annorlunda, ring veterinären och berätta hur mycket ost katten åt.",
     "da": "Hvis din kat har spist lidt ost, er der ingen grund til at skynde sig til dyrlægen. Hold øje med den. Hvis den bliver utilpas eller opfører sig anderledes, så ring til din dyrlæge og fortæl hvor meget ost din kat har spist.",
     "fi": "Jos kissasi söi vähän juustoa, eläinlääkäriin ei tarvitse kiirehtiä. Pidä kissaa silmällä. Jos se tulee huonovointiseksi tai käyttäytyy tavallisesta poikkeavasti, soita eläinlääkärille ja kerro, kuinka paljon juustoa kissasi söi.",
@@ -423,7 +423,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bcc9fe15b727a0ed5809019e323a82c63a0d0162fbc5d117d3f3502e7a3516e8"
+      "verified_hash": "1937c0b751c8390630f572487863ee56df4fea1e17106e0bcc140ff3ed4ad555"
     },
     "sv": {
       "status": "verified",

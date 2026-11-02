@@ -81,7 +81,7 @@
     "nl": "Gekookte eieren leveren eiwitten, vitamines en gezonde vetten, maar ze zijn niet nodig voor een uitgebalanceerd voer. Dierenartsen raden aan eieren altijd gaar te maken voordat je ze aan een hond geeft. Eierschalen hebben scherpe randen die de keel van een hond kunnen verwonden, en net als elk snoepje leveren eieren extra calorieën.",
     "pl": "Gotowane jajka dostarczają białka, witamin i zdrowych tłuszczów, ale nie są niezbędne w zbilansowanej diecie. Weterynarze radzą zawsze gotować jajka przed podaniem ich psu. Skorupki mają ostre krawędzie, które mogą zranić gardło psa, a jak każdy smakołyk jajka dostarczają kalorii.",
     "cs": "Tepelně upravená vejce dodávají bílkoviny, vitaminy a zdravé tuky, ale pro vyváženou stravu nejsou nezbytná. Veterináři doporučují vejce před podáním psovi vždy tepelně upravit. Vaječné skořápky mají ostré hrany, které mohou psovi poranit krk, a jako každý pamlsek přidávají vejce kalorie.",
-    "hr": "Termički obrađena jaja daju bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti psu grlo, a kao i svaka poslastica, jaja donose kalorije.",
+    "hr": "Termički obrađena jaja sadrže bjelančevine, vitamine i zdrave masti, ali nisu nužna za uravnoteženu prehranu. Veterinari savjetuju da jaja uvijek termički obradiš prije nego što ih daš psu. Ljuske jaja imaju oštre rubove koji mogu ozlijediti grlo psa, a kao i svaka poslastica, jaja dodaju kalorije.",
     "sv": "Tillagade ägg ger protein, vitaminer och nyttiga fetter, men de är inte nödvändiga i en balanserad kost. Veterinärer råder att alltid tillaga ägg innan hunden får dem. Äggskal har vassa kanter som kan skada hundens hals, och som alla godbitar ger ägg extra kalorier.",
     "da": "Tilberedte æg giver protein, vitaminer og sunde fedtstoffer, men de er ikke nødvendige i en afbalanceret kost. Dyrlæger anbefaler altid at tilberede æg, før de gives til en hund. Æggeskaller har skarpe kanter, som kan skade hundens hals, og som alle godbidder giver æg ekstra kalorier.",
     "fi": "Kypsennetyistä kananmunista saa proteiinia, vitamiineja ja terveellisiä rasvoja, mutta ne eivät ole välttämättömiä tasapainoisessa ruokavaliossa. Eläinlääkärit neuvovat kypsentämään kananmunat aina, ennen kuin niitä annetaan koiralle. Munankuorissa on teräviä reunoja, jotka voivat vahingoittaa koiran kurkkua, ja minkä tahansa herkun tavoin kananmunat lisäävät kaloreita.",
@@ -319,7 +319,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "832b4ee660f8ae7c482ac0125f038336d84612ce912f65c8fae27f020d2c3f8b"
+      "verified_hash": "6ee15f0de6f07d0ba1a76a29e82c1d0e3b6e3b965f8948ee3a3cce989ad8e3c2"
     },
     "sv": {
       "status": "verified",

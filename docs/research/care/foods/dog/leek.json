@@ -64,7 +64,7 @@
     "nl": "Nee. Prei hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Alle delen van de plant zijn schadelijk, ook gekookt of gedroogd. Prei kan rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen.",
     "pl": "Nie. Por należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Szkodliwe są wszystkie części rośliny, także po ugotowaniu lub wysuszeniu. Może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
     "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatý. Škodlivé jsou všechny části rostliny, i tepelně upravené nebo sušené. Může poškodit červené krvinky a příznaky se často objeví až po několika dnech.",
-    "hr": "Ne. Poriluk pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Štetni su svi dijelovi biljke, čak i termički obrađeni ili sušeni. Može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
+    "hr": "Ne. Poriluk pripada rodu Allium, kao luk i češnjak, i otrovan je za pse. Štetni su svi dijelovi biljke, čak i kad su termički obrađeni ili sušeni. Može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
     "sv": "Nej. Purjolök är en lökväxt, precis som lök och vitlök, och den är giftig för hundar. Alla delar av växten är skadliga, även tillagade eller torkade. Den kan skada de röda blodkropparna, och symtomen dröjer ofta några dagar.",
     "da": "Nej. Porre er en løgplante ligesom løg og hvidløg, og den er giftig for hunde. Alle dele af planten er skadelige, også når de er tilberedt eller tørret. Porre kan skade de røde blodlegemer, og symptomerne viser sig ofte først efter et par dage.",
     "fi": "Ei saa. Purjo on sipulikasvi kuten sipuli ja valkosipuli, ja se on koiralle myrkyllinen. Kasvin kaikki osat ovat haitallisia, myös kypsennettyinä tai kuivattuina. Purjo voi vaurioittaa punasoluja, ja oireet ilmaantuvat usein vasta muutaman päivän kuluttua.",
@@ -422,7 +422,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ac0a14acfedc870faec255a70ddf1434ba107cedd32492634c1d16dc8ad226a"
+      "verified_hash": "6571fb5b3fe4b8a927b43c7b2ad757f08edbd0111321af27e0c22d7669f565d2"
     },
     "sv": {
       "status": "verified",

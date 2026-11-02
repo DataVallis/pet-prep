@@ -119,7 +119,7 @@
       "Přibírání na váze při častém krmení"
     ],
     "hr": [
-      "Debljanje ako se daje često"
+      "Debljanje ako se često daje"
     ],
     "sv": [
       "Viktökning om den ges ofta"
@@ -330,7 +330,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4b2d099b4c241735004ba90cf9f9d6f9de600c983de0d26ba95e72bda15686d9"
+      "verified_hash": "63b6df266dbf6a60a25bc32a1831163fb168f5b9f3c7a0b401a057fa4dbbd372"
     },
     "sv": {
       "status": "verified",

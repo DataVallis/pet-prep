@@ -81,7 +81,7 @@
     "nl": "Veel honden kunnen lactose moeilijk verteren, wat winderigheid, diarree of braken kan veroorzaken. Griekse yoghurt bevat minder lactose en is daarom meestal de betere keuze. Sommige zoetstoffen, vooral xylitol, zijn giftig voor honden, en te veel zuivelvet kan de maag van streek maken of alvleesklierontsteking veroorzaken.",
     "pl": "Wiele psów ma kłopot z trawieniem laktozy, co może powodować wzdęcia, biegunkę lub wymioty. Jogurt typu greckiego ma mniej laktozy, więc zwykle jest lepszym wyborem. Niektóre słodziki, zwłaszcza ksylitol, są toksyczne dla psów, a zbyt dużo tłuszczu mlecznego może podrażnić żołądek lub wywołać zapalenie trzustki.",
     "cs": "Mnoho psů špatně tráví laktózu, což může způsobit plynatost, průjem nebo zvracení. Jogurt řeckého typu má méně laktózy, takže je obvykle lepší volbou. Některá sladidla, zejména xylitol, jsou pro psy jedovatá a příliš mnoho mléčného tuku může podráždit žaludek nebo způsobit zánět slinivky břišní.",
-    "hr": "Mnogi psi teško probavljaju laktozu, što može izazvati vjetrove, proljev ili povraćanje. Grčki jogurt ima manje laktoze, pa je obično bolji izbor. Neka sladila, osobito ksilitol, otrovna su za pse, a previše mliječne masti može izazvati probavne tegobe ili upalu gušterače.",
+    "hr": "Mnogi psi teško probavljaju laktozu, što može izazvati nadutost, proljev ili povraćanje. Grčki jogurt ima manje laktoze, pa je obično bolji izbor. Neka sladila, osobito ksilitol, otrovna su za pse, a previše mliječne masti može izazvati probavne tegobe ili upalu gušterače.",
     "sv": "Många hundar har svårt att bryta ner laktos, vilket kan ge gaser, diarré eller kräkningar. Grekisk yoghurt innehåller mindre laktos, så den är oftast det bättre valet. Vissa sötningsmedel, särskilt xylitol, är giftiga för hundar, och för mycket mjölkfett kan ge magbesvär eller orsaka bukspottkörtelinflammation (pankreatit).",
     "da": "Mange hunde har svært ved at fordøje laktose, hvilket kan give luft i maven, diarré eller opkast. Græsk yoghurt indeholder mindre laktose og er derfor som regel det bedste valg. Nogle sødemidler, især xylitol, er giftige for hunde, og for meget mælkefedt kan give maveproblemer eller betændelse i bugspytkirtlen.",
     "fi": "Monen koiran on vaikea sulattaa laktoosia, mikä voi aiheuttaa ilmavaivoja, ripulia tai oksentelua. Kreikkalaistyyppisessä jogurtissa on vähemmän laktoosia, joten se on yleensä parempi valinta. Jotkin makeutusaineet, etenkin ksylitoli, ovat koirille myrkyllisiä, ja liika maitorasva voi aiheuttaa vatsavaivoja tai haimatulehduksen.",
@@ -99,7 +99,7 @@
     "nl": "Begin met een kleine hoeveelheid en let op winderigheid, diarree of braken; stop als die optreden. Zat er xylitol in de yoghurt? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren.",
     "pl": "Zacznij od małej ilości i obserwuj, czy nie pojawiają się wzdęcia, biegunka lub wymioty; jeśli wystąpią, przestań go podawać. Jeśli jogurt zawierał ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt.",
     "cs": "Začněte malým množstvím a sledujte, zda se neobjeví plynatost, průjem nebo zvracení; pokud ano, přestaňte jogurt dávat. Pokud jogurt obsahoval xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
-    "hr": "Počni s malom količinom i prati pojavljuju li se vjetrovi, proljev ili povraćanje; ako se pojave, prestani. Ako je jogurt sadržavao ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
+    "hr": "Počni s malom količinom i prati pojavljuju li se nadutost, proljev ili povraćanje; ako se pojave, prestani. Ako je jogurt sadržavao ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
     "sv": "Börja med en liten mängd och håll utkik efter gaser, diarré eller kräkningar; sluta om de dyker upp. Om yoghurten innehöll xylitol, kontakta veterinären eller en giftrådgivning för djur direkt.",
     "da": "Start med en lille mængde, og hold øje med luft i maven, diarré eller opkast; stop hvis det opstår. Hvis yoghurten indeholdt xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr.",
     "fi": "Aloita pienellä määrällä ja seuraa, tuleeko ilmavaivoja, ripulia tai oksentelua; lopeta, jos niitä ilmenee. Jos jogurtissa oli ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
@@ -328,7 +328,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "72e2166d22a3441eba300cc5e93934060e44d393fc5f7d1e217eb3a5b6c97079"
+      "verified_hash": "ddb2a49ea4db96baa09f01def67962cf14db1278ec918da615628d0a74fbb775"
     },
     "sv": {
       "status": "verified",

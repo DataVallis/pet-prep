@@ -220,7 +220,7 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als er maar een paar rozijnen zijn gegeten. Schrijf op hoeveel er ongeveer zijn gegeten. Wacht niet op verschijnselen: hoe eerder de behandeling begint, hoe beter.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli pies zjadł tylko kilka rodzynek. Zanotuj, ile mniej więcej zjadł. Nie czekaj na objawy: im szybciej zacznie się leczenie, tym lepiej.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když pes snědl jen pár rozinek. Poznamenejte si, kolik jich zhruba snědl. Nečekejte, až se objeví příznaky: čím dříve léčba začne, tím lépe.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što prije liječenje počne, to bolje.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što se prije počne s liječenjem, to bolje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: Jo før behandlingen starter, jo bedre.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koira olisi syönyt vain muutaman rusinan. Kirjaa ylös, suunnilleen montako rusinaa koira söi. Älä odota oireita: mitä aikaisemmin hoito alkaa, sitä parempi.",
@@ -429,7 +429,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "698237b0b4e9f7a1ef2d02cdb21bf75e77e20408f6a0c38f70e4d6ddee6f939a"
+      "verified_hash": "36defa3b6c1b4dd762f2eed45a89cb556b44032bf7186487747c63e86d6b6d3f"
     },
     "sv": {
       "status": "verified",

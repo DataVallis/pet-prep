@@ -275,7 +275,7 @@
         "nl": "Dat is een enzym in sommige rauwe vis dat thiamine (vitamine B1) afbreekt. Door koken wordt het vernietigd.",
         "pl": "To enzym występujący w niektórych surowych rybach, który niszczy tiaminę (witaminę B1). Gotowanie go niszczy.",
         "cs": "Je to enzym, který se vyskytuje v některých syrových rybách a ničí thiamin (vitamin B1). Tepelnou úpravou se zničí.",
-        "hr": "To je enzim koji se nalazi u nekim sirovim ribama i uništava tiamin (vitamin B1). Termička obrada ga uništava.",
+        "hr": "To je enzim koji se nalazi u nekim vrstama sirove ribe i uništava tiamin (vitamin B1). Termička obrada ga uništava.",
         "sv": "Det är ett enzym som finns i viss rå fisk och som bryter ner tiamin (B1-vitamin). Det förstörs när fisken tillagas.",
         "da": "Det er et enzym der findes i noget rå fisk og ødelægger thiamin (B1-vitamin). Tilberedning ødelægger enzymet.",
         "fi": "Se on entsyymi, jota on joissakin raaoissa kaloissa ja joka tuhoaa tiamiinia (B1-vitamiinia). Kypsentäminen tuhoaa sen.",
@@ -399,7 +399,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8ac80e59d73e51051bb8a37af54c0b561a686be8d0aef0e23892c798d1b9a3ec"
+      "verified_hash": "68dad530b9543bd61edf066f2536e8c25e1c74a7c585748dc90456477ffbcff0"
     },
     "sv": {
       "status": "verified",

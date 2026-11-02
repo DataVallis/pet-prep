@@ -152,7 +152,7 @@
       "Povraćanje",
       "Proljev",
       "Želučane tegobe",
-      "Djeluje kao da joj nije dobro"
+      "Čini se da joj nije dobro"
     ],
     "sv": [
       "Kräkningar",
@@ -377,7 +377,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8669ed2dad6ee9077a72e6faae913e83ca816d97265770ba41c0014c370b2d0b"
+      "verified_hash": "bf6526fb62e963864d0a7b91cb55bc90798fd83be873ffec1e9eaa0a2f40a30d"
     },
     "sv": {
       "status": "verified",

@@ -64,7 +64,7 @@
     "nl": "Niet aan te raden. Een beetje pruimenvruchtvlees zonder pit is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
     "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek.",
     "cs": "Nedoporučuje se. Trocha švestkové dužiny bez pecky není hlavní problém, švestkové pecky jsou ale pro psy jedovaté a mohou způsobit dušení nebo ucpání střev. Stopky, listy a semena švestky obsahují kyanid.",
-    "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse, a mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid.",
+    "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse i mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid.",
     "sv": "Nej, det rekommenderas inte. Lite plommonkött utan kärna är inte det stora problemet, men plommonkärnor är giftiga för hundar och kan orsaka kvävning eller tarmstopp. Plommonträdets stjälkar, blad och frön innehåller cyanid.",
     "da": "Det frarådes. Lidt blommekød uden sten er ikke den største bekymring, men blommesten er giftige for hunde og kan sætte sig fast i halsen eller give tarmblokering. Blommetræets stilke, blade og kerner indeholder cyanid.",
     "fi": "Ei suositella. Vähäinen määrä luumun hedelmälihaa ilman kiveä ei ole suurin huoli, mutta luumun kivet ovat koiralle myrkyllisiä ja voivat aiheuttaa tukehtumisen tai suolitukoksen. Luumukasvin varsissa, lehdissä ja siemenissä on syanidia.",
@@ -368,7 +368,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1703a40773d745321239702f158eaaf3bae91a8138f1799fddf8afbdda7a6872"
+      "verified_hash": "7885aabf22e96d6dd6faaa08233021f9d8317b972dce4f920ddc0e86815a432e"
     },
     "sv": {
       "status": "verified",

@@ -81,7 +81,7 @@
     "nl": "Walnoten bevatten veel vet, wat braken, diarree en mogelijk alvleesklierontsteking kan veroorzaken. Op de dop of de kern kan schimmel groeien die gifstoffen maakt, en die kunnen trillingen, toevallen en braken veroorzaken. Zwarte walnoten zijn erg giftig voor honden en kunnen juglon bevatten.",
     "pl": "Orzechy włoskie mają dużo tłuszczu, który może wywołać wymioty, biegunkę, a być może także zapalenie trzustki. Na łupinie lub jądrze może wyrosnąć pleśń wytwarzająca toksyny, które mogą wywołać drżenie mięśni, drgawki i wymioty. Orzechy czarne są bardzo toksyczne dla psów i mogą zawierać juglon.",
     "cs": "Vlašské ořechy mají hodně tuku, který může způsobit zvracení, průjem a případně zánět slinivky břišní. Na skořápce nebo jádru může růst plíseň a produkovat toxiny, které mohou způsobit třes, záchvaty a zvracení. Ořechy ořešáku černého jsou pro psy velmi jedovaté a mohou obsahovat juglon.",
-    "hr": "Orasi imaju puno masti, što može izazvati povraćanje, proljev i moguće upalu gušterače. Na ljusci ili jezgri može narasti plijesan koja stvara otrove, a oni mogu izazvati drhtanje mišića, napadaje i povraćanje. Crni orasi vrlo su otrovni za pse i mogu sadržavati juglon.",
+    "hr": "Orasi imaju puno masti, što može izazvati povraćanje, proljev, a možda i upalu gušterače. Na ljusci ili jezgri može narasti plijesan koja stvara otrove, a oni mogu izazvati drhtanje mišića, napadaje i povraćanje. Crni orasi vrlo su otrovni za pse i mogu sadržavati juglon.",
     "sv": "Valnötter innehåller mycket fett, som kan orsaka kräkningar, diarré och kanske bukspottkörtelinflammation (pankreatit). Mögel kan växa på skalet eller kärnan och bilda gifter som kan orsaka darrningar, kramper och kräkningar. Svarta valnötter är mycket giftiga för hundar och kan innehålla juglon.",
     "da": "Valnødder indeholder meget fedt, som kan give opkast, diarré og muligvis betændelse i bugspytkirtlen. Der kan gro skimmel på skallen eller kernen, og skimmelen kan danne giftstoffer der kan give rysten, kramper og opkast. Sorte valnødder er meget giftige for hunde og kan indeholde juglon.",
     "fi": "Saksanpähkinöissä on paljon rasvaa, joka voi aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kuoreen tai ytimeen voi kasvaa hometta, joka tuottaa myrkkyjä; ne voivat aiheuttaa vapinaa, kouristuksia ja oksentelua. Mustapähkinät ovat koirille erittäin myrkyllisiä, ja niissä voi olla juglonia.",
@@ -399,7 +399,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a0be7c6b0d6d70bd154dd8474a07dc055816381b14fbb0f55266d0b50a860e00"
+      "verified_hash": "109fa2722392ba0a0637b802e2dfa5b07f1302a232bd5fc781bcb124726c9fe6"
     },
     "sv": {
       "status": "verified",

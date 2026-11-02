@@ -208,7 +208,7 @@
     "nl": "Bieslook lijkt op klein groen gras, maar het hoort bij de uienfamilie en is niet voor honden. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Szczypiorek wygląda jak zielona trawka, ale należy do rodziny cebuli i nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
     "cs": "Pažitka vypadá jako malá zelená tráva, ale patří do stejné rodiny jako cibule, takže není pro psy. Když ji pes sní, řekni to dospělému.",
-    "hr": "Vlasac izgleda kao mala zelena trava, ali je u obitelji luka i nije za pse. Ako ga pas pojede, reci odrasloj osobi.",
+    "hr": "Vlasac izgleda kao sitna zelena trava, ali pripada obitelji luka i nije za pse. Ako ga pas pojede, reci odrasloj osobi.",
     "sv": "Gräslök ser ut som litet grönt gräs, men den hör till lökfamiljen och är inte för hundar. Säg till en vuxen om hunden äter av den.",
     "da": "Purløg ligner små grønne græsstrå, men det hører til løgfamilien og er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
     "fi": "Ruohosipuli näyttää pieneltä vihreältä ruoholta, mutta se on sipulin sukua eikä sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
@@ -280,7 +280,7 @@
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
-        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon jedenja.",
+        "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što pas pojede vlasac.",
         "sv": "Symtomen kan börja inom 24 timmar men tar oftare några dagar att visa sig; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit.",
         "da": "Symptomerne kan begynde inden for 24 timer, men viser sig oftere først efter nogle dage; tegn på blodmangel udvikler sig typisk flere dage efter at hunden har spist det.",
         "fi": "Oireet voivat alkaa 24 tunnin kuluessa, mutta useammin niiden ilmaantuminen kestää muutaman päivän; anemian oireet kehittyvät tyypillisesti useita päiviä syömisen jälkeen.",
@@ -426,7 +426,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d94703a38eef8d42bf106680d4b25a52970e94a82f07427f29a834e560db9d43"
+      "verified_hash": "074b698f7e8c26e7c4a299cbd387db5f081384655deac0fa3e2793573cae3b1b"
     },
     "sv": {
       "status": "verified",

@@ -81,7 +81,7 @@
     "nl": "Gist blijft werken in de warme, vochtige maag: het deeg zet uit en er hoopt zich gas op, wat de darmen kan verstoppen of, minder vaak, de maag kan laten draaien (maagtorsie). Tegelijk maakt de gist alcohol, die snel in het bloed wordt opgenomen. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden.",
     "pl": "Drożdże pracują dalej w ciepłym, wilgotnym żołądku: ciasto się powiększa i gromadzą się gazy, co może zatkać przewód pokarmowy lub, rzadziej, doprowadzić do skrętu żołądka. Jednocześnie drożdże wytwarzają alkohol, który szybko wchłania się do krwi. Najczęściej dotyczy to psów, bo jedzą wszystko, co znajdą.",
     "cs": "Kvasinky v teplém, vlhkém žaludku dál pracují: těsto se zvětšuje a hromadí se plyn, který může ucpat trávicí trakt nebo vzácněji způsobit otočení žaludku (torzi žaludku). Kvasinky zároveň produkují alkohol, který se rychle vstřebává do krve. Nejčastěji to postihuje psy, protože sežerou, co najdou.",
-    "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti probavni sustav ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu.",
+    "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti crijeva ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu.",
     "sv": "Jästen fortsätter att arbeta i den varma, fuktiga magen: degen sväller och gas samlas, vilket kan orsaka stopp i mag-tarmkanalen eller, mer sällan, magomvridning. Samtidigt bildar jästen alkohol, som snabbt tas upp i blodet. Hundar drabbas oftast eftersom de äter vad de än hittar.",
     "da": "Gæren arbejder videre i den varme, fugtige mave: Dejen udvider sig, og der ophobes gas, som kan blokere tarmen eller, sjældnere, få mavesækken til at dreje (mavedrejning). Samtidig danner gæren alkohol, som hurtigt optages i blodet. Hunde rammes oftest, fordi de spiser hvad som helst de finder.",
     "fi": "Hiiva jatkaa toimintaansa lämpimässä ja kosteassa mahalaukussa: taikina laajenee ja kaasua kertyy, mikä voi tukkia ruoansulatuskanavan tai harvemmin aiheuttaa mahalaukun kiertymän. Samalla hiiva tuottaa alkoholia, joka imeytyy nopeasti vereen. Koirilla tätä esiintyy useimmin, koska ne syövät kaiken, mitä löytävät.",
@@ -208,7 +208,7 @@
     "nl": "Brooddeeg dat nog rijst, is niet voor honden. Het blijft groeien in hun buikje. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Ciasto na chleb, które jeszcze rośnie, nie jest dla psów. Rośnie dalej w ich brzuszku. Powiedz dorosłemu, jeśli twój pies trochę go zje.",
     "cs": "Těsto na chleba, které ještě kyne, není pro psy. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému.",
-    "hr": "Tijesto za kruh koje još raste nije za pse. U njihovu trbuhu nastavi rasti. Reci odrasloj osobi ako ga tvoj pas pojede.",
+    "hr": "Tijesto za kruh koje još raste nije za pse. U trbuhu nastavlja rasti. Reci odrasloj osobi ako ga tvoj pas pojede.",
     "sv": "Bröddeg som fortfarande jäser är inte för hundar. Den fortsätter att växa i magen. Säg till en vuxen om din hund äter deg.",
     "da": "Brøddej der stadig hæver, er ikke til hunde. Den bliver ved med at vokse i maven. Sig det til en voksen hvis din hund spiser noget.",
     "fi": "Kohoava leipätaikina ei sovi koirille. Se jatkaa kasvamista koiran mahassa. Kerro aikuiselle, jos koirasi syö sitä.",
@@ -394,7 +394,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c9b412aac08afb944f29801c8ec06707dae989f497002b391a52c9df2e4d33a6"
+      "verified_hash": "676a4dfa03770d8710e970d34aaa8e9c6d70e12572b3a0dc46ff9ed50c5ca49f"
     },
     "sv": {
       "status": "verified",

@@ -64,7 +64,7 @@
     "nl": "Niet aan te raden. Een paar chips veroorzaken waarschijnlijk geen zoutvergiftiging, maar chips zijn zout en te veel zout eten is niet goed voor honden, vooral niet voor honden met hartproblemen. Chips met ui- of knoflooksmaak brengen extra risico, want ui en knoflook zijn giftig voor honden.",
     "pl": "Nie zaleca się. Kilka chipsów ziemniaczanych raczej nie spowoduje zatrucia solą, ale chipsy są słone, a nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z problemami z sercem. Chipsy o smaku cebulowym lub czosnkowym to dodatkowe ryzyko, bo cebula i czosnek są toksyczne dla psów.",
     "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté.",
-    "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka donosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
+    "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka nosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
     "sv": "Rekommenderas inte. Några få chips ger knappast saltförgiftning, men chips är salta och för mycket salt mat är inte bra för hundar, särskilt inte för hundar med hjärtproblem. Chips med lök- eller vitlökssmak ger en extra risk, eftersom lök och vitlök är giftiga för hundar.",
     "da": "Det frarådes. Nogle få chips giver næppe saltforgiftning, men chips er salte, og for meget salt mad er ikke godt for hunde, især ikke for hunde med hjerteproblemer. Chips med løg- eller hvidløgssmag giver en ekstra risiko, fordi løg og hvidløg er giftige for hunde.",
     "fi": "Ei suositella. Muutama perunalastu tuskin aiheuttaa suolamyrkytystä, mutta lastut ovat suolaisia, eikä suolaisen ruoan liiallinen syöminen ole hyväksi koirille, etenkään niille, joilla on sydänongelmia. Sipulin- tai valkosipulinmakuiset lastut lisäävät riskiä, koska sipuli ja valkosipuli ovat koirille myrkyllisiä.",
@@ -390,7 +390,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e996074580ba71aedd19ebe6e156b59b3d53b590067c00a47b92b9c23222584b"
+      "verified_hash": "52ca1df2adbea2c011441340c438064d765170b48f47608e7cc665c3d302d2d3"
     },
     "sv": {
       "status": "verified",

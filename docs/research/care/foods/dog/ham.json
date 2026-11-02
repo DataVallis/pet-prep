@@ -64,7 +64,7 @@
     "nl": "Niet aan te raden. Ham is niet giftig voor honden, maar bevat veel vet en natrium. Ham uit de winkel bevat veel zout, en te veel vet kan tot alvleesklierontsteking en andere spijsverteringsproblemen leiden. Een gezonder hondensnoepje is de betere keuze.",
     "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk.",
     "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
-    "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Kupovna šunka sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
+    "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Šunka iz trgovine sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
     "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
     "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
     "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta.",
@@ -259,7 +259,7 @@
         "nl": "Ham bevat meer vet dan veel andere vleessoorten, en ham uit de winkel bevat erg veel natrium.",
         "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu.",
         "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
-        "hr": "Ima više masti od mnogih vrsta mesa, a kupovna šunka sadrži jako mnogo natrija.",
+        "hr": "Ima više masti od mnogih vrsta mesa, a šunka iz trgovine sadrži jako mnogo natrija.",
         "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium.",
         "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium.",
         "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia.",
@@ -386,7 +386,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "91746e03700ddfec4bf80c2ec0411eef5c0747f47ef3bd2072b0e01e7589f8a7"
+      "verified_hash": "b2dc3ccdbfb2650f94cddf42c01db2885d2dd32d741379fbc9cb56df9fa429fe"
     },
     "sv": {
       "status": "verified",

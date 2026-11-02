@@ -64,7 +64,7 @@
     "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stelen, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stelen kauwen.",
     "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli.",
     "cs": "Nedoporučuje se. Meruňka je uváděna jako rostlina jedovatá pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy nenechte psa kousat meruňkové pecky, listy ani stonky.",
-    "hr": "Ne preporučuje se. Marelica je kao biljka navedena kao otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
+    "hr": "Ne preporučuje se. Biljka marelice ubraja se među otrovne za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
     "sv": "Rekommenderas inte. Aprikosträdet anges som giftigt för hundar: skaft, blad och kärnor innehåller cyanid, särskilt när de vissnar. Låt aldrig hunden tugga på aprikoskärnor, blad eller skaft.",
     "da": "Det frarådes. Abrikosplanten er opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke.",
     "fi": "Ei suositella. Aprikoosikasvi on luokiteltu koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia, etenkin kuihtuessaan. Älä koskaan anna koirasi pureskella aprikoosin kiviä, lehtiä tai varsia.",
@@ -81,7 +81,7 @@
     "nl": "Stelen, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant als giftig voor honden staat vermeld, beschouwen wij abrikozen niet als een veilig snoepje.",
     "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk.",
     "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože je rostlina uváděna jako jedovatá pro psy, nepovažujeme meruňky za bezpečný pamlsek.",
-    "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da je biljka navedena kao otrovna za pse, marelice ne smatramo sigurnom poslasticom.",
+    "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da se biljka ubraja među otrovne za pse, marelice ne smatramo sigurnom poslasticom.",
     "sv": "Aprikosträdets skaft, blad och kärnor innehåller cyanogena glykosider, som frigör cyanid. Cyanid minskar kroppens förmåga att använda syre. Eftersom trädet anges som giftigt för hundar klassar vi inte aprikoser som en säker godbit.",
     "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten er opført som giftig for hunde, vurderer vi ikke abrikoser som en sikker godbid.",
     "fi": "Aprikoosin varret, lehdet ja siemenet sisältävät syanogeenisia glykosideja, joista vapautuu syanidia. Syanidi heikentää elimistön kykyä käyttää happea. Koska kasvi on luokiteltu koirille myrkylliseksi, emme pidä aprikoosia turvallisena herkkuna.",
@@ -338,7 +338,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "660bb03002b1ef8671e6297735cfba88a9f432db00114106f84459b4312b2141"
+      "verified_hash": "2d36a5f5e3e4f45be4de09b628d7efaf3157854726c5ca3079da6148b26996fd"
     },
     "sv": {
       "status": "verified",

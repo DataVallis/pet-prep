@@ -81,7 +81,7 @@
     "nl": "Bramen bevatten van nature sporen van xylitol, net als ander fruit en andere groenten. Zoals bij elk voedingsmiddel kunnen te veel bramen de maag van streek maken, en snoepjes horen maar een klein deel van het eten van een hond te zijn.",
     "pl": "Jeżyny, podobnie jak inne owoce i warzywa, zawierają śladowe ilości naturalnie występującego ksylitolu. Jak w przypadku każdego jedzenia, zbyt dużo jeżyn może wywołać rozstrój żołądka, a smakołyki powinny stanowić tylko niewielką część diety psa.",
     "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy.",
-    "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može uznemiriti želudac, a poslastice trebaju činiti samo mali dio pseće prehrane.",
+    "hr": "Kupine prirodno sadrže ksilitol u tragovima, kao i drugo voće i povrće. Kao i kod svake hrane, previše kupina može izazvati probavne tegobe, a poslastice trebaju činiti samo mali dio pseće prehrane.",
     "sv": "Björnbär innehåller naturligt xylitol i spårmängder, liksom andra frukter och grönsaker. Som med all mat kan för många björnbär ge orolig mage, och godbitar ska bara vara en liten del av hundens kost.",
     "da": "Brombær indeholder naturligt xylitol i meget små mængder, ligesom andre frugter og grøntsager. Som med al mad kan for mange brombær give dårlig mave, og godbidder bør kun udgøre en lille del af hundens kost.",
     "fi": "Karhunvatukoissa on luonnostaan hivenmääriä ksylitolia, kuten muissakin hedelmissä ja vihanneksissa. Kuten minkä tahansa ruoan, myös karhunvatukoiden liiallinen syöminen voi aiheuttaa vatsavaivoja, ja herkkujen pitäisi olla vain pieni osa koiran ruokavaliota.",
@@ -99,7 +99,7 @@
     "nl": "Vertoont je hond een reactie na het eten van bramen? Bel dan meteen je dierenarts.",
     "pl": "Jeśli po zjedzeniu jeżyn u twojego psa wystąpi jakakolwiek reakcja, od razu zadzwoń do weterynarza.",
     "cs": "Pokud má váš pes po snědení ostružin nějakou reakci, okamžitě zavolejte veterináři.",
-    "hr": "Ako pas nakon jedenja kupina ima neku reakciju, odmah nazovi veterinara.",
+    "hr": "Ako pas nakon što pojede kupine pokaže neku reakciju, odmah nazovi veterinara.",
     "sv": "Om hunden reagerar efter att ha ätit björnbär, ring veterinären omedelbart.",
     "da": "Ring straks til din dyrlæge hvis hunden får en reaktion efter at have spist brombær.",
     "fi": "Jos koirallesi tulee reaktio karhunvatukoiden syömisen jälkeen, soita heti eläinlääkärille.",
@@ -116,7 +116,7 @@
     "nl": "Gewassen verse bramen zonder toevoegingen; geen bevroren bessen, waaraan meestal suiker of xylitol is toegevoegd; wilde bessen alleen als je zeker weet dat het bramen zijn.",
     "pl": "Umyte, zwykłe świeże jeżyny; bez mrożonych owoców, które zwykle mają dodatek cukru lub ksylitolu; dziko rosnące tylko wtedy, gdy masz pewność, że to jeżyny.",
     "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny.",
-    "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako si siguran da su kupine.",
+    "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako sigurno znaš da su kupine.",
     "sv": "Sköljda, naturella färska björnbär; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
     "da": "Vaskede, rene, friske brombær; ingen frosne bær, der som regel er tilsat sukker eller xylitol; kun vilde bær som du er sikker på er brombær.",
     "fi": "Pestyinä, pelkkinä tuoreina karhunvatukoina; ei pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia; luonnosta vain marjoja, jotka tunnistat varmasti karhunvatukoiksi.",
@@ -169,7 +169,7 @@
         "nl": "Ja, zolang je zeker weet dat het bramen zijn.",
         "pl": "Tak, pod warunkiem że masz pewność, że to jeżyny.",
         "cs": "Ano, pokud víte jistě, že jsou to ostružiny.",
-        "hr": "Da, ako si siguran da su to kupine.",
+        "hr": "Da, ako sigurno znaš da su to kupine.",
         "sv": "Ja, så länge du är säker på att det är björnbär.",
         "da": "Ja, så længe du er sikker på at det er brombær.",
         "fi": "Saa, kunhan olet varma, että ne ovat karhunvatukoita.",
@@ -284,7 +284,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "06bb7c1951aa32865bd1663eff081236c4c56b19d5d206b76ac988fc9831040b"
+      "verified_hash": "18c48855312d35378d1a32cb5d797646cf41386717c6fcc483fc5227f13c312f"
     },
     "sv": {
       "status": "verified",

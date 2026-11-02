@@ -81,7 +81,7 @@
     "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen.",
     "pl": "Łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne podczas więdnięcia. Źródła, które znaleźliśmy, opisują ryzyko związane z tymi częściami rośliny i nie podają, że miąższ owocu jest bezpieczny dla kotów, dlatego nie zalecamy dzielenia się nim.",
     "cs": "Stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a zvlášť toxické jsou při vadnutí. Zdroje, které jsme našli, popisují riziko těchto částí rostliny a neuvádějí, že by dužina plodu byla pro kočky bezpečná, proto ji kočkám nedoporučujeme.",
-    "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ga ne preporučujemo dijeliti s mačkom.",
+    "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ne preporučujemo da ga dijeliš s mačkom.",
     "sv": "Skaft, blad och kärnor innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar. Källorna vi har hittat beskriver risken med dessa växtdelar och säger inte att fruktköttet är säkert för katter, så vi avråder från att ge katten fruktköttet.",
     "da": "Stilkene, bladene og kernerne indeholder cyanid (i form af cyanogene glykosider) og er særligt giftige mens de visner. De kilder vi har fundet, beskriver risikoen ved disse plantedele og siger ikke at frugtkødet er sikkert for katte, så vi anbefaler ikke at dele det.",
     "fi": "Varret, lehdet ja siemenet sisältävät syanidia (syanogeenisina glykosideina), ja ne ovat erityisen myrkyllisiä kuihtuessaan. Löytämämme lähteet kuvaavat näiden kasvinosien riskiä eivätkä sano, että hedelmäliha olisi kissoille turvallista, joten emme suosittele sen antamista.",
@@ -242,7 +242,7 @@
         "nl": "Welk deel is het probleem?",
         "pl": "Która część jest problemem?",
         "cs": "Které části jsou nebezpečné?",
-        "hr": "Koji je dio problem?",
+        "hr": "Koji je dio problematičan?",
         "sv": "Vilken del är problemet?",
         "da": "Hvilken del er problemet?",
         "fi": "Mikä osa on ongelma?",
@@ -358,7 +358,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ac59c7fcb89aa4793bfb8944b802a55c8404c2ec652755a9a0576a891abc712d"
+      "verified_hash": "7d727d6ea097a28015405bbd89162d8adc87fb72b87b59ba48545baf00358d4b"
     },
     "sv": {
       "status": "verified",

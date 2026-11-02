@@ -64,7 +64,7 @@
     "nl": "Nee, liever niet. Rauwe eieren kunnen bacteriën zoals salmonella bevatten, die schadelijk kunnen zijn voor honden en de mensen om hen heen, en rauw eiwit kan de opname van een vitamine verstoren. Maak eieren helemaal gaar voordat je ze deelt.",
     "pl": "Lepiej nie. Surowe jajka mogą przenosić bakterie, takie jak Salmonella, które mogą zaszkodzić psom i ludziom wokół nich, a surowe białko jaja może zaburzać przyswajanie jednej z witamin. Zanim podzielisz się jajkami, dobrze je ugotuj.",
     "cs": "Ne, raději ne. Syrová vejce mohou obsahovat bakterie, například salmonelu, které mohou uškodit psům i lidem kolem nich, a syrový bílek může blokovat jeden z vitaminů. Vejce před podáním důkladně tepelně upravte.",
-    "hr": "Ne, bolje ne. Sirova jaja mogu sadržavati bakterije poput salmonele, koje mogu naštetiti psima i ljudima oko njih, a sirovi bjelanjak može ometati iskorištavanje jednog vitamina. Prije nego što ih podijeliš sa psom, jaja potpuno termički obradi.",
+    "hr": "Ne, bolje ne. Sirova jaja mogu sadržavati bakterije poput salmonele, koje mogu naštetiti psima i ljudima oko njih, a sirovi bjelanjak može ometati iskorištavanje jednog vitamina. Jaja prije nego što ih podijeliš s psom potpuno termički obradi.",
     "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen helt innan du delar med dig.",
     "da": "Nej, det er bedst at lade være. Rå æg kan indeholde bakterier som salmonella, der kan skade både hunde og menneskerne omkring dem, og rå æggehvide kan påvirke optagelsen af et vitamin. Tilbered æggene helt før du deler dem.",
     "fi": "Ei, parempi olla antamatta. Raaoissa kananmunissa voi olla bakteereja, kuten salmonellaa, jotka voivat olla haitallisia koirille ja niiden lähellä oleville ihmisille, ja raaka munanvalkuainen voi häiritä erään vitamiinin imeytymistä. Kypsennä kananmunat kunnolla ennen kuin jaat niitä.",
@@ -190,7 +190,7 @@
     "nl": "Heeft je hond een rauw ei opgelikt? Let dan de komende dagen op braken, diarree of weinig energie en bel je dierenarts als het braken of de diarree ernstig is of niet ophoudt. Was je handen en maak alles goed schoon.",
     "pl": "Jeśli twój pies zlizał surowe jajko, przez kolejne dni obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują. Umyj ręce i dokładnie posprzątaj.",
     "cs": "Pokud váš pes olízal syrové vejce, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo není malátný, a pokud je zvracení nebo průjem silný nebo neustává, zavolejte veterináři. Umyjte si ruce a vše důkladně ukliďte.",
-    "hr": "Ako je tvoj pas polizao sirovo jaje, sljedećih dana prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju. Operi ruke i dobro očisti prostor.",
+    "hr": "Ako je tvoj pas polizao sirovo jaje, sljedećih dana prati pojavljuju li se povraćanje, proljev ili bezvoljnost i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju. Operi ruke i dobro očisti prostor.",
     "sv": "Om hunden slickat i sig ett rått ägg, håll utkik efter kräkningar, diarré eller orkeslöshet de närmaste dagarna och ring veterinären om kräkningarna eller diarrén är svåra eller inte går över. Tvätta händerna och städa noga.",
     "da": "Hvis din hund har slikket et råt æg op, så hold øje med opkast, diarré eller lavt energiniveau de næste dage, og kontakt din dyrlæge hvis opkastet eller diarréen er voldsom eller ikke holder op. Vask hænder, og gør grundigt rent.",
     "fi": "Jos koirasi nuoli raakaa kananmunaa, seuraa seuraavina päivinä, tuleeko oksentelua, ripulia tai voimattomuutta, ja soita eläinlääkärille, jos oksentelu tai ripuli on voimakasta tai ei lopu. Pese kätesi ja siivoa huolellisesti.",
@@ -378,7 +378,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "93de893ed960e7069947eb24e4e5a34b3b69228d3f16174676e771f35f940f71"
+      "verified_hash": "7f88ee3cb42fa48a9b0b8f9a1bfd2fed6d247d8598caca8d3a87b13c0d0ea026"
     },
     "sv": {
       "status": "verified",

@@ -64,7 +64,7 @@
     "nl": "Nee, liever niet. Boter is niet giftig, maar wel erg vet, en vet eten kan de maag van een hond van streek maken en mogelijk alvleesklierontsteking uitlokken, een pijnlijke ontsteking. Eten dat je deelt, zoals ei of aardappelpuree, maak je het best zonder boter klaar.",
     "pl": "Lepiej nie. Masło nie jest trujące, ale jest bardzo tłuste, a tłuste jedzenie może podrażnić żołądek psa i wywołać zapalenie trzustki, czyli bolesny stan zapalny. Jedzenie, którym się dzielisz, np. jajka czy puree ziemniaczane, najlepiej przygotuj bez masła.",
     "cs": "Raději ne. Máslo není jedovaté, ale je velmi tučné a tučná jídla mohou psovi podráždit žaludek nebo spustit bolestivý zánět slinivky břišní. Jídlo, o které se se psem dělíte, například vejce nebo bramborovou kaši, je lepší připravovat bez másla.",
-    "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu uznemiriti želudac i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca.",
+    "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu izazvati probavne tegobe i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca.",
     "sv": "Nej, helst inte. Smör är inte giftigt, men det är mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med dig av, som ägg eller potatismos, lagas helst utan smör.",
     "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
     "fi": "Ei kannata. Voi itsessään ei ole myrkyllistä, mutta se on hyvin rasvaista, ja rasvaiset ruoat voivat aiheuttaa koiralle vatsavaivoja ja mahdollisesti laukaista haimatulehduksen, joka on kivulias tulehdus. Koiran kanssa jaettava ruoka, kuten kananmuna tai perunamuusi, kannattaa valmistaa ilman voita.",
@@ -81,7 +81,7 @@
     "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken.",
     "pl": "W przypadku tłustego jedzenia ze stołu nie chodzi o toksyczność, ale tłuste produkty, takie jak masło, oleje i tłuszcz spod pieczeni, mogą wywołać zapalenie trzustki. Niektóre rasy, zwłaszcza sznaucer miniaturowy, są na nie bardziej podatne. Weterynarze radzą też przygotowywać jedzenie dla psa, np. jajka czy puree ziemniaczane, bez masła.",
     "cs": "Tučná jídla ze stolu nejsou problémem kvůli jedovatosti, ale tučné potraviny jako máslo, oleje a výpek z masa mohou způsobit zánět slinivky břišní. Některá plemena, hlavně knírač malý, jsou k němu náchylnější. Veterináři také doporučují připravovat jídlo pro psy, například vejce nebo bramborovou kaši, bez másla.",
-    "hr": "Masna hrana sa stola nije problem otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca.",
+    "hr": "Masna hrana sa stola nije problem zbog otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca.",
     "sv": "Fet bordsmat är inget förgiftningsproblem, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, är mer benägna att drabbas. Veterinärer föreslår också att mat till hundar, som ägg eller potatismos, lagas utan smör.",
     "da": "Fed mad fra bordet er ikke et forgiftningsproblem, men fed mad som smør, olie og stegefedt kan give betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
     "fi": "Rasvaiset ihmisruoat eivät ole myrkytysongelma, mutta rasvaiset ruoat, kuten voi, öljyt ja paistinrasva, voivat aiheuttaa haimatulehduksen. Jotkin rodut, etenkin kääpiösnautserit, ovat sille alttiimpia. Eläinlääkärit neuvovat myös valmistamaan koiralle tarkoitetun ruoan, kuten kananmunan tai perunamuusin, ilman voita.",
@@ -244,7 +244,7 @@
         "nl": "Niet in de zin van vergiftiging. Het probleem is het vet, dat een maagstoornis of alvleesklierontsteking kan veroorzaken.",
         "pl": "Nie jest trujące. Problemem jest tłuszcz, który może wywołać dolegliwości żołądkowe lub zapalenie trzustki.",
         "cs": "Ne v tom smyslu, že by bylo jedem. Problémem je tuk, který může podráždit žaludek nebo způsobit zánět slinivky břišní.",
-        "hr": "Ne u smislu otrova. Problem je mast, koja može uznemiriti želudac ili izazvati upalu gušterače.",
+        "hr": "Ne u smislu otrova. Problem je mast, koja može izazvati probavne tegobe ili upalu gušterače.",
         "sv": "Inte i betydelsen förgiftning. Problemet är fettet, som kan ge orolig mage eller bukspottkörtelinflammation.",
         "da": "Ikke i den forstand at det er giftigt. Problemet er fedtet, som kan give dårlig mave eller betændelse i bugspytkirtlen.",
         "fi": "Ei siinä mielessä, että se olisi myrkkyä. Ongelma on rasva, joka voi aiheuttaa vatsavaivoja tai haimatulehduksen.",
@@ -347,7 +347,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7a19782742e518d747c24994a920857fd245c9ffd9796af43a634fc4aec18962"
+      "verified_hash": "109c9177a61271311eeb5114c5a78795b0f55bc41a7acf2352e45e29acde4494"
     },
     "sv": {
       "status": "verified",

@@ -64,7 +64,7 @@
     "nl": "Nee, rauw vlees raden we af voor katten. Wilde katten eten weliswaar rauwe prooi, maar rauw vlees kan ziekteverwekkers zoals Salmonella, Listeria en E. coli bevatten, en parasieten zoals Toxoplasma, waar katten en mensen ziek van kunnen worden.",
     "pl": "Nie, surowe mięso nie jest zalecane dla kotów. Choć dzikie koty jedzą surową zdobycz, surowe mięso może przenosić zarazki, takie jak Salmonella, Listeria i E. coli, oraz pasożyty, takie jak Toxoplasma, które mogą wywołać chorobę u kotów i ludzi.",
     "cs": "Ne, syrové maso se kočkám nedoporučuje. Přestože divoké kočky jedí syrovou kořist, syrové maso může přenášet choroboplodné zárodky, jako jsou salmonely, listerie a E. coli, a parazity, jako je toxoplazma, které mohou způsobit onemocnění koček i lidí.",
-    "hr": "Ne, sirovo se meso ne preporučuje za mačke. Iako divlje mačke jedu sirov plijen, sirovo meso može prenositi klice poput salmonele (Salmonella), listerije (Listeria) i bakterije E. coli te parazite poput toksoplazme (Toxoplasma), od kojih se mogu razboljeti mačke i ljudi.",
+    "hr": "Ne, sirovo se meso ne preporučuje za mačke. Iako divlje mačke jedu sirov plijen, sirovo meso može prenositi uzročnike bolesti poput salmonele (Salmonella), listerije (Listeria) i bakterije E. coli te parazite poput toksoplazme (Toxoplasma), od kojih se mogu razboljeti mačke i ljudi.",
     "sv": "Nej, rått kött rekommenderas inte för katter. Även om vilda katter äter råa bytesdjur kan rått kött bära på bakterier som salmonella, listeria och E. coli och parasiter som toxoplasma, som kan göra både katter och människor sjuka.",
     "da": "Nej, råt kød anbefales ikke til katte. Selvom vilde katte spiser rå byttedyr, kan råt kød indeholde bakterier som salmonella, listeria og E. coli og parasitter som Toxoplasma, der kan gøre både katte og mennesker syge.",
     "fi": "Ei, raakaa lihaa ei suositella kissoille. Vaikka luonnossa elävät kissat syövät raakaa saalista, raa’assa lihassa voi olla taudinaiheuttajia, kuten salmonellaa, listeriaa ja E. coli -bakteeria, sekä loisia, kuten toksoplasmaa, jotka voivat sairastuttaa kissoja ja ihmisiä.",
@@ -81,7 +81,7 @@
     "nl": "Cornell en de Merck Veterinary Manual raden allebei rauw vlees voor katten af, als voer en als snoepje, omdat het toxoplasmose en andere infecties kan overdragen. Besmetting van rauw vlees met bacteriën komt vaak voor, en sommige katten lijken gezond maar scheiden de bacteriën uit via hun ontlasting, waardoor de bacteriën kunnen overgaan op mensen en andere huisdieren. Vlees uit de supermarkt voor mensen is bedoeld om gekookt te worden.",
     "pl": "Cornell i Merck Veterinary Manual odradzają podawanie kotom surowego mięsa, zarówno jako pokarmu, jak i smakołyku, bo może przenosić toksoplazmozę i inne infekcje. Skażenie surowego mięsa bakteriami jest częste, a niektóre koty wyglądają na zdrowe, ale wydalają bakterie z kałem, przez co mogą one przejść na ludzi i inne zwierzęta. Mięso dla ludzi z supermarketu jest przeznaczone do obróbki termicznej.",
     "cs": "Cornellova univerzita i Merck Veterinary Manual nedoporučují dávat kočkám syrové maso, ať už jako krmivo, nebo jako pamlsek, protože může šířit toxoplazmózu a další infekce. Kontaminace syrového masa bakteriemi je běžná a některé kočky se zdají v pořádku, ale bakterie vylučují trusem, odkud se mohou přenést na lidi i další zvířata. Maso pro lidi ze supermarketu je určeno k tepelné úpravě.",
-    "hr": "Cornell i priručnik Merck Veterinary Manual savjetuju da se mačkama ne daje sirovo meso, ni kao hrana ni kao poslastica, jer može širiti toksoplazmozu i druge infekcije. Onečišćenje sirovog mesa bakterijama je često, a neke mačke djeluju zdravo, ali izlučuju bakterije izmetom, odakle se one mogu proširiti na ljude i druge ljubimce. Meso iz trgovine namijenjeno ljudima predviđeno je za termičku obradu.",
+    "hr": "Cornell i priručnik Merck Veterinary Manual savjetuju da se mačkama ne daje sirovo meso, ni kao hrana ni kao poslastica, jer može širiti toksoplazmozu i druge infekcije. Sirovo meso često je onečišćeno bakterijama, a neke mačke djeluju zdravo, ali izlučuju bakterije izmetom, odakle se one mogu proširiti na ljude i druge ljubimce. Meso iz supermarketa za ljude predviđeno je za termičku obradu.",
     "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik för människor är tänkt att tillagas.",
     "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt.",
     "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raa’an lihan bakteerikontaminaatio on yleistä, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä.",
@@ -223,7 +223,7 @@
     "nl": "Op rauw vlees kunnen bacteriën zitten. Katten mogen alleen vlees krijgen dat een volwassene heeft gekookt.",
     "pl": "Na surowym mięsie mogą być zarazki. Koty powinny dostawać tylko mięso ugotowane przez dorosłego.",
     "cs": "Na syrovém mase můžou být bacily. Kočky smějí dostat jen maso, které dospělý pořádně uvařil nebo upekl.",
-    "hr": "Sirovo meso može nositi klice. Mace smiju dobiti samo meso koje je skuhala odrasla osoba.",
+    "hr": "Na sirovom mesu mogu biti mikrobi. Mace smiju dobiti samo meso koje je skuhala odrasla osoba.",
     "sv": "Rått kött kan ha bakterier. Katter ska bara få kött som en vuxen har kokat.",
     "da": "Råt kød kan have bakterier. Katte skal kun have kød som en voksen har kogt.",
     "fi": "Raa’assa lihassa voi olla pöpöjä. Kissa saa vain sellaista lihaa, jonka aikuinen on keittänyt.",
@@ -439,7 +439,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0709ab6ad15d77ee6a83f86365e592af2bdb9406c2a9783f532a0ff94bba4b0e"
+      "verified_hash": "cf176c67a3b37507aaafc23acc5c383821208a592dad09d17fb44651aad989ae"
     },
     "sv": {
       "status": "verified",

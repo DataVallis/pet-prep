@@ -81,7 +81,7 @@
     "nl": "Hoe macadamianoten honden vergiftigen, is onbekend, maar ze tasten de werking van zenuwen en spieren aan. Omdat ze erg olierijk zijn, krijgen sommige honden ook alvleesklierontsteking. Verschijnselen verdwijnen meestal binnen 12–48 uur, maar neem altijd contact op met een dierenarts.",
     "pl": "Nie wiadomo, w jaki sposób orzechy makadamia zatruwają psy, ale wpływają na pracę nerwów i mięśni. Ponieważ są bardzo oleiste, u niektórych psów rozwija się też zapalenie trzustki. Objawy na ogół ustępują w ciągu 12–48 godzin, ale zawsze trzeba skontaktować się z weterynarzem.",
     "cs": "Jak přesně makadamové ořechy psy otravují, není známo, ovlivňují ale činnost nervů a svalů. Protože jsou velmi tučné, u některých psů se rozvine i zánět slinivky břišní. Příznaky obvykle odezní během 12–48 hodin, přesto se ale vždy obraťte na veterináře.",
-    "hr": "Nije poznato kako točno makadamija truje pse, ali utječe na rad živaca i mišića. Budući da je vrlo masna, kod nekih se pasa razvije i upala gušterače. Znakovi uglavnom prođu unutar 12–48 sati, ali uvijek se treba obratiti veterinaru.",
+    "hr": "Nije poznato kako točno makadamija truje pse, ali utječe na rad živaca i mišića. Budući da je vrlo masna, kod nekih se pasa razvije i upala gušterače. Znakovi uglavnom prođu unutar 12–48 sati, ali se u svakom slučaju treba obratiti veterinaru.",
     "sv": "Hur macadamianötter förgiftar hundar är okänt, men de påverkar nervernas och musklernas funktion. Eftersom nötterna är mycket oljiga får vissa hundar också bukspottkörtelinflammation. Symtomen brukar gå över inom 12–48 timmar, men du ska alltid kontakta veterinären.",
     "da": "Man ved ikke hvordan macadamianødder forgifter hunde, men de påvirker nerve- og muskelfunktionen. Fordi de er meget fede, får nogle hunde også betændelse i bugspytkirtlen. Symptomerne går som regel over inden for 12–48 timer, men du bør altid kontakte en dyrlæge.",
     "fi": "Ei tiedetä, miten makadamiapähkinät myrkyttävät koiran, mutta ne vaikuttavat hermojen ja lihasten toimintaan. Koska ne ovat hyvin öljyisiä, osalle koirista kehittyy myös haimatulehdus. Oireet häviävät yleensä 12–48 tunnissa, mutta eläinlääkäriin pitää aina ottaa yhteyttä.",
@@ -433,7 +433,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "90b3f9f5c3de0077c95e98fb6c8e2eabb51e0edb1167bc39f57e699a4a7b1cd4"
+      "verified_hash": "bc8c644d906de31dddd701ce6332ba67709a31d2936829f55b7a653874a1274b"
     },
     "sv": {
       "status": "verified",

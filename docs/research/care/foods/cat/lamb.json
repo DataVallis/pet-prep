@@ -64,7 +64,7 @@
     "nl": "Ja, een beetje onbewerkt, goed doorbakken lamsvlees is af en toe prima als snoepje. Snijd het vet eraf, haal alle botjes eruit en voeg geen kruiden of zout toe. Rauw lamsvlees raden we af.",
     "pl": "Tak, odrobina zwykłej, dobrze ugotowanej jagnięciny jest w porządku jako okazjonalny smakołyk. Odkrój tłuszcz, usuń wszystkie kości i nie dodawaj przypraw. Surowa jagnięcina nie jest zalecana.",
     "cs": "Ano, trocha obyčejného, důkladně tepelně upraveného jehněčího masa je v pořádku jako občasný pamlsek. Odkrojte tuk, odstraňte všechny kosti a maso nekořeňte. Syrové jehněčí se nedoporučuje.",
-    "hr": "Da, malo obične, dobro termički obrađene janjetine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodaji začine. Sirova se janjetina ne preporučuje.",
+    "hr": "Da, malo obične, dobro termički obrađene janjetine u redu je kao povremena poslastica. Odreži masnoću, ukloni sve kosti i ne dodavaj začine. Sirova se janjetina ne preporučuje.",
     "sv": "Ja, lite naturellt, ordentligt tillagat lammkött går bra som godbit någon gång ibland. Skär bort fettet, ta bort alla ben och krydda inte. Rått lammkött rekommenderas inte.",
     "da": "Ja, lidt naturelt, gennemtilberedt lammekød er fint som en godbid en gang imellem. Skær fedtet fra, fjern alle knogler, og tilsæt ingen krydderier. Råt lammekød anbefales ikke.",
     "fi": "Saa, vähän maustamatonta, hyvin kypsennettyä lampaanlihaa sopii satunnaiseksi herkuksi. Leikkaa rasva pois, poista kaikki luut äläkä lisää mausteita. Raakaa lampaanlihaa ei suositella.",
@@ -248,7 +248,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e5c554e852dfe69dcdac7c0dfaba3e7f829fa0593f2204f93ceca4d2406591c2"
+      "verified_hash": "9c76c2fc9485ef36b83a812a5f803b658a2ad9b5c738399916e5e185d5b8e31d"
     },
     "sv": {
       "status": "verified",

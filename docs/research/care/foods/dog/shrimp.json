@@ -81,7 +81,7 @@
     "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je met koken vermijdt. Een hond kan stikken in garnalenschalen, en ze kunnen verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus met mate is het devies.",
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których pozwala uniknąć gotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
     "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
-    "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uklanja. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
+    "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uništava. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
     "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta.",
     "da": "Rå skaldyr indeholder skadelige smitstoffer, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde.",
     "fi": "Raa’oissa äyriäisissä on haitallisia taudinaiheuttajia, jotka kypsentäminen poistaa. Katkaravun kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin. Friteeratuissa tai leivitetyissä katkaravuissa on tarpeettomia rasvoja ja öljyjä. Katkaravuissa on vähän rasvaa ja kaloreita mutta paljon kolesterolia, joten kohtuus on tärkeää.",
@@ -99,7 +99,7 @@
     "nl": "Geef geen garnalen meer als je hond last van zijn buik heeft of zich niet lekker lijkt te voelen, en bel je dierenarts als de verschijnselen erger worden. Bel ook je dierenarts als je hond schalen heeft ingeslikt en lijkt te stikken.",
     "pl": "Przestań dawać krewetki, jeśli twój pies ma dolegliwości żołądkowe lub wydaje się chory, i zadzwoń do weterynarza, jeśli objawy się nasilą. Zadzwoń też, jeśli pies połknął pancerze i wygląda, jakby się dławił.",
     "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí.",
-    "hr": "Prestani davati kozice ako pas pokazuje nelagodu u trbuhu ili se čini da mu nije dobro i nazovi veterinara ako se znakovi pogoršaju. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši.",
+    "hr": "Ako pas pokazuje nelagodu u trbuhu ili djeluje loše, prestani mu davati kozice, a ako se znakovi pogoršaju, nazovi veterinara. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši.",
     "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden svalt skal och verkar ha satt något i halsen.",
     "da": "Stop med at give rejer hvis din hund får ubehag i maven eller virker utilpas, og kontakt din dyrlæge hvis symptomerne bliver værre. Kontakt også din dyrlæge hvis hunden har slugt skaller og ser ud til at være ved at blive kvalt.",
     "fi": "Lopeta katkarapujen antaminen, jos koirallasi on vatsavaivoja tai se vaikuttaa sairaalta, ja soita eläinlääkärille, jos oireet pahenevat. Soita eläinlääkärille myös, jos koirasi nieli kuoria ja näyttää olevan tukehtumassa.",
@@ -282,7 +282,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b54acf3ad33d2e03a284efab92828d555b05ed635846ba9fcd26414363895550"
+      "verified_hash": "0aa234ca3c75b9798e1e661f6046d100f4054d1ba56de073a4549ff2aa3e2651"
     },
     "sv": {
       "status": "verified",

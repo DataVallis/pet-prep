@@ -81,7 +81,7 @@
     "nl": "Kalkoen is niet giftig, maar de bereiding doet ertoe. Vel en vet zijn zwaar en kunnen alvleesklierontsteking veroorzaken, terwijl extra kruiden de maag van een hond kunnen irriteren. Ui en knoflook kunnen giftig zijn voor honden. Gekookte botten van gevogelte zijn broos en kunnen splinteren. Wit vlees is magerder dan donker vlees.",
     "pl": "Indyk nie jest toksyczny, ale ważne jest, jak został przygotowany. Skóra i tłuszcz są ciężkostrawne i mogą wywołać zapalenie trzustki, a dodatkowe przyprawy mogą podrażnić żołądek psa. Cebula i czosnek mogą być toksyczne dla psów. Gotowane kości drobiowe są kruche i mogą łamać się na odłamki. Białe mięso jest chudsze niż ciemne.",
     "cs": "Krůtí maso není jedovaté, záleží ale na tom, jak je připravené. Kůže a tuk jsou těžké a mohou způsobit zánět slinivky břišní, zatímco koření navíc může podráždit psí žaludek. Cibule a česnek mohou být pro psy jedovaté. Tepelně upravené drůbeží kosti jsou křehké a mohou se tříštit. Bílé maso je libovější než tmavé.",
-    "hr": "Puretina nije otrovna, ali važno je kako je pripremljena. Koža i masnoća vrlo su masne i mogu izazvati upalu gušterače, a dodatni začini mogu nadražiti pseći želudac. Luk i češnjak mogu biti otrovni za pse. Termički obrađene kosti peradi krhke su i mogu se raspucati na oštre komadiće. Bijelo meso posnije je od tamnog.",
+    "hr": "Puretina nije otrovna, ali važno je kako je pripremljena. Koža i masnoća teško se probavljaju i mogu izazvati upalu gušterače, a dodatni začini mogu nadražiti pseći želudac. Luk i češnjak mogu biti otrovni za pse. Termički obrađene kosti peradi krhke su i mogu se raspucati na oštre komadiće. Bijelo meso posnije je od tamnog.",
     "sv": "Kalkon är inte giftig, men tillagningen spelar roll. Skinn och fett är mäktiga och kan orsaka bukspottkörtelinflammation (pankreatit), och extra kryddor kan irritera hundens mage. Lök och vitlök kan vara giftiga för hundar. Tillagade fågelben är sköra och kan splittras. Ljust kött är magrare än mörkt.",
     "da": "Kalkun er ikke giftig, men tilberedningen betyder noget. Skind og fedt er meget fedtrige og kan give betændelse i bugspytkirtlen, mens ekstra krydderier kan irritere hundens mave. Løg og hvidløg kan være giftige for hunde. Tilberedte fjerkræknogler er skøre og kan splintre. Lyst kød er magrere end mørkt kød.",
     "fi": "Kalkkuna ei ole myrkyllistä, mutta valmistustapa ratkaisee. Nahka ja rasva ovat raskaita ja voivat aiheuttaa haimatulehduksen, ja ylimääräiset mausteet voivat ärsyttää koiran vatsaa. Sipuli ja valkosipuli voivat olla koirille myrkyllisiä. Kypsennetyt siipikarjan luut ovat hauraita ja voivat sirpaloitua. Vaalea liha on vähärasvaisempaa kuin tumma.",
@@ -298,7 +298,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e092aaa633e075d8ce74c9abfaa72176c2dd5c3087924d92057b9dd7257b5764"
+      "verified_hash": "6b6f0e691893a7d9880cf54b6a3df07bba1d21484e26e844fb5c6881c7b58aff"
     },
     "sv": {
       "status": "verified",

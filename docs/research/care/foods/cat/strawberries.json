@@ -81,7 +81,7 @@
     "nl": "De ASPCA noemt de aardbeienplant niet giftig voor katten, en het dierenziekenhuis van NC State rekent aardbei tot de gezonde snoepjes uit de mensenkeuken voor katten en honden, in afgemeten hoeveelheden en meegeteld bij de dagelijkse calorieën. Katten zijn strikte vleeseters en hebben geen fruit nodig, snoepjes horen maar een klein deel van het dagelijkse eten te zijn, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "ASPCA uznaje truskawkę za roślinę nietoksyczną dla kotów, a szpital weterynaryjny NC State wymienia truskawki wśród zdrowych smakołyków z ludzkiego jedzenia dla kotów i psów, podawanych w odmierzonych ilościach i wliczanych do dziennej puli kalorii. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy materiał roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "ASPCA uvádí jahodník jako rostlinu netoxickou pro kočky a veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí jahody mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "ASPCA navodi biljku jagode kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi jagodu među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
+    "hr": "ASPCA navodi biljku jagode kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi jagodu među zdravim poslasticama od ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att jordgubbsplantan inte är giftig för katter, och djursjukhuset vid NC State räknar jordgubbar till nyttiga godbitar från människomat för katter och hundar, i avvägda mängder och inräknade i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "ASPCA opfører jordbærplanten som ikke giftig for katte, og dyrehospitalet ved NC State nævner jordbær blandt de sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i det daglige kalorieindtag. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
     "fi": "ASPCA luokittelee mansikkakasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee mansikan terveellisten ihmisruokaherkkujen joukossa kissoille ja koirille, kun niitä annetaan harkitusti ja ne lasketaan mukaan päivän kaloreihin. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää jäädä pieneksi osaksi päivän ruokaa, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja.",
@@ -133,7 +133,7 @@
     "nl": "Een klein stukje aardbei kan af en toe een kattensnoepje zijn. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
     "pl": "Kawałeczek truskawki może być od czasu do czasu smakołykiem dla kota. Koty potrzebują głównie mięsa, więc owoc to tylko mały dodatek.",
     "cs": "Malý kousek jahody může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
-    "hr": "Komadić jagode ponekad može biti poslastica za macu. Mace najviše trebaju meso, pa je voće samo mali dodatak.",
+    "hr": "Komadić jagode ponekad može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
     "sv": "En liten bit jordgubbe kan ibland vara en godbit för katten. Katter behöver mest kött, så frukt är bara något litet extra.",
     "da": "Et lille stykke jordbær kan være en kattegodbid en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
     "fi": "Pieni pala mansikkaa voi joskus olla kissan herkku. Kissat tarvitsevat ennen kaikkea lihaa, joten hedelmä on vain pieni lisä.",
@@ -280,7 +280,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "46e20bd534eaf863f4db305c5c21da5d677ff4e17d65520cc8049d6873d9454b"
+      "verified_hash": "f80d169c6d1d89ce70306fc5a250c644806c1730e5cdcc99255b4472e89ba09a"
     },
     "sv": {
       "status": "verified",

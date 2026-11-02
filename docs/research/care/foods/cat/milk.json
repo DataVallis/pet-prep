@@ -209,7 +209,7 @@
     "nl": "Katten in tekenfilms zijn dol op melk, maar echte katten krijgen er buikpijn van. Vers water is het beste drankje voor je poes!",
     "pl": "Koty z bajek uwielbiają mleko, ale prawdziwe koty boli od niego brzuszek. Świeża woda to najlepszy napój dla kotka!",
     "cs": "Kočky v kreslených pohádkách mléko milují, ale skutečné kočky z něj může bolet bříško. Nejlepší pití pro kočičku je čerstvá voda!",
-    "hr": "Mačke iz crtića obožavaju mlijeko, ali prave mace od njega zaboli trbuščić. Svježa voda macino je najbolje piće!",
+    "hr": "Mačke iz crtića obožavaju mlijeko, ali prave mace od njega zaboli trbuščić. Svježa voda je za macu najbolje piće!",
     "sv": "Katter i tecknade filmer älskar mjölk, men riktiga katter får ont i magen av den. Friskt vatten är kattens bästa dryck!",
     "da": "Tegnefilmskatte elsker mælk, men rigtige katte får ondt i maven af den. Frisk vand er kattens bedste drik!",
     "fi": "Piirroskissat rakastavat maitoa, mutta oikeat kissat saavat siitä vatsakivun. Raikas vesi on kisun paras juoma!",
@@ -437,7 +437,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c71a448c2410b16f016d66feab8a2b2065a78006ac8ea2736aac95c283a4dcbc"
+      "verified_hash": "c72a282f1e6b8dccad3c2ea89415012769893d4f933c3d790a4ef6d13ffd362c"
     },
     "sv": {
       "status": "verified",

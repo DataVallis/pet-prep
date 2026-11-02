@@ -64,7 +64,7 @@
     "nl": "Ja, met mate. Cantaloupe bevat weinig calorieën en is een goede bron van water en vezels, maar bevat wel veel suiker, dus geef er zuinig van, zeker aan honden die te zwaar zijn of diabetes hebben. Geef de schil en de pitten niet.",
     "pl": "Tak, z umiarem. Melon kantalupa ma mało kalorii i jest dobrym źródłem wody i błonnika, ale zawiera dużo cukru, więc dziel się nim oszczędnie, zwłaszcza z psem z nadwagą lub cukrzycą. Nie podawaj skórki ani pestek.",
     "cs": "Ano, s mírou. Cukrový meloun má málo kalorií a je dobrým zdrojem vody a vlákniny, ale obsahuje hodně cukru, proto ho dávejte střídmě, zvlášť psům s nadváhou nebo cukrovkou. Nedávejte slupku ani semínka.",
-    "hr": "Da, umjereno. Dinja ima malo kalorija i dobar je izvor vode i vlakana, ali sadrži mnogo šećera, zato je dijeli štedljivo, osobito sa psima koji imaju prekomjernu težinu ili dijabetes. Ne daj koru ni sjemenke.",
+    "hr": "Da, umjereno. Dinja ima malo kalorija i dobar je izvor vode i vlakana, ali sadrži mnogo šećera, zato je daj u malim količinama, osobito psima s viškom kilograma ili s dijabetesom. Ne daj koru ni sjemenke.",
     "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och ger vätska och fibrer, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
     "da": "Ja, med måde. Cantaloupemelon har få kalorier og er en god kilde til væske og fibre, men den har et højt sukkerindhold, så giv den sparsomt, især til hunde med overvægt eller diabetes. Giv ikke skræl eller kerner.",
     "fi": "Kyllä, kohtuudella. Cantaloupe-meloni on vähäkalorinen ja hyvä veden ja kuidun lähde, mutta siinä on paljon sokeria, joten anna sitä säästeliäästi, etenkin ylipainoisille tai diabetesta sairastaville koirille. Älä anna kuorta tai siemeniä.",
@@ -81,7 +81,7 @@
     "nl": "De schil van cantaloupe kan, net als de schil van watermeloen, de maag van streek maken, vast komen te zitten in het spijsverteringskanaal en een verstikkingsgevaar vormen. De pitten zijn onschadelijk, maar kunnen ook een verstikkingsgevaar vormen. Te veel snoepjes bovenop gezond eten kunnen tot overgewicht leiden.",
     "pl": "Skórka kantalupy, podobnie jak skórka arbuza, może wywołać rozstrój żołądka lub utknąć w przewodzie pokarmowym, a do tego grozi zadławieniem. Pestki są nieszkodliwe, ale też mogą spowodować zadławienie. Zbyt wiele smakołyków dodawanych do zdrowej diety może prowadzić do otyłości.",
     "cs": "Slupka cukrového melounu může stejně jako slupka vodního melounu podráždit žaludek, uvíznout v trávicím traktu nebo způsobit dušení. Semínka jsou neškodná, ale také mohou způsobit dušení. Příliš mnoho pamlsků navíc ke zdravé stravě může vést k obezitě.",
-    "hr": "Kora dinje, kao i kora lubenice, može uznemiriti želudac, zaglaviti se u probavnom sustavu i izazvati gušenje. Sjemenke su bezopasne, ali i one mogu izazvati gušenje. Previše poslastica uz zdravu prehranu može dovesti do pretilosti.",
+    "hr": "Kora dinje, kao i kora lubenice, može izazvati probavne tegobe, zaglaviti se u probavnom sustavu i izazvati gušenje. Sjemenke su bezopasne, ali i one mogu izazvati gušenje. Previše poslastica uz zdravu prehranu može dovesti do pretilosti.",
     "sv": "Melonskal kan, precis som vattenmelonskal, ge orolig mage, fastna i matsmältningskanalen och ge kvävningsrisk. Kärnorna är ofarliga men kan också ge kvävningsrisk. För många godbitar utöver en hälsosam kost kan leda till fetma.",
     "da": "Skrællen fra cantaloupemelon kan ligesom vandmelonskræl give dårlig mave, sætte sig fast i fordøjelseskanalen og udgøre en kvælningsfare. Kernerne er harmløse, men kan også udgøre en kvælningsfare. For mange godbidder oven i en sund kost kan føre til overvægt.",
     "fi": "Cantaloupe-melonin kuoret voivat vesimelonin kuorten tavoin aiheuttaa vatsavaivoja, juuttua ruoansulatuskanavaan ja aiheuttaa tukehtumisvaaran. Siemenet ovat vaarattomia, mutta nekin voivat aiheuttaa tukehtumisvaaran. Liian monet herkut terveellisen ruokavalion lisäksi voivat johtaa lihavuuteen.",
@@ -279,7 +279,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "51127a47991d208a2a1cdc179b5e5818996c37e097c751d777a73293921efb77"
+      "verified_hash": "1cc5fe85ed726bafe8919f34590cbc9537a621ca09b59e15a9bc4ea1821b44a9"
     },
     "sv": {
       "status": "verified",

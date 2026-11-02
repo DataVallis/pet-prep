@@ -259,7 +259,7 @@
         "nl": "Eén kers veroorzaakt geen cyanidevergiftiging, en als een gezonde hond er een of twee eet, hoef je niet in paniek te raken. Toch kunnen pitten een verstopping veroorzaken, dus vraag het je dierenarts als je twijfelt.",
         "pl": "Jedna czereśnia nie spowoduje zatrucia cyjankiem, a zdrowy pies, który zje jedną lub dwie, nie jest powodem do paniki. Pestki mogą jednak powodować niedrożność, więc jeśli nie masz pewności, zapytaj weterynarza.",
         "cs": "Jedna třešeň otravu kyanidem nezpůsobí a u zdravého psa, který sní jednu nebo dvě, není třeba panikařit. Pecky ale mohou způsobit ucpání, proto se v případě nejistoty zeptejte veterináře.",
-        "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi siguran.",
+        "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi načisto.",
         "sv": "Ett körsbär ger ingen cyanidförgiftning, och om en frisk hund äter ett eller två finns ingen anledning till panik. Kärnor kan ändå orsaka stopp, så fråga veterinären om du är osäker.",
         "da": "Ét kirsebær giver ikke cyanidforgiftning, og der er ingen grund til panik hvis en rask hund spiser et eller to. Stenene kan dog give blokering, så spørg din dyrlæge hvis du er i tvivl.",
         "fi": "Yksi kirsikka ei aiheuta syanidimyrkytystä, eikä tarvitse panikoida, jos terve koira syö yhden tai kaksi. Kivet voivat silti aiheuttaa tukoksia, joten kysy eläinlääkäriltä, jos olet epävarma.",
@@ -418,7 +418,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5510854f25d8667f8f51a4ec5cbad1300e549a5eda0c18f86f6547f35c726b7b"
+      "verified_hash": "96ed3475b15a87f3da7d60944a7b88605b5135696ea76e744028d46c5ee4c45a"
     },
     "sv": {
       "status": "verified",

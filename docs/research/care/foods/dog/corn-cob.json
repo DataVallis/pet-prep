@@ -64,7 +64,7 @@
     "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal.",
     "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa.",
     "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat urgentní léčbu. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
-    "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa nešto su drugo.",
+    "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa druga su stvar.",
     "sv": "Nej. Ge aldrig en hund majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Naturella majskorn som tagits av kolven är en annan sak.",
     "da": "Nej. Giv aldrig en hund majs på kolben. Hunde kan sluge stykker eller endda hele kolben, hvilket kan give kvælning eller en alvorlig tarmblokering, der kan kræve akut behandling. Almindelige majskorn uden kolbe er en anden sag.",
     "fi": "Ei saa. Älä koskaan anna koiralle maissintähkää. Koira voi nielaista paloja tai jopa koko tähkän, mikä voi aiheuttaa tukehtumisen tai vakavan suolitukoksen, joka saattaa vaatia kiireellistä hoitoa. Pelkät tähkästä irrotetut maissinjyvät ovat eri asia.",
@@ -425,7 +425,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5a3a2b8cf632bc128727487e937a8e9b4553f9e88502c8b4fc6f1b0000f22358"
+      "verified_hash": "393a06b59ba0eeefc0b4c45ca6df640733ef29eb61fdd685ff44b8a73f76cdc7"
     },
     "sv": {
       "status": "verified",

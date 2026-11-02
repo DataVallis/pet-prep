@@ -346,7 +346,7 @@
         "nl": "Meestal binnen 6–12 uur na het eten. Bel daarom meteen de dierenarts in plaats van af te wachten.",
         "pl": "Zwykle w ciągu 6–12 godzin od zjedzenia, dlatego zadzwoń do weterynarza od razu, zamiast czekać.",
         "cs": "Obvykle do 6–12 hodin po snědení, proto veterináři zavolejte hned a nečekejte.",
-        "hr": "Obično unutar 6–12 sati nakon jedenja, zato odmah nazovi veterinara umjesto da čekaš.",
+        "hr": "Obično unutar 6–12 sati nakon što pas pojede čokoladu, zato odmah nazovi veterinara umjesto da čekaš.",
         "sv": "Oftast inom 6–12 timmar efter att hunden ätit, och därför ska du ringa veterinären direkt i stället för att vänta.",
         "da": "Som regel inden for 6–12 timer efter at hunden har spist chokoladen, og derfor skal du ringe til dyrlægen med det samme i stedet for at vente.",
         "fi": "Yleensä 6–12 tunnin kuluessa syömisestä, minkä vuoksi eläinlääkärille on syytä soittaa heti eikä jäädä odottamaan.",
@@ -478,7 +478,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "61b047cde7a9f864e287fe501b938f19e3a19b443f5408104ea13db7c5013f47"
+      "verified_hash": "25a0a83f30fc84b76e84e9e5c7a550f063163415edf4bfe1a071cfb6be08a34d"
     },
     "sv": {
       "status": "verified",
