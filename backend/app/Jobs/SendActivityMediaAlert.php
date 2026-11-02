@@ -14,9 +14,11 @@ use Illuminate\Queue\InteractsWithQueue;
 /**
  * David 2026-10-28 (home first, school and games locked until their clips are ready):
  * ONE Discord post per `media:retry-activity-clips` run that found school / game clips
- * which failed for good — those activities stay locked until an admin acts. Counts only
- * (no pet, family or child; the command's --dry-run lists the pets). Low-priority
- * `alerts` queue, like the app error alerts.
+ * which failed for good. Since David 2026-11-02 (self-healing, option B) those activities
+ * are not locked any more: their automatic recovery is exhausted and they run in SIMPLE
+ * mode — the post says how many pets were switched (`$simple`). Counts only (no pet,
+ * family or child; the command's --dry-run lists the pets). Nothing to click — informative.
+ * Low-priority `alerts` queue, like the app error alerts.
  */
 class SendActivityMediaAlert implements ShouldQueue
 {
@@ -24,22 +26,22 @@ class SendActivityMediaAlert implements ShouldQueue
 
     public int $tries = 1;
 
-    public function __construct(public readonly int $count)
+    public function __construct(public readonly int $count, public readonly int $simple = 0)
     {
         $this->onQueue((string) config('system_health.app_errors.alert_queue', 'alerts'));
     }
 
     public function handle(DiscordWebhook $discord): void
     {
-        if ($this->count < 1 || ! $discord->configured()) {
+        if (($this->count < 1 && $this->simple < 1) || ! $discord->configured()) {
             return;
         }
 
         try {
             $discord->send(new AdminAlert(
                 AdminAlertKind::ActivityMediaStuck,
-                __('admin.activity_media.discord.title', ['count' => $this->count]),
-                __('admin.activity_media.discord.body'),
+                __('admin.activity_media.discord.title', ['count' => $this->count, 'simple' => $this->simple]),
+                __('admin.activity_media.discord.body', ['simple' => $this->simple]),
                 [],
             ));
         } catch (DiscordWebhookException $e) {

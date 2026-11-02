@@ -566,8 +566,8 @@ return [
     ],
     'activity_media' => [
         'discord' => [
-            'title' => ':count school / game clip(s) need an admin',
-            'body' => 'A school / game clip (or the reference image it needs) failed after the automatic retries, timed out, or needs review. That activity stays locked for the pet until it is made: Pets → AI media → »Generate missing« (shared looks — the default — and own media), Regenerate (own media only) or »Approve anyway« (Needs review). List: php artisan media:retry-activity-clips --dry-run',
+            'title' => 'School / game clips: :count failed for good, :simple pet(s) switched to simple mode',
+            'body' => 'A school / game clip (or the reference image it needs) failed after every automatic strategy (retries, prompt variants), timed out, or needs review. :simple pet(s) switched to SIMPLE mode: the activity stays playable with the classic stage (no admin action needed) and returns to the full mode by itself once its clips are made. Optional: Pets → AI media → »Generate missing« / Regenerate / »Approve anyway«. List: php artisan media:retry-activity-clips --dry-run',
         ],
     ],
     'app_errors' => [

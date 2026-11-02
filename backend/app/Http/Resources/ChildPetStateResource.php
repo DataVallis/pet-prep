@@ -396,7 +396,9 @@ class ChildPetStateResource extends JsonResource
                  * sleeps (next_allowed_at = when it wakes).
                  *
                  * David 2026-10-28: `media_not_ready` while the school's clips are not all shown
-                 * (the school stays locked, »Šolo še pripravljamo«; see `media_ready`).
+                 * (the school stays locked, »Šolo še pripravljamo«; see `media_ready`) — since
+                 * 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+                 * school is ready in simple mode (`media.phase_groups` without `school`).
                  *
                  * @var 'training_not_available'|'training_pet_sleeping'|'training_session_active'|'media_not_ready'|'training_day_ending'|'training_daily_budget_used'|'training_child_share_used'|null
                  */

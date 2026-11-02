@@ -303,6 +303,8 @@ class Pet extends Model
         // M5-R14 – R20 follow-up: when an existing dog's care tasks start (apps get the tasks themselves).
         'care_tasks_since',
         'care_reminder_check_at',
+        // David 2026-11-02 (self-healing activity clips): activities in simple mode (GameMediaReadiness::simpleGames()).
+        'simple_activities',
     ];
 
     /**
@@ -364,6 +366,7 @@ class Pet extends Model
             'care_tasks_since' => 'datetime',
             'care_reminder_check_at' => 'datetime',
             'birthday_next_check_at' => 'datetime',
+            'simple_activities' => 'array',
         ];
     }
 

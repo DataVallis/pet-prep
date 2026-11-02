@@ -58,15 +58,16 @@ Schedule::command('media:sweep')
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
-// Hourly (David 2026-10-28, home first — school and games locked until their clips are
-// ready): failed school / game clips (fal error, lost webhook, failed generation) are
-// re-queued — at most 3 claims per slot, 30 min after the failure — so an activity is never
-// locked forever; slots out of retries / needing review are posted to Discord once.
+// Hourly (David 2026-10-28, home first — school and games wait for their clips; 2026-11-02
+// self-healing): failed school / game clips are re-queued 30 min after the failure (≤ 2 auto
+// retries per chain; after a fal refusal the next prompt variant, never the identical request);
+// once the recovery is exhausted the activity switches to simple mode (playable, classic stage)
+// and Discord gets one informative post. Chains reported before 2026-11-02 are picked up once.
 Schedule::command('media:retry-activity-clips')
     ->hourlyAt(17)
     ->withoutOverlapping()
     ->name('retry-activity-clips')
-    ->description('Re-queue failed school / game clips that keep an activity locked');
+    ->description('Heal failed school / game clips; exhausted activities switch to simple mode');
 
 // Daily (frugal clips, QA #451 m7): delete zero-cost previews older than frugal_preview_keep_hours.
 Schedule::command('media:frugal-preview --prune')

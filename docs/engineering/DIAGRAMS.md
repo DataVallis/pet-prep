@@ -1436,7 +1436,10 @@ flowchart LR
   GF & TK & EF & DF & SW -.-> AD["media:backfill / Filament Generate missing / Regenerate"]
   GF & EF -.->|"school / game pose · phase clip or the reference image of a pet with phase clips"| AR["hourly media:retry-activity-clips (:17, David 2026-10-28):<br/>≥ 30 min after the failure, ≤ 2 auto retries per failure chain<br/>(look row counts for a shared look), within today's budget"]
   SW -.->|"timed_out: never resubmitted (may still finish at fal)"| AL
-  AR -->|"out of retries · quality_failed · disabled · flagged"| AL["one report per chain:<br/>Discord activity_media_stuck (counts only) + AI media panel LOCKED"] -.-> AD
+  AR -->|"no_media_generated on a pose (2026-11-02)"| PV["next prompt variant (pet_media.prompt_variant)<br/>never the identical request"] --> AR
+  AR -->|"out of retries · refused, no variant left · quality_failed · disabled · flagged"| AL["recovery exhausted, one report per chain:<br/>activity → SIMPLE mode (pets.simple_activities, no phase group, classic stage)<br/>+ Discord activity_media_stuck (counts only) + AI media panel"] -.->|"optional, never needed"| AD
+  AL -.->|"every phase clip shown again (any path)"| FM["full mode returns by itself"]
+  OLD["reports before 2026-11-02 (recovery_version 0)"] -->|"hourly run, once"| AL2["simple mode now + one more try (look row once)"] --> AR
   UP["M5-T16 /admin → Upgrade to new media / media:backfill --state-media:<br/>preview (no spend, per look) → confirm (frozen set, recomputed) →<br/>UpgradePetsToStateMedia chunks → generateMissing(upgrade)"] -.-> RT
 ```
 
@@ -1719,7 +1722,7 @@ flowchart TD
   subgraph Ready [GameMediaReadiness v3]
     RP[play = ball phases + playing + idle]
     RW[wand = wand phases]
-    RF[a FAILED phase clip / pose → activity stays LOCKED<br/>2026-10-28: hourly retry ≤ 3 claims, then Discord + admin panel]
+    RF[a FAILED phase clip / pose → locked while the hourly recovery runs<br/>2026-11-02: exhausted → SIMPLE mode = classic list, group dropped from phase_groups]
     RS[school = all school phases — start condition<br/>422 media_not_ready, training.media_ready]
   end
 ```

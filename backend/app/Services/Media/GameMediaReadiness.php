@@ -45,6 +45,14 @@ use Illuminate\Support\Collection;
  *   slots are retried automatically (ActivityClipRetryService, hourly, capped) and a
  *   slot that runs out of retries is reported to the admin (Discord + AI media
  *   panel, {@see failedClips()}); the admin's Regenerate / »Approve anyway« unlocks it.
+ * - Self-healing, simple mode as the last resort (David 2026-11-02, option B — replaces the
+ *   »locked until an admin acts« end of the rule above): once the automatic recovery of an
+ *   activity is exhausted (ActivityClipRetryService: retries, prompt variants), the activity is
+ *   switched to SIMPLE mode (`pets.simple_activities`): it is ready with the list above
+ *   (school: no clip needed) and the payload's `phase_groups` drops its group, so the app plays
+ *   its existing no-phase-group stage (state loops). When every phase clip of the activity is
+ *   shown again (any path), the full mode returns by itself ({@see simpleGames()}). No admin
+ *   click is ever needed for a child to get a working activity.
  * - Frugal clips (David 2026-10-30): a phase clip served from its source
  *   (MediaEntitlementService::phaseSourceOf — come / place / potty attention from the sit
  *   attention clip) counts when its SOURCE is shown; a failed source keeps it locked.
@@ -76,16 +84,85 @@ class GameMediaReadiness
         return $this->missing($pet, $game, $slots) === [];
     }
 
+    /** Activity → its phase clip group (the payload's `phase_groups`). */
+    public const GROUP_OF = [
+        self::PLAY => PetPhaseClip::GROUP_BALL,
+        self::WAND => PetPhaseClip::GROUP_WAND,
+        self::SCHOOL => PetPhaseClip::GROUP_SCHOOL,
+    ];
+
     /**
-     * The clips of $game the pet is entitled to but does not have yet
-     * (empty = ready). Used by the admin / logs and the tests.
+     * The activities of the pet running in SIMPLE mode now (David 2026-11-02): switched
+     * (`pets.simple_activities`, written by ActivityClipRetryService once the automatic
+     * recovery is exhausted) AND a phase clip of the activity is still not shown. As soon as
+     * every phase clip is shown the activity is full again — no write needed.
      *
      * @param  Collection<int, PetMedia>|null  $slots
      * @return list<string>
      */
-    public function missing(Pet $pet, string $game, ?Collection $slots = null): array
+    public function simpleGames(Pet $pet, ?Collection $slots = null): array
     {
-        $required = $this->requiredClips($pet, $game, $slots);
+        $switched = is_array($pet->simple_activities) ? $pet->simple_activities : [];
+        if ($switched === []) {
+            return [];
+        }
+
+        $out = [];
+        foreach ([self::SCHOOL, self::PLAY, self::WAND] as $game) {
+            if (array_key_exists($game, $switched) && $this->phaseClipsOf($pet, $game) !== []
+                && $this->phasesMissing($pet, $game, $slots) !== []) {
+                $out[] = $game;
+            }
+        }
+
+        return $out;
+    }
+
+    /**
+     * The PHASE clips of $game the pet does not show yet (the classic state clips aside) —
+     * empty = the full activity can be shown.
+     *
+     * @param  Collection<int, PetMedia>|null  $slots
+     * @return list<string>
+     */
+    public function phasesMissing(Pet $pet, string $game, ?Collection $slots = null): array
+    {
+        return array_values(array_filter(
+            $this->missing($pet, $game, $slots, full: true),
+            fn (string $clip) => PetPhaseClip::tryFrom($clip) !== null,
+        ));
+    }
+
+    /**
+     * The phase clip groups the app plays for this pet (the payload's `phase_groups`): the
+     * groups of `phaseClipsFor()` without those of activities in simple mode.
+     *
+     * @param  Collection<int, PetMedia>|null  $slots
+     * @return list<string>
+     */
+    public function phaseGroups(Pet $pet, ?Collection $slots = null): array
+    {
+        $groups = array_values(array_unique(array_map(fn (PetPhaseClip $c) => $c->group(), $this->entitlements->phaseClipsFor($pet))));
+        if ($groups === [] || ! is_array($pet->simple_activities) || $pet->simple_activities === []) {
+            return $groups;
+        }
+        $simple = array_map(fn (string $game) => self::GROUP_OF[$game], $this->simpleGames($pet, $slots));
+
+        return array_values(array_diff($groups, $simple));
+    }
+
+    /**
+     * The clips of $game the pet is entitled to but does not have yet
+     * (empty = ready). Used by the admin / logs and the tests.
+     *
+     * `$full`: the full (phase clip) requirement even for an activity in simple mode.
+     *
+     * @param  Collection<int, PetMedia>|null  $slots
+     * @return list<string>
+     */
+    public function missing(Pet $pet, string $game, ?Collection $slots = null, bool $full = false): array
+    {
+        $required = $this->requiredClips($pet, $game, $slots, $full);
         if ($required === []) {
             return [];
         }
@@ -118,10 +195,13 @@ class GameMediaReadiness
      * The clips $game shows for this pet: the configured list ∩ the pet's entitled states —
      * for a pet with the game's phase clips those phase clips (+ the list for `play`).
      *
+     * An activity in simple mode ({@see simpleGames()}) needs only the list (school: nothing),
+     * unless `$full`.
+     *
      * @param  Collection<int, PetMedia>|null  $slots  the pet's media rows when already loaded
      * @return list<string>
      */
-    public function requiredClips(Pet $pet, string $game, ?Collection $slots = null): array
+    public function requiredClips(Pet $pet, string $game, ?Collection $slots = null, bool $full = false): array
     {
         $entitled = array_map(fn (PetStateEnum $s) => $s->value, $this->entitlements->videoStatesFor($pet));
         $classic = array_values(array_unique(array_intersect(array_map('strval', (array) config("media.game_clips.{$game}", [])), $entitled)));
@@ -129,12 +209,13 @@ class GameMediaReadiness
         // M5-T10: the game's phase clips for a pet that gets them (v3, both switches on).
         $clips = $this->phaseClipsOf($pet, $game);
 
-        if ($clips === []) {
+        if ($clips === [] || (! $full && in_array($game, $this->simpleGames($pet, $slots), true))) {
             return $game === self::SCHOOL ? [] : $classic;
         }
 
         // David 2026-10-28: a failed phase clip / pose no longer falls back to the list above —
-        // the activity stays locked (missing() reports the clip) until it is made.
+        // the activity stays locked (missing() reports the clip) until it is made — or, once the
+        // automatic recovery is exhausted, runs in simple mode (above, David 2026-11-02).
         $phases = array_map(fn (PetPhaseClip $c) => $c->value, $clips);
 
         return match ($game) {
@@ -150,7 +231,7 @@ class GameMediaReadiness
      * without phase clips.
      *
      * @param  Collection<int, PetMedia>|null  $slots
-     * @return array<string, array{ready: bool, missing: list<string>, failed: list<string>}>
+     * @return array<string, array{ready: bool, simple: bool, missing: list<string>, failed: list<string>}>
      */
     public function activities(Pet $pet, ?Collection $slots = null): array
     {
@@ -160,14 +241,22 @@ class GameMediaReadiness
         $image = $slots->first(fn (PetMedia $m) => $m->isImage());
         $imageFailed = $image !== null && $image->status === PetMedia::STATUS_FAILED && ! $image->isServable();
 
+        $simple = $this->simpleGames($pet, $slots);
+
         foreach ([self::SCHOOL, self::PLAY, self::WAND] as $game) {
             $clips = $this->phaseClipsOf($pet, $game);
             if ($clips === []) {
                 continue;
             }
-            $missing = $this->missing($pet, $game, $slots);
+            // The full requirement: what keeps the FULL activity from showing (simple mode says it is playable).
+            $missing = $this->missing($pet, $game, $slots, full: true);
             $failed = $this->failedClips($pet, $clips, $slots);
-            $out[$game] = ['ready' => $missing === [], 'missing' => $missing, 'failed' => $missing !== [] && $imageFailed ? ['reference', ...$failed] : $failed];
+            $out[$game] = [
+                'ready' => $missing === [],
+                'simple' => in_array($game, $simple, true),
+                'missing' => $missing,
+                'failed' => $missing !== [] && $imageFailed ? ['reference', ...$failed] : $failed,
+            ];
         }
 
         return $out;

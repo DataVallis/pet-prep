@@ -68,7 +68,9 @@ final class PreparationPayload
             'announce' => $this->announce,
             // M5-T09 (QA m6): a school phase clip of the pet is still on its way (not stored, not
             // failed) — »Šola se še pripravlja«. Since David 2026-10-28 the school is LOCKED until
-            // all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`).
+            // all its clips are shown (`training.media_ready`, start → 422 `media_not_ready`) —
+            // since 2026-11-02 only while their automatic recovery runs; once it is exhausted the
+            // school is ready in simple mode (no `school` phase group) and this is false.
             // Independent of `running`: the school clips come after the preparation ended.
             'school_pending' => $this->schoolPending,
         ];

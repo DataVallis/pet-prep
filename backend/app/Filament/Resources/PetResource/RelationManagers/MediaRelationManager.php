@@ -89,12 +89,14 @@ class MediaRelationManager extends RelationManager
             default => $fmt($timing['preparation_seconds']),
         };
 
-        // David 2026-10-28: school / games stay locked until their own clips are shown.
+        // David 2026-10-28: school / games wait for their own clips; 2026-11-02: an exhausted
+        // automatic recovery switches the activity to simple mode (playable, no admin needed).
         $activities = [];
         foreach (app(GameMediaReadiness::class)->activities($pet) as $game => $state) {
             $activities[] = $game.': '.match (true) {
                 $state['ready'] => 'open',
-                $state['failed'] !== [] => 'LOCKED — failed: '.implode(', ', $state['failed']).' (auto retry hourly; then »Generate missing« — or Regenerate for own media / Approve anyway for Needs review)',
+                $state['simple'] => 'SIMPLE MODE (playable, classic stage) — failed: '.implode(', ', $state['failed']).' (full mode returns by itself once made; optional »Generate missing« / Regenerate / Approve anyway)',
+                $state['failed'] !== [] => 'waiting — failed: '.implode(', ', $state['failed']).' (automatic recovery hourly; simple mode once it is exhausted)',
                 default => 'preparing ('.count($state['missing']).' clip(s) to come)',
             };
         }
