@@ -19,6 +19,9 @@ use Illuminate\Support\Carbon;
  * again re-enables it. `locale` = the install's language for push texts
  * (M1-18, from the `locale` body field of POST /api/devices; rows from before
  * M1-18 and new rows without the field get 'sl'; null → default English).
+ * `followed_at` (David 2026-11-02) = when a child user last registered this
+ * install: child pushes go only to the latest child row per token (the pet
+ * opened last on a shared phone); null on parent rows and legacy rows.
  *
  * @property int $id
  * @property int $user_id
@@ -28,6 +31,7 @@ use Illuminate\Support\Carbon;
  * @property string|null $app_version
  * @property string|null $locale
  * @property Carbon|null $last_seen_at
+ * @property Carbon|null $followed_at
  * @property Carbon|null $disabled_at
  * @property string|null $disabled_reason
  */
@@ -50,6 +54,7 @@ class DevicePushToken extends Model
         'app_version',
         'locale',
         'last_seen_at',
+        'followed_at',
         'disabled_at',
         'disabled_reason',
     ];
@@ -59,6 +64,7 @@ class DevicePushToken extends Model
         return [
             'platform' => DevicePlatform::class,
             'last_seen_at' => 'datetime',
+            'followed_at' => 'datetime',
             'disabled_at' => 'datetime',
         ];
     }
