@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation. Blueberries are low in calories and provide fibre, vitamin C and antioxidants, but they should be an occasional treat rather than a big part of your dog's diet.",
-    "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane.",
+    "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del pasje prehrane.",
     "de": "Ja, in Maßen. Heidelbeeren sind kalorienarm und liefern Ballaststoffe, Vitamin C und Antioxidantien. Sie sollten aber ein gelegentliches Leckerli bleiben und keinen großen Teil der Ernährung Ihres Hundes ausmachen.",
     "fr": "Oui, avec modération. Les myrtilles sont peu caloriques et apportent des fibres, de la vitamine C et des antioxydants, mais elles doivent rester une friandise occasionnelle plutôt qu’une part importante de l’alimentation de votre chien.",
     "es": "Sí, con moderación. Los arándanos tienen pocas calorías y aportan fibra, vitamina C y antioxidantes, pero deben ser un premio ocasional y no una parte importante de la dieta de tu perro.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
-    "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove.",
+    "sl": "Zaradi velikosti in oblike se pes z njimi lahko zaduši, zlasti če je zelo majhen. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odziva.",
     "de": "Wegen ihrer Größe und Form können sie zur Erstickungsgefahr werden, besonders für sehr kleine Hunde. Wie bei jedem neuen Lebensmittel sollten Sie mit einer kleinen Menge beginnen und beobachten, wie Ihr Hund reagiert.",
     "fr": "Leur taille et leur forme peuvent présenter un risque d’étouffement, en particulier pour les très petits chiens. Comme pour tout nouvel aliment, commencez par une petite quantité et observez la réaction de votre chien.",
     "es": "Por su tamaño y su forma pueden suponer un riesgo de atragantamiento, sobre todo en perros muy pequeños. Como con cualquier alimento nuevo, empieza con poca cantidad y observa cómo reacciona tu perro.",
@@ -235,7 +235,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a643355f01fd206e3329dafadbd4fd4b352ab383256d1adf97242f69241c1c4a"
+      "verified_hash": "f0d5ff53f2308e226b03155315bb118738a0200523c8c2b26af975d2d7792ffc"
     },
     "de": {
       "status": "verified",

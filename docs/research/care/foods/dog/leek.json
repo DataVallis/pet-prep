@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Leek is an allium, like onion and garlic, and it is toxic to dogs. All parts of the plant are harmful, even when cooked or dried. It can damage red blood cells, and signs often take a few days to appear.",
-    "sl": "Ne. Por je luk, tako kot čebula in česen, in je za pse strupen. Škodljivi so vsi deli rastline, tudi kuhani ali posušeni. Lahko poškoduje rdeče krvničke, znaki pa se pogosto pokažejo šele po nekaj dneh.",
+    "sl": "Ne. Por spada med luke, tako kot čebula in česen, in je za pse strupen. Škodljivi so vsi deli rastline, tudi kuhani ali posušeni. Lahko poškoduje rdeče krvničke, znaki pa se pogosto pokažejo šele čez nekaj dni.",
     "de": "Nein. Lauch gehört wie Zwiebeln und Knoblauch zu den Lauchgewächsen (Allium) und ist für Hunde giftig. Alle Teile der Pflanze sind schädlich, auch gekocht oder getrocknet. Lauch kann rote Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen.",
     "fr": "Non. Le poireau est un allium, comme l’oignon et l’ail, et il est toxique pour les chiens. Toutes les parties de la plante sont nocives, même cuites ou séchées. Il peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
     "es": "No. El puerro es una aliácea, como la cebolla y el ajo, y es tóxico para los perros. Todas las partes de la planta son perjudiciales, incluso cocinadas o secas. Puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
-    "sl": "Spada v družino lukov (čebula, česen, por, drobnjak), ki je za pse strupena. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljivi so vsi deli in vse oblike: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
+    "sl": "Por spada med luke (čebula, česen, por, drobnjak), ki so za pse strupeni. Te rastline vsebujejo snovi, ki poškodujejo rdeče krvničke in lahko povzročijo slabokrvnost. Škodljive so vse oblike in vsi deli rastline: surove, kuhane, posušene in v prahu. Prebavne težave se lahko pojavijo pri vsaki količini, večje količine pa poškodujejo kri.",
     "de": "Lauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Stoffe, die rote Blutkörperchen schädigen und zu Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "Le poireau appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : cru, cuit, séché et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
@@ -181,7 +181,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away. Note what was eaten (leek) and roughly how much. Don't wait for signs: damage to the blood usually shows only a few days later.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je pes pojedel (por) in približno koliko. Ne čakajte na znake: okvara krvi se običajno pokaže šele po nekaj dneh.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pes pojedel (por) in približno koliko. Ne čakajte na znake: poškodba krvi se običajno pokaže šele čez nekaj dni.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde (Lauch), und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Schäden am Blut zeigen sich meist erst einige Tage später.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qui a été mangé (poireau) et en quelle quantité approximative. N’attendez pas l’apparition des signes : les dommages au sang n’apparaissent généralement qu’après quelques jours.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido (puerro) y más o menos cuánto. No esperes a que aparezcan síntomas: el daño en la sangre suele notarse solo unos días después.",
@@ -199,7 +199,7 @@
   "serving": null,
   "child": {
     "en": "Leeks belong to the onion family, so they are not for dogs. Tell a grown-up if your dog eats some.",
-    "sl": "Por spada v družino čebule, zato ni za pse. Povej odraslemu, če ga pes poje.",
+    "sl": "Por je sorodnik čebule, zato ni za pse. Če ga pes poje, povej odraslemu.",
     "de": "Lauch gehört zur Zwiebelfamilie und ist deshalb nichts für Hunde. Wenn dein Hund etwas davon frisst, sag einem Erwachsenen Bescheid.",
     "fr": "Le poireau est de la famille de l’oignon, alors il n’est pas pour les chiens. Préviens un adulte si ton chien en mange.",
     "es": "Los puerros son de la familia de la cebolla, así que no son para perros. Avisa a un adulto si tu perro se come un poco.",
@@ -235,7 +235,7 @@
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
-        "sl": "Česen in čebula najpogosteje povzročita zastrupitev, a por spada v isto strupeno družino rastlin, zato z njim ravnajte enako.",
+        "sl": "Najpogostejša vzroka zastrupitve sta česen in čebula, a por spada v isto strupeno družino rastlin, zato z njim ravnajte enako.",
         "de": "Knoblauch und Zwiebeln sind die häufigsten Ursachen von Vergiftungen, aber Lauch gehört zur selben giftigen Pflanzenfamilie und sollte genauso behandelt werden.",
         "fr": "L’ail et l’oignon sont les causes d’intoxication les plus fréquentes, mais le poireau appartient à la même famille de plantes toxiques et doit être traité de la même façon.",
         "es": "El ajo y la cebolla son las causas más frecuentes de intoxicación, pero el puerro pertenece a la misma familia de plantas tóxicas y hay que tratarlo igual.",
@@ -271,7 +271,7 @@
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
-        "sl": "Ne. Za pse so strupene surove, kuhane, posušene, praškaste in tekoče oblike.",
+        "sl": "Ne. Za pse so strupene vse oblike pora: surov, kuhan, posušen, v prahu in v tekoči obliki.",
         "de": "Nein. Roh, gekocht, getrocknet, als Pulver und in flüssiger Form ist er für Hunde giftig.",
         "fr": "Non. Cru, cuit, séché, en poudre ou sous forme liquide, il est toujours toxique pour les chiens.",
         "es": "No. Crudo, cocinado, seco, en polvo o en forma líquida, siempre es tóxico para los perros.",
@@ -377,7 +377,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "21fd56b8d6e8a36acda7a28fa21b9aea9ed0dae1983bc92dad38c5ca7af3c5f1"
+      "verified_hash": "b071d026309f55dfafcfb96914877423f31418b375d29def16289c65fbc5a167"
     },
     "de": {
       "status": "verified",

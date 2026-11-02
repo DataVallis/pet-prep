@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not regularly. A small amount of tuna may not cause harm, but tinned tuna for people lacks nutrients cats need, can be high in salt and mercury, and some vets advise against it even as a treat. It is never a complete diet.",
-    "sl": "Ne redno. Majhna količina tune morda ne škodi, vendar konzervirani tuni za ljudi manjkajo hranila, ki jih mačke potrebujejo, lahko ima veliko soli in živega srebra, nekateri veterinarji pa jo odsvetujejo celo kot priboljšek. Nikoli ni popolna prehrana.",
+    "sl": "Ne redno. Majhna količina tune morda ne škodi, vendar konzervirani tuni, namenjeni ljudem, manjkajo hranila, ki jih mačke potrebujejo, lahko vsebuje veliko soli in živega srebra, nekateri veterinarji pa jo odsvetujejo celo kot priboljšek. Sama po sebi nikoli ni popolna prehrana.",
     "de": "Nicht regelmäßig. Eine kleine Menge Thunfisch schadet vielleicht nicht, aber dem Dosenthunfisch für Menschen fehlen Nährstoffe, die Katzen brauchen, er kann viel Salz und Quecksilber enthalten, und manche Tierärzte raten sogar als Leckerli davon ab. Eine vollständige Ernährung ist er nie.",
     "fr": "Pas régulièrement. Une petite quantité de thon n’est peut-être pas nocive, mais le thon en conserve pour humains manque de nutriments dont les chats ont besoin, peut être riche en sel et en mercure, et certains vétérinaires le déconseillent même en friandise. Ce n’est jamais une alimentation complète.",
     "es": "No de forma habitual. Un poco de atún puede no hacerle daño, pero el atún en lata para personas no tiene nutrientes que los gatos necesitan, puede tener mucha sal y mercurio, y algunos veterinarios lo desaconsejan incluso como premio. Nunca es una alimentación completa.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Sources disagree, so we use the stricter level. RSPCA Australia allows tinned tuna in spring water as an occasional treat. VCA says cats shouldn't eat tuna, not even as a treat, because it lacks essential nutrients and has too much unsaturated fat. Cats Protection warns it can be high in salt and mercury and cause weight gain. The Merck Veterinary Manual notes vitamin E deficiency in cats given large quantities of canned tuna.",
-    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. RSPCA Avstralija dovoljuje konzervirano tuno v izvirski vodi kot občasen priboljšek. VCA navaja, da mačke tune ne bi smele jesti niti kot priboljšek, ker ji manjkajo nujna hranila in ima preveč nenasičenih maščob. Cats Protection opozarja, da ima lahko veliko soli in živega srebra ter mačko zredi. Merckov veterinarski priročnik omenja pomanjkanje vitamina E pri mačkah, ki so dobivale velike količine konzervirane tune.",
+    "sl": "Viri se razlikujejo, zato uporabljamo strožjo stopnjo. RSPCA Avstralija dovoljuje konzervirano tuno v izvirski vodi kot občasen priboljšek. VCA navaja, da mačke tune ne bi smele jesti niti kot priboljšek, ker ji manjkajo nujna hranila in vsebuje preveč nenasičenih maščob. Cats Protection opozarja, da lahko vsebuje veliko soli in živega srebra ter da lahko povzroči prekomerno težo. Merckov veterinarski priročnik omenja pomanjkanje vitamina E pri mačkah, ki so dobivale velike količine konzervirane tune.",
     "de": "Die Quellen sind sich nicht einig, daher wählen wir die strengere Einstufung. RSPCA Australia erlaubt Dosenthunfisch in Quellwasser als gelegentliches Leckerli. VCA sagt, Katzen sollten keinen Thunfisch fressen, nicht einmal als Leckerli, weil ihm wichtige Nährstoffe fehlen und er zu viel ungesättigtes Fett enthält. Cats Protection warnt, dass er viel Salz und Quecksilber enthalten und zu Gewichtszunahme führen kann. Das Merck Veterinary Manual beschreibt Vitamin-E-Mangel bei Katzen, die große Mengen Dosenthunfisch bekamen.",
     "fr": "Les sources ne sont pas d’accord ; nous retenons donc le niveau le plus prudent. La RSPCA Australia accepte le thon en conserve au naturel (à l’eau) comme friandise occasionnelle. Selon VCA, les chats ne devraient pas manger de thon, même en friandise, car il manque de nutriments essentiels et contient trop de graisses insaturées. Cats Protection avertit qu’il peut être riche en sel et en mercure et faire prendre du poids. Le Merck Veterinary Manual signale des carences en vitamine E chez des chats nourris avec de grandes quantités de thon en conserve.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. RSPCA Australia admite el atún en lata al natural (en agua) como premio ocasional. VCA dice que los gatos no deberían comer atún, ni siquiera como premio, porque le faltan nutrientes esenciales y tiene demasiada grasa insaturada. Cats Protection advierte de que puede tener mucha sal y mercurio y hacer que el gato engorde. El Manual Merck de Veterinaria señala carencia de vitamina E en gatos que comían grandes cantidades de atún en lata.",
@@ -92,7 +92,7 @@
       "Weight gain if fed often"
     ],
     "sl": [
-      "Pridobivanje teže pri pogostem hranjenju"
+      "Povečanje telesne teže pri pogostem hranjenju"
     ],
     "de": [
       "Gewichtszunahme bei häufiger Fütterung"
@@ -136,7 +136,7 @@
   },
   "what_to_do": {
     "en": "A bite of tuna is unlikely to be a problem. Don't make it a habit or a main meal. If your cat seems unwell after eating tuna, or eats a lot of it often, talk to your vet.",
-    "sl": "Grižljaj tune najverjetneje ne bo težava. Naj ne postane navada ali glavni obrok. Če se mačka po tuni ne počuti dobro ali je pogosto poje veliko, se posvetujte z veterinarjem.",
+    "sl": "Grižljaj tune verjetno ne bo težava. Naj ne postane navada ali glavni obrok. Če se mačka po tuni ne počuti dobro ali pogosto poje veliko tune, se posvetujte z veterinarjem.",
     "de": "Ein Happen Thunfisch ist wahrscheinlich kein Problem. Machen Sie daraus aber keine Gewohnheit und keine Hauptmahlzeit. Wirkt Ihre Katze nach dem Thunfisch krank oder frisst sie oft viel davon, sprechen Sie mit Ihrem Tierarzt.",
     "fr": "Une bouchée de thon a peu de chances de poser problème. N’en faites pas une habitude ni un repas principal. Si votre chat semble malade après avoir mangé du thon, ou s’il en mange souvent beaucoup, parlez-en à votre vétérinaire.",
     "es": "Un bocado de atún probablemente no sea un problema. No lo conviertas en costumbre ni en una comida principal. Si tu gato parece encontrarse mal después de comer atún, o come mucho atún a menudo, habla con tu veterinario.",
@@ -170,7 +170,7 @@
   },
   "child": {
     "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
-    "sl": "Mucke imajo rade tuno, a preveč tune ni zdravo. Močne jih ohranja njihova mačja hrana.",
+    "sl": "Muce imajo rade tuno, vendar preveč tune ni zdravo. Močne ostanejo s svojo mačjo hrano.",
     "de": "Katzen lieben Thunfisch, aber zu viel davon ist nicht gesund. Ihr eigenes Katzenfutter hält sie stark.",
     "fr": "Les chats adorent le thon, mais trop, ce n’est pas bon pour la santé. Leur nourriture pour chat les garde en pleine forme.",
     "es": "A los gatos les encanta el atún, pero demasiado no es sano. Su propia comida para gatos los mantiene fuertes.",
@@ -189,7 +189,7 @@
     {
       "q": {
         "en": "Can my cat live on tuna?",
-        "sl": "Ali lahko mačka živi samo od tune?",
+        "sl": "Ali lahko mačka živi samo s tuno?",
         "de": "Kann meine Katze von Thunfisch leben?",
         "fr": "Mon chat peut-il se nourrir uniquement de thon ?",
         "es": "¿Puede mi gato alimentarse solo de atún?",
@@ -285,7 +285,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c11ef83400afc798b5c749175bbbdee043eea72e769e4b02362b7bea0dbfceaf"
+      "verified_hash": "75a906fffeafff9c40e1b04675dc2c30b44923d8705679457dfbfa3d3e9903e9"
     },
     "de": {
       "status": "verified",

@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, walnuts are best kept away from cats. They contain a lot of oils and fats, which can make a cat unwell and may cause vomiting or diarrhoea.",
-    "sl": "Ne, orehov mački raje ne dajajte. Vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti, lahko pa povzročijo tudi bruhanje ali drisko.",
+    "sl": "Ne, orehov mački raje ne dajajte. Vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti, povzročijo pa lahko tudi bruhanje ali drisko.",
     "de": "Nein, Walnüsse halten Sie besser von Katzen fern. Sie enthalten viel Öl und Fett, was einer Katze nicht gut bekommen und Erbrechen oder Durchfall verursachen kann.",
     "fr": "Non, mieux vaut tenir les noix loin des chats. Elles contiennent beaucoup d’huiles et de graisses, qui peuvent rendre un chat malade et provoquer des vomissements ou de la diarrhée.",
     "es": "No, es mejor mantener las nueces lejos de los gatos. Contienen muchos aceites y grasas, que pueden sentarle mal a un gato y causarle vómitos o diarrea.",
@@ -97,8 +97,8 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Razdražen želodec",
-      "Mačka deluje bolna"
+      "Želodčne težave",
+      "Mačka se zdi bolna"
     ],
     "de": [
       "Erbrechen",
@@ -181,7 +181,7 @@
   },
   "what_to_do": {
     "en": "If your cat ate walnuts, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when.",
-    "sl": "Če je muca pojedla orehe, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj.",
+    "sl": "Če je mačka pojedla orehe, se za nasvet obrnite na veterinarja, zlasti če jih je bilo veliko ali se ne počuti dobro. Zapišite si, kaj je pojedla, koliko in kdaj.",
     "de": "Wenn Ihre Katze Walnüsse gefressen hat, lassen Sie sich von Ihrem Tierarzt beraten, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann.",
     "fr": "Si votre chat a mangé des noix, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure.",
     "es": "Si tu gato ha comido nueces, pide consejo a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Anota qué ha comido, cuánto y cuándo.",
@@ -218,7 +218,7 @@
     {
       "q": {
         "en": "Are some nuts worse than others?",
-        "sl": "Ali so nekateri oreščki hujši od drugih?",
+        "sl": "Ali so nekateri oreščki bolj nevarni od drugih?",
         "de": "Sind manche Nüsse schlimmer als andere?",
         "fr": "Certains fruits à coque sont-ils plus dangereux que d’autres ?",
         "es": "¿Hay frutos secos peores que otros?",
@@ -235,7 +235,7 @@
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
-        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost.",
+        "sl": "Da. Makadamije so mastne in so za mačke tudi strupene, zato bodite pri njih najbolj previdni.",
         "de": "Ja. Macadamianüsse sind fettreich und zudem giftig für Katzen; bei ihnen ist also besondere Vorsicht geboten.",
         "fr": "Oui. Les noix de macadamia sont grasses et, en plus, toxiques pour les chats : ce sont celles dont il faut se méfier le plus.",
         "es": "Sí. Las nueces de macadamia son grasas y además tóxicas para los gatos, así que son las que exigen más cuidado.",
@@ -284,7 +284,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8c722348d76d050c29f6f9a44a255c11af04854c5cd9ab437f5607d9c92b0a2e"
+      "verified_hash": "cfa29e6f706e4cb3633acb35d7291818062e29174ca07c11fd4d71b7aaa5e3ac"
     },
     "de": {
       "status": "verified",

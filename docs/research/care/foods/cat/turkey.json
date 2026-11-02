@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked turkey is fine as an occasional treat. Remove bones and skin and skip seasoning, stuffing and gravy. Turkey on its own isn't a complete diet.",
-    "sl": "Da, malo navadnega kuhanega puranjega mesa je v redu kot občasen priboljšek. Odstranite kosti in kožo ter izpustite začimbe, nadev in omako. Puran sam po sebi ni popolna prehrana.",
+    "sl": "Da, malo navadnega kuhanega puranjega mesa je v redu kot občasen priboljšek. Odstranite kosti in kožo, meso pa naj bo brez začimb, nadeva in omake. Samo puranje meso ni popolna prehrana.",
     "de": "Ja, ein wenig pures, gegartes Putenfleisch ist als gelegentliches Leckerli in Ordnung. Entfernen Sie Knochen und Haut und verzichten Sie auf Gewürze, Füllung und Bratensoße. Putenfleisch allein ist keine vollwertige Ernährung.",
     "fr": "Oui, un peu de dinde cuite nature convient comme friandise occasionnelle. Retirez les os et la peau, et évitez assaisonnement, farce et jus de cuisson. La dinde seule n’est pas une alimentation complète.",
     "es": "Sí, un poco de pavo cocinado y sin nada añadido está bien como premio ocasional. Quítale los huesos y la piel, y nada de condimentos, relleno ni salsa. El pavo por sí solo no es una alimentación completa.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Cats Protection says plain cooked turkey is fine as an occasional treat but shouldn't be given regularly, as turkey alone lacks nutrients cats need. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and roast skin may carry garlic or herbs. Turkey bones can splinter and cause choking or blockages.",
-    "sl": "Cats Protection navaja, da je navaden kuhan puran v redu kot občasen priboljšek, ne pa redno, ker puran sam ne vsebuje vseh hranil, ki jih mačke potrebujejo. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, pečena koža pa ima lahko česen ali zelišča. Puranje kosti se lahko razcepijo in povzročijo dušenje ali zamašitev.",
+    "sl": "Cats Protection navaja, da je navadno kuhano puranje meso v redu kot občasen priboljšek, ne pa kot redna hrana, saj samo puranje meso ne vsebuje vseh hranil, ki jih mačke potrebujejo. Puranja koža vsebuje veliko maščob in lahko povzroči prebavne težave ali celo vnetje trebušne slinavke, pečena koža pa je lahko začinjena s česnom ali zelišči. Puranje kosti se lahko razcepijo in povzročijo dušenje ali zamašitev.",
     "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, sollte aber nicht regelmäßig gegeben werden, da Pute allein nicht alle Nährstoffe enthält, die Katzen brauchen. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, und die Haut eines Bratens kann Knoblauch oder Kräuter abbekommen haben. Putenknochen können splittern und zum Ersticken oder zu Blockaden im Verdauungstrakt führen.",
     "fr": "Selon Cats Protection, un peu de dinde cuite nature convient comme friandise occasionnelle, mais ne doit pas être donnée régulièrement, car la dinde seule n’apporte pas tous les nutriments dont les chats ont besoin. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et la peau d’une dinde rôtie peut avoir été en contact avec de l’ail ou des herbes. Les os de dinde peuvent se briser en éclats et provoquer un étouffement ou une occlusion.",
     "es": "Cats Protection dice que el pavo cocinado sin nada añadido está bien como premio ocasional, pero que no hay que darlo de forma habitual, porque el pavo solo no tiene todos los nutrientes que los gatos necesitan. La piel del pavo tiene mucha grasa y puede causar molestias digestivas o incluso pancreatitis, y la piel del pavo asado puede llevar ajo o hierbas. Los huesos de pavo pueden astillarse y causar atragantamiento u obstrucciones.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat ate turkey bones, stuffing or gravy with onion or garlic, call your vet straight away.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pojedla puranje kosti, nadev ali omako s čebulo ali česnom, takoj pokličite veterinarja.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima drisko, nehajte in se posvetujte z veterinarjem. Če je mačka pojedla puranje kosti, nadev ali omako s čebulo ali česnom, takoj pokličite veterinarja.",
     "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze Putenknochen, Füllung oder Bratensoße mit Zwiebeln oder Knoblauch gefressen, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a mangé des os de dinde, de la farce ou un jus de cuisson contenant de l’oignon ou de l’ail, appelez immédiatement votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Si tu gato ha comido huesos de pavo, relleno o salsa con cebolla o ajo, llama a tu veterinario enseguida.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
-    "sl": "Navadno kuhano meso brez kosti, kože in začimb; majhna količina, upoštevana v dnevnem obroku.",
+    "sl": "Navadno kuhano meso brez kosti, kože in začimb; majhna količina, všteta v dnevno količino hrane.",
     "de": "Gegartes Fleisch pur, ohne Knochen, Haut und Gewürze; eine kleine Menge, die zur täglichen Futtermenge zählt.",
     "fr": "Viande cuite nature, sans os, sans peau ni assaisonnement ; une petite quantité, comptée dans la ration quotidienne.",
     "es": "Carne cocinada sin nada añadido, sin huesos, piel ni condimentos; una pequeña cantidad, contada dentro de su comida diaria.",
@@ -124,7 +124,7 @@
   },
   "child": {
     "en": "A little plain turkey with no bones can be a cat treat. The skin and gravy stay on your plate.",
-    "sl": "Malo navadnega purana brez kosti je lahko priboljšek za mucke. Koža in omaka ostaneta na tvojem krožniku.",
+    "sl": "Malo navadnega puranjega mesa brez kosti je lahko priboljšek za muce. Koža in omaka ostaneta na tvojem krožniku.",
     "de": "Ein bisschen Putenfleisch ohne alles und ohne Knochen kann ein Leckerli für Katzen sein. Die Haut und die Soße bleiben auf deinem Teller.",
     "fr": "Un peu de dinde nature sans os peut être une friandise pour chat. La peau et la sauce restent dans ton assiette.",
     "es": "Un poco de pavo sin nada añadido y sin huesos puede ser un premio para gatos. La piel y la salsa se quedan en tu plato.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "It's best not to. Turkey skin is high in fat and can cause digestive upset or even pancreatitis, and it may have touched seasoning or garlic.",
-        "sl": "Bolje ne. Puranja koža ima veliko maščob in lahko povzroči prebavne težave ali celo pankreatitis, lahko pa je prišla v stik z začimbami ali česnom.",
+        "sl": "Bolje ne. Puranja koža vsebuje veliko maščob in lahko povzroči prebavne težave ali celo vnetje trebušne slinavke, lahko pa je bila tudi v stiku z začimbami ali česnom.",
         "de": "Besser nicht. Putenhaut ist sehr fettreich und kann Verdauungsbeschwerden oder sogar eine Pankreatitis auslösen, und sie kann mit Gewürzen oder Knoblauch in Berührung gekommen sein.",
         "fr": "Mieux vaut s’en abstenir. La peau de dinde est très grasse et peut provoquer des troubles digestifs, voire une pancréatite, et elle a pu être en contact avec un assaisonnement ou de l’ail.",
         "es": "Mejor que no. La piel del pavo tiene mucha grasa y puede causar molestias digestivas o incluso pancreatitis, y puede haber estado en contacto con condimentos o ajo.",
@@ -237,7 +237,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "76e22b74102d03dc593994d3f0de9c6531e130160d63ff4555e3b91575f65b9e"
+      "verified_hash": "d39472c59f1ab40d03e6ca255397fdc485c6faf7815b8c92e7b79043088c893a"
     },
     "de": {
       "status": "verified",

@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Raw salmon can carry parasites and bacteria; in the Pacific Northwest of the USA it can cause salmon poisoning disease, which is serious if untreated. Salmon has small, brittle bones that can cause choking. Smoked salmon and lox are high in salt. Seasonings, oils and sauces don't belong on a dog's portion.",
-    "sl": "Surov losos lahko prenaša zajedavce in bakterije; na pacifiškem severozahodu ZDA lahko povzroči bolezen »zastrupitev z lososom«, ki je brez zdravljenja resna. Losos ima drobne, krhke kosti, ki lahko povzročijo dušenje. Dimljen losos vsebuje veliko soli. Začimbe, olja in omake ne sodijo na pasji obrok.",
+    "sl": "Surov losos lahko vsebuje zajedavce in bakterije; na pacifiškem severozahodu ZDA lahko povzroči zastrupitev z lososom, bolezen, ki je brez zdravljenja resna. Losos ima drobne, krhke kosti, ki lahko povzročijo dušenje. Dimljen losos vsebuje veliko soli. Začimbe, olja in omake ne sodijo na pasji obrok.",
     "de": "Roher Lachs kann Parasiten und Bakterien übertragen; im pazifischen Nordwesten der USA kann er die Lachsvergiftung (Salmon Poisoning Disease) auslösen, die unbehandelt schwer verläuft. Lachs hat kleine, brüchige Gräten, an denen ein Hund ersticken kann. Räucherlachs und Lox sind sehr salzig. Gewürze, Öle und Saucen gehören nicht auf die Portion eines Hundes.",
     "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien.",
     "es": "El salmón crudo puede llevar parásitos y bacterias; en el noroeste del Pacífico de Estados Unidos puede causar la enfermedad por intoxicación del salmón, que es grave si no se trata. El salmón tiene espinas pequeñas y quebradizas que pueden provocar atragantamiento. El salmón ahumado y el lox tienen mucha sal. Los condimentos, aceites y salsas no deben estar en la ración del perro.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate raw salmon, especially from the Pacific Northwest of the USA, call your vet and mention it; watch for fever, weakness, loss of appetite, vomiting or diarrhoea. If your dog swallowed bones and is choking, call your vet straight away.",
-    "sl": "Če je pes pojedel surovega lososa, posebej s pacifiškega severozahoda ZDA, pokličite veterinarja in mu to povejte; opazujte, ali se pojavijo vročina, šibkost, izguba apetita, bruhanje ali driska. Če je pes pogoltnil kosti in se duši, takoj pokličite veterinarja.",
+    "sl": "Če je pes pojedel surovega lososa, zlasti s pacifiškega severozahoda ZDA, pokličite veterinarja in mu to povejte; opazujte, ali se pojavijo vročina, šibkost, izguba apetita, bruhanje ali driska. Če je pes pogoltnil kosti in se duši, takoj pokličite veterinarja.",
     "de": "Hat Ihr Hund rohen Lachs gefressen, besonders aus dem pazifischen Nordwesten der USA, rufen Sie Ihren Tierarzt an und erwähnen Sie das; achten Sie auf Fieber, Schwäche, Appetitlosigkeit, Erbrechen oder Durchfall. Hat Ihr Hund Gräten verschluckt und droht zu ersticken, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Si votre chien a mangé du saumon cru, surtout venant du Nord-Ouest Pacifique des États-Unis, appelez votre vétérinaire et signalez-le ; surveillez fièvre, faiblesse, perte d’appétit, vomissements ou diarrhée. Si votre chien a avalé des arêtes et s’étouffe, appelez immédiatement votre vétérinaire.",
     "es": "Si tu perro ha comido salmón crudo, sobre todo del noroeste del Pacífico de Estados Unidos, llama a tu veterinario y díselo; vigila si tiene fiebre, debilidad, pérdida de apetito, vómitos o diarrea. Si se ha tragado espinas y se está atragantando, llama a tu veterinario de inmediato.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Fully cooked (baked, steamed or grilled), plain, no seasoning, oils or sauces, boneless fillet; never raw or smoked.",
-    "sl": "Popolnoma kuhan (pečen, na pari ali na žaru), brez začimb, olj in omak, file brez kosti; nikoli surov ali dimljen.",
+    "sl": "Popolnoma kuhan (pečen, na pari ali na žaru), brez začimb, olj in omak, filet brez kosti; nikoli surov ali dimljen.",
     "de": "Vollständig gegart (gebacken, gedämpft oder gegrillt), pur, ohne Gewürze, Öle oder Saucen, als grätenfreies Filet; nie roh oder geräuchert.",
     "fr": "Bien cuit (au four, à la vapeur ou grillé), nature, sans assaisonnement, huile ni sauce, en filet sans arêtes ; jamais cru ni fumé.",
     "es": "Bien cocinado (al horno, al vapor o a la plancha), sin nada, sin condimentos, aceites ni salsas, en filete sin espinas; nunca crudo ni ahumado.",
@@ -196,7 +196,7 @@
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
-        "sl": "Losos v komercialni pasji hrani je običajno varen, ker je kuhan.",
+        "sl": "Losos v industrijsko pripravljeni pasji hrani je običajno varen, ker je kuhan.",
         "de": "Lachs in handelsüblichem Hundefutter ist in der Regel unbedenklich, weil er gegart ist.",
         "fr": "Le saumon des aliments industriels est généralement sans danger, car il est cuit.",
         "es": "El salmón de los piensos comerciales suele ser seguro porque está cocinado.",
@@ -283,7 +283,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "da26993b6aaf295646a10d4e56b55233038f1a33777c85c078a9338cdbe909cb"
+      "verified_hash": "d83f4e030d9bac0316ee2787de4e07b3bc1daa54775f95b926b8d2faa2a7a0aa"
     },
     "de": {
       "status": "verified",

@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, ice cream is not a good treat for cats. It is made with milk and cream, which can upset a cat's stomach, and it adds fat and sugar that cats don't need.",
-    "sl": "Ne, sladoled ni dober priboljšek za mačke. Narejen je iz mleka in smetane, ki mački lahko razdražita želodec, poleg tega pa vsebuje maščobe in sladkor, ki jih mačke ne potrebujejo.",
+    "sl": "Ne, sladoled ni dober priboljšek za mačke. Narejen je iz mleka in smetane, ki mački lahko pokvarita želodec, vsebuje pa tudi maščobe in sladkor, česar mačke ne potrebujejo.",
     "de": "Nein, Eis ist kein gutes Leckerli für Katzen. Es wird aus Milch und Sahne hergestellt, die einer Katze auf den Magen schlagen können, und liefert Fett und Zucker, die Katzen nicht brauchen.",
     "fr": "Non, la glace n’est pas une bonne friandise pour les chats. Elle est faite avec du lait et de la crème, qui peuvent leur déranger l’estomac, et elle apporte des graisses et du sucre dont ils n’ont pas besoin.",
     "es": "No, el helado no es un buen premio para los gatos. Se hace con leche y nata, que pueden sentarle mal al estómago de un gato, y aporta grasa y azúcar que los gatos no necesitan.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Adult cats have little lactase, the enzyme that digests milk sugar, so milk and other dairy-based products can cause diarrhoea or other digestive upset. Cream and dairy products are high in fat and can lead to weight gain. Sugar isn't toxic to cats, but it is still unhealthy for them and adds calories they don't need.",
-    "sl": "Odrasle mačke imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Smetana in mlečni izdelki imajo veliko maščob in lahko vodijo v debelost. Sladkor za mačke ni strupen, je pa nezdrav in jim prinaša nepotrebne kalorije.",
+    "sl": "Odrasle mačke imajo malo laktaze, encima, ki prebavlja mlečni sladkor, zato lahko mleko in drugi mlečni izdelki povzročijo drisko ali druge prebavne težave. Smetana in mlečni izdelki vsebujejo veliko maščob in lahko vodijo v čezmerno telesno težo. Sladkor za mačke ni strupen, je pa nezdrav in jim prinaša nepotrebne kalorije.",
     "de": "Erwachsene Katzen haben wenig Laktase, das Enzym, das Milchzucker verdaut. Daher können Milch und andere Milchprodukte Durchfall oder andere Verdauungsbeschwerden verursachen. Sahne und Milchprodukte sind fettreich und können zu Gewichtszunahme führen. Zucker ist für Katzen nicht giftig, aber trotzdem ungesund und liefert Kalorien, die sie nicht brauchen.",
     "fr": "Les chats adultes ont peu de lactase, l’enzyme qui digère le sucre du lait ; le lait et les autres produits laitiers peuvent donc provoquer de la diarrhée ou d’autres troubles digestifs. La crème et les produits laitiers sont riches en graisses et peuvent faire prendre du poids. Le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé et apporte des calories dont ils n’ont pas besoin.",
     "es": "Los gatos adultos tienen poca lactasa, la enzima que digiere el azúcar de la leche, así que la leche y otros productos lácteos pueden causar diarrea u otros trastornos digestivos. La nata y los lácteos tienen mucha grasa y pueden hacer que el gato engorde. El azúcar no es tóxico para los gatos, pero aun así no es sano para ellos y aporta calorías que no necesitan.",
@@ -96,7 +96,7 @@
     "sl": [
       "Driska",
       "Bruhanje",
-      "Razdražen želodec"
+      "Želodčne težave"
     ],
     "de": [
       "Durchfall",
@@ -184,7 +184,7 @@
   "serving": null,
   "child": {
     "en": "Ice cream is a treat for people. It can give cats a sore tummy, so keep your cone to yourself.",
-    "sl": "Sladoled je posladek za ljudi. Mucki lahko povzroči bolan trebušček, zato kornet obdrži zase.",
+    "sl": "Sladoled je posladek za ljudi. Muco lahko zaboli trebušček, zato kornet obdrži zase.",
     "de": "Eis ist ein Leckerli für Menschen. Katzen kann es Bauchweh machen, also behalte deine Eiswaffel lieber für dich.",
     "fr": "La glace, c’est une friandise pour les humains. Elle peut donner mal au ventre aux chats, alors garde ton cornet pour toi.",
     "es": "El helado es un capricho para personas. Puede darles dolor de barriga a los gatos, así que el cucurucho, para ti.",
@@ -291,7 +291,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8780c646033375248e5ec5fcc0cd3fbebc60abf806c633700a36a98165347730"
+      "verified_hash": "658be3f1f7f1027cc26c0ccbb0e77070abcd4b3f5d98203a81022aef148ddcc3"
     },
     "de": {
       "status": "verified",

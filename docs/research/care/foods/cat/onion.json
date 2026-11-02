@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Onion is toxic to cats in every form — raw, cooked, dried or powdered. It can damage red blood cells and cause anaemia, and cats are the most sensitive species. Call your vet if your cat eats any.",
-    "sl": "Ne. Čebula je za mačke strupena v vseh oblikah – surova, kuhana, sušena ali v prahu. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost, mačke pa so najbolj občutljive. Če jo muca poje, pokličite veterinarja.",
+    "sl": "Ne. Čebula je za mačke strupena v vseh oblikah – surova, kuhana, sušena ali v prahu. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost, mačke pa so med vsemi vrstami najbolj občutljive. Če jo mačka poje, pokličite veterinarja.",
     "de": "Nein. Zwiebeln sind für Katzen in jeder Form giftig – roh, gekocht, getrocknet oder als Pulver. Sie können rote Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen, und Katzen sind die empfindlichste Tierart. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. L’oignon est toxique pour les chats sous toutes ses formes – cru, cuit, séché ou en poudre. Il peut endommager les globules rouges et provoquer une anémie, et le chat est l’espèce la plus sensible. Appelez votre vétérinaire si votre chat en mange.",
     "es": "No. La cebolla es tóxica para los gatos en cualquier forma: cruda, cocinada, deshidratada o en polvo. Puede dañar los glóbulos rojos y causar anemia, y el gato es la especie más sensible. Llama a tu veterinario si tu gato se come un poco.",
@@ -100,7 +100,7 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Slabši apetit",
+      "Slabši tek",
       "Šibkost",
       "Blede dlesni",
       "Rdečkast urin",
@@ -226,7 +226,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se mačka zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite si, kaj je pojedla (surova čebula, kuhana, v prahu ali jed s čebulo), koliko in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn Ihre Katze gesund wirkt – Anzeichen einer Blutarmut können erst nach mehreren Tagen auftreten. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Anota qué ha comido tu gato (cebolla cruda, cocinada, en polvo o un plato que la lleve), cuánto y cuándo. No intentes hacer vomitar a tu gato en casa.",
@@ -280,7 +280,7 @@
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked, dried, powdered and liquid onion. Be careful with leftovers, stuffing and gravy that may contain it.",
-        "sl": "Ne. Za mačke so strupene vse oblike, tudi surova, kuhana, sušena, tekoča čebula in čebula v prahu. Previdni bodite pri ostankih hrane, nadevih in mesnih omakah, ki jo lahko vsebujejo.",
+        "sl": "Ne. Za mačke so strupene vse oblike čebule: surova, kuhana, sušena, v prahu in tekoča. Bodite previdni pri ostankih hrane, nadevih in mesnih omakah, ki jo lahko vsebujejo.",
         "de": "Nein. Alle Formen sind für Katzen giftig, auch rohe, gekochte, getrocknete, pulverisierte und flüssige Zwiebel. Vorsicht bei Essensresten, Füllungen und Bratensoße, die Zwiebeln enthalten können.",
         "fr": "Non. L’oignon est toxique pour les chats sous toutes ses formes, y compris cru, cuit, séché, en poudre et liquide. Faites attention aux restes, aux farces et aux jus de viande qui peuvent en contenir.",
         "es": "No. Todas las formas son tóxicas para los gatos, también la cebolla cruda, cocinada, deshidratada, en polvo y líquida. Ten cuidado con las sobras, los rellenos y las salsas de carne que puedan llevarla.",
@@ -435,7 +435,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b38f8c5db7a7ee973e80612790ffa23b08f89805b03d9ab688d90095994e5c69"
+      "verified_hash": "698e29fa0636b26aa0570825dfa9605e6925372a2fc8accd657af6520f911c6b"
     },
     "de": {
       "status": "verified",

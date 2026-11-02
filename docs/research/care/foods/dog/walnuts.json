@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. A walnut or two is unlikely to cause harm, but walnuts are fatty and can be a choking hazard. Mouldy walnuts, such as old ones fallen in the garden, and black walnuts are much more dangerous.",
-    "sl": "Ne, bolje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Plesnivi orehi, na primer stari, odpadli na vrtu, in črni orehi so precej bolj nevarni.",
+    "sl": "Ne, raje ne. En ali dva oreha verjetno ne bosta škodovala, a orehi so mastni in pes se lahko z njimi zaduši. Veliko nevarnejši so plesnivi orehi, na primer stari, ki so odpadli na vrtu, in črni orehi.",
     "de": "Nein, besser nicht. Ein oder zwei Walnüsse schaden wahrscheinlich nicht, aber Walnüsse sind fettreich und können zum Ersticken führen. Schimmelige Walnüsse, etwa alte, die im Garten heruntergefallen sind, und Schwarznüsse sind deutlich gefährlicher.",
     "fr": "Non, mieux vaut éviter. Une ou deux noix ont peu de chances de faire du mal, mais les noix sont grasses et peuvent provoquer un étouffement. Les noix moisies, comme les vieilles noix tombées dans le jardin, et les noix noires sont bien plus dangereuses.",
     "es": "No, es mejor no dárselas. Es poco probable que una o dos nueces le hagan daño, pero las nueces son grasas y pueden provocar atragantamiento. Las nueces enmohecidas, como las viejas caídas en el jardín, y las nueces negras son mucho más peligrosas.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Walnuts are high in fat, which can cause vomiting, diarrhoea and possibly pancreatitis. Mould can grow on the shell or kernel and produce toxins that can cause tremors, seizures and vomiting. Black walnuts are very toxic to dogs and may contain juglone.",
-    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupe in lahko povzroči tresenje, krče in bruhanje. Črni orehi so za pse zelo strupeni in lahko vsebujejo juglon.",
+    "sl": "Orehi so zelo mastni, kar lahko povzroči bruhanje, drisko in morda vnetje trebušne slinavke. Na lupini ali jedrcu lahko raste plesen, ki tvori strupene snovi in lahko povzroči tresenje, krče in bruhanje. Črni orehi so za pse zelo strupeni in lahko vsebujejo juglon.",
     "de": "Walnüsse sind sehr fettreich, was Erbrechen, Durchfall und möglicherweise eine Bauchspeicheldrüsenentzündung (Pankreatitis) verursachen kann. Auf Schale oder Kern kann Schimmel wachsen und Giftstoffe bilden, die Zittern, Krampfanfälle und Erbrechen auslösen können. Schwarznüsse sind für Hunde sehr giftig und können Juglon enthalten.",
     "fr": "Les noix sont riches en graisses, ce qui peut provoquer vomissements, diarrhée et parfois une pancréatite. Des moisissures peuvent se développer sur la coque ou le cerneau et produire des toxines capables de provoquer tremblements, convulsions et vomissements. Les noix noires sont très toxiques pour les chiens et peuvent contenir de la juglone.",
     "es": "Las nueces tienen mucha grasa, lo que puede causar vómitos, diarrea y posiblemente pancreatitis. En la cáscara o en el fruto puede crecer moho que produce toxinas capaces de provocar temblores, convulsiones y vómitos. Las nueces negras son muy tóxicas para los perros y pueden contener juglona.",
@@ -271,7 +271,7 @@
       },
       "a": {
         "en": "Black walnuts are very toxic to dogs. Contact your vet immediately if your dog eats one.",
-        "sl": "Črni orehi so za pse zelo strupeni. Če ga pes poje, takoj pokličite veterinarja.",
+        "sl": "Črni orehi so za pse zelo strupeni. Če pes poje enega, takoj pokličite veterinarja.",
         "de": "Schwarznüsse sind für Hunde sehr giftig. Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund eine frisst.",
         "fr": "Les noix noires sont très toxiques pour les chiens. Contactez immédiatement votre vétérinaire si votre chien en mange une.",
         "es": "Las nueces negras son muy tóxicas para los perros. Contacta de inmediato con tu veterinario si tu perro se come una.",
@@ -354,7 +354,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7e370beacd04179ee3edc169c48ced95b4063595f3eb38d4b203d6e96c97d930"
+      "verified_hash": "8a919eee8c1062690b0b65a6284826067222e7299c5fae3c752db7cde32a898a"
     },
     "de": {
       "status": "verified",

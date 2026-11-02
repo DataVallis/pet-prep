@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Raspberries contain naturally occurring xylitol at higher levels than most other fruits, although the amount is low compared with what is known to harm dogs. Overfeeding raspberries may cause vomiting, diarrhoea, constipation or other digestive upset. Sweetened raspberry products should be avoided.",
-    "sl": "Maline vsebujejo naravni ksilitol, in sicer več kot večina drugih vrst sadja, čeprav je te količine malo v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte.",
+    "sl": "Maline vsebujejo naravni ksilitol, in to več kot večina drugega sadja, vendar je njegova količina majhna v primerjavi s tisto, za katero je znano, da psom škoduje. Preveč malin lahko povzroči bruhanje, drisko, zaprtje ali druge prebavne težave. Sladkanim malinovim izdelkom se izogibajte.",
     "de": "Himbeeren enthalten mehr natürlich vorkommendes Xylit als die meisten anderen Obstsorten, auch wenn diese Menge im Vergleich zu dem, was Hunden bekanntermaßen schadet, gering ist. Zu viele Himbeeren können Erbrechen, Durchfall, Verstopfung oder andere Verdauungsbeschwerden verursachen. Gesüßte Himbeerprodukte sollten Sie meiden.",
     "fr": "Les framboises contiennent naturellement du xylitol, à des teneurs plus élevées que la plupart des autres fruits, même si la quantité reste faible par rapport à celle connue pour nuire aux chiens. Trop de framboises peuvent provoquer des vomissements, une diarrhée, une constipation ou d’autres troubles digestifs. Les produits sucrés à la framboise sont à éviter.",
     "es": "Las frambuesas contienen xilitol natural en niveles más altos que la mayoría de las frutas, aunque la cantidad es baja comparada con la que se sabe que hace daño a los perros. Dar demasiadas frambuesas puede provocar vómitos, diarrea, estreñimiento u otras molestias digestivas. Hay que evitar los productos de frambuesa endulzados.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Plain fresh or frozen raspberries, never sweetened products; as an occasional treat.",
-    "sl": "Navadne sveže ali zamrznjene maline, nikoli sladkani izdelki; kot občasen priboljšek.",
+    "sl": "Navadne sveže ali zamrznjene maline; sladkanih izdelkov nikoli; kot občasen priboljšek.",
     "de": "Frische oder tiefgekühlte Himbeeren ohne Zusätze, niemals gesüßte Produkte; als gelegentliches Leckerli.",
     "fr": "Framboises nature, fraîches ou surgelées, jamais de produits sucrés ; comme friandise occasionnelle.",
     "es": "Frambuesas frescas o congeladas, al natural, nunca productos endulzados; como premio ocasional.",
@@ -239,7 +239,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e2164a22d59d56824c3d83bd021a111e2579441a2a7998c351f836753a6c1050"
+      "verified_hash": "8878cba22efff537d2a09aac768fe9df11fe424c7e29601b6aeef1b1abc1bd12"
     },
     "de": {
       "status": "verified",

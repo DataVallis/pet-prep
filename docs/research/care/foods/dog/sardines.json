@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Plain, fully cooked fish provides protein and fatty acids. Cooking fully reduces the risk from parasites and bacteria. Canned sardines are the exception to the bones rule because their bones soften during canning; for other fish, bones must be removed. Canned fish should be unsalted and unseasoned.",
-    "sl": "Navadne, popolnoma kuhane ribe dajejo beljakovine in maščobne kisline. Popolno kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene.",
+    "sl": "Navadne, temeljito kuhane ribe dajejo beljakovine in maščobne kisline. Temeljito kuhanje zmanjša tveganje zaradi zajedavcev in bakterij. Sardine v konzervi so izjema pri pravilu o kosteh, ker se kosti med konzerviranjem zmehčajo; pri drugih ribah je treba kosti odstraniti. Ribe v konzervi naj bodo nesoljene in nezačinjene.",
     "de": "Purer, vollständig durchgegarter Fisch liefert Eiweiß und Fettsäuren. Vollständiges Garen verringert das Risiko durch Parasiten und Bakterien. Sardinen aus der Dose sind die Ausnahme von der Grätenregel, weil ihre Gräten beim Konservieren weich werden; bei anderem Fisch müssen die Gräten entfernt werden. Fisch aus der Dose sollte ungesalzen und ungewürzt sein.",
     "fr": "Le poisson nature et bien cuit apporte des protéines et des acides gras. Une cuisson complète réduit le risque lié aux parasites et aux bactéries. Les sardines en conserve sont l’exception à la règle des arêtes, car celles-ci ramollissent pendant la mise en conserve ; pour les autres poissons, il faut retirer les arêtes. Le poisson en conserve doit être sans sel ni assaisonnement.",
     "es": "El pescado natural y bien cocinado aporta proteínas y ácidos grasos. Cocinarlo bien reduce el riesgo de parásitos y bacterias. Las sardinas en lata son la excepción a la regla de las espinas, porque sus espinas se ablandan durante el enlatado; en otros pescados hay que quitarlas. El pescado en lata debe ir sin sal y sin condimentos.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "If your dog ate salty or seasoned sardines or raw fish, watch for vomiting, diarrhoea or low energy and call your vet if these are severe or don't stop.",
-    "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne prenehajo.",
+    "sl": "Če je pes pojedel slane ali začinjene sardine ali surove ribe, opazujte, ali bruha, ima drisko ali je utrujen, in pokličite veterinarja, če so težave hude ali ne ponehajo.",
     "de": "Wenn Ihr Hund salzige oder gewürzte Sardinen oder rohen Fisch gefressen hat, achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn diese stark ausgeprägt sind oder nicht aufhören.",
     "fr": "Si votre chien a mangé des sardines salées ou assaisonnées, ou du poisson cru, surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas.",
     "es": "Si tu perro ha comido sardinas saladas o condimentadas o pescado crudo, vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan.",
@@ -235,7 +235,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9456ef505dfb35b2bdd8f62b7d1dc953a5ca5ff6b09aeebb6860e3d6325e9610"
+      "verified_hash": "84e8625f548a04715c3d577ad4548da75fb76414abfdda57917d3c38d63fc7be"
     },
     "de": {
       "status": "verified",

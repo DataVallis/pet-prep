@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Energy drinks often contain a lot of caffeine, which is toxic to dogs. Caffeine overstimulates the heart and nervous system, and dogs are more sensitive to it than people. Even lapping up a spilled energy drink can be a problem.",
-    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein pretirano spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težava je lahko že polizana razlita energijska pijača.",
+    "sl": "Ne. Energijske pijače pogosto vsebujejo veliko kofeina, ki je za pse strupen. Kofein preveč spodbuja srce in živčevje, psi pa so nanj bolj občutljivi kot ljudje. Težave lahko povzroči že to, da pes poliže razlito energijsko pijačo.",
     "de": "Nein. Energydrinks enthalten oft viel Koffein, und Koffein ist für Hunde giftig. Es überreizt Herz und Nervensystem, und Hunde reagieren empfindlicher darauf als Menschen. Schon das Auflecken eines verschütteten Energydrinks kann ein Problem sein.",
     "fr": "Non. Les boissons énergisantes contiennent souvent beaucoup de caféine, toxique pour les chiens. La caféine surstimule le cœur et le système nerveux, et les chiens y sont plus sensibles que nous. Même laper une boisson énergisante renversée peut poser problème.",
     "es": "No. Las bebidas energéticas suelen contener mucha cafeína, que es tóxica para los perros. La cafeína sobreestimula el corazón y el sistema nervioso, y los perros son más sensibles a ella que las personas. Incluso lamer una bebida energética derramada puede ser un problema.",
@@ -211,7 +211,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline as soon as you realise your dog has had caffeine. Note what it was (drink, shot, pouch or tablet) and roughly how much. Don't wait for signs: early treatment matters.",
-    "sl": "Takoj ko opazite, da je pes zaužil kofein, pokličite veterinarja ali center za zastrupitve živali. Zapišite si, kaj je bilo (pijača, šot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: zgodnje zdravljenje je pomembno.",
+    "sl": "Takoj ko ugotovite, da je pes zaužil kofein, pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je bilo (pijača, shot, vrečka ali tableta) in približno koliko. Ne čakajte na znake: pomembno je zgodnje zdravljenje.",
     "de": "Wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere, sobald Sie bemerken, dass Ihr Hund Koffein aufgenommen hat. Notieren Sie, was es war (Getränk, Shot, Beutel oder Tablette) und ungefähr wie viel. Warten Sie nicht auf Anzeichen: Eine frühe Behandlung ist wichtig.",
     "fr": "Contactez votre vétérinaire ou un centre antipoison vétérinaire dès que vous vous rendez compte que votre chien a consommé de la caféine. Notez ce que c’était (boisson, shot, sachet ou comprimé) et en quelle quantité approximative. N’attendez pas l’apparition des signes : un traitement précoce compte.",
     "es": "Contacta con tu veterinario o con una línea de información toxicológica para animales en cuanto te des cuenta de que tu perro ha tomado cafeína. Apunta qué era (bebida, shot, bolsita o pastilla) y más o menos cuánto. No esperes a que aparezcan síntomas: tratarlo pronto es importante.",
@@ -229,7 +229,7 @@
   "serving": null,
   "child": {
     "en": "Energy drinks are not for dogs at all. Wipe up spills fast and tell a grown-up if your dog drinks some.",
-    "sl": "Energijske pijače sploh niso za pse. Razlito hitro pobriši in povej odraslemu, če jo pes popije.",
+    "sl": "Energijske pijače sploh niso za pse. Če se pijača razlije, jo hitro pobriši, in če jo pes popije, povej odraslemu.",
     "de": "Energydrinks sind überhaupt nichts für Hunde. Wisch Verschüttetes schnell auf und sag einem Erwachsenen Bescheid, wenn dein Hund davon trinkt.",
     "fr": "Les boissons énergisantes ne sont pas du tout pour les chiens. Essuie vite ce qui est renversé et préviens un adulte si ton chien en boit.",
     "es": "Las bebidas energéticas no son para perros, nunca. Limpia rápido lo que se derrame y avisa a un adulto si tu perro bebe un poco.",
@@ -265,7 +265,7 @@
       },
       "a": {
         "en": "They contain caffeine too. Keep them out of reach and call your vet straight away if your dog gets into them.",
-        "sl": "Tudi ti vsebujejo kofein. Hranite jih izven dosega in takoj pokličite veterinarja, če jih pes doseže.",
+        "sl": "Tudi ti vsebujejo kofein. Hranite jih zunaj dosega psa in takoj pokličite veterinarja, če jih pes doseže.",
         "de": "Auch sie enthalten Koffein. Bewahren Sie sie außer Reichweite auf und rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund daran gelangt.",
         "fr": "Ils contiennent aussi de la caféine. Gardez-les hors de portée et appelez immédiatement votre vétérinaire si votre chien en a trouvé.",
         "es": "También contienen cafeína. Guárdalos fuera de su alcance y llama enseguida a tu veterinario si tu perro se hace con ellos.",
@@ -360,7 +360,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8e09d495c6c5bef4970fa5b3b24f1822dbae9ed7deb710a605b0984aefd2a95e"
+      "verified_hash": "89f44223d244d65eb5938feb95d8e74e64d534f2515ce70edfaf44f527449080"
     },
     "de": {
       "status": "verified",

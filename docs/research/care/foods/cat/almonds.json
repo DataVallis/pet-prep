@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, almonds are best kept away from cats. Sweet almonds aren't considered toxic, but they are high in oils and fats and can make a cat unwell, with stomach upset or vomiting.",
-    "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar imajo veliko olj in maščob in lahko mački povzročijo slabo počutje, razdražen želodec ali bruhanje.",
+    "sl": "Ne, mandljev mački raje ne dajajte. Sladki mandlji ne veljajo za strupene, vendar so bogati z olji in maščobami, zato se mačka po njih lahko slabo počuti, ima prebavne težave ali bruha.",
     "de": "Nein, Mandeln halten Sie besser von Katzen fern. Süße Mandeln gelten nicht als giftig, enthalten aber viel Öl und Fett und können einer Katze zusetzen – etwa mit Magenverstimmung oder Erbrechen.",
     "fr": "Non, mieux vaut tenir les amandes loin des chats. Les amandes douces ne sont pas considérées comme toxiques, mais elles sont riches en huiles et en graisses et peuvent rendre un chat malade, avec des troubles digestifs ou des vomissements.",
     "es": "No, es mejor mantener las almendras lejos de los gatos. Las almendras dulces no se consideran tóxicas, pero tienen mucho aceite y grasa y pueden sentarle mal a un gato, con malestar de estómago o vómitos.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
-    "sl": "Cats Protection mandlje navaja med oreščki, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. ASPCA navaja, da sladki mandlji, ki se prodajajo za uživanje, za hišne živali niso strupeni, a ker niso del njihove običajne prehrane, lahko povzročijo prebavne težave. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene.",
+    "sl": "Organizacija Cats Protection mandlje uvršča med oreščke, ki vsebujejo veliko olj in maščob, zaradi katerih se mačka lahko slabo počuti. Po navedbah ASPCA sladki mandlji, ki se prodajajo za prehrano, za hišne ljubljenčke niso strupeni, vendar lahko povzročijo prebavne težave, ker niso običajen del njihove prehrane. Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene.",
     "de": "Cats Protection zählt Mandeln zu den Nüssen, die viel Öl und Fett enthalten und einer Katze schaden können. Laut ASPCA sind süße Mandeln, wie sie zum Essen verkauft werden, für Haustiere nicht giftig; da sie aber nicht zur normalen Ernährung eines Tieres gehören, können sie Verdauungsprobleme verursachen. Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig.",
     "fr": "Cats Protection classe les amandes parmi les fruits à coque très riches en huiles et en graisses, qui peuvent rendre un chat malade. Selon l’ASPCA, les amandes douces vendues pour la consommation ne sont pas toxiques pour les animaux, mais comme elles ne font pas partie de leur alimentation habituelle, elles peuvent provoquer des troubles digestifs. Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques.",
     "es": "Cats Protection incluye las almendras entre los frutos secos que contienen grandes cantidades de aceites y grasas que pueden sentarle mal a un gato. La ASPCA indica que las almendras dulces que se venden para comer no son tóxicas para las mascotas, pero, como no forman parte de su dieta habitual, pueden causar problemas digestivos. Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas.",
@@ -97,8 +97,8 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Razdražen želodec",
-      "Mačka deluje bolna"
+      "Želodčne težave",
+      "Mačka se zdi bolna"
     ],
     "de": [
       "Erbrechen",
@@ -181,7 +181,7 @@
   },
   "what_to_do": {
     "en": "If your cat ate almonds, contact your vet for advice, especially if she ate a lot or seems unwell. Note what she ate, how much and when. If they were bitter almonds, contact your vet straight away.",
-    "sl": "Če je muca pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je pojedla veliko ali se ne počuti dobro. Zapišite, kaj je pojedla, koliko in kdaj. Če so bili to grenki mandlji, takoj pokličite veterinarja.",
+    "sl": "Če je mačka pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je bilo veliko ali se ne počuti dobro. Zapišite si, kaj je pojedla, koliko in kdaj. Če so bili grenki mandlji, takoj pokličite veterinarja.",
     "de": "Wenn Ihre Katze Mandeln gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann. Waren es Bittermandeln, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Si votre chat a mangé des amandes, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. S’il s’agissait d’amandes amères, contactez votre vétérinaire immédiatement.",
     "es": "Si tu gato ha comido almendras, consulta a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo. Si eran almendras amargas, ponte en contacto con tu veterinario de inmediato.",
@@ -254,7 +254,7 @@
     {
       "q": {
         "en": "Are some nuts worse than others?",
-        "sl": "Ali so nekateri oreščki hujši od drugih?",
+        "sl": "Ali so nekateri oreščki bolj nevarni od drugih?",
         "de": "Sind manche Nüsse schlimmer als andere?",
         "fr": "Certains fruits à coque sont-ils plus dangereux que d’autres ?",
         "es": "¿Hay frutos secos peores que otros?",
@@ -271,7 +271,7 @@
       },
       "a": {
         "en": "Yes. Macadamia nuts are fatty and also toxic to cats, so they are the ones to be most careful with.",
-        "sl": "Da. Makadamije so mastne in za mačke tudi strupene, zato je pri njih potrebna največja previdnost.",
+        "sl": "Da. Makadamije so mastne in so za mačke tudi strupene, zato bodite pri njih najbolj previdni.",
         "de": "Ja. Macadamianüsse sind fettreich und für Katzen außerdem giftig – bei ihnen ist daher die größte Vorsicht geboten.",
         "fr": "Oui. Les noix de macadamia sont grasses et, en plus, toxiques pour les chats : ce sont celles dont il faut se méfier le plus.",
         "es": "Sí. Las nueces de macadamia son grasas y además tóxicas para los gatos, así que son las que exigen más cuidado.",
@@ -332,7 +332,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5eec7080ec087e983d0bdecfa86b08f1bde42662d094c52da69a72aa18eb29b3"
+      "verified_hash": "34c975e0f636c7f0a0168122f95ec2edaf47d66b45d3c118071dbab818f57715"
     },
     "de": {
       "status": "verified",

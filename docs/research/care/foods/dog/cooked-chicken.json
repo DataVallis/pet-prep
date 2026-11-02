@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Plain, unseasoned cooked chicken, taken off the bone, can be served to a dog on its own. Never give cooked chicken bones, which splinter easily, and skip seasoned, fatty or raw chicken.",
-    "sl": "Da. Navaden, nezačinjen kuhan piščanec brez kosti lahko psu ponudite kar samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu.",
+    "sl": "Da. Navadnega, nezačinjenega kuhanega piščanca brez kosti lahko psu ponudite samega. Nikoli ne dajte kuhanih piščančjih kosti, ki se zlahka razcepijo, in se izogibajte začinjenemu, mastnemu ali surovemu piščancu.",
     "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen kann einem Hund für sich allein gegeben werden. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
     "fr": "Oui. Du poulet cuit nature, sans assaisonnement et désossé, peut être donné tel quel à un chien. Ne donnez jamais d’os de poulet cuits, qui éclatent facilement, et évitez le poulet assaisonné, gras ou cru.",
     "es": "Sí. El pollo cocinado natural, sin condimentos y sin hueso, se le puede dar a un perro tal cual. Nunca le des huesos de pollo cocinados, que se astillan con facilidad, y evita el pollo condimentado, graso o crudo.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
-    "sl": "Nezačinjen pečen, poširan, na žaru ali v pečici pripravljen piščanec je primeren sam po sebi. Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil. Surov piščanec ni priporočljiv zaradi salmonele in drugih bakterij. Bedra imajo približno dvakrat več maščobe kot prsi, mastna hrana pa lahko razdraži prebavo.",
+    "sl": "Nezačinjenega piščanca, ki je pečen, poširan ali pripravljen na žaru ali v pečici, lahko psu daste samega. Kuhane piščančje kosti se zlahka razcepijo in lahko povzročijo dušenje ali predrtje prebavil. Surov piščanec ni priporočljiv zaradi salmonele in drugih bakterij. Piščančja bedra vsebujejo približno dvakrat več maščobe kot prsi, mastna hrana pa lahko draži prebavila.",
     "de": "Ungewürztes gebratenes, pochiertes, gegrilltes oder im Ofen gegartes Hähnchen ist für sich allein in Ordnung. Gekochte Hähnchenknochen splittern leicht und können zum Ersticken führen oder den Magen-Darm-Trakt durchbohren. Von rohem Hähnchen wird wegen Salmonellen und anderer Bakterien abgeraten. Schenkelfleisch hat etwa doppelt so viel Fett wie Brust, und fettreiches Futter kann auf den Magen schlagen.",
     "fr": "Le poulet rôti, poché, grillé ou cuit au four sans assaisonnement convient tel quel. Les os de poulet cuits éclatent facilement et peuvent provoquer un étouffement ou perforer l’intestin. Le poulet cru est déconseillé à cause des salmonelles et d’autres bactéries. La cuisse contient environ deux fois plus de graisses que le blanc, et les aliments gras peuvent dérégler l’estomac.",
     "es": "El pollo asado, escalfado, a la plancha o al horno sin condimentos se puede dar tal cual. Los huesos de pollo cocinados se astillan con facilidad y pueden provocar atragantamiento o perforar el intestino. No se recomienda el pollo crudo por la salmonela y otras bacterias. El muslo tiene aproximadamente el doble de grasa que la pechuga, y los alimentos grasos pueden sentar mal al estómago.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Plain cooked chicken (breast is leanest), no seasoning, fully cooked, taken off the bone, in small pieces.",
-    "sl": "Navaden kuhan piščanec (prsi so najbolj puste), brez začimb, popolnoma kuhan, brez kosti, v majhnih koščkih.",
+    "sl": "Navaden kuhan piščanec (prsi so najbolj puste), brez začimb, do konca kuhan, brez kosti, narezan na majhne koščke.",
     "de": "Pures gegartes Hähnchen (Brust ist am magersten), ungewürzt, vollständig durchgegart, ohne Knochen, in kleinen Stücken.",
     "fr": "Poulet cuit nature (le blanc est le plus maigre), sans assaisonnement, bien cuit, désossé, en petits morceaux.",
     "es": "Pollo cocinado natural (la pechuga es lo más magro), sin condimentos, bien hecho, sin hueso y en trozos pequeños.",
@@ -245,7 +245,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4fc5cd1e5c3a1df0901d44b5b5a27844c2490852fe103b35549c1382699526fc"
+      "verified_hash": "72f38c0106570a4c0fc70991b12026a3d53030da6fb6c29fd1bbf96e09012782"
     },
     "de": {
       "status": "verified",

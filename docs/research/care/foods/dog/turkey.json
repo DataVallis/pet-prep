@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Turkey isn't toxic, but how it is cooked matters. Skin and fat are rich and can cause pancreatitis, while extra seasonings can irritate a dog's stomach. Onions and garlic can be toxic to dogs. Cooked poultry bones are brittle and can splinter. White meat is leaner than dark meat.",
-    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kuhane perutninske kosti so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega.",
+    "sl": "Puran ni strupen, pomembno pa je, kako je pripravljen. Koža in maščoba sta težki in lahko povzročita vnetje trebušne slinavke, začimbe pa lahko psu razdražijo želodec. Čebula in česen sta lahko za pse strupena. Kosti kuhane perutnine so krhke in se lahko razcepijo. Belo meso je bolj pusto od temnega.",
     "de": "Putenfleisch ist nicht giftig, aber es kommt darauf an, wie es zubereitet wird. Haut und Fett sind gehaltvoll und können eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, während zusätzliche Gewürze den Magen eines Hundes reizen können. Zwiebeln und Knoblauch können für Hunde giftig sein. Gekochte Geflügelknochen sind spröde und können splittern. Helles Fleisch ist magerer als dunkles.",
     "fr": "La dinde n’est pas toxique, mais sa préparation compte. La peau et le gras sont riches et peuvent provoquer une pancréatite, tandis que les assaisonnements peuvent irriter l’estomac d’un chien. L’oignon et l’ail peuvent être toxiques pour les chiens. Les os de volaille cuits sont cassants et peuvent éclater. Le blanc est plus maigre que la viande brune de la cuisse.",
     "es": "El pavo no es tóxico, pero importa cómo se cocina. La piel y la grasa son muy pesadas y pueden provocar pancreatitis, y los condimentos de más pueden irritar el estómago del perro. La cebolla y el ajo pueden ser tóxicos para los perros. Los huesos de ave cocinados son quebradizos y pueden astillarse. La carne blanca es más magra que la oscura.",
@@ -253,7 +253,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7f2c3525abc30da53576f00497f70b342b2027285af0e9163cc20789a6c1a4e8"
+      "verified_hash": "40148c05ece0719b584636804d1a5891dad62e12021f7628938ea4d521b88dff"
     },
     "de": {
       "status": "verified",

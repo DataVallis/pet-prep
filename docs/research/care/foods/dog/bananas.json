@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Bananas are high in potassium, vitamin B6 and vitamin C, but they are high in sugar, so they are best kept as a treat rather than part of your dog's daily diet. Always remove the peel.",
-    "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj bodo priboljšek in ne del psove vsakodnevne prehrane. Vedno odstranite olupek.",
+    "sl": "Da, kot občasen priboljšek. Banane vsebujejo veliko kalija, vitamina B6 in vitamina C, a tudi veliko sladkorja, zato naj ostanejo priboljšek in ne postanejo del vsakodnevne prehrane. Vedno odstranite olupek.",
     "de": "Ja, als gelegentliches Leckerli. Bananen enthalten viel Kalium, Vitamin B6 und Vitamin C, aber auch viel Zucker – sie sollten daher ein Leckerli bleiben und nicht zum täglichen Futter Ihres Hundes gehören. Entfernen Sie immer die Schale.",
     "fr": "Oui, comme friandise occasionnelle. Les bananes sont riches en potassium, en vitamine B6 et en vitamine C, mais aussi en sucre : mieux vaut les donner en friandise plutôt que d’en faire un élément de l’alimentation quotidienne de votre chien. Retirez toujours la peau.",
     "es": "Sí, como premio ocasional. El plátano tiene mucho potasio, vitamina B6 y vitamina C, pero también mucho azúcar, así que es mejor reservarlo como premio y no incluirlo en la dieta diaria de tu perro. Quita siempre la piel.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Peeled, in bite-sized pieces, mashed into food or frozen; as an occasional treat.",
-    "sl": "Olupljena, v majhnih koščkih, pretlačena v hrano ali zamrznjena; kot občasen priboljšek.",
+    "sl": "Olupljeno banano narežite na grižljaju primerne koščke, jo pretlačite v hrano ali zamrznite; kot občasen priboljšek.",
     "de": "Geschält, in mundgerechten Stücken, zerdrückt unter das Futter gemischt oder gefroren; als gelegentliches Leckerli.",
     "fr": "Épluchée, en petites bouchées, écrasée dans la gamelle ou congelée ; comme friandise occasionnelle.",
     "es": "Pelado, en trocitos, aplastado y mezclado con su comida, o congelado; como premio ocasional.",
@@ -238,7 +238,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e9a0ace5c36ff19dba57f48f215571267bf777eeb79b149401e6de53b226adc5"
+      "verified_hash": "7f7f5069a229648157b56537bf3f4f2736fc1cf6a02cbe45c963fe14222be4ec"
     },
     "de": {
       "status": "verified",

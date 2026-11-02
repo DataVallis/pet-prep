@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "NC State's veterinary hospital lists apple without seeds among healthy human-food treats for cats and dogs, and Pet Poison Helpline says apples are safe raw or cooked once the core and seeds are removed. The ASPCA lists the apple plant as toxic to cats because its stems, leaves and seeds contain cyanide. Cats are obligate carnivores, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Veterinarska bolnišnica univerze NC State navaja jabolko brez pečk med zdravimi priboljški iz človeške hrane za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, ko odstranite peščišče in pečke. ASPCA rastlino jablane navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obvezni mesojedci, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "sl": "Veterinarska bolnišnica univerze NC State jabolko brez pečk uvršča med zdrave priboljške iz hrane za ljudi za mačke in pse, Pet Poison Helpline pa navaja, da so jabolka varna surova ali kuhana, če odstranite peščišče in pečke. ASPCA jablano navaja kot strupeno za mačke, ker njeni peclji, listi in pečke vsebujejo cianid. Mačke so obligatni mesojedci, zato lahko vsaka rastlinska hrana povzroči bruhanje ali prebavne težave.",
     "de": "Die Tierklinik der NC State University zählt Apfel ohne Kerne zu den gesunden Leckerlis aus der Menschenküche für Katzen und Hunde, und laut Pet Poison Helpline sind Äpfel roh oder gekocht unbedenklich, sobald Kerngehäuse und Kerne entfernt sind. Die ASPCA stuft die Apfelpflanze als giftig für Katzen ein, weil ihre Stiele, Blätter und Kerne Cyanid enthalten. Katzen sind obligate Fleischfresser, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
     "fr": "L’hôpital vétérinaire de NC State classe la pomme sans pépins parmi les friandises saines issues de l’alimentation humaine pour les chats et les chiens, et le Pet Poison Helpline indique que les pommes, crues ou cuites, sont sans danger une fois le trognon et les pépins retirés. L’ASPCA répertorie le pommier comme toxique pour les chats, car ses tiges, ses feuilles et ses pépins contiennent du cyanure. Les chats sont des carnivores stricts, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "El hospital veterinario de NC State incluye la manzana sin semillas entre los alimentos humanos saludables que pueden darse como premio a gatos y perros, y Pet Poison Helpline dice que la manzana es segura cruda o cocinada una vez quitados el corazón y las semillas. La ASPCA considera el manzano tóxico para los gatos porque sus tallos, hojas y semillas contienen cianuro. Los gatos son carnívoros estrictos, y cualquier material vegetal puede provocar vómitos o malestar de estómago.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet. If your cat chewed apple seeds, stems or leaves, contact your vet or a pet poison helpline as soon as possible.",
-    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali center za zastrupitve živali.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem. Če je mačka grizljala jabolčne pečke, peclje ali liste, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali.",
     "de": "Bieten Sie zuerst ein kleines Stück an. Bekommt Ihre Katze danach Erbrechen oder eine Magenverstimmung, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze auf Apfelkernen, -stielen oder -blättern gekaut, wenden Sie sich so schnell wie möglich an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a l’estomac dérangé ensuite, arrêtez et demandez conseil à votre vétérinaire. Si votre chat a mâché des pépins, des tiges ou des feuilles de pommier, contactez au plus vite votre vétérinaire ou un centre antipoison vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta a tu veterinario. Si tu gato ha mordisqueado semillas, tallos u hojas de manzano, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
-    "sl": "Samo jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, upoštevan v dnevnem obroku.",
+    "sl": "Le jabolčno meso, surovo ali kuhano, brez peščišča, pečk in peclja; občasno majhen košček, všteti ga je treba v dnevno količino hrane.",
     "de": "Nur das Fruchtfleisch, roh oder gekocht, ohne Kerngehäuse, Kerne und Stiel; ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
     "fr": "Uniquement la chair de la pomme, crue ou cuite, sans le trognon, les pépins ni la queue ; un petit morceau de temps en temps, compté dans la ration quotidienne de votre chat.",
     "es": "Solo la pulpa de la manzana, cruda o cocinada, sin corazón, semillas ni tallo; un trocito de vez en cuando, contándolo como parte de la comida diaria de tu gato.",
@@ -143,7 +143,7 @@
     {
       "q": {
         "en": "Why remove the core and seeds?",
-        "sl": "Zakaj odstraniti peščišče in pečke?",
+        "sl": "Zakaj je treba odstraniti peščišče in pečke?",
         "de": "Warum Kerngehäuse und Kerne entfernen?",
         "fr": "Pourquoi retirer le trognon et les pépins ?",
         "es": "¿Por qué hay que quitar el corazón y las semillas?",
@@ -196,7 +196,7 @@
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
         "fr": "Non. Les chats sont carnivores : ils ont besoin de nutriments présents dans la viande et n’ont besoin ni de fruits ni de légumes dans leur alimentation. Les fruits ne peuvent jamais être qu’un petit plus.",
         "es": "No. Los gatos son carnívoros: necesitan nutrientes que se encuentran en la carne y no necesitan fruta ni verdura en su dieta. La fruta solo puede ser un pequeño extra.",
@@ -291,7 +291,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b87e2cd40c2fb8ded3bc595859ba7842dbb0f8d8faaceaa5cf72ca9017fb72e0"
+      "verified_hash": "ba8d3107242177bb7f3b269ced66fa0c591524603ebd1c027a4c0d6446227c6c"
     },
     "de": {
       "status": "verified",

@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few pieces of plain, fully cooked shrimp are fine for dogs. Remove the shell, head, legs and tail first. Raw shrimp can carry harmful germs, and fried, breaded or seasoned shrimp are not suitable.",
-    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko prenašajo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne.",
+    "sl": "Da, nekaj koščkov navadnih, popolnoma kuhanih kozic je za pse v redu. Najprej odstranite oklep, glavo, nožice in rep. Surove kozice lahko vsebujejo škodljive klice, ocvrte, panirane ali začinjene kozice pa niso primerne.",
     "de": "Ja, ein paar Stücke vollständig gegarter, ungewürzter Garnelen sind für Hunde in Ordnung. Entfernen Sie vorher Schale, Kopf, Beine und Schwanz. Rohe Garnelen können schädliche Keime enthalten, und frittierte, panierte oder gewürzte Garnelen sind nicht geeignet.",
     "fr": "Oui, quelques morceaux de crevettes nature et bien cuites conviennent aux chiens. Retirez d’abord la carapace, la tête, les pattes et la queue. Les crevettes crues peuvent porter des germes nocifs, et les crevettes frites, panées ou assaisonnées ne conviennent pas.",
     "es": "Sí, unos pocos trozos de gamba bien cocinada y sin nada están bien para los perros. Quítales antes la cáscara, la cabeza, las patas y la cola. Las gambas crudas pueden llevar gérmenes dañinos, y las fritas, rebozadas o condimentadas no son adecuadas.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
-    "sl": "Surovi raki in školjke vsebujejo škodljive klice, ki jih s kuhanjem odpravimo. Oklepi kozic lahko povzročijo dušenje in zamašitev. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost.",
+    "sl": "Surovi morski sadeži vsebujejo škodljive klice, ki jih kuhanje uniči. Oklepi kozic lahko povzročijo dušenje in zaporo. Ocvrte ali panirane kozice dodajo nepotrebne maščobe in olja. Kozice imajo malo maščob in kalorij, a veliko holesterola, zato je ključna zmernost.",
     "de": "Rohe Schalentiere enthalten schädliche Krankheitserreger, die durch das Garen vermieden werden. Garnelenschalen können zum Ersticken führen und einen Darmverschluss verursachen. Frittierte oder panierte Garnelen enthalten unnötige Fette und Öle. Garnelen sind fett- und kalorienarm, aber reich an Cholesterin – deshalb kommt es auf das richtige Maß an.",
     "fr": "Les crustacés crus contiennent des agents pathogènes nocifs que la cuisson permet d’éviter. Les carapaces de crevettes peuvent provoquer un étouffement et des obstructions. Les crevettes frites ou panées apportent des graisses et des huiles inutiles. Les crevettes sont pauvres en graisses et en calories mais riches en cholestérol : la modération est essentielle.",
     "es": "El marisco crudo contiene patógenos dañinos que se evitan cocinándolo. La cáscara de las gambas puede provocar atragantamiento y obstrucciones. Las gambas fritas o rebozadas añaden grasas y aceites innecesarios. Las gambas tienen poca grasa y pocas calorías, pero mucho colesterol, así que la clave es la moderación.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
-        "sl": "Ne. Odstranite oklep, glavo, nožice in rep, ker oklepi lahko povzročijo dušenje in zamašitev.",
+        "sl": "Ne. Odstranite oklep, glavo, nožice in rep, ker oklepi lahko povzročijo dušenje in zaporo.",
         "de": "Nein. Entfernen Sie Schale, Kopf, Beine und Schwanz, denn Schalen können zum Ersticken führen und einen Darmverschluss verursachen.",
         "fr": "Non. Retirez la carapace, la tête, les pattes et la queue, car les carapaces peuvent provoquer un étouffement et des obstructions.",
         "es": "No. Quita la cáscara, la cabeza, las patas y la cola, porque la cáscara puede provocar atragantamiento y obstrucciones.",
@@ -237,7 +237,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c8a0d85b9ff43e70487a9300ba44cbda4406962954afbfccbea20b8c939aa267"
+      "verified_hash": "156381bc90fe0a35dbf06ac732b1c2aa885c360a7b26e5de527e69de9bc9a414"
     },
     "de": {
       "status": "verified",

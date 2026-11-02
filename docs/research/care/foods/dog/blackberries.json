@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Blackberries contain naturally occurring xylitol in trace amounts, as do other fruits and vegetables. Like any food, too many blackberries can cause stomach upset, and treats should make up only a small part of a dog's diet.",
-    "sl": "Robide vsebujejo naravni ksilitol v sledovih, tako kot tudi druge vrste sadja in zelenjave. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane.",
+    "sl": "Robide, tako kot drugo sadje in zelenjava, v sledovih vsebujejo naravni ksilitol. Kot pri vsaki hrani lahko preveč robid povzroči prebavne težave, priboljški pa naj bodo le majhen del pasje prehrane.",
     "de": "Brombeeren enthalten – wie andere Obst- und Gemüsesorten auch – natürlich vorkommendes Xylit in Spuren. Wie bei jedem Lebensmittel können zu viele Brombeeren den Magen verstimmen, und Leckerlis sollten nur einen kleinen Teil der Ernährung eines Hundes ausmachen.",
     "fr": "Les mûres contiennent naturellement des traces de xylitol, comme d’autres fruits et légumes. Comme pour tout aliment, trop de mûres peuvent déranger l’estomac, et les friandises ne doivent représenter qu’une petite part de l’alimentation d’un chien.",
     "es": "Las moras contienen xilitol natural en cantidades mínimas, igual que otras frutas y verduras. Como cualquier alimento, demasiadas moras pueden sentar mal al estómago, y los premios deben ser solo una parte pequeña de la dieta de un perro.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "If your dog has a reaction after eating blackberries, call your vet immediately.",
-    "sl": "Če se pes po robidah odzove s težavami, takoj pokličite veterinarja.",
+    "sl": "Če ima pes po zaužitju robid težave, takoj pokličite veterinarja.",
     "de": "Zeigt Ihr Hund nach dem Fressen von Brombeeren eine Reaktion, rufen Sie sofort Ihren Tierarzt an.",
     "fr": "Si votre chien a une réaction après avoir mangé des mûres, appelez immédiatement votre vétérinaire.",
     "es": "Si tu perro tiene alguna reacción después de comer moras, llama enseguida a tu veterinario.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Washed, plain fresh blackberries; no frozen berries, which usually have added sugar or xylitol; only wild berries you are sure are blackberries.",
-    "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje le, če ste prepričani, da so robide.",
+    "sl": "Oprane, navadne sveže robide; brez zamrznjenega jagodičja, ki ima običajno dodan sladkor ali ksilitol; divje robide le, če ste prepričani, da gre res za robide.",
     "de": "Gewaschene, frische Brombeeren ohne Zusätze; keine tiefgekühlten Beeren, die meist zugesetzten Zucker oder Xylit enthalten; wild gepflückte Beeren nur, wenn Sie sicher sind, dass es Brombeeren sind.",
     "fr": "Mûres fraîches, nature et lavées ; pas de baies surgelées, qui contiennent généralement du sucre ajouté ou du xylitol ; pour les baies sauvages, seulement si vous êtes sûr qu’il s’agit bien de mûres.",
     "es": "Moras frescas, lavadas y al natural; nada de bayas congeladas, que suelen llevar azúcar añadido o xilitol; moras silvestres solo si estás seguro de que son moras.",
@@ -124,7 +124,7 @@
   },
   "child": {
     "en": "Dogs can share a few washed blackberries! Ask a grown-up first, especially for berries picked outside.",
-    "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, posebej za robide, nabrane v naravi.",
+    "sl": "Psi lahko dobijo nekaj opranih robid! Najprej vprašaj odraslega, zlasti če so robide nabrane v naravi.",
     "de": "Hunde dürfen ein paar gewaschene Brombeeren mitnaschen! Frag vorher einen Erwachsenen, vor allem bei Beeren, die draußen gepflückt wurden.",
     "fr": "Les chiens peuvent manger quelques mûres bien lavées ! Demande d’abord à un adulte, surtout pour les baies cueillies dehors.",
     "es": "¡Los perros pueden comer unas pocas moras lavadas! Antes pregunta a un adulto, sobre todo si son moras cogidas en el campo.",
@@ -239,7 +239,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cd26960c5a0af524b70dd200ba9981c2db6d73cf79981b739ae574a1bab9ac67"
+      "verified_hash": "b8532dd9cf2d01317303098f6f8a6ba1f7ad6f3058abb067f077e510e502f333"
     },
     "de": {
       "status": "verified",

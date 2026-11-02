@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few cranberries are fine as an occasional treat. Pet Poison Helpline calls cranberries pet safe, raw or processed, but dried cranberries, juice, sauce and jelly often have added sugar or sweeteners, so check the label for xylitol or grape ingredients first.",
-    "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za živali, surove ali predelane, vendar imajo suhe brusnice, sok, omaka in žele pogosto dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
+    "sl": "Da, nekaj brusnic je v redu kot občasen priboljšek. Pet Poison Helpline brusnice navaja kot varne za hišne ljubljenčke, surove ali predelane, vendar suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali sladila, zato najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
     "de": "Ja, ein paar Cranberrys sind als gelegentliches Leckerli in Ordnung. Laut Pet Poison Helpline sind Cranberrys roh wie verarbeitet unbedenklich für Haustiere, doch getrocknete Cranberrys, Saft, Soße und Gelee enthalten oft zugesetzten Zucker oder Süßungsmittel – prüfen Sie also zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
     "fr": "Oui, quelques canneberges conviennent comme friandise occasionnelle. Selon le Pet Poison Helpline, les canneberges sont sans danger pour les animaux, crues ou transformées, mais les canneberges séchées, le jus, la sauce et la gelée contiennent souvent du sucre ajouté ou des édulcorants : vérifiez d’abord sur l’étiquette l’absence de xylitol ou d’ingrédients à base de raisin.",
     "es": "Sí, unos pocos arándanos rojos están bien como premio ocasional. Pet Poison Helpline los considera seguros para las mascotas, crudos o procesados, pero los deshidratados, el zumo, la salsa y la jalea suelen llevar azúcar u otros edulcorantes añadidos, así que comprueba antes en la etiqueta que no lleven xilitol ni ingredientes derivados de la uva.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Pet Poison Helpline, on a page about pet-safe fall foods that also names cats, says cranberries are pet safe both raw and processed. Dried cranberries, juice, sauce and jelly often contain added sugar or other sweeteners, and some products may contain toxic ingredients such as xylitol or grape derivatives. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za živali, kjer omenja tudi mačke, navaja, da so brusnice za živali varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "sl": "Pet Poison Helpline na strani o jesenskih živilih, varnih za hišne ljubljenčke, kjer omenja tudi mačke, navaja, da so brusnice varne, surove in predelane. Suhe brusnice, sok, omaka in žele pogosto vsebujejo dodan sladkor ali druga sladila, nekateri izdelki pa lahko vsebujejo strupene sestavine, kot sta ksilitol ali sestavine iz grozdja. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Auf einer Seite über herbstliche Lebensmittel, die für Haustiere unbedenklich sind, nennt Pet Poison Helpline auch Katzen und schreibt, dass Cranberrys roh wie verarbeitet unbedenklich sind. Getrocknete Cranberrys, Saft, Soße und Gelee enthalten oft zugesetzten Zucker oder andere Süßungsmittel, und manche Produkte können giftige Zutaten wie Xylit oder Bestandteile von Weintrauben enthalten. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
     "fr": "Le Pet Poison Helpline, sur une page consacrée aux aliments d’automne sans danger pour les animaux qui mentionne aussi les chats, indique que les canneberges sont sans danger pour les animaux, crues comme transformées. Les canneberges séchées, le jus, la sauce et la gelée contiennent souvent du sucre ajouté ou d’autres édulcorants, et certains produits peuvent contenir des ingrédients toxiques comme le xylitol ou des dérivés du raisin. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "Pet Poison Helpline, en una página sobre alimentos de otoño seguros para mascotas que también menciona a los gatos, dice que los arándanos rojos son seguros para las mascotas tanto crudos como procesados. Los arándanos rojos deshidratados, el zumo, la salsa y la jalea suelen llevar azúcar u otros edulcorantes añadidos, y algunos productos pueden contener ingredientes tóxicos como el xilitol o derivados de la uva. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier material vegetal puede provocar vómitos o malestar de estómago.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
-    "sl": "Občasno nekaj brusnic, upoštevanih v dnevnem obroku. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
+    "sl": "Občasno nekaj brusnic, všteti jih je treba v dnevno količino hrane. Pri suhih brusnicah, soku, omaki ali želeju najprej na deklaraciji preverite, ali vsebujejo ksilitol ali sestavine iz grozdja.",
     "de": "Ab und zu ein paar Beeren, die zur täglichen Futtermenge Ihrer Katze zählen. Bei getrockneten Cranberrys, Saft, Soße oder Gelee prüfen Sie zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
     "fr": "Quelques baies de temps en temps, comptées dans la ration quotidienne de votre chat. Pour les canneberges séchées, le jus, la sauce ou la gelée, vérifiez d’abord sur l’étiquette l’absence de xylitol ou d’ingrédients à base de raisin.",
     "es": "Unos pocos arándanos rojos de vez en cuando, contándolos como parte de la comida diaria de tu gato. Si son deshidratados o en zumo, salsa o jalea, revisa antes en la etiqueta que no lleven xilitol ni ingredientes derivados de la uva.",
@@ -196,7 +196,7 @@
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
         "fr": "Non. Les chats sont carnivores : ils ont besoin de nutriments présents dans la viande et n’ont besoin ni de fruits ni de légumes dans leur alimentation. Les fruits ne peuvent jamais être qu’un petit plus.",
         "es": "No. Los gatos son carnívoros: necesitan nutrientes que se encuentran en la carne y no necesitan fruta ni verdura en su dieta. La fruta solo puede ser un pequeño extra.",
@@ -283,7 +283,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a34709bc77f652dfcbf1c0956089432924908171020bf8b5c4e9c8a47f02e3c5"
+      "verified_hash": "64cadf5b18d16e73aabac5bee11328e89bcd556d1d6572fd23c06c1878afd9d1"
     },
     "de": {
       "status": "verified",

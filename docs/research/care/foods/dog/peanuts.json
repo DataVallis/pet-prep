@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain peanuts now and then: unsalted, unflavoured, dry-roasted or raw, with the shells removed. Salted, honey-roasted or flavoured peanuts are not suitable, and peanuts are fatty, so keep it to a few.",
-    "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, brez okusov, suho praženih ali surovih, brez lupin. Soljeni, medeni ali začinjeni arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
+    "sl": "Da, občasno nekaj navadnih arašidov: nesoljenih, nearomatiziranih, suho praženih ali surovih, brez lupin. Soljeni, medeni ali aromatizirani arašidi niso primerni, arašidi pa so mastni, zato naj jih bo le nekaj.",
     "de": "Ja, ab und zu ein paar naturbelassene Erdnüsse: ungesalzen, ohne Aroma, trocken geröstet oder roh und ohne Schale. Gesalzene, honiggeröstete oder aromatisierte Erdnüsse sind nicht geeignet. Erdnüsse sind zudem fettreich – bleiben Sie also bei ein paar wenigen.",
     "fr": "Oui, quelques cacahuètes nature de temps en temps : non salées, non aromatisées, grillées à sec ou crues, sans leur coque. Les cacahuètes salées, au miel ou aromatisées ne conviennent pas, et les cacahuètes sont grasses : limitez-vous à quelques-unes.",
     "es": "Sí, unos pocos cacahuetes naturales de vez en cuando: sin sal, sin sabores, tostados sin aceite o crudos, y sin cáscara. Los cacahuetes salados, garrapiñados con miel o con sabores no son adecuados, y los cacahuetes son grasos, así que limítate a unos pocos.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Peanuts are high in fat, which can cause digestive upset and even pancreatitis if a dog eats too much. Salted peanuts add sodium a dog doesn't need, flavoured ones add other risky ingredients, and the fibrous shell can be a choking hazard, especially for small breeds.",
-    "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, začinjeni še druge tvegane sestavine, vlaknata lupina pa lahko povzroči dušenje, posebej pri majhnih pasmah.",
+    "sl": "Arašidi so zelo mastni, kar lahko pri preveliki količini povzroči prebavne težave in celo vnetje trebušne slinavke. Soljeni arašidi vsebujejo več natrija, kot ga pes potrebuje, aromatizirani pa druge tvegane sestavine; vlaknata lupina lahko povzroči dušenje, zlasti pri majhnih pasmah.",
     "de": "Erdnüsse sind sehr fettreich, was Verdauungsbeschwerden und sogar eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen kann, wenn ein Hund zu viel davon frisst. Gesalzene Erdnüsse liefern Natrium, das ein Hund nicht braucht, aromatisierte bringen weitere riskante Zutaten mit, und die faserige Schale kann zur Erstickungsgefahr werden, besonders bei kleinen Rassen.",
     "fr": "Les cacahuètes sont riches en graisses, ce qui peut provoquer des troubles digestifs, voire une pancréatite si un chien en mange trop. Salées, elles apportent du sodium dont le chien n’a pas besoin ; aromatisées, d’autres ingrédients à risque ; et la coque fibreuse peut provoquer un étouffement, surtout chez les petites races.",
     "es": "Los cacahuetes tienen mucha grasa, lo que puede provocar molestias digestivas e incluso pancreatitis si el perro come demasiados. Los salados aportan un sodio que el perro no necesita, los de sabores añaden otros ingredientes con riesgo, y la cáscara fibrosa puede provocar atragantamiento, sobre todo en razas pequeñas.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
-    "sl": "Le nekaj, navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin — ne vsak dan.",
+    "sl": "Le nekaj navadnih: suho praženih ali surovih, nesoljenih, nezačinjenih, brez obloge in brez lupin – ne vsak dan.",
     "de": "Nur ein paar, naturbelassen: trocken geröstet oder roh, ungesalzen, ungewürzt, ohne Überzug, ohne Schale – nicht jeden Tag.",
     "fr": "Seulement quelques-unes, nature : grillées à sec ou crues, non salées, sans assaisonnement ni enrobage, sans coque – pas tous les jours.",
     "es": "Solo unos pocos, naturales: tostados sin aceite o crudos, sin sal, sin condimentos, sin recubrimiento y sin cáscara; no todos los días.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "No. Honey-roasted and other flavoured peanuts are unsafe for dogs; only plain, unsalted peanuts are suitable.",
-        "sl": "Ne. Medeni in drugi začinjeni arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
+        "sl": "Ne. Medeni in drugi aromatizirani arašidi za pse niso varni; primerni so le navadni, nesoljeni arašidi.",
         "de": "Nein. Honiggeröstete und andere aromatisierte Erdnüsse sind für Hunde nicht sicher; geeignet sind nur naturbelassene, ungesalzene Erdnüsse.",
         "fr": "Non. Les cacahuètes grillées au miel et les autres cacahuètes aromatisées sont dangereuses pour les chiens ; seules les cacahuètes nature non salées conviennent.",
         "es": "No. Los cacahuetes con miel y otros cacahuetes con sabores no son seguros para los perros; solo son adecuados los cacahuetes naturales sin sal.",
@@ -236,7 +236,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "980390aaca656980381cfa88a907188dbb85d2567cc43fc826d9a7cc1ae55a4d"
+      "verified_hash": "0fa5118ba40a91da03fd7fe06dc370ff7607656961798c7e11de84ca39008f8b"
     },
     "de": {
       "status": "verified",

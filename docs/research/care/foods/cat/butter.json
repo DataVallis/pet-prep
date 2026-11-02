@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, butter is best avoided. It is a fatty dairy food: cat-care guides list fatty foods among things never to feed cats, dairy products can upset a cat's stomach, and their fat adds weight.",
-    "sl": "Ne, maslu se je bolje izogniti. Je masten mlečni izdelek: viri o negi mačk mastno hrano navajajo med živili, ki jih mačkam nikoli ne dajemo, mlečni izdelki mački lahko razdražijo želodec, njihova maščoba pa jo zredi.",
+    "sl": "Ne, maslu se je bolje izogniti. Je masten mlečni izdelek: priročniki za nego mačk mastno hrano uvrščajo med živila, ki jih mačkam nikoli ne dajemo; mlečni izdelki lahko mački pokvarijo želodec, maščoba v njih pa jo zredi.",
     "de": "Nein, auf Butter verzichten Sie besser. Sie ist ein fettes Milchprodukt: Ratgeber zur Katzenhaltung zählen fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, Milchprodukte können den Magen einer Katze verstimmen, und ihr Fett treibt das Gewicht nach oben.",
     "fr": "Non, mieux vaut éviter le beurre. C’est un produit laitier gras : les guides de soins félins classent les aliments gras parmi ceux à ne jamais donner aux chats, les produits laitiers peuvent leur déranger l’estomac et leurs graisses font prendre du poids.",
     "es": "No, es mejor evitar la mantequilla. Es un lácteo graso: las guías de cuidado de gatos incluyen los alimentos grasos entre los que nunca hay que dar a un gato, los lácteos pueden sentarle mal al estómago y su grasa hace engordar.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
-    "sl": "RSPCA Avstralija mastne ostanke in mastno hrano navaja med stvarmi, ki jih mačkam nikoli ne dajemo, dodana maščoba pa lahko povzroči boleče stanje, imenovano pankreatitis. Maslo je tudi mlečni izdelek: mnoge mačke ne prenašajo laktoze, izdelki iz mleka lahko povzročijo bruhanje ali drisko, mlečni izdelki pa imajo veliko maščob in prispevajo k debelosti.",
+    "sl": "RSPCA Avstralija mastne odrezke in mastno hrano uvršča med živila, ki jih mačkam nikoli ne dajemo, dodana maščoba pa lahko povzroči boleče stanje, imenovano pankreatitis (vnetje trebušne slinavke). Maslo je tudi mlečni izdelek: mnoge mačke ne prenašajo laktoze, izdelki iz mleka lahko povzročijo bruhanje ali drisko, mlečni izdelki pa vsebujejo veliko maščob in prispevajo k večji telesni teži.",
     "de": "RSPCA Australia zählt fette Fleischreste und fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, und zusätzliches Fett kann zu einer schmerzhaften Erkrankung führen, der Bauchspeicheldrüsenentzündung (Pankreatitis). Butter ist außerdem ein Milchprodukt: Viele Katzen vertragen keine Laktose, Produkte auf Milchbasis können Erbrechen oder Durchfall auslösen, und Milchprodukte sind fettreich und tragen zur Gewichtszunahme bei.",
     "fr": "La RSPCA Australia classe les chutes de gras et les aliments gras parmi ce qu’il ne faut jamais donner aux chats, et les graisses ajoutées peuvent provoquer une maladie douloureuse, la pancréatite. Le beurre est aussi un produit laitier : beaucoup de chats sont intolérants au lactose, les produits à base de lait peuvent provoquer des vomissements ou de la diarrhée, et les produits laitiers, riches en graisses, font prendre du poids.",
     "es": "RSPCA Australia incluye los recortes de grasa y los alimentos grasos entre lo que nunca hay que dar a los gatos, y la grasa añadida puede provocar una enfermedad dolorosa llamada pancreatitis. La mantequilla, además, es un lácteo: muchos gatos son intolerantes a la lactosa, los productos a base de leche pueden causar vómitos o diarrea, y los lácteos tienen mucha grasa y contribuyen a que el gato engorde.",
@@ -96,7 +96,7 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Razdražen želodec"
+      "Želodčne težave"
     ],
     "de": [
       "Erbrechen",
@@ -166,7 +166,7 @@
   },
   "what_to_do": {
     "en": "If your cat ate butter, watch for vomiting or diarrhoea and contact your vet for advice if she seems unwell or ate a lot.",
-    "sl": "Če je muca pojedla maslo, bodite pozorni na bruhanje ali drisko in se za nasvet obrnite na veterinarja, če se ne počuti dobro ali ga je pojedla veliko.",
+    "sl": "Če je mačka pojedla maslo, pazite, ali bruha ali ima drisko, in se za nasvet obrnite na veterinarja, če se ne počuti dobro ali ga je pojedla veliko.",
     "de": "Wenn Ihre Katze Butter gefressen hat, achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt um Rat, wenn sie krank wirkt oder viel gefressen hat.",
     "fr": "Si votre chat a mangé du beurre, surveillez l’apparition de vomissements ou de diarrhée et demandez conseil à votre vétérinaire s’il semble malade ou en a mangé beaucoup.",
     "es": "Si tu gato ha comido mantequilla, vigila si tiene vómitos o diarrea y consulta a tu veterinario si parece encontrarse mal o ha comido mucha.",
@@ -249,7 +249,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fadeaa53ba95fce07544e579701f37d4b9ac7e5ef309e759ef4706faaf8958e5"
+      "verified_hash": "d0d5e8b24d5dd12bafd60204b248967c83c41c14f57ac182d0b746370e4857b1"
     },
     "de": {
       "status": "verified",

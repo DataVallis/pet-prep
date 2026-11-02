@@ -55,7 +55,7 @@
   "level": "toxic",
   "answer": {
     "en": "No. Chives belong to the onion family and are poisonous to cats, fresh, cooked or dried. They can damage red blood cells and cause anaemia. Call your vet if your cat eats any, and keep potted chives out of reach.",
-    "sl": "Ne. Drobnjak spada med lukovke in je za mačke strupen, svež, kuhan ali sušen. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga muca poje, pokličite veterinarja, lonček z drobnjakom pa postavite izven njenega dosega.",
+    "sl": "Ne. Drobnjak spada med lukovke in je za mačke strupen, svež, kuhan ali sušen. Lahko poškoduje rdeče krvničke in povzroči slabokrvnost. Če ga mačka poje, pokličite veterinarja, lonček z drobnjakom pa naj bo zunaj njenega dosega.",
     "de": "Nein. Schnittlauch gehört zur Familie der Zwiebelgewächse und ist für Katzen giftig – frisch, gekocht oder getrocknet. Er kann die roten Blutkörperchen schädigen und eine Blutarmut (Anämie) verursachen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst, und stellen Sie Schnittlauch im Topf außer Reichweite.",
     "fr": "Non. La ciboulette fait partie de la famille de l’oignon et est toxique pour les chats, fraîche, cuite ou séchée. Elle peut endommager les globules rouges et provoquer une anémie. Appelez votre vétérinaire si votre chat en mange, et placez les pots de ciboulette hors de sa portée.",
     "es": "No. El cebollino pertenece a la familia de la cebolla y es venenoso para los gatos, ya sea fresco, cocinado o seco. Puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo y mantén las macetas de cebollino fuera de su alcance.",
@@ -100,7 +100,7 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Slabši apetit",
+      "Slabši tek",
       "Šibkost",
       "Blede dlesni",
       "Rdečkast urin",
@@ -226,7 +226,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away, even if your cat seems well — signs of anaemia can take several days to show. Note what your cat ate (raw, cooked, powder or a dish containing it), how much and when. Don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali center za zastrupitve živali, tudi če se muca zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite, kaj je pojedla (surovo, kuhano, v prahu ali jed, ki to vsebuje), koliko in kdaj. Muce doma ne poskušajte spraviti k bruhanju.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, tudi če se mačka zdi v redu, saj se znaki slabokrvnosti lahko pokažejo šele po nekaj dneh. Zapišite si, kaj je pojedla (surov drobnjak, kuhan, v prahu ali jed z drobnjakom), koliko in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, auch wenn es Ihrer Katze gut zu gehen scheint – Anzeichen einer Blutarmut können erst nach mehreren Tagen sichtbar werden. Notieren Sie, was Ihre Katze gefressen hat (roh, gekocht, als Pulver oder in einem Gericht), wie viel und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (crue, cuite, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los signos de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (crudo, cocinado, en polvo o un plato que lo lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
@@ -280,7 +280,7 @@
       },
       "a": {
         "en": "No. All forms are poisonous to cats, including raw, cooked and dried chives. Be careful with leftovers, sauces, soups and gravy that may contain them.",
-        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Previdni bodite pri ostankih hrane, omakah, juhah in mesnih omakah, ki ga lahko vsebujejo.",
+        "sl": "Ne. Za mačke so strupene vse oblike, tudi surov, kuhan in sušen drobnjak. Bodite previdni pri ostankih hrane, omakah, juhah in mesnih sokovih, ki ga lahko vsebujejo.",
         "de": "Nein. Alle Formen sind für Katzen giftig, auch roher, gekochter und getrockneter Schnittlauch. Vorsicht bei Essensresten, Saucen, Suppen und Bratensoße, die ihn enthalten können.",
         "fr": "Non. La ciboulette est toxique pour les chats sous toutes ses formes, y compris crue, cuite et séchée. Faites attention aux restes, aux sauces, aux soupes et aux jus de viande qui peuvent en contenir.",
         "es": "No. Todas las formas son venenosas para los gatos, también el cebollino crudo, cocinado y seco. Ten cuidado con las sobras, las salsas, las sopas y los jugos de asado que puedan llevarlo.",
@@ -398,7 +398,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "03b6af6c445adabc1ec7cc7f684ea952a2b0b59fb05e0420456aa62f8b2fbb61"
+      "verified_hash": "3dd14f888ce26b9aa4ee689ce1d78050dbd7bd57a60948f17e8189e5a7ff192e"
     },
     "de": {
       "status": "verified",

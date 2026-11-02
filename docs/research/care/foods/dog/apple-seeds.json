@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
-    "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral ljubljenček pojesti ogromne količine, da bi bilo zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
+    "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral hišni ljubljenček pojesti ogromne količine, da bi bilo to zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
     "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Tier riesige Mengen Kerne fressen, damit sie bedenklich werden. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
     "fr": "L’ASPCA répertorie le pommier comme toxique pour les chiens : ses tiges, ses feuilles et ses pépins contiennent du cyanure (issu de glycosides cyanogènes). Selon l’AKC, un petit nombre de pépins ne devrait pas faire de mal, et selon le Pet Poison Helpline, il faudrait qu’un animal en mange des quantités massives pour que cela pose problème. Nous suivons l’avis le plus strict, car les pépins contiennent du cyanure et le trognon peut aussi provoquer un étouffement ou une obstruction intestinale.",
     "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera preocupante. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
@@ -196,7 +196,7 @@
   },
   "what_to_do": {
     "en": "If your dog eats an apple core or seeds, watch for signs of digestive trouble or blockage, and contact a vet if your dog has problems.",
-    "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore, in se obrnite na veterinarja, če ima težave.",
+    "sl": "Če pes poje ogrizek ali pečke, opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, se obrnite na veterinarja.",
     "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
     "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction, et contactez un vétérinaire si votre chien a des problèmes.",
     "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción y contacta con un veterinario si tiene algún problema.",
@@ -214,7 +214,7 @@
   "serving": null,
   "child": {
     "en": "Apple seeds are not for dogs. A grown-up takes out the core and seeds before your dog gets a piece of apple.",
-    "sl": "Jabolčne pečke niso za pse. Odrasel odstrani ogrizek in pečke, preden pes dobi košček jabolka.",
+    "sl": "Jabolčne pečke niso za pse. Odrasel naj odstrani ogrizek in pečke, preden pes dobi košček jabolka.",
     "de": "Apfelkerne sind nichts für Hunde. Ein Erwachsener entfernt Kerngehäuse und Kerne, bevor dein Hund ein Stück Apfel bekommt.",
     "fr": "Les pépins de pomme ne sont pas pour les chiens. Un adulte retire le trognon et les pépins avant de donner un morceau de pomme à ton chien.",
     "es": "Las semillas de manzana no son para perros. Un adulto quita el corazón y las semillas antes de darle a tu perro un trozo de manzana.",
@@ -250,7 +250,7 @@
       },
       "a": {
         "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
-        "sl": "Majhno število pečk verjetno ne bo škodilo. Psa opazujte, ali se pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
+        "sl": "Majhno število pečk verjetno ne bo škodilo. Opazujte, ali se pri psu pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
         "de": "Wenige Kerne richten wahrscheinlich keinen Schaden an. Achten Sie bei Ihrem Hund auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss durch das Kerngehäuse, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
         "fr": "Un petit nombre de pépins ne devrait pas lui faire de mal. Surveillez chez votre chien l’apparition de troubles digestifs ou de signes d’obstruction dus au trognon, et contactez un vétérinaire s’il a des problèmes.",
         "es": "Es poco probable que unas pocas semillas le hagan daño. Vigila si tu perro muestra signos de problemas digestivos o de obstrucción por el corazón y contacta con un veterinario si tiene algún problema.",
@@ -334,7 +334,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9abe64ab16f750d8188c4048f62b29c064e311dc41330bf93aeee5ef3858327a"
+      "verified_hash": "4d5c00c437b80e584a5c62a399272b15e4f901a6e9e8901330f6e57b9852712e"
     },
     "de": {
       "status": "verified",

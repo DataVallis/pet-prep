@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. The apricot plant is listed as toxic to dogs: its stems, leaves and seeds contain cyanide, especially as they wilt. Never let your dog chew apricot stones, leaves or stems.",
-    "sl": "Ni priporočljivo. Marelica je navedena kot strupena za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Psu nikoli ne pustite žvečiti marelične koščice, listov ali pecljev.",
+    "sl": "Ni priporočljivo. Rastlina marelica je na seznamu strupenih za pse: njeni peclji, listi in semena vsebujejo cianid, zlasti ko venejo. Pazite, da pes nikoli ne žveči mareličnih koščic, listov ali pecljev.",
     "de": "Nicht empfohlen. Die Aprikosenpflanze gilt als giftig für Hunde: Stiele, Blätter und Samen enthalten Cyanid, besonders beim Welken. Lassen Sie Ihren Hund nie auf Aprikosenkernen, -blättern oder -stielen kauen.",
     "fr": "Déconseillé. L’abricotier est répertorié comme toxique pour les chiens : ses tiges, ses feuilles et ses graines contiennent du cyanure, surtout lorsqu’elles se flétrissent. Ne laissez jamais votre chien mâchouiller des noyaux, des feuilles ou des tiges d’abricot.",
     "es": "No se recomienda. La planta del albaricoquero figura como tóxica para los perros: sus tallos, hojas y semillas contienen cianuro, sobre todo cuando se marchitan. No dejes nunca que tu perro mordisquee huesos, hojas o tallos de albaricoque.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Apricot stems, leaves and seeds contain cyanogenic glycosides, which release cyanide. Cyanide reduces the body's ability to use oxygen. Because the plant is listed as toxic to dogs, we do not rate apricots as a safe treat.",
-    "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da porablja kisik. Ker je rastlina navedena kot strupena za pse, marelic ne ocenjujemo kot varen priboljšek.",
+    "sl": "Peclji, listi in semena marelice vsebujejo cianogene glikozide, iz katerih se sprošča cianid. Cianid zmanjša sposobnost telesa, da izkoristi kisik. Ker je rastlina na seznamu strupenih za pse, marelic ne štejemo med varne priboljške.",
     "de": "Stiele, Blätter und Samen der Aprikose enthalten cyanogene Glykoside, die Cyanid freisetzen. Cyanid verringert die Fähigkeit des Körpers, Sauerstoff zu verwerten. Weil die Pflanze als giftig für Hunde gilt, stufen wir Aprikosen nicht als sicheres Leckerli ein.",
     "fr": "Les tiges, les feuilles et les graines de l’abricotier contiennent des glycosides cyanogènes, qui libèrent du cyanure. Le cyanure réduit la capacité de l’organisme à utiliser l’oxygène. Comme la plante est répertoriée comme toxique pour les chiens, nous ne considérons pas l’abricot comme une friandise sûre.",
     "es": "Los tallos, las hojas y las semillas del albaricoque contienen glucósidos cianogénicos, que liberan cianuro. El cianuro reduce la capacidad del organismo para usar el oxígeno. Como la planta figura como tóxica para los perros, no consideramos los albaricoques un premio seguro.",
@@ -199,7 +199,7 @@
   "serving": null,
   "child": {
     "en": "Apricot stones, leaves and stems are bad for dogs. Keep apricots for people, and tell a grown-up if your dog chews a stone.",
-    "sl": "Marelične koščice, listi in peclji so za pse slabi. Marelice so za ljudi; povej odraslemu, če pes žveči koščico.",
+    "sl": "Marelične koščice, listi in peclji so za pse škodljivi. Marelice naj ostanejo za ljudi. Če pes grize koščico, povej odraslemu.",
     "de": "Aprikosenkerne, -blätter und -stiele sind schlecht für Hunde. Aprikosen sind für Menschen. Wenn dein Hund auf einem Kern kaut, sag einem Erwachsenen Bescheid.",
     "fr": "Les noyaux, les feuilles et les tiges d’abricot sont mauvais pour les chiens. Garde les abricots pour les humains et préviens un adulte si ton chien mâchouille un noyau.",
     "es": "Los huesos, hojas y tallos del albaricoque son malos para los perros. Deja los albaricoques para las personas y avisa a un adulto si tu perro mordisquea un hueso.",
@@ -235,7 +235,7 @@
       },
       "a": {
         "en": "The stems, leaves and seeds contain cyanide, and they are particularly toxic as they wilt.",
-        "sl": "Peclji, listi in semena vsebujejo cianid in so posebej strupeni, ko venejo.",
+        "sl": "Peclji, listi in semena vsebujejo cianid, zlasti strupeni pa so, ko venejo.",
         "de": "Stiele, Blätter und Samen enthalten Cyanid und sind beim Welken besonders giftig.",
         "fr": "Les tiges, les feuilles et les graines contiennent du cyanure, et elles sont particulièrement toxiques lorsqu’elles se flétrissent.",
         "es": "Los tallos, las hojas y las semillas contienen cianuro, y son especialmente tóxicos cuando se marchitan.",
@@ -293,7 +293,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bb7907a0c6efca2b31323c1785721857b96e341e9413ae693a92189982c3be80"
+      "verified_hash": "8494d164f3fdaf2f75dc0a6394baef02a08c586a1f55f957d899b3e45e56668e"
     },
     "de": {
       "status": "verified",

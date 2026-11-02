@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Pork is one of the most common proteins in cat food. As a home treat it must be properly cooked: International Cat Care warns that raw or undercooked meat such as beef, lamb and pork can carry Toxoplasma, and advises feeding only properly cooked food. Fatty trimmings are on RSPCA Australia's do-not-feed list, and cooked bones can splinter. Ham is a different food and is covered separately.",
-    "sl": "Svinjina je ena najpogostejših beljakovin v hrani za mačke. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, lahko prenaša toksoplazmo, in svetuje le dobro kuhano hrano. Mastni ostanki so na seznamu RSPCA Avstralija živil, ki jih ne dajemo, kuhane kosti pa se lahko razcepijo. Šunka je drugo živilo in je opisana posebej.",
+    "sl": "Svinjina je ena najpogostejših beljakovinskih sestavin v mačji hrani. Kot domači priboljšek mora biti dobro kuhana: International Cat Care opozarja, da lahko surovo ali premalo kuhano meso, kot so govedina, jagnjetina in svinjina, prenaša toksoplazmo, zato svetuje le dobro kuhano hrano. Mastne odrezke RSPCA Avstralija uvršča na seznam živil, ki jih mačkam ne dajemo, kuhane kosti pa se lahko razcepijo. Šunka je drugo živilo in je obravnavana posebej.",
     "de": "Schweinefleisch ist eine der häufigsten Proteinquellen in Katzenfutter. Als Leckerli zu Hause muss es richtig durchgegart sein: International Cat Care warnt, dass rohes oder nicht ausreichend gegartes Fleisch wie Rind, Lamm und Schwein Toxoplasmen übertragen kann, und rät, nur richtig gegartes Futter zu geben. Fette Fleischreste stehen bei der RSPCA Australia auf der Liste der Dinge, die man nicht füttern sollte, und gegarte Knochen können splittern. Schinken ist ein anderes Lebensmittel und wird gesondert behandelt.",
     "fr": "Le porc est l’une des protéines les plus courantes dans les aliments pour chats. En friandise maison, il doit être bien cuit : International Cat Care avertit que la viande crue ou insuffisamment cuite, comme le bœuf, l’agneau ou le porc, peut transmettre la toxoplasmose, et recommande de ne donner que des aliments bien cuits. Les chutes de gras figurent sur la liste des aliments à ne pas donner de la RSPCA Australia, et les os cuits peuvent se briser en éclats. Le jambon est un aliment différent, traité séparément.",
     "es": "El cerdo es una de las proteínas más habituales en la comida para gatos. Como premio casero debe estar bien cocinado: International Cat Care advierte de que la carne cruda o poco hecha, como la de ternera, cordero y cerdo, puede transmitir Toxoplasma, y aconseja dar solo comida bien cocinada. Los recortes de grasa están en la lista de alimentos que no hay que dar de RSPCA Australia, y los huesos cocinados pueden astillarse. El jamón es un alimento distinto y se trata por separado.",
@@ -90,7 +90,7 @@
   "signs": null,
   "what_to_do": {
     "en": "Offer a small piece first. If your cat gets vomiting or diarrhoea afterwards, stop and ask your vet. If your cat swallowed a cooked bone, call your vet.",
-    "sl": "Najprej ponudite majhen košček. Če ima mačka potem bruhanje ali drisko, prenehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja.",
+    "sl": "Najprej ponudite majhen košček. Če mačka po tem bruha ali ima drisko, nehajte in se posvetujte z veterinarjem. Če je mačka pogoltnila kuhano kost, pokličite veterinarja.",
     "de": "Geben Sie zuerst ein kleines Stück. Bekommt Ihre Katze danach Erbrechen oder Durchfall, hören Sie auf und fragen Sie Ihren Tierarzt. Hat Ihre Katze einen gegarten Knochen verschluckt, rufen Sie Ihren Tierarzt an.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a la diarrhée ensuite, arrêtez et demandez conseil à votre vétérinaire. S’il a avalé un os cuit, appelez votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después tu gato tiene vómitos o diarrea, deja de dárselo y consulta a tu veterinario. Si tu gato se ha tragado un hueso cocinado, llama a tu veterinario.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
-    "sl": "Dobro kuhano, brez dodatkov, pusto, brez kosti in začimb; nekaj majhnih koščkov občasno.",
+    "sl": "Dobro kuhano, navadno, pusto, brez kosti in začimb; občasno nekaj majhnih koščkov.",
     "de": "Gut durchgegart, pur, mager, ohne Knochen und ungewürzt; ab und zu ein paar kleine Stücke.",
     "fr": "Bien cuit, nature, maigre, sans os et sans assaisonnement ; quelques petits morceaux de temps en temps.",
     "es": "Bien cocinado, sin condimentar, magro y sin huesos; unos trocitos de vez en cuando.",
@@ -202,7 +202,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c3d7f12674f38ccaf6d58c58874e3f4ba8e96b6aca237f10dffeb4ad42e539f5"
+      "verified_hash": "feddd2c17bbc74202e42eb54f2946f18c7b6dfe2d10a09e2f443d7db09421fc8"
     },
     "de": {
       "status": "verified",

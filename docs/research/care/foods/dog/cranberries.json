@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small quantities. Plain fresh, cooked or dried cranberries are not toxic to dogs, but too many can upset the stomach. Avoid cranberry sauce and dried fruit mixes, which may contain sugar, raisins or other harmful ingredients.",
-    "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razburi želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine.",
+    "sl": "Da, v majhnih količinah. Navadne sveže, kuhane ali suhe brusnice za pse niso strupene, a preveč jih lahko razdraži želodec. Izogibajte se brusnični omaki in mešanicam suhega sadja, ki lahko vsebujejo sladkor, rozine ali druge škodljive sestavine.",
     "de": "Ja, in kleinen Mengen. Frische, gekochte oder getrocknete Cranberrys ohne Zusätze sind für Hunde nicht giftig, aber zu viele können den Magen verstimmen. Meiden Sie Cranberrysoße und getrocknete Fruchtmischungen, die Zucker, Rosinen oder andere schädliche Zutaten enthalten können.",
     "fr": "Oui, en petites quantités. Les canneberges nature, fraîches, cuites ou séchées, ne sont pas toxiques pour les chiens, mais en trop grande quantité elles peuvent déranger l’estomac. Évitez la sauce aux canneberges et les mélanges de fruits secs, qui peuvent contenir du sucre, des raisins secs ou d’autres ingrédients nocifs.",
     "es": "Sí, en pequeñas cantidades. Los arándanos rojos al natural, ya sean frescos, cocinados o deshidratados, no son tóxicos para los perros, pero demasiados pueden sentar mal al estómago. Evita la salsa de arándanos rojos y las mezclas de fruta deshidratada, que pueden llevar azúcar, pasas u otros ingredientes perjudiciales.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Dried cranberries sometimes come mixed with raisins, and grapes and raisins are very toxic to dogs. Cranberry sauce is high in sugar, which can cause stomach upset, and some recipes include grapes, raisins, currants or alcohol. Many dried cranberries sold for people are sweetened, which adds unneeded sugar.",
-    "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, ribez ali alkohol. Veliko suhih brusnic, namenjenih ljudem, je sladkanih, kar doda nepotreben sladkor.",
+    "sl": "Suhe brusnice so včasih pomešane z rozinami, grozdje in rozine pa so za pse zelo strupeni. Brusnična omaka vsebuje veliko sladkorja, ki lahko povzroči prebavne težave, nekateri recepti pa vsebujejo grozdje, rozine, korintske rozine ali alkohol. Veliko suhih brusnic, ki so naprodaj za ljudi, je sladkanih, zato vsebujejo odvečen sladkor.",
     "de": "Getrocknete Cranberrys werden manchmal mit Rosinen gemischt verkauft, und Weintrauben und Rosinen sind für Hunde sehr giftig. Cranberrysoße enthält viel Zucker, der den Magen verstimmen kann, und manche Rezepte enthalten Weintrauben, Rosinen, Korinthen oder Alkohol. Viele getrocknete Cranberrys für Menschen sind gesüßt und liefern so unnötigen Zucker.",
     "fr": "Les canneberges séchées sont parfois mélangées à des raisins secs, et le raisin comme les raisins secs sont très toxiques pour les chiens. La sauce aux canneberges est riche en sucre, ce qui peut déranger l’estomac, et certaines recettes contiennent du raisin, des raisins secs, des raisins de Corinthe ou de l’alcool. Beaucoup de canneberges séchées vendues pour la consommation humaine sont sucrées, ce qui ajoute du sucre inutile.",
     "es": "Los arándanos rojos deshidratados a veces vienen mezclados con pasas, y las uvas y las pasas son muy tóxicas para los perros. La salsa de arándanos rojos tiene mucho azúcar, que puede sentar mal al estómago, y algunas recetas llevan uvas, pasas, pasas de Corinto o alcohol. Muchos arándanos rojos deshidratados que se venden para personas están endulzados, lo que añade azúcar innecesario.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "It is best avoided. Cranberry sauce is high in sugar, and some recipes include grapes, raisins, currants, which are toxic to dogs, or brandy, and alcohol is toxic to dogs too.",
-        "sl": "Bolje se ji je izogniti. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa vsebujejo grozdje, rozine, ribez, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen.",
+        "sl": "Raje ne. Brusnična omaka vsebuje veliko sladkorja, nekateri recepti pa grozdje, rozine ali korintske rozine, ki so za pse strupeni, ali žganje, alkohol pa je za pse prav tako strupen.",
         "de": "Besser nicht. Cranberrysoße enthält viel Zucker, und manche Rezepte enthalten Weintrauben, Rosinen oder Korinthen, die für Hunde giftig sind, oder Brandy – und auch Alkohol ist für Hunde giftig.",
         "fr": "Mieux vaut l’éviter. La sauce aux canneberges est riche en sucre, et certaines recettes contiennent du raisin, des raisins secs ou des raisins de Corinthe, toxiques pour les chiens, ou encore du brandy ; or l’alcool est lui aussi toxique pour les chiens.",
         "es": "Es mejor evitarla. La salsa de arándanos rojos tiene mucho azúcar, y algunas recetas llevan uvas, pasas o pasas de Corinto, que son tóxicas para los perros, o brandy; el alcohol también es tóxico para ellos.",
@@ -179,7 +179,7 @@
     {
       "q": {
         "en": "Do cranberries help with urinary tract infections in dogs?",
-        "sl": "Ali brusnice pomagajo pri okužbah sečil pri psih?",
+        "sl": "Ali brusnice psom pomagajo pri okužbah sečil?",
         "de": "Helfen Cranberrys Hunden bei Harnwegsinfekten?",
         "fr": "Les canneberges aident-elles contre les infections urinaires chez le chien ?",
         "es": "¿Sirven los arándanos rojos contra las infecciones de orina en los perros?",
@@ -196,7 +196,7 @@
       },
       "a": {
         "en": "Many people believe so, but there have not been enough studies in dogs to confirm it.",
-        "sl": "Mnogi tako mislijo, a pri psih ni bilo dovolj raziskav, ki bi to potrdile.",
+        "sl": "Mnogi so tega prepričani, a raziskav pri psih ni dovolj, da bi to potrdile.",
         "de": "Viele glauben das, aber es gibt noch nicht genug Studien an Hunden, um es zu bestätigen.",
         "fr": "Beaucoup de gens le pensent, mais il n’y a pas eu assez d’études chez le chien pour le confirmer.",
         "es": "Mucha gente lo cree, pero no se han hecho suficientes estudios en perros para confirmarlo.",
@@ -295,7 +295,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7039c907be5dc2a220702f32549b543e63f2335f7ce016584d5ff0843aaa4354"
+      "verified_hash": "ff84561988cf14fe6c3cdf074cc36d261a5102e6030c7edefcd6e0cd36f83062"
     },
     "de": {
       "status": "verified",

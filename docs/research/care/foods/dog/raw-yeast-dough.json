@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Yeast keeps working in the warm, moist stomach: the dough expands and gas builds up, which can block the gut or, less often, twist the stomach (bloat). At the same time the yeast produces alcohol, which is quickly absorbed into the blood. Dogs are affected most often because they eat whatever they find.",
-    "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Psi so najpogosteje prizadeti, ker pojedo, kar najdejo.",
+    "sl": "Kvas v toplem in vlažnem želodcu deluje naprej: testo se širi in nabirajo se plini, kar lahko zamaši prebavila ali, redkeje, zasuka želodec. Hkrati kvas tvori alkohol, ki se hitro vsrka v kri. Najpogosteje so prizadeti psi, ker pojedo vse, kar najdejo.",
     "de": "Die Hefe arbeitet im warmen, feuchten Magen weiter: Der Teig dehnt sich aus und Gas sammelt sich an, was den Magen-Darm-Trakt blockieren oder, seltener, zu einer Magendrehung führen kann. Gleichzeitig bildet die Hefe Alkohol, der rasch ins Blut aufgenommen wird. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden.",
     "fr": "La levure continue d’agir dans l’estomac chaud et humide : la pâte gonfle et des gaz s’accumulent, ce qui peut bloquer l’intestin ou, plus rarement, provoquer une torsion de l’estomac (dilatation-torsion). En même temps, la levure produit de l’alcool, qui passe rapidement dans le sang. Les chiens sont les plus souvent touchés parce qu’ils mangent tout ce qu’ils trouvent.",
     "es": "La levadura sigue actuando en el estómago, que es cálido y húmedo: la masa se expande y se acumulan gases, lo que puede obstruir el intestino o, con menos frecuencia, provocar una torsión de estómago (dilatación-torsión gástrica). Al mismo tiempo, la levadura produce alcohol, que pasa rápidamente a la sangre. Los perros son los más afectados porque se comen lo que encuentran.",
@@ -181,7 +181,7 @@
   },
   "what_to_do": {
     "en": "Contact your vet right away. Note roughly how much dough was eaten and when. Don't wait for signs: a swelling stomach and alcohol poisoning both need prompt care.",
-    "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihnjen želodec in zastrupitev z alkoholom zahtevata hitro pomoč.",
+    "sl": "Takoj pokličite veterinarja. Zapišite si, približno koliko testa je pes pojedel in kdaj. Ne čakajte na znake: napihovanje želodca in zastrupitev z alkoholom zahtevata hitro pomoč.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt. Notieren Sie ungefähr, wie viel Teig gefressen wurde und wann. Warten Sie nicht auf Anzeichen: Ein anschwellender Magen und eine Alkoholvergiftung müssen beide schnell behandelt werden.",
     "fr": "Contactez immédiatement votre vétérinaire. Notez la quantité approximative de pâte mangée et à quelle heure. N’attendez pas l’apparition des signes : un estomac qui gonfle et une intoxication à l’alcool nécessitent tous deux des soins rapides.",
     "es": "Contacta enseguida con tu veterinario. Apunta más o menos cuánta masa se comió y cuándo. No esperes a que aparezcan síntomas: tanto un estómago que se hincha como una intoxicación etílica necesitan atención rápida.",
@@ -235,7 +235,7 @@
       },
       "a": {
         "en": "The danger described here is raw, unbaked yeast dough, because the yeast is still alive and keeps working in the stomach.",
-        "sl": "Nevarnost, opisana tukaj, velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej.",
+        "sl": "Tu opisana nevarnost velja za surovo, nepečeno kvašeno testo, ker je kvas še živ in v želodcu deluje naprej.",
         "de": "Die hier beschriebene Gefahr betrifft rohen, ungebackenen Hefeteig, weil die Hefe darin noch lebt und im Magen weiterarbeitet.",
         "fr": "Le danger décrit ici concerne la pâte crue à la levure, non cuite, car la levure est encore vivante et continue d’agir dans l’estomac.",
         "es": "El peligro que se describe aquí es el de la masa cruda con levadura, sin hornear, porque la levadura sigue viva y continúa actuando en el estómago.",
@@ -349,7 +349,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9e4dde557b2b573216975e50291634eeb6b695aae1bd0791b141fcefd2ac50df"
+      "verified_hash": "3830bc41727b425f87f28e050695db1b45607668ceea291a4641b0223cb23864"
     },
     "de": {
       "status": "verified",

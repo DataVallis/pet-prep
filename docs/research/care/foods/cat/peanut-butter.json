@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to make it a habit. Some vets say natural peanut butter can be an occasional treat, but it must never contain xylitol, and Cats Protection advises sticking to cat treats instead of human foods.",
-    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, Cats Protection pa svetuje priboljške za mačke namesto človeške hrane.",
+    "sl": "Bolje je, da to ne postane navada. Nekateri veterinarji pravijo, da je naravno arašidovo maslo lahko občasen priboljšek, vendar nikoli ne sme vsebovati ksilitola, Cats Protection pa svetuje priboljške za mačke namesto hrane za ljudi.",
     "de": "Besser nicht regelmäßig. Manche Tierärzte halten naturbelassene Erdnussbutter für ein gelegentliches Leckerli, sie darf aber niemals Xylit (Birkenzucker) enthalten, und Cats Protection rät, bei Katzenleckerlis zu bleiben, statt Lebensmittel für Menschen zu geben.",
     "fr": "Mieux vaut ne pas en faire une habitude. Certains vétérinaires estiment que le beurre de cacahuète naturel peut être une friandise occasionnelle, mais il ne doit jamais contenir de xylitol, et Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains.",
     "es": "Mejor que no se convierta en costumbre. Algunos veterinarios dicen que la crema de cacahuete natural puede ser un premio ocasional, pero nunca debe llevar xilitol, y Cats Protection aconseja limitarse a premios para gatos en lugar de alimentos para personas.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
-    "sl": "Viri se razlikujejo. VCA naravno arašidovo maslo opisuje kot priboljšek, ki ga mačke imajo rade, če ne vsebuje konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol. Cats Protection svetuje priboljške za mačke namesto človeške hrane in opozarja, da oreščki mačkam lahko povzročajo težave. Uporabljamo strožjo stopnjo.",
+    "sl": "Viri se razlikujejo. VCA naravno arašidovo maslo opisuje kot priboljšek, ki ga mačke imajo rade, če ne vsebuje konzervansov in življenjsko nevarnih dodatkov, kot je ksilitol. Cats Protection svetuje priboljške za mačke namesto hrane za ljudi in opozarja, da oreščki mačkam lahko povzročajo težave. Uporabljamo strožjo stopnjo.",
     "de": "Die Quellen sind sich nicht einig. VCA beschreibt naturbelassene Erdnussbutter als Leckerli, das Katzen lieben, solange sie frei von Konservierungsstoffen und lebensgefährlichen Zusätzen wie Xylit ist. Cats Protection rät, bei Katzenleckerlis zu bleiben, statt Lebensmittel für Menschen zu geben, und warnt, dass Nüsse bei Katzen Probleme verursachen können. Wir verwenden die strengere Stufe.",
     "fr": "Les sources ne sont pas d’accord. VCA présente le beurre de cacahuète naturel comme une friandise que les chats adorent, à condition qu’il soit sans conservateurs ni additifs potentiellement mortels comme le xylitol. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains et avertit que les fruits à coque peuvent poser problème aux chats. Nous retenons le niveau le plus prudent.",
     "es": "Las fuentes no coinciden. VCA describe la crema de cacahuete natural como un premio que encanta a los gatos, siempre que no lleve conservantes ni aditivos potencialmente mortales como el xilitol. Cats Protection aconseja limitarse a premios para gatos en lugar de alimentos para personas y advierte de que los frutos secos pueden causar problemas a los gatos. Nosotros aplicamos el nivel más estricto.",
@@ -96,7 +96,7 @@
     "sl": [
       "Bruhanje",
       "Driska",
-      "Razdražen želodec"
+      "Želodčne težave"
     ],
     "de": [
       "Erbrechen",
@@ -166,7 +166,7 @@
   },
   "what_to_do": {
     "en": "A lick of plain peanut butter is unlikely to be serious; watch for vomiting or diarrhoea. If the peanut butter contains xylitol, contact your vet or a pet poison helpline right away, note how much was eaten, and don't wait for signs.",
-    "sl": "Malo navadnega arašidovega masla najverjetneje ne bo resna težava; bodite pozorni na bruhanje ali drisko. Če arašidovo maslo vsebuje ksilitol, takoj pokličite veterinarja ali center za zastrupitve živali, zapišite si, koliko ga je mačka pojedla, in ne čakajte na znake.",
+    "sl": "Liček navadnega arašidovega masla verjetno ne bo resna težava; bodite pozorni na bruhanje ali drisko. Če arašidovo maslo vsebuje ksilitol, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, zapišite si, koliko ga je mačka pojedla, in ne čakajte na znake.",
     "de": "Hat Ihre Katze nur etwas naturbelassene Erdnussbutter abgeleckt, ist das wahrscheinlich nicht ernst; achten Sie auf Erbrechen oder Durchfall. Enthält die Erdnussbutter Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, notieren Sie, wie viel gefressen wurde, und warten Sie nicht auf Anzeichen.",
     "fr": "Un coup de langue sur du beurre de cacahuète nature a peu de chances d’être grave ; surveillez l’apparition de vomissements ou de diarrhée. Si le beurre de cacahuète contient du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, notez la quantité mangée et n’attendez pas l’apparition de signes.",
     "es": "Un lametón de crema de cacahuete sin nada añadido probablemente no sea grave; vigila si aparecen vómitos o diarrea. Si la crema de cacahuete lleva xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, anota cuánto ha comido y no esperes a que aparezcan síntomas.",
@@ -183,7 +183,7 @@
   },
   "serving": {
     "en": "If your vet is happy with it: natural peanut butter only, with no xylitol or preservatives, as a rare lick, not a habit.",
-    "sl": "Če se veterinar strinja: samo naravno arašidovo maslo brez ksilitola in konzervansov, redko in le za lizanje, ne kot navada.",
+    "sl": "Če se veterinar strinja: samo naravno arašidovo maslo brez ksilitola in konzervansov, samo kot redek liček, ne kot navada.",
     "de": "Wenn Ihr Tierarzt einverstanden ist: nur naturbelassene Erdnussbutter ohne Xylit und Konservierungsstoffe, nur selten ein wenig zum Ablecken, nicht als Gewohnheit.",
     "fr": "Si votre vétérinaire est d’accord : uniquement du beurre de cacahuète naturel, sans xylitol ni conservateurs, à faire lécher rarement, sans en faire une habitude.",
     "es": "Si tu veterinario está de acuerdo: solo crema de cacahuete natural, sin xilitol ni conservantes, como un lametón ocasional, no como costumbre.",
@@ -289,7 +289,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ad9ca3159de285016eae171712cae102f8c54b2b9bb793459c251b78f2848094"
+      "verified_hash": "411edb958691d87a391ac1d5ec98a2b1e9f20663e272fdb65d765942896195e3"
     },
     "de": {
       "status": "verified",

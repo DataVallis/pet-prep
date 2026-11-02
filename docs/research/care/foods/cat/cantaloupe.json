@@ -55,7 +55,7 @@
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of cantaloupe is fine as an occasional treat. The ASPCA lists cantaloupe as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
-    "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlina pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
+    "sl": "Da, majhen košček kantalupe je v redu kot občasen priboljšek. ASPCA kantalupo navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči želodčne težave, zato naj bo le majhen dodatek.",
     "de": "Ja, ein kleines Stück Cantaloupe-Melone ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft die Cantaloupe-Melone als ungiftig für Katzen ein, aber Katzen sind Fleischfresser und brauchen kein Obst, und jede Pflanze kann den Magen verstimmen – bleiben Sie also bei einer winzigen Kleinigkeit.",
     "fr": "Oui, un petit morceau de melon cantaloup convient comme friandise occasionnelle. L’ASPCA classe le melon cantaloup comme non toxique pour les chats, mais les chats sont carnivores et n’ont pas besoin de fruits, et toute plante peut déranger l’estomac : cela doit rester un tout petit plus.",
     "es": "Sí, un trocito de melón cantalupo está bien como premio ocasional. La ASPCA considera el melón cantalupo no tóxico para los gatos, pero los gatos son carnívoros y no necesitan fruta, y cualquier planta puede sentarles mal al estómago, así que dáselo solo como un pequeño extra.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "The ASPCA lists true cantaloupe (Cucumis melo) as non-toxic to cats. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
-    "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
+    "sl": "ASPCA pravo kantalupo (Cucumis melo) navaja kot nestrupeno za mačke. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Die ASPCA stuft die echte Cantaloupe-Melone (Cucumis melo) als ungiftig für Katzen ein. Katzen sind obligate Fleischfresser und brauchen kein Obst. Leckerlis sollten nur einen kleinen Teil des täglichen Futters ausmachen, und jedes Pflanzenmaterial kann Erbrechen oder Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe le véritable melon cantaloup (Cucumis melo) comme non toxique pour les chats. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "La ASPCA considera el auténtico melón cantalupo (Cucumis melo) no tóxico para los gatos. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier material vegetal puede provocar vómitos o malestar de estómago.",
@@ -107,7 +107,7 @@
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
-    "sl": "Občasno majhen košček, upoštevan v dnevnem obroku.",
+    "sl": "Občasno majhen košček, všteti ga je treba v dnevno količino hrane.",
     "de": "Ab und zu ein kleines Stück, das zur täglichen Futtermenge Ihrer Katze zählt.",
     "fr": "Un petit morceau de temps en temps, compté dans la ration quotidienne de votre chat.",
     "es": "Un trocito de vez en cuando, contándolo como parte de la comida diaria de tu gato.",
@@ -160,7 +160,7 @@
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "de": "Nein. Katzen sind Fleischfresser: Sie brauchen Nährstoffe, die in Fleisch stecken, und benötigen weder Obst noch Gemüse in ihrer Ernährung. Obst kann immer nur ein kleines Extra sein.",
         "fr": "Non. Les chats sont carnivores : ils ont besoin de nutriments présents dans la viande et n’ont besoin ni de fruits ni de légumes dans leur alimentation. Les fruits ne peuvent jamais être qu’un petit plus.",
         "es": "No. Los gatos son carnívoros: necesitan nutrientes que se encuentran en la carne y no necesitan fruta ni verdura en su dieta. La fruta solo puede ser un pequeño extra.",
@@ -226,7 +226,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "805d6dc177abda93b56accc312c4d075202f4618692842552642ded8bfed2a09"
+      "verified_hash": "a22e86d1b4fc41efee2e016ea64e8ab7e15f9f44b1afd69a3e0fb9528d117b57"
     },
     "de": {
       "status": "verified",

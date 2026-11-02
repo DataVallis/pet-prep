@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "The stems and leaves are not toxic but can cause stomach upset, and whole strawberries can be a choking risk, especially for smaller breeds. Avoid strawberries in syrup or canned strawberries, which have too much sugar and may even contain artificial sweeteners that are toxic to dogs.",
-    "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa lahko predstavljajo nevarnost zadušitve, zlasti pri manjših pasmah. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse.",
+    "sl": "Peclji in listi niso strupeni, a lahko povzročijo prebavne težave, cele jagode pa so lahko nevarne, ker se pes z njimi zaduši, zlasti če je manjše pasme. Izogibajte se jagodam v sirupu ali konzerviranim jagodam, ki imajo preveč sladkorja in lahko celo vsebujejo umetna sladila, strupena za pse.",
     "de": "Stiele und Blätter sind nicht giftig, können aber den Magen verstimmen, und ganze Erdbeeren können zur Erstickungsgefahr werden, besonders bei kleineren Rassen. Meiden Sie Erdbeeren in Sirup oder aus der Dose: Sie enthalten zu viel Zucker und womöglich sogar künstliche Süßstoffe, die für Hunde giftig sind.",
     "fr": "Les queues et les feuilles ne sont pas toxiques mais peuvent déranger l’estomac, et les fraises entières peuvent présenter un risque d’étouffement, surtout pour les petites races. Évitez les fraises au sirop ou en conserve, trop sucrées et pouvant même contenir des édulcorants artificiels toxiques pour les chiens.",
     "es": "El tallo y las hojas no son tóxicos, pero pueden sentar mal al estómago, y las fresas enteras pueden suponer un riesgo de atragantamiento, sobre todo en razas pequeñas. Evita las fresas en almíbar o en lata, que tienen demasiado azúcar e incluso pueden llevar edulcorantes artificiales tóxicos para los perros.",
@@ -196,7 +196,7 @@
       },
       "a": {
         "en": "Whenever you introduce a new food to your dog's diet, it is best to talk to your vet first.",
-        "sl": "Kadar psu uvajate novo hrano, se je najbolje najprej pogovoriti z veterinarjem.",
+        "sl": "Kadar psu uvajate novo hrano, je najbolje, da se najprej pogovorite z veterinarjem.",
         "de": "Wenn Sie ein neues Lebensmittel in die Ernährung Ihres Hundes aufnehmen, sprechen Sie am besten vorher mit Ihrem Tierarzt.",
         "fr": "Chaque fois que vous introduisez un nouvel aliment dans les repas de votre chien, mieux vaut d’abord en parler à votre vétérinaire.",
         "es": "Siempre que añadas un alimento nuevo a la dieta de tu perro, lo mejor es hablar antes con tu veterinario.",
@@ -283,7 +283,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "515bd5af2cf4b8a3adb6d2eab5ec3f7529f91405b931b7aa3d5fa13369a3b705"
+      "verified_hash": "843e709622f22b417411e6ccd79a0760eb685dd0a44f6055cfc8a0d5b1f551a6"
     },
     "de": {
       "status": "verified",

@@ -55,7 +55,7 @@
   "level": "not_recommended",
   "answer": {
     "en": "No, it is best not to. Butter is not poisonous, but it is very fatty, and fatty foods can upset a dog's stomach and may trigger pancreatitis, a painful inflammation. Food you share, such as eggs or mashed potato, is best prepared without butter.",
-    "sl": "Ne, bolje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži vnetje trebušne slinavke, ki je boleče. Hrano, ki jo delite s psom, na primer jajca ali pire, je najbolje pripraviti brez masla.",
+    "sl": "Ne, raje ne. Maslo ni strupeno, je pa zelo mastno, mastna hrana pa lahko psu razdraži želodec in sproži boleče vnetje trebušne slinavke. Hrano, ki jo delite s psom, na primer jajca ali krompirjev pire, je najbolje pripraviti brez masla.",
     "de": "Nein, besser nicht. Butter ist nicht giftig, aber sehr fettreich, und fettreiches Essen kann einem Hund auf den Magen schlagen und eine schmerzhafte Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Essen, das Sie mit ihm teilen, etwa Eier oder Kartoffelbrei, bereiten Sie am besten ohne Butter zu.",
     "fr": "Non, mieux vaut éviter. Le beurre n’est pas toxique, mais il est très gras, et les aliments gras peuvent dérégler l’estomac d’un chien et parfois déclencher une pancréatite, une inflammation douloureuse. Les aliments que vous partagez, comme les œufs ou la purée, sont à préparer de préférence sans beurre.",
     "es": "No, mejor que no. La mantequilla no es tóxica, pero es muy grasa, y los alimentos grasos pueden sentarle mal al estómago de un perro y llegar a desencadenar una pancreatitis, una inflamación dolorosa. La comida que compartas con él, como los huevos o el puré de patatas, es mejor prepararla sin mantequilla.",
@@ -72,7 +72,7 @@
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
-    "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, predvsem mali šnavcerji, so zanj bolj dovzetne. Veterinarski viri tudi svetujejo, da hrano za pse, na primer jajca ali pire, pripravimo brez masla.",
+    "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, zlasti pritlikavi šnavcerji, so zanj bolj dovzetne. Veterinarji tudi svetujejo, naj jajca ali krompirjev pire za psa pripravimo brez masla.",
     "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten.",
     "fr": "Les aliments de table gras ne posent pas de problème de toxicité, mais les aliments gras comme le beurre, les huiles et les jus de cuisson de viande peuvent provoquer une pancréatite. Certaines races, en particulier le schnauzer nain, y sont plus sujettes. Les vétérinaires conseillent aussi de préparer sans beurre les aliments destinés aux chiens, comme les œufs ou la purée.",
     "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida para perros, como los huevos o el puré de patatas.",
@@ -95,8 +95,8 @@
       "Poor appetite and low energy"
     ],
     "sl": [
-      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
-      "Boleč trebuh",
+      "Bruhanje, ki se lahko začne 1–4 dni po mastnem obroku",
+      "Bolečine v trebuhu",
       "Driska",
       "Slab apetit in utrujenost"
     ],
@@ -199,7 +199,7 @@
   "serving": null,
   "child": {
     "en": "Butter is too fatty for dogs and can give them a sore tummy. Keep the butter dish out of reach!",
-    "sl": "Maslo je za pse premastno in jih lahko boli trebušček. Maslo pospravi, da ga pes ne doseže!",
+    "sl": "Maslo je za pse premastno in jih lahko zaboli trebušček. Posodico z maslom pospravi, da je pes ne doseže!",
     "de": "Butter ist zu fett für Hunde und kann ihnen Bauchweh machen. Stell die Butterdose außer Reichweite!",
     "fr": "Le beurre est trop gras pour les chiens et peut leur donner mal au ventre. Range le beurrier hors de portée !",
     "es": "La mantequilla es demasiado grasa para los perros y les puede doler la barriga. ¡Guarda la mantequilla donde el perro no llegue!",
@@ -302,7 +302,7 @@
     "sl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bc426f6340d42346e61608f1fa16e49f0906c308d511a82e16d7208aa5b3f7c8"
+      "verified_hash": "b202f936bdb2101bda383ea20eb9a775888a2456c82925b057b83b5ab7f2bb0b"
     },
     "de": {
       "status": "verified",
