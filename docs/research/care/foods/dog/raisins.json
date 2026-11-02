@@ -75,7 +75,7 @@
     "sl": "Rozine, grozdje in korintske rozine lahko poškodujejo pasje ledvice. Za strupeno sestavino sumijo vinsko kislino; njena količina se razlikuje, zato so učinki nepredvidljivi, prav tako pa ni mogoče vedeti, kateri psi so bolj občutljivi. Ker vzrok ni pojasnjen, vsako količino jemljemo resno.",
     "de": "Rosinen, Weintrauben und Korinthen können die Nieren eines Hundes schädigen. Als giftiger Bestandteil wird Weinsäure vermutet; ihr Gehalt schwankt, deshalb sind die Folgen unberechenbar, und es lässt sich nicht erkennen, welche Hunde empfindlicher sind. Weil die Ursache unklar ist, gilt jede Menge als bedenklich.",
     "fr": "Les raisins secs, le raisin et les raisins de Corinthe peuvent endommager les reins d’un chien. L’acide tartrique est soupçonné d’être la substance toxique ; sa teneur varie, les effets sont donc imprévisibles, et on ne peut pas savoir quels chiens sont plus sensibles. Comme la cause est incertaine, toute quantité est considérée comme préoccupante.",
-    "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no es segura, cualquier cantidad se considera preocupante.",
+    "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no está clara, cualquier cantidad se considera preocupante.",
     "it": "Uvetta, uva e uva passa di Corinto possono danneggiare i reni del cane. Si sospetta che la parte tossica sia l’acido tartarico; la sua quantità varia, quindi gli effetti sono imprevedibili, e non c’è modo di sapere quali cani siano più sensibili. Poiché la causa non è certa, qualsiasi quantità va considerata preoccupante.",
     "pt": "As passas, as uvas e as passas de Corinto podem danificar os rins de um cão. Suspeita-se que a parte tóxica seja o ácido tartárico; a sua quantidade varia, por isso os efeitos são imprevisíveis, e não há forma de saber que cães são mais sensíveis. Como a causa é incerta, qualquer quantidade é motivo de preocupação.",
     "nl": "Rozijnen, druiven en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof; de hoeveelheid verschilt, dus het effect is onvoorspelbaar, en je kunt niet zien welke honden gevoeliger zijn. Omdat de oorzaak onzeker is, wordt elke hoeveelheid als zorgwekkend beschouwd.",
@@ -399,7 +399,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4a7de02fac105371aea1ba729beefc9b7b5a671e9e904a1356c5576f3b1073c2"
+      "verified_hash": "3b8c1ea9776019940abca86eb51dc23bd11519c2c2313ad6004aaea7df145a9f"
     },
     "it": {
       "status": "verified",

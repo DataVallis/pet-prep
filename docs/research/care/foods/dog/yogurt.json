@@ -58,7 +58,7 @@
     "sl": "Da, v majhnih količinah, če je navaden, nesladkan in pes mlečne izdelke prenaša. Nekaterim psom laktoza razdraži prebavo. Nikoli ne dajte jogurta s ksilitolom ali drugimi sladili ali z dodanim sladkorjem.",
     "de": "Ja, in kleinen Mengen, wenn es ungesüßter Naturjoghurt ist und Ihr Hund Milchprodukte verträgt. Manche Hunde bekommen von Laktose Bauchbeschwerden. Geben Sie niemals Joghurt mit Xylit (Birkenzucker) oder anderen Süßstoffen oder mit zugesetztem Zucker.",
     "fr": "Oui, en petite quantité, s’il est nature et non sucré et si votre chien tolère les produits laitiers. Certains chiens ont des troubles digestifs à cause du lactose. Ne donnez jamais de yaourt contenant du xylitol ou d’autres édulcorants, ni de yaourt sucré.",
-    "es": "Sí, en pequeñas cantidades, si es natural y sin azúcar, y si tu perro tolera los lácteos. A algunos perros la lactosa les sienta mal a la barriga. Nunca le des yogur con xilitol u otros edulcorantes, ni con azúcar añadido.",
+    "es": "Sí, en pequeñas cantidades, si es natural y sin azúcar, y si tu perro tolera los lácteos. A algunos perros la lactosa les provoca molestias de barriga. Nunca le des yogur con xilitol u otros edulcorantes, ni con azúcar añadido.",
     "it": "Sì, in piccole quantità, se è bianco, non zuccherato e il tuo cane tollera i latticini. Ad alcuni cani il lattosio dà disturbi di pancia. Non dargli mai yogurt con xilitolo o altri dolcificanti, o con zucchero aggiunto.",
     "pt": "Sim, em pequenas quantidades, se for natural, sem açúcar e o teu cão tolerar laticínios. Alguns cães ficam com mal-estar de barriga por causa da lactose. Nunca dês iogurte com xilitol ou outros adoçantes, nem com açúcar adicionado.",
     "nl": "Ja, in kleine hoeveelheden, als het ongezoete yoghurt naturel is en je hond zuivel verdraagt. Sommige honden krijgen maag-darmklachten van lactose. Geef nooit yoghurt met xylitol of andere zoetstoffen, of met toegevoegde suiker.",
@@ -298,7 +298,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "18e8bde85f8fe6ca6d66d6f1feaa577f2ae613192fc37159fe35f6d445981aa4"
+      "verified_hash": "a01f28b8e55cbb0965e766bf0c61f90b3035f55665a6c1ee7b40b94100790b92"
     },
     "it": {
       "status": "verified",

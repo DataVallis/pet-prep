@@ -58,7 +58,7 @@
     "sl": "Ne. Čebula je za pse strupena v vseh oblikah: surova, kuhana, posušena ali v prahu. Poškoduje rdeče krvničke in lahko povzroči slabokrvnost, znaki pa se pogosto pokažejo šele čez nekaj dni. Enako velja za čebulni prah in mešanice za juhe.",
     "de": "Nein. Zwiebeln sind für Hunde in jeder Form giftig: roh, gekocht, getrocknet oder als Pulver. Sie schädigen rote Blutkörperchen und können Blutarmut (Anämie) verursachen; Anzeichen zeigen sich oft erst Tage später. Auch Pulver und Tütensuppen zählen dazu.",
     "fr": "Non. L’oignon est toxique pour les chiens sous toutes ses formes : cru, cuit, séché ou en poudre. Il endommage les globules rouges et peut provoquer une anémie, dont les signes n’apparaissent souvent que quelques jours plus tard. Les poudres et les soupes instantanées comptent aussi.",
-    "es": "No. La cebolla es tóxica para los perros en cualquier forma: cruda, cocinada, seca o en polvo. Daña los glóbulos rojos y puede provocar anemia, y los síntomas a menudo aparecen solo días después. Los polvos y los sobres de sopa también cuentan.",
+    "es": "No. La cebolla es tóxica para los perros en cualquier forma: cruda, cocinada, seca o en polvo. Daña los glóbulos rojos y puede provocar anemia, y los síntomas a menudo aparecen solo días después. También cuentan la cebolla en polvo y los sobres de sopa.",
     "it": "No. La cipolla è tossica per i cani in ogni forma: cruda, cotta, secca o in polvere. Danneggia i globuli rossi e può causare anemia, con sintomi che spesso compaiono solo giorni dopo. Contano anche le polveri e i preparati per zuppe.",
     "pt": "Não. A cebola é tóxica para os cães em todas as formas: crua, cozinhada, seca ou em pó. Danifica os glóbulos vermelhos e pode causar anemia, e os sinais muitas vezes só aparecem dias depois. Os pós e as misturas para sopa também contam.",
     "nl": "Nee. Ui is in elke vorm giftig voor honden: rauw, gekookt, gedroogd of als poeder. Ui beschadigt rode bloedcellen en kan bloedarmoede veroorzaken, waarbij verschijnselen vaak pas dagen later komen. Ook poeders en soepmixen tellen mee.",
@@ -116,7 +116,7 @@
       "Vómitos y diarrea",
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
-      "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+      "Síntomas de anemia (glóbulos rojos dañados), normalmente unos días después"
     ],
     "it": [
       "Vomito e diarrea",
@@ -274,7 +274,7 @@
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele čez nekaj dni; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les signes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
-        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerla.",
+        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los síntomas de anemia suelen aparecer varios días después de comerla.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
@@ -401,7 +401,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9849fafd084780ad6239facf167695e3e129bed1ccbec2e9f8fcf917af1a1129"
+      "verified_hash": "c14929353900783b9abe121d2ad953ba010496fdeb9819a868550d1c02b4b965"
     },
     "it": {
       "status": "verified",

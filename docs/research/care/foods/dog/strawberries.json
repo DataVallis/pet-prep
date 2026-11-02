@@ -110,7 +110,7 @@
     "sl": "Temeljito oprane, brez pecljev in listov, narezane na majhne koščke ali za majhne pse pretlačene; sveže ali zamrznjene, nikoli v sirupu ali iz konzerve.",
     "de": "Gründlich gewaschen, ohne Stiele und Blätter, in kleine Stücke geschnitten oder für kleine Hunde zerdrückt; frisch oder tiefgekühlt, niemals in Sirup oder aus der Dose.",
     "fr": "Bien lavées, sans queues ni feuilles, coupées en petits morceaux, ou écrasées pour les petits chiens ; fraîches ou surgelées, jamais au sirop ni en conserve.",
-    "es": "Bien lavadas, sin tallo ni hojas, cortadas en trocitos o, para perros pequeños, aplastadas; frescas o congeladas, nunca en almíbar ni en lata.",
+    "es": "Bien lavadas, sin tallo ni hojas, cortadas en trocitos o, para perros pequeños, machacadas; frescas o congeladas, nunca en almíbar ni en lata.",
     "it": "Lavate bene, senza piccioli e foglie, tagliate a pezzetti o schiacciate per i cani piccoli; fresche o surgelate, mai sciroppate o in scatola.",
     "pt": "Bem lavados, sem pés nem folhas, cortados em pedaços pequenos ou esmagados para cães pequenos; frescos ou congelados, nunca em calda nem enlatados.",
     "nl": "Grondig gewassen, zonder steeltjes en blaadjes, in kleine stukjes gesneden of geprakt voor kleine honden; vers of bevroren, nooit op siroop of uit blik.",
@@ -298,7 +298,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6231fd9e1db40fd14a46530f3d01cd2076f1a5d6ee9667c153916120a1cc932f"
+      "verified_hash": "d625c36e430756a476591f14acf58e4d722104b33d8b704ab56590b1737582b2"
     },
     "it": {
       "status": "verified",

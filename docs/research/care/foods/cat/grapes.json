@@ -139,7 +139,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, koliko grozdja je mačka pojedla in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, wie viele Trauben Ihre Katze gefressen hat und wann. Warten Sie nicht auf Anzeichen und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez combien de grains votre chat a mangés et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas uvas ha comido tu gato y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuántas uvas ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanti acini ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota de quantas uvas o teu gato comeu e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel druiven je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -280,7 +280,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4ca54fea6f0b3b4153aed83f73eeca482729beb8547ee5bfc5ac0b5f777b8cef"
+      "verified_hash": "9881e53be65d7906b51897b3918aec5e832d0e64b25acbe0e8e13d2904febe83"
     },
     "it": {
       "status": "verified",

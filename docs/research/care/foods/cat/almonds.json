@@ -116,7 +116,7 @@
       "Vómitos",
       "Diarrea",
       "Malestar de estómago",
-      "Aspecto de estar enfermo"
+      "Parece encontrarse mal"
     ],
     "it": [
       "Vomito",
@@ -184,7 +184,7 @@
     "sl": "Če je mačka pojedla mandlje, se za nasvet obrnite na veterinarja, zlasti če jih je bilo veliko ali se ne počuti dobro. Zapišite si, kaj je pojedla, koliko in kdaj. Če so bili grenki mandlji, takoj pokličite veterinarja.",
     "de": "Wenn Ihre Katze Mandeln gefressen hat, fragen Sie Ihren Tierarzt um Rat, besonders wenn sie viele gefressen hat oder krank wirkt. Notieren Sie, was sie gefressen hat, wie viel und wann. Waren es Bittermandeln, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Si votre chat a mangé des amandes, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. S’il s’agissait d’amandes amères, contactez votre vétérinaire immédiatement.",
-    "es": "Si tu gato ha comido almendras, consulta a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo. Si eran almendras amargas, ponte en contacto con tu veterinario de inmediato.",
+    "es": "Si tu gato ha comido almendras, consulta a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo. Si eran almendras amargas, ponte en contacto con tu veterinario enseguida.",
     "it": "Se il tuo gatto ha mangiato delle mandorle, chiedi consiglio al veterinario, soprattutto se ne ha mangiate molte o sembra stare male. Annota che cosa ha mangiato, quanto e quando. Se erano mandorle amare, contatta subito il veterinario.",
     "pt": "Se o teu gato comeu amêndoas, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Toma nota do que comeu, da quantidade e de quando. Se eram amêndoas amargas, contacta imediatamente o teu veterinário.",
     "nl": "Heeft je kat amandelen gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Ging het om bittere amandelen, neem dan meteen contact op met je dierenarts.",
@@ -238,7 +238,7 @@
         "sl": "Grenki mandlji vsebujejo cianidno spojino in veljajo za strupene. Če je mačka pojedla grenke mandlje, takoj pokličite veterinarja.",
         "de": "Bittermandeln enthalten eine Cyanidverbindung und gelten als giftig. Wenn Ihre Katze Bittermandeln gefressen hat, wenden Sie sich sofort an Ihren Tierarzt.",
         "fr": "Les amandes amères contiennent un composé cyanuré et sont considérées comme toxiques. Si votre chat a mangé des amandes amères, contactez votre vétérinaire immédiatement.",
-        "es": "Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas. Si tu gato ha comido almendras amargas, ponte en contacto con tu veterinario de inmediato.",
+        "es": "Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas. Si tu gato ha comido almendras amargas, ponte en contacto con tu veterinario enseguida.",
         "it": "Le mandorle amare contengono un composto del cianuro e sono considerate tossiche. Se il tuo gatto ha mangiato mandorle amare, contatta subito il veterinario.",
         "pt": "As amêndoas amargas contêm um composto de cianeto e são consideradas tóxicas. Se o teu gato comeu amêndoas amargas, contacta imediatamente o teu veterinário.",
         "nl": "Bittere amandelen bevatten een cyanideverbinding en gelden als giftig. Heeft je kat bittere amandelen gegeten, neem dan meteen contact op met je dierenarts.",
@@ -347,7 +347,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "facb640767ab4c7dfdf5d28e3cd55e10fe39d24d6ef724dab57e6952a39e5274"
+      "verified_hash": "34f8015aa097a70803794d747006fd01129ec795a58f7ac66561985666afe0c4"
     },
     "it": {
       "status": "verified",

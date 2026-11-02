@@ -58,7 +58,7 @@
     "sl": "Ne. Kuhane kosti, na primer piščančje ali puranje, se lahko razcepijo in pri mačkah povzročijo dušenje, notranje poškodbe ali zaporo. Meso vedno odstranite s kosti, preden ga date mački, ostanke pa zavrzite tako, da jih ne doseže.",
     "de": "Nein. Gekochte Knochen, etwa von Hähnchen oder Pute, können splittern und bei Katzen zum Ersticken, zu inneren Verletzungen oder Blockaden führen. Lösen Sie das Fleisch immer vom Knochen, bevor Sie es teilen, und entsorgen Sie Karkassen so, dass Ihre Katze nicht herankommt.",
     "fr": "Non. Les os cuits, comme ceux du poulet ou de la dinde, peuvent se briser en éclats et provoquer un étouffement, des blessures internes ou des occlusions chez le chat. Détachez toujours la viande de l’os avant de la partager, et jetez les carcasses là où votre chat ne peut pas les atteindre.",
-    "es": "No. Los huesos cocinados, como los de pollo o pavo, pueden astillarse y provocar atragantamiento, lesiones internas u obstrucciones en los gatos. Quita siempre la carne del hueso antes de compartirla y tira los restos del animal donde tu gato no pueda alcanzarlos.",
+    "es": "No. Los huesos cocinados, como los de pollo o pavo, pueden astillarse y provocar atragantamiento, lesiones internas u obstrucciones en los gatos. Quita siempre la carne del hueso antes de compartirla y tira las carcasas donde tu gato no pueda alcanzarlas.",
     "it": "No. Le ossa cotte, come quelle di pollo o di tacchino, possono scheggiarsi e causare soffocamento, lesioni interne od ostruzioni nei gatti. Togli sempre la carne dall’osso prima di condividerla e getta le carcasse dove il tuo gatto non può raggiungerle.",
     "pt": "Não. Os ossos cozinhados, como os de frango ou de peru, podem lascar e causar engasgamento, lesões internas ou obstruções nos gatos. Tira sempre a carne do osso antes de a partilhar e deita fora as carcaças onde o teu gato não lhes possa chegar.",
     "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan.",
@@ -239,7 +239,7 @@
         "sl": "Cats Protection navaja, da je navadno kuhano puranje meso lahko občasen priboljšek, če je brez kosti, nezačinjeno in brez kože. Ostanke trupa odvrzite tako, da jih mačka ne doseže.",
         "de": "Laut Cats Protection ist pures, gegartes Putenfleisch als gelegentliches Leckerli in Ordnung, wenn es ohne Knochen, ungewürzt und ohne Haut ist. Entsorgen Sie die Karkasse sicher außer Reichweite Ihrer Katze.",
         "fr": "Selon Cats Protection, un peu de dinde cuite nature convient comme friandise occasionnelle si elle est sans os, sans assaisonnement et sans peau. Jetez la carcasse en lieu sûr, hors de portée de votre chat.",
-        "es": "Cats Protection indica que el pavo cocinado y sin nada está bien como premio de vez en cuando si no tiene huesos, condimentos ni piel. Tira los restos del pavo de forma segura, fuera del alcance de tu gato.",
+        "es": "Cats Protection indica que el pavo cocinado y sin nada está bien como premio de vez en cuando si no tiene huesos, condimentos ni piel. Tira la carcasa del pavo de forma segura, fuera del alcance de tu gato.",
         "it": "Secondo Cats Protection un po’ di tacchino cotto e semplice va bene come premio occasionale, se è senza ossa, senza condimenti e senza pelle. Getta la carcassa in modo sicuro, fuori dalla portata del tuo gatto.",
         "pt": "A Cats Protection diz que o peru simples e cozinhado não faz mal como guloseima ocasional, se for sem ossos, sem temperos e sem pele. Deita fora a carcaça em segurança, fora do alcance do teu gato.",
         "nl": "Volgens Cats Protection is gewone, gekookte kalkoen af en toe prima als snoepje, als het zonder botten, zonder kruiden en zonder vel is. Gooi het karkas veilig weg, buiten bereik van je kat.",
@@ -331,7 +331,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "004fcb765c1bed9c6e82e01b8faaf0f033b4e3a539d6e289c7b114621655148c"
+      "verified_hash": "31170f1e165d53afa5d427570267436d6d6b0d52fd22de9196747bd370ae69c5"
     },
     "it": {
       "status": "verified",

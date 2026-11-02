@@ -58,7 +58,7 @@
     "sl": "Ne. Pekan orehi za pse niso dobri: že majhno število lahko psu zelo škodi. Vsebujejo juglon, na njih je lahko strupena plesen, so mastni, njihove trde lupine pa lahko povzročijo dušenje ali zaporo. Če jih pes poje, pokličite veterinarja.",
     "de": "Nein. Pekannüsse sind nicht gut für Hunde: Schon wenige können einen Hund sehr krank machen. Sie enthalten Juglon, können mit giftigen Schimmelpilzen belastet sein, sind fettreich, und ihre harten Schalen können zum Ersticken oder zu Darmverschlüssen führen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund welche frisst.",
     "fr": "Non. Les noix de pécan ne sont pas bonnes pour les chiens : même quelques-unes peuvent rendre un chien très malade. Elles contiennent de la juglone, peuvent porter des moisissures toxiques, sont grasses, et leur coque dure peut provoquer un étouffement ou des obstructions. Appelez votre vétérinaire si votre chien en mange.",
-    "es": "No. Las nueces pecanas no son buenas para los perros: incluso unas pocas pueden hacer que un perro enferme gravemente. Contienen juglona, pueden tener moho tóxico, son grasas y su cáscara dura puede provocar atragantamiento u obstrucciones. Llama a tu veterinario si tu perro se come alguna.",
+    "es": "No. Las nueces pecanas no son buenas para los perros: incluso unas pocas pueden hacer que un perro enferme gravemente. Contienen juglona, pueden tener moho tóxico, tienen mucha grasa y su cáscara dura puede provocar atragantamiento u obstrucciones. Llama a tu veterinario si tu perro se come alguna.",
     "it": "No. Le noci pecan non fanno bene ai cani: anche poche possono farli stare molto male. Contengono juglone, possono avere muffe tossiche, sono grasse e il loro guscio duro può causare soffocamento od ostruzioni. Chiama il veterinario se il tuo cane ne mangia.",
     "pt": "Não. As nozes-pecã não fazem bem aos cães: mesmo poucas podem pôr um cão muito doente. Contêm juglona, podem ter bolor tóxico, são gordas e as cascas duras podem causar engasgamento ou obstruções. Liga ao teu veterinário se o teu cão comer alguma.",
     "nl": "Nee. Pecannoten zijn niet goed voor honden: zelfs een klein aantal kan een hond erg ziek maken. Ze bevatten juglon, er kan giftige schimmel op zitten, ze zijn vet en een hond kan stikken in de harde doppen of er een verstopping door krijgen. Bel je dierenarts als je hond ervan heeft gegeten.",
@@ -116,7 +116,7 @@
       "Vómitos",
       "Diarrea",
       "Pérdida de apetito y cansancio",
-      "Signos de problemas del sistema nervioso"
+      "Síntomas de problemas del sistema nervioso"
     ],
     "it": [
       "Vomito",
@@ -238,7 +238,7 @@
         "sl": "Vsi deli pekan oreha vsebujejo juglon, na pekan orehih pa zlahka zraste plesen, ki tvori mikotoksine.",
         "de": "Jeder Teil der Pekannuss enthält Juglon, und Pekannüsse schimmeln leicht; dieser Schimmel bildet Mykotoxine.",
         "fr": "Toutes les parties de la noix de pécan contiennent de la juglone, et les noix de pécan moisissent facilement en produisant des mycotoxines.",
-        "es": "Todas las partes de la nuez pecana contienen juglona, y a las pecanas les sale con facilidad moho que produce micotoxinas.",
+        "es": "Todas las partes de la nuez pecana contienen juglona, y las pecanas desarrollan con facilidad un moho que produce micotoxinas.",
         "it": "Ogni parte della noce pecan contiene juglone, e le noci pecan sviluppano facilmente muffe che producono micotossine.",
         "pt": "Todas as partes da noz-pecã contêm juglona, e as nozes-pecã ganham facilmente bolor, que produz micotoxinas.",
         "nl": "Elk deel van de pecannoot bevat juglon, en op pecannoten groeit makkelijk schimmel die mycotoxinen maakt.",
@@ -325,7 +325,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "60d90a2f93767ef05bd3bd20a2c7cc6dbbfe4ad69e3cbd6c6ee3a74850df7b2d"
+      "verified_hash": "6072f5160b71f1a1b87f3d88b2162c38eb56b9861806c787c586b24c986a3cfc"
     },
     "it": {
       "status": "verified",

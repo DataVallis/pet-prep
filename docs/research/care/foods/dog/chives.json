@@ -116,7 +116,7 @@
       "Vómitos y diarrea",
       "Come menos de lo habitual",
       "Malestar de barriga, incluso con poca cantidad",
-      "Signos de anemia (glóbulos rojos dañados), normalmente unos días después"
+      "Síntomas de anemia (glóbulos rojos dañados), normalmente unos días después"
     ],
     "it": [
       "Vomito e diarrea",
@@ -274,7 +274,7 @@
         "sl": "Znaki se lahko pojavijo v 24 urah, pogosteje pa šele čez nekaj dni; znaki slabokrvnosti se običajno razvijejo nekaj dni po zaužitju.",
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les signes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
-        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los signos de anemia suelen aparecer varios días después de comerlo.",
+        "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los síntomas de anemia suelen aparecer varios días después de comerlo.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
@@ -396,7 +396,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3aa1206dd30da7043fb1cee2bbf6cced705f9c46ed14025508caced2b449d25a"
+      "verified_hash": "6ec8bcb062374a443e9d6b8546b91f0645e7fe5c75013b98f265674d580ec422"
     },
     "it": {
       "status": "verified",

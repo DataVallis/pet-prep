@@ -236,7 +236,7 @@
         "sl": "Je čips z okusom slabši?",
         "de": "Sind Chips mit Geschmacksrichtung schlimmer?",
         "fr": "Les chips aromatisées sont-elles pires ?",
-        "es": "¿Las patatas fritas con sabores son peores?",
+        "es": "¿Las patatas fritas de sabores son peores?",
         "it": "Le patatine aromatizzate sono peggio?",
         "pt": "As batatas fritas com sabores são piores?",
         "nl": "Zijn chips met een smaakje erger?",
@@ -253,7 +253,7 @@
         "sl": "Lahko je. Čebula in česen sta za pse strupena v vseh oblikah, tudi v prahu, zato preverite okus.",
         "de": "Mitunter ja. Zwiebeln und Knoblauch sind für Hunde in jeder Form giftig, auch als Pulver – prüfen Sie also die Geschmacksrichtung.",
         "fr": "Elles peuvent l’être. L’oignon et l’ail sont toxiques pour les chiens sous toutes leurs formes, y compris en poudre : vérifiez le parfum.",
-        "es": "Pueden serlo. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo, así que mira el sabor.",
+        "es": "Pueden serlo. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo, así que fíjate en el sabor.",
         "it": "Possono esserlo. Cipolla e aglio sono tossici per i cani in qualsiasi forma, anche in polvere, quindi controlla il gusto.",
         "pt": "Podem ser. A cebola e o alho são tóxicos para os cães em todas as formas, incluindo em pó, por isso verifica o sabor.",
         "nl": "Dat kan. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder, dus kijk goed welke smaak het is.",
@@ -360,7 +360,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "80ba5c74e4f8565b4c9085446bc491dcd336fcf1cfdb891afd683a76183d77be"
+      "verified_hash": "f651a39ba81d61ec90dc0ddc4472c40f7e503ea8a25b9bd9544019c739c65b4d"
     },
     "it": {
       "status": "verified",

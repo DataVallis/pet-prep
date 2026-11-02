@@ -199,7 +199,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala koščico, peclje ali liste. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze auf einem Kern, einem Stiel oder Blättern gekaut hat. Notieren Sie, was sie gefressen hat, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchouillé un noyau, une tige ou des feuilles. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, un tallo o hojas. Apunta qué ha comido, cuánto y cuándo. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordisqueado un hueso, un tallo o hojas. Apunta qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato un nocciolo, uno stelo o delle foglie. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Toma nota do que foi comido, da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, steel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -328,7 +328,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2be8b08811e655876a67e3d2b461410699d4440f8b8b6a7e550cfbbf997988ab"
+      "verified_hash": "5d187f73385bd0cb16db6a5b3322c579656572f116401cd18e1482e93c0069f6"
     },
     "it": {
       "status": "verified",

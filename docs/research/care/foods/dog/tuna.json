@@ -93,7 +93,7 @@
     "sl": "Ukraden grižljaj tune ni razlog za paniko. Če pes redno dobiva tuno in se pojavijo znaki, kot so tresenje, slaba koordinacija, bruhanje krvi ali krvava driska, ga takoj odpeljite k veterinarju.",
     "de": "Ein stibitzter Bissen Thunfisch ist kein Grund zur Panik. Wenn Ihr Hund regelmäßig Thunfisch gefressen hat und Anzeichen wie Zittern, Koordinationsverlust, blutiges Erbrechen oder blutigen Durchfall zeigt, bringen Sie ihn sofort zum Tierarzt.",
     "fr": "Une bouchée de thon chapardée n’est pas une raison de paniquer. Si votre chien mange du thon régulièrement et présente des signes comme des tremblements, une perte de coordination, des vomissements de sang ou une diarrhée sanglante, emmenez-le immédiatement chez le vétérinaire.",
-    "es": "Que tu perro robe un bocado de atún no es motivo de pánico. Si tu perro ha estado comiendo atún con regularidad y muestra signos como temblores, falta de coordinación, vómitos con sangre o diarrea con sangre, llévalo al veterinario de inmediato.",
+    "es": "Que tu perro robe un bocado de atún no es motivo de pánico. Si tu perro ha estado comiendo atún con regularidad y muestra síntomas como temblores, falta de coordinación, vómitos con sangre o diarrea con sangre, llévalo al veterinario enseguida.",
     "it": "Un boccone di tonno rubato non è motivo di panico. Se il tuo cane mangia tonno regolarmente e mostra sintomi come tremori, perdita di coordinazione, vomito con sangue o diarrea con sangue, portalo subito dal veterinario.",
     "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostrar sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário.",
     "nl": "Een gestolen hapje tonijn is geen reden tot paniek. Eet je hond regelmatig tonijn en zie je verschijnselen zoals trillingen, slechte coördinatie, bloed braken of bloederige diarree? Ga dan meteen naar de dierenarts.",
@@ -310,7 +310,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "32b36f8ef4942331bce26b3057e8f2f840e4a564fede4b5ac414b2475aa89f16"
+      "verified_hash": "9e38b0dea671eea967a34ba577d73247a9f5b966526f6e9494693f7d0f7273e2"
     },
     "it": {
       "status": "verified",

@@ -75,7 +75,7 @@
     "sl": "Zastrupitev z alkoholom lahko doleti vse živali, mačke pa so še posebej občutljive. Alkohol ni le v pijačah: najdemo ga tudi v bonbonih z likerjem, razkužilu za roke, ustni vodici in surovem vzhajajočem testu. Znaki se običajno pokažejo kmalu po zaužitju.",
     "de": "Alle Tiere können eine Alkoholvergiftung bekommen, Katzen sind aber besonders empfindlich. Alkohol steckt nicht nur in Getränken, sondern auch in Likörpralinen, Händedesinfektionsmittel, Mundspülung und rohem, aufgehendem Brotteig. Die Anzeichen treten meist schnell auf, nachdem eine Katze ihn aufgenommen hat.",
     "fr": "Tous les animaux peuvent être intoxiqués par l’alcool, mais les chats sont particulièrement sensibles. L’alcool ne se trouve pas que dans les boissons : il peut aussi être présent dans les bonbons à la liqueur, le gel hydroalcoolique, les bains de bouche et la pâte à pain crue en train de lever. Les signes apparaissent généralement vite après l’ingestion.",
-    "es": "Todos los animales pueden sufrir una intoxicación por alcohol, pero los gatos son especialmente sensibles. El alcohol no está solo en las bebidas: también puede haberlo en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación. Los signos suelen aparecer poco después de que el gato lo trague.",
+    "es": "Todos los animales pueden sufrir una intoxicación por alcohol, pero los gatos son especialmente sensibles. El alcohol no está solo en las bebidas: también puede haberlo en los bombones de licor, el gel hidroalcohólico, el enjuague bucal y la masa de pan cruda en fermentación. Los síntomas suelen aparecer poco después de que el gato lo trague.",
     "it": "Tutti gli animali possono subire un’intossicazione da alcol, ma i gatti sono particolarmente sensibili. L’alcol non si trova solo nelle bevande: può essere presente anche nei dolcetti al liquore, nel gel igienizzante per le mani, nel collutorio e nell’impasto crudo del pane in lievitazione. Di solito i sintomi compaiono poco dopo che il gatto lo ha ingerito.",
     "pt": "Todos os animais podem sofrer uma intoxicação por álcool, mas os gatos são especialmente sensíveis. O álcool não está só nas bebidas: também pode estar em bombons de licor, gel desinfetante para as mãos, elixir bucal e massa de pão crua a levedar. Os sinais costumam surgir pouco depois de o gato o engolir.",
     "nl": "Alle dieren kunnen een alcoholvergiftiging krijgen, maar katten zijn bijzonder gevoelig. Alcohol zit niet alleen in drankjes: het kan ook zitten in likeurbonbons, handgel, mondwater en rauw, rijzend brooddeeg. Verschijnselen treden meestal snel op nadat een kat het heeft binnengekregen.",
@@ -184,7 +184,7 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka zaužila, koliko in kdaj, ter shranite steklenico ali embalažo. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze verschluckt hat, wie viel und wann, und bewahren Sie die Flasche oder Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé, en quelle quantité et à quelle heure, et gardez la bouteille ou l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato, cuánto y cuándo, y guarda la botella o el envase. No esperes a que aparezcan signos y no intentes provocarle el vómito en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato, cuánto y cuándo, y guarda la botella o el envase. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto, quanto e quando, e conserva la bottiglia o la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu, da quantidade e de quando, e guarda a garrafa ou a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen, hoeveel en wanneer, en bewaar de fles of verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
@@ -345,7 +345,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5175989614f12b3d1f4b18a479871d3281d1727b3ae82713e48fecd0ce0030a4"
+      "verified_hash": "49b048005a45f382373f3ae468fe391c480ed68ba3d7e4685ceb65c21dd1a1b8"
     },
     "it": {
       "status": "verified",

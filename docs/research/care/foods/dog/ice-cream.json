@@ -169,7 +169,7 @@
     "sl": "Če pes poliže navaden vanilijev sladoled, običajno zadošča, da opazujete, ali se pojavijo prebavne težave. Če je sladoled vseboval čokolado ali ksilitol, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, zapišite si, kaj in koliko je pes pojedel, in ne čakajte na znake.",
     "de": "Hat Ihr Hund nur kurz an gewöhnlichem Vanilleeis geschleckt, genügt es meist, auf Magen-Darm-Beschwerden zu achten. Enthielt das Eis Schokolade oder Xylit, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, notieren Sie, was und wie viel gefressen wurde, und warten Sie nicht auf Anzeichen.",
     "fr": "Après un coup de langue sur une glace à la vanille nature, il suffit généralement de surveiller les troubles digestifs. Si la glace contenait du chocolat ou du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, notez ce qu’il a mangé et en quelle quantité, et n’attendez pas l’apparition des signes.",
-    "es": "Un lametón de helado de vainilla natural normalmente solo requiere vigilar si aparecen molestias de barriga. Si el helado llevaba chocolate o xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, apunta qué ha comido y cuánto, y no esperes a que aparezcan síntomas.",
+    "es": "Un lametón de helado de vainilla natural normalmente basta con vigilar si aparecen molestias de barriga. Si el helado llevaba chocolate o xilitol, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales, apunta qué ha comido y cuánto, y no esperes a que aparezcan síntomas.",
     "it": "Di solito, dopo una leccata di gelato semplice alla vaniglia, basta controllare se compaiono disturbi di pancia. Se il gelato conteneva cioccolato o xilitolo, contatta subito il veterinario o un centro antiveleni veterinario, annota che cosa e quanto ha mangiato e non aspettare che compaiano i sintomi.",
     "pt": "Uma lambidela de gelado simples de baunilha normalmente só exige que vigies se há mal-estar de barriga. Se o gelado tinha chocolate ou xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, anota o que comeu e quanto, e não esperes pelos sinais.",
     "nl": "Na een likje gewoon vanille-ijs hoef je meestal alleen op maag-darmklachten te letten. Zat er chocolade of xylitol in het ijs? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, schrijf op wat en hoeveel er is gegeten en wacht niet op verschijnselen.",
@@ -331,7 +331,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "321b1550e04976f76068dcfb2192d1e0125057cdb2ce8866c2a3d05bf0136ef2"
+      "verified_hash": "bdb0b84608cc52902579226c0332a6db544af0fb0614db1e75cc914e81684683"
     },
     "it": {
       "status": "verified",

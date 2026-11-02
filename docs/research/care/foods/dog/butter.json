@@ -75,7 +75,7 @@
     "sl": "Mastna hrana z mize ni strupena, a mastna živila, kot so maslo, olja in mast od pečenke, lahko povzročijo vnetje trebušne slinavke. Nekatere pasme, zlasti pritlikavi šnavcerji, so zanj bolj dovzetne. Veterinarji tudi svetujejo, naj jajca ali krompirjev pire za psa pripravimo brez masla.",
     "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten.",
     "fr": "Les aliments de table gras ne posent pas de problème de toxicité, mais les aliments gras comme le beurre, les huiles et les jus de cuisson de viande peuvent provoquer une pancréatite. Certaines races, en particulier le schnauzer nain, y sont plus sujettes. Les vétérinaires conseillent aussi de préparer sans beurre les aliments destinés aux chiens, comme les œufs ou la purée.",
-    "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida para perros, como los huevos o el puré de patatas.",
+    "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida que se da a los perros, como los huevos o el puré de patatas.",
     "it": "I cibi grassi della tavola non sono un problema di tossicità, ma cibi grassi come burro, oli e sughi di cottura della carne possono causare pancreatite. Alcune razze, soprattutto lo schnauzer nano, sono più predisposte. I veterinari consigliano anche di preparare il cibo per i cani, come uova o purè di patate, senza burro.",
     "pt": "Os alimentos gordos da mesa não são um problema de toxicidade, mas alimentos gordos como a manteiga, os óleos e a gordura da carne podem causar pancreatite. Algumas raças, sobretudo o schnauzer miniatura, são mais propensas. Os veterinários também sugerem preparar a comida para cães, como ovos ou puré de batata, sem manteiga.",
     "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken.",
@@ -238,7 +238,7 @@
         "sl": "Ne v smislu zastrupitve. Težava je maščoba, ki lahko povzroči prebavne težave ali vnetje trebušne slinavke.",
         "de": "Nicht im Sinne einer Vergiftung. Das Problem ist das Fett, das zu Magenverstimmung oder einer Pankreatitis führen kann.",
         "fr": "Pas au sens d’un poison. Le problème, ce sont les graisses, qui peuvent provoquer des troubles digestifs ou une pancréatite.",
-        "es": "No en el sentido de un veneno. El problema es la grasa, que puede causar problemas de estómago o pancreatitis.",
+        "es": "Como veneno, no. El problema es la grasa, que puede causar malestar de estómago o pancreatitis.",
         "it": "Non nel senso di velenoso. Il problema sono i grassi, che possono causare disturbi di stomaco o pancreatite.",
         "pt": "Não no sentido de ser venenosa. O problema é a gordura, que pode perturbar o estômago ou causar pancreatite.",
         "nl": "Niet in de zin van vergiftiging. Het probleem is het vet, dat een maagstoornis of alvleesklierontsteking kan veroorzaken.",
@@ -317,7 +317,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2a5c5e02c1f8c6d71032ae93929766839b857b13c2452fe1885e402bd0db8945"
+      "verified_hash": "0370357f21d54fc10437688038d87ecb30d0523a8d103fd8ba0f4ca2370b2bb6"
     },
     "it": {
       "status": "verified",

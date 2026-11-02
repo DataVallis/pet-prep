@@ -110,7 +110,7 @@
     ],
     "es": [
       "Atragantamiento o arcadas",
-      "Signos de obstrucción: vómitos repetidos, no come, cansancio",
+      "Síntomas de obstrucción: vómitos repetidos, no come, cansancio",
       "Pupilas dilatadas, encías de color rojo ladrillo, dificultad para respirar (cianuro)"
     ],
     "it": [
@@ -275,7 +275,7 @@
         "sl": "Lahko povzroči dušenje, zamaši črevesje, njeno seme pa vsebuje snovi, ki sproščajo cianid.",
         "de": "Er kann zum Ersticken führen und den Darm blockieren, und sein Samen enthält Verbindungen, die Cyanid freisetzen.",
         "fr": "Il peut provoquer un étouffement, bloquer l’intestin, et son amande contient des composés qui libèrent du cyanure.",
-        "es": "Puede provocar atragantamiento, obstruir el intestino, y su semilla contiene compuestos que liberan cianuro.",
+        "es": "Puede provocar atragantamiento y obstruir el intestino, y su semilla contiene compuestos que liberan cianuro.",
         "it": "Può causare soffocamento, può ostruire l’intestino e il suo seme contiene sostanze che liberano cianuro.",
         "pt": "Pode causar engasgamento, pode obstruir o intestino e a sua semente contém compostos que libertam cianeto.",
         "nl": "Een hond kan erin stikken, de pit kan de darmen verstoppen, en de kern bevat stoffen waaruit cyanide vrijkomt.",
@@ -382,7 +382,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9a7a58401e52861aa7a02f30b51acbb80fdd968fa35395ae87d538c7fbf651e7"
+      "verified_hash": "efe1d9d78490b0ff4ceab092d9b311c8e97daf95ec1ae7adad3ed06e3bd0f029"
     },
     "it": {
       "status": "verified",

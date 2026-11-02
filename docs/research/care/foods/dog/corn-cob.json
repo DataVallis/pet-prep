@@ -199,7 +199,7 @@
     "sl": "Takoj pokličite veterinarja, če je pes pogoltnil koruzni storž ali njegov del, tudi če se zdi v redu. Zapišite si, kdaj se je to zgodilo in približno koliko je pojedel. Ne čakajte na znake zapore.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihr Hund einen Maiskolben oder ein Stück davon verschluckt hat, auch wenn er unauffällig wirkt. Notieren Sie, wann es passiert ist und ungefähr wie viel gefressen wurde. Warten Sie nicht auf Anzeichen eines Darmverschlusses.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chien a avalé un épi de maïs ou un morceau d’épi, même s’il semble aller bien. Notez quand c’est arrivé et en quelle quantité approximative. N’attendez pas les signes d’une obstruction.",
-    "es": "Contacta enseguida con tu veterinario si tu perro se ha tragado una mazorca de maíz o parte de ella, aunque parezca estar bien. Apunta cuándo ha pasado y más o menos cuánto ha comido. No esperes a que aparezcan signos de obstrucción.",
+    "es": "Contacta enseguida con tu veterinario si tu perro se ha tragado una mazorca de maíz o parte de ella, aunque parezca estar bien. Apunta cuándo ha pasado y más o menos cuánto ha comido. No esperes a que aparezcan síntomas de obstrucción.",
     "it": "Contatta subito il veterinario se il tuo cane ha ingoiato una pannocchia o un pezzo di pannocchia, anche se sembra stare bene. Annota quando è successo e più o meno quanto ne ha mangiato. Non aspettare i segni di un’ostruzione.",
     "pt": "Contacta imediatamente o teu veterinário se o teu cão engoliu uma maçaroca de milho ou parte de uma, mesmo que pareça estar bem. Anota quando aconteceu e mais ou menos quanto comeu. Não esperes por sinais de obstrução.",
     "nl": "Neem meteen contact op met je dierenarts als je hond een maïskolf of een deel ervan heeft ingeslikt, ook als hij in orde lijkt. Schrijf op wanneer het gebeurde en ongeveer hoeveel er is gegeten. Wacht niet op tekenen van een verstopping.",
@@ -217,7 +217,7 @@
     "sl": "Koruzni storž se lahko psu zatakne v trebuščku. Storž odloži v zaprt koš, če pa ga pes poje, povej odraslemu.",
     "de": "Maiskolben können im Bauch eines Hundes stecken bleiben. Wirf Kolben gleich in einen geschlossenen Mülleimer und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
     "fr": "Les épis de maïs peuvent rester coincés dans le ventre d’un chien. Jette-les tout de suite dans une poubelle fermée et préviens un adulte si ton chien en mange un.",
-    "es": "Las mazorcas se pueden quedar atascadas en la barriga de un perro. Tíralas enseguida a una basura con tapa y avisa a un adulto si tu perro se come una.",
+    "es": "Las mazorcas se pueden quedar atascadas en la barriga de un perro. Tíralas enseguida a un cubo con tapa y avisa a un adulto si tu perro se come una.",
     "it": "Le pannocchie possono bloccarsi nella pancia di un cane. Butta subito le pannocchie in un bidone chiuso e dillo a un adulto se il tuo cane ne mangia una.",
     "pt": "As maçarocas de milho podem ficar presas na barriga de um cão. Põe-nas logo num caixote do lixo fechado e avisa um adulto se o teu cão comer uma.",
     "nl": "Maïskolven kunnen in het buikje van een hond vast komen te zitten. Gooi kolven meteen in een dichte vuilnisbak. Eet je hond er een? Vertel het aan een volwassene.",
@@ -272,7 +272,7 @@
         "sl": "Ali storž pride ven sam od sebe?",
         "de": "Wird ein Maiskolben von allein wieder ausgeschieden?",
         "fr": "Un épi de maïs finira-t-il par passer tout seul ?",
-        "es": "¿Una mazorca de maíz saldrá sola?",
+        "es": "¿Una mazorca de maíz se expulsa sola?",
         "it": "La pannocchia uscirà da sola?",
         "pt": "A maçaroca acaba por sair sozinha?",
         "nl": "Komt een maïskolf er vanzelf weer uit?",
@@ -395,7 +395,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "03e2f575fe19b30a58ad388db2f6c83facb2bca80ee8788bc830bd980fa1d5cd"
+      "verified_hash": "1c710d33ef5b3ff51e6bd553b359d324453b15dd07c5069c1912b10904373acf"
     },
     "it": {
       "status": "verified",

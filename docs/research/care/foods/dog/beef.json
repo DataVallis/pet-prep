@@ -58,7 +58,7 @@
     "sl": "Da, nezačinjena kuhana govedina brez maščobe je lahko zdrav vir beljakovin. Ne uporabljajte soli, začimb in dodatkov, kot sta čebula in česen, nikoli ne dajte kuhanih kosti in se izogibajte surovi govedini, ki lahko vsebuje bakterije.",
     "de": "Ja, pures, gegartes Rindfleisch ohne Fettrand kann eine gesunde Proteinquelle sein. Verzichten Sie auf Salz, Gewürze und Toppings wie Zwiebeln und Knoblauch, geben Sie niemals gegarte Knochen und meiden Sie rohes Rindfleisch, das Bakterien übertragen kann.",
     "fr": "Oui, du bœuf cuit nature, dégraissé, peut être une bonne source de protéines. Évitez le sel, les épices et les garnitures comme l’oignon et l’ail, ne donnez jamais d’os cuits et évitez le bœuf cru, qui peut contenir des bactéries.",
-    "es": "Sí, la ternera cocinada, sin nada añadido y sin la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
+    "es": "Sí, la ternera cocinada, sin nada añadido y quitándole la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
     "it": "Sì, il manzo cotto al naturale e privato del grasso può essere una sana fonte di proteine. Niente sale, spezie o aggiunte come cipolla e aglio, mai ossa cotte, ed evita il manzo crudo, che può contenere batteri.",
     "pt": "Sim, a carne de vaca cozinhada, simples e sem gordura pode ser uma fonte saudável de proteína. Não lhe juntes sal, especiarias nem acompanhamentos como cebola e alho, nunca dês ossos cozinhados e evita a carne de vaca crua, que pode ter bactérias.",
     "nl": "Ja, gewoon gekookt rundvlees zonder vet kan een gezonde bron van eiwit zijn. Laat zout, kruiden en toevoegingen zoals ui en knoflook weg, geef nooit gekookte botten en vermijd rauw rundvlees, dat bacteriën kan bevatten.",
@@ -248,7 +248,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d894a6ebe2c8f4e80a38764a93400a726037b6cbb4268bf8dc289ebfbf07fc82"
+      "verified_hash": "db179080c5032625227108901b9137528b5d7e8178d80c4a84450f3c21d4b831"
     },
     "it": {
       "status": "verified",

@@ -75,7 +75,7 @@
     "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral hišni ljubljenček pojesti ogromne količine, da bi bilo to zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
     "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Haustier riesige Mengen Kerne fressen, bevor es bedenklich wird. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
     "fr": "L’ASPCA répertorie le pommier comme toxique pour les chiens : ses tiges, ses feuilles et ses pépins contiennent du cyanure (issu de glycosides cyanogènes). Selon l’AKC, un petit nombre de pépins ne devrait pas faire de mal, et selon le Pet Poison Helpline, il faudrait qu’un animal en mange des quantités massives pour que cela pose problème. Nous suivons l’avis le plus strict, car les pépins contiennent du cyanure et le trognon peut aussi provoquer un étouffement ou une obstruction intestinale.",
-    "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera preocupante. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
+    "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera motivo de preocupación. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
     "it": "L’ASPCA classifica il melo come tossico per i cani: piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Secondo l’AKC è improbabile che pochi semi facciano male, e secondo Pet Poison Helpline un animale dovrebbe mangiarne quantità enormi perché diventino preoccupanti. Noi seguiamo la posizione più prudente, perché i semi contengono cianuro e il torsolo può anche causare soffocamento o un’ostruzione intestinale.",
     "pt": "A ASPCA classifica a macieira como tóxica para cães: os caules, as folhas e as sementes contêm cianeto (proveniente de glicosídeos cianogénicos). O AKC diz que um pequeno número de sementes dificilmente fará mal, e a Pet Poison Helpline diz que um animal teria de comer quantidades enormes para haver motivo de preocupação. Seguimos a posição mais rigorosa porque as sementes contêm cianeto e o carolo também pode causar engasgamento ou obstrução intestinal.",
     "nl": "De ASPCA noemt de appelplant giftig voor honden: de steeltjes, bladeren en pitten bevatten cyanide (in de vorm van cyanogene glycosiden). Volgens de AKC zal een klein aantal pitten waarschijnlijk geen kwaad doen, en volgens Pet Poison Helpline zou een dier enorme hoeveelheden moeten eten voordat het zorgwekkend wordt. Wij volgen het strengere advies, omdat de pitten cyanide bevatten en het klokhuis ook verstikking of een darmverstopping kan veroorzaken.",
@@ -121,7 +121,7 @@
       "Pupilas dilatadas",
       "Dificultad para respirar, jadeo",
       "Shock",
-      "Signos de problemas digestivos o de obstrucción"
+      "Síntomas de problemas digestivos o de obstrucción"
     ],
     "it": [
       "Gengive o altre mucose rosso mattone",
@@ -199,7 +199,7 @@
     "sl": "Če pes poje ogrizek ali pečke, opazujte, ali se pojavijo znaki prebavnih težav ali zapore. Če ima pes težave, se obrnite na veterinarja.",
     "de": "Hat Ihr Hund ein Kerngehäuse oder Apfelkerne gefressen, achten Sie auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
     "fr": "Si votre chien a mangé un trognon de pomme ou des pépins, surveillez l’apparition de troubles digestifs ou de signes d’obstruction, et contactez un vétérinaire si votre chien présente des troubles.",
-    "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen signos de problemas digestivos o de obstrucción y contacta con un veterinario si tiene algún problema.",
+    "es": "Si tu perro se come un corazón o semillas de manzana, vigila si aparecen síntomas de problemas digestivos o de obstrucción y contacta con un veterinario si tiene algún problema.",
     "it": "Se il tuo cane mangia un torsolo o dei semi di mela, tieni d’occhio eventuali segni di disturbi digestivi o di un’ostruzione e contatta il veterinario se ha dei problemi.",
     "pt": "Se o teu cão comer um carolo ou sementes de maçã, vigia se aparecem sinais de problemas digestivos ou de obstrução e contacta um veterinário se o teu cão tiver problemas.",
     "nl": "Heeft je hond een klokhuis of pitten gegeten? Let dan op verschijnselen van spijsverteringsproblemen of een verstopping, en neem contact op met een dierenarts als je hond klachten krijgt.",
@@ -253,7 +253,7 @@
         "sl": "Majhno število pečk verjetno ne bo škodilo. Opazujte, ali se pri psu pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
         "de": "Wenige Kerne richten wahrscheinlich keinen Schaden an. Achten Sie bei Ihrem Hund auf Anzeichen von Verdauungsproblemen oder einem Darmverschluss durch das Kerngehäuse, und wenden Sie sich an einen Tierarzt, wenn Ihr Hund Beschwerden hat.",
         "fr": "Un petit nombre de pépins ne devrait pas lui faire de mal. Surveillez chez votre chien l’apparition de troubles digestifs ou de signes d’obstruction dus au trognon, et contactez un vétérinaire s’il présente des troubles.",
-        "es": "Es poco probable que unas pocas semillas le hagan daño. Vigila si tu perro muestra signos de problemas digestivos o de obstrucción por el corazón y contacta con un veterinario si tiene algún problema.",
+        "es": "Es poco probable que unas pocas semillas le hagan daño. Vigila si tu perro muestra síntomas de problemas digestivos o de obstrucción por el corazón y contacta con un veterinario si tiene algún problema.",
         "it": "È improbabile che pochi semi facciano male. Tieni d’occhio il tuo cane per eventuali segni di disturbi digestivi o di un’ostruzione causata dal torsolo e contatta il veterinario se ha dei problemi.",
         "pt": "Um pequeno número de sementes dificilmente fará mal. Vigia se o teu cão mostra sinais de problemas digestivos ou de obstrução causada pelo carolo e contacta um veterinário se o teu cão tiver problemas.",
         "nl": "Een klein aantal pitten zal waarschijnlijk geen kwaad doen. Let bij je hond op verschijnselen van spijsverteringsproblemen of een verstopping door het klokhuis, en neem contact op met een dierenarts als je hond klachten krijgt.",
@@ -349,7 +349,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c02da54a3c63b5d7559946832f2d7edbe801b930c5db56ce982ed46f9d443f52"
+      "verified_hash": "266277e704a679b9dfb68b7c647aa393c009970c51af3996f294c0929236b57b"
     },
     "it": {
       "status": "verified",

@@ -169,7 +169,7 @@
     "sl": "Takoj pokličite veterinarja, če je mačka pogoltnila kost ali se duši ali bruha. Zapišite si, kakšna kost je bila in kdaj. Ne čakajte, da vidite, kaj se bo zgodilo, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt, wenn Ihre Katze einen Knochen verschluckt hat, zu ersticken droht oder erbricht. Notieren Sie, was für ein Knochen es war und wann es passiert ist. Warten Sie nicht ab, was passiert, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a avalé un os, s’étouffe ou vomit. Notez de quel os il s’agissait et à quelle heure. N’attendez pas de voir ce qui se passe et n’essayez pas de faire vomir votre chat vous-même.",
-    "es": "Contacta enseguida con tu veterinario si tu gato se ha tragado un hueso, se está atragantando o vomita. Anota qué tipo de hueso era y cuándo ocurrió. No esperes a ver qué pasa y no intentes hacer vomitar a tu gato en casa.",
+    "es": "Ponte en contacto enseguida con tu veterinario si tu gato se ha tragado un hueso, se está atragantando o vomita. Apunta qué tipo de hueso era y cuándo ocurrió. No esperes a ver qué pasa y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha ingerito un osso, sta soffocando o vomita. Annota che tipo di osso era e quando l’ha mangiato. Non aspettare di vedere che cosa succede e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso ou se estiver a engasgar-se ou a vomitar. Toma nota do tipo de osso e de quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat een bot heeft ingeslikt, zich verslikt of braakt. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
@@ -265,7 +265,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "efedf04be4c815a615807655929d4881cb69b8560bedf32dacb632fda69aee30"
+      "verified_hash": "68a29a15f3e24ff300328eb7ba49c61b5153150451ad5413a1f05d57725e131c"
     },
     "it": {
       "status": "verified",

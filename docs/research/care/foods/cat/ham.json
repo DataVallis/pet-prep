@@ -58,7 +58,7 @@
     "sl": "Raje ne. Šunka je mastna in zelo slana, kar lahko mački povzroči prebavne težave in poveča tveganje za vnetje trebušne slinavke. Šunka, pripravljena s čebulo ali česnom, je za mačke strupena. Veterinarka z Univerze v Georgii priporoča, da se šunki povsem izognete.",
     "de": "Besser nicht. Schinken ist fett und salzreich, was die Verdauung einer Katze stören und das Risiko einer Bauchspeicheldrüsenentzündung (Pankreatitis) erhöhen kann. Mit Zwiebeln oder Knoblauch zubereiteter Schinken ist für Katzen giftig. Ein Tierarzt der University of Georgia empfiehlt, ganz auf Schinken zu verzichten.",
     "fr": "Mieux vaut s’en abstenir. Le jambon est gras et très salé, ce qui peut perturber la digestion du chat et augmenter le risque de pancréatite. Le jambon cuisiné avec de l’oignon ou de l’ail est toxique pour les chats. Un vétérinaire de l’université de Géorgie recommande d’éviter complètement le jambon.",
-    "es": "Es mejor no dárselo. El jamón es graso y tiene mucha sal, lo que puede sentarle mal a la digestión de un gato y aumentar el riesgo de pancreatitis. El jamón cocinado con cebolla o ajo es tóxico para los gatos. Un veterinario de la Universidad de Georgia recomienda evitar el jamón por completo.",
+    "es": "Es mejor no dárselo. El jamón es graso y tiene mucha sal, lo que puede alterar la digestión de un gato y aumentar el riesgo de pancreatitis. El jamón cocinado con cebolla o ajo es tóxico para los gatos. Un veterinario de la Universidad de Georgia recomienda evitar el jamón por completo.",
     "it": "Meglio di no. Il prosciutto è grasso e molto salato, e questo può disturbare la digestione del gatto e aumentare il rischio di pancreatite. Il prosciutto cucinato con cipolla o aglio è tossico per i gatti. Un veterinario dell’Università della Georgia consiglia di evitarlo del tutto.",
     "pt": "É melhor não. O fiambre é gordo e tem muito sal, o que pode fazer mal à digestão do gato e aumentar o risco de pancreatite. O fiambre cozinhado com cebola ou alho é tóxico para gatos. Um veterinário da Universidade da Geórgia recomenda evitar completamente o fiambre.",
     "nl": "Liever niet. Ham is vet en bevat veel zout, wat de spijsvertering van een kat kan verstoren en het risico op alvleesklierontsteking (pancreatitis) verhoogt. Ham die met ui of knoflook is bereid, is giftig voor katten. Een dierenarts van de University of Georgia raadt aan ham helemaal te vermijden.",
@@ -169,7 +169,7 @@
     "sl": "Če je mačka pojedla šunko, začinjeno s čebulo ali česnom, takoj pokličite veterinarja. Če je pojedla veliko navadne šunke ali pa bruha ali ima drisko, se za nasvet obrnite na veterinarja.",
     "de": "Wenn Ihre Katze mit Zwiebeln oder Knoblauch gewürzten Schinken gefressen hat, wenden Sie sich sofort an Ihren Tierarzt. Hat sie viel ungewürzten Schinken gefressen, erbricht sie oder hat sie Durchfall, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten.",
     "fr": "Si votre chat a mangé du jambon assaisonné à l’oignon ou à l’ail, contactez immédiatement votre vétérinaire. S’il a mangé beaucoup de jambon nature, ou s’il vomit ou a la diarrhée, demandez conseil à votre vétérinaire.",
-    "es": "Si tu gato ha comido jamón condimentado con cebolla o ajo, ponte en contacto con tu veterinario de inmediato. Si ha comido mucho jamón sin condimentar, o tiene vómitos o diarrea, llama a tu veterinario para que te aconseje.",
+    "es": "Si tu gato ha comido jamón condimentado con cebolla o ajo, ponte en contacto con tu veterinario enseguida. Si ha comido mucho jamón sin condimentar, o tiene vómitos o diarrea, llama a tu veterinario para que te aconseje.",
     "it": "Se il tuo gatto ha mangiato prosciutto insaporito con cipolla o aglio, contatta subito il veterinario. Se ha mangiato molto prosciutto semplice, o ha vomito o diarrea, chiama il veterinario per un consiglio.",
     "pt": "Se o teu gato comeu fiambre temperado com cebola ou alho, contacta imediatamente o teu veterinário. Se comeu muito fiambre simples, ou se tiver vómitos ou diarreia, liga ao teu veterinário para pedir conselho.",
     "nl": "Heeft je kat ham gegeten die met ui of knoflook is gekruid, neem dan meteen contact op met je dierenarts. Heeft ze veel gewone ham gegeten, of braakt ze of heeft ze diarree, bel dan je dierenarts voor advies.",
@@ -187,7 +187,7 @@
     "sl": "Šunka je za muce preslana in premastna. Boljše presenečenje je njen mačji priboljšek.",
     "de": "Schinken ist zu salzig und zu fett für Katzen. Katzenleckerlis sind für deine Katze eine bessere Überraschung.",
     "fr": "Le jambon est trop salé et trop gras pour les chats. Les friandises pour chat font une bien meilleure surprise.",
-    "es": "El jamón tiene demasiada sal y grasa para los gatos. Para tu gatito, sus propios premios son una sorpresa mejor.",
+    "es": "El jamón tiene demasiada sal y grasa para los gatos. Los premios para gatos son una sorpresa mucho mejor para tu gatito.",
     "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premi per gatti sono una sorpresa migliore.",
     "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor.",
     "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing.",
@@ -311,7 +311,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ffe0465e8089db8780fef9880d1dfe9b1e0f0c4857cb07b6ce6319c08dafb17a"
+      "verified_hash": "cc36c94d47c7af0a0d78d84538ee88d0125c51cf18dd6ee312ebb7020aeefacd"
     },
     "it": {
       "status": "verified",

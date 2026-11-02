@@ -23,7 +23,7 @@
     "sl": "Ali lahko psi pijejo energijske pijače?",
     "de": "Dürfen Hunde Energydrinks trinken?",
     "fr": "Les chiens peuvent-ils boire des boissons énergisantes ?",
-    "es": "¿Pueden los perros tomar bebidas energéticas?",
+    "es": "¿Pueden los perros beber bebidas energéticas?",
     "it": "I cani possono bere le bevande energetiche?",
     "pt": "Os cães podem beber bebidas energéticas?",
     "nl": "Mogen honden energiedrankjes drinken?",
@@ -375,7 +375,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d8f50b1301703d1422e4b5529eb1fc384d3284afa43aaf777eae6eff646734d4"
+      "verified_hash": "2d3c07249e6fa9757f656dd04ea403a13ff02daba97f080848f8f7df2a0ea3da"
     },
     "it": {
       "status": "verified",

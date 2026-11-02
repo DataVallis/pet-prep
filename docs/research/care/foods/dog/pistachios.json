@@ -58,7 +58,7 @@
     "sl": "Ne, raje se jim izogibajte. Pistacije same po sebi niso strupene, so pa mastne in običajno slane, lahko razdražijo prebavila ali vodijo do vnetja trebušne slinavke, oreščki ali lupine pa lahko povzročijo dušenje. Na njih lahko zraste tudi škodljiva plesen.",
     "de": "Nein, meiden Sie sie besser. Pistazien sind an sich nicht giftig, aber fettreich und meist gesalzen. Sie können auf den Magen schlagen oder zu einer Bauchspeicheldrüsenentzündung (Pankreatitis) führen, und Nüsse oder Schalen können zum Ersticken führen. Außerdem kann sich auf ihnen schädlicher Schimmel bilden.",
     "fr": "Non, mieux vaut les éviter. Les pistaches ne sont pas toxiques en elles-mêmes, mais elles sont grasses et généralement salées, peuvent déranger l’estomac ou entraîner une pancréatite, et les pistaches ou leurs coques peuvent provoquer un étouffement. Elles peuvent aussi développer des moisissures nocives.",
-    "es": "No, es mejor evitarlos. Los pistachos no son tóxicos en sí mismos, pero son grasos y suelen llevar sal, pueden sentar mal al estómago o provocar pancreatitis, y tanto el fruto como la cáscara pueden causar atragantamiento. Además, pueden criar moho dañino.",
+    "es": "No, es mejor evitarlos. Los pistachos no son tóxicos en sí mismos, pero son grasos y suelen llevar sal, pueden sentar mal al estómago o provocar pancreatitis, y tanto el fruto como la cáscara pueden causar atragantamiento. Además, pueden desarrollar moho dañino.",
     "it": "No, è meglio evitarli. I pistacchi non sono tossici di per sé, ma sono grassi e di solito salati, possono disturbare lo stomaco o portare a una pancreatite, e i frutti o i gusci possono causare soffocamento. Possono anche sviluppare muffe dannose.",
     "pt": "Não, é melhor evitar. Os pistácios não são tóxicos em si, mas são gordos e normalmente salgados, podem fazer mal ao estômago ou levar a pancreatite, e os frutos ou as cascas podem causar engasgamento. Também podem ganhar bolor nocivo.",
     "nl": "Nee, die kun je beter vermijden. Pistachenoten zijn op zich niet giftig, maar ze zijn vet en meestal zout, kunnen de maag van streek maken of tot alvleesklierontsteking leiden, en een hond kan stikken in de noten of doppen. Er kan ook schadelijke schimmel op groeien.",
@@ -184,7 +184,7 @@
     "sl": "Če je pes pojedel nekaj pistacij, opazujte, ali bruha, ima drisko ali ga boli trebuh. Pokličite veterinarja, če jih je pojedel veliko ali z lupinami, se duši ali je šibek, utrujen ali kaže katerega od teh znakov.",
     "de": "Wenn Ihr Hund ein paar Pistazien gefressen hat, achten Sie auf Erbrechen, Durchfall oder Bauchschmerzen. Rufen Sie Ihren Tierarzt an, wenn Ihr Hund viele davon oder ihre Schalen gefressen hat, zu ersticken droht oder Schwäche, Müdigkeit oder eines dieser Anzeichen zeigt.",
     "fr": "Si votre chien a mangé quelques pistaches, surveillez les vomissements, la diarrhée ou les douleurs au ventre. Appelez votre vétérinaire s’il en a mangé beaucoup ou a mangé des coques, s’il semble s’étouffer, ou s’il montre de la faiblesse, de la fatigue ou l’un de ces signes.",
-    "es": "Si tu perro se ha comido unos pocos pistachos, vigila si tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha comido muchos o sus cáscaras, si parece que se atraganta o si muestra debilidad, cansancio o cualquiera de estos signos.",
+    "es": "Si tu perro se ha comido unos pocos pistachos, vigila si tiene vómitos, diarrea o dolor de barriga. Llama a tu veterinario si se ha comido muchos o sus cáscaras, si parece que se atraganta o si muestra debilidad, cansancio o cualquiera de estos síntomas.",
     "it": "Se il tuo cane ha mangiato qualche pistacchio, controlla se compaiono vomito, diarrea o mal di pancia. Chiama il veterinario se ne ha mangiati molti o ne ha mangiato i gusci, se sembra soffocare o se mostra debolezza, stanchezza o uno di questi sintomi.",
     "pt": "Se o teu cão comeu alguns pistácios, vigia se há vómitos, diarreia ou dor de barriga. Liga ao teu veterinário se o teu cão comeu muitos pistácios ou as cascas, parecer estar a engasgar-se ou mostrar fraqueza, cansaço ou algum destes sinais.",
     "nl": "Heeft je hond een paar pistachenoten gegeten? Let dan op braken, diarree of buikpijn. Bel je dierenarts als je hond er veel of de doppen heeft gegeten, lijkt te stikken, of zwak of moe is of een van deze verschijnselen heeft.",
@@ -330,7 +330,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "49a6c5d669bd72f47fcf2b799776c2c4ba9b129dbced0c0e64e17dc3ed03fe49"
+      "verified_hash": "2da706fe223eca568ce1eb4b1e86a9d951f7e39702df24bd27dfca8268e8cecc"
     },
     "it": {
       "status": "verified",

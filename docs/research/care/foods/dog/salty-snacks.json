@@ -58,7 +58,7 @@
     "sl": "Ni priporočljivo. Nekaj slanih prigrizkov pri zdravem psu s svežo vodo verjetno ne povzroči zastrupitve s soljo, a slana hrana psom na splošno ne koristi, zlasti tistim z boleznijo srca. Večja količina lahko povzroči žejo, bruhanje in hujše težave.",
     "de": "Nicht empfohlen. Ein paar salzige Snacks lösen bei einem gesunden Hund mit frischem Wasser wahrscheinlich keine Salzvergiftung aus, aber salziges Essen ist grundsätzlich nicht gut für Hunde, besonders bei Herzerkrankungen. Große Mengen können Durst, Erbrechen und Schlimmeres verursachen.",
     "fr": "Déconseillé. Quelques en-cas salés ont peu de chances de provoquer une intoxication au sel chez un chien en bonne santé qui a de l’eau fraîche, mais les aliments salés ne sont généralement pas bons pour les chiens, surtout ceux qui ont une maladie cardiaque. En manger beaucoup peut provoquer soif, vomissements, voire pire.",
-    "es": "No se recomienda. Unos pocos aperitivos salados difícilmente causarán una intoxicación por sal a un perro sano con agua fresca, pero la comida salada en general no es buena para los perros, sobre todo para los que tienen enfermedades del corazón. Comer mucho puede causar sed, vómitos y cosas peores.",
+    "es": "No se recomienda. Unos pocos aperitivos salados difícilmente causarán una intoxicación por sal a un perro sano con agua fresca, pero la comida salada en general no es buena para los perros, sobre todo para los que tienen enfermedades del corazón. Comer mucho puede causar sed, vómitos y algo más grave.",
     "it": "Sconsigliati. Pochi snack salati difficilmente causano un avvelenamento da sale in un cane sano che ha acqua fresca, ma i cibi salati in generale non fanno bene ai cani, soprattutto a quelli con malattie cardiache. Mangiarne molti può causare sete, vomito e problemi peggiori.",
     "pt": "Não é recomendado. Alguns petiscos salgados dificilmente causam intoxicação por sal num cão saudável com água fresca, mas a comida salgada em geral não faz bem aos cães, sobretudo aos que têm doença cardíaca. Comer muitos pode causar sede, vómitos e pior.",
     "nl": "Niet aan te raden. Een paar zoute snacks veroorzaken bij een gezonde hond met vers water waarschijnlijk geen zoutvergiftiging, maar zout eten is over het algemeen niet goed voor honden, vooral niet bij hartziekte. Veel ervan eten kan dorst, braken en ergere klachten veroorzaken.",
@@ -216,7 +216,7 @@
     "sl": "Raje jih ne delite. Če psu daste hrano za ljudi, naj bo navadna, brez soli in začimb.",
     "de": "Besser nicht teilen. Wenn Sie Ihrem Hund doch etwas von Ihrem Essen geben, dann pur, ohne Salz und Gewürze.",
     "fr": "Mieux vaut ne pas en partager. Si vous donnez des aliments pour humains, servez-les nature, sans sel ni assaisonnement.",
-    "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin nada, sin sal ni condimentos.",
+    "es": "Mejor no compartirlos. Si le das comida de personas, sírvela sin sal ni condimentos.",
     "it": "Meglio non dargliene. Se gli dai cibo delle persone, servilo semplice, senza sale né condimenti.",
     "pt": "É melhor não partilhar. Se deres comida de pessoas, serve-a simples, sem sal nem temperos.",
     "nl": "Liever niet delen. Geef je mensenvoedsel, geef het dan puur, zonder zout of kruiden.",
@@ -376,7 +376,7 @@
     "es": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bdcdde7d3a7fe8da1251f745948da89981a7dfde609266b4d17659acad3d0231"
+      "verified_hash": "495293c75f47a767eb6b6ecec3b99273cb6ba5dd2ab2539feaab7dfb84bb2024"
     },
     "it": {
       "status": "verified",
