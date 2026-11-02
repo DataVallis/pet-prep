@@ -190,7 +190,7 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (napitak, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, kahvinporoja, kahvipapuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
@@ -244,7 +244,7 @@
         "nl": "Ja. Pet Poison Helpline waarschuwt dat het eten van theezakjes een ernstige vergiftiging kan veroorzaken bij katten. Gooi gebruikte theezakjes weg waar je kat er niet bij kan.",
         "pl": "Tak. Pet Poison Helpline ostrzega, że zjedzenie torebek herbaty może wywołać u kotów poważne zatrucie. Zużyte torebki wyrzucaj tam, gdzie kot ich nie dosięgnie.",
         "cs": "Ano. Pet Poison Helpline varuje, že snědení čajových sáčků by mohlo kočkám způsobit vážnou otravu. Použité čajové sáčky vyhazujte tam, kam kočka nedosáhne.",
-        "hr": "Jesu. Pet Poison Helpline upozorava da jedenje vrećica čaja kod mačaka može izazvati ozbiljno otrovanje. Iskorištene vrećice čaja baci tamo gdje ih mačka ne može dohvatiti.",
+        "hr": "Jesu. Pet Poison Helpline upozorava da pojedene vrećice čaja kod mačaka mogu izazvati ozbiljno otrovanje. Iskorištene vrećice čaja baci tamo gdje ih mačka ne može dohvatiti.",
         "sv": "Ja. Pet Poison Helpline varnar för att tepåsar kan ge allvarlig förgiftning hos katter. Släng använda tepåsar där katten inte kommer åt dem.",
         "da": "Ja. Pet Poison Helpline advarer om at det kan give katte en alvorlig forgiftning at spise tebreve. Smid brugte tebreve ud et sted hvor din kat ikke kan nå dem.",
         "fi": "Ovat. Pet Poison Helpline varoittaa, että teepussien syöminen voi aiheuttaa kissoille vakavan myrkytyksen. Heitä käytetyt teepussit roska-astiaan, johon kissasi ei pääse käsiksi.",
@@ -371,7 +371,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "775d700a27387112d8c876bf9f468bde4e4c35723301224e026d6ce765661e21"
+      "verified_hash": "7ef267f7a91d2890082fee4a063779ef8aaf44d7b40e2419011e6dde9e526948"
     },
     "sv": {
       "status": "verified",

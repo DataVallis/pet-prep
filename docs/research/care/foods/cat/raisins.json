@@ -119,7 +119,7 @@
       "Zvracení, často do jednoho dne"
     ],
     "hr": [
-      "Povraćanje, često unutar jednog dana"
+      "Povraćanje, često u roku od jednog dana"
     ],
     "sv": [
       "Kräkningar, ofta inom ett dygn"
@@ -313,7 +313,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a33b13fc74d495590a902b65d7f4fdec3c50c93caf3517b4bdf50fdc1e4fae9c"
+      "verified_hash": "3166d9d23773a02cd7aa461e3f470dfbd73fab5d42ff5f0f4ad550ac47bb7091"
     },
     "sv": {
       "status": "verified",

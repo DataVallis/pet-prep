@@ -193,7 +193,7 @@
     "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing.",
     "pl": "Szynka jest za słona i za tłusta dla kotów. Kocie smakołyki to dla kotka lepsza niespodzianka.",
     "cs": "Šunka je pro kočky moc slaná a tučná. Kočičí pamlsky jsou pro kočičku lepší překvapení.",
-    "hr": "Šunka je preslana i premasna za mace. Macine poslastice za mačke bolje su iznenađenje.",
+    "hr": "Šunka je preslana i premasna za mace. Poslastice za mačke bolje su iznenađenje za macu.",
     "sv": "Skinka är för salt och fet för katter. Kattgodis är en bättre överraskning för katten.",
     "da": "Skinke er for salt og fed til katte. Din kats egne kattegodbidder er en bedre overraskelse.",
     "fi": "Kinkku on kissoille liian suolaista ja rasvaista. Kisun omat kissanherkut ovat parempi yllätys.",
@@ -341,7 +341,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "672436c4b77f9121c5ab9af735b60c99f12db335c335cd910547d3ed3717ac3c"
+      "verified_hash": "77957fd13ac6fcf596c919d60fed371d32030965a640f53d885ed2a1661b258c"
     },
     "sv": {
       "status": "verified",

@@ -81,7 +81,7 @@
     "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes).",
     "pl": "Orzechy nerkowca nie są toksyczne, ale to bardzo tłusta przekąska: zbyt duża ilość może prowadzić do problemów z brzuchem, zapalenia trzustki i przybierania na wadze. Solone orzechy nerkowca dostarczają soli, która w nadmiarze szkodzi. Największe ryzyko stanowią inne orzechy w mieszance, np. makadamia. Niektóre psy mogą zareagować obrzękiem, swędzeniem lub pokrzywką.",
     "cs": "Kešu ořechy nejsou jedovaté, ale jsou to velmi tučné pochutiny: když jich pes sní příliš, může mít zažívací potíže, zánět slinivky břišní a přibrat na váze. Solené kešu obsahují navíc sůl, která je v nadbytku škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
-    "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići donose i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
+    "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići dodaju i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
     "sv": "Cashewnötter är inte giftiga, men de är ett fett mellanmål: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter ger salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
     "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
     "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla voi esiintyä reaktiona turvotusta, kutinaa tai nokkosihottumaa.",
@@ -289,7 +289,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "af46da435cc93b936ff0aa726ba5c961d8884520d2aa3eaadb22394c6cb23e91"
+      "verified_hash": "dee19c58d42b3752c772a31ac68b789434f17693a632e452eb23fba92d63e851"
     },
     "sv": {
       "status": "verified",

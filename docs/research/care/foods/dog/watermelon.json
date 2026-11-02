@@ -99,7 +99,7 @@
     "nl": "Geef de eerste keer een kleine hoeveelheid en let op spijsverteringsklachten. Neem contact op met je dierenarts als je hond verschijnselen vertoont na het eten van watermeloen.",
     "pl": "Za pierwszym razem podaj małą ilość i obserwuj, czy nie pojawią się problemy trawienne. Skontaktuj się z weterynarzem, jeśli po zjedzeniu arbuza u psa pojawią się niepokojące objawy.",
     "cs": "Poprvé dejte malé množství a sledujte, zda se neobjeví zažívací potíže. Pokud má váš pes po snědení melounu nějaké příznaky, obraťte se na veterináře.",
-    "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokazuje simptome.",
+    "hr": "Prvi put daj malu količinu i prati pojavljuju li se probavne tegobe. Obrati se veterinaru ako tvoj pas nakon lubenice pokaže znakove bolesti.",
     "sv": "Ge en liten mängd första gången och håll utkik efter matsmältningsbesvär. Kontakta veterinären om hunden får symtom efter att ha ätit vattenmelon.",
     "da": "Giv en lille mængde første gang, og hold øje med fordøjelsesproblemer. Kontakt din dyrlæge hvis din hund får symptomer efter at have spist vandmelon.",
     "fi": "Anna ensimmäisellä kerralla pieni määrä ja seuraa, tuleeko ruoansulatusvaivoja. Ota yhteyttä eläinlääkäriin, jos koirallasi ilmenee oireita vesimelonin syömisen jälkeen.",
@@ -295,7 +295,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "765ed4ee5824d85beecfae9fdaa24d0f3b15f4de758b99c3f4f724693862f3ff"
+      "verified_hash": "6b426a247bde6ebbad855ce4a3e1ec93fe184b070cff9c32aa3bb40297c79718"
     },
     "sv": {
       "status": "verified",

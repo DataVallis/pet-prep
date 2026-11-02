@@ -81,7 +81,7 @@
     "nl": "Amandelen bevatten, zoals de meeste noten, veel vet. Dat kan de maag van streek maken en een hond vatbaar maken voor alvleesklierontsteking. Hele amandelen kunnen de slokdarm, de darmen of de luchtpijp blokkeren, vooral bij kleine rassen. Gezouten en gekruide amandelen brengen extra risico’s mee door het zout en de kruiden.",
     "pl": "Migdały, jak większość orzechów, zawierają dużo tłuszczu, który może podrażnić żołądek i narazić psa na zapalenie trzustki. Całe migdały mogą zatkać przełyk, jelita lub tchawicę, zwłaszcza u małych ras. Migdały solone i smakowe niosą dodatkowe ryzyko związane z solą i przyprawami.",
     "cs": "Mandle mají jako většina ořechů vysoký obsah tuku, který může podráždit žaludek a vystavit psa riziku zánětu slinivky břišní. Celé mandle mohou ucpat jícen, střeva nebo průdušnici, zvlášť u malých plemen. Solené a ochucené mandle přinášejí další rizika kvůli soli a koření.",
-    "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može uznemiriti želudac i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina.",
+    "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može izazvati probavne tegobe i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina.",
     "sv": "Mandlar är, som de flesta nötter, mycket feta, vilket kan ge orolig mage och göra att hunden riskerar bukspottkörtelinflammation (pankreatit). Hela mandlar kan blockera matstrupen, tarmarna eller luftstrupen, särskilt hos små raser. Saltade och smaksatta mandlar ger extra risker från salt och kryddor.",
     "da": "Mandler har ligesom de fleste nødder et højt fedtindhold, som kan give dårlig mave og øge risikoen for betændelse i bugspytkirtlen. Hele mandler kan blokere spiserøret, tarmene eller luftrøret, især hos små racer. Saltede mandler og mandler med smag giver ekstra risiko på grund af salt og krydderier.",
     "fi": "Mantelit sisältävät useimpien pähkinöiden tavoin paljon rasvaa, joka voi aiheuttaa vatsavaivoja ja altistaa koiran haimatulehdukselle. Kokonaiset mantelit voivat tukkia ruokatorven, suoliston tai henkitorven etenkin pienillä roduilla. Suolatuissa ja maustetuissa manteleissa lisäriskinä ovat suola ja mausteet.",
@@ -400,7 +400,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "16d89ded56c99611848bd3c9b041854785d4b1ca745bf838c04f2112a245deae"
+      "verified_hash": "3404531c7aaed09db16a99f784d5cbf48eafb581dc58aa5c04bd863f68e94976"
     },
     "sv": {
       "status": "verified",

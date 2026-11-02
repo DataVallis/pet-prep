@@ -81,7 +81,7 @@
     "nl": "Rauwe zalm kan parasieten en bacteriën bevatten; in het noordwesten van de VS (Pacific Northwest) kan hij zalmvergiftiging (salmon poisoning disease) veroorzaken, wat zonder behandeling ernstig is. Zalm heeft kleine, brosse graten waarin een hond kan stikken. Gerookte zalm en lox (gepekelde zalm) bevatten veel zout. Kruiden, olie en sauzen horen niet op de portie van een hond.",
     "pl": "Surowy łosoś może przenosić pasożyty i bakterie; na północno-zachodnim wybrzeżu Pacyfiku w USA może wywołać chorobę łososiową, która bez leczenia jest groźna. Łosoś ma drobne, kruche ości, które mogą spowodować zadławienie. Łosoś wędzony i lox (solony łosoś) mają dużo soli. Przyprawy, oleje i sosy nie powinny trafiać do psiej porcji.",
     "cs": "Syrový losos může obsahovat parazity a bakterie; na tichomořském severozápadě USA může způsobit otravu lososem, která je bez léčby vážná. Losos má drobné, křehké kosti, které mohou způsobit dušení. Uzený a nakládaný losos (lox) obsahuje hodně soli. Koření, oleje a omáčky do psí porce nepatří.",
-    "hr": "Sirovi losos može sadržavati parazite i bakterije; na pacifičkom sjeverozapadu SAD-a može izazvati bolest trovanja lososom, koja je ozbiljna ako se ne liječi. Losos ima sitne, krhke kosti koje mogu izazvati gušenje. Dimljeni i soljeni losos imaju puno soli. Začini, ulja i umaci ne pripadaju u pseću porciju.",
+    "hr": "Sirovi losos može sadržavati parazite i bakterije; na pacifičkom sjeverozapadu SAD-a može izazvati trovanje lososom, koje je ozbiljno ako se ne liječi. Losos ima sitne, krhke kosti koje mogu izazvati gušenje. Dimljeni i soljeni losos imaju puno soli. Začini, ulja i umaci ne pripadaju u pseću porciju.",
     "sv": "Rå lax kan bära på parasiter och bakterier; i nordvästra USA kan den orsaka laxförgiftning (salmon poisoning disease), som är allvarlig om den inte behandlas. Lax har små, sköra ben som kan orsaka kvävning. Rökt och gravad lax innehåller mycket salt. Kryddor, olja och såser hör inte hemma på hundens portion.",
     "da": "Rå laks kan indeholde parasitter og bakterier; i det nordvestlige USA ved Stillehavet kan den give lakseforgiftning (salmon poisoning disease), som er alvorlig hvis den ikke behandles. Laks har små, skøre ben, der kan sætte sig fast i halsen. Røget og saltet laks indeholder meget salt. Krydderier, olie og saucer hører ikke hjemme i hundens portion.",
     "fi": "Raa’assa lohessa voi olla loisia ja bakteereja; Yhdysvaltain Tyynenmeren luoteisrannikolla se voi aiheuttaa lohimyrkytystaudin, joka on vakava, jos sitä ei hoideta. Lohessa on pieniä, hauraita ruotoja, jotka voivat aiheuttaa tukehtumisen. Savulohessa ja graavilohessa on paljon suolaa. Mausteet, öljyt ja kastikkeet eivät kuulu koiran annokseen.",
@@ -328,7 +328,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1d9c3e851b48f7a54e859cbced6064c470a26346bef2c268c1556431c4ef9757"
+      "verified_hash": "795e5782f8f4f87f770b4ac7e3195a15446430fc38a9cc0521e49d854cd1314a"
     },
     "sv": {
       "status": "verified",

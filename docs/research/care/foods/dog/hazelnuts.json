@@ -64,7 +64,7 @@
     "nl": "Nee, liever niet. Hazelnoten zijn niet giftig, maar de heel harde doppen kunnen verstikking en verstoppingen veroorzaken. En net als andere noten bevatten ze veel vet, wat de maag van een hond van streek kan maken en tot alvleesklierontsteking kan leiden.",
     "pl": "Lepiej nie. Orzechy laskowe nie są toksyczne, ale ich bardzo twarde łupiny mogą spowodować zadławienie i niedrożność, a jak inne orzechy zawierają dużo tłuszczu, który może podrażnić żołądek psa i prowadzić do zapalenia trzustki.",
     "cs": "Raději ne. Lískové ořechy nejsou jedovaté, ale jejich velmi tvrdé skořápky mohou způsobit dušení a ucpání a stejně jako jiné ořechy mají hodně tuku, který může psovi podráždit žaludek a vést k zánětu slinivky břišní.",
-    "hr": "Bolje ne. Lješnjaci nisu otrovni, ali njihove vrlo tvrde ljuske mogu izazvati gušenje i začepljenje, a kao i drugi orašasti plodovi sadrže mnogo masti, koja psu može uznemiriti želudac i dovesti do upale gušterače.",
+    "hr": "Bolje ne. Lješnjaci nisu otrovni, ali njihove vrlo tvrde ljuske mogu izazvati gušenje i začepljenje, a kao i drugi orašasti plodovi sadrže mnogo masti, koja psu može izazvati probavne tegobe i dovesti do upale gušterače.",
     "sv": "Nej, helst inte. Hasselnötter är inte giftiga, men de mycket hårda skalen kan orsaka kvävning och tarmstopp, och precis som andra nötter innehåller de mycket fett, vilket kan ge hunden magbesvär och kanske leda till bukspottkörtelinflammation (pankreatit).",
     "da": "Nej, helst ikke. Hasselnødder er ikke giftige, men de meget hårde skaller kan give kvælning og blokering, og ligesom andre nødder har de et højt fedtindhold, som kan give hunden dårlig mave og kan føre til betændelse i bugspytkirtlen (pankreatitis).",
     "fi": "Ei kannata. Hasselpähkinät eivät ole myrkyllisiä, mutta niiden erittäin kovat kuoret voivat aiheuttaa tukehtumisen ja tukoksia, ja muiden pähkinöiden tavoin niissä on paljon rasvaa, mikä voi aiheuttaa koiralle vatsavaivoja ja johtaa haimatulehdukseen.",
@@ -332,7 +332,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c970d9c0148197ef48dd1e4d234c549db786c9d084b8252e513e4ff1836c4c2d"
+      "verified_hash": "1b5f81336493f652fa3a2e64de8be8647fc6e29d42c18d10ff15f48b3e3c732a"
     },
     "sv": {
       "status": "verified",

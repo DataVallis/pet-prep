@@ -64,7 +64,7 @@
     "nl": "Niet aan te raden. Spek is niet giftig, maar het is vet tafelvoedsel dat braken en diarree kan veroorzaken of alvleesklierontsteking kan uitlokken, en die kan ernstig zijn. Twijfel je? Deel dan geen tafelvoedsel met je hond.",
     "pl": "Nie zaleca się. Boczek nie jest toksyczny, ale to tłuste jedzenie ze stołu, które może wywołać wymioty i biegunkę albo zapalenie trzustki, czasem ciężkie. W razie wątpliwości nie dziel się z psem jedzeniem ze stołu.",
     "cs": "Nedoporučuje se. Slanina není jedovatá, ale je to tučné jídlo ze stolu, které může vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, který může mít těžký průběh. Když si nejste jistí, o jídlo ze stolu se se psem nedělte.",
-    "hr": "Ne preporučuje se. Slanina nije otrovna, ali je masna hrana sa stola koja može izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja može biti teška. Ako nisi siguran, ne dijeli hranu sa stola sa psom.",
+    "hr": "Ne preporučuje se. Slanina nije otrovna, ali je masna hrana sa stola koja može izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja može biti teška. U slučaju sumnje ne dijeli hranu sa stola sa psom.",
     "sv": "Rekommenderas inte. Bacon är inte giftigt, men det är fet bordsmat som kan ge kräkningar och diarré eller utlösa bukspottkörtelinflammation, som kan vara allvarlig. Är du osäker, dela inte bordsmat med hunden.",
     "da": "Det frarådes. Bacon er ikke giftigt, men det er fed mad fra bordet, som kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), der kan være alvorlig. Er du i tvivl, så del ikke mad fra bordet med din hund.",
     "fi": "Ei suositella. Pekoni ei ole myrkyllistä, mutta se on rasvaista ihmisten ruokaa, joka voi aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka voi olla vakava. Jos olet epävarma, älä jaa ihmisten ruokaa koirasi kanssa.",
@@ -81,7 +81,7 @@
     "nl": "Pet Poison Helpline rekent spek tot het vette tafelvoedsel dat problemen geeft, van een lichte maagstoornis tot ernstige alvleesklierontsteking. Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking, en sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor.",
     "pl": "Pet Poison Helpline wymienia boczek wśród tłustych potraw ze stołu, które powodują problemy – od łagodnych dolegliwości żołądkowych po ciężkie zapalenie trzustki. Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki, a niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
     "cs": "Pet Poison Helpline řadí slaninu mezi tučná jídla ze stolu, která způsobují potíže od lehce podrážděného žaludku až po těžký zánět slinivky břišní. Tučné jídlo je známým spouštěčem zánětu slinivky břišní a některá plemena, například knírač malý, jsou k němu náchylnější.",
-    "hr": "Pet Poison Helpline slaninu ubraja u masnu hranu sa stola koja izaziva tegobe od blagih želučanih smetnji do teške upale gušterače. Masan obrok poznat je okidač upale gušterače, a neke su joj pasmine, poput patuljastog šnaucera, sklonije.",
+    "hr": "Pet Poison Helpline slaninu ubraja u masnu hranu sa stola koja izaziva tegobe od blagih želučanih smetnji do teške upale gušterače. Masni obrok poznat je okidač upale gušterače, a neke su joj pasmine, poput patuljastog šnaucera, sklonije.",
     "sv": "Pet Poison Helpline nämner bacon bland fet bordsmat som ger problem alltifrån lindriga magbesvär till allvarlig bukspottkörtelinflammation (pankreatit). En fet måltid är en känd utlösande faktor, och vissa raser, som dvärgschnauzer, är mer benägna att drabbas.",
     "da": "Pet Poison Helpline nævner bacon blandt fed mad fra bordet, der giver problemer fra let dårlig mave til alvorlig betændelse i bugspytkirtlen. Et fedt måltid er en kendt udløser af betændelse i bugspytkirtlen, og nogle racer, fx dværgschnauzer, er mere tilbøjelige til at få det.",
     "fi": "Pet Poison Helpline mainitsee pekonin rasvaisten ihmisruokien joukossa, jotka aiheuttavat ongelmia lievistä vatsavaivoista vakavaan haimatulehdukseen. Rasvainen ateria on tunnettu haimatulehduksen laukaisija, ja jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia.",
@@ -259,7 +259,7 @@
         "nl": "Spek is niet giftig, maar vet tafelvoedsel kan de maag van een hond van streek maken of alvleesklierontsteking uitlokken. Je kunt het dus beter niet delen.",
         "pl": "Boczek nie jest toksyczny, ale tłuste jedzenie ze stołu może podrażnić żołądek psa lub wywołać zapalenie trzustki, więc lepiej się nim nie dzielić.",
         "cs": "Slanina není jedovatá, ale tučné jídlo ze stolu může psovi podráždit žaludek nebo spustit zánět slinivky břišní, proto je lepší se o ni nedělit.",
-        "hr": "Slanina nije otrovna, ali masna hrana sa stola može psu uznemiriti želudac ili potaknuti upalu gušterače, zato je bolje ne dijeliti je.",
+        "hr": "Slanina nije otrovna, ali masna hrana sa stola može psu izazvati probavne tegobe ili potaknuti upalu gušterače, zato je bolje ne dijeliti je.",
         "sv": "Bacon är inte giftigt, men fet bordsmat kan ge hunden orolig mage eller utlösa bukspottkörtelinflammation, så det är bäst att inte dela med sig.",
         "da": "Bacon er ikke giftigt, men fed mad fra bordet kan give hunden dårlig mave eller udløse betændelse i bugspytkirtlen, så det er bedst ikke at dele det.",
         "fi": "Pekoni ei ole myrkyllistä, mutta rasvainen ihmisruoka voi aiheuttaa koiralle vatsavaivoja tai laukaista haimatulehduksen, joten sitä on parasta olla jakamatta.",
@@ -378,7 +378,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "002356289ce3aba9eefd0518e20038dc548f2c7347c853a7e2a96cc2795759c9"
+      "verified_hash": "7f9cd9b76f7ccf88d2cb86fc43efb13814310e7b7bc1bdadf9539730bd351d34"
     },
     "sv": {
       "status": "verified",

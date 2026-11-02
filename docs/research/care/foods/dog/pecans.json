@@ -190,7 +190,7 @@
     "nl": "Neem meteen contact op met je dierenarts, ook als je hond maar een paar pecannoten heeft gegeten. Schrijf op hoeveel er zijn gegeten en of ze oud of beschimmeld waren, en wacht niet op verschijnselen.",
     "pl": "Od razu skontaktuj się z weterynarzem, nawet jeśli twój pies zjadł tylko kilka orzechów pekan. Zanotuj, ile ich zjadł i czy były stare lub spleśniałe, i nie czekaj na objawy.",
     "cs": "Okamžitě se obraťte na veterináře, i když pes snědl jen pár pekanových ořechů. Poznamenejte si, kolik jich snědl a zda byly staré nebo plesnivé, a nečekejte, až se objeví příznaky.",
-    "hr": "Odmah se obrati veterinaru, čak i ako je tvoj pas pojeo samo nekoliko pekan oraha. Zapiši koliko ih je pojeo i jesu li bili stari ili pljesnivi i ne čekaj da se pojave znakovi.",
+    "hr": "Odmah se obrati veterinaru, čak i ako je tvoj pas pojeo samo nekoliko pekan oraha. Zapiši koliko ih je pojeo i jesu li bili stari ili pljesnivi. Ne čekaj da se pojave znakovi.",
     "sv": "Kontakta veterinären direkt, även om hunden bara ätit några få pekannötter. Notera hur många den åt och om de var gamla eller möglade, och vänta inte på symtom.",
     "da": "Kontakt straks din dyrlæge, også selv om din hund kun har spist nogle få pekannødder. Skriv ned hvor mange hunden har spist, og om de var gamle eller mugne, og vent ikke på symptomer.",
     "fi": "Ota heti yhteyttä eläinlääkäriin, vaikka koirasi söi vain muutaman pekaanipähkinän. Kirjaa ylös, montako se söi ja olivatko pähkinät vanhoja tai homeisia, äläkä odota oireita.",
@@ -208,7 +208,7 @@
     "nl": "Pecannoten zijn niet voor honden. Eet een hond ervan? Vertel het meteen aan een volwassene, zodat die de dierenarts kan bellen.",
     "pl": "Orzechy pekan nie są dla psów. Jeśli pies jakieś zje, od razu powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Pekanové ořechy nejsou pro psy. Když je pes sní, řekni to hned dospělému, aby mohl zavolat veterináři.",
-    "hr": "Pekan orasi nisu za pse. Ako ih pas pojede, odmah reci odrasloj osobi da može nazvati veterinara.",
+    "hr": "Pekan orasi nisu za pse. Ako ih pas pojede, odmah reci odrasloj osobi da bi mogla nazvati veterinara.",
     "sv": "Pekannötter är inte för hundar. Om en hund äter några, säg till en vuxen direkt så att den vuxna kan ringa veterinären.",
     "da": "Pekannødder er ikke til hunde. Hvis en hund spiser nogle, så sig det straks til en voksen, så den voksne kan ringe til dyrlægen.",
     "fi": "Pekaanipähkinät eivät sovi koirille. Jos koira syö niitä, kerro heti aikuiselle, niin hän voi soittaa eläinlääkärille.",
@@ -355,7 +355,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6c3bc12b71806e47d2d678e527001302938f24531b5e9fca7a7580fc769ebbab"
+      "verified_hash": "63763d5aad22e1d0e64b3d9c7e14464fb4866d2dfdfdbd354a8382ead5e86841"
     },
     "sv": {
       "status": "verified",

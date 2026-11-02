@@ -64,7 +64,7 @@
     "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan.",
     "pl": "Nie. Gotowane kości, na przykład z kurczaka lub indyka, mogą się rozszczepiać i spowodować u kota zadławienie, obrażenia wewnętrzne lub niedrożność. Zawsze oddziel mięso od kości, zanim się nim podzielisz, i wyrzucaj resztki tuszki tam, gdzie kot ich nie dosięgnie.",
     "cs": "Ne. Tepelně upravené kosti, například kuřecí nebo krůtí, se mohou tříštit a u koček způsobit dušení, vnitřní poranění nebo ucpání. Než se s kočkou o maso podělíte, vždy ho oberte od kostí a zbytky kostry vyhazujte tam, kam kočka nedosáhne.",
-    "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a ostatke peradi baci ondje gdje ih mačka ne može dohvatiti.",
+    "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a kosture peradi baci tako da ih mačka ne može dohvatiti.",
     "sv": "Nej. Tillagade ben, till exempel kyckling- eller kalkonben, kan splittras och orsaka kvävning, inre skador eller tarmstopp hos katter. Ta alltid bort köttet från benet innan du delar med dig, och släng skrovet där katten inte kommer åt det.",
     "da": "Nej. Tilberedte knogler, for eksempel fra kylling eller kalkun, kan splintre og sætte sig fast i halsen, give indre skader eller blokeringer hos katte. Tag altid kødet af knoglen før du deler, og smid skrogene ud et sted hvor din kat ikke kan nå dem.",
     "fi": "Ei saa. Kypsennetyt luut, kuten kanan- tai kalkkunanluut, voivat sirpaloitua ja aiheuttaa kissalle tukehtumisen, sisäisiä vammoja tai tukoksia. Irrota liha aina luista, ennen kuin annat sitä kissalle, ja hävitä ruhot paikkaan, johon kissasi ei ylety.",
@@ -209,7 +209,7 @@
     "nl": "Botjes kunnen pijn doen in de buik van een kat. Geef je poes alleen vlees zonder botjes. Pakt ze toch een bot? Vertel het meteen aan een volwassene.",
     "pl": "Kości mogą zranić kotu brzuszek. Dawaj kotkowi tylko mięso bez kości i powiedz dorosłemu, jeśli kotek porwie kość.",
     "cs": "Z kostí může kočku bolet bříško. Dávej kočičce jen maso bez kostí, a když si nějakou kost čmajzne, řekni to dospělému.",
-    "hr": "Kosti mogu macu zaboljeti u trbuščiću. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost.",
+    "hr": "Kosti mogu ozlijediti macin trbuščić. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost.",
     "sv": "Ben kan göra ont i kattens mage. Ge katten bara kött utan ben, och säg till en vuxen om katten tar ett ben.",
     "da": "Knogler kan gøre ondt i en kats mave. Giv kun din kat kød uden knogler, og sig det til en voksen hvis den snupper en knogle.",
     "fi": "Luut voivat satuttaa kissan masua. Anna kisulle vain luutonta lihaa ja kerro aikuiselle, jos kisu nappaa luun.",
@@ -245,7 +245,7 @@
         "nl": "Volgens Cats Protection is gewone, gekookte kalkoen af en toe prima als snoepje, als het zonder botten, zonder kruiden en zonder vel is. Gooi het karkas veilig weg, buiten bereik van je kat.",
         "pl": "Według Cats Protection zwykły gotowany indyk jest w porządku jako okazjonalny smakołyk, jeśli jest bez kości, bez przypraw i bez skóry. Tuszkę wyrzuć bezpiecznie, poza zasięgiem kota.",
         "cs": "Podle Cats Protection je obyčejné tepelně upravené krůtí maso jako občasný pamlsek v pořádku, pokud je bez kostí, nekořeněné a bez kůže. Zbytky kostry bezpečně vyhoďte mimo dosah kočky.",
-        "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica ako je bez kostiju, bez začina i bez kože. Ostatke purice baci na sigurno mjesto izvan dosega mačke.",
+        "hr": "Cats Protection navodi da je obična termički obrađena puretina u redu kao povremena poslastica ako je bez kostiju, bez začina i bez kože. Kostur purana baci tako da ga mačka ne može dohvatiti.",
         "sv": "Enligt Cats Protection går naturell, tillagad kalkon bra som godbit någon gång ibland om den är benfri, okryddad och utan skinn. Släng skrovet säkert, utom räckhåll för katten.",
         "da": "Cats Protection skriver at naturel, tilberedt kalkun er fin som en godbid en gang imellem hvis den er uden knogler, krydderier og skind. Smid skroget ud et sted hvor din kat ikke kan nå det.",
         "fi": "Cats Protectionin mukaan pelkkä kypsennetty kalkkuna sopii satunnaiseksi herkuksi, jos se on luutonta, maustamatonta ja nahatonta. Hävitä kalkkunan ruho turvallisesti paikkaan, johon kissasi ei ylety.",
@@ -361,7 +361,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1f2089a2e6fdb82cfd309db09a696892e980a588b7ed8810b038783d6ee0e729"
+      "verified_hash": "17587b6023735c3c61573997260c16669954eee62becb65d4f73e3c5077a9ea7"
     },
     "sv": {
       "status": "verified",

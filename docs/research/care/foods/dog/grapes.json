@@ -64,7 +64,7 @@
     "nl": "Nee. Honden mogen nooit druiven eten. Druiven kunnen bij honden nierfalen veroorzaken, en zelfs een kleine hoeveelheid kan een hond ernstig ziek maken. Niemand kan voorspellen welke honden erop reageren, dus elke druif is een reden om de dierenarts te bellen.",
     "pl": "Nie. Psy nigdy nie powinny jeść winogron. Winogrona mogą wywołać u psów niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić. Nie da się przewidzieć, których psów to dotknie, więc każde zjedzone winogrono to powód, by zadzwonić do weterynarza.",
     "cs": "Ne. Psi by nikdy neměli jíst hroznové víno. Hrozny mohou u psů způsobit selhání ledvin a vážně onemocnět může pes i po malém množství. Nelze předvídat, kterého psa to postihne, proto je každá snědená kulička důvodem zavolat veterináři.",
-    "hr": "Ne. Psi nikad ne smiju jesti grožđe. Grožđe može kod pasa izazvati zatajenje bubrega, a čak i mala količina može psa ozbiljno razboljeti. Nemoguće je predvidjeti koji će psi biti pogođeni, zato je svaka bobica grožđa razlog da nazoveš veterinara.",
+    "hr": "Ne. Psi nikad ne smiju jesti grožđe. Grožđe kod pasa može izazvati zatajenje bubrega, a čak i mala količina može psa ozbiljno razboljeti. Nemoguće je predvidjeti koji će psi biti pogođeni, zato je svaka bobica grožđa razlog da nazoveš veterinara.",
     "sv": "Nej. Hundar ska aldrig äta vindruvor. Vindruvor kan orsaka njursvikt hos hundar, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas, så varje vindruva är ett skäl att ringa veterinären.",
     "da": "Nej. Hunde må aldrig spise vindruer. Vindruer kan give nyresvigt hos hunde, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket, så enhver vindrue er en grund til at ringe til dyrlægen.",
     "fi": "Ei saa. Koira ei saa koskaan syödä viinirypäleitä. Viinirypäleet voivat aiheuttaa koirille munuaisten vajaatoiminnan, ja jo pieni määrä voi tehdä koiran vakavasti sairaaksi. On mahdotonta ennustaa, mihin koiriin ne vaikuttavat, joten jokainen syöty viinirypäle on syy soittaa eläinlääkärille.",
@@ -220,7 +220,7 @@
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je hond maar een of twee druiven heeft gegeten. Schrijf op hoeveel er zijn gegeten en wanneer. Wacht niet op verschijnselen: hoe eerder een hond wordt behandeld, hoe beter de vooruitzichten.",
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, nawet jeśli twój pies zjadł tylko jedno czy dwa winogrona. Zanotuj, ile zjadł i kiedy. Nie czekaj na objawy: im szybciej pies zostanie poddany leczeniu, tym lepsze rokowania.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když váš pes snědl jen jednu nebo dvě kuličky. Poznamenejte si, kolik jich snědl a kdy. Nečekejte, až se objeví příznaky: čím dřív je pes léčen, tím lepší je prognóza.",
-    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo jednu ili dvije bobice grožđa. Zapiši koliko ih je pojeo i kada. Ne čekaj da se pojave znakovi: što se pas prije liječi, izgledi su bolji.",
+    "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo jednu ili dvije bobice grožđa. Zapiši koliko ih je pojeo i kada. Ne čekaj da se pojave znakovi: što prije počne liječenje, to su izgledi bolji.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit en eller två vindruvor. Notera hur många den åt och när. Vänta inte på symtom: ju tidigare hunden får behandling, desto bättre är utsikterna.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom hunden kun har spist en eller to vindruer. Skriv ned hvor mange hunden har spist og hvornår. Vent ikke på symptomer: jo hurtigere en hund bliver behandlet, desto bedre er udsigterne.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koirasi olisi syönyt vain yhden tai kaksi viinirypälettä. Kirjaa ylös, kuinka monta koira söi ja milloin. Älä odota oireita: mitä nopeammin koira saa hoitoa, sitä parempi on ennuste.",
@@ -293,7 +293,7 @@
         "nl": "Zijn groene en rode druiven even riskant?",
         "pl": "Czy zielone i czerwone winogrona są tak samo ryzykowne?",
         "cs": "Jsou zelené a červené hrozny stejně rizikové?",
-        "hr": "Jesu li bijelo i crno grožđe jednako rizični?",
+        "hr": "Je li zeleno grožđe jednako rizično kao crveno?",
         "sv": "Är gröna och röda vindruvor lika riskabla?",
         "da": "Er grønne og røde vindruer lige risikable?",
         "fi": "Ovatko vihreät ja punaiset viinirypäleet yhtä vaarallisia?",
@@ -433,7 +433,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e953fcc18b9b818feb44154e325db7ff4af13b9b1b937c6e1d43912f840d08d6"
+      "verified_hash": "8938311ead0986e916caa8096d581a51a2a9b7c29dde8c9d8fbeb416c7e9d618"
     },
     "sv": {
       "status": "verified",

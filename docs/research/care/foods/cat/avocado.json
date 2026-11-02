@@ -64,7 +64,7 @@
     "nl": "Liever niet. Avocado bevat veel vet en een gifstof die persine heet, en volgens Cats Protection kan het eten van een grote hoeveelheid gezondheidsproblemen geven bij katten. Avocado is vooral gevaarlijk voor vogels, paarden en sommige andere dieren, maar het is ook geen goed voedsel voor katten.",
     "pl": "Lepiej nie. Awokado jest bardzo tłuste i zawiera toksynę o nazwie persyna, a według Cats Protection zjedzenie go w dużej ilości może wywołać u kota problemy zdrowotne. Awokado jest groźne głównie dla ptaków, koni i niektórych innych zwierząt, ale i tak nie jest dobrym pokarmem dla kotów.",
     "cs": "Raději ne. Avokádo má vysoký obsah tuku a obsahuje toxin zvaný persin; podle Cats Protection může kočkám způsobit zdravotní potíže, pokud ho snědí hodně. Avokádo je nebezpečné hlavně pro ptáky, koně a některá další zvířata, ani pro kočky to ale není vhodné jídlo.",
-    "hr": "Bolje ne. Avokado ima mnogo masti i sadrži toksin zvan persin, a Cats Protection navodi da mačkama može izazvati zdravstvene probleme ako ga pojedu mnogo. Avokado je opasan uglavnom za ptice, konje i neke druge životinje, ali ni za mačke nije dobra hrana.",
+    "hr": "Bolje ne. Avokado ima mnogo masti i sadrži toksin zvan persin, a Cats Protection navodi da mačkama može izazvati zdravstvene probleme ako ga pojedu u većoj količini. Avokado je opasan uglavnom za ptice, konje i neke druge životinje, ali ni za mačke nije dobra hrana.",
     "sv": "Helst inte. Avokado är mycket fet och innehåller ett gift som heter persin, och enligt Cats Protection kan stora mängder ge hälsoproblem hos katter. Avokado är främst farlig för fåglar, hästar och vissa andra djur, men det är ändå ingen bra mat för katter.",
     "da": "Det er bedst at lade være. Avocado indeholder meget fedt og et giftstof der hedder persin, og Cats Protection skriver at det kan give helbredsproblemer hos katte hvis de spiser meget af det. Avocado er først og fremmest farlig for fugle, heste og nogle andre dyr, men det er stadig ikke god mad til katte.",
     "fi": "Ei kannata. Avokadossa on paljon rasvaa ja persiini-nimistä myrkkyä, ja Cats Protectionin mukaan sen syöminen suurina määrinä voi aiheuttaa kissoille terveysongelmia. Avokado on vaarallinen lähinnä linnuille, hevosille ja joillekin muille eläimille, mutta se ei silti ole hyvää ruokaa kissoille.",
@@ -119,7 +119,7 @@
       "Jakékoli známky toho, že je kočce po snědení většího množství špatně (naše zdroje neuvádějí konkrétní příznaky u koček)"
     ],
     "hr": [
-      "Bilo kakav znak da joj nije dobro nakon što ga je pojela mnogo (naši izvori ne navode konkretne znakove kod mačaka)"
+      "Bilo koji znak da joj nije dobro nakon što je pojela veću količinu (naši izvori ne navode konkretne znakove kod mačaka)"
     ],
     "sv": [
       "Alla tecken på att katten mår dåligt efter att ha ätit mycket (våra källor anger inga specifika symtom hos katter)"
@@ -293,7 +293,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3d0aa8f38256b1c65a50b0d543da42589a9f2fb9ff6760c6147b0fdde4a5238b"
+      "verified_hash": "0259cad0e1f50d0a7298c35342fc5226c13bb26050b712cb291c5afe99119755"
     },
     "sv": {
       "status": "verified",

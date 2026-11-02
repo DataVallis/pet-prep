@@ -64,7 +64,7 @@
     "nl": "Ja, een beetje gekookte zalm is af en toe prima als snoepje. Geef het zonder toevoegingen, zonder graten en zonder kruiden, en houd het klein. Vis hoort het complete voer van een kat niet te vervangen.",
     "pl": "Tak, odrobina gotowanego łososia jest w porządku jako okazjonalny smakołyk. Podawaj go bez dodatków, bez ości i przypraw, w małej ilości. Ryba nie powinna zastępować pełnoporcjowej karmy kota.",
     "cs": "Ano, trocha tepelně upraveného lososa je v pořádku jako občasný pamlsek. Podávejte ho bez přísad, bez kostí a bez koření a jen v malém množství. Ryba by neměla nahrazovat kompletní krmivo pro kočky.",
-    "hr": "Da, malo termički obrađenog lososa u redu je kao povremena poslastica. Posluži ga običnog, bez kostiju i začina, i u malim količinama. Riba ne bi smjela zamijeniti mačkinu potpunu hranu.",
+    "hr": "Da, malo termički obrađenog lososa u redu je kao povremena poslastica. Posluži ga običnog, bez kostiju i začina, i u malim količinama. Riba ne bi smjela zamijeniti potpunu hranu za mačke.",
     "sv": "Ja, lite tillagad lax går bra som en godbit ibland. Servera den naturell, utan ben och kryddor, och i små mängder. Fisk ska inte ersätta kattens fullfoder.",
     "da": "Ja, lidt tilberedt laks er fin som en godbid en gang imellem. Server den naturel og uden ben og krydderier, og hold portionen lille. Fisk må ikke erstatte kattens komplette foder.",
     "fi": "Saa, vähän kypsennettyä lohta sopii silloin tällöin herkuksi. Tarjoa se maustamattomana, ilman ruotoja, ja pidä annos pienenä. Kala ei saa korvata kissan täysravintoa.",
@@ -116,7 +116,7 @@
     "nl": "Gekookt, zonder toevoegingen, zonder graten en zonder kruiden, of uit blik in bronwater; af en toe een paar kleine stukjes.",
     "pl": "Gotowany, bez dodatków, bez ości i przypraw albo z puszki w wodzie źródlanej; od czasu do czasu kilka małych kawałków.",
     "cs": "Tepelně upravený, bez přísad, bez kostí a nekořeněný, nebo z konzervy v pramenité vodě; občas několik malých kousků.",
-    "hr": "Termički obrađen, običan, bez kostiju i nezačinjen ili iz konzerve u izvorskoj vodi; tu i tamo nekoliko malih komadića.",
+    "hr": "Termički obrađen, običan, bez kostiju i nezačinjen ili iz konzerve u izvorskoj vodi; povremeno nekoliko malih komadića.",
     "sv": "Tillagad, naturell, benfri och okryddad, eller konserverad i vatten; några små bitar då och då.",
     "da": "Tilberedt, naturel, uden ben og uden krydderier eller på dåse i vand; et par små stykker en gang imellem.",
     "fi": "Kypsennettynä, maustamattomana ja ruodottomana tai lähdeveteen säilöttynä purkkilohena; muutama pieni pala silloin tällöin.",
@@ -264,7 +264,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6938accefffb7b2307e5c7cb93e511884c20c4e4a094256c0026dcc5bc58affa"
+      "verified_hash": "0de74c4dacaedc981cfe73b877470c8072debf73140534ba14a5b46b5db74767"
     },
     "sv": {
       "status": "verified",

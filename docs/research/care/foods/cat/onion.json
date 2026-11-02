@@ -325,7 +325,7 @@
         "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
         "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
         "cs": "Nejdřív se často projeví podrážděný žaludek, ale příznaky chudokrevnosti obvykle nastupují později a mohou se objevit během jednoho až pěti dnů. Proto byste měli veterináři zavolat hned a nečekat.",
-        "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti unutar jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
+        "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti u roku od jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
         "sv": "Magbesvär syns ofta först, men tecken på blodbrist dröjer oftast längre och kan komma inom en till fem dagar. Därför ska du ringa veterinären direkt i stället för att vänta.",
         "da": "Maveproblemer viser sig ofte først, men tegn på blodmangel kommer som regel senere og kan vise sig inden for en til fem dage. Derfor skal du ringe til din dyrlæge med det samme i stedet for at vente.",
         "fi": "Vatsavaivat näkyvät usein ensin, mutta anemian oireet tulevat yleensä myöhemmin ja voivat ilmaantua 1–5 päivän kuluessa. Siksi eläinlääkärille pitää soittaa heti eikä jäädä odottamaan.",
@@ -480,7 +480,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0f95ad826a3a2c3c84e3f52be4fb8b4f228d5a6860296d0501fa4ee5f74c301d"
+      "verified_hash": "e3c3e0218b183da7a09eb834a0e07c122929ddf43004b173995937056800b37b"
     },
     "sv": {
       "status": "verified",

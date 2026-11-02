@@ -81,7 +81,7 @@
     "nl": "Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking bij honden. De gevolgen lopen uiteen van een lichte maagstoornis tot een ernstige, zelfs levensbedreigende alvleesklierontsteking. Honden die eerder alvleesklierontsteking hebben gehad, moeten vet eten vermijden.",
     "pl": "Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki u psów. Skutki wahają się od łagodnego rozstroju żołądka po ciężkie, a nawet zagrażające życiu zapalenie trzustki. Psy, które już przeszły zapalenie trzustki, powinny unikać tłustego jedzenia.",
     "cs": "Tučné jídlo je u psů známým spouštěčem zánětu slinivky břišní. Následky sahají od lehce podrážděného žaludku až po těžký, dokonce život ohrožující zánět slinivky břišní. Psi, kteří už zánět slinivky břišní prodělali, by se tučným jídlům měli vyhýbat.",
-    "hr": "Masan obrok poznat je okidač upale gušterače kod pasa. Posljedice sežu od blagih želučanih smetnji do teške, čak i po život opasne upale gušterače. Psi koji su već imali upalu gušterače trebaju izbjegavati masnu hranu.",
+    "hr": "Masni obrok poznat je okidač upale gušterače kod pasa. Posljedice sežu od blagih želučanih smetnji do teške, čak i po život opasne upale gušterače. Psi koji su već imali upalu gušterače trebaju izbjegavati masnu hranu.",
     "sv": "En fet måltid är en känd utlösande faktor för bukspottkörtelinflammation hos hundar. Följderna kan variera från lätta magbesvär till en svår, till och med livshotande bukspottkörtelinflammation. Hundar som haft bukspottkörtelinflammation tidigare bör undvika fet mat.",
     "da": "Et fedt måltid er en kendt udløser af betændelse i bugspytkirtlen hos hunde. Følgerne spænder fra let dårlig mave til alvorlig, endda livstruende betændelse i bugspytkirtlen. Hunde der tidligere har haft betændelse i bugspytkirtlen, bør undgå fed mad.",
     "fi": "Rasvainen ateria on tunnettu haimatulehduksen laukaisija koirilla. Vaikutukset vaihtelevat lievistä vatsavaivoista vakavaan, jopa hengenvaaralliseen haimatulehdukseen. Koirien, joilla on aiemmin ollut haimatulehdus, pitäisi välttää rasvaisia ruokia.",
@@ -275,7 +275,7 @@
         "nl": "Een ontsteking van de alvleesklier (pancreatitis) die braken, misselijkheid en pijn veroorzaakt. Bij honden kan een vette maaltijd die uitlokken.",
         "pl": "Stan zapalny trzustki, który powoduje wymioty, nudności i ból. U psów może go wywołać tłusty posiłek.",
         "cs": "Zánět slinivky břišní, který způsobuje zvracení, nevolnost a bolest. U psů ho může spustit tučné jídlo.",
-        "hr": "Gušterača se upali, što izaziva povraćanje, mučninu i bolove. Kod pasa upalu može potaknuti masan obrok.",
+        "hr": "Upala gušterače koja izaziva povraćanje, mučninu i bolove. Kod pasa je može potaknuti masni obrok.",
         "sv": "En inflammation i bukspottkörteln (pankreatit) som ger kräkningar, illamående och smärta. Hos hundar kan den utlösas av en fet måltid.",
         "da": "En betændelse i bugspytkirtlen (pankreatitis), der giver opkast, kvalme og smerter. Hos hunde kan den udløses af et fedt måltid.",
         "fi": "Haiman tulehdus, joka aiheuttaa oksentelua, pahoinvointia ja kipua. Koiralla sen voi laukaista rasvainen ateria.",
@@ -438,7 +438,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "aa821df6a9d744038d714207bc337a2678d8d3b12346f06cd41873ede6bffa26"
+      "verified_hash": "5862314d53cf6e8daed4bb90702d3d318074d104b8ec9b94ae574133d13ba922"
     },
     "sv": {
       "status": "verified",

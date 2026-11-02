@@ -64,7 +64,7 @@
     "nl": "Nee. Druiven staan op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Vermijd ze helemaal, ook in kleine hoeveelheden, en bel je dierenarts als je kat er een eet.",
     "pl": "Nie. Winogrona są na liście pokarmów toksycznych dla kotów, a ich zjedzenie może wywołać niewydolność nerek. Unikaj ich całkowicie, nawet w małych ilościach, i zadzwoń do weterynarza, jeśli kot zje choć jedno.",
     "cs": "Ne. Hrozny patří mezi potraviny toxické pro kočky a mohou způsobit selhání ledvin. Úplně se jim vyhněte, i v malém množství, a pokud je kočka sní, zavolejte veterináři.",
-    "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke, a može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
+    "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke i može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
     "sv": "Nej. Vindruvor finns på listan över livsmedel som är giftiga för katter, och de kan orsaka njursvikt. Undvik dem helt, även i små mängder, och ring veterinären om katten äter någon.",
     "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogen.",
     "fi": "Ei saa. Viinirypäleet kuuluvat kissoille myrkyllisiin ruokiin, ja niiden syöminen voi aiheuttaa munuaisten vajaatoiminnan. Vältä niitä kokonaan, pieniäkin määriä, ja soita eläinlääkärille, jos kissasi syö niitä.",
@@ -119,7 +119,7 @@
       "Zvracení, často do jednoho dne"
     ],
     "hr": [
-      "Povraćanje, često unutar jednog dana"
+      "Povraćanje, često u roku od jednog dana"
     ],
     "sv": [
       "Kräkningar, ofta inom ett dygn"
@@ -310,7 +310,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1e2665a8390c47875ce53938c922e6b5803ad80549fe63792b6f6e6d8a9306f4"
+      "verified_hash": "4a0713a59d3598332ee1dade32ca9c17a1ddfa70b7dda24e971c07e4a9a5ea3f"
     },
     "sv": {
       "status": "verified",

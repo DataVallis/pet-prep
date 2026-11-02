@@ -81,7 +81,7 @@
     "nl": "Pistachenoten bevatten veel vet en zout, wat maagproblemen kan veroorzaken, en vette, zoute snacks kunnen tot alvleesklierontsteking leiden. Zelfs gepelde noten kunnen verstikking veroorzaken. Schimmel op notendoppen kan aflatoxine maken; daar kunnen honden zwak en lusteloos van worden, het kan de maag van streek maken en zelfs toevallen veroorzaken.",
     "pl": "Pistacje mają dużo tłuszczu i soli, które mogą wywołać problemy z żołądkiem, a tłuste, słone przekąski mogą prowadzić do zapalenia trzustki. Nawet łuskane orzechy mogą grozić zadławieniem. Pleśń na łupinach orzechów może wytwarzać aflatoksynę, przez którą pies może stać się słaby i ospały, mieć rozstrój żołądka, a nawet drgawki.",
     "cs": "Pistácie mají hodně tuku a soli, což může způsobit žaludeční potíže, a tučné, slané pochutiny mohou vést k zánětu slinivky břišní. I vyloupané ořechy mohou způsobit dušení. Plíseň na skořápkách ořechů může produkovat aflatoxin, po kterém mohou být psi slabí a malátní, může podráždit žaludek, a dokonce způsobit záchvaty.",
-    "hr": "Pistacije imaju puno masti i soli, što može izazvati probavne tegobe, a masne i slane grickalice mogu dovesti do upale gušterače. Čak i oljušteni plodovi mogu izazvati gušenje. Plijesan na ljuskama orašastih plodova može stvarati aflatoksin, od kojeg pas može postati slab i bezvoljan, a može izazvati i probavne tegobe, pa čak i napadaje.",
+    "hr": "Pistacije imaju puno masti i soli, što može izazvati probavne tegobe, a masne i slane grickalice mogu dovesti do upale gušterače. Čak i oljušteni plodovi mogu izazvati gušenje. Plijesan na ljuskama orašastih plodova može stvarati aflatoksin, koji kod pasa može izazvati slabost i bezvoljnost, probavne tegobe, pa čak i napadaje.",
     "sv": "Pistaschnötter innehåller mycket fett och salt, som kan ge magproblem, och feta, salta snacks kan leda till bukspottkörtelinflammation. Även skalade nötter kan orsaka kvävning. Mögel på nötskal kan bilda aflatoxin, som kan göra hundar svaga och slöa, ge magbesvär och till och med orsaka kramper.",
     "da": "Pistacienødder indeholder meget fedt og salt, som kan give maveproblemer, og fede, salte snacks kan føre til betændelse i bugspytkirtlen. Selv afskallede nødder kan sætte sig fast i halsen. Skimmel på nøddeskaller kan danne aflatoksin, som kan gøre hunde svage og sløve, give maveproblemer og endda kramper.",
     "fi": "Pistaasipähkinöissä on paljon rasvaa ja suolaa, mikä voi aiheuttaa vatsavaivoja, ja rasvaiset, suolaiset naposteltavat voivat johtaa haimatulehdukseen. Kuoritutkin pähkinät voivat aiheuttaa tukehtumisvaaran. Pähkinöiden kuorissa kasvava home voi tuottaa aflatoksiinia, joka voi tehdä koirasta heikon ja väsyneen, aiheuttaa vatsavaivoja ja jopa kouristuksia.",
@@ -208,7 +208,7 @@
     "nl": "Pistachenoten en hun doppen zijn niet voor honden. Ze kunnen het buikje van een hond van streek maken, dus zet de schaal hoog weg.",
     "pl": "Pistacje i ich łupinki nie są dla psów. Może psa od nich rozboleć brzuszek, więc trzymaj miseczkę wysoko.",
     "cs": "Pistácie ani jejich skořápky nejsou pro psy. Psa z nich může rozbolet bříško, tak dej misku vysoko.",
-    "hr": "Pistacije i njihove ljuske nisu za pse. Od njih psa može zaboljeti trbuh, zato zdjelicu drži visoko.",
+    "hr": "Pistacije i njihove ljuske nisu za pse. Od njih psa može zaboljeti trbuh, zato zdjelu drži na visokom mjestu.",
     "sv": "Pistaschnötter och deras skal är inte för hundar. De kan ge en hund ont i magen, så ställ skålen högt upp.",
     "da": "Pistacienødder og deres skaller er ikke til hunde. De kan give hunden ondt i maven, så stil skålen højt op.",
     "fi": "Pistaasipähkinät ja niiden kuoret eivät sovi koirille. Niistä voi tulla koiralle vatsakipu, joten pidä kulho korkealla.",
@@ -360,7 +360,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b827396e51862774075ce091d9feb6dfa95ed77cdb91b053cbcc1aaf651db1b2"
+      "verified_hash": "90350698d9871b46ee9da29d1ea47fb7df0afd0fbb9c9989494e635d947d56de"
     },
     "sv": {
       "status": "verified",

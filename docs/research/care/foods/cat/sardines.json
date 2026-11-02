@@ -64,7 +64,7 @@
     "nl": "Ja, af en toe als snoepje. Sardines uit blik in bronwater kun je zo nu en dan geven; let wel op graten. Ze horen geen hoofdbestanddeel van het eten van een kat te worden.",
     "pl": "Tak, jako okazjonalny smakołyk. Sardynki z puszki w wodzie źródlanej można od czasu do czasu podać, uważając na ości. Nie powinny stać się główną częścią diety kota.",
     "cs": "Ano, jako občasný pamlsek. Sardinky z konzervy v pramenité vodě můžete čas od času nabídnout, jen dávejte pozor na kosti. Neměly by se stát hlavní součástí kočičího jídelníčku.",
-    "hr": "Da, kao povremena poslastica. Srdele iz konzerve u izvorskoj vodi mogu se ponuditi tu i tamo, uz oprez zbog kostiju. Ne bi smjele postati glavni dio mačje prehrane.",
+    "hr": "Da, kao povremena poslastica. Srdele iz konzerve u izvorskoj vodi mogu se ponuditi s vremena na vrijeme, uz oprez zbog kostiju. Ne bi smjele postati glavni dio mačje prehrane.",
     "sv": "Ja, som en godbit ibland. Konserverade sardiner i vatten kan ges då och då, men se upp med benen. De ska inte bli en huvuddel av kattens kost.",
     "da": "Ja, som en godbid en gang imellem. Sardiner på dåse i vand kan gives nu og da – pas på benene. De bør ikke blive hoveddelen af kattens kost.",
     "fi": "Saa, satunnaisena herkkuna. Lähdeveteen säilöttyjä purkkisardiineja voi tarjota silloin tällöin, kunhan varoo ruotoja. Niistä ei pidä tulla kissan ruokavalion pääosaa.",
@@ -116,7 +116,7 @@
     "nl": "Uit blik in bronwater, met de graten eruit; af en toe een paar stukjes.",
     "pl": "Z puszki w wodzie źródlanej, bez ości; od czasu do czasu kilka kawałków.",
     "cs": "Z konzervy v pramenité vodě, bez kostí; občas několik kousků.",
-    "hr": "Iz konzerve u izvorskoj vodi, bez kostiju; tu i tamo nekoliko komadića.",
+    "hr": "Iz konzerve u izvorskoj vodi, bez kostiju; povremeno nekoliko komadića.",
     "sv": "Konserverade i vatten, med benen borttagna; några bitar då och då.",
     "da": "På dåse i vand og med benene fjernet; et par stykker en gang imellem.",
     "fi": "Lähdeveteen säilöttyinä purkkisardiineina, ruodot poistettuina; muutama pala silloin tällöin.",
@@ -219,7 +219,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "217f6e192301ac1a3003ca1250a76aa032f2e1e7d3da40bae29de387d4f44cfe"
+      "verified_hash": "bfd21d66a01cb13406e8af336d6a795ee7dcec3761f4f34f1765e35bc3b513e6"
     },
     "sv": {
       "status": "verified",

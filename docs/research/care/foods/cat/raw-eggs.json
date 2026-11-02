@@ -223,7 +223,7 @@
     "nl": "Op rauwe eieren kunnen bacteriën zitten. Alleen volwassenen horen ze aan te raken, en katten mogen ze niet eten.",
     "pl": "Na surowych jajkach mogą być zarazki. Zajmować się nimi powinni tylko dorośli, a koty nie powinny ich jeść.",
     "cs": "Na syrových vejcích můžou být bacily. Brát je do ruky mají jen dospělí a kočky je jíst nemají.",
-    "hr": "Na sirovim jajima mogu biti klice. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti.",
+    "hr": "Na sirovim jajima mogu biti mikrobi. Smiju ih dirati samo odrasli, a mace ih ne bi smjele jesti.",
     "sv": "Råa ägg kan ha bakterier på sig. Bara vuxna ska hantera dem, och katter ska inte äta dem.",
     "da": "Rå æg kan have bakterier på sig. Kun voksne skal håndtere dem, og katte skal ikke spise dem.",
     "fi": "Raaoissa kananmunissa voi olla pöpöjä. Vain aikuiset saavat käsitellä niitä, eikä kissojen pidä syödä niitä.",
@@ -377,7 +377,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "97ff8ff25c8302fdf432689185d4d783d3bc99bf782e4d150e36f8544b141f83"
+      "verified_hash": "0278fe06f06938d88fa0bb37fa46a5d1d55703a191f89ee19f83bf383afbe903"
     },
     "sv": {
       "status": "verified",

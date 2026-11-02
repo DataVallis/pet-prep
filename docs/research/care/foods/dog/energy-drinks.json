@@ -220,7 +220,7 @@
     "nl": "Neem contact op met je dierenarts of een vergiftigingenlijn voor dieren zodra je merkt dat je hond cafeïne binnen heeft gekregen. Schrijf op wat het was (drankje, shot, zakje of tablet) en ongeveer hoeveel. Wacht niet op verschijnselen: een vroege behandeling is belangrijk.",
     "pl": "Skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, gdy tylko zorientujesz się, że twój pies zjadł lub wypił coś z kofeiną. Zanotuj, co to było (napój, shot, saszetka czy tabletka) i mniej więcej ile. Nie czekaj na objawy: liczy się wczesne leczenie.",
     "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, shot, sáček nebo tableta) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
-    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas unio kofein. Zapiši što je to bilo (piće, shot, vrećica ili tableta) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno.",
+    "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas pojeo ili popio nešto s kofeinom. Zapiši što je to bilo (piće, shot, vrećica ili tableta) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du förstår att hunden har fått i sig koffein. Notera vad det var (dryck, shot, påse eller tablett) och ungefär hur mycket. Vänta inte på symtom: tidig behandling gör skillnad.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at hunden har fået koffein. Skriv ned hvad det var (drik, shot, pose eller tablet) og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
     "fi": "Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan heti, kun huomaat koirasi saaneen kofeiinia. Kirjaa ylös, mitä se oli (juoma, shotti, pussi tai tabletti) ja suunnilleen kuinka paljon. Älä odota oireita: varhainen hoito on tärkeää.",
@@ -405,7 +405,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b436424cfceed085330eb53e301a94070de38669d15f80c888954667ba44b108"
+      "verified_hash": "d09eaa2cf37795e436b4a909227a947e81960fd6e1c281842fff717aa1b605e7"
     },
     "sv": {
       "status": "verified",

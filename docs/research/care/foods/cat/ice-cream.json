@@ -64,7 +64,7 @@
     "nl": "Nee, ijs is geen goed snoepje voor katten. Het wordt gemaakt met melk en room, die de maag van een kat van streek kunnen maken, en het bevat vet en suiker die katten niet nodig hebben.",
     "pl": "Nie, lody nie są dobrym smakołykiem dla kotów. Robi się je z mleka i śmietanki, które mogą wywołać u kota rozstrój żołądka, a do tego dostarczają tłuszczu i cukru, których koty nie potrzebują.",
     "cs": "Ne, zmrzlina není pro kočky dobrý pamlsek. Je vyrobená z mléka a smetany, které mohou kočce podráždit žaludek, a přidává tuk a cukr, které kočky nepotřebují.",
-    "hr": "Ne, sladoled nije dobra poslastica za mačke. Napravljen je od mlijeka i vrhnja, koji mački mogu izazvati želučane tegobe, a donosi i mast i šećer koji mačkama ne trebaju.",
+    "hr": "Ne, sladoled nije dobra poslastica za mačke. Napravljen je od mlijeka i vrhnja, koji mački mogu izazvati želučane tegobe, a uz to dodaje masnoću i šećer koji mačkama nisu potrebni.",
     "sv": "Nej, glass är ingen bra godbit för katter. Den görs på mjölk och grädde, som kan ge katten orolig mage, och den tillför fett och socker som katter inte behöver.",
     "da": "Nej, is er ikke en god godbid til katte. Den er lavet af mælk og fløde, som kan give en kat dårlig mave, og den tilfører fedt og sukker som katte ikke har brug for.",
     "fi": "Ei, jäätelö ei ole hyvä herkku kissoille. Se tehdään maidosta ja kermasta, jotka voivat aiheuttaa kissalle vatsavaivoja, ja siinä on rasvaa ja sokeria, joita kissa ei tarvitse.",
@@ -81,7 +81,7 @@
     "nl": "Volwassen katten hebben weinig lactase, het enzym dat melksuiker verteert, dus melk en andere zuivelproducten kunnen diarree of andere spijsverteringsklachten veroorzaken. Room en zuivelproducten bevatten veel vet en kunnen tot gewichtstoename leiden. Suiker is niet giftig voor katten, maar wel ongezond en levert calorieën op die ze niet nodig hebben.",
     "pl": "Dorosłe koty mają mało laktazy, czyli enzymu trawiącego cukier mleczny, więc mleko i inne produkty na bazie mleka mogą wywołać biegunkę lub inne problemy trawienne. Śmietanka i produkty mleczne zawierają dużo tłuszczu i mogą prowadzić do tycia. Cukier nie jest dla kotów toksyczny, ale i tak jest dla nich niezdrowy i dostarcza zbędnych kalorii.",
     "cs": "Dospělé kočky mají málo laktázy, enzymu, který tráví mléčný cukr, takže mléko a další výrobky z mléka mohou způsobit průjem nebo jiné trávicí potíže. Smetana a mléčné výrobky mají vysoký obsah tuku a mohou vést k přibírání na váze. Cukr pro kočky není toxický, přesto pro ně není zdravý a dodává kalorie, které nepotřebují.",
-    "hr": "Odrasle mačke imaju malo laktaze, enzima koji probavlja mliječni šećer, pa mlijeko i drugi mliječni proizvodi mogu izazvati proljev ili druge probavne smetnje. Vrhnje i mliječni proizvodi imaju mnogo masti i mogu dovesti do debljanja. Šećer nije otrovan za mačke, ali im ipak nije zdrav i donosi kalorije koje im ne trebaju.",
+    "hr": "Odrasle mačke imaju malo laktaze, enzima koji probavlja mliječni šećer, pa mlijeko i drugi mliječni proizvodi mogu izazvati proljev ili druge probavne smetnje. Vrhnje i mliječni proizvodi imaju mnogo masti i mogu dovesti do debljanja. Šećer nije otrovan za mačke, ali im ipak nije zdrav i dodaje kalorije koje im ne trebaju.",
     "sv": "Vuxna katter har lite laktas, enzymet som bryter ner mjölksocker, så mjölk och andra mejeribaserade produkter kan ge diarré eller andra magbesvär. Grädde och mejeriprodukter är feta och kan leda till viktuppgång. Socker är inte giftigt för katter, men det är ändå ohälsosamt och ger kalorier som de inte behöver.",
     "da": "Voksne katte har kun lidt laktase, det enzym der fordøjer mælkesukker, så mælk og andre mælkebaserede produkter kan give diarré eller andre fordøjelsesproblemer. Fløde og mejeriprodukter har et højt fedtindhold og kan føre til vægtøgning. Sukker er ikke giftigt for katte, men det er stadig usundt for dem og tilfører kalorier, de ikke har brug for.",
     "fi": "Aikuisilla kissoilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maito ja muut maitopohjaiset tuotteet voivat aiheuttaa ripulia tai muita ruoansulatusvaivoja. Kermassa ja maitotuotteissa on paljon rasvaa, ja ne voivat lihottaa. Sokeri ei ole kissoille myrkyllistä, mutta se on silti niille epäterveellistä ja lisää kaloreita, joita ne eivät tarvitse.",
@@ -336,7 +336,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bbd81a1cf86bdd7118af265ab61083c9e8de98a834984d7b86f39c2159d5875e"
+      "verified_hash": "e9be66a5d5e168b6b98014493fe04eb120d01cf36f39dd030f52cb5921737c71"
     },
     "sv": {
       "status": "verified",

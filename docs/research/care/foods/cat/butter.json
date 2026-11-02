@@ -64,7 +64,7 @@
     "nl": "Nee, boter kun je beter vermijden. Het is een vet zuivelproduct: kattenverzorgingsgidsen noemen vet voedsel bij de dingen die je katten nooit moet geven, zuivel kan de maag van een kat van streek maken en het vet zorgt voor extra gewicht.",
     "pl": "Nie, lepiej unikać masła. To tłusty produkt mleczny: poradniki o opiece nad kotami wymieniają tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, produkty mleczne mogą wywołać u kota rozstrój żołądka, a ich tłuszcz sprzyja tyciu.",
     "cs": "Ne, máslu je lepší se vyhnout. Je to tučná mléčná potravina: příručky o péči o kočky řadí tučná jídla mezi to, čím kočky nikdy nekrmit, mléčné výrobky mohou kočce podráždit žaludek a jejich tuk přispívá k přibírání na váze.",
-    "hr": "Ne, maslac je najbolje izbjegavati. To je masna mliječna namirnica: vodiči za njegu mačaka navode masnu hranu među onim što mačkama nikad ne treba davati, mliječni proizvodi mogu mački izazvati želučane tegobe, a njihova masnoća pridonosi debljanju.",
+    "hr": "Ne, maslac je najbolje izbjegavati. To je masna mliječna namirnica: priručnici o njezi mačaka navode masnu hranu među onim što mačkama nikad ne treba davati, mliječni proizvodi mogu mački izazvati želučane tegobe, a njihova masnoća pridonosi debljanju.",
     "sv": "Nej, smör är bäst att undvika. Det är en fet mejeriprodukt: skötselguider för katter räknar fet mat till sådant man aldrig ska ge katter, mejeriprodukter kan ge katten orolig mage, och fettet ger extra vikt.",
     "da": "Nej, smør bør undgås. Det er et fedt mejeriprodukt: Vejledninger om kattepleje nævner fed mad blandt de ting katte aldrig må få, mejeriprodukter kan give en kat dårlig mave, og fedtet giver ekstra vægt.",
     "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaat mainitsevat rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, maitotuotteet voivat aiheuttaa kissalle vatsavaivoja, ja niiden rasva lisää painoa.",
@@ -294,7 +294,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b3336f8500ea406b32654435a38d773644c22fa76790817a34cfca10425cb870"
+      "verified_hash": "ffb0ca31152146f0106ccfbc102c30c82b33d3a90aebb7960d90b4c71dc040ed"
     },
     "sv": {
       "status": "verified",

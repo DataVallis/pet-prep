@@ -64,7 +64,7 @@
     "nl": "Ja, met mate. Blauwe bessen bevatten weinig calorieën en leveren vezels, vitamine C en antioxidanten, maar ze horen een snoepje voor af en toe te zijn en geen groot deel van het eten van je hond.",
     "pl": "Tak, z umiarem. Borówki mają mało kalorii i dostarczają błonnika, witaminy C i przeciwutleniaczy, ale powinny być okazjonalnym smakołykiem, a nie dużą częścią diety psa.",
     "cs": "Ano, s mírou. Borůvky mají málo kalorií a obsahují vlákninu, vitamin C a antioxidanty, ale měly by být spíš občasným pamlskem než velkou součástí psí stravy.",
-    "hr": "Da, umjereno. Borovnice imaju malo kalorija i daju vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
+    "hr": "Da, umjereno. Borovnice imaju malo kalorija, a sadrže vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
     "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost.",
     "da": "Ja, med måde. Blåbær har få kalorier og giver fibre, C-vitamin og antioxidanter, men de bør være en godbid en gang imellem og ikke en stor del af hundens kost.",
     "fi": "Kyllä, kohtuudella. Mustikat ovat vähäkalorisia, ja niissä on kuitua, C-vitamiinia ja antioksidantteja, mutta niiden pitäisi olla satunnainen herkku eikä suuri osa koirasi ruokavaliota.",
@@ -99,7 +99,7 @@
     "nl": "Begin met een kleine hoeveelheid en houd je hond in de gaten. Twijfel je of blauwe bessen geschikt zijn voor je hond, vraag het dan je dierenarts.",
     "pl": "Zacznij od małej ilości i obserwuj psa. Jeśli nie masz pewności, czy borówki są odpowiednie dla twojego psa, zapytaj weterynarza.",
     "cs": "Začněte malým množstvím a psa pozorujte. Pokud si nejste jistí, zda jsou borůvky pro vašeho psa vhodné, zeptejte se veterináře.",
-    "hr": "Počni s malom količinom i promatraj psa. Ako nisi siguran jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
+    "hr": "Počni s malom količinom i promatraj psa. Ako ne znaš jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
     "sv": "Börja med en liten mängd och håll koll på hunden. Om du är osäker på om blåbär passar din hund, fråga veterinären.",
     "da": "Start med en lille mængde, og hold øje med hunden. Spørg din dyrlæge hvis du er i tvivl om blåbær er gode for din hund.",
     "fi": "Aloita pienellä määrällä ja tarkkaile koiraasi. Jos et ole varma, sopivatko mustikat koirallesi, kysy eläinlääkäriltä.",
@@ -280,7 +280,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b26cc4771a2500cc5c8fc4ba841710ad1de1f4d639b4b5e286bc13769ef4e5aa"
+      "verified_hash": "8d50363bb84764210f80707df526f2eb03733223f8f4069cd342e65b42237549"
     },
     "sv": {
       "status": "verified",

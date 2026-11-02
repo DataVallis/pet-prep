@@ -64,7 +64,7 @@
     "nl": "Nee, yoghurt kun je beter vermijden. Het is een zuivelproduct, en volwassen katten hebben weinig van het enzym dat melksuiker verteert, dus zuivel kan diarree of maagklachten veroorzaken. Diergeneeskundige gidsen raden af katten zuivelproducten te geven.",
     "pl": "Nie, lepiej unikać jogurtu. To produkt mleczny, a dorosłe koty mają mało enzymu trawiącego cukier mleczny, więc nabiał może wywołać biegunkę lub rozstrój żołądka. Poradniki weterynaryjne odradzają podawanie kotom produktów mlecznych.",
     "cs": "Ne, jogurtu se raději vyhněte. Je to mléčný výrobek a dospělé kočky mají málo enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou způsobit průjem nebo podráždění žaludku. Veterinární příručky nedoporučují krmit kočky mléčnými výrobky.",
-    "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski vodiči savjetuju da se mačkama ne daju mliječni proizvodi.",
+    "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski priručnici savjetuju da se mačkama ne daju mliječni proizvodi.",
     "sv": "Nej, yoghurt är bäst att undvika. Det är en mejeriprodukt, och vuxna katter har lite av enzymet som bryter ner mjölksocker, så mejeriprodukter kan ge diarré eller orolig mage. Veterinära guider avråder från att ge katter mejeriprodukter.",
     "da": "Nej, yoghurt bør undgås. Yoghurt er et mejeriprodukt, og voksne katte har kun lidt af det enzym der fordøjer mælkesukker, så mejeriprodukter kan give diarré eller dårlig mave. Veterinære vejledninger fraråder at give katte mejeriprodukter.",
     "fi": "Ei, jogurttia on parasta välttää. Se on maitotuote, ja aikuisilla kissoilla on vähän maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa ripulia tai vatsavaivoja. Eläinlääkäreiden oppaat neuvovat olemaan antamatta kissoille maitotuotteita.",
@@ -152,7 +152,7 @@
       "Proljev",
       "Povraćanje",
       "Želučane tegobe",
-      "Vjetrovi ili nadutost"
+      "Nadutost ili plinovi"
     ],
     "sv": [
       "Diarré",
@@ -227,7 +227,7 @@
         "nl": "Is zuivelvrije yoghurt beter voor katten?",
         "pl": "Czy jogurt bez nabiału jest lepszy dla kotów?",
         "cs": "Je pro kočky lepší rostlinný jogurt?",
-        "hr": "Je li jogurt bez mliječnih sastojaka bolji za mačke?",
+        "hr": "Je li biljni jogurt bolji za mačke?",
         "sv": "Är mejerifri yoghurt bättre för katter?",
         "da": "Er mælkefri yoghurt bedre for katte?",
         "fi": "Onko maidoton jogurtti parempi kissoille?",
@@ -355,7 +355,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fe9715bccce87a2ff90ccc9f12e6f529cc5050af2faf74379a4ca2dd69fc7039"
+      "verified_hash": "eefe716f26c3d98a4829b372185362215b40452183cd3c9b08a1a1fff293517b"
     },
     "sv": {
       "status": "verified",

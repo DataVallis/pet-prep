@@ -64,7 +64,7 @@
     "nl": "Nee, liever niet. IJs zit vol lactose, vet en suiker, waar een hond buikpijn van kan krijgen, en sommige smaken bevatten chocolade of de zoetstof xylitol, die giftig zijn voor honden.",
     "pl": "Lepiej nie. Lody są pełne laktozy, tłuszczu i cukru, które mogą podrażnić brzuch psa, a niektóre smaki zawierają czekoladę lub słodzik ksylitol, które są toksyczne dla psów.",
     "cs": "Raději ne. Zmrzlina je plná laktózy, tuku a cukru, které mohou psovi podráždit žaludek, a některé příchutě obsahují čokoládu nebo sladidlo xylitol, které jsou pro psy jedovaté.",
-    "hr": "Bolje ne. Sladoled je pun laktoze, masti i šećera, koji mogu psu uznemiriti trbuh, a neki okusi sadrže čokoladu ili sladilo ksilitol, koji su otrovni za pse.",
+    "hr": "Bolje ne. Sladoled je pun laktoze, masti i šećera, koji mogu izazvati probavne tegobe, a neki okusi sadrže čokoladu ili sladilo ksilitol, koji su otrovni za pse.",
     "sv": "Nej, helst inte. Glass är full av laktos, fett och socker, som kan ge hunden magbesvär, och vissa smaker innehåller choklad eller sötningsmedlet xylitol, som är giftiga för hundar.",
     "da": "Nej, helst ikke. Is er fuld af laktose, fedt og sukker, som kan give hunden dårlig mave, og nogle smagsvarianter indeholder chokolade eller sødemidlet xylitol, som er giftige for hunde.",
     "fi": "Ei kannata. Jäätelössä on paljon laktoosia, rasvaa ja sokeria, jotka voivat aiheuttaa koiralle vatsavaivoja, ja joissakin makuvaihtoehdoissa on suklaata tai makeutusaine ksylitolia, jotka ovat koirille myrkyllisiä.",
@@ -361,7 +361,7 @@
     "hr": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7edd32b18ce96e490cbf59542c67ea03508ed73c4f0621011b910732d051949a"
+      "verified_hash": "0e1bb7f8dd8ffa98206b66f3749d8adb5f89dad230495b894375b762c0ee5e02"
     },
     "sv": {
       "status": "verified",
