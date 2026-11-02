@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-02 — Igra s palico pri muci ne zapre več aplikacije
+
+**Kaj:** David je na iPhonu (TestFlight) odprl igro »Palica s peresom« pri muci in aplikacija se je po približno sekundi zaprla. Vzrok je bil v eni vrstici risbe igralnega polja: barvo je izračunala funkcija, ki ne sme teči na grafični niti telefona — taka napaka zapre celo aplikacijo, ne le igre. Popravek je majhen (barve so izračunane vnaprej), dobi ga obstoječa gradnja s posodobitvijo prek zraka. Testi zdaj takšno napako odkrijejo pri vsaki igri, še preden pride na telefon.
+**Zakaj je pomembno:** igre za muco so nova funkcija; zrušena aplikacija je najslabša izkušnja za otroka. Ugotovljeno in popravljeno isti dan.
+- 👩 Starši / 🧒 otroci: igra s palico pri muci spet deluje (po naslednji posodobitvi aplikacije).
+- 🛠 Tehnično: Reanimated / worklets — klic ne-worklet funkcije iz `useDerivedValue` je v release gradnji usoden (fatal), napake ne ujame noben error boundary; Jest mock zdaj preveri `__closure` vsakega UI workleta.
+
 ## 2026-11-02 — Igre in šola se popravijo same
 
 **Kaj:** pri enem kužku je AI 7-krat zapored zavrnil isto sliko (»prazna soba, kuža je odšel«), zato igra z žogo 4 dni ni bila na voljo. Strežnik zdaj tak primer popravi sam: sliko opiše drugače, po zavrnitvi poskusi z drugo različico (nikoli ista zahteva), in če res ne gre, igro odpre v preprostem načinu (klasična zanka, žoga odleti in se vrne). Ko so posnetki pozneje narejeni, se polna igra vrne sama.

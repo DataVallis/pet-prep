@@ -7,7 +7,7 @@
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
-import { api, type ChildPetState } from '@/api/client';
+import { api, ApiError, type ChildPetState } from '@/api/client';
 import { i18n } from '@/i18n';
 import CatCareOverlay from '@/modules/catCare/CatCareOverlay';
 import { loadWandGameV2, resetWandGameV2ForTests } from '@/modules/catCare/wandV2/loadWandGameV2';
@@ -201,6 +201,109 @@ describe('the hunt', () => {
     await advance(19000);
     const [, moves] = mocked.finishWandV2.mock.calls[0] as [string, WandV2Move[]];
     expect(moves).toEqual([{ t: expect.any(Number), away: true, in_zone: true, speed_ok: true }]);
+  });
+});
+
+/**
+ * Device crash (David 2026-11-02, iPhone, store 3.1.10 (8)): the whole app closed ~1 s after the
+ * wand card opened (»Muca se pripravlja …«). Cause: the play-zone ring's `useDerivedValue` called
+ * `alpha()` — not a worklet — on the UI runtime; react-native-worklets reports that as a FATAL
+ * error (no error boundary sees it). The reanimated mock now fails any UI worklet that captures a
+ * non-worklet function (`assertUiWorklet`), so these renders reproduce the crash in Jest.
+ */
+describe('device crash 2026-11-02: no UI-thread worklet calls a non-worklet function', () => {
+  const { assertUiWorklet } = jest.requireMock<{ assertUiWorklet: (fn: unknown, hook: string) => void }>('react-native-reanimated');
+
+  it('the guard rejects a UI worklet that captures a plain helper and accepts worklet helpers', () => {
+    const plain = (n: number) => n * 2;
+    const helper = (n: number) => {
+      'worklet';
+      return n + 1;
+    };
+    const bad = () => {
+      'worklet';
+      return plain(1);
+    };
+    const indirect = (n: number) => {
+      'worklet';
+      return plain(n);
+    };
+    const viaWorklet = () => {
+      'worklet';
+      return indirect(1);
+    };
+    const good = () => {
+      'worklet';
+      return helper(1);
+    };
+    expect(() => assertUiWorklet(bad, 'useDerivedValue')).toThrow(/non-worklet function "plain"/);
+    expect(() => assertUiWorklet(viaWorklet, 'useDerivedValue')).toThrow(/non-worklet function "plain"/);
+    expect(() => assertUiWorklet(good, 'useDerivedValue')).not.toThrow();
+  });
+
+  function mediaView(media: Parameters<typeof makeMedia>[0], settings?: Record<string, unknown>): ChildPetView {
+    const raw = catState();
+    const base = normalizeChildState(settings === undefined ? raw : { ...raw, settings: { ...(raw.settings ?? {}), ...settings } } as ChildPetState, 0, T0);
+    return { ...base, pet: { ...base.pet, media: normalizePetMedia(makeMedia(media)) } };
+  }
+
+  const FULL = {
+    status: 'ready' as const,
+    reference_image_url: URLS.ref,
+    poses: { crouch: URLS.crouch, catch: URLS.catch },
+    phases: { wand_stalking: URLS.stalking, wand_crouch_loop: URLS.loop, wand_pouncing: URLS.pouncing, wand_catching: URLS.catching },
+    phase_groups: ['wand' as const],
+    phase_seconds: { wand_stalking: 3, wand_crouch_loop: 2, wand_pouncing: 3, wand_catching: 3 },
+  };
+
+  const CASES: [string, ChildPetView][] = [
+    ['phase group present', mediaView(FULL)],
+    // Simple mode (backend PR #547): the group is dropped → the state-loop deck.
+    ['phase group absent (simple mode)', mediaView({ ...FULL, phase_groups: [] })],
+    ['clips partly missing (no crouch loop, no pounce)', mediaView({ ...FULL, phases: { wand_stalking: URLS.stalking, wand_catching: URLS.catching } })],
+    ['no clips and no poses at all', mediaView({ status: 'ready', reference_image_url: URLS.ref, phase_groups: ['wand'] })],
+    ['picture display mode', mediaView(FULL, { media_display: 'picture' })],
+  ];
+
+  function readyEveryPlayer() {
+    for (const node of screen.queryAllByTestId(new RegExp(`^${ID}-deck-player-\\d+$`))) fireEvent(node, 'firstFrameRender');
+  }
+
+  it.each(CASES)('%s: the card, the deck wait and a full hunt run without a crash', async (_name, view) => {
+    mocked.startWandV2.mockResolvedValue({ status: 'accepted', session: SESSION, state: catState() });
+    mocked.finishWandV2.mockImplementation(async (_id: string, moves: WandV2Move[]) => ({
+      status: 'accepted',
+      result: { session_id: SESSION.id, rules_version: 2, ...scoreWandV2(moves, PARSED) },
+      state: catState(),
+    }));
+    open(view);
+    layoutField();
+    // »Muca se pripravlja …« — the moment the device crashed.
+    await advance(1_000);
+    expect(screen.queryByTestId(`${ID}-escape`)).toBeNull();
+    readyEveryPlayer();
+    await advance(12_000);
+    expect(screen.getByTestId(`${ID}-start`).props.accessibilityState?.disabled).toBe(false);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(7_400);
+    pullAway();
+    await advance(19_000);
+    expect(mocked.finishWandV2).toHaveBeenCalledTimes(1);
+    expect(screen.getByTestId(`${ID}-result-title`)).toBeTruthy();
+    expect(screen.queryByTestId(`${ID}-escape`)).toBeNull();
+  });
+
+  it('a start refusal (422 media_not_ready) shows a friendly card, never a crash', async () => {
+    mocked.startWandV2.mockRejectedValue(new ApiError('refused', 422, { reason: 'media_not_ready' }));
+    open(catView());
+    layoutField();
+    deckReady();
+    await advance(0);
+    fireEvent.press(screen.getByTestId(`${ID}-start`));
+    await advance(0);
+    expect(mocked.finishWandV2).not.toHaveBeenCalled();
+    expect(screen.queryByTestId(`${ID}-escape`)).toBeNull();
+    expect(screen.queryByTestId(`${ID}-failed-text`) ?? screen.queryByTestId(`${ID}-intro`)).toBeTruthy();
   });
 });
 
