@@ -13,7 +13,8 @@
     "pl": "Rodzynki",
     "cs": "Rozinky",
     "hr": "Grožđice",
-    "sv": "Russin"
+    "sv": "Russin",
+    "da": "Rosiner"
   },
   "question": {
     "en": "Can cats eat raisins?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść rodzynki?",
     "cs": "Mohou kočky jíst rozinky?",
     "hr": "Smiju li mačke jesti grožđice?",
-    "sv": "Får katter äta russin?"
+    "sv": "Får katter äta russin?",
+    "da": "Må katte spise rosiner?"
   },
   "url_slug": {
     "en": "raisins",
@@ -41,7 +43,8 @@
     "pl": "rodzynki",
     "cs": "rozinky",
     "hr": "grozdice",
-    "sv": "russin"
+    "sv": "russin",
+    "da": "rosiner"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Rodzynki, podobnie jak winogrona i koryntki, są na liście pokarmów toksycznych dla kotów i mogą wywołać niewydolność nerek. Uważaj na ciasta, babeczki z bakaliami i inne wypieki, które je zawierają, i zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Rozinky jsou stejně jako hrozny a korintky na seznamu potravin toxických pro kočky a mohou způsobit selhání ledvin. Dávejte pozor na koláče, mince pies (vánoční koláčky s ovocnou náplní) a další pečivo, které je obsahuje, a pokud je vaše kočka sní, zavolejte veterináři.",
     "hr": "Ne. Grožđice su, kao i grožđe i korintsko grožđe, na popisu hrane otrovne za mačke i mogu uzrokovati zatajenje bubrega. Pripazi na kolače, pitice s nadjevom od sušenog voća i druga peciva koja ih sadrže, a ako mačka pojede imalo grožđica, nazovi veterinara.",
-    "sv": "Nej. Russin, liksom vindruvor och korinter, finns på listan över livsmedel som är giftiga för katter och kan orsaka njursvikt. Se upp med kakor, julbakelser och annat bakverk som innehåller russin, och ring veterinären om katten äter något sådant."
+    "sv": "Nej. Russin, liksom vindruvor och korinter, finns på listan över livsmedel som är giftiga för katter och kan orsaka njursvikt. Se upp med kakor, julbakelser och annat bakverk som innehåller russin, och ring veterinären om katten äter något sådant.",
+    "da": "Nej. Rosiner står ligesom vindruer og korender på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Pas på med kager, mince pies og andet bagværk med rosiner, og ring til din dyrlæge hvis din kat spiser nogen."
   },
   "why": {
     "en": "Cat welfare charities warn that grapes, raisins and currants can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. Cats are unlikely to eat many raisins on their own but may be tempted by foods that contain them. Cat cases are rare and not well understood, so we use the stricter level.",
@@ -70,7 +74,8 @@
     "pl": "Organizacje działające na rzecz kotów ostrzegają, że winogrona, rodzynki i koryntki mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. Koty raczej nie zjedzą dużo samych rodzynek, ale mogą je skusić produkty, które je zawierają. Przypadki u kotów są rzadkie i słabo poznane, dlatego przyjmujemy surowszą ocenę.",
     "cs": "Organizace na ochranu koček varují, že hrozny, rozinky a korintky mohou kočkám způsobit selhání ledvin, přičemž kočky s chronickým onemocněním ledvin mohou být ohroženy ještě více. Kočky samy od sebe pravděpodobně mnoho rozinek nesnědí, mohou je ale lákat potraviny, které je obsahují. Případy u koček jsou vzácné a málo prozkoumané, proto používáme přísnější hodnocení.",
     "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe, grožđice i korintsko grožđe kod mačaka mogu uzrokovati zatajenje bubrega, a mačke s kroničnom bolešću bubrega možda su izložene većem riziku. Mačke vjerojatno same neće pojesti mnogo grožđica, ali može ih privući hrana koja ih sadrži. Slučajevi kod mačaka rijetki su i nisu dobro istraženi, pa primjenjujemo strožu razinu.",
-    "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor, russin och korinter kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Katter äter sällan många russin av sig själva, men de kan lockas av mat som innehåller russin. Fall hos katter är ovanliga och inte väl utredda, så vi använder den strängare nivån."
+    "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor, russin och korinter kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Katter äter sällan många russin av sig själva, men de kan lockas av mat som innehåller russin. Fall hos katter är ovanliga och inte väl utredda, så vi använder den strängare nivån.",
+    "da": "Organisationer for kattevelfærd advarer om at vindruer, rosiner og korender kan give nyresvigt hos katte, og katte med kronisk nyresygdom kan have større risiko. Katte spiser næppe mange rosiner af sig selv, men de kan blive fristet af mad der indeholder rosiner. Tilfælde hos katte er sjældne, og man ved ikke meget om dem, så vi bruger det strengere niveau."
   },
   "signs": {
     "en": [
@@ -108,6 +113,9 @@
     ],
     "sv": [
       "Kräkningar, ofta inom ett dygn"
+    ],
+    "da": [
+      "Opkast, ofte inden for et døgn"
     ]
   },
   "what_to_do": {
@@ -122,7 +130,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co zjadł twój kot (rodzynki czy produkt, który je zawiera), ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka snědla (rozinky nebo potravinu, která je obsahovala), kolik a kdy, a uschovejte obal. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka pojela (grožđice ili hranu koja ih sadrži), koliko i kada te sačuvaj ambalažu. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten åt (russin eller mat som innehöll russin), hur mycket och när, och spara förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten åt (russin eller mat som innehöll russin), hur mycket och när, och spara förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har spist (rosiner eller mad med rosiner), hvor meget og hvornår, og gem emballagen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -137,7 +146,8 @@
     "pl": "Rodzynki to nie przekąska dla kota. Trzymaj rodzynki i ciasto z rodzynkami z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Rozinky nejsou svačinka pro kočky. Rozinky i koláč s rozinkami dávej tam, kam kočička nedosáhne, a když nějaké sní, řekni to dospělému.",
     "hr": "Grožđice nisu grickalica za mace. Grožđice i kolač s grožđicama drži daleko od mace, a ako ih maca pojede, reci odrasloj osobi.",
-    "sv": "Russin är inget mellanmål för katter. Håll russin och russinkaka borta från katten, och säg till en vuxen om katten äter några."
+    "sv": "Russin är inget mellanmål för katter. Håll russin och russinkaka borta från katten, och säg till en vuxen om katten äter några.",
+    "da": "Rosiner er ikke en kattesnack. Hold rosiner og rosinkage væk fra katten, og sig det til en voksen hvis den spiser nogle."
   },
   "faq": [
     {
@@ -153,7 +163,8 @@
         "pl": "A co z babeczkami z bakaliami i keksem świątecznym?",
         "cs": "A co mince pies a vánoční koláč?",
         "hr": "Što je s piticama s nadjevom od sušenog voća i božićnim kolačem?",
-        "sv": "Hur är det med julbakelser och fruktkaka?"
+        "sv": "Hur är det med julbakelser och fruktkaka?",
+        "da": "Hvad med mince pies og engelsk julekage?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -167,7 +178,8 @@
         "pl": "PDSA ostrzega, że babeczki z bakaliami (mince pies) i keks świąteczny zawierają rodzynki, sułtanki i koryntki, które są dla zwierząt wysoce toksyczne. Trzymaj je poza zasięgiem kota.",
         "cs": "PDSA varuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Uchovávejte je mimo dosah vaší kočky.",
         "hr": "PDSA upozorava da pitice s nadjevom od sušenog voća (mince pies) i božićni kolač sadrže grožđice, sultanije i korintsko grožđe, koji su za ljubimce vrlo otrovni. Drži ih izvan mačkina dosega.",
-        "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten."
+        "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten.",
+        "da": "PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Hold dem uden for din kats rækkevidde."
       }
     }
   ],
@@ -283,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a418f7b3b951a9cc03054373d69c5348695b4954940ecb24f4210851b7a40fae"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7d43dba7da0f0e16ef3f23c3323b630bc3857a50ad402c1d9aab7ce964d9806"
     }
   }
 }

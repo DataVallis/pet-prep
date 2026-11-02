@@ -6,21 +6,24 @@
     "sl": "Jabolčne pečke",
     "cs": "Jablečná jádra",
     "hr": "Sjemenke jabuke",
-    "sv": "Äppelkärnor"
+    "sv": "Äppelkärnor",
+    "da": "Æblekerner"
   },
   "question": {
     "en": "Can dogs eat apple seeds?",
     "sl": "Ali lahko psi jedo jabolčne pečke?",
     "cs": "Mohou psi jíst jablečná jádra?",
     "hr": "Smiju li psi jesti sjemenke jabuke?",
-    "sv": "Får hundar äta äppelkärnor?"
+    "sv": "Får hundar äta äppelkärnor?",
+    "da": "Må hunde spise æblekerner?"
   },
   "url_slug": {
     "en": "apple-seeds",
     "sl": "jabolcne-pecke",
     "cs": "jablecna-jadra",
     "hr": "sjemenke-jabuke",
-    "sv": "appelkarnor"
+    "sv": "appelkarnor",
+    "da": "aeblekerner"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, jabolčnim pečkam se izogibajte. Vsebujejo cianid, ogrizek in pecelj okoli njih pa se lahko psu zataknejo v grlu. Majhno število pečk verjetno ne bo škodilo, a preden psu daste jabolko, odstranite pečke in ogrizek.",
     "cs": "Ne, jablečným jádrům je lepší se vyhnout. Obsahují kyanid a ohryzek se stopkou, ve kterých jsou, by mohl způsobit dušení. Malé množství jader pravděpodobně neublíží, ale než se o jablko podělíte, odstraňte jádra i ohryzek.",
     "hr": "Ne, sjemenke jabuke treba izbjegavati. Sadrže cijanid, a sjemena kućica i peteljka oko njih mogu izazvati gušenje. Malo sjemenki vjerojatno neće naštetiti, ali prije nego što psu daš jabuku, ukloni sjemenke i sjemenu kućicu.",
-    "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet."
+    "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet.",
+    "da": "Nej, æblekerner bør undgås. De indeholder cyanid, og kernehuset og stilken omkring dem kan sætte sig fast i halsen på hunden. Nogle få kerner gør sandsynligvis ikke skade, men fjern kerner og kernehus før du deler æble med hunden."
   },
   "why": {
     "en": "The ASPCA lists the apple plant as toxic to dogs: its stems, leaves and seeds contain cyanide (from cyanogenic glycosides). AKC says a small number of seeds is unlikely to cause harm, and Pet Poison Helpline says a pet would need to eat massive amounts to be of concern. We follow the stricter view because the seeds contain cyanide and the core can also cause choking or intestinal obstruction.",
     "sl": "ASPCA jablano navaja kot strupeno za pse: njeni peclji, listi in pečke vsebujejo cianid (iz cianogenih glikozidov). AKC pravi, da majhno število pečk verjetno ne bo škodilo, Pet Poison Helpline pa, da bi moral ljubljenček pojesti ogromne količine, da bi bilo zaskrbljujoče. Upoštevamo strožje stališče, ker pečke vsebujejo cianid, ogrizek pa lahko povzroči tudi dušenje ali zaporo črevesja.",
     "cs": "ASPCA uvádí jabloň jako rostlinu jedovatou pro psy: její stonky, listy a semena obsahují kyanid (z kyanogenních glykosidů). Podle AKC malé množství jader pravděpodobně neublíží a podle Pet Poison Helpline by zvíře muselo sníst obrovské množství, aby to bylo znepokojivé. Řídíme se přísnějším pohledem, protože jádra obsahují kyanid a ohryzek může navíc způsobit dušení nebo ucpání střev.",
     "hr": "ASPCA navodi da je jabuka kao biljka otrovna za pse: njezine peteljke, listovi i sjemenke sadrže cijanid (iz cijanogenih glikozida). AKC navodi da malo sjemenki vjerojatno neće naštetiti, a Pet Poison Helpline da bi ljubimac morao pojesti ogromne količine da bi to bilo zabrinjavajuće. Držimo se strožeg stajališta jer sjemenke sadrže cijanid, a sjemena kućica može izazvati i gušenje ili začepljenje crijeva.",
-    "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska vara oroande. Vi följer den strängare hållningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp."
+    "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska vara oroande. Vi följer den strängare hållningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp.",
+    "da": "ASPCA opfører æbleplanten som giftig for hunde: stilke, blade og kerner indeholder cyanid (fra cyanogene glykosider). AKC skriver at nogle få kerner sandsynligvis ikke gør skade, og Pet Poison Helpline skriver at et dyr skal spise meget store mængder, før det giver grund til bekymring. Vi følger den strengere vurdering, fordi kernerne indeholder cyanid og kernehuset også kan sætte sig fast i halsen eller give tarmblokering."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Svårt att andas, flämtning",
       "Chock",
       "Tecken på magbesvär eller stopp"
+    ],
+    "da": [
+      "Teglstensrødt tandkød eller andre teglstensrøde slimhinder",
+      "Udvidede pupiller",
+      "Vejrtrækningsbesvær, hiven efter vejret",
+      "Chok",
+      "Tegn på fordøjelsesproblemer eller blokering"
     ]
   },
   "what_to_do": {
@@ -79,7 +91,8 @@
     "sl": "Če pes poje ogrizek ali pečke, ga opazujte, ali se pojavijo znaki prebavnih težav ali zapore, in se obrnite na veterinarja, če ima težave.",
     "cs": "Pokud váš pes sní ohryzek nebo jádra, sledujte, zda se neobjeví známky zažívacích potíží nebo ucpání, a pokud má pes potíže, obraťte se na veterináře.",
     "hr": "Ako je pas pojeo sjemenu kućicu ili sjemenke jabuke, prati pojavljuju li se znakovi probavnih tegoba ili začepljenja i obrati se veterinaru ako pas ima tegobe.",
-    "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem."
+    "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
+    "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering og kontakte en dyrlæge hvis hunden får problemer."
   },
   "serving": null,
   "child": {
@@ -87,7 +100,8 @@
     "sl": "Jabolčne pečke niso za pse. Odrasel odstrani ogrizek in pečke, preden pes dobi košček jabolka.",
     "cs": "Jablečná jádra nejsou pro psy. Než pes dostane kousek jablka, dospělý z něj vyřízne ohryzek a jádra.",
     "hr": "Sjemenke jabuke nisu za pse. Odrasla osoba izvadi sjemenu kućicu i sjemenke prije nego što tvoj pas dobije komadić jabuke.",
-    "sv": "Äppelkärnor är inte för hundar. En vuxen tar bort kärnhuset och kärnorna innan hunden får en bit äpple."
+    "sv": "Äppelkärnor är inte för hundar. En vuxen tar bort kärnhuset och kärnorna innan hunden får en bit äpple.",
+    "da": "Æblekerner er ikke til hunde. En voksen fjerner kernehuset og kernerne, før din hund får et stykke æble."
   },
   "faq": [
     {
@@ -96,14 +110,16 @@
         "sl": "Pes je pojedel celo jabolko s pečkami. Je to nujen primer?",
         "cs": "Můj pes snědl celé jablko i s jádry. Je to pohotovost?",
         "hr": "Moj je pas pojeo cijelu jabuku sa sjemenkama. Je li to hitan slučaj?",
-        "sv": "Min hund åt ett helt äpple med kärnor. Är det akut?"
+        "sv": "Min hund åt ett helt äpple med kärnor. Är det akut?",
+        "da": "Min hund har spist et helt æble med kerner. Er det akut?"
       },
       "a": {
         "en": "A small number of seeds is unlikely to cause harm. Watch your dog for signs of digestive trouble or blockage from the core, and contact a vet if your dog has problems.",
         "sl": "Majhno število pečk verjetno ne bo škodilo. Psa opazujte, ali se pojavijo znaki prebavnih težav ali zapore zaradi ogrizka, in se obrnite na veterinarja, če ima težave.",
         "cs": "Malé množství jader pravděpodobně neublíží. Sledujte, zda se u psa neobjeví známky zažívacích potíží nebo ucpání způsobeného ohryzkem, a pokud má potíže, obraťte se na veterináře.",
         "hr": "Malo sjemenki vjerojatno neće naštetiti. Prati ima li pas znakove probavnih tegoba ili začepljenja zbog sjemene kućice i obrati se veterinaru ako pas ima tegobe.",
-        "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem."
+        "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
+        "da": "Nogle få kerner gør sandsynligvis ikke skade. Hold øje med tegn på fordøjelsesproblemer eller blokering fra kernehuset, og kontakt en dyrlæge hvis hunden får problemer."
       }
     }
   ],
@@ -190,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "125d3576c0c233db6a2a7da65eb8f08232959a73f1969c50b9d76900e9c8a611"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a7331ffbb78926f8013f266cddafd7ec3590fac1112a3e1185063cabf2198e87"
     }
   }
 }

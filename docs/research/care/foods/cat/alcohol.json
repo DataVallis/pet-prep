@@ -13,7 +13,8 @@
     "pl": "Alkohol",
     "cs": "Alkohol",
     "hr": "Alkohol",
-    "sv": "Alkohol"
+    "sv": "Alkohol",
+    "da": "Alkohol"
   },
   "question": {
     "en": "Can cats drink alcohol?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą pić alkohol?",
     "cs": "Mohou kočky pít alkohol?",
     "hr": "Smiju li mačke piti alkohol?",
-    "sv": "Får katter dricka alkohol?"
+    "sv": "Får katter dricka alkohol?",
+    "da": "Må katte drikke alkohol?"
   },
   "url_slug": {
     "en": "alcohol",
@@ -41,7 +43,8 @@
     "pl": "alkohol",
     "cs": "alkohol",
     "hr": "alkohol",
-    "sv": "alkohol"
+    "sv": "alkohol",
+    "da": "alkohol"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Nawet odrobina alkoholu może być dla kota skrajnie toksyczna, a koty są na niego szczególnie wrażliwe. Trzymaj napoje, potrawy z alkoholem i produkty takie jak żel do dezynfekcji rąk z dala od kota i zadzwoń do weterynarza, jeśli kot połknie choć trochę.",
     "cs": "Ne. I nepatrné množství alkoholu může být pro kočky mimořádně toxické a kočky jsou na něj obzvlášť citlivé. Nápoje, jídla s alkoholem a výrobky, jako je dezinfekce na ruce, uchovávejte mimo dosah kočky, a pokud kočka nějaký alkohol spolkne, zavolejte veterináři.",
     "hr": "Ne. Već i vrlo mala količina alkohola može biti iznimno otrovna za mačke, a mačke su na njega posebno osjetljive. Pića, hranu s alkoholom i proizvode poput sredstva za dezinfekciju ruku drži podalje od mačke, a ako mačka išta od toga proguta, nazovi veterinara.",
-    "sv": "Nej. Redan en mycket liten mängd alkohol kan vara extremt giftig för katter, och katter är särskilt känsliga. Håll drycker, mat som innehåller alkohol och produkter som handsprit borta från katten, och ring veterinären om katten har fått i sig något."
+    "sv": "Nej. Redan en mycket liten mängd alkohol kan vara extremt giftig för katter, och katter är särskilt känsliga. Håll drycker, mat som innehåller alkohol och produkter som handsprit borta från katten, och ring veterinären om katten har fått i sig något.",
+    "da": "Nej. Selv en meget lille mængde alkohol kan være ekstremt giftig for katte, og katte er særligt følsomme over for det. Hold drikkevarer, mad med alkohol og produkter som håndsprit væk fra din kat, og ring til din dyrlæge hvis din kat sluger noget af det."
   },
   "why": {
     "en": "All animals can get alcohol poisoning, but cats are especially sensitive. Alcohol is not only in drinks: it can also be in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough. Signs usually appear quickly after a cat swallows it.",
@@ -70,7 +74,8 @@
     "pl": "Każde zwierzę może zatruć się alkoholem, ale koty są szczególnie wrażliwe. Alkohol jest nie tylko w napojach: może się też znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym. Objawy zwykle pojawiają się szybko po połknięciu.",
     "cs": "Otravu alkoholem mohou dostat všechna zvířata, kočky jsou však obzvlášť citlivé. Alkohol není jen v nápojích: může být také v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě. Příznaky se obvykle objeví brzy poté, co ho kočka spolkne.",
     "hr": "Otrovanje alkoholom može zadesiti sve životinje, ali mačke su posebno osjetljive. Alkohol nije samo u pićima: može ga biti i u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta te u sirovom tijestu za kruh koje se diže. Znakovi se obično pojave brzo nakon što ga mačka proguta.",
-    "sv": "Alla djur kan få alkoholförgiftning, men katter är särskilt känsliga. Alkohol finns inte bara i drycker: den kan också finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg. Symtomen brukar komma snabbt efter att katten har fått i sig alkohol."
+    "sv": "Alla djur kan få alkoholförgiftning, men katter är särskilt känsliga. Alkohol finns inte bara i drycker: den kan också finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg. Symtomen brukar komma snabbt efter att katten har fått i sig alkohol.",
+    "da": "Alle dyr kan få alkoholforgiftning, men katte er særligt følsomme. Alkohol findes ikke kun i drikkevarer: Det kan også være i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej. Symptomerne viser sig som regel hurtigt efter at en kat har slugt det."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Svårt att gå, ostadig gång",
       "Långsam andning",
       "I svåra fall: kramper eller kollaps"
+    ],
+    "da": [
+      "Usædvanlig døsighed eller sløvhed",
+      "Besvær med at gå, vaklende gang",
+      "Langsom vejrtrækning",
+      "I alvorlige tilfælde: kramper eller kollaps"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot, ile i kiedy, i zachowaj butelkę lub opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla, kolik a kdy, a láhev nebo obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala, koliko i kada te sačuvaj bocu ili ambalažu. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten fick i sig, hur mycket och när, och spara flaskan eller förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten fick i sig, hur mycket och när, och spara flaskan eller förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt, hvor meget og hvornår, og gem flasken eller emballagen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "pl": "Napoje dorosłych nigdy nie są dla kotów. Jeśli kotek poliże szklankę albo rozlany napój, od razu powiedz dorosłemu.",
     "cs": "Nápoje pro dospělé nejsou pro kočky nikdy. Když kočička olízne skleničku nebo rozlité pití, hned to řekni dospělému.",
     "hr": "Pića za odrasle nikad nisu za mace. Ako maca poliže čašu ili proliveno piće, odmah reci odrasloj osobi.",
-    "sv": "Vuxnas drycker är aldrig för katter. Om katten slickar på ett glas eller en utspilld dryck, säg till en vuxen direkt."
+    "sv": "Vuxnas drycker är aldrig för katter. Om katten slickar på ett glas eller en utspilld dryck, säg till en vuxen direkt.",
+    "da": "Voksnes drinks er aldrig for katte. Hvis din kat slikker af et glas eller af noget der er spildt, så sig det til en voksen med det samme."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "pl": "Gdzie jeszcze może kryć się alkohol?",
         "cs": "Kde všude se může alkohol skrývat?",
         "hr": "Gdje se još može skrivati alkohol?",
-        "sv": "Var mer kan alkohol gömma sig?"
+        "sv": "Var mer kan alkohol gömma sig?",
+        "da": "Hvor kan alkohol ellers gemme sig?"
       },
       "a": {
         "en": "Besides drinks, alcohol can be found in liqueur sweets, hand sanitiser, mouthwash and raw, rising bread dough.",
@@ -203,7 +217,8 @@
         "pl": "Oprócz napojów alkohol może się znajdować w cukierkach z likierem, żelu do dezynfekcji rąk, płynie do płukania ust oraz w surowym, rosnącym cieście drożdżowym.",
         "cs": "Kromě nápojů může být alkohol v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě.",
         "hr": "Osim u pićima, alkohola može biti u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta i sirovom tijestu za kruh koje se diže.",
-        "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg."
+        "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg.",
+        "da": "Ud over i drikkevarer kan alkohol findes i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej."
       }
     }
   ],
@@ -336,6 +351,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c42971545ea9e1176af03392f7fd329662d13bfa470d4cb8e4d79da264d62040"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6388eaea55046f2614c23b6886ed205fac8e5892fab50ddcee04933b2ed9b88c"
     }
   }
 }

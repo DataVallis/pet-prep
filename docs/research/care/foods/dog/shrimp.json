@@ -13,7 +13,8 @@
     "pl": "Krewetki",
     "cs": "Krevety",
     "hr": "Kozice",
-    "sv": "Räkor"
+    "sv": "Räkor",
+    "da": "Rejer"
   },
   "question": {
     "en": "Can dogs eat shrimp?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść krewetki?",
     "cs": "Mohou psi jíst krevety?",
     "hr": "Smiju li psi jesti kozice?",
-    "sv": "Får hundar äta räkor?"
+    "sv": "Får hundar äta räkor?",
+    "da": "Må hunde spise rejer?"
   },
   "url_slug": {
     "en": "shrimp",
@@ -41,7 +43,8 @@
     "pl": "krewetki",
     "cs": "krevety",
     "hr": "kozice",
-    "sv": "rakor"
+    "sv": "rakor",
+    "da": "rejer"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, kilka kawałków zwykłych, dobrze ugotowanych krewetek jest dla psów w porządku. Najpierw usuń pancerz, głowę, odnóża i ogon. Surowe krewetki mogą przenosić szkodliwe zarazki, a krewetki smażone, panierowane lub przyprawione się nie nadają.",
     "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou.",
     "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne.",
-    "sv": "Ja, några bitar naturella, helt tillagade räkor går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte."
+    "sv": "Ja, några bitar naturella, helt tillagade räkor går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte.",
+    "da": "Ja, nogle få stykker almindelige, gennemtilberedte rejer er fine til hunde. Fjern først skal, hoved, ben og hale. Rå rejer kan indeholde skadelige smitstoffer, og friturestegte, panerede eller krydrede rejer er ikke egnede."
   },
   "why": {
     "en": "Raw shellfish contain harmful pathogens that cooking avoids. Shrimp shells are a choking hazard and can cause blockages. Fried or breaded shrimp add unnecessary fats and oils. Shrimp are low in fat and calories but high in cholesterol, so moderation is key.",
@@ -70,7 +74,8 @@
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których pozwala uniknąć gotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
     "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
     "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uklanja. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
-    "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta."
+    "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta.",
+    "da": "Rå skaldyr indeholder skadelige smitstoffer, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Przestań dawać krewetki, jeśli twój pies ma dolegliwości żołądkowe lub wydaje się chory, i zadzwoń do weterynarza, jeśli objawy się nasilą. Zadzwoń też, jeśli pies połknął pancerze i wygląda, jakby się dławił.",
     "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí.",
     "hr": "Prestani davati kozice ako pas pokazuje nelagodu u trbuhu ili se čini da mu nije dobro i nazovi veterinara ako se znakovi pogoršaju. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši.",
-    "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden svalt skal och verkar ha satt något i halsen."
+    "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden svalt skal och verkar ha satt något i halsen.",
+    "da": "Stop med at give rejer hvis din hund får ubehag i maven eller virker utilpas, og kontakt din dyrlæge hvis symptomerne bliver værre. Kontakt også din dyrlæge hvis hunden har slugt skaller og ser ud til at være ved at blive kvalt."
   },
   "serving": {
     "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -99,7 +105,8 @@
     "pl": "Kilka kawałków dobrze ugotowanych (najlepiej na parze), zwykłych, bez pancerza, głowy, odnóży i ogona; nie smażonych, panierowanych ani przyprawionych.",
     "cs": "Pár kousků, důkladně tepelně upravených (nejlépe v páře), bez přísad, bez krunýře, hlavy, nožiček a ocásku; ne smažené, obalované ani kořeněné.",
     "hr": "Nekoliko komada, potpuno termički obrađenih (najbolje kuhanih na pari), bez dodataka, bez oklopa, glave, nožica i repa; ne pržene, pohane ni začinjene.",
-    "sv": "Några bitar, helt tillagade (helst ångkokta), naturella, utan skal, huvud, ben och stjärt; inte friterade, panerade eller kryddade."
+    "sv": "Några bitar, helt tillagade (helst ångkokta), naturella, utan skal, huvud, ben och stjärt; inte friterade, panerade eller kryddade.",
+    "da": "Nogle få stykker, gennemtilberedte (helst dampede), uden tilsætning og med skal, hoved, ben og hale fjernet; ikke friturestegte, panerede eller krydrede."
   },
   "child": {
     "en": "A dog may have a couple of cooked, peeled shrimp. The shells and tails are not for dogs.",
@@ -113,7 +120,8 @@
     "pl": "Pies może dostać jedną czy dwie ugotowane, obrane krewetki. Pancerzyki i ogonki nie są dla psów.",
     "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky pro psy nejsou.",
     "hr": "Pas smije pojesti jednu ili dvije kuhane, očišćene kozice. Oklopi i repovi nisu za pse.",
-    "sv": "En hund får äta ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar."
+    "sv": "En hund får äta ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar.",
+    "da": "En hund må gerne få et par kogte, pillede rejer. Skallerne og halerne er ikke til hunde."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść ogony krewetek?",
         "cs": "Mohou psi jíst ocásky krevet?",
         "hr": "Smiju li psi jesti repove kozica?",
-        "sv": "Får hundar äta räkstjärtar?"
+        "sv": "Får hundar äta räkstjärtar?",
+        "da": "Må hunde spise rejehaler?"
       },
       "a": {
         "en": "No. Remove the shell, head, legs and tail, as shells are a choking hazard and can cause blockages.",
@@ -143,7 +152,8 @@
         "pl": "Nie. Usuń pancerz, głowę, odnóża i ogon, bo pancerze grożą zadławieniem i mogą powodować niedrożność.",
         "cs": "Ne. Odstraňte krunýř, hlavu, nožičky i ocásek, protože krunýře mohou způsobit dušení a ucpání střev.",
         "hr": "Ne smiju. Ukloni oklop, glavu, nožice i rep jer oklop može izazvati gušenje i začepljenje.",
-        "sv": "Nej. Ta bort skal, huvud, ben och stjärt, eftersom skalen kan orsaka kvävning och tarmstopp."
+        "sv": "Nej. Ta bort skal, huvud, ben och stjärt, eftersom skalen kan orsaka kvävning och tarmstopp.",
+        "da": "Nej. Fjern skal, hoved, ben og hale, da skaller kan sætte sig fast i halsen og give blokeringer."
       }
     }
   ],
@@ -258,6 +268,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2155d263cf5bdccfeacd5df31249605805bf1f5683be91843bc3917c5de05e7b"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4702f09109b21832f4182c66f9ce5bb153f69b6b1e7d74bec10fae4fad653339"
     }
   }
 }

@@ -13,7 +13,8 @@
     "pl": "Orzechy makadamia",
     "cs": "Makadamové ořechy",
     "hr": "Makadamija",
-    "sv": "Macadamianötter"
+    "sv": "Macadamianötter",
+    "da": "Macadamianødder"
   },
   "question": {
     "en": "Can cats eat macadamia nuts?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść orzechy makadamia?",
     "cs": "Mohou kočky jíst makadamové ořechy?",
     "hr": "Smiju li mačke jesti makadamiju?",
-    "sv": "Får katter äta macadamianötter?"
+    "sv": "Får katter äta macadamianötter?",
+    "da": "Må katte spise macadamianødder?"
   },
   "url_slug": {
     "en": "macadamia-nuts",
@@ -41,7 +43,8 @@
     "pl": "orzechy-makadamia",
     "cs": "makadamove-orechy",
     "hr": "makadamija",
-    "sv": "macadamianotter"
+    "sv": "macadamianotter",
+    "da": "macadamianoedder"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Orzechy makadamia są bardzo tłuste, a według VCA także toksyczne i mogą wywołać u kotów chorobę. Trzymaj je poza zasięgiem kota i skontaktuj się z weterynarzem, jeśli kot jakieś zje.",
     "cs": "Ne. Makadamové ořechy jsou velmi tučné a podle VCA jsou navíc toxické a mohou kočkám způsobit onemocnění. Uchovávejte je mimo dosah kočky, a pokud nějaké sní, obraťte se na veterináře.",
     "hr": "Ne. Makadamija je vrlo masna, a prema VCA-u i otrovna te kod mačaka može izazvati bolest. Drži je izvan mačkina dosega i obrati se veterinaru ako je mačka pojede makar malo.",
-    "sv": "Nej. Macadamianötter är mycket feta, och enligt VCA är de dessutom giftiga och kan göra katter sjuka. Håll dem utom räckhåll för katten och kontakta veterinären om katten äter några."
+    "sv": "Nej. Macadamianötter är mycket feta, och enligt VCA är de dessutom giftiga och kan göra katter sjuka. Håll dem utom räckhåll för katten och kontakta veterinären om katten äter några.",
+    "da": "Nej. Macadamianødder er meget fede, og ifølge VCA er de også giftige og kan gøre katte syge. Hold dem uden for din kats rækkevidde, og kontakt din dyrlæge hvis din kat spiser nogen."
   },
   "why": {
     "en": "Cats Protection lists macadamia among nuts whose high oil and fat content can make cats unwell. VCA says macadamia nuts are very fatty, potentially causing pancreatitis, and also toxic, causing illness in cats. Detailed descriptions of macadamia poisoning mostly come from dogs, but we use the stricter level for cats.",
@@ -70,7 +74,8 @@
     "pl": "Cats Protection wymienia makadamię wśród orzechów, które przez dużą zawartość olejów i tłuszczu mogą zaszkodzić kotom. Według VCA orzechy makadamia są bardzo tłuste, co może wywołać zapalenie trzustki, a do tego są toksyczne i wywołują u kotów chorobę. Szczegółowe opisy zatrucia orzechami makadamia dotyczą głównie psów, ale w przypadku kotów przyjmujemy surowszą ocenę.",
     "cs": "Cats Protection uvádí makadamové ořechy mezi ořechy, jejichž vysoký obsah oleje a tuku může kočkám uškodit. Podle VCA jsou makadamové ořechy velmi tučné, což může vést k zánětu slinivky břišní, a navíc toxické, takže kočkám způsobují onemocnění. Podrobné popisy otravy makadamovými ořechy se většinou týkají psů, u koček však používáme přísnější hodnocení.",
     "hr": "Cats Protection navodi makadamiju među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA navodi da je makadamija vrlo masna, pa može izazvati upalu gušterače, ali i da je otrovna te kod mačaka može izazvati bolest. Detaljni opisi otrovanja makadamijom uglavnom se odnose na pse, ali za mačke primjenjujemo strožu razinu.",
-    "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att de kan göra katter dåliga. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga och kan göra katter sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter."
+    "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att de kan göra katter dåliga. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga och kan göra katter sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter.",
+    "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpasse. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Svaghet",
       "Skakningar",
       "Överhettning (hög kroppstemperatur)"
+    ],
+    "da": [
+      "Svaghed",
+      "Rysten",
+      "Overophedning (høj kropstemperatur)"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot zjadł orzechy makadamia. Zapisz, ile ich zjadł i kiedy, i zachowaj opakowanie. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ako je mačka pojela makadamiju. Zapiši koliko je plodova pojela i kada te sačuvaj ambalažu. Ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Kontakta veterinären direkt om katten har ätit macadamianötter. Notera hur många den åt och när, och spara förpackningen. Försök inte få katten att kräkas hemma."
+    "sv": "Kontakta veterinären direkt om katten har ätit macadamianötter. Notera hur många den åt och när, och spara förpackningen. Försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge hvis din kat har spist macadamianødder. Skriv ned hvor mange den har spist og hvornår, og gem emballagen. Prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "pl": "Orzechy makadamia nie są dla kotów. Trzymaj miseczkę z orzechami poza zasięgiem kotka i powiedz dorosłemu, jeśli kotek jakieś zje.",
     "cs": "Makadamové ořechy nejsou pro kočky. Misku s ořechy dej tam, kam kočička nedosáhne, a když nějaký sní, řekni to dospělému.",
     "hr": "Makadamija nije za mace. Zdjelicu s orašastim plodovima drži tamo gdje je maca ne može dohvatiti, a ako maca ipak pojede koji, reci odrasloj osobi.",
-    "sv": "Macadamianötter är inte för katter. Ställ nötskålen där katten inte når den och säg till en vuxen om katten äter några."
+    "sv": "Macadamianötter är inte för katter. Ställ nötskålen där katten inte når den och säg till en vuxen om katten äter några.",
+    "da": "Macadamianødder er ikke for katte. Stil nøddeskålen et sted hvor katten ikke kan nå den, og sig det til en voksen hvis katten spiser nogle."
   },
   "faq": [
     {
@@ -177,7 +189,8 @@
         "pl": "Czy orzechy makadamia są gorsze od innych orzechów?",
         "cs": "Jsou makadamové ořechy horší než jiné ořechy?",
         "hr": "Je li makadamija opasnija od drugih orašastih plodova?",
-        "sv": "Är macadamianötter värre än andra nötter?"
+        "sv": "Är macadamianötter värre än andra nötter?",
+        "da": "Er macadamianødder værre end andre nødder?"
       },
       "a": {
         "en": "Yes. Most nuts are very fatty, but VCA says macadamia nuts are also toxic and can cause illness in cats, such as weakness, tremors and overheating.",
@@ -191,7 +204,8 @@
         "pl": "Tak. Większość orzechów jest bardzo tłusta, ale według VCA orzechy makadamia są też toksyczne i mogą wywołać u kotów chorobę z objawami takimi jak osłabienie, drżenie mięśni i przegrzanie.",
         "cs": "Ano. Většina ořechů je velmi tučná, ale makadamové ořechy jsou podle VCA navíc toxické a mohou kočkám způsobit potíže, jako je slabost, třes a přehřátí.",
         "hr": "Jest. Većina orašastih plodova vrlo je masna, ali prema VCA-u makadamija je i otrovna te kod mačaka može izazvati bolest, primjerice slabost, drhtanje i pregrijavanje.",
-        "sv": "Ja. De flesta nötter är mycket feta, men enligt VCA är macadamianötter dessutom giftiga och kan göra katter sjuka, till exempel med svaghet, skakningar och överhettning."
+        "sv": "Ja. De flesta nötter är mycket feta, men enligt VCA är macadamianötter dessutom giftiga och kan göra katter sjuka, till exempel med svaghet, skakningar och överhettning.",
+        "da": "Ja. De fleste nødder er meget fede, men ifølge VCA er macadamianødder også giftige og kan gøre katte syge med for eksempel svaghed, rysten og overophedning."
       }
     }
   ],
@@ -296,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5632cfde64fbe30e18c7332289020426a9497023e00e1eb2ea100a6292f78a64"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3bc214ef49e2183f5dcef26a696c4c0701046966b5d6109c11e2c4ed008c88d5"
     }
   }
 }

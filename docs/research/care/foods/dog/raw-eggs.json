@@ -13,7 +13,8 @@
     "pl": "Surowe jajka",
     "cs": "Syrová vejce",
     "hr": "Sirova jaja",
-    "sv": "Råa ägg"
+    "sv": "Råa ägg",
+    "da": "Rå æg"
   },
   "question": {
     "en": "Can dogs eat raw eggs?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść surowe jajka?",
     "cs": "Mohou psi jíst syrová vejce?",
     "hr": "Smiju li psi jesti sirova jaja?",
-    "sv": "Får hundar äta råa ägg?"
+    "sv": "Får hundar äta råa ägg?",
+    "da": "Må hunde spise rå æg?"
   },
   "url_slug": {
     "en": "raw-eggs",
@@ -41,7 +43,8 @@
     "pl": "surowe-jajka",
     "cs": "syrova-vejce",
     "hr": "sirova-jaja",
-    "sv": "raa-agg"
+    "sv": "raa-agg",
+    "da": "raa-aeg"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Lepiej nie. Surowe jajka mogą przenosić bakterie, takie jak Salmonella, które mogą zaszkodzić psom i ludziom wokół nich, a surowe białko jaja może zaburzać przyswajanie jednej z witamin. Zanim podzielisz się jajkami, dobrze je ugotuj.",
     "cs": "Ne, raději ne. Syrová vejce mohou obsahovat bakterie, například salmonelu, které mohou uškodit psům i lidem kolem nich, a syrový bílek může blokovat jeden z vitaminů. Vejce před podáním důkladně tepelně upravte.",
     "hr": "Ne, bolje ne. Sirova jaja mogu sadržavati bakterije poput salmonele, koje mogu naštetiti psima i ljudima oko njih, a sirovi bjelanjak može ometati iskorištavanje jednog vitamina. Prije nego što ih podijeliš sa psom, jaja potpuno termički obradi.",
-    "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen helt innan du delar med dig."
+    "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen helt innan du delar med dig.",
+    "da": "Nej, det er bedst at lade være. Rå æg kan indeholde bakterier som salmonella, der kan skade både hunde og menneskerne omkring dem, og rå æggehvide kan påvirke optagelsen af et vitamin. Tilbered æggene helt før du deler dem."
   },
   "why": {
     "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
@@ -70,7 +74,8 @@
     "pl": "Surowe jajka mogą zawierać bakterie Salmonella i E. coli, szkodliwe zarówno dla zwierząt, jak i ludzi. Surowe białko jaja zawiera awidynę, która blokuje witaminę biotynę; niedobór zdarza się rzadko, ale może wpływać na skórę i sierść. Większość weterynarzy zaleca dobrze ugotować jajka przed podaniem ich psu.",
     "cs": "Syrová vejce mohou obsahovat salmonelu a E. coli, které škodí zvířatům i lidem. Syrový bílek obsahuje avidin, který blokuje vitamin biotin; jeho nedostatek je vzácný, může se ale projevit na kůži a srsti. Většina veterinářů doporučuje vejce před podáním psovi důkladně tepelně upravit.",
     "hr": "Sirova jaja mogu sadržavati salmonelu i E. coli, štetne i za ljubimce i za ljude. Sirovi bjelanjak sadrži avidin, koji blokira vitamin biotin; nedostatak je rijedak, ali može utjecati na kožu i dlaku. Većina veterinara preporučuje da se jaja potpuno termički obrade prije nego što se daju psu.",
-    "sv": "Råa ägg kan innehålla salmonella och E. coli, som är skadliga för både djur och människor. Rå äggvita innehåller avidin, som blockerar vitaminet biotin; brist är ovanlig men kan påverka hud och päls. De flesta veterinärer rekommenderar att ägg tillagas helt innan hunden får dem."
+    "sv": "Råa ägg kan innehålla salmonella och E. coli, som är skadliga för både djur och människor. Rå äggvita innehåller avidin, som blockerar vitaminet biotin; brist är ovanlig men kan påverka hud och päls. De flesta veterinärer rekommenderar att ägg tillagas helt innan hunden får dem.",
+    "da": "Rå æg kan indeholde salmonella og E. coli, som er skadelige for både kæledyr og mennesker. Rå æggehvide indeholder avidin, som blokerer vitaminet biotin; mangel er sjælden, men den kan påvirke hud og pels. De fleste dyrlæger anbefaler at tilberede æg helt før man giver dem til en hund."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Diarré",
       "Orkeslöshet eller dålig aptit",
       "Obehag i magen"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Lavt energiniveau eller nedsat appetit",
+      "Ubehag i maven"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Jeśli twój pies zlizał surowe jajko, przez kolejne dni obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują. Umyj ręce i dokładnie posprzątaj.",
     "cs": "Pokud váš pes olízal syrové vejce, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo není malátný, a pokud je zvracení nebo průjem silný nebo neustává, zavolejte veterináři. Umyjte si ruce a vše důkladně ukliďte.",
     "hr": "Ako je tvoj pas polizao sirovo jaje, sljedećih dana prati pojavljuju li se povraćanje, proljev ili manjak energije i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju. Operi ruke i dobro očisti prostor.",
-    "sv": "Om hunden slickat i sig ett rått ägg, håll utkik efter kräkningar, diarré eller orkeslöshet de närmaste dagarna och ring veterinären om kräkningarna eller diarrén är svåra eller inte går över. Tvätta händerna och städa noga."
+    "sv": "Om hunden slickat i sig ett rått ägg, håll utkik efter kräkningar, diarré eller orkeslöshet de närmaste dagarna och ring veterinären om kräkningarna eller diarrén är svåra eller inte går över. Tvätta händerna och städa noga.",
+    "da": "Hvis din hund har slikket et råt æg op, så hold øje med opkast, diarré eller lavt energiniveau de næste dage, og kontakt din dyrlæge hvis opkastet eller diarréen er voldsom eller ikke holder op. Vask hænder, og gør grundigt rent."
   },
   "serving": {
     "en": "Cook the egg fully (hard-boiled or scrambled), plain, without oil, butter, salt or seasonings.",
@@ -172,7 +184,8 @@
     "pl": "Podawaj jajko dobrze ścięte (na twardo lub jako jajecznicę), zwykłe, bez oleju, masła, soli i przypraw.",
     "cs": "Vejce důkladně tepelně upravte (natvrdo uvařené nebo míchané), bez přísad, bez oleje, másla, soli a koření.",
     "hr": "Jaje potpuno termički obradi (tvrdo kuhano ili kajgana), bez ulja, maslaca, soli i začina.",
-    "sv": "Tillaga ägget helt (hårdkokt eller som äggröra), naturellt, utan olja, smör, salt eller kryddor."
+    "sv": "Tillaga ägget helt (hårdkokt eller som äggröra), naturellt, utan olja, smör, salt eller kryddor.",
+    "da": "Tilbered ægget helt (hårdkogt eller røræg), og server det uden olie, smør, salt eller krydderier."
   },
   "child": {
     "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
@@ -186,7 +199,8 @@
     "pl": "Psy mogą jeść tylko ugotowane jajka. Surowe jajka mogą mieć zarazki, przez które psy i ludzie źle się czują.",
     "cs": "Psi smějí jen vajíčka, která jsou dobře uvařená. Na syrových vajíčkách můžou být bacily, ze kterých je psům i lidem zle.",
     "hr": "Psi smiju jesti samo kuhana jaja. Sirova jaja mogu imati klice od kojih se psi i ljudi razbole.",
-    "sv": "Hundar ska bara få kokta ägg. Råa ägg kan ha bakterier som gör både hundar och människor sjuka."
+    "sv": "Hundar ska bara få kokta ägg. Råa ägg kan ha bakterier som gör både hundar och människor sjuka.",
+    "da": "Hunde må kun få kogte æg. Rå æg kan have bakterier der gør både hunde og mennesker syge."
   },
   "faq": [
     {
@@ -202,7 +216,8 @@
         "pl": "Czy surowe jajko nie jest dobre na lśniącą sierść?",
         "cs": "Není syrové vejce dobré na lesklou srst?",
         "hr": "Zar sirovo jaje nije dobro za sjajnu dlaku?",
-        "sv": "Är inte rått ägg bra för en blank päls?"
+        "sv": "Är inte rått ägg bra för en blank päls?",
+        "da": "Er rå æg ikke godt for en blank pels?"
       },
       "a": {
         "en": "Not reliably: raw egg white can block biotin absorption, which can lead to skin and coat problems.",
@@ -216,7 +231,8 @@
         "pl": "Nie da się na tym polegać: surowe białko jaja może blokować wchłanianie biotyny, co może prowadzić do problemów ze skórą i sierścią.",
         "cs": "Na to se nedá spolehnout: syrový bílek může blokovat vstřebávání biotinu, což může vést k potížím s kůží a srstí.",
         "hr": "Ne pouzdano: sirovi bjelanjak može blokirati apsorpciju biotina, što može dovesti do problema s kožom i dlakom.",
-        "sv": "Inte säkert: rå äggvita kan blockera upptaget av biotin, vilket kan leda till problem med hud och päls."
+        "sv": "Inte säkert: rå äggvita kan blockera upptaget av biotin, vilket kan leda till problem med hud och päls.",
+        "da": "Det kan man ikke regne med: Rå æggehvide kan blokere optagelsen af biotin, hvilket kan give problemer med hud og pels."
       }
     }
   ],
@@ -336,6 +352,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3193da36d2bd13e55f2a4ecd70fe68887a93e66e586f837200a6c16cfba9ca95"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "520c4a280a84eec6afbe5fe7fab0f28b8663a1368134d02f97dde75cf4157748"
     }
   }
 }

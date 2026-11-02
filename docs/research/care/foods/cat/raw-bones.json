@@ -13,7 +13,8 @@
     "pl": "Surowe kości",
     "cs": "Syrové kosti",
     "hr": "Sirove kosti",
-    "sv": "Råa ben"
+    "sv": "Råa ben",
+    "da": "Rå knogler"
   },
   "question": {
     "en": "Can cats eat raw bones?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść surowe kości?",
     "cs": "Mohou kočky jíst syrové kosti?",
     "hr": "Smiju li mačke jesti sirove kosti?",
-    "sv": "Får katter äta råa ben?"
+    "sv": "Får katter äta råa ben?",
+    "da": "Må katte spise rå knogler?"
   },
   "url_slug": {
     "en": "raw-bones",
@@ -41,7 +43,8 @@
     "pl": "surowe-kosci",
     "cs": "syrove-kosti",
     "hr": "sirove-kosti",
-    "sv": "raa-ben"
+    "sv": "raa-ben",
+    "da": "raa-knogler"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Lepiej nie. Cats Protection radzi unikać surowych kości, bo zwiększają ryzyko zadławienia lub niedrożności żołądka. Kości mogą też zranić przewód pokarmowy kota, a surowe mięso może przenosić szkodliwe bakterie i pasożyty.",
     "cs": "Raději ne. Cats Protection doporučuje se syrovým kostem vyhnout, protože zvyšují riziko udušení nebo ucpání žaludku. Kosti mohou kočce také poranit trávicí trakt a syrové maso může přenášet škodlivé bakterie a parazity.",
     "hr": "Bolje ne. Cats Protection savjetuje izbjegavati sirove kosti jer povećavaju rizik od gušenja ili začepljenja želuca. Kosti mogu i ozlijediti mačji probavni sustav, a sirovo meso može sadržavati štetne bakterije i parazite.",
-    "sv": "Helst inte. Cats Protection avråder från råa ben eftersom de ökar risken för kvävning eller stopp i magen. Ben kan också skada kattens tarm, och rått kött kan bära på skadliga bakterier och parasiter."
+    "sv": "Helst inte. Cats Protection avråder från råa ben eftersom de ökar risken för kvävning eller stopp i magen. Ben kan också skada kattens tarm, och rått kött kan bära på skadliga bakterier och parasiter.",
+    "da": "Helst ikke. Cats Protection fraråder rå knogler fordi de øger risikoen for kvælning eller en blokering i maven. Knogler kan også skade kattens tarm, og råt kød kan indeholde skadelige bakterier og parasitter."
   },
   "why": {
     "en": "Swallowed bones can injure or block the gut, which can be serious and may need surgery. Raw meat attached to bones may also contain harmful bacteria and parasites.",
@@ -70,7 +74,8 @@
     "pl": "Połknięte kości mogą zranić lub zablokować przewód pokarmowy, co bywa poważne i może wymagać operacji. Surowe mięso na kościach może też zawierać szkodliwe bakterie i pasożyty.",
     "cs": "Spolknuté kosti mohou poranit nebo ucpat trávicí trakt, což může být vážné a může si to vyžádat operaci. Syrové maso na kostech může také obsahovat škodlivé bakterie a parazity.",
     "hr": "Progutane kosti mogu ozlijediti ili začepiti probavni sustav, što može biti ozbiljno i zahtijevati operaciju. Sirovo meso na kostima može sadržavati i štetne bakterije i parazite.",
-    "sv": "Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation. Rått kött som sitter kvar på benen kan också innehålla skadliga bakterier och parasiter."
+    "sv": "Ben som katten sväljer kan skada eller blockera tarmen, vilket kan vara allvarligt och kräva operation. Rått kött som sitter kvar på benen kan också innehålla skadliga bakterier och parasiter.",
+    "da": "Slugte knogler kan skade eller blokere mave-tarm-kanalen, hvilket kan være alvorligt og kræve en operation. Råt kød på knoglerne kan også indeholde skadelige bakterier og parasitter."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Kvävning",
       "Kräkningar",
       "Ont i magen (gömmer sig, morrar, vill inte bli berörd)"
+    ],
+    "da": [
+      "Kvælningstegn (noget sidder fast i halsen)",
+      "Opkast",
+      "Mavesmerter (gemmer sig, knurrer, vil ikke røres ved)"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął kość, dławi się lub wymiotuje. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma."
+    "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge hvis din kat har slugt en knogle, er ved at blive kvalt eller kaster op. Skriv ned hvilken slags knogle det var og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
     "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe.",
-    "sv": "Ben kan fastna i kattens hals eller mage. Lägg inga ben i kattens skål och säg till en vuxen om katten hittar ett."
+    "sv": "Ben kan fastna i kattens hals eller mage. Lägg inga ben i kattens skål och säg till en vuxen om katten hittar ett.",
+    "da": "Knogler kan sætte sig fast i en kats hals eller mave. Hold knogler væk fra kattens skål, og sig det til en voksen hvis katten finder en."
   },
   "faq": [],
   "sources": [
@@ -265,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c8e268565537ba8004cbfd6721ad1ea490fd4a62197e5bd4f9361e9370379548"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ddb4fccc2f7b66269901aa2a33b03cfc0e0c5a2a71d4091c6e358c0cd215381a"
     }
   }
 }

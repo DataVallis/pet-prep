@@ -13,7 +13,8 @@
     "pl": "Wątróbka",
     "cs": "Játra",
     "hr": "Jetra",
-    "sv": "Lever"
+    "sv": "Lever",
+    "da": "Lever"
   },
   "question": {
     "en": "Can cats eat liver?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść wątróbkę?",
     "cs": "Mohou kočky jíst játra?",
     "hr": "Smiju li mačke jesti jetru?",
-    "sv": "Får katter äta lever?"
+    "sv": "Får katter äta lever?",
+    "da": "Må katte spise lever?"
   },
   "url_slug": {
     "en": "liver",
@@ -41,7 +43,8 @@
     "pl": "watrobka",
     "cs": "jatra",
     "hr": "jetra",
-    "sv": "lever"
+    "sv": "lever",
+    "da": "lever"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie jako domowy smakołyk. Wątróbka zawiera bardzo dużo witaminy A, a u kotów karmionych surową wątróbką lub dietą bogatą w wątróbkę może dojść do zatrucia witaminą A. Wątróbka w pełnoporcjowej, zbilansowanej karmie dla kotów jest w porządku.",
     "cs": "Jako domácí pamlsek ne. Játra jsou velmi bohatá na vitamin A a u koček krmených syrovými játry nebo stravou s vysokým podílem jater se může vyvinout otrava vitaminem A. Játra v kompletním, vyváženém krmivu pro kočky jsou v pořádku.",
     "hr": "Ne kao domaća poslastica. Jetra je vrlo bogata vitaminom A, a mačke koje jedu sirovu jetru ili hranu s puno jetre mogu se otrovati vitaminom A. Jetra u potpunoj, uravnoteženoj hrani za mačke je u redu.",
-    "sv": "Inte som godbit hemma. Lever är mycket rik på A-vitamin, och katter som får rå lever eller en kost med mycket lever kan få A-vitaminförgiftning. Lever i ett komplett, balanserat kattfoder går bra."
+    "sv": "Inte som godbit hemma. Lever är mycket rik på A-vitamin, och katter som får rå lever eller en kost med mycket lever kan få A-vitaminförgiftning. Lever i ett komplett, balanserat kattfoder går bra.",
+    "da": "Ikke som hjemmelavet godbid. Lever er meget rig på A-vitamin, og katte der får rå lever eller en kost med meget lever, kan få A-vitaminforgiftning. Lever i et komplet, balanceret kattefoder er i orden."
   },
   "why": {
     "en": "VCA says vitamin A poisoning most commonly occurs when pets are fed raw liver or vitamin A-rich supplements over weeks to months. The Merck Veterinary Manual notes that in cats it can occur when growing kittens are fed a diet high in liver, and that feeding only liver can cause it. VCA recommends a commercially prepared, balanced diet instead.",
@@ -70,7 +74,8 @@
     "pl": "Według VCA do zatrucia witaminą A dochodzi najczęściej, gdy zwierzęta dostają surową wątróbkę lub suplementy bogate w witaminę A przez wiele tygodni lub miesięcy. Merck Veterinary Manual podaje, że u kotów może do niego dojść, gdy rosnące kocięta są karmione dietą bogatą w wątróbkę, oraz że może je wywołać karmienie wyłącznie wątróbką. VCA zaleca zamiast tego gotową, zbilansowaną karmę.",
     "cs": "Podle VCA k otravě vitaminem A nejčastěji dochází, když zvířata týdny až měsíce dostávají syrová játra nebo doplňky bohaté na vitamin A. Merck Veterinary Manual uvádí, že u koček k ní může dojít, když rostoucí koťata dostávají stravu s vysokým podílem jater, a že ji může způsobit krmení samotnými játry. VCA místo toho doporučuje komerčně vyráběnou vyváženou stravu.",
     "hr": "VCA navodi da se otrovanje vitaminom A najčešće javlja kad ljubimci tjednima do mjesecima dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A. Priručnik Merck Veterinary Manual navodi da se kod mačaka može javiti kad mačići u rastu jedu hranu s puno jetre te da ga može izazvati hranjenje samo jetrom. VCA umjesto toga preporučuje komercijalno pripremljenu, uravnoteženu hranu.",
-    "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när kattungar som växer får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder."
+    "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när kattungar som växer får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
+    "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det kan give A-vitaminforgiftning udelukkende at fodre med lever. VCA anbefaler i stedet en færdigfremstillet, balanceret kost."
   },
   "signs": {
     "en": [
@@ -168,6 +173,14 @@
       "Svaghet",
       "Smärtsamma eller begränsade rörelser",
       "Kräkningar eller dåsighet efter en mycket stor mängd"
+    ],
+    "da": [
+      "Dårlig eller ru pels",
+      "Tør hud",
+      "Vægttab",
+      "Svaghed",
+      "Smertefulde eller begrænsede bevægelser",
+      "Opkast eller døsighed efter en meget stor mængde"
     ]
   },
   "what_to_do": {
@@ -182,7 +195,8 @@
     "pl": "Zatrucie witaminą A zwykle narasta przez tygodnie lub miesiące, więc nie dawaj wątróbki regularnie w domu. Jeśli twój kot jadł dużo wątróbki, a zauważysz szorstką sierść, utratę wagi, osłabienie lub bolesne ruchy, porozmawiaj z weterynarzem.",
     "cs": "Otrava vitaminem A se obvykle rozvíjí postupně během týdnů až měsíců, proto játra doma pravidelně nezkrmujte. Pokud vaše kočka jedla hodně jater a všimnete si hrubé srsti, hubnutí, slabosti nebo bolestivého pohybu, poraďte se s veterinářem.",
     "hr": "Otrovanje vitaminom A obično se razvija tjednima do mjesecima, zato kod kuće nemoj redovito davati jetru. Ako je mačka jela puno jetre, a ti primijetiš grubu dlaku, gubitak težine, slabost ili bolno kretanje, razgovaraj s veterinarom.",
-    "sv": "A-vitaminförgiftning byggs oftast upp under veckor till månader, så ge inte lever regelbundet hemma. Om katten har ätit mycket lever och du märker sträv päls, viktnedgång, svaghet eller smärtsamma rörelser, prata med veterinären."
+    "sv": "A-vitaminförgiftning byggs oftast upp under veckor till månader, så ge inte lever regelbundet hemma. Om katten har ätit mycket lever och du märker sträv päls, viktnedgång, svaghet eller smärtsamma rörelser, prata med veterinären.",
+    "da": "A-vitaminforgiftning udvikler sig som regel over uger til måneder, så giv ikke lever regelmæssigt derhjemme. Hvis din kat har spist meget lever, og du ser ru pels, vægttab, svaghed eller smertefulde bevægelser, skal du tale med din dyrlæge."
   },
   "serving": null,
   "child": {
@@ -197,7 +211,8 @@
     "pl": "Wątróbka ma bardzo dużo jednej witaminy, a jej nadmiar szkodzi kotom. Kocia karma ma już jej tyle, ile trzeba.",
     "cs": "Játra mají hodně jednoho vitaminu a jeho přemíra kočkám neprospívá. V kočičím krmivu už je ho přesně tolik, kolik má být.",
     "hr": "Jetra ima jako puno jednog vitamina, a previše tog vitamina nije dobro za mace. U njihovoj hrani za mačke već ga ima baš koliko treba.",
-    "sv": "Lever har jättemycket av ett visst vitamin, och för mycket är inte bra för katter. Kattmaten har redan precis lagom mycket."
+    "sv": "Lever har jättemycket av ett visst vitamin, och för mycket är inte bra för katter. Kattmaten har redan precis lagom mycket.",
+    "da": "Lever indeholder meget af ét bestemt vitamin, og for meget af det er ikke godt for katte. Deres kattemad har allerede den rigtige mængde."
   },
   "faq": [
     {
@@ -213,7 +228,8 @@
         "pl": "Moja karma dla kota zawiera wątróbkę. Czy to problem?",
         "cs": "Ve složení krmiva mé kočky jsou játra. Je to problém?",
         "hr": "Hrana moje mačke sadrži jetru. Je li to problem?",
-        "sv": "Det står lever på mitt kattfoder. Är det ett problem?"
+        "sv": "Det står lever på mitt kattfoder. Är det ett problem?",
+        "da": "Der står lever på ingredienslisten til mit kattefoder. Er det et problem?"
       },
       "a": {
         "en": "No. Liver is a common ingredient in canned cat foods, and a complete, balanced cat food is what vets recommend.",
@@ -227,7 +243,8 @@
         "pl": "Nie. Wątróbka to częsty składnik karm puszkowych dla kotów, a weterynarze zalecają właśnie pełnoporcjową, zbilansowaną karmę dla kotów.",
         "cs": "Ne. Játra jsou běžnou složkou konzervovaných krmiv pro kočky a veterináři doporučují právě kompletní, vyvážené krmivo.",
         "hr": "Nije. Jetra je čest sastojak konzervirane hrane za mačke, a veterinari preporučuju upravo potpunu, uravnoteženu hranu za mačke.",
-        "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och ett komplett, balanserat kattfoder är det som veterinärer rekommenderar."
+        "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och ett komplett, balanserat kattfoder är det som veterinärer rekommenderar.",
+        "da": "Nej. Lever er en almindelig ingrediens i kattefoder på dåse, og et komplet, balanceret kattefoder er netop det dyrlæger anbefaler."
       }
     }
   ],
@@ -327,6 +344,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f48b8f95f025d4344ca21d228f72849200d2495560b83711368b975b333a2515"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "00f5140b6c7144dd6e7bb24e4aed2a66817b6b015c87961c2b6c6072812778c2"
     }
   }
 }

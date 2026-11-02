@@ -6,21 +6,24 @@
     "sl": "Borovnice",
     "cs": "Borůvky",
     "hr": "Borovnice",
-    "sv": "Blåbär"
+    "sv": "Blåbär",
+    "da": "Blåbær"
   },
   "question": {
     "en": "Can dogs eat blueberries?",
     "sl": "Ali lahko psi jedo borovnice?",
     "cs": "Mohou psi jíst borůvky?",
     "hr": "Smiju li psi jesti borovnice?",
-    "sv": "Får hundar äta blåbär?"
+    "sv": "Får hundar äta blåbär?",
+    "da": "Må hunde spise blåbær?"
   },
   "url_slug": {
     "en": "blueberries",
     "sl": "borovnice",
     "cs": "boruvky",
     "hr": "borovnice",
-    "sv": "blabar"
+    "sv": "blabar",
+    "da": "blaabaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, zmerno. Borovnice imajo malo kalorij ter vsebujejo vlaknine, vitamin C in antioksidante, a naj bodo občasen priboljšek in ne velik del psove prehrane.",
     "cs": "Ano, s mírou. Borůvky mají málo kalorií a obsahují vlákninu, vitamin C a antioxidanty, ale měly by být spíš občasným pamlskem než velkou součástí psí stravy.",
     "hr": "Da, umjereno. Borovnice imaju malo kalorija i daju vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
-    "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost."
+    "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost.",
+    "da": "Ja, med måde. Blåbær har få kalorier og giver fibre, C-vitamin og antioxidanter, men de bør være en godbid en gang imellem og ikke en stor del af hundens kost."
   },
   "why": {
     "en": "Their size and shape can pose a choking risk, particularly for very small dogs. As with any new food, start with a small amount and watch how your dog reacts.",
     "sl": "Njihova velikost in oblika lahko predstavljata nevarnost zadušitve, zlasti pri zelo majhnih psih. Kot pri vsaki novi hrani začnite z majhno količino in opazujte, kako se pes odzove.",
     "cs": "Kvůli své velikosti a tvaru mohou představovat riziko dušení, zvlášť u velmi malých psů. Jako u každé nové potraviny začněte malým množstvím a sledujte, jak pes reaguje.",
     "hr": "Zbog veličine i oblika mogu izazvati gušenje, osobito kod vrlo malih pasa. Kao i kod svake nove hrane, počni s malom količinom i prati kako pas reagira.",
-    "sv": "Storleken och formen kan ge kvävningsrisk, särskilt för mycket små hundar. Som med all ny mat: börja med en liten mängd och se hur hunden reagerar."
+    "sv": "Storleken och formen kan ge kvävningsrisk, särskilt för mycket små hundar. Som med all ny mat: börja med en liten mängd och se hur hunden reagerar.",
+    "da": "Deres størrelse og form kan udgøre en kvælningsfare, især for meget små hunde. Som med al ny mad skal du starte med en lille mængde og se hvordan hunden reagerer."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Začnite z majhno količino in psa opazujte. Če niste prepričani, ali so borovnice primerne za vašega psa, vprašajte veterinarja.",
     "cs": "Začněte malým množstvím a psa pozorujte. Pokud si nejste jistí, zda jsou borůvky pro vašeho psa vhodné, zeptejte se veterináře.",
     "hr": "Počni s malom količinom i promatraj psa. Ako nisi siguran jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
-    "sv": "Börja med en liten mängd och håll koll på hunden. Om du är osäker på om blåbär passar din hund, fråga veterinären."
+    "sv": "Börja med en liten mängd och håll koll på hunden. Om du är osäker på om blåbär passar din hund, fråga veterinären.",
+    "da": "Start med en lille mængde, og hold øje med hunden. Spørg din dyrlæge hvis du er i tvivl om blåbær er gode for din hund."
   },
   "serving": {
     "en": "Washed thoroughly, fresh or frozen; cut in halves for very small dogs; as an occasional treat.",
     "sl": "Temeljito oprane, sveže ali zamrznjene; za zelo majhne pse prerezane na pol; kot občasen priboljšek.",
     "cs": "Důkladně omyté, čerstvé nebo mražené; pro velmi malé psy rozpůlené; jako občasný pamlsek.",
     "hr": "Dobro oprane, svježe ili zamrznute; za vrlo male pse prepolovljene; kao povremena poslastica.",
-    "sv": "Ordentligt sköljda, färska eller frysta; halverade för mycket små hundar; som en godbit ibland."
+    "sv": "Ordentligt sköljda, färska eller frysta; halverade för mycket små hundar; som en godbit ibland.",
+    "da": "Grundigt vaskede, friske eller frosne; skåret i halve til meget små hunde; som en godbid en gang imellem."
   },
   "child": {
     "en": "Blueberries can be a yummy little treat for dogs! A grown-up washes them first and gives just a few.",
     "sl": "Borovnice so lahko za pse slasten majhen priboljšek! Odrasel jih najprej opere in da le nekaj.",
     "cs": "Borůvky můžou být pro psy dobrý malý pamlsek! Dospělý je nejdřív omyje a dá jich jen pár.",
     "hr": "Borovnice mogu biti fina mala poslastica za pse! Odrasla osoba ih prvo opere i ponudi samo nekoliko.",
-    "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få."
+    "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få.",
+    "da": "Blåbær kan være en lækker lille godbid til hunde! En voksen vasker dem først og giver kun nogle få."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Sveže ali zamrznjene borovnice?",
         "cs": "Čerstvé, nebo mražené borůvky?",
         "hr": "Svježe ili zamrznute borovnice?",
-        "sv": "Färska eller frysta blåbär?"
+        "sv": "Färska eller frysta blåbär?",
+        "da": "Friske eller frosne blåbær?"
       },
       "a": {
         "en": "Both are fine. You can offer your dog either fresh or frozen blueberries.",
         "sl": "Oboje je v redu. Psu lahko ponudite sveže ali zamrznjene borovnice.",
         "cs": "Obojí je v pořádku. Psovi můžete nabídnout čerstvé i mražené borůvky.",
         "hr": "Obje su u redu. Psu možeš ponuditi svježe ili zamrznute borovnice.",
-        "sv": "Båda går bra. Du kan ge hunden antingen färska eller frysta blåbär."
+        "sv": "Båda går bra. Du kan ge hunden antingen färska eller frysta blåbär.",
+        "da": "Begge dele er fint. Du kan give din hund både friske og frosne blåbær."
       }
     }
   ],
@@ -151,6 +161,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cf4b9326da4ea385ba217dbfaaffcd3e68db9c75bdf5ceb9a52af885f5a88e3d"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "676f2b4ef57e8295eb5802d05212bd4dbe36de06b057d31e1f7fb21a3d8f02b7"
     }
   }
 }

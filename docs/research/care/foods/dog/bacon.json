@@ -13,7 +13,8 @@
     "pl": "Boczek",
     "cs": "Slanina",
     "hr": "Slanina",
-    "sv": "Bacon"
+    "sv": "Bacon",
+    "da": "Bacon"
   },
   "question": {
     "en": "Can dogs eat bacon?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść boczek?",
     "cs": "Mohou psi jíst slaninu?",
     "hr": "Smiju li psi jesti slaninu?",
-    "sv": "Får hundar äta bacon?"
+    "sv": "Får hundar äta bacon?",
+    "da": "Må hunde spise bacon?"
   },
   "url_slug": {
     "en": "bacon",
@@ -41,7 +43,8 @@
     "pl": "boczek",
     "cs": "slanina",
     "hr": "slanina",
-    "sv": "bacon"
+    "sv": "bacon",
+    "da": "bacon"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie zaleca się. Boczek nie jest toksyczny, ale to tłuste jedzenie ze stołu, które może wywołać wymioty i biegunkę albo zapalenie trzustki, czasem ciężkie. W razie wątpliwości nie dziel się z psem jedzeniem ze stołu.",
     "cs": "Nedoporučuje se. Slanina není jedovatá, ale je to tučné jídlo ze stolu, které může vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, který může mít těžký průběh. Když si nejste jistí, o jídlo ze stolu se se psem nedělte.",
     "hr": "Ne preporučuje se. Slanina nije otrovna, ali je masna hrana sa stola koja može izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja može biti teška. Ako nisi siguran, ne dijeli hranu sa stola sa psom.",
-    "sv": "Rekommenderas inte. Bacon är inte giftigt, men det är fet bordsmat som kan ge kräkningar och diarré eller utlösa bukspottkörtelinflammation, som kan vara allvarlig. Är du osäker, dela inte bordsmat med hunden."
+    "sv": "Rekommenderas inte. Bacon är inte giftigt, men det är fet bordsmat som kan ge kräkningar och diarré eller utlösa bukspottkörtelinflammation, som kan vara allvarlig. Är du osäker, dela inte bordsmat med hunden.",
+    "da": "Det frarådes. Bacon er ikke giftigt, men det er fed mad fra bordet, som kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), der kan være alvorlig. Er du i tvivl, så del ikke mad fra bordet med din hund."
   },
   "why": {
     "en": "Pet Poison Helpline names bacon among fatty table foods that cause problems ranging from mild stomach upset to severe pancreatitis. A fatty meal is a known pancreatitis trigger, and some breeds, such as Miniature Schnauzers, are more prone to it.",
@@ -70,7 +74,8 @@
     "pl": "Pet Poison Helpline wymienia boczek wśród tłustych potraw ze stołu, które powodują problemy – od łagodnych dolegliwości żołądkowych po ciężkie zapalenie trzustki. Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki, a niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
     "cs": "Pet Poison Helpline řadí slaninu mezi tučná jídla ze stolu, která způsobují potíže od lehce podrážděného žaludku až po těžký zánět slinivky břišní. Tučné jídlo je známým spouštěčem zánětu slinivky břišní a některá plemena, například knírač malý, jsou k němu náchylnější.",
     "hr": "Pet Poison Helpline slaninu ubraja u masnu hranu sa stola koja izaziva tegobe od blagih želučanih smetnji do teške upale gušterače. Masan obrok poznat je okidač upale gušterače, a neke su joj pasmine, poput patuljastog šnaucera, sklonije.",
-    "sv": "Pet Poison Helpline nämner bacon bland fet bordsmat som ger problem alltifrån lindriga magbesvär till allvarlig bukspottkörtelinflammation (pankreatit). En fet måltid är en känd utlösande faktor, och vissa raser, som dvärgschnauzer, är mer benägna att drabbas."
+    "sv": "Pet Poison Helpline nämner bacon bland fet bordsmat som ger problem alltifrån lindriga magbesvär till allvarlig bukspottkörtelinflammation (pankreatit). En fet måltid är en känd utlösande faktor, och vissa raser, som dvärgschnauzer, är mer benägna att drabbas.",
+    "da": "Pet Poison Helpline nævner bacon blandt fed mad fra bordet, der giver problemer fra let dårlig mave til alvorlig betændelse i bugspytkirtlen. Et fedt måltid er en kendt udløser af betændelse i bugspytkirtlen, og nogle racer, fx dværgschnauzer, er mere tilbøjelige til at få det."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Diarré",
       "Ingen matlust",
       "Trötthet, feber"
+    ],
+    "da": [
+      "Opkast, som nogle gange begynder 1–4 dage efter det fede måltid",
+      "Mavesmerter (hunden kan strække sig i en »bedestilling«)",
+      "Diarré",
+      "Vil ikke spise",
+      "Træthed, feber"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "pl": "Jeśli twój pies zjadł dużo tłustego jedzenia albo w kolejnych dniach wymiotuje, boli go brzuch lub jest zmęczony, skontaktuj się z weterynarzem. Zanotuj, co zjadł i mniej więcej ile. Objawy zapalenia trzustki mogą pojawić się z opóźnieniem kilku dni.",
     "cs": "Pokud váš pes snědl hodně tučného jídla nebo se u něj v následujících dnech objeví zvracení, bolest břicha či malátnost, obraťte se na veterináře. Poznamenejte si, co pes snědl a zhruba kolik. Příznaky zánětu slinivky břišní se mohou objevit až o několik dní později.",
     "hr": "Ako je pas pojeo mnogo masne hrane ili sljedećih dana povraća, ima bolove u trbuhu ili je umoran, obrati se veterinaru. Zapiši što je pojeo i otprilike koliko. Znakovi upale gušterače mogu se pojaviti tek nakon nekoliko dana.",
-    "sv": "Om hunden har ätit mycket fet mat, eller får kräkningar, ont i magen eller blir trött under de närmaste dagarna, kontakta veterinären. Notera vad den åt och ungefär hur mycket. Symtom på bukspottkörtelinflammation kan dröja några dagar."
+    "sv": "Om hunden har ätit mycket fet mat, eller får kräkningar, ont i magen eller blir trött under de närmaste dagarna, kontakta veterinären. Notera vad den åt och ungefär hur mycket. Symtom på bukspottkörtelinflammation kan dröja några dagar.",
+    "da": "Kontakt din dyrlæge hvis hunden har spist meget fed mad eller får opkast, mavesmerter eller bliver træt i dagene efter. Skriv ned hvad hunden har spist og omtrent hvor meget. Symptomer på betændelse i bugspytkirtlen kan først vise sig nogle dage senere."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "pl": "Boczek pięknie pachnie, ale jest dla psów za tłusty i może je od niego rozboleć brzuszek. Wybierz lepiej psi smakołyk.",
     "cs": "Slanina krásně voní, ale pro psy je moc tučná a může je z ní bolet bříško. Dej psovi radši psí pamlsek.",
     "hr": "Slanina fino miriše, ali je premasna za pse i može ih zaboljeti trbuščić. Radije izaberi pseću poslasticu.",
-    "sv": "Bacon luktar gott, men det är för fett för hundar och kan ge dem ont i magen. Välj en hundgodbit i stället."
+    "sv": "Bacon luktar gott, men det är för fett för hundar och kan ge dem ont i magen. Välj en hundgodbit i stället.",
+    "da": "Bacon dufter lækkert, men det er for fedt til hunde og kan give dem ondt i maven. Vælg en hundegodbid i stedet."
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "pl": "Czy malutki kawałek boczku jest niebezpieczny?",
         "cs": "Je malinký kousek slaniny nebezpečný?",
         "hr": "Je li maleni komadić slanine opasan?",
-        "sv": "Är en liten bit bacon farlig?"
+        "sv": "Är en liten bit bacon farlig?",
+        "da": "Er et lille stykke bacon farligt?"
       },
       "a": {
         "en": "Bacon is not toxic, but fatty table food can upset a dog's stomach or trigger pancreatitis, so it's best not to share it.",
@@ -215,7 +230,8 @@
         "pl": "Boczek nie jest toksyczny, ale tłuste jedzenie ze stołu może podrażnić żołądek psa lub wywołać zapalenie trzustki, więc lepiej się nim nie dzielić.",
         "cs": "Slanina není jedovatá, ale tučné jídlo ze stolu může psovi podráždit žaludek nebo spustit zánět slinivky břišní, proto je lepší se o ni nedělit.",
         "hr": "Slanina nije otrovna, ali masna hrana sa stola može psu uznemiriti želudac ili potaknuti upalu gušterače, zato je bolje ne dijeliti je.",
-        "sv": "Bacon är inte giftigt, men fet bordsmat kan ge hunden orolig mage eller utlösa bukspottkörtelinflammation, så det är bäst att inte dela med sig."
+        "sv": "Bacon är inte giftigt, men fet bordsmat kan ge hunden orolig mage eller utlösa bukspottkörtelinflammation, så det är bäst att inte dela med sig.",
+        "da": "Bacon er ikke giftigt, men fed mad fra bordet kan give hunden dårlig mave eller udløse betændelse i bugspytkirtlen, så det er bedst ikke at dele det."
       }
     }
   ],
@@ -336,6 +352,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cdb1a69bb92ec80a9e867909ebeb82c6ec3a51eb0875d060af8f60c3643a73ed"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "44d9a0f26977ee101788588d31c74b749f54d6033a6ffbeb2ff6f527cded5c94"
     }
   }
 }

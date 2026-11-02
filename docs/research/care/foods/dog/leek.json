@@ -13,7 +13,8 @@
     "pl": "Por",
     "cs": "Pórek",
     "hr": "Poriluk",
-    "sv": "Purjolök"
+    "sv": "Purjolök",
+    "da": "Porre"
   },
   "question": {
     "en": "Can dogs eat leek?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść pora?",
     "cs": "Mohou psi jíst pórek?",
     "hr": "Smiju li psi jesti poriluk?",
-    "sv": "Får hundar äta purjolök?"
+    "sv": "Får hundar äta purjolök?",
+    "da": "Må hunde spise porre?"
   },
   "url_slug": {
     "en": "leek",
@@ -41,7 +43,8 @@
     "pl": "por",
     "cs": "porek",
     "hr": "poriluk",
-    "sv": "purjolok"
+    "sv": "purjolok",
+    "da": "porre"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Por należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Szkodliwe są wszystkie części rośliny, także po ugotowaniu lub wysuszeniu. Może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
     "cs": "Ne. Pórek patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatý. Škodlivé jsou všechny části rostliny, i tepelně upravené nebo sušené. Může poškodit červené krvinky a příznaky se často objeví až po několika dnech.",
     "hr": "Ne. Poriluk pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Štetni su svi dijelovi biljke, čak i termički obrađeni ili sušeni. Može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
-    "sv": "Nej. Purjolök är en lökväxt, precis som lök och vitlök, och den är giftig för hundar. Alla delar av växten är skadliga, även tillagade eller torkade. Den kan skada de röda blodkropparna, och symtomen dröjer ofta några dagar."
+    "sv": "Nej. Purjolök är en lökväxt, precis som lök och vitlök, och den är giftig för hundar. Alla delar av växten är skadliga, även tillagade eller torkade. Den kan skada de röda blodkropparna, och symtomen dröjer ofta några dagar.",
+    "da": "Nej. Porre er en løgplante ligesom løg og hvidløg, og den er giftig for hunde. Alle dele af planten er skadelige, også når de er tilberedt eller tørret. Porre kan skade de røde blodlegemer, og symptomerne viser sig ofte først efter et par dage."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -70,7 +74,8 @@
     "pl": "Por należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
-    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet."
+    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet.",
+    "da": "Porre hører til løgplanterne (løg, hvidløg, porre, purløg), som er giftige for hunde. Planterne indeholder stoffer der skader de røde blodlegemer og kan føre til blodmangel (anæmi). Alle dele og alle former er skadelige: rå, tilberedte, tørrede og i pulverform. Maveproblemer kan opstå ved enhver mængde; større mængder skader blodet."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Äter mindre än vanligt",
       "Magbesvär, även efter små mängder",
       "Tecken på blodbrist (skadade röda blodkroppar), oftast några dagar senare"
+    ],
+    "da": [
+      "Opkast og diarré",
+      "Spiser mindre end normalt",
+      "Maveproblemer, selv efter små mængder",
+      "Tegn på blodmangel (skadede røde blodlegemer), som regel efter nogle dage"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co pies zjadł (pora) i mniej więcej ile. Nie czekaj na objawy: uszkodzenie krwi zwykle ujawnia się dopiero po kilku dniach.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (pórek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (poriluk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (purjolök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare."
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (purjolök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad hunden har spist (porre), og omtrent hvor meget. Vent ikke på symptomer: Skaden på blodet viser sig som regel først efter nogle dage."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "pl": "Por należy do rodziny cebuli, więc nie jest dla psów. Powiedz dorosłemu, jeśli twój pies go zje.",
     "cs": "Pórek patří do stejné rodiny jako cibule, takže není pro psy. Když ho pes sní, řekni to dospělému.",
     "hr": "Poriluk je iz obitelji luka, zato nije za pse. Reci odrasloj osobi ako ga tvoj pas pojede.",
-    "sv": "Purjolök hör till lökfamiljen, så den är inte för hundar. Säg till en vuxen om din hund äter purjolök."
+    "sv": "Purjolök hör till lökfamiljen, så den är inte för hundar. Säg till en vuxen om din hund äter purjolök.",
+    "da": "Porre hører til løgfamilien, så den er ikke til hunde. Sig det til en voksen hvis din hund spiser noget af den."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "pl": "Czy por jest tak samo niebezpieczny jak cebula?",
         "cs": "Je pórek stejně nebezpečný jako cibule?",
         "hr": "Je li poriluk jednako opasan kao luk?",
-        "sv": "Är purjolök lika farlig som lök?"
+        "sv": "Är purjolök lika farlig som lök?",
+        "da": "Er porre lige så farlig som løg?"
       },
       "a": {
         "en": "Garlic and onion are the most common causes of poisoning, but leek belongs to the same toxic plant family and should be treated the same way.",
@@ -203,7 +217,8 @@
         "pl": "Czosnek i cebula najczęściej powodują zatrucia, ale por należy do tej samej toksycznej rodziny roślin i trzeba go traktować tak samo.",
         "cs": "Nejčastější příčinou otravy jsou česnek a cibule, pórek ale patří do stejné jedovaté skupiny rostlin a je třeba k němu přistupovat stejně.",
         "hr": "Češnjak i luk najčešći su uzroci otrovanja, ali poriluk pripada istoj skupini otrovnih biljaka i treba ga shvatiti jednako ozbiljno.",
-        "sv": "Vitlök och lök är de vanligaste orsakerna till förgiftning, men purjolök hör till samma giftiga växtfamilj och ska behandlas på samma sätt."
+        "sv": "Vitlök och lök är de vanligaste orsakerna till förgiftning, men purjolök hör till samma giftiga växtfamilj och ska behandlas på samma sätt.",
+        "da": "Hvidløg og løg er de hyppigste årsager til forgiftning, men porre hører til samme giftige plantefamilie og skal behandles på samme måde."
       }
     },
     {
@@ -219,7 +234,8 @@
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczny?",
         "cs": "Je bezpečný tepelně upravený pórek nebo pórek v prášku?",
         "hr": "Je li siguran kad je termički obrađen ili u prahu?",
-        "sv": "Är purjolök ofarlig om den är tillagad eller i pulverform?"
+        "sv": "Är purjolök ofarlig om den är tillagad eller i pulverform?",
+        "da": "Er porre sikker når den er tilberedt eller i pulverform?"
       },
       "a": {
         "en": "No. Raw, cooked, dried, powdered and liquid forms are all poisonous to dogs.",
@@ -233,7 +249,8 @@
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
-        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar."
+        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar.",
+        "da": "Nej. Alle former er giftige for hunde: rå, tilberedte, tørrede, i pulverform og flydende."
       }
     }
   ],
@@ -377,6 +394,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "69e523edec49b75a088b4dedb06e63bc872090d56287f36ff56490c68da515db"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0917f0f91aa1de8069470906bd1ef27e07972263ffa5099a7721d2f2362a197b"
     }
   }
 }

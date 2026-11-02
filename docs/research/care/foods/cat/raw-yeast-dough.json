@@ -13,7 +13,8 @@
     "pl": "Surowe ciasto drożdżowe",
     "cs": "Syrové kynuté těsto",
     "hr": "Sirovo tijesto s kvascem",
-    "sv": "Rå jäsdeg"
+    "sv": "Rå jäsdeg",
+    "da": "Rå gærdej"
   },
   "question": {
     "en": "Can cats eat raw yeast dough?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść surowe ciasto drożdżowe?",
     "cs": "Mohou kočky jíst syrové kynuté těsto?",
     "hr": "Smiju li mačke jesti sirovo tijesto s kvascem?",
-    "sv": "Får katter äta rå jäsdeg?"
+    "sv": "Får katter äta rå jäsdeg?",
+    "da": "Må katte spise rå gærdej?"
   },
   "url_slug": {
     "en": "raw-yeast-dough",
@@ -41,7 +43,8 @@
     "pl": "surowe-ciasto-drozdzowe",
     "cs": "syrove-kynute-testo",
     "hr": "sirovo-tijesto-s-kvascem",
-    "sv": "ra-jasdeg"
+    "sv": "ra-jasdeg",
+    "da": "raa-gaerdej"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Surowe ciasto drożdżowe jest dla kotów niebezpieczne na dwa sposoby: może dalej rosnąć w żołądku i spowodować niedrożność, a drożdże wytwarzają alkohol, który jest dla kotów toksyczny. Trzymaj rosnące ciasto poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot trochę zje.",
     "cs": "Ne. Syrové kynuté těsto je pro kočky nebezpečné dvojím způsobem: v žaludku může dál nabývat na objemu a způsobit ucpání a kvasinky vytvářejí alkohol, který je pro kočky toxický. Kynoucí těsto mějte mimo dosah kočky, a pokud ho vaše kočka sní, zavolejte veterináři.",
     "hr": "Ne. Sirovo tijesto s kvascem opasno je za mačke na dva načina: može se nastaviti širiti u želucu i izazvati začepljenje, a kvasac stvara alkohol, koji je otrovan za mačke. Tijesto koje se diže drži izvan dosega mačke i nazovi veterinara ako ga mačka pojede makar malo.",
-    "sv": "Nej. Rå jäsdeg är farlig för katter på två sätt: den kan fortsätta jäsa i magen och orsaka stopp där, och jästen bildar alkohol, som är giftig för katter. Ställ jäsande deg utom räckhåll och ring veterinären om katten äter av den."
+    "sv": "Nej. Rå jäsdeg är farlig för katter på två sätt: den kan fortsätta jäsa i magen och orsaka stopp där, och jästen bildar alkohol, som är giftig för katter. Ställ jäsande deg utom räckhåll och ring veterinären om katten äter av den.",
+    "da": "Nej. Rå gærdej er farlig for katte på to måder: Den kan blive ved med at hæve i maven og give en blokering, og gæren danner alkohol, som er giftig for katte. Hold dej der hæver, uden for rækkevidde, og ring til din dyrlæge hvis din kat spiser noget."
   },
   "why": {
     "en": "Raw dough contains some alcohol and produces carbon dioxide. Once swallowed, the yeast keeps working in the stomach: the dough expands and can cause an obstruction, while the alcohol it produces is absorbed into the blood. Cats are especially sensitive to alcohol.",
@@ -70,7 +74,8 @@
     "pl": "Surowe ciasto zawiera trochę alkoholu i wytwarza dwutlenek węgla. Po połknięciu drożdże dalej pracują w żołądku: ciasto rośnie i może spowodować niedrożność, a wytwarzany alkohol wchłania się do krwi. Koty są szczególnie wrażliwe na alkohol.",
     "cs": "Syrové těsto obsahuje trochu alkoholu a vytváří oxid uhličitý. Po spolknutí kvasinky v žaludku dál pracují: těsto zvětšuje objem a může způsobit ucpání, zatímco vznikající alkohol se vstřebává do krve. Kočky jsou na alkohol obzvlášť citlivé.",
     "hr": "Sirovo tijesto sadrži nešto alkohola i stvara ugljikov dioksid. Nakon što ga mačka proguta, kvasac nastavlja djelovati u želucu: tijesto se širi i može izazvati začepljenje, a alkohol koji pritom nastaje upija se u krv. Mačke su posebno osjetljive na alkohol.",
-    "sv": "Rå deg innehåller lite alkohol och bildar koldioxid. När degen har svalts fortsätter jästen att arbeta i magen: degen sväller och kan orsaka stopp i magen, samtidigt som alkoholen som bildas tas upp i blodet. Katter är särskilt känsliga för alkohol."
+    "sv": "Rå deg innehåller lite alkohol och bildar koldioxid. När degen har svalts fortsätter jästen att arbeta i magen: degen sväller och kan orsaka stopp i magen, samtidigt som alkoholen som bildas tas upp i blodet. Katter är särskilt känsliga för alkohol.",
+    "da": "Rå dej indeholder lidt alkohol og danner kuldioxid. Når dejen er slugt, arbejder gæren videre i maven: Dejen udvider sig og kan give en blokering, mens den alkohol der dannes, optages i blodet. Katte er særligt følsomme over for alkohol."
   },
   "signs": {
     "en": [
@@ -144,6 +149,12 @@
       "Försöker kräkas utan att något kommer upp",
       "Vinglig gång eller verkar förvirrad",
       "Ovanlig svaghet eller sömnighet"
+    ],
+    "da": [
+      "Hævet, oppustet mave",
+      "Forsøg på at kaste op uden at noget kommer op",
+      "Vaklende gang eller virker forvirret",
+      "Usædvanlig svaghed eller søvnighed"
     ]
   },
   "what_to_do": {
@@ -158,7 +169,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile ciasta zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta vaše kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je tijesta mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera hur mycket deg katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera hur mycket deg katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor meget dej din kat har spist og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -173,7 +185,8 @@
     "pl": "Ciasto na chleb ma rosnąć w misce, a nie w brzuszku. Trzymaj ciasto z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Těsto na chleba má kynout v míse, ne v bříšku. Drž těsto daleko od kočičky, a když ho sní, řekni to dospělému.",
     "hr": "Tijesto za kruh treba se dizati u zdjeli, a ne u trbuščiću. Drži tijesto daleko od mace i reci odrasloj osobi ako ga maca pojede.",
-    "sv": "Bröddeg ska jäsa i en skål, inte i en mage. Håll degen borta från katten och säg till en vuxen om den äter av degen."
+    "sv": "Bröddeg ska jäsa i en skål, inte i en mage. Håll degen borta från katten och säg till en vuxen om den äter av degen.",
+    "da": "Brøddej skal hæve i en skål, ikke i en mave. Hold dej væk fra katten, og sig det til en voksen hvis den spiser noget."
   },
   "faq": [
     {
@@ -189,7 +202,8 @@
         "pl": "Dlaczego surowe ciasto jest niebezpieczne, skoro samo nie jest trucizną?",
         "cs": "Proč je syrové těsto nebezpečné, když samo o sobě není jed?",
         "hr": "Zašto je sirovo tijesto opasno ako samo po sebi nije otrov?",
-        "sv": "Varför är rå deg farlig om den inte är ett gift i sig?"
+        "sv": "Varför är rå deg farlig om den inte är ett gift i sig?",
+        "da": "Hvorfor er rå dej farlig når den ikke i sig selv er en gift?"
       },
       "a": {
         "en": "Raw dough contains live yeast. In the stomach it keeps rising and producing alcohol, so it can both cause a blockage and lead to alcohol poisoning.",
@@ -203,7 +217,8 @@
         "pl": "Surowe ciasto zawiera żywe drożdże. W żołądku dalej rośnie i wytwarza alkohol, więc może zarówno spowodować niedrożność, jak i doprowadzić do zatrucia alkoholem.",
         "cs": "Syrové těsto obsahuje živé kvasinky. V žaludku dál kyne a vytváří alkohol, takže může způsobit ucpání i otravu alkoholem.",
         "hr": "Sirovo tijesto sadrži živi kvasac. U želucu se nastavlja dizati i stvarati alkohol, pa može izazvati i začepljenje i otrovanje alkoholom.",
-        "sv": "Rå deg innehåller levande jäst. I magen fortsätter den att jäsa och bilda alkohol, så den kan både orsaka stopp i magen och leda till alkoholförgiftning."
+        "sv": "Rå deg innehåller levande jäst. I magen fortsätter den att jäsa och bilda alkohol, så den kan både orsaka stopp i magen och leda till alkoholförgiftning.",
+        "da": "Rå dej indeholder levende gær. I maven bliver den ved med at hæve og danne alkohol, så den både kan give en blokering og føre til alkoholforgiftning."
       }
     }
   ],
@@ -331,6 +346,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3b7754eb54e61c9bec9538d19e5461a269889f1291049de7f376f32042b22f1f"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4fecc35e947619cd3c066ac58d8aeda72cdbda26c3ad0938d31b6325178efaa6"
     }
   }
 }

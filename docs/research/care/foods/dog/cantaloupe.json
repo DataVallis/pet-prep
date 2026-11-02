@@ -6,21 +6,24 @@
     "sl": "Melona kantalupa",
     "cs": "Cukrový meloun",
     "hr": "Dinja",
-    "sv": "Cantaloupemelon"
+    "sv": "Cantaloupemelon",
+    "da": "Cantaloupemelon"
   },
   "question": {
     "en": "Can dogs eat cantaloupe?",
     "sl": "Ali lahko psi jedo melono kantalupo?",
     "cs": "Mohou psi jíst cukrový meloun?",
     "hr": "Smiju li psi jesti dinju?",
-    "sv": "Får hundar äta cantaloupemelon?"
+    "sv": "Får hundar äta cantaloupemelon?",
+    "da": "Må hunde spise cantaloupemelon?"
   },
   "url_slug": {
     "en": "cantaloupe",
     "sl": "melona-kantalupa",
     "cs": "cukrovy-meloun",
     "hr": "dinja",
-    "sv": "cantaloupemelon"
+    "sv": "cantaloupemelon",
+    "da": "cantaloupemelon"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, zmerno. Kantalupa ima malo kalorij ter je dober vir vode in vlaknin, a vsebuje veliko sladkorja, zato jo dajajte zmerno, zlasti psom s prekomerno težo ali sladkorno boleznijo. Ne dajajte lupine ali pečk.",
     "cs": "Ano, s mírou. Cukrový meloun má málo kalorií a je dobrým zdrojem vody a vlákniny, ale obsahuje hodně cukru, proto ho dávejte střídmě, zvlášť psům s nadváhou nebo cukrovkou. Nedávejte slupku ani semínka.",
     "hr": "Da, umjereno. Dinja ima malo kalorija i dobar je izvor vode i vlakana, ali sadrži mnogo šećera, zato je dijeli štedljivo, osobito sa psima koji imaju prekomjernu težinu ili dijabetes. Ne daj koru ni sjemenke.",
-    "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och ger vätska och fibrer, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna."
+    "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och ger vätska och fibrer, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
+    "da": "Ja, med måde. Cantaloupemelon har få kalorier og er en god kilde til væske og fibre, men den har et højt sukkerindhold, så giv den sparsomt, især til hunde med overvægt eller diabetes. Giv ikke skræl eller kerner."
   },
   "why": {
     "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
     "sl": "Lupina kantalupe lahko, tako kot lubenična, povzroči prebavne težave, se zagozdi v prebavilih in predstavlja nevarnost zadušitve. Pečke so neškodljive, a se lahko prav tako zataknejo v grlu. Preveč priboljškov poleg zdrave prehrane lahko vodi v debelost.",
     "cs": "Slupka cukrového melounu může stejně jako slupka vodního melounu podráždit žaludek, uvíznout v trávicím traktu nebo způsobit dušení. Semínka jsou neškodná, ale také mohou způsobit dušení. Příliš mnoho pamlsků navíc ke zdravé stravě může vést k obezitě.",
     "hr": "Kora dinje, kao i kora lubenice, može uznemiriti želudac, zaglaviti se u probavnom sustavu i izazvati gušenje. Sjemenke su bezopasne, ali i one mogu izazvati gušenje. Previše poslastica uz zdravu prehranu može dovesti do pretilosti.",
-    "sv": "Melonskal kan, precis som vattenmelonskal, ge orolig mage, fastna i matsmältningskanalen och ge kvävningsrisk. Kärnorna är ofarliga men kan också ge kvävningsrisk. För många godbitar utöver en hälsosam kost kan leda till fetma."
+    "sv": "Melonskal kan, precis som vattenmelonskal, ge orolig mage, fastna i matsmältningskanalen och ge kvävningsrisk. Kärnorna är ofarliga men kan också ge kvävningsrisk. För många godbitar utöver en hälsosam kost kan leda till fetma.",
+    "da": "Skrællen fra cantaloupemelon kan ligesom vandmelonskræl give dårlig mave, sætte sig fast i fordøjelseskanalen og udgøre en kvælningsfare. Kernerne er harmløse, men kan også udgøre en kvælningsfare. For mange godbidder oven i en sund kost kan føre til overvægt."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če imate vprašanja ali pomisleke glede hranjenja psa s kantalupo, na primer če ima pes sladkorno bolezen, vprašajte veterinarja.",
     "cs": "Pokud máte otázky nebo obavy ohledně krmení psa cukrovým melounem, například pokud má váš pes cukrovku, zeptejte se veterináře.",
     "hr": "Ako imaš pitanja ili nedoumica u vezi s davanjem dinje psu, na primjer ako pas ima dijabetes, pitaj veterinara.",
-    "sv": "Om du har frågor eller funderingar kring att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären."
+    "sv": "Om du har frågor eller funderingar kring att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
+    "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund cantaloupemelon, fx hvis den har diabetes."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
     "sl": "Samo meso, brez lupine in pečk; kot občasen priboljšek.",
     "cs": "Jen dužnina, bez slupky a semínek; jako občasný pamlsek.",
     "hr": "Samo meso ploda, bez kore i sjemenki; kao povremena poslastica.",
-    "sv": "Bara fruktköttet, utan skal och kärnor; som en godbit ibland."
+    "sv": "Bara fruktköttet, utan skal och kärnor; som en godbit ibland.",
+    "da": "Kun frugtkødet, uden skræl og kerner; som en godbid en gang imellem."
   },
   "child": {
     "en": "Dogs can enjoy a little piece of melon! A grown-up cuts off the hard skin and takes out the seeds.",
     "sl": "Psi lahko uživajo v koščku melone! Odrasel odreže trdo lupino in odstrani pečke.",
     "cs": "Psi si můžou pochutnat na kousku melounu! Dospělý odkrojí tvrdou slupku a vybere semínka.",
     "hr": "Psi mogu uživati u komadiću dinje! Odrasla osoba odreže tvrdu koru i izvadi sjemenke.",
-    "sv": "Hundar kan få en liten bit melon! En vuxen skär bort det hårda skalet och tar ut kärnorna."
+    "sv": "Hundar kan få en liten bit melon! En vuxen skär bort det hårda skalet och tar ut kärnorna.",
+    "da": "Hunde kan godt få et lille stykke melon! En voksen skærer den hårde skal af og fjerner kernerne."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Je kantalupa primerna za psa s sladkorno boleznijo?",
         "cs": "Hodí se cukrový meloun pro psa s cukrovkou?",
         "hr": "Je li dinja u redu za psa s dijabetesom?",
-        "sv": "Passar cantaloupemelon för en hund med diabetes?"
+        "sv": "Passar cantaloupemelon för en hund med diabetes?",
+        "da": "Er cantaloupemelon okay til en hund med diabetes?"
       },
       "a": {
         "en": "It may not be a good choice, because it is high in sugar. Ask your vet first.",
         "sl": "Morda ni dobra izbira, ker vsebuje veliko sladkorja. Najprej vprašajte veterinarja.",
         "cs": "Nemusí to být dobrá volba, protože obsahuje hodně cukru. Nejdřív se zeptejte veterináře.",
         "hr": "Možda nije dobar izbor jer sadrži mnogo šećera. Prvo pitaj veterinara.",
-        "sv": "Det är kanske inget bra val, eftersom den innehåller mycket socker. Fråga veterinären först."
+        "sv": "Det är kanske inget bra val, eftersom den innehåller mycket socker. Fråga veterinären först.",
+        "da": "Det er måske ikke et godt valg, fordi den har et højt sukkerindhold. Spørg din dyrlæge først."
       }
     }
   ],
@@ -150,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7aa63865cd7d399bd7b8ad1d30b581e8b14e58944f8e522b8df1a3f70139ee3c"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "71fc47645970e5f5ee8c2ed88026ca24cc2aeec5673b7b585aab200222f5826f"
     }
   }
 }

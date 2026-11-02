@@ -6,21 +6,24 @@
     "sl": "Borovnice",
     "cs": "Borůvky",
     "hr": "Borovnice",
-    "sv": "Blåbär"
+    "sv": "Blåbär",
+    "da": "Blåbær"
   },
   "question": {
     "en": "Can cats eat blueberries?",
     "sl": "Ali lahko mačke jedo borovnice?",
     "cs": "Mohou kočky jíst borůvky?",
     "hr": "Smiju li mačke jesti borovnice?",
-    "sv": "Får katter äta blåbär?"
+    "sv": "Får katter äta blåbär?",
+    "da": "Må katte spise blåbær?"
   },
   "url_slug": {
     "en": "blueberries",
     "sl": "borovnice",
     "cs": "boruvky",
     "hr": "borovnice",
-    "sv": "blabar"
+    "sv": "blabar",
+    "da": "blaabaer"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, nekaj borovnic je v redu kot občasen priboljšek. Univerzitetna veterinarska bolnišnica jih navaja med zdravimi priboljški iz človeške hrane za mačke in pse, vendar so mačke mesojede in sadja ne potrebujejo, zato naj bodo le majhen dodatek.",
     "cs": "Ano, pár borůvek je jako občasný pamlsek v pořádku. Jedna univerzitní veterinární nemocnice je řadí mezi zdravé pamlsky z lidské stravy pro kočky a psy, kočky jsou ale masožravci a ovoce nepotřebují, takže ať jsou jen malým doplňkem.",
     "hr": "Da, nekoliko borovnica u redu je kao povremena poslastica. Jedna sveučilišna veterinarska bolnica navodi ih među zdravim poslasticama iz ljudske hrane za mačke i pse, ali mačke su mesojedi i ne trebaju voće, pa neka ostanu mali dodatak.",
-    "sv": "Ja, några blåbär går bra som godbit någon gång ibland. Ett universitetsdjursjukhus räknar dem till de hälsosamma godbitarna från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra."
+    "sv": "Ja, några blåbär går bra som godbit någon gång ibland. Ett universitetsdjursjukhus räknar dem till de hälsosamma godbitarna från människomat för katter och hundar, men katter är köttätare och behöver inte frukt, så låt det bara vara något litet extra.",
+    "da": "Ja, nogle få blåbær er fine som en godbid en gang imellem. Et universitetsdyrehospital nævner dem blandt sunde godbidder fra menneskemad til katte og hunde, men katte er kødædere og har ikke brug for frugt, så lad det kun være et lille ekstra."
   },
   "why": {
     "en": "NC State's veterinary hospital lists blueberries among healthy human-food treats for cats and dogs, given in measured amounts and counted in the daily calories. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
     "sl": "Veterinarska bolnišnica univerze NC State borovnice navaja med zdravimi priboljški iz človeške hrane za mačke in pse, ki jih dajemo v odmerjenih količinah in upoštevamo v dnevnem vnosu kalorij. Mačke so obvezni mesojedci in sadja ne potrebujejo, priboljški naj ostanejo majhen del dnevnega obroka, vsak rastlinski material pa lahko povzroči bruhanje ali prebavne težave.",
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí borůvky mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama iz ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
-    "sv": "NC States djursjukhus räknar blåbär till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage."
+    "sv": "NC States djursjukhus räknar blåbär till de hälsosamma godbitarna från människomat för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
+    "da": "Dyrehospitalet ved NC State nævner blåbær blandt sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i de daglige kalorier. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Najprej ponudite le malo. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Najprije ponudi samo malo. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-    "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären."
+    "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
+    "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food.",
     "sl": "Občasno nekaj borovnic, upoštevanih v dnevnem obroku.",
     "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky.",
     "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke.",
-    "sv": "Några bär då och då, inräknade i kattens dagliga matranson."
+    "sv": "Några bär då och då, inräknade i kattens dagliga matranson.",
+    "da": "Nogle få bær en gang imellem, regnet med i kattens daglige mad."
   },
   "child": {
     "en": "A few blueberries can be a cat treat now and then. Cats mostly need meat, so fruit is only a small extra.",
     "sl": "Nekaj borovnic je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
     "cs": "Pár borůvek může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
     "hr": "Nekoliko borovnica povremeno može biti poslastica za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
-    "sv": "Några blåbär kan bli en godbit för katten då och då. Katter behöver mest kött, så frukt är bara något litet extra."
+    "sv": "Några blåbär kan bli en godbit för katten då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
+    "da": "Nogle få blåbær kan være en godbid til en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali mačke potrebujejo sadje?",
         "cs": "Potřebují kočky ovoce?",
         "hr": "Trebaju li mačke voće?",
-        "sv": "Behöver katter frukt?"
+        "sv": "Behöver katter frukt?",
+        "da": "Har katte brug for frugt?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
         "sl": "Ne. Mačke so mesojede: potrebujejo hranila iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
         "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem.",
         "hr": "Ne. Mačke su mesojedi: trebaju hranjive tvari koje se nalaze u mesu i u prehrani im ne treba ni voće ni povrće. Voće može biti samo mali dodatak.",
-        "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra."
+        "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
+        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
       }
     }
   ],
@@ -143,6 +153,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ab2867e30ede1a202cce74604caa536becd15b40d8ff71fa4990d745fc66ede5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3a45fafa0a91935012dc62da2ba9a9cfc5e5ea6abefe2cee4c117c896251345d"
     }
   }
 }

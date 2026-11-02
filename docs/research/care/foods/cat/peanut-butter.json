@@ -13,7 +13,8 @@
     "pl": "Masło orzechowe",
     "cs": "Arašídové máslo",
     "hr": "Maslac od kikirikija",
-    "sv": "Jordnötssmör"
+    "sv": "Jordnötssmör",
+    "da": "Peanutbutter"
   },
   "question": {
     "en": "Can cats eat peanut butter?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść masło orzechowe?",
     "cs": "Mohou kočky jíst arašídové máslo?",
     "hr": "Smiju li mačke jesti maslac od kikirikija?",
-    "sv": "Får katter äta jordnötssmör?"
+    "sv": "Får katter äta jordnötssmör?",
+    "da": "Må katte spise peanutbutter?"
   },
   "url_slug": {
     "en": "peanut-butter",
@@ -41,7 +43,8 @@
     "pl": "maslo-orzechowe",
     "cs": "arasidove-maslo",
     "hr": "maslac-od-kikirikija",
-    "sv": "jordnotssmor"
+    "sv": "jordnotssmor",
+    "da": "peanutbutter"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Lepiej nie robić z tego zwyczaju. Niektórzy weterynarze uważają, że naturalne masło orzechowe może być okazjonalnym smakołykiem, ale nigdy nie może zawierać ksylitolu, a Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia.",
     "cs": "Raději z toho nedělejte zvyk. Někteří veterináři říkají, že přírodní arašídové máslo může být občasným pamlskem, nikdy však nesmí obsahovat xylitol, a Cats Protection doporučuje dávat místo lidských potravin raději pamlsky pro kočky.",
     "hr": "Bolje da to ne postane navika. Neki veterinari kažu da prirodni maslac od kikirikija može biti povremena poslastica, ali nikad ne smije sadržavati ksilitol, a Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
-    "sv": "Gör det helst inte till en vana. Vissa veterinärer menar att naturellt jordnötssmör kan vara en godbit någon gång ibland, men det får aldrig innehålla xylitol, och Cats Protection råder till att hålla sig till kattgodis i stället för människomat."
+    "sv": "Gör det helst inte till en vana. Vissa veterinärer menar att naturellt jordnötssmör kan vara en godbit någon gång ibland, men det får aldrig innehålla xylitol, och Cats Protection råder till att hålla sig till kattgodis i stället för människomat.",
+    "da": "Helst ikke som en fast vane. Nogle dyrlæger mener at naturel peanutbutter kan være en godbid en gang imellem, men den må aldrig indeholde xylitol, og Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad."
   },
   "why": {
     "en": "Sources disagree. VCA describes natural peanut butter as a treat cats love, as long as it is free of preservatives and life-threatening additives such as xylitol. Cats Protection advises sticking to cat treats rather than human foods and warns that nuts can cause problems for cats. We use the stricter level.",
@@ -70,7 +74,8 @@
     "pl": "Źródła się różnią. VCA opisuje naturalne masło orzechowe jako smakołyk, który koty uwielbiają, pod warunkiem że nie zawiera konserwantów ani zagrażających życiu dodatków, takich jak ksylitol. Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia i ostrzega, że orzechy mogą sprawiać kotom problemy. Przyjmujemy surowszą ocenę.",
     "cs": "Zdroje se rozcházejí. VCA popisuje přírodní arašídové máslo jako pamlsek, který kočky milují, pokud neobsahuje konzervanty a život ohrožující přísady, jako je xylitol. Cats Protection doporučuje držet se pamlsků pro kočky místo lidského jídla a varuje, že ořechy mohou kočkám způsobit potíže. Používáme přísnější hodnocení.",
     "hr": "Izvori se ne slažu. VCA opisuje prirodni maslac od kikirikija kao poslasticu koju mačke obožavaju, pod uvjetom da nema konzervansa ni po život opasnih dodataka kao što je ksilitol. Cats Protection savjetuje držati se poslastica za mačke umjesto ljudske hrane i upozorava da orašasti plodovi mačkama mogu stvarati probleme. Primjenjujemo strožu razinu.",
-    "sv": "Källorna är oense. VCA beskriver naturellt jordnötssmör som en godbit som katter älskar, så länge det är fritt från konserveringsmedel och livsfarliga tillsatser som xylitol. Cats Protection råder till att hålla sig till kattgodis i stället för människomat och varnar för att nötter kan ge katter problem. Vi använder den strängare nivån."
+    "sv": "Källorna är oense. VCA beskriver naturellt jordnötssmör som en godbit som katter älskar, så länge det är fritt från konserveringsmedel och livsfarliga tillsatser som xylitol. Cats Protection råder till att hålla sig till kattgodis i stället för människomat och varnar för att nötter kan ge katter problem. Vi använder den strängare nivån.",
+    "da": "Kilderne er uenige. VCA beskriver naturel peanutbutter som en godbid katte elsker så længe den er fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol. Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad og advarer om at nødder kan give katte problemer. Vi bruger det strengere niveau."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Kräkningar",
       "Diarré",
       "Orolig mage"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Dårlig mave"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "pl": "Liźnięcie zwykłego masła orzechowego raczej nie jest groźne; obserwuj, czy kot nie wymiotuje i nie ma biegunki. Jeśli masło orzechowe zawiera ksylitol, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, zapisz, ile kot zjadł, i nie czekaj na objawy.",
     "cs": "Olíznutí obyčejného arašídového másla pravděpodobně nebude nic vážného; sledujte, zda se neobjeví zvracení nebo průjem. Pokud arašídové máslo obsahuje xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, kolik ho kočka snědla, a nečekejte na příznaky.",
     "hr": "Jedno liznuće običnog maslaca od kikirikija vjerojatno nije ozbiljno; prati pojavu povraćanja ili proljeva. Ako maslac od kikirikija sadrži ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zabilježi koliko je pojedeno i ne čekaj da se pojave znakovi.",
-    "sv": "Om katten bara har slickat i sig lite naturellt jordnötssmör är det sannolikt inte allvarligt; håll utkik efter kräkningar eller diarré. Om jordnötssmöret innehåller xylitol, vänd dig direkt till din veterinär eller en giftrådgivning för djur, notera hur mycket katten åt och vänta inte på symtom."
+    "sv": "Om katten bara har slickat i sig lite naturellt jordnötssmör är det sannolikt inte allvarligt; håll utkik efter kräkningar eller diarré. Om jordnötssmöret innehåller xylitol, vänd dig direkt till din veterinär eller en giftrådgivning för djur, notera hur mycket katten åt och vänta inte på symtom.",
+    "da": "Et enkelt slik naturel peanutbutter er næppe alvorligt; hold øje med opkast eller diarré. Hvis peanutbutteren indeholder xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr, skrive ned hvor meget der er spist, og ikke vente på symptomer."
   },
   "serving": {
     "en": "If your vet is happy with it: natural peanut butter only, with no xylitol or preservatives, as a rare lick, not a habit.",
@@ -160,7 +171,8 @@
     "pl": "Jeśli weterynarz się zgodzi: tylko naturalne masło orzechowe, bez ksylitolu i konserwantów, rzadko odrobina do polizania, nie jako stały zwyczaj.",
     "cs": "Pokud s tím veterinář souhlasí: jen přírodní arašídové máslo bez xylitolu a konzervantů, výjimečně na olíznutí, ne pravidelně.",
     "hr": "Ako se veterinar slaže: samo prirodni maslac od kikirikija, bez ksilitola i konzervansa, rijetko i tek za liznuti, a ne kao navika.",
-    "sv": "Om veterinären tycker att det går bra: bara naturellt jordnötssmör, utan xylitol och konserveringsmedel, bara lite att slicka på någon enstaka gång, inte som en vana."
+    "sv": "Om veterinären tycker att det går bra: bara naturellt jordnötssmör, utan xylitol och konserveringsmedel, bara lite att slicka på någon enstaka gång, inte som en vana.",
+    "da": "Hvis din dyrlæge synes det er i orden: kun naturel peanutbutter uden xylitol og konserveringsmidler, som et sjældent slik – ikke som en vane."
   },
   "child": {
     "en": "Peanut butter is a people food. Ask a grown-up before sharing anything with your cat.",
@@ -174,7 +186,8 @@
     "pl": "Masło orzechowe to jedzenie dla ludzi. Zanim podzielisz się czymś z kotem, zapytaj dorosłego.",
     "cs": "Arašídové máslo je jídlo pro lidi. Než se s kočkou o něco podělíš, zeptej se dospělého.",
     "hr": "Maslac od kikirikija hrana je za ljude. Prije nego što s macom išta podijeliš, pitaj odraslu osobu.",
-    "sv": "Jordnötssmör är mat för människor. Fråga en vuxen innan du delar något med din katt."
+    "sv": "Jordnötssmör är mat för människor. Fråga en vuxen innan du delar något med din katt.",
+    "da": "Peanutbutter er menneskemad. Spørg en voksen før du deler noget med din kat."
   },
   "faq": [
     {
@@ -190,7 +203,8 @@
         "pl": "Dlaczego ksylitol ma znaczenie?",
         "cs": "Proč záleží na xylitolu?",
         "hr": "Zašto je ksilitol važan?",
-        "sv": "Varför spelar xylitol roll?"
+        "sv": "Varför spelar xylitol roll?",
+        "da": "Hvorfor er xylitol vigtigt?"
       },
       "a": {
         "en": "Xylitol is a sweetener added to some peanut butters. VCA calls it a life-threatening additive, so always check the label.",
@@ -204,7 +218,8 @@
         "pl": "Ksylitol to słodzik dodawany do niektórych maseł orzechowych. VCA nazywa go dodatkiem zagrażającym życiu, więc zawsze sprawdzaj etykietę.",
         "cs": "Xylitol je sladidlo, které se přidává do některých arašídových másel. VCA ho označuje za život ohrožující přísadu, proto vždy kontrolujte složení na obalu.",
         "hr": "Ksilitol je sladilo koje se dodaje u neke maslace od kikirikija. VCA ga naziva po život opasnim dodatkom, zato uvijek provjeri deklaraciju.",
-        "sv": "Xylitol är ett sötningsmedel som tillsätts i vissa jordnötssmör. VCA kallar det en livsfarlig tillsats, så kolla alltid innehållsförteckningen."
+        "sv": "Xylitol är ett sötningsmedel som tillsätts i vissa jordnötssmör. VCA kallar det en livsfarlig tillsats, så kolla alltid innehållsförteckningen.",
+        "da": "Xylitol er et sødemiddel der er tilsat noget peanutbutter. VCA kalder det et livsfarligt tilsætningsstof, så tjek altid varedeklarationen."
       }
     }
   ],
@@ -295,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1fa319e9bb79993c93cd5f29c4eddf170a0e0926b953446584ea9529577a437a"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "73fbe040702984d9751a7b2cb9bbc0873e7e26ed638fcce09273ca21eba80c9a"
     }
   }
 }

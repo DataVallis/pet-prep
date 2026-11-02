@@ -13,7 +13,8 @@
     "pl": "Czekolada",
     "cs": "Čokoláda",
     "hr": "Čokolada",
-    "sv": "Choklad"
+    "sv": "Choklad",
+    "da": "Chokolade"
   },
   "question": {
     "en": "Can cats eat chocolate?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść czekoladę?",
     "cs": "Mohou kočky jíst čokoládu?",
     "hr": "Smiju li mačke jesti čokoladu?",
-    "sv": "Får katter äta choklad?"
+    "sv": "Får katter äta choklad?",
+    "da": "Må katte spise chokolade?"
   },
   "url_slug": {
     "en": "chocolate",
@@ -41,7 +43,8 @@
     "pl": "czekolada",
     "cs": "cokolada",
     "hr": "cokolada",
-    "sv": "choklad"
+    "sv": "choklad",
+    "da": "chokolade"
   },
   "level": "toxic",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Nie. Czekolada jest dla kotów toksyczna. Zawiera teobrominę i kofeinę, z którymi koty słabo sobie radzą, a im ciemniejsza i bardziej gorzka czekolada, tym groźniejsza. Jeśli kot zje choć trochę, od razu zadzwoń do weterynarza.",
     "cs": "Ne. Čokoláda je pro kočky toxická. Obsahuje theobromin a kofein, se kterými se kočky vyrovnávají špatně, a čím tmavší a hořčí čokoláda, tím je nebezpečnější. Pokud ji kočka sní, okamžitě zavolejte veterináři.",
     "hr": "Ne. Čokolada je otrovna za mačke. Sadrži teobromin i kofein, koje mačke slabo podnose, a što je čokolada tamnija i gorča, to je opasnija. Ako tvoja mačka pojede imalo čokolade, odmah nazovi veterinara.",
-    "sv": "Nej. Choklad är giftig för katter. Den innehåller teobromin och koffein, som katter tål dåligt, och ju mörkare och bittrare chokladen är, desto farligare är den. Om katten äter någon choklad, ring veterinären direkt."
+    "sv": "Nej. Choklad är giftig för katter. Den innehåller teobromin och koffein, som katter tål dåligt, och ju mörkare och bittrare chokladen är, desto farligare är den. Om katten äter någon choklad, ring veterinären direkt.",
+    "da": "Nej. Chokolade er giftig for katte. Den indeholder theobromin og koffein, som katte har svært ved at tåle, og jo mørkere og mere bitter chokoladen er, desto farligere er den. Hvis din kat spiser noget af det, så ring straks til din dyrlæge."
   },
   "why": {
     "en": "Chocolate contains theobromine and caffeine. Cats process these substances differently from people, which makes them more sensitive to their effects. Because cats struggle to break down theobromine, it stays in the blood and can quickly build up to dangerous levels. Dark and bitter chocolate carries the most risk; white chocolate has the least theobromine.",
@@ -70,7 +74,8 @@
     "pl": "Czekolada zawiera teobrominę i kofeinę. Koty przetwarzają te substancje inaczej niż ludzie, dlatego są bardziej wrażliwe na ich działanie. Ponieważ koty z trudem rozkładają teobrominę, pozostaje ona we krwi i może szybko osiągnąć niebezpieczny poziom. Największe ryzyko niesie czekolada ciemna i gorzka; biała czekolada zawiera najmniej teobrominy.",
     "cs": "Čokoláda obsahuje theobromin a kofein. Kočky tyto látky zpracovávají jinak než lidé, a proto jsou na jejich účinky citlivější. Protože kočky theobromin jen obtížně odbourávají, zůstává v krvi a může rychle dosáhnout nebezpečné hladiny. Největší riziko představuje tmavá a hořká čokoláda; bílá čokoláda obsahuje theobrominu nejméně.",
     "hr": "Čokolada sadrži teobromin i kofein. Mačke te tvari razgrađuju drukčije od ljudi, zbog čega su osjetljivije na njihovo djelovanje. Budući da mačke teško razgrađuju teobromin, on ostaje u krvi i može brzo doseći opasne razine. Najveći rizik nose tamna i gorka čokolada; bijela čokolada ima najmanje teobromina.",
-    "sv": "Choklad innehåller teobromin och koffein. Katter bryter ner de här ämnena på ett annat sätt än människor, vilket gör dem känsligare för effekterna. Eftersom katter har svårt att bryta ner teobromin stannar det kvar i blodet och kan snabbt nå farliga nivåer. Mörk och bitter choklad innebär störst risk; vit choklad innehåller minst teobromin."
+    "sv": "Choklad innehåller teobromin och koffein. Katter bryter ner de här ämnena på ett annat sätt än människor, vilket gör dem känsligare för effekterna. Eftersom katter har svårt att bryta ner teobromin stannar det kvar i blodet och kan snabbt nå farliga nivåer. Mörk och bitter choklad innebär störst risk; vit choklad innehåller minst teobromin.",
+    "da": "Chokolade indeholder theobromin og koffein. Katte omsætter disse stoffer anderledes end mennesker, og det gør dem mere følsomme over for virkningerne. Fordi katte har svært ved at nedbryde theobromin, bliver det i blodet og kan hurtigt ophobes til farlige niveauer. Mørk og bitter chokolade giver den største risiko; hvid chokolade indeholder mindst theobromin."
   },
   "signs": {
     "en": [
@@ -180,6 +185,15 @@
       "Kissar mer än vanligt",
       "Mycket snabb puls",
       "I svåra fall: muskelskakningar eller kramper"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Øget tørst",
+      "Pesen eller uro",
+      "Tisser mere end normalt",
+      "Hurtig puls",
+      "I alvorlige tilfælde: muskelrystelser eller kramper"
     ]
   },
   "what_to_do": {
@@ -194,7 +208,8 @@
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego. Zapisz, jaką czekoladę zjadł twój kot, ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku. Poznamenejte si, jaký druh čokolády kočka snědla, kolik a kdy, a obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro. Zapiši koju je vrstu čokolade mačka pojela, koliko i kada te sačuvaj omot. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
-    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra. Notera vilken sorts choklad katten åt, hur mycket och när, och spara omslaget. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
+    "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra. Notera vilken sorts choklad katten åt, hur mycket och när, och spara omslaget. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker upåvirket. Skriv ned hvilken slags chokolade din kat har spist, hvor meget og hvornår, og gem indpakningen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
   },
   "serving": null,
   "child": {
@@ -209,7 +224,8 @@
     "pl": "Czekolada to smakołyk dla ludzi, nie dla kotów. Chowaj ją, a jeśli kotek jakąś znajdzie, powiedz dorosłemu.",
     "cs": "Čokoláda je mlsání pro lidi, ne pro kočky. Měj ji uklizenou, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Čokolada je poslastica za ljude, a ne za mace. Drži je spremljenu i reci odrasloj osobi ako je maca pronađe.",
-    "sv": "Choklad är godis för människor, inte för katter. Lägg undan den, och säg till en vuxen om katten hittar någon."
+    "sv": "Choklad är godis för människor, inte för katter. Lägg undan den, och säg till en vuxen om katten hittar någon.",
+    "da": "Chokolade er en godbid for mennesker, ikke for katte. Læg den væk, og sig det til en voksen hvis din kat finder noget."
   },
   "faq": [
     {
@@ -225,7 +241,8 @@
         "pl": "Czy biała czekolada jest bezpieczna dla kotów?",
         "cs": "Je bílá čokoláda pro kočky bezpečná?",
         "hr": "Je li bijela čokolada sigurna za mačke?",
-        "sv": "Är vit choklad säker för katter?"
+        "sv": "Är vit choklad säker för katter?",
+        "da": "Er hvid chokolade sikker for katte?"
       },
       "a": {
         "en": "White chocolate has the least theobromine, while darker, more bitter chocolate is the most dangerous. Keep all chocolate out of your cat's reach and call your vet if your cat eats any.",
@@ -239,7 +256,8 @@
         "pl": "Biała czekolada zawiera najmniej teobrominy, a najgroźniejsza jest czekolada ciemniejsza i bardziej gorzka. Trzymaj każdą czekoladę poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot zje choć trochę.",
         "cs": "Bílá čokoláda obsahuje theobrominu nejméně, zatímco nejnebezpečnější je tmavší a hořčí čokoláda. Veškerou čokoládu uchovávejte mimo dosah kočky, a pokud ji kočka sní, zavolejte veterináři.",
         "hr": "Bijela čokolada ima najmanje teobromina, a tamnija i gorča čokolada najopasnija je. Svu čokoladu drži izvan dosega mačke i nazovi veterinara ako tvoja mačka pojede imalo čokolade.",
-        "sv": "Vit choklad innehåller minst teobromin, medan mörkare och bittrare choklad är farligast. Håll all choklad utom räckhåll för katten och ring veterinären om katten äter någon choklad."
+        "sv": "Vit choklad innehåller minst teobromin, medan mörkare och bittrare choklad är farligast. Håll all choklad utom räckhåll för katten och ring veterinären om katten äter någon choklad.",
+        "da": "Hvid chokolade indeholder mindst theobromin, mens mørkere og mere bitter chokolade er farligst. Hold al chokolade uden for kattens rækkevidde, og ring til din dyrlæge hvis din kat spiser noget af det."
       }
     },
     {
@@ -255,7 +273,8 @@
         "pl": "Dlaczego koty są bardziej wrażliwe niż ludzie?",
         "cs": "Proč jsou kočky citlivější než lidé?",
         "hr": "Zašto su mačke osjetljivije od ljudi?",
-        "sv": "Varför är katter känsligare än människor?"
+        "sv": "Varför är katter känsligare än människor?",
+        "da": "Hvorfor er katte mere følsomme end mennesker?"
       },
       "a": {
         "en": "Cats process theobromine and caffeine differently from people. Theobromine stays in a cat's bloodstream and can quickly reach dangerous levels.",
@@ -269,7 +288,8 @@
         "pl": "Koty przetwarzają teobrominę i kofeinę inaczej niż ludzie. Teobromina pozostaje we krwi kota i może szybko osiągnąć niebezpieczny poziom.",
         "cs": "Kočky zpracovávají theobromin a kofein jinak než lidé. Theobromin zůstává v kočičím krevním oběhu a může rychle dosáhnout nebezpečné hladiny.",
         "hr": "Mačke razgrađuju teobromin i kofein drukčije od ljudi. Teobromin ostaje u mačjoj krvi i može brzo doseći opasne razine.",
-        "sv": "Katter bryter ner teobromin och koffein på ett annat sätt än människor. Teobromin stannar kvar i kattens blod och kan snabbt nå farliga nivåer."
+        "sv": "Katter bryter ner teobromin och koffein på ett annat sätt än människor. Teobromin stannar kvar i kattens blod och kan snabbt nå farliga nivåer.",
+        "da": "Katte omsætter theobromin og koffein anderledes end mennesker. Theobromin bliver i kattens blod og kan hurtigt nå farlige niveauer."
       }
     }
   ],
@@ -418,6 +438,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bea62d812364bc142333a74106cc38b09936d2d1195673586d2c10506cd1270c"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b5df82d5a0e9b6d4fe96ba2039cd1a996cdf52d5f8eee8e1067d289a8307d88b"
     }
   }
 }
