@@ -3190,6 +3190,40 @@
         }
       ],
       "notes": "Not RKC-registered → no RKC minimum / best_practice level. Rat Terrier Club of America health statement (K39, June 2025) lists the required tests 'Cardiac Evaluation', 'Hip Dysplasia', 'Patellar Luxation', 'Primary Lens Luxation (DNA)' (the statement does not say verbatim that they apply to breeding dogs — paraphrase), optional tests listed separately (not taken). AKC Terrier Group health-testing page (K38): recommended by the national breed club 'Patella Evaluation', 'Hip Evaluation', 'Cardiac Exam', 'Primary Lens Luxation (PLL) - DNA Test' — the same four. No new key."
+    },
+    "greater_swiss_mountain_dog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S654",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "To support the breed's health, responsible breeders should ensure they complete all tests in both categories."
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S654",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S654",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S654",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S654, 2026-11-02, UK name 'Great Swiss Mountain Dog'): minimum 'Prioritising genetic diversity'; Best Practice BVA/KC elbow and hip schemes. No new test key."
     }
   }
 }
