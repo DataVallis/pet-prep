@@ -2180,5 +2180,28 @@ return [
                 ['tag' => 'food_motivated_weight', 'source_ids' => ['S648'], 'refs' => ['rat_terrier.behaviour.food_motivation']],
             ],
         ],
+        // M5-R10-86: greater_swiss_mountain_dog.* (S652–S659), runbook rules (data.json
+        // proposed_game_parameters.greater_swiss_mountain_dog.suitability_tags). RKC Breed Watch Category 1 → no welfare chip;
+        // no chases_small_pets (herding instinct, no verbatim prey drive), no needs_company (VCA "Fine as a trained adult").
+        'greater_swiss_mountain_dog' => [
+            'suits' => [
+                // S656 "This makes them great family dogs who are gentle with children."
+                ['tag' => 'family_pet', 'source_ids' => ['S656'], 'refs' => ['greater_swiss_mountain_dog.behaviour.family']],
+                // S656 same sentence; supervision caveat kept in data.json notes → not small_children.
+                ['tag' => 'children', 'source_ids' => ['S656'], 'refs' => ['greater_swiss_mountain_dog.behaviour.family']],
+                // S654 "Size of home: Large house" + "Size of garden: Large garden".
+                ['tag' => 'large_home', 'source_ids' => ['S654'], 'refs' => ['greater_swiss_mountain_dog.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S656 "Swissies need to stay active and mentally stimulated thanks to their hardworking history."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S656'], 'refs' => ['greater_swiss_mountain_dog.exercise.mental']],
+                // S654 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S654'], 'refs' => ['greater_swiss_mountain_dog.suitability.rkc_shedding']],
+                // S658 "The breed does have problems with obesity, so keep treats to a minimum …"
+                ['tag' => 'food_motivated_weight', 'source_ids' => ['S658'], 'refs' => ['greater_swiss_mountain_dog.behaviour.food_motivation']],
+                // S657 "Care must be taken during even mild weather to limit exercise to the coolest times of day."
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S657'], 'refs' => ['greater_swiss_mountain_dog.exercise.heat']],
+            ],
+        ],
     ],
 ];
