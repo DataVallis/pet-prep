@@ -1069,6 +1069,17 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_SHAR_PEI = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-87)';
 
     /**
+     * M5-R10-88 Brussels Griffon (unattended run 2026-11-03, data.json
+     * proposed_game_parameters.brussels_griffon.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 30 min (RKC S670
+     * "Up to 30 minutes per day"), senior 23 min, puppy 10 min × age capped at 30, stages young 9 / adult 36 /
+     * senior 108 (0.75 × RKC lower bound 12 y — no McMillan 2024 / VetCompass median reachable), arrival 2 / 9 / 36 /
+     * 108, learning multiplier 0.7 (Coren rank 59, Fair); care rates the Border Collie's. Open: brushing 2× a week
+     * (PROPOSED_R13_BRUSSELS_GRIFFON).
+     */
+    public const CONFIRMED_R10_BRUSSELS_GRIFFON = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-88)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1182,6 +1193,8 @@ class BreedStageParamsSeeder extends Seeder
      * (S636) and PetMD "regular brushing" (S635) give none either → the M5-R13 fallback 2 per week, verified=false.
      */
     public const PROPOSED_R13_LAGOTTO_ROMAGNOLO = 'predlog Claude 2026-10-31 (RKC »More than once a week« brez števila, tudi Woodgreen / PetMD brez števila → 2, M5-R13, M5-R10-82) — čaka Davida';
+
+    public const PROPOSED_R13_BRUSSELS_GRIFFON = 'predlog Claude 2026-11-03 (RKC »More than once a week« brez števila; PetMD: grobodlaki 1×, gladkodlaki dnevno do tedensko → 2, M5-R13, M5-R10-88) — čaka Davida';
 
     /**
      * M5-R14 / R15 / R18 / R19 / R20 (David 2026-10-24): every breed care task row is
@@ -1348,6 +1361,11 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S656', 'Greater Swiss Mountain Dogs require weekly ear cleanings to prevent infections from developing.', 'proposed_game_parameters.greater_swiss_mountain_dog.ear_care', '"weekly ear cleanings" → once a week (VCA S657 the same)'],
             'nail_trim' => [1, 'week', 'S657', 'Weekly ear cleanings and pedicures, plus periodic baths, will keep this dog looking his very best.', 'proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming', '"Weekly … pedicures" → once a week (WebMD S658 "as needed" — alternative; baths "periodic" → no reminder)'],
         ],
+        'brussels_griffon' => [
+            'fold_cleaning' => [1, 'week', 'S672', 'Their face folds should be cleaned around once a week.', 'proposed_game_parameters.brussels_griffon.face_fold_cleaning', '"around once a week" → once a week'],
+            'tooth_brushing' => [7, 'day', 'S672', 'Brussels Griffons will likely benefit from daily at-home tooth brushing', 'proposed_game_parameters.brussels_griffon.tooth_brushing', '"daily at-home tooth brushing" → every day'],
+            'groomer_visit' => [1, 'month', 'S672', 'requiring professional grooming every four to eight weeks in addition to occasional baths and weekly brushing.', 'proposed_game_parameters.brussels_griffon.professional_grooming', '"every four to eight weeks" → the lower bound, 4 weeks (rough coat; baths "occasional", nails / ears "regularly" → no task)'],
+        ],
     ];
 
     /**
@@ -1362,6 +1380,7 @@ class BreedStageParamsSeeder extends Seeder
         'bulldog' => ['S180', 'they should never be exercised in the heat of the day as they are prone to overheating', 'proposed_game_parameters.bulldog.no_exercise_in_heat'],
         'boston_terrier' => ['S259', 'but it’s important to remember that they should never be exercised in the heat of the day as they are prone to overheating.', 'proposed_game_parameters.boston_terrier.no_exercise_in_heat'],
         'pug' => ['S357', 'You will also need to avoid exercising them in the heat as this can cause even more problems', 'proposed_game_parameters.pug.no_exercise_in_heat'],
+        'brussels_griffon' => ['S672', 'Care should be taken to limit exercise and extended periods of time outside during the summer months', 'proposed_game_parameters.brussels_griffon.no_exercise_in_heat'],
     ];
 
     /**
@@ -1452,6 +1471,7 @@ class BreedStageParamsSeeder extends Seeder
         'rat_terrier' => [1, 'S647', 'Brushing once a week will remove dead hair.', 'high', false],
         'greater_swiss_mountain_dog' => [1, 'S654', 'Once a week', 'high', false],
         'shar_pei' => [1, 'S664', 'Once a week', 'high', false],
+        'brussels_griffon' => [2, 'S670', 'More than once a week', 'low', true, self::PROPOSED_R13_BRUSSELS_GRIFFON],
     ];
 
     /**
@@ -1595,13 +1615,14 @@ class BreedStageParamsSeeder extends Seeder
         'rat_terrier' => ['S648', 'Early (and consistent!) socialization and training is a must.'],
         'greater_swiss_mountain_dog' => ['S656', 'Early and consistent socialization is equally important for them to grow into well-mannered companions.'],
         'shar_pei' => ['S660', 'socialise your Shar Pei from a young age with lots of different people, experiences and other dogs'],
+        'brussels_griffon' => ['S672', 'However, early and consistent socialization can help them feel more confident and comfortable.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2408,6 +2429,7 @@ class BreedStageParamsSeeder extends Seeder
             // M5-R10-87 (docs/research/dog-data/data.json shar_pei,
             // S660–S668; runbook rules in proposed_game_parameters.shar_pei).
             BreedType::SharPei => self::sharPeiProfile(),
+            BreedType::BrusselsGriffon => self::brusselsGriffonProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -8499,6 +8521,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'shar_pei.lifespan.median_uk',
                 'quote' => 'The median longevity of 190 Shar Pei that died during the study period was 7.28 years (IQR 5.04-10.05, range 0.04-15.04).',
                 'notes' => 'VetCompass median (O\'Neill et al. 2023, S667); RKC / PDSA "Over 10 years" (S664 / S660), VCA 8–10 y (S661); McMillan 2024 not reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Brussels Griffon (M5-R10-88). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_BRUSSELS_GRIFFON); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function brusselsGriffonProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_BRUSSELS_GRIFFON;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S670', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.brussels_griffon.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a toy dog is full-grown at 8–12 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [108, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 12 years" (S670) = 9 y = 108 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 120 (McMillan 13.3 y only via Wikipedia S673, tier C), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 108],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brussels_griffon.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (8–12 months for a toy dog, S10); capped at the adult 30 minutes, which 10 × age reaches at 3 months.',
+            'adult_minutes' => [30, [
+                'unit' => 'minutes/day', 'source_id' => 'S670', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brussels_griffon.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Up to 30 minutes per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 30 minutes per day" (S670) → 30 min = 3,000 steps (runbook rule: "up to N" → N). PetMD (S672) "up to 30 minutes of moderate activity or neighborhood walks per day" agrees.',
+            ]],
+            'senior_minutes' => [23, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brussels_griffon.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 30 minutes = 22.5 → 23 min (half up) = 2,300 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[3.5, 6], [
+                'unit' => 'kg', 'source_id' => 'S669', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'brussels_griffon.adult_weight.fci',
+                'quote' => 'Varie de 3,5 à 6 kg.',
+                'notes' => 'FCI-Standard N° 80 (S669), one range for the three Belgian small dogs; KC 3.2–5 kg (S671) and PetMD 6–14 lb (S672) are alternatives.',
+            ]],
+            'growth_end' => [[8, 12], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'brussels_griffon.growth.adult_weight_reached',
+                'quote' => 'Toy (5–12 pounds): 8–12 months',
+                'notes' => 'Size-class value, not breed-specific (3.5–6 kg ≈ 7.7–13.2 lb, S669 → almost entirely the Toy class of S10).',
+            ]],
+            'coren_rank' => [59, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'brussels_griffon.trainability.coren_rank',
+                'notes' => 'Coren rank 59 "Griffon Bruxellois" (shared with the Maltese), tier Fair Working/Obedience Intelligence (ranks 55–69) — Wikipedia table (S35, checked 2026-11-03).',
+            ]],
+            'learning_multiplier' => [0.7, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.brussels_griffon.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 59 = Fair (S35) → 0.7 (PetMD S672: smart and easy to train with positive reinforcement, sensitive to harsh correction). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [12, [
+                'unit' => 'years', 'source_id' => 'S670', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'brussels_griffon.lifespan.rkc',
+                'quote' => 'Over 12 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S670); PetMD 12–15 y (S672) is consistent. No McMillan 2024 value reachable (13.3 y only via Wikipedia S673, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

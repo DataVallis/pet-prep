@@ -569,6 +569,13 @@ return [
         ['key' => 'chocolate', 'value' => 'solid chocolate brown', 'en' => 'Chocolate', 'sl' => 'Čokoladno rjav'],
         ['key' => 'blue', 'value' => 'solid blue (dilute slate blue-grey)', 'en' => 'Blue', 'sl' => 'Moder (modro siv)'],
     ],
+    // M5-R10-88: KC breed standard (S671) "Clear red, black, or black and rich tan, without white markings."; red = the
+    // portrait default (the only FCI N° 80 colour, S669).
+    'brussels_griffon' => [
+        ['key' => 'red', 'value' => 'clear red', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black-tan', 'value' => 'black and rich tan, no white markings', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'black', 'value' => 'solid black, no white markings', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

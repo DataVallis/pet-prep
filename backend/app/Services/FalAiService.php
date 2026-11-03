@@ -724,6 +724,12 @@ class FalAiService
                 .'moderate loose skin with a few wrinkles on the forehead and withers only, eyes clearly open, '
                 .'a broad flat skull with a broad, padded muzzle and a large nose, very small thick triangular ears folded forward, '
                 .'a thick high-set tail curled over the back, calm and alert expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-88: KC breed standard (S671) / FCI-Standard N° 80 (S669) — a cobby, square toy dog with a harsh, wiry rough
+            // coat; flat-faced welfare breed (PetMD S672) → a moderate short face, open nostrils.
+            BreedType::BrusselsGriffon => 'A small, cobby, square Brussels Griffon toy dog with a harsh, wiry rough coat with a beard and whiskers, '
+                .'clear red or black and tan without white markings, a fairly large rounded head with a moderate short muzzle (not extreme), '
+                .'a visible black nose with clearly open nostrils, very dark round eyes that do not bulge, small semi-erect natural ears, '
+                .'a natural high-set tail, lively and alert expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1754,6 +1760,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'very short, harsh, bristly coat',
                 'markings' => 'one solid colour, moderate wrinkles on the forehead and withers only, eyes clearly open, never white, brindle or patches',
+            ],
+            // M5-R10-88: KC standard colours only (S671); never white markings, merle or brindle.
+            BreedType::BrusselsGriffon => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1 => 'clear red',
+                    2 => 'black and rich tan',
+                },
+                'eye_color' => 'very dark brown',
+                'fur_texture' => 'harsh, wiry rough coat with a beard',
+                'markings' => 'no white markings, moderate short face with open nostrils, never merle or brindle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

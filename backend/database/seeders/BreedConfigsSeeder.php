@@ -1792,6 +1792,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.shar_pei',
                 'search_keywords' => ['shar pei', 'shar-pei', 'sharpei', 'chinese shar-pei', 'chinese shar pei', 'šarpej', 'sarpej', 'šar pej', 'sar pej', 'kitajski šarpej', 'kitajski sarpej'],
             ],
+            // M5-R10-88 Brussels Griffon (docs/research/dog-data/data.json brussels_griffon, sources S669–S674; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.brussels_griffon.step_goal_adult: 30 min × 100 steps/min — RKC S670 "Up to 30 minutes per
+            // day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::BrusselsGriffon->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 820,
+                'label_key' => 'breeds.brussels_griffon',
+                'search_keywords' => ['brussels griffon', 'griffon bruxellois', 'griffon', 'belgium griffon', 'bruseljski grifon', 'grifon', 'grifon bruxellois'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

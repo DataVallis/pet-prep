@@ -102,6 +102,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   rat_terrier: 'dog',
   greater_swiss_mountain_dog: 'dog',
   shar_pei: 'dog',
+  brussels_griffon: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -208,6 +209,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'rat_terrier',
   'greater_swiss_mountain_dog',
   'shar_pei',
+  'brussels_griffon',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

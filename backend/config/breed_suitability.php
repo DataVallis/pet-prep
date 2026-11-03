@@ -2234,5 +2234,26 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S660'], 'refs' => ['shar_pei.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-88 Brussels Griffon — flat-faced welfare breed (PetMD S672 brachycephalic + hot, humid weather; RKC Breed Watch
+        // Category 2 and BOAS respiratory grading, S670): brachycephalic_breathing. No new vocabulary key.
+        'brussels_griffon' => [
+            'suits' => [
+                // S670 "Size of home: Flat/ Apartment"; "Size of garden: Small/ medium garden"
+                ['tag' => 'apartment', 'source_ids' => ['S670'], 'refs' => ['brussels_griffon.suitability.rkc_size_of_home', 'brussels_griffon.suitability.rkc_size_of_garden']],
+                // S672 "Brussels Griffons typically do well in families with children, other dogs, or cats," (supervision recommended)
+                ['tag' => 'children', 'source_ids' => ['S672'], 'refs' => ['brussels_griffon.behaviour.children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S672'], 'refs' => ['brussels_griffon.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S672 "Brussels Griffons belong to a class of dogs called brachycephalic dogs," — "more sensitive to hot, humid weather."
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S672'], 'refs' => ['brussels_griffon.health.brachycephaly', 'brussels_griffon.exercise.heat_and_walk_timing']],
+                // S672 "They are considered “Velcro dogs” and don’t like to be left alone for extended periods of time."
+                ['tag' => 'needs_company', 'source_ids' => ['S672'], 'refs' => ['brussels_griffon.behaviour.time_alone']],
+                // S670 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S670'], 'refs' => ['brussels_griffon.suitability.rkc_shedding']],
+                // S670 "Grooming: More than once a week"; S672 professional grooming every four to eight weeks (rough coat).
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S670', 'S672'], 'refs' => ['brussels_griffon.suitability.rkc_grooming', 'brussels_griffon.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

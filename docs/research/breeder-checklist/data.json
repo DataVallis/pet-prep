@@ -3265,6 +3265,40 @@
         }
       ],
       "notes": "RKC breed page (dog-data S664, 2026-11-02; the page heads the first group 'Good Practice'): minimum the BVA/KC/ISDS eye scheme; Best Practice the POAG/PLL DNA test, BVA/KC elbow and hip schemes ('Sheme' sic, as returned). New test key dna_poag_pll (one combined RKC DNA test; dna_poag and dna_pll exist separately for other breeds)."
+    },
+    "brussels_griffon": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S670",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "These tests address conditions that are still significant for the breed"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S670",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S670",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "boas_grading",
+          "level": "best_practice",
+          "name": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme",
+          "source_id": "S670",
+          "quote": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) using the KC Respiratory Function Grading scheme."
+        }
+      ],
+      "notes": "RKC breed page (dog-data S670, 2026-11-03; 'Good Practice schemes and tests' = minimum, 'Best Practice schemes and tests'): minimum 'Prioritising genetic diversity' (inbreeding_coi, Dachshund / Shetland Sheepdog precedent); Best Practice the BVA/KC/ISDS eye scheme and the KC Respiratory Function Grading for BOAS ('NEW test recognised Aug 2026'). No new test key."
     }
   }
 }

@@ -74,7 +74,8 @@ describe('M5-R10-55 Wirehaired Pointing Griffon', () => {
     expect(find('Francoski ostrodlaki ptičar')).toEqual(['wirehaired_pointing_griffon']);
     // M5-R10-65: »ostrodlaki ptičar« also finds the German Wirehaired Pointer (»nemški ostrodlaki ptičar«).
     expect(find('ostrodlaki pticar')).toEqual(['wirehaired_pointing_griffon', 'german_wirehaired_pointer']);
-    expect(find('grifon')).toEqual(['wirehaired_pointing_griffon']);
+    // M5-R10-88: »grifon« also finds the Brussels Griffon (»bruseljski grifon« — its own name, no way around it).
+    expect(find('grifon')).toEqual(['wirehaired_pointing_griffon', 'brussels_griffon']);
   });
 
   it('shows its chips in the picker, quotes 12.000 / 9.000 steps and confirms as a challenge dog', () => {
