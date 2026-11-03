@@ -6386,7 +6386,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Grapefruit",
@@ -6401,7 +6402,8 @@
         "nl": "Grapefruit",
         "pl": "Grejpfrut",
         "sv": "Grapefrukt",
-        "da": "Grapefrugt"
+        "da": "Grapefrugt",
+        "fi": "Greippi"
       },
       "question": {
         "en": "Can cats eat grapefruit?",
@@ -6416,7 +6418,8 @@
         "nl": "Mogen katten grapefruit eten?",
         "pl": "Czy koty mogą jeść grejpfruta?",
         "sv": "Får katter äta grapefrukt?",
-        "da": "Må katte spise grapefrugt?"
+        "da": "Må katte spise grapefrugt?",
+        "fi": "Saako kissa syödä greippiä?"
       },
       "url_slug": {
         "en": "grapefruit",
@@ -6431,7 +6434,8 @@
         "nl": "grapefruit",
         "pl": "grejpfrut",
         "sv": "grapefrukt",
-        "da": "grapefrugt"
+        "da": "grapefrugt",
+        "fi": "greippi"
       },
       "answer": {
         "en": "No, it's best not to. The ASPCA lists the grapefruit plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep grapefruit for people.",
@@ -6446,7 +6450,8 @@
         "nl": "Nee, liever niet. De ASPCA noemt de grapefruitplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar grapefruit maar voor mensen.",
         "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo grejpfrutowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc grejpfruta zostaw dla ludzi.",
         "sv": "Nej, det är bäst att låta bli. ASPCA anger att grapefruktväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt grapefrukten vara människomat.",
-        "da": "Nej, det er bedst at lade være. ASPCA regner grapefrugtplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad grapefrugten være til os mennesker."
+        "da": "Nej, det er bedst at lade være. ASPCA regner grapefrugtplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad grapefrugten være til os mennesker.",
+        "fi": "Ei kannata. ASPCA luokittelee greippikasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja. Hedelmäliha on syötävää, mutta kuori ja muut kasvinosat voivat aiheuttaa ongelmia. Lisäksi sitrushedelmät ovat kissoille haitallisia, joten jätä greippi ihmisille."
       },
       "why": {
         "en": "The ASPCA lists the grapefruit plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -6461,7 +6466,8 @@
         "nl": "De ASPCA noemt de grapefruitplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
         "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota grejpfrutem.",
         "sv": "ASPCA anger att grapefruktväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
-        "da": "ASPCA regner grapefrugtplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele grapefrugten med katten."
+        "da": "ASPCA regner grapefrugtplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele grapefrugten med katten.",
+        "fi": "ASPCA luokittelee greippikasvin kissoille myrkylliseksi: siinä on eteerisiä öljyjä ja psoraleeneja, ja vaikka hedelmä on syötävä, kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Koska lähteet suhtautuvat asiaan eri tiukkuudella, noudatamme tiukempaa ohjetta emmekä suosittele greipin antamista kissalle."
       },
       "signs": {
         "en": [
@@ -6554,6 +6560,13 @@
           "Ubehag i maven",
           "Nedtrykthed",
           "Mulig hudirritation (dermatitis)"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Vatsavaivat",
+          "Alakuloisuus",
+          "Mahdollinen ihoärsytys (ihotulehdus)"
         ]
       },
       "what_to_do": {
@@ -6569,7 +6582,8 @@
         "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
         "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
         "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
-        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+        "fi": "Jos kissasi on syönyt kuorta, lehtiä tai muita kasvinosia tai sillä on oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin."
       },
       "serving": null,
       "child": {
@@ -6585,7 +6599,8 @@
         "nl": "Grapefruit is een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar grapefruit maar voor mensen.",
         "pl": "Grejpfrut to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc grejpfruta zostaw dla ludzi.",
         "sv": "Grapefrukt är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så den får vi människor äta själva.",
-        "da": "Grapefrugt er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad grapefrugten være til os."
+        "da": "Grapefrugt er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad grapefrugten være til os.",
+        "fi": "Greippi on ihmisten välipala. Kissat eivät tykkää sen tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä greippi ihmisille."
       },
       "faq": [
         {
@@ -6602,7 +6617,8 @@
             "nl": "Welk deel is het probleem?",
             "pl": "Która część szkodzi?",
             "sv": "Vilken del orsakar problemen?",
-            "da": "Hvilken del er problemet?"
+            "da": "Hvilken del er problemet?",
+            "fi": "Mikä osa on ongelma?"
           },
           "a": {
             "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -6617,7 +6633,8 @@
             "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
             "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
             "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+            "fi": "ASPCA:n mukaan hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
           }
         },
         {
@@ -6634,7 +6651,8 @@
             "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
             "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
             "sv": "Min katt smakade bara lite. Är det akut?",
-            "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+            "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+            "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
           },
           "a": {
             "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -6649,7 +6667,8 @@
             "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
             "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
             "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+            "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
           }
         },
         {
@@ -6666,7 +6685,8 @@
             "nl": "Waarom mijden katten citrus meestal?",
             "pl": "Dlaczego koty zwykle unikają cytrusów?",
             "sv": "Varför brukar katter undvika citrus?",
-            "da": "Hvorfor holder katte sig som regel fra citrus?"
+            "da": "Hvorfor holder katte sig som regel fra citrus?",
+            "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
           },
           "a": {
             "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -6681,7 +6701,8 @@
             "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
             "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
             "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+            "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
           }
         }
       ],
@@ -7250,7 +7271,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Honeydew melon",
@@ -7265,7 +7287,8 @@
         "nl": "Honingmeloen",
         "pl": "Melon miodowy",
         "sv": "Honungsmelon",
-        "da": "Honningmelon"
+        "da": "Honningmelon",
+        "fi": "Hunajameloni"
       },
       "question": {
         "en": "Can cats eat honeydew melon?",
@@ -7280,7 +7303,8 @@
         "nl": "Mogen katten honingmeloen eten?",
         "pl": "Czy koty mogą jeść melona miodowego?",
         "sv": "Får katter äta honungsmelon?",
-        "da": "Må katte spise honningmelon?"
+        "da": "Må katte spise honningmelon?",
+        "fi": "Saako kissa syödä hunajamelonia?"
       },
       "url_slug": {
         "en": "honeydew",
@@ -7295,7 +7319,8 @@
         "nl": "honingmeloen",
         "pl": "melon-miodowy",
         "sv": "honungsmelon",
-        "da": "honningmelon"
+        "da": "honningmelon",
+        "fi": "hunajameloni"
       },
       "answer": {
         "en": "Yes, a small piece of honeydew melon is fine as an occasional treat. The ASPCA lists honeydew as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
@@ -7310,7 +7335,8 @@
         "nl": "Ja, een klein stukje honingmeloen is af en toe prima als traktatie. De ASPCA noemt honingmeloen niet giftig voor katten, maar katten zijn vleeseters en hebben geen fruit nodig, en elke plant kan maagklachten geven, dus houd het bij een piepklein extraatje.",
         "pl": "Tak, od czasu do czasu mały kawałek melona miodowego jako smakołyk to nie problem. ASPCA podaje, że melon miodowy nie jest toksyczny dla kotów, ale koty są mięsożercami i nie potrzebują owoców, a każdy pokarm roślinny może zaszkodzić żołądkowi, więc niech to będzie tylko drobny dodatek.",
         "sv": "Ja, en liten bit honungsmelon går bra som godbit då och då. ASPCA anger att honungsmelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och vilket växtmaterial som helst kan ge orolig mage, så se det bara som ett pyttelitet extra.",
-        "da": "Ja, et lille stykke honningmelon er fint som en godbid en gang imellem. ASPCA betragter honningmelon som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad den kun være et bitte lille ekstra."
+        "da": "Ja, et lille stykke honningmelon er fint som en godbid en gang imellem. ASPCA betragter honningmelon som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad den kun være et bitte lille ekstra.",
+        "fi": "Saa, pieni pala hunajamelonia sopii satunnaiseksi herkuksi. ASPCA luokittelee hunajamelonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä."
       },
       "why": {
         "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -7325,7 +7351,8 @@
         "nl": "De ASPCA noemt honingmeloen (Cucumis melo) niet giftig voor katten, en het dierenziekenhuis van NC State rekent honingmeloen tot de fruittraktaties voor katten en honden. Katten zijn strikte vleeseters en hebben geen fruit nodig, traktaties horen een klein deel van de dagelijkse voeding te blijven, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
         "pl": "ASPCA uznaje melon miodowy (Cucumis melo) za nietoksyczny dla kotów, a szpital weterynaryjny NC State wymienia melon miodowy wśród owoców podawanych jako smakołyki kotom i psom. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
         "sv": "ASPCA anger att honungsmelon (Cucumis melo) inte är giftig för katter, och NC States djursjukhus tar upp honungsmelon bland frukt som kan vara godbitar för katter och hundar. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och vilket växtmaterial som helst kan ge kräkningar eller orolig mage.",
-        "da": "ASPCA betragter honningmelon (Cucumis melo) som ugiftig for katte, og dyrehospitalet ved NC State nævner honningmelon blandt de frugter man kan give katte og hunde som godbid. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave."
+        "da": "ASPCA betragter honningmelon (Cucumis melo) som ugiftig for katte, og dyrehospitalet ved NC State nævner honningmelon blandt de frugter man kan give katte og hunde som godbid. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
+        "fi": "ASPCA luokittelee hunajamelonin (Cucumis melo) kissoille myrkyttömäksi, ja NC Staten eläinsairaalan luettelossa hunajameloni kuuluu kissoille ja koirille sopiviin hedelmäherkkuihin. Kissat ovat ehdottomia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää jäädä pieneksi osaksi päivän ruokaa, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -7341,7 +7368,8 @@
         "nl": "Geef maar een klein stukje. Elk plantaardig materiaal kan bij katten braken of maagklachten veroorzaken.",
         "pl": "Podaj tylko mały kawałek. Każdy pokarm roślinny może wywołać u kota wymioty lub rozstrój żołądka.",
         "sv": "Ge bara en liten bit. Vilket växtmaterial som helst kan ge kräkningar eller orolig mage hos katter.",
-        "da": "Giv kun et lille stykke. Alt plantemateriale kan give katte opkast eller dårlig mave."
+        "da": "Giv kun et lille stykke. Alt plantemateriale kan give katte opkast eller dårlig mave.",
+        "fi": "Tarjoa vain pieni pala. Mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua tai vatsavaivoja."
       },
       "serving": {
         "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
@@ -7356,7 +7384,8 @@
         "nl": "Af en toe een klein stukje meloen, meegeteld bij de dagelijkse voeding van je kat.",
         "pl": "Od czasu do czasu mały kawałek owocu, wliczony w dzienną porcję jedzenia kota.",
         "sv": "En liten bit av frukten då och då, som räknas in i kattens dagliga matranson.",
-        "da": "Et lille stykke af frugten en gang imellem, medregnet i kattens daglige foder."
+        "da": "Et lille stykke af frugten en gang imellem, medregnet i kattens daglige foder.",
+        "fi": "Silloin tällöin pieni pala hedelmälihaa; laske se mukaan kissasi päivittäiseen ruokamäärään."
       },
       "child": {
         "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -7371,7 +7400,8 @@
         "nl": "Een piepklein stukje honingmeloen mag een kat af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
         "pl": "Malutki kawałek melona miodowego od czasu do czasu jest dla kota w porządku. Koty potrzebują głównie mięsa, więc owoc to tylko mały dodatek.",
         "sv": "En pytteliten bit honungsmelon är okej för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
-        "da": "Et bitte lille stykke honningmelon er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra."
+        "da": "Et bitte lille stykke honningmelon er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
+        "fi": "Kissa saa silloin tällöin pikkuisen palan hunajamelonia. Kissat tarvitsevat ennen kaikkea lihaa, joten hedelmä on vain pieni lisä."
       },
       "faq": [
         {
@@ -7388,7 +7418,8 @@
             "nl": "Hebben katten fruit nodig?",
             "pl": "Czy koty potrzebują owoców?",
             "sv": "Behöver katter frukt?",
-            "da": "Har katte brug for frugt?"
+            "da": "Har katte brug for frugt?",
+            "fi": "Tarvitsevatko kissat hedelmiä?"
           },
           "a": {
             "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -7403,7 +7434,8 @@
             "nl": "Nee. Katten zijn vleeseters: ze hebben voedingsstoffen nodig die in vlees zitten, en fruit of groente hoeft niet op hun menu te staan. Fruit kan hooguit een klein extraatje zijn.",
             "pl": "Nie. Koty są mięsożercami: potrzebują składników odżywczych zawartych w mięsie i nie potrzebują w diecie owoców ani warzyw. Owoce mogą być najwyżej drobnym dodatkiem.",
             "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
-            "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
+            "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
+            "fi": "Eivät. Kissat ovat lihansyöjiä: ne saavat tarvitsemansa ravintoaineet lihasta eivätkä tarvitse ruokavaliossaan hedelmiä tai kasviksia. Hedelmä voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -8247,7 +8279,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Lemons",
@@ -8262,7 +8295,8 @@
         "nl": "Citroenen",
         "pl": "Cytryny",
         "sv": "Citroner",
-        "da": "Citroner"
+        "da": "Citroner",
+        "fi": "Sitruunat"
       },
       "question": {
         "en": "Can cats eat lemons?",
@@ -8277,7 +8311,8 @@
         "nl": "Mogen katten citroenen eten?",
         "pl": "Czy koty mogą jeść cytryny?",
         "sv": "Får katter äta citroner?",
-        "da": "Må katte spise citroner?"
+        "da": "Må katte spise citroner?",
+        "fi": "Saako kissa syödä sitruunoita?"
       },
       "url_slug": {
         "en": "lemons",
@@ -8292,7 +8327,8 @@
         "nl": "citroenen",
         "pl": "cytryny",
         "sv": "citroner",
-        "da": "citroner"
+        "da": "citroner",
+        "fi": "sitruunat"
       },
       "answer": {
         "en": "No, it's best not to. The ASPCA lists the lemon plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep lemons for people.",
@@ -8307,7 +8343,8 @@
         "nl": "Nee, liever niet. De ASPCA noemt de citroenplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar citroenen maar voor mensen.",
         "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo cytrynowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc cytryny zostaw dla ludzi.",
         "sv": "Nej, det är bäst att låta bli. ASPCA anger att citronväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt citronerna vara människomat.",
-        "da": "Nej, det er bedst at lade være. ASPCA regner citronplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad citronerne være til os mennesker."
+        "da": "Nej, det er bedst at lade være. ASPCA regner citronplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad citronerne være til os mennesker.",
+        "fi": "Ei kannata. ASPCA luokittelee sitruunakasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja. Hedelmäliha on syötävää, mutta kuori ja muut kasvinosat voivat aiheuttaa ongelmia. Lisäksi sitrushedelmät ovat kissoille haitallisia, joten jätä sitruunat ihmisille."
       },
       "why": {
         "en": "The ASPCA lists the lemon plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -8322,7 +8359,8 @@
         "nl": "De ASPCA noemt de citroenplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
         "pl": "ASPCA uznaje drzewo cytrynowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota cytrynami.",
         "sv": "ASPCA anger att citronväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
-        "da": "ASPCA regner citronplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele citronerne med katten."
+        "da": "ASPCA regner citronplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele citronerne med katten.",
+        "fi": "ASPCA luokittelee sitruunakasvin kissoille myrkylliseksi: siinä on eteerisiä öljyjä ja psoraleeneja, ja vaikka hedelmä on syötävä, kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Koska lähteet suhtautuvat asiaan eri tiukkuudella, noudatamme tiukempaa ohjetta emmekä suosittele sitruunoiden antamista kissalle."
       },
       "signs": {
         "en": [
@@ -8415,6 +8453,13 @@
           "Ubehag i maven",
           "Nedtrykthed",
           "Mulig hudirritation (dermatitis)"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Vatsavaivat",
+          "Alakuloisuus",
+          "Mahdollinen ihoärsytys (ihotulehdus)"
         ]
       },
       "what_to_do": {
@@ -8430,7 +8475,8 @@
         "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
         "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
         "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
-        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+        "fi": "Jos kissasi on syönyt kuorta, lehtiä tai muita kasvinosia tai sillä on oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin."
       },
       "serving": null,
       "child": {
@@ -8446,7 +8492,8 @@
         "nl": "Citroenen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar citroenen maar voor mensen.",
         "pl": "Cytryny to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc cytryny zostaw dla ludzi.",
         "sv": "Citroner är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så de får vi människor äta själva.",
-        "da": "Citroner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad citronerne være til os."
+        "da": "Citroner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad citronerne være til os.",
+        "fi": "Sitruunat ovat ihmisten välipala. Kissat eivät tykkää niiden tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä sitruunat ihmisille."
       },
       "faq": [
         {
@@ -8463,7 +8510,8 @@
             "nl": "Welk deel is het probleem?",
             "pl": "Która część szkodzi?",
             "sv": "Vilken del orsakar problemen?",
-            "da": "Hvilken del er problemet?"
+            "da": "Hvilken del er problemet?",
+            "fi": "Mikä osa on ongelma?"
           },
           "a": {
             "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -8478,7 +8526,8 @@
             "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
             "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
             "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+            "fi": "ASPCA:n mukaan hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
           }
         },
         {
@@ -8495,7 +8544,8 @@
             "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
             "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
             "sv": "Min katt smakade bara lite. Är det akut?",
-            "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+            "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+            "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
           },
           "a": {
             "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -8510,7 +8560,8 @@
             "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
             "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
             "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+            "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
           }
         },
         {
@@ -8527,7 +8578,8 @@
             "nl": "Waarom mijden katten citrus meestal?",
             "pl": "Dlaczego koty zwykle unikają cytrusów?",
             "sv": "Varför brukar katter undvika citrus?",
-            "da": "Hvorfor holder katte sig som regel fra citrus?"
+            "da": "Hvorfor holder katte sig som regel fra citrus?",
+            "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
           },
           "a": {
             "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -8542,7 +8594,8 @@
             "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
             "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
             "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+            "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
           }
         }
       ],
@@ -8589,7 +8642,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Limes",
@@ -8604,7 +8658,8 @@
         "nl": "Limoenen",
         "pl": "Limonki",
         "sv": "Lime",
-        "da": "Limefrugter"
+        "da": "Limefrugter",
+        "fi": "Limetit"
       },
       "question": {
         "en": "Can cats eat limes?",
@@ -8619,7 +8674,8 @@
         "nl": "Mogen katten limoenen eten?",
         "pl": "Czy koty mogą jeść limonki?",
         "sv": "Får katter äta lime?",
-        "da": "Må katte spise limefrugter?"
+        "da": "Må katte spise limefrugter?",
+        "fi": "Saako kissa syödä limettejä?"
       },
       "url_slug": {
         "en": "limes",
@@ -8634,7 +8690,8 @@
         "nl": "limoenen",
         "pl": "limonki",
         "sv": "lime",
-        "da": "limefrugter"
+        "da": "limefrugter",
+        "fi": "limetit"
       },
       "answer": {
         "en": "No, it's best not to. The ASPCA lists the lime plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep limes for people.",
@@ -8649,7 +8706,8 @@
         "nl": "Nee, liever niet. De ASPCA noemt de limoenplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar limoenen maar voor mensen.",
         "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo limonkowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc limonki zostaw dla ludzi.",
         "sv": "Nej, det är bäst att låta bli. ASPCA anger att limeväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt limen vara människomat.",
-        "da": "Nej, det er bedst at lade være. ASPCA regner limeplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad limefrugterne være til os mennesker."
+        "da": "Nej, det er bedst at lade være. ASPCA regner limeplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad limefrugterne være til os mennesker.",
+        "fi": "Ei kannata. ASPCA luokittelee limettikasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja. Hedelmäliha on syötävää, mutta kuori ja muut kasvinosat voivat aiheuttaa ongelmia. Lisäksi sitrushedelmät ovat kissoille haitallisia, joten jätä limetit ihmisille."
       },
       "why": {
         "en": "The ASPCA lists the lime plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -8664,7 +8722,8 @@
         "nl": "De ASPCA noemt de limoenplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
         "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota limonkami.",
         "sv": "ASPCA anger att limeväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
-        "da": "ASPCA regner limeplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele limefrugterne med katten."
+        "da": "ASPCA regner limeplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele limefrugterne med katten.",
+        "fi": "ASPCA luokittelee limettikasvin kissoille myrkylliseksi: siinä on eteerisiä öljyjä ja psoraleeneja, ja vaikka hedelmä on syötävä, kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Koska lähteet suhtautuvat asiaan eri tiukkuudella, noudatamme tiukempaa ohjetta emmekä suosittele limettien antamista kissalle."
       },
       "signs": {
         "en": [
@@ -8757,6 +8816,13 @@
           "Ubehag i maven",
           "Nedtrykthed",
           "Mulig hudirritation (dermatitis)"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Vatsavaivat",
+          "Alakuloisuus",
+          "Mahdollinen ihoärsytys (ihotulehdus)"
         ]
       },
       "what_to_do": {
@@ -8772,7 +8838,8 @@
         "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
         "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
         "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
-        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+        "fi": "Jos kissasi on syönyt kuorta, lehtiä tai muita kasvinosia tai sillä on oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin."
       },
       "serving": null,
       "child": {
@@ -8788,7 +8855,8 @@
         "nl": "Limoenen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar limoenen maar voor mensen.",
         "pl": "Limonki to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc limonki zostaw dla ludzi.",
         "sv": "Lime är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så den får vi människor äta själva.",
-        "da": "Limefrugter er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad limefrugterne være til os."
+        "da": "Limefrugter er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad limefrugterne være til os.",
+        "fi": "Limetit ovat ihmisten välipala. Kissat eivät tykkää niiden tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä limetit ihmisille."
       },
       "faq": [
         {
@@ -8805,7 +8873,8 @@
             "nl": "Welk deel is het probleem?",
             "pl": "Która część szkodzi?",
             "sv": "Vilken del orsakar problemen?",
-            "da": "Hvilken del er problemet?"
+            "da": "Hvilken del er problemet?",
+            "fi": "Mikä osa on ongelma?"
           },
           "a": {
             "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -8820,7 +8889,8 @@
             "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
             "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
             "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+            "fi": "ASPCA:n mukaan hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
           }
         },
         {
@@ -8837,7 +8907,8 @@
             "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
             "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
             "sv": "Min katt smakade bara lite. Är det akut?",
-            "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+            "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+            "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
           },
           "a": {
             "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -8852,7 +8923,8 @@
             "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
             "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
             "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+            "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
           }
         },
         {
@@ -8869,7 +8941,8 @@
             "nl": "Waarom mijden katten citrus meestal?",
             "pl": "Dlaczego koty zwykle unikają cytrusów?",
             "sv": "Varför brukar katter undvika citrus?",
-            "da": "Hvorfor holder katte sig som regel fra citrus?"
+            "da": "Hvorfor holder katte sig som regel fra citrus?",
+            "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
           },
           "a": {
             "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -8884,7 +8957,8 @@
             "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
             "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
             "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+            "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
           }
         }
       ],
@@ -9522,7 +9596,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Mandarins",
@@ -9537,7 +9612,8 @@
         "nl": "Mandarijnen",
         "pl": "Mandarynki",
         "sv": "Mandariner",
-        "da": "Mandariner"
+        "da": "Mandariner",
+        "fi": "Mandariinit"
       },
       "question": {
         "en": "Can cats eat mandarins?",
@@ -9552,7 +9628,8 @@
         "nl": "Mogen katten mandarijnen eten?",
         "pl": "Czy koty mogą jeść mandarynki?",
         "sv": "Får katter äta mandariner?",
-        "da": "Må katte spise mandariner?"
+        "da": "Må katte spise mandariner?",
+        "fi": "Saako kissa syödä mandariineja?"
       },
       "url_slug": {
         "en": "mandarins",
@@ -9567,7 +9644,8 @@
         "nl": "mandarijnen",
         "pl": "mandarynki",
         "sv": "mandariner",
-        "da": "mandariner"
+        "da": "mandariner",
+        "fi": "mandariinit"
       },
       "answer": {
         "en": "No, it's best not to. Mandarins are citrus fruits, and Cats Protection says eating citrus fruits is bad for cats. The ASPCA lists the orange plant as toxic to cats, mainly because of the peel and plant parts, so keep mandarins for people.",
@@ -9582,7 +9660,8 @@
         "nl": "Nee, liever niet. Mandarijnen zijn citrusvruchten, en Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten. De ASPCA noemt de sinaasappelplant giftig voor katten, vooral vanwege de schil en andere plantendelen, dus bewaar mandarijnen maar voor mensen.",
         "pl": "Nie, lepiej tego unikać. Mandarynki to owoce cytrusowe, a Cats Protection podaje, że jedzenie cytrusów jest dla kotów szkodliwe. ASPCA uznaje drzewo pomarańczowe za toksyczne dla kotów, głównie z powodu skórki i części rośliny, więc mandarynki zostaw dla ludzi.",
         "sv": "Nej, det är bäst att låta bli. Mandariner är citrusfrukter, och Cats Protection skriver att citrusfrukter inte är bra för katter. ASPCA anger att apelsinväxten är giftig för katter, främst på grund av skalet och växtdelarna, så låt mandarinerna vara människomat.",
-        "da": "Nej, det er bedst at lade være. Mandariner er citrusfrugter, og Cats Protection skriver at det er dårligt for katte at spise citrusfrugter. ASPCA regner appelsinplanten for giftig for katte, primært på grund af skallen og plantedelene, så lad mandarinerne være til os mennesker."
+        "da": "Nej, det er bedst at lade være. Mandariner er citrusfrugter, og Cats Protection skriver at det er dårligt for katte at spise citrusfrugter. ASPCA regner appelsinplanten for giftig for katte, primært på grund af skallen og plantedelene, så lad mandarinerne være til os mennesker.",
+        "fi": "Ei kannata. Mandariinit ovat sitrushedelmiä, ja Cats Protectionin mukaan sitrushedelmät ovat kissoille haitallisia. ASPCA luokittelee appelsiinikasvin kissoille myrkylliseksi, pääasiassa kuoren ja muiden kasvinosien vuoksi, joten jätä mandariinit ihmisille."
       },
       "why": {
         "en": "We found no vet source that names mandarins on their own, so this answer relies on what the sources say about citrus fruits in general. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. The ASPCA lists the orange plant as toxic to cats because of essential oils and psoralens: the fruit is edible, but the skins and plant material can cause problems. Cats Protection adds that a small taste is unlikely to cause a severe reaction. We follow the stricter advice and do not recommend sharing mandarins.",
@@ -9597,7 +9676,8 @@
         "nl": "Wij vonden geen dierenartsbron die mandarijnen apart noemt, dus dit antwoord is gebaseerd op wat de bronnen over citrusvruchten in het algemeen zeggen. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. De ASPCA noemt de sinaasappelplant giftig voor katten vanwege etherische oliën en psoralenen: de vrucht is eetbaar, maar de schillen en het plantaardige materiaal kunnen problemen geven. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Wij volgen het strengere advies en raden af om mandarijnen te delen.",
         "pl": "Żadne ze znalezionych źródeł weterynaryjnych nie wymienia mandarynek osobno, więc ta odpowiedź opiera się na tym, co mówią o owocach cytrusowych ogólnie. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. ASPCA uznaje drzewo pomarańczowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów: owoc jest jadalny, ale skórki i części rośliny mogą szkodzić. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Kierujemy się ostrzejszą radą i nie zalecamy częstowania kota mandarynkami.",
         "sv": "Vi hittade ingen veterinärkälla som nämner mandariner specifikt, så svaret bygger på vad källorna säger om citrusfrukter i allmänhet. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. ASPCA anger att apelsinväxten är giftig för katter på grund av eteriska oljor och psoralener: frukten går att äta, men skalet och växtmaterialet kan orsaka problem. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Vi följer det strängare rådet och rekommenderar inte att du ger katten mandariner.",
-        "da": "Vi har ikke fundet nogen dyrlægekilde der nævner mandariner specifikt, så dette svar bygger på kildernes oplysninger om citrusfrugter generelt. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. ASPCA regner appelsinplanten for giftig for katte på grund af æteriske olier og psoralener: Frugten er spiselig, men skallerne og plantematerialet kan give problemer. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Vi følger det strengeste råd og anbefaler ikke at dele mandariner med katten."
+        "da": "Vi har ikke fundet nogen dyrlægekilde der nævner mandariner specifikt, så dette svar bygger på kildernes oplysninger om citrusfrugter generelt. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. ASPCA regner appelsinplanten for giftig for katte på grund af æteriske olier og psoralener: Frugten er spiselig, men skallerne og plantematerialet kan give problemer. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Vi følger det strengeste råd og anbefaler ikke at dele mandariner med katten.",
+        "fi": "Emme löytäneet yhtään eläinlääkärilähdettä, joka mainitsisi mandariinit erikseen, joten vastaus perustuu siihen, mitä lähteet sanovat sitrushedelmistä yleensä. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. ASPCA luokittelee appelsiinikasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja: hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Noudatamme tiukempaa ohjetta emmekä suosittele mandariinien antamista kissalle."
       },
       "signs": {
         "en": [
@@ -9664,6 +9744,11 @@
           "Opkast",
           "Diarré",
           "Ubehag i maven"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Vatsavaivat"
         ]
       },
       "what_to_do": {
@@ -9679,7 +9764,8 @@
         "nl": "Krijgt je kat verschijnselen zoals braken of diarree na het eten van mandarijn? Neem dan zo snel mogelijk contact op met je dierenarts. Schrijf op wat er is gegeten en wanneer.",
         "pl": "Jeśli po zjedzeniu mandarynki kot ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem. Zanotuj, co kot zjadł i kiedy.",
         "sv": "Om katten visar tecken som kräkningar eller diarré efter att ha ätit mandarin, kontakta din veterinär så snart som möjligt. Notera vad katten åt och när.",
-        "da": "Hvis din kat viser tegn som opkast eller diarré efter at have spist mandarin, skal du kontakte din dyrlæge hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+        "da": "Hvis din kat viser tegn som opkast eller diarré efter at have spist mandarin, skal du kontakte din dyrlæge hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+        "fi": "Jos kissalla ilmenee mandariinin syömisen jälkeen oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin. Kirjaa ylös, mitä kissa söi ja milloin."
       },
       "serving": null,
       "child": {
@@ -9695,7 +9781,8 @@
         "nl": "Mandarijnen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar mandarijnen maar voor mensen.",
         "pl": "Mandarynki to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc mandarynki zostaw dla ludzi.",
         "sv": "Mandariner är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så de får vi människor äta själva.",
-        "da": "Mandariner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad mandarinerne være til os."
+        "da": "Mandariner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad mandarinerne være til os.",
+        "fi": "Mandariinit ovat ihmisten välipala. Kissat eivät tykkää niiden tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä mandariinit ihmisille."
       },
       "faq": [
         {
@@ -9712,7 +9799,8 @@
             "nl": "Welk deel van een sinaasappel is het probleem?",
             "pl": "Która część pomarańczy szkodzi?",
             "sv": "Vilken del av en apelsin orsakar problemen?",
-            "da": "Hvilken del af en appelsin er problemet?"
+            "da": "Hvilken del af en appelsin er problemet?",
+            "fi": "Mikä osa appelsiinissa on ongelma?"
           },
           "a": {
             "en": "For oranges, the ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -9727,7 +9815,8 @@
             "nl": "Bij sinaasappels zegt de ASPCA dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
             "pl": "W przypadku pomarańczy ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
             "sv": "Om apelsiner skriver ASPCA att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-            "da": "Om appelsiner skriver ASPCA at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+            "da": "Om appelsiner skriver ASPCA at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+            "fi": "ASPCA:n mukaan appelsiinin hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
           }
         },
         {
@@ -9744,7 +9833,8 @@
             "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
             "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
             "sv": "Min katt smakade bara lite. Är det akut?",
-            "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+            "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+            "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
           },
           "a": {
             "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -9759,7 +9849,8 @@
             "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
             "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
             "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+            "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
           }
         },
         {
@@ -9776,7 +9867,8 @@
             "nl": "Waarom mijden katten citrus meestal?",
             "pl": "Dlaczego koty zwykle unikają cytrusów?",
             "sv": "Varför brukar katter undvika citrus?",
-            "da": "Hvorfor holder katte sig som regel fra citrus?"
+            "da": "Hvorfor holder katte sig som regel fra citrus?",
+            "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
           },
           "a": {
             "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -9791,7 +9883,8 @@
             "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
             "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
             "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+            "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
           }
         }
       ],
@@ -10587,7 +10680,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Oranges",
@@ -10602,7 +10696,8 @@
         "nl": "Sinaasappels",
         "pl": "Pomarańcze",
         "sv": "Apelsiner",
-        "da": "Appelsiner"
+        "da": "Appelsiner",
+        "fi": "Appelsiinit"
       },
       "question": {
         "en": "Can cats eat oranges?",
@@ -10617,7 +10712,8 @@
         "nl": "Mogen katten sinaasappels eten?",
         "pl": "Czy koty mogą jeść pomarańcze?",
         "sv": "Får katter äta apelsiner?",
-        "da": "Må katte spise appelsiner?"
+        "da": "Må katte spise appelsiner?",
+        "fi": "Saako kissa syödä appelsiineja?"
       },
       "url_slug": {
         "en": "oranges",
@@ -10632,7 +10728,8 @@
         "nl": "sinaasappels",
         "pl": "pomarancze",
         "sv": "apelsiner",
-        "da": "appelsiner"
+        "da": "appelsiner",
+        "fi": "appelsiinit"
       },
       "answer": {
         "en": "No, it's best not to. The ASPCA lists the orange plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep oranges for people.",
@@ -10647,7 +10744,8 @@
         "nl": "Nee, liever niet. De ASPCA noemt de sinaasappelplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar sinaasappels maar voor mensen.",
         "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo pomarańczowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc pomarańcze zostaw dla ludzi.",
         "sv": "Nej, det är bäst att låta bli. ASPCA anger att apelsinväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt apelsinerna vara människomat.",
-        "da": "Nej, det er bedst at lade være. ASPCA regner appelsinplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad appelsinerne være til os mennesker."
+        "da": "Nej, det er bedst at lade være. ASPCA regner appelsinplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad appelsinerne være til os mennesker.",
+        "fi": "Ei kannata. ASPCA luokittelee appelsiinikasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja. Hedelmäliha on syötävää, mutta kuori ja muut kasvinosat voivat aiheuttaa ongelmia. Lisäksi sitrushedelmät ovat kissoille haitallisia, joten jätä appelsiinit ihmisille."
       },
       "why": {
         "en": "The ASPCA lists the orange plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -10662,7 +10760,8 @@
         "nl": "De ASPCA noemt de sinaasappelplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
         "pl": "ASPCA uznaje drzewo pomarańczowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota pomarańczami.",
         "sv": "ASPCA anger att apelsinväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
-        "da": "ASPCA regner appelsinplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele appelsinerne med katten."
+        "da": "ASPCA regner appelsinplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele appelsinerne med katten.",
+        "fi": "ASPCA luokittelee appelsiinikasvin kissoille myrkylliseksi: siinä on eteerisiä öljyjä ja psoraleeneja, ja vaikka hedelmä on syötävä, kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Koska lähteet suhtautuvat asiaan eri tiukkuudella, noudatamme tiukempaa ohjetta emmekä suosittele appelsiinien antamista kissalle."
       },
       "signs": {
         "en": [
@@ -10755,6 +10854,13 @@
           "Ubehag i maven",
           "Nedtrykthed",
           "Mulig hudirritation (dermatitis)"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Vatsavaivat",
+          "Alakuloisuus",
+          "Mahdollinen ihoärsytys (ihotulehdus)"
         ]
       },
       "what_to_do": {
@@ -10770,7 +10876,8 @@
         "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
         "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
         "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
-        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+        "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+        "fi": "Jos kissasi on syönyt kuorta, lehtiä tai muita kasvinosia tai sillä on oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin."
       },
       "serving": null,
       "child": {
@@ -10786,7 +10893,8 @@
         "nl": "Sinaasappels zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar sinaasappels maar voor mensen.",
         "pl": "Pomarańcze to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc pomarańcze zostaw dla ludzi.",
         "sv": "Apelsiner är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så de får vi människor äta själva.",
-        "da": "Appelsiner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad appelsinerne være til os."
+        "da": "Appelsiner er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad appelsinerne være til os.",
+        "fi": "Appelsiinit ovat ihmisten välipala. Kissat eivät tykkää niiden tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä appelsiinit ihmisille."
       },
       "faq": [
         {
@@ -10803,7 +10911,8 @@
             "nl": "Welk deel is het probleem?",
             "pl": "Która część szkodzi?",
             "sv": "Vilken del orsakar problemen?",
-            "da": "Hvilken del er problemet?"
+            "da": "Hvilken del er problemet?",
+            "fi": "Mikä osa on ongelma?"
           },
           "a": {
             "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -10818,7 +10927,8 @@
             "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
             "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
             "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+            "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+            "fi": "ASPCA:n mukaan hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
           }
         },
         {
@@ -10835,7 +10945,8 @@
             "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
             "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
             "sv": "Min katt smakade bara lite. Är det akut?",
-            "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+            "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+            "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
           },
           "a": {
             "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -10850,7 +10961,8 @@
             "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
             "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
             "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+            "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+            "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
           }
         },
         {
@@ -10867,7 +10979,8 @@
             "nl": "Waarom mijden katten citrus meestal?",
             "pl": "Dlaczego koty zwykle unikają cytrusów?",
             "sv": "Varför brukar katter undvika citrus?",
-            "da": "Hvorfor holder katte sig som regel fra citrus?"
+            "da": "Hvorfor holder katte sig som regel fra citrus?",
+            "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
           },
           "a": {
             "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -10882,7 +10995,8 @@
             "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
             "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
             "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+            "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+            "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
           }
         }
       ],
@@ -24657,7 +24771,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Grapefruit",
@@ -24672,7 +24787,8 @@
         "nl": "Grapefruit",
         "pl": "Grejpfrut",
         "sv": "Grapefrukt",
-        "da": "Grapefrugt"
+        "da": "Grapefrugt",
+        "fi": "Greippi"
       },
       "question": {
         "en": "Can dogs eat grapefruit?",
@@ -24687,7 +24803,8 @@
         "nl": "Mogen honden grapefruit eten?",
         "pl": "Czy psy mogą jeść grejpfruta?",
         "sv": "Får hundar äta grapefrukt?",
-        "da": "Må hunde spise grapefrugt?"
+        "da": "Må hunde spise grapefrugt?",
+        "fi": "Saako koira syödä greippiä?"
       },
       "url_slug": {
         "en": "grapefruit",
@@ -24702,7 +24819,8 @@
         "nl": "grapefruit",
         "pl": "grejpfrut",
         "sv": "grapefrukt",
-        "da": "grapefrugt"
+        "da": "grapefrugt",
+        "fi": "greippi"
       },
       "answer": {
         "en": "No, it's best not to feed grapefruit to dogs. The flesh isn't toxic, but its high citric acid can upset a dog's stomach, and the skin and rind are toxic to dogs because of their essential oils.",
@@ -24717,7 +24835,8 @@
         "nl": "Nee, geef honden liever geen grapefruit. Het vruchtvlees is niet giftig, maar door het vele citroenzuur kan de maag van een hond van streek raken, en de schil is giftig voor honden vanwege de etherische oliën.",
         "pl": "Nie, grejpfruta lepiej psom nie podawać. Miąższ nie jest toksyczny, ale dużo kwasu cytrynowego może rozstroić psi żołądek, a skórka jest dla psów toksyczna z powodu olejków eterycznych.",
         "sv": "Nej, det är bäst att inte ge grapefrukt till hundar. Fruktköttet är inte giftigt, men den höga halten citronsyra kan ge hunden orolig mage, och skalet är giftigt för hundar på grund av de eteriska oljorna.",
-        "da": "Nej, det er bedst ikke at give hunde grapefrugt. Frugtkødet er ikke giftigt, men det høje indhold af citronsyre kan give hunden dårlig mave, og skallen er giftig for hunde på grund af de æteriske olier."
+        "da": "Nej, det er bedst ikke at give hunde grapefrugt. Frugtkødet er ikke giftigt, men det høje indhold af citronsyre kan give hunden dårlig mave, og skallen er giftig for hunde på grund af de æteriske olier.",
+        "fi": "Ei, greippiä ei kannata antaa koiralle. Hedelmäliha ei ole myrkyllistä, mutta runsas sitruunahappo voi sekoittaa koiran vatsan, ja kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi."
       },
       "why": {
         "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
@@ -24732,7 +24851,8 @@
         "nl": "De ASPCA noemt de grapefruitplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat het vruchtvlees niet giftig is maar beter vermeden kan worden, mede door het vele citroenzuur, en dat de schil giftig is door de natuurlijke etherische oliën. De PDSA noemt grapefruit onveilig omdat het erg zuur is. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees zelf niet giftig is en de schil het gevaar vormt.",
         "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. Według AKC miąższ nie jest toksyczny, ale lepiej go unikać, m.in. z powodu dużej zawartości kwasu cytrynowego, a skórka jest toksyczna przez naturalne olejki eteryczne. PDSA zalicza grejpfruta do owoców niebezpiecznych, bo jest bardzo kwaśny. Używamy określenia „niezalecane”, ponieważ sam miąższ nie jest toksyczny, a zagrożeniem jest skórka.",
         "sv": "ASPCA anger att grapefruktväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att fruktköttet inte är giftigt men bäst undviks, delvis på grund av den höga halten citronsyra, och att skalet är giftigt på grund av de naturliga eteriska oljorna. PDSA anger att grapefrukt inte är säker för hundar eftersom den är mycket sur. Vi använder ”rekommenderas inte” eftersom själva fruktköttet inte är giftigt, medan skalet är det som är farligt.",
-        "da": "ASPCA regner grapefrugtplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at frugtkødet ikke er giftigt, men bedst undgås, blandt andet på grund af det høje indhold af citronsyre, og at skallen er giftig på grund af de naturlige æteriske olier. PDSA anser grapefrugt for at være usikker, fordi den er meget sur. Vi bruger »frarådes«, fordi frugtkødet i sig selv ikke er giftigt, mens skallen er det farlige."
+        "da": "ASPCA regner grapefrugtplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at frugtkødet ikke er giftigt, men bedst undgås, blandt andet på grund af det høje indhold af citronsyre, og at skallen er giftig på grund af de naturlige æteriske olier. PDSA anser grapefrugt for at være usikker, fordi den er meget sur. Vi bruger »frarådes«, fordi frugtkødet i sig selv ikke er giftigt, mens skallen er det farlige.",
+        "fi": "ASPCA luokittelee greippikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan hedelmäliha ei ole myrkyllistä mutta sitä kannattaa välttää, osittain runsaan sitruunahapon vuoksi, ja kuori on myrkyllistä sen luontaisten eteeristen öljyjen takia. PDSA pitää greippiä koiralle turvattomana, koska se on hyvin hapan. Luokitus on ”ei suositella”, koska hedelmäliha sinänsä ei ole myrkyllistä, vaan vaarana on kuori."
       },
       "signs": {
         "en": [
@@ -24825,6 +24945,13 @@
           "Diarré",
           "Nedtrykthed (lavt energiniveau, virker nedtrykt)",
           "Hudirritation"
+        ],
+        "fi": [
+          "Vatsavaivat",
+          "Oksentelu",
+          "Ripuli",
+          "Alakuloisuus (vähän energiaa, vaikuttaa masentuneelta)",
+          "Ihoärsytys"
         ]
       },
       "what_to_do": {
@@ -24840,7 +24967,8 @@
         "nl": "Heeft je hond grapefruitschil gegeten? Bel dan meteen je dierenarts of een spoedkliniek voor dieren. Heeft je hond veel vruchtvlees gegeten, neem dan ook contact op met je dierenarts.",
         "pl": "Jeśli pies zjadł skórkę grejpfruta, od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Jeśli zjadł dużą ilość miąższu, również skontaktuj się z weterynarzem.",
         "sv": "Om hunden har ätit grapefruktskal, ring din veterinär eller ett djursjukhus med akutjour direkt. Om den har ätit en stor mängd fruktkött, kontakta också veterinären.",
-        "da": "Hvis din hund har spist grapefrugtskal, skal du straks ringe til din dyrlæge eller en akut dyreklinik. Kontakt også din dyrlæge hvis hunden har spist en stor mængde af frugtkødet."
+        "da": "Hvis din hund har spist grapefrugtskal, skal du straks ringe til din dyrlæge eller en akut dyreklinik. Kontakt også din dyrlæge hvis hunden har spist en stor mængde af frugtkødet.",
+        "fi": "Jos koirasi on syönyt greipin kuorta, soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Jos se söi paljon hedelmälihaa, ota yhteyttä eläinlääkäriin siinäkin tapauksessa."
       },
       "serving": null,
       "child": {
@@ -24856,7 +24984,8 @@
         "nl": "Grapefruit is te zuur voor honden en kan buikpijn geven. Bewaar grapefruit en de schil maar voor mensen.",
         "pl": "Grejpfrut jest dla psów za kwaśny i może wywołać ból brzucha. Grejpfruta i jego skórkę zostaw dla ludzi.",
         "sv": "Grapefrukt är för sur för hundar och kan ge dem ont i magen. Grapefrukt och grapefruktskal är till för människor.",
-        "da": "Grapefrugt er for sur til hunde og kan give dem ondt i maven. Lad grapefrugten og skallen være til os mennesker."
+        "da": "Grapefrugt er for sur til hunde og kan give dem ondt i maven. Lad grapefrugten og skallen være til os mennesker.",
+        "fi": "Greippi on koirille liian hapan ja voi aiheuttaa niille vatsakipua. Jätä greippi ja sen kuori ihmisille."
       },
       "faq": [
         {
@@ -24873,7 +25002,8 @@
             "nl": "Wat als mijn hond grapefruitschil heeft gegeten?",
             "pl": "Co zrobić, jeśli pies zjadł skórkę grejpfruta?",
             "sv": "Vad gör jag om hunden har ätit grapefruktskal?",
-            "da": "Hvad hvis min hund har spist grapefrugtskal?"
+            "da": "Hvad hvis min hund har spist grapefrugtskal?",
+            "fi": "Entä jos koirani söi greipin kuorta?"
           },
           "a": {
             "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
@@ -24888,7 +25018,8 @@
             "nl": "Bel meteen je dierenarts of een spoedkliniek voor dieren. De schil is giftig voor honden vanwege de etherische oliën.",
             "pl": "Od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Skórka jest toksyczna dla psów z powodu olejków eterycznych.",
             "sv": "Ring din veterinär eller ett djursjukhus med akutjour direkt. Skalet är giftigt för hundar på grund av de eteriska oljorna.",
-            "da": "Ring straks til din dyrlæge eller en akut dyreklinik. Skallen er giftig for hunde på grund af de æteriske olier."
+            "da": "Ring straks til din dyrlæge eller en akut dyreklinik. Skallen er giftig for hunde på grund af de æteriske olier.",
+            "fi": "Soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi."
           }
         }
       ],
@@ -25874,7 +26005,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Honeydew melon",
@@ -25889,7 +26021,8 @@
         "nl": "Honingmeloen",
         "pl": "Melon miodowy",
         "sv": "Honungsmelon",
-        "da": "Honningmelon"
+        "da": "Honningmelon",
+        "fi": "Hunajameloni"
       },
       "question": {
         "en": "Can dogs eat honeydew melon?",
@@ -25904,7 +26037,8 @@
         "nl": "Mogen honden honingmeloen eten?",
         "pl": "Czy psy mogą jeść melona miodowego?",
         "sv": "Får hundar äta honungsmelon?",
-        "da": "Må hunde spise honningmelon?"
+        "da": "Må hunde spise honningmelon?",
+        "fi": "Saako koira syödä hunajamelonia?"
       },
       "url_slug": {
         "en": "honeydew",
@@ -25919,7 +26053,8 @@
         "nl": "honingmeloen",
         "pl": "melon-miodowy",
         "sv": "honungsmelon",
-        "da": "honningmelon"
+        "da": "honningmelon",
+        "fi": "hunajameloni"
       },
       "answer": {
         "en": "Yes, sparingly. Honeydew is not toxic to dogs, but it is high in sugar, so give only a little as an occasional treat, and ask your vet first if your dog has diabetes. Remove the rind and seeds.",
@@ -25934,7 +26069,8 @@
         "nl": "Ja, maar spaarzaam. Honingmeloen is niet giftig voor honden, maar bevat veel suiker, dus geef er af en toe een klein beetje van als snoepje, en vraag eerst je dierenarts om advies als je hond diabetes heeft. Haal de schil en de pitten eruit.",
         "pl": "Tak, z umiarem. Melon miodowy nie jest toksyczny dla psów, ale ma dużo cukru, więc dawaj tylko odrobinę jako okazjonalny smakołyk, a jeśli twój pies ma cukrzycę, najpierw zapytaj weterynarza. Usuń skórkę i pestki.",
         "sv": "Ja, med måtta. Honungsmelon är inte giftig för hundar, men den innehåller mycket socker, så ge bara lite som en godbit då och då, och fråga veterinären först om hunden har diabetes. Ta bort skalet och kärnorna.",
-        "da": "Ja, men sparsomt. Honningmelon er ikke giftig for hunde, men den indeholder meget sukker, så giv kun lidt som en godbid en gang imellem, og spørg først din dyrlæge hvis din hund har diabetes. Fjern skræl og kerner."
+        "da": "Ja, men sparsomt. Honningmelon er ikke giftig for hunde, men den indeholder meget sukker, så giv kun lidt som en godbid en gang imellem, og spørg først din dyrlæge hvis din hund har diabetes. Fjern skræl og kerner.",
+        "fi": "Kyllä, kohtuudella. Hunajameloni ei ole koirille myrkyllistä, mutta siinä on paljon sokeria, joten anna vain vähän satunnaisena herkkuna ja kysy ensin eläinlääkäriltä, jos koirasi sairastaa diabetesta. Poista kuori ja siemenet."
       },
       "why": {
         "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
@@ -25949,7 +26085,8 @@
         "nl": "De ASPCA noemt honingmeloen niet giftig voor honden, en de hoofddierenarts van de AKC stelt het voor onder de meloenen voor bevroren snoepjes. De vrucht bevat veel suiker, waardoor ze misschien niet geschikt is voor honden met diabetes. De schil kan spijsverteringsproblemen of een darmverstopping veroorzaken, en de pitten zijn niet giftig maar kunnen een verstikkingsgevaar vormen.",
         "pl": "ASPCA uznaje melon miodowy za nietoksyczny dla psów, a główny lekarz weterynarii AKC poleca go wśród melonów do mrożonych smakołyków. Owoc zawiera dużo cukru, więc może nie być odpowiedni dla psów z cukrzycą. Skórka może wywołać rozstrój trawienia lub niedrożność jelit, a pestki nie są toksyczne, ale mogą grozić zadławieniem.",
         "sv": "ASPCA anger att honungsmelon inte är giftig för hundar, och AKC:s chefsveterinär nämner den bland de meloner som passar som frysta godbitar. Frukten innehåller mycket socker, vilket kan göra den olämplig för hundar med diabetes. Skalet kan ge matsmältningsbesvär eller tarmstopp, och kärnorna är inte giftiga men innebär en kvävningsrisk.",
-        "da": "ASPCA regner honningmelon for ugiftig for hunde, og AKC's chefdyrlæge nævner den blandt de meloner der egner sig til frosne godbidder. Frugten indeholder meget sukker, så den kan være uegnet til hunde med diabetes. Skrællen kan give fordøjelsesproblemer eller tarmblokering, og kernerne er ikke giftige, men kan udgøre en kvælningsfare."
+        "da": "ASPCA regner honningmelon for ugiftig for hunde, og AKC's chefdyrlæge nævner den blandt de meloner der egner sig til frosne godbidder. Frugten indeholder meget sukker, så den kan være uegnet til hunde med diabetes. Skrællen kan give fordøjelsesproblemer eller tarmblokering, og kernerne er ikke giftige, men kan udgøre en kvælningsfare.",
+        "fi": "ASPCA luokittelee hunajamelonin koirille myrkyttömäksi, ja AKC:n eläinlääketieteellinen johtaja mainitsee sen melonien joukossa, joista voi tehdä pakastettuja herkkuja. Hedelmässä on paljon sokeria, joten se ei välttämättä sovi diabetesta sairastaville koirille. Kuori voi aiheuttaa ruoansulatusvaivoja tai suolitukoksen, ja siemenet eivät ole myrkyllisiä mutta voivat aiheuttaa tukehtumisvaaran."
       },
       "signs": null,
       "what_to_do": {
@@ -25965,7 +26102,8 @@
         "nl": "Overleg met je dierenarts voordat je honingmeloen aan het voer van je hond toevoegt, vooral als je hond diabetes heeft.",
         "pl": "Zanim dodasz melon miodowy do diety psa, porozmawiaj z weterynarzem, zwłaszcza jeśli pies ma cukrzycę.",
         "sv": "Prata med veterinären innan du lägger till honungsmelon i hundens mat, särskilt om hunden har diabetes.",
-        "da": "Tal med din dyrlæge, inden honningmelon bliver en fast del af din hunds kost, især hvis din hund har diabetes."
+        "da": "Tal med din dyrlæge, inden honningmelon bliver en fast del af din hunds kost, især hvis din hund har diabetes.",
+        "fi": "Keskustele eläinlääkärin kanssa ennen kuin lisäät hunajamelonia koirasi ruokavalioon, etenkin jos koirasi sairastaa diabetesta."
       },
       "serving": {
         "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
@@ -25980,7 +26118,8 @@
         "nl": "Alleen het vruchtvlees, zonder schil en pitten, in kleine blokjes; je kunt het ook pureren en invriezen als snoepje.",
         "pl": "Tylko miąższ, bez skórki i pestek, pokrojony w małą kostkę; można go też zmiksować na przecier i zamrozić jako smakołyk.",
         "sv": "Bara fruktköttet, utan skal och kärnor, skuret i små tärningar; det kan också mixas till puré och frysas som en godbit.",
-        "da": "Kun frugtkødet, uden skræl og kerner, skåret i små tern. Det kan også moses og fryses som en godbid."
+        "da": "Kun frugtkødet, uden skræl og kerner, skåret i små tern. Det kan også moses og fryses som en godbid.",
+        "fi": "Vain hedelmäliha, ilman kuorta ja siemeniä, pieninä kuutioina. Sen voi myös soseuttaa ja pakastaa herkuksi."
       },
       "child": {
         "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
@@ -25995,7 +26134,8 @@
         "nl": "Honden kunnen genieten van een klein stukje honingmeloen! Een volwassene haalt eerst de harde schil en de pitten eraf.",
         "pl": "Psy mogą zjeść mały kawałek melona miodowego! Dorosły najpierw usuwa twardą skórkę i pestki.",
         "sv": "Hundar kan få en liten bit honungsmelon! En vuxen tar först bort det hårda skalet och kärnorna.",
-        "da": "Hunde kan godt få et lille stykke honningmelon! En voksen fjerner først den hårde skræl og kernerne."
+        "da": "Hunde kan godt få et lille stykke honningmelon! En voksen fjerner først den hårde skræl og kernerne.",
+        "fi": "Koira saa herkutella pienellä palalla hunajamelonia! Aikuinen poistaa ensin kovan kuoren ja siemenet."
       },
       "faq": [
         {
@@ -26012,7 +26152,8 @@
             "nl": "Is honingmeloen oké voor een hond met diabetes?",
             "pl": "Czy melon miodowy jest odpowiedni dla psa z cukrzycą?",
             "sv": "Är honungsmelon okej för en hund med diabetes?",
-            "da": "Er honningmelon i orden til en hund med diabetes?"
+            "da": "Er honningmelon i orden til en hund med diabetes?",
+            "fi": "Sopiiko hunajameloni diabetesta sairastavalle koiralle?"
           },
           "a": {
             "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
@@ -26027,7 +26168,8 @@
             "nl": "Misschien niet, want honingmeloen bevat erg veel suiker. Vraag het eerst aan je dierenarts.",
             "pl": "Niekoniecznie, bo melon miodowy ma bardzo dużo cukru. Najpierw zapytaj weterynarza.",
             "sv": "Kanske inte, eftersom honungsmelon innehåller mycket socker. Fråga veterinären först.",
-            "da": "Det er den måske ikke, fordi honningmelon indeholder meget sukker. Spørg din dyrlæge først."
+            "da": "Det er den måske ikke, fordi honningmelon indeholder meget sukker. Spørg din dyrlæge først.",
+            "fi": "Ei välttämättä, koska hunajamelonissa on hyvin paljon sokeria. Kysy ensin eläinlääkäriltä."
           }
         },
         {
@@ -26044,7 +26186,8 @@
             "nl": "Wat als mijn hond een pit heeft ingeslikt?",
             "pl": "Co zrobić, jeśli pies połknął pestkę?",
             "sv": "Vad gör jag om min hund har svalt en kärna?",
-            "da": "Hvad hvis min hund har slugt en kerne?"
+            "da": "Hvad hvis min hund har slugt en kerne?",
+            "fi": "Entä jos koirani nielaisi siemenen?"
           },
           "a": {
             "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
@@ -26059,7 +26202,8 @@
             "nl": "Honingmeloenpitten zijn niet giftig, en één pit is waarschijnlijk geen reden tot zorg, maar pitten kunnen een verstikkingsgevaar vormen, dus haal ze eruit voordat je de meloen geeft.",
             "pl": "Pestki melona miodowego nie są toksyczne i jedna pestka raczej nie jest powodem do niepokoju, ale mogą grozić zadławieniem, więc przed podaniem je usuń.",
             "sv": "Honungsmelonkärnor är inte giftiga, och en enda kärna är förmodligen ingen anledning till oro, men kärnor innebär en kvävningsrisk, så ta bort dem innan du serverar.",
-            "da": "Honningmelonkerner er ikke giftige, og én kerne er sandsynligvis ikke noget at bekymre sig om, men kerner kan udgøre en kvælningsfare, så fjern dem inden du serverer melonen."
+            "da": "Honningmelonkerner er ikke giftige, og én kerne er sandsynligvis ikke noget at bekymre sig om, men kerner kan udgøre en kvælningsfare, så fjern dem inden du serverer melonen.",
+            "fi": "Hunajamelonin siemenet eivät ole myrkyllisiä, eikä yksi siemen todennäköisesti ole huolen aihe, mutta siemenet voivat aiheuttaa tukehtumisvaaran, joten poista ne ennen tarjoamista."
           }
         }
       ],
@@ -26393,7 +26537,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Kiwi",
@@ -26408,7 +26553,8 @@
         "nl": "Kiwi",
         "pl": "Kiwi",
         "sv": "Kiwi",
-        "da": "Kiwi"
+        "da": "Kiwi",
+        "fi": "Kiwi"
       },
       "question": {
         "en": "Can dogs eat kiwi?",
@@ -26423,7 +26569,8 @@
         "nl": "Mogen honden kiwi eten?",
         "pl": "Czy psy mogą jeść kiwi?",
         "sv": "Får hundar äta kiwi?",
-        "da": "Må hunde spise kiwi?"
+        "da": "Må hunde spise kiwi?",
+        "fi": "Saako koira syödä kiwiä?"
       },
       "url_slug": {
         "en": "kiwi",
@@ -26438,7 +26585,8 @@
         "nl": "kiwi",
         "pl": "kiwi",
         "sv": "kiwi",
-        "da": "kiwi"
+        "da": "kiwi",
+        "fi": "kiwi"
       },
       "answer": {
         "en": "Yes, dogs can have small amounts of kiwi as an occasional treat. Peel it and cut it into small pieces or slices, and never give a whole kiwi, because it can be a choking hazard.",
@@ -26453,7 +26601,8 @@
         "nl": "Ja, honden mogen af en toe een klein beetje kiwi als snoepje. Schil de kiwi en snijd hem in kleine stukjes of plakjes, en geef nooit een hele kiwi, want dat kan een verstikkingsgevaar vormen.",
         "pl": "Tak, psy mogą od czasu do czasu dostać niewielką ilość kiwi jako smakołyk. Obierz je i pokrój na małe kawałki lub plasterki, a nigdy nie dawaj go w całości, bo pies może się zadławić.",
         "sv": "Ja, hundar kan få små mängder kiwi som en godbit då och då. Skala den och skär den i små bitar eller skivor, och ge aldrig en hel kiwi, eftersom hunden kan sätta den i halsen.",
-        "da": "Ja, hunde kan få lidt kiwi som en godbid en gang imellem. Skræl den, og skær den i små stykker eller skiver. Giv aldrig en hel kiwi, da den kan sætte sig fast i halsen."
+        "da": "Ja, hunde kan få lidt kiwi som en godbid en gang imellem. Skræl den, og skær den i små stykker eller skiver. Giv aldrig en hel kiwi, da den kan sætte sig fast i halsen.",
+        "fi": "Kyllä, koira voi saada pieniä määriä kiwiä satunnaisena herkkuna. Kuori se ja leikkaa pieniksi paloiksi tai viipaleiksi, äläkä koskaan anna kokonaista kiwiä, koska se voi aiheuttaa tukehtumisvaaran."
       },
       "why": {
         "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
@@ -26468,7 +26617,8 @@
         "nl": "Kiwi is een zoete vrucht boordevol vitamine C en kalium, en bevat veel vezels, vooral onoplosbare vezels. Te veel kiwi kan spijsverteringsproblemen veroorzaken, waaronder diarree. De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken. Een hele kiwi is klein genoeg om een verstikkingsgevaar te vormen.",
         "pl": "Kiwi to słodki owoc, bogaty w witaminę C i potas. Zawiera też dużo błonnika, zwłaszcza nierozpuszczalnego. Zbyt dużo kiwi może wywołać problemy trawienne, w tym biegunkę. Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek. Całe kiwi jest na tyle małe, że może grozić zadławieniem.",
         "sv": "Kiwi är en söt frukt full av vitamin C och kalium, och den innehåller mycket fiber, framför allt olösliga fibrer. För mycket kiwi kan ge matsmältningsproblem, bland annat diarré. Skalet är inte giftigt, men det är segt och fiberrikt och kan ge hunden orolig mage. En hel kiwi är så liten att hunden kan sätta den i halsen.",
-        "da": "Kiwi er en sød frugt, der er rig på C-vitamin og kalium og indeholder mange fibre, især uopløselige. For meget kiwi kan give fordøjelsesproblemer, herunder diarré. Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave. En hel kiwi er lille nok til at sætte sig fast i halsen på en hund."
+        "da": "Kiwi er en sød frugt, der er rig på C-vitamin og kalium og indeholder mange fibre, især uopløselige. For meget kiwi kan give fordøjelsesproblemer, herunder diarré. Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave. En hel kiwi er lille nok til at sætte sig fast i halsen på en hund.",
+        "fi": "Kiwi on makea hedelmä, jossa on runsaasti C-vitamiinia ja kaliumia, ja siinä on paljon kuitua, etenkin liukenematonta kuitua. Liika kiwi voi aiheuttaa ruoansulatusvaivoja, myös ripulia. Kuori ei ole myrkyllistä, mutta se on sitkeää ja kuitupitoista ja voi sekoittaa koiran vatsan. Kokonainen kiwi on niin pieni, että se voi jäädä koiran kurkkuun."
       },
       "signs": null,
       "what_to_do": {
@@ -26484,7 +26634,8 @@
         "nl": "Geef steeds maar een klein beetje. Te veel kiwi kan spijsverteringsproblemen zoals diarree veroorzaken, en kiwi mag nooit in de plaats komen van een volwaardig, uitgebalanceerd hondenvoer.",
         "pl": "Podawaj tylko po trochu. Zbyt dużo kiwi może wywołać problemy trawienne, takie jak biegunka, a kiwi nigdy nie powinno zastępować pełnoporcjowej, zbilansowanej karmy dla psów.",
         "sv": "Ge bara lite åt gången. För mycket kiwi kan ge matsmältningsproblem som diarré, och kiwi ska aldrig ersätta ett komplett och balanserat hundfoder.",
-        "da": "Giv kun lidt ad gangen. For meget kiwi kan give fordøjelsesproblemer som diarré, og kiwi må aldrig erstatte et komplet og afbalanceret hundefoder."
+        "da": "Giv kun lidt ad gangen. For meget kiwi kan give fordøjelsesproblemer som diarré, og kiwi må aldrig erstatte et komplet og afbalanceret hundefoder.",
+        "fi": "Anna vain vähän kerrallaan. Liika kiwi voi aiheuttaa ruoansulatusvaivoja, kuten ripulia, eikä kiwillä saa koskaan korvata täysipainoista ja tasapainoista koiranruokaa."
       },
       "serving": {
         "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
@@ -26499,7 +26650,8 @@
         "nl": "Geschild en in kleine stukjes of plakjes gesneden; steeds een klein beetje, als snoepje voor af en toe.",
         "pl": "Obrane i pokrojone na małe kawałki lub plasterki; po trochu, jako okazjonalny smakołyk.",
         "sv": "Skalad och skuren i små bitar eller skivor; lite åt gången, som en godbit då och då.",
-        "da": "Skrællet og skåret i små stykker eller skiver; lidt ad gangen, som en godbid en gang imellem."
+        "da": "Skrællet og skåret i små stykker eller skiver; lidt ad gangen, som en godbid en gang imellem.",
+        "fi": "Kuorittuna ja pieniksi paloiksi tai viipaleiksi leikattuna; vähän kerrallaan, satunnaisena herkkuna."
       },
       "child": {
         "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
@@ -26514,7 +26666,8 @@
         "nl": "Honden mogen een klein beetje kiwi proeven! Een volwassene schilt de kiwi en snijdt hem in kleine stukjes, zodat hij makkelijk te eten is.",
         "pl": "Psy mogą skosztować odrobiny kiwi! Dorosły obiera je i kroi na drobne kawałki, żeby łatwo je było zjeść.",
         "sv": "Hundar kan smaka lite kiwi! En vuxen skalar den och skär den i pyttesmå bitar så att den är lätt att äta.",
-        "da": "Hunde må gerne smage lidt kiwi! En voksen skræller den og skærer den i helt små stykker, så den er nem at spise."
+        "da": "Hunde må gerne smage lidt kiwi! En voksen skræller den og skærer den i helt små stykker, så den er nem at spise.",
+        "fi": "Koira saa maistaa vähän kiwiä! Aikuinen kuorii sen ja leikkaa pieniksi paloiksi, jotta se on helppo syödä."
       },
       "faq": [
         {
@@ -26531,7 +26684,8 @@
             "nl": "Mogen honden de schil van kiwi eten?",
             "pl": "Czy psy mogą jeść skórkę kiwi?",
             "sv": "Får hundar äta kiwiskal?",
-            "da": "Må hunde spise kiwiskræl?"
+            "da": "Må hunde spise kiwiskræl?",
+            "fi": "Saako koira syödä kiwin kuorta?"
           },
           "a": {
             "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
@@ -26546,7 +26700,8 @@
             "nl": "De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken, dus haal hem er het beste af.",
             "pl": "Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek; najlepiej ją usunąć.",
             "sv": "Skalet är inte giftigt, men det är segt och fiberrikt och kan ge hunden orolig mage, så det är bäst att ta bort det.",
-            "da": "Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave, så det er bedst at fjerne den."
+            "da": "Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave, så det er bedst at fjerne den.",
+            "fi": "Kuori ei ole myrkyllistä, mutta se on sitkeää ja kuitupitoista ja voi sekoittaa koiran vatsan, joten se on parasta poistaa."
           }
         }
       ],
@@ -27136,7 +27291,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Lemons",
@@ -27151,7 +27307,8 @@
         "nl": "Citroenen",
         "pl": "Cytryny",
         "sv": "Citroner",
-        "da": "Citroner"
+        "da": "Citroner",
+        "fi": "Sitruunat"
       },
       "question": {
         "en": "Can dogs eat lemons?",
@@ -27166,7 +27323,8 @@
         "nl": "Mogen honden citroenen eten?",
         "pl": "Czy psy mogą jeść cytryny?",
         "sv": "Får hundar äta citroner?",
-        "da": "Må hunde spise citroner?"
+        "da": "Må hunde spise citroner?",
+        "fi": "Saako koira syödä sitruunoita?"
       },
       "url_slug": {
         "en": "lemons",
@@ -27181,7 +27339,8 @@
         "nl": "citroenen",
         "pl": "cytryny",
         "sv": "citroner",
-        "da": "citroner"
+        "da": "citroner",
+        "fi": "sitruunat"
       },
       "answer": {
         "en": "No, lemons are not something to feed your dog. The flesh isn't toxic, but lemon juice is very acidic and the rind contains psoralen, which is toxic to dogs. If your dog ate a whole lemon or a rind, contact your vet right away.",
@@ -27196,7 +27355,8 @@
         "nl": "Nee, citroenen zijn niets voor je hond. Het vruchtvlees is niet giftig, maar citroensap is erg zuur en de schil bevat psoraleen, dat giftig is voor honden. Heeft je hond een hele citroen of een schil gegeten, neem dan meteen contact op met je dierenarts.",
         "pl": "Nie, cytryn nie należy podawać psom. Miąższ nie jest toksyczny, ale sok z cytryny jest bardzo kwaśny, a skórka zawiera psoralen, który jest toksyczny dla psów. Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem.",
         "sv": "Nej, citroner ska man inte ge sin hund. Fruktköttet är inte giftigt, men citronsaft är mycket sur och skalet innehåller psoralen, som är giftigt för hundar. Om hunden har ätit en hel citron eller ett skal, kontakta veterinären direkt.",
-        "da": "Nej, citroner er ikke noget, man skal give sin hund. Frugtkødet er ikke giftigt, men citronsaft er meget sur, og skallen indeholder stoffet psoralen, som er giftigt for hunde. Hvis din hund har spist en hel citron eller en citronskal, skal du straks kontakte din dyrlæge."
+        "da": "Nej, citroner er ikke noget, man skal give sin hund. Frugtkødet er ikke giftigt, men citronsaft er meget sur, og skallen indeholder stoffet psoralen, som er giftigt for hunde. Hvis din hund har spist en hel citron eller en citronskal, skal du straks kontakte din dyrlæge.",
+        "fi": "Ei, sitruunat eivät kuulu koiran ruokaan. Hedelmäliha ei ole myrkyllistä, mutta sitruunamehu on hyvin hapanta ja kuoressa on psoraleenia, joka on koirille myrkyllistä. Jos koirasi on syönyt kokonaisen sitruunan tai kuorta, ota heti yhteyttä eläinlääkäriin."
       },
       "why": {
         "en": "The ASPCA lists the lemon plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC agrees the flesh isn't toxic but advises against feeding lemons, and PDSA lists them as unsafe because they are very acidic and can upset the stomach. Lemon juice contains a lot of citric acid, the rind contains psoralen and, if swallowed, can cause a stomach obstruction. We use 'not recommended' rather than a stricter level because the flesh itself is not toxic and the danger lies in the rind, juice and plant; most dogs avoid lemons because of the strong smell.",
@@ -27211,7 +27371,8 @@
         "nl": "De ASPCA noemt de citroenplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC is het ermee eens dat het vruchtvlees niet giftig is, maar raadt af om citroenen te geven, en de PDSA noemt ze onveilig omdat ze erg zuur zijn en de maag van streek kunnen maken. Citroensap bevat veel citroenzuur, en de schil bevat psoraleen en kan, als hij wordt ingeslikt, een verstopping in de maag veroorzaken. Wij kiezen voor “niet aan te raden” in plaats van een strenger niveau, omdat het vruchtvlees zelf niet giftig is en het gevaar in de schil, het sap en de plant zit; de meeste honden mijden citroenen vanwege de sterke geur.",
         "pl": "ASPCA uznaje drzewo cytrynowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC zgadza się, że miąższ nie jest toksyczny, ale odradza podawanie cytryn, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne i mogą rozstroić żołądek. Sok z cytryny zawiera dużo kwasu cytrynowego, a skórka zawiera psoralen i po połknięciu może spowodować niedrożność żołądka. Używamy określenia „niezalecane”, a nie ostrzejszego poziomu, bo sam miąższ nie jest toksyczny, a zagrożeniem są skórka, sok i roślina; większość psów i tak unika cytryn z powodu intensywnego zapachu.",
         "sv": "ASPCA anger att citronväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC håller med om att fruktköttet inte är giftigt men avråder från att ge citroner, och PDSA anger att de inte är säkra eftersom de är mycket sura och kan ge orolig mage. Citronsaft innehåller mycket citronsyra, och skalet innehåller psoralen och kan, om det sväljs, orsaka en blockering i magsäcken. Vi använder ”rekommenderas inte” i stället för en strängare nivå eftersom själva fruktköttet inte är giftigt och faran ligger i skalet, saften och växten; de flesta hundar undviker citroner på grund av den starka lukten.",
-        "da": "ASPCA regner citronplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC er enig i at frugtkødet ikke er giftigt, men fraråder at give citroner, og PDSA anser dem for at være usikre, fordi de er meget sure og kan give dårlig mave. Citronsaft indeholder meget citronsyre, og skallen indeholder psoralen og kan give blokering i maven hvis den sluges. Vi bruger »frarådes« og ikke et strengere niveau, fordi frugtkødet i sig selv ikke er giftigt, og faren ligger i skallen, saften og planten. De fleste hunde undgår citroner på grund af den stærke lugt."
+        "da": "ASPCA regner citronplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC er enig i at frugtkødet ikke er giftigt, men fraråder at give citroner, og PDSA anser dem for at være usikre, fordi de er meget sure og kan give dårlig mave. Citronsaft indeholder meget citronsyre, og skallen indeholder psoralen og kan give blokering i maven hvis den sluges. Vi bruger »frarådes« og ikke et strengere niveau, fordi frugtkødet i sig selv ikke er giftigt, og faren ligger i skallen, saften og planten. De fleste hunde undgår citroner på grund af den stærke lugt.",
+        "fi": "ASPCA luokittelee sitruunakasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC on samaa mieltä siitä, ettei hedelmäliha ole myrkyllistä, mutta neuvoo olemaan antamatta sitruunoita, ja PDSA pitää niitä turvattomina, koska ne ovat hyvin happamia ja voivat sekoittaa vatsan. Sitruunamehussa on paljon sitruunahappoa. Kuoressa on psoraleenia, ja nieltynä kuori voi aiheuttaa mahalaukun tukoksen. Luokitus on ”ei suositella” eikä tiukempi, koska hedelmäliha sinänsä ei ole myrkyllistä ja vaara on kuoressa, mehussa ja kasvissa; useimmat koirat karttavat sitruunoita niiden voimakkaan tuoksun vuoksi."
       },
       "signs": {
         "en": [
@@ -27291,6 +27452,12 @@
           "Diarré",
           "Nedtrykthed (lavt energiniveau, virker nedtrykt)",
           "Hudirritation"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Ripuli",
+          "Alakuloisuus (vähän energiaa, vaikuttaa masentuneelta)",
+          "Ihoärsytys"
         ]
       },
       "what_to_do": {
@@ -27306,7 +27473,8 @@
         "nl": "Heeft je hond een hele citroen of een schil gegeten, neem dan meteen contact op met je dierenarts. Houd ook limonade en citroensnoep uit de buurt van je hond, vanwege de suiker.",
         "pl": "Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem. Z powodu cukru trzymaj też z dala od psa lemoniadę i cytrynowe słodycze.",
         "sv": "Om hunden har ätit en hel citron eller ett skal, kontakta veterinären direkt. Håll också lemonad och citrongodis borta från hunden, eftersom de innehåller socker.",
-        "da": "Hvis din hund har spist en hel citron eller en citronskal, skal du straks kontakte din dyrlæge. Hold også limonade og citronbolsjer væk fra hunden på grund af sukkeret."
+        "da": "Hvis din hund har spist en hel citron eller en citronskal, skal du straks kontakte din dyrlæge. Hold også limonade og citronbolsjer væk fra hunden på grund af sukkeret.",
+        "fi": "Jos koirasi on syönyt kokonaisen sitruunan tai kuorta, ota heti yhteyttä eläinlääkäriin. Pidä sokerin vuoksi myös limonadi ja sitruunakarkit poissa koirasi ulottuvilta."
       },
       "serving": null,
       "child": {
@@ -27322,7 +27490,8 @@
         "nl": "Citroenen zijn te zuur voor honden en kunnen buikpijn geven. Bewaar citroenen maar voor mensen.",
         "pl": "Cytryny są dla psów za kwaśne i mogą wywołać ból brzucha. Cytryny zostaw dla ludzi.",
         "sv": "Citroner är för sura för hundar och kan ge dem ont i magen. Citroner är till för människor.",
-        "da": "Citroner er for sure til hunde og kan give dem ondt i maven. Lad citronerne være til mennesker."
+        "da": "Citroner er for sure til hunde og kan give dem ondt i maven. Lad citronerne være til mennesker.",
+        "fi": "Sitruunat ovat koirille liian happamia ja voivat aiheuttaa niille vatsakipua. Jätä sitruunat ihmisille."
       },
       "faq": [
         {
@@ -27339,7 +27508,8 @@
             "nl": "Mogen honden citroensap of limonade?",
             "pl": "Czy psy mogą pić sok z cytryny lub lemoniadę?",
             "sv": "Får hundar citronsaft eller lemonad?",
-            "da": "Må hunde få citronsaft eller limonade?"
+            "da": "Må hunde få citronsaft eller limonade?",
+            "fi": "Saako koira juoda sitruunamehua tai limonadia?"
           },
           "a": {
             "en": "No. Lemon juice contains a lot of citric acid, and sweet lemon products like lemonade are not recommended because too much sugar can lead to obesity.",
@@ -27354,7 +27524,8 @@
             "nl": "Nee. Citroensap bevat veel citroenzuur, en zoete citroenproducten zoals limonade worden afgeraden, omdat te veel suiker tot overgewicht kan leiden.",
             "pl": "Nie. Sok z cytryny zawiera dużo kwasu cytrynowego, a słodkich produktów cytrynowych, takich jak lemoniada, nie zaleca się, bo nadmiar cukru może prowadzić do otyłości.",
             "sv": "Nej. Citronsaft innehåller mycket citronsyra, och söta produkter med citron, som lemonad, rekommenderas inte, eftersom för mycket socker kan leda till fetma.",
-            "da": "Nej. Citronsaft indeholder meget citronsyre, og søde citronprodukter som limonade frarådes, fordi for meget sukker kan føre til overvægt."
+            "da": "Nej. Citronsaft indeholder meget citronsyre, og søde citronprodukter som limonade frarådes, fordi for meget sukker kan føre til overvægt.",
+            "fi": "Ei. Sitruunamehussa on paljon sitruunahappoa, eikä limonadin kaltaisia makeita sitruunatuotteita suositella, koska liika sokeri voi johtaa lihavuuteen."
           }
         }
       ],
@@ -27396,7 +27567,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Limes",
@@ -27411,7 +27583,8 @@
         "nl": "Limoenen",
         "pl": "Limonki",
         "sv": "Lime",
-        "da": "Limefrugter"
+        "da": "Limefrugter",
+        "fi": "Limetit"
       },
       "question": {
         "en": "Can dogs eat limes?",
@@ -27426,7 +27599,8 @@
         "nl": "Mogen honden limoenen eten?",
         "pl": "Czy psy mogą jeść limonki?",
         "sv": "Får hundar äta lime?",
-        "da": "Må hunde spise limefrugter?"
+        "da": "Må hunde spise limefrugter?",
+        "fi": "Saako koira syödä limettejä?"
       },
       "url_slug": {
         "en": "limes",
@@ -27441,7 +27615,8 @@
         "nl": "limoenen",
         "pl": "limonki",
         "sv": "lime",
-        "da": "limefrugter"
+        "da": "limefrugter",
+        "fi": "limetit"
       },
       "answer": {
         "en": "No, it's best not to feed limes to dogs. The fruit itself is not toxic, but lime rinds and their oils are dangerous for dogs, and the acid can upset the stomach. Most dogs dislike the taste and smell anyway.",
@@ -27456,7 +27631,8 @@
         "nl": "Nee, geef honden liever geen limoenen. De vrucht zelf is niet giftig, maar limoenschillen en de oliën daarin zijn gevaarlijk voor honden, en het zuur kan de maag van streek maken. De meeste honden houden toch niet van de smaak en de geur.",
         "pl": "Nie, limonek lepiej psom nie podawać. Sam owoc nie jest toksyczny, ale skórka limonki i zawarte w niej olejki są dla psów niebezpieczne, a kwas może rozstroić żołądek. Większość psów i tak nie lubi ich smaku ani zapachu.",
         "sv": "Nej, det är bäst att inte ge lime till hundar. Själva frukten är inte giftig, men limeskal och oljorna i dem är farliga för hundar, och syran kan ge orolig mage. De flesta hundar tycker ändå inte om smaken eller lukten.",
-        "da": "Nej, det er bedst ikke at give hunde limefrugter. Selve frugten er ikke giftig, men limeskaller og olierne i dem er farlige for hunde, og syren kan give dårlig mave. De fleste hunde bryder sig alligevel ikke om smagen og duften."
+        "da": "Nej, det er bedst ikke at give hunde limefrugter. Selve frugten er ikke giftig, men limeskaller og olierne i dem er farlige for hunde, og syren kan give dårlig mave. De fleste hunde bryder sig alligevel ikke om smagen og duften.",
+        "fi": "Ei, limettejä ei kannata antaa koiralle. Hedelmäliha ei sinänsä ole myrkyllistä, mutta limetin kuori ja sen öljyt ovat koiralle vaarallisia, ja happo voi sekoittaa vatsan. Useimmat koirat eivät muutenkaan pidä limetin mausta ja tuoksusta."
       },
       "why": {
         "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
@@ -27471,7 +27647,8 @@
         "nl": "De ASPCA noemt de limoenplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat limoenen niet giftig zijn maar raadt af om ze te geven, en de PDSA noemt ze onveilig omdat ze erg zuur zijn. In grote hoeveelheden kan citroenzuur maagklachten veroorzaken, het zenuwstelsel zelfs afremmen en tot verlies van coördinatie leiden. Limoensap is geconcentreerd en mag niet aan honden worden gegeven. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees niet giftig is en het gevaar in de schil, de oliën en grote hoeveelheden zit.",
         "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC podaje, że limonki nie są toksyczne, ale odradza ich podawanie, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne. W dużych ilościach kwas cytrynowy może wywołać rozstrój żołądka, a nawet zahamowanie czynności ośrodkowego układu nerwowego i utratę koordynacji. Sok z limonki jest skoncentrowany i nie należy go podawać psom. Używamy określenia „niezalecane”, ponieważ miąższ nie jest toksyczny, a zagrożeniem są skórka, olejki i duże ilości.",
         "sv": "ASPCA anger att limeväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att lime inte är giftig men avråder från att ge den, och PDSA anger att lime inte är säker för hundar eftersom den är mycket sur. I stora mängder kan citronsyra ge magbesvär och till och med dämpad funktion i nervsystemet och nedsatt koordination. Limesaft är koncentrerad och ska inte ges till hundar. Vi använder ”rekommenderas inte” eftersom fruktköttet inte är giftigt, medan skalet, oljorna och stora mängder är det som är farligt.",
-        "da": "ASPCA regner limeplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at limefrugter ikke er giftige, men fraråder at give dem, og PDSA anser dem for at være usikre, fordi de er meget sure. I store mængder kan citronsyre give maveproblemer og endda dæmpe nervesystemets aktivitet og give tab af koordination. Limesaft er koncentreret og bør ikke gives til hunde. Vi bruger »frarådes«, fordi frugtkødet ikke er giftigt, mens skallen, olierne og store mængder er det farlige."
+        "da": "ASPCA regner limeplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at limefrugter ikke er giftige, men fraråder at give dem, og PDSA anser dem for at være usikre, fordi de er meget sure. I store mængder kan citronsyre give maveproblemer og endda dæmpe nervesystemets aktivitet og give tab af koordination. Limesaft er koncentreret og bør ikke gives til hunde. Vi bruger »frarådes«, fordi frugtkødet ikke er giftigt, mens skallen, olierne og store mængder er det farlige.",
+        "fi": "ASPCA luokittelee limettikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan limetit eivät ole myrkyllisiä, mutta niitä ei kannata antaa, ja PDSA pitää niitä turvattomina, koska ne ovat hyvin happamia. Suurina määrinä sitruunahappo voi aiheuttaa vatsavaivoja ja jopa hermoston toiminnan lamaantumista ja koordinaatiohäiriöitä. Limettimehu on väkevää, eikä sitä pidä antaa koiralle. Luokitus on ”ei suositella”, koska hedelmäliha ei ole myrkyllistä, vaan vaarana ovat kuori, öljyt ja suuret määrät."
       },
       "signs": {
         "en": [
@@ -27590,6 +27767,15 @@
           "Tegn på tarmblokering",
           "Rysten eller skælven",
           "Kraftig savlen"
+        ],
+        "fi": [
+          "Väsymys, velttous",
+          "Oksentelu",
+          "Ripuli",
+          "Ruokahaluttomuus",
+          "Suolitukoksen merkit",
+          "Vapina tai tärinä",
+          "Runsas kuolaaminen"
         ]
       },
       "what_to_do": {
@@ -27605,7 +27791,8 @@
         "nl": "Heeft je hond veel limoenen gegeten? Let dan op deze verschijnselen en neem meteen contact op met je dierenarts. Gooi schillen weg op een plek waar je hond er niet bij kan, en moedig je hond niet aan om met gevallen limoenen te spelen.",
         "pl": "Jeśli pies zjadł dużo limonek, obserwuj, czy nie występują wymienione wyżej objawy, i od razu skontaktuj się z weterynarzem. Skórki wyrzucaj tak, by pies nie mógł ich zjeść, i nie zachęcaj go do zabawy opadłymi limonkami.",
         "sv": "Om hunden har ätit mycket lime, håll utkik efter de här tecknen och kontakta veterinären direkt. Släng skalen så att hunden inte kommer åt dem, och uppmuntra inte hunden att leka med nedfallna limefrukter.",
-        "da": "Hvis din hund har spist mange limefrugter, skal du holde øje med disse tegn og straks kontakte din dyrlæge. Smid skallerne ud, så din hund ikke kan komme til dem, og lad ikke hunden lege med limefrugter der er faldet ned."
+        "da": "Hvis din hund har spist mange limefrugter, skal du holde øje med disse tegn og straks kontakte din dyrlæge. Smid skallerne ud, så din hund ikke kan komme til dem, og lad ikke hunden lege med limefrugter der er faldet ned.",
+        "fi": "Jos koirasi on syönyt paljon limettejä, tarkkaile näitä oireita ja ota heti yhteyttä eläinlääkäriin. Hävitä kuoret niin, ettei koirasi yllä niihin, äläkä anna sen leikkiä maahan pudonneilla limeteillä."
       },
       "serving": null,
       "child": {
@@ -27621,7 +27808,8 @@
         "nl": "Limoenen zijn te zuur voor honden en kunnen hun buikje van streek maken. Houd limoenen en hun schil uit de buurt van je hond.",
         "pl": "Limonki są dla psów za kwaśne i mogą rozstroić im brzuszek. Limonki i ich skórki trzymaj z dala od psa.",
         "sv": "Lime är för sur för hundar och kan ge dem ont i magen. Håll lime och limeskal borta från hunden.",
-        "da": "Limefrugter er for sure til hunde og kan give dem ondt i maven. Hold limefrugter og skaller væk fra din hund."
+        "da": "Limefrugter er for sure til hunde og kan give dem ondt i maven. Hold limefrugter og skaller væk fra din hund.",
+        "fi": "Limetit ovat koirille liian happamia ja voivat sekoittaa niiden vatsan. Pidä limetit ja niiden kuoret poissa koirasi ulottuvilta."
       },
       "faq": [
         {
@@ -27638,7 +27826,8 @@
             "nl": "Mogen honden limoensap?",
             "pl": "Czy psy mogą dostać sok z limonki?",
             "sv": "Får hundar limesaft?",
-            "da": "Må hunde få limesaft?"
+            "da": "Må hunde få limesaft?",
+            "fi": "Saako koira juoda limettimehua?"
           },
           "a": {
             "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
@@ -27653,7 +27842,8 @@
             "nl": "Nee. Limoensap is een geconcentreerde vorm van het vruchtvlees, dus het mag niet aan honden worden gegeven.",
             "pl": "Nie. Sok z limonki to skoncentrowana postać owocu, więc nie należy go podawać psom.",
             "sv": "Nej. Limesaft är en koncentrerad form av fruktköttet och ska inte ges till hundar.",
-            "da": "Nej. Limesaft er frugtkødet i koncentreret form og bør ikke gives til hunde."
+            "da": "Nej. Limesaft er frugtkødet i koncentreret form og bør ikke gives til hunde.",
+            "fi": "Ei. Limettimehu on väkevää tiivistelmää hedelmälihasta, joten sitä ei pidä antaa koiralle."
           }
         }
       ],
@@ -28322,7 +28512,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Mandarins",
@@ -28337,7 +28528,8 @@
         "nl": "Mandarijnen",
         "pl": "Mandarynki",
         "sv": "Mandariner",
-        "da": "Mandariner"
+        "da": "Mandariner",
+        "fi": "Mandariinit"
       },
       "question": {
         "en": "Can dogs eat mandarins?",
@@ -28352,7 +28544,8 @@
         "nl": "Mogen honden mandarijnen eten?",
         "pl": "Czy psy mogą jeść mandarynki?",
         "sv": "Får hundar äta mandariner?",
-        "da": "Må hunde spise mandariner?"
+        "da": "Må hunde spise mandariner?",
+        "fi": "Saako koira syödä mandariineja?"
       },
       "url_slug": {
         "en": "mandarins",
@@ -28367,7 +28560,8 @@
         "nl": "mandarijnen",
         "pl": "mandarynki",
         "sv": "mandariner",
-        "da": "mandariner"
+        "da": "mandariner",
+        "fi": "mandariinit"
       },
       "answer": {
         "en": "Yes, mandarins aren't toxic to dogs and can be given in small amounts, much like oranges. Remove the peel and any seeds first, and keep portions small, because mandarins contain natural sugars.",
@@ -28382,7 +28576,8 @@
         "nl": "Ja, mandarijnen zijn niet giftig voor honden en mogen in kleine hoeveelheden, net als sinaasappels. Haal eerst de schil en eventuele pitten eraf en houd de porties klein, want mandarijnen bevatten natuurlijke suikers.",
         "pl": "Tak, mandarynki nie są toksyczne dla psów i można je dawać w małych ilościach, podobnie jak pomarańcze. Najpierw usuń skórkę i pestki, a porcje niech będą małe, bo mandarynki zawierają naturalne cukry.",
         "sv": "Ja, mandariner är inte giftiga för hundar och kan ges i små mängder, ungefär som apelsiner. Ta först bort skalet och eventuella kärnor, och ge små portioner, eftersom mandariner innehåller naturligt socker.",
-        "da": "Ja, mandariner er ikke giftige for hunde og kan gives i små mængder, ligesom appelsiner. Fjern først skal og kerner, og hold portionerne små, fordi mandariner indeholder naturligt sukker."
+        "da": "Ja, mandariner er ikke giftige for hunde og kan gives i små mængder, ligesom appelsiner. Fjern først skal og kerner, og hold portionerne små, fordi mandariner indeholder naturligt sukker.",
+        "fi": "Kyllä, mandariini ei ole koiralle myrkyllistä, ja sitä voi antaa pieniä määriä, kuten appelsiiniakin. Poista ensin kuori ja mahdolliset siemenet ja pidä annokset pieninä, koska mandariineissa on luonnollisia sokereita."
       },
       "why": {
         "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
@@ -28397,7 +28592,8 @@
         "nl": "Mandarijnen bevatten vergelijkbare voedingsstoffen als sinaasappels, waaronder vitamine C en vezels, maar ook natuurlijke suikers. Net als bij sinaasappels is de schil taai en moeilijk verteerbaar en kan hij het risico op een verstopping vergroten, en pitten kunnen een verstikkingsgevaar vormen, vooral voor kleinere honden. Ook hier geldt: te veel eten kan spijsverteringsproblemen veroorzaken, waaronder diarree.",
         "pl": "Mandarynki zawierają podobne składniki odżywcze jak pomarańcze, w tym witaminę C i błonnik, ale też naturalne cukry. Tak jak w pomarańczy, skórka jest twarda i trudna do strawienia i może zwiększać ryzyko niedrożności, a pestki mogą grozić zadławieniem, zwłaszcza u mniejszych psów. Podobnie jak pomarańcze, w nadmiarze mogą rozstroić trawienie, w tym wywołać biegunkę.",
         "sv": "Mandariner innehåller ungefär samma näringsämnen som apelsiner, bland annat vitamin C och fiber, men också naturligt socker. Precis som på apelsiner är skalet segt och svårsmält och kan öka risken för stopp i tarmen, och kärnor innebär en kvävningsrisk, särskilt hos mindre hundar. Precis som med apelsiner kan för mycket ge matsmältningsbesvär, bland annat diarré.",
-        "da": "Mandariner indeholder lignende næringsstoffer som appelsiner, blandt andet C-vitamin og fibre, men også naturligt sukker. Som med appelsiner er skallen sej og svær at fordøje og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare, især for mindre hunde. Som med appelsiner kan for mange mandariner give fordøjelsesproblemer, herunder diarré."
+        "da": "Mandariner indeholder lignende næringsstoffer som appelsiner, blandt andet C-vitamin og fibre, men også naturligt sukker. Som med appelsiner er skallen sej og svær at fordøje og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare, især for mindre hunde. Som med appelsiner kan for mange mandariner give fordøjelsesproblemer, herunder diarré.",
+        "fi": "Mandariineissa on samanlaisia ravintoaineita kuin appelsiineissa, muun muassa C-vitamiinia ja kuitua, mutta myös luonnollisia sokereita. Appelsiinin tavoin myös mandariinin kuori on sitkeää ja vaikeasti sulavaa ja voi lisätä tukoksen riskiä, ja siemenet voivat aiheuttaa tukehtumisvaaran, etenkin pienemmille koirille. Appelsiinin tavoin liika mandariini voi aiheuttaa ruoansulatusvaivoja, myös ripulia."
       },
       "signs": null,
       "what_to_do": {
@@ -28413,7 +28609,8 @@
         "nl": "Geef je hond de schil niet: net als bij sinaasappels is die moeilijk verteerbaar en kan hij het risico op een darmverstopping vergroten, waarvoor soms de hulp van een dierenarts nodig is.",
         "pl": "Nie dawaj psu skórki: podobnie jak skórka pomarańczy jest trudna do strawienia i może zwiększać ryzyko niedrożności jelit, która w niektórych przypadkach wymaga pomocy weterynarza.",
         "sv": "Ge inte hunden skalet: precis som på apelsiner är det svårsmält och kan öka risken för stopp i tarmen, vilket i vissa fall kräver veterinärvård.",
-        "da": "Giv ikke din hund skallen. Som med appelsiner er den svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge."
+        "da": "Giv ikke din hund skallen. Som med appelsiner er den svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge.",
+        "fi": "Älä anna koirallesi kuorta: appelsiinin kuoren tavoin se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua."
       },
       "serving": {
         "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
@@ -28428,7 +28625,8 @@
         "nl": "Geschild, zonder pitten, in kleine stukjes; kleine porties als snoepje voor af en toe.",
         "pl": "Obrane, bez pestek, w małych kawałkach; małe porcje jako okazjonalny smakołyk.",
         "sv": "Skalade, utan kärnor, i små bitar; små portioner som en godbit då och då.",
-        "da": "Skrællet og uden kerner, i små stykker. Små portioner som en godbid en gang imellem."
+        "da": "Skrællet og uden kerner, i små stykker. Små portioner som en godbid en gang imellem.",
+        "fi": "Kuorittuna, ilman siemeniä, pieninä paloina; pieniä annoksia satunnaisena herkkuna."
       },
       "child": {
         "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
@@ -28443,7 +28641,8 @@
         "nl": "Een hond mag een piepklein stukje mandarijn! Een volwassene haalt eerst de schil en de pitten eraf.",
         "pl": "Pies może zjeść maleńki kawałek mandarynki! Dorosły najpierw zdejmuje skórkę i wyjmuje pestki.",
         "sv": "En hund kan få en pytteliten bit mandarin! En vuxen tar först bort skalet och kärnorna.",
-        "da": "En hund må gerne få et helt lille stykke mandarin! En voksen tager skallen af og fjerner kernerne først."
+        "da": "En hund må gerne få et helt lille stykke mandarin! En voksen tager skallen af og fjerner kernerne først.",
+        "fi": "Koira saa pienen palan mandariinia! Aikuinen poistaa ensin kuoren ja siemenet."
       },
       "faq": [
         {
@@ -28460,7 +28659,8 @@
             "nl": "Zijn mandarijnen voor honden anders dan sinaasappels?",
             "pl": "Czy dla psów mandarynki różnią się od pomarańczy?",
             "sv": "Är det någon skillnad mellan mandariner och apelsiner för hundar?",
-            "da": "Er mandariner anderledes end appelsiner, når det gælder hunde?"
+            "da": "Er mandariner anderledes end appelsiner, når det gælder hunde?",
+            "fi": "Eroaako mandariini appelsiinista koiran ruokinnassa?"
           },
           "a": {
             "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
@@ -28475,7 +28675,8 @@
             "nl": "Nauwelijks: ze hebben vergelijkbare voedingsstoffen en natuurlijke suikers, en er gelden dezelfde regels – haal de schil eraf, verwijder de pitten en houd de porties klein.",
             "pl": "Niewiele: mają podobne składniki odżywcze i naturalne cukry, a zasady są te same – zdejmij skórkę, usuń pestki i podawaj małe porcje.",
             "sv": "Knappast någon skillnad: de har liknande näringsämnen och naturligt socker, och samma regler gäller – skala frukten, ta bort kärnorna och ge små portioner.",
-            "da": "Ikke meget. De indeholder lignende næringsstoffer og naturligt sukker, og de samme regler gælder – tag skallen af, fjern kernerne, og hold portionerne små."
+            "da": "Ikke meget. De indeholder lignende næringsstoffer og naturligt sukker, og de samme regler gælder – tag skallen af, fjern kernerne, og hold portionerne små.",
+            "fi": "Eivät juuri: niissä on samanlaisia ravintoaineita ja luonnollisia sokereita, ja samat säännöt pätevät – poista kuori ja siemenet ja pidä annokset pieninä."
           }
         }
       ],
@@ -28513,7 +28714,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Mango",
@@ -28528,7 +28730,8 @@
         "nl": "Mango",
         "pl": "Mango",
         "sv": "Mango",
-        "da": "Mango"
+        "da": "Mango",
+        "fi": "Mango"
       },
       "question": {
         "en": "Can dogs eat mango?",
@@ -28543,7 +28746,8 @@
         "nl": "Mogen honden mango eten?",
         "pl": "Czy psy mogą jeść mango?",
         "sv": "Får hundar äta mango?",
-        "da": "Må hunde spise mango?"
+        "da": "Må hunde spise mango?",
+        "fi": "Saako koira syödä mangoa?"
       },
       "url_slug": {
         "en": "mango",
@@ -28558,7 +28762,8 @@
         "nl": "mango",
         "pl": "mango",
         "sv": "mango",
-        "da": "mango"
+        "da": "mango",
+        "fi": "mango"
       },
       "answer": {
         "en": "Yes, dogs can eat mango in moderation, as long as it is properly prepared: peel it and remove the pit. Mango is high in sugar, so keep it an occasional treat, especially for dogs who struggle with their weight.",
@@ -28573,7 +28778,8 @@
         "nl": "Ja, honden mogen met mate mango eten, mits goed klaargemaakt: schil de mango en haal de pit eruit. Mango bevat veel suiker, dus geef er maar af en toe wat van als snoepje, vooral aan honden die moeite hebben met hun gewicht.",
         "pl": "Tak, psy mogą jeść mango z umiarem, o ile jest odpowiednio przygotowane: obierz je i usuń pestkę. Mango ma dużo cukru, więc niech będzie okazjonalnym smakołykiem, zwłaszcza dla psów z problemami z wagą.",
         "sv": "Ja, hundar kan äta mango med måtta, så länge du förbereder den rätt: skala den och ta bort kärnan. Mango innehåller mycket socker, så ge den bara som en godbit då och då, särskilt till hundar som har problem med vikten.",
-        "da": "Ja, med måde. Hunde kan godt få mango, hvis du først skræller den og fjerner stenen. Mango indeholder meget sukker, så giv den kun som en godbid en gang imellem, især til hunde der har tendens til at tage på."
+        "da": "Ja, med måde. Hunde kan godt få mango, hvis du først skræller den og fjerner stenen. Mango indeholder meget sukker, så giv den kun som en godbid en gang imellem, især til hunde der har tendens til at tage på.",
+        "fi": "Kyllä, koira voi syödä mangoa kohtuudella, kunhan se on valmisteltu oikein: kuori se ja poista kivi. Mangossa on paljon sokeria, joten anna sitä vain satunnaisena herkkuna, etenkin jos koirasi painonhallinta on vaikeaa."
       },
       "why": {
         "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
@@ -28588,7 +28794,8 @@
         "nl": "Mango bevat vezels en de vitamines A, B6, C en E. De pit vormt een groot verstikkingsgevaar, kan in het spijsverteringskanaal vast komen te zitten en bevat kleine hoeveelheden cyanide. De schil is moeilijk verteerbaar. Te veel fruit kan buikpijn en diarree veroorzaken.",
         "pl": "Mango zawiera błonnik oraz witaminy A, B6, C i E. Pestka stanowi poważne zagrożenie zadławieniem, może utknąć w przewodzie pokarmowym i zawiera niewielkie ilości cyjanku. Skórka jest trudna do strawienia. Zbyt duża ilość owocu może wywołać ból brzucha i biegunkę.",
         "sv": "Mango innehåller fiber och vitamin A, B6, C och E. Kärnan är en allvarlig kvävningsrisk, kan fastna i matsmältningskanalen och innehåller små mängder cyanid. Skalet är svårsmält. För mycket frukt kan ge magont och diarré.",
-        "da": "Mango indeholder fibre samt A-, B6-, C- og E-vitamin. Stenen udgør en alvorlig kvælningsfare, kan sætte sig fast i fordøjelseskanalen og indeholder små mængder cyanid. Skrællen er svær at fordøje. For meget frugt kan give mavepine og diarré."
+        "da": "Mango indeholder fibre samt A-, B6-, C- og E-vitamin. Stenen udgør en alvorlig kvælningsfare, kan sætte sig fast i fordøjelseskanalen og indeholder små mængder cyanid. Skrællen er svær at fordøje. For meget frugt kan give mavepine og diarré.",
+        "fi": "Mangossa on kuitua sekä A-, B6-, C- ja E-vitamiineja. Kivi on vakava tukehtumisvaara, voi juuttua ruoansulatuskanavaan ja sisältää pieniä määriä syanidia. Kuori on vaikeasti sulavaa. Liian suuri määrä mangoa voi aiheuttaa vatsakipua ja ripulia."
       },
       "signs": null,
       "what_to_do": {
@@ -28604,7 +28811,8 @@
         "nl": "Heb je vragen of twijfels over mango voor je hond? Vraag het dan aan je dierenarts.",
         "pl": "Jeśli masz pytania lub wątpliwości dotyczące podawania psu mango, zapytaj weterynarza.",
         "sv": "Har du frågor eller funderingar om att ge hunden mango, fråga veterinären.",
-        "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund mango."
+        "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund mango.",
+        "fi": "Jos mangon antaminen koirallesi mietityttää, kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
@@ -28619,7 +28827,8 @@
         "nl": "Geschild, zonder pit, in kleine stukjes; als snoepje voor af en toe.",
         "pl": "Obrane, z usuniętą pestką, pokrojone w małe kawałki; jako okazjonalny smakołyk.",
         "sv": "Skalad, med kärnan borttagen, skuren i små bitar; som en godbit då och då.",
-        "da": "Skrællet og uden sten, skåret i små stykker; som en godbid en gang imellem."
+        "da": "Skrællet og uden sten, skåret i små stykker; som en godbid en gang imellem.",
+        "fi": "Kuorittuna, kivi poistettuna ja pieniksi paloiksi leikattuna; satunnaisena herkkuna."
       },
       "child": {
         "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
@@ -28634,7 +28843,8 @@
         "nl": "Honden mogen een klein beetje mango proeven! Een volwassene schilt de mango en haalt eerst de grote pit eruit.",
         "pl": "Psy mogą spróbować odrobiny mango! Dorosły najpierw je obiera i wyjmuje dużą pestkę.",
         "sv": "Hundar kan smaka lite mango! En vuxen skalar den och tar först bort den stora kärnan.",
-        "da": "Hunde må gerne smage lidt mango! En voksen skræller den og tager først den store sten ud."
+        "da": "Hunde må gerne smage lidt mango! En voksen skræller den og tager først den store sten ud.",
+        "fi": "Koira saa maistaa vähän mangoa! Aikuinen kuorii sen ja ottaa ensin pois ison kiven."
       },
       "faq": [
         {
@@ -28651,7 +28861,8 @@
             "nl": "Waarom moet de pit van de mango eruit?",
             "pl": "Dlaczego trzeba usuwać pestkę mango?",
             "sv": "Varför måste mangokärnan tas bort?",
-            "da": "Hvorfor skal mangostenen fjernes?"
+            "da": "Hvorfor skal mangostenen fjernes?",
+            "fi": "Miksi mangon kivi pitää poistaa?"
           },
           "a": {
             "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
@@ -28666,7 +28877,8 @@
             "nl": "Een hond kan in de pit stikken, de pit kan in het spijsverteringskanaal blijven steken en bevat bovendien kleine hoeveelheden cyanide.",
             "pl": "Pestka może spowodować zadławienie lub utknąć w przewodzie pokarmowym psa, a do tego zawiera niewielkie ilości cyjanku.",
             "sv": "Hunden kan sätta kärnan i halsen, eller så kan den fastna i matsmältningskanalen, och den innehåller små mängder cyanid.",
-            "da": "En hund kan blive kvalt af stenen, og den kan sætte sig fast i fordøjelseskanalen. Den indeholder også små mængder cyanid."
+            "da": "En hund kan blive kvalt af stenen, og den kan sætte sig fast i fordøjelseskanalen. Den indeholder også små mængder cyanid.",
+            "fi": "Kivi voi saada koiran tukehtumaan tai juuttua sen ruoansulatuskanavaan, ja se sisältää pieniä määriä syanidia."
           }
         },
         {
@@ -28683,7 +28895,8 @@
             "nl": "Mogen honden de schil van mango eten?",
             "pl": "Czy psy mogą jeść skórkę mango?",
             "sv": "Får hundar äta mangoskal?",
-            "da": "Må hunde spise mangoskræl?"
+            "da": "Må hunde spise mangoskræl?",
+            "fi": "Saako koira syödä mangon kuorta?"
           },
           "a": {
             "en": "It is difficult to digest, so it is best to remove it before serving.",
@@ -28698,7 +28911,8 @@
             "nl": "De schil is moeilijk verteerbaar, dus haal hem het best eraf voordat je de mango geeft.",
             "pl": "Jest trudna do strawienia, więc przed podaniem najlepiej ją usunąć.",
             "sv": "Det är svårsmält, så det är bäst att ta bort det innan du serverar.",
-            "da": "Den er svær at fordøje, så det er bedst at fjerne den inden du serverer mangoen."
+            "da": "Den er svær at fordøje, så det er bedst at fjerne den inden du serverer mangoen.",
+            "fi": "Se on vaikeasti sulavaa, joten se on parasta poistaa ennen tarjoamista."
           }
         }
       ],
@@ -29294,7 +29508,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Oranges",
@@ -29309,7 +29524,8 @@
         "nl": "Sinaasappels",
         "pl": "Pomarańcze",
         "sv": "Apelsiner",
-        "da": "Appelsiner"
+        "da": "Appelsiner",
+        "fi": "Appelsiinit"
       },
       "question": {
         "en": "Can dogs eat oranges?",
@@ -29324,7 +29540,8 @@
         "nl": "Mogen honden sinaasappels eten?",
         "pl": "Czy psy mogą jeść pomarańcze?",
         "sv": "Får hundar äta apelsiner?",
-        "da": "Må hunde spise appelsiner?"
+        "da": "Må hunde spise appelsiner?",
+        "fi": "Saako koira syödä appelsiinia?"
       },
       "url_slug": {
         "en": "oranges",
@@ -29339,7 +29556,8 @@
         "nl": "sinaasappels",
         "pl": "pomarancze",
         "sv": "apelsiner",
-        "da": "appelsiner"
+        "da": "appelsiner",
+        "fi": "appelsiinit"
       },
       "answer": {
         "en": "Yes, dogs can eat the flesh of an orange in limited amounts, without the peel and seeds. Oranges are high in natural sugar, so keep them an occasional treat; many dogs dislike the strong citrus smell anyway.",
@@ -29354,7 +29572,8 @@
         "nl": "Ja, honden mogen het vruchtvlees van een sinaasappel in beperkte hoeveelheden eten, zonder schil en pitten. Sinaasappels bevatten veel natuurlijke suiker, dus geef ze alleen af en toe als snoepje; veel honden houden toch niet van de sterke citrusgeur.",
         "pl": "Tak, psy mogą jeść miąższ pomarańczy w ograniczonych ilościach, bez skórki i pestek. Pomarańcze mają dużo naturalnego cukru, więc niech będą okazjonalnym smakołykiem; wiele psów i tak nie lubi intensywnego zapachu cytrusów.",
         "sv": "Ja, hundar kan äta fruktköttet från en apelsin i små mängder, utan skal och kärnor. Apelsiner innehåller mycket naturligt socker, så ge dem bara som en godbit då och då; många hundar tycker ändå inte om den starka citruslukten.",
-        "da": "Ja, hunde må spise frugtkødet fra en appelsin i begrænsede mængder, uden skal og kerner. Appelsiner indeholder meget naturligt sukker, så giv dem kun en gang imellem. Mange hunde bryder sig alligevel ikke om den stærke citrusduft."
+        "da": "Ja, hunde må spise frugtkødet fra en appelsin i begrænsede mængder, uden skal og kerner. Appelsiner indeholder meget naturligt sukker, så giv dem kun en gang imellem. Mange hunde bryder sig alligevel ikke om den stærke citrusduft.",
+        "fi": "Kyllä, koira voi syödä appelsiinin hedelmälihaa pieniä määriä, ilman kuorta ja siemeniä. Appelsiinissa on paljon luonnollista sokeria, joten anna sitä vain satunnaisena herkkuna; moni koira ei muutenkaan pidä voimakkaasta sitrustuoksusta."
       },
       "why": {
         "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
@@ -29369,7 +29588,8 @@
         "nl": "De ASPCA noemt de sinaasappelplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC, de PDSA en Blue Cross zeggen dat het vruchtvlees met mate prima is. De schil is taai en moeilijk verteerbaar, kan de maag van streek maken en het risico op een verstopping vergroten; pitten kunnen een verstikkingsgevaar vormen. Te veel sinaasappel kan spijsverteringsproblemen veroorzaken, waaronder diarree.",
         "pl": "ASPCA uznaje drzewo pomarańczowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznacza jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC, PDSA i Blue Cross podają, że miąższ jest w porządku, jeśli podawać go z umiarem. Skórka jest twarda i trudna do strawienia, może rozstroić żołądek i zwiększać ryzyko niedrożności; pestki mogą grozić zadławieniem. Zbyt dużo pomarańczy może rozstroić trawienie, w tym wywołać biegunkę.",
         "sv": "ASPCA anger att apelsinväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC, PDSA och Blue Cross skriver att fruktköttet är okej med måtta. Skalet är segt och svårsmält, kan ge orolig mage och kan öka risken för stopp; kärnor innebär en kvävningsrisk. För mycket apelsin kan ge matsmältningsbesvär, bland annat diarré.",
-        "da": "ASPCA regner appelsinplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC, PDSA og Blue Cross skriver at frugtkødet er i orden med måde. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare. For mange appelsiner kan give fordøjelsesproblemer, herunder diarré."
+        "da": "ASPCA regner appelsinplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC, PDSA og Blue Cross skriver at frugtkødet er i orden med måde. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare. For mange appelsiner kan give fordøjelsesproblemer, herunder diarré.",
+        "fi": "ASPCA luokittelee appelsiinikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC, PDSA ja Blue Cross pitävät hedelmälihaa sopivana kohtuudella. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä; siemenet voivat aiheuttaa tukehtumisvaaran. Liika appelsiini voi aiheuttaa ruoansulatusvaivoja, myös ripulia."
       },
       "signs": null,
       "what_to_do": {
@@ -29385,7 +29605,8 @@
         "nl": "Geef je hond de schil niet: die is moeilijk verteerbaar en kan het risico op een darmverstopping vergroten, waarvoor soms de hulp van een dierenarts nodig is.",
         "pl": "Nie dawaj psu skórki: jest trudna do strawienia i może zwiększać ryzyko niedrożności jelit, która w niektórych przypadkach wymaga pomocy weterynarza.",
         "sv": "Ge inte hunden skalet: det är svårsmält och kan öka risken för stopp i tarmen, vilket i vissa fall kräver veterinärvård.",
-        "da": "Giv ikke din hund skallen. Den er svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge."
+        "da": "Giv ikke din hund skallen. Den er svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge.",
+        "fi": "Älä anna koirallesi kuorta: se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua."
       },
       "serving": {
         "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
@@ -29400,7 +29621,8 @@
         "nl": "Alleen het vruchtvlees, zonder schil en pitten, in kleine stukjes gesneden; als snoepje voor af en toe.",
         "pl": "Tylko miąższ, bez skórki i pestek, pokrojony w małe kawałki; jako okazjonalny smakołyk.",
         "sv": "Bara fruktköttet, utan skal och kärnor, skuret i små bitar; som en godbit då och då.",
-        "da": "Kun frugtkødet, uden skal og kerner, skåret i små stykker; som en godbid en gang imellem."
+        "da": "Kun frugtkødet, uden skal og kerner, skåret i små stykker; som en godbid en gang imellem.",
+        "fi": "Vain hedelmäliha ilman kuorta ja siemeniä, pieniksi paloiksi leikattuna; satunnaisena herkkuna."
       },
       "child": {
         "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
@@ -29415,7 +29637,8 @@
         "nl": "Sommige honden vinden een klein stukje sinaasappel lekker, andere vinden de geur niet lekker! Een volwassene schilt de sinaasappel en haalt de pitten eruit.",
         "pl": "Niektóre psy lubią mały kawałek pomarańczy, a innym nie podoba się jej zapach! Dorosły najpierw obiera pomarańczę i wyjmuje pestki.",
         "sv": "Vissa hundar gillar en liten bit apelsin, och andra tycker inte om lukten! En vuxen skalar den och tar bort kärnorna.",
-        "da": "Nogle hunde kan lide et lille stykke appelsin, og andre bryder sig ikke om lugten! En voksen skræller den og tager kernerne ud."
+        "da": "Nogle hunde kan lide et lille stykke appelsin, og andre bryder sig ikke om lugten! En voksen skræller den og tager kernerne ud.",
+        "fi": "Jotkut koirat tykkäävät pienestä appelsiinipalasta, mutta toisten mielestä tuoksu ei ole kiva! Aikuinen kuorii appelsiinin ja ottaa siemenet pois."
       },
       "faq": [
         {
@@ -29432,7 +29655,8 @@
             "nl": "Mogen honden sinaasappelschil eten?",
             "pl": "Czy psy mogą jeść skórkę pomarańczy?",
             "sv": "Får hundar äta apelsinskal?",
-            "da": "Må hunde spise appelsinskal?"
+            "da": "Må hunde spise appelsinskal?",
+            "fi": "Saako koira syödä appelsiinin kuorta?"
           },
           "a": {
             "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
@@ -29447,7 +29671,8 @@
             "nl": "Nee. De schil is taai en moeilijk verteerbaar, kan de maag van streek maken en het risico op een verstopping vergroten. De ASPCA zegt dat de schillen en het plantaardige materiaal de problemen veroorzaken.",
             "pl": "Nie. Skórka jest twarda i trudna do strawienia, może rozstroić żołądek i zwiększać ryzyko niedrożności. ASPCA podaje, że problemy powodują skórki i części rośliny.",
             "sv": "Nej. Skalet är segt och svårsmält, kan ge orolig mage och kan öka risken för stopp. ASPCA skriver att det är skalet och växtmaterialet som orsakar problem.",
-            "da": "Nej. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering. ASPCA skriver at det er skallerne og plantematerialet der giver problemer."
+            "da": "Nej. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering. ASPCA skriver at det er skallerne og plantematerialet der giver problemer.",
+            "fi": "Ei. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä. ASPCA:n mukaan ongelmia aiheuttavat kuoret ja kasvimateriaali."
           }
         },
         {
@@ -29464,7 +29689,8 @@
             "nl": "Mogen honden sinaasappelsap drinken?",
             "pl": "Czy psy mogą pić sok pomarańczowy?",
             "sv": "Får hundar dricka apelsinjuice?",
-            "da": "Må hunde drikke appelsinjuice?"
+            "da": "Må hunde drikke appelsinjuice?",
+            "fi": "Saako koira juoda appelsiinimehua?"
           },
           "a": {
             "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
@@ -29479,7 +29705,8 @@
             "nl": "Sinaasappelsap is niet giftig, maar meestal geen goede keuze: het bevat geconcentreerde natuurlijke suikers en niet de vezels van de hele vrucht.",
             "pl": "Sok pomarańczowy nie jest toksyczny, ale zwykle nie jest dobrym wyborem: zawiera skoncentrowane naturalne cukry i nie zawiera błonnika, który jest w całym owocu.",
             "sv": "Apelsinjuice är inte giftig, men det är i regel inget bra val: den innehåller koncentrerat naturligt socker och saknar fibrerna i hela frukten.",
-            "da": "Appelsinjuice er ikke giftig, men det er sjældent et godt valg. Den indeholder koncentreret naturligt sukker og mangler fibrene fra hele frugten."
+            "da": "Appelsinjuice er ikke giftig, men det er sjældent et godt valg. Den indeholder koncentreret naturligt sukker og mangler fibrene fra hele frugten.",
+            "fi": "Appelsiinimehu ei ole myrkyllistä, mutta se ei yleensä ole hyvä valinta: siinä on tiivistynyttä luonnollista sokeria, ja siitä puuttuu kokonaisen hedelmän kuitu."
           }
         }
       ],
@@ -29529,7 +29756,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Papaya",
@@ -29544,7 +29772,8 @@
         "nl": "Papaja",
         "pl": "Papaja",
         "sv": "Papaya",
-        "da": "Papaya"
+        "da": "Papaya",
+        "fi": "Papaija"
       },
       "question": {
         "en": "Can dogs eat papaya?",
@@ -29559,7 +29788,8 @@
         "nl": "Mogen honden papaja eten?",
         "pl": "Czy psy mogą jeść papaję?",
         "sv": "Får hundar äta papaya?",
-        "da": "Må hunde spise papaya?"
+        "da": "Må hunde spise papaya?",
+        "fi": "Saako koira syödä papaijaa?"
       },
       "url_slug": {
         "en": "papaya",
@@ -29574,7 +29804,8 @@
         "nl": "papaja",
         "pl": "papaja",
         "sv": "papaya",
-        "da": "papaya"
+        "da": "papaya",
+        "fi": "papaija"
       },
       "answer": {
         "en": "Yes, dogs can eat small amounts of fresh papaya, as long as the seeds and the skin are removed first. Papaya is naturally high in sugar, so keep it an occasional treat.",
@@ -29589,7 +29820,8 @@
         "nl": "Ja, honden mogen kleine hoeveelheden verse papaja eten, mits eerst de pitten en de schil zijn verwijderd. Papaja bevat van nature veel suiker, dus geef papaja maar af en toe als snoepje.",
         "pl": "Tak, psy mogą jeść niewielkie ilości świeżej papai, o ile najpierw usuniesz pestki i skórkę. Papaja z natury zawiera dużo cukru, więc niech będzie okazjonalnym smakołykiem.",
         "sv": "Ja, hundar kan äta små mängder färsk papaya, så länge fröna och skalet tas bort först. Papaya är naturligt rik på socker, så ge den bara som en godbit då och då.",
-        "da": "Ja, hunde kan få lidt frisk papaya, hvis du først fjerner kerner og skræl. Papaya indeholder af natur meget sukker, så giv den kun en gang imellem."
+        "da": "Ja, hunde kan få lidt frisk papaya, hvis du først fjerner kerner og skræl. Papaya indeholder af natur meget sukker, så giv den kun en gang imellem.",
+        "fi": "Kyllä, koira voi syödä pieniä määriä tuoretta papaijaa, kunhan siemenet ja kuori poistetaan ensin. Papaijassa on luonnostaan paljon sokeria, joten anna sitä vain satunnaisena herkkuna."
       },
       "why": {
         "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
@@ -29604,7 +29836,8 @@
         "nl": "Papajapitten bevatten kleine hoeveelheden cyanogene verbindingen, die in grotere hoeveelheden schadelijk kunnen zijn. De schil is taai en moeilijk verteerbaar en kan maagklachten veroorzaken. Papaja is van nature zoet en rijk aan vezels, dus te veel kan maagklachten of diarree geven; bij honden met diabetes moet de hoeveelheid fruit zorgvuldig worden afgestemd. Gedroogde papaja bevat vaak toegevoegde suiker of conserveermiddelen.",
         "pl": "Pestki papai zawierają niewielkie ilości związków cyjanogennych, które w większych ilościach mogą szkodzić. Skórka jest twarda, trudna do strawienia i może wywołać dolegliwości żołądkowe. Papaja jest z natury słodka i bogata w błonnik, więc zbyt dużo może rozstroić żołądek lub wywołać biegunkę; u psów z cukrzycą ilość owoców trzeba dokładnie kontrolować. Suszona papaja często zawiera dodatek cukru lub konserwanty.",
         "sv": "Papayafrön innehåller små mängder cyanogena ämnen, som kan vara skadliga i större mängder. Skalet är segt och svårsmält och kan ge obehag i magen. Papaya är naturligt sockerrik och fiberrik, så för mycket kan ge orolig mage eller diarré; för hundar med diabetes måste fruktintaget styras noga. Torkad papaya innehåller ofta tillsatt socker eller konserveringsmedel.",
-        "da": "Papayakerner indeholder små mængder cyanogene forbindelser, som kan være skadelige i større mængder. Skrællen er sej og svær at fordøje og kan give ubehag i maven. Papaya er af natur sukkerholdig og rig på fibre, så for meget kan give dårlig mave eller diarré. Hunde med diabetes skal have deres frugtindtag nøje styret. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler."
+        "da": "Papayakerner indeholder små mængder cyanogene forbindelser, som kan være skadelige i større mængder. Skrællen er sej og svær at fordøje og kan give ubehag i maven. Papaya er af natur sukkerholdig og rig på fibre, så for meget kan give dårlig mave eller diarré. Hunde med diabetes skal have deres frugtindtag nøje styret. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler.",
+        "fi": "Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, jotka suurina määrinä voivat olla haitallisia. Kuori on sitkeää ja vaikeasti sulavaa ja voi aiheuttaa vatsavaivoja. Papaija on luonnostaan sokeripitoista ja kuiturikasta, joten liika voi aiheuttaa vatsavaivoja tai ripulia; diabetesta sairastavien koirien hedelmien määrää on seurattava tarkasti. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita."
       },
       "signs": null,
       "what_to_do": {
@@ -29620,7 +29853,8 @@
         "nl": "Overleg met je dierenarts voordat je papaja aan het voer van je hond toevoegt, vooral als je hond een gezondheidsprobleem heeft, zoals diabetes.",
         "pl": "Zanim dodasz papaję do diety psa, porozmawiaj z weterynarzem, zwłaszcza jeśli pies ma problem zdrowotny, taki jak cukrzyca.",
         "sv": "Prata med veterinären innan du lägger till papaya i hundens mat, särskilt om hunden har en sjukdom som diabetes.",
-        "da": "Tal med din dyrlæge, inden papaya bliver en fast del af din hunds kost, især hvis din hund har en sygdom som diabetes."
+        "da": "Tal med din dyrlæge, inden papaya bliver en fast del af din hunds kost, især hvis din hund har en sygdom som diabetes.",
+        "fi": "Keskustele eläinlääkärin kanssa ennen kuin lisäät papaijaa koirasi ruokavalioon, etenkin jos koirallasi on jokin terveysongelma, kuten diabetes."
       },
       "serving": {
         "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
@@ -29635,7 +29869,8 @@
         "nl": "Vers, niet gedroogd: snijd de papaja doormidden, schep de pitten eruit, haal de schil eraf en snijd het vruchtvlees in kleine, hapklare blokjes.",
         "pl": "Świeża, nie suszona: przekrój na pół, wyjmij pestki łyżką, usuń skórkę, a miąższ pokrój w kostkę na jeden kęs.",
         "sv": "Färsk, inte torkad: dela den på mitten, skrapa ut fröna, ta bort skalet och skär fruktköttet i små, lagom stora tärningar.",
-        "da": "Frisk, ikke tørret. Del den på midten, skrab kernerne ud, fjern skrællen, og skær frugtkødet i små, mundrette tern."
+        "da": "Frisk, ikke tørret. Del den på midten, skrab kernerne ud, fjern skrællen, og skær frugtkødet i små, mundrette tern.",
+        "fi": "Tuoretta, ei kuivattua: halkaise, kaavi siemenet pois, poista kuori ja leikkaa hedelmäliha pieniksi suupaloiksi."
       },
       "child": {
         "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
@@ -29650,7 +29885,8 @@
         "nl": "Honden mogen een beetje papaja proeven! Een volwassene schept de pitten eruit, snijdt de schil eraf en maakt kleine stukjes.",
         "pl": "Psy mogą spróbować odrobiny papai! Dorosły wyjmuje pestki łyżką, odkrawa skórkę i kroi owoc na maleńkie kawałki.",
         "sv": "Hundar kan smaka lite papaya! En vuxen skrapar ur fröna, skär bort skalet och gör pyttesmå bitar.",
-        "da": "Hunde kan prøve lidt papaya! En voksen skraber kernerne ud, skærer skrællen af og skærer frugtkødet i helt små stykker."
+        "da": "Hunde kan prøve lidt papaya! En voksen skraber kernerne ud, skærer skrællen af og skærer frugtkødet i helt små stykker.",
+        "fi": "Koira saa maistaa vähän papaijaa! Aikuinen kaapii siemenet pois, kuorii hedelmän ja pilkkoo sen pieniksi paloiksi."
       },
       "faq": [
         {
@@ -29667,7 +29903,8 @@
             "nl": "Mogen honden papajapitten eten?",
             "pl": "Czy psy mogą jeść pestki papai?",
             "sv": "Får hundar äta papayafrön?",
-            "da": "Må hunde spise papayakerner?"
+            "da": "Må hunde spise papayakerner?",
+            "fi": "Saako koira syödä papaijan siemeniä?"
           },
           "a": {
             "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
@@ -29682,7 +29919,8 @@
             "nl": "Nee. Papajapitten bevatten kleine hoeveelheden cyanogene verbindingen, dus haal ze eruit voordat je de papaja geeft.",
             "pl": "Nie. Pestki papai zawierają niewielkie ilości związków cyjanogennych, więc przed podaniem je usuń.",
             "sv": "Nej. Papayafrön innehåller små mängder cyanogena ämnen, så ta bort dem innan du serverar.",
-            "da": "Nej. Papayakerner indeholder små mængder cyanogene forbindelser, så fjern dem inden du serverer frugten."
+            "da": "Nej. Papayakerner indeholder små mængder cyanogene forbindelser, så fjern dem inden du serverer frugten.",
+            "fi": "Ei. Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, joten poista ne ennen tarjoamista."
           }
         },
         {
@@ -29699,7 +29937,8 @@
             "nl": "Is gedroogde papaja oké voor honden?",
             "pl": "Czy suszona papaja jest dla psów w porządku?",
             "sv": "Är torkad papaya okej för hundar?",
-            "da": "Er tørret papaya i orden til hunde?"
+            "da": "Er tørret papaya i orden til hunde?",
+            "fi": "Sopiiko kuivattu papaija koirille?"
           },
           "a": {
             "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
@@ -29714,7 +29953,8 @@
             "nl": "Vers is beter. Gedroogde papaja bevat vaak toegevoegde suiker of conserveermiddelen die niet geschikt zijn voor honden.",
             "pl": "Lepsza jest świeża. Suszona papaja często zawiera dodatek cukru lub konserwanty, które nie są odpowiednie dla psów.",
             "sv": "Färsk är bättre. Torkad papaya innehåller ofta tillsatt socker eller konserveringsmedel som inte passar hundar.",
-            "da": "Frisk er bedre. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler der ikke egner sig til hunde."
+            "da": "Frisk er bedre. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler der ikke egner sig til hunde.",
+            "fi": "Tuore on parempi. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita, jotka eivät sovi koirille."
           }
         }
       ],
@@ -30860,7 +31100,8 @@
         "nl",
         "pl",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Pineapple",
@@ -30875,7 +31116,8 @@
         "nl": "Ananas",
         "pl": "Ananas",
         "sv": "Ananas",
-        "da": "Ananas"
+        "da": "Ananas",
+        "fi": "Ananas"
       },
       "question": {
         "en": "Can dogs eat pineapple?",
@@ -30890,7 +31132,8 @@
         "nl": "Mogen honden ananas eten?",
         "pl": "Czy psy mogą jeść ananasa?",
         "sv": "Får hundar äta ananas?",
-        "da": "Må hunde spise ananas?"
+        "da": "Må hunde spise ananas?",
+        "fi": "Saako koira syödä ananasta?"
       },
       "url_slug": {
         "en": "pineapple",
@@ -30905,7 +31148,8 @@
         "nl": "ananas",
         "pl": "ananas",
         "sv": "ananas",
-        "da": "ananas"
+        "da": "ananas",
+        "fi": "ananas"
       },
       "answer": {
         "en": "Yes, raw pineapple in small amounts is a good snack for dogs, as long as the spiny skin, the crown and the hard core are removed. Avoid canned pineapple, because the syrup has too much sugar.",
@@ -30920,7 +31164,8 @@
         "nl": "Ja, rauwe ananas in kleine hoeveelheden is een goede snack voor honden, zolang de stekelige schil, de kroon en de harde kern zijn verwijderd. Vermijd ananas uit blik, want de siroop bevat te veel suiker.",
         "pl": "Tak, surowy ananas w małych ilościach to dobra przekąska dla psa, o ile usuniesz kolczastą skórkę, zielony czub i twardy środek. Unikaj ananasa z puszki, bo syrop zawiera za dużo cukru.",
         "sv": "Ja, rå ananas i små mängder är ett bra mellanmål för hundar, så länge det taggiga skalet, kronan och den hårda kärnan tas bort. Undvik ananas på burk, eftersom sirapen innehåller för mycket socker.",
-        "da": "Ja, hunde kan få lidt rå ananas som en god snack, så længe du først fjerner den stikkende skal, kronen og den hårde midte. Undgå ananas på dåse, fordi sirupen indeholder for meget sukker."
+        "da": "Ja, hunde kan få lidt rå ananas som en god snack, så længe du først fjerner den stikkende skal, kronen og den hårde midte. Undgå ananas på dåse, fordi sirupen indeholder for meget sukker.",
+        "fi": "Kyllä, pieni määrä raakaa ananasta on koiralle hyvä välipala, kunhan piikikäs kuori, lehtiruusuke ja kova ydin poistetaan. Vältä säilykeananasta, koska siirapissa on liikaa sokeria."
       },
       "why": {
         "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
@@ -30935,7 +31180,8 @@
         "nl": "Ananas zit vol vitamines, mineralen en vezels, maar bevat ook veel natuurlijke suiker. De taaie kern in het midden en de stekelige schil kunnen een verstopping veroorzaken. Ananas uit blik kun je het best vermijden, omdat de siroop te veel suiker bevat voor de spijsvertering van de meeste honden. Sommige honden krijgen diarree of maagklachten van ananas.",
         "pl": "Ananas jest pełen witamin, składników mineralnych i błonnika, ale zawiera też dużo naturalnego cukru. Twardy środek i kolczasta skórka mogą spowodować niedrożność. Ananasa z puszki najlepiej unikać, bo jego syrop zawiera zbyt dużo cukru dla układu pokarmowego większości psów. Po ananasie niektóre psy mają biegunkę lub rozstrój żołądka.",
         "sv": "Ananas är full av vitaminer, mineraler och fiber, men innehåller också mycket naturligt socker. Den sega kärnan i mitten och det taggiga skalet kan orsaka stopp i tarmen. Ananas på burk är bäst att undvika, eftersom sirapen innehåller för mycket socker för de flesta hundars matsmältning. Vissa hundar får diarré eller orolig mage av ananas.",
-        "da": "Ananas er rig på vitaminer, mineraler og fibre, men indeholder også meget naturligt sukker. Den seje midte og den stikkende skal kan give en blokering. Ananas på dåse bør helst undgås, fordi sirupen indeholder for meget sukker til de fleste hundes mave. Nogle hunde får diarré eller dårlig mave af ananas."
+        "da": "Ananas er rig på vitaminer, mineraler og fibre, men indeholder også meget naturligt sukker. Den seje midte og den stikkende skal kan give en blokering. Ananas på dåse bør helst undgås, fordi sirupen indeholder for meget sukker til de fleste hundes mave. Nogle hunde får diarré eller dårlig mave af ananas.",
+        "fi": "Ananas on täynnä vitamiineja, kivennäisaineita ja kuitua, mutta siinä on myös paljon luonnollista sokeria. Sitkeä ydin ja piikikäs kuori voivat aiheuttaa tukoksen. Säilykeananasta on parasta välttää, koska sen siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria. Joillakin koirilla ananas aiheuttaa ripulia tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -30951,7 +31197,8 @@
         "nl": "Krijgt je hond diarree of maagklachten na het eten van ananas? Dan is ananas misschien niet de juiste snack voor je hond.",
         "pl": "Jeśli po ananasie pies ma biegunkę lub rozstrój żołądka, ananas może nie być dla niego dobrą przekąską.",
         "sv": "Om hunden får diarré eller orolig mage av ananas är det kanske inte rätt mellanmål för den.",
-        "da": "Hvis din hund får diarré eller dårlig mave af at spise ananas, er ananas måske ikke noget for din hund."
+        "da": "Hvis din hund får diarré eller dårlig mave af at spise ananas, er ananas måske ikke noget for din hund.",
+        "fi": "Jos koirallasi on ananaksen syömisen jälkeen ripulia tai vatsavaivoja, ananas ei ehkä sovi sille välipalaksi."
       },
       "serving": {
         "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
@@ -30966,7 +31213,8 @@
         "nl": "Vers en geschild, zonder kroon en kern, in hapklare stukjes; bevroren stukjes verse ananas zijn een zomers snoepje.",
         "pl": "Świeży i obrany, bez czuba i środka, pokrojony na kawałki wielkości jednego kęsa; mrożone kawałki świeżego ananasa to letni smakołyk.",
         "sv": "Färsk och skalad, utan krona och kärna, skuren i lagom stora bitar; frysta bitar av färsk ananas blir en svalkande sommargodbit.",
-        "da": "Frisk og skrællet, uden krone og midte, skåret i mundrette stykker. Frosne stykker frisk ananas er en lækker godbid om sommeren."
+        "da": "Frisk og skrællet, uden krone og midte, skåret i mundrette stykker. Frosne stykker frisk ananas er en lækker godbid om sommeren.",
+        "fi": "Tuoretta ja kuorittua, ilman lehtiruusukettä ja ydintä, suupaloiksi leikattuna. Pakastetut ananaspalat ovat kesäinen herkku."
       },
       "child": {
         "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
@@ -30981,7 +31229,8 @@
         "nl": "Honden mogen een klein stukje verse ananas! Een volwassene snijdt eerst de stekelige schil en het harde middenstuk eraf.",
         "pl": "Psy mogą zjeść mały kawałek świeżego ananasa! Dorosły najpierw odcina kłującą skórkę i twardy środek.",
         "sv": "Hundar kan få en liten bit färsk ananas! En vuxen skär först bort det taggiga skalet och den hårda mitten.",
-        "da": "Hunde kan få et lille stykke frisk ananas! En voksen skærer først den stikkende skal og den hårde midte af."
+        "da": "Hunde kan få et lille stykke frisk ananas! En voksen skærer først den stikkende skal og den hårde midte af.",
+        "fi": "Koira saa pienen palan tuoretta ananasta! Aikuinen leikkaa ensin pois piikikkään kuoren ja kovan keskustan."
       },
       "faq": [
         {
@@ -30998,7 +31247,8 @@
             "nl": "Mogen honden ananas uit blik eten?",
             "pl": "Czy psy mogą jeść ananasa z puszki?",
             "sv": "Får hundar äta ananas på burk?",
-            "da": "Må hunde spise ananas på dåse?"
+            "da": "Må hunde spise ananas på dåse?",
+            "fi": "Saako koira syödä säilykeananasta?"
           },
           "a": {
             "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
@@ -31013,7 +31263,8 @@
             "nl": "Dat kun je het best vermijden. De siroop in fruit uit blik bevat te veel suiker voor de spijsvertering van de meeste honden.",
             "pl": "Lepiej go unikać. Syrop w owocach z puszki zawiera zbyt dużo cukru dla układu pokarmowego większości psów.",
             "sv": "Det är bäst att låta bli. Sirapen i frukt på burk innehåller för mycket socker för de flesta hundars matsmältning.",
-            "da": "Det er bedst at undgå. Sirupen i frugt på dåse indeholder for meget sukker til de fleste hundes mave."
+            "da": "Det er bedst at undgå. Sirupen i frugt på dåse indeholder for meget sukker til de fleste hundes mave.",
+            "fi": "Sitä on parasta välttää. Säilykehedelmien siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria."
           }
         },
         {
@@ -31030,7 +31281,8 @@
             "nl": "Waarom moeten de kern en de schil eraf?",
             "pl": "Dlaczego trzeba usuwać środek i skórkę?",
             "sv": "Varför ska kärnan och skalet tas bort?",
-            "da": "Hvorfor skal midten og skallen fjernes?"
+            "da": "Hvorfor skal midten og skallen fjernes?",
+            "fi": "Miksi ydin ja kuori pitää poistaa?"
           },
           "a": {
             "en": "The tough core and the spiny skin can cause a blockage in the gut.",
@@ -31045,7 +31297,8 @@
             "nl": "De taaie kern en de stekelige schil kunnen een darmverstopping veroorzaken.",
             "pl": "Twardy środek i kolczasta skórka mogą spowodować niedrożność jelit.",
             "sv": "Den sega kärnan och det taggiga skalet kan orsaka stopp i tarmen.",
-            "da": "Den seje midte og den stikkende skal kan give en blokering i tarmen."
+            "da": "Den seje midte og den stikkende skal kan give en blokering i tarmen.",
+            "fi": "Sitkeä ydin ja piikikäs kuori voivat aiheuttaa suolitukoksen."
           }
         }
       ],
