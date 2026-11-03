@@ -99,6 +99,11 @@ class GameDataResetService
         'purchase_events',
         // AI spend + AI Lab (ledger → lab results → lab runs)
         'ai_spend_ledger',
+        // M6-W03 item content (→ pets, pet_looks; the ledger above references item_media). The
+        // catalogue pictures go too (their files are on the emptied media disk) — media:item-media
+        // makes them again.
+        'item_media_notices',
+        'item_media',
         // M5-T15: budget warning dedupe (the ledger restarts, so do its warnings)
         // and the Filament database notifications (superadmin bell, no game data kept)
         'ai_budget_alerts',

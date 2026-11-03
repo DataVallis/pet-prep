@@ -578,6 +578,113 @@ class PetAppearancePrompt
             .$ending.' No toys, no ball, no feather. '.$style;
     }
 
+    // ── M6-W03 »Želje« item content (SHOP_SPEC §5, David 2026-11-03) ──
+
+    /** Prompt variants of every item request (a variant is used only after fal's `no_media_generated`). */
+    public const ITEM_PROMPT_VARIANTS = 2;
+
+    /** Item key image edit: the same animal, room and framing; only the pose changes and the item is added. */
+    public const ITEM_KEEP = 'Keep it clearly the same individual animal: identical coat colours, coat pattern and markings, '
+        .'identical eye colour, ears, size and age. Keep the same room, floor, background, natural light, camera position and framing; '
+        .'the whole body stays in frame. Change only the pose and add exactly this one object, at a natural size for the animal.';
+
+    public const ITEM_PICTURE_STYLE = 'Realistic product photograph, the object alone and whole in the centre of the frame, '
+        .'on a plain soft light-grey background, soft even studio light, a gentle shadow under it, sharp focus, true-to-life materials and colours. '
+        .'Only the object: no animal, no people, no hands, no text, no price tag, no logo, no watermark.';
+
+    /**
+     * M6-W03: the CATALOGUE picture of an item design — the object alone (no animal), the same
+     * object description that every pet-with-item prompt uses.
+     */
+    public function itemPicturePrompt(string $description, int $variant = 0): string
+    {
+        $variant = max(0, min(self::ITEM_PROMPT_VARIANTS - 1, $variant));
+
+        return $variant === 0
+            ? 'A product photograph of '.$description.'. '.self::ITEM_PICTURE_STYLE
+            : 'A clean pet-shop catalogue photo showing '.$description.', standing on its own. '.self::ITEM_PICTURE_STYLE;
+    }
+
+    /**
+     * M6-W03: the KEY IMAGE of a bought item — an edit of the stage's reference image: the same
+     * animal now with the item (`$itemKey` decides what it does with it). `$withPicture` = the
+     * design's catalogue picture is the second reference image. Breed + traits + stage only.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function itemImagePrompt(string $breedKey, string $itemKey, string $description, array $traits = [], ?LifeStage $stage = null, bool $withPicture = false, int $variant = 0): string
+    {
+        $species = self::speciesOf($breedKey);
+        $this->refuseCatWithoutTraits($species, $traits);
+        $noun = $species === Species::Cat ? 'cat' : 'dog';
+        $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
+        $variant = max(0, min(self::ITEM_PROMPT_VARIANTS - 1, $variant));
+        $object = $withPicture
+            ? $description.' — exactly the object shown in the second reference image (same shape, colours and materials)'
+            : $description;
+        $action = self::itemPose($itemKey, $species, $object);
+        $anatomy = sprintf(self::POSE_ANATOMY, $noun);
+
+        return $variant === 0
+            ? 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.self::ITEM_KEEP.' '.self::KEYFRAME_STYLE
+            : 'A realistic photograph of the same '.$noun.' as in the first reference image ('.$subject.') in the same room: the '.$noun.' is '.$action.'. '
+                .$anatomy.' '.self::ITEM_KEEP.' '.self::KEYFRAME_STYLE;
+    }
+
+    /**
+     * M6-W03: the CLIP of a bought item — start frame = the item key image only. Bed and toys
+     * loop (the clip comes back close to the start), bowls and treats are played once.
+     *
+     * @param  array<string, string>  $traits
+     */
+    public function itemClipPrompt(string $breedKey, string $itemKey, string $description, array $traits = [], ?LifeStage $stage = null, int $variant = 0): string
+    {
+        $species = self::speciesOf($breedKey);
+        $subject = $this->clipSubject($breedKey, $species, $traits, $stage);
+        $style = $species === Species::Cat ? self::CAT_LOOP_STYLE : self::LOOP_STYLE;
+        $loops = in_array($itemKey, ['bed', 'toy_1', 'toy_2'], true);
+        $note = $loops ? self::LOOP_NOTE : self::SAME_FRAME_PHASE_NOTE;
+        $motion = self::itemMotion($itemKey, $species);
+
+        return $variant === 0
+            ? 'The same '.$subject.' as in the image, '.$motion.'. The object stays exactly as in the image ('.$description.'). '.$note.' '.$style
+            : 'A realistic video of the same '.$subject.' as in the start image: '.$motion.'. '.$note.' '.$style;
+    }
+
+    /** Negative prompt of an item clip (start frame only, like a loop). */
+    public function itemClipNegativePrompt(Species $species): string
+    {
+        return $this->loopNegativePrompt($species);
+    }
+
+    /** What the animal does with the item in its key image. */
+    private static function itemPose(string $itemKey, Species $species, string $object): string
+    {
+        $cat = $species === Species::Cat;
+
+        return match ($itemKey) {
+            'bed' => $cat ? 'curled up asleep in '.$object.', eyes closed, relaxed' : 'lying curled up asleep on '.$object.', eyes closed, relaxed',
+            'bowls' => 'standing in front of '.$object.' with its head lowered, eating from the food bowl',
+            'treats' => $cat ? 'crouched on the floor, sniffing and nibbling '.$object.' lying in front of its front paws' : 'sitting on the floor, holding '.$object.' gently in its mouth',
+            default => $cat ? 'in a playful crouch on the floor, batting at '.$object.' with one front paw' : 'lying on the floor in a playful pose, holding '.$object.' between its front paws and mouthing it',
+        };
+    }
+
+    /** What the animal does in the item clip. */
+    private static function itemMotion(string $itemKey, Species $species): string
+    {
+        $cat = $species === Species::Cat;
+
+        return match ($itemKey) {
+            'bed' => 'sleeping peacefully on its bed: slow, clearly visible breathing, an ear twitching, a small shift of a paw, staying asleep with its eyes closed',
+            'bowls' => 'eating from the food bowl: chewing with clearly visible jaw movement, then lifting its head and licking its lips contentedly',
+            'treats' => 'eating the treat: picking it up, chewing it with clearly visible jaw movement, then licking its lips happily',
+            default => $cat
+                ? 'playing with the toy: batting it with its front paws, a quick playful pounce, then settling back into its crouch'
+                : 'playing with the toy: tugging and shaking it playfully, tail wagging, staying in the same spot on the floor',
+        };
+    }
+
     /** @param  array<string, string>  $traits */
     private function clipSubject(string $breedKey, Species $species, array $traits, ?LifeStage $stage): string
     {

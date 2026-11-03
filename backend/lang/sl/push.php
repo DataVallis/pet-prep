@@ -277,4 +277,20 @@ return [
         'cat_treats' => 'priboljške',
         'other' => 'novo stvar',
     ],
+    // M6-W03 (SHOP_SPEC §3 korak 4, David 3. 11. 2026): vsebina kupljene stvari je pripravljena. Samo
+    // otrokom skrbnikom (tikanje); naslov je ime ljubljenčka (če ga ima), besedilo nikoli ne omenja imen.
+    // Cel stavek za vsako stvar (brez sklanjanja).
+    'item_ready' => [
+        'dog_bed' => 'Nova postelja je tu. Pridi pogledat!',
+        'cat_basket' => 'Nova košara je tu. Pridi pogledat!',
+        'dog_bowls' => 'Novi skledi sta tu. Pridi pogledat!',
+        'cat_bowls' => 'Novi skledi sta tu. Pridi pogledat!',
+        'dog_rope' => 'Nova vrv za vlečenje je tu. Pridi pogledat!',
+        'dog_squeaky' => 'Nova piskajoča igrača je tu. Pridi pogledat!',
+        'cat_mouse' => 'Nova plišasta miška je tu. Pridi pogledat!',
+        'cat_feather' => 'Nova palica s peresi je tu. Pridi pogledat!',
+        'dog_treats' => 'Priboljški so tu. Pridi pogledat!',
+        'cat_treats' => 'Priboljški so tu. Pridi pogledat!',
+        'other' => 'Nekaj novega je tu. Pridi pogledat!',
+    ],
 ];

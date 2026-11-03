@@ -63,6 +63,14 @@ Schedule::command('media:sweep')
 // retries per chain; after a fal refusal the next prompt variant, never the identical request);
 // once the recovery is exhausted the activity switches to simple mode (playable, classic stage)
 // and Discord gets one informative post. Chains reported before 2026-11-02 are picked up once.
+// M6-W03 (David 2026-11-03): AI content of »Želje« items — catalogue pictures, the content of every
+// owned item (also items bought before W03 — the automatic backfill), lost requests, self-healing.
+Schedule::command('media:item-media')
+    ->everyTenMinutes()
+    ->withoutOverlapping()
+    ->name('item-media')
+    ->description('AI content of bought items (catalogue pictures, pet-with-item pictures / clips), self-healing');
+
 Schedule::command('media:retry-activity-clips')
     ->hourlyAt(17)
     ->withoutOverlapping()

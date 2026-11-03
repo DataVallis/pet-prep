@@ -25,6 +25,8 @@ enum AdminAlertKind: string
     case ActivityMediaStuck = 'activity_media_stuck';
     /** David 2026-10-30 (QA #451 m2): a frugal reversal / ping-pong failed for good — made by fal instead. */
     case FrugalClipFallback = 'frugal_clip_fallback';
+    /** M6-W03: AI content of »Želje« items given up after its automatic recovery (the items are shown without it — informative). */
+    case ItemMediaStuck = 'item_media_stuck';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -37,7 +39,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck => 'warning',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
         };
@@ -59,6 +61,7 @@ enum AdminAlertKind: string
         return match ($this) {
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
             self::ActivityMediaStuck, self::FrugalClipFallback => '/admin/pets',
+            self::ItemMediaStuck => '/admin/item-media',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::Test => '/admin/system-health',
         };
     }

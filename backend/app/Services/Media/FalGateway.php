@@ -99,10 +99,10 @@ class FalGateway
      *
      * @throws AiCallException
      */
-    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null, int $timeoutSeconds = 120): array
+    public function submit(ModelProfile $profile, array $input, AiSpendPurpose $purpose, string $webhookUrl, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null, int $timeoutSeconds = 120, ?int $itemMediaId = null): array
     {
         $this->assertCallable($profile);
-        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId);
+        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId, $itemMediaId);
 
         try {
             $response = $this->http()

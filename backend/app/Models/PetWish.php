@@ -15,6 +15,7 @@ use Illuminate\Support\Carbon;
  * @property int $pet_id
  * @property int $child_user_id
  * @property string $item_key
+ * @property string|null $design M6-W03: the design the child picked (null for treats)
  * @property WishStatus $status
  * @property int|null $decided_by_user_id
  * @property Carbon|null $decided_at
@@ -22,7 +23,7 @@ use Illuminate\Support\Carbon;
  */
 class PetWish extends Model
 {
-    protected $fillable = ['pet_id', 'child_user_id', 'item_key', 'status', 'decided_by_user_id', 'decided_at'];
+    protected $fillable = ['pet_id', 'child_user_id', 'item_key', 'design', 'status', 'decided_by_user_id', 'decided_at'];
 
     protected function casts(): array
     {

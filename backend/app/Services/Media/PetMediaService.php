@@ -15,11 +15,13 @@ use App\Jobs\CheckPetMediaQuality;
 use App\Jobs\GeneratePetKeyframe;
 use App\Jobs\GeneratePetReferenceImage;
 use App\Jobs\GenerateSchoolClipDerivative;
+use App\Jobs\QueuePetItemMedia;
 use App\Jobs\RegeneratePetStageMedia;
 use App\Jobs\StorePetMedia;
 use App\Jobs\SubmitPetStateVideo;
 use App\Models\AiSpendLedger;
 use App\Models\Pet;
+use App\Models\PetItem;
 use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
@@ -1260,9 +1262,22 @@ class PetMediaService
         if ($pet !== null) {
             if ($locked->isImage()) {
                 $pet->updateQuietly(['media_status' => 'ready', 'media_error' => null]);
+                self::queueItemMedia($pet);
             }
 
             PetUpdated::afterCommit($pet, self::readyEvent($locked));
+        }
+    }
+
+    /**
+     * M6-W03: the pet shows a new picture (first image, a new life stage, a regenerate) — the
+     * content of the items it owns follows that picture (ItemMediaService; shared looks 0 $).
+     * Only for pets that own items; queued after commit.
+     */
+    private static function queueItemMedia(Pet $pet): void
+    {
+        if (PetItem::where('pet_id', $pet->id)->whereNull('revoked_at')->exists()) {
+            QueuePetItemMedia::dispatch($pet->id)->afterCommit();
         }
     }
 
@@ -1949,6 +1964,8 @@ class PetMediaService
             phaseGroups: app(GameMediaReadiness::class)->phaseGroups($pet, $slots),
             // M5-T08b (QA m3): the pet's set, not the switch — off never downgrades stored media.
             stateMedia: $this->entitlements->hasStateMediaSet($pet),
+            // M6-W03: content of the items the pet owns (its own table — ItemMediaService).
+            items: app(ItemMediaService::class)->payloadFor($pet, $slots, $expires),
         );
     }
 
@@ -3092,6 +3109,7 @@ class PetMediaService
             if ($pet !== null) {
                 if ($locked->isImage()) {
                     $pet->updateQuietly(['media_status' => 'ready', 'media_error' => null]);
+                    self::queueItemMedia($pet);
                 }
 
                 PetUpdated::afterCommit($pet, self::readyEvent($locked));

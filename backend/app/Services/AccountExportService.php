@@ -338,8 +338,8 @@ class AccountExportService
         // M5-R06-04 / 05: cat care sessions (wand play, grooming, litter change, scratching) — who, when, verdict.
         $careSessions = $byPet('pet_care_sessions', ['user_id', 'kind', 'local_date', 'started_at', 'status', 'finished_at', 'result'], 'started_at');
         // M6-W01 »Želje«: wishes (ids only), owned items and treats given.
-        $wishes = $byPet('pet_wishes', ['child_user_id', 'item_key', 'status', 'decided_by_user_id', 'decided_at', 'created_at'], 'created_at');
-        $items = $byPet('pet_items', ['item_key', 'kind', 'variant', 'quantity_total', 'quantity_left', 'acquired_at', 'revoked_at'], 'acquired_at');
+        $wishes = $byPet('pet_wishes', ['child_user_id', 'item_key', 'design', 'status', 'decided_by_user_id', 'decided_at', 'created_at'], 'created_at');
+        $items = $byPet('pet_items', ['item_key', 'kind', 'variant', 'design', 'quantity_total', 'quantity_left', 'acquired_at', 'revoked_at'], 'acquired_at');
         $treats = $byPet('pet_treat_events', ['child_user_id', 'given_at', 'local_date'], 'given_at');
         // M5-R05: invitations as rows (≤ 2 a day); free plays — unlimited — as one
         // count per day, child and kind, so play can never make the export too large.
@@ -519,6 +519,7 @@ class AccountExportService
                 'wishes' => $rows($wishes)->map(fn ($r) => [
                     'child_id' => $r->child_user_id,
                     'item_key' => $r->item_key,
+                    'design' => $r->design,
                     'status' => $r->status,
                     'decided_by' => $r->decided_by_user_id,
                     'decided_at' => $this->iso($r->decided_at),
@@ -528,6 +529,8 @@ class AccountExportService
                     'item_key' => $r->item_key,
                     'kind' => $r->kind,
                     'variant' => $r->variant,
+                    // M6-W03: the design (null for treats).
+                    'design' => $r->design,
                     'quantity_total' => (int) $r->quantity_total,
                     'quantity_left' => (int) $r->quantity_left,
                     'acquired_at' => $this->iso($r->acquired_at),

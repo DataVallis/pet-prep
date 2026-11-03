@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\PushType;
+use App\Enums\Species;
 use App\Enums\WishStatus;
 use App\Filament\Resources\PetResource\Pages\EditPet;
 use App\Filament\Resources\PetResource\RelationManagers\ItemsRelationManager;
@@ -23,6 +24,7 @@ use App\Services\FamilyService;
 use App\Services\NotificationService;
 use App\Services\Push\ExpoPushClient;
 use App\Services\Push\PushCopy;
+use App\Services\Shop\ItemDesigns;
 use Illuminate\Http\Client\Factory as HttpFactory;
 use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Middleware\ThrottleRequests;
@@ -88,8 +90,10 @@ function wiAs(User $user): void
 function wiWish(User $child, string $key): TestResponse
 {
     wiAs($child);
+    // M6-W03: an item with designs needs one — the first design of the item for the pet's species.
+    $design = ItemDesigns::defaultFor($key, $child->activePet()?->speciesValue() ?? Species::Dog);
 
-    return postJson('/api/child/wishes', ['item_key' => $key]);
+    return postJson('/api/child/wishes', ['item_key' => $key] + ($design !== null ? ['design' => $design] : []));
 }
 
 /** @param  array<string, mixed>  $overrides */
@@ -151,10 +155,16 @@ describe('catalogue', function () {
             ->assertJsonPath('open_limit', 3)
             ->assertJsonPath('can_wish', true)
             ->assertJsonPath('blocked_reason', null)
-            ->assertJsonPath('items.0', ['key' => 'bed', 'kind' => 'durable', 'variant' => 'dog_bed', 'status' => 'available'])
+            ->assertJsonPath('items.0.key', 'bed')
+            ->assertJsonPath('items.0.kind', 'durable')
+            ->assertJsonPath('items.0.variant', 'dog_bed')
+            ->assertJsonPath('items.0.status', 'available')
+            // M6-W03: three designs per durable item (catalogue picture null until made), none for treats.
+            ->assertJsonCount(3, 'items.0.designs')
+            ->assertJsonPath('items.0.design', null)
             ->assertJsonPath('items.2.variant', 'dog_rope')
             ->assertJsonPath('items.3.variant', 'dog_squeaky')
-            ->assertJsonPath('items.4', ['key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'status' => 'available', 'treats_left' => 0])
+            ->assertJsonPath('items.4', ['key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'designs' => [], 'design' => null, 'status' => 'available', 'treats_left' => 0])
             ->assertJsonCount(5, 'items');
     });
 
@@ -166,7 +176,9 @@ describe('catalogue', function () {
             ->assertJsonPath('species', 'cat')
             ->assertJsonPath('items.0.variant', 'cat_basket')
             ->assertJsonPath('items.2.variant', 'cat_mouse')
-            ->assertJsonPath('items.3.variant', 'cat_feather');
+            ->assertJsonPath('items.3.variant', 'cat_feather')
+            ->assertJsonPath('items.0.designs.0.key', 'cat_basket_wicker_cream')
+            ->assertJsonPath('items.3.designs.2.key', 'cat_wand_peacock');
     });
 
     it('answers 404 no_pet for a child without a pet', function () {
@@ -213,8 +225,18 @@ describe('child wishes', function () {
             ->assertJsonPath('pets.0.pet_id', $pet->id)
             ->assertJsonPath('pets.0.bundle_eligible', true)
             ->assertJsonPath('pets.0.bundle_product_id', 'petprep_wish_bundle_welcome')
-            ->assertJsonPath('pets.0.items.0', ['key' => 'bed', 'variant' => 'dog_bed', 'product_id' => 'petprep_wish_bed', 'owned' => false, 'media_ready' => false])
-            ->assertJsonPath('pets.0.items.4', ['key' => 'treats', 'variant' => 'dog_treats', 'product_id' => 'petprep_wish_treats_10', 'treats_left' => 0])
+            ->assertJsonPath('wishes.0.design', 'dog_bed_round_grey')
+            ->assertJsonPath('pets.0.items.0.key', 'bed')
+            ->assertJsonPath('pets.0.items.0.variant', 'dog_bed')
+            ->assertJsonPath('pets.0.items.0.product_id', 'petprep_wish_bed')
+            ->assertJsonPath('pets.0.items.0.design', null)
+            ->assertJsonPath('pets.0.items.0.owned', false)
+            ->assertJsonPath('pets.0.items.0.media_ready', false)
+            ->assertJsonPath('pets.0.items.0.designs.0.key', 'dog_bed_round_grey')
+            ->assertJsonPath('pets.0.items.4.key', 'treats')
+            ->assertJsonPath('pets.0.items.4.designs', [])
+            ->assertJsonPath('pets.0.items.4.treats_left', 0)
+            ->assertJsonMissingPath('pets.0.items.4.media_ready')
             ->assertJsonPath('unassigned_credits', []);
         getJson('/api/parent/dashboard')->assertJsonPath('wishes_open_count', 1);
     });
@@ -244,7 +266,8 @@ describe('child wishes', function () {
         wiRedeem($parent, $pet, 'petprep_wish_bed')->assertOk();
         wiWish($child, 'bed')->assertStatus(422)->assertJsonPath('reason', 'already_owned');
         wiAs($child);
-        getJson('/api/child/wishes')->assertJsonPath('items.0.status', 'owned')->assertJsonPath('items.0.media_ready', false);
+        // M6-W03: a pet without AI media gets no item content — the item is ready at once.
+        getJson('/api/child/wishes')->assertJsonPath('items.0.status', 'owned')->assertJsonPath('items.0.media_ready', true);
     });
 
     it('allows treats only while 2 or fewer are left', function () {
@@ -545,12 +568,15 @@ describe('redeem', function () {
         wiBuy($parent);
         wiRedeem($parent, $pet, 'petprep_wish_bed', $id)->assertOk()
             ->assertJsonPath('status', 'assigned')
-            ->assertJsonPath('items.0', ['key' => 'bed', 'variant' => 'dog_bed', 'product_id' => 'petprep_wish_bed', 'owned' => true, 'media_ready' => false])
+            ->assertJsonPath('items.0.key', 'bed')
+            ->assertJsonPath('items.0.design', 'dog_bed_round_grey')
+            ->assertJsonPath('items.0.owned', true)
+            ->assertJsonPath('items.0.media_ready', true)
             ->assertJsonPath('open_count', 0);
         expect(PetWish::find($id)->status)->toBe(WishStatus::Bought)
             ->and(PetWish::find($id)->decided_by_user_id)->toBe($parent->id);
         wiAs($child);
-        getJson('/api/child/pet')->assertJsonPath('wishes.items', [['key' => 'bed', 'variant' => 'dog_bed', 'media_ready' => false]]);
+        getJson('/api/child/pet')->assertJsonPath('wishes.items', [['key' => 'bed', 'variant' => 'dog_bed', 'design' => 'dog_bed_round_grey', 'media_ready' => true]]);
     });
 
     it('is idempotent with Idempotency-Key and refuses a durable the pet owns (the credit stays unused)', function () {

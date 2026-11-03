@@ -109,6 +109,12 @@ Route::get('media/{media}/derived/{key}', [PetMediaController::class, 'showDeriv
     ->where('key', '[a-z_]{1,64}')
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.derived');
+// M6-W03 »Želje« item content: catalogue pictures (no pet — product pictures, no child data) and
+// a pet's item pictures / clips (`pet` in the signed query; a token must be allowed to listen to it).
+Route::get('media/items/{itemMedia}', [PetMediaController::class, 'showItem'])
+    ->whereNumber('itemMedia')
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.item');
 // M5-R04 growth album: archived reference images of earlier life stages.
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])

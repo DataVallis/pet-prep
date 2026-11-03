@@ -403,6 +403,8 @@ class PetResource extends Resource
             // M6-W01 »Želje« (read only).
             RelationManagers\WishesRelationManager::class,
             RelationManagers\ItemsRelationManager::class,
+            // M6-W03: AI content of the items (superadmin; Regenerate / Generate missing).
+            RelationManagers\ItemMediaRelationManager::class,
         ];
     }
 

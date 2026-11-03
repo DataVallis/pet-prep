@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FalAiWebhookRequest;
 use App\Models\AiSpendLedger;
+use App\Models\ItemMedia;
 use App\Models\MediaLabResult;
 use App\Models\PetMedia;
 use App\Services\FalAiService;
+use App\Services\Media\ItemMediaService;
 use App\Services\Media\MediaLabService;
 use App\Services\Media\PetMediaService;
 use Illuminate\Http\JsonResponse;
@@ -19,6 +21,7 @@ class FalAiWebhookController extends Controller
         private readonly FalAiService $falAiService,
         private readonly MediaLabService $lab,
         private readonly PetMediaService $media,
+        private readonly ItemMediaService $items,
     ) {}
 
     /**
@@ -63,6 +66,21 @@ class FalAiWebhookController extends Controller
                 };
             }
 
+            // M6-W03: »Želje« item content (own table, ItemMediaService) — pictures / key images
+            // answer with `images[0].url`, clips with `video.url`.
+            /** @var ItemMedia|null $item */
+            $item = ItemMedia::where('request_id', $requestId)->lockForUpdate()->first();
+
+            if ($item !== null) {
+                $result = $this->falAiService->parseWebhookResult($body, image: $item->isStill());
+
+                return match ($this->items->recordResult($item, $result)) {
+                    'already_processed' => response()->json(['message' => 'Already processed.'], 200),
+                    'failed' => response()->json(['message' => 'Failure recorded.'], 200),
+                    default => response()->json(['message' => 'Item media recorded; storing.'], 200),
+                };
+            }
+
             $result = $this->falAiService->parseWebhookResult($body);
 
             // AI Lab video (admin only, M4-02): same signed webhook, own table.
@@ -84,7 +102,14 @@ class FalAiWebhookController extends Controller
             // submit stored it) — then 404 so fal delivers again.
             $ledger = AiSpendLedger::where('request_id', $requestId)->first();
 
-            if ($ledger !== null) {
+            if ($ledger !== null && $ledger->item_media_id !== null) {
+                // M6-W03: an item row still waiting for its own request id → deliver again (404).
+                $owner = ItemMedia::find($ledger->item_media_id);
+
+                if ($owner === null || $owner->request_id !== null || $owner->status !== ItemMedia::STATUS_RUNNING) {
+                    return response()->json(['message' => 'Superseded.'], 200);
+                }
+            } elseif ($ledger !== null) {
                 $owner = $ledger->pet_media_id !== null ? PetMedia::find($ledger->pet_media_id) : null;
 
                 if ($owner === null || $owner->request_id !== null || $owner->status !== PetMedia::STATUS_RUNNING) {

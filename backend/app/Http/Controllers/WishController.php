@@ -39,7 +39,10 @@ class WishController extends Controller
      * with `status` available | requested | declined_recently | owned (treats
      * carry `treats_left`), `open_count` / `open_limit` (3, all pets of the
      * child), `can_wish` (+ `blocked_reason` game_over | pet_not_started |
-     * payment_required). 404 `no_pet`.
+     * payment_required). M6-W03: every row lists its `designs` (key, name in the
+     * request language, catalogue picture URL or null; treats: []), `design` = the
+     * owned / requested design (else null), and owned rows carry the real
+     * `media_ready`. 404 `no_pet`.
      *
      * GET /api/child/wishes
      */
@@ -62,16 +65,18 @@ class WishController extends Controller
             // Null while the child can wish (QA #417 m10: always present, typed).
             /** @var 'game_over'|'pet_not_started'|'payment_required'|null */
             'blocked_reason' => $c['blocked_reason'] ?? null,
-            /** @var list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', kind: 'durable'|'consumable', variant: string, status: 'available'|'requested'|'declined_recently'|'owned', wish_id?: int, requested_at?: string, retry_at?: string, media_ready?: bool, treats_left?: int}> */
+            /** @var list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', kind: 'durable'|'consumable', variant: string, designs: list<array{key: string, name: string, image: string|null}>, design: string|null, status: 'available'|'requested'|'declined_recently'|'owned', wish_id?: int, requested_at?: string, retry_at?: string, media_ready?: bool, treats_left?: int}> */
             'items' => $c['items'],
         ]);
     }
 
     /**
      * Wish for an item (push to the parents, max one per child per 10 min).
+     * M6-W03: `design` (one of the row's `designs[].key`) is required for an item
+     * with designs and must be absent for treats.
      * 422 wish_limit_reached | already_requested | already_owned |
      * declined_recently (+ retry_at) | treats_still_left | unknown_item |
-     * bundle_not_wishable; 423 game_over | pet_not_started | payment_required.
+     * bundle_not_wishable | invalid_design; 423 game_over | pet_not_started | payment_required.
      *
      * POST /api/child/wishes
      */
@@ -82,7 +87,7 @@ class WishController extends Controller
         $child = $request->user();
 
         try {
-            $wish = $this->wishes->create($pet, $child, $request->itemKey());
+            $wish = $this->wishes->create($pet, $child, $request->itemKey(), $request->design());
         } catch (WishException $e) {
             return response()->json($e->body(), $e->status);
         }
@@ -92,6 +97,8 @@ class WishController extends Controller
                 'id' => $wish->id,
                 /** @var 'bed'|'bowls'|'toy_1'|'toy_2'|'treats' */
                 'item_key' => $wish->item_key,
+                // M6-W03: the design picked (null for treats).
+                'design' => $wish->design,
                 /** @var 'open' */
                 'status' => $wish->status->value,
                 'created_at' => $wish->created_at->copy()->setTimezone($pet->familyTimezone())->toIso8601String(),
@@ -104,7 +111,8 @@ class WishController extends Controller
     /**
      * Give the pet one treat (max 2 per family-local day; looks only — never a
      * need, score or certificate). 200 {treats_left, given_today, daily_limit,
-     * media: null until M6-W03}; 422 no_treats | treat_limit_today (+ next_at =
+     * media: the treat clip (M6-W03 — `media.items.treats` + `video_url` / `url`)
+     * or null while it is made / for a pet without AI media}; 422 no_treats | treat_limit_today (+ next_at =
      * the next local midnight) | pet_sleeping (+ next_at = wake time); 423 as
      * every child action. Every body carries `state`.
      *
@@ -147,9 +155,11 @@ class WishController extends Controller
         }
 
         return response()->json(array_merge(['status' => 'accepted'], $counts, [
-            // M6-W03 adds the treat clip; until then always null (the app shows the picture). When set it
-            // will use the existing PetMedia shape (PetMediaPayload: signed `video_url` / `url`), never a fal URL.
-            'media' => null,
+            // M6-W03: the treat clip of the pet's current picture (signed URLs of our files, never fal):
+            // `image`, `video`, `video_seconds`, `loop` (false) as `media.items.treats`, plus `video_url` /
+            // `url` (what the M6-W04 app reads). Null while it is made / for a pet without AI media.
+            /** @var array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, video_url: string|null, url: string|null}|null */
+            'media' => $this->wishes->treatMedia($pet),
             'state' => $state,
         ]));
     }
@@ -171,9 +181,9 @@ class WishController extends Controller
         return response()->json([
             /** @var int */
             'open_count' => $list['open_count'],
-            /** @var list<array{id: int, pet_id: int, pet_name: string|null, species: 'dog'|'cat', child_id: int, child_name: string|null, item_key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, product_id: string|null, status: 'open', created_at: string, bundle_product_id: string|null}> */
+            /** @var list<array{id: int, pet_id: int, pet_name: string|null, species: 'dog'|'cat', child_id: int, child_name: string|null, item_key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, design: string|null, product_id: string|null, status: 'open', created_at: string, bundle_product_id: string|null}> */
             'wishes' => $list['wishes'],
-            /** @var list<array{pet_id: int, pet_name: string|null, species: 'dog'|'cat', bundle_eligible: bool, bundle_product_id: string|null, items: list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, product_id: string, owned?: bool, media_ready?: bool, treats_left?: int}>}> */
+            /** @var list<array{pet_id: int, pet_name: string|null, species: 'dog'|'cat', bundle_eligible: bool, bundle_product_id: string|null, items: list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, product_id: string, designs: list<array{key: string, name: string, image: string|null}>, design: string|null, owned?: bool, media_ready?: bool, treats_left?: int}>}> */
             'pets' => $list['pets'],
             /** @var list<array{product_id: string, item_key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats'|'welcome_bundle', count: int}> */
             'unassigned_credits' => $list['unassigned_credits'],
@@ -221,8 +231,12 @@ class WishController extends Controller
      * (an open wish of this pet the product covers) → bought; other open
      * wishes of the pet for a covered key → cancelled. Header
      * `Idempotency-Key` (store transaction id): a repeat → `already_assigned`.
+     * M6-W03: the item gets the wish's design; without a wish `design` (missing
+     * → the item's first design); the bundle `designs` {bed, bowls, toy_1} (each
+     * missing → first design; the wished item keeps the wish's). The item's AI
+     * content is queued at once (`media_ready` false until it is there).
      * 409 no_credit (retry); 422 already_owned | bundle_not_eligible |
-     * unknown_product | pet_not_active | wish_mismatch; 404 pet_not_found.
+     * unknown_product | pet_not_active | wish_mismatch | invalid_design; 404 pet_not_found.
      *
      * POST /api/parent/pets/{pet}/items/redeem
      */
@@ -239,7 +253,7 @@ class WishController extends Controller
         try {
             // Unborn / game over / payment_required → 422 pet_not_active; a repeated
             // Idempotency-Key for another pet → 422 wish_mismatch (QA #417).
-            $result = $this->credits->redeem($target, $parent, $request->productId(), $request->wishId(), $request->idempotencyKey());
+            $result = $this->credits->redeem($target, $parent, $request->productId(), $request->wishId(), $request->idempotencyKey(), $request->design(), $request->designs());
         } catch (WishException $e) {
             return response()->json($e->body(), $e->status);
         }
@@ -247,8 +261,8 @@ class WishController extends Controller
         return response()->json([
             /** @var 'assigned'|'already_assigned' */
             'status' => $result['status'],
-            /** @var list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, product_id: string, owned?: bool, media_ready?: bool, treats_left?: int}> */
-            'items' => $this->wishes->parentItems($result['pet']),
+            /** @var list<array{key: 'bed'|'bowls'|'toy_1'|'toy_2'|'treats', variant: string, product_id: string, designs: list<array{key: string, name: string, image: string|null}>, design: string|null, owned?: bool, media_ready?: bool, treats_left?: int}> */
+            'items' => $this->wishes->parentItems($result['pet']->fresh() ?? $result['pet']),
             /** @var int */
             'open_count' => $this->wishes->openCountOfFamily($family),
         ]);

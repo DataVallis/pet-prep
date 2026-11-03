@@ -570,6 +570,13 @@ return [
             'body' => 'A school / game clip (or the reference image it needs) failed after every automatic strategy (retries, prompt variants), timed out, or needs review. :simple pet(s) switched to SIMPLE mode: the activity stays playable with the classic stage (no admin action needed) and returns to the full mode by itself once its clips are made. Optional: Pets → AI media → »Generate missing« / Regenerate / »Approve anyway«. List: php artisan media:retry-activity-clips --dry-run',
         ],
     ],
+    // M6-W03: »Želje« item content given up after its automatic recovery (ItemMediaService::heal).
+    'item_media' => [
+        'discord' => [
+            'title' => 'Item content: :count item picture(s) / clip(s) failed for good',
+            'body' => 'AI content of bought items (a catalogue picture, a pet-with-item picture or clip) failed after every automatic strategy (retries, prompt variants) or timed out. The items are already shown without that content — no admin action needed. Optional: Shop → Item media → Regenerate (or Pets → Item media → »Generate missing«). List: php artisan media:item-media --dry-run',
+        ],
+    ],
     'app_errors' => [
         'heading' => 'App errors',
         'description' => 'Crashes and render errors reported by the mobile app (M5-05). Grouped by error; no user, family or pet is stored — only the role (parent / child / signed out). Kept 30 days.',

@@ -17,6 +17,8 @@ use App\Models\PushNotification;
 use App\Models\ShopItem;
 use App\Models\User;
 use App\Models\WishCredit;
+use App\Services\Media\ItemMediaService;
+use App\Services\Shop\ItemDesigns;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Collection;
@@ -56,10 +58,18 @@ class WishService
     /** Max one wish push per child in this many minutes (the rest only land on the list). */
     public const PUSH_GAP_MINUTES = 10;
 
+    private ?ItemMediaService $itemMedia = null;
+
     public function __construct(
         private readonly NotificationService $notifications,
         private readonly PetSleepService $sleep,
     ) {}
+
+    /** M6-W03: item content (resolved lazily — the media pipeline is not needed by every wish call). */
+    private function itemMedia(): ItemMediaService
+    {
+        return $this->itemMedia ??= app(ItemMediaService::class);
+    }
 
     // ── catalogue / store products ────────────────────────────────────────
 
@@ -139,18 +149,24 @@ class WishService
         $open = PetWish::where('pet_id', $pet->id)->where('status', WishStatus::Open->value)->get()->keyBy('item_key');
         $blocked = $this->blockedReason($pet, $child);
         $iso = fn (?CarbonInterface $at): ?string => $at?->copy()->setTimezone($tz)->toIso8601String();
+        // M6-W03: the designs (with their catalogue pictures) and the real media readiness.
+        $pictures = $this->itemMedia()->catalogueUrls();
+        $ready = $this->itemMedia()->readiness($pet);
 
         $items = [];
         foreach (ShopItem::catalogue() as $item) {
             if ($item->isBundle()) {
                 continue;
             }
-            $row = ['key' => $item->key, 'kind' => $item->kind, 'variant' => (string) $item->variantFor($species)];
+            $row = ['key' => $item->key, 'kind' => $item->kind, 'variant' => (string) $item->variantFor($species),
+                'designs' => $this->itemMedia()->designsFor($item->key, $species, $pictures), 'design' => null];
             $wish = $open->get($item->key);
             $retryAt = $this->retryAt($pet, $child, $item->key, $now);
             if ($item->isDurable() && $owned->has($item->key)) {
-                $row += ['status' => 'owned', 'media_ready' => false];
+                $row['design'] = $this->ownedDesign($owned->get($item->key), $species);
+                $row += ['status' => 'owned', 'media_ready' => $ready[$item->key] ?? true];
             } elseif ($wish !== null) {
+                $row['design'] = $wish->design;
                 $row += ['status' => 'requested', 'wish_id' => $wish->id, 'requested_at' => $iso($wish->created_at)];
             } elseif ($retryAt !== null) {
                 $row += ['status' => 'declined_recently', 'retry_at' => $iso($retryAt)];
@@ -159,6 +175,10 @@ class WishService
             }
             if (! $item->isDurable()) {
                 $row['treats_left'] = $treatsLeft;
+                // M6-W03: the treat clip's readiness while the pet has a pack.
+                if (isset($ready[$item->key])) {
+                    $row['media_ready'] = $ready[$item->key];
+                }
             }
             $items[] = $row;
         }
@@ -173,11 +193,12 @@ class WishService
     }
 
     /**
-     * POST /api/child/wishes: the child wishes for $itemKey for their pet.
+     * POST /api/child/wishes: the child wishes for $itemKey for their pet — in the design
+     * $design (M6-W03: required for an item with designs, absent for treats; else 422 invalid_design).
      *
      * @throws WishException
      */
-    public function create(Pet $pet, User $child, string $itemKey): PetWish
+    public function create(Pet $pet, User $child, string $itemKey, ?string $design = null): PetWish
     {
         $item = ShopItem::find($itemKey);
         if ($item === null) {
@@ -186,8 +207,13 @@ class WishService
         if ($item->isBundle()) {
             throw new WishException('bundle_not_wishable', 'The bundle cannot be wished for.');
         }
+        $design = $design === '' ? null : $design;
+        $species = $pet->speciesValue();
+        if (ItemDesigns::hasDesigns($item->key, $species) ? ! ItemDesigns::isValid($item->key, $species, $design) : $design !== null) {
+            throw new WishException('invalid_design', 'Pick one of the designs of this item.');
+        }
 
-        $wish = DB::transaction(function () use ($pet, $child, $item): PetWish {
+        $wish = DB::transaction(function () use ($pet, $child, $item, $design): PetWish {
             User::whereKey($child->id)->lockForUpdate()->first(['id']);
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
             $now = now()->startOfSecond();
@@ -221,6 +247,7 @@ class WishService
                 'pet_id' => $locked->id,
                 'child_user_id' => $child->id,
                 'item_key' => $item->key,
+                'design' => $design,
                 'status' => WishStatus::Open,
             ]);
 
@@ -288,17 +315,19 @@ class WishService
      * THIS PET (all children; QA #417 m9) — the per-child count for the limit is
      * on GET /api/child/wishes.
      *
-     * @return array{open_count: int, items: list<array{key: string, variant: string, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int}}
+     * @return array{open_count: int, items: list<array{key: string, variant: string, design: string|null, media_ready: bool}>, treats: array{left: int, given_today: int, daily_limit: int}}
      */
     public function stateBlock(Pet $pet, ?User $child, ?CarbonInterface $now = null): array
     {
         $now = $now ?? now();
         $owned = $this->ownedItems($pet);
+        $species = $pet->speciesValue();
+        $ready = $owned->isEmpty() ? [] : $this->itemMedia()->readiness($pet);
 
         return [
             'open_count' => $this->openCountOfPet($pet),
             'items' => $owned->filter(fn (PetItem $i) => $i->kind === ShopItem::KIND_DURABLE)
-                ->map(fn (PetItem $i): array => ['key' => $i->item_key, 'variant' => $i->variant, 'media_ready' => false])
+                ->map(fn (PetItem $i): array => ['key' => $i->item_key, 'variant' => $i->variant, 'design' => $this->ownedDesign($i, $species), 'media_ready' => $ready[$i->item_key] ?? true])
                 ->values()->all(),
             'treats' => [
                 'left' => $this->treatsLeft($pet),
@@ -335,6 +364,7 @@ class WishService
             return $eligible[$pet->id] ??= $bundle !== null && $this->bundleEligible($pet, $bundle);
         };
 
+        $pictures = $this->itemMedia()->catalogueUrls();
         $pets = Pet::where('family_id', $family->id)->where('is_active', true)->where('is_game_over', false)
             ->orderBy('id')->get()
             ->filter(fn (Pet $p) => $this->blockedReason($p) === null)
@@ -355,6 +385,8 @@ class WishService
                     'child_name' => $w->child?->name,
                     'item_key' => $w->item_key,
                     'variant' => (string) $item?->variantFor($species),
+                    // M6-W03: the design the child picked (null for treats / wishes from before designs).
+                    'design' => $w->design,
                     'product_id' => $item !== null ? self::productFor($item) : null,
                     'status' => $w->status->value,
                     'created_at' => $w->created_at->copy()->setTimezone($tz)->toIso8601String(),
@@ -368,7 +400,7 @@ class WishService
                 'species' => $p->speciesValue()->value,
                 'bundle_eligible' => $isEligible($p),
                 'bundle_product_id' => $bundle !== null && $isEligible($p) ? self::productFor($bundle) : null,
-                'items' => $this->parentItems($p, $catalogue),
+                'items' => $this->parentItems($p, $catalogue, $pictures),
             ])->all(),
             'unassigned_credits' => WishCredit::where('family_id', $family->id)->available()
                 ->selectRaw('product_id, item_key, count(*) as n')->groupBy('product_id', 'item_key')->orderBy('product_id')->get()
@@ -380,21 +412,33 @@ class WishService
      * A pet's items as the parent sees them (`pets[].items`, redeem `items`).
      *
      * @param  Collection<string, ShopItem>|null  $catalogue
+     * @param  array<string, string>|null  $pictures  catalogue picture URLs by design (M6-W03)
      * @return list<array<string, mixed>>
      */
-    public function parentItems(Pet $pet, ?Collection $catalogue = null): array
+    public function parentItems(Pet $pet, ?Collection $catalogue = null, ?array $pictures = null): array
     {
         $catalogue ??= ShopItem::catalogue();
         $species = $pet->speciesValue();
         $owned = $this->ownedItems($pet);
         $left = $this->treatsLeft($pet);
+        // M6-W03: designs (pictures) for the surprise purchase, the owned design and the real readiness.
+        $pictures ??= $this->itemMedia()->catalogueUrls();
+        $ready = $this->itemMedia()->readiness($pet);
 
-        return $catalogue->reject(fn (ShopItem $i) => $i->isBundle())->map(function (ShopItem $i) use ($species, $owned, $left): array {
-            $row = ['key' => $i->key, 'variant' => (string) $i->variantFor($species), 'product_id' => self::productFor($i)];
+        return $catalogue->reject(fn (ShopItem $i) => $i->isBundle())->map(function (ShopItem $i) use ($species, $owned, $left, $pictures, $ready): array {
+            $row = ['key' => $i->key, 'variant' => (string) $i->variantFor($species), 'product_id' => self::productFor($i),
+                'designs' => $this->itemMedia()->designsFor($i->key, $species, $pictures)];
 
-            return $i->isDurable()
-                ? $row + ['owned' => $owned->has($i->key), 'media_ready' => false]
-                : $row + ['treats_left' => $left];
+            if (! $i->isDurable()) {
+                return $row + ['design' => null, 'treats_left' => $left] + (isset($ready[$i->key]) ? ['media_ready' => $ready[$i->key]] : []);
+            }
+            $mine = $owned->get($i->key);
+
+            return $row + [
+                'design' => $mine !== null ? $this->ownedDesign($mine, $species) : null,
+                'owned' => $mine !== null,
+                'media_ready' => $mine === null ? false : ($ready[$i->key] ?? true),
+            ];
         })->values()->all();
     }
 
@@ -512,6 +556,32 @@ class WishService
             ->where(fn ($q) => $q->where('status', PushNotification::STATUS_SCHEDULED)
                 ->orWhere(fn ($q) => $q->whereIn('status', [PushNotification::STATUS_QUEUED, PushNotification::STATUS_SENT])->where('created_at', '>', $since)))
             ->exists();
+    }
+
+    /**
+     * M6-W03: the design an owned durable item shows (its stored design; an unknown / missing one →
+     * the item's first design, like the backfill of items bought before designs). Null for treats.
+     */
+    public function ownedDesign(PetItem $item, Species $species): ?string
+    {
+        if ($item->kind !== ShopItem::KIND_DURABLE) {
+            return null;
+        }
+
+        return ItemDesigns::isValid($item->item_key, $species, $item->design) ? $item->design : ItemDesigns::defaultFor($item->item_key, $species);
+    }
+
+    /**
+     * M6-W03: the treat clip for POST /api/child/pet/treat — the `media.items.treats` entry plus
+     * `video_url` / `url` (what the app of M6-W04 reads), or null while it is not made.
+     *
+     * @return array{image: string|null, video: string|null, video_seconds: float|null, loop: bool, video_url: string|null, url: string|null}|null
+     */
+    public function treatMedia(Pet $pet): ?array
+    {
+        $entry = $this->itemMedia()->payloadFor($pet)[ShopItem::TREATS] ?? null;
+
+        return $entry === null ? null : $entry + ['video_url' => $entry['video'], 'url' => $entry['video'] ?? $entry['image']];
     }
 
     /** The push copy key of an item for a species (push.wish_created.<variant>). */

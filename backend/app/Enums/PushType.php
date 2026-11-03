@@ -111,10 +111,21 @@ enum PushType: string
      */
     case WishCreated = 'wish_created';
 
+    /**
+     * M6-W03 (SHOP_SPEC §3 step 4, David 2026-11-03): the content of a bought item is there
+     * (or will not come — the item is shown without it) — »Nova postelja je tu!« to the pet's
+     * caretaker children (child copy, the pet's name only as the title). Metric = the item key;
+     * once per (pet, item, design) — ItemMediaService::settle guards with item_media_notices (a
+     * new life stage refreshes the picture without a second push). Held over quiet hours (news,
+     * like the birthday); dropped while the pet is locked. Child pushes follow the pet opened
+     * last (delivery rule of 2026-11-02).
+     */
+    case ItemReady = 'item_ready';
+
     /** Phase 2 and above (not the walk reminder, not billing news): high priority, Android channel "alarm". */
     public function isUrgent(): bool
     {
-        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated], true);
+        return ! in_array($this, [self::SoftWarning, self::WalkReminder, self::PlayReminder, self::LitterReminder, self::TrialEnding, self::PaymentRequired, self::ChallengeCompleted, self::PetReady, self::PetBirthday, self::CareReminder, self::WishCreated, self::ItemReady], true);
     }
 
     /**
@@ -135,7 +146,7 @@ enum PushType: string
      */
     public function holdsOverQuietHours(): bool
     {
-        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated;
+        return $this->isLockNews() || $this === self::PetBirthday || $this === self::CareReminder || $this === self::WishCreated || $this === self::ItemReady;
     }
 
     /**
@@ -182,6 +193,8 @@ enum PushType: string
             self::CareReminder => 12 * 3600,
             // M6-W01: the wish waits on the list anyway.
             self::WishCreated => 12 * 3600,
+            // M6-W03: the new item is still news later that day.
+            self::ItemReady => 12 * 3600,
         };
     }
 }

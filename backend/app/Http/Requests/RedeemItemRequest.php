@@ -26,7 +26,31 @@ class RedeemItemRequest extends FormRequest
         return [
             'product_id' => ['required', 'string', 'max:255'],
             'wish_id' => ['nullable', 'integer', 'min:1'],
+            // M6-W03: the design of a purchase without a wish (a wish carries its own); missing →
+            // the item's first design; unknown → 422 `invalid_design`.
+            'design' => ['nullable', 'string', 'max:64'],
+            // M6-W03: the welcome bundle — a design per item (each optional, default = first design).
+            // (not `array:bed,…` — Scramble would type every key as required; other keys are ignored)
+            'designs' => ['nullable', 'array'],
+            'designs.bed' => ['nullable', 'string', 'max:64'],
+            'designs.bowls' => ['nullable', 'string', 'max:64'],
+            'designs.toy_1' => ['nullable', 'string', 'max:64'],
         ];
+    }
+
+    public function design(): ?string
+    {
+        $design = $this->validated('design');
+
+        return is_string($design) && $design !== '' ? $design : null;
+    }
+
+    /** @return array<string, string|null> */
+    public function designs(): array
+    {
+        $designs = $this->validated('designs');
+
+        return is_array($designs) ? array_map(fn ($d) => is_string($d) && $d !== '' ? $d : null, $designs) : [];
     }
 
     public function productId(): string
