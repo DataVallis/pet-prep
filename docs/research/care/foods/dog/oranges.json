@@ -10,7 +10,8 @@
     "fr": "Oranges",
     "es": "Naranjas",
     "it": "Arance",
-    "pt": "Laranjas"
+    "pt": "Laranjas",
+    "nl": "Sinaasappels"
   },
   "question": {
     "en": "Can dogs eat oranges?",
@@ -21,7 +22,8 @@
     "fr": "Les chiens peuvent-ils manger des oranges ?",
     "es": "¿Pueden los perros comer naranjas?",
     "it": "I cani possono mangiare le arance?",
-    "pt": "Os cães podem comer laranjas?"
+    "pt": "Os cães podem comer laranjas?",
+    "nl": "Mogen honden sinaasappels eten?"
   },
   "url_slug": {
     "en": "oranges",
@@ -32,7 +34,8 @@
     "fr": "oranges",
     "es": "naranjas",
     "it": "arance",
-    "pt": "laranjas"
+    "pt": "laranjas",
+    "nl": "sinaasappels"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "fr": "Oui, les chiens peuvent manger la chair d’une orange en quantité limitée, sans la peau ni les pépins. Les oranges sont riches en sucres naturels : réservez-les à une friandise occasionnelle. Beaucoup de chiens n’aiment d’ailleurs pas leur odeur forte.",
     "es": "Sí, los perros pueden comer la pulpa de la naranja en cantidades limitadas, sin cáscara ni semillas. Las naranjas tienen mucho azúcar natural, así que dáselas solo como premio ocasional; además, a muchos perros no les gusta el olor intenso de los cítricos.",
     "it": "Sì, i cani possono mangiare la polpa dell’arancia in quantità limitate, senza buccia e semi. Le arance contengono molto zucchero naturale, quindi devono restare un premio occasionale; a molti cani, del resto, non piace l’odore intenso degli agrumi.",
-    "pt": "Sim, os cães podem comer a polpa da laranja em quantidades limitadas, sem casca nem sementes. As laranjas têm muito açúcar natural, por isso mantém-nas como guloseima ocasional; além disso, muitos cães não gostam do cheiro intenso dos citrinos."
+    "pt": "Sim, os cães podem comer a polpa da laranja em quantidades limitadas, sem casca nem sementes. As laranjas têm muito açúcar natural, por isso mantém-nas como guloseima ocasional; além disso, muitos cães não gostam do cheiro intenso dos citrinos.",
+    "nl": "Ja, honden mogen het vruchtvlees van een sinaasappel in beperkte hoeveelheden eten, zonder schil en pitten. Sinaasappels bevatten veel natuurlijke suiker, dus geef ze alleen af en toe als snoepje; veel honden houden toch niet van de sterke citrusgeur."
   },
   "why": {
     "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
@@ -55,7 +59,8 @@
     "fr": "L’ASPCA classe l’oranger parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, mais précise que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC, la PDSA et Blue Cross indiquent que la chair ne pose pas de problème si elle est donnée avec modération. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion ; les pépins peuvent présenter un risque d’étouffement. Trop d’orange peut causer des troubles digestifs, dont de la diarrhée.",
     "es": "La ASPCA considera tóxica para los perros la planta del naranjo por sus aceites esenciales y psoralenos, pero señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC, la PDSA y Blue Cross afirman que la pulpa está bien con moderación. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción; las semillas pueden provocar atragantamiento. Demasiada naranja puede causar malestar digestivo, como diarrea.",
     "it": "L’ASPCA classifica la pianta dell’arancio come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC, il PDSA e Blue Cross affermano che la polpa va bene con moderazione. La buccia è dura e difficile da digerire, può far venire mal di stomaco e aumentare il rischio di ostruzione; i semi possono far soffocare. Troppa arancia può causare disturbi digestivi, anche diarrea.",
-    "pt": "A ASPCA classifica a laranjeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC, a PDSA e a Blue Cross dizem que, com moderação, a polpa não faz mal. A casca é rija e difícil de digerir, pode irritar o estômago e aumentar o risco de obstrução; as sementes podem provocar engasgo. Laranja a mais pode causar problemas digestivos, incluindo diarreia."
+    "pt": "A ASPCA classifica a laranjeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC, a PDSA e a Blue Cross dizem que, com moderação, a polpa não faz mal. A casca é rija e difícil de digerir, pode irritar o estômago e aumentar o risco de obstrução; as sementes podem provocar engasgo. Laranja a mais pode causar problemas digestivos, incluindo diarreia.",
+    "nl": "De ASPCA noemt de sinaasappelplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC, de PDSA en Blue Cross zeggen dat het vruchtvlees met mate prima is. De schil is taai en moeilijk verteerbaar, kan de maag van streek maken en het risico op een verstopping vergroten; pitten kunnen een verstikkingsgevaar vormen. Te veel sinaasappel kan spijsverteringsproblemen veroorzaken, waaronder diarree."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "fr": "Ne donnez pas l’écorce à votre chien : elle est difficile à digérer et peut augmenter le risque d’occlusion intestinale, qui nécessite parfois l’intervention d’un vétérinaire.",
     "es": "No le des la cáscara a tu perro: es difícil de digerir y puede aumentar el riesgo de obstrucción intestinal, que en algunos casos necesita atención veterinaria.",
     "it": "Non dare la buccia al tuo cane: è difficile da digerire e può aumentare il rischio di ostruzione intestinale, che in alcuni casi richiede l’intervento del veterinario.",
-    "pt": "Não dês a casca ao teu cão: é difícil de digerir e pode aumentar o risco de obstrução intestinal, que em alguns casos precisa de ajuda veterinária."
+    "pt": "Não dês a casca ao teu cão: é difícil de digerir e pode aumentar o risco de obstrução intestinal, que em alguns casos precisa de ajuda veterinária.",
+    "nl": "Geef je hond de schil niet: die is moeilijk verteerbaar en kan het risico op een darmverstopping vergroten, waarvoor soms de hulp van een dierenarts nodig is."
   },
   "serving": {
     "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
@@ -78,7 +84,8 @@
     "fr": "Uniquement la chair, sans l’écorce ni les pépins, coupée en petits morceaux ; en friandise occasionnelle.",
     "es": "Solo la pulpa, sin cáscara ni semillas y cortada en trocitos; como premio ocasional.",
     "it": "Solo la polpa, senza buccia e semi, tagliata a pezzetti; come premio occasionale.",
-    "pt": "Só a polpa, sem casca nem sementes, cortada em pedacinhos; como guloseima ocasional."
+    "pt": "Só a polpa, sem casca nem sementes, cortada em pedacinhos; como guloseima ocasional.",
+    "nl": "Alleen het vruchtvlees, zonder schil en pitten, in kleine stukjes gesneden; als snoepje voor af en toe."
   },
   "child": {
     "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
@@ -89,7 +96,8 @@
     "fr": "Certains chiens aiment un petit morceau d’orange, d’autres n’aiment pas l’odeur ! Un adulte enlève la peau et les pépins.",
     "es": "A algunos perros les gusta un trocito de naranja, ¡y a otros no les gusta el olor! Un adulto la pela y le quita las semillas.",
     "it": "A qualche cane piace un pezzettino di arancia, ad altri non piace l’odore! Un adulto la sbuccia e toglie i semi.",
-    "pt": "Alguns cães gostam de um pedacinho de laranja; outros não gostam do cheiro! Um adulto descasca-a e tira as sementes."
+    "pt": "Alguns cães gostam de um pedacinho de laranja; outros não gostam do cheiro! Um adulto descasca-a e tira as sementes.",
+    "nl": "Sommige honden vinden een klein stukje sinaasappel lekker, andere vinden de geur niet lekker! Een volwassene schilt de sinaasappel en haalt de pitten eruit."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "fr": "Les chiens peuvent-ils manger de l’écorce d’orange ?",
         "es": "¿Pueden los perros comer cáscara de naranja?",
         "it": "I cani possono mangiare la buccia dell’arancia?",
-        "pt": "Os cães podem comer casca de laranja?"
+        "pt": "Os cães podem comer casca de laranja?",
+        "nl": "Mogen honden sinaasappelschil eten?"
       },
       "a": {
         "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
@@ -113,7 +122,8 @@
         "fr": "Non. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion. Selon l’ASPCA, ce sont les écorces et les autres parties de la plante qui posent problème.",
         "es": "No. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción. La ASPCA señala que lo que causa problemas son la piel y el resto de la planta.",
         "it": "No. La buccia è dura e difficile da digerire, può far venire mal di stomaco e aumentare il rischio di ostruzione. Secondo l’ASPCA, i problemi vengono proprio da bucce e parti della pianta.",
-        "pt": "Não. A casca é rija e difícil de digerir, pode irritar o estômago e aumentar o risco de obstrução. A ASPCA diz que são as cascas e as partes da planta que causam problemas."
+        "pt": "Não. A casca é rija e difícil de digerir, pode irritar o estômago e aumentar o risco de obstrução. A ASPCA diz que são as cascas e as partes da planta que causam problemas.",
+        "nl": "Nee. De schil is taai en moeilijk verteerbaar, kan de maag van streek maken en het risico op een verstopping vergroten. De ASPCA zegt dat de schillen en het plantaardige materiaal de problemen veroorzaken."
       }
     },
     {
@@ -126,7 +136,8 @@
         "fr": "Les chiens peuvent-ils boire du jus d’orange ?",
         "es": "¿Pueden los perros beber zumo de naranja?",
         "it": "I cani possono bere il succo d’arancia?",
-        "pt": "Os cães podem beber sumo de laranja?"
+        "pt": "Os cães podem beber sumo de laranja?",
+        "nl": "Mogen honden sinaasappelsap drinken?"
       },
       "a": {
         "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
@@ -137,7 +148,8 @@
         "fr": "Le jus d’orange n’est pas toxique, mais ce n’est généralement pas un bon choix : il concentre les sucres naturels et ne contient pas les fibres du fruit entier.",
         "es": "El zumo de naranja no es tóxico, pero en general no es una buena opción: tiene azúcares naturales concentrados y carece de la fibra de la fruta entera.",
         "it": "Il succo d’arancia non è tossico, ma in genere non è una buona scelta: contiene zuccheri naturali concentrati e non ha le fibre del frutto intero.",
-        "pt": "O sumo de laranja não é tóxico, mas em geral não é uma boa escolha: tem açúcares naturais concentrados e não tem a fibra do fruto inteiro."
+        "pt": "O sumo de laranja não é tóxico, mas em geral não é uma boa escolha: tem açúcares naturais concentrados e não tem a fibra do fruto inteiro.",
+        "nl": "Sinaasappelsap is niet giftig, maar meestal geen goede keuze: het bevat geconcentreerde natuurlijke suikers en niet de vezels van de hele vrucht."
       }
     }
   ],
@@ -274,6 +286,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d109c97fe3a43d819a5fb9967c3afa0bbd8d69e506206c3bbf6624e05ff1292b"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "16a3a07ccd5c1dddff693c03137a74ef3a6cfff0efd36518d8ca2ae24fad5efe"
     }
   }
 }
