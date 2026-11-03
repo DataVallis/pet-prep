@@ -4,43 +4,51 @@
   "name": {
     "en": "Pineapple",
     "sl": "Ananas",
+    "hr": "Ananas",
     "cs": "Ananas"
   },
   "question": {
     "en": "Can dogs eat pineapple?",
     "sl": "Ali lahko psi jedo ananas?",
+    "hr": "Smiju li psi jesti ananas?",
     "cs": "Mohou psi jíst ananas?"
   },
   "url_slug": {
     "en": "pineapple",
     "sl": "ananas",
+    "hr": "ananas",
     "cs": "ananas"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, raw pineapple in small amounts is a good snack for dogs, as long as the spiny skin, the crown and the hard core are removed. Avoid canned pineapple, because the syrup has too much sugar.",
     "sl": "Da, surov ananas je v majhnih količinah dober prigrizek za pse, če odstranite bodičasto lupino, krono in trdo sredico. Ananasa iz pločevinke ne dajajte, ker ima sirup preveč sladkorja.",
+    "hr": "Da, svjež ananas u malim količinama dobra je užina za pse, pod uvjetom da prije toga skineš bodljikavu koru, odrežeš krunu i izvadiš tvrdu jezgru. Izbjegavaj ananas iz konzerve, jer sirup sadrži previše šećera.",
     "cs": "Ano, čerstvý ananas je v malém množství pro psy dobrý pamlsek, pokud odstraníte bodlavou slupku, korunku a tvrdé jádro. Konzervovaný ananas nedávejte, protože sirup obsahuje příliš mnoho cukru."
   },
   "why": {
     "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
     "sl": "Ananas je poln vitaminov, mineralov in vlaknin, vsebuje pa tudi veliko naravnega sladkorja. Trda sredica in bodičasta lupina lahko povzročita zaporo. Ananasu iz pločevinke se raje izognite, ker ima njegov sirup preveč sladkorja za prebavo večine psov. Nekateri psi imajo po ananasu drisko ali prebavne težave.",
+    "hr": "Ananas je pun vitamina, minerala i vlakana, ali sadrži i mnogo prirodnog šećera. Žilava jezgra u sredini i bodljikava kora mogu izazvati začepljenje. Ananas iz konzerve najbolje je izbjegavati, jer njegov sirup sadrži previše šećera za probavu većine pasa. Neki psi od ananasa dobiju proljev ili želučane tegobe.",
     "cs": "Ananas je plný vitaminů, minerálů a vlákniny, ale obsahuje také hodně přirozeného cukru. Tvrdé jádro uprostřed a bodlavá slupka mohou způsobit ucpání střev. Konzervovanému ananasu je lepší se vyhnout, protože jeho sirup obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila. Někteří psi po ananasu dostanou průjem nebo podrážděný žaludek."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog gets diarrhoea or an upset stomach after eating pineapple, pineapple may not be the right snack for it.",
     "sl": "Če ima pes po ananasu drisko ali prebavne težave, ananas morda ni pravi prigrizek zanj.",
+    "hr": "Ako pas nakon ananasa dobije proljev ili želučane tegobe, ananas možda nije dobra užina za njega.",
     "cs": "Pokud má pes po snězení ananasu průjem nebo podrážděný žaludek, ananas pro něj možná není to pravé."
   },
   "serving": {
     "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
     "sl": "Svež in olupljen, brez krone in sredice, narezan na koščke za en grižljaj; zamrznjeni koščki svežega ananasa so poletni priboljšek.",
+    "hr": "Svjež i oguljen, bez krune i jezgre, narezan na komadiće veličine zalogaja; smrznuti komadići svježeg ananasa ljetna su poslastica.",
     "cs": "Čerstvý a oloupaný, bez korunky a jádra, nakrájený na kousky na jedno sousto; jako letní pamlsek poslouží zmrazené kousky čerstvého ananasu."
   },
   "child": {
     "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
     "sl": "Psi lahko dobijo košček svežega ananasa! Odrasel najprej odreže bodičasto lupino in trdo sredino.",
+    "hr": "Psi smiju dobiti mali komadić svježeg ananasa! Odrasla osoba prvo odreže bodljikavu koru i tvrdu sredinu.",
     "cs": "Psi mohou dostat malý kousek čerstvého ananasu! Dospělý nejdřív odřízne pichlavou slupku a tvrdý střed."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Can dogs eat canned pineapple?",
         "sl": "Ali lahko psi jedo ananas iz pločevinke?",
+        "hr": "Smiju li psi jesti ananas iz konzerve?",
         "cs": "Mohou psi jíst konzervovaný ananas?"
       },
       "a": {
         "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
         "sl": "Raje ne. Sirup v sadju iz pločevinke vsebuje preveč sladkorja za prebavo večine psov.",
+        "hr": "Najbolje ga je izbjegavati. Sirup u voću iz konzerve sadrži previše šećera za probavu većine pasa.",
         "cs": "Je lepší se mu vyhnout. Sirup v konzervovaném ovoci obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Why remove the core and skin?",
         "sl": "Zakaj odstraniti sredico in lupino?",
+        "hr": "Zašto treba ukloniti jezgru i koru?",
         "cs": "Proč odstraňovat jádro a slupku?"
       },
       "a": {
         "en": "The tough core and the spiny skin can cause a blockage in the gut.",
         "sl": "Trda sredica in bodičasta lupina lahko povzročita zaporo v prebavilih.",
+        "hr": "Žilava jezgra i bodljikava kora mogu izazvati začepljenje crijeva.",
         "cs": "Tvrdé jádro a bodlavá slupka mohou způsobit ucpání střev."
       }
     }
@@ -135,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1877c2cab5dc27c003d2f0fd91a6aac7f12735101a9ed336da1f231429b997d8"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "323689b0c520f8c917f7624eccfcc189cd9abd8eb7a192734ba28aefbfaae649"
     },
     "cs": {
       "status": "verified",

@@ -4,27 +4,32 @@
   "name": {
     "en": "Lemons",
     "sl": "Limone",
+    "hr": "Limuni",
     "cs": "Citrony"
   },
   "question": {
     "en": "Can dogs eat lemons?",
     "sl": "Ali lahko psi jedo limone?",
+    "hr": "Smiju li psi jesti limune?",
     "cs": "Mohou psi jíst citrony?"
   },
   "url_slug": {
     "en": "lemons",
     "sl": "limone",
+    "hr": "limuni",
     "cs": "citrony"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, lemons are not something to feed your dog. The flesh isn't toxic, but lemon juice is very acidic and the rind contains psoralen, which is toxic to dogs. If your dog ate a whole lemon or a rind, contact your vet right away.",
     "sl": "Ne, limon psu ne dajajte. Meso ni strupeno, vendar je limonin sok zelo kisel, lupina pa vsebuje psoralen, ki je za pse strupen. Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja.",
+    "hr": "Ne, limune psu ne treba davati. Meso ploda nije otrovno, ali je sok od limuna vrlo kiseo, a kora sadrži psoralen, koji je otrovan za pse. Ako je pas pojeo cijeli limun ili koru, odmah se obrati veterinaru.",
     "cs": "Ne, citrony psům nedávejte. Dužina sice není toxická, ale citronová šťáva je velmi kyselá a kůra obsahuje psoralen, který je pro psy toxický. Pokud váš pes snědl celý citron nebo kůru, okamžitě se obraťte na veterináře."
   },
   "why": {
     "en": "The ASPCA lists the lemon plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC agrees the flesh isn't toxic but advises against feeding lemons, and PDSA lists them as unsafe because they are very acidic and can upset the stomach. Lemon juice contains a lot of citric acid, the rind contains psoralen and, if swallowed, can cause a stomach obstruction. We use 'not recommended' rather than a stricter level because the flesh itself is not toxic and the danger lies in the rind, juice and plant; most dogs avoid lemons because of the strong smell.",
     "sl": "ASPCA limonovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC se strinja, da meso ni strupeno, a odsvetuje dajanje limon, PDSA pa jih navaja kot neprimerne, ker so zelo kisle in lahko razburijo želodec. Limonin sok vsebuje veliko citronske kisline, lupina vsebuje psoralen in lahko, če jo pes pogoltne, povzroči zaporo v želodcu. Izbrali smo stopnjo »ni priporočljivo« in ne strožje, ker meso samo ni strupeno, nevarnost pa so lupina, sok in rastlina; večina psov se limonam izogiba zaradi močnega vonja.",
+    "hr": "ASPCA biljku limuna ubraja među biljke otrovne za pse zbog eteričnih ulja i psoralena, uz napomenu da je plod jestiv te da tegobe uzrokuju kora i dijelovi biljke. AKC se slaže da meso ploda nije otrovno, ali savjetuje da se limuni ne daju, a PDSA ih navodi kao nesigurne, jer su vrlo kiseli i mogu nadražiti želudac. Sok od limuna sadrži mnogo limunske kiseline, a kora sadrži psoralen i, ako se proguta, može začepiti želudac. Koristimo ocjenu „ne preporučuje se“, a ne strožu, jer meso ploda samo po sebi nije otrovno, a opasnost su kora, sok i biljka; većina pasa ionako izbjegava limune zbog jakog mirisa.",
     "cs": "ASPCA řadí citroník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům a zároveň poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC se shoduje, že dužina není toxická, ale citrony psům nedoporučuje, a PDSA je řadí mezi nebezpečné potraviny, protože jsou velmi kyselé a mohou podráždit žaludek. Citronová šťáva obsahuje hodně kyseliny citronové, kůra obsahuje psoralen a po spolknutí může způsobit ucpání žaludku. Používáme označení „nedoporučuje se“ místo přísnější úrovně, protože dužina sama toxická není a nebezpečí spočívá v kůře, šťávě a rostlině; většina psů se citronům kvůli silné vůni vyhýbá."
   },
   "signs": {
@@ -40,6 +45,12 @@
       "Potrtost (malo energije, slaba volja)",
       "Draženje kože"
     ],
+    "hr": [
+      "Povraćanje",
+      "Proljev",
+      "Bezvoljnost (malo energije, djeluje utučeno)",
+      "Nadraženost kože"
+    ],
     "cs": [
       "Zvracení",
       "Průjem",
@@ -50,12 +61,14 @@
   "what_to_do": {
     "en": "If your dog has eaten a whole lemon or a rind, contact your vet right away. Keep lemonade and lemon sweets away from your dog too, because of the sugar.",
     "sl": "Če je pes pojedel celo limono ali lupino, takoj pokličite veterinarja. Psu ne dajajte niti limonade in limoninih sladic, ker vsebujejo veliko sladkorja.",
+    "hr": "Ako je pas pojeo cijeli limun ili koru, odmah se obrati veterinaru. Psu ne daj ni limunadu ni bombone s okusom limuna, zbog šećera.",
     "cs": "Pokud váš pes snědl celý citron nebo kůru, okamžitě se obraťte na veterináře. Před psem schovejte také limonádu a citronové bonbony, protože obsahují cukr."
   },
   "serving": null,
   "child": {
     "en": "Lemons are too sour for dogs and can give them a tummy ache. Keep lemons for people.",
     "sl": "Limone so za pse prekisle in jih lahko boli trebušček. Limone so za ljudi.",
+    "hr": "Limuni su psima prekiseli i mogu ih zaboljeti trbuh. Limune ostavi ljudima.",
     "cs": "Citrony jsou pro psy příliš kyselé a může je z nich rozbolet bříško. Citrony nech lidem."
   },
   "faq": [
@@ -63,11 +76,13 @@
       "q": {
         "en": "Can dogs have lemon juice or lemonade?",
         "sl": "Ali lahko psi pijejo limonin sok ali limonado?",
+        "hr": "Smiju li psi dobiti sok od limuna ili limunadu?",
         "cs": "Může pes dostat citronovou šťávu nebo limonádu?"
       },
       "a": {
         "en": "No. Lemon juice contains a lot of citric acid, and sweet lemon products like lemonade are not recommended because too much sugar can lead to obesity.",
         "sl": "Ne. Limonin sok vsebuje veliko citronske kisline, sladki limonini izdelki, kot je limonada, pa niso priporočljivi, ker lahko preveč sladkorja vodi v debelost.",
+        "hr": "Ne. Sok od limuna sadrži mnogo limunske kiseline, a slatki proizvodi od limuna poput limunade ne preporučuju se, jer previše šećera može dovesti do pretilosti.",
         "cs": "Ne. Citronová šťáva obsahuje hodně kyseliny citronové a sladké citronové výrobky, jako je limonáda, se nedoporučují, protože příliš mnoho cukru může vést k obezitě."
       }
     }
@@ -138,6 +153,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9ab43a1b976db0aa39f9a978a1b0186491c799026d55c31d2c77ede17dc0ca3d"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f4c887ebed4b94b2d7bc26f74fbc79bc48174100ca77bebec6be3cc4b8ee6cf8"
     },
     "cs": {
       "status": "verified",
