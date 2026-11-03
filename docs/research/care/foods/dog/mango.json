@@ -4,43 +4,51 @@
   "name": {
     "en": "Mango",
     "sl": "Mango",
+    "hr": "Mango",
     "cs": "Mango"
   },
   "question": {
     "en": "Can dogs eat mango?",
     "sl": "Ali lahko psi jedo mango?",
+    "hr": "Smiju li psi jesti mango?",
     "cs": "Mohou psi jíst mango?"
   },
   "url_slug": {
     "en": "mango",
     "sl": "mango",
+    "hr": "mango",
     "cs": "mango"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat mango in moderation, as long as it is properly prepared: peel it and remove the pit. Mango is high in sugar, so keep it an occasional treat, especially for dogs who struggle with their weight.",
     "sl": "Da, psi lahko zmerno jedo mango, če je pravilno pripravljen: olupite ga in odstranite koščico. Mango vsebuje veliko sladkorja, zato naj ostane občasen priboljšek, zlasti za pse, ki imajo težave s težo.",
+    "hr": "Da, psi smiju umjereno jesti mango ako je pravilno pripremljen: oguli ga i ukloni košticu. Mango ima mnogo šećera, zato neka ostane povremena poslastica, osobito za pse koji imaju problema s težinom.",
     "cs": "Ano, psi mohou mango jíst s mírou, pokud je správně připravené: oloupejte ho a odstraňte pecku. Mango obsahuje hodně cukru, proto z něj dělejte jen občasný pamlsek, zvlášť u psů, kteří mají problémy s váhou."
   },
   "why": {
     "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
     "sl": "Mango vsebuje vlaknine ter vitamine A, B6, C in E. Koščica je resna nevarnost, da se pes zaduši, lahko se zagozdi v prebavilih in vsebuje majhne količine cianida. Lupina je težko prebavljiva. Preveč sadja lahko povzroči bolečine v trebuhu in drisko.",
+    "hr": "Mango sadrži vlakna te vitamine A, B6, C i E. Koštica je ozbiljna opasnost od gušenja, može zapeti u probavnom sustavu i sadrži male količine cijanida. Kora se teško probavlja. Previše voća može izazvati bolove u trbuhu i proljev.",
     "cs": "Mango obsahuje vlákninu a vitaminy A, B6, C a E. Pecka představuje vážné riziko dušení, může uvíznout v trávicím traktu a obsahuje malé množství kyanidu. Slupka se špatně tráví. Příliš mnoho ovoce může způsobit bolest břicha a průjem."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you have questions or concerns about feeding your dog mango, ask your vet.",
     "sl": "Če imate vprašanja ali pomisleke glede dajanja manga psu, se posvetujte z veterinarjem.",
+    "hr": "Ako imaš pitanja ili nedoumice oko davanja manga psu, pitaj veterinara.",
     "cs": "Pokud máte k podávání manga psovi jakékoli otázky nebo obavy, zeptejte se veterináře."
   },
   "serving": {
     "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
     "sl": "Olupljen, brez koščice, narezan na majhne koščke; kot občasen priboljšek.",
+    "hr": "Oguljen, bez koštice, narezan na male komadiće; kao povremena poslastica.",
     "cs": "Oloupané, bez pecky, nakrájené na malé kousky; jako občasný pamlsek."
   },
   "child": {
     "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
     "sl": "Psi lahko poskusijo malo manga! Odrasel ga najprej olupi in odstrani veliko koščico.",
+    "hr": "Psi smiju kušati malo manga! Odrasla osoba ga prvo oguli i izvadi veliku košticu.",
     "cs": "Psi si můžou dát kousíček manga! Dospělý ho nejdřív oloupe a vyndá velkou pecku."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Why must the mango pit be removed?",
         "sl": "Zakaj je treba odstraniti koščico manga?",
+        "hr": "Zašto treba ukloniti košticu manga?",
         "cs": "Proč je třeba z manga odstranit pecku?"
       },
       "a": {
         "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
         "sl": "Pes se lahko s koščico zaduši ali se mu ta zagozdi v prebavilih, poleg tega vsebuje majhne količine cianida.",
+        "hr": "Pas se može ugušiti košticom ili mu ona može zapeti u probavnom sustavu, a sadrži i male količine cijanida.",
         "cs": "Pecka může psa udusit, může také uvíznout v trávicím traktu a obsahuje malé množství kyanidu."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Can dogs eat mango skin?",
         "sl": "Ali lahko psi jedo lupino manga?",
+        "hr": "Smiju li psi jesti koru manga?",
         "cs": "Mohou psi jíst slupku manga?"
       },
       "a": {
         "en": "It is difficult to digest, so it is best to remove it before serving.",
         "sl": "Težko je prebavljiva, zato jo je najbolje odstraniti pred serviranjem.",
+        "hr": "Teško se probavlja, zato je najbolje ukloniti je prije posluživanja.",
         "cs": "Špatně se tráví, proto je nejlepší ji před podáváním odstranit."
       }
     }
@@ -135,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1b840126f4c8e985ae7de3503eea5922d68e817e830649cd6fb985220dd923e9"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "31ff85f7aadf0743648b78b4e56a35f3177e825179c655f906a3bf3e3296a59f"
     },
     "cs": {
       "status": "verified",

@@ -4,43 +4,51 @@
   "name": {
     "en": "Papaya",
     "sl": "Papaja",
+    "hr": "Papaja",
     "cs": "Papája"
   },
   "question": {
     "en": "Can dogs eat papaya?",
     "sl": "Ali lahko psi jedo papajo?",
+    "hr": "Smiju li psi jesti papaju?",
     "cs": "Mohou psi jíst papáju?"
   },
   "url_slug": {
     "en": "papaya",
     "sl": "papaja",
+    "hr": "papaja",
     "cs": "papaja"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat small amounts of fresh papaya, as long as the seeds and the skin are removed first. Papaya is naturally high in sugar, so keep it an occasional treat.",
     "sl": "Da, psi lahko jedo majhne količine sveže papaje, če prej odstranite pečke in lupino. Papaja ima naravno veliko sladkorja, zato naj ostane občasen priboljšek.",
+    "hr": "Da, psi smiju jesti male količine svježe papaje, ali prvo treba ukloniti sjemenke i koru. Papaja prirodno sadrži mnogo šećera, zato neka ostane povremena poslastica.",
     "cs": "Ano, psi mohou jíst malé množství čerstvé papáje, pokud z ní nejdříve odstraníte semínka a slupku. Papája obsahuje přirozeně hodně cukru, proto z ní dělejte jen občasný pamlsek."
   },
   "why": {
     "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
     "sl": "Pečke papaje vsebujejo majhne količine cianogenih spojin, ki so v večjih količinah lahko škodljive. Lupina je trda in težko prebavljiva ter lahko povzroči želodčne težave. Papaja ima naravno veliko sladkorja in vlaknin, zato lahko preveč papaje povzroči prebavne težave ali drisko; pri psih s sladkorno boleznijo je treba količino sadja skrbno uravnavati. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse.",
+    "hr": "Sjemenke papaje sadrže male količine cijanogenih spojeva, koji u većim količinama mogu biti štetni. Kora je žilava i teško se probavlja te može izazvati nelagodu u želucu. Papaja je prirodno slatka i bogata vlaknima, pa previše može izazvati želučane tegobe ili proljev; psima sa šećernom bolešću unos voća treba pažljivo prilagoditi. Sušena papaja često sadrži dodan šećer ili konzervanse.",
     "cs": "Semínka papáje obsahují malé množství kyanogenních látek, které mohou být ve větším množství škodlivé. Slupka je tuhá a špatně stravitelná a může způsobit žaludeční potíže. Papája je přirozeně sladká a bohatá na vlákninu, takže příliš mnoho může způsobit podráždění žaludku nebo průjem; u psů s cukrovkou je třeba příjem ovoce pečlivě hlídat. Sušená papája často obsahuje přidaný cukr nebo konzervanty."
   },
   "signs": null,
   "what_to_do": {
     "en": "Talk to your vet before adding papaya to your dog's diet, especially if your dog has a health condition such as diabetes.",
     "sl": "Preden psu ponudite papajo, se posvetujte z veterinarjem, zlasti če ima pes zdravstvene težave, na primer sladkorno bolezen.",
+    "hr": "Prije nego što papaju uvrstiš u prehranu svog psa, posavjetuj se s veterinarom, osobito ako pas ima zdravstveni problem poput šećerne bolesti.",
     "cs": "Než papáju zařadíte do psího jídelníčku, poraďte se s veterinářem, zvlášť pokud má váš pes nějaké onemocnění, například cukrovku."
   },
   "serving": {
     "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
     "sl": "Sveža, ne suha: prerežite jo na pol, izdolbite pečke, odstranite lupino in meso narežite na majhne kocke za en grižljaj.",
+    "hr": "Svježa, ne sušena: prepolovi je, izvadi sjemenke, ukloni koru i meso nareži na male kockice veličine zalogaja.",
     "cs": "Čerstvou, ne sušenou: rozkrojte ji napůl, vyberte semínka, odstraňte slupku a dužinu nakrájejte na malé kostičky na jedno sousto."
   },
   "child": {
     "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
     "sl": "Psi lahko poskusijo malo papaje! Odrasel izdolbe pečke, odreže lupino in jo nareže na drobne koščke.",
+    "hr": "Psi smiju probati malo papaje! Odrasla osoba izvadi sjemenke, odreže koru i napravi sitne komadiće.",
     "cs": "Psi mohou ochutnat kousek papáje! Dospělý vyndá semínka, odstraní slupku a nakrájí ji na malinké kousky."
   },
   "faq": [
@@ -48,11 +56,13 @@
       "q": {
         "en": "Can dogs eat papaya seeds?",
         "sl": "Ali lahko psi jedo pečke papaje?",
+        "hr": "Smiju li psi jesti sjemenke papaje?",
         "cs": "Mohou psi jíst semínka papáje?"
       },
       "a": {
         "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
         "sl": "Ne. Pečke papaje vsebujejo majhne količine cianogenih spojin, zato jih pred serviranjem odstranite.",
+        "hr": "Ne. Sjemenke papaje sadrže male količine cijanogenih spojeva, zato ih ukloni prije posluživanja.",
         "cs": "Ne. Semínka papáje obsahují malé množství kyanogenních látek, proto je před podáváním odstraňte."
       }
     },
@@ -60,11 +70,13 @@
       "q": {
         "en": "Is dried papaya okay for dogs?",
         "sl": "Je suha papaja primerna za pse?",
+        "hr": "Je li sušena papaja u redu za pse?",
         "cs": "Hodí se sušená papája pro psy?"
       },
       "a": {
         "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
         "sl": "Bolje je dati svežo. Suha papaja pogosto vsebuje dodan sladkor ali konzervanse, ki za pse niso primerni.",
+        "hr": "Bolja je svježa. Sušena papaja često sadrži dodan šećer ili konzervanse koji nisu prikladni za pse.",
         "cs": "Lepší je čerstvá. Sušená papája často obsahuje přidaný cukr nebo konzervanty, které pro psy nejsou vhodné."
       }
     }
@@ -151,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a8a37b4cb23b34851da84750f437d210323ad8fc9813b36274d8789ac22cf5cd"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c8182c304cecd0c7a392df1d664089a744bd1d80b8e9a72f2dff15d06553864"
     },
     "cs": {
       "status": "verified",
