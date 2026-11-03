@@ -84,7 +84,7 @@
     "hr": "Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali previše soli može dovesti do zadržavanja tekućine u tijelu, a u velikim količinama i do trovanja solju. Mali psi sa zdravstvenim tegobama izloženiji su riziku kad nemaju svježe vode. Hranu za pse najbolje je davati bez dodane soli i začina.",
     "sv": "Salt mat med måtta bör inte orsaka saltförgiftning, men för mycket salt kan leda till vätskeansamling och i stora mängder till saltförgiftning. Små hundar med hälsoproblem löper större risk när de saknar tillgång till färskt vatten. Mat till hundar serveras helst utan tillsatt salt eller kryddor.",
     "da": "Salt mad med måde bør ikke give saltforgiftning, men for meget salt kan føre til væskeophobning og i store mængder til saltforgiftning. Små hunde med helbredsproblemer er mere udsatte når de ikke har adgang til frisk vand. Hundens mad serveres bedst uden tilsat salt eller krydderier.",
-    "fi": "Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta liika suola voi johtaa nesteen kertymiseen elimistöön ja suurina määrinä suolamyrkytykseen. Pienet koirat, joilla on terveysongelmia, ovat suuremmassa vaarassa, jos raikasta vettä ei ole saatavilla. Koiralle annettava ruoka on parasta tarjota ilman lisättyä suolaa tai mausteita.",
+    "fi": "Kohtuullinen määrä suolaista ruokaa ei yleensä aiheuta suolamyrkytystä, mutta liika suola voi johtaa nesteen kertymiseen elimistöön ja suurina määrinä suolamyrkytykseen. Pienet koirat, joilla on terveysongelmia, ovat suuremmassa vaarassa, jos raikasta vettä ei ole saatavilla. Koiralle annettava ruoka on parasta tarjota ilman lisättyä suolaa tai mausteita.",
     "nb": "Salt mat med måte bør ikke gi saltforgiftning, men for mye salt kan føre til at kroppen holder på væske, og store mengder kan gi saltforgiftning. Små hunder med helseproblemer er mer utsatt når de ikke har tilgang til friskt vann. Mat til hunder bør serveres uten tilsatt salt eller krydder."
   },
   "signs": {
@@ -421,7 +421,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "752bb2f6853d5e0b000c017deaee6f61fdad63da19f1559d067027ad4099cbdb"
+      "verified_hash": "ac37bbcc04710a3d9bee8137cde7734a2357569d48d253c39d61335614957537"
     },
     "nb": {
       "status": "verified",

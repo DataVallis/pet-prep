@@ -193,7 +193,7 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (luk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (lök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad hunden har spist (løg), og omtrent hvor meget. Vent ikke på symptomer: skaden på blodet viser sig som regel først efter nogle dage.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (sipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (sipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vaurioituminen näkyy yleensä vasta muutaman päivän kuluttua.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden spiste (løk), og omtrent hvor mye. Ikke vent på symptomer – skader på blodet viser seg vanligvis først etter noen dager."
   },
   "serving": null,
@@ -446,7 +446,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "de0f1c14d26d297887e98f13966b7c8510e024acea7ac15f321e863f9f132796"
+      "verified_hash": "b82b035f0469dbc3e9d19f021ad3e4053904a7ba4f271fe84654016095561003"
     },
     "nb": {
       "status": "verified",

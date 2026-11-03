@@ -84,7 +84,7 @@
     "hr": "Cats Protection navodi makadamiju među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA navodi da je makadamija vrlo masna, pa može izazvati upalu gušterače, ali i da je otrovna te kod mačaka može izazvati bolest. Detaljni opisi otrovanja makadamijom uglavnom se odnose na pse, ali za mačke primjenjujemo strožu razinu.",
     "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att katter kan må dåligt av dem. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga, så att katter kan bli sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter.",
     "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpas. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau.",
-    "fi": "Cats Protectionin mukaan makadamia kuuluu pähkinöihin, joiden runsas öljy ja rasva voivat tehdä kissalle pahaa. VCA:n mukaan makadamiapähkinät ovat hyvin rasvaisia, joten ne voivat aiheuttaa haimatulehduksen, ja lisäksi ne ovat myrkyllisiä ja sairastuttavat kissan. Tarkat kuvaukset makadamiamyrkytyksestä koskevat enimmäkseen koiria, mutta käytämme kissoille tiukempaa luokitusta.",
+    "fi": "Cats Protectionin mukaan makadamia kuuluu pähkinöihin, joiden runsas öljy ja rasva voivat tehdä kissan sairaaksi. VCA:n mukaan makadamiapähkinät ovat hyvin rasvaisia, joten ne voivat aiheuttaa haimatulehduksen, ja lisäksi ne ovat myrkyllisiä ja sairastuttavat kissan. Tarkat kuvaukset makadamiamyrkytyksestä koskevat enimmäkseen koiria, mutta käytämme kissoille tiukempaa luokitusta.",
     "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter dårlige. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
   },
   "signs": {
@@ -347,7 +347,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "96983f41d755ef67dd830c92f14898ad80251d9afc619e3fa77714fd6f61ef07"
+      "verified_hash": "4a37f19ab0ec9631022a2e2916f0767843fcd77933b88afed539d65e16e36571"
     },
     "nb": {
       "status": "verified",

@@ -181,7 +181,7 @@
     ],
     "fi": [
       "Toistuva oksentelu",
-      "Haluttomuus syödä",
+      "Ruokahaluttomuus",
       "Väsymys ja vähentynyt aktiivisuus",
       "Ripuli",
       "Nestehukka"
@@ -440,7 +440,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b5548e5dbbd38e621b69bd6b1bed485860373346dd5fe2ddf2c95d5889b33dc5"
+      "verified_hash": "6038d8b07032b62c7b525b7a2c0bbc3bc89ac825f4fa4d18abef05b43526948f"
     },
     "nb": {
       "status": "verified",

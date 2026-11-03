@@ -84,7 +84,7 @@
     "hr": "ASPCA navodi biljku banane kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi bananu među zdravim poslasticama od ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att bananväxten inte är giftig för katter, och NC States djursjukhus tar upp banan bland hälsosamma godbitar från människomaten för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "ASPCA betragter bananplanten som ugiftig for katte, og dyrehospitalet ved NC State nævner banan blandt sunde godbidder fra menneskemad til katte og hunde, hvis de gives i afmålte mængder og tælles med i det daglige kalorieindtag. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "ASPCA luokittelee banaanikasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee banaanin terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "fi": "ASPCA luokittelee banaanikasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee banaanin terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat ehdottomia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "ASPCA oppgir bananplanten som ikke giftig for katter, og dyresykehuset ved NC State oppgir banan blant sunne godbiter fra menneskemat for katter og hunder, gitt i avmålte mengder og regnet med i det daglige kaloriinntaket. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
@@ -295,7 +295,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "797de41435f1d69756171df06c8823db7abbdcba68c1210c95806f5681f69260"
+      "verified_hash": "b75f5548d7e3bf045249f13b97c1c1a7239e5ba91f6a018ae1cebcb7bfc9aa90"
     },
     "nb": {
       "status": "verified",

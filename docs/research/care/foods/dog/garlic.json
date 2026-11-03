@@ -193,7 +193,7 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (češnjak) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (vitlök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad hunden har spist (hvidløg) og omtrent hvor meget. Vent ikke på symptomer: skader på blodet viser sig som regel først nogle dage senere.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (valkosipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (valkosipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vaurioituminen näkyy yleensä vasta muutaman päivän kuluttua.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden spiste (hvitløk), og omtrent hvor mye. Ikke vent på symptomer – skader på blodet viser seg vanligvis først etter noen dager."
   },
   "serving": null,
@@ -211,7 +211,7 @@
     "hr": "Češnjak jako miriše i ljudima je fin, ali nije za pse. Ako ga pas pojede, reci odrasloj osobi.",
     "sv": "Vitlök luktar starkt och människor tycker att den smakar gott, men den är inte för hundar. Säg till en vuxen om din hund äter vitlök.",
     "da": "Hvidløg dufter stærkt og smager godt for mennesker, men det er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
-    "fi": "Valkosipuli tuoksuu voimakkaalta ja maistuu ihmisistä hyvältä, mutta se ei sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
+    "fi": "Valkosipuli tuoksuu voimakkaalta ja maistuu ihmisille hyvältä, mutta se ei sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
     "nb": "Hvitløk lukter sterkt og smaker godt for mennesker, men den er ikke for hunder. Si fra til en voksen hvis hunden din spiser noe."
   },
   "faq": [
@@ -482,7 +482,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8db4e2f344d1bce6eb1f7c823fece91a30da569cf76d5603ab090bc5ecf8368a"
+      "verified_hash": "68f3034f09e3c61e737f1ed26842600770f6a70f0312397e38c5b5b328f261a1"
     },
     "nb": {
       "status": "verified",

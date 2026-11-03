@@ -84,7 +84,7 @@
     "hr": "Poriluk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
     "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Porre hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
-    "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
+    "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
     "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
@@ -462,7 +462,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e3e73017bb13834d34b595df6f18742f471eba036fbd6997293d457042b772e2"
+      "verified_hash": "9645bca238114ad05022226fb720dd5843173c0cb2183a192f69fd2b40f5c701"
     },
     "nb": {
       "status": "verified",

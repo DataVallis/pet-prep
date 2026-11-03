@@ -67,7 +67,7 @@
     "hr": "Bolje ne. Većina odraslih mačaka ne podnosi laktozu, pa kravlje mlijeko može izazvati povraćanje, proljev i bol u trbuhu. Mlijeko mačkama ne donosi nikakvu korist; za piće im treba samo svježa voda.",
     "sv": "Helst inte. De flesta vuxna katter är laktosintoleranta, så komjölk kan ge kräkningar, diarré och ont i magen. Katter har ingen nytta av mjölk; friskt vatten är allt de behöver dricka.",
     "da": "Helst ikke. De fleste voksne katte er laktoseintolerante, så komælk kan give opkast, diarré og mavesmerter. Katte har ingen gavn af mælk; frisk vand er det eneste de behøver at drikke.",
-    "fi": "Parempi olla antamatta. Useimmat aikuiset kissat eivät siedä laktoosia, joten lehmänmaito voi aiheuttaa oksentelua, ripulia ja vatsakipua. Kissa ei hyödy maidosta; juodakseen se tarvitsee vain raikasta vettä.",
+    "fi": "Parempi olla antamatta. Useimmat aikuiset kissat eivät siedä laktoosia, joten lehmänmaito voi aiheuttaa oksentelua, ripulia ja vatsakipua. Kissa ei hyödy maidosta; juomaksi se tarvitsee vain raikasta vettä.",
     "nb": "Helst ikke. De fleste voksne katter tåler ikke laktose, så kumelk kan gi oppkast, diaré og vondt i magen. Katter har ingen nytte av melk; friskt vann er alt de trenger å drikke."
   },
   "why": {
@@ -452,7 +452,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f7b789cda15bba7e7d5ce7f512f507355ceff992b2567d9c2c3387e153ddcada"
+      "verified_hash": "80a1c26140491e9b2985bbbafece92b75e590abeeb7cd23e8fdea8f211807ca6"
     },
     "nb": {
       "status": "verified",

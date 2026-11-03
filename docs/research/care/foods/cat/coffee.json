@@ -167,7 +167,7 @@
       "Hurtig puls eller ændret hjerterytme"
     ],
     "fi": [
-      "Levottomuus, hermostuneisuus, haluttomuus maata paikallaan",
+      "Levottomuus, hermostuneisuus, haluttomuus pysyä aloillaan",
       "Ylivilkkaus",
       "Vatsavaivat",
       "Nopea syke tai sydämen rytmin muutokset"
@@ -386,7 +386,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d0278d8b75883e173480f664af17a70d77d0bd583b2c136128958f63eab0c093"
+      "verified_hash": "c744329074536f8be7527ac9f37c3f3c5d1dd2ff9d4b45cb521c527c98cdaaee"
     },
     "nb": {
       "status": "verified",

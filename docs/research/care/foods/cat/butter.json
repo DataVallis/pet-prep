@@ -67,7 +67,7 @@
     "hr": "Ne, maslac je najbolje izbjegavati. To je masna mliječna namirnica: priručnici o njezi mačaka navode masnu hranu među onim što mačkama nikad ne treba davati, mliječni proizvodi mogu mački izazvati želučane tegobe, a njihova masnoća pridonosi debljanju.",
     "sv": "Nej, smör är bäst att undvika. Det är en fet mejeriprodukt: guider om kattvård räknar fet mat till sådant man aldrig ska ge katter, mejeriprodukter kan ge katten orolig mage, och fettet bidrar till viktuppgång.",
     "da": "Nej, smør bør undgås. Det er et fedtrigt mejeriprodukt: Vejledninger i kattepleje nævner fed mad blandt det katte aldrig må få, mejeriprodukter kan give en kat dårlig mave, og fedtet får katten til at tage på.",
-    "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaat mainitsevat rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, maitotuotteet voivat aiheuttaa kissalle vatsavaivoja, ja niiden rasva lisää painoa.",
+    "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaiden mukaan rasvaisia ruokia ei saa koskaan antaa kissoille, maitotuotteet voivat aiheuttaa vatsavaivoja ja niiden rasva lisää painoa.",
     "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Veiledninger om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
   },
   "why": {
@@ -84,7 +84,7 @@
     "hr": "RSPCA Australia navodi masne obreske i masnu hranu među onim što mačkama nikad ne treba davati, a dodana mast može dovesti do bolnog stanja koje se zove upala gušterače. Maslac je ujedno mliječni proizvod: mnoge mačke ne podnose laktozu, proizvodi na bazi mlijeka mogu izazvati povraćanje ili proljev, a mliječni proizvodi imaju mnogo masti i pridonose debljanju.",
     "sv": "RSPCA Australia räknar fettrester och fet mat till sådant man aldrig ska ge katter, och extra fett kan leda till ett smärtsamt tillstånd som kallas bukspottkörtelinflammation (pankreatit). Smör är också en mejeriprodukt: många katter är laktosintoleranta, mjölkbaserade produkter kan ge kräkningar eller diarré, och mejeriprodukter är feta och bidrar till viktuppgång.",
     "da": "RSPCA Australia nævner fedtafskær og fed mad blandt de ting katte aldrig må få, og ekstra fedt kan føre til en smertefuld tilstand der hedder betændelse i bugspytkirtlen (pankreatitis). Smør er også et mejeriprodukt: Mange katte er laktoseintolerante, mælkebaserede produkter kan give opkast eller diarré, og mejeriprodukter er fede og kan få katten til at tage på.",
-    "fi": "RSPCA Australia mainitsee rasvaiset lihanpalat ja rasvaiset ruoat ruokina, joita kissoille ei saa koskaan antaa, ja lisätty rasva voi johtaa kivuliaaseen haimatulehdukseen. Voi on myös maitotuote: monet kissat eivät siedä laktoosia, maitopohjaiset tuotteet voivat aiheuttaa oksentelua tai ripulia, ja maitotuotteet ovat rasvaisia ja edistävät painonnousua.",
+    "fi": "RSPCA Australian mukaan rasvaisia lihanpaloja ja muita rasvaisia ruokia ei saa koskaan antaa kissoille, ja lisärasva voi johtaa kivuliaaseen haimatulehdukseen. Voi on myös maitotuote: monet kissat eivät siedä laktoosia, maitopohjaiset tuotteet voivat aiheuttaa oksentelua tai ripulia, ja maitotuotteet ovat rasvaisia ja edistävät painonnousua.",
     "nb": "RSPCA Australia regner fettrester og fet mat blant det du aldri skal gi katter, og tilsatt fett kan føre til en smertefull tilstand som kalles betennelse i bukspyttkjertelen (pankreatitt). Smør er også et meieriprodukt: Mange katter tåler ikke laktose, melkebaserte produkter kan gi oppkast eller diaré, og meieriprodukter inneholder mye fett og bidrar til vektøkning."
   },
   "signs": {
@@ -309,7 +309,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "91ae448a14aea83980812e5ef100a0d8090dec7d6474a88bf19b11c46f956c60"
+      "verified_hash": "03b35909c45fc8e65897b6ad9d6c0f3c6c7564741ed6ef33733231cf436369c1"
     },
     "nb": {
       "status": "verified",

@@ -67,7 +67,7 @@
     "hr": "Ne, ne u velikim količinama. Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali velika količina soli može, na primjer iz domaćeg slanog tijesta, tijesta za modeliranje ili iz puno morske vode. Znakovi su povraćanje, jaka žeđ, drhtanje mišića i napadaji.",
     "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, kraftig törst, darrningar och kramper.",
     "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, legedej eller store mængder havvand. Symptomerne omfatter opkast, kraftig tørst, rysten og kramper.",
-    "fi": "Ei, ei suuria määriä. Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta suuri määrä suolaa esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä voi aiheuttaa. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
+    "fi": "Ei, ei suuria määriä. Kohtuullinen määrä suolaista ruokaa ei yleensä aiheuta suolamyrkytystä, mutta suuri määrä suolaa voi, esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä saatuna. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
     "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Symptomene er bl.a. oppkast, sterk tørst, skjelvinger og kramper."
   },
   "why": {
@@ -453,7 +453,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "92765e61d2126176b12e27eec520843ba75ac8b9e94f9a488fa5f36ba828e56c"
+      "verified_hash": "3a56e3c1a4645d5bbfccf5e808037f8ec378b3581045a6cbfd05e3581f729167"
     },
     "nb": {
       "status": "verified",

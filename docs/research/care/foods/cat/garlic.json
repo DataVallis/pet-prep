@@ -84,7 +84,7 @@
     "hr": "Češnjak pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući. Od svih biljaka iz roda Allium češnjak je za mačke najotrovniji.",
     "sv": "Vitlök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form. Av lökväxterna är vitlök den giftigaste för katter.",
     "da": "Hvidløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende. Af løgplanterne er hvidløg det mest giftige for katte.",
-    "fi": "Valkosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen. Sipulikasveista valkosipuli on kissoille myrkyllisin.",
+    "fi": "Valkosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen. Sipulikasveista valkosipuli on kissoille myrkyllisin.",
     "nb": "Hvitløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form. Av løkplantene er hvitløk den giftigste for katter."
   },
   "signs": {
@@ -256,7 +256,7 @@
     "hr": "Češnjak nama jako miriše, a za mace nije siguran. Hranu s češnjakom drži podalje od mace i reci odrasloj osobi ako je malo pojela.",
     "sv": "Vitlök luktar starkt för oss, och den är inte säker för katter. Håll mat med vitlök borta från katten och säg till en vuxen om katten äter lite.",
     "da": "Hvidløg lugter stærkt for os, og det er ikke sikkert for katte. Hold mad med hvidløg væk fra katten, og sig det til en voksen hvis den spiser noget.",
-    "fi": "Valkosipuli tuoksuu meistä voimakkaalta, eikä se ole turvallista kissoille. Pidä valkosipuliset ruoat kaukana kisusta ja kerro aikuiselle, jos kisu syö sitä.",
+    "fi": "Valkosipuli tuoksuu meille voimakkaalta, eikä se ole turvallista kissoille. Pidä valkosipuliset ruoat kaukana kisusta ja kerro aikuiselle, jos kisu syö sitä.",
     "nb": "Hvitløk lukter sterkt for oss, og den er ikke trygg for katter. Hold mat med hvitløk unna pusen, og si fra til en voksen hvis den spiser noe."
   },
   "faq": [
@@ -328,7 +328,7 @@
         "hr": "Ne daj mački češnjak ni iz kojeg razloga. Svi su oblici otrovni za mačke, a Blue Cross napominje da postoji i zabrinutost da dugotrajna upotreba češnjaka može izazvati probleme. Pitaj veterinara za sigurnu zaštitu od buha.",
         "sv": "Ge aldrig katten vitlök, oavsett anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
         "da": "Giv aldrig din kat hvidløg, uanset hvorfor. Alle former er giftige for katte, og Blue Cross nævner at man også frygter at langvarig brug af hvidløg kan give problemer. Spørg din dyrlæge om sikker loppebehandling.",
-        "fi": "Älä anna kissallesi valkosipulia mistään syystä. Kaikki muodot ovat kissoille myrkyllisiä, ja Blue Crossin mukaan on myös huolta siitä, että valkosipulin pitkäaikainen käyttö voi aiheuttaa ongelmia. Kysy eläinlääkäriltä turvallisesta kirppuhoidosta.",
+        "fi": "Älä anna kissallesi valkosipulia mistään syystä. Kaikki muodot ovat kissoille myrkyllisiä, ja Blue Crossin mukaan myös valkosipulin pitkäaikaisen käytön epäillään voivan aiheuttaa ongelmia. Kysy eläinlääkäriltä turvallisesta kirppuhoidosta.",
         "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er bekymring for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
       }
     }
@@ -494,7 +494,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f5f31d26987b5369e62531fe6876be33bfd521ca98cfefe993ec0abd5a07de3f"
+      "verified_hash": "68737af800a8e91e6be5d5ff2c3290d1fba67e80ed94b0fd5ba29abd8c18e053"
     },
     "nb": {
       "status": "verified",

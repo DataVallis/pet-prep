@@ -313,7 +313,7 @@
         "hr": "Mljevena kava poznat je izvor kofeina za ljubimce. Drži mljevenu kavu i zrna podalje od psa i nazovi veterinara ako ih pojede.",
         "sv": "Kaffesump är en känd koffeinkälla för husdjur. Håll kaffesump och bönor borta från hunden och ring veterinären om den äter av dem.",
         "da": "Kaffegrums er en kendt kilde til koffein for kæledyr. Hold grums og bønner væk fra hunden, og ring til din dyrlæge hvis den spiser noget.",
-        "fi": "Jauhettu kahvi on tunnettu lähde, josta lemmikit saavat kofeiinia. Pidä jauhettu kahvi ja pavut koirasi ulottumattomissa ja soita eläinlääkärille, jos se syö niitä.",
+        "fi": "Jauhettu kahvi on tunnettu kofeiinin lähde lemmikeille. Pidä jauhettu kahvi ja pavut koirasi ulottumattomissa ja soita eläinlääkärille, jos se syö niitä.",
         "nb": "Kaffegrut er en kjent kilde til koffein for kjæledyr. Hold kaffegrut og bønner unna hunden, og ring dyrlegen hvis den spiser noe."
       }
     }
@@ -468,7 +468,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4f2e9d2ffcc5bb71a66d1f9b8bf701068935a97ac4d4855d5e00560bc7699cf1"
+      "verified_hash": "e197524f8087b6b9097bebf0320aa8d240e44f53988c481bc7d324452a64b8b8"
     },
     "nb": {
       "status": "verified",

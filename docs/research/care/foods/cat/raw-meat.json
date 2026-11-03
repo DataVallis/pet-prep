@@ -84,7 +84,7 @@
     "hr": "Cornell i priručnik Merck Veterinary Manual savjetuju da se mačkama ne daje sirovo meso, ni kao hrana ni kao poslastica, jer može širiti toksoplazmozu i druge infekcije. Sirovo meso često je onečišćeno bakterijama, a neke mačke djeluju zdravo, ali izlučuju bakterije izmetom, odakle se one mogu proširiti na ljude i druge ljubimce. Meso iz supermarketa za ljude predviđeno je za termičku obradu.",
     "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik är avsett att tillagas innan man äter det.",
     "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt.",
-    "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raa’an lihan bakteerikontaminaatio on yleistä, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä.",
+    "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raaka liha on usein bakteerien saastuttamaa, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä.",
     "nb": "Både Cornell og Merck Veterinary Manual fraråder rått kjøtt til katter, som mat eller som godbit, fordi det kan spre toksoplasmose og andre infeksjoner. Det er vanlig at rått kjøtt er forurenset med bakterier, og noen katter virker friske, men skiller ut bakteriene i avføringen, og det kan smitte mennesker og andre kjæledyr. Kjøtt til mennesker fra butikken er ment å tilberedes."
   },
   "signs": {
@@ -454,7 +454,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "50e7766b34c7a03713ecef18722be01811c72a808a6d1dabdd4e4ac92155f183"
+      "verified_hash": "fbb7414256f8b1499e0ccae99d6d8056852131abbeba8f864b7e5699cd70d4ca"
     },
     "nb": {
       "status": "verified",

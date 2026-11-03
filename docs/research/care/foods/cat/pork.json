@@ -84,7 +84,7 @@
     "hr": "Svinjetina je jedan od najčešćih izvora bjelančevina u hrani za mačke. Kao domaća poslastica mora biti dobro termički obrađena: International Cat Care upozorava da sirovo ili nedovoljno termički obrađeno meso, poput govedine, janjetine i svinjetine, može prenositi toksoplazmu (Toxoplasma) i savjetuje davati samo dobro termički obrađenu hranu. Masni obresci nalaze se na popisu RSPCA Australia s namirnicama koje se ne smiju davati, a termički obrađene kosti mogu se rascijepiti. Šunka je druga namirnica i obrađena je zasebno.",
     "sv": "Fläskkött är ett av de vanligaste proteinerna i kattmat. Som godbit hemma måste det vara ordentligt tillagat: International Cat Care varnar för att rått eller otillräckligt tillagat kött, som nöt-, lamm- och fläskkött, kan bära på toxoplasma och rekommenderar att bara ge ordentligt tillagad mat. Fettrester från kött finns på RSPCA Australias lista över sådant man inte ska ge, och tillagade ben kan splittras. Skinka är ett annat livsmedel och beskrivs separat.",
     "da": "Svinekød er en af de mest almindelige proteinkilder i kattefoder. Som hjemmelavet godbid skal det være ordentligt tilberedt: International Cat Care advarer om at råt eller utilstrækkeligt tilberedt kød som oksekød, lammekød og svinekød kan indeholde Toxoplasma, og anbefaler kun at give ordentligt tilberedt mad. Fedtafskær står på RSPCA Australias liste over ting katte ikke må få, og tilberedte knogler kan splintre. Skinke er en anden fødevare og behandles for sig.",
-    "fi": "Sianliha on yksi kissanruokien yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen on oltava kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai riittämättömästi kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla toksoplasmaa, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset leikkuutähteet ovat RSPCA Australian listalla ruoista, joita ei pidä antaa, ja kypsennetyt luut voivat sirpaloitua. Kinkku on eri ruoka, ja sitä käsitellään erikseen.",
+    "fi": "Sianliha on yksi kissanruokien yleisimmistä proteiininlähteistä. Kotona annettavana herkkuna sen on oltava kunnolla kypsennettyä: International Cat Care varoittaa, että raa’assa tai vajaasti kypsennetyssä lihassa, kuten naudan-, lampaan- ja sianlihassa, voi olla toksoplasmaa, ja neuvoo antamaan vain kunnolla kypsennettyä ruokaa. Rasvaiset lihanpalat ovat RSPCA Australian listalla ruoista, joita ei pidä antaa, ja kypsennetyt luut voivat sirpaloitua. Kinkku on eri ruoka, ja sitä käsitellään erikseen.",
     "nb": "Svinekjøtt er en av de vanligste proteinkildene i kattefôr. Som godbit hjemme må det være ordentlig tilberedt: International Cat Care advarer om at rått eller for lite tilberedt kjøtt, som storfe-, lamme- og svinekjøtt, kan inneholde parasitten Toxoplasma, og anbefaler å gi bare ordentlig tilberedt mat. Fettrester står på RSPCA Australias liste over mat du ikke skal gi, og tilberedte bein kan splintres. Skinke er en annen matvare og omtales for seg."
   },
   "signs": null,
@@ -262,7 +262,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8eadbc890763d548f81646ac4541c1e09496f7dc169f356a68cd6ee10760d139"
+      "verified_hash": "903960539e60efdde8bd1f837721a294a66a37e6112997171d9d3cd66e626692"
     },
     "nb": {
       "status": "verified",

@@ -238,7 +238,7 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro. Zapiši koju je vrstu čokolade mačka pojela, koliko i kada te sačuvaj omot. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra. Notera vilken sorts choklad katten åt, hur mycket och när, och spara omslaget. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker upåvirket. Skriv ned hvilken slags chokolade din kat har spist, hvor meget og hvornår, og gem indpakningen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin. Kirjaa ylös, millaista suklaata kissasi söi, kuinka paljon ja milloin, ja säästä kääre. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin. Kirjaa ylös, millaista suklaata kissasi söi, kuinka paljon ja milloin, ja säilytä kääre. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker helt fin. Skriv ned hva slags sjokolade katten har spist, hvor mye og når, og ta vare på innpakningen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
@@ -256,7 +256,7 @@
     "hr": "Čokolada je poslastica za ljude, a ne za mace. Drži je sklonjenu i reci odrasloj osobi ako je maca pronađe.",
     "sv": "Choklad är godis för människor, inte för katter. Lägg undan den, och säg till en vuxen om katten hittar någon.",
     "da": "Chokolade er en godbid for mennesker, ikke for katte. Læg den væk, og sig det til en voksen hvis din kat finder noget.",
-    "fi": "Suklaa on ihmisten herkku, ei kissanherkku. Pidä se tallessa ja kerro aikuiselle, jos kisu löytää sitä.",
+    "fi": "Suklaa on ihmisten herkku, ei kissanherkku. Pidä se piilossa kisulta ja kerro aikuiselle, jos kisu löytää sitä.",
     "nb": "Sjokolade er godteri for mennesker, ikke for katter. Ha den godt gjemt, og si fra til en voksen hvis pusen finner noe."
   },
   "faq": [
@@ -487,7 +487,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e5f185ab8c9a7077d791e3cc71a2dc405c71a2575602d17363e004f3f8c69304"
+      "verified_hash": "be05ad48d1c5ce00586ae6f05aa1b952ad1bee5b9f08bc1513a7ccff4634501b"
     },
     "nb": {
       "status": "verified",

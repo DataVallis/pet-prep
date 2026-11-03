@@ -193,7 +193,7 @@
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (vlasac) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (gräslök) och ungefär hur mycket. Vänta inte på symtom: skador på blodet syns oftast först efter några dagar.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad hunden har spist (purløg) og omtrent hvor meget. Vent ikke på symptomer: skader på blodet viser sig som regel først nogle dage senere.",
-    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (ruohosipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (ruohosipulia) ja suunnilleen kuinka paljon. Älä odota oireita: veren vaurioituminen näkyy yleensä vasta muutaman päivän kuluttua.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden spiste (gressløk), og omtrent hvor mye. Ikke vent på symptomer – skader på blodet viser seg vanligvis først etter noen dager."
   },
   "serving": null,
@@ -441,7 +441,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1d0af5459348c06607c868746386ebfb5de75fe7909b9bfc770a1bb3dcd4a995"
+      "verified_hash": "7b09e780a0751fb15670e061bb429890b55e444cda0c3e51619e55f77bf1eaed"
     },
     "nb": {
       "status": "verified",

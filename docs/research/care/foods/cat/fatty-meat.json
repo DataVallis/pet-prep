@@ -67,7 +67,7 @@
     "hr": "Bolje ne. Masno meso i koža peradi mogu poremetiti mačju probavu, a kod osjetljivih mačaka čak dovesti do upale gušterače. Ako dijeliš meso s mačkom, daj joj malo običnog, nemasnog, termički obrađenog mesa bez kože, kostiju i začina.",
     "sv": "Helst inte. Fett kött och fågelskinn kan störa kattens matsmältning och hos känsliga katter till och med leda till bukspottkörtelinflammation (pankreatit). Om du delar med dig av kött, ge lite naturellt, magert, tillagat kött utan skinn, ben och kryddor.",
     "da": "Det er bedst at lade være. Fedt kød og skind fra fjerkræ kan give en kat fordøjelsesproblemer og hos følsomme katte endda føre til betændelse i bugspytkirtlen (pankreatitis). Hvis du deler kød, så giv lidt naturelt, magert, tilberedt kød uden skind, knogler eller krydderier.",
-    "fi": "Ei kannata. Rasvainen liha ja linnun nahka voivat aiheuttaa kissalle ruoansulatusvaivoja, ja herkillä kissoilla ne voivat johtaa jopa haimatulehdukseen. Jos annat kissalle lihaa, anna vähän pelkkää, vähärasvaista, kypsennettyä lihaa ilman nahkaa, luita ja mausteita.",
+    "fi": "Ei kannata. Rasvainen liha ja siipikarjan nahka voivat aiheuttaa kissalle ruoansulatusvaivoja, ja herkillä kissoilla ne voivat johtaa jopa haimatulehdukseen. Jos annat kissalle lihaa, anna vähän pelkkää, vähärasvaista, kypsennettyä lihaa ilman nahkaa, luita ja mausteita.",
     "nb": "Helst ikke. Fett kjøtt og skinn fra fjærfe kan gi katten fordøyelsesplager og hos følsomme katter til og med føre til betennelse i bukspyttkjertelen (pankreatitt). Hvis du deler kjøtt, gi litt naturelt, magert, tilberedt kjøtt uten skinn, bein eller krydder."
   },
   "why": {
@@ -356,7 +356,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4572f746a30f18105fc2f235c03f14281c5960f4b45dbb04c3dadc62ea7df4db"
+      "verified_hash": "d620e0019e531d229764d1f5bf8691db4164408fe67ad416f8f034ad7d2a5aad"
     },
     "nb": {
       "status": "verified",
