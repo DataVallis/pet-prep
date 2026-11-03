@@ -61,7 +61,7 @@
     "es": "No, ni como comida ni como premio. El aparato digestivo del gato no está preparado para grandes cantidades de sal, y el exceso puede causar una intoxicación por sal. Mantén la sal de mesa, la sal gorda para el hielo y los alimentos muy salados lejos de tu gato, y llama a tu veterinario si come mucha.",
     "it": "No, né come alimento né come premio. L’apparato digerente del gatto non è in grado di tollerare grandi quantità di sale, e troppo sale può causare un’intossicazione. Tieni sale da cucina, sale antighiaccio e cibi molto salati lontani dal tuo gatto, e chiama il veterinario se ne mangia molto.",
     "pt": "Não, nem como alimento nem como guloseima. O sistema digestivo do gato não está preparado para grandes quantidades de sal, e o excesso pode causar intoxicação por sal. Mantém o sal de cozinha, o sal-gema e os alimentos muito salgados longe do teu gato, e liga ao teu veterinário se ele comer muito.",
-    "nl": "Nee, niet als voer of snoepje. Het spijsverteringsstelsel van een kat is niet gemaakt voor grote hoeveelheden zout, en te veel kan een zoutvergiftiging veroorzaken. Houd keukenzout, strooizout en heel zout eten weg bij je kat, en bel je dierenarts als ze er veel van eet.",
+    "nl": "Nee, niet als voer of als traktatie. Het spijsverteringsstelsel van een kat is niet gemaakt voor grote hoeveelheden zout, en te veel kan een zoutvergiftiging veroorzaken. Houd keukenzout, strooizout en heel zout voedsel uit de buurt van je kat, en bel je dierenarts als ze er veel van eet.",
     "pl": "Nie, ani jako pokarm, ani jako smakołyk. Układ pokarmowy kota nie jest przystosowany do dużych ilości soli, a jej nadmiar może wywołać zatrucie solą. Trzymaj sól kuchenną, sól drogową i bardzo słone jedzenie z dala od kota i zadzwoń do weterynarza, jeśli kot zje jej dużo.",
     "cs": "Ne, jako potravina ani pamlsek ne. Trávicí soustava koček není uzpůsobená ke zpracování velkého množství soli a jejím nadbytkem si kočka může přivodit otravu solí. Kuchyňskou sůl, posypovou sůl a velmi slaná jídla držte mimo dosah kočky, a pokud jich kočka sní hodně, zavolejte veterináři.",
     "hr": "Ne, ni kao hrana ni kao poslastica. Mačji probavni sustav nije građen za velike količine soli, a previše soli može izazvati otrovanje solju. Kuhinjsku sol, sol za posipanje i vrlo slanu hranu drži daleko od mačke i nazovi veterinara ako je pojede mnogo.",
@@ -158,7 +158,7 @@
       "Lusteloosheid",
       "Wankel lopen",
       "Overmatige dorst of veel plassen",
-      "Trillingen of epileptische aanvallen"
+      "Trillingen of toevallen"
     ],
     "pl": [
       "Wymioty",
@@ -232,7 +232,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha comido sal o un alimento muy salado, o ha lamido sal gorda para el hielo. Apunta qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha mangiato sale o un cibo molto salato o ha leccato del sale antighiaccio. Annota che cosa ha mangiato, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato comeu sal ou um alimento muito salgado, ou lambeu sal-gema. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat zout of heel zout eten heeft gegeten of aan strooizout heeft gelikt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat zout of heel zout voedsel heeft gegeten of aan strooizout heeft gelikt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot zjadł sól lub bardzo słone jedzenie albo lizał sól drogową. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka snědla sůl nebo velmi slané jídlo či olízla posypovou sůl, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka pojela sol ili vrlo slanu hranu ili polizala sol za posipanje. Zapiši što je pojela, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
@@ -250,7 +250,7 @@
     "es": "La sal no es un premio para gatos. Mantén el salero y la comida muy salada lejos de tu gato.",
     "it": "Il sale non è un premio per gatti. Tieni la saliera e i cibi molto salati lontani dal micio.",
     "pt": "O sal não é uma guloseima para gatos. Mantém o saleiro e a comida muito salgada longe do gatinho.",
-    "nl": "Zout is geen snoepje voor katten. Houd het zoutvaatje en heel zout eten weg bij je poes.",
+    "nl": "Zout is geen snoepje voor katten. Houd het zoutvaatje en heel zout voedsel uit de buurt van je poes.",
     "pl": "Sól to nie smakołyk dla kota. Trzymaj solniczkę i bardzo słone jedzenie z dala od kotka.",
     "cs": "Sůl není pamlsek pro kočky. Slánku a hodně slané jídlo drž daleko od kočičky.",
     "hr": "Sol nije poslastica za mace. Soljenku i vrlo slanu hranu drži daleko od mace.",

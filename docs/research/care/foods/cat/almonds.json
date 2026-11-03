@@ -61,7 +61,7 @@
     "es": "No, es mejor mantener las almendras lejos de los gatos. Las almendras dulces no se consideran tóxicas, pero tienen mucho aceite y grasa y pueden sentarle mal a un gato, con malestar de estómago o vómitos.",
     "it": "No, è meglio tenere le mandorle lontane dai gatti. Le mandorle dolci non sono considerate tossiche, ma sono ricche di oli e grassi e possono far stare male un gatto, con disturbi di stomaco o vomito.",
     "pt": "Não, é melhor manter as amêndoas longe dos gatos. As amêndoas doces não são consideradas tóxicas, mas são ricas em óleos e gorduras e podem pôr o gato indisposto, com mal-estar no estômago ou vómitos.",
-    "nl": "Nee, houd amandelen liever bij katten uit de buurt. Zoete amandelen gelden niet als giftig, maar ze bevatten veel olie en vet en kunnen een kat ziek maken, met maagklachten of braken.",
+    "nl": "Nee, houd amandelen liever bij je kat uit de buurt. Zoete amandelen gelden niet als giftig, maar ze bevatten veel olie en vet en kunnen een kat ziek maken, met maagklachten of braken.",
     "pl": "Nie, migdały lepiej trzymać z dala od kota. Migdały słodkie nie są uważane za toksyczne, ale zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu, powodując rozstrój żołądka lub wymioty.",
     "cs": "Ne, mandle je lepší držet mimo dosah koček. Sladké mandle se nepovažují za toxické, obsahují však hodně olejů a tuků a kočce po nich může být špatně – může mít podrážděný žaludek nebo zvracet.",
     "hr": "Ne, bademe je najbolje držati podalje od mačaka. Slatki bademi ne smatraju se otrovnima, ali imaju mnogo ulja i masti pa mački od njih može pozliti, uz želučane tegobe ili povraćanje.",
@@ -78,7 +78,7 @@
     "es": "Cats Protection incluye las almendras entre los frutos secos que contienen grandes cantidades de aceites y grasas que pueden sentarle mal a un gato. La ASPCA indica que las almendras dulces que se venden para comer no son tóxicas para las mascotas, pero, como no forman parte de su dieta habitual, pueden causar problemas digestivos. Las almendras amargas contienen un compuesto de cianuro y se consideran tóxicas.",
     "it": "Cats Protection elenca le mandorle tra la frutta a guscio ricca di oli e grassi che può far stare male un gatto. L’ASPCA spiega che le mandorle dolci vendute per il consumo non sono tossiche per gli animali domestici, ma poiché non fanno parte della loro dieta abituale possono causare disturbi digestivi. Le mandorle amare contengono un composto del cianuro e sono considerate tossiche.",
     "pt": "A Cats Protection inclui as amêndoas entre os frutos secos com muitos óleos e gorduras, que podem pôr um gato indisposto. A ASPCA diz que as amêndoas doces vendidas para consumo não são tóxicas para os animais de estimação, mas, como não fazem parte da sua alimentação normal, podem causar problemas digestivos. As amêndoas amargas contêm um composto de cianeto e são consideradas tóxicas.",
-    "nl": "Cats Protection noemt amandelen bij de noten die veel olie en vet bevatten en een kat ziek kunnen maken. Volgens de ASPCA zijn zoete amandelen die voor consumptie worden verkocht niet giftig voor huisdieren, maar omdat ze geen gewoon onderdeel van hun voeding zijn, kunnen ze spijsverteringsproblemen geven. Bittere amandelen bevatten een cyanideverbinding en gelden als giftig.",
+    "nl": "Cats Protection rekent amandelen tot de noten die veel olie en vet bevatten en een kat ziek kunnen maken. Volgens de ASPCA zijn zoete amandelen die als eten worden verkocht niet giftig voor huisdieren, maar omdat ze geen normaal onderdeel van hun voeding zijn, kunnen ze spijsverteringsproblemen geven. Bittere amandelen bevatten een cyanideverbinding en gelden als giftig.",
     "pl": "Cats Protection wymienia migdały wśród orzechów, które zawierają dużo olejów i tłuszczu i mogą zaszkodzić kotu. ASPCA podaje, że migdały słodkie sprzedawane do jedzenia nie są toksyczne dla zwierząt, ale ponieważ nie należą do ich zwykłej diety, mogą wywołać problemy trawienne. Migdały gorzkie zawierają związek cyjanogenny i są uważane za toksyczne.",
     "cs": "Cats Protection řadí mandle mezi ořechy s vysokým obsahem olejů a tuků, po kterých může být kočce špatně. Podle ASPCA nejsou sladké mandle, které se prodávají k jídlu, pro zvířata toxické, ale protože nejsou běžnou součástí jejich stravy, mohou způsobit trávicí potíže. Hořké mandle obsahují sloučeninu kyanidu a považují se za toxické.",
     "hr": "Cats Protection navodi bademe među orašastim plodovima s mnogo ulja i masti, od kojih mački može pozliti. ASPCA navodi da slatki bademi koji se prodaju za jelo nisu otrovni za kućne ljubimce, ali budući da nisu uobičajen dio prehrane ljubimca, mogu izazvati probavne smetnje. Gorki bademi sadrže spoj cijanida i smatraju se otrovnima.",
@@ -134,7 +134,7 @@
       "Braken",
       "Diarree",
       "Maagklachten",
-      "Ziek lijken"
+      "Een zieke indruk maken"
     ],
     "pl": [
       "Wymioty",
@@ -260,7 +260,7 @@
         "es": "¿Hay frutos secos peores que otros?",
         "it": "Ci sono tipi di frutta a guscio peggiori di altri?",
         "pt": "Há frutos secos piores do que outros?",
-        "nl": "Zijn sommige noten erger dan andere?",
+        "nl": "Zijn sommige noten gevaarlijker dan andere?",
         "pl": "Czy niektóre orzechy są gorsze od innych?",
         "cs": "Jsou některé ořechy horší než jiné?",
         "hr": "Jesu li neki orašasti plodovi opasniji od drugih?",

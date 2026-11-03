@@ -61,7 +61,7 @@
     "es": "No, es mejor mantener las nueces lejos de los gatos. Contienen muchos aceites y grasas, que pueden sentarle mal a un gato y causarle vómitos o diarrea.",
     "it": "No, è meglio tenere le noci lontane dai gatti. Contengono molti oli e grassi, che possono far stare male un gatto e causare vomito o diarrea.",
     "pt": "Não, é melhor manter as nozes longe dos gatos. Têm muitos óleos e gorduras, que podem pôr o gato doente e causar vómitos ou diarreia.",
-    "nl": "Nee, houd walnoten liever bij katten uit de buurt. Ze bevatten veel olie en vet, waar een kat ziek van kan worden en die braken of diarree kunnen veroorzaken.",
+    "nl": "Nee, houd walnoten liever bij je kat uit de buurt. Ze bevatten veel olie en vet. Daar kan een kat ziek van worden, en het kan braken of diarree veroorzaken.",
     "pl": "Nie, orzechy włoskie lepiej trzymać z dala od kota. Zawierają dużo olejów i tłuszczu, które mogą zaszkodzić kotu i wywołać wymioty lub biegunkę.",
     "cs": "Ne, vlašské ořechy je lepší držet mimo dosah koček. Obsahují hodně olejů a tuků, které mohou kočce uškodit a mohou způsobit zvracení nebo průjem.",
     "hr": "Ne, orahe je bolje držati daleko od mačaka. Sadrže puno ulja i masti, zbog kojih mački može pozliti, a mogu izazvati i povraćanje ili proljev.",
@@ -134,7 +134,7 @@
       "Braken",
       "Diarree",
       "Maagklachten",
-      "Ziek lijken"
+      "Een zieke indruk maken"
     ],
     "pl": [
       "Wymioty",
@@ -205,7 +205,7 @@
     "es": "Las nueces son demasiado grasientas para la barriga de un gato. Déjalas para las personas y dale a tu gato sus propios premios.",
     "it": "Le noci sono troppo oleose per la pancia di un gatto. Lasciale alle persone e dai al tuo gatto i suoi premi.",
     "pt": "As nozes são demasiado gordurosas para a barriga de um gato. Ficam para as pessoas; dá ao teu gato as guloseimas dele.",
-    "nl": "Walnoten zijn te vet voor de buik van een kat. Houd ze voor mensen en geef je kat haar eigen snoepjes.",
+    "nl": "Walnoten zijn te vet voor het buikje van een kat. Houd ze voor mensen en geef je kat zijn eigen kattensnoepjes.",
     "pl": "Orzechy włoskie są za tłuste dla kociego brzuszka. Zostaw je dla ludzi, a kotu daj jego własne smakołyki.",
     "cs": "Vlašské ořechy jsou na kočičí bříško moc mastné. Nech je lidem a dej kočce její vlastní pamlsky.",
     "hr": "Orasi su previše masni za macin trbuščić. Ostavi ih ljudima, a maci daj njezine poslastice.",
@@ -224,7 +224,7 @@
         "es": "¿Hay frutos secos peores que otros?",
         "it": "Ci sono tipi di frutta a guscio peggiori di altri?",
         "pt": "Há frutos secos piores do que outros?",
-        "nl": "Zijn sommige noten erger dan andere?",
+        "nl": "Zijn sommige noten gevaarlijker dan andere?",
         "pl": "Czy niektóre orzechy są gorsze od innych?",
         "cs": "Jsou některé ořechy horší než jiné?",
         "hr": "Jesu li neki orašasti plodovi opasniji od drugih?",
