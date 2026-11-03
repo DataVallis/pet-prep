@@ -63,7 +63,7 @@
     "pt": "É melhor não. O abacate é rico em gordura e contém uma toxina chamada persina, e a Cats Protection diz que comer muito pode causar problemas de saúde aos gatos. O abacate é perigoso sobretudo para aves, cavalos e alguns outros animais, mas, mesmo assim, não é um bom alimento para gatos.",
     "nl": "Liever niet. Avocado bevat veel vet en een gifstof die persine heet, en volgens Cats Protection kan het eten van een grote hoeveelheid gezondheidsproblemen geven bij katten. Avocado is vooral gevaarlijk voor vogels, paarden en sommige andere dieren, maar het is ook geen geschikt voedsel voor katten.",
     "pl": "Lepiej nie. Awokado zawiera dużo tłuszczu i toksynę o nazwie persyna, a według Cats Protection zjedzenie go w dużej ilości może wywołać u kota problemy zdrowotne. Awokado jest groźne głównie dla ptaków, koni i niektórych innych zwierząt, ale to i tak nie jest dobry pokarm dla kotów.",
-    "cs": "Raději ne. Avokádo má vysoký obsah tuku a obsahuje toxin zvaný persin; podle Cats Protection může kočkám způsobit zdravotní potíže, pokud ho snědí hodně. Avokádo je nebezpečné hlavně pro ptáky, koně a některá další zvířata, ani pro kočky to ale není vhodné jídlo.",
+    "cs": "Raději ne. Avokádo má vysoký obsah tuku a obsahuje toxin zvaný persin; podle Cats Protection může kočkám způsobit zdravotní potíže, pokud ho snědí hodně. Avokádo je nebezpečné hlavně pro ptáky, koně a některá další zvířata, ale ani pro kočky to není vhodné jídlo.",
     "hr": "Bolje ne. Avokado ima mnogo masti i sadrži toksin zvan persin, a Cats Protection navodi da mačkama može izazvati zdravstvene probleme ako ga pojedu u većoj količini. Avokado je opasan uglavnom za ptice, konje i neke druge životinje, ali ni za mačke nije dobra hrana.",
     "sv": "Helst inte. Avokado är mycket fet och innehåller ett gift som heter persin, och enligt Cats Protection kan stora mängder ge hälsoproblem hos katter. Avokado är främst farlig för fåglar, hästar och vissa andra djur, men det är ändå ingen bra mat för katter.",
     "da": "Det er bedst at lade være. Avocado indeholder meget fedt og et giftstof der hedder persin, og Cats Protection skriver at det kan give helbredsproblemer hos katte hvis de spiser meget af det. Avocado er først og fremmest farlig for fugle, heste og nogle andre dyr, men det er stadig ikke god mad til katte.",
@@ -288,7 +288,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "00e48fbfe51f437b157a41284b52093c027f89b7ad35e883cd2dbea8c181dcb1"
+      "verified_hash": "7193ed6dbe7cb558d011a639534b9f084d98d011614e3413b28004cf972af6b2"
     },
     "hr": {
       "status": "verified",

@@ -63,7 +63,7 @@
     "pt": "Não, é melhor evitar o queijo. Não é tóxico, mas muitos gatos são intolerantes à lactose, por isso pode fazer-lhes mal ao estômago. Também é rico em gordura e sal e não dá aos gatos os nutrientes de que precisam.",
     "nl": "Nee, kaas kun je beter vermijden. Het is niet giftig, maar veel katten zijn lactose-intolerant, dus het kan hun maag van streek maken. Kaas bevat ook veel vet en zout en geeft katten niet de voedingsstoffen die ze nodig hebben.",
     "pl": "Nie, lepiej unikać sera. Nie jest toksyczny, ale wiele kotów nie toleruje laktozy, więc ser może wywołać rozstrój żołądka. Zawiera też dużo tłuszczu i soli i nie dostarcza kotom potrzebnych składników odżywczych.",
-    "cs": "Ne, sýru je lepší se vyhnout. Není toxický, ale mnoho koček nesnáší laktózu, takže jim může podráždit žaludek. Navíc má vysoký obsah tuku a soli a nedává kočkám živiny, které potřebují.",
+    "cs": "Ne, sýru je lepší se vyhnout. Není toxický, ale mnoho koček nesnáší laktózu, takže jim může podráždit žaludek. Navíc má vysoký obsah tuku a soli a neobsahuje živiny, které kočky potřebují.",
     "hr": "Ne, sir je najbolje izbjegavati. Nije otrovan, ali mnoge mačke ne podnose laktozu, pa im može izazvati želučane tegobe. Uz to ima mnogo masti i soli i ne daje mačkama hranjive tvari koje im trebaju.",
     "sv": "Nej, ost är bäst att undvika. Den är inte giftig, men många katter är laktosintoleranta, så osten kan ge dem orolig mage. Den innehåller också mycket fett och salt och ger inte katter de näringsämnen de behöver.",
     "da": "Nej, ost bør undgås. Den er ikke giftig, men mange katte er laktoseintolerante, så den kan give dem dårlig mave. Den indeholder også meget fedt og salt og giver ikke katte de næringsstoffer, de har brug for.",
@@ -243,7 +243,7 @@
         "pt": "As guloseimas feitas para gatos com um pouco de queijo não fazem mal em pequenas quantidades, de vez em quando. Se o teu gato ficar com o estômago irritado, escolhe outra guloseima da próxima vez.",
         "nl": "Kattensnoepjes met een beetje kaas zijn in kleine hoeveelheden af en toe prima. Krijgt je kat er maagklachten van, kies dan een andere keer een ander kattensnoepje.",
         "pl": "Smakołyki dla kotów z niewielkim dodatkiem sera można podawać w małych ilościach od czasu do czasu. Jeśli kot dostanie rozstroju żołądka, następnym razem wybierz inny smakołyk.",
-        "cs": "Pamlsky vyrobené pro kočky s trochou sýra jsou v malém množství občas v pořádku. Pokud má kočka po nich podrážděný žaludek, vyberte příště jiný pamlsek.",
+        "cs": "Pamlsky určené pro kočky, které obsahují trochu sýra, jsou v malém množství a občas v pořádku. Pokud kočka po nich dostane podrážděný žaludek, vyberte příště jiný pamlsek.",
         "hr": "Poslastice za mačke s malo sira u redu su u malim količinama, povremeno. Ako tvoja mačka dobije želučane tegobe, sljedeći put odaberi drugu poslasticu.",
         "sv": "Kattgodis med lite ost i går bra i små mängder då och då. Om katten får orolig mage, välj en annan godbit nästa gång.",
         "da": "Godbidder lavet til katte med lidt ost i er fine i små mængder en gang imellem. Hvis din kat får dårlig mave, så vælg en anden godbid næste gang.",
@@ -418,7 +418,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "81788d84d09d911bb47fef05d7ba8e5aebc26d6be4d00c3abaa5982b25b4c266"
+      "verified_hash": "a4736326315d0814018e3466489206c8832919565956a5fe5caa5a0cd153026e"
     },
     "hr": {
       "status": "verified",

@@ -98,7 +98,7 @@
     "pt": "Se o teu cão engoliu ossos de frango cozinhados, liga ao teu veterinário para te aconselhar e não tentes fazer o teu cão vomitar. Liga imediatamente se vires engasgamento, vómitos ou sinais de dor de barriga.",
     "nl": "Heeft je hond gekookte kippenbotten ingeslikt? Bel je dierenarts voor advies en probeer je hond niet te laten braken. Bel meteen als je ziet dat hij stikt, braakt of buikpijn lijkt te hebben.",
     "pl": "Jeśli twój pies połknął gotowane kości kurczaka, zadzwoń do weterynarza po poradę i nie próbuj wywoływać u psa wymiotów. Zadzwoń od razu, jeśli pies się dławi, wymiotuje lub ma objawy bólu brzucha.",
-    "cs": "Pokud váš pes spolkl tepelně upravené kuřecí kosti, zavolejte veterináři o radu a nesnažte se psa přimět ke zvracení. Pokud se dusí, zvrací nebo má známky bolesti břicha, volejte hned.",
+    "cs": "Pokud váš pes spolkl tepelně upravené kuřecí kosti, zavolejte veterináři a poraďte se; nesnažte se psa přimět ke zvracení. Pokud se dusí, zvrací nebo má známky bolesti břicha, volejte ihned.",
     "hr": "Ako je pas progutao termički obrađene pileće kosti, nazovi veterinara za savjet i ne pokušavaj psu izazvati povraćanje. Odmah nazovi ako primijetiš gušenje, povraćanje ili znakove bolova u trbuhu.",
     "sv": "Om hunden har svalt tillagade kycklingben, ring veterinären för råd och försök inte få hunden att kräkas. Ring direkt om du ser kvävning, kräkningar eller tecken på ont i magen.",
     "da": "Hvis hunden har slugt tilberedte kyllingeknogler, skal du ringe til din dyrlæge for at få råd; prøv ikke selv at få hunden til at kaste op. Ring med det samme hvis du ser kvælningstegn, opkast eller tegn på mavesmerter.",
@@ -285,7 +285,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2d0a37a8c7cd4691a24185b56bbe9bb467bb0fd7ecb7f38f42bc40bfa646a3e9"
+      "verified_hash": "40837d1f8b2de8eeaf9969bffe56bf21b9a9733e8620d76c5aa35f0debe2dfba"
     },
     "hr": {
       "status": "verified",

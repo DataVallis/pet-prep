@@ -63,7 +63,7 @@
     "pt": "Não como alimento habitual, nem cru. A intoxicação por vitamina A nos animais de estimação acontece sobretudo quando comem fígado cru ou suplementos ricos em vitamina A, e o fígado cru tem os mesmos riscos de germes que qualquer carne crua. Pergunta ao teu veterinário antes de incluir fígado na alimentação do teu cão.",
     "nl": "Niet als vast voer, en niet rauw. Vitamine A-vergiftiging bij huisdieren ontstaat meestal als ze rauwe lever of supplementen met veel vitamine A krijgen, en rauwe lever brengt dezelfde risico’s op ziektekiemen met zich mee als ander rauw vlees. Overleg met je dierenarts voordat je lever aan het voer van je hond toevoegt.",
     "pl": "Nie jako stały pokarm i nie na surowo. Zatrucie witaminą A u zwierząt domowych najczęściej zdarza się, gdy dostają surową wątróbkę lub suplementy bogate w witaminę A, a surowa wątróbka, jak każde surowe mięso, niesie ryzyko zakażenia drobnoustrojami. Zanim dodasz wątróbkę do diety psa, zapytaj weterynarza.",
-    "cs": "Ne jako běžné krmivo a ne syrová. K otravě vitaminem A dochází u zvířat nejčastěji tehdy, když dostávají syrová játra nebo doplňky bohaté na vitamin A, a syrová játra s sebou nesou stejná rizika choroboplodných zárodků jako každé syrové maso. Než začnete psovi játra dávat, poraďte se s veterinářem.",
+    "cs": "Jako běžná součást jídelníčku ne a syrová už vůbec ne. K otravě vitaminem A dochází u zvířat nejčastěji tehdy, když dostávají syrová játra nebo doplňky bohaté na vitamin A, a syrová játra navíc nesou stejné riziko choroboplodných zárodků jako jakékoli syrové maso. Než začnete psovi játra dávat, poraďte se s veterinářem.",
     "hr": "Ne kao redovitu hranu i ne sirovu. Do otrovanja vitaminom A kod kućnih ljubimaca najčešće dolazi kad dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A, a sirova jetra nosi i mikrobiološke rizike kao i svako sirovo meso. Prije nego što psu uvedeš jetru u prehranu, pitaj veterinara.",
     "sv": "Inte som vanlig mat och inte rå. A-vitaminförgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på A-vitamin, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
     "da": "Ikke som fast foder og ikke rå. A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever eller kosttilskud med meget A-vitamin, og rå lever har samme bakterierisiko som alt råt kød. Spørg din dyrlæge før du giver din hund lever som en del af kosten.",
@@ -311,7 +311,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9bf38fb9f4e2a1f0e96737b1608382587636a25002dea97788528964339213e7"
+      "verified_hash": "5b3318e7e5dd6a283f85667666c0f4ac7b6312e7c950a54c74f42df074963845"
     },
     "hr": {
       "status": "verified",

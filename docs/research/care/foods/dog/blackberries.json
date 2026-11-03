@@ -132,7 +132,7 @@
     "pt": "Podes partilhar umas amoras lavadas com o teu cão! Pergunta primeiro a um adulto, sobretudo se forem apanhadas lá fora.",
     "nl": "Honden mogen een paar gewassen bramen meesnoepen! Vraag het eerst aan een volwassene, zeker bij bessen die je buiten hebt geplukt.",
     "pl": "Możesz podzielić się z psem kilkoma umytymi jeżynami! Najpierw zapytaj dorosłego, zwłaszcza o owoce zerwane na dworze.",
-    "cs": "O pár omytých ostružin se se psem můžeš rozdělit! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku.",
+    "cs": "Pes může dostat pár omytých ostružin! Nejdřív se zeptej dospělého, hlavně u plodů natrhaných venku.",
     "hr": "Psi smiju pojesti nekoliko opranih kupina! Prvo pitaj odraslu osobu, osobito za bobice ubrane vani.",
     "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
     "da": "Hunde kan godt få et par vaskede brombær! Spørg en voksen først, især hvis bærrene er plukket udenfor.",
@@ -279,7 +279,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1cc2a908957cceb2814077b86a14764bb7094d530428723987ebca70cc09d97b"
+      "verified_hash": "506d101009faac773b141d2007ea3723c1ca79f07235d5bfc753df766821d92d"
     },
     "hr": {
       "status": "verified",

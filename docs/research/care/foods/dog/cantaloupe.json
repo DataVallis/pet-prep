@@ -98,7 +98,7 @@
     "pt": "Se tiveres dúvidas ou preocupações sobre dar meloa ao teu cão, por exemplo se for diabético, pergunta ao teu veterinário.",
     "nl": "Heb je vragen of twijfels over cantaloupe voor je hond, bijvoorbeeld omdat je hond diabetes heeft? Vraag het dan aan je dierenarts.",
     "pl": "Jeśli masz pytania lub wątpliwości co do karmienia psa kantalupą, na przykład gdy twój pies ma cukrzycę, zapytaj weterynarza.",
-    "cs": "Pokud máte otázky nebo obavy ohledně krmení psa cukrovým melounem, například pokud má váš pes cukrovku, zeptejte se veterináře.",
+    "cs": "Pokud máte k podávání cukrového melounu pochybnosti, například protože má váš pes cukrovku, zeptejte se veterináře.",
     "hr": "Ako imaš pitanja ili nedoumica u vezi s davanjem dinje psu, na primjer ako pas ima dijabetes, pitaj veterinara.",
     "sv": "Om du har frågor eller funderingar kring att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
     "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund cantaloupemelon, fx hvis den har diabetes.",
@@ -274,7 +274,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f7d43fe23d219878c0b40cbea28c1e1a4afd1eed5034d7f5810baf307fc3779c"
+      "verified_hash": "86d67abe9a81dd3621b97434dbf20c6b3a7d9d02fa22e66777832962b39ea243"
     },
     "hr": {
       "status": "verified",

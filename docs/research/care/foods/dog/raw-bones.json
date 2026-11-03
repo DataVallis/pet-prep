@@ -80,7 +80,7 @@
     "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A FDA refere obstruções, engasgamento e lesões na boca depois de comerem ossos e aconselha a perguntar ao veterinário quais são as alternativas mais seguras para roer. O AKC refere que os ossos crus podem ter Salmonella e que os ossos muito duros podem danificar os dentes. Os ossos podem ferir ou obstruir o intestino, e as obstruções são muito graves.",
     "nl": "De bronnen verschillen, dus kiezen we het strengere niveau. De FDA noemt verstoppingen, stikken en verwondingen in de bek na het eten van botten en raadt aan om bij je dierenarts naar veiligere kauwartikelen te vragen. De AKC wijst erop dat rauwe botten salmonella kunnen bevatten en dat heel harde botten de tanden kunnen beschadigen. Botten kunnen de darmen verwonden of verstoppen, en verstoppingen zijn heel ernstig.",
     "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. FDA odnotowuje przypadki niedrożności, zadławień i urazów pyska spowodowanych kośćmi i radzi zapytać weterynarza o bezpieczniejsze gryzaki. AKC zauważa, że surowe kości mogą przenosić bakterie Salmonella, a bardzo twarde kości mogą uszkodzić zęby. Kości mogą zranić lub zatkać przewód pokarmowy, a niedrożność jest bardzo poważna.",
-    "cs": "Zdroje se liší, proto používáme přísnější hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážné.",
+    "cs": "Zdroje se liší, proto vycházíme z přísnějšího hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážný stav.",
     "hr": "Izvori se razlikuju, pa koristimo strožu ocjenu. FDA navodi da kosti mogu uzrokovati začepljenja, gušenje i ozljede usta te savjetuje da veterinara pitaš za sigurnije žvakalice. AKC napominje da sirove kosti mogu sadržavati salmonelu i da vrlo tvrde kosti mogu oštetiti zube. Kosti mogu ozlijediti ili začepiti crijeva, a začepljenja su vrlo ozbiljna.",
     "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt.",
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og råder til at spørge dyrlægen om sikrere ting at tygge på. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
@@ -310,7 +310,7 @@
         "pt": "O osso deve ser maior do que o comprimento do focinho do cão, para que não o consiga engolir inteiro, e deves vigiar o teu cão enquanto rói.",
         "nl": "Het bot moet groter zijn dan de lengte van de snuit van je hond, zodat het niet in één keer kan worden doorgeslikt, en je moet je hond tijdens het kauwen in de gaten houden.",
         "pl": "Kość powinna być większa niż długość kufy psa, żeby nie dało się jej połknąć w całości, a podczas gryzienia pilnuj psa.",
-        "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání byste psa měli hlídat.",
+        "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání psa hlídejte.",
         "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok pas glođe, povremeno provjeri kako je.",
         "sv": "Benet ska vara längre än hundens nos så att det inte kan sväljas helt, och du ska hålla koll på hunden medan den tuggar.",
         "da": "En knogle skal være større end længden af hundens snude, så den ikke kan sluges hel, og du skal holde øje med hunden mens den tygger.",
@@ -461,7 +461,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "58d341bf3e56524aec4bd1582b06c1746f8f3a503b139bdbcb5d0089d33f0fff"
+      "verified_hash": "84ed627fe2426cdf3aea50c8d8b5f8a4dae962cefb097e0d2dddc6a7d2bca386"
     },
     "hr": {
       "status": "verified",

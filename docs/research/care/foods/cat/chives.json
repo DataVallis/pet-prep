@@ -80,7 +80,7 @@
     "pt": "O cebolinho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
     "nl": "Bieslook hoort bij de alliumfamilie (de uienfamilie). Alliumsoorten beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, als poeder en vloeibaar.",
     "pl": "Szczypiorek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
-    "cs": "Pažitka patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
+    "cs": "Pažitka patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Ze všech zvířat jsou na ně kočky nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
     "hr": "Vlasac pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
     "sv": "Gräslök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Purløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
@@ -172,7 +172,7 @@
     "cs": [
       "Zvracení",
       "Průjem",
-      "Snížená chuť k jídlu",
+      "Nechuť k jídlu",
       "Slabost",
       "Bledé dásně",
       "Červeně zbarvená moč",
@@ -252,7 +252,7 @@
     "pt": "O cebolinho parece erva, mas não é erva para gatos! Mantém-no longe do gatinho e avisa um adulto se ele o mastigar.",
     "nl": "Bieslook lijkt op gras, maar het is geen kattengras! Houd het uit de buurt van je kat. Kauwt ze erop? Vertel het meteen aan een volwassene.",
     "pl": "Szczypiorek wygląda jak trawa, ale to nie jest kocia trawka! Trzymaj go z dala od kotka i powiedz dorosłemu, jeśli kotek trochę go pogryzie.",
-    "cs": "Pažitka vypadá jako tráva, ale kočičí tráva to není! Drž ji od kočičky dál, a když ji kočička okusuje, řekni to dospělému.",
+    "cs": "Pažitka vypadá jako tráva, ale kočičí tráva to není! Drž ji od kočičky dál, a když ji kočička začne okusovat, řekni to dospělému.",
     "hr": "Vlasac izgleda kao trava, ali nije trava za mace! Drži ga podalje od mace i reci odrasloj osobi ako ga maca malo požvače.",
     "sv": "Gräslök ser ut som gräs, men det är inte kattgräs! Håll den borta från katten och säg till en vuxen om katten tuggar på den.",
     "da": "Purløg ligner græs, men det er ikke kattegræs! Hold det væk fra din kat, og sig det til en voksen hvis den tygger på det.",
@@ -438,7 +438,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "917fab3ccc686c8692ea262f139b132c9c0c9b285edcc20f736c0be44de6be75"
+      "verified_hash": "3c5026503aa49ec9fa31d757675fd86f67a86d434403ae6ee44ae2fceec5d124"
     },
     "hr": {
       "status": "verified",

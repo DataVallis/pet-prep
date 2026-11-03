@@ -80,7 +80,7 @@
     "pt": "Os cajus não são tóxicos, mas são um petisco com muita gordura: comer demasiados pode levar a dor de barriga, pancreatite e aumento de peso. Os cajus salgados acrescentam sal, que em excesso faz mal. O maior risco vem de outros frutos secos da mistura, como as nozes de macadâmia. Alguns cães podem reagir com inchaço, comichão ou urticária.",
     "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel ervan eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes).",
     "pl": "Orzechy nerkowca nie są toksyczne, ale to bardzo tłusta przekąska: zbyt duża ilość może prowadzić do problemów z brzuchem, zapalenia trzustki i przybierania na wadze. Solone orzechy nerkowca dostarczają soli, która w nadmiarze szkodzi. Największe ryzyko stanowią inne orzechy w mieszance, np. orzechy makadamia. Niektóre psy mogą zareagować obrzękiem, swędzeniem lub pokrzywką.",
-    "cs": "Kešu ořechy nejsou jedovaté, ale jsou to velmi tučné pochutiny: když jich pes sní příliš, může mít zažívací potíže, zánět slinivky břišní a přibrat na váze. Solené kešu obsahují navíc sůl, která je v nadbytku škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
+    "cs": "Kešu ořechy nejsou jedovaté, ale mají hodně tuku: když jich pes sní příliš, hrozí zažívací potíže, zánět slinivky břišní i nárůst hmotnosti. Solené kešu navíc obsahují sůl, která je ve velkém množství škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
     "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići dodaju i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
     "sv": "Cashewnötter är inte giftiga, men de är ett fett mellanmål: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter ger salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
     "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
@@ -132,7 +132,7 @@
     "pt": "Um cão pode comer um ou dois cajus simples de vez em quando. As misturas de frutos secos salgadas não são para cães.",
     "nl": "Een hond mag af en toe een of twee gewone cashewnoten. Zoute notenmixen zijn niet voor honden.",
     "pl": "Pies może czasem dostać jeden lub dwa zwykłe orzechy nerkowca. Słone mieszanki orzechów nie są dla psów.",
-    "cs": "Pes může občas dostat jeden nebo dva čisté kešu ořechy. Slané směsi ořechů nejsou pro psy.",
+    "cs": "Pes může občas dostat jeden nebo dva neochucené kešu ořechy. Slané směsi ořechů psům nepatří.",
     "hr": "Pas ponekad smije dobiti jedan ili dva obična indijska oraščića. Slane mješavine orašastih plodova nisu za pse.",
     "sv": "En hund kan ibland få en eller två osaltade cashewnötter. Salta nötblandningar är inte för hundar.",
     "da": "En hund må godt få en eller to almindelige cashewnødder en gang imellem. Saltede nøddeblandinger er ikke til hunde.",
@@ -284,7 +284,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5f672ef377273f8b711df0b626900696d57c8343fa66d8dd8b05009ac459733d"
+      "verified_hash": "c4add70ded0afa4096856ccffab5f89db04c83d9f57dc9b039823b01edf4b54b"
     },
     "hr": {
       "status": "verified",

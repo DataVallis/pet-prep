@@ -146,7 +146,7 @@
       "Zvracení",
       "Průjem",
       "Podrážděný žaludek",
-      "Kočka působí nemocně"
+      "Kočka vypadá, že jí není dobře"
     ],
     "hr": [
       "Povraćanje",
@@ -189,7 +189,7 @@
     "pt": "Se o teu gato comeu nozes, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Anota o que comeu, a quantidade e quando.",
     "nl": "Heeft je kat walnoten gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer.",
     "pl": "Jeśli twój kot zjadł orzechy włoskie, poradź się weterynarza, zwłaszcza jeśli zjadł ich dużo lub źle się czuje. Zapisz, co zjadł, ile i kiedy.",
-    "cs": "Pokud vaše kočka snědla vlašské ořechy, obraťte se o radu na veterináře, zvlášť pokud jich snědla hodně nebo se nezdá v pořádku. Poznamenejte si, co snědla, kolik a kdy.",
+    "cs": "Pokud kočka snědla vlašské ořechy, obraťte se o radu na veterináře, zvlášť pokud jich snědla hodně nebo se nezdá v pořádku. Poznamenejte si, co snědla, kolik a kdy.",
     "hr": "Ako je mačka pojela orahe, obrati se veterinaru za savjet, osobito ako ih je pojela mnogo ili se čini da joj nije dobro. Zapiši što je pojela, koliko i kada.",
     "sv": "Om katten har ätit valnötter, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när.",
     "da": "Hvis din kat har spist valnødder, skal du kontakte din dyrlæge og få råd, især hvis den har spist mange eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår.",
@@ -324,7 +324,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fc39caabd28e1f60bf879e23e8e8cbf1371ece6fe601a985259cf67c28f5a76f"
+      "verified_hash": "6e488fa05c4755af0c8a0163232a93d266fc40c4c6b27b48f26f75e3b2392f60"
     },
     "hr": {
       "status": "verified",

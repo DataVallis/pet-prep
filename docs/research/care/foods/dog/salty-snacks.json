@@ -238,7 +238,7 @@
     "pt": "Os petiscos salgados são para pessoas. Demasiado sal dá sede aos cães e põe-nos doentes, por isso dá ao teu cão as guloseimas dele.",
     "nl": "Zoute snacks zijn voor mensen. Van te veel zout krijgen honden dorst en worden ze ziek, dus geef je hond zijn eigen snoepjes.",
     "pl": "Słone przekąski są dla ludzi. Przez nadmiar soli psy chce się pić i mogą się rozchorować, więc dawaj psu jego własne smakołyki.",
-    "cs": "Slané pochutiny jsou pro lidi. Po moc velkém množství soli mají psi žízeň a je jim zle, tak dej svému psovi jeho vlastní pamlsky.",
+    "cs": "Slané pochutiny jsou pro lidi. Když psi sní moc soli, mají žízeň a je jim zle, tak dej svému psovi jeho vlastní pamlsky.",
     "hr": "Slane grickalice su za ljude. Od previše soli psi postanu žedni i bolesni, zato svom psu daj njegove poslastice.",
     "sv": "Salta snacks är för människor. För mycket salt gör hundar törstiga och sjuka, så ge din hund dess egna godbitar.",
     "da": "Salte snacks er til mennesker. For meget salt gør hunde tørstige og syge, så giv din hund dens egne godbidder.",
@@ -401,7 +401,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3d4de62a585cd8018aab7cf42ceb20992bad0b6f492c4fb42e71335a90eadced"
+      "verified_hash": "18a678e4c80de8e5459755456da5e94d0bc977dd3f30d40694601ed348135cb5"
     },
     "hr": {
       "status": "verified",

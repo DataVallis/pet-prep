@@ -63,7 +63,7 @@
     "pt": "Não é recomendado. O alperceiro está classificado como tóxico para os cães: os caules, as folhas e as sementes contêm cianeto, sobretudo quando murcham. Nunca deixes o teu cão roer caroços, folhas ou caules de alperce.",
     "nl": "Niet aan te raden. De abrikozenplant staat te boek als giftig voor honden: de stengels, bladeren en pitten bevatten cyanide, vooral als ze verwelken. Laat je hond nooit op abrikozenpitten, -bladeren of -stengels kauwen.",
     "pl": "Nie zaleca się. Morela figuruje na listach roślin toksycznych dla psów: jej łodygi, liście i nasiona zawierają cyjanek, zwłaszcza gdy więdną. Nigdy nie pozwalaj psu gryźć pestek, liści ani łodyg moreli.",
-    "cs": "Nedoporučuje se. Meruňka je uváděna jako rostlina jedovatá pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy nenechte psa kousat meruňkové pecky, listy ani stonky.",
+    "cs": "Nedoporučuje se. Meruňka patří mezi rostliny jedovaté pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy psovi nedovolte kousat meruňkové pecky, listy ani stonky.",
     "hr": "Ne preporučuje se. Biljka marelice ubraja se među otrovne za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
     "sv": "Rekommenderas inte. Aprikosträdet anges som giftigt för hundar: skaft, blad och kärnor innehåller cyanid, särskilt när de vissnar. Låt aldrig hunden tugga på aprikoskärnor, blad eller skaft.",
     "da": "Det frarådes. Abrikosplanten er opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke.",
@@ -80,7 +80,7 @@
     "pt": "Os caules, as folhas e as sementes do alperce contêm glicosídeos cianogénicos, que libertam cianeto. O cianeto reduz a capacidade do organismo de usar o oxigénio. Como a planta está classificada como tóxica para os cães, não consideramos os alperces uma guloseima segura.",
     "nl": "Stengels, bladeren en pitten van de abrikoos bevatten cyanogene glycosiden, waaruit cyanide vrijkomt. Cyanide vermindert het vermogen van het lichaam om zuurstof te gebruiken. Omdat de plant op de lijst van giftige planten voor honden staat, beschouwen wij abrikozen niet als een veilig snoepje.",
     "pl": "Łodygi, liście i nasiona moreli zawierają glikozydy cyjanogenne, które uwalniają cyjanek. Cyjanek ogranicza zdolność organizmu do wykorzystywania tlenu. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, nie uznajemy moreli za bezpieczny smakołyk.",
-    "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože je rostlina uváděna jako jedovatá pro psy, nepovažujeme meruňky za bezpečný pamlsek.",
+    "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože meruňka patří mezi rostliny jedovaté pro psy, nepovažujeme ji za bezpečný pamlsek.",
     "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da se biljka ubraja među otrovne za pse, marelice ne smatramo sigurnom poslasticom.",
     "sv": "Aprikosträdets skaft, blad och kärnor innehåller cyanogena glykosider, som frigör cyanid. Cyanid minskar kroppens förmåga att använda syre. Eftersom trädet anges som giftigt för hundar klassar vi inte aprikoser som en säker godbit.",
     "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten er opført som giftig for hunde, vurderer vi ikke abrikoser som en sikker godbid.",
@@ -333,7 +333,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "21e8f0bd49e0bcfae93f61cc0e21794a12f81451f46ae6873eb5aa93db500b4d"
+      "verified_hash": "d71fc4c43d346587e2ca8bdefa6b3054e87b743e97f50f00338819a187649646"
     },
     "hr": {
       "status": "verified",

@@ -63,7 +63,7 @@
     "pt": "Não. Nunca dês maçarocas de milho a um cão. Os cães podem engolir pedaços ou até a maçaroca inteira, o que pode causar engasgamento ou uma obstrução intestinal grave que pode exigir tratamento de emergência. Os grãos de milho simples, já fora da maçaroca, são outra história.",
     "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal.",
     "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa.",
-    "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat urgentní léčbu. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
+    "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat neodkladné ošetření. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
     "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa druga su stvar.",
     "sv": "Nej. Ge aldrig en hund majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Naturella majskorn som tagits av kolven är en annan sak.",
     "da": "Nej. Giv aldrig en hund majs på kolben. Hunde kan sluge stykker eller endda hele kolben, hvilket kan give kvælning eller en alvorlig tarmblokering, der kan kræve akut behandling. Almindelige majskorn uden kolbe er en anden sag.",
@@ -80,7 +80,7 @@
     "pt": "Os pedaços engolidos podem obstruir os intestinos; num caso relatado, a obstrução reduziu a irrigação sanguínea, e pode ser necessário tratamento de emergência. Os grãos simples, com moderação, são geralmente seguros; o perigo é a maçaroca.",
     "nl": "Ingeslikte stukken kunnen de darmen verstoppen; in een beschreven geval belemmerde de verstopping de bloedtoevoer, en een spoedbehandeling kan nodig zijn. Gewone maïskorrels zijn met mate over het algemeen veilig; het gevaar zit in de kolf.",
     "pl": "Połknięte kawałki mogą zatkać jelita; w jednym opisanym przypadku niedrożność ograniczyła dopływ krwi i może być potrzebne pilne leczenie. Zwykłe ziarna w umiarkowanej ilości są na ogół bezpieczne; zagrożeniem jest kolba.",
-    "cs": "Spolknuté kousky mohou ucpat střeva; v jednom popsaném případě ucpání omezilo prokrvení střeva a může být nutná urgentní léčba. Čistá zrna jsou s mírou obecně bezpečná; nebezpečný je klas.",
+    "cs": "Spolknuté kousky mohou ucpat střeva; v jednom popsaném případě ucpání omezilo prokrvení střeva a může být nutné neodkladné ošetření. Čistá zrna jsou s mírou obecně bezpečná; nebezpečný je klas.",
     "hr": "Progutani komadi mogu začepiti crijeva; u jednom opisanom slučaju začepljenje je ograničilo dotok krvi, a može biti potrebno hitno liječenje. Obična zrna kukuruza u umjerenim količinama uglavnom su sigurna; opasan je klip.",
     "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall begränsade stoppet blodtillförseln, och akut behandling kan behövas. Naturella majskorn med måtta är i regel säkra; det är kolven som är farlig.",
     "da": "Slugte stykker kan blokere tarmene; i et beskrevet tilfælde hæmmede blokeringen blodforsyningen, og akut behandling kan blive nødvendig. Almindelige majskorn er generelt sikre med måde; det er kolben, der er farlig.",
@@ -420,7 +420,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f6905e4a895e8c8d7ffeef3917940a866502ae7fe2c2e7212662866d9b1e3443"
+      "verified_hash": "a70d7622d35d6a907400e5985ba90e0be6d354c981fbaeb60e9d94178187fb18"
     },
     "hr": {
       "status": "verified",

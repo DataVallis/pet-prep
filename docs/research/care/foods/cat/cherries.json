@@ -63,7 +63,7 @@
     "pt": "Não, é melhor não. A ASPCA classifica a cerejeira como tóxica para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças cerejas ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma.",
     "nl": "Nee, liever niet. De ASPCA noemt de kersenplant giftig voor katten: de stengels, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen kersen, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt.",
     "pl": "Nie, lepiej nie. ASPCA uznaje czereśnię za roślinę toksyczną dla kotów: jej łodygi, liście i nasiona (pestka) zawierają cyjanek. Nie dawaj kotu czereśni, trzymaj pestki i części rośliny poza jego zasięgiem i zadzwoń do weterynarza, jeśli kot coś z nich pogryzie.",
-    "cs": "Ne, raději ne. ASPCA vede třešeň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Třešně kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
+    "cs": "Ne, raději ne. ASPCA uvádí třešeň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Třešně kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku trešnje kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi trešnje svojoj mački, koštice i dijelove biljke drži izvan njezina dosega, a ako je mačka nešto od toga žvakala, nazovi veterinara.",
     "sv": "Nej, helst inte. ASPCA anger att körsbärsträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten körsbär, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
     "da": "Nej, det er bedst at lade være. ASPCA opfører kirsebærplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke kirsebær til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
@@ -154,7 +154,7 @@
     "cs": [
       "Cihlově červené dásně",
       "Rozšířené zorničky",
-      "Dýchací potíže",
+      "Potíže s dýcháním",
       "Dýchání s otevřenou tlamou",
       "Šok"
     ],
@@ -222,7 +222,7 @@
     "pt": "As cerejas são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
     "nl": "Kersen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Czereśnie to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
-    "cs": "Třešně jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když nějakou pecku kočička okusuje.",
+    "cs": "Třešně jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když je kočička začne okusovat.",
     "hr": "Trešnje su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
     "sv": "Körsbär är mellanmål för människor. Stenarna och bladen är inte säkra för katter, så säg till en vuxen om katten tuggar på något av dem.",
     "da": "Kirsebær er en snack for mennesker. Stenene og bladene er ikke sikre for katte, så sig det til en voksen hvis din kat tygger på en af dem.",
@@ -353,7 +353,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "096ad383807b94b4ba53a5fdef59122611e36fed1d67b8c6547032a79b240b0b"
+      "verified_hash": "0632d9d312b2c19aeb9ace43bfa46363400a910fd70153ac7485fcc95472c331"
     },
     "hr": {
       "status": "verified",

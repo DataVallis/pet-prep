@@ -63,7 +63,7 @@
     "pt": "Não é recomendado. O bacon não é tóxico, mas é comida gorda da mesa que pode causar vómitos e diarreia ou desencadear uma pancreatite, que pode ser grave. Na dúvida, não partilhes comida da mesa com o teu cão.",
     "nl": "Niet aan te raden. Spek is niet giftig, maar het is vet eten van tafel dat braken en diarree kan veroorzaken of een alvleesklierontsteking kan uitlokken, die ernstig kan zijn. Twijfel je? Deel dan geen eten van tafel met je hond.",
     "pl": "Nie zaleca się. Boczek nie jest toksyczny, ale to tłuste jedzenie ze stołu, które może wywołać wymioty i biegunkę albo zapalenie trzustki, czasem ciężkie. W razie wątpliwości nie dziel się z psem jedzeniem ze stołu.",
-    "cs": "Nedoporučuje se. Slanina není jedovatá, ale je to tučné jídlo ze stolu, které může vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, který může mít těžký průběh. Když si nejste jistí, o jídlo ze stolu se se psem nedělte.",
+    "cs": "Nedoporučuje se. Slanina není jedovatá, ale je to tučné jídlo ze stolu, které může vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, jenž může mít těžký průběh. Když si nejste jistí, jídlem ze stolu psa raději nekrmte.",
     "hr": "Ne preporučuje se. Slanina nije otrovna, ali je masna hrana sa stola koja može izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja može biti teška. U slučaju sumnje ne dijeli hranu sa stola sa psom.",
     "sv": "Rekommenderas inte. Bacon är inte giftigt, men det är fet bordsmat som kan ge kräkningar och diarré eller utlösa bukspottkörtelinflammation, som kan vara allvarlig. Är du osäker, dela inte bordsmat med hunden.",
     "da": "Det frarådes. Bacon er ikke giftigt, men det er fed mad fra bordet, som kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), der kan være alvorlig. Er du i tvivl, så del ikke mad fra bordet med din hund.",
@@ -373,7 +373,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "05e59558225f0bc84990071bdd919ca2ca7c8296a5ecb443a72ec831b6814116"
+      "verified_hash": "fffac7f0a53beb2e02bc741b93cabb389078212398a20728ac1c1ffb7e6f3cde"
     },
     "hr": {
       "status": "verified",

@@ -207,7 +207,7 @@
     "pt": "O café é uma bebida de adultos. Deixa os gatos nervosos, por isso nunca o partilhes, e avisa um adulto se o gatinho beber um pouco.",
     "nl": "Koffie is een drankje voor volwassenen. Katten worden er zenuwachtig van, dus deel het nooit. Likt je kat er wat van op? Vertel het dan meteen aan een volwassene.",
     "pl": "Kawa to napój dla dorosłych. Koty robią się od niej nerwowe, więc nigdy się nią nie dziel, a jeśli kotek trochę wychłepcze, powiedz dorosłemu.",
-    "cs": "Káva je pití pro dospělé. Kočky z ní jsou neklidné, tak se o ni s kočičkou nikdy nedělej, a když kočička trochu vylíže, řekni to dospělému.",
+    "cs": "Káva je pití pro dospělé. Kočky z ní jsou neklidné, tak ji kočičce nikdy nedávej, a když ji kočička trochu vylíže, řekni to dospělému.",
     "hr": "Kava je piće za odrasle. Od nje su mace nemirne, zato je nikad ne dijeli s macom i reci odrasloj osobi ako je maca malo polizala.",
     "sv": "Kaffe är en dryck för vuxna. Det gör katter skakiga, så dela aldrig med dig, och säg till en vuxen om katten slickar i sig lite.",
     "da": "Kaffe er noget voksne drikker. Det gør katte urolige, så del det aldrig, og sig det til en voksen hvis din kat slikker noget i sig.",
@@ -366,7 +366,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "eede1478eb90e2af2c728d40ee852891960cfaab20a92dfa04075f9b2dec5a41"
+      "verified_hash": "0f244c23193d2e39d9cf1cd10bcb9656eba2098e77eb181fefeb40d773d8db11"
     },
     "hr": {
       "status": "verified",

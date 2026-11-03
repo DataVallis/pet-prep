@@ -208,7 +208,7 @@
     "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples.",
     "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je kat een klein stukje gewoon mager vlees.",
     "pl": "Od tłustych kawałków kota może boleć brzuszek. Jeśli dorosły się zgodzi, kotek może dostać odrobinę zwykłego chudego mięsa.",
-    "cs": "Z tučných kousků může kočku bolet bříško. Když dospělý řekne, že ano, může kočička dostat kousíček obyčejného libového masa.",
+    "cs": "Z tučných kousků může kočku bolet bříško. Když to dospělý dovolí, může kočička dostat kousíček obyčejného libového masa.",
     "hr": "Od masnih komadića macu može zaboljeti trbuščić. Ako odrasla osoba kaže da smije, maca može dobiti sićušan komadić običnog nemasnog mesa.",
     "sv": "Feta bitar kan ge en katt ont i magen. Om en vuxen säger ja, kan katten få en pytteliten bit magert kött utan kryddor.",
     "da": "Fede stykker kan give en kat ondt i maven. Hvis en voksen siger ja, kan din kat få en lille smule almindeligt magert kød.",
@@ -336,7 +336,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4ad5658890994cd7f70587f0317244f5694af36066fff81d9e80ffe7e6506d4c"
+      "verified_hash": "729d3a7097db942f86d4a7369793ca34bf1777ddeb7d95c18ee7a6e5fadd5f10"
     },
     "hr": {
       "status": "verified",

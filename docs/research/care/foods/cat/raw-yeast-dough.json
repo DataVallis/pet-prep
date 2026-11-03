@@ -63,7 +63,7 @@
     "pt": "Não. A massa crua com fermento é perigosa para os gatos de duas formas: pode continuar a crescer no estômago e causar uma obstrução, e o fermento produz álcool, que é tóxico para os gatos. Guarda a massa a levedar fora do alcance e liga ao teu veterinário se o teu gato comer alguma.",
     "nl": "Nee. Rauw gistdeeg is op twee manieren gevaarlijk voor katten: het kan in de maag blijven uitzetten en een verstopping veroorzaken, en de gist maakt alcohol aan, die giftig is voor katten. Houd rijzend deeg buiten bereik en bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Surowe ciasto drożdżowe jest dla kotów niebezpieczne na dwa sposoby: może dalej rosnąć w żołądku i spowodować niedrożność, a drożdże wytwarzają alkohol, który jest dla kotów toksyczny. Trzymaj rosnące ciasto poza zasięgiem kota i zadzwoń do weterynarza, jeśli kot trochę zje.",
-    "cs": "Ne. Syrové kynuté těsto je pro kočky nebezpečné dvojím způsobem: v žaludku může dál nabývat na objemu a způsobit ucpání a kvasinky vytvářejí alkohol, který je pro kočky toxický. Kynoucí těsto mějte mimo dosah kočky, a pokud ho vaše kočka sní, zavolejte veterináři.",
+    "cs": "Ne. Syrové kynuté těsto je pro kočky nebezpečné dvojím způsobem: v žaludku může dál nabývat na objemu a způsobit ucpání a kvasinky vytvářejí alkohol, který je pro kočky toxický. Kynoucí těsto mějte mimo dosah kočky, a pokud ho kočka sní, zavolejte veterináři.",
     "hr": "Ne. Sirovo tijesto s kvascem opasno je za mačke na dva načina: može se nastaviti širiti u želucu i izazvati začepljenje, a kvasac stvara alkohol, koji je otrovan za mačke. Tijesto koje se diže drži izvan dosega mačke i nazovi veterinara ako ga mačka pojede makar malo.",
     "sv": "Nej. Rå jäsdeg är farlig för katter på två sätt: den kan fortsätta jäsa i magen och orsaka stopp där, och jästen bildar alkohol, som är giftig för katter. Ställ jäsande deg utom räckhåll och ring veterinären om katten äter av den.",
     "da": "Nej. Rå gærdej er farlig for katte på to måder: Den kan blive ved med at hæve i maven og give en blokering, og gæren danner alkohol, som er giftig for katte. Hold dej der hæver, uden for rækkevidde, og ring til din dyrlæge hvis din kat spiser noget.",
@@ -189,7 +189,7 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quanta massa o teu gato comeu e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile ciasta zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta vaše kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je tijesta mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera hur mycket deg katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor meget dej din kat har spist og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
@@ -365,7 +365,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2bcd18ae55b2daa7f4eeefea85f14d5c83c4018b0b1be8c19a8c1b0e3b923ded"
+      "verified_hash": "f82a10325cce66cc02e33465e95331366a7a67bcb5405e86f3a9cebbb266db85"
     },
     "hr": {
       "status": "verified",

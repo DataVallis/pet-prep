@@ -132,7 +132,7 @@
     "pt": "Um bocadinho de carne de vaca simples e cozinhada pode ser uma guloseima. Um adulto deve cozinhá-la e tirar os ossos.",
     "nl": "Een klein stukje gewoon, gaar rundvlees kan een kattensnoepje zijn. Een volwassene maakt het gaar en haalt de botten eruit.",
     "pl": "Odrobina zwykłej gotowanej wołowiny może być smakołykiem. Dorosły powinien ją ugotować i wyjąć kości.",
-    "cs": "Kousíček obyčejného hovězího může být pamlsek, ale jen dobře uvařený nebo upečený. Připravit ho a vyndat kosti by měl dospělý.",
+    "cs": "Kousíček obyčejného uvařeného hovězího může být pamlsek. Uvařit ho a vyndat z něj kosti by měl dospělý.",
     "hr": "Sićušan komadić obične kuhane govedine može biti poslastica. Odrasla osoba treba je skuhati i izvaditi kosti.",
     "sv": "En pytteliten bit kokt nötkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
     "da": "En lille smule almindeligt kogt oksekød kan være en godbid. En voksen skal tilberede det og tage knoglerne ud.",
@@ -243,7 +243,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e254f09c71d0fb1a8f8febf3b74e8b0ff5408ede9e235b285cf45f43ed12ca14"
+      "verified_hash": "618b94dfe35468929bdb4f8d21978f1aa6b7bf5d24472fd244e4979d75d2dfaa"
     },
     "hr": {
       "status": "verified",

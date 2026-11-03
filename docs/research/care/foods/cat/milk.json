@@ -174,7 +174,7 @@
     "pt": "Se o teu gato bebeu leite e tem vómitos ou diarreia que não passam, ou parece doente, contacta o teu veterinário para pedir conselho.",
     "nl": "Heeft je kat melk gedronken en gaat het braken of de diarree niet over, of lijkt ze ziek? Vraag dan je dierenarts om advies.",
     "pl": "Jeśli twój kot wypił mleko i ma wymioty lub biegunkę, które nie mijają, albo źle się czuje, poradź się weterynarza.",
-    "cs": "Pokud vaše kočka vypila mléko a zvracení nebo průjem neustupují, případně se zdá nemocná, obraťte se o radu na veterináře.",
+    "cs": "Pokud kočka vypila mléko a zvracení nebo průjem neustupují, případně se zdá nemocná, obraťte se o radu na veterináře.",
     "hr": "Ako je mačka popila mlijeko pa povraća ili ima proljev koji ne prolazi ili ti se čini da joj nije dobro, obrati se veterinaru za savjet.",
     "sv": "Om katten har druckit mjölk och har kräkningar eller diarré som inte går över, eller verkar må dåligt, kontakta veterinären för råd.",
     "da": "Hvis din kat har drukket mælk og får opkast eller diarré der ikke går over, eller virker utilpas, skal du kontakte din dyrlæge og få råd.",
@@ -208,7 +208,7 @@
     "pt": "Os gatos dos desenhos animados adoram leite, mas os gatos a sério ficam com dor de barriga. A água fresca é a melhor bebida para o gatinho!",
     "nl": "Katten in tekenfilms zijn dol op melk, maar echte katten krijgen er buikpijn van. Vers water is het beste drankje voor je kat!",
     "pl": "Koty z bajek uwielbiają mleko, ale prawdziwe koty boli od niego brzuszek. Świeża woda to najlepszy napój dla kotka!",
-    "cs": "Kočky v kreslených pohádkách mléko milují, ale skutečné kočky z něj může bolet bříško. Nejlepší pití pro kočičku je čerstvá voda!",
+    "cs": "V kreslených pohádkách kočky mléko milují, ale ve skutečnosti z něj kočku bolí bříško. Nejlepší pití pro kočičku je čerstvá voda!",
     "hr": "Mačke iz crtića obožavaju mlijeko, ali prave mace od njega zaboli trbuščić. Svježa voda je za macu najbolje piće!",
     "sv": "Katter i tecknade filmer älskar mjölk, men riktiga katter får ont i magen av den. Friskt vatten är kattens bästa dryck!",
     "da": "Tegnefilmskatte elsker mælk, men rigtige katte får ondt i maven af den. Frisk vand er kattens bedste drik!",
@@ -280,7 +280,7 @@
         "pt": "Os gatinhos precisam do leite da mãe. Se um gatinho tiver de ser alimentado a biberão, dá-lhe apenas leite especial para gatinhos, porque os outros leites não têm o equilíbrio certo de nutrientes.",
         "nl": "Kittens hebben de melk van hun moeder nodig. Moet een kitten met de fles worden gevoed, geef dan alleen speciale kittenmelk, want andere melk bevat de voedingsstoffen niet in de juiste verhouding.",
         "pl": "Kocięta potrzebują mleka matki. Jeśli kocię trzeba karmić butelką, dawaj mu tylko specjalne mleko dla kociąt, bo inne rodzaje mleka nie mają odpowiednich proporcji składników odżywczych.",
-        "cs": "Koťata potřebují mléko své matky. Pokud musí být kotě krmeno z lahve, dávejte mu jen speciální mléko pro koťata, protože jiná mléka nemají správný poměr živin.",
+        "cs": "Koťata potřebují mléko své matky. Pokud se kotě musí krmit z lahve, dávejte mu jen speciální mléko pro koťata, protože jiná mléka nemají správný poměr živin.",
         "hr": "Mačićima je potrebno majčino mlijeko. Ako mačića moraš hraniti na bočicu, daj mu samo posebno mlijeko za mačiće jer druge vrste mlijeka nemaju pravi omjer hranjivih tvari.",
         "sv": "Kattungar behöver sin mammas mjölk. Om en kattunge måste flaskmatas, ge bara särskild kattungemjölk, eftersom annan mjölk inte har rätt balans av näringsämnen.",
         "da": "Killinger har brug for deres mors mælk. Hvis en killing skal flaskeopfostres, skal den kun have særlig killingemælk fordi anden mælk ikke har den rette balance af næringsstoffer.",
@@ -316,7 +316,7 @@
         "pt": "O leite próprio para gatos tem normalmente muito menos lactose ou nenhuma. Mesmo assim, tem calorias, por isso conta-o na comida diária do teu gato. O teu gato só precisa de beber água.",
         "nl": "Melk die voor katten is gemaakt, bevat meestal veel minder lactose of helemaal geen. Er zitten wel calorieën in, dus reken het mee in de dagelijkse voeding van je kat. Je kat hoeft alleen water te drinken.",
         "pl": "Mleko dla kotów zwykle zawiera dużo mniej laktozy albo nie zawiera jej wcale. Ma jednak kalorie, więc wliczaj je do dziennej porcji jedzenia kota. Do picia kot potrzebuje tylko wody.",
-        "cs": "Mléko určené pro kočky má obvykle mnohem méně laktózy, nebo žádnou. Stále však obsahuje kalorie, proto ho započítejte do denní dávky krmiva. K pití vaše kočka potřebuje jen vodu.",
+        "cs": "Mléko určené pro kočky má obvykle mnohem méně laktózy, nebo žádnou. Stále však obsahuje kalorie, proto ho započítejte do denní dávky krmiva. K pití kočka potřebuje jen vodu.",
         "hr": "Mlijeko namijenjeno mačkama obično ima mnogo manje laktoze ili je uopće nema. Ipak ima kalorije, pa ih uračunaj u mačkin dnevni obrok. Za piće tvojoj mački treba samo voda.",
         "sv": "Mjölk som är gjord för katter har oftast mycket mindre laktos eller ingen alls. Den innehåller ändå kalorier, så räkna in den i kattens dagliga matranson. Katten behöver bara vatten att dricka.",
         "da": "Mælk lavet til katte indeholder som regel meget mindre laktose eller slet ingen. Den indeholder stadig kalorier, så regn den med i kattens daglige mad. Din kat behøver kun vand at drikke.",
@@ -432,7 +432,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dc61ddc0cbad8016fb15cad46c29b69ea76e89c695722cb59ffc078374f8bf27"
+      "verified_hash": "bba5387d17bf28568ec166192df797e7a23611b73a7a8fac3583d4d1b85ad0c9"
     },
     "hr": {
       "status": "verified",

@@ -154,7 +154,7 @@
     "cs": [
       "Cihlově červené dásně",
       "Rozšířené zorničky",
-      "Dýchací potíže",
+      "Potíže s dýcháním",
       "Dýchání s otevřenou tlamou",
       "Šok"
     ],
@@ -204,7 +204,7 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato mastigou um caroço, um caule ou folhas. Anota o que foi comido, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat op een pit, stengel of bladeren heeft gekauwd. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, jeśli twój kot pogryzł pestkę, łodygę lub liście. Zapisz, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka okousala pecku, stonek nebo listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Pokud kočka okousala pecku, stonek nebo listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja ako je mačka žvakala košticu, peteljku ili listove. Zapiši što je pojedeno, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur om katten har tuggat på en sten, ett skaft eller blad. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din kat har tygget på en sten, en stilk eller blade. Skriv ned hvad den har spist, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
@@ -222,7 +222,7 @@
     "pt": "Os pêssegos são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
     "nl": "Perziken zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Brzoskwinie to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
-    "cs": "Broskve jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže když nějakou kočička okouše, řekni to dospělému.",
+    "cs": "Broskve jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže řekni dospělému, když je kočička začne okusovat.",
     "hr": "Breskve su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
     "sv": "Persikor är mellanmål för människor. Stenarna och bladen är inte säkra för katter, så säg till en vuxen om katten tuggar på något av dem.",
     "da": "Ferskner er en snack for mennesker. Stenene og bladene er ikke sikre for katte, så sig det til en voksen hvis katten tygger på en.",
@@ -353,7 +353,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7eb8906a3daf3258258310ee714098c5aeb6aaac4bbf7ec472558f8df6bb8f15"
+      "verified_hash": "a71cb7def47b74e4a4010848690b3750d0a665fddaabdc2b5a02a09f36c19d51"
     },
     "hr": {
       "status": "verified",

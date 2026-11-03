@@ -98,7 +98,7 @@
     "pt": "Se o teu cão comeu salmão cru, sobretudo do noroeste do Pacífico, nos EUA, liga ao teu veterinário e diz-lhe isso; vigia se há febre, fraqueza, perda de apetite, vómitos ou diarreia. Se o teu cão engoliu espinhas e está a engasgar-se, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond rauwe zalm gegeten, vooral uit het noordwesten van de VS? Bel dan je dierenarts en vertel het erbij; let op koorts, zwakte, weinig eetlust, braken of diarree. Heeft je hond graten ingeslikt en stikt je hond? Bel dan meteen je dierenarts.",
     "pl": "Jeśli twój pies zjadł surowego łososia, zwłaszcza z północno-zachodniego wybrzeża Pacyfiku w USA, zadzwoń do weterynarza i powiedz mu o tym; obserwuj, czy nie pojawiają się gorączka, osłabienie, utrata apetytu, wymioty lub biegunka. Jeśli pies połknął ości i się dławi, od razu zadzwoń do weterynarza.",
-    "cs": "Pokud váš pes snědl syrového lososa, zejména z tichomořského severozápadu USA, zavolejte veterináři a řekněte mu to; sledujte, zda nemá horečku, není slabý, nemá nechuť k jídlu, nezvrací nebo nemá průjem. Pokud pes spolkl kosti a dusí se, zavolejte veterináři hned.",
+    "cs": "Pokud váš pes snědl syrového lososa, zejména z tichomořského severozápadu USA, zavolejte veterináři a řekněte mu to; sledujte, zda nemá horečku, není slabý, nemá nechuť k jídlu, nezvrací nebo nemá průjem. Pokud pes spolkl kosti a dusí se, zavolejte veterináři ihned.",
     "hr": "Ako je tvoj pas pojeo sirovog lososa, osobito s pacifičkog sjeverozapada SAD-a, nazovi veterinara i spomeni to; prati pojavljuju li se vrućica, slabost, gubitak apetita, povraćanje ili proljev. Ako je pas progutao kosti i guši se, odmah nazovi veterinara.",
     "sv": "Om hunden ätit rå lax, särskilt från nordvästra USA, ring veterinären och berätta det; håll utkik efter feber, svaghet, aptitlöshet, kräkningar eller diarré. Om hunden svalt ben och håller på att kvävas, ring veterinären direkt.",
     "da": "Hvis din hund har spist rå laks, især fra det nordvestlige USA ved Stillehavet, så kontakt din dyrlæge og fortæl om det; hold øje med feber, svaghed, appetitløshed, opkast eller diarré. Hvis din hund har slugt ben og er ved at blive kvalt, skal du kontakte din dyrlæge med det samme.",
@@ -132,7 +132,7 @@
     "pt": "O salmão cozinhado e sem espinhas pode ser uma guloseima saudável para um cão. O salmão cru ou fumado não é para cães.",
     "nl": "Gare zalm zonder graten kan een gezond snoepje zijn voor een hond. Rauwe of gerookte zalm is niet voor honden.",
     "pl": "Gotowany łosoś bez ości może być zdrowym smakołykiem dla psa. Surowy lub wędzony łosoś nie jest dla psów.",
-    "cs": "Uvařený losos bez kostí může být pro psa zdravý pamlsek. Syrový nebo uzený losos pro psy není.",
+    "cs": "Uvařený losos bez kostí může být pro psa zdravý pamlsek. Syrový nebo uzený losos psům nepatří.",
     "hr": "Kuhani losos bez kostiju može biti zdrava poslastica za psa. Sirovi ili dimljeni losos nije za pse.",
     "sv": "Tillagad lax utan ben kan vara en nyttig godbit för en hund. Rå eller rökt lax är inte för hundar.",
     "da": "Kogt laks uden ben kan være en sund godbid til en hund. Rå eller røget laks er ikke til hunde.",
@@ -323,7 +323,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1cdfa1662e0f898ae19e289438c20672d2ddfec79e6bf2c8e04b5b4b0bd76f82"
+      "verified_hash": "231c98882ad639585f14f3b73a0ff9141b34acba5365763c5eaf73cf4046a0ff"
     },
     "hr": {
       "status": "verified",

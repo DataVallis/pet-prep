@@ -63,7 +63,7 @@
     "pt": "Não. Os ossos cozinhados, como os de frango ou de peru, podem lascar e causar engasgo, lesões internas ou obstruções nos gatos. Tira sempre a carne do osso antes de a partilhar e deita fora as carcaças onde o teu gato não lhes chegue.",
     "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotten, kunnen splinteren en ervoor zorgen dat een kat zich verslikt, inwendig letsel oploopt of een verstopping krijgt. Haal het vlees altijd van het bot voordat je iets met je kat deelt, en gooi karkassen weg op een plek waar je kat er niet bij kan.",
     "pl": "Nie. Gotowane kości, na przykład z kurczaka lub indyka, mogą pękać na ostre odłamki i spowodować u kota zadławienie, obrażenia wewnętrzne lub niedrożność. Zawsze oddziel mięso od kości, zanim się nim podzielisz, i wyrzucaj resztki tuszki tam, gdzie kot ich nie dosięgnie.",
-    "cs": "Ne. Tepelně upravené kosti, například kuřecí nebo krůtí, se mohou tříštit a u koček způsobit dušení, vnitřní poranění nebo ucpání. Než se s kočkou o maso podělíte, vždy ho oberte od kostí a zbytky kostry vyhazujte tam, kam kočka nedosáhne.",
+    "cs": "Ne. Tepelně upravené kosti, například kuřecí nebo krůtí, se mohou tříštit a u koček způsobit dušení, vnitřní poranění nebo ucpání. Než se s kočkou o maso podělíte, vždy ho oberte od kostí a zbytky kostry vyhazujte tak, aby se k nim kočka nedostala.",
     "hr": "Ne. Termički obrađene kosti, poput pilećih ili purećih, mogu se rascijepiti i kod mačaka izazvati gušenje, unutarnje ozljede ili začepljenje. Prije nego što podijeliš meso s mačkom, uvijek ga skini s kosti, a kosture peradi baci tako da ih mačka ne može dohvatiti.",
     "sv": "Nej. Tillagade ben, till exempel kyckling- eller kalkonben, kan splittras och orsaka kvävning, inre skador eller tarmstopp hos katter. Ta alltid bort köttet från benet innan du delar med dig, och släng skrovet där katten inte kommer åt det.",
     "da": "Nej. Tilberedte knogler, for eksempel fra kylling eller kalkun, kan splintre og sætte sig fast i halsen, give indre skader eller blokeringer hos katte. Tag altid kødet af knoglen før du deler, og smid skrogene ud et sted hvor din kat ikke kan nå dem.",
@@ -227,7 +227,7 @@
         "pt": "Posso dar ao meu gato peru do assado?",
         "nl": "Mag ik mijn kat wat van de gebraden kalkoen geven?",
         "pl": "Czy mogę dać kotu pieczonego indyka?",
-        "cs": "Mohu dát kočce krůtí maso z pečené krůty?",
+        "cs": "Můžu dát kočce krůtí maso z pečené krůty?",
         "hr": "Smijem li mački dati puretinu od pečenja?",
         "sv": "Kan jag ge katten lite av kalkonsteken?",
         "da": "Må jeg give min kat lidt af kalkunstegen?",
@@ -356,7 +356,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5e750740630e48d3a9ca54db593f6321e48a38f8e2149835d49a02dc16a8a2b7"
+      "verified_hash": "8b7e5a6754309e338ecb385227279a9424891fa3cc379accae67ae74012ab819"
     },
     "hr": {
       "status": "verified",

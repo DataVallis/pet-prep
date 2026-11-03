@@ -174,7 +174,7 @@
     "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Anota quantas comeu e quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat macadamianoten heeft gegeten. Schrijf op hoeveel ze er heeft gegeten en wanneer, en bewaar de verpakking. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot zjadł orzechy makadamia. Zapisz, ile ich zjadł i kiedy, i zachowaj opakowanie. Nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Pokud kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ako je mačka pojela makadamiju. Zapiši koliko je plodova pojela i kada te sačuvaj ambalažu. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären direkt om katten har ätit macadamianötter. Notera hur många den åt och när, och spara förpackningen. Försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge hvis din kat har spist macadamianødder. Skriv ned hvor mange den har spist og hvornår, og gem emballagen. Prøv ikke selv at få katten til at kaste op.",
@@ -327,7 +327,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "da4f888825378cc6a6382a3173ba6887e9586c85251e4bd43817808f4cc706d1"
+      "verified_hash": "531f9f1a08be4404b7aa2f6507d4bbb08e38be9bde9aa00450f2ac87bb7609ba"
     },
     "hr": {
       "status": "verified",

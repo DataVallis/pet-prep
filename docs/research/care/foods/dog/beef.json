@@ -98,7 +98,7 @@
     "pt": "Se o teu cão comeu carne de vaca gorda ou temperada, vigia se aparecem vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond vet of gekruid rundvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als dat zich voordoet. Heeft hij gekookte botten of eten met ui of knoflook gegeten, bel dan meteen je dierenarts.",
     "pl": "Jeśli twój pies zjadł tłustą lub przyprawioną wołowinę, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości albo jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
-    "cs": "Pokud váš pes snědl tučné nebo kořeněné hovězí, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
+    "cs": "Pokud váš pes snědl tučné nebo kořeněné hovězí, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři ihned.",
     "hr": "Ako je pas pojeo masnu ili začinjenu govedinu, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Om hunden har ätit fett eller kryddat nötkött: håll utkik efter kräkningar, diarré eller ont i magen och ring veterinären om det dyker upp. Om den har ätit tillagade ben eller mat med lök eller vitlök, ring veterinären direkt.",
     "da": "Hvis hunden har spist fedt eller krydret oksekød, skal du holde øje med opkast, diarré eller mavesmerter og ringe til din dyrlæge hvis de opstår. Hvis den har spist tilberedte knogler eller mad med løg eller hvidløg, skal du ringe til din dyrlæge med det samme.",
@@ -151,7 +151,7 @@
         "pt": "O meu cão pode dar uma dentada no meu hambúrguer?",
         "nl": "Mag mijn hond een hapje van mijn hamburger?",
         "pl": "Czy mój pies może dostać kęs mojego burgera?",
-        "cs": "Může můj pes kousnout do mého burgeru?",
+        "cs": "Smím dát psovi kousek svého burgeru?",
         "hr": "Smije li moj pas dobiti zalogaj moje pljeskavice?",
         "sv": "Får hunden ta en tugga av min hamburgare?",
         "da": "Må min hund få en bid af min burger?",
@@ -168,7 +168,7 @@
         "pt": "É melhor não: os hambúrgueres costumam ter sal, especiarias e acompanhamentos como cebola, que podem ser perigosos. A carne cozinhada simples é a escolha mais segura.",
         "nl": "Liever niet: hamburgers bevatten vaak zout, kruiden en toevoegingen zoals ui die gevaarlijk kunnen zijn. Gewoon gekookt vlees is de veiligere keuze.",
         "pl": "Lepiej nie: burgery często zawierają sól, przyprawy i dodatki, np. cebulę, które mogą być niebezpieczne. Zwykłe gotowane mięso to bezpieczniejszy wybór.",
-        "cs": "Raději ne: burgery často obsahují sůl, koření a přísady jako cibuli, které mohou být nebezpečné. Čisté tepelně upravené maso je bezpečnější volba.",
+        "cs": "Raději ne: burgery často obsahují sůl, koření a přísady jako cibuli, které mohou být nebezpečné. Bezpečnější volbou je čisté tepelně upravené maso.",
         "hr": "Bolje ne: pljeskavice često sadrže sol, začine i dodatke poput luka, koji mogu biti opasni. Nezačinjeno termički obrađeno meso sigurniji je izbor.",
         "sv": "Helst inte: hamburgare innehåller ofta salt, kryddor och tillbehör som lök, som kan vara farliga. Naturellt tillagat kött är ett säkrare val.",
         "da": "Helst ikke: burgere indeholder ofte salt, krydderier og tilbehør som løg, der kan være farlige. Almindeligt tilberedt kød er det sikrere valg.",
@@ -273,7 +273,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba08abbb27b1277a75bc6d0686dcbb7c9c1a09d736d5ef52d998c9c7ba2692e8"
+      "verified_hash": "c828c9e1703d06e93213564850f9d0935d019db72426ec2607db96eae9795b5c"
     },
     "hr": {
       "status": "verified",

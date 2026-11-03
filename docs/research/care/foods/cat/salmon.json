@@ -98,7 +98,7 @@
     "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Retira as espinhas que encontrares.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Haal alle graten eruit die je vindt.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Usuń wszystkie ości, które znajdziesz.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Odstraňte všechny kosti, které najdete.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Odstraňte všechny kosti, které najdete.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ukloni sve kosti koje pronađeš.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Ta bort alla ben du hittar.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Fjern de ben du finder.",
@@ -132,7 +132,7 @@
     "pt": "Um bocadinho de salmão cozinhado e sem espinhas pode ser uma guloseima especial. Pergunta primeiro a um adulto.",
     "nl": "Een klein beetje gaar gemaakte zalm zonder graten kan een extra lekkere traktatie zijn. Vraag het eerst aan een volwassene.",
     "pl": "Odrobina gotowanego łososia bez ości może być wyjątkowym smakołykiem. Najpierw zapytaj dorosłego.",
-    "cs": "Malinký kousek propečeného lososa bez kostí může být výjimečný pamlsek. Nejdřív se zeptej dospělého.",
+    "cs": "Malinký kousek uvařeného lososa bez kostí může být výjimečný pamlsek. Nejdřív se zeptej dospělého.",
     "hr": "Mrvica kuhanog lososa bez kostiju može biti posebna poslastica. Najprije pitaj odraslu osobu.",
     "sv": "En pytteliten bit kokt lax utan ben kan vara en extra godbit. Fråga en vuxen först.",
     "da": "En lille smule kogt laks uden ben kan være en særlig godbid. Spørg en voksen først.",
@@ -259,7 +259,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8eda8c8863aa1d18100162c70d9aa99ac158cf6e1345f01826273dfa70e6ec7e"
+      "verified_hash": "5d4d8d580fc5e8b255feb110279e4f12cd2974e7076e7e24118886352f08744f"
     },
     "hr": {
       "status": "verified",
