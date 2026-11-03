@@ -11,7 +11,8 @@
     "es": "Pomelo",
     "it": "Pompelmo",
     "pt": "Toranja",
-    "nl": "Grapefruit"
+    "nl": "Grapefruit",
+    "pl": "Grejpfrut"
   },
   "question": {
     "en": "Can dogs eat grapefruit?",
@@ -23,7 +24,8 @@
     "es": "¿Pueden los perros comer pomelo?",
     "it": "I cani possono mangiare il pompelmo?",
     "pt": "Os cães podem comer toranja?",
-    "nl": "Mogen honden grapefruit eten?"
+    "nl": "Mogen honden grapefruit eten?",
+    "pl": "Czy psy mogą jeść grejpfruta?"
   },
   "url_slug": {
     "en": "grapefruit",
@@ -35,7 +37,8 @@
     "es": "pomelo",
     "it": "pompelmo",
     "pt": "toranja",
-    "nl": "grapefruit"
+    "nl": "grapefruit",
+    "pl": "grejpfrut"
   },
   "level": "not_recommended",
   "answer": {
@@ -48,7 +51,8 @@
     "es": "No, es mejor no dar pomelo a los perros. La pulpa no es tóxica, pero tiene mucho ácido cítrico y puede sentarles mal al estómago, y la piel y la corteza son tóxicas para los perros por sus aceites esenciales.",
     "it": "No, meglio non dare il pompelmo ai cani. La polpa non è tossica, ma l’alto contenuto di acido citrico può far venire mal di stomaco, mentre la buccia è tossica per i cani a causa degli oli essenziali.",
     "pt": "Não, é melhor não dar toranja aos cães. A polpa não é tóxica, mas o elevado teor de ácido cítrico pode irritar o estômago do cão, e a casca é tóxica para os cães por causa dos óleos essenciais que contém.",
-    "nl": "Nee, geef honden liever geen grapefruit. Het vruchtvlees is niet giftig, maar door het vele citroenzuur kan de maag van een hond van streek raken, en de schil is giftig voor honden vanwege de etherische oliën."
+    "nl": "Nee, geef honden liever geen grapefruit. Het vruchtvlees is niet giftig, maar door het vele citroenzuur kan de maag van een hond van streek raken, en de schil is giftig voor honden vanwege de etherische oliën.",
+    "pl": "Nie, grejpfruta lepiej psom nie podawać. Miąższ nie jest toksyczny, ale dużo kwasu cytrynowego może rozstroić psi żołądek, a skórka jest dla psów toksyczna z powodu olejków eterycznych."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
@@ -60,7 +64,8 @@
     "es": "La ASPCA considera tóxica para los perros la planta del pomelo por sus aceites esenciales y psoralenos, aunque señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC dice que la pulpa no es tóxica, pero que es mejor evitarla, en parte por el ácido cítrico que contiene, y que la piel y la corteza son tóxicas por sus aceites esenciales naturales. La PDSA incluye el pomelo entre los alimentos que no son seguros porque es muy ácido. Usamos «no recomendado» porque la pulpa en sí no es tóxica, mientras que el peligro está en la piel y la corteza.",
     "it": "L’ASPCA classifica la pianta del pompelmo come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC afferma che la polpa non è tossica ma è meglio evitarla, anche per l’alto contenuto di acido citrico, e che la buccia è tossica per i suoi oli essenziali naturali. Il PDSA indica il pompelmo tra i cibi non sicuri perché molto acido. Usiamo «sconsigliato» perché la polpa in sé non è tossica, mentre il pericolo sta nella buccia.",
     "pt": "A ASPCA classifica a toranjeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC diz que a polpa não é tóxica, mas que é melhor evitá-la, em parte por causa do elevado teor de ácido cítrico, e que a casca é tóxica por causa dos óleos essenciais que contém naturalmente. A PDSA classifica a toranja como não segura, por ser muito ácida. Usamos «não recomendado» porque a polpa em si não é tóxica; o perigo está na casca.",
-    "nl": "De ASPCA noemt de grapefruitplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat het vruchtvlees niet giftig is maar beter vermeden kan worden, mede door het vele citroenzuur, en dat de schil giftig is door de natuurlijke etherische oliën. De PDSA noemt grapefruit onveilig omdat het erg zuur is. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees zelf niet giftig is en de schil het gevaar vormt."
+    "nl": "De ASPCA noemt de grapefruitplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat het vruchtvlees niet giftig is maar beter vermeden kan worden, mede door het vele citroenzuur, en dat de schil giftig is door de natuurlijke etherische oliën. De PDSA noemt grapefruit onveilig omdat het erg zuur is. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees zelf niet giftig is en de schil het gevaar vormt.",
+    "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. Według AKC miąższ nie jest toksyczny, ale lepiej go unikać, m.in. z powodu dużej zawartości kwasu cytrynowego, a skórka jest toksyczna przez naturalne olejki eteryczne. PDSA zalicza grejpfruta do owoców niebezpiecznych, bo jest bardzo kwaśny. Używamy określenia „niezalecane”, ponieważ sam miąższ nie jest toksyczny, a zagrożeniem jest skórka."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Diarree",
       "Futloosheid (weinig energie, lijkt neerslachtig)",
       "Huidirritatie"
+    ],
+    "pl": [
+      "Rozstrój żołądka",
+      "Wymioty",
+      "Biegunka",
+      "Apatia (mało energii, pies wydaje się przygaszony)",
+      "Podrażnienie skóry"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "es": "Si tu perro se ha comido la piel o la corteza del pomelo, llama enseguida a tu veterinario o a una clínica de urgencias veterinarias. Si ha comido mucha pulpa, contacta también con tu veterinario.",
     "it": "Se il tuo cane ha mangiato la buccia del pompelmo, chiama subito il veterinario o un pronto soccorso veterinario. Contatta il veterinario anche se ha mangiato una grande quantità di polpa.",
     "pt": "Se o teu cão comeu casca de toranja, liga imediatamente ao teu veterinário ou a uma clínica veterinária de urgência. Se comeu muita polpa, contacta também o veterinário.",
-    "nl": "Heeft je hond grapefruitschil gegeten? Bel dan meteen je dierenarts of een spoedkliniek voor dieren. Heeft je hond veel vruchtvlees gegeten, neem dan ook contact op met je dierenarts."
+    "nl": "Heeft je hond grapefruitschil gegeten? Bel dan meteen je dierenarts of een spoedkliniek voor dieren. Heeft je hond veel vruchtvlees gegeten, neem dan ook contact op met je dierenarts.",
+    "pl": "Jeśli pies zjadł skórkę grejpfruta, od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Jeśli zjadł dużą ilość miąższu, również skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "es": "El pomelo es demasiado ácido para los perros y puede darles dolor de barriga. El pomelo, con su cáscara, es solo para las personas.",
     "it": "Il pompelmo è troppo aspro per i cani e può far venire il mal di pancia. Il pompelmo e la sua buccia sono solo per le persone.",
     "pt": "A toranja é azeda demais para os cães e pode dar-lhes dor de barriga. A toranja e a casca são só para as pessoas.",
-    "nl": "Grapefruit is te zuur voor honden en kan buikpijn geven. Bewaar grapefruit en de schil maar voor mensen."
+    "nl": "Grapefruit is te zuur voor honden en kan buikpijn geven. Bewaar grapefruit en de schil maar voor mensen.",
+    "pl": "Grejpfrut jest dla psów za kwaśny i może wywołać ból brzucha. Grejpfruta i jego skórkę zostaw dla ludzi."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "es": "¿Y si mi perro se ha comido cáscara de pomelo?",
         "it": "E se il mio cane ha mangiato la buccia di pompelmo?",
         "pt": "E se o meu cão comeu casca de toranja?",
-        "nl": "Wat als mijn hond grapefruitschil heeft gegeten?"
+        "nl": "Wat als mijn hond grapefruitschil heeft gegeten?",
+        "pl": "Co zrobić, jeśli pies zjadł skórkę grejpfruta?"
       },
       "a": {
         "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
@@ -183,7 +198,8 @@
         "es": "Llama enseguida a tu veterinario o a una clínica de urgencias veterinarias. La piel y la corteza son tóxicas para los perros por sus aceites esenciales.",
         "it": "Chiama subito il veterinario o un pronto soccorso veterinario. La buccia è tossica per i cani a causa degli oli essenziali.",
         "pt": "Liga imediatamente ao teu veterinário ou a uma clínica veterinária de urgência. A casca é tóxica para os cães por causa dos óleos essenciais.",
-        "nl": "Bel meteen je dierenarts of een spoedkliniek voor dieren. De schil is giftig voor honden vanwege de etherische oliën."
+        "nl": "Bel meteen je dierenarts of een spoedkliniek voor dieren. De schil is giftig voor honden vanwege de etherische oliën.",
+        "pl": "Od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Skórka jest toksyczna dla psów z powodu olejków eterycznych."
       }
     }
   ],
@@ -293,6 +309,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f55bda79854f5f6668405ab70db7be9d810481eb7b6e53f54bf1cd3401005373"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9207d2ecbedf22cce1fc2c91048151f44789245efb85ebc5edf2183e1a6c8402"
     }
   }
 }

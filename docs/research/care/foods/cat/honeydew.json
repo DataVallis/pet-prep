@@ -11,7 +11,8 @@
     "es": "Melón verde",
     "it": "Melone bianco",
     "pt": "Melão honeydew",
-    "nl": "Honingmeloen"
+    "nl": "Honingmeloen",
+    "pl": "Melon miodowy"
   },
   "question": {
     "en": "Can cats eat honeydew melon?",
@@ -23,7 +24,8 @@
     "es": "¿Pueden los gatos comer melón verde?",
     "it": "I gatti possono mangiare il melone bianco?",
     "pt": "Os gatos podem comer melão honeydew?",
-    "nl": "Mogen katten honingmeloen eten?"
+    "nl": "Mogen katten honingmeloen eten?",
+    "pl": "Czy koty mogą jeść melona miodowego?"
   },
   "url_slug": {
     "en": "honeydew",
@@ -35,7 +37,8 @@
     "es": "melon-verde",
     "it": "melone-bianco",
     "pt": "melao-honeydew",
-    "nl": "honingmeloen"
+    "nl": "honingmeloen",
+    "pl": "melon-miodowy"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "es": "Sí, un trocito de melón verde está bien como premio ocasional. La ASPCA considera el melón verde no tóxico para los gatos, pero los gatos son carnívoros y no necesitan fruta, y cualquier planta puede sentar mal al estómago, así que dáselo solo como un pequeño extra.",
     "it": "Sì, un pezzetto di melone bianco va bene come premio occasionale. L’ASPCA classifica il melone bianco come non tossico per i gatti, ma i gatti sono carnivori e non hanno bisogno di frutta, e qualsiasi vegetale può dare mal di stomaco: limitati a un piccolissimo extra.",
     "pt": "Sim, um pedacinho de melão honeydew de vez em quando não faz mal. A ASPCA classifica o melão honeydew como não tóxico para os gatos, mas os gatos são carnívoros e não precisam de fruta, e qualquer planta pode causar mal-estar no estômago, por isso limita-te a um pequeno extra.",
-    "nl": "Ja, een klein stukje honingmeloen is af en toe prima als traktatie. De ASPCA noemt honingmeloen niet giftig voor katten, maar katten zijn vleeseters en hebben geen fruit nodig, en elke plant kan maagklachten geven, dus houd het bij een piepklein extraatje."
+    "nl": "Ja, een klein stukje honingmeloen is af en toe prima als traktatie. De ASPCA noemt honingmeloen niet giftig voor katten, maar katten zijn vleeseters en hebben geen fruit nodig, en elke plant kan maagklachten geven, dus houd het bij een piepklein extraatje.",
+    "pl": "Tak, od czasu do czasu mały kawałek melona miodowego jako smakołyk to nie problem. ASPCA podaje, że melon miodowy nie jest toksyczny dla kotów, ale koty są mięsożercami i nie potrzebują owoców, a każdy pokarm roślinny może zaszkodzić żołądkowi, więc niech to będzie tylko drobny dodatek."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -60,7 +64,8 @@
     "es": "La ASPCA considera el melón verde (Cucumis melo) no tóxico para los gatos, y el hospital veterinario de NC State incluye el melón verde entre las frutas que pueden darse como premio a gatos y perros. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "L’ASPCA classifica il melone bianco (Cucumis melo) come non tossico per i gatti, e l’ospedale veterinario della NC State inserisce il melone bianco tra i premi di frutta per gatti e cani. I gatti sono carnivori obbligati e non hanno bisogno di frutta; i premi devono restare una piccola parte del cibo quotidiano e qualsiasi parte vegetale può causare vomito o mal di stomaco.",
     "pt": "A ASPCA classifica o melão honeydew (Cucumis melo) como não tóxico para os gatos, e o hospital veterinário da NC State inclui o melão honeydew entre as frutas que se podem dar como guloseima a gatos e cães. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem ser apenas uma pequena parte da alimentação diária, e qualquer matéria vegetal pode causar vómitos ou mal-estar no estômago.",
-    "nl": "De ASPCA noemt honingmeloen (Cucumis melo) niet giftig voor katten, en het dierenziekenhuis van NC State rekent honingmeloen tot de fruittraktaties voor katten en honden. Katten zijn strikte vleeseters en hebben geen fruit nodig, traktaties horen een klein deel van de dagelijkse voeding te blijven, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
+    "nl": "De ASPCA noemt honingmeloen (Cucumis melo) niet giftig voor katten, en het dierenziekenhuis van NC State rekent honingmeloen tot de fruittraktaties voor katten en honden. Katten zijn strikte vleeseters en hebben geen fruit nodig, traktaties horen een klein deel van de dagelijkse voeding te blijven, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
+    "pl": "ASPCA uznaje melon miodowy (Cucumis melo) za nietoksyczny dla kotów, a szpital weterynaryjny NC State wymienia melon miodowy wśród owoców podawanych jako smakołyki kotom i psom. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "es": "Ofrécele solo un trocito. Cualquier materia vegetal puede provocar vómitos o malestar de estómago en los gatos.",
     "it": "Offri solo un pezzetto. Qualsiasi alimento vegetale può causare vomito o mal di stomaco nei gatti.",
     "pt": "Oferece apenas um pedacinho. Qualquer matéria vegetal pode causar vómitos ou mal-estar no estômago nos gatos.",
-    "nl": "Geef maar een klein stukje. Elk plantaardig materiaal kan bij katten braken of maagklachten veroorzaken."
+    "nl": "Geef maar een klein stukje. Elk plantaardig materiaal kan bij katten braken of maagklachten veroorzaken.",
+    "pl": "Podaj tylko mały kawałek. Każdy pokarm roślinny może wywołać u kota wymioty lub rozstrój żołądka."
   },
   "serving": {
     "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
@@ -85,7 +91,8 @@
     "es": "Un trocito de fruta de vez en cuando, contándolo como parte de la comida diaria de tu gato.",
     "it": "Un pezzetto ogni tanto, conteggiato nella razione giornaliera del tuo gatto.",
     "pt": "Um pedacinho da polpa de vez em quando, contabilizado na comida diária do teu gato.",
-    "nl": "Af en toe een klein stukje meloen, meegeteld bij de dagelijkse voeding van je kat."
+    "nl": "Af en toe een klein stukje meloen, meegeteld bij de dagelijkse voeding van je kat.",
+    "pl": "Od czasu do czasu mały kawałek owocu, wliczony w dzienną porcję jedzenia kota."
   },
   "child": {
     "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -97,7 +104,8 @@
     "es": "Un trocito de melón verde está bien para un gato de vez en cuando. Los gatos necesitan sobre todo carne, así que la fruta es solo un pequeño extra.",
     "it": "Ogni tanto un pezzettino di melone bianco va bene per il micio. Ai gatti serve soprattutto la carne, quindi la frutta è solo un piccolo extra.",
     "pt": "Um pedacinho minúsculo de melão honeydew de vez em quando não faz mal ao gato. Os gatos precisam sobretudo de carne, por isso a fruta é só um pequeno extra.",
-    "nl": "Een piepklein stukje honingmeloen mag een kat af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje."
+    "nl": "Een piepklein stukje honingmeloen mag een kat af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
+    "pl": "Malutki kawałek melona miodowego od czasu do czasu jest dla kota w porządku. Koty potrzebują głównie mięsa, więc owoc to tylko mały dodatek."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "es": "¿Los gatos necesitan fruta?",
         "it": "I gatti hanno bisogno della frutta?",
         "pt": "Os gatos precisam de fruta?",
-        "nl": "Hebben katten fruit nodig?"
+        "nl": "Hebben katten fruit nodig?",
+        "pl": "Czy koty potrzebują owoców?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -123,7 +132,8 @@
         "es": "No. Los gatos son carnívoros: necesitan nutrientes que se encuentran en la carne y no necesitan fruta ni verdura en su dieta. La fruta solo puede ser un pequeño extra.",
         "it": "No. I gatti sono carnivori: hanno bisogno dei nutrienti presenti nella carne e nella loro dieta non servono né frutta né verdura. La frutta può essere al massimo un piccolo extra.",
         "pt": "Não. Os gatos são carnívoros: precisam de nutrientes que existem na carne e não precisam de fruta nem de legumes na alimentação. A fruta só pode ser um pequeno extra.",
-        "nl": "Nee. Katten zijn vleeseters: ze hebben voedingsstoffen nodig die in vlees zitten, en fruit of groente hoeft niet op hun menu te staan. Fruit kan hooguit een klein extraatje zijn."
+        "nl": "Nee. Katten zijn vleeseters: ze hebben voedingsstoffen nodig die in vlees zitten, en fruit of groente hoeft niet op hun menu te staan. Fruit kan hooguit een klein extraatje zijn.",
+        "pl": "Nie. Koty są mięsożercami: potrzebują składników odżywczych zawartych w mięsie i nie potrzebują w diecie owoców ani warzyw. Owoce mogą być najwyżej drobnym dodatkiem."
       }
     }
   ],
@@ -226,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "14d4463c3ff9d3c3aa860f03d954a053d4fb2cace69a44e0dae78a64c188b25b"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e21a2c9b1038023e12d27768757b7bdb04059796d7c16b2017ed9217ee299a34"
     }
   }
 }

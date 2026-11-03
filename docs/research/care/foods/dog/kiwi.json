@@ -11,7 +11,8 @@
     "es": "Kiwi",
     "it": "Kiwi",
     "pt": "Quivi",
-    "nl": "Kiwi"
+    "nl": "Kiwi",
+    "pl": "Kiwi"
   },
   "question": {
     "en": "Can dogs eat kiwi?",
@@ -23,7 +24,8 @@
     "es": "¿Pueden los perros comer kiwi?",
     "it": "I cani possono mangiare il kiwi?",
     "pt": "Os cães podem comer quivi?",
-    "nl": "Mogen honden kiwi eten?"
+    "nl": "Mogen honden kiwi eten?",
+    "pl": "Czy psy mogą jeść kiwi?"
   },
   "url_slug": {
     "en": "kiwi",
@@ -35,7 +37,8 @@
     "es": "kiwi",
     "it": "kiwi",
     "pt": "quivi",
-    "nl": "kiwi"
+    "nl": "kiwi",
+    "pl": "kiwi"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "es": "Sí, los perros pueden comer pequeñas cantidades de kiwi como premio ocasional. Pélalo y córtalo en trocitos o rodajas, y nunca le des un kiwi entero, porque puede provocar atragantamiento.",
     "it": "Sì, i cani possono mangiare un po’ di kiwi come premio occasionale. Sbuccialo e taglialo a pezzetti o a fettine, e non dare mai un kiwi intero, perché può far soffocare.",
     "pt": "Sim, os cães podem comer pequenas quantidades de quivi como guloseima ocasional. Descasca-o e corta-o em pedacinhos ou rodelas, e nunca dês um quivi inteiro, porque pode provocar engasgo.",
-    "nl": "Ja, honden mogen af en toe een klein beetje kiwi als snoepje. Schil de kiwi en snijd hem in kleine stukjes of plakjes, en geef nooit een hele kiwi, want dat kan een verstikkingsgevaar vormen."
+    "nl": "Ja, honden mogen af en toe een klein beetje kiwi als snoepje. Schil de kiwi en snijd hem in kleine stukjes of plakjes, en geef nooit een hele kiwi, want dat kan een verstikkingsgevaar vormen.",
+    "pl": "Tak, psy mogą od czasu do czasu dostać niewielką ilość kiwi jako smakołyk. Obierz je i pokrój na małe kawałki lub plasterki, a nigdy nie dawaj go w całości, bo pies może się zadławić."
   },
   "why": {
     "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
@@ -60,7 +64,8 @@
     "es": "El kiwi es una fruta dulce, muy rica en vitamina C y potasio, y contiene mucha fibra, sobre todo insoluble. Demasiado kiwi puede causar problemas digestivos, como diarrea. La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro. Un kiwi entero es lo bastante pequeño como para suponer un riesgo de atragantamiento.",
     "it": "Il kiwi è un frutto dolce, ricco di vitamina C e potassio, e contiene molte fibre, soprattutto insolubili. Troppo kiwi può causare disturbi digestivi, anche diarrea. La buccia non è tossica, ma è dura e ricca di fibre e può far venire mal di stomaco al cane. Un kiwi intero è abbastanza piccolo da rappresentare un rischio di soffocamento.",
     "pt": "O quivi é uma fruta doce, cheia de vitamina C e potássio, e tem muita fibra, sobretudo insolúvel. Quivi em excesso pode causar problemas digestivos, incluindo diarreia. A casca não é tóxica, mas é rija, tem muita fibra e pode irritar o estômago do cão. Um quivi inteiro é pequeno ao ponto de poder provocar engasgo.",
-    "nl": "Kiwi is een zoete vrucht boordevol vitamine C en kalium, en bevat veel vezels, vooral onoplosbare vezels. Te veel kiwi kan spijsverteringsproblemen veroorzaken, waaronder diarree. De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken. Een hele kiwi is klein genoeg om een verstikkingsgevaar te vormen."
+    "nl": "Kiwi is een zoete vrucht boordevol vitamine C en kalium, en bevat veel vezels, vooral onoplosbare vezels. Te veel kiwi kan spijsverteringsproblemen veroorzaken, waaronder diarree. De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken. Een hele kiwi is klein genoeg om een verstikkingsgevaar te vormen.",
+    "pl": "Kiwi to słodki owoc, bogaty w witaminę C i potas. Zawiera też dużo błonnika, zwłaszcza nierozpuszczalnego. Zbyt dużo kiwi może wywołać problemy trawienne, w tym biegunkę. Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek. Całe kiwi jest na tyle małe, że może grozić zadławieniem."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "es": "Dale solo un poco cada vez. Demasiado kiwi puede causar problemas digestivos como diarrea, y el kiwi no debe sustituir nunca a una comida completa y equilibrada para perros.",
     "it": "Dagliene solo un pochino alla volta. Troppo kiwi può causare disturbi digestivi come la diarrea, e il kiwi non deve mai sostituire un alimento completo e bilanciato per cani.",
     "pt": "Dá só um bocadinho de cada vez. Quivi em excesso pode causar problemas digestivos como diarreia, e o quivi nunca deve substituir uma ração completa e equilibrada.",
-    "nl": "Geef steeds maar een klein beetje. Te veel kiwi kan spijsverteringsproblemen zoals diarree veroorzaken, en kiwi mag nooit in de plaats komen van een volwaardig, uitgebalanceerd hondenvoer."
+    "nl": "Geef steeds maar een klein beetje. Te veel kiwi kan spijsverteringsproblemen zoals diarree veroorzaken, en kiwi mag nooit in de plaats komen van een volwaardig, uitgebalanceerd hondenvoer.",
+    "pl": "Podawaj tylko po trochu. Zbyt dużo kiwi może wywołać problemy trawienne, takie jak biegunka, a kiwi nigdy nie powinno zastępować pełnoporcjowej, zbilansowanej karmy dla psów."
   },
   "serving": {
     "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
@@ -85,7 +91,8 @@
     "es": "Pelado y cortado en trocitos o rodajas; un poco cada vez, como premio ocasional.",
     "it": "Sbucciato e tagliato a pezzetti o a fettine; un po’ alla volta, come premio occasionale.",
     "pt": "Descascado e cortado em pedacinhos ou rodelas; um bocadinho de cada vez, como guloseima ocasional.",
-    "nl": "Geschild en in kleine stukjes of plakjes gesneden; steeds een klein beetje, als snoepje voor af en toe."
+    "nl": "Geschild en in kleine stukjes of plakjes gesneden; steeds een klein beetje, als snoepje voor af en toe.",
+    "pl": "Obrane i pokrojone na małe kawałki lub plasterki; po trochu, jako okazjonalny smakołyk."
   },
   "child": {
     "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
@@ -97,7 +104,8 @@
     "es": "¡Los perros pueden probar un poquito de kiwi! Un adulto lo pela y lo corta en trocitos muy pequeños para que sea fácil de comer.",
     "it": "I cani possono assaggiare un po’ di kiwi! Un adulto lo sbuccia e lo taglia a pezzettini, così è facile da mangiare.",
     "pt": "Os cães podem provar um bocadinho de quivi! Um adulto descasca-o e corta-o em pedacinhos bem pequenos, para ser fácil de comer.",
-    "nl": "Honden mogen een klein beetje kiwi proeven! Een volwassene schilt de kiwi en snijdt hem in kleine stukjes, zodat hij makkelijk te eten is."
+    "nl": "Honden mogen een klein beetje kiwi proeven! Een volwassene schilt de kiwi en snijdt hem in kleine stukjes, zodat hij makkelijk te eten is.",
+    "pl": "Psy mogą skosztować odrobiny kiwi! Dorosły obiera je i kroi na drobne kawałki, żeby łatwo je było zjeść."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "es": "¿Pueden los perros comer la piel del kiwi?",
         "it": "I cani possono mangiare la buccia del kiwi?",
         "pt": "Os cães podem comer a casca do quivi?",
-        "nl": "Mogen honden de schil van kiwi eten?"
+        "nl": "Mogen honden de schil van kiwi eten?",
+        "pl": "Czy psy mogą jeść skórkę kiwi?"
       },
       "a": {
         "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
@@ -123,7 +132,8 @@
         "es": "La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro, así que lo mejor es quitarla.",
         "it": "La buccia non è tossica, ma è dura e ricca di fibre e può far venire mal di stomaco al cane, quindi è meglio toglierla.",
         "pt": "A casca não é tóxica, mas é rija, tem muita fibra e pode irritar o estômago do cão, por isso é melhor tirá-la.",
-        "nl": "De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken, dus haal hem er het beste af."
+        "nl": "De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken, dus haal hem er het beste af.",
+        "pl": "Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek; najlepiej ją usunąć."
       }
     }
   ],
@@ -221,6 +231,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fe67e4010207b09151e05eeb98a03d5b8bbfcfdde2eeedd69ded8d528f90c895"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d1305324b0730a3e98b274e103b21b1d824fdf89eae55d0c3cbcc45ae2a6660b"
     }
   }
 }
