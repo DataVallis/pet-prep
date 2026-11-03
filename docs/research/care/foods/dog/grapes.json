@@ -181,7 +181,7 @@
       "Trötthet och svaghet",
       "Ingen matlust",
       "Ont i magen",
-      "Uttorkning och stor törst",
+      "Uttorkning och kraftig törst",
       "Darrningar"
     ],
     "da": [
@@ -438,7 +438,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f20961ec25e09dd0c38c31e10e357f19bb23150b7e5b505a32ac654cca2beb18"
+      "verified_hash": "08befc4662362590b5ccb77f0ec3b32d4ee208ed73ee9776f5d5d561c10e2da8"
     },
     "da": {
       "status": "verified",

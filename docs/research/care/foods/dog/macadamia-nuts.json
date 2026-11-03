@@ -65,7 +65,7 @@
     "pl": "Nie. Orzechy makadamia są toksyczne dla psów, a psy to jedyny znany gatunek, który po nich choruje. Nawet mała ilość może wywołać osłabienie, wymioty, drżenie mięśni i wysoką temperaturę. Duża zawartość tłuszczu może też wywołać zapalenie trzustki.",
     "cs": "Ne. Makadamové ořechy jsou pro psy jedovaté a psi jsou jediným známým druhem, kterému po nich bývá špatně. I malé množství může způsobit slabost, zvracení, třes a vysokou teplotu. Vysoký obsah tuku může navíc vyvolat zánět slinivky břišní.",
     "hr": "Ne. Makadamija je otrovna za pse, a psi su jedina vrsta za koju je poznato da od nje obolijevaju. Već mala količina može izazvati slabost, povraćanje, drhtanje i visoku tjelesnu temperaturu. Zbog velikog udjela masti može izazvati i upalu gušterače.",
-    "sv": "Nej. Macadamianötter är giftiga för hundar, och hundar är den enda art man vet blir sjuk av dem. Redan en liten mängd kan orsaka svaghet, kräkningar, darrningar och hög kroppstemperatur. Den höga fetthalten kan också utlösa bukspottkörtelinflammation (pankreatit).",
+    "sv": "Nej. Macadamianötter är giftiga för hundar, och hundar är det enda djurslag som man vet blir sjukt av dem. Redan en liten mängd kan orsaka svaghet, kräkningar, darrningar och hög kroppstemperatur. Den höga fetthalten kan också utlösa bukspottkörtelinflammation (pankreatit).",
     "da": "Nej. Macadamianødder er giftige for hunde, og hunde er den eneste dyreart man ved bliver syg af dem. Selv en lille mængde kan give svaghed, opkast, rysten og høj temperatur. Det høje fedtindhold kan desuden udløse betændelse i bugspytkirtlen (pankreatitis).",
     "fi": "Ei saa. Makadamiapähkinät ovat koiralle myrkyllisiä, ja koira on ainoa eläinlaji, jonka tiedetään sairastuvan niistä. Pienikin määrä voi aiheuttaa heikkoutta, oksentelua, vapinaa ja korkeaa ruumiinlämpöä. Runsas rasvapitoisuus voi myös laukaista haimatulehduksen.",
     "nb": "Nei. Macadamianøtter er giftige for hunder, og hunder er den eneste arten man vet blir syke av dem. Selv en liten mengde kan gi svakhet, oppkast, skjelvinger og høy kroppstemperatur. Det høye fettinnholdet kan også utløse betennelse i bukspyttkjertelen (pankreatitt)."
@@ -82,7 +82,7 @@
     "pl": "Nie wiadomo, w jaki sposób orzechy makadamia zatruwają psy, ale wpływają na pracę nerwów i mięśni. Ponieważ są bardzo oleiste, u niektórych psów rozwija się też zapalenie trzustki. Objawy na ogół ustępują w ciągu 12–48 godzin, ale zawsze trzeba skontaktować się z weterynarzem.",
     "cs": "Jak přesně makadamové ořechy psy otravují, není známo, ovlivňují ale činnost nervů a svalů. Protože jsou velmi tučné, u některých psů se rozvine i zánět slinivky břišní. Příznaky obvykle odezní během 12–48 hodin, přesto se ale vždy obraťte na veterináře.",
     "hr": "Nije poznato kako točno makadamija truje pse, ali utječe na rad živaca i mišića. Budući da je vrlo masna, kod nekih se pasa razvije i upala gušterače. Znakovi uglavnom prođu unutar 12–48 sati, ali se u svakom slučaju treba obratiti veterinaru.",
-    "sv": "Hur macadamianötter förgiftar hundar är okänt, men de påverkar nervernas och musklernas funktion. Eftersom nötterna är mycket oljiga får vissa hundar också bukspottkörtelinflammation. Symtomen brukar gå över inom 12–48 timmar, men du ska alltid kontakta veterinären.",
+    "sv": "Man vet inte hur macadamianötter förgiftar hundar, men de påverkar nervernas och musklernas funktion. Eftersom nötterna är mycket oljiga får vissa hundar också bukspottkörtelinflammation. Symtomen brukar gå över inom 12–48 timmar, men du ska alltid kontakta veterinären.",
     "da": "Man ved ikke hvordan macadamianødder forgifter hunde, men de påvirker nerve- og muskelfunktionen. Fordi de er meget fede, får nogle hunde også betændelse i bugspytkirtlen. Symptomerne går som regel over inden for 12–48 timer, men du bør altid kontakte en dyrlæge.",
     "fi": "Ei tiedetä, miten makadamiapähkinät myrkyttävät koiran, mutta ne vaikuttavat hermojen ja lihasten toimintaan. Koska ne ovat hyvin öljyisiä, osalle koirista kehittyy myös haimatulehdus. Oireet häviävät yleensä 12–48 tunnissa, mutta eläinlääkäriin pitää aina ottaa yhteyttä.",
     "nb": "Man vet ikke hvordan macadamianøtter forgifter hunder, men de påvirker nerve- og muskelfunksjonen. Fordi nøttene er svært oljerike, får noen hunder også betennelse i bukspyttkjertelen. Symptomene går som regel over i løpet av 12–48 timer, men du bør alltid kontakte dyrlegen."
@@ -294,7 +294,7 @@
         "pl": "Jak długo trwają objawy?",
         "cs": "Jak dlouho příznaky trvají?",
         "hr": "Koliko dugo traju znakovi?",
-        "sv": "Hur länge håller symtomen i sig?",
+        "sv": "Hur länge varar symtomen?",
         "da": "Hvor længe varer symptomerne?",
         "fi": "Kuinka kauan oireet kestävät?",
         "nb": "Hvor lenge varer symptomene?"
@@ -438,7 +438,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ded2fff838f216c5c972d835769128e4b280e8ff9bf24ace1c358c1aaf3ee968"
+      "verified_hash": "8ab5b5f31cd6f29933f82faaadc4cc5758b9134b9676e5293ccc1ad69345b02d"
     },
     "da": {
       "status": "verified",

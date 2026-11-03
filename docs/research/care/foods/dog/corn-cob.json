@@ -65,7 +65,7 @@
     "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa.",
     "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat neodkladné ošetření. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
     "hr": "Ne. Nikad ne daj psu kukuruz na klipu. Psi mogu progutati komade ili čak cijeli klip, što može izazvati gušenje ili ozbiljno začepljenje crijeva za koje može biti potrebno hitno liječenje. Obična zrna kukuruza skinuta s klipa druga su stvar.",
-    "sv": "Nej. Ge aldrig en hund majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Naturella majskorn som tagits av kolven är en annan sak.",
+    "sv": "Nej. Ge aldrig hunden majskolv. Hundar kan svälja bitar eller till och med hela kolven, vilket kan orsaka kvävning eller allvarligt tarmstopp som kan kräva akut behandling. Vanliga majskorn som skurits av kolven är en annan sak.",
     "da": "Nej. Giv aldrig en hund majs på kolben. Hunde kan sluge stykker eller endda hele kolben, hvilket kan give kvælning eller en alvorlig tarmblokering, der kan kræve akut behandling. Almindelige majskorn uden kolbe er en anden sag.",
     "fi": "Ei saa. Älä koskaan anna koiralle maissintähkää. Koira voi nielaista paloja tai jopa koko tähkän, mikä voi aiheuttaa tukehtumisen tai vakavan suolitukoksen, joka saattaa vaatia kiireellistä hoitoa. Pelkät tähkästä irrotetut maissinjyvät ovat eri asia.",
     "nb": "Nei. Gi aldri en hund maiskolbe. Hunder kan svelge biter av kolben eller hele kolben, noe som kan føre til kvelning eller alvorlig tarmblokkering som kan kreve akutt behandling. Naturelle maiskorn som er tatt av kolben, er en annen sak."
@@ -82,7 +82,7 @@
     "pl": "Połknięte kawałki mogą zatkać jelita; w jednym opisanym przypadku niedrożność ograniczyła dopływ krwi i może być potrzebne pilne leczenie. Zwykłe ziarna w umiarkowanej ilości są na ogół bezpieczne; zagrożeniem jest kolba.",
     "cs": "Spolknuté kousky mohou ucpat střeva; v jednom popsaném případě ucpání omezilo prokrvení střeva a může být nutné neodkladné ošetření. Čistá zrna jsou s mírou obecně bezpečná; nebezpečný je klas.",
     "hr": "Progutani komadi mogu začepiti crijeva; u jednom opisanom slučaju začepljenje je ograničilo dotok krvi, a može biti potrebno hitno liječenje. Obična zrna kukuruza u umjerenim količinama uglavnom su sigurna; opasan je klip.",
-    "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall begränsade stoppet blodtillförseln, och akut behandling kan behövas. Naturella majskorn med måtta är i regel säkra; det är kolven som är farlig.",
+    "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall försämrade stoppet blodtillförseln, och akut behandling kan behövas. Vanliga majskorn är i regel säkra med måtta; det är kolven som är farlig.",
     "da": "Slugte stykker kan blokere tarmene; i et beskrevet tilfælde hæmmede blokeringen blodforsyningen, og akut behandling kan blive nødvendig. Almindelige majskorn er generelt sikre med måde; det er kolben, der er farlig.",
     "fi": "Nielaistut palat voivat tukkia suoliston; yhdessä raportoidussa tapauksessa tukos heikensi suolen verenkiertoa, ja kiireellinen hoito voi olla tarpeen. Pelkät maissinjyvät ovat kohtuudella yleensä turvallisia; vaara on tähkässä.",
     "nb": "Biter som svelges, kan blokkere tarmen; i ett omtalt tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
@@ -206,7 +206,7 @@
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies połknął kolbę kukurydzy lub jej część, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, kiedy to się stało i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności.",
     "cs": "Pokud váš pes spolkl kukuřičný klas nebo jeho část, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, kdy se to stalo a zhruba kolik pes snědl. Nečekejte na známky ucpání.",
     "hr": "Odmah se obrati veterinaru ako je pas progutao kukuruzni klip ili njegov dio, čak i ako se čini da je dobro. Zapiši kada se to dogodilo i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
-    "sv": "Kontakta veterinären direkt om hunden har svalt en majskolv eller en del av en, även om den verkar må bra. Notera när det hände och ungefär hur mycket den åt. Vänta inte på tecken på stopp.",
+    "sv": "Kontakta veterinären direkt om hunden har svalt en majskolv eller en del av en, även om den verkar må bra. Notera när det hände och ungefär hur mycket den åt. Vänta inte tills du ser tecken på stopp.",
     "da": "Kontakt din dyrlæge med det samme hvis hunden har slugt en majskolbe eller en del af en, også selvom den virker upåvirket. Skriv ned hvornår det skete og omtrent hvor meget hunden har spist. Vent ikke på tegn på blokering.",
     "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi nielaisi maissintähkän tai osan siitä, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, milloin se tapahtui ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita.",
     "nb": "Kontakt dyrlegen med en gang hvis hunden har svelget en maiskolbe eller en del av en, selv om den virker helt fin. Skriv ned når det skjedde, og omtrent hvor mye den spiste. Ikke vent på tegn på tarmblokkering."
@@ -260,7 +260,7 @@
         "pl": "Zwykłe ziarna kukurydzy w umiarkowanej ilości są na ogół bezpieczne dla psów. Niebezpieczna jest kolba.",
         "cs": "Čistá kukuřičná zrna jsou pro psy s mírou obecně bezpečná. Nebezpečný je klas.",
         "hr": "Obična zrna kukuruza uglavnom su sigurna za pse u umjerenim količinama. Opasan je klip.",
-        "sv": "Naturella majskorn är i regel säkra för hundar med måtta. Det är kolven som är farlig.",
+        "sv": "Vanliga majskorn är i regel säkra för hundar med måtta. Det är kolven som är farlig.",
         "da": "Almindelige majskorn er generelt sikre for hunde med måde. Det er kolben, der er farlig.",
         "fi": "Pelkät maissinjyvät ovat kohtuudella annettuina yleensä turvallisia koirille. Vaarallinen on nimenomaan tähkä.",
         "nb": "Naturelle maiskorn er som regel trygt for hunder med måte. Det er kolben som er farlig."
@@ -296,7 +296,7 @@
         "pl": "Nie czekaj, żeby się przekonać. Połknięta kolba może spowodować poważną niedrożność, więc od razu skontaktuj się z weterynarzem.",
         "cs": "Nečekejte, až to zjistíte. Spolknutý klas může způsobit vážné ucpání, proto se okamžitě obraťte na veterináře.",
         "hr": "Ne čekaj da to saznaš. Progutani klip može izazvati ozbiljno začepljenje, zato se odmah obrati veterinaru.",
-        "sv": "Vänta inte och se. En svald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt.",
+        "sv": "Vänta inte och se vad som händer. En nedsvald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt.",
         "da": "Se ikke tiden an. En slugt kolbe kan give en alvorlig blokering, så kontakt din dyrlæge med det samme.",
         "fi": "Älä jää odottamaan. Nielaistu tähkä voi aiheuttaa vakavan tukoksen, joten ota heti yhteyttä eläinlääkäriin.",
         "nb": "Ikke vent for å finne det ut. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
@@ -430,7 +430,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "426caa9552ab26daf626e031c1df717424d8f5cc1c827bda5433f74e500d3cf1"
+      "verified_hash": "b3a06d673df75cfcb0d0c08ffd5485b5bdf969994b9a782b476427c6a119402a"
     },
     "da": {
       "status": "verified",

@@ -65,7 +65,7 @@
     "pl": "Tak, kilka zwykłych orzeszków ziemnych od czasu do czasu: niesolonych, bez dodatków smakowych, prażonych na sucho lub surowych, bez łupin. Orzeszki solone, prażone w miodzie lub smakowe się nie nadają, a orzeszki są tłuste, więc poprzestań na kilku.",
     "cs": "Ano, pár obyčejných arašídů jednou za čas: nesolené, neochucené, pražené nasucho nebo syrové a vyloupané. Solené, v medu pražené nebo ochucené arašídy vhodné nejsou, a protože jsou arašídy tučné, zůstaňte jen u několika kusů.",
     "hr": "Da, nekoliko zrna običnog kikirikija s vremena na vrijeme: neslanog, bez arome, prženog na suho ili sirovog, bez ljuske. Slani, medom prženi ili aromatizirani kikiriki nije prikladan, a kikiriki je mastan, zato neka to bude samo nekoliko zrna.",
-    "sv": "Ja, några naturella jordnötter då och då: osaltade, utan smaksättning, torrostade eller råa och utan skal. Saltade, honungsrostade eller smaksatta jordnötter passar inte, och jordnötter är feta, så håll dig till några få.",
+    "sv": "Ja, några få jordnötter då och då: osaltade, utan smaksättning, torrostade eller råa och utan skal. Saltade, honungsrostade eller smaksatta jordnötter är inte lämpliga, och jordnötter är feta, så håll dig till några få.",
     "da": "Ja, nogle få almindelige jordnødder en gang imellem: usaltede, uden smag, tørristede eller rå og uden skal. Saltede, honningristede eller krydrede jordnødder er ikke egnede, og jordnødder er fede, så hold dig til nogle få.",
     "fi": "Saa, silloin tällöin muutaman maapähkinän, kunhan ne ovat suolattomia, maustamattomia ja kuivapaahdettuja tai raakoja ja kuoret on poistettu. Suolatut, hunajapaahdetut tai maustetut maapähkinät eivät sovi, ja maapähkinät ovat rasvaisia, joten anna vain muutama.",
     "nb": "Ja, noen få naturelle peanøtter av og til: usaltede, uten smakstilsetning, tørristede eller rå, og uten skall. Saltede, honningristede eller smaksatte peanøtter passer ikke, og peanøtter er fete, så hold deg til noen få."
@@ -100,7 +100,7 @@
     "pl": "Jeśli twój pies zjadł dużo orzeszków ziemnych, orzeszki solone lub łupiny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią albo pies wygląda, jakby się dławił.",
     "cs": "Pokud váš pes snědl hodně arašídů, solené arašídy nebo skořápky, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví nebo se zdá, že se pes dusí, zavolejte veterináři.",
     "hr": "Ako je tvoj pas pojeo puno kikirikija, slani kikiriki ili ljuske, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave ili ako se čini da se pas guši.",
-    "sv": "Om hunden ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha satt något i halsen.",
+    "sv": "Om hunden har ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha fått något i halsen.",
     "da": "Hvis din hund har spist mange jordnødder, saltede jordnødder eller skaller, så hold øje med opkast, diarré eller mavesmerter, og kontakt din dyrlæge hvis de opstår, eller hvis hunden ser ud til at være ved at blive kvalt.",
     "fi": "Jos koirasi söi paljon maapähkinöitä, suolattuja maapähkinöitä tai kuoria, seuraa, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee tai koira näyttää tukehtuvan.",
     "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å ha satt noe i halsen."
@@ -117,7 +117,7 @@
     "pl": "Tylko kilka zwykłych orzeszków: prażonych na sucho lub surowych, niesolonych, nieprzyprawionych, bez polewy, bez łupin – nie codziennie.",
     "cs": "Jen pár kusů, obyčejných: pražených nasucho nebo syrových, nesolených, nekořeněných, bez obalu a vyloupaných – ne každý den.",
     "hr": "Samo nekoliko zrna običnog kikirikija: prženog na suho ili sirovog, neslanog, bez začina, bez preljeva i bez ljuske – ne svaki dan.",
-    "sv": "Bara några få, naturella: torrostade eller råa, osaltade, okryddade, utan överdrag och utan skal – inte varje dag.",
+    "sv": "Bara några få, utan tillsatser: torrostade eller råa, osaltade, okryddade, utan överdrag och utan skal – inte varje dag.",
     "da": "Kun nogle få og helt almindelige: tørristede eller rå, usaltede, ukrydrede, uden overtræk og uden skal – ikke hver dag.",
     "fi": "Vain muutama, pelkkänä: kuivapaahdettuna tai raakana, suolattomana, maustamattomana ja kuorrutteettomana, kuoret poistettuina – ei joka päivä.",
     "nb": "Bare noen få, naturelle: tørristede eller rå, usaltede, ukrydrede, uten overtrekk og uten skall – ikke hver dag."
@@ -134,7 +134,7 @@
     "pl": "Pies może dostać kilka zwykłych orzeszków ziemnych bez łupinek. Słone lub słodkie orzeszki są tylko dla ludzi.",
     "cs": "Pes může dostat pár obyčejných arašídů bez skořápky. Slané nebo sladké arašídy jsou jen pro lidi.",
     "hr": "Pas smije pojesti nekoliko zrna običnog kikirikija bez ljuske. Slani ili slatki kikiriki samo je za ljude.",
-    "sv": "En hund får äta några naturella jordnötter utan skal. Salta eller söta jordnötter är bara för människor.",
+    "sv": "En hund kan få några helt vanliga jordnötter utan skal. Salta eller söta jordnötter är bara för människor.",
     "da": "En hund må gerne få nogle få almindelige jordnødder uden skal. Saltede eller søde jordnødder er kun til mennesker.",
     "fi": "Koira saa syödä muutaman maustamattoman maapähkinän ilman kuoria. Suolaiset tai makeat maapähkinät ovat vain ihmisille.",
     "nb": "En hund kan få noen få naturelle peanøtter uten skall. Salte eller søte peanøtter er bare for mennesker."
@@ -170,7 +170,7 @@
         "pl": "Nie. Orzeszki prażone w miodzie i inne smakowe nie są bezpieczne dla psów; nadają się tylko zwykłe, niesolone orzeszki.",
         "cs": "Ne. Arašídy pražené v medu a jiné ochucené arašídy nejsou pro psy bezpečné; vhodné jsou jen obyčejné, nesolené arašídy.",
         "hr": "Nije. Kikiriki pržen s medom i drugi aromatizirani kikiriki nisu sigurni za pse; prikladan je samo običan, neslan kikiriki.",
-        "sv": "Nej. Honungsrostade och andra smaksatta jordnötter är inte ofarliga för hundar; bara naturella, osaltade jordnötter passar.",
+        "sv": "Nej. Honungsrostade och andra smaksatta jordnötter är inte säkra för hundar; bara osaltade jordnötter utan smaksättning passar.",
         "da": "Nej. Honningristede jordnødder og andre jordnødder med smag er ikke sikre for hunde; kun almindelige, usaltede jordnødder er egnede.",
         "fi": "Eivät. Hunajapaahdetut ja muut maustetut maapähkinät eivät ole koirille turvallisia; vain pelkät, suolattomat maapähkinät sopivat.",
         "nb": "Nei. Honningristede og andre smaksatte peanøtter er ikke trygge for hunder; bare naturelle, usaltede peanøtter passer."
@@ -286,7 +286,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3f15088fb2c4f22d04e4f8099886f36ae794fe6d83bcd38834cd090041d29946"
+      "verified_hash": "b300543040ebdd19ef233591e4ec71aada1c6eb1169b145fc7743b277fcecdb0"
     },
     "da": {
       "status": "verified",

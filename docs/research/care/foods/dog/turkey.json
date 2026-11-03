@@ -65,7 +65,7 @@
     "pl": "Tak, odrobina zwykłego gotowanego mięsa z indyka jest bezpieczna dla większości psów. Najpierw usuń skórę, nadmiar tłuszczu i wszystkie kości. Indyk przygotowany z przyprawami, cebulą lub czosnkiem, a także sos cebulowy czy nadzienie nie są dla psów.",
     "cs": "Ano, trocha obyčejného tepelně upraveného krůtího masa je pro většinu psů bezpečná. Nejdřív odstraňte kůži, přebytečný tuk a všechny kosti. Krůtí maso připravené s kořením, cibulí nebo česnekem, cibulová omáčka a nádivka psům nepatří.",
     "hr": "Da, malo obične termički obrađene puretine sigurno je za većinu pasa. Prije toga ukloni kožu, višak masnoće i sve kosti. Puretina pripremljena sa začinima, lukom ili češnjakom te umak od luka ili nadjev nisu za pse.",
-    "sv": "Ja, lite naturellt, tillagat kalkonkött är ofarligt för de flesta hundar. Ta först bort skinnet, överflödigt fett och alla ben. Kalkon tillagad med kryddor, lök eller vitlök samt löksky eller fyllning är inte för hundar.",
+    "sv": "Ja, lite okryddat, tillagat kalkonkött är ofarligt för de flesta hundar. Ta först bort skinnet, överflödigt fett och alla ben. Kalkon tillagad med kryddor, lök eller vitlök samt lökbaserad sky eller fyllning är inte för hundar.",
     "da": "Ja, lidt almindeligt tilberedt kalkunkød er sikkert for de fleste hunde. Fjern først skind, overskydende fedt og alle knogler. Kalkun tilberedt med krydderier, løg eller hvidløg samt løgsovs og fyld er ikke til hunde.",
     "fi": "Saa, vähän maustamatonta kypsennettyä kalkkunanlihaa on turvallista useimmille koirille. Poista ensin nahka, ylimääräinen rasva ja kaikki luut. Mausteilla, sipulilla tai valkosipulilla kypsennetty kalkkuna sekä sipulipohjainen kastike tai täyte eivät sovi koirille.",
     "nb": "Ja, litt tilberedt kalkunkjøtt uten noe tilsatt er trygt for de fleste hunder. Fjern skinn, overflødig fett og alle bein først. Kalkun tilberedt med krydder, løk eller hvitløk, og saus eller fyll med løk, er ikke noe for hunder."
@@ -117,7 +117,7 @@
     "pl": "Zwykłe gotowane mięso z indyka, najlepiej białe, bez skóry, nadmiaru tłuszczu i kości, bez przypraw; w małej ilości.",
     "cs": "Obyčejné tepelně upravené krůtí maso, ideálně bílé, bez kůže, přebytečného tuku a kostí, bez koření; malé množství.",
     "hr": "Obična termički obrađena puretina, po mogućnosti bijelo meso, bez kože, viška masnoće i kostiju, bez začina; mala količina.",
-    "sv": "Naturellt, tillagat kalkonkött, helst ljust kött, utan skinn, överflödigt fett, ben och kryddor; en liten mängd.",
+    "sv": "Okryddat, tillagat kalkonkött, helst ljust kött, utan skinn, överflödigt fett och ben; en liten mängd.",
     "da": "Almindeligt tilberedt kalkunkød, helst lyst kød, uden skind, overskydende fedt eller knogler og uden krydderier; en lille mængde.",
     "fi": "Maustamatonta kypsennettyä kalkkunanlihaa, mieluiten vaaleaa lihaa, ilman nahkaa, ylimääräistä rasvaa ja luita, ilman mausteita; pieni määrä.",
     "nb": "Tilberedt kalkunkjøtt uten noe tilsatt, helst lyst kjøtt, uten skinn, overflødig fett eller bein og uten krydder; en liten mengde."
@@ -170,7 +170,7 @@
         "pl": "Tylko zwykłe mięso bez skóry i kości. Nadzienie i sos na bazie cebuli trzymaj z dala od psa.",
         "cs": "Jen obyčejné maso bez kůže a kostí. Nádivku a cibulovou omáčku držte od psa dál.",
         "hr": "Samo obično meso bez kože i kostiju. Nadjev i umak na bazi luka drži podalje od psa.",
-        "sv": "Bara naturellt kött utan skinn och ben. Håll fyllning och sky med lök borta från hunden.",
+        "sv": "Bara okryddat kött utan skinn och ben. Håll fyllning och sky med lök borta från hunden.",
         "da": "Kun almindeligt kød uden skind og knogler. Hold fyld og løgsovs væk fra din hund.",
         "fi": "Vain maustamatonta lihaa ilman nahkaa ja luita. Pidä täyte ja sipulipohjainen kastike poissa koirasi ulottuvilta.",
         "nb": "Bare kjøtt uten noe tilsatt, uten skinn eller bein. Hold fyll og saus med løk unna hunden."
@@ -303,7 +303,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "30a6546248562b73b1bb7bb4cdc8d4850558fe07b8a077546ba292c4e45cc96e"
+      "verified_hash": "e723209d4746dac400fecc1e07a2a5edf3e1ee7b56cb2cf0a97d2c7913c22541"
     },
     "da": {
       "status": "verified",

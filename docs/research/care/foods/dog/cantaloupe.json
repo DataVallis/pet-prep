@@ -65,7 +65,7 @@
     "pl": "Tak, z umiarem. Melon kantalupa ma mało kalorii i jest dobrym źródłem wody i błonnika, ale zawiera dużo cukru, więc dziel się nim oszczędnie, zwłaszcza z psem z nadwagą lub cukrzycą. Nie podawaj skórki ani pestek.",
     "cs": "Ano, s mírou. Cukrový meloun má málo kalorií a je dobrým zdrojem vody a vlákniny, ale obsahuje hodně cukru, proto ho dávejte střídmě, zvlášť psům s nadváhou nebo cukrovkou. Nedávejte slupku ani semínka.",
     "hr": "Da, umjereno. Dinja ima malo kalorija i dobar je izvor vode i vlakana, ali sadrži mnogo šećera, zato je daj u malim količinama, osobito psima s viškom kilograma ili s dijabetesom. Ne daj koru ni sjemenke.",
-    "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och ger vätska och fibrer, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
+    "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och är en bra källa till vätska och fiber, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
     "da": "Ja, med måde. Cantaloupemelon har få kalorier og er en god kilde til væske og fibre, men den har et højt sukkerindhold, så giv den sparsomt, især til hunde med overvægt eller diabetes. Giv ikke skræl eller kerner.",
     "fi": "Kyllä, kohtuudella. Cantaloupe-meloni on vähäkalorinen ja hyvä veden ja kuidun lähde, mutta siinä on paljon sokeria, joten anna sitä säästeliäästi, etenkin ylipainoisille tai diabetesta sairastaville koirille. Älä anna kuorta tai siemeniä.",
     "nb": "Ja, med måte. Cantaloupemelon har få kalorier og er en god kilde til vann og fiber, men den inneholder mye sukker, så del den sparsomt, særlig med hunder som er overvektige eller har diabetes. Ikke gi skallet eller frøene."
@@ -100,7 +100,7 @@
     "pl": "Jeśli masz pytania lub wątpliwości co do karmienia psa kantalupą, na przykład gdy twój pies ma cukrzycę, zapytaj weterynarza.",
     "cs": "Pokud máte k podávání cukrového melounu pochybnosti, například protože má váš pes cukrovku, zeptejte se veterináře.",
     "hr": "Ako imaš pitanja ili nedoumica u vezi s davanjem dinje psu, na primjer ako pas ima dijabetes, pitaj veterinara.",
-    "sv": "Om du har frågor eller funderingar kring att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
+    "sv": "Om du undrar över eller är orolig för att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
     "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund cantaloupemelon, fx hvis den har diabetes.",
     "fi": "Jos sinulla on kysyttävää cantaloupe-melonin antamisesta koirallesi tai olet siitä huolissasi, esimerkiksi jos koirallasi on diabetes, kysy eläinlääkäriltä.",
     "nb": "Har du spørsmål eller er du bekymret for å gi hunden cantaloupemelon, for eksempel fordi hunden har diabetes, kan du spørre dyrlegen."
@@ -284,7 +284,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7aa63865cd7d399bd7b8ad1d30b581e8b14e58944f8e522b8df1a3f70139ee3c"
+      "verified_hash": "c5d29187ddad84d5030c704bf344e26d5cfd502183df1cf48a9bf03034964c2a"
     },
     "da": {
       "status": "verified",

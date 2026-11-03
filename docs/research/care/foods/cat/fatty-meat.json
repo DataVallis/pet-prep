@@ -82,7 +82,7 @@
     "pl": "Zbyt dużo tłuszczu może zaszkodzić przewodowi pokarmowemu kota, zwłaszcza trzustce. Cats Protection ostrzega, że skóra indyka zawiera dużo tłuszczu i może wywołać problemy trawienne, a u wrażliwych kotów nawet zapalenie trzustki. Z kolei weterynarz z University of Georgia radzi całkowicie unikać tłustszych kawałków szynki.",
     "cs": "Příliš mnoho tuku může ovlivnit kočičí trávicí trakt, zejména slinivku břišní. Cats Protection varuje, že krůtí kůže má vysoký obsah tuku a u citlivých koček může způsobit trávicí potíže, nebo dokonce zánět slinivky břišní, a veterinář z University of Georgia doporučuje se tučnějším kouskům šunky úplně vyhnout.",
     "hr": "Previše masti može utjecati na mačji probavni sustav, osobito na gušteraču. Cats Protection upozorava da pureća koža ima mnogo masti i kod osjetljivih mačaka može izazvati probavne smetnje ili čak upalu gušterače, a jedan veterinar sa Sveučilišta Georgia savjetuje da se masniji komadi šunke potpuno izbjegavaju.",
-    "sv": "För mycket fett kan påverka kattens matsmältningskanal, särskilt bukspottkörteln. Cats Protection varnar för att kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation hos känsliga katter, och en veterinär vid University of Georgia råder till att helt undvika de fetare bitarna av skinka.",
+    "sv": "För mycket fett kan påverka kattens matsmältningskanal, särskilt bukspottkörteln. Cats Protection varnar för att kalkonskinn är mycket fett och kan ge magbesvär eller till och med bukspottkörtelinflammation hos känsliga katter, och en veterinär vid University of Georgia rekommenderar att helt undvika de fetare bitarna av skinka.",
     "da": "For meget fedt kan påvirke kattens fordøjelseskanal, især bugspytkirtlen. Cats Protection advarer om at kalkunskind har et højt fedtindhold og kan give fordøjelsesbesvær eller endda betændelse i bugspytkirtlen hos følsomme katte, og en dyrlæge fra University of Georgia råder til helt at undgå de fedeste stykker skinke.",
     "fi": "Liika rasva voi vaikuttaa kissan ruoansulatuskanavaan, etenkin haimaan. Cats Protection varoittaa, että kalkkunan nahassa on paljon rasvaa ja se voi aiheuttaa herkille kissoille ruoansulatusvaivoja tai jopa haimatulehduksen, ja Georgian yliopiston eläinlääkäri neuvoo välttämään kinkun rasvaisempia paloja kokonaan.",
     "nb": "For mye fett kan påvirke kattens fordøyelse, særlig bukspyttkjertelen. Cats Protection advarer om at kalkunskinn inneholder mye fett og kan gi fordøyelsesplager eller til og med pankreatitt hos følsomme katter, og en dyrlege ved University of Georgia anbefaler å unngå de fetere bitene av skinke helt."
@@ -346,7 +346,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d7813fb0d2d1f36b33692e4894af4e822dbaecaaf85decf3670b7b626eae080e"
+      "verified_hash": "3712926fa512aa89dd64600eb945f28c118e54c000345cd921b54980fbb423ae"
     },
     "da": {
       "status": "verified",

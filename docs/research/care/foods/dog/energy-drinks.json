@@ -65,7 +65,7 @@
     "pl": "Nie. Napoje energetyczne często zawierają dużo kofeiny, która jest toksyczna dla psów. Kofeina nadmiernie pobudza serce i układ nerwowy, a psy są na nią bardziej wrażliwe niż ludzie. Nawet wylizanie rozlanego napoju energetycznego może być problemem.",
     "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu, který je pro psy jedovatý. Kofein nadměrně stimuluje srdce a nervovou soustavu a psi jsou na něj citlivější než lidé. Problém může nastat, i když pes jen vylíže rozlitý energetický nápoj.",
     "hr": "Ne. Energetska pića često sadrže mnogo kofeina, koji je otrovan za pse. Kofein pretjerano potiče rad srca i živčanog sustava, a psi su na njega osjetljiviji od ljudi. Problem može biti čak i kad pas polize proliveno energetsko piće.",
-    "sv": "Nej. Energidrycker innehåller ofta mycket koffein, som är giftigt för hundar. Koffein överstimulerar hjärtat och nervsystemet, och hundar är känsligare för det än människor. Även att lapa i sig utspilld energidryck kan vara ett problem.",
+    "sv": "Nej. Energidrycker innehåller ofta mycket koffein, som är giftigt för hundar. Koffein överstimulerar hjärtat och nervsystemet, och hundar är känsligare för det än människor. Även om hunden slickar i sig utspilld energidryck kan det vara ett problem.",
     "da": "Nej. Energidrikke indeholder ofte meget koffein, som er giftigt for hunde. Koffein overstimulerer hjertet og nervesystemet, og hunde er mere følsomme over for det end mennesker. Selv en spildt energidrik som hunden slikker op, kan være et problem.",
     "fi": "Ei saa. Energiajuomissa on usein paljon kofeiinia, joka on koirille myrkyllistä. Kofeiini ylikiihottaa sydäntä ja hermostoa, ja koirat ovat sille herkempiä kuin ihmiset. Jo läikkyneen energiajuoman lipittäminen voi olla ongelma.",
     "nb": "Nei. Energidrikker inneholder ofte mye koffein, som er giftig for hunder. Koffein overstimulerer hjertet og nervesystemet, og hunder er mer følsomme for det enn mennesker. Selv det å slikke i seg sølt energidrikk kan være et problem."
@@ -177,12 +177,12 @@
       "Češće mokrenje"
     ],
     "sv": [
-      "Rastlöshet, överaktivitet, går fram och tillbaka",
+      "Rastlöshet, överaktivitet, vandrar av och an",
       "Snabb puls",
       "Kräkningar och diarré",
-      "Dreglar",
+      "Dregling",
       "Darrningar",
-      "Kissar mer"
+      "Ökat kissande"
     ],
     "da": [
       "Rastløshed, hyperaktivitet, går frem og tilbage",
@@ -410,7 +410,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "590c4f0466a4483d48a5d8f76f097ade25bebf45b049007e7f3bc47fc3754d62"
+      "verified_hash": "e6b0292b9d19fbc811be02d03143a4a59bf7a1406166f832d1a6eaa8f297a7a3"
     },
     "da": {
       "status": "verified",

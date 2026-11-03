@@ -176,7 +176,7 @@
     "pl": "Po jednym czy dwóch orzechach obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli twój pies połknął łupiny, zjadł dużo orzechów lub orzechy spleśniałe, wygląda, jakby się dławił, albo ma któryś z tych objawów.",
     "cs": "Po jednom nebo dvou ořeších sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha. Zavolejte veterináři, pokud váš pes spolkl skořápky, snědl hodně ořechů nebo ořechy plesnivé, zdá se, že se dusí, nebo má některý z těchto příznaků.",
     "hr": "Nakon jednog ili dva lješnjaka prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas progutao ljuske, pojeo mnogo lješnjaka ili pljesnive lješnjake, ako se čini da se guši ili ako pokazuje neki od ovih znakova.",
-    "sv": "Har hunden ätit en eller två nötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden svalt skal, ätit många nötter eller möglade nötter, verkar ha satt något i halsen eller visar något av dessa symtom.",
+    "sv": "Har hunden ätit en eller två nötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har svalt skal, ätit många nötter eller möglade nötter, verkar ha fått något i halsen eller visar något av symtomen ovan.",
     "da": "Efter en nød eller to skal du holde øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har slugt skaller, spist mange nødder eller mugne nødder, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
     "fi": "Jos koira söi pähkinän tai kaksi, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi nielaisi kuoria, söi paljon pähkinöitä tai homeisia pähkinöitä, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
     "nb": "Etter én eller to nøtter bør du følge med på oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har svelget skall, har spist mange nøtter eller mugne nøtter, ser ut til å holde på å kveles eller viser noen av disse symptomene."
@@ -194,7 +194,7 @@
     "pl": "Orzechy laskowe to przekąska dla ludzi. Ich twarde łupinki mogą utknąć psu w brzuszku, więc trzymaj je z dala od swojego pupila.",
     "cs": "Lískové ořechy jsou svačinka pro lidi. Jejich tvrdé skořápky můžou psovi uvíznout, a tak je před ním schovej.",
     "hr": "Lješnjaci su grickalica za ljude. Njihove tvrde ljuske mogu psu zapeti, zato ih drži podalje od svog ljubimca.",
-    "sv": "Hasselnötter är ett mellanmål för människor. De hårda skalen kan fastna inuti en hund, så håll dem borta från ditt djur.",
+    "sv": "Hasselnötter är ett mellanmål för människor. De hårda skalen kan fastna inuti en hund, så håll dem borta från din hund.",
     "da": "Hasselnødder er en snack til mennesker. Deres hårde skaller kan sætte sig fast i halsen eller maven på en hund, så hold dem væk fra din hund.",
     "fi": "Hasselpähkinät ovat ihmisten naposteltavaa. Niiden kovat kuoret voivat juuttua koiran sisälle, joten pidä ne kaukana lemmikistäsi.",
     "nb": "Hasselnøtter er snacks for mennesker. De harde skallene kan sette seg fast i en hund, så hold dem unna dyret ditt."
@@ -337,7 +337,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "491ac279c837385713b0c47f95d102ee6b73a578edf6978fc8df2d2df7efa413"
+      "verified_hash": "259009e632c9976d63a091793ef3ccb8764e212c7a51612655c986594dcdae8e"
     },
     "da": {
       "status": "verified",

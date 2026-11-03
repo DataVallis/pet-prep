@@ -82,7 +82,7 @@
     "pl": "Masło orzechowe ma dużo tłuszczu i może zawierać dużo soli, więc nadaje się tylko jako okazjonalny smakołyk i nie jest idealne dla psów na diecie. Prawdziwym zagrożeniem jest ksylitol: zawierają go niektóre masła z orzeszków ziemnych i innych orzechów, a u psów może wywołać gwałtowny spadek poziomu cukru we krwi.",
     "cs": "Arašídové máslo je bohaté na tuk a může obsahovat hodně soli, proto se hodí jen jako občasný pamlsek a pro psy na dietě není ideální. Skutečným nebezpečím je xylitol: obsahují ho některá arašídová a ořechová másla a u psů může způsobit prudký pokles hladiny cukru v krvi.",
     "hr": "Maslac od kikirikija bogat je mastima i može sadržavati puno soli, pa je prikladan samo kao povremena poslastica i nije idealan za pse na dijeti. Prava opasnost je ksilitol: sadrže ga neki maslaci od kikirikija i drugih orašastih plodova, a kod pasa može izazvati nagli pad šećera u krvi.",
-    "sv": "Jordnötssmör innehåller mycket fett och kan vara salt, så det passar bara som en godbit ibland, och det är inte idealiskt för hundar som bantar. Den verkliga faran är xylitol: vissa jordnöts- och nötsmör innehåller det, och hos hundar kan det orsaka ett kraftigt blodsockerfall.",
+    "sv": "Jordnötssmör innehåller mycket fett och kan vara salt, så det passar bara som en godbit ibland, och det är inte idealiskt för hundar som ska gå ner i vikt. Den verkliga faran är xylitol: vissa jordnöts- och nötsmör innehåller det, och hos hundar kan det orsaka ett kraftigt blodsockerfall.",
     "da": "Peanutbutter er fedtrig og kan indeholde meget salt, så den egner sig kun som en godbid en gang imellem og er ikke ideel til hunde på slankekur. Den egentlige fare er xylitol: Nogle slags peanut- og nøddesmør indeholder det, og hos hunde kan det give et kraftigt fald i blodsukkeret.",
     "fi": "Maapähkinävoissa on paljon rasvaa ja siinä voi olla paljon suolaa, joten se sopii vain satunnaiseksi herkuksi eikä ole ihanteellinen laihduttavalle koiralle. Todellinen vaara on ksylitoli: sitä on joissakin maapähkinä- ja pähkinävoissa, ja koiralla se voi aiheuttaa verensokerin jyrkän laskun.",
     "nb": "Peanøttsmør er rikt på fett og kan inneholde mye salt, så det passer bare som en godbit en gang iblant, og det er ikke ideelt for hunder som går på diett. Den virkelige faren er xylitol: Noe peanøtt- og nøttesmør inneholder det, og hos hunder kan det gi et kraftig fall i blodsukkeret."
@@ -206,7 +206,7 @@
         "pl": "Wiele osób tak robi; FDA radzi najpierw sprawdzić etykietę, żeby upewnić się, że produkt nie zawiera ksylitolu.",
         "cs": "Mnoho lidí to tak dělá; úřad FDA doporučuje nejdřív zkontrolovat etiketu, zda máslo neobsahuje xylitol.",
         "hr": "Mnogi to rade; FDA savjetuje da prvo provjeriš deklaraciju i uvjeriš se da ne sadrži ksilitol.",
-        "sv": "Det gör många; FDA råder dig att först läsa innehållsförteckningen för att försäkra dig om att det inte innehåller xylitol.",
+        "sv": "Det gör många; FDA rekommenderar att du först läser innehållsförteckningen så att du vet att det inte innehåller xylitol.",
         "da": "Det gør mange; FDA anbefaler først at tjekke varedeklarationen for at sikre at den ikke indeholder xylitol.",
         "fi": "Moni tekee niin; FDA neuvoo tarkistamaan ensin tuoteselosteen, ettei siinä ole ksylitolia.",
         "nb": "Mange gjør det; FDA anbefaler å sjekke etiketten først for å være sikker på at det ikke inneholder xylitol."
@@ -352,7 +352,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2059aafd1c13ad3edfaa09a5cee8c2fef5ffbe9aa9a8f075ab24665871379709"
+      "verified_hash": "587fa8351c50a496a3a3ff6328d022a58810b46466cb1213c65ad07b5820d728"
     },
     "da": {
       "status": "verified",

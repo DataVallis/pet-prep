@@ -181,7 +181,7 @@
       "Trötthet och svaghet",
       "Ingen matlust",
       "Ont i magen",
-      "Uttorkning och stor törst",
+      "Uttorkning och kraftig törst",
       "Darrningar"
     ],
     "da": [
@@ -275,7 +275,7 @@
         "pl": "Jedne i drugie są niebezpieczne. Źródła traktują winogrona, rodzynki i korynki jako takie samo zagrożenie i radzą dzwonić do weterynarza bez względu na zjedzoną ilość.",
         "cs": "Nebezpečné je obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři.",
         "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine.",
-        "sv": "Båda är farliga. Källorna ser vindruvor, russin och korinter som samma risk och råder dig att ringa veterinären efter vilken mängd som helst.",
+        "sv": "Båda är farliga. Källorna ser vindruvor, russin och korinter som samma risk och råder dig att ringa veterinären oavsett hur mycket hunden har ätit.",
         "da": "Begge dele er farlige. Kilderne behandler vindruer, rosiner og korender som samme risiko og råder til at kontakte dyrlægen uanset mængden.",
         "fi": "Molemmat ovat vaarallisia. Lähteet pitävät viinirypäleitä, rusinoita ja korintteja yhtä suurena riskinä ja neuvovat soittamaan eläinlääkärille, olipa syöty määrä mikä tahansa.",
         "nb": "Begge er farlige. Kildene regner druer, rosiner og korinter som samme risiko og råder deg til å ringe dyrlegen uansett mengde."
@@ -434,7 +434,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "89fe8591f4ee1c56ce65bbd40fda47619acef4fc01c5e4ae748851343546706e"
+      "verified_hash": "81f83eafb05ef4fe7069084a26938bc132410710560399fbd6d55dfd36c3c97c"
     },
     "da": {
       "status": "verified",

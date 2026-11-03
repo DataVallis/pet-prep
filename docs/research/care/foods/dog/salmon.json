@@ -65,7 +65,7 @@
     "pl": "Tak, jeśli jest dobrze ugotowany, zwykły i bez ości. Gotowany łosoś to dobre źródło białka i kwasów tłuszczowych omega-3. Surowy lub niedogotowany łosoś nie jest bezpieczny, a łosoś wędzony jest za słony, więc trzymaj je z dala od psa.",
     "cs": "Ano, pokud je důkladně tepelně upravený, bez přísad a bez kostí. Tepelně upravený losos je dobrým zdrojem bílkovin a omega-3 mastných kyselin. Syrový nebo nedostatečně tepelně upravený losos bezpečný není a uzený losos je příliš slaný, proto je psovi nedávejte.",
     "hr": "Da, ako je potpuno termički obrađen, bez dodataka i bez kostiju. Termički obrađen losos dobar je izvor bjelančevina i omega-3 masti. Sirov ili nedovoljno termički obrađen losos nije siguran, a dimljeni losos je preslan, zato ih drži podalje od psa.",
-    "sv": "Ja, om den är helt tillagad, utan kryddor och utan ben. Tillagad lax är en bra källa till protein och omega-3-fetter. Rå eller otillräckligt tillagad lax är inte ofarlig, och rökt lax är för salt, så håll dem borta från hunden.",
+    "sv": "Ja, om den är helt tillagad, utan kryddor och utan ben. Tillagad lax är en bra källa till protein och omega-3-fetter. Rå eller otillräckligt tillagad lax är inte säker, och rökt lax är för salt, så håll dem borta från hunden.",
     "da": "Ja, hvis den er gennemtilberedt, uden tilsætning og uden ben. Tilberedt laks er en god kilde til protein og omega-3-fedtsyrer. Rå eller ikke gennemtilberedt laks er ikke sikker, og røget laks er for salt, så hold dem væk fra din hund.",
     "fi": "Saa, jos lohi on täysin kypsennettyä, maustamatonta ja ruodotonta. Kypsennetty lohi on hyvä proteiinin ja omega-3-rasvojen lähde. Raaka tai vajaasti kypsennetty lohi ei ole turvallista, ja savulohi on liian suolaista, joten pidä ne poissa koirasi ulottuvilta.",
     "nb": "Ja, hvis den er gjennomstekt, uten noe tilsatt og uten bein. Tilberedt laks er en god kilde til protein og omega-3-fett. Rå eller ikke gjennomstekt laks er ikke trygg, og røkt laks er for salt, så hold slik laks unna hunden."
@@ -333,7 +333,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5e72ec7fc35d28f296735a33a195296d94abb89a0ecc7453fb46f2157ae57c70"
+      "verified_hash": "beef4d4b5e02c34ae688f2b321a6b4719c36c7bd7ade984a6ab0ea07dd89e277"
     },
     "da": {
       "status": "verified",

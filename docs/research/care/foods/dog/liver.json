@@ -65,7 +65,7 @@
     "pl": "Nie jako stały pokarm i nie na surowo. Zatrucie witaminą A u zwierząt domowych najczęściej zdarza się, gdy dostają surową wątróbkę lub suplementy bogate w witaminę A, a surowa wątróbka, jak każde surowe mięso, niesie ryzyko zakażenia drobnoustrojami. Zanim dodasz wątróbkę do diety psa, zapytaj weterynarza.",
     "cs": "Jako běžná součást jídelníčku ne a syrová už vůbec ne. K otravě vitaminem A dochází u zvířat nejčastěji tehdy, když dostávají syrová játra nebo doplňky bohaté na vitamin A, a syrová játra navíc nesou stejné riziko choroboplodných zárodků jako jakékoli syrové maso. Než začnete psovi játra dávat, poraďte se s veterinářem.",
     "hr": "Ne kao redovitu hranu i ne sirovu. Do otrovanja vitaminom A kod kućnih ljubimaca najčešće dolazi kad dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A, a sirova jetra nosi i mikrobiološke rizike kao i svako sirovo meso. Prije nego što psu uvedeš jetru u prehranu, pitaj veterinara.",
-    "sv": "Inte som vanlig mat och inte rå. A-vitaminförgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på A-vitamin, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
+    "sv": "Inte som vanlig mat, och inte rå. Vitamin A-förgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på vitamin A, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
     "da": "Ikke som fast foder og ikke rå. A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever eller kosttilskud med meget A-vitamin, og rå lever har samme bakterierisiko som alt råt kød. Spørg din dyrlæge før du giver din hund lever som en del af kosten.",
     "fi": "Ei tavalliseksi ruoaksi eikä raakana. Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita, ja raakaan maksaan liittyvät samat bakteeririskit kuin kaikkeen raakaan lihaan. Kysy eläinlääkäriltä ennen kuin lisäät maksaa koirasi ruokavalioon.",
     "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever inn i hundens kosthold."
@@ -82,7 +82,7 @@
     "pl": "Zatrucie witaminą A najczęściej zdarza się, gdy zwierzęta domowe dostają surową wątróbkę, tran lub inne suplementy bogate w witaminę A. Nadmiar przez tygodnie lub miesiące może prowadzić do matowej sierści i suchej skóry; duża ilość naraz może wywołać wymioty, senność i drażliwość. Surowe białko zwierzęce może też przenosić bakterie Salmonella i inne.",
     "cs": "K otravě vitaminem A dochází nejčastěji, když zvířata dostávají syrová játra, tresčí olej nebo jiné doplňky bohaté na vitamin A. Příliš velké množství po dobu týdnů či měsíců může vést ke zhoršení stavu srsti a k suché kůži; velké množství najednou může způsobit zvracení, ospalost a podrážděnost. Syrové živočišné bílkoviny mohou navíc obsahovat salmonelu a další bakterie.",
     "hr": "Do otrovanja vitaminom A najčešće dolazi kad ljubimci dobivaju sirovu jetru, ulje jetre bakalara ili druge dodatke prehrani bogate vitaminom A. Prevelike količine tijekom nekoliko tjedana ili mjeseci mogu dovesti do lošeg stanja dlake i suhe kože, a velika količina odjednom može izazvati povraćanje, pospanost i razdražljivost. Sirove životinjske bjelančevine mogu sadržavati i salmonelu i druge bakterije.",
-    "sv": "A-vitaminförgiftning uppstår oftast när husdjur får rå lever, levertran eller andra kosttillskott rika på A-vitamin. För mycket under veckor eller månader kan ge glanslös päls och torr hud; en stor mängd på en gång kan orsaka kräkningar, dåsighet och irritabilitet. Rått animaliskt protein kan också bära på salmonella och andra bakterier.",
+    "sv": "Vitamin A-förgiftning uppstår oftast när husdjur får rå lever, levertran eller andra kosttillskott rika på vitamin A. För mycket under veckor eller månader kan ge glanslös päls och torr hud; en stor mängd på en gång kan orsaka kräkningar, dåsighet och irritabilitet. Rått animaliskt protein kan också bära på salmonella och andra bakterier.",
     "da": "A-vitaminforgiftning opstår oftest når kæledyr fodres med rå lever, levertran eller andre kosttilskud med meget A-vitamin. For meget over uger eller måneder kan give dårlig pels og tør hud; en stor mængde på én gang kan give opkast, døsighed og irritabilitet. Råt animalsk protein kan desuden indeholde salmonella og andre bakterier.",
     "fi": "A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita. Liian suuri määrä viikkojen tai kuukausien ajan voi johtaa huonoon turkkiin ja kuivaan ihoon; suuri määrä kerralla voi aiheuttaa oksentelua, uneliaisuutta ja ärtyisyyttä. Raa’assa eläinperäisessä proteiinissa voi myös olla salmonellaa ja muita bakteereja.",
     "nb": "A-vitaminforgiftning skjer oftest når kjæledyr får rå lever, tran eller andre kosttilskudd med mye A-vitamin. For mye over uker eller måneder kan gi dårlig pels og tørr hud; en stor mengde på én gang kan gi oppkast, døsighet og irritabilitet. Rått animalsk protein kan også inneholde salmonella og andre bakterier."
@@ -215,7 +215,7 @@
         "pl": "Zatrucie witaminą A u zwierząt domowych najczęściej zdarza się, gdy dostają surową wątróbkę, tran lub inne suplementy bogate w witaminę A.",
         "cs": "K otravě vitaminem A dochází u zvířat nejčastěji, když dostávají syrová játra, tresčí olej nebo jiné doplňky bohaté na vitamin A.",
         "hr": "Do otrovanja vitaminom A kod kućnih ljubimaca najčešće dolazi kad dobivaju sirovu jetru, ulje jetre bakalara ili druge dodatke prehrani bogate vitaminom A.",
-        "sv": "A-vitaminförgiftning hos husdjur uppstår oftast när de får rå lever, levertran eller andra kosttillskott rika på A-vitamin.",
+        "sv": "Vitamin A-förgiftning hos husdjur uppstår oftast när de får rå lever, levertran eller andra kosttillskott rika på vitamin A.",
         "da": "A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever, levertran eller andre kosttilskud med meget A-vitamin.",
         "fi": "Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa, kalanmaksaöljyä tai muita runsaasti A-vitamiinia sisältäviä lisäravinteita.",
         "nb": "A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever, tran eller andre kosttilskudd med mye A-vitamin."
@@ -321,7 +321,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0388d07bd1bb4cc20329bde32cb1ccdf6bcf0a3be6eb1a2369af81a4af57a0e1"
+      "verified_hash": "327fe1f2d329c5795ad24b4330d6af7ba7baae7446bfa8911b04f04e5044ad78"
     },
     "da": {
       "status": "verified",

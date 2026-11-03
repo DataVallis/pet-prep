@@ -65,7 +65,7 @@
     "pl": "Nie zaleca się. Szynka nie jest toksyczna dla psów, ale zawiera dużo tłuszczu i sodu. Szynka ze sklepu ma dużo soli, a nadmiar tłuszczu może prowadzić do zapalenia trzustki i innych problemów trawiennych. Lepszym wyborem jest zdrowszy psi smakołyk.",
     "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
     "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Šunka iz trgovine sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
-    "sv": "Nej, det rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Köpt skinka är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
+    "sv": "Rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Skinka från affären är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
     "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
     "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta.",
     "nb": "Anbefales ikke. Skinke er ikke giftig for hunder, men den inneholder mye fett og natrium. Skinke fra butikken inneholder mye salt, og for mye fett kan føre til betennelse i bukspyttkjertelen og andre fordøyelsesplager. En sunnere hundegodbit er et bedre valg."
@@ -82,7 +82,7 @@
     "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom.",
     "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit.",
     "hr": "Šunka ima više masti od mnogih drugih vrsta mesa, a masni obroci poznati su okidač upale gušterače. Većina šunke uz to je vrlo slana, a višak soli može psima naštetiti.",
-    "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider är en känd utlösande faktor för bukspottkörtelinflammation. Den mesta skinkan är dessutom mycket salt, och för mycket salt kan skada hundar.",
+    "sv": "Skinka har högre fetthalt än många andra köttsorter, och feta måltider kan utlösa bukspottkörtelinflammation. De flesta skinksorter är dessutom mycket salta, och för mycket salt kan skada hundar.",
     "da": "Skinke har et højere fedtindhold end mange andre kødtyper, og fede måltider er en kendt udløser af betændelse i bugspytkirtlen. Det meste skinke er også meget salt, og for meget salt kan være skadeligt for hunde.",
     "fi": "Kinkussa on enemmän rasvaa kuin monessa muussa lihassa, ja rasvaiset ateriat ovat tunnettu haimatulehduksen laukaisija. Useimmat kinkut ovat myös hyvin suolaisia, ja liika suola voi olla koirille haitallista.",
     "nb": "Skinke har høyere fettinnhold enn mange andre kjøttslag, og fete måltider er en kjent utløser av betennelse i bukspyttkjertelen. De fleste skinker er dessuten svært salte, og for mye salt kan være skadelig for hunder."
@@ -167,7 +167,7 @@
     ],
     "sv": [
       "Kräkningar, ibland först 1–4 dagar efter den feta måltiden",
-      "Ont i magen (hunden kan sträcka på sig i ”bönställning”)",
+      "Ont i magen (hunden kan sträcka på sig i en ”bönställning”)",
       "Diarré",
       "Ingen matlust",
       "Trötthet, feber"
@@ -260,7 +260,7 @@
         "pl": "Ma więcej tłuszczu niż wiele rodzajów mięsa, a szynka ze sklepu zawiera bardzo dużo sodu.",
         "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
         "hr": "Ima više masti od mnogih vrsta mesa, a šunka iz trgovine sadrži jako mnogo natrija.",
-        "sv": "Den innehåller mer fett än många köttsorter, och köpt skinka innehåller väldigt mycket natrium.",
+        "sv": "Den innehåller mer fett än många köttsorter, och skinka från affären innehåller väldigt mycket natrium.",
         "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium.",
         "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia.",
         "nb": "Den har mer fett enn mange kjøttslag, og skinke fra butikken inneholder svært mye natrium."
@@ -391,7 +391,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ce0faaaa47c38db26a7c9e398ff20e5743dfd37cd26e8be23a7d03fa9dc7bfb6"
+      "verified_hash": "ebb78c8b07ae91195ad90b17f5b3c4f11ef3a006d75ab2acfd13578a9c02fdd3"
     },
     "da": {
       "status": "verified",

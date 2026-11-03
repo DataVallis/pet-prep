@@ -65,7 +65,7 @@
     "pl": "Tak, jeśli odpowiednio go przygotujesz. Arbuz to niskokaloryczny owoc z dużą zawartością wody, ale najpierw usuń wszystkie pestki i skórkę, bo jedno i drugie może wywołać problemy trawienne lub niedrożność jelit.",
     "cs": "Ano, pokud ho správně připravíte. Vodní meloun je nízkokalorické ovoce s vysokým obsahem vody, nejdřív ale odstraňte všechna semínka a kůru, protože obojí může způsobit zažívací potíže nebo ucpání střev.",
     "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva.",
-    "sv": "Ja, om du förbereder den rätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
+    "sv": "Ja, om du förbereder den på rätt sätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
     "da": "Ja, hvis du gør den klar på den rigtige måde. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
     "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen.",
     "nb": "Ja, hvis den gjøres klar på riktig måte. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
@@ -82,7 +82,7 @@
     "pl": "Pestki mogą spowodować niedrożność jelit, zwłaszcza gdy pies zje ich dużo, a u małych psów grożą zadławieniem. Skórka zjedzona w dużych kawałkach może wywołać rozstrój żołądka, wymioty, biegunkę lub niedrożność jelit. Zbyt dużo arbuza może wywołać dolegliwości żołądkowe lub biegunkę z powodu naturalnego cukru i błonnika.",
     "cs": "Semínka mohou způsobit ucpání střev, zejména když jich pes sní hodně, a malí psi se jimi mohou udusit. Kůra může při snědení ve velkých kusech způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev. Příliš mnoho melounu může kvůli přirozenému cukru a vláknině způsobit žaludeční potíže nebo průjem.",
     "hr": "Sjemenke mogu izazvati začepljenje crijeva, osobito ako ih pas pojede puno, a kod malih pasa mogu izazvati gušenje. Kora može izazvati probavne tegobe, povraćanje, proljev ili začepljenje crijeva ako pas pojede velike komade. Previše lubenice može izazvati nelagodu u trbuhu ili proljev zbog prirodnog šećera i vlakana.",
-    "sv": "Kärnorna kan orsaka tarmstopp, särskilt om hunden äter många, och kan orsaka kvävning hos små hundar. Skalet kan ge magbesvär, kräkningar, diarré eller tarmstopp om hunden äter stora bitar. För mycket vattenmelon kan ge obehag i magen eller diarré på grund av det naturliga sockret och fibrerna.",
+    "sv": "Kärnorna kan orsaka tarmstopp, särskilt om hunden äter många, och kan orsaka kvävning hos små hundar. Skalet kan ge magbesvär, kräkningar, diarré eller tarmstopp om hunden äter stora bitar. För mycket vattenmelon kan ge obehag i magen eller diarré på grund av det naturliga sockret och fibern.",
     "da": "Kerner kan give tarmblokering, især hvis en hund spiser mange, og kan sætte sig fast i halsen på små hunde. Skrællen kan give maveproblemer, opkast, diarré eller tarmblokering hvis den spises i store stykker. For meget vandmelon kan give ubehag i maven eller diarré på grund af det naturlige sukker og fibrene.",
     "fi": "Siemenet voivat aiheuttaa suolitukoksen, etenkin jos koira syö niitä paljon, ja ne voivat aiheuttaa tukehtumisvaaran pienille koirille. Kuori voi aiheuttaa vatsavaivoja, oksentelua, ripulia tai suolitukoksen, jos koira syö sitä suurina paloina. Liika vesimeloni voi luonnollisen sokerin ja kuidun vuoksi aiheuttaa vatsavaivoja tai ripulia.",
     "nb": "Kjernene kan gi tarmblokkering, særlig hvis hunden spiser mange, og kan sette seg fast i halsen på små hunder. Skallet kan gi urolig mage, oppkast, diaré eller tarmblokkering hvis det spises i store biter. For mye vannmelon kan gi ubehag i magen eller diaré på grunn av det naturlige sukkeret og fibrene."
@@ -300,7 +300,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "db3a81de374ee722b60ac8f0fd88212071137eb48e420621e19f95ffc0e0ceea"
+      "verified_hash": "3b1c9bb1376d46803a6fdf440c9834235597a3e379824ada62c4eea9059acce3"
     },
     "da": {
       "status": "verified",

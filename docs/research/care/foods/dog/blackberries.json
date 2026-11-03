@@ -117,7 +117,7 @@
     "pl": "Umyte, zwykłe świeże jeżyny; bez mrożonych owoców, które zwykle mają dodatek cukru lub ksylitolu; dziko rosnące tylko wtedy, gdy masz pewność, że to jeżyny.",
     "cs": "Omyté čerstvé ostružiny bez přísad; žádné mražené bobule, které mívají přidaný cukr nebo xylitol; z volně rostoucích plodů jen ty, o kterých víte jistě, že jsou to ostružiny.",
     "hr": "Oprane, obične svježe kupine; bez zamrznutih bobica, koje obično imaju dodani šećer ili ksilitol; divlje bobice samo ako sigurno znaš da su kupine.",
-    "sv": "Sköljda, naturella färska björnbär; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
+    "sv": "Sköljda, färska björnbär utan tillsatser; inga frysta bär, som oftast har tillsatt socker eller xylitol; bara vilda bär som du är säker på är björnbär.",
     "da": "Vaskede, rene, friske brombær; ingen frosne bær, der som regel er tilsat sukker eller xylitol; kun vilde bær som du er sikker på er brombær.",
     "fi": "Pestyinä, pelkkinä tuoreina karhunvatukoina; ei pakastemarjoja, joihin on yleensä lisätty sokeria tai ksylitolia; luonnosta vain marjoja, jotka tunnistat varmasti karhunvatukoiksi.",
     "nb": "Vaskede, naturelle, ferske bjørnebær; ikke frosne bær, som vanligvis har tilsatt sukker eller xylitol; bare ville bær du er sikker på er bjørnebær."
@@ -289,7 +289,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a4585586790df90e7dde12d62982a7bc621a3353696a71332ec04c026f7657e2"
+      "verified_hash": "7c89d344513ca8542167ba2ecf174e4eb7f91907fe644ff338c1e89d7fbbe3d9"
     },
     "da": {
       "status": "verified",

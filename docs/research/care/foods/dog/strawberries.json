@@ -65,7 +65,7 @@
     "pl": "Tak, z umiarem. Truskawki są pełne przeciwutleniaczy, błonnika i witaminy C, ale zawierają naturalny cukier, a zbyt wiele naraz może wywołać luźne stolce lub biegunkę. Umyj je, usuń szypułki i liście i pokrój na małe kawałki.",
     "cs": "Ano, s mírou. Jahody jsou plné antioxidantů, vlákniny a vitaminu C, obsahují ale přirozený cukr a příliš mnoho najednou může způsobit řidší stolici nebo průjem. Omyjte je, odstraňte stopky a lístky a nakrájejte je na malé kousky.",
     "hr": "Da, umjereno. Jagode su pune antioksidansa, vlakana i vitamina C, ali sadrže prirodni šećer, a previše njih odjednom može izazvati mekanu stolicu ili proljev. Operi ih, ukloni peteljke i listiće i nareži ih na male komadiće.",
-    "sv": "Ja, med måtta. Jordgubbar är fulla av antioxidanter, fibrer och C-vitamin, men de innehåller naturligt socker, och för många på en gång kan ge lös avföring eller diarré. Skölj dem, ta bort stjälkar och blad och skär dem i små bitar.",
+    "sv": "Ja, med måtta. Jordgubbar är fulla av antioxidanter, fiber och vitamin C, men de innehåller naturligt socker, och för många på en gång kan ge lös avföring eller diarré. Skölj dem, ta bort stjälkar och blad och skär dem i små bitar.",
     "da": "Ja, med måde. Jordbær er fulde af antioxidanter, fibre og C-vitamin, men de indeholder naturligt sukker, og for mange på én gang kan give tynd mave eller diarré. Vask dem, fjern stilke og blade, og skær dem i små stykker.",
     "fi": "Saa, kohtuudella. Mansikoissa on runsaasti antioksidantteja, kuitua ja C-vitamiinia, mutta niissä on luonnollista sokeria, ja liian monta kerralla voi aiheuttaa löysää ulostetta tai ripulia. Pese mansikat, poista kannat ja lehdet ja leikkaa ne pieniksi.",
     "nb": "Ja, med måte. Jordbær er fulle av antioksidanter, fiber og C-vitamin, men de inneholder naturlig sukker, og for mange på én gang kan gi løs avføring eller diaré. Vask dem, fjern stilk og blader, og skjær dem i små biter."
@@ -117,7 +117,7 @@
     "pl": "Dokładnie umyte, bez szypułek i liści, pokrojone na małe kawałki, a dla małych psów rozgniecione; świeże lub mrożone, nigdy w syropie ani z puszki.",
     "cs": "Důkladně omyté, bez stopek a lístků, nakrájené na malé kousky, pro malé psy rozmačkané; čerstvé nebo mražené, nikdy v sirupu ani z konzervy.",
     "hr": "Temeljito oprane, bez peteljki i listića, narezane na male komadiće ili zgnječene za male pse; svježe ili smrznute, nikad u sirupu ili iz konzerve.",
-    "sv": "Noga sköljda, utan stjälkar och blad, skurna i små bitar eller mosade till små hundar; färska eller frysta, aldrig i sockerlag eller på burk.",
+    "sv": "Noga sköljda, utan stjälkar och blad, skurna i små bitar eller mosade för små hundar; färska eller frysta, aldrig i sockerlag eller på burk.",
     "da": "Grundigt vasket, uden stilke og blade, skåret i små stykker eller moset til små hunde; friske eller frosne, aldrig i sirup eller fra dåse.",
     "fi": "Huolellisesti pestyinä, kannat ja lehdet poistettuina, pieniksi paloiksi leikattuina tai pienille koirille soseutettuina; tuoreina tai pakastettuina, ei koskaan siirapissa tai purkista.",
     "nb": "Grundig vasket, uten stilk og blader, skåret i små biter eller moset for små hunder; ferske eller frosne, aldri i sirup eller fra boks."
@@ -134,7 +134,7 @@
     "pl": "Psy mogą dostać trochę truskawek! Dorosły je myje, zdejmuje zielone listki i kroi na małe kawałki.",
     "cs": "Pejsci můžou dostat kousek jahody! Dospělý ji omyje, utrhne zelené lístky a nakrájí ji na malé kousky.",
     "hr": "Psi smiju pojesti malo jagode! Odrasla osoba je opere, skine zelene listiće i nareže je na male komadiće.",
-    "sv": "Hundar får äta lite jordgubbe! En vuxen sköljer den, tar bort de gröna bladen och skär den i små bitar.",
+    "sv": "Hundar kan få lite jordgubbe! En vuxen sköljer den, tar bort de gröna bladen och skär den i små bitar.",
     "da": "Hunde må gerne få lidt jordbær! En voksen vasker dem, tager de grønne blade af og skærer dem i små stykker.",
     "fi": "Koira saa syödä vähän mansikkaa! Aikuinen pesee sen, poistaa vihreät lehdet ja leikkaa sen pieneksi.",
     "nb": "Hunder kan få litt jordbær! En voksen vasker bærene, tar av de grønne bladene og skjærer dem i små biter."
@@ -333,7 +333,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "07385a298e6a56acd8494ab0f4144a568263f5b72c76c26d229eda408e305206"
+      "verified_hash": "c545accbabb7eb322928d76d1f891e2a0bbdc8da1fd740d11c566b935ddb9c2f"
     },
     "da": {
       "status": "verified",

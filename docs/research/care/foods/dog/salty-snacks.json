@@ -166,7 +166,7 @@
       "Drhtanje mišića ili napadaji"
     ],
     "sv": [
-      "Stor törst och kissar mycket",
+      "Kraftig törst och mycket kissande",
       "Kräkningar, ofta inom några timmar",
       "Diarré",
       "Ostadighet, trötthet",
@@ -223,7 +223,7 @@
     "pl": "Lepiej się nie dzielić. Jeśli dajesz psu ludzkie jedzenie, podawaj je zwykłe, bez soli i przypraw.",
     "cs": "Raději se o ně nedělte. Pokud psovi dáváte lidské jídlo, podávejte ho bez soli a koření.",
     "hr": "Bolje ih ne dijeli. Ako psu daješ ljudsku hranu, daj je bez dodataka, bez soli i začina.",
-    "sv": "Dela helst inte med dig. Om du ger människomat, servera den naturell, utan salt eller kryddor.",
+    "sv": "Dela helst inte med dig. Om du ger människomat, servera den utan salt eller kryddor.",
     "da": "Del helst ikke. Hvis du giver menneskemad, så server den uden tilsætning, salt eller krydderier.",
     "fi": "Parempi olla jakamatta. Jos annat ihmisten ruokaa, tarjoa se maustamattomana, ilman suolaa tai mausteita.",
     "nb": "Det er bedre å la være å dele. Hvis du gir menneskemat, bør den være uten salt eller krydder."
@@ -240,7 +240,7 @@
     "pl": "Słone przekąski są dla ludzi. Przez nadmiar soli psy chce się pić i mogą się rozchorować, więc dawaj psu jego własne smakołyki.",
     "cs": "Slané pochutiny jsou pro lidi. Když psi sní moc soli, mají žízeň a je jim zle, tak dej svému psovi jeho vlastní pamlsky.",
     "hr": "Slane grickalice su za ljude. Od previše soli psi postanu žedni i bolesni, zato svom psu daj njegove poslastice.",
-    "sv": "Salta snacks är för människor. För mycket salt gör hundar törstiga och sjuka, så ge din hund dess egna godbitar.",
+    "sv": "Salta snacks är för människor. För mycket salt gör hundar törstiga och sjuka, så ge hunden en egen hundgodbit.",
     "da": "Salte snacks er til mennesker. For meget salt gør hunde tørstige og syge, så giv din hund dens egne godbidder.",
     "fi": "Suolaiset naposteltavat ovat ihmisille. Liiasta suolasta koira tulee janoiseksi ja sairaaksi, joten anna koirallesi sen omia herkkuja.",
     "nb": "Salte snacks er for mennesker. For mye salt gjør hunder tørste og syke, så la hunden din få sine egne godbiter."
@@ -411,7 +411,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5081d6154f7366e709fca7e80d7f6d21800e10fee55c9b3da1eb7b1de4b18a0a"
+      "verified_hash": "902d97233ae9c37e30cdb55a36ca797861a49d66c1245991777a48d4cc97f33f"
     },
     "da": {
       "status": "verified",

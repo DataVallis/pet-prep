@@ -65,7 +65,7 @@
     "pl": "Nie w dużych ilościach. Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale zjedzenie dużej ilości soli, np. z domowej masy solnej, ciastoliny lub dużej ilości wody morskiej, już może. Objawy to m.in. wymioty, silne pragnienie, drżenie mięśni i drgawki.",
     "cs": "Ne, ve velkém množství ne. Slané jídlo s mírou by otravu solí způsobit nemělo, velké množství soli však ano – například z domácího slaného těsta, modelíny nebo spousty mořské vody. Mezi příznaky patří zvracení, silná žízeň, třes a záchvaty.",
     "hr": "Ne, ne u velikim količinama. Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali velika količina soli može, na primjer iz domaćeg slanog tijesta, tijesta za modeliranje ili iz puno morske vode. Znakovi su povraćanje, jaka žeđ, drhtanje mišića i napadaji.",
-    "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, stor törst, darrningar och kramper.",
+    "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, kraftig törst, darrningar och kramper.",
     "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, trylledej eller store mængder havvand. Symptomerne omfatter opkast, stærk tørst, rysten og kramper.",
     "fi": "Ei, ei suuria määriä. Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta suuri määrä suolaa esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä voi aiheuttaa. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
     "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Symptomene er bl.a. oppkast, sterk tørst, skjelvinger og kramper."
@@ -166,7 +166,7 @@
       "Drhtanje mišića ili napadaji"
     ],
     "sv": [
-      "Stor törst och kissar mycket",
+      "Kraftig törst och mycket kissande",
       "Kräkningar, ofta inom några timmar",
       "Diarré",
       "Ostadighet, trötthet",
@@ -224,7 +224,7 @@
     "pl": "Przez nadmiar soli psy bardzo chce się pić i mogą się rozchorować. Trzymaj sól i słoną ciastolinę z dala od psa.",
     "cs": "Když pes sní moc soli, má velkou žízeň a je mu hodně zle. Sůl i slanou modelínu nech mimo dosah psa.",
     "hr": "Od previše soli psi postanu jako žedni i bolesni. Drži sol i slano tijesto za modeliranje podalje od svog psa.",
-    "sv": "För mycket salt gör hundar jättetörstiga och sjuka. Håll salt och salt lekdeg borta från din hund.",
+    "sv": "För mycket salt gör hundar jättetörstiga och sjuka. Håll salt och lekdeg med salt borta från din hund.",
     "da": "For meget salt gør hunde meget tørstige og syge. Hold salt og trylledej med salt i væk fra din hund.",
     "fi": "Liiasta suolasta koira tulee hyvin janoiseksi ja sairaaksi. Pidä suola ja suolainen muovailutaikina kaukana koirastasi.",
     "nb": "For mye salt gjør hunder veldig tørste og syke. Hold salt og salt lekedeig unna hunden din."
@@ -443,7 +443,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "137a88a9b94225dbd025b0b78f36e31e830f8eaaae82de674702f10011ce91e1"
+      "verified_hash": "8d0479d6d462d8cbc8811417611d96501c27ba2f7e28ae86b2047dffe73d4a61"
     },
     "da": {
       "status": "verified",

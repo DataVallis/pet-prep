@@ -65,7 +65,7 @@
     "pl": "Tak, z umiarem. Sardynki z puszki w wodzie, niesolone i nieprzyprawione, to odpowiedni rybny smakołyk, a ich drobne ości po konserwowaniu są miękkie i jadalne. Świeże sardynki muszą być dobrze ugotowane. Unikaj ryb słonych, przyprawionych lub surowych.",
     "cs": "Ano, s mírou. Sardinky z konzervy ve vodě, nesolené a nekořeněné, jsou vhodným rybím pamlskem a jejich drobné kosti jsou po zavaření měkké a jedlé. Čerstvé sardinky musí být důkladně tepelně upravené. Vyhněte se slaným, kořeněným nebo syrovým rybám.",
     "hr": "Da, umjereno. Srdele iz konzerve u vodi, neslane i bez začina, prikladne su kao riblja poslastica, a njihove sitne kosti nakon konzerviranja omekšaju i jestive su. Svježe srdele moraju biti potpuno termički obrađene. Izbjegavaj slanu, začinjenu ili sirovu ribu.",
-    "sv": "Ja, med måtta. Sardiner på burk i vatten, osaltade och okryddade, är en passande fiskgodbit, och de små benen är mjuka och ätbara efter konserveringen. Färska sardiner måste vara helt tillagade. Undvik salt, kryddad eller rå fisk.",
+    "sv": "Ja, med måtta. Sardiner på burk i vatten, osaltade och okryddade, är en lämplig fiskgodbit, och de små benen är mjuka och ätbara efter konserveringen. Färska sardiner måste vara helt tillagade. Undvik saltad, kryddad eller rå fisk.",
     "da": "Ja, med måde. Sardiner på dåse i vand, usaltede og ukrydrede, er en passende fiskegodbid, og de små ben er bløde og spiselige efter konserveringen. Friske sardiner skal være gennemtilberedte. Undgå salt, krydret eller rå fisk.",
     "fi": "Saa, kohtuudella. Veteen säilötyt, suolaamattomat ja maustamattomat purkkisardiinit sopivat kalaherkuksi, ja niiden pienet ruodot ovat säilönnän jälkeen pehmeitä ja syötäviä. Tuoreet sardiinit pitää kypsentää täysin. Vältä suolattua, maustettua tai raakaa kalaa.",
     "nb": "Ja, med måte. Hermetiske sardiner i vann, usaltede og ukrydrede, er en passende fiskegodbit, og de bitte små beina er myke og spiselige etter hermetiseringen. Ferske sardiner må være gjennomstekte. Unngå salt, krydret eller rå fisk."
@@ -134,7 +134,7 @@
     "pl": "Sardynki w wodzie mogą być od czasu do czasu rybnym smakołykiem dla psa. Słona ryba nie jest dla psów.",
     "cs": "Sardinky ve vodě můžou být pro psa občas rybí pamlsek. Slaná ryba pro psy není.",
     "hr": "Srdele u vodi mogu biti riblja poslastica za psa, s vremena na vrijeme. Slana riba nije za pse.",
-    "sv": "Sardiner i vatten kan vara en fiskig godbit för en hund ibland. Salt fisk är inte för hundar.",
+    "sv": "Sardiner i vatten kan vara en fiskig godbit för en hund ibland. Saltad fisk är inte för hundar.",
     "da": "Sardiner i vand kan være en lækker fiskegodbid til en hund en gang imellem. Salt fisk er ikke til hunde.",
     "fi": "Veteen säilötyt sardiinit voivat olla koiralle kalaherkku silloin tällöin. Suolainen kala ei sovi koirille.",
     "nb": "Sardiner i vann kan være en fiskegodbit for en hund av og til. Salt fisk er ikke noe for hunder."
@@ -285,7 +285,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ea97eedf7692425e91366d6469188a00b87d4e404a1c828c7f096e86beb1030"
+      "verified_hash": "cee96b965eb80d1a6c553da9f691dc60b83d1b12a5e9bfe10c81a5d474277ae8"
     },
     "da": {
       "status": "verified",

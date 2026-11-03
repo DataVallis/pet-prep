@@ -157,7 +157,7 @@
     "sv": [
       "Vidgade pupiller",
       "Tegelrött tandkött",
-      "Svårt att andas, flämtning",
+      "Svårt att andas, flåsande",
       "Chock"
     ],
     "da": [
@@ -209,7 +209,7 @@
     "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę.",
     "cs": "Meruňkové pecky, listy a stonky psům škodí. Meruňky nech pro lidi, a když pes kouše pecku, řekni to dospělému.",
     "hr": "Koštice, listovi i peteljke marelice štete psima. Marelice ostavi ljudima, a ako pas žvače košticu, reci odrasloj osobi.",
-    "sv": "Aprikoskärnor, blad och skaft är dåliga för hundar. Spara aprikoser till människor, och säg till en vuxen om hunden tuggar på en kärna.",
+    "sv": "Aprikoskärnor, blad och skaft är inte bra för hundar. Aprikoser är till för människor, och säg till en vuxen om hunden tuggar på en kärna.",
     "da": "Abrikossten, -blade og -stilke er dårlige for hunde. Lad abrikoserne være til mennesker, og sig det til en voksen hvis din hund tygger på en sten.",
     "fi": "Aprikoosin kivet, lehdet ja varret ovat koirille pahasta. Jätä aprikoosit ihmisille ja kerro aikuiselle, jos koirasi pureskelee kiveä.",
     "nb": "Aprikossteiner, -blader og -stilker er ikke bra for hunder. La aprikosene være for mennesker, og si fra til en voksen hvis hunden tygger på en stein."
@@ -343,7 +343,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "82ce6367383aeffb18b8c3f539df9db0871cadaf9219944b3533ef9b4c5c67f2"
+      "verified_hash": "37fdf414d05af7de82f6b5f3e1390dc55c353026d4f6c222e3e1c2e7df0152d1"
     },
     "da": {
       "status": "verified",
