@@ -27,7 +27,7 @@ class RedeemItemRequest extends FormRequest
             'product_id' => ['required', 'string', 'max:255'],
             'wish_id' => ['nullable', 'integer', 'min:1'],
             // M6-W03: the design of a purchase without a wish (a wish carries its own); missing →
-            // the item's first design; unknown → 422 `invalid_design`.
+            // the item's first design; an unknown one too (a paid purchase is never refused over a design).
             'design' => ['nullable', 'string', 'max:64'],
             // M6-W03: the welcome bundle — a design per item (each optional, default = first design).
             // (not `array:bed,…` — Scramble would type every key as required; other keys are ignored)

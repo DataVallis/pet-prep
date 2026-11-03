@@ -5,6 +5,7 @@ use App\Enums\Species;
 use App\Events\PetUpdated;
 use App\Filament\Resources\ItemMediaResource\Pages\ListItemMedia;
 use App\Jobs\SendItemMediaAlert;
+use App\Jobs\StoreItemMedia;
 use App\Models\AiSpendLedger;
 use App\Models\ItemMedia;
 use App\Models\ItemMediaNotice;
@@ -12,9 +13,9 @@ use App\Models\Pet;
 use App\Models\PetItem;
 use App\Models\PetLook;
 use App\Models\PetMedia;
+use App\Models\PetWish;
 use App\Models\PushNotification;
 use App\Models\User;
-use App\Models\WishCredit;
 use App\Services\CareScoreService;
 use App\Services\FalWebhookVerifier;
 use App\Services\Media\FalGateway;
@@ -25,6 +26,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Http;
@@ -277,7 +279,7 @@ describe('designs', function () {
             ->and(ItemDesigns::description('dog_treats'))->toContain('dog biscuit');
     });
 
-    it('lists the designs in the child catalogue (names in the request language) and requires one when wishing', function () {
+    it('lists the designs in the child catalogue (names in the request language); a wish defaults to the first design, refuses only unknown ones', function () {
         [, $child, $pet] = imFamily();
         imAs($child);
 
@@ -289,11 +291,12 @@ describe('designs', function () {
             ->and($bed['design'])->toBeNull()
             ->and($treats['designs'])->toBe([]);
 
-        postJson('/api/child/wishes', ['item_key' => 'bed'])->assertStatus(422)->assertJsonPath('reason', 'invalid_design');
         postJson('/api/child/wishes', ['item_key' => 'bed', 'design' => 'cat_bed_grey_cave'])->assertStatus(422)->assertJsonPath('reason', 'invalid_design');
         postJson('/api/child/wishes', ['item_key' => 'treats', 'design' => 'dog_bed_round_grey'])->assertStatus(422)->assertJsonPath('reason', 'invalid_design');
         postJson('/api/child/wishes', ['item_key' => 'bed', 'design' => 'dog_bed_wicker_checked'])->assertCreated()
             ->assertJsonPath('wish.design', 'dog_bed_wicker_checked');
+        // QA #655 m2: an app build without the picker sends no design → the item's first design.
+        postJson('/api/child/wishes', ['item_key' => 'bowls'])->assertCreated()->assertJsonPath('wish.design', 'dog_bowls_steel_stand');
 
         $bed = collect(getJson('/api/child/wishes')->json('items'))->firstWhere('key', 'bed');
         expect($bed['status'])->toBe('requested')->and($bed['design'])->toBe('dog_bed_wicker_checked');
@@ -305,17 +308,13 @@ describe('designs', function () {
         imAs($child);
         $wish = postJson('/api/child/wishes', ['item_key' => 'bowls', 'design' => 'dog_bowls_bamboo_stand'])->assertCreated()->json('wish.id');
 
-        imRedeem($parent, $pet, 'petprep_wish_bowls', ['wish_id' => $wish, 'design' => 'dog_bowls_steel_stand'])
-            ->assertStatus(422)->assertJsonPath('reason', 'invalid_design');
-        expect(WishCredit::whereNull('pet_id')->count())->toBe(1); // nothing used
-        imAs($parent);
-        postJson("/api/parent/pets/{$pet->id}/items/redeem", ['product_id' => 'petprep_wish_bowls', 'wish_id' => $wish])->assertOk();
+        // QA #655 m1: a paid purchase is never refused over a design — the wish's design wins.
+        imRedeem($parent, $pet, 'petprep_wish_bowls', ['wish_id' => $wish, 'design' => 'dog_bowls_steel_stand'])->assertOk();
         expect(PetItem::where('pet_id', $pet->id)->where('item_key', 'bowls')->value('design'))->toBe('dog_bowls_bamboo_stand');
 
         imRedeem($parent, $pet, 'petprep_wish_toy_1', ['design' => 'dog_rope_rainbow'])->assertOk();
-        imRedeem($parent, $pet, 'petprep_wish_toy_2', ['design' => 'nope'])->assertStatus(422)->assertJsonPath('reason', 'invalid_design');
-        imAs($parent);
-        $items = postJson("/api/parent/pets/{$pet->id}/items/redeem", ['product_id' => 'petprep_wish_toy_2'])->assertOk()->json('items');
+        // An unknown design → the first design (no 422).
+        $items = imRedeem($parent, $pet, 'petprep_wish_toy_2', ['design' => 'nope'])->assertOk()->json('items');
         expect(PetItem::where('pet_id', $pet->id)->where('item_key', 'toy_1')->value('design'))->toBe('dog_rope_rainbow')
             ->and(PetItem::where('pet_id', $pet->id)->where('item_key', 'toy_2')->value('design'))->toBe('dog_squeaky_duck')
             ->and(collect($items)->firstWhere('key', 'toy_2')['design'])->toBe('dog_squeaky_duck')
@@ -333,6 +332,38 @@ describe('designs', function () {
         PetItem::create(['pet_id' => $pet->id, 'item_key' => 'bed', 'kind' => 'durable', 'variant' => 'dog_bed', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]);
 
         imChildState($child)->assertJsonPath('wishes.items.0.design', 'dog_bed_round_grey');
+    });
+
+    it('gives a cat bundle cat designs: the chosen ones, else the first of each item', function () {
+        config(['services.fal_ai.key' => null]);
+        seedBreedConfigs();
+        [$parent, , $cat] = imFamily(null, ['breed_type' => 'siberian_cat'], withPicture: false);
+        imRedeem($parent, $cat, 'petprep_wish_bundle_welcome', ['designs' => ['toy_1' => 'cat_mouse_white_knit', 'bed' => 'dog_bed_round_grey']])->assertOk();
+
+        expect(PetItem::where('pet_id', $cat->id)->pluck('design', 'item_key')->all())
+            ->toBe(['bed' => 'cat_basket_wicker_cream', 'bowls' => 'cat_bowls_white_gold', 'toy_1' => 'cat_mouse_white_knit']);
+    });
+
+    it('migration backfill: durable items and open wishes get the first design of their species, treats and decided wishes none', function () {
+        seedBreedConfigs();
+        [, $child, $dog] = imFamily(null, [], withPicture: false);
+        [, $catChild, $cat] = imFamily(null, ['breed_type' => 'siberian_cat'], withPicture: false);
+        $rows = [
+            'dog_bed' => PetItem::create(['pet_id' => $dog->id, 'item_key' => 'bed', 'kind' => 'durable', 'variant' => 'dog_bed', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]),
+            'cat_toy' => PetItem::create(['pet_id' => $cat->id, 'item_key' => 'toy_2', 'kind' => 'durable', 'variant' => 'cat_feather', 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]),
+            'treats' => PetItem::create(['pet_id' => $dog->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()]),
+        ];
+        $open = PetWish::create(['pet_id' => $cat->id, 'child_user_id' => $catChild->id, 'item_key' => 'bowls', 'status' => 'open']);
+        $declined = PetWish::create(['pet_id' => $dog->id, 'child_user_id' => $child->id, 'item_key' => 'bowls', 'status' => 'declined']);
+
+        $migration = require database_path('migrations/2027_03_07_120000_add_item_media.php');
+        (new ReflectionMethod($migration, 'backfillDesigns'))->invoke($migration);
+
+        expect($rows['dog_bed']->fresh()->design)->toBe('dog_bed_round_grey')
+            ->and($rows['cat_toy']->fresh()->design)->toBe('cat_wand_rainbow_feathers')
+            ->and($rows['treats']->fresh()->design)->toBeNull()
+            ->and($open->fresh()->design)->toBe('cat_bowls_white_gold')
+            ->and($declined->fresh()->design)->toBeNull();
     });
 });
 
@@ -393,9 +424,21 @@ describe('pet content', function () {
         get(str_replace('https://api.petprep.si', '', $bed['video']))->assertOk();
 
         // Another family's parent may not use the URL with a token.
-        [$stranger] = imFamily();
+        [$stranger, , $strangerPet] = imFamily();
         imAs($stranger);
-        get(str_replace('https://api.petprep.si', '', $bed['video']))->assertForbidden();
+        $path = str_replace('https://api.petprep.si', '', $bed['video']);
+        get($path)->assertForbidden();
+        // QA #655 m6: the row belongs to another pet → 404 (a correctly signed URL for the wrong pet).
+        $row = ItemMedia::where('kind', 'clip')->firstOrFail();
+        $wrongPet = str_replace('https://api.petprep.si', '', app(ItemMediaService::class)->signedUrl($row, $strangerPet));
+        get($wrongPet)->assertNotFound();
+        // fal's start-frame URL (no `pet`) refuses any token, but works without one.
+        $falUrl = str_replace('https://api.petprep.si', '', app(ItemMediaService::class)->falFetchUrl($row));
+        imAs($child);
+        get($falUrl)->assertForbidden();
+        app('auth')->forgetGuards();
+        $this->flushHeaders();
+        get($falUrl)->assertOk();
 
         app(ItemMediaService::class)->settle($pet->fresh());
         artisan('media:item-media')->assertSuccessful();
@@ -621,6 +664,60 @@ describe('pet content', function () {
         $admin->forceFill(['is_superadmin' => true])->save();
         $this->actingAs($admin);
         Livewire::test(ListItemMedia::class)->assertCanSeeTableRecords([$row]);
+    });
+
+    it('shows the picture alone while the clip profile is off (never »Na poti« for ever), and refreshes once the clip comes — one push', function () {
+        Event::fake([PetUpdated::class]);
+        config(['media.profiles.video.kling_v3_pro.enabled' => false]);
+        [, $child, $pet] = imFamily(null);
+        PetItem::create(['pet_id' => $pet->id, 'item_key' => 'treats', 'kind' => 'consumable', 'variant' => 'dog_treats', 'quantity_total' => 10, 'quantity_left' => 10, 'acquired_at' => now()]);
+
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        expect(imFalSubmits('clip'))->toHaveCount(0)
+            ->and(app(ItemMediaService::class)->readiness($pet->fresh()))->toBe(['treats' => true])
+            ->and(imChildState($child)->json('pet.media.items.treats.video'))->toBeNull()
+            ->and(imChildState($child)->json('pet.media.items.treats.image'))->not->toBeNull()
+            ->and(ItemMediaNotice::where('pet_id', $pet->id)->value('outcome'))->toBe('fallback');
+
+        // QA #655 m3: the clip comes later (profile on again) → the same stage is announced again, no second push.
+        config(['media.profiles.video.kling_v3_pro.enabled' => true]);
+        artisan('media:item-media')->assertSuccessful();
+        imComplete();
+        expect(imChildState($child)->json('pet.media.items.treats.video'))->not->toBeNull()
+            ->and(ItemMediaNotice::where('pet_id', $pet->id)->value('outcome'))->toBe('content')
+            ->and(PushNotification::where('type', 'item_ready')->where('pet_id', $pet->id)->count())->toBe(1)
+            ->and(collect(Event::dispatched(PetUpdated::class))->filter(fn ($e) => $e[0]->eventType === 'item_media_ready'))->toHaveCount(2);
+    });
+
+    it('retries our own failed download from the fal URL (free) before failing the row for a paid regeneration', function () {
+        Queue::fake([StoreItemMedia::class]);
+        [, , $pet] = imFamily(null);
+        $row = ItemMedia::create(['scope' => 'pet', 'pet_id' => $pet->id, 'item_key' => 'bed', 'design' => 'dog_bed_round_grey', 'kind' => 'image',
+            'status' => 'running', 'request_id' => 'dl-1', 'source_url' => 'https://v3.fal.media/files/im/dl-1.jpg']);
+        $service = app(ItemMediaService::class);
+
+        (new StoreItemMedia($row->id))->failed(new RuntimeException('disk full'));
+        expect($row->fresh()->status)->toBe('running')->and($row->fresh()->download_attempts)->toBe(1);
+
+        $this->travel(61)->minutes();
+        $service->sweep();
+        Queue::assertPushed(StoreItemMedia::class, fn ($job) => $job->itemMediaId === $row->id);
+        expect(imFalSubmits())->toHaveCount(0); // no new fal call
+
+        $service->downloadFailed($row->fresh(), 'again');
+        $service->downloadFailed($row->fresh(), 'and again');
+        expect($row->fresh()->status)->toBe('failed')->and($row->fresh()->error_reason)->toBe('http_error');
+    });
+
+    it('lists item files in media:disk-report (not orphans)', function () {
+        Storage::disk('pet_media')->put('items/1/dog_bed_round_grey-g1.jpg', IM_JPEG.'x');
+        ItemMedia::create(['scope' => 'catalogue', 'item_key' => 'bed', 'design' => 'dog_bed_round_grey', 'kind' => 'picture', 'status' => 'ready',
+            'storage_path' => 'items/1/dog_bed_round_grey-g1.jpg', 'bytes' => 21]);
+
+        Artisan::call('media:disk-report');
+        expect(Artisan::output())->toContain('item media (catalogue)')
+            ->toContain('Orphans (no pet_media / history / derivative / contact sheet / item_media row): 0');
     });
 
     it('builds species-correct prompts for a cat', function () {

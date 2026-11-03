@@ -624,7 +624,7 @@ describe('media:disk-report', function () {
         $out = Artisan::output();
 
         expect($out)->toContain('video')->toContain('Files on disk: 4')
-            ->toContain('Orphans (no pet_media / history / derivative / contact sheet row): 1')->toContain('orphan looks/orphan.mp4')
+            ->toContain('Orphans (no pet_media / history / derivative / contact sheet / item_media row): 1')->toContain('orphan looks/orphan.mp4')
             ->toContain('awaiting deletion (grace period): 1')
             ->toContain('Clip candidates older than 24 h: 1')->toContain('looks/sick-cand.mp4')
             ->toContain('nothing was deleted')

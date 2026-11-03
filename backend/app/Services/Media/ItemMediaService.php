@@ -84,6 +84,9 @@ class ItemMediaService
     /** A queued request without a result for this long is given up (`timed_out`). */
     public const TIMEOUT_MINUTES = 120;
 
+    /** QA #655 m5: rounds of our own download (each = StoreItemMedia's tries) before the row fails and is regenerated. */
+    public const DOWNLOAD_ROUNDS = 3;
+
     /** Failures that wait for money / the switch and are never counted as a retry. */
     public const WAITING_REASONS = [AiCallFailure::BudgetDaily, AiCallFailure::BudgetMonthly, AiCallFailure::BudgetRun, AiCallFailure::FalBalance, AiCallFailure::Disabled];
 
@@ -112,10 +115,20 @@ class ItemMediaService
         return max(0, (int) config('media.item_media.retry_after_minutes', 30));
     }
 
-    /** fal + both item profiles usable — otherwise no item content is made at all. */
+    /** fal + the item image profile usable — otherwise no item content is made at all (no_media). */
     public function enabled(): bool
     {
         return $this->fal->isEnabled() && $this->profiles->itemImage() !== null;
+    }
+
+    /**
+     * QA #655 m4: the clip profile (the state video profile at `clip_seconds.item`) is usable. While
+     * it is not, no clip is made and an item whose key image is shown counts as shown (fallback
+     * with the picture) — never »Na poti« for ever.
+     */
+    public function clipsEnabled(): bool
+    {
+        return $this->fal->isEnabled() && $this->profiles->clipVideo('item')->enabled;
     }
 
     // ──────────────────────────────────────────────────────────────
@@ -214,17 +227,16 @@ class ItemMediaService
         $picture = $this->pictureOf($pet, $slots);
         $noMedia = $this->noMedia($pet, $picture);
         $rows = $picture === null ? collect() : $this->rowsQuery($picture)->whereIn('design', array_column($owned, 'content_key'))->get();
+        $clips = ! $noMedia && $this->clipsEnabled();
 
         $states = [];
         foreach ($owned as $key => $own) {
             $state = $own + ['outcome' => self::OUTCOME_WAITING, 'stage' => $picture['stage'] ?? null, 'image' => null, 'clip' => null];
 
-            if ($noMedia) {
-                $states[$key] = ['outcome' => self::OUTCOME_NO_MEDIA] + $state;
-
-                continue;
-            }
             if ($picture === null) {
+                if ($noMedia) {
+                    $state['outcome'] = self::OUTCOME_NO_MEDIA;
+                }
                 $states[$key] = $state; // the pet's own picture is on its way
 
                 continue;
@@ -239,8 +251,11 @@ class ItemMediaService
             $state['clip'] = $clipCurrent ? $clip : null;
             $state['outcome'] = match (true) {
                 $clipCurrent => self::OUTCOME_CONTENT,
+                // AI / the item profile switched off: what is already made stays shown, else none comes.
+                $noMedia => $imageCurrent ? self::OUTCOME_FALLBACK : self::OUTCOME_NO_MEDIA,
                 ! $imageCurrent && $image !== null && $image->isExhausted() && $image->target_path === $picture['path'] => self::OUTCOME_FALLBACK,
                 $imageCurrent && $clip !== null && $clip->isExhausted() && $clip->target_path === $image->storage_path => self::OUTCOME_FALLBACK,
+                $imageCurrent && ! $clips => self::OUTCOME_FALLBACK, // clip profile off: the picture alone
                 default => self::OUTCOME_WAITING,
             };
             $states[$key] = $state;
@@ -420,6 +435,9 @@ class ItemMediaService
             $image = $this->row($picture, $own['item_key'], $own['content_key'], ItemMedia::KIND_IMAGE);
 
             if ($image->isServable() && $image->source_path === $picture['path']) {
+                if (! $this->clipsEnabled()) {
+                    continue; // QA #655 m4: no clip while its profile is off — the picture is shown
+                }
                 $clip = $this->row($picture, $own['item_key'], $own['content_key'], ItemMedia::KIND_CLIP);
                 $dispatched += $this->ensureRow($clip, (string) $image->storage_path) ? 1 : 0;
 
@@ -477,6 +495,7 @@ class ItemMediaService
             'error' => null,
             'auto_retries' => 0,
             'prompt_variant' => 0,
+            'download_attempts' => 0,
             'exhausted_at' => null,
             'alerted_at' => null,
             'completed_at' => null,
@@ -777,6 +796,7 @@ class ItemMediaService
 
         $row->update([
             'status' => ItemMedia::STATUS_RUNNING,
+            'download_attempts' => 0,
             'source_url' => $result['url'] ?? $result['video_url'] ?? null,
             'error_reason' => null,
             'error' => null,
@@ -911,6 +931,30 @@ class ItemMediaService
     }
 
     /**
+     * QA #655 m5: StoreItemMedia gave up on a result whose fal URL may still be valid (network /
+     * disk trouble on OUR side). The row stays `running` with its `source_url`: the sweep downloads
+     * it again (free) after an hour — only after DOWNLOAD_ROUNDS rounds does it fail and get
+     * regenerated (paid). An expired / refused fal URL is a permanent download error → fail at once.
+     */
+    public function downloadFailed(ItemMedia $row, string $message): void
+    {
+        $updated = ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_RUNNING)->whereNotNull('source_url')
+            ->where('download_attempts', '<', self::DOWNLOAD_ROUNDS - 1)
+            ->update(['download_attempts' => DB::raw('download_attempts + 1'), 'updated_at' => now()]);
+
+        if ($updated === 1) {
+            Log::warning('ItemMediaService: download failed, the sweep tries again (no new fal call)', ['item_media_id' => $row->id, 'error' => $message]);
+
+            return;
+        }
+
+        $fresh = $row->fresh();
+        if ($fresh !== null && $fresh->status === ItemMedia::STATUS_RUNNING) {
+            $this->fail($fresh, AiCallFailure::HttpError, 'Download failed: '.$message);
+        }
+    }
+
+    /**
      * A row failed (submit, webhook, poll, download). A look / pet row's pets are told once its
      * recovery is exhausted (heal()).
      */
@@ -932,7 +976,9 @@ class ItemMediaService
      * Tell the family once per owned item and stage that its content is there (or will not
      * come — fallback / no AI media): one PetUpdated `item_media_ready` for the pet (if anything
      * new) and one `item_ready` push per item the first time (a new stage only refreshes the
-     * picture — no second »new bed« push). Idempotent (`item_media_notices`).
+     * picture — no second »new bed« push). A stage settled again with another outcome (fallback /
+     * no media → content after a Regenerate) broadcasts again, without a push. Idempotent
+     * (`item_media_notices`).
      *
      * @return list<string> item keys newly settled
      */
@@ -958,6 +1004,16 @@ class ItemMediaService
                 if (! $seen && $pet->is_active && ! $pet->is_game_over) {
                     $this->notifications->itemReady($pet, $key);
                 }
+
+                continue;
+            }
+            // QA #655 m3: the same stage settled again with another outcome (a fallback / no-media item
+            // got its content after a Regenerate / Generate missing): the apps refresh — no second push.
+            $changed = ItemMediaNotice::query()->where('pet_id', $pet->id)->where('item_key', $key)->where('design', $design)
+                ->where('life_stage', (string) ($state['stage'] ?? ''))->where('outcome', '!=', $state['outcome'])
+                ->update(['outcome' => $state['outcome']]);
+            if ($changed > 0) {
+                $new[] = $key;
             }
         }
 
@@ -1143,6 +1199,7 @@ class ItemMediaService
             ->update(array_merge([
                 'status' => ItemMedia::STATUS_PENDING,
                 'generation' => $row->generation + 1,
+                'download_attempts' => 0,
                 'request_id' => null,
                 'status_url' => null,
                 'response_url' => null,
@@ -1169,7 +1226,9 @@ class ItemMediaService
             default => $this->profiles->clipVideo('item'),
         };
 
-        return $profile !== null && $this->guard->refusalFor($profile->estimatedCostUsd(), AiSpendPurpose::ItemMedia) === null;
+        // QA #655 m4: a switched-off profile is not »money left« — the row keeps waiting (its item is
+        // shown without it: statesFor()).
+        return $profile !== null && $profile->enabled && $this->guard->refusalFor($profile->estimatedCostUsd(), AiSpendPurpose::ItemMedia) === null;
     }
 
     /**
@@ -1247,6 +1306,36 @@ class ItemMediaService
         }
 
         return $this->ensure($pet);
+    }
+
+    /**
+     * Admin (QA #655 nit): what »Generate missing« would spend for this pet at most — per owned item
+     * without current content: its key image (+ the design's catalogue picture when that is not made)
+     * and its clip. A shared look's content is made once for every pet of the look.
+     *
+     * @return array{items: int, cost_usd: float, shared: bool}
+     */
+    public function missingCostFor(Pet $pet): array
+    {
+        $states = $this->statesFor($pet);
+        $image = $this->profiles->itemImage()?->estimatedCostUsd() ?? 0.0;
+        $picture = $this->profiles->itemPicture()?->estimatedCostUsd() ?? 0.0;
+        $clip = $this->clipsEnabled() ? $this->profiles->clipVideo('item')->estimatedCostUsd() : 0.0;
+        $pictures = ItemMedia::where('scope', ItemMedia::SCOPE_CATALOGUE)->whereNotNull('storage_path')->pluck('design')->flip();
+        $items = 0;
+        $cost = 0.0;
+        foreach ($states as $state) {
+            if ($state['outcome'] === self::OUTCOME_CONTENT || $state['outcome'] === self::OUTCOME_NO_MEDIA) {
+                continue;
+            }
+            $items++;
+            if ($state['image'] === null) {
+                $cost += $image + (ItemDesigns::find((string) $state['content_key']) !== null && ! $pictures->has($state['content_key']) ? $picture : 0.0);
+            }
+            $cost += $clip;
+        }
+
+        return ['items' => $items, 'cost_usd' => round($cost, 2), 'shared' => $pet->pet_look_id !== null];
     }
 
     /**

@@ -2,7 +2,6 @@
 
 namespace App\Jobs;
 
-use App\Enums\AiCallFailure;
 use App\Models\ItemMedia;
 use App\Services\Media\ItemMediaService;
 use Illuminate\Bus\Queueable;
@@ -50,8 +49,10 @@ class StoreItemMedia implements ShouldBeUnique, ShouldQueue
     {
         $row = ItemMedia::find($this->itemMediaId);
 
+        // QA #655 m5: our download failed — the fal URL may still be valid: the sweep downloads again
+        // (free) before the row fails and is regenerated (paid).
         if ($row !== null && $row->status === ItemMedia::STATUS_RUNNING) {
-            app(ItemMediaService::class)->fail($row, AiCallFailure::HttpError, 'Download failed: '.$exception?->getMessage());
+            app(ItemMediaService::class)->downloadFailed($row, (string) $exception?->getMessage());
         }
 
         Log::error('StoreItemMedia: giving up', ['item_media_id' => $this->itemMediaId, 'error' => $exception?->getMessage()]);

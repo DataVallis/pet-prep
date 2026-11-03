@@ -194,7 +194,8 @@ class WishService
 
     /**
      * POST /api/child/wishes: the child wishes for $itemKey for their pet — in the design
-     * $design (M6-W03: required for an item with designs, absent for treats; else 422 invalid_design).
+     * $design (M6-W03: missing → the item's first design (older app builds); unknown for the item,
+     * or any design for treats → 422 invalid_design).
      *
      * @throws WishException
      */
@@ -209,8 +210,15 @@ class WishService
         }
         $design = $design === '' ? null : $design;
         $species = $pet->speciesValue();
-        if (ItemDesigns::hasDesigns($item->key, $species) ? ! ItemDesigns::isValid($item->key, $species, $design) : $design !== null) {
-            throw new WishException('invalid_design', 'Pick one of the designs of this item.');
+        // QA #655 m2: an app build without the design picker sends none → the item's first design;
+        // only a design that does not exist for this item (or any design for treats) is refused.
+        if (ItemDesigns::hasDesigns($item->key, $species)) {
+            $design ??= ItemDesigns::defaultFor($item->key, $species);
+            if (! ItemDesigns::isValid($item->key, $species, $design)) {
+                throw new WishException('invalid_design', 'Pick one of the designs of this item.');
+            }
+        } elseif ($design !== null) {
+            throw new WishException('invalid_design', 'This item has no designs.');
         }
 
         $wish = DB::transaction(function () use ($pet, $child, $item, $design): PetWish {

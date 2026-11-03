@@ -77,6 +77,9 @@ return new class extends Migration
             // and when the chain was given up (the app then shows the item without its content).
             $table->unsignedSmallInteger('auto_retries')->default(0);
             $table->unsignedSmallInteger('prompt_variant')->default(0);
+            // QA #655 m5: our own download / store of a result failed (its fal URL may still be valid) —
+            // the sweep retries the DOWNLOAD (free) before the row fails and is regenerated (paid).
+            $table->unsignedSmallInteger('download_attempts')->default(0);
             $table->timestamp('exhausted_at')->nullable();
             $table->timestamp('alerted_at')->nullable();
             $table->timestamp('completed_at')->nullable();

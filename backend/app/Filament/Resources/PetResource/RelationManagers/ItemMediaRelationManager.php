@@ -44,7 +44,13 @@ class ItemMediaRelationManager extends RelationManager
                     ->label('Generate missing')
                     ->icon('heroicon-o-sparkles')
                     ->requiresConfirmation()
-                    ->modalDescription('Queues the AI content of every item this pet owns that is missing for its current picture (also starts a new try for failed ones). A shared look\'s files are made once for every pet of the look. Every call goes through the AI budget.')
+                    ->modalDescription(function (): string {
+                        $pet = $this->getOwnerRecord();
+                        $plan = $pet instanceof Pet ? app(ItemMediaService::class)->missingCostFor($pet) : ['items' => 0, 'cost_usd' => 0.0, 'shared' => false];
+
+                        return sprintf('Queues the AI content of the %d item(s) this pet owns that are missing for its current picture (also a new try for failed ones) — at most ≈ $%.2f, through the AI budget. ', $plan['items'], $plan['cost_usd'])
+                            .($plan['shared'] ? 'This pet shows a shared look: the files are made once for every pet of the look (0 $ for them).' : 'This pet has its own media: the files are its own.');
+                    })
                     ->action(function (): void {
                         $pet = $this->getOwnerRecord();
                         $n = $pet instanceof Pet ? app(ItemMediaService::class)->generateMissing($pet) : 0;

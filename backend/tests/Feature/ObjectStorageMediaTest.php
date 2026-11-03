@@ -1,6 +1,7 @@
 <?php
 
 use App\Filament\Widgets\SystemHealth\SystemHealthStats;
+use App\Models\ItemMedia;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
@@ -321,6 +322,26 @@ describe('media:move-to-object-storage', function () {
         ])
             ->and(Storage::disk('pet_media_s3')->get("{$pet->id}/idle-g1.mp4"))->toBe(Storage::disk('pet_media')->get("{$pet->id}/idle-g1.mp4"))
             ->and(Storage::disk('pet_media')->allFiles())->toHaveCount(7); // nothing local deleted
+    });
+
+    it('copies »Želje« item content too: catalogue pictures, shared look rows and own-pet rows (QA #655 M1)', function () {
+        [, , $pet] = osFamilyPet();
+        $files = [
+            'items/1/dog_bed_round_grey-g1.jpg' => ['scope' => 'catalogue', 'kind' => 'picture'],
+            'looks/7/item-dog_bed_round_grey-clip-young-g1.mp4' => ['scope' => 'look', 'kind' => 'clip', 'pet_look_id' => 7, 'life_stage' => 'young'],
+            "{$pet->id}/item-dog_treats-image-young-g1.jpg" => ['scope' => 'pet', 'kind' => 'image', 'pet_id' => $pet->id, 'item_key' => 'treats', 'design' => 'dog_treats'],
+        ];
+        foreach ($files as $path => $row) {
+            Storage::disk('pet_media')->put($path, str_ends_with($path, '.mp4') ? OS_MP4 : OS_JPEG);
+            ItemMedia::create($row + ['item_key' => 'bed', 'design' => 'dog_bed_round_grey', 'status' => 'ready', 'storage_path' => $path]);
+        }
+
+        expect(app(ObjectStorageMover::class)->referencedPaths())->toEqualCanonicalizing(array_keys($files));
+        $this->artisan('media:move-to-object-storage')->assertSuccessful();
+
+        foreach (array_keys($files) as $path) {
+            expect(Storage::disk('pet_media_s3')->get($path))->toBe(Storage::disk('pet_media')->get($path));
+        }
     });
 
     it('is idempotent and resumable with --limit', function () {

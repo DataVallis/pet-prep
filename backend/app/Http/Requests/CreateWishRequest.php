@@ -23,8 +23,8 @@ class CreateWishRequest extends FormRequest
     {
         return [
             'item_key' => ['required', 'string', 'max:32'],
-            // M6-W03: the design the child picked (`designs[].key` of the catalogue row) — required
-            // for an item with designs, absent for treats (WishService → 422 `invalid_design`).
+            // M6-W03: the design the child picked (`designs[].key` of the catalogue row); missing → the
+            // item's first design (older app builds); unknown / any for treats → 422 `invalid_design`.
             'design' => ['nullable', 'string', 'max:64'],
         ];
     }

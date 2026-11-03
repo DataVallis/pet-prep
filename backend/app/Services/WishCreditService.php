@@ -69,14 +69,13 @@ class WishCreditService
     /**
      * M6-W03 designs: a durable item gets the design of the wish it is bought for (the child's
      * pick); without a wish the parent's `$design`; the bundle (S12) takes `$designs[key]` per
-     * item, the wish's design for the wished item, else each item's FIRST design. A missing
-     * design never refuses a paid purchase — it falls back to the item's first design; an
-     * unknown one (or one that contradicts the wish) → 422 invalid_design before anything is used.
+     * item, the wish's design for the wished item, else each item's FIRST design. A missing or
+     * unknown design never refuses a paid purchase (QA #655 m1) — it falls back to the first design.
      *
      * @param  array<string, string|null>  $designs  bundle: item key => design
      * @return array{status: 'assigned'|'already_assigned', pet: Pet, credit: WishCredit}
      *
-     * @throws WishException unknown_product / pet_not_active / wish_mismatch / already_owned / bundle_not_eligible / invalid_design (422), no_credit (409)
+     * @throws WishException unknown_product / pet_not_active / wish_mismatch / already_owned / bundle_not_eligible (422), no_credit (409)
      */
     public function redeem(Pet $pet, User $parent, string $productId, ?int $wishId, ?string $idempotencyKey, ?string $design = null, array $designs = []): array
     {
@@ -183,31 +182,25 @@ class WishCreditService
     }
 
     /**
-     * M6-W03: item key => design for the durable items a purchase covers (treats: none).
+     * M6-W03: item key => design for the durable items a purchase covers (treats: none). A paid
+     * purchase is NEVER refused over a cosmetic choice (QA #655 m1): the wish's design first, else
+     * the requested one when it is a valid design of the item, else the item's first design.
      *
      * @param  array<string, string|null>  $designs
      * @return array<string, string|null>
-     *
-     * @throws WishException invalid_design
      */
     private function designsFor(ShopItem $item, Species $species, ?PetWish $wish, ?string $design, array $designs): array
     {
-        $design = $design === '' ? null : $design;
         $chosen = [];
         foreach ($item->covers as $key) {
             if (! ItemDesigns::hasDesigns($key, $species)) {
                 continue;
             }
             $asked = $item->isBundle() ? ($designs[$key] ?? null) : $design;
-            $asked = $asked === '' ? null : $asked;
-            if ($asked !== null && ! ItemDesigns::isValid($key, $species, $asked)) {
-                throw new WishException('invalid_design', 'This design does not exist for this item.');
-            }
             $fromWish = $wish !== null && $wish->item_key === $key && ItemDesigns::isValid($key, $species, $wish->design) ? $wish->design : null;
-            if ($fromWish !== null && $asked !== null && $asked !== $fromWish) {
-                throw new WishException('invalid_design', 'The wish asks for another design.');
-            }
-            $chosen[$key] = $fromWish ?? $asked ?? ItemDesigns::defaultFor($key, $species);
+            $chosen[$key] = $fromWish
+                ?? (ItemDesigns::isValid($key, $species, $asked) ? $asked : null)
+                ?? ItemDesigns::defaultFor($key, $species);
         }
 
         return $chosen;

@@ -119,6 +119,9 @@ class ObjectStorageMover
             ->merge(DB::table('pet_media_quality_checks')->whereNotNull('sheet_path')->pluck('sheet_path'))
             // School smooth playback (2026-10-28): ffmpeg-derived school clips (loops, release).
             ->merge(DB::table('pet_media_derivatives')->whereNotNull('storage_path')->pluck('storage_path'))
+            // M6-W03 (QA #655 M1): »Želje« item content — catalogue pictures (`items/…`), shared look
+            // rows (`looks/…/item-…`) and own-pet rows (`{pet}/item-…`).
+            ->merge(DB::table('item_media')->whereNotNull('storage_path')->pluck('storage_path'))
             ->filter(fn ($p): bool => is_string($p) && $p !== '')
             ->unique()->values()->all();
     }

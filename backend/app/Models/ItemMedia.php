@@ -53,6 +53,7 @@ use Illuminate\Support\Carbon;
  * @property int $attempts
  * @property int $auto_retries
  * @property int $prompt_variant
+ * @property int $download_attempts
  * @property Carbon|null $exhausted_at
  * @property Carbon|null $alerted_at
  * @property Carbon|null $completed_at
@@ -90,7 +91,7 @@ class ItemMedia extends Model
         'scope', 'pet_id', 'pet_look_id', 'item_key', 'design', 'kind', 'life_stage', 'source_path', 'target_path',
         'status', 'generation', 'profile', 'request_id', 'status_url', 'response_url', 'source_url',
         'storage_path', 'bytes', 'mime', 'duration_seconds', 'cost_usd', 'error_reason', 'error',
-        'attempts', 'auto_retries', 'prompt_variant', 'exhausted_at', 'alerted_at', 'completed_at',
+        'attempts', 'auto_retries', 'prompt_variant', 'download_attempts', 'exhausted_at', 'alerted_at', 'completed_at',
     ];
 
     protected function casts(): array
@@ -103,6 +104,7 @@ class ItemMedia extends Model
             'attempts' => 'integer',
             'auto_retries' => 'integer',
             'prompt_variant' => 'integer',
+            'download_attempts' => 'integer',
             'exhausted_at' => 'datetime',
             'alerted_at' => 'datetime',
             'completed_at' => 'datetime',

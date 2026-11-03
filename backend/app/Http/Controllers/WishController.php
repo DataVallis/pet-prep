@@ -72,8 +72,8 @@ class WishController extends Controller
 
     /**
      * Wish for an item (push to the parents, max one per child per 10 min).
-     * M6-W03: `design` (one of the row's `designs[].key`) is required for an item
-     * with designs and must be absent for treats.
+     * M6-W03: `design` = one of the row's `designs[].key` (missing → the item's
+     * first design, for app builds without the picker; must be absent for treats).
      * 422 wish_limit_reached | already_requested | already_owned |
      * declined_recently (+ retry_at) | treats_still_left | unknown_item |
      * bundle_not_wishable | invalid_design; 423 game_over | pet_not_started | payment_required.
@@ -236,7 +236,7 @@ class WishController extends Controller
      * missing → first design; the wished item keeps the wish's). The item's AI
      * content is queued at once (`media_ready` false until it is there).
      * 409 no_credit (retry); 422 already_owned | bundle_not_eligible |
-     * unknown_product | pet_not_active | wish_mismatch | invalid_design; 404 pet_not_found.
+     * unknown_product | pet_not_active | wish_mismatch; 404 pet_not_found.
      *
      * POST /api/parent/pets/{pet}/items/redeem
      */
