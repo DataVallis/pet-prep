@@ -62,7 +62,7 @@
     "it": "No, la carne cruda è sconsigliata per i gatti. Anche se i gatti selvatici mangiano prede crude, la carne cruda può contenere germi come Salmonella, Listeria ed E. coli e parassiti come il Toxoplasma, che possono far ammalare gatti e persone.",
     "pt": "Não, a carne crua não é recomendada para gatos. Embora os gatos selvagens comam presas cruas, a carne crua pode ter micróbios como Salmonella, Listeria e E. coli, e parasitas como o Toxoplasma, que podem pôr doentes os gatos e as pessoas.",
     "nl": "Nee, rauw vlees raden we af voor katten. Wilde katten eten weliswaar rauwe prooi, maar rauw vlees kan ziekteverwekkers zoals Salmonella, Listeria en E. coli bevatten, en parasieten zoals Toxoplasma, waar katten en mensen ziek van kunnen worden.",
-    "pl": "Nie, surowe mięso nie jest zalecane dla kotów. Choć dzikie koty jedzą surową zdobycz, surowe mięso może przenosić zarazki, takie jak Salmonella, Listeria i E. coli, oraz pasożyty, takie jak Toxoplasma, które mogą wywołać chorobę u kotów i ludzi.",
+    "pl": "Nie, surowe mięso nie jest zalecane dla kotów. Choć dzikie koty jedzą surową zdobycz, surowe mięso może przenosić drobnoustroje, takie jak Salmonella, Listeria i E. coli, oraz pasożyty, takie jak Toxoplasma, które mogą wywołać chorobę u kotów i ludzi.",
     "cs": "Ne, syrové maso se kočkám nedoporučuje. Přestože divoké kočky jedí syrovou kořist, syrové maso může přenášet choroboplodné zárodky, jako jsou salmonely, listerie a E. coli, a parazity, jako je toxoplazma, které mohou způsobit onemocnění koček i lidí.",
     "hr": "Ne, sirovo se meso ne preporučuje za mačke. Iako divlje mačke jedu sirov plijen, sirovo meso može prenositi uzročnike bolesti poput salmonele (Salmonella), listerije (Listeria) i bakterije E. coli te parazite poput toksoplazme (Toxoplasma), od kojih se mogu razboljeti mačke i ljudi.",
     "sv": "Nej, rått kött rekommenderas inte för katter. Även om vilda katter äter råa bytesdjur kan rått kött bära på bakterier som salmonella, listeria och E. coli och parasiter som toxoplasma, som kan göra både katter och människor sjuka.",
@@ -79,7 +79,7 @@
     "it": "Sia la Cornell University sia il Manuale Veterinario Merck sconsigliano la carne cruda per i gatti, come alimento o come premio, perché può trasmettere la toxoplasmosi e altre infezioni. La contaminazione batterica della carne cruda è frequente, e alcuni gatti sembrano stare bene ma eliminano i batteri con le feci, che possono così diffondersi alle persone e agli altri animali. La carne del supermercato destinata alle persone va cotta.",
     "pt": "A Cornell e o Merck Veterinary Manual desaconselham a carne crua para gatos, como alimento ou como guloseima, porque pode transmitir toxoplasmose e outras infeções. A contaminação da carne crua por bactérias é comum, e alguns gatos parecem bem mas eliminam as bactérias nas fezes, que podem passar para as pessoas e para outros animais de estimação. A carne do supermercado destinada às pessoas é feita para ser cozinhada.",
     "nl": "Cornell en de Merck Veterinary Manual raden allebei rauw vlees voor katten af, als maaltijd of als traktatie, omdat het toxoplasmose en andere infecties kan overdragen. Besmetting van rauw vlees met bacteriën komt vaak voor, en sommige katten lijken gezond maar scheiden de bacteriën uit via hun ontlasting, waardoor de bacteriën kunnen overgaan op mensen en andere huisdieren. Vlees uit de supermarkt is bedoeld voor mensen, om gaar gemaakt te worden.",
-    "pl": "Cornell i Merck Veterinary Manual odradzają podawanie kotom surowego mięsa, zarówno jako pokarmu, jak i smakołyku, bo może przenosić toksoplazmozę i inne infekcje. Skażenie surowego mięsa bakteriami jest częste, a niektóre koty wyglądają na zdrowe, ale wydalają bakterie z kałem, przez co mogą one przejść na ludzi i inne zwierzęta. Mięso dla ludzi z supermarketu jest przeznaczone do obróbki termicznej.",
+    "pl": "Cornell i Merck Veterinary Manual odradzają podawanie kotom surowego mięsa, zarówno jako pokarmu, jak i smakołyku, bo może przenosić toksoplazmozę i inne infekcje. Skażenie surowego mięsa bakteriami jest częste, a niektóre koty wyglądają na zdrowe, ale wydalają bakterie z kałem, przez co mogą zarazić ludzi i inne zwierzęta. Mięso z supermarketu, kupowane dla ludzi, jest przeznaczone do ugotowania.",
     "cs": "Cornellova univerzita i Merck Veterinary Manual nedoporučují dávat kočkám syrové maso, ať už jako krmivo, nebo jako pamlsek, protože může šířit toxoplazmózu a další infekce. Kontaminace syrového masa bakteriemi je běžná a některé kočky se zdají v pořádku, ale bakterie vylučují trusem, odkud se mohou přenést na lidi i další zvířata. Maso pro lidi ze supermarketu je určeno k tepelné úpravě.",
     "hr": "Cornell i priručnik Merck Veterinary Manual savjetuju da se mačkama ne daje sirovo meso, ni kao hrana ni kao poslastica, jer može širiti toksoplazmozu i druge infekcije. Sirovo meso često je onečišćeno bakterijama, a neke mačke djeluju zdravo, ali izlučuju bakterije izmetom, odakle se one mogu proširiti na ljude i druge ljubimce. Meso iz supermarketa za ljude predviđeno je za termičku obradu.",
     "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik för människor är tänkt att tillagas.",
@@ -146,7 +146,7 @@
     ],
     "pl": [
       "Wymioty",
-      "Biegunka, czasem z krwią",
+      "Biegunka, czasem z krwią",
       "Gorączka",
       "Niechęć do jedzenia",
       "Apatia"
@@ -203,7 +203,7 @@
     "it": "Se il tuo gatto ha mangiato un po’ di carne cruda, controlla se compaiono vomito, diarrea, febbre, rifiuto del cibo o stanchezza, e in tal caso chiama il veterinario. Lavati bene le mani e pulisci a fondo superfici e ciotole.",
     "pt": "Se o teu gato comeu um pouco de carne crua, vigia se aparecem vómitos, diarreia, febre, falta de apetite ou cansaço e, se surgir algum destes sinais, liga ao teu veterinário. Lava bem as mãos e limpa bem as superfícies e as tigelas.",
     "nl": "Heeft je kat een beetje rauw vlees gegeten? Let op braken, diarree, koorts, niet willen eten of vermoeidheid, en bel je dierenarts als je daar iets van ziet. Was je handen en maak oppervlakken en voerbakjes goed schoon.",
-    "pl": "Jeśli twój kot zjadł trochę surowego mięsa, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka, brak apetytu lub zmęczenie, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i dokładnie wyczyść powierzchnie i miski.",
+    "pl": "Jeśli twój kot zjadł trochę surowego mięsa, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka, brak apetytu lub zmęczenie, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i dokładnie wyczyść powierzchnie i miski.",
     "cs": "Pokud vaše kočka snědla kousek syrového masa, sledujte, zda se neobjeví zvracení, průjem, horečka, nechuť k jídlu nebo únava, a pokud ano, zavolejte veterináři. Důkladně si umyjte ruce a vyčistěte povrchy i misky.",
     "hr": "Ako je mačka pojela malo sirovog mesa, prati pojavu povraćanja, proljeva, vrućice, odbijanja hrane ili umora i nazovi veterinara ako se išta od toga pojavi. Dobro operi ruke te temeljito očisti površine i zdjelice.",
     "sv": "Om katten har ätit lite rått kött: håll utkik efter kräkningar, diarré, feber, att den slutar äta eller blir trött, och ring veterinären om något av detta dyker upp. Tvätta händerna och rengör ytor och skålar noga.",
@@ -257,7 +257,7 @@
         "it": "La carne cruda può contenere batteri e parassiti che infettano i gatti e i loro proprietari, e secondo la Cornell University le diete a base di carne cruda non portano ai gatti alcun chiaro beneficio per la salute.",
         "pt": "A carne crua pode ter bactérias e parasitas que infetam os gatos e os seus donos, e a Cornell afirma que as dietas cruas não trazem nenhum benefício claro para a saúde dos gatos.",
         "nl": "Rauw vlees kan bacteriën en parasieten bevatten die katten en hun eigenaren kunnen besmetten, en volgens Cornell heeft rauwe voeding geen duidelijk gezondheidsvoordeel voor katten.",
-        "pl": "Surowe mięso może przenosić bakterie i pasożyty, którymi mogą się zarazić koty i ich opiekunowie, a według Cornell surowa dieta nie daje kotom wyraźnych korzyści zdrowotnych.",
+        "pl": "Surowe mięso może przenosić bakterie i pasożyty, którymi mogą się zarazić koty i ich opiekunowie, a według Cornell surowa dieta nie daje kotom wyraźnych korzyści zdrowotnych.",
         "cs": "Syrové maso může přenášet bakterie a parazity, kterými se mohou nakazit kočky i jejich majitelé, a podle Cornellovy univerzity nemá syrová strava pro kočky žádný jasný zdravotní přínos.",
         "hr": "Sirovo meso može prenositi bakterije i parazite koji mogu zaraziti mačke i njihove vlasnike, a Cornell navodi da sirova prehrana mačkama ne donosi jasnu korist za zdravlje.",
         "sv": "Rått kött kan bära på bakterier och parasiter som smittar katter och deras ägare, och enligt Cornell ger rå kost ingen tydlig hälsovinst för katter.",
@@ -293,7 +293,7 @@
         "it": "Le persone più a rischio di malattie gravi sono gli anziani, i bambini molto piccoli e le persone con un sistema immunitario indebolito.",
         "pt": "As pessoas com maior risco de doença grave são as muito idosas, as muito jovens e as que têm o sistema imunitário enfraquecido.",
         "nl": "Mensen met het grootste risico op ernstige ziekte zijn heel oude mensen, heel jonge kinderen en mensen met een verzwakt immuunsysteem.",
-        "pl": "Na poważną chorobę najbardziej narażone są osoby w bardzo podeszłym wieku, bardzo małe dzieci i osoby z osłabioną odpornością.",
+        "pl": "Na poważną chorobę najbardziej narażone są osoby w bardzo podeszłym wieku, bardzo małe dzieci i osoby z osłabioną odpornością.",
         "cs": "Nejvyšší riziko vážného onemocnění mají velmi staří lidé, malé děti a lidé s oslabenou imunitou.",
         "hr": "Najveći rizik od ozbiljne bolesti imaju vrlo stari ljudi, vrlo mala djeca i osobe s oslabljenim imunitetom.",
         "sv": "Störst risk att bli allvarligt sjuka har mycket gamla människor, mycket små barn och personer med försvagat immunförsvar.",
@@ -429,7 +429,7 @@
     "pl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "28d483cf5292e825de449568f525a7aa96608cb5c0b9f05eb92e58f510213b25"
+      "verified_hash": "1988c2184dae60612aede3d96c70706e5e8be48470f847c232f537dc21bd740a"
     },
     "cs": {
       "status": "verified",
