@@ -866,8 +866,9 @@ describe('GET /api/parent/dashboard (M2-05)', function () {
         $week = $count(7);
         $challenge = $count(84);
 
-        // M6-W01: + 1 constant query for `wishes_open_count`.
-        expect($challenge)->toBe($week)->toBeLessThanOrEqual(61);
+        // M6-W01: + 1 constant query for `wishes_open_count`. M6-W03: + 1 `pet_items` read per media
+        // payload the dashboard builds for the pet (3; owned items → `media.items`) — constant, not per day.
+        expect($challenge)->toBe($week)->toBeLessThanOrEqual(64);
     });
 
     it('never shows another family', function () {
