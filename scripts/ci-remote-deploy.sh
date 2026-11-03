@@ -11,8 +11,9 @@
 # Prebuilt images (D28): with APP_IMAGE + WEB_IMAGE (digest refs from
 # scripts/ci-image-refs.sh) + REGISTRY_USER + REGISTRY_TOKEN (the job's GITHUB_TOKEN,
 # packages: read) the server logs in to ghcr.io over ssh stdin (the token never appears in
-# a command line), deploy-production.sh pulls exactly those digests and logs out right
-# after the pull; the ssh command logs out again at the end. Missing / malformed refs or a
+# a command line) into a private docker config dir ($PULL_DOCKER_CONFIG, never the deploy
+# user's ~/.docker — the website deploy logs in there too), deploy-production.sh pulls exactly
+# those digests with it and deletes it; the ssh command deletes it again at the end. Missing / malformed refs or a
 # failed login → the server builds the images itself (old behaviour).
 #
 # Env: SSH_PRIVATE_KEY, SSH_HOST, SSH_USER (default deploy), COMMIT_SHA, EXPECT_DOMAIN
@@ -72,7 +73,9 @@ if [ -n "${APP_IMAGE:-}" ] && [ -n "${WEB_IMAGE:-}" ] && [ -n "${REGISTRY_USER:-
         exit 1
     fi
     IMAGE_ARGS="--app-image ${APP_IMAGE} --web-image ${WEB_IMAGE}"
-    LOGIN_CMD="docker login ghcr.io -u '${REGISTRY_USER}' --password-stdin > /dev/null 2>&1 || echo 'WARNING: ghcr.io login failed - the images are built on the server.'; "
+    # Private docker config (D30, QA website #210 M3): the website deploy logs in as the same
+    # `deploy` user, possibly at the same time — never share ~/.docker/config.json with it.
+    LOGIN_CMD="D=\$(mktemp -d) && chmod 700 \"\$D\" && { DOCKER_CONFIG=\"\$D\" docker login ghcr.io -u '${REGISTRY_USER}' --password-stdin > /dev/null 2>&1 || echo 'WARNING: ghcr.io login failed - the images are built on the server.'; }; export PULL_DOCKER_CONFIG=\"\$D\"; "
     echo "   CI images: ${APP_IMAGE} ${WEB_IMAGE}"
 else
     echo "   No CI image digests — the server builds the images."
@@ -83,7 +86,7 @@ DEPLOY_CMD="/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petpr
 # shellcheck disable=SC2029  # expanded here on purpose (validated tokens above)
 if [ -n "$LOGIN_CMD" ]; then
   printf '%s\n' "$REGISTRY_TOKEN" | ssh "${SSH_OPTS[@]}" "${SSH_USER}@${SSH_HOST}" \
-    "${LOGIN_CMD}${DEPLOY_CMD} < /dev/null; rc=\$?; docker logout ghcr.io > /dev/null 2>&1; exit \$rc"
+    "${LOGIN_CMD}${DEPLOY_CMD} < /dev/null; rc=\$?; rm -rf \"\$D\"; exit \$rc"
 else
   ssh "${SSH_OPTS[@]}" "${SSH_USER}@${SSH_HOST}" "$DEPLOY_CMD"
 fi

@@ -496,8 +496,13 @@ remote_img() { # remote_img APP WEB → rc
 check "prebuilt: deploys" 0 "$(remote_img ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb)"
 r=1; grep -q -- "--expect-domain api.petprep.si --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb abc1234" "$TMP/remote.log" && r=0
 check "prebuilt: digests passed to the deploy script" 0 "$r"
-r=1; grep -q -- "docker login ghcr.io -u 'github-actions\\[bot\\]' --password-stdin" "$TMP/remote.log" && grep -q "docker logout ghcr.io" "$TMP/remote.log" && r=0
-check "prebuilt: login via stdin, logout after" 0 "$r"
+DL="\$D" # the literal text $D of the remote command
+r=1; grep -qF -- "DOCKER_CONFIG=\"$DL\" docker login ghcr.io -u 'github-actions[bot]' --password-stdin" "$TMP/remote.log" && grep -qF "rm -rf \"$DL\"" "$TMP/remote.log" && r=0
+check "prebuilt: login via stdin into a private config, deleted after" 0 "$r"
+r=1; grep -qF "export PULL_DOCKER_CONFIG=\"$DL\"" "$TMP/remote.log" && r=0
+check "… the deploy script gets the private config" 0 "$r"
+r=0; grep -q "docker logout" "$TMP/remote.log" && r=1
+check "… never touches ~/.docker (no logout of the shared config)" 0 "$r"
 r=0; grep -q "tok-sentinel-123" "$TMP/remote.log" "$TMP/remote.out" && r=1
 check "prebuilt: token never on a command line / in the output" 0 "$r"
 check "prebuilt: no digests → plain deploy" 0 "$(remote_img "" "")"
