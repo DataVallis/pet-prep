@@ -14,7 +14,8 @@
     "nl": "Limoenen",
     "pl": "Limonki",
     "sv": "Lime",
-    "da": "Limefrugter"
+    "da": "Limefrugter",
+    "fi": "Limetit"
   },
   "question": {
     "en": "Can cats eat limes?",
@@ -29,7 +30,8 @@
     "nl": "Mogen katten limoenen eten?",
     "pl": "Czy koty mogą jeść limonki?",
     "sv": "Får katter äta lime?",
-    "da": "Må katte spise limefrugter?"
+    "da": "Må katte spise limefrugter?",
+    "fi": "Saako kissa syödä limettejä?"
   },
   "url_slug": {
     "en": "limes",
@@ -44,7 +46,8 @@
     "nl": "limoenen",
     "pl": "limonki",
     "sv": "lime",
-    "da": "limefrugter"
+    "da": "limefrugter",
+    "fi": "limetit"
   },
   "level": "dangerous",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Nee, liever niet. De ASPCA noemt de limoenplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar limoenen maar voor mensen.",
     "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo limonkowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc limonki zostaw dla ludzi.",
     "sv": "Nej, det är bäst att låta bli. ASPCA anger att limeväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt limen vara människomat.",
-    "da": "Nej, det er bedst at lade være. ASPCA regner limeplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad limefrugterne være til os mennesker."
+    "da": "Nej, det er bedst at lade være. ASPCA regner limeplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad limefrugterne være til os mennesker.",
+    "fi": "Ei kannata. ASPCA luokittelee limettikasvin kissoille myrkylliseksi, koska siinä on eteerisiä öljyjä ja psoraleeneja. Hedelmäliha on syötävää, mutta kuori ja muut kasvinosat voivat aiheuttaa ongelmia. Lisäksi sitrushedelmät ovat kissoille haitallisia, joten jätä limetit ihmisille."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -75,7 +79,8 @@
     "nl": "De ASPCA noemt de limoenplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
     "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota limonkami.",
     "sv": "ASPCA anger att limeväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
-    "da": "ASPCA regner limeplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele limefrugterne med katten."
+    "da": "ASPCA regner limeplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele limefrugterne med katten.",
+    "fi": "ASPCA luokittelee limettikasvin kissoille myrkylliseksi: siinä on eteerisiä öljyjä ja psoraleeneja, ja vaikka hedelmä on syötävä, kuoret ja muut kasvinosat voivat aiheuttaa ongelmia. Cats Protectionin mukaan sitrushedelmien syöminen on kissoille haitallista ja voi aiheuttaa vatsavaivoja, oksentelua ja ripulia. NC Staten eläinsairaalan luettelossa sitrushedelmät kuuluvat ruokiin, jotka voivat aiheuttaa kissoille ja koirille oksentelua tai ripulia. Cats Protectionin mukaan pieni maistiainen tuskin aiheuttaa vakavaa reaktiota. Koska lähteet suhtautuvat asiaan eri tiukkuudella, noudatamme tiukempaa ohjetta emmekä suosittele limettien antamista kissalle."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Ubehag i maven",
       "Nedtrykthed",
       "Mulig hudirritation (dermatitis)"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Ripuli",
+      "Vatsavaivat",
+      "Alakuloisuus",
+      "Mahdollinen ihoärsytys (ihotulehdus)"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
     "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
     "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
-    "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
+    "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår.",
+    "fi": "Jos kissasi on syönyt kuorta, lehtiä tai muita kasvinosia tai sillä on oireita, kuten oksentelua tai ripulia, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin."
   },
   "serving": null,
   "child": {
@@ -199,7 +212,8 @@
     "nl": "Limoenen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar limoenen maar voor mensen.",
     "pl": "Limonki to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc limonki zostaw dla ludzi.",
     "sv": "Lime är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så den får vi människor äta själva.",
-    "da": "Limefrugter er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad limefrugterne være til os."
+    "da": "Limefrugter er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad limefrugterne være til os.",
+    "fi": "Limetit ovat ihmisten välipala. Kissat eivät tykkää niiden tuoksusta, ja sitrus voi aiheuttaa niille vatsakipua, joten jätä limetit ihmisille."
   },
   "faq": [
     {
@@ -216,7 +230,8 @@
         "nl": "Welk deel is het probleem?",
         "pl": "Która część szkodzi?",
         "sv": "Vilken del orsakar problemen?",
-        "da": "Hvilken del er problemet?"
+        "da": "Hvilken del er problemet?",
+        "fi": "Mikä osa on ongelma?"
       },
       "a": {
         "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -231,7 +246,8 @@
         "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
         "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
         "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
-        "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
+        "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener.",
+        "fi": "ASPCA:n mukaan hedelmä on syötävä, mutta kuoret ja muut kasvinosat voivat aiheuttaa ongelmia, koska niissä on eteerisiä öljyjä ja psoraleeneja."
       }
     },
     {
@@ -248,7 +264,8 @@
         "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
         "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
         "sv": "Min katt smakade bara lite. Är det akut?",
-        "da": "Min kat har fået en lille smagsprøve. Er det akut?"
+        "da": "Min kat har fået en lille smagsprøve. Er det akut?",
+        "fi": "Kissani maistoi vain vähän. Onko se hätätilanne?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -263,7 +280,8 @@
         "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
         "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
         "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
-        "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
+        "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret.",
+        "fi": "Cats Protectionin mukaan ei tarvitse säikähtää, jos kissa maistaa vain lohkoa tai nuolaisee sormiasi: vakavan reaktion vaaraan kissan pitäisi syödä sitä paljon. Tarkkaile, tuleeko oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos asia huolettaa."
       }
     },
     {
@@ -280,7 +298,8 @@
         "nl": "Waarom mijden katten citrus meestal?",
         "pl": "Dlaczego koty zwykle unikają cytrusów?",
         "sv": "Varför brukar katter undvika citrus?",
-        "da": "Hvorfor holder katte sig som regel fra citrus?"
+        "da": "Hvorfor holder katte sig som regel fra citrus?",
+        "fi": "Miksi kissat yleensä karttavat sitrushedelmiä?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -295,7 +314,8 @@
         "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
         "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
         "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
-        "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
+        "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter.",
+        "fi": "Cats Protectionin mukaan kissat eivät luonnostaan siedä voimakasta sitrustuoksua, joten ne yleensä karttavat sitrushedelmiä."
       }
     }
   ],
@@ -437,6 +457,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0f7afb56c8bbf9e6f6fc8de47423b8c83782868ee1e37531700073ebfe3c0d17"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "262a9f4b756c45940a990693cb2b113869c39e176513dff4970e03548c24f9ad"
     }
   }
 }

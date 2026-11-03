@@ -14,7 +14,8 @@
     "nl": "Kiwi",
     "pl": "Kiwi",
     "sv": "Kiwi",
-    "da": "Kiwi"
+    "da": "Kiwi",
+    "fi": "Kiwi"
   },
   "question": {
     "en": "Can dogs eat kiwi?",
@@ -29,7 +30,8 @@
     "nl": "Mogen honden kiwi eten?",
     "pl": "Czy psy mogą jeść kiwi?",
     "sv": "Får hundar äta kiwi?",
-    "da": "Må hunde spise kiwi?"
+    "da": "Må hunde spise kiwi?",
+    "fi": "Saako koira syödä kiwiä?"
   },
   "url_slug": {
     "en": "kiwi",
@@ -44,7 +46,8 @@
     "nl": "kiwi",
     "pl": "kiwi",
     "sv": "kiwi",
-    "da": "kiwi"
+    "da": "kiwi",
+    "fi": "kiwi"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Ja, honden mogen af en toe een klein beetje kiwi als snoepje. Schil de kiwi en snijd hem in kleine stukjes of plakjes, en geef nooit een hele kiwi, want dat kan een verstikkingsgevaar vormen.",
     "pl": "Tak, psy mogą od czasu do czasu dostać niewielką ilość kiwi jako smakołyk. Obierz je i pokrój na małe kawałki lub plasterki, a nigdy nie dawaj go w całości, bo pies może się zadławić.",
     "sv": "Ja, hundar kan få små mängder kiwi som en godbit då och då. Skala den och skär den i små bitar eller skivor, och ge aldrig en hel kiwi, eftersom hunden kan sätta den i halsen.",
-    "da": "Ja, hunde kan få lidt kiwi som en godbid en gang imellem. Skræl den, og skær den i små stykker eller skiver. Giv aldrig en hel kiwi, da den kan sætte sig fast i halsen."
+    "da": "Ja, hunde kan få lidt kiwi som en godbid en gang imellem. Skræl den, og skær den i små stykker eller skiver. Giv aldrig en hel kiwi, da den kan sætte sig fast i halsen.",
+    "fi": "Kyllä, koira voi saada pieniä määriä kiwiä satunnaisena herkkuna. Kuori se ja leikkaa pieniksi paloiksi tai viipaleiksi, äläkä koskaan anna kokonaista kiwiä, koska se voi aiheuttaa tukehtumisvaaran."
   },
   "why": {
     "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
@@ -75,7 +79,8 @@
     "nl": "Kiwi is een zoete vrucht boordevol vitamine C en kalium, en bevat veel vezels, vooral onoplosbare vezels. Te veel kiwi kan spijsverteringsproblemen veroorzaken, waaronder diarree. De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken. Een hele kiwi is klein genoeg om een verstikkingsgevaar te vormen.",
     "pl": "Kiwi to słodki owoc, bogaty w witaminę C i potas. Zawiera też dużo błonnika, zwłaszcza nierozpuszczalnego. Zbyt dużo kiwi może wywołać problemy trawienne, w tym biegunkę. Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek. Całe kiwi jest na tyle małe, że może grozić zadławieniem.",
     "sv": "Kiwi är en söt frukt full av vitamin C och kalium, och den innehåller mycket fiber, framför allt olösliga fibrer. För mycket kiwi kan ge matsmältningsproblem, bland annat diarré. Skalet är inte giftigt, men det är segt och fiberrikt och kan ge hunden orolig mage. En hel kiwi är så liten att hunden kan sätta den i halsen.",
-    "da": "Kiwi er en sød frugt, der er rig på C-vitamin og kalium og indeholder mange fibre, især uopløselige. For meget kiwi kan give fordøjelsesproblemer, herunder diarré. Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave. En hel kiwi er lille nok til at sætte sig fast i halsen på en hund."
+    "da": "Kiwi er en sød frugt, der er rig på C-vitamin og kalium og indeholder mange fibre, især uopløselige. For meget kiwi kan give fordøjelsesproblemer, herunder diarré. Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave. En hel kiwi er lille nok til at sætte sig fast i halsen på en hund.",
+    "fi": "Kiwi on makea hedelmä, jossa on runsaasti C-vitamiinia ja kaliumia, ja siinä on paljon kuitua, etenkin liukenematonta kuitua. Liika kiwi voi aiheuttaa ruoansulatusvaivoja, myös ripulia. Kuori ei ole myrkyllistä, mutta se on sitkeää ja kuitupitoista ja voi sekoittaa koiran vatsan. Kokonainen kiwi on niin pieni, että se voi jäädä koiran kurkkuun."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nl": "Geef steeds maar een klein beetje. Te veel kiwi kan spijsverteringsproblemen zoals diarree veroorzaken, en kiwi mag nooit in de plaats komen van een volwaardig, uitgebalanceerd hondenvoer.",
     "pl": "Podawaj tylko po trochu. Zbyt dużo kiwi może wywołać problemy trawienne, takie jak biegunka, a kiwi nigdy nie powinno zastępować pełnoporcjowej, zbilansowanej karmy dla psów.",
     "sv": "Ge bara lite åt gången. För mycket kiwi kan ge matsmältningsproblem som diarré, och kiwi ska aldrig ersätta ett komplett och balanserat hundfoder.",
-    "da": "Giv kun lidt ad gangen. For meget kiwi kan give fordøjelsesproblemer som diarré, og kiwi må aldrig erstatte et komplet og afbalanceret hundefoder."
+    "da": "Giv kun lidt ad gangen. For meget kiwi kan give fordøjelsesproblemer som diarré, og kiwi må aldrig erstatte et komplet og afbalanceret hundefoder.",
+    "fi": "Anna vain vähän kerrallaan. Liika kiwi voi aiheuttaa ruoansulatusvaivoja, kuten ripulia, eikä kiwillä saa koskaan korvata täysipainoista ja tasapainoista koiranruokaa."
   },
   "serving": {
     "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
@@ -106,7 +112,8 @@
     "nl": "Geschild en in kleine stukjes of plakjes gesneden; steeds een klein beetje, als snoepje voor af en toe.",
     "pl": "Obrane i pokrojone na małe kawałki lub plasterki; po trochu, jako okazjonalny smakołyk.",
     "sv": "Skalad och skuren i små bitar eller skivor; lite åt gången, som en godbit då och då.",
-    "da": "Skrællet og skåret i små stykker eller skiver; lidt ad gangen, som en godbid en gang imellem."
+    "da": "Skrællet og skåret i små stykker eller skiver; lidt ad gangen, som en godbid en gang imellem.",
+    "fi": "Kuorittuna ja pieniksi paloiksi tai viipaleiksi leikattuna; vähän kerrallaan, satunnaisena herkkuna."
   },
   "child": {
     "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
@@ -121,7 +128,8 @@
     "nl": "Honden mogen een klein beetje kiwi proeven! Een volwassene schilt de kiwi en snijdt hem in kleine stukjes, zodat hij makkelijk te eten is.",
     "pl": "Psy mogą skosztować odrobiny kiwi! Dorosły obiera je i kroi na drobne kawałki, żeby łatwo je było zjeść.",
     "sv": "Hundar kan smaka lite kiwi! En vuxen skalar den och skär den i pyttesmå bitar så att den är lätt att äta.",
-    "da": "Hunde må gerne smage lidt kiwi! En voksen skræller den og skærer den i helt små stykker, så den er nem at spise."
+    "da": "Hunde må gerne smage lidt kiwi! En voksen skræller den og skærer den i helt små stykker, så den er nem at spise.",
+    "fi": "Koira saa maistaa vähän kiwiä! Aikuinen kuorii sen ja leikkaa pieniksi paloiksi, jotta se on helppo syödä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nl": "Mogen honden de schil van kiwi eten?",
         "pl": "Czy psy mogą jeść skórkę kiwi?",
         "sv": "Får hundar äta kiwiskal?",
-        "da": "Må hunde spise kiwiskræl?"
+        "da": "Må hunde spise kiwiskræl?",
+        "fi": "Saako koira syödä kiwin kuorta?"
       },
       "a": {
         "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
@@ -153,7 +162,8 @@
         "nl": "De schil is niet giftig, maar wel taai en vezelrijk en kan de maag van een hond van streek maken, dus haal hem er het beste af.",
         "pl": "Skórka nie jest toksyczna, ale jest twarda i bogata w błonnik, więc może rozstroić psi żołądek; najlepiej ją usunąć.",
         "sv": "Skalet är inte giftigt, men det är segt och fiberrikt och kan ge hunden orolig mage, så det är bäst att ta bort det.",
-        "da": "Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave, så det er bedst at fjerne den."
+        "da": "Skrællen er ikke giftig, men den er sej og fiberrig og kan give hunden dårlig mave, så det er bedst at fjerne den.",
+        "fi": "Kuori ei ole myrkyllistä, mutta se on sitkeää ja kuitupitoista ja voi sekoittaa koiran vatsan, joten se on parasta poistaa."
       }
     }
   ],
@@ -266,6 +276,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "42a5acde23ee9c60ead918eb3bbd6bf4f10159266bdc72c422347a89972190f1"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "75b994e45e26bb6dace6e423d800df3483d4738f8d7673893d3203a93638d8c4"
     }
   }
 }
