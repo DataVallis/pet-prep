@@ -2255,5 +2255,26 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S670', 'S672'], 'refs' => ['brussels_griffon.suitability.rkc_grooming', 'brussels_griffon.suitability.petmd_grooming']],
             ],
         ],
+        // M5-R10-89 Irish Setter — not a welfare breed (RKC Breed Watch Category 1, S676). No new vocabulary key.
+        'irish_setter' => [
+            'suits' => [
+                // S676 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S676'], 'refs' => ['irish_setter.exercise.adult', 'irish_setter.suitability.rkc_exercise']],
+                // S678 "Irish Setters are very friendly, affectionate dogs that get on well with both children and other pets," (toddler caveat, S679)
+                ['tag' => 'children', 'source_ids' => ['S678'], 'refs' => ['irish_setter.behaviour.children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S678'], 'refs' => ['irish_setter.behaviour.other_pets']],
+                // S676 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S676'], 'refs' => ['irish_setter.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S676'], 'refs' => ['irish_setter.exercise.adult', 'irish_setter.suitability.rkc_exercise']],
+                // S679 "They definitely like human interaction, so they need as much house time and human contact as possible."
+                ['tag' => 'needs_company', 'source_ids' => ['S679'], 'refs' => ['irish_setter.behaviour.time_alone']],
+                // S676 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S676'], 'refs' => ['irish_setter.suitability.rkc_shedding']],
+                // S676 "Grooming: More than once a week"; S678 grooming 2 or 3 times per week.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S676', 'S678'], 'refs' => ['irish_setter.suitability.rkc_grooming', 'irish_setter.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

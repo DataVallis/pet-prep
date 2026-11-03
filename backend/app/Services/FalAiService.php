@@ -730,6 +730,13 @@ class FalAiService
                 .'clear red or black and tan without white markings, a fairly large rounded head with a moderate short muzzle (not extreme), '
                 .'a visible black nose with clearly open nostrils, very dark round eyes that do not bulge, small semi-erect natural ears, '
                 .'a natural high-set tail, lively and alert expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-89: FCI-Standard N° 120 (S675) / RKC standard (S677) / AKC standard (S680) — a racy, athletic gundog,
+            // rich chestnut red with no black, flat silky coat with long feathering, natural tail.
+            BreedType::IrishSetter => 'A racy, balanced, athletic Irish Setter gundog, rich chestnut red with no black, '
+                .'a flat silky coat of moderate length with long feathering on the ears, legs, belly and tail, '
+                .'a long lean head with a moderately deep, fairly square muzzle, dark hazel eyes with a kind expression, '
+                .'low-set ears hanging in a neat fold, a natural tail of moderate length set low, friendly and lively expression, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1770,6 +1777,13 @@ class FalAiService
                 'eye_color' => 'very dark brown',
                 'fur_texture' => 'harsh, wiry rough coat with a beard',
                 'markings' => 'no white markings, moderate short face with open nostrils, never merle or brindle',
+            ],
+            // M5-R10-89: one standard colour (FCI S675); never red and white, never black.
+            BreedType::IrishSetter => [
+                'color_scheme' => 'rich chestnut red',
+                'eye_color' => 'dark hazel',
+                'fur_texture' => 'flat, silky coat of moderate length with long feathering',
+                'markings' => 'no black, at most a small white mark on the chest or toes, never red and white',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

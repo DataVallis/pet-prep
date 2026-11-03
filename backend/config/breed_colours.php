@@ -576,6 +576,11 @@ return [
         ['key' => 'black-tan', 'value' => 'black and rich tan, no white markings', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
         ['key' => 'black', 'value' => 'solid black, no white markings', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-89: FCI-Standard N° 120 (S675) "Rich chestnut with no trace of black; white on chest, throat, and toes." — the
+    // only standard colour (= the portrait default).
+    'irish_setter' => [
+        ['key' => 'chestnut', 'value' => 'rich chestnut red with no black (at most a small white mark on the chest or toes)', 'en' => 'Rich chestnut', 'sl' => 'Kostanjevo rdeč'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

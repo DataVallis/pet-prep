@@ -90,6 +90,7 @@ return [
     'greater_swiss_mountain_dog' => 'Greater Swiss Mountain Dog',
     'shar_pei' => 'Shar Pei',
     'brussels_griffon' => 'Brussels Griffon',
+    'irish_setter' => 'Irish Setter',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

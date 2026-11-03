@@ -45944,6 +45944,547 @@
       }
     }
   },
+  "irish_setter": {
+    "_note": "Added 2026-11-03 (M5-R10-89, unattended run — appended after the Brussels Griffon: AKC 2024 No. 85 'Irish Setter', S174 full-list table '85 | Irish Setter'). Quotes as returned by the web-fetch tool on 2026-11-03 (fragments marked as such); paraphrase only in notes. Sources S675–S681 (+ S35 Coren, S10 growth, S11 AAHA, S14 Dogs Trust, S45 steps). No health percentages anywhere. A large gundog (FCI Group 7, pointing dogs), RKC Breed Watch Category 1. The game dog = the Irish (Red) Setter, FCI-Standard N° 120 — never the Irish Red and White Setter (FCI N° 330).",
+    "identity": {
+      "value": "FCI No. 120, Group 7 Section 2 (British and Irish Pointers and Setters), Ireland",
+      "unit": "—",
+      "source_id": "S675",
+      "quote": "FCI-Standard N° 120",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 120 (S675, English PDF): 'Group 7 Pointing Dogs.' / 'Section 2 British and Irish Pointers and Setters.', origin 'Ireland.', official standard published '13.03.2001'. FCI name 'Irish Red Setter'; RKC / AKC 'Irish Setter'. Not the Irish Red and White Setter (FCI N° 330, a separate breed)."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S676",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S676, value as returned); PDSA (S678) 'Size: Large' agrees. AKC standard 60–70 lb (S680) ≈ 27–32 kg → the 'Large (59–99 pounds)' class of S10 (used for growth)."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            58,
+            67
+          ],
+          "female": [
+            55,
+            62
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S675",
+        "quote": "23 ins (58 cm) to 26.5 ins (67 cm).",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 120 (S675): males '23 ins (58 cm) to 26.5 ins (67 cm).', females '21.5 ins (55 cm) to 24.5 ins (62 cm).' (as returned). The game range. AKC (S680) ideal 27 in dogs / 25 in bitches; PDSA (S678) average 54–67 cm — alternatives."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            31.8,
+            31.8
+          ],
+          "female": [
+            27.2,
+            27.2
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S680",
+        "quote": "27 inches at the withers and a show weight of about 70 pounds is considered ideal for the dog",
+        "confidence": "high",
+        "notes": "AKC breed standard (approved 1990, published by the Irish Setter Club of America, the AKC parent club, S680): dog about 70 lb, bitch 'the bitch 25 inches, 60 pounds' (fragment as returned) → 31.8 kg / 27.2 kg (pounds × 0.4536 by us, rounded). The FCI (S675) and RKC (S677) standards give no weight. The game range 27.2–31.8 kg (adult_weight_kg)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            25,
+            32
+          ],
+          "female": [
+            25,
+            32
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S678",
+        "quote": "25-32 kg",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Average weight' (S678, value as returned), one range for both sexes. Alternative; PetMD (S679) 'Considering their size (60-70 pounds with long legs),' agrees with the AKC numbers."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: AKC 60–70 lb (S680) and PDSA 25–32 kg (≈ 55–71 lb, S678) are mostly 'Large (59–99 pounds)' (Weimaraner / Chesapeake Bay Retriever precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Irish Setter growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S676",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S676, value as returned); PDSA (S678) 'Average lifespan: Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "around 14",
+        "unit": "years",
+        "source_id": "S679",
+        "quote": "generally has a lifespan of around 14 years",
+        "confidence": "medium",
+        "notes": "PetMD (S679, tier B, US; fragment as returned). Consistent with the RKC lower bound."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: no breed value reachable (the Dogs Trust breed table S123 is not in the fetch tool's provenance). Wikipedia (S681, tier C): 'A 2024 UK study found a life expectancy of 12.9 years for the breed' — would give 0.75 × 12.9 × 12 = 116.1 → 116. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S676) → 0.75 × 10 = 7.5 y = 90 months. McMillan 12.9 y via Wikipedia (tier C) would give 116; PetMD ~14 y (S679) 126. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S676"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S676",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S676, value as returned) — the runbook's preferred source. PDSA (S678): 'Irish Setters have high energy levels and require plenty of exercise – ideally over 2 hours per day.' and key fact 'Minimum exercise (per day): 2 hours'; PetMD (S679) 'require a lot of exercise, even into adulthood' (no number) — the sources agree on 120."
+      },
+      "pdsa": {
+        "value": "ideally over 2 hours a day",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "Irish Setters have high energy levels and require plenty of exercise – ideally over 2 hours per day.",
+        "confidence": "high",
+        "notes": "PDSA (S678). Agrees with 120."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found advising a gap between meals and exercise for this breed (PDSA S678 names GDV / 'bloat' as an emergency; PetMD S679 advises two smaller meals a day instead of one large one — neither gives a wait after eating) → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "demonstrably affectionate; keen, intelligent, energetic, loyal",
+        "unit": "—",
+        "source_id": "S677",
+        "quote": "Demonstrably affectionate.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S677) 'Temperament: Demonstrably affectionate.'; FCI (S675) 'Keen, intelligent, energetic, affectionate and loyal.'; AKC (S680) 'The Irish Setter has a rollicking personality.' / 'An outgoing, stable temperament is the essence of the Irish Setter.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement for this breed in an A/B source (RKC S676 'They make good companions, their temperament making them ideal all-round family dogs.' describes the whole Gundog group, not the breed). PDSA (S678) is a children / other-pets statement. No family_pet chip."
+      },
+      "children": {
+        "value": "get on well with children; toddlers can be knocked down",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "Irish Setters are very friendly, affectionate dogs that get on well with both children and other pets,",
+        "confidence": "high",
+        "notes": "PDSA (S678) fragment as returned — an explicit statement, basis of the children chip. Caveat kept here: PetMD (S679) 'so children are fine, but toddlers are at risk of being accidentally knocked down,' (fragment) → never small_children."
+      },
+      "other_pets": {
+        "value": "get on well with other pets, with proper introductions",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "Irish Setters are very friendly, affectionate dogs that get on well with both children and other pets,",
+        "confidence": "high",
+        "notes": "PDSA (S678) fragment as returned; PetMD (S679) 'Irish Setters are usually okay with other pets, including cats, as long as proper introductions are made.'. No prey-drive statement. Basis of the other_pets chip."
+      },
+      "time_alone": {
+        "value": "need as much house time and human contact as possible; may chew if left alone too long",
+        "unit": "—",
+        "source_id": "S679",
+        "quote": "They definitely like human interaction, so they need as much house time and human contact as possible.",
+        "confidence": "high",
+        "notes": "PetMD (S679); also 'They are not a dog to be put in the backyard and ignored.' and 'Irish Setters can be chewers or develop other destructive habits, especially if left to their own devices for too long.'. Basis of the needs_company chip (Weimaraner / Brussels Griffon precedent); never often_alone."
+      },
+      "socialisation": {
+        "value": "early socialisation",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.",
+        "confidence": "high",
+        "notes": "PDSA (S678). Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "intelligent and quick to learn, but can be independent — may need more effort in training",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "They can give the impression of doing their own thing despite what's being asked of them,",
+        "confidence": "medium",
+        "notes": "PDSA (S678) fragment as returned, continued 'which means you may have to put more effort into training.'; PetMD (S679) 'intelligent and quick to learn new things' / 'they can also be independent' (fragments)."
+      },
+      "chewing": {
+        "value": "can be chewers, especially if left alone too long",
+        "unit": "—",
+        "source_id": "S679",
+        "quote": "Irish Setters can be chewers or develop other destructive habits, especially if left to their own devices for too long.",
+        "confidence": "medium",
+        "notes": "PetMD (S679). Background (the game's chewing chance is the general rule)."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S676). Conditions named by PDSA (S678) and PetMD (S679).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S676) Breed Watch, Category 1 (fragment as returned). Not a conformation welfare breed."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "This is an emergency and requires urgent veterinary attention.",
+        "confidence": "high",
+        "notes": "PDSA (S678) list item 'Gastric Dilatation Volvulus (GDV)', 'often known as 'bloat'' (fragments); PetMD (S679) 'With GDV, the stomach fills with gas and then twists.' and two smaller meals a day instead of one (paraphrase). No wait-after-eating advice → no meal gap."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list item; PetMD (S679) orthopedic conditions incl. hip dysplasia and cruciate ligament tears (paraphrase). RKC Best Practice hip and elbow schemes (S676, breeder checklist)."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy (PRA); entropion",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list items 'Progressive retinal atrophy', 'Entropion'; PetMD (S679) PRA. RKC (S676): DNA tests PRA rcd4 (minimum) and PRA(rcd1) (Best Practice), BVA/KC/ISDS eye scheme."
+      },
+      "skin": {
+        "value": "atopy (skin allergy)",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list item 'Atopy'; PetMD (S679) allergies that can lead to ear infections (paraphrase)."
+      },
+      "thyroid": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list item; PetMD (S679) agrees."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list item; PetMD (S679) agrees."
+      },
+      "bone_cancer": {
+        "value": "osteosarcoma (bone cancer)",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S678) list item 'Osteosarcoma'."
+      },
+      "clad": {
+        "value": "canine leukocyte adhesion deficiency (CLAD) — DNA test available",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "DNA test for Canine leukocyte adhesion deficiency (CLAD)",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S676); breeder checklist."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 35,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Irish Setter",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-03): rank 35 (continuation line under the '35 Cairn Terrier' row, shared with the Kerry Blue Terrier), tier 'Above Average Working Dogs' (ranks 27–39). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label 'Above Average Working Dogs' on the rank-27 row, applying to ranks 27–39 (as returned)."
+      },
+      "training_notes": {
+        "value": "intelligent and quick to learn; can seem to do their own thing",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "They can give the impression of doing their own thing despite what's being asked of them,",
+        "confidence": "medium",
+        "notes": "PDSA (S678) fragment as returned."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.irish_setter.learning_multiplier (1.2, runbook rule: Above average tier, rank 35).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "racy, balanced, athletic, full of quality",
+        "unit": "—",
+        "source_id": "S677",
+        "quote": "Must be racy, balanced and full of quality.",
+        "confidence": "high",
+        "notes": "RKC breed standard (S677); FCI (S675) 'Racy and athletic full of quality, kindly in expression.'"
+      },
+      "colours": {
+        "value": [
+          "rich chestnut"
+        ],
+        "unit": "list",
+        "source_id": "S675",
+        "quote": "Rich chestnut with no trace of black; white on chest, throat, and toes.",
+        "confidence": "high",
+        "notes": "FCI (S675, fragment as returned; a small star or narrow blaze on the face is allowed, paraphrase). RKC (S677) 'Rich chestnut with no trace of black.'; AKC (S680) 'Mahogany or rich chestnut red with no black.'. One standard colour: rich chestnut red, at most small white marks on chest, throat, toes; never black, never red and white (that is the Irish Red and White Setter)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): rich chestnut red 1.0 (the only standard colour, the portrait default)."
+      },
+      "coat": {
+        "value": "short and fine on head, front of legs and ear tips; moderate length, flat, free from curl or wave elsewhere; long silky feathering",
+        "unit": "—",
+        "source_id": "S680",
+        "quote": "Feathering long and silky on ears; on back of forelegs and thighs long and fine,",
+        "confidence": "high",
+        "notes": "AKC (S680) fragments as returned: 'Short and fine on head and forelegs.' / 'On all other parts of moderate length and flat.'; RKC (S677) 'flat and as free as possible from curl or wave' (fragment)."
+      },
+      "head": {
+        "value": "long and lean",
+        "unit": "—",
+        "source_id": "S675",
+        "quote": "Long and lean, and not coarse at the ears.",
+        "confidence": "high",
+        "notes": "FCI (S675)."
+      },
+      "muzzle": {
+        "value": "moderately deep, fairly square at the end",
+        "unit": "—",
+        "source_id": "S675",
+        "quote": "Moderately deep and fairly square at the end.",
+        "confidence": "high",
+        "notes": "FCI (S675)."
+      },
+      "eyes": {
+        "value": "dark hazel to dark brown, not too large, kind expression",
+        "unit": "—",
+        "source_id": "S677",
+        "quote": "Dark hazel to dark brown, not too large,",
+        "confidence": "high",
+        "notes": "RKC (S677) fragment as returned; FCI (S675) 'Dark hazel or dark brown ought not to be too large.'"
+      },
+      "ears": {
+        "value": "moderate size, fine, set low and well back, hanging in a neat fold",
+        "unit": "—",
+        "source_id": "S677",
+        "quote": "Of moderate size, fine in texture, set on low, well back and hanging in a neat fold close to head.",
+        "confidence": "high",
+        "notes": "RKC (S677)."
+      },
+      "tail": {
+        "value": "moderate length, set low (natural)",
+        "unit": "—",
+        "source_id": "S675",
+        "quote": "Moderate length, proportionate to size of body, set on rather low.",
+        "confidence": "high",
+        "notes": "FCI (S675). Never docked."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S676, returned as values — quoted here as the value), PDSA (S678), PetMD (S679). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S676)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min (PDSA S678 'ideally over 2 hours per day' agrees). Basis of long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S676). Basis of the large_home chip; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S676)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S676). No number → runbook dog-grooming rule: the most specific number of another A/B source — PDSA (S678) '2 or 3 times per week' → 3 (range → upper bound). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S676); PDSA (S678) 'Medium' agrees."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S676). Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S676)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S676)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S676)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S676",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S676) Breed Watch category."
+      },
+      "pdsa_grooming": {
+        "value": "grooming 2 or 3 times per week",
+        "unit": "—",
+        "source_id": "S678",
+        "quote": "To keep the coat of the Irish Setter glossy and in top condition, they'll need grooming 2 or 3 times per week.",
+        "confidence": "high",
+        "notes": "PDSA (S678). The basis of brushing 3× a week (M5-R13, range → upper bound). PetMD (S679) 'daily (or at least 2-3 times a week)' (fragment) — alternative (7)."
+      },
+      "petmd_grooming": {
+        "value": "brush just about every day (or at least 2–3 times a week); trim toenails and fur each month",
+        "unit": "—",
+        "source_id": "S679",
+        "quote": "potential pet parents need to be prepared to brush that striking coat just about every day to prevent it from matting.",
+        "confidence": "high",
+        "notes": "PetMD (S679) fragments as returned: brushing 'daily (or at least 2-3 times a week)'; a fuller grooming session should 'trim their toenails and fur each month.' — basis of the monthly nail-trim task (M5-R19). Bathing: no frequency → no bath reminder."
+      },
+      "petmd_ears": {
+        "value": "weekly ear checks and cleaning",
+        "unit": "—",
+        "source_id": "S679",
+        "quote": "Weekly ear checks and cleaning are recommended for Irish Setters.",
+        "confidence": "high",
+        "notes": "PetMD (S679). Basis of the weekly ear-cleaning task (M5-R20)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -68876,6 +69417,311 @@
         "confidence": "high",
         "notes": "KC (S671): 'Nose black, with large wide-open nostrils and definite stop between muzzle and skull.'; FCI N° 80 (S669) red only and a very short muzzle. Welfare trait: muzzle (moderate face, open nostrils) — dog trait `muzzle` (French Bulldog / Pug precedent). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red (FCI / KC) is the portrait default; rough coat (FCI N° 80); moderate face with open nostrils, natural ears and tail, standard colours only (never white markings, merle or brindle)"
+      }
+    },
+    "irish_setter": {
+      "_note": "Unattended run M5-R10-89 (2026-11-03): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S676 'More than 2 hours per day' → 120; PDSA S678 agrees). Senior 90 from the RKC lower bound 'Over 10 years' (S676; McMillan 2024 not reachable → provisional). Coren rank 35 (Above average) → 1.2. Built: brushing 3× a week (PDSA S678 '2 or 3 times per week' → upper bound, M5-R13), puppy socialisation with the PDSA quote (S678, M5-R17), care tasks with a PetMD frequency (S679): ear cleaning once a week (M5-R20), nail trimming once a month (M5-R19). No meal gap (no wait-after-eating quote), no tooth / bath / groomer task (no frequency). Not a welfare breed (RKC Breed Watch Category 1) → in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S676",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: More than 2 hours per day' (S676) → rule 'more than N' → 120. PDSA (S678) 'ideally over 2 hours per day' agrees.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S676 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S676",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S676). No McMillan 2024 / VetCompass value reachable. Alternatives: 116 (McMillan 12.9 y via Wikipedia S681, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S676"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 116,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S676)"
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × RKC lower bound S676). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (none found) → the RKC lower bound (this).",
+        "derived_from": [
+          "S11",
+          "S676"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 116,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 (RKC lower bound 10 y, S676)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 35 'Irish Setter' (S35, checked 2026-11-03) → tier Above average (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 35, Above average, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S678",
+        "quote": "To keep the coat of the Irish Setter glossy and in top condition, they'll need grooming 2 or 3 times per week.",
+        "confidence": "high",
+        "notes": "irish_setter.suitability.pdsa_grooming. RKC 'Grooming: More than once a week' (S676) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PDSA (S678) '2 or 3 times per week' → 3 (range → upper bound). Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 7,
+            "source_id": "S679",
+            "quote": "potential pet parents need to be prepared to brush that striking coat just about every day to prevent it from matting.",
+            "notes": "PetMD 'daily (or at least 2-3 times a week)' — alternative."
+          },
+          {
+            "value": null,
+            "source_id": "S676",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »2 or 3 times per week«, zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S678",
+        "quote": "As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.",
+        "confidence": "high",
+        "notes": "irish_setter.behaviour.socialisation (PDSA S678). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S678)"
+      },
+      "ear_care": {
+        "value": "weekly ear checks and cleaning",
+        "unit": "ear cleaning (sourced need)",
+        "source_id": "S679",
+        "quote": "Weekly ear checks and cleaning are recommended for Irish Setters.",
+        "confidence": "high",
+        "notes": "PetMD (S679), irish_setter.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once a program week (DOG_CARE_TASKS, M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Weekly ear checks and cleaning« → 1× na teden"
+      },
+      "nail_trimming": {
+        "value": "trim toenails each month",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S679",
+        "quote": "trim their toenails and fur each month.",
+        "confidence": "high",
+        "notes": "PetMD (S679) fragment as returned, irish_setter.suitability.petmd_grooming. Built: the child's nail-trim mini-game once every 4 program weeks (DOG_CARE_TASKS [1, month], M5-R19). Bathing: no frequency → no bath reminder.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »each month« → 1× na mesec (4 tedne)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-89); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.exercise.adult",
+              "irish_setter.suitability.rkc_exercise"
+            ],
+            "quote": "S676 'More than 2 hours per day'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.behaviour.children"
+            ],
+            "quote": "S678 'Irish Setters are very friendly, affectionate dogs that get on well with both children and other pets,'",
+            "note": "Caveat kept in notes: PetMD (S679) toddlers can be knocked down → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.behaviour.other_pets"
+            ],
+            "quote": "S678 'Irish Setters are very friendly, affectionate dogs that get on well with both children and other pets,'"
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_size_of_home"
+            ],
+            "quote": "S676 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.exercise.adult",
+              "irish_setter.suitability.rkc_exercise"
+            ],
+            "quote": "S676 'More than 2 hours per day'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S679"
+            ],
+            "refs": [
+              "irish_setter.behaviour.time_alone"
+            ],
+            "quote": "S679 'They definitely like human interaction, so they need as much house time and human contact as possible.'",
+            "note": "Breed-specific statement (Weimaraner / Brussels Griffon precedent); never often_alone."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_shedding"
+            ],
+            "quote": "S676 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S676",
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_grooming",
+              "irish_setter.suitability.pdsa_grooming"
+            ],
+            "quote": "S676 'More than once a week'; S678 'they'll need grooming 2 or 3 times per week.'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "Only a Gundog-group sentence on the RKC page (S676), no breed-specific family-pet statement.",
+          "small_children": "PetMD (S679): toddlers are at risk of being accidentally knocked down.",
+          "not_for_small_children": "PetMD's toddler caveat (S679) is a warning, not advice against the breed with small children (Weimaraner PDSA S480 precedent is explicit) — kept in notes.",
+          "apartment": "RKC 'Large house' (S676); PetMD (S679) not well suited to apartment living.",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source (PDSA S678 only says training may take more effort).",
+          "often_alone": "PetMD (S679) the opposite → needs_company.",
+          "low_shedding": "RKC 'Sheds: Yes' (S676).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S676).",
+          "chases_small_pets": "No prey-drive statement.",
+          "hips_hind_legs": "RKC Breed Watch Category 1 (S676) — hip dysplasia only as a PDSA list item, no welfare chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, children, other_pets, large_home; consider long_daily_exercise, needs_company, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S676), no BVA / UFAW / VetCompass conformation concern found. Never promise the breed's health; never shown as an easy dog for toddlers (PetMD S679 caveat).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Irish Setter (Irish Red Setter), rich chestnut red with no black: racy, balanced, athletic large gundog; long lean head with a moderately deep, fairly square muzzle; dark hazel to dark brown eyes with a kind expression; low-set ears hanging in a neat fold with long silky feathering; flat coat of moderate length, free from curl, with feathering on ears, legs, belly and tail; natural tail of moderate length, set low; at most a small white mark on chest or toes — never red and white, never black",
+        "unit": "—",
+        "source_id": "S675",
+        "quote": "Rich chestnut with no trace of black; white on chest, throat, and toes.",
+        "confidence": "high",
+        "notes": "FCI (S675), RKC (S677), AKC (S680). One standard colour → no colour weights to choose (unsourced weight 1.0).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): rich chestnut red (FCI / RKC / AKC, the only colour) is the portrait default; natural tail; never red and white, never black"
       }
     }
   }

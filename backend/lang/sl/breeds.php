@@ -90,6 +90,7 @@ return [
     'greater_swiss_mountain_dog' => 'Veliki švicarski planšarski pes',
     'shar_pei' => 'Šarpej',
     'brussels_griffon' => 'Bruseljski grifon',
+    'irish_setter' => 'Irski seter',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

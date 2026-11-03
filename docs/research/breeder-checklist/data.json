@@ -3299,6 +3299,68 @@
         }
       ],
       "notes": "RKC breed page (dog-data S670, 2026-11-03; 'Good Practice schemes and tests' = minimum, 'Best Practice schemes and tests'): minimum 'Prioritising genetic diversity' (inbreeding_coi, Dachshund / Shetland Sheepdog precedent); Best Practice the BVA/KC/ISDS eye scheme and the KC Respiratory Function Grading for BOAS ('NEW test recognised Aug 2026'). No new test key."
+    },
+    "irish_setter": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S676",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "These tests address conditions that are still significant for the breed"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S676",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "dna_rcd4_pra",
+          "level": "minimum",
+          "name": "DNA test for progressive retinal atrophy PRA rcd4",
+          "source_id": "S676",
+          "quote": "DNA test for progressive retinal atrophy PRA rcd4"
+        },
+        {
+          "key": "dna_clad",
+          "level": "best_practice",
+          "name": "DNA test for Canine leukocyte adhesion deficiency (CLAD)",
+          "source_id": "S676",
+          "quote": "DNA test for Canine leukocyte adhesion deficiency (CLAD)"
+        },
+        {
+          "key": "dna_pra_rcd1",
+          "level": "best_practice",
+          "name": "DNA test for Progressive retinal atrophy PRA(rcd1)",
+          "source_id": "S676",
+          "quote": "DNA test for Progressive retinal atrophy PRA(rcd1)*"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme",
+          "source_id": "S676",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/KC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S676",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "best_practice",
+          "name": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme",
+          "source_id": "S676",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S676, 2026-11-03; 'Good Practice' tests = minimum, 'Best Practice'): minimum genetic diversity (inbreeding_coi) and the PRA rcd4 DNA test (dna_rcd4_pra, existing key); Best Practice CLAD DNA test (new key dna_clad), PRA(rcd1) DNA test (new key dna_pra_rcd1; the page marks it with '*', footnote not returned), elbow, eye and hip schemes."
     }
   }
 }
