@@ -58387,7 +58387,8 @@
       "address": "Keppoch Road, Culloden, Inverness, IV2 7LL",
       "phone": "+44 1463793700",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:00-17:00. Page lists out-of-hours number 01463 211020 (Highland Vet Emergencies, Culduthel Avenue IV2 6JG); the clinic itself is not 24 h.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://ivc.co.uk/find-a-vet/crown-vets-culloden",
       "source_url": "https://ivc.co.uk/find-a-vet/crown-vets-culloden",
       "checked": "2026-11-03"
@@ -58401,7 +58402,8 @@
       "address": "58 Argyle Street, Inverness, IV2 3BB",
       "phone": "+44 1463237000",
       "emergency_24h": false,
-      "duty": "Hours from the Highland Vet Emergencies contact page: Mon-Thu 8:00-20:00, Fri 8:00-18:00, Sat 8:30-16:00. Crown Vets own site not retrievable.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "source_url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58415,7 +58417,8 @@
       "address": "5 Inshes Holdings, Inshes, Inverness, IV2 5FF",
       "phone": "+44 1463711777",
       "emergency_24h": false,
-      "duty": "Day practice (Mon-Fri 8:00-19:00, Sat 9:00-13:00 per the page); out-of-hours via Highland Vet Emergencies.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "source_url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58429,7 +58432,8 @@
       "address": "Culduthel Avenue, Culduthel, Inverness, IV2 6JG",
       "phone": "+44 1463211020",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic (evenings/nights, weekends). Opened page lists times unclearly and does not state 24 h wording; marked false.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.highlandvetemergencies.co.uk/",
       "source_url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58443,7 +58447,8 @@
       "address": "Forest Road, Grantown-on-Spey, PH26 3JJ",
       "phone": "+44 1479872252",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-19:00. Emergency and out-of-hours use the same number; page asks to phone in advance; no 24 h wording.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.strathspeyvets.co.uk/contact-us",
       "source_url": "https://www.strathspeyvets.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58457,7 +58462,8 @@
       "address": "2 Granish Way, Dalfaber Drive, Aviemore, PH22 1UQ",
       "phone": "+44 1479872252",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-18:00, Sat 9:00-12:00. Emergency and out-of-hours use the same number; no 24 h wording.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.strathspeyvets.co.uk/contact-us",
       "source_url": "https://www.strathspeyvets.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58471,7 +58477,8 @@
       "address": null,
       "phone": "+44 1397302172",
       "emergency_24h": true,
-      "duty": "Emergency page: \"Contact our vets 24/7/365 for emergency veterinary assistance.\" No street address on opened pages (gov.scot lists Caol Shopping Centre, Glenloy Street, Caol PH33 7DR with a different number, 01397 302712; own-site number used).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://nevisvets.co.uk/",
       "source_url": "https://nevisvets.co.uk/in-an-emergency/",
       "checked": "2026-11-03"
@@ -58485,7 +58492,8 @@
       "address": "Victoria Road, Tain, IV19 1AU",
       "phone": "+44 1862894223",
       "emergency_24h": true,
-      "duty": "\"We offer all our clients a 24 hour emergency care service from our Tain surgery.\" Office hours Mon-Fri 8:30-18:00, Sat 9:00-12:30. Invergordon branch 01349 854981.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.johnstonandfarrellvets.co.uk/tain-surgery",
       "source_url": "https://www.johnstonandfarrellvets.co.uk/emergencies",
       "checked": "2026-11-03"
@@ -58499,7 +58507,8 @@
       "address": "Ardlair, High Street, Conon Bridge, Dingwall, IV7 8AZ",
       "phone": "+44 1349861203",
       "emergency_24h": true,
-      "duty": "\"Our emergency vet service is available 24 hours a day staffed by our own veterinary surgeons.\" Also branches Dingwall 01349 863117, Gairloch, Ullapool, Fortrose. Address from gov.scot HIVS list.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://conanvet.co.uk/locations/conan-bridge-practice/",
       "source_url": "https://conanvet.co.uk/locations/conan-bridge-practice/",
       "checked": "2026-11-03"
@@ -58513,7 +58522,8 @@
       "address": "25 High Street, Invergordon, IV18 0EZ",
       "phone": "+44 1349852204",
       "emergency_24h": false,
-      "duty": "Mon-Thu 8:00-19:00, Fri 8:00-18:00. Page also shows 01349 884777 in a contact list. Own site redirects to ivc.co.uk (not fetchable).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "source_url": "https://www.highlandvetemergencies.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58527,7 +58537,8 @@
       "address": "Veterinary Surgery, Janet Street, Thurso, KW14 7EG",
       "phone": "+44 1847892387",
       "emergency_24h": true,
-      "duty": "Pets page: own out of hours available \"24/7, 365 days a year, in our normal premises.\" Phone usual branch number.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://dsmcg.co.uk/thurso-veterinary-surgery/",
       "source_url": "https://dsmcg.co.uk/pets/",
       "checked": "2026-11-03"
@@ -58541,7 +58552,8 @@
       "address": "Veterinary Surgery, Airport Industrial Estate, Wick, KW1 4QS",
       "phone": "+44 1955602088",
       "emergency_24h": true,
-      "duty": "Pets page: own out of hours available \"24/7, 365 days a year.\" Mon-Fri 9:00-17:30, Sat 9:00-13:00.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://dsmcg.co.uk/wick-veterinary-surgery/",
       "source_url": "https://dsmcg.co.uk/pets/",
       "checked": "2026-11-03"
@@ -58555,7 +58567,8 @@
       "address": "19 Kenovay, Isle of Tiree, PA77 6UU",
       "phone": "+44 1879552101",
       "emergency_24h": false,
-      "duty": "Visiting-vet model; page says emergency calls forward to the vet on duty and telemedicine backup is 24/7, but no on-island 24 h clinic; marked false.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://animalcaretiree.co.uk/how-does-act-work/",
       "source_url": "https://animalcaretiree.co.uk/how-does-act-work/",
       "checked": "2026-11-03"
@@ -58569,7 +58582,8 @@
       "address": "33 Junction Road, Kirkwall, KW15 1AG",
       "phone": "+44 1856873403",
       "emergency_24h": true,
-      "duty": "\"provide a 24 hour emergency service 365 days of the year\"; call usual number out of hours. Mon-Fri 8:30-17:30, Sat 8:30-17:00. Also Stromness (1 North End Road KW16 3AG, same number).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://northvet.co.uk/contact/",
       "source_url": "https://northvet.co.uk/",
       "checked": "2026-11-03"
@@ -58583,7 +58597,8 @@
       "address": "Garrison Road, Hatston Industrial Estate, Kirkwall, KW15 1GN",
       "phone": "+44 1856872859",
       "emergency_24h": true,
-      "duty": "Page: \"24 hour emergency service.\" Mon-Fri 8:45-18:00, Sat 9:00-12:00 by appointment.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.flettandcarmichael.co.uk/",
       "source_url": "https://www.flettandcarmichael.co.uk/",
       "checked": "2026-11-03"
@@ -58597,7 +58612,8 @@
       "address": "13 Tweeddale Street, Oban, PA34 5DD",
       "phone": "+44 1631562876",
       "emergency_24h": false,
-      "duty": "Own vets on rota out of hours via the usual number; header labels it \"24 h Contact Number\" but the out-of-hours page gives no 24 h service statement; marked false. Mon-Fri 8:30-18:00.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.obanvets.co.uk/",
       "source_url": "https://www.obanvets.co.uk/contact-us/out-of-hours",
       "checked": "2026-11-03"
@@ -58611,7 +58627,8 @@
       "address": "89-91 Longrow, Campbeltown, PA28 6EX",
       "phone": "+44 1586552136",
       "emergency_24h": true,
-      "duty": "\"Phones are always answered 24/7\"; out of hours via an emergency answering service to the on-call vet. Mon-Fri 9:00-17:45.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.westwardsvet.co.uk/",
       "source_url": "https://www.westwardsvet.co.uk/emergency-care",
       "checked": "2026-11-03"
@@ -58625,7 +58642,8 @@
       "address": "Manse Brae, Lochgilphead, PA31 8QX",
       "phone": "+44 1546602240",
       "emergency_24h": true,
-      "duty": "Phone shown as \"Tel: 01546 602240 (24 hrs)\"; page says aims to serve clients 24 hours a day, 365 days a year. Mon-Fri 8:30-18:00.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.dalriadavets.com/",
       "source_url": "https://www.dalriadavets.com/",
       "checked": "2026-11-03"
@@ -58639,7 +58657,8 @@
       "address": "248 Argyll Street, Dunoon, PA23 7LT",
       "phone": "+44 1369702532",
       "emergency_24h": true,
-      "duty": "\"If you have an emergency please CALL our 24hr line\"; labelled 24 Hour Emergency Services. Office Mon-Fri 8:30-17:30.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.buteandcowalvets.co.uk/contact",
       "source_url": "https://www.buteandcowalvets.co.uk/contact",
       "checked": "2026-11-03"
@@ -58653,7 +58672,8 @@
       "address": "17 Argyle Street, Rothesay, Isle of Bute, PA20 0AU",
       "phone": "+44 1700503017",
       "emergency_24h": true,
-      "duty": "Emergency line for Rothesay 01700 503017 (page also lists 01369 702532); 24 Hour Emergency Services.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.buteandcowalvets.co.uk/contact",
       "source_url": "https://www.buteandcowalvets.co.uk/contact",
       "checked": "2026-11-03"
@@ -58667,7 +58687,8 @@
       "address": "Knowe Road, Brodick, Isle of Arran, KA27 8BY",
       "phone": "+44 1770302511",
       "emergency_24h": true,
-      "duty": "Out-of-hours calls taken \"24/7/365\" via the practice number (answerphone gives on-call vet); two vets cover the whole island.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.arranvets.co.uk/",
       "source_url": "https://www.arranvets.co.uk/emergencies/",
       "checked": "2026-11-03"
@@ -58681,7 +58702,8 @@
       "address": "Unit 1, Easter Langlee Industrial Estate, Melrose Road, Galashiels, TD1 2UH",
       "phone": "+44 1896753759",
       "emergency_24h": true,
-      "duty": "\"All of our practices have an emergency out of hours service providing 24 hour a day care\"; branch page: night vets and nurses deliver 24-hour care to hospitalised patients. Mon-Fri 8:00-18:00, Sat 8:00-12:00. Also serves Border Vets out-of-hours.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.galedinvet.com/branch/galashiels",
       "source_url": "https://www.galedinvet.com/emergency",
       "checked": "2026-11-03"
@@ -58695,7 +58717,8 @@
       "address": null,
       "phone": "+44 1573224496",
       "emergency_24h": true,
-      "duty": "Practice-wide \"24 hour a day\" out-of-hours wording; Kelso clients are seen at E-Vets Galashiels. No street address on opened pages.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.galedinvet.com/",
       "source_url": "https://www.galedinvet.com/emergency",
       "checked": "2026-11-03"
@@ -58709,7 +58732,8 @@
       "address": null,
       "phone": "+44 1361883742",
       "emergency_24h": true,
-      "duty": "Practice-wide \"24 hour a day\" out-of-hours wording. No street address on opened pages.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.galedinvet.com/",
       "source_url": "https://www.galedinvet.com/emergency",
       "checked": "2026-11-03"
@@ -58723,7 +58747,8 @@
       "address": "Galashiels Surgery, Gala Terrace, Galashiels, TD1 3JT",
       "phone": "+44 1896752156",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:00-18:00, Sat 8:00-13:00. Out of hours by e-vets at Galedin Vets Galashiels (01896 752156 per emergency page).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://bordervets.co.uk/",
       "source_url": "https://bordervets.co.uk/branches/galashiels",
       "checked": "2026-11-03"
@@ -58737,7 +58762,8 @@
       "address": "Selkirk Surgery, 9/11 High Street, Selkirk, TD7 4BZ",
       "phone": "+44 175021398",
       "emergency_24h": false,
-      "duty": "Out of hours transferred to e-vets (Galedin). Earlston branch 01896 849888.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://bordervets.co.uk/",
       "source_url": "https://bordervets.co.uk/branches/selkirk",
       "checked": "2026-11-03"
@@ -58751,7 +58777,8 @@
       "address": "Oakwell Road, Castle Douglas, DG7 1JT",
       "phone": "+44 1556502263",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-18:00, Sat 9:00-12:30 urgent only. \"Emergency out-of-hours call-outs: 01556 502263\"; no 24 h wording. Dalbeattie surgery Mon-Fri 15:30-16:30.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.stewartryveterinarycentre.co.uk/",
       "source_url": "https://www.stewartryveterinarycentre.co.uk/",
       "checked": "2026-11-03"
@@ -58765,7 +58792,8 @@
       "address": null,
       "phone": "+44 1776703131",
       "emergency_24h": false,
-      "duty": "Page links an Out of Hours service page not opened; no 24 h wording on opened page.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.academyvets.co.uk/",
       "source_url": "https://www.academyvets.co.uk/",
       "checked": "2026-11-03"
@@ -58779,7 +58807,8 @@
       "address": null,
       "phone": "+44 1671404951",
       "emergency_24h": false,
-      "duty": "As Stranraer branch; no 24 h wording on opened page.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.academyvets.co.uk/",
       "source_url": "https://www.academyvets.co.uk/",
       "checked": "2026-11-03"
@@ -58793,7 +58822,8 @@
       "address": "8 Whitefriars Crescent, Perth, PH2 0PA",
       "phone": "+44 1738621415",
       "emergency_24h": true,
-      "duty": "\"24-hour onsite emergency care.\" Mon-Thu 8:00-19:00, Fri 8:00-18:00, Sat 8:30-11:30, Sun 9:00-12:00.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://tayvalleyvets.co.uk/contact-us",
       "source_url": "https://tayvalleyvets.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58807,7 +58837,8 @@
       "address": "101 Perth Road, Scone, Perth, PH2 6JL",
       "phone": "+44 1738505122",
       "emergency_24h": true,
-      "duty": "\"We provide our own 24/7 emergency service with our own vets always on call\". No overnight hospitalisation at Scone (Blairgowrie/Kirriemuir). Mon-Fri 8:30-17:00 (Wed to 18:30), Sat 9:00-12:30.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://thrumsvet.co.uk/scone-perth-practice-branch/",
       "source_url": "https://thrumsvet.co.uk/vets-in-perth/",
       "checked": "2026-11-03"
@@ -58821,7 +58852,8 @@
       "address": "32 York Place, Perth, PH2 8EH",
       "phone": "+44 1738623210",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-19:00. Out of hours: call 01382 690733 then go to 5 King's Cross Road, Dundee DD2 3PT.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://ivc.co.uk/find-a-vet/fair-city-vets-perth",
       "source_url": "https://ivc.co.uk/find-a-vet/fair-city-vets-perth",
       "checked": "2026-11-03"
@@ -58835,7 +58867,8 @@
       "address": null,
       "phone": "+44 1796472201",
       "emergency_24h": false,
-      "duty": "Emergency number same as practice; no 24 h wording on opened page. Aberfeldy branch 01887 820771 (The Mill Surgery, Taybridge Terrace, PH15 2BS per gov.scot).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.heartlandvets.co.uk/",
       "source_url": "https://www.heartlandvets.co.uk/",
       "checked": "2026-11-03"
@@ -58849,7 +58882,8 @@
       "address": "New Elgin Road, Elgin, IV30 6BA",
       "phone": "+44 1343544811",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-18:30, Sat 9:00-13:00. Out of hours 01542 882209 (Seafield Veterinary Group, Keith).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://ivc.co.uk/find-a-vet/wards-vets-elgin",
       "source_url": "https://ivc.co.uk/find-a-vet/wards-vets-elgin",
       "checked": "2026-11-03"
@@ -58863,7 +58897,8 @@
       "address": "144 Land Street, Keith, AB55 5DL",
       "phone": "+44 1542882209",
       "emergency_24h": false,
-      "duty": "Out of hours: Seafield covers Mon-Fri 18:00-08:00 and Sat to 13:00; Vets Now Aberdeen / Highland Vet Emergencies at weekends; no 24 h wording. Branches Buckie 01542 835207, Banff 01261 812168.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.seafieldvetgroup.co.uk/contact-us/small-animal-emergencies",
       "source_url": "https://www.seafieldvetgroup.co.uk/contact-us",
       "checked": "2026-11-03"
@@ -58877,7 +58912,8 @@
       "address": "Skene Road, Kingswells, Aberdeen, AB15 8PJ",
       "phone": "+44 1224740700",
       "emergency_24h": false,
-      "duty": "Small animal out-of-hours covered by Vets Now Aberdeen (01224 379091); 24 h wording applies only to farm and equine. Bridge of Don branch 01224 826121.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.ardenehouse.co.uk/out-of-hours",
       "source_url": "https://www.ardenehouse.co.uk/out-of-hours",
       "checked": "2026-11-03"
@@ -58891,7 +58927,8 @@
       "address": "171 Mayfield Road, Edinburgh, EH9 3AZ",
       "phone": "+44 1316672478",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency line 0131 662 1689 (e-vets); page says a vet and nurse are onsite at all times but has no explicit 24 h wording. Other branches Dalkeith 0131 654 1232, Leith Walk 0131 553 1366.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://braidvet.co.uk/",
       "source_url": "https://braidvet.co.uk/emergency",
       "checked": "2026-11-03"
@@ -58905,7 +58942,8 @@
       "address": "11 Drumbrae Avenue, Corstorphine, Edinburgh, EH12 8TE",
       "phone": "+44 1313178150",
       "emergency_24h": true,
-      "duty": "Westport24: vet and nurse on site 24 hours a day, every day, own team; for registered Westport clients. Also Linlithgow 01506 844165, South Queensferry 0131 331 3451, Winchburgh 01506 667353.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.westportvets.com/",
       "source_url": "https://www.westportvets.com/",
       "checked": "2026-11-03"
@@ -58919,7 +58957,8 @@
       "address": "163 St John's Road, Edinburgh, EH12 7SD",
       "phone": "+44 1315602770",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-18:00, Sat 8:30-12:30. No own out-of-hours; refers to Vets Now Edinburgh (2B Hutchison Crossway EH14 1RR).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.westedinburghvets.co.uk/contact-us-opening-hours/",
       "source_url": "https://www.westedinburghvets.co.uk/contact-us-opening-hours/",
       "checked": "2026-11-03"
@@ -58933,7 +58972,8 @@
       "address": "73-77 Whitehill Street, Newcraighall, Musselburgh, EH21 8QZ",
       "phone": "+44 1315162499",
       "emergency_24h": false,
-      "duty": "Page: \"Call 0131 516 2499 any time - day or night\"; out-of-hours calls forwarded to ICR Loanhead; no explicit 24 h clinic statement. Mon-Fri 8:30-18:00, Sat 9:00-12:00.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.veterinarywellnesscentre.com/",
       "source_url": "https://www.veterinarywellnesscentre.com/",
       "checked": "2026-11-03"
@@ -58947,7 +58987,8 @@
       "address": "1 Maxwell Street, Baillieston, Glasgow, G69 6ED",
       "phone": "+44 1413786293",
       "emergency_24h": true,
-      "duty": "Page: \"We Are Available 24/7\" / \"your local emergency vets\"; page does not say which branch provides the cover.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://scotvet.com/",
       "source_url": "https://scotvet.com/",
       "checked": "2026-11-03"
@@ -58961,7 +59002,8 @@
       "address": "1453 Shettleston Road, Glasgow, G32 9AT",
       "phone": "+44 1417788335",
       "emergency_24h": true,
-      "duty": "Page: \"We Are Available 24/7\" (practice-wide wording); call to confirm which branch provides cover.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://scotvet.com/",
       "source_url": "https://scotvet.com/",
       "checked": "2026-11-03"
@@ -58975,7 +59017,8 @@
       "address": null,
       "phone": "+44 1416430404",
       "emergency_24h": false,
-      "duty": "Out of hours via an Out of Hours care provider; no 24 h wording. Mount Florida branch 0141 649 5351.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.avenuesvets.co.uk/",
       "source_url": "https://www.avenuesvets.co.uk/",
       "checked": "2026-11-03"
@@ -58989,7 +59032,8 @@
       "address": "4 Market Street, Kilsyth, G65 0BD",
       "phone": "+44 1236347959",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-18:00, Sat 10:00-14:00; own out-of-hours emergency care, no 24 h wording.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://kilsythvets.com/",
       "source_url": "https://kilsythvets.com/",
       "checked": "2026-11-03"
