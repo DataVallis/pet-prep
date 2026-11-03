@@ -12,7 +12,8 @@
     "it": "Lime",
     "pt": "Limas",
     "nl": "Limoenen",
-    "pl": "Limonki"
+    "pl": "Limonki",
+    "sv": "Lime"
   },
   "question": {
     "en": "Can dogs eat limes?",
@@ -25,7 +26,8 @@
     "it": "I cani possono mangiare i lime?",
     "pt": "Os cães podem comer limas?",
     "nl": "Mogen honden limoenen eten?",
-    "pl": "Czy psy mogą jeść limonki?"
+    "pl": "Czy psy mogą jeść limonki?",
+    "sv": "Får hundar äta lime?"
   },
   "url_slug": {
     "en": "limes",
@@ -38,7 +40,8 @@
     "it": "lime",
     "pt": "limas",
     "nl": "limoenen",
-    "pl": "limonki"
+    "pl": "limonki",
+    "sv": "lime"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "it": "No, meglio non dare i lime ai cani. Il frutto in sé non è tossico, ma le scorze di lime e i loro oli sono pericolosi per i cani e l’acido può far venire mal di stomaco. Alla maggior parte dei cani, comunque, sapore e odore non piacciono.",
     "pt": "Não, é melhor não dar limas aos cães. O fruto em si não é tóxico, mas as cascas das limas e os seus óleos são perigosos para os cães, e o ácido pode irritar o estômago. De resto, a maioria dos cães não gosta do sabor nem do cheiro.",
     "nl": "Nee, geef honden liever geen limoenen. De vrucht zelf is niet giftig, maar limoenschillen en de oliën daarin zijn gevaarlijk voor honden, en het zuur kan de maag van streek maken. De meeste honden houden toch niet van de smaak en de geur.",
-    "pl": "Nie, limonek lepiej psom nie podawać. Sam owoc nie jest toksyczny, ale skórka limonki i zawarte w niej olejki są dla psów niebezpieczne, a kwas może rozstroić żołądek. Większość psów i tak nie lubi ich smaku ani zapachu."
+    "pl": "Nie, limonek lepiej psom nie podawać. Sam owoc nie jest toksyczny, ale skórka limonki i zawarte w niej olejki są dla psów niebezpieczne, a kwas może rozstroić żołądek. Większość psów i tak nie lubi ich smaku ani zapachu.",
+    "sv": "Nej, det är bäst att inte ge lime till hundar. Själva frukten är inte giftig, men limeskal och oljorna i dem är farliga för hundar, och syran kan ge orolig mage. De flesta hundar tycker ändå inte om smaken eller lukten."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
@@ -65,7 +69,8 @@
     "it": "L’ASPCA classifica la pianta del lime come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC afferma che i lime non sono tossici ma sconsiglia di darli, e il PDSA li indica come non sicuri perché molto acidi. In grandi quantità l’acido citrico può causare disturbi di stomaco e addirittura depressione del sistema nervoso e perdita di coordinazione. Il succo di lime è concentrato e non va dato ai cani. Usiamo «sconsigliato» perché la polpa non è tossica, mentre il pericolo sta nella scorza, negli oli e nelle grandi quantità.",
     "pt": "A ASPCA classifica a limeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC diz que as limas não são tóxicas, mas desaconselha dar limas, e a PDSA classifica-as como não seguras por serem muito ácidas. Em grandes quantidades, o ácido cítrico pode causar problemas de estômago e até depressão do sistema nervoso e perda de coordenação. O sumo de lima é concentrado e não deve ser dado aos cães. Usamos «não recomendado» porque a polpa não é tóxica, e o perigo está na casca, nos óleos e nas grandes quantidades.",
     "nl": "De ASPCA noemt de limoenplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat limoenen niet giftig zijn maar raadt af om ze te geven, en de PDSA noemt ze onveilig omdat ze erg zuur zijn. In grote hoeveelheden kan citroenzuur maagklachten veroorzaken, het zenuwstelsel zelfs afremmen en tot verlies van coördinatie leiden. Limoensap is geconcentreerd en mag niet aan honden worden gegeven. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees niet giftig is en het gevaar in de schil, de oliën en grote hoeveelheden zit.",
-    "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC podaje, że limonki nie są toksyczne, ale odradza ich podawanie, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne. W dużych ilościach kwas cytrynowy może wywołać rozstrój żołądka, a nawet zahamowanie czynności ośrodkowego układu nerwowego i utratę koordynacji. Sok z limonki jest skoncentrowany i nie należy go podawać psom. Używamy określenia „niezalecane”, ponieważ miąższ nie jest toksyczny, a zagrożeniem są skórka, olejki i duże ilości."
+    "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC podaje, że limonki nie są toksyczne, ale odradza ich podawanie, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne. W dużych ilościach kwas cytrynowy może wywołać rozstrój żołądka, a nawet zahamowanie czynności ośrodkowego układu nerwowego i utratę koordynacji. Sok z limonki jest skoncentrowany i nie należy go podawać psom. Używamy określenia „niezalecane”, ponieważ miąższ nie jest toksyczny, a zagrożeniem są skórka, olejki i duże ilości.",
+    "sv": "ASPCA anger att limeväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att lime inte är giftig men avråder från att ge den, och PDSA anger att lime inte är säker för hundar eftersom den är mycket sur. I stora mängder kan citronsyra ge magbesvär och till och med dämpad funktion i nervsystemet och nedsatt koordination. Limesaft är koncentrerad och ska inte ges till hundar. Vi använder ”rekommenderas inte” eftersom fruktköttet inte är giftigt, medan skalet, oljorna och stora mängder är det som är farligt."
   },
   "signs": {
     "en": [
@@ -166,6 +171,15 @@
       "Objawy niedrożności jelit",
       "Drżenie",
       "Nadmierne ślinienie się"
+    ],
+    "sv": [
+      "Trötthet, slöhet",
+      "Kräkningar",
+      "Diarré",
+      "Minskad aptit",
+      "Tecken på stopp i tarmen",
+      "Darrningar eller skakningar",
+      "Kraftig dregling"
     ]
   },
   "what_to_do": {
@@ -179,7 +193,8 @@
     "it": "Se il tuo cane ha mangiato molti lime, osserva questi sintomi e contatta subito il veterinario. Butta le scorze dove il cane non le raggiunge e non incoraggiarlo a giocare con i lime caduti a terra.",
     "pt": "Se o teu cão comeu muitas limas, fica atento a estes sinais e liga imediatamente ao teu veterinário. Deita fora as cascas num sítio a que o teu cão não tenha acesso e não o incentives a brincar com limas caídas.",
     "nl": "Heeft je hond veel limoenen gegeten? Let dan op deze verschijnselen en neem meteen contact op met je dierenarts. Gooi schillen weg op een plek waar je hond er niet bij kan, en moedig je hond niet aan om met gevallen limoenen te spelen.",
-    "pl": "Jeśli pies zjadł dużo limonek, obserwuj, czy nie występują wymienione wyżej objawy, i od razu skontaktuj się z weterynarzem. Skórki wyrzucaj tak, by pies nie mógł ich zjeść, i nie zachęcaj go do zabawy opadłymi limonkami."
+    "pl": "Jeśli pies zjadł dużo limonek, obserwuj, czy nie występują wymienione wyżej objawy, i od razu skontaktuj się z weterynarzem. Skórki wyrzucaj tak, by pies nie mógł ich zjeść, i nie zachęcaj go do zabawy opadłymi limonkami.",
+    "sv": "Om hunden har ätit mycket lime, håll utkik efter de här tecknen och kontakta veterinären direkt. Släng skalen så att hunden inte kommer åt dem, och uppmuntra inte hunden att leka med nedfallna limefrukter."
   },
   "serving": null,
   "child": {
@@ -193,7 +208,8 @@
     "it": "I lime sono troppo aspri per i cani e possono far male alla pancia. Tieni i lime e le loro bucce lontani dal tuo cane.",
     "pt": "As limas são azedas demais para os cães e podem dar-lhes dor de barriga. Mantém as limas e as cascas longe do teu cão.",
     "nl": "Limoenen zijn te zuur voor honden en kunnen hun buikje van streek maken. Houd limoenen en hun schil uit de buurt van je hond.",
-    "pl": "Limonki są dla psów za kwaśne i mogą rozstroić im brzuszek. Limonki i ich skórki trzymaj z dala od psa."
+    "pl": "Limonki są dla psów za kwaśne i mogą rozstroić im brzuszek. Limonki i ich skórki trzymaj z dala od psa.",
+    "sv": "Lime är för sur för hundar och kan ge dem ont i magen. Håll lime och limeskal borta från hunden."
   },
   "faq": [
     {
@@ -208,7 +224,8 @@
         "it": "I cani possono bere succo di lime?",
         "pt": "Os cães podem beber sumo de lima?",
         "nl": "Mogen honden limoensap?",
-        "pl": "Czy psy mogą dostać sok z limonki?"
+        "pl": "Czy psy mogą dostać sok z limonki?",
+        "sv": "Får hundar limesaft?"
       },
       "a": {
         "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
@@ -221,7 +238,8 @@
         "it": "No. Il succo di lime è la polpa del frutto in forma concentrata, quindi non va dato ai cani.",
         "pt": "Não. O sumo de lima é uma forma concentrada da polpa do fruto, por isso não deve ser dado aos cães.",
         "nl": "Nee. Limoensap is een geconcentreerde vorm van het vruchtvlees, dus het mag niet aan honden worden gegeven.",
-        "pl": "Nie. Sok z limonki to skoncentrowana postać owocu, więc nie należy go podawać psom."
+        "pl": "Nie. Sok z limonki to skoncentrowana postać owocu, więc nie należy go podawać psom.",
+        "sv": "Nej. Limesaft är en koncentrerad form av fruktköttet och ska inte ges till hundar."
       }
     }
   ],
@@ -372,6 +390,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "033c60efa73b3f9a41a76b36dc264a86497693be7a8c2c609d49dfb6e7ae437c"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "30ee3f2e923d4f3deb19284a7614e489d97a9cbc4a60226812f3aa10664fc7f2"
     }
   }
 }

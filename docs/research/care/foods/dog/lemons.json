@@ -12,7 +12,8 @@
     "it": "Limoni",
     "pt": "Limões",
     "nl": "Citroenen",
-    "pl": "Cytryny"
+    "pl": "Cytryny",
+    "sv": "Citroner"
   },
   "question": {
     "en": "Can dogs eat lemons?",
@@ -25,7 +26,8 @@
     "it": "I cani possono mangiare i limoni?",
     "pt": "Os cães podem comer limões?",
     "nl": "Mogen honden citroenen eten?",
-    "pl": "Czy psy mogą jeść cytryny?"
+    "pl": "Czy psy mogą jeść cytryny?",
+    "sv": "Får hundar äta citroner?"
   },
   "url_slug": {
     "en": "lemons",
@@ -38,7 +40,8 @@
     "it": "limoni",
     "pt": "limoes",
     "nl": "citroenen",
-    "pl": "cytryny"
+    "pl": "cytryny",
+    "sv": "citroner"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "it": "No, i limoni non vanno dati al cane. La polpa non è tossica, ma il succo di limone è molto acido e la scorza contiene psoralene, che è tossico per i cani. Se il tuo cane ha mangiato un limone intero o della scorza, contatta subito il veterinario.",
     "pt": "Não, os limões não são para dar ao teu cão. A polpa não é tóxica, mas o sumo de limão é muito ácido e a casca contém psoraleno, que é tóxico para os cães. Se o teu cão comeu um limão inteiro ou uma casca, liga imediatamente ao teu veterinário.",
     "nl": "Nee, citroenen zijn niets voor je hond. Het vruchtvlees is niet giftig, maar citroensap is erg zuur en de schil bevat psoraleen, dat giftig is voor honden. Heeft je hond een hele citroen of een schil gegeten, neem dan meteen contact op met je dierenarts.",
-    "pl": "Nie, cytryn nie należy podawać psom. Miąższ nie jest toksyczny, ale sok z cytryny jest bardzo kwaśny, a skórka zawiera psoralen, który jest toksyczny dla psów. Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem."
+    "pl": "Nie, cytryn nie należy podawać psom. Miąższ nie jest toksyczny, ale sok z cytryny jest bardzo kwaśny, a skórka zawiera psoralen, który jest toksyczny dla psów. Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem.",
+    "sv": "Nej, citroner ska man inte ge sin hund. Fruktköttet är inte giftigt, men citronsaft är mycket sur och skalet innehåller psoralen, som är giftigt för hundar. Om hunden har ätit en hel citron eller ett skal, kontakta veterinären direkt."
   },
   "why": {
     "en": "The ASPCA lists the lemon plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC agrees the flesh isn't toxic but advises against feeding lemons, and PDSA lists them as unsafe because they are very acidic and can upset the stomach. Lemon juice contains a lot of citric acid, the rind contains psoralen and, if swallowed, can cause a stomach obstruction. We use 'not recommended' rather than a stricter level because the flesh itself is not toxic and the danger lies in the rind, juice and plant; most dogs avoid lemons because of the strong smell.",
@@ -65,7 +69,8 @@
     "it": "L’ASPCA classifica la pianta del limone come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. Anche l’AKC conferma che la polpa non è tossica ma sconsiglia i limoni, e il PDSA li indica come non sicuri perché molto acidi e capaci di far venire mal di stomaco. Il succo di limone contiene molto acido citrico, mentre la scorza contiene psoralene e, se ingerita, può causare un’ostruzione allo stomaco. Usiamo «sconsigliato» e non un livello più severo perché la polpa in sé non è tossica e il pericolo sta nella scorza, nel succo e nella pianta; la maggior parte dei cani evita i limoni per via dell’odore intenso.",
     "pt": "A ASPCA classifica o limoeiro como tóxico para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC concorda que a polpa não é tóxica, mas desaconselha dar limões, e a PDSA classifica-os como não seguros por serem muito ácidos e poderem irritar o estômago. O sumo de limão tem muito ácido cítrico, e a casca contém psoraleno e, se for engolida, pode causar uma obstrução do estômago. Usamos «não recomendado» e não um nível mais rigoroso porque a polpa em si não é tóxica e o perigo está na casca, no sumo e na planta; a maioria dos cães evita os limões por causa do cheiro forte.",
     "nl": "De ASPCA noemt de citroenplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC is het ermee eens dat het vruchtvlees niet giftig is, maar raadt af om citroenen te geven, en de PDSA noemt ze onveilig omdat ze erg zuur zijn en de maag van streek kunnen maken. Citroensap bevat veel citroenzuur, en de schil bevat psoraleen en kan, als hij wordt ingeslikt, een verstopping in de maag veroorzaken. Wij kiezen voor “niet aan te raden” in plaats van een strenger niveau, omdat het vruchtvlees zelf niet giftig is en het gevaar in de schil, het sap en de plant zit; de meeste honden mijden citroenen vanwege de sterke geur.",
-    "pl": "ASPCA uznaje drzewo cytrynowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC zgadza się, że miąższ nie jest toksyczny, ale odradza podawanie cytryn, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne i mogą rozstroić żołądek. Sok z cytryny zawiera dużo kwasu cytrynowego, a skórka zawiera psoralen i po połknięciu może spowodować niedrożność żołądka. Używamy określenia „niezalecane”, a nie ostrzejszego poziomu, bo sam miąższ nie jest toksyczny, a zagrożeniem są skórka, sok i roślina; większość psów i tak unika cytryn z powodu intensywnego zapachu."
+    "pl": "ASPCA uznaje drzewo cytrynowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC zgadza się, że miąższ nie jest toksyczny, ale odradza podawanie cytryn, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne i mogą rozstroić żołądek. Sok z cytryny zawiera dużo kwasu cytrynowego, a skórka zawiera psoralen i po połknięciu może spowodować niedrożność żołądka. Używamy określenia „niezalecane”, a nie ostrzejszego poziomu, bo sam miąższ nie jest toksyczny, a zagrożeniem są skórka, sok i roślina; większość psów i tak unika cytryn z powodu intensywnego zapachu.",
+    "sv": "ASPCA anger att citronväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC håller med om att fruktköttet inte är giftigt men avråder från att ge citroner, och PDSA anger att de inte är säkra eftersom de är mycket sura och kan ge orolig mage. Citronsaft innehåller mycket citronsyra, och skalet innehåller psoralen och kan, om det sväljs, orsaka en blockering i magsäcken. Vi använder ”rekommenderas inte” i stället för en strängare nivå eftersom själva fruktköttet inte är giftigt och faran ligger i skalet, saften och växten; de flesta hundar undviker citroner på grund av den starka lukten."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Biegunka",
       "Apatia (mało energii, pies wydaje się przygaszony)",
       "Podrażnienie skóry"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Slöhet (orkeslös, verkar nedstämd)",
+      "Hudirritation"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "it": "Se il tuo cane ha mangiato un limone intero o della scorza, contatta subito il veterinario. Tieni lontani dal cane anche limonata e caramelle al limone, per via dello zucchero.",
     "pt": "Se o teu cão comeu um limão inteiro ou uma casca, liga imediatamente ao teu veterinário. Mantém também a limonada e os doces de limão longe do teu cão, por causa do açúcar.",
     "nl": "Heeft je hond een hele citroen of een schil gegeten, neem dan meteen contact op met je dierenarts. Houd ook limonade en citroensnoep uit de buurt van je hond, vanwege de suiker.",
-    "pl": "Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem. Z powodu cukru trzymaj też z dala od psa lemoniadę i cytrynowe słodycze."
+    "pl": "Jeśli pies zjadł całą cytrynę lub skórkę, od razu skontaktuj się z weterynarzem. Z powodu cukru trzymaj też z dala od psa lemoniadę i cytrynowe słodycze.",
+    "sv": "Om hunden har ätit en hel citron eller ett skal, kontakta veterinären direkt. Håll också lemonad och citrongodis borta från hunden, eftersom de innehåller socker."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "it": "I limoni sono troppo aspri per i cani e possono far venire il mal di pancia. I limoni sono solo per le persone.",
     "pt": "Os limões são azedos demais para os cães e podem dar-lhes dor de barriga. Os limões são só para as pessoas.",
     "nl": "Citroenen zijn te zuur voor honden en kunnen buikpijn geven. Bewaar citroenen maar voor mensen.",
-    "pl": "Cytryny są dla psów za kwaśne i mogą wywołać ból brzucha. Cytryny zostaw dla ludzi."
+    "pl": "Cytryny są dla psów za kwaśne i mogą wywołać ból brzucha. Cytryny zostaw dla ludzi.",
+    "sv": "Citroner är för sura för hundar och kan ge dem ont i magen. Citroner är till för människor."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "it": "I cani possono bere succo di limone o limonata?",
         "pt": "Os cães podem beber sumo de limão ou limonada?",
         "nl": "Mogen honden citroensap of limonade?",
-        "pl": "Czy psy mogą pić sok z cytryny lub lemoniadę?"
+        "pl": "Czy psy mogą pić sok z cytryny lub lemoniadę?",
+        "sv": "Får hundar citronsaft eller lemonad?"
       },
       "a": {
         "en": "No. Lemon juice contains a lot of citric acid, and sweet lemon products like lemonade are not recommended because too much sugar can lead to obesity.",
@@ -188,7 +202,8 @@
         "it": "No. Il succo di limone contiene molto acido citrico, e i prodotti dolci al limone, come la limonata, sono sconsigliati perché troppo zucchero può portare all’obesità.",
         "pt": "Não. O sumo de limão tem muito ácido cítrico, e os produtos doces de limão, como a limonada, não são recomendados, porque o excesso de açúcar pode levar à obesidade.",
         "nl": "Nee. Citroensap bevat veel citroenzuur, en zoete citroenproducten zoals limonade worden afgeraden, omdat te veel suiker tot overgewicht kan leiden.",
-        "pl": "Nie. Sok z cytryny zawiera dużo kwasu cytrynowego, a słodkich produktów cytrynowych, takich jak lemoniada, nie zaleca się, bo nadmiar cukru może prowadzić do otyłości."
+        "pl": "Nie. Sok z cytryny zawiera dużo kwasu cytrynowego, a słodkich produktów cytrynowych, takich jak lemoniada, nie zaleca się, bo nadmiar cukru może prowadzić do otyłości.",
+        "sv": "Nej. Citronsaft innehåller mycket citronsyra, och söta produkter med citron, som lemonad, rekommenderas inte, eftersom för mycket socker kan leda till fetma."
       }
     }
   ],
@@ -303,6 +318,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4773a2d45763167b1c76d45956f75a67ec0e82b49e8a9e08fe9683aca876b553"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f2a014819d0461ca13466bf971d2227ad7bda33b70db404774e30433ec580aea"
     }
   }
 }
