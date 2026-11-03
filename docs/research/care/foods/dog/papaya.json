@@ -8,7 +8,8 @@
     "cs": "Papája",
     "de": "Papaya",
     "fr": "Papaye",
-    "es": "Papaya"
+    "es": "Papaya",
+    "it": "Papaya"
   },
   "question": {
     "en": "Can dogs eat papaya?",
@@ -17,7 +18,8 @@
     "cs": "Mohou psi jíst papáju?",
     "de": "Dürfen Hunde Papaya fressen?",
     "fr": "Les chiens peuvent-ils manger de la papaye ?",
-    "es": "¿Pueden los perros comer papaya?"
+    "es": "¿Pueden los perros comer papaya?",
+    "it": "I cani possono mangiare la papaya?"
   },
   "url_slug": {
     "en": "papaya",
@@ -26,7 +28,8 @@
     "cs": "papaja",
     "de": "papaya",
     "fr": "papaye",
-    "es": "papaya"
+    "es": "papaya",
+    "it": "papaya"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "cs": "Ano, psi mohou jíst malé množství čerstvé papáje, pokud z ní nejdříve odstraníte semínka a slupku. Papája obsahuje přirozeně hodně cukru, proto z ní dělejte jen občasný pamlsek.",
     "de": "Ja, Hunde dürfen kleine Mengen frische Papaya fressen, wenn vorher Kerne und Schale entfernt wurden. Papaya enthält von Natur aus viel Zucker und sollte deshalb ein gelegentliches Leckerli bleiben.",
     "fr": "Oui, les chiens peuvent manger un peu de papaye fraîche, à condition d’avoir d’abord retiré les graines et la peau. La papaye est naturellement très sucrée : gardez-la pour une friandise occasionnelle.",
-    "es": "Sí, los perros pueden comer pequeñas cantidades de papaya fresca, siempre que antes le quites las semillas y la piel. La papaya tiene mucho azúcar natural, así que dásela solo como premio ocasional."
+    "es": "Sí, los perros pueden comer pequeñas cantidades de papaya fresca, siempre que antes le quites las semillas y la piel. La papaya tiene mucho azúcar natural, así que dásela solo como premio ocasional.",
+    "it": "Sì, i cani possono mangiare piccole quantità di papaya fresca, purché prima si tolgano semi e buccia. La papaya è naturalmente ricca di zuccheri, quindi deve restare un premio occasionale."
   },
   "why": {
     "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
@@ -45,7 +49,8 @@
     "cs": "Semínka papáje obsahují malé množství kyanogenních látek, které mohou být ve větším množství škodlivé. Slupka je tuhá a špatně stravitelná a může způsobit žaludeční potíže. Papája je přirozeně sladká a bohatá na vlákninu, takže příliš mnoho může způsobit podráždění žaludku nebo průjem; u psů s cukrovkou je třeba příjem ovoce pečlivě hlídat. Sušená papája často obsahuje přidaný cukr nebo konzervanty.",
     "de": "Papayakerne enthalten geringe Mengen cyanogener Verbindungen, die in größeren Mengen schädlich sein können. Die Schale ist zäh und schwer verdaulich und kann Magenbeschwerden verursachen. Papaya ist von Natur aus zuckerhaltig und reich an Ballaststoffen, daher kann zu viel eine Magenverstimmung oder Durchfall auslösen; bei Hunden mit Diabetes muss die Obstmenge sorgfältig gesteuert werden. Getrocknete Papaya enthält oft zugesetzten Zucker oder Konservierungsstoffe.",
     "fr": "Les graines de papaye contiennent de petites quantités de composés cyanogènes, qui peuvent être nocifs en quantité plus importante. La peau est coriace, difficile à digérer et peut causer des maux d’estomac. La papaye est naturellement sucrée et riche en fibres : trop de papaye peut donc provoquer des maux d’estomac ou de la diarrhée ; chez les chiens diabétiques, la consommation de fruits doit être soigneusement encadrée. La papaye séchée contient souvent du sucre ajouté ou des conservateurs.",
-    "es": "Las semillas de papaya contienen pequeñas cantidades de compuestos cianogénicos, que en cantidades mayores pueden ser dañinos. La piel es dura, difícil de digerir y puede causar molestias de estómago. La papaya es dulce por naturaleza y rica en fibra, así que demasiada puede causar malestar de estómago o diarrea; en los perros con diabetes hay que controlar con cuidado la cantidad de fruta. La papaya deshidratada suele llevar azúcar añadido o conservantes."
+    "es": "Las semillas de papaya contienen pequeñas cantidades de compuestos cianogénicos, que en cantidades mayores pueden ser dañinos. La piel es dura, difícil de digerir y puede causar molestias de estómago. La papaya es dulce por naturaleza y rica en fibra, así que demasiada puede causar malestar de estómago o diarrea; en los perros con diabetes hay que controlar con cuidado la cantidad de fruta. La papaya deshidratada suele llevar azúcar añadido o conservantes.",
+    "it": "I semi di papaya contengono piccole quantità di composti cianogenici, che in quantità maggiori possono essere dannosi. La buccia è dura e difficile da digerire e può causare fastidi allo stomaco. La papaya è naturalmente zuccherina e ricca di fibre, quindi troppa può causare mal di stomaco o diarrea; nei cani diabetici l’assunzione di frutta va gestita con attenzione. La papaya essiccata contiene spesso zuccheri aggiunti o conservanti."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "cs": "Než papáju zařadíte do psího jídelníčku, poraďte se s veterinářem, zvlášť pokud má váš pes nějaké onemocnění, například cukrovku.",
     "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie Papaya in den Speiseplan Ihres Hundes aufnehmen, besonders wenn Ihr Hund eine Erkrankung wie Diabetes hat.",
     "fr": "Parlez-en à votre vétérinaire avant d’ajouter de la papaye à l’alimentation de votre chien, surtout s’il souffre d’une maladie comme le diabète.",
-    "es": "Habla con tu veterinario antes de añadir papaya a la dieta de tu perro, sobre todo si tiene algún problema de salud, como diabetes."
+    "es": "Habla con tu veterinario antes de añadir papaya a la dieta de tu perro, sobre todo si tiene algún problema de salud, como diabetes.",
+    "it": "Parla con il veterinario prima di inserire la papaya nella dieta del tuo cane, soprattutto se ha un problema di salute come il diabete."
   },
   "serving": {
     "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
@@ -64,7 +70,8 @@
     "cs": "Čerstvou, ne sušenou: rozkrojte ji napůl, vyberte semínka, odstraňte slupku a dužinu nakrájejte na malé kostičky na jedno sousto.",
     "de": "Frisch, nicht getrocknet: halbieren, die Kerne herauslöffeln, die Schale entfernen und das Fruchtfleisch in kleine, mundgerechte Würfel schneiden.",
     "fr": "Fraîche, pas séchée : coupez-la en deux, retirez les graines à la cuillère, enlevez la peau et coupez la chair en petits dés de la taille d’une bouchée.",
-    "es": "Fresca, no deshidratada: córtala por la mitad, saca las semillas, quita la piel y corta la pulpa en cubitos pequeños, del tamaño de un bocado."
+    "es": "Fresca, no deshidratada: córtala por la mitad, saca las semillas, quita la piel y corta la pulpa en cubitos pequeños, del tamaño de un bocado.",
+    "it": "Fresca, non essiccata: tagliala a metà, togli i semi con un cucchiaio, togli la buccia e riduci la polpa in cubetti piccoli, da un boccone."
   },
   "child": {
     "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
@@ -73,7 +80,8 @@
     "cs": "Psi mohou ochutnat kousek papáje! Dospělý vyndá semínka, odstraní slupku a nakrájí ji na malinké kousky.",
     "de": "Hunde dürfen ein bisschen Papaya probieren! Ein Erwachsener löffelt die Kerne heraus, schneidet die Schale ab und macht winzige Stücke daraus.",
     "fr": "Les chiens peuvent goûter un peu de papaye ! Un adulte retire les graines à la cuillère, enlève la peau et coupe de tout petits morceaux.",
-    "es": "¡Los perros pueden probar un poquito de papaya! Un adulto saca las semillas, quita la piel y la corta en trocitos muy pequeños."
+    "es": "¡Los perros pueden probar un poquito de papaya! Un adulto saca las semillas, quita la piel y la corta en trocitos muy pequeños.",
+    "it": "I cani possono provare un po’ di papaya! Un adulto toglie i semi con un cucchiaio, toglie la buccia e prepara dei pezzettini minuscoli."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "cs": "Mohou psi jíst semínka papáje?",
         "de": "Dürfen Hunde Papayakerne fressen?",
         "fr": "Les chiens peuvent-ils manger des graines de papaye ?",
-        "es": "¿Pueden los perros comer semillas de papaya?"
+        "es": "¿Pueden los perros comer semillas de papaya?",
+        "it": "I cani possono mangiare i semi di papaya?"
       },
       "a": {
         "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
@@ -93,7 +102,8 @@
         "cs": "Ne. Semínka papáje obsahují malé množství kyanogenních látek, proto je před podáváním odstraňte.",
         "de": "Nein. Papayakerne enthalten geringe Mengen cyanogener Verbindungen; entfernen Sie sie daher vor dem Füttern.",
         "fr": "Non. Les graines de papaye contiennent de petites quantités de composés cyanogènes ; retirez-les avant de servir.",
-        "es": "No. Las semillas de papaya contienen pequeñas cantidades de compuestos cianogénicos, así que quítalas antes de servirla."
+        "es": "No. Las semillas de papaya contienen pequeñas cantidades de compuestos cianogénicos, así que quítalas antes de servirla.",
+        "it": "No. I semi di papaya contengono piccole quantità di composti cianogenici, quindi vanno tolti prima di servire."
       }
     },
     {
@@ -104,7 +114,8 @@
         "cs": "Hodí se sušená papája pro psy?",
         "de": "Ist getrocknete Papaya für Hunde in Ordnung?",
         "fr": "La papaye séchée convient-elle aux chiens ?",
-        "es": "¿La papaya deshidratada es buena para los perros?"
+        "es": "¿La papaya deshidratada es buena para los perros?",
+        "it": "La papaya essiccata va bene per i cani?"
       },
       "a": {
         "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
@@ -113,7 +124,8 @@
         "cs": "Lepší je čerstvá. Sušená papája často obsahuje přidaný cukr nebo konzervanty, které pro psy nejsou vhodné.",
         "de": "Frische Papaya ist besser. Getrocknete Papaya enthält oft zugesetzten Zucker oder Konservierungsstoffe, die für Hunde nicht geeignet sind.",
         "fr": "Mieux vaut la papaye fraîche. La papaye séchée contient souvent du sucre ajouté ou des conservateurs qui ne conviennent pas aux chiens.",
-        "es": "Es mejor la fresca. La papaya deshidratada suele llevar azúcar añadido o conservantes que no son adecuados para los perros."
+        "es": "Es mejor la fresca. La papaya deshidratada suele llevar azúcar añadido o conservantes que no son adecuados para los perros.",
+        "it": "Meglio quella fresca. La papaya essiccata contiene spesso zuccheri aggiunti o conservanti non adatti ai cani."
       }
     }
   ],
@@ -224,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "35f7e50c79c13446dfc9e6dbb7a56bc1ded66ee9e2b0d43d91482f7369b08249"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0de27857b76bcaa486f0b0032025fb1093f589d36e8f10a53bda74e3f28fce98"
     }
   }
 }

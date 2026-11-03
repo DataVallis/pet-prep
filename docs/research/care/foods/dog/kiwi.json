@@ -8,7 +8,8 @@
     "cs": "Kiwi",
     "de": "Kiwi",
     "fr": "Kiwi",
-    "es": "Kiwi"
+    "es": "Kiwi",
+    "it": "Kiwi"
   },
   "question": {
     "en": "Can dogs eat kiwi?",
@@ -17,7 +18,8 @@
     "cs": "Mohou psi jíst kiwi?",
     "de": "Dürfen Hunde Kiwi fressen?",
     "fr": "Les chiens peuvent-ils manger du kiwi ?",
-    "es": "¿Pueden los perros comer kiwi?"
+    "es": "¿Pueden los perros comer kiwi?",
+    "it": "I cani possono mangiare il kiwi?"
   },
   "url_slug": {
     "en": "kiwi",
@@ -26,7 +28,8 @@
     "cs": "kiwi",
     "de": "kiwi",
     "fr": "kiwi",
-    "es": "kiwi"
+    "es": "kiwi",
+    "it": "kiwi"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "cs": "Ano, psi mohou občas dostat malé množství kiwi jako pamlsek. Oloupejte ho a nakrájejte na malé kousky nebo plátky; celé kiwi nikdy nedávejte, protože může způsobit dušení.",
     "de": "Ja, Hunde dürfen kleine Mengen Kiwi als gelegentliches Leckerli bekommen. Schälen Sie die Frucht und schneiden Sie sie in kleine Stücke oder Scheiben. Geben Sie nie eine ganze Kiwi, denn ein Hund kann daran ersticken.",
     "fr": "Oui, les chiens peuvent manger un peu de kiwi en friandise occasionnelle. Pelez-le et coupez-le en petits morceaux ou en tranches, et ne donnez jamais un kiwi entier : votre chien pourrait s’étouffer.",
-    "es": "Sí, los perros pueden comer pequeñas cantidades de kiwi como premio ocasional. Pélalo y córtalo en trocitos o rodajas, y nunca le des un kiwi entero, porque puede provocar atragantamiento."
+    "es": "Sí, los perros pueden comer pequeñas cantidades de kiwi como premio ocasional. Pélalo y córtalo en trocitos o rodajas, y nunca le des un kiwi entero, porque puede provocar atragantamiento.",
+    "it": "Sì, i cani possono mangiare un po’ di kiwi come premio occasionale. Sbuccialo e taglialo a pezzetti o a fettine, e non dare mai un kiwi intero, perché può far soffocare."
   },
   "why": {
     "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
@@ -45,7 +49,8 @@
     "cs": "Kiwi je sladké ovoce plné vitaminu C a draslíku a obsahuje hodně vlákniny, zejména nerozpustné. Příliš mnoho kiwi může způsobit zažívací potíže, včetně průjmu. Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek. Celé kiwi je dost malé na to, aby se jím pes mohl udusit.",
     "de": "Kiwi ist eine süße Frucht, reich an Vitamin C und Kalium, und enthält viele Ballaststoffe, vor allem unlösliche. Zu viel Kiwi kann zu Verdauungsbeschwerden bis hin zu Durchfall führen. Die Schale ist nicht giftig, aber zäh und ballaststoffreich und kann einem Hund auf den Magen schlagen. Eine ganze Kiwi ist so klein, dass ein Hund daran ersticken könnte.",
     "fr": "Le kiwi est un fruit sucré riche en vitamine C et en potassium, et il contient beaucoup de fibres, surtout insolubles. Trop de kiwi peut causer des troubles digestifs, dont de la diarrhée. La peau n’est pas toxique, mais elle est coriace, riche en fibres et peut irriter l’estomac du chien. Un kiwi entier est assez petit pour qu’un chien puisse s’étouffer avec.",
-    "es": "El kiwi es una fruta dulce, muy rica en vitamina C y potasio, y contiene mucha fibra, sobre todo insoluble. Demasiado kiwi puede causar problemas digestivos, como diarrea. La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro. Un kiwi entero es lo bastante pequeño como para suponer un riesgo de atragantamiento."
+    "es": "El kiwi es una fruta dulce, muy rica en vitamina C y potasio, y contiene mucha fibra, sobre todo insoluble. Demasiado kiwi puede causar problemas digestivos, como diarrea. La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro. Un kiwi entero es lo bastante pequeño como para suponer un riesgo de atragantamiento.",
+    "it": "Il kiwi è un frutto dolce, ricco di vitamina C e potassio, e contiene molte fibre, soprattutto insolubili. Troppo kiwi può causare disturbi digestivi, anche diarrea. La buccia non è tossica, ma è dura e ricca di fibre e può far venire mal di stomaco al cane. Un kiwi intero è abbastanza piccolo da rappresentare un rischio di soffocamento."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "cs": "Dávejte vždy jen trochu. Příliš mnoho kiwi může způsobit zažívací potíže, například průjem, a kiwi nikdy nemá nahradit kompletní a vyvážené krmivo pro psy.",
     "de": "Füttern Sie immer nur ein wenig auf einmal. Zu viel Kiwi kann zu Verdauungsbeschwerden wie Durchfall führen, und Kiwi sollte niemals ein vollwertiges, ausgewogenes Hundefutter ersetzen.",
     "fr": "N’en donnez qu’un peu à la fois. Trop de kiwi peut provoquer des troubles digestifs comme de la diarrhée, et le kiwi ne doit jamais remplacer une alimentation complète et équilibrée pour chien.",
-    "es": "Dale solo un poco cada vez. Demasiado kiwi puede causar problemas digestivos como diarrea, y el kiwi no debe sustituir nunca a una comida completa y equilibrada para perros."
+    "es": "Dale solo un poco cada vez. Demasiado kiwi puede causar problemas digestivos como diarrea, y el kiwi no debe sustituir nunca a una comida completa y equilibrada para perros.",
+    "it": "Dagliene solo un pochino alla volta. Troppo kiwi può causare disturbi digestivi come la diarrea, e il kiwi non deve mai sostituire un alimento completo e bilanciato per cani."
   },
   "serving": {
     "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
@@ -64,7 +70,8 @@
     "cs": "Oloupané a nakrájené na malé kousky nebo plátky; vždy jen trochu, jako občasný pamlsek.",
     "de": "Geschält und in kleine Stücke oder Scheiben geschnitten; immer nur ein wenig auf einmal, als gelegentliches Leckerli.",
     "fr": "Pelé et coupé en petits morceaux ou en tranches ; un peu à la fois, en friandise occasionnelle.",
-    "es": "Pelado y cortado en trocitos o rodajas; un poco cada vez, como premio ocasional."
+    "es": "Pelado y cortado en trocitos o rodajas; un poco cada vez, como premio ocasional.",
+    "it": "Sbucciato e tagliato a pezzetti o a fettine; un po’ alla volta, come premio occasionale."
   },
   "child": {
     "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
@@ -73,7 +80,8 @@
     "cs": "Psi si můžou dát kousíček kiwi! Dospělý ho oloupe a nakrájí na malinké kousky, aby se dobře jedly.",
     "de": "Hunde dürfen ein bisschen Kiwi probieren! Ein Erwachsener schält sie und schneidet sie in winzige Stücke, damit sie leicht zu fressen ist.",
     "fr": "Les chiens peuvent goûter un peu de kiwi ! Un adulte le pèle et le coupe en tout petits morceaux pour qu’il soit facile à manger.",
-    "es": "¡Los perros pueden probar un poquito de kiwi! Un adulto lo pela y lo corta en trocitos muy pequeños para que sea fácil de comer."
+    "es": "¡Los perros pueden probar un poquito de kiwi! Un adulto lo pela y lo corta en trocitos muy pequeños para que sea fácil de comer.",
+    "it": "I cani possono assaggiare un po’ di kiwi! Un adulto lo sbuccia e lo taglia a pezzettini, così è facile da mangiare."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "cs": "Mohou psi jíst slupku kiwi?",
         "de": "Dürfen Hunde Kiwischale fressen?",
         "fr": "Les chiens peuvent-ils manger la peau du kiwi ?",
-        "es": "¿Pueden los perros comer la piel del kiwi?"
+        "es": "¿Pueden los perros comer la piel del kiwi?",
+        "it": "I cani possono mangiare la buccia del kiwi?"
       },
       "a": {
         "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
@@ -93,7 +102,8 @@
         "cs": "Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek, proto je nejlepší ji odstranit.",
         "de": "Die Schale ist nicht giftig, aber zäh und ballaststoffreich und kann einem Hund auf den Magen schlagen. Entfernen Sie sie am besten.",
         "fr": "La peau n’est pas toxique, mais elle est coriace, riche en fibres et peut irriter l’estomac du chien ; mieux vaut donc la retirer.",
-        "es": "La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro, así que lo mejor es quitarla."
+        "es": "La piel no es tóxica, pero es dura y rica en fibra y puede sentar mal al estómago del perro, así que lo mejor es quitarla.",
+        "it": "La buccia non è tossica, ma è dura e ricca di fibre e può far venire mal di stomaco al cane, quindi è meglio toglierla."
       }
     }
   ],
@@ -176,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1bcab2a2c5830ad0c1f1068d01cbd3791ca490b16c8f1bd3789f8b21d8026346"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "463d505a761c8758750fcd14b933c04ed031167dd43156d58035009e15250ddd"
     }
   }
 }

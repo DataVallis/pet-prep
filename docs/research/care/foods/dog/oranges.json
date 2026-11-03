@@ -8,7 +8,8 @@
     "cs": "Pomeranče",
     "de": "Orangen",
     "fr": "Oranges",
-    "es": "Naranjas"
+    "es": "Naranjas",
+    "it": "Arance"
   },
   "question": {
     "en": "Can dogs eat oranges?",
@@ -17,7 +18,8 @@
     "cs": "Mohou psi jíst pomeranče?",
     "de": "Dürfen Hunde Orangen fressen?",
     "fr": "Les chiens peuvent-ils manger des oranges ?",
-    "es": "¿Pueden los perros comer naranjas?"
+    "es": "¿Pueden los perros comer naranjas?",
+    "it": "I cani possono mangiare le arance?"
   },
   "url_slug": {
     "en": "oranges",
@@ -26,7 +28,8 @@
     "cs": "pomerance",
     "de": "orangen",
     "fr": "oranges",
-    "es": "naranjas"
+    "es": "naranjas",
+    "it": "arance"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "cs": "Ano, psi mohou jíst dužinu pomeranče v omezeném množství, bez slupky a semínek. Pomeranče obsahují hodně přirozeného cukru, proto z nich dělejte jen občasný pamlsek; spousta psů stejně nemá ráda silnou citrusovou vůni.",
     "de": "Ja, das Fruchtfleisch einer Orange dürfen Hunde in begrenzter Menge fressen – ohne Schale und Kerne. Orangen enthalten viel natürlichen Zucker und sollten deshalb ein gelegentliches Leckerli bleiben; viele Hunde mögen den starken Zitrusgeruch ohnehin nicht.",
     "fr": "Oui, les chiens peuvent manger la chair d’une orange en quantité limitée, sans la peau ni les pépins. Les oranges sont riches en sucres naturels : réservez-les à une friandise occasionnelle. Beaucoup de chiens n’aiment d’ailleurs pas leur odeur forte.",
-    "es": "Sí, los perros pueden comer la pulpa de la naranja en cantidades limitadas, sin cáscara ni semillas. Las naranjas tienen mucho azúcar natural, así que dáselas solo como premio ocasional; además, a muchos perros no les gusta el olor intenso de los cítricos."
+    "es": "Sí, los perros pueden comer la pulpa de la naranja en cantidades limitadas, sin cáscara ni semillas. Las naranjas tienen mucho azúcar natural, así que dáselas solo como premio ocasional; además, a muchos perros no les gusta el olor intenso de los cítricos.",
+    "it": "Sì, i cani possono mangiare la polpa dell’arancia in quantità limitate, senza buccia e semi. Le arance contengono molto zucchero naturale, quindi devono restare un premio occasionale; a molti cani, del resto, non piace l’odore intenso degli agrumi."
   },
   "why": {
     "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
@@ -45,7 +49,8 @@
     "cs": "ASPCA řadí pomerančovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům, ale poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC, PDSA i Blue Cross uvádějí, že dužina je s mírou v pořádku. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev; semínka mohou způsobit dušení. Příliš mnoho pomeranče může způsobit zažívací potíže, včetně průjmu.",
     "de": "Die ASPCA führt die Orangenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. AKC, PDSA und Blue Cross sagen, das Fruchtfleisch sei in Maßen unbedenklich. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen; Kerne können eine Erstickungsgefahr darstellen. Zu viel Orange kann zu Verdauungsbeschwerden bis hin zu Durchfall führen.",
     "fr": "L’ASPCA classe l’oranger parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, mais précise que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC, la PDSA et Blue Cross indiquent que la chair ne pose pas de problème si elle est donnée avec modération. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion ; les pépins peuvent présenter un risque d’étouffement. Trop d’orange peut causer des troubles digestifs, dont de la diarrhée.",
-    "es": "La ASPCA considera tóxica para los perros la planta del naranjo por sus aceites esenciales y psoralenos, pero señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC, la PDSA y Blue Cross afirman que la pulpa está bien con moderación. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción; las semillas pueden provocar atragantamiento. Demasiada naranja puede causar malestar digestivo, como diarrea."
+    "es": "La ASPCA considera tóxica para los perros la planta del naranjo por sus aceites esenciales y psoralenos, pero señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC, la PDSA y Blue Cross afirman que la pulpa está bien con moderación. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción; las semillas pueden provocar atragantamiento. Demasiada naranja puede causar malestar digestivo, como diarrea.",
+    "it": "L’ASPCA classifica la pianta dell’arancio come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC, il PDSA e Blue Cross affermano che la polpa va bene con moderazione. La buccia è dura e difficile da digerire, può far venire mal di stomaco e aumentare il rischio di ostruzione; i semi possono far soffocare. Troppa arancia può causare disturbi digestivi, anche diarrea."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "cs": "Slupku psovi nedávejte: špatně se tráví a může zvýšit riziko ucpání střev, které v některých případech vyžaduje veterinární pomoc.",
     "de": "Geben Sie Ihrem Hund keine Schale: Sie ist schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, der in manchen Fällen tierärztliche Hilfe braucht.",
     "fr": "Ne donnez pas l’écorce à votre chien : elle est difficile à digérer et peut augmenter le risque d’occlusion intestinale, qui nécessite parfois l’intervention d’un vétérinaire.",
-    "es": "No le des la cáscara a tu perro: es difícil de digerir y puede aumentar el riesgo de obstrucción intestinal, que en algunos casos necesita atención veterinaria."
+    "es": "No le des la cáscara a tu perro: es difícil de digerir y puede aumentar el riesgo de obstrucción intestinal, que en algunos casos necesita atención veterinaria.",
+    "it": "Non dare la buccia al tuo cane: è difficile da digerire e può aumentare il rischio di ostruzione intestinale, che in alcuni casi richiede l’intervento del veterinario."
   },
   "serving": {
     "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
@@ -64,7 +70,8 @@
     "cs": "Jen dužina, bez slupky a semínek, nakrájená na malé kousky; jako občasný pamlsek.",
     "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Stücke geschnitten; als gelegentliches Leckerli.",
     "fr": "Uniquement la chair, sans l’écorce ni les pépins, coupée en petits morceaux ; en friandise occasionnelle.",
-    "es": "Solo la pulpa, sin cáscara ni semillas y cortada en trocitos; como premio ocasional."
+    "es": "Solo la pulpa, sin cáscara ni semillas y cortada en trocitos; como premio ocasional.",
+    "it": "Solo la polpa, senza buccia e semi, tagliata a pezzetti; come premio occasionale."
   },
   "child": {
     "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
@@ -73,7 +80,8 @@
     "cs": "Někteří psi mají rádi malý kousek pomeranče a jiným se jeho vůně nelíbí! Dospělý ho oloupe a vybere semínka.",
     "de": "Manche Hunde mögen ein kleines Stück Orange, andere mögen den Geruch nicht! Ein Erwachsener schält sie und nimmt die Kerne heraus.",
     "fr": "Certains chiens aiment un petit morceau d’orange, d’autres n’aiment pas l’odeur ! Un adulte enlève la peau et les pépins.",
-    "es": "A algunos perros les gusta un trocito de naranja, ¡y a otros no les gusta el olor! Un adulto la pela y le quita las semillas."
+    "es": "A algunos perros les gusta un trocito de naranja, ¡y a otros no les gusta el olor! Un adulto la pela y le quita las semillas.",
+    "it": "A qualche cane piace un pezzettino di arancia, ad altri non piace l’odore! Un adulto la sbuccia e toglie i semi."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "cs": "Mohou psi jíst pomerančovou slupku?",
         "de": "Dürfen Hunde Orangenschale fressen?",
         "fr": "Les chiens peuvent-ils manger de l’écorce d’orange ?",
-        "es": "¿Pueden los perros comer cáscara de naranja?"
+        "es": "¿Pueden los perros comer cáscara de naranja?",
+        "it": "I cani possono mangiare la buccia dell’arancia?"
       },
       "a": {
         "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
@@ -93,7 +102,8 @@
         "cs": "Ne. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev. ASPCA uvádí, že potíže způsobují právě slupky a ostatní části rostliny.",
         "de": "Nein. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen. Laut ASPCA verursachen vor allem Schalen und Pflanzenteile Probleme.",
         "fr": "Non. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion. Selon l’ASPCA, ce sont les écorces et les autres parties de la plante qui posent problème.",
-        "es": "No. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción. La ASPCA señala que lo que causa problemas son la piel y el resto de la planta."
+        "es": "No. La cáscara es dura y difícil de digerir, puede sentar mal al estómago y aumentar el riesgo de obstrucción. La ASPCA señala que lo que causa problemas son la piel y el resto de la planta.",
+        "it": "No. La buccia è dura e difficile da digerire, può far venire mal di stomaco e aumentare il rischio di ostruzione. Secondo l’ASPCA, i problemi vengono proprio da bucce e parti della pianta."
       }
     },
     {
@@ -104,7 +114,8 @@
         "cs": "Mohou psi pít pomerančový džus?",
         "de": "Dürfen Hunde Orangensaft trinken?",
         "fr": "Les chiens peuvent-ils boire du jus d’orange ?",
-        "es": "¿Pueden los perros beber zumo de naranja?"
+        "es": "¿Pueden los perros beber zumo de naranja?",
+        "it": "I cani possono bere il succo d’arancia?"
       },
       "a": {
         "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
@@ -113,7 +124,8 @@
         "cs": "Pomerančový džus není toxický, ale obecně to není dobrá volba: obsahuje koncentrované přirozené cukry a chybí v něm vláknina, kterou má celý plod.",
         "de": "Orangensaft ist nicht giftig, aber in der Regel keine gute Wahl: Er enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht.",
         "fr": "Le jus d’orange n’est pas toxique, mais ce n’est généralement pas un bon choix : il concentre les sucres naturels et ne contient pas les fibres du fruit entier.",
-        "es": "El zumo de naranja no es tóxico, pero en general no es una buena opción: tiene azúcares naturales concentrados y carece de la fibra de la fruta entera."
+        "es": "El zumo de naranja no es tóxico, pero en general no es una buena opción: tiene azúcares naturales concentrados y carece de la fibra de la fruta entera.",
+        "it": "Il succo d’arancia non è tossico, ma in genere non è una buona scelta: contiene zuccheri naturali concentrati e non ha le fibre del frutto intero."
       }
     }
   ],
@@ -240,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5957edfea5fa597a96e52b1cde95b7bf56596704ec545372681dd23580e033ba"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d77e0938235129d192c08337ae94742d55e4ca5ef4d575b93a3a6ce1373acea4"
     }
   }
 }

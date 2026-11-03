@@ -8,7 +8,8 @@
     "cs": "Ananas",
     "de": "Ananas",
     "fr": "Ananas",
-    "es": "Piña"
+    "es": "Piña",
+    "it": "Ananas"
   },
   "question": {
     "en": "Can dogs eat pineapple?",
@@ -17,7 +18,8 @@
     "cs": "Mohou psi jíst ananas?",
     "de": "Dürfen Hunde Ananas fressen?",
     "fr": "Les chiens peuvent-ils manger de l’ananas ?",
-    "es": "¿Pueden los perros comer piña?"
+    "es": "¿Pueden los perros comer piña?",
+    "it": "I cani possono mangiare l’ananas?"
   },
   "url_slug": {
     "en": "pineapple",
@@ -26,7 +28,8 @@
     "cs": "ananas",
     "de": "ananas",
     "fr": "ananas",
-    "es": "pina"
+    "es": "pina",
+    "it": "ananas"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "cs": "Ano, čerstvý ananas je v malém množství pro psy dobrý pamlsek, pokud odstraníte bodlavou slupku, korunku a tvrdé jádro. Konzervovaný ananas nedávejte, protože sirup obsahuje příliš mnoho cukru.",
     "de": "Ja, frische Ananas ist in kleinen Mengen ein guter Snack für Hunde, solange die stachelige Schale, der Blätterschopf und der harte Strunk entfernt sind. Verzichten Sie auf Dosenananas, denn der Sirup enthält zu viel Zucker.",
     "fr": "Oui, l’ananas frais en petite quantité est un bon en-cas pour les chiens, à condition d’avoir retiré la peau épineuse, la couronne et le cœur dur. Évitez l’ananas en conserve, car le sirop contient trop de sucre.",
-    "es": "Sí, la piña cruda en pequeñas cantidades es un buen premio para los perros, siempre que le quites la piel con espinas, la corona y el corazón duro. Evita la piña en conserva, porque el almíbar tiene demasiado azúcar."
+    "es": "Sí, la piña cruda en pequeñas cantidades es un buen premio para los perros, siempre que le quites la piel con espinas, la corona y el corazón duro. Evita la piña en conserva, porque el almíbar tiene demasiado azúcar.",
+    "it": "Sì, l’ananas crudo in piccole quantità è un ottimo snack per i cani, purché si tolgano la buccia spinosa, il ciuffo e il torsolo duro. Evita l’ananas in scatola, perché lo sciroppo contiene troppo zucchero."
   },
   "why": {
     "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
@@ -45,7 +49,8 @@
     "cs": "Ananas je plný vitaminů, minerálů a vlákniny, ale obsahuje také hodně přirozeného cukru. Tvrdé jádro uprostřed a bodlavá slupka mohou způsobit ucpání střev. Konzervovanému ananasu je lepší se vyhnout, protože jeho sirup obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila. Někteří psi po ananasu dostanou průjem nebo podrážděný žaludek.",
     "de": "Ananas steckt voller Vitamine, Mineralstoffe und Ballaststoffe, enthält aber auch viel natürlichen Zucker. Der zähe Strunk in der Mitte und die stachelige Schale können einen Darmverschluss verursachen. Auf Dosenananas sollten Sie besser verzichten, weil der Sirup für die Verdauung der meisten Hunde zu viel Zucker enthält. Manche Hunde bekommen von Ananas Durchfall oder eine Magenverstimmung.",
     "fr": "L’ananas est riche en vitamines, en minéraux et en fibres, mais il contient aussi beaucoup de sucre naturel. Le cœur coriace et la peau épineuse peuvent provoquer une occlusion. Mieux vaut éviter l’ananas en conserve, car son sirop contient trop de sucre pour la digestion de la plupart des chiens. Certains chiens ont de la diarrhée ou des maux d’estomac après avoir mangé de l’ananas.",
-    "es": "La piña es rica en vitaminas, minerales y fibra, pero también contiene mucho azúcar natural. El corazón central duro y la piel con espinas pueden causar una obstrucción. Es mejor evitar la piña en conserva, porque su almíbar contiene demasiado azúcar para la digestión de la mayoría de los perros. A algunos perros la piña les provoca diarrea o malestar de estómago."
+    "es": "La piña es rica en vitaminas, minerales y fibra, pero también contiene mucho azúcar natural. El corazón central duro y la piel con espinas pueden causar una obstrucción. Es mejor evitar la piña en conserva, porque su almíbar contiene demasiado azúcar para la digestión de la mayoría de los perros. A algunos perros la piña les provoca diarrea o malestar de estómago.",
+    "it": "L’ananas è ricco di vitamine, minerali e fibre, ma contiene anche molto zucchero naturale. Il torsolo centrale duro e la buccia spinosa possono causare un’ostruzione. Meglio evitare l’ananas in scatola, perché lo sciroppo contiene troppo zucchero per la digestione della maggior parte dei cani. Ad alcuni cani l’ananas dà diarrea o mal di stomaco."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "cs": "Pokud má pes po snězení ananasu průjem nebo podrážděný žaludek, ananas pro něj možná není to pravé.",
     "de": "Bekommt Ihr Hund nach der Ananas Durchfall oder eine Magenverstimmung, ist Ananas vielleicht nicht der richtige Snack für ihn.",
     "fr": "Si votre chien a de la diarrhée ou des maux d’estomac après avoir mangé de l’ananas, ce n’est peut-être pas le bon en-cas pour lui.",
-    "es": "Si tu perro tiene diarrea o malestar de estómago después de comer piña, puede que la piña no sea el premio adecuado para él."
+    "es": "Si tu perro tiene diarrea o malestar de estómago después de comer piña, puede que la piña no sea el premio adecuado para él.",
+    "it": "Se dopo aver mangiato l’ananas il tuo cane ha la diarrea o mal di stomaco, forse l’ananas non è lo snack giusto per lui."
   },
   "serving": {
     "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
@@ -64,7 +70,8 @@
     "cs": "Čerstvý a oloupaný, bez korunky a jádra, nakrájený na kousky na jedno sousto; jako letní pamlsek poslouží zmrazené kousky čerstvého ananasu.",
     "de": "Frisch und geschält, ohne Blätterschopf und Strunk, in mundgerechte Stücke geschnitten; gefrorene Stücke frischer Ananas sind ein schönes Sommerleckerli.",
     "fr": "Frais et pelé, sans la couronne ni le cœur, coupé en morceaux de la taille d’une bouchée ; des morceaux d’ananas frais congelés font une friandise d’été.",
-    "es": "Fresca y pelada, sin la corona ni el corazón y cortada en trozos del tamaño de un bocado; los trozos congelados de piña fresca son un premio para el verano."
+    "es": "Fresca y pelada, sin la corona ni el corazón y cortada en trozos del tamaño de un bocado; los trozos congelados de piña fresca son un premio para el verano.",
+    "it": "Fresco e sbucciato, senza ciuffo e torsolo, a pezzetti da un boccone; i pezzetti di ananas fresco, congelati, sono un premio rinfrescante per l’estate."
   },
   "child": {
     "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
@@ -73,7 +80,8 @@
     "cs": "Psi mohou dostat malý kousek čerstvého ananasu! Dospělý nejdřív odřízne pichlavou slupku a tvrdý střed.",
     "de": "Hunde dürfen ein kleines Stück frische Ananas haben! Ein Erwachsener schneidet vorher die stachelige Schale und die harte Mitte ab.",
     "fr": "Les chiens peuvent manger un petit morceau d’ananas frais ! Un adulte enlève d’abord la peau piquante et le cœur dur.",
-    "es": "¡Los perros pueden comer un trocito de piña fresca! Un adulto corta antes la piel espinosa y el centro duro."
+    "es": "¡Los perros pueden comer un trocito de piña fresca! Un adulto corta antes la piel espinosa y el centro duro.",
+    "it": "I cani possono mangiare un pezzettino di ananas fresco! Prima un adulto toglie la buccia pungente e il centro duro."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "cs": "Mohou psi jíst konzervovaný ananas?",
         "de": "Dürfen Hunde Dosenananas fressen?",
         "fr": "Les chiens peuvent-ils manger de l’ananas en conserve ?",
-        "es": "¿Pueden los perros comer piña en conserva?"
+        "es": "¿Pueden los perros comer piña en conserva?",
+        "it": "I cani possono mangiare l’ananas in scatola?"
       },
       "a": {
         "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
@@ -93,7 +102,8 @@
         "cs": "Je lepší se mu vyhnout. Sirup v konzervovaném ovoci obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila.",
         "de": "Besser nicht. Der Sirup in Dosenfrüchten enthält für die Verdauung der meisten Hunde zu viel Zucker.",
         "fr": "Mieux vaut l’éviter. Le sirop des fruits en conserve contient trop de sucre pour la digestion de la plupart des chiens.",
-        "es": "Es mejor evitarla. El almíbar de la fruta en conserva contiene demasiado azúcar para la digestión de la mayoría de los perros."
+        "es": "Es mejor evitarla. El almíbar de la fruta en conserva contiene demasiado azúcar para la digestión de la mayoría de los perros.",
+        "it": "Meglio evitarlo. Lo sciroppo della frutta in scatola contiene troppo zucchero per la digestione della maggior parte dei cani."
       }
     },
     {
@@ -104,7 +114,8 @@
         "cs": "Proč odstraňovat jádro a slupku?",
         "de": "Warum müssen Strunk und Schale entfernt werden?",
         "fr": "Pourquoi faut-il retirer le cœur et la peau ?",
-        "es": "¿Por qué hay que quitar el corazón y la piel?"
+        "es": "¿Por qué hay que quitar el corazón y la piel?",
+        "it": "Perché bisogna togliere torsolo e buccia?"
       },
       "a": {
         "en": "The tough core and the spiny skin can cause a blockage in the gut.",
@@ -113,7 +124,8 @@
         "cs": "Tvrdé jádro a bodlavá slupka mohou způsobit ucpání střev.",
         "de": "Der zähe Strunk und die stachelige Schale können einen Darmverschluss verursachen.",
         "fr": "Le cœur coriace et la peau épineuse peuvent provoquer une occlusion intestinale.",
-        "es": "El corazón duro y la piel con espinas pueden causar una obstrucción en el intestino."
+        "es": "El corazón duro y la piel con espinas pueden causar una obstrucción en el intestino.",
+        "it": "Il torsolo duro e la buccia spinosa possono causare un’ostruzione intestinale."
       }
     }
   ],
@@ -208,6 +220,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ad5107d8b568e09b37ddae73e5ff360f3419d3ec773801394f0d4d0cd35eb17"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "82061ad43a1e28a88baa0ecf691d4c185aabe4500eec1455399e0e9b91443346"
     }
   }
 }
