@@ -140,7 +140,7 @@
     "nl": [
       "Herhaald braken",
       "Niet willen eten",
-      "Vermoeidheid en minder actief",
+      "Vermoeidheid en minder activiteit",
       "Diarree",
       "Uitdroging"
     ],
@@ -410,7 +410,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "123f02e333dcc90dad35a20438765cd9e6f563e69656678b09ae1289331f9f0d"
+      "verified_hash": "731fb0cfc4485d2c81b78e04790e8e754bd1b4db7b7ac769d268c54f3703a75f"
     },
     "pl": {
       "status": "verified",

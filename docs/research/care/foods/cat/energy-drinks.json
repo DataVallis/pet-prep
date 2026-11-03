@@ -61,7 +61,7 @@
     "es": "No. Las bebidas energéticas suelen contener mucha cafeína, y los gatos son más sensibles a la cafeína que las personas. No dejes nunca que tu gato beba de una lata o un vaso, y llama a tu veterinario si se traga algo.",
     "it": "No. Le bevande energetiche contengono spesso molta caffeina, e i gatti sono più sensibili alla caffeina rispetto alle persone. Non lasciare mai che il tuo gatto beva da una lattina o da un bicchiere, e chiama il veterinario se ne ingerisce.",
     "pt": "Não. As bebidas energéticas têm frequentemente muita cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. Nunca deixes o teu gato beber de uma lata ou de um copo e liga ao teu veterinário se ele engolir alguma.",
-    "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Laat je kat nooit uit een blikje of glas drinken, en bel je dierenarts als je kat er iets van binnenkrijgt.",
+    "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Laat je kat nooit uit een blikje of glas drinken, en bel je dierenarts als je kat er iets van heeft ingeslikt.",
     "pl": "Nie. Napoje energetyczne często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Nigdy nie pozwalaj kotu pić z puszki ani szklanki i zadzwoń do weterynarza, jeśli kot choć trochę połknie.",
     "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud nějaký nápoj spolkne, zavolejte veterináři.",
     "hr": "Ne. Energetska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nikad ne dopusti mački da pije iz limenke ili čaše i nazovi veterinara ako mačka išta od toga popije.",
@@ -187,7 +187,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha bebido tu gato, cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha bevuto il tuo gatto, quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato bebeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gedronken, hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gedronken, hoeveel en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co wypił twój kot, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka vypila, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka popila, koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
@@ -205,7 +205,7 @@
     "es": "Las bebidas energéticas son para mayores, no para gatos. Tu gatito solo necesita agua fresca. Avisa a un adulto si bebe un poco.",
     "it": "Le bevande energetiche sono per i grandi, non per i gatti. Al micio basta acqua fresca. Dillo a un adulto se ne beve un po’.",
     "pt": "As bebidas energéticas são para adultos, não para gatos. O gatinho só precisa de água fresca. Avisa um adulto se ele beber alguma.",
-    "nl": "Energiedrankjes zijn voor volwassenen, niet voor katten. Je poes heeft alleen vers water nodig. Drinkt ze er toch van? Vertel het meteen aan een volwassene.",
+    "nl": "Energiedrankjes zijn voor volwassenen, niet voor katten. Je kat heeft alleen vers water nodig. Drinkt ze er toch van? Vertel het dan meteen aan een volwassene.",
     "pl": "Napoje energetyczne są dla dorosłych, nie dla kotów. Kotek potrzebuje tylko świeżej wody. Powiedz dorosłemu, jeśli kotek trochę wypije.",
     "cs": "Energetické nápoje jsou pro dospělé, ne pro kočky. Kočička potřebuje jen čerstvou vodu. Když se trochu napije, řekni to dospělému.",
     "hr": "Energetska pića su za odrasle, a ne za mace. Maci treba samo svježa voda. Reci odrasloj osobi ako je malo popila.",
@@ -319,7 +319,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "447a4f38c8928f8df7f0c12387388d8fd20d1ed8f1aba455a66b44cbfaf10ca3"
+      "verified_hash": "c7f607a9137ad4eb4ce1990ff138df135652d850f760a22b6f18430706a787c9"
     },
     "pl": {
       "status": "verified",

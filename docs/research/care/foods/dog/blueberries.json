@@ -78,7 +78,7 @@
     "es": "Por su tamaño y su forma pueden suponer un riesgo de atragantamiento, sobre todo en perros muy pequeños. Como con cualquier alimento nuevo, empieza con poca cantidad y observa cómo reacciona tu perro.",
     "it": "Per dimensioni e forma possono comportare un rischio di soffocamento, soprattutto per i cani molto piccoli. Come per ogni cibo nuovo, inizia con una piccola quantità e osserva come reagisce il tuo cane.",
     "pt": "O tamanho e a forma dos mirtilos podem representar risco de engasgamento, sobretudo para cães muito pequenos. Como acontece com qualquer alimento novo, começa com uma pequena quantidade e observa como o teu cão reage.",
-    "nl": "Door hun grootte en vorm kan een hond erin stikken, vooral een heel kleine hond. Begin zoals bij elk nieuw voedingsmiddel met een kleine hoeveelheid en kijk hoe je hond reageert.",
+    "nl": "Door hun grootte en vorm kan een hond zich erin verslikken, vooral een heel kleine hond. Begin zoals bij elk nieuw voedingsmiddel met een kleine hoeveelheid en kijk hoe je hond reageert.",
     "pl": "Ze względu na swój rozmiar i kształt borówki mogą grozić zadławieniem, zwłaszcza u bardzo małych psów. Jak w przypadku każdego nowego jedzenia, zacznij od małej ilości i obserwuj, jak pies reaguje.",
     "cs": "Kvůli své velikosti a tvaru mohou představovat riziko dušení, zvlášť u velmi malých psů. Jako u každé nové potraviny začněte malým množstvím a sledujte, jak pes reaguje.",
     "hr": "Zbog veličine i oblika mogu izazvati gušenje, osobito kod vrlo malih pasa. Kao i kod svake nove hrane, počni s malom količinom i prati kako pas reagira.",
@@ -96,7 +96,7 @@
     "es": "Empieza con poca cantidad y observa a tu perro. Si no estás seguro de si los arándanos le convienen, consulta a tu veterinario.",
     "it": "Inizia con una piccola quantità e osserva il tuo cane. Se non sei sicuro che i mirtilli siano adatti al tuo cane, chiedi al veterinario.",
     "pt": "Começa com uma pequena quantidade e observa o teu cão. Se não tiveres a certeza de que os mirtilos são adequados para o teu cão, pergunta ao teu veterinário.",
-    "nl": "Begin met een kleine hoeveelheid en houd je hond in de gaten. Twijfel je of blauwe bessen geschikt zijn voor je hond, vraag het dan je dierenarts.",
+    "nl": "Begin met een kleine hoeveelheid en houd je hond in de gaten. Twijfel je of blauwe bessen geschikt zijn voor je hond? Vraag het dan aan je dierenarts.",
     "pl": "Zacznij od małej ilości i obserwuj psa. Jeśli nie masz pewności, czy borówki są odpowiednie dla twojego psa, zapytaj weterynarza.",
     "cs": "Začněte malým množstvím a psa pozorujte. Pokud si nejste jistí, zda jsou borůvky pro vašeho psa vhodné, zeptejte se veterináře.",
     "hr": "Počni s malom količinom i promatraj psa. Ako ne znaš jesu li borovnice prikladne za tvog psa, pitaj veterinara.",
@@ -265,7 +265,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "687bc94ae6bd9f1ed7a95027923763e4bc21a894469dce28e48c3fbb4254a43e"
+      "verified_hash": "e3458f113902ef748cd01605edab67d5ebec6c7296d304afdb88e234f0af8c2b"
     },
     "pl": {
       "status": "verified",

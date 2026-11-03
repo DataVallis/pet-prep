@@ -78,7 +78,7 @@
     "es": "Al cocinarlos, los huesos se vuelven frágiles y se rompen en astillas afiladas. Los huesos de pollo y de pavo son el ejemplo clásico, pero cualquier hueso de la mesa puede herir a un perro. La FDA ha recibido notificaciones de atragantamientos, heridas en la boca, vómitos, diarrea, sangrado por el recto y obstrucciones intestinales en perros que comieron huesos o premios de hueso.",
     "it": "La cottura rende le ossa fragili, quindi si rompono in schegge appuntite. Le ossa di pollo e di tacchino sono l’esempio classico, ma qualsiasi osso avanzato dalla tavola può ferire un cane. La FDA ha ricevuto segnalazioni di soffocamento, ferite in bocca, vomito, diarrea, sanguinamento rettale e ostruzioni intestinali in cani che avevano mangiato ossa o snack a base di ossa.",
     "pt": "A cozedura torna os ossos quebradiços, por isso partem-se em lascas afiadas. Os ossos de frango e de peru são o exemplo clássico, mas quaisquer ossos da mesa podem ferir um cão. A FDA recebeu relatos de engasgamento, feridas na boca, vómitos, diarreia, hemorragia retal e obstruções intestinais em cães que comeram ossos ou guloseimas de osso.",
-    "nl": "Door koken worden botten broos, zodat ze in scherpe splinters breken. Kippen- en kalkoenbotten zijn het bekende voorbeeld, maar alle botten van de eettafel kunnen een hond verwonden. De FDA heeft meldingen gekregen van verstikking, wonden in de bek, braken, diarree, bloedingen uit de anus en darmverstoppingen bij honden die botten of botsnacks hadden gegeten.",
+    "nl": "Door het gaarmaken worden botten broos, zodat ze in scherpe splinters breken. Kippen- en kalkoenbotten zijn het bekende voorbeeld, maar alle botten van tafel kunnen een hond verwonden. De FDA heeft meldingen gekregen van verstikking, wonden in de bek, braken, diarree, bloedingen uit de anus en darmverstoppingen bij honden die botten of kluifjes hadden gegeten.",
     "pl": "Gotowanie sprawia, że kości stają się kruche i łamią się na ostre odłamki. Kości kurczaka i indyka to klasyczny przykład, ale każda kość ze stołu może zranić psa. Do FDA wpłynęły zgłoszenia zadławień, ran w pysku, wymiotów, biegunki, krwawienia z odbytu i niedrożności jelit u psów, które zjadły kości lub gryzaki z kości.",
     "cs": "Tepelnou úpravou kosti zkřehnou, takže se lámou na ostré střípky. Typickým příkladem jsou kuřecí a krůtí kosti, ale psa může poranit jakákoli kost ze stolu. FDA obdržela hlášení o dušení, poraněních tlamy, zvracení, průjmu, krvácení z konečníku a ucpání střev u psů, kteří snědli kosti nebo kostěné pamlsky.",
     "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, rektalnog krvarenja i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju.",
@@ -292,7 +292,7 @@
         "es": "Deja las fuentes fuera de su alcance mientras cocinas y durante las comidas, y ten cuidado con lo que tiras a la basura: los perros suelen rebuscar en ella las carcasas y los huesos de chuleta.",
         "it": "Tieni i piatti da portata lontano dal cane mentre cucini e mentre siete a tavola, e fai attenzione a cosa butti nella spazzatura: i cani spesso frugano nei rifiuti in cerca di carcasse e ossa di bistecca.",
         "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife.",
-        "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat je in de vuilnisbak gooit: honden plunderen vaak de vuilnisbak op zoek naar karkassen en biefstukbotten.",
+        "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat er in de vuilnisbak belandt: honden gaan er vaak doorheen op zoek naar karkassen en biefstukbotten.",
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często przeszukują śmieci w poszukiwaniu resztek drobiu i kości ze steków.",
         "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi často vybírají odpadky kvůli zbytkům drůbeže a kostem ze steaků.",
         "hr": "Dok kuhaš i jedeš, drži pladnjeve izvan dosega psa i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka.",
@@ -419,7 +419,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "42084197187bd74fdc3f6733a799cc7d21a90b6ef7d29f7fd9e433ada5af21dc"
+      "verified_hash": "9d89e2e0bda211cf57e8019daa55f71fae315c3800a548c5d6147a4e101261e2"
     },
     "pl": {
       "status": "verified",

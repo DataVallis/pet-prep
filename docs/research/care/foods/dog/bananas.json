@@ -96,7 +96,7 @@
     "es": "La piel del plátano podría causar molestias de estómago o, en algunos casos, una obstrucción intestinal, así que quítala siempre. Si no sabes cuánto plátano le conviene a tu perro según su tamaño, edad o salud, consulta a tu veterinario.",
     "it": "La buccia di banana potrebbe causare fastidi allo stomaco o, in alcuni casi, un’ostruzione intestinale, quindi toglila sempre. Se non sei sicuro di quanta banana sia adatta alla taglia, all’età o alla salute del tuo cane, chiedi al veterinario.",
     "pt": "A casca da banana pode causar mal-estar de estômago ou, em alguns casos, uma obstrução intestinal, por isso tira-a sempre. Se não tiveres a certeza de quanta banana é adequada ao tamanho, à idade ou à saúde do teu cão, pergunta ao teu veterinário.",
-    "nl": "Een bananenschil kan maagklachten of in sommige gevallen een darmverstopping veroorzaken, dus haal hem altijd eraf. Twijfel je hoeveel banaan past bij het formaat, de leeftijd of de gezondheid van je hond, vraag het dan je dierenarts.",
+    "nl": "Een bananenschil kan maagklachten of in sommige gevallen een darmverstopping veroorzaken, dus haal hem altijd eraf. Weet je niet zeker hoeveel banaan past bij het formaat, de leeftijd of de gezondheid van je hond? Vraag het dan aan je dierenarts.",
     "pl": "Skórka banana może wywołać dolegliwości żołądkowe, a w niektórych przypadkach niedrożność jelit, więc zawsze ją usuwaj. Jeśli nie wiesz, ile banana możesz dać psu, biorąc pod uwagę jego wielkość, wiek i stan zdrowia, zapytaj weterynarza.",
     "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
     "hr": "Kora banane može izazvati želučane tegobe ili, u nekim slučajevima, začepljenje crijeva, zato je uvijek ukloni. Ako ne znaš koliko banane odgovara veličini, dobi ili zdravlju tvog psa, pitaj veterinara.",
@@ -268,7 +268,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "600a1ddbd38579f67db5f85a63d4ae4e4ea1bcd5afc9d0c00ebc88493b1aed09"
+      "verified_hash": "6f384ac1d2722e47986091c6c6fcb2bae7050d28a0414984bc4349d7c8d2c796"
     },
     "pl": {
       "status": "verified",

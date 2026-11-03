@@ -78,7 +78,7 @@
     "es": "El hospital veterinario de NC State incluye las semillas de manzana en «Tóxico para mascotas: ¡no dar!» en su página para gatos y perros, y la ASPCA considera el manzano tóxico para los gatos porque sus tallos, hojas y semillas contienen cianuro (en forma de glucósidos cianogénicos). Pet Poison Helpline añade que el corazón y las semillas pueden provocar atragantamiento y obstrucción intestinal, pero que una mascota tendría que comer cantidades enormes de semillas para que el cianuro fuera preocupante. Aplicamos el nivel más estricto: no se las des.",
     "it": "L’ospedale veterinario della NC State inserisce i semi di mela tra i cibi «Tossici per gli animali: non darli!» nella sua pagina per cani e gatti, e l’ASPCA classifica il melo come tossico per i gatti perché piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Pet Poison Helpline aggiunge che torsolo e semi possono causare soffocamento e ostruzione intestinale, ma che un animale dovrebbe mangiare quantità enormi di semi perché il cianuro diventi preoccupante. Noi seguiamo il consiglio più prudente: non darli.",
     "pt": "O hospital veterinário da NC State inclui as sementes de maçã em «Tóxico para animais de estimação: não dar!» na sua página para gatos e cães, e a ASPCA classifica a macieira como tóxica para gatos porque os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos). A Pet Poison Helpline acrescenta que o carolo e as sementes podem causar engasgo e obstrução intestinal, mas que um animal teria de comer quantidades enormes de sementes para o cianeto ser preocupante. Seguimos o conselho mais rigoroso: não as dês.",
-    "nl": "Het dierenziekenhuis van NC State zet appelpitten op zijn pagina voor katten en honden onder “Giftig voor huisdieren: niet geven!”, en de ASPCA noemt de appelplant giftig voor katten, omdat de steeltjes, bladeren en pitten cyanide bevatten (in de vorm van cyanogene glycosiden). Pet Poison Helpline voegt eraan toe dat het klokhuis en de pitten verstikking en een darmverstopping kunnen veroorzaken, maar dat een dier enorme hoeveelheden pitten zou moeten eten voordat de cyanide zorgwekkend wordt. Wij volgen het strengere advies: niet geven.",
+    "nl": "Het dierenziekenhuis van NC State plaatst appelpitten op zijn pagina voor katten en honden onder “Giftig voor huisdieren: niet geven!”, en de ASPCA noemt de appelplant giftig voor katten, omdat de steeltjes, bladeren en pitten cyanide bevatten (in de vorm van cyanogene glycosiden). Pet Poison Helpline voegt eraan toe dat het klokhuis en de pitten verstikking en een darmverstopping kunnen veroorzaken, maar dat een dier enorme hoeveelheden pitten zou moeten eten voordat de cyanide een probleem wordt. Wij volgen het strengere advies: niet geven.",
     "pl": "Szpital weterynaryjny NC State na swojej stronie o kotach i psach wymienia pestki jabłek w części „Toksyczne dla zwierząt: nie podawać!”, a ASPCA uznaje jabłoń za roślinę toksyczną dla kotów, bo jej łodygi, liście i pestki zawierają cyjanek (w postaci glikozydów cyjanogennych). Pet Poison Helpline dodaje, że gniazdo nasienne i pestki mogą spowodować zadławienie i niedrożność jelit, ale żeby cyjanek stał się problemem, zwierzę musiałoby zjeść ogromną ilość pestek. Kierujemy się surowszym zaleceniem: nie podawaj ich.",
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablečná jádra na své stránce pro kočky a psy v části „Toxické pro zvířata: nekrmte!“ a ASPCA vede jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů). Pet Poison Helpline dodává, že ohryzek a jádra mohou způsobit dušení a ucpání střev, ale aby byl kyanid problémem, muselo by zvíře sníst obrovské množství jader. Držíme se přísnějšího doporučení: nedávejte je.",
     "hr": "Veterinarska bolnica sveučilišta NC State na svojoj stranici za mačke i pse navodi sjemenke jabuke pod „Otrovno za ljubimce: ne davati!“, a ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida). Pet Poison Helpline dodaje da jezgra i sjemenke mogu izazvati gušenje i začepljenje crijeva, ali da bi ljubimac morao pojesti golemu količinu sjemenki da bi cijanid bio razlog za brigu. Mi se držimo strožeg savjeta: ne daj ih mački.",
@@ -140,7 +140,7 @@
     "nl": [
       "Steenrood tandvlees",
       "Verwijde pupillen",
-      "Moeite met ademhalen",
+      "Moeite met ademen",
       "Hijgen",
       "Shock"
     ],
@@ -220,7 +220,7 @@
     "es": "Las semillas de manzana no son para gatos. Si tu gatito encuentra alguna, avisa a un adulto.",
     "it": "I semi di mela non sono per i gatti. Se il micio ne trova qualcuno, dillo a un adulto.",
     "pt": "As sementes de maçã não são para gatos. Se o gatinho encontrar algumas, avisa um adulto.",
-    "nl": "Appelpitten zijn niet voor katten. Vindt je poes er een paar? Vertel het aan een volwassene.",
+    "nl": "Appelpitten zijn niet voor katten. Vindt je kat er een paar? Vertel het dan aan een volwassene.",
     "pl": "Pestki jabłek nie są dla kotów. Jeśli kotek jakieś znajdzie, powiedz dorosłemu.",
     "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému.",
     "hr": "Sjemenke jabuke nisu za mace. Ako ih maca pronađe, reci odrasloj osobi.",
@@ -256,7 +256,7 @@
         "es": "Según Pet Poison Helpline, una mascota tendría que comer cantidades enormes de semillas de manzana para que fueran preocupantes. Si tienes dudas o ves algún síntoma, ponte en contacto con tu veterinario.",
         "it": "Secondo Pet Poison Helpline un animale dovrebbe mangiare quantità enormi di semi di mela perché diventino preoccupanti. Se hai dubbi o noti qualche sintomo, contatta il veterinario.",
         "pt": "Segundo a Pet Poison Helpline, um animal teria de comer quantidades enormes de sementes de maçã para haver motivo de preocupação. Se tiveres dúvidas ou vires algum sinal, contacta o teu veterinário.",
-        "nl": "Volgens Pet Poison Helpline zou een dier enorme hoeveelheden appelpitten moeten eten voordat ze zorgwekkend worden. Twijfel je of zie je verschijnselen, neem dan contact op met je dierenarts.",
+        "nl": "Volgens Pet Poison Helpline zou een dier enorme hoeveelheden appelpitten moeten eten voordat ze een probleem worden. Twijfel je of zie je verschijnselen, neem dan contact op met je dierenarts.",
         "pl": "Według Pet Poison Helpline zwierzę musiałoby zjeść ogromną ilość pestek jabłek, żeby były powodem do niepokoju. Jeśli nie masz pewności albo zauważysz jakiekolwiek objawy, skontaktuj się z weterynarzem.",
         "cs": "Podle Pet Poison Helpline by zvíře muselo sníst obrovské množství jablečných jader, aby byla problémem. Pokud si nejste jistí nebo si všimnete jakýchkoli příznaků, obraťte se na veterináře.",
         "hr": "Pet Poison Helpline navodi da bi ljubimac morao pojesti golemu količinu sjemenki jabuke da bi one bile razlog za brigu. U slučaju dvojbe ili ako primijetiš bilo kakve znakove, obrati se veterinaru.",
@@ -368,7 +368,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6f1397d6b52af4ed1f96a4594f59d5d579d51ac7ce28712b366aca4b2da4d230"
+      "verified_hash": "f54969d221b10c9587547f4e5f046a919acb5ba7c9797fec3f40e314cc702c36"
     },
     "pl": {
       "status": "verified",

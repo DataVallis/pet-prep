@@ -78,7 +78,7 @@
     "es": "El chocolate contiene teobromina y cafeína. Los gatos procesan estas sustancias de forma distinta a las personas, lo que los hace más sensibles a sus efectos. Como a los gatos les cuesta descomponer la teobromina, esta se queda en la sangre y puede acumularse rápidamente hasta niveles peligrosos. El chocolate negro y amargo es el de mayor riesgo; el chocolate blanco es el que menos teobromina tiene.",
     "it": "Il cioccolato contiene teobromina e caffeina. I gatti metabolizzano queste sostanze in modo diverso dalle persone, e questo li rende più sensibili ai loro effetti. Poiché i gatti fanno fatica a smaltire la teobromina, questa resta nel sangue e può raggiungere rapidamente livelli pericolosi. Il cioccolato fondente e amaro è il più rischioso; quello bianco contiene meno teobromina.",
     "pt": "O chocolate contém teobromina e cafeína. Os gatos processam estas substâncias de forma diferente das pessoas, o que os torna mais sensíveis aos seus efeitos. Como os gatos têm dificuldade em decompor a teobromina, esta fica no sangue e pode acumular-se rapidamente até níveis perigosos. O chocolate negro e amargo é o de maior risco; o chocolate branco é o que tem menos teobromina.",
-    "nl": "Chocolade bevat theobromine en cafeïne. Katten verwerken deze stoffen anders dan mensen, waardoor ze gevoeliger zijn voor de effecten. Omdat katten theobromine moeilijk kunnen afbreken, blijft het in het bloed en kan het snel oplopen tot een gevaarlijk niveau. Donkere en bittere chocolade geeft het meeste risico; witte chocolade bevat de minste theobromine.",
+    "nl": "Chocolade bevat theobromine en cafeïne. Katten verwerken deze stoffen anders dan mensen, waardoor ze er gevoeliger voor zijn. Omdat katten theobromine moeilijk kunnen afbreken, blijft het in het bloed en kan het snel oplopen tot een gevaarlijk niveau. Donkere en bittere chocolade brengt het grootste risico met zich mee; witte chocolade bevat de minste theobromine.",
     "pl": "Czekolada zawiera teobrominę i kofeinę. Koty przetwarzają te substancje inaczej niż ludzie, dlatego są bardziej wrażliwe na ich działanie. Ponieważ koty z trudem rozkładają teobrominę, pozostaje ona we krwi i może szybko osiągnąć niebezpieczny poziom. Największe ryzyko niesie czekolada ciemna i gorzka; biała czekolada zawiera najmniej teobrominy.",
     "cs": "Čokoláda obsahuje theobromin a kofein. Kočky tyto látky zpracovávají jinak než lidé, a proto jsou na jejich účinky citlivější. Protože kočky theobromin jen obtížně odbourávají, zůstává v krvi a může rychle dosáhnout nebezpečné hladiny. Největší riziko představuje tmavá a hořká čokoláda; bílá čokoláda obsahuje theobrominu nejméně.",
     "hr": "Čokolada sadrži teobromin i kofein. Mačke te tvari razgrađuju drukčije od ljudi, zbog čega su osjetljivije na njihovo djelovanje. Budući da mačke teško razgrađuju teobromin, on ostaje u krvi i može brzo doseći opasne razine. Najveći rizik nose tamna i gorka čokolada; bijela čokolada ima najmanje teobromina.",
@@ -157,8 +157,8 @@
       "Meer dorst",
       "Hijgen of onrust",
       "Vaker plassen dan normaal",
-      "Jagend hart",
-      "In ernstige gevallen: spiertrillingen of epileptische aanvallen"
+      "Razendsnelle hartslag",
+      "In ernstige gevallen: spiertrillingen of toevallen"
     ],
     "pl": [
       "Wymioty",
@@ -232,7 +232,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien. Apunta qué tipo de chocolate ha comido, cuánto y cuándo, y guarda el envoltorio. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene. Annota che tipo di cioccolato ha mangiato, quanto e quando, e conserva l’involucro. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem. Anota o tipo de chocolate que o teu gato comeu, a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet. Schrijf op wat voor chocolade je kat heeft gegeten, hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er prima uitziet. Schrijf op wat voor chocolade je kat heeft gegeten, hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego. Zapisz, jaką czekoladę zjadł twój kot, ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku. Poznamenejte si, jaký druh čokolády kočka snědla, kolik a kdy, a obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro. Zapiši koju je vrstu čokolade mačka pojela, koliko i kada te sačuvaj omot. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
@@ -250,7 +250,7 @@
     "es": "El chocolate es un capricho para personas, no un premio para gatos. Guárdalo bien y avisa a un adulto si tu gatito encuentra un poco.",
     "it": "Il cioccolato è un dolce per le persone, non per i gatti. Tienilo ben riposto e dillo a un adulto se il micio ne trova un po’.",
     "pt": "O chocolate é uma guloseima para pessoas, não para gatos. Guarda-o bem e avisa um adulto se o gatinho encontrar algum.",
-    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je poes toch wat? Vertel het meteen aan een volwassene.",
+    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je kat toch wat? Vertel het meteen aan een volwassene.",
     "pl": "Czekolada to smakołyk dla ludzi, nie dla kotów. Chowaj ją, a jeśli kotek jakąś znajdzie, powiedz dorosłemu.",
     "cs": "Čokoláda je mlsání pro lidi, ne pro kočky. Měj ji uklizenou, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Čokolada je poslastica za ljude, a ne za mace. Drži je sklonjenu i reci odrasloj osobi ako je maca pronađe.",
@@ -457,7 +457,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "84ce654fae715dc40b49d731a9fe1c87b8a22131e25fab041eeea1020ac06193"
+      "verified_hash": "32dba06441573c333f017250d24fee9615ef9f4efce2786c6a964a77e492812b"
     },
     "pl": {
       "status": "verified",

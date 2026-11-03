@@ -78,7 +78,7 @@
     "es": "El jamón es una carne grasa que además tiene mucho sodio, y ambas cosas pueden causar problemas de salud. Demasiada grasa afecta al aparato digestivo, sobre todo al páncreas. Condimentos como la cebolla o el ajo lo vuelven tóxico. Puede que pequeñas cantidades no sean extremadamente dañinas, pero no es un buen premio. La comida salada también puede deshidratar más a los gatos, y los gatos con problemas de riñón, corazón o vías urinarias deberían evitar el jamón especialmente.",
     "it": "Il prosciutto è una carne grassa e ricca di sodio, ed entrambi possono causare problemi di salute. Troppi grassi colpiscono l’apparato digerente, soprattutto il pancreas. Condimenti come cipolla o aglio lo rendono tossico. Piccole quantità potrebbero non essere molto dannose, ma non è un buon premio. I cibi salati possono anche disidratare di più i gatti, e i gatti con problemi renali, cardiaci o urinari dovrebbero evitare il prosciutto in particolare.",
     "pt": "O fiambre é uma carne gorda e também rica em sódio, e ambos podem causar problemas de saúde. A gordura em excesso afeta o aparelho digestivo, sobretudo o pâncreas. Temperos como a cebola ou o alho tornam-no tóxico. Pequenas quantidades podem não ser extremamente prejudiciais, mas não é uma boa guloseima. A comida salgada também pode deixar os gatos mais desidratados, e os gatos com problemas renais, cardíacos ou urinários devem evitar especialmente o fiambre.",
-    "nl": "Ham is vet vlees dat ook veel natrium bevat, en allebei kunnen ze gezondheidsproblemen geven. Te veel vet tast het spijsverteringskanaal aan, vooral de alvleesklier. Kruiden zoals ui of knoflook maken het giftig. Kleine hoeveelheden zijn misschien niet heel schadelijk, maar het is geen goed snoepje. Door zout eten kunnen katten ook sneller uitdrogen, en katten met nier-, hart- of urinewegproblemen moeten ham zeker vermijden.",
+    "nl": "Ham is vet vlees dat ook veel natrium bevat, en allebei kunnen ze gezondheidsproblemen geven. Te veel vet tast het spijsverteringskanaal aan, vooral de alvleesklier. Smaakmakers zoals ui of knoflook maken het giftig. Kleine hoeveelheden zijn misschien niet heel schadelijk, maar het is geen goede traktatie. Zout voedsel kan ook zorgen voor extra uitdroging, en katten met nier-, hart- of urinewegproblemen moeten ham zeker vermijden.",
     "pl": "Szynka to tłuste mięso, które zawiera też dużo sodu, a jedno i drugie może powodować problemy zdrowotne. Zbyt dużo tłuszczu szkodzi przewodowi pokarmowemu, zwłaszcza trzustce. Przyprawy takie jak cebula czy czosnek sprawiają, że szynka staje się toksyczna. Małe ilości mogą nie być bardzo szkodliwe, ale to nie jest dobry smakołyk. Słone jedzenie może też pogłębiać odwodnienie kota, a koty z problemami nerek, serca lub dróg moczowych szczególnie powinny unikać szynki.",
     "cs": "Šunka je tučné maso s vysokým obsahem sodíku a obojí může způsobit zdravotní potíže. Příliš mnoho tuku ovlivňuje trávicí trakt, zejména slinivku břišní. Koření, jako je cibule nebo česnek, ji činí toxickou. Malé množství nemusí být mimořádně škodlivé, dobrý pamlsek to ale není. Slané jídlo může kočky také víc dehydratovat a kočky s potížemi s ledvinami, srdcem nebo močovými cestami by se šunce měly vyhýbat obzvlášť.",
     "hr": "Šunka je masno meso koje ima i mnogo natrija, a oboje može izazvati zdravstvene probleme. Previše masti utječe na probavni sustav, osobito na gušteraču. Začini poput luka ili češnjaka čine je otrovnom. Male količine možda nisu iznimno štetne, ali šunka nije dobra poslastica. Slana hrana može mačke i dodatno dehidrirati, a mačke s problemima s bubrezima, srcem ili mokraćnim sustavom trebaju šunku osobito izbjegavati.",
@@ -126,7 +126,7 @@
     "nl": [
       "Braken",
       "Diarree",
-      "Last van de buik"
+      "Buikklachten"
     ],
     "pl": [
       "Wymioty",
@@ -190,7 +190,7 @@
     "es": "El jamón tiene demasiada sal y grasa para los gatos. Los premios para gatos son una sorpresa mucho mejor para tu gatito.",
     "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premietti sono una sorpresa più bella.",
     "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor.",
-    "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing.",
+    "nl": "Ham is te zout en te vet voor katten. De eigen snoepjes van je kat zijn een veel betere verrassing.",
     "pl": "Szynka jest za słona i za tłusta dla kotów. Kocie smakołyki to dla kotka lepsza niespodzianka.",
     "cs": "Šunka je pro kočky moc slaná a tučná. Kočičí pamlsky jsou pro kočičku lepší překvapení.",
     "hr": "Šunka je preslana i premasna za mace. Poslastice za mačke bolje su iznenađenje za macu.",
@@ -326,7 +326,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2a1a7e704f6ab04fe26e59e3e9da064718bbf80ee22923c16fb8ce1bfe985d77"
+      "verified_hash": "e58b20a59d468ba5e1b3045d2162ce8dda9bf6e44c218b8c4defe1c134c3064d"
     },
     "pl": {
       "status": "verified",

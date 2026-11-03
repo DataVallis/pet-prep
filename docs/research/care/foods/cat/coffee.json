@@ -187,7 +187,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato (bebida, café molido, granos, bolsita de té o pastillas), cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato engoliu (bebida, café moído, grãos, saqueta de chá ou comprimidos), a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft ingeslikt (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
@@ -205,7 +205,7 @@
     "es": "El café es una bebida de mayores. Pone nerviosos a los gatos, así que nunca lo compartas y avisa a un adulto si tu gatito lame un poco.",
     "it": "Il caffè è una bevanda per i grandi. Rende i gatti agitati, quindi non condividerlo mai, e dillo a un adulto se il micio ne lecca un po’.",
     "pt": "O café é uma bebida de adultos. Deixa os gatos nervosos, por isso nunca o partilhes, e avisa um adulto se o gatinho beber um pouco.",
-    "nl": "Koffie is een drankje voor volwassenen. Katten worden er zenuwachtig van, dus deel het nooit. Likt je poes ervan? Vertel het meteen aan een volwassene.",
+    "nl": "Koffie is een drankje voor volwassenen. Katten worden er zenuwachtig van, dus deel het nooit. Likt je kat er wat van op? Vertel het dan meteen aan een volwassene.",
     "pl": "Kawa to napój dla dorosłych. Koty robią się od niej roztrzęsione, więc nigdy się nią nie dziel, a jeśli kotek trochę wychłepcze, powiedz dorosłemu.",
     "cs": "Káva je pití pro dospělé. Kočky z ní jsou neklidné, tak se o ni s kočičkou nikdy nedělej, a když kočička trochu vylíže, řekni to dospělému.",
     "hr": "Kava je piće za odrasle. Od nje su mace nemirne, zato je nikad ne dijeli s macom i reci odrasloj osobi ako je maca malo polizala.",
@@ -224,7 +224,7 @@
         "es": "¿El café molido y los granos son peores que una taza de café?",
         "it": "I fondi e i chicchi di caffè sono peggio di una tazza di caffè?",
         "pt": "O café moído e os grãos são piores do que uma chávena de café?",
-        "nl": "Zijn koffiedik en koffiebonen erger dan een kopje koffie?",
+        "nl": "Zijn koffiedik en koffiebonen gevaarlijker dan een kopje koffie?",
         "pl": "Czy kawa mielona i ziarna są gorsze niż filiżanka kawy?",
         "cs": "Jsou mletá káva a zrna horší než šálek kávy?",
         "hr": "Jesu li talog i zrna kave opasniji od šalice kave?",
@@ -356,7 +356,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bd1cd1eb51ee197cbabf8fa05df46a4de9a867bcd01db739feb781370b97c00d"
+      "verified_hash": "84724fab993bb4f472cf5b6c446839524f3db336be85094779dac8a9cf31d6a7"
     },
     "pl": {
       "status": "verified",

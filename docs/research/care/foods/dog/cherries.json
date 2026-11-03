@@ -61,7 +61,7 @@
     "es": "No, es mejor evitar las cerezas. La pulpa madura no es la parte tóxica, pero los huesos, los rabitos y las hojas contienen compuestos que pueden liberar cianuro, y los huesos pueden obstruir el intestino de un perro. Pet Poison Helpline afirma que el riesgo supera cualquier beneficio.",
     "it": "No, è meglio evitare le ciliegie. La polpa matura non è la parte tossica, ma noccioli, gambi e foglie contengono sostanze che possono liberare cianuro, e i noccioli possono ostruire l’intestino del cane. Secondo Pet Poison Helpline il rischio supera qualsiasi beneficio.",
     "pt": "Não, é melhor evitar as cerejas. A polpa madura não é a parte tóxica, mas os caroços, os pés e as folhas contêm compostos que podem libertar cianeto, e os caroços podem obstruir os intestinos do cão. A Pet Poison Helpline diz que o risco é maior do que qualquer benefício.",
-    "nl": "Nee, kersen kun je beter vermijden. Het rijpe vruchtvlees is niet het giftige deel, maar de pitten, stelen en bladeren bevatten stoffen waaruit cyanide kan vrijkomen, en pitten kunnen de darmen van een hond verstoppen. Volgens Pet Poison Helpline weegt het risico zwaarder dan elk voordeel.",
+    "nl": "Nee, kersen kun je beter vermijden. Het rijpe vruchtvlees is niet het giftige deel, maar de pitten, steeltjes en bladeren bevatten stoffen waaruit cyanide kan vrijkomen, en pitten kunnen de darmen van een hond verstoppen. Volgens Pet Poison Helpline weegt het risico zwaarder dan elk voordeel.",
     "pl": "Nie, czereśni lepiej unikać. Sam dojrzały miąższ nie jest toksyczny, ale pestki, szypułki i liście zawierają związki, które mogą uwalniać cyjanek, a pestki mogą zatkać jelita psa. Pet Poison Helpline podaje, że ryzyko przewyższa wszelkie korzyści.",
     "cs": "Ne, třešním je lepší se vyhnout. Zralá dužnina sama jedovatá není, ale pecky, stopky a listy obsahují látky, ze kterých se může uvolnit kyanid, a pecky mohou psovi ucpat střeva. Podle Pet Poison Helpline riziko převažuje nad jakýmkoli přínosem.",
     "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist.",
@@ -78,7 +78,7 @@
     "es": "Los huesos, los rabitos y las hojas de la cereza contienen glucósidos cianogénicos, que pueden convertirse en cianuro. El cianuro se libera cuando el hueso se mastica y se rompe; no se espera intoxicación si el hueso se traga entero, pero puede quedarse atascado y causar una obstrucción. Una cereza no provoca una intoxicación por cianuro, pero no merece la pena correr el riesgo.",
     "it": "Noccioli, gambi e foglie del ciliegio contengono glicosidi cianogenici, che possono trasformarsi in cianuro. Il cianuro si libera quando il nocciolo viene masticato e rotto; un nocciolo ingoiato intero non dovrebbe causare avvelenamento, ma può bloccarsi e provocare un’ostruzione. Una sola ciliegia non provoca avvelenamento da cianuro, ma non vale la pena correre il rischio.",
     "pt": "Os caroços, os pés e as folhas da cereja contêm glicosídeos cianogénicos, que se podem transformar em cianeto. O cianeto é libertado quando o caroço é mastigado e partido; um caroço engolido inteiro não deverá envenenar, mas pode ficar preso e causar uma obstrução. Uma cereja não causa intoxicação por cianeto, mas o risco não compensa.",
-    "nl": "Kersenpitten, -stelen en -bladeren bevatten cyanogene glycosiden, die in cyanide kunnen veranderen. Cyanide komt vrij als een pit wordt stukgekauwd en gebroken; van een heel ingeslikte pit wordt geen vergiftiging verwacht, maar die kan wel vast komen te zitten en een verstopping veroorzaken. Eén kers veroorzaakt geen cyanidevergiftiging, maar het risico is het niet waard.",
+    "nl": "Kersenpitten, steeltjes en bladeren bevatten cyanogene glycosiden, die in cyanide kunnen veranderen. Cyanide komt vrij als een pit wordt stukgekauwd en gebroken; van een heel ingeslikte pit wordt geen vergiftiging verwacht, maar die kan wel vast komen te zitten en een verstopping veroorzaken. Eén kers veroorzaakt geen cyanidevergiftiging, maar het risico is het niet waard.",
     "pl": "Pestki, szypułki i liście czereśni zawierają glikozydy cyjanogenne, które mogą przekształcić się w cyjanek. Cyjanek uwalnia się, gdy pestka zostanie rozgryziona i rozkruszona; połknięta w całości pestka raczej nie wywoła zatrucia, ale może utknąć i spowodować niedrożność. Jedna czereśnia nie spowoduje zatrucia cyjankiem, ale i tak nie warto ryzykować.",
     "cs": "Třešňové pecky, stopky a listy obsahují kyanogenní glykosidy, ze kterých může vznikat kyanid. Kyanid se uvolní, když pes pecku rozkouše nebo rozlomí; u celé spolknuté pecky se otrava nepředpokládá, ale pecka může uvíznout a způsobit ucpání. Jedna třešeň otravu kyanidem nezpůsobí, přesto riziko nestojí za to.",
     "hr": "Koštice, peteljke i listovi trešnje sadrže cijanogene glikozide, koji se mogu pretvoriti u cijanid. Cijanid se oslobađa kad se koštica sažvače i razbije; od cijele progutane koštice ne očekuje se otrovanje, ali ona može zapeti i izazvati začepljenje. Jedna trešnja neće izazvati otrovanje cijanidom, no rizik se ne isplati.",
@@ -141,7 +141,7 @@
       "Verwijde pupillen",
       "Steenrood tandvlees",
       "Moeite met ademhalen, hijgen",
-      "Van streek geraakte maag of diarree",
+      "Maagklachten of diarree",
       "Shock"
     ],
     "pl": [
@@ -202,7 +202,7 @@
     "es": "Si tu perro ha comido huesos, rabitos u hojas de cereza, o muchas cerezas, contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta más o menos cuántas ha comido y si ha masticado los huesos. No esperes a que aparezcan síntomas.",
     "it": "Se il tuo cane ha mangiato noccioli, gambi o foglie di ciliegio, o molte ciliegie, contatta subito il veterinario o un centro antiveleni veterinario. Annota più o meno quante ne ha mangiate e se ha masticato i noccioli. Non aspettare che compaiano i sintomi.",
     "pt": "Se o teu cão comeu caroços, pés ou folhas de cereja, ou muitas cerejas, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota mais ou menos quantas comeu e se mastigou os caroços. Não esperes pelos sinais.",
-    "nl": "Heeft je hond kersenpitten, -stelen of -bladeren gegeten, of veel kersen? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel er ongeveer is gegeten en of er pitten zijn stukgekauwd. Wacht niet op verschijnselen.",
+    "nl": "Heeft je hond kersenpitten, steeltjes of bladeren gegeten, of veel kersen? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel er ongeveer is gegeten en of er pitten zijn stukgekauwd. Wacht niet op verschijnselen.",
     "pl": "Jeśli twój pies zjadł pestki, szypułki lub liście czereśni albo dużo czereśni, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, ile mniej więcej zjadł i czy rozgryzał pestki. Nie czekaj na objawy.",
     "cs": "Pokud váš pes snědl třešňové pecky, stopky nebo listy nebo hodně třešní, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, zhruba kolik jich snědl a zda pecky rozkousal. Nečekejte, až se objeví příznaky.",
     "hr": "Ako je pas pojeo koštice, peteljke ili listove trešnje ili mnogo trešanja, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši otprilike koliko ih je pojeo i je li žvakao koštice. Ne čekaj da se pojave znakovi.",
@@ -256,7 +256,7 @@
         "es": "Una cereza no provoca una intoxicación por cianuro, y si un perro sano se come una o dos, no hace falta entrar en pánico. Aun así, los huesos pueden causar obstrucciones, así que pregunta a tu veterinario si tienes dudas.",
         "it": "Una sola ciliegia non provoca avvelenamento da cianuro, e se un cane sano ne mangia una o due non c’è motivo di farsi prendere dal panico. I noccioli però possono causare ostruzioni, quindi nel dubbio chiedi al veterinario.",
         "pt": "Uma cereja não causa intoxicação por cianeto, e, se um cão saudável comer uma ou duas, não há motivo para pânico. Mesmo assim, os caroços podem causar obstruções, por isso pergunta ao teu veterinário se tiveres dúvidas.",
-        "nl": "Eén kers veroorzaakt geen cyanidevergiftiging, en als een gezonde hond er een of twee eet, hoef je niet in paniek te raken. Toch kunnen pitten een verstopping veroorzaken, dus vraag het je dierenarts als je twijfelt.",
+        "nl": "Eén kers veroorzaakt geen cyanidevergiftiging, en als een gezonde hond er een of twee eet, hoef je niet in paniek te raken. Toch kunnen pitten een verstopping veroorzaken, dus vraag het aan je dierenarts als je twijfelt.",
         "pl": "Jedna czereśnia nie spowoduje zatrucia cyjankiem, a zdrowy pies, który zje jedną lub dwie, nie jest powodem do paniki. Pestki mogą jednak powodować niedrożność, więc jeśli nie masz pewności, zapytaj weterynarza.",
         "cs": "Jedna třešeň otravu kyanidem nezpůsobí a u zdravého psa, který sní jednu nebo dvě, není třeba panikařit. Pecky ale mohou způsobit ucpání, proto se v případě nejistoty zeptejte veterináře.",
         "hr": "Jedna trešnja neće izazvati otrovanje cijanidom, a ako zdrav pas pojede jednu ili dvije, nema razloga za paniku. Ipak, koštice mogu izazvati začepljenje, zato pitaj veterinara ako nisi načisto.",
@@ -292,7 +292,7 @@
         "es": "La pulpa madura no es la parte tóxica, pero Pet Poison Helpline advierte de que el riesgo de dar cerezas a un perro supera los beneficios.",
         "it": "La polpa matura non è la parte tossica, ma Pet Poison Helpline avverte che i rischi di dare ciliegie al cane superano i benefici.",
         "pt": "A polpa madura não é a parte tóxica, mas a Pet Poison Helpline considera que o risco de dar cerejas é maior do que os benefícios.",
-        "nl": "Het rijpe vruchtvlees is niet het giftige deel, maar volgens Pet Poison Helpline weegt het risico van het geven van kersen zwaarder dan de voordelen.",
+        "nl": "Het rijpe vruchtvlees is niet het giftige deel, maar volgens Pet Poison Helpline weegt het risico van kersen geven zwaarder dan de voordelen.",
         "pl": "Sam dojrzały miąższ nie jest toksyczny, ale Pet Poison Helpline podaje, że ryzyko karmienia czereśniami przewyższa korzyści.",
         "cs": "Zralá dužnina sama jedovatá není, ale podle Pet Poison Helpline riziko krmení třešněmi převažuje nad přínosem.",
         "hr": "Zrelo meso ploda nije otrovni dio, ali Pet Poison Helpline upozorava da rizik od davanja trešanja psu nadmašuje koristi.",
@@ -403,7 +403,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dedf9156ce45f542bcabb62325b142e35aa8952ab566e2a776ad155588195cf9"
+      "verified_hash": "807ce5fea4f5b2ac3b6f7fdaacf60d3b5ff0d80a06f65420c7ca2934625d0cce"
     },
     "pl": {
       "status": "verified",

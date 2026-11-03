@@ -187,7 +187,7 @@
     "es": "Si tu perro se ha comido una o dos nueces, vigila si tiene vómitos o diarrea. Si se ha comido una nuez negra o nueces enmohecidas, contacta enseguida con tu veterinario y no esperes a que aparezcan síntomas; llama también si aparecen temblores, convulsiones o atragantamiento.",
     "it": "Dopo una o due noci, controlla se compaiono vomito o diarrea. Se il tuo cane ha mangiato una noce nera o noci ammuffite, contatta subito il veterinario e non aspettare che compaiano i sintomi; chiamalo anche se compaiono tremori, convulsioni o soffocamento.",
     "pt": "Depois de uma ou duas nozes, vigia se há vómitos ou diarreia. Se o teu cão comeu uma noz-preta ou nozes com bolor, contacta imediatamente o teu veterinário e não esperes pelos sinais; liga também se surgirem tremores, convulsões ou engasgamento.",
-    "nl": "Let na een of twee walnoten op braken of diarree. Heeft je hond een zwarte walnoot of beschimmelde walnoten gegeten? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen; bel ook bij trillingen, toevallen of stikken.",
+    "nl": "Let na een of twee walnoten op braken of diarree. Heeft je hond een zwarte walnoot of beschimmelde walnoten gegeten? Neem dan meteen contact op met je dierenarts en wacht niet op verschijnselen; bel ook als je trillingen of toevallen ziet of als je hond lijkt te stikken.",
     "pl": "Po jednym czy dwóch orzechach włoskich obserwuj, czy nie pojawiają się wymioty lub biegunka. Jeśli twój pies zjadł orzech czarny lub spleśniałe orzechy włoskie, od razu skontaktuj się z weterynarzem i nie czekaj na objawy; zadzwoń też, jeśli pojawi się drżenie mięśni, drgawki lub zadławienie.",
     "cs": "Po jednom nebo dvou vlašských ořeších sledujte, zda pes nezvrací nebo nemá průjem. Pokud snědl ořech ořešáku černého nebo plesnivé vlašské ořechy, okamžitě se obraťte na veterináře a nečekejte, až se objeví příznaky; zavolejte také, pokud se objeví třes, záchvaty nebo dušení.",
     "hr": "Nakon jednog ili dva oraha prati pojavljuju li se povraćanje ili proljev. Ako je tvoj pas pojeo crni orah ili pljesnive orahe, odmah se obrati veterinaru i ne čekaj da se pojave znakovi; nazovi ga i ako se pojave drhtanje, napadaji ili gušenje.",
@@ -384,7 +384,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d15aed19ea331293fb3ab973c8cbdfadbcb1f29f82703932ac3958076af11595"
+      "verified_hash": "ce39324d926c07a9e770be9bb8141ddba3fd8da8df545ac80dc2dd2fa35ddbb1"
     },
     "pl": {
       "status": "verified",

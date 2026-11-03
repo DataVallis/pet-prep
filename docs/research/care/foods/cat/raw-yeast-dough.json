@@ -187,7 +187,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta cuánta masa ha comido tu gato y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota quanto impasto ha mangiato il tuo gatto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quanta massa o teu gato comeu e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel deeg je kat heeft gegeten en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile ciasta zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik těsta vaše kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je tijesta mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
@@ -205,7 +205,7 @@
     "es": "La masa de pan tiene que subir en un bol, no en una barriga. Mantenla lejos de tu gato y avisa a un adulto si se come un poco.",
     "it": "L’impasto del pane deve lievitare in una ciotola, non in una pancia. Tienilo lontano dal micio e dillo a un adulto se ne mangia un po’.",
     "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho.",
-    "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg weg bij je poes. Eet ze er toch van? Vertel het meteen aan een volwassene.",
+    "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg uit de buurt van je kat. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
     "pl": "Ciasto na chleb ma rosnąć w misce, a nie w brzuszku. Trzymaj ciasto z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Těsto na chleba má kynout v míse, ne v bříšku. Drž těsto daleko od kočičky, a když ho sní, řekni to dospělému.",
     "hr": "Tijesto za kruh treba se dizati u zdjeli, a ne u trbuščiću. Drži tijesto daleko od mace i reci odrasloj osobi ako ga maca pojede.",
@@ -355,7 +355,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dbb9c853c7feb5d55ec741363dcff0278658e7a103996426df4520a4297382e0"
+      "verified_hash": "2c713a1608716ac454a750edbbc5aa2825415c58359714bddebc16c334e79bde"
     },
     "pl": {
       "status": "verified",

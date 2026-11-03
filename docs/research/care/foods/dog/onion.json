@@ -61,7 +61,7 @@
     "es": "No. La cebolla es tóxica para los perros en cualquier forma: cruda, cocinada, seca o en polvo. Daña los glóbulos rojos y puede provocar anemia, y los síntomas a menudo aparecen solo días después. También cuentan la cebolla en polvo y los sobres de sopa.",
     "it": "No. La cipolla è tossica per i cani in ogni forma: cruda, cotta, secca o in polvere. Danneggia i globuli rossi e può causare anemia, con sintomi che spesso compaiono solo giorni dopo. Vale anche per le polveri e i preparati per zuppe.",
     "pt": "Não. A cebola é tóxica para os cães em todas as formas: crua, cozinhada, seca ou em pó. Danifica os glóbulos vermelhos e pode causar anemia, e os sinais muitas vezes só aparecem dias depois. Os pós e as misturas para sopa também contam.",
-    "nl": "Nee. Ui is in elke vorm giftig voor honden: rauw, gekookt, gedroogd of als poeder. Ui beschadigt rode bloedcellen en kan bloedarmoede veroorzaken, waarbij verschijnselen vaak pas dagen later komen. Ook poeders en soepmixen tellen mee.",
+    "nl": "Nee. Ui is in elke vorm giftig voor honden: rauw, gaar gemaakt, gedroogd of als poeder. Ui beschadigt rode bloedcellen en kan bloedarmoede veroorzaken, waarbij de verschijnselen vaak pas dagen later zichtbaar worden. Ook uipoeder en soepmixen vallen hieronder.",
     "pl": "Nie. Cebula jest toksyczna dla psów w każdej postaci: surowa, gotowana, suszona i w proszku. Uszkadza czerwone krwinki i może wywołać anemię, a objawy często pojawiają się dopiero po kilku dniach. Liczą się też przyprawy w proszku i zupy w proszku.",
     "cs": "Ne. Cibule je pro psy jedovatá v jakékoli podobě: syrová, tepelně upravená, sušená i v prášku. Poškozuje červené krvinky a může způsobit chudokrevnost (anémii), přičemž příznaky se často objeví až po několika dnech. Platí to i pro koření v prášku a polévkové směsi.",
     "hr": "Ne. Luk je otrovan za pse u svakom obliku: sirov, termički obrađen, sušen ili u prahu. Oštećuje crvene krvne stanice i može izazvati anemiju, a znakovi se često pojave tek nakon nekoliko dana. Opasni su i proizvodi u prahu te mješavine za juhu.",
@@ -78,7 +78,7 @@
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: cruda, cocinada, seca y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Fa parte delle alliacee (cipolla, aglio, porro, erba cipollina), piante tossiche per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Tutte le parti sono dannose, in qualsiasi forma: crude, cotte, secche o in polvere. I disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
     "pt": "A cebola pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: crua, cozinhada, seca e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
-    "nl": "Ui hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
+    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie: ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gaar gemaakt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Cebula należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
@@ -134,7 +134,7 @@
       "Braken en diarree",
       "Minder eten dan normaal",
       "Maag-darmklachten, ook na kleine hoeveelheden",
-      "Tekenen van bloedarmoede (beschadigde rode bloedcellen), meestal een paar dagen later"
+      "Tekenen van bloedarmoede (beschadigde rode bloedcellen), meestal pas een paar dagen later"
     ],
     "pl": [
       "Wymioty i biegunka",
@@ -205,7 +205,7 @@
     "es": "La cebolla no es para perros, ni siquiera cocinada en la comida. Puede hacerles daño en la sangre. Avisa a un adulto si tu perro se come un poco.",
     "it": "La cipolla non è per i cani, nemmeno cotta nel cibo. Può far ammalare il sangue del cane. Avvisa un adulto se il tuo cane ne mangia.",
     "pt": "A cebola não é para cães, nem cozinhada na comida. Pode fazer mal ao sangue de um cão. Avisa um adulto se o teu cão comer alguma.",
-    "nl": "Uien zijn niet voor honden, ook niet gekookt in het eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
+    "nl": "Uien zijn niet voor honden, ook niet gaar gemaakt in eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Cebula nie jest dla psów, nawet ugotowana w jedzeniu. Może zaszkodzić psiej krwi. Powiedz dorosłemu, jeśli twój pies ją zje.",
     "cs": "Cibule není pro psy, ani ta uvařená v jídle. Může psovi poškodit krev. Když ji pes sní, řekni to dospělému.",
     "hr": "Luk nije za pse, čak ni skuhan u jelu. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede.",
@@ -224,7 +224,7 @@
         "es": "¿Es segura cocinada o en polvo?",
         "it": "È sicura cotta o in polvere?",
         "pt": "É segura cozinhada ou em pó?",
-        "nl": "Is het veilig als het gekookt is of als poeder?",
+        "nl": "Is het veilig als het gaar gemaakt is of als poeder?",
         "pl": "Czy po ugotowaniu lub w proszku jest bezpieczna?",
         "cs": "Je bezpečná tepelně upravená cibule nebo cibule v prášku?",
         "hr": "Je li siguran kad je termički obrađen ili u prahu?",
@@ -241,7 +241,7 @@
         "es": "No. Cruda, cocinada, seca, en polvo o en forma líquida, siempre es tóxica para los perros.",
         "it": "No. Cruda, cotta, secca, in polvere o liquida: in tutte le forme è velenosa per i cani.",
         "pt": "Não. Crua, cozinhada, seca, em pó ou líquida, todas as formas são venenosas para os cães.",
-        "nl": "Nee. Rauw, gekookt, gedroogd, als poeder en vloeibaar: alle vormen zijn giftig voor honden.",
+        "nl": "Nee. Rauw, gaar gemaakt, gedroogd, als poeder of vloeibaar: alle vormen zijn giftig voor honden.",
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
@@ -277,7 +277,7 @@
         "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los síntomas de anemia suelen aparecer varios días después de comerla.",
         "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sinais podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
-        "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
+        "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen. Tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
         "hr": "Znakovi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što je pas pojeo luk.",
@@ -416,7 +416,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "25812cd4573db91e440f46521928bcd60b03e088139834b3e8ed72dcd6db5164"
+      "verified_hash": "7e471ab1f83fc1fcaf070fb7a638e04b7f9a722096d81696147e1e7224015233"
     },
     "pl": {
       "status": "verified",

@@ -78,7 +78,7 @@
     "es": "Las pasas, las uvas y las pasas de Corinto pueden dañar los riñones del perro. Se sospecha que la parte tóxica es el ácido tartárico; su cantidad varía, así que los efectos son impredecibles, y no hay forma de saber qué perros son más sensibles. Como la causa no está clara, cualquier cantidad se considera preocupante.",
     "it": "Uvetta, uva e uva passa di Corinto possono danneggiare i reni del cane. Si sospetta che la parte tossica sia l’acido tartarico; la sua quantità varia, quindi gli effetti sono imprevedibili, e non c’è modo di sapere quali cani siano più sensibili. Poiché la causa non è certa, qualsiasi quantità va considerata preoccupante.",
     "pt": "As passas, as uvas e as passas de Corinto podem danificar os rins de um cão. Suspeita-se que a parte tóxica seja o ácido tartárico; a sua quantidade varia, por isso os efeitos são imprevisíveis, e não há forma de saber que cães são mais sensíveis. Como a causa é incerta, qualquer quantidade é motivo de preocupação.",
-    "nl": "Rozijnen, druiven en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof; de hoeveelheid verschilt, dus het effect is onvoorspelbaar, en je kunt niet zien welke honden gevoeliger zijn. Omdat de oorzaak onzeker is, wordt elke hoeveelheid als zorgwekkend beschouwd.",
+    "nl": "Rozijnen, druiven en krenten kunnen de nieren van een hond beschadigen. Wijnsteenzuur is vermoedelijk de giftige stof; de hoeveelheid verschilt, dus het effect is onvoorspelbaar, en je kunt niet zien welke honden gevoeliger zijn. Omdat de oorzaak onzeker is, geldt elke hoeveelheid als reden tot zorg.",
     "pl": "Rodzynki, winogrona i porzeczki koryntki mogą uszkodzić nerki psa. Podejrzewa się, że toksycznym składnikiem jest kwas winowy; jego ilość bywa różna, więc skutki są nieprzewidywalne i nie da się określić, które psy są bardziej wrażliwe. Ponieważ przyczyna nie jest pewna, każdą ilość traktuje się jako powód do niepokoju.",
     "cs": "Rozinky, hrozny a korintky mohou poškodit psí ledviny. Jako jedovatá složka je podezřelá kyselina vinná; její množství se liší, takže účinky jsou nepředvídatelné a nelze poznat, kteří psi jsou citlivější. Protože příčina není jistá, považuje se za problém jakékoli množství.",
     "hr": "Grožđice, grožđe i korintsko grožđe mogu oštetiti pseće bubrege. Pretpostavlja se da je otrovni sastojak vinska kiselina; njezina se količina razlikuje, pa su učinci nepredvidljivi i ne može se znati koji su psi osjetljiviji. Budući da uzrok nije siguran, svaka se količina smatra razlogom za zabrinutost.",
@@ -271,7 +271,7 @@
         "es": "Las dos son peligrosas. Las fuentes consideran que las uvas, las pasas y las pasas de Corinto tienen el mismo riesgo y aconsejan llamar al veterinario sea cual sea la cantidad.",
         "it": "Sono pericolose entrambe. Le fonti considerano uva, uvetta e uva passa di Corinto lo stesso rischio e consigliano di chiamare il veterinario qualunque sia la quantità.",
         "pt": "Ambas são perigosas. As fontes tratam as uvas, as passas e as passas de Corinto como o mesmo risco e aconselham a ligar ao veterinário depois de qualquer quantidade.",
-        "nl": "Ze zijn allebei gevaarlijk. Bronnen zien druiven, rozijnen en krenten als hetzelfde risico en raden aan na elke hoeveelheid de dierenarts te bellen.",
+        "nl": "Ze zijn allebei gevaarlijk. Bronnen zien druiven, rozijnen en krenten als hetzelfde risico en adviseren bij elke hoeveelheid de dierenarts te bellen.",
         "pl": "Jedne i drugie są niebezpieczne. Źródła traktują winogrona, rodzynki i porzeczki koryntki jako takie samo zagrożenie i radzą dzwonić do weterynarza bez względu na zjedzoną ilość.",
         "cs": "Nebezpečné jsou obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři.",
         "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine.",
@@ -414,7 +414,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "426389b5bca5610a9336120376253baf276ddd291017dfc5de06292ee6c6e5ba"
+      "verified_hash": "e5ea2e33062e653076fe3877e58ce5630ddb88dd8d55602f9f63f869bf62bd3e"
     },
     "pl": {
       "status": "verified",

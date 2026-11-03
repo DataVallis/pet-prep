@@ -61,7 +61,7 @@
     "es": "No se recomiendan. Es poco probable que unas pocas patatas fritas causen una intoxicación por sal, pero son saladas, y el exceso de sal no es bueno para los perros, sobre todo si tienen problemas de corazón. Las de sabor a cebolla o ajo añaden otro riesgo: la cebolla y el ajo son tóxicos para los perros.",
     "it": "Sconsigliate. È improbabile che qualche patatina causi un avvelenamento da sale, ma le patatine sono salate e troppi cibi salati non fanno bene ai cani, soprattutto a quelli con problemi di cuore. Le patatine al gusto di cipolla o aglio aggiungono un ulteriore rischio, perché cipolla e aglio sono tossici per i cani.",
     "pt": "Não é recomendado. Algumas batatas fritas dificilmente causam intoxicação por sal, mas são salgadas, e comida salgada em excesso não faz bem aos cães, sobretudo aos que têm problemas cardíacos. As batatas fritas com sabor a cebola ou alho trazem um risco extra, porque a cebola e o alho são tóxicos para os cães.",
-    "nl": "Niet aan te raden. Een paar chips veroorzaken waarschijnlijk geen zoutvergiftiging, maar chips zijn zout en te veel zout eten is niet goed voor honden, vooral niet voor honden met hartproblemen. Chips met ui- of knoflooksmaak brengen extra risico, want ui en knoflook zijn giftig voor honden.",
+    "nl": "Niet aan te raden. Een paar chips veroorzaken waarschijnlijk geen zoutvergiftiging, maar chips zijn zout en te veel zout eten is niet goed voor honden, vooral niet voor honden met hartproblemen. Chips met ui- of knoflooksmaak brengen extra risico mee, want ui en knoflook zijn giftig voor honden.",
     "pl": "Nie zaleca się. Kilka chipsów ziemniaczanych raczej nie spowoduje zatrucia solą, ale chipsy są słone, a nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z problemami z sercem. Chipsy o smaku cebulowym lub czosnkowym to dodatkowe ryzyko, bo cebula i czosnek są toksyczne dla psów.",
     "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté.",
     "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka nosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
@@ -78,7 +78,7 @@
     "es": "Según el AKC, un perro puede comer alimentos salados como las patatas fritas en cantidades limitadas, pero el exceso de sal no es bueno para los perros y puede hacer que retengan líquidos. Las cantidades grandes de sal pueden provocar una intoxicación por sal. La cebolla y el ajo son tóxicos para los perros en cualquier forma, también en polvo.",
     "it": "Secondo l’AKC un cane può mangiare cibi salati come le patatine in quantità limitate, ma il sale in eccesso non fa bene ai cani e può causare ritenzione di liquidi. Grandi quantità di sale possono portare all’avvelenamento da sale. Cipolla e aglio sono tossici per i cani in qualsiasi forma, anche in polvere.",
     "pt": "O AKC diz que um cão pode comer alimentos salgados, como batatas fritas de pacote, em quantidades limitadas, mas o excesso de sal não faz bem aos cães e pode causar retenção de líquidos. Grandes quantidades de sal podem levar a intoxicação por sal. A cebola e o alho são tóxicos para os cães em todas as formas, incluindo em pó.",
-    "nl": "Volgens de AKC mag een hond zoute dingen zoals chips in beperkte hoeveelheden, maar te veel zout is niet goed voor honden en kan ervoor zorgen dat het lichaam vocht vasthoudt. Grote hoeveelheden zout kunnen tot zoutvergiftiging leiden. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder.",
+    "nl": "Volgens de AKC mag een hond zout eten zoals chips in beperkte hoeveelheden, maar te veel zout is niet goed voor honden en kan ervoor zorgen dat het lichaam vocht vasthoudt. Grote hoeveelheden zout kunnen tot zoutvergiftiging leiden. Ui en knoflook zijn in elke vorm giftig voor honden, ook als poeder.",
     "pl": "AKC podaje, że pies może jeść słone produkty, takie jak chipsy ziemniaczane, w ograniczonych ilościach, ale nadmiar soli nie jest dla psów dobry i może powodować zatrzymywanie wody w organizmie. Duże ilości soli mogą prowadzić do zatrucia solą. Cebula i czosnek są toksyczne dla psów w każdej postaci, także w proszku.",
     "cs": "Podle AKC může pes slaná jídla, jako jsou brambůrky, dostat v omezeném množství, ale nadbytek soli psům nesvědčí a může způsobit zadržování tekutin. Velké množství soli může vést k otravě solí. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku.",
     "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu.",
@@ -141,7 +141,7 @@
       "Veel dorst en veel plassen",
       "Braken, vaak binnen een paar uur",
       "Diarree",
-      "Wankelen, vermoeidheid",
+      "Wankel lopen, vermoeidheid",
       "Trillen of toevallen"
     ],
     "pl": [
@@ -375,7 +375,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fcd9634224854978c670697953fde1414f4c652f4044b44f993bfea66eef82fc"
+      "verified_hash": "6e8ecabd5a4e53c88d39e1d05f52b2d0f11870b66de91b291e03c2234195b2c3"
     },
     "pl": {
       "status": "verified",

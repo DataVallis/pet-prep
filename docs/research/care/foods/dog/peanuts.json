@@ -96,7 +96,7 @@
     "es": "Si tu perro se ha comido muchos cacahuetes, cacahuetes salados o cáscaras, vigila si tiene vómitos, diarrea o dolor de barriga, y llama a tu veterinario si aparecen o si parece que se atraganta.",
     "it": "Se il tuo cane ha mangiato molte arachidi, arachidi salate o gusci, controlla se compaiono vomito, diarrea o mal di pancia, e chiama il veterinario se compaiono o se sembra che stia soffocando.",
     "pt": "Se o teu cão comeu muitos amendoins, amendoins salgados ou cascas, vigia se há vómitos, diarreia ou dor de barriga, e liga ao teu veterinário se surgirem ou se o teu cão parecer estar a engasgar-se.",
-    "nl": "Heeft je hond veel pinda’s, gezouten pinda’s of doppen gegeten? Let dan op braken, diarree of buikpijn, en bel je dierenarts als die optreden of als je hond lijkt te stikken.",
+    "nl": "Heeft je hond veel pinda’s, gezouten pinda’s of doppen gegeten? Let dan op of je hond gaat braken of diarree of buikpijn krijgt, en bel je dierenarts als dat gebeurt of als je hond lijkt te stikken.",
     "pl": "Jeśli twój pies zjadł dużo orzeszków ziemnych, orzeszki solone lub łupiny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią albo pies wygląda, jakby się dławił.",
     "cs": "Pokud váš pes snědl hodně arašídů, solené arašídy nebo skořápky, sledujte, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví nebo se zdá, že se pes dusí, zavolejte veterináři.",
     "hr": "Ako je tvoj pas pojeo puno kikirikija, slani kikiriki ili ljuske, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave ili ako se čini da se pas guši.",
@@ -113,7 +113,7 @@
     "es": "Solo unos pocos, naturales: tostados sin aceite o crudos, sin sal, sin condimentos, sin recubrimiento y sin cáscara; no todos los días.",
     "it": "Solo poche e semplici: tostate a secco o crude, senza sale, senza condimenti, senza rivestimenti e sgusciate – non tutti i giorni.",
     "pt": "Só alguns, simples: torrados a seco ou crus, sem sal, sem temperos, sem cobertura, sem casca – não todos os dias.",
-    "nl": "Maar een paar, puur: droog geroosterd of rauw, ongezouten, ongekruid, zonder laagje, zonder dop – niet elke dag.",
+    "nl": "Maar een paar gewone pinda’s: droog geroosterd of rauw, ongezouten, ongekruid, zonder laagje en zonder dop – niet elke dag.",
     "pl": "Tylko kilka zwykłych orzeszków: prażonych na sucho lub surowych, niesolonych, nieprzyprawionych, bez polewy, bez łupin – nie codziennie.",
     "cs": "Jen pár kusů, obyčejných: pražených nasucho nebo syrových, nesolených, nekořeněných, bez obalu a vyloupaných – ne každý den.",
     "hr": "Samo nekoliko zrna običnog kikirikija: prženog na suho ili sirovog, neslanog, bez začina, bez preljeva i bez ljuske – ne svaki dan.",
@@ -266,7 +266,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "455299292819cfb9ef71786bdc362035ac3c2d820a285146f202d018ab5407c3"
+      "verified_hash": "4e56475aef280d73916aecdd6f8a1a89afd694e45cade0e46413bb8971735234"
     },
     "pl": {
       "status": "verified",

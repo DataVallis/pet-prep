@@ -78,7 +78,7 @@
     "es": "La cebolla pertenece a la familia de las aliáceas (la familia de la cebolla). Las aliáceas dañan los glóbulos rojos y pueden provocar anemia, y además irritan el estómago y el intestino. El gato es la especie más sensible. Todas las formas son tóxicas para los gatos: cruda, cocinada, deshidratada, en polvo y líquida.",
     "it": "La cipolla appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide.",
     "pt": "A cebola pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
-    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliums beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, in poedervorm en vloeibaar.",
+    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliumsoorten beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, als poeder en vloeibaar.",
     "pl": "Cebula należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
     "cs": "Cibule patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
     "hr": "Luk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
@@ -157,8 +157,8 @@
       "Minder eetlust",
       "Zwakte",
       "Bleek tandvlees",
-      "Rood gekleurde urine",
-      "Snellere of zwaardere ademhaling"
+      "Rood verkleurde urine",
+      "Snellere of moeizamere ademhaling"
     ],
     "pl": [
       "Wymioty",
@@ -232,7 +232,7 @@
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los síntomas de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (cebolla cruda, cocinada, en polvo o un plato que la lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Anota o que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), a quantidade e quando. Não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er prima uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou cibuli, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
@@ -250,7 +250,7 @@
     "es": "La cebolla no es para los gatos, ni siquiera cocinada en la comida. Si tu gato se come un poco, díselo a un adulto para que llame al veterinario.",
     "it": "La cipolla non è per i gatti, nemmeno cotta nel cibo. Se il micio ne mangia un po’, dillo a un adulto, così può chiamare il veterinario.",
     "pt": "As cebolas não são para gatos, nem cozinhadas na comida. Se o gatinho comer alguma, avisa um adulto, que pode ligar ao veterinário.",
-    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je poes ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
+    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je kat ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
     "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Cibule není pro kočky, ani když je uvařená nebo upečená v jídle. Když ji kočička sní, řekni to dospělému, aby mohl zavolat veterináři.",
     "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
@@ -286,7 +286,7 @@
         "es": "No. Todas las formas son tóxicas para los gatos, también la cebolla cruda, cocinada, deshidratada, en polvo y líquida. Ten cuidado con las sobras, los rellenos y las salsas de carne que puedan llevarla.",
         "it": "No. Tutte le forme sono velenose per i gatti, compresa la cipolla cruda, cotta, essiccata, in polvere e liquida. Fai attenzione ad avanzi, ripieni e sughi che potrebbero contenerla.",
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo a cebola crua, cozinhada, seca, em pó e líquida. Tem cuidado com restos de comida, recheios e molho de assado que a possam conter.",
-        "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte, gedroogde, gemalen en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten.",
+        "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde ui, uienpoeder en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten.",
         "pl": "Nie. Każda postać jest dla kotów trująca, także cebula surowa, gotowana, suszona, w proszku i w płynie. Uważaj na resztki jedzenia, farsz i sos pieczeniowy, które mogą ją zawierać.",
         "cs": "Ne. Pro kočky jsou jedovaté všechny formy cibule – syrová, tepelně upravená, sušená, v prášku i tekutá. Dávejte pozor na zbytky jídla, nádivky a šťávu z masa, které ji mohou obsahovat.",
         "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen, sušen, tekući luk i luk u prahu. Pripazi na ostatke hrane, nadjeve i sok od pečenja koji ga mogu sadržavati.",
@@ -322,7 +322,7 @@
         "es": "Las molestias de estómago suelen aparecer primero, pero los síntomas de anemia normalmente tardan más y pueden aparecer en un plazo de uno a cinco días. Por eso debes llamar a tu veterinario enseguida en lugar de esperar.",
         "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "O mal-estar na barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
-        "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
+        "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Bel daarom meteen je dierenarts in plaats van af te wachten.",
         "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
         "cs": "Nejdřív se často projeví podrážděný žaludek, ale příznaky chudokrevnosti obvykle nastupují později a mohou se objevit během jednoho až pěti dnů. Proto byste měli veterináři zavolat hned a nečekat.",
         "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti u roku od jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
@@ -465,7 +465,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "008cd6901f2dff2c470029f0c2ef6e8e04dd851a36ab658be86fbda09a814eff"
+      "verified_hash": "35ad30c10107299d4ac6020af5545d7a3049e3528d45a383ac4d7d97ea0d9b55"
     },
     "pl": {
       "status": "verified",

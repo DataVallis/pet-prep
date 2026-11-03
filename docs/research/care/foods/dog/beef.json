@@ -61,7 +61,7 @@
     "es": "Sí, la ternera cocinada, sin nada añadido y quitándole la grasa, puede ser una fuente sana de proteína. No le pongas sal, especias ni añadidos como cebolla y ajo, no le des nunca huesos cocinados y evita la ternera cruda, que puede contener bacterias.",
     "it": "Sì, il manzo cotto al naturale e privato del grasso può essere una sana fonte di proteine. Niente sale, spezie o aggiunte come cipolla e aglio, mai ossa cotte, ed evita il manzo crudo, che può contenere batteri.",
     "pt": "Sim, a carne de vaca cozinhada, simples e sem gordura pode ser uma fonte saudável de proteína. Não lhe juntes sal, especiarias nem acompanhamentos como cebola e alho, nunca dês ossos cozinhados e evita a carne de vaca crua, que pode ter bactérias.",
-    "nl": "Ja, gewoon gekookt rundvlees zonder vet kan een gezonde bron van eiwit zijn. Laat zout, kruiden en toevoegingen zoals ui en knoflook weg, geef nooit gekookte botten en vermijd rauw rundvlees, dat bacteriën kan bevatten.",
+    "nl": "Ja, gewoon gekookt rundvlees waar het vet is afgesneden, kan een gezonde eiwitbron zijn. Laat zout, kruiden en toevoegingen zoals ui en knoflook weg, geef nooit gekookte botten en vermijd rauw rundvlees, dat bacteriën kan bevatten.",
     "pl": "Tak, zwykła gotowana wołowina bez tłuszczu może być zdrowym źródłem białka. Pomiń sól, przyprawy i dodatki, takie jak cebula i czosnek, nigdy nie dawaj gotowanych kości i unikaj surowej wołowiny, która może przenosić bakterie.",
     "cs": "Ano, čisté tepelně upravené hovězí maso bez tuku může být zdravým zdrojem bílkovin. Vynechte sůl, koření a přísady jako cibuli a česnek, nikdy nedávejte tepelně upravené kosti a vyhněte se syrovému hovězímu, které může přenášet bakterie.",
     "hr": "Da, obična termički obrađena govedina bez masnoće može biti zdrav izvor bjelančevina. Izostavi sol, začine i dodatke poput luka i češnjaka, nikad ne daj termički obrađene kosti i izbjegavaj sirovu govedinu, koja može prenositi bakterije.",
@@ -78,7 +78,7 @@
     "es": "La ternera cocinada y sin condimentar puede ser una proteína sana, cortada en trocitos y sin la grasa. Las hamburguesas y los filetes suelen llevar sal, especias y añadidos que pueden ser peligrosos; la cebolla y el ajo son tóxicos para los perros. Un filete o una hamburguesa crudos pueden contener Salmonella y E. coli, y nunca hay que darle huesos cocinados de ningún tipo.",
     "it": "Il manzo cotto e non condito, tagliato a bocconcini e privato del grasso, può essere una fonte sana di proteine. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
     "pt": "A carne de vaca cozinhada e sem temperos pode ser uma proteína saudável, cortada em pedaços pequenos e sem gordura. Os hambúrgueres e os bifes costumam ter sal, especiarias e acompanhamentos que podem ser perigosos; a cebola e o alho são tóxicos para os cães. O bife ou o hambúrguer crus podem ter Salmonella e E. coli, e nunca se devem dar ossos cozinhados de nenhum tipo.",
-    "nl": "Ongekruid, gaar rundvlees kan een gezonde eiwitbron zijn, in hapklare stukjes en met het vet eraf. Hamburgers en biefstukken bevatten vaak zout, kruiden en toevoegingen die gevaarlijk kunnen zijn; ui en knoflook zijn giftig voor honden. Rauwe biefstuk of hamburger kan salmonella en E. coli bevatten, en gekookte botten van welke soort ook mag je nooit geven.",
+    "nl": "Ongekruid, gaar rundvlees kan een gezonde eiwitbron zijn, in hapklare stukjes en met het vet eraf. Hamburgers en biefstukken bevatten vaak zout, kruiden en toevoegingen die gevaarlijk kunnen zijn; ui en knoflook zijn giftig voor honden. Rauwe biefstuk of hamburger kan salmonella en E. coli bevatten. Geef nooit gekookte botten, van welke soort ook.",
     "pl": "Nieprzyprawiona, gotowana wołowina pokrojona na małe kawałki i pozbawiona tłuszczu może być zdrowym białkiem. Burgery i steki często zawierają sól, przyprawy i dodatki, które mogą być niebezpieczne; cebula i czosnek są toksyczne dla psów. Surowy stek lub burger może przenosić bakterie Salmonella i E. coli, a gotowanych kości żadnego rodzaju nigdy nie wolno podawać.",
     "cs": "Nekořeněné, tepelně upravené hovězí maso nakrájené na malé kousky a zbavené tuku může být zdravou bílkovinou. Burgery a steaky často obsahují sůl, koření a přísady, které mohou být nebezpečné; cibule a česnek jsou pro psy jedovaté. Syrový steak nebo burger může přenášet salmonelu a E. coli a tepelně upravené kosti jakéhokoli druhu se nikdy nesmějí dávat.",
     "hr": "Nezačinjena, termički obrađena govedina može biti zdrav izvor bjelančevina, narezana na komadiće za jedan zalogaj i bez masnoće. Pljeskavice i odresci često sadrže sol, začine i dodatke koji mogu biti opasni; luk i češnjak otrovni su za pse. Sirovi odrezak ili pljeskavica mogu prenositi salmonelu i E. coli, a termički obrađene kosti bilo koje vrste nikad se ne smiju davati.",
@@ -96,7 +96,7 @@
     "es": "Si tu perro ha comido ternera grasa o condimentada, vigila si tiene vómitos, diarrea o dolor de barriga y llama a tu veterinario si aparecen. Si ha comido huesos cocinados o comida con cebolla o ajo, llama a tu veterinario enseguida.",
     "it": "Se il tuo cane ha mangiato manzo grasso o condito, controlla se compaiono vomito, diarrea o mal di pancia e, in quel caso, chiama il veterinario. Se ha mangiato ossa cotte o cibo con cipolla o aglio, chiama subito il veterinario.",
     "pt": "Se o teu cão comeu carne de vaca gorda ou temperada, vigia se aparecem vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
-    "nl": "Heeft je hond vet of gekruid rundvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die optreden. Heeft hij gekookte botten of eten met ui of knoflook gegeten, bel je dierenarts dan meteen.",
+    "nl": "Heeft je hond vet of gekruid rundvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als dat zich voordoet. Heeft hij gekookte botten of eten met ui of knoflook gegeten, bel dan meteen je dierenarts.",
     "pl": "Jeśli twój pies zjadł tłustą lub przyprawioną wołowinę, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości albo jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
     "cs": "Pokud váš pes snědl tučné nebo kořeněné hovězí, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
     "hr": "Ako je pas pojeo masnu ili začinjenu govedinu, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
@@ -113,7 +113,7 @@
     "es": "Ternera bien cocinada, sin nada añadido ni condimentos, sin grasa, sin huesos y en trocitos.",
     "it": "Manzo al naturale, non condito, ben cotto, privato del grasso, senza ossa, a bocconcini.",
     "pt": "Carne de vaca simples, sem temperos, bem cozinhada, sem gordura, sem ossos, em pedaços pequenos.",
-    "nl": "Gewoon, ongekruid, helemaal gaar rundvlees, zonder vet en zonder botten, in hapklare stukjes.",
+    "nl": "Zonder toevoegingen: ongekruid, helemaal gaar rundvlees, vet afgesneden, zonder botten, in hapklare stukjes.",
     "pl": "Zwykła, nieprzyprawiona, dobrze ugotowana wołowina bez tłuszczu i kości, pokrojona na małe kawałki.",
     "cs": "Čisté, nekořeněné, důkladně tepelně upravené hovězí maso bez tuku a bez kostí, v malých kouscích.",
     "hr": "Obična, nezačinjena, potpuno termički obrađena govedina, bez masnoće i kostiju, u komadićima za jedan zalogaj.",
@@ -130,7 +130,7 @@
     "es": "Unos bocaditos de ternera cocinada sin nada añadido pueden ser un premio. Las hamburguesas con cebolla o salsa son solo para las personas.",
     "it": "Qualche boccone di manzo cotto al naturale può essere un premio. Gli hamburger con cipolla o salse sono solo per le persone.",
     "pt": "Uns pedacinhos de carne de vaca cozinhada e simples podem ser uma guloseima. Hambúrgueres com cebola ou molho são só para pessoas.",
-    "nl": "Een paar hapjes gewoon gekookt rundvlees kunnen een traktatie zijn. Hamburgers met ui of saus zijn alleen voor mensen.",
+    "nl": "Een paar hapjes gewoon gekookt rundvlees kunnen een lekker snoepje zijn. Hamburgers met ui of saus zijn alleen voor mensen.",
     "pl": "Kilka kęsów zwykłej gotowanej wołowiny może być smakołykiem. Burgery z cebulą lub sosem są tylko dla ludzi.",
     "cs": "Pár soust čistého tepelně upraveného hovězího může být pamlsek. Burgery s cibulí nebo omáčkou jsou jen pro lidi.",
     "hr": "Nekoliko zalogaja obične kuhane govedine može biti poslastica. Pljeskavice s lukom ili umakom samo su za ljude.",
@@ -263,7 +263,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1c7dfb0ba63bae3512d05721b5e95f1e0beaaaac092ac636ee569ea9efbc3ee9"
+      "verified_hash": "ec16d123bd70ab8a55252ba4d668dc32ac83904c08adb5755a943337001552d1"
     },
     "pl": {
       "status": "verified",
