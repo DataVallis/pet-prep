@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a27f5a0fc9028f8d37289bc634f9c16b1a9c7f4513edf013570db0248677aa44"
+      "sha256": "be944583c56f006e5c1d10a927f87fa47db963eb621834da1b9e73740c45a655"
     }
   },
   "suitability_vocabulary": {
@@ -50232,7 +50232,12 @@
           "S679"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "irish-setter.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

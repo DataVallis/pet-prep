@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `irish_setter` (viri S675–S681; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S676) |
 | Izvor | FCI št. 120, skupina 7, sekcija 2 (britanski in irski ptičarji in setri), Irska (S675); ni irski rdeče-beli seter (FCI št. 330, druga pasma) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 85. mesto »Irish Setter« (S174, prebrano 2026-11-03) |
-| PR-ji | pet-prep #591 (pasma) · portret: sledi · spletna stran: pet-prep-website `feat/register-irish-setter` (sledi) |
+| PR-ji | pet-prep #591 (pasma, združen `b1a2998`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 41568028702, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-irish-setter` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 3× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-03 |
 | Čiščenje ušes 1× na teden, striženje krempljev vsake 4 tedne (mini igri) | 🛠 | 💶 izziv | M5-R19 / M5-R20 | 2026-11-03 |
 | Barva (izbirnik: kostanjevo rdeča — edina) | 🛠 | 💶 izziv | M5-R21 | 2026-11-03 |
-| AI portret v registru | 🗓 sledi (`breed-portraits.yml` po združitvi) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/irish-setter`, `/sl/zivali/psi/irski-seter`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), kostanjevo rdeč, naraven rep | — | M5-R11-04 | 2026-11-03 |
+| Stran na petprep.si (`/animals/dogs/irish-setter`, `/sl/zivali/psi/irski-seter`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
