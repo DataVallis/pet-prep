@@ -74,5 +74,12 @@ next queue line.
                 "source_url": "…", "checked": "2026-10-31" }],
   "notes": "…" }
 ```
-Allowed entry keys: kind, name, city, region, address, phone, emergency_24h, duty, small_animals, url, source_url,
-checked, note, quote. A clinic needs a phone or a url.
+Allowed entry keys: kind, name, city, region, address, phone, emergency_24h, duty, duty_i18n, small_animals, url,
+source_url, checked, note, quote. A clinic needs a phone or a url.
+
+**Public vs internal text (David 2026-11-03):** `duty` is the only free text visitors see — opening hours, emergency
+arrangements, surcharges, "call ahead", in **English**, short, nothing about how it was researched. Everything about
+the research (which page/register said what, "could not be opened", conflicting numbers) goes in `note`, which is
+**never published**. `duty_i18n` (`{ "<locale>": "…" }`) holds the translations of `duty`; it is filled by the daily
+vet translation run (`docs/engineering/VET_TRANSLATION_RUNBOOK.md`), not by this run. When this run changes a
+`duty`, it deletes that entry's `duty_i18n` so the translations are redone.
