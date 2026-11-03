@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `greater_swiss_mountain_dog` (viri S652–S659; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S654) |
 | Izvor | FCI št. 58, skupina 2, sekcija 3 (švicarski planšarski in govedarski psi), Švica (S652, S653); v Veliki Britaniji »Great Swiss Mountain Dog« (S654) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 82. mesto (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #519 (pasma, združen `90d24ac`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41381262158 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-greater-swiss-mountain-dog` (PR sledi) |
+| PR-ji | pet-prep #519 (pasma, združen `90d24ac`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41381262158 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-shar-pei` (skupaj z rat terierjem in šarpejem; PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 

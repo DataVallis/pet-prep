@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `rat_terrier` (viri S647–S651; ponovno S8, S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: Rat Terrier Club of America (K39) in AKC (K38) |
 | Izvor | ameriška pasma, AKC skupina terierjev (standard ratificiran 2009; S650, S651); **standarda FCI nisem našel** (pasma ni pri RKC; v registru ni podatka FCI) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 81. mesto (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #514 (pasma, združen `09add54`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41372091995 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-rat-terrier` (PR sledi) |
+| PR-ji | pet-prep #514 (pasma, združen `09add54`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41372091995 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-shar-pei` (skupaj s šarpejem in velikim švicarskim planšarskim psom; PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 

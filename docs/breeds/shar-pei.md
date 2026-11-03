@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `shar_pei` (viri S660–S668; ponovno S8, S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: stran RKC (S664) |
 | Izvor | FCI št. 309, skupina 2, sekcija 2.1 (molosi, mastifski tip), Kitajska (S662, S663); v ZDA »Chinese Shar-Pei« (S174) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 83. mesto »Chinese Shar-Pei« (S174, prebrano 2026-11-02) |
-| PR-ji | pet-prep #529 (pasma, združen `c078fd4`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41426135891 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-shar-pei` (PR sledi) |
+| PR-ji | pet-prep #529 (pasma, združen `c078fd4`) · portret pet-prep #585 (zagon `breed-portraits.yml` 41551091234 3. 11. 2026, sprejet v prvem poskusu; prej zagon 41426135891 zavrnjen — čakal na produkcijsko namestitev Laravel 12) · spletna stran: pet-prep-website `feat/register-shar-pei` (z besedili vseh treh pasem; PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
