@@ -1090,6 +1090,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_IRISH_SETTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-89)';
 
     /**
+     * M5-R10-90 Anatolian Shepherd Dog (unattended run 2026-11-03, data.json
+     * proposed_game_parameters.anatolian_shepherd_dog.*.decision): every value follows a standing rule of
+     * docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise 120 min (RKC S685
+     * "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages young 9 / adult 36 /
+     * senior 90 (0.75 × RKC lower bound 10 y — no McMillan 2024 / VetCompass median reachable), arrival 2 / 9 / 36 /
+     * 90, learning multiplier 1.0 (not ranked by Coren); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ANATOLIAN_SHEPHERD_DOG = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-90)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1380,6 +1390,9 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S679', 'Weekly ear checks and cleaning are recommended for Irish Setters.', 'proposed_game_parameters.irish_setter.ear_care', '"Weekly ear checks and cleaning" → once a week'],
             'nail_trim' => [1, 'month', 'S679', 'trim their toenails and fur each month.', 'proposed_game_parameters.irish_setter.nail_trimming', '"each month" → every 4 weeks (teeth, baths, groomer: no frequency → no task)'],
         ],
+        'anatolian_shepherd_dog' => [
+            'tooth_brushing' => [7, 'day', 'S688', 'You can take care of their teeth with daily brushing, dental treats, and dog chews.', 'proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing', '"daily brushing" → every day (ears after swimming / bathing, nails "regularly": no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1487,6 +1500,7 @@ class BreedStageParamsSeeder extends Seeder
         'shar_pei' => [1, 'S664', 'Once a week', 'high', false],
         'brussels_griffon' => [2, 'S670', 'More than once a week', 'low', true, self::PROPOSED_R13_BRUSSELS_GRIFFON],
         'irish_setter' => [3, 'S678', 'To keep the coat of the Irish Setter glossy and in top condition, they\'ll need grooming 2 or 3 times per week.', 'high', false],
+        'anatolian_shepherd_dog' => [1, 'S687', 'Outside of this biannual coat blowing, their short outer coat is smooth and only requires weekly brushing for maintenance.', 'high', false],
     ];
 
     /**
@@ -1535,6 +1549,7 @@ class BreedStageParamsSeeder extends Seeder
         'alaskan_malamute' => ['S639', 'Remember to leave a gap after eating and before exercising, as this is thought to reduce the risks of GDV.'],
         'greater_swiss_mountain_dog' => ['S656', 'avoid using elevated food bowls and do not exercise your dog directly before or after mealtimes'],
         'shar_pei' => ['S660', 'Remember to leave a gap between eating and exercising.'],
+        'anatolian_shepherd_dog' => ['S687', 'feed your Anatolian Shepherd at least two or three small meals throughout the day and avoid exercise around mealtimes.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1632,13 +1647,14 @@ class BreedStageParamsSeeder extends Seeder
         'shar_pei' => ['S660', 'socialise your Shar Pei from a young age with lots of different people, experiences and other dogs'],
         'brussels_griffon' => ['S672', 'However, early and consistent socialization can help them feel more confident and comfortable.'],
         'irish_setter' => ['S678', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
+        'anatolian_shepherd_dog' => ['S687', 'Early socialization is key to help prevent an Anatolian Shepherd puppy from thinking everything new is a threat.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2447,6 +2463,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::SharPei => self::sharPeiProfile(),
             BreedType::BrusselsGriffon => self::brusselsGriffonProfile(),
             BreedType::IrishSetter => self::irishSetterProfile(),
+            BreedType::AnatolianShepherdDog => self::anatolianShepherdDogProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -8682,6 +8699,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'irish_setter.lifespan.rkc',
                 'quote' => 'Over 10 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S676); PDSA "Over 10 years" (S678) and PetMD around 14 y (S679) are consistent. No McMillan 2024 value reachable (12.9 y only via Wikipedia S681, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Anatolian Shepherd Dog (M5-R10-90). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow
+     * the runbook's standing rules (CONFIRMED_R10_ANATOLIAN_SHEPHERD_DOG); weight, growth and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function anatolianShepherdDogProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ANATOLIAN_SHEPHERD_DOG;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S685', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.anatolian_shepherd_dog.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a giant dog reaches adult weight at 18–24 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S685) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 99 (WebMD 11–13 y, S688), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.anatolian_shepherd_dog.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (18–24 months for a giant dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S685', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.anatolian_shepherd_dog.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S685) → 120 min = 12,000 steps (runbook rule: "more than N" → N). WebMD (S688) "medium amount of activity" and PetMD (S687) give no number.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.anatolian_shepherd_dog.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[36.3, 68.0], [
+                'unit' => 'kg', 'source_id' => 'S686', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'anatolian_shepherd_dog.adult_weight.akc',
+                'quote' => 'Dogs should be from 29 inches and weighing from 110 to 150 pounds proportionate to size and structure.',
+                'notes' => 'AKC breed standard (S686): dogs 110–150 lb, bitches 80–120 lb → 49.9–68.0 / 36.3–54.4 kg (pounds × 0.4536). FCI-St. N°331 (S682) males 48–60 kg, females 40–50 kg is an alternative.',
+            ]],
+            'growth_end' => [[18, 24], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'anatolian_shepherd_dog.growth.adult_weight_reached',
+                'quote' => 'Giant (over 100 pounds) | 18–24 months',
+                'notes' => 'Size-class value, not breed-specific (AKC dogs 110–150 lb, S686 → the Giant class of S10).',
+            ]],
+            'coren_rank' => [null, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'anatolian_shepherd_dog.trainability.coren_rank',
+                'notes' => 'Not ranked: neither "Anatolian" nor "Kangal" is in the Wikipedia table of Coren\'s ranking (S35, checked 2026-11-03).',
+            ]],
+            'learning_multiplier' => [1.0, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.anatolian_shepherd_dog.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): not ranked by Coren (S35) → 1.0, the mixed breed\'s speed (FCI S682: "naturally independent, very intelligent and tractable"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S685', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'anatolian_shepherd_dog.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S685); WebMD 11–13 y (S688) is consistent. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

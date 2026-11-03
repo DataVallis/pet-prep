@@ -2276,5 +2276,22 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S676', 'S678'], 'refs' => ['irish_setter.suitability.rkc_grooming', 'irish_setter.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-90 Anatolian Shepherd Dog — not a welfare breed (RKC Breed Watch Category 1, S685). No new vocabulary key.
+        'anatolian_shepherd_dog' => [
+            'suits' => [
+                // S687 "When Anatolian Shepherd puppies are introduced at a young age, they typically get along well with other pets."
+                ['tag' => 'other_pets', 'source_ids' => ['S687'], 'refs' => ['anatolian_shepherd_dog.behaviour.other_pets']],
+                // S685 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S685'], 'refs' => ['anatolian_shepherd_dog.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                // S685 "Exercise: More than 2 hours per day"
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S685'], 'refs' => ['anatolian_shepherd_dog.exercise.adult', 'anatolian_shepherd_dog.suitability.rkc_exercise']],
+                // S687 "Anatolian Shepherds might be best in homes without smaller children,"
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S687'], 'refs' => ['anatolian_shepherd_dog.behaviour.children']],
+                // S685 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S685'], 'refs' => ['anatolian_shepherd_dog.suitability.rkc_shedding']],
+            ],
+        ],
     ],
 ];

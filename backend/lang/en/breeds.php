@@ -91,6 +91,7 @@ return [
     'shar_pei' => 'Shar Pei',
     'brussels_griffon' => 'Brussels Griffon',
     'irish_setter' => 'Irish Setter',
+    'anatolian_shepherd_dog' => 'Anatolian Shepherd Dog',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
