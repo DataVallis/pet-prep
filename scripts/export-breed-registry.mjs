@@ -471,6 +471,7 @@ const SPECIES = [
       { id: 'rat_terrier', synonyms: { en: ['Rattie', 'Ratty', 'American Rat Terrier'], sl: ['rattie', 'ameriški rat terier', 'terier za podgane'] } },
       { id: 'greater_swiss_mountain_dog', synonyms: { en: ['Great Swiss Mountain Dog', 'Swissy', 'Grosser Schweizer Sennenhund'], sl: ['švicarski planšar', 'veliki švicarski planšar', 'grosser schweizer sennenhund'] } },
       { id: 'shar_pei', synonyms: { en: ['Chinese Shar-Pei', 'Shar-Pei', 'Sharpei'], sl: ['šar pej', 'shar pei', 'kitajski šarpej'] } },
+      { id: 'brussels_griffon', synonyms: { en: ['Griffon Bruxellois', 'Griffon', 'Belgium Griffon'], sl: ['grifon', 'griffon bruxellois', 'bruseljski grifon'] } },
     ],
   },
   {
@@ -2331,6 +2332,29 @@ const DOG_FACTS = {
       ['hip_elbow_dysplasia', 'health.hip_elbow'],
     ],
   },
+  // M5-R10-88. Height = PetMD 7–10 in (S672; no standard gives a height), weight = FCI-Standard N° 80 3.5–6 kg (S669),
+  // lifespan = the RKC band 'Over 12 years' (S670) + PetMD 12–15 y (S672), exercise = RKC 'Up to 30 minutes per day' (S670),
+  // coat / grooming / shedding = RKC key facts (S670). Coren rank 59. FCI origin Belgium (BE). Not exported:
+  // adult_weight.kc / petmd (alternatives), lifespan.mcmillan_2024 (null, 13.3 y only via Wikipedia) / senior_from,
+  // health.breed_watch (chip), health.face_fold (care task). No new health key.
+  brussels_griffon: {
+    height: ['height.petmd'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly'],
+      ['heat_stroke_risk', 'exercise.heat_and_walk_timing'],
+      ['dental_disease_tooth_brushing', 'health.dental'],
+      ['eye_conditions', 'health.eyes'],
+      ['kneecap_luxation', 'health.patella'],
+      ['hip_dysplasia', 'health.hips'],
+    ],
+  },
 
 
 };
@@ -2384,6 +2408,7 @@ export const DOG_CARE_TASKS = {
   basenji: [['tooth_brushing', 2, 7, 'proposed_game_parameters.basenji.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.basenji.ear_care']],
   rat_terrier: [['nail_trim', 1, 7, 'proposed_game_parameters.rat_terrier.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.rat_terrier.bathing']],
   greater_swiss_mountain_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming']],
+  brussels_griffon: [['fold_cleaning', 1, 7, 'proposed_game_parameters.brussels_griffon.face_fold_cleaning'], ['tooth_brushing', 7, 7, 'proposed_game_parameters.brussels_griffon.tooth_brushing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.brussels_griffon.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2392,6 +2417,7 @@ export const DOG_NO_WALK_IN_HEAT = {
   bulldog: 'proposed_game_parameters.bulldog.no_exercise_in_heat',
   boston_terrier: 'proposed_game_parameters.boston_terrier.no_exercise_in_heat',
   pug: 'proposed_game_parameters.pug.no_exercise_in_heat',
+  brussels_griffon: 'proposed_game_parameters.brussels_griffon.no_exercise_in_heat',
 };
 
 /** M5-R14: the summer midday window of the heat warning (config/care_tasks.php heat; no weather data). */
@@ -3051,6 +3077,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.shar_pei.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.shar_pei.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.shar_pei.exercise_minutes_senior',
+  },
+  brussels_griffon: {
+    adult_minutes: ['proposed_game_parameters.brussels_griffon.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.brussels_griffon.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.brussels_griffon.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.brussels_griffon.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.brussels_griffon.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.brussels_griffon.exercise_minutes_senior',
   },
 
 

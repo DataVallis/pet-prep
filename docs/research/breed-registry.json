@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "a0a0b45504f944b4ed3019ae58685ac49e53da50b7061a806f79c8f915635f8f"
+      "sha256": "91f274f6fa2522fc44e70626b4af369200fbdce520d491c999a9840e89737ae4"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "ac4faa08d560cf91428d3500dcbab58420daa2c18154b8ef10c2dda359559fb6"
+      "sha256": "d052a894faa79bfe99106d22e802f3dfc65e4c2b47c8116557c1b1cd34ce58d9"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "a7ae4942dc39e569e9714c4d4bd609e447a94ce89e37d1c3e31ccb4b25ccf3a9"
+      "sha256": "bea4fd7844c5cc4091d0054419e2ea2ec1e98850d216eb5cb8de3bae0d1aa013"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "9daf669df3ceecdac3f1b3ac66dc6d6504a7d0d7ccaf834884dd565379aad35b"
+      "sha256": "bf34a7ccd600f361369c97994b88a9bcbd8fc92d6e24679256ea0a98c893cea8"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "1d33a1b5af119dd2e67295f218248b6b12185f8402ac59d2dd58b23eb556eadf"
+      "sha256": "3c9ed64ff74b8a355c2d9fb7cde3a54c972bd97d7aebf1d0d6ae5ac1105e506c"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "26b34aba53db37f3d3f443437112ef591f25aa31c769c959fee33d19611cb81f"
+      "sha256": "e6ff95cf1d368c2d95a2b4065358361b30acf825b557be96df68472fd7f69f71"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "50f7db06da25b2d629f8c19f1a4f4e913c00b9015e052c15956c8f3e1ed233fe"
+      "sha256": "827f372753d3bf24f0c42a57285ed92f6c655cbfac9a0795d24867adad92b14d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 81,
+      "breed_count": 82,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -48989,6 +48989,665 @@
       ]
     },
     {
+      "id": "brussels_griffon",
+      "species": "dog",
+      "order": 81,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Brussels Griffon",
+        "sl": "Bruseljski grifon"
+      },
+      "slug": {
+        "en": "brussels-griffon",
+        "sl": "bruseljski-grifon"
+      },
+      "synonyms": {
+        "en": [
+          "Griffon Bruxellois",
+          "Griffon",
+          "Belgium Griffon"
+        ],
+        "sl": [
+          "grifon",
+          "griffon bruxellois",
+          "bruseljski grifon"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              18,
+              25
+            ],
+            "female": [
+              18,
+              25
+            ]
+          },
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.height.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              3.5,
+              6
+            ],
+            "female": [
+              3.5,
+              6
+            ]
+          },
+          "source_ids": [
+            "S669"
+          ],
+          "ref": "brussels_griffon.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "brussels_griffon.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S670"
+          ],
+          "ref": "brussels_griffon.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 59,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "brussels_griffon.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 80,
+            "group": 9,
+            "section": 3,
+            "origin": "BE"
+          },
+          "source_ids": [
+            "S669"
+          ],
+          "ref": "brussels_griffon.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "flat_face_breathing",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.health.brachycephaly",
+          "confidence": "high"
+        },
+        {
+          "key": "heat_stroke_risk",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.exercise.heat_and_walk_timing",
+          "confidence": "high"
+        },
+        {
+          "key": "dental_disease_tooth_brushing",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.health.dental",
+          "confidence": "high"
+        },
+        {
+          "key": "eye_conditions",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.health.patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S672"
+          ],
+          "ref": "brussels_griffon.health.hips",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S670"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_size_of_home",
+              "brussels_griffon.suitability.rkc_size_of_garden"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.health.brachycephaly",
+              "brussels_griffon.exercise.heat_and_walk_timing"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S670"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S670",
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_grooming",
+              "brussels_griffon.suitability.petmd_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 2
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "fold_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "no_walk_in_heat",
+            "params": {
+              "months_north": [
+                6,
+                7,
+                8
+              ],
+              "months_south": [
+                12,
+                1,
+                2
+              ],
+              "from": "11:00",
+              "to": "16:00"
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S670"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S670 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S670"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S670)"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 59, Fair, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.grooming",
+            "basis_source_ids": [
+              "S670"
+            ],
+            "decision": "predlog Claude 2026-11-03 (RKC »More than once a week« brez števila; PetMD: grobodlaki 1×, gladkodlaki dnevno do tedensko → 2, M5-R13, M5-R10-88) — čaka Davida"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.face_fold_cleaning",
+            "basis_source_ids": [
+              "S672"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »around once a week« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.tooth_brushing",
+            "basis_source_ids": [
+              "S672"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.professional_grooming",
+            "basis_source_ids": [
+              "S672"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every four to eight weeks« → spodnja meja 4 tedne = 28 dni"
+          },
+          {
+            "ref": "proposed_game_parameters.brussels_griffon.no_exercise_in_heat",
+            "basis_source_ids": [
+              "S672"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S670",
+          "S672"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S670"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S670"
+            ]
+          },
+          {
+            "key": "boas_grading",
+            "level": "best_practice",
+            "source_ids": [
+              "S670"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S670"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S669",
+        "S670",
+        "S672",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -54384,6 +55043,27 @@
       "publisher": "Royal Veterinary College (VetCompass)",
       "title": "Shar Pei infographic (2024-01-07) (PDF)",
       "url": "https://www.rvc.ac.uk/Media/Default/VetCompass/240107%20VetCompass%20-%20Shar%20Pei%20infographic%20PDF.pdf"
+    },
+    {
+      "id": "S669",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 80 — Griffon bruxellois (PDF, French)",
+      "url": "https://www.fci.be/Nomenclature/Standards/080g09-fr.pdf"
+    },
+    {
+      "id": "S670",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Griffon Bruxellois",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/griffon-bruxellois/"
+    },
+    {
+      "id": "S672",
+      "tier": "B",
+      "publisher": "PetMD — Veronica Higgs, DVM (reviewed by Barri J. Morrison, DVM; updated 2025-06-30)",
+      "title": "Brussels Griffon Dog Breed Health and Care",
+      "url": "https://petmd.com/dog/breeds/brussels-griffon"
     },
     {
       "id": "C1",
