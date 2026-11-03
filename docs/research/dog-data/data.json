@@ -45702,9 +45702,9 @@
         "value": 59,
         "unit": "rank (working/obedience intelligence)",
         "source_id": "S35",
-        "quote": "| 59 | Griffon Bruxellois |",
+        "quote": "Griffon Bruxellois",
         "confidence": "medium",
-        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-03): rank 59, shared with the Maltese (next table line), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-03): rank 59 (table row as returned), shared with the Maltese (next table line), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
       },
       "coren_tier": {
         "value": "Fair",
