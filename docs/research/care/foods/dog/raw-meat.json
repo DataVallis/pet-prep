@@ -78,7 +78,7 @@
     "es": "La contaminación de la carne cruda por bacterias es frecuente. Los perros pueden llevar estos gérmenes sin mostrar síntomas y eliminarlos con la saliva y las heces, lo que pone en riesgo a la familia, sobre todo a los grupos de riesgo como los niños pequeños y las personas mayores. El cerdo crudo puede llevar un parásito, los huesos crudos pueden obstruir el intestino y las dietas crudas caseras probablemente no estén equilibradas, salvo que la receta la haya formulado un nutricionista.",
     "it": "La contaminazione batterica della carne cruda è frequente. I cani possono portare questi germi senza sintomi ed eliminarli con la saliva e le feci, mettendo a rischio i familiari, soprattutto i gruppi più fragili come i più piccoli e gli anziani. Il maiale crudo può trasmettere un parassita, le ossa crude possono ostruire l’intestino e le diete crude fatte in casa probabilmente non sono bilanciate, a meno che la ricetta non sia stata formulata da un nutrizionista.",
     "pt": "A contaminação da carne crua por bactérias é comum. Os cães podem ter estes germes sem mostrar sinais e eliminá-los na saliva e nas fezes, pondo em risco a família, sobretudo os grupos de risco, como os mais novos e os mais velhos. A carne de porco crua pode ter um parasita, os ossos crus podem obstruir o intestino, e as dietas cruas caseiras provavelmente não são equilibradas, a não ser que a receita tenha sido formulada por um nutricionista.",
-    "nl": "Besmetting van rauw vlees met bacteriën komt vaak voor. Honden kunnen deze bacteriën dragen zonder verschijnselen en ze uitscheiden via speeksel en ontlasting, wat gezinsleden in gevaar brengt, vooral risicogroepen zoals jonge kinderen en ouderen. Rauw varkensvlees kan een parasiet bevatten, rauwe botten kunnen de darmen verstoppen, en zelfgemaakte rauwe voeding is waarschijnlijk niet evenwichtig, tenzij een voedingsdeskundige het recept heeft samengesteld.",
+    "nl": "Besmetting van rauw vlees met bacteriën komt vaak voor. Honden kunnen deze bacteriën dragen zonder verschijnselen en ze uitscheiden via speeksel en ontlasting, wat gezinsleden in gevaar brengt, vooral risicogroepen zoals heel jonge en oudere mensen. Rauw varkensvlees kan een parasiet bevatten, rauwe botten kunnen de darmen verstoppen, en zelfgemaakte rauwe voeding is waarschijnlijk niet evenwichtig, tenzij een voedingsdeskundige het recept heeft samengesteld.",
     "pl": "Skażenie surowego mięsa bakteriami jest częste. Psy mogą przenosić te zarazki bez objawów i wydalać je w ślinie i kale, narażając członków rodziny, zwłaszcza grupy wysokiego ryzyka, takie jak dzieci i osoby starsze. Surowa wieprzowina może przenosić pasożyta, surowe kości mogą zatkać przewód pokarmowy, a domowe surowe diety najpewniej nie są zbilansowane, jeśli przepisu nie ułożył specjalista od żywienia.",
     "cs": "Kontaminace syrového masa bakteriemi je běžná. Psi mohou tyto bakterie nosit bez příznaků a vylučovat je slinami a trusem, čímž ohrožují členy rodiny, zejména rizikové skupiny, jako jsou děti a starší lidé. Syrové vepřové může přenášet parazita, syrové kosti mohou ucpat střeva a domácí syrová strava pravděpodobně není vyvážená, pokud recept nesestavil odborník na výživu.",
     "hr": "Sirovo meso često je kontaminirano bakterijama. Psi mogu nositi te klice bez ikakvih znakova i izlučivati ih slinom i izmetom, čime ugrožavaju članove obitelji, osobito rizične skupine poput male djece i starijih osoba. Sirova svinjetina može prenijeti parazita, sirove kosti mogu začepiti crijeva, a domaća sirova prehrana vjerojatno nije uravnotežena ako recept nije sastavio stručnjak za prehranu.",
@@ -221,7 +221,7 @@
     "es": "La carne cruda puede tener gérmenes. De la comida de las personas, los perros solo pueden comer carne cocinada, y todos se lavan las manos después de tocar carne cruda.",
     "it": "La carne cruda può avere germi. Tra i cibi delle persone, ai cani si dà solo carne cotta, e dopo aver toccato carne cruda tutti si lavano le mani.",
     "pt": "A carne crua pode ter germes. Da comida das pessoas, os cães só devem comer carne cozinhada, e todos lavam as mãos depois de mexer em carne crua.",
-    "nl": "In rauw vlees kunnen bacteriën zitten. Als een hond iets van ons eten krijgt, moet het vlees gaar zijn. Na het aanraken van rauw vlees wast iedereen zijn handen.",
+    "nl": "In rauw vlees kunnen ziektekiemen zitten. Als een hond iets van ons eten krijgt, moet het vlees gaar zijn. Na het aanraken van rauw vlees wast iedereen zijn handen.",
     "pl": "Surowe mięso może mieć zarazki. Z ludzkiego jedzenia psy powinny dostawać tylko gotowane mięso, a po dotknięciu surowego mięsa wszyscy myją ręce.",
     "cs": "Na syrovém mase můžou být bacily. Z lidského jídla smějí psi dostat jen uvařené nebo upečené maso, a kdo sahá na syrové maso, musí si potom umýt ruce.",
     "hr": "Sirovo meso može imati klice. Od ljudske hrane psi smiju dobiti samo kuhano meso, a svi peru ruke nakon što dodirnu sirovo meso.",
@@ -426,7 +426,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0b82cfb9c3f09110d705cf95047916bdead9aa08e33d6a6522bdfc033df3e09b"
+      "verified_hash": "5af9ecc765ecfff60f19f5ccc1faf582315de75ecd837907b27623d3dda48716"
     },
     "pl": {
       "status": "verified",

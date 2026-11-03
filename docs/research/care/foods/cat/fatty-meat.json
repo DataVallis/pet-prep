@@ -206,7 +206,7 @@
     "es": "Los trozos con grasa pueden darle dolor de barriga a un gato. Si un adulto dice que sí, tu gatito puede comer un poquito de carne magra sin nada.",
     "it": "I pezzi grassi possono far venire il mal di pancia a un gatto. Se un adulto dice di sì, il micio può avere un pezzettino di carne magra semplice.",
     "pt": "As partes gordas podem dar dor de barriga a um gato. Se um adulto disser que sim, o gatinho pode comer um bocadinho de carne magra simples.",
-    "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je poes een klein stukje gewoon mager vlees.",
+    "nl": "Van vette stukjes kan een kat buikpijn krijgen. Als een volwassene het goed vindt, mag je kat een klein stukje gewoon mager vlees.",
     "pl": "Od tłustych kawałków kota może boleć brzuszek. Jeśli dorosły się zgodzi, kotek może dostać odrobinę zwykłego chudego mięsa.",
     "cs": "Z tučných kousků může kočku bolet bříško. Když dospělý řekne, že ano, může kočička dostat kousíček obyčejného libového masa.",
     "hr": "Od masnih komadića macu može zaboljeti trbuščić. Ako odrasla osoba kaže da smije, maca može dobiti sićušan komadić običnog nemasnog mesa.",
@@ -326,7 +326,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "921e39d526c2b7904a250fa028f9eb1e896af19b0472b11e18cb322d6b0be74e"
+      "verified_hash": "5d532a21777b3f06e49c6897f0cc942815fa3def529b9d0767bae425988fe343"
     },
     "pl": {
       "status": "verified",

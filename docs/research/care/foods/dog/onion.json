@@ -78,7 +78,7 @@
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: cruda, cocinada, seca y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Fa parte delle alliacee (cipolla, aglio, porro, erba cipollina), piante tossiche per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Tutte le parti sono dannose, in qualsiasi forma: crude, cotte, secche o in polvere. I disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
     "pt": "A cebola pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: crua, cozinhada, seca e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
-    "nl": "Ui hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gaar gemaakt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
+    "nl": "Ui hoort bij de alliumfamilie (de uienfamilie: ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gaar gemaakt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Cebula należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
@@ -205,7 +205,7 @@
     "es": "La cebolla no es para perros, ni siquiera cocinada en la comida. Puede hacerles daño en la sangre. Avisa a un adulto si tu perro se come un poco.",
     "it": "La cipolla non è per i cani, nemmeno cotta nel cibo. Può far ammalare il sangue del cane. Avvisa un adulto se il tuo cane ne mangia.",
     "pt": "A cebola não é para cães, nem cozinhada na comida. Pode fazer mal ao sangue de um cão. Avisa um adulto se o teu cão comer alguma.",
-    "nl": "Uien zijn niet voor honden, ook niet als ze gaar zijn gemaakt in het eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
+    "nl": "Uien zijn niet voor honden, ook niet gaar gemaakt in eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Cebula nie jest dla psów, nawet ugotowana w jedzeniu. Może zaszkodzić psiej krwi. Powiedz dorosłemu, jeśli twój pies ją zje.",
     "cs": "Cibule není pro psy, ani ta uvařená v jídle. Může psovi poškodit krev. Když ji pes sní, řekni to dospělému.",
     "hr": "Luk nije za pse, čak ni skuhan u jelu. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede.",
@@ -416,7 +416,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "25812cd4573db91e440f46521928bcd60b03e088139834b3e8ed72dcd6db5164"
+      "verified_hash": "7e471ab1f83fc1fcaf070fb7a638e04b7f9a722096d81696147e1e7224015233"
     },
     "pl": {
       "status": "verified",

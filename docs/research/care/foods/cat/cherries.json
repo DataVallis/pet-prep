@@ -220,7 +220,7 @@
     "es": "Las cerezas son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gatito mordisquea uno.",
     "it": "Le ciliegie sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
     "pt": "As cerejas são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
-    "nl": "Kersen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het dan meteen aan een volwassene.",
+    "nl": "Kersen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Czereśnie to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
     "cs": "Třešně jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když nějakou pecku kočička okusuje.",
     "hr": "Trešnje su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
@@ -343,7 +343,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fbd1b45db0d1b054577bc1e3d8fa9fb8152e2bec5f5e5edd0fe600665f930966"
+      "verified_hash": "cb9712a876311dab0392162da657b6150fa0b8cb0757d0afdeace9558ffb5c2e"
     },
     "pl": {
       "status": "verified",

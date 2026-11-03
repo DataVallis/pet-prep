@@ -160,7 +160,7 @@
     "es": "Las pasas no son un tentempié para gatos. Mantén las pasas y los bizcochos con pasas lejos de tu gato, y avisa a un adulto si se come alguna.",
     "it": "L’uvetta non è uno spuntino per gatti. Tieni uvetta e dolci con l’uvetta lontani dal micio, e dillo a un adulto se ne mangia un po’.",
     "pt": "As passas não são um petisco para gatos. Mantém as passas e os bolos com passas longe do gatinho e avisa um adulto se ele comer alguma.",
-    "nl": "Rozijnen zijn geen snoepje voor katten. Houd rozijnen en rozijnencake uit de buurt van je poes. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
+    "nl": "Rozijnen zijn geen snoepje voor katten. Houd rozijnen en rozijnencake uit de buurt van je kat. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
     "pl": "Rodzynki to nie przekąska dla kota. Trzymaj rodzynki i ciasto z rodzynkami z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Rozinky nejsou svačinka pro kočky. Rozinky i koláč s rozinkami dávej tam, kam kočička nedosáhne, a když nějaké sní, řekni to dospělému.",
     "hr": "Grožđice nisu grickalica za mace. Grožđice i kolač s grožđicama drži daleko od mace, a ako ih maca pojede, reci odrasloj osobi.",
@@ -196,7 +196,7 @@
         "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, pasas sultanas y pasas de Corinto, que son muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
         "it": "PDSA avverte che i mince pie e il Christmas cake, dolci natalizi inglesi, contengono uvetta, uva sultanina e uva passa di Corinto, che sono altamente tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
         "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e uvas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
-        "nl": "PDSA waarschuwt dat mince pies (Britse kersttaartjes) en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten bereik van je kat.",
+        "nl": "PDSA waarschuwt dat mince pies en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten bereik van je kat.",
         "pl": "PDSA ostrzega, że babeczki z bakaliami (mince pies) i keks świąteczny zawierają rodzynki, sułtanki i koryntki, które są dla zwierząt wysoce toksyczne. Trzymaj je poza zasięgiem kota.",
         "cs": "PDSA varuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Uchovávejte je mimo dosah vaší kočky.",
         "hr": "PDSA upozorava da pitice s nadjevom od sušenog voća (mince pies) i božićni kolač sadrže grožđice, sultanije i korintsko grožđe, koji su za ljubimce vrlo otrovni. Drži ih izvan mačkina dosega.",
@@ -298,7 +298,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9f22edcea7017343b1751259b256240fafbfc52a2088175f2e2843f60bf3be61"
+      "verified_hash": "c9348a34a9328123980446fd04efbc10bd35f1928889c7faf0fa86815bfebac2"
     },
     "pl": {
       "status": "verified",

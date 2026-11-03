@@ -220,7 +220,7 @@
     "es": "Los albaricoques son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gatito mordisquea uno.",
     "it": "Le albicocche sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
     "pt": "Os alperces são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
-    "nl": "Abrikozen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het dan meteen aan een volwassene.",
+    "nl": "Abrikozen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Morele to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
     "cs": "Meruňky jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když nějakou pecku kočička okusuje.",
     "hr": "Marelice su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
@@ -347,7 +347,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9306e1bd85c5990e812d40ab2931d9bf373d6d9a3ae4e31a54da61f79d08f721"
+      "verified_hash": "192bc381f7a1fbc0fd302586d50797e8ef702a5cd4fd3911f77672cac55c333b"
     },
     "pl": {
       "status": "verified",

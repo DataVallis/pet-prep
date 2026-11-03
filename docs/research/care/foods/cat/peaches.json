@@ -220,7 +220,7 @@
     "es": "Los melocotones son un tentempié para personas. Sus huesos y sus hojas no son seguros para los gatos, así que avisa a un adulto si tu gato mordisquea uno.",
     "it": "Le pesche sono uno spuntino per le persone. Noccioli e foglie non sono sicuri per i gatti: se il micio ne mastica uno, dillo a un adulto.",
     "pt": "Os pêssegos são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
-    "nl": "Perziken zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je poes erop? Vertel het dan meteen aan een volwassene.",
+    "nl": "Perziken zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Brzoskwinie to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
     "cs": "Broskve jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, takže když nějakou kočička okouše, řekni to dospělému.",
     "hr": "Breskve su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
@@ -343,7 +343,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5c49e718b3b3dfa610a8d156e66779a791f1435e165089ce57b7da1329762058"
+      "verified_hash": "35d9c4927cc73950272682bbf9bf09108f4ba2e23d85bcd7ab1fe5769df2955a"
     },
     "pl": {
       "status": "verified",

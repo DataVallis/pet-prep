@@ -61,7 +61,7 @@
     "es": "No. El ajo es tóxico para los gatos y, para ellos, es el miembro más tóxico de la familia de la cebolla. El ajo crudo, cocinado, seco y en polvo puede dañar los glóbulos rojos y causar anemia. Llama a tu veterinario si tu gato come algo.",
     "it": "No. L’aglio è tossico per i gatti ed è, per loro, il membro più tossico della famiglia della cipolla. L’aglio, crudo, cotto, essiccato o in polvere, può danneggiare i globuli rossi e causare anemia. Chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. O alho é tóxico para os gatos e, de toda a família da cebola, é o mais tóxico para eles. O alho cru, cozinhado, seco e em pó pode danificar os glóbulos vermelhos e causar anemia. Liga ao teu veterinário se o teu gato comer algum.",
-    "nl": "Nee. Knoflook is giftig voor katten en voor hen de giftigste uiachtige. Knoflook kan, rauw, gekookt, gedroogd of als poeder, rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet.",
+    "nl": "Nee. Knoflook is giftig voor katten en voor hen het giftigste lid van de alliumfamilie (de uienfamilie). Knoflook kan, rauw, gekookt, gedroogd of als poeder, rode bloedcellen beschadigen en bloedarmoede veroorzaken. Bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Czosnek jest dla kotów toksyczny – to najbardziej toksyczny dla nich przedstawiciel rodziny cebulowatych. Czosnek surowy, gotowany, suszony i w proszku może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Česnek je pro kočky toxický a ze všech cibulovin (rod Allium) je pro ně nejtoxičtější. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho kočka sní, zavolejte veterináři.",
     "hr": "Ne. Češnjak je otrovan za mačke i za njih je najotrovniji član porodice luka. Sirov, termički obrađen, sušen i češnjak u prahu mogu oštetiti crvene krvne stanice i izazvati anemiju. Ako tvoja mačka pojede imalo češnjaka, nazovi veterinara.",
@@ -250,7 +250,7 @@
     "es": "El ajo huele fuerte y no es seguro para los gatos. Mantén la comida con ajo lejos de tu gatito y avisa a un adulto si come un poco.",
     "it": "Per noi l’aglio ha un odore forte, e per i gatti non è sicuro. Tienilo lontano dal micio e avvisa un adulto se ne mangia.",
     "pt": "O alho tem um cheiro forte para nós e não é seguro para gatos. Mantém a comida com alho longe do gatinho e avisa um adulto se ele a comer.",
-    "nl": "Knoflook ruikt voor ons sterk en is niet veilig voor katten. Houd eten met knoflook bij je poes uit de buurt. Eet ze ervan? Vertel het dan meteen aan een volwassene.",
+    "nl": "Knoflook ruikt voor ons sterk en is niet veilig voor katten. Houd eten met knoflook bij je kat uit de buurt. Eet ze ervan? Vertel het meteen aan een volwassene.",
     "pl": "Dla nas czosnek mocno pachnie, a dla kotów nie jest bezpieczny. Trzymaj jedzenie z czosnkiem z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Česnek je cítit hodně silně a pro kočky není bezpečný. Jídlo s česnekem drž od kočičky dál, a když nějaké sní, řekni to dospělému.",
     "hr": "Češnjak nama jako miriše, a za mace nije siguran. Hranu s češnjakom drži podalje od mace i reci odrasloj osobi ako je malo pojela.",
@@ -464,7 +464,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "44a98f8f3f161c5cbd99f0e42aaa18541fdb75b3362fb8e3170d4447ef93dde9"
+      "verified_hash": "3e0662e95197956e53d8a84cd407e25cc862c66843dbda0b39ffd6d68f4b3cb5"
     },
     "pl": {
       "status": "verified",

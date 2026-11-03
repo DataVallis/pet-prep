@@ -61,7 +61,7 @@
     "es": "No. El cebollino pertenece a la familia de las aliáceas, como la cebolla y el ajo, y es tóxico para los perros. Crudo, cocinado o seco, puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
     "it": "No. L’erba cipollina appartiene alle alliacee, come cipolla e aglio, ed è tossica per i cani. Cruda, cotta o secca, può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
     "pt": "Não. O cebolinho é uma aliácea, como a cebola e o alho, e é tóxico para os cães. O cebolinho cru, cozinhado ou seco pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer.",
-    "nl": "Nee. Bieslook hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Rauw, gekookt en gedroogd bieslook kunnen allemaal de rode bloedcellen beschadigen, en de verschijnselen laten vaak een paar dagen op zich wachten.",
+    "nl": "Nee. Bieslook hoort, net als ui en knoflook, bij de alliumfamilie (de uienfamilie) en is giftig voor honden. Rauw, gekookt en gedroogd bieslook kunnen allemaal de rode bloedcellen beschadigen, en de verschijnselen laten vaak een paar dagen op zich wachten.",
     "pl": "Nie. Szczypiorek należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Surowy, gotowany i suszony szczypiorek może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
     "cs": "Ne. Pažitka patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatá. Syrová, tepelně upravená i sušená pažitka může poškodit červené krvinky a příznaky se často objeví až po několika dnech.",
     "hr": "Ne. Vlasac pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Sirov, termički obrađen i sušen vlasac može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
@@ -78,7 +78,7 @@
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
     "it": "Fa parte delle alliacee (cipolla, aglio, porro, erba cipollina), piante tossiche per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Tutte le parti sono dannose, in qualsiasi forma: crude, cotte, secche o in polvere. I disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
     "pt": "O cebolinho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
-    "nl": "Bieslook hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
+    "nl": "Bieslook hoort bij de alliumfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Szczypiorek należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
@@ -411,7 +411,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "792d4e311df9b54b97625c87198709e4099f5643f098e3a6e34a3d15f0050a7f"
+      "verified_hash": "2d347f416c7b6d79a5fa696100bcf620df847acd14ddc97a11008100994ae724"
     },
     "pl": {
       "status": "verified",

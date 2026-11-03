@@ -61,7 +61,7 @@
     "es": "Sí, unos pocos trozos de gamba bien cocinada y al natural están bien para los perros. Quítales antes la cáscara, la cabeza, las patas y la cola. Las gambas crudas pueden llevar gérmenes dañinos, y las fritas, rebozadas o condimentadas no son adecuadas.",
     "it": "Sì, qualche gamberetto semplice e ben cotto va bene per i cani. Prima togli guscio, testa, zampe e coda. I gamberetti crudi possono portare germi dannosi, e quelli fritti, impanati o conditi non sono adatti.",
     "pt": "Sim, alguns pedaços de camarão simples e bem cozinhado não fazem mal aos cães. Tira primeiro a casca, a cabeça, as patas e a cauda. O camarão cru pode ter germes nocivos, e o camarão frito, panado ou temperado não é adequado.",
-    "nl": "Ja, een paar stukjes gewone, helemaal gare garnalen zijn prima voor honden. Haal eerst de schil, kop, pootjes en staart eraf. Rauwe garnalen kunnen schadelijke bacteriën bevatten, en gefrituurde, gepaneerde of gekruide garnalen zijn niet geschikt.",
+    "nl": "Ja, een paar stukjes gewone, helemaal gare garnalen zijn prima voor honden. Haal eerst de schil, kop, pootjes en staart eraf. Rauwe garnalen kunnen schadelijke ziektekiemen bevatten, en gefrituurde, gepaneerde of gekruide garnalen zijn niet geschikt.",
     "pl": "Tak, kilka kawałków zwykłych, dobrze ugotowanych krewetek jest dla psów w porządku. Najpierw usuń pancerz, głowę, odnóża i ogon. Surowe krewetki mogą przenosić szkodliwe zarazki, a krewetki smażone, panierowane lub przyprawione się nie nadają.",
     "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou.",
     "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne.",
@@ -78,7 +78,7 @@
     "es": "El marisco crudo contiene patógenos dañinos que se evitan cocinándolo. La cáscara de las gambas puede provocar atragantamiento y obstrucciones. Las gambas fritas o rebozadas añaden grasas y aceites innecesarios. Las gambas tienen poca grasa y pocas calorías, pero mucho colesterol, así que la clave es la moderación.",
     "it": "I crostacei crudi contengono patogeni dannosi che la cottura elimina. Il guscio dei gamberetti può causare soffocamento e ostruzioni. I gamberetti fritti o impanati aggiungono grassi e oli inutili. I gamberetti hanno pochi grassi e poche calorie ma molto colesterolo, quindi la moderazione è fondamentale.",
     "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura elimina. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial.",
-    "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je voorkomt door ze gaar te maken. Garnalenschillen kunnen verstikking en verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus matigheid is belangrijk.",
+    "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je voorkomt door ze gaar te maken. Een hond kan stikken in garnalenschillen, en ze kunnen verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus matigheid is belangrijk.",
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których pozwala uniknąć gotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
     "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
     "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uništava. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
@@ -166,7 +166,7 @@
         "es": "No. Quita la cáscara, la cabeza, las patas y la cola, porque la cáscara puede provocar atragantamiento y obstrucciones.",
         "it": "No. Togli guscio, testa, zampe e coda, perché i gusci possono causare soffocamento e ostruzioni.",
         "pt": "Não. Tira a casca, a cabeça, as patas e a cauda, porque as cascas podem causar engasgamento e obstruções.",
-        "nl": "Nee. Haal de schil, kop, pootjes en staart eraf, want schillen kunnen verstikking en verstoppingen veroorzaken.",
+        "nl": "Nee. Haal de schil, kop, pootjes en staart eraf, want een hond kan stikken in schillen, en ze kunnen verstoppingen veroorzaken.",
         "pl": "Nie. Usuń pancerz, głowę, odnóża i ogon, bo pancerze grożą zadławieniem i mogą powodować niedrożność.",
         "cs": "Ne. Odstraňte krunýř, hlavu, nožičky i ocásek, protože krunýře mohou způsobit dušení a ucpání střev.",
         "hr": "Ne smiju. Ukloni oklop, glavu, nožice i rep jer oklop može izazvati gušenje i začepljenje.",
@@ -267,7 +267,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "81f58f59264a03cf7fc04cb4f606b3a26c34d69b62ef0234cbdd45ffee1157b2"
+      "verified_hash": "baf623da5ae693b01b42bf964fc1b259f4449a1f995e9109e90803d19e534cfa"
     },
     "pl": {
       "status": "verified",

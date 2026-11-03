@@ -206,7 +206,7 @@
     "es": "A los gatos de los dibujos les encanta la leche, pero a los gatos de verdad les da dolor de barriga. ¡El agua fresca es su mejor bebida!",
     "it": "I gatti dei cartoni animati adorano il latte, ma ai gatti veri fa venire il mal di pancia. L’acqua fresca è la bevanda migliore per il micio!",
     "pt": "Os gatos dos desenhos animados adoram leite, mas os gatos a sério ficam com dor de barriga. A água fresca é a melhor bebida para o gatinho!",
-    "nl": "Katten in tekenfilms zijn dol op melk, maar echte katten krijgen er buikpijn van. Vers water is het beste drankje voor je poes!",
+    "nl": "Katten in tekenfilms zijn dol op melk, maar echte katten krijgen er buikpijn van. Vers water is het beste drankje voor je kat!",
     "pl": "Koty z bajek uwielbiają mleko, ale prawdziwe koty boli od niego brzuszek. Świeża woda to najlepszy napój dla kotka!",
     "cs": "Kočky v kreslených pohádkách mléko milují, ale skutečné kočky z něj může bolet bříško. Nejlepší pití pro kočičku je čerstvá voda!",
     "hr": "Mačke iz crtića obožavaju mlijeko, ali prave mace od njega zaboli trbuščić. Svježa voda je za macu najbolje piće!",
@@ -422,7 +422,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "675057a56a5784f9d51abb4b705b872e9d038746ad48c2d40d5fae38b7943b7f"
+      "verified_hash": "4f300b47e542ed3e9df9cb4d879e3b1f93151a1704ae44ec599d2aea71b0f0ac"
     },
     "pl": {
       "status": "verified",

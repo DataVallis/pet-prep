@@ -206,7 +206,7 @@
     "es": "Los huesos pueden hacerle daño en la barriga a un gato. Dale a tu gatito solo carne sin huesos y avisa a un adulto si coge un hueso.",
     "it": "Le ossa possono far male alla pancia di un gatto. Dai al micio solo carne senza ossa, e dillo a un adulto se afferra un osso.",
     "pt": "Os ossos podem magoar a barriga de um gato. Dá ao gatinho só carne sem ossos e avisa um adulto se ele apanhar um osso.",
-    "nl": "Botten kunnen de buik van een kat pijn doen. Geef je poes alleen vlees zonder botten. Pakt ze toch een bot? Vertel het dan meteen aan een volwassene.",
+    "nl": "Botten kunnen de buik van een kat pijn doen. Geef je kat alleen vlees zonder botten. Pakt ze toch een bot? Vertel het dan meteen aan een volwassene.",
     "pl": "Kości mogą zranić kotu brzuszek. Dawaj kotkowi tylko mięso bez kości i powiedz dorosłemu, jeśli kotek porwie kość.",
     "cs": "Z kostí může kočku bolet bříško. Dávej kočičce jen maso bez kostí, a když si nějakou kost čmajzne, řekni to dospělému.",
     "hr": "Kosti mogu ozlijediti macin trbuščić. Maci daj samo meso bez kostiju i reci odrasloj osobi ako zgrabi kost.",
@@ -346,7 +346,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e2da72ca937b6b876e644be052d3e6a26fb01120bd8e9b83be187e2a581933d4"
+      "verified_hash": "e7fd9a60e75ca09004d0d71c614a6b4168533421ae3eb2e05db0cf7c839d9c1e"
     },
     "pl": {
       "status": "verified",

@@ -190,7 +190,7 @@
     "es": "Las nueces de macadamia no son para gatos. Deja el cuenco de frutos secos donde tu gatito no llegue y avisa a un adulto si se come alguna.",
     "it": "Le noci di macadamia non sono per i gatti. Tieni la ciotola della frutta secca lontana dal micio e dillo a un adulto se ne mangia.",
     "pt": "As nozes de macadâmia não são para gatos. Mantém a taça dos frutos secos fora do alcance do gatinho e avisa um adulto se ele comer alguma.",
-    "nl": "Macadamianoten zijn niet voor katten. Zet het schaaltje met noten buiten bereik van je poes. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
+    "nl": "Macadamianoten zijn niet voor katten. Zet het schaaltje met noten buiten bereik van je kat. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
     "pl": "Orzechy makadamia nie są dla kotów. Trzymaj miseczkę z orzechami poza zasięgiem kotka i powiedz dorosłemu, jeśli kotek jakieś zje.",
     "cs": "Makadamové ořechy nejsou pro kočky. Misku s ořechy dej tam, kam kočička nedosáhne, a když nějaký sní, řekni to dospělému.",
     "hr": "Makadamija nije za mace. Zdjelicu s orašastim plodovima drži tamo gdje je maca ne može dohvatiti, a ako maca ipak pojede koji, reci odrasloj osobi.",
@@ -317,7 +317,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "80adeb33ae55c4fd1eae26f87262e1616bdaa97ba4881ba89905c9b845a52a26"
+      "verified_hash": "284f446721a404126a176ce27cbfeb9bd5b97f4e423e19cf46f6c61883d024df"
     },
     "pl": {
       "status": "verified",

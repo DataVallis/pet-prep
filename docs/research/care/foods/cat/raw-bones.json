@@ -190,7 +190,7 @@
     "es": "Los huesos pueden quedarse atascados en la garganta o la barriga de un gato. No pongas huesos en su cuenco y avisa a un adulto si encuentra uno.",
     "it": "Le ossa possono bloccarsi nella gola o nella pancia di un gatto. Non mettere ossa nella ciotola del micio e dillo a un adulto se ne trova qualcuna.",
     "pt": "Os ossos podem ficar presos na garganta ou na barriga de um gato. Não ponhas ossos na tigela do gatinho e avisa um adulto se ele encontrar um.",
-    "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je poes! Vindt ze er een? Vertel het dan meteen aan een volwassene.",
+    "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je kat! Vindt ze er een? Vertel het dan meteen aan een volwassene.",
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
     "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe.",
@@ -280,7 +280,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "627666145a3146b25b00dfac5810f4a156101724bfbd0b342c41148cd5234e4d"
+      "verified_hash": "0c8eb855fe33e2f36aa89fab73fe379da17f6a08137a74852d51a0ad55903aa6"
     },
     "pl": {
       "status": "verified",

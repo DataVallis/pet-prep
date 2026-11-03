@@ -308,7 +308,7 @@
         "es": "El hueso debe ser más grande que la longitud del hocico del perro para que no pueda tragárselo entero, y conviene vigilar a tu perro mientras lo roe.",
         "it": "L’osso deve essere più grande della lunghezza del muso del cane, così non può ingoiarlo intero, e devi controllare il cane mentre mastica.",
         "pt": "O osso deve ser maior do que o comprimento do focinho do cão, para que não o consiga engolir inteiro, e deves vigiar o teu cão enquanto rói.",
-        "nl": "Het bot moet langer zijn dan de snuit van je hond, zodat het niet in één keer kan worden doorgeslikt, en je moet je hond tijdens het kauwen in de gaten houden.",
+        "nl": "Het bot moet groter zijn dan de lengte van de snuit van je hond, zodat het niet in één keer kan worden doorgeslikt, en je moet je hond tijdens het kauwen in de gaten houden.",
         "pl": "Kość powinna być większa niż długość kufy psa, żeby nie dało się jej połknąć w całości, a podczas gryzienia pilnuj psa.",
         "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání byste psa měli hlídat.",
         "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok pas glođe, povremeno provjeri kako je.",
@@ -451,7 +451,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e363630541744984cc349ca906487763fbcf664194df2f0c7a47dc6e8733eaa6"
+      "verified_hash": "bacf4410ab1802a0c4feb8dd6ceb4b388e08a57ed24c0769ee5a51207a883f5f"
     },
     "pl": {
       "status": "verified",

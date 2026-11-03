@@ -221,7 +221,7 @@
     "es": "Los perros solo pueden comer huevos cocinados. Los huevos crudos pueden tener gérmenes que hacen enfermar a perros y personas.",
     "it": "I cani possono mangiare solo uova cotte. Le uova crude possono avere germi che fanno stare male cani e persone.",
     "pt": "Os cães só devem comer ovos cozinhados. Os ovos crus podem ter germes que deixam doentes tanto os cães como as pessoas.",
-    "nl": "Honden mogen alleen eieren die gaar zijn gemaakt. In rauwe eieren kunnen bacteriën zitten waar honden en mensen ziek van worden.",
+    "nl": "Honden mogen alleen eieren die gaar zijn gemaakt. In rauwe eieren kunnen ziektekiemen zitten waar honden en mensen ziek van worden.",
     "pl": "Psy mogą jeść tylko ugotowane jajka. Surowe jajka mogą mieć zarazki, przez które psy i ludzie źle się czują.",
     "cs": "Psi smějí jen vajíčka, která jsou dobře uvařená. Na syrových vajíčkách můžou být bacily, ze kterých je psům i lidem zle.",
     "hr": "Psi smiju jesti samo kuhana jaja. Sirova jaja mogu imati klice od kojih se psi i ljudi razbole.",
@@ -257,7 +257,7 @@
         "es": "No de forma fiable: la clara cruda puede bloquear la absorción de biotina, lo que puede causar problemas de piel y pelaje.",
         "it": "Non in modo affidabile: l’albume crudo può bloccare l’assorbimento della biotina, e questo può causare problemi di pelle e pelo.",
         "pt": "Não de forma fiável: a clara crua pode bloquear a absorção de biotina, o que pode causar problemas de pele e de pelagem.",
-        "nl": "Niet op een betrouwbare manier: het eiwit van een rauw ei kan de opname van biotine blokkeren, wat tot problemen met huid en vacht kan leiden.",
+        "nl": "Daar kun je niet op rekenen: het eiwit van een rauw ei kan de opname van biotine blokkeren, wat tot problemen met huid en vacht kan leiden.",
         "pl": "Nie da się na tym polegać: surowe białko jaja może blokować wchłanianie biotyny, co może prowadzić do problemów ze skórą i sierścią.",
         "cs": "Na to se nedá spolehnout: syrový bílek může blokovat vstřebávání biotinu, což může vést k potížím s kůží a srstí.",
         "hr": "Ne pouzdano: sirovi bjelanjak može blokirati apsorpciju biotina, što može dovesti do problema s kožom i dlakom.",
@@ -363,7 +363,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ff539917a89249c64af52ec7d08ab2f8287664fefb7c9bd3eaa95ec262e68c2c"
+      "verified_hash": "008ac19128a1098d41c124771ae58d2d364fb1b6d9cba76295060d2011b19ab1"
     },
     "pl": {
       "status": "verified",

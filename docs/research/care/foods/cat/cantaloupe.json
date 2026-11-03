@@ -130,7 +130,7 @@
     "es": "Un trocito de melón cantalupo está bien para un gato de vez en cuando. Los gatos necesitan sobre todo carne, así que la fruta es solo un pequeño extra.",
     "it": "Un pezzettino di melone ogni tanto va bene per il gatto. Ai gatti serve soprattutto la carne, quindi la frutta è solo un piccolo extra.",
     "pt": "Um pedacinho de meloa não faz mal a um gato de vez em quando. Os gatos precisam sobretudo de carne, por isso a fruta é só um pequeno extra.",
-    "nl": "Een piepklein stukje cantaloupe mag een poes af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
+    "nl": "Een piepklein stukje cantaloupe mag een kat af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
     "pl": "Malutki kawałek melona od czasu do czasu jest dla kota w porządku. Koty potrzebują głównie mięsa, więc owoc to tylko mały dodatek.",
     "cs": "Kousíček cukrového melounu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek.",
     "hr": "Sićušan komadić dinje povremeno je u redu za macu. Mačkama uglavnom treba meso, pa je voće samo mali dodatak.",
@@ -256,7 +256,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4c3246d3bec3d76e97fabb7a86a8b80119620378dabb7245616c9f3092e5b0bd"
+      "verified_hash": "76b5a839894bc5d60d63ddbdbb0851e7117a4ee9faa61651c097021505ec1335"
     },
     "pl": {
       "status": "verified",

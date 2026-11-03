@@ -307,7 +307,7 @@
         "es": "Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero aun así hay que avisar enseguida a tu veterinario.",
         "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario.",
         "pt": "Os sinais costumam passar em 12–48 horas, mas deves avisar imediatamente o teu veterinário na mesma.",
-        "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar vertel het je dierenarts toch meteen.",
+        "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar meld het toch meteen aan je dierenarts.",
         "pl": "Objawy na ogół ustępują w ciągu 12–48 godzin, ale i tak trzeba od razu powiadomić weterynarza.",
         "cs": "Příznaky obvykle odezní během 12–48 hodin, přesto ale dejte veterináři vědět hned.",
         "hr": "Znakovi uglavnom prođu unutar 12–48 sati, ali svejedno odmah obavijesti veterinara.",
@@ -418,7 +418,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6dc39a67098eb11c2a7cc6770915cb9ec499ccebc10aecd54ddd7b5fd89da62a"
+      "verified_hash": "af73cb393a7549c89d2a012bef918230923f0c91aa0e2e1d66269e08f1da33d3"
     },
     "pl": {
       "status": "verified",

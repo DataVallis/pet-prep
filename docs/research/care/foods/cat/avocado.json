@@ -160,7 +160,7 @@
     "es": "El aguacate es comida para personas. Tiene demasiada grasa para los gatos, así que dale a tu gatito sus propios premios para gatos.",
     "it": "L’avocado è un cibo per le persone. È troppo grasso per i gatti, quindi dai al micio i suoi premietti.",
     "pt": "O abacate é comida de pessoas. Tem demasiada gordura para gatos, por isso dá ao gatinho as guloseimas próprias para gatos.",
-    "nl": "Avocado is eten voor mensen. Het is te vet voor katten, dus geef je poes liever haar eigen kattensnoepjes.",
+    "nl": "Avocado is eten voor mensen. Het is te vet voor katten, dus geef je kat liever haar eigen kattensnoepjes.",
     "pl": "Awokado to jedzenie dla ludzi. Jest za tłuste dla kotów, więc daj kotkowi jego własne kocie smakołyki.",
     "cs": "Avokádo je jídlo pro lidi. Pro kočky je moc tučné, tak dej kočičce radši její vlastní kočičí pamlsky.",
     "hr": "Avokado je hrana za ljude. Za mace je premastan, zato maci radije daj njezine poslastice za mačke.",
@@ -278,7 +278,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3ba15acee2bd2402daaab87a3802bb7f6e4af03e8003f6178645ab727b7fce49"
+      "verified_hash": "b7cd48ce9ceb6e1adc4465d99008dc92cb60ccf45367dfa574b31471367593da"
     },
     "pl": {
       "status": "verified",

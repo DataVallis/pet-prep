@@ -250,7 +250,7 @@
     "es": "La cebolla no es para los gatos, ni siquiera cocinada en la comida. Si tu gato se come un poco, díselo a un adulto para que llame al veterinario.",
     "it": "La cipolla non è per i gatti, nemmeno cotta nel cibo. Se il micio ne mangia un po’, dillo a un adulto, così può chiamare il veterinario.",
     "pt": "As cebolas não são para gatos, nem cozinhadas na comida. Se o gatinho comer alguma, avisa um adulto, que pode ligar ao veterinário.",
-    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je poes ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
+    "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je kat ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
     "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Cibule není pro kočky, ani když je uvařená nebo upečená v jídle. Když ji kočička sní, řekni to dospělému, aby mohl zavolat veterináři.",
     "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
@@ -465,7 +465,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "008cd6901f2dff2c470029f0c2ef6e8e04dd851a36ab658be86fbda09a814eff"
+      "verified_hash": "35ad30c10107299d4ac6020af5545d7a3049e3528d45a383ac4d7d97ea0d9b55"
     },
     "pl": {
       "status": "verified",

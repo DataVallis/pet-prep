@@ -205,7 +205,7 @@
     "es": "El té es para las personas. Mantén las tazas y las bolsitas usadas lejos de tu gato, y avisa a un adulto si las alcanza.",
     "it": "Il tè è per le persone. Tieni tazze e bustine usate lontane dal micio, e dillo a un adulto se ci mette il muso.",
     "pt": "O chá é para as pessoas. Mantém as chávenas e as saquetas usadas longe do gatinho e avisa um adulto se ele mexer nelas.",
-    "nl": "Thee is voor mensen. Houd kopjes en gebruikte theezakjes uit de buurt van je poes. Komt ze er toch aan? Vertel het dan meteen aan een volwassene.",
+    "nl": "Thee is voor mensen. Houd kopjes en gebruikte theezakjes uit de buurt van je kat. Komt ze er toch aan? Vertel het dan meteen aan een volwassene.",
     "pl": "Herbata jest dla ludzi. Trzymaj kubki i zużyte torebki herbaty z dala od kotka i powiedz dorosłemu, jeśli kotek się do nich dobierze.",
     "cs": "Čaj je pro lidi. Hrnky a použité čajové sáčky drž daleko od kočičky, a když se k nim dostane, řekni to dospělému.",
     "hr": "Čaj je za ljude. Šalice i iskorištene vrećice čaja drži daleko od mace i reci odrasloj osobi ako ih maca dohvati.",
@@ -356,7 +356,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba134fc10255347874b83feac9fc6f567f8bfd33fb915e72bde918326f35e96d"
+      "verified_hash": "53be30b3976c235719986dc510ac12d231e093813e792e06b862105ce7ebc5ac"
     },
     "pl": {
       "status": "verified",

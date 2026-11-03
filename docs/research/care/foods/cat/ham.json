@@ -190,7 +190,7 @@
     "es": "El jamón tiene demasiada sal y grasa para los gatos. Los premios para gatos son una sorpresa mucho mejor para tu gatito.",
     "it": "Il prosciutto è troppo salato e grasso per i gatti. Per il micio, i suoi premietti sono una sorpresa più bella.",
     "pt": "O fiambre é demasiado salgado e gordo para gatos. As guloseimas próprias do gatinho são uma surpresa melhor.",
-    "nl": "Ham is te zout en te vet voor katten. De eigen kattensnoepjes van je poes zijn een veel betere verrassing.",
+    "nl": "Ham is te zout en te vet voor katten. De eigen snoepjes van je kat zijn een veel betere verrassing.",
     "pl": "Szynka jest za słona i za tłusta dla kotów. Kocie smakołyki to dla kotka lepsza niespodzianka.",
     "cs": "Šunka je pro kočky moc slaná a tučná. Kočičí pamlsky jsou pro kočičku lepší překvapení.",
     "hr": "Šunka je preslana i premasna za mace. Poslastice za mačke bolje su iznenađenje za macu.",
@@ -326,7 +326,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2a1a7e704f6ab04fe26e59e3e9da064718bbf80ee22923c16fb8ce1bfe985d77"
+      "verified_hash": "e58b20a59d468ba5e1b3045d2162ce8dda9bf6e44c218b8c4defe1c134c3064d"
     },
     "pl": {
       "status": "verified",

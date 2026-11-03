@@ -220,7 +220,7 @@
     "es": "Las semillas de manzana no son para gatos. Si tu gatito encuentra alguna, avisa a un adulto.",
     "it": "I semi di mela non sono per i gatti. Se il micio ne trova qualcuno, dillo a un adulto.",
     "pt": "As sementes de maçã não são para gatos. Se o gatinho encontrar algumas, avisa um adulto.",
-    "nl": "Appelpitten zijn niet voor katten. Vindt je poes er een paar? Vertel het dan aan een volwassene.",
+    "nl": "Appelpitten zijn niet voor katten. Vindt je kat er een paar? Vertel het dan aan een volwassene.",
     "pl": "Pestki jabłek nie są dla kotów. Jeśli kotek jakieś znajdzie, powiedz dorosłemu.",
     "cs": "Jablečná jádra nejsou pro kočky. Když na nějaká kočička narazí, řekni to dospělému.",
     "hr": "Sjemenke jabuke nisu za mace. Ako ih maca pronađe, reci odrasloj osobi.",
@@ -368,7 +368,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6f1397d6b52af4ed1f96a4594f59d5d579d51ac7ce28712b366aca4b2da4d230"
+      "verified_hash": "f54969d221b10c9587547f4e5f046a919acb5ba7c9797fec3f40e314cc702c36"
     },
     "pl": {
       "status": "verified",

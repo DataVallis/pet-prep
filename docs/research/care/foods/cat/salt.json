@@ -250,7 +250,7 @@
     "es": "La sal no es un premio para gatos. Mantén el salero y la comida muy salada lejos de tu gato.",
     "it": "Il sale non è un premio per gatti. Tieni la saliera e i cibi molto salati lontani dal micio.",
     "pt": "O sal não é uma guloseima para gatos. Mantém o saleiro e a comida muito salgada longe do gatinho.",
-    "nl": "Zout is geen snoepje voor katten. Houd het zoutvaatje en heel zout voedsel uit de buurt van je poes.",
+    "nl": "Zout is geen snoepje voor katten. Houd het zoutvaatje en heel zout voedsel uit de buurt van je kat.",
     "pl": "Sól to nie smakołyk dla kota. Trzymaj solniczkę i bardzo słone jedzenie z dala od kotka.",
     "cs": "Sůl není pamlsek pro kočky. Slánku a hodně slané jídlo drž daleko od kočičky.",
     "hr": "Sol nije poslastica za mace. Soljenku i vrlo slanu hranu drži daleko od mace.",
@@ -412,7 +412,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4eb79ff2534f3a0114a3422fddfcf64a6ad9e77e6606fe54dc1a8cfa19979672"
+      "verified_hash": "2dfe691067fb2c9f0cce14540d0b0ad11cdfecfe56cf6410c6b68692a01e4490"
     },
     "pl": {
       "status": "verified",

@@ -205,7 +205,7 @@
     "es": "La masa de pan tiene que subir en un bol, no en una barriga. Mantenla lejos de tu gato y avisa a un adulto si se come un poco.",
     "it": "L’impasto del pane deve lievitare in una ciotola, non in una pancia. Tienilo lontano dal micio e dillo a un adulto se ne mangia un po’.",
     "pt": "A massa do pão cresce numa tigela, não numa barriga. Mantém a massa longe do gatinho e avisa um adulto se ele comer um bocadinho.",
-    "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg uit de buurt van je poes. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
+    "nl": "Brooddeeg moet rijzen in een kom, niet in een buik. Houd deeg uit de buurt van je kat. Eet ze er toch van? Vertel het dan meteen aan een volwassene.",
     "pl": "Ciasto na chleb ma rosnąć w misce, a nie w brzuszku. Trzymaj ciasto z dala od kotka i powiedz dorosłemu, jeśli kotek trochę zje.",
     "cs": "Těsto na chleba má kynout v míse, ne v bříšku. Drž těsto daleko od kočičky, a když ho sní, řekni to dospělému.",
     "hr": "Tijesto za kruh treba se dizati u zdjeli, a ne u trbuščiću. Drži tijesto daleko od mace i reci odrasloj osobi ako ga maca pojede.",
@@ -355,7 +355,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dbb9c853c7feb5d55ec741363dcff0278658e7a103996426df4520a4297382e0"
+      "verified_hash": "2c713a1608716ac454a750edbbc5aa2825415c58359714bddebc16c334e79bde"
     },
     "pl": {
       "status": "verified",

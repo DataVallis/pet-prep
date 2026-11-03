@@ -250,7 +250,7 @@
     "es": "El puerro es primo de la cebolla, así que no es seguro para los gatos. Avisa a un adulto si tu gatito mordisquea un poco.",
     "it": "Il porro è un cugino della cipolla, quindi non è sicuro per i gatti. Dillo a un adulto se il micio ne sgranocchia un po’.",
     "pt": "O alho-francês é primo da cebola, por isso não é seguro para gatos. Avisa um adulto se o gatinho o mordiscar.",
-    "nl": "Prei is familie van de ui, dus het is niet veilig voor katten. Knabbelt je poes eraan? Vertel het meteen aan een volwassene.",
+    "nl": "Prei is familie van de ui, dus het is niet veilig voor katten. Knabbelt je kat eraan? Vertel het meteen aan een volwassene.",
     "pl": "Por to kuzyn cebuli, więc nie jest bezpieczny dla kotów. Powiedz dorosłemu, jeśli kotek trochę go podgryzie.",
     "cs": "Pórek je bratranec cibule, takže pro kočky není bezpečný. Když ho kočička ochutná, řekni to dospělému.",
     "hr": "Poriluk je rođak luka, pa nije siguran za mace. Ako ga maca malo grickne, reci odrasloj osobi.",
@@ -432,7 +432,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a2272eb8f92d21adbdac5b851a7b17cff8f505e8be252d4486c73911180f826b"
+      "verified_hash": "872c41f52662b01e5dc270a9c5544b99874db36adf10cf6b3698a2d46b9edef2"
     },
     "pl": {
       "status": "verified",

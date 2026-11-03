@@ -61,7 +61,7 @@
     "es": "No se recomienda. Un poco de pulpa de ciruela sin hueso no es la principal preocupación, pero los huesos de ciruela son tóxicos para los perros y pueden provocar atragantamiento u obstrucción intestinal. El rabito, las hojas y las semillas del ciruelo contienen cianuro.",
     "it": "Sconsigliate. Un po’ di polpa di prugna senza nocciolo non è il problema principale, ma i noccioli di prugna sono tossici per i cani e possono causare soffocamento o un’ostruzione intestinale. Piccioli, foglie e semi del susino contengono cianuro.",
     "pt": "Não é recomendado. Um pouco de polpa de ameixa sem caroço não é a principal preocupação, mas os caroços de ameixa são tóxicos para os cães e podem causar engasgamento ou uma obstrução intestinal. Os caules, as folhas e as sementes da ameixeira contêm cianeto.",
-    "nl": "Niet aan te raden. Een beetje vruchtvlees van een pruim, zonder pit, is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en kunnen verstikking of een darmverstopping veroorzaken. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
+    "nl": "Niet aan te raden. Een beetje vruchtvlees van een pruim, zonder pit, is niet het grootste probleem, maar pruimenpitten zijn giftig voor honden en een hond kan erin stikken of er een darmverstopping door krijgen. De stelen, bladeren en pitten van de pruimenplant bevatten cyanide.",
     "pl": "Nie zaleca się. Odrobina miąższu śliwki bez pestki nie jest głównym problemem, ale pestki śliwek są toksyczne dla psów i mogą spowodować zadławienie lub niedrożność jelit. Szypułki, liście i nasiona śliwy zawierają cyjanek.",
     "cs": "Nedoporučuje se. Trocha švestkové dužiny bez pecky není hlavní problém, švestkové pecky jsou ale pro psy jedovaté a mohou způsobit dušení nebo ucpání střev. Stopky, listy a semena švestky obsahují kyanid.",
     "hr": "Ne preporučuje se. Malo mesa šljive bez koštice nije glavna briga, ali koštice šljive otrovne su za pse i mogu izazvati gušenje ili začepljenje crijeva. Peteljke, listovi i sjemenke šljive sadrže cijanid.",
@@ -353,7 +353,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7d5fc0b792b50fab2955455cf95e98fe47113a5b22fd41fdaac00b783745e44a"
+      "verified_hash": "26a65c27605a4bef581066cc107aef29ba61aca6d00f301c52b353ee723d7170"
     },
     "pl": {
       "status": "verified",

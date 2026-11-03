@@ -205,7 +205,7 @@
     "es": "Las bebidas de los mayores nunca son para los gatos. Si tu gatito lame un vaso o una bebida derramada, avisa enseguida a un adulto.",
     "it": "Le bevande dei grandi non sono mai per i gatti. Se il micio lecca un bicchiere o una bevanda rovesciata, dillo subito a un adulto.",
     "pt": "As bebidas dos adultos nunca são para gatos. Se o gatinho lamber um copo ou uma bebida entornada, avisa logo um adulto.",
-    "nl": "Drankjes voor volwassenen zijn nooit voor katten. Likt je poes aan een glas of aan gemorste drank? Vertel het dan meteen aan een volwassene.",
+    "nl": "Drankjes voor volwassenen zijn nooit voor katten. Likt je kat aan een glas of aan gemorste drank? Vertel het dan meteen aan een volwassene.",
     "pl": "Napoje dorosłych nigdy nie są dla kotów. Jeśli kotek poliże szklankę albo rozlany napój, od razu powiedz dorosłemu.",
     "cs": "Nápoje pro dospělé nejsou pro kočky nikdy. Když kočička olízne skleničku nebo rozlité pití, hned to řekni dospělému.",
     "hr": "Pića za odrasle nikad nisu za mace. Ako maca poliže čašu ili proliveno piće, odmah reci odrasloj osobi.",
@@ -360,7 +360,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7102a52f3652b0d36051ea36aee1c355b123ac50c2b76854c539ace891045182"
+      "verified_hash": "c31a3689a6b9cea9944b94156f35efeed3483350fd824bfa70e2acb68c944383"
     },
     "pl": {
       "status": "verified",

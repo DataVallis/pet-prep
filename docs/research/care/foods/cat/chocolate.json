@@ -250,7 +250,7 @@
     "es": "El chocolate es un capricho para personas, no un premio para gatos. Guárdalo bien y avisa a un adulto si tu gatito encuentra un poco.",
     "it": "Il cioccolato è un dolce per le persone, non per i gatti. Tienilo ben riposto e dillo a un adulto se il micio ne trova un po’.",
     "pt": "O chocolate é uma guloseima para pessoas, não para gatos. Guarda-o bem e avisa um adulto se o gatinho encontrar algum.",
-    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je poes toch wat? Vertel het meteen aan een volwassene.",
+    "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je kat toch wat? Vertel het meteen aan een volwassene.",
     "pl": "Czekolada to smakołyk dla ludzi, nie dla kotów. Chowaj ją, a jeśli kotek jakąś znajdzie, powiedz dorosłemu.",
     "cs": "Čokoláda je mlsání pro lidi, ne pro kočky. Měj ji uklizenou, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Čokolada je poslastica za ljude, a ne za mace. Drži je sklonjenu i reci odrasloj osobi ako je maca pronađe.",
@@ -457,7 +457,7 @@
     "nl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "84ce654fae715dc40b49d731a9fe1c87b8a22131e25fab041eeea1020ac06193"
+      "verified_hash": "32dba06441573c333f017250d24fee9615ef9f4efce2786c6a964a77e492812b"
     },
     "pl": {
       "status": "verified",
