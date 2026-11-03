@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `anatolian_shepherd_dog` (viri S682–S689; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S685) |
 | Izvor | FCI št. 331 »Kangal Shepherd Dog«, skupina 2, sekcija 2.2 (molosi gorskega tipa), Turčija (S682, S683) — povezava z imenom »Anatolian Shepherd Dog« prek KUSA (S684); RKC vodi anatolskega ovčarja in turškega kangala kot dve pasmi (glej »Odprto za Davida«) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 86. mesto »Anatolian Shepherd Dog« (S174, zabeleženo 2026-11-03) |
-| PR-ji | pet-prep #604 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #604 (pasma, združen `5f5d9e4`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 41591870941, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-anatolian-shepherd-dog` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 1× na teden, »Nova izkušnja« za mladička, opozorilo 60 min po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R16 | 2026-11-03 |
 | Ščetkanje zob vsak dan (mini igra) | 🛠 | 💶 izziv | M5-R15 | 2026-11-03 |
 | Barva (izbirnik: plava s črno masko, volčje siva s črno masko) | 🛠 | 💶 izziv | M5-R21 | 2026-11-03 |
-| AI portret v registru | 🗓 sledi takoj po združitvi (§8) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/anatolian-shepherd-dog`, `/sl/zivali/psi/anatolski-ovcar`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), plav s črno masko, naravna ušesa in rep | — | M5-R11-04 | 2026-11-03 |
+| Stran na petprep.si (`/animals/dogs/anatolian-shepherd-dog`, `/sl/zivali/psi/anatolski-ovcar`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
