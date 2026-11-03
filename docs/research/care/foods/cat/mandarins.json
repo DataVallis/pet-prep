@@ -6,21 +6,24 @@
     "sl": "Mandarine",
     "hr": "Mandarine",
     "cs": "Mandarinky",
-    "de": "Mandarinen"
+    "de": "Mandarinen",
+    "fr": "Mandarines"
   },
   "question": {
     "en": "Can cats eat mandarins?",
     "sl": "Ali lahko mačke jedo mandarine?",
     "hr": "Smiju li mačke jesti mandarine?",
     "cs": "Mohou kočky jíst mandarinky?",
-    "de": "Dürfen Katzen Mandarinen fressen?"
+    "de": "Dürfen Katzen Mandarinen fressen?",
+    "fr": "Les chats peuvent-ils manger des mandarines ?"
   },
   "url_slug": {
     "en": "mandarins",
     "sl": "mandarine",
     "hr": "mandarine",
     "cs": "mandarinky",
-    "de": "mandarinen"
+    "de": "mandarinen",
+    "fr": "mandarines"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, raje ne. Mandarine so citrusi, Cats Protection pa navaja, da citrusi mačkam škodijo. ASPCA navaja pomarančevec kot rastlino, strupeno za mačke, predvsem zaradi olupka in delov rastline, zato naj bodo mandarine le za ljudi.",
     "hr": "Ne, bolje je da ne. Mandarine su citrusi, a Cats Protection navodi da jedenje citrusa mačkama škodi. ASPCA biljku naranče ubraja među biljke otrovne za mačke, uglavnom zbog kore i dijelova biljke, zato mandarine ostavi ljudima.",
     "cs": "Ne, raději ne. Mandarinky jsou citrusy a Cats Protection uvádí, že citrusy kočkám škodí. ASPCA řadí pomerančovník mezi rostliny toxické pro kočky, hlavně kvůli slupce a ostatním částem rostliny, proto mandarinky nechte lidem.",
-    "de": "Nein, besser nicht. Mandarinen sind Zitrusfrüchte, und laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut. Die ASPCA führt die Orangenpflanze als giftig für Katzen auf, vor allem wegen der Schale und der Pflanzenteile. Überlassen Sie Mandarinen daher lieber den Menschen."
+    "de": "Nein, besser nicht. Mandarinen sind Zitrusfrüchte, und laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut. Die ASPCA führt die Orangenpflanze als giftig für Katzen auf, vor allem wegen der Schale und der Pflanzenteile. Überlassen Sie Mandarinen daher lieber den Menschen.",
+    "fr": "Non, mieux vaut s’abstenir. Les mandarines sont des agrumes, et Cats Protection explique que les agrumes sont mauvais pour les chats. L’ASPCA classe l’oranger parmi les plantes toxiques pour les chats, surtout à cause de l’écorce et des autres parties de la plante : gardez-les pour vous."
   },
   "why": {
     "en": "We found no vet source that names mandarins on their own, so this answer relies on what the sources say about citrus fruits in general. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. The ASPCA lists the orange plant as toxic to cats because of essential oils and psoralens: the fruit is edible, but the skins and plant material can cause problems. Cats Protection adds that a small taste is unlikely to cause a severe reaction. We follow the stricter advice and do not recommend sharing mandarins.",
     "sl": "Nismo našli veterinarskega vira, ki bi posebej omenjal mandarine, zato ta odgovor temelji na tem, kar viri pravijo o citrusih nasploh. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. ASPCA pomarančevec navaja kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov: sadež je užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Upoštevamo strožji nasvet in deljenja mandarin ne priporočamo.",
     "hr": "Nismo pronašli veterinarski izvor koji izrijekom spominje mandarine, pa se ovaj odgovor oslanja na ono što izvori kažu o citrusima općenito. Cats Protection navodi da jedenje citrusa mačkama škodi i može izazvati nelagodu u želucu, povraćanje i proljev, a veterinarska bolnica NC State ubraja citruse među namirnice zbog kojih mačke i psi mogu povraćati ili dobiti proljev. ASPCA biljku naranče ubraja među biljke otrovne za mačke zbog eteričnih ulja i psoralena: plod je jestiv, ali kora i dijelovi biljke mogu izazvati tegobe. Cats Protection dodaje da mali zalogaj vjerojatno neće izazvati jaku reakciju. Držimo se strožeg savjeta i ne preporučujemo da mački daješ mandarine.",
     "cs": "Nenašli jsme žádný veterinární zdroj, který by se mandarinkami zabýval samostatně, a odpověď proto vychází z toho, co zdroje uvádějí o citrusech obecně. Cats Protection uvádí, že citrusy kočkám škodí a mohou vyvolat žaludeční potíže, zvracení a průjem, a veterinární nemocnice univerzity NC State řadí citrusy mezi potraviny, které mohou u koček i psů způsobit zvracení nebo průjem. ASPCA řadí pomerančovník mezi rostliny toxické pro kočky kvůli éterickým olejům a psoralenům: plod je sice jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže. Cats Protection dodává, že malé ochutnání pravděpodobně nezpůsobí vážnou reakci. Řídíme se přísnějším doporučením a nedoporučujeme kočkám mandarinky dávat.",
-    "de": "Wir haben keine tierärztliche Quelle gefunden, die Mandarinen einzeln nennt; diese Antwort stützt sich daher auf das, was die Quellen allgemein über Zitrusfrüchte sagen. Laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut und können Magenbeschwerden, Erbrechen und Durchfall auslösen; die Tierklinik der NC State University zählt Zitrusfrüchte zu den Lebensmitteln, die bei Katzen und Hunden Erbrechen oder Durchfall verursachen können. Die ASPCA führt die Orangenpflanze als giftig für Katzen auf – wegen ätherischer Öle und Psoralene: Die Frucht ist essbar, aber Schalen und Pflanzenteile können Probleme verursachen. Cats Protection ergänzt, dass ein kleines Probierhäppchen wahrscheinlich keine schwere Reaktion auslöst. Wir folgen dem strengeren Rat und raten davon ab, Mandarinen mit der Katze zu teilen."
+    "de": "Wir haben keine tierärztliche Quelle gefunden, die Mandarinen einzeln nennt; diese Antwort stützt sich daher auf das, was die Quellen allgemein über Zitrusfrüchte sagen. Laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut und können Magenbeschwerden, Erbrechen und Durchfall auslösen; die Tierklinik der NC State University zählt Zitrusfrüchte zu den Lebensmitteln, die bei Katzen und Hunden Erbrechen oder Durchfall verursachen können. Die ASPCA führt die Orangenpflanze als giftig für Katzen auf – wegen ätherischer Öle und Psoralene: Die Frucht ist essbar, aber Schalen und Pflanzenteile können Probleme verursachen. Cats Protection ergänzt, dass ein kleines Probierhäppchen wahrscheinlich keine schwere Reaktion auslöst. Wir folgen dem strengeren Rat und raten davon ab, Mandarinen mit der Katze zu teilen.",
+    "fr": "Nous n’avons trouvé aucune source vétérinaire qui traite des mandarines en particulier ; cette réponse repose donc sur ce que disent les sources des agrumes en général. Cats Protection explique que les agrumes sont mauvais pour les chats et peuvent provoquer des maux d’estomac, des vomissements et de la diarrhée ; l’hôpital vétérinaire de NC State classe les agrumes parmi les aliments pouvant provoquer des vomissements ou de la diarrhée chez les chats et les chiens. L’ASPCA classe l’oranger parmi les plantes toxiques pour les chats à cause de ses huiles essentielles et de ses psoralènes : le fruit est comestible, mais les écorces et les autres parties de la plante peuvent poser problème. Cats Protection ajoute qu’une petite bouchée a peu de chances de provoquer une réaction grave. Nous suivons le conseil le plus strict et déconseillons de donner des mandarines à votre chat."
   },
   "signs": {
     "en": [
@@ -62,6 +67,11 @@
       "Erbrechen",
       "Durchfall",
       "Magenbeschwerden"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Maux d’estomac"
     ]
   },
   "what_to_do": {
@@ -69,7 +79,8 @@
     "sl": "Če opazite, da ima mačka po zaužitju mandarine znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja. Zapišite si, kaj je pojedla in kdaj.",
     "hr": "Ako mačka nakon mandarine pokaže znakove poput povraćanja ili proljeva, obrati se što prije veterinaru. Zapiši što je i kada pojela.",
     "cs": "Pokud se u kočky po snězení mandarinky objeví příznaky, například zvracení či průjem, co nejdříve se obraťte na veterináře. Poznamenejte si, co snědla a kdy.",
-    "de": "Zeigt Ihre Katze Anzeichen wie Erbrechen oder Durchfall, nachdem sie Mandarine gefressen hat, wenden Sie sich so bald wie möglich an Ihren Tierarzt. Notieren Sie, was Ihre Katze gefressen hat und wann."
+    "de": "Zeigt Ihre Katze Anzeichen wie Erbrechen oder Durchfall, nachdem sie Mandarine gefressen hat, wenden Sie sich so bald wie möglich an Ihren Tierarzt. Notieren Sie, was Ihre Katze gefressen hat und wann.",
+    "fr": "Si votre chat présente des signes tels que des vomissements ou de la diarrhée après avoir mangé de la mandarine, contactez votre vétérinaire au plus vite. Notez ce qu’il a mangé et à quel moment."
   },
   "serving": null,
   "child": {
@@ -77,7 +88,8 @@
     "sl": "Mandarine so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase.",
     "hr": "Mandarine su užina za ljude. Mačke ne vole njihov miris, a citrusi im mogu zasmetati trbuščiću, zato mandarine ostavi ljudima.",
     "cs": "Mandarinky jsou svačinka pro lidi. Kočky jejich vůni nemají rády a z citrusů je může rozbolet bříško, takže mandarinky nech lidem.",
-    "de": "Mandarinen sind ein Snack für Menschen. Katzen mögen den Geruch nicht, und Zitrusfrüchte können ihnen auf den Bauch schlagen. Überlass Mandarinen deshalb den Menschen."
+    "de": "Mandarinen sind ein Snack für Menschen. Katzen mögen den Geruch nicht, und Zitrusfrüchte können ihnen auf den Bauch schlagen. Überlass Mandarinen deshalb den Menschen.",
+    "fr": "Les mandarines, c’est pour les humains. Les chats n’aiment pas l’odeur, et les agrumes peuvent leur donner mal au ventre : garde-les pour toi."
   },
   "faq": [
     {
@@ -86,14 +98,16 @@
         "sl": "Kateri del pomaranče je težava?",
         "hr": "Koji je dio naranče problematičan?",
         "cs": "Která část pomeranče způsobuje potíže?",
-        "de": "Welcher Teil der Orange ist problematisch?"
+        "de": "Welcher Teil der Orange ist problematisch?",
+        "fr": "Quelle partie de l’orange pose problème ?"
       },
       "a": {
         "en": "For oranges, the ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
         "sl": "Za pomaranče ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene.",
         "hr": "Za naranče ASPCA navodi da je plod jestiv, ali da kora i dijelovi biljke mogu izazvati tegobe, jer sadrže eterična ulja i psoralene.",
         "cs": "U pomerančů ASPCA uvádí, že plod je jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže, protože obsahují éterické oleje a psoraleny.",
-        "de": "Bei Orangen sagt die ASPCA, dass die Frucht essbar ist, Schalen und Pflanzenteile aber Probleme verursachen können, weil sie ätherische Öle und Psoralene enthalten."
+        "de": "Bei Orangen sagt die ASPCA, dass die Frucht essbar ist, Schalen und Pflanzenteile aber Probleme verursachen können, weil sie ätherische Öle und Psoralene enthalten.",
+        "fr": "Pour les oranges, l’ASPCA explique que le fruit est comestible, mais que les écorces et les autres parties de la plante peuvent poser problème, car elles contiennent des huiles essentielles et des psoralènes."
       }
     },
     {
@@ -102,14 +116,16 @@
         "sl": "Moja mačka je le malo poskusila. Je to nujno?",
         "hr": "Moja je mačka probala sasvim malo. Je li to hitan slučaj?",
         "cs": "Moje kočka jen kousek ochutnala. Je to naléhavý případ?",
-        "de": "Meine Katze hat nur kurz probiert. Ist das ein Notfall?"
+        "de": "Meine Katze hat nur kurz probiert. Ist das ein Notfall?",
+        "fr": "Mon chat en a goûté un tout petit peu. Est-ce une urgence ?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
         "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi.",
         "hr": "Cats Protection savjetuje da ne paničariš ako mačka proba krišku ili poliže ti prste; mačka bi morala pojesti mnogo da bi joj prijetila jaka reakcija. Pazi na povraćanje ili proljev, a ako te brine, pitaj veterinara.",
         "cs": "Cats Protection radí nepanikařit, když kočka ochutná dílek nebo olízne vaše prsty: aby jí hrozila vážná reakce, musela by sníst hodně. Sledujte, zda se neobjeví zvracení nebo průjem, a pokud máte obavy, poraďte se s veterinářem.",
-        "de": "Cats Protection rät, nicht in Panik zu geraten, wenn eine Katze ein Stück probiert oder an Ihren Fingern leckt: Für eine schwere Reaktion müsste sie viel davon fressen. Achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt, wenn Sie sich Sorgen machen."
+        "de": "Cats Protection rät, nicht in Panik zu geraten, wenn eine Katze ein Stück probiert oder an Ihren Fingern leckt: Für eine schwere Reaktion müsste sie viel davon fressen. Achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt, wenn Sie sich Sorgen machen.",
+        "fr": "Cats Protection recommande de ne pas paniquer si un chat goûte un quartier ou lèche vos doigts : il faudrait qu’il en mange beaucoup pour risquer une réaction grave. Surveillez l’apparition de vomissements ou de diarrhée et demandez conseil à votre vétérinaire si vous avez un doute."
       }
     },
     {
@@ -118,14 +134,16 @@
         "sl": "Zakaj se mačke citrusom navadno izogibajo?",
         "hr": "Zašto mačke obično izbjegavaju citruse?",
         "cs": "Proč se kočky citrusům obvykle vyhýbají?",
-        "de": "Warum meiden Katzen Zitrusfrüchte meistens?"
+        "de": "Warum meiden Katzen Zitrusfrüchte meistens?",
+        "fr": "Pourquoi les chats évitent-ils généralement les agrumes ?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
         "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo.",
         "hr": "Cats Protection navodi da mačke prirodno ne vole jak miris citrusa, pa ih obično ne jedu.",
         "cs": "Cats Protection uvádí, že kočky mají přirozenou nechuť k silné citrusové vůni, a proto citrusy většinou nejedí.",
-        "de": "Laut Cats Protection mögen Katzen starke Zitrusgerüche von Natur aus nicht und fressen Zitrusfrüchte deshalb meist nicht."
+        "de": "Laut Cats Protection mögen Katzen starke Zitrusgerüche von Natur aus nicht und fressen Zitrusfrüchte deshalb meist nicht.",
+        "fr": "Selon Cats Protection, les chats ont naturellement horreur de l’odeur forte des agrumes, ce qui les dissuade généralement d’y goûter."
       }
     }
   ],
@@ -223,6 +241,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "34510508df4ff0bcb69d260ac9380d622f56ccaf1f6d66ce756a9db36ca93f0b"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01ad705f3eb8d9180376d5bdb3e1512da476ef9933967c0326f47e3ecd374fd1"
     }
   }
 }

@@ -6,21 +6,24 @@
     "sl": "Mango",
     "hr": "Mango",
     "cs": "Mango",
-    "de": "Mango"
+    "de": "Mango",
+    "fr": "Mangue"
   },
   "question": {
     "en": "Can dogs eat mango?",
     "sl": "Ali lahko psi jedo mango?",
     "hr": "Smiju li psi jesti mango?",
     "cs": "Mohou psi jíst mango?",
-    "de": "Dürfen Hunde Mango fressen?"
+    "de": "Dürfen Hunde Mango fressen?",
+    "fr": "Les chiens peuvent-ils manger de la mangue ?"
   },
   "url_slug": {
     "en": "mango",
     "sl": "mango",
     "hr": "mango",
     "cs": "mango",
-    "de": "mango"
+    "de": "mango",
+    "fr": "mangue"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, psi lahko zmerno jedo mango, če je pravilno pripravljen: olupite ga in odstranite koščico. Mango vsebuje veliko sladkorja, zato naj ostane občasen priboljšek, zlasti za pse, ki imajo težave s težo.",
     "hr": "Da, psi smiju umjereno jesti mango ako je pravilno pripremljen: oguli ga i ukloni košticu. Mango ima mnogo šećera, zato neka ostane povremena poslastica, osobito za pse koji imaju problema s težinom.",
     "cs": "Ano, psi mohou mango jíst s mírou, pokud je správně připravené: oloupejte ho a odstraňte pecku. Mango obsahuje hodně cukru, proto z něj dělejte jen občasný pamlsek, zvlášť u psů, kteří mají problémy s váhou.",
-    "de": "Ja, in Maßen: Hunde dürfen Mango fressen, wenn sie richtig vorbereitet ist. Schälen Sie die Frucht und entfernen Sie den Kern. Mango enthält viel Zucker und sollte deshalb ein gelegentliches Leckerli bleiben, besonders bei Hunden mit Gewichtsproblemen."
+    "de": "Ja, in Maßen: Hunde dürfen Mango fressen, wenn sie richtig vorbereitet ist. Schälen Sie die Frucht und entfernen Sie den Kern. Mango enthält viel Zucker und sollte deshalb ein gelegentliches Leckerli bleiben, besonders bei Hunden mit Gewichtsproblemen.",
+    "fr": "Oui, avec modération : les chiens peuvent manger de la mangue si elle est bien préparée. Pelez-la et retirez le noyau. La mangue est riche en sucre ; elle doit donc rester une friandise occasionnelle, surtout pour les chiens qui ont des problèmes de poids."
   },
   "why": {
     "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
     "sl": "Mango vsebuje vlaknine ter vitamine A, B6, C in E. Koščica je resna nevarnost, da se pes zaduši, lahko se zagozdi v prebavilih in vsebuje majhne količine cianida. Lupina je težko prebavljiva. Preveč sadja lahko povzroči bolečine v trebuhu in drisko.",
     "hr": "Mango sadrži vlakna te vitamine A, B6, C i E. Koštica je ozbiljna opasnost od gušenja, može zapeti u probavnom sustavu i sadrži male količine cijanida. Kora se teško probavlja. Previše voća može izazvati bolove u trbuhu i proljev.",
     "cs": "Mango obsahuje vlákninu a vitaminy A, B6, C a E. Pecka představuje vážné riziko dušení, může uvíznout v trávicím traktu a obsahuje malé množství kyanidu. Slupka se špatně tráví. Příliš mnoho ovoce může způsobit bolest břicha a průjem.",
-    "de": "Mango enthält Ballaststoffe sowie die Vitamine A, B6, C und E. Der Kern stellt eine ernste Erstickungsgefahr dar, kann im Verdauungstrakt stecken bleiben und enthält geringe Mengen Cyanid. Die Schale ist schwer verdaulich. Zu viel Obst kann Bauchschmerzen und Durchfall verursachen."
+    "de": "Mango enthält Ballaststoffe sowie die Vitamine A, B6, C und E. Der Kern stellt eine ernste Erstickungsgefahr dar, kann im Verdauungstrakt stecken bleiben und enthält geringe Mengen Cyanid. Die Schale ist schwer verdaulich. Zu viel Obst kann Bauchschmerzen und Durchfall verursachen.",
+    "fr": "La mangue contient des fibres et les vitamines A, B6, C et E. Le noyau présente un sérieux risque d’étouffement, peut se bloquer dans le tube digestif et contient de petites quantités de cyanure. La peau est difficile à digérer. En manger trop peut provoquer des maux de ventre et de la diarrhée."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če imate vprašanja ali pomisleke glede dajanja manga psu, se posvetujte z veterinarjem.",
     "hr": "Ako imaš pitanja ili nedoumice oko davanja manga psu, pitaj veterinara.",
     "cs": "Pokud máte k podávání manga psovi jakékoli otázky nebo obavy, zeptejte se veterináře.",
-    "de": "Wenn Sie unsicher sind, ob Sie Ihrem Hund Mango geben dürfen, fragen Sie Ihren Tierarzt."
+    "de": "Wenn Sie unsicher sind, ob Sie Ihrem Hund Mango geben dürfen, fragen Sie Ihren Tierarzt.",
+    "fr": "Si vous avez des questions ou des doutes sur le fait de donner de la mangue à votre chien, demandez conseil à votre vétérinaire."
   },
   "serving": {
     "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
     "sl": "Olupljen, brez koščice, narezan na majhne koščke; kot občasen priboljšek.",
     "hr": "Oguljen, bez koštice, narezan na male komadiće; kao povremena poslastica.",
     "cs": "Oloupané, bez pecky, nakrájené na malé kousky; jako občasný pamlsek.",
-    "de": "Geschält, ohne Kern und in kleine Stücke geschnitten; als gelegentliches Leckerli."
+    "de": "Geschält, ohne Kern und in kleine Stücke geschnitten; als gelegentliches Leckerli.",
+    "fr": "Pelée, sans noyau, coupée en petits morceaux ; en friandise occasionnelle."
   },
   "child": {
     "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
     "sl": "Psi lahko poskusijo malo manga! Odrasel ga najprej olupi in odstrani veliko koščico.",
     "hr": "Psi smiju kušati malo manga! Odrasla osoba ga prvo oguli i izvadi veliku košticu.",
     "cs": "Psi si můžou dát kousíček manga! Dospělý ho nejdřív oloupe a vyndá velkou pecku.",
-    "de": "Hunde dürfen ein bisschen Mango probieren! Ein Erwachsener schält sie zuerst und nimmt den großen Kern heraus."
+    "de": "Hunde dürfen ein bisschen Mango probieren! Ein Erwachsener schält sie zuerst und nimmt den großen Kern heraus.",
+    "fr": "Les chiens peuvent goûter un peu de mangue ! Un adulte commence par la peler et retirer le gros noyau."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Zakaj je treba odstraniti koščico manga?",
         "hr": "Zašto treba ukloniti košticu manga?",
         "cs": "Proč je třeba z manga odstranit pecku?",
-        "de": "Warum muss der Mangokern entfernt werden?"
+        "de": "Warum muss der Mangokern entfernt werden?",
+        "fr": "Pourquoi faut-il retirer le noyau de la mangue ?"
       },
       "a": {
         "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
         "sl": "Pes se lahko s koščico zaduši ali se mu ta zagozdi v prebavilih, poleg tega vsebuje majhne količine cianida.",
         "hr": "Pas se može ugušiti košticom ili mu ona može zapeti u probavnom sustavu, a sadrži i male količine cijanida.",
         "cs": "Pecka může psa udusit, může také uvíznout v trávicím traktu a obsahuje malé množství kyanidu.",
-        "de": "Ein Hund kann am Kern ersticken, und der Kern kann im Verdauungstrakt stecken bleiben; außerdem enthält er geringe Mengen Cyanid."
+        "de": "Ein Hund kann am Kern ersticken, und der Kern kann im Verdauungstrakt stecken bleiben; außerdem enthält er geringe Mengen Cyanid.",
+        "fr": "Le noyau présente un risque d’étouffement, peut se bloquer dans le tube digestif du chien et contient de petites quantités de cyanure."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi jedo lupino manga?",
         "hr": "Smiju li psi jesti koru manga?",
         "cs": "Mohou psi jíst slupku manga?",
-        "de": "Dürfen Hunde Mangoschale fressen?"
+        "de": "Dürfen Hunde Mangoschale fressen?",
+        "fr": "Les chiens peuvent-ils manger la peau de la mangue ?"
       },
       "a": {
         "en": "It is difficult to digest, so it is best to remove it before serving.",
         "sl": "Težko je prebavljiva, zato jo je najbolje odstraniti pred serviranjem.",
         "hr": "Teško se probavlja, zato je najbolje ukloniti je prije posluživanja.",
         "cs": "Špatně se tráví, proto je nejlepší ji před podáváním odstranit.",
-        "de": "Sie ist schwer verdaulich; entfernen Sie sie daher am besten vor dem Füttern."
+        "de": "Sie ist schwer verdaulich; entfernen Sie sie daher am besten vor dem Füttern.",
+        "fr": "Elle est difficile à digérer ; mieux vaut donc la retirer avant de servir."
       }
     }
   ],
@@ -174,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e7b54282ae65acdc78baf7cc325a0d3ce0cd6fdabec3e7e640686b768cc48c04"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e59effb34a247919c4f213cfeb49e6425d82f514b3341931b2fb54d59fc3d7d5"
     }
   }
 }

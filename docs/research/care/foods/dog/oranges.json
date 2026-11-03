@@ -6,21 +6,24 @@
     "sl": "Pomaranče",
     "hr": "Naranče",
     "cs": "Pomeranče",
-    "de": "Orangen"
+    "de": "Orangen",
+    "fr": "Oranges"
   },
   "question": {
     "en": "Can dogs eat oranges?",
     "sl": "Ali lahko psi jedo pomaranče?",
     "hr": "Smiju li psi jesti naranče?",
     "cs": "Mohou psi jíst pomeranče?",
-    "de": "Dürfen Hunde Orangen fressen?"
+    "de": "Dürfen Hunde Orangen fressen?",
+    "fr": "Les chiens peuvent-ils manger des oranges ?"
   },
   "url_slug": {
     "en": "oranges",
     "sl": "pomarance",
     "hr": "narance",
     "cs": "pomerance",
-    "de": "orangen"
+    "de": "orangen",
+    "fr": "oranges"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, psi lahko v omejenih količinah jedo meso pomaranče, brez lupine in pečk. Pomaranče imajo veliko naravnega sladkorja, zato naj ostanejo občasen priboljšek; mnogim psom močan vonj citrusov tako ali tako ni všeč.",
     "hr": "Da, psi smiju jesti meso naranče u ograničenim količinama, bez kore i sjemenki. Naranče sadrže mnogo prirodnog šećera, zato neka ostanu povremena poslastica; mnogi psi ionako ne vole jak miris citrusa.",
     "cs": "Ano, psi mohou jíst dužinu pomeranče v omezeném množství, bez slupky a semínek. Pomeranče obsahují hodně přirozeného cukru, proto z nich dělejte jen občasný pamlsek; spousta psů stejně nemá ráda silnou citrusovou vůni.",
-    "de": "Ja, das Fruchtfleisch einer Orange dürfen Hunde in begrenzter Menge fressen – ohne Schale und Kerne. Orangen enthalten viel natürlichen Zucker und sollten deshalb ein gelegentliches Leckerli bleiben; viele Hunde mögen den starken Zitrusgeruch ohnehin nicht."
+    "de": "Ja, das Fruchtfleisch einer Orange dürfen Hunde in begrenzter Menge fressen – ohne Schale und Kerne. Orangen enthalten viel natürlichen Zucker und sollten deshalb ein gelegentliches Leckerli bleiben; viele Hunde mögen den starken Zitrusgeruch ohnehin nicht.",
+    "fr": "Oui, les chiens peuvent manger la chair d’une orange en quantité limitée, sans la peau ni les pépins. Les oranges sont riches en sucres naturels : réservez-les à une friandise occasionnelle. Beaucoup de chiens n’aiment d’ailleurs pas leur odeur forte."
   },
   "why": {
     "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
     "sl": "ASPCA pomarančevec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC, PDSA in Blue Cross pravijo, da je meso v zmernih količinah v redu. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo; s pečkami se pes lahko zaduši. Preveč pomaranče lahko povzroči prebavne težave, tudi drisko.",
     "hr": "ASPCA biljku naranče ubraja među biljke otrovne za pse zbog eteričnih ulja i psoralena, ali napominje da je plod jestiv te da tegobe uzrokuju kora i dijelovi biljke. AKC, PDSA i Blue Cross navode da je meso ploda u redu ako se daje umjereno. Kora je žilava i teško se probavlja, može nadražiti želudac i povećati rizik od začepljenja; sjemenke mogu izazvati gušenje. Previše naranče može izazvati probavne smetnje, uključujući proljev.",
     "cs": "ASPCA řadí pomerančovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům, ale poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC, PDSA i Blue Cross uvádějí, že dužina je s mírou v pořádku. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev; semínka mohou způsobit dušení. Příliš mnoho pomeranče může způsobit zažívací potíže, včetně průjmu.",
-    "de": "Die ASPCA führt die Orangenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. AKC, PDSA und Blue Cross sagen, das Fruchtfleisch sei in Maßen unbedenklich. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen; Kerne können eine Erstickungsgefahr darstellen. Zu viel Orange kann zu Verdauungsbeschwerden bis hin zu Durchfall führen."
+    "de": "Die ASPCA führt die Orangenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. AKC, PDSA und Blue Cross sagen, das Fruchtfleisch sei in Maßen unbedenklich. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen; Kerne können eine Erstickungsgefahr darstellen. Zu viel Orange kann zu Verdauungsbeschwerden bis hin zu Durchfall führen.",
+    "fr": "L’ASPCA classe l’oranger parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, mais précise que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC, la PDSA et Blue Cross indiquent que la chair ne pose pas de problème si elle est donnée avec modération. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion ; les pépins peuvent présenter un risque d’étouffement. Trop d’orange peut causer des troubles digestifs, dont de la diarrhée."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Psu ne dajajte lupine: težko je prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč.",
     "hr": "Psu ne daj koru: teško se probavlja i može povećati rizik od začepljenja crijeva, koje u nekim slučajevima zahtijeva veterinarsku pomoć.",
     "cs": "Slupku psovi nedávejte: špatně se tráví a může zvýšit riziko ucpání střev, které v některých případech vyžaduje veterinární pomoc.",
-    "de": "Geben Sie Ihrem Hund keine Schale: Sie ist schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, der in manchen Fällen tierärztliche Hilfe braucht."
+    "de": "Geben Sie Ihrem Hund keine Schale: Sie ist schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, der in manchen Fällen tierärztliche Hilfe braucht.",
+    "fr": "Ne donnez pas l’écorce à votre chien : elle est difficile à digérer et peut augmenter le risque d’occlusion intestinale, qui nécessite parfois l’intervention d’un vétérinaire."
   },
   "serving": {
     "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
     "sl": "Samo meso, brez lupine in pečk, narezano na majhne koščke; kot občasen priboljšek.",
     "hr": "Samo meso ploda, bez kore i sjemenki, narezano na male komadiće; kao povremena poslastica.",
     "cs": "Jen dužina, bez slupky a semínek, nakrájená na malé kousky; jako občasný pamlsek.",
-    "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Stücke geschnitten; als gelegentliches Leckerli."
+    "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Stücke geschnitten; als gelegentliches Leckerli.",
+    "fr": "Uniquement la chair, sans l’écorce ni les pépins, coupée en petits morceaux ; en friandise occasionnelle."
   },
   "child": {
     "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
     "sl": "Nekaterim psom je košček pomaranče všeč, drugim pa vonj ne diši! Odrasel jo olupi in odstrani pečke.",
     "hr": "Neki psi vole mali komadić naranče, a nekima smeta miris! Odrasla osoba je oguli i izvadi sjemenke.",
     "cs": "Někteří psi mají rádi malý kousek pomeranče a jiným se jeho vůně nelíbí! Dospělý ho oloupe a vybere semínka.",
-    "de": "Manche Hunde mögen ein kleines Stück Orange, andere mögen den Geruch nicht! Ein Erwachsener schält sie und nimmt die Kerne heraus."
+    "de": "Manche Hunde mögen ein kleines Stück Orange, andere mögen den Geruch nicht! Ein Erwachsener schält sie und nimmt die Kerne heraus.",
+    "fr": "Certains chiens aiment un petit morceau d’orange, d’autres n’aiment pas l’odeur ! Un adulte enlève la peau et les pépins."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo pomarančno lupino?",
         "hr": "Smiju li psi jesti koru naranče?",
         "cs": "Mohou psi jíst pomerančovou slupku?",
-        "de": "Dürfen Hunde Orangenschale fressen?"
+        "de": "Dürfen Hunde Orangenschale fressen?",
+        "fr": "Les chiens peuvent-ils manger de l’écorce d’orange ?"
       },
       "a": {
         "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
         "sl": "Ne. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo. ASPCA navaja, da težave povzročajo prav lupine in drugi deli rastline.",
         "hr": "Ne. Kora je žilava i teško se probavlja, može nadražiti želudac i povećati rizik od začepljenja. ASPCA navodi da tegobe uzrokuju kora i dijelovi biljke.",
         "cs": "Ne. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev. ASPCA uvádí, že potíže způsobují právě slupky a ostatní části rostliny.",
-        "de": "Nein. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen. Laut ASPCA verursachen vor allem Schalen und Pflanzenteile Probleme."
+        "de": "Nein. Die Schale ist zäh und schwer verdaulich, kann den Magen reizen und das Risiko eines Darmverschlusses erhöhen. Laut ASPCA verursachen vor allem Schalen und Pflanzenteile Probleme.",
+        "fr": "Non. L’écorce est coriace et difficile à digérer, peut irriter l’estomac et augmenter le risque d’occlusion. Selon l’ASPCA, ce sont les écorces et les autres parties de la plante qui posent problème."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Ali lahko psi pijejo pomarančni sok?",
         "hr": "Smiju li psi piti sok od naranče?",
         "cs": "Mohou psi pít pomerančový džus?",
-        "de": "Dürfen Hunde Orangensaft trinken?"
+        "de": "Dürfen Hunde Orangensaft trinken?",
+        "fr": "Les chiens peuvent-ils boire du jus d’orange ?"
       },
       "a": {
         "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
         "sl": "Pomarančni sok ni strupen, a na splošno ni dobra izbira: ima zgoščene naravne sladkorje in nima vlaknin celega sadeža.",
         "hr": "Sok od naranče nije otrovan, ali općenito nije dobar izbor: ima koncentrirane prirodne šećere, a za razliku od cijelog ploda nema vlakana.",
         "cs": "Pomerančový džus není toxický, ale obecně to není dobrá volba: obsahuje koncentrované přirozené cukry a chybí v něm vláknina, kterou má celý plod.",
-        "de": "Orangensaft ist nicht giftig, aber in der Regel keine gute Wahl: Er enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht."
+        "de": "Orangensaft ist nicht giftig, aber in der Regel keine gute Wahl: Er enthält konzentrierten natürlichen Zucker, und ihm fehlen die Ballaststoffe der ganzen Frucht.",
+        "fr": "Le jus d’orange n’est pas toxique, mais ce n’est généralement pas un bon choix : il concentre les sucres naturels et ne contient pas les fibres du fruit entier."
       }
     }
   ],
@@ -206,6 +218,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d42bb328a980899fde7b623dbc74908f0fcc05abbeacdc8c89c71c297f026f71"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8bcb88a653492219d5991b5f80f97d8b5736d4a11a6bb9d39108ca8ae4436fa0"
     }
   }
 }

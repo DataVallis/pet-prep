@@ -6,21 +6,24 @@
     "sl": "Limete",
     "hr": "Limete",
     "cs": "Limetky",
-    "de": "Limetten"
+    "de": "Limetten",
+    "fr": "Citrons verts"
   },
   "question": {
     "en": "Can cats eat limes?",
     "sl": "Ali lahko mačke jedo limete?",
     "hr": "Smiju li mačke jesti limete?",
     "cs": "Mohou kočky jíst limetky?",
-    "de": "Dürfen Katzen Limetten fressen?"
+    "de": "Dürfen Katzen Limetten fressen?",
+    "fr": "Les chats peuvent-ils manger des citrons verts ?"
   },
   "url_slug": {
     "en": "limes",
     "sl": "limete",
     "hr": "limete",
     "cs": "limetky",
-    "de": "limetten"
+    "de": "limetten",
+    "fr": "citrons-verts"
   },
   "level": "dangerous",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, raje ne. ASPCA navaja limetovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo limete le za ljudi.",
     "hr": "Ne, bolje je da ne. ASPCA biljku limete ubraja među biljke otrovne za mačke zbog eteričnih ulja i psoralena. Meso ploda je jestivo, ali kora i dijelovi biljke mogu izazvati tegobe, a citrusi općenito mačkama škode, zato limete ostavi ljudima.",
     "cs": "Ne, raději ne. ASPCA řadí limetkovník mezi rostliny toxické pro kočky kvůli obsahu éterických olejů a psoralenů. Dužina je sice jedlá, ale slupka a ostatní části rostliny mohou způsobit potíže a citrusy kočkám obecně škodí, proto limetky nechte lidem.",
-    "de": "Nein, besser nicht. Die ASPCA führt die Limettenpflanze als giftig für Katzen auf – wegen ihrer ätherischen Öle und Psoralene. Das Fruchtfleisch ist essbar, doch Schale und Pflanzenteile können Probleme verursachen, und Zitrusfrüchte sind für Katzen nicht gut. Überlassen Sie Limetten daher lieber den Menschen."
+    "de": "Nein, besser nicht. Die ASPCA führt die Limettenpflanze als giftig für Katzen auf – wegen ihrer ätherischen Öle und Psoralene. Das Fruchtfleisch ist essbar, doch Schale und Pflanzenteile können Probleme verursachen, und Zitrusfrüchte sind für Katzen nicht gut. Überlassen Sie Limetten daher lieber den Menschen.",
+    "fr": "Non, mieux vaut s’abstenir. L’ASPCA classe le limettier parmi les plantes toxiques pour les chats, à cause de ses huiles essentielles et de ses psoralènes. La chair du fruit est comestible, mais l’écorce et les autres parties de la plante peuvent poser problème, et les agrumes sont mauvais pour les chats : gardez-les pour vous."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
     "sl": "ASPCA navaja limetovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo.",
     "hr": "ASPCA biljku limete ubraja među biljke otrovne za mačke: sadrži eterična ulja i psoralene, a iako je plod jestiv, kora i dijelovi biljke mogu izazvati tegobe. Cats Protection navodi da jedenje citrusa mačkama škodi i može izazvati nelagodu u želucu, povraćanje i proljev, a veterinarska bolnica NC State ubraja citruse među namirnice zbog kojih mačke i psi mogu povraćati ili dobiti proljev. Cats Protection dodaje da mali zalogaj vjerojatno neće izazvati jaku reakciju. Budući da se izvori razlikuju u strogosti, držimo se strožeg savjeta i ne preporučujemo da ih daješ mački.",
     "cs": "ASPCA řadí limetkovník mezi rostliny toxické pro kočky: obsahuje éterické oleje a psoraleny a plod je sice jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže. Cats Protection uvádí, že citrusy kočkám škodí a mohou vyvolat žaludeční potíže, zvracení a průjem, a veterinární nemocnice univerzity NC State řadí citrusy mezi potraviny, které mohou u koček i psů způsobit zvracení nebo průjem. Cats Protection dodává, že malé ochutnání pravděpodobně nezpůsobí vážnou reakci. Zdroje nejsou stejně přísné, proto se řídíme přísnějším doporučením a nedoporučujeme limetky kočkám dávat.",
-    "de": "Die ASPCA führt die Limettenpflanze als giftig für Katzen auf: Sie enthält ätherische Öle und Psoralene, und obwohl die Frucht essbar ist, können Schalen und Pflanzenteile Probleme verursachen. Laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut und können Magenbeschwerden, Erbrechen und Durchfall auslösen; die Tierklinik der NC State University zählt Zitrusfrüchte zu den Lebensmitteln, die bei Katzen und Hunden Erbrechen oder Durchfall verursachen können. Cats Protection ergänzt, dass ein kleines Probierhäppchen wahrscheinlich keine schwere Reaktion auslöst. Weil die Quellen unterschiedlich streng sind, folgen wir dem strengeren Rat und raten davon ab, die Frucht mit der Katze zu teilen."
+    "de": "Die ASPCA führt die Limettenpflanze als giftig für Katzen auf: Sie enthält ätherische Öle und Psoralene, und obwohl die Frucht essbar ist, können Schalen und Pflanzenteile Probleme verursachen. Laut Cats Protection sind Zitrusfrüchte für Katzen nicht gut und können Magenbeschwerden, Erbrechen und Durchfall auslösen; die Tierklinik der NC State University zählt Zitrusfrüchte zu den Lebensmitteln, die bei Katzen und Hunden Erbrechen oder Durchfall verursachen können. Cats Protection ergänzt, dass ein kleines Probierhäppchen wahrscheinlich keine schwere Reaktion auslöst. Weil die Quellen unterschiedlich streng sind, folgen wir dem strengeren Rat und raten davon ab, die Frucht mit der Katze zu teilen.",
+    "fr": "L’ASPCA classe le limettier parmi les plantes toxiques pour les chats : il contient des huiles essentielles et des psoralènes, et si le fruit est comestible, les écorces et les autres parties de la plante peuvent poser problème. Cats Protection explique que les agrumes sont mauvais pour les chats et peuvent provoquer des maux d’estomac, des vomissements et de la diarrhée ; l’hôpital vétérinaire de NC State classe les agrumes parmi les aliments pouvant provoquer des vomissements ou de la diarrhée chez les chats et les chiens. Cats Protection ajoute qu’une petite bouchée a peu de chances de provoquer une réaction grave. Les sources n’étant pas toutes aussi strictes, nous suivons le conseil le plus strict et déconseillons d’en donner à votre chat."
   },
   "signs": {
     "en": [
@@ -72,6 +77,13 @@
       "Magenbeschwerden",
       "Niedergeschlagenheit",
       "Möglicherweise Hautreizung (Dermatitis)"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Maux d’estomac",
+      "Abattement",
+      "Irritation cutanée possible (dermatite)"
     ]
   },
   "what_to_do": {
@@ -79,7 +91,8 @@
     "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj.",
     "hr": "Ako je mačka pojela koru, listove ili druge dijelove biljke ili pokazuje znakove poput povraćanja ili proljeva, obrati se što prije veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i kada pojela.",
     "cs": "Pokud kočka snědla slupku, listy či jiné části rostliny nebo se u ní objeví příznaky, například zvracení či průjem, co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla a kdy.",
-    "de": "Hat Ihre Katze Schale, Blätter oder andere Pflanzenteile gefressen oder zeigt sie Anzeichen wie Erbrechen oder Durchfall, wenden Sie sich so bald wie möglich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat und wann."
+    "de": "Hat Ihre Katze Schale, Blätter oder andere Pflanzenteile gefressen oder zeigt sie Anzeichen wie Erbrechen oder Durchfall, wenden Sie sich so bald wie möglich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat und wann.",
+    "fr": "Si votre chat a mangé de l’écorce, des feuilles ou d’autres parties de la plante, ou présente des signes tels que des vomissements ou de la diarrhée, contactez au plus vite votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et à quel moment."
   },
   "serving": null,
   "child": {
@@ -87,7 +100,8 @@
     "sl": "Limete so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase.",
     "hr": "Limete su užina za ljude. Mačke ne vole njihov miris, a citrusi im mogu zasmetati trbuščiću, zato limete ostavi ljudima.",
     "cs": "Limetky jsou svačinka pro lidi. Kočky jejich vůni nemají rády a z citrusů je může rozbolet bříško, takže limetky nech lidem.",
-    "de": "Limetten sind ein Snack für Menschen. Katzen mögen den Geruch nicht, und Zitrusfrüchte können ihnen auf den Bauch schlagen. Überlass Limetten deshalb den Menschen."
+    "de": "Limetten sind ein Snack für Menschen. Katzen mögen den Geruch nicht, und Zitrusfrüchte können ihnen auf den Bauch schlagen. Überlass Limetten deshalb den Menschen.",
+    "fr": "Les citrons verts, c’est pour les humains. Les chats n’aiment pas l’odeur, et les agrumes peuvent leur donner mal au ventre : garde-les pour toi."
   },
   "faq": [
     {
@@ -96,14 +110,16 @@
         "sl": "Kateri del je težava?",
         "hr": "Koji je dio problematičan?",
         "cs": "Která část způsobuje potíže?",
-        "de": "Welcher Teil ist problematisch?"
+        "de": "Welcher Teil ist problematisch?",
+        "fr": "Quelle partie pose problème ?"
       },
       "a": {
         "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
         "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene.",
         "hr": "ASPCA navodi da je plod jestiv, ali da kora i dijelovi biljke mogu izazvati tegobe, jer sadrže eterična ulja i psoralene.",
         "cs": "ASPCA uvádí, že plod je jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže, protože obsahují éterické oleje a psoraleny.",
-        "de": "Die ASPCA sagt, dass die Frucht essbar ist, Schalen und Pflanzenteile aber Probleme verursachen können, weil sie ätherische Öle und Psoralene enthalten."
+        "de": "Die ASPCA sagt, dass die Frucht essbar ist, Schalen und Pflanzenteile aber Probleme verursachen können, weil sie ätherische Öle und Psoralene enthalten.",
+        "fr": "L’ASPCA explique que le fruit est comestible, mais que les écorces et les autres parties de la plante peuvent poser problème, car elles contiennent des huiles essentielles et des psoralènes."
       }
     },
     {
@@ -112,14 +128,16 @@
         "sl": "Moja mačka je le malo poskusila. Je to nujno?",
         "hr": "Moja je mačka probala sasvim malo. Je li to hitan slučaj?",
         "cs": "Moje kočka jen kousek ochutnala. Je to naléhavý případ?",
-        "de": "Meine Katze hat nur kurz probiert. Ist das ein Notfall?"
+        "de": "Meine Katze hat nur kurz probiert. Ist das ein Notfall?",
+        "fr": "Mon chat en a goûté un tout petit peu. Est-ce une urgence ?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
         "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi.",
         "hr": "Cats Protection savjetuje da ne paničariš ako mačka proba krišku ili poliže ti prste; mačka bi morala pojesti mnogo da bi joj prijetila jaka reakcija. Pazi na povraćanje ili proljev, a ako te brine, pitaj veterinara.",
         "cs": "Cats Protection radí nepanikařit, když kočka ochutná dílek nebo olízne vaše prsty: aby jí hrozila vážná reakce, musela by sníst hodně. Sledujte, zda se neobjeví zvracení nebo průjem, a pokud máte obavy, poraďte se s veterinářem.",
-        "de": "Cats Protection rät, nicht in Panik zu geraten, wenn eine Katze ein Stück probiert oder an Ihren Fingern leckt: Für eine schwere Reaktion müsste sie viel davon fressen. Achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt, wenn Sie sich Sorgen machen."
+        "de": "Cats Protection rät, nicht in Panik zu geraten, wenn eine Katze ein Stück probiert oder an Ihren Fingern leckt: Für eine schwere Reaktion müsste sie viel davon fressen. Achten Sie auf Erbrechen oder Durchfall und fragen Sie Ihren Tierarzt, wenn Sie sich Sorgen machen.",
+        "fr": "Cats Protection recommande de ne pas paniquer si un chat goûte un quartier ou lèche vos doigts : il faudrait qu’il en mange beaucoup pour risquer une réaction grave. Surveillez l’apparition de vomissements ou de diarrhée et demandez conseil à votre vétérinaire si vous avez un doute."
       }
     },
     {
@@ -128,14 +146,16 @@
         "sl": "Zakaj se mačke citrusom navadno izogibajo?",
         "hr": "Zašto mačke obično izbjegavaju citruse?",
         "cs": "Proč se kočky citrusům obvykle vyhýbají?",
-        "de": "Warum meiden Katzen Zitrusfrüchte meistens?"
+        "de": "Warum meiden Katzen Zitrusfrüchte meistens?",
+        "fr": "Pourquoi les chats évitent-ils généralement les agrumes ?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
         "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo.",
         "hr": "Cats Protection navodi da mačke prirodno ne vole jak miris citrusa, pa ih obično ne jedu.",
         "cs": "Cats Protection uvádí, že kočky mají přirozenou nechuť k silné citrusové vůni, a proto citrusy většinou nejedí.",
-        "de": "Laut Cats Protection mögen Katzen starke Zitrusgerüche von Natur aus nicht und fressen Zitrusfrüchte deshalb meist nicht."
+        "de": "Laut Cats Protection mögen Katzen starke Zitrusgerüche von Natur aus nicht und fressen Zitrusfrüchte deshalb meist nicht.",
+        "fr": "Selon Cats Protection, les chats ont naturellement horreur de l’odeur forte des agrumes, ce qui les dissuade généralement d’y goûter."
       }
     }
   ],
@@ -237,6 +257,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "74df0669b6b8783387d09a54412b5c2c3c628ec63f646c961c0b32b8c711b2f1"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bcd872a3bb9059ea2838b01e35aa2e7886a857086b045fe0edd857b39e7e71bd"
     }
   }
 }
