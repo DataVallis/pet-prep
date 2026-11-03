@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Mandarins",
-    "sl": "Mandarine"
+    "sl": "Mandarine",
+    "cs": "Mandarinky"
   },
   "question": {
     "en": "Can dogs eat mandarins?",
-    "sl": "Ali lahko psi jedo mandarine?"
+    "sl": "Ali lahko psi jedo mandarine?",
+    "cs": "Mohou psi jíst mandarinky?"
   },
   "url_slug": {
     "en": "mandarins",
-    "sl": "mandarine"
+    "sl": "mandarine",
+    "cs": "mandarinky"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, mandarins aren't toxic to dogs and can be given in small amounts, much like oranges. Remove the peel and any seeds first, and keep portions small, because mandarins contain natural sugars.",
-    "sl": "Da, mandarine za pse niso strupene in jih lahko, podobno kot pomaranče, dajete v majhnih količinah. Najprej odstranite lupino in morebitne pečke, porcije pa naj bodo majhne, ker mandarine vsebujejo naravne sladkorje."
+    "sl": "Da, mandarine za pse niso strupene in jih lahko, podobno kot pomaranče, dajete v majhnih količinah. Najprej odstranite lupino in morebitne pečke, porcije pa naj bodo majhne, ker mandarine vsebujejo naravne sladkorje.",
+    "cs": "Ano, mandarinky pro psy nejsou toxické a podobně jako pomeranče je lze dávat v malém množství. Nejdřív odstraňte slupku a případná semínka a držte porce malé, protože mandarinky obsahují přirozené cukry."
   },
   "why": {
     "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
-    "sl": "Mandarine vsebujejo podobna hranila kot pomaranče, med drugim vitamin C in vlaknine, a tudi naravne sladkorje. Tako kot pri pomarančah je lupina trda in težko prebavljiva ter lahko poveča tveganje za zaporo, s pečkami pa se pes lahko zaduši, zlasti če je manjši. Tako kot pri pomarančah lahko preveč sadeža povzroči prebavne težave, tudi drisko."
+    "sl": "Mandarine vsebujejo podobna hranila kot pomaranče, med drugim vitamin C in vlaknine, a tudi naravne sladkorje. Tako kot pri pomarančah je lupina trda in težko prebavljiva ter lahko poveča tveganje za zaporo, s pečkami pa se pes lahko zaduši, zlasti če je manjši. Tako kot pri pomarančah lahko preveč sadeža povzroči prebavne težave, tudi drisko.",
+    "cs": "Mandarinky obsahují podobné živiny jako pomeranče, včetně vitaminu C a vlákniny, ale také přirozené cukry. Stejně jako u pomerančů je slupka tuhá a špatně stravitelná a může zvýšit riziko ucpání střev a semínka mohou způsobit dušení, zvlášť u menších psů. Stejně jako u pomerančů může příliš mnoho mandarinek způsobit zažívací potíže, včetně průjmu."
   },
   "signs": null,
   "what_to_do": {
     "en": "Don't give your dog the peel: as with oranges, it is hard to digest and can raise the risk of a blockage in the gut, which in some cases needs veterinary help.",
-    "sl": "Psu ne dajajte lupine: tako kot pri pomarančah je težko prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč."
+    "sl": "Psu ne dajajte lupine: tako kot pri pomarančah je težko prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč.",
+    "cs": "Slupku psovi nedávejte: stejně jako u pomerančů se špatně tráví a může zvýšit riziko ucpání střev, které v některých případech vyžaduje veterinární pomoc."
   },
   "serving": {
     "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
-    "sl": "Olupljene, brez pečk, v majhnih koščkih; majhne porcije kot občasen priboljšek."
+    "sl": "Olupljene, brez pečk, v majhnih koščkih; majhne porcije kot občasen priboljšek.",
+    "cs": "Oloupané, bez semínek, v malých kouscích; malé porce jako občasný pamlsek."
   },
   "child": {
     "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
-    "sl": "Pes lahko dobi droben košček mandarine! Odrasel najprej odstrani lupino in pečke."
+    "sl": "Pes lahko dobi droben košček mandarine! Odrasel najprej odstrani lupino in pečke.",
+    "cs": "Pes může dostat malinký kousek mandarinky! Dospělý nejdřív odstraní slupku a semínka."
   },
   "faq": [
     {
       "q": {
         "en": "Are mandarins different from oranges for dogs?",
-        "sl": "Ali so mandarine za pse drugačne od pomaranč?"
+        "sl": "Ali so mandarine za pse drugačne od pomaranč?",
+        "cs": "Jsou mandarinky pro psy jiné než pomeranče?"
       },
       "a": {
         "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
-        "sl": "Ne kaj dosti: imajo podobna hranila in naravne sladkorje, veljajo pa enaka pravila – odstranite lupino in pečke ter dajajte majhne porcije."
+        "sl": "Ne kaj dosti: imajo podobna hranila in naravne sladkorje, veljajo pa enaka pravila – odstranite lupino in pečke ter dajajte majhne porcije.",
+        "cs": "Moc ne: mají podobné živiny a přirozené cukry a platí stejná pravidla – sloupněte slupku, odstraňte semínka a držte porce malé."
       }
     }
   ],
@@ -97,6 +107,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d12496067e17f1a70cf6dac11a2ac1a0d29f091de2686e30f85850b02ee56546"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1be64b06beb913e1ca9ed8f6bc51f2470e6998900ca0181d2a6f405fe3e8f6ab"
     }
   }
 }

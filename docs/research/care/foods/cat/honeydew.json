@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Honeydew melon",
-    "sl": "Medena melona"
+    "sl": "Medena melona",
+    "cs": "Medový meloun"
   },
   "question": {
     "en": "Can cats eat honeydew melon?",
-    "sl": "Ali lahko mačke jedo medeno melono?"
+    "sl": "Ali lahko mačke jedo medeno melono?",
+    "cs": "Mohou kočky jíst medový meloun?"
   },
   "url_slug": {
     "en": "honeydew",
-    "sl": "medena-melona"
+    "sl": "medena-melona",
+    "cs": "medovy-meloun"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of honeydew melon is fine as an occasional treat. The ASPCA lists honeydew as non-toxic to cats, but cats are meat eaters and don't need fruit, and any plant can upset the stomach, so keep it to a tiny extra.",
-    "sl": "Da, majhen košček medene melone je v redu kot občasen priboljšek. ASPCA medeno melono navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči želodčne težave, zato naj bo le majhen dodatek."
+    "sl": "Da, majhen košček medene melone je v redu kot občasen priboljšek. ASPCA medeno melono navaja kot nestrupeno za mačke, vendar so mačke mesojede in sadja ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči želodčne težave, zato naj bo le majhen dodatek.",
+    "cs": "Ano, malý kousek medového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí medový meloun jako netoxický pro kočky, ale kočky jsou masožravci, ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
-    "sl": "ASPCA medeno melono (Cucumis melo) navaja kot nestrupeno za mačke, veterinarska bolnišnica NC State pa jo uvršča med sadne priboljške za mačke in pse. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+    "sl": "ASPCA medeno melono (Cucumis melo) navaja kot nestrupeno za mačke, veterinarska bolnišnica NC State pa jo uvršča med sadne priboljške za mačke in pse. Mačke so obligatni mesojedci in sadja ne potrebujejo; priboljški naj bodo le majhen del dnevne hrane, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
+    "cs": "ASPCA uvádí medový meloun (Cucumis melo) jako netoxický pro kočky a veterinární nemocnice univerzity NC State ho řadí mezi ovocné pamlsky pro kočky i psy. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer only a small piece. Any plant material can cause vomiting or stomach upset in cats.",
-    "sl": "Ponudite le majhen košček. Vsaka rastlinska hrana lahko pri mačkah povzroči bruhanje ali želodčne težave."
+    "sl": "Ponudite le majhen košček. Vsaka rastlinska hrana lahko pri mačkah povzroči bruhanje ali želodčne težave.",
+    "cs": "Nabídněte jen malý kousek. Jakákoli rostlinná potrava může u koček vyvolat zvracení nebo podráždění žaludku."
   },
   "serving": {
     "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
-    "sl": "Občasno majhen košček sadeža, všteti ga je treba v dnevno količino hrane."
+    "sl": "Občasno majhen košček sadeža, všteti ga je treba v dnevno količino hrane.",
+    "cs": "Občas malý kousek melounu, započítaný do denní dávky krmiva vaší kočky."
   },
   "child": {
     "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
-    "sl": "Majhen košček medene melone je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek."
+    "sl": "Majhen košček medene melone je za muco občasno v redu. Muce potrebujejo predvsem meso, zato je sadje le majhen dodatek.",
+    "cs": "Kousíček medového melounu je pro kočku občas v pohodě. Kočky potřebují hlavně maso, takže ovoce je jen malý přídavek."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need fruit?",
-        "sl": "Ali mačke potrebujejo sadje?"
+        "sl": "Ali mačke potrebujejo sadje?",
+        "cs": "Potřebují kočky ovoce?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
-        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek."
+        "sl": "Ne. Mačke so mesojede: hranila, ki jih potrebujejo, dobijo iz mesa, sadja in zelenjave pa v prehrani ne potrebujejo. Sadje je lahko le majhen dodatek.",
+        "cs": "Ne. Kočky jsou masožravci: potřebují živiny, které obsahuje maso, a ovoce ani zeleninu ve stravě nepotřebují. Ovoce může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -106,6 +116,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "df0d0df6665ed439f772d8624691668c35a39d49f3a525dd9b2361dbd045b61b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6be00d1698bacdccfd8b106e56cd8e21ee5ab38ecc4d00212c538eaa317c5986"
     }
   }
 }

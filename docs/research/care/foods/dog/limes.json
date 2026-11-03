@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Limes",
-    "sl": "Limete"
+    "sl": "Limete",
+    "cs": "Limetky"
   },
   "question": {
     "en": "Can dogs eat limes?",
-    "sl": "Ali lahko psi jedo limete?"
+    "sl": "Ali lahko psi jedo limete?",
+    "cs": "Mohou psi jíst limetky?"
   },
   "url_slug": {
     "en": "limes",
-    "sl": "limete"
+    "sl": "limete",
+    "cs": "limetky"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it's best not to feed limes to dogs. The fruit itself is not toxic, but lime rinds and their oils are dangerous for dogs, and the acid can upset the stomach. Most dogs dislike the taste and smell anyway.",
-    "sl": "Ne, limet je bolje psom ne dajati. Sadež sam ni strupen, lupine limet in njihova olja pa so za pse nevarna, kislina pa lahko razburi želodec. Večini psov okus in vonj limet tako ali tako nista všeč."
+    "sl": "Ne, limet je bolje psom ne dajati. Sadež sam ni strupen, lupine limet in njihova olja pa so za pse nevarna, kislina pa lahko razburi želodec. Večini psov okus in vonj limet tako ali tako nista všeč.",
+    "cs": "Ne, limetky psům raději nedávejte. Samotný plod není toxický, ale kůra limetek a její oleje jsou pro psy nebezpečné a kyselina může podráždit žaludek. Většině psů se chuť i vůně stejně nelíbí."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
-    "sl": "ASPCA limetovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da limete niso strupene, a odsvetuje dajanje, PDSA pa jih navaja kot neprimerne, ker so zelo kisle. V velikih količinah lahko citronska kislina povzroči prebavne težave in celo upočasnjeno delovanje živčevja ter izgubo koordinacije. Limetin sok je zgoščen in ga psom ne dajajte. Izbrali smo stopnjo »ni priporočljivo«, ker meso ni strupeno, nevarne pa so lupina, olja in velike količine."
+    "sl": "ASPCA limetovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da limete niso strupene, a odsvetuje dajanje, PDSA pa jih navaja kot neprimerne, ker so zelo kisle. V velikih količinah lahko citronska kislina povzroči prebavne težave in celo upočasnjeno delovanje živčevja ter izgubo koordinacije. Limetin sok je zgoščen in ga psom ne dajajte. Izbrali smo stopnjo »ni priporočljivo«, ker meso ni strupeno, nevarne pa so lupina, olja in velike količine.",
+    "cs": "ASPCA řadí limetkovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům a zároveň poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC uvádí, že limetky nejsou toxické, ale nedoporučuje je psům dávat, a PDSA je řadí mezi nebezpečné potraviny, protože jsou velmi kyselé. Ve velkém množství může kyselina citronová způsobit žaludeční potíže a dokonce útlum nervové soustavy a ztrátu koordinace. Limetková šťáva je koncentrovaná a psům by se dávat neměla. Používáme označení „nedoporučuje se“, protože dužina toxická není, nebezpečné jsou kůra, oleje a velké množství."
   },
   "signs": {
     "en": [
@@ -40,26 +45,39 @@
       "Znaki zapore v prebavilih",
       "Tresenje",
       "Močno slinjenje"
+    ],
+    "cs": [
+      "Únava, malátnost",
+      "Zvracení",
+      "Průjem",
+      "Nechuť k jídlu",
+      "Známky ucpání střev",
+      "Třes nebo chvění",
+      "Nadměrné slinění"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate a lot of limes, watch for these signs and contact your vet right away. Throw away rinds where your dog can't reach them, and don't encourage it to play with fallen limes.",
-    "sl": "Če je pes pojedel veliko limet, bodite pozorni na te znake in takoj pokličite veterinarja. Lupine odvrzite tja, kamor jih pes ne more doseči, in ga ne spodbujajte k igri s padlimi limetami."
+    "sl": "Če je pes pojedel veliko limet, bodite pozorni na te znake in takoj pokličite veterinarja. Lupine odvrzite tja, kamor jih pes ne more doseči, in ga ne spodbujajte k igri s padlimi limetami.",
+    "cs": "Pokud váš pes snědl hodně limetek, sledujte tyto příznaky a okamžitě se obraťte na veterináře. Kůru vyhazujte tak, aby na ni pes nedosáhl, a nenechte ho hrát si s popadanými limetkami."
   },
   "serving": null,
   "child": {
     "en": "Limes are too sour for dogs and can upset their tummy. Keep limes and their peels away from your dog.",
-    "sl": "Limete so za pse prekisle in jim lahko razburijo trebušček. Limete in njihove lupine pospravi stran od psa."
+    "sl": "Limete so za pse prekisle in jim lahko razburijo trebušček. Limete in njihove lupine pospravi stran od psa.",
+    "cs": "Limetky jsou pro psy příliš kyselé a mohou je rozbolet bříško. Limetky i jejich slupky drž od psa dál."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs have lime juice?",
-        "sl": "Ali lahko psi pijejo limetin sok?"
+        "sl": "Ali lahko psi pijejo limetin sok?",
+        "cs": "Může pes dostat limetkovou šťávu?"
       },
       "a": {
         "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
-        "sl": "Ne. Limetin sok je zgoščena oblika mesa sadeža, zato ga psom ne dajajte."
+        "sl": "Ne. Limetin sok je zgoščena oblika mesa sadeža, zato ga psom ne dajajte.",
+        "cs": "Ne. Limetková šťáva je koncentrovaná dužina plodu, a proto by se psům dávat neměla."
       }
     }
   ],
@@ -165,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dbba63f3d28b840912170eb31224fa5a565be57aef0d6e4227a430c786d3d09e"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "599edd7f47f7102304ada1fe0e7c6f73c6b341dab99f52e153f2e242fc048fd2"
     }
   }
 }

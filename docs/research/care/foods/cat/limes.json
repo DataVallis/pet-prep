@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Limes",
-    "sl": "Limete"
+    "sl": "Limete",
+    "cs": "Limetky"
   },
   "question": {
     "en": "Can cats eat limes?",
-    "sl": "Ali lahko mačke jedo limete?"
+    "sl": "Ali lahko mačke jedo limete?",
+    "cs": "Mohou kočky jíst limetky?"
   },
   "url_slug": {
     "en": "limes",
-    "sl": "limete"
+    "sl": "limete",
+    "cs": "limetky"
   },
   "level": "dangerous",
   "answer": {
     "en": "No, it's best not to. The ASPCA lists the lime plant as toxic to cats because of its essential oils and psoralens. The fruit flesh is edible, but the peel and plant parts can cause problems, and citrus fruits are bad for cats, so keep limes for people.",
-    "sl": "Ne, raje ne. ASPCA navaja limetovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo limete le za ljudi."
+    "sl": "Ne, raje ne. ASPCA navaja limetovec kot rastlino, strupeno za mačke, zaradi eteričnih olj in psoralenov. Sadno meso je sicer užitno, olupek in deli rastline pa lahko povzročijo težave. Citrusi mačkam škodijo, zato naj bodo limete le za ljudi.",
+    "cs": "Ne, raději ne. ASPCA řadí limetkovník mezi rostliny toxické pro kočky kvůli obsahu éterických olejů a psoralenů. Dužina je sice jedlá, ale slupka a ostatní části rostliny mohou způsobit potíže a citrusy kočkám obecně škodí, proto limetky nechte lidem."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
-    "sl": "ASPCA navaja limetovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo."
+    "sl": "ASPCA navaja limetovec kot rastlino, strupeno za mačke: vsebuje eterična olja in psoralene; sadež je sicer užiten, olupek in deli rastline pa lahko povzročijo težave. Cats Protection navaja, da citrusi mačkam škodijo in lahko povzročijo neugodje v trebuhu, bruhanje in drisko, veterinarska bolnišnica NC State pa citruse uvršča med živila, ki lahko pri mačkah in psih povzročijo bruhanje ali drisko. Cats Protection dodaja, da majhna pokušina verjetno ne bo povzročila hude reakcije. Ker so viri različno strogi, upoštevamo strožji nasvet in deljenja ne priporočamo.",
+    "cs": "ASPCA řadí limetkovník mezi rostliny toxické pro kočky: obsahuje éterické oleje a psoraleny a plod je sice jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže. Cats Protection uvádí, že citrusy kočkám škodí a mohou vyvolat žaludeční potíže, zvracení a průjem, a veterinární nemocnice univerzity NC State řadí citrusy mezi potraviny, které mohou u koček i psů způsobit zvracení nebo průjem. Cats Protection dodává, že malé ochutnání pravděpodobně nezpůsobí vážnou reakci. Zdroje nejsou stejně přísné, proto se řídíme přísnějším doporučením a nedoporučujeme limetky kočkám dávat."
   },
   "signs": {
     "en": [
@@ -36,46 +41,61 @@
       "Neugodje v trebuhu",
       "Potrtost",
       "Možno vnetje kože (dermatitis)"
+    ],
+    "cs": [
+      "Zvracení",
+      "Průjem",
+      "Žaludeční potíže",
+      "Skleslost",
+      "Možné podráždění kůže (dermatitida)"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate peel, leaves or other plant parts, or shows signs such as vomiting or diarrhoea, contact your vet or a pet poison helpline as soon as possible. Note what was eaten and when.",
-    "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj."
+    "sl": "Če je mačka pojedla olupek, liste ali druge dele rastline ali če opazite znake, kot sta bruhanje ali driska, se čim prej obrnite na veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj.",
+    "cs": "Pokud kočka snědla slupku, listy či jiné části rostliny nebo se u ní objeví příznaky, například zvracení či průjem, co nejdříve se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla a kdy."
   },
   "serving": null,
   "child": {
     "en": "Limes are a people snack. Cats don't like the smell, and citrus can upset their tummy, so keep limes for people.",
-    "sl": "Limete so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase."
+    "sl": "Limete so prigrizek za ljudi. Mucam vonj ni všeč in citrusi jim lahko razburkajo trebušček, zato jih imej le zase.",
+    "cs": "Limetky jsou svačinka pro lidi. Kočky jejich vůni nemají rády a z citrusů je může rozbolet bříško, takže limetky nech lidem."
   },
   "faq": [
     {
       "q": {
         "en": "Which part is the problem?",
-        "sl": "Kateri del je težava?"
+        "sl": "Kateri del je težava?",
+        "cs": "Která část způsobuje potíže?"
       },
       "a": {
         "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
-        "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene."
+        "sl": "ASPCA navaja, da je sadež užiten, olupek in deli rastline pa lahko povzročijo težave, ker vsebujejo eterična olja in psoralene.",
+        "cs": "ASPCA uvádí, že plod je jedlý, ale slupky a ostatní části rostliny mohou způsobit potíže, protože obsahují éterické oleje a psoraleny."
       }
     },
     {
       "q": {
         "en": "My cat had a tiny taste. Is that an emergency?",
-        "sl": "Moja mačka je le malo poskusila. Je to nujno?"
+        "sl": "Moja mačka je le malo poskusila. Je to nujno?",
+        "cs": "Moje kočka jen kousek ochutnala. Je to naléhavý případ?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
-        "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi."
+        "sl": "Cats Protection svetuje, naj vas ne zajame panika, če mačka poskusi krhelj ali vam poliže prste; za hudo reakcijo bi morala pojesti veliko. Bodite pozorni na bruhanje ali drisko in se posvetujte z veterinarjem, če vas skrbi.",
+        "cs": "Cats Protection radí nepanikařit, když kočka ochutná dílek nebo olízne vaše prsty: aby jí hrozila vážná reakce, musela by sníst hodně. Sledujte, zda se neobjeví zvracení nebo průjem, a pokud máte obavy, poraďte se s veterinářem."
       }
     },
     {
       "q": {
         "en": "Why do cats usually avoid citrus?",
-        "sl": "Zakaj se mačke citrusom navadno izogibajo?"
+        "sl": "Zakaj se mačke citrusom navadno izogibajo?",
+        "cs": "Proč se kočky citrusům obvykle vyhýbají?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
-        "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo."
+        "sl": "Cats Protection navaja, da mačkam močan vonj citrusov po naravi ni všeč, zato se jim navadno izogibajo.",
+        "cs": "Cats Protection uvádí, že kočky mají přirozenou nechuť k silné citrusové vůni, a proto citrusy většinou nejedí."
       }
     }
   ],
@@ -162,6 +182,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a9922a3f6164cb3c880115b91ce95c73e52e7bbd3e231b0b526285767796a877"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fcd9805447479b30591d04dc49cae079ea26eb7ae0d9b7f5b4854df47cd04dcf"
     }
   }
 }

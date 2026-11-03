@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Honeydew melon",
-    "sl": "Medena melona"
+    "sl": "Medena melona",
+    "cs": "Medový meloun"
   },
   "question": {
     "en": "Can dogs eat honeydew melon?",
-    "sl": "Ali lahko psi jedo medeno melono?"
+    "sl": "Ali lahko psi jedo medeno melono?",
+    "cs": "Mohou psi jíst medový meloun?"
   },
   "url_slug": {
     "en": "honeydew",
-    "sl": "medena-melona"
+    "sl": "medena-melona",
+    "cs": "medovy-meloun"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, sparingly. Honeydew is not toxic to dogs, but it is high in sugar, so give only a little as an occasional treat, and ask your vet first if your dog has diabetes. Remove the rind and seeds.",
-    "sl": "Da, v majhnih količinah. Medena melona za pse ni strupena, a vsebuje veliko sladkorja, zato je dajajte le malo kot občasen priboljšek; če ima pes sladkorno bolezen, najprej vprašajte veterinarja. Odstranite lupino in pečke."
+    "sl": "Da, v majhnih količinah. Medena melona za pse ni strupena, a vsebuje veliko sladkorja, zato je dajajte le malo kot občasen priboljšek; če ima pes sladkorno bolezen, najprej vprašajte veterinarja. Odstranite lupino in pečke.",
+    "cs": "Ano, střídmě. Medový meloun pro psy není toxický, ale obsahuje hodně cukru, proto ho dávejte jen málo a jen občas jako pamlsek. Pokud má váš pes cukrovku, nejdřív se zeptejte veterináře. Odstraňte slupku a semínka."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
-    "sl": "ASPCA medeno melono uvršča med rastline, ki za pse niso strupene, glavni veterinar AKC pa jo med melonami predlaga za zamrznjene priboljške. Plod vsebuje veliko sladkorja, zato morda ni primeren za pse s sladkorno boleznijo. Lupina lahko povzroči prebavne težave ali zaporo črevesja, pečke pa niso strupene, a se pes z njimi lahko zaduši."
+    "sl": "ASPCA medeno melono uvršča med rastline, ki za pse niso strupene, glavni veterinar AKC pa jo med melonami predlaga za zamrznjene priboljške. Plod vsebuje veliko sladkorja, zato morda ni primeren za pse s sladkorno boleznijo. Lupina lahko povzroči prebavne težave ali zaporo črevesja, pečke pa niso strupene, a se pes z njimi lahko zaduši.",
+    "cs": "ASPCA uvádí medový meloun jako netoxický pro psy a hlavní veterinář AKC ho zmiňuje mezi melouny vhodnými na zmrazené pamlsky. Plod obsahuje hodně cukru, proto nemusí být vhodný pro psy s cukrovkou. Slupka může způsobit zažívací potíže nebo ucpání střev a semínka sice nejsou toxická, ale mohou způsobit dušení."
   },
   "signs": null,
   "what_to_do": {
     "en": "Talk to your vet before adding honeydew to your dog's diet, especially if your dog has diabetes.",
-    "sl": "Preden psu ponudite medeno melono, se posvetujte z veterinarjem, zlasti če ima pes sladkorno bolezen."
+    "sl": "Preden psu ponudite medeno melono, se posvetujte z veterinarjem, zlasti če ima pes sladkorno bolezen.",
+    "cs": "Než medový meloun zařadíte do psího jídelníčku, poraďte se s veterinářem, zvlášť pokud má váš pes cukrovku."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
-    "sl": "Samo meso, brez lupine in pečk, narezano na majhne kocke; lahko ga tudi zmeljete v pire in zamrznete kot priboljšek."
+    "sl": "Samo meso, brez lupine in pečk, narezano na majhne kocke; lahko ga tudi zmeljete v pire in zamrznete kot priboljšek.",
+    "cs": "Jen dužina, bez slupky a semínek, nakrájená na malé kostičky; můžete ji také rozmixovat a zmrazit jako pamlsek."
   },
   "child": {
     "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
-    "sl": "Psi se lahko posladkajo s koščkom medene melone! Odrasel najprej odstrani trdo lupino in pečke."
+    "sl": "Psi se lahko posladkajo s koščkom medene melone! Odrasel najprej odstrani trdo lupino in pečke.",
+    "cs": "Psi si můžou pochutnat na kousku medového melounu! Dospělý nejdřív odstraní tvrdou slupku a semínka."
   },
   "faq": [
     {
       "q": {
         "en": "Is honeydew okay for a dog with diabetes?",
-        "sl": "Je medena melona primerna za psa s sladkorno boleznijo?"
+        "sl": "Je medena melona primerna za psa s sladkorno boleznijo?",
+        "cs": "Hodí se medový meloun pro psa s cukrovkou?"
       },
       "a": {
         "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
-        "sl": "Morda ne, ker medena melona vsebuje veliko sladkorja. Najprej vprašajte veterinarja."
+        "sl": "Morda ne, ker medena melona vsebuje veliko sladkorja. Najprej vprašajte veterinarja.",
+        "cs": "Nemusí být vhodný, protože medový meloun obsahuje velmi hodně cukru. Nejdřív se zeptejte veterináře."
       }
     },
     {
       "q": {
         "en": "What if my dog swallowed a seed?",
-        "sl": "Kaj, če je pes pogoltnil pečko?"
+        "sl": "Kaj, če je pes pogoltnil pečko?",
+        "cs": "Co když můj pes spolkl semínko?"
       },
       "a": {
         "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
-        "sl": "Pečke medene melone niso strupene in ena pečka verjetno ni razlog za skrb, a se pes z njimi lahko zaduši, zato jih pred serviranjem odstranite."
+        "sl": "Pečke medene melone niso strupene in ena pečka verjetno ni razlog za skrb, a se pes z njimi lahko zaduši, zato jih pred serviranjem odstranite.",
+        "cs": "Semínka medového melounu nejsou toxická a jedno semínko pravděpodobně není důvod k obavám, ale semínka mohou způsobit dušení, proto je před podáváním odstraňte."
       }
     }
   ],
@@ -115,6 +127,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "726153a2467e8d7eeed8fffa2e6d688f270da5cb51bdc9030176fbffbbe588c0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a93c3c8c941453602148290a31637fb89b9a5915d66d270bd4a2ed282e94bf3"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Grapefruit",
-    "sl": "Grenivka"
+    "sl": "Grenivka",
+    "cs": "Grapefruit"
   },
   "question": {
     "en": "Can dogs eat grapefruit?",
-    "sl": "Ali lahko psi jedo grenivko?"
+    "sl": "Ali lahko psi jedo grenivko?",
+    "cs": "Mohou psi jíst grapefruit?"
   },
   "url_slug": {
     "en": "grapefruit",
-    "sl": "grenivka"
+    "sl": "grenivka",
+    "cs": "grapefruit"
   },
   "level": "not_recommended",
   "answer": {
     "en": "No, it's best not to feed grapefruit to dogs. The flesh isn't toxic, but its high citric acid can upset a dog's stomach, and the skin and rind are toxic to dogs because of their essential oils.",
-    "sl": "Ne, grenivke je bolje psom ne dajati. Meso ni strupeno, a veliko citronske kisline lahko psu razburi želodec, lupina pa je za pse strupena zaradi eteričnih olj, ki jih vsebuje."
+    "sl": "Ne, grenivke je bolje psom ne dajati. Meso ni strupeno, a veliko citronske kisline lahko psu razburi želodec, lupina pa je za pse strupena zaradi eteričnih olj, ki jih vsebuje.",
+    "cs": "Ne, grapefruit psům raději nedávejte. Dužina sice není toxická, ale vysoký obsah kyseliny citronové může psovi podráždit žaludek a slupka i kůra jsou pro psy kvůli éterickým olejům toxické."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
-    "sl": "ASPCA grenivko zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da meso ni strupeno, a se mu je bolje izogniti, deloma zaradi veliko citronske kisline, lupina pa je strupena zaradi naravnih eteričnih olj. PDSA grenivko navaja kot neprimerno, ker je zelo kisla. Izbrali smo stopnjo »ni priporočljivo«, ker meso samo ni strupeno, nevarna pa je lupina."
+    "sl": "ASPCA grenivko zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da meso ni strupeno, a se mu je bolje izogniti, deloma zaradi veliko citronske kisline, lupina pa je strupena zaradi naravnih eteričnih olj. PDSA grenivko navaja kot neprimerno, ker je zelo kisla. Izbrali smo stopnjo »ni priporočljivo«, ker meso samo ni strupeno, nevarna pa je lupina.",
+    "cs": "ASPCA řadí grapefruitovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům a zároveň poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC uvádí, že dužina není toxická, ale je lepší se jí vyhnout, mimo jiné kvůli vysokému obsahu kyseliny citronové, a že slupka a kůra jsou toxické kvůli přirozeným éterickým olejům. PDSA řadí grapefruit mezi nebezpečné potraviny, protože je velmi kyselý. Používáme označení „nedoporučuje se“, protože dužina sama toxická není, nebezpečná je slupka a kůra."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Driska",
       "Potrtost (malo energije, slaba volja)",
       "Draženje kože"
+    ],
+    "cs": [
+      "Podrážděný žaludek",
+      "Zvracení",
+      "Průjem",
+      "Skleslost (nedostatek energie, pes působí smutně)",
+      "Podráždění kůže"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate grapefruit skin or rind, call your vet or an emergency vet clinic right away. If it ate a large amount of the flesh, contact your vet too.",
-    "sl": "Če je pes pojedel lupino grenivke, takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Če je pojedel veliko mesa, prav tako pokličite veterinarja."
+    "sl": "Če je pes pojedel lupino grenivke, takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Če je pojedel veliko mesa, prav tako pokličite veterinarja.",
+    "cs": "Pokud váš pes snědl slupku nebo kůru grapefruitu, okamžitě zavolejte veterináři nebo na nonstop veterinární pohotovost. Také když snědl velké množství dužiny, obraťte se na veterináře."
   },
   "serving": null,
   "child": {
     "en": "Grapefruit is too sour for dogs and can give them a tummy ache. Keep grapefruit and its peel for people.",
-    "sl": "Grenivka je za pse prekisla in jih lahko boli trebušček. Grenivka in njena lupina sta za ljudi."
+    "sl": "Grenivka je za pse prekisla in jih lahko boli trebušček. Grenivka in njena lupina sta za ljudi.",
+    "cs": "Grapefruit je pro psy příliš kyselý a může je z něj rozbolet bříško. Grapefruit i jeho slupku nech lidem."
   },
   "faq": [
     {
       "q": {
         "en": "What if my dog ate grapefruit peel?",
-        "sl": "Kaj, če je pes pojedel lupino grenivke?"
+        "sl": "Kaj, če je pes pojedel lupino grenivke?",
+        "cs": "Co když můj pes snědl slupku grapefruitu?"
       },
       "a": {
         "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
-        "sl": "Takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Lupina je za pse strupena zaradi eteričnih olj."
+        "sl": "Takoj pokličite veterinarja ali nujno veterinarsko ambulanto. Lupina je za pse strupena zaradi eteričnih olj.",
+        "cs": "Okamžitě zavolejte veterináři nebo na nonstop veterinární pohotovost. Slupka a kůra jsou pro psy toxické kvůli éterickým olejům."
       }
     }
   ],
@@ -125,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "93a643acec681db358ab0b3f5e818a90b03abf3caae9fd9d2af6cffdc2ce0378"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3e4f606570991ea1026ff70f576fe9cdb013e3aa1ed7f6ac3f653fc3d2575d8e"
     }
   }
 }

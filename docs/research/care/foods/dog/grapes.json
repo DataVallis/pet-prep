@@ -63,7 +63,7 @@
     "pt": "Não. Os cães nunca devem comer uvas. As uvas podem causar insuficiência renal nos cães, e mesmo uma pequena quantidade pode pôr um cão gravemente doente. Não há forma de prever que cães serão afetados, por isso qualquer uva é motivo para ligar ao veterinário.",
     "nl": "Nee. Honden mogen nooit druiven eten. Druiven kunnen bij honden nierfalen veroorzaken, en zelfs een kleine hoeveelheid kan een hond ernstig ziek maken. Niemand kan voorspellen welke honden erop reageren, dus elke druif is een reden om de dierenarts te bellen.",
     "pl": "Nie. Psy nigdy nie powinny jeść winogron. Winogrona mogą wywołać u psów niewydolność nerek, a nawet mała ilość może poważnie zaszkodzić. Nie da się przewidzieć, których psów to dotknie, więc każde zjedzone winogrono to powód, by zadzwonić do weterynarza.",
-    "cs": "Ne. Psi by nikdy neměli jíst hrozny. Hrozny mohou u psů způsobit selhání ledvin a vážně onemocnět může pes i po malém množství. Nelze předvídat, kterého psa to postihne, proto je každá snědené zrnko důvodem zavolat veterináři.",
+    "cs": "Ne. Psi by nikdy neměli jíst hrozny. Hrozny mohou u psů způsobit selhání ledvin a vážně onemocnět může pes i po malém množství. Nelze předvídat, kterého psa to postihne, proto je každé snědené zrnko důvodem zavolat veterináři.",
     "hr": "Ne. Psi nikad ne smiju jesti grožđe. Grožđe kod pasa može izazvati zatajenje bubrega, a čak i mala količina može psa ozbiljno razboljeti. Nemoguće je predvidjeti koji će psi biti pogođeni, zato je svaka bobica grožđa razlog da nazoveš veterinara.",
     "sv": "Nej. Hundar ska aldrig äta vindruvor. Vindruvor kan orsaka njursvikt hos hundar, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas, så varje vindruva är ett skäl att ringa veterinären.",
     "da": "Nej. Hunde må aldrig spise vindruer. Vindruer kan give nyresvigt hos hunde, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket, så enhver vindrue er en grund til at ringe til dyrlægen.",
@@ -237,7 +237,7 @@
     "pt": "As uvas não são para cães, nem uma só. Podem fazer mal aos rins do cão. Se o teu cão comer uma, avisa logo um adulto.",
     "nl": "Druiven zijn niet voor honden, zelfs niet één. Ze kunnen de nieren van een hond beschadigen. Eet je hond er een? Vertel het meteen aan een volwassene.",
     "pl": "Winogrona nie są dla psów, nawet jedno. Mogą uszkodzić psu nerki. Jeśli twój pies zje winogrono, od razu powiedz dorosłemu.",
-    "cs": "Hrozny psům nepatří, ani jediné zrnko. Můžou psovi poškodit ledviny. Když pes nějakou sní, hned to řekni dospělému.",
+    "cs": "Hrozny psům nepatří, ani jediné zrnko. Můžou psovi poškodit ledviny. Když pes nějaké zrnko sní, hned to řekni dospělému.",
     "hr": "Grožđe nije za pse, ni jedna jedina bobica. Može naštetiti psećim bubrezima. Ako pas pojede bobicu, odmah reci odrasloj osobi.",
     "sv": "Vindruvor är inte för hundar, inte ens en enda. De kan skada hundens njurar. Om din hund äter en, säg till en vuxen direkt.",
     "da": "Vindruer er ikke til hunde, ikke engang én. De kan skade hundens nyrer. Hvis din hund spiser en, så sig det til en voksen med det samme.",
@@ -256,7 +256,7 @@
         "pt": "Uma uva é perigosa para um cão?",
         "nl": "Is één druif gevaarlijk voor een hond?",
         "pl": "Czy jedno winogrono jest niebezpieczne dla psa?",
-        "cs": "Je jedno zrnko hroznu pro psa nebezpečná?",
+        "cs": "Je jedno zrnko hroznu pro psa nebezpečné?",
         "hr": "Je li jedna bobica grožđa opasna za psa?",
         "sv": "Är en enda vindruva farlig för en hund?",
         "da": "Er én vindrue farlig for en hund?",
@@ -273,7 +273,7 @@
         "pt": "Pode ser. Ninguém consegue prever que cães vão reagir, por isso qualquer uva comida é motivo para contactar o teu veterinário.",
         "nl": "Dat kan. Niemand kan voorspellen welke honden reageren, dus elke gegeten druif is een reden om contact op te nemen met je dierenarts.",
         "pl": "Może być. Nikt nie potrafi przewidzieć, które psy zareagują, więc każde zjedzone winogrono to powód, by skontaktować się z weterynarzem.",
-        "cs": "Může být. Nikdo nedokáže předvídat, který pes zareaguje, proto je každá snědené zrnko důvodem obrátit se na veterináře.",
+        "cs": "Může být. Nikdo nedokáže předvídat, který pes zareaguje, proto je každé snědené zrnko důvodem obrátit se na veterináře.",
         "hr": "Može biti. Nitko ne može predvidjeti koji će psi reagirati, zato je svaka pojedena bobica grožđa razlog da se obratiš veterinaru.",
         "sv": "Det kan den vara. Ingen kan förutsäga vilka hundar som reagerar, så varje uppäten vindruva är ett skäl att kontakta veterinären.",
         "da": "Det kan den være. Ingen kan forudsige hvilke hunde der reagerer, så enhver vindrue som hunden har spist, er en grund til at kontakte din dyrlæge.",
@@ -428,7 +428,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d3b3cc3c079ec3152284fd1999d932b960707207ac3e16eb76575258c3205dc0"
+      "verified_hash": "84e133f27d598ec07e48d30e5480666614992a5158c009326a321d15b1b38ae5"
     },
     "hr": {
       "status": "verified",
