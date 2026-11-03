@@ -4,68 +4,80 @@
   "name": {
     "en": "Coconut",
     "sl": "Kokos",
-    "de": "Kokosnuss"
+    "de": "Kokosnuss",
+    "fr": "Noix de coco"
   },
   "question": {
     "en": "Can dogs eat coconut?",
     "sl": "Ali lahko psi jedo kokos?",
-    "de": "Dürfen Hunde Kokosnuss fressen?"
+    "de": "Dürfen Hunde Kokosnuss fressen?",
+    "fr": "Les chiens peuvent-ils manger de la noix de coco ?"
   },
   "url_slug": {
     "en": "coconut",
     "sl": "kokos",
-    "de": "kokosnuss"
+    "de": "kokosnuss",
+    "fr": "noix-de-coco"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
     "sl": "Da, v majhnih količinah. Nesladkano kokosovo meso je za pse varno, če ga dajete zmerno, kokosove luščine in lupine pa nikoli. Kokos vsebuje veliko maščob in olja, ki lahko povzročijo prebavne težave in drisko.",
-    "de": "Ja, in kleinen Mengen. Das ungesüßte Fruchtfleisch ist in Maßen für Hunde unbedenklich, aber geben Sie nie die Faserhülle oder die Schale. Kokosnuss ist fettreich und enthält Öle, die Magenbeschwerden und Durchfall verursachen können."
+    "de": "Ja, in kleinen Mengen. Das ungesüßte Fruchtfleisch ist in Maßen für Hunde unbedenklich, aber geben Sie nie die Faserhülle oder die Schale. Kokosnuss ist fettreich und enthält Öle, die Magenbeschwerden und Durchfall verursachen können.",
+    "fr": "Oui, en petites quantités. La chair de noix de coco non sucrée est sans danger pour les chiens avec modération, mais ne leur donnez jamais la bourre ni la coque. La noix de coco est riche en graisses et contient des huiles qui peuvent provoquer des maux d’estomac et de la diarrhée."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
     "sl": "V majhnih količinah kokos verjetno ne povzroči resne škode, meso in mleko svežih kokosov pa vsebujeta olja, ki lahko povzročijo prebavne težave, mehko blato in drisko. Kokos ima več maščob, zato naj psi, ki ne smejo jesti mastne hrane ali imajo prekomerno težo, dobijo druge priboljške. Ima tudi veliko kalija, zato je pri psih z boleznijo ledvic potrebna previdnost. Luščina in lupina lahko povzročita zaporo črevesja.",
-    "de": "In kleinen Mengen ist Kokosnuss wahrscheinlich nicht ernsthaft schädlich, aber Fruchtfleisch und Milch frischer Kokosnüsse enthalten Öle, die Magenbeschwerden, weichen Kot und Durchfall auslösen können. Kokosnuss ist fettreich; Hunde, die keine fettreiche Kost bekommen sollten oder übergewichtig sind, sollten daher andere Leckerli erhalten. Sie enthält außerdem viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung Vorsicht geboten. Faserhülle und Schale können einen Darmverschluss verursachen."
+    "de": "In kleinen Mengen ist Kokosnuss wahrscheinlich nicht ernsthaft schädlich, aber Fruchtfleisch und Milch frischer Kokosnüsse enthalten Öle, die Magenbeschwerden, weichen Kot und Durchfall auslösen können. Kokosnuss ist fettreich; Hunde, die keine fettreiche Kost bekommen sollten oder übergewichtig sind, sollten daher andere Leckerli erhalten. Sie enthält außerdem viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung Vorsicht geboten. Faserhülle und Schale können einen Darmverschluss verursachen.",
+    "fr": "En petites quantités, la noix de coco ne risque guère de causer de problème grave, mais la chair et le lait des noix de coco fraîches contiennent des huiles qui peuvent provoquer des maux d’estomac, des selles molles et de la diarrhée. Comme la noix de coco est assez grasse, les chiens qui ne doivent pas suivre un régime riche en graisses ou qui sont en surpoids devraient recevoir d’autres friandises. Elle est aussi riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale. La bourre et la coque peuvent provoquer une occlusion intestinale."
   },
   "signs": null,
   "what_to_do": {
     "en": "Ask your vet before adding coconut to your dog's diet, especially if your dog has had pancreatitis.",
     "sl": "Preden psu v prehrano dodate kokos, se posvetujte z veterinarjem, zlasti če je pes že imel vnetje trebušne slinavke.",
-    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Kokosnuss in die Ernährung Ihres Hundes aufnehmen, besonders wenn Ihr Hund schon einmal eine Bauchspeicheldrüsenentzündung hatte."
+    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Kokosnuss in die Ernährung Ihres Hundes aufnehmen, besonders wenn Ihr Hund schon einmal eine Bauchspeicheldrüsenentzündung hatte.",
+    "fr": "Demandez conseil à votre vétérinaire avant d’ajouter de la noix de coco à l’alimentation de votre chien, surtout s’il a déjà eu une pancréatite."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
     "sl": "Samo nesladkano meso v majhnih količinah, brez luščine in lupine. Kokosovo mleko le nesladkano in brez ksilitola; kokosovo vodo le kot priboljšek, nikoli namesto vode.",
-    "de": "Nur ungesüßtes Fruchtfleisch, in kleinen Mengen, ohne Faserhülle und Schale. Kokosmilch nur ungesüßt und xylitfrei; Kokoswasser nur als Leckerli, niemals anstelle von Wasser."
+    "de": "Nur ungesüßtes Fruchtfleisch, in kleinen Mengen, ohne Faserhülle und Schale. Kokosmilch nur ungesüßt und xylitfrei; Kokoswasser nur als Leckerli, niemals anstelle von Wasser.",
+    "fr": "Uniquement de la chair non sucrée, en petites quantités, sans bourre ni coque. Le lait de coco seulement non sucré et sans xylitol ; l’eau de coco seulement en friandise, jamais à la place de l’eau."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
     "sl": "Psi lahko poskusijo malo kokosa! Trda lupina ni za pse, zato ga pripravi odrasli.",
-    "de": "Hunde dürfen ein bisschen Kokosnuss probieren! Die harte Schale ist nichts für Hunde, deshalb bereitet ein Erwachsener sie vor."
+    "de": "Hunde dürfen ein bisschen Kokosnuss probieren! Die harte Schale ist nichts für Hunde, deshalb bereitet ein Erwachsener sie vor.",
+    "fr": "Les chiens peuvent goûter un tout petit peu de noix de coco ! La coque dure n’est pas pour eux, c’est donc un adulte qui prépare la noix de coco."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs drink coconut water or coconut milk?",
         "sl": "Ali lahko psi pijejo kokosovo vodo ali kokosovo mleko?",
-        "de": "Dürfen Hunde Kokoswasser oder Kokosmilch trinken?"
+        "de": "Dürfen Hunde Kokoswasser oder Kokosmilch trinken?",
+        "fr": "Les chiens peuvent-ils boire de l’eau de coco ou du lait de coco ?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
         "sl": "Kokosovo vodo le kot priboljšek, ne namesto navadne vode. Kokosovo mleko le nesladkano in brez umetnih sladil, kot je ksilitol, ki je za pse strupen.",
-        "de": "Kokoswasser nur als Leckerli, nicht anstelle von normalem Wasser. Kokosmilch nur ungesüßt und frei von künstlichen Süßstoffen wie Xylit, das für Hunde giftig ist."
+        "de": "Kokoswasser nur als Leckerli, nicht anstelle von normalem Wasser. Kokosmilch nur ungesüßt und frei von künstlichen Süßstoffen wie Xylit, das für Hunde giftig ist.",
+        "fr": "L’eau de coco seulement en friandise, jamais à la place de l’eau habituelle. Le lait de coco seulement non sucré et sans édulcorants artificiels comme le xylitol, qui est toxique pour les chiens."
       }
     },
     {
       "q": {
         "en": "Why not the coconut shell?",
         "sl": "Zakaj ne kokosove lupine?",
-        "de": "Warum nicht die Kokosschale?"
+        "de": "Warum nicht die Kokosschale?",
+        "fr": "Pourquoi pas la coque de la noix de coco ?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
         "sl": "Luščina in lupina lahko povzročita resne prebavne težave, tudi zaporo črevesja in draženje želodca, podobno kot če bi pes pojedel palice ali les.",
-        "de": "Faserhülle und Schale können ernste Verdauungsprobleme verursachen, darunter einen Darmverschluss und Magenreizungen – ähnlich wie bei Stöcken oder Holz."
+        "de": "Faserhülle und Schale können ernste Verdauungsprobleme verursachen, darunter einen Darmverschluss und Magenreizungen – ähnlich wie bei Stöcken oder Holz.",
+        "fr": "La bourre et la coque peuvent causer de graves problèmes digestifs, notamment une occlusion intestinale et des irritations de l’estomac, comme lorsqu’un chien avale des bouts de bois."
       }
     }
   ],
@@ -165,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2ddee61e36f0597f9dd7de0ac3bcdde51e659d77254b73612cb587407483a774"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "943c4ab91cc1491167ecb58c4431646adac540f2719a9a89f96b59e05c2e4ae6"
     }
   }
 }

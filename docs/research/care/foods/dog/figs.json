@@ -4,68 +4,80 @@
   "name": {
     "en": "Figs",
     "sl": "Fige",
-    "de": "Feigen"
+    "de": "Feigen",
+    "fr": "Figues"
   },
   "question": {
     "en": "Can dogs eat figs?",
     "sl": "Ali lahko psi jedo fige?",
-    "de": "Dürfen Hunde Feigen fressen?"
+    "de": "Dürfen Hunde Feigen fressen?",
+    "fr": "Les chiens peuvent-ils manger des figues ?"
   },
   "url_slug": {
     "en": "figs",
     "sl": "fige",
-    "de": "feigen"
+    "de": "feigen",
+    "fr": "figues"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
     "sl": "Da, sveže fige so za pse na splošno varne, če so pravilno pripravljene, a le kot občasen priboljšek. Ponudite samo mehko notranjost v majhnih koščkih in psu nikoli ne pustite jesti figovih listov, lubja ali vej. Suhe fige so presladke.",
-    "de": "Ja, frische Feigen sind für Hunde bei richtiger Zubereitung in der Regel unbedenklich, aber nur als gelegentliches Leckerli. Geben Sie nur das weiche Innere in kleinen Stücken und lassen Sie Ihren Hund niemals Feigenblätter, Rinde oder Zweige fressen. Getrocknete Feigen sind zu zuckrig."
+    "de": "Ja, frische Feigen sind für Hunde bei richtiger Zubereitung in der Regel unbedenklich, aber nur als gelegentliches Leckerli. Geben Sie nur das weiche Innere in kleinen Stücken und lassen Sie Ihren Hund niemals Feigenblätter, Rinde oder Zweige fressen. Getrocknete Feigen sind zu zuckrig.",
+    "fr": "Oui, les figues fraîches sont en général sans danger pour les chiens si elles sont bien préparées, mais seulement en friandise occasionnelle. Ne proposez que l’intérieur tendre, en petits morceaux, et ne laissez jamais votre chien manger les feuilles, l’écorce ou les branches du figuier. Les figues séchées sont trop sucrées."
   },
   "why": {
     "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
     "sl": "Same fige ne veljajo za strupene kot grozdje in češnje, figovec kot rastlina pa je lahko škodljiv. Fige vsebujejo vitamina A in C, kalcij, kalij, magnezij in železo. Ker sadje vsebuje naravni sladkor in vlaknine, ima lahko preveč fig odvajalni učinek in povzroči drisko. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda.",
-    "de": "Feigen selbst gelten nicht als giftig wie Weintrauben und Kirschen, aber die Feigenpflanze kann schädlich sein. Feigen enthalten die Vitamine A und C, Kalzium, Kalium, Magnesium und Eisen. Weil Obst natürlichen Zucker und Ballaststoffe enthält, können zu viele Feigen abführend wirken und Durchfall verursachen. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil ihnen das Wasser entzogen wurde."
+    "de": "Feigen selbst gelten nicht als giftig wie Weintrauben und Kirschen, aber die Feigenpflanze kann schädlich sein. Feigen enthalten die Vitamine A und C, Kalzium, Kalium, Magnesium und Eisen. Weil Obst natürlichen Zucker und Ballaststoffe enthält, können zu viele Feigen abführend wirken und Durchfall verursachen. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil ihnen das Wasser entzogen wurde.",
+    "fr": "Les figues ne sont pas considérées comme toxiques, contrairement au raisin et aux cerises, mais le figuier, lui, peut être nocif. Les figues contiennent des vitamines A et C, du calcium, du potassium, du magnésium et du fer. Comme les fruits contiennent du sucre naturel et des fibres, en manger trop peut avoir un effet laxatif et provoquer de la diarrhée. Les figues séchées contiennent un sucre beaucoup plus concentré, car l’eau a été retirée."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog eats any part of the fig plant, get veterinary care right away. If your dog eats several figs and its symptoms don't improve, or it starts to vomit, contact your vet.",
     "sl": "Če pes poje kateri koli del figovca, takoj poiščite veterinarsko pomoč. Če pes poje več fig in se mu znaki ne izboljšajo ali začne bruhati, se obrnite na veterinarja.",
-    "de": "Frisst Ihr Hund irgendeinen Teil der Feigenpflanze, suchen Sie sofort einen Tierarzt auf. Frisst Ihr Hund mehrere Feigen und bessern sich seine Beschwerden nicht oder muss er erbrechen, wenden Sie sich an Ihren Tierarzt."
+    "de": "Frisst Ihr Hund irgendeinen Teil der Feigenpflanze, suchen Sie sofort einen Tierarzt auf. Frisst Ihr Hund mehrere Feigen und bessern sich seine Beschwerden nicht oder muss er erbrechen, wenden Sie sich an Ihren Tierarzt.",
+    "fr": "Si votre chien mange n’importe quelle partie du figuier, consultez un vétérinaire sans attendre. S’il mange plusieurs figues et que les signes ne s’améliorent pas, ou s’il se met à vomir, contactez votre vétérinaire."
   },
   "serving": {
     "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
     "sl": "Samo mehka notranjost sveže fige brez vseh delov rastline, narezana na majhne koščke. Začnite z drobnim koščkom in bodite pozorni na prebavne težave ali alergijsko reakcijo.",
-    "de": "Nur das weiche Innere einer frischen Feige, ohne Pflanzenteile, in kleine Stücke geschnitten. Beginnen Sie mit einem winzigen Stück und achten Sie auf Magenverstimmung oder eine allergische Reaktion."
+    "de": "Nur das weiche Innere einer frischen Feige, ohne Pflanzenteile, in kleine Stücke geschnitten. Beginnen Sie mit einem winzigen Stück und achten Sie auf Magenverstimmung oder eine allergische Reaktion.",
+    "fr": "Uniquement l’intérieur tendre d’une figue fraîche, débarrassé de toute partie de la plante, coupé en petits morceaux. Commencez par un tout petit morceau et surveillez l’apparition de troubles digestifs ou d’une réaction allergique."
   },
   "child": {
     "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
     "sl": "Psi lahko poskusijo droben košček mehke fige. Figovi listi in veje niso za pse, zato najprej vprašaj odraslega.",
-    "de": "Hunde dürfen ein winziges Stück weiche Feige probieren. Feigenblätter und -zweige sind nichts für Hunde, also frag zuerst einen Erwachsenen."
+    "de": "Hunde dürfen ein winziges Stück weiche Feige probieren. Feigenblätter und -zweige sind nichts für Hunde, also frag zuerst einen Erwachsenen.",
+    "fr": "Les chiens peuvent goûter un tout petit peu de figue bien tendre. Les feuilles et les branches du figuier ne sont pas pour eux : demande d’abord à un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat dried figs?",
         "sl": "Ali lahko psi jedo suhe fige?",
-        "de": "Dürfen Hunde getrocknete Feigen fressen?"
+        "de": "Dürfen Hunde getrocknete Feigen fressen?",
+        "fr": "Les chiens peuvent-ils manger des figues séchées ?"
       },
       "a": {
         "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
         "sl": "Suhe fige niso dobra izbira za priboljšek. Imajo veliko bolj zgoščen sladkor, ker jim je bila med sušenjem odvzeta voda.",
-        "de": "Getrocknete Feigen sind kein gutes Leckerli. Sie enthalten viel mehr konzentrierten Zucker, weil beim Trocknen das Wasser entzogen wurde."
+        "de": "Getrocknete Feigen sind kein gutes Leckerli. Sie enthalten viel mehr konzentrierten Zucker, weil beim Trocknen das Wasser entzogen wurde.",
+        "fr": "Les figues séchées ne sont pas une bonne friandise. Elles contiennent un sucre beaucoup plus concentré, car l’eau a été retirée au séchage."
       }
     },
     {
       "q": {
         "en": "What if my dog chews a fig tree?",
         "sl": "Kaj, če pes gloda figovo drevo?",
-        "de": "Was, wenn mein Hund an einem Feigenbaum knabbert?"
+        "de": "Was, wenn mein Hund an einem Feigenbaum knabbert?",
+        "fr": "Que faire si mon chien mâchonne un figuier ?"
       },
       "a": {
         "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
         "sl": "Figovec je lahko škodljiv. Znaki so lahko bruhanje, močno slinjenje, draženje kože in izpuščaji. Če pes poje kateri koli del rastline, takoj poiščite veterinarsko pomoč.",
-        "de": "Die Feigenpflanze kann schädlich sein. Mögliche Anzeichen sind Erbrechen, starkes Sabbern, Hautreizungen und Ausschlag. Frisst Ihr Hund irgendeinen Teil der Pflanze, suchen Sie sofort einen Tierarzt auf."
+        "de": "Die Feigenpflanze kann schädlich sein. Mögliche Anzeichen sind Erbrechen, starkes Sabbern, Hautreizungen und Ausschlag. Frisst Ihr Hund irgendeinen Teil der Pflanze, suchen Sie sofort einen Tierarzt auf.",
+        "fr": "Le figuier peut être nocif. Les signes possibles sont des vomissements, une salivation excessive, une irritation de la peau et des éruptions cutanées. Si votre chien mange n’importe quelle partie de la plante, consultez un vétérinaire sans attendre."
       }
     }
   ],
@@ -157,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a8370bc454d08e993504b654e637cf7c950f2f808afd38291abad51b7210dfb9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d84997afecdbe912726c1e4416627bcef7a0262c309d73d346aff00507f34b4c"
     }
   }
 }

@@ -4,28 +4,33 @@
   "name": {
     "en": "Fruit pits and stones",
     "sl": "Koščice sadja",
-    "de": "Obstkerne"
+    "de": "Obstkerne",
+    "fr": "Noyaux de fruits"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
     "sl": "Ali lahko psi jedo koščice sadja?",
-    "de": "Dürfen Hunde Obstkerne fressen?"
+    "de": "Dürfen Hunde Obstkerne fressen?",
+    "fr": "Les chiens peuvent-ils manger des noyaux de fruits ?"
   },
   "url_slug": {
     "en": "fruit-pits",
     "sl": "koscice-sadja",
-    "de": "obstkerne"
+    "de": "obstkerne",
+    "fr": "noyaux-de-fruits"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
     "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena.",
-    "de": "Nein. Kerne und Steine von Früchten wie Kirschen, Pfirsichen und Nektarinen sollten Hunden nie gegeben werden. Sie können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren und enthalten eine kleine Menge Cyanid. Wenn Sie Obst mit Ihrem Hund teilen, entfernen Sie vorher immer Kerne und Samen."
+    "de": "Nein. Kerne und Steine von Früchten wie Kirschen, Pfirsichen und Nektarinen sollten Hunden nie gegeben werden. Sie können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren und enthalten eine kleine Menge Cyanid. Wenn Sie Obst mit Ihrem Hund teilen, entfernen Sie vorher immer Kerne und Samen.",
+    "fr": "Non. Ne donnez jamais à un chien de noyaux de cerises, de pêches ou de nectarines. Ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et ils contiennent un peu de cyanure. Retirez toujours noyaux et pépins avant de partager un fruit."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
     "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer.",
-    "de": "Harte Kerne können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren, und Kerne mit rauen Kanten können beim Verschlucken die Speiseröhre verletzen. Der Kern enthält außerdem eine kleine Menge Cyanid. Cyanidvergiftungen durch Steinobst sind selten, aber Tiere können schon nach einer winzigen Menge erkranken – ein aufgebissener Kern gilt deshalb als dringender Fall."
+    "de": "Harte Kerne können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren, und Kerne mit rauen Kanten können beim Verschlucken die Speiseröhre verletzen. Der Kern enthält außerdem eine kleine Menge Cyanid. Cyanidvergiftungen durch Steinobst sind selten, aber Tiere können schon nach einer winzigen Menge erkranken – ein aufgebissener Kern gilt deshalb als dringender Fall.",
+    "fr": "Les noyaux durs peuvent casser des dents, provoquer un étouffement ou obstruer l’intestin, et ceux aux bords rugueux peuvent blesser l’œsophage lorsqu’ils sont avalés. Le noyau contient aussi un peu de cyanure. Les intoxications au cyanure dues aux fruits à noyau sont rares, mais un animal peut tomber malade après une infime quantité : un noyau brisé est donc traité comme une urgence."
   },
   "signs": {
     "en": [
@@ -51,42 +56,56 @@
       "Schwierigkeiten beim Kotabsatz",
       "Bauchschmerzen",
       "Atembeschwerden"
+    ],
+    "fr": [
+      "Haut-le-cœur",
+      "Salivation excessive",
+      "Vomissements",
+      "Difficultés à faire ses selles",
+      "Douleurs au ventre",
+      "Difficultés à respirer"
     ]
   },
   "what_to_do": {
     "en": "Call your vet right away if your dog breaks open a pit. If your dog swallowed a pit and shows any of these signs, call your vet.",
     "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja.",
-    "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund einen Kern aufbeißt. Hat Ihr Hund einen Kern verschluckt und zeigt eines dieser Anzeichen, rufen Sie Ihren Tierarzt an."
+    "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund einen Kern aufbeißt. Hat Ihr Hund einen Kern verschluckt und zeigt eines dieser Anzeichen, rufen Sie Ihren Tierarzt an.",
+    "fr": "Appelez immédiatement votre vétérinaire si votre chien a brisé un noyau. Si votre chien a avalé un noyau et présente l’un de ces signes, appelez votre vétérinaire."
   },
   "serving": null,
   "child": {
     "en": "Fruit stones are not for dogs. Throw them in the bin where your dog can't reach, and tell a grown-up if your dog eats one.",
     "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje.",
-    "de": "Obstkerne sind nichts für Hunde. Wirf sie in einen Mülleimer, an den dein Hund nicht herankommt, und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst."
+    "de": "Obstkerne sind nichts für Hunde. Wirf sie in einen Mülleimer, an den dein Hund nicht herankommt, und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
+    "fr": "Les noyaux de fruits ne sont pas pour les chiens. Jette-les à la poubelle, hors de portée de ton chien, et préviens un adulte s’il en mange un."
   },
   "faq": [
     {
       "q": {
         "en": "Is the fruit itself okay?",
         "sl": "Je sam sadež v redu?",
-        "de": "Ist die Frucht selbst in Ordnung?"
+        "de": "Ist die Frucht selbst in Ordnung?",
+        "fr": "Le fruit lui-même est-il sans danger ?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
         "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje.",
-        "de": "Das hängt von der Frucht ab; schauen Sie auf der jeweiligen Seite nach. Grundsätzlich sollten Samen, Kerne, Kerngehäuse, Schalen und Pflanzenstiele entfernt werden, bevor Sie Obst an Ihren Hund verfüttern."
+        "de": "Das hängt von der Frucht ab; schauen Sie auf der jeweiligen Seite nach. Grundsätzlich sollten Samen, Kerne, Kerngehäuse, Schalen und Pflanzenstiele entfernt werden, bevor Sie Obst an Ihren Hund verfüttern.",
+        "fr": "Cela dépend du fruit ; voir la page de chaque fruit. En général, il faut retirer les graines, les noyaux, les trognons, les peaux et les tiges avant de donner un fruit à un chien."
       }
     },
     {
       "q": {
         "en": "Which fruits have pits?",
         "sl": "Katero sadje ima koščice?",
-        "de": "Welche Früchte haben Kerne?"
+        "de": "Welche Früchte haben Kerne?",
+        "fr": "Quels fruits ont un noyau ?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
         "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid.",
-        "de": "Früchte wie Kirschen, Nektarinen und Pfirsiche nennt man Steinobst. Wie bei Kirschen enthalten auch Pfirsichkerne Cyanid."
+        "de": "Früchte wie Kirschen, Nektarinen und Pfirsiche nennt man Steinobst. Wie bei Kirschen enthalten auch Pfirsichkerne Cyanid.",
+        "fr": "Les cerises, les nectarines et les pêches sont des fruits à noyau. Comme celui des cerises, le noyau de la pêche contient du cyanure."
       }
     }
   ],
@@ -164,6 +183,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "660ef18f7df04fddbdfafc0bf9c416c91dd115d3daf29d79ee5a3065cc6a9847"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b2450053e308eb99edec9f6afc19a008bdbcc13b510a1eb290d4417157642ab0"
     }
   }
 }
