@@ -59,7 +59,7 @@
     "de": "Nein. Rosinen stehen wie Weintrauben und Korinthen auf der Liste der für Katzen giftigen Lebensmittel und können Nierenversagen verursachen. Vorsicht bei Kuchen, englischen Mince Pies und anderem Gebäck mit Rosinen. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon frisst.",
     "fr": "Non. Les raisins secs, comme le raisin frais et les raisins de Corinthe, figurent sur la liste des aliments toxiques pour les chats et peuvent provoquer une insuffisance rénale. Méfiez-vous des gâteaux, des mince pies (petites tartes de Noël aux fruits secs) et autres pâtisseries qui en contiennent, et appelez votre vétérinaire si votre chat en mange.",
     "es": "No. Las pasas, igual que las uvas y las pasas de Corinto, están en la lista de alimentos tóxicos para los gatos y pueden causar insuficiencia renal. Ten cuidado con los bizcochos, los pasteles navideños y otros productos horneados que las lleven, y llama a tu veterinario si tu gato se come alguna.",
-    "it": "No. L’uvetta, come l’uva e l’uva passa di Corinto, è nell’elenco degli alimenti tossici per i gatti e può causare insufficienza renale. Fai attenzione a torte, dolci natalizi come i mince pie e altri prodotti da forno che la contengono, e chiama il veterinario se il tuo gatto ne mangia.",
+    "it": "No. L’uvetta, come l’uva e l’uva passa di Corinto, è tra gli alimenti tossici per i gatti e può causare insufficienza renale. Fai attenzione a torte, dolci natalizi come i mince pie e altri prodotti da forno che la contengono, e chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. As passas, tal como as uvas e as uvas de Corinto, estão na lista de alimentos tóxicos para gatos e podem causar insuficiência renal. Atenção aos bolos, tartes e outros produtos de pastelaria que as contenham, e liga ao teu veterinário se o teu gato comer alguma.",
     "nl": "Nee. Rozijnen staan net als druiven en krenten op de lijst van voedingsmiddelen die giftig zijn voor katten, en ze kunnen nierfalen veroorzaken. Let op cake, kersttaartjes en ander gebak waar ze in zitten, en bel je dierenarts als je kat er iets van eet.",
     "pl": "Nie. Rodzynki, podobnie jak winogrona i koryntki, są na liście pokarmów toksycznych dla kotów i mogą wywołać niewydolność nerek. Uważaj na ciasta, babeczki z bakaliami i inne wypieki, które je zawierają, i zadzwoń do weterynarza, jeśli kot zje choć trochę.",
@@ -288,7 +288,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9ee01b32ebcf397601fd4010d7a33ed7a59eeb5da3c0f797dea7c1b8cfbd6808"
+      "verified_hash": "0002ec366fe322ff2b4bc795a0d5f8788d7f567759428db40d25945ed8cd6fca"
     },
     "pt": {
       "status": "verified",

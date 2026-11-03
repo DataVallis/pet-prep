@@ -76,7 +76,7 @@
     "de": "Wie Macadamianüsse Hunde vergiften, ist nicht bekannt, sie beeinträchtigen aber die Nerven- und Muskelfunktion. Weil sie sehr ölhaltig sind, entwickeln manche Hunde außerdem eine Pankreatitis. Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, ein Tierarzt sollte aber immer verständigt werden.",
     "fr": "On ne sait pas comment les noix de macadamia intoxiquent les chiens, mais elles perturbent le fonctionnement des nerfs et des muscles. Comme elles sont très grasses, certains chiens développent aussi une pancréatite. Les signes disparaissent généralement en 12 à 48 heures, mais il faut toujours contacter un vétérinaire.",
     "es": "No se sabe cómo intoxican las nueces de macadamia a los perros, pero afectan al funcionamiento de los nervios y los músculos. Como son muy oleosas, algunos perros también desarrollan pancreatitis. Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero siempre hay que contactar con un veterinario.",
-    "it": "Non si sa come le noci di macadamia avvelenino i cani, ma agiscono sulla funzione dei nervi e dei muscoli. Poiché sono molto oleose, alcuni cani sviluppano anche una pancreatite. In genere i sintomi si risolvono entro 12–48 ore, ma bisogna sempre contattare il veterinario.",
+    "it": "Non si sa come le noci di macadamia avvelenino i cani, ma agiscono sulla funzione dei nervi e dei muscoli. Poiché sono molto oleose, alcuni cani sviluppano anche una pancreatite. In genere i sintomi si risolvono entro 12–48 ore, ma bisogna sempre contattare il veterinario.",
     "pt": "Não se sabe como as nozes de macadâmia intoxicam os cães, mas afetam o funcionamento dos nervos e dos músculos. Como são muito oleosas, alguns cães também desenvolvem pancreatite. Os sinais costumam passar em 12–48 horas, mas deves contactar sempre um veterinário.",
     "nl": "Hoe macadamianoten honden vergiftigen, is onbekend, maar ze tasten de werking van zenuwen en spieren aan. Omdat ze erg olierijk zijn, krijgen sommige honden ook alvleesklierontsteking. Verschijnselen verdwijnen meestal binnen 12–48 uur, maar neem altijd contact op met een dierenarts.",
     "pl": "Nie wiadomo, w jaki sposób orzechy makadamia zatruwają psy, ale wpływają na pracę nerwów i mięśni. Ponieważ są bardzo oleiste, u niektórych psów rozwija się też zapalenie trzustki. Objawy na ogół ustępują w ciągu 12–48 godzin, ale zawsze trzeba skontaktować się z weterynarzem.",
@@ -305,7 +305,7 @@
         "de": "Die Anzeichen klingen meist innerhalb von 12–48 Stunden ab, trotzdem sollten Sie Ihren Tierarzt sofort informieren.",
         "fr": "Les signes disparaissent généralement en 12 à 48 heures, mais prévenez quand même immédiatement votre vétérinaire.",
         "es": "Los síntomas suelen desaparecer en un plazo de 12 a 48 horas, pero aun así hay que avisar enseguida a tu veterinario.",
-        "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario.",
+        "it": "In genere i sintomi si risolvono entro 12–48 ore, ma devi comunque avvisare subito il veterinario.",
         "pt": "Os sinais costumam passar em 12–48 horas, mas deves avisar imediatamente o teu veterinário na mesma.",
         "nl": "Verschijnselen verdwijnen meestal binnen 12–48 uur, maar laat het je dierenarts toch meteen weten.",
         "pl": "Objawy na ogół ustępują w ciągu 12–48 godzin, ale i tak trzeba od razu powiadomić weterynarza.",
@@ -408,7 +408,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b5e8352116eea41c02004716d8d2a383ec6ddf187e566fc8c025ca22e58e1c30"
+      "verified_hash": "0f5c9680af4ae9295f2baa1f252ad8f23e63e4cbb386d2b382bbaa6eb4dd0cdb"
     },
     "pt": {
       "status": "verified",

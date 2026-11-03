@@ -76,7 +76,7 @@
     "de": "Stiele, Blätter und Samen des Pfirsichs enthalten cyanogene Glykoside. Wird ein Kern gründlich zerkaut, kann Cyanid freigesetzt werden, und ein verschluckter Kern kann den Darm blockieren, besonders bei kleinen Hunden. Pfirsiche aus der Dose oder getrocknete Pfirsiche enthalten oft zusätzlichen Zucker. Weil die Pflanze als giftig für Hunde gilt, stufen wir Pfirsiche als „nicht empfohlen“ ein und nicht als unbedenkliches Leckerli.",
     "fr": "Les tiges, les feuilles et les graines du pêcher contiennent des glycosides cyanogènes. Si un noyau est bien mâché, du cyanure peut être libéré, et un noyau avalé peut bloquer l’intestin, surtout chez les petits chiens. Les pêches en conserve ou séchées contiennent souvent du sucre ajouté. Comme la plante est répertoriée comme toxique pour les chiens, nous classons la pêche comme déconseillée plutôt que comme une friandise sûre.",
     "es": "El rabito, las hojas y las semillas del melocotón contienen glucósidos cianogénicos. Si el perro mastica bien un hueso, puede liberarse cianuro, y un hueso tragado puede obstruir el intestino, sobre todo en perros pequeños. El melocotón en almíbar o deshidratado suele llevar azúcar añadido. Como la planta figura como tóxica para los perros, clasificamos el melocotón como no recomendado y no como un premio seguro.",
-    "it": "Piccioli, foglie e semi del pesco contengono glicosidi cianogenici. Se il nocciolo viene masticato a fondo, può liberarsi cianuro, e un nocciolo ingoiato può ostruire l’intestino, soprattutto nei cani di piccola taglia. Le pesche in scatola o essiccate contengono spesso zucchero aggiunto. Poiché la pianta è classificata come tossica per i cani, consideriamo le pesche sconsigliate e non un premio sicuro.",
+    "it": "Piccioli, foglie e semi del pesco contengono glicosidi cianogenici. Se il nocciolo viene masticato a fondo, può liberarsi cianuro, e un nocciolo ingoiato può ostruire l’intestino, soprattutto nei cani di piccola taglia. Le pesche in scatola o essiccate contengono spesso zucchero aggiunto. Poiché la pianta è classificata come tossica per i cani, le consideriamo sconsigliate, non un premio sicuro.",
     "pt": "Os caules, as folhas e as sementes do pessegueiro contêm glicosídeos cianogénicos. Se um caroço for bem mastigado, pode libertar cianeto, e um caroço engolido pode obstruir o intestino, sobretudo em cães pequenos. Os pêssegos em calda ou secos têm muitas vezes açúcar adicionado. Como a planta está classificada como tóxica para os cães, classificamos os pêssegos como não recomendados e não como uma guloseima segura.",
     "nl": "Stelen, bladeren en pitten van de perzik bevatten cyanogene glycosiden. Als een pit grondig wordt stukgekauwd, kan er cyanide vrijkomen, en een ingeslikte pit kan de darmen verstoppen, vooral bij kleine honden. Perziken uit blik of gedroogde perziken bevatten vaak extra suiker. Omdat de plant als giftig voor honden staat vermeld, beoordelen wij perziken als niet aan te raden in plaats van als een veilig snoepje.",
     "pl": "Szypułki, liście i nasiona brzoskwini zawierają glikozydy cyjanogenne. Gdy pestka zostanie dokładnie rozgryziona, może uwolnić się cyjanek, a połknięta pestka może zatkać przewód pokarmowy, zwłaszcza u małych psów. Brzoskwinie z puszki lub suszone często zawierają dodatkowy cukier. Ponieważ roślina figuruje na listach roślin toksycznych dla psów, uznajemy brzoskwinie za niezalecane, a nie za bezpieczny smakołyk.",
@@ -116,7 +116,7 @@
     "it": [
       "Soffocamento o conati",
       "Segni di un’ostruzione: vomito ripetuto, rifiuto del cibo, stanchezza",
-      "Pupille dilatate, gengive rosso mattone, difficoltà a respirare (cianuro)"
+      "Pupille dilatate, gengive rosso mattone, difficoltà respiratorie (cianuro)"
     ],
     "pt": [
       "Engasgamento ou ânsias",
@@ -387,7 +387,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d093fa3ee579a99ccc8aa8a564ef01dd0f191dc102da463de2471dc90a628263"
+      "verified_hash": "5393e1c0c7254bd94587ea90c8e234d5b83f24226b336415b827c7a7ae3f24f2"
     },
     "pt": {
       "status": "verified",

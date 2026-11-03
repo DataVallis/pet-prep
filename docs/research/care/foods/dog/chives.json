@@ -59,7 +59,7 @@
     "de": "Nein. Schnittlauch gehört wie Zwiebeln und Knoblauch zur Familie der Lauchgewächse (Allium) und ist für Hunde giftig. Roher, gekochter und getrockneter Schnittlauch kann die roten Blutkörperchen schädigen, und Anzeichen zeigen sich oft erst nach einigen Tagen.",
     "fr": "Non. La ciboulette fait partie de la famille des alliums, comme l’oignon et l’ail, et elle est toxique pour les chiens. Crue, cuite ou séchée, elle peut endommager les globules rouges, et les signes mettent souvent quelques jours à apparaître.",
     "es": "No. El cebollino pertenece a la familia de las aliáceas, como la cebolla y el ajo, y es tóxico para los perros. Crudo, cocinado o seco, puede dañar los glóbulos rojos, y los síntomas suelen tardar unos días en aparecer.",
-    "it": "No. L’erba cipollina appartiene alla famiglia degli allium, come cipolla e aglio, ed è tossica per i cani. Cruda, cotta o secca, può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
+    "it": "No. L’erba cipollina appartiene alle alliacee, come cipolla e aglio, ed è tossica per i cani. Cruda, cotta o secca, può danneggiare i globuli rossi, e spesso i sintomi compaiono solo dopo qualche giorno.",
     "pt": "Não. O cebolinho é uma aliácea, como a cebola e o alho, e é tóxico para os cães. O cebolinho cru, cozinhado ou seco pode danificar os glóbulos vermelhos, e os sinais muitas vezes demoram alguns dias a aparecer.",
     "nl": "Nee. Bieslook hoort, net als ui en knoflook, bij de lookfamilie (allium) en is giftig voor honden. Rauw, gekookt en gedroogd bieslook kunnen allemaal de rode bloedcellen beschadigen, en verschijnselen komen vaak pas na een paar dagen.",
     "pl": "Nie. Szczypiorek należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Surowy, gotowany i suszony szczypiorek może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
@@ -76,7 +76,7 @@
     "de": "Schnittlauch gehört zur Familie der Lauchgewächse (Zwiebeln, Knoblauch, Lauch, Schnittlauch), die für Hunde giftig sind. Diese Pflanzen enthalten Verbindungen, die rote Blutkörperchen schädigen und zu einer Blutarmut (Anämie) führen können. Alle Teile und alle Formen sind schädlich: roh, gekocht, getrocknet und als Pulver. Magen-Darm-Beschwerden können bei jeder Menge auftreten; größere Mengen schädigen das Blut.",
     "fr": "La ciboulette appartient à la famille des alliums (oignon, ail, poireau, ciboulette), toxique pour les chiens. Ces plantes contiennent des composés qui endommagent les globules rouges et peuvent provoquer une anémie. Toutes les parties et toutes les formes sont nocives : crue, cuite, séchée et en poudre. Des troubles digestifs peuvent survenir quelle que soit la quantité ; de plus grandes quantités endommagent le sang.",
     "es": "Pertenece a la familia de las aliáceas (cebolla, ajo, puerro, cebollino), que es tóxica para los perros. Estas plantas contienen compuestos que dañan los glóbulos rojos y pueden provocar anemia. Todas las partes y todas las formas son perjudiciales: crudo, cocinado, seco y en polvo. Cualquier cantidad puede causar malestar de estómago; las cantidades mayores dañan la sangre.",
-    "it": "Appartiene alla famiglia degli allium (cipolla, aglio, porro, erba cipollina), tossica per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Sono dannose tutte le parti, in qualsiasi forma: crude, cotte, secche o in polvere. Disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
+    "it": "Fa parte delle alliacee (cipolla, aglio, porro, erba cipollina), piante tossiche per i cani. Queste piante contengono sostanze che danneggiano i globuli rossi e possono portare all’anemia. Tutte le parti sono dannose, in qualsiasi forma: crude, cotte, secche o in polvere. I disturbi di stomaco possono comparire con qualsiasi quantità; quantità maggiori danneggiano il sangue.",
     "pt": "O cebolinho pertence à família das aliáceas (cebola, alho, alho-francês, cebolinho), que é tóxica para os cães. Estas plantas contêm compostos que danificam os glóbulos vermelhos e podem levar a anemia. Todas as partes e todas as formas fazem mal: cru, cozinhado, seco e em pó. Qualquer quantidade pode causar mal-estar de estômago; quantidades maiores danificam o sangue.",
     "nl": "Bieslook hoort bij de lookfamilie (ui, knoflook, prei, bieslook), die giftig is voor honden. Deze planten bevatten stoffen die rode bloedcellen beschadigen en tot bloedarmoede kunnen leiden. Alle delen en alle vormen zijn schadelijk: rauw, gekookt, gedroogd en als poeder. Maag-darmklachten kunnen bij elke hoeveelheid optreden; grotere hoeveelheden beschadigen het bloed.",
     "pl": "Szczypiorek należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
@@ -275,7 +275,7 @@
         "de": "Beschwerden können innerhalb von 24 Stunden beginnen, zeigen sich aber häufiger erst nach einigen Tagen; Anzeichen einer Blutarmut entwickeln sich typischerweise mehrere Tage nach dem Fressen.",
         "fr": "Les signes peuvent commencer dans les 24 heures, mais mettent plus souvent quelques jours à apparaître ; les signes d’anémie se développent généralement plusieurs jours après l’ingestion.",
         "es": "Los síntomas pueden empezar en las primeras 24 horas, pero lo más habitual es que tarden unos días; los síntomas de anemia suelen aparecer varios días después de comerlo.",
-        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
+        "it": "I sintomi possono comparire entro 24 ore, ma più spesso servono alcuni giorni; i segni di anemia di solito si sviluppano diversi giorni dopo l’ingestione.",
         "pt": "Os sintomas podem começar nas primeiras 24 horas, mas é mais frequente demorarem alguns dias a aparecer; os sinais de anemia costumam surgir vários dias depois de o cão comer.",
         "nl": "Verschijnselen kunnen binnen 24 uur beginnen, maar komen vaker pas na een paar dagen; tekenen van bloedarmoede ontstaan meestal enkele dagen na het eten.",
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
@@ -401,7 +401,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "30d78ce69668dbc207dc87cf9fe18d40e17b0fb4460455c58167071732a07dc2"
+      "verified_hash": "a669dcb26dfc5214f04dd1050ad6c51e981abcce7657f12252691402271f4831"
     },
     "pt": {
       "status": "verified",

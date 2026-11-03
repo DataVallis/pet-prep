@@ -59,7 +59,7 @@
     "de": "Nein, Eis ist kein gutes Leckerli für Katzen. Es wird aus Milch und Sahne hergestellt, die einer Katze auf den Magen schlagen können, und liefert Fett und Zucker, die Katzen nicht brauchen.",
     "fr": "Non, la glace n’est pas une bonne friandise pour les chats. Elle est faite avec du lait et de la crème, qui peuvent leur déranger l’estomac, et elle apporte des graisses et du sucre dont ils n’ont pas besoin.",
     "es": "No, el helado no es un buen premio para los gatos. Se hace con leche y nata, que pueden sentarle mal al estómago de un gato, y aporta grasa y azúcar que los gatos no necesitan.",
-    "it": "No, il gelato non è un buon premio per i gatti. È fatto con latte e panna, che possono disturbare lo stomaco del gatto, e apporta grassi e zuccheri di cui i gatti non hanno bisogno.",
+    "it": "No, il gelato non è un buon premio per i gatti. È fatto con latte e panna, che possono disturbare lo stomaco del gatto, e contiene grassi e zuccheri di cui i gatti non hanno bisogno.",
     "pt": "Não, o gelado não é uma boa guloseima para gatos. É feito com leite e natas, que podem fazer mal ao estômago do gato, e acrescenta gordura e açúcar de que os gatos não precisam.",
     "nl": "Nee, ijs is geen goed snoepje voor katten. Het wordt gemaakt met melk en room, die de maag van een kat van streek kunnen maken, en het bevat vet en suiker die katten niet nodig hebben.",
     "pl": "Nie, lody nie są dobrym smakołykiem dla kotów. Robi się je z mleka i śmietanki, które mogą wywołać u kota rozstrój żołądka, a do tego dostarczają tłuszczu i cukru, których koty nie potrzebują.",
@@ -311,7 +311,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3ee79bd1ee8494e639d1ef358c18df79cbf7472e74ddb4b8fce70407c9608b53"
+      "verified_hash": "d21741b26eb3d711cd587cbf36ea3be0fa5b9fb7c795a532d9252e0879cf9f01"
     },
     "pt": {
       "status": "verified",

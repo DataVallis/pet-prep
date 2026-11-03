@@ -116,7 +116,7 @@
     "it": [
       "Soffocamento o conati",
       "Segni di un’ostruzione: vomito ripetuto, rifiuto del cibo, stanchezza",
-      "Pupille dilatate, gengive rosso mattone, difficoltà a respirare (cianuro)"
+      "Pupille dilatate, gengive rosso mattone, difficoltà respiratorie (cianuro)"
     ],
     "pt": [
       "Engasgamento ou ânsias",
@@ -343,7 +343,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a3eee4c6406517a0b6b649365023649f07a2f997e7d56e54beef20cfe54972d2"
+      "verified_hash": "8ed2f54b1b968ff481bb00a1177052f72d2bdfa78d8d95defeb238d05e64831d"
     },
     "pt": {
       "status": "verified",

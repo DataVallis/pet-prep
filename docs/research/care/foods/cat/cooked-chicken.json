@@ -76,7 +76,7 @@
     "de": "Cats Protection und RSPCA Australia sagen beide, dass gekochtes oder gedämpftes Hähnchen gelegentlich angeboten werden kann. Es muss gegart und ohne Knochen sein, denn gekochte Knochen können splittern. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel – deshalb bleibt es ein Leckerli.",
     "fr": "Cats Protection et la RSPCA Australia indiquent toutes deux que l’on peut proposer de temps en temps du poulet bouilli ou cuit à la vapeur. Il doit être cuit et sans os, car les os cuits peuvent se briser en éclats. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences ; il doit donc rester une friandise.",
     "es": "Tanto Cats Protection como RSPCA Australia indican que se puede ofrecer de vez en cuando pollo hervido o al vapor. Tiene que estar cocinado y sin huesos, porque los huesos cocinados pueden astillarse. Dar solo pollo cocinado durante mucho tiempo puede provocar carencias nutricionales, así que debe seguir siendo un premio.",
-    "it": "Sia Cats Protection sia RSPCA Australia affermano che il pollo lesso o cotto al vapore può essere offerto ogni tanto. Deve essere cotto e senza ossa, perché le ossa cotte possono scheggiarsi. Dare solo pollo cotto a lungo termine può causare carenze nutrizionali, quindi deve restare un premio.",
+    "it": "Sia Cats Protection sia RSPCA Australia affermano che il pollo lesso o cotto al vapore può essere offerto ogni tanto. Deve essere cotto e senza ossa, perché le ossa cotte possono scheggiarsi. Un’alimentazione a base di solo pollo cotto può causare carenze nutrizionali a lungo andare, quindi deve restare un premio.",
     "pt": "A Cats Protection e a RSPCA Australia dizem ambas que se pode dar frango cozido ou cozinhado a vapor de vez em quando. Tem de estar cozinhado e sem ossos, porque os ossos cozinhados podem lascar. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais, por isso deve continuar a ser uma guloseima.",
     "nl": "Cats Protection en RSPCA Australia zeggen allebei dat je af en toe gekookte of gestoomde kip kunt geven. Het moet gaar zijn en zonder botten, want gekookte botten kunnen splinteren. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden, dus het blijft een snoepje.",
     "pl": "Cats Protection i RSPCA Australia podają, że od czasu do czasu można dać kotu kurczaka gotowanego w wodzie lub na parze. Musi być ugotowany i bez kości, bo gotowane kości mogą się rozszczepiać. Karmienie wyłącznie gotowanym kurczakiem przez dłuższy czas może prowadzić do niedoborów żywieniowych, więc powinien pozostać smakołykiem.",
@@ -164,7 +164,7 @@
         "de": "Nein. Wer auf Dauer nur gegartes Hähnchen füttert, riskiert Nährstoffmängel. Geben Sie es nur als Extra.",
         "fr": "Non. Nourrir un chat uniquement de poulet cuit sur le long terme peut entraîner des carences. Gardez-le comme un petit plus.",
         "es": "No. Dar solo pollo cocinado durante mucho tiempo puede provocar carencias nutricionales. Que sea un extra.",
-        "it": "No. Dare solo pollo cotto a lungo termine può causare carenze nutrizionali. Tienilo come extra.",
+        "it": "No. Un’alimentazione a base di solo pollo cotto può causare carenze nutrizionali a lungo andare. Dagli il pollo solo come extra.",
         "pt": "Não. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais. Mantém-no como um extra.",
         "nl": "Nee. Langdurig alleen gekookte kip geven kan tot voedingstekorten leiden. Houd het bij iets extra’s.",
         "pl": "Nie. Karmienie wyłącznie gotowanym kurczakiem przez dłuższy czas może prowadzić do niedoborów żywieniowych. Traktuj go jako dodatek.",
@@ -251,7 +251,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "395900dd7ef69e6a2d07d3d2a955dbe864498573508ba1b24b96f3a73e8bf7ae"
+      "verified_hash": "90dc418d00cd602491d475a2f926b4756a6b2b74a1471bf6ae4dd68f05e151c2"
     },
     "pt": {
       "status": "verified",
