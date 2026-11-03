@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `irish_setter` (viri S675–S681; ponovno S10, S11, S14, S24, S35, S45, S174); seznam za vzreditelja: stran RKC (S676) |
 | Izvor | FCI št. 120, skupina 7, sekcija 2 (britanski in irski ptičarji in setri), Irska (S675); ni irski rdeče-beli seter (FCI št. 330, druga pasma) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 85. mesto »Irish Setter« (S174, prebrano 2026-11-03) |
-| PR-ji | pet-prep #591 (pasma, združen `b1a2998`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 41568028702, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-irish-setter` |
+| PR-ji | pet-prep #591 (pasma, združen `b1a2998`) · portret pet-prep #594 (zagon `breed-portraits.yml` 41568028702, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-irish-setter` |
 
 ## Odločitve (z viri in kdo je odločil)
 
