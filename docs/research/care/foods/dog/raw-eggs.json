@@ -68,7 +68,7 @@
     "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen ordentligt innan du delar med dig.",
     "da": "Nej, det er bedst at lade være. Rå æg kan indeholde bakterier som salmonella, der kan skade både hunde og menneskerne omkring dem, og rå æggehvide kan påvirke optagelsen af et vitamin. Tilbered æggene helt før du deler dem.",
     "fi": "Ei, parempi olla antamatta. Raaoissa kananmunissa voi olla bakteereja, kuten salmonellaa, jotka voivat olla haitallisia koirille ja niiden lähellä oleville ihmisille, ja raaka munanvalkuainen voi häiritä erään vitamiinin imeytymistä. Kypsennä kananmunat kunnolla ennen kuin jaat niitä.",
-    "nb": "Nei, det er best å la være. Rå egg kan inneholde bakterier som salmonella, som kan skade både hunder og menneskene rundt dem, og rå eggehvite kan hindre opptaket av et vitamin. Sørg for at eggene er helt tilberedt før du deler dem."
+    "nb": "Nei, det er best å la være. Rå egg kan inneholde bakterier som salmonella, som kan skade både hunder og menneskene rundt dem, og rå eggehvite kan hindre opptaket av et vitamin. Kok eller stek eggene helt gjennom før du deler dem."
   },
   "why": {
     "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
@@ -85,7 +85,7 @@
     "sv": "Råa ägg kan innehålla salmonella och E. coli, som är skadliga för både djur och människor. Rå äggvita innehåller avidin, som blockerar vitaminet biotin; brist är ovanlig men kan påverka hud och päls. De flesta veterinärer rekommenderar att ägg tillagas helt innan hunden får dem.",
     "da": "Rå æg kan indeholde salmonella og E. coli, som er skadelige for både kæledyr og mennesker. Rå æggehvide indeholder avidin, som blokerer vitaminet biotin; mangel er sjælden, men den kan påvirke hud og pels. De fleste dyrlæger anbefaler at tilberede æg helt før man giver dem til en hund.",
     "fi": "Raaoissa kananmunissa voi olla salmonellaa ja E. coli -bakteeria, jotka ovat haitallisia sekä lemmikeille että ihmisille. Raa’assa munanvalkuaisessa on avidiinia, joka estää biotiini-nimisen vitamiinin imeytymistä; puutos on harvinainen, mutta se voi vaikuttaa ihoon ja turkkiin. Useimmat eläinlääkärit suosittelevat kypsentämään kananmunat kunnolla ennen kuin niitä annetaan koiralle.",
-    "nb": "Rå egg kan inneholde salmonella og E. coli, som er skadelige for både kjæledyr og mennesker. Rå eggehvite inneholder avidin, som blokkerer vitaminet biotin; mangel er sjelden, men kan påvirke hud og pels. De fleste dyrleger anbefaler å tilberede eggene helt før en hund får dem."
+    "nb": "Rå egg kan inneholde salmonella og E. coli, som er skadelige for både kjæledyr og mennesker. Rå eggehvite inneholder avidin, som blokkerer vitaminet biotin; mangel er sjelden, men kan påvirke hud og pels. De fleste dyrleger anbefaler å tilberede eggene helt gjennom før en hund får dem."
   },
   "signs": {
     "en": [
@@ -211,7 +211,7 @@
     "sv": "Tillaga ägget ordentligt (hårdkokt eller som äggröra), utan olja, smör, salt eller kryddor.",
     "da": "Tilbered ægget helt (hårdkogt eller røræg), og server det uden olie, smør, salt eller krydderier.",
     "fi": "Kypsennä kananmuna kunnolla (kovaksi keitettynä tai munakokkelina), pelkkänä, ilman öljyä, voita, suolaa tai mausteita.",
-    "nb": "Tilbered egget helt (hardkokt eller som eggerøre), uten noe tilsatt – ingen olje, smør, salt eller krydder."
+    "nb": "Kok eller stek egget helt gjennom (hardkokt eller som eggerøre), uten noe tilsatt – ingen olje, smør, salt eller krydder."
   },
   "child": {
     "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
@@ -398,7 +398,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "10101ec654f655389f71aa5e7b8f37d18a9e1b9c6657de9aadd94c8f01e2eb7d"
+      "verified_hash": "604b0a32ae4a4ba258840044a213809387bb11a6b28c50b9ce3a7b5c23a515d2"
     }
   }
 }

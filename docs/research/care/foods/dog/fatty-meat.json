@@ -68,7 +68,7 @@
     "sv": "Rekommenderas inte. Fett kött, fågelskinn och senor är inte giftiga, men de kan orsaka kräkningar och diarré eller utlösa bukspottkörtelinflammation (pankreatit), en smärtsam och ibland allvarlig inflammation. Vissa raser, som dvärgschnauzer, drabbas lättare.",
     "da": "Det frarådes. Fedt kød, skind fra fjerkræ og brusk er ikke giftigt, men det kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld og nogle gange alvorlig. Nogle racer, fx dværgschnauzer, er mere tilbøjelige til det.",
     "fi": "Ei suositella. Rasvainen liha, linnun nahka ja rustot eivät ole myrkyllisiä, mutta ne voivat aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka on kivulias ja joskus vakava tulehdus. Jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia.",
-    "nb": "Anbefales ikke. Fett kjøtt, skinn fra fjærfe og brusk er ikke giftig, men kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som er smertefullt og noen ganger alvorlig. Noen raser, som dvergschnauzer, er mer utsatt."
+    "nb": "Anbefales ikke. Fett kjøtt, skinn fra fjærfe og brusk er ikke giftig, men kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som kan være smertefull og noen ganger alvorlig. Noen raser, som dvergschnauzer, er mer utsatt."
   },
   "why": {
     "en": "A fatty meal is a known trigger of pancreatitis in dogs. Effects range from a mild upset stomach to a severe, even life-threatening pancreatitis. Dogs that have had pancreatitis before should avoid fatty foods.",
@@ -458,7 +458,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f2fd6f0059c2ae120acc2789a404a4fcfe1e6f873a410dc8711ed11b5ebd5cc2"
+      "verified_hash": "a9d99d67ddb995abda9d89da5977c0f59ef7183076bd00e88d95cd49ebb4c7a9"
     }
   }
 }

@@ -68,7 +68,7 @@
     "sv": "Ja. Okryddad, tillagad kyckling utan ben kan ges till hunden som den är. Ge aldrig tillagade kycklingben, som splittras lätt, och undvik kryddad, fet eller rå kyckling.",
     "da": "Ja. Ren, ukrydret, tilberedt kylling, uden ben, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over.",
     "fi": "Saa. Maustamatonta kypsennettyä kanaa voi antaa koiralle sellaisenaan, kun liha on irrotettu luista. Älä koskaan anna kypsennettyjä kananluita, jotka sirpaloituvat helposti, ja jätä väliin maustettu, rasvainen tai raaka kana.",
-    "nb": "Ja. Naturell, ukrydret, tilberedt kylling uten bein kan gis til en hund som den er. Gi aldri tilberedte kyllingbein, som lett splintres, og dropp krydret, fet eller rå kylling."
+    "nb": "Ja. Naturell, ukrydret, tilberedt kylling uten bein kan du gi hunden som den er. Gi aldri tilberedte kyllingbein, som lett splintres, og dropp krydret, fet eller rå kylling."
   },
   "why": {
     "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -310,7 +310,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "be9f6859efe903af1db1f5e91af079c487a48603e5ec377cc4b0c470af7e7c24"
+      "verified_hash": "8f82e34381219704192eded9baedb4deb31a20e7e11d45e2c538ad8078a6fc22"
     }
   }
 }

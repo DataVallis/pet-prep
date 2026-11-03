@@ -212,7 +212,7 @@
     "sv": "Aprikoskärnor, blad och skaft är inte bra för hundar. Aprikoser är till för människor, och säg till en vuxen om hunden tuggar på en kärna.",
     "da": "Abrikossten, -blade og -stilke er dårlige for hunde. Lad abrikoserne være til mennesker, og sig det til en voksen hvis din hund tygger på en sten.",
     "fi": "Aprikoosin kivet, lehdet ja varret ovat koirille pahasta. Jätä aprikoosit ihmisille ja kerro aikuiselle, jos koirasi pureskelee kiveä.",
-    "nb": "Aprikossteiner, -blader og -stilker er ikke bra for hunder. La aprikosene være for mennesker, og si fra til en voksen hvis hunden tygger på en stein."
+    "nb": "Aprikossteiner, -blader og -stilker er ikke bra for hunder. Aprikosene er til oss mennesker, og du må si fra til en voksen hvis hunden tygger på en stein."
   },
   "faq": [
     {
@@ -358,7 +358,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a09550e5724caf0e91f42296c9f623864eda1a935319bb7a60f312ebcb9bacc8"
+      "verified_hash": "3e6e7b549fa2b90aecf867e2ccf3942b255a607f9aba1485b22d410c12696b6a"
     }
   }
 }

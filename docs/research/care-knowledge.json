@@ -279,7 +279,7 @@
             "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg.",
             "da": "Udover i drikkevarer kan alkohol også findes i likørfyldt slik, håndsprit, mundskyllevæske og rå, hævende brøddej.",
             "fi": "Juomien lisäksi alkoholia voi olla liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa.",
-            "nb": "I tillegg til drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
+            "nb": "Foruten i drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
           }
         }
       ],
@@ -395,7 +395,7 @@
         "sv": "Nej, mandlar bör hållas borta från katter. Söta mandlar anses inte giftiga, men de innehåller mycket olja och fett och kan få katten att må dåligt, med orolig mage eller kräkningar.",
         "da": "Nej, mandler holdes bedst væk fra katte. Søde mandler regnes ikke for giftige, men de indeholder meget olie og fedt og kan gøre en kat utilpas med dårlig mave eller opkast.",
         "fi": "Ei, mantelit on parasta pitää kissan ulottumattomissa. Makeita manteleita ei pidetä myrkyllisinä, mutta ne sisältävät paljon öljyjä ja rasvaa, ja ne voivat saada kissan voimaan huonosti ja aiheuttaa vatsavaivoja tai oksentelua.",
-        "nb": "Nei, mandler bør holdes unna katter. Søte mandler regnes ikke som giftige, men de inneholder mye olje og fett og kan gjøre katten dårlig, med urolig mage eller oppkast."
+        "nb": "Nei, mandler bør holdes unna katter. Søte mandler regnes ikke som giftige, men de inneholder mye olje og fett og kan gjøre katten uvel, med urolig mage eller oppkast."
       },
       "why": {
         "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
@@ -412,7 +412,7 @@
         "sv": "Cats Protection räknar mandlar till de nötter som innehåller mycket olja och fett och kan få en katt att må dåligt. ASPCA skriver att söta mandlar som säljs som livsmedel inte är giftiga för husdjur, men eftersom de inte hör till djurens vanliga kost kan de ge matsmältningsbesvär. Bittermandlar innehåller en cyanidförening och anses giftiga.",
         "da": "Cats Protection nævner mandler blandt de nødder der indeholder store mængder olie og fedt, som kan gøre en kat utilpas. ASPCA skriver at søde mandler, der sælges som fødevare, ikke er giftige for kæledyr, men fordi de ikke er en normal del af et kæledyrs kost, kan de give fordøjelsesproblemer. Bittermandler indeholder en cyanidforbindelse og regnes for giftige.",
         "fi": "Cats Protection mainitsee mantelit niiden pähkinöiden joukossa, jotka sisältävät paljon öljyjä ja rasvaa ja voivat saada kissan voimaan huonosti. ASPCA:n mukaan syötäväksi myytävät makeat mantelit eivät ole lemmikeille myrkyllisiä, mutta koska ne eivät kuulu lemmikin tavalliseen ruokavalioon, ne voivat aiheuttaa ruoansulatusvaivoja. Karvasmantelit sisältävät syanidiyhdistettä, ja niitä pidetään myrkyllisinä.",
-        "nb": "Cats Protection regner mandler blant nøtter som inneholder mye olje og fett, som kan gjøre katten dårlig. ASPCA skriver at søte mandler som selges til mat, ikke er giftige for kjæledyr, men siden de ikke er en vanlig del av dyrets kosthold, kan de gi fordøyelsesplager. Bitre mandler inneholder en cyanidforbindelse og regnes som giftige."
+        "nb": "Cats Protection regner mandler blant nøtter som inneholder mye olje og fett, som kan gjøre katten uvel. ASPCA skriver at søte mandler som selges til mat, ikke er giftige for kjæledyr, men siden de ikke er en vanlig del av dyrets kosthold, kan de gi fordøyelsesplager. Bitre mandler inneholder en cyanidforbindelse og regnes som giftige."
       },
       "signs": {
         "en": [
@@ -503,7 +503,7 @@
           "Oppkast",
           "Diaré",
           "Urolig mage",
-          "Virker dårlig"
+          "Virker uvel"
         ]
       },
       "what_to_do": {
@@ -521,7 +521,7 @@
         "sv": "Om katten har ätit mandlar, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när. Om det var bittermandlar, kontakta veterinären direkt.",
         "da": "Hvis din kat har spist mandler, så kontakt din dyrlæge for at få råd, især hvis den har spist meget eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår. Hvis det var bittermandler, skal du kontakte din dyrlæge med det samme.",
         "fi": "Jos kissasi söi manteleita, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa huonovointiselta. Kirjaa ylös, mitä se söi, kuinka paljon ja milloin. Jos ne olivat karvasmanteleita, ota heti yhteyttä eläinlääkäriin.",
-        "nb": "Hvis katten har spist mandler, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hva den har spist, hvor mye og når. Hvis det var bitre mandler, kontakt dyrlegen med en gang."
+        "nb": "Hvis katten har spist mandler, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker uvel. Skriv ned hva den har spist, hvor mye og når. Hvis det var bitre mandler, kontakt dyrlegen med en gang."
       },
       "serving": null,
       "child": {
@@ -1062,7 +1062,7 @@
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären. Om katten har tuggat på äppelkärnor, skaft eller blad, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt.",
         "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge. Hvis din kat har tygget på æblekerner, -stilke eller -blade, så kontakt din dyrlæge eller en giftrådgivning for dyr så hurtigt som muligt.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi pureskeli omenansiemeniä, -varsia tai -lehtiä, ota mahdollisimman pian yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
-        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen. Hvis katten har tygget på eplekjerner, eplestilker eller -blader, kontakt dyrlegen eller giftinformasjon for dyr så snart som mulig."
+        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen. Hvis katten har tygget på eplekjerner, eplestilker eller -blader, kontakt dyrlegen eller giftinformasjon for dyr så snart som mulig."
       },
       "serving": {
         "en": "Apple flesh only, raw or cooked, with the core, seeds and stem removed; a small piece now and then, counted in your cat's daily food.",
@@ -1651,7 +1651,7 @@
           "Mikä tahansa huonovointisuuden merkki, kun kissa on syönyt sitä paljon (lähteemme eivät mainitse kissoilla tiettyjä oireita)"
         ],
         "nb": [
-          "Alle tegn på at katten er dårlig etter å ha spist mye av det (kildene våre nevner ingen bestemte symptomer hos katter)"
+          "Eventuelle tegn på at katten er uvel etter å ha spist mye av det (kildene våre nevner ingen bestemte symptomer hos katter)"
         ]
       },
       "what_to_do": {
@@ -1669,7 +1669,7 @@
         "sv": "Om katten har ätit avokado, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera hur mycket katten åt och när.",
         "da": "Hvis din kat har spist avocado, så kontakt din dyrlæge for at få råd, især hvis den har spist meget, eller hvis din kat virker utilpas. Skriv ned hvor meget din kat har spist, og hvornår.",
         "fi": "Jos kissasi söi avokadoa, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa huonovointiselta. Kirjaa ylös, kuinka paljon kissasi söi ja milloin.",
-        "nb": "Hvis katten har spist avokado, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hvor mye katten har spist og når."
+        "nb": "Hvis katten har spist avokado, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker uvel. Skriv ned hvor mye katten har spist og når."
       },
       "serving": null,
       "child": {
@@ -1864,7 +1864,7 @@
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
@@ -2080,7 +2080,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt knogle, så ring til din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissallesi tulee sen jälkeen oksentelua tai ripulia, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nieli kypsennetyn luun, soita eläinlääkärille.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
       },
       "serving": {
         "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -2261,7 +2261,7 @@
         "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
         "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-        "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A few berries now and then, counted in your cat's daily food.",
@@ -2440,7 +2440,7 @@
         "sv": "Nej, smör är bäst att undvika. Det är en fet mejeriprodukt: guider om kattvård räknar fet mat till sådant man aldrig ska ge katter, mejeriprodukter kan ge katten orolig mage, och fettet bidrar till viktuppgång.",
         "da": "Nej, smør bør undgås. Det er et fedtrigt mejeriprodukt: Vejledninger i kattepleje nævner fed mad blandt det katte aldrig må få, mejeriprodukter kan give en kat dårlig mave, og fedtet får katten til at tage på.",
         "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaiden mukaan rasvaisia ruokia ei saa koskaan antaa kissoille, maitotuotteet voivat aiheuttaa vatsavaivoja ja niiden rasva lisää painoa.",
-        "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Veiledninger om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
+        "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Råd om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
       },
       "why": {
         "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -2551,7 +2551,7 @@
         "sv": "Om katten har ätit smör, håll utkik efter kräkningar eller diarré och kontakta veterinären för råd om den verkar må dåligt eller har ätit mycket.",
         "da": "Hvis din kat har spist smør, så hold øje med opkast eller diarré, og kontakt din dyrlæge for at få råd hvis katten virker utilpas eller har spist meget.",
         "fi": "Jos kissasi söi voita, seuraa, ilmeneekö oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta tai söi paljon.",
-        "nb": "Hvis katten har spist smør, følg med på oppkast eller diaré, og kontakt dyrlegen for råd hvis den virker dårlig eller har spist mye."
+        "nb": "Hvis katten har spist smør, følg med på oppkast eller diaré, og kontakt dyrlegen for råd hvis den virker uvel eller har spist mye."
       },
       "serving": null,
       "child": {
@@ -2711,7 +2711,7 @@
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
@@ -2906,7 +2906,7 @@
         "sv": "De flesta vuxna katter kan inte bryta ner laktos ordentligt, alltså sockret i mjölk och i mejeriprodukter som ost. Det kan ge kräkningar eller diarré och göra katten trög. Ost innehåller också mycket fett och salt, och om katten äter det regelbundet kan det leda till viktuppgång. Laktosfri och växtbaserad ost är inget säkert alternativ, eftersom vissa mejerialternativ innehåller ingredienser som kan vara giftiga för katter.",
         "da": "De fleste voksne katte kan ikke fordøje laktose ordentligt, altså sukkeret i mælk og i mejeriprodukter som ost. Det kan give opkast eller diarré og gøre en kat sløv. Ost indeholder også meget fedt og salt, og spist jævnligt kan den få katten til at tage på. Laktosefri og plantebaseret ost er ikke et sikkert alternativ fordi nogle mejerierstatninger indeholder ingredienser der kan være giftige for katte.",
         "fi": "Useimmat aikuiset kissat eivät pysty kunnolla sulattamaan laktoosia, joka on maidon ja maitotuotteiden, kuten juuston, sokeri. Se voi aiheuttaa oksentelua tai ripulia ja tehdä kissasta voimattoman. Juustossa on myös paljon rasvaa ja suolaa, ja säännöllisesti syötynä se voi johtaa painonnousuun. Laktoosittomat ja kasvipohjaiset juustot eivät ole turvallinen korvike, koska joissakin maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä.",
-        "nb": "De fleste voksne katter klarer ikke å fordøye laktose ordentlig, sukkeret i melk og i meieriprodukter som ost. Det kan gi oppkast eller diaré og gjøre katten slapp. Ost inneholder også mye fett og salt, og spist jevnlig kan den føre til vektøkning. Laktosefri og plantebasert ost er ikke et trygt alternativ, fordi noen meierierstatninger inneholder ingredienser som kan være giftige for katter."
+        "nb": "De fleste voksne katter klarer ikke å fordøye laktose ordentlig, sukkeret i melk og i meieriprodukter som ost. Det kan gi oppkast eller diaré og gjøre katten slapp. Ost inneholder også mye fett og salt, og spist jevnlig kan den føre til vektøkning. Laktosefri og plantebasert ost er ikke et trygt alternativ, fordi noen meierialternativer inneholder ingredienser som kan være giftige for katter."
       },
       "signs": {
         "en": [
@@ -3015,7 +3015,7 @@
         "sv": "Om katten har ätit lite ost behöver du inte skynda till veterinären. Håll ett öga på katten. Om den börjar må dåligt eller beter sig annorlunda, ring veterinären och berätta hur mycket ost katten åt.",
         "da": "Hvis din kat har spist lidt ost, er der ingen grund til at skynde sig til dyrlægen. Hold øje med katten. Hvis den bliver utilpas eller opfører sig anderledes, så ring til din dyrlæge og fortæl hvor meget ost din kat har spist.",
         "fi": "Jos kissasi söi vähän juustoa, eläinlääkäriin ei tarvitse kiirehtiä. Pidä kissaa silmällä. Jos se tulee huonovointiseksi tai käyttäytyy tavallisesta poikkeavasti, soita eläinlääkärille ja kerro, kuinka paljon juustoa kissasi söi.",
-        "nb": "Hvis katten har spist litt ost, er det ikke nødvendig å skynde seg til dyrlegen. Følg med på den. Hvis den blir dårlig eller oppfører seg annerledes, ring dyrlegen og fortell hvor mye ost katten har spist."
+        "nb": "Hvis katten har spist litt ost, er det ikke nødvendig å skynde seg til dyrlegen. Følg med på den. Hvis den blir uvel eller oppfører seg annerledes, ring dyrlegen og fortell hvor mye ost katten har spist."
       },
       "serving": null,
       "child": {
@@ -3105,7 +3105,7 @@
             "sv": "Nej. Undvik även laktosfri och växtbaserad ost, eftersom många mejerialternativ innehåller ingredienser som kan vara giftiga för katter.",
             "da": "Nej. Undgå også laktosefri og plantebaseret ost fordi mange mejerierstatninger indeholder ingredienser der kan være giftige for katte.",
             "fi": "Ei ole. Vältä myös laktoositonta ja kasvipohjaista juustoa, koska monissa maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä.",
-            "nb": "Nei. Unngå også laktosefri og plantebasert ost, fordi mange meierierstatninger inneholder ingredienser som kan være giftige for katter."
+            "nb": "Nei. Unngå også laktosefri og plantebasert ost, fordi mange meierialternativer inneholder ingredienser som kan være giftige for katter."
           }
         }
       ],
@@ -3544,7 +3544,7 @@
         "sv": "Gräslök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
         "da": "Purløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
         "fi": "Ruohosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-        "nb": "Gressløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+        "nb": "Gressløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
       },
       "signs": {
         "en": [
@@ -3716,7 +3716,7 @@
         "sv": "Gräslök ser ut som gräs, men det är inte kattgräs! Håll den borta från katten och säg till en vuxen om katten tuggar på den.",
         "da": "Purløg ligner græs, men det er ikke kattegræs! Hold det væk fra din kat, og sig det til en voksen hvis den tygger på det.",
         "fi": "Ruohosipuli näyttää ruoholta, mutta se ei ole kissanheinää! Pidä se kaukana kisusta ja kerro aikuiselle, jos kisu pureskelee sitä.",
-        "nb": "Gressløk ligner på gress, men det er ikke kattegress! Hold den unna pusen, og si fra til en voksen hvis pusen tygger på den."
+        "nb": "Gressløk ligner på gress, men den er ikke kattegress! Hold den unna pusen, og si fra til en voksen hvis pusen tygger på den."
       },
       "faq": [
         {
@@ -4022,7 +4022,7 @@
         "nb": [
           "Oppkast",
           "Diaré",
-          "Økt tørste",
+          "Økt tørst",
           "Pesing eller uro",
           "Tisser mer enn vanlig",
           "Hjertet slår svært fort",
@@ -4044,7 +4044,7 @@
         "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra. Notera vilken sorts choklad katten åt, hur mycket och när, och spara omslaget. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
         "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker upåvirket. Skriv ned hvilken slags chokolade din kat har spist, hvor meget og hvornår, og gem indpakningen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
         "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin. Kirjaa ylös, millaista suklaata kissasi söi, kuinka paljon ja milloin, ja säilytä kääre. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
-        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker helt fin. Skriv ned hva slags sjokolade katten har spist, hvor mye og når, og ta vare på innpakningen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
+        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker helt frisk. Skriv ned hva slags sjokolade katten har spist, hvor mye og når, og ta vare på innpakningen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
       },
       "serving": null,
       "child": {
@@ -4660,7 +4660,7 @@
         "sv": "Kontakta veterinären direkt om katten har svalt ett tillagat ben, även om den verkar må bra. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
         "da": "Kontakt straks din dyrlæge hvis din kat har slugt en tilberedt knogle, også selvom den virker upåvirket. Skriv ned hvilken slags knogle det var, og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
         "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nielaisi kypsennetyn luun, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi.",
-        "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et tilberedt bein, selv om den virker helt fin. Skriv ned hva slags bein det var og når. Ikke vent og se, og ikke prøv å få katten til å kaste opp selv."
+        "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et tilberedt bein, selv om den virker helt frisk. Skriv ned hva slags bein det var og når. Ikke se det an, og ikke prøv å få katten til å kaste opp selv."
       },
       "serving": {
         "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
@@ -4878,7 +4878,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat kycklingben, ring veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt kyllingeknogle, så ring til din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn kananluun, soita eläinlääkärille.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt kyllingbein, ring dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt kyllingbein, ring dyrlegen."
       },
       "serving": {
         "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
@@ -4948,7 +4948,7 @@
             "sv": "Nej. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist. Låt kycklingen vara något extra.",
             "da": "Nej. Hvis katten i længere tid kun får tilberedt kylling, kan det føre til mangel på næringsstoffer. Lad det være et ekstra.",
             "fi": "Ei saa. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin. Anna sitä vain lisänä.",
-            "nb": "Nei. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel. La det være noe ekstra."
+            "nb": "Nei. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel. Gi den bare som et tillegg."
           }
         }
       ],
@@ -5093,7 +5093,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären innan du försöker igen.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge før du prøver igen.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä, ennen kuin kokeilet uudelleen.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen før du prøver igjen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen før du prøver igjen."
       },
       "serving": {
         "en": "Fully cooked and plain, with nothing added; a small piece as an occasional treat.",
@@ -5307,7 +5307,7 @@
         "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
         "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä.",
-        "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A few berries now and then, counted in your cat's daily food. For dried cranberries, juice, sauce or jelly, check the label first for xylitol or grape ingredients.",
@@ -6091,7 +6091,7 @@
         "sv": "Vitlök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form. Av lökväxterna är vitlök den giftigaste för katter.",
         "da": "Hvidløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende. Af løgplanterne er hvidløg det mest giftige for katte.",
         "fi": "Valkosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen. Sipulikasveista valkosipuli on kissoille myrkyllisin.",
-        "nb": "Hvitløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form. Av løkplantene er hvitløk den giftigste for katter."
+        "nb": "Hvitløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form. Av løkplantene er hvitløk den giftigste for katter."
       },
       "signs": {
         "en": [
@@ -6335,7 +6335,7 @@
             "sv": "Ge aldrig katten vitlök, oavsett anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
             "da": "Giv aldrig din kat hvidløg, uanset hvorfor. Alle former er giftige for katte, og Blue Cross nævner at man også frygter at langvarig brug af hvidløg kan give problemer. Spørg din dyrlæge om sikker loppebehandling.",
             "fi": "Älä anna kissallesi valkosipulia mistään syystä. Kaikki muodot ovat kissoille myrkyllisiä, ja Blue Crossin mukaan myös valkosipulin pitkäaikaisen käytön epäillään voivan aiheuttaa ongelmia. Kysy eläinlääkäriltä turvallisesta kirppuhoidosta.",
-            "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er bekymring for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
+            "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er grunn til å være bekymret for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
           }
         }
       ],
@@ -6583,7 +6583,7 @@
         "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall.",
         "da": "Velfærdsorganisationer for katte advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være mere udsatte. Vindrueforgiftning hos katte er sjælden og dårligt kendt, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en nødsituation.",
         "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena.",
-        "nb": "Organisasjoner for katters velferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som et nødstilfelle."
+        "nb": "Organisasjoner for kattevelferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som en nødsituasjon."
       },
       "signs": {
         "en": [
@@ -6829,7 +6829,7 @@
         "sv": "Skinka är ett fett kött som också innehåller mycket natrium, och båda kan ge hälsoproblem. För mycket fett påverkar matsmältningskanalen, särskilt bukspottkörteln. Kryddor som lök eller vitlök gör den giftig. Små mängder är kanske inte extremt skadliga, men det är ingen bra godbit. Salt mat kan också göra katter mer uttorkade, och katter med njur-, hjärt- eller urinvägsproblem bör särskilt undvika skinka.",
         "da": "Skinke er fedt kød med et højt natriumindhold, og begge dele kan give helbredsproblemer. For meget fedt påvirker fordøjelseskanalen, især bugspytkirtlen. Krydderier som løg eller hvidløg gør den giftig. Små mængder er måske ikke ekstremt skadelige, men skinke er ikke en god godbid. Salt mad kan også gøre katte mere dehydrerede, og katte med nyre-, hjerte- eller urinvejsproblemer bør især undgå skinke.",
         "fi": "Kinkku on rasvaista lihaa, jossa on myös paljon natriumia, ja kumpikin voi aiheuttaa terveysongelmia. Liika rasva vaikuttaa ruoansulatuskanavaan, etenkin haimaan. Mausteet, kuten sipuli tai valkosipuli, tekevät siitä myrkyllistä. Pienet määrät eivät välttämättä ole kovin haitallisia, mutta kinkku ei ole hyvä herkku. Suolainen ruoka voi myös pahentaa kissan nestehukkaa, ja kissojen, joilla on munuais-, sydän- tai virtsatievaivoja, pitäisi erityisesti välttää kinkkua.",
-        "nb": "Skinke er fett kjøtt som også inneholder mye natrium, og begge deler kan gi helseproblemer. For mye fett påvirker fordøyelsen, særlig bukspyttkjertelen. Krydder som løk eller hvitløk gjør den giftig. Små mengder er kanskje ikke svært skadelige, men skinke er ikke en god godbit. Salt mat kan også gjøre katter mer dehydrerte, og katter med nyre-, hjerte- eller urinveisproblemer bør særlig unngå skinke."
+        "nb": "Skinke er fett kjøtt som også inneholder mye salt (natrium), og begge deler kan gi helseproblemer. For mye fett påvirker fordøyelsen, særlig bukspyttkjertelen. Krydder som løk eller hvitløk gjør den giftig. Små mengder er kanskje ikke svært skadelige, men skinke er ikke en god godbit. Salt mat kan også gjøre at katter blir mer dehydrert, og katter med nyre-, hjerte- eller urinveisproblemer bør særlig unngå skinke."
       },
       "signs": {
         "en": [
@@ -7273,7 +7273,7 @@
         "sv": "Om katten har ätit glass, håll utkik efter diarré eller kräkningar och kontakta veterinären för råd om den verkar må dåligt. Om glassen innehöll choklad, kontakta veterinären direkt.",
         "da": "Hvis din kat har spist is, så hold øje med diarré eller opkast, og kontakt din dyrlæge for at få råd hvis den virker utilpas. Hvis isen indeholdt chokolade, skal du kontakte din dyrlæge med det samme.",
         "fi": "Jos kissasi söi jäätelöä, seuraa, tuleeko ripulia tai oksentelua, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta. Jos jäätelössä oli suklaata, ota heti yhteyttä eläinlääkäriin.",
-        "nb": "Hvis katten har spist iskrem, følg med på diaré eller oppkast, og kontakt dyrlegen for råd hvis den virker dårlig. Hvis iskremen inneholdt sjokolade, kontakt dyrlegen med en gang."
+        "nb": "Hvis katten har spist iskrem, følg med på diaré eller oppkast, og kontakt dyrlegen for råd hvis den virker uvel. Hvis iskremen inneholdt sjokolade, kontakt dyrlegen med en gang."
       },
       "serving": null,
       "child": {
@@ -7327,7 +7327,7 @@
             "sv": "Nej. Katter kan inte känna söt smak alls, så socker ger dem inget annat än extra kalorier.",
             "da": "Nej. Katte kan slet ikke smage sødt, så sukker giver dem ikke andet end ekstra kalorier.",
             "fi": "Eivät. Kissat eivät maista makeaa lainkaan, joten sokerista ne saavat vain ylimääräisiä kaloreita.",
-            "nb": "Nei. Katter kan ikke kjenne søt smak i det hele tatt, så sukker gir dem ikke noe annet enn ekstra kalorier."
+            "nb": "Nei. Katter kan ikke smake søtt i det hele tatt, så sukker gir dem ikke noe annet enn ekstra kalorier."
           }
         }
       ],
@@ -7472,7 +7472,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn luun, soita eläinlääkärille.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
       },
       "serving": {
         "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -7635,7 +7635,7 @@
         "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
         "da": "Porre hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
         "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-        "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+        "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
       },
       "signs": {
         "en": [
@@ -8204,7 +8204,7 @@
         "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när växande kattungar får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
         "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det også kan ske hvis katten udelukkende fodres med lever. VCA anbefaler i stedet en kommercielt fremstillet, balanceret kost.",
         "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa.",
-        "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at det å bare gi lever kan føre til forgiftningen. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
+        "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at et kosthold med bare lever kan føre til forgiftning. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
       },
       "signs": {
         "en": [
@@ -8361,7 +8361,7 @@
         "sv": "Lever har jättemycket av ett visst vitamin, och för mycket är inte bra för katter. Kattmaten har redan precis lagom mycket.",
         "da": "Lever indeholder meget af ét bestemt vitamin, og for meget af det er ikke godt for katte. Deres kattemad har allerede den rigtige mængde.",
         "fi": "Maksassa on paljon yhtä vitamiinia, ja liian paljon sitä ei ole hyväksi kissoille. Kissanruoassa sitä on jo juuri sopivasti.",
-        "nb": "Lever har veldig mye av ett vitamin, og for mye av det er ikke bra for katter. Kattematen har allerede passe mengde."
+        "nb": "Lever har veldig mye av ett vitamin, og for mye av det er ikke bra for katter. Kattematen har allerede akkurat nok av det."
       },
       "faq": [
         {
@@ -8397,7 +8397,7 @@
             "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och komplett, balanserad kattmat är det som veterinärer rekommenderar.",
             "da": "Nej. Lever er en almindelig ingrediens i kattefoder på dåse, og et komplet, balanceret kattefoder er netop det dyrlæger anbefaler.",
             "fi": "Ei ole. Maksa on tavallinen ainesosa kissojen märkäruoissa, ja eläinlääkärit suosittelevat tasapainoista täysravintoa.",
-            "nb": "Nei. Lever er en vanlig ingrediens i kattefôr på boks, og et komplett, balansert kattefôr er det dyrleger anbefaler."
+            "nb": "Nei. Lever er en vanlig ingrediens i våtfôr, og dyrleger anbefaler komplett, balansert kattefôr."
           }
         }
       ],
@@ -8521,7 +8521,7 @@
         "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att katter kan må dåligt av dem. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga, så att katter kan bli sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter.",
         "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpas. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau.",
         "fi": "Cats Protectionin mukaan makadamia kuuluu pähkinöihin, joiden runsas öljy ja rasva voivat tehdä kissan sairaaksi. VCA:n mukaan makadamiapähkinät ovat hyvin rasvaisia, joten ne voivat aiheuttaa haimatulehduksen, ja lisäksi ne ovat myrkyllisiä ja sairastuttavat kissan. Tarkat kuvaukset makadamiamyrkytyksestä koskevat enimmäkseen koiria, mutta käytämme kissoille tiukempaa luokitusta.",
-        "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter dårlige. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
+        "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter uvel. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
       },
       "signs": {
         "en": [
@@ -8995,7 +8995,7 @@
         "sv": "Om katten har druckit mjölk och har kräkningar eller diarré som inte går över, eller verkar må dåligt, kontakta veterinären för råd.",
         "da": "Hvis din kat har drukket mælk og får opkast eller diarré der ikke går over, eller virker utilpas, skal du kontakte din dyrlæge og få råd.",
         "fi": "Jos kissasi joi maitoa ja sillä on oksentelua tai ripulia, joka ei mene ohi, tai se vaikuttaa sairaalta, kysy neuvoa eläinlääkäriltä.",
-        "nb": "Hvis katten har drukket melk og har oppkast eller diaré som ikke gir seg, eller virker dårlig, bør du kontakte dyrlegen for råd."
+        "nb": "Hvis katten har drukket melk og har oppkast eller diaré som ikke gir seg, eller virker uvel, bør du kontakte dyrlegen for råd."
       },
       "serving": {
         "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
@@ -9251,7 +9251,7 @@
         "sv": "Nej. Lök är giftig för katter i alla former – rå, tillagad, torkad eller som pulver. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi), och katter är den känsligaste arten. Ring veterinären om katten äter någon lök.",
         "da": "Nej. Løg er giftigt for katte i alle former – råt, tilberedt, tørret eller i pulverform. Det kan skade de røde blodlegemer og give blodmangel (anæmi), og katte er den mest følsomme dyreart. Ring til din dyrlæge hvis din kat spiser noget af det.",
         "fi": "Ei saa. Sipuli on kissalle myrkyllistä kaikissa muodoissa – raakana, kypsennettynä, kuivattuna tai jauheena. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa, ja kissat ovat kaikista eläinlajeista herkimpiä. Soita eläinlääkärille, jos kissasi syö sitä vähänkin.",
-        "nb": "Nei. Løk er giftig for katter i alle former – rå, tilberedt, tørket eller som pulver. Den kan skade de røde blodcellene og gi blodmangel (anemi), og katter er den mest følsomme arten. Ring dyrlegen hvis katten spiser noe løk."
+        "nb": "Nei. Løk er giftig for katter i alle former – rå, tilberedt, tørket eller som pulver. Den kan skade de røde blodcellene og gi blodmangel (anemi), og katter er den mest følsomme dyrearten. Ring dyrlegen hvis katten spiser noe løk."
       },
       "why": {
         "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -9268,7 +9268,7 @@
         "sv": "Lök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
         "da": "Løg hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
         "fi": "Sipuli kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-        "nb": "Løk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+        "nb": "Løk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
       },
       "signs": {
         "en": [
@@ -10229,7 +10229,7 @@
             "sv": "Xylitol är ett sötningsmedel som tillsätts i vissa jordnötssmör. VCA kallar det en livsfarlig tillsats, så kolla alltid innehållsförteckningen.",
             "da": "Xylitol er et sødemiddel der er tilsat noget peanutbutter. VCA kalder det et livsfarligt tilsætningsstof, så tjek altid varedeklarationen.",
             "fi": "Ksylitoli on makeutusaine, jota lisätään joihinkin maapähkinävoihin. VCA kutsuu sitä hengenvaaralliseksi lisäaineeksi, joten tarkista aina tuoteseloste.",
-            "nb": "Xylitol er et søtstoff som tilsettes i noen typer peanøttsmør. VCA kaller det en livsfarlig tilsetning, så sjekk alltid innholdsfortegnelsen."
+            "nb": "Xylitol er et søtstoff som tilsettes i noen typer peanøttsmør. VCA kaller det en livsfarlig tilsetning, så sjekk alltid ingredienslisten."
           }
         }
       ],
@@ -10671,7 +10671,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai saa ripulin sen jälkeen, lopeta ja kysy eläinlääkäriltä. Jos kissasi nieli kypsennetyn luun, soita eläinlääkärille.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
       },
       "serving": {
         "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -10833,7 +10833,7 @@
         "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor, russin och korinter kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Katter äter sällan många russin av sig själva, men de kan lockas av mat som innehåller russin. Fall hos katter är ovanliga och inte väl utredda, så vi använder den strängare nivån.",
         "da": "Velfærdsorganisationer for katte advarer om at vindruer, rosiner og korender kan give nyresvigt hos katte, og katte med kronisk nyresygdom kan have større risiko. Katte spiser næppe mange rosiner af sig selv, men de kan blive fristet af mad der indeholder rosiner. Tilfælde hos katte er sjældne og dårligt kendt, så vi bruger det strengere niveau.",
         "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet, rusinat ja korintit voivat aiheuttaa kissoille munuaisten vajaatoiminnan, ja kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Kissat tuskin syövät itsestään paljon rusinoita, mutta niitä voivat houkutella ruoat, joissa rusinoita on. Kissoilla tapaukset ovat harvinaisia, eikä niitä tunneta hyvin, joten käytämme tiukempaa luokitusta.",
-        "nb": "Organisasjoner for katters velferd advarer om at druer, rosiner og korinter kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Det er lite sannsynlig at katter spiser mange rosiner på egen hånd, men de kan bli fristet av mat som inneholder dem. Tilfeller hos katter er sjeldne og lite forstått, så vi bruker det strengere nivået."
+        "nb": "Organisasjoner for kattevelferd advarer om at druer, rosiner og korinter kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Det er lite sannsynlig at katter spiser mange rosiner på egen hånd, men de kan bli fristet av mat som inneholder dem. Tilfeller hos katter er sjeldne og lite forstått, så vi bruker det strengere nivået."
       },
       "signs": {
         "en": [
@@ -10951,7 +10951,7 @@
             "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten.",
             "da": "PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Hold dem uden for din kats rækkevidde.",
             "fi": "PDSA varoittaa, että mince pie -piirakoissa ja joulukakussa on rusinoita, sultanarusinoita ja korintteja, jotka ovat lemmikeille erittäin myrkyllisiä. Pidä ne poissa kissasi ulottuvilta.",
-            "nb": "PDSA advarer om at mince pies og julekake inneholder rosiner, sultanarosiner og korinter, som er svært giftige for kjæledyr. Hold dem utenfor kattens rekkevidde."
+            "nb": "PDSA advarer om at mince pies og julekake inneholder rosiner, sultanrosiner og korinter, som er svært giftige for kjæledyr. Hold dem utenfor kattens rekkevidde."
           }
         }
       ],
@@ -11173,7 +11173,7 @@
         "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
         "da": "Kontakt straks din dyrlæge hvis din kat har slugt en knogle, er ved at blive kvalt eller kaster op. Skriv ned hvilken slags knogle det var og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
         "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nieli luun, tukehtuu tai oksentaa. Kirjaa ylös, millainen luu oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi.",
-        "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et bein, holder på å bli kvalt eller kaster opp. Skriv ned hva slags bein det var og når. Ikke vent og se, og ikke prøv å få katten til å kaste opp selv."
+        "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et bein, holder på å bli kvalt eller kaster opp. Skriv ned hva slags bein det var og når. Ikke se det an, og ikke prøv å få katten til å kaste opp selv."
       },
       "serving": null,
       "child": {
@@ -11932,7 +11932,7 @@
         "sv": "Nej, rått kött rekommenderas inte för katter. Även om vilda katter äter råa bytesdjur kan rått kött bära på bakterier som salmonella, listeria och E. coli och parasiter som toxoplasma, som kan göra både katter och människor sjuka.",
         "da": "Nej, råt kød anbefales ikke til katte. Selvom vilde katte spiser rå byttedyr, kan råt kød indeholde bakterier som salmonella, listeria og E. coli og parasitter som Toxoplasma, der kan gøre både katte og mennesker syge.",
         "fi": "Ei, raakaa lihaa ei suositella kissoille. Vaikka luonnossa elävät kissat syövät raakaa saalista, raa’assa lihassa voi olla taudinaiheuttajia, kuten salmonellaa, listeriaa ja E. coli -bakteeria, sekä loisia, kuten toksoplasmaa, jotka voivat sairastuttaa kissoja ja ihmisiä.",
-        "nb": "Nei, rått kjøtt anbefales ikke for katter. Selv om ville katter spiser rått bytte, kan rått kjøtt bære med seg smittestoffer som bakteriene Salmonella, Listeria og E. coli og parasitten Toxoplasma, som kan gjøre både katter og mennesker syke."
+        "nb": "Nei, rått kjøtt anbefales ikke for katter. Selv om ville katter spiser rått bytte, kan rått kjøtt inneholde smittestoffer som bakteriene Salmonella, Listeria og E. coli og parasitten Toxoplasma, som kan gjøre både katter og mennesker syke."
       },
       "why": {
         "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
@@ -11949,7 +11949,7 @@
         "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik är avsett att tillagas innan man äter det.",
         "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt.",
         "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raaka liha on usein bakteerien saastuttamaa, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä.",
-        "nb": "Både Cornell og Merck Veterinary Manual fraråder rått kjøtt til katter, som mat eller som godbit, fordi det kan spre toksoplasmose og andre infeksjoner. Det er vanlig at rått kjøtt er forurenset med bakterier, og noen katter virker friske, men skiller ut bakteriene i avføringen, og det kan smitte mennesker og andre kjæledyr. Kjøtt til mennesker fra butikken er ment å tilberedes."
+        "nb": "Både Cornell og Merck Veterinary Manual fraråder rått kjøtt til katter, som mat eller som godbit, fordi det kan spre toksoplasmose og andre infeksjoner. Det er vanlig at rått kjøtt er forurenset med bakterier, og noen katter virker friske, men skiller ut bakteriene i avføringen, og det kan smitte mennesker og andre kjæledyr. Kjøtt som selges til mennesker, er ment å tilberedes før det spises."
       },
       "signs": {
         "en": [
@@ -12163,7 +12163,7 @@
             "sv": "Störst risk att bli allvarligt sjuka har mycket gamla människor, mycket små barn och personer med försvagat immunförsvar.",
             "da": "De mennesker der har størst risiko for alvorlig sygdom, er meget gamle, meget unge og personer med svækket immunforsvar.",
             "fi": "Vakavan sairauden riski on suurin hyvin iäkkäillä, hyvin pienillä lapsilla ja ihmisillä, joiden vastustuskyky on heikentynyt.",
-            "nb": "Personer med høyest risiko for alvorlig sykdom er de aller eldste, de aller yngste og personer med svekket immunforsvar."
+            "nb": "De som har størst risiko for alvorlig sykdom, er de aller eldste, de aller yngste og personer med svekket immunforsvar."
           }
         }
       ],
@@ -12612,7 +12612,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Ta bort alla ben du hittar.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Fjern de ben du finder.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Poista kaikki ruodot, jotka löydät.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Fjern alle bein du finner."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Fjern alle bein du finner."
       },
       "serving": {
         "en": "Cooked, plain, boneless and unseasoned, or tinned in spring water; a few small pieces now and then.",
@@ -12806,7 +12806,7 @@
         "sv": "För mycket salt ger törst och gör att katten kissar ofta, och i allvarliga fall ger det darrningar och kramper. Saltkällor i hemmet är bland annat bordssalt i matlagningen och vägsalt som används mot halka på vintern.",
         "da": "For meget salt giver tørst og hyppig vandladning og i alvorlige tilfælde rysten og kramper. Kilder til salt i hjemmet er blandt andet bordsalt til madlavning og vejsalt der bruges mod glatføre om vinteren.",
         "fi": "Liika suola aiheuttaa janoa ja tiheää virtsaamista ja vakavissa tapauksissa vapinaa ja kouristuksia. Kotona suolaa on esimerkiksi ruoanlaitossa käytettävässä ruokasuolassa ja talvella liukkaudentorjuntaan käytettävässä tiesuolassa.",
-        "nb": "For mye salt gir tørste og hyppig vannlating og i alvorlige tilfeller skjelvinger og kramper. Saltkilder i hjemmet er bl.a. bordsalt i matlagingen og strøsalt som brukes mot is om vinteren."
+        "nb": "For mye salt gir tørst og hyppig vannlating og i alvorlige tilfeller skjelvinger og kramper. Saltkilder i hjemmet er blant annet bordsalt i matlagingen og strøsalt som brukes mot is om vinteren."
       },
       "signs": {
         "en": [
@@ -12941,7 +12941,7 @@
           "Nedsatt matlyst",
           "Sløvhet",
           "Ustø gange",
-          "Unormalt mye tørste eller vannlating",
+          "Kraftig tørst eller hyppig vannlating",
           "Skjelvinger eller kramper"
         ]
       },
@@ -13166,7 +13166,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
@@ -13339,7 +13339,7 @@
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, skal du stoppe og spørge din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy eläinlääkäriltä.",
-        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
@@ -13832,7 +13832,7 @@
         "sv": "Källorna är oense, så vi använder den strängare nivån. RSPCA Australia tillåter konserverad tonfisk i vatten som en godbit ibland. VCA skriver att katter inte ska äta tonfisk, inte ens som godbit, eftersom den saknar livsviktiga näringsämnen och innehåller för mycket omättat fett. Cats Protection varnar för att den kan innehålla mycket salt och kvicksilver och leda till viktuppgång. Merck Veterinary Manual beskriver E-vitaminbrist hos katter som fått stora mängder konserverad tonfisk.",
         "da": "Kilderne er uenige, så vi bruger det strengere niveau. RSPCA Australia tillader tun på dåse i vand som en godbid en gang imellem. Ifølge VCA bør katte ikke spise tun, heller ikke som godbid fordi tun mangler livsnødvendige næringsstoffer og har for meget umættet fedt. Cats Protection advarer om at tun kan indeholde meget salt og kviksølv og give vægtøgning. Merck Veterinary Manual beskriver E-vitaminmangel hos katte der har fået store mængder tun på dåse.",
         "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. RSPCA Australia sallii lähdeveteen säilötyn purkkitonnikalan satunnaisena herkkuna. VCA:n mukaan kissojen ei pidä syödä tonnikalaa edes herkkuna, koska siitä puuttuu välttämättömiä ravintoaineita ja siinä on liikaa tyydyttymätöntä rasvaa. Cats Protection varoittaa, että siinä voi olla paljon suolaa ja elohopeaa ja että se voi lihottaa. Merck Veterinary Manual mainitsee E-vitamiinin puutoksen kissoilla, joille on annettu suuria määriä purkkitonnikalaa.",
-        "nb": "Kildene er uenige, så vi bruker det strengere nivået. RSPCA Australia godtar hermetisk tunfisk i kildevann som en godbit en gang iblant. VCA skriver at katter ikke bør spise tunfisk, ikke engang som godbit, fordi den mangler livsviktige næringsstoffer og har for mye umettet fett. Cats Protection advarer om at den kan inneholde mye salt og kvikksølv og føre til vektøkning. Merck Veterinary Manual beskriver mangel på vitamin E hos katter som har fått store mengder hermetisk tunfisk."
+        "nb": "Kildene er uenige, så vi bruker det strengere nivået. RSPCA Australia mener at hermetisk tunfisk i kildevann er greit som en godbit en gang iblant. VCA skriver at katter ikke bør spise tunfisk, ikke engang som godbit, fordi den mangler livsviktige næringsstoffer og har for mye umettet fett. Cats Protection advarer om at den kan inneholde mye salt og kvikksølv og føre til vektøkning. Merck Veterinary Manual beskriver mangel på vitamin E hos katter som har fått store mengder hermetisk tunfisk."
       },
       "signs": {
         "en": [
@@ -13896,7 +13896,7 @@
         "sv": "En tugga tonfisk är knappast något problem. Gör det inte till en vana eller en huvudmåltid. Om katten verkar må dåligt efter att ha ätit tonfisk, eller ofta äter mycket av den, prata med veterinären.",
         "da": "En bid tun er næppe et problem. Gør det ikke til en vane eller et hovedmåltid. Hvis din kat virker utilpas efter at have spist tun, eller ofte spiser meget af det, skal du tale med din dyrlæge.",
         "fi": "Tonnikalapala tuskin aiheuttaa ongelmia. Älä tee siitä tapaa tai pääateriaa. Jos kissasi vaikuttaa sairaalta tonnikalan syömisen jälkeen tai syö sitä usein paljon, keskustele eläinlääkärin kanssa.",
-        "nb": "En bit tunfisk er neppe et problem. Ikke gjør det til en vane eller et hovedmåltid. Hvis katten virker dårlig etter å ha spist tunfisk, eller ofte spiser mye av den, bør du snakke med dyrlegen."
+        "nb": "En bit tunfisk er neppe et problem. Ikke gjør det til en vane eller et hovedmåltid. Hvis katten virker uvel etter å ha spist tunfisk, eller ofte spiser mye av den, bør du snakke med dyrlegen."
       },
       "serving": {
         "en": "If at all: tinned in spring water with no added salt, a little, rarely, and never instead of cat food.",
@@ -13913,7 +13913,7 @@
         "sv": "Om alls: konserverad i vatten utan tillsatt salt, lite och sällan, och aldrig i stället för kattmat.",
         "da": "Om overhovedet, så kun lidt og sjældent: på dåse i vand uden tilsat salt og aldrig i stedet for kattefoder.",
         "fi": "Jos ollenkaan: lähdeveteen säilöttynä ilman lisättyä suolaa, vähän, harvoin eikä koskaan kissanruoan sijasta.",
-        "nb": "Om i det hele tatt: hermetisk i kildevann uten tilsatt salt, litt, sjelden og aldri i stedet for kattefôr."
+        "nb": "Hvis du i det hele tatt gir det: hermetisk i kildevann uten tilsatt salt, litt, sjelden og aldri i stedet for kattefôr."
       },
       "child": {
         "en": "Cats love tuna, but too much isn't healthy. Their own cat food keeps them strong.",
@@ -13966,7 +13966,7 @@
             "sv": "Nej. Tonfisk saknar livsviktiga näringsämnen som katter behöver, och katter som fått stora mängder konserverad tonfisk har fått E-vitaminbrist.",
             "da": "Nej. Tun mangler livsnødvendige næringsstoffer som katte har brug for, og katte der har fået store mængder tun på dåse, har udviklet E-vitaminmangel.",
             "fi": "Ei voi. Tonnikalasta puuttuu välttämättömiä ravintoaineita, joita kissat tarvitsevat, ja kissoille, joille on annettu suuria määriä purkkitonnikalaa, on kehittynyt E-vitamiinin puutos.",
-            "nb": "Nei. Tunfisk mangler livsviktige næringsstoffer katter trenger, og katter som har fått store mengder hermetisk tunfisk, har fått mangel på vitamin E."
+            "nb": "Nei. Tunfisk mangler livsviktige næringsstoffer katter trenger, og katter som har fått store mengder hermetisk tunfisk, har utviklet mangel på vitamin E."
           }
         }
       ],
@@ -14113,7 +14113,7 @@
         "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har ätit kalkonben, fyllning eller sås med lök eller vitlök, ring veterinären direkt.",
         "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har spist kalkunben, fyld eller sovs med løg eller hvidløg, skal du straks ringe til din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Jos kissasi söi kalkkunan luita tai sipulia tai valkosipulia sisältävää täytettä tai kastiketta, soita eläinlääkärille heti.",
-        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har spist kalkunbein, fyll eller saus med løk eller hvitløk, ring dyrlegen med en gang."
+        "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har spist kalkunbein, fyll eller saus med løk eller hvitløk, ring dyrlegen med en gang."
       },
       "serving": {
         "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -14296,7 +14296,7 @@
         "sv": "Nej, valnötter ska helst hållas borta från katter. De innehåller mycket olja och fett, som kan göra en katt sjuk och ge kräkningar eller diarré.",
         "da": "Nej, valnødder skal helst holdes væk fra katte. De indeholder meget olie og fedt, som kan gøre en kat utilpas og give opkast eller diarré.",
         "fi": "Ei, saksanpähkinät on parasta pitää poissa kissan ulottuvilta. Niissä on paljon öljyjä ja rasvoja, jotka voivat sairastuttaa kissan ja aiheuttaa oksentelua tai ripulia.",
-        "nb": "Nei, valnøtter bør holdes unna katter. De inneholder mye olje og fett, som kan gjøre katten dårlig og gi oppkast eller diaré."
+        "nb": "Nei, valnøtter bør holdes unna katter. De inneholder mye olje og fett, som kan gjøre katten uvel og gi oppkast eller diaré."
       },
       "why": {
         "en": "Cats Protection names walnuts among nuts with high amounts of oils and fats that can make a cat unwell. VCA adds that most nuts are very fatty and can cause vomiting and diarrhoea.",
@@ -14313,7 +14313,7 @@
         "sv": "Cats Protection nämner valnötter bland nötter med mycket olja och fett som kan göra en katt sjuk. VCA tillägger att de flesta nötter är väldigt feta och kan ge kräkningar och diarré.",
         "da": "Cats Protection nævner valnødder blandt de nødder med et højt indhold af olie og fedt der kan gøre en kat utilpas. VCA tilføjer at de fleste nødder er meget fede og kan give opkast og diarré.",
         "fi": "Cats Protection mainitsee saksanpähkinät niiden pähkinöiden joukossa, joissa on paljon öljyjä ja rasvoja ja jotka voivat sairastuttaa kissan. VCA lisää, että useimmat pähkinät ovat hyvin rasvaisia ja voivat aiheuttaa oksentelua ja ripulia.",
-        "nb": "Cats Protection nevner valnøtter blant nøttene med mye olje og fett som kan gjøre en katt dårlig. VCA legger til at de fleste nøtter er svært fete og kan gi oppkast og diaré."
+        "nb": "Cats Protection nevner valnøtter blant nøttene med mye olje og fett som kan gjøre en katt uvel. VCA legger til at de fleste nøtter er svært fete og kan gi oppkast og diaré."
       },
       "signs": {
         "en": [
@@ -14404,7 +14404,7 @@
           "Oppkast",
           "Diaré",
           "Urolig mage",
-          "Virker dårlig"
+          "Virker uvel"
         ]
       },
       "what_to_do": {
@@ -14422,7 +14422,7 @@
         "sv": "Om katten har ätit valnötter, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när.",
         "da": "Hvis din kat har spist valnødder, skal du kontakte din dyrlæge og få råd, især hvis den har spist mange eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår.",
         "fi": "Jos kissasi söi saksanpähkinöitä, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa sairaalta. Kirjaa ylös, mitä kissa söi, kuinka paljon ja milloin.",
-        "nb": "Hvis katten har spist valnøtter, bør du kontakte dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hva den har spist, hvor mye og når."
+        "nb": "Hvis katten har spist valnøtter, bør du kontakte dyrlegen for råd, særlig hvis den har spist mye eller virker uvel. Skriv ned hva den har spist, hvor mye og når."
       },
       "serving": null,
       "child": {
@@ -14440,7 +14440,7 @@
         "sv": "Valnötter är för oljiga för en kattmage. Spara dem till människor och ge katten kattgodis i stället.",
         "da": "Valnødder er for fede til en kats mave. Gem dem til mennesker, og giv din kat dens egne godbidder.",
         "fi": "Saksanpähkinät ovat liian öljyisiä kissan masulle. Jätä ne ihmisille ja anna kissallesi sen omia herkkuja.",
-        "nb": "Valnøtter er for oljete for magen til en katt. Spar dem til mennesker, og gi katten godbiter laget for katter."
+        "nb": "Valnøtter er for oljete for magen til en katt. La dem være til menneskene, og gi katten godbiter laget for katter."
       },
       "faq": [
         {
@@ -14614,7 +14614,7 @@
         "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
         "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, skal du stoppe og spørge din dyrlæge.",
         "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy eläinlääkäriltä.",
-        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+        "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
       },
       "serving": {
         "en": "A small piece now and then, counted in your cat's daily food.",
@@ -14919,7 +14919,7 @@
         "sv": "Om katten har ätit yoghurt: håll utkik efter diarré, kräkningar eller ändrat beteende, och kontakta veterinären för råd om den verkar må dåligt.",
         "da": "Hvis din kat har spist yoghurt, så hold øje med diarré, opkast eller ændret adfærd, og kontakt din dyrlæge for at få råd hvis den virker utilpas.",
         "fi": "Jos kissasi söi jogurttia, seuraa, ilmeneekö ripulia, oksentelua tai käytöksen muutoksia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa sairaalta.",
-        "nb": "Hvis katten har spist yoghurt, bør du følge med på diaré, oppkast eller endret oppførsel og kontakte dyrlegen for råd hvis den virker dårlig."
+        "nb": "Hvis katten har spist yoghurt, bør du følge med på diaré, oppkast eller endret oppførsel og kontakte dyrlegen for råd hvis den virker uvel."
       },
       "serving": null,
       "child": {
@@ -14937,7 +14937,7 @@
         "sv": "Yoghurt är mat för människor. Den kan ge katten ont i magen, så låt den stanna i din skål, inte i kattens.",
         "da": "Yoghurt er menneskemad. Den kan give en kat ondt i maven, så hold den i din skål og ikke i kattens.",
         "fi": "Jogurtti on ihmisten ruokaa. Se voi tehdä kissan masun kipeäksi, joten pidä se omassa kulhossasi äläkä kissan kupissa.",
-        "nb": "Yoghurt er menneskemat. Den kan gi en katt vondt i magen, så la den bli i din skål, ikke i kattens."
+        "nb": "Yoghurt er menneskemat. Den kan gi en katt vondt i magen, så la den bli i skålen din, ikke i kattens."
       },
       "faq": [
         {
@@ -15570,7 +15570,7 @@
         "sv": "En eller två mandlar är oftast ingen anledning till oro. Håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av symtomen ovan.",
         "da": "En eller to mandler er som regel ingen grund til panik: hold øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har spist mange mandler eller mandler med smag, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
         "fi": "Yksi tai kaksi mantelia ei yleensä ole syy paniikkiin: seuraa, ilmeneekö koirallasi oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi söi paljon manteleita tai maustettuja manteleita, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
-        "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse symptomene."
+        "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse tegnene."
       },
       "serving": null,
       "child": {
@@ -15624,7 +15624,7 @@
             "sv": "Nej. Macadamianötter är giftiga för hundar; mandlar är ett problem främst på grund av fettet och risken för stopp.",
             "da": "Nej. Macadamianødder er giftige for hunde; mandler er mest et problem på grund af fedtet og risikoen for blokering.",
             "fi": "Eivät. Makadamiapähkinät ovat koiralle myrkyllisiä, mantelit taas ovat ongelma lähinnä rasvan ja tukosvaaran vuoksi.",
-            "nb": "Nei. Macadamianøtter er giftige for hunder; mandler er et problem først og fremst på grunn av fettet og faren for blokkering."
+            "nb": "Nei. Macadamianøtter er giftige for hunder; mandler er først og fremst et problem på grunn av fettet og faren for blokkering."
           }
         },
         {
@@ -15915,7 +15915,7 @@
         "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
         "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering og kontakte en dyrlæge hvis hunden får problemer.",
         "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
-        "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering og kontakte dyrlege hvis hunden får problemer."
+        "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering og kontakte dyrlegen hvis hunden får problemer."
       },
       "serving": null,
       "child": {
@@ -15969,7 +15969,7 @@
             "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
             "da": "Nogle få kerner gør sandsynligvis ikke skade. Hold øje med tegn på fordøjelsesproblemer eller blokering fra kernehuset, og kontakt en dyrlæge hvis hunden får problemer.",
             "fi": "Muutama siemen tuskin aiheuttaa haittaa. Seuraa, ilmeneekö koirallasi siemenkodan aiheuttamien ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
-            "nb": "Noen få kjerner gjør neppe skade. Følg med på tegn på fordøyelsesproblemer eller blokkering fra kjernehuset, og kontakt dyrlege hvis hunden får problemer."
+            "nb": "Noen få kjerner gjør neppe skade. Følg med på tegn på fordøyelsesproblemer eller blokkering fra kjernehuset, og kontakt dyrlegen hvis hunden får problemer."
           }
         }
       ],
@@ -16100,7 +16100,7 @@
         "sv": "Äpplen är en kalorisnål godbit med vitamin A och C, kalium, antioxidanter och fiber, särskilt i skalet. Eftersom äpplen innehåller socker är ett helt äpple troligen för mycket för hunden, och om hunden äter för mycket äpple kan den få ont i magen eller diarré.",
         "da": "Æbler er en kaloriefattig godbid med A- og C-vitamin, kalium, antioxidanter og fibre, især i skrællen. På grund af sukkeret i hvert æble er et helt æble sandsynligvis for meget for din hund, og for mange æbler kan give dårlig mave eller diarré.",
         "fi": "Omena on vähäkalorinen herkku, jossa on A- ja C-vitamiinia, kaliumia, antioksidantteja ja kuitua, etenkin kuoressa. Omenan sokerin vuoksi kokonainen omena on koirallesi todennäköisesti liikaa, ja liian monen omenan syöminen voi aiheuttaa vatsakipua tai ripulia.",
-        "nb": "Epler er en kalorifattig godbit med vitamin A og C, kalium, antioksidanter og fiber, særlig i skallet. På grunn av sukkeret i hvert eple er et helt eple trolig for mye for hunden, og for mange epler kan gi vondt i magen eller diaré."
+        "nb": "Epler er en kalorifattig godbit med vitamin A og C, kalium, antioksidanter og fiber, særlig i skallet. Epler inneholder en del sukker, så et helt eple er trolig for mye for hunden, og for mange epler kan gi vondt i magen eller diaré."
       },
       "signs": null,
       "what_to_do": {
@@ -16118,7 +16118,7 @@
         "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp. Om hunden får problem, sluta ge äpple och kontakta en veterinär.",
         "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering. Hvis hunden får problemer, skal du stoppe med at give den æble og kontakte en dyrlæge.",
         "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä. Jos koiralla on ongelmia, lopeta omenan antaminen ja ota yhteyttä eläinlääkäriin.",
-        "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering. Får hunden problemer, slutter du å gi den epler og kontakter dyrlege."
+        "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering. Får hunden problemer, slutter du å gi den epler og kontakter dyrlegen."
       },
       "serving": {
         "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
@@ -16224,7 +16224,7 @@
             "sv": "Nej. Det tillsatta sockret och pajdegen är för mycket för hundar. Undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
             "da": "Nej. Det tilsatte sukker og tærtedejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
             "fi": "Ei saa. Lisätty sokeri ja piirakkapohja ovat koirille liikaa; vältä omenaruokia, joissa on lisättyä sokeria tai mausteita, kuten muskottipähkinää.",
-            "nb": "Nei. Det tilsatte sukkeret og paibunnen er for mye for hunder; unngå mat med eple som har tilsatt sukker eller krydder, som muskatnøtt."
+            "nb": "Nei. Tilsatt sukker og paibunn er for mye for hunder; unngå også epleretter med tilsatt sukker eller krydder, som muskatnøtt."
           }
         }
       ],
@@ -16486,7 +16486,7 @@
         "sv": "Aprikoskärnor, blad och skaft är inte bra för hundar. Aprikoser är till för människor, och säg till en vuxen om hunden tuggar på en kärna.",
         "da": "Abrikossten, -blade og -stilke er dårlige for hunde. Lad abrikoserne være til mennesker, og sig det til en voksen hvis din hund tygger på en sten.",
         "fi": "Aprikoosin kivet, lehdet ja varret ovat koirille pahasta. Jätä aprikoosit ihmisille ja kerro aikuiselle, jos koirasi pureskelee kiveä.",
-        "nb": "Aprikossteiner, -blader og -stilker er ikke bra for hunder. La aprikosene være for mennesker, og si fra til en voksen hvis hunden tygger på en stein."
+        "nb": "Aprikossteiner, -blader og -stilker er ikke bra for hunder. Aprikosene er til oss mennesker, og du må si fra til en voksen hvis hunden tygger på en stein."
       },
       "faq": [
         {
@@ -16757,7 +16757,7 @@
         "sv": "Avokado är ingen bra godbit för hundar. Den stora kärnan kan fastna i hundens mage, så håll avokado borta.",
         "da": "Avocado er ikke en god hundesnack. Den store sten indeni kan sætte sig fast i hundens mave, så hold avocadoer væk.",
         "fi": "Avokado ei ole hyvä koiran välipala. Sen sisällä oleva iso kivi voi juuttua koiran mahaan, joten pidä avokadot poissa koiran luota.",
-        "nb": "Avokado er ikke en god hundesnack. Den store steinen inni kan sette seg fast i magen til hunden, så hold avokadoer unna."
+        "nb": "Avokado er ikke en god snack for hunder. Den store steinen inni kan sette seg fast i magen, så hold avokadoen unna."
       },
       "faq": [
         {
@@ -17794,7 +17794,7 @@
         "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
         "da": "Hunde kan godt få et par vaskede brombær! Spørg en voksen først, især hvis bærrene er plukket udenfor.",
         "fi": "Koira saa maistaa muutaman pestyn karhunvatukan! Kysy ensin aikuiselta, etenkin jos marjat on poimittu luonnosta.",
-        "nb": "Hunder kan få noen vaskede bjørnebær! Spør en voksen først, særlig når det gjelder bær som er plukket ute."
+        "nb": "Hunder kan få noen vaskede bjørnebær! Spør en voksen først, særlig hvis bærene er plukket ute."
       },
       "faq": [
         {
@@ -18011,7 +18011,7 @@
         "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få.",
         "da": "Blåbær kan være en lækker lille godbid til hunde! En voksen vasker dem først og giver kun nogle få.",
         "fi": "Mustikat voivat olla koiralle ihana pieni herkku! Aikuinen pesee ne ensin ja antaa vain muutaman.",
-        "nb": "Blåbær kan være en liten, god godbit for hunder! En voksen vasker dem først og gir bare noen få."
+        "nb": "Blåbær kan være en deilig liten godbit for hunder! En voksen vasker dem først og gir bare noen få."
       },
       "faq": [
         {
@@ -18158,7 +18158,7 @@
         "sv": "Nej, helst inte. Smör är inte giftigt, men det innehåller mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med hunden, som ägg eller potatismos, lagar du helst utan smör.",
         "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedtholdigt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
         "fi": "Ei kannata. Voi ei sinänsä ole myrkyllistä, mutta se on hyvin rasvaista, ja rasvaiset ruoat voivat aiheuttaa koiralle vatsavaivoja ja mahdollisesti laukaista haimatulehduksen, joka on kivulias tulehdus. Koiran kanssa jaettava ruoka, kuten kananmuna tai perunamuusi, kannattaa valmistaa ilman voita.",
-        "nb": "Nei, helst ikke. Smør er ikke giftig, men det er svært fett, og fet mat kan gi hunden urolig mage og kan utløse betennelse i bukspyttkjertelen, som er smertefullt. Mat du deler, som egg eller potetmos, lager du helst uten smør."
+        "nb": "Nei, helst ikke. Smør er ikke giftig, men det er svært fett, og fet mat kan gi hunden urolig mage og kan utløse betennelse i bukspyttkjertelen, noe som er smertefullt. Mat du deler, som egg eller potetmos, lager du helst uten smør."
       },
       "why": {
         "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -18175,7 +18175,7 @@
         "sv": "Fet mat är inte ett förgiftningsproblem i sig, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, drabbas lättare. Veterinärer rekommenderar också att mat som lagas till hundar, som ägg eller potatismos, lagas utan smör.",
         "da": "Fed mad fra bordet giver ikke forgiftning, men fed mad som smør, olie og stegefedt kan udløse betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
         "fi": "Rasvaiset ihmisruoat eivät aiheuta myrkytystä, mutta rasvaiset ruoat, kuten voi, öljyt ja paistinrasva, voivat aiheuttaa haimatulehduksen. Jotkin rodut, etenkin kääpiösnautserit, ovat sille alttiimpia. Eläinlääkärit neuvovat myös tekemään koirallekin annettavan ruoan, kuten kananmunan tai perunamuusin, ilman voita.",
-        "nb": "Fet menneskemat er ikke et giftighetsproblem, men fet mat som smør, olje og stekefett kan gi betennelse i bukspyttkjertelen. Noen raser, særlig dvergschnauzer, er mer utsatt. Dyrleger anbefaler også å lage mat til hunder, som egg eller potetmos, uten smør."
+        "nb": "Fet menneskemat er ikke noe forgiftningsproblem, men fet mat som smør, olje og stekefett kan gi betennelse i bukspyttkjertelen. Noen raser, særlig dvergschnauzer, er mer utsatt. Dyrleger anbefaler også å lage mat til hunder, som egg eller potetmos, uten smør."
       },
       "signs": {
         "en": [
@@ -18338,7 +18338,7 @@
             "sv": "Inte som gift. Problemet är fettet, som kan ge orolig mage eller bukspottkörtelinflammation.",
             "da": "Ikke i den forstand at det er giftigt. Problemet er fedtet, som kan give dårlig mave eller betændelse i bugspytkirtlen.",
             "fi": "Ei siinä mielessä, että se olisi myrkkyä. Ongelma on rasva, joka voi aiheuttaa vatsavaivoja tai haimatulehduksen.",
-            "nb": "Ikke i betydningen giftig. Problemet er fettet, som kan gi urolig mage eller betennelse i bukspyttkjertelen."
+            "nb": "Ikke giftig i vanlig forstand. Problemet er fettet, som kan gi urolig mage eller betennelse i bukspyttkjertelen."
           }
         }
       ],
@@ -18447,7 +18447,7 @@
         "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och är en bra källa till vätska och fiber, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
         "da": "Ja, med måde. Cantaloupemelon har få kalorier og er en god kilde til væske og fibre, men den har et højt sukkerindhold, så giv den sparsomt, især til hunde med overvægt eller diabetes. Giv ikke skræl eller kerner.",
         "fi": "Kyllä, kohtuudella. Cantaloupe-meloni on vähäkalorinen ja hyvä veden ja kuidun lähde, mutta siinä on paljon sokeria, joten anna sitä säästeliäästi, etenkin ylipainoisille tai diabetesta sairastaville koirille. Älä anna kuorta tai siemeniä.",
-        "nb": "Ja, med måte. Cantaloupemelon har få kalorier og er en god kilde til vann og fiber, men den inneholder mye sukker, så del den sparsomt, særlig med hunder som er overvektige eller har diabetes. Ikke gi skallet eller frøene."
+        "nb": "Ja, med måte. Cantaloupemelon har få kalorier og er en god kilde til vann og fiber, men den inneholder mye sukker, så gi bare små mengder, særlig til hunder som er overvektige eller har diabetes. Ikke gi skallet eller frøene."
       },
       "why": {
         "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
@@ -18482,7 +18482,7 @@
         "sv": "Om du undrar över eller är orolig för att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
         "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund cantaloupemelon, fx hvis den har diabetes.",
         "fi": "Jos sinulla on kysyttävää cantaloupe-melonin antamisesta koirallesi tai olet siitä huolissasi, esimerkiksi jos koirallasi on diabetes, kysy eläinlääkäriltä.",
-        "nb": "Har du spørsmål eller er du bekymret for å gi hunden cantaloupemelon, for eksempel fordi hunden har diabetes, kan du spørre dyrlegen."
+        "nb": "Er du i tvil om du bør gi hunden cantaloupemelon, for eksempel fordi den har diabetes, kan du spørre dyrlegen."
       },
       "serving": {
         "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
@@ -18679,7 +18679,7 @@
         "sv": "Cashewnötter är inte giftiga, men de är ett fettrikt tilltugg: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter innehåller salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
         "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
         "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla reaktiona voi olla turvotus, kutina tai nokkosihottuma.",
-        "nb": "Cashewnøtter er ikke giftige, men de er en fet snacks: For mange kan føre til urolig mage, betennelse i bukspyttkjertelen og vektøkning. Saltede cashewnøtter gir salt, som er skadelig i store mengder. Den største risikoen kommer fra andre nøtter i en blanding, som macadamianøtter. Noen hunder kan reagere med hevelse, kløe eller elveblest."
+        "nb": "Cashewnøtter er ikke giftige, men de er en fet snacks: For mange kan føre til urolig mage, betennelse i bukspyttkjertelen og vektøkning. Saltede cashewnøtter inneholder ekstra salt, som er skadelig i store mengder. Den største risikoen kommer fra andre nøtter i en blanding, som macadamianøtter. Noen hunder kan reagere med hevelse, kløe eller elveblest."
       },
       "signs": null,
       "what_to_do": {
@@ -18881,7 +18881,7 @@
         "sv": "Inte som en vanlig godbit. Vissa veterinärkällor tillåter små bitar osmaksatt, mager ost, men ost är fet, många hundar har svårt att smälta mejeriprodukter, och vissa ostar innehåller lök, vitlök eller gräslök. Blåmögelost är särskilt problematisk.",
         "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader små stykker almindelig, mager ost, men ost er fed, mange hunde fordøjer mejeriprodukter dårligt, og nogle oste indeholder løg, hvidløg eller purløg. Blåskimmeloste er særligt problematiske.",
         "fi": "Ei säännöllisenä herkkuna. Jotkin eläinlääketieteelliset lähteet sallivat pieniä paloja maustamatonta, vähärasvaisempaa juustoa, mutta juusto on rasvaista, moni koira sulattaa maitotuotteita huonosti, ja joissakin juustoissa on sipulia, valkosipulia tai ruohosipulia. Sinihomejuustot ovat erityinen huolenaihe.",
-        "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Blåmuggost er særlig bekymringsfullt."
+        "nb": "Ikke som en fast godbit. Noen veterinærmedisinske kilder tillater små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Spesielt blåmuggost bør du holde unna."
       },
       "why": {
         "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -18898,7 +18898,7 @@
         "sv": "Hundar har lite laktas, enzymet som bryter ned mjölksocker, så mejeriprodukter kan ge orolig mage. Ost innehåller mycket fett: för mycket leder till viktökning och kan utlösa bukspottkörtelinflammation (pankreatit). Smaksatta ostar kan innehålla lök, vitlök eller gräslök, och blåmögelostar som roquefort innehåller roquefortin C, som hundar verkar vara känsliga för. Källorna skiljer sig åt: AKC och Dogs Trust tillåter små mängder, medan Cornell räknar ost till de feta livsmedel som ska undvikas, så vi använder den strängare nivån.",
         "da": "Hunde har kun lidt laktase, enzymet der fordøjer mælkesukker, så mejeriprodukter kan give dårlig mave. Ost har et højt fedtindhold: for meget fører til vægtøgning og kan udløse betændelse i bugspytkirtlen (pankreatitis). Oste med smag kan indeholde løg, hvidløg eller purløg, og blåskimmeloste som roquefort indeholder roquefortin C, som hunde ser ud til at være følsomme over for. Kilderne er uenige: AKC og Dogs Trust tillader små mængder, mens Cornell nævner ost blandt fed mad man bør undgå, så vi følger den strengere vurdering.",
         "fi": "Koirilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa vatsavaivoja. Juustossa on paljon rasvaa: liian suuri määrä johtaa painonnousuun ja voi laukaista haimatulehduksen. Maustetuissa juustoissa voi olla sipulia, valkosipulia tai ruohosipulia, ja sinihomejuustot, kuten roquefort, sisältävät roquefortiini C:tä, jolle koirat vaikuttavat olevan herkkiä. Lähteet ovat eri mieltä: AKC ja Dogs Trust sallivat pieniä määriä, kun taas Cornell mainitsee juuston vältettävien rasvaisten ruokien joukossa, joten käytämme tiukempaa luokitusta.",
-        "nb": "Hunder har lite laktase, enzymet som bryter ned melkesukker, så melkeprodukter kan gi urolig mage. Ost inneholder mye fett: For mye fører til vektøkning og kan utløse betennelse i bukspyttkjertelen. Oster med smak kan inneholde løk, hvitløk eller gressløk, og blåmuggoster som roquefort inneholder roquefortin C, som hunder ser ut til å være følsomme for. Kildene er uenige: AKC og Dogs Trust godtar små mengder, mens Cornell nevner ost blant fet mat som bør unngås, så vi bruker det strengeste nivået."
+        "nb": "Hunder har lite laktase, enzymet som bryter ned melkesukker, så melkeprodukter kan gi urolig mage. Ost inneholder mye fett: For mye fører til vektøkning og kan utløse betennelse i bukspyttkjertelen. Smaksatt ost kan inneholde løk, hvitløk eller gressløk, og blåmuggoster som roquefort inneholder roquefortin C, som hunder ser ut til å være følsomme for. Kildene er uenige: AKC og Dogs Trust tillater små mengder, mens Cornell nevner ost blant fet mat som bør unngås, så vi bruker det strengeste nivået."
       },
       "signs": {
         "en": [
@@ -19041,7 +19041,7 @@
         "sv": "Ost är väldigt fet för en hundmage. En pytteliten bit vanlig ost ibland räcker gott – fråga en vuxen först.",
         "da": "Ost er meget fed for en hundemave. Et bitte lille stykke almindelig ost en gang imellem er rigeligt – spørg en voksen først.",
         "fi": "Juusto on koiran mahalle hyvin rasvaista. Pikkuinen maustamaton pala silloin tällöin riittää hyvin – kysy ensin aikuiselta.",
-        "nb": "Ost er veldig fett for magen til en hund. En ørliten, naturell bit en gang iblant er nok – spør en voksen først."
+        "nb": "Ost er veldig fet mat for magen til en hund. En ørliten, naturell bit en gang iblant er nok – spør en voksen først."
       },
       "faq": [
         {
@@ -19391,7 +19391,7 @@
         "sv": "Körsbär har hårda kärnor inuti som inte är bra för hundar. Körsbär är till för människor, och säg till en vuxen om hunden äter några.",
         "da": "Kirsebær har hårde sten indeni, som er dårlige for hunde. Lad kirsebærrene være til mennesker, og sig det til en voksen hvis din hund spiser nogle.",
         "fi": "Kirsikoiden sisällä on kovia kiviä, jotka ovat koirille pahasta. Jätä kirsikat ihmisille ja kerro aikuiselle, jos koirasi syö niitä.",
-        "nb": "Kirsebær har harde steiner inni som ikke er bra for hunder. La kirsebærene være for mennesker, og si fra til en voksen hvis hunden spiser noen."
+        "nb": "Kirsebær har harde steiner inni som ikke er bra for hunder. Kirsebærene er til oss mennesker, så si fra til en voksen hvis hunden spiser noen."
       },
       "faq": [
         {
@@ -19736,7 +19736,7 @@
         "sv": "Chips är ett salt tilltugg för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
         "da": "Chips er en salt snack til mennesker. De er ikke gode for hunde, så hold posen lukket, og giv din hund dens egen godbid.",
         "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omia herkkuja.",
-        "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden sin egen godbit."
+        "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden en egen godbit."
       },
       "faq": [
         {
@@ -20032,7 +20032,7 @@
         "sv": "Gräslök ser ut som litet grönt gräs, men den hör till lökfamiljen och är inte för hundar. Säg till en vuxen om hunden äter av den.",
         "da": "Purløg ligner små grønne græsstrå, men det hører til løgfamilien og er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
         "fi": "Ruohosipuli näyttää pieneltä vihreältä ruoholta, mutta se on sipulin sukua eikä sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
-        "nb": "Gressløk ligner på lite, grønt gress, men den hører til løkfamilien og er ikke for hunder. Si fra til en voksen hvis hunden spiser noe."
+        "nb": "Gressløk ser ut som små grønne grasstrå, men den hører til løkfamilien og er ikke for hunder. Si fra til en voksen hvis hunden spiser noe."
       },
       "faq": [
         {
@@ -20622,7 +20622,7 @@
         "sv": "Nej. Kaffe innehåller koffein, som är giftigt för hundar; hundar är känsligare för det än människor. Ett par slickar ger knappast förgiftning, men kaffesump och kaffebönor kan ge allvarlig förgiftning. Kaffebönor med chokladöverdrag är dubbelt farliga.",
         "da": "Nej. Kaffe indeholder koffein, og det er giftigt for hunde, som er mere følsomme over for det end mennesker. Slikker hunden bare lidt kaffe i sig, giver det næppe forgiftning, men kaffegrums og kaffebønner kan give alvorlig forgiftning. Chokoladeovertrukne kaffebønner er dobbelt farlige.",
         "fi": "Ei saa. Kahvissa on kofeiinia, joka on koirille myrkyllistä; koirat ovat sille herkempiä kuin ihmiset. Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä, mutta jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen. Suklaalla kuorrutetut kahvipavut ovat kaksinkertainen vaara.",
-        "nb": "Nei. Kaffe inneholder koffein, som er giftig for hunder; hunder er mer følsomme for det enn mennesker. Et slikk eller to gir neppe forgiftning, men kaffegrut og kaffebønner kan gi alvorlig forgiftning. Sjokoladetrukne kaffebønner er en dobbel fare."
+        "nb": "Nei. Kaffe inneholder koffein, som er giftig for hunder; hunder er mer følsomme for det enn mennesker. En slikk eller to gir neppe forgiftning, men kaffegrut og kaffebønner kan gi alvorlig forgiftning. Sjokoladetrukne kaffebønner er en dobbel fare."
       },
       "why": {
         "en": "Caffeine overstimulates the heart and nervous system. It is the same kind of substance that makes chocolate toxic. A lick or two of coffee is unlikely to poison, but unused coffee grounds and beans can cause serious toxicity, and chocolate-covered beans are a double threat.",
@@ -20639,7 +20639,7 @@
         "sv": "Koffein överstimulerar hjärtat och nervsystemet. Det är samma slags ämne som gör choklad giftig. Ett par slickar kaffe ger knappast förgiftning, men oanvänt malet kaffe och kaffebönor kan ge allvarlig förgiftning, och bönor med chokladöverdrag är dubbelt farliga.",
         "da": "Koffein overstimulerer hjertet og nervesystemet. Det er samme slags stof som det, der gør chokolade giftigt. Slikker hunden bare lidt kaffe i sig, giver det næppe forgiftning, men ubrugt kaffegrums og kaffebønner kan give alvorlig forgiftning, og chokoladeovertrukne bønner er dobbelt farlige.",
         "fi": "Kofeiini ylikiihottaa sydäntä ja hermostoa. Se on yksi niistä aineista, jotka tekevät suklaasta myrkyllistä. Nuolaisu tai kaksi kahvia tuskin aiheuttaa myrkytystä, mutta käyttämätön jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen, ja suklaalla kuorrutetut pavut ovat kaksinkertainen vaara.",
-        "nb": "Koffein overstimulerer hjertet og nervesystemet. Det er samme type stoff som gjør sjokolade giftig. Et slikk eller to kaffe gir neppe forgiftning, men ubrukt malt kaffe og kaffebønner kan gi alvorlig forgiftning, og sjokoladetrukne bønner er en dobbel fare."
+        "nb": "Koffein overstimulerer hjertet og nervesystemet. Det er den samme typen stoff som gjør sjokolade giftig. En slikk eller to kaffe gir neppe forgiftning, men ubrukt malt kaffe og kaffebønner kan gi alvorlig forgiftning, og sjokoladetrukne bønner er en dobbel fare."
       },
       "signs": {
         "en": [
@@ -20815,7 +20815,7 @@
             "sv": "Min hund slickade i min kopp. Är det akut?",
             "da": "Min hund har slikket i min kop. Er det akut?",
             "fi": "Koirani nuolaisi kuppiani. Onko se hätätilanne?",
-            "nb": "Hunden min slikket i koppen min. Er det akutt?"
+            "nb": "Hunden min slikket på koppen min. Er det akutt?"
           },
           "a": {
             "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -20832,7 +20832,7 @@
             "sv": "Ett par slickar ger knappast förgiftning hos de flesta hundar. Om hunden drack mer, eller åt kaffesump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
             "da": "Hvis hunden kun har slikket lidt, giver det næppe forgiftning hos de fleste hunde. Hvis hunden har drukket mere eller spist kaffegrums, bønner eller teposer, skal du ringe til din dyrlæge eller en giftrådgivning for dyr.",
             "fi": "Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä useimmille koirille. Jos koirasi joi enemmän tai söi jauhettua kahvia, papuja tai teepusseja, soita eläinlääkärille tai eläinten myrkytysneuvontaan.",
-            "nb": "Ett eller to slikk gir neppe forgiftning hos de fleste hunder. Har hunden drukket mer, eller spist kaffegrut, bønner eller teposer, må du ringe dyrlegen eller giftinformasjon for dyr."
+            "nb": "En eller to slikk gir neppe forgiftning hos de fleste hunder. Har hunden drukket mer, eller spist kaffegrut, bønner eller teposer, må du ringe dyrlegen eller giftinformasjon for dyr."
           }
         },
         {
@@ -20987,7 +20987,7 @@
         "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller blockera tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
         "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
         "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja ne voivat aiheuttaa hätätilanteen, joka vaatii eläinlääkärin hoitoa.",
-        "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan kutte munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
+        "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan gi kutt i munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
       },
       "why": {
         "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -21218,7 +21218,7 @@
             "sv": "Ställ undan fat med mat så att hunden inte når dem medan du lagar mat och äter, och tänk på vad du slänger i soporna: hundar går ofta i soporna efter kycklingskrov och ben från stekar.",
             "da": "Hold fade uden for rækkevidde, mens du laver mad og spiser, og pas på med hvad der ryger i skraldespanden: hunde roder ofte i skraldet efter skrog og bøfben.",
             "fi": "Pidä tarjoiluvadit koiran ulottumattomissa ruoanlaiton ja ruokailun aikana ja mieti, mitä heität roskiin: koirat penkovat usein roskiksesta linnunruhoja ja pihvin luita.",
-            "nb": "Hold fat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
+            "nb": "Hold serveringsfat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
           }
         }
       ],
@@ -21336,7 +21336,7 @@
         "sv": "Ja. Okryddad, tillagad kyckling utan ben kan ges till hunden som den är. Ge aldrig tillagade kycklingben, som splittras lätt, och undvik kryddad, fet eller rå kyckling.",
         "da": "Ja. Ren, ukrydret, tilberedt kylling, uden ben, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over.",
         "fi": "Saa. Maustamatonta kypsennettyä kanaa voi antaa koiralle sellaisenaan, kun liha on irrotettu luista. Älä koskaan anna kypsennettyjä kananluita, jotka sirpaloituvat helposti, ja jätä väliin maustettu, rasvainen tai raaka kana.",
-        "nb": "Ja. Naturell, ukrydret, tilberedt kylling uten bein kan gis til en hund som den er. Gi aldri tilberedte kyllingbein, som lett splintres, og dropp krydret, fet eller rå kylling."
+        "nb": "Ja. Naturell, ukrydret, tilberedt kylling uten bein kan du gi hunden som den er. Gi aldri tilberedte kyllingbein, som lett splintres, og dropp krydret, fet eller rå kylling."
       },
       "why": {
         "en": "Unseasoned roasted, poached, grilled or baked chicken is fine on its own. Cooked chicken bones splinter easily and can cause choking or puncture the gut. Raw chicken is not recommended because of Salmonella and other bacteria. Thigh meat has about twice the fat of breast, and fatty foods can upset the stomach.",
@@ -21697,7 +21697,7 @@
             "sv": "Hårdkokta eller som äggröra, helt genomkokta och vanliga, utan salt, smör eller kryddor.",
             "da": "Hårdkogte eller som røræg, gennemtilberedte og rene, uden salt, smør eller krydderier.",
             "fi": "Kovaksi keitettyinä tai munakokkelina, kokonaan kypsennettyinä ja maustamattomina, ilman suolaa, voita ja mausteita.",
-            "nb": "Hardkokt eller som eggerøre, gjennomtilberedt og naturell, uten salt, smør eller krydder."
+            "nb": "Hardkokt eller som eggerøre, gjennomkokt og naturell, uten salt, smør eller krydder."
           }
         }
       ],
@@ -21825,7 +21825,7 @@
         "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall försämrade stoppet blodtillförseln, och akut behandling kan behövas. Vanliga majskorn är i regel säkra med måtta; det är kolven som är farlig.",
         "da": "Slugte stykker kan blokere tarmene; i et beskrevet tilfælde hæmmede blokeringen blodforsyningen, og akut behandling kan blive nødvendig. Almindelige majskorn er generelt sikre med måde; det er kolben, der er farlig.",
         "fi": "Nielaistut palat voivat tukkia suoliston; yhdessä raportoidussa tapauksessa tukos heikensi suolen verenkiertoa, ja kiireellinen hoito voi olla tarpeen. Pelkät maissinjyvät ovat kohtuudella yleensä turvallisia; vaara on tähkässä.",
-        "nb": "Biter som svelges, kan blokkere tarmen; i ett omtalt tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
+        "nb": "Biter som svelges, kan blokkere tarmen; i ett rapportert tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
       },
       "signs": {
         "en": [
@@ -21931,7 +21931,7 @@
           "Vil ikke spise",
           "Sløvhet og mindre aktivitet",
           "Diaré",
-          "Uttørking"
+          "Dehydrering"
         ]
       },
       "what_to_do": {
@@ -22039,7 +22039,7 @@
             "sv": "Vänta inte och se vad som händer. En nedsvald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt.",
             "da": "Se ikke tiden an. En slugt kolbe kan give en alvorlig blokering, så kontakt din dyrlæge med det samme.",
             "fi": "Älä jää odottamaan. Nielaistu tähkä voi aiheuttaa vakavan tukoksen, joten ota heti yhteyttä eläinlääkäriin.",
-            "nb": "Ikke vent for å finne det ut. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
+            "nb": "Ikke vent og se hva som skjer. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
           }
         }
       ],
@@ -22189,7 +22189,7 @@
         "sv": "Ge tranbär med måtta och enligt veterinärens råd. Vindruvor och russin är mycket giftiga för hundar, så undvik tranbärsblandningar som innehåller russin.",
         "da": "Giv tranebær med måde og efter råd fra en dyrlæge. Vindruer og rosiner er meget giftige for hunde, så undgå tranebærblandinger med rosiner.",
         "fi": "Anna karpaloita kohtuudella ja eläinlääkärin ohjeiden mukaan. Viinirypäleet ja rusinat ovat koirille hyvin myrkyllisiä, joten vältä karpalosekoituksia, joissa on rusinoita.",
-        "nb": "Gi tranebær med måte og etter råd fra dyrlege. Druer og rosiner er svært giftige for hunder, så unngå tranebærblandinger som inneholder rosiner."
+        "nb": "Gi tranebær med måte og etter råd fra dyrlegen. Druer og rosiner er svært giftige for hunder, så unngå tranebærblandinger som inneholder rosiner."
       },
       "serving": {
         "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
@@ -22412,7 +22412,7 @@
         "sv": "Nej. Energidrycker innehåller ofta mycket koffein, som är giftigt för hundar. Koffein överstimulerar hjärtat och nervsystemet, och hundar är känsligare för det än människor. Även om hunden slickar i sig utspilld energidryck kan det vara ett problem.",
         "da": "Nej. Energidrikke indeholder ofte meget koffein, som er giftigt for hunde. Koffein overstimulerer hjertet og nervesystemet, og hunde er mere følsomme over for det end mennesker. Selv en spildt energidrik som hunden slikker op, kan være et problem.",
         "fi": "Ei saa. Energiajuomissa on usein paljon kofeiinia, joka on koirille myrkyllistä. Kofeiini ylikiihottaa sydäntä ja hermostoa, ja koirat ovat sille herkempiä kuin ihmiset. Jo läikkyneen energiajuoman lipittäminen voi olla ongelma.",
-        "nb": "Nei. Energidrikker inneholder ofte mye koffein, som er giftig for hunder. Koffein overstimulerer hjertet og nervesystemet, og hunder er mer følsomme for det enn mennesker. Selv det å slikke i seg sølt energidrikk kan være et problem."
+        "nb": "Nei. Energidrikker inneholder ofte mye koffein, som er giftig for hunder. Koffein overstimulerer hjertet og nervesystemet, og hunder er mer følsomme for det enn mennesker. Selv å slikke i seg sølt energidrikk kan være et problem."
       },
       "why": {
         "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
@@ -22568,7 +22568,7 @@
         "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du förstår att hunden har fått i sig koffein. Notera vad det var (dryck, shot, påse eller tablett) och ungefär hur mycket. Vänta inte på symtom: tidig behandling gör skillnad.",
         "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at hunden har fået koffein. Skriv ned hvad det var (drik, shot, pose eller tablet) og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
         "fi": "Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan heti, kun huomaat koirasi saaneen kofeiinia. Kirjaa ylös, mitä se oli (juoma, shotti, pussi tai tabletti) ja suunnilleen kuinka paljon. Älä odota oireita: varhainen hoito on tärkeää.",
-        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikk, shot, pose eller tablett), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
+        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikke, shot, pose eller tablett), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
       },
       "serving": null,
       "child": {
@@ -22586,7 +22586,7 @@
         "sv": "Energidrycker är inte alls för hundar. Torka snabbt upp spill och säg till en vuxen om hunden dricker energidryck.",
         "da": "Energidrikke er slet ikke til hunde. Tør spild hurtigt op, og sig det til en voksen hvis din hund drikker noget.",
         "fi": "Energiajuomat eivät sovi koirille ollenkaan. Pyyhi läikät nopeasti ja kerro aikuiselle, jos koirasi juo energiajuomaa.",
-        "nb": "Energidrikk er overhodet ikke for hunder. Tørk fort opp hvis noe blir sølt, og si fra til en voksen hvis hunden drikker noe."
+        "nb": "Energidrikk er ikke noe for hunder i det hele tatt. Tørk fort opp hvis noe blir sølt, og si fra til en voksen hvis hunden drikker noe."
       },
       "faq": [
         {
@@ -22738,7 +22738,7 @@
         "sv": "Rekommenderas inte. Fett kött, fågelskinn och senor är inte giftiga, men de kan orsaka kräkningar och diarré eller utlösa bukspottkörtelinflammation (pankreatit), en smärtsam och ibland allvarlig inflammation. Vissa raser, som dvärgschnauzer, drabbas lättare.",
         "da": "Det frarådes. Fedt kød, skind fra fjerkræ og brusk er ikke giftigt, men det kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld og nogle gange alvorlig. Nogle racer, fx dværgschnauzer, er mere tilbøjelige til det.",
         "fi": "Ei suositella. Rasvainen liha, linnun nahka ja rustot eivät ole myrkyllisiä, mutta ne voivat aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka on kivulias ja joskus vakava tulehdus. Jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia.",
-        "nb": "Anbefales ikke. Fett kjøtt, skinn fra fjærfe og brusk er ikke giftig, men kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som er smertefullt og noen ganger alvorlig. Noen raser, som dvergschnauzer, er mer utsatt."
+        "nb": "Anbefales ikke. Fett kjøtt, skinn fra fjærfe og brusk er ikke giftig, men kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som kan være smertefull og noen ganger alvorlig. Noen raser, som dvergschnauzer, er mer utsatt."
       },
       "why": {
         "en": "A fatty meal is a known trigger of pancreatitis in dogs. Effects range from a mild upset stomach to a severe, even life-threatening pancreatitis. Dogs that have had pancreatitis before should avoid fatty foods.",
@@ -23244,7 +23244,7 @@
         "sv": "Vitlök luktar starkt och människor tycker att den smakar gott, men den är inte för hundar. Säg till en vuxen om din hund äter vitlök.",
         "da": "Hvidløg dufter stærkt og smager godt for mennesker, men det er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
         "fi": "Valkosipuli tuoksuu voimakkaalta ja maistuu ihmisille hyvältä, mutta se ei sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
-        "nb": "Hvitløk lukter sterkt og smaker godt for mennesker, men den er ikke for hunder. Si fra til en voksen hvis hunden din spiser noe."
+        "nb": "Hvitløk lukter sterkt, og folk synes den smaker godt, men den er ikke for hunder. Si fra til en voksen hvis hunden din spiser noe."
       },
       "faq": [
         {
@@ -23559,7 +23559,7 @@
         "sv": "Nej. Hundar ska aldrig äta vindruvor. Vindruvor kan orsaka njursvikt hos hundar, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas, så varje vindruva är ett skäl att ringa veterinären.",
         "da": "Nej. Hunde må aldrig spise vindruer. Vindruer kan give nyresvigt hos hunde, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket, så enhver vindrue er en grund til at ringe til dyrlægen.",
         "fi": "Ei saa. Koira ei saa koskaan syödä viinirypäleitä. Viinirypäleet voivat aiheuttaa koirille munuaisten vajaatoiminnan, ja jo pieni määrä voi tehdä koiran vakavasti sairaaksi. On mahdotonta ennustaa, mihin koiriin ne vaikuttavat, joten jokainen syöty viinirypäle on syy soittaa eläinlääkärille.",
-        "nb": "Nei. Hunder skal aldri spise druer. Druer kan gi nyresvikt hos hunder, og selv en liten mengde kan gjøre en hund alvorlig syk. Det finnes ingen måte å forutsi hvilke hunder som blir rammet, så hver eneste drue er en grunn til å ringe dyrlegen."
+        "nb": "Nei. Hunder skal aldri spise druer. Druer kan gi nyresvikt hos hunder, og selv en liten mengde kan gjøre en hund alvorlig syk. Det finnes ingen måte å forutsi hvilke hunder som blir rammet, så selv én eneste drue er grunn nok til å ringe dyrlegen."
       },
       "why": {
         "en": "Grapes, raisins and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part, and its amount varies between grapes, so the effect is unpredictable. Because the cause is still uncertain, vets treat any amount as a concern. Dogs that survive kidney injury may be left with long-term kidney disease.",
@@ -23576,7 +23576,7 @@
         "sv": "Vindruvor, russin och korinter kan skada hundens njurar. Man misstänker att vinsyra är det giftiga ämnet, och mängden varierar mellan druvorna, så effekten är oförutsägbar. Eftersom orsaken fortfarande är osäker ser veterinärer allvarligt på varje mängd. Hundar som överlever en njurskada kan få en kronisk njursjukdom.",
         "da": "Vindruer, rosiner og korender kan skade hundens nyrer. Vinsyre mistænkes for at være det giftige stof, og mængden varierer fra drue til drue, så virkningen er uforudsigelig. Fordi årsagen stadig er usikker, betragter dyrlæger enhver mængde som bekymrende. Hunde der overlever en nyreskade, kan få en langvarig nyresygdom.",
         "fi": "Viinirypäleet, rusinat ja korintit voivat vaurioittaa koiran munuaisia. Myrkyllisen aineen epäillään olevan viinihappo, jonka määrä vaihtelee rypäleestä toiseen, joten vaikutusta on mahdotonta ennustaa. Koska syy on yhä epävarma, eläinlääkärit pitävät mitä tahansa määrää huolestuttavana. Munuaisvauriosta selvinneille koirille voi jäädä pitkäaikainen munuaissairaus.",
-        "nb": "Druer, rosiner og korinter kan skade nyrene til en hund. Vinsyre mistenkes å være det giftige stoffet, og mengden varierer fra drue til drue, så virkningen er uforutsigbar. Fordi årsaken fortsatt er usikker, regner dyrleger enhver mengde som bekymringsfull. Hunder som overlever en nyreskade, kan få varig nyresykdom."
+        "nb": "Druer, rosiner og korinter kan skade nyrene til en hund. Vinsyre er mistenkt for å være det giftige stoffet, og mengden varierer fra drue til drue, så virkningen er uforutsigbar. Fordi årsaken fortsatt er usikker, tar dyrleger enhver mengde alvorlig. Hunder som overlever en nyreskade, kan få varig nyresykdom."
       },
       "signs": {
         "en": [
@@ -23696,7 +23696,7 @@
           "Sløvhet og svakhet",
           "Vil ikke spise",
           "Vondt i magen",
-          "Uttørking og mye drikking",
+          "Dehydrering og mye drikking",
           "Skjelvinger"
         ]
       },
@@ -23715,7 +23715,7 @@
         "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit en eller två vindruvor. Notera hur många den åt och när. Vänta inte på symtom: ju tidigare hunden får behandling, desto bättre är utsikterna.",
         "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom hunden kun har spist en eller to vindruer. Skriv ned hvor mange hunden har spist og hvornår. Vent ikke på symptomer: jo hurtigere en hund bliver behandlet, desto bedre er udsigterne.",
         "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koirasi olisi syönyt vain yhden tai kaksi viinirypälettä. Kirjaa ylös, kuinka monta koira söi ja milloin. Älä odota oireita: mitä nopeammin koira saa hoitoa, sitä parempi on ennuste.",
-        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist én eller to druer. Skriv ned hvor mange den spiste, og når. Ikke vent på symptomer – jo før en hund får behandling, desto bedre er utsiktene."
+        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist én eller to druer. Skriv ned hvor mange den spiste, og når. Ikke vent på symptomer – jo tidligere en hund får behandling, desto bedre er prognosen."
       },
       "serving": null,
       "child": {
@@ -23769,7 +23769,7 @@
             "sv": "Det kan den vara. Ingen kan förutsäga vilka hundar som reagerar, så varje uppäten vindruva är ett skäl att kontakta veterinären.",
             "da": "Det kan den være. Ingen kan forudsige hvilke hunde der reagerer, så enhver vindrue som hunden har spist, er en grund til at kontakte din dyrlæge.",
             "fi": "Voi olla. Kukaan ei voi ennustaa, mitkä koirat reagoivat, joten jokainen syöty viinirypäle on syy ottaa yhteyttä eläinlääkäriin.",
-            "nb": "Det kan den være. Ingen kan forutsi hvilke hunder som reagerer, så hver drue som er spist, er en grunn til å kontakte dyrlegen."
+            "nb": "Det kan den være. Ingen kan forutsi hvilke hunder som reagerer, så du bør kontakte dyrlegen selv om hunden bare har spist én drue."
           }
         },
         {
@@ -24340,7 +24340,7 @@
         "sv": "Har hunden ätit en eller två nötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har svalt skal, ätit många nötter eller möglade nötter, verkar ha fått något i halsen eller visar något av symtomen ovan.",
         "da": "Efter en nød eller to skal du holde øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har slugt skaller, spist mange nødder eller mugne nødder, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
         "fi": "Jos koira söi pähkinän tai kaksi, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi nielaisi kuoria, söi paljon pähkinöitä tai homeisia pähkinöitä, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
-        "nb": "Etter én eller to nøtter bør du følge med på oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har svelget skall, har spist mange nøtter eller mugne nøtter, ser ut til å holde på å kveles eller viser noen av disse symptomene."
+        "nb": "Etter én eller to nøtter bør du følge med på oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har svelget skall, har spist mange nøtter eller mugne nøtter, ser ut til å holde på å kveles eller viser noen av disse tegnene."
       },
       "serving": null,
       "child": {
@@ -24730,7 +24730,7 @@
         "sv": "Glass är godis för människor. Den kan ge hundar ont i magen, så ät upp din glass själv.",
         "da": "Is er en godbid til mennesker. Den kan give hunde ondt i maven, så spis selv din is.",
         "fi": "Jäätelö on ihmisten herkku. Se voi tehdä koiran masun kipeäksi, joten pidä tötterö itselläsi.",
-        "nb": "Iskrem er en godbit for mennesker. Den kan gi hunder vondt i magen, så behold isen din selv."
+        "nb": "Iskrem er en godbit for mennesker. Den kan gi hunder vondt i magen, så spis isen din selv."
       },
       "faq": [
         {
@@ -25684,7 +25684,7 @@
         "sv": "Inte som vanlig mat, och inte rå. Vitamin A-förgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på vitamin A, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
         "da": "Ikke som fast foder og ikke rå. A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever eller kosttilskud med meget A-vitamin, og rå lever har samme bakterierisiko som alt råt kød. Spørg din dyrlæge før du giver din hund lever som en del af kosten.",
         "fi": "Ei tavalliseksi ruoaksi eikä raakana. Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita, ja raakaan maksaan liittyvät samat bakteeririskit kuin kaikkeen raakaan lihaan. Kysy eläinlääkäriltä ennen kuin lisäät maksaa koirasi ruokavalioon.",
-        "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever inn i hundens kosthold."
+        "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever med i hundens kosthold."
       },
       "why": {
         "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
@@ -26673,7 +26673,7 @@
         "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Det gäller även lökpulver och soppmixer.",
         "da": "Nej. Løg er giftigt for hunde i alle former: rå, tilberedt, tørret eller som pulver. Det skader de røde blodlegemer og kan give blodmangel (anæmi), og symptomerne viser sig ofte først efter flere dage. Løgpulver og suppeblandinger tæller også med.",
         "fi": "Ei saa. Sipuli on koiralle myrkyllistä kaikissa muodoissa: raakana, kypsennettynä, kuivattuna tai jauheena. Se vaurioittaa punasoluja ja voi aiheuttaa anemiaa, ja oireet ilmaantuvat usein vasta päivien kuluttua. Myös sipulijauhe ja pussikeitot kuuluvat tähän.",
-        "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Pulver og suppemikser teller også."
+        "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Det gjelder også pulver og suppepulver."
       },
       "why": {
         "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -27190,7 +27190,7 @@
         "sv": "Rekommenderas inte. Vissa veterinärer tillåter färskt persikokött i små tärningar utan stjälk och kärna, men kärnan är en verklig fara: den kan orsaka kvävning eller tarmstopp och innehåller en form av cyanid.",
         "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid.",
         "fi": "Ei suositella. Jotkut eläinlääkärit sallivat tuoretta persikan hedelmälihaa pieninä kuutioina, kun varsi ja kivi on poistettu, mutta kivi on todellinen vaara: se voi aiheuttaa tukehtumisen tai suolitukoksen, ja siinä on syanidiyhdistettä.",
-        "nb": "Anbefales ikke. Noen dyrleger godtar ferskt fruktkjøtt i små terninger med stilk og stein fjernet, men steinen er en reell fare: Den kan sette seg fast i halsen eller gi tarmblokkering, og den inneholder en form for cyanid."
+        "nb": "Anbefales ikke. Noen dyrleger tillater ferskt fruktkjøtt i små terninger med stilk og stein fjernet, men steinen er en reell fare: Den kan sette seg fast i halsen eller gi tarmblokkering, og den inneholder en form for cyanid."
       },
       "why": {
         "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -27207,7 +27207,7 @@
         "sv": "Persikans stjälkar, blad och frön innehåller cyanogena glykosider. Om en kärna tuggas sönder ordentligt kan cyanid frigöras, och en nedsvald kärna kan orsaka tarmstopp, särskilt hos små hundar. Persikor på burk och torkade persikor innehåller ofta tillsatt socker. Eftersom växten anges som giftig för hundar bedömer vi persikor som ”rekommenderas inte” i stället för som en säker godbit.",
         "da": "Ferskentræets stilke, blade og kerner indeholder cyanogene glykosider. Hvis en sten bliver tygget grundigt, kan der frigives cyanid, og en slugt sten kan blokere tarmen, især hos små hunde. Ferskner på dåse og tørrede ferskner indeholder ofte ekstra sukker. Fordi planten står opført som giftig for hunde, vurderer vi ferskner som frarådede frem for som en sikker godbid.",
         "fi": "Persikan varressa, lehdissä ja siemenissä on syanogeenisia glykosideja. Jos kiveä pureskellaan perusteellisesti, siitä voi vapautua syanidia, ja nielty kivi voi tukkia suoliston etenkin pienillä koirilla. Säilykepersikoissa ja kuivatuissa persikoissa on usein lisättyä sokeria. Koska kasvi on luokiteltu koiralle myrkylliseksi, emme suosittele persikoita emmekä pidä niitä turvallisena herkkuna.",
-        "nb": "Stilker, blader og frø fra fersken inneholder cyanogene glykosider. Hvis en stein blir tygget grundig, kan det frigjøres cyanid, og en svelget stein kan blokkere tarmen, særlig hos små hunder. Hermetiske eller tørkede ferskener inneholder ofte ekstra sukker. Fordi planten er oppført som giftig for hunder, vurderer vi fersken som ikke anbefalt i stedet for som en trygg godbit."
+        "nb": "Stilker, blader og frø fra fersken inneholder cyanogene glykosider. Hvis en stein blir tygget grundig, kan det frigjøres cyanid, og en svelget stein kan blokkere tarmen, særlig hos små hunder. Hermetiske eller tørkede ferskener inneholder ofte ekstra sukker. Fordi planten er oppført som giftig for hunder, vurderer vi fersken som «anbefales ikke», ikke som en trygg godbit."
       },
       "signs": {
         "en": [
@@ -27354,7 +27354,7 @@
             "sv": "Går det bra med persikor på burk?",
             "da": "Er ferskner på dåse i orden?",
             "fi": "Sopivatko säilykepersikat?",
-            "nb": "Er hermetiske ferskener greit?"
+            "nb": "Går det bra med hermetiske ferskener?"
           },
           "a": {
             "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
@@ -27817,7 +27817,7 @@
         "sv": "Om hunden har ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha fått något i halsen.",
         "da": "Hvis din hund har spist mange jordnødder, saltede jordnødder eller skaller, så hold øje med opkast, diarré eller mavesmerter, og kontakt din dyrlæge hvis de opstår, eller hvis hunden ser ud til at være ved at blive kvalt.",
         "fi": "Jos koirasi söi paljon maapähkinöitä, suolattuja maapähkinöitä tai kuoria, seuraa, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee tai koira näyttää tukehtuvan.",
-        "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å ha satt noe i halsen."
+        "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å holde på å kveles."
       },
       "serving": {
         "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
@@ -28500,7 +28500,7 @@
         "sv": "Om hunden har ätit några pistaschnötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många nötter eller skal, verkar ha fått något i halsen eller visar svaghet, trötthet eller något av symtomen ovan.",
         "da": "Hvis din hund har spist nogle få pistacienødder, så hold øje med opkast, diarré eller mavesmerter. Kontakt din dyrlæge hvis hunden har spist mange nødder eller skaller, ser ud til at være ved at blive kvalt eller viser svaghed, træthed eller et af disse symptomer.",
         "fi": "Jos koirasi söi muutaman pistaasipähkinän, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koira söi niitä tai niiden kuoria paljon, näyttää tukehtuvan tai sillä on heikkoutta, väsymystä tai jokin muu näistä oireista.",
-        "nb": "Hvis hunden har spist noen få pistasjnøtter, må du følge med på oppkast, diaré eller vondt i magen. Ring dyrlegen hvis hunden har spist mange nøtter eller skall, ser ut til å ha satt noe i halsen, eller viser svakhet, sløvhet eller noen av disse symptomene."
+        "nb": "Hvis hunden har spist noen få pistasjnøtter, må du følge med på oppkast, diaré eller vondt i magen. Ring dyrlegen hvis hunden har spist mange nøtter eller skall, ser ut til å holde på å kveles, eller viser svakhet, sløvhet eller noen av disse tegnene."
       },
       "serving": null,
       "child": {
@@ -28684,7 +28684,7 @@
         "sv": "Plommonträdet anges som giftigt för hundar eftersom dess stjälkar, blad och frön innehåller cyanogena glykosider. En kärna kan också sväljas och fastna. Vissa veterinärer tillåter plommonkött utan kärna som en godbit ibland; eftersom själva växten anges som giftig använder vi den strängare bedömningen. Katrinplommon innehåller ännu mer socker.",
         "da": "Blommetræet står opført som giftigt for hunde, fordi stilke, blade og kerner indeholder cyanogene glykosider. En sten kan også blive slugt og sætte sig fast. Nogle dyrlæger tillader blommekød uden sten som en godbid en gang imellem; fordi selve planten står opført som giftig, bruger vi den strengere vurdering. Svesker indeholder endnu mere sukker.",
         "fi": "Luumukasvi on luokiteltu koiralle myrkylliseksi, koska sen varsissa, lehdissä ja siemenissä on syanogeenisia glykosideja. Koira voi myös niellä kiven, joka voi juuttua kiinni. Jotkut eläinlääkärit sallivat luumun hedelmälihaa satunnaisena herkkuna, kun kivi on poistettu; koska itse kasvi on luokiteltu myrkylliseksi, käytämme tiukempaa luokitusta. Kuivatuissa luumuissa on vielä enemmän sokeria.",
-        "nb": "Plommetreet er oppført som giftig for hunder fordi stilkene, bladene og frøene inneholder cyanogene glykosider. En stein kan også bli svelget og sette seg fast. Noen dyrleger godtar plommekjøtt som en godbit av og til, med steinen fjernet; fordi selve planten er oppført som giftig, bruker vi den strengere vurderingen. Svisker inneholder enda mer sukker."
+        "nb": "Plommetreet er oppført som giftig for hunder fordi stilkene, bladene og frøene inneholder cyanogene glykosider. En stein kan også bli svelget og sette seg fast. Noen dyrleger tillater plommekjøtt som en godbit av og til, med steinen fjernet; fordi selve planten er oppført som giftig, bruker vi den strengere vurderingen. Svisker inneholder enda mer sukker."
       },
       "signs": {
         "en": [
@@ -28795,7 +28795,7 @@
         "sv": "Om du delar med dig: bara lite färskt fruktkött utan kärna och stjälk. Undvik katrinplommon. Fråga veterinären först.",
         "da": "Hvis du deler, så giv kun lidt frisk frugtkød uden sten og stilk. Undgå svesker. Spørg din dyrlæge først.",
         "fi": "Jos jaat luumua, anna vain vähän tuoretta hedelmälihaa kivi ja varsi poistettuina. Jätä kuivatut luumut väliin. Kysy ensin eläinlääkäriltä.",
-        "nb": "Hvis du deler noe, gi bare litt ferskt fruktkjøtt med stein og stilk fjernet. Dropp svisker. Sjekk med dyrlegen først."
+        "nb": "Hvis du deler noe, så gi bare litt ferskt fruktkjøtt med stein og stilk fjernet. Dropp svisker. Sjekk med dyrlegen først."
       },
       "child": {
         "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -28962,7 +28962,7 @@
         "sv": "Inte som en vanlig godbit. Vissa veterinärkällor tillåter lite okryddat, genomstekt magert fläskkött, men fläskkött är fett och svårsmält för hundar, och fet mat kan utlösa bukspottkörtelinflammation (pankreatit). Rått fläskkött, tillagade ben, skinka och bacon passar inte.",
         "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader lidt almindeligt, gennemtilberedt magert svinekød, men svinekød er fedt og svært for hunde at fordøje, og fed mad kan udløse betændelse i bugspytkirtlen (pankreatitis). Råt svinekød, tilberedte knogler, skinke og bacon er ikke egnede.",
         "fi": "Ei säännöllisenä herkkuna. Joidenkin eläinlääkärilähteiden mukaan koiralle voi antaa vähän maustamatonta, täysin kypsennettyä vähärasvaista sianlihaa, mutta sianliha on rasvaista ja koiralle vaikeasti sulavaa, ja rasvaiset ruoat voivat laukaista haimatulehduksen. Raaka sianliha, kypsennetyt luut, kinkku ja pekoni eivät sovi.",
-        "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar litt gjennomstekt, magert svinekjøtt uten noe tilsatt, men svinekjøtt er fett og tungt for hunder å fordøye, og fet mat kan utløse betennelse i bukspyttkjertelen. Rått svinekjøtt, tilberedte bein, skinke og bacon passer ikke."
+        "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder tillater litt gjennomstekt, magert svinekjøtt uten noe tilsatt, men svinekjøtt er fett og tungt for hunder å fordøye, og fet mat kan utløse betennelse i bukspyttkjertelen. Rått svinekjøtt, tilberedte bein, skinke og bacon passer ikke."
       },
       "why": {
         "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
@@ -28979,7 +28979,7 @@
         "sv": "Fläskkött innehåller en typ av fett som är svår för hundar att smälta. Rått eller otillräckligt tillagat fläskkött kan bära på parasiten Trichinella. Tillagade ben blir sköra, och kryddor kan vara farliga. Skinka innehåller mycket salt och fett. Källorna går isär: AKC kallar okryddat, tillagat magert fläskkött ofarligt med måtta, medan PDSA räknar fläskkött till de fettrika livsmedel som kan leda till bukspottkörtelinflammation och avråder hundar som har haft sjukdomen från fettrika godbitar som fläskkött, så vi använder den strängare nivån.",
         "da": "Svinekød indeholder en type fedt som er svær for hunde at fordøje. Råt eller ikke gennemtilberedt svinekød kan indeholde parasitten Trichinella (trikiner). Tilberedte knogler bliver skøre, og krydderier kan være farlige. Skinke indeholder meget salt og fedt. Kilderne er uenige: AKC kalder almindeligt, tilberedt magert svinekød sikkert i moderate mængder, mens PDSA nævner svinekød blandt de fede fødevarer der kan føre til betændelse i bugspytkirtlen, og anbefaler at hunde der har haft det, undgår fede godbidder som svinekød. Derfor bruger vi det strengeste niveau.",
         "fi": "Sianlihassa on paljon sellaista rasvaa, jota koiran on vaikea sulattaa. Raa’assa tai riittämättömästi kypsennetyssä sianlihassa voi olla trikiinejä (Trichinella-loisia). Kypsennetyt luut haurastuvat, ja mausteet voivat olla vaarallisia. Kinkussa on paljon suolaa ja rasvaa. Lähteet ovat eri mieltä: AKC:n mukaan maustamaton, kypsennetty vähärasvainen sianliha on kohtuudella turvallista, kun taas PDSA mainitsee sianlihan rasvaisten ruokien joukossa, jotka voivat johtaa haimatulehdukseen, ja neuvoo haimatulehduksen sairastaneita koiria välttämään rasvaisia herkkuja, kuten sianlihaa; siksi käytämme tiukempaa luokitusta.",
-        "nb": "Svinekjøtt er rikt på en type fett som er vanskelig for hunder å fordøye. Rått eller ikke gjennomstekt svinekjøtt kan inneholde parasitten Trichinella. Tilberedte bein blir skjøre, og krydder kan være farlig. Skinke inneholder mye salt og fett. Kildene sier ulike ting: AKC kaller tilberedt, magert svinekjøtt uten noe tilsatt trygt i moderate mengder, mens PDSA regner svinekjøtt blant de fete matvarene som kan føre til betennelse i bukspyttkjertelen, og råder hunder som har hatt det, til å unngå fete godbiter som svinekjøtt. Derfor bruker vi det strengere nivået."
+        "nb": "Svinekjøtt er rikt på en type fett som er vanskelig for hunder å fordøye. Rått eller ikke gjennomstekt svinekjøtt kan inneholde parasitten Trichinella. Tilberedte bein blir skjøre, og krydder kan være farlig. Skinke inneholder mye salt og fett. Kildene sier ulike ting: AKC kaller tilberedt, magert svinekjøtt uten noe tilsatt trygt med måte, mens PDSA regner svinekjøtt blant de fete matvarene som kan føre til betennelse i bukspyttkjertelen, og anbefaler at hunder som har hatt det, unngår fete godbiter som svinekjøtt. Derfor bruker vi det strengere nivået."
       },
       "signs": {
         "en": [
@@ -29122,7 +29122,7 @@
         "sv": "Fläskkött är väldigt fett för en hundmage. Bara en vuxen ska bestämma om en hund får en pytteliten bit utan kryddor.",
         "da": "Svinekød er meget fedt for en hundemave. Kun en voksen må bestemme om en hund må få et lillebitte stykke helt uden krydderier.",
         "fi": "Sianliha on koiran vatsalle hyvin rasvaista. Vain aikuinen saa päättää, saako koira pikkuruisen maustamattoman palan.",
-        "nb": "Svinekjøtt er veldig fett for magen til en hund. Bare en voksen skal bestemme om en hund får en liten bit uten krydder."
+        "nb": "Svinekjøtt er veldig fet mat for magen til en hund. Bare en voksen skal bestemme om en hund får en liten bit uten krydder."
       },
       "faq": [
         {
@@ -29158,7 +29158,7 @@
             "sv": "De är inga bra val: skinka innehåller mycket fett och natrium, och mycket bacon kan orsaka bukspottkörtelinflammation.",
             "da": "Det er ikke gode valg: skinke indeholder meget fedt og natrium, og meget bacon kan give betændelse i bugspytkirtlen.",
             "fi": "Ne eivät ole hyviä valintoja: kinkussa on paljon rasvaa ja natriumia, ja suuri määrä pekonia voi aiheuttaa haimatulehduksen.",
-            "nb": "Det er ikke noe godt valg: Skinke inneholder mye fett og natrium, og mye bacon kan gi betennelse i bukspyttkjertelen."
+            "nb": "Ingen av dem er et godt valg: Skinke inneholder mye fett og natrium, og mye bacon kan gi betennelse i bukspyttkjertelen."
           }
         }
       ],
@@ -29413,7 +29413,7 @@
           "Sløvhet og svakhet",
           "Vil ikke spise",
           "Vondt i magen",
-          "Uttørking og mye drikking",
+          "Dehydrering og mye drikking",
           "Skjelvinger"
         ]
       },
@@ -29432,7 +29432,7 @@
         "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre.",
         "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: jo før behandlingen starter, jo bedre.",
         "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koira olisi syönyt vain muutaman rusinan. Kirjaa ylös, suunnilleen montako rusinaa koira söi. Älä odota oireita: mitä aikaisemmin hoito alkaa, sitä parempi.",
-        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist noen få rosiner. Skriv ned omtrent hvor mange den har spist. Ikke vent på symptomer – jo før behandlingen starter, desto bedre."
+        "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist noen få rosiner. Skriv ned omtrent hvor mange den har spist. Ikke vent på symptomer – jo tidligere behandlingen starter, desto bedre."
       },
       "serving": null,
       "child": {
@@ -29852,7 +29852,7 @@
         "sv": "Bara efter att du har pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
         "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler er heller ikke risikofri: de kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
         "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita.",
-        "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger godtar dem under tilsyn; andre fraråder bein."
+        "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger tillater dem under tilsyn; andre fraråder bein."
       },
       "why": {
         "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -29869,7 +29869,7 @@
         "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt.",
         "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og anbefaler at spørge dyrlægen om sikrere tyggeting. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
         "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. FDA mainitsee luiden jälkeen ilmenneitä tukoksia, tukehtumistapauksia ja suun vammoja ja neuvoo kysymään eläinlääkäriltä turvallisemmista purutuotteista. AKC:n mukaan raaoissa luissa voi olla salmonellaa, ja hyvin kovat luut voivat vahingoittaa hampaita. Luut voivat vaurioittaa tai tukkia suoliston, ja tukokset ovat erittäin vakavia.",
-        "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere ting å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
+        "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere alternativer å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
       },
       "signs": {
         "en": [
@@ -29993,7 +29993,7 @@
         "sv": "Om hunden har svalt en stor bit ben eller visar något av symtomen ovan, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var.",
         "da": "Kontakt straks din dyrlæge hvis din hund har slugt et stort stykke knogle eller viser nogle af disse symptomer. Skriv ned hvilken slags knogle det var, og hvor stor den var.",
         "fi": "Jos koirasi nieli ison palan luuta tai sillä on jokin näistä oireista, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös luun laatu ja koko.",
-        "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse symptomene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
+        "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse tegnene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
       },
       "serving": {
         "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
@@ -30221,7 +30221,7 @@
         "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen ordentligt innan du delar med dig.",
         "da": "Nej, det er bedst at lade være. Rå æg kan indeholde bakterier som salmonella, der kan skade både hunde og menneskerne omkring dem, og rå æggehvide kan påvirke optagelsen af et vitamin. Tilbered æggene helt før du deler dem.",
         "fi": "Ei, parempi olla antamatta. Raaoissa kananmunissa voi olla bakteereja, kuten salmonellaa, jotka voivat olla haitallisia koirille ja niiden lähellä oleville ihmisille, ja raaka munanvalkuainen voi häiritä erään vitamiinin imeytymistä. Kypsennä kananmunat kunnolla ennen kuin jaat niitä.",
-        "nb": "Nei, det er best å la være. Rå egg kan inneholde bakterier som salmonella, som kan skade både hunder og menneskene rundt dem, og rå eggehvite kan hindre opptaket av et vitamin. Sørg for at eggene er helt tilberedt før du deler dem."
+        "nb": "Nei, det er best å la være. Rå egg kan inneholde bakterier som salmonella, som kan skade både hunder og menneskene rundt dem, og rå eggehvite kan hindre opptaket av et vitamin. Kok eller stek eggene helt gjennom før du deler dem."
       },
       "why": {
         "en": "Raw eggs can contain Salmonella and E. coli, harmful to pets and people alike. Raw egg white contains avidin, which blocks the vitamin biotin; deficiency is rare, but it can affect skin and coat. Most vets recommend cooking eggs fully before giving them to a dog.",
@@ -30238,7 +30238,7 @@
         "sv": "Råa ägg kan innehålla salmonella och E. coli, som är skadliga för både djur och människor. Rå äggvita innehåller avidin, som blockerar vitaminet biotin; brist är ovanlig men kan påverka hud och päls. De flesta veterinärer rekommenderar att ägg tillagas helt innan hunden får dem.",
         "da": "Rå æg kan indeholde salmonella og E. coli, som er skadelige for både kæledyr og mennesker. Rå æggehvide indeholder avidin, som blokerer vitaminet biotin; mangel er sjælden, men den kan påvirke hud og pels. De fleste dyrlæger anbefaler at tilberede æg helt før man giver dem til en hund.",
         "fi": "Raaoissa kananmunissa voi olla salmonellaa ja E. coli -bakteeria, jotka ovat haitallisia sekä lemmikeille että ihmisille. Raa’assa munanvalkuaisessa on avidiinia, joka estää biotiini-nimisen vitamiinin imeytymistä; puutos on harvinainen, mutta se voi vaikuttaa ihoon ja turkkiin. Useimmat eläinlääkärit suosittelevat kypsentämään kananmunat kunnolla ennen kuin niitä annetaan koiralle.",
-        "nb": "Rå egg kan inneholde salmonella og E. coli, som er skadelige for både kjæledyr og mennesker. Rå eggehvite inneholder avidin, som blokkerer vitaminet biotin; mangel er sjelden, men kan påvirke hud og pels. De fleste dyrleger anbefaler å tilberede eggene helt før en hund får dem."
+        "nb": "Rå egg kan inneholde salmonella og E. coli, som er skadelige for både kjæledyr og mennesker. Rå eggehvite inneholder avidin, som blokkerer vitaminet biotin; mangel er sjelden, men kan påvirke hud og pels. De fleste dyrleger anbefaler å tilberede eggene helt gjennom før en hund får dem."
       },
       "signs": {
         "en": [
@@ -30364,7 +30364,7 @@
         "sv": "Tillaga ägget ordentligt (hårdkokt eller som äggröra), utan olja, smör, salt eller kryddor.",
         "da": "Tilbered ægget helt (hårdkogt eller røræg), og server det uden olie, smør, salt eller krydderier.",
         "fi": "Kypsennä kananmuna kunnolla (kovaksi keitettynä tai munakokkelina), pelkkänä, ilman öljyä, voita, suolaa tai mausteita.",
-        "nb": "Tilbered egget helt (hardkokt eller som eggerøre), uten noe tilsatt – ingen olje, smør, salt eller krydder."
+        "nb": "Kok eller stek egget helt gjennom (hardkokt eller som eggerøre), uten noe tilsatt – ingen olje, smør, salt eller krydder."
       },
       "child": {
         "en": "Dogs should only have eggs that are cooked. Raw eggs can carry germs that make dogs and people poorly.",
@@ -31663,7 +31663,7 @@
             "sv": "Är lax i hundfoder ofarlig?",
             "da": "Er laks i hundefoder sikker?",
             "fi": "Onko koiranruoan lohi turvallista?",
-            "nb": "Er laks i hundefôr trygt?"
+            "nb": "Er laks i hundefôr trygg?"
           },
           "a": {
             "en": "Salmon in commercial diets is typically safe because it is cooked.",
@@ -31794,7 +31794,7 @@
         "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, kraftig törst, darrningar och kramper.",
         "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, legedej eller store mængder havvand. Symptomerne omfatter opkast, kraftig tørst, rysten og kramper.",
         "fi": "Ei, ei suuria määriä. Kohtuullinen määrä suolaista ruokaa ei yleensä aiheuta suolamyrkytystä, mutta suuri määrä suolaa voi, esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä saatuna. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
-        "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Symptomene er bl.a. oppkast, sterk tørst, skjelvinger og kramper."
+        "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Tegn på det er blant annet oppkast, sterk tørst, skjelvinger og kramper."
       },
       "why": {
         "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
@@ -32144,7 +32144,7 @@
         "sv": "Nej, det rekommenderas inte. Några salta snacks orsakar sannolikt inte saltförgiftning hos en frisk hund med tillgång till färskt vatten, men salt mat är i allmänhet inte bra för hundar, särskilt inte för hundar med hjärtsjukdom. Stora mängder kan orsaka törst, kräkningar och ännu allvarligare besvär.",
         "da": "Det frarådes. Nogle få salte snacks giver næppe saltforgiftning hos en rask hund med adgang til frisk vand, men salt mad er generelt ikke godt for hunde, især ikke for hunde med hjertesygdom. Store mængder kan give tørst, opkast og værre.",
         "fi": "Ei suositella. Muutama suolainen naposteltava tuskin aiheuttaa suolamyrkytystä terveelle koiralle, jolla on raikasta vettä saatavilla, mutta suolaiset ruoat eivät yleensä ole hyväksi koirille, etenkään sydänsairaille. Suuri määrä voi aiheuttaa janoa, oksentelua ja vakavampiakin oireita.",
-        "nb": "Anbefales ikke. Noen få salte snacks gir neppe saltforgiftning hos en frisk hund som har friskt vann, men salt mat er generelt ikke bra for hunder, særlig ikke for hunder med hjertesykdom. Mye kan gi tørst, oppkast og verre."
+        "nb": "Anbefales ikke. Noen få salte snacks gir neppe saltforgiftning hos en frisk hund som har friskt vann, men salt mat er generelt ikke bra for hunder, særlig ikke for hunder med hjertesykdom. Mye kan gi tørst og oppkast, og i verste fall mer alvorlige plager."
       },
       "why": {
         "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
@@ -32722,7 +32722,7 @@
         "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden har svalt skal och verkar ha fått något i halsen.",
         "da": "Stop med at give rejer hvis din hund får ubehag i maven eller virker utilpas, og kontakt din dyrlæge hvis symptomerne bliver værre. Kontakt også din dyrlæge hvis hunden har slugt skaller og ser ud til at være ved at blive kvalt.",
         "fi": "Lopeta katkarapujen antaminen, jos koirallasi on vatsavaivoja tai se vaikuttaa sairaalta, ja soita eläinlääkärille, jos oireet pahenevat. Soita eläinlääkärille myös, jos koirasi nieli kuoria ja näyttää olevan tukehtumassa.",
-        "nb": "Slutt å gi reker hvis hunden får ubehag i magen eller virker uvel, og ring dyrlegen hvis symptomene blir verre. Ring også dyrlegen hvis hunden har svelget skall og ser ut til å ha satt noe i halsen."
+        "nb": "Slutt å gi reker hvis hunden får ubehag i magen eller virker uvel, og ring dyrlegen hvis symptomene blir verre. Ring også dyrlegen hvis hunden har svelget skall og ser ut til å holde på å kveles."
       },
       "serving": {
         "en": "A few pieces, fully cooked (steamed is best), plain, with shell, head, legs and tail removed; not fried, breaded or seasoned.",
@@ -33331,7 +33331,7 @@
         "sv": "Te med koffein är en dryck för människor, inte för hundar. Ge din hund färskt vatten i stället.",
         "da": "Te med koffein er en drik til mennesker, ikke til hunde. Giv i stedet din hund frisk vand.",
         "fi": "Kofeiinia sisältävä tee on ihmisten juoma, ei koiran. Anna koirallesi sen sijaan raikasta vettä.",
-        "nb": "Te med koffein er en drikk for mennesker, ikke for hunder. Gi hunden din friskt vann i stedet."
+        "nb": "Te med koffein er en drikke for mennesker, ikke for hunder. Gi hunden din friskt vann i stedet."
       },
       "faq": [
         {
@@ -33350,7 +33350,7 @@
             "sv": "Min hund slickade i min kopp. Är det akut?",
             "da": "Min hund slikkede i min kop. Er det akut?",
             "fi": "Koirani nuolaisi kuppiani. Onko se hätätilanne?",
-            "nb": "Hunden min slikket i koppen min. Er det akutt?"
+            "nb": "Hunden min slikket på koppen min. Er det akutt?"
           },
           "a": {
             "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -33625,7 +33625,7 @@
             "sv": "Oftast inte: tonfisk är inte giftig, och problemet är om hunden får tonfisk regelbundet över tid.",
             "da": "Som regel ikke: tun er ikke giftig, og bekymringen gælder regelmæssig fodring over længere tid.",
             "fi": "Yleensä ei: tonnikala ei ole myrkyllistä, ja huoli koskee säännöllistä syöttämistä pitkän ajan kuluessa.",
-            "nb": "Som regel ikke: Tunfisk er ikke giftig, og det som er bekymringsfullt, er å gi den regelmessig over tid."
+            "nb": "Som regel ikke: Tunfisk er ikke giftig, og det som kan bli et problem, er å gi den regelmessig over tid."
           }
         },
         {
@@ -34144,7 +34144,7 @@
         "sv": "Valnötter är inget mellanmål för hundar. Gamla valnötter på marken kan göra hundar sjuka, så säg till en vuxen om din hund hittar några.",
         "da": "Valnødder er ikke en hundesnack. Gamle valnødder på jorden kan gøre hunde syge, så sig det til en voksen hvis din hund finder nogle.",
         "fi": "Saksanpähkinät eivät ole koiran naposteltavaa. Maassa olevat vanhat pähkinät voivat sairastuttaa koiran, joten kerro aikuiselle, jos koirasi löytää niitä.",
-        "nb": "Valnøtter er ikke hundesnacks. Gamle valnøtter på bakken kan gjøre hunder syke, så si fra til en voksen hvis hunden din finner noen."
+        "nb": "Valnøtter er ikke snacks for hunder. Gamle valnøtter på bakken kan gjøre hunder syke, så si fra til en voksen hvis hunden din finner noen."
       },
       "faq": [
         {
@@ -34329,7 +34329,7 @@
         "sv": "Ja, om du förbereder den på rätt sätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
         "da": "Ja, hvis du forbereder den rigtigt. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
         "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen.",
-        "nb": "Ja, hvis den gjøres klar på riktig måte. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
+        "nb": "Ja, hvis du forbereder den riktig. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
       },
       "why": {
         "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
@@ -34931,7 +34931,7 @@
         "sv": "Börja med en liten mängd och håll utkik efter gaser, diarré eller kräkningar; sluta om de dyker upp. Om yoghurten innehöll xylitol, kontakta veterinären eller en giftrådgivning för djur direkt.",
         "da": "Start med en lille mængde, og hold øje med luft i maven, diarré eller opkast; stop hvis det opstår. Hvis yoghurten indeholdt xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr.",
         "fi": "Aloita pienellä määrällä ja seuraa, tuleeko ilmavaivoja, ripulia tai oksentelua; lopeta, jos niitä ilmenee. Jos jogurtissa oli ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
-        "nb": "Start med en liten mengde og følg med på luft i magen, diaré eller oppkast; slutt hvis det oppstår. Hvis yoghurten inneholdt xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang."
+        "nb": "Start med en liten mengde og følg med på om hunden får luft i magen, diaré eller oppkast; slutt å gi yoghurt hvis det skjer. Hvis yoghurten inneholdt xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang."
       },
       "serving": {
         "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",

@@ -68,7 +68,7 @@
     "sv": "Nej, smör är bäst att undvika. Det är en fet mejeriprodukt: guider om kattvård räknar fet mat till sådant man aldrig ska ge katter, mejeriprodukter kan ge katten orolig mage, och fettet bidrar till viktuppgång.",
     "da": "Nej, smør bør undgås. Det er et fedtrigt mejeriprodukt: Vejledninger i kattepleje nævner fed mad blandt det katte aldrig må få, mejeriprodukter kan give en kat dårlig mave, og fedtet får katten til at tage på.",
     "fi": "Ei, voita on parasta välttää. Se on rasvainen maitotuote: kissanhoito-oppaiden mukaan rasvaisia ruokia ei saa koskaan antaa kissoille, maitotuotteet voivat aiheuttaa vatsavaivoja ja niiden rasva lisää painoa.",
-    "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Veiledninger om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
+    "nb": "Nei, smør bør du helst unngå. Det er et fett meieriprodukt: Råd om kattestell regner fet mat blant det du aldri skal gi katter, meieriprodukter kan gi katten urolig mage, og fettet gjør at den legger på seg."
   },
   "why": {
     "en": "RSPCA Australia lists fatty trimmings and fatty foods among things never to feed cats, and added fat can lead to a painful condition called pancreatitis. Butter is also a dairy product: many cats are lactose intolerant, milk-based products can cause vomiting or diarrhoea, and dairy products are high in fat and contribute to weight gain.",
@@ -179,7 +179,7 @@
     "sv": "Om katten har ätit smör, håll utkik efter kräkningar eller diarré och kontakta veterinären för råd om den verkar må dåligt eller har ätit mycket.",
     "da": "Hvis din kat har spist smør, så hold øje med opkast eller diarré, og kontakt din dyrlæge for at få råd hvis katten virker utilpas eller har spist meget.",
     "fi": "Jos kissasi söi voita, seuraa, ilmeneekö oksentelua tai ripulia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa huonovointiselta tai söi paljon.",
-    "nb": "Hvis katten har spist smør, følg med på oppkast eller diaré, og kontakt dyrlegen for råd hvis den virker dårlig eller har spist mye."
+    "nb": "Hvis katten har spist smør, følg med på oppkast eller diaré, og kontakt dyrlegen for råd hvis den virker uvel eller har spist mye."
   },
   "serving": null,
   "child": {
@@ -314,7 +314,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3102710d0dd98afc5d4e6e5efbdde128b3d19f9c2be94404b3b61030b5cd6279"
+      "verified_hash": "a1a995dc9e4f4d4234f51cdfecf6bdd9a92b728862bf78ea555e4d333606b515"
     }
   }
 }

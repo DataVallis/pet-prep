@@ -85,7 +85,7 @@
     "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när växande kattungar får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
     "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det også kan ske hvis katten udelukkende fodres med lever. VCA anbefaler i stedet en kommercielt fremstillet, balanceret kost.",
     "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa.",
-    "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at det å bare gi lever kan føre til forgiftningen. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
+    "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at et kosthold med bare lever kan føre til forgiftning. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
   },
   "signs": {
     "en": [
@@ -242,7 +242,7 @@
     "sv": "Lever har jättemycket av ett visst vitamin, och för mycket är inte bra för katter. Kattmaten har redan precis lagom mycket.",
     "da": "Lever indeholder meget af ét bestemt vitamin, og for meget af det er ikke godt for katte. Deres kattemad har allerede den rigtige mængde.",
     "fi": "Maksassa on paljon yhtä vitamiinia, ja liian paljon sitä ei ole hyväksi kissoille. Kissanruoassa sitä on jo juuri sopivasti.",
-    "nb": "Lever har veldig mye av ett vitamin, og for mye av det er ikke bra for katter. Kattematen har allerede passe mengde."
+    "nb": "Lever har veldig mye av ett vitamin, og for mye av det er ikke bra for katter. Kattematen har allerede akkurat nok av det."
   },
   "faq": [
     {
@@ -278,7 +278,7 @@
         "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och komplett, balanserad kattmat är det som veterinärer rekommenderar.",
         "da": "Nej. Lever er en almindelig ingrediens i kattefoder på dåse, og et komplet, balanceret kattefoder er netop det dyrlæger anbefaler.",
         "fi": "Ei ole. Maksa on tavallinen ainesosa kissojen märkäruoissa, ja eläinlääkärit suosittelevat tasapainoista täysravintoa.",
-        "nb": "Nei. Lever er en vanlig ingrediens i kattefôr på boks, og et komplett, balansert kattefôr er det dyrleger anbefaler."
+        "nb": "Nei. Lever er en vanlig ingrediens i våtfôr, og dyrleger anbefaler komplett, balansert kattefôr."
       }
     }
   ],
@@ -392,7 +392,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ea1cd290f4493a211f586cb531bdd217a9b0409e2e4dbc0034b34a120dff599"
+      "verified_hash": "9e1141930ac274a39d82fc202d44bd0b9b31fe3acc7e860b37a0c51f44cc8f2d"
     }
   }
 }

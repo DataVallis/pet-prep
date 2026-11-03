@@ -85,7 +85,7 @@
     "sv": "Plommonträdet anges som giftigt för hundar eftersom dess stjälkar, blad och frön innehåller cyanogena glykosider. En kärna kan också sväljas och fastna. Vissa veterinärer tillåter plommonkött utan kärna som en godbit ibland; eftersom själva växten anges som giftig använder vi den strängare bedömningen. Katrinplommon innehåller ännu mer socker.",
     "da": "Blommetræet står opført som giftigt for hunde, fordi stilke, blade og kerner indeholder cyanogene glykosider. En sten kan også blive slugt og sætte sig fast. Nogle dyrlæger tillader blommekød uden sten som en godbid en gang imellem; fordi selve planten står opført som giftig, bruger vi den strengere vurdering. Svesker indeholder endnu mere sukker.",
     "fi": "Luumukasvi on luokiteltu koiralle myrkylliseksi, koska sen varsissa, lehdissä ja siemenissä on syanogeenisia glykosideja. Koira voi myös niellä kiven, joka voi juuttua kiinni. Jotkut eläinlääkärit sallivat luumun hedelmälihaa satunnaisena herkkuna, kun kivi on poistettu; koska itse kasvi on luokiteltu myrkylliseksi, käytämme tiukempaa luokitusta. Kuivatuissa luumuissa on vielä enemmän sokeria.",
-    "nb": "Plommetreet er oppført som giftig for hunder fordi stilkene, bladene og frøene inneholder cyanogene glykosider. En stein kan også bli svelget og sette seg fast. Noen dyrleger godtar plommekjøtt som en godbit av og til, med steinen fjernet; fordi selve planten er oppført som giftig, bruker vi den strengere vurderingen. Svisker inneholder enda mer sukker."
+    "nb": "Plommetreet er oppført som giftig for hunder fordi stilkene, bladene og frøene inneholder cyanogene glykosider. En stein kan også bli svelget og sette seg fast. Noen dyrleger tillater plommekjøtt som en godbit av og til, med steinen fjernet; fordi selve planten er oppført som giftig, bruker vi den strengere vurderingen. Svisker inneholder enda mer sukker."
   },
   "signs": {
     "en": [
@@ -196,7 +196,7 @@
     "sv": "Om du delar med dig: bara lite färskt fruktkött utan kärna och stjälk. Undvik katrinplommon. Fråga veterinären först.",
     "da": "Hvis du deler, så giv kun lidt frisk frugtkød uden sten og stilk. Undgå svesker. Spørg din dyrlæge først.",
     "fi": "Jos jaat luumua, anna vain vähän tuoretta hedelmälihaa kivi ja varsi poistettuina. Jätä kuivatut luumut väliin. Kysy ensin eläinlääkäriltä.",
-    "nb": "Hvis du deler noe, gi bare litt ferskt fruktkjøtt med stein og stilk fjernet. Dropp svisker. Sjekk med dyrlegen først."
+    "nb": "Hvis du deler noe, så gi bare litt ferskt fruktkjøtt med stein og stilk fjernet. Dropp svisker. Sjekk med dyrlegen først."
   },
   "child": {
     "en": "Plum stones are bad for dogs. Never give your dog a plum stone, and ask a grown-up before sharing any plum.",
@@ -388,7 +388,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "eb26e70b4c30fed063f70acc08ef4a090eec29018f6dbb67b59aafda1fd0ad3c"
+      "verified_hash": "c20b255fbdd72b7c082279bb98de274948768468f5931f6f1037c59bda06c32f"
     }
   }
 }

@@ -103,7 +103,7 @@
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat kycklingben, ring veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, så stop og spørg din dyrlæge. Hvis din kat har slugt en tilberedt kyllingeknogle, så ring til din dyrlæge.",
     "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn kananluun, soita eläinlääkärille.",
-    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt kyllingbein, ring dyrlegen."
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt kyllingbein, ring dyrlegen."
   },
   "serving": {
     "en": "Boiled or steamed, plain, with no bones, skin or seasoning; small pieces within the daily food allowance.",
@@ -173,7 +173,7 @@
         "sv": "Nej. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist. Låt kycklingen vara något extra.",
         "da": "Nej. Hvis katten i længere tid kun får tilberedt kylling, kan det føre til mangel på næringsstoffer. Lad det være et ekstra.",
         "fi": "Ei saa. Pelkän kypsennetyn kanan syöttäminen pitkään voi johtaa ravintoainepuutoksiin. Anna sitä vain lisänä.",
-        "nb": "Nei. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel. La det være noe ekstra."
+        "nb": "Nei. Hvis katten bare får tilberedt kylling over lang tid, kan det føre til næringsmangel. Gi den bare som et tillegg."
       }
     }
   ],
@@ -296,7 +296,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e71430de69aa67876b60e05baf39c36863953018350de938ae80c4190db9f93a"
+      "verified_hash": "62394e004d993111a949f9e0d16f560b1cca279abbb9579e02b4ee4076617f20"
     }
   }
 }

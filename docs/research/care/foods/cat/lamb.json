@@ -103,7 +103,7 @@
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har svalt ett tillagat ben, ring veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har slugt en tilberedt knogle, skal du ringe til din dyrlæge.",
     "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee ripuli sen jälkeen, lopeta ja kysy neuvoa eläinlääkäriltä. Jos kissasi nielaisi kypsennetyn luun, soita eläinlääkärille.",
-    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har svelget et tilberedt bein, ring dyrlegen."
   },
   "serving": {
     "en": "Well cooked, plain, lean, boneless and unseasoned; a few small pieces now and then.",
@@ -268,7 +268,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3eb18e202d4b0737e771393bb86e8ae84c45656395296d47cdcb3a06154a2025"
+      "verified_hash": "a071f62e5d7a0a6cd75f1fdcaf60cda4130e850f7a3b090b5aa0c97d057ffcb3"
     }
   }
 }

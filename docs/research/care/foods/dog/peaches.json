@@ -68,7 +68,7 @@
     "sv": "Rekommenderas inte. Vissa veterinärer tillåter färskt persikokött i små tärningar utan stjälk och kärna, men kärnan är en verklig fara: den kan orsaka kvävning eller tarmstopp och innehåller en form av cyanid.",
     "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid.",
     "fi": "Ei suositella. Jotkut eläinlääkärit sallivat tuoretta persikan hedelmälihaa pieninä kuutioina, kun varsi ja kivi on poistettu, mutta kivi on todellinen vaara: se voi aiheuttaa tukehtumisen tai suolitukoksen, ja siinä on syanidiyhdistettä.",
-    "nb": "Anbefales ikke. Noen dyrleger godtar ferskt fruktkjøtt i små terninger med stilk og stein fjernet, men steinen er en reell fare: Den kan sette seg fast i halsen eller gi tarmblokkering, og den inneholder en form for cyanid."
+    "nb": "Anbefales ikke. Noen dyrleger tillater ferskt fruktkjøtt i små terninger med stilk og stein fjernet, men steinen er en reell fare: Den kan sette seg fast i halsen eller gi tarmblokkering, og den inneholder en form for cyanid."
   },
   "why": {
     "en": "Peach stems, leaves and seeds contain cyanogenic glycosides. If a pit is thoroughly chewed, cyanide can be released, and a swallowed pit may block the gut, especially in small dogs. Canned or dried peaches often contain extra sugar. Because the plant is listed as toxic to dogs, we rate peaches as not recommended rather than a safe treat.",
@@ -85,7 +85,7 @@
     "sv": "Persikans stjälkar, blad och frön innehåller cyanogena glykosider. Om en kärna tuggas sönder ordentligt kan cyanid frigöras, och en nedsvald kärna kan orsaka tarmstopp, särskilt hos små hundar. Persikor på burk och torkade persikor innehåller ofta tillsatt socker. Eftersom växten anges som giftig för hundar bedömer vi persikor som ”rekommenderas inte” i stället för som en säker godbit.",
     "da": "Ferskentræets stilke, blade og kerner indeholder cyanogene glykosider. Hvis en sten bliver tygget grundigt, kan der frigives cyanid, og en slugt sten kan blokere tarmen, især hos små hunde. Ferskner på dåse og tørrede ferskner indeholder ofte ekstra sukker. Fordi planten står opført som giftig for hunde, vurderer vi ferskner som frarådede frem for som en sikker godbid.",
     "fi": "Persikan varressa, lehdissä ja siemenissä on syanogeenisia glykosideja. Jos kiveä pureskellaan perusteellisesti, siitä voi vapautua syanidia, ja nielty kivi voi tukkia suoliston etenkin pienillä koirilla. Säilykepersikoissa ja kuivatuissa persikoissa on usein lisättyä sokeria. Koska kasvi on luokiteltu koiralle myrkylliseksi, emme suosittele persikoita emmekä pidä niitä turvallisena herkkuna.",
-    "nb": "Stilker, blader og frø fra fersken inneholder cyanogene glykosider. Hvis en stein blir tygget grundig, kan det frigjøres cyanid, og en svelget stein kan blokkere tarmen, særlig hos små hunder. Hermetiske eller tørkede ferskener inneholder ofte ekstra sukker. Fordi planten er oppført som giftig for hunder, vurderer vi fersken som ikke anbefalt i stedet for som en trygg godbit."
+    "nb": "Stilker, blader og frø fra fersken inneholder cyanogene glykosider. Hvis en stein blir tygget grundig, kan det frigjøres cyanid, og en svelget stein kan blokkere tarmen, særlig hos små hunder. Hermetiske eller tørkede ferskener inneholder ofte ekstra sukker. Fordi planten er oppført som giftig for hunder, vurderer vi fersken som «anbefales ikke», ikke som en trygg godbit."
   },
   "signs": {
     "en": [
@@ -232,7 +232,7 @@
         "sv": "Går det bra med persikor på burk?",
         "da": "Er ferskner på dåse i orden?",
         "fi": "Sopivatko säilykepersikat?",
-        "nb": "Er hermetiske ferskener greit?"
+        "nb": "Går det bra med hermetiske ferskener?"
       },
       "a": {
         "en": "They are not recommended, because canned or dried peaches often contain extra sugar and other ingredients.",
@@ -432,7 +432,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "11d255a723e0ce7b96d4b625c760fb76122199bfd104def51b5ff9af66f340d6"
+      "verified_hash": "908921fbd13d37e40bb9cf7ab16a471dafb39ecbb8c1dc3980cff131ee4c1770"
     }
   }
 }

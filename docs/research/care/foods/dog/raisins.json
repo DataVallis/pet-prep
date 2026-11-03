@@ -205,7 +205,7 @@
       "Sløvhet og svakhet",
       "Vil ikke spise",
       "Vondt i magen",
-      "Uttørking og mye drikking",
+      "Dehydrering og mye drikking",
       "Skjelvinger"
     ]
   },
@@ -224,7 +224,7 @@
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: jo før behandlingen starter, jo bedre.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koira olisi syönyt vain muutaman rusinan. Kirjaa ylös, suunnilleen montako rusinaa koira söi. Älä odota oireita: mitä aikaisemmin hoito alkaa, sitä parempi.",
-    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist noen få rosiner. Skriv ned omtrent hvor mange den har spist. Ikke vent på symptomer – jo før behandlingen starter, desto bedre."
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist noen få rosiner. Skriv ned omtrent hvor mange den har spist. Ikke vent på symptomer – jo tidligere behandlingen starter, desto bedre."
   },
   "serving": null,
   "child": {
@@ -449,7 +449,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b4ed18ca5dacca9dbeea71e24150c671ec40744955918aa1a8a4d3de9e85c114"
+      "verified_hash": "b4b42bcb25c18073b5a88f036e35ccb9633e0da5539c42a513c6ab741c8de1a2"
     }
   }
 }

@@ -103,7 +103,7 @@
     "sv": "Börja med en liten mängd och håll utkik efter gaser, diarré eller kräkningar; sluta om de dyker upp. Om yoghurten innehöll xylitol, kontakta veterinären eller en giftrådgivning för djur direkt.",
     "da": "Start med en lille mængde, og hold øje med luft i maven, diarré eller opkast; stop hvis det opstår. Hvis yoghurten indeholdt xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr.",
     "fi": "Aloita pienellä määrällä ja seuraa, tuleeko ilmavaivoja, ripulia tai oksentelua; lopeta, jos niitä ilmenee. Jos jogurtissa oli ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
-    "nb": "Start med en liten mengde og følg med på luft i magen, diaré eller oppkast; slutt hvis det oppstår. Hvis yoghurten inneholdt xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang."
+    "nb": "Start med en liten mengde og følg med på om hunden får luft i magen, diaré eller oppkast; slutt å gi yoghurt hvis det skjer. Hvis yoghurten inneholdt xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang."
   },
   "serving": {
     "en": "Plain yogurt with no added sweeteners, ideally Greek-style; check the label for sugar and xylitol.",
@@ -348,7 +348,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b4d296b23e9b1f713d773e7f086fbffd648d9f22385d7895fefde270661de720"
+      "verified_hash": "5283d6d67848338735e956bb8c0a1267b68b8aee77161ce338af0351b5ec50d5"
     }
   }
 }

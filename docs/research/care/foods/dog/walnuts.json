@@ -212,7 +212,7 @@
     "sv": "Valnötter är inget mellanmål för hundar. Gamla valnötter på marken kan göra hundar sjuka, så säg till en vuxen om din hund hittar några.",
     "da": "Valnødder er ikke en hundesnack. Gamle valnødder på jorden kan gøre hunde syge, så sig det til en voksen hvis din hund finder nogle.",
     "fi": "Saksanpähkinät eivät ole koiran naposteltavaa. Maassa olevat vanhat pähkinät voivat sairastuttaa koiran, joten kerro aikuiselle, jos koirasi löytää niitä.",
-    "nb": "Valnøtter er ikke hundesnacks. Gamle valnøtter på bakken kan gjøre hunder syke, så si fra til en voksen hvis hunden din finner noen."
+    "nb": "Valnøtter er ikke snacks for hunder. Gamle valnøtter på bakken kan gjøre hunder syke, så si fra til en voksen hvis hunden din finner noen."
   },
   "faq": [
     {
@@ -419,7 +419,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fe68c209ae7cdb3f14ce43be061fa20632a83190abc6239449c8b9cfe247e68f"
+      "verified_hash": "fd139d025744fd1746ee6cf7a410a0b157cd6829ced848efce04722ca9ff9638"
     }
   }
 }

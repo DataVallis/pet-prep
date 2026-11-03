@@ -85,7 +85,7 @@
     "sv": "De flesta vuxna katter kan inte bryta ner laktos ordentligt, alltså sockret i mjölk och i mejeriprodukter som ost. Det kan ge kräkningar eller diarré och göra katten trög. Ost innehåller också mycket fett och salt, och om katten äter det regelbundet kan det leda till viktuppgång. Laktosfri och växtbaserad ost är inget säkert alternativ, eftersom vissa mejerialternativ innehåller ingredienser som kan vara giftiga för katter.",
     "da": "De fleste voksne katte kan ikke fordøje laktose ordentligt, altså sukkeret i mælk og i mejeriprodukter som ost. Det kan give opkast eller diarré og gøre en kat sløv. Ost indeholder også meget fedt og salt, og spist jævnligt kan den få katten til at tage på. Laktosefri og plantebaseret ost er ikke et sikkert alternativ fordi nogle mejerierstatninger indeholder ingredienser der kan være giftige for katte.",
     "fi": "Useimmat aikuiset kissat eivät pysty kunnolla sulattamaan laktoosia, joka on maidon ja maitotuotteiden, kuten juuston, sokeri. Se voi aiheuttaa oksentelua tai ripulia ja tehdä kissasta voimattoman. Juustossa on myös paljon rasvaa ja suolaa, ja säännöllisesti syötynä se voi johtaa painonnousuun. Laktoosittomat ja kasvipohjaiset juustot eivät ole turvallinen korvike, koska joissakin maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä.",
-    "nb": "De fleste voksne katter klarer ikke å fordøye laktose ordentlig, sukkeret i melk og i meieriprodukter som ost. Det kan gi oppkast eller diaré og gjøre katten slapp. Ost inneholder også mye fett og salt, og spist jevnlig kan den føre til vektøkning. Laktosefri og plantebasert ost er ikke et trygt alternativ, fordi noen meierierstatninger inneholder ingredienser som kan være giftige for katter."
+    "nb": "De fleste voksne katter klarer ikke å fordøye laktose ordentlig, sukkeret i melk og i meieriprodukter som ost. Det kan gi oppkast eller diaré og gjøre katten slapp. Ost inneholder også mye fett og salt, og spist jevnlig kan den føre til vektøkning. Laktosefri og plantebasert ost er ikke et trygt alternativ, fordi noen meierialternativer inneholder ingredienser som kan være giftige for katter."
   },
   "signs": {
     "en": [
@@ -194,7 +194,7 @@
     "sv": "Om katten har ätit lite ost behöver du inte skynda till veterinären. Håll ett öga på katten. Om den börjar må dåligt eller beter sig annorlunda, ring veterinären och berätta hur mycket ost katten åt.",
     "da": "Hvis din kat har spist lidt ost, er der ingen grund til at skynde sig til dyrlægen. Hold øje med katten. Hvis den bliver utilpas eller opfører sig anderledes, så ring til din dyrlæge og fortæl hvor meget ost din kat har spist.",
     "fi": "Jos kissasi söi vähän juustoa, eläinlääkäriin ei tarvitse kiirehtiä. Pidä kissaa silmällä. Jos se tulee huonovointiseksi tai käyttäytyy tavallisesta poikkeavasti, soita eläinlääkärille ja kerro, kuinka paljon juustoa kissasi söi.",
-    "nb": "Hvis katten har spist litt ost, er det ikke nødvendig å skynde seg til dyrlegen. Følg med på den. Hvis den blir dårlig eller oppfører seg annerledes, ring dyrlegen og fortell hvor mye ost katten har spist."
+    "nb": "Hvis katten har spist litt ost, er det ikke nødvendig å skynde seg til dyrlegen. Følg med på den. Hvis den blir uvel eller oppfører seg annerledes, ring dyrlegen og fortell hvor mye ost katten har spist."
   },
   "serving": null,
   "child": {
@@ -284,7 +284,7 @@
         "sv": "Nej. Undvik även laktosfri och växtbaserad ost, eftersom många mejerialternativ innehåller ingredienser som kan vara giftiga för katter.",
         "da": "Nej. Undgå også laktosefri og plantebaseret ost fordi mange mejerierstatninger indeholder ingredienser der kan være giftige for katte.",
         "fi": "Ei ole. Vältä myös laktoositonta ja kasvipohjaista juustoa, koska monissa maitotuotteiden korvikkeissa on ainesosia, jotka voivat olla kissoille myrkyllisiä.",
-        "nb": "Nei. Unngå også laktosefri og plantebasert ost, fordi mange meierierstatninger inneholder ingredienser som kan være giftige for katter."
+        "nb": "Nei. Unngå også laktosefri og plantebasert ost, fordi mange meierialternativer inneholder ingredienser som kan være giftige for katter."
       }
     }
   ],
@@ -443,7 +443,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "46f05a4fad031c8b82d9a5734b7f31086e2c287cfce9259981223cd0668a7562"
+      "verified_hash": "5b4f2cc33705c175e80d07b9f951f76382d4dd374ef83322db680b78eb93a3b6"
     }
   }
 }

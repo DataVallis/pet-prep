@@ -68,7 +68,7 @@
     "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, kraftig törst, darrningar och kramper.",
     "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, legedej eller store mængder havvand. Symptomerne omfatter opkast, kraftig tørst, rysten og kramper.",
     "fi": "Ei, ei suuria määriä. Kohtuullinen määrä suolaista ruokaa ei yleensä aiheuta suolamyrkytystä, mutta suuri määrä suolaa voi, esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä saatuna. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
-    "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Symptomene er bl.a. oppkast, sterk tørst, skjelvinger og kramper."
+    "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Tegn på det er blant annet oppkast, sterk tørst, skjelvinger og kramper."
   },
   "why": {
     "en": "Common causes of salt poisoning are homemade salt-dough ornaments and play dough, snow with salt de-icer, and drinking a lot of sea water. Salt poisoning is unlikely when a healthy dog has fresh water, but small dogs with health problems are at more risk if they have no fresh water. Salt must never be used to make a dog vomit.",
@@ -458,7 +458,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "19c1f2a4c5c67d860ff7ae2cb13fda9c891512fcb3f5be2970170e0cedae72a6"
+      "verified_hash": "a7b3d9ee453ce26d495f6efb34163c81d27ea32a9f82959787ad3562afd2917f"
     }
   }
 }

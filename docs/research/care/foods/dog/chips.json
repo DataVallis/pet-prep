@@ -227,7 +227,7 @@
     "sv": "Chips är ett salt tilltugg för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
     "da": "Chips er en salt snack til mennesker. De er ikke gode for hunde, så hold posen lukket, og giv din hund dens egen godbid.",
     "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omia herkkuja.",
-    "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden sin egen godbit."
+    "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden en egen godbit."
   },
   "faq": [
     {
@@ -410,7 +410,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2ad1842bdb4eb4ae32faf1f70d9b6f5597fedd1b2404313f452b161ad43c084f"
+      "verified_hash": "77e2871bc2f9b32f0c14b1b86b9d8faf7587a6357b2d857e42945bb59252efb8"
     }
   }
 }

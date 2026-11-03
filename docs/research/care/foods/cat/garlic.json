@@ -85,7 +85,7 @@
     "sv": "Vitlök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form. Av lökväxterna är vitlök den giftigaste för katter.",
     "da": "Hvidløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende. Af løgplanterne er hvidløg det mest giftige for katte.",
     "fi": "Valkosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen. Sipulikasveista valkosipuli on kissoille myrkyllisin.",
-    "nb": "Hvitløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form. Av løkplantene er hvitløk den giftigste for katter."
+    "nb": "Hvitløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form. Av løkplantene er hvitløk den giftigste for katter."
   },
   "signs": {
     "en": [
@@ -329,7 +329,7 @@
         "sv": "Ge aldrig katten vitlök, oavsett anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
         "da": "Giv aldrig din kat hvidløg, uanset hvorfor. Alle former er giftige for katte, og Blue Cross nævner at man også frygter at langvarig brug af hvidløg kan give problemer. Spørg din dyrlæge om sikker loppebehandling.",
         "fi": "Älä anna kissallesi valkosipulia mistään syystä. Kaikki muodot ovat kissoille myrkyllisiä, ja Blue Crossin mukaan myös valkosipulin pitkäaikaisen käytön epäillään voivan aiheuttaa ongelmia. Kysy eläinlääkäriltä turvallisesta kirppuhoidosta.",
-        "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er bekymring for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
+        "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er grunn til å være bekymret for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
       }
     }
   ],
@@ -499,7 +499,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8c473b7969b1057428c36bbbb5bc5c07824cc0cbb0313c73fa48160ef782ab48"
+      "verified_hash": "03720842e8d128d5256c4ee6455935408d5403638bdeb455181ad5b007f80a85"
     }
   }
 }

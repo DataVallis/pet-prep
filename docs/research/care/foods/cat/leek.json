@@ -85,7 +85,7 @@
     "sv": "Purjolök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Porre hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
     "fi": "Purjo kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-    "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+    "nb": "Purre hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
     "en": [
@@ -467,7 +467,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "25ba7979ac59b3c0e0a9083e0dca40c4681ad1e051db722d6c8dc0061e833cd3"
+      "verified_hash": "d863f1781129831b510a5c24b0c1830c534667a56134c0adcf79e369ad51b680"
     }
   }
 }

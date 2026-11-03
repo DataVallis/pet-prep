@@ -68,7 +68,7 @@
     "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller blockera tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
     "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
     "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja ne voivat aiheuttaa hätätilanteen, joka vaatii eläinlääkärin hoitoa.",
-    "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan kutte munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
+    "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan gi kutt i munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
   },
   "why": {
     "en": "Cooking makes bones brittle, so they break into sharp splinters. Chicken and turkey bones are the classic example, but any bones from the kitchen table can injure a dog. The FDA has received reports of choking, mouth wounds, vomiting, diarrhoea, rectal bleeding and gut blockages in dogs that ate bones or bone treats.",
@@ -299,7 +299,7 @@
         "sv": "Ställ undan fat med mat så att hunden inte når dem medan du lagar mat och äter, och tänk på vad du slänger i soporna: hundar går ofta i soporna efter kycklingskrov och ben från stekar.",
         "da": "Hold fade uden for rækkevidde, mens du laver mad og spiser, og pas på med hvad der ryger i skraldespanden: hunde roder ofte i skraldet efter skrog og bøfben.",
         "fi": "Pidä tarjoiluvadit koiran ulottumattomissa ruoanlaiton ja ruokailun aikana ja mieti, mitä heität roskiin: koirat penkovat usein roskiksesta linnunruhoja ja pihvin luita.",
-        "nb": "Hold fat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
+        "nb": "Hold serveringsfat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
       }
     }
   ],
@@ -454,7 +454,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9c9772d2f1b952ee2389076d3586d7d55cc3eb8d5c46a368a3516a55f67d68f4"
+      "verified_hash": "ef5358582d417200f63616a45ea7c0ef1b93003be4318f2e2c790a557e569a3f"
     }
   }
 }

@@ -85,7 +85,7 @@
     "sv": "Bitar som sväljs kan blockera tarmarna; i ett rapporterat fall försämrade stoppet blodtillförseln, och akut behandling kan behövas. Vanliga majskorn är i regel säkra med måtta; det är kolven som är farlig.",
     "da": "Slugte stykker kan blokere tarmene; i et beskrevet tilfælde hæmmede blokeringen blodforsyningen, og akut behandling kan blive nødvendig. Almindelige majskorn er generelt sikre med måde; det er kolben, der er farlig.",
     "fi": "Nielaistut palat voivat tukkia suoliston; yhdessä raportoidussa tapauksessa tukos heikensi suolen verenkiertoa, ja kiireellinen hoito voi olla tarpeen. Pelkät maissinjyvät ovat kohtuudella yleensä turvallisia; vaara on tähkässä.",
-    "nb": "Biter som svelges, kan blokkere tarmen; i ett omtalt tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
+    "nb": "Biter som svelges, kan blokkere tarmen; i ett rapportert tilfelle hindret blokkeringen blodtilførselen, og det kan bli nødvendig med akutt behandling. Naturelle maiskorn med måte er som regel trygt; det er kolben som er farlig."
   },
   "signs": {
     "en": [
@@ -191,7 +191,7 @@
       "Vil ikke spise",
       "Sløvhet og mindre aktivitet",
       "Diaré",
-      "Uttørking"
+      "Dehydrering"
     ]
   },
   "what_to_do": {
@@ -299,7 +299,7 @@
         "sv": "Vänta inte och se vad som händer. En nedsvald kolv kan orsaka allvarligt tarmstopp, så kontakta veterinären direkt.",
         "da": "Se ikke tiden an. En slugt kolbe kan give en alvorlig blokering, så kontakt din dyrlæge med det samme.",
         "fi": "Älä jää odottamaan. Nielaistu tähkä voi aiheuttaa vakavan tukoksen, joten ota heti yhteyttä eläinlääkäriin.",
-        "nb": "Ikke vent for å finne det ut. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
+        "nb": "Ikke vent og se hva som skjer. En svelget kolbe kan gi alvorlig tarmblokkering, så kontakt dyrlegen med en gang."
       }
     }
   ],
@@ -445,7 +445,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "86dd075a66f8638234ac354c890f805184939426f730b9b0d405c045ca1106dd"
+      "verified_hash": "adbdefd49933fb8bbba545e6c7446191a3e33e225c9b85138ea8aad73c8e3c91"
     }
   }
 }

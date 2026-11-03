@@ -103,7 +103,7 @@
     "sv": "Ge bara lite först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
     "da": "Giv først bare en lille smule. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
     "fi": "Tarjoa ensin vain vähän. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-    "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+    "nb": "Gi bare litt først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
   },
   "serving": {
     "en": "A few berries now and then, counted in your cat's daily food.",
@@ -292,7 +292,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3158990725a0768cea32ae3a719676d63a07193913eddbae7f7ca9f72257dc25"
+      "verified_hash": "63b58957995b561f5254c08d43c947642abb7a0d797800ba177c3ec2c943af99"
     }
   }
 }

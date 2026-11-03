@@ -85,7 +85,7 @@
     "sv": "Äpplen är en kalorisnål godbit med vitamin A och C, kalium, antioxidanter och fiber, särskilt i skalet. Eftersom äpplen innehåller socker är ett helt äpple troligen för mycket för hunden, och om hunden äter för mycket äpple kan den få ont i magen eller diarré.",
     "da": "Æbler er en kaloriefattig godbid med A- og C-vitamin, kalium, antioxidanter og fibre, især i skrællen. På grund af sukkeret i hvert æble er et helt æble sandsynligvis for meget for din hund, og for mange æbler kan give dårlig mave eller diarré.",
     "fi": "Omena on vähäkalorinen herkku, jossa on A- ja C-vitamiinia, kaliumia, antioksidantteja ja kuitua, etenkin kuoressa. Omenan sokerin vuoksi kokonainen omena on koirallesi todennäköisesti liikaa, ja liian monen omenan syöminen voi aiheuttaa vatsakipua tai ripulia.",
-    "nb": "Epler er en kalorifattig godbit med vitamin A og C, kalium, antioksidanter og fiber, særlig i skallet. På grunn av sukkeret i hvert eple er et helt eple trolig for mye for hunden, og for mange epler kan gi vondt i magen eller diaré."
+    "nb": "Epler er en kalorifattig godbit med vitamin A og C, kalium, antioksidanter og fiber, særlig i skallet. Epler inneholder en del sukker, så et helt eple er trolig for mye for hunden, og for mange epler kan gi vondt i magen eller diaré."
   },
   "signs": null,
   "what_to_do": {
@@ -103,7 +103,7 @@
     "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp. Om hunden får problem, sluta ge äpple och kontakta en veterinär.",
     "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering. Hvis hunden får problemer, skal du stoppe med at give den æble og kontakte en dyrlæge.",
     "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä. Jos koiralla on ongelmia, lopeta omenan antaminen ja ota yhteyttä eläinlääkäriin.",
-    "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering. Får hunden problemer, slutter du å gi den epler og kontakter dyrlege."
+    "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering. Får hunden problemer, slutter du å gi den epler og kontakter dyrlegen."
   },
   "serving": {
     "en": "Wash and scrub the apple, remove the seeds, core and stem, and cut it into slices or small cubes; in moderation, not a whole apple.",
@@ -209,7 +209,7 @@
         "sv": "Nej. Det tillsatta sockret och pajdegen är för mycket för hundar. Undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
         "da": "Nej. Det tilsatte sukker og tærtedejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
         "fi": "Ei saa. Lisätty sokeri ja piirakkapohja ovat koirille liikaa; vältä omenaruokia, joissa on lisättyä sokeria tai mausteita, kuten muskottipähkinää.",
-        "nb": "Nei. Det tilsatte sukkeret og paibunnen er for mye for hunder; unngå mat med eple som har tilsatt sukker eller krydder, som muskatnøtt."
+        "nb": "Nei. Tilsatt sukker og paibunn er for mye for hunder; unngå også epleretter med tilsatt sukker eller krydder, som muskatnøtt."
       }
     }
   ],
@@ -367,7 +367,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e52196d6afdfe6936b82cdbfcb6e304bcd14ae4c64e36f94bdb03597adf6b40b"
+      "verified_hash": "1f3fa2cee89af937388d3e497714053601f9e76c3fcc25944affc05a678e90de"
     }
   }
 }

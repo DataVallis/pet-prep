@@ -103,7 +103,7 @@
     "sv": "Ge en liten bit först. Om katten kräks eller får orolig mage efteråt, sluta och fråga veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat kaster op eller får dårlig mave bagefter, så stop og spørg din dyrlæge.",
     "fi": "Tarjoa ensin pieni pala. Jos kissasi oksentaa tai sille tulee vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä.",
-    "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt og spør dyrlegen."
+    "nb": "Gi en liten bit først. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi det og spør dyrlegen."
   },
   "serving": {
     "en": "A small piece now and then, counted in your cat's daily food.",
@@ -300,7 +300,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fe43b4fd3263f02f29e796557c163dfaeafe1c49ee3e712732d8419f8018167a"
+      "verified_hash": "436fb7811b3df0d7d96ff89764084853f575e05a777859c2db433d7177801849"
     }
   }
 }

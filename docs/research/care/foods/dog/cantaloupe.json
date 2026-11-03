@@ -68,7 +68,7 @@
     "sv": "Ja, med måtta. Cantaloupemelon har få kalorier och är en bra källa till vätska och fiber, men den innehåller mycket socker, så ge den sparsamt, särskilt till hundar som är överviktiga eller har diabetes. Ge inte skalet eller kärnorna.",
     "da": "Ja, med måde. Cantaloupemelon har få kalorier og er en god kilde til væske og fibre, men den har et højt sukkerindhold, så giv den sparsomt, især til hunde med overvægt eller diabetes. Giv ikke skræl eller kerner.",
     "fi": "Kyllä, kohtuudella. Cantaloupe-meloni on vähäkalorinen ja hyvä veden ja kuidun lähde, mutta siinä on paljon sokeria, joten anna sitä säästeliäästi, etenkin ylipainoisille tai diabetesta sairastaville koirille. Älä anna kuorta tai siemeniä.",
-    "nb": "Ja, med måte. Cantaloupemelon har få kalorier og er en god kilde til vann og fiber, men den inneholder mye sukker, så del den sparsomt, særlig med hunder som er overvektige eller har diabetes. Ikke gi skallet eller frøene."
+    "nb": "Ja, med måte. Cantaloupemelon har få kalorier og er en god kilde til vann og fiber, men den inneholder mye sukker, så gi bare små mengder, særlig til hunder som er overvektige eller har diabetes. Ikke gi skallet eller frøene."
   },
   "why": {
     "en": "Cantaloupe rinds, like watermelon rinds, can cause stomach upset, can become impacted in the digestive tract and are a choking hazard. The seeds are harmless but can also be a choking hazard. Too many treats on top of a healthy diet can lead to obesity.",
@@ -103,7 +103,7 @@
     "sv": "Om du undrar över eller är orolig för att ge hunden cantaloupemelon, till exempel om hunden har diabetes, fråga veterinären.",
     "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund cantaloupemelon, fx hvis den har diabetes.",
     "fi": "Jos sinulla on kysyttävää cantaloupe-melonin antamisesta koirallesi tai olet siitä huolissasi, esimerkiksi jos koirallasi on diabetes, kysy eläinlääkäriltä.",
-    "nb": "Har du spørsmål eller er du bekymret for å gi hunden cantaloupemelon, for eksempel fordi hunden har diabetes, kan du spørre dyrlegen."
+    "nb": "Er du i tvil om du bør gi hunden cantaloupemelon, for eksempel fordi den har diabetes, kan du spørre dyrlegen."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds; as an occasional treat.",
@@ -299,7 +299,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7d889c83b1e65e32159e944087625572ada3afe9bb95d82309ab2859ceac0fa8"
+      "verified_hash": "581c539ecf4d0e1044851cf860cef1546cf572c1d0b8c3844061e06a68147484"
     }
   }
 }

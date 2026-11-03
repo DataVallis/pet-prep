@@ -68,7 +68,7 @@
     "sv": "Inte som en vanlig godbit. Vissa veterinärkällor tillåter små bitar osmaksatt, mager ost, men ost är fet, många hundar har svårt att smälta mejeriprodukter, och vissa ostar innehåller lök, vitlök eller gräslök. Blåmögelost är särskilt problematisk.",
     "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader små stykker almindelig, mager ost, men ost er fed, mange hunde fordøjer mejeriprodukter dårligt, og nogle oste indeholder løg, hvidløg eller purløg. Blåskimmeloste er særligt problematiske.",
     "fi": "Ei säännöllisenä herkkuna. Jotkin eläinlääketieteelliset lähteet sallivat pieniä paloja maustamatonta, vähärasvaisempaa juustoa, mutta juusto on rasvaista, moni koira sulattaa maitotuotteita huonosti, ja joissakin juustoissa on sipulia, valkosipulia tai ruohosipulia. Sinihomejuustot ovat erityinen huolenaihe.",
-    "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Blåmuggost er særlig bekymringsfullt."
+    "nb": "Ikke som en fast godbit. Noen veterinærmedisinske kilder tillater små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Spesielt blåmuggost bør du holde unna."
   },
   "why": {
     "en": "Dogs have little lactase, the enzyme that digests milk sugar, so dairy can upset the stomach. Cheese is high in fat: too much leads to weight gain and can trigger pancreatitis. Flavoured cheeses may contain onion, garlic or chives, and blue cheeses such as Roquefort contain roquefortine C, to which dogs appear sensitive. Sources differ: the AKC and Dogs Trust allow small amounts, while Cornell lists cheese among fatty foods to avoid, so we use the stricter level.",
@@ -85,7 +85,7 @@
     "sv": "Hundar har lite laktas, enzymet som bryter ned mjölksocker, så mejeriprodukter kan ge orolig mage. Ost innehåller mycket fett: för mycket leder till viktökning och kan utlösa bukspottkörtelinflammation (pankreatit). Smaksatta ostar kan innehålla lök, vitlök eller gräslök, och blåmögelostar som roquefort innehåller roquefortin C, som hundar verkar vara känsliga för. Källorna skiljer sig åt: AKC och Dogs Trust tillåter små mängder, medan Cornell räknar ost till de feta livsmedel som ska undvikas, så vi använder den strängare nivån.",
     "da": "Hunde har kun lidt laktase, enzymet der fordøjer mælkesukker, så mejeriprodukter kan give dårlig mave. Ost har et højt fedtindhold: for meget fører til vægtøgning og kan udløse betændelse i bugspytkirtlen (pankreatitis). Oste med smag kan indeholde løg, hvidløg eller purløg, og blåskimmeloste som roquefort indeholder roquefortin C, som hunde ser ud til at være følsomme over for. Kilderne er uenige: AKC og Dogs Trust tillader små mængder, mens Cornell nævner ost blandt fed mad man bør undgå, så vi følger den strengere vurdering.",
     "fi": "Koirilla on vähän laktaasia, maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa vatsavaivoja. Juustossa on paljon rasvaa: liian suuri määrä johtaa painonnousuun ja voi laukaista haimatulehduksen. Maustetuissa juustoissa voi olla sipulia, valkosipulia tai ruohosipulia, ja sinihomejuustot, kuten roquefort, sisältävät roquefortiini C:tä, jolle koirat vaikuttavat olevan herkkiä. Lähteet ovat eri mieltä: AKC ja Dogs Trust sallivat pieniä määriä, kun taas Cornell mainitsee juuston vältettävien rasvaisten ruokien joukossa, joten käytämme tiukempaa luokitusta.",
-    "nb": "Hunder har lite laktase, enzymet som bryter ned melkesukker, så melkeprodukter kan gi urolig mage. Ost inneholder mye fett: For mye fører til vektøkning og kan utløse betennelse i bukspyttkjertelen. Oster med smak kan inneholde løk, hvitløk eller gressløk, og blåmuggoster som roquefort inneholder roquefortin C, som hunder ser ut til å være følsomme for. Kildene er uenige: AKC og Dogs Trust godtar små mengder, mens Cornell nevner ost blant fet mat som bør unngås, så vi bruker det strengeste nivået."
+    "nb": "Hunder har lite laktase, enzymet som bryter ned melkesukker, så melkeprodukter kan gi urolig mage. Ost inneholder mye fett: For mye fører til vektøkning og kan utløse betennelse i bukspyttkjertelen. Smaksatt ost kan inneholde løk, hvitløk eller gressløk, og blåmuggoster som roquefort inneholder roquefortin C, som hunder ser ut til å være følsomme for. Kildene er uenige: AKC og Dogs Trust tillater små mengder, mens Cornell nevner ost blant fet mat som bør unngås, så vi bruker det strengeste nivået."
   },
   "signs": {
     "en": [
@@ -228,7 +228,7 @@
     "sv": "Ost är väldigt fet för en hundmage. En pytteliten bit vanlig ost ibland räcker gott – fråga en vuxen först.",
     "da": "Ost er meget fed for en hundemave. Et bitte lille stykke almindelig ost en gang imellem er rigeligt – spørg en voksen først.",
     "fi": "Juusto on koiran mahalle hyvin rasvaista. Pikkuinen maustamaton pala silloin tällöin riittää hyvin – kysy ensin aikuiselta.",
-    "nb": "Ost er veldig fett for magen til en hund. En ørliten, naturell bit en gang iblant er nok – spør en voksen først."
+    "nb": "Ost er veldig fet mat for magen til en hund. En ørliten, naturell bit en gang iblant er nok – spør en voksen først."
   },
   "faq": [
     {
@@ -450,7 +450,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "56cdaa67f9ff0d66aa818af0be4b4706c77048c86930b7c27d1abf22b215aebd"
+      "verified_hash": "c99075ea4f647b88d85e33e2a5f58741cf57981cc337da47a27156d4227c5e39"
     }
   }
 }

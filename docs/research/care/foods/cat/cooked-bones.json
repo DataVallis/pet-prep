@@ -179,7 +179,7 @@
     "sv": "Kontakta veterinären direkt om katten har svalt ett tillagat ben, även om den verkar må bra. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge hvis din kat har slugt en tilberedt knogle, også selvom den virker upåvirket. Skriv ned hvilken slags knogle det var, og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Ota heti yhteyttä eläinlääkäriin, jos kissasi nielaisi kypsennetyn luun, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja milloin se tapahtui. Älä jää odottamaan, mitä tapahtuu, äläkä yritä itse oksennuttaa kissaasi.",
-    "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et tilberedt bein, selv om den virker helt fin. Skriv ned hva slags bein det var og når. Ikke vent og se, og ikke prøv å få katten til å kaste opp selv."
+    "nb": "Kontakt dyrlegen med en gang hvis katten har svelget et tilberedt bein, selv om den virker helt frisk. Skriv ned hva slags bein det var og når. Ikke se det an, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": {
     "en": "If you share plain cooked chicken or turkey, give only boneless meat.",
@@ -381,7 +381,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c5ddff415dc51c34ac2001142b013a6a9cbe56becfb97d6eb74abc486236d5d1"
+      "verified_hash": "caa3e29cb5bbe37dd62d8bee90c8d587a1d769f347fb0d183023899b10c5962f"
     }
   }
 }

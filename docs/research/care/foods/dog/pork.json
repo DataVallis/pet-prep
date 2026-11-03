@@ -68,7 +68,7 @@
     "sv": "Inte som en vanlig godbit. Vissa veterinärkällor tillåter lite okryddat, genomstekt magert fläskkött, men fläskkött är fett och svårsmält för hundar, och fet mat kan utlösa bukspottkörtelinflammation (pankreatit). Rått fläskkött, tillagade ben, skinka och bacon passar inte.",
     "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader lidt almindeligt, gennemtilberedt magert svinekød, men svinekød er fedt og svært for hunde at fordøje, og fed mad kan udløse betændelse i bugspytkirtlen (pankreatitis). Råt svinekød, tilberedte knogler, skinke og bacon er ikke egnede.",
     "fi": "Ei säännöllisenä herkkuna. Joidenkin eläinlääkärilähteiden mukaan koiralle voi antaa vähän maustamatonta, täysin kypsennettyä vähärasvaista sianlihaa, mutta sianliha on rasvaista ja koiralle vaikeasti sulavaa, ja rasvaiset ruoat voivat laukaista haimatulehduksen. Raaka sianliha, kypsennetyt luut, kinkku ja pekoni eivät sovi.",
-    "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar litt gjennomstekt, magert svinekjøtt uten noe tilsatt, men svinekjøtt er fett og tungt for hunder å fordøye, og fet mat kan utløse betennelse i bukspyttkjertelen. Rått svinekjøtt, tilberedte bein, skinke og bacon passer ikke."
+    "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder tillater litt gjennomstekt, magert svinekjøtt uten noe tilsatt, men svinekjøtt er fett og tungt for hunder å fordøye, og fet mat kan utløse betennelse i bukspyttkjertelen. Rått svinekjøtt, tilberedte bein, skinke og bacon passer ikke."
   },
   "why": {
     "en": "Pork is rich in a type of fat that is difficult for dogs to digest. Raw or undercooked pork can carry the parasite Trichinella. Cooked bones become brittle, and seasonings can be dangerous. Ham is high in salt and fat. Sources differ: the AKC calls plain cooked lean pork safe in moderation, while PDSA lists pork among high-fat foods that can lead to pancreatitis and advises dogs that have had it to avoid high-fat treats like pork, so we use the stricter level.",
@@ -85,7 +85,7 @@
     "sv": "Fläskkött innehåller en typ av fett som är svår för hundar att smälta. Rått eller otillräckligt tillagat fläskkött kan bära på parasiten Trichinella. Tillagade ben blir sköra, och kryddor kan vara farliga. Skinka innehåller mycket salt och fett. Källorna går isär: AKC kallar okryddat, tillagat magert fläskkött ofarligt med måtta, medan PDSA räknar fläskkött till de fettrika livsmedel som kan leda till bukspottkörtelinflammation och avråder hundar som har haft sjukdomen från fettrika godbitar som fläskkött, så vi använder den strängare nivån.",
     "da": "Svinekød indeholder en type fedt som er svær for hunde at fordøje. Råt eller ikke gennemtilberedt svinekød kan indeholde parasitten Trichinella (trikiner). Tilberedte knogler bliver skøre, og krydderier kan være farlige. Skinke indeholder meget salt og fedt. Kilderne er uenige: AKC kalder almindeligt, tilberedt magert svinekød sikkert i moderate mængder, mens PDSA nævner svinekød blandt de fede fødevarer der kan føre til betændelse i bugspytkirtlen, og anbefaler at hunde der har haft det, undgår fede godbidder som svinekød. Derfor bruger vi det strengeste niveau.",
     "fi": "Sianlihassa on paljon sellaista rasvaa, jota koiran on vaikea sulattaa. Raa’assa tai riittämättömästi kypsennetyssä sianlihassa voi olla trikiinejä (Trichinella-loisia). Kypsennetyt luut haurastuvat, ja mausteet voivat olla vaarallisia. Kinkussa on paljon suolaa ja rasvaa. Lähteet ovat eri mieltä: AKC:n mukaan maustamaton, kypsennetty vähärasvainen sianliha on kohtuudella turvallista, kun taas PDSA mainitsee sianlihan rasvaisten ruokien joukossa, jotka voivat johtaa haimatulehdukseen, ja neuvoo haimatulehduksen sairastaneita koiria välttämään rasvaisia herkkuja, kuten sianlihaa; siksi käytämme tiukempaa luokitusta.",
-    "nb": "Svinekjøtt er rikt på en type fett som er vanskelig for hunder å fordøye. Rått eller ikke gjennomstekt svinekjøtt kan inneholde parasitten Trichinella. Tilberedte bein blir skjøre, og krydder kan være farlig. Skinke inneholder mye salt og fett. Kildene sier ulike ting: AKC kaller tilberedt, magert svinekjøtt uten noe tilsatt trygt i moderate mengder, mens PDSA regner svinekjøtt blant de fete matvarene som kan føre til betennelse i bukspyttkjertelen, og råder hunder som har hatt det, til å unngå fete godbiter som svinekjøtt. Derfor bruker vi det strengere nivået."
+    "nb": "Svinekjøtt er rikt på en type fett som er vanskelig for hunder å fordøye. Rått eller ikke gjennomstekt svinekjøtt kan inneholde parasitten Trichinella. Tilberedte bein blir skjøre, og krydder kan være farlig. Skinke inneholder mye salt og fett. Kildene sier ulike ting: AKC kaller tilberedt, magert svinekjøtt uten noe tilsatt trygt med måte, mens PDSA regner svinekjøtt blant de fete matvarene som kan føre til betennelse i bukspyttkjertelen, og anbefaler at hunder som har hatt det, unngår fete godbiter som svinekjøtt. Derfor bruker vi det strengere nivået."
   },
   "signs": {
     "en": [
@@ -228,7 +228,7 @@
     "sv": "Fläskkött är väldigt fett för en hundmage. Bara en vuxen ska bestämma om en hund får en pytteliten bit utan kryddor.",
     "da": "Svinekød er meget fedt for en hundemave. Kun en voksen må bestemme om en hund må få et lillebitte stykke helt uden krydderier.",
     "fi": "Sianliha on koiran vatsalle hyvin rasvaista. Vain aikuinen saa päättää, saako koira pikkuruisen maustamattoman palan.",
-    "nb": "Svinekjøtt er veldig fett for magen til en hund. Bare en voksen skal bestemme om en hund får en liten bit uten krydder."
+    "nb": "Svinekjøtt er veldig fet mat for magen til en hund. Bare en voksen skal bestemme om en hund får en liten bit uten krydder."
   },
   "faq": [
     {
@@ -264,7 +264,7 @@
         "sv": "De är inga bra val: skinka innehåller mycket fett och natrium, och mycket bacon kan orsaka bukspottkörtelinflammation.",
         "da": "Det er ikke gode valg: skinke indeholder meget fedt og natrium, og meget bacon kan give betændelse i bugspytkirtlen.",
         "fi": "Ne eivät ole hyviä valintoja: kinkussa on paljon rasvaa ja natriumia, ja suuri määrä pekonia voi aiheuttaa haimatulehduksen.",
-        "nb": "Det er ikke noe godt valg: Skinke inneholder mye fett og natrium, og mye bacon kan gi betennelse i bukspyttkjertelen."
+        "nb": "Ingen av dem er et godt valg: Skinke inneholder mye fett og natrium, og mye bacon kan gi betennelse i bukspyttkjertelen."
       }
     }
   ],
@@ -416,7 +416,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ebee42543bed264bff58fce5ceac102591057b193f5f9057de3d59cfa521a3e"
+      "verified_hash": "ae8af9a3277ae69a727b1ce1d3fc4bcbcd3738df4622ef59b5546d620361d647"
     }
   }
 }

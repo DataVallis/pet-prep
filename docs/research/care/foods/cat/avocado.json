@@ -131,7 +131,7 @@
       "Mikä tahansa huonovointisuuden merkki, kun kissa on syönyt sitä paljon (lähteemme eivät mainitse kissoilla tiettyjä oireita)"
     ],
     "nb": [
-      "Alle tegn på at katten er dårlig etter å ha spist mye av det (kildene våre nevner ingen bestemte symptomer hos katter)"
+      "Eventuelle tegn på at katten er uvel etter å ha spist mye av det (kildene våre nevner ingen bestemte symptomer hos katter)"
     ]
   },
   "what_to_do": {
@@ -149,7 +149,7 @@
     "sv": "Om katten har ätit avokado, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera hur mycket katten åt och när.",
     "da": "Hvis din kat har spist avocado, så kontakt din dyrlæge for at få råd, især hvis den har spist meget, eller hvis din kat virker utilpas. Skriv ned hvor meget din kat har spist, og hvornår.",
     "fi": "Jos kissasi söi avokadoa, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa huonovointiselta. Kirjaa ylös, kuinka paljon kissasi söi ja milloin.",
-    "nb": "Hvis katten har spist avokado, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hvor mye katten har spist og når."
+    "nb": "Hvis katten har spist avokado, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker uvel. Skriv ned hvor mye katten har spist og når."
   },
   "serving": null,
   "child": {
@@ -313,7 +313,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7c334e9908d96ff605e1a786c1b0059bd3cd719ce5c689f724d203eb42e5c648"
+      "verified_hash": "a075ad8d4f015bc172de940e49d71974bd0173054a4efc0005befdf3c7734ddf"
     }
   }
 }

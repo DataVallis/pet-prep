@@ -68,7 +68,7 @@
     "sv": "Nej, det rekommenderas inte. Några salta snacks orsakar sannolikt inte saltförgiftning hos en frisk hund med tillgång till färskt vatten, men salt mat är i allmänhet inte bra för hundar, särskilt inte för hundar med hjärtsjukdom. Stora mängder kan orsaka törst, kräkningar och ännu allvarligare besvär.",
     "da": "Det frarådes. Nogle få salte snacks giver næppe saltforgiftning hos en rask hund med adgang til frisk vand, men salt mad er generelt ikke godt for hunde, især ikke for hunde med hjertesygdom. Store mængder kan give tørst, opkast og værre.",
     "fi": "Ei suositella. Muutama suolainen naposteltava tuskin aiheuttaa suolamyrkytystä terveelle koiralle, jolla on raikasta vettä saatavilla, mutta suolaiset ruoat eivät yleensä ole hyväksi koirille, etenkään sydänsairaille. Suuri määrä voi aiheuttaa janoa, oksentelua ja vakavampiakin oireita.",
-    "nb": "Anbefales ikke. Noen få salte snacks gir neppe saltforgiftning hos en frisk hund som har friskt vann, men salt mat er generelt ikke bra for hunder, særlig ikke for hunder med hjertesykdom. Mye kan gi tørst, oppkast og verre."
+    "nb": "Anbefales ikke. Noen få salte snacks gir neppe saltforgiftning hos en frisk hund som har friskt vann, men salt mat er generelt ikke bra for hunder, særlig ikke for hunder med hjertesykdom. Mye kan gi tørst og oppkast, og i verste fall mer alvorlige plager."
   },
   "why": {
     "en": "Salty food in moderation should not cause salt toxicity, but too much salt can lead to fluid retention and, in large amounts, salt poisoning. Small dogs with health issues are more at risk when fresh water isn't available. Dog foods are best served without added salt or seasoning.",
@@ -426,7 +426,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "144ef355bac30768270ff986b1a4236d9ab1d56212ce02524f3c839ce328b67a"
+      "verified_hash": "49d5c0b0140a347a80d7f4f67f12b7f7e7ca688f97c6d609912188574c7113bc"
     }
   }
 }
