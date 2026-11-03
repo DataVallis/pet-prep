@@ -62,7 +62,7 @@
     "it": "No. La cipolla è tossica per i gatti in ogni forma: cruda, cotta, essiccata o in polvere. Può danneggiare i globuli rossi e causare anemia, e i gatti sono la specie più sensibile. Chiama il veterinario se il tuo gatto ne mangia.",
     "pt": "Não. A cebola é tóxica para os gatos em todas as formas – crua, cozinhada, seca ou em pó. Pode danificar os glóbulos vermelhos e causar anemia, e os gatos são a espécie mais sensível. Liga ao teu veterinário se o teu gato comer alguma.",
     "nl": "Nee. Ui is in elke vorm giftig voor katten – rauw, gekookt, gedroogd of als poeder. Het kan rode bloedcellen beschadigen en bloedarmoede veroorzaken, en katten zijn de gevoeligste diersoort. Bel je dierenarts als je kat er iets van eet.",
-    "pl": "Nie. Cebula jest toksyczna dla kotów w każdej postaci – surowa, gotowana, suszona i w proszku. Może uszkadzać czerwone krwinki i wywołać anemię, a koty są gatunkiem najbardziej wrażliwym. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
+    "pl": "Nie. Cebula jest toksyczna dla kotów w każdej postaci – surowa, gotowana, suszona i w proszku. Może uszkadzać czerwone krwinki i wywołać anemię, a koty są gatunkiem najbardziej wrażliwym. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Cibule patří mezi cibuloviny (rod Allium) a je pro kočky toxická v jakékoli podobě – syrová, tepelně upravená, sušená i v prášku. Může poškodit červené krvinky a způsobit chudokrevnost (anémii), přičemž kočky jsou ze všech druhů nejcitlivější. Pokud ji vaše kočka sní byť jen trochu, zavolejte veterináři.",
     "hr": "Ne. Luk je otrovan za mačke u svakom obliku – sirov, termički obrađen, sušen ili u prahu. Može oštetiti crvene krvne stanice i uzrokovati anemiju, a mačke su najosjetljivija vrsta. Ako mačka pojede imalo luka, nazovi veterinara.",
     "sv": "Nej. Lök är giftig för katter i alla former – rå, tillagad, torkad eller som pulver. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi), och katter är den känsligaste arten. Ring veterinären om katten äter någon lök.",
@@ -79,7 +79,7 @@
     "it": "La cipolla appartiene al genere Allium (la famiglia della cipolla). Le piante di questo genere danneggiano i globuli rossi, possono portare all’anemia e irritano anche stomaco e intestino. I gatti sono la specie più sensibile. Tutte le forme sono velenose per i gatti: crude, cotte, essiccate, in polvere e liquide.",
     "pt": "A cebola pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas.",
     "nl": "Ui hoort bij de alliumfamilie (de uienfamilie). Alliumsoorten beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, als poeder en vloeibaar.",
-    "pl": "Cebula należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
+    "pl": "Cebula należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna.",
     "cs": "Cibule patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá.",
     "hr": "Luk pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući.",
     "sv": "Lök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
@@ -167,7 +167,7 @@
       "Osłabienie",
       "Blade dziąsła",
       "Mocz zabarwiony na czerwono",
-      "Szybszy lub cięższy oddech"
+      "Szybszy lub utrudniony oddech"
     ],
     "cs": [
       "Zvracení",
@@ -233,7 +233,7 @@
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Anota o que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), a quantidade e quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er prima uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
-    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
+    "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou cibuli, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako se čini da je mačka dobro – znakovi anemije mogu se pokazati tek nakon nekoliko dana. Zapiši što je mačka pojela (sirovo, termički obrađeno, u prahu ili jelo koje ga sadrži), koliko i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra – tecken på blodbrist kan dröja flera dagar. Notera vad katten åt (rått, tillagat, pulver eller en maträtt som innehöll det), hur mycket och när. Försök inte få katten att kräkas hemma.",
@@ -251,7 +251,7 @@
     "it": "La cipolla non è per i gatti, nemmeno cotta nel cibo. Se il micio ne mangia un po’, dillo a un adulto, così può chiamare il veterinario.",
     "pt": "As cebolas não são para gatos, nem cozinhadas na comida. Se o gatinho comer alguma, avisa um adulto, que pode ligar ao veterinário.",
     "nl": "Uien zijn niet voor katten, ook niet als ze in het eten zijn meegekookt. Eet je kat ervan? Vertel het meteen aan een volwassene, die dan de dierenarts kan bellen.",
-    "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
+    "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Cibule není pro kočky, ani když je uvařená nebo upečená v jídle. Když ji kočička sní, řekni to dospělému, aby mohl zavolat veterináři.",
     "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
     "sv": "Lök är inte för katter, inte ens tillagad i maten. Om katten äter lite, säg till en vuxen så att den vuxna kan ringa veterinären.",
@@ -287,7 +287,7 @@
         "it": "No. Tutte le forme sono velenose per i gatti, compresa la cipolla cruda, cotta, essiccata, in polvere e liquida. Fai attenzione ad avanzi, ripieni e sughi che potrebbero contenerla.",
         "pt": "Não. Todas as formas são venenosas para gatos, incluindo a cebola crua, cozinhada, seca, em pó e líquida. Tem cuidado com restos de comida, recheios e molho de assado que a possam conter.",
         "nl": "Nee. Alle vormen zijn giftig voor katten, ook rauwe, gekookte en gedroogde ui, uienpoeder en vloeibare ui. Wees voorzichtig met restjes, vulling en jus waar het in kan zitten.",
-        "pl": "Nie. Każda postać jest dla kotów trująca, także cebula surowa, gotowana, suszona, w proszku i w płynie. Uważaj na resztki jedzenia, farsz i sos pieczeniowy, które mogą ją zawierać.",
+        "pl": "Nie. Każda postać jest dla kotów trująca, także cebula surowa, gotowana, suszona, w proszku i w płynie. Uważaj na resztki jedzenia, farsz i sos pieczeniowy, które mogą ją zawierać.",
         "cs": "Ne. Pro kočky jsou jedovaté všechny formy cibule – syrová, tepelně upravená, sušená, v prášku i tekutá. Dávejte pozor na zbytky jídla, nádivky a šťávu z masa, které ji mohou obsahovat.",
         "hr": "Nije. Za mačke su otrovni svi oblici, uključujući sirov, termički obrađen, sušen, tekući luk i luk u prahu. Pripazi na ostatke hrane, nadjeve i sok od pečenja koji ga mogu sadržavati.",
         "sv": "Nej. Alla former är giftiga för katter, även rå, tillagad, torkad, pulveriserad och flytande lök. Var försiktig med rester, fyllning och sky som kan innehålla lök.",
@@ -323,7 +323,7 @@
         "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "O mal-estar na barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
         "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Bel daarom meteen je dierenarts in plaats van af te wachten.",
-        "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
+        "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
         "cs": "Nejdřív se často projeví podrážděný žaludek, ale příznaky chudokrevnosti obvykle nastupují později a mohou se objevit během jednoho až pěti dnů. Proto byste měli veterináři zavolat hned a nečekat.",
         "hr": "Probavne smetnje često se pojave prve, ali znakovima anemije obično treba dulje i mogu se pojaviti u roku od jednog do pet dana. Zato odmah nazovi veterinara, umjesto da čekaš.",
         "sv": "Magbesvär syns ofta först, men tecken på blodbrist dröjer oftast längre och kan komma inom en till fem dagar. Därför ska du ringa veterinären direkt i stället för att vänta.",
@@ -470,7 +470,7 @@
     "pl": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "443d3db8d776d2f21d20844ca6d930f121bf6634f10fd7f70a2611fae7cbc7a0"
+      "verified_hash": "0bee6685a4472f84f9d04bd71a4c142fff01dcdbd61c473cfcadf931de7e4c1b"
     },
     "cs": {
       "status": "verified",
