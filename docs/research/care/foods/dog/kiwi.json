@@ -5,51 +5,59 @@
     "en": "Kiwi",
     "sl": "Kivi",
     "hr": "Kivi",
-    "cs": "Kiwi"
+    "cs": "Kiwi",
+    "de": "Kiwi"
   },
   "question": {
     "en": "Can dogs eat kiwi?",
     "sl": "Ali lahko psi jedo kivi?",
     "hr": "Smiju li psi jesti kivi?",
-    "cs": "Mohou psi jíst kiwi?"
+    "cs": "Mohou psi jíst kiwi?",
+    "de": "Dürfen Hunde Kiwi fressen?"
   },
   "url_slug": {
     "en": "kiwi",
     "sl": "kivi",
     "hr": "kivi",
-    "cs": "kiwi"
+    "cs": "kiwi",
+    "de": "kiwi"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can have small amounts of kiwi as an occasional treat. Peel it and cut it into small pieces or slices, and never give a whole kiwi, because it can be a choking hazard.",
     "sl": "Da, psi lahko kot občasen priboljšek dobijo malo kivija. Olupite ga in narežite na majhne koščke ali rezine; celega kivija nikoli ne dajajte, ker se pes z njim lahko zaduši.",
     "hr": "Da, psi smiju pojesti malo kivija kao povremenu poslasticu. Oguli ga i nareži na male komadiće ili kriške, a nikad ne daj cijeli kivi, jer može izazvati gušenje.",
-    "cs": "Ano, psi mohou občas dostat malé množství kiwi jako pamlsek. Oloupejte ho a nakrájejte na malé kousky nebo plátky; celé kiwi nikdy nedávejte, protože může způsobit dušení."
+    "cs": "Ano, psi mohou občas dostat malé množství kiwi jako pamlsek. Oloupejte ho a nakrájejte na malé kousky nebo plátky; celé kiwi nikdy nedávejte, protože může způsobit dušení.",
+    "de": "Ja, Hunde dürfen kleine Mengen Kiwi als gelegentliches Leckerli bekommen. Schälen Sie die Frucht und schneiden Sie sie in kleine Stücke oder Scheiben. Geben Sie nie eine ganze Kiwi, denn ein Hund kann daran ersticken."
   },
   "why": {
     "en": "Kiwi is a sweet fruit packed with vitamin C and potassium, and it contains a lot of fibre, especially insoluble fibre. Too much kiwi may cause digestive issues, including diarrhoea. The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach. A whole kiwi is small enough to be a choking hazard.",
     "sl": "Kivi je sladek sadež, bogat z vitaminom C in kalijem, vsebuje pa tudi veliko vlaknin, zlasti netopnih. Preveč kivija lahko povzroči prebavne težave, tudi drisko. Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec. Cel kivi je dovolj majhen, da se pes z njim lahko zaduši.",
     "hr": "Kivi je slatko voće bogato vitaminom C i kalijem, a sadrži mnogo vlakana, osobito netopivih. Previše kivija može izazvati probavne tegobe, uključujući proljev. Kora nije otrovna, ali je žilava i bogata vlaknima te može nadražiti psu želudac. Cijeli kivi dovoljno je malen da izazove gušenje.",
-    "cs": "Kiwi je sladké ovoce plné vitaminu C a draslíku a obsahuje hodně vlákniny, zejména nerozpustné. Příliš mnoho kiwi může způsobit zažívací potíže, včetně průjmu. Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek. Celé kiwi je dost malé na to, aby se jím pes mohl udusit."
+    "cs": "Kiwi je sladké ovoce plné vitaminu C a draslíku a obsahuje hodně vlákniny, zejména nerozpustné. Příliš mnoho kiwi může způsobit zažívací potíže, včetně průjmu. Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek. Celé kiwi je dost malé na to, aby se jím pes mohl udusit.",
+    "de": "Kiwi ist eine süße Frucht, reich an Vitamin C und Kalium, und enthält viele Ballaststoffe, vor allem unlösliche. Zu viel Kiwi kann zu Verdauungsbeschwerden bis hin zu Durchfall führen. Die Schale ist nicht giftig, aber zäh und ballaststoffreich und kann einem Hund auf den Magen schlagen. Eine ganze Kiwi ist so klein, dass ein Hund daran ersticken könnte."
   },
   "signs": null,
   "what_to_do": {
     "en": "Feed only a little at a time. Too much kiwi can cause digestive issues such as diarrhoea, and kiwi should never replace a complete and balanced dog food.",
     "sl": "Dajajte ga le malo naenkrat. Preveč kivija lahko povzroči prebavne težave, kot je driska, in kivi nikoli ne sme nadomestiti popolne in uravnotežene pasje hrane.",
     "hr": "Daj samo malo odjednom. Previše kivija može izazvati probavne tegobe poput proljeva, a kivi nikad ne smije zamijeniti potpunu i uravnoteženu hranu za pse.",
-    "cs": "Dávejte vždy jen trochu. Příliš mnoho kiwi může způsobit zažívací potíže, například průjem, a kiwi nikdy nemá nahradit kompletní a vyvážené krmivo pro psy."
+    "cs": "Dávejte vždy jen trochu. Příliš mnoho kiwi může způsobit zažívací potíže, například průjem, a kiwi nikdy nemá nahradit kompletní a vyvážené krmivo pro psy.",
+    "de": "Füttern Sie immer nur ein wenig auf einmal. Zu viel Kiwi kann zu Verdauungsbeschwerden wie Durchfall führen, und Kiwi sollte niemals ein vollwertiges, ausgewogenes Hundefutter ersetzen."
   },
   "serving": {
     "en": "Peeled and cut into small pieces or slices; a little at a time, as an occasional treat.",
     "sl": "Olupljen in narezan na majhne koščke ali rezine; malo naenkrat, kot občasen priboljšek.",
     "hr": "Oguljen i narezan na male komadiće ili kriške; malo odjednom, kao povremena poslastica.",
-    "cs": "Oloupané a nakrájené na malé kousky nebo plátky; vždy jen trochu, jako občasný pamlsek."
+    "cs": "Oloupané a nakrájené na malé kousky nebo plátky; vždy jen trochu, jako občasný pamlsek.",
+    "de": "Geschält und in kleine Stücke oder Scheiben geschnitten; immer nur ein wenig auf einmal, als gelegentliches Leckerli."
   },
   "child": {
     "en": "Dogs can taste a little kiwi! A grown-up peels it and cuts it into tiny pieces so it is easy to eat.",
     "sl": "Psi lahko poskusijo malo kivija! Odrasel ga olupi in nareže na drobne koščke, da ga pes lažje poje.",
     "hr": "Psi smiju kušati malo kivija! Odrasla osoba ga oguli i nareže na sitne komadiće da ih je lako pojesti.",
-    "cs": "Psi si můžou dát kousíček kiwi! Dospělý ho oloupe a nakrájí na malinké kousky, aby se dobře jedly."
+    "cs": "Psi si můžou dát kousíček kiwi! Dospělý ho oloupe a nakrájí na malinké kousky, aby se dobře jedly.",
+    "de": "Hunde dürfen ein bisschen Kiwi probieren! Ein Erwachsener schält sie und schneidet sie in winzige Stücke, damit sie leicht zu fressen ist."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat kiwi skin?",
         "sl": "Ali lahko psi jedo lupino kivija?",
         "hr": "Smiju li psi jesti koru kivija?",
-        "cs": "Mohou psi jíst slupku kiwi?"
+        "cs": "Mohou psi jíst slupku kiwi?",
+        "de": "Dürfen Hunde Kiwischale fressen?"
       },
       "a": {
         "en": "The skin is not toxic, but it is tough and high in fibre and can upset a dog's stomach, so it is best removed.",
         "sl": "Lupina ni strupena, je pa trda in bogata z vlakninami ter lahko psu razburi želodec, zato jo je bolje odstraniti.",
         "hr": "Kora nije otrovna, ali je žilava i bogata vlaknima te može nadražiti psu želudac, zato je najbolje ukloniti je.",
-        "cs": "Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek, proto je nejlepší ji odstranit."
+        "cs": "Slupka není toxická, ale je tuhá a bohatá na vlákninu a může psovi podráždit žaludek, proto je nejlepší ji odstranit.",
+        "de": "Die Schale ist nicht giftig, aber zäh und ballaststoffreich und kann einem Hund auf den Magen schlagen. Entfernen Sie sie am besten."
       }
     }
   ],
@@ -131,6 +141,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7d1c45abc7a38e0670af5ffb4a5ef42ef7bdfd48aed38e84a399a36c861e81d5"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f69f895f320cfe0bae4a8124337daf110cc313811ebc9119c8ac83ef2b9fb5bb"
     }
   }
 }
