@@ -63,7 +63,7 @@
     "pt": "Não, o peixe cru não é uma boa ideia para os gatos. Pode ter bactérias e parasitas nocivos, e alguns peixes crus contêm tiaminase, uma enzima que destrói a vitamina B1. O peixe para gatos deve ser bem cozinhado e sem espinhas.",
     "nl": "Nee, rauwe vis is geen goed idee voor katten. Het kan schadelijke bacteriën en parasieten bevatten, en sommige rauwe vis bevat thiaminase, een enzym dat vitamine B1 afbreekt. Vis voor katten moet goed gaar zijn en zonder graten.",
     "pl": "Nie, surowa ryba to zły pomysł dla kota. Może przenosić szkodliwe bakterie i pasożyty, a niektóre surowe ryby zawierają tiaminazę – enzym niszczący witaminę B1. Ryba dla kota powinna być dobrze ugotowana i bez ości.",
-    "cs": "Ne, syrové ryby nejsou pro kočky dobrý nápad. Mohou přenášet škodlivé bakterie a parazity a některé syrové ryby obsahují thiaminázu, enzym, který ničí vitamin B1. Ryby pro kočky by měly být řádně tepelně upravené a zbavené kostí.",
+    "cs": "Ne, syrové ryby nejsou pro kočky vhodné. Mohou přenášet škodlivé bakterie a parazity a některé syrové ryby obsahují thiaminázu, enzym, který ničí vitamin B1. Ryby pro kočky by měly být řádně tepelně upravené a bez kostí.",
     "hr": "Ne, sirova riba nije dobra ideja za mačke. Može sadržavati štetne bakterije i parazite, a neka sirova riba sadrži tiaminazu, enzim koji uništava vitamin B1. Riba za mačke treba biti dobro termički obrađena i bez kostiju.",
     "sv": "Nej, rå fisk är ingen bra idé för katter. Den kan innehålla skadliga bakterier och parasiter, och viss rå fisk innehåller tiaminas, ett enzym som bryter ner B1-vitamin. Fisk till katter ska vara ordentligt tillagad och benfri.",
     "da": "Nej, rå fisk er ikke en god idé til katte. Rå fisk kan indeholde skadelige bakterier og parasitter, og noget rå fisk indeholder thiaminase, et enzym der ødelægger B1-vitamin. Fisk til katte skal være ordentligt tilberedt og uden ben.",
@@ -204,7 +204,7 @@
     "pt": "Se o teu gato comeu um pouco de peixe cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e, se surgir algum destes sinais, liga ao teu veterinário. O peixe cru não deve tornar-se um alimento habitual.",
     "nl": "Heeft je kat een beetje rauwe vis gegeten? Let op braken, diarree, koorts of niet willen eten, en bel je dierenarts als je daar iets van ziet. Rauwe vis hoort geen vast onderdeel van de voeding te worden.",
     "pl": "Jeśli twój kot zjadł odrobinę surowej ryby, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Surowa ryba nie powinna stać się stałym pokarmem.",
-    "cs": "Pokud vaše kočka snědla trochu syrové ryby, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Syrové ryby by se neměly stát běžnou součástí jídelníčku.",
+    "cs": "Pokud kočka snědla trochu syrové ryby, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Syrové ryby by se neměly stát běžnou součástí jídelníčku.",
     "hr": "Ako je mačka pojela malo sirove ribe, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Sirova riba ne bi smjela postati redovita hrana.",
     "sv": "Om katten har ätit lite rå fisk: håll utkik efter kräkningar, diarré, feber eller att den slutar äta, och ring veterinären om något av detta dyker upp. Rå fisk ska inte bli vanlig mat.",
     "da": "Hvis din kat har spist lidt rå fisk, så hold øje med opkast, diarré, feber eller manglende lyst til at spise, og ring til din dyrlæge hvis noget af det viser sig. Rå fisk bør ikke blive en fast del af kosten.",
@@ -238,7 +238,7 @@
     "pt": "Os gatos adoram peixe, mas primeiro um adulto tem de o cozinhar e tirar as espinhas todas.",
     "nl": "Katten zijn dol op vis, maar een volwassene moet de vis eerst gaar maken en de graten eruit halen.",
     "pl": "Koty uwielbiają ryby, ale najpierw dorosły musi rybę ugotować i usunąć ości.",
-    "cs": "Kočky ryby milují, ale nejdřív je musí dospělý pořádně uvařit nebo upéct a vybrat z nich kosti.",
+    "cs": "Kočky ryby milují, ale nejdřív je musí dospělý pořádně uvařit a vybrat z nich kosti.",
     "hr": "Mace obožavaju ribu, ali odrasla osoba najprije je mora skuhati i izvaditi sve kosti.",
     "sv": "Katter älskar fisk, men en vuxen måste koka den först och ta bort alla ben.",
     "da": "Katte elsker fisk, men fisken skal først koges af en voksen og være helt uden ben.",
@@ -394,7 +394,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8e76690e2d24124faf661b2ce21dc0fc5159a007dbeabdb0a100d475de9791dc"
+      "verified_hash": "45a3d24464f9abbfb17f87491168ae3346c6380d82b7701d706e7f70331db24e"
     },
     "hr": {
       "status": "verified",

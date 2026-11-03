@@ -63,7 +63,7 @@
     "pt": "Não, é melhor não. A ASPCA classifica o alperceiro como tóxico para gatos: os caules, as folhas e as sementes (o caroço) contêm cianeto. Não ofereças alperces ao teu gato, mantém os caroços e as partes da planta fora do alcance e liga ao teu veterinário se ele mastigar alguma.",
     "nl": "Nee, liever niet. De ASPCA noemt de abrikozenplant giftig voor katten: de stengels, bladeren en zaden (de pit) bevatten cyanide. Geef je kat geen abrikozen, houd pitten en plantendelen buiten bereik en bel je dierenarts als je kat erop kauwt.",
     "pl": "Nie, lepiej nie. ASPCA uznaje morelę za roślinę toksyczną dla kotów: jej łodygi, liście i nasiona (pestka) zawierają cyjanek. Nie dawaj kotu moreli, trzymaj pestki i części rośliny poza jego zasięgiem i zadzwoń do weterynarza, jeśli kot coś z nich pogryzie.",
-    "cs": "Ne, raději ne. ASPCA vede meruňku jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Meruňky kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
+    "cs": "Ne, raději ne. ASPCA uvádí meruňku jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Meruňky kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku marelice kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi marelice svojoj mački, koštice i dijelove biljke drži izvan njezina dosega, a ako je mačka nešto od toga žvakala, nazovi veterinara.",
     "sv": "Nej, helst inte. ASPCA anger att aprikosträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten aprikoser, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
     "da": "Nej, det er bedst at lade være. ASPCA opfører abrikosplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke abrikoser til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
@@ -154,7 +154,7 @@
     "cs": [
       "Cihlově červené dásně",
       "Rozšířené zorničky",
-      "Dýchací potíže",
+      "Potíže s dýcháním",
       "Dýchání s otevřenou tlamou",
       "Šok"
     ],
@@ -222,7 +222,7 @@
     "pt": "Os alperces são um petisco para pessoas. Os caroços e as folhas não são seguros para gatos, por isso avisa um adulto se o gatinho mastigar um.",
     "nl": "Abrikozen zijn een tussendoortje voor mensen. De pitten en bladeren zijn niet veilig voor katten. Kauwt je kat erop? Vertel het dan meteen aan een volwassene.",
     "pl": "Morele to przekąska dla ludzi. Ich pestki i liście nie są bezpieczne dla kotów, więc powiedz dorosłemu, jeśli kotek coś z nich pogryzie.",
-    "cs": "Meruňky jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když nějakou pecku kočička okusuje.",
+    "cs": "Meruňky jsou svačinka pro lidi. Jejich pecky a listy nejsou pro kočky bezpečné, tak řekni dospělému, když je kočička začne okusovat.",
     "hr": "Marelice su grickalica za ljude. Njihove koštice i listovi nisu sigurni za mace, zato reci odrasloj osobi ako maca neku žvače.",
     "sv": "Aprikoser är mellanmål för människor. Stenarna och bladen är inte säkra för katter, så säg till en vuxen om katten tuggar på något av dem.",
     "da": "Abrikoser er en snack for mennesker. Stenene og bladene er ikke sikre for katte, så sig det til en voksen hvis din kat tygger på en af dem.",
@@ -357,7 +357,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ed6e986af149eac9b3d43c7699e03f8bf9aa10c33b41ce575c57b9294217bd3d"
+      "verified_hash": "4b61f7e7323333d5b783fbfe8538a840c21c2a0bfbea55a4a6d72750319badeb"
     },
     "hr": {
       "status": "verified",

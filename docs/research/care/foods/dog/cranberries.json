@@ -204,7 +204,7 @@
         "pt": "Muitas pessoas acreditam que sim, mas não há estudos suficientes em cães que o confirmem.",
         "nl": "Veel mensen denken van wel, maar er is nog te weinig onderzoek bij honden gedaan om dat te bevestigen.",
         "pl": "Wiele osób tak uważa, ale badań na psach jest za mało, by to potwierdzić.",
-        "cs": "Mnoho lidí si to myslí, ale u psů zatím nebylo dost studií, které by to potvrdily.",
+        "cs": "Mnoho lidí tomu věří, ale u psů zatím nebylo dost studií, které by to potvrdily.",
         "hr": "Mnogi ljudi tako misle, ali nema dovoljno istraživanja na psima koja bi to potvrdila.",
         "sv": "Många tror det, men det finns inte tillräckligt med studier på hundar för att bekräfta det.",
         "da": "Mange tror det, men der er ikke lavet nok undersøgelser på hunde til at bekræfte det.",
@@ -335,7 +335,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "35db9fadf883815227835a451ac6b0adf84e2aba4ce2442f0cf15a53d01d0a96"
+      "verified_hash": "a72ceb57a950d8a802f7f8ad700674b75ca00c8bf9895055e930795c1c5de956"
     },
     "hr": {
       "status": "verified",

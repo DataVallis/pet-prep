@@ -144,7 +144,7 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota quantas uvas o teu gato comeu e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op hoeveel druiven je kat heeft gegeten en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, ile winogron zjadł twój kot i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik kuliček hroznů kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, kolik zrnek hroznů kočka snědla a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši koliko je bobica grožđa mačka pojela i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera hur många vindruvor katten åt och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvor mange vindruer din kat har spist, og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
@@ -162,7 +162,7 @@
     "pt": "As uvas são deliciosas para nós, mas não são seguras para gatos. Deixa-as no teu prato e avisa um adulto se o gatinho comer uma.",
     "nl": "Druiven zijn lekker voor ons, maar niet veilig voor katten. Laat ze op je eigen bord liggen. Heeft je kat er een gegeten? Vertel het dan meteen aan een volwassene.",
     "pl": "Winogrona są dla nas pyszne, ale nie są bezpieczne dla kotów. Trzymaj je na swoim talerzu i powiedz dorosłemu, jeśli kotek jakieś zje.",
-    "cs": "Hrozny nám chutnají, ale pro kočky nejsou bezpečné. Nech si je na talíři, a když kočička nějakou kuličku sní, řekni to dospělému.",
+    "cs": "Hrozny nám chutnají, ale pro kočky nejsou bezpečné. Nech si je na talíři, a když kočička nějaké zrnko sní, řekni to dospělému.",
     "hr": "Grožđe je nama fino, ali za mace nije sigurno. Drži ga na svom tanjuru i reci odrasloj osobi ako maca pojede bobicu grožđa.",
     "sv": "Vindruvor är goda för oss men inte säkra för katter. Låt dem ligga kvar på din tallrik och säg till en vuxen om katten äter en.",
     "da": "Vindruer smager godt for os, men de er ikke sikre for katte. Lad dem blive på din tallerken, og sig det til en voksen hvis din kat spiser en.",
@@ -305,7 +305,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0cb15bda4fb2ca9e2446de8694eb0a0dd4f95e01cff46722d1fdfe112c0612d1"
+      "verified_hash": "4cf937e47363e44fcbcddbd7bf29f68c3645f0b83d1d11572a16c62ba23cb928"
     },
     "hr": {
       "status": "verified",

@@ -63,7 +63,7 @@
     "pt": "Não. Nunca dês ossos cozinhados a um cão. Os ossos cozinhados partem-se em lascas afiadas que podem cortar a boca, causar engasgamento ou obstruir o intestino. Os ossos de aves cozinhados são especialmente quebradiços e podem tornar-se uma emergência veterinária.",
     "nl": "Nee. Geef een hond nooit gekookte botten. Gekookte botten splinteren in scherpe stukjes die de bek kunnen verwonden, verstikking kunnen veroorzaken of de darmen kunnen verstoppen. Gekookte botten van gevogelte zijn extra broos en kunnen tot een spoedgeval bij de dierenarts leiden.",
     "pl": "Nie. Nigdy nie dawaj psu gotowanych kości. Gotowane kości rozpadają się na ostre odłamki, które mogą skaleczyć pysk, spowodować zadławienie lub zatkać przewód pokarmowy. Gotowane kości drobiowe są szczególnie kruche i mogą doprowadzić do sytuacji wymagającej pilnej pomocy weterynarza.",
-    "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou si vyžádat návštěvu veterinární pohotovosti.",
+    "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou skončit na veterinární pohotovosti.",
     "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu postati hitan slučaj za veterinara.",
     "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller ge stopp i tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
     "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
@@ -222,7 +222,7 @@
     "pt": "Os ossos dos nossos pratos não são para cães. Partem-se em pedacinhos afiados. Avisa um adulto se o teu cão encontrar um.",
     "nl": "Botten van ons bord zijn niet voor honden. Ze breken in scherpe stukjes. Vertel het aan een volwassene als je hond er een vindt.",
     "pl": "Kości z naszych talerzy nie są dla psów. Łamią się na ostre kawałki. Powiedz dorosłemu, jeśli twój pies jakąś znajdzie.",
-    "cs": "Kosti z našich talířů nejsou pro psy. Lámou se na ostré kousky. Když pes nějakou najde, řekni to dospělému.",
+    "cs": "Kosti z našich talířů psům nepatří. Lámou se na ostré kousky. Když pes nějakou najde, řekni to dospělému.",
     "hr": "Kosti s naših tanjura nisu za pse. Lome se na oštre komadiće. Ako pas nađe kost, reci odrasloj osobi.",
     "sv": "Ben från våra tallrikar är inte för hundar. De går sönder i vassa bitar. Säg till en vuxen om hunden hittar ett.",
     "da": "Knogler fra vores tallerkener er ikke til hunde. De brækker i skarpe stykker. Sig det til en voksen hvis din hund finder en.",
@@ -294,7 +294,7 @@
         "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife.",
         "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat er in de vuilnisbak belandt: honden gaan er vaak doorheen op zoek naar karkassen en biefstukbotten.",
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często grzebią w śmieciach i wyciągają z nich kości z drobiu i ze steków.",
-        "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi často vybírají odpadky kvůli zbytkům drůbeže a kostem ze steaků.",
+        "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi se často přehrabují v odpadcích a hledají zbytky drůbeže a kosti ze steaků.",
         "hr": "Dok kuhaš i jedeš, drži pladnjeve izvan dosega psa i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka.",
         "sv": "Ställ fat utom räckhåll när du lagar mat och äter, och tänk på vad du slänger i soporna: hundar letar ofta i soporna efter kycklingskrov och benbitar från stekar.",
         "da": "Hold fade uden for rækkevidde, mens du laver mad og spiser, og pas på med hvad der ryger i skraldespanden: hunde roder ofte i skraldet efter skrog og bøfben.",
@@ -429,7 +429,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "71689d9c4c6ec8437990b8af7e0bb5663029bfdfeb255ae20d231df25bdbc6ac"
+      "verified_hash": "af43484090af34f0d6554398151517cba957be0323e688ac432b93def99d4aa9"
     },
     "hr": {
       "status": "verified",

@@ -144,7 +144,7 @@
     ],
     "cs": [
       "Zvracení a průjem",
-      "Nechuť k jídlu",
+      "Jí méně než obvykle",
       "Podrážděný žaludek, i po malém množství",
       "Známky chudokrevnosti (poškozené červené krvinky), obvykle o několik dní později"
     ],
@@ -462,7 +462,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "13d03797e61b3a3d8c8c8db433214f0514eb6154bf6288a13d13f2fda2bda832"
+      "verified_hash": "e8297df1bc03fd28ea23ef009ad991d7c7630f8ef09a8faf6f5357a9251ae092"
     },
     "hr": {
       "status": "verified",

@@ -207,7 +207,7 @@
     "pt": "A massa do pão que ainda está a crescer não é para cães. Continua a crescer dentro da barriga deles. Avisa um adulto se o teu cão comer alguma.",
     "nl": "Brooddeeg dat nog rijst, is niet voor honden. Het blijft groeien in hun buikje. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Ciasto na chleb, które jeszcze rośnie, nie jest dla psów. Rośnie dalej w ich brzuszku. Powiedz dorosłemu, jeśli twój pies zje trochę takiego ciasta.",
-    "cs": "Těsto na chleba, které ještě kyne, není pro psy. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému.",
+    "cs": "Těsto na chleba, které ještě kyne, psům nepatří. V bříšku jim dál roste. Když ho pes sní, řekni to dospělému.",
     "hr": "Tijesto za kruh koje još raste nije za pse. U trbuhu nastavlja rasti. Reci odrasloj osobi ako ga tvoj pas pojede.",
     "sv": "Bröddeg som fortfarande jäser är inte för hundar. Den fortsätter att växa i magen. Säg till en vuxen om din hund äter deg.",
     "da": "Brøddej der stadig hæver, er ikke til hunde. Den bliver ved med at vokse i maven. Sig det til en voksen hvis din hund spiser noget.",
@@ -279,7 +279,7 @@
         "pt": "O fermento, ao fermentar, produz álcool no estômago, que é rapidamente absorvido para a corrente sanguínea.",
         "nl": "Bij de gisting maakt gist alcohol in de maag, en die wordt snel in het bloed opgenomen.",
         "pl": "Fermentujące drożdże wytwarzają w żołądku alkohol, który szybko wchłania się do krwiobiegu.",
-        "cs": "Kvasící kvasinky produkují v žaludku alkohol, který se rychle vstřebává do krevního oběhu.",
+        "cs": "Kvasinky při kvašení produkují v žaludku alkohol, který se rychle vstřebává do krevního oběhu.",
         "hr": "Kvasac koji fermentira stvara alkohol u želucu, a on se brzo upija u krvotok.",
         "sv": "Jästen jäser och bildar alkohol i magen, och alkoholen tas snabbt upp i blodet.",
         "da": "Gær der gærer, danner alkohol i maven, og alkoholen optages hurtigt i blodet.",
@@ -389,7 +389,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6cb7ff5645d6c6a6228acbaf0f3ced21fabe18faedee7f9100e5089c06c1ff13"
+      "verified_hash": "f011d8159e9712e49b80f30d3d0d2649a6bfca43f6967a5ab4f8f48879d4882e"
     },
     "hr": {
       "status": "verified",

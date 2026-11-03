@@ -226,7 +226,7 @@
         "pt": "Porque é que as nozes caídas no jardim são um risco?",
         "nl": "Waarom zijn gevallen walnoten in de tuin een risico?",
         "pl": "Dlaczego orzechy włoskie, które spadły w ogrodzie, są groźne?",
-        "cs": "Proč jsou spadané vlašské ořechy na zahradě rizikem?",
+        "cs": "Proč jsou rizikem vlašské ořechy spadané na zahradě?",
         "hr": "Zašto su orasi koji su pali u vrtu rizični?",
         "sv": "Varför är nedfallna valnötter i trädgården en risk?",
         "da": "Hvorfor er nedfaldne valnødder i haven en risiko?",
@@ -394,7 +394,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4e2b32f6d24dc1bb10fa8d1e3ebf2bb5d1e7289e02b3fcbdd5c7f24cf8bf7fa6"
+      "verified_hash": "d3246df6bdc118e53464cdc7d76637f21cea06e197f155e89109e16a6923e9e9"
     },
     "hr": {
       "status": "verified",

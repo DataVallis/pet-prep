@@ -174,7 +174,7 @@
     "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso ou se estiver a engasgar-se ou a vomitar. Anota o tipo de osso e quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat een bot heeft ingeslikt, zich verslikt of braakt. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął kość, dławi się lub wymiotuje. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Pokud kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ako je mačka progutala kost, guši se ili povraća. Zapiši o kakvoj se kosti radi i kada se to dogodilo. Ne čekaj da vidiš što će se dogoditi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären direkt om katten har svalt ett ben eller håller på att kvävas eller kräks. Notera vilken sorts ben det var och när. Vänta inte och se vad som händer, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge hvis din kat har slugt en knogle, er ved at blive kvalt eller kaster op. Skriv ned hvilken slags knogle det var og hvornår. Se ikke tiden an, og prøv ikke selv at få katten til at kaste op.",
@@ -192,7 +192,7 @@
     "pt": "Os ossos podem ficar presos na garganta ou na barriga de um gato. Não ponhas ossos na tigela do gatinho e avisa um adulto se ele encontrar um.",
     "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je kat! Vindt ze er een? Vertel het dan meteen aan een volwassene.",
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
-    "cs": "Kosti se kočce můžou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
+    "cs": "Kosti se kočce mohou zaseknout v krku nebo v bříšku. Do kočičí misky kosti nepatří, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Kosti mogu zapeti maci u grlu ili trbuščiću. Ne stavljaj kosti u macinu zdjelicu i reci odrasloj osobi ako maca neku pronađe.",
     "sv": "Ben kan fastna i kattens hals eller mage. Lägg inga ben i kattens skål och säg till en vuxen om katten hittar ett.",
     "da": "Knogler kan sætte sig fast i en kats hals eller mave. Hold knogler væk fra kattens skål, og sig det til en voksen hvis katten finder en.",
@@ -290,7 +290,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f67aad29f32b06ece2141ea93a83822d2dec209bd46f7c365d9489f253cc0b6c"
+      "verified_hash": "3231e813ab08e57b4677cbb0c06d3e12a850b2617311bfd62a7209b8fe487a5d"
     },
     "hr": {
       "status": "verified",

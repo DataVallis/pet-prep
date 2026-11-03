@@ -237,7 +237,7 @@
     "pt": "As bebidas energéticas não são, de todo, para cães. Limpa depressa o que se entornar e avisa um adulto se o teu cão beber um pouco.",
     "nl": "Energydrinks zijn helemaal niet voor honden. Veeg gemorste drank snel op en vertel het aan een volwassene als je hond ervan drinkt.",
     "pl": "Napoje energetyczne w ogóle nie są dla psów. Szybko wycieraj rozlany napój i powiedz dorosłemu, jeśli twój pies trochę wypije.",
-    "cs": "Energetické nápoje nejsou pro psy vůbec. Rozlitý nápoj hned utři, a když se ho pes napije, řekni to dospělému.",
+    "cs": "Energetické nápoje psům vůbec nepatří. Rozlitý nápoj hned utři, a když se ho pes napije, řekni to dospělému.",
     "hr": "Energetska pića uopće nisu za pse. Brzo obriši ono što se prolije, a ako pas popije malo, reci odrasloj osobi.",
     "sv": "Energidrycker är inte alls för hundar. Torka snabbt upp spill och säg till en vuxen om hunden dricker energidryck.",
     "da": "Energidrikke er slet ikke til hunde. Tør spild hurtigt op, og sig det til en voksen hvis din hund drikker noget.",
@@ -400,7 +400,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "818da0dc5d450b8ff63f1e6bcfd0aa26c9c7467c37f5826e9a00eed2f7743b97"
+      "verified_hash": "6da574557e24ad04d83c530d3c8465c74ae1e76f1c575790b6b17ef6fa1ae4ef"
     },
     "hr": {
       "status": "verified",

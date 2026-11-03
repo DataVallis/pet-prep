@@ -80,7 +80,7 @@
     "pt": "As maçãs são uma guloseima pouco calórica, com vitaminas A e C, potássio, antioxidantes e fibra, sobretudo na casca. Como cada maçã tem açúcar, uma maçã inteira é provavelmente demais para o teu cão, e comer maçã a mais pode causar dor de barriga ou diarreia.",
     "nl": "Appels zijn een caloriearm snoepje met vitamine A en C, kalium, antioxidanten en vezels, vooral in de schil. Vanwege de suiker in een appel is een hele appel waarschijnlijk te veel voor je hond, en te veel appels kunnen buikpijn of diarree veroorzaken.",
     "pl": "Jabłka to niskokaloryczny smakołyk z witaminami A i C, potasem, przeciwutleniaczami i błonnikiem, zwłaszcza w skórce. Ponieważ jabłka zawierają cukier, całe jabłko to dla psa prawdopodobnie za dużo, a zbyt wiele jabłek może wywołać ból brzucha lub biegunkę.",
-    "cs": "Jablka jsou nízkokalorický pamlsek s vitaminy A a C, draslíkem, antioxidanty a vlákninou, hlavně ve slupce. Kvůli obsahu cukru je celé jablko pro psa nejspíš příliš mnoho a velké množství jablek může způsobit bolest břicha nebo průjem.",
+    "cs": "Jablka jsou nízkokalorický pamlsek s vitaminy A a C, draslíkem, antioxidanty a vlákninou, hlavně ve slupce. Kvůli obsahu cukru je celé jablko pro psa nejspíš příliš a větší množství jablek může způsobit bolest břicha nebo průjem.",
     "hr": "Jabuke su niskokalorična poslastica s vitaminima A i C, kalijem, antioksidansima i vlaknima, osobito u kori. Zbog šećera u svakoj jabuci cijela je jabuka vjerojatno previše za tvog psa, a previše jabuka može izazvati bolove u trbuhu ili proljev.",
     "sv": "Äpplen är en kalorisnål godbit med A- och C-vitamin, kalium, antioxidanter och fibrer, särskilt i skalet. Eftersom varje äpple innehåller socker är ett helt äpple troligen för mycket för hunden, och för många äpplen kan ge ont i magen eller diarré.",
     "da": "Æbler er en kaloriefattig godbid med A- og C-vitamin, kalium, antioxidanter og fibre, især i skrællen. På grund af sukkeret i hvert æble er et helt æble sandsynligvis for meget for din hund, og for mange æbler kan give dårlig mave eller diarré.",
@@ -204,7 +204,7 @@
         "pt": "Não. O açúcar adicionado e a massa são demais para os cães; evita produtos de maçã com açúcar adicionado ou especiarias, como a noz-moscada.",
         "nl": "Nee. De toegevoegde suiker en de korst zijn te veel voor honden; vermijd appelgerechten met toegevoegde suiker of specerijen zoals nootmuskaat.",
         "pl": "Nie. Dodatek cukru i ciasto to dla psa za dużo; unikaj potraw z jabłek z dodatkiem cukru lub przypraw, takich jak gałka muszkatołowa.",
-        "cs": "Ne. Přidaný cukr a těsto jsou pro psy příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem.",
+        "cs": "Ne. Přidaného cukru a těsta je pro psa příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem.",
         "hr": "Ne. Dodani šećer i tijesto previše su za pse; izbjegavaj jela od jabuka s dodanim šećerom ili začinima poput muškatnog oraščića.",
         "sv": "Nej. Det tillsatta sockret och pajskalet är för mycket för hundar; undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
         "da": "Nej. Det tilsatte sukker og dejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
@@ -342,7 +342,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9047bffd9fb23a43b277fc650277548a339f92dae3565cfae3b36871194d5925"
+      "verified_hash": "f8468ad63e6cda4cdae6c15661284e99216154f1a5053c3a95326c30e91c3da9"
     },
     "hr": {
       "status": "verified",

@@ -80,7 +80,7 @@
     "pt": "O alho pertence à família das aliáceas (a família da cebola). As aliáceas danificam os glóbulos vermelhos e podem levar a anemia, e também irritam o estômago e o intestino. Os gatos são a espécie mais sensível. Todas as formas são venenosas para gatos – cruas, cozinhadas, secas, em pó e líquidas. Das aliáceas, o alho é a mais tóxica para os gatos.",
     "nl": "Knoflook hoort bij de alliumfamilie (de uienfamilie). Alliumsoorten beschadigen rode bloedcellen en kunnen tot bloedarmoede leiden, en ze irriteren ook de maag en darmen. Katten zijn de gevoeligste diersoort. Alle vormen zijn giftig voor katten – rauw, gekookt, gedroogd, als poeder en vloeibaar. Van alle alliumsoorten is knoflook het giftigst voor katten.",
     "pl": "Czosnek należy do roślin z rodzaju Allium, czyli z rodziny cebulowatych. Rośliny z tego rodzaju uszkadzają czerwone krwinki, mogą prowadzić do anemii, a do tego podrażniają żołądek i jelita. Koty są gatunkiem najbardziej wrażliwym. Każda postać jest dla kotów trująca – surowa, gotowana, suszona, sproszkowana i płynna. Spośród tych roślin czosnek jest dla kotów najbardziej toksyczny.",
-    "cs": "Česnek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Kočky jsou ze všech druhů zvířat nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá. Ze všech cibulovin je pro kočky nejtoxičtější právě česnek.",
+    "cs": "Česnek patří mezi cibuloviny (rod Allium). Cibuloviny poškozují červené krvinky, mohou vést k chudokrevnosti a navíc dráždí žaludek a střeva. Ze všech zvířat jsou na ně kočky nejcitlivější. Pro kočky jsou jedovaté všechny formy – syrová, tepelně upravená, sušená, v prášku i tekutá. Ze všech cibulovin je pro kočky nejtoxičtější právě česnek.",
     "hr": "Češnjak pripada biljkama iz roda Allium (porodici luka). Biljke iz roda Allium oštećuju crvene krvne stanice i mogu dovesti do anemije, a uz to nadražuju želudac i crijeva. Mačke su najosjetljivija vrsta. Svi su oblici otrovni za mačke – sirov, termički obrađen, sušen, u prahu i tekući. Od svih biljaka iz roda Allium češnjak je za mačke najotrovniji.",
     "sv": "Vitlök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form. Av lökväxterna är vitlök den giftigaste för katter.",
     "da": "Hvidløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende. Af løgplanterne er hvidløg det mest giftige for katte.",
@@ -172,7 +172,7 @@
     "cs": [
       "Zvracení",
       "Průjem",
-      "Snížená chuť k jídlu",
+      "Nechuť k jídlu",
       "Slabost",
       "Bledé dásně",
       "Červeně zbarvená moč",
@@ -307,7 +307,7 @@
         "pt": "O alho serve para afastar as pulgas?",
         "nl": "Helpt knoflook om vlooien weg te houden?",
         "pl": "Czy czosnek pomaga odstraszać pchły?",
-        "cs": "Pomáhá česnek proti blechám?",
+        "cs": "Odpuzuje česnek blechy?",
         "hr": "Pomaže li češnjak protiv buha?",
         "sv": "Hjälper vitlök mot loppor?",
         "da": "Er hvidløg godt til at holde lopper væk?",
@@ -324,7 +324,7 @@
         "pt": "Não dês alho ao teu gato por nenhum motivo. Todas as formas são venenosas para gatos, e a Blue Cross refere que também há a preocupação de que o uso prolongado de alho possa causar problemas. Pede ao teu veterinário um tratamento seguro contra as pulgas.",
         "nl": "Geef je kat om geen enkele reden knoflook. Alle vormen zijn giftig voor katten, en Blue Cross wijst erop dat er ook bezorgdheid bestaat dat langdurig gebruik van knoflook problemen kan veroorzaken. Vraag je dierenarts naar een veilige vlooienbehandeling.",
         "pl": "Nie dawaj kotu czosnku z żadnego powodu. Każda jego postać jest dla kotów trująca, a Blue Cross zwraca też uwagę na obawy, że długotrwałe stosowanie czosnku może powodować problemy. Zapytaj weterynarza o bezpieczne środki na pchły.",
-        "cs": "Nedávejte kočce česnek z žádného důvodu. Pro kočky jsou jedovaté všechny jeho formy a Blue Cross upozorňuje, že existují i obavy, že dlouhodobé užívání česneku může způsobit potíže. Na bezpečnou ochranu proti blechám se zeptejte veterináře.",
+        "cs": "Nedávejte kočce česnek z žádného důvodu. Pro kočky jsou jedovaté všechny jeho formy a Blue Cross navíc upozorňuje na obavy, že dlouhodobé užívání česneku může způsobovat potíže. Na bezpečnou ochranu proti blechám se zeptejte veterináře.",
         "hr": "Ne daj mački češnjak ni iz kojeg razloga. Svi su oblici otrovni za mačke, a Blue Cross napominje da postoji i zabrinutost da dugotrajna upotreba češnjaka može izazvati probleme. Pitaj veterinara za sigurnu zaštitu od buha.",
         "sv": "Ge inte katten vitlök av någon anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
         "da": "Giv aldrig din kat hvidløg, uanset grunden. Alle former er giftige for katte, og Blue Cross påpeger at der også er bekymring for at langvarig brug af hvidløg kan give problemer. Spørg din dyrlæge om sikker loppebehandling.",
@@ -474,7 +474,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba289a53f84f08065d4866b89ba253d98466e9d0e5cd9f9e0c46f0df901d58d1"
+      "verified_hash": "2b8103b8150ded5efa4d788b0340cdde61ce00571f5a94bae2674177e500f4e6"
     },
     "hr": {
       "status": "verified",

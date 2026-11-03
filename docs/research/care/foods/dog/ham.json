@@ -222,7 +222,7 @@
     "pt": "O fiambre é comida de pessoas, salgado e gordo demais para os cães. Guarda-o para a tua sandes e dá ao teu cão uma guloseima para cães.",
     "nl": "Ham is mensenvoer dat te zout en te vet is voor honden. Bewaar het voor je boterham en geef je hond een hondensnoepje.",
     "pl": "Szynka to jedzenie dla ludzi – dla psów jest za słona i za tłusta. Zostaw ją na swoją kanapkę i daj psu psi smakołyk.",
-    "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji do chleba a dej psovi psí pamlsek.",
+    "cs": "Šunka je jídlo pro lidi a pro psy je moc slaná a tučná. Nech si ji na chleba a dej psovi psí pamlsek.",
     "hr": "Šunka je hrana za ljude i preslana je i premasna za pse. Ostavi je za svoj sendvič, a psu daj pseću poslasticu.",
     "sv": "Skinka är människomat som är för salt och fet för hundar. Spara den till din smörgås och ge hunden en hundgodbit.",
     "da": "Skinke er menneskemad, der er for salt og fed til hunde. Gem den til din sandwich, og giv din hund en hundegodbid.",
@@ -381,7 +381,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d7f33ae5925c067250079214826f6588ae11f3d79da0433c4db3750ab91d4a84"
+      "verified_hash": "771e105ed43797afb3dce1964d16535a037e913bb2a4279af41f40dbe378203b"
     },
     "hr": {
       "status": "verified",

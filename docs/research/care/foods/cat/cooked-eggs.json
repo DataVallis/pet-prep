@@ -80,7 +80,7 @@
     "pt": "A Universidade Cornell inclui os ovos entre as fontes de proteína mais usadas na comida para gatos, e a PDSA diz que os ovos são adequados para animais de estimação, mas só com moderação. A cozedura é importante: os ovos crus podem conter Salmonella e a clara crua bloqueia a vitamina biotina. As guloseimas devem ser uma pequena parte da alimentação do gato.",
     "nl": "Cornell rekent eieren tot de eiwitbronnen die het meest in kattenvoer worden gebruikt, en volgens PDSA zijn eieren geschikt voor huisdieren, maar alleen met mate. Goed gaar maken is belangrijk: rauwe eieren kunnen Salmonella bevatten en rauw eiwit blokkeert de opname van de vitamine biotine. Traktaties horen maar een klein deel van de voeding van een kat te zijn.",
     "pl": "Cornell wymienia jajka wśród źródeł białka najczęściej używanych w karmie dla kotów, a PDSA podaje, że jajka nadają się dla zwierząt, ale tylko z umiarem. Liczy się sposób przygotowania: surowe jajka mogą przenosić bakterie Salmonella, a surowe białko jaja blokuje wchłanianie witaminy biotyny. Smakołyki powinny stanowić niewielką część diety kota.",
-    "cs": "Cornellova univerzita uvádí vejce mezi nejčastěji používanými zdroji bílkovin v kočičím krmivu a podle PDSA jsou vejce pro zvířata vhodná, ale jen s mírou. Záleží na tepelné úpravě: syrová vejce mohou přenášet salmonelu a syrový bílek blokuje vitamin biotin. Pamlsky by měly tvořit jen malou část kočičí stravy.",
+    "cs": "Cornellova univerzita uvádí vejce mezi nejčastěji používanými zdroji bílkovin v kočičím krmivu a podle PDSA jsou vejce pro domácí zvířata vhodná, ale jen s mírou. Záleží na tepelné úpravě: syrová vejce mohou přenášet salmonelu a syrový bílek blokuje vitamin biotin. Pamlsky by měly tvořit jen malou část kočičí stravy.",
     "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane.",
     "sv": "Cornell räknar ägg till de proteinkällor som oftast används i kattmat, och PDSA skriver att ägg passar husdjur, men bara med måtta. Tillagningen spelar roll: råa ägg kan bära på salmonella, och rå äggvita blockerar vitaminet biotin. Godbitar ska bara vara en liten del av kattens kost.",
     "da": "Cornell nævner æg blandt de proteinkilder der oftest bruges i kattefoder, og PDSA skriver at æg passer til kæledyr, men kun med måde. Tilberedningen er vigtig: Rå æg kan indeholde salmonella, og rå æggehvide blokerer vitaminet biotin. Godbidder bør kun udgøre en lille del af en kats kost.",
@@ -132,7 +132,7 @@
     "pt": "Um bocadinho de ovo simples, cozinhado pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe.",
     "nl": "Een klein beetje gewoon gekookt ei kan een lekker kattensnoepje zijn. Vraag een volwassene om het eerst gaar te maken.",
     "pl": "Odrobina zwykłego gotowanego jajka może być smakołykiem dla kota. Poproś dorosłego, żeby najpierw je ugotował.",
-    "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív připraví.",
+    "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív uvaří.",
     "hr": "Malo običnog kuhanog jajeta može biti poslastica za macu. Zamoli odraslu osobu da ga najprije skuha.",
     "sv": "En pytteliten bit kokt ägg utan kryddor kan bli en godbit för en katt. Be en vuxen att koka det först.",
     "da": "En lille smule almindeligt kogt æg kan være en godbid til en kat. Bed en voksen om at koge det først.",
@@ -261,7 +261,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3913367cfe6fa2f338e0d89257acbe1a9e4f540a4f102b7813264ac86fe15f3d"
+      "verified_hash": "8855e54cc6905097130fa0deb8de0ec35be14bd906feb7917873a890e517fc50"
     },
     "hr": {
       "status": "verified",

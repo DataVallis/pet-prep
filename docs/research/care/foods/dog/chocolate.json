@@ -63,7 +63,7 @@
     "pt": "Não. O chocolate é tóxico para os cães, mesmo em quantidades bastante pequenas. Contém teobromina e cafeína, e quanto mais escuro for o chocolate, maior é o risco. O chocolate de culinária e o cacau em pó são os mais perigosos; o chocolate branco é o que tem menos destas substâncias.",
     "nl": "Nee. Chocolade is giftig voor honden, zelfs in vrij kleine hoeveelheden. Het bevat theobromine en cafeïne, en hoe donkerder de chocolade, hoe groter het risico. Bakchocolade en cacaopoeder zijn het gevaarlijkst; witte chocolade bevat het minst van deze stoffen.",
     "pl": "Nie. Czekolada jest toksyczna dla psów, nawet w dość małych ilościach. Zawiera teobrominę i kofeinę, a im ciemniejsza czekolada, tym większe ryzyko. Najbardziej niebezpieczne są czekolada do pieczenia i kakao; biała czekolada zawiera tych substancji najmniej.",
-    "cs": "Ne. Čokoláda je pro psy jedovatá, i v docela malém množství. Obsahuje theobromin a kofein a čím je čokoláda tmavší, tím větší je riziko. Nejnebezpečnější je čokoláda na vaření a kakaový prášek; bílá čokoláda obsahuje těchto látek nejméně.",
+    "cs": "Ne. Čokoláda je pro psy jedovatá, i v poměrně malém množství. Obsahuje theobromin a kofein a čím je čokoláda tmavší, tím větší je riziko. Nejnebezpečnější je čokoláda na vaření a kakaový prášek; bílá čokoláda obsahuje těchto látek nejméně.",
     "hr": "Ne. Čokolada je otrovna za pse, čak i u prilično malim količinama. Sadrži teobromin i kofein, a što je čokolada tamnija, rizik je veći. Najopasniji su čokolada za kuhanje i kakao prah; bijela čokolada ima najmanje tih tvari.",
     "sv": "Nej. Choklad är giftig för hundar, även i ganska små mängder. Den innehåller teobromin och koffein, och ju mörkare chokladen är, desto större är risken. Bakchoklad och kakao är farligast; vit choklad innehåller minst av dessa ämnen.",
     "da": "Nej. Chokolade er giftigt for hunde, selv i ret små mængder. Det indeholder theobromin og koffein, og jo mørkere chokoladen er, desto større er risikoen. Bagechokolade og kakaopulver er farligst; hvid chokolade indeholder mindst af disse stoffer.",
@@ -473,7 +473,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "01a540c57060b3d8710f8fb9601eec981f46b6d5829f1f2e11e7422bf97cb235"
+      "verified_hash": "7d96f5f6cc50b71b4dc77f8f9e8091a7e2caf25f871740d845a9c2b63c487e60"
     },
     "hr": {
       "status": "verified",

@@ -189,7 +189,7 @@
     "pt": "Se o teu gato comeu iogurte, vigia se aparecem diarreia, vómitos ou mudanças de comportamento, e contacta o teu veterinário para pedir conselho se ele parecer doente.",
     "nl": "Heeft je kat yoghurt gegeten? Let op diarree, braken of veranderd gedrag, en vraag je dierenarts om advies als ze ziek lijkt.",
     "pl": "Jeśli twój kot zjadł jogurt, obserwuj, czy nie ma biegunki, wymiotów lub zmian w zachowaniu, i poradź się weterynarza, jeśli źle się czuje.",
-    "cs": "Pokud vaše kočka snědla jogurt, sledujte, zda se neobjeví průjem, zvracení nebo změna chování, a pokud se nezdá v pořádku, obraťte se o radu na veterináře.",
+    "cs": "Pokud kočka snědla jogurt, sledujte, zda se neobjeví průjem, zvracení nebo změna chování, a pokud se nezdá v pořádku, obraťte se o radu na veterináře.",
     "hr": "Ako je mačka pojela jogurt, prati pojavu proljeva, povraćanja ili promjene u ponašanju i obrati se veterinaru za savjet ako ti se čini da joj nije dobro.",
     "sv": "Om katten har ätit yoghurt: håll utkik efter diarré, kräkningar eller ändrat beteende, och kontakta veterinären för råd om den verkar må dåligt.",
     "da": "Hvis din kat har spist yoghurt, så hold øje med diarré, opkast eller ændret adfærd, og kontakt din dyrlæge for at få råd hvis den virker utilpas.",
@@ -350,7 +350,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f59cb9ac20103dbf908d85a54d27b39573bf516f6b92e6655572ba015596b42e"
+      "verified_hash": "9a5312ddafd5c1a7cde758dea46c2af71469ccdb76ecb418380677ece9043a22"
     },
     "hr": {
       "status": "verified",

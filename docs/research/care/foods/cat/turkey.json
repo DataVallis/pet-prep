@@ -98,7 +98,7 @@
     "pt": "Começa por oferecer um pedacinho. Se o teu gato tiver vómitos ou diarreia depois, para e pergunta ao teu veterinário. Se o teu gato comeu ossos de peru, recheio ou molho com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Krijgt je kat daarna last van braken of diarree, stop dan en vraag je dierenarts om advies. Heeft je kat kalkoenbotten gegeten, of vulling of jus met ui of knoflook, bel dan meteen je dierenarts.",
     "pl": "Najpierw podaj mały kawałek. Jeśli potem twój kot wymiotuje lub ma biegunkę, przestań i zapytaj weterynarza. Jeśli kot zjadł kości indyka, farsz lub sos pieczeniowy z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
-    "cs": "Nejdřív nabídněte malý kousek. Pokud vaše kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud vaše kočka snědla krůtí kosti, nádivku nebo omáčku s cibulí či česnekem, okamžitě zavolejte veterináři.",
+    "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má průjem, přestaňte a poraďte se s veterinářem. Pokud kočka snědla krůtí kosti, nádivku nebo omáčku s cibulí či česnekem, okamžitě zavolejte veterináři.",
     "hr": "Najprije ponudi mali komadić. Ako mačka nakon toga povraća ili ima proljev, prestani i pitaj veterinara. Ako je mačka pojela pureće kosti, nadjev ili sok od pečenja s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har ätit kalkonben, fyllning eller sås med lök eller vitlök, ring veterinären direkt.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har spist kalkunben, fyld eller sovs med løg eller hvidløg, skal du straks ringe til din dyrlæge.",
@@ -277,7 +277,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "67dd53bec071b21c82ca711588622f3fc7ebe33225ba369c557fc75f68961504"
+      "verified_hash": "f48faa921c81be41a75f5b9c4dac545bfcb585b5543ddb68286211955cef4139"
     },
     "hr": {
       "status": "verified",

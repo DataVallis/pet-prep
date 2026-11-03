@@ -237,7 +237,7 @@
     "pt": "As bebidas dos adultos nunca são para cães. Se um cão beber um pouco, pode ficar muito doente depressa, por isso avisa logo um adulto.",
     "nl": "Drankjes voor volwassenen zijn nooit voor honden. Een hond die ervan drinkt, kan snel heel ziek worden. Vertel het dan meteen aan een volwassene.",
     "pl": "Napoje dorosłych nigdy nie są dla psów. Jeśli pies trochę wypije, może szybko bardzo się rozchorować, więc od razu powiedz dorosłemu.",
-    "cs": "Nápoje pro dospělé nejsou nikdy pro psy. Když se pes napije, může mu být rychle moc zle, a tak to hned řekni dospělému.",
+    "cs": "Nápoje pro dospělé psům nikdy nepatří. Když se pes napije, může mu být rychle moc zle, a tak to hned řekni dospělému.",
     "hr": "Pića za odrasle nikad nisu za pse. Ako pas popije malo, može se brzo jako razboljeti, zato odmah reci odrasloj osobi.",
     "sv": "Vuxendrycker är aldrig för hundar. Om en hund dricker sådant kan den snabbt bli mycket sjuk, så säg till en vuxen direkt.",
     "da": "Voksendrikke er aldrig til hunde. Hvis en hund drikker noget af det, kan den hurtigt blive meget syg, så sig det til en voksen med det samme.",
@@ -256,7 +256,7 @@
         "pt": "Uma lambidela de cerveja não faz mal?",
         "nl": "Is een likje bier oké?",
         "pl": "Czy nic się nie stanie, jeśli pies zliże odrobinę piwa?",
-        "cs": "Je v pořádku, když pes lízne pivo?",
+        "cs": "Je v pořádku, když pes jen olízne pivo?",
         "hr": "Smije li pas liznuti malo piva?",
         "sv": "Är det okej om hunden slickar i sig lite öl?",
         "da": "Er det okay hvis hunden slikker lidt øl?",
@@ -273,7 +273,7 @@
         "pt": "Não. As bebidas e os alimentos com álcool são tóxicos para os cães. Nunca lhes ofereças álcool e liga ao teu veterinário se o teu cão beber um pouco.",
         "nl": "Nee. Dranken en eten met alcohol zijn giftig voor honden. Geef nooit alcohol en bel je dierenarts als je hond ervan drinkt.",
         "pl": "Nie. Napoje i potrawy zawierające alkohol są toksyczne dla psów. Nigdy nie częstuj psa alkoholem, a jeśli trochę wypije, zadzwoń do weterynarza.",
-        "cs": "Ne. Nápoje a potraviny s alkoholem jsou pro psy jedovaté. Alkohol mu nikdy nenabízejte, a pokud se ho pes napije, zavolejte veterináři.",
+        "cs": "Ne. Nápoje a potraviny s alkoholem jsou pro psy jedovaté. Nikdy psovi alkohol nenabízejte, a pokud se ho napije, zavolejte veterináři.",
         "hr": "Ne. Pića i hrana s alkoholom otrovni su za pse. Nikad ne nudi psu alkohol, a ako ga pas popije, nazovi veterinara.",
         "sv": "Nej. Drycker och mat som innehåller alkohol är giftiga för hundar. Ge aldrig alkohol, och ring veterinären om hunden har druckit något.",
         "da": "Nej. Drikkevarer og mad med alkohol er giftige for hunde. Giv aldrig hunden alkohol, og ring til din dyrlæge hvis den drikker noget.",
@@ -428,7 +428,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "087e8db31f09c6c16da3bdf5c6ebf0c087a06561c64a1265796b40e33c549563"
+      "verified_hash": "7e0c3204ee30d586a78e3d4e6f9ce2336178ef7c337ab9d8ed296e5bbe65aded"
     },
     "hr": {
       "status": "verified",

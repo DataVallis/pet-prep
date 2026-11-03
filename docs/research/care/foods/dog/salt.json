@@ -222,7 +222,7 @@
     "pt": "Demasiado sal deixa os cães cheios de sede e doentes. Mantém o sal e a massa de modelar salgada longe do teu cão.",
     "nl": "Van te veel zout krijgen honden veel dorst en worden ze ziek. Houd zout en zoute speelklei uit de buurt van je hond.",
     "pl": "Przez nadmiar soli psy bardzo chce się pić i mogą się rozchorować. Trzymaj sól i słoną ciastolinę z dala od psa.",
-    "cs": "Po moc velkém množství soli mají psi velkou žízeň a je jim hodně zle. Sůl i slanou modelínu dej tam, kam pes nedosáhne.",
+    "cs": "Když pes sní moc soli, má velkou žízeň a je mu hodně zle. Sůl i slanou modelínu nech mimo dosah psa.",
     "hr": "Od previše soli psi postanu jako žedni i bolesni. Drži sol i slano tijesto za modeliranje podalje od svog psa.",
     "sv": "För mycket salt gör hundar jättetörstiga och sjuka. Håll salt och salt lekdeg borta från din hund.",
     "da": "For meget salt gør hunde meget tørstige og syge. Hold salt og trylledej med salt i væk fra din hund.",
@@ -433,7 +433,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "be83d6fde05fccb27aa6c63553d6875af94149229b3901e8bbc6b43fcd2d9b5e"
+      "verified_hash": "5f21dc8d7870f8e57c3eedb9c67efe347f955dbd274bd1afee2c185e3dd7cad8"
     },
     "hr": {
       "status": "verified",

@@ -98,7 +98,7 @@
     "pt": "Se a manteiga de amendoim tinha xilitol, contacta imediatamente o teu veterinário, uma clínica veterinária de urgência ou uma linha de apoio toxicológico para animais, anota quanto comeu e não esperes pelos sinais.",
     "nl": "Zat er xylitol in de pindakaas? Neem dan meteen contact op met je dierenarts, een spoedkliniek of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet op verschijnselen.",
     "pl": "Jeśli masło orzechowe zawierało ksylitol, od razu skontaktuj się z weterynarzem lub całodobową przychodnią weterynaryjną albo zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, ile pies zjadł, i nie czekaj na objawy.",
-    "cs": "Pokud arašídové máslo obsahovalo xylitol, okamžitě se obraťte na veterináře, nonstop veterinární pohotovost nebo toxikologickou linku pro zvířata, poznamenejte si, kolik ho pes snědl, a nečekejte, až se objeví příznaky.",
+    "cs": "Pokud arašídové máslo obsahovalo xylitol, okamžitě se obraťte na veterináře, na nonstop veterinární pohotovost nebo na toxikologickou linku pro zvířata, poznamenejte si, kolik ho pes snědl, a nečekejte, až se objeví příznaky.",
     "hr": "Ako je maslac od kikirikija sadržavao ksilitol, odmah se obrati veterinaru, dežurnoj veterinarskoj ambulanti ili telefonskoj liniji za otrovanja životinja, zapiši koliko je pas pojeo i ne čekaj da se pojave znakovi.",
     "sv": "Om jordnötssmöret innehöll xylitol, kontakta veterinären, ett djursjukhus med akutjour eller en giftrådgivning för djur direkt, notera hur mycket hunden åt och vänta inte på symtom.",
     "da": "Hvis peanutbutteren indeholdt xylitol, skal du straks kontakte din dyrlæge, en akut dyreklinik eller en giftrådgivning for dyr. Skriv ned hvor meget hunden har spist, og vent ikke på symptomer.",
@@ -187,7 +187,7 @@
         "pt": "Posso usar manteiga de amendoim para dar um comprimido ao meu cão?",
         "nl": "Mag ik pindakaas gebruiken om mijn hond een pil te geven?",
         "pl": "Czy mogę podać psu tabletkę w maśle orzechowym?",
-        "cs": "Mohu psovi podat tabletku v arašídovém másle?",
+        "cs": "Mohu psovi dát tabletku zabalenou do arašídového másla?",
         "hr": "Smijem li psu dati tabletu u maslacu od kikirikija?",
         "sv": "Kan jag använda jordnötssmör när jag ger hunden en tablett?",
         "da": "Kan jeg bruge peanutbutter til at give min hund en pille?",
@@ -342,7 +342,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0070594fa892e8491d79d90abd8cc2eea6cdcc4802c4ddaca99933fc2ebd1114"
+      "verified_hash": "2678dc032d2707122471de66a3f066870b713896eaf7355d1cee4dc1286b928b"
     },
     "hr": {
       "status": "verified",

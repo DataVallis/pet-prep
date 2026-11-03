@@ -80,7 +80,7 @@
     "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura elimina. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial.",
     "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je voorkomt door ze gaar te maken. Een hond kan stikken in garnalenschillen, en ze kunnen verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus matigheid is belangrijk.",
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których unika się przez ugotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
-    "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
+    "cs": "Syrové korýše a měkkýše mohou obsahovat choroboplodné zárodky, které tepelná úprava zničí. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečný tuk a olej. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
     "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uništava. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
     "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta.",
     "da": "Rå skaldyr indeholder skadelige smitstoffer, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde.",
@@ -132,7 +132,7 @@
     "pt": "Um cão pode comer um ou dois camarões cozinhados e descascados. As cascas e as caudas não são para cães.",
     "nl": "Een hond mag een paar gare, gepelde garnalen. De schillen en staartjes zijn niet voor honden.",
     "pl": "Pies może dostać jedną czy dwie ugotowane, obrane krewetki. Pancerzyki i ogonki nie są dla psów.",
-    "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky pro psy nejsou.",
+    "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky psům nepatří.",
     "hr": "Pas smije pojesti jednu ili dvije kuhane, očišćene kozice. Oklopi i repovi nisu za pse.",
     "sv": "En hund får äta ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar.",
     "da": "En hund må gerne få et par kogte, pillede rejer. Skallerne og halerne er ikke til hunde.",
@@ -277,7 +277,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e84cf97ea5eacd8d5fb74f40b5f04f80a29fd609490111d364b94a79499ffa44"
+      "verified_hash": "bcd8ebe58e52c536314996d515e975c0ecda37c1c30f5f79efedb66782104c49"
     },
     "hr": {
       "status": "verified",

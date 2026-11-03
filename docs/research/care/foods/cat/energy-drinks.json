@@ -63,7 +63,7 @@
     "pt": "Não. As bebidas energéticas têm frequentemente muita cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. Nunca deixes o teu gato beber de uma lata ou de um copo e liga ao teu veterinário se ele engolir alguma.",
     "nl": "Nee. Energiedrankjes bevatten vaak veel cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Laat je kat nooit uit een blikje of glas drinken, en bel je dierenarts als je kat er iets van heeft ingeslikt.",
     "pl": "Nie. Napoje energetyczne często zawierają dużo kofeiny, a koty są na nią bardziej wrażliwe niż ludzie. Nigdy nie pozwalaj kotu pić z puszki ani szklanki i zadzwoń do weterynarza, jeśli kot choć trochę połknie.",
-    "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud nějaký nápoj spolkne, zavolejte veterináři.",
+    "cs": "Ne. Energetické nápoje často obsahují hodně kofeinu a kočky jsou na kofein citlivější než lidé. Nikdy nenechte kočku pít z plechovky nebo ze sklenice, a pokud kočka něco z toho vypije, zavolejte veterináři.",
     "hr": "Ne. Energetska pića često sadrže mnogo kofeina, a mačke su na kofein osjetljivije od ljudi. Nikad ne dopusti mački da pije iz limenke ili čaše i nazovi veterinara ako mačka išta od toga popije.",
     "sv": "Nej. Energidrycker innehåller ofta mycket koffein, och katter är känsligare för koffein än människor. Låt aldrig katten dricka ur en burk eller ett glas, och ring veterinären om katten har fått i sig något.",
     "da": "Nej. Energidrikke indeholder ofte meget koffein, og katte er mere følsomme over for koffein end mennesker. Lad aldrig din kat drikke af en dåse eller et glas, og ring til din dyrlæge hvis din kat sluger noget af det.",
@@ -329,7 +329,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "544112ca2ee68c14d509e1eaa9982dbdcecacccf2c1d9e596289b313ec13b555"
+      "verified_hash": "df8b33568549576200bfa0224b7d0511bd1b59ff9eb0c2f5d9841c7ec9208b1b"
     },
     "hr": {
       "status": "verified",

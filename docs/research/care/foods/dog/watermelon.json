@@ -115,7 +115,7 @@
     "pt": "Pedacinhos sem nenhuma semente e sem casca; os pedaços sem sementes também podem ser congelados como guloseima refrescante.",
     "nl": "Hapklare stukjes zonder pitten en schil; pitloze stukjes kun je ook invriezen als verkoelend snoepje.",
     "pl": "Kawałki wielkości jednego kęsa, bez pestek i skórki; kawałki bez pestek można też zamrozić jako chłodzący smakołyk.",
-    "cs": "Kousky na jedno kousnutí, bez všech semínek a kůry; kousky bez semínek můžete také zamrazit jako osvěžující pamlsek.",
+    "cs": "Kousky na jedno sousto, zbavené všech semínek a kůry; kousky bez semínek můžete také zamrazit jako osvěžující pamlsek.",
     "hr": "Komadići veličine zalogaja, bez ijedne sjemenke i bez kore; komadiće bez sjemenki možeš i zamrznuti kao osvježavajuću poslasticu.",
     "sv": "Lagom stora bitar utan kärnor och skal; kärnfria bitar kan också frysas som en svalkande godbit.",
     "da": "Mundrette stykker uden kerner og skræl; kernefri stykker kan også fryses som en kølende godbid.",
@@ -290,7 +290,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7271633b7c698929dcbe6d07d7b4d46c8451cf1f5d2f76ca5840145e3cf69ddd"
+      "verified_hash": "510f789976a04a0e7e906c1d084c77a9c997ced7530b583fed2bfe9f2ba947b0"
     },
     "hr": {
       "status": "verified",

@@ -144,7 +144,7 @@
     ],
     "cs": [
       "Zvracení a průjem",
-      "Nechuť k jídlu",
+      "Jí méně než obvykle",
       "Podrážděný žaludek, i po malém množství",
       "Známky chudokrevnosti (poškozené červené krvinky), obvykle o několik dní později"
     ],
@@ -207,7 +207,7 @@
     "pt": "A cebola não é para cães, nem cozinhada na comida. Pode fazer mal ao sangue de um cão. Avisa um adulto se o teu cão comer alguma.",
     "nl": "Uien zijn niet voor honden, ook niet gaar gemaakt in eten. Ze kunnen het bloed van een hond ziek maken. Vertel het aan een volwassene als je hond ervan eet.",
     "pl": "Cebula nie jest dla psów, nawet ugotowana w jedzeniu. Może zaszkodzić psiej krwi. Powiedz dorosłemu, jeśli twój pies ją zje.",
-    "cs": "Cibule není pro psy, ani ta uvařená v jídle. Může psovi poškodit krev. Když ji pes sní, řekni to dospělému.",
+    "cs": "Cibule psům nepatří, ani ta uvařená v jídle. Může psovi poškodit krev. Když ji pes sní, řekni to dospělému.",
     "hr": "Luk nije za pse, čak ni skuhan u jelu. Može naštetiti psećoj krvi. Reci odrasloj osobi ako ga tvoj pas pojede.",
     "sv": "Lök är inte för hundar, inte ens stekt eller kokt lök i maten. Den kan göra hundens blod sjukt. Säg till en vuxen om din hund äter lök.",
     "da": "Løg er ikke til hunde – heller ikke kogte løg i maden. De kan skade hundens blod. Sig det til en voksen hvis din hund spiser noget.",
@@ -426,7 +426,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba0052c6a5ce75207f7f7c24c54097a1757ab5b7aa23ee7598e85e3513a7a7c4"
+      "verified_hash": "0aad66608eb3b9602e2ad97b48024d7a96d485b86358d43368bbf40c490e226b"
     },
     "hr": {
       "status": "verified",

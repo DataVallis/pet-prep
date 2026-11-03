@@ -80,7 +80,7 @@
     "pt": "A carne de borrego em si é considerada segura para os cães em pequenas quantidades. Todos os ossos ficam quebradiços quando cozinhados e podem lascar. Os alimentos ricos em gordura podem provocar vómitos, diarreia ou até pancreatite, e é melhor evitar alimentos com muita gordura ou sal. Os molhos à base de cebola não são seguros para os cães.",
     "nl": "Lamsvlees zelf staat in kleine hoeveelheden als veilig voor honden vermeld. Alle botten worden broos als ze gekookt zijn en kunnen splinteren. Vet eten kan braken, diarree of zelfs alvleesklierontsteking uitlokken, en eten met veel vet of zout kun je beter vermijden. Jus op basis van ui is niet veilig voor honden.",
     "pl": "Samo mięso jagnięce figuruje jako bezpieczne dla psów w małych ilościach. Wszystkie kości po ugotowaniu stają się kruche i mogą łamać się na odłamki. Tłuste jedzenie może wywołać wymioty, biegunkę, a nawet zapalenie trzustki, a potraw tłustych lub słonych najlepiej unikać. Sosy na bazie cebuli nie są bezpieczne dla psów.",
-    "cs": "Samotné jehněčí maso je uváděno jako bezpečné pro psy v malém množství. Všechny kosti tepelnou úpravou zkřehnou a mohou se roztříštit. Tučná jídla mohou vyvolat zvracení, průjem, nebo dokonce zánět slinivky břišní a jídlům s vysokým obsahem tuku nebo soli je lepší se vyhnout. Cibulové omáčky nejsou pro psy bezpečné.",
+    "cs": "Samotné jehněčí maso je pro psy v malém množství bezpečné. Všechny kosti tepelnou úpravou zkřehnou a mohou se roztříštit. Tučná jídla mohou vyvolat zvracení, průjem, nebo dokonce zánět slinivky břišní a jídlům s vysokým obsahem tuku nebo soli je lepší se vyhnout. Cibulové omáčky nejsou pro psy bezpečné.",
     "hr": "Janjeće meso samo po sebi navodi se kao sigurno za pse u malim količinama. Sve kosti termičkom obradom postaju krhke i mogu se lomiti u krhotine. Masna hrana može izazvati povraćanje, proljev ili čak upalu gušterače, a hranu s mnogo masti ili soli najbolje je izbjegavati. Umaci s lukom nisu sigurni za pse.",
     "sv": "Lammkött i sig anges som ofarligt för hundar i små mängder. Alla ben blir sköra när de tillagas och kan splittras. Fet mat kan utlösa kräkningar, diarré och till och med bukspottkörtelinflammation (pankreatit), och mat med mycket fett eller salt är bäst att undvika. Sky med lök är inte ofarlig för hundar.",
     "da": "Selve lammekødet er opført som sikkert for hunde i små mængder. Alle knogler bliver skøre ved tilberedning og kan splintre. Meget fed mad kan udløse opkast, diarré eller endda betændelse i bugspytkirtlen (pankreatitis), og mad med meget fedt eller salt er bedst at undgå. Sovs med løg er ikke sikker for hunde.",
@@ -98,7 +98,7 @@
     "pt": "Se o teu cão comeu restos gordos de borrego, vigia se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos cozinhados ou borrego com molho de cebola, liga imediatamente ao teu veterinário e não tentes fazê-lo vomitar.",
     "nl": "Heeft je hond vette restjes lamsvlees gegeten? Let dan op braken, diarree of buikpijn en bel je dierenarts als die zich voordoen. Heeft hij gekookte botten of lamsvlees met uienjus gegeten, bel je dierenarts dan meteen en probeer je hond niet te laten braken.",
     "pl": "Jeśli twój pies zjadł tłuste resztki jagnięciny, obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł gotowane kości lub jagnięcinę w sosie z cebulą, od razu zadzwoń do weterynarza i nie próbuj wywoływać u psa wymiotów.",
-    "cs": "Pokud váš pes snědl tučné zbytky jehněčího, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jehněčí s cibulovou omáčkou, zavolejte veterináři hned a nesnažte se psa přimět ke zvracení.",
+    "cs": "Pokud váš pes snědl tučné zbytky jehněčího, sledujte, zda se neobjeví zvracení, průjem nebo bolest břicha, a pokud ano, zavolejte veterináři. Pokud snědl tepelně upravené kosti nebo jehněčí s cibulovou omáčkou, zavolejte veterináři ihned a nesnažte se psa přimět ke zvracení.",
     "hr": "Ako je pas pojeo masne ostatke janjetine, prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo termički obrađene kosti ili janjetinu s umakom s lukom, odmah nazovi veterinara i ne pokušavaj psu izazvati povraćanje.",
     "sv": "Har hunden ätit feta rester av lammkött, håll utkik efter kräkningar, diarré eller ont i magen och ring veterinären om de dyker upp. Har den ätit tillagade ben eller lammkött med löksky, ring veterinären direkt och försök inte få hunden att kräkas.",
     "da": "Hvis hunden har spist fede lammerester, skal du holde øje med opkast, diarré eller mavesmerter og ringe til din dyrlæge hvis de opstår. Hvis den har spist tilberedte knogler eller lammekød med løgsovs, skal du ringe til din dyrlæge med det samme; prøv ikke selv at få hunden til at kaste op.",
@@ -276,7 +276,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bc9aa195fafa8b9d42f9476ced3f829d43224245860b90e1b3ca633a5b2d45b9"
+      "verified_hash": "be4277d3e443f7177545e7dd30b82de6638dd2e7ad8c0b68a4a8fff0d437caf6"
     },
     "hr": {
       "status": "verified",

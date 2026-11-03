@@ -174,7 +174,7 @@
     "pt": "Uma lambidela de gelado simples de baunilha normalmente só exige que vigies se há mal-estar de barriga. Se o gelado tinha chocolate ou xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, anota o que comeu e quanto, e não esperes pelos sinais.",
     "nl": "Na een likje gewoon vanille-ijs hoef je meestal alleen op maag-darmklachten te letten. Zat er chocolade of xylitol in het ijs? Neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, noteer wat je hond heeft gegeten en hoeveel, en wacht niet op verschijnselen.",
     "pl": "Po liźnięciu zwykłych lodów waniliowych zazwyczaj wystarczy obserwować, czy nie pojawiają się dolegliwości żołądkowe. Jeśli lody zawierały czekoladę lub ksylitol, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zanotuj, co i ile pies zjadł, i nie czekaj na objawy.",
-    "cs": "Po líznutí obyčejné vanilkové zmrzliny obvykle stačí sledovat, zda se neobjeví zažívací potíže. Pokud zmrzlina obsahovala čokoládu nebo xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, co a kolik pes snědl, a nečekejte, až se objeví příznaky.",
+    "cs": "Po olíznutí obyčejné vanilkové zmrzliny obvykle stačí sledovat, zda se neobjeví zažívací potíže. Pokud zmrzlina obsahovala čokoládu nebo xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, co a kolik pes snědl, a nečekejte, až se objeví příznaky.",
     "hr": "Nakon što pas lizne običan sladoled od vanilije, obično je dovoljno pratiti ima li probavnih smetnji. Ako je sladoled sadržavao čokoladu ili ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zapiši što je i koliko pojeo i ne čekaj da se pojave znakovi.",
     "sv": "Har hunden bara slickat lite vanlig vaniljglass räcker det oftast att hålla utkik efter magbesvär. Om glassen innehöll choklad eller xylitol, kontakta veterinären eller en giftrådgivning för djur direkt, notera vad och hur mycket hunden åt och vänta inte på symtom.",
     "da": "Hvis hunden har slikket lidt almindelig vaniljeis, er det som regel nok at holde øje med dårlig mave. Hvis isen indeholdt chokolade eller xylitol, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme, skrive ned hvad og hvor meget hunden har spist, og ikke vente på symptomer.",
@@ -356,7 +356,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e44c7f28a6dcfafefeb27deceff6b1761ec6d5049aaf76a679256d77ca08776d"
+      "verified_hash": "d530c13cb9658b60b0c77fd2e457a22a64afd4694fdaec193366fdf040cba6fa"
     },
     "hr": {
       "status": "verified",

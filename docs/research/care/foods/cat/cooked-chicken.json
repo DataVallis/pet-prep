@@ -63,7 +63,7 @@
     "pt": "Sim, o frango simples, cozinhado, não faz mal como guloseima ocasional para gatos. Coze-o, tira todos os ossos e a pele e não juntes temperos. Conta-o como parte da comida diária do teu gato, e não como substituto dela.",
     "nl": "Ja, gewone gekookte kip is af en toe prima als traktatie voor katten. Kook het, verwijder alle botten en het vel en gebruik geen kruiden. Reken het mee als onderdeel van de dagelijkse voeding van je kat; het vervangt die voeding niet.",
     "pl": "Tak, zwykły gotowany kurczak jest w porządku jako okazjonalny smakołyk dla kota. Ugotuj go, usuń wszystkie kości i skórę i nie dodawaj przypraw. Traktuj go jako część dziennej porcji jedzenia kota, a nie jej zamiennik.",
-    "cs": "Ano, obyčejné tepelně upravené kuřecí maso je pro kočky jako občasný pamlsek v pořádku. Uvařte ho, odstraňte všechny kosti a kůži a nekořeňte ho. Počítejte ho jako součást denní dávky krmiva vaší kočky, ne jako její náhradu.",
+    "cs": "Ano, obyčejné tepelně upravené kuřecí maso je pro kočky jako občasný pamlsek v pořádku. Uvařte ho, odstraňte všechny kosti a kůži a nekořeňte ho. Započítejte ho do denní dávky krmiva kočky, nenahrazujte jím krmivo.",
     "hr": "Da, obična kuhana piletina u redu je kao povremena poslastica za mačke. Skuhaj je, ukloni sve kosti i kožu i ne dodavaj začine. Uračunaj je u dnevni obrok svoje mačke, a ne umjesto njega.",
     "sv": "Ja, naturell kokt kyckling går bra som godbit för katter någon gång ibland. Koka den, ta bort alla ben och skinnet, och krydda inte. Räkna in den i kattens dagliga matranson – den ersätter inte maten.",
     "da": "Ja, naturel, tilberedt kylling er fin som en godbid en gang imellem til katte. Kog den, fjern alle knogler og skindet, og tilsæt ingen krydderier. Regn den med i kattens daglige mad – den erstatter den ikke.",
@@ -80,7 +80,7 @@
     "pt": "A Cats Protection e a RSPCA Australia dizem ambas que se pode dar frango cozido ou ao vapor de vez em quando. Tem de estar cozinhado e sem ossos, porque os ossos cozinhados podem lascar. Dar só frango cozinhado durante muito tempo pode levar a carências nutricionais, por isso deve continuar a ser uma guloseima.",
     "nl": "Cats Protection en RSPCA Australia zeggen allebei dat je af en toe gekookte of gestoomde kip kunt geven. Het moet gaar zijn en zonder botten, want gekookte botten kunnen splinteren. Als een kat langdurig alleen gekookte kip krijgt, kan dat tot voedingstekorten leiden, dus het blijft een traktatie.",
     "pl": "Cats Protection i RSPCA Australia podają, że od czasu do czasu można dać kotu kurczaka gotowanego w wodzie lub na parze. Musi być ugotowany i bez kości, bo gotowane kości mogą pękać na ostre odłamki. Karmienie wyłącznie gotowanym kurczakiem przez dłuższy czas może prowadzić do niedoborów żywieniowych, więc powinien pozostać smakołykiem.",
-    "cs": "Cats Protection i RSPCA Australia uvádějí, že vařené nebo v páře připravené kuřecí maso lze kočce občas nabídnout. Musí být tepelně upravené a bez kostí, protože tepelně upravené kosti se mohou tříštit. Dlouhodobé krmení pouze tepelně upraveným kuřecím masem může vést k nedostatku živin, proto ať zůstane jen pamlskem.",
+    "cs": "Cats Protection i RSPCA Australia uvádějí, že vařené nebo napařené kuřecí maso lze kočce občas nabídnout. Musí být tepelně upravené a bez kostí, protože tepelně upravené kosti se mohou tříštit. Dlouhodobé krmení pouze tepelně upraveným kuřecím masem může vést k nedostatku živin, proto ať zůstane jen pamlskem.",
     "hr": "Cats Protection i RSPCA Australia navode da se piletina kuhana u vodi ili na pari može povremeno ponuditi. Mora biti termički obrađena i bez kostiju jer se termički obrađene kosti mogu rascijepiti. Dugotrajno hranjenje isključivo termički obrađenom piletinom može dovesti do nedostatka hranjivih tvari, pa ona ostaje poslastica.",
     "sv": "Både Cats Protection och RSPCA Australia skriver att kokt eller ångkokt kyckling kan ges någon gång ibland. Den måste vara tillagad och benfri, eftersom tillagade ben kan splittras. Om katten under lång tid bara får kokt kyckling kan den få näringsbrist, så kycklingen ska förbli en godbit.",
     "da": "Både Cats Protection og RSPCA Australia skriver at kogt eller dampet kylling kan gives en gang imellem. Den skal være tilberedt og uden knogler fordi tilberedte knogler kan splintre. Hvis katten i længere tid kun får tilberedt kylling, kan det føre til mangel på næringsstoffer, så det forbliver en godbid.",
@@ -115,7 +115,7 @@
     "pt": "Cozido ou a vapor, simples, sem ossos, pele ou temperos; pedaços pequenos dentro da quantidade diária de comida.",
     "nl": "Gekookt of gestoomd, naturel, zonder botten, vel of kruiden; kleine stukjes binnen de dagelijkse hoeveelheid voer.",
     "pl": "Gotowany w wodzie lub na parze, bez dodatków, bez kości, skóry i przypraw; małe kawałki w ramach dziennej porcji jedzenia.",
-    "cs": "Vařené nebo připravené v páře, bez přísad, bez kostí, kůže a koření; malé kousky v rámci denní dávky krmiva.",
+    "cs": "Vařené nebo napařené, bez přísad, bez kostí, kůže a koření; malé kousky v rámci denní dávky krmiva.",
     "hr": "Kuhana u vodi ili na pari, obična, bez kostiju, kože i začina; mali komadići unutar dnevnog obroka.",
     "sv": "Kokt eller ångkokt, naturell, utan ben, skinn och kryddor; små bitar inom den dagliga matransonen.",
     "da": "Kogt eller dampet, naturel, uden knogler, skind eller krydderier; små stykker inden for den daglige madmængde.",
@@ -271,7 +271,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "19fff4d2b32b0895b34f49a305b06ef4768897b576c564890a9ac728160cd300"
+      "verified_hash": "da5f02cbec0cc77183b5ee74be1326dfbb1ff7d8002d284c13329957e294d4dc"
     },
     "hr": {
       "status": "verified",

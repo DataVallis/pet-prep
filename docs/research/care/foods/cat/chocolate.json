@@ -252,7 +252,7 @@
     "pt": "O chocolate é uma guloseima para pessoas, não para gatos. Guarda-o bem e avisa um adulto se o gatinho encontrar algum.",
     "nl": "Chocolade is een snoepje voor mensen, niet voor katten. Berg het goed op. Vindt je kat toch wat? Vertel het meteen aan een volwassene.",
     "pl": "Czekolada to smakołyk dla ludzi, nie dla kotów. Chowaj ją, a jeśli kotek jakąś znajdzie, powiedz dorosłemu.",
-    "cs": "Čokoláda je mlsání pro lidi, ne pro kočky. Měj ji uklizenou, a když nějakou kočička najde, řekni to dospělému.",
+    "cs": "Čokoláda je mlsání pro lidi, ne pro kočky. Měj ji pěkně schovanou, a když nějakou kočička najde, řekni to dospělému.",
     "hr": "Čokolada je poslastica za ljude, a ne za mace. Drži je sklonjenu i reci odrasloj osobi ako je maca pronađe.",
     "sv": "Choklad är godis för människor, inte för katter. Lägg undan den, och säg till en vuxen om katten hittar någon.",
     "da": "Chokolade er en godbid for mennesker, ikke for katte. Læg den væk, og sig det til en voksen hvis din kat finder noget.",
@@ -467,7 +467,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f6447b30e44b0a96aa101e53c72d87d08c7b37ca509e3464ccc429282c398ea8"
+      "verified_hash": "9e8587b7fc23eb2a81b2353e2f3eeb8b775b1c72b2219fd74bdd4a39c0b4d7db"
     },
     "hr": {
       "status": "verified",

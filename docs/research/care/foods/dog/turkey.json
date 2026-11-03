@@ -63,7 +63,7 @@
     "pt": "Sim, um pouco de carne de peru cozinhada e simples é segura para a maioria dos cães. Tira primeiro a pele, o excesso de gordura e todos os ossos. O peru cozinhado com temperos, cebola ou alho, e o molho de cebola ou o recheio, não são para cães.",
     "nl": "Ja, een beetje ongekruid, gaar gemaakt kalkoenvlees is veilig voor de meeste honden. Haal eerst het vel, overtollig vet en alle botten eraf. Kalkoen die met kruiden, ui of knoflook is bereid, en jus met ui of vulling zijn niet voor honden.",
     "pl": "Tak, odrobina zwykłego gotowanego mięsa z indyka jest bezpieczna dla większości psów. Najpierw usuń skórę, nadmiar tłuszczu i wszystkie kości. Indyk przygotowany z przyprawami, cebulą lub czosnkiem, a także sos cebulowy czy nadzienie nie są dla psów.",
-    "cs": "Ano, trocha obyčejného tepelně upraveného krůtího masa je pro většinu psů bezpečná. Nejdřív odstraňte kůži, přebytečný tuk a všechny kosti. Krůtí maso s kořením, cibulí nebo česnekem, cibulová omáčka ani nádivka pro psy nejsou.",
+    "cs": "Ano, trocha obyčejného tepelně upraveného krůtího masa je pro většinu psů bezpečná. Nejdřív odstraňte kůži, přebytečný tuk a všechny kosti. Krůtí maso připravené s kořením, cibulí nebo česnekem, cibulová omáčka a nádivka psům nepatří.",
     "hr": "Da, malo obične termički obrađene puretine sigurno je za većinu pasa. Prije toga ukloni kožu, višak masnoće i sve kosti. Puretina pripremljena sa začinima, lukom ili češnjakom te umak od luka ili nadjev nisu za pse.",
     "sv": "Ja, lite naturellt, tillagat kalkonkött är ofarligt för de flesta hundar. Ta först bort skinnet, överflödigt fett och alla ben. Kalkon tillagad med kryddor, lök eller vitlök samt löksky eller fyllning är inte för hundar.",
     "da": "Ja, lidt almindeligt tilberedt kalkunkød er sikkert for de fleste hunde. Fjern først skind, overskydende fedt og alle knogler. Kalkun tilberedt med krydderier, løg eller hvidløg samt løgsovs og fyld er ikke til hunde.",
@@ -98,7 +98,7 @@
     "pt": "Se o teu cão comeu pele de peru, restos gordos ou carne temperada, vigia nos dias seguintes se há vómitos, diarreia ou dor de barriga e liga ao teu veterinário se surgirem. Se comeu ossos ou comida com cebola ou alho, liga imediatamente ao teu veterinário.",
     "nl": "Heeft je hond kalkoenvel, vette restjes of gekruid vlees gegeten? Let dan de komende dagen op braken, diarree of buikpijn en bel je dierenarts als dat gebeurt. Heeft je hond botten of eten met ui of knoflook gegeten? Bel dan meteen je dierenarts.",
     "pl": "Jeśli twój pies zjadł skórę z indyka, tłuste resztki lub przyprawione mięso, przez kilka kolejnych dni obserwuj, czy nie pojawiają się wymioty, biegunka lub ból brzucha, i zadzwoń do weterynarza, jeśli wystąpią. Jeśli zjadł kości lub jedzenie z cebulą lub czosnkiem, od razu zadzwoń do weterynarza.",
-    "cs": "Pokud váš pes snědl krůtí kůži, tučné zbytky nebo kořeněné maso, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví, zavolejte veterináři. Pokud snědl kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři hned.",
+    "cs": "Pokud váš pes snědl krůtí kůži, tučné zbytky nebo kořeněné maso, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo bolesti břicha, a pokud se tyto potíže objeví, zavolejte veterináři. Pokud snědl kosti nebo jídlo s cibulí či česnekem, zavolejte veterináři ihned.",
     "hr": "Ako je tvoj pas pojeo pureću kožu, masne ostatke ili začinjeno meso, sljedećih nekoliko dana prati pojavljuju li se povraćanje, proljev ili bolovi u trbuhu i nazovi veterinara ako se pojave. Ako je pojeo kosti ili hranu s lukom ili češnjakom, odmah nazovi veterinara.",
     "sv": "Om hunden ätit kalkonskinn, feta rester eller kryddat kött, håll utkik efter kräkningar, diarré eller ont i magen de närmaste dagarna och ring veterinären om de dyker upp. Om den ätit ben eller mat med lök eller vitlök, ring veterinären direkt.",
     "da": "Hvis din hund har spist kalkunskind, fede rester eller krydret kød, så hold øje med opkast, diarré eller mavesmerter de næste dage, og kontakt din dyrlæge hvis de opstår. Hvis den har spist knogler eller mad med løg eller hvidløg, skal du kontakte din dyrlæge med det samme.",
@@ -293,7 +293,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "012d2667c168322061978707485eda9c7ce7e8b438e5f54b83b44b686810fe90"
+      "verified_hash": "7e10c72b291e8d727745cae99740df01409e63a9b4b48d7c0d4c512344640d30"
     },
     "hr": {
       "status": "verified",

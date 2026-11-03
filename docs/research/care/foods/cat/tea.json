@@ -63,7 +63,7 @@
     "pt": "Não. Muitos chás contêm cafeína, e os gatos são mais sensíveis à cafeína do que as pessoas. As saquetas de chá são especialmente perigosas. Não partilhes o teu chá e liga ao teu veterinário se o teu gato mastigar uma saqueta ou beber chá com cafeína.",
     "nl": "Nee. Veel soorten thee bevatten cafeïne, en katten zijn gevoeliger voor cafeïne dan mensen. Vooral theezakjes zijn riskant. Deel je thee niet, en bel je dierenarts als je kat op een theezakje kauwt of thee met cafeïne drinkt.",
     "pl": "Nie. Wiele herbat zawiera kofeinę, a koty są na nią bardziej wrażliwe niż ludzie. Szczególnie ryzykowne są torebki herbaty. Nie dziel się z kotem herbatą i zadzwoń do weterynarza, jeśli kot pogryzie torebkę herbaty lub wypije herbatę z kofeiną.",
-    "cs": "Ne. Mnoho čajů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Zvlášť rizikové jsou čajové sáčky. O čaj se s kočkou nedělte, a pokud vaše kočka okouše čajový sáček nebo se napije čaje s kofeinem, zavolejte veterináři.",
+    "cs": "Ne. Mnoho čajů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Zvlášť rizikové jsou čajové sáčky. Svůj čaj kočce nedávejte, a pokud kočka okouše čajový sáček nebo se napije čaje s kofeinem, zavolejte veterináři.",
     "hr": "Ne. Mnogi čajevi sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Vrećice čaja posebno su rizične. Ne dijeli svoj čaj s mačkom i nazovi veterinara ako mačka sažvače vrećicu čaja ili popije čaj s kofeinom.",
     "sv": "Nej. Många sorters te innehåller koffein, och katter är känsligare för koffein än människor. Tepåsar är extra riskabla. Dela inte med dig av ditt te, och ring veterinären om katten tuggar på en tepåse eller dricker te med koffein.",
     "da": "Nej. Mange slags te indeholder koffein, og katte er mere følsomme over for koffein end mennesker. Tebreve er særligt risikable. Del ikke din te, og ring til din dyrlæge hvis din kat tygger på et tebrev eller drikker te med koffein.",
@@ -189,7 +189,7 @@
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato engoliu (bebida, café moído, grãos, saqueta de chá ou comprimidos), a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft ingeslikt (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot je verschijnselen ziet en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+    "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
@@ -366,7 +366,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "97f339266e6a80a8b4a5ab228f717562b394f2726066944326e68a4fd7e06c20"
+      "verified_hash": "aa738b4713ab76a2b0864fa8c7b8f98bc85e81776ebf3357abcf03342cdab062"
     },
     "hr": {
       "status": "verified",

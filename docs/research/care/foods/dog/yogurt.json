@@ -132,7 +132,7 @@
     "pt": "Um pouco de iogurte natural pode ser uma guloseima para alguns cães. O iogurte doce ou com sabores não é para cães.",
     "nl": "Een beetje yoghurt naturel kan voor sommige honden een snoepje zijn. Zoete yoghurt of yoghurt met een smaakje is niet voor honden.",
     "pl": "Odrobina jogurtu naturalnego może być smakołykiem dla niektórych psów. Słodki lub smakowy jogurt nie jest dla psów.",
-    "cs": "Trocha bílého jogurtu může být pro některé psy pamlsek. Sladký nebo ochucený jogurt pro psy není.",
+    "cs": "Trocha bílého jogurtu může být pro některé psy pamlsek. Sladký nebo ochucený jogurt psům nepatří.",
     "hr": "Malo običnog jogurta može biti poslastica za neke pse. Slatki jogurt ili jogurt s okusom nije za pse.",
     "sv": "Lite naturell yoghurt kan vara en godbit för vissa hundar. Söt eller smaksatt yoghurt är inte för hundar.",
     "da": "Lidt naturel yoghurt kan være en godbid for nogle hunde. Sød yoghurt eller yoghurt med smag er ikke til hunde.",
@@ -323,7 +323,7 @@
     "cs": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4a21d8e580edd677817dfcd78af149c4c8f9da8c8c02e527ffd6d69e4c578ba8"
+      "verified_hash": "cbad6df0e3db966a94711de0ddeef41fd0f84b1a081b39487248bb921713741d"
     },
     "hr": {
       "status": "verified",
