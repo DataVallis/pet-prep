@@ -1078,6 +1078,19 @@
             "prompt_hash": "sha256:000829b88c94d0b3f43cd475396c45439fc8a9102335fa337405d7638dcd707d",
             "generated_at": "2026-11-03T00:58:42+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "irish_setter",
+            "species": "dog",
+            "colour": "chestnut",
+            "file": "dog/irish-setter.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:51a583c311d1c0a1d8669bd202e8c9cdb52ec9d068601a20b45437c4ddef76be",
+            "generated_at": "2026-11-03T02:46:00+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
