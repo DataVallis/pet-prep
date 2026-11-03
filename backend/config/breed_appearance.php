@@ -715,6 +715,14 @@
 | withers only, eyes clearly open — the dog trait `muzzle` carries it. Fawn first with the highest weight (the portrait
 | default, Claude's choice); weights unsourced → `verified => false`.
 |
+| Brussels Griffon (M5-R10-88, docs/research/dog-data brussels_griffon.appearance):
+| "A cobby, well-balanced, square little dog" (KC breed standard, S671); rough coat "harsh, wiry, free from curl, preferably
+| with undercoat." (S671; FCI-Standard N° 80 S669 is the rough-coated red dog); "Clear red, black, or black and rich tan,
+| without white markings." (S671; FCI red only); head fairly large and rounded, black nose with large wide-open nostrils,
+| very dark round eyes, small semi-erect ears, high-set tail (natural, undocked). Flat-faced welfare breed (PetMD S672,
+| RKC BOAS grading S670): a moderate short face with a visible nose and open nostrils — the dog trait `muzzle` carries it.
+| Red first with the highest weight (the portrait default); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3847,6 +3855,43 @@ return [
             'ear_carriage' => ['very small, thick triangular ears folded forward close to the head'],
             'eye_color' => ['dark almond-shaped eyes'],
             'tail' => ['thick, high-set tail tapering to a fine point, curled over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-88 (docs/research/dog-data/data.json brussels_griffon.appearance; runbook rules 2026-10-10: KC standard colours —
+    // S671 "Clear red, black, or black and rich tan, without white markings."; red = the portrait default (FCI N° 80 S669);
+    // rough coat (FCI N° 80); flat-faced welfare breed → moderate `muzzle`, open nostrils).
+    'brussels_griffon' => [
+        'display_name' => 'Brussels Griffon (Griffon Bruxellois)',
+        // Three standard colours; their weights are in no source (brussels_griffon.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'KC breed standard Griffon Bruxellois (S671, KUSA copy 07-2025) and FCI-Standard N° 80 (S669) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S671 "Weight: 3.2kg – 5kg."; S669 "Varie de 3,5 à 6 kg."; RKC S670 "Small"',
+            'build' => 'S671 "A cobby, well-balanced, square little dog"',
+            'coat_length' => 'S671 roughs "harsh, wiry, free from curl, preferably with undercoat."; S669 hard, slightly wavy, trimmed (paraphrase)',
+            'coat_color' => 'S671 "Clear red, black, or black and rich tan, without white markings." (weights unsourced)',
+            'head' => 'S671 "Head fairly large in comparison to body, rounded but in no way domed; moderately wide between the ears."',
+            'muzzle' => 'Welfare rule (PetMD S672 brachycephalic; RKC S670 BOAS respiratory grading): S671 "Nose black, with large wide-open nostrils and definite stop between muzzle and skull." — a moderate short face, nose visible, nostrils clearly open',
+            'ear_carriage' => 'S671 "Semi-erect, high-set, the smaller the better." (natural, uncropped)',
+            'eye_color' => 'S671 "Black-rimmed, very dark, round, clear and well-spaced."',
+            'tail' => 'S671 "High-set, emerging at right angles from level topline." (natural, undocked)',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'cobby, square, well-balanced little toy dog', 'weight' => 3], 'compact, square little toy dog'],
+            'coat_length' => ['harsh, wiry rough coat with a beard and whiskers, free from curl'],
+            // Red first, highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'clear red', 'weight' => 60],
+                ['value' => 'black and rich tan, no white markings', 'weight' => 25],
+                ['value' => 'solid black, no white markings', 'weight' => 15],
+            ],
+            'head' => ['fairly large, rounded head with a bearded face'],
+            'muzzle' => ['moderate short muzzle (not extreme) with a visible black nose and clearly open, wide nostrils'],
+            'ear_carriage' => ['small, high-set, semi-erect natural ears'],
+            'eye_color' => ['very dark, round, well-spaced eyes that do not bulge'],
+            'tail' => ['natural high-set tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
