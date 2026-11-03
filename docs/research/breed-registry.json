@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "57651b01a926ce9f811c22adeab06beb9efaed69e1e441ef93915ee74a2d8a02"
+      "sha256": "a27f5a0fc9028f8d37289bc634f9c16b1a9c7f4513edf013570db0248677aa44"
     }
   },
   "suitability_vocabulary": {
@@ -49606,7 +49606,12 @@
           "S672"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "brussels-griffon.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

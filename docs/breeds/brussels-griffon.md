@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `brussels_griffon` (viri S669–S674; ponovno S10, S11, S14, S24, S35, S45, S92, S174); seznam za vzreditelja: stran RKC (S670) |
 | Izvor | FCI št. 80, skupina 9, sekcija 3 (mali belgijski psi), Belgija (S669); RKC in AKC vodita skupaj grobodlako in gladkodlako različico (FCI: Griffon Belge in Petit Brabançon sta ločeni pasmi) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 84. mesto »Brussels Griffon« (S174, prebrano 2026-11-03) |
-| PR-ji | pet-prep #582 (pasma) · portret: sledi · spletna stran: šele s portretom |
+| PR-ji | pet-prep #582 (pasma, združen `ed57658`) · portret pet-prep #587 (zagon `breed-portraits.yml` 41556538088, sprejet v prvem poskusu; rep zaradi drže ni viden) · spletna stran: pet-prep-website `feat/register-brussels-griffon` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Česanje 2× na teden (predlog), »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-03 |
 | Čiščenje gub 1× na teden, ščetkanje zob vsak dan (mini igri), opomnik za frizerja vsake 4 tedne, opozorilo za sprehod poleti opoldne | 🛠 | 💶 izziv | M5-R14 / M5-R15 / M5-R18 | 2026-11-03 |
 | Barva (izbirnik: rdeča, črno-rjava, črna) | 🛠 | 💶 izziv | M5-R21 | 2026-11-03 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/brussels-griffon`, `/sl/zivali/psi/bruseljski-grifon`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), rdeč grobodlak | — | M5-R11-04 | 2026-11-03 |
+| Stran na petprep.si (`/animals/dogs/brussels-griffon`, `/sl/zivali/psi/bruseljski-grifon`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
