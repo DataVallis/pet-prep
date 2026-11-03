@@ -472,6 +472,7 @@ const SPECIES = [
       { id: 'greater_swiss_mountain_dog', synonyms: { en: ['Great Swiss Mountain Dog', 'Swissy', 'Grosser Schweizer Sennenhund'], sl: ['švicarski planšar', 'veliki švicarski planšar', 'grosser schweizer sennenhund'] } },
       { id: 'shar_pei', synonyms: { en: ['Chinese Shar-Pei', 'Shar-Pei', 'Sharpei'], sl: ['šar pej', 'shar pei', 'kitajski šarpej'] } },
       { id: 'brussels_griffon', synonyms: { en: ['Griffon Bruxellois', 'Griffon', 'Belgium Griffon'], sl: ['grifon', 'griffon bruxellois', 'bruseljski grifon'] } },
+      { id: 'irish_setter', synonyms: { en: ['Irish Red Setter', 'Red Setter'], sl: ['irski rdeči seter', 'rdeči seter', 'seter'] } },
     ],
   },
   {
@@ -2355,6 +2356,30 @@ const DOG_FACTS = {
       ['hip_dysplasia', 'health.hips'],
     ],
   },
+  // M5-R10-89. Height = FCI-Standard N° 120 by sex (S675), weight = AKC standard dog about 70 lb / bitch 60 lb (S680; FCI and
+  // RKC give none), lifespan = the RKC band 'Over 10 years' (S676), exercise = RKC 'More than 2 hours per day' (S676),
+  // coat / grooming / shedding = RKC key facts (S676). Coren rank 35. FCI origin Ireland (IE). Not exported:
+  // adult_weight.pdsa (alternative), lifespan.petmd ('around 14', no span), lifespan.mcmillan_2024 (null, 12.9 y only via
+  // Wikipedia) / senior_from, health.breed_watch (Category 1), health.clad (breeder checklist). No new health key.
+  irish_setter: {
+    height: ['height.fci'],
+    weight: [['adult_weight.akc', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['bloat_gdv', 'health.gdv'],
+      ['hip_dysplasia', 'health.hips'],
+      ['pra_eye_disease', 'health.eyes'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['epilepsy', 'health.epilepsy'],
+      ['certain_cancers', 'health.bone_cancer'],
+    ],
+  },
 
 
 };
@@ -2409,6 +2434,7 @@ export const DOG_CARE_TASKS = {
   rat_terrier: [['nail_trim', 1, 7, 'proposed_game_parameters.rat_terrier.nail_trimming'], ['bath', 1, 28, 'proposed_game_parameters.rat_terrier.bathing']],
   greater_swiss_mountain_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.ear_care'], ['nail_trim', 1, 7, 'proposed_game_parameters.greater_swiss_mountain_dog.nail_trimming']],
   brussels_griffon: [['fold_cleaning', 1, 7, 'proposed_game_parameters.brussels_griffon.face_fold_cleaning'], ['tooth_brushing', 7, 7, 'proposed_game_parameters.brussels_griffon.tooth_brushing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.brussels_griffon.professional_grooming']],
+  irish_setter: [['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_setter.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.irish_setter.nail_trimming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -3085,6 +3111,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.brussels_griffon.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.brussels_griffon.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.brussels_griffon.exercise_minutes_senior',
+  },
+  irish_setter: {
+    adult_minutes: ['proposed_game_parameters.irish_setter.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.irish_setter.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.irish_setter.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.irish_setter.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.irish_setter.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.irish_setter.exercise_minutes_senior',
   },
 
 

@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "91f274f6fa2522fc44e70626b4af369200fbdce520d491c999a9840e89737ae4"
+      "sha256": "e85bf3dd07d0b546229dbabbd52a28c7208007b60361f0f06b38990e91fc17d4"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "d052a894faa79bfe99106d22e802f3dfc65e4c2b47c8116557c1b1cd34ce58d9"
+      "sha256": "02c47eb40b0eb259235fccb7b910f68e40fbb917460f4faacffd28c13b713a87"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "bea4fd7844c5cc4091d0054419e2ea2ec1e98850d216eb5cb8de3bae0d1aa013"
+      "sha256": "06f9f787d4c94c3483715f57268b1b6baed310b67af5842e3a3c8a3f3daca45a"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "bf34a7ccd600f361369c97994b88a9bcbd8fc92d6e24679256ea0a98c893cea8"
+      "sha256": "76dc2ac32b7dd536a9537da75d5b015090dd22dfd0cf5a6efcd9d82ae42b6284"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3c9ed64ff74b8a355c2d9fb7cde3a54c972bd97d7aebf1d0d6ae5ac1105e506c"
+      "sha256": "8295c733c1276cb748eb2248ad05ad6f514ec2d59f6afbaa77ebbd951936e9f4"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "e6ff95cf1d368c2d95a2b4065358361b30acf825b557be96df68472fd7f69f71"
+      "sha256": "c4376d4722156acf37d48e7c68d412fd377e56cf4293dbcb3bf427202416232c"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "827f372753d3bf24f0c42a57285ed92f6c655cbfac9a0795d24867adad92b14d"
+      "sha256": "f7af010d3e36febd0cf3f661ed4b7e46759e777bef914261c8e6a31ffe5a2d0b"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 82,
+      "breed_count": 83,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -49668,6 +49668,657 @@
       ]
     },
     {
+      "id": "irish_setter",
+      "species": "dog",
+      "order": 82,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Irish Setter",
+        "sl": "Irski seter"
+      },
+      "slug": {
+        "en": "irish-setter",
+        "sl": "irski-seter"
+      },
+      "synonyms": {
+        "en": [
+          "Irish Red Setter",
+          "Red Setter"
+        ],
+        "sl": [
+          "irski rdeči seter",
+          "rdeči seter",
+          "seter"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              58,
+              67
+            ],
+            "female": [
+              55,
+              62
+            ]
+          },
+          "source_ids": [
+            "S675"
+          ],
+          "ref": "irish_setter.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              31.8,
+              31.8
+            ],
+            "female": [
+              27.2,
+              27.2
+            ]
+          },
+          "source_ids": [
+            "S680"
+          ],
+          "ref": "irish_setter.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "irish_setter.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S676"
+          ],
+          "ref": "irish_setter.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 35,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "irish_setter.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 120,
+            "group": 7,
+            "section": 2,
+            "origin": "IE"
+          },
+          "source_ids": [
+            "S675"
+          ],
+          "ref": "irish_setter.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_eye_disease",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "itchy_skin_allergy",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.skin",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.thyroid",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "certain_cancers",
+          "source_ids": [
+            "S678"
+          ],
+          "ref": "irish_setter.health.bone_cancer",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.exercise.adult",
+              "irish_setter.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.exercise.adult",
+              "irish_setter.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S679"
+            ],
+            "refs": [
+              "irish_setter.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S676"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S676",
+              "S678"
+            ],
+            "refs": [
+              "irish_setter.suitability.rkc_grooming",
+              "irish_setter.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.2
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S676"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S676 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S676"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S676)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 35, Above average, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.grooming",
+            "basis_source_ids": [
+              "S678"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »2 or 3 times per week«, zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.ear_care",
+            "basis_source_ids": [
+              "S679"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »Weekly ear checks and cleaning« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.irish_setter.nail_trimming",
+            "basis_source_ids": [
+              "S679"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »each month« → 1× na mesec (4 tedne)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S676",
+          "S678",
+          "S679"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "dna_rcd4_pra",
+            "level": "minimum",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "dna_clad",
+            "level": "best_practice",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "dna_pra_rcd1",
+            "level": "best_practice",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "elbow_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S676"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S676"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S676"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S675",
+        "S676",
+        "S678",
+        "S679",
+        "S680",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -55084,6 +55735,41 @@
       "publisher": "PetMD — Veronica Higgs, DVM (reviewed by Barri J. Morrison, DVM; updated 2025-06-30)",
       "title": "Brussels Griffon Dog Breed Health and Care",
       "url": "https://petmd.com/dog/breeds/brussels-griffon"
+    },
+    {
+      "id": "S675",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 120 — Irish Red Setter (PDF)",
+      "url": "https://fci.be/Nomenclature/Standards/120g07-en.pdf"
+    },
+    {
+      "id": "S676",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Irish Setter",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/gundog/irish-setter/"
+    },
+    {
+      "id": "S678",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Irish Setter breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/irish-setter"
+    },
+    {
+      "id": "S679",
+      "tier": "B",
+      "publisher": "PetMD — Kristen Seymour (reviewed by Barri J. Morrison, DVM; updated 2023-02-16)",
+      "title": "Irish Setter",
+      "url": "https://www.petmd.com/dog/breeds/irish-setter"
+    },
+    {
+      "id": "S680",
+      "tier": "A",
+      "publisher": "Irish Setter Club of America (AKC parent club)",
+      "title": "Official Breed Standard for the Irish Setter (AKC, approved 1990-08-14)",
+      "url": "https://irishsetterclub.org/breed-information/official-breed-standard/"
     },
     {
       "id": "C1",
