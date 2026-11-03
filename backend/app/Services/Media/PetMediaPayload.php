@@ -41,6 +41,8 @@ final class PetMediaPayload
         public readonly array $phaseSeconds = [],
         /** @var array<string, array{exit_side: string}> Games phase 1: phase clip => facts measured from it (ball_running => exit_side) */
         public readonly array $phaseMeta = [],
+        /** @var array<string, array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}> M6-W03: owned item => its content for the current picture */
+        public readonly array $items = [],
     ) {}
 
     /**
@@ -54,7 +56,7 @@ final class PetMediaPayload
     }
 
     /**
-     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_seconds: object, phase_groups: list<string>, phase_meta: object}
+     * @return array{status: string, reference_image_url: string|null, videos: object, current_video_url: string|null, states: list<string>, expires_at: string|null, keyframes: object, transitions: object, loops: list<string>, state_media: bool, poses: object, phases: object, phase_seconds: object, phase_groups: list<string>, phase_meta: object, items: object}
      */
     public function toArray(): array
     {
@@ -177,6 +179,18 @@ final class PetMediaPayload
              * @var array{ball_running?: array{exit_side: 'left'|'right'|'center'}}
              */
             'phase_meta' => (object) $this->phaseMeta,
+            /**
+             * M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+             * CURRENT picture (life stage) — present only while that content is shown (missing
+             * while it is made, for a pet without AI media, and when the item is shown without
+             * content). `image` = the pet with its item (key image), `video` = the clip made from
+             * it (null when only the picture could be made), `video_seconds` = its length,
+             * `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+             * Signed URLs like every media URL (expire with `expires_at`). Always an object.
+             *
+             * @var array{bed?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, bowls?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_1?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, toy_2?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}, treats?: array{image: string|null, video: string|null, video_seconds: float|null, loop: bool}}
+             */
+            'items' => (object) $this->items,
         ];
     }
 }

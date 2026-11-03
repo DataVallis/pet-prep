@@ -141,7 +141,7 @@ class AiSpendGuard
     /**
      * @throws AiCallException when a cap would be exceeded
      */
-    public function reserve(ModelProfile $profile, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null): AiSpendLedger
+    public function reserve(ModelProfile $profile, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, ?int $petMediaId = null, ?int $itemMediaId = null): AiSpendLedger
     {
         $cost = $profile->estimatedCostUsd();
 
@@ -150,7 +150,7 @@ class AiSpendGuard
         $this->settings->storedAiBudget();
         $this->settings->storedAiLabBudget();
 
-        return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $cost) {
+        return DB::transaction(function () use ($profile, $purpose, $petId, $labResultId, $petMediaId, $itemMediaId, $cost) {
             if (DB::getDriverName() === 'pgsql') {
                 DB::select('SELECT pg_advisory_xact_lock(?)', [self::ADVISORY_LOCK_KEY]);
             }
@@ -171,6 +171,8 @@ class AiSpendGuard
                 'status' => AiSpendLedger::STATUS_RESERVED,
                 'pet_id' => $petId,
                 'pet_media_id' => $petMediaId,
+                // M6-W03: the item_media row (catalogue picture / item image / clip) this call is for.
+                'item_media_id' => $itemMediaId,
                 'media_lab_result_id' => $labResultId,
             ]);
         });

@@ -15,6 +15,7 @@ use Illuminate\Support\Carbon;
  * @property string $item_key
  * @property string $kind durable | consumable
  * @property string $variant
+ * @property string|null $design M6-W03: the design key (config/shop_designs.php); null for treats
  * @property int|null $wish_credit_id
  * @property int $quantity_total
  * @property int $quantity_left
@@ -23,7 +24,7 @@ use Illuminate\Support\Carbon;
  */
 class PetItem extends Model
 {
-    protected $fillable = ['pet_id', 'item_key', 'kind', 'variant', 'wish_credit_id', 'quantity_total', 'quantity_left', 'acquired_at', 'revoked_at'];
+    protected $fillable = ['pet_id', 'item_key', 'kind', 'variant', 'design', 'wish_credit_id', 'quantity_total', 'quantity_left', 'acquired_at', 'revoked_at'];
 
     protected function casts(): array
     {

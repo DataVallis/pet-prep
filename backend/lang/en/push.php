@@ -275,4 +275,19 @@ return [
         'cat_treats' => 'treats',
         'other' => 'something new',
     ],
+    // M6-W03 (SHOP_SPEC §3 step 4, David 2026-11-03): the bought item's content is there. Caretaker
+    // children only (informal); title = the pet's name (when set), the body never names anyone.
+    'item_ready' => [
+        'dog_bed' => 'The new bed is here. Come and see!',
+        'cat_basket' => 'The new basket is here. Come and see!',
+        'dog_bowls' => 'The new bowls are here. Come and see!',
+        'cat_bowls' => 'The new bowls are here. Come and see!',
+        'dog_rope' => 'The new rope toy is here. Come and see!',
+        'dog_squeaky' => 'The new squeaky toy is here. Come and see!',
+        'cat_mouse' => 'The new plush mouse is here. Come and see!',
+        'cat_feather' => 'The new feather wand is here. Come and see!',
+        'dog_treats' => 'The treats are here. Come and see!',
+        'cat_treats' => 'The treats are here. Come and see!',
+        'other' => 'Something new is here. Come and see!',
+    ],
 ];

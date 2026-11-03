@@ -921,6 +921,31 @@ sequenceDiagram
   Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls / treats once; »Na poti …« → »Že ima«
 ```
 
+**M6-W03 item content on the server** (`Media\ItemMediaService`, table `item_media`, WISHES_API §8). One look + design + stage is made once; every later pet of that look gets it for 0 $. Every fal call goes through FalGateway / AiSpendGuard (purpose `item_media`).
+
+```mermaid
+flowchart TD
+  R[redeem → QueuePetItemMedia after commit] --> E
+  N[new pet picture stored / linked<br/>first image · new life stage] --> E
+  SCH[media:item-media every 10 min<br/>catalogue · poll · heal · backfill of owned items] --> E
+  E{ensure pet:<br/>owned design + current picture} -->|no AI media| NM[media_ready true · no content]
+  E -->|look / own row current| OK[content shown]
+  E -->|missing / stale| PIC{design's catalogue picture?}
+  PIC -->|being made| WAIT[image waits]
+  PIC -->|stored or given up| IMG[key image: Nano Banana Pro Edit<br/>stage picture + catalogue picture]
+  WAIT --> IMG
+  IMG -->|webhook → StoreItemMedia| CLIP[clip: Kling 3 s, start frame only]
+  CLIP -->|webhook → StoreItemMedia| SET[settle pets of the row]
+  SET --> EV[PetUpdated item_media_ready + push item_ready<br/>once per pet + item + design]
+  IMG -. fail .-> H{heal}
+  CLIP -. fail .-> H
+  H -->|budget / balance| BW[wait for the budget · not counted]
+  H -->|no_media_generated| VAR[next prompt variant]
+  H -->|http / invalid / generation| RT[≤ 2 retries per chain, ≥ 30 min]
+  H -->|nothing left / timed_out| EX[exhausted → item shown without content<br/>+ one Discord alert per run]
+  EX --> SET
+```
+
 ## 6. Data model (core)
 
 Family model (M2-01, ADR-012): `families` own pets and quiet hours; `family_user` puts parents and children in a family; `pet_caretakers` links children to pets (shared pet = several rows). `users.parent_id` and `pets.user_id` are deprecated mirrors.

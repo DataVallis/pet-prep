@@ -100,6 +100,8 @@ export function makeMedia(overrides: Partial<PetMedia> = {}): PetMedia {
     phase_seconds: {},
     // GAMES_SPEC phase 1 (additive): nothing measured from the clips yet.
     phase_meta: {},
+    // M6-W03 (additive): no bought item content.
+    items: {},
     ...overrides,
   };
 }

@@ -569,6 +569,13 @@ return [
             'body' => 'Posnetek šole / igre (ali referenčna slika, ki jo potrebuje) ni uspel niti po vseh samodejnih poskusih (ponovitve, različice poziva), je potekel ali čaka pregled. Ljubljenčkov preklopljenih v PREPROSTI način: :simple — dejavnost ostane igralna s klasičnim prizorom (skrbnik ni potreben) in se sama vrne v polni način, ko so posnetki narejeni. Po želji: Ljubljenčki → AI mediji → »Generate missing« / Regenerate / »Approve anyway«. Seznam: php artisan media:retry-activity-clips --dry-run',
         ],
     ],
+    // M6-W03: AI vsebine kupljenih stvari, ki niso uspele niti po samodejnih poskusih (ItemMediaService::heal).
+    'item_media' => [
+        'discord' => [
+            'title' => 'Vsebine stvari: :count slik / posnetkov stvari dokončno neuspelih',
+            'body' => 'AI vsebina kupljene stvari (slika v katalogu, slika ali posnetek ljubljenčka s stvarjo) ni uspela niti po vseh samodejnih poskusih (ponovitve, različice poziva) ali je potekla. Stvari se že prikazujejo brez te vsebine — skrbnik ni potreben. Po želji: Shop → Item media → Regenerate (ali Ljubljenčki → Item media → »Generate missing«). Seznam: php artisan media:item-media --dry-run',
+        ],
+    ],
     'app_errors' => [
         'heading' => 'Napake v aplikaciji',
         'description' => 'Sesutja in napake prikaza, ki jih pošlje mobilna aplikacija (M5-05). Združeno po napaki; ne hranimo uporabnika, družine ali ljubljenčka — samo vlogo (starš / otrok / odjavljen). Hranimo 30 dni.',

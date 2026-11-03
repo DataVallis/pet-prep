@@ -284,6 +284,16 @@ class NotificationService
         return $this->escalation($pet, PushType::WishCreated, (string) $wish->id);
     }
 
+    /**
+     * M6-W03: the content of a bought item is there — the pet's caretaker children (payload
+     * {type, pet_id} only; the body names the item, never the pet or the child; title = the
+     * pet's name when set). Called once per (pet, item, design) by ItemMediaService::settle.
+     */
+    public function itemReady(Pet $pet, string $itemKey): ?PushNotification
+    {
+        return $this->escalation($pet, PushType::ItemReady, $itemKey);
+    }
+
     /** Minutes of outside-quiet time before a scoop deadline when the litter reminder is decided. */
     public const LITTER_REMINDER_MINUTES = 60;
 
@@ -657,6 +667,8 @@ class NotificationService
             PushType::CareReminder => $this->careReminderParents($pet),
             // M6-W01: buying is the parent's business.
             PushType::WishCreated => $parents(),
+            // M6-W03: the child's news — the pet's caretaker children.
+            PushType::ItemReady => $children(),
         };
 
         return $list->unique('user_id')->values()->all();
@@ -683,6 +695,10 @@ class NotificationService
         }
         // M6-W01: one per wish; WishService limits it to one per child per 10 minutes.
         if ($type === PushType::WishCreated) {
+            return false;
+        }
+        // M6-W03: once per (pet, item, design) — ItemMediaService::settle guards with item_media_notices.
+        if ($type === PushType::ItemReady) {
             return false;
         }
 
@@ -801,6 +817,10 @@ class NotificationService
             $wish = $this->openWish($notification);
 
             return $wish === null ? null : ['variant' => WishService::pushVariant($wish->item_key, $pet->speciesValue()), 'replace' => []];
+        }
+        // M6-W03: the item (metric = item key) → its variant for the species (dog_bed, cat_basket, …).
+        if ($notification->type === PushType::ItemReady) {
+            return ['variant' => WishService::pushVariant((string) $notification->metric, $pet->speciesValue()), 'replace' => []];
         }
         // M5-R06-04 (M3-12): the play reminder only when the wand game can start now.
         if ($notification->type === PushType::PlayReminder) {

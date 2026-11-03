@@ -1773,6 +1773,32 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/media/items/{itemMedia}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * GET /api/media/items/{itemMedia}?pet=…&expires=…&v=…&signature=… (M6-W03 »Želje«)
+         * @description A stored item file (ItemMediaService::signedUrl): a design's CATALOGUE picture (no `pet` —
+         *     a product picture of the object alone, no child data, so no listen check: the same picture
+         *     for every family; still a signed, expiring capability) or a pet's item picture / clip
+         *     (`pet` signed into the URL: the row must be that pet's own or its shared look's; a request
+         *     carrying a Sanctum token must be allowed to listen to the pet, like show()). Without `pet`
+         *     (only the URLs fal fetches start frames from) a token is refused, like a shared look's
+         *     pet_media row. 404 while nothing is stored.
+         */
+        get: operations["media.item"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/media/history/{history}": {
         parameters: {
             query?: never;
@@ -1932,8 +1958,12 @@ export interface paths {
          *     (an open wish of this pet the product covers) → bought; other open
          *     wishes of the pet for a covered key → cancelled. Header
          *     `Idempotency-Key` (store transaction id): a repeat → `already_assigned`.
+         *     M6-W03: the item gets the wish's design; without a wish `design` (missing
+         *     → the item's first design); the bundle `designs` {bed, bowls, toy_1} (each
+         *     missing → first design; the wished item keeps the wish's). The item's AI
+         *     content is queued at once (`media_ready` false until it is there).
          *     409 no_credit (retry); 422 already_owned | bundle_not_eligible |
-         *     unknown_product | pet_not_active | wish_mismatch; 404 pet_not_found
+         *     unknown_product | pet_not_active | wish_mismatch | invalid_design; 404 pet_not_found
          * @description POST /api/parent/pets/{pet}/items/redeem
          */
         post: operations["wish.redeem"];
@@ -1955,16 +1985,21 @@ export interface paths {
          *     with `status` available | requested | declined_recently | owned (treats
          *     carry `treats_left`), `open_count` / `open_limit` (3, all pets of the
          *     child), `can_wish` (+ `blocked_reason` game_over | pet_not_started |
-         *     payment_required). 404 `no_pet`
+         *     payment_required). M6-W03: every row lists its `designs` (key, name in the
+         *     request language, catalogue picture URL or null; treats: []), `design` = the
+         *     owned / requested design (else null), and owned rows carry the real
+         *     `media_ready`. 404 `no_pet`
          * @description GET /api/child/wishes
          */
         get: operations["wish.childIndex"];
         put?: never;
         /**
          * Wish for an item (push to the parents, max one per child per 10 min).
+         *     M6-W03: `design` (one of the row's `designs[].key`) is required for an item
+         *     with designs and must be absent for treats.
          *     422 wish_limit_reached | already_requested | already_owned |
          *     declined_recently (+ retry_at) | treats_still_left | unknown_item |
-         *     bundle_not_wishable; 423 game_over | pet_not_started | payment_required
+         *     bundle_not_wishable | invalid_design; 423 game_over | pet_not_started | payment_required
          * @description POST /api/child/wishes
          */
         post: operations["wish.store"];
@@ -1986,7 +2021,8 @@ export interface paths {
         /**
          * Give the pet one treat (max 2 per family-local day; looks only — never a
          *     need, score or certificate). 200 {treats_left, given_today, daily_limit,
-         *     media: null until M6-W03}; 422 no_treats | treat_limit_today (+ next_at =
+         *     media: the treat clip (M6-W03 — `media.items.treats` + `video_url` / `url`)
+         *     or null while it is made / for a pet without AI media}; 422 no_treats | treat_limit_today (+ next_at =
          *     the next local midnight) | pet_sleeping (+ next_at = wake time); 423 as
          *     every child action. Every body carries `state`
          * @description POST /api/child/pet/treat
@@ -2180,6 +2216,11 @@ export interface components {
          */
         CreateWishRequest: {
             item_key: string;
+            /**
+             * @description M6-W03: the design the child picked (`designs[].key` of the catalogue row) — required
+             *     for an item with designs, absent for treats (WishService → 422 `invalid_design`).
+             */
+            design?: string | null;
         };
         /**
          * DevicePlatform
@@ -2618,6 +2659,47 @@ export interface components {
                         exit_side: "left" | "right" | "center";
                     };
                 };
+                /**
+                 * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                 *     CURRENT picture (life stage) — present only while that content is shown (missing
+                 *     while it is made, for a pet without AI media, and when the item is shown without
+                 *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                 *     it (null when only the picture could be made), `video_seconds` = its length,
+                 *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                 *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                 */
+                items: {
+                    bed?: {
+                        image: string | null;
+                        video: string | null;
+                        video_seconds: number | null;
+                        loop: boolean;
+                    };
+                    bowls?: {
+                        image: string | null;
+                        video: string | null;
+                        video_seconds: number | null;
+                        loop: boolean;
+                    };
+                    toy_1?: {
+                        image: string | null;
+                        video: string | null;
+                        video_seconds: number | null;
+                        loop: boolean;
+                    };
+                    toy_2?: {
+                        image: string | null;
+                        video: string | null;
+                        video_seconds: number | null;
+                        loop: boolean;
+                    };
+                    treats?: {
+                        image: string | null;
+                        video: string | null;
+                        video_seconds: number | null;
+                        loop: boolean;
+                    };
+                };
             };
             /**
              * @description M5-R13: the weekly brushing routine can apply to this pet (every profiled
@@ -2767,6 +2849,20 @@ export interface components {
         RedeemItemRequest: {
             product_id: string;
             wish_id?: number | null;
+            /**
+             * @description M6-W03: the design of a purchase without a wish (a wish carries its own); missing →
+             *     the item's first design; unknown → 422 `invalid_design`.
+             */
+            design?: string | null;
+            /**
+             * @description M6-W03: the welcome bundle — a design per item (each optional, default = first design).
+             *     (not `array:bed,…` — Scramble would type every key as required; other keys are ignored)
+             */
+            designs?: {
+                bed?: string | null;
+                bowls?: string | null;
+                toy_1?: string | null;
+            };
         };
         /**
          * RegisterDeviceRequest
@@ -4470,6 +4566,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -5450,6 +5587,47 @@ export interface operations {
                                     ball_running?: {
                                         /** @enum {string} */
                                         exit_side: "left" | "right" | "center";
+                                    };
+                                };
+                                /**
+                                 * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                 *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                 *     while it is made, for a pet without AI media, and when the item is shown without
+                                 *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                 *     it (null when only the picture could be made), `video_seconds` = its length,
+                                 *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                 *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                 */
+                                items: {
+                                    bed?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    bowls?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    toy_1?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    toy_2?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    treats?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
                                     };
                                 };
                             };
@@ -6454,6 +6632,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -7452,6 +7671,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -8454,6 +8714,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -9454,6 +9755,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -10452,6 +10794,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -11458,6 +11841,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -12460,6 +12884,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -13466,6 +13931,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -14468,6 +14974,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -15474,6 +16021,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -16474,6 +17062,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -17472,6 +18101,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -18478,6 +19148,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -19476,6 +20187,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -20482,6 +21234,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -21480,6 +22273,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -22486,6 +23320,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -23488,6 +24363,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -24494,6 +25410,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -25498,6 +26455,47 @@ export interface operations {
                                             exit_side: "left" | "right" | "center";
                                         };
                                     };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                    };
                                 };
                                 /**
                                  * @description M5-T06: is the pet ready (everything it shows stored), what is still on its way,
@@ -26500,6 +27498,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -27703,6 +28742,9 @@ export interface operations {
                         /** @constant */
                         message: "Failure recorded.";
                     } | {
+                        /** @constant */
+                        message: "Item media recorded; storing.";
+                    } | {
                         /** @enum {string} */
                         message: "Image recorded; storing." | "Video recorded; storing.";
                         pet_id: number | null;
@@ -28148,6 +29190,47 @@ export interface operations {
                                         exit_side: "left" | "right" | "center";
                                     };
                                 };
+                                /**
+                                 * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                 *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                 *     while it is made, for a pet without AI media, and when the item is shown without
+                                 *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                 *     it (null when only the picture could be made), `video_seconds` = its length,
+                                 *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                 *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                 */
+                                items: {
+                                    bed?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    bowls?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    toy_1?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    toy_2?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                    treats?: {
+                                        image: string | null;
+                                        video: string | null;
+                                        video_seconds: number | null;
+                                        loop: boolean;
+                                    };
+                                };
                             };
                         };
                         child: {
@@ -28462,6 +29545,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -28985,6 +30109,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -29545,6 +30710,29 @@ export interface operations {
             404: components["responses"]["ModelNotFoundException"];
         };
     };
+    "media.item": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The item media ID */
+                itemMedia: number;
+            };
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": Record<string, never>;
+                };
+            };
+            404: components["responses"]["ModelNotFoundException"];
+        };
+    };
     "media.history.show": {
         parameters: {
             query?: never;
@@ -29764,6 +30952,7 @@ export interface operations {
                             /** @enum {string} */
                             item_key: "bed" | "bowls" | "toy_1" | "toy_2" | "treats";
                             variant: string;
+                            design: string | null;
                             product_id: string | null;
                             /** @constant */
                             status: "open";
@@ -29782,6 +30971,12 @@ export interface operations {
                                 key: "bed" | "bowls" | "toy_1" | "toy_2" | "treats";
                                 variant: string;
                                 product_id: string;
+                                designs: {
+                                    key: string;
+                                    name: string;
+                                    image: string | null;
+                                }[];
+                                design: string | null;
                                 owned?: boolean;
                                 media_ready?: boolean;
                                 treats_left?: number;
@@ -29873,6 +31068,12 @@ export interface operations {
                             key: "bed" | "bowls" | "toy_1" | "toy_2" | "treats";
                             variant: string;
                             product_id: string;
+                            designs: {
+                                key: string;
+                                name: string;
+                                image: string | null;
+                            }[];
+                            design: string | null;
                             owned?: boolean;
                             media_ready?: boolean;
                             treats_left?: number;
@@ -29928,6 +31129,12 @@ export interface operations {
                             /** @enum {string} */
                             kind: "durable" | "consumable";
                             variant: string;
+                            designs: {
+                                key: string;
+                                name: string;
+                                image: string | null;
+                            }[];
+                            design: string | null;
                             /** @enum {string} */
                             status: "available" | "requested" | "declined_recently" | "owned";
                             wish_id?: number;
@@ -29975,6 +31182,8 @@ export interface operations {
                             id: number;
                             /** @enum {string} */
                             item_key: "bed" | "bowls" | "toy_1" | "toy_2" | "treats";
+                            /** @description M6-W03: the design picked (null for treats). */
+                            design: string | null;
                             /** @constant */
                             status: "open";
                             created_at: string;
@@ -30009,11 +31218,14 @@ export interface operations {
                         given_today: number;
                         /** @constant */
                         daily_limit: 2;
-                        /**
-                         * @description M6-W03 adds the treat clip; until then always null (the app shows the picture). When set it
-                         *     will use the existing PetMedia shape (PetMediaPayload: signed `video_url` / `url`), never a fal URL.
-                         */
-                        media: null;
+                        media: {
+                            image: string | null;
+                            video: string | null;
+                            video_seconds: number | null;
+                            loop: boolean;
+                            video_url: string | null;
+                            url: string | null;
+                        } | null;
                         state: {
                             pet: {
                                 id: number;
@@ -30251,6 +31463,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };
@@ -31233,6 +32486,47 @@ export interface operations {
                                         ball_running?: {
                                             /** @enum {string} */
                                             exit_side: "left" | "right" | "center";
+                                        };
+                                    };
+                                    /**
+                                     * @description M6-W03 »Želje« (SHOP_SPEC §4 / §5): the AI content of each item the pet owns, for its
+                                     *     CURRENT picture (life stage) — present only while that content is shown (missing
+                                     *     while it is made, for a pet without AI media, and when the item is shown without
+                                     *     content). `image` = the pet with its item (key image), `video` = the clip made from
+                                     *     it (null when only the picture could be made), `video_seconds` = its length,
+                                     *     `loop` = play it looped (bed, toys) or once (bowls, treats). The OWNED design.
+                                     *     Signed URLs like every media URL (expire with `expires_at`). Always an object.
+                                     */
+                                    items: {
+                                        bed?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        bowls?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_1?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        toy_2?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
+                                        };
+                                        treats?: {
+                                            image: string | null;
+                                            video: string | null;
+                                            video_seconds: number | null;
+                                            loop: boolean;
                                         };
                                     };
                                 };

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ItemMedia;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
@@ -55,7 +56,7 @@ class PetMediaController extends Controller
      * `…/{name}-loop.mp4` / `-release.mp4` too, SchoolClipDerivativeService::derivedPath); `D`: `$` must
      * not match before a trailing newline.
      */
-    public const SAFE_RELATIVE_PATH = '#^(looks/)?[0-9]+/[A-Za-z0-9_-]+(\.[A-Za-z0-9]+)?$#D';
+    public const SAFE_RELATIVE_PATH = '#^(looks/|items/)?[0-9]+/[A-Za-z0-9_-]+(\.[A-Za-z0-9]+)?$#D';
 
     public const ACCEL_HEADER = 'X-Accel-Redirect';
 
@@ -141,11 +142,43 @@ class PetMediaController extends Controller
         return $this->serve($media->pet, $known, $known ? $path : '', 'video/mp4', $service);
     }
 
-    private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service): Response
+    /**
+     * GET /api/media/items/{itemMedia}?pet=…&expires=…&v=…&signature=… (M6-W03 »Želje«)
+     *
+     * A stored item file (ItemMediaService::signedUrl): a design's CATALOGUE picture (no `pet` —
+     * a product picture of the object alone, no child data, so no listen check: the same picture
+     * for every family; still a signed, expiring capability) or a pet's item picture / clip
+     * (`pet` signed into the URL: the row must be that pet's own or its shared look's; a request
+     * carrying a Sanctum token must be allowed to listen to the pet, like show()). Without `pet`
+     * (only the URLs fal fetches start frames from) a token is refused, like a shared look's
+     * pet_media row. 404 while nothing is stored.
+     */
+    public function showItem(ItemMedia $itemMedia, PetMediaService $service): Response
+    {
+        if ($itemMedia->scope === ItemMedia::SCOPE_CATALOGUE) {
+            return $this->serve(null, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service, public: true);
+        }
+
+        $petId = (string) request()->query('pet', '');
+        if ($petId === '') {
+            // fal's copy of a start frame / reference (ItemMediaService::falFetchUrl of a look row):
+            // the signature alone, like a shared look's pet_media row — 403 for any token.
+            return $this->serve(null, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service);
+        }
+        $pet = ctype_digit($petId) ? Pet::find((int) $petId) : null;
+        $belongs = $pet !== null && ($itemMedia->scope === ItemMedia::SCOPE_PET
+            ? (int) $itemMedia->pet_id === (int) $pet->id
+            : $pet->pet_look_id !== null && (int) $itemMedia->pet_look_id === (int) $pet->pet_look_id);
+        abort_unless($belongs, 404);
+
+        return $this->serve($pet, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service);
+    }
+
+    private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service, bool $public = false): Response
     {
         $user = Auth::guard('sanctum')->user();
 
-        if ($user instanceof User && ($pet === null || ! $user->can('listen', $pet))) {
+        if (! $public && $user instanceof User && ($pet === null || ! $user->can('listen', $pet))) {
             abort(403);
         }
 

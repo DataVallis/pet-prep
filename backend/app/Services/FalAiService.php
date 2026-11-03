@@ -1914,6 +1914,106 @@ class FalAiService
         ];
     }
 
+    // ──────────────────────────────────────────────────────────────
+    //  M6-W03 item content (queued at fal like key images; purpose item_media)
+    // ──────────────────────────────────────────────────────────────
+
+    /**
+     * M6-W03: the CATALOGUE picture of an item design — text-to-image (media.item_media.picture_profile,
+     * square), queued with the signed webhook (`images[0].url`). Call only from a queued job.
+     *
+     * @return array{request_id: string, status_url: string|null, response_url: string|null, profile: string}
+     *
+     * @throws AiCallException (Disabled when fal or the profile is off)
+     */
+    public function submitItemPicture(string $prompt, int $seed, int $itemMediaId): array
+    {
+        $profile = $this->profiles->itemPicture();
+
+        if (! $this->isEnabled() || $profile === null) {
+            throw new AiCallException(AiCallFailure::Disabled);
+        }
+
+        $input = $profile->imageInput($prompt, $seed);
+        if (array_key_exists('aspect_ratio', $input)) {
+            $input['aspect_ratio'] = (string) config('media.item_media.picture_aspect_ratio', '1:1');
+        }
+
+        return $this->submitItem($profile, $input, $itemMediaId, self::KEYFRAME_SUBMIT_TIMEOUT_SECONDS);
+    }
+
+    /**
+     * M6-W03: the KEY IMAGE of an item — an edit of the stage's reference image (first
+     * reference) with the animal and the item; `$designPictureUrl` (the design's stored
+     * catalogue picture) is passed as a SECOND reference image when the profile takes a list
+     * (Nano Banana Pro Edit `image_urls`), so the object looks like its catalogue picture.
+     *
+     * @return array{request_id: string, status_url: string|null, response_url: string|null, profile: string}
+     *
+     * @throws AiCallException (Disabled when fal or the profile is off)
+     */
+    public function submitItemImage(string $prompt, string $referenceImageUrl, ?string $designPictureUrl, int $seed, ?int $petId, int $itemMediaId): array
+    {
+        $profile = $this->profiles->itemImage();
+
+        if (! $this->isEnabled() || $profile === null) {
+            throw new AiCallException(AiCallFailure::Disabled);
+        }
+
+        $input = $profile->editInput($prompt, $referenceImageUrl, $seed);
+        if ($designPictureUrl !== null && is_array($input[$profile->imageParam] ?? null)) {
+            $input[$profile->imageParam][] = $designPictureUrl;
+        }
+
+        return $this->submitItem($profile, $input, $itemMediaId, self::KEYFRAME_SUBMIT_TIMEOUT_SECONDS, $petId);
+    }
+
+    /**
+     * M6-W03: the CLIP of an item — the state video profile at `clip_seconds.item`, start frame =
+     * the item key image ONLY (like the state loops since 2026-10-23: never the same image as
+     * end frame — Kling froze such clips).
+     *
+     * @return array{request_id: string, status_url: string|null, response_url: string|null, profile: string, duration_seconds: int}
+     *
+     * @throws AiCallException
+     */
+    public function submitItemClip(string $prompt, string $negativePrompt, string $startImageUrl, ?int $petId, int $itemMediaId): array
+    {
+        $profile = $this->profiles->clipVideo('item');
+
+        if (! $this->isEnabled()) {
+            throw new AiCallException(AiCallFailure::Disabled);
+        }
+
+        $submitted = $this->submitItem($profile, $profile->videoInput($startImageUrl, $prompt, $negativePrompt), $itemMediaId, 120, $petId);
+
+        return $submitted + ['duration_seconds' => $profile->durationSeconds];
+    }
+
+    /**
+     * @param  array<string, mixed>  $input
+     * @return array{request_id: string, status_url: string|null, response_url: string|null, profile: string}
+     */
+    private function submitItem(ModelProfile $profile, array $input, int $itemMediaId, int $timeoutSeconds, ?int $petId = null): array
+    {
+        $submitted = $this->gateway->submit(
+            $profile,
+            $input,
+            AiSpendPurpose::ItemMedia,
+            $this->webhookUrl(),
+            petId: $petId,
+            timeoutSeconds: $timeoutSeconds,
+            itemMediaId: $itemMediaId,
+        );
+
+        return [
+            'request_id' => $submitted['request_id'],
+            'status_url' => $submitted['status_url'],
+            'response_url' => $submitted['response_url'],
+            'profile' => $profile->key,
+        ];
+    }
+
     /** The fal queue answers a submit within a second or two; a hung one is cut well before the job timeout. */
     public const KEYFRAME_SUBMIT_TIMEOUT_SECONDS = 30;
 

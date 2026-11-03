@@ -194,6 +194,8 @@ final class PushCopy
             PushType::CareReminder => $line('care_reminder.'.(str_starts_with((string) $metric, 'bath') ? 'bath' : 'groomer_visit')),
             // M6-W01: parents only, formal; `variant` = the item variant (dog_bed …) → its accusative form.
             PushType::WishCreated => $line('wish_created.body', ['item' => $line('wish_items.'.(is_string($variant) && Lang::has("push.wish_items.{$variant}", $locale, false) ? $variant : 'other'))]),
+            // M6-W03: the child's news; `variant` = the item variant → one whole sentence per item (no declension).
+            PushType::ItemReady => $line('item_ready.'.(is_string($variant) && Lang::has("push.item_ready.{$variant}", $locale, false) ? $variant : 'other')),
         };
     }
 

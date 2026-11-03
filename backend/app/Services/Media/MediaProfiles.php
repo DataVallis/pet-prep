@@ -82,6 +82,38 @@ class MediaProfiles
     }
 
     /**
+     * M6-W03: the text-to-image profile of the item CATALOGUE pictures and the image-to-image
+     * profile of the pet-with-item key images (media.item_media.*), or null when unknown /
+     * disabled — then no item content is made (items are shown without it).
+     */
+    public function itemPicture(): ?ModelProfile
+    {
+        return $this->enabledImage((string) config('media.item_media.picture_profile', 'nano_banana_pro'));
+    }
+
+    public function itemImage(): ?ModelProfile
+    {
+        return $this->enabledImage((string) config('media.item_media.image_profile', 'nano_banana_pro_edit'));
+    }
+
+    private function enabledImage(string $key): ?ModelProfile
+    {
+        if (! is_array(config("media.profiles.image.{$key}"))) {
+            static $logged = [];
+            if (! isset($logged[$key])) {
+                $logged[$key] = true;
+                Log::error('MediaProfiles: unknown item media profile configured', ['profile' => $key]);
+            }
+
+            return null;
+        }
+
+        $profile = $this->image($key);
+
+        return $profile->enabled ? $profile : null;
+    }
+
+    /**
      * M5-T08: image-to-image profile for the state KEY IMAGES (Nano Banana Pro
      * Edit, David 2026-10-21), or null when disabled / unknown — then no key
      * images, loops or transitions are made (the pre-M5-T08 media set).

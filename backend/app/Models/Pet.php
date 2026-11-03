@@ -615,6 +615,17 @@ class Pet extends Model
     }
 
     /**
+     * M6-W03 (admin only): the item content rows this pet shows — its shared look's rows (every
+     * design / stage of the look), else its own. Not for eager loading (depends on the record).
+     */
+    public function itemMediaRows(): HasMany
+    {
+        return $this->pet_look_id !== null
+            ? $this->hasMany(ItemMedia::class, 'pet_look_id', 'pet_look_id')
+            : $this->hasMany(ItemMedia::class, 'pet_id');
+    }
+
+    /**
      * AI media slots (reference image + state videos, M4-03 / M4-05).
      */
     public function media(): HasMany

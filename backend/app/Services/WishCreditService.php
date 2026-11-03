@@ -3,9 +3,11 @@
 namespace App\Services;
 
 use App\Enums\ChallengeCreditRevokeReason;
+use App\Enums\Species;
 use App\Enums\WishStatus;
 use App\Events\PetUpdated;
 use App\Exceptions\WishException;
+use App\Jobs\QueuePetItemMedia;
 use App\Models\Family;
 use App\Models\Pet;
 use App\Models\PetItem;
@@ -14,6 +16,7 @@ use App\Models\PurchaseEvent;
 use App\Models\ShopItem;
 use App\Models\User;
 use App\Models\WishCredit;
+use App\Services\Shop\ItemDesigns;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 
@@ -64,18 +67,24 @@ class WishCreditService
     }
 
     /**
+     * M6-W03 designs: a durable item gets the design of the wish it is bought for (the child's
+     * pick); without a wish the parent's `$design`; the bundle (S12) takes `$designs[key]` per
+     * item, the wish's design for the wished item, else each item's FIRST design. A missing or
+     * unknown design never refuses a paid purchase (QA #655 m1) — it falls back to the first design.
+     *
+     * @param  array<string, string|null>  $designs  bundle: item key => design
      * @return array{status: 'assigned'|'already_assigned', pet: Pet, credit: WishCredit}
      *
      * @throws WishException unknown_product / pet_not_active / wish_mismatch / already_owned / bundle_not_eligible (422), no_credit (409)
      */
-    public function redeem(Pet $pet, User $parent, string $productId, ?int $wishId, ?string $idempotencyKey): array
+    public function redeem(Pet $pet, User $parent, string $productId, ?int $wishId, ?string $idempotencyKey, ?string $design = null, array $designs = []): array
     {
         $item = WishService::itemForProduct($productId);
         if ($item === null) {
             throw new WishException('unknown_product', 'This is not a wish product.');
         }
 
-        return DB::transaction(function () use ($pet, $parent, $productId, $item, $wishId, $idempotencyKey): array {
+        $redeemed = DB::transaction(function () use ($pet, $parent, $productId, $item, $wishId, $idempotencyKey, $design, $designs): array {
             Family::whereKey($pet->family_id)->lockForUpdate()->first(['id']);
             $locked = Pet::whereKey($pet->id)->lockForUpdate()->firstOrFail();
 
@@ -113,6 +122,9 @@ class WishCreditService
                 throw new WishException('already_owned', 'The pet already has this item.');
             }
 
+            // M6-W03: the design of every covered durable item — decided before a credit is used.
+            $chosen = $this->designsFor($item, $locked->speciesValue(), $wish, $design, $designs);
+
             // QA #417 m1: the purchase the key names (store transaction id) first, else the oldest unused one.
             $available = fn () => WishCredit::where('family_id', $locked->family_id)->where('product_id', $productId)->available();
             $credit = $idempotencyKey !== null
@@ -144,6 +156,7 @@ class WishCreditService
                     'item_key' => $part->key,
                     'kind' => $part->isDurable() ? ShopItem::KIND_DURABLE : ShopItem::KIND_CONSUMABLE,
                     'variant' => (string) $part->variantFor($species),
+                    'design' => $chosen[$part->key] ?? null,
                     'wish_credit_id' => $credit->id,
                     'quantity_total' => $quantity,
                     'quantity_left' => $quantity,
@@ -158,9 +171,39 @@ class WishCreditService
                 ->update(['status' => WishStatus::Cancelled->value, 'decided_by_user_id' => $parent->id, 'decided_at' => $now, 'updated_at' => $now]);
 
             PetUpdated::afterCommit($locked, 'item_acquired');
+            // M6-W03: its AI content (a shared look's already made content costs 0 $; a pet
+            // without AI media is ready at once) — after commit, outside the transaction.
+            QueuePetItemMedia::dispatch($locked->id)->afterCommit();
 
             return ['status' => 'assigned', 'pet' => $locked, 'credit' => $credit];
         });
+
+        return $redeemed;
+    }
+
+    /**
+     * M6-W03: item key => design for the durable items a purchase covers (treats: none). A paid
+     * purchase is NEVER refused over a cosmetic choice (QA #655 m1): the wish's design first, else
+     * the requested one when it is a valid design of the item, else the item's first design.
+     *
+     * @param  array<string, string|null>  $designs
+     * @return array<string, string|null>
+     */
+    private function designsFor(ShopItem $item, Species $species, ?PetWish $wish, ?string $design, array $designs): array
+    {
+        $chosen = [];
+        foreach ($item->covers as $key) {
+            if (! ItemDesigns::hasDesigns($key, $species)) {
+                continue;
+            }
+            $asked = $item->isBundle() ? ($designs[$key] ?? null) : $design;
+            $fromWish = $wish !== null && $wish->item_key === $key && ItemDesigns::isValid($key, $species, $wish->design) ? $wish->design : null;
+            $chosen[$key] = $fromWish
+                ?? (ItemDesigns::isValid($key, $species, $asked) ? $asked : null)
+                ?? ItemDesigns::defaultFor($key, $species);
+        }
+
+        return $chosen;
     }
 
     /**

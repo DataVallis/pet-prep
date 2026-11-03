@@ -13,4 +13,7 @@ enum AiSpendPurpose: string
 
     /** Automatic clip quality check (vision LLM, David 2026-10-23) — production budget. */
     case QualityCheck = 'quality_check';
+
+    /** M6-W03: AI content of »Želje« items (catalogue pictures, pet-with-item images / clips) — production budget. */
+    case ItemMedia = 'item_media';
 }

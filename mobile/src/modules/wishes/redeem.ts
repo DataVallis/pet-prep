@@ -68,7 +68,15 @@ export async function redeemWithRetry(req: RedeemRequest, deps: RedeemDeps = def
   const idempotent = req.transactionId !== null;
   for (let attempt = 0; ; attempt += 1) {
     try {
-      const res = await deps.redeem(req.petId, { product_id: req.productId, wish_id: req.wishId, ...(req.choice ?? {}) }, req.transactionId);
+      // The generated body types `design` / `designs` as optional (no null) — send only what is chosen.
+      const choice = req.choice ?? {};
+      const body = {
+        product_id: req.productId,
+        wish_id: req.wishId,
+        ...(choice.design ? { design: choice.design } : {}),
+        ...(choice.designs ? { designs: choice.designs } : {}),
+      };
+      const res = await deps.redeem(req.petId, body, req.transactionId);
       return { status: 'assigned', items: readParentPetItems((res as { items?: unknown }).items, req.species ?? 'dog') };
     } catch (error) {
       if (retryable(error, idempotent) && attempt < REDEEM_RETRIES) {

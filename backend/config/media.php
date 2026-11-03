@@ -183,7 +183,32 @@ return [
             // Frugal clips C (David 2026-10-30, switch `frugal_clips`): the low-motion loops
             // (`frugal.short_loop_states`) are generated 3 s and served as a ping-pong.
             'state_short' => 3,
+            // M6-W03 (SHOP_SPEC §5): the clip of a bought item (bed / toys loop, bowls / treats once).
+            'item' => 3,
         ],
+    ],
+
+    /*
+    | M6-W03 »AI vsebine stvari« (SHOP_SPEC §5, David 2026-11-03) — Media\ItemMediaService.
+    | Catalogue picture of a design = text-to-image (`picture_profile`, the object alone,
+    | square); the animal with the item = an EDIT of the pet's / look's reference image of
+    | the stage (`image_profile`, Nano Banana Pro Edit — its `image_urls` is a LIST, so the
+    | design's catalogue picture is sent as a second reference: the same object in both
+    | pictures); the clip = the state video profile at `state_media.clip_seconds.item`,
+    | start frame only. Everything through FalGateway (purpose `item_media`, production
+    | budget). Self-healing like ActivityClipRetryService: ≤ `max_auto_retries` retries per
+    | failure chain ≥ `retry_after_minutes` after the failure; fal's `no_media_generated`
+    | → the next prompt variant (never the identical request); then the item is shown
+    | without its content and one Discord alert (counts only) is posted.
+    */
+    'item_media' => [
+        'picture_profile' => env('AI_ITEM_PICTURE_PROFILE', 'nano_banana_pro'),
+        'image_profile' => env('AI_ITEM_IMAGE_PROFILE', 'nano_banana_pro_edit'),
+        'picture_aspect_ratio' => '1:1',
+        'max_auto_retries' => 2,
+        'retry_after_minutes' => 30,
+        // Pass the design's catalogue picture to the item image edit as a 2nd reference image.
+        'picture_as_reference' => true,
     ],
 
     /*

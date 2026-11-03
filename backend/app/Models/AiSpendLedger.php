@@ -37,6 +37,8 @@ class AiSpendLedger extends Model
         'request_id',
         'pet_id',
         'pet_media_id',
+        // M6-W03: an item_media row (»Želje« item content).
+        'item_media_id',
         'media_lab_result_id',
     ];
 

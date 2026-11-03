@@ -51,6 +51,12 @@ class MediaDiskReportCommand extends Command
         $rows[] = ['derived school clips', (int) $derived->files, $mb((int) $derived->bytes), '–', '–'];
         $rows[] = ['growth album (history)', (int) $history->files, $mb((int) $history->bytes), '–', '–'];
         $rows[] = ['open clip candidates', (int) $candidates->files, $mb((int) $candidates->bytes), '–', '–'];
+        // M6-W03: »Želje« item content (own table; catalogue pictures, shared look and own-pet rows).
+        DB::table('item_media')->whereNotNull('storage_path')->groupBy('scope')->orderBy('scope')
+            ->selectRaw('scope, count(*) as files, coalesce(sum(bytes), 0) as bytes')->get()
+            ->each(function ($r) use (&$rows, $mb): void {
+                $rows[] = ['item media ('.$r->scope.')', (int) $r->files, $mb((int) $r->bytes), '–', '–'];
+            });
 
         $this->info('Media by kind (pet_media.bytes; a shared look file counted once):');
         $this->table(['kind', 'files', 'size', 'compressed', 'saved'], $rows);
@@ -114,7 +120,7 @@ class MediaDiskReportCommand extends Command
         $this->line(sprintf('Files on disk: %d, %s.', count($files), $mb($total)));
         $this->line(sprintf('Compressed-away originals awaiting deletion (grace period): %d, %s; interrupted swaps: %d.', count($awaiting), $mb($awaitingBytes), $replacing));
         $this->line(sprintf('Frugal-clip previews (deleted after 24 h): %d, %s.', $previews, $mb($previewBytes)));
-        $this->line(sprintf('Orphans (no pet_media / history / derivative / contact sheet row): %d, %s.', count($orphans), $mb($orphanBytes)));
+        $this->line(sprintf('Orphans (no pet_media / history / derivative / contact sheet / item_media row): %d, %s.', count($orphans), $mb($orphanBytes)));
         foreach (array_slice($orphans, 0, $listMax) as $path) {
             $this->line('  orphan '.$path);
         }
