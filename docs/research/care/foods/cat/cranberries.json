@@ -59,7 +59,7 @@
     "de": "Ja, ein paar Cranberrys sind als gelegentliches Leckerli in Ordnung. Laut Pet Poison Helpline sind Cranberrys roh wie verarbeitet unbedenklich für Haustiere, doch getrocknete Cranberrys, Saft, Soße und Gelee enthalten oft zugesetzten Zucker oder Süßungsmittel – prüfen Sie also zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
     "fr": "Oui, quelques canneberges conviennent comme friandise occasionnelle. Selon le Pet Poison Helpline, les canneberges sont sans danger pour les animaux, crues ou transformées, mais les canneberges séchées, le jus, la sauce et la gelée contiennent souvent du sucre ajouté ou des édulcorants : vérifiez d’abord sur l’étiquette l’absence de xylitol ou d’ingrédients à base de raisin.",
     "es": "Sí, unos pocos arándanos rojos están bien como premio ocasional. Pet Poison Helpline los considera seguros para las mascotas, crudos o procesados, pero los deshidratados, el zumo, la salsa y la jalea suelen llevar azúcar u otros edulcorantes añadidos, así que comprueba antes en la etiqueta que no lleven xilitol ni ingredientes derivados de la uva.",
-    "it": "Sì, qualche mirtillo rosso va bene come premio occasionale. Secondo Pet Poison Helpline i mirtilli rossi sono sicuri per gli animali domestici, sia crudi sia lavorati, ma mirtilli rossi essiccati, succo, salsa e gelatina contengono spesso zucchero o dolcificanti aggiunti, quindi controlla prima in etichetta che non contengano xilitolo o ingredienti a base di uva.",
+    "it": "Sì, qualche mirtillo rosso va bene come premio occasionale. Secondo Pet Poison Helpline i mirtilli rossi sono sicuri per gli animali domestici, sia crudi sia lavorati, ma mirtilli rossi essiccati, succo, salsa e gelatina contengono spesso zucchero o dolcificanti aggiunti, quindi controlla prima l’etichetta che non contengano xilitolo o ingredienti a base di uva.",
     "pt": "Sim, alguns arandos não fazem mal como guloseima ocasional. A Pet Poison Helpline considera os arandos seguros para animais, crus ou processados, mas os arandos desidratados, o sumo, o molho e a geleia têm muitas vezes açúcar ou adoçantes adicionados, por isso confirma primeiro no rótulo se têm xilitol ou ingredientes de uva.",
     "nl": "Ja, een paar veenbessen zijn prima als snoepje voor af en toe. Volgens Pet Poison Helpline zijn veenbessen veilig voor huisdieren, rauw of bewerkt, maar gedroogde veenbessen, veenbessensap, -saus en -gelei bevatten vaak toegevoegde suiker of zoetstoffen, dus controleer eerst het etiket op xylitol of ingrediënten op basis van druiven.",
     "pl": "Tak, kilka owoców żurawiny jest w porządku jako okazjonalny smakołyk. Pet Poison Helpline uznaje żurawinę za bezpieczną dla zwierząt, zarówno surową, jak i przetworzoną, ale suszona żurawina, sok, sos i galaretka często mają dodatek cukru lub słodzików, więc najpierw sprawdź na etykiecie, czy nie zawierają ksylitolu ani składników z winogron.",
@@ -111,7 +111,7 @@
     "de": "Ab und zu ein paar Beeren, die zur täglichen Futtermenge Ihrer Katze zählen. Bei getrockneten Cranberrys, Saft, Soße oder Gelee prüfen Sie zuerst das Etikett auf Xylit oder Zutaten aus Weintrauben.",
     "fr": "Quelques baies de temps en temps, comptées dans la ration quotidienne de votre chat. Pour les canneberges séchées, le jus, la sauce ou la gelée, vérifiez d’abord sur l’étiquette l’absence de xylitol ou d’ingrédients à base de raisin.",
     "es": "Unos pocos arándanos rojos de vez en cuando, contándolos como parte de la comida diaria de tu gato. Si son deshidratados o en zumo, salsa o jalea, revisa antes en la etiqueta que no lleven xilitol ni ingredientes derivados de la uva.",
-    "it": "Qualche mirtillo rosso ogni tanto, calcolato nella razione giornaliera del tuo gatto. Per mirtilli rossi essiccati, succo, salsa o gelatina, controlla prima in etichetta che non contengano xilitolo o ingredienti a base di uva.",
+    "it": "Qualche mirtillo rosso ogni tanto, calcolato nella razione giornaliera del tuo gatto. Per mirtilli rossi essiccati, succo, salsa o gelatina, controlla prima l’etichetta che non contengano xilitolo o ingredienti a base di uva.",
     "pt": "Algumas bagas de vez em quando, contadas na alimentação diária do teu gato. No caso de arandos desidratados, sumo, molho ou geleia, confirma primeiro no rótulo se têm xilitol ou ingredientes de uva.",
     "nl": "Af en toe een paar bessen, meegeteld bij het dagelijkse eten van je kat. Bij gedroogde veenbessen, veenbessensap, -saus of -gelei: controleer eerst het etiket op xylitol of ingrediënten op basis van druiven.",
     "pl": "Od czasu do czasu kilka owoców żurawiny, wliczonych do dziennej porcji jedzenia kota. W przypadku suszonej żurawiny, soku, sosu lub galaretki najpierw sprawdź na etykiecie, czy nie zawierają ksylitolu ani składników z winogron.",
@@ -303,7 +303,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4883e42cfaec1f6b9b822f39600b382a06ce2044618c5e0d90e994a8a29adf7a"
+      "verified_hash": "eca5a0efad90a110705ea46b4679915bae08d9ed510005d69b82299e6e757a83"
     },
     "pt": {
       "status": "verified",

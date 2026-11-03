@@ -76,7 +76,7 @@
     "de": "Cats Protection zählt gegarten Lachs ohne Gräten und Gewürze zu den unbedenklichen Festtagsspeisen und sagt, dass kleine Mengen gegarter Fisch wie Lachs geeignet sind. Laut RSPCA Australia kann Lachs aus der Dose in Quellwasser ein gelegentliches Leckerli sein. Roher Fisch ist etwas anderes: Er kann Bakterien und Parasiten enthalten.",
     "fr": "Cats Protection cite le saumon cuit sans arêtes ni assaisonnement parmi les aliments de fête sans danger et indique que de petites quantités de poisson cuit, comme le saumon, conviennent. Selon la RSPCA Australia, le saumon en conserve au naturel (à l’eau) peut être une friandise occasionnelle. Le poisson cru, c’est autre chose : il peut contenir des bactéries et des parasites.",
     "es": "Cats Protection incluye el salmón cocinado sin espinas ni condimentos entre los alimentos navideños seguros y dice que pequeñas cantidades de pescado cocinado, como el salmón, son adecuadas. RSPCA Australia dice que el salmón en lata al natural (en agua) puede ser un premio ocasional. El pescado crudo es otra cosa: puede contener bacterias y parásitos.",
-    "it": "Cats Protection inserisce il salmone cotto senza lische né condimenti tra i cibi delle feste sicuri e afferma che piccole quantità di pesce cotto, come il salmone, sono adatte. RSPCA Australia dice che il salmone in scatola al naturale (in acqua) può essere un premio occasionale. Il pesce crudo è un’altra cosa: può contenere batteri e parassiti.",
+    "it": "Cats Protection inserisce il salmone cotto senza lische né condimenti tra i cibi sicuri delle feste e afferma che piccole quantità di pesce cotto, come il salmone, sono adatte. RSPCA Australia dice che il salmone in scatola al naturale (in acqua) può essere un premio occasionale. Il pesce crudo è un’altra cosa: può contenere batteri e parassiti.",
     "pt": "A Cats Protection inclui o salmão cozinhado, sem espinhas nem temperos, entre os alimentos festivos seguros e diz que pequenas quantidades de peixe cozinhado, como o salmão, são adequadas. A RSPCA Australia afirma que o salmão em lata ao natural (em água) pode ser uma guloseima ocasional. O peixe cru é diferente: pode ter bactérias e parasitas.",
     "nl": "Cats Protection noemt gekookte zalm zonder graten of kruiden bij de veilige feestdagenhapjes en zegt dat kleine hoeveelheden gekookte vis zoals zalm geschikt zijn. Volgens RSPCA Australia kan zalm uit blik in bronwater af en toe een snoepje zijn. Rauwe vis is iets anders: die kan bacteriën en parasieten bevatten.",
     "pl": "Cats Protection wymienia gotowanego łososia bez ości i przypraw wśród bezpiecznych potraw świątecznych i podaje, że małe ilości gotowanej ryby, takiej jak łosoś, są odpowiednie. RSPCA Australia podaje, że łosoś z puszki w wodzie źródlanej może być okazjonalnym smakołykiem. Z surową rybą jest inaczej: może przenosić bakterie i pasożyty.",
@@ -239,7 +239,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b1911c15698c4023abceb465b9765b1d902c26a3cc4c5ccf3ae37af3ee8e3e3d"
+      "verified_hash": "2eda713594eaa5e8c7798a1e1321c6bb02c5415b54e3b56a2f432fb65f6760a5"
     },
     "pt": {
       "status": "verified",

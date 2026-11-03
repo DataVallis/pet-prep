@@ -239,7 +239,7 @@
         "de": "Nüsse, die auf dem Boden liegen, können feucht werden und schimmeln, und dieser Schimmel kann für Hunde giftig sein.",
         "fr": "Les noix restées par terre peuvent prendre l’humidité et moisir, et ces moisissures peuvent être toxiques pour les chiens.",
         "es": "Los frutos secos que quedan en el suelo pueden humedecerse y desarrollar moho, que puede ser tóxico para los perros.",
-        "it": "La frutta a guscio che resta a terra può diventare umida e fare la muffa, che può essere tossica per i cani.",
+        "it": "La frutta a guscio che resta a terra può inumidirsi e ammuffire, e la muffa può essere tossica per i cani.",
         "pt": "Os frutos secos caídos no chão podem ficar húmidos e ganhar bolor, que pode ser tóxico para os cães.",
         "nl": "Noten die op de grond liggen, kunnen vochtig worden en gaan schimmelen, en die schimmel kan giftig zijn voor honden.",
         "pl": "Orzechy leżące na ziemi mogą zawilgotnieć i spleśnieć, a pleśń może być toksyczna dla psów.",
@@ -374,7 +374,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "377843287d5e71fd8679314e3293c69a9e5ca7c585abfa923eab4cd1b519191e"
+      "verified_hash": "f342600313d96e9737b4a2254ca90dbdbe53fdfadf15ca83fde64d32d173e814"
     },
     "pt": {
       "status": "verified",

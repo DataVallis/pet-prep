@@ -76,7 +76,7 @@
     "de": "Ungewürztes, gegartes Rindfleisch kann eine gesunde Proteinquelle sein – in mundgerechte Stücke geschnitten und mit abgeschnittenem Fett. Burger und Steaks enthalten oft Salz, Gewürze und Toppings, die gefährlich sein können; Zwiebeln und Knoblauch sind für Hunde giftig. Rohes Steak oder rohe Burger-Patties können Salmonellen und E. coli übertragen, und gegarte Knochen jeder Art dürfen Hunde nie bekommen.",
     "fr": "Cuit et sans assaisonnement, le bœuf peut être une protéine saine, coupé en petits morceaux et dégraissé. Les burgers et les steaks contiennent souvent du sel, des épices et des garnitures qui peuvent être dangereux ; l’oignon et l’ail sont toxiques pour les chiens. Le steak ou le burger cru peut contenir des salmonelles et des E. coli, et il ne faut jamais donner d’os cuits, quels qu’ils soient.",
     "es": "La ternera cocinada y sin condimentar puede ser una proteína sana, cortada en trocitos y sin la grasa. Las hamburguesas y los filetes suelen llevar sal, especias y añadidos que pueden ser peligrosos; la cebolla y el ajo son tóxicos para los perros. Un filete o una hamburguesa crudos pueden contener Salmonella y E. coli, y nunca hay que darle huesos cocinados de ningún tipo.",
-    "it": "Il manzo cotto e non condito può essere una proteina sana, tagliato a bocconcini e privato del grasso. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
+    "it": "Il manzo cotto e non condito, tagliato a bocconcini e privato del grasso, può essere una fonte sana di proteine. Hamburger e bistecche spesso contengono sale, spezie e aggiunte che possono essere pericolose; cipolla e aglio sono tossici per i cani. La bistecca o l’hamburger crudi possono contenere Salmonella ed E. coli, e non bisogna mai dare ossa cotte di nessun tipo.",
     "pt": "A carne de vaca cozinhada e sem temperos pode ser uma proteína saudável, cortada em pedaços pequenos e sem gordura. Os hambúrgueres e os bifes costumam ter sal, especiarias e acompanhamentos que podem ser perigosos; a cebola e o alho são tóxicos para os cães. O bife ou o hambúrguer crus podem ter Salmonella e E. coli, e nunca se devem dar ossos cozinhados de nenhum tipo.",
     "nl": "Ongekruid, gaar rundvlees kan een gezonde eiwitbron zijn, in hapklare stukjes en met het vet eraf. Hamburgers en biefstukken bevatten vaak zout, kruiden en toevoegingen die gevaarlijk kunnen zijn; ui en knoflook zijn giftig voor honden. Rauwe biefstuk of hamburger kan salmonella en E. coli bevatten, en gekookte botten van welke soort ook mag je nooit geven.",
     "pl": "Nieprzyprawiona, gotowana wołowina pokrojona na małe kawałki i pozbawiona tłuszczu może być zdrowym białkiem. Burgery i steki często zawierają sól, przyprawy i dodatki, które mogą być niebezpieczne; cebula i czosnek są toksyczne dla psów. Surowy stek lub burger może przenosić bakterie Salmonella i E. coli, a gotowanych kości żadnego rodzaju nigdy nie wolno podawać.",
@@ -253,7 +253,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4d69bf3023ff3a675e5c5818a3591d998e4c5e48437454547e890c6dff26b47c"
+      "verified_hash": "213f7784212cf47903152982d651283267690878bc89d03308009ad62692cd66"
     },
     "pt": {
       "status": "verified",

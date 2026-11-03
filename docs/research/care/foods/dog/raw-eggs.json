@@ -238,7 +238,7 @@
         "de": "Ist rohes Ei nicht gut für ein glänzendes Fell?",
         "fr": "L’œuf cru n’est-il pas bon pour un pelage brillant ?",
         "es": "¿No es bueno el huevo crudo para que el pelo brille?",
-        "it": "L’uovo crudo non fa bene al pelo lucido?",
+        "it": "Le uova crude non rendono il pelo più lucido?",
         "pt": "O ovo cru não faz bem a uma pelagem brilhante?",
         "nl": "Is rauw ei niet goed voor een glanzende vacht?",
         "pl": "Czy surowe jajko nie jest dobre na lśniącą sierść?",
@@ -353,7 +353,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6b53f4400d2185602b9269294c33e4069240091a143be3502708cf633aa63127"
+      "verified_hash": "7fd254bfede4acb4b38c6d5028cdabd8d32ec473c415bffa63a2c7042fa9bf7e"
     },
     "pt": {
       "status": "verified",

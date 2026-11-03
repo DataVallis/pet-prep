@@ -59,7 +59,7 @@
     "de": "Nein. Alkohol ist für Hunde giftig. Alkoholhaltige Getränke und Speisen können Erbrechen, Taumeln, Atemprobleme und Zittern verursachen. Alkohol wird schnell aufgenommen, und die Anzeichen beginnen meist innerhalb von 15–90 Minuten – handeln Sie also schnell.",
     "fr": "Non. L’alcool est toxique pour les chiens. Les boissons et les aliments qui en contiennent peuvent provoquer des vomissements, une démarche titubante, des difficultés respiratoires et des tremblements. L’alcool est absorbé rapidement et les signes apparaissent généralement en 15 à 90 minutes : agissez vite.",
     "es": "No. El alcohol es tóxico para los perros. Las bebidas y los alimentos con alcohol pueden causar vómitos, tambaleo, problemas para respirar y temblores. El alcohol se absorbe rápido y los síntomas suelen empezar en un plazo de 15 a 90 minutos, así que actúa deprisa.",
-    "it": "No. L’alcol è tossico per i cani. Bevande e alimenti che lo contengono possono causare vomito, andatura barcollante, difficoltà respiratorie e tremori. L’alcol viene assorbito rapidamente e i sintomi compaiono di solito entro 15–90 minuti: agisci in fretta.",
+    "it": "No. L’alcol è tossico per i cani. Bevande e alimenti che lo contengono possono causare vomito, andatura barcollante, difficoltà respiratorie e tremori. L’alcol viene assorbito rapidamente e i sintomi compaiono di solito entro 15–90 minuti: agisci in fretta.",
     "pt": "Não. O álcool é tóxico para os cães. Bebidas e alimentos com álcool podem causar vómitos, desequilíbrio, dificuldades respiratórias e tremores. O álcool é absorvido rapidamente e os sinais costumam surgir em 15–90 minutos, por isso age depressa.",
     "nl": "Nee. Alcohol is giftig voor honden. Drankjes en etenswaren met alcohol kunnen braken, wankelen, ademhalingsproblemen en trillingen veroorzaken. Alcohol wordt snel opgenomen en de verschijnselen beginnen meestal binnen 15–90 minuten, dus handel snel.",
     "pl": "Nie. Alkohol jest toksyczny dla psów. Napoje i potrawy zawierające alkohol mogą wywołać wymioty, chwiejny chód, problemy z oddychaniem i drżenie mięśni. Alkohol szybko się wchłania, a objawy zwykle pojawiają się w ciągu 15–90 minut, więc działaj szybko.",
@@ -134,7 +134,7 @@
       "Sonnolenza, abbattimento",
       "Difficoltà respiratorie",
       "Tremori",
-      "I sintomi compaiono di solito entro 15–90 minuti"
+      "I sintomi compaiono di solito entro 15–90 minuti"
     ],
     "pt": [
       "Vómitos e diarreia",
@@ -288,7 +288,7 @@
         "de": "Wo kann ein Hund zu Hause noch Alkohol finden?",
         "fr": "Où un chien peut-il encore trouver de l’alcool à la maison ?",
         "es": "¿Dónde más puede encontrar alcohol un perro en casa?",
-        "it": "In quali altri posti di casa un cane può trovare alcol?",
+        "it": "Dove altro, in casa, può trovare alcol un cane?",
         "pt": "Onde mais pode um cão encontrar álcool em casa?",
         "nl": "Waar kan een hond thuis nog meer alcohol vinden?",
         "pl": "Gdzie jeszcze pies może znaleźć alkohol w domu?",
@@ -408,7 +408,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "571a73e63f16f36f6617fff9170ebb5283f47406da7a0d3b74f21ad9dcf912e3"
+      "verified_hash": "bd01094e77252c7f7ac3175c6f1a8dface03c8af1817367e3ef92ce069514f9f"
     },
     "pt": {
       "status": "verified",

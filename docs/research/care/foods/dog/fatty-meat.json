@@ -124,7 +124,7 @@
       "Cansancio, fiebre"
     ],
     "it": [
-      "Vomito, a volte 1–4 giorni dopo il pasto grasso",
+      "Vomito, a volte 1–4 giorni dopo il pasto grasso",
       "Mal di pancia (il cane può allungarsi nella posizione «della preghiera»)",
       "Diarrea",
       "Rifiuto del cibo",
@@ -306,7 +306,7 @@
         "de": "Nein. Putenhaut und andere fettige Speisen vom Tisch können Beschwerden von einer Magenverstimmung bis zu einer schweren Pankreatitis auslösen.",
         "fr": "Non. La peau de dinde et les autres aliments de table gras peuvent provoquer aussi bien des troubles digestifs qu’une pancréatite grave.",
         "es": "No. La piel del pavo y otras comidas grasas de la mesa pueden causar desde un malestar de estómago hasta una pancreatitis grave.",
-        "it": "No. La pelle del tacchino e gli altri cibi grassi della tavola possono causare di tutto, da un mal di stomaco a una pancreatite grave.",
+        "it": "No. La pelle del tacchino e gli altri cibi grassi da tavola possono causare di tutto, da un mal di stomaco a una pancreatite grave.",
         "pt": "Não. A pele do peru e outros alimentos gordos da mesa podem causar desde uma perturbação do estômago até uma pancreatite grave.",
         "nl": "Nee. Kalkoenvel en ander vet tafelvoedsel kunnen van alles veroorzaken, van een maagstoornis tot ernstige alvleesklierontsteking.",
         "pl": "Nie. Skóra z indyka i inne tłuste jedzenie ze stołu mogą wywołać różne problemy – od rozstroju żołądka po ciężkie zapalenie trzustki.",
@@ -413,7 +413,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ceb5c8cddf5e433bfa21895d7c24d0f09adfe85b6dcbd994dfcce0839dfecf9b"
+      "verified_hash": "e828cffae48fc82e941bedbe4b18f9d58d673ec2776bcdede235f6a0f4a44123"
     },
     "pt": {
       "status": "verified",

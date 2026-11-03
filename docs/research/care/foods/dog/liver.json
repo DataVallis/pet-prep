@@ -155,7 +155,7 @@
     "de": "Wenn Ihr Hund auf einmal viel Leber gefressen hat oder oft Leber bekommt und stumpfes Fell oder trockene Haut hat, rufen Sie Ihren Tierarzt an. Ein ausgewogenes Fertigfutter oder eine tierärztlich zusammengestellte, selbst zubereitete Ration vermeidet das Problem.",
     "fr": "Si votre chien a mangé une grande quantité de foie en une fois, ou s’il reçoit souvent du foie et a le pelage terne ou la peau sèche, appelez votre vétérinaire. Une alimentation industrielle équilibrée ou une ration ménagère formulée par un vétérinaire évite le problème.",
     "es": "Si tu perro ha comido una gran cantidad de hígado de una vez, o se le da hígado a menudo y tiene el pelaje en mal estado o la piel seca, llama a tu veterinario. Una dieta comercial equilibrada o una dieta casera formulada por un veterinario evita el problema.",
-    "it": "Se il tuo cane ha mangiato molto fegato in una volta sola, oppure ne mangia spesso e ha il mantello opaco o la pelle secca, chiama il veterinario. Un’alimentazione commerciale bilanciata o una dieta casalinga formulata da un veterinario evita il problema.",
+    "it": "Se il tuo cane ha mangiato molto fegato in una volta sola, oppure ne mangia spesso e ha il mantello opaco o la pelle secca, chiama il veterinario. Un’alimentazione commerciale bilanciata o una dieta casalinga formulata da un veterinario evitano il problema.",
     "pt": "Se o teu cão comeu uma grande quantidade de fígado de uma só vez, ou se come fígado com frequência e tem a pelagem baça ou a pele seca, liga ao teu veterinário. Uma ração comercial equilibrada ou uma dieta caseira formulada por um veterinário evita o problema.",
     "nl": "Heeft je hond in één keer veel lever gegeten, of krijgt hij vaak lever en heeft hij een slechte vacht of een droge huid? Bel dan je dierenarts. Met volwaardig commercieel voer of een thuisdieet dat door een dierenarts is samengesteld, voorkom je het probleem.",
     "pl": "Jeśli twój pies zjadł naraz dużo wątróbki albo często dostaje wątróbkę i ma matową sierść lub suchą skórę, zadzwoń do weterynarza. Zbilansowana karma gotowa lub domowa dieta ułożona przez weterynarza pozwala uniknąć tego problemu.",
@@ -291,7 +291,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1ad5650d0cf11bf9b8b269d9a55935f2631d641f4df23b2f8cce8ed592a35f18"
+      "verified_hash": "77eb63ab57ecf74c37857b78e38785fad50b0f4e8811a59c9d05cc252987cd9a"
     },
     "pt": {
       "status": "verified",

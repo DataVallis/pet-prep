@@ -320,7 +320,7 @@
         "de": "Magen-Darm-Beschwerden zeigen sich oft zuerst, Anzeichen einer Blutarmut brauchen aber meist länger und können innerhalb von ein bis fünf Tagen auftreten. Rufen Sie deshalb sofort Ihren Tierarzt an, statt abzuwarten.",
         "fr": "Les troubles digestifs apparaissent souvent en premier, mais les signes d’anémie mettent généralement plus de temps et peuvent apparaître dans un délai d’un à cinq jours. C’est pourquoi vous devez appeler votre vétérinaire immédiatement, sans attendre.",
         "es": "Las molestias de estómago suelen aparecer primero, pero los síntomas de anemia normalmente tardan más y pueden aparecer en un plazo de uno a cinco días. Por eso debes llamar a tu veterinario enseguida en lugar de esperar.",
-        "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
+        "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "O mal-estar de barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
         "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
         "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
@@ -455,7 +455,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c181e2c0aaff50439e32d3d24fe05d29db037ce3268ae5ee0e57050190eb65bd"
+      "verified_hash": "68d6d09377c66e55c8a463d3e1a0911d883d5a2a1971c1c93292bd87f3ae30ae"
     },
     "pt": {
       "status": "verified",

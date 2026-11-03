@@ -59,7 +59,7 @@
     "de": "Ja. Pures, ungewürztes, gegartes Hähnchenfleisch ohne Knochen können Sie Ihrem Hund ganz für sich allein geben. Geben Sie niemals gekochte Hähnchenknochen, die leicht splittern, und verzichten Sie auf gewürztes, fettes oder rohes Hähnchen.",
     "fr": "Oui. Du poulet cuit nature, sans assaisonnement et désossé, peut être donné tel quel à un chien. Ne donnez jamais d’os de poulet cuits, qui éclatent facilement, et évitez le poulet assaisonné, gras ou cru.",
     "es": "Sí. El pollo cocinado natural, sin condimentos y sin hueso, se le puede dar a un perro tal cual. Nunca le des huesos de pollo cocinados, que se astillan con facilidad, y evita el pollo condimentado, graso o crudo.",
-    "it": "Sì. Il pollo cotto al naturale e non condito, staccato dall’osso, si può dare al cane anche da solo, senza altri alimenti. Non dare mai ossa di pollo cotte, che si scheggiano facilmente, ed evita il pollo condito, grasso o crudo.",
+    "it": "Sì. Il pollo cotto al naturale e non condito, staccato dall’osso, si può dare al cane anche da solo. Non dare mai ossa di pollo cotte, che si scheggiano facilmente, ed evita il pollo condito, grasso o crudo.",
     "pt": "Sim. O frango cozinhado, simples, sem temperos e sem osso pode ser dado a um cão, sem acompanhamentos. Nunca dês ossos de frango cozinhados, que lascam com facilidade, e evita o frango temperado, gordo ou cru.",
     "nl": "Ja. Gewone, ongekruide gekookte kip, van het bot gehaald, kun je een hond los geven. Geef nooit gekookte kippenbotten, want die splinteren makkelijk, en sla gekruide, vette of rauwe kip over.",
     "pl": "Tak. Zwykłego, nieprzyprawionego gotowanego kurczaka, zdjętego z kości, możesz podać psu bez dodatków. Nigdy nie dawaj gotowanych kości kurczaka, które łatwo się łamią na odłamki, i pomiń kurczaka przyprawionego, tłustego lub surowego.",
@@ -265,7 +265,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "16019921a2d26d033e98ee737da24c32abd69a35d86d62fdd4afe50688230bf9"
+      "verified_hash": "7333703a6d06bcac762b2b1db492df3809119a5498d4a01162affdf99c7b6953"
     },
     "pt": {
       "status": "verified",

@@ -59,7 +59,7 @@
     "de": "Nein, nicht als Futter oder Leckerli. Das Verdauungssystem einer Katze ist nicht für große Mengen Salz ausgelegt, und zu viel davon kann eine Salzvergiftung verursachen. Halten Sie Speisesalz, Streusalz und sehr salzige Lebensmittel von Ihrer Katze fern und rufen Sie Ihren Tierarzt an, wenn sie viel davon frisst.",
     "fr": "Non, ni comme aliment ni comme friandise. Le système digestif du chat n’est pas fait pour de grandes quantités de sel, et trop de sel peut provoquer une intoxication au sel. Tenez le sel de table, le sel de déneigement et les aliments très salés loin de votre chat, et appelez votre vétérinaire s’il en mange beaucoup.",
     "es": "No, ni como comida ni como premio. El aparato digestivo del gato no está preparado para grandes cantidades de sal, y el exceso puede causar una intoxicación por sal. Mantén la sal de mesa, la sal gorda para el hielo y los alimentos muy salados lejos de tu gato, y llama a tu veterinario si come mucha.",
-    "it": "No, né come alimento né come premio. L’apparato digerente del gatto non è fatto per gestire grandi quantità di sale, e troppo sale può causare un’intossicazione. Tieni sale da cucina, sale antighiaccio e cibi molto salati lontani dal tuo gatto, e chiama il veterinario se ne mangia molto.",
+    "it": "No, né come alimento né come premio. L’apparato digerente del gatto non è in grado di tollerare grandi quantità di sale, e troppo sale può causare un’intossicazione. Tieni sale da cucina, sale antighiaccio e cibi molto salati lontani dal tuo gatto, e chiama il veterinario se ne mangia molto.",
     "pt": "Não, nem como alimento nem como guloseima. O sistema digestivo do gato não está preparado para grandes quantidades de sal, e o excesso pode causar intoxicação por sal. Mantém o sal de cozinha, o sal-gema e os alimentos muito salgados longe do teu gato, e liga ao teu veterinário se ele comer muito.",
     "nl": "Nee, niet als voer of snoepje. Het spijsverteringsstelsel van een kat is niet gemaakt voor grote hoeveelheden zout, en te veel kan een zoutvergiftiging veroorzaken. Houd keukenzout, strooizout en heel zout eten weg bij je kat, en bel je dierenarts als ze er veel van eet.",
     "pl": "Nie, ani jako pokarm, ani jako smakołyk. Układ pokarmowy kota nie jest przystosowany do dużych ilości soli, a jej nadmiar może wywołać zatrucie solą. Trzymaj sól kuchenną, sól drogową i bardzo słone jedzenie z dala od kota i zadzwoń do weterynarza, jeśli kot zje jej dużo.",
@@ -76,7 +76,7 @@
     "de": "Zu viel Salz verursacht Durst und häufiges Urinieren, in schweren Fällen auch Zittern und Krampfanfälle. Salzquellen im Haushalt sind etwa Speisesalz zum Kochen und Streusalz, das im Winter gegen Glätte eingesetzt wird.",
     "fr": "Trop de sel donne soif et fait uriner souvent et, dans les cas graves, provoque des tremblements et des convulsions. À la maison, les sources de sel sont notamment le sel de table utilisé en cuisine et le sel de déneigement utilisé l’hiver.",
     "es": "El exceso de sal provoca sed y ganas frecuentes de orinar y, en los casos graves, temblores y convulsiones. En casa, la sal puede venir de la sal de mesa que se usa para cocinar y de la sal gorda que se echa en invierno para deshacer el hielo.",
-    "it": "Troppo sale provoca sete e minzione frequente e, nei casi gravi, tremori e convulsioni. In casa il sale si trova come sale da cucina, usato per cucinare, e come sale grosso antighiaccio, usato d’inverno.",
+    "it": "Troppo sale provoca molta sete, bisogno frequente di urinare e, nei casi gravi, tremori e convulsioni. In casa il sale si trova come sale da cucina, usato per cucinare, e come sale grosso antighiaccio, usato d’inverno.",
     "pt": "O excesso de sal causa sede e vontade frequente de urinar e, nos casos graves, tremores e convulsões. Em casa, o sal pode vir do sal de cozinha usado nos cozinhados e do sal-gema usado no inverno para derreter o gelo.",
     "nl": "Te veel zout veroorzaakt dorst en vaak plassen, en in ernstige gevallen trillingen en toevallen. Zout in huis is onder andere keukenzout om mee te koken en strooizout tegen gladheid in de winter.",
     "pl": "Nadmiar soli wywołuje pragnienie i częste oddawanie moczu, a w poważnych przypadkach drżenie mięśni i drgawki. W domu źródłem soli jest sól kuchenna używana do gotowania oraz sól drogowa (kamienna) używana zimą do odladzania.",
@@ -139,7 +139,7 @@
       "Calo dell’appetito",
       "Letargia",
       "Andatura barcollante",
-      "Sete o minzione eccessive",
+      "Sete eccessiva o bisogno frequente di urinare",
       "Tremori o convulsioni"
     ],
     "pt": [
@@ -402,7 +402,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "301075972d9ccc11c4c0411490310787af964ba5c66232455fa7745bffd8ac00"
+      "verified_hash": "22cc14de7fc52779498dc8aed5ab53dd4a2e257948fc68735199656e56882de3"
     },
     "pt": {
       "status": "verified",
