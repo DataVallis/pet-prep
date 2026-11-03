@@ -1091,6 +1091,19 @@
             "prompt_hash": "sha256:51a583c311d1c0a1d8669bd202e8c9cdb52ec9d068601a20b45437c4ddef76be",
             "generated_at": "2026-11-03T02:46:00+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "anatolian_shepherd_dog",
+            "species": "dog",
+            "colour": "fawn",
+            "file": "dog/anatolian-shepherd-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:38dd8540603c531e29355eb4a4aeebbf5086c03e923030c1b55bfc4dda68611f",
+            "generated_at": "2026-11-03T06:45:54+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
