@@ -6,21 +6,24 @@
     "sl": "Ananas",
     "hr": "Ananas",
     "cs": "Ananas",
-    "de": "Ananas"
+    "de": "Ananas",
+    "fr": "Ananas"
   },
   "question": {
     "en": "Can dogs eat pineapple?",
     "sl": "Ali lahko psi jedo ananas?",
     "hr": "Smiju li psi jesti ananas?",
     "cs": "Mohou psi jíst ananas?",
-    "de": "Dürfen Hunde Ananas fressen?"
+    "de": "Dürfen Hunde Ananas fressen?",
+    "fr": "Les chiens peuvent-ils manger de l’ananas ?"
   },
   "url_slug": {
     "en": "pineapple",
     "sl": "ananas",
     "hr": "ananas",
     "cs": "ananas",
-    "de": "ananas"
+    "de": "ananas",
+    "fr": "ananas"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, surov ananas je v majhnih količinah dober prigrizek za pse, če odstranite bodičasto lupino, krono in trdo sredico. Ananasa iz pločevinke ne dajajte, ker ima sirup preveč sladkorja.",
     "hr": "Da, svjež ananas u malim količinama dobra je užina za pse, pod uvjetom da prije toga skineš bodljikavu koru, odrežeš krunu i izvadiš tvrdu jezgru. Izbjegavaj ananas iz konzerve, jer sirup sadrži previše šećera.",
     "cs": "Ano, čerstvý ananas je v malém množství pro psy dobrý pamlsek, pokud odstraníte bodlavou slupku, korunku a tvrdé jádro. Konzervovaný ananas nedávejte, protože sirup obsahuje příliš mnoho cukru.",
-    "de": "Ja, frische Ananas ist in kleinen Mengen ein guter Snack für Hunde, solange die stachelige Schale, der Blätterschopf und der harte Strunk entfernt sind. Verzichten Sie auf Dosenananas, denn der Sirup enthält zu viel Zucker."
+    "de": "Ja, frische Ananas ist in kleinen Mengen ein guter Snack für Hunde, solange die stachelige Schale, der Blätterschopf und der harte Strunk entfernt sind. Verzichten Sie auf Dosenananas, denn der Sirup enthält zu viel Zucker.",
+    "fr": "Oui, l’ananas frais en petite quantité est un bon en-cas pour les chiens, à condition d’avoir retiré la peau épineuse, la couronne et le cœur dur. Évitez l’ananas en conserve, car le sirop contient trop de sucre."
   },
   "why": {
     "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
     "sl": "Ananas je poln vitaminov, mineralov in vlaknin, vsebuje pa tudi veliko naravnega sladkorja. Trda sredica in bodičasta lupina lahko povzročita zaporo. Ananasu iz pločevinke se raje izognite, ker ima njegov sirup preveč sladkorja za prebavo večine psov. Nekateri psi imajo po ananasu drisko ali prebavne težave.",
     "hr": "Ananas je pun vitamina, minerala i vlakana, ali sadrži i mnogo prirodnog šećera. Žilava jezgra u sredini i bodljikava kora mogu izazvati začepljenje. Ananas iz konzerve najbolje je izbjegavati, jer njegov sirup sadrži previše šećera za probavu većine pasa. Neki psi od ananasa dobiju proljev ili želučane tegobe.",
     "cs": "Ananas je plný vitaminů, minerálů a vlákniny, ale obsahuje také hodně přirozeného cukru. Tvrdé jádro uprostřed a bodlavá slupka mohou způsobit ucpání střev. Konzervovanému ananasu je lepší se vyhnout, protože jeho sirup obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila. Někteří psi po ananasu dostanou průjem nebo podrážděný žaludek.",
-    "de": "Ananas steckt voller Vitamine, Mineralstoffe und Ballaststoffe, enthält aber auch viel natürlichen Zucker. Der zähe Strunk in der Mitte und die stachelige Schale können einen Darmverschluss verursachen. Auf Dosenananas sollten Sie besser verzichten, weil der Sirup für die Verdauung der meisten Hunde zu viel Zucker enthält. Manche Hunde bekommen von Ananas Durchfall oder eine Magenverstimmung."
+    "de": "Ananas steckt voller Vitamine, Mineralstoffe und Ballaststoffe, enthält aber auch viel natürlichen Zucker. Der zähe Strunk in der Mitte und die stachelige Schale können einen Darmverschluss verursachen. Auf Dosenananas sollten Sie besser verzichten, weil der Sirup für die Verdauung der meisten Hunde zu viel Zucker enthält. Manche Hunde bekommen von Ananas Durchfall oder eine Magenverstimmung.",
+    "fr": "L’ananas est riche en vitamines, en minéraux et en fibres, mais il contient aussi beaucoup de sucre naturel. Le cœur coriace et la peau épineuse peuvent provoquer une occlusion. Mieux vaut éviter l’ananas en conserve, car son sirop contient trop de sucre pour la digestion de la plupart des chiens. Certains chiens ont de la diarrhée ou des maux d’estomac après avoir mangé de l’ananas."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če ima pes po ananasu drisko ali prebavne težave, ananas morda ni pravi prigrizek zanj.",
     "hr": "Ako pas nakon ananasa dobije proljev ili želučane tegobe, ananas možda nije dobra užina za njega.",
     "cs": "Pokud má pes po snězení ananasu průjem nebo podrážděný žaludek, ananas pro něj možná není to pravé.",
-    "de": "Bekommt Ihr Hund nach der Ananas Durchfall oder eine Magenverstimmung, ist Ananas vielleicht nicht der richtige Snack für ihn."
+    "de": "Bekommt Ihr Hund nach der Ananas Durchfall oder eine Magenverstimmung, ist Ananas vielleicht nicht der richtige Snack für ihn.",
+    "fr": "Si votre chien a de la diarrhée ou des maux d’estomac après avoir mangé de l’ananas, ce n’est peut-être pas le bon en-cas pour lui."
   },
   "serving": {
     "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
     "sl": "Svež in olupljen, brez krone in sredice, narezan na koščke za en grižljaj; zamrznjeni koščki svežega ananasa so poletni priboljšek.",
     "hr": "Svjež i oguljen, bez krune i jezgre, narezan na komadiće veličine zalogaja; smrznuti komadići svježeg ananasa ljetna su poslastica.",
     "cs": "Čerstvý a oloupaný, bez korunky a jádra, nakrájený na kousky na jedno sousto; jako letní pamlsek poslouží zmrazené kousky čerstvého ananasu.",
-    "de": "Frisch und geschält, ohne Blätterschopf und Strunk, in mundgerechte Stücke geschnitten; gefrorene Stücke frischer Ananas sind ein schönes Sommerleckerli."
+    "de": "Frisch und geschält, ohne Blätterschopf und Strunk, in mundgerechte Stücke geschnitten; gefrorene Stücke frischer Ananas sind ein schönes Sommerleckerli.",
+    "fr": "Frais et pelé, sans la couronne ni le cœur, coupé en morceaux de la taille d’une bouchée ; des morceaux d’ananas frais congelés font une friandise d’été."
   },
   "child": {
     "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
     "sl": "Psi lahko dobijo košček svežega ananasa! Odrasel najprej odreže bodičasto lupino in trdo sredino.",
     "hr": "Psi smiju dobiti mali komadić svježeg ananasa! Odrasla osoba prvo odreže bodljikavu koru i tvrdu sredinu.",
     "cs": "Psi mohou dostat malý kousek čerstvého ananasu! Dospělý nejdřív odřízne pichlavou slupku a tvrdý střed.",
-    "de": "Hunde dürfen ein kleines Stück frische Ananas haben! Ein Erwachsener schneidet vorher die stachelige Schale und die harte Mitte ab."
+    "de": "Hunde dürfen ein kleines Stück frische Ananas haben! Ein Erwachsener schneidet vorher die stachelige Schale und die harte Mitte ab.",
+    "fr": "Les chiens peuvent manger un petit morceau d’ananas frais ! Un adulte enlève d’abord la peau piquante et le cœur dur."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo ananas iz pločevinke?",
         "hr": "Smiju li psi jesti ananas iz konzerve?",
         "cs": "Mohou psi jíst konzervovaný ananas?",
-        "de": "Dürfen Hunde Dosenananas fressen?"
+        "de": "Dürfen Hunde Dosenananas fressen?",
+        "fr": "Les chiens peuvent-ils manger de l’ananas en conserve ?"
       },
       "a": {
         "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
         "sl": "Raje ne. Sirup v sadju iz pločevinke vsebuje preveč sladkorja za prebavo večine psov.",
         "hr": "Najbolje ga je izbjegavati. Sirup u voću iz konzerve sadrži previše šećera za probavu većine pasa.",
         "cs": "Je lepší se mu vyhnout. Sirup v konzervovaném ovoci obsahuje příliš mnoho cukru na to, aby ho většina psů dobře strávila.",
-        "de": "Besser nicht. Der Sirup in Dosenfrüchten enthält für die Verdauung der meisten Hunde zu viel Zucker."
+        "de": "Besser nicht. Der Sirup in Dosenfrüchten enthält für die Verdauung der meisten Hunde zu viel Zucker.",
+        "fr": "Mieux vaut l’éviter. Le sirop des fruits en conserve contient trop de sucre pour la digestion de la plupart des chiens."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Zakaj odstraniti sredico in lupino?",
         "hr": "Zašto treba ukloniti jezgru i koru?",
         "cs": "Proč odstraňovat jádro a slupku?",
-        "de": "Warum müssen Strunk und Schale entfernt werden?"
+        "de": "Warum müssen Strunk und Schale entfernt werden?",
+        "fr": "Pourquoi faut-il retirer le cœur et la peau ?"
       },
       "a": {
         "en": "The tough core and the spiny skin can cause a blockage in the gut.",
         "sl": "Trda sredica in bodičasta lupina lahko povzročita zaporo v prebavilih.",
         "hr": "Žilava jezgra i bodljikava kora mogu izazvati začepljenje crijeva.",
         "cs": "Tvrdé jádro a bodlavá slupka mohou způsobit ucpání střev.",
-        "de": "Der zähe Strunk und die stachelige Schale können einen Darmverschluss verursachen."
+        "de": "Der zähe Strunk und die stachelige Schale können einen Darmverschluss verursachen.",
+        "fr": "Le cœur coriace et la peau épineuse peuvent provoquer une occlusion intestinale."
       }
     }
   ],
@@ -174,6 +186,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d9f45c8b7f5f9a7f2323e8b7d96e1f9a8fdb802d9eb6be2a5f55c5e5e9e660e0"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2f2fa56a36e9f7c02cc8a4ce271f1090f9338bdb84944baf48da69d64056011"
     }
   }
 }

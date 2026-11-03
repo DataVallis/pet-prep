@@ -6,21 +6,24 @@
     "sl": "Limete",
     "hr": "Limete",
     "cs": "Limetky",
-    "de": "Limetten"
+    "de": "Limetten",
+    "fr": "Citrons verts"
   },
   "question": {
     "en": "Can dogs eat limes?",
     "sl": "Ali lahko psi jedo limete?",
     "hr": "Smiju li psi jesti limete?",
     "cs": "Mohou psi jíst limetky?",
-    "de": "Dürfen Hunde Limetten fressen?"
+    "de": "Dürfen Hunde Limetten fressen?",
+    "fr": "Les chiens peuvent-ils manger des citrons verts ?"
   },
   "url_slug": {
     "en": "limes",
     "sl": "limete",
     "hr": "limete",
     "cs": "limetky",
-    "de": "limetten"
+    "de": "limetten",
+    "fr": "citrons-verts"
   },
   "level": "not_recommended",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, limet je bolje psom ne dajati. Sadež sam ni strupen, lupine limet in njihova olja pa so za pse nevarna, kislina pa lahko razburi želodec. Večini psov okus in vonj limet tako ali tako nista všeč.",
     "hr": "Ne, bolje je da psima ne daješ limete. Sam plod nije otrovan, ali su kora limete i ulja iz nje opasna za pse, a kiselina može nadražiti želudac. Većini pasa ionako smetaju okus i miris.",
     "cs": "Ne, limetky psům raději nedávejte. Samotný plod není toxický, ale kůra limetek a její oleje jsou pro psy nebezpečné a kyselina může podráždit žaludek. Většině psů se chuť i vůně stejně nelíbí.",
-    "de": "Nein, füttern Sie Hunden besser keine Limetten. Die Frucht selbst ist nicht giftig, aber Limettenschalen und ihre Öle sind für Hunde gefährlich, und die Säure kann den Magen reizen. Die meisten Hunde mögen Geschmack und Geruch ohnehin nicht."
+    "de": "Nein, füttern Sie Hunden besser keine Limetten. Die Frucht selbst ist nicht giftig, aber Limettenschalen und ihre Öle sind für Hunde gefährlich, und die Säure kann den Magen reizen. Die meisten Hunde mögen Geschmack und Geruch ohnehin nicht.",
+    "fr": "Non, mieux vaut ne pas donner de citron vert à un chien. Le fruit en lui-même n’est pas toxique, mais l’écorce du citron vert et ses huiles sont dangereuses pour les chiens, et l’acidité peut irriter l’estomac. De toute façon, la plupart des chiens n’aiment ni le goût ni l’odeur."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
     "sl": "ASPCA limetovec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC pravi, da limete niso strupene, a odsvetuje dajanje, PDSA pa jih navaja kot neprimerne, ker so zelo kisle. V velikih količinah lahko citronska kislina povzroči prebavne težave in celo upočasnjeno delovanje živčevja ter izgubo koordinacije. Limetin sok je zgoščen in ga psom ne dajajte. Izbrali smo stopnjo »ni priporočljivo«, ker meso ni strupeno, nevarne pa so lupina, olja in velike količine.",
     "hr": "ASPCA biljku limete ubraja među biljke otrovne za pse zbog eteričnih ulja i psoralena, uz napomenu da je plod jestiv te da tegobe uzrokuju kora i dijelovi biljke. AKC navodi da limete nisu otrovne, ali savjetuje da se ne daju, a PDSA ih navodi kao nesigurne, jer su vrlo kisele. U velikim količinama limunska kiselina može izazvati želučane tegobe, pa čak i depresiju živčanog sustava i gubitak koordinacije. Sok od limete je koncentriran i ne bi ga trebalo davati psima. Koristimo ocjenu „ne preporučuje se“ jer meso ploda nije otrovno, a opasnost su kora, ulja i velike količine.",
     "cs": "ASPCA řadí limetkovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům a zároveň poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC uvádí, že limetky nejsou toxické, ale nedoporučuje je psům dávat, a PDSA je řadí mezi nebezpečné potraviny, protože jsou velmi kyselé. Ve velkém množství může kyselina citronová způsobit žaludeční potíže a dokonce útlum nervové soustavy a ztrátu koordinace. Limetková šťáva je koncentrovaná a psům by se dávat neměla. Používáme označení „nedoporučuje se“, protože dužina toxická není, nebezpečné jsou kůra, oleje a velké množství.",
-    "de": "Die ASPCA führt die Limettenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. Der AKC sagt, Limetten seien nicht giftig, rät aber vom Füttern ab, und die PDSA stuft sie als nicht sicher ein, weil sie sehr sauer sind. In großen Mengen kann Zitronensäure Magenbeschwerden und sogar eine Dämpfung des Nervensystems mit Koordinationsverlust verursachen. Limettensaft ist konzentriert und sollte Hunden nicht gegeben werden. Wir verwenden „nicht empfohlen“, weil das Fruchtfleisch nicht giftig ist, die Gefahr aber von Schale, Ölen und großen Mengen ausgeht."
+    "de": "Die ASPCA führt die Limettenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. Der AKC sagt, Limetten seien nicht giftig, rät aber vom Füttern ab, und die PDSA stuft sie als nicht sicher ein, weil sie sehr sauer sind. In großen Mengen kann Zitronensäure Magenbeschwerden und sogar eine Dämpfung des Nervensystems mit Koordinationsverlust verursachen. Limettensaft ist konzentriert und sollte Hunden nicht gegeben werden. Wir verwenden „nicht empfohlen“, weil das Fruchtfleisch nicht giftig ist, die Gefahr aber von Schale, Ölen und großen Mengen ausgeht.",
+    "fr": "L’ASPCA classe le limettier parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, tout en précisant que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC indique que les citrons verts ne sont pas toxiques mais déconseille de les donner, et la PDSA les range parmi les aliments dangereux parce qu’ils sont très acides. En grande quantité, l’acide citrique peut provoquer des troubles gastriques, voire une dépression du système nerveux central et une perte de coordination. Le jus de citron vert est concentré et ne doit pas être donné aux chiens. Nous utilisons la mention « déconseillé » parce que la chair n’est pas toxique, alors que l’écorce, les huiles et les grandes quantités sont dangereuses."
   },
   "signs": {
     "en": [
@@ -82,6 +87,15 @@
       "Anzeichen eines Darmverschlusses",
       "Zittern",
       "Übermäßiges Speicheln"
+    ],
+    "fr": [
+      "Fatigue, léthargie",
+      "Vomissements",
+      "Diarrhée",
+      "Perte d’appétit",
+      "Signes d’occlusion intestinale",
+      "Tremblements",
+      "Bave excessive"
     ]
   },
   "what_to_do": {
@@ -89,7 +103,8 @@
     "sl": "Če je pes pojedel veliko limet, bodite pozorni na te znake in takoj pokličite veterinarja. Lupine odvrzite tja, kamor jih pes ne more doseči, in ga ne spodbujajte k igri s padlimi limetami.",
     "hr": "Ako je pas pojeo mnogo limeta, prati pojavljuju li se ti znakovi i odmah se obrati veterinaru. Kore baci tamo gdje ih pas ne može dohvatiti i ne potiči ga da se igra otpalim limetama.",
     "cs": "Pokud váš pes snědl hodně limetek, sledujte tyto příznaky a okamžitě se obraťte na veterináře. Kůru vyhazujte tak, aby na ni pes nedosáhl, a nenechte ho hrát si s popadanými limetkami.",
-    "de": "Hat Ihr Hund viele Limetten gefressen, achten Sie auf diese Anzeichen und wenden Sie sich sofort an Ihren Tierarzt. Entsorgen Sie Schalen so, dass Ihr Hund nicht herankommt, und ermuntern Sie ihn nicht, mit heruntergefallenen Limetten zu spielen."
+    "de": "Hat Ihr Hund viele Limetten gefressen, achten Sie auf diese Anzeichen und wenden Sie sich sofort an Ihren Tierarzt. Entsorgen Sie Schalen so, dass Ihr Hund nicht herankommt, und ermuntern Sie ihn nicht, mit heruntergefallenen Limetten zu spielen.",
+    "fr": "Si votre chien a mangé beaucoup de citrons verts, surveillez ces signes et contactez immédiatement votre vétérinaire. Jetez les écorces là où votre chien ne peut pas les atteindre, et ne l’encouragez pas à jouer avec des citrons verts tombés par terre."
   },
   "serving": null,
   "child": {
@@ -97,7 +112,8 @@
     "sl": "Limete so za pse prekisle in jim lahko razburijo trebušček. Limete in njihove lupine pospravi stran od psa.",
     "hr": "Limete su psima prekisele i mogu im zasmetati trbuščiću. Limete i njihovu koru drži podalje od psa.",
     "cs": "Limetky jsou pro psy příliš kyselé a mohou je rozbolet bříško. Limetky i jejich slupky drž od psa dál.",
-    "de": "Limetten sind für Hunde zu sauer und können ihnen auf den Bauch schlagen. Halte Limetten und ihre Schalen von deinem Hund fern."
+    "de": "Limetten sind für Hunde zu sauer und können ihnen auf den Bauch schlagen. Halte Limetten und ihre Schalen von deinem Hund fern.",
+    "fr": "Les citrons verts sont trop acides pour les chiens et peuvent leur donner mal au ventre. Garde les citrons verts et leurs écorces loin de ton chien."
   },
   "faq": [
     {
@@ -106,14 +122,16 @@
         "sl": "Ali lahko psi pijejo limetin sok?",
         "hr": "Smiju li psi dobiti sok od limete?",
         "cs": "Může pes dostat limetkovou šťávu?",
-        "de": "Dürfen Hunde Limettensaft trinken?"
+        "de": "Dürfen Hunde Limettensaft trinken?",
+        "fr": "Les chiens peuvent-ils boire du jus de citron vert ?"
       },
       "a": {
         "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
         "sl": "Ne. Limetin sok je zgoščena oblika mesa sadeža, zato ga psom ne dajajte.",
         "hr": "Ne. Sok od limete koncentrirani je oblik mesa ploda, pa ga ne treba davati psima.",
         "cs": "Ne. Limetková šťáva je koncentrovaná dužina plodu, a proto by se psům dávat neměla.",
-        "de": "Nein. Limettensaft ist eine konzentrierte Form des Fruchtfleischs und sollte Hunden nicht gegeben werden."
+        "de": "Nein. Limettensaft ist eine konzentrierte Form des Fruchtfleischs und sollte Hunden nicht gegeben werden.",
+        "fr": "Non. Le jus de citron vert est le fruit sous forme concentrée : il ne doit pas être donné aux chiens."
       }
     }
   ],
@@ -234,6 +252,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4ddc7b21708e891131b7e55b2fea513b54e84fc1d5329c3dc4cf2f619b3d2be8"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "31ae683c6fc02827993aef8623ada676f898af1ca589ced4f58133c02ea2b3ba"
     }
   }
 }

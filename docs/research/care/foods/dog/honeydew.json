@@ -6,21 +6,24 @@
     "sl": "Medena melona",
     "hr": "Medena dinja",
     "cs": "Medový meloun",
-    "de": "Honigmelone"
+    "de": "Honigmelone",
+    "fr": "Melon miel"
   },
   "question": {
     "en": "Can dogs eat honeydew melon?",
     "sl": "Ali lahko psi jedo medeno melono?",
     "hr": "Smiju li psi jesti medenu dinju?",
     "cs": "Mohou psi jíst medový meloun?",
-    "de": "Dürfen Hunde Honigmelone fressen?"
+    "de": "Dürfen Hunde Honigmelone fressen?",
+    "fr": "Les chiens peuvent-ils manger du melon miel ?"
   },
   "url_slug": {
     "en": "honeydew",
     "sl": "medena-melona",
     "hr": "medena-dinja",
     "cs": "medovy-meloun",
-    "de": "honigmelone"
+    "de": "honigmelone",
+    "fr": "melon-miel"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, v majhnih količinah. Medena melona za pse ni strupena, a vsebuje veliko sladkorja, zato je dajajte le malo kot občasen priboljšek; če ima pes sladkorno bolezen, najprej vprašajte veterinarja. Odstranite lupino in pečke.",
     "hr": "Da, ali umjereno. Medena dinja nije otrovna za pse, ali ima mnogo šećera, pa daj samo malo kao povremenu poslasticu, a ako pas ima šećernu bolest, prvo pitaj veterinara. Ukloni koru i sjemenke.",
     "cs": "Ano, střídmě. Medový meloun pro psy není toxický, ale obsahuje hodně cukru, proto ho dávejte jen málo a jen občas jako pamlsek. Pokud má váš pes cukrovku, nejdřív se zeptejte veterináře. Odstraňte slupku a semínka.",
-    "de": "Ja, aber sparsam. Honigmelone ist für Hunde nicht giftig, enthält aber viel Zucker – geben Sie nur wenig als gelegentliches Leckerli und fragen Sie vorher Ihren Tierarzt, wenn Ihr Hund Diabetes hat. Entfernen Sie Schale und Kerne."
+    "de": "Ja, aber sparsam. Honigmelone ist für Hunde nicht giftig, enthält aber viel Zucker – geben Sie nur wenig als gelegentliches Leckerli und fragen Sie vorher Ihren Tierarzt, wenn Ihr Hund Diabetes hat. Entfernen Sie Schale und Kerne.",
+    "fr": "Oui, mais avec parcimonie. Le melon miel n’est pas toxique pour les chiens, mais il est très sucré : n’en donnez qu’un peu, en friandise occasionnelle, et demandez d’abord conseil à votre vétérinaire si votre chien est diabétique. Retirez l’écorce et les pépins."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
     "sl": "ASPCA medeno melono uvršča med rastline, ki za pse niso strupene, glavni veterinar AKC pa jo med melonami predlaga za zamrznjene priboljške. Plod vsebuje veliko sladkorja, zato morda ni primeren za pse s sladkorno boleznijo. Lupina lahko povzroči prebavne težave ali zaporo črevesja, pečke pa niso strupene, a se pes z njimi lahko zaduši.",
     "hr": "ASPCA medenu dinju ubraja među neotrovne za pse, a glavni veterinar AKC-a predlaže je među dinjama za zamrznute poslastice. Plod ima mnogo šećera, pa možda nije prikladan za pse sa šećernom bolešću. Kora može izazvati probavne smetnje ili začepljenje crijeva, a sjemenke nisu otrovne, ali mogu izazvati gušenje.",
     "cs": "ASPCA uvádí medový meloun jako netoxický pro psy a hlavní veterinář AKC ho zmiňuje mezi melouny vhodnými na zmrazené pamlsky. Plod obsahuje hodně cukru, proto nemusí být vhodný pro psy s cukrovkou. Slupka může způsobit zažívací potíže nebo ucpání střev a semínka sice nejsou toxická, ale mohou způsobit dušení.",
-    "de": "Die ASPCA führt Honigmelone als ungiftig für Hunde auf, und der leitende Tierarzt des AKC zählt sie zu den Melonen, die sich für gefrorene Leckerlis eignen. Die Frucht enthält viel Zucker und ist deshalb für Hunde mit Diabetes möglicherweise nicht geeignet. Die Schale kann Verdauungsbeschwerden oder einen Darmverschluss verursachen, und die Kerne sind nicht giftig, können aber eine Erstickungsgefahr darstellen."
+    "de": "Die ASPCA führt Honigmelone als ungiftig für Hunde auf, und der leitende Tierarzt des AKC zählt sie zu den Melonen, die sich für gefrorene Leckerlis eignen. Die Frucht enthält viel Zucker und ist deshalb für Hunde mit Diabetes möglicherweise nicht geeignet. Die Schale kann Verdauungsbeschwerden oder einen Darmverschluss verursachen, und die Kerne sind nicht giftig, können aber eine Erstickungsgefahr darstellen.",
+    "fr": "L’ASPCA classe le melon miel parmi les aliments non toxiques pour les chiens, et le vétérinaire en chef de l’AKC le cite parmi les melons pour préparer des friandises glacées. Le fruit est très sucré, ce qui peut le rendre inadapté aux chiens diabétiques. L’écorce peut provoquer des troubles digestifs ou une occlusion intestinale, et les pépins, sans être toxiques, peuvent présenter un risque d’étouffement."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Preden psu ponudite medeno melono, se posvetujte z veterinarjem, zlasti če ima pes sladkorno bolezen.",
     "hr": "Prije nego što medenu dinju uvrstiš u prehranu svog psa, posavjetuj se s veterinarom, osobito ako pas ima šećernu bolest.",
     "cs": "Než medový meloun zařadíte do psího jídelníčku, poraďte se s veterinářem, zvlášť pokud má váš pes cukrovku.",
-    "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie Honigmelone in den Speiseplan Ihres Hundes aufnehmen, besonders wenn Ihr Hund Diabetes hat."
+    "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie Honigmelone in den Speiseplan Ihres Hundes aufnehmen, besonders wenn Ihr Hund Diabetes hat.",
+    "fr": "Parlez-en à votre vétérinaire avant d’ajouter du melon miel à l’alimentation de votre chien, surtout s’il est diabétique."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
     "sl": "Samo meso, brez lupine in pečk, narezano na majhne kocke; lahko ga tudi zmeljete v pire in zamrznete kot priboljšek.",
     "hr": "Samo meso ploda, bez kore i sjemenki, narezano na male kockice; može se i izmiksati pa zamrznuti kao poslastica.",
     "cs": "Jen dužina, bez slupky a semínek, nakrájená na malé kostičky; můžete ji také rozmixovat a zmrazit jako pamlsek.",
-    "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Würfel geschnitten; es kann auch püriert und als Leckerli eingefroren werden."
+    "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Würfel geschnitten; es kann auch püriert und als Leckerli eingefroren werden.",
+    "fr": "Uniquement la chair, sans l’écorce ni les pépins, coupée en petits dés ; on peut aussi la réduire en purée et la congeler pour en faire une friandise."
   },
   "child": {
     "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
     "sl": "Psi se lahko posladkajo s koščkom medene melone! Odrasel najprej odstrani trdo lupino in pečke.",
     "hr": "Psi smiju uživati u malom komadiću medene dinje! Odrasla osoba prvo ukloni tvrdu koru i sjemenke.",
     "cs": "Psi si můžou pochutnat na kousku medového melounu! Dospělý nejdřív odstraní tvrdou slupku a semínka.",
-    "de": "Hunde dürfen ein kleines Stück Honigmelone genießen! Ein Erwachsener entfernt vorher die harte Schale und die Kerne."
+    "de": "Hunde dürfen ein kleines Stück Honigmelone genießen! Ein Erwachsener entfernt vorher die harte Schale und die Kerne.",
+    "fr": "Les chiens peuvent se régaler d’un petit morceau de melon miel ! Un adulte enlève d’abord la peau dure et les pépins."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Je medena melona primerna za psa s sladkorno boleznijo?",
         "hr": "Je li medena dinja u redu za psa sa šećernom bolešću?",
         "cs": "Hodí se medový meloun pro psa s cukrovkou?",
-        "de": "Ist Honigmelone für einen Hund mit Diabetes in Ordnung?"
+        "de": "Ist Honigmelone für einen Hund mit Diabetes in Ordnung?",
+        "fr": "Le melon miel convient-il à un chien diabétique ?"
       },
       "a": {
         "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
         "sl": "Morda ne, ker medena melona vsebuje veliko sladkorja. Najprej vprašajte veterinarja.",
         "hr": "Možda nije, jer ima vrlo mnogo šećera. Prvo pitaj veterinara.",
         "cs": "Nemusí být vhodný, protože medový meloun obsahuje velmi hodně cukru. Nejdřív se zeptejte veterináře.",
-        "de": "Vielleicht nicht, denn Honigmelone enthält sehr viel Zucker. Fragen Sie zuerst Ihren Tierarzt."
+        "de": "Vielleicht nicht, denn Honigmelone enthält sehr viel Zucker. Fragen Sie zuerst Ihren Tierarzt.",
+        "fr": "Peut-être pas, car le melon miel est très riche en sucre. Demandez d’abord conseil à votre vétérinaire."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Kaj, če je pes pogoltnil pečko?",
         "hr": "Što ako je pas progutao sjemenku?",
         "cs": "Co když můj pes spolkl semínko?",
-        "de": "Was ist, wenn mein Hund einen Kern verschluckt hat?"
+        "de": "Was ist, wenn mein Hund einen Kern verschluckt hat?",
+        "fr": "Et si mon chien a avalé un pépin ?"
       },
       "a": {
         "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
         "sl": "Pečke medene melone niso strupene in ena pečka verjetno ni razlog za skrb, a se pes z njimi lahko zaduši, zato jih pred serviranjem odstranite.",
         "hr": "Sjemenke medene dinje nisu otrovne i jedna sjemenka vjerojatno ne zabrinjava, ali sjemenke mogu izazvati gušenje, zato ih ukloni prije posluživanja.",
         "cs": "Semínka medového melounu nejsou toxická a jedno semínko pravděpodobně není důvod k obavám, ale semínka mohou způsobit dušení, proto je před podáváním odstraňte.",
-        "de": "Honigmelonenkerne sind nicht giftig, und ein einzelner Kern ist wahrscheinlich kein Grund zur Sorge. Kerne können aber eine Erstickungsgefahr darstellen; entfernen Sie sie daher vor dem Füttern."
+        "de": "Honigmelonenkerne sind nicht giftig, und ein einzelner Kern ist wahrscheinlich kein Grund zur Sorge. Kerne können aber eine Erstickungsgefahr darstellen; entfernen Sie sie daher vor dem Füttern.",
+        "fr": "Les pépins de melon miel ne sont pas toxiques et un seul pépin n’est probablement pas un motif d’inquiétude, mais les pépins peuvent présenter un risque d’étouffement : retirez-les avant de servir."
       }
     }
   ],
@@ -166,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c872f3e7afb80e6ef42d65f069158eaaf1e3a65d74b6ae3d523645627d1a5c70"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40b51e2b2490d94e375c6ed6284dc42a7a117ecccb548a0eae9fe80b950a1091"
     }
   }
 }

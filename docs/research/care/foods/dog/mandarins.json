@@ -6,21 +6,24 @@
     "sl": "Mandarine",
     "hr": "Mandarine",
     "cs": "Mandarinky",
-    "de": "Mandarinen"
+    "de": "Mandarinen",
+    "fr": "Mandarines"
   },
   "question": {
     "en": "Can dogs eat mandarins?",
     "sl": "Ali lahko psi jedo mandarine?",
     "hr": "Smiju li psi jesti mandarine?",
     "cs": "Mohou psi jíst mandarinky?",
-    "de": "Dürfen Hunde Mandarinen fressen?"
+    "de": "Dürfen Hunde Mandarinen fressen?",
+    "fr": "Les chiens peuvent-ils manger des mandarines ?"
   },
   "url_slug": {
     "en": "mandarins",
     "sl": "mandarine",
     "hr": "mandarine",
     "cs": "mandarinky",
-    "de": "mandarinen"
+    "de": "mandarinen",
+    "fr": "mandarines"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, mandarine za pse niso strupene in jih lahko, podobno kot pomaranče, dajete v majhnih količinah. Najprej odstranite lupino in morebitne pečke, porcije pa naj bodo majhne, ker mandarine vsebujejo naravne sladkorje.",
     "hr": "Da, mandarine nisu otrovne za pse i mogu se davati u malim količinama, slično kao naranče. Prvo ukloni koru i sjemenke, a porcije neka budu male, jer mandarine sadrže prirodne šećere.",
     "cs": "Ano, mandarinky pro psy nejsou toxické a podobně jako pomeranče je lze dávat v malém množství. Nejdřív odstraňte slupku a případná semínka a držte porce malé, protože mandarinky obsahují přirozené cukry.",
-    "de": "Ja, Mandarinen sind für Hunde nicht giftig und können wie Orangen in kleinen Mengen gegeben werden. Entfernen Sie vorher Schale und Kerne und halten Sie die Portionen klein, denn Mandarinen enthalten natürlichen Zucker."
+    "de": "Ja, Mandarinen sind für Hunde nicht giftig und können wie Orangen in kleinen Mengen gegeben werden. Entfernen Sie vorher Schale und Kerne und halten Sie die Portionen klein, denn Mandarinen enthalten natürlichen Zucker.",
+    "fr": "Oui, les mandarines ne sont pas toxiques pour les chiens et peuvent leur être données en petites quantités, comme les oranges. Retirez d’abord la peau et les éventuels pépins, et restez sur de petites portions, car les mandarines contiennent des sucres naturels."
   },
   "why": {
     "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
     "sl": "Mandarine vsebujejo podobna hranila kot pomaranče, med drugim vitamin C in vlaknine, a tudi naravne sladkorje. Tako kot pri pomarančah je lupina trda in težko prebavljiva ter lahko poveča tveganje za zaporo, s pečkami pa se pes lahko zaduši, zlasti če je manjši. Tako kot pri pomarančah lahko preveč sadeža povzroči prebavne težave, tudi drisko.",
     "hr": "Mandarine sadrže hranjive tvari slične narančama, među njima vitamin C i vlakna, ali i prirodne šećere. Kao i kod naranča, kora je žilava i teško se probavlja te može povećati rizik od začepljenja, a sjemenke mogu izazvati gušenje, osobito kod manjih pasa. Kao i kod naranča, previše mandarina može izazvati probavne smetnje, uključujući proljev.",
     "cs": "Mandarinky obsahují podobné živiny jako pomeranče, včetně vitaminu C a vlákniny, ale také přirozené cukry. Stejně jako u pomerančů je slupka tuhá a špatně stravitelná a může zvýšit riziko ucpání střev a semínka mohou způsobit dušení, zvlášť u menších psů. Stejně jako u pomerančů může příliš mnoho mandarinek způsobit zažívací potíže, včetně průjmu.",
-    "de": "Mandarinen enthalten ähnliche Nährstoffe wie Orangen, darunter Vitamin C und Ballaststoffe, aber auch natürlichen Zucker. Wie bei Orangen ist die Schale zäh und schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, und Kerne können eine Erstickungsgefahr darstellen, besonders für kleinere Hunde. Auch hier kann zu viel davon zu Verdauungsbeschwerden bis hin zu Durchfall führen."
+    "de": "Mandarinen enthalten ähnliche Nährstoffe wie Orangen, darunter Vitamin C und Ballaststoffe, aber auch natürlichen Zucker. Wie bei Orangen ist die Schale zäh und schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, und Kerne können eine Erstickungsgefahr darstellen, besonders für kleinere Hunde. Auch hier kann zu viel davon zu Verdauungsbeschwerden bis hin zu Durchfall führen.",
+    "fr": "Les mandarines contiennent des nutriments semblables à ceux des oranges, notamment de la vitamine C et des fibres, mais aussi des sucres naturels. Comme celle de l’orange, l’écorce est coriace et difficile à digérer, et elle peut augmenter le risque d’occlusion ; les pépins peuvent présenter un risque d’étouffement, surtout pour les petits chiens. Là encore, en manger trop peut causer des troubles digestifs, dont de la diarrhée."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Psu ne dajajte lupine: tako kot pri pomarančah je težko prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč.",
     "hr": "Psu ne daj koru: kao i kod naranča, teško se probavlja i može povećati rizik od začepljenja crijeva, koje u nekim slučajevima zahtijeva veterinarsku pomoć.",
     "cs": "Slupku psovi nedávejte: stejně jako u pomerančů se špatně tráví a může zvýšit riziko ucpání střev, které v některých případech vyžaduje veterinární pomoc.",
-    "de": "Geben Sie Ihrem Hund keine Schale: Wie bei Orangen ist sie schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, der in manchen Fällen tierärztliche Hilfe braucht."
+    "de": "Geben Sie Ihrem Hund keine Schale: Wie bei Orangen ist sie schwer verdaulich und kann das Risiko eines Darmverschlusses erhöhen, der in manchen Fällen tierärztliche Hilfe braucht.",
+    "fr": "Ne donnez pas la peau à votre chien : comme celle de l’orange, elle est difficile à digérer et peut augmenter le risque d’occlusion intestinale, qui nécessite parfois l’intervention d’un vétérinaire."
   },
   "serving": {
     "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
     "sl": "Olupljene, brez pečk, v majhnih koščkih; majhne porcije kot občasen priboljšek.",
     "hr": "Oguljene, bez sjemenki, narezane na male komadiće; male porcije kao povremena poslastica.",
     "cs": "Oloupané, bez semínek, v malých kouscích; malé porce jako občasný pamlsek.",
-    "de": "Geschält, ohne Kerne, in kleinen Stücken; kleine Portionen als gelegentliches Leckerli."
+    "de": "Geschält, ohne Kerne, in kleinen Stücken; kleine Portionen als gelegentliches Leckerli.",
+    "fr": "Pelée, sans pépins, en petits morceaux ; de petites portions, en friandise occasionnelle."
   },
   "child": {
     "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
     "sl": "Pes lahko dobi droben košček mandarine! Odrasel najprej odstrani lupino in pečke.",
     "hr": "Pas smije dobiti sitan komadić mandarine! Odrasla osoba prvo skine koru i izvadi sjemenke.",
     "cs": "Pes může dostat malinký kousek mandarinky! Dospělý nejdřív odstraní slupku a semínka.",
-    "de": "Ein Hund darf ein winziges Stück Mandarine haben! Ein Erwachsener entfernt vorher Schale und Kerne."
+    "de": "Ein Hund darf ein winziges Stück Mandarine haben! Ein Erwachsener entfernt vorher Schale und Kerne.",
+    "fr": "Un chien peut manger un tout petit morceau de mandarine ! Un adulte enlève d’abord la peau et les pépins."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali so mandarine za pse drugačne od pomaranč?",
         "hr": "Jesu li mandarine za pse drukčije od naranča?",
         "cs": "Jsou mandarinky pro psy jiné než pomeranče?",
-        "de": "Gelten für Mandarinen andere Regeln als für Orangen?"
+        "de": "Gelten für Mandarinen andere Regeln als für Orangen?",
+        "fr": "Les mandarines sont-elles différentes des oranges pour les chiens ?"
       },
       "a": {
         "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
         "sl": "Ne kaj dosti: imajo podobna hranila in naravne sladkorje, veljajo pa enaka pravila – odstranite lupino in pečke ter dajajte majhne porcije.",
         "hr": "Nisu bitno drukčije: imaju slične hranjive tvari i prirodne šećere, a vrijede ista pravila – skini koru, ukloni sjemenke i drži porcije male.",
         "cs": "Moc ne: mají podobné živiny a přirozené cukry a platí stejná pravidla – sloupněte slupku, odstraňte semínka a držte porce malé.",
-        "de": "Kaum: Sie enthalten ähnliche Nährstoffe und natürlichen Zucker, und es gelten dieselben Regeln – Schale entfernen, Kerne herausnehmen und die Portionen klein halten."
+        "de": "Kaum: Sie enthalten ähnliche Nährstoffe und natürlichen Zucker, und es gelten dieselben Regeln – Schale entfernen, Kerne herausnehmen und die Portionen klein halten.",
+        "fr": "Pas vraiment : leurs nutriments et leurs sucres naturels sont semblables, et les mêmes règles s’appliquent. Retirez la peau et les pépins, et restez sur de petites portions."
       }
     }
   ],
@@ -142,6 +152,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6b627609a69521de620981e15f51509dae8cfa88947545619bc2a50327ba7a8e"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0214a985e748d949c1e2cd06bc7194e322f78cd254680e8c2733ff1941757a01"
     }
   }
 }
