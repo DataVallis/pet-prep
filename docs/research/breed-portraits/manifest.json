@@ -1065,6 +1065,19 @@
             "prompt_hash": "sha256:7f826bd2fd1f7728834cd5b4e7d79812c326d8cb41f82bb75b772cbe95f109df",
             "generated_at": "2026-11-03T00:15:29+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "brussels_griffon",
+            "species": "dog",
+            "colour": "red",
+            "file": "dog/brussels-griffon.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:000829b88c94d0b3f43cd475396c45439fc8a9102335fa337405d7638dcd707d",
+            "generated_at": "2026-11-03T00:58:42+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
