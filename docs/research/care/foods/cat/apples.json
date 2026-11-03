@@ -84,7 +84,7 @@
     "hr": "Veterinarska bolnica sveučilišta NC State navodi jabuku bez sjemenki među zdravim poslasticama od ljudske hrane za mačke i pse, a Pet Poison Helpline navodi da su jabuke sigurne sirove ili termički obrađene kad se uklone jezgra i sjemenke. ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid. Mačke su obligatni mesojedi, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "NC States djursjukhus tar upp äpple utan kärnor bland hälsosamma godbitar från människomaten för katter och hundar, och Pet Poison Helpline skriver att äpplen är säkra råa eller tillagade när kärnhus och kärnor är borttagna. ASPCA anger att äppelträdet är giftigt för katter eftersom skaft, blad och kärnor innehåller cyanid. Katter är obligata köttätare, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "Dyrehospitalet ved NC State nævner æble uden kerner blandt sunde godbidder fra menneskemad til katte og hunde, og Pet Poison Helpline skriver at æbler er sikre rå eller tilberedte når kernehus og kerner er fjernet. ASPCA betragter æbleplanten som giftig for katte fordi dens stilke, blade og kerner indeholder cyanid. Katte er rene kødædere, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "NC Staten eläinsairaala mainitsee siemenettömän omenan terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, ja Pet Poison Helplinen mukaan omena on turvallinen raakana tai kypsennettynä, kun siemenkota ja siemenet on poistettu. ASPCA luokittelee omenakasvin kissoille myrkylliseksi, koska sen varret, lehdet ja siemenet sisältävät syanidia. Kissat ovat pakollisia lihansyöjiä, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "fi": "NC Staten eläinsairaala mainitsee siemenettömän omenan terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, ja Pet Poison Helplinen mukaan omena on turvallinen raakana tai kypsennettynä, kun siemenkota ja siemenet on poistettu. ASPCA luokittelee omenakasvin kissoille myrkylliseksi, koska sen varret, lehdet ja siemenet sisältävät syanidia. Kissat ovat ehdottomia lihansyöjiä, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "Dyresykehuset ved NC State oppgir eple uten kjerner blant sunne godbiter fra menneskemat for katter og hunder, og Pet Poison Helpline skriver at epler er trygge rå eller tilberedt når kjernehuset og kjernene er fjernet. ASPCA regner epletreet som giftig for katter fordi stilkene, bladene og kjernene inneholder cyanid. Katter er obligate kjøttetere, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
@@ -351,7 +351,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6af92f69a1ba7e84c94f1fe8029e39739d39838e89b0630124292ac612dbf823"
+      "verified_hash": "ce51aef01844c201c3455ea409a2f07738e72e078115a95f8dd026d251d0ad81"
     },
     "nb": {
       "status": "verified",

@@ -84,7 +84,7 @@
     "hr": "Veterinarska bolnica sveučilišta NC State navodi borovnice među zdravim poslasticama od ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "NC States djursjukhus tar upp blåbär bland hälsosamma godbitar från människomaten för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "Dyrehospitalet ved NC State nævner blåbær blandt sunde godbidder fra menneskemad til katte og hunde, hvis de gives i afmålte mængder og tælles med i det daglige kalorieindtag. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "NC Staten eläinsairaala mainitsee mustikat terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "fi": "NC Staten eläinsairaala mainitsee mustikat terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat ehdottomia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "Dyresykehuset ved NC State oppgir blåbær blant sunne godbiter fra menneskemat for katter og hunder, gitt i avmålte mengder og regnet med i det daglige kaloriinntaket. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
@@ -287,7 +287,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c0762c72548838d58d9bfd50e585d2e71bef3cf16c498b3b222ba54524c4c9ba"
+      "verified_hash": "8eaf3aea15668a71f6bdad32df7c1df07a871c170c67bb8bc7f6cc9cc1979e35"
     },
     "nb": {
       "status": "verified",

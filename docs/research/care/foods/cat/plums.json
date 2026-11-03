@@ -84,7 +84,7 @@
     "hr": "Peteljke, listovi i sjemenke sadrže cijanid (u obliku cijanogenih glikozida) i posebno su otrovni dok venu. Izvori koje smo pronašli opisuju opasnost od tih dijelova biljke i ne navode da je meso ploda sigurno za mačke, pa ne preporučujemo da ga dijeliš s mačkom.",
     "sv": "Skaft, blad och kärnor innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar. Källorna vi har hittat beskriver risken med dessa växtdelar och säger inte att fruktköttet är säkert för katter, så vi avråder från att ge katten fruktköttet.",
     "da": "Stilkene, bladene og kernerne indeholder cyanid (i form af cyanogene glykosider) og er særligt giftige mens de visner. De kilder vi har fundet, beskriver risikoen ved disse plantedele og siger ikke at frugtkødet er sikkert for katte, så vi anbefaler ikke at dele det.",
-    "fi": "Varsissa, lehdissä ja siemenissä on syanidia (syanogeenisina glykosideina), ja ne ovat erityisen myrkyllisiä kuihtuessaan. Löytämämme lähteet kuvaavat näiden kasvinosien riskiä eivätkä sano hedelmälihan olevan kissoille turvallista, joten emme suosittele sen jakamista.",
+    "fi": "Varsissa, lehdissä ja siemenissä on syanidia (syanogeenisina glykosideina), ja ne ovat erityisen myrkyllisiä kuihtuessaan. Löytämämme lähteet kuvaavat näiden kasvinosien riskiä eivätkä sano hedelmälihan olevan kissoille turvallista, joten emme suosittele sen antamista.",
     "nb": "Stilkene, bladene og frøene inneholder cyanid (som cyanogene glykosider) og er særlig giftige når de visner. Kildene vi fant, beskriver risikoen ved disse plantedelene og sier ikke at fruktkjøttet er trygt for katter, så vi anbefaler ikke å dele det."
   },
   "signs": {
@@ -373,7 +373,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "04cf0e5fe5d0cf740922ddaa937c4d2ceb28cdeb7030bf4947adae77fd87f12a"
+      "verified_hash": "7dd5949e762713f7139bea5205b3abaa78cdd2df167165737a370f7823a1d6fa"
     },
     "nb": {
       "status": "verified",

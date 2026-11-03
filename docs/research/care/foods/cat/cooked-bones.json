@@ -156,7 +156,7 @@
     "fi": [
       "Tukehtuminen",
       "Oksentelu",
-      "Vatsakipu (piiloutuminen, murina, haluttomuus tulla kosketetuksi)"
+      "Vatsakipu (piiloutuminen, murina, kosketuksen välttely)"
     ],
     "nb": [
       "Kvelning",
@@ -376,7 +376,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2b552f58599b4eaed1496cf11e7e1315576176a61f7d1e6667e0d29e8ee4bd20"
+      "verified_hash": "212fb1b2518720384a443b9aff81fc26a7ec64bbc2bdb4ccd4cce6accd654371"
     },
     "nb": {
       "status": "verified",

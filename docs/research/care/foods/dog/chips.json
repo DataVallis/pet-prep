@@ -226,7 +226,7 @@
     "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu.",
     "sv": "Chips är ett salt tilltugg för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
     "da": "Chips er en salt snack til mennesker. De er ikke gode for hunde, så hold posen lukket, og giv din hund dens egen godbid.",
-    "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omaa herkkua.",
+    "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omia herkkuja.",
     "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden sin egen godbit."
   },
   "faq": [
@@ -405,7 +405,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7914d8c0f5a3b778b0b31c5b0fb609d28441ac9c1b5ea6c9aa2932fc3c7e2347"
+      "verified_hash": "4f6d76872cb96c35b42a20ce3c2fb2d6944c41d6cb649f5739ae253b5099ed0c"
     },
     "nb": {
       "status": "verified",

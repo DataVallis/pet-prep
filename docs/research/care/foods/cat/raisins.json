@@ -84,7 +84,7 @@
     "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe, grožđice i korintsko grožđe kod mačaka mogu uzrokovati zatajenje bubrega, a mačke s kroničnom bolešću bubrega možda su izložene većem riziku. Mačke vjerojatno same neće pojesti mnogo grožđica, ali može ih privući hrana koja ih sadrži. Slučajevi kod mačaka rijetki su i nisu dobro istraženi, pa primjenjujemo strožu razinu.",
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor, russin och korinter kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Katter äter sällan många russin av sig själva, men de kan lockas av mat som innehåller russin. Fall hos katter är ovanliga och inte väl utredda, så vi använder den strängare nivån.",
     "da": "Velfærdsorganisationer for katte advarer om at vindruer, rosiner og korender kan give nyresvigt hos katte, og katte med kronisk nyresygdom kan have større risiko. Katte spiser næppe mange rosiner af sig selv, men de kan blive fristet af mad der indeholder rosiner. Tilfælde hos katte er sjældne og dårligt kendt, så vi bruger det strengere niveau.",
-    "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet, rusinat ja korintit voivat aiheuttaa kissoille munuaisten vajaatoiminnan, ja kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Kissat tuskin syövät itsestään paljon rusinoita, mutta niitä voivat houkutella ruoat, joissa rusinoita on. Kissojen tapaukset ovat harvinaisia, eikä niitä tunneta hyvin, joten käytämme tiukempaa luokitusta.",
+    "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet, rusinat ja korintit voivat aiheuttaa kissoille munuaisten vajaatoiminnan, ja kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Kissat tuskin syövät itsestään paljon rusinoita, mutta niitä voivat houkutella ruoat, joissa rusinoita on. Kissoilla tapaukset ovat harvinaisia, eikä niitä tunneta hyvin, joten käytämme tiukempaa luokitusta.",
     "nb": "Organisasjoner for katters velferd advarer om at druer, rosiner og korinter kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Det er lite sannsynlig at katter spiser mange rosiner på egen hånd, men de kan bli fristet av mat som inneholder dem. Tilfeller hos katter er sjeldne og lite forstått, så vi bruker det strengere nivået."
   },
   "signs": {
@@ -328,7 +328,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fef072688a2d88fb69dc78d57abd050b08ded78501cf7c61e94ceca1549c43bb"
+      "verified_hash": "25cf268c82e32028c11e7f5bbb4d04cb9716d9a648f24e5d2da3083963740982"
     },
     "nb": {
       "status": "verified",

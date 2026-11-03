@@ -195,7 +195,7 @@
     "fi": [
       "Oksentelu tai ripuli, usein 6–24 tunnin kuluessa",
       "Väsymys ja voimattomuus",
-      "Haluttomuus syödä",
+      "Ruokahaluttomuus",
       "Vatsakipu",
       "Nestehukka ja runsas juominen",
       "Vapina"
@@ -448,7 +448,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bd33e4123a0b8b0ba2dab4eb719f470b8118eb00f20a4f5b4a239c881bd233c7"
+      "verified_hash": "09962a3f9e37666aee689d899b9f6da6f10fcd4c86d57d67f22e27ff8d9ff4db"
     },
     "nb": {
       "status": "verified",

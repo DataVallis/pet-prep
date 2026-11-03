@@ -84,7 +84,7 @@
     "hr": "ASPCA navodi pravu dinju kantalupu (Cucumis melo) kao neotrovnu za mačke. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att äkta cantaloupemelon (Cucumis melo) inte är giftig för katter. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
     "da": "ASPCA betragter ægte cantaloupemelon (Cucumis melo) som ugiftig for katte. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
-    "fi": "ASPCA luokittelee aidon cantaloupe-melonin (Cucumis melo) kissoille myrkyttömäksi. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
+    "fi": "ASPCA luokittelee aidon cantaloupe-melonin (Cucumis melo) kissoille myrkyttömäksi. Kissat ovat ehdottomia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "ASPCA oppgir ekte cantaloupe (Cucumis melo) som ikke giftig for katter. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
   "signs": null,
@@ -286,7 +286,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "237db0b923c9da98ca5a517de7dd9b6e74d6accd24b35e8ed47eddf6a5d33d0e"
+      "verified_hash": "c07808cea76b4032b84af477a7394627aaeaf138d7f31a636165eefdb78900e0"
     },
     "nb": {
       "status": "verified",

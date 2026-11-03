@@ -84,7 +84,7 @@
     "hr": "Sirovo meso često je kontaminirano bakterijama. Psi mogu nositi te klice bez ikakvih znakova i izlučivati ih slinom i izmetom, čime ugrožavaju članove obitelji, osobito rizične skupine poput male djece i starijih osoba. Sirova svinjetina može prenijeti parazita, sirove kosti mogu začepiti crijeva, a domaća sirova prehrana vjerojatno nije uravnotežena ako recept nije sastavio stručnjak za prehranu.",
     "sv": "Det är vanligt att rått kött är förorenat av bakterier. Hundar kan bära på bakterierna utan symtom och utsöndra dem med saliv och avföring, vilket utsätter familjen för risk, särskilt riskgrupper som små barn och äldre. Rått fläskkött kan bära på en parasit, råa ben kan orsaka tarmstopp, och hemlagat råfoder är troligen inte balanserat om inte en nutritionist har tagit fram receptet.",
     "da": "Det er almindeligt at råt kød er forurenet med bakterier. Hunde kan bære bakterierne uden symptomer og udskille dem i spyt og afføring, hvilket udsætter familiemedlemmer for risiko, især risikogrupper som børn og ældre. Råt svinekød kan indeholde en parasit, rå knogler kan blokere tarmen, og hjemmelavede rå foderplaner er sandsynligvis ikke balancerede, medmindre en ernæringsekspert har sammensat opskriften.",
-    "fi": "Raa’an lihan bakteerikontaminaatio on yleistä. Koira voi kantaa näitä bakteereja oireettomana ja erittää niitä sylkeen ja ulosteeseen, mikä on riski perheenjäsenille, etenkin riskiryhmille, kuten pienille lapsille ja ikääntyneille. Raa’assa sianlihassa voi olla loinen, raa’at luut voivat tukkia suoliston, ja kotona tehty raakaruokavalio ei todennäköisesti ole tasapainoinen, ellei ravitsemusasiantuntija ole laatinut reseptiä.",
+    "fi": "Raaka liha on usein bakteerien saastuttamaa. Koira voi kantaa näitä bakteereja oireettomana ja erittää niitä sylkeen ja ulosteeseen, mikä on riski perheenjäsenille, etenkin riskiryhmille, kuten pienille lapsille ja ikääntyneille. Raa’assa sianlihassa voi olla loinen, raa’at luut voivat tukkia suoliston, ja kotona tehty raakaruokavalio ei todennäköisesti ole tasapainoinen, ellei ravitsemusasiantuntija ole laatinut reseptiä.",
     "nb": "Det er vanlig at rått kjøtt er forurenset med bakterier. Hunder kan bære disse bakteriene uten symptomer og skille dem ut i spytt og avføring, noe som setter familiemedlemmer i fare, særlig risikogrupper som barn og eldre. Rått svinekjøtt kan inneholde en parasitt, rå bein kan blokkere tarmen, og hjemmelaget råfôr er trolig ikke balansert med mindre en ernæringsekspert har satt sammen oppskriften."
   },
   "signs": {
@@ -456,7 +456,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9711c23dc1bf707e1902d280fa6f8b6f188dbcb8d77aa744ddb6985d78e0dd26"
+      "verified_hash": "aab3668780e5c6a893c044bb5ec8d7c980a61d64c814be660e466e007a338c7c"
     },
     "nb": {
       "status": "verified",

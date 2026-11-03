@@ -67,7 +67,7 @@
     "hr": "Ne kao domaća poslastica. Jetra je vrlo bogata vitaminom A, a mačke koje jedu sirovu jetru ili hranu s puno jetre mogu se otrovati vitaminom A. Jetra u potpunoj, uravnoteženoj hrani za mačke je u redu.",
     "sv": "Inte som godbit hemma. Lever är mycket rik på A-vitamin, och katter som får rå lever eller en kost med mycket lever kan få A-vitaminförgiftning. Lever i ett komplett, balanserat kattfoder går bra.",
     "da": "Ikke som hjemmelavet godbid. Lever er meget rig på A-vitamin, og katte der får rå lever eller en kost med meget lever, kan få A-vitaminforgiftning. Lever i et komplet, balanceret kattefoder er i orden.",
-    "fi": "Ei kotona annettavaksi herkuksi. Maksassa on erittäin paljon A-vitamiinia, ja kissa, jolle syötetään raakaa maksaa tai paljon maksaa sisältävää ruokaa, voi saada A-vitamiinimyrkytyksen. Tasapainoisen kissan täysravinnon sisältämä maksa ei ole ongelma.",
+    "fi": "Ei kotona annettavaksi herkuksi. Maksassa on erittäin paljon A-vitamiinia, ja kissa, jolle syötetään raakaa maksaa tai paljon maksaa sisältävää ruokaa, voi saada A-vitamiinimyrkytyksen. Täysravinnoksi tarkoitetussa, tasapainoisessa kissanruoassa oleva maksa ei ole ongelma.",
     "nb": "Ikke som godbit hjemme. Lever er svært rik på vitamin A, og katter som får rå lever eller et kosthold med mye lever, kan få A-vitaminforgiftning. Lever i et komplett, balansert kattefôr er greit."
   },
   "why": {
@@ -387,7 +387,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "038bbf906e9d3a22991feced477eac9febe0ccdf99879c6cf5f928feb88f8db6"
+      "verified_hash": "1c1ef16867a4532dbb63e0588edec9a31dae7bbb676a4b9d03070b8d613dcd80"
     },
     "nb": {
       "status": "verified",

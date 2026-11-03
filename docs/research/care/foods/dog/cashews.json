@@ -84,7 +84,7 @@
     "hr": "Indijski oraščići nisu otrovni, ali su vrlo masna grickalica: previše njih može dovesti do probavnih smetnji, upale gušterače i debljanja. Slani indijski oraščići dodaju i sol, koja je u višku štetna. Najveći rizik dolazi od drugih orašastih plodova u mješavini, poput makadamije. Neki psi mogu reagirati oticanjem, svrbežom ili koprivnjačom.",
     "sv": "Cashewnötter är inte giftiga, men de är ett fettrikt tilltugg: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter innehåller salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
     "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
-    "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla voi esiintyä reaktiona turvotusta, kutinaa tai nokkosihottumaa.",
+    "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla reaktiona voi olla turvotus, kutina tai nokkosihottuma.",
     "nb": "Cashewnøtter er ikke giftige, men de er en fet snacks: For mange kan føre til urolig mage, betennelse i bukspyttkjertelen og vektøkning. Saltede cashewnøtter gir salt, som er skadelig i store mengder. Den største risikoen kommer fra andre nøtter i en blanding, som macadamianøtter. Noen hunder kan reagere med hevelse, kløe eller elveblest."
   },
   "signs": null,
@@ -304,7 +304,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f85da7b2f5b8865131184a1141e9cec2c77b1aa5b2cc7d89b998b6b4cbdef6aa"
+      "verified_hash": "fda1d459a3a310b06d3a865877e5517b80755afeb41912f44ab69109715ae14a"
     },
     "nb": {
       "status": "verified",

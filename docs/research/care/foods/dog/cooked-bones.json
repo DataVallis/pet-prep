@@ -67,7 +67,7 @@
     "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu postati hitan slučaj za veterinara.",
     "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller blockera tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
     "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
-    "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja niistä voi seurata eläinlääkärin hoitoa vaativa hätätilanne.",
+    "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja ne voivat aiheuttaa hätätilanteen, joka vaatii eläinlääkärin hoitoa.",
     "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan kutte munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
   },
   "why": {
@@ -449,7 +449,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a79d20082cfaebbb2720ed90747d64e4bac74cbf74357010ce50686cd27682a6"
+      "verified_hash": "f0be22d67cd10634b6864795c1cbb108c7797498fd90f934dc288af23a1ebea5"
     },
     "nb": {
       "status": "verified",

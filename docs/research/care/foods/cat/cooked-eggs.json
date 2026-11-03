@@ -84,7 +84,7 @@
     "hr": "Cornell navodi jaja među najčešćim izvorima bjelančevina u hrani za mačke, a PDSA navodi da su jaja prikladna za ljubimce, ali samo umjereno. Termička obrada je važna: sirova jaja mogu prenositi salmonelu, a sirovi bjelanjak sprječava iskorištavanje vitamina biotina. Poslastice trebaju biti mali dio mačje prehrane.",
     "sv": "Cornell räknar ägg till de proteinkällor som oftast används i kattmat, och PDSA skriver att ägg passar husdjur, men bara med måtta. Tillagningen spelar roll: råa ägg kan bära på salmonella, och rå äggvita blockerar vitaminet biotin. Godbitar ska bara vara en liten del av kattens kost.",
     "da": "Cornell nævner æg blandt de proteinkilder der oftest bruges i kattefoder, og PDSA skriver at æg passer til kæledyr, men kun med måde. Tilberedningen er vigtig: Rå æg kan indeholde salmonella, og rå æggehvide blokerer vitaminet biotin. Godbidder bør kun udgøre en lille del af en kats kost.",
-    "fi": "Cornellin yliopisto mainitsee kananmunat kissanruoan yleisimpien proteiininlähteiden joukossa, ja PDSA:n mukaan kananmunat sopivat lemmikeille, mutta vain kohtuudella. Kypsentäminen on tärkeää: raa’assa kananmunassa voi olla salmonellaa, ja raaka munanvalkuainen estää biotiini-vitamiinin imeytymisen. Herkkujen pitäisi olla vain pieni osa kissan ruokavaliota.",
+    "fi": "Cornellin yliopisto mainitsee kananmunat kissanruoan yleisimpien proteiininlähteiden joukossa, ja PDSA:n mukaan kananmunat sopivat lemmikeille, mutta vain kohtuudella. Kypsentäminen on tärkeää: raa’assa kananmunassa voi olla salmonellaa, ja raaka munanvalkuainen estää biotiinin imeytymisen. Herkkujen pitäisi olla vain pieni osa kissan ruokavaliota.",
     "nb": "Cornell regner egg blant proteinkildene som brukes mest i kattefôr, og PDSA skriver at egg passer for kjæledyr, men bare med måte. Tilberedningen er viktig: Rå egg kan inneholde salmonella, og rå eggehvite hindrer opptaket av vitaminet biotin. Godbiter bør være en liten del av kattens kosthold."
   },
   "signs": null,
@@ -172,7 +172,7 @@
         "hr": "Sirova jaja mogu prenositi bakterije poput salmonele, a sirovi bjelanjak sadrži avidin, koji sprječava apsorpciju vitamina biotina.",
         "sv": "Råa ägg kan bära på bakterier som salmonella, och rå äggvita innehåller avidin, som hindrar att vitaminet biotin tas upp.",
         "da": "Rå æg kan indeholde bakterier som salmonella, og rå æggehvide indeholder avidin, som forhindrer at vitaminet biotin bliver optaget.",
-        "fi": "Raa’assa kananmunassa voi olla bakteereja, kuten salmonellaa, ja raa’assa munanvalkuaisessa on avidiinia, joka estää biotiini-vitamiinin imeytymisen.",
+        "fi": "Raa’assa kananmunassa voi olla bakteereja, kuten salmonellaa, ja raa’assa munanvalkuaisessa on avidiinia, joka estää biotiinin imeytymisen.",
         "nb": "Rå egg kan inneholde bakterier som salmonella, og rå eggehvite inneholder avidin, som hindrer at vitaminet biotin blir tatt opp."
       }
     }
@@ -281,7 +281,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5ad13c8ba9a9e68555b3ce943e41c2e0aafd446331ba7b1ee9ebb11e1264a26f"
+      "verified_hash": "84bb7f7120aa4bfe21ecb6f8af4f2c5417cad64ce53b15734148627e92741992"
     },
     "nb": {
       "status": "verified",

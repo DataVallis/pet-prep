@@ -181,9 +181,9 @@
     ],
     "fi": [
       "Oksentelu, joka voi alkaa vasta 1–4 päivää rasvaisen aterian jälkeen",
-      "Vatsakipu (koira saattaa venyttäytyä ”rukousasentoon”)",
+      "Vatsakipu (koira saattaa ottaa ”rukousasennon”)",
       "Ripuli",
-      "Haluttomuus syödä",
+      "Ruokahaluttomuus",
       "Väsymys, kuume"
     ],
     "nb": [
@@ -401,7 +401,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b5a1002909d4f6d75ace1a828ceea1f61028df8cc51f55d2790748987ac44626"
+      "verified_hash": "ab63db0752be9bfef79a168cd51afdba948ee707b8d3bd287dcfda4ca491dbf3"
     },
     "nb": {
       "status": "verified",

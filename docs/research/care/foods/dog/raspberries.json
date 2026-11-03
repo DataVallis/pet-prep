@@ -136,7 +136,7 @@
     "hr": "Psi smiju pojesti nekoliko malina kao poslasticu! Odrasla osoba odlučuje koliko, jer od previše malina može zaboljeti trbuh.",
     "sv": "Hundar får äta några hallon som godbit! En vuxen bestämmer hur många, eftersom för många kan ge ont i magen.",
     "da": "Hunde må gerne få nogle få hindbær som godbid! En voksen bestemmer hvor mange – for mange kan give ondt i maven.",
-    "fi": "Koira saa syödä muutaman vadelman herkkuna! Aikuinen päättää, kuinka monta, koska liian monesta voi tulla vatsa kipeäksi.",
+    "fi": "Koira saa syödä muutaman vadelman herkkuna! Aikuinen päättää, kuinka monta, koska liian monesta vatsa voi mennä kipeäksi.",
     "nb": "Hunder kan få noen bringebær som godbit! En voksen bestemmer hvor mange, siden for mange kan gi vondt i magen."
   },
   "faq": [
@@ -299,7 +299,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "92b47f73d521059795a58b3961982c81e145ea6dd8f6a49eedeb56519c3d3cae"
+      "verified_hash": "64e7cde9784a4a44036375452c00fd86ff68ee2f797c2dc21aca76306a162579"
     },
     "nb": {
       "status": "verified",

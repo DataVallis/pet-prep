@@ -136,7 +136,7 @@
     "hr": "Mnogi psi obožavaju malo maslaca od kikirikija! Odrasla osoba prvo mora provjeriti staklenku jer neke vrste nisu sigurne za pse.",
     "sv": "Många hundar älskar lite jordnötssmör! En vuxen måste först kolla burken, för vissa sorter kan vara farliga för hundar.",
     "da": "Mange hunde elsker lidt peanutbutter! En voksen skal tjekke glasset først, for nogle slags er ikke sikre for hunde.",
-    "fi": "Moni koira rakastaa vähän maapähkinävoita! Aikuisen pitää ensin tarkistaa purkki, koska jotkin laadut eivät ole turvallisia koirille.",
+    "fi": "Moni koira rakastaa vähän maapähkinävoita! Aikuisen pitää ensin tarkistaa purkki, koska kaikki tuotteet eivät ole turvallisia koirille.",
     "nb": "Mange hunder elsker litt peanøttsmør! En voksen må sjekke glasset først, for noen typer er ikke trygge for hunder."
   },
   "faq": [
@@ -362,7 +362,7 @@
     "fi": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "85adebab20711b4a49d125251fcf9a9294e728d39f4ff6655070688a3ac99173"
+      "verified_hash": "05a87691e003a99549fee8e0215b83004b05097e624c4c83486393171f02184f"
     },
     "nb": {
       "status": "verified",
