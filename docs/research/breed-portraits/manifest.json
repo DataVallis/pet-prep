@@ -1026,6 +1026,45 @@
             "prompt_hash": "sha256:83a4ac2fbe889937a50b3c51989b810192f4ecc559c6b2bf330c4de24ed33d47",
             "generated_at": "2026-10-31T07:15:42+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "rat_terrier",
+            "species": "dog",
+            "colour": "black-tan-white",
+            "file": "dog/rat-terrier.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:f46873618acad09bbc9f0585ebf4005579658159e3542f72ecdbcdd4b93f3536",
+            "generated_at": "2026-11-03T00:14:52+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "greater_swiss_mountain_dog",
+            "species": "dog",
+            "colour": "tricolour",
+            "file": "dog/greater-swiss-mountain-dog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:6302612b24f5d9532cac876e0d9f90228e08e0c573cc5f0b8b180e2ded681d62",
+            "generated_at": "2026-11-03T00:15:11+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "shar_pei",
+            "species": "dog",
+            "colour": "fawn",
+            "file": "dog/shar-pei.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:7f826bd2fd1f7728834cd5b4e7d79812c326d8cb41f82bb75b772cbe95f109df",
+            "generated_at": "2026-11-03T00:15:29+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
