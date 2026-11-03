@@ -1,6 +1,6 @@
 {
   "country": "PL",
-  "checked": "2026-11-02",
+  "checked": "2026-11-03",
   "sources": [
     {
       "name": "SGGW Klinika Małych Zwierząt (klinikawet.sggw.edu.pl)",
@@ -41,6 +41,21 @@
       "name": "Individual clinic websites (opened with WebFetch 2026-11-02)",
       "url": "https://veterio.pl/en/contact/",
       "note": "Each entry source_url is the clinic own page."
+    },
+    {
+      "name": "Miasto Opole - program opieki nad zwierzętami (AquaVet)",
+      "url": "https://www.opole.pl/print/pdf/node/1884",
+      "note": "Official city page naming a round-the-clock practice."
+    },
+    {
+      "name": "Opolskie voivodeship BIP - reply on lack of night vet care (2024)",
+      "url": "https://bip.opolskie.pl/wp-content/uploads/2024/05/Odp-na-interp-Radnego-W.Komarzynskiego-z-dn-8.07.24-z-dn-w-sprawie-braku-nocnej-opieki-weterynaryjnej.pdf",
+      "note": "Official reply: no 24 h/night vet service in Opolskie; unnamed Opole clinic on ul. Plebiscytowa keeps phone duty outside hours. Context only, no entry."
+    },
+    {
+      "name": "Grupa LuxVet - facilities",
+      "url": "https://grupaluxvet.pl/en/placowki/",
+      "note": "Group page used for discovery only."
     }
   ],
   "entries": [
@@ -675,7 +690,110 @@
       "source_url": "https://przychodnia-arka.pl/kontakt",
       "note": "24 h is the on-call emergency number (conditional). Clinic phone +48 793 703 103.",
       "quote": "Pogotowie 24/7"
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "AquaVet Gabinet Weterynaryjny (Zawada k. Opola)",
+      "city": "Zawada (Opole)",
+      "region": "Opolskie",
+      "address": "ul. Wodociągowa 1J, Zawada",
+      "phone": "518 852 739",
+      "emergency_24h": true,
+      "duty": "City of Opole page describes it as a round-the-clock veterinary practice providing night-time care.",
+      "url": "https://aquavet.opole.pl/",
+      "source_url": "https://www.opole.pl/print/pdf/node/1884",
+      "note": "Conditional: 24 h claim comes from the City of Opole page only (clinic site blocks automated access, not opened); call ahead. Opolskie government reply 2024 says no formal night vet service exists in the voivodeship.",
+      "quote": "Całodobowy gabinet weterynaryjny"
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "Gabinet Weterynaryjny Animed",
+      "city": "Białystok",
+      "region": "Podlaskie",
+      "address": "ul. Armii Krajowej 23/1, 15-661 Białystok",
+      "phone": "+48 608 242 920",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-19:00, Sat 9:00-14:00, Sun 10:00-12:00. No 24 h wording.",
+      "url": "https://weterynaria.bialystok.pl/",
+      "source_url": "https://weterynaria.bialystok.pl/"
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "Przychodnia Weterynaryjna Pupil",
+      "city": "Białystok",
+      "region": "Podlaskie",
+      "address": "ul. Władysława Wysockiego 78, 15-167 Białystok",
+      "phone": "+48 608 304 278",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-19:00, Sat by arrangement, Sun closed. Booking by phone. No 24 h wording.",
+      "url": "https://pupil.bialystok.pl/",
+      "source_url": "https://pupil.bialystok.pl/kontakt/"
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "AMICUS przychodnia weterynaryjna",
+      "city": "Białystok",
+      "region": "Podlaskie",
+      "address": "ul. Antoniuk Fabryczny 55 lok. 1, Białystok",
+      "phone": "+48 500 368 400",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 10:00-19:00, Sat 10:00-14:00. No 24 h wording.",
+      "url": "https://amicus.bialystok.pl/",
+      "source_url": "https://amicus.bialystok.pl/"
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "Przychodnia Weterynaryjna HELP",
+      "city": "Zielona Góra",
+      "region": "Lubuskie",
+      "address": "ul. Węgierska 44, 65-001 Zielona Góra",
+      "phone": "+48 68 323 23 04",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-19:00 (by appointment), Sat 8:00-13:00. No 24 h wording.",
+      "url": "https://help.zgora.pl/",
+      "source_url": "https://help.zgora.pl/",
+      "note": "Mobile +48 722 020 633."
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "Przychodnia Weterynaryjna Zielona Góra (Zielonogórska Lecznica Weterynaryjna)",
+      "city": "Zielona Góra",
+      "region": "Lubuskie",
+      "address": "ul. Olbrychta 1A, 65-823 Zielona Góra",
+      "phone": "+48 68 326 70 75",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-18:00, Sat 9:00-15:00, Sun 10:00-12:00. No 24 h reception wording (LuxVet group page says hospital wards are monitored 24/7, not a 24 h emergency claim).",
+      "url": "https://lecznica.zgora.pl/",
+      "source_url": "https://lecznica.zgora.pl/kontakt/",
+      "note": "Second phone +48 68 455 63 00."
+    },
+    {
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-03",
+      "name": "Gdyński Szpital Weterynaryjny",
+      "city": "Gdynia",
+      "region": "Pomorskie",
+      "address": "ul. Kielecka 22, 81-303 Gdynia",
+      "phone": "+48 58 620 55 55",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 7:00-20:00, Sat 8:00-16:00, Sun closed. Contact page has no 24 h wording.",
+      "url": "https://gswet.pl/",
+      "source_url": "https://gswet.pl/strona-glowna/kontakt/",
+      "note": "LuxVet group page mentions a 24/7 supervised inpatient hospital, but the clinic's own page gives no 24 h emergency reception."
     }
   ],
-  "notes": "First PL run 2026-11-02. Every entry page opened with WebFetch; aggregator pages (worldpetnet, znanylekarz, gost24, doweta etc.) used only to discover URLs. 24 h marked only where the clinic page says 24 h / całą dobę / całodobowo / 24/7; several are conditional (emergency duty or phone line outside regular hours) and say so in note: AMVET Kraków and Gdańsk, Luxvet24, UR Kraków, Giszowiec, Ołtaszyńska, OIOMVET (24 h only Fri-Sun), ARKA. Not marked 24 h despite wording: KORA Bydgoszcz (page says całą dobę but hours end in evening), Gdynia Stryjska (duty to 24:00 only; aggregators call it 24h), Bydgoszcz/Toruń Pogotowie (night 20-8, 24 h Sun/holidays, schedule not tied to a site), Witolińska Warszawa (7-23). Duty rotas: Poland has no national or chamber-run rota that could be opened; Krajowa Izba Lekarsko-Weterynaryjna page returned unreadable content and regional chambers were not reachable; only the City of Łódź list is included as duty_rota. Poison line: none included - no opened page names a real animal poison information line in Poland (human poison centres were not claimed to advise on animals). Koszalin: an advocacy page (vet-alert.org) reports that in Jan 2025 the Zachodniopomorska izba said no Koszalin clinic is registered as 24 h; no Koszalin/Kołobrzeg/Słupsk (Baltic coast) 24 h clinic included. Not done / left for follow-up: UP Wrocław SOR (announced for early 2026, kliniki.upwr.edu.pl pages returned errors), UP Poznań UCMW (robots disallowed), ZUT Szczecin (no clinic found), Warszawa Ursynów lecznica-ursynow.waw.pl and Morskie Oko (site redirect loop / not opened), VETS Warsaw, Bemowo, Vet Med Brwinów, Gdyński Szpital Weterynaryjny Kielecka 22 (only group news page, hospital 24/7 supervised), AMVET-group others; Gdynia/Sopot own-site 24 h clinics; Zakopane and Mazury 24 h clinics (none found); Białystok, Opole, Kielce, Zielona Góra, Olsztyn 24 h private clinics; regional chambers (okręgowe izby) duty pages; Piła Matuszewscy (24 h phone line only, not a clinic claim). Independent check 2026-11-02: opened source_url of all 31 24-h entries, the Łódź duty rota and 2 random other clinics (VetMaria, Bydgoszcz/Toruń Pogotowie) - 34 checked, 0 phones fixed, 0 downgraded, 0 removed. 24-h wording confirmed on every page (several conditional, see notes: OIOMVET Mon-Thu 8-24, AMVET/Luxvet24/Sosken/UR Kraków/Giszowiec/Ołtaszyńska emergency duty outside regular hours, Centrum Bydgoszcz night = emergencies only). Remaining ~7 other clinics not re-opened."
+  "notes": "First PL run 2026-11-02. Every entry page opened with WebFetch; aggregator pages (worldpetnet, znanylekarz, gost24, doweta etc.) used only to discover URLs. 24 h marked only where the clinic page says 24 h / całą dobę / całodobowo / 24/7; several are conditional (emergency duty or phone line outside regular hours) and say so in note: AMVET Kraków and Gdańsk, Luxvet24, UR Kraków, Giszowiec, Ołtaszyńska, OIOMVET (24 h only Fri-Sun), ARKA. Not marked 24 h despite wording: KORA Bydgoszcz (page says całą dobę but hours end in evening), Gdynia Stryjska (duty to 24:00 only; aggregators call it 24h), Bydgoszcz/Toruń Pogotowie (night 20-8, 24 h Sun/holidays, schedule not tied to a site), Witolińska Warszawa (7-23). Duty rotas: Poland has no national or chamber-run rota that could be opened; Krajowa Izba Lekarsko-Weterynaryjna page returned unreadable content and regional chambers were not reachable; only the City of Łódź list is included as duty_rota. Poison line: none included - no opened page names a real animal poison information line in Poland (human poison centres were not claimed to advise on animals). Koszalin: an advocacy page (vet-alert.org) reports that in Jan 2025 the Zachodniopomorska izba said no Koszalin clinic is registered as 24 h; no Koszalin/Kołobrzeg/Słupsk (Baltic coast) 24 h clinic included. Not done / left for follow-up: UP Wrocław SOR (announced for early 2026, kliniki.upwr.edu.pl pages returned errors), UP Poznań UCMW (robots disallowed), ZUT Szczecin (no clinic found), Warszawa Ursynów lecznica-ursynow.waw.pl and Morskie Oko (site redirect loop / not opened), VETS Warsaw, Bemowo, Vet Med Brwinów, Gdyński Szpital Weterynaryjny Kielecka 22 (only group news page, hospital 24/7 supervised), AMVET-group others; Gdynia/Sopot own-site 24 h clinics; Zakopane and Mazury 24 h clinics (none found); Białystok, Opole, Kielce, Zielona Góra, Olsztyn 24 h private clinics; regional chambers (okręgowe izby) duty pages; Piła Matuszewscy (24 h phone line only, not a clinic claim). Independent check 2026-11-02: opened source_url of all 31 24-h entries, the Łódź duty rota and 2 random other clinics (VetMaria, Bydgoszcz/Toruń Pogotowie) - 34 checked, 0 phones fixed, 0 downgraded, 0 removed. 24-h wording confirmed on every page (several conditional, see notes: OIOMVET Mon-Thu 8-24, AMVET/Luxvet24/Sosken/UR Kraków/Giszowiec/Ołtaszyńska emergency duty outside regular hours, Centrum Bydgoszcz night = emergencies only). Remaining ~7 other clinics not re-opened. Follow-up 2026-11-03 (regional / Baltic / Mazury): added 7 clinics (0 duty rotas, 1 conditional 24 h: AquaVet Zawada near Opole, 24 h claim only from the City of Opole page). Białystok (3), Zielona Góra (2), Gdynia (1) are ordinary clinics without 24 h wording. No okręgowa izba duty-rota page could be found or opened: the search tool did not surface any chamber pages, and fetch only works on URLs returned by search. The 2024 Opolskie voivodeship reply states there is no formal night vet service in Opolskie. Unreachable: aquavet.opole.pl and weterynarz.kielce.pl (robots disallow automated access), trojmiasto.pl AmVet page (client error), bialystok.oirl.pl (not retrievable). Gdynia Specialist Veterinary Clinic (ul. Paprykowa 12A, +48 536 300 490, no 24 h) only seen on LuxVet group page, not added. Not found at all: 24 h clinics in Białystok, Kielce, Zielona Góra, Sopot, Zakopane, Mazury (Olsztyn region, Mikołajki, Mrągowo, Ełk), Koszalin, Kołobrzeg, Słupsk, Hel/Władysławowo; searches returned only aggregators or job listings. Left: chamber duty lists (Białystok, Olsztyn, Kielce, Opole, Zielona Góra, Gdańsk/Gdynia), own-site research for these regions via a search tool that can surface clinic domains. Independent check 2026-11-03: opened source_url of all 7 new entries (AquaVet Zawada, Białystok x3, Zielona Góra x2, Gdynia) - 7 checked, 0 phones fixed, 0 downgraded, 0 removed; AquaVet 24 h wording (Całodobowy gabinet weterynaryjny) confirmed on the City of Opole page."
 }
