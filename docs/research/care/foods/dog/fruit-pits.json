@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Fruit pits and stones",
-    "sl": "Koščice sadja"
+    "sl": "Koščice sadja",
+    "de": "Obstkerne"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
-    "sl": "Ali lahko psi jedo koščice sadja?"
+    "sl": "Ali lahko psi jedo koščice sadja?",
+    "de": "Dürfen Hunde Obstkerne fressen?"
   },
   "url_slug": {
     "en": "fruit-pits",
-    "sl": "koscice-sadja"
+    "sl": "koscice-sadja",
+    "de": "obstkerne"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
-    "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena."
+    "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena.",
+    "de": "Nein. Kerne und Steine von Früchten wie Kirschen, Pfirsichen und Nektarinen sollten Hunden nie gegeben werden. Sie können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren und enthalten eine kleine Menge Cyanid. Wenn Sie Obst mit Ihrem Hund teilen, entfernen Sie vorher immer Kerne und Samen."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
-    "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer."
+    "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer.",
+    "de": "Harte Kerne können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren, und Kerne mit rauen Kanten können beim Verschlucken die Speiseröhre verletzen. Der Kern enthält außerdem eine kleine Menge Cyanid. Cyanidvergiftungen durch Steinobst sind selten, aber Tiere können schon nach einer winzigen Menge erkranken – ein aufgebissener Kern gilt deshalb als dringender Fall."
   },
   "signs": {
     "en": [
@@ -38,36 +43,50 @@
       "Težave pri iztrebljanju",
       "Bolečine v trebuhu",
       "Težko dihanje"
+    ],
+    "de": [
+      "Würgen",
+      "Sabbern",
+      "Erbrechen",
+      "Schwierigkeiten beim Kotabsatz",
+      "Bauchschmerzen",
+      "Atembeschwerden"
     ]
   },
   "what_to_do": {
     "en": "Call your vet right away if your dog breaks open a pit. If your dog swallowed a pit and shows any of these signs, call your vet.",
-    "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja."
+    "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja.",
+    "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund einen Kern aufbeißt. Hat Ihr Hund einen Kern verschluckt und zeigt eines dieser Anzeichen, rufen Sie Ihren Tierarzt an."
   },
   "serving": null,
   "child": {
     "en": "Fruit stones are not for dogs. Throw them in the bin where your dog can't reach, and tell a grown-up if your dog eats one.",
-    "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje."
+    "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje.",
+    "de": "Obstkerne sind nichts für Hunde. Wirf sie in einen Mülleimer, an den dein Hund nicht herankommt, und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst."
   },
   "faq": [
     {
       "q": {
         "en": "Is the fruit itself okay?",
-        "sl": "Je sam sadež v redu?"
+        "sl": "Je sam sadež v redu?",
+        "de": "Ist die Frucht selbst in Ordnung?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
-        "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje."
+        "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje.",
+        "de": "Das hängt von der Frucht ab; schauen Sie auf der jeweiligen Seite nach. Grundsätzlich sollten Samen, Kerne, Kerngehäuse, Schalen und Pflanzenstiele entfernt werden, bevor Sie Obst an Ihren Hund verfüttern."
       }
     },
     {
       "q": {
         "en": "Which fruits have pits?",
-        "sl": "Katero sadje ima koščice?"
+        "sl": "Katero sadje ima koščice?",
+        "de": "Welche Früchte haben Kerne?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
-        "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid."
+        "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid.",
+        "de": "Früchte wie Kirschen, Nektarinen und Pfirsiche nennt man Steinobst. Wie bei Kirschen enthalten auch Pfirsichkerne Cyanid."
       }
     }
   ],
@@ -140,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5a9d9c20efd9a478abc3415c001c4471307416eb357130a6cc10a1889921eba3"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "660ef18f7df04fddbdfafc0bf9c416c91dd115d3daf29d79ee5a3065cc6a9847"
     }
   }
 }

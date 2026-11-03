@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Coconut",
-    "sl": "Kokos"
+    "sl": "Kokos",
+    "de": "Kokosnuss"
   },
   "question": {
     "en": "Can dogs eat coconut?",
-    "sl": "Ali lahko psi jedo kokos?"
+    "sl": "Ali lahko psi jedo kokos?",
+    "de": "Dürfen Hunde Kokosnuss fressen?"
   },
   "url_slug": {
     "en": "coconut",
-    "sl": "kokos"
+    "sl": "kokos",
+    "de": "kokosnuss"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
-    "sl": "Da, v majhnih količinah. Nesladkano kokosovo meso je za pse varno, če ga dajete zmerno, kokosove luščine in lupine pa nikoli. Kokos vsebuje veliko maščob in olja, ki lahko povzročijo prebavne težave in drisko."
+    "sl": "Da, v majhnih količinah. Nesladkano kokosovo meso je za pse varno, če ga dajete zmerno, kokosove luščine in lupine pa nikoli. Kokos vsebuje veliko maščob in olja, ki lahko povzročijo prebavne težave in drisko.",
+    "de": "Ja, in kleinen Mengen. Das ungesüßte Fruchtfleisch ist in Maßen für Hunde unbedenklich, aber geben Sie nie die Faserhülle oder die Schale. Kokosnuss ist fettreich und enthält Öle, die Magenbeschwerden und Durchfall verursachen können."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
-    "sl": "V majhnih količinah kokos verjetno ne povzroči resne škode, meso in mleko svežih kokosov pa vsebujeta olja, ki lahko povzročijo prebavne težave, mehko blato in drisko. Kokos ima več maščob, zato naj psi, ki ne smejo jesti mastne hrane ali imajo prekomerno težo, dobijo druge priboljške. Ima tudi veliko kalija, zato je pri psih z boleznijo ledvic potrebna previdnost. Luščina in lupina lahko povzročita zaporo črevesja."
+    "sl": "V majhnih količinah kokos verjetno ne povzroči resne škode, meso in mleko svežih kokosov pa vsebujeta olja, ki lahko povzročijo prebavne težave, mehko blato in drisko. Kokos ima več maščob, zato naj psi, ki ne smejo jesti mastne hrane ali imajo prekomerno težo, dobijo druge priboljške. Ima tudi veliko kalija, zato je pri psih z boleznijo ledvic potrebna previdnost. Luščina in lupina lahko povzročita zaporo črevesja.",
+    "de": "In kleinen Mengen ist Kokosnuss wahrscheinlich nicht ernsthaft schädlich, aber Fruchtfleisch und Milch frischer Kokosnüsse enthalten Öle, die Magenbeschwerden, weichen Kot und Durchfall auslösen können. Kokosnuss ist fettreich; Hunde, die keine fettreiche Kost bekommen sollten oder übergewichtig sind, sollten daher andere Leckerli erhalten. Sie enthält außerdem viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung Vorsicht geboten. Faserhülle und Schale können einen Darmverschluss verursachen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Ask your vet before adding coconut to your dog's diet, especially if your dog has had pancreatitis.",
-    "sl": "Preden psu v prehrano dodate kokos, se posvetujte z veterinarjem, zlasti če je pes že imel vnetje trebušne slinavke."
+    "sl": "Preden psu v prehrano dodate kokos, se posvetujte z veterinarjem, zlasti če je pes že imel vnetje trebušne slinavke.",
+    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Kokosnuss in die Ernährung Ihres Hundes aufnehmen, besonders wenn Ihr Hund schon einmal eine Bauchspeicheldrüsenentzündung hatte."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
-    "sl": "Samo nesladkano meso v majhnih količinah, brez luščine in lupine. Kokosovo mleko le nesladkano in brez ksilitola; kokosovo vodo le kot priboljšek, nikoli namesto vode."
+    "sl": "Samo nesladkano meso v majhnih količinah, brez luščine in lupine. Kokosovo mleko le nesladkano in brez ksilitola; kokosovo vodo le kot priboljšek, nikoli namesto vode.",
+    "de": "Nur ungesüßtes Fruchtfleisch, in kleinen Mengen, ohne Faserhülle und Schale. Kokosmilch nur ungesüßt und xylitfrei; Kokoswasser nur als Leckerli, niemals anstelle von Wasser."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
-    "sl": "Psi lahko poskusijo malo kokosa! Trda lupina ni za pse, zato ga pripravi odrasli."
+    "sl": "Psi lahko poskusijo malo kokosa! Trda lupina ni za pse, zato ga pripravi odrasli.",
+    "de": "Hunde dürfen ein bisschen Kokosnuss probieren! Die harte Schale ist nichts für Hunde, deshalb bereitet ein Erwachsener sie vor."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs drink coconut water or coconut milk?",
-        "sl": "Ali lahko psi pijejo kokosovo vodo ali kokosovo mleko?"
+        "sl": "Ali lahko psi pijejo kokosovo vodo ali kokosovo mleko?",
+        "de": "Dürfen Hunde Kokoswasser oder Kokosmilch trinken?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
-        "sl": "Kokosovo vodo le kot priboljšek, ne namesto navadne vode. Kokosovo mleko le nesladkano in brez umetnih sladil, kot je ksilitol, ki je za pse strupen."
+        "sl": "Kokosovo vodo le kot priboljšek, ne namesto navadne vode. Kokosovo mleko le nesladkano in brez umetnih sladil, kot je ksilitol, ki je za pse strupen.",
+        "de": "Kokoswasser nur als Leckerli, nicht anstelle von normalem Wasser. Kokosmilch nur ungesüßt und frei von künstlichen Süßstoffen wie Xylit, das für Hunde giftig ist."
       }
     },
     {
       "q": {
         "en": "Why not the coconut shell?",
-        "sl": "Zakaj ne kokosove lupine?"
+        "sl": "Zakaj ne kokosove lupine?",
+        "de": "Warum nicht die Kokosschale?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
-        "sl": "Luščina in lupina lahko povzročita resne prebavne težave, tudi zaporo črevesja in draženje želodca, podobno kot če bi pes pojedel palice ali les."
+        "sl": "Luščina in lupina lahko povzročita resne prebavne težave, tudi zaporo črevesja in draženje želodca, podobno kot če bi pes pojedel palice ali les.",
+        "de": "Faserhülle und Schale können ernste Verdauungsprobleme verursachen, darunter einen Darmverschluss und Magenreizungen – ähnlich wie bei Stöcken oder Holz."
       }
     }
   ],
@@ -148,6 +160,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fce6d083e5eac00745abb98d06dc4a23421340e178a65d5ec1f1c5233643d066"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2ddee61e36f0597f9dd7de0ac3bcdde51e659d77254b73612cb587407483a774"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Fruit pits and stones",
-    "sl": "Koščice sadja"
+    "sl": "Koščice sadja",
+    "de": "Obstkerne"
   },
   "question": {
     "en": "Can cats eat fruit pits?",
-    "sl": "Ali lahko mačke jedo koščice sadja?"
+    "sl": "Ali lahko mačke jedo koščice sadja?",
+    "de": "Dürfen Katzen Obstkerne fressen?"
   },
   "url_slug": {
     "en": "fruit-pits",
-    "sl": "koscice-sadja"
+    "sl": "koscice-sadja",
+    "de": "obstkerne"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
-    "sl": "Ne. Koščice in semena koščičastega sadja naj bodo daleč od mačk. ASPCA češnjo, breskev, slivo in marelico navaja kot rastline, strupene za mačke, ker njihova semena, peclji in listi vsebujejo cianid. Pokličite veterinarja, če mačka koščico grizlja ali pogoltne."
+    "sl": "Ne. Koščice in semena koščičastega sadja naj bodo daleč od mačk. ASPCA češnjo, breskev, slivo in marelico navaja kot rastline, strupene za mačke, ker njihova semena, peclji in listi vsebujejo cianid. Pokličite veterinarja, če mačka koščico grizlja ali pogoltne.",
+    "de": "Nein. Halten Sie Kerne, Steine und Samen von Steinobst von Katzen fern. Die ASPCA führt Kirsch-, Pfirsich-, Pflaumen- und Aprikosenpflanzen als giftig für Katzen auf, weil ihre Samen, Stiele und Blätter Cyanid enthalten. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Kern kaut oder ihn verschluckt."
   },
   "why": {
     "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
-    "sl": "Pri češnji, breskvi, slivi in marelici ASPCA navaja, da peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo, vse štiri rastline pa uvršča med strupene za mačke. Koščica teh sadežev je njihovo seme, zato je mački nikoli ne dajajte."
+    "sl": "Pri češnji, breskvi, slivi in marelici ASPCA navaja, da peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo, vse štiri rastline pa uvršča med strupene za mačke. Koščica teh sadežev je njihovo seme, zato je mački nikoli ne dajajte.",
+    "de": "Bei Kirsche, Pfirsich, Pflaume und Aprikose sagt die ASPCA, dass Stiele, Blätter und Samen Cyanid (in Form cyanogener Glykoside) enthalten und besonders giftig sind, während sie welken; alle vier Pflanzen führt sie als giftig für Katzen auf. Der Kern oder Stein dieser Früchte ist der Samen und sollte einer Katze deshalb nie gegeben werden."
   },
   "signs": {
     "en": [
@@ -36,26 +41,37 @@
       "Težave z dihanjem",
       "Sopihanje",
       "Šok"
+    ],
+    "de": [
+      "Ziegelrotes Zahnfleisch",
+      "Erweiterte Pupillen",
+      "Atembeschwerden",
+      "Hecheln",
+      "Schock"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away if your cat chewed or swallowed a pit, stone or seed. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
-    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala ali pogoltnila koščico ali seme. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala ali pogoltnila koščico ali seme. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
+    "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze einen Kern, Stein oder Samen zerkaut oder verschluckt hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
   },
   "serving": null,
   "child": {
     "en": "Fruit stones are not safe for cats. If kitty chews one, tell a grown-up.",
-    "sl": "Koščice sadja niso varne za muce. Če jih muca grizlja, povej odraslemu."
+    "sl": "Koščice sadja niso varne za muce. Če jih muca grizlja, povej odraslemu.",
+    "de": "Obstkerne sind für Katzen nicht sicher. Wenn deine Katze auf einem herumkaut, sag einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Which fruits does this cover?",
-        "sl": "Na katero sadje se to nanaša?"
+        "sl": "Na katero sadje se to nanaša?",
+        "de": "Welche Früchte sind gemeint?"
       },
       "a": {
         "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
-        "sl": "ASPCA češnjo, breskev, slivo in marelico navaja kot strupene za mačke in za vsako od njih piše, da peclji, listi in semena vsebujejo cianid."
+        "sl": "ASPCA češnjo, breskev, slivo in marelico navaja kot strupene za mačke in za vsako od njih piše, da peclji, listi in semena vsebujejo cianid.",
+        "de": "Die ASPCA führt Kirsche, Pfirsich, Pflaume und Aprikose als giftig für Katzen auf und weist bei jeder darauf hin, dass Stiele, Blätter und Samen Cyanid enthalten."
       }
     }
   ],
@@ -131,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f9d73b66325f9356055cd1c29ab7aed7d489f8122b1e979170b3e2c06017e697"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9110940c0ad32f4b37d4ba9b6728cec6a364c867c7263d948d25d7ef3bf1b58e"
     }
   }
 }
