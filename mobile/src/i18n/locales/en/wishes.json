@@ -41,7 +41,8 @@
       "treats_still_left": "There are still enough treats.",
       "blocked": "You can't ask for new things right now.",
       "offline": "No connection. Try again.",
-      "failed": "That didn't work. Try again."
+      "failed": "That didn't work. Try again.",
+      "invalid_design": "That choice is gone. Pick again."
     },
     "treat": {
       "button": "Treat",
@@ -109,5 +110,15 @@
       }
     },
     "unknownItem": "Item"
+  },
+  "designs": {
+    "childHint": "Which one would you pick? Tap a picture.",
+    "pickFirst": "Pick one first",
+    "pickA11y": "Pick: {{design}}",
+    "back": "Back",
+    "requested": "Wants: {{design}}",
+    "parentPick": "Choose the look: {{item}}",
+    "buyA11y": "Buy the chosen look for {{pet}} for {{price}}",
+    "cancel": "Cancel"
   }
 }

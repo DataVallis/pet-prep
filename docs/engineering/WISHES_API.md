@@ -135,10 +135,17 @@ New top-level field `"wishes_open_count": 2` (all children, all pets of the fami
 ## 6. Push
 
 - Child wishes → push to every parent of the family who has the app (`PushCopy`, parent register formal): title = pet name when set, else »PetPrep«; body SL »Vaš otrok si želi {item_acc}.«, EN »Your child is wishing for {item}.« (never the child's or pet's name in the body). Data `{ "type": "wish_created", "pet_id": 12, "wish_id": 31 }` → app opens the parent wishes list. Held over quiet hours like other parent pushes. Max one wish push per child per 10 minutes, and while one of the child's wish pushes is still held over quiet hours no second one is created (the end of quiet hours releases at most one); the rest just land on the list. Dropped at delivery when the wish is no longer open.
-- Item ready (W03): child push »{Ime} ima novo posteljo!« — not in W01.
+- Item ready (W03): child push »{Ime} ima novo posteljo!« — data `{ "type": "item_ready", "pet_id": 12 }`; the app (2026-11-03) opens the child's pet screen and refetches the pet state + catalogue; not urgent.
 
 ## 7. Data, privacy, admin
 
 - Tables: `shop_items` (key, kind, pack_size, dog_variant, cat_variant, product_id, sort), `pet_wishes` (pet_id, child_user_id, item_key, status, decided_by_user_id, decided_at, timestamps), `wish_credits` (like `challenge_credits`: family, purchase_event, product_id, store, environment, transaction_id, purchased_at, pet_id, assigned_at, assigned_via, revoked_at, revoke_reason, revoke_event_id, transferred_*), `pet_items` (pet_id, item_key, variant, wish_credit_id, quantity_total, quantity_left, acquired_at, revoked_at), `pet_treat_events` (pet_id, child_user_id, pet_item_id, given_at, local_date).
 - A wish stores only ids (child, pet, item) — no new personal data. Included in the GDPR family export; deleted with the pet / family (cascade). Wish credits survive a pet deletion with `pet_id` null (used), like challenge credits.
 - `/admin`: read-only Wish credits resource + wishes / items on the Pet view.
+
+## 8. M6-W03 app side (2026-11-03)
+
+- **Item media** — every `PetMediaPayload` may carry `items.{bed|bowls|toy_1|toy_2|treats} = {image, video, video_seconds, loop}` (only when owned and ready for the pet's current stage). The app reads it in `modules/petMedia/petMedia.ts#readItemMedia` and shows it per `modules/petMedia/itemMedia.ts`: bed → sleeping scene, toy → playing scene (one toy per play session, alternating), bowls → once after an accepted feed / water, treats → once after »Priboljšek«. Picture mode → the image. Missing → the normal scene.
+- **`media_ready`** on catalogue / parent rows drives »Na poti …« → »Že ima« (unchanged); `PetUpdated` `item_media_ready` refetches `GET /api/child/wishes` and `GET /api/parent/wishes` as well as the pet state.
+- **Treat answer `media`**: the app reads `items.treats.video` first (older shapes `video_url` / `url` / `current_video_url` / `videos.treat` still work) — but prefers the pet state's own `media.items.treats`.
+- **Designs (David 2026-11-03)**: rows gain `designs: [{key, name, image|null}]` (treats `[]`), owned rows and wish rows `design`. Child wish body `{item_key, design}` (design only when the item has designs; 422 `invalid_design` → the app asks to pick again). Redeem body adds **`design`** (one item: the wish's design, or the parent's pick for a surprise / »Komu?«) or, for the welcome bundle, **`designs: {bed, bowls, toy_1}`** (the wish's design fixed for its key) — *app assumption for the bundle field name until the backend PR confirms it*. A server without designs sends none → the app behaves as before.

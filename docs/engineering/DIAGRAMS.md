@@ -901,7 +901,7 @@ sequenceDiagram
   participant P as Parent app
   participant S as App Store / Play
   participant RC as RevenueCat
-  C->>API: POST /api/child/wishes {item_key}
+  C->>API: POST /api/child/wishes {item_key, design?} (M6-W03 designs)
   API->>API: WishService::create (child → pet lock)<br/>3 open / child · 1 open per pet+key · owned · treats ≤ 2 · 7 days after decline
   API-->>C: 201 {wish, open_count}
   API-)P: push wish_created (parents, formal, max 1 / child / 10 min, held over quiet hours)
@@ -912,12 +912,13 @@ sequenceDiagram
     P->>S: purchase petprep_wish_* (consumable)
     S->>RC: transaction
     RC->>API: webhook NON_RENEWING_PURCHASE → wish_credits (family, unassigned)
-    P->>API: POST /api/parent/pets/{pet}/items/redeem {product_id, wish_id}<br/>Idempotency-Key: store tx id
+    P->>API: POST /api/parent/pets/{pet}/items/redeem {product_id, wish_id, design? | designs?}<br/>Idempotency-Key: store tx id
     API->>API: family → pet → credit lock · oldest credit → pet_items · wish bought · other covered wishes cancelled
     API-->>P: 200 assigned | 409 no_credit (retry)
   end
   RC->>API: REFUND / CANCELLATION → credit revoked · its pet_items revoked (treats → 0)
   C->>API: POST /api/child/pet/treat (max 2 / local day, not asleep, 423 when locked)
+  Note over API,C: M6-W03: item content ready → PetUpdated item_media_ready + push item_ready<br/>media.items → bed (sleeping), toy (playing), bowls / treats once; »Na poti …« → »Že ima«
 ```
 
 ## 6. Data model (core)

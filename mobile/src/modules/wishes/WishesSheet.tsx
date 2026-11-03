@@ -4,6 +4,9 @@
  * `childRowState` (requested / owned / on the way / maybe another time / open limit / treats
  * left). Opened from the »Želje« row of the HUD settings sheet (not a care action, so it
  * stays out of the dock and the top stack). Dark glass bottom sheet like `ChildSettingsSheet`.
+ * M6-W03 designs (David 2026-11-03): an item with designs opens its design pictures first (big
+ * tappable cards, no prices) — pick one → »Prosi starša« sends it; an owned / requested item
+ * shows its design's picture. A server without designs → asked directly, as before.
  */
 
 import { useContext, useState } from 'react';
@@ -17,8 +20,8 @@ import { t } from '@/i18n';
 import { useChildWishes, useCreateWish } from '@/hooks/queries/useWishes';
 import { classifyActionError } from '@/modules/childPet/actionMessages';
 import { MIN_TOUCH, alpha, dark, fonts, palette, radius, tightTracking } from '@/theme';
-import WishIcon from '@/modules/wishes/WishIcon';
-import { childRowState, errorReason, isFeatureMissing, type ChildRowState, type ChildWishItem, type WishItemKey } from '@/modules/wishes/wishes';
+import DesignCard, { DesignThumb, designLabel } from '@/modules/wishes/DesignCard';
+import { childRowState, designOf, errorReason, isFeatureMissing, needsDesign, type ChildRowState, type ChildWishItem, type WishItemKey } from '@/modules/wishes/wishes';
 
 export interface WishesSheetProps {
   visible: boolean;
@@ -38,6 +41,7 @@ export function wishErrorText(error: unknown): string {
     case 'declined_recently':
     case 'wish_limit_reached':
     case 'treats_still_left':
+    case 'invalid_design':
       return t(`wishes:child.errors.${reason}`);
     case 'game_over':
     case 'payment_required':
@@ -55,32 +59,68 @@ export default function WishesSheet({ visible, onClose, nowMs }: WishesSheetProp
   const create = useCreateWish();
   const [feedback, setFeedback] = useState<Feedback | null>(null);
   const [errorText, setErrorText] = useState<string | null>(null);
+  // M6-W03: the item whose designs are shown, and the design tapped there.
+  const [picking, setPicking] = useState<WishItemKey | null>(null);
+  const [chosen, setChosen] = useState<string | null>(null);
   const data = query.data;
   const now = nowMs();
 
-  const ask = (key: WishItemKey) => {
+  const send = (key: WishItemKey, design: string | null) => {
     if (create.isPending) return;
     setFeedback(null);
-    create.mutate(key, {
-      onSuccess: () => setFeedback({ kind: 'sent' }),
-      onError: (error) => {
-        setErrorText(wishErrorText(error));
-        setFeedback({ kind: 'error', key });
+    create.mutate(
+      { key, design },
+      {
+        onSuccess: () => {
+          setFeedback({ kind: 'sent' });
+          setPicking(null);
+          setChosen(null);
+        },
+        onError: (error) => {
+          setErrorText(wishErrorText(error));
+          setFeedback({ kind: 'error', key });
+          // The designs changed on the server: show the fresh ones, the child picks again.
+          if (errorReason(error) === 'invalid_design') {
+            setChosen(null);
+            void query.refetch();
+          }
+        },
       },
-    });
+    );
+  };
+
+  const ask = (item: ChildWishItem) => {
+    if (needsDesign(item)) {
+      setFeedback(null);
+      setChosen(null);
+      setPicking(item.key);
+      return;
+    }
+    send(item.key, null);
+  };
+
+  const pickingItem = picking === null ? null : (data?.items.find((i) => i.key === picking) ?? null);
+  const closeSheet = () => {
+    setPicking(null);
+    setChosen(null);
+    onClose();
+  };
+  const backToList = () => {
+    setPicking(null);
+    setChosen(null);
   };
 
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose} statusBarTranslucent>
+    <Modal visible={visible} transparent animationType="slide" onRequestClose={pickingItem !== null ? backToList : closeSheet} statusBarTranslucent>
       <View style={styles.backdrop}>
-        <Pressable style={StyleSheet.absoluteFill} onPress={onClose} accessible={false} importantForAccessibility="no" testID="wishes-sheet-backdrop" />
+        <Pressable style={StyleSheet.absoluteFill} onPress={closeSheet} accessible={false} importantForAccessibility="no" testID="wishes-sheet-backdrop" />
         <View style={[styles.sheet, { paddingBottom: 24 + bottomInset }]} testID="wishes-sheet" accessibilityViewIsModal>
           <View style={styles.headerRow}>
             <Text style={styles.title} accessibilityRole="header">
               {t('wishes:child.title')}
             </Text>
             <Pressable
-              onPress={onClose}
+              onPress={closeSheet}
               accessibilityRole="button"
               accessibilityLabel={t('wishes:child.close')}
               style={({ pressed }) => [styles.close, pressed && styles.pressed]}
@@ -111,6 +151,16 @@ export default function WishesSheet({ visible, onClose, nowMs }: WishesSheetProp
                 </Pressable>
               )}
             </View>
+          ) : pickingItem !== null ? (
+            <DesignPicker
+              item={pickingItem}
+              chosen={chosen}
+              busy={create.isPending}
+              canSend={childRowState(pickingItem, data, now) === 'ask'}
+              onChoose={setChosen}
+              onSend={() => chosen !== null && send(pickingItem.key, chosen)}
+              onBack={backToList}
+            />
           ) : (
             <>
               {!data.can_wish ? (
@@ -124,7 +174,7 @@ export default function WishesSheet({ visible, onClose, nowMs }: WishesSheetProp
               ) : null}
               <ScrollView style={styles.list} contentContainerStyle={styles.listContent}>
                 {data.items.map((item) => (
-                  <WishRow key={item.key} item={item} state={childRowState(item, data, now)} busy={create.isPending && create.variables === item.key} onAsk={() => ask(item.key)} />
+                  <WishRow key={item.key} item={item} state={childRowState(item, data, now)} busy={create.isPending && create.variables?.key === item.key} onAsk={() => ask(item)} />
                 ))}
               </ScrollView>
             </>
@@ -152,15 +202,74 @@ function statusText(state: ChildRowState, item: ChildWishItem): string | null {
   }
 }
 
-function WishRow({ item, state, busy, onAsk }: { item: ChildWishItem; state: ChildRowState; busy: boolean; onAsk: () => void }) {
+/** M6-W03: the design pictures of one item — tap one, then »Prosi starša«. */
+export function DesignPicker({
+  item,
+  chosen,
+  busy,
+  canSend,
+  onChoose,
+  onSend,
+  onBack,
+}: {
+  item: ChildWishItem;
+  chosen: string | null;
+  busy: boolean;
+  canSend: boolean;
+  onChoose: (design: string) => void;
+  onSend: () => void;
+  onBack: () => void;
+}) {
   const name = t(`wishes:items.${item.variant}`);
+  const picked = designOf(item.designs, chosen);
+  const disabled = picked === null || busy || !canSend;
+  return (
+    <View style={styles.picker} testID={`wish-designs-${item.key}`}>
+      <Text style={styles.rowName}>{name}</Text>
+      <Text style={styles.hint}>{t('wishes:designs.childHint')}</Text>
+      <ScrollView style={styles.list} contentContainerStyle={styles.designGrid}>
+        {item.designs.map((design) => (
+          <DesignCard
+            key={design.key}
+            design={design}
+            variant={item.variant}
+            tone="dark"
+            size={140}
+            selected={design.key === chosen}
+            onPress={() => onChoose(design.key)}
+            testID={`wish-design-${item.key}-${design.key}`}
+          />
+        ))}
+      </ScrollView>
+      <Pressable
+        onPress={onSend}
+        disabled={disabled}
+        accessibilityRole="button"
+        accessibilityLabel={picked ? t('wishes:child.askA11y', { item: designLabel(picked, item.variant) }) : t('wishes:designs.pickFirst')}
+        accessibilityState={{ disabled, busy }}
+        style={({ pressed }) => [styles.ask, styles.askWide, disabled && styles.disabled, pressed && styles.pressed]}
+        testID={`wish-design-ask-${item.key}`}
+      >
+        {busy ? <ActivityIndicator color={palette.graphite} /> : <Text style={styles.askText}>{picked ? t('wishes:child.ask') : t('wishes:designs.pickFirst')}</Text>}
+      </Pressable>
+      <Pressable onPress={onBack} accessibilityRole="button" style={({ pressed }) => [styles.secondary, pressed && styles.pressed]} testID="wish-designs-back">
+        <Text style={styles.secondaryText}>{t('wishes:designs.back')}</Text>
+      </Pressable>
+    </View>
+  );
+}
+
+function WishRow({ item, state, busy, onAsk }: { item: ChildWishItem; state: ChildRowState; busy: boolean; onAsk: () => void }) {
+  const ownDesign = designOf(item.designs, item.design);
+  // M6-W03: an owned / requested item is named after its design.
+  const name = ownDesign !== null && (state === 'owned' || state === 'on_the_way' || state === 'requested') ? designLabel(ownDesign, item.variant) : t(`wishes:items.${item.variant}`);
   const status = statusText(state, item);
   const showButton = state === 'ask' || state === 'limit';
   const disabled = state !== 'ask' || busy;
   const treatsNote = item.key === 'treats' && state !== 'treats_left' && (item.treats_left ?? 0) > 0 ? t('wishes:child.treatsLeft', { count: item.treats_left ?? 0 }) : null;
   return (
     <View style={styles.row} testID={`wish-row-${item.key}`}>
-      <WishIcon variant={item.variant} tone="dark" size={52} />
+      <DesignThumb design={ownDesign} variant={item.variant} tone="dark" size={52} testID={`wish-row-design-${item.key}`} />
       <View style={styles.rowTexts}>
         <Text style={styles.rowName}>{name}</Text>
         {treatsNote && <Text style={styles.rowStatus}>{treatsNote}</Text>}
@@ -229,6 +338,9 @@ const styles = StyleSheet.create({
   rowStatus: { color: palette.n300, fontSize: 13, fontWeight: '600' },
   ask: { minHeight: MIN_TOUCH, paddingHorizontal: 14, borderRadius: 22, backgroundColor: palette.mint, alignItems: 'center', justifyContent: 'center' },
   askText: { color: palette.graphite, fontSize: 14, fontWeight: '800' },
+  askWide: { alignSelf: 'stretch' },
+  picker: { gap: 10, flexShrink: 1 },
+  designGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 12, justifyContent: 'center', paddingBottom: 8 },
   secondary: { minHeight: MIN_TOUCH, paddingHorizontal: 16, borderRadius: radius.button, borderWidth: 1, borderColor: dark.glassBorder, justifyContent: 'center' },
   secondaryText: { color: palette.mint, fontSize: 14, fontWeight: '700' },
   disabled: { opacity: 0.45 },

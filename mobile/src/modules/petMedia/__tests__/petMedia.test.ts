@@ -85,6 +85,8 @@ describe('normalizePetMedia', () => {
       phaseMs: {},
       // GAMES_SPEC §8.4: no phase_meta → the exit side is unknown.
       phaseMeta: { ballExitSide: null },
+      // M6-W03: no `items` → every scene stays the normal one.
+      items: {},
     });
   });
 

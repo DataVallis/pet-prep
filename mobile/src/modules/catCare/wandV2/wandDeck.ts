@@ -21,6 +21,7 @@ import { CLIP_END_GRACE_MS, type ClipSpec } from '@/modules/gameLayer/clipQueue'
 import type { DeckClip, DeckPlan } from '@/modules/gameLayer/deck';
 import type { WandRole } from '@/modules/catCare/wandV2/wandRules';
 import { selectMediaSource, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { pickToy, toyLoop } from '@/modules/petMedia/itemMedia';
 import { phaseClipMs, usesPhaseClips } from '@/modules/petMedia/phasePlayer';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
 
@@ -48,8 +49,11 @@ export function wandPounceClipMs(media: Pick<PetMediaInfo, 'phaseMs'>): number {
 }
 
 /** The stage plan of the hunt for this cat and display mode. */
-export function wandDeck(media: PetMediaInfo, mode: MediaMode): DeckPlan {
-  const stand = present(media.referenceImageUrl) ? media.referenceImageUrl : null;
+export function wandDeck(media: PetMediaInfo, mode: MediaMode, toy = pickToy(media.items)): DeckPlan {
+  // M6-W03: without the `wand` group a bought toy's loop stands in for the `playing` loop (never
+  // for a phase clip); its image is the still / picture-mode picture.
+  const toyStage = usesPhaseClips(media, 'wand') ? null : toyLoop(media.items, toy, mode);
+  const stand = toyStage?.image ?? (present(media.referenceImageUrl) ? media.referenceImageUrl : null);
   const crouch = present(media.poses.crouch) ? media.poses.crouch : stand;
   const caught = present(media.poses.catch) ? media.poses.catch : crouch;
   const video = mode === 'video';
@@ -60,6 +64,7 @@ export function wandDeck(media: PetMediaInfo, mode: MediaMode): DeckPlan {
   const roles: WandRole[] = separateStalk ? ['stalking', 'crouch', 'pounce', 'catching'] : ['crouch', 'pounce', 'catching'];
 
   const stateLoop = (() => {
+    if (toyStage?.url) return toyStage.url;
     const source = selectMediaSource(media, 'playing');
     return source.kind === 'video' ? source.url : null;
   })();

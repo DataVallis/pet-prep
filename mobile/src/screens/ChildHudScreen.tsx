@@ -144,7 +144,9 @@ import ParentalGate, { PARENTAL_GATE_STRINGS } from '@/components/ParentalGate';
 import ActionButton from '@/components/ActionButton';
 import PetAlbum from '@/components/PetAlbum';
 import { ALBUM_STRINGS, hasAlbum } from '@/modules/petMedia/album';
-import { isMediaPending } from '@/modules/petMedia/petMedia';
+import { EMPTY_PET_MEDIA, isMediaPending } from '@/modules/petMedia/petMedia';
+import { useItemMoment } from '@/modules/petMedia/useItemMoment';
+import { advanceToyTurn } from '@/modules/petMedia/itemMedia';
 import CleaningOverlay from '@/components/CleaningOverlay';
 import { loadMessGames } from '@/modules/cleaning/loadMessGames';
 import { messStages } from '@/modules/cleaning/messPlan';
@@ -163,7 +165,7 @@ import { showBirthdayHat } from '@/modules/birthday/birthday';
 import { useBirthdayCard } from '@/modules/birthday/birthdaySeen';
 import ChildSettingsSheet from '@/components/ChildSettingsSheet';
 import WishesSheet from '@/modules/wishes/WishesSheet';
-import { TreatChip, TreatClip, treatErrorText } from '@/modules/wishes/TreatChip';
+import { TreatChip, treatErrorText } from '@/modules/wishes/TreatChip';
 import { showTreatButton } from '@/modules/wishes/wishes';
 import { useGiveTreat } from '@/hooks/queries/useWishes';
 
@@ -349,6 +351,14 @@ export default function ChildHudScreen() {
   const openCatGame = useAppStore((s) => s.openCatGame);
   const closeCatGame = useAppStore((s) => s.closeCatGame);
   const abandonedCatSessions = useAppStore((s) => s.abandonedCatSessions);
+  // M6-W03: every play session (a play layer or a cat game opening) takes the next toy when the
+  // pet owns both — the stage of that session and the home `playing` scene after it alternate.
+  const playSessionOpen = playOverlay !== null || catOverlay !== null;
+  const wasPlaySessionOpen = useRef(playSessionOpen);
+  useEffect(() => {
+    if (playSessionOpen && !wasPlaySessionOpen.current) advanceToyTurn();
+    wasPlaySessionOpen.current = playSessionOpen;
+  }, [playSessionOpen]);
   // M5-R14 / R15 / R19 / R20: the breed care mini-game open over the HUD.
   const careTaskOverlay = useAppStore((s) => s.careTaskOverlay);
   const openCareTask = useAppStore((s) => s.openCareTask);
@@ -490,27 +500,32 @@ export default function ChildHudScreen() {
   const [isSettingsVisible, setSettingsVisible] = useState(false);
   // M6-W04 »Želje«: the catalogue sheet (UI state) and the treat moment (clip or brief hearts).
   const [isWishesVisible, setWishesVisible] = useState(false);
-  const [treatClip, setTreatClip] = useState<string | null>(null);
   const [treatHearts, setTreatHearts] = useState(false);
+  // M6-W03: bowls after a feed / water, the treat clip after »Priboljšek« — once on the stage.
+  const itemMoment = useItemMoment(view?.pet.media ?? EMPTY_PET_MEDIA, mediaModeOf(view));
+  const endItemMoment = itemMoment.end;
+  useEffect(() => {
+    if (lockedNow) endItemMoment();
+  }, [lockedNow, endItemMoment]);
   const giveTreat = useGiveTreat();
   useEffect(() => {
     if (!treatHearts) return;
     const id = setTimeout(() => setTreatHearts(false), TREAT_HEARTS_MS);
     return () => clearTimeout(id);
   }, [treatHearts]);
-  const closeTreatClip = useCallback(() => setTreatClip(null), []);
+  const playItemMoment = itemMoment.play;
   const handleTreat = useCallback(() => {
     giveTreat.mutate(undefined, {
       onSuccess: (result) => {
-        if (result.clipUrl !== null) setTreatClip(result.clipUrl);
-        else setTreatHearts(true);
+        // M6-W03: the treat clip once on the stage (picture mode: its image), else the hearts.
+        if (!playItemMoment('treats', result.clipUrl)) setTreatHearts(true);
         showToast({ tone: 'ok', message: t('wishes:child.treat.given') });
       },
       onError: (error) => {
         showToast({ tone: 'info', message: treatErrorText(error, queryClient.getQueryData<ChildPetView>(childPetKey) ?? null) });
       },
     });
-  }, [giveTreat, queryClient, showToast]);
+  }, [giveTreat, queryClient, showToast, playItemMoment]);
   // M2-01d: the finished challenge (certificate / "the parent will prepare it" / kind note).
   const [isCertificateVisible, setCertificateVisible] = useState(false);
   // GAMES_SPEC §6.2: the slipper game (native layer only); a lock closes it.
@@ -576,6 +591,8 @@ export default function ChildHudScreen() {
             : successMessage(action, response.status);
         // M5-T01 (spec §4): an accepted care is a ✓ confirmation with "next time" where the state knows it.
         const accepted = response.status === 'accepted';
+        // M6-W03: the pet's own bowls once on the stage after an accepted meal / water (looks only, S1).
+        if (accepted && (action === 'feed' || action === 'water')) playItemMoment('bowls');
         showToast({ tone: 'ok', message, confirm: accepted, next: confirmationNext(action, response.status, after, response.feed_mode) });
       },
       onError: (error) => {
@@ -961,6 +978,9 @@ export default function ChildHudScreen() {
           onVideoStateChange={setHudVideoState}
           // M5-T11 »Prikaz: Slika«: the key image of the current state, no video download.
           mode={mediaModeOf(view)}
+          // M6-W03: a bought item's one-shot moment (bowls / treats), then the normal stage.
+          phase={itemMoment.phase}
+          onPhaseEnd={endItemMoment}
           variant="hud"
           // M5-F06: the "getting ready" notice is stacked above the dock (BehaviourPanel), not on the media.
           // Under a translucent lock (vet, hard stop, payment) the panel is hidden → keep it on the media.
@@ -1442,7 +1462,6 @@ export default function ChildHudScreen() {
       {view.wishes !== null && (
         <WishesSheet visible={isWishesVisible} onClose={() => setWishesVisible(false)} nowMs={() => Date.now() + view.clockSkewMs} />
       )}
-      {treatClip !== null && <TreatClip url={treatClip} onClose={closeTreatClip} />}
       <ChildCertificateSheet
         visible={isCertificateVisible}
         certificate={view.certificate}

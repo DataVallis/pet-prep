@@ -14,11 +14,15 @@
  * loop stands in for every role — the dog stays in frame, the ball still flies, the run / return
  * take the default 3 s. Picture mode (M5-T11 / the 12 s deck timeout): no clip at all — the
  * reference image, the empty room (pose `empty`) while the dog is out.
+ * M6-W03: without the `ball` group a bought toy's loop (`toyLoop`, one toy per session) stands in
+ * for that state loop (picture mode / its start frame: the toy image). With the group the phase
+ * clips stay exactly as they are — a toy never replaces a phase clip.
  */
 
 import { CLIP_END_GRACE_MS, type ClipSpec } from '@/modules/gameLayer/clipQueue';
 import type { DeckClip, DeckPlan } from '@/modules/gameLayer/deck';
 import { selectMediaSource, type PetMediaInfo } from '@/modules/petMedia/petMedia';
+import { pickToy, toyLoop } from '@/modules/petMedia/itemMedia';
 import { phaseClipMs, usesPhaseClips } from '@/modules/petMedia/phasePlayer';
 import type { MediaMode } from '@/modules/petMedia/statePlayer';
 import type { BallRole } from '@/modules/play/ballV2/ballMachine';
@@ -41,16 +45,19 @@ export function ballWaitingKey(media: Pick<PetMediaInfo, 'phases'>): 'ball_waiti
 }
 
 /** The stage plan of the ball game for this pet and display mode. */
-export function ballDeck(media: PetMediaInfo, mode: MediaMode): DeckPlan {
-  const stand = present(media.referenceImageUrl) ? media.referenceImageUrl : null;
+export function ballDeck(media: PetMediaInfo, mode: MediaMode, toy = pickToy(media.items)): DeckPlan {
+  const phased = usesPhaseClips(media, 'ball');
+  // M6-W03: the toy only where the generic `playing` loop would play (no phase group).
+  const toyStage = phased ? null : toyLoop(media.items, toy, mode);
+  const stand = toyStage?.image ?? (present(media.referenceImageUrl) ? media.referenceImageUrl : null);
   const empty = present(media.poses.empty) ? media.poses.empty : stand;
   const video = mode === 'video';
-  const phased = usesPhaseClips(media, 'ball');
 
   const urlOf = (role: BallRole): { url: string | null; loop: boolean } => {
     if (!video) return { url: null, loop: false };
     if (!phased) {
-      // Older set: the state loop stands in for every role (one shared player).
+      // Older set: the toy loop / the state loop stands in for every role (one shared player).
+      if (toyStage?.url) return { url: toyStage.url, loop: true };
       const source = selectMediaSource(media, 'playing');
       const hub = source.kind === 'video' ? source.url : null;
       return { url: hub, loop: true };

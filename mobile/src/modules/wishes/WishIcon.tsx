@@ -1,7 +1,8 @@
 /**
- * Placeholder picture of a wish item (M6-W04): a round mint-tinted disc with a Lucide icon
- * (brand: icons = Lucide, 2 px stroke). Real AI item art is pending (M6-W03) — replace the
- * icon with the item's key image then. Decorative: the row's text carries the name.
+ * Generic picture of a wish item (M6-W04): a round mint-tinted disc with a Lucide icon
+ * (brand: icons = Lucide, 2 px stroke). M6-W03: a design's own product picture is shown by
+ * `DesignCard` / `DesignThumb`; this icon stays for items without designs / pictures (and as
+ * their placeholder). Decorative: the row's text carries the name.
  */
 
 import { StyleSheet, View } from 'react-native';

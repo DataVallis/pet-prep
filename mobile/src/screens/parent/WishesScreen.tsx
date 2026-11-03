@@ -9,6 +9,9 @@
  * store doesn't have yet → »Nakup še ni na voljo« and the button is off. Purchases run only in
  * the parent app (password-protected = parental protection, PAYMENTS_SPEC); never in a child
  * session (`modules/purchases` checks the role). Outcomes are codes translated at render.
+ * M6-W03 designs (David 2026-11-03): a wish shows the requested design's picture + name and is
+ * bought as exactly that design; a surprise purchase, the welcome bundle (one design per item)
+ * and »Komu?« ask for the design(s) first (`DesignChoice`). A server without designs → as before.
  */
 
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -27,19 +30,56 @@ import { petLabel } from '@/modules/petName/petName';
 import { speciesName } from '@/modules/species/species';
 import { fonts, palette, radius, tightTracking } from '@/theme';
 import WishIcon from '@/modules/wishes/WishIcon';
+import DesignCard, { DesignThumb, designLabel } from '@/modules/wishes/DesignCard';
 import { isGoodResult, useWishPurchase, wishResultText, type WishPurchaseResult } from '@/modules/wishes/useWishPurchase';
 import { useAppStore } from '@/store/appStore';
 import { retryPendingPurchases } from '@/modules/wishes/redeem';
 import {
+  defaultDesigns,
+  designChoiceFor,
+  designKeysFor,
+  designOf,
   errorReason,
   isFeatureMissing,
   parentItemState,
   productIdsOf,
   showBundleOffer,
   variantFor,
+  wishDesign,
   type ParentWish,
   type ParentWishPet,
+  type WishItemKey,
 } from '@/modules/wishes/wishes';
+
+/**
+ * M6-W03: a purchase / assignment waiting for the parent's design pick(s). `fixed` = picks that
+ * are not the parent's to change (the design the child asked for); `picks` = the current choice.
+ */
+export interface PendingDesignChoice {
+  /** Where the chooser shows (a wish / surprise row / credit) — one at a time. */
+  anchor: string;
+  action: 'buy' | 'assign';
+  productId: string;
+  petId: number;
+  wishId: number | null;
+  species: 'dog' | 'cat';
+  keys: WishItemKey[];
+  fixed: Partial<Record<WishItemKey, string>>;
+  picks: Partial<Record<WishItemKey, string>>;
+}
+
+/** The chooser for a product on a pet, or null when nothing is left to choose (buy at once). */
+export function designChoiceOf(
+  pet: ParentWishPet,
+  opts: { anchor: string; action: 'buy' | 'assign'; productId: string; wishId: number | null; fixed?: Partial<Record<WishItemKey, string>> },
+): PendingDesignChoice | null {
+  const fixed = opts.fixed ?? {};
+  const keys = designKeysFor(opts.productId, pet.items);
+  const open = keys.filter((k) => fixed[k] === undefined);
+  const picks = { ...defaultDesigns(keys, pet.items), ...fixed };
+  if (open.length === 0) return null;
+  return { anchor: opts.anchor, action: opts.action, productId: opts.productId, petId: pet.pet_id, wishId: opts.wishId, species: pet.species, keys: open, fixed, picks };
+}
 
 type Message =
   | { kind: 'purchase'; result: WishPurchaseResult }
@@ -115,6 +155,8 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
   const [message, setMessage] = useState<Message | null>(null);
   const [surprisePet, setSurprisePet] = useState<number | null>(null);
   const [assignFor, setAssignFor] = useState<string | null>(null);
+  // M6-W03: the design pick(s) a purchase / assignment waits for.
+  const [choice, setChoice] = useState<PendingDesignChoice | null>(null);
   const busy = purchase.isPending || decline.isPending;
   const timezone = family?.timezone ?? 'Europe/Ljubljana';
 
@@ -127,24 +169,117 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
     return name ?? speciesName(species);
   };
 
-  const buy = (productId: string, petId: number, wishId: number | null, species: 'dog' | 'cat') => {
+  const petOf = (petId: number): ParentWishPet | null => data?.pets.find((p) => p.pet_id === petId) ?? null;
+
+  const buyNow = (productId: string, petId: number, wishId: number | null, species: 'dog' | 'cat', picks: Partial<Record<WishItemKey, string>>) => {
     const product = productOf(productId);
     if (!product || busy) return;
     setMessage(null);
-    purchase.mutate({ product, productId, petId, wishId, species }, { onSuccess: (result) => setMessage({ kind: 'purchase', result }) });
+    purchase.mutate(
+      { product, productId, petId, wishId, species, choice: designChoiceFor(productId, picks) },
+      {
+        onSuccess: (result) => {
+          setMessage({ kind: 'purchase', result });
+          setChoice(null);
+        },
+      },
+    );
   };
 
-  const assign = (productId: string, pet: ParentWishPet) => {
+  /** Buy — first the design(s) when the parent still has to choose (surprise, bundle). */
+  const buy = (anchor: string, productId: string, petId: number, wishId: number | null, species: 'dog' | 'cat', fixed: Partial<Record<WishItemKey, string>> = {}) => {
+    if (busy || !productOf(productId)) return;
+    const pet = petOf(petId);
+    const pending = pet === null ? null : designChoiceOf(pet, { anchor, action: 'buy', productId, wishId, fixed });
+    if (pending !== null) {
+      setMessage(null);
+      setChoice(pending);
+      return;
+    }
+    buyNow(productId, petId, wishId, species, fixed);
+  };
+
+  const assignNow = (productId: string, petId: number, species: 'dog' | 'cat', picks: Partial<Record<WishItemKey, string>>) => {
     if (busy) return;
     setMessage(null);
     purchase.mutate(
-      { product: null, productId, petId: pet.pet_id, wishId: null, species: pet.species },
+      { product: null, productId, petId, wishId: null, species, choice: designChoiceFor(productId, picks) },
       {
         onSuccess: (result) => {
           setMessage({ kind: 'purchase', result });
           setAssignFor(null);
+          setChoice(null);
         },
       },
+    );
+  };
+
+  const assign = (productId: string, pet: ParentWishPet) => {
+    if (busy) return;
+    const pending = designChoiceOf(pet, { anchor: `credit-${productId}`, action: 'assign', productId, wishId: null });
+    if (pending !== null) {
+      setMessage(null);
+      setChoice(pending);
+      return;
+    }
+    assignNow(productId, pet.pet_id, pet.species, {});
+  };
+
+  /** The design pick(s) of a pending purchase / assignment, shown at its anchor. */
+  const renderChoice = (anchor: string) => {
+    if (choice === null || choice.anchor !== anchor) return null;
+    const pet = petOf(choice.petId);
+    if (pet === null) return null;
+    const petText = petName(pet.pet_id, pet.pet_name, pet.species);
+    const confirm = () => (choice.action === 'buy' ? buyNow(choice.productId, choice.petId, choice.wishId, choice.species, choice.picks) : assignNow(choice.productId, choice.petId, choice.species, choice.picks));
+    return (
+      <View style={styles.choice} testID={`design-choice-${anchor}`}>
+        {choice.keys.map((key) => {
+          const item = pet.items.find((i) => i.key === key);
+          if (!item) return null;
+          return (
+            <View key={key} style={styles.choiceGroup}>
+              <Text style={[styles.body, styles.bold]}>{t('wishes:designs.parentPick', { item: t(`wishes:items.${item.variant}`) })}</Text>
+              <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.choiceRow}>
+                {item.designs.map((d) => (
+                  <DesignCard
+                    key={d.key}
+                    design={d}
+                    variant={item.variant}
+                    tone="light"
+                    size={104}
+                    selected={choice.picks[key] === d.key}
+                    onPress={() => setChoice({ ...choice, picks: { ...choice.picks, [key]: d.key } })}
+                    testID={`design-choice-${anchor}-${key}-${d.key}`}
+                  />
+                ))}
+              </ScrollView>
+            </View>
+          );
+        })}
+        {choice.action === 'buy' ? (
+          priceButton({
+            productId: choice.productId,
+            label: (price) => t('wishes:parent.buy', { price }),
+            a11y: (price) => t('wishes:designs.buyA11y', { pet: petText, price }),
+            onPress: confirm,
+            testID: `design-choice-confirm-${anchor}`,
+          })
+        ) : (
+          <Pressable
+            style={({ pressed }) => [styles.primaryButton, busy && styles.disabled, pressed && styles.pressed]}
+            disabled={busy}
+            onPress={confirm}
+            accessibilityRole="button"
+            testID={`design-choice-confirm-${anchor}`}
+          >
+            <Text style={styles.primaryText}>{t('wishes:parent.assignTo', { pet: petText })}</Text>
+          </Pressable>
+        )}
+        <Pressable style={({ pressed }) => [styles.textButton, pressed && styles.pressed]} onPress={() => setChoice(null)} accessibilityRole="button" testID={`design-choice-cancel-${anchor}`}>
+          <Text style={styles.textButtonText}>{t('wishes:designs.cancel')}</Text>
+        </Pressable>
+      </View>
     );
   };
 
@@ -239,7 +374,8 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                         <WishIcon variant={variant} tone="light" size={44} />
                         <Text style={[styles.body, styles.bold]}>{t('wishes:parent.creditLine', { item: name, count: credit.count })}</Text>
                       </View>
-                      {assignFor === credit.product_id ? (
+                      {renderChoice(`credit-${credit.product_id}`)}
+                      {choice?.anchor === `credit-${credit.product_id}` ? null : assignFor === credit.product_id ? (
                         data.pets.map((pet) => (
                           <Pressable
                             key={pet.pet_id}
@@ -279,12 +415,20 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
               data.wishes.map((wish) => {
                 const name = t(`wishes:items.${wish.variant}`);
                 const pet = petName(wish.pet_id, wish.pet_name, wish.species);
+                // M6-W03: the design the child asked for — bought as exactly that one.
+                const design = wishDesign(wish, data.pets);
+                const fixed: Partial<Record<WishItemKey, string>> = wish.design !== null ? { [wish.item_key]: wish.design } : {};
                 return (
                   <Card key={wish.id} testID={`wish-${wish.id}`}>
                     <View style={styles.itemRow}>
-                      <WishIcon variant={wish.variant} tone="light" size={48} />
+                      <DesignThumb design={design} variant={wish.variant} tone="light" size={design !== null ? 72 : 48} testID={`wish-design-image-${wish.id}`} />
                       <View style={styles.flex}>
                         <Text style={[styles.body, styles.bold]}>{name}</Text>
+                        {design !== null && (
+                          <Text style={styles.body} testID={`wish-design-name-${wish.id}`}>
+                            {t('wishes:designs.requested', { design: designLabel(design, wish.variant) })}
+                          </Text>
+                        )}
                         <Text style={styles.muted}>{t('wishes:parent.wishMeta', { child: wish.child_name, pet, when: formatWishTime(wish.created_at, timezone) })}</Text>
                       </View>
                     </View>
@@ -292,7 +436,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                       productId: wish.product_id,
                       label: (price) => t('wishes:parent.buy', { price }),
                       a11y: (price) => t('wishes:parent.buyA11y', { item: name, pet, price }),
-                      onPress: () => buy(wish.product_id, wish.pet_id, wish.id, wish.species),
+                      onPress: () => buy(`wish-${wish.id}`, wish.product_id, wish.pet_id, wish.id, wish.species, fixed),
                       testID: `wish-buy-${wish.id}`,
                     })}
                     {showBundleOffer(wish, storeHas) &&
@@ -301,10 +445,11 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                         productId: wish.bundle_product_id,
                         label: (price) => t('wishes:parent.bundle', { price }),
                         a11y: (price) => t('wishes:parent.bundleA11y', { pet, price }),
-                        onPress: () => buy(wish.bundle_product_id ?? '', wish.pet_id, wish.id, wish.species),
+                        onPress: () => buy(`wish-${wish.id}`, wish.bundle_product_id ?? '', wish.pet_id, wish.id, wish.species, fixed),
                         testID: `wish-bundle-${wish.id}`,
                         secondary: true,
                       })}
+                    {renderChoice(`wish-${wish.id}`)}
                     <Pressable
                       style={({ pressed }) => [styles.textButton, busy && styles.disabled, pressed && styles.pressed]}
                       disabled={busy}
@@ -355,22 +500,25 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                           productId: surprise.bundle_product_id,
                           label: (price) => t('wishes:parent.bundle', { price }),
                           a11y: (price) => t('wishes:parent.bundleA11y', { pet: petName(surprise.pet_id, surprise.pet_name, surprise.species), price }),
-                          onPress: () => buy(surprise.bundle_product_id ?? '', surprise.pet_id, null, surprise.species),
+                          onPress: () => buy(`surprise-${surprise.pet_id}-welcome_bundle`, surprise.bundle_product_id ?? '', surprise.pet_id, null, surprise.species),
                           testID: `surprise-buy-${surprise.pet_id}-welcome_bundle`,
                           secondary: true,
                         })}
+                        {renderChoice(`surprise-${surprise.pet_id}-welcome_bundle`)}
                       </View>
                     )}
                     {surprise.items.map((item) => {
                       const name = t(`wishes:items.${item.variant}`);
                       const state = parentItemState(item);
                       const pet = petName(surprise.pet_id, surprise.pet_name, surprise.species);
+                      // M6-W03: an owned item shows its design.
+                      const owned = item.owned ? designOf(item.designs, item.design) : null;
                       return (
                         <View key={item.key} style={styles.surpriseRow}>
                           <View style={styles.itemRow}>
-                            <WishIcon variant={item.variant} tone="light" size={44} />
+                            <DesignThumb design={owned} variant={item.variant} tone="light" size={44} />
                             <View style={styles.flex}>
-                              <Text style={[styles.body, styles.bold]}>{name}</Text>
+                              <Text style={[styles.body, styles.bold]}>{owned !== null ? designLabel(owned, item.variant) : name}</Text>
                               {item.treats_left !== null && <Text style={styles.muted}>{t('wishes:parent.treatsLeft', { count: item.treats_left })}</Text>}
                             </View>
                           </View>
@@ -379,7 +527,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                               productId: item.product_id,
                               label: (price) => t('wishes:parent.buy', { price }),
                               a11y: (price) => t('wishes:parent.buyA11y', { item: name, pet, price }),
-                              onPress: () => buy(item.product_id, surprise.pet_id, null, surprise.species),
+                              onPress: () => buy(`surprise-${surprise.pet_id}-${item.key}`, item.product_id, surprise.pet_id, null, surprise.species),
                               testID: `surprise-buy-${surprise.pet_id}-${item.key}`,
                               secondary: true,
                             })
@@ -388,6 +536,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                               {state === 'owned' ? t('wishes:parent.owned') : t('wishes:parent.onTheWay')}
                             </Text>
                           )}
+                          {renderChoice(`surprise-${surprise.pet_id}-${item.key}`)}
                         </View>
                       );
                     })}
@@ -440,6 +589,9 @@ const styles = StyleSheet.create({
   petChip: { minHeight: 44, paddingHorizontal: 14, borderRadius: radius.pill, borderWidth: 1, borderColor: C.border, backgroundColor: C.card, justifyContent: 'center' },
   petChipSelected: { backgroundColor: C.accentSoft, borderColor: C.accentBorder },
   petChipText: { fontSize: 14, fontWeight: '600', color: C.text },
+  choice: { marginTop: 10, gap: 10, paddingTop: 10, borderTopWidth: 1, borderTopColor: C.divider },
+  choiceGroup: { gap: 6 },
+  choiceRow: { gap: 10, paddingVertical: 2 },
   disabled: { opacity: 0.5 },
   pressed: { opacity: 0.85 },
 });
