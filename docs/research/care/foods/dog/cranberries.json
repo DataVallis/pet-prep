@@ -103,7 +103,7 @@
     "sv": "Ge tranbär med måtta och enligt veterinärens råd. Vindruvor och russin är mycket giftiga för hundar, så undvik tranbärsblandningar som innehåller russin.",
     "da": "Giv tranebær med måde og efter råd fra en dyrlæge. Vindruer og rosiner er meget giftige for hunde, så undgå tranebærblandinger med rosiner.",
     "fi": "Anna karpaloita kohtuudella ja eläinlääkärin ohjeiden mukaan. Viinirypäleet ja rusinat ovat koirille hyvin myrkyllisiä, joten vältä karpalosekoituksia, joissa on rusinoita.",
-    "nb": "Gi tranebær med måte og etter råd fra dyrlege. Druer og rosiner er svært giftige for hunder, så unngå tranebærblandinger som inneholder rosiner."
+    "nb": "Gi tranebær med måte og etter råd fra dyrlegen. Druer og rosiner er svært giftige for hunder, så unngå tranebærblandinger som inneholder rosiner."
   },
   "serving": {
     "en": "Plain fresh, cooked or dried cranberries without added sugar and without raisins; in small quantities.",
@@ -360,7 +360,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fa13eda4caf40cd2650c3a44466800bd2bf33cf0042dd6b3d9bb3b3694c14dab"
+      "verified_hash": "58304907afc232bcbd0dc48b44459a6377df7c645f9a73fd6e322fb7bd94dbd7"
     }
   }
 }

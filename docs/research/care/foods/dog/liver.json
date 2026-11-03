@@ -68,7 +68,7 @@
     "sv": "Inte som vanlig mat, och inte rå. Vitamin A-förgiftning hos husdjur uppstår oftast när de får rå lever eller kosttillskott rika på vitamin A, och rå lever medför samma bakterierisker som allt rått kött. Fråga veterinären innan du ger hunden lever.",
     "da": "Ikke som fast foder og ikke rå. A-vitaminforgiftning hos kæledyr opstår oftest når de fodres med rå lever eller kosttilskud med meget A-vitamin, og rå lever har samme bakterierisiko som alt råt kød. Spørg din dyrlæge før du giver din hund lever som en del af kosten.",
     "fi": "Ei tavalliseksi ruoaksi eikä raakana. Lemmikit saavat A-vitamiinimyrkytyksen useimmiten, kun niille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita, ja raakaan maksaan liittyvät samat bakteeririskit kuin kaikkeen raakaan lihaan. Kysy eläinlääkäriltä ennen kuin lisäät maksaa koirasi ruokavalioon.",
-    "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever inn i hundens kosthold."
+    "nb": "Ikke som fast mat, og ikke rå. A-vitaminforgiftning hos kjæledyr skjer oftest når de får rå lever eller kosttilskudd med mye A-vitamin, og rå lever har den samme smitterisikoen som alt rått kjøtt. Spør dyrlegen før du tar lever med i hundens kosthold."
   },
   "why": {
     "en": "Vitamin A poisoning most often happens when pets are fed raw liver, cod liver oil or other vitamin A-rich supplements. Too much over weeks or months can lead to a poor coat and dry skin; a large amount at once can cause vomiting, drowsiness and irritability. Raw animal protein can also carry Salmonella and other bacteria.",
@@ -336,7 +336,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7609e7daec8cd559c479e7c240bab20e2db0a18a8813f30d67ef7032f499dc42"
+      "verified_hash": "a9ae6b2dfd047065e01b7941f1b4b32b4ca7f18eb2c56e1e9acf2a74ba03b73f"
     }
   }
 }

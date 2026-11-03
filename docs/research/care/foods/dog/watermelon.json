@@ -68,7 +68,7 @@
     "sv": "Ja, om du förbereder den på rätt sätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
     "da": "Ja, hvis du forbereder den rigtigt. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
     "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen.",
-    "nb": "Ja, hvis den gjøres klar på riktig måte. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
+    "nb": "Ja, hvis du forbereder den riktig. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
   },
   "why": {
     "en": "Seeds can cause an intestinal blockage, especially if a dog eats many, and can be a choking hazard for small dogs. The rind may cause stomach upset, vomiting, diarrhoea or intestinal obstruction if eaten in large pieces. Too much watermelon may cause stomach discomfort or diarrhoea because of its natural sugar and fibre.",
@@ -315,7 +315,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2025045926869b986fd6aab9fafbec96939e2352a9322ebfe5364c84af05e84d"
+      "verified_hash": "a4b2e8ad05d7bade99270b22c5401eed4aea05e44593296a281942ec79257c2c"
     }
   }
 }

@@ -85,7 +85,7 @@
     "sv": "Skinka är ett fett kött som också innehåller mycket natrium, och båda kan ge hälsoproblem. För mycket fett påverkar matsmältningskanalen, särskilt bukspottkörteln. Kryddor som lök eller vitlök gör den giftig. Små mängder är kanske inte extremt skadliga, men det är ingen bra godbit. Salt mat kan också göra katter mer uttorkade, och katter med njur-, hjärt- eller urinvägsproblem bör särskilt undvika skinka.",
     "da": "Skinke er fedt kød med et højt natriumindhold, og begge dele kan give helbredsproblemer. For meget fedt påvirker fordøjelseskanalen, især bugspytkirtlen. Krydderier som løg eller hvidløg gør den giftig. Små mængder er måske ikke ekstremt skadelige, men skinke er ikke en god godbid. Salt mad kan også gøre katte mere dehydrerede, og katte med nyre-, hjerte- eller urinvejsproblemer bør især undgå skinke.",
     "fi": "Kinkku on rasvaista lihaa, jossa on myös paljon natriumia, ja kumpikin voi aiheuttaa terveysongelmia. Liika rasva vaikuttaa ruoansulatuskanavaan, etenkin haimaan. Mausteet, kuten sipuli tai valkosipuli, tekevät siitä myrkyllistä. Pienet määrät eivät välttämättä ole kovin haitallisia, mutta kinkku ei ole hyvä herkku. Suolainen ruoka voi myös pahentaa kissan nestehukkaa, ja kissojen, joilla on munuais-, sydän- tai virtsatievaivoja, pitäisi erityisesti välttää kinkkua.",
-    "nb": "Skinke er fett kjøtt som også inneholder mye natrium, og begge deler kan gi helseproblemer. For mye fett påvirker fordøyelsen, særlig bukspyttkjertelen. Krydder som løk eller hvitløk gjør den giftig. Små mengder er kanskje ikke svært skadelige, men skinke er ikke en god godbit. Salt mat kan også gjøre katter mer dehydrerte, og katter med nyre-, hjerte- eller urinveisproblemer bør særlig unngå skinke."
+    "nb": "Skinke er fett kjøtt som også inneholder mye salt (natrium), og begge deler kan gi helseproblemer. For mye fett påvirker fordøyelsen, særlig bukspyttkjertelen. Krydder som løk eller hvitløk gjør den giftig. Små mengder er kanskje ikke svært skadelige, men skinke er ikke en god godbit. Salt mat kan også gjøre at katter blir mer dehydrert, og katter med nyre-, hjerte- eller urinveisproblemer bør særlig unngå skinke."
   },
   "signs": {
     "en": [
@@ -361,7 +361,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3f6f847d2d739e15e19dd27c311bc0e61b8bbc8429550f7a63b9f85bc24a3008"
+      "verified_hash": "2865fb31d4a040f119d1bc285fccdb917e44866ad9db95a8579c8709ca86b519"
     }
   }
 }

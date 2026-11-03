@@ -179,7 +179,7 @@
     "sv": "Om katten har druckit mjölk och har kräkningar eller diarré som inte går över, eller verkar må dåligt, kontakta veterinären för råd.",
     "da": "Hvis din kat har drukket mælk og får opkast eller diarré der ikke går over, eller virker utilpas, skal du kontakte din dyrlæge og få råd.",
     "fi": "Jos kissasi joi maitoa ja sillä on oksentelua tai ripulia, joka ei mene ohi, tai se vaikuttaa sairaalta, kysy neuvoa eläinlääkäriltä.",
-    "nb": "Hvis katten har drukket melk og har oppkast eller diaré som ikke gir seg, eller virker dårlig, bør du kontakte dyrlegen for råd."
+    "nb": "Hvis katten har drukket melk og har oppkast eller diaré som ikke gir seg, eller virker uvel, bør du kontakte dyrlegen for råd."
   },
   "serving": {
     "en": "If you want to offer milk, choose a milk made for cats (usually low-lactose or lactose-free) and count its calories in your cat's daily food.",
@@ -457,7 +457,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "848179d946ee94d6161c272b2e4f9158ac100f07b09020293de14cbc4d2702a9"
+      "verified_hash": "c2a32b4955091a97bd2c13a7e395aecdfaa1c64972e84101fcafe21186a7e5b5"
     }
   }
 }

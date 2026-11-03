@@ -85,7 +85,7 @@
     "sv": "För mycket salt ger törst och gör att katten kissar ofta, och i allvarliga fall ger det darrningar och kramper. Saltkällor i hemmet är bland annat bordssalt i matlagningen och vägsalt som används mot halka på vintern.",
     "da": "For meget salt giver tørst og hyppig vandladning og i alvorlige tilfælde rysten og kramper. Kilder til salt i hjemmet er blandt andet bordsalt til madlavning og vejsalt der bruges mod glatføre om vinteren.",
     "fi": "Liika suola aiheuttaa janoa ja tiheää virtsaamista ja vakavissa tapauksissa vapinaa ja kouristuksia. Kotona suolaa on esimerkiksi ruoanlaitossa käytettävässä ruokasuolassa ja talvella liukkaudentorjuntaan käytettävässä tiesuolassa.",
-    "nb": "For mye salt gir tørste og hyppig vannlating og i alvorlige tilfeller skjelvinger og kramper. Saltkilder i hjemmet er bl.a. bordsalt i matlagingen og strøsalt som brukes mot is om vinteren."
+    "nb": "For mye salt gir tørst og hyppig vannlating og i alvorlige tilfeller skjelvinger og kramper. Saltkilder i hjemmet er blant annet bordsalt i matlagingen og strøsalt som brukes mot is om vinteren."
   },
   "signs": {
     "en": [
@@ -220,7 +220,7 @@
       "Nedsatt matlyst",
       "Sløvhet",
       "Ustø gange",
-      "Unormalt mye tørste eller vannlating",
+      "Kraftig tørst eller hyppig vannlating",
       "Skjelvinger eller kramper"
     ]
   },
@@ -447,7 +447,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f6b5e2b340bb72dc374f6831f95857591e115ffe9c714f98fa76481b61ba286f"
+      "verified_hash": "9ba1c47098588587f984822293cf3c7e824cdfcaa3ad1692b2aef729420be456"
     }
   }
 }

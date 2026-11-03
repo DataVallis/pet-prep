@@ -103,7 +103,7 @@
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären. Om katten har ätit kalkonben, fyllning eller sås med lök eller vitlök, ring veterinären direkt.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge. Hvis din kat har spist kalkunben, fyld eller sovs med løg eller hvidløg, skal du straks ringe til din dyrlæge.",
     "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä. Jos kissasi söi kalkkunan luita tai sipulia tai valkosipulia sisältävää täytettä tai kastiketta, soita eläinlääkärille heti.",
-    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen. Hvis katten har spist kalkunbein, fyll eller saus med løk eller hvitløk, ring dyrlegen med en gang."
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen. Hvis katten har spist kalkunbein, fyll eller saus med løk eller hvitløk, ring dyrlegen med en gang."
   },
   "serving": {
     "en": "Plain cooked meat with no bones, skin or seasoning; a small amount, counted in the daily food.",
@@ -302,7 +302,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d5603c0dd7d9d22f7f41444538a9e6597e21d768997ff9ab20866da4f669cc68"
+      "verified_hash": "1bf770ca214f23fe47ae312ae7cf9ecaa245969ee326ab9c6565fca1b03d285d"
     }
   }
 }

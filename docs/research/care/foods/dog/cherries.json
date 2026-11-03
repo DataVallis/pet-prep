@@ -227,7 +227,7 @@
     "sv": "Körsbär har hårda kärnor inuti som inte är bra för hundar. Körsbär är till för människor, och säg till en vuxen om hunden äter några.",
     "da": "Kirsebær har hårde sten indeni, som er dårlige for hunde. Lad kirsebærrene være til mennesker, og sig det til en voksen hvis din hund spiser nogle.",
     "fi": "Kirsikoiden sisällä on kovia kiviä, jotka ovat koirille pahasta. Jätä kirsikat ihmisille ja kerro aikuiselle, jos koirasi syö niitä.",
-    "nb": "Kirsebær har harde steiner inni som ikke er bra for hunder. La kirsebærene være for mennesker, og si fra til en voksen hvis hunden spiser noen."
+    "nb": "Kirsebær har harde steiner inni som ikke er bra for hunder. Kirsebærene er til oss mennesker, så si fra til en voksen hvis hunden spiser noen."
   },
   "faq": [
     {
@@ -438,7 +438,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "153dfff8e33751c02b8bb09ccd15ed17853cf289d97e5d22a8a8bcdbb68ff2b0"
+      "verified_hash": "e61b64816223b373db006cd74b9bafd2aaee8852a90184dd5b6fcf0741d633d7"
     }
   }
 }

@@ -179,7 +179,7 @@
     "sv": "Har hunden ätit en eller två nötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har svalt skal, ätit många nötter eller möglade nötter, verkar ha fått något i halsen eller visar något av symtomen ovan.",
     "da": "Efter en nød eller to skal du holde øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har slugt skaller, spist mange nødder eller mugne nødder, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
     "fi": "Jos koira söi pähkinän tai kaksi, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi nielaisi kuoria, söi paljon pähkinöitä tai homeisia pähkinöitä, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
-    "nb": "Etter én eller to nøtter bør du følge med på oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har svelget skall, har spist mange nøtter eller mugne nøtter, ser ut til å holde på å kveles eller viser noen av disse symptomene."
+    "nb": "Etter én eller to nøtter bør du følge med på oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har svelget skall, har spist mange nøtter eller mugne nøtter, ser ut til å holde på å kveles eller viser noen av disse tegnene."
   },
   "serving": null,
   "child": {
@@ -352,7 +352,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "424a841c934110655c940d4fea8f9bd730079236257304ed0ec584ecdaf0f7d0"
+      "verified_hash": "a1897006fbba93ed0000be3b5dc3e92d7413e4e63877b989062358163b112b2e"
     }
   }
 }

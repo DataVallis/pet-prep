@@ -249,7 +249,7 @@
         "sv": "Xylitol är ett sötningsmedel som tillsätts i vissa jordnötssmör. VCA kallar det en livsfarlig tillsats, så kolla alltid innehållsförteckningen.",
         "da": "Xylitol er et sødemiddel der er tilsat noget peanutbutter. VCA kalder det et livsfarligt tilsætningsstof, så tjek altid varedeklarationen.",
         "fi": "Ksylitoli on makeutusaine, jota lisätään joihinkin maapähkinävoihin. VCA kutsuu sitä hengenvaaralliseksi lisäaineeksi, joten tarkista aina tuoteseloste.",
-        "nb": "Xylitol er et søtstoff som tilsettes i noen typer peanøttsmør. VCA kaller det en livsfarlig tilsetning, så sjekk alltid innholdsfortegnelsen."
+        "nb": "Xylitol er et søtstoff som tilsettes i noen typer peanøttsmør. VCA kaller det en livsfarlig tilsetning, så sjekk alltid ingredienslisten."
       }
     }
   ],
@@ -354,7 +354,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d8b25cb43e2cfd8538735998510fd83d86e59bc73227a162fe061687d5fd1c28"
+      "verified_hash": "9793e2b5e72a0f7522906525fd2901eb56d34ec873c6e82140919a3654815d70"
     }
   }
 }

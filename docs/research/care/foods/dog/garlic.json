@@ -212,7 +212,7 @@
     "sv": "Vitlök luktar starkt och människor tycker att den smakar gott, men den är inte för hundar. Säg till en vuxen om din hund äter vitlök.",
     "da": "Hvidløg dufter stærkt og smager godt for mennesker, men det er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
     "fi": "Valkosipuli tuoksuu voimakkaalta ja maistuu ihmisille hyvältä, mutta se ei sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
-    "nb": "Hvitløk lukter sterkt og smaker godt for mennesker, men den er ikke for hunder. Si fra til en voksen hvis hunden din spiser noe."
+    "nb": "Hvitløk lukter sterkt, og folk synes den smaker godt, men den er ikke for hunder. Si fra til en voksen hvis hunden din spiser noe."
   },
   "faq": [
     {
@@ -487,7 +487,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4963978eaa61f45ce8d38351be226262ad9fc3d7bc70b2f19a6aeb73ee18d5d7"
+      "verified_hash": "c9b05a797907b603b919a8ad7db52df81d57614e245f6d010f76a17e082e2331"
     }
   }
 }

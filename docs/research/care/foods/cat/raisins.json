@@ -85,7 +85,7 @@
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor, russin och korinter kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Katter äter sällan många russin av sig själva, men de kan lockas av mat som innehåller russin. Fall hos katter är ovanliga och inte väl utredda, så vi använder den strängare nivån.",
     "da": "Velfærdsorganisationer for katte advarer om at vindruer, rosiner og korender kan give nyresvigt hos katte, og katte med kronisk nyresygdom kan have større risiko. Katte spiser næppe mange rosiner af sig selv, men de kan blive fristet af mad der indeholder rosiner. Tilfælde hos katte er sjældne og dårligt kendt, så vi bruger det strengere niveau.",
     "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet, rusinat ja korintit voivat aiheuttaa kissoille munuaisten vajaatoiminnan, ja kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Kissat tuskin syövät itsestään paljon rusinoita, mutta niitä voivat houkutella ruoat, joissa rusinoita on. Kissoilla tapaukset ovat harvinaisia, eikä niitä tunneta hyvin, joten käytämme tiukempaa luokitusta.",
-    "nb": "Organisasjoner for katters velferd advarer om at druer, rosiner og korinter kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Det er lite sannsynlig at katter spiser mange rosiner på egen hånd, men de kan bli fristet av mat som inneholder dem. Tilfeller hos katter er sjeldne og lite forstått, så vi bruker det strengere nivået."
+    "nb": "Organisasjoner for kattevelferd advarer om at druer, rosiner og korinter kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Det er lite sannsynlig at katter spiser mange rosiner på egen hånd, men de kan bli fristet av mat som inneholder dem. Tilfeller hos katter er sjeldne og lite forstått, så vi bruker det strengere nivået."
   },
   "signs": {
     "en": [
@@ -203,7 +203,7 @@
         "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten.",
         "da": "PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Hold dem uden for din kats rækkevidde.",
         "fi": "PDSA varoittaa, että mince pie -piirakoissa ja joulukakussa on rusinoita, sultanarusinoita ja korintteja, jotka ovat lemmikeille erittäin myrkyllisiä. Pidä ne poissa kissasi ulottuvilta.",
-        "nb": "PDSA advarer om at mince pies og julekake inneholder rosiner, sultanarosiner og korinter, som er svært giftige for kjæledyr. Hold dem utenfor kattens rekkevidde."
+        "nb": "PDSA advarer om at mince pies og julekake inneholder rosiner, sultanrosiner og korinter, som er svært giftige for kjæledyr. Hold dem utenfor kattens rekkevidde."
       }
     }
   ],
@@ -333,7 +333,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0ac6ce589a81915909c9023d2940f919e34e9145791690a60a75ca8dbef09d5e"
+      "verified_hash": "0410f7c79be55c2be597bcfb47183be55fbd65445c641e11bc6ed9dd6aba61aa"
     }
   }
 }

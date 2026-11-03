@@ -68,7 +68,7 @@
     "sv": "Nej. Lök är giftig för katter i alla former – rå, tillagad, torkad eller som pulver. Den kan skada de röda blodkropparna och orsaka blodbrist (anemi), och katter är den känsligaste arten. Ring veterinären om katten äter någon lök.",
     "da": "Nej. Løg er giftigt for katte i alle former – råt, tilberedt, tørret eller i pulverform. Det kan skade de røde blodlegemer og give blodmangel (anæmi), og katte er den mest følsomme dyreart. Ring til din dyrlæge hvis din kat spiser noget af det.",
     "fi": "Ei saa. Sipuli on kissalle myrkyllistä kaikissa muodoissa – raakana, kypsennettynä, kuivattuna tai jauheena. Se voi vaurioittaa punasoluja ja aiheuttaa anemiaa, ja kissat ovat kaikista eläinlajeista herkimpiä. Soita eläinlääkärille, jos kissasi syö sitä vähänkin.",
-    "nb": "Nei. Løk er giftig for katter i alle former – rå, tilberedt, tørket eller som pulver. Den kan skade de røde blodcellene og gi blodmangel (anemi), og katter er den mest følsomme arten. Ring dyrlegen hvis katten spiser noe løk."
+    "nb": "Nei. Løk er giftig for katter i alle former – rå, tilberedt, tørket eller som pulver. Den kan skade de røde blodcellene og gi blodmangel (anemi), og katter er den mest følsomme dyrearten. Ring dyrlegen hvis katten spiser noe løk."
   },
   "why": {
     "en": "Onion belongs to the allium family (the onion family). Alliums damage red blood cells and can lead to anaemia, and they also irritate the stomach and gut. Cats are the most sensitive species. All forms are poisonous to cats — raw, cooked, dried, powdered and liquid.",
@@ -85,7 +85,7 @@
     "sv": "Lök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Løg hører til løgplanterne (Allium, løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel, og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
     "fi": "Sipuli kuuluu sipulikasveihin eli sipulin sukuun. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissalle myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-    "nb": "Løk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+    "nb": "Løk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
     "en": [
@@ -500,7 +500,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "72d60c8266b35f9ee615b77acd73b3b4a826668a70e85ccbc7a960c99fa1a955"
+      "verified_hash": "c76d5533d196ade33c91fa8b1067dca3f66738cbbde7f316c6d6cfdc7133e940"
     }
   }
 }

@@ -68,7 +68,7 @@
     "sv": "Nej. Energidrycker innehåller ofta mycket koffein, som är giftigt för hundar. Koffein överstimulerar hjärtat och nervsystemet, och hundar är känsligare för det än människor. Även om hunden slickar i sig utspilld energidryck kan det vara ett problem.",
     "da": "Nej. Energidrikke indeholder ofte meget koffein, som er giftigt for hunde. Koffein overstimulerer hjertet og nervesystemet, og hunde er mere følsomme over for det end mennesker. Selv en spildt energidrik som hunden slikker op, kan være et problem.",
     "fi": "Ei saa. Energiajuomissa on usein paljon kofeiinia, joka on koirille myrkyllistä. Kofeiini ylikiihottaa sydäntä ja hermostoa, ja koirat ovat sille herkempiä kuin ihmiset. Jo läikkyneen energiajuoman lipittäminen voi olla ongelma.",
-    "nb": "Nei. Energidrikker inneholder ofte mye koffein, som er giftig for hunder. Koffein overstimulerer hjertet og nervesystemet, og hunder er mer følsomme for det enn mennesker. Selv det å slikke i seg sølt energidrikk kan være et problem."
+    "nb": "Nei. Energidrikker inneholder ofte mye koffein, som er giftig for hunder. Koffein overstimulerer hjertet og nervesystemet, og hunder er mer følsomme for det enn mennesker. Selv å slikke i seg sølt energidrikk kan være et problem."
   },
   "why": {
     "en": "Energy and sports drinks often contain a lot of caffeine, and energy shots, pouches and tablets contain caffeine too. Caffeine stimulates the heart and nervous system, which can be dangerous for dogs.",
@@ -224,7 +224,7 @@
     "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du förstår att hunden har fått i sig koffein. Notera vad det var (dryck, shot, påse eller tablett) och ungefär hur mycket. Vänta inte på symtom: tidig behandling gör skillnad.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at hunden har fået koffein. Skriv ned hvad det var (drik, shot, pose eller tablet) og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
     "fi": "Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan heti, kun huomaat koirasi saaneen kofeiinia. Kirjaa ylös, mitä se oli (juoma, shotti, pussi tai tabletti) ja suunnilleen kuinka paljon. Älä odota oireita: varhainen hoito on tärkeää.",
-    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikk, shot, pose eller tablett), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikke, shot, pose eller tablett), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
   },
   "serving": null,
   "child": {
@@ -242,7 +242,7 @@
     "sv": "Energidrycker är inte alls för hundar. Torka snabbt upp spill och säg till en vuxen om hunden dricker energidryck.",
     "da": "Energidrikke er slet ikke til hunde. Tør spild hurtigt op, og sig det til en voksen hvis din hund drikker noget.",
     "fi": "Energiajuomat eivät sovi koirille ollenkaan. Pyyhi läikät nopeasti ja kerro aikuiselle, jos koirasi juo energiajuomaa.",
-    "nb": "Energidrikk er overhodet ikke for hunder. Tørk fort opp hvis noe blir sølt, og si fra til en voksen hvis hunden drikker noe."
+    "nb": "Energidrikk er ikke noe for hunder i det hele tatt. Tørk fort opp hvis noe blir sølt, og si fra til en voksen hvis hunden drikker noe."
   },
   "faq": [
     {
@@ -425,7 +425,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1f9c6b104d15bfcf962622366253aeb9da36bd891ac1bee1e13c8ab8d6c5fbbe"
+      "verified_hash": "499e54d2b47b71bb4381446a11b3be4cc800589363e8ce508a765650d3c956f1"
     }
   }
 }

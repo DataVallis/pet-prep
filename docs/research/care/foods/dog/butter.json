@@ -68,7 +68,7 @@
     "sv": "Nej, helst inte. Smör är inte giftigt, men det innehåller mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med hunden, som ägg eller potatismos, lagar du helst utan smör.",
     "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedtholdigt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
     "fi": "Ei kannata. Voi ei sinänsä ole myrkyllistä, mutta se on hyvin rasvaista, ja rasvaiset ruoat voivat aiheuttaa koiralle vatsavaivoja ja mahdollisesti laukaista haimatulehduksen, joka on kivulias tulehdus. Koiran kanssa jaettava ruoka, kuten kananmuna tai perunamuusi, kannattaa valmistaa ilman voita.",
-    "nb": "Nei, helst ikke. Smør er ikke giftig, men det er svært fett, og fet mat kan gi hunden urolig mage og kan utløse betennelse i bukspyttkjertelen, som er smertefullt. Mat du deler, som egg eller potetmos, lager du helst uten smør."
+    "nb": "Nei, helst ikke. Smør er ikke giftig, men det er svært fett, og fet mat kan gi hunden urolig mage og kan utløse betennelse i bukspyttkjertelen, noe som er smertefullt. Mat du deler, som egg eller potetmos, lager du helst uten smør."
   },
   "why": {
     "en": "Fatty table foods are not a toxicity problem, but fatty foods such as butter, oils and meat drippings may cause pancreatitis. Some breeds, especially miniature Schnauzers, are more prone to it. Vets also suggest preparing food for dogs, such as eggs or mashed potato, without butter.",
@@ -85,7 +85,7 @@
     "sv": "Fet mat är inte ett förgiftningsproblem i sig, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, drabbas lättare. Veterinärer rekommenderar också att mat som lagas till hundar, som ägg eller potatismos, lagas utan smör.",
     "da": "Fed mad fra bordet giver ikke forgiftning, men fed mad som smør, olie og stegefedt kan udløse betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
     "fi": "Rasvaiset ihmisruoat eivät aiheuta myrkytystä, mutta rasvaiset ruoat, kuten voi, öljyt ja paistinrasva, voivat aiheuttaa haimatulehduksen. Jotkin rodut, etenkin kääpiösnautserit, ovat sille alttiimpia. Eläinlääkärit neuvovat myös tekemään koirallekin annettavan ruoan, kuten kananmunan tai perunamuusin, ilman voita.",
-    "nb": "Fet menneskemat er ikke et giftighetsproblem, men fet mat som smør, olje og stekefett kan gi betennelse i bukspyttkjertelen. Noen raser, særlig dvergschnauzer, er mer utsatt. Dyrleger anbefaler også å lage mat til hunder, som egg eller potetmos, uten smør."
+    "nb": "Fet menneskemat er ikke noe forgiftningsproblem, men fet mat som smør, olje og stekefett kan gi betennelse i bukspyttkjertelen. Noen raser, særlig dvergschnauzer, er mer utsatt. Dyrleger anbefaler også å lage mat til hunder, som egg eller potetmos, uten smør."
   },
   "signs": {
     "en": [
@@ -248,7 +248,7 @@
         "sv": "Inte som gift. Problemet är fettet, som kan ge orolig mage eller bukspottkörtelinflammation.",
         "da": "Ikke i den forstand at det er giftigt. Problemet er fedtet, som kan give dårlig mave eller betændelse i bugspytkirtlen.",
         "fi": "Ei siinä mielessä, että se olisi myrkkyä. Ongelma on rasva, joka voi aiheuttaa vatsavaivoja tai haimatulehduksen.",
-        "nb": "Ikke i betydningen giftig. Problemet er fettet, som kan gi urolig mage eller betennelse i bukspyttkjertelen."
+        "nb": "Ikke giftig i vanlig forstand. Problemet er fettet, som kan gi urolig mage eller betennelse i bukspyttkjertelen."
       }
     }
   ],
@@ -367,7 +367,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5ae2bf3a2a73c72b4e339a4c2eb173e3fd3734368da0655e2dcfe67525d16f6c"
+      "verified_hash": "b8301348cc0b5481544cc043d0f5fa41ee846ddb98093ad3d2836093496580e7"
     }
   }
 }

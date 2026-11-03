@@ -212,7 +212,7 @@
     "sv": "Gräslök ser ut som litet grönt gräs, men den hör till lökfamiljen och är inte för hundar. Säg till en vuxen om hunden äter av den.",
     "da": "Purløg ligner små grønne græsstrå, men det hører til løgfamilien og er ikke til hunde. Sig det til en voksen hvis din hund spiser noget.",
     "fi": "Ruohosipuli näyttää pieneltä vihreältä ruoholta, mutta se on sipulin sukua eikä sovi koirille. Kerro aikuiselle, jos koirasi syö sitä.",
-    "nb": "Gressløk ligner på lite, grønt gress, men den hører til løkfamilien og er ikke for hunder. Si fra til en voksen hvis hunden spiser noe."
+    "nb": "Gressløk ser ut som små grønne grasstrå, men den hører til løkfamilien og er ikke for hunder. Si fra til en voksen hvis hunden spiser noe."
   },
   "faq": [
     {
@@ -446,7 +446,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "27606bc9d22468a3d23625851fc9dd49101ae32df5e71a75c7a3a59fc4408b41"
+      "verified_hash": "617e274a9a9eca9bc154247c588e371cae73a87348403b4a8d066df843e1e963"
     }
   }
 }

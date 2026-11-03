@@ -213,7 +213,7 @@
     "sv": "Glass är godis för människor. Den kan ge hundar ont i magen, så ät upp din glass själv.",
     "da": "Is er en godbid til mennesker. Den kan give hunde ondt i maven, så spis selv din is.",
     "fi": "Jäätelö on ihmisten herkku. Se voi tehdä koiran masun kipeäksi, joten pidä tötterö itselläsi.",
-    "nb": "Iskrem er en godbit for mennesker. Den kan gi hunder vondt i magen, så behold isen din selv."
+    "nb": "Iskrem er en godbit for mennesker. Den kan gi hunder vondt i magen, så spis isen din selv."
   },
   "faq": [
     {
@@ -381,7 +381,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9ad8163754a99095a631ee2ccfd597905ab9c9ec43bfd89bf7eea7c9953cdfaf"
+      "verified_hash": "3b11397762040b968833d18ebd9f5fd52ffd89b58b0f89647e53f6cf6d113b7d"
     }
   }
 }

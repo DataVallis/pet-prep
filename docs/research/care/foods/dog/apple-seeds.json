@@ -209,7 +209,7 @@
     "sv": "Om hunden äter ett kärnhus eller kärnor: håll utkik efter tecken på magbesvär eller stopp, och kontakta en veterinär om hunden får problem.",
     "da": "Hvis hunden spiser et kernehus eller kerner, skal du holde øje med tegn på fordøjelsesproblemer eller blokering og kontakte en dyrlæge hvis hunden får problemer.",
     "fi": "Jos koirasi syö omenan siemenkodan tai siemeniä, seuraa, ilmeneekö ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
-    "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering og kontakte dyrlege hvis hunden får problemer."
+    "nb": "Hvis hunden spiser et kjernehus eller eplekjerner, må du følge med på tegn på fordøyelsesproblemer eller blokkering og kontakte dyrlegen hvis hunden får problemer."
   },
   "serving": null,
   "child": {
@@ -263,7 +263,7 @@
         "sv": "Några få kärnor gör troligen ingen skada. Håll utkik efter tecken på magbesvär eller stopp från kärnhuset, och kontakta en veterinär om hunden får problem.",
         "da": "Nogle få kerner gør sandsynligvis ikke skade. Hold øje med tegn på fordøjelsesproblemer eller blokering fra kernehuset, og kontakt en dyrlæge hvis hunden får problemer.",
         "fi": "Muutama siemen tuskin aiheuttaa haittaa. Seuraa, ilmeneekö koirallasi siemenkodan aiheuttamien ruoansulatusvaivojen tai tukoksen merkkejä, ja ota yhteyttä eläinlääkäriin, jos koiralla on ongelmia.",
-        "nb": "Noen få kjerner gjør neppe skade. Følg med på tegn på fordøyelsesproblemer eller blokkering fra kjernehuset, og kontakt dyrlege hvis hunden får problemer."
+        "nb": "Noen få kjerner gjør neppe skade. Følg med på tegn på fordøyelsesproblemer eller blokkering fra kjernehuset, og kontakt dyrlegen hvis hunden får problemer."
       }
     }
   ],
@@ -399,7 +399,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "71d04da5b377f8819c79eb601cceb14253b608f7e02520c8f5960a8285f46ada"
+      "verified_hash": "e9b6d46710eb487de5bb6dcf54833e5ffa1aaa8e3913eb5cbc6ea8966f972d8b"
     }
   }
 }

@@ -137,7 +137,7 @@
     "sv": "Hundar kan få några sköljda björnbär! Fråga en vuxen först, särskilt om bären är plockade ute.",
     "da": "Hunde kan godt få et par vaskede brombær! Spørg en voksen først, især hvis bærrene er plukket udenfor.",
     "fi": "Koira saa maistaa muutaman pestyn karhunvatukan! Kysy ensin aikuiselta, etenkin jos marjat on poimittu luonnosta.",
-    "nb": "Hunder kan få noen vaskede bjørnebær! Spør en voksen først, særlig når det gjelder bær som er plukket ute."
+    "nb": "Hunder kan få noen vaskede bjørnebær! Spør en voksen først, særlig hvis bærene er plukket ute."
   },
   "faq": [
     {
@@ -304,7 +304,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bb3a8f12a507438e1b3b92c7486339a92f2b093b8e4e917fdf65f3a1efc053ed"
+      "verified_hash": "96d30069ab74decf95eb8fe79a384aa748eb1eeef46191b27b470b7ca660b221"
     }
   }
 }

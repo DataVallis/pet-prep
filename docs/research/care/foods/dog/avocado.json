@@ -197,7 +197,7 @@
     "sv": "Avokado är ingen bra godbit för hundar. Den stora kärnan kan fastna i hundens mage, så håll avokado borta.",
     "da": "Avocado er ikke en god hundesnack. Den store sten indeni kan sætte sig fast i hundens mave, så hold avocadoer væk.",
     "fi": "Avokado ei ole hyvä koiran välipala. Sen sisällä oleva iso kivi voi juuttua koiran mahaan, joten pidä avokadot poissa koiran luota.",
-    "nb": "Avokado er ikke en god hundesnack. Den store steinen inni kan sette seg fast i magen til hunden, så hold avokadoer unna."
+    "nb": "Avokado er ikke en god snack for hunder. Den store steinen inni kan sette seg fast i magen, så hold avokadoen unna."
   },
   "faq": [
     {
@@ -464,7 +464,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "73e1e7c1fd8b82f06e0737fc5f73302dae1076f0e6d69e36f58b222b4473b56c"
+      "verified_hash": "213be68baf12ca1da24165dc4aae03fc6f95034d403967b85ad0cf16957198fd"
     }
   }
 }

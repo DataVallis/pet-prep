@@ -85,7 +85,7 @@
     "sv": "Gräslök hör till släktet Allium (lökfamiljen). Lökväxter skadar de röda blodkropparna och kan leda till blodbrist (anemi), och de irriterar också magen och tarmarna. Katter är den känsligaste arten. Alla former är giftiga för katter – rå, tillagad, torkad, i pulverform och i flytande form.",
     "da": "Purløg hører til løgplanterne (løgfamilien). Løgplanter skader de røde blodlegemer og kan føre til blodmangel (anæmi), og de irriterer også mave og tarm. Katte er den mest følsomme dyreart. Alle former er giftige for katte – rå, tilberedte, tørrede, i pulverform og flydende.",
     "fi": "Ruohosipuli kuuluu sipulikasveihin. Sipulikasvit vaurioittavat punasoluja ja voivat johtaa anemiaan, ja ne myös ärsyttävät mahaa ja suolistoa. Kissat ovat kaikista eläinlajeista herkimpiä. Kaikki muodot ovat kissoille myrkyllisiä – raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
-    "nb": "Gressløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme arten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
+    "nb": "Gressløk hører til løkplantene (Allium). Løkplanter skader de røde blodcellene og kan føre til blodmangel (anemi), og de irriterer også magen og tarmen. Katter er den mest følsomme dyrearten. Alle former er giftige for katter – rå, tilberedt, tørket, som pulver og i flytende form."
   },
   "signs": {
     "en": [
@@ -257,7 +257,7 @@
     "sv": "Gräslök ser ut som gräs, men det är inte kattgräs! Håll den borta från katten och säg till en vuxen om katten tuggar på den.",
     "da": "Purløg ligner græs, men det er ikke kattegræs! Hold det væk fra din kat, og sig det til en voksen hvis den tygger på det.",
     "fi": "Ruohosipuli näyttää ruoholta, mutta se ei ole kissanheinää! Pidä se kaukana kisusta ja kerro aikuiselle, jos kisu pureskelee sitä.",
-    "nb": "Gressløk ligner på gress, men det er ikke kattegress! Hold den unna pusen, og si fra til en voksen hvis pusen tygger på den."
+    "nb": "Gressløk ligner på gress, men den er ikke kattegress! Hold den unna pusen, og si fra til en voksen hvis pusen tygger på den."
   },
   "faq": [
     {
@@ -463,7 +463,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0bea4416229d33ad832dc3a26e62863c1a5a4047b3ee5fbeb9035203d9bb3d8d"
+      "verified_hash": "0ec592acb30412028763fed29570327fe3454fa213ae9c1775096ac0943b85d4"
     }
   }
 }

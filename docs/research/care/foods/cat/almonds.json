@@ -68,7 +68,7 @@
     "sv": "Nej, mandlar bör hållas borta från katter. Söta mandlar anses inte giftiga, men de innehåller mycket olja och fett och kan få katten att må dåligt, med orolig mage eller kräkningar.",
     "da": "Nej, mandler holdes bedst væk fra katte. Søde mandler regnes ikke for giftige, men de indeholder meget olie og fedt og kan gøre en kat utilpas med dårlig mave eller opkast.",
     "fi": "Ei, mantelit on parasta pitää kissan ulottumattomissa. Makeita manteleita ei pidetä myrkyllisinä, mutta ne sisältävät paljon öljyjä ja rasvaa, ja ne voivat saada kissan voimaan huonosti ja aiheuttaa vatsavaivoja tai oksentelua.",
-    "nb": "Nei, mandler bør holdes unna katter. Søte mandler regnes ikke som giftige, men de inneholder mye olje og fett og kan gjøre katten dårlig, med urolig mage eller oppkast."
+    "nb": "Nei, mandler bør holdes unna katter. Søte mandler regnes ikke som giftige, men de inneholder mye olje og fett og kan gjøre katten uvel, med urolig mage eller oppkast."
   },
   "why": {
     "en": "Cats Protection lists almonds among nuts that contain high amounts of oils and fats which can make a cat unwell. The ASPCA says sweet almonds sold for eating are not toxic to pets, but because they are not a normal part of a pet's diet they can cause digestive issues. Bitter almonds contain a cyanide compound and are considered toxic.",
@@ -85,7 +85,7 @@
     "sv": "Cats Protection räknar mandlar till de nötter som innehåller mycket olja och fett och kan få en katt att må dåligt. ASPCA skriver att söta mandlar som säljs som livsmedel inte är giftiga för husdjur, men eftersom de inte hör till djurens vanliga kost kan de ge matsmältningsbesvär. Bittermandlar innehåller en cyanidförening och anses giftiga.",
     "da": "Cats Protection nævner mandler blandt de nødder der indeholder store mængder olie og fedt, som kan gøre en kat utilpas. ASPCA skriver at søde mandler, der sælges som fødevare, ikke er giftige for kæledyr, men fordi de ikke er en normal del af et kæledyrs kost, kan de give fordøjelsesproblemer. Bittermandler indeholder en cyanidforbindelse og regnes for giftige.",
     "fi": "Cats Protection mainitsee mantelit niiden pähkinöiden joukossa, jotka sisältävät paljon öljyjä ja rasvaa ja voivat saada kissan voimaan huonosti. ASPCA:n mukaan syötäväksi myytävät makeat mantelit eivät ole lemmikeille myrkyllisiä, mutta koska ne eivät kuulu lemmikin tavalliseen ruokavalioon, ne voivat aiheuttaa ruoansulatusvaivoja. Karvasmantelit sisältävät syanidiyhdistettä, ja niitä pidetään myrkyllisinä.",
-    "nb": "Cats Protection regner mandler blant nøtter som inneholder mye olje og fett, som kan gjøre katten dårlig. ASPCA skriver at søte mandler som selges til mat, ikke er giftige for kjæledyr, men siden de ikke er en vanlig del av dyrets kosthold, kan de gi fordøyelsesplager. Bitre mandler inneholder en cyanidforbindelse og regnes som giftige."
+    "nb": "Cats Protection regner mandler blant nøtter som inneholder mye olje og fett, som kan gjøre katten uvel. ASPCA skriver at søte mandler som selges til mat, ikke er giftige for kjæledyr, men siden de ikke er en vanlig del av dyrets kosthold, kan de gi fordøyelsesplager. Bitre mandler inneholder en cyanidforbindelse og regnes som giftige."
   },
   "signs": {
     "en": [
@@ -176,7 +176,7 @@
       "Oppkast",
       "Diaré",
       "Urolig mage",
-      "Virker dårlig"
+      "Virker uvel"
     ]
   },
   "what_to_do": {
@@ -194,7 +194,7 @@
     "sv": "Om katten har ätit mandlar, kontakta veterinären för råd, särskilt om den har ätit mycket eller verkar må dåligt. Notera vad den åt, hur mycket och när. Om det var bittermandlar, kontakta veterinären direkt.",
     "da": "Hvis din kat har spist mandler, så kontakt din dyrlæge for at få råd, især hvis den har spist meget eller virker utilpas. Skriv ned hvad den har spist, hvor meget og hvornår. Hvis det var bittermandler, skal du kontakte din dyrlæge med det samme.",
     "fi": "Jos kissasi söi manteleita, kysy neuvoa eläinlääkäriltä, etenkin jos se söi paljon tai vaikuttaa huonovointiselta. Kirjaa ylös, mitä se söi, kuinka paljon ja milloin. Jos ne olivat karvasmanteleita, ota heti yhteyttä eläinlääkäriin.",
-    "nb": "Hvis katten har spist mandler, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker dårlig. Skriv ned hva den har spist, hvor mye og når. Hvis det var bitre mandler, kontakt dyrlegen med en gang."
+    "nb": "Hvis katten har spist mandler, kontakt dyrlegen for råd, særlig hvis den har spist mye eller virker uvel. Skriv ned hva den har spist, hvor mye og når. Hvis det var bitre mandler, kontakt dyrlegen med en gang."
   },
   "serving": null,
   "child": {
@@ -397,7 +397,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f30fb4d2ed10e05c5454ab67bc9b42a170cace1099311760e917de887bc0de27"
+      "verified_hash": "25547b70a258e983a831bb806e94d8c91229ab25aac4a649ea62820909e79d1b"
     }
   }
 }

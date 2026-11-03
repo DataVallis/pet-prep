@@ -194,7 +194,7 @@
     "sv": "Om katten har ätit yoghurt: håll utkik efter diarré, kräkningar eller ändrat beteende, och kontakta veterinären för råd om den verkar må dåligt.",
     "da": "Hvis din kat har spist yoghurt, så hold øje med diarré, opkast eller ændret adfærd, og kontakt din dyrlæge for at få råd hvis den virker utilpas.",
     "fi": "Jos kissasi söi jogurttia, seuraa, ilmeneekö ripulia, oksentelua tai käytöksen muutoksia, ja kysy neuvoa eläinlääkäriltä, jos kissa vaikuttaa sairaalta.",
-    "nb": "Hvis katten har spist yoghurt, bør du følge med på diaré, oppkast eller endret oppførsel og kontakte dyrlegen for råd hvis den virker dårlig."
+    "nb": "Hvis katten har spist yoghurt, bør du følge med på diaré, oppkast eller endret oppførsel og kontakte dyrlegen for råd hvis den virker uvel."
   },
   "serving": null,
   "child": {
@@ -212,7 +212,7 @@
     "sv": "Yoghurt är mat för människor. Den kan ge katten ont i magen, så låt den stanna i din skål, inte i kattens.",
     "da": "Yoghurt er menneskemad. Den kan give en kat ondt i maven, så hold den i din skål og ikke i kattens.",
     "fi": "Jogurtti on ihmisten ruokaa. Se voi tehdä kissan masun kipeäksi, joten pidä se omassa kulhossasi äläkä kissan kupissa.",
-    "nb": "Yoghurt er menneskemat. Den kan gi en katt vondt i magen, så la den bli i din skål, ikke i kattens."
+    "nb": "Yoghurt er menneskemat. Den kan gi en katt vondt i magen, så la den bli i skålen din, ikke i kattens."
   },
   "faq": [
     {
@@ -375,7 +375,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dc8d9837506bc4443826cc0866dfee7f04c866c415aab35bbb7f350078807549"
+      "verified_hash": "88836206cd20fe59e21693f025cfd0fe32720d8129f6ecb568f40a6af43cbdc1"
     }
   }
 }

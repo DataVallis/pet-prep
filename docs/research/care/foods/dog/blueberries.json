@@ -137,7 +137,7 @@
     "sv": "Blåbär kan vara en liten smaskig godbit för hundar! En vuxen sköljer dem först och ger bara några få.",
     "da": "Blåbær kan være en lækker lille godbid til hunde! En voksen vasker dem først og giver kun nogle få.",
     "fi": "Mustikat voivat olla koiralle ihana pieni herkku! Aikuinen pesee ne ensin ja antaa vain muutaman.",
-    "nb": "Blåbær kan være en liten, god godbit for hunder! En voksen vasker dem først og gir bare noen få."
+    "nb": "Blåbær kan være en deilig liten godbit for hunder! En voksen vasker dem først og gir bare noen få."
   },
   "faq": [
     {
@@ -300,7 +300,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2cb3254cb6ef7fef0b4b27ff2e135299d712accff0835cc9c1ffea614b484412"
+      "verified_hash": "284ed41846725f3b16094c8486f59c447edafee2377c9a3ad8a64484fb8ff2b6"
     }
   }
 }

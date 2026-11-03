@@ -85,7 +85,7 @@
     "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att katter kan må dåligt av dem. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga, så att katter kan bli sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter.",
     "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpas. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau.",
     "fi": "Cats Protectionin mukaan makadamia kuuluu pähkinöihin, joiden runsas öljy ja rasva voivat tehdä kissan sairaaksi. VCA:n mukaan makadamiapähkinät ovat hyvin rasvaisia, joten ne voivat aiheuttaa haimatulehduksen, ja lisäksi ne ovat myrkyllisiä ja sairastuttavat kissan. Tarkat kuvaukset makadamiamyrkytyksestä koskevat enimmäkseen koiria, mutta käytämme kissoille tiukempaa luokitusta.",
-    "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter dårlige. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
+    "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter uvel. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
   },
   "signs": {
     "en": [
@@ -352,7 +352,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c7539cee2e38f30f33a9f4f8caa50e3e6620d4898e7ff92839bdc9c5d519841a"
+      "verified_hash": "f7b03b1441f15a5cc184ef7dc4ee48f9c1eda4e2074dec6c7b9767b2383a871b"
     }
   }
 }

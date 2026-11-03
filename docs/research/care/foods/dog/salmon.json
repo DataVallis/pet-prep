@@ -192,7 +192,7 @@
         "sv": "Är lax i hundfoder ofarlig?",
         "da": "Er laks i hundefoder sikker?",
         "fi": "Onko koiranruoan lohi turvallista?",
-        "nb": "Er laks i hundefôr trygt?"
+        "nb": "Er laks i hundefôr trygg?"
       },
       "a": {
         "en": "Salmon in commercial diets is typically safe because it is cooked.",
@@ -348,7 +348,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2c86f72a5a66a82d02137ecf0389a63aeb37190ec851c1d1acadfbccf3a568d0"
+      "verified_hash": "d84214e98e23bb9a10bfa7d0389ade86daccc522887b6d14521c7ce9f7ed7b1f"
     }
   }
 }

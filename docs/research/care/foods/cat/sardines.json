@@ -103,7 +103,7 @@
     "sv": "Ge en liten bit först. Om katten får kräkningar eller diarré efteråt, sluta och fråga veterinären.",
     "da": "Giv først et lille stykke. Hvis din kat får opkast eller diarré bagefter, skal du stoppe og spørge din dyrlæge.",
     "fi": "Tarjoa ensin pieni pala. Jos kissasi alkaa sen jälkeen oksennella tai sille tulee ripuli, lopeta ja kysy eläinlääkäriltä.",
-    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt og spør dyrlegen."
+    "nb": "Gi en liten bit først. Hvis katten får oppkast eller diaré etterpå, slutt å gi det og spør dyrlegen."
   },
   "serving": {
     "en": "Tinned in spring water, with bones removed; a few pieces now and then.",
@@ -239,7 +239,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2f169260aae7d7575424b994c099d179b9f0f6207c149ac9a7251323fb3e228d"
+      "verified_hash": "2df1d5667a011af5e3ba4a368796f8dec17de541e9f1a059a573be8f7dffcd9e"
     }
   }
 }

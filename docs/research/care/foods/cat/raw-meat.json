@@ -68,7 +68,7 @@
     "sv": "Nej, rått kött rekommenderas inte för katter. Även om vilda katter äter råa bytesdjur kan rått kött bära på bakterier som salmonella, listeria och E. coli och parasiter som toxoplasma, som kan göra både katter och människor sjuka.",
     "da": "Nej, råt kød anbefales ikke til katte. Selvom vilde katte spiser rå byttedyr, kan råt kød indeholde bakterier som salmonella, listeria og E. coli og parasitter som Toxoplasma, der kan gøre både katte og mennesker syge.",
     "fi": "Ei, raakaa lihaa ei suositella kissoille. Vaikka luonnossa elävät kissat syövät raakaa saalista, raa’assa lihassa voi olla taudinaiheuttajia, kuten salmonellaa, listeriaa ja E. coli -bakteeria, sekä loisia, kuten toksoplasmaa, jotka voivat sairastuttaa kissoja ja ihmisiä.",
-    "nb": "Nei, rått kjøtt anbefales ikke for katter. Selv om ville katter spiser rått bytte, kan rått kjøtt bære med seg smittestoffer som bakteriene Salmonella, Listeria og E. coli og parasitten Toxoplasma, som kan gjøre både katter og mennesker syke."
+    "nb": "Nei, rått kjøtt anbefales ikke for katter. Selv om ville katter spiser rått bytte, kan rått kjøtt inneholde smittestoffer som bakteriene Salmonella, Listeria og E. coli og parasitten Toxoplasma, som kan gjøre både katter og mennesker syke."
   },
   "why": {
     "en": "Cornell and the Merck Veterinary Manual both advise against raw meat for cats, as food or as a treat, because it can spread toxoplasmosis and other infections. Contamination of raw meat by bacteria is common, and some cats seem fine but shed the bacteria in their stool, which can spread to people and other pets. Supermarket meat for people is meant to be cooked.",
@@ -85,7 +85,7 @@
     "sv": "Både Cornell och Merck Veterinary Manual avråder från rått kött till katter, som mat eller godbit, eftersom det kan sprida toxoplasmos och andra infektioner. Det är vanligt att rått kött är förorenat av bakterier, och en del katter verkar friska men utsöndrar bakterierna i avföringen, vilket kan smitta människor och andra husdjur. Kött som säljs i butik är avsett att tillagas innan man äter det.",
     "da": "Cornell og Merck Veterinary Manual fraråder begge råt kød til katte, både som foder og som godbid fordi det kan overføre toxoplasmose og andre infektioner. Det er almindeligt at råt kød er forurenet med bakterier, og nogle katte virker raske, men udskiller bakterierne med afføringen, hvorfra de kan smitte mennesker og andre kæledyr. Kød fra supermarkedet er beregnet til at blive tilberedt.",
     "fi": "Sekä Cornell että Merck Veterinary Manual neuvovat olemaan antamatta kissalle raakaa lihaa ruoaksi tai herkuksi, koska se voi levittää toksoplasmoosia ja muita tartuntatauteja. Raaka liha on usein bakteerien saastuttamaa, ja jotkin kissat vaikuttavat terveiltä mutta erittävät bakteereja ulosteeseensa, mistä ne voivat levitä ihmisiin ja muihin lemmikkeihin. Ihmisille myytävä kaupan liha on tarkoitettu syötäväksi kypsennettynä.",
-    "nb": "Både Cornell og Merck Veterinary Manual fraråder rått kjøtt til katter, som mat eller som godbit, fordi det kan spre toksoplasmose og andre infeksjoner. Det er vanlig at rått kjøtt er forurenset med bakterier, og noen katter virker friske, men skiller ut bakteriene i avføringen, og det kan smitte mennesker og andre kjæledyr. Kjøtt til mennesker fra butikken er ment å tilberedes."
+    "nb": "Både Cornell og Merck Veterinary Manual fraråder rått kjøtt til katter, som mat eller som godbit, fordi det kan spre toksoplasmose og andre infeksjoner. Det er vanlig at rått kjøtt er forurenset med bakterier, og noen katter virker friske, men skiller ut bakteriene i avføringen, og det kan smitte mennesker og andre kjæledyr. Kjøtt som selges til mennesker, er ment å tilberedes før det spises."
   },
   "signs": {
     "en": [
@@ -299,7 +299,7 @@
         "sv": "Störst risk att bli allvarligt sjuka har mycket gamla människor, mycket små barn och personer med försvagat immunförsvar.",
         "da": "De mennesker der har størst risiko for alvorlig sygdom, er meget gamle, meget unge og personer med svækket immunforsvar.",
         "fi": "Vakavan sairauden riski on suurin hyvin iäkkäillä, hyvin pienillä lapsilla ja ihmisillä, joiden vastustuskyky on heikentynyt.",
-        "nb": "Personer med høyest risiko for alvorlig sykdom er de aller eldste, de aller yngste og personer med svekket immunforsvar."
+        "nb": "De som har størst risiko for alvorlig sykdom, er de aller eldste, de aller yngste og personer med svekket immunforsvar."
       }
     }
   ],
@@ -459,7 +459,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1d3f431d3ca96a841eedf57eb835d7cf36d52c360fae8cb00da1c919209732aa"
+      "verified_hash": "84c58a25153f0324c279012a684d658f980d3e08cf91705a2570d30f12b0c3bd"
     }
   }
 }

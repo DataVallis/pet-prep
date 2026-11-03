@@ -194,7 +194,7 @@
     "sv": "Om hunden har ätit några pistaschnötter, håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många nötter eller skal, verkar ha fått något i halsen eller visar svaghet, trötthet eller något av symtomen ovan.",
     "da": "Hvis din hund har spist nogle få pistacienødder, så hold øje med opkast, diarré eller mavesmerter. Kontakt din dyrlæge hvis hunden har spist mange nødder eller skaller, ser ud til at være ved at blive kvalt eller viser svaghed, træthed eller et af disse symptomer.",
     "fi": "Jos koirasi söi muutaman pistaasipähkinän, seuraa, tuleeko oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koira söi niitä tai niiden kuoria paljon, näyttää tukehtuvan tai sillä on heikkoutta, väsymystä tai jokin muu näistä oireista.",
-    "nb": "Hvis hunden har spist noen få pistasjnøtter, må du følge med på oppkast, diaré eller vondt i magen. Ring dyrlegen hvis hunden har spist mange nøtter eller skall, ser ut til å ha satt noe i halsen, eller viser svakhet, sløvhet eller noen av disse symptomene."
+    "nb": "Hvis hunden har spist noen få pistasjnøtter, må du følge med på oppkast, diaré eller vondt i magen. Ring dyrlegen hvis hunden har spist mange nøtter eller skall, ser ut til å holde på å kveles, eller viser svakhet, sløvhet eller noen av disse tegnene."
   },
   "serving": null,
   "child": {
@@ -380,7 +380,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "00132ab842b5ac68c71eb6bf9c1e9df8f540c809d72a9824f1a9ec4e1d2047e1"
+      "verified_hash": "e2140c1604574ff856c2089440564c3ebe4f53fa63666b27ec6e95e2a5d3f199"
     }
   }
 }

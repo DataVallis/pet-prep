@@ -68,7 +68,7 @@
     "sv": "Bara efter att du har pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
     "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler er heller ikke risikofri: de kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
     "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita.",
-    "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger godtar dem under tilsyn; andre fraråder bein."
+    "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger tillater dem under tilsyn; andre fraråder bein."
   },
   "why": {
     "en": "Sources differ, so we use the stricter level. The FDA lists blockages, choking and mouth injuries after bones and advises asking your vet about safer chews. AKC notes raw bones may carry Salmonella and very hard bones can damage teeth. Bones can injure or block the gut, and blockages are very serious.",
@@ -85,7 +85,7 @@
     "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt.",
     "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og anbefaler at spørge dyrlægen om sikrere tyggeting. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
     "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. FDA mainitsee luiden jälkeen ilmenneitä tukoksia, tukehtumistapauksia ja suun vammoja ja neuvoo kysymään eläinlääkäriltä turvallisemmista purutuotteista. AKC:n mukaan raaoissa luissa voi olla salmonellaa, ja hyvin kovat luut voivat vahingoittaa hampaita. Luut voivat vaurioittaa tai tukkia suoliston, ja tukokset ovat erittäin vakavia.",
-    "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere ting å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
+    "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere alternativer å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
   },
   "signs": {
     "en": [
@@ -209,7 +209,7 @@
     "sv": "Om hunden har svalt en stor bit ben eller visar något av symtomen ovan, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var.",
     "da": "Kontakt straks din dyrlæge hvis din hund har slugt et stort stykke knogle eller viser nogle af disse symptomer. Skriv ned hvilken slags knogle det var, og hvor stor den var.",
     "fi": "Jos koirasi nieli ison palan luuta tai sillä on jokin näistä oireista, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös luun laatu ja koko.",
-    "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse symptomene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
+    "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse tegnene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
   },
   "serving": {
     "en": "Ask your vet first. If they agree, choose a bone larger than your dog's muzzle so it can't be swallowed whole, avoid very hard bones, and always supervise chewing.",
@@ -486,7 +486,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "96bbbc47a1fee53e587d77f50cd2b55c23ea552a2c9f029e447b5177cc4b3161"
+      "verified_hash": "7b5c07328428f6cfa387033cfba5b57bfe33a4b06722e72be4901786dbad48b3"
     }
   }
 }

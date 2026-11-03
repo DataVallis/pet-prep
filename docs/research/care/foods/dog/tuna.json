@@ -173,7 +173,7 @@
         "sv": "Oftast inte: tonfisk är inte giftig, och problemet är om hunden får tonfisk regelbundet över tid.",
         "da": "Som regel ikke: tun er ikke giftig, og bekymringen gælder regelmæssig fodring over længere tid.",
         "fi": "Yleensä ei: tonnikala ei ole myrkyllistä, ja huoli koskee säännöllistä syöttämistä pitkän ajan kuluessa.",
-        "nb": "Som regel ikke: Tunfisk er ikke giftig, og det som er bekymringsfullt, er å gi den regelmessig over tid."
+        "nb": "Som regel ikke: Tunfisk er ikke giftig, og det som kan bli et problem, er å gi den regelmessig over tid."
       }
     },
     {
@@ -360,7 +360,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8d30f27cf731de23f9794b3b14d341a275a813bc72291e40ce3451d1210ab9ff"
+      "verified_hash": "fede4da71f376e04f38a96b55db297e6f2367cfb0f90d73de3ce9400918f236b"
     }
   }
 }

@@ -248,7 +248,7 @@
         "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg.",
         "da": "Udover i drikkevarer kan alkohol også findes i likørfyldt slik, håndsprit, mundskyllevæske og rå, hævende brøddej.",
         "fi": "Juomien lisäksi alkoholia voi olla liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa.",
-        "nb": "I tillegg til drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
+        "nb": "Foruten i drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
       }
     }
   ],
@@ -395,7 +395,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0b8176defd23de5fbd04ca0fb8cb659834780a75201ca160d5a892f6f449d450"
+      "verified_hash": "f4d086eb821e459394d7b61f93f895746b0c6a595810a9f1391eff2f23b66828"
     }
   }
 }

@@ -68,7 +68,7 @@
     "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Det gäller även lökpulver och soppmixer.",
     "da": "Nej. Løg er giftigt for hunde i alle former: rå, tilberedt, tørret eller som pulver. Det skader de røde blodlegemer og kan give blodmangel (anæmi), og symptomerne viser sig ofte først efter flere dage. Løgpulver og suppeblandinger tæller også med.",
     "fi": "Ei saa. Sipuli on koiralle myrkyllistä kaikissa muodoissa: raakana, kypsennettynä, kuivattuna tai jauheena. Se vaurioittaa punasoluja ja voi aiheuttaa anemiaa, ja oireet ilmaantuvat usein vasta päivien kuluttua. Myös sipulijauhe ja pussikeitot kuuluvat tähän.",
-    "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Pulver og suppemikser teller også."
+    "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Det gjelder også pulver og suppepulver."
   },
   "why": {
     "en": "It belongs to the allium family (onion, garlic, leek, chives), which is toxic to dogs. These plants contain compounds that damage red blood cells and can lead to anaemia. All parts and all forms are harmful: raw, cooked, dried and powdered. Stomach upset can happen with any amount; larger amounts damage the blood.",
@@ -451,7 +451,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7b23230fb404ecf7cfe92f4c65ce277b09adf378f298d2b5101e2bbf4275fe8e"
+      "verified_hash": "899305eab7de64c34aa74d2b15b31f8764f820a01a571a508a0d0913c4d4e0f0"
     }
   }
 }

@@ -209,7 +209,7 @@
         "sv": "Hårdkokta eller som äggröra, helt genomkokta och vanliga, utan salt, smör eller kryddor.",
         "da": "Hårdkogte eller som røræg, gennemtilberedte og rene, uden salt, smør eller krydderier.",
         "fi": "Kovaksi keitettyinä tai munakokkelina, kokonaan kypsennettyinä ja maustamattomina, ilman suolaa, voita ja mausteita.",
-        "nb": "Hardkokt eller som eggerøre, gjennomtilberedt og naturell, uten salt, smør eller krydder."
+        "nb": "Hardkokt eller som eggerøre, gjennomkokt og naturell, uten salt, smør eller krydder."
       }
     }
   ],
@@ -339,7 +339,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "99c74123a661a4180b4144e8ef2bc4224a7233f91c395984b62cdc61be6e2a51"
+      "verified_hash": "f22af208b2b9f1dd478d2fda01cb1a4117fc80c8d5c6ef75fab666a39236e6cd"
     }
   }
 }

@@ -194,7 +194,7 @@
     "sv": "En eller två mandlar är oftast ingen anledning till oro. Håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av symtomen ovan.",
     "da": "En eller to mandler er som regel ingen grund til panik: hold øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har spist mange mandler eller mandler med smag, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
     "fi": "Yksi tai kaksi mantelia ei yleensä ole syy paniikkiin: seuraa, ilmeneekö koirallasi oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi söi paljon manteleita tai maustettuja manteleita, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
-    "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse symptomene."
+    "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse tegnene."
   },
   "serving": null,
   "child": {
@@ -248,7 +248,7 @@
         "sv": "Nej. Macadamianötter är giftiga för hundar; mandlar är ett problem främst på grund av fettet och risken för stopp.",
         "da": "Nej. Macadamianødder er giftige for hunde; mandler er mest et problem på grund af fedtet og risikoen for blokering.",
         "fi": "Eivät. Makadamiapähkinät ovat koiralle myrkyllisiä, mantelit taas ovat ongelma lähinnä rasvan ja tukosvaaran vuoksi.",
-        "nb": "Nei. Macadamianøtter er giftige for hunder; mandler er et problem først og fremst på grunn av fettet og faren for blokkering."
+        "nb": "Nei. Macadamianøtter er giftige for hunder; mandler er først og fremst et problem på grunn av fettet og faren for blokkering."
       }
     },
     {
@@ -420,7 +420,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0874d2ca749f3e9df9d626ccecc600d31e3256c53c0543beccb77c56804a187f"
+      "verified_hash": "321566d29b587bcb99efa6659001f6ddd8b118eef4214bb6d0e8e1a8a4a6f34a"
     }
   }
 }

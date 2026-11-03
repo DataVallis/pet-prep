@@ -85,7 +85,7 @@
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall.",
     "da": "Velfærdsorganisationer for katte advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være mere udsatte. Vindrueforgiftning hos katte er sjælden og dårligt kendt, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en nødsituation.",
     "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena.",
-    "nb": "Organisasjoner for katters velferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som et nødstilfelle."
+    "nb": "Organisasjoner for kattevelferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som en nødsituasjon."
   },
   "signs": {
     "en": [
@@ -330,7 +330,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dae1f91bfe2c26072c1ee14b1d05ab6ab918ceff2bd7dcf44a9ee3e03e2a96a0"
+      "verified_hash": "dfb324aa04a476f6b715e65aaabb97f399694717ce7a349682129f0d7529fda3"
     }
   }
 }

@@ -217,7 +217,7 @@
     "nb": [
       "Oppkast",
       "Diaré",
-      "Økt tørste",
+      "Økt tørst",
       "Pesing eller uro",
       "Tisser mer enn vanlig",
       "Hjertet slår svært fort",
@@ -239,7 +239,7 @@
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur, även om katten verkar må bra. Notera vilken sorts choklad katten åt, hur mycket och när, och spara omslaget. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
     "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selvom din kat virker upåvirket. Skriv ned hvilken slags chokolade din kat har spist, hvor meget og hvornår, og gem indpakningen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka kissasi vaikuttaisi voivan hyvin. Kirjaa ylös, millaista suklaata kissasi söi, kuinka paljon ja milloin, ja säilytä kääre. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
-    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker helt fin. Skriv ned hva slags sjokolade katten har spist, hvor mye og når, og ta vare på innpakningen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om katten virker helt frisk. Skriv ned hva slags sjokolade katten har spist, hvor mye og når, og ta vare på innpakningen. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
   "serving": null,
   "child": {
@@ -492,7 +492,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0316494bb2d3348c27d0a7939330deb3f366f7c131018b28b4cacd36b785a99f"
+      "verified_hash": "c92abff0b2bacfc1749ec3c6a0f9fba02d68e4ee9dc3a244a0774013fcde0c85"
     }
   }
 }

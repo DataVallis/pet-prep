@@ -68,7 +68,7 @@
     "sv": "Nej. Hundar ska aldrig äta vindruvor. Vindruvor kan orsaka njursvikt hos hundar, och redan en liten mängd kan göra en hund allvarligt sjuk. Det går inte att förutsäga vilka hundar som påverkas, så varje vindruva är ett skäl att ringa veterinären.",
     "da": "Nej. Hunde må aldrig spise vindruer. Vindruer kan give nyresvigt hos hunde, og selv en lille mængde kan gøre en hund alvorligt syg. Man kan ikke forudsige hvilke hunde der bliver påvirket, så enhver vindrue er en grund til at ringe til dyrlægen.",
     "fi": "Ei saa. Koira ei saa koskaan syödä viinirypäleitä. Viinirypäleet voivat aiheuttaa koirille munuaisten vajaatoiminnan, ja jo pieni määrä voi tehdä koiran vakavasti sairaaksi. On mahdotonta ennustaa, mihin koiriin ne vaikuttavat, joten jokainen syöty viinirypäle on syy soittaa eläinlääkärille.",
-    "nb": "Nei. Hunder skal aldri spise druer. Druer kan gi nyresvikt hos hunder, og selv en liten mengde kan gjøre en hund alvorlig syk. Det finnes ingen måte å forutsi hvilke hunder som blir rammet, så hver eneste drue er en grunn til å ringe dyrlegen."
+    "nb": "Nei. Hunder skal aldri spise druer. Druer kan gi nyresvikt hos hunder, og selv en liten mengde kan gjøre en hund alvorlig syk. Det finnes ingen måte å forutsi hvilke hunder som blir rammet, så selv én eneste drue er grunn nok til å ringe dyrlegen."
   },
   "why": {
     "en": "Grapes, raisins and currants can damage a dog's kidneys. Tartaric acid is suspected to be the toxic part, and its amount varies between grapes, so the effect is unpredictable. Because the cause is still uncertain, vets treat any amount as a concern. Dogs that survive kidney injury may be left with long-term kidney disease.",
@@ -85,7 +85,7 @@
     "sv": "Vindruvor, russin och korinter kan skada hundens njurar. Man misstänker att vinsyra är det giftiga ämnet, och mängden varierar mellan druvorna, så effekten är oförutsägbar. Eftersom orsaken fortfarande är osäker ser veterinärer allvarligt på varje mängd. Hundar som överlever en njurskada kan få en kronisk njursjukdom.",
     "da": "Vindruer, rosiner og korender kan skade hundens nyrer. Vinsyre mistænkes for at være det giftige stof, og mængden varierer fra drue til drue, så virkningen er uforudsigelig. Fordi årsagen stadig er usikker, betragter dyrlæger enhver mængde som bekymrende. Hunde der overlever en nyreskade, kan få en langvarig nyresygdom.",
     "fi": "Viinirypäleet, rusinat ja korintit voivat vaurioittaa koiran munuaisia. Myrkyllisen aineen epäillään olevan viinihappo, jonka määrä vaihtelee rypäleestä toiseen, joten vaikutusta on mahdotonta ennustaa. Koska syy on yhä epävarma, eläinlääkärit pitävät mitä tahansa määrää huolestuttavana. Munuaisvauriosta selvinneille koirille voi jäädä pitkäaikainen munuaissairaus.",
-    "nb": "Druer, rosiner og korinter kan skade nyrene til en hund. Vinsyre mistenkes å være det giftige stoffet, og mengden varierer fra drue til drue, så virkningen er uforutsigbar. Fordi årsaken fortsatt er usikker, regner dyrleger enhver mengde som bekymringsfull. Hunder som overlever en nyreskade, kan få varig nyresykdom."
+    "nb": "Druer, rosiner og korinter kan skade nyrene til en hund. Vinsyre er mistenkt for å være det giftige stoffet, og mengden varierer fra drue til drue, så virkningen er uforutsigbar. Fordi årsaken fortsatt er usikker, tar dyrleger enhver mengde alvorlig. Hunder som overlever en nyreskade, kan få varig nyresykdom."
   },
   "signs": {
     "en": [
@@ -205,7 +205,7 @@
       "Sløvhet og svakhet",
       "Vil ikke spise",
       "Vondt i magen",
-      "Uttørking og mye drikking",
+      "Dehydrering og mye drikking",
       "Skjelvinger"
     ]
   },
@@ -224,7 +224,7 @@
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit en eller två vindruvor. Notera hur många den åt och när. Vänta inte på symtom: ju tidigare hunden får behandling, desto bättre är utsikterna.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, også selvom hunden kun har spist en eller to vindruer. Skriv ned hvor mange hunden har spist og hvornår. Vent ikke på symptomer: jo hurtigere en hund bliver behandlet, desto bedre er udsigterne.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koirasi olisi syönyt vain yhden tai kaksi viinirypälettä. Kirjaa ylös, kuinka monta koira söi ja milloin. Älä odota oireita: mitä nopeammin koira saa hoitoa, sitä parempi on ennuste.",
-    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist én eller to druer. Skriv ned hvor mange den spiste, og når. Ikke vent på symptomer – jo før en hund får behandling, desto bedre er utsiktene."
+    "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist én eller to druer. Skriv ned hvor mange den spiste, og når. Ikke vent på symptomer – jo tidligere en hund får behandling, desto bedre er prognosen."
   },
   "serving": null,
   "child": {
@@ -278,7 +278,7 @@
         "sv": "Det kan den vara. Ingen kan förutsäga vilka hundar som reagerar, så varje uppäten vindruva är ett skäl att kontakta veterinären.",
         "da": "Det kan den være. Ingen kan forudsige hvilke hunde der reagerer, så enhver vindrue som hunden har spist, er en grund til at kontakte din dyrlæge.",
         "fi": "Voi olla. Kukaan ei voi ennustaa, mitkä koirat reagoivat, joten jokainen syöty viinirypäle on syy ottaa yhteyttä eläinlääkäriin.",
-        "nb": "Det kan den være. Ingen kan forutsi hvilke hunder som reagerer, så hver drue som er spist, er en grunn til å kontakte dyrlegen."
+        "nb": "Det kan den være. Ingen kan forutsi hvilke hunder som reagerer, så du bør kontakte dyrlegen selv om hunden bare har spist én drue."
       }
     },
     {
@@ -453,7 +453,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "989ed8fb22c782b9399a0dc84f960b6a42c10d20ac61d308d0f53f003727edc5"
+      "verified_hash": "21e38a67de1427dca990ab9311405724056a2f8c208a0fd0a55c9c98c97a3db0"
     }
   }
 }

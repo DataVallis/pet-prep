@@ -103,7 +103,7 @@
     "sv": "Om hunden har ätit många jordnötter, saltade jordnötter eller skal, håll utkik efter kräkningar, diarré eller ont i magen, och ring veterinären om de dyker upp eller om hunden verkar ha fått något i halsen.",
     "da": "Hvis din hund har spist mange jordnødder, saltede jordnødder eller skaller, så hold øje med opkast, diarré eller mavesmerter, og kontakt din dyrlæge hvis de opstår, eller hvis hunden ser ud til at være ved at blive kvalt.",
     "fi": "Jos koirasi söi paljon maapähkinöitä, suolattuja maapähkinöitä tai kuoria, seuraa, tuleeko oksentelua, ripulia tai vatsakipua, ja soita eläinlääkärille, jos niitä ilmenee tai koira näyttää tukehtuvan.",
-    "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å ha satt noe i halsen."
+    "nb": "Hvis hunden har spist mange peanøtter, saltede peanøtter eller skall, må du følge med på oppkast, diaré eller vondt i magen og ringe dyrlegen hvis dette oppstår, eller hvis hunden ser ut til å holde på å kveles."
   },
   "serving": {
     "en": "Only a few, plain: dry-roasted or raw, unsalted, unseasoned, uncoated, shells removed — not every day.",
@@ -301,7 +301,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "17475b8bbac1bb66d7a67ecdd15699fe254edcd085a22c6db1cee26b703c334e"
+      "verified_hash": "5868ed78d998da0def524352f5e1b9d9b49c95cec1c9e7c505fac03aa1f1f237"
     }
   }
 }

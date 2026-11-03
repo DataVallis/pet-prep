@@ -85,7 +85,7 @@
     "sv": "Cashewnötter är inte giftiga, men de är ett fettrikt tilltugg: för många kan leda till orolig mage, bukspottkörtelinflammation (pankreatit) och viktökning. Saltade cashewnötter innehåller salt, som är skadligt i för stora mängder. Den största risken kommer från andra nötter i en blandning, som macadamianötter. Vissa hundar kan reagera med svullnad, klåda eller nässelutslag.",
     "da": "Cashewnødder er ikke giftige, men de er en fed snack: for mange kan føre til dårlig mave, betændelse i bugspytkirtlen og vægtøgning. Saltede cashewnødder giver salt, som er skadeligt i store mængder. Den største risiko kommer fra andre nødder i en blanding, fx macadamianødder. Nogle hunde kan reagere med hævelse, kløe eller nældefeber.",
     "fi": "Cashewpähkinät eivät ole myrkyllisiä, mutta ne ovat rasvainen välipala: liian monen syöminen voi johtaa vatsavaivoihin, haimatulehdukseen ja painonnousuun. Suolatuissa cashewpähkinöissä on suolaa, joka liikaa saatuna on haitallista. Suurin riski tulee sekoituksen muista pähkinöistä, kuten makadamiapähkinöistä. Joillakin koirilla reaktiona voi olla turvotus, kutina tai nokkosihottuma.",
-    "nb": "Cashewnøtter er ikke giftige, men de er en fet snacks: For mange kan føre til urolig mage, betennelse i bukspyttkjertelen og vektøkning. Saltede cashewnøtter gir salt, som er skadelig i store mengder. Den største risikoen kommer fra andre nøtter i en blanding, som macadamianøtter. Noen hunder kan reagere med hevelse, kløe eller elveblest."
+    "nb": "Cashewnøtter er ikke giftige, men de er en fet snacks: For mange kan føre til urolig mage, betennelse i bukspyttkjertelen og vektøkning. Saltede cashewnøtter inneholder ekstra salt, som er skadelig i store mengder. Den største risikoen kommer fra andre nøtter i en blanding, som macadamianøtter. Noen hunder kan reagere med hevelse, kløe eller elveblest."
   },
   "signs": null,
   "what_to_do": {
@@ -309,7 +309,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f53c7988148f3c1fe584b3d1f7b107c539fa359920183fd87547902c58c7c3ae"
+      "verified_hash": "1bf3a00c5828b3be2313afea85571d9bb5b963346200fa0779df018b9c6541a4"
     }
   }
 }

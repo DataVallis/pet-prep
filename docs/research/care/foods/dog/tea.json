@@ -242,7 +242,7 @@
     "sv": "Te med koffein är en dryck för människor, inte för hundar. Ge din hund färskt vatten i stället.",
     "da": "Te med koffein er en drik til mennesker, ikke til hunde. Giv i stedet din hund frisk vand.",
     "fi": "Kofeiinia sisältävä tee on ihmisten juoma, ei koiran. Anna koirallesi sen sijaan raikasta vettä.",
-    "nb": "Te med koffein er en drikk for mennesker, ikke for hunder. Gi hunden din friskt vann i stedet."
+    "nb": "Te med koffein er en drikke for mennesker, ikke for hunder. Gi hunden din friskt vann i stedet."
   },
   "faq": [
     {
@@ -261,7 +261,7 @@
         "sv": "Min hund slickade i min kopp. Är det akut?",
         "da": "Min hund slikkede i min kop. Er det akut?",
         "fi": "Koirani nuolaisi kuppiani. Onko se hätätilanne?",
-        "nb": "Hunden min slikket i koppen min. Er det akutt?"
+        "nb": "Hunden min slikket på koppen min. Er det akutt?"
       },
       "a": {
         "en": "One or two licks are unlikely to poison most dogs. If your dog drank more, or ate grounds, beans or tea bags, call your vet or a pet poison helpline.",
@@ -465,7 +465,7 @@
     "nb": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b14a347029323bf2618f8e2f7eae7e6194a268f3f1f337c7e1f9956992aa63e0"
+      "verified_hash": "e79c68b78fe816d0fffb653bbc45612ae441f1752bc8850d0704c440884bbba6"
     }
   }
 }
