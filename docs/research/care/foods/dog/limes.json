@@ -9,7 +9,8 @@
     "de": "Limetten",
     "fr": "Citrons verts",
     "es": "Limas",
-    "it": "Lime"
+    "it": "Lime",
+    "pt": "Limas"
   },
   "question": {
     "en": "Can dogs eat limes?",
@@ -19,7 +20,8 @@
     "de": "Dürfen Hunde Limetten fressen?",
     "fr": "Les chiens peuvent-ils manger des citrons verts ?",
     "es": "¿Pueden los perros comer limas?",
-    "it": "I cani possono mangiare i lime?"
+    "it": "I cani possono mangiare i lime?",
+    "pt": "Os cães podem comer limas?"
   },
   "url_slug": {
     "en": "limes",
@@ -29,7 +31,8 @@
     "de": "limetten",
     "fr": "citrons-verts",
     "es": "limas",
-    "it": "lime"
+    "it": "lime",
+    "pt": "limas"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "de": "Nein, füttern Sie Hunden besser keine Limetten. Die Frucht selbst ist nicht giftig, aber Limettenschalen und ihre Öle sind für Hunde gefährlich, und die Säure kann den Magen reizen. Die meisten Hunde mögen Geschmack und Geruch ohnehin nicht.",
     "fr": "Non, mieux vaut ne pas donner de citron vert à un chien. Le fruit en lui-même n’est pas toxique, mais l’écorce du citron vert et ses huiles sont dangereuses pour les chiens, et l’acidité peut irriter l’estomac. De toute façon, la plupart des chiens n’aiment ni le goût ni l’odeur.",
     "es": "No, es mejor no dar limas a los perros. El fruto en sí no es tóxico, pero la corteza de la lima y sus aceites son peligrosos para los perros, y el ácido puede sentarles mal al estómago. A la mayoría de los perros, además, no les gustan ni el sabor ni el olor.",
-    "it": "No, meglio non dare i lime ai cani. Il frutto in sé non è tossico, ma le scorze di lime e i loro oli sono pericolosi per i cani e l’acido può far venire mal di stomaco. Alla maggior parte dei cani, comunque, sapore e odore non piacciono."
+    "it": "No, meglio non dare i lime ai cani. Il frutto in sé non è tossico, ma le scorze di lime e i loro oli sono pericolosi per i cani e l’acido può far venire mal di stomaco. Alla maggior parte dei cani, comunque, sapore e odore non piacciono.",
+    "pt": "Não, é melhor não dar limas aos cães. O fruto em si não é tóxico, mas as cascas das limas e os seus óleos são perigosos para os cães, e o ácido pode irritar o estômago. De resto, a maioria dos cães não gosta do sabor nem do cheiro."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
@@ -50,7 +54,8 @@
     "de": "Die ASPCA führt die Limettenpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. Der AKC sagt, Limetten seien nicht giftig, rät aber vom Füttern ab, und die PDSA stuft sie als nicht sicher ein, weil sie sehr sauer sind. In großen Mengen kann Zitronensäure Magenbeschwerden und sogar eine Dämpfung des Nervensystems mit Koordinationsverlust verursachen. Limettensaft ist konzentriert und sollte Hunden nicht gegeben werden. Wir verwenden „nicht empfohlen“, weil das Fruchtfleisch nicht giftig ist, die Gefahr aber von Schale, Ölen und großen Mengen ausgeht.",
     "fr": "L’ASPCA classe le limettier parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, tout en précisant que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC indique que les citrons verts ne sont pas toxiques mais déconseille de les donner, et la PDSA les range parmi les aliments dangereux parce qu’ils sont très acides. En grande quantité, l’acide citrique peut provoquer des troubles gastriques, voire une dépression du système nerveux central et une perte de coordination. Le jus de citron vert est concentré et ne doit pas être donné aux chiens. Nous utilisons la mention « déconseillé » parce que la chair n’est pas toxique, alors que l’écorce, les huiles et les grandes quantités sont dangereuses.",
     "es": "La ASPCA considera tóxica para los perros la planta del limero por sus aceites esenciales y psoralenos, aunque señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC dice que las limas no son tóxicas, pero desaconseja darlas, y la PDSA las incluye entre los alimentos no seguros porque son muy ácidas. En grandes cantidades, el ácido cítrico puede causar molestias de estómago e incluso depresión del sistema nervioso y pérdida de coordinación. El zumo de lima es concentrado y no se debe dar a los perros. Usamos «no recomendado» porque la pulpa no es tóxica, mientras que el peligro está en la corteza, los aceites y las cantidades grandes.",
-    "it": "L’ASPCA classifica la pianta del lime come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC afferma che i lime non sono tossici ma sconsiglia di darli, e il PDSA li indica come non sicuri perché molto acidi. In grandi quantità l’acido citrico può causare disturbi di stomaco e addirittura depressione del sistema nervoso e perdita di coordinazione. Il succo di lime è concentrato e non va dato ai cani. Usiamo «sconsigliato» perché la polpa non è tossica, mentre il pericolo sta nella scorza, negli oli e nelle grandi quantità."
+    "it": "L’ASPCA classifica la pianta del lime come tossica per i cani per via di oli essenziali e psoraleni, ma precisa che il frutto è commestibile e che i problemi vengono da bucce e parti della pianta. L’AKC afferma che i lime non sono tossici ma sconsiglia di darli, e il PDSA li indica come non sicuri perché molto acidi. In grandi quantità l’acido citrico può causare disturbi di stomaco e addirittura depressione del sistema nervoso e perdita di coordinazione. Il succo di lime è concentrato e non va dato ai cani. Usiamo «sconsigliato» perché la polpa non è tossica, mentre il pericolo sta nella scorza, negli oli e nelle grandi quantità.",
+    "pt": "A ASPCA classifica a limeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC diz que as limas não são tóxicas, mas desaconselha dar limas, e a PDSA classifica-as como não seguras por serem muito ácidas. Em grandes quantidades, o ácido cítrico pode causar problemas de estômago e até depressão do sistema nervoso e perda de coordenação. O sumo de lima é concentrado e não deve ser dado aos cães. Usamos «não recomendado» porque a polpa não é tóxica, e o perigo está na casca, nos óleos e nas grandes quantidades."
   },
   "signs": {
     "en": [
@@ -124,6 +129,15 @@
       "Segni di un’ostruzione intestinale",
       "Tremori",
       "Salivazione eccessiva"
+    ],
+    "pt": [
+      "Cansaço, letargia",
+      "Vómitos",
+      "Diarreia",
+      "Perda de apetite",
+      "Sinais de obstrução intestinal",
+      "Tremores",
+      "Baba em excesso"
     ]
   },
   "what_to_do": {
@@ -134,7 +148,8 @@
     "de": "Hat Ihr Hund viele Limetten gefressen, achten Sie auf diese Anzeichen und wenden Sie sich sofort an Ihren Tierarzt. Entsorgen Sie Schalen so, dass Ihr Hund nicht herankommt, und ermuntern Sie ihn nicht, mit heruntergefallenen Limetten zu spielen.",
     "fr": "Si votre chien a mangé beaucoup de citrons verts, surveillez ces signes et contactez immédiatement votre vétérinaire. Jetez les écorces là où votre chien ne peut pas les atteindre, et ne l’encouragez pas à jouer avec des citrons verts tombés par terre.",
     "es": "Si tu perro se ha comido muchas limas, vigila si aparecen estos síntomas y contacta enseguida con tu veterinario. Tira las cortezas donde tu perro no llegue y no lo animes a jugar con las limas caídas.",
-    "it": "Se il tuo cane ha mangiato molti lime, osserva questi sintomi e contatta subito il veterinario. Butta le scorze dove il cane non le raggiunge e non incoraggiarlo a giocare con i lime caduti a terra."
+    "it": "Se il tuo cane ha mangiato molti lime, osserva questi sintomi e contatta subito il veterinario. Butta le scorze dove il cane non le raggiunge e non incoraggiarlo a giocare con i lime caduti a terra.",
+    "pt": "Se o teu cão comeu muitas limas, fica atento a estes sinais e liga imediatamente ao teu veterinário. Deita fora as cascas num sítio a que o teu cão não tenha acesso e não o incentives a brincar com limas caídas."
   },
   "serving": null,
   "child": {
@@ -145,7 +160,8 @@
     "de": "Limetten sind für Hunde zu sauer und können ihnen auf den Bauch schlagen. Halte Limetten und ihre Schalen von deinem Hund fern.",
     "fr": "Les citrons verts sont trop acides pour les chiens et peuvent leur donner mal au ventre. Garde les citrons verts et leurs écorces loin de ton chien.",
     "es": "Las limas son demasiado ácidas para los perros y pueden darles dolor de barriga. Mantén las limas y sus cáscaras lejos de tu perro.",
-    "it": "I lime sono troppo aspri per i cani e possono far male alla pancia. Tieni i lime e le loro bucce lontani dal tuo cane."
+    "it": "I lime sono troppo aspri per i cani e possono far male alla pancia. Tieni i lime e le loro bucce lontani dal tuo cane.",
+    "pt": "As limas são azedas demais para os cães e podem dar-lhes dor de barriga. Mantém as limas e as cascas longe do teu cão."
   },
   "faq": [
     {
@@ -157,7 +173,8 @@
         "de": "Dürfen Hunde Limettensaft trinken?",
         "fr": "Les chiens peuvent-ils boire du jus de citron vert ?",
         "es": "¿Pueden los perros tomar zumo de lima?",
-        "it": "I cani possono bere succo di lime?"
+        "it": "I cani possono bere succo di lime?",
+        "pt": "Os cães podem beber sumo de lima?"
       },
       "a": {
         "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
@@ -167,7 +184,8 @@
         "de": "Nein. Limettensaft ist eine konzentrierte Form des Fruchtfleischs und sollte Hunden nicht gegeben werden.",
         "fr": "Non. Le jus de citron vert est le fruit sous forme concentrée : il ne doit pas être donné aux chiens.",
         "es": "No. El zumo de lima es pulpa concentrada, así que no se debe dar a los perros.",
-        "it": "No. Il succo di lime è la polpa del frutto in forma concentrata, quindi non va dato ai cani."
+        "it": "No. Il succo di lime è la polpa del frutto in forma concentrata, quindi non va dato ai cani.",
+        "pt": "Não. O sumo de lima é uma forma concentrada da polpa do fruto, por isso não deve ser dado aos cães."
       }
     }
   ],
@@ -303,6 +321,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1452354f5969db53350d772b3b07f6ad4b1cadeafedeb4ba4abd689634e9b9f6"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8867f03fd398b6a715d1b1c699b309eae81a0c3b7a65f15c78f33cd6e10354ad"
     }
   }
 }

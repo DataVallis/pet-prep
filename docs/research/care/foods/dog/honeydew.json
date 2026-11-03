@@ -9,7 +9,8 @@
     "de": "Honigmelone",
     "fr": "Melon miel",
     "es": "Melón verde",
-    "it": "Melone bianco"
+    "it": "Melone bianco",
+    "pt": "Melão honeydew"
   },
   "question": {
     "en": "Can dogs eat honeydew melon?",
@@ -19,7 +20,8 @@
     "de": "Dürfen Hunde Honigmelone fressen?",
     "fr": "Les chiens peuvent-ils manger du melon miel ?",
     "es": "¿Pueden los perros comer melón verde?",
-    "it": "I cani possono mangiare il melone bianco?"
+    "it": "I cani possono mangiare il melone bianco?",
+    "pt": "Os cães podem comer melão honeydew?"
   },
   "url_slug": {
     "en": "honeydew",
@@ -29,7 +31,8 @@
     "de": "honigmelone",
     "fr": "melon-miel",
     "es": "melon-verde",
-    "it": "melone-bianco"
+    "it": "melone-bianco",
+    "pt": "melao-honeydew"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "de": "Ja, aber sparsam. Honigmelone ist für Hunde nicht giftig, enthält aber viel Zucker – geben Sie nur wenig als gelegentliches Leckerli und fragen Sie vorher Ihren Tierarzt, wenn Ihr Hund Diabetes hat. Entfernen Sie Schale und Kerne.",
     "fr": "Oui, mais avec parcimonie. Le melon miel n’est pas toxique pour les chiens, mais il est très sucré : n’en donnez qu’un peu, en friandise occasionnelle, et demandez d’abord conseil à votre vétérinaire si votre chien est diabétique. Retirez l’écorce et les pépins.",
     "es": "Sí, con moderación. El melón verde no es tóxico para los perros, pero tiene mucho azúcar, así que dale solo un poco como premio ocasional y consulta antes con tu veterinario si tu perro tiene diabetes. Quita la corteza y las semillas.",
-    "it": "Sì, ma con parsimonia. Il melone bianco non è tossico per i cani, ma contiene molto zucchero: dagliene solo un pochino come premio occasionale e chiedi prima al veterinario se il tuo cane è diabetico. Togli buccia e semi."
+    "it": "Sì, ma con parsimonia. Il melone bianco non è tossico per i cani, ma contiene molto zucchero: dagliene solo un pochino come premio occasionale e chiedi prima al veterinario se il tuo cane è diabetico. Togli buccia e semi.",
+    "pt": "Sim, com moderação. O melão honeydew não é tóxico para os cães, mas tem muito açúcar, por isso dá só um bocadinho como guloseima ocasional e pergunta primeiro ao teu veterinário se o teu cão tiver diabetes. Tira a casca e as sementes."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
@@ -50,7 +54,8 @@
     "de": "Die ASPCA führt Honigmelone als ungiftig für Hunde auf, und der leitende Tierarzt des AKC zählt sie zu den Melonen, die sich für gefrorene Leckerlis eignen. Die Frucht enthält viel Zucker und ist deshalb für Hunde mit Diabetes möglicherweise nicht geeignet. Die Schale kann Verdauungsbeschwerden oder einen Darmverschluss verursachen, und die Kerne sind nicht giftig, können aber eine Erstickungsgefahr darstellen.",
     "fr": "L’ASPCA classe le melon miel parmi les aliments non toxiques pour les chiens, et le vétérinaire en chef de l’AKC le cite parmi les melons pour préparer des friandises glacées. Le fruit est très sucré, ce qui peut le rendre inadapté aux chiens diabétiques. L’écorce peut provoquer des troubles digestifs ou une occlusion intestinale, et les pépins, sans être toxiques, peuvent présenter un risque d’étouffement.",
     "es": "La ASPCA considera el melón verde no tóxico para los perros, y el veterinario jefe del AKC lo incluye entre los melones aptos para preparar premios helados. La fruta tiene mucho azúcar, por lo que puede no ser adecuada para perros con diabetes. La corteza puede provocar malestar digestivo u obstrucción intestinal, y las semillas no son tóxicas, pero pueden suponer un riesgo de atragantamiento.",
-    "it": "L’ASPCA classifica il melone bianco come non tossico per i cani e il veterinario capo dell’AKC lo propone tra i meloni per i premi congelati. Il frutto contiene molto zucchero, quindi potrebbe non essere adatto ai cani diabetici. La buccia può causare disturbi digestivi o un’ostruzione intestinale, e i semi non sono tossici ma possono far soffocare."
+    "it": "L’ASPCA classifica il melone bianco come non tossico per i cani e il veterinario capo dell’AKC lo propone tra i meloni per i premi congelati. Il frutto contiene molto zucchero, quindi potrebbe non essere adatto ai cani diabetici. La buccia può causare disturbi digestivi o un’ostruzione intestinale, e i semi non sono tossici ma possono far soffocare.",
+    "pt": "A ASPCA classifica o melão honeydew como não tóxico para os cães, e o veterinário-chefe da AKC inclui-o entre os melões indicados para guloseimas congeladas. O fruto tem muito açúcar, o que pode torná-lo inadequado para cães com diabetes. A casca pode causar problemas digestivos ou uma obstrução intestinal, e as sementes não são tóxicas, mas podem provocar engasgo."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "de": "Sprechen Sie mit Ihrem Tierarzt, bevor Sie Honigmelone in den Speiseplan Ihres Hundes aufnehmen, besonders wenn Ihr Hund Diabetes hat.",
     "fr": "Parlez-en à votre vétérinaire avant d’ajouter du melon miel à l’alimentation de votre chien, surtout s’il est diabétique.",
     "es": "Habla con tu veterinario antes de añadir melón verde a la dieta de tu perro, sobre todo si tiene diabetes.",
-    "it": "Parla con il veterinario prima di inserire il melone bianco nella dieta del tuo cane, soprattutto se è diabetico."
+    "it": "Parla con il veterinario prima di inserire il melone bianco nella dieta del tuo cane, soprattutto se è diabetico.",
+    "pt": "Fala com o teu veterinário antes de juntares melão honeydew à alimentação do teu cão, sobretudo se ele tiver diabetes."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
@@ -71,7 +77,8 @@
     "de": "Nur das Fruchtfleisch, ohne Schale und Kerne, in kleine Würfel geschnitten; es kann auch püriert und als Leckerli eingefroren werden.",
     "fr": "Uniquement la chair, sans l’écorce ni les pépins, coupée en petits dés ; on peut aussi la réduire en purée et la congeler pour en faire une friandise.",
     "es": "Solo la pulpa, sin la corteza ni las semillas, cortada en cubitos pequeños; también se puede triturar y congelar como premio.",
-    "it": "Solo la polpa, senza buccia e semi, tagliata a cubetti; si può anche frullare e congelare come premio."
+    "it": "Solo la polpa, senza buccia e semi, tagliata a cubetti; si può anche frullare e congelare come premio.",
+    "pt": "Só a polpa, sem casca nem sementes, cortada em cubinhos; também pode ser reduzida a puré e congelada como guloseima."
   },
   "child": {
     "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
@@ -81,7 +88,8 @@
     "de": "Hunde dürfen ein kleines Stück Honigmelone genießen! Ein Erwachsener entfernt vorher die harte Schale und die Kerne.",
     "fr": "Les chiens peuvent se régaler d’un petit morceau de melon miel ! Un adulte enlève d’abord la peau dure et les pépins.",
     "es": "¡Los perros pueden disfrutar de un trocito de melón verde! Un adulto quita antes la corteza dura y las semillas.",
-    "it": "I cani possono gustarsi un pezzettino di melone bianco! Prima un adulto toglie la buccia dura e i semi."
+    "it": "I cani possono gustarsi un pezzettino di melone bianco! Prima un adulto toglie la buccia dura e i semi.",
+    "pt": "Os cães podem gostar de um pedacinho de melão honeydew! Um adulto tira primeiro a casca dura e as sementes."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "de": "Ist Honigmelone für einen Hund mit Diabetes in Ordnung?",
         "fr": "Le melon miel convient-il à un chien diabétique ?",
         "es": "¿Puede un perro con diabetes comer melón verde?",
-        "it": "Il melone bianco va bene per un cane diabetico?"
+        "it": "Il melone bianco va bene per un cane diabetico?",
+        "pt": "O melão honeydew é adequado para um cão com diabetes?"
       },
       "a": {
         "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
@@ -103,7 +112,8 @@
         "de": "Vielleicht nicht, denn Honigmelone enthält sehr viel Zucker. Fragen Sie zuerst Ihren Tierarzt.",
         "fr": "Peut-être pas, car le melon miel est très riche en sucre. Demandez d’abord conseil à votre vétérinaire.",
         "es": "Puede que no, porque el melón verde tiene muchísimo azúcar. Pregunta antes a tu veterinario.",
-        "it": "Forse no: il melone bianco è molto ricco di zucchero. Chiedi prima al veterinario."
+        "it": "Forse no: il melone bianco è molto ricco di zucchero. Chiedi prima al veterinario.",
+        "pt": "Talvez não, porque tem muito açúcar. Pergunta primeiro ao teu veterinário."
       }
     },
     {
@@ -115,7 +125,8 @@
         "de": "Was ist, wenn mein Hund einen Kern verschluckt hat?",
         "fr": "Et si mon chien a avalé un pépin ?",
         "es": "¿Y si mi perro se ha tragado una semilla?",
-        "it": "E se il mio cane ha ingoiato un seme?"
+        "it": "E se il mio cane ha ingoiato un seme?",
+        "pt": "E se o meu cão engoliu uma semente?"
       },
       "a": {
         "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
@@ -125,7 +136,8 @@
         "de": "Honigmelonenkerne sind nicht giftig, und ein einzelner Kern ist wahrscheinlich kein Grund zur Sorge. Kerne können aber eine Erstickungsgefahr darstellen; entfernen Sie sie daher vor dem Füttern.",
         "fr": "Les pépins de melon miel ne sont pas toxiques et un seul pépin n’est probablement pas un motif d’inquiétude, mais les pépins peuvent présenter un risque d’étouffement : retirez-les avant de servir.",
         "es": "Las semillas del melón verde no son tóxicas y es probable que una sola no sea motivo de preocupación, pero pueden suponer un riesgo de atragantamiento, así que quítalas antes de servirlo.",
-        "it": "I semi del melone bianco non sono tossici e probabilmente un solo seme non deve preoccupare, ma i semi possono far soffocare, quindi toglili prima di servire."
+        "it": "I semi del melone bianco non sono tossici e probabilmente un solo seme non deve preoccupare, ma i semi possono far soffocare, quindi toglili prima di servire.",
+        "pt": "As sementes do melão honeydew não são tóxicas e uma única semente provavelmente não é motivo de preocupação, mas as sementes podem provocar engasgo, por isso tira-as antes de servir."
       }
     }
   ],
@@ -217,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d13291b575313fa6b6c249d4b80821a877878777f83bd09ced0bcd28de10db46"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f367ec2e8e9d48ffe1f796d9ef86ba6c2f3309b40900a381bf3d50bf2672558e"
     }
   }
 }
