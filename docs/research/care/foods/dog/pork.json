@@ -119,7 +119,7 @@
       "Poco apetito y poca energía"
     ],
     "it": [
-      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
+      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
       "Diarrea",
       "Mal di pancia",
       "Poco appetito e poca energia"
@@ -371,7 +371,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fde3dcf1a867ffecc4b0af040e9b939b13f523d2e7597eb8a2981e3c95913dbb"
+      "verified_hash": "2c0307ea5600290aec5d2ac0de35191abc35e72fb872e3002209d1c088bff76f"
     },
     "pt": {
       "status": "verified",

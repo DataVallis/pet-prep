@@ -200,7 +200,7 @@
         "de": "Nein. Der zugesetzte Zucker und der Teig sind zu viel für Hunde; meiden Sie Apfelprodukte mit zugesetztem Zucker oder Gewürzen wie Muskatnuss.",
         "fr": "Non. Le sucre ajouté et la pâte, c’est trop pour un chien ; évitez les préparations à la pomme contenant du sucre ajouté ou des épices comme la noix de muscade.",
         "es": "No. El azúcar añadido y la masa son demasiado para los perros; evita los productos con manzana que lleven azúcar añadido o especias como la nuez moscada.",
-        "it": "No. Lo zucchero aggiunto e l’impasto sono troppo per i cani; evita i cibi a base di mela con zucchero aggiunto o spezie come la noce moscata.",
+        "it": "No. Tra zucchero aggiunto e impasto è troppo per un cane; evita i cibi a base di mela con zucchero aggiunto o spezie come la noce moscata.",
         "pt": "Não. O açúcar adicionado e a massa são demasiado para os cães; evita produtos de maçã com açúcar adicionado ou especiarias, como a noz-moscada.",
         "nl": "Nee. De toegevoegde suiker en de korst zijn te veel voor honden; vermijd appelgerechten met toegevoegde suiker of specerijen zoals nootmuskaat.",
         "pl": "Nie. Dodany cukier i ciasto to dla psa za dużo; unikaj potraw z jabłek z dodatkiem cukru lub przypraw, takich jak gałka muszkatołowa.",
@@ -322,7 +322,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f3b6ade03d3b29396964b14733b56614e254dd3c80282d6e13a6d968a0220af5"
+      "verified_hash": "eee742384a437e925b429a749b783917e53068742a5626f55ac34fdfd936c486"
     },
     "pt": {
       "status": "verified",

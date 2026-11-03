@@ -76,7 +76,7 @@
     "de": "Die ASPCA stuft die Apfelpflanze als giftig für Hunde ein: Stiele, Blätter und Kerne enthalten Cyanid (aus cyanogenen Glykosiden). Laut AKC richten wenige Kerne wahrscheinlich keinen Schaden an, und laut Pet Poison Helpline müsste ein Haustier riesige Mengen Kerne fressen, bevor es bedenklich wird. Wir folgen der strengeren Einschätzung, weil die Kerne Cyanid enthalten und das Kerngehäuse außerdem zum Ersticken oder zu einem Darmverschluss führen kann.",
     "fr": "L’ASPCA répertorie le pommier comme toxique pour les chiens : ses tiges, ses feuilles et ses pépins contiennent du cyanure (issu de glycosides cyanogènes). Selon l’AKC, un petit nombre de pépins ne devrait pas faire de mal, et selon le Pet Poison Helpline, il faudrait qu’un animal en mange des quantités massives pour que cela pose problème. Nous suivons l’avis le plus strict, car les pépins contiennent du cyanure et le trognon peut aussi provoquer un étouffement ou une obstruction intestinale.",
     "es": "La ASPCA considera el manzano tóxico para los perros: sus tallos, hojas y semillas contienen cianuro (procedente de glucósidos cianogénicos). El AKC dice que es poco probable que unas pocas semillas causen daño, y Pet Poison Helpline dice que una mascota tendría que comer cantidades enormes para que fuera motivo de preocupación. Seguimos el criterio más estricto porque las semillas contienen cianuro y el corazón también puede provocar atragantamiento u obstrucción intestinal.",
-    "it": "L’ASPCA classifica il melo come tossico per i cani: piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Secondo l’AKC è improbabile che pochi semi facciano male, e secondo Pet Poison Helpline un animale dovrebbe mangiarne quantità enormi perché diventino preoccupanti. Noi seguiamo la posizione più prudente, perché i semi contengono cianuro e il torsolo può anche causare soffocamento o un’ostruzione intestinale.",
+    "it": "L’ASPCA classifica il melo come tossico per i cani: piccioli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici). Secondo l’AKC è improbabile che pochi semi facciano male, e secondo Pet Poison Helpline un animale domestico dovrebbe mangiarne quantità enormi perché ci sia da preoccuparsi. Noi seguiamo la posizione più prudente, perché i semi contengono cianuro e il torsolo può anche causare soffocamento o un’ostruzione intestinale.",
     "pt": "A ASPCA classifica a macieira como tóxica para cães: os caules, as folhas e as sementes contêm cianeto (proveniente de glicosídeos cianogénicos). O AKC diz que um pequeno número de sementes dificilmente fará mal, e a Pet Poison Helpline diz que um animal teria de comer quantidades enormes para haver motivo de preocupação. Seguimos a posição mais rigorosa porque as sementes contêm cianeto e o carolo também pode causar engasgamento ou obstrução intestinal.",
     "nl": "De ASPCA noemt de appelplant giftig voor honden: de steeltjes, bladeren en pitten bevatten cyanide (in de vorm van cyanogene glycosiden). Volgens de AKC zal een klein aantal pitten waarschijnlijk geen kwaad doen, en volgens Pet Poison Helpline zou een dier enorme hoeveelheden moeten eten voordat het zorgwekkend wordt. Wij volgen het strengere advies, omdat de pitten cyanide bevatten en het klokhuis ook verstikking of een darmverstopping kan veroorzaken.",
     "pl": "ASPCA uznaje jabłoń za roślinę toksyczną dla psów: jej łodygi, liście i pestki zawierają cyjanek (pochodzący z glikozydów cyjanogennych). AKC podaje, że kilka pestek raczej nie zaszkodzi, a Pet Poison Helpline – że zwierzę musiałoby zjeść ogromne ilości pestek, żeby był powód do niepokoju. Przyjmujemy surowszą ocenę, bo pestki zawierają cyjanek, a gniazdo nasienne może też spowodować zadławienie lub niedrożność jelit.",
@@ -126,7 +126,7 @@
     "it": [
       "Gengive o altre mucose rosso mattone",
       "Pupille dilatate",
-      "Difficoltà a respirare, respiro affannoso",
+      "Difficoltà respiratorie, respiro affannoso",
       "Shock",
       "Segni di disturbi digestivi o di un’ostruzione"
     ],
@@ -354,7 +354,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9cdb56261d94692c4cdeeb44ad2152ea55290556e88779daa82e7b16ac26bb99"
+      "verified_hash": "a0faa7b48034df73d00fc55e2b612910de09da75b1271dc08d055965b5329a14"
     },
     "pt": {
       "status": "verified",

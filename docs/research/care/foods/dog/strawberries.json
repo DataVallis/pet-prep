@@ -94,7 +94,7 @@
     "de": "Wenn Ihnen nach dem Fressen von Erdbeeren etwas Ungewöhnliches an Ihrem Hund auffällt, geben Sie ihm keine mehr und fragen Sie Ihren Tierarzt.",
     "fr": "Si vous remarquez quelque chose d’inhabituel après que votre chien a mangé des fraises, arrêtez de lui en donner et demandez conseil à votre vétérinaire.",
     "es": "Si notas algo raro después de que tu perro coma fresas, deja de dárselas y consulta a tu veterinario.",
-    "it": "Se noti qualcosa di diverso dopo che il tuo cane ha mangiato fragole, smetti di dargliele e senti il veterinario.",
+    "it": "Se noti qualcosa di diverso dopo che il tuo cane ha mangiato fragole, smetti di dargliele e chiedi al veterinario.",
     "pt": "Se notares alguma diferença depois de o teu cão comer morangos, deixa de lhos dar e fala com o teu veterinário.",
     "nl": "Merk je iets anders aan je hond nadat hij aardbeien heeft gegeten? Stop dan met aardbeien geven en overleg met je dierenarts.",
     "pl": "Jeśli po zjedzeniu truskawek zauważysz u psa jakąkolwiek zmianę, przestań je podawać i skonsultuj się z weterynarzem.",
@@ -303,7 +303,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "bdc90d870521a8a71183f34b23466dfffe3ab48efb1685fac10c5ddf0690c319"
+      "verified_hash": "cf7b34def9c2031745ee7102a0c2a48b8268b3348090b02ce5e60270de5815c3"
     },
     "pt": {
       "status": "verified",

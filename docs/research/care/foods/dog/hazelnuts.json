@@ -188,7 +188,7 @@
     "de": "Haselnüsse sind ein Snack für Menschen. Ihre harten Schalen können in einem Hund stecken bleiben, also halte sie von deinem Hund fern.",
     "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton chien.",
     "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
-    "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo animale.",
+    "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo cane.",
     "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu animal.",
     "nl": "Hazelnoten zijn een snack voor mensen. De harde doppen kunnen bij een hond vast komen te zitten, dus houd ze uit de buurt van je huisdier.",
     "pl": "Orzechy laskowe to przekąska dla ludzi. Ich twarde łupinki mogą utknąć psu w środku, więc trzymaj je z dala od swojego pupila.",
@@ -307,7 +307,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6c212705dbd3d7cc31500986fbdae29ba8c953e31dc3552049632e103405936e"
+      "verified_hash": "689efec0b8c14494b4f38193036f5e10ece7c2ab41211bf3ac4aa414a412c613"
     },
     "pt": {
       "status": "verified",

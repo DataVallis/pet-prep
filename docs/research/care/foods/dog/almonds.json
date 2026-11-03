@@ -239,7 +239,7 @@
         "de": "Nein. Macadamianüsse sind für Hunde giftig; Mandeln sind vor allem wegen ihres Fettgehalts und der Gefahr einer Blockade ein Problem.",
         "fr": "Non. Les noix de macadamia sont toxiques pour les chiens ; les amandes posent surtout problème à cause de leurs graisses et du risque d’obstruction.",
         "es": "No. Las nueces de macadamia son tóxicas para los perros; las almendras son un problema sobre todo por su grasa y por el riesgo de obstrucción.",
-        "it": "No. Le noci di macadamia sono tossiche per i cani; le mandorle sono un problema soprattutto per i grassi e per il rischio di ostruzione.",
+        "it": "No. Le noci di macadamia sono tossiche per i cani; con le mandorle il problema sono soprattutto i grassi e il rischio di ostruzione.",
         "pt": "Não. As nozes de macadâmia são tóxicas para os cães; as amêndoas são um problema sobretudo pela gordura e pelo risco de obstrução.",
         "nl": "Nee. Macadamianoten zijn giftig voor honden; amandelen zijn vooral een probleem door het vet en het risico op een verstopping.",
         "pl": "Nie. Orzechy makadamia są toksyczne dla psów; migdały szkodzą głównie z powodu tłuszczu i ryzyka niedrożności.",
@@ -375,7 +375,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "32c05a73dbde1f0d8b19d45b7a4c85d770beef5c97f9fe54205e87f222bf8d6c"
+      "verified_hash": "f7e8b8339a833eb033f2520478f3c91cf5eb233af19f751e78e1b3f442afaa20"
     },
     "pt": {
       "status": "verified",

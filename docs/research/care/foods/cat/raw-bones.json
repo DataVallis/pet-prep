@@ -188,7 +188,7 @@
     "de": "Knochen können einer Katze im Hals oder im Bauch stecken bleiben. Lass Knochen aus dem Napf deiner Katze und sag einem Erwachsenen Bescheid, wenn sie einen findet.",
     "fr": "Les os peuvent rester coincés dans la gorge ou le ventre de ton chat. Ne mets pas d’os dans sa gamelle et préviens un adulte s’il en trouve un.",
     "es": "Los huesos pueden quedarse atascados en la garganta o la barriga de un gato. No pongas huesos en su cuenco y avisa a un adulto si encuentra uno.",
-    "it": "Le ossa possono bloccarsi nella gola o nella pancia di un gatto. Non mettere ossa nella ciotola del micio e dillo a un adulto se ne trova una.",
+    "it": "Le ossa possono bloccarsi nella gola o nella pancia di un gatto. Non mettere ossa nella ciotola del micio e dillo a un adulto se ne trova qualcuna.",
     "pt": "Os ossos podem ficar presos na garganta ou na barriga de um gato. Não ponhas ossos na tigela do gatinho e avisa um adulto se ele encontrar um.",
     "nl": "Botten kunnen vastraken in de keel of buik van een kat. Geen botten in het bakje van je poes! Vindt ze er een? Vertel het meteen aan een volwassene.",
     "pl": "Kości mogą utknąć kotu w gardle albo w brzuszku. Nie wkładaj kości do miski kotka i powiedz dorosłemu, jeśli kotek jakąś znajdzie.",
@@ -270,7 +270,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ab4005971c54f5b35a23640a7da77a569db339f089235cbcd49dea97d6759695"
+      "verified_hash": "730733bc91cb9c681f810b5b3d92cf239aee914b5104dde52a7445dc01ad4048"
     },
     "pt": {
       "status": "verified",
