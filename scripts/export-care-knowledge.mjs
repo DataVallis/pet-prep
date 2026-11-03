@@ -109,7 +109,7 @@ export function load() {
 }
 
 const VET_KINDS = ['clinic', 'duty_rota', 'poison_line'];
-const VET_KEYS = ['kind', 'name', 'city', 'region', 'address', 'phone', 'emergency_24h', 'duty', 'small_animals', 'url', 'source_url', 'checked', 'note', 'quote'];
+const VET_KEYS = ['kind', 'name', 'city', 'region', 'address', 'phone', 'emergency_24h', 'duty', 'small_animals', 'url', 'source_url', 'checked', 'note', 'quote', 'duty_i18n'];
 
 /** Vets / duty rotas / poison lines per country (M6-K1): docs/research/care/vets/<CC>.json. */
 export function loadVets() {
@@ -136,12 +136,13 @@ export function buildVets(files) {
       if (!/^https?:\/\//.test(e.source_url ?? '')) errors.push(`${at}: source_url required`);
       if (!/^\d{4}-\d{2}-\d{2}$/.test(e.checked ?? '')) errors.push(`${at}: checked must be YYYY-MM-DD`);
       if (kind === 'clinic' && !e.phone && !e.url) errors.push(`${at}: clinic needs a phone or a url`);
+      if (e.duty_i18n != null && (typeof e.duty_i18n !== 'object' || Object.values(e.duty_i18n).some((v) => typeof v !== 'string' || !v.trim()))) errors.push(`${at}: duty_i18n must map locale → text`);
       if (e.small_animals === false) continue; // farm-only practices are kept in research, not published
       const key = `${e.name}|${e.city ?? ''}`.toLowerCase();
       if (seen.has(key)) continue;
       seen.add(key);
       out.push({ country: cc, kind, name: e.name, city: e.city ?? null, region: e.region ?? null, address: e.address ?? null,
-        phone: e.phone ?? null, emergency_24h: e.emergency_24h === true, duty: e.duty ?? e.note ?? null, url: e.url ?? null,
+        phone: e.phone ?? null, emergency_24h: e.emergency_24h === true, duty: e.duty ?? null, duty_i18n: e.duty_i18n ?? null, url: e.url ?? null,
         source_url: e.source_url, checked: e.checked });
     }
   }
