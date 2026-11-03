@@ -14,7 +14,8 @@
     "nl": "Honingmeloen",
     "pl": "Melon miodowy",
     "sv": "Honungsmelon",
-    "da": "Honningmelon"
+    "da": "Honningmelon",
+    "fi": "Hunajameloni"
   },
   "question": {
     "en": "Can cats eat honeydew melon?",
@@ -29,7 +30,8 @@
     "nl": "Mogen katten honingmeloen eten?",
     "pl": "Czy koty mogą jeść melona miodowego?",
     "sv": "Får katter äta honungsmelon?",
-    "da": "Må katte spise honningmelon?"
+    "da": "Må katte spise honningmelon?",
+    "fi": "Saako kissa syödä hunajamelonia?"
   },
   "url_slug": {
     "en": "honeydew",
@@ -44,7 +46,8 @@
     "nl": "honingmeloen",
     "pl": "melon-miodowy",
     "sv": "honungsmelon",
-    "da": "honningmelon"
+    "da": "honningmelon",
+    "fi": "hunajameloni"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nl": "Ja, een klein stukje honingmeloen is af en toe prima als traktatie. De ASPCA noemt honingmeloen niet giftig voor katten, maar katten zijn vleeseters en hebben geen fruit nodig, en elke plant kan maagklachten geven, dus houd het bij een piepklein extraatje.",
     "pl": "Tak, od czasu do czasu mały kawałek melona miodowego jako smakołyk to nie problem. ASPCA podaje, że melon miodowy nie jest toksyczny dla kotów, ale koty są mięsożercami i nie potrzebują owoców, a każdy pokarm roślinny może zaszkodzić żołądkowi, więc niech to będzie tylko drobny dodatek.",
     "sv": "Ja, en liten bit honungsmelon går bra som godbit då och då. ASPCA anger att honungsmelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och vilket växtmaterial som helst kan ge orolig mage, så se det bara som ett pyttelitet extra.",
-    "da": "Ja, et lille stykke honningmelon er fint som en godbid en gang imellem. ASPCA betragter honningmelon som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad den kun være et bitte lille ekstra."
+    "da": "Ja, et lille stykke honningmelon er fint som en godbid en gang imellem. ASPCA betragter honningmelon som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad den kun være et bitte lille ekstra.",
+    "fi": "Saa, pieni pala hunajamelonia sopii satunnaiseksi herkuksi. ASPCA luokittelee hunajamelonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon (Cucumis melo) as non-toxic to cats, and NC State's veterinary hospital lists honeydew among fruit treats for cats and dogs. Cats are obligate carnivores and don't need fruit, treats should stay a small part of the daily food, and any plant material can cause vomiting or stomach upset.",
@@ -75,7 +79,8 @@
     "nl": "De ASPCA noemt honingmeloen (Cucumis melo) niet giftig voor katten, en het dierenziekenhuis van NC State rekent honingmeloen tot de fruittraktaties voor katten en honden. Katten zijn strikte vleeseters en hebben geen fruit nodig, traktaties horen een klein deel van de dagelijkse voeding te blijven, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "ASPCA uznaje melon miodowy (Cucumis melo) za nietoksyczny dla kotów, a szpital weterynaryjny NC State wymienia melon miodowy wśród owoców podawanych jako smakołyki kotom i psom. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
     "sv": "ASPCA anger att honungsmelon (Cucumis melo) inte är giftig för katter, och NC States djursjukhus tar upp honungsmelon bland frukt som kan vara godbitar för katter och hundar. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och vilket växtmaterial som helst kan ge kräkningar eller orolig mage.",
-    "da": "ASPCA betragter honningmelon (Cucumis melo) som ugiftig for katte, og dyrehospitalet ved NC State nævner honningmelon blandt de frugter man kan give katte og hunde som godbid. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave."
+    "da": "ASPCA betragter honningmelon (Cucumis melo) som ugiftig for katte, og dyrehospitalet ved NC State nævner honningmelon blandt de frugter man kan give katte og hunde som godbid. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "fi": "ASPCA luokittelee hunajamelonin (Cucumis melo) kissoille myrkyttömäksi, ja NC Staten eläinsairaalan luettelossa hunajameloni kuuluu kissoille ja koirille sopiviin hedelmäherkkuihin. Kissat ovat ehdottomia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää jäädä pieneksi osaksi päivän ruokaa, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nl": "Geef maar een klein stukje. Elk plantaardig materiaal kan bij katten braken of maagklachten veroorzaken.",
     "pl": "Podaj tylko mały kawałek. Każdy pokarm roślinny może wywołać u kota wymioty lub rozstrój żołądka.",
     "sv": "Ge bara en liten bit. Vilket växtmaterial som helst kan ge kräkningar eller orolig mage hos katter.",
-    "da": "Giv kun et lille stykke. Alt plantemateriale kan give katte opkast eller dårlig mave."
+    "da": "Giv kun et lille stykke. Alt plantemateriale kan give katte opkast eller dårlig mave.",
+    "fi": "Tarjoa vain pieni pala. Mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua tai vatsavaivoja."
   },
   "serving": {
     "en": "A small piece of the fruit now and then, counted in your cat's daily food.",
@@ -106,7 +112,8 @@
     "nl": "Af en toe een klein stukje meloen, meegeteld bij de dagelijkse voeding van je kat.",
     "pl": "Od czasu do czasu mały kawałek owocu, wliczony w dzienną porcję jedzenia kota.",
     "sv": "En liten bit av frukten då och då, som räknas in i kattens dagliga matranson.",
-    "da": "Et lille stykke af frugten en gang imellem, medregnet i kattens daglige foder."
+    "da": "Et lille stykke af frugten en gang imellem, medregnet i kattens daglige foder.",
+    "fi": "Silloin tällöin pieni pala hedelmälihaa; laske se mukaan kissasi päivittäiseen ruokamäärään."
   },
   "child": {
     "en": "A tiny piece of honeydew melon is OK for a cat now and then. Cats mostly need meat, so fruit is only a small extra.",
@@ -121,7 +128,8 @@
     "nl": "Een piepklein stukje honingmeloen mag een kat af en toe best. Katten hebben vooral vlees nodig, dus fruit is maar een klein extraatje.",
     "pl": "Malutki kawałek melona miodowego od czasu do czasu jest dla kota w porządku. Koty potrzebują głównie mięsa, więc owoc to tylko mały dodatek.",
     "sv": "En pytteliten bit honungsmelon är okej för en katt då och då. Katter behöver mest kött, så frukt är bara något litet extra.",
-    "da": "Et bitte lille stykke honningmelon er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra."
+    "da": "Et bitte lille stykke honningmelon er okay for en kat en gang imellem. Katte har mest brug for kød, så frugt er kun et lille ekstra.",
+    "fi": "Kissa saa silloin tällöin pikkuisen palan hunajamelonia. Kissat tarvitsevat ennen kaikkea lihaa, joten hedelmä on vain pieni lisä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nl": "Hebben katten fruit nodig?",
         "pl": "Czy koty potrzebują owoców?",
         "sv": "Behöver katter frukt?",
-        "da": "Har katte brug for frugt?"
+        "da": "Har katte brug for frugt?",
+        "fi": "Tarvitsevatko kissat hedelmiä?"
       },
       "a": {
         "en": "No. Cats are carnivores: they need nutrients found in meat and don't need fruit or vegetables in their diet. Fruit can only ever be a small extra.",
@@ -153,7 +162,8 @@
         "nl": "Nee. Katten zijn vleeseters: ze hebben voedingsstoffen nodig die in vlees zitten, en fruit of groente hoeft niet op hun menu te staan. Fruit kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Koty są mięsożercami: potrzebują składników odżywczych zawartych w mięsie i nie potrzebują w diecie owoców ani warzyw. Owoce mogą być najwyżej drobnym dodatkiem.",
         "sv": "Nej. Katter är köttätare: de behöver näringsämnen som finns i kött och behöver inte frukt eller grönsaker i maten. Frukt kan bara vara något litet extra.",
-        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra."
+        "da": "Nej. Katte er kødædere: De har brug for næringsstoffer der findes i kød, og har ikke brug for frugt eller grøntsager i deres kost. Frugt kan aldrig være mere end et lille ekstra.",
+        "fi": "Eivät. Kissat ovat lihansyöjiä: ne saavat tarvitsemansa ravintoaineet lihasta eivätkä tarvitse ruokavaliossaan hedelmiä tai kasviksia. Hedelmä voi olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -271,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ffb41030c46e7f7eb7ef556a1e4db03ff7b19204833ba0ce2c6e3e60eaa19eb3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d55d692821fb6f9f56f12b0917df247dc6d0176a412cf590ad99062075442fb9"
     }
   }
 }
