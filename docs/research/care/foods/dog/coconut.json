@@ -1,0 +1,153 @@
+{
+  "slug": "coconut",
+  "species": "dog",
+  "name": {
+    "en": "Coconut",
+    "sl": "Kokos"
+  },
+  "question": {
+    "en": "Can dogs eat coconut?",
+    "sl": "Ali lahko psi jedo kokos?"
+  },
+  "url_slug": {
+    "en": "coconut",
+    "sl": "kokos"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
+    "sl": "Da, v majhnih količinah. Nesladkano kokosovo meso je za pse varno, če ga dajete zmerno, kokosove luščine in lupine pa nikoli. Kokos vsebuje veliko maščob in olja, ki lahko povzročijo prebavne težave in drisko."
+  },
+  "why": {
+    "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
+    "sl": "V majhnih količinah kokos verjetno ne povzroči resne škode, meso in mleko svežih kokosov pa vsebujeta olja, ki lahko povzročijo prebavne težave, mehko blato in drisko. Kokos ima več maščob, zato naj psi, ki ne smejo jesti mastne hrane ali imajo prekomerno težo, dobijo druge priboljške. Ima tudi veliko kalija, zato je pri psih z boleznijo ledvic potrebna previdnost. Luščina in lupina lahko povzročita zaporo črevesja."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Ask your vet before adding coconut to your dog's diet, especially if your dog has had pancreatitis.",
+    "sl": "Preden psu v prehrano dodate kokos, se posvetujte z veterinarjem, zlasti če je pes že imel vnetje trebušne slinavke."
+  },
+  "serving": {
+    "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
+    "sl": "Samo nesladkano meso v majhnih količinah, brez luščine in lupine. Kokosovo mleko le nesladkano in brez ksilitola; kokosovo vodo le kot priboljšek, nikoli namesto vode."
+  },
+  "child": {
+    "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
+    "sl": "Psi lahko poskusijo malo kokosa! Trda lupina ni za pse, zato ga pripravi odrasli."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs drink coconut water or coconut milk?",
+        "sl": "Ali lahko psi pijejo kokosovo vodo ali kokosovo mleko?"
+      },
+      "a": {
+        "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
+        "sl": "Kokosovo vodo le kot priboljšek, ne namesto navadne vode. Kokosovo mleko le nesladkano in brez umetnih sladil, kot je ksilitol, ki je za pse strupen."
+      }
+    },
+    {
+      "q": {
+        "en": "Why not the coconut shell?",
+        "sl": "Zakaj ne kokosove lupine?"
+      },
+      "a": {
+        "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
+        "sl": "Luščina in lupina lahko povzročita resne prebavne težave, tudi zaporo črevesja in draženje želodca, podobno kot če bi pes pojedel palice ali les."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD1",
+      "quote": "When ingested in small amounts, coconut and coconut-based products are not likely to cause serious harm to your pet."
+    },
+    {
+      "id": "KD1",
+      "quote": "However, the flesh and milk of fresh coconuts do contain oils that may cause stomach upset, loose stools and diarrhea."
+    },
+    {
+      "id": "KD122",
+      "quote": "Dr. Stegemoller advises that coconut milk, water, and coconut flesh are safe for dogs to eat."
+    },
+    {
+      "id": "KD122",
+      "quote": "they're safe to share with your dog as long as they're unsweetened and fed in small amounts."
+    },
+    {
+      "id": "KD122",
+      "quote": "However, experts warn that the husk and shell pose risks to your dog, potentially leading to serious digestive problems."
+    },
+    {
+      "id": "KD122",
+      "quote": "You should never feed your dog the husk or shell of the coconut."
+    },
+    {
+      "id": "KD122",
+      "quote": "It can potentially create risk for intestinal blockage. Gastrointestinal upset due to stomach irritation can also occur,"
+    },
+    {
+      "id": "KD122",
+      "quote": "think of the husk or shell as being comparable to your dog eating something like sticks or wood."
+    },
+    {
+      "id": "KD122",
+      "quote": "you should only give them coconut water as is a treat, and not as a substitute for regular water."
+    },
+    {
+      "id": "KD122",
+      "quote": "Coconut is high in potassium, so caution should be used for dogs with kidney disease or other electrolyte disturbances"
+    },
+    {
+      "id": "KD122",
+      "quote": "If you want to give your dog coconut milk, Dr. Stegemoller advises they should only drink the unsweetened variety."
+    },
+    {
+      "id": "KD122",
+      "quote": "free of artificial sweeteners like xylitol, which is toxic for dogs"
+    },
+    {
+      "id": "KD122",
+      "quote": "Coconut is higher in fat"
+    },
+    {
+      "id": "KD122",
+      "quote": "so dogs that should not eat high-fat diets or are overweight should find other treats instead."
+    },
+    {
+      "id": "KD122",
+      "quote": "The primary side effect to watch for when feeding coconut to dogs is gastrointestinal upset, like diarrhea."
+    },
+    {
+      "id": "KD122",
+      "quote": "Although feeding coconut to your dog has benefits, you should only do it in moderation."
+    },
+    {
+      "id": "KD122",
+      "quote": "If your dog has a history of pancreatitis, be sure to discuss"
+    },
+    {
+      "id": "KD122",
+      "quote": "Always consult your veterinarian before adding new foods to your dog's diet."
+    }
+  ],
+  "related": [
+    "coconut-oil",
+    "xylitol",
+    "pineapple",
+    "mango"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "460dc69b0fadd3a39a12ae565cc74d82607a92205469e25e9a5b3ec28f78a480"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fce6d083e5eac00745abb98d06dc4a23421340e178a65d5ec1f1c5233643d066"
+    }
+  }
+}

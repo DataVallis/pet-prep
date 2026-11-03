@@ -1,0 +1,140 @@
+{
+  "slug": "dried-fruit",
+  "species": "cat",
+  "name": {
+    "en": "Dried fruit",
+    "sl": "Suho sadje"
+  },
+  "question": {
+    "en": "Can cats eat dried fruit?",
+    "sl": "Ali lahko mačke jedo suho sadje?"
+  },
+  "url_slug": {
+    "en": "dried-fruit",
+    "sl": "suho-sadje"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No, keep dried fruit away from cats. Raisins, sultanas and currants are highly toxic to pets, raisins and currants can cause kidney failure in cats, and sugar is unhealthy for cats. Watch out for cakes and mince pies too, and call your vet if your cat eats any.",
+    "sl": "Ne, suho sadje hranite zunaj dosega mačk. Rozine, sultanine in korintske rozine so za hišne ljubljenčke zelo strupene, rozine in korintske rozine lahko pri mačkah povzročijo odpoved ledvic, sladkor pa je za mačke nezdrav. Pazite tudi na kolače in pite s suhim sadjem ter pokličite veterinarja, če ga mačka poje."
+  },
+  "why": {
+    "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
+    "sl": "Cats Protection grozdje, rozine in korintske rozine uvršča med človeško hrano, ki je za mačke strupena, in navaja, da lahko pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Cats Protection dodaja, da sladkor za mačke sicer ni strupen, je pa nezdrav. Zastrupitev z grozdjem in rozinami je pri mačkah redka in slabo pojasnjena, vira, ki bi katero koli suho sadje označil za varno za mačke, pa nismo našli, zato uporabljamo strožjo stopnjo."
+  },
+  "signs": {
+    "en": [
+      "Vomiting, usually within a day"
+    ],
+    "sl": [
+      "Bruhanje, običajno znotraj enega dneva"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away. Note what your cat ate (which dried fruit or which food containing it), how much and when, and keep the packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka pojedla (katero suho sadje ali katero hrano z njim), koliko in kdaj, ter shranite embalažo. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Dried fruit like raisins is not a cat snack. Keep it away from kitty, and tell a grown-up if she eats some.",
+    "sl": "Suho sadje, kot so rozine, ni prigrizek za muce. Naj bo daleč od muce. Če ga muca poje, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about mince pies and Christmas cake?",
+        "sl": "Kaj pa pite s suhim sadjem in božični kolač?"
+      },
+      "a": {
+        "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
+        "sl": "PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Hranite jih zunaj mačjega dosega."
+      }
+    },
+    {
+      "q": {
+        "en": "Is the sugar a problem too?",
+        "sl": "Ali je težava tudi sladkor?"
+      },
+      "a": {
+        "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
+        "sl": "Cats Protection navaja, da sladkor za mačke ni strupen, je pa nezdrav. Mačke sladkega okusa ne zaznajo, sladkor jim ne daje nobene hranilne vrednosti, redno dajanje sladke hrane pa lahko vodi v zdravstvene težave."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "grapes, raisins and currants"
+    },
+    {
+      "id": "KC5",
+      "quote": "Consuming this fruit can cause kidney failure in cats."
+    },
+    {
+      "id": "KC5",
+      "quote": "Those with chronic kidney disease may be at greater risk."
+    },
+    {
+      "id": "KC25",
+      "quote": "Mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets."
+    },
+    {
+      "id": "KC53",
+      "quote": "Even though sugar isn't toxic to cats, it's still unhealthy for them."
+    },
+    {
+      "id": "KC53",
+      "quote": "Cats can't taste sweetness at all."
+    },
+    {
+      "id": "KC53",
+      "quote": "Sugar offers no nutritional value for cats."
+    },
+    {
+      "id": "KC53",
+      "quote": "But regularly giving your cat sugary foods could lead to health problems."
+    },
+    {
+      "id": "KC29",
+      "quote": "Grape and raisin poisoning in cats is not well understood and is very rare."
+    },
+    {
+      "id": "KC29",
+      "quote": "Cats are unlikely to eat grapes or raisins in significant amounts but may be tempted by products containing them."
+    },
+    {
+      "id": "KC29",
+      "quote": "Symptoms usually start with vomiting within 6 to 24 hours after ingestion."
+    },
+    {
+      "id": "KC8",
+      "quote": "If possible, take the packaging, plant, or substance with you to the veterinary clinic"
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "raisins",
+    "grapes",
+    "fruit-pits"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c120a5a7c264c498f2493b9ae4b6feb4305a86e064e2e6a8182ab057bef4f37"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5b195b2ca2e571ef6b0a8e36680b5f1a76d1bb4133eb314505b4ce6e49bce9e1"
+    }
+  }
+}

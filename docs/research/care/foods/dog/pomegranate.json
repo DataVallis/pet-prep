@@ -1,0 +1,142 @@
+{
+  "slug": "pomegranate",
+  "species": "dog",
+  "name": {
+    "en": "Pomegranate",
+    "sl": "Granatno jabolko"
+  },
+  "question": {
+    "en": "Can dogs eat pomegranate?",
+    "sl": "Ali lahko psi jedo granatno jabolko?"
+  },
+  "url_slug": {
+    "en": "pomegranate",
+    "sl": "granatno-jabolko"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
+    "sl": "Ni priporočljivo. Granatno jabolko za pse ni strupeno, a to še ne pomeni, da je varno: semena lahko povzročijo prebavne težave in zaporo prebavil, koščki lupine in peclja pa zamašitev. Varneje je, da psu svežega granatnega jabolka ne dajete."
+  },
+  "why": {
+    "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
+    "sl": "Glavni veterinar AKC pravi, da granatno jabolko za pse ni strupeno. Semena, ki jih ljudje običajno jemo, pa lahko vseeno povzročijo prebavne težave in zaporo prebavil. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih. Izvleček granatnega jabolka v izdelkih, narejenih za pse, je nekaj drugega kot svež sadež."
+  },
+  "signs": {
+    "en": [
+      "Diarrhoea",
+      "Vomiting"
+    ],
+    "sl": [
+      "Driska",
+      "Bruhanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog gets into pomegranate seeds, contact your vet right away.",
+    "sl": "Če pes poje semena granatnega jabolka, se takoj obrnite na veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Pomegranate is a people fruit. Its seeds and peel can upset a dog's tummy, so keep it out of reach.",
+    "sl": "Granatno jabolko je sadež za ljudi. Njegova semena in lupina lahko psu razburijo trebušček, zato ga pospravi."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is pomegranate in dog food okay?",
+        "sl": "Je granatno jabolko v pasji hrani v redu?"
+      },
+      "a": {
+        "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
+        "sl": "Izvleček granatnega jabolka ima lahko za pse koristi. Če ga želite dajati, izberite izdelke, narejene posebej za pse, in se posvetujte z veterinarjem."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat the pomegranate peel?",
+        "sl": "Ali lahko psi jedo lupino granatnega jabolka?"
+      },
+      "a": {
+        "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
+        "sl": "Ne. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih, zato jih psu ne dajajte."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD121",
+      "quote": "Dr. Jerry Klein, Chief Veterinarian for the AKC, explains that pomegranates aren’t toxic to dogs."
+    },
+    {
+      "id": "KD121",
+      "quote": "However, that doesn’t mean that the fruit is safe for dogs to eat."
+    },
+    {
+      "id": "KD121",
+      "quote": "The part of the pomegranates that most people eat is the seeds."
+    },
+    {
+      "id": "KD121",
+      "quote": "However, these can cause gastrointestinal issues in dogs, Dr. Klein says."
+    },
+    {
+      "id": "KD121",
+      "quote": "They can also cause a digestive tract blockage"
+    },
+    {
+      "id": "KD121",
+      "quote": "With this in mind, it’s safer to avoid giving fresh pomegranates to your dog."
+    },
+    {
+      "id": "KD121",
+      "quote": "Dr. Klein explains that the pieces of the rind and stem can cause obstruction if ingested, especially in smaller dogs."
+    },
+    {
+      "id": "KD121",
+      "quote": "Because of this, it’s important to not feed pomegranate rinds and stems to your dog."
+    },
+    {
+      "id": "KD121",
+      "quote": "He notes that diarrhea and vomiting are the most common symptoms to watch for, especially if a dog consumes"
+    },
+    {
+      "id": "KD121",
+      "quote": "If your dog gets into your pomegranate seeds, chocolate-covered pomegranate seeds, or pomegranate"
+    },
+    {
+      "id": "KD121",
+      "quote": "consult a veterinarian right away."
+    },
+    {
+      "id": "KD121",
+      "quote": "Although pomegranate extract can have health benefits for dogs, avoid letting your dog snack down on this fruit."
+    },
+    {
+      "id": "KD121",
+      "quote": "look for products that are manufactured specifically for dogs."
+    },
+    {
+      "id": "KD121",
+      "quote": "speak with your dog’s veterinarian."
+    }
+  ],
+  "related": [
+    "grapes",
+    "cherries",
+    "watermelon"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d100495f068a92a48c3a465408cd6d1d1c04bbf6c0de466b4b25e85cd5d3eae3"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d644ebf124115813dd8f4c2f787a2949d70bfeb3599b6f0c16e4b2115accb722"
+    }
+  }
+}

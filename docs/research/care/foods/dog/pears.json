@@ -1,0 +1,152 @@
+{
+  "slug": "pears",
+  "species": "dog",
+  "name": {
+    "en": "Pears",
+    "sl": "Hruške"
+  },
+  "question": {
+    "en": "Can dogs eat pears?",
+    "sl": "Ali lahko psi jedo hruške?"
+  },
+  "url_slug": {
+    "en": "pears",
+    "sl": "hruske"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
+    "sl": "Da, psi lahko zmerno jedo hruške. Odstranite peščišče in semena, sadež narežite na majhne koščke in ne dajajte hrušk iz konzerve v sladkem sirupu. Preveč hrušk lahko psu razburi želodec."
+  },
+  "why": {
+    "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
+    "sl": "Hruške vsebujejo vitamin C, vitamin A, baker in vlaknine. Semena vsebujejo sledi cianida in lahko povzročijo tudi dušenje, zato peščišča psu ne dajajte. Hruške iz konzerve vsebujejo preveč sladkorja, ki lahko draži prebavila in vodi v debelost. Tudi varna hrana, kot so hruške, lahko povzroči dušenje."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "The first time you give pears, watch for signs of stomach upset, and contact your vet if you have any concerns.",
+    "sl": "Ko psu prvič date hruško, bodite pozorni na znake prebavnih težav in se ob kakršnih koli skrbeh obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
+    "sl": "Sveža, zrela hruška brez peščišča in semen, narezana na majhne koščke; psa med jedjo opazujte. Kot občasen prigrizek."
+  },
+  "child": {
+    "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
+    "sl": "Psi lahko pojedo nekaj koščkov hruške! Odrasli najprej odstrani sredico s semeni."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat the pear core?",
+        "sl": "Ali lahko psi jedo peščišče hruške?"
+      },
+      "a": {
+        "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
+        "sl": "Ne. Psu ne dajajte delov hruške s semeni; semena vsebujejo sledi cianida in lahko povzročijo dušenje."
+      }
+    },
+    {
+      "q": {
+        "en": "Are canned pears okay?",
+        "sl": "So hruške iz konzerve v redu?"
+      },
+      "a": {
+        "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
+        "sl": "Ne. Hruške iz konzerve vsebujejo preveč sladkorja. Ne dajajte hrušk iz konzerve ali kozarca v sirupu, tudi ne tistih z oznako »v lastnem soku«. Najboljša izbira so sveže, zrele hruške."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD117",
+      "quote": "Thankfully, the answer is yes."
+    },
+    {
+      "id": "KD117",
+      "quote": "In moderation, pears are a healthy snack, full of vitamin C, vitamin A, and fiber."
+    },
+    {
+      "id": "KD117",
+      "quote": "just because pears are safe for dogs to eat does not mean your dog should eat a lot of them on a regular basis."
+    },
+    {
+      "id": "KD117",
+      "quote": "Just like any food you give your dog, too many pears could lead to an upset stomach."
+    },
+    {
+      "id": "KD117",
+      "quote": "In fact, even dog-safe foods like pears can be a choking hazard."
+    },
+    {
+      "id": "KD117",
+      "quote": "Before feeding pears to your dog, cut the fruit into bite-sized pieces"
+    },
+    {
+      "id": "KD117",
+      "quote": "monitor your dog carefully as they eat to prevent choking."
+    },
+    {
+      "id": "KD117",
+      "quote": "Dogs shouldn't eat the seeds from pears, which contain traces of the toxin cyanide."
+    },
+    {
+      "id": "KD117",
+      "quote": "As tempting as it is to toss your dog your leftover pear core, avoid giving your dog the parts of pears with seeds in them."
+    },
+    {
+      "id": "KD117",
+      "quote": "Pear seeds are toxic in large quantities and can also cause choking."
+    },
+    {
+      "id": "KD117",
+      "quote": "Like most canned fruits, canned pears aren’t good for dogs."
+    },
+    {
+      "id": "KD117",
+      "quote": "They contain too much sugar, which can irritate your dog’s digestive tract and lead to obesity."
+    },
+    {
+      "id": "KD117",
+      "quote": "Fresh, ripe pears are the best option for your dog."
+    },
+    {
+      "id": "KD117",
+      "quote": "When feeding your dog pears, or any new food, for the first time, be sure to look for signs of gastrointestinal upset"
+    },
+    {
+      "id": "KD117",
+      "quote": "contact your veterinarian if you have any concerns."
+    },
+    {
+      "id": "KD89",
+      "quote": "are a great snack because they're high in copper, vitamins C and K, and fiber."
+    },
+    {
+      "id": "KD89",
+      "quote": "remove the pit and seeds first, as the seeds contain traces of cyanide."
+    },
+    {
+      "id": "KD89",
+      "quote": "Skip canned or jarred pears with sugary syrups, even the ones labeled 'in their own juice.'"
+    }
+  ],
+  "related": [
+    "apples",
+    "apple-seeds",
+    "peaches"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4da262eada7070b1764252f8d2b8344575b5bee9f66ff6cd40e510c4f1d4cf47"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "930298a9b80d9a0b8dc15d3f38b9c3d473950d9a422c604f0270a9af1e9ec4a1"
+    }
+  }
+}
