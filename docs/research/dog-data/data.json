@@ -45376,6 +45376,574 @@
       }
     }
   },
+  "brussels_griffon": {
+    "_note": "Added 2026-11-03 (M5-R10-88, unattended run — appended after the Shar Pei: AKC 2024 No. 84 'Brussels Griffon', S174 full-list table '84 | Brussels Griffon'). Quotes as returned by the web-fetch tool on 2026-11-03 (fragments marked as such); paraphrase only in notes. Sources S669–S674 (+ S35 Coren, S10 growth, S11 AAHA, S45 steps, S92 BVA). No health percentages anywhere. A flat-faced (brachycephalic) toy breed, RKC Breed Watch Category 2. The game dog = FCI-Standard N° 80 (rough-coated); the RKC / KC 'Griffon Bruxellois' also covers the smooth coat and black / black-and-tan colours (FCI: Griffon Belge / Petit Brabançon).",
+    "identity": {
+      "value": "FCI No. 80, Group 9 Section 3 (Small Belgian dogs), Belgium",
+      "unit": "—",
+      "source_id": "S669",
+      "quote": "Standard FCI N° 80",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 80 (S669, French PDF): group 'Groupe 9 Chiens d'agrément et de compagnie', section 3 small Belgian dogs (paraphrase), origin 'Belgique', official standard published '25.03.2003', use 'Petit chien de garde et de compagnie.'. FCI separates the red rough-coated Griffon Bruxellois (N° 80) from the Griffon Belge (N° 81, black / black and tan, rough) and the Petit Brabançon (N° 82, smooth); the RKC (S670 / S671) and the AKC (S674) keep them as one breed with two coats."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S670",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S670, value as returned). FCI 3.5–6 kg (S669) ≈ 7.7–13.2 lb → almost entirely the 'Toy (5–12 pounds)' class of S10 (KC 3.2–5 kg, S671, entirely) — used for growth."
+    },
+    "height": {
+      "petmd": {
+        "value": {
+          "male": [
+            18,
+            25
+          ],
+          "female": [
+            18,
+            25
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S672",
+        "quote": "They are also small dogs, weighing in at 6–14 pounds and 7–10 inches tall.",
+        "confidence": "medium",
+        "notes": "PetMD (S672): 7–10 in = 17.8–25.4 cm (inches × 2.54 by us, rounded), one range for both sexes. The FCI (S669) and KC (S671) standards give no height; Wikipedia (S673, tier C) '9–11 inches (230–280 mm) tall' — background only. The game range."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            3.5,
+            6
+          ],
+          "female": [
+            3.5,
+            6
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S669",
+        "quote": "Varie de 3,5 à 6 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 80 (S669), one range for the three Belgian small dogs (stored per sex). The game range (adult_weight_kg)."
+      },
+      "kc": {
+        "value": {
+          "male": [
+            3.2,
+            5
+          ],
+          "female": [
+            3.2,
+            5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S671",
+        "quote": "Weight: 3.2kg – 5kg.",
+        "confidence": "high",
+        "notes": "KC breed standard (S671, via KUSA 07-2025): most desirable 3.6kg – 4.5kg (fragment as returned: '3.6kg – 4.5kg'). Alternative."
+      },
+      "petmd": {
+        "value": {
+          "male": [
+            2.7,
+            6.4
+          ],
+          "female": [
+            2.7,
+            6.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S672",
+        "quote": "They are also small dogs, weighing in at 6–14 pounds and 7–10 inches tall.",
+        "confidence": "medium",
+        "notes": "PetMD (S672): 6–14 lb = 2.7–6.4 kg (pounds × 0.4536 by us). Alternative; AKC (S674) 'Tipping the scales at no more than 12 pounds' (fragment)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI 3.5–6 kg ≈ 7.7–13.2 lb sits almost entirely in 'Toy (5–12 pounds)' (KC 3.2–5 kg ≈ 7.1–11 lb entirely; Miniature Pinscher precedent). The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Brussels Griffon growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S670",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S670, value as returned). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–15",
+        "unit": "years",
+        "source_id": "S672",
+        "quote": "The average Brussels Griffon lifespan is 12–15 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S672, tier B, US). Consistent with the RKC lower bound."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Nature PDF names 'Brussels Griffon' only in the Fig. 5 phylogeny labels (no value in the text); the Dogs Trust breed table (S123) is not in the fetch tool's provenance. Wikipedia (S673, tier C): 'a life expectancy of 13.3 years for the breed' citing McMillan 2024 — would give 0.75 × 13.3 × 12 = 119.7 → 120. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 12 y (RKC lower bound 'Over 12 years', S670) → 0.75 × 12 = 9 y = 108 months. PetMD lower bound 12 y (S672) gives the same. McMillan 13.3 y via Wikipedia (tier C) would give 120. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S670"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S670",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S670, value as returned). PetMD (S672): 'Brussels Griffons have a medium energy level and will do fine with up to 30 minutes of moderate activity or neighborhood walks per day.' — the sources agree on up to 30 minutes."
+      },
+      "petmd": {
+        "value": "up to 30 minutes of moderate activity or walks a day",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons have a medium energy level and will do fine with up to 30 minutes of moderate activity or neighborhood walks per day.",
+        "confidence": "medium",
+        "notes": "PetMD (S672). Agrees with 30."
+      },
+      "heat_and_walk_timing": {
+        "value": "limit exercise and time outside in the summer months and on poor air quality days",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Care should be taken to limit exercise and extended periods of time outside during the summer months",
+        "confidence": "high",
+        "notes": "PetMD (S672) fragment as returned, continued 'and during poor air quality days.'; preceded by 'This makes them more prone to snore and more sensitive to hot, humid weather.' (flat face). Basis of the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "lively and alert; smart, sensitive",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Lively and alert.",
+        "confidence": "high",
+        "notes": "KC breed standard (S671). RKC (S670): 'Smart little dog from Belgium with terrier-like personality.' (fragment). AKC (S674): 'smart, devoted, and comically self-important' (fragment). PetMD (S672): sensitive — 'but they can be sensitive, so supervision is recommended.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement in an A/B source (PetMD S672 'do well in families with children, other dogs, or cats' is a children / other-pets statement). AKC (S674): 'A sensitive companion for discerning grownups' (fragment) — background. No family_pet chip."
+      },
+      "children": {
+        "value": "typically do well in families with children; sensitive — supervision recommended",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons typically do well in families with children, other dogs, or cats,",
+        "confidence": "medium",
+        "notes": "PetMD (S672) fragment as returned, continued 'but they can be sensitive, so supervision is recommended.' An explicit statement — basis of the children chip (supervision caveat kept here; no small-children rating → never small_children). AKC (S674) 'A sensitive companion for discerning grownups' (fragment) — kept as the caveat."
+      },
+      "other_pets": {
+        "value": "typically do well with other dogs or cats",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons typically do well in families with children, other dogs, or cats,",
+        "confidence": "medium",
+        "notes": "PetMD (S672) fragment as returned (supervision recommended). No prey-drive statement. Basis of the other_pets chip."
+      },
+      "time_alone": {
+        "value": "'Velcro dogs' — do not like to be left alone for extended periods",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "They are considered “Velcro dogs” and don’t like to be left alone for extended periods of time.",
+        "confidence": "high",
+        "notes": "PetMD (S672); also 'They will also often develop undesirable behaviors if left alone for long periods of time,' / 'as they strongly prefer to be with their family.' (fragments). Basis of the needs_company chip (Boxer / Pug precedent); never often_alone."
+      },
+      "socialisation": {
+        "value": "early and consistent socialisation",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "However, early and consistent socialization can help them feel more confident and comfortable.",
+        "confidence": "high",
+        "notes": "PetMD (S672); preceded by 'Similarly, Brussels Griffon dogs can be nervous around strangers or in new situations.' Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "smart; easy to train with positive reinforcement; does not respond well to harsh correction",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "easy to train with positive reinforcement",
+        "confidence": "medium",
+        "notes": "PetMD (S672) fragment as returned; 'do not respond well to harsh correction' (fragment); potty training can take extra patience (paraphrase)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. Flat-faced (brachycephalic) toy breed (PetMD S672); RKC Breed Watch Category 2 (S670); RKC Best Practice includes the BOAS Respiratory Function Grading (S670, 'NEW test recognised Aug 2026'). Wikipedia (S673, tier C) names Chiari-like malformation / syringomyelia — background only (no A/B source fetched).",
+      "brachycephaly": {
+        "value": "brachycephalic — short snout and flat face; more prone to snore and sensitive to hot, humid weather",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons belong to a class of dogs called brachycephalic dogs,",
+        "confidence": "high",
+        "notes": "PetMD (S672) fragments as returned: 'which means they have a short snout and flat-faced appearance.' / 'This makes them more prone to snore and more sensitive to hot, humid weather.'. RKC (S670) Best Practice: breathing test for BOAS under the KC Respiratory Function Grading scheme (paraphrase). Basis of brachycephalic_breathing and of the marketing exclusion (BVA S92)."
+      },
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 2",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC breed page (S670): Breed Watch category 'Category 2' — points of concern not in the breed standard (paraphrase); the Breed Watch page itself was not fetched (no individual points recorded)."
+      },
+      "face_fold": {
+        "value": "nose / face fold — keep clean and dry; clean around once a week",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Their face folds should be cleaned around once a week.",
+        "confidence": "high",
+        "notes": "PetMD (S672); preceded by 'As brachycephalic dogs, Brussels Griffons have a nose fold that needs to be kept clean and dry.' Basis of the weekly fold-cleaning task (M5-R14)."
+      },
+      "dental": {
+        "value": "dental disease — daily at-home tooth brushing and routine veterinary dental cleanings",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons will likely benefit from daily at-home tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S672) fragments as returned: 'Therefore, canine dental care is very important' / 'as well as routine dental cleanings done by your veterinarian.'. Basis of the daily tooth-brushing task (M5-R15)."
+      },
+      "eyes": {
+        "value": "eye problems — cataracts, progressive retinal atrophy, eye injuries",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S672) list items (paraphrase): cataracts, progressive retinal atrophy (PRA), eye injuries; see a vet if the eyes 'have discharge, are red, or if your dog is rubbing at them' (fragment). RKC (S670) Best Practice: BVA/KC/ISDS Eye Scheme (breeder checklist)."
+      },
+      "patella": {
+        "value": "luxating patella (kneecap slipping out of place)",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S672) list item (paraphrase)."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S672) list item (paraphrase)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 59,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 59 | Griffon Bruxellois |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-03): rank 59, shared with the Maltese (next table line), tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Coren's own top / bottom-10 article (S34) does not list the breed. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label on the rank-55 row, applying to ranks 55–69 (as returned)."
+      },
+      "training_notes": {
+        "value": "smart, easy to train with positive reinforcement; sensitive to harsh correction",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "easy to train with positive reinforcement",
+        "confidence": "medium",
+        "notes": "PetMD (S672) fragment as returned."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.brussels_griffon.learning_multiplier (0.7, runbook rule: Fair tier, rank 59).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "cobby, well-balanced, square little dog",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "A cobby, well-balanced, square little dog",
+        "confidence": "high",
+        "notes": "KC breed standard (S671)."
+      },
+      "colours": {
+        "value": [
+          "red",
+          "black and tan",
+          "black"
+        ],
+        "unit": "list",
+        "source_id": "S671",
+        "quote": "Clear red, black, or black and rich tan, without white markings.",
+        "confidence": "high",
+        "notes": "KC breed standard (S671). FCI N° 80 (S669) allows red only: 'Rouge, roussâtre ; un peu de noir est toléré à la garniture de la tête.' (black and black-and-tan rough dogs are the FCI's Griffon Belge). The game uses the KC colours (red default); never white markings, never belge / merle / brindle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): red 0.6 (the only FCI colour, the portrait default), black and tan 0.25, black 0.15."
+      },
+      "coat": {
+        "value": "rough: harsh, wiry, free from curl, preferably with undercoat (smooth: short and tight)",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "harsh, wiry, free from curl, preferably with undercoat.",
+        "confidence": "high",
+        "notes": "KC (S671) roughs (fragment as returned); smooths 'short and tight.' (fragment). FCI (S669): 'Le poil est naturellement dur, légèrement ondulé, pas bouclé, mais trimmé.'. The game dog is rough-coated (FCI N° 80)."
+      },
+      "head": {
+        "value": "fairly large compared with the body, rounded but not domed",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Head fairly large in comparison to body, rounded but in no way domed; moderately wide between the ears.",
+        "confidence": "high",
+        "notes": "KC (S671)."
+      },
+      "nose": {
+        "value": "black nose with large, wide-open nostrils",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Nose black, with large wide-open nostrils and definite stop between muzzle and skull.",
+        "confidence": "high",
+        "notes": "KC (S671). Welfare trait for the AI portrait (clearly open nostrils)."
+      },
+      "muzzle": {
+        "value": "very short (FCI: nose included, at most 1.5 cm)",
+        "unit": "—",
+        "source_id": "S669",
+        "quote": "Le chanfrein, truffe comprise, est très court : il n'excèdera pas 1,5 cm de long.",
+        "confidence": "high",
+        "notes": "FCI (S669). Welfare trait: the game draws a moderate (not extreme) short face with a visible nose and open nostrils — dog trait `muzzle` (French Bulldog / Pug precedent)."
+      },
+      "eyes": {
+        "value": "very dark, round, clear, well spaced, black-rimmed",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Black-rimmed, very dark, round, clear and well-spaced.",
+        "confidence": "high",
+        "notes": "KC (S671)."
+      },
+      "ears": {
+        "value": "semi-erect, high-set, small",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Semi-erect, high-set, the smaller the better.",
+        "confidence": "high",
+        "notes": "KC (S671); FCI (S669) 'Petites, attachées haut, avec suffisamment d'espace entre elles.'. Natural (uncropped) ears in the game."
+      },
+      "tail": {
+        "value": "high-set (natural, undocked in the game)",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "High-set, emerging at right angles from level topline.",
+        "confidence": "high",
+        "notes": "KC (S671) undocked tail (fragment as returned); the standard also describes a docked tail — the game draws the natural tail (Dobermann / German Shorthaired Pointer precedent)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S670, returned as label / value pairs — quoted here as the value), PetMD (S672). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S670)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "Basis of 30 min (PetMD S672 'up to 30 minutes' agrees). Not long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S670). Basis of the apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_size_of_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S670)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S670). No number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S672) rough coat 'weekly brushing' (1, contradicts 'more than once') and smooth coat 'daily to weekly brushing' (range → 7); no consistent number for the rough game coat → fallback 2 per week, Claude's proposal, open for David. Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S670)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S670). Basis of the sheds chip."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S670)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S670)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S670)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 2",
+        "unit": "—",
+        "source_id": "S670",
+        "quote": "Category 2",
+        "confidence": "high",
+        "notes": "RKC breed page (S670) Breed Watch category."
+      },
+      "petmd_grooming": {
+        "value": "rough coat: professional grooming every four to eight weeks, occasional baths, weekly brushing; smooth coat: occasional baths, daily to weekly brushing",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "requiring professional grooming every four to eight weeks in addition to occasional baths and weekly brushing.",
+        "confidence": "high",
+        "notes": "PetMD (S672) fragments as returned: 'Rough-coated Brussels Griffons will have moderate grooming demands,' / 'The smooth-coated Brussels Griffons have a straight, short, glossy coat that requires occasional baths' / 'and daily to weekly brushing.'. Basis of the groomer reminder every 4 program weeks (M5-R18, lower bound of 4–8 weeks); baths 'occasional' → no bath reminder."
+      },
+      "petmd_face_folds": {
+        "value": "clean the face folds around once a week",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Their face folds should be cleaned around once a week.",
+        "confidence": "high",
+        "notes": "PetMD (S672)."
+      },
+      "petmd_teeth": {
+        "value": "daily at-home tooth brushing",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "Brussels Griffons will likely benefit from daily at-home tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S672) fragment as returned."
+      },
+      "petmd_nails_ears": {
+        "value": "trim nails regularly; regular ear cleaning, especially after baths",
+        "unit": "—",
+        "source_id": "S672",
+        "quote": "If you can hear your Brussels Griffon's nails clicking on the floor, it's time for a trim.",
+        "confidence": "medium",
+        "notes": "PetMD (S672); ears 'Perform regular ear cleanings, especially after bath time.' — no frequency → no nail or ear task (runbook »Breed care tasks«)."
+      }
+    }
+  },
   "medium_mixed_breed": {
     "_note": "No breed standard exists. All values below are SIZE-CLASS data (general_by_size) applied to an assumed medium size; the size assumption itself is a proposal.",
     "assumed_adult_weight": {
@@ -68005,6 +68573,309 @@
         "confidence": "high",
         "notes": "Colours of FCI-Standard N° 309 (S663) / RKC (S665): any solid colour except white; never brindle, patches, spots, black and tan or white. Welfare breed: moderate wrinkles only, eyes open (entropion and heavy body folds disqualify, S663). Weights unsourced in prompts.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn is the portrait default (most typical solid colour); moderate, non-exaggerated wrinkles; never white, brindle, spotted, patched or black-and-tan"
+      }
+    },
+    "brussels_griffon": {
+      "_note": "Unattended run M5-R10-88 (2026-11-03): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S670 'Up to 30 minutes per day' → 30; PetMD S672 agrees). Senior 108 from the RKC lower bound 'Over 12 years' (S670; McMillan 2024 not reachable → provisional). Coren rank 59 (Fair) → 0.7. Built: brushing 2× a week (Claude's proposal — RKC 'More than once a week' has no number, PetMD gives 1 for the rough coat, 7 for the smooth — open for David, M5-R13), puppy socialisation with the PetMD quote (S672, M5-R17), care tasks with a PetMD frequency (S672): face-fold cleaning once a week (M5-R14), tooth brushing every day (M5-R15), groomer reminder every 4 weeks (M5-R18), and the summer-midday walk warning (M5-R14). No nail / ear / bath task (no frequency), no meal gap. Welfare breed (brachycephalic, PetMD S672; RKC Breed Watch Category 2, S670) → chip brachycephalic_breathing; not in marketing (BVA S92). No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S670",
+        "quote": "Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: Up to 30 minutes per day' (S670) → rule 'up to N' → 30. PetMD (S672) 'up to 30 minutes of moderate activity or neighborhood walks per day' agrees.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S670 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S670",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = round(22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S670). No McMillan 2024 / VetCompass value reachable. Alternatives: 120 (McMillan 13.3 y via Wikipedia S673, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S670"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S670)"
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × RKC lower bound S670). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (none found) → the RKC lower bound (this).",
+        "derived_from": [
+          "S11",
+          "S670"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 108 (RKC lower bound 12 y, S670)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 59 'Griffon Bruxellois' (S35, checked 2026-11-03) → tier Fair (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 59, Fair, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 2,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S670",
+        "quote": "More than once a week",
+        "confidence": "low",
+        "notes": "brussels_griffon.suitability.rkc_grooming. RKC 'Grooming: More than once a week' (S670) has no number; PetMD (S672) gives 1 for the rough coat ('weekly brushing' — contradicts 'more than once') and 'daily to weekly' for the smooth coat (upper bound 7) → no consistent A/B number for the rough game coat → M5-R13 fallback 2 per week, verified=false, open for David (Lagotto Romagnolo / Pyrenean Mountain Dog precedent). Matted coat at ceil(2 / 2) = 1 missed.",
+        "alternatives": {
+          "petmd_rough_weekly": 1,
+          "petmd_smooth_daily_upper_bound": 7
+        },
+        "decision": "predlog Claude 2026-11-03 (RKC »More than once a week« brez števila; PetMD: grobodlaki 1×, gladkodlaki dnevno do tedensko → 2, M5-R13, M5-R10-88) — čaka Davida"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S672",
+        "quote": "However, early and consistent socialization can help them feel more confident and comfortable.",
+        "confidence": "high",
+        "notes": "brussels_griffon.behaviour.socialisation (PetMD S672). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S672)"
+      },
+      "face_fold_cleaning": {
+        "value": 1,
+        "unit": "face-fold cleaning sessions per week (sourced need)",
+        "source_id": "S672",
+        "quote": "Their face folds should be cleaned around once a week.",
+        "confidence": "high",
+        "notes": "PetMD (S672), brussels_griffon.health.face_fold. Built: child mini-game once a week (BreedStageParamsSeeder::DOG_CARE_TASKS fold_cleaning [1, week], M5-R14).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): »around once a week« → 1× na teden"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S672",
+        "quote": "Brussels Griffons will likely benefit from daily at-home tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S672), brussels_griffon.health.dental. Built: child mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+      },
+      "professional_grooming": {
+        "value": "professional grooming every four to eight weeks (rough coat)",
+        "unit": "visits (sourced need)",
+        "source_id": "S672",
+        "quote": "requiring professional grooming every four to eight weeks in addition to occasional baths and weekly brushing.",
+        "confidence": "high",
+        "notes": "PetMD (S672), brussels_griffon.suitability.petmd_grooming. Built: the parent's groomer reminder every 4 program weeks (DOG_CARE_TASKS groomer_visit [1, month], M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every four to eight weeks« → spodnja meja 4 tedne = 28 dni"
+      },
+      "no_exercise_in_heat": {
+        "value": "limit exercise in the summer months (flat face, sensitive to hot, humid weather)",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S672",
+        "quote": "Care should be taken to limit exercise and extended periods of time outside during the summer months",
+        "confidence": "high",
+        "notes": "PetMD (S672), brussels_griffon.exercise.heat_and_walk_timing; 'This makes them more prone to snore and more sensitive to hot, humid weather.'. Built: the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14; no weather data).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-88); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S670"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_size_of_home",
+              "brussels_griffon.suitability.rkc_size_of_garden"
+            ],
+            "quote": "S670 'Flat/ Apartment'; 'Small/ medium garden'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.children"
+            ],
+            "quote": "S672 'Brussels Griffons typically do well in families with children, other dogs, or cats,'",
+            "note": "Caveat kept in notes: 'but they can be sensitive, so supervision is recommended.' No small-children rating → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.other_pets"
+            ],
+            "quote": "S672 'Brussels Griffons typically do well in families with children, other dogs, or cats,'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.health.brachycephaly",
+              "brussels_griffon.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S672 'Brussels Griffons belong to a class of dogs called brachycephalic dogs,' — 'This makes them more prone to snore and more sensitive to hot, humid weather.'; 'Care should be taken to limit exercise and extended periods of time outside during the summer months'",
+            "note": "Welfare rule §3: flat-faced breed with a sourced heat warning (French Bulldog, Bulldog, Boston Terrier, Pug)."
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.behaviour.time_alone"
+            ],
+            "quote": "S672 'They are considered “Velcro dogs” and don’t like to be left alone for extended periods of time.'",
+            "note": "Breed-specific statement (Boxer / Pug precedent); never often_alone."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S670"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_shedding"
+            ],
+            "quote": "S670 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S670",
+              "S672"
+            ],
+            "refs": [
+              "brussels_griffon.suitability.rkc_grooming",
+              "brussels_griffon.suitability.petmd_grooming"
+            ],
+            "quote": "S670 'More than once a week'; S672 'requiring professional grooming every four to eight weeks …'"
+          }
+        ],
+        "not_proposed": {
+          "family_pet": "No explicit family-pet statement (PetMD S672 is a children / other-pets statement; AKC S674 'A sensitive companion for discerning grownups').",
+          "small_children": "No small-children rating; PetMD advises supervision (S672).",
+          "first_time_owner": "No source.",
+          "often_alone": "PetMD 'Velcro dogs' (S672) — the opposite → needs_company.",
+          "low_shedding": "RKC 'Sheds: Yes' (S670).",
+          "long_daily_exercise": "Up to 30 minutes a day (S670).",
+          "sensitive_skin": "No Breed Watch point fetched; PetMD names a nose fold to keep clean (fold-cleaning task), no dermatitis statement.",
+          "short_muzzle_breathing": "The source names the flat face together with heat → brachycephalic_breathing (French Bulldog / Pug precedent).",
+          "shorter_lifespan": "RKC 'Over 12 years' (S670).",
+          "chases_small_pets": "No prey-drive statement.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits apartment, children, other_pets; consider brachycephalic_breathing, needs_company, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). PetMD (S672) 'Brussels Griffons belong to a class of dogs called brachycephalic dogs,' and RKC Best Practice BOAS respiratory grading (S670) → the rule's brachycephalic exclusion (French Bulldog / Pug / Shih Tzu precedent). A normal breed in the app (picker, register on the website), never in PetPrep advertising, store screenshots, social posts or decks. Open for David whether he wants it in marketing anyway.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po PetMD S672); izjema odprta za Davida"
+      },
+      "ai_appearance": {
+        "value": "adult Brussels Griffon (Griffon Bruxellois), rough-coated clear red: cobby, square little toy dog; harsh, wiry, slightly tousled red coat with a beard and whiskers; fairly large rounded head; moderate (not extreme) short face with a visible black nose and clearly open nostrils; very dark, round, well-spaced eyes that do not bulge; small semi-erect natural ears (uncropped); natural high-set tail (undocked); standard colours only (red, black and tan, black — KC), never white markings, merle or brindle",
+        "unit": "—",
+        "source_id": "S671",
+        "quote": "Clear red, black, or black and rich tan, without white markings.",
+        "confidence": "high",
+        "notes": "KC (S671): 'Nose black, with large wide-open nostrils and definite stop between muzzle and skull.'; FCI N° 80 (S669) red only and a very short muzzle. Welfare trait: muzzle (moderate face, open nostrils) — dog trait `muzzle` (French Bulldog / Pug precedent). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red (FCI / KC) is the portrait default; rough coat (FCI N° 80); moderate face with open nostrils, natural ears and tail, standard colours only (never white markings, merle or brindle)"
       }
     }
   }
