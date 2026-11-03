@@ -15,7 +15,8 @@
     "pl": "Mandarynki",
     "sv": "Mandariner",
     "da": "Mandariner",
-    "fi": "Mandariinit"
+    "fi": "Mandariinit",
+    "nb": "Mandariner"
   },
   "question": {
     "en": "Can dogs eat mandarins?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść mandarynki?",
     "sv": "Får hundar äta mandariner?",
     "da": "Må hunde spise mandariner?",
-    "fi": "Saako koira syödä mandariineja?"
+    "fi": "Saako koira syödä mandariineja?",
+    "nb": "Kan hunder spise mandariner?"
   },
   "url_slug": {
     "en": "mandarins",
@@ -47,7 +49,8 @@
     "pl": "mandarynki",
     "sv": "mandariner",
     "da": "mandariner",
-    "fi": "mandariinit"
+    "fi": "mandariinit",
+    "nb": "mandariner"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, mandarynki nie są toksyczne dla psów i można je dawać w małych ilościach, podobnie jak pomarańcze. Najpierw usuń skórkę i pestki, a porcje niech będą małe, bo mandarynki zawierają naturalne cukry.",
     "sv": "Ja, mandariner är inte giftiga för hundar och kan ges i små mängder, ungefär som apelsiner. Ta först bort skalet och eventuella kärnor, och ge små portioner, eftersom mandariner innehåller naturligt socker.",
     "da": "Ja, mandariner er ikke giftige for hunde og kan gives i små mængder, ligesom appelsiner. Fjern først skal og kerner, og hold portionerne små, fordi mandariner indeholder naturligt sukker.",
-    "fi": "Kyllä, mandariini ei ole koiralle myrkyllistä, ja sitä voi antaa pieniä määriä, kuten appelsiiniakin. Poista ensin kuori ja mahdolliset siemenet ja pidä annokset pieninä, koska mandariineissa on luonnollisia sokereita."
+    "fi": "Kyllä, mandariini ei ole koiralle myrkyllistä, ja sitä voi antaa pieniä määriä, kuten appelsiiniakin. Poista ensin kuori ja mahdolliset siemenet ja pidä annokset pieninä, koska mandariineissa on luonnollisia sokereita.",
+    "nb": "Ja, mandariner er ikke giftige for hunder, og de kan gis i små mengder, på samme måte som appelsiner. Fjern skallet og eventuelle kjerner først, og hold porsjonene små, fordi mandariner inneholder naturlig sukker."
   },
   "why": {
     "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
@@ -80,7 +84,8 @@
     "pl": "Mandarynki zawierają podobne składniki odżywcze jak pomarańcze, w tym witaminę C i błonnik, ale też naturalne cukry. Tak jak w pomarańczy, skórka jest twarda i trudna do strawienia i może zwiększać ryzyko niedrożności, a pestki mogą grozić zadławieniem, zwłaszcza u mniejszych psów. Podobnie jak pomarańcze, w nadmiarze mogą rozstroić trawienie, w tym wywołać biegunkę.",
     "sv": "Mandariner innehåller ungefär samma näringsämnen som apelsiner, bland annat vitamin C och fiber, men också naturligt socker. Precis som på apelsiner är skalet segt och svårsmält och kan öka risken för stopp i tarmen, och kärnor innebär en kvävningsrisk, särskilt hos mindre hundar. Precis som med apelsiner kan för mycket ge matsmältningsbesvär, bland annat diarré.",
     "da": "Mandariner indeholder lignende næringsstoffer som appelsiner, blandt andet C-vitamin og fibre, men også naturligt sukker. Som med appelsiner er skallen sej og svær at fordøje og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare, især for mindre hunde. Som med appelsiner kan for mange mandariner give fordøjelsesproblemer, herunder diarré.",
-    "fi": "Mandariineissa on samanlaisia ravintoaineita kuin appelsiineissa, muun muassa C-vitamiinia ja kuitua, mutta myös luonnollisia sokereita. Appelsiinin tavoin myös mandariinin kuori on sitkeää ja vaikeasti sulavaa ja voi lisätä tukoksen riskiä, ja siemenet voivat aiheuttaa tukehtumisvaaran, etenkin pienemmille koirille. Appelsiinin tavoin liika mandariini voi aiheuttaa ruoansulatusvaivoja, myös ripulia."
+    "fi": "Mandariineissa on samanlaisia ravintoaineita kuin appelsiineissa, muun muassa C-vitamiinia ja kuitua, mutta myös luonnollisia sokereita. Appelsiinin tavoin myös mandariinin kuori on sitkeää ja vaikeasti sulavaa ja voi lisätä tukoksen riskiä, ja siemenet voivat aiheuttaa tukehtumisvaaran, etenkin pienemmille koirille. Appelsiinin tavoin liika mandariini voi aiheuttaa ruoansulatusvaivoja, myös ripulia.",
+    "nb": "Mandariner inneholder omtrent de samme næringsstoffene som appelsiner, blant annet vitamin C og fiber, men også naturlig sukker. Skallet er seigt og tungt å fordøye, akkurat som appelsinskall, og kan øke risikoen for tarmblokkering. Kjerner kan gi kvelningsfare, særlig for mindre hunder. For mye mandarin kan gi fordøyelsesplager, blant annet diaré, slik det også kan med appelsiner."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Nie dawaj psu skórki: podobnie jak skórka pomarańczy jest trudna do strawienia i może zwiększać ryzyko niedrożności jelit, która w niektórych przypadkach wymaga pomocy weterynarza.",
     "sv": "Ge inte hunden skalet: precis som på apelsiner är det svårsmält och kan öka risken för stopp i tarmen, vilket i vissa fall kräver veterinärvård.",
     "da": "Giv ikke din hund skallen. Som med appelsiner er den svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge.",
-    "fi": "Älä anna koirallesi kuorta: appelsiinin kuoren tavoin se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua."
+    "fi": "Älä anna koirallesi kuorta: appelsiinin kuoren tavoin se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua.",
+    "nb": "Ikke gi hunden skallet. Det er tungt å fordøye, akkurat som appelsinskall, og kan øke risikoen for blokkering i tarmen, noe som i noen tilfeller krever hjelp fra dyrlegen."
   },
   "serving": {
     "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
@@ -113,7 +119,8 @@
     "pl": "Obrane, bez pestek, w małych kawałkach; małe porcje jako okazjonalny smakołyk.",
     "sv": "Skalade, utan kärnor, i små bitar; små portioner som en godbit då och då.",
     "da": "Skrællet og uden kerner, i små stykker. Små portioner som en godbid en gang imellem.",
-    "fi": "Kuorittuna, ilman siemeniä, pieninä paloina; pieniä annoksia satunnaisena herkkuna."
+    "fi": "Kuorittuna, ilman siemeniä, pieninä paloina; pieniä annoksia satunnaisena herkkuna.",
+    "nb": "Skrellet, uten kjerner, i små biter; små porsjoner som en godbit av og til."
   },
   "child": {
     "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
@@ -129,7 +136,8 @@
     "pl": "Pies może zjeść maleńki kawałek mandarynki! Dorosły najpierw zdejmuje skórkę i wyjmuje pestki.",
     "sv": "En hund kan få en pytteliten bit mandarin! En vuxen tar först bort skalet och kärnorna.",
     "da": "En hund må gerne få et helt lille stykke mandarin! En voksen tager skallen af og fjerner kernerne først.",
-    "fi": "Koira saa pienen palan mandariinia! Aikuinen poistaa ensin kuoren ja siemenet."
+    "fi": "Koira saa pienen palan mandariinia! Aikuinen poistaa ensin kuoren ja siemenet.",
+    "nb": "En hund kan få en bitteliten bit mandarin! En voksen tar av skallet og fjerner kjernene først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Czy dla psów mandarynki różnią się od pomarańczy?",
         "sv": "Är det någon skillnad mellan mandariner och apelsiner för hundar?",
         "da": "Er mandariner anderledes end appelsiner, når det gælder hunde?",
-        "fi": "Eroaako mandariini appelsiinista koiran ruokinnassa?"
+        "fi": "Eroaako mandariini appelsiinista koiran ruokinnassa?",
+        "nb": "Er mandariner annerledes enn appelsiner for hunder?"
       },
       "a": {
         "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
@@ -163,7 +172,8 @@
         "pl": "Niewiele: mają podobne składniki odżywcze i naturalne cukry, a zasady są te same – zdejmij skórkę, usuń pestki i podawaj małe porcje.",
         "sv": "Knappast någon skillnad: de har liknande näringsämnen och naturligt socker, och samma regler gäller – skala frukten, ta bort kärnorna och ge små portioner.",
         "da": "Ikke meget. De indeholder lignende næringsstoffer og naturligt sukker, og de samme regler gælder – tag skallen af, fjern kernerne, og hold portionerne små.",
-        "fi": "Eivät juuri: niissä on samanlaisia ravintoaineita ja luonnollisia sokereita, ja samat säännöt pätevät – poista kuori ja siemenet ja pidä annokset pieninä."
+        "fi": "Eivät juuri: niissä on samanlaisia ravintoaineita ja luonnollisia sokereita, ja samat säännöt pätevät – poista kuori ja siemenet ja pidä annokset pieninä.",
+        "nb": "Ikke særlig: De har lignende næringsstoffer og naturlig sukker, og de samme reglene gjelder – skrell frukten, fjern kjernene og hold porsjonene små."
       }
     }
   ],
@@ -277,6 +287,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "479003254824eae3a0ba3cabf37c49cce0aa5e1d047a70885fa42b0ec356c9ef"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1195250c9c9a23d2d40577dd97a56a8431aeff5a3a00895e30b99e51b587d2ff"
     }
   }
 }

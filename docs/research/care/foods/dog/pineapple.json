@@ -15,7 +15,8 @@
     "pl": "Ananas",
     "sv": "Ananas",
     "da": "Ananas",
-    "fi": "Ananas"
+    "fi": "Ananas",
+    "nb": "Ananas"
   },
   "question": {
     "en": "Can dogs eat pineapple?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść ananasa?",
     "sv": "Får hundar äta ananas?",
     "da": "Må hunde spise ananas?",
-    "fi": "Saako koira syödä ananasta?"
+    "fi": "Saako koira syödä ananasta?",
+    "nb": "Kan hunder spise ananas?"
   },
   "url_slug": {
     "en": "pineapple",
@@ -47,7 +49,8 @@
     "pl": "ananas",
     "sv": "ananas",
     "da": "ananas",
-    "fi": "ananas"
+    "fi": "ananas",
+    "nb": "ananas"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, surowy ananas w małych ilościach to dobra przekąska dla psa, o ile usuniesz kolczastą skórkę, zielony czub i twardy środek. Unikaj ananasa z puszki, bo syrop zawiera za dużo cukru.",
     "sv": "Ja, rå ananas i små mängder är ett bra mellanmål för hundar, så länge det taggiga skalet, kronan och den hårda kärnan tas bort. Undvik ananas på burk, eftersom sirapen innehåller för mycket socker.",
     "da": "Ja, hunde kan få lidt rå ananas som en god snack, så længe du først fjerner den stikkende skal, kronen og den hårde midte. Undgå ananas på dåse, fordi sirupen indeholder for meget sukker.",
-    "fi": "Kyllä, pieni määrä raakaa ananasta on koiralle hyvä välipala, kunhan piikikäs kuori, lehtiruusuke ja kova ydin poistetaan. Vältä säilykeananasta, koska siirapissa on liikaa sokeria."
+    "fi": "Kyllä, pieni määrä raakaa ananasta on koiralle hyvä välipala, kunhan piikikäs kuori, lehtiruusuke ja kova ydin poistetaan. Vältä säilykeananasta, koska siirapissa on liikaa sokeria.",
+    "nb": "Ja, rå ananas i små mengder er en fin godbit for hunder, forutsatt at det piggete skallet, kronen og den harde kjernen er fjernet. Unngå ananas på boks, fordi sirupen inneholder for mye sukker."
   },
   "why": {
     "en": "Pineapple is full of vitamins, minerals and fibre, but it also contains a lot of natural sugar. The tough central core and the spiny skin can cause a blockage. Canned pineapple is best avoided, because its syrup contains too much sugar for most dogs' digestion. Some dogs get diarrhoea or an upset stomach from pineapple.",
@@ -80,7 +84,8 @@
     "pl": "Ananas jest pełen witamin, składników mineralnych i błonnika, ale zawiera też dużo naturalnego cukru. Twardy środek i kolczasta skórka mogą spowodować niedrożność. Ananasa z puszki najlepiej unikać, bo jego syrop zawiera zbyt dużo cukru dla układu pokarmowego większości psów. Po ananasie niektóre psy mają biegunkę lub rozstrój żołądka.",
     "sv": "Ananas är full av vitaminer, mineraler och fiber, men innehåller också mycket naturligt socker. Den sega kärnan i mitten och det taggiga skalet kan orsaka stopp i tarmen. Ananas på burk är bäst att undvika, eftersom sirapen innehåller för mycket socker för de flesta hundars matsmältning. Vissa hundar får diarré eller orolig mage av ananas.",
     "da": "Ananas er rig på vitaminer, mineraler og fibre, men indeholder også meget naturligt sukker. Den seje midte og den stikkende skal kan give en blokering. Ananas på dåse bør helst undgås, fordi sirupen indeholder for meget sukker til de fleste hundes mave. Nogle hunde får diarré eller dårlig mave af ananas.",
-    "fi": "Ananas on täynnä vitamiineja, kivennäisaineita ja kuitua, mutta siinä on myös paljon luonnollista sokeria. Sitkeä ydin ja piikikäs kuori voivat aiheuttaa tukoksen. Säilykeananasta on parasta välttää, koska sen siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria. Joillakin koirilla ananas aiheuttaa ripulia tai vatsavaivoja."
+    "fi": "Ananas on täynnä vitamiineja, kivennäisaineita ja kuitua, mutta siinä on myös paljon luonnollista sokeria. Sitkeä ydin ja piikikäs kuori voivat aiheuttaa tukoksen. Säilykeananasta on parasta välttää, koska sen siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria. Joillakin koirilla ananas aiheuttaa ripulia tai vatsavaivoja.",
+    "nb": "Ananas er rik på vitaminer, mineraler og fiber, men inneholder også mye naturlig sukker. Den seige kjernen i midten og det piggete skallet kan gi tarmblokkering. Ananas på boks er best å unngå, fordi sirupen inneholder for mye sukker for magen til de fleste hunder. Noen hunder får diaré eller urolig mage av ananas."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Jeśli po ananasie pies ma biegunkę lub rozstrój żołądka, ananas może nie być dla niego dobrą przekąską.",
     "sv": "Om hunden får diarré eller orolig mage av ananas är det kanske inte rätt mellanmål för den.",
     "da": "Hvis din hund får diarré eller dårlig mave af at spise ananas, er ananas måske ikke noget for din hund.",
-    "fi": "Jos koirallasi on ananaksen syömisen jälkeen ripulia tai vatsavaivoja, ananas ei ehkä sovi sille välipalaksi."
+    "fi": "Jos koirallasi on ananaksen syömisen jälkeen ripulia tai vatsavaivoja, ananas ei ehkä sovi sille välipalaksi.",
+    "nb": "Hvis hunden får diaré eller urolig mage av ananas, er ananas kanskje ikke noe for den."
   },
   "serving": {
     "en": "Fresh and peeled, without the crown and core, cut into bite-sized pieces; frozen pieces of fresh pineapple make a summer treat.",
@@ -113,7 +119,8 @@
     "pl": "Świeży i obrany, bez czuba i środka, pokrojony na kawałki wielkości jednego kęsa; mrożone kawałki świeżego ananasa to letni smakołyk.",
     "sv": "Färsk och skalad, utan krona och kärna, skuren i lagom stora bitar; frysta bitar av färsk ananas blir en svalkande sommargodbit.",
     "da": "Frisk og skrællet, uden krone og midte, skåret i mundrette stykker. Frosne stykker frisk ananas er en lækker godbid om sommeren.",
-    "fi": "Tuoretta ja kuorittua, ilman lehtiruusukettä ja ydintä, suupaloiksi leikattuna. Pakastetut ananaspalat ovat kesäinen herkku."
+    "fi": "Tuoretta ja kuorittua, ilman lehtiruusukettä ja ydintä, suupaloiksi leikattuna. Pakastetut ananaspalat ovat kesäinen herkku.",
+    "nb": "Fersk og skrellet, uten krone og kjerne, skåret i små biter; frosne biter av fersk ananas er en forfriskende sommergodbit."
   },
   "child": {
     "en": "Dogs can have a little piece of fresh pineapple! A grown-up cuts off the prickly skin and the hard middle first.",
@@ -129,7 +136,8 @@
     "pl": "Psy mogą zjeść mały kawałek świeżego ananasa! Dorosły najpierw odcina kłującą skórkę i twardy środek.",
     "sv": "Hundar kan få en liten bit färsk ananas! En vuxen skär först bort det taggiga skalet och den hårda mitten.",
     "da": "Hunde kan få et lille stykke frisk ananas! En voksen skærer først den stikkende skal og den hårde midte af.",
-    "fi": "Koira saa pienen palan tuoretta ananasta! Aikuinen leikkaa ensin pois piikikkään kuoren ja kovan keskustan."
+    "fi": "Koira saa pienen palan tuoretta ananasta! Aikuinen leikkaa ensin pois piikikkään kuoren ja kovan keskustan.",
+    "nb": "Hunder kan få en liten bit fersk ananas! En voksen skjærer først bort det piggete skallet og den harde midten."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Czy psy mogą jeść ananasa z puszki?",
         "sv": "Får hundar äta ananas på burk?",
         "da": "Må hunde spise ananas på dåse?",
-        "fi": "Saako koira syödä säilykeananasta?"
+        "fi": "Saako koira syödä säilykeananasta?",
+        "nb": "Kan hunder spise ananas på boks?"
       },
       "a": {
         "en": "It is best avoided. The syrup in canned fruit contains too much sugar for most dogs' digestion.",
@@ -163,7 +172,8 @@
         "pl": "Lepiej go unikać. Syrop w owocach z puszki zawiera zbyt dużo cukru dla układu pokarmowego większości psów.",
         "sv": "Det är bäst att låta bli. Sirapen i frukt på burk innehåller för mycket socker för de flesta hundars matsmältning.",
         "da": "Det er bedst at undgå. Sirupen i frugt på dåse indeholder for meget sukker til de fleste hundes mave.",
-        "fi": "Sitä on parasta välttää. Säilykehedelmien siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria."
+        "fi": "Sitä on parasta välttää. Säilykehedelmien siirapissa on useimpien koirien ruoansulatukselle liikaa sokeria.",
+        "nb": "Det er best å la være. Sirupen i hermetisk frukt inneholder for mye sukker for magen til de fleste hunder."
       }
     },
     {
@@ -181,7 +191,8 @@
         "pl": "Dlaczego trzeba usuwać środek i skórkę?",
         "sv": "Varför ska kärnan och skalet tas bort?",
         "da": "Hvorfor skal midten og skallen fjernes?",
-        "fi": "Miksi ydin ja kuori pitää poistaa?"
+        "fi": "Miksi ydin ja kuori pitää poistaa?",
+        "nb": "Hvorfor skal kjernen og skallet fjernes?"
       },
       "a": {
         "en": "The tough core and the spiny skin can cause a blockage in the gut.",
@@ -197,7 +208,8 @@
         "pl": "Twardy środek i kolczasta skórka mogą spowodować niedrożność jelit.",
         "sv": "Den sega kärnan och det taggiga skalet kan orsaka stopp i tarmen.",
         "da": "Den seje midte og den stikkende skal kan give en blokering i tarmen.",
-        "fi": "Sitkeä ydin ja piikikäs kuori voivat aiheuttaa suolitukoksen."
+        "fi": "Sitkeä ydin ja piikikäs kuori voivat aiheuttaa suolitukoksen.",
+        "nb": "Den seige kjernen og det piggete skallet kan gi blokkering i tarmen."
       }
     }
   ],
@@ -327,6 +339,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "18c2f59dcb3b1a8b5d957afd4fb65e59a57e3aaa88ffc612b82d33201c772c67"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94eb8030aadc34b26733d370287d4933fc57ad29e1db97ed6193c7cb9f2bae95"
     }
   }
 }

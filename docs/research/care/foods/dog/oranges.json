@@ -15,7 +15,8 @@
     "pl": "Pomarańcze",
     "sv": "Apelsiner",
     "da": "Appelsiner",
-    "fi": "Appelsiinit"
+    "fi": "Appelsiinit",
+    "nb": "Appelsiner"
   },
   "question": {
     "en": "Can dogs eat oranges?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść pomarańcze?",
     "sv": "Får hundar äta apelsiner?",
     "da": "Må hunde spise appelsiner?",
-    "fi": "Saako koira syödä appelsiinia?"
+    "fi": "Saako koira syödä appelsiinia?",
+    "nb": "Kan hunder spise appelsiner?"
   },
   "url_slug": {
     "en": "oranges",
@@ -47,7 +49,8 @@
     "pl": "pomarancze",
     "sv": "apelsiner",
     "da": "appelsiner",
-    "fi": "appelsiinit"
+    "fi": "appelsiinit",
+    "nb": "appelsiner"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, psy mogą jeść miąższ pomarańczy w ograniczonych ilościach, bez skórki i pestek. Pomarańcze mają dużo naturalnego cukru, więc niech będą okazjonalnym smakołykiem; wiele psów i tak nie lubi intensywnego zapachu cytrusów.",
     "sv": "Ja, hundar kan äta fruktköttet från en apelsin i små mängder, utan skal och kärnor. Apelsiner innehåller mycket naturligt socker, så ge dem bara som en godbit då och då; många hundar tycker ändå inte om den starka citruslukten.",
     "da": "Ja, hunde må spise frugtkødet fra en appelsin i begrænsede mængder, uden skal og kerner. Appelsiner indeholder meget naturligt sukker, så giv dem kun en gang imellem. Mange hunde bryder sig alligevel ikke om den stærke citrusduft.",
-    "fi": "Kyllä, koira voi syödä appelsiinin hedelmälihaa pieniä määriä, ilman kuorta ja siemeniä. Appelsiinissa on paljon luonnollista sokeria, joten anna sitä vain satunnaisena herkkuna; moni koira ei muutenkaan pidä voimakkaasta sitrustuoksusta."
+    "fi": "Kyllä, koira voi syödä appelsiinin hedelmälihaa pieniä määriä, ilman kuorta ja siemeniä. Appelsiinissa on paljon luonnollista sokeria, joten anna sitä vain satunnaisena herkkuna; moni koira ei muutenkaan pidä voimakkaasta sitrustuoksusta.",
+    "nb": "Ja, hunder kan spise fruktkjøttet fra en appelsin med måte, uten skall og kjerner. Appelsiner inneholder mye naturlig sukker, så la det bli en godbit av og til; mange hunder liker uansett ikke den sterke sitruslukten."
   },
   "why": {
     "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
@@ -80,7 +84,8 @@
     "pl": "ASPCA uznaje drzewo pomarańczowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznacza jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC, PDSA i Blue Cross podają, że miąższ jest w porządku, jeśli podawać go z umiarem. Skórka jest twarda i trudna do strawienia, może rozstroić żołądek i zwiększać ryzyko niedrożności; pestki mogą grozić zadławieniem. Zbyt dużo pomarańczy może rozstroić trawienie, w tym wywołać biegunkę.",
     "sv": "ASPCA anger att apelsinväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC, PDSA och Blue Cross skriver att fruktköttet är okej med måtta. Skalet är segt och svårsmält, kan ge orolig mage och kan öka risken för stopp; kärnor innebär en kvävningsrisk. För mycket apelsin kan ge matsmältningsbesvär, bland annat diarré.",
     "da": "ASPCA regner appelsinplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC, PDSA og Blue Cross skriver at frugtkødet er i orden med måde. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering, og kernerne kan udgøre en kvælningsfare. For mange appelsiner kan give fordøjelsesproblemer, herunder diarré.",
-    "fi": "ASPCA luokittelee appelsiinikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC, PDSA ja Blue Cross pitävät hedelmälihaa sopivana kohtuudella. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä; siemenet voivat aiheuttaa tukehtumisvaaran. Liika appelsiini voi aiheuttaa ruoansulatusvaivoja, myös ripulia."
+    "fi": "ASPCA luokittelee appelsiinikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC, PDSA ja Blue Cross pitävät hedelmälihaa sopivana kohtuudella. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä; siemenet voivat aiheuttaa tukehtumisvaaran. Liika appelsiini voi aiheuttaa ruoansulatusvaivoja, myös ripulia.",
+    "nb": "ASPCA oppgir at appelsinplanten er giftig for hunder på grunn av eteriske oljer og psoralener, men understreker at frukten er spiselig, og at det er skallet og plantematerialet som gir problemene. AKC, PDSA og Blue Cross skriver at fruktkjøttet er greit med måte. Skallet er seigt og tungt å fordøye, kan gi urolig mage og kan øke risikoen for blokkering; kjerner kan gi kvelningsfare. For mye appelsin kan gi fordøyelsesplager, blant annet diaré."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Nie dawaj psu skórki: jest trudna do strawienia i może zwiększać ryzyko niedrożności jelit, która w niektórych przypadkach wymaga pomocy weterynarza.",
     "sv": "Ge inte hunden skalet: det är svårsmält och kan öka risken för stopp i tarmen, vilket i vissa fall kräver veterinärvård.",
     "da": "Giv ikke din hund skallen. Den er svær at fordøje og kan øge risikoen for tarmblokering, som i nogle tilfælde kræver hjælp fra en dyrlæge.",
-    "fi": "Älä anna koirallesi kuorta: se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua."
+    "fi": "Älä anna koirallesi kuorta: se on vaikeasti sulavaa ja voi lisätä suolitukoksen riskiä, joka vaatii joskus eläinlääkärin apua.",
+    "nb": "Ikke gi hunden skallet: Det er tungt å fordøye og kan øke risikoen for blokkering i tarmen, noe som i noen tilfeller krever hjelp fra dyrlegen."
   },
   "serving": {
     "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
@@ -113,7 +119,8 @@
     "pl": "Tylko miąższ, bez skórki i pestek, pokrojony w małe kawałki; jako okazjonalny smakołyk.",
     "sv": "Bara fruktköttet, utan skal och kärnor, skuret i små bitar; som en godbit då och då.",
     "da": "Kun frugtkødet, uden skal og kerner, skåret i små stykker; som en godbid en gang imellem.",
-    "fi": "Vain hedelmäliha ilman kuorta ja siemeniä, pieniksi paloiksi leikattuna; satunnaisena herkkuna."
+    "fi": "Vain hedelmäliha ilman kuorta ja siemeniä, pieniksi paloiksi leikattuna; satunnaisena herkkuna.",
+    "nb": "Bare fruktkjøttet, uten skall og kjerner, skåret i små biter; som en godbit av og til."
   },
   "child": {
     "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
@@ -129,7 +136,8 @@
     "pl": "Niektóre psy lubią mały kawałek pomarańczy, a innym nie podoba się jej zapach! Dorosły najpierw obiera pomarańczę i wyjmuje pestki.",
     "sv": "Vissa hundar gillar en liten bit apelsin, och andra tycker inte om lukten! En vuxen skalar den och tar bort kärnorna.",
     "da": "Nogle hunde kan lide et lille stykke appelsin, og andre bryder sig ikke om lugten! En voksen skræller den og tager kernerne ud.",
-    "fi": "Jotkut koirat tykkäävät pienestä appelsiinipalasta, mutta toisten mielestä tuoksu ei ole kiva! Aikuinen kuorii appelsiinin ja ottaa siemenet pois."
+    "fi": "Jotkut koirat tykkäävät pienestä appelsiinipalasta, mutta toisten mielestä tuoksu ei ole kiva! Aikuinen kuorii appelsiinin ja ottaa siemenet pois.",
+    "nb": "Noen hunder liker en liten bit appelsin, og andre liker ikke lukten! En voksen skreller den og tar ut kjernene."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Czy psy mogą jeść skórkę pomarańczy?",
         "sv": "Får hundar äta apelsinskal?",
         "da": "Må hunde spise appelsinskal?",
-        "fi": "Saako koira syödä appelsiinin kuorta?"
+        "fi": "Saako koira syödä appelsiinin kuorta?",
+        "nb": "Kan hunder spise appelsinskall?"
       },
       "a": {
         "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
@@ -163,7 +172,8 @@
         "pl": "Nie. Skórka jest twarda i trudna do strawienia, może rozstroić żołądek i zwiększać ryzyko niedrożności. ASPCA podaje, że problemy powodują skórki i części rośliny.",
         "sv": "Nej. Skalet är segt och svårsmält, kan ge orolig mage och kan öka risken för stopp. ASPCA skriver att det är skalet och växtmaterialet som orsakar problem.",
         "da": "Nej. Skallen er sej og svær at fordøje, kan give dårlig mave og kan øge risikoen for tarmblokering. ASPCA skriver at det er skallerne og plantematerialet der giver problemer.",
-        "fi": "Ei. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä. ASPCA:n mukaan ongelmia aiheuttavat kuoret ja kasvimateriaali."
+        "fi": "Ei. Kuori on sitkeää ja vaikeasti sulavaa, voi sekoittaa vatsan ja lisätä tukoksen riskiä. ASPCA:n mukaan ongelmia aiheuttavat kuoret ja kasvimateriaali.",
+        "nb": "Nei. Skallet er seigt og tungt å fordøye, kan gi urolig mage og kan øke risikoen for blokkering. ASPCA skriver at det er skallet og plantematerialet som gir problemer."
       }
     },
     {
@@ -181,7 +191,8 @@
         "pl": "Czy psy mogą pić sok pomarańczowy?",
         "sv": "Får hundar dricka apelsinjuice?",
         "da": "Må hunde drikke appelsinjuice?",
-        "fi": "Saako koira juoda appelsiinimehua?"
+        "fi": "Saako koira juoda appelsiinimehua?",
+        "nb": "Kan hunder drikke appelsinjuice?"
       },
       "a": {
         "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
@@ -197,7 +208,8 @@
         "pl": "Sok pomarańczowy nie jest toksyczny, ale zwykle nie jest dobrym wyborem: zawiera skoncentrowane naturalne cukry i nie zawiera błonnika, który jest w całym owocu.",
         "sv": "Apelsinjuice är inte giftig, men det är i regel inget bra val: den innehåller koncentrerat naturligt socker och saknar fibrerna i hela frukten.",
         "da": "Appelsinjuice er ikke giftig, men det er sjældent et godt valg. Den indeholder koncentreret naturligt sukker og mangler fibrene fra hele frugten.",
-        "fi": "Appelsiinimehu ei ole myrkyllistä, mutta se ei yleensä ole hyvä valinta: siinä on tiivistynyttä luonnollista sokeria, ja siitä puuttuu kokonaisen hedelmän kuitu."
+        "fi": "Appelsiinimehu ei ole myrkyllistä, mutta se ei yleensä ole hyvä valinta: siinä on tiivistynyttä luonnollista sokeria, ja siitä puuttuu kokonaisen hedelmän kuitu.",
+        "nb": "Appelsinjuice er ikke giftig, men er sjelden et godt valg: Den inneholder konsentrert naturlig sukker og har ikke fibrene fra hel frukt."
       }
     }
   ],
@@ -359,6 +371,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3df279c4b550f4c0ab5d967e33e463962b6094d24a91ae08eb5622a580e44ef3"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "68927c0829398e0d66779bca12cb666cf9e51d8eaa81e1fe2f10d77e9d868d98"
     }
   }
 }
