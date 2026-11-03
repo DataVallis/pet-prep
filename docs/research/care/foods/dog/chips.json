@@ -238,7 +238,7 @@
         "fr": "Les chips aromatisées sont-elles pires ?",
         "es": "¿Las patatas fritas de sabores son peores?",
         "it": "Le patatine aromatizzate sono peggio?",
-        "pt": "As batatas fritas com sabores são piores?",
+        "pt": "As batatas fritas aromatizadas são piores?",
         "nl": "Zijn chips met een smaakje erger?",
         "pl": "Czy chipsy smakowe są gorsze?",
         "cs": "Jsou ochucené brambůrky horší?",
@@ -370,7 +370,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4ed6ee3a4b7c4df1e22c158ee594c0903adf87f2930942146332a8306fd88408"
+      "verified_hash": "ba2167a6d21f6373c2852d9a39eac0f7ba26e3b2c1748f52b14c0288d0db264b"
     },
     "nl": {
       "status": "verified",

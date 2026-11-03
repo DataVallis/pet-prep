@@ -77,7 +77,7 @@
     "fr": "Les graines peuvent provoquer une obstruction intestinale, surtout si un chien en mange beaucoup, et présenter un risque d’étouffement pour les petits chiens. L’écorce peut provoquer des troubles digestifs, des vomissements, une diarrhée ou une obstruction intestinale si elle est avalée en gros morceaux. Trop de pastèque peut causer un inconfort digestif ou une diarrhée en raison de son sucre naturel et de ses fibres.",
     "es": "Las semillas pueden provocar una obstrucción intestinal, sobre todo si el perro se come muchas, y pueden causar atragantamiento en perros pequeños. La corteza puede provocar malestar de estómago, vómitos, diarrea u obstrucción intestinal si se come en trozos grandes. Demasiada sandía puede causar molestias de estómago o diarrea por su azúcar natural y su fibra.",
     "it": "I semi possono causare un’ostruzione intestinale, soprattutto se un cane ne mangia molti, e possono far soffocare i cani piccoli. La buccia, se mangiata a grossi pezzi, può causare mal di stomaco, vomito, diarrea o un’ostruzione intestinale. Troppa anguria può causare fastidi allo stomaco o diarrea per via degli zuccheri naturali e delle fibre.",
-    "pt": "As sementes podem causar uma obstrução intestinal, sobretudo se o cão comer muitas, e podem provocar engasgamento em cães pequenos. A casca pode causar mal-estar de estômago, vómitos, diarreia ou obstrução intestinal se for comida em pedaços grandes. Melancia a mais pode causar desconforto de estômago ou diarreia por causa do açúcar natural e da fibra.",
+    "pt": "As sementes podem causar uma obstrução intestinal, sobretudo se o cão comer muitas, e podem provocar engasgamento em cães pequenos. A casca pode causar mal-estar de estômago, vómitos, diarreia ou obstrução intestinal se for comida em pedaços grandes. Melancia em excesso pode causar mal-estar de estômago ou diarreia por causa do açúcar natural e da fibra.",
     "nl": "Pitten kunnen een darmverstopping veroorzaken, vooral als een hond er veel eet, en kleine honden kunnen erin stikken. De schil kan maagklachten, braken, diarree of een darmverstopping veroorzaken als hij in grote stukken wordt gegeten. Te veel watermeloen kan door de natuurlijke suiker en vezels buikpijn of diarree geven.",
     "pl": "Pestki mogą spowodować niedrożność jelit, zwłaszcza gdy pies zje ich dużo, a u małych psów grożą zadławieniem. Skórka zjedzona w dużych kawałkach może wywołać rozstrój żołądka, wymioty, biegunkę lub niedrożność jelit. Zbyt dużo arbuza może wywołać dolegliwości żołądkowe lub biegunkę z powodu naturalnego cukru i błonnika.",
     "cs": "Semínka mohou způsobit ucpání střev, zejména když jich pes sní hodně, a malí psi se jimi mohou udusit. Kůra může při snědení ve velkých kusech způsobit žaludeční potíže, zvracení, průjem nebo ucpání střev. Příliš mnoho melounu může kvůli přirozenému cukru a vláknině způsobit žaludeční potíže nebo průjem.",
@@ -95,7 +95,7 @@
     "fr": "La première fois, donnez-en une petite quantité et surveillez l’apparition de troubles digestifs. Contactez votre vétérinaire si votre chien présente des signes après avoir mangé de la pastèque.",
     "es": "La primera vez, dale poca cantidad y vigila si aparece malestar digestivo. Contacta con tu veterinario si tu perro tiene síntomas después de comer sandía.",
     "it": "La prima volta dagliene poca e osserva se compaiono disturbi digestivi. Contatta il veterinario se il tuo cane mostra sintomi dopo aver mangiato anguria.",
-    "pt": "Da primeira vez, dá uma pequena quantidade e vigia se há problemas digestivos. Contacta o teu veterinário se o teu cão tiver sintomas depois de comer melancia.",
+    "pt": "Da primeira vez, dá uma pequena quantidade e vigia se há problemas digestivos. Contacta o teu veterinário se o teu cão tiver sinais depois de comer melancia.",
     "nl": "Geef de eerste keer een kleine hoeveelheid en let op spijsverteringsklachten. Neem contact op met je dierenarts als je hond verschijnselen vertoont na het eten van watermeloen.",
     "pl": "Za pierwszym razem podaj małą ilość i obserwuj, czy nie pojawią się problemy trawienne. Skontaktuj się z weterynarzem, jeśli po zjedzeniu arbuza u psa pojawią się niepokojące objawy.",
     "cs": "Poprvé dejte malé množství a sledujte, zda se neobjeví zažívací potíže. Pokud má váš pes po snědení melounu nějaké příznaky, obraťte se na veterináře.",
@@ -275,7 +275,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a68ce780403c97be907a5cc97ad75a9ed7b220e08ca6c0b4cc2319a833edae94"
+      "verified_hash": "c19e06c16140cfa874daf3c2c94d406493dcf12102eb67f98762f724e3ab4ae3"
     },
     "nl": {
       "status": "verified",

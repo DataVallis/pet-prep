@@ -234,7 +234,7 @@
     "fr": "Les raisins secs sont de tout petits grains de raisin séchés, et ils ne sont pas pour les chiens. Si ton chien en mange, préviens tout de suite un adulte.",
     "es": "Las pasas son uvas secas muy pequeñas, y no son para perros. Si tu perro se come alguna, díselo enseguida a un adulto.",
     "it": "L’uvetta è uva piccola e secca, e non è per i cani. Se il tuo cane ne mangia un po’, avvisa subito un adulto.",
-    "pt": "As passas são uvas pequeninas secas e não são para cães. Se o teu cão comer algumas, avisa logo um adulto.",
+    "pt": "As passas são uvas secas pequeninas e não são para cães. Se o teu cão comer algumas, avisa logo um adulto.",
     "nl": "Rozijnen zijn kleine gedroogde druiven, en ze zijn niet voor honden. Eet je hond ervan? Vertel het meteen aan een volwassene.",
     "pl": "Rodzynki to malutkie suszone winogrona i nie są dla psów. Jeśli twój pies jakieś zje, od razu powiedz dorosłemu.",
     "cs": "Rozinky jsou malinké sušené hrozny a pro psy nejsou. Když je pes sní, řekni to hned dospělému.",
@@ -409,7 +409,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8de82c0e95a62c277f414adf4e3d8396ce312fb560d9d4e800607bdcddb01a32"
+      "verified_hash": "6acd97f2e5ee6ec01283623d956bcebd86d332e52d0d4de258339a172582aa5b"
     },
     "nl": {
       "status": "verified",

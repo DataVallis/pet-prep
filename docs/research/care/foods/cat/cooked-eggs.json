@@ -129,7 +129,7 @@
     "fr": "Un tout petit peu d’œuf cuit nature peut être une friandise pour un chat. Demande d’abord à un adulte de le cuire.",
     "es": "Un poquito de huevo cocinado y sin nada puede ser un premio para un gato. Pídele a un adulto que lo cocine primero.",
     "it": "Un pezzettino di uovo cotto e semplice può essere un premio per un gatto. Chiedi a un adulto di cuocerlo prima.",
-    "pt": "Um bocadinho de ovo cozinhado simples pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe.",
+    "pt": "Um bocadinho de ovo simples, cozinhado pode ser uma guloseima para um gato. Pede primeiro a um adulto que o cozinhe.",
     "nl": "Een klein beetje gewoon gekookt ei kan een snoepje zijn voor een kat. Vraag een volwassene om het eerst te koken.",
     "pl": "Odrobina zwykłego gotowanego jajka może być smakołykiem dla kota. Poproś dorosłego, żeby najpierw je ugotował.",
     "cs": "Kousíček obyčejného uvařeného vajíčka může být pro kočku pamlsek. Požádej dospělého, ať ho nejdřív připraví.",
@@ -246,7 +246,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f8aa580ff22069e6ee57917a0a92cc27ab1e806c83408c99f7bc300500029fee"
+      "verified_hash": "3105c8276845f4efbbfcc936285bafdfcbf87097f7e79b97f45b996ef0f8751f"
     },
     "nl": {
       "status": "verified",

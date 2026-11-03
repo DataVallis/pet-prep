@@ -128,7 +128,7 @@
       "Vómitos",
       "Diarreia",
       "Pouca energia ou pouco apetite",
-      "Desconforto na barriga"
+      "Mal-estar de barriga"
     ],
     "nl": [
       "Braken",
@@ -220,7 +220,7 @@
     "fr": "Les chiens ne doivent manger que des œufs cuits. Les œufs crus peuvent porter des microbes qui rendent malades les chiens et les humains.",
     "es": "Los perros solo pueden comer huevos cocinados. Los huevos crudos pueden tener gérmenes que hacen enfermar a perros y personas.",
     "it": "I cani possono mangiare solo uova cotte. Le uova crude possono avere germi che fanno stare male cani e persone.",
-    "pt": "Os cães só devem comer ovos cozinhados. Os ovos crus podem ter germes que põem doentes os cães e as pessoas.",
+    "pt": "Os cães só devem comer ovos cozinhados. Os ovos crus podem ter germes que deixam doentes tanto os cães como as pessoas.",
     "nl": "Honden mogen alleen gekookte eieren. In rauwe eieren kunnen bacteriën zitten waar honden en mensen ziek van worden.",
     "pl": "Psy mogą jeść tylko ugotowane jajka. Surowe jajka mogą mieć zarazki, przez które psy i ludzie źle się czują.",
     "cs": "Psi smějí jen vajíčka, která jsou dobře uvařená. Na syrových vajíčkách můžou být bacily, ze kterých je psům i lidem zle.",
@@ -358,7 +358,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0a72a8c3cabb22db5760ca41a6295e4fad84fb242e666b7de70083023b4c6f20"
+      "verified_hash": "66f917fac42b40d51992d07f23fc5d4549ecc99d7155304cd7d549b26dcdb418"
     },
     "nl": {
       "status": "verified",

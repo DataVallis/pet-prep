@@ -60,7 +60,7 @@
     "fr": "Mieux vaut s’en abstenir. Cats Protection conseille d’éviter les os crus, car ils augmentent le risque d’étouffement ou d’occlusion de l’estomac. Les os peuvent aussi blesser l’intestin du chat, et la viande crue peut contenir des bactéries et des parasites dangereux.",
     "es": "Mejor que no. Cats Protection aconseja evitar los huesos crudos porque aumentan el riesgo de atragantamiento o de obstrucción en el estómago. Los huesos también pueden lesionar el aparato digestivo del gato, y la carne cruda puede contener bacterias y parásitos dañinos.",
     "it": "Meglio di no. Cats Protection consiglia di evitare le ossa crude perché aumentano il rischio di soffocamento o di ostruzione dello stomaco. Le ossa possono anche ferire l’intestino del gatto, e la carne cruda può contenere batteri e parassiti nocivi.",
-    "pt": "É melhor não. A Cats Protection aconselha a evitar os ossos crus, porque aumentam o risco de engasgamento ou de obstrução no estômago. Os ossos também podem ferir o intestino do gato, e a carne crua pode ter bactérias e parasitas nocivos.",
+    "pt": "É melhor não. A Cats Protection aconselha a evitar os ossos crus, porque aumentam o risco de engasgo ou de obstrução no estômago. Os ossos também podem ferir o intestino do gato, e a carne crua pode ter bactérias e parasitas nocivos.",
     "nl": "Liever niet. Cats Protection raadt rauwe botten af, omdat ze de kans op verslikken of een verstopping in de maag vergroten. Botten kunnen ook de darmen van een kat beschadigen, en rauw vlees kan schadelijke bacteriën en parasieten bevatten.",
     "pl": "Lepiej nie. Cats Protection radzi unikać surowych kości, bo zwiększają ryzyko zadławienia lub niedrożności żołądka. Kości mogą też zranić przewód pokarmowy kota, a surowe mięso może przenosić szkodliwe bakterie i pasożyty.",
     "cs": "Raději ne. Cats Protection doporučuje se syrovým kostem vyhnout, protože zvyšují riziko udušení nebo ucpání žaludku. Kosti mohou kočce také poranit trávicí trakt a syrové maso může přenášet škodlivé bakterie a parazity.",
@@ -119,7 +119,7 @@
       "Dolore alla pancia (si nasconde, ringhia, non vuole essere toccato)"
     ],
     "pt": [
-      "Engasgamento",
+      "Engasgo",
       "Vómitos",
       "Dor de barriga (esconder-se, rosnar, não querer ser tocado)"
     ],
@@ -171,7 +171,7 @@
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a avalé un os, s’étouffe ou vomit. Notez de quel os il s’agissait et à quelle heure. N’attendez pas de voir ce qui se passe et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario si tu gato se ha tragado un hueso, se está atragantando o vomita. Apunta qué tipo de hueso era y cuándo ocurrió. No esperes a ver qué pasa y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha ingerito un osso, sta soffocando o vomita. Annota che tipo di osso era e quando l’ha mangiato. Non aspettare di vedere che cosa succede e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso ou se estiver a engasgar-se ou a vomitar. Toma nota do tipo de osso e de quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso ou se estiver a engasgar-se ou a vomitar. Anota o tipo de osso e quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat een bot heeft ingeslikt, zich verslikt of braakt. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął kość, dławi się lub wymiotuje. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka spolkla kost, dusí se nebo zvrací, okamžitě se obraťte na veterináře. Poznamenejte si, o jakou kost šlo a kdy se to stalo. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
@@ -275,7 +275,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9775c66d290290ed51e5b01d1b8f36acd6bfc19084edc05fc7896817b6eed00a"
+      "verified_hash": "b72039bff984f7e4846d738b4958430792ba3431b84acae77badc066d39dc8a3"
     },
     "nl": {
       "status": "verified",

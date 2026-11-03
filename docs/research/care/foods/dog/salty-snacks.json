@@ -77,7 +77,7 @@
     "fr": "Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais trop de sel peut entraîner une rétention d’eau et, en grande quantité, une intoxication au sel. Les petits chiens ayant des problèmes de santé sont plus à risque lorsqu’ils n’ont pas d’eau fraîche. Les aliments destinés au chien sont à servir de préférence sans sel ajouté ni assaisonnement.",
     "es": "La comida salada con moderación no debería causar una intoxicación por sal, pero demasiada sal puede provocar retención de líquidos y, en grandes cantidades, intoxicación por sal. Los perros pequeños con problemas de salud corren más riesgo cuando no tienen agua fresca a mano. Lo mejor es servir la comida de los perros sin sal añadida ni condimentos.",
     "it": "Mangiati con moderazione, i cibi salati non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti.",
-    "pt": "A comida salgada com moderação não deve causar intoxicação por sal, mas sal a mais pode levar à retenção de líquidos e, em grandes quantidades, a intoxicação por sal. Os cães pequenos com problemas de saúde correm mais risco quando não têm água fresca. A comida para cães deve ser servida sem sal adicionado nem temperos.",
+    "pt": "A comida salgada com moderação não deve causar intoxicação por sal, mas o excesso de sal pode levar à retenção de líquidos e, em grandes quantidades, a intoxicação por sal. Os cães pequenos com problemas de saúde correm mais risco quando não têm água fresca. A comida para cães deve ser servida sem sal adicionado nem temperos.",
     "nl": "Zout eten met mate zou geen zoutvergiftiging moeten veroorzaken, maar te veel zout kan ervoor zorgen dat het lichaam vocht vasthoudt, en in grote hoeveelheden tot zoutvergiftiging leiden. Kleine honden met gezondheidsproblemen lopen meer risico als er geen vers water is. Eten voor honden geef je het best zonder toegevoegd zout of kruiden.",
     "pl": "Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale nadmiar soli może prowadzić do zatrzymywania wody w organizmie, a w dużych ilościach – do zatrucia solą. Małe psy z problemami zdrowotnymi są bardziej zagrożone, gdy nie mają dostępu do świeżej wody. Jedzenie dla psa najlepiej podawać bez dodatku soli i przypraw.",
     "cs": "Slané jídlo s mírou by otravu solí způsobit nemělo, příliš mnoho soli však může vést k zadržování tekutin a ve velkém množství k otravě solí. Malí psi se zdravotními problémy jsou ohroženější, když nemají k dispozici čerstvou vodu. Jídlo pro psy je nejlepší podávat bez přidané soli a koření.",
@@ -235,7 +235,7 @@
     "fr": "Les en-cas salés sont pour les humains. Trop de sel donne soif aux chiens et les rend malades, alors donne à ton chien ses propres friandises.",
     "es": "Los aperitivos salados son para las personas. Demasiada sal da sed a los perros y los pone malitos, así que dale a tu perro sus propios premios.",
     "it": "Gli snack salati sono per le persone. Troppo sale fa venire sete ai cani e li fa stare male, quindi dai al tuo cane i suoi premi.",
-    "pt": "Os petiscos salgados são para pessoas. Sal a mais dá sede aos cães e põe-nos doentes, por isso dá ao teu cão as guloseimas dele.",
+    "pt": "Os petiscos salgados são para pessoas. Demasiado sal dá sede aos cães e põe-nos doentes, por isso dá ao teu cão as guloseimas dele.",
     "nl": "Zoute snacks zijn voor mensen. Van te veel zout krijgen honden dorst en worden ze ziek, dus geef je hond zijn eigen snoepjes.",
     "pl": "Słone przekąski są dla ludzi. Od nadmiaru soli psom chce się pić i rozchorowują się, więc dawaj psu jego własne smakołyki.",
     "cs": "Slané pochutiny jsou pro lidi. Po moc velkém množství soli mají psi žízeň a je jim zle, tak dej svému psovi jeho vlastní pamlsky.",
@@ -386,7 +386,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6e33dde414b418e9bc3c2a2884900aa4fbd372286a3ef9b825a76d4acdc4dcd6"
+      "verified_hash": "d51aa480263fabcde77e74be34ef3c36a6f158b5043282ca412038dfd2a18a4c"
     },
     "nl": {
       "status": "verified",

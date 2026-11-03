@@ -77,7 +77,7 @@
     "fr": "Les crustacés crus contiennent des agents pathogènes nocifs que la cuisson permet d’éviter. Les carapaces de crevettes peuvent provoquer un étouffement et des obstructions. Les crevettes frites ou panées apportent des graisses et des huiles inutiles. Les crevettes sont pauvres en graisses et en calories mais riches en cholestérol : la modération est essentielle.",
     "es": "El marisco crudo contiene patógenos dañinos que se evitan cocinándolo. La cáscara de las gambas puede provocar atragantamiento y obstrucciones. Las gambas fritas o rebozadas añaden grasas y aceites innecesarios. Las gambas tienen poca grasa y pocas calorías, pero mucho colesterol, así que la clave es la moderación.",
     "it": "I crostacei crudi contengono patogeni dannosi che la cottura elimina. Il guscio dei gamberetti può causare soffocamento e ostruzioni. I gamberetti fritti o impanati aggiungono grassi e oli inutili. I gamberetti hanno pochi grassi e poche calorie ma molto colesterolo, quindi la moderazione è fondamentale.",
-    "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura evita. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial.",
+    "pt": "O marisco cru contém agentes patogénicos nocivos que a cozedura elimina. As cascas do camarão podem causar engasgamento e obstruções. O camarão frito ou panado acrescenta gorduras e óleos desnecessários. O camarão tem pouca gordura e poucas calorias, mas muito colesterol, por isso a moderação é essencial.",
     "nl": "Rauwe schaaldieren bevatten schadelijke ziekteverwekkers, die je met koken vermijdt. Een hond kan stikken in garnalenschalen, en ze kunnen verstoppingen veroorzaken. Gefrituurde of gepaneerde garnalen bevatten onnodig vet en olie. Garnalen bevatten weinig vet en calorieën, maar veel cholesterol, dus met mate is het devies.",
     "pl": "Surowe skorupiaki zawierają szkodliwe patogeny, których pozwala uniknąć gotowanie. Pancerze krewetek grożą zadławieniem i mogą powodować niedrożność. Krewetki smażone lub panierowane dostarczają niepotrzebnych tłuszczów i olejów. Krewetki mają mało tłuszczu i kalorii, ale dużo cholesterolu, więc kluczowy jest umiar.",
     "cs": "Syrové plody moře obsahují škodlivé patogeny, kterým se tepelnou úpravou vyhnete. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečné tuky a oleje navíc. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
@@ -95,7 +95,7 @@
     "fr": "Arrêtez de donner des crevettes si votre chien a mal au ventre ou semble malade, et appelez votre vétérinaire si les signes s’aggravent. Appelez aussi votre vétérinaire si votre chien a avalé des carapaces et semble s’étouffer.",
     "es": "Deja de darle gambas si tu perro muestra molestias en la barriga o parece encontrarse mal, y llama a tu veterinario si los síntomas empeoran. Llama también a tu veterinario si se ha tragado cáscaras y parece que se atraganta.",
     "it": "Smetti di dare gamberetti se il tuo cane ha fastidi alla pancia o sembra stare male, e chiama il veterinario se i sintomi peggiorano. Chiama il veterinario anche se ha ingoiato dei gusci e sembra soffocare.",
-    "pt": "Deixa de dar camarão se o teu cão mostrar desconforto na barriga ou parecer adoentado, e liga ao teu veterinário se os sinais piorarem. Liga também ao teu veterinário se o teu cão engoliu cascas e parecer estar a engasgar-se.",
+    "pt": "Deixa de dar camarão se o teu cão mostrar mal-estar de barriga ou parecer adoentado, e liga ao teu veterinário se os sinais piorarem. Liga também ao teu veterinário se o teu cão engoliu cascas e parecer estar a engasgar-se.",
     "nl": "Geef geen garnalen meer als je hond last van zijn buik heeft of zich niet lekker lijkt te voelen, en bel je dierenarts als de verschijnselen erger worden. Bel ook je dierenarts als je hond schalen heeft ingeslikt en lijkt te stikken.",
     "pl": "Przestań dawać krewetki, jeśli twój pies ma dolegliwości żołądkowe lub wydaje się chory, i zadzwoń do weterynarza, jeśli objawy się nasilą. Zadzwoń też, jeśli pies połknął pancerze i wygląda, jakby się dławił.",
     "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí.",
@@ -262,7 +262,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "43ba7acab6ed0692c35c29ef6e53b740113b01dd9b28cd2932d343f8cb3bb07c"
+      "verified_hash": "cbdd1f78cb41ff7589dbf1f06596c1c3175b335a1da60ed3304cd6aca13c2ab1"
     },
     "nl": {
       "status": "verified",

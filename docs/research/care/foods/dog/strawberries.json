@@ -77,7 +77,7 @@
     "fr": "Les queues et les feuilles ne sont pas toxiques mais peuvent déranger l’estomac, et les fraises entières peuvent présenter un risque d’étouffement, surtout pour les petites races. Évitez les fraises au sirop ou en conserve, trop sucrées et pouvant même contenir des édulcorants artificiels toxiques pour les chiens.",
     "es": "El tallo y las hojas no son tóxicos, pero pueden sentar mal al estómago, y las fresas enteras pueden suponer un riesgo de atragantamiento, sobre todo en razas pequeñas. Evita las fresas en almíbar o en lata, que tienen demasiado azúcar e incluso pueden llevar edulcorantes artificiales tóxicos para los perros.",
     "it": "Piccioli e foglie non sono tossici, ma possono causare mal di stomaco, e le fragole intere possono comportare un rischio di soffocamento, soprattutto per le razze più piccole. Evita le fragole sciroppate o in scatola, che hanno troppo zucchero e possono persino contenere dolcificanti artificiali tossici per i cani.",
-    "pt": "Os pés e as folhas não são tóxicos, mas podem causar mal-estar de estômago, e os morangos inteiros podem representar risco de engasgamento, sobretudo para raças mais pequenas. Evita morangos em calda ou enlatados, que têm açúcar a mais e podem até conter adoçantes artificiais tóxicos para cães.",
+    "pt": "Os pés e as folhas não são tóxicos, mas podem causar mal-estar de estômago, e os morangos inteiros podem representar risco de engasgamento, sobretudo para raças mais pequenas. Evita morangos em calda ou enlatados, que têm açúcar em excesso e podem até conter adoçantes artificiais tóxicos para cães.",
     "nl": "De steeltjes en blaadjes zijn niet giftig, maar kunnen de maag van streek maken, en een hond kan stikken in hele aardbeien, vooral bij kleinere rassen. Vermijd aardbeien op siroop en aardbeien uit blik: die bevatten te veel suiker en soms zelfs kunstmatige zoetstoffen die giftig zijn voor honden.",
     "pl": "Szypułki i liście nie są toksyczne, ale mogą wywołać rozstrój żołądka, a całe truskawki mogą grozić zadławieniem, zwłaszcza u mniejszych ras. Unikaj truskawek w syropie i z puszki: mają za dużo cukru, a mogą nawet zawierać sztuczne słodziki toksyczne dla psów.",
     "cs": "Stopky a lístky nejsou jedovaté, mohou ale podráždit žaludek, a celé jahody mohou způsobit dušení, zejména u menších plemen. Vyhněte se jahodám v sirupu nebo z konzervy, které mají příliš mnoho cukru a mohou dokonce obsahovat umělá sladidla, která jsou pro psy jedovatá.",
@@ -308,7 +308,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b238af30620d85c1eade020d4deca3d94760c1b3580cd72fbbc95cc1a53cf4a3"
+      "verified_hash": "607a5e327f9ee3ab41d2fe3624a1c4342424f860763da4bb20a432efaf6bf36a"
     },
     "nl": {
       "status": "verified",

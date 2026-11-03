@@ -77,7 +77,7 @@
     "fr": "La dinde n’est pas toxique, mais sa préparation compte. La peau et le gras sont riches et peuvent provoquer une pancréatite, tandis que les assaisonnements peuvent irriter l’estomac d’un chien. L’oignon et l’ail peuvent être toxiques pour les chiens. Les os de volaille cuits sont cassants et peuvent éclater. Le blanc est plus maigre que la viande brune de la cuisse.",
     "es": "El pavo no es tóxico, pero importa cómo se cocina. La piel y la grasa son muy pesadas y pueden provocar pancreatitis, y los condimentos de más pueden irritar el estómago del perro. La cebolla y el ajo pueden ser tóxicos para los perros. Los huesos de ave cocinados son quebradizos y pueden astillarse. La carne blanca es más magra que la oscura.",
     "it": "Il tacchino non è tossico, ma conta come viene cucinato. Pelle e grasso sono pesanti e possono causare una pancreatite, mentre i condimenti in più possono irritare lo stomaco del cane. Cipolla e aglio possono essere tossici per i cani. Le ossa cotte del pollame sono fragili e possono scheggiarsi. La carne bianca è più magra di quella scura.",
-    "pt": "O peru não é tóxico, mas a forma como é cozinhado faz diferença. A pele e a gordura são pesadas e podem causar pancreatite, e os temperos a mais podem irritar o estômago do cão. A cebola e o alho podem ser tóxicos para os cães. Os ossos de aves cozinhados são quebradiços e podem lascar. A carne branca é mais magra do que a carne escura.",
+    "pt": "O peru não é tóxico, mas a forma como é cozinhado faz diferença. A pele e a gordura são pesadas e podem causar pancreatite, e o excesso de temperos pode irritar o estômago do cão. A cebola e o alho podem ser tóxicos para os cães. Os ossos de aves cozinhados são quebradiços e podem lascar. A carne branca é mais magra do que a carne escura.",
     "nl": "Kalkoen is niet giftig, maar de bereiding doet ertoe. Vel en vet zijn zwaar en kunnen alvleesklierontsteking veroorzaken, terwijl extra kruiden de maag van een hond kunnen irriteren. Ui en knoflook kunnen giftig zijn voor honden. Gekookte botten van gevogelte zijn broos en kunnen splinteren. Wit vlees is magerder dan donker vlees.",
     "pl": "Indyk nie jest toksyczny, ale ważne jest, jak został przygotowany. Skóra i tłuszcz są ciężkostrawne i mogą wywołać zapalenie trzustki, a dodatkowe przyprawy mogą podrażnić żołądek psa. Cebula i czosnek mogą być toksyczne dla psów. Gotowane kości drobiowe są kruche i mogą łamać się na odłamki. Białe mięso jest chudsze niż ciemne.",
     "cs": "Krůtí maso není jedovaté, záleží ale na tom, jak je připravené. Kůže a tuk jsou těžké a mohou způsobit zánět slinivky břišní, zatímco koření navíc může podráždit psí žaludek. Cibule a česnek mohou být pro psy jedovaté. Tepelně upravené drůbeží kosti jsou křehké a mohou se tříštit. Bílé maso je libovější než tmavé.",
@@ -278,7 +278,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3ad42e9480b8cabfa5c194aab4cb57e358479c26522de7c2ee521d623b69294d"
+      "verified_hash": "4f565fdbca90569b8a4440bf1855fe0191b949dd42bc100a2ac5cb43067f239c"
     },
     "nl": {
       "status": "verified",

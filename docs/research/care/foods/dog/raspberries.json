@@ -77,7 +77,7 @@
     "fr": "Les framboises contiennent naturellement du xylitol, à des teneurs plus élevées que la plupart des autres fruits, même si la quantité reste faible par rapport à celle connue pour nuire aux chiens. Trop de framboises peuvent provoquer des vomissements, une diarrhée, une constipation ou d’autres troubles digestifs. Les produits sucrés à la framboise sont à éviter.",
     "es": "Las frambuesas contienen xilitol natural en niveles más altos que la mayoría de las frutas, aunque la cantidad es baja comparada con la que se sabe que hace daño a los perros. Dar demasiadas frambuesas puede provocar vómitos, diarrea, estreñimiento u otras molestias digestivas. Hay que evitar los productos de frambuesa endulzados.",
     "it": "I lamponi contengono xilitolo naturale in quantità maggiori rispetto alla maggior parte degli altri frutti, anche se la quantità è bassa rispetto a quella che notoriamente fa male ai cani. Darne troppi può causare vomito, diarrea, stitichezza o altri disturbi digestivi. I prodotti ai lamponi zuccherati vanno evitati.",
-    "pt": "As framboesas contêm xilitol natural em níveis mais altos do que a maioria das outras frutas, embora a quantidade seja baixa em comparação com a que se sabe ser prejudicial para cães. Dar framboesas a mais pode causar vómitos, diarreia, prisão de ventre ou outros problemas digestivos. Os produtos de framboesa adoçados devem ser evitados.",
+    "pt": "As framboesas contêm xilitol natural em níveis mais altos do que a maioria das outras frutas, embora a quantidade seja baixa em comparação com a que se sabe ser prejudicial para cães. Framboesas em excesso podem causar vómitos, diarreia, prisão de ventre ou outros problemas digestivos. Os produtos de framboesa adoçados devem ser evitados.",
     "nl": "Frambozen bevatten van nature meer xylitol dan de meeste andere vruchten, al is die hoeveelheid laag vergeleken met de hoeveelheid waarvan bekend is dat die honden schaadt. Te veel frambozen kunnen braken, diarree, obstipatie of andere spijsverteringsklachten veroorzaken. Vermijd gezoete frambozenproducten.",
     "pl": "Maliny zawierają więcej naturalnie występującego ksylitolu niż większość innych owoców, choć to wciąż mało w porównaniu z ilością, o której wiadomo, że szkodzi psom. Przekarmienie malinami może wywołać wymioty, biegunkę, zaparcie lub inne problemy trawienne. Należy unikać słodzonych produktów z malin.",
     "cs": "Maliny obsahují přirozeně se vyskytující xylitol ve větším množství než většina ostatního ovoce, i když je to málo ve srovnání s množstvím, o kterém je známo, že psům škodí. Příliš mnoho malin může způsobit zvracení, průjem, zácpu nebo jiné zažívací potíže. Slazeným malinovým výrobkům se vyhněte.",
@@ -129,7 +129,7 @@
     "fr": "Les chiens peuvent avoir quelques framboises en friandise ! Un adulte décide combien en donner, parce que trop de framboises peuvent donner mal au ventre.",
     "es": "¡Los perros pueden comer unas pocas frambuesas como premio! Un adulto decide cuántas, porque demasiadas pueden darles dolor de barriga.",
     "it": "I cani possono avere qualche lampone come premio! Un adulto decide quanti, perché troppi possono far venire il mal di pancia.",
-    "pt": "Os cães podem comer algumas framboesas como guloseima! Um adulto decide quantas, porque framboesas a mais podem dar dor de barriga.",
+    "pt": "Os cães podem comer algumas framboesas como guloseima! Um adulto decide quantas, porque demasiadas framboesas podem dar dor de barriga.",
     "nl": "Honden mogen een paar frambozen als snoepje! Een volwassene bepaalt hoeveel, want van te veel kan een hondenbuikje van streek raken.",
     "pl": "Psy mogą dostać kilka malin jako smakołyk! Dorosły decyduje, ile ich dać, bo od zbyt wielu malin może rozboleć brzuszek.",
     "cs": "Pejsci si můžou dát pár malin jako pamlsek! Kolik, rozhodne dospělý, protože moc malin může rozbolet bříško.",
@@ -264,7 +264,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e25e8235d4c4410ee2ba6fb6b6c4ae0404a1fe992d2f51648f42fc18a4f26f4f"
+      "verified_hash": "b72cfe49e3ecb0b233b0fb18195f3f22ca6dde1300b4143fa1f2fdb5598e2190"
     },
     "nl": {
       "status": "verified",

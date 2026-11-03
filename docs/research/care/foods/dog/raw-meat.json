@@ -60,7 +60,7 @@
     "fr": "C’est déconseillé. La viande crue contient souvent des bactéries comme les salmonelles, la listeria et E. coli, qui peuvent rendre les chiens malades et se transmettre aux personnes du foyer, même si le chien semble en bonne santé. Des organismes vétérinaires comme l’AVMA déconseillent l’alimentation crue.",
     "es": "No se recomienda. La carne cruda suele llevar bacterias como Salmonella, Listeria y E. coli, que pueden hacer enfermar a los perros y pasar a las personas de la casa, aunque el perro parezca sano. Organismos veterinarios como la AVMA desaconsejan la alimentación cruda.",
     "it": "È sconsigliata. La carne cruda porta spesso batteri come Salmonella, Listeria ed E. coli, che possono far ammalare i cani e passare alle persone di casa, anche quando il cane sembra sano. Enti veterinari come l’AVMA sconsigliano l’alimentazione a crudo.",
-    "pt": "Não é recomendado. A carne crua tem muitas vezes bactérias como Salmonella, Listeria e E. coli, que podem pôr os cães doentes e passar para as pessoas da casa, mesmo quando o cão parece saudável. Organismos veterinários como a AVMA desaconselham a alimentação crua.",
+    "pt": "Não é recomendado. A carne crua tem muitas vezes bactérias como Salmonella, Listeria e E. coli, que podem pôr os cães doentes e passar para as pessoas da casa, mesmo quando o cão parece saudável. Organizações veterinárias como a AVMA desaconselham a alimentação crua.",
     "nl": "Niet aan te raden. Rauw vlees bevat vaak bacteriën zoals salmonella, listeria en E. coli, waar honden ziek van kunnen worden en die zich naar mensen in huis kunnen verspreiden, ook als de hond gezond lijkt. Veterinaire organisaties zoals de AVMA raden het voeren van rauw vlees af.",
     "pl": "Nie zaleca się. Surowe mięso często przenosi bakterie, takie jak Salmonella, Listeria i E. coli, które mogą wywołać chorobę u psa i przenieść się na domowników, nawet gdy pies wygląda na zdrowego. Organizacje weterynaryjne, takie jak AVMA, odradzają karmienie surowym mięsem.",
     "cs": "Nedoporučuje se. Syrové maso často obsahuje bakterie, například salmonelu, listerii a E. coli, které mohou psům uškodit a přenést se na lidi v domácnosti, i když pes vypadá zdravě. Veterinární organizace, například AVMA, od krmení syrovou stravou odrazují.",
@@ -128,7 +128,7 @@
       "Vómitos",
       "Diarreia",
       "Pouca energia ou pouco apetite",
-      "Desconforto na barriga"
+      "Mal-estar de barriga"
     ],
     "nl": [
       "Braken",
@@ -421,7 +421,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "05d2155d2b271d1f23940cece6d5bb81a40710061957ce6d1bf3b5cbea2ff2c4"
+      "verified_hash": "1240fe9fbcfd54f2b757a247a25e039c2397fdad119dc7d7c0095ed418580606"
     },
     "nl": {
       "status": "verified",

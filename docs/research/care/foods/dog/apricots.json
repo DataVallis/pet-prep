@@ -204,7 +204,7 @@
     "fr": "Les noyaux, les feuilles et les tiges d’abricot sont mauvais pour les chiens. Garde les abricots pour les humains et préviens un adulte si ton chien mâchouille un noyau.",
     "es": "Los huesos, hojas y tallos del albaricoque son malos para los perros. Deja los albaricoques para las personas y avisa a un adulto si tu perro mordisquea un hueso.",
     "it": "Noccioli, foglie e gambi delle albicocche fanno male ai cani. Lascia le albicocche alle persone e dillo a un adulto se il tuo cane mastica un nocciolo.",
-    "pt": "Os caroços, as folhas e os pés dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço.",
+    "pt": "Os caroços, as folhas e os caules dos alperces fazem mal aos cães. Os alperces são para as pessoas; avisa um adulto se o teu cão roer um caroço.",
     "nl": "Abrikozenpitten, -bladeren en -stelen zijn slecht voor honden. Abrikozen zijn voor mensen. Vertel het aan een volwassene als je hond op een pit kauwt.",
     "pl": "Pestki, liście i łodyżki moreli szkodzą psom. Morele zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies gryzie pestkę.",
     "cs": "Meruňkové pecky, listy a stonky psům škodí. Meruňky nech pro lidi, a když pes kouše pecku, řekni to dospělému.",
@@ -318,7 +318,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "35afc41ab7c57159f788e0de7c42a8ab45be71e52d4d6ed8c4e9cb2e6905e002"
+      "verified_hash": "ab7cbab57e5a45cc3134040eb4325939ab97f5944d8f4d577279ffd77da405b7"
     },
     "nl": {
       "status": "verified",

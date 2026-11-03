@@ -189,7 +189,7 @@
     "fr": "Les noisettes, c’est un en-cas pour les humains. Leur coque dure peut rester coincée dans le ventre d’un chien, alors garde-les loin de ton chien.",
     "es": "Las avellanas son un tentempié para personas. Su cáscara dura se le puede quedar atascada a un perro, así que mantenlas lejos de tu mascota.",
     "it": "Le nocciole sono uno snack per le persone. Il loro guscio duro può bloccarsi dentro il cane, quindi tienile lontane dal tuo cane.",
-    "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu animal.",
+    "pt": "As avelãs são um petisco de pessoas. As cascas duras podem ficar presas dentro de um cão, por isso mantém-nas longe do teu cão.",
     "nl": "Hazelnoten zijn een snack voor mensen. De harde doppen kunnen bij een hond vast komen te zitten, dus houd ze uit de buurt van je huisdier.",
     "pl": "Orzechy laskowe to przekąska dla ludzi. Ich twarde łupinki mogą utknąć psu w środku, więc trzymaj je z dala od swojego pupila.",
     "cs": "Lískové ořechy jsou svačinka pro lidi. Jejich tvrdé skořápky můžou psovi uvíznout, a tak je před ním schovej.",
@@ -312,7 +312,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "745340a5e0895d00a2a60c99be3240bd396f4ab61d0f5d23a736eb23363bdb55"
+      "verified_hash": "745bae6c900a4f0338bed90cb8d8ed364654605fc5b11d67c88e7753f1e4510d"
     },
     "nl": {
       "status": "verified",

@@ -127,8 +127,8 @@
     "pt": [
       "Vómitos",
       "Diarreia",
-      "Mal-estar de estômago",
-      "Parecer doente"
+      "Mal-estar no estômago",
+      "Aparentar estar doente"
     ],
     "nl": [
       "Braken",
@@ -186,7 +186,7 @@
     "fr": "Si votre chat a mangé des noix, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez ce qu’il a mangé, en quelle quantité et à quelle heure.",
     "es": "Si tu gato ha comido nueces, pide consejo a tu veterinario, sobre todo si ha comido muchas o parece encontrarse mal. Apunta qué ha comido, cuánto y cuándo.",
     "it": "Se il tuo gatto ha mangiato delle noci, chiedi consiglio al veterinario, soprattutto se ne ha mangiate molte o sembra stare male. Annota che cosa ha mangiato, quanto e quando.",
-    "pt": "Se o teu gato comeu nozes, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Toma nota do que comeu, da quantidade e de quando.",
+    "pt": "Se o teu gato comeu nozes, contacta o teu veterinário para pedir conselho, sobretudo se comeu muitas ou parece doente. Anota o que comeu, a quantidade e quando.",
     "nl": "Heeft je kat walnoten gegeten? Vraag je dierenarts om advies, zeker als ze er veel heeft gegeten of ziek lijkt. Schrijf op wat ze heeft gegeten, hoeveel en wanneer.",
     "pl": "Jeśli twój kot zjadł orzechy włoskie, poradź się weterynarza, zwłaszcza jeśli zjadł ich dużo lub źle się czuje. Zapisz, co zjadł, ile i kiedy.",
     "cs": "Pokud vaše kočka snědla vlašské ořechy, obraťte se o radu na veterináře, zvlášť pokud jich snědla hodně nebo se nezdá v pořádku. Poznamenejte si, co snědla, kolik a kdy.",
@@ -309,7 +309,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d262184d608305f3d6f5a8787d6ff7150551a979ade431da12f3ec90440d3308"
+      "verified_hash": "6afd88691702e1cbe5bd5c144c4f8bbf63463d04764f0ac2c9ab46ef75dd688a"
     },
     "nl": {
       "status": "verified",

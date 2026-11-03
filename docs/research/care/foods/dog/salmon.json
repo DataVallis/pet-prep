@@ -77,7 +77,7 @@
     "fr": "Le saumon cru peut porter des parasites et des bactéries ; dans le Nord-Ouest Pacifique des États-Unis, il peut provoquer la maladie de l’empoisonnement au saumon, grave sans traitement. Le saumon a de petites arêtes cassantes qui peuvent provoquer un étouffement. Le saumon fumé et le lox (saumon salé) sont très salés. Les assaisonnements, les huiles et les sauces n’ont pas leur place dans la portion d’un chien.",
     "es": "El salmón crudo puede llevar parásitos y bacterias; en el noroeste del Pacífico de Estados Unidos puede causar la enfermedad del envenenamiento por salmón, que es grave si no se trata. El salmón tiene espinas pequeñas y quebradizas que pueden provocar atragantamiento. El salmón ahumado y el lox tienen mucha sal. Los condimentos, los aceites y las salsas no deben formar parte de la ración del perro.",
     "it": "Il salmone crudo può portare parassiti e batteri; nel Pacifico nord-occidentale degli Stati Uniti può causare la malattia da avvelenamento da salmone, grave se non curata. Il salmone ha lische piccole e fragili che possono causare soffocamento. Il salmone affumicato e il lox sono molto salati. Condimenti, oli e salse non vanno nella porzione del cane.",
-    "pt": "O salmão cru pode ter parasitas e bactérias; no noroeste do Pacífico, nos EUA, pode causar a doença do envenenamento por salmão, que é grave se não for tratada. O salmão tem espinhas pequenas e quebradiças que podem causar engasgamento. O salmão fumado e o lox têm muito sal. Temperos, óleos e molhos não devem ir para a porção do cão.",
+    "pt": "O salmão cru pode ter parasitas e bactérias; no noroeste do Pacífico, nos EUA, pode causar a doença do envenenamento por salmão, que é grave se não for tratada. O salmão tem espinhas pequenas e quebradiças que podem causar engasgamento. O salmão fumado e o lox têm muito sal. Temperos, óleos e molhos não devem ser incluídos na porção do cão.",
     "nl": "Rauwe zalm kan parasieten en bacteriën bevatten; in het noordwesten van de VS (Pacific Northwest) kan hij zalmvergiftiging (salmon poisoning disease) veroorzaken, wat zonder behandeling ernstig is. Zalm heeft kleine, brosse graten waarin een hond kan stikken. Gerookte zalm en lox (gepekelde zalm) bevatten veel zout. Kruiden, olie en sauzen horen niet op de portie van een hond.",
     "pl": "Surowy łosoś może przenosić pasożyty i bakterie; na północno-zachodnim wybrzeżu Pacyfiku w USA może wywołać chorobę łososiową, która bez leczenia jest groźna. Łosoś ma drobne, kruche ości, które mogą spowodować zadławienie. Łosoś wędzony i lox (solony łosoś) mają dużo soli. Przyprawy, oleje i sosy nie powinny trafiać do psiej porcji.",
     "cs": "Syrový losos může obsahovat parazity a bakterie; na tichomořském severozápadě USA může způsobit otravu lososem, která je bez léčby vážná. Losos má drobné, křehké kosti, které mohou způsobit dušení. Uzený a nakládaný losos (lox) obsahuje hodně soli. Koření, oleje a omáčky do psí porce nepatří.",
@@ -308,7 +308,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3561a628df6f36ac32d230e99e93ae2fec51124101b715f46ba6a5fb3c38bbfe"
+      "verified_hash": "a1f06dd29455a1fcf5458130ca9a39b0a69c9e5f41c5fef7a33cdf382b1b87df"
     },
     "nl": {
       "status": "verified",

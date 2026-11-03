@@ -126,7 +126,7 @@
     ],
     "pt": [
       "Sonolência ou apatia invulgares",
-      "Dificuldade em andar, desequilíbrio",
+      "Dificuldade em andar, passo cambaleante",
       "Respiração lenta",
       "Em casos graves: convulsões ou colapso"
     ],
@@ -186,7 +186,7 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé, en quelle quantité et à quelle heure, et gardez la bouteille ou l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué se ha tragado tu gato, cuánto y cuándo, y guarda la botella o el envase. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto, quanto e quando, e conserva la bottiglia o la confezione. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu, da quantidade e de quando, e guarda a garrafa ou a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato engoliu, a quantidade e quando, e guarda a garrafa ou a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen, hoeveel en wanneer, en bewaar de fles of verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot, ile i kiedy, i zachowaj butelkę lub opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla, kolik a kdy, a láhev nebo obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
@@ -355,7 +355,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e0e6237b894678de73aff81c7da9e5d65aff33f3140baac061e870106bfd49d3"
+      "verified_hash": "f949b027852e523f62f88e52a85ed73b1da9c6a910e290382a410dc456b76acb"
     },
     "nl": {
       "status": "verified",

@@ -121,7 +121,7 @@
     "pt": [
       "Fraqueza",
       "Tremores",
-      "Sobreaquecimento (temperatura corporal elevada)"
+      "Excesso de calor corporal (temperatura elevada)"
     ],
     "nl": [
       "Zwakte",
@@ -171,7 +171,7 @@
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a mangé des noix de macadamia. Notez combien il en a mangé et à quelle heure, et gardez l’emballage. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto con tu veterinario enseguida si tu gato ha comido nueces de macadamia. Apunta cuántas ha comido y cuándo, y guarda el envase. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha mangiato noci di macadamia. Annota quante ne ha mangiate e quando, e conserva la confezione. Non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Toma nota de quantas comeu e de quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário se o teu gato comeu nozes de macadâmia. Anota quantas comeu e quando, e guarda a embalagem. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat macadamianoten heeft gegeten. Schrijf op hoeveel ze er heeft gegeten en wanneer, en bewaar de verpakking. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot zjadł orzechy makadamia. Zapisz, ile ich zjadł i kiedy, i zachowaj opakowanie. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud vaše kočka snědla makadamové ořechy, okamžitě se obraťte na veterináře. Poznamenejte si, kolik jich snědla a kdy, a uschovejte obal. Nesnažte se u kočky doma vyvolat zvracení.",
@@ -225,7 +225,7 @@
         "fr": "Oui. La plupart des fruits à coque sont très gras, mais selon VCA, les noix de macadamia sont aussi toxiques et peuvent rendre les chats malades, avec par exemple de la faiblesse, des tremblements et une hyperthermie.",
         "es": "Sí. La mayoría de los frutos secos son muy grasos, pero VCA indica que las nueces de macadamia además son tóxicas y pueden hacer enfermar a los gatos, con debilidad, temblores y sobrecalentamiento.",
         "it": "Sì. Quasi tutta la frutta a guscio è molto grassa, ma secondo VCA le noci di macadamia sono anche tossiche e possono far ammalare i gatti, con debolezza, tremori e surriscaldamento.",
-        "pt": "Sim. A maioria dos frutos secos é muito gorda, mas a VCA diz que as nozes de macadâmia também são tóxicas e podem pôr os gatos doentes, com fraqueza, tremores e sobreaquecimento.",
+        "pt": "Sim. A maioria dos frutos secos é muito gorda, mas a VCA diz que as nozes de macadâmia também são tóxicas e podem pôr os gatos doentes, com fraqueza, tremores e excesso de calor corporal.",
         "nl": "Ja. De meeste noten zijn erg vet, maar volgens VCA zijn macadamianoten ook giftig en kunnen ze katten ziek maken, met verschijnselen zoals zwakte, trillingen en oververhitting.",
         "pl": "Tak. Większość orzechów jest bardzo tłusta, ale według VCA orzechy makadamia są też toksyczne i mogą wywołać u kotów chorobę z objawami takimi jak osłabienie, drżenie mięśni i przegrzanie.",
         "cs": "Ano. Většina ořechů je velmi tučná, ale makadamové ořechy jsou podle VCA navíc toxické a mohou kočkám způsobit potíže, jako je slabost, třes a přehřátí.",
@@ -312,7 +312,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4fc6b8559619ae9e1d582e13ddc684638eeb106b4559db172bf8aa6ba8f1c6f1"
+      "verified_hash": "51b1b9b92a82d504bab2de06de6d1bd41a8403e5607e5d98f43492ae98c9e6be"
     },
     "nl": {
       "status": "verified",

@@ -291,7 +291,7 @@
         "fr": "Les personnes les plus exposées à une maladie grave sont les personnes très âgées, les très jeunes enfants et les personnes dont le système immunitaire est affaibli.",
         "es": "Las personas con más riesgo de enfermar gravemente son las muy mayores, los niños muy pequeños y las personas con el sistema inmunitario debilitado.",
         "it": "Le persone più a rischio di malattie gravi sono gli anziani, i bambini molto piccoli e le persone con un sistema immunitario indebolito.",
-        "pt": "As pessoas com maior risco de doença grave são as muito idosas, as muito novas e as que têm o sistema imunitário fraco.",
+        "pt": "As pessoas com maior risco de doença grave são as muito idosas, as muito jovens e as que têm o sistema imunitário enfraquecido.",
         "nl": "Mensen met het grootste risico op ernstige ziekte zijn heel oude mensen, heel jonge kinderen en mensen met een verzwakt immuunsysteem.",
         "pl": "Na poważną chorobę najbardziej narażone są osoby w bardzo podeszłym wieku, bardzo małe dzieci i osoby z osłabioną odpornością.",
         "cs": "Nejvyšší riziko vážného onemocnění mají velmi staří lidé, malé děti a lidé s oslabenou imunitou.",
@@ -419,7 +419,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e09c9e55e309d92e177252cfce94ec201032af8f3fa47293f82f235cf69f1075"
+      "verified_hash": "bbf8e446fad9ef3338613c217f99a9db0edc3b0df3dc80f344097afad12d3b0c"
     },
     "nl": {
       "status": "verified",

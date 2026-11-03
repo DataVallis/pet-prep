@@ -77,7 +77,7 @@
     "fr": "Beaucoup de chiens digèrent mal le lactose, ce qui peut provoquer gaz, diarrhée ou vomissements. Le yaourt à la grecque contient moins de lactose : c’est donc généralement le meilleur choix. Certains édulcorants, en particulier le xylitol, sont toxiques pour les chiens, et trop de matières grasses laitières peuvent déranger l’estomac ou provoquer une pancréatite.",
     "es": "A muchos perros les cuesta digerir la lactosa, lo que puede causar gases, diarrea o vómitos. El yogur de tipo griego tiene menos lactosa, así que suele ser la mejor opción. Algunos edulcorantes, sobre todo el xilitol, son tóxicos para los perros, y demasiada grasa láctea puede sentar mal al estómago o provocar pancreatitis.",
     "it": "Molti cani digeriscono con difficoltà il lattosio, che può causare gas intestinali, diarrea o vomito. Lo yogurt greco contiene meno lattosio, quindi di solito è la scelta migliore. Alcuni dolcificanti, soprattutto lo xilitolo, sono tossici per i cani, e troppi grassi del latte possono disturbare lo stomaco o causare una pancreatite.",
-    "pt": "Muitos cães têm dificuldade em digerir a lactose, o que pode causar gases, diarreia ou vómitos. O iogurte de estilo grego tem menos lactose, por isso costuma ser a melhor escolha. Alguns adoçantes, sobretudo o xilitol, são tóxicos para os cães, e demasiada gordura láctea pode fazer mal ao estômago ou causar pancreatite.",
+    "pt": "Muitos cães têm dificuldade em digerir a lactose, o que pode causar gases, diarreia ou vómitos. O iogurte grego tem menos lactose, por isso costuma ser a melhor escolha. Alguns adoçantes, sobretudo o xilitol, são tóxicos para os cães, e demasiada gordura láctea pode fazer mal ao estômago ou causar pancreatite.",
     "nl": "Veel honden kunnen lactose moeilijk verteren, wat winderigheid, diarree of braken kan veroorzaken. Griekse yoghurt bevat minder lactose en is daarom meestal de betere keuze. Sommige zoetstoffen, vooral xylitol, zijn giftig voor honden, en te veel zuivelvet kan de maag van streek maken of alvleesklierontsteking veroorzaken.",
     "pl": "Wiele psów ma kłopot z trawieniem laktozy, co może powodować wzdęcia, biegunkę lub wymioty. Jogurt typu greckiego ma mniej laktozy, więc zwykle jest lepszym wyborem. Niektóre słodziki, zwłaszcza ksylitol, są toksyczne dla psów, a zbyt dużo tłuszczu mlecznego może podrażnić żołądek lub wywołać zapalenie trzustki.",
     "cs": "Mnoho psů špatně tráví laktózu, což může způsobit plynatost, průjem nebo zvracení. Jogurt řeckého typu má méně laktózy, takže je obvykle lepší volbou. Některá sladidla, zejména xylitol, jsou pro psy jedovatá a příliš mnoho mléčného tuku může podráždit žaludek nebo způsobit zánět slinivky břišní.",
@@ -112,7 +112,7 @@
     "fr": "Yaourt nature sans édulcorant ajouté, de préférence à la grecque ; vérifiez sur l’étiquette l’absence de sucre et de xylitol.",
     "es": "Yogur natural sin edulcorantes añadidos, mejor de tipo griego; revisa en la etiqueta el azúcar y el xilitol.",
     "it": "Yogurt bianco senza dolcificanti aggiunti, meglio se greco; controlla in etichetta zucchero e xilitolo.",
-    "pt": "Iogurte natural sem adoçantes adicionados, de preferência de estilo grego; lê o rótulo para ver se tem açúcar e xilitol.",
+    "pt": "Iogurte natural sem adoçantes adicionados, de preferência grego; lê o rótulo para ver se tem açúcar e xilitol.",
     "nl": "Yoghurt naturel zonder toegevoegde zoetstoffen, bij voorkeur Griekse yoghurt; controleer het etiket op suiker en xylitol.",
     "pl": "Jogurt naturalny bez dodatku słodzików, najlepiej typu greckiego; sprawdź na etykiecie cukier i ksylitol.",
     "cs": "Bílý jogurt bez přidaných sladidel, ideálně řeckého typu; na etiketě zkontrolujte cukr a xylitol.",
@@ -165,7 +165,7 @@
         "fr": "Généralement oui : le yaourt nature à la grecque contient moins de lactose qu’un yaourt classique.",
         "es": "Normalmente sí: el yogur natural de tipo griego tiene menos lactosa que el yogur normal.",
         "it": "Di solito sì: lo yogurt greco bianco contiene meno lattosio dello yogurt normale.",
-        "pt": "Normalmente sim: o iogurte natural de estilo grego tem menos lactose do que o iogurte normal.",
+        "pt": "Normalmente sim: o iogurte grego natural tem menos lactose do que o iogurte normal.",
         "nl": "Meestal wel: Griekse yoghurt naturel bevat minder lactose dan gewone yoghurt.",
         "pl": "Zwykle tak: naturalny jogurt typu greckiego ma mniej laktozy niż zwykły jogurt.",
         "cs": "Obvykle ano: bílý jogurt řeckého typu obsahuje méně laktózy než běžný jogurt.",
@@ -184,7 +184,7 @@
         "fr": "Pourquoi vérifier l’étiquette ?",
         "es": "¿Por qué hay que revisar la etiqueta?",
         "it": "Perché controllare l’etichetta?",
-        "pt": "Porque devo ler o rótulo?",
+        "pt": "Porque é que devo ler o rótulo?",
         "nl": "Waarom het etiket controleren?",
         "pl": "Po co sprawdzać etykietę?",
         "cs": "Proč kontrolovat etiketu?",
@@ -308,7 +308,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c8b29efbd5cb051f5beb6eefffdc1774b2712a22e8b49b8d0ae31afeb07cfb3b"
+      "verified_hash": "44987b75b65807eff81b4032be2746c9f477a6661765c78332cce732a1946dd7"
     },
     "nl": {
       "status": "verified",

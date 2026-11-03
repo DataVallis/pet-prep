@@ -95,7 +95,7 @@
     "fr": "Si votre chien a mangé des œufs cuisinés avec du beurre, du sel ou des assaisonnements, ou beaucoup d’œufs, surveillez les troubles digestifs et appelez votre vétérinaire si les vomissements ou la diarrhée sont importants ou ne s’arrêtent pas.",
     "es": "Si tu perro ha comido huevos cocinados con mantequilla, sal o condimentos, o muchos huevos, vigila si tiene molestias de barriga y llama a tu veterinario si los vómitos o la diarrea son fuertes o no se pasan.",
     "it": "Se il tuo cane ha mangiato uova cotte con burro, sale o condimenti, o molte uova, controlla se ha disturbi di pancia e chiama il veterinario se vomito o diarrea sono forti o non passano.",
-    "pt": "Se o teu cão comeu ovos cozinhados com manteiga, sal ou temperos, ou muitos ovos, vigia se tem a barriga perturbada e liga ao teu veterinário se os vómitos ou a diarreia forem fortes ou não pararem.",
+    "pt": "Se o teu cão comeu ovos cozinhados com manteiga, sal ou temperos, ou muitos ovos, vigia se aparece mal-estar de barriga e liga ao teu veterinário se os vómitos ou a diarreia forem fortes ou não pararem.",
     "nl": "Heeft je hond eieren gegeten die met boter, zout of kruiden zijn bereid, of veel eieren? Let dan op maag-darmklachten en bel je dierenarts als het braken of de diarree ernstig is of niet ophoudt.",
     "pl": "Jeśli twój pies zjadł jajka przygotowane z masłem, solą lub przyprawami albo dużo jajek, obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują.",
     "cs": "Pokud váš pes snědl vejce připravená s máslem, solí nebo kořením nebo hodně vajec, sledujte, zda nemá zažívací potíže, a pokud je zvracení nebo průjem silný či neustává, zavolejte veterináři.",
@@ -165,7 +165,7 @@
         "fr": "Les sources divergent : Dogs Trust indique que les coquilles cuites ne posent généralement pas de problème, tandis que l’AKC prévient qu’elles ont des bords tranchants. Les retirer est le choix le plus sûr.",
         "es": "Las fuentes no coinciden: Dogs Trust indica que las cáscaras cocinadas suelen estar bien, mientras que el AKC advierte de que tienen bordes afilados. Lo más seguro es no dárselas.",
         "it": "Le fonti non concordano: secondo Dogs Trust i gusci d’uovo cotti di solito vanno bene, mentre l’AKC avverte che hanno bordi taglienti. Toglierli è la scelta più sicura.",
-        "pt": "As fontes divergem: a Dogs Trust considera que as cascas de ovo cozinhadas normalmente não fazem mal, enquanto o AKC avisa que as cascas têm arestas afiadas. Não as dar é a escolha mais segura.",
+        "pt": "As fontes divergem: a Dogs Trust considera que as cascas de ovo cozinhadas normalmente não fazem mal, enquanto o AKC avisa que as cascas têm arestas afiadas. O mais seguro é não as dar.",
         "nl": "De bronnen verschillen: Dogs Trust noemt gekookte eierschalen meestal prima, terwijl de AKC waarschuwt dat schalen scherpe randen hebben. Ze weglaten is de veiligere keuze.",
         "pl": "Źródła się różnią: Dogs Trust podaje, że gotowane skorupki są zwykle w porządku, a AKC ostrzega, że skorupki mają ostre krawędzie. Bezpieczniej je pominąć.",
         "cs": "Zdroje se liší: Dogs Trust uvádí, že tepelně upravené skořápky jsou obvykle v pořádku, zatímco AKC upozorňuje, že skořápky mají ostré hrany. Bezpečnější je skořápky vynechat.",
@@ -299,7 +299,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b62f207e2d2136b43973be1bfd6170745becf2ed946bf6fcee8cf2029e23f005"
+      "verified_hash": "2723c3a4a7b8c39c3c0e04e956c574ce12f7ce5165daea0f109d3f1ecc4fbfb7"
     },
     "nl": {
       "status": "verified",
