@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-03 — Strežnik naredi vsebino kupljenih stvari: dizajni, slike v katalogu, ljubljenček s svojo posteljo (M6-W03, strežnik)
+
+**Kaj:** vsaka stvar v »Željah« ima zdaj tri dizajne za kužka in tri za muco (npr. okrogla siva postelja, modra blazina, pletena košara) — 24 dizajnov. Za vsakega strežnik enkrat naredi sliko v katalogu (24 slik, skupaj 3,60 $). Ko starš kupi izbrani dizajn, strežnik iz ljubljenčkove trenutne slike naredi njegovo sliko z novo stvarjo in kratek video (spi na postelji, jé iz skled, se igra z igračo, poje priboljšek) — približno 0,49 $ na stvar, a samo prvič za isti videz pasme, barve in obdobja; vsak naslednji kupec istega dizajna stane 0 $. Ko ljubljenček zraste, dobi stvar novo vsebino za novo obdobje. Če AI kaj zavrne, strežnik sam poskusi drugače (največ dvakrat oz. z drugačnim opisom); če ne gre, se stvar pokaže brez posebnega videa — otrok nikoli ne obtiči na »Na poti«, skrbnik dobi eno obvestilo. Postelja, ki jo je David kupil pred dnevi, dobi svojo vsebino sama po namestitvi.
+**Zakaj je pomembno:** nakup se zdaj res vidi v ljubljenčkovem vsakdanu, strošek pa je enkraten na videz in deljen med kupci — marža ostaja visoka tudi pri brezplačnem planu.
+**Kako povedati:** 👩 »Otrok izbere videz, vi kupite točno tega — in ga vidi v ljubljenčkovem dnevu.« · 🧒 »Tvoja muca zdaj spi v košari, ki si jo izbral.« · 💼 AI vsebina stvari stane ≈ 0,49 $ enkrat na videz in dizajn, nato 0 $ (cena 5,99 €). · 🛠 lastna tabela, samopopravljanje brez ročnih korakov, vse prek proračunske varovalke.
+
 ## 2026-11-03 — Kupljene stvari se pokažejo v prizorih ljubljenčka (M6-W03, aplikacija)
 
 **Kaj:** ko starš kupi posteljo, skledi, igračo ali priboljške in strežnik pripravi njihovo vsebino, jih otrok vidi v prizorih: ljubljenček spi na svoji postelji, po hranjenju ali vodi enkrat jé iz svojih skled, igra se s svojo igračo (z dvema igračama izmenično), gumb »Priboljšek« pa zavrti, kako poje priboljšek. Do takrat piše »Na poti …«, potem »Že ima«. Nova so tudi **videzi**: pri vsaki stvari otrok izbira med tremi slikami (npr. tremi posteljami), starš pa kupi točno izbranega.
