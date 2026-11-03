@@ -188,6 +188,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-03 (cloud) — website deploy faster (pet-prep-website `ci/D30-fast-deploy`, DEPLOYMENT.md D30)
+Website: one `next build` per run (in node:22-alpine), image to GHCR after the smoke test, server pulls the digest; main reuses the image of a green run on the same tree. New single gate check »Website CI OK« — ADD_BREED_RUNBOOK §9 now waits for it. Was: PR ~13 min, live 17–20 min.
+
 ### 2026-11-02 (cloud) — fast CI: Pest shards + merged-PR proof (`ci/D29-fast-ci`, DEPLOYMENT.md D29)
 Profile (local junit, 5,213 tests): two Filament tests 575 s (»all« rendered 4,300 rows) → fixed (35 s / 22 s). Backend now 6 shards (`scripts/ci-pest-shard.mjs`, `backend/tests/durations.json`), marker job `backend-green`. Pushes to `main` skip suites proven by the merged PR's green run when `main` moved only elsewhere (21 of the last 30 pushes re-ran the full backend); production dispatch diffs against the last deploy. Next: seed breed data once per process (~790 s CPU) in its own PR.
 
