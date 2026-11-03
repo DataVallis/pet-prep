@@ -66,7 +66,7 @@
     "cs": "Ne, raději ne. ASPCA uvádí meruňku jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Meruňky kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku marelice kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi marelice svojoj mački, koštice i dijelove biljke drži izvan njezina dosega, a ako je mačka nešto od toga žvakala, nazovi veterinara.",
     "sv": "Nej, helst inte. ASPCA anger att aprikosträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten aprikoser, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
-    "da": "Nej, det er bedst at lade være. ASPCA opfører abrikosplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke abrikoser til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
+    "da": "Nej, det er bedst at lade være. ASPCA betragter abrikosplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke abrikoser til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
     "fi": "Ei kannata. ASPCA luokittelee aprikoosikasvin kissoille myrkylliseksi: sen varret, lehdet ja siemenet (kivi) sisältävät syanidia. Älä tarjoa aprikooseja kissallesi, pidä kivet ja kasvinosat sen ulottumattomissa ja soita eläinlääkärille, jos kissasi pureskelee niitä.",
     "nb": "Nei, helst ikke. ASPCA regner aprikostreet som giftig for katter: Stilkene, bladene og frøene (steinen) inneholder cyanid. Ikke gi katten aprikoser, hold steiner og plantedeler utenfor rekkevidde, og ring dyrlegen hvis katten tygger på noe av det."
   },
@@ -372,7 +372,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "56406315b2aad66d3bc2ab9c3d1f350b8e87cd1dce44c8a5c61d6f0e7bb97d39"
+      "verified_hash": "cbdb054d137cad52c325d3d4d5fda9b49bbe99e65fe7adcb1f8e6efd66297b2c"
     },
     "fi": {
       "status": "verified",

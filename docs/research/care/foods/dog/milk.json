@@ -171,7 +171,7 @@
         "cs": "Mnoho psů špatně snáší laktózu: nemá dost laktázy, enzymu, který tráví mléčný cukr.",
         "hr": "Mnogi psi ne podnose laktozu: nemaju puno laktaze, enzima koji probavlja mliječni šećer.",
         "sv": "Många hundar är laktosintoleranta: de har inte mycket laktas, enzymet som bryter ner mjölksocker.",
-        "da": "Mange hunde tåler ikke laktose: De har ikke ret meget laktase, enzymet der nedbryder mælkesukker.",
+        "da": "Mange hunde tåler ikke laktose: de har ikke ret meget laktase, enzymet der nedbryder mælkesukker.",
         "fi": "Monet koirat eivät siedä laktoosia: niillä ei ole paljon laktaasia, entsyymiä, joka pilkkoo maitosokeria.",
         "nb": "Mange hunder tåler ikke laktose: De har lite laktase, enzymet som bryter ned melkesukker."
       }
@@ -294,7 +294,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7425a593fe0f0965bf5e4c0490406f9a490ca0632612a900a928350a0447350c"
+      "verified_hash": "616c8d8270c91c5af303b952391dfd09c9fc621db44ea49eb0c58c8c12c62bd6"
     },
     "fi": {
       "status": "verified",

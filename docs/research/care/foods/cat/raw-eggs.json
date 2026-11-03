@@ -207,7 +207,7 @@
     "cs": "Pokud kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo.",
     "hr": "Ako je mačka polizala malo sirovog jajeta, prati pojavu povraćanja, proljeva, vrućice ili odbijanja hrane i nazovi veterinara ako se išta od toga pojavi. Operi ruke i sve površine koje su došle u dodir s jajetom.",
     "sv": "Om katten har slickat i sig lite rått ägg, håll utkik efter kräkningar, diarré, feber eller att den inte äter, och ring veterinären om något av det visar sig. Tvätta händerna och alla ytor som ägget har kommit i kontakt med.",
-    "da": "Hvis din kat har slikket lidt råt æg, så hold øje med opkast, diarré, feber eller manglende lyst til at spise, og ring til din dyrlæge hvis noget af det viser sig. Vask hænderne og alle overflader ægget har været i kontakt med.",
+    "da": "Hvis din kat har slikket lidt råt æg, så hold øje med opkast, diarré, feber eller manglende lyst til at spise, og ring til din dyrlæge hvis noget af det viser sig. Vask hænderne og alle overflader som ægget har rørt.",
     "fi": "Jos kissasi nuoli vähän raakaa kananmunaa, seuraa, tuleeko oksentelua, ripulia, kuumetta tai syömättömyyttä, ja soita eläinlääkärille, jos niitä ilmenee. Pese kätesi ja kaikki pinnat, joihin kananmuna on koskenut.",
     "nb": "Hvis katten har slikket i seg litt rått egg, bør du følge med på oppkast, diaré, feber eller manglende matlyst og ringe dyrlegen hvis noe av dette oppstår. Vask hendene og alle flater egget har vært borti."
   },
@@ -387,7 +387,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6095590f58c2c8185369be33d44a6d6ff42b9ab9880786b667584a8f38ff63d7"
+      "verified_hash": "f5b86ff68f3a00fe51d38f8ea8eb551d20273bdaf86c873d9fa1f0d5cae374b7"
     },
     "fi": {
       "status": "verified",

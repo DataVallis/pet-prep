@@ -101,7 +101,7 @@
     "cs": "Maliny dávejte jen s mírou, protože příliš velké množství může podráždit trávení. Majitelé psů s cukrovkou by se měli před podáním jakéhokoli nového pamlsku poradit s veterinářem.",
     "hr": "Daj maline samo umjereno jer previše malina može izazvati probavne tegobe. Ako tvoj pas ima šećernu bolest, pitaj veterinara prije nego što mu daš bilo koju novu poslasticu.",
     "sv": "Ge hallon bara med måtta, eftersom för mycket kan ge matsmältningsbesvär. Har du en hund med diabetes, fråga veterinären innan du ger nya godbitar.",
-    "da": "Giv kun hindbær med måde – for mange kan give fordøjelsesproblemer. Har din hund sukkersyge, så spørg din dyrlæge før du giver den nye godbidder.",
+    "da": "Giv kun hindbær med måde – for mange kan give fordøjelsesproblemer. Har din hund diabetes, så spørg din dyrlæge før du giver den nye godbidder.",
     "fi": "Anna vadelmia vain kohtuudella, koska liian suuri määrä voi aiheuttaa ruoansulatusvaivoja. Diabetesta sairastavien koirien omistajien tulisi kysyä eläinlääkäriltä ennen uusien herkkujen antamista.",
     "nb": "Gi bringebær bare med måte, siden for mange kan gi fordøyelsesplager. Eiere av hunder med diabetes bør spørre dyrlegen før de gir nye godbiter."
   },
@@ -294,7 +294,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7fde266d6a21a7f630772631e48a5971cffa0ea201ef5977b007e216f934a1d8"
+      "verified_hash": "8e93fcf06bb878ee4c42ae53cf9aa5b1c2f248b068d3cb48ad501d18f6490f54"
     },
     "fi": {
       "status": "verified",

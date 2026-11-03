@@ -192,7 +192,7 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co pes snědl (pórek) a zhruba kolik. Nečekejte, až se objeví příznaky: poškození krve se obvykle projeví až po několika dnech.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas pojeo (poriluk) i otprilike koliko. Ne čekaj da se pojave znakovi: oštećenje krvi obično se pokaže tek nakon nekoliko dana.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden åt (purjolök) och ungefär hur mycket. Vänta inte på symtom: skadorna på blodet syns oftast först några dagar senare.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad hunden har spist (porre), og omtrent hvor meget. Vent ikke på symptomer: Skaden på blodet viser sig som regel først efter nogle dage.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad hunden har spist (porre), og omtrent hvor meget. Vent ikke på symptomer: skaden på blodet viser sig som regel først efter nogle dage.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi (purjoa) ja suunnilleen kuinka paljon. Älä odota oireita: veren vauriot näkyvät yleensä vasta muutaman päivän kuluttua.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden spiste (purre), og omtrent hvor mye. Ikke vent på symptomer – skader på blodet viser seg vanligvis først etter noen dager."
   },
@@ -432,7 +432,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0917f0f91aa1de8069470906bd1ef27e07972263ffa5099a7721d2f2362a197b"
+      "verified_hash": "9737bc10965be76b9b0d8231c063423f1921021e07c8a75fd14ee523ff490f7f"
     },
     "fi": {
       "status": "verified",

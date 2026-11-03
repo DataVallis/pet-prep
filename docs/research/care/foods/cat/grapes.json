@@ -66,7 +66,7 @@
     "cs": "Ne. Hrozny patří mezi potraviny toxické pro kočky a mohou způsobit selhání ledvin. Úplně se jim vyhněte, i v malém množství, a pokud je kočka sní, zavolejte veterináři.",
     "hr": "Ne. Grožđe je na popisu namirnica otrovnih za mačke i može izazvati zatajenje bubrega. Potpuno ga izbjegavaj, čak i u malim količinama, i nazovi veterinara ako tvoja mačka pojede imalo grožđa.",
     "sv": "Nej. Vindruvor finns på listan över livsmedel som är giftiga för katter, och de kan orsaka njursvikt. Undvik dem helt, även i små mängder, och ring veterinären om katten äter någon.",
-    "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogen.",
+    "da": "Nej. Vindruer står på listen over fødevarer der er giftige for katte, og de kan give nyresvigt. Undgå dem helt, også i små mængder, og ring til din dyrlæge hvis din kat spiser nogle.",
     "fi": "Ei saa. Viinirypäleet kuuluvat kissoille myrkyllisiin ruokiin, ja niiden syöminen voi aiheuttaa munuaisten vajaatoiminnan. Vältä niitä kokonaan, pieniäkin määriä, ja soita eläinlääkärille, jos kissasi syö niitä.",
     "nb": "Nei. Druer står på listen over matvarer som er giftige for katter, og de kan gi nyresvikt. Unngå dem helt, også i små mengder, og ring dyrlegen hvis katten spiser noen."
   },
@@ -83,7 +83,7 @@
     "cs": "Organizace na ochranu koček varují, že hrozny mohou u koček způsobit selhání ledvin a že kočky s chronickým onemocněním ledvin mohou být ohroženy víc. Otrava hrozny je u koček vzácná a není dobře prozkoumaná a některé zdroje ji popisují jen u psů, proto používáme přísnější hodnocení: jakékoli množství berte jako naléhavý stav.",
     "hr": "Udruge za dobrobit mačaka upozoravaju da grožđe kod mačaka može izazvati zatajenje bubrega te da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku. Otrovanje grožđem kod mačaka rijetko je i nije dobro istraženo, a neki ga izvori opisuju samo kod pasa, pa se držimo strože razine: svaku količinu smatraj hitnim slučajem.",
     "sv": "Djurskyddsorganisationer för katter varnar för att vindruvor kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom kan löpa större risk. Vindruvsförgiftning hos katter är ovanlig och inte väl utredd, och vissa källor beskriver den bara hos hundar, så vi använder den strängare nivån: behandla alla mängder som ett akutfall.",
-    "da": "Organisationer for kattevelfærd advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være i større risiko. Vindrueforgiftning hos katte er sjælden, og man ved ikke meget om den, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en akut situation.",
+    "da": "Velfærdsorganisationer for katte advarer om at vindruer kan give nyresvigt hos katte, og at katte med kronisk nyresygdom kan være mere udsatte. Vindrueforgiftning hos katte er sjælden og dårligt kendt, og nogle kilder beskriver den kun hos hunde, så vi bruger det strengeste niveau: Enhver mængde skal behandles som en nødsituation.",
     "fi": "Kissojen hyvinvointijärjestöt varoittavat, että viinirypäleet voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. Viinirypälemyrkytys on kissoilla harvinainen eikä sitä tunneta hyvin, ja jotkin lähteet kuvaavat sitä vain koirilla, joten käytämme tiukempaa luokitusta: pidä mitä tahansa määrää hätätilanteena.",
     "nb": "Organisasjoner for katters velferd advarer om at druer kan gi nyresvikt hos katter, og at katter med kronisk nyresykdom kan ha større risiko. Drueforgiftning hos katter er sjelden og lite forstått, og noen kilder beskriver den bare hos hunder, så vi bruker det strengere nivået: Behandle enhver mengde som et nødstilfelle."
   },
@@ -201,7 +201,7 @@
         "cs": "Podle Cats Protection mohou být kočky s chronickým onemocněním ledvin hrozny ohroženy víc.",
         "hr": "Cats Protection navodi da mačke s kroničnom bolešću bubrega mogu biti izložene većem riziku od grožđa.",
         "sv": "Enligt Cats Protection kan katter med kronisk njursjukdom löpa större risk att bli sjuka av vindruvor.",
-        "da": "Cats Protection skriver at katte med kronisk nyresygdom kan være i større risiko ved vindruer.",
+        "da": "Cats Protection skriver at katte med kronisk nyresygdom kan være mere udsatte for vindruer.",
         "fi": "Cats Protectionin mukaan kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa viinirypäleiden vuoksi.",
         "nb": "Cats Protection skriver at katter med kronisk nyresykdom kan ha større risiko ved druer."
       }
@@ -320,7 +320,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "516dbad434bdaa9c75fd5f745436247514a7f4d7bdfccd4d2a3e67b0e85b03fa"
+      "verified_hash": "96406e560e4ceeb0aa0f0169bd393442dada856ffcacdadfde5c7613eb0227fa"
     },
     "fi": {
       "status": "verified",

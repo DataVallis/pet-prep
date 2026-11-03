@@ -66,7 +66,7 @@
     "cs": "Ano, občas a v malém množství. Tuňák není pro psy jedovatý, obsahuje ale hodně rtuti, takže by neměl být běžnou součástí stravy. Vybírejte tepelně upraveného tuňáka nebo „light“ tuňáka (pruhovaného) z konzervy jen ve vodě, bez přidané soli a oleje.",
     "hr": "Da, povremeno i u malim količinama. Tuna nije otrovna za pse, ali sadrži puno žive, pa ne bi trebala biti redovita hrana. Odaberi termički obrađenu tunu ili prugastu tunu iz konzerve (često označenu kao „light“) samo u vodi, bez dodane soli i ulja.",
     "sv": "Ja, ibland och i små mängder. Tonfisk är inte giftig för hundar, men den innehåller mycket kvicksilver, så den bör inte vara en vanlig del av maten. Välj tillagad tonfisk eller ”light”-tonfisk (skipjack) på burk i vatten, utan tillsatt salt eller olja.",
-    "da": "Ja, en gang imellem og i små mængder. Tun er ikke giftig for hunde, men indeholder meget kviksølv, så den bør ikke være fast føde. Vælg tilberedt tun eller »light« tun på dåse (skipjack) kun i vand, uden tilsat salt eller olie.",
+    "da": "Ja, en gang imellem og i små mængder. Tun er ikke giftig for hunde, men indeholder meget kviksølv, så den ikke bør være en fast del af kosten. Vælg tilberedt tun eller »light« tun på dåse (skipjack) kun i vand, uden tilsat salt eller olie.",
     "fi": "Saa, satunnaisesti ja pieninä määrinä. Tonnikala ei ole koirille myrkyllistä, mutta siinä on paljon elohopeaa, joten sen ei pidä olla säännöllistä ruokaa. Valitse kypsennettyä tonnikalaa tai pelkkään veteen säilöttyä boniittitonnikalaa (”light”, skipjack) ilman lisättyä suolaa tai öljyä.",
     "nb": "Ja, av og til og i små mengder. Tunfisk er ikke giftig for hunder, men inneholder mye kvikksølv, så den bør ikke være fast mat. Velg tilberedt tunfisk eller «light»-tunfisk (skipjack) på boks som bare er lagt i vann, uten tilsatt salt eller olje."
   },
@@ -171,7 +171,7 @@
         "cs": "Většinou ne: tuňák není jedovatý a problémem je pravidelné krmení po delší dobu.",
         "hr": "Obično ne: tuna nije otrovna, a problem je redovito hranjenje tunom tijekom duljeg vremena.",
         "sv": "Oftast inte: tonfisk är inte giftig, och problemet är om hunden får tonfisk regelbundet över tid.",
-        "da": "Som regel ikke: Tun er ikke giftig, og bekymringen gælder regelmæssig fodring over længere tid.",
+        "da": "Som regel ikke: tun er ikke giftig, og bekymringen gælder regelmæssig fodring over længere tid.",
         "fi": "Yleensä ei: tonnikala ei ole myrkyllistä, ja huoli koskee säännöllistä syöttämistä pitkän ajan kuluessa.",
         "nb": "Som regel ikke: Tunfisk er ikke giftig, og det som er bekymringsfullt, er å gi den regelmessig over tid."
       }
@@ -207,7 +207,7 @@
         "cs": "„Light“ neboli pruhovaný tuňák jen ve vodě, podávaný občas.",
         "hr": "Prugasta tuna (često označena kao „light“) samo u vodi, i to povremeno.",
         "sv": "”Light”-tonfisk eller skipjack, enbart i vatten, som hunden bara får ibland.",
-        "da": "»Light« tun eller skipjack kun i vand, givet en gang imellem.",
+        "da": "Tun af typen »light« eller skipjack, kun i vand og kun en gang imellem.",
         "fi": "Pelkkään veteen säilötty boniittitonnikala (”light”, skipjack) satunnaisesti annettuna.",
         "nb": "«Light»-tunfisk eller skipjack som bare er lagt i vann, gitt av og til."
       }
@@ -350,7 +350,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "15c703a697f786a7448b6712703857fc732652800fe37d56fa344c58a60f04c9"
+      "verified_hash": "2b426c6db9235bf16fc1c6b615374bbd9ad7c9b4c38c4503e75f765a11490dec"
     },
     "fi": {
       "status": "verified",

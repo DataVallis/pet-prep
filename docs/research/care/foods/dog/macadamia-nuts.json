@@ -186,7 +186,7 @@
     ],
     "da": [
       "Muskelsvaghed",
-      "Lavt energiniveau, nedtrykthed",
+      "Lavt energiniveau, sløvhed",
       "Opkast",
       "Rysten",
       "Høj kropstemperatur",
@@ -443,7 +443,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2632bed095d4660a730eef04f600fd25e36873888936ef90924c918236794f18"
+      "verified_hash": "12046ab487384958b38c31b8be5c08eb1d5a29462722df89576e53eeee2d67dc"
     },
     "fi": {
       "status": "verified",

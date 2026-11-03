@@ -83,7 +83,7 @@
     "cs": "Samotné jehněčí maso je pro psy v malém množství bezpečné. Všechny kosti tepelnou úpravou zkřehnou a mohou se roztříštit. Tučná jídla mohou vyvolat zvracení, průjem, nebo dokonce zánět slinivky břišní a jídlům s vysokým obsahem tuku nebo soli je lepší se vyhnout. Cibulové omáčky nejsou pro psy bezpečné.",
     "hr": "Janjeće meso samo po sebi navodi se kao sigurno za pse u malim količinama. Sve kosti termičkom obradom postaju krhke i mogu se lomiti u krhotine. Masna hrana može izazvati povraćanje, proljev ili čak upalu gušterače, a hranu s mnogo masti ili soli najbolje je izbjegavati. Umaci s lukom nisu sigurni za pse.",
     "sv": "Lammkött i sig anges som ofarligt för hundar i små mängder. Alla ben blir sköra när de tillagas och kan splittras. Fet mat kan utlösa kräkningar, diarré och till och med bukspottkörtelinflammation (pankreatit), och mat med mycket fett eller salt är bäst att undvika. Sky som innehåller lök är inte säker för hundar.",
-    "da": "Selve lammekødet er opført som sikkert for hunde i små mængder. Alle knogler bliver skøre ved tilberedning og kan splintre. Meget fed mad kan udløse opkast, diarré eller endda betændelse i bugspytkirtlen (pankreatitis), og mad med meget fedt eller salt er bedst at undgå. Sovs med løg er ikke sikker for hunde.",
+    "da": "Selve lammekødet regnes for sikkert for hunde i små mængder. Alle knogler bliver skøre ved tilberedning og kan splintre. Meget fed mad kan udløse opkast, diarré eller endda betændelse i bugspytkirtlen (pankreatitis), og mad med meget fedt eller salt er bedst at undgå. Sovs med løg er ikke sikker for hunde.",
     "fi": "Itse lampaanliha mainitaan koirille turvallisena pieninä määrinä. Kaikki luut haurastuvat kypsennettäessä ja voivat sirpaloitua. Rasvaiset ruoat voivat laukaista oksentelua, ripulia tai jopa haimatulehduksen, ja rasvaisia tai suolaisia ruokia on parasta välttää. Sipulipohjaiset kastikkeet eivät ole koirille turvallisia.",
     "nb": "Selve lammekjøttet er oppført som trygt for hunder i små mengder. Alle bein blir skjøre når de tilberedes, og kan splintres. Fet mat kan utløse oppkast, diaré eller til og med betennelse i bukspyttkjertelen, og mat med mye fett eller salt bør helst unngås. Saus med løk er ikke trygt for hunder."
   },
@@ -291,7 +291,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0fa3600269747209c1eb1e32d77996908fd6248f082fc4a10fc53d7740e8a779"
+      "verified_hash": "3a2be4450c7c7d2539dc96d54431a5c85d28c50dfda4ff00b0e4a9328a5631f9"
     },
     "fi": {
       "status": "verified",

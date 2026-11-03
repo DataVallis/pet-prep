@@ -66,7 +66,7 @@
     "cs": "Jako pravidelný pamlsek ne. Některé veterinární zdroje připouštějí malé kousky čistého, méně tučného sýra, ale sýr je tučný, mnoho psů špatně tráví mléčné výrobky a některé sýry obsahují cibuli, česnek nebo pažitku. Zvlášť problematické jsou plísňové sýry.",
     "hr": "Ne kao redovitu poslasticu. Neki veterinarski izvori dopuštaju komadiće običnog sira s manje masti, ali sir je mastan, mnogi psi slabo probavljaju mliječne proizvode, a neki sirevi sadrže luk, češnjak ili vlasac. Posebno su zabrinjavajući sirevi s plavom plijesni.",
     "sv": "Inte som en vanlig godbit. Vissa veterinärkällor tillåter små bitar osmaksatt, mager ost, men ost är fet, många hundar har svårt att smälta mejeriprodukter, och vissa ostar innehåller lök, vitlök eller gräslök. Blåmögelost är särskilt problematisk.",
-    "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader små stykker almindelig, magrere ost, men ost er fed, mange hunde fordøjer mejeriprodukter dårligt, og nogle oste indeholder løg, hvidløg eller purløg. Blåskimmeloste giver særlig grund til bekymring.",
+    "da": "Ikke som fast godbid. Nogle dyrlægekilder tillader små stykker almindelig, mager ost, men ost er fed, mange hunde fordøjer mejeriprodukter dårligt, og nogle oste indeholder løg, hvidløg eller purløg. Blåskimmeloste er særligt problematiske.",
     "fi": "Ei säännöllisenä herkkuna. Jotkin eläinlääketieteelliset lähteet sallivat pieniä paloja maustamatonta, vähärasvaisempaa juustoa, mutta juusto on rasvaista, moni koira sulattaa maitotuotteita huonosti, ja joissakin juustoissa on sipulia, valkosipulia tai ruohosipulia. Sinihomejuustot ovat erityinen huolenaihe.",
     "nb": "Ikke som fast godbit. Noen veterinærmedisinske kilder godtar små biter naturell, magrere ost, men ost er fet, mange hunder tåler melkeprodukter dårlig, og noen oster inneholder løk, hvitløk eller gressløk. Blåmuggost er særlig bekymringsfullt."
   },
@@ -209,7 +209,7 @@
     "cs": "Pokud se vůbec dělíte: malinký kousek čistého, méně tučného sýra, například mozzarelly nebo tvarohového sýra (cottage), nikdy ochucený ani plísňový sýr.",
     "hr": "Ako ga uopće dijeliš: maleni komadić običnog sira s manje masti, poput mozzarelle ili zrnatog svježeg sira, nikad sir s dodacima ili s plavom plijesni.",
     "sv": "Om du alls delar med dig: en pytteliten bit osmaksatt, mager ost som mozzarella eller keso, aldrig smaksatt ost eller blåmögelost.",
-    "da": "Hvis du overhovedet deler: et bitte lille stykke almindelig, magrere ost som mozzarella eller hytteost, aldrig ost med smag eller blåskimmelost.",
+    "da": "Hvis du overhovedet deler: et bitte lille stykke almindelig, mager ost som mozzarella eller hytteost, aldrig ost med smag eller blåskimmelost.",
     "fi": "Jos annat ollenkaan: pikkuinen pala maustamatonta, vähärasvaisempaa juustoa, kuten mozzarellaa tai raejuustoa, ei koskaan maustettua juustoa tai sinihomejuustoa.",
     "nb": "Hvis du i det hele tatt deler: en ørliten bit naturell, magrere ost som mozzarella eller cottage cheese, aldri ost med smak eller blåmuggost."
   },
@@ -298,7 +298,7 @@
         "cs": "Méně tučné čisté sýry, například mozzarella, tvarohový sýr (cottage) nebo měkký kozí sýr, v malém množství.",
         "hr": "Obični sirevi s manje masti, poput mozzarelle, zrnatog svježeg sira ili mekog kozjeg sira, u maloj količini.",
         "sv": "Magra, osmaksatta ostar som mozzarella, keso eller mjuk getost, i en liten mängd.",
-        "da": "Almindelige, magrere oste som mozzarella, hytteost eller blød gedeost i en lille mængde.",
+        "da": "Almindelige, magre oste som mozzarella, hytteost eller blød gedeost i en lille mængde.",
         "fi": "Vähärasvaisemmat maustamattomat juustot, kuten mozzarella, raejuusto tai pehmeä vuohenjuusto, pieninä määrinä.",
         "nb": "Magrere, naturelle oster som mozzarella, cottage cheese eller myk ost av geitemelk, i en liten mengde."
       }
@@ -440,7 +440,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "157cf67e4580ad3ebb3fa11ccfa0e134723c9be45ffc16267f76d638616fcde1"
+      "verified_hash": "575b6eadb50d72a440744588722e554f4acb7b780e423b76736e24ab6013070c"
     },
     "fi": {
       "status": "verified",

@@ -83,7 +83,7 @@
     "cs": "Čokoláda obsahuje theobromin a kofein. Kočky tyto látky zpracovávají jinak než lidé, a proto jsou na jejich účinky citlivější. Protože kočky theobromin jen obtížně odbourávají, zůstává v krvi a může rychle dosáhnout nebezpečné hladiny. Největší riziko představuje tmavá a hořká čokoláda; bílá čokoláda obsahuje theobrominu nejméně.",
     "hr": "Čokolada sadrži teobromin i kofein. Mačke te tvari razgrađuju drukčije od ljudi, zbog čega su osjetljivije na njihovo djelovanje. Budući da mačke teško razgrađuju teobromin, on ostaje u krvi i može brzo doseći opasne razine. Najveći rizik nose tamna i gorka čokolada; bijela čokolada ima najmanje teobromina.",
     "sv": "Choklad innehåller teobromin och koffein. Katter bryter ner de här ämnena på ett annat sätt än människor, vilket gör dem känsligare för effekterna. Eftersom katter har svårt att bryta ner teobromin stannar det kvar i blodet och kan snabbt nå farliga nivåer. Mörk och bitter choklad innebär störst risk; vit choklad innehåller minst teobromin.",
-    "da": "Chokolade indeholder theobromin og koffein. Katte omsætter disse stoffer anderledes end mennesker, og det gør dem mere følsomme over for virkningerne. Fordi katte har svært ved at nedbryde theobromin, bliver det i blodet og kan hurtigt ophobes til farlige niveauer. Mørk og bitter chokolade giver den største risiko; hvid chokolade indeholder mindst theobromin.",
+    "da": "Chokolade indeholder theobromin og koffein. Katte omsætter disse stoffer anderledes end mennesker, og det gør dem mere følsomme over for virkningerne. Fordi katte har svært ved at nedbryde theobromin, forbliver det i blodet og kan hurtigt ophobes til farlige koncentrationer. Mørk og bitter chokolade giver den største risiko; hvid chokolade indeholder mindst theobromin.",
     "fi": "Suklaassa on teobromiinia ja kofeiinia. Kissan elimistö käsittelee näitä aineita eri tavalla kuin ihmisen, minkä vuoksi kissat ovat herkempiä niiden vaikutuksille. Koska kissan elimistön on vaikea hajottaa teobromiinia, se jää vereen ja voi nopeasti kertyä vaarallisiin pitoisuuksiin. Tumma ja kitkerä suklaa on riskialtteinta; valkoisessa suklaassa on vähiten teobromiinia.",
     "nb": "Sjokolade inneholder teobromin og koffein. Katter omsetter disse stoffene annerledes enn mennesker, og det gjør dem mer følsomme for virkningene. Fordi katter har vanskelig for å bryte ned teobromin, blir stoffet værende i blodet og kan raskt hope seg opp til farlige nivåer. Mørk og bitter sjokolade er mest risikabel; hvit sjokolade har minst teobromin."
   },
@@ -482,7 +482,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b5df82d5a0e9b6d4fe96ba2039cd1a996cdf52d5f8eee8e1067d289a8307d88b"
+      "verified_hash": "563521260179f4c0403a21b325493eb6dbbc8287c6bc0aeff8661442a7490e0d"
     },
     "fi": {
       "status": "verified",

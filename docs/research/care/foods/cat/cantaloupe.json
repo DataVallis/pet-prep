@@ -66,7 +66,7 @@
     "cs": "Ano, malý kousek cukrového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí cukrový meloun jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk.",
     "hr": "Da, mali komadić dinje u redu je kao povremena poslastica. ASPCA navodi dinju kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, a bilo koja biljka može izazvati želučane tegobe, pa neka ostane samo sitan dodatak.",
     "sv": "Ja, en liten bit cantaloupemelon går bra som godbit någon gång ibland. ASPCA anger att cantaloupemelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och alla växter kan ge orolig mage, så se det bara som ett pyttelitet extra.",
-    "da": "Ja, et lille stykke cantaloupemelon er fint som en godbid en gang imellem. ASPCA opfører cantaloupemelon som ikke giftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad det kun være et bitte lille ekstra.",
+    "da": "Ja, et lille stykke cantaloupemelon er fint som en godbid en gang imellem. ASPCA betragter cantaloupemelon som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad det kun være et bitte lille ekstra.",
     "fi": "Kyllä, pieni pala cantaloupe-melonia sopii satunnaiseksi herkuksi. ASPCA luokittelee cantaloupe-melonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se pikkuisena lisänä.",
     "nb": "Ja, en liten bit cantaloupemelon er greit som en godbit en gang iblant. ASPCA oppgir cantaloupe som ikke giftig for katter, men katter er kjøttetere og trenger ikke frukt, og alle planter kan gi urolig mage, så la det bare være litt ekstra."
   },
@@ -83,7 +83,7 @@
     "cs": "ASPCA uvádí pravý cukrový meloun (Cucumis melo) jako netoxický pro kočky. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "ASPCA navodi pravu dinju kantalupu (Cucumis melo) kao neotrovnu za mačke. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att äkta cantaloupemelon (Cucumis melo) inte är giftig för katter. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "ASPCA opfører ægte cantaloupemelon (Cucumis melo) som ikke giftig for katte. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "da": "ASPCA betragter ægte cantaloupemelon (Cucumis melo) som ugiftig for katte. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
     "fi": "ASPCA luokittelee aidon cantaloupe-melonin (Cucumis melo) kissoille myrkyttömäksi. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "ASPCA oppgir ekte cantaloupe (Cucumis melo) som ikke giftig for katter. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
@@ -118,7 +118,7 @@
     "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
-    "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad.",
+    "da": "Et lille stykke en gang imellem, medregnet i kattens daglige foder.",
     "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
     "nb": "En liten bit nå og da, regnet med i kattens daglige matmengde."
   },
@@ -281,7 +281,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4de091e5dacc8e1786a7acbbaa2cb78ae18b5b569d2b30c1bd295160a6270d5c"
+      "verified_hash": "d3db56bd15008b4646a4b3d5402dcc95234c33c6068b769311be4fb69f94d867"
     },
     "fi": {
       "status": "verified",

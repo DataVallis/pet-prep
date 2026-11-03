@@ -83,7 +83,7 @@
     "cs": "Podle VCA k otravě vitaminem A nejčastěji dochází, když domácí zvířata týdny až měsíce dostávají syrová játra nebo doplňky bohaté na vitamin A. Merck Veterinary Manual uvádí, že u koček k ní může dojít, když rostoucí koťata dostávají stravu s vysokým podílem jater, a že ji může způsobit krmení samotnými játry. VCA místo toho doporučuje komerčně vyráběnou vyváženou stravu.",
     "hr": "VCA navodi da se otrovanje vitaminom A najčešće javlja kad ljubimci tjednima do mjesecima dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A. Priručnik Merck Veterinary Manual navodi da se kod mačaka može javiti kad mačići u rastu jedu hranu s puno jetre te da ga može izazvati hranjenje samo jetrom. VCA umjesto toga preporučuje komercijalno pripremljenu, uravnoteženu hranu.",
     "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när växande kattungar får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
-    "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det kan give A-vitaminforgiftning udelukkende at fodre med lever. VCA anbefaler i stedet en færdigfremstillet, balanceret kost.",
+    "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det også kan ske hvis katten udelukkende fodres med lever. VCA anbefaler i stedet en kommercielt fremstillet, balanceret kost.",
     "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa.",
     "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at det å bare gi lever kan føre til forgiftningen. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
   },
@@ -382,7 +382,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "00f5140b6c7144dd6e7bb24e4aed2a66817b6b015c87961c2b6c6072812778c2"
+      "verified_hash": "19e83fd476997ee179b477c34ac0517270252e9f828c1a7db4c6064deb8a63aa"
     },
     "fi": {
       "status": "verified",

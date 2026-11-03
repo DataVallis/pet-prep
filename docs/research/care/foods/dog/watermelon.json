@@ -66,7 +66,7 @@
     "cs": "Ano, pokud ho správně připravíte. Vodní meloun je nízkokalorické ovoce s vysokým obsahem vody, nejdřív ale odstraňte všechna semínka a kůru, protože obojí může způsobit zažívací potíže nebo ucpání střev.",
     "hr": "Da, ako je pravilno pripremiš. Lubenica je niskokalorično voće s puno vode, ali prije toga ukloni sve sjemenke i koru jer i jedno i drugo može izazvati probavne tegobe ili začepljenje crijeva.",
     "sv": "Ja, om du förbereder den på rätt sätt. Vattenmelon är en kalorisnål frukt med hög vattenhalt, men ta först bort alla kärnor och skalet, eftersom båda kan ge matsmältningsbesvär eller tarmstopp.",
-    "da": "Ja, hvis du gør den klar på den rigtige måde. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
+    "da": "Ja, hvis du forbereder den rigtigt. Vandmelon er en kaloriefattig frugt med et højt vandindhold, men fjern først alle kerner og skrællen, fordi begge dele kan give fordøjelsesproblemer eller tarmblokering.",
     "fi": "Saa, kunhan se on oikein valmisteltu. Vesimeloni on vähäkalorinen ja hyvin vesipitoinen hedelmä, mutta poista ensin kaikki siemenet ja kuori, koska molemmat voivat aiheuttaa ruoansulatusvaivoja tai suolitukoksen.",
     "nb": "Ja, hvis den gjøres klar på riktig måte. Vannmelon er en kalorifattig frukt med mye vann, men fjern alle kjerner og skallet først, fordi begge deler kan gi fordøyelsesplager eller tarmblokkering."
   },
@@ -305,7 +305,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f2144e18ce18e14403b3921a6d71177ffe5fadd35d8c0a59dd9533ef030da426"
+      "verified_hash": "cb741adf0970f7bc598e2236f71ca3cdf409cfc908182d86618d27f92c2c7c6d"
     },
     "fi": {
       "status": "verified",

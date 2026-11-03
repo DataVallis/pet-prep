@@ -118,7 +118,7 @@
     "cs": "Tepelně upravené maso bez přísad, bez kostí, kůže a koření; malé množství započítané do denní dávky krmiva.",
     "hr": "Obično termički obrađeno meso bez kostiju, kože i začina; mala količina, uračunata u dnevni obrok.",
     "sv": "Naturellt tillagat kött utan ben, skinn eller kryddor; en liten mängd, inräknad i den dagliga maten.",
-    "da": "Naturelt, tilberedt kød uden ben, skind og krydderier; en lille mængde, regnet med i den daglige mad.",
+    "da": "Naturelt, tilberedt kød uden ben, skind og krydderier; en lille mængde, medregnet i den daglige foderportion.",
     "fi": "Maustamatonta kypsennettyä lihaa ilman luita, nahkaa ja mausteita; pieni määrä, laskettuna mukaan päivän ruokaan.",
     "nb": "Naturell, tilberedt kalkun uten bein, skinn eller krydder; en liten mengde, regnet med i den daglige maten."
   },
@@ -292,7 +292,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ef63cf229d525f988712b03e34f7f3fb5f93416727324df7ea9be00500693ba7"
+      "verified_hash": "21ef1632367a46b83627c610677f665a30de64e2a7856a4e2ec9e8bf85b39617"
     },
     "fi": {
       "status": "verified",

@@ -66,7 +66,7 @@
     "cs": "Ne, třešním je lepší se vyhnout. Zralá dužnina sama jedovatá není, ale pecky, stopky a listy obsahují látky, ze kterých se může uvolnit kyanid, a pecky mohou psovi ucpat střeva. Podle Pet Poison Helpline riziko převažuje nad jakýmkoli přínosem.",
     "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist.",
     "sv": "Nej, körsbär är bäst att undvika. Det mogna fruktköttet är inte den giftiga delen, men kärnor, skaft och blad innehåller ämnen som kan frigöra cyanid, och kärnorna kan blockera hundens tarmar. Pet Poison Helpline menar att risken väger tyngre än nyttan.",
-    "da": "Nej, kirsebær er bedst at undgå. Det modne frugtkød er ikke den giftige del, men stenene, stilkene og bladene indeholder stoffer der kan frigive cyanid, og stenene kan blokere hundens tarme. Pet Poison Helpline siger at risikoen overstiger enhver fordel.",
+    "da": "Nej, kirsebær er bedst at undgå. Det modne frugtkød er ikke den giftige del, men stenene, stilkene og bladene indeholder stoffer der kan frigive cyanid, og stenene kan blokere hundens tarme. Pet Poison Helpline siger at risikoen er større end enhver fordel.",
     "fi": "Ei, kirsikoita on parasta välttää. Kypsä hedelmäliha ei ole kirsikan myrkyllinen osa, mutta kivet, varret ja lehdet sisältävät yhdisteitä, joista voi vapautua syanidia, ja kivet voivat tukkia koiran suoliston. Pet Poison Helplinen mukaan riski on hyötyä suurempi.",
     "nb": "Nei, kirsebær bør helst unngås. Det modne fruktkjøttet er ikke den giftige delen, men steinene, stilkene og bladene inneholder stoffer som kan frigjøre cyanid, og steinene kan blokkere tarmen. Pet Poison Helpline mener at risikoen er større enn nytten."
   },
@@ -175,7 +175,7 @@
     "da": [
       "Udvidede pupiller",
       "Teglstensrødt tandkød",
-      "Vejrtrækningsbesvær, hiven efter vejret",
+      "Vejrtrækningsbesvær, pesen",
       "Dårlig mave eller diarré",
       "Chok"
     ],
@@ -297,7 +297,7 @@
         "cs": "Zralá dužnina sama jedovatá není, ale podle Pet Poison Helpline riziko krmení třešněmi převažuje nad přínosem.",
         "hr": "Zrelo meso ploda nije otrovni dio, ali Pet Poison Helpline upozorava da rizik od davanja trešanja psu nadmašuje koristi.",
         "sv": "Det mogna fruktköttet är inte den giftiga delen, men Pet Poison Helpline menar att risken med att ge körsbär väger tyngre än nyttan.",
-        "da": "Det modne frugtkød er ikke den giftige del, men Pet Poison Helpline vurderer at risikoen ved at give kirsebær overstiger fordelene.",
+        "da": "Det modne frugtkød er ikke den giftige del, men Pet Poison Helpline vurderer at risikoen ved at give kirsebær er større end fordelene.",
         "fi": "Kypsä hedelmäliha ei ole kirsikan myrkyllinen osa, mutta Pet Poison Helplinen mukaan kirsikoiden antamisen riski on hyötyjä suurempi.",
         "nb": "Det modne fruktkjøttet er ikke den giftige delen, men Pet Poison Helpline mener at risikoen ved å gi hunden kirsebær er større enn nytten."
       }
@@ -428,7 +428,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e74c14c34e17735b845e0e539480a40e353de87fb77f2a969d6b2ec89abbbf15"
+      "verified_hash": "eb8ab5fb20f979c2ea5cbf0ad40a9c4bd80288a582be16c7b56d0546844af2a1"
     },
     "fi": {
       "status": "verified",

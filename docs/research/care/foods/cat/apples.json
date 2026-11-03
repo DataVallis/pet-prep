@@ -66,7 +66,7 @@
     "cs": "Ano, malý kousek jablka je občas v pořádku, pokud předem odstraníte ohryzek, jádra a stopku. Kočky jsou masožravci a ovoce nepotřebují, takže jablko je jen občasný doplněk.",
     "hr": "Da, mali komadić jabuke povremeno je u redu, ako prije toga ukloniš jezgru, sjemenke i peteljku. Mačke su mesojedi i ne trebaju voće, pa je jabuka samo povremeni dodatak.",
     "sv": "Ja, en liten bit äpple då och då går bra, så länge du först tar bort kärnhus, kärnor och skaft. Katter är köttätare och behöver inte frukt, så äpple är bara ett litet extra någon gång.",
-    "da": "Ja, et lille stykke æble er fint en gang imellem så længe du først fjerner kernehus, kerner og stilk. Katte er kødædere og har ikke brug for frugt, så æble er kun et ekstra indimellem.",
+    "da": "Ja, et lille stykke æble er fint en gang imellem så længe du først fjerner kernehus, kerner og stilk. Katte er kødædere og har ikke brug for frugt, så æble skal kun være et lille ekstra nu og da.",
     "fi": "Kyllä, pieni pala omenaa silloin tällöin sopii, kunhan poistat ensin siemenkodan, siemenet ja varren. Kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten omena on vain satunnainen lisä.",
     "nb": "Ja, en liten bit eple er greit nå og da, så lenge du fjerner kjernehuset, kjernene og stilken først. Katter er kjøttetere og trenger ikke frukt, så eple er bare et ekstra innslag en gang iblant."
   },
@@ -83,7 +83,7 @@
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) uvádí jablko bez jader mezi zdravými pamlsky z lidských potravin pro kočky a psy a podle Pet Poison Helpline jsou jablka bezpečná syrová i tepelně upravená, jakmile se odstraní ohryzek a jádra. ASPCA uvádí jabloň jako rostlinu toxickou pro kočky, protože její stonky, listy a semena obsahují kyanid. Kočky jsou obligátní masožravci a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Veterinarska bolnica sveučilišta NC State navodi jabuku bez sjemenki među zdravim poslasticama od ljudske hrane za mačke i pse, a Pet Poison Helpline navodi da su jabuke sigurne sirove ili termički obrađene kad se uklone jezgra i sjemenke. ASPCA navodi biljku jabuke kao otrovnu za mačke jer njezine peteljke, listovi i sjemenke sadrže cijanid. Mačke su obligatni mesojedi, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "NC States djursjukhus tar upp äpple utan kärnor bland hälsosamma godbitar från människomaten för katter och hundar, och Pet Poison Helpline skriver att äpplen är säkra råa eller tillagade när kärnhus och kärnor är borttagna. ASPCA anger att äppelträdet är giftigt för katter eftersom skaft, blad och kärnor innehåller cyanid. Katter är obligata köttätare, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "Dyrehospitalet ved NC State nævner æble uden kerner blandt sunde godbidder fra menneskemad til katte og hunde, og Pet Poison Helpline skriver at æbler er sikre rå eller tilberedte når kernehus og kerner er fjernet. ASPCA opfører æbleplanten som giftig for katte fordi dens stilke, blade og kerner indeholder cyanid. Katte er obligate kødædere, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "da": "Dyrehospitalet ved NC State nævner æble uden kerner blandt sunde godbidder fra menneskemad til katte og hunde, og Pet Poison Helpline skriver at æbler er sikre rå eller tilberedte når kernehus og kerner er fjernet. ASPCA betragter æbleplanten som giftig for katte fordi dens stilke, blade og kerner indeholder cyanid. Katte er rene kødædere, og alt plantemateriale kan give opkast eller dårlig mave.",
     "fi": "NC Staten eläinsairaala mainitsee siemenettömän omenan terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille, ja Pet Poison Helplinen mukaan omena on turvallinen raakana tai kypsennettynä, kun siemenkota ja siemenet on poistettu. ASPCA luokittelee omenakasvin kissoille myrkylliseksi, koska sen varret, lehdet ja siemenet sisältävät syanidia. Kissat ovat pakollisia lihansyöjiä, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "Dyresykehuset ved NC State oppgir eple uten kjerner blant sunne godbiter fra menneskemat for katter og hunder, og Pet Poison Helpline skriver at epler er trygge rå eller tilberedt når kjernehuset og kjernene er fjernet. ASPCA regner epletreet som giftig for katter fordi stilkene, bladene og kjernene inneholder cyanid. Katter er obligate kjøttetere, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
@@ -118,7 +118,7 @@
     "cs": "Pouze dužina jablka, syrová nebo tepelně upravená, bez ohryzku, jader a stopky; občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Samo meso jabuke, sirovo ili termički obrađeno, bez jezgre, sjemenki i peteljke; mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "Bara fruktköttet, rått eller tillagat, med kärnhus, kärnor och skaft borttagna; en liten bit då och då, inräknad i kattens dagliga matranson.",
-    "da": "Kun æblekød, råt eller tilberedt, med kernehus, kerner og stilk fjernet; et lille stykke en gang imellem, regnet med i kattens daglige mad.",
+    "da": "Kun æblekød, råt eller tilberedt, med kernehus, kerner og stilk fjernet; et lille stykke en gang imellem, medregnet i kattens daglige foder.",
     "fi": "Vain omenan hedelmäliha raakana tai kypsennettynä, siemenkota, siemenet ja varsi poistettuina; pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
     "nb": "Bare fruktkjøttet, rått eller tilberedt, med kjernehus, kjerner og stilk fjernet; en liten bit nå og da, regnet med i kattens daglige matmengde."
   },
@@ -346,7 +346,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "adb1e36c4c59caac0fe8486aaff2f4ef0312b8a453e31c3a1340c200fc10a946"
+      "verified_hash": "3228d0a89fa9d7ad0b017a2104b9be0eba4465ec120fcce3011a3e96e4d1fad6"
     },
     "fi": {
       "status": "verified",

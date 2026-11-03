@@ -66,7 +66,7 @@
     "cs": "Jen po poradě s veterinářem. Tepelně upravené kosti se tříští, rizika ale nesou i syrové kosti: mohou zlomit zuby, způsobit dušení nebo ucpat střeva a syrové maso na nich může obsahovat bakterie, například salmonelu. Někteří veterináři je pod dohledem povolují, jiní kosti nedoporučují.",
     "hr": "Samo nakon razgovora s veterinarom. Termički obrađene kosti pucaju u oštre krhotine, ali i sirove kosti nose rizike: mogu slomiti zube, uzrokovati gušenje ili začepiti crijeva, a sirovo meso na njima može sadržavati bakterije poput salmonele. Neki ih veterinari dopuštaju uz nadzor, a drugi odvraćaju od davanja kostiju.",
     "sv": "Bara efter att du har pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
-    "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler har også risici: De kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
+    "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler er heller ikke risikofri: de kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
     "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita.",
     "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger godtar dem under tilsyn; andre fraråder bein."
   },
@@ -83,7 +83,7 @@
     "cs": "Zdroje se liší, proto vycházíme z přísnějšího hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážný stav.",
     "hr": "Izvori se razlikuju, pa koristimo strožu ocjenu. FDA navodi da kosti mogu uzrokovati začepljenja, gušenje i ozljede usta te savjetuje da veterinara pitaš za sigurnije žvakalice. AKC napominje da sirove kosti mogu sadržavati salmonelu i da vrlo tvrde kosti mogu oštetiti zube. Kosti mogu ozlijediti ili začepiti crijeva, a začepljenja su vrlo ozbiljna.",
     "sv": "Källorna går isär, så vi använder den strängare nivån. FDA nämner tarmstopp, kvävning och skador i munnen efter ben och råder dig att fråga veterinären om säkrare tuggben. AKC påpekar att råa ben kan bära på salmonella och att mycket hårda ben kan skada tänderna. Ben kan skada mag-tarmkanalen eller orsaka stopp i den, och tarmstopp är mycket allvarligt.",
-    "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og råder til at spørge dyrlægen om sikrere ting at tygge på. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
+    "da": "Kilderne er uenige, så vi bruger det strengeste niveau. FDA nævner blokeringer, kvælning og skader i munden efter knogler og anbefaler at spørge dyrlægen om sikrere tyggeting. AKC påpeger at rå knogler kan indeholde salmonella, og at meget hårde knogler kan skade tænderne. Knogler kan skade eller blokere tarmen, og blokeringer er meget alvorlige.",
     "fi": "Lähteet ovat eri mieltä, joten käytämme tiukempaa luokitusta. FDA mainitsee luiden jälkeen ilmenneitä tukoksia, tukehtumistapauksia ja suun vammoja ja neuvoo kysymään eläinlääkäriltä turvallisemmista purutuotteista. AKC:n mukaan raaoissa luissa voi olla salmonellaa, ja hyvin kovat luut voivat vahingoittaa hampaita. Luut voivat vaurioittaa tai tukkia suoliston, ja tukokset ovat erittäin vakavia.",
     "nb": "Kildene sier ulike ting, så vi bruker det strengere nivået. FDA nevner blokkeringer, kvelning og skader i munnen etter bein og råder deg til å spørre dyrlegen om tryggere ting å tygge på. AKC påpeker at rå bein kan inneholde salmonella, og at svært harde bein kan skade tennene. Bein kan skade eller blokkere tarmen, og blokkeringer er svært alvorlige."
   },
@@ -277,7 +277,7 @@
         "cs": "Tepelně upravené kosti se tříští, a proto se nesmějí dávat nikdy. Syrové kosti s sebou ale stále nesou riziko zlomených zubů, ucpání střev a bakterií, proto se nejdřív zeptejte veterináře.",
         "hr": "Termički obrađene kosti pucaju u oštre krhotine, zato ih psu nikad ne smiješ davati. I sirove kosti nose rizik od slomljenih zuba, začepljenja i bakterija, zato prvo pitaj veterinara.",
         "sv": "Tillagade ben splittras, och därför ska de aldrig ges. Råa ben innebär ändå risk för brutna tänder, tarmstopp och bakterier, så fråga veterinären först.",
-        "da": "Tilberedte knogler splintrer, og derfor må de aldrig gives. Rå knogler har stadig risiko for knækkede tænder, blokeringer og bakterier, så spørg din dyrlæge først.",
+        "da": "Tilberedte knogler splintrer, og derfor må de aldrig gives. Rå knogler indebærer stadig risiko for knækkede tænder, blokeringer og bakterier, så spørg din dyrlæge først.",
         "fi": "Kypsennetyt luut sirpaloituvat, ja siksi niitä ei pidä antaa koskaan. Myös raakoihin luihin liittyy hampaiden rikkoutumisen, tukosten ja bakteerien riski, joten kysy ensin eläinlääkäriltä.",
         "nb": "Tilberedte bein splintres, og derfor skal de aldri gis. Rå bein har likevel risiko for knekte tenner, blokkering og bakterier, så spør dyrlegen først."
       }
@@ -313,7 +313,7 @@
         "cs": "Kost by měla být větší, než je délka psí tlamy, aby ji pes nemohl spolknout celou, a při žvýkání psa hlídejte.",
         "hr": "Kost treba biti dulja od pseće njuške kako je pas ne bi mogao progutati cijelu, a dok pas glođe, povremeno provjeri kako je.",
         "sv": "Benet ska vara längre än hundens nos så att det inte kan sväljas helt, och du ska hålla koll på hunden medan den tuggar.",
-        "da": "En knogle skal være større end længden af hundens snude, så den ikke kan sluges hel, og du skal holde øje med hunden mens den tygger.",
+        "da": "En knogle skal være længere end hundens snude, så den ikke kan sluges hel, og du skal holde øje med hunden mens den tygger.",
         "fi": "Luun pitää olla koiran kuonon pituutta suurempi, jotta koira ei voi niellä sitä kokonaisena, ja koiraa pitää tarkkailla sen pureskellessa luuta.",
         "nb": "Beinet bør være lengre enn snuten til hunden, så det ikke kan svelges helt, og du bør følge med på hunden mens den tygger."
       }
@@ -476,7 +476,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2aab89e2ac92d3fdf3b509a35817791aa7c0276fd013c4ecb948e951d10e2a87"
+      "verified_hash": "8b8da219b6bd9b36c0f7b4047736d773017bdd4e897c5db90b820b4b2ee2be3d"
     },
     "fi": {
       "status": "verified",

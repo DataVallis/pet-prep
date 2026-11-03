@@ -66,7 +66,7 @@
     "cs": "Ne, ve velkém množství ne. Slané jídlo s mírou by otravu solí způsobit nemělo, velké množství soli však ano – například z domácího slaného těsta, modelíny nebo spousty mořské vody. Mezi příznaky patří zvracení, silná žízeň, třes a záchvaty.",
     "hr": "Ne, ne u velikim količinama. Slana hrana u umjerenim količinama ne bi trebala izazvati trovanje solju, ali velika količina soli može, na primjer iz domaćeg slanog tijesta, tijesta za modeliranje ili iz puno morske vode. Znakovi su povraćanje, jaka žeđ, drhtanje mišića i napadaji.",
     "sv": "Nej, inte i stora mängder. Salt mat med måtta bör inte orsaka saltförgiftning, men mycket salt, till exempel från hemgjord saltdeg, lekdeg eller mycket havsvatten, kan göra det. Symtomen är bland annat kräkningar, kraftig törst, darrningar och kramper.",
-    "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, trylledej eller store mængder havvand. Symptomerne omfatter opkast, stærk tørst, rysten og kramper.",
+    "da": "Nej, ikke i store mængder. Salt mad med måde bør ikke give saltforgiftning, men meget salt kan – for eksempel fra hjemmelavet saltdej, legedej eller store mængder havvand. Symptomerne omfatter opkast, kraftig tørst, rysten og kramper.",
     "fi": "Ei, ei suuria määriä. Kohtuullisen määrän suolaista ruokaa ei pitäisi aiheuttaa suolamyrkytystä, mutta suuri määrä suolaa esimerkiksi kotitekoisesta suolataikinasta, muovailutaikinasta tai runsaasta merivedestä voi aiheuttaa. Oireita ovat oksentelu, voimakas jano, vapina ja kouristukset.",
     "nb": "Nei, ikke i store mengder. Salt mat med måte bør ikke gi saltforgiftning, men mye salt, for eksempel fra hjemmelaget saltdeig eller lekedeig eller mye sjøvann, kan gjøre det. Symptomene er bl.a. oppkast, sterk tørst, skjelvinger og kramper."
   },
@@ -83,7 +83,7 @@
     "cs": "Častými příčinami otravy solí jsou domácí ozdoby ze slaného těsta a modelína, sníh s posypovou solí a vypití velkého množství mořské vody. Otrava solí je nepravděpodobná, pokud má zdravý pes k dispozici čerstvou vodu, větší riziko však hrozí malým psům se zdravotními problémy, kteří čerstvou vodu nemají. Sůl se nikdy nesmí používat k vyvolání zvracení u psa.",
     "hr": "Trovanje solju najčešće uzrokuju domaći ukrasi od slanog tijesta, tijesto za modeliranje, snijeg posut solju protiv poledice i pijenje puno morske vode. Trovanje solju malo je vjerojatno kad zdrav pas ima svježu vodu, ali mali psi sa zdravstvenim tegobama izloženiji su riziku ako nemaju svježe vode. Sol se nikad ne smije koristiti za izazivanje povraćanja kod psa.",
     "sv": "Vanliga orsaker till saltförgiftning är hemgjort pynt av saltdeg och lekdeg, snö med vägsalt och att hunden dricker mycket havsvatten. Saltförgiftning är osannolik när en frisk hund har tillgång till färskt vatten, men små hundar med hälsoproblem löper större risk om de saknar färskt vatten. Salt får aldrig användas för att få en hund att kräkas.",
-    "da": "Almindelige årsager til saltforgiftning er hjemmelavet pynt af saltdej og trylledej, sne med vejsalt og store mængder havvand. Saltforgiftning er usandsynlig når en rask hund har frisk vand, men små hunde med helbredsproblemer er mere udsatte hvis de ikke har frisk vand. Salt må aldrig bruges til at få en hund til at kaste op.",
+    "da": "Almindelige årsager til saltforgiftning er hjemmelavet pynt af saltdej og legedej, sne med vejsalt og store mængder havvand. Saltforgiftning er usandsynlig når en rask hund har frisk vand, men små hunde med helbredsproblemer er mere udsatte hvis de ikke har frisk vand. Salt må aldrig bruges til at få en hund til at kaste op.",
     "fi": "Suolamyrkytyksen tavallisia syitä ovat kotitekoiset suolataikinakoristeet ja muovailutaikina, lumi, jossa on tiesuolaa sekä suuren merivesimäärän juominen. Suolamyrkytys on epätodennäköinen, kun terveellä koiralla on raikasta vettä saatavilla, mutta pienet koirat, joilla on terveysongelmia, ovat suuremmassa vaarassa, jos raikasta vettä ei ole. Suolaa ei saa koskaan käyttää koiran oksennuttamiseen.",
     "nb": "Vanlige årsaker til saltforgiftning er hjemmelagde pyntefigurer av saltdeig og hjemmelaget lekedeig, snø med veisalt og å drikke mye sjøvann. Saltforgiftning er lite sannsynlig når en frisk hund har tilgang til friskt vann, men små hunder med helseproblemer er mer utsatt hvis de ikke har friskt vann. Salt må aldri brukes for å få en hund til å kaste opp."
   },
@@ -173,7 +173,7 @@
       "Darrningar eller kramper"
     ],
     "da": [
-      "Stærk tørst og hyppig vandladning",
+      "Kraftig tørst og hyppig vandladning",
       "Opkast, ofte inden for et par timer",
       "Diarré",
       "Usikker gang, træthed",
@@ -207,7 +207,7 @@
     "cs": "Pokud váš pes snědl hodně soli, slaného těsta nebo modelíny nebo vypil hodně mořské vody, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co a kolik pes snědl. Nečekejte, až se objeví příznaky a nikdy psovi nedávejte sůl, abyste vyvolali zvracení.",
     "hr": "Ako je tvoj pas pojeo puno soli, slanog tijesta ili tijesta za modeliranje ili je popio puno morske vode, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i koliko pojeo. Ne čekaj da se pojave znakovi i nikad ne daj psu sol da bi povratio.",
     "sv": "Om hunden ätit mycket salt, saltdeg eller lekdeg, eller druckit mycket havsvatten, kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad och hur mycket den fått i sig. Vänta inte på symtom, och ge aldrig salt för att få hunden att kräkas.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din hund har spist meget salt, saltdej eller trylledej eller har drukket meget havvand. Skriv ned hvad og hvor meget hunden har fået. Vent ikke på symptomer, og giv aldrig salt for at få en hund til at kaste op.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din hund har spist meget salt, saltdej eller legedej eller har drukket meget havvand. Skriv ned hvad og hvor meget hunden har fået. Vent ikke på symptomer, og giv aldrig salt for at få en hund til at kaste op.",
     "fi": "Jos koirasi söi paljon suolaa, suolataikinaa tai muovailutaikinaa tai joi paljon merivettä, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koira söi ja kuinka paljon. Älä odota oireita äläkä koskaan anna suolaa koiran oksennuttamiseksi.",
     "nb": "Hvis hunden har spist mye salt, saltdeig eller lekedeig, eller drukket mye sjøvann, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva og hvor mye hunden har fått i seg. Ikke vent på symptomer, og gi aldri salt for å få hunden til å kaste opp."
   },
@@ -225,7 +225,7 @@
     "cs": "Když pes sní moc soli, má velkou žízeň a je mu hodně zle. Sůl i slanou modelínu nech mimo dosah psa.",
     "hr": "Od previše soli psi postanu jako žedni i bolesni. Drži sol i slano tijesto za modeliranje podalje od svog psa.",
     "sv": "För mycket salt gör hundar jättetörstiga och sjuka. Håll salt och lekdeg med salt borta från din hund.",
-    "da": "For meget salt gør hunde meget tørstige og syge. Hold salt og trylledej med salt i væk fra din hund.",
+    "da": "For meget salt gør hunde meget tørstige og syge. Hold salt og saltholdig legedej væk fra din hund.",
     "fi": "Liiasta suolasta koira tulee hyvin janoiseksi ja sairaaksi. Pidä suola ja suolainen muovailutaikina kaukana koirastasi.",
     "nb": "For mye salt gjør hunder veldig tørste og syke. Hold salt og salt lekedeig unna hunden din."
   },
@@ -244,7 +244,7 @@
         "cs": "Je domácí modelína nebezpečná?",
         "hr": "Je li domaće tijesto za modeliranje opasno?",
         "sv": "Är hemgjord lekdeg farlig?",
-        "da": "Er hjemmelavet trylledej farlig?",
+        "da": "Er hjemmelavet legedej farlig?",
         "fi": "Onko kotitekoinen muovailutaikina vaarallista?",
         "nb": "Er hjemmelaget lekedeig farlig?"
       },
@@ -261,7 +261,7 @@
         "cs": "Ano. Kvůli vysokému obsahu soli je domácí modelína pro psy vysoce jedovatá. Rizikem jsou i ozdoby ze slaného těsta.",
         "hr": "Jest. Zbog velike količine soli domaće tijesto za modeliranje vrlo je otrovno za pse. Rizik su i ukrasi od slanog tijesta.",
         "sv": "Ja. På grund av den höga salthalten är hemgjord lekdeg mycket giftig för hundar. Pynt av saltdeg är också en risk.",
-        "da": "Ja. På grund af det høje saltindhold er hjemmelavet trylledej meget giftig for hunde. Pynt af saltdej er også en risiko.",
+        "da": "Ja. På grund af det høje saltindhold er hjemmelavet legedej meget giftig for hunde. Pynt af saltdej er også en risiko.",
         "fi": "On. Runsaan suolapitoisuutensa vuoksi kotitekoinen muovailutaikina on koirille erittäin myrkyllistä. Myös suolataikinakoristeet ovat riski.",
         "nb": "Ja. På grunn av det høye saltinnholdet er hjemmelaget lekedeig svært giftig for hunder. Pyntefigurer av saltdeig er også en risiko."
       }
@@ -448,7 +448,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "57ab66bfb299da3dab9fbc921be1df132c0d7e673954c7a90f67226046d58ba0"
+      "verified_hash": "0fa3b94574175cd9a162fafc1c37300101b39d3afd3f06e522c58cd1d8be6483"
     },
     "fi": {
       "status": "verified",

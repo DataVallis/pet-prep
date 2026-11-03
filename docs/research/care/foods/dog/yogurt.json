@@ -171,7 +171,7 @@
         "cs": "Obvykle ano: bílý jogurt řeckého typu obsahuje méně laktózy než běžný jogurt.",
         "hr": "Obično jest: nezaslađeni grčki jogurt ima manje laktoze od klasičnog jogurta.",
         "sv": "Oftast ja: naturell grekisk yoghurt innehåller mindre laktos än vanlig yoghurt.",
-        "da": "Som regel ja: Naturel græsk yoghurt indeholder mindre laktose end almindelig yoghurt.",
+        "da": "Som regel ja: naturel græsk yoghurt indeholder mindre laktose end almindelig yoghurt.",
         "fi": "Yleensä on: maustamattomassa kreikkalaistyyppisessä jogurtissa on vähemmän laktoosia kuin tavallisessa jogurtissa.",
         "nb": "Som regel ja: Naturell yoghurt av gresk type inneholder mindre laktose enn vanlig yoghurt."
       }
@@ -207,7 +207,7 @@
         "cs": "Některé jogurty obsahují sladidla, jako je xylitol, který je pro psy jedovatý, nebo přidaný cukr.",
         "hr": "Neki jogurti sadrže sladila poput ksilitola, koji je otrovan za pse, ili dodani šećer.",
         "sv": "Vissa yoghurtar innehåller sötningsmedel som xylitol, som är giftigt för hundar, eller tillsatt socker.",
-        "da": "Noget yoghurt indeholder sødemidler som xylitol, som er giftigt for hunde, eller tilsat sukker.",
+        "da": "Noget yoghurt indeholder sødemidler som xylitol, der er giftigt for hunde, eller tilsat sukker.",
         "fi": "Joissakin jogurteissa on makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä, tai lisättyä sokeria.",
         "nb": "Noen yoghurter inneholder søtstoffer som xylitol, som er giftig for hunder, eller tilsatt sukker."
       }
@@ -338,7 +338,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e9427b664d21dd3ea422eb4ad02008050a0a4971dec405118ff7e6d6de7b9422"
+      "verified_hash": "57088a84db66bb500b8a06f336febb15e2e8b370e3f94c7d6e35bb7a90a881ba"
     },
     "fi": {
       "status": "verified",

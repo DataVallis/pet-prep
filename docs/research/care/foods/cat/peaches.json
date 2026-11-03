@@ -66,7 +66,7 @@
     "cs": "Ne, raději ne. ASPCA uvádí broskvoň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Broskve kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku breskve kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi mački breskve, koštice i dijelove biljke drži izvan njezina dosega i nazovi veterinara ako mačka išta od toga sažvače.",
     "sv": "Nej, helst inte. ASPCA anger att persikoträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten persikor, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
-    "da": "Nej, helst ikke. ASPCA opfører ferskentræet som giftigt for katte: Dets stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke din kat ferskner, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
+    "da": "Nej, helst ikke. ASPCA betragter ferskentræet som giftigt for katte: Dets stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke din kat ferskner, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
     "fi": "Ei, parempi olla antamatta. ASPCA luokittelee persikkakasvin kissalle myrkylliseksi: sen varsissa, lehdissä ja siemenissä (kivessä) on syanidia. Älä tarjoa persikkaa kissallesi, pidä kivet ja kasvinosat poissa sen ulottuvilta ja soita eläinlääkärille, jos kissasi pureskelee niitä.",
     "nb": "Nei, helst ikke. ASPCA regner ferskentreet som giftig for katter: Stilkene, bladene og frøene (steinen) inneholder cyanid. Ikke gi katten fersken, hold steiner og plantedeler utenfor rekkevidde, og ring dyrlegen hvis katten tygger på noe av det."
   },
@@ -368,7 +368,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7fac54ea5508c10e19bb669548477c64074566b53010253e1f3bde5cc95ef527"
+      "verified_hash": "486124b1bb69d5636bd95f916414df87d1c32052ec4174f4f5d873a1f7f6839b"
     },
     "fi": {
       "status": "verified",

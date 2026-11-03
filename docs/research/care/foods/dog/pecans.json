@@ -66,7 +66,7 @@
     "cs": "Ne. Pekanové ořechy psům neprospívají: i malé množství může psovi vážně uškodit. Obsahují juglon, mohou na nich být jedovaté plísně, jsou tučné a jejich tvrdé skořápky mohou způsobit dušení nebo ucpání střev. Pokud pes nějaké sní, zavolejte veterináři.",
     "hr": "Ne. Pekan orasi nisu dobri za pse: već nekoliko njih može psa ozbiljno razboljeti. Sadrže juglon, na njima se može razviti otrovna plijesan, masni su, a njihova tvrda ljuska može izazvati gušenje ili začepiti crijeva. Nazovi veterinara ako ih tvoj pas pojede.",
     "sv": "Nej. Pekannötter är inte bra för hundar: redan ett fåtal kan göra en hund mycket sjuk. De innehåller juglon, kan bära på giftigt mögel och är feta, och de hårda skalen kan orsaka kvävning eller tarmstopp. Ring veterinären om hunden äter några.",
-    "da": "Nej. Pekannødder er ikke gode for hunde: Selv nogle få kan gøre en hund meget syg. De indeholder juglon, kan have giftig skimmel og er fede, og de hårde skaller kan sætte sig fast i halsen eller give blokeringer. Kontakt din dyrlæge hvis din hund spiser nogle.",
+    "da": "Nej. Pekannødder er ikke gode for hunde: selv nogle få kan gøre en hund meget syg. De indeholder juglon, kan have giftig skimmel og er fede, og de hårde skaller kan sætte sig fast i halsen eller give blokeringer. Kontakt din dyrlæge hvis din hund spiser nogle.",
     "fi": "Ei saa. Pekaanipähkinät eivät ole hyväksi koirille: pienikin määrä voi sairastuttaa koiran vakavasti. Niissä on juglonia, niissä voi olla myrkyllistä hometta, ne ovat rasvaisia, ja niiden kovat kuoret voivat aiheuttaa tukehtumisen tai tukoksia. Soita eläinlääkärille, jos koirasi syö niitä.",
     "nb": "Nei. Pekannøtter er ikke bra for hunder: Selv noen få kan gjøre en hund svært syk. De inneholder juglon, kan ha giftig mugg, er fete, og de harde skallene kan sette seg fast i halsen eller gi blokkering. Ring dyrlegen hvis hunden din spiser noen."
   },
@@ -365,7 +365,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "540148b7a72ff80890231e4ff85fb284c891024f2ce5e7acfb5e43403e5e0360"
+      "verified_hash": "ccf8ca666500631f4ea8f6bdc2cb0975aa08441a064ff006492ca10cb5d21244"
     },
     "fi": {
       "status": "verified",

@@ -66,7 +66,7 @@
     "cs": "Nedoporučuje se. Syrové ryby mohou obsahovat bakterie, například salmonelu a listerii, i parazity a jejich drobné kosti jsou nebezpečné. Na tichomořském severozápadě USA může syrový losos nebo pstruh způsobit otravu lososem (salmon poisoning disease). Rybu tepelně upravte bez přísad a odstraňte kosti.",
     "hr": "Ne preporučuje se. Sirova riba može sadržavati bakterije poput salmonele i listerije, kao i parazite, a njezine su sitne kosti opasne. Na pacifičkom sjeverozapadu SAD-a sirovi losos ili pastrva mogu izazvati takozvano trovanje lososom. Ribu termički obradi, bez dodataka, i ukloni kosti.",
     "sv": "Det rekommenderas inte. Rå fisk kan bära på bakterier som salmonella och listeria samt parasiter, och de små benen är en fara. I nordvästra USA kan rå lax eller öring orsaka laxförgiftning (salmon poisoning disease). Tillaga fisken utan kryddor och ta bort benen.",
-    "da": "Det frarådes. Rå fisk kan indeholde bakterier som salmonella og listeria samt parasitter, og de små ben er en fare. I det nordvestlige USA ved Stillehavet kan rå laks eller ørred give lakseforgiftning (salmon poisoning disease). Tilbered fisken uden tilsætning, og fjern benene.",
+    "da": "Det frarådes. Rå fisk kan indeholde bakterier som salmonella og listeria samt parasitter, og de små ben er en fare. I det nordvestlige USA ved Stillehavet kan rå laks eller ørred give lakseforgiftning (salmon poisoning disease). Tilbered fisken uden tilsætninger, og fjern benene.",
     "fi": "Ei ole suositeltavaa. Raa’assa kalassa voi olla bakteereja, kuten salmonellaa ja listeriaa, sekä loisia, ja sen pienet ruodot ovat vaaraksi. Yhdysvaltain Tyynenmeren luoteisrannikolla raaka lohi tai taimen voi aiheuttaa lohimyrkytystaudin. Kypsennä kala maustamatta ja poista ruodot.",
     "nb": "Anbefales ikke. Rå fisk kan inneholde bakterier som salmonella og listeria, i tillegg til parasitter, og de små beina er en fare. I det nordvestlige USA kan rå laks eller ørret gi laksforgiftning (salmon poisoning disease). Tilbered fisken uten noe tilsatt, og fjern beina."
   },
@@ -224,7 +224,7 @@
     "cs": "Jen důkladně tepelně upravenou rybu (pečenou, dušenou v páře nebo grilovanou), bez přísad a bez kostí.",
     "hr": "Samo potpuno termički obrađena riba (pečena u pećnici, kuhana na pari ili na roštilju), bez dodataka, bez ijedne kosti.",
     "sv": "Bara helt tillagad fisk (ugnsbakad, ångkokt eller grillad), utan kryddor, med alla ben borttagna.",
-    "da": "Kun gennemtilberedt fisk (bagt, dampet eller grillet), uden tilsætning og med alle ben fjernet.",
+    "da": "Kun gennemtilberedt fisk (bagt, dampet eller grillet), uden tilsætninger og med alle ben fjernet.",
     "fi": "Vain täysin kypsennettyä kalaa (uunissa, höyryssä tai grillissä kypsennettyä), maustamatta ja kaikki ruodot poistettuina.",
     "nb": "Bare gjennomstekt fisk (bakt, dampet eller grillet), uten noe tilsatt og med alle bein fjernet."
   },
@@ -425,7 +425,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cd849b568dba3a6dc681fa496661b0918d8840571fd519533dff39a6e0cb4d82"
+      "verified_hash": "5e481593047f84f7b06f0de6c6ea1b509710f34c4a36c6d5598466016a609daf"
     },
     "fi": {
       "status": "verified",

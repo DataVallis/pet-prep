@@ -66,7 +66,7 @@
     "cs": "Raději ne. Většina dospělých koček nesnáší laktózu, takže kravské mléko může způsobit zvracení, průjem a bolest břicha. Kočkám mléko nic nepřináší; k pití potřebují jen čerstvou vodu.",
     "hr": "Bolje ne. Većina odraslih mačaka ne podnosi laktozu, pa kravlje mlijeko može izazvati povraćanje, proljev i bol u trbuhu. Mlijeko mačkama ne donosi nikakvu korist; za piće im treba samo svježa voda.",
     "sv": "Helst inte. De flesta vuxna katter är laktosintoleranta, så komjölk kan ge kräkningar, diarré och ont i magen. Katter har ingen nytta av mjölk; friskt vatten är allt de behöver dricka.",
-    "da": "Helst ikke. De fleste voksne katte er laktoseintolerante, så komælk kan give opkast, diarré og mavesmerter. Katte har ingen gavn af mælk; frisk vand er alt hvad de behøver at drikke.",
+    "da": "Helst ikke. De fleste voksne katte er laktoseintolerante, så komælk kan give opkast, diarré og mavesmerter. Katte har ingen gavn af mælk; frisk vand er det eneste de behøver at drikke.",
     "fi": "Parempi olla antamatta. Useimmat aikuiset kissat eivät siedä laktoosia, joten lehmänmaito voi aiheuttaa oksentelua, ripulia ja vatsakipua. Kissa ei hyödy maidosta; juodakseen se tarvitsee vain raikasta vettä.",
     "nb": "Helst ikke. De fleste voksne katter tåler ikke laktose, så kumelk kan gi oppkast, diaré og vondt i magen. Katter har ingen nytte av melk; friskt vann er alt de trenger å drikke."
   },
@@ -194,7 +194,7 @@
     "cs": "Pokud chcete mléko nabídnout, zvolte mléko určené pro kočky (obvykle se sníženým obsahem laktózy nebo bez laktózy) a jeho kalorie započítejte do denní dávky krmiva vaší kočky.",
     "hr": "Ako joj želiš ponuditi mlijeko, odaberi mlijeko namijenjeno mačkama (obično sa smanjenim udjelom laktoze ili bez laktoze) i uračunaj njegove kalorije u mačkin dnevni obrok.",
     "sv": "Om du vill ge mjölk, välj mjölk som är gjord för katter (oftast laktosreducerad eller laktosfri) och räkna in kalorierna i kattens dagliga matranson.",
-    "da": "Hvis du vil give mælk, så vælg mælk lavet til katte (som regel laktosereduceret eller laktosefri), og regn kalorierne med i kattens daglige mad.",
+    "da": "Hvis du vil give mælk, så vælg mælk lavet til katte (som regel laktosereduceret eller laktosefri), og medregn kalorierne i kattens daglige foder.",
     "fi": "Jos haluat tarjota maitoa, valitse kissoille tarkoitettua maitoa (yleensä vähälaktoosista tai laktoositonta) ja laske sen kalorit mukaan kissasi päivittäiseen ruokamäärään.",
     "nb": "Hvis du vil gi melk, velg melk laget for katter (vanligvis laktoseredusert eller laktosefri), og regn kaloriene med i kattens daglige matmengde."
   },
@@ -319,7 +319,7 @@
         "cs": "Mléko určené pro kočky má obvykle mnohem méně laktózy, nebo žádnou. Stále však obsahuje kalorie, proto ho započítejte do denní dávky krmiva. K pití kočka potřebuje jen vodu.",
         "hr": "Mlijeko namijenjeno mačkama obično ima mnogo manje laktoze ili je uopće nema. Ipak ima kalorije, pa ih uračunaj u mačkin dnevni obrok. Za piće tvojoj mački treba samo voda.",
         "sv": "Mjölk som är gjord för katter har oftast mycket mindre laktos eller ingen alls. Den innehåller ändå kalorier, så räkna in den i kattens dagliga matranson. Katten behöver bara vatten att dricka.",
-        "da": "Mælk lavet til katte indeholder som regel meget mindre laktose eller slet ingen. Den indeholder stadig kalorier, så regn den med i kattens daglige mad. Din kat behøver kun vand at drikke.",
+        "da": "Mælk lavet til katte indeholder som regel meget mindre laktose eller slet ingen. Den indeholder stadig kalorier, så medregn den i kattens daglige foder. Din kat har kun brug for vand at drikke.",
         "fi": "Kissoille tarkoitetussa maidossa on yleensä paljon vähemmän laktoosia tai ei lainkaan. Siinä on silti kaloreita, joten laske se mukaan kissasi päivittäiseen ruokamäärään. Juotavaksi kissasi tarvitsee vain vettä.",
         "nb": "Melk laget for katter har vanligvis mye mindre laktose eller ingen. Den inneholder likevel kalorier, så regn den med i kattens daglige matmengde. Katten trenger bare vann å drikke."
       }
@@ -447,7 +447,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c2ecd1289532ca5aec17b4f19fe60eef1043ae456b7a95ec68584edc5411c309"
+      "verified_hash": "91195e4cc0736dbcb5aa937c4aaf4655d51d380535bc99d3b2ab29df53c9d592"
     },
     "fi": {
       "status": "verified",

@@ -66,7 +66,7 @@
     "cs": "Ne, čaj s kofeinem psům nepatří. Čaj obsahuje kofein, který je pro psy jedovatý. Trocha čaje pravděpodobně neuškodí, větší množství ale může být nebezpečné, zejména pro malé psy, a snědené čajové sáčky mohou způsobit vážnou otravu.",
     "hr": "Ne, čaj s kofeinom nije za pse. Čaj sadrži kofein, koji je otrovan za pse. Mali gutljaj vjerojatno neće naštetiti, ali veće količine mogu biti opasne, osobito za male pse, a pojedene vrećice čaja mogu izazvati ozbiljno otrovanje.",
     "sv": "Nej, te med koffein är inte för hundar. Te innehåller koffein, som är giftigt för hundar. En liten smakbit skadar sannolikt inte, men större mängder kan vara farliga, särskilt för små hundar, och tepåsar som hunden har ätit kan orsaka allvarlig förgiftning.",
-    "da": "Nej, te med koffein er ikke til hunde. Te indeholder koffein, som er giftigt for hunde. En lille smagsprøve gør næppe skade, men større mængder kan være farlige, især for små hunde, og hvis hunden spiser tebreve, kan det give alvorlig forgiftning.",
+    "da": "Nej, te med koffein er ikke til hunde. Te indeholder koffein, og det er giftigt for hunde. En lille smagsprøve gør næppe skade, men større mængder kan være farlige, især for små hunde, og hvis hunden spiser teposer, kan det give alvorlig forgiftning.",
     "fi": "Ei, kofeiinipitoinen tee ei sovi koirille. Teessä on kofeiinia, joka on koirille myrkyllistä. Pieni maistiainen tuskin vahingoittaa, mutta suuremmat määrät voivat olla vaarallisia etenkin pienille koirille, ja syödyt teepussit voivat aiheuttaa vakavan myrkytyksen.",
     "nb": "Nei, te med koffein er ikke noe for hunder. Te inneholder koffein, som er giftig for hunder. En liten smak gjør neppe skade, men større mengder kan være farlige, særlig for små hunder, og teposer som blir spist, kan gi alvorlig forgiftning."
   },
@@ -83,7 +83,7 @@
     "cs": "Mnoho čajů obsahuje kofein, který nadměrně stimuluje srdce a nervovou soustavu psa. Psi jsou na kofein citlivější než lidé. Jedno či dvě olíznutí čaje otravu pravděpodobně nezpůsobí, spolknuté čajové sáčky ale mohou vést k vážné otravě.",
     "hr": "Mnogi čajevi sadrže kofein, koji pretjerano potiče rad psećeg srca i živčanog sustava. Psi su osjetljiviji na kofein od ljudi. Jedno ili dva liznuća čaja vjerojatno neće izazvati otrovanje, ali progutane vrećice čaja mogu izazvati ozbiljno otrovanje.",
     "sv": "Många tesorter innehåller koffein, som överstimulerar hundens hjärta och nervsystem. Hundar är känsligare för koffein än människor. Ett par slickar te orsakar sannolikt ingen förgiftning, men nedsvalda tepåsar kan orsaka allvarlig förgiftning.",
-    "da": "Mange slags te indeholder koffein, som overstimulerer hundens hjerte og nervesystem. Hunde er mere følsomme over for koffein end mennesker. Et eller to slik af te giver næppe forgiftning, men slugte tebreve kan give alvorlig forgiftning.",
+    "da": "Mange slags te indeholder koffein, som overstimulerer hundens hjerte og nervesystem. Hunde er mere følsomme over for koffein end mennesker. Hvis hunden kun slikker lidt te i sig, giver det næppe forgiftning, men slugte teposer kan give alvorlig forgiftning.",
     "fi": "Monissa teelaaduissa on kofeiinia, joka ylikiihottaa koiran sydäntä ja hermostoa. Koirat ovat herkempiä kofeiinille kuin ihmiset. Pari nuolaisua teetä tuskin aiheuttaa myrkytystä, mutta nielaistut teepussit voivat aiheuttaa vakavan myrkytyksen.",
     "nb": "Mange typer te inneholder koffein, som overstimulerer hjertet og nervesystemet til hunden. Hunder er mer følsomme for koffein enn mennesker. Et par slikk te gir neppe forgiftning, men svelgede teposer kan gi alvorlig forgiftning."
   },
@@ -185,12 +185,12 @@
       "Ökat kissande"
     ],
     "da": [
-      "Uro, hyperaktivitet, går frem og tilbage",
-      "Hurtig puls",
+      "Rastløshed, hyperaktivitet, går frem og tilbage",
+      "Hurtig hjerterytme",
       "Opkast og diarré",
       "Savlen",
       "Rysten",
-      "Tisser mere"
+      "Hyppigere vandladning"
     ],
     "fi": [
       "Levottomuus, ylivilkkaus, edestakaisin kulkeminen",
@@ -222,7 +222,7 @@
     "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, kávová sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
     "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je tvoj pas unio kofein. Zapiši što je to bilo (piće, mljevena kava, zrna, vrećice čaja) i otprilike koliko. Ne čekaj da se pojave znakovi: važno je liječenje započeti rano.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du inser att hunden har fått i sig koffein. Notera vad det var (dryck, kaffesump, bönor, tepåsar) och ungefär hur mycket. Vänta inte på symtom: tidig behandling är viktig.",
-    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at din hund har fået koffein. Skriv ned hvad det var (drik, kaffegrums, bønner, tebreve), og omtrent hvor meget. Vent ikke på symptomer: Tidlig behandling er vigtig.",
+    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at din hund har fået koffein. Skriv ned hvad det var (drik, kaffegrums, bønner, teposer), og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
     "fi": "Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan heti, kun huomaat koirasi saaneen kofeiinia. Kirjaa ylös, mitä se oli (juoma, kahvinporot, kahvipavut, teepussit) ja suunnilleen kuinka paljon. Älä odota oireita: varhainen hoito on tärkeää.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikke, kaffegrut, bønner, teposer), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
   },
@@ -276,7 +276,7 @@
         "cs": "Jedno či dvě olíznutí většinu psů pravděpodobně neotráví. Pokud váš pes vypil víc nebo snědl kávovou sedlinu, zrna nebo čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata.",
         "hr": "Jedno ili dva liznuća kod većine pasa vjerojatno neće izazvati otrovanje. Ako je tvoj pas popio više ili je pojeo mljevenu kavu, zrna ili vrećice čaja, nazovi veterinara ili telefonsku liniju za otrovanja životinja.",
         "sv": "Ett par slickar orsakar sannolikt ingen förgiftning hos de flesta hundar. Om hunden har druckit mer eller ätit kaffesump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
-        "da": "Et eller to slik giver næppe forgiftning hos de fleste hunde. Hvis din hund har drukket mere eller spist grums, bønner eller tebreve, så kontakt din dyrlæge eller en giftrådgivning for dyr.",
+        "da": "Hvis hunden kun har slikket lidt, giver det næppe forgiftning hos de fleste hunde. Hvis din hund har drukket mere eller spist grums, bønner eller teposer, så kontakt din dyrlæge eller en giftrådgivning for dyr.",
         "fi": "Pari nuolaisua tuskin aiheuttaa myrkytystä useimmille koirille. Jos koirasi joi enemmän tai söi kahvinporoja, kahvipapuja tai teepusseja, soita eläinlääkärille tai eläinten myrkytysneuvontaan.",
         "nb": "Et par slikk gir neppe forgiftning hos de fleste hunder. Hvis hunden har drukket mer, eller spist kaffegrut, bønner eller teposer, må du ringe dyrlegen eller giftinformasjon for dyr."
       }
@@ -295,7 +295,7 @@
         "cs": "Co když pes snědl čajový sáček?",
         "hr": "Što ako je moj pas pojeo vrećicu čaja?",
         "sv": "Vad gör jag om hunden ätit en tepåse?",
-        "da": "Hvad hvis min hund har spist et tebrev?",
+        "da": "Hvad hvis min hund har spist en tepose?",
         "fi": "Entä jos koirani söi teepussin?",
         "nb": "Hva om hunden min har spist en tepose?"
       },
@@ -312,7 +312,7 @@
         "cs": "Čajové sáčky mohou způsobit vážnou otravu kofeinem. Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
         "hr": "Vrećice čaja mogu izazvati ozbiljno otrovanje kofeinom. Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
         "sv": "Tepåsar kan orsaka allvarlig koffeinförgiftning. Kontakta veterinären eller en giftrådgivning för djur direkt.",
-        "da": "Tebreve kan give alvorlig koffeinforgiftning. Kontakt straks din dyrlæge eller en giftrådgivning for dyr.",
+        "da": "Teposer kan give alvorlig koffeinforgiftning. Kontakt straks din dyrlæge eller en giftrådgivning for dyr.",
         "fi": "Teepussit voivat aiheuttaa vakavan kofeiinimyrkytyksen. Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan.",
         "nb": "Teposer kan gi alvorlig koffeinforgiftning. Kontakt dyrlegen eller giftinformasjon for dyr med en gang."
       }
@@ -455,7 +455,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2573013db082af46d248aa7450f6fe4e40609b209c8204b9434a6cdac93679be"
+      "verified_hash": "b0b43401b40ea314c1d1c2d82321c2fdda4be5bfbe1f91202f67b5026f36d71f"
     },
     "fi": {
       "status": "verified",

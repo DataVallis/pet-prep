@@ -174,7 +174,7 @@
     ],
     "da": [
       "Gentagne opkast",
-      "Vil ikke spise",
+      "Spiser ikke",
       "Træthed og mindre aktivitet",
       "Diarré",
       "Væskemangel"
@@ -435,7 +435,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cd78bb8755626c14d22ff30745a4f82a1ad55a0beda5048cb6c1138e08bf3222"
+      "verified_hash": "efd9b073b5f4d50f4570655c93949fd585c2c4a942702dc5295b1045521ff5e7"
     },
     "fi": {
       "status": "verified",

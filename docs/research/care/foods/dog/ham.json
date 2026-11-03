@@ -66,7 +66,7 @@
     "cs": "Nedoporučuje se. Šunka není pro psy jedovatá, ale obsahuje hodně tuku a sodíku. Kupovaná šunka je velmi slaná a příliš mnoho tuku může vést k zánětu slinivky břišní a dalším zažívacím potížím. Lepší volbou je zdravější psí pamlsek.",
     "hr": "Ne preporučuje se. Šunka nije otrovna za pse, ali sadrži mnogo masti i natrija. Šunka iz trgovine sadrži mnogo soli, a previše masti može dovesti do upale gušterače i drugih probavnih smetnji. Zdravija pseća poslastica bolji je izbor.",
     "sv": "Rekommenderas inte. Skinka är inte giftig för hundar, men den innehåller mycket fett och natrium. Skinka från affären är mycket salt, och för mycket fett kan leda till bukspottkörtelinflammation (pankreatit) och andra matsmältningsbesvär. En nyttigare hundgodbit är ett bättre val.",
-    "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Købt skinke indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
+    "da": "Det frarådes. Skinke er ikke giftigt for hunde, men det har et højt indhold af fedt og natrium. Skinke fra butikken indeholder meget salt, og for meget fedt kan føre til betændelse i bugspytkirtlen (pankreatitis) og andre fordøjelsesproblemer. En sundere hundegodbid er det bedre valg.",
     "fi": "Ei suositella. Kinkku ei ole koirille myrkyllistä, mutta siinä on paljon rasvaa ja natriumia. Kaupan kinkussa on paljon suolaa, ja liika rasva voi johtaa haimatulehdukseen ja muihin ruoansulatusvaivoihin. Terveellisempi koiranherkku on parempi valinta.",
     "nb": "Anbefales ikke. Skinke er ikke giftig for hunder, men den inneholder mye fett og natrium. Skinke fra butikken inneholder mye salt, og for mye fett kan føre til betennelse i bukspyttkjertelen og andre fordøyelsesplager. En sunnere hundegodbit er et bedre valg."
   },
@@ -176,7 +176,7 @@
       "Opkast, som nogle gange begynder 1–4 dage efter det fede måltid",
       "Mavesmerter (hunden kan strække sig i en »bedestilling«)",
       "Diarré",
-      "Vil ikke spise",
+      "Spiser ikke",
       "Træthed, feber"
     ],
     "fi": [
@@ -261,7 +261,7 @@
         "cs": "Má víc tuku než mnoho jiných druhů masa a kupovaná šunka obsahuje velké množství sodíku.",
         "hr": "Ima više masti od mnogih vrsta mesa, a šunka iz trgovine sadrži jako mnogo natrija.",
         "sv": "Den innehåller mer fett än många köttsorter, och skinka från affären innehåller väldigt mycket natrium.",
-        "da": "Skinke har mere fedt end mange andre kødtyper, og købt skinke indeholder rigtig meget natrium.",
+        "da": "Skinke har mere fedt end mange andre kødtyper, og skinke fra butikken indeholder rigtig meget natrium.",
         "fi": "Siinä on enemmän rasvaa kuin monessa muussa lihassa, ja kaupan kinkussa on hyvin paljon natriumia.",
         "nb": "Den har mer fett enn mange kjøttslag, og skinke fra butikken inneholder svært mye natrium."
       }
@@ -396,7 +396,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "40eaaa77f6140d7a34856e40e7eaeaff5bb3ba803d6e511c8f0b4ff70ddef50d"
+      "verified_hash": "7fe716c9a19b498f653d34ceeb286cba37cea3861d7cec9afeb5f2c4d1f24bf2"
     },
     "fi": {
       "status": "verified",

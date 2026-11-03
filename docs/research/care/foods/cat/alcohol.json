@@ -83,7 +83,7 @@
     "cs": "Otravu alkoholem mohou dostat všechna zvířata, kočky jsou však obzvlášť citlivé. Alkohol není jen v nápojích: může být také v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě. Příznaky se obvykle objeví brzy poté, co ho kočka spolkne.",
     "hr": "Otrovanje alkoholom može zadesiti sve životinje, ali mačke su posebno osjetljive. Alkohol nije samo u pićima: može ga biti i u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta te u sirovom tijestu za kruh koje se diže. Znakovi se obično pojave brzo nakon što ga mačka proguta.",
     "sv": "Alla djur kan få alkoholförgiftning, men katter är särskilt känsliga. Alkohol finns inte bara i drycker: den kan också finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg. Symtomen brukar komma snabbt efter att katten har fått i sig alkohol.",
-    "da": "Alle dyr kan få alkoholforgiftning, men katte er særligt følsomme. Alkohol findes ikke kun i drikkevarer: Det kan også være i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej. Symptomerne viser sig som regel hurtigt efter at en kat har slugt det.",
+    "da": "Alle dyr kan få alkoholforgiftning, men katte er særligt følsomme. Alkohol findes ikke kun i drikkevarer, men også i likørfyldt slik, håndsprit, mundskyllevæske og rå, hævende brøddej. Symptomerne viser sig som regel hurtigt efter at en kat har slugt det.",
     "fi": "Kaikki eläimet voivat saada alkoholimyrkytyksen, mutta kissat ovat erityisen herkkiä. Alkoholia ei ole vain juomissa: sitä voi olla myös liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa. Oireet ilmenevät yleensä nopeasti sen jälkeen, kun kissa on nielaissut alkoholia.",
     "nb": "Alle dyr kan få alkoholforgiftning, men katter er spesielt følsomme. Alkohol finnes ikke bare i drikke: Den kan også finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever. Symptomene kommer som regel raskt etter at katten har fått det i seg."
   },
@@ -210,7 +210,7 @@
     "cs": "Pití pro dospělé kočkám nikdy nepatří. Když kočička olízne skleničku nebo rozlité pití, hned to řekni dospělému.",
     "hr": "Pića za odrasle nikad nisu za mace. Ako maca poliže čašu ili proliveno piće, odmah reci odrasloj osobi.",
     "sv": "Vuxnas drycker är aldrig för katter. Om katten slickar på ett glas eller en utspilld dryck, säg till en vuxen direkt.",
-    "da": "Voksnes drinks er aldrig for katte. Hvis din kat slikker af et glas eller af noget der er spildt, så sig det til en voksen med det samme.",
+    "da": "Voksendrinks er aldrig noget for katte. Hvis din kat slikker på et glas eller på noget spildt, så sig det straks til en voksen.",
     "fi": "Aikuisten juomat eivät ole koskaan kissoille. Jos kisu nuolaisee lasia tai läikkynyttä juomaa, kerro heti aikuiselle.",
     "nb": "Drikke for voksne er aldri for katter. Hvis pusen slikker på et glass eller noe som er sølt, si fra til en voksen med en gang."
   },
@@ -246,7 +246,7 @@
         "cs": "Kromě nápojů může být alkohol v likérových bonbonech, dezinfekci na ruce, ústní vodě a v syrovém kynoucím chlebovém těstě.",
         "hr": "Osim u pićima, alkohola može biti u bombonima s likerom, sredstvu za dezinfekciju ruku, vodici za ispiranje usta i sirovom tijestu za kruh koje se diže.",
         "sv": "Förutom i drycker kan alkohol finnas i likörfyllt godis, handsprit, munskölj och rå, jäsande bröddeg.",
-        "da": "Ud over i drikkevarer kan alkohol findes i likørfyldt slik, håndsprit, mundskyl og rå, hævende brøddej.",
+        "da": "Udover i drikkevarer kan alkohol også findes i likørfyldt slik, håndsprit, mundskyllevæske og rå, hævende brøddej.",
         "fi": "Juomien lisäksi alkoholia voi olla liköörimakeisissa, käsidesissä, suuvedessä ja raa’assa, kohoavassa leipätaikinassa.",
         "nb": "I tillegg til drikke kan alkohol finnes i likørfylt godteri, håndsprit, munnskyll og rå brøddeig som hever."
       }
@@ -385,7 +385,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6388eaea55046f2614c23b6886ed205fac8e5892fab50ddcee04933b2ed9b88c"
+      "verified_hash": "885ca2664af462ab9ab66537524f4abd5abeca2ae51ed8b35a99e0803d09c359"
     },
     "fi": {
       "status": "verified",

@@ -66,7 +66,7 @@
     "cs": "Ano, malý kousek banánu je jako občasný pamlsek v pořádku. ASPCA uvádí banán jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují, takže ať je to jen malinký doplněk.",
     "hr": "Da, mali komadić banane u redu je kao povremena poslastica. ASPCA navodi bananu kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, pa neka ostane samo sitan dodatak.",
     "sv": "Ja, en liten bit banan går bra som godbit någon gång ibland. ASPCA anger att banan inte är giftig för katter, men katter är köttätare och behöver inte frukt, så se det bara som ett pyttelitet extra.",
-    "da": "Ja, et lille stykke banan er fint som en godbid en gang imellem. ASPCA opfører banan som ikke giftig for katte, men katte er kødædere og har ikke brug for frugt, så lad det kun være et bitte lille ekstra.",
+    "da": "Ja, et lille stykke banan er fint som en godbid en gang imellem. ASPCA betragter banan som ugiftig for katte, men katte er kødædere og har ikke brug for frugt, så lad det kun være et bitte lille ekstra.",
     "fi": "Kyllä, pieni pala banaania sopii satunnaiseksi herkuksi. ASPCA luokittelee banaanin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, joten pidä se pikkuisena lisänä.",
     "nb": "Ja, en liten bit banan er greit som en godbit en gang iblant. ASPCA oppgir banan som ikke giftig for katter, men katter er kjøttetere og trenger ikke frukt, så la det bare være litt ekstra."
   },
@@ -83,7 +83,7 @@
     "cs": "ASPCA uvádí banánovník jako rostlinu netoxickou pro kočky a veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí banán mezi zdravé pamlsky z lidských potravin pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "ASPCA navodi biljku banane kao neotrovnu za mačke, a veterinarska bolnica sveučilišta NC State navodi bananu među zdravim poslasticama od ljudske hrane za mačke i pse, koje se daju u odmjerenim količinama i uračunavaju u dnevni unos kalorija. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA anger att bananväxten inte är giftig för katter, och NC States djursjukhus tar upp banan bland hälsosamma godbitar från människomaten för katter och hundar, i avvägda mängder som räknas in i det dagliga kaloriintaget. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "ASPCA opfører bananplanten som ikke giftig for katte, og dyrehospitalet ved NC State nævner banan blandt sunde godbidder fra menneskemad til katte og hunde, givet i afmålte mængder og regnet med i de daglige kalorier. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "da": "ASPCA betragter bananplanten som ugiftig for katte, og dyrehospitalet ved NC State nævner banan blandt sunde godbidder fra menneskemad til katte og hunde, hvis de gives i afmålte mængder og tælles med i det daglige kalorieindtag. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
     "fi": "ASPCA luokittelee banaanikasvin kissoille myrkyttömäksi, ja NC Staten eläinsairaala mainitsee banaanin terveellisten ihmisruokien joukossa, joita voi antaa herkkuina kissoille ja koirille mitattuina määrinä ja päivän kaloreihin laskettuina. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitää pysyä pienenä osana päivittäistä ruokaa, ja mikä tahansa kasvimateriaali voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "ASPCA oppgir bananplanten som ikke giftig for katter, og dyresykehuset ved NC State oppgir banan blant sunne godbiter fra menneskemat for katter og hunder, gitt i avmålte mengder og regnet med i det daglige kaloriinntaket. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
@@ -118,7 +118,7 @@
     "cs": "Občas malý kousek, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Mali komadić povremeno, uračunat u dnevni obrok tvoje mačke.",
     "sv": "En liten bit då och då, inräknad i kattens dagliga matranson.",
-    "da": "Et lille stykke en gang imellem, regnet med i kattens daglige mad.",
+    "da": "Et lille stykke en gang imellem, medregnet i kattens daglige foder.",
     "fi": "Pieni pala silloin tällöin, laskettuna mukaan kissasi päivittäiseen ruokamäärään.",
     "nb": "En liten bit nå og da, regnet med i kattens daglige matmengde."
   },
@@ -290,7 +290,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cd84aa0216c31be44ee749c5c135b0da9c017d3429412c2d6934254b2ef7ed38"
+      "verified_hash": "c8fa7283ed0eff2b62cbfe4463d66e0ba1160c15ba98dc5e025c1583aedeb188"
     },
     "fi": {
       "status": "verified",

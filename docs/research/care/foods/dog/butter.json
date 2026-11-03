@@ -66,7 +66,7 @@
     "cs": "Raději ne. Máslo není jedovaté, ale je velmi tučné a tučná jídla mohou psovi podráždit žaludek nebo spustit bolestivý zánět slinivky břišní. Pokrmy, které psovi dopřejete, například vejce nebo bramborovou kaši, je lepší připravit bez másla.",
     "hr": "Bolje ne. Maslac nije otrovan, ali je vrlo mastan, a masna hrana može psu izazvati probavne tegobe i potaknuti upalu gušterače, koja je bolna. Hranu koju dijeliš sa psom, poput jaja ili pire krumpira, najbolje je pripremiti bez maslaca.",
     "sv": "Nej, helst inte. Smör är inte giftigt, men det innehåller mycket fett, och fet mat kan ge hunden orolig mage och kanske utlösa bukspottkörtelinflammation, en smärtsam inflammation. Mat som du delar med hunden, som ägg eller potatismos, lagar du helst utan smör.",
-    "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
+    "da": "Nej, helst ikke. Smør er ikke giftigt, men det er meget fedtholdigt, og fed mad kan give hunden dårlig mave og kan udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld. Mad som du deler med hunden, fx æg eller kartoffelmos, er bedst tilberedt uden smør.",
     "fi": "Ei kannata. Voi itsessään ei ole myrkyllistä, mutta se on hyvin rasvaista, ja rasvaiset ruoat voivat aiheuttaa koiralle vatsavaivoja ja mahdollisesti laukaista haimatulehduksen, joka on kivulias tulehdus. Koiran kanssa jaettava ruoka, kuten kananmuna tai perunamuusi, kannattaa valmistaa ilman voita.",
     "nb": "Nei, helst ikke. Smør er ikke giftig, men det er svært fett, og fet mat kan gi hunden urolig mage og kan utløse betennelse i bukspyttkjertelen, som er smertefullt. Mat du deler, som egg eller potetmos, lager du helst uten smør."
   },
@@ -83,7 +83,7 @@
     "cs": "Tučná jídla ze stolu nejsou problémem kvůli jedovatosti, ale tučné potraviny jako máslo, oleje a výpek z masa mohou způsobit zánět slinivky břišní. Některá plemena, hlavně knírač malý, jsou k němu náchylnější. Veterináři také doporučují připravovat jídlo pro psy, například vejce nebo bramborovou kaši, bez másla.",
     "hr": "Masna hrana sa stola nije problem zbog otrovnosti, ali masna hrana poput maslaca, ulja i masnoće od pečenja mesa može izazvati upalu gušterače. Neke su joj pasmine, osobito patuljasti šnauceri, sklonije. Veterinari savjetuju i da se hrana za pse, poput jaja ili pire krumpira, priprema bez maslaca.",
     "sv": "Fet mat är inte ett förgiftningsproblem i sig, men fet mat som smör, oljor och stekflott kan orsaka bukspottkörtelinflammation (pankreatit). Vissa raser, särskilt dvärgschnauzer, drabbas lättare. Veterinärer rekommenderar också att mat som lagas till hundar, som ägg eller potatismos, lagas utan smör.",
-    "da": "Fed mad fra bordet er ikke et forgiftningsproblem, men fed mad som smør, olie og stegefedt kan give betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
+    "da": "Fed mad fra bordet giver ikke forgiftning, men fed mad som smør, olie og stegefedt kan udløse betændelse i bugspytkirtlen. Nogle racer, især dværgschnauzer, er mere tilbøjelige til det. Dyrlæger anbefaler også at tilberede mad til hunde, fx æg eller kartoffelmos, uden smør.",
     "fi": "Rasvaiset ihmisruoat eivät ole myrkytysongelma, mutta rasvaiset ruoat, kuten voi, öljyt ja paistinrasva, voivat aiheuttaa haimatulehduksen. Jotkin rodut, etenkin kääpiösnautserit, ovat sille alttiimpia. Eläinlääkärit neuvovat myös valmistamaan koiralle tarkoitetun ruoan, kuten kananmunan tai perunamuusin, ilman voita.",
     "nb": "Fet menneskemat er ikke et giftighetsproblem, men fet mat som smør, olje og stekefett kan gi betennelse i bukspyttkjertelen. Noen raser, særlig dvergschnauzer, er mer utsatt. Dyrleger anbefaler også å lage mat til hunder, som egg eller potetmos, uten smør."
   },
@@ -357,7 +357,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fbbc963d971b9117c3cca0affd45f49f869fd22ba25be1e354469df8615a108d"
+      "verified_hash": "bd1155f0a0212051ba8860f09dcd1ae4c2814288dc843cb48a2ae576e5397ba2"
     },
     "fi": {
       "status": "verified",

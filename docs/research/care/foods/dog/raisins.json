@@ -187,9 +187,9 @@
     "da": [
       "Opkast eller diarré, ofte inden for 6–24 timer",
       "Træthed og svaghed",
-      "Vil ikke spise",
+      "Spiser ikke",
       "Mavesmerter",
-      "Dehydrering og stor tørst",
+      "Væskemangel og stor tørst",
       "Rysten"
     ],
     "fi": [
@@ -222,7 +222,7 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když pes snědl jen pár rozinek. Poznamenejte si, kolik jich zhruba snědl. Nečekejte, až se objeví příznaky: čím dříve léčba začne, tím lépe.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, čak i ako je pas pojeo samo nekoliko grožđica. Zapiši otprilike koliko ih je pojeo. Ne čekaj da se pojave znakovi: što se prije počne s liječenjem, to bolje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt, även om hunden bara ätit några få russin. Notera ungefär hur många den åt. Vänta inte på symtom: ju tidigare behandlingen börjar, desto bättre.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: Jo før behandlingen starter, jo bedre.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr, også selv om hunden kun har spist nogle få rosiner. Skriv ned omtrent hvor mange den har spist. Vent ikke på symptomer: jo før behandlingen starter, jo bedre.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, vaikka koira olisi syönyt vain muutaman rusinan. Kirjaa ylös, suunnilleen montako rusinaa koira söi. Älä odota oireita: mitä aikaisemmin hoito alkaa, sitä parempi.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang, selv om hunden bare har spist noen få rosiner. Skriv ned omtrent hvor mange den har spist. Ikke vent på symptomer – jo før behandlingen starter, desto bedre."
   },
@@ -276,7 +276,7 @@
         "cs": "Nebezpečné je obojí. Zdroje považují hrozny, rozinky i korintky za stejné riziko a po jakémkoli množství doporučují zavolat veterináři.",
         "hr": "Oboje je opasno. Izvori grožđe, grožđice i korintsko grožđe smatraju jednakim rizikom i savjetuju da nazoveš veterinara nakon bilo koje količine.",
         "sv": "Båda är farliga. Källorna ser vindruvor, russin och korinter som samma risk och råder dig att ringa veterinären oavsett hur mycket hunden har ätit.",
-        "da": "Begge dele er farlige. Kilderne behandler vindruer, rosiner og korender som samme risiko og råder til at kontakte dyrlægen uanset mængden.",
+        "da": "Begge dele er farlige. Kilderne behandler vindruer, rosiner og korender som én og samme risiko og anbefaler at kontakte dyrlægen uanset mængden.",
         "fi": "Molemmat ovat vaarallisia. Lähteet pitävät viinirypäleitä, rusinoita ja korintteja yhtä suurena riskinä ja neuvovat soittamaan eläinlääkärille, olipa syöty määrä mikä tahansa.",
         "nb": "Begge er farlige. Kildene regner druer, rosiner og korinter som samme risiko og råder deg til å ringe dyrlegen uansett mengde."
       }
@@ -439,7 +439,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6f5f2c2d3f6e79527006622b04977f491ca45c95682e1a6da52a83d5d351a987"
+      "verified_hash": "96b3cad6a3f04eaa6f5fb98bccc241d671245d9a447e7740a37b51baf00c140a"
     },
     "fi": {
       "status": "verified",

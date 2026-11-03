@@ -66,7 +66,7 @@
     "cs": "Ne. Mnoho čajů obsahuje kofein a kočky jsou na kofein citlivější než lidé. Zvlášť rizikové jsou čajové sáčky. Svůj čaj kočce nedávejte, a pokud kočka okouše čajový sáček nebo se napije čaje s kofeinem, zavolejte veterináři.",
     "hr": "Ne. Mnogi čajevi sadrže kofein, a mačke su na kofein osjetljivije od ljudi. Vrećice čaja posebno su rizične. Ne dijeli svoj čaj s mačkom i nazovi veterinara ako mačka sažvače vrećicu čaja ili popije čaj s kofeinom.",
     "sv": "Nej. Många sorters te innehåller koffein, och katter är känsligare för koffein än människor. Tepåsar är extra riskabla. Dela inte med dig av ditt te, och ring veterinären om katten tuggar på en tepåse eller dricker te med koffein.",
-    "da": "Nej. Mange slags te indeholder koffein, og katte er mere følsomme over for koffein end mennesker. Tebreve er særligt risikable. Del ikke din te, og ring til din dyrlæge hvis din kat tygger på et tebrev eller drikker te med koffein.",
+    "da": "Nej. Mange slags te indeholder koffein, og katte er mere følsomme over for koffein end mennesker. Teposer er særligt risikable. Del ikke din te, og ring til din dyrlæge hvis din kat tygger på en tepose eller drikker te med koffein.",
     "fi": "Ei saa. Monissa teelaaduissa on kofeiinia, ja kissat ovat herkempiä kofeiinille kuin ihmiset. Teepussit ovat erityisen riskialttiita. Älä jaa teetäsi kissan kanssa ja soita eläinlääkärille, jos kissasi pureskelee teepussia tai juo kofeiinipitoista teetä.",
     "nb": "Nei. Mange typer te inneholder koffein, og katter er mer følsomme for koffein enn mennesker. Teposer er særlig risikable. Ikke del teen din, og ring dyrlegen hvis katten tygger på en tepose eller drikker te med koffein."
   },
@@ -192,7 +192,7 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drikkevare, grums, bønner, tepose eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, kahvinporoja, kahvipapuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva katten har fått i seg (drikke, kaffegrut, bønner, tepose eller tabletter), hvor mye og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
@@ -210,7 +210,7 @@
     "cs": "Čaj je pro lidi. Hrnky a použité čajové sáčky drž daleko od kočičky, a když se k nim dostane, řekni to dospělému.",
     "hr": "Čaj je za ljude. Šalice i iskorištene vrećice čaja drži daleko od mace i reci odrasloj osobi ako ih maca dohvati.",
     "sv": "Te är för människor. Håll koppar och använda tepåsar borta från katten, och säg till en vuxen om den kommer åt dem.",
-    "da": "Te er til mennesker. Hold kopper og brugte tebreve væk fra katten, og sig det til en voksen hvis den kommer i dem.",
+    "da": "Te er til mennesker. Hold kopper og brugte teposer væk fra katten, og sig det til en voksen hvis den roder i dem.",
     "fi": "Tee on ihmisille. Pidä kupit ja käytetyt teepussit kaukana kissasta ja kerro aikuiselle, jos kissa pääsee niihin käsiksi.",
     "nb": "Te er for mennesker. Hold kopper og brukte teposer unna pusen, og si fra til en voksen hvis den får tak i dem."
   },
@@ -229,7 +229,7 @@
         "cs": "Jsou čajové sáčky nebezpečné?",
         "hr": "Jesu li vrećice čaja opasne?",
         "sv": "Är tepåsar farliga?",
-        "da": "Er tebreve farlige?",
+        "da": "Er teposer farlige?",
         "fi": "Ovatko teepussit vaarallisia?",
         "nb": "Er teposer farlige?"
       },
@@ -246,7 +246,7 @@
         "cs": "Ano. Pet Poison Helpline varuje, že snědení čajových sáčků by mohlo kočkám způsobit vážnou otravu. Použité čajové sáčky vyhazujte tam, kam kočka nedosáhne.",
         "hr": "Jesu. Pet Poison Helpline upozorava da pojedene vrećice čaja kod mačaka mogu izazvati ozbiljno otrovanje. Iskorištene vrećice čaja baci tamo gdje ih mačka ne može dohvatiti.",
         "sv": "Ja. Pet Poison Helpline varnar för att tepåsar kan ge allvarlig förgiftning hos katter. Släng använda tepåsar där katten inte kommer åt dem.",
-        "da": "Ja. Pet Poison Helpline advarer om at det kan give katte en alvorlig forgiftning at spise tebreve. Smid brugte tebreve ud et sted hvor din kat ikke kan nå dem.",
+        "da": "Ja. Pet Poison Helpline advarer om at det kan give katte en alvorlig forgiftning at spise teposer. Smid brugte teposer ud et sted hvor din kat ikke kan nå dem.",
         "fi": "Ovat. Pet Poison Helpline varoittaa, että teepussien syöminen voi aiheuttaa kissoille vakavan myrkytyksen. Heitä käytetyt teepussit roska-astiaan, johon kissasi ei pääse käsiksi.",
         "nb": "Ja. Pet Poison Helpline advarer om at det å spise teposer kan gi alvorlig forgiftning hos katter. Kast brukte teposer der katten ikke når dem."
       }
@@ -381,7 +381,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2aae0d37e9eda12e976f0172f811f2992f862e98cf0f5a7badea48b656768400"
+      "verified_hash": "27775c9c4d739176c6707d43b05cd97988527d7ed7b00c252c7fff6b18b42363"
     },
     "fi": {
       "status": "verified",

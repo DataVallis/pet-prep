@@ -66,7 +66,7 @@
     "cs": "Ne. Makadamové ořechy jsou velmi tučné a podle VCA jsou navíc toxické a mohou kočkám způsobit onemocnění. Uchovávejte je mimo dosah kočky, a pokud nějaké sní, obraťte se na veterináře.",
     "hr": "Ne. Makadamija je vrlo masna, a prema VCA-u i otrovna te kod mačaka može izazvati bolest. Drži je izvan mačkina dosega i obrati se veterinaru ako je mačka pojede makar malo.",
     "sv": "Nej. Macadamianötter är mycket feta, och enligt VCA är de dessutom giftiga och kan göra katter sjuka. Håll dem utom räckhåll för katten och kontakta veterinären om katten äter några.",
-    "da": "Nej. Macadamianødder er meget fede, og ifølge VCA er de også giftige og kan gøre katte syge. Hold dem uden for din kats rækkevidde, og kontakt din dyrlæge hvis din kat spiser nogen.",
+    "da": "Nej. Macadamianødder er meget fede, og ifølge VCA er de også giftige og kan gøre katte syge. Hold dem uden for din kats rækkevidde, og kontakt din dyrlæge hvis din kat spiser nogle.",
     "fi": "Ei saa. Makadamiapähkinät ovat hyvin rasvaisia, ja VCA:n mukaan ne ovat myös myrkyllisiä ja voivat sairastuttaa kissan. Pidä ne poissa kissasi ulottuvilta ja ota yhteyttä eläinlääkäriin, jos kissasi syö niitä.",
     "nb": "Nei. Macadamianøtter er svært fete, og ifølge VCA er de også giftige og kan gjøre katter syke. Hold dem utenfor kattens rekkevidde, og kontakt dyrlegen hvis katten spiser noen."
   },
@@ -83,7 +83,7 @@
     "cs": "Cats Protection uvádí makadamové ořechy mezi ořechy, jejichž vysoký obsah oleje a tuku může kočkám uškodit. Podle VCA jsou makadamové ořechy velmi tučné, což může vést k zánětu slinivky břišní, a navíc toxické, takže kočkám způsobují onemocnění. Podrobné popisy otravy makadamovými ořechy se většinou týkají psů, u koček však používáme přísnější hodnocení.",
     "hr": "Cats Protection navodi makadamiju među orašastim plodovima koji zbog visokog udjela ulja i masti mački mogu naškoditi. VCA navodi da je makadamija vrlo masna, pa može izazvati upalu gušterače, ali i da je otrovna te kod mačaka može izazvati bolest. Detaljni opisi otrovanja makadamijom uglavnom se odnose na pse, ali za mačke primjenjujemo strožu razinu.",
     "sv": "Cats Protection räknar macadamia till de nötter som innehåller så mycket olja och fett att katter kan må dåligt av dem. Enligt VCA är macadamianötter mycket feta, vilket kan leda till bukspottkörtelinflammation (pankreatit), och dessutom giftiga, så att katter kan bli sjuka. Utförliga beskrivningar av macadamiaförgiftning kommer mest från hundar, men vi använder den strängare nivån för katter.",
-    "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpasse. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau.",
+    "da": "Cats Protection nævner macadamia blandt de nødder hvis høje indhold af olie og fedt kan gøre katte utilpas. Ifølge VCA er macadamianødder meget fede og kan muligvis give betændelse i bugspytkirtlen (pankreatitis), og de er desuden giftige og kan gøre katte syge. De detaljerede beskrivelser af macadamiaforgiftning stammer mest fra hunde, men for katte bruger vi det strengere niveau.",
     "fi": "Cats Protectionin mukaan makadamia kuuluu pähkinöihin, joiden runsas öljy ja rasva voivat tehdä kissalle pahaa. VCA:n mukaan makadamiapähkinät ovat hyvin rasvaisia, joten ne voivat aiheuttaa haimatulehduksen, ja lisäksi ne ovat myrkyllisiä ja sairastuttavat kissan. Tarkat kuvaukset makadamiamyrkytyksestä koskevat enimmäkseen koiria, mutta käytämme kissoille tiukempaa luokitusta.",
     "nb": "Cats Protection nevner macadamia blant nøttene som inneholder så mye olje og fett at de kan gjøre katter dårlige. VCA skriver at macadamianøtter er svært fete og kan gi betennelse i bukspyttkjertelen (pankreatitt), og at de i tillegg er giftige og kan gjøre katter syke. Detaljerte beskrivelser av macadamiaforgiftning gjelder for det meste hunder, men for katter bruker vi det strengere nivået."
   },
@@ -342,7 +342,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3bc214ef49e2183f5dcef26a696c4c0701046966b5d6109c11e2c4ed008c88d5"
+      "verified_hash": "e5643a5f4deed8389a83f26532b581ebb7c5c586c368d8cea314cc1b90c50836"
     },
     "fi": {
       "status": "verified",

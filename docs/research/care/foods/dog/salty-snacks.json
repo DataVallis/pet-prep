@@ -173,7 +173,7 @@
       "Darrningar eller kramper"
     ],
     "da": [
-      "Stærk tørst og hyppig vandladning",
+      "Kraftig tørst og hyppig vandladning",
       "Opkast, ofte inden for et par timer",
       "Diarré",
       "Usikker gang, træthed",
@@ -416,7 +416,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "399935df5fa4d51eea3a2809d99e923f490fdc8eb23c9c2733b404f1cfcdbfdf"
+      "verified_hash": "fb0163aa2ce785b4b7f6a14f30afe91809a9ce83168dc3e98f8f3767c68e5304"
     },
     "fi": {
       "status": "verified",

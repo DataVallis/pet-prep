@@ -83,7 +83,7 @@
     "cs": "Čokoláda obsahuje methylxanthiny, hlavně theobromin a kofein, které jsou pro psy jedovaté. Hořká čokoláda, čokoláda na vaření a kakaový prášek jich obsahují víc než mléčná čokoláda. Nejčastěji jsou postiženi psi, protože snědí, co najdou, a k čokoládě se snadno dostanou. Sladkosti a pečivo mohou navíc obsahovat další škodlivé přísady.",
     "hr": "Čokolada sadrži metilksantine, ponajprije teobromin i kofein, koji su otrovni za pse. Tamna čokolada, čokolada za kuhanje i kakao prah sadrže ih više od mliječne čokolade. Psi su najčešće pogođeni jer jedu sve što nađu, a do čokolade lako dođu. Slatkiši i peciva mogu sadržavati i druge štetne sastojke.",
     "sv": "Choklad innehåller metylxantiner, främst teobromin och koffein, som är giftiga för hundar. Mörk choklad, matlagningschoklad och kakao innehåller mer av dem än mjölkchoklad. Hundar drabbas oftast eftersom de äter allt de hittar och lätt kommer åt choklad. Godis och bakverk kan dessutom innehålla andra skadliga ingredienser.",
-    "da": "Chokolade indeholder methylxanthiner, især theobromin og koffein, som er giftige for hunde. Mørk chokolade, bagechokolade og kakaopulver indeholder mere af dem end mælkechokolade. Hunde rammes oftest, fordi de spiser hvad de finder og let kan få fat i chokolade. Slik og bagværk kan også indeholde andre skadelige ingredienser.",
+    "da": "Chokolade indeholder methylxanthiner, især theobromin og koffein, som er giftige for hunde. Mørk chokolade, bagechokolade og kakaopulver indeholder mere af dem end mælkechokolade. Hunde rammes oftest, fordi de spiser alt hvad de finder og let kan få fat i chokolade. Slik og bagværk kan også indeholde andre skadelige ingredienser.",
     "fi": "Suklaassa on metyyliksantiineja, pääasiassa teobromiinia ja kofeiinia, jotka ovat koirille myrkyllisiä. Tummassa suklaassa, leivontasuklaassa ja kaakaojauheessa niitä on enemmän kuin maitosuklaassa. Suklaamyrkytys koskee useimmin koiria, koska ne syövät kaiken, mitä löytävät ja pääsevät helposti käsiksi suklaaseen. Makeisissa ja leivonnaisissa voi olla myös muita haitallisia ainesosia.",
     "nb": "Sjokolade inneholder metylxantiner, først og fremst teobromin og koffein, som er giftige for hunder. Mørk sjokolade, kokesjokolade og kakaopulver inneholder mer av dem enn melkesjokolade. Hunder rammes oftest fordi de spiser alt de finner og lett får tak i sjokolade. Godteri og bakevarer kan også inneholde andre skadelige ingredienser."
   },
@@ -186,7 +186,7 @@
     ],
     "da": [
       "Opkast og diarré",
-      "Hiven efter vejret, stor tørst og tisser mere",
+      "Pesen, stor tørst og hyppigere vandladning",
       "Rastløshed og hyperaktivitet",
       "Hurtig eller uregelmæssig hjerterytme",
       "Rysten eller kramper",
@@ -488,7 +488,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "37ef97b56f4364889ab6f19956f3544ea30b3b3c6046b0c771344e443a47cb30"
+      "verified_hash": "dff7d9ba458e780becacf7069568091a460f63aa52a06c5551515e35eb16e107"
     },
     "fi": {
       "status": "verified",
