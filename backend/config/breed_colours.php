@@ -581,6 +581,12 @@ return [
     'irish_setter' => [
         ['key' => 'chestnut', 'value' => 'rich chestnut red with no black (at most a small white mark on the chest or toes)', 'en' => 'Rich chestnut', 'sl' => 'Kostanjevo rdeč'],
     ],
+    // M5-R10-90: FCI-St. N°331 (S682) "Whole body should be one colour. Can be from fawn to wolf sable." with a black mask —
+    // fawn first (= the portrait default).
+    'anatolian_shepherd_dog' => [
+        ['key' => 'fawn', 'value' => 'one-coloured fawn with a black mask and dark ears', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'wolf-sable', 'value' => 'one-coloured wolf sable with a black mask and dark ears', 'en' => 'Wolf sable with black mask', 'sl' => 'Volčje siv s črno masko'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

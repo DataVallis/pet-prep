@@ -737,6 +737,13 @@ class FalAiService
                 .'a long lean head with a moderately deep, fairly square muzzle, dark hazel eyes with a kind expression, '
                 .'low-set ears hanging in a neat fold, a natural tail of moderate length set low, friendly and lively expression, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-90: FCI-St. N°331 (S682) / AKC standard (S686) — a large, powerfully built livestock-guarding dog, one
+            // colour (fawn to wolf sable) with a black mask, natural pendant ears and a long tail curled at the tip.
+            BreedType::AnatolianShepherdDog => 'A large, upstanding, powerfully built Anatolian Shepherd Dog livestock guardian, '
+                .'a one-coloured fawn coat with a black mask over the muzzle and dark ears, a short to medium dense double coat '
+                .'slightly longer on the neck, a broad head with a blunt muzzle, almond-shaped dark brown eyes with black rims, '
+                .'medium triangular natural pendant ears, a long tail carried low with a curl at the tip, calm and observant expression, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1784,6 +1791,13 @@ class FalAiService
                 'eye_color' => 'dark hazel',
                 'fur_texture' => 'flat, silky coat of moderate length with long feathering',
                 'markings' => 'no black, at most a small white mark on the chest or toes, never red and white',
+            ],
+            // M5-R10-90: one colour from fawn to wolf sable with a black mask (FCI S682); never without the mask.
+            BreedType::AnatolianShepherdDog => [
+                'color_scheme' => 'fawn with a black mask',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'short to medium dense double coat, slightly longer on the neck',
+                'markings' => 'black mask on the muzzle, dark ears, at most a small white patch on the chest',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

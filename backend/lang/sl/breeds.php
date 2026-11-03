@@ -91,6 +91,7 @@ return [
     'shar_pei' => 'Šarpej',
     'brussels_griffon' => 'Bruseljski grifon',
     'irish_setter' => 'Irski seter',
+    'anatolian_shepherd_dog' => 'Anatolski ovčar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

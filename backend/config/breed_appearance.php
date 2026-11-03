@@ -731,6 +731,15 @@
 | tail of moderate length, set low (S675; natural). Not a welfare breed (RKC Breed Watch Category 1, S676). One colour →
 | no weight to choose; still `verified => false` (the weight 1.0 is ours).
 |
+| Anatolian Shepherd Dog (M5-R10-90, docs/research/dog-data anatolian_shepherd_dog.appearance):
+| "Large, upstanding, powerfully built, livestock guarding dog with dark mask." (FCI-St. N°331, S682); "Whole body should
+| be one colour. Can be from fawn to wolf sable." / "Must have black mask." (S682) — the two standard colours; coat "Short
+| (one inch minimum, not tight) to Rough (approximately 4 inches in length) with neck hair slightly longer." (AKC S686);
+| muzzle shorter than the skull, blunt (S682); eyes "Dark brown to light brown, the darker, the better. Eye rims black."
+| (S682); pendant triangular ears (S682; AKC: erect ears disqualify), long tail curled at the tip (S686 / S682). Not a
+| welfare breed (RKC Breed Watch Category 1, S685). Fawn first with the highest weight (the portrait default); weights
+| unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3935,6 +3944,42 @@ return [
             'ear_carriage' => ['low-set ears hanging in a neat fold close to the head, with silky feathering'],
             'eye_color' => ['dark hazel to dark brown, almond-shaped eyes'],
             'tail' => ['natural tail of moderate length, set low, with a tapering fringe'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-90 (docs/research/dog-data/data.json anatolian_shepherd_dog.appearance; runbook rules 2026-10-10: the FCI colours
+    // only — S682 "Whole body should be one colour. Can be from fawn to wolf sable." with a black mask; fawn first = the
+    // portrait default; natural ears and tail; never blue or odd eyes).
+    'anatolian_shepherd_dog' => [
+        'display_name' => 'Anatolian Shepherd Dog',
+        // Colour weights are in no source (anatolian_shepherd_dog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-St. N°331 (S682) and AKC breed standard (S686) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S682 "Height at the withers: Males: 72 to 78 cm."; AKC S686 dogs 110–150 lb; RKC S685 "Large"',
+            'build' => 'S682 "Large, upstanding, powerfully built, livestock guarding dog with dark mask."',
+            'coat_length' => 'S686 "Short (one inch minimum, not tight) to Rough (approximately 4 inches in length) with neck hair slightly longer."',
+            'coat_color' => 'S682 "Whole body should be one colour. Can be from fawn to wolf sable." / "Must have black mask." (weights unsourced)',
+            'head' => 'S682 broad skull, slightly narrowing towards the stop (paraphrase)',
+            'muzzle' => 'S682 "Muzzle: Shorter than the skull. Muzzle length is 40-44% of head length."',
+            'ear_carriage' => 'S682 "Medium sized, triangular in shape, rounded at tip, pendant with front edge close to cheek, higher when alert."',
+            'eye_color' => 'S682 "Dark brown to light brown, the darker, the better. Eye rims black."',
+            'tail' => 'S686 "Tail should be long and reaching to the hocks."; S682 "when relaxed carried low with close curl at the tip;"',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'large, upstanding, powerfully built livestock-guarding dog', 'weight' => 3], 'tall, strong, rectangular livestock guardian'],
+            'coat_length' => ['short to medium dense double coat, slightly longer on the neck'],
+            // Fawn with a black mask first with the highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'one-coloured fawn with a black mask and dark ears', 'weight' => 70],
+                ['value' => 'one-coloured wolf sable with a black mask and dark ears', 'weight' => 30],
+            ],
+            'head' => ['broad, strong head with a calm, observant expression'],
+            'muzzle' => ['blunt muzzle shorter than the skull, black nose'],
+            'ear_carriage' => ['medium triangular natural pendant ears close to the cheeks'],
+            'eye_color' => ['almond-shaped dark brown eyes with black rims'],
+            'tail' => ['long natural tail carried low with a curl at the tip'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

@@ -46761,6 +46761,533 @@
       "notes": "UNSOURCED — proposal. REALISM_SPEC draft; consistent with training start ~8 weeks (S36) but no source on purchase age was collected."
     }
   },
+  "anatolian_shepherd_dog": {
+    "_note": "Added 2026-11-03 (M5-R10-90, unattended run — appended after the Irish Setter: AKC 2024 No. 86 'Anatolian Shepherd Dog', S174 full-list table as recorded on 2026-11-03). Quotes as returned by the web-fetch tool on 2026-11-03 (fragments marked as such); paraphrase only in notes. Sources S682–S689 (+ S35 Coren, S10 growth, S11 AAHA, S14 Dogs Trust, S45 steps). No health percentages anywhere. A large livestock-guarding dog; RKC Breed Watch Category 1. The game dog = the Anatolian Shepherd Dog of the RKC (Pastoral group) and the AKC (Working group). Identity: the FCI recognises the Turkish shepherd dog as N° 331 'Kangal Shepherd Dog' (S682 / S683); KUSA (an FCI member) publishes that standard as 'KANGAL SHEPHERD DOG [ANATOLIAN SHEPHERD]' (S684), while the RKC keeps the Anatolian Shepherd Dog and the Turkish Kangal Dog as two breeds and Turkish authorities do not recognise the name (Wikipedia S689, tier C) — the identity mapping is open for David.",
+    "identity": {
+      "value": "FCI No. 331, Group 2 Section 2 (Molossoid breeds, Mountain type), Turkey",
+      "unit": "—",
+      "source_id": "S682",
+      "quote": "Height at the withers: Males: 72 to 78 cm. with + /- 2 cm of tolerance",
+      "confidence": "medium",
+      "notes": "FCI-St. N°331 (S682, English PDF): 'Kangal Shepherd Dog', Group 2 (Pinscher and Schnauzer — Molossoid and Swiss Mountain and Cattle Dogs), Section 2.2 (Molossoid breeds, Mountain type), 'Without working trial', origin Turkey, official standard published 15.06.2018 (paraphrase; the quote field holds a verbatim line of the same standard). FCI nomenclature (S683): 'KANGAL SHEPHERD DOG', group n°2, section 'Molossoïdes', country 'TURQUIE', definitively accepted '06/06/1989'. KUSA (S684) titles the FCI standard 'KANGAL SHEPHERD DOG [ANATOLIAN SHEPHERD]'. The RKC (S685) and AKC (S686) call the breed 'Anatolian Shepherd Dog'; the RKC also lists a separate 'Turkish Kangal Dog'. Using FCI 331 for the Anatolian Shepherd Dog = Claude's reading via KUSA — open for David."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S685",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S685, value as returned). AKC standard dogs 110–150 lb (S686) → the 'Giant (over 100 pounds)' class of S10 for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            72,
+            78
+          ],
+          "female": [
+            65,
+            73
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S682",
+        "quote": "Height at the withers: Males: 72 to 78 cm. with + /- 2 cm of tolerance",
+        "confidence": "high",
+        "notes": "FCI-St. N°331 (S682): males '72 to 78 cm. with + /- 2 cm of tolerance', females 'Females: 65 to 73 cm. with +/-2 cm of tolerance' (as returned). The game range. AKC (S686) gives only lower limits: dogs 'from 29 inches' (≈ 74 cm), bitches 'from 27 inches' (≈ 69 cm) — alternative."
+      },
+      "akc": {
+        "value": {
+          "male": [
+            73.7,
+            73.7
+          ],
+          "female": [
+            68.6,
+            68.6
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S686",
+        "quote": "Dogs should be from 29 inches and weighing from 110 to 150 pounds proportionate to size and structure.",
+        "confidence": "medium",
+        "notes": "AKC breed standard (S686): dogs 'from 29 inches', bitches 'from 27 inches' — minimum heights (inches × 2.54 by us). Alternative."
+      }
+    },
+    "adult_weight": {
+      "akc": {
+        "value": {
+          "male": [
+            49.9,
+            68.0
+          ],
+          "female": [
+            36.3,
+            54.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S686",
+        "quote": "Dogs should be from 29 inches and weighing from 110 to 150 pounds proportionate to size and structure.",
+        "confidence": "high",
+        "notes": "AKC breed standard (S686): dogs 110–150 lb; 'Bitches should be from 27 inches, weighing from 80 to 120 pounds, proportionate to size and structure.' → 49.9–68.0 / 36.3–54.4 kg (pounds × 0.4536 by us, rounded). The standard of the breed as named (Anatolian Shepherd Dog). The game range 36.3–68.0 kg (adult_weight_kg). PetMD (S687) 'Adult males can weigh 110-150 pounds and stand an average of 29 inches.' and WebMD (S688) agree."
+      },
+      "fci": {
+        "value": {
+          "male": [
+            48,
+            60
+          ],
+          "female": [
+            40,
+            50
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S682",
+        "quote": "Weight: Males: 48 to 60 kg",
+        "confidence": "high",
+        "notes": "FCI-St. N°331 Kangal Shepherd Dog (S682): males 'Weight: Males: 48 to 60 kg', females 'Females: 40 to 50 kg' (as returned). Alternative (the FCI breed, see identity)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "18–24 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Giant (over 100 pounds) | 18–24 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: AKC dogs 110–150 lb (S686) → 'Giant' (Mastiff / Pyrenean Mountain Dog precedent; bitches 80–120 lb straddle Large / Giant). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Anatolian Shepherd Dog growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S685",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S685, value as returned). The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "webmd": {
+        "value": "11–13",
+        "unit": "years",
+        "source_id": "S688",
+        "quote": "Anatolian shepherds live 11 to 13 years on average.",
+        "confidence": "medium",
+        "notes": "WebMD (S688, medically reviewed by a veterinarian). Consistent with the RKC lower bound; would give 0.75 × 11 × 12 = 99 — alternative."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Nature PDF names the breed only as a figure label (no value in the text) and the Dogs Trust breed table (S123) is not in the fetch tool's provenance."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S685) → 0.75 × 10 = 7.5 y = 90 months. WebMD 11–13 y (S688) would give 99. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S685"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S685",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S685, value as returned) — the runbook's preferred source. US sources describe less: WebMD (S688) 'Anatolian shepherds need a medium amount of activity.'; PetMD (S687) outdoor playtime in a securely fenced-in yard is typically sufficient (paraphrase) — no number → alternatives only."
+      },
+      "webmd": {
+        "value": "medium amount of activity",
+        "unit": "—",
+        "source_id": "S688",
+        "quote": "Anatolian shepherds need a medium amount of activity.",
+        "confidence": "medium",
+        "notes": "WebMD (S688). No number — alternative to the RKC value."
+      },
+      "after_meals": {
+        "value": "avoid exercise around mealtimes (GDV)",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": "feed your Anatolian Shepherd at least two or three small meals throughout the day and avoid exercise around mealtimes.",
+        "confidence": "high",
+        "notes": "PetMD (S687, GDV section; fragment as returned). No number in the source → the game's 60-minute 'wait with the walk' warning (M5-R16, David 2026-10-12) — proposed_game_parameters.anatolian_shepherd_dog.meal_exercise_gap."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "steady and bold without aggression, naturally independent, intelligent; loyal to owners, wary of strangers",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Steady and bold without aggression, naturally independent, very intelligent and tractable.",
+        "confidence": "high",
+        "notes": "FCI (S682); also 'Proud and confident. Loyal and affectionate to owners, but wary of strangers when on duty.'. RKC (S685): 'naturally independent and wary of strangers.' (fragment). AKC (S686) 'Alert and intelligent, calm and observant.'"
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement in an A/B source (PetMD S687: 'Because of their independent nature and imposing size, Anatolian Shepherd puppies need the right family to thrive.'). No family_pet chip."
+      },
+      "children": {
+        "value": "better in homes without smaller children; live well with children they know",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": "Anatolian Shepherds might be best in homes without smaller children,",
+        "confidence": "high",
+        "notes": "PetMD (S687) fragment as returned, continued: smaller children can easily be knocked down by an accidental bump from a 150-pound dog (paraphrase) — basis of not_for_small_children. WebMD (S688): 'Anatolian shepherds live well with children and other animals they know and are more reserved around strangers.' → sources conflict on young children → no children / small_children chip."
+      },
+      "other_pets": {
+        "value": "typically get along with other pets when introduced young",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": "When Anatolian Shepherd puppies are introduced at a young age, they typically get along well with other pets.",
+        "confidence": "high",
+        "notes": "PetMD (S687); WebMD (S688) 'live well with children and other animals they know' agrees. No prey-drive statement. Basis of the other_pets chip (condition kept here)."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No time-alone statement found."
+      },
+      "socialisation": {
+        "value": "early socialisation",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": "Early socialization is key to help prevent an Anatolian Shepherd puppy from thinking everything new is a threat.",
+        "confidence": "high",
+        "notes": "PetMD (S687). Basis of the breed's own socialisation quote (M5-R17). WebMD (S688) 'They need to be socialized from an early age so that they aren't too wary of strangers.' agrees."
+      },
+      "training": {
+        "value": "intelligent and tractable but naturally independent",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Steady and bold without aggression, naturally independent, very intelligent and tractable.",
+        "confidence": "medium",
+        "notes": "FCI (S682); RKC (S685) 'naturally independent' (fragment)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S685). Conditions named by PetMD (S687): elbow and hip dysplasia, entropion, sensitivity to anaesthesia, GDV.",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges,",
+        "confidence": "high",
+        "notes": "RKC breed page (S685) Breed Watch, Category 1 (fragment as returned). Not a conformation welfare breed."
+      },
+      "gdv": {
+        "value": "gastric dilatation volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S687): GDV named; seek immediate veterinary care at signs such as a distended abdomen or retching without vomit (paraphrase); several small meals and no exercise around mealtimes (exercise.after_meals)."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S687) list item. RKC Best Practice: 'Hip testing (for hip dysplasia) using the BVA/KC Hip Dysplasia Scheme' (S685, breeder checklist)."
+      },
+      "elbows": {
+        "value": "elbow dysplasia",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S687) list item."
+      },
+      "eyes": {
+        "value": "entropion",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S687) list item."
+      },
+      "anaesthesia": {
+        "value": "sensitivity to anaesthesia",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S687) list item (paraphrase) — background for the parent; tell the vet the breed."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not listed in the Wikipedia table of Coren's ranking (S35, checked 2026-11-03: 'not listed'; neither 'Anatolian' nor 'Kangal'). Unranked → learning 1.0 (runbook)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "intelligent and tractable, naturally independent",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Steady and bold without aggression, naturally independent, very intelligent and tractable.",
+        "confidence": "medium",
+        "notes": "FCI (S682)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.anatolian_shepherd_dog.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "large, upstanding, powerfully built livestock-guarding dog with a dark mask",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Large, upstanding, powerfully built, livestock guarding dog with dark mask.",
+        "confidence": "high",
+        "notes": "FCI (S682); 'Its constitution is robust. Compact body is covered with thick and medium length of hair. Body is of rectangular shape.'"
+      },
+      "colours": {
+        "value": [
+          "fawn with a black mask",
+          "wolf sable with a black mask"
+        ],
+        "unit": "list",
+        "source_id": "S682",
+        "quote": "Whole body should be one colour. Can be from fawn to wolf sable.",
+        "confidence": "high",
+        "notes": "FCI (S682): 'Must have black mask. Mask covers the muzzle and it is lighter on the skull. Ears are dark.'; white on the chest up to 10 cm is not a fault, less white preferred (paraphrase); disqualifying: brown nose, no mask (paraphrase). AKC (S686): 'All color patterns and markings are equally acceptable.' — no colour named. The game keeps the two FCI colours (runbook: colours listed by the standard only)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): fawn with black mask 70 (portrait default, the colour of the FCI and the most typical), wolf sable with black mask 30."
+      },
+      "coat": {
+        "value": "short to rough, dense undercoat, longer on the neck",
+        "unit": "—",
+        "source_id": "S686",
+        "quote": "Short (one inch minimum, not tight) to Rough (approximately 4 inches in length) with neck hair slightly longer.",
+        "confidence": "high",
+        "notes": "AKC (S686); FCI (S682) 'Hair: 3 to 7 cm, thick and harsh guard coat, dense undercoat.'"
+      },
+      "head": {
+        "value": "broad skull, muzzle shorter than the skull, blunt profile",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Muzzle: Shorter than the skull. Muzzle length is 40-44% of head length.",
+        "confidence": "high",
+        "notes": "FCI (S682); 'Profile blunt, tapering slightly to the end.'"
+      },
+      "eyes": {
+        "value": "almond-shaped, dark brown to light brown, black rims",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Dark brown to light brown, the darker, the better. Eye rims black.",
+        "confidence": "high",
+        "notes": "FCI (S682); AKC (S686) 'Eyes are medium size, set apart, almond shaped and dark brown to light amber in color.' — never blue or odd eyes."
+      },
+      "ears": {
+        "value": "medium, triangular, rounded tips, pendant (natural, never cropped)",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Medium sized, triangular in shape, rounded at tip, pendant with front edge close to cheek, higher when alert.",
+        "confidence": "high",
+        "notes": "FCI (S682); AKC (S686) 'Ears dropped to sides. Erect ears are a disqualification.'. Natural ears in the game."
+      },
+      "tail": {
+        "value": "long, carried low with a curl at the tip; high and curled when alert",
+        "unit": "—",
+        "source_id": "S686",
+        "quote": "Tail should be long and reaching to the hocks.",
+        "confidence": "high",
+        "notes": "AKC (S686); FCI (S682) 'when relaxed carried low with close curl at the tip;' (fragment)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S685, returned as values — quoted here as the value), PetMD (S687), WebMD (S688). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S685)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min and of long_daily_exercise. WebMD / PetMD describe a medium need (alternatives, exercise.webmd)."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S685). Basis of the large_home chip; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S685)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S685). No number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S687) 'only requires weekly brushing for maintenance' (WebMD S688 'once a week' agrees) → 1. Not frequent_grooming (the number sources say weekly)."
+      },
+      "rkc_coat_length": {
+        "value": "Short",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Short",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S685)."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S685). Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S685)."
+      },
+      "rkc_town_or_country": {
+        "value": "Country",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Country",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S685)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "No",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S685)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S685",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S685) Breed Watch category."
+      },
+      "petmd_grooming": {
+        "value": "weekly brushing; every few days while the coat blows twice a year",
+        "unit": "—",
+        "source_id": "S687",
+        "quote": "Outside of this biannual coat blowing, their short outer coat is smooth and only requires weekly brushing for maintenance.",
+        "confidence": "high",
+        "notes": "PetMD (S687). The basis of brushing 1× a week (M5-R13; seasonal coat blowing not modelled — runbook: the out-of-season number). Ears: routine cleaning, also after swimming / bathing (paraphrase, no frequency → no task). No bath / nail / groomer frequency."
+      },
+      "webmd_grooming": {
+        "value": "brushed once a week most of the year",
+        "unit": "—",
+        "source_id": "S688",
+        "quote": "For most of the year, they will need to be brushed once a week with a short-bristle brush.",
+        "confidence": "high",
+        "notes": "WebMD (S688). Agrees with PetMD. Nails 'regularly' (no number → no task)."
+      },
+      "webmd_teeth": {
+        "value": "daily tooth brushing, dental treats and chews",
+        "unit": "—",
+        "source_id": "S688",
+        "quote": "You can take care of their teeth with daily brushing, dental treats, and dog chews.",
+        "confidence": "medium",
+        "notes": "WebMD (S688, medically reviewed by Amy Flowers, DVM). Basis of the daily tooth-brushing task (M5-R15)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -69722,6 +70249,287 @@
         "confidence": "high",
         "notes": "FCI (S675), RKC (S677), AKC (S680). One standard colour → no colour weights to choose (unsourced weight 1.0).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): rich chestnut red (FCI / RKC / AKC, the only colour) is the portrait default; natural tail; never red and white, never black"
+      }
+    },
+    "anatolian_shepherd_dog": {
+      "_note": "Unattended run M5-R10-90 (2026-11-03): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S685 'More than 2 hours per day' → 120; WebMD / PetMD describe a medium need without a number — alternatives). Senior 90 from the RKC lower bound 'Over 10 years' (S685; McMillan 2024 not reachable → provisional). Not ranked by Coren → 1.0. Built: brushing 1× a week (PetMD S687 'weekly brushing', M5-R13), puppy socialisation with the PetMD quote (S687, M5-R17), the 60-minute meal / exercise warning (PetMD S687 'avoid exercise around mealtimes', M5-R16), daily tooth brushing (WebMD S688, M5-R15). No ear / nail / bath / groomer task (no frequency). Not a welfare breed (RKC Breed Watch Category 1) → in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S685",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: More than 2 hours per day' (S685) → rule 'more than N' → 120. WebMD (S688) 'medium amount of activity' and PetMD (S687) give no number.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S688",
+            "quote": "Anatolian shepherds need a medium amount of activity.",
+            "notes": "WebMD — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S685 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S685",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S685). No McMillan 2024 / VetCompass value reachable. Alternatives: 99 (WebMD 11–13 y lower bound, S688), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S685"
+        ],
+        "alternatives": {
+          "senior_webmd_11_y": 99,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S685)"
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × RKC lower bound S685). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (none found) → the RKC lower bound (this).",
+        "derived_from": [
+          "S11",
+          "S685"
+        ],
+        "alternatives": {
+          "senior_webmd_11_y": 99,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 (RKC lower bound 10 y, S685)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not ranked by Coren (S35, checked 2026-11-03) → 1.0 (runbook: unranked → 1.0; Havanese precedent). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 1,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S687",
+        "quote": "Outside of this biannual coat blowing, their short outer coat is smooth and only requires weekly brushing for maintenance.",
+        "confidence": "high",
+        "notes": "anatolian_shepherd_dog.suitability.petmd_grooming. RKC 'Grooming: More than once a week' (S685) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PetMD (S687) weekly → 1 (the out-of-season number; brushing every few days during the twice-yearly coat blow is not modelled). WebMD (S688) 'brushed once a week' agrees. Built in M5-R13; matted coat at ceil(1 / 2) = 1 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S685",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          },
+          {
+            "value": 1,
+            "source_id": "S688",
+            "quote": "For most of the year, they will need to be brushed once a week with a short-bristle brush.",
+            "notes": "WebMD — agrees."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »weekly brushing«, izven sezone menjave dlake); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S687",
+        "quote": "Early socialization is key to help prevent an Anatolian Shepherd puppy from thinking everything new is a threat.",
+        "confidence": "high",
+        "notes": "anatolian_shepherd_dog.behaviour.socialisation (PetMD S687). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PetMD S687)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S687",
+        "quote": "feed your Anatolian Shepherd at least two or three small meals throughout the day and avoid exercise around mealtimes.",
+        "confidence": "high",
+        "notes": "anatolian_shepherd_dog.exercise.after_meals (PetMD S687, GDV advice). Warning only; steps still count.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "tooth_brushing": {
+        "value": "daily tooth brushing",
+        "unit": "care routine (sourced need)",
+        "source_id": "S688",
+        "quote": "You can take care of their teeth with daily brushing, dental treats, and dog chews.",
+        "confidence": "medium",
+        "notes": "WebMD (S688), anatolian_shepherd_dog.suitability.webmd_teeth. Built: the child's tooth-brushing mini-game every day (DOG_CARE_TASKS [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily brushing« → vsak dan"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-90); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S687"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.behaviour.other_pets"
+            ],
+            "quote": "S687 'When Anatolian Shepherd puppies are introduced at a young age, they typically get along well with other pets.'",
+            "note": "Condition (introduced young) kept in notes."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.suitability.rkc_size_of_home"
+            ],
+            "quote": "S685 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.exercise.adult",
+              "anatolian_shepherd_dog.suitability.rkc_exercise"
+            ],
+            "quote": "S685 'More than 2 hours per day'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S687"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.behaviour.children"
+            ],
+            "quote": "S687 'Anatolian Shepherds might be best in homes without smaller children,'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.suitability.rkc_shedding"
+            ],
+            "quote": "S685 'Yes'"
+          }
+        ],
+        "not_proposed": {
+          "active_family": "RKC 'More than 2 hours per day' (S685), but WebMD (S688) 'medium amount of activity' — sources conflict on the activity level → only the consider chip long_daily_exercise (the game value).",
+          "family_pet": "No breed-specific family-pet statement (PetMD S687: needs 'the right family').",
+          "children": "PetMD (S687) best without smaller children vs WebMD (S688) live well with children they know — conflict → neither children nor small_children.",
+          "small_children": "PetMD (S687) the opposite.",
+          "apartment": "RKC 'Large house' (S685).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No explicit statement (independent nature, PetMD S687 / RKC S685 — open for David).",
+          "secure_fencing": "PetMD (S687) mentions a securely fenced-in yard only as where exercise happens, not as a need.",
+          "frequent_grooming": "RKC 'More than once a week' (S685), but PetMD / WebMD weekly → brushing 1× a week, no chip.",
+          "low_shedding": "RKC 'Sheds: Yes' (S685).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S685).",
+          "chases_small_pets": "No prey-drive statement.",
+          "hips_hind_legs": "RKC Breed Watch Category 1 (S685) — hip dysplasia only as a PetMD list item, no welfare chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits other_pets, large_home; consider long_daily_exercise, not_for_small_children, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S685), no BVA / UFAW / VetCompass conformation concern found. Never promise the breed's health; never shown with small children (PetMD S687).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult Anatolian Shepherd Dog: large, upstanding, powerfully built livestock-guarding dog; one-coloured fawn coat with a black mask over the muzzle and dark ears; short to medium dense double coat, slightly longer on the neck; broad head with a blunt muzzle shorter than the skull; almond-shaped dark brown eyes with black rims; medium triangular pendant ears (natural, never cropped); long tail carried low with a curl at the tip; calm, observant expression",
+        "unit": "—",
+        "source_id": "S682",
+        "quote": "Whole body should be one colour. Can be from fawn to wolf sable.",
+        "confidence": "high",
+        "notes": "FCI (S682), AKC (S686). Fawn with a black mask first (portrait default, the typical colour); weights unsourced.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask (FCI S682) is the portrait default; natural ears and tail; never blue or odd eyes, never without the mask"
       }
     }
   }

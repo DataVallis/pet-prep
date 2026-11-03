@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "e85bf3dd07d0b546229dbabbd52a28c7208007b60361f0f06b38990e91fc17d4"
+      "sha256": "b947fd42cdede4a626a5349cfe9641bd35b69efba1a661f5ab4a9001b5fc716b"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "02c47eb40b0eb259235fccb7b910f68e40fbb917460f4faacffd28c13b713a87"
+      "sha256": "23ec2c6c9f94e4c8125a524039334a188ca1d6e9e64d44ed8b8d11d07d7d45ed"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "06f9f787d4c94c3483715f57268b1b6baed310b67af5842e3a3c8a3f3daca45a"
+      "sha256": "e9cf70fa3c3257b4f4b9037c072e312d2a485467948b611ea9a1c46f5d6896d1"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "76dc2ac32b7dd536a9537da75d5b015090dd22dfd0cf5a6efcd9d82ae42b6284"
+      "sha256": "7042c84ad5d9daba0eef07e605225fb19ea8e4743b4a5109bf350d627ed5fbaa"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "8295c733c1276cb748eb2248ad05ad6f514ec2d59f6afbaa77ebbd951936e9f4"
+      "sha256": "f80c9a76cbaec1f88c9a4ed6b47a27af4b48c921a51e2adfa726bd3c157acdb8"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c4376d4722156acf37d48e7c68d412fd377e56cf4293dbcb3bf427202416232c"
+      "sha256": "34dae5c7d23f7979bd506c53005dc166744897a756e0219a787c46d5b0a8cf11"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "f7af010d3e36febd0cf3f661ed4b7e46759e777bef914261c8e6a31ffe5a2d0b"
+      "sha256": "8ec8fb72d66eda4eb1789196db88526a6ef7a84a6227e504195d6a594d7b3b31"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 83,
+      "breed_count": 84,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -50324,6 +50324,550 @@
       ]
     },
     {
+      "id": "anatolian_shepherd_dog",
+      "species": "dog",
+      "order": 83,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Anatolian Shepherd Dog",
+        "sl": "Anatolski ovčar"
+      },
+      "slug": {
+        "en": "anatolian-shepherd-dog",
+        "sl": "anatolski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Anatolian Shepherd",
+          "Kangal Shepherd Dog",
+          "Karabash"
+        ],
+        "sl": [
+          "anatolski pastirski pes",
+          "kangal",
+          "kangalski ovčar"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              72,
+              78
+            ],
+            "female": [
+              65,
+              73
+            ]
+          },
+          "source_ids": [
+            "S682"
+          ],
+          "ref": "anatolian_shepherd_dog.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              49.9,
+              68
+            ],
+            "female": [
+              36.3,
+              54.4
+            ]
+          },
+          "source_ids": [
+            "S686"
+          ],
+          "ref": "anatolian_shepherd_dog.adult_weight.akc",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            18,
+            24
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "anatolian_shepherd_dog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            11,
+            13
+          ],
+          "source_ids": [
+            "S688"
+          ],
+          "ref": "anatolian_shepherd_dog.lifespan.webmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "more_than",
+          "value": 120,
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "short"
+          ],
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S685"
+          ],
+          "ref": "anatolian_shepherd_dog.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 331,
+            "group": 2,
+            "section": 2,
+            "origin": "TR"
+          },
+          "source_ids": [
+            "S682"
+          ],
+          "ref": "anatolian_shepherd_dog.identity",
+          "confidence": "medium"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S687"
+          ],
+          "ref": "anatolian_shepherd_dog.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S687"
+          ],
+          "ref": "anatolian_shepherd_dog.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S687"
+          ],
+          "ref": "anatolian_shepherd_dog.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S687"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.suitability.rkc_size_of_home"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.exercise.adult",
+              "anatolian_shepherd_dog.suitability.rkc_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S687"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.behaviour.children"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S685"
+            ],
+            "refs": [
+              "anatolian_shepherd_dog.suitability.rkc_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 1
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "tooth_brushing",
+              "actor": "child",
+              "times": 7,
+              "period_days": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S685"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S685 'More than 2 hours per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S685"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S685)"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not ranked by Coren, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.grooming",
+            "basis_source_ids": [
+              "S687"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 1× na teden (RKC »More than once a week« brez števila → PetMD »weekly brushing«, izven sezone menjave dlake); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing",
+            "basis_source_ids": [
+              "S688"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily brushing« → vsak dan"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S685",
+          "S687",
+          "S688"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S685"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S685"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S685"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S682",
+        "S685",
+        "S686",
+        "S687",
+        "S688",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -55775,6 +56319,41 @@
       "publisher": "Irish Setter Club of America (AKC parent club)",
       "title": "Official Breed Standard for the Irish Setter (AKC, approved 1990-08-14)",
       "url": "https://irishsetterclub.org/breed-information/official-breed-standard/"
+    },
+    {
+      "id": "S682",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-St. N°331 — Kangal Shepherd Dog (Kangal Çoban Köpeği) (PDF)",
+      "url": "https://WWW.FCI.BE/medias/331g02-en-9067.pdf"
+    },
+    {
+      "id": "S685",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Anatolian Shepherd Dog",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/pastoral/anatolian-shepherd-dog/"
+    },
+    {
+      "id": "S686",
+      "tier": "A",
+      "publisher": "American Kennel Club (Anatolian Shepherd Dog Club of America)",
+      "title": "Official Standard of the Anatolian Shepherd Dog (approved June 1995, effective 1996-06-01) (PDF)",
+      "url": "https://a.storyblok.com/f/92981/x/9572e56ac7/akc-anatolian-shepherd-dog.pdf"
+    },
+    {
+      "id": "S687",
+      "tier": "B",
+      "publisher": "PetMD — Teresa Kho-Pelfrey, DVM (2023-02-08)",
+      "title": "Anatolian Shepherd",
+      "url": "https://www.petmd.com/dog/breeds/anatolian-shepherd"
+    },
+    {
+      "id": "S688",
+      "tier": "B",
+      "publisher": "WebMD Pets — Logan Smith, medically reviewed by Amy Flowers, DVM (2025-01-31)",
+      "title": "What to Know About Anatolian Shepherd Dogs",
+      "url": "https://www.webmd.com/pets/dogs/know-about-anatolian-shepherd-dogs"
     },
     {
       "id": "C1",
