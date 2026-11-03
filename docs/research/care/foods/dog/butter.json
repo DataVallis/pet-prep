@@ -60,7 +60,7 @@
     "fr": "Non, mieux vaut éviter. Le beurre n’est pas toxique, mais il est très gras, et les aliments gras peuvent déranger l’estomac d’un chien et parfois déclencher une pancréatite, une inflammation douloureuse. Les aliments que vous partagez, comme les œufs ou la purée, sont à préparer de préférence sans beurre.",
     "es": "No, mejor que no. La mantequilla no es tóxica, pero es muy grasa, y los alimentos grasos pueden sentarle mal al estómago de un perro y llegar a desencadenar una pancreatitis, una inflamación dolorosa. La comida que compartas con él, como los huevos o el puré de patatas, es mejor prepararla sin mantequilla.",
     "it": "Meglio di no. Il burro non è velenoso, ma è molto grasso, e i cibi grassi possono disturbare lo stomaco del cane e scatenare una pancreatite, un’infiammazione dolorosa. Il cibo che condividi, come uova o purè di patate, è meglio prepararlo senza burro.",
-    "pt": "Não, é melhor não. A manteiga não é venenosa, mas é muito gorda, e os alimentos gordos podem perturbar o estômago do cão e desencadear uma pancreatite, uma inflamação dolorosa. A comida que partilhas, como ovos ou puré de batata, é melhor ser preparada sem manteiga.",
+    "pt": "Não, é melhor não. A manteiga não é venenosa, mas é muito gorda, e os alimentos gordos podem perturbar o estômago do cão e desencadear uma pancreatite, uma inflamação dolorosa. Se partilhares comida, como ovos ou puré de batata, é melhor prepará-la sem manteiga.",
     "nl": "Nee, liever niet. Boter is niet giftig, maar wel erg vet, en vet eten kan de maag van een hond van streek maken en mogelijk alvleesklierontsteking uitlokken, een pijnlijke ontsteking. Eten dat je deelt, zoals ei of aardappelpuree, maak je het best zonder boter klaar.",
     "pl": "Lepiej nie. Masło nie jest trujące, ale jest bardzo tłuste, a tłuste jedzenie może podrażnić żołądek psa i wywołać zapalenie trzustki, czyli bolesny stan zapalny. Jedzenie, którym się dzielisz, np. jajka czy puree ziemniaczane, najlepiej przygotuj bez masła.",
     "cs": "Raději ne. Máslo není jedovaté, ale je velmi tučné a tučná jídla mohou psovi podráždit žaludek nebo spustit bolestivý zánět slinivky břišní. Jídlo, o které se se psem dělíte, například vejce nebo bramborovou kaši, je lepší připravovat bez másla.",
@@ -327,7 +327,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e19c4f22783f707f7a4d69ba8a09c414ce856ffcb192b3951f6eeea30ba6e107"
+      "verified_hash": "9dbc6604d40068cb29a10f5158fcf1648aae17e75506126d3a2adde6a642bc82"
     },
     "nl": {
       "status": "verified",

@@ -77,7 +77,7 @@
     "fr": "L’hôpital vétérinaire de NC State range les myrtilles parmi les aliments humains sains qui font de bonnes friandises pour les chats et les chiens, à donner en quantités mesurées et à compter dans les calories de la journée. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "El hospital veterinario de NC State incluye los arándanos entre los alimentos saludables para personas que pueden darse como premio a gatos y perros, en cantidades controladas y sumando sus calorías al total diario. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "L’ospedale veterinario della NC State inserisce i mirtilli tra i cibi umani adatti come premi sani per cani e gatti, da dare in quantità misurate e da calcolare nelle calorie giornaliere. I gatti sono carnivori obbligati e non hanno bisogno della frutta; i premi devono restare una piccola parte del cibo quotidiano e qualsiasi materiale vegetale può causare vomito o mal di stomaco.",
-    "pt": "O hospital veterinário da NC State inclui os mirtilos entre os alimentos humanos saudáveis que se podem dar como guloseima a gatos e cães, em quantidades medidas e contadas nas calorias diárias. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem continuar a ser uma pequena parte da alimentação diária e qualquer matéria vegetal pode causar vómitos ou mal-estar de estômago.",
+    "pt": "O hospital veterinário da NC State inclui os mirtilos entre os alimentos humanos saudáveis que se podem dar como guloseima a gatos e cães, em quantidades medidas e contadas nas calorias diárias. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem continuar a ser uma pequena parte da alimentação diária e qualquer matéria vegetal pode causar vómitos ou mal-estar no estômago.",
     "nl": "Het dierenziekenhuis van NC State rekent blauwe bessen tot de gezonde snoepjes uit de mensenkeuken voor katten en honden, in afgemeten hoeveelheden en meegeteld bij de dagelijkse calorieën. Katten zijn strikte vleeseters en hebben geen fruit nodig, snoepjes horen maar een klein deel van het dagelijkse eten te zijn, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "Szpital weterynaryjny NC State wymienia borówki wśród zdrowych smakołyków z ludzkiego jedzenia dla kotów i psów, podawanych w odmierzonych ilościach i wliczanych do dziennej puli kalorii. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy materiał roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "Veterinární nemocnice Státní univerzity Severní Karolíny (NC State) řadí borůvky mezi zdravé pamlsky z lidské stravy pro kočky a psy, podávané v odměřeném množství a započítané do denního příjmu kalorií. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
@@ -95,7 +95,7 @@
     "fr": "Proposez-en d’abord très peu. Si votre chat vomit ou a l’estomac dérangé ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero solo un poco. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta a tu veterinario.",
     "it": "Inizia con pochi mirtilli. Se poi il tuo gatto vomita o ha mal di stomaco, smetti e chiedi al veterinario.",
-    "pt": "Oferece primeiro só um pouco. Se depois o teu gato vomitar ou ficar com mal-estar de estômago, para de lhe dar e pergunta ao teu veterinário.",
+    "pt": "Oferece primeiro só um pouco. Se depois o teu gato vomitar ou ficar com mal-estar no estômago, para de lhe dar e pergunta ao teu veterinário.",
     "nl": "Geef eerst maar een klein beetje. Moet je kat daarna braken of krijgt ze maagklachten, stop dan en vraag je dierenarts om advies.",
     "pl": "Na początek podaj tylko odrobinę. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Nejdřív nabídněte jen trochu. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
@@ -252,7 +252,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ce63daaea300dedbe0875f3bbe6810aa6bb099735d831d46284d94aab370eb77"
+      "verified_hash": "f26dc1f61019b2122ec461bfea9f533db73f949d6d3f6a519486af80598cf94f"
     },
     "nl": {
       "status": "verified",

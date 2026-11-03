@@ -95,7 +95,7 @@
     "fr": "Une bouchée de thon chapardée n’est pas une raison de paniquer. Si votre chien mange du thon régulièrement et présente des signes comme des tremblements, une perte de coordination, des vomissements de sang ou une diarrhée sanglante, emmenez-le immédiatement chez le vétérinaire.",
     "es": "Que tu perro robe un bocado de atún no es motivo de pánico. Si tu perro ha estado comiendo atún con regularidad y muestra síntomas como temblores, falta de coordinación, vómitos con sangre o diarrea con sangre, llévalo al veterinario enseguida.",
     "it": "Un boccone di tonno rubato non è motivo di panico. Se il tuo cane mangia tonno regolarmente e mostra sintomi come tremori, perdita di coordinazione, vomito con sangue o diarrea con sangue, portalo subito dal veterinario.",
-    "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostrar sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário.",
+    "pt": "Uma dentada de atum roubada não é motivo para pânico. Se o teu cão tem comido atum com regularidade e mostra sinais como tremores, perda de coordenação, vómitos com sangue ou diarreia com sangue, leva-o imediatamente ao veterinário.",
     "nl": "Een gestolen hapje tonijn is geen reden tot paniek. Eet je hond regelmatig tonijn en zie je verschijnselen zoals trillingen, slechte coördinatie, bloed braken of bloederige diarree? Ga dan meteen naar de dierenarts.",
     "pl": "Podkradziony kęs tuńczyka to nie powód do paniki. Jeśli twój pies regularnie je tuńczyka i ma objawy takie jak drżenie mięśni, utrata koordynacji, wymioty z krwią lub krwawa biegunka, natychmiast zabierz go do weterynarza.",
     "cs": "Ukradené sousto tuňáka není důvod k panice. Pokud váš pes jí tuňáka pravidelně a objeví se u něj příznaky, jako je třes, ztráta koordinace, zvracení krve nebo krvavý průjem, okamžitě s ním jeďte k veterináři.",
@@ -165,7 +165,7 @@
         "fr": "Généralement pas : le thon n’est pas toxique, le problème vient d’une consommation régulière dans le temps.",
         "es": "Normalmente no: el atún no es tóxico, y lo que preocupa es darlo con regularidad durante mucho tiempo.",
         "it": "Di solito no: il tonno non è tossico, il problema è darlo regolarmente nel tempo.",
-        "pt": "Normalmente não: o atum não é tóxico, e a preocupação é dar atum com regularidade ao longo do tempo.",
+        "pt": "Normalmente não: o atum não é tóxico, e o que preocupa é dar atum com regularidade ao longo do tempo.",
         "nl": "Meestal niet: tonijn is niet giftig, en het probleem zit in regelmatig geven over langere tijd.",
         "pl": "Zwykle nie: tuńczyk nie jest toksyczny, a problemem jest regularne karmienie nim przez dłuższy czas.",
         "cs": "Většinou ne: tuňák není jedovatý a problémem je pravidelné krmení po delší dobu.",
@@ -320,7 +320,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4ee5aac8c3265380731fddd09e57c6231095acb1561b6b41f8be97ad038dd701"
+      "verified_hash": "c86864313222087ac8323586beb9f0d1b98926642749ee6734e12161220cf51b"
     },
     "nl": {
       "status": "verified",

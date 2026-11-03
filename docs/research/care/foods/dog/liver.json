@@ -174,7 +174,7 @@
     "fr": "Trop de foie n’est pas bon pour les chiens. C’est un adulte, avec le vétérinaire, qui décide si un chien peut en manger.",
     "es": "Demasiado hígado no es bueno para los perros. Un adulto y el veterinario deciden si un perro puede comer hígado.",
     "it": "Troppo fegato non fa bene ai cani. Se un cane può mangiare il fegato, lo decidono un adulto e il veterinario.",
-    "pt": "Fígado a mais não faz bem aos cães. Um adulto e o veterinário decidem se o cão come fígado.",
+    "pt": "Demasiado fígado não faz bem aos cães. Um adulto e o veterinário decidem se o cão come fígado.",
     "nl": "Te veel lever is niet goed voor honden. Een volwassene en de dierenarts beslissen of een hond lever krijgt.",
     "pl": "Za dużo wątróbki nie jest dobre dla psów. To dorosły i weterynarz decydują, czy pies dostanie wątróbkę.",
     "cs": "Moc jater psům neprospívá. O tom, jestli pes dostane játra, rozhoduje dospělý s veterinářem.",
@@ -193,7 +193,7 @@
         "fr": "Pourquoi trop de foie pose-t-il problème ?",
         "es": "¿Por qué es un problema darle demasiado hígado?",
         "it": "Perché troppo fegato è un problema?",
-        "pt": "Porque é que fígado a mais é um problema?",
+        "pt": "Porque é que demasiado fígado é um problema?",
         "nl": "Waarom is te veel lever een probleem?",
         "pl": "Dlaczego za dużo wątróbki to problem?",
         "cs": "Proč je příliš mnoho jater problém?",
@@ -296,7 +296,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "653feccce81ad05819ac007403556067b2bb270370bad996891f11fc593e5c08"
+      "verified_hash": "79eb0a33f7d5d0f9fc26dc139b0ff6915f6582edd9305e21029ca748cc0f4248"
     },
     "nl": {
       "status": "verified",

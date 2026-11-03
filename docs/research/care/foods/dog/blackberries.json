@@ -77,7 +77,7 @@
     "fr": "Les mûres contiennent naturellement des traces de xylitol, comme d’autres fruits et légumes. Comme pour tout aliment, trop de mûres peuvent déranger l’estomac, et les friandises ne doivent représenter qu’une petite part de l’alimentation d’un chien.",
     "es": "Las moras contienen xilitol natural en cantidades mínimas, igual que otras frutas y verduras. Como cualquier alimento, demasiadas moras pueden sentar mal al estómago, y los premios deben ser solo una parte pequeña de la dieta de un perro.",
     "it": "Le more contengono tracce di xilitolo naturale, come altri frutti e verdure. Come per qualsiasi cibo, troppe more possono causare mal di stomaco, e i premi devono essere solo una piccola parte della dieta del cane.",
-    "pt": "As amoras contêm vestígios de xilitol natural, tal como outras frutas e legumes. Como qualquer alimento, amoras a mais podem causar mal-estar de estômago, e as guloseimas devem ser apenas uma pequena parte da alimentação do cão.",
+    "pt": "As amoras contêm vestígios de xilitol natural, tal como outras frutas e legumes. Como qualquer alimento, amoras em excesso podem causar mal-estar de estômago, e as guloseimas devem ser apenas uma pequena parte da alimentação do cão.",
     "nl": "Bramen bevatten van nature sporen van xylitol, net als ander fruit en andere groenten. Zoals bij elk voedingsmiddel kunnen te veel bramen de maag van streek maken, en snoepjes horen maar een klein deel van het eten van een hond te zijn.",
     "pl": "Jeżyny, podobnie jak inne owoce i warzywa, zawierają śladowe ilości naturalnie występującego ksylitolu. Jak w przypadku każdego jedzenia, zbyt dużo jeżyn może wywołać rozstrój żołądka, a smakołyki powinny stanowić tylko niewielką część diety psa.",
     "cs": "Ostružiny přirozeně obsahují stopové množství xylitolu, stejně jako jiné ovoce a zelenina. Jako u každé potraviny může příliš mnoho ostružin podráždit žaludek a pamlsky by měly tvořit jen malou část psí stravy.",
@@ -264,7 +264,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "81cad4479bd47fbb4ba707a3f788247cb137ff3278a27fb270371d965180d0ed"
+      "verified_hash": "84644fc762785bed4578a3f0742be722b79a79873a271d0d6949b1996e8b2a7d"
     },
     "nl": {
       "status": "verified",

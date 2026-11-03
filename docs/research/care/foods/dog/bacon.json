@@ -77,7 +77,7 @@
     "fr": "Le Pet Poison Helpline cite le bacon parmi les aliments de table gras qui causent des problèmes allant de légers troubles digestifs à une pancréatite grave. Un repas gras est un déclencheur connu de la pancréatite, et certaines races, comme le schnauzer nain, y sont plus sujettes.",
     "es": "Pet Poison Helpline incluye el beicon entre las comidas grasas de la mesa que causan problemas, desde un leve malestar de estómago hasta una pancreatitis grave. Una comida grasa es un desencadenante conocido de la pancreatitis, y algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
     "it": "Pet Poison Helpline cita il bacon tra i cibi grassi da tavola che causano problemi che vanno da un lieve mal di stomaco a una pancreatite grave. Un pasto grasso è un noto fattore scatenante della pancreatite, e alcune razze, come lo schnauzer nano, sono più predisposte.",
-    "pt": "A Pet Poison Helpline inclui o bacon entre os alimentos gordos da mesa que causam problemas que vão de uma ligeira perturbação do estômago a uma pancreatite grave. Uma refeição gorda é um desencadeador conhecido de pancreatite, e algumas raças, como o schnauzer miniatura, são mais propensas.",
+    "pt": "A Pet Poison Helpline inclui o bacon entre os alimentos gordos da mesa que causam problemas que vão de uma ligeira perturbação do estômago a uma pancreatite grave. Uma refeição gorda é um fator desencadeante conhecido de pancreatite, e algumas raças, como o schnauzer miniatura, são mais propensas.",
     "nl": "Pet Poison Helpline rekent spek tot het vette tafelvoedsel dat problemen geeft, van een lichte maagstoornis tot ernstige alvleesklierontsteking. Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking, en sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor.",
     "pl": "Pet Poison Helpline wymienia boczek wśród tłustych potraw ze stołu, które powodują problemy – od łagodnych dolegliwości żołądkowych po ciężkie zapalenie trzustki. Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki, a niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
     "cs": "Pet Poison Helpline řadí slaninu mezi tučná jídla ze stolu, která způsobují potíže od lehce podrážděného žaludku až po těžký zánět slinivky břišní. Tučné jídlo je známým spouštěčem zánětu slinivky břišní a některá plemena, například knírač malý, jsou k němu náchylnější.",
@@ -358,7 +358,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "32052348f0765329b75da69a039f60be0f14d0ec867b3716a7199b2b84847045"
+      "verified_hash": "14de09586e9fa1922916098ef95919a77b336b193aa097619161af9029682fd4"
     },
     "nl": {
       "status": "verified",

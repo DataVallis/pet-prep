@@ -121,7 +121,7 @@
     "pt": [
       "Diarreia",
       "Vómitos",
-      "Mal-estar de estômago"
+      "Mal-estar no estômago"
     ],
     "nl": [
       "Diarree",
@@ -225,7 +225,7 @@
         "fr": "Non. Les chats ne perçoivent pas du tout le goût sucré : le sucre ne leur apporte que des calories en trop.",
         "es": "No. Los gatos no perciben el sabor dulce, así que el azúcar solo les aporta calorías de más.",
         "it": "No. I gatti non sentono affatto il sapore dolce, quindi lo zucchero dà loro solo calorie in più.",
-        "pt": "Não. Os gatos não sentem o sabor doce, por isso o açúcar não lhes dá nada além de calorias a mais.",
+        "pt": "Não. Os gatos não conseguem sentir o sabor doce, por isso o açúcar não lhes dá nada além de calorias a mais.",
         "nl": "Nee. Katten kunnen helemaal geen zoet proeven, dus suiker geeft ze niets anders dan extra calorieën.",
         "pl": "Nie. Koty w ogóle nie czują smaku słodkiego, więc cukier nie daje im nic poza dodatkowymi kaloriami.",
         "cs": "Ne. Kočky sladkou chuť vůbec necítí, takže jim cukr nedává nic než kalorie navíc.",
@@ -316,7 +316,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a1eb84679a90226f0f058c84faae0d267e86ae997b37d22368015c88c96d1b14"
+      "verified_hash": "ff3b81542e999df8a13f6f9d3c638e2f97e54a20e37eaf77093d4dc770307fd0"
     },
     "nl": {
       "status": "verified",

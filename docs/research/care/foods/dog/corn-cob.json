@@ -60,7 +60,7 @@
     "fr": "Non. Ne donnez jamais d’épi de maïs à un chien. Les chiens peuvent en avaler des morceaux, voire l’épi entier, ce qui peut provoquer un étouffement ou une grave obstruction intestinale nécessitant parfois un traitement d’urgence. Les grains de maïs nature, détachés de l’épi, c’est une autre histoire.",
     "es": "No. Nunca le des a un perro maíz en mazorca. Los perros pueden tragarse trozos o incluso la mazorca entera, lo que puede provocar atragantamiento o una obstrucción intestinal grave que puede requerir tratamiento de urgencia. Los granos de maíz naturales, ya desgranados, son otra cosa.",
     "it": "No. Non dare mai a un cane la pannocchia di mais. I cani possono ingoiarne dei pezzi o perfino la pannocchia intera, con il rischio di soffocamento o di una grave ostruzione intestinale che può richiedere un trattamento d’urgenza. I chicchi di mais al naturale, staccati dalla pannocchia, sono un’altra cosa.",
-    "pt": "Não. Nunca dês a um cão milho na maçaroca. Os cães podem engolir pedaços ou até a maçaroca inteira, o que pode causar engasgamento ou uma obstrução intestinal grave que pode exigir tratamento de emergência. Os grãos de milho simples, já fora da maçaroca, são outra história.",
+    "pt": "Não. Nunca dês maçarocas de milho a um cão. Os cães podem engolir pedaços ou até a maçaroca inteira, o que pode causar engasgamento ou uma obstrução intestinal grave que pode exigir tratamento de emergência. Os grãos de milho simples, já fora da maçaroca, são outra história.",
     "nl": "Nee. Geef een hond nooit een maïskolf. Honden kunnen stukken of zelfs de hele kolf inslikken, wat verstikking of een ernstige darmverstopping kan veroorzaken waarvoor soms een spoedbehandeling nodig is. Losse, gewone maïskorrels zijn een ander verhaal.",
     "pl": "Nie. Nigdy nie dawaj psu kukurydzy w kolbie. Pies może połknąć kawałki, a nawet całą kolbę, co może spowodować zadławienie lub poważną niedrożność jelit wymagającą pilnego leczenia. Zwykłe ziarna kukurydzy zdjęte z kolby to inna sprawa.",
     "cs": "Ne. Nikdy psovi nedávejte kukuřici na klasu. Pes může spolknout kousky nebo i celý klas, což může způsobit dušení nebo vážné ucpání střev, které může vyžadovat urgentní léčbu. Čistá kukuřičná zrna oddělená od klasu jsou jiná věc.",
@@ -405,7 +405,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9b0b234fd6d23148056d1fc93a2ecfa8bda17c08e3399ddeb508845fce774093"
+      "verified_hash": "04c33229eaf11150952f12b3c660a475fc88f5e21242d6d474d5c223376d55ee"
     },
     "nl": {
       "status": "verified",

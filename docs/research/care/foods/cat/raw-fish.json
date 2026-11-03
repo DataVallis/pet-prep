@@ -60,7 +60,7 @@
     "fr": "Non, le poisson cru n’est pas une bonne idée pour les chats. Il peut contenir des bactéries et des parasites dangereux, et certains poissons crus contiennent de la thiaminase, une enzyme qui détruit la vitamine B1. Le poisson destiné aux chats doit être bien cuit et sans arêtes.",
     "es": "No, el pescado crudo no es buena idea para los gatos. Puede contener bacterias y parásitos dañinos, y algunos pescados crudos contienen tiaminasa, una enzima que destruye la vitamina B1. El pescado para gatos debe estar bien cocinado y sin espinas.",
     "it": "No, il pesce crudo non è una buona idea per i gatti. Può contenere batteri e parassiti nocivi, e alcuni pesci crudi contengono tiaminasi, un enzima che distrugge la vitamina B1. Il pesce per i gatti deve essere ben cotto e senza lische.",
-    "pt": "Não, o peixe cru não é boa ideia para os gatos. Pode ter bactérias e parasitas nocivos, e algum peixe cru contém tiaminase, uma enzima que destrói a vitamina B1. O peixe para gatos deve ser bem cozinhado e sem espinhas.",
+    "pt": "Não, o peixe cru não é uma boa ideia para os gatos. Pode ter bactérias e parasitas nocivos, e alguns peixes crus contêm tiaminase, uma enzima que destrói a vitamina B1. O peixe para gatos deve ser bem cozinhado e sem espinhas.",
     "nl": "Nee, rauwe vis is geen goed idee voor katten. Het kan schadelijke bacteriën en parasieten bevatten, en sommige rauwe vis bevat thiaminase, een enzym dat vitamine B1 afbreekt. Vis voor katten moet goed gaar zijn en zonder graten.",
     "pl": "Nie, surowa ryba to zły pomysł dla kota. Może przenosić szkodliwe bakterie i pasożyty, a niektóre surowe ryby zawierają tiaminazę – enzym niszczący witaminę B1. Ryba dla kota powinna być porządnie ugotowana i bez ości.",
     "cs": "Ne, syrové ryby nejsou pro kočky dobrý nápad. Mohou přenášet škodlivé bakterie a parazity a některé syrové ryby obsahují thiaminázu, enzym, který ničí vitamin B1. Ryby pro kočky by měly být řádně tepelně upravené a zbavené kostí.",
@@ -271,7 +271,7 @@
         "fr": "C’est une enzyme présente dans certains poissons crus, qui détruit la thiamine (vitamine B1). La cuisson la détruit.",
         "es": "Es una enzima presente en algunos pescados crudos que destruye la tiamina (vitamina B1). La cocción la destruye.",
         "it": "È un enzima presente in alcuni pesci crudi che distrugge la tiamina (vitamina B1). La cottura, invece, distrugge l’enzima.",
-        "pt": "É uma enzima presente em algum peixe cru que destrói a tiamina (vitamina B1). A cozedura destrói-a.",
+        "pt": "É uma enzima presente em alguns peixes crus que destrói a tiamina (vitamina B1). A cozedura destrói-a.",
         "nl": "Dat is een enzym in sommige rauwe vis dat thiamine (vitamine B1) afbreekt. Door koken wordt het vernietigd.",
         "pl": "To enzym występujący w niektórych surowych rybach, który niszczy tiaminę (witaminę B1). Gotowanie go niszczy.",
         "cs": "Je to enzym, který se vyskytuje v některých syrových rybách a ničí thiamin (vitamin B1). Tepelnou úpravou se zničí.",
@@ -379,7 +379,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "02f4959d6ea1e452596b0db17f97863c8bf7d0d71f7a2e4f3b71f965c6ebf9c9"
+      "verified_hash": "2261af81287bb80135e681b6a7f1a3e30e281e31a9b121915ad505c6248a838f"
     },
     "nl": {
       "status": "verified",

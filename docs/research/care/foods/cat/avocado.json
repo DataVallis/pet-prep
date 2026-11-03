@@ -141,7 +141,7 @@
     "fr": "Si votre chat a mangé de l’avocat, demandez conseil à votre vétérinaire, surtout s’il en a mangé beaucoup ou semble malade. Notez la quantité mangée et l’heure.",
     "es": "Si tu gato ha comido aguacate, consulta a tu veterinario, sobre todo si ha comido mucho o parece encontrarse mal. Apunta cuánto ha comido y cuándo.",
     "it": "Se il tuo gatto ha mangiato dell’avocado, chiedi consiglio al veterinario, soprattutto se ne ha mangiato molto o sembra stare male. Annota quanto ne ha mangiato e quando.",
-    "pt": "Se o teu gato comeu abacate, contacta o teu veterinário para pedir conselho, sobretudo se comeu muito ou parece doente. Toma nota da quantidade que o teu gato comeu e de quando.",
+    "pt": "Se o teu gato comeu abacate, contacta o teu veterinário para pedir conselho, sobretudo se comeu muito ou parece doente. Anota a quantidade que o teu gato comeu e quando.",
     "nl": "Heeft je kat avocado gegeten? Vraag je dierenarts om advies, zeker als het om een grote hoeveelheid ging of je kat ziek lijkt. Schrijf op hoeveel je kat heeft gegeten en wanneer.",
     "pl": "Jeśli twój kot zjadł awokado, poradź się weterynarza, zwłaszcza jeśli zjadł dużo lub źle się czuje. Zapisz, ile zjadł i kiedy.",
     "cs": "Pokud kočka snědla avokádo, poraďte se s veterinářem, zejména pokud ho snědla hodně nebo se zdá, že jí není dobře. Poznamenejte si, kolik ho kočka snědla a kdy.",
@@ -273,7 +273,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "76f47bf201ef7433086229e1f9f6bc28e470f7a2e08cff96e7fec6e3d69818b5"
+      "verified_hash": "66d10eb0a17483f9fdf8a9cfd4351c3e533f5e43b84049d526e06e35b8cc4d25"
     },
     "nl": {
       "status": "verified",

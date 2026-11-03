@@ -127,7 +127,7 @@
     "pt": [
       "Agitação, nervosismo, não querer ficar quieto",
       "Hiperatividade",
-      "Mal-estar de estômago",
+      "Mal-estar no estômago",
       "Batimento cardíaco acelerado ou alterações do ritmo cardíaco"
     ],
     "nl": [
@@ -186,7 +186,7 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a avalé (boisson, café moulu, grains, sachet de thé ou comprimés), en quelle quantité et à quelle heure. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha tragado tu gato (bebida, posos, granos, bolsita de té o pastillas), cuánto y cuándo. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha ingerito il tuo gatto (bevanda, fondi di caffè, chicchi, bustina di tè o compresse), quanto e quando. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Toma nota do que o teu gato engoliu (bebida, borras, grãos, saqueta de chá ou comprimidos), da quantidade e de quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato engoliu (bebida, café moído, grãos, saqueta de chá ou comprimidos), a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft binnengekregen (drank, koffiedik, bonen, een theezakje of tabletten), hoeveel en wanneer. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt. Zapisz, co połknął twój kot (napój, kawę mieloną, ziarna, torebkę herbaty czy tabletki), ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co vaše kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
@@ -351,7 +351,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9267c436040d2e292a7d5b797cc624693354cfbfa68f8de900e54dd5fae46925"
+      "verified_hash": "a95b7f562734feba7161b7d90ae07bcbbc68d93caf3a294bc83e7bef1eb4304f"
     },
     "nl": {
       "status": "verified",

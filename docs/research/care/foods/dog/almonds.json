@@ -276,7 +276,7 @@
         "fr": "Pas de panique. Surveillez les troubles digestifs et appelez votre vétérinaire si des signes apparaissent.",
         "es": "Que no cunda el pánico. Vigila si tiene molestias de barriga y llama a tu veterinario si aparecen síntomas.",
         "it": "Niente panico. Controlla se ha disturbi di pancia e chiama il veterinario se compaiono sintomi.",
-        "pt": "Não entres em pânico. Vigia se tem a barriga perturbada e liga ao teu veterinário se aparecerem sinais.",
+        "pt": "Não entres em pânico. Vigia se aparece mal-estar de barriga e liga ao teu veterinário se aparecerem sinais.",
         "nl": "Geen paniek. Let op maagklachten en bel je dierenarts als er verschijnselen optreden.",
         "pl": "Nie panikuj. Obserwuj, czy nie ma problemów z brzuchem, i zadzwoń do weterynarza, jeśli pojawią się objawy.",
         "cs": "Nepanikařte. Sledujte, zda nemá zažívací potíže, a pokud se objeví příznaky, zavolejte veterináři.",
@@ -380,7 +380,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "27ab5343c0e86f80859b7128b5ce7d31c30fa7506c2642cab290f8c85a3c1707"
+      "verified_hash": "654481b593e7de865da5930ff1bfed8b643d9e83e7a14a3ef6857098d617e5e7"
     },
     "nl": {
       "status": "verified",

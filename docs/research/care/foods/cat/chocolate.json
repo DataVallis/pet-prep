@@ -231,7 +231,7 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien. Notez quel chocolat il a mangé, en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition de signes et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien. Apunta qué tipo de chocolate ha comido, cuánto y cuándo, y guarda el envoltorio. No esperes a que aparezcan síntomas y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene. Annota che tipo di cioccolato ha mangiato, quanto e quando, e conserva l’involucro. Non aspettare che compaiano i sintomi e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem. Toma nota do tipo de chocolate que o teu gato comeu, da quantidade e de quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem. Anota o tipo de chocolate que o teu gato comeu, a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet. Schrijf op wat voor chocolade je kat heeft gegeten, hoeveel en wanneer, en bewaar de verpakking. Wacht niet tot er verschijnselen optreden en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego. Zapisz, jaką czekoladę zjadł twój kot, ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se kočka zdá v pořádku. Poznamenejte si, jaký druh čokolády kočka snědla, kolik a kdy, a obal si schovejte. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
@@ -452,7 +452,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6caca0be51cf8dcef572bd0ac693e854dd9bf78d02b2f15a54f21b5265855563"
+      "verified_hash": "243a8b5a02a7db0497167331c525f96b48ba138d1ed96043f75d2c4ce0ed188c"
     },
     "nl": {
       "status": "verified",

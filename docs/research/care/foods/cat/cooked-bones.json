@@ -60,7 +60,7 @@
     "fr": "Non. Les os cuits, comme ceux du poulet ou de la dinde, peuvent se briser en éclats et provoquer un étouffement, des blessures internes ou des occlusions chez le chat. Détachez toujours la viande de l’os avant de la partager, et jetez les carcasses là où votre chat ne peut pas les atteindre.",
     "es": "No. Los huesos cocinados, como los de pollo o pavo, pueden astillarse y provocar atragantamiento, lesiones internas u obstrucciones en los gatos. Quita siempre la carne del hueso antes de compartirla y tira las carcasas donde tu gato no pueda alcanzarlas.",
     "it": "No. Le ossa cotte, come quelle di pollo o di tacchino, possono scheggiarsi e causare soffocamento, lesioni interne od ostruzioni nei gatti. Togli sempre la carne dall’osso prima di condividerla e getta le carcasse dove il tuo gatto non può raggiungerle.",
-    "pt": "Não. Os ossos cozinhados, como os de frango ou de peru, podem lascar e causar engasgamento, lesões internas ou obstruções nos gatos. Tira sempre a carne do osso antes de a partilhar e deita fora as carcaças onde o teu gato não lhes possa chegar.",
+    "pt": "Não. Os ossos cozinhados, como os de frango ou de peru, podem lascar e causar engasgo, lesões internas ou obstruções nos gatos. Tira sempre a carne do osso antes de a partilhar e deita fora as carcaças onde o teu gato não lhes chegue.",
     "nl": "Nee. Gekookte botten, zoals kip- of kalkoenbotjes, kunnen splinteren en bij katten verstikking, inwendig letsel of verstoppingen veroorzaken. Haal het vlees altijd van het bot voordat je deelt, en gooi karkassen weg waar je kat er niet bij kan.",
     "pl": "Nie. Gotowane kości, na przykład z kurczaka lub indyka, mogą się rozszczepiać i spowodować u kota zadławienie, obrażenia wewnętrzne lub niedrożność. Zawsze oddziel mięso od kości, zanim się nim podzielisz, i wyrzucaj resztki tuszki tam, gdzie kot ich nie dosięgnie.",
     "cs": "Ne. Tepelně upravené kosti, například kuřecí nebo krůtí, se mohou tříštit a u koček způsobit dušení, vnitřní poranění nebo ucpání. Než se s kočkou o maso podělíte, vždy ho oberte od kostí a zbytky kostry vyhazujte tam, kam kočka nedosáhne.",
@@ -119,7 +119,7 @@
       "Dolore alla pancia (si nasconde, ringhia, non vuole essere toccato)"
     ],
     "pt": [
-      "Engasgamento",
+      "Engasgo",
       "Vómitos",
       "Dor de barriga (esconder-se, rosnar, não querer ser tocado)"
     ],
@@ -171,7 +171,7 @@
     "fr": "Contactez immédiatement votre vétérinaire si votre chat a avalé un os cuit, même s’il semble aller bien. Notez de quel os il s’agissait et à quelle heure. N’attendez pas de voir ce qui se passe et n’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario si tu gato se ha tragado un hueso cocinado, aunque parezca estar bien. Apunta qué tipo de hueso era y cuándo. No esperes a ver qué pasa y no intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario se il tuo gatto ha ingerito un osso cotto, anche se sembra stare bene. Annota che tipo di osso era e quando l’ha mangiato. Non aspettare di vedere che cosa succede e non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso cozinhado, mesmo que pareça bem. Toma nota do tipo de osso e de quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário se o teu gato engoliu um osso cozinhado, mesmo que pareça bem. Anota o tipo de osso e quando foi. Não esperes para ver o que acontece e não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts als je kat een gekookt bot heeft ingeslikt, ook als ze er gezond uitziet. Schrijf op wat voor bot het was en wanneer. Wacht niet af wat er gebeurt en probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój kot połknął gotowaną kość, nawet jeśli wygląda na zdrowego. Zapisz, jaka to była kość i kiedy ją połknął. Nie czekaj na rozwój sytuacji i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře, pokud kočka spolkla tepelně upravenou kost, i když se zdá v pořádku. Poznamenejte si, o jakou kost šlo a kdy. Nečekejte, co se stane, a nesnažte se u kočky doma vyvolat zvracení.",
@@ -341,7 +341,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "76bda884125fff603787697adbc7047ba1a9e45348df39a56db49363ddb3ffc6"
+      "verified_hash": "7c4fcf520b493ec867add198dc023144231019e619af181a627a6d764b7d6aed"
     },
     "nl": {
       "status": "verified",

@@ -95,7 +95,7 @@
     "fr": "Si votre chien a les selles molles, des gaz, des vomissements ou mal au ventre après avoir bu du lait, arrêtez de lui en donner. Contactez votre vétérinaire en cas d’inquiétude.",
     "es": "Si tu perro tiene heces blandas, gases, vómitos o dolor de barriga después de tomar leche, deja de dársela. Contacta con tu veterinario si estás preocupado.",
     "it": "Se dopo il latte il tuo cane ha feci molli, gas intestinali, vomito o mal di pancia, smetti di darglielo. Se sei preoccupato, contatta il veterinario.",
-    "pt": "Se o teu cão ficar com fezes moles, gases, vómitos ou dor de barriga depois de beber leite, deixa de lhe dar leite. Contacta o teu veterinário se estiveres preocupado.",
+    "pt": "Se o teu cão ficar com fezes moles, gases, vómitos ou dor de barriga depois de beber leite, deixa de lhe dar leite. Contacta o teu veterinário se tiveres alguma preocupação.",
     "nl": "Krijgt je hond na melk dunne ontlasting, winderigheid, braken of buikpijn? Geef dan geen melk meer. Neem contact op met je dierenarts als je je zorgen maakt.",
     "pl": "Jeśli po mleku twój pies ma luźne stolce, wzdęcia, wymioty lub ból brzucha, przestań mu je dawać. Skontaktuj się z weterynarzem, jeśli się niepokoisz.",
     "cs": "Pokud má váš pes po mléce řídkou stolici, plynatost, zvrací nebo ho bolí břicho, přestaňte mu mléko dávat. Máte-li obavy, obraťte se na veterináře.",
@@ -264,7 +264,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8efdf5572acf2288af8d86b44a14b2f251c375164f092ef45285ac7fd1937fea"
+      "verified_hash": "888109127939c32ecdea6074987521ff10035d6cf1dce0debb4f02c6799b4bc2"
     },
     "nl": {
       "status": "verified",

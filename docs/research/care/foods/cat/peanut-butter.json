@@ -60,7 +60,7 @@
     "fr": "Mieux vaut ne pas en faire une habitude. Certains vétérinaires estiment que le beurre de cacahuète naturel peut être une friandise occasionnelle, mais il ne doit jamais contenir de xylitol, et Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains.",
     "es": "Mejor que no se convierta en costumbre. Algunos veterinarios dicen que la crema de cacahuete natural puede ser un premio ocasional, pero nunca debe llevar xilitol, y Cats Protection aconseja limitarse a premios para gatos en lugar de alimentos para personas.",
     "it": "Meglio non farne un’abitudine. Alcuni veterinari dicono che il burro di arachidi naturale può essere un premio occasionale, ma non deve mai contenere xilitolo, e Cats Protection consiglia di limitarsi ai premi per gatti invece che ai cibi per le persone.",
-    "pt": "É melhor não fazer disto um hábito. Alguns veterinários dizem que a manteiga de amendoim natural pode ser uma guloseima ocasional, mas nunca pode conter xilitol, e a Cats Protection aconselha a ficar pelas guloseimas para gatos em vez de comida de pessoas.",
+    "pt": "É melhor não fazer disto um hábito. Alguns veterinários dizem que a manteiga de amendoim natural pode ser uma guloseima ocasional, mas nunca pode conter xilitol, e a Cats Protection aconselha a dar apenas guloseimas próprias para gatos, em vez de comida de pessoas.",
     "nl": "Maak er liever geen gewoonte van. Sommige dierenartsen zeggen dat natuurlijke pindakaas af en toe een snoepje kan zijn, maar er mag nooit xylitol in zitten, en Cats Protection raadt aan om bij kattensnoepjes te blijven in plaats van mensenvoedsel.",
     "pl": "Lepiej nie robić z tego zwyczaju. Niektórzy weterynarze uważają, że naturalne masło orzechowe może być okazjonalnym smakołykiem, ale nigdy nie może zawierać ksylitolu, a Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia.",
     "cs": "Raději z toho nedělejte zvyk. Někteří veterináři říkají, že přírodní arašídové máslo může být občasným pamlskem, nikdy však nesmí obsahovat xylitol, a Cats Protection doporučuje dávat místo lidských potravin raději pamlsky pro kočky.",
@@ -77,7 +77,7 @@
     "fr": "Les sources divergent. VCA présente le beurre de cacahuète naturel comme une friandise que les chats adorent, à condition qu’il soit sans conservateurs ni additifs potentiellement mortels comme le xylitol. Cats Protection conseille de s’en tenir aux friandises pour chats plutôt qu’aux aliments pour humains et avertit que les fruits à coque peuvent poser problème aux chats. Nous retenons le niveau le plus prudent.",
     "es": "Las fuentes no coinciden. VCA describe la crema de cacahuete natural como un premio que encanta a los gatos, siempre que no lleve conservantes ni aditivos potencialmente mortales como el xilitol. Cats Protection aconseja limitarse a premios para gatos en lugar de alimentos para personas y advierte de que los frutos secos pueden causar problemas a los gatos. Aplicamos el nivel más estricto.",
     "it": "Le fonti non sono concordi. VCA descrive il burro di arachidi naturale come un premio che i gatti adorano, purché sia privo di conservanti e di additivi potenzialmente letali come lo xilitolo. Cats Protection consiglia di limitarsi ai premi per gatti invece che ai cibi per le persone e avverte che la frutta a guscio può causare problemi ai gatti. Applichiamo il livello più severo.",
-    "pt": "As fontes não estão de acordo. A VCA descreve a manteiga de amendoim natural como uma guloseima de que os gatos gostam muito, desde que não tenha conservantes nem aditivos que põem a vida em risco, como o xilitol. A Cats Protection aconselha a ficar pelas guloseimas para gatos em vez de comida de pessoas e avisa que os frutos secos podem causar problemas aos gatos. Seguimos o nível mais rigoroso.",
+    "pt": "As fontes não estão de acordo. A VCA descreve a manteiga de amendoim natural como uma guloseima de que os gatos gostam muito, desde que não tenha conservantes nem aditivos que põem a vida em risco, como o xilitol. A Cats Protection aconselha a dar apenas guloseimas próprias para gatos, em vez de comida de pessoas e avisa que os frutos secos podem causar problemas aos gatos. Seguimos o nível mais rigoroso.",
     "nl": "De bronnen zijn het niet met elkaar eens. VCA noemt natuurlijke pindakaas een snoepje waar katten dol op zijn, zolang er geen conserveermiddelen en levensgevaarlijke toevoegingen zoals xylitol in zitten. Cats Protection raadt aan om bij kattensnoepjes te blijven in plaats van mensenvoedsel en waarschuwt dat noten problemen kunnen geven bij katten. Wij volgen het strengste niveau.",
     "pl": "Źródła się różnią. VCA opisuje naturalne masło orzechowe jako smakołyk, który koty uwielbiają, pod warunkiem że nie zawiera konserwantów ani zagrażających życiu dodatków, takich jak ksylitol. Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia i ostrzega, że orzechy mogą sprawiać kotom problemy. Przyjmujemy surowszą ocenę.",
     "cs": "Zdroje se rozcházejí. VCA popisuje přírodní arašídové máslo jako pamlsek, který kočky milují, pokud neobsahuje konzervanty a život ohrožující přísady, jako je xylitol. Cats Protection doporučuje držet se pamlsků pro kočky místo lidského jídla a varuje, že ořechy mohou kočkám způsobit potíže. Používáme přísnější hodnocení.",
@@ -121,7 +121,7 @@
     "pt": [
       "Vómitos",
       "Diarreia",
-      "Mal-estar de estômago"
+      "Mal-estar no estômago"
     ],
     "nl": [
       "Braken",
@@ -171,7 +171,7 @@
     "fr": "Un coup de langue sur du beurre de cacahuète nature a peu de chances d’être grave ; surveillez l’apparition de vomissements ou de diarrhée. Si le beurre de cacahuète contient du xylitol, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, notez la quantité mangée et n’attendez pas l’apparition de signes.",
     "es": "Un lametón de crema de cacahuete sin nada añadido probablemente no sea grave; vigila si aparecen vómitos o diarrea. Si la crema de cacahuete lleva xilitol, ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, apunta cuánto ha comido y no esperes a que aparezcan síntomas.",
     "it": "Una leccatina di burro di arachidi semplice difficilmente è grave; controlla se compaiono vomito o diarrea. Se il burro di arachidi contiene xilitolo, contatta subito il veterinario o un centro antiveleni veterinario, annota quanto ne ha mangiato e non aspettare che compaiano i sintomi.",
-    "pt": "Uma lambidela de manteiga de amendoim simples dificilmente será grave; vigia se aparecem vómitos ou diarreia. Se a manteiga de amendoim tiver xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, toma nota da quantidade comida e não esperes que surjam sinais.",
+    "pt": "Uma lambidela de manteiga de amendoim simples dificilmente será grave; vigia se aparecem vómitos ou diarreia. Se a manteiga de amendoim tiver xilitol, contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, anota a quantidade comida e não esperes que surjam sinais.",
     "nl": "Eén likje gewone pindakaas is waarschijnlijk niet ernstig; let op braken of diarree. Zit er xylitol in de pindakaas, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, schrijf op hoeveel er is gegeten en wacht niet tot er verschijnselen optreden.",
     "pl": "Liźnięcie zwykłego masła orzechowego raczej nie jest groźne; obserwuj, czy kot nie wymiotuje i nie ma biegunki. Jeśli masło orzechowe zawiera ksylitol, od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, zapisz, ile kot zjadł, i nie czekaj na objawy.",
     "cs": "Olíznutí obyčejného arašídového másla pravděpodobně nebude nic vážného; sledujte, zda se neobjeví zvracení nebo průjem. Pokud arašídové máslo obsahuje xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, kolik ho kočka snědla, a nečekejte na příznaky.",
@@ -314,7 +314,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "133a3899603e6150f7f06a8b2c85d14fa0c00e5b23b215797e18c89d9609c74a"
+      "verified_hash": "2647b86d901c936a853b44bb12dc8e7655757b67ca4858e6f245c1ef2ef7cb8d"
     },
     "nl": {
       "status": "verified",

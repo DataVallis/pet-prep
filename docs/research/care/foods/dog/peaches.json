@@ -120,7 +120,7 @@
     ],
     "pt": [
       "Engasgamento ou ânsias",
-      "Sinais de obstrução: vómitos repetidos, não comer, cansaço",
+      "Sinais de obstrução: vómitos repetidos, recusa em comer, cansaço",
       "Pupilas dilatadas, gengivas vermelho-tijolo, dificuldade em respirar (cianeto)"
     ],
     "nl": [
@@ -392,7 +392,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9321b2f828d571f3ee8c05a43ce03cb4a7bb7ae4a97e7a5ed45712b4b3317724"
+      "verified_hash": "eb16b3b059b23ead48987cf609c6ea2451b32546546a3c44689adf67016b2fb0"
     },
     "nl": {
       "status": "verified",

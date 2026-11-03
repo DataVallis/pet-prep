@@ -77,7 +77,7 @@
     "fr": "Les noix de cajou ne sont pas toxiques, mais c’est un en-cas riche en graisses : en manger trop peut entraîner des troubles digestifs, une pancréatite et une prise de poids. Salées, elles apportent du sel, nocif en excès. Le plus grand risque vient des autres fruits à coque d’un mélange, comme les noix de macadamia. Certains chiens peuvent réagir par un gonflement, des démangeaisons ou de l’urticaire.",
     "es": "Los anacardos no son tóxicos, pero son un tentempié con mucha grasa: comer demasiados puede provocar malestar de barriga, pancreatitis y aumento de peso. Los anacardos salados añaden sal, que en exceso es perjudicial. El mayor riesgo viene de otros frutos secos de la mezcla, como las nueces de macadamia. Algunos perros pueden reaccionar con hinchazón, picor o ronchas.",
     "it": "Gli anacardi non sono tossici, ma sono uno snack molto grasso: mangiarne troppi può portare a disturbi di pancia, pancreatite e aumento di peso. Gli anacardi salati aggiungono sale, che in eccesso fa male. Il rischio maggiore viene da altra frutta a guscio presente nei mix, come le noci di macadamia. Alcuni cani possono reagire con gonfiore, prurito od orticaria.",
-    "pt": "Os cajus não são tóxicos, mas são um petisco com muita gordura: comer demasiados pode levar a dor de barriga, pancreatite e aumento de peso. Os cajus salgados juntam sal, que em excesso faz mal. O maior risco vem de outros frutos secos da mistura, como as nozes de macadâmia. Alguns cães podem reagir com inchaço, comichão ou urticária.",
+    "pt": "Os cajus não são tóxicos, mas são um petisco com muita gordura: comer demasiados pode levar a dor de barriga, pancreatite e aumento de peso. Os cajus salgados acrescentam sal, que em excesso faz mal. O maior risco vem de outros frutos secos da mistura, como as nozes de macadâmia. Alguns cães podem reagir com inchaço, comichão ou urticária.",
     "nl": "Cashewnoten zijn niet giftig, maar wel een vette snack: te veel eten kan leiden tot maag-darmklachten, alvleesklierontsteking en overgewicht. Gezouten cashewnoten bevatten zout, en te veel zout is schadelijk. Het grootste risico komt van andere noten in een mix, zoals macadamianoten. Sommige honden kunnen reageren met zwelling, jeuk of netelroos (bultjes).",
     "pl": "Orzechy nerkowca nie są toksyczne, ale to bardzo tłusta przekąska: zbyt duża ilość może prowadzić do problemów z brzuchem, zapalenia trzustki i przybierania na wadze. Solone orzechy nerkowca dostarczają soli, która w nadmiarze szkodzi. Największe ryzyko stanowią inne orzechy w mieszance, np. makadamia. Niektóre psy mogą zareagować obrzękiem, swędzeniem lub pokrzywką.",
     "cs": "Kešu ořechy nejsou jedovaté, ale jsou to velmi tučné pochutiny: když jich pes sní příliš, může mít zažívací potíže, zánět slinivky břišní a přibrat na váze. Solené kešu obsahují navíc sůl, která je v nadbytku škodlivá. Největší riziko představují jiné ořechy ve směsi, například makadamové. Někteří psi mohou reagovat otokem, svěděním nebo kopřivkou.",
@@ -269,7 +269,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ec3ed16de3dc0e470be806476d7c055dde266a9c949fa3ea4b9089355c950c7c"
+      "verified_hash": "196b5751f4247be1472353603793007e02133da0a22f3de9b93cb821a622a9b1"
     },
     "nl": {
       "status": "verified",

@@ -77,7 +77,7 @@
     "fr": "Trop de banane peut apporter un excès de calories et provoquer des troubles digestifs chez certains chiens. La peau de banane n’est pas toxique pour les chiens, mais elle est difficile à digérer et pourrait causer un inconfort digestif ou, dans certains cas, une obstruction intestinale.",
     "es": "Demasiado plátano puede añadir calorías de más y provocar malestar digestivo en algunos perros. La piel del plátano no es tóxica para los perros, pero es difícil de digerir y podría causar molestias de estómago o, en algunos casos, una obstrucción intestinal.",
     "it": "Troppa banana può aggiungere calorie in eccesso e in alcuni cani può causare disturbi digestivi. La buccia di banana non è tossica per i cani, ma è difficile da digerire e potrebbe causare fastidi allo stomaco o, in alcuni casi, un’ostruzione intestinale.",
-    "pt": "Banana a mais pode acrescentar calorias extra e causar problemas digestivos em alguns cães. A casca da banana não é tóxica para cães, mas é difícil de digerir e pode causar desconforto de estômago ou, em alguns casos, uma obstrução intestinal.",
+    "pt": "Banana em excesso pode acrescentar calorias e causar problemas digestivos em alguns cães. A casca da banana não é tóxica para cães, mas é difícil de digerir e pode causar mal-estar de estômago ou, em alguns casos, uma obstrução intestinal.",
     "nl": "Te veel banaan kan extra calorieën opleveren en bij sommige honden de spijsvertering van streek maken. Bananenschillen zijn niet giftig voor honden, maar ze zijn moeilijk verteerbaar en kunnen maagklachten of in sommige gevallen een darmverstopping veroorzaken.",
     "pl": "Zbyt dużo banana może dostarczyć dodatkowych kalorii i u niektórych psów wywołać problemy trawienne. Skórka banana nie jest dla psów toksyczna, ale jest ciężkostrawna i może wywołać dolegliwości żołądkowe, a w niektórych przypadkach niedrożność jelit.",
     "cs": "Příliš mnoho banánu může přidat kalorie navíc a u některých psů může způsobit zažívací potíže. Banánové slupky nejsou pro psy jedovaté, ale špatně se tráví a mohly by způsobit žaludeční potíže nebo v některých případech ucpání střev.",
@@ -95,7 +95,7 @@
     "fr": "La peau de banane pourrait causer un inconfort digestif ou, dans certains cas, une obstruction intestinale : retirez-la toujours. Si vous ne savez pas quelle quantité de banane convient à la taille, à l’âge ou à la santé de votre chien, demandez conseil à votre vétérinaire.",
     "es": "La piel del plátano podría causar molestias de estómago o, en algunos casos, una obstrucción intestinal, así que quítala siempre. Si no sabes cuánto plátano le conviene a tu perro según su tamaño, edad o salud, consulta a tu veterinario.",
     "it": "La buccia di banana potrebbe causare fastidi allo stomaco o, in alcuni casi, un’ostruzione intestinale, quindi toglila sempre. Se non sei sicuro di quanta banana sia adatta alla taglia, all’età o alla salute del tuo cane, chiedi al veterinario.",
-    "pt": "A casca da banana pode causar desconforto de estômago ou, em alguns casos, uma obstrução intestinal, por isso tira-a sempre. Se não tiveres a certeza de quanta banana é adequada ao tamanho, à idade ou à saúde do teu cão, pergunta ao teu veterinário.",
+    "pt": "A casca da banana pode causar mal-estar de estômago ou, em alguns casos, uma obstrução intestinal, por isso tira-a sempre. Se não tiveres a certeza de quanta banana é adequada ao tamanho, à idade ou à saúde do teu cão, pergunta ao teu veterinário.",
     "nl": "Een bananenschil kan maagklachten of in sommige gevallen een darmverstopping veroorzaken, dus haal hem altijd eraf. Twijfel je hoeveel banaan past bij het formaat, de leeftijd of de gezondheid van je hond, vraag het dan je dierenarts.",
     "pl": "Skórka banana może wywołać dolegliwości żołądkowe, a w niektórych przypadkach niedrożność jelit, więc zawsze ją usuwaj. Jeśli nie wiesz, ile banana możesz dać psu, biorąc pod uwagę jego wielkość, wiek i stan zdrowia, zapytaj weterynarza.",
     "cs": "Banánová slupka by mohla způsobit žaludeční potíže nebo v některých případech ucpání střev, proto ji vždy odstraňte. Pokud si nejste jistí, kolik banánu se hodí k velikosti, věku nebo zdraví vašeho psa, zeptejte se veterináře.",
@@ -263,7 +263,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ba9efe6e1e02a184262f164ed041651efa949d093ec20fa81d574fed28653255"
+      "verified_hash": "6b17781afd18f1fbc6035f3b6b1d818dec0ebd5ac6152d6518671dd177a77565"
     },
     "nl": {
       "status": "verified",

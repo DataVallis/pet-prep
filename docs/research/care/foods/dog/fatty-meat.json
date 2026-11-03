@@ -77,7 +77,7 @@
     "fr": "Un repas gras est un déclencheur connu de la pancréatite chez le chien. Les effets vont de légers troubles digestifs à une pancréatite grave, voire mortelle. Les chiens qui ont déjà eu une pancréatite doivent éviter les aliments gras.",
     "es": "Una comida grasa es un desencadenante conocido de la pancreatitis en los perros. Los efectos van desde un leve malestar de estómago hasta una pancreatitis grave que incluso puede poner en peligro su vida. Los perros que ya han tenido pancreatitis deben evitar los alimentos grasos.",
     "it": "Un pasto grasso è un noto fattore scatenante della pancreatite nei cani. Gli effetti vanno da un lieve mal di stomaco a una pancreatite grave, potenzialmente mortale. I cani che hanno già avuto una pancreatite dovrebbero evitare i cibi grassi.",
-    "pt": "Uma refeição gorda é um desencadeador conhecido de pancreatite nos cães. Os efeitos vão de uma ligeira perturbação do estômago a uma pancreatite grave, que pode até pôr a vida em risco. Os cães que já tiveram pancreatite devem evitar alimentos gordos.",
+    "pt": "Uma refeição gorda é um fator desencadeante conhecido de pancreatite nos cães. Os efeitos vão de uma ligeira perturbação do estômago a uma pancreatite grave, que pode até pôr a vida em risco. Os cães que já tiveram pancreatite devem evitar alimentos gordos.",
     "nl": "Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking bij honden. De gevolgen lopen uiteen van een lichte maagstoornis tot een ernstige, zelfs levensbedreigende alvleesklierontsteking. Honden die eerder alvleesklierontsteking hebben gehad, moeten vet eten vermijden.",
     "pl": "Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki u psów. Skutki wahają się od łagodnego rozstroju żołądka po ciężkie, a nawet zagrażające życiu zapalenie trzustki. Psy, które już przeszły zapalenie trzustki, powinny unikać tłustego jedzenia.",
     "cs": "Tučné jídlo je u psů známým spouštěčem zánětu slinivky břišní. Následky sahají od lehce podrážděného žaludku až po těžký, dokonce život ohrožující zánět slinivky břišní. Psi, kteří už zánět slinivky břišní prodělali, by se tučným jídlům měli vyhýbat.",
@@ -418,7 +418,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "61733fb4f49dc26e23e9c83db440ec0584f8dd043f0b804c37f1df805e874470"
+      "verified_hash": "d512f301b800150983e4cb1b1e82b07082feae046e304559e0cf35fad3615d66"
     },
     "nl": {
       "status": "verified",

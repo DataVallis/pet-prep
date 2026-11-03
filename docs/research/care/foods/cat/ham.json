@@ -121,7 +121,7 @@
     "pt": [
       "Vómitos",
       "Diarreia",
-      "Mal-estar de barriga"
+      "Mal-estar na barriga"
     ],
     "nl": [
       "Braken",
@@ -321,7 +321,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1d1e1e9a3ca40abb60036cf234dbe0cdc122fd34a2065f350277b88f061260d6"
+      "verified_hash": "5b42c74c5af9aa453f81b39685659e1cfe01cc162adff931e1c936776ed2e7c0"
     },
     "nl": {
       "status": "verified",

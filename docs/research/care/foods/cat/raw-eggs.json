@@ -201,7 +201,7 @@
     "fr": "Si votre chat a léché un peu d’œuf cru, surveillez l’apparition de vomissements, de diarrhée, de fièvre ou d’un refus de manger, et appelez votre vétérinaire si l’un de ces signes apparaît. Lavez-vous les mains et nettoyez toutes les surfaces touchées par l’œuf.",
     "es": "Si tu gato ha lamido un poco de huevo crudo, vigila si tiene vómitos, diarrea, fiebre o deja de comer, y llama a tu veterinario si aparece alguno de estos síntomas. Lávate las manos y limpia las superficies que haya tocado el huevo.",
     "it": "Se il tuo gatto ha leccato un po’ di uovo crudo, controlla se compaiono vomito, diarrea, febbre o rifiuto del cibo, e in tal caso chiama il veterinario. Lavati le mani e pulisci le superfici toccate dall’uovo.",
-    "pt": "Se o teu gato lambeu um pouco de ovo cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e liga ao teu veterinário se algum destes sinais surgir. Lava as mãos e as superfícies em que o ovo tocou.",
+    "pt": "Se o teu gato lambeu um pouco de ovo cru, vigia se aparecem vómitos, diarreia, febre ou falta de apetite e liga ao teu veterinário se algum destes sinais surgir. Lava as mãos e as superfícies com que o ovo entrou em contacto.",
     "nl": "Heeft je kat een beetje rauw ei gelikt? Let op braken, diarree, koorts of niet eten, en bel je dierenarts als je daar iets van ziet. Was je handen en alle oppervlakken waar het ei mee in aanraking is gekomen.",
     "pl": "Jeśli twój kot polizał odrobinę surowego jajka, obserwuj, czy nie pojawią się wymioty, biegunka, gorączka lub brak apetytu, a jeśli tak, zadzwoń do weterynarza. Umyj ręce i wszystkie powierzchnie, których dotknęło jajko.",
     "cs": "Pokud vaše kočka olízla trochu syrového vejce, sledujte, zda se neobjeví zvracení, průjem, horečka nebo nechuť k jídlu, a pokud ano, zavolejte veterináři. Umyjte si ruce i všechny povrchy, kterých se vejce dotklo.",
@@ -255,7 +255,7 @@
         "fr": "L’œuf cuit, c’est autre chose : selon la PDSA, les œufs peuvent convenir aux animaux, mais seulement avec modération. Faites-le bien cuire et servez-le nature.",
         "es": "El huevo cocinado es otra cosa: PDSA dice que los huevos pueden ser adecuados para las mascotas, pero solo con moderación. Cocínalo del todo y sírvelo sin nada añadido.",
         "it": "L’uovo cotto è un’altra cosa: secondo PDSA le uova possono essere adatte agli animali domestici, ma solo con moderazione. Cuocilo bene e servilo semplice.",
-        "pt": "O ovo cozinhado é outra história: a PDSA diz que os ovos podem ser adequados para animais de estimação, mas só com moderação. Cozinha-o bem e serve-o simples.",
+        "pt": "O ovo cozinhado é diferente: a PDSA diz que os ovos podem ser adequados para animais de estimação, mas só com moderação. Cozinha-o bem e serve-o simples.",
         "nl": "Gekookt ei is iets anders: volgens PDSA kunnen eieren geschikt zijn voor huisdieren, maar alleen met mate. Kook het goed gaar en geef het zonder toevoegingen.",
         "pl": "Gotowane jajko to inna sprawa: według PDSA jajka mogą być odpowiednie dla zwierząt, ale tylko z umiarem. Ugotuj je dokładnie i podawaj bez dodatków.",
         "cs": "Tepelně upravené vejce je jiná věc: podle PDSA mohou být vejce pro zvířata vhodná, ale jen s mírou. Vejce důkladně tepelně upravte a podávejte bez ochucení.",
@@ -357,7 +357,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "433121081f93164553266a2a99f0db5649ebd0e2da2fd5ca7bee05c5088484c1"
+      "verified_hash": "2e75c095c4c064ddec2dab2cfbd1293db8b2feb5d618d9c1d3812ead4e8ee9d3"
     },
     "nl": {
       "status": "verified",

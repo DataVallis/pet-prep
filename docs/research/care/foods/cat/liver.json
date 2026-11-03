@@ -216,7 +216,7 @@
     "fr": "L’intoxication à la vitamine A s’installe généralement sur des semaines, voire des mois : ne donnez donc pas régulièrement de foie à la maison. Si votre chat a mangé beaucoup de foie et que vous remarquez un pelage rêche, une perte de poids, de la faiblesse ou des mouvements douloureux, parlez-en à votre vétérinaire.",
     "es": "La intoxicación por vitamina A suele desarrollarse a lo largo de semanas o meses, así que no le des hígado en casa de forma habitual. Si tu gato ha estado comiendo mucho hígado y notas el pelaje áspero, pérdida de peso, debilidad o que se mueve con dolor, habla con tu veterinario.",
     "it": "L’intossicazione da vitamina A di solito si sviluppa nell’arco di settimane o mesi, quindi non dare regolarmente fegato a casa. Se il tuo gatto ha mangiato molto fegato e noti pelo ruvido, perdita di peso, debolezza o movimenti dolorosi, parlane con il veterinario.",
-    "pt": "A intoxicação por vitamina A costuma instalar-se ao longo de semanas ou meses, por isso não dês fígado em casa com regularidade. Se o teu gato tem comido muito fígado e notares o pelo áspero, perda de peso, fraqueza ou movimentos dolorosos, fala com o teu veterinário.",
+    "pt": "A intoxicação por vitamina A costuma instalar-se ao longo de semanas ou meses, por isso não dês fígado em casa com regularidade. Se o teu gato tem comido muito fígado e reparares em pelo áspero, perda de peso, fraqueza ou movimentos dolorosos, fala com o teu veterinário.",
     "nl": "Een vitamine A-vergiftiging bouwt zich meestal op over weken tot maanden, dus geef thuis niet regelmatig lever. Heeft je kat veel lever gegeten en zie je een ruwe vacht, gewichtsverlies, zwakte of pijnlijk bewegen, overleg dan met je dierenarts.",
     "pl": "Zatrucie witaminą A zwykle narasta przez tygodnie lub miesiące, więc nie dawaj wątróbki regularnie w domu. Jeśli twój kot jadł dużo wątróbki, a zauważysz szorstką sierść, utratę wagi, osłabienie lub bolesne ruchy, porozmawiaj z weterynarzem.",
     "cs": "Otrava vitaminem A se obvykle rozvíjí postupně během týdnů až měsíců, proto játra doma pravidelně nezkrmujte. Pokud vaše kočka jedla hodně jater a všimnete si hrubé srsti, hubnutí, slabosti nebo bolestivého pohybu, poraďte se s veterinářem.",
@@ -234,7 +234,7 @@
     "fr": "Le foie contient beaucoup d’une certaine vitamine, et en trop grande quantité, ce n’est pas bon pour les chats. Leur nourriture en contient déjà juste ce qu’il faut.",
     "es": "El hígado tiene muchísima cantidad de una vitamina, y tomar demasiada no es bueno para los gatos. Su comida para gatos ya lleva la cantidad justa.",
     "it": "Il fegato è pieno di una vitamina che, se è troppa, non fa bene ai gatti. Il loro cibo ne contiene già la giusta quantità.",
-    "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida de gato já tem a quantidade certa.",
+    "pt": "O fígado tem uma vitamina em grande quantidade, e vitamina a mais não faz bem aos gatos. A comida para gatos já tem a quantidade certa.",
     "nl": "In lever zit heel veel van één vitamine, en te veel is niet goed voor katten. In kattenvoer zit al precies genoeg.",
     "pl": "Wątróbka ma bardzo dużo jednej witaminy, a jej nadmiar szkodzi kotom. Kocia karma ma już jej tyle, ile trzeba.",
     "cs": "Játra mají hodně jednoho vitaminu a jeho přemíra kočkám neprospívá. V kočičím krmivu už je ho přesně tolik, kolik má být.",
@@ -352,7 +352,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "aa3702d564f7f9c1d7cc16a78b02c13e40698312484b39ebad2669b60b59614f"
+      "verified_hash": "16f3474a95673831aa24a74e4c9b954ea53fe60900e8576ff10084d7bbea501f"
     },
     "nl": {
       "status": "verified",

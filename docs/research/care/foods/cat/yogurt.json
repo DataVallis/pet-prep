@@ -60,7 +60,7 @@
     "fr": "Non, mieux vaut éviter le yaourt. C’est un produit laitier, et les chats adultes ont peu de l’enzyme qui digère le sucre du lait : les produits laitiers peuvent donc provoquer de la diarrhée ou des maux de ventre. Les guides vétérinaires déconseillent de donner des produits laitiers aux chats.",
     "es": "No, es mejor evitar el yogur. Es un lácteo, y los gatos adultos producen poca enzima para digerir el azúcar de la leche, así que los lácteos pueden causar diarrea o malestar de estómago. Las guías veterinarias desaconsejan dar lácteos a los gatos.",
     "it": "No, è meglio evitare lo yogurt. È un latticino, e i gatti adulti hanno poco enzima per digerire lo zucchero del latte, quindi i latticini possono causare diarrea o mal di stomaco. Le guide veterinarie sconsigliano di dare latticini ai gatti.",
-    "pt": "Não, é melhor evitar o iogurte. É um laticínio, e os gatos adultos têm pouca da enzima que digere o açúcar do leite, por isso os laticínios podem causar diarreia ou mal-estar de estômago. Os guias veterinários desaconselham dar laticínios aos gatos.",
+    "pt": "Não, é melhor evitar o iogurte. É um laticínio, e os gatos adultos têm pouca da enzima que digere o açúcar do leite, por isso os laticínios podem causar diarreia ou mal-estar no estômago. Os guias veterinários desaconselham dar laticínios aos gatos.",
     "nl": "Nee, yoghurt kun je beter vermijden. Het is een zuivelproduct, en volwassen katten hebben weinig van het enzym dat melksuiker verteert, dus zuivel kan diarree of maagklachten veroorzaken. Diergeneeskundige gidsen raden af katten zuivelproducten te geven.",
     "pl": "Nie, lepiej unikać jogurtu. To produkt mleczny, a dorosłe koty mają mało enzymu trawiącego cukier mleczny, więc nabiał może wywołać biegunkę lub rozstrój żołądka. Poradniki weterynaryjne odradzają podawanie kotom produktów mlecznych.",
     "cs": "Ne, jogurtu se raději vyhněte. Je to mléčný výrobek a dospělé kočky mají málo enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou způsobit průjem nebo podráždění žaludku. Veterinární příručky nedoporučují krmit kočky mléčnými výrobky.",
@@ -127,7 +127,7 @@
     "pt": [
       "Diarreia",
       "Vómitos",
-      "Mal-estar de estômago",
+      "Mal-estar no estômago",
       "Gases ou barriga inchada"
     ],
     "nl": [
@@ -335,7 +335,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2f48d34b7f286bd6257e60b3ce2e3c5f93c2b8cefe632f9f35147806a69673c9"
+      "verified_hash": "52430ad859de997aba34b55029c22a849ff49f1acfa0ae84c82a0b42399e4038"
     },
     "nl": {
       "status": "verified",

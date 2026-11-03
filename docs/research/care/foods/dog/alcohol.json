@@ -253,7 +253,7 @@
         "fr": "Un petit coup de langue dans une bière, c’est permis ?",
         "es": "¿Un lametón de cerveza está bien?",
         "it": "Una leccatina di birra va bene?",
-        "pt": "Posso deixar o meu cão dar uma lambidela de cerveja?",
+        "pt": "Uma lambidela de cerveja não faz mal?",
         "nl": "Is een likje bier oké?",
         "pl": "Czy liźnięcie piwa jest w porządku?",
         "cs": "Je v pořádku, když pes lízne pivo?",
@@ -413,7 +413,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cdc41e7cb1b2696bc3d9b2c58490146db6bbe35cd8a3debd47ece9059288a90a"
+      "verified_hash": "b66115ff67eddbfa570ea593921eb7f87749674f850d7d407bd3c02e2f2218fe"
     },
     "nl": {
       "status": "verified",

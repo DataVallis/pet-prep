@@ -77,7 +77,7 @@
     "fr": "Le jambon est plus gras que beaucoup d’autres viandes, et les repas gras sont un déclencheur connu de la pancréatite. La plupart des jambons sont aussi très salés, et l’excès de sel peut être nocif pour les chiens.",
     "es": "El jamón tiene más grasa que muchas otras carnes, y las comidas grasas son un desencadenante conocido de la pancreatitis. Además, la mayoría del jamón es muy salado, y el exceso de sal puede ser perjudicial para los perros.",
     "it": "Il prosciutto ha un contenuto di grassi più alto di molte altre carni, e i pasti grassi sono un noto fattore scatenante della pancreatite. Inoltre la maggior parte del prosciutto è molto salata, e il sale in eccesso può fare male ai cani.",
-    "pt": "O fiambre tem mais gordura do que muitas outras carnes, e as refeições gordas são um conhecido desencadeador de pancreatite. A maior parte do fiambre também é muito salgada, e o excesso de sal pode fazer mal aos cães.",
+    "pt": "O fiambre tem mais gordura do que muitas outras carnes, e as refeições gordas são um fator desencadeante conhecido de pancreatite. A maior parte do fiambre também é muito salgada, e o excesso de sal pode fazer mal aos cães.",
     "nl": "Ham bevat meer vet dan veel andere vleessoorten, en vette maaltijden zijn een bekende uitlokker van alvleesklierontsteking. De meeste ham is ook erg zout, en te veel zout kan schadelijk zijn voor honden.",
     "pl": "Szynka ma więcej tłuszczu niż wiele innych rodzajów mięsa, a tłuste posiłki to znany czynnik wywołujący zapalenie trzustki. Większość szynek jest też bardzo słona, a nadmiar soli może szkodzić psom.",
     "cs": "Šunka má vyšší obsah tuku než mnoho jiných druhů masa a tučná jídla jsou známým spouštěčem zánětu slinivky břišní. Většina šunky je navíc velmi slaná a nadbytek soli může psům škodit.",
@@ -366,7 +366,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "940b5def0dc77b32abd2c110dc1b3683dc95cf228ade8bf1e3e1e8ebd7e99a3a"
+      "verified_hash": "6e8ebdc56ed3f3e0648aa65f757ed45692adf5b944c0be0e110d077f30a9c2db"
     },
     "nl": {
       "status": "verified",

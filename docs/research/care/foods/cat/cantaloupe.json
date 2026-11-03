@@ -77,7 +77,7 @@
     "fr": "L’ASPCA classe le véritable melon cantaloup (Cucumis melo) comme non toxique pour les chats. Les chats sont des carnivores stricts et n’ont pas besoin de fruits ; les friandises doivent rester une petite part de l’alimentation quotidienne, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "La ASPCA considera el auténtico melón cantalupo (Cucumis melo) no tóxico para los gatos. Los gatos son carnívoros estrictos y no necesitan fruta; los premios deben ser una parte pequeña de su comida diaria, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "L’ASPCA classifica il vero melone cantalupo (Cucumis melo) come non tossico per i gatti. I gatti sono carnivori obbligati e non hanno bisogno della frutta; i premi devono restare una piccola parte del cibo quotidiano e qualsiasi materiale vegetale può causare vomito o mal di stomaco.",
-    "pt": "A ASPCA classifica a meloa propriamente dita (Cucumis melo) como não tóxica para gatos. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem continuar a ser uma pequena parte da alimentação diária e qualquer matéria vegetal pode causar vómitos ou mal-estar de estômago.",
+    "pt": "A ASPCA classifica a meloa propriamente dita (Cucumis melo) como não tóxica para gatos. Os gatos são carnívoros estritos e não precisam de fruta, as guloseimas devem continuar a ser uma pequena parte da alimentação diária e qualquer matéria vegetal pode causar vómitos ou mal-estar no estômago.",
     "nl": "De ASPCA noemt echte cantaloupe (Cucumis melo) niet giftig voor katten. Katten zijn strikte vleeseters en hebben geen fruit nodig, snoepjes horen maar een klein deel van het dagelijkse eten te zijn, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "ASPCA uznaje prawdziwą kantalupę (Cucumis melo) za nietoksyczną dla kotów. Koty są bezwzględnymi mięsożercami i nie potrzebują owoców, smakołyki powinny stanowić tylko niewielką część dziennej porcji jedzenia, a każdy materiał roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "ASPCA uvádí pravý cukrový meloun (Cucumis melo) jako netoxický pro kočky. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
@@ -95,7 +95,7 @@
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou a l’estomac dérangé ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta a tu veterinario.",
     "it": "Inizia con un pezzetto. Se poi il tuo gatto vomita o ha mal di stomaco, smetti e chiedi al veterinario.",
-    "pt": "Oferece primeiro um pedacinho. Se depois o teu gato vomitar ou ficar com mal-estar de estômago, para de lhe dar e pergunta ao teu veterinário.",
+    "pt": "Oferece primeiro um pedacinho. Se depois o teu gato vomitar ou ficar com mal-estar no estômago, para de lhe dar e pergunta ao teu veterinário.",
     "nl": "Geef eerst een klein stukje. Moet je kat daarna braken of krijgt ze maagklachten, stop dan en vraag je dierenarts om advies.",
     "pl": "Najpierw podaj mały kawałek. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Nejdřív nabídněte malý kousek. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
@@ -251,7 +251,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b50a66037f390eab134b67922c3e1aa90b788a5c6483f7730882f1a634e2fd6d"
+      "verified_hash": "33e86a52ebbd0ab9fc25608f242d1837f75cbd77c52f96380c9ade1f74068f0c"
     },
     "nl": {
       "status": "verified",

@@ -77,7 +77,7 @@
     "fr": "Les sources divergent ; nous retenons donc le niveau le plus strict. La FDA signale des obstructions, des étouffements et des blessures dans la bouche après des os et conseille de demander à votre vétérinaire des objets à mâcher plus sûrs. L’AKC indique que les os crus peuvent contenir des salmonelles et que les os très durs peuvent abîmer les dents. Les os peuvent blesser ou bloquer l’intestin, et les obstructions sont très graves.",
     "es": "Las fuentes no coinciden, así que aplicamos el nivel más estricto. La FDA enumera obstrucciones, atragantamientos y heridas en la boca tras comer huesos y aconseja preguntar al veterinario por alternativas masticables más seguras. El AKC señala que los huesos crudos pueden llevar Salmonella y que los huesos muy duros pueden dañar los dientes. Los huesos pueden herir u obstruir el intestino, y las obstrucciones son muy graves.",
     "it": "Le fonti non concordano, quindi adottiamo il livello più prudente. La FDA segnala ostruzioni, soffocamento e lesioni alla bocca dopo l’ingestione di ossa e consiglia di chiedere al veterinario alternative da masticare più sicure. L’AKC osserva che le ossa crude possono portare Salmonella e che quelle molto dure possono danneggiare i denti. Le ossa possono ferire od ostruire l’intestino, e le ostruzioni sono molto gravi.",
-    "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A FDA refere obstruções, engasgamento e lesões na boca depois de ossos e aconselha a perguntar ao veterinário por alternativas mais seguras para roer. O AKC refere que os ossos crus podem ter Salmonella e que os ossos muito duros podem danificar os dentes. Os ossos podem ferir ou obstruir o intestino, e as obstruções são muito graves.",
+    "pt": "As fontes divergem, por isso usamos o nível mais rigoroso. A FDA refere obstruções, engasgamento e lesões na boca depois de comerem ossos e aconselha a perguntar ao veterinário quais são as alternativas mais seguras para roer. O AKC refere que os ossos crus podem ter Salmonella e que os ossos muito duros podem danificar os dentes. Os ossos podem ferir ou obstruir o intestino, e as obstruções são muito graves.",
     "nl": "De bronnen verschillen, dus kiezen we het strengere niveau. De FDA noemt verstoppingen, verstikking en verwondingen in de bek na het eten van botten en raadt aan je dierenarts te vragen naar veiligere kauwartikelen. De AKC wijst erop dat rauwe botten salmonella kunnen bevatten en dat heel harde botten de tanden kunnen beschadigen. Botten kunnen de darmen verwonden of verstoppen, en verstoppingen zijn heel ernstig.",
     "pl": "Źródła się różnią, dlatego przyjmujemy surowszą ocenę. FDA odnotowuje przypadki niedrożności, zadławień i urazów pyska spowodowanych kośćmi i radzi zapytać weterynarza o bezpieczniejsze gryzaki. AKC zauważa, że surowe kości mogą przenosić bakterie Salmonella, a bardzo twarde kości mogą uszkodzić zęby. Kości mogą zranić lub zatkać przewód pokarmowy, a niedrożność jest bardzo poważna.",
     "cs": "Zdroje se liší, proto používáme přísnější hodnocení. FDA uvádí případy ucpání střev, dušení a poranění tlamy po kostech a doporučuje zeptat se veterináře na bezpečnější pamlsky na žvýkání. AKC upozorňuje, že syrové kosti mohou přenášet salmonelu a velmi tvrdé kosti mohou poškodit zuby. Kosti mohou poranit nebo ucpat trávicí trakt a ucpání je velmi vážné.",
@@ -201,7 +201,7 @@
     "fr": "Si votre chien a avalé un gros morceau d’os, ou s’il présente l’un de ces signes, contactez immédiatement votre vétérinaire. Notez le type et la taille de l’os.",
     "es": "Si tu perro se ha tragado un trozo grande de hueso o muestra cualquiera de estos síntomas, contacta enseguida con tu veterinario. Apunta el tipo y el tamaño del hueso.",
     "it": "Se il tuo cane ha ingoiato un grosso pezzo d’osso o mostra uno di questi sintomi, contatta subito il veterinario. Annota il tipo e la dimensione dell’osso.",
-    "pt": "Se o teu cão engoliu um pedaço grande de osso, ou mostrar algum destes sinais, contacta imediatamente o teu veterinário. Anota o tipo e o tamanho do osso.",
+    "pt": "Se o teu cão engoliu um pedaço grande de osso, ou se mostrar algum destes sinais, contacta imediatamente o teu veterinário. Anota o tipo e o tamanho do osso.",
     "nl": "Heeft je hond een groot stuk bot ingeslikt, of heeft hij een van deze verschijnselen? Neem dan meteen contact op met je dierenarts. Schrijf op wat voor bot het was en hoe groot.",
     "pl": "Jeśli twój pies połknął duży kawałek kości lub ma któryś z tych objawów, od razu skontaktuj się z weterynarzem. Zanotuj rodzaj i wielkość kości.",
     "cs": "Pokud váš pes spolkl velký kus kosti nebo má některý z těchto příznaků, okamžitě se obraťte na veterináře. Poznamenejte si druh a velikost kosti.",
@@ -446,7 +446,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ff03ac1adfc50479b9e059d25551519fc7dcb361ae148dd16c78d43c83839822"
+      "verified_hash": "79df675cea98692e0eead29f5c912324e0cc9a938919a27d884ef024c91e6cb3"
     },
     "nl": {
       "status": "verified",

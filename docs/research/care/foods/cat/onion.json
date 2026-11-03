@@ -231,7 +231,7 @@
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, même si votre chat semble aller bien – les signes d’anémie peuvent mettre plusieurs jours à apparaître. Notez ce qu’il a mangé (cru, cuit, en poudre ou dans un plat), en quelle quantité et à quelle heure. N’essayez pas de faire vomir votre chat vous-même.",
     "es": "Ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, aunque tu gato parezca estar bien: los síntomas de anemia pueden tardar varios días en aparecer. Apunta qué ha comido tu gato (cebolla cruda, cocinada, en polvo o un plato que la lleve), cuánto y cuándo. No intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario, anche se il tuo gatto sembra stare bene: i sintomi dell’anemia possono impiegare diversi giorni a manifestarsi. Annota che cosa ha mangiato (crudo, cotto, in polvere o in un piatto che lo conteneva), quanto e quando. Non cercare di farlo vomitare a casa.",
-    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Toma nota do que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), da quantidade e de quando. Não tentes provocar o vómito ao teu gato em casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais, mesmo que o teu gato pareça bem – os sinais de anemia podem demorar vários dias a aparecer. Anota o que o teu gato comeu (cru, cozinhado, em pó ou num prato que o continha), a quantidade e quando. Não tentes provocar o vómito ao teu gato em casa.",
     "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, ook als je kat er gezond uitziet – verschijnselen van bloedarmoede kunnen een paar dagen op zich laten wachten. Schrijf op wat je kat heeft gegeten (rauw, gekookt, als poeder of in een gerecht), hoeveel en wanneer. Probeer je kat niet zelf thuis te laten braken.",
     "pl": "Od razu zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt, nawet jeśli kot wygląda na zdrowego – objawy anemii mogą się pojawić dopiero po kilku dniach. Zapisz, co zjadł twój kot (surowy, gotowany, w proszku czy w potrawie), ile i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, i když se vaše kočka zdá v pořádku – příznaky chudokrevnosti se mohou projevit až po několika dnech. Poznamenejte si, co kočka snědla (syrovou cibuli, tepelně upravenou, v prášku nebo pokrm, který ji obsahoval), kolik a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
@@ -321,7 +321,7 @@
         "fr": "Les troubles digestifs apparaissent souvent en premier, mais les signes d’anémie mettent généralement plus de temps et peuvent apparaître dans un délai d’un à cinq jours. C’est pourquoi vous devez appeler votre vétérinaire immédiatement, sans attendre.",
         "es": "Las molestias de estómago suelen aparecer primero, pero los síntomas de anemia normalmente tardan más y pueden aparecer en un plazo de uno a cinco días. Por eso debes llamar a tu veterinario enseguida en lugar de esperar.",
         "it": "Spesso il mal di pancia si vede per primo, ma i sintomi dell’anemia di solito impiegano più tempo e possono comparire entro 1–5 giorni. Per questo devi chiamare subito il veterinario invece di aspettare.",
-        "pt": "O mal-estar de barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
+        "pt": "O mal-estar na barriga aparece muitas vezes primeiro, mas os sinais de anemia costumam demorar mais e podem surgir entre um e cinco dias depois. É por isso que deves ligar logo ao teu veterinário em vez de esperar.",
         "nl": "Maag- en darmklachten zie je vaak als eerste, maar verschijnselen van bloedarmoede laten meestal langer op zich wachten en kunnen binnen één tot vijf dagen optreden. Daarom bel je je dierenarts meteen in plaats van af te wachten.",
         "pl": "Najpierw często widać rozstrój żołądka, ale objawy anemii zwykle pojawiają się później i mogą wystąpić w ciągu od jednego do pięciu dni. Dlatego od razu zadzwoń do weterynarza, zamiast czekać.",
         "cs": "Nejdřív se často projeví podrážděný žaludek, ale příznaky chudokrevnosti obvykle nastupují později a mohou se objevit během jednoho až pěti dnů. Proto byste měli veterináři zavolat hned a nečekat.",
@@ -460,7 +460,7 @@
     "pt": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2dcd7ba3ae56a571b3cdcacc1759d13c007ac5ce7093c5c99119707ba7259097"
+      "verified_hash": "97dc9b611b89887079e276f2b31ca12bf603b7fc1199fb628c4fb7bf5db8bc14"
     },
     "nl": {
       "status": "verified",
