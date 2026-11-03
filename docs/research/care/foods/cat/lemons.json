@@ -11,7 +11,8 @@
     "es": "Limones",
     "it": "Limoni",
     "pt": "Limões",
-    "nl": "Citroenen"
+    "nl": "Citroenen",
+    "pl": "Cytryny"
   },
   "question": {
     "en": "Can cats eat lemons?",
@@ -23,7 +24,8 @@
     "es": "¿Pueden los gatos comer limones?",
     "it": "I gatti possono mangiare i limoni?",
     "pt": "Os gatos podem comer limões?",
-    "nl": "Mogen katten citroenen eten?"
+    "nl": "Mogen katten citroenen eten?",
+    "pl": "Czy koty mogą jeść cytryny?"
   },
   "url_slug": {
     "en": "lemons",
@@ -35,7 +37,8 @@
     "es": "limones",
     "it": "limoni",
     "pt": "limoes",
-    "nl": "citroenen"
+    "nl": "citroenen",
+    "pl": "cytryny"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "es": "No, es mejor no dárselos. La ASPCA considera tóxica para los gatos la planta del limonero por sus aceites esenciales y sus psoralenos. La pulpa es comestible, pero la cáscara y otras partes de la planta pueden causar problemas. Además, los cítricos no son buenos para los gatos: deja los limones para las personas.",
     "it": "No, meglio di no. L’ASPCA classifica la pianta del limone come tossica per i gatti per via di oli essenziali e psoraleni. La polpa del frutto è commestibile, ma la buccia e le altre parti della pianta possono causare problemi, e gli agrumi non fanno bene ai gatti: lascia i limoni alle persone.",
     "pt": "Não, é melhor não dar. A ASPCA classifica o limoeiro como tóxico para os gatos por causa dos óleos essenciais e dos psoralenos. A polpa do fruto é comestível, mas a casca e as outras partes da planta podem causar problemas, e os citrinos fazem mal aos gatos, por isso os limões ficam para as pessoas.",
-    "nl": "Nee, liever niet. De ASPCA noemt de citroenplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar citroenen maar voor mensen."
+    "nl": "Nee, liever niet. De ASPCA noemt de citroenplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar citroenen maar voor mensen.",
+    "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo cytrynowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc cytryny zostaw dla ludzi."
   },
   "why": {
     "en": "The ASPCA lists the lemon plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -60,7 +64,8 @@
     "es": "La ASPCA considera tóxica para los gatos la planta del limonero: contiene aceites esenciales y psoralenos y, aunque el fruto es comestible, la piel y el resto de la planta pueden causar problemas. Cats Protection explica que los cítricos son malos para los gatos y pueden provocar molestias de estómago, vómitos y diarrea, y el hospital veterinario de NC State incluye los cítricos entre los alimentos que pueden causar vómitos o diarrea en gatos y perros. Cats Protection añade que es poco probable que un bocado pequeño cause una reacción grave. Como las fuentes no son igual de estrictas, seguimos el consejo más estricto y no recomendamos dárselos a los gatos.",
     "it": "L’ASPCA classifica la pianta del limone come tossica per i gatti: contiene oli essenziali e psoraleni e, anche se il frutto è commestibile, bucce e parti della pianta possono causare problemi. Secondo Cats Protection mangiare agrumi fa male ai gatti e può causare fastidio allo stomaco, vomito e diarrea, e l’ospedale veterinario della NC State inserisce gli agrumi tra gli alimenti che possono causare vomito o diarrea in gatti e cani. Cats Protection aggiunge che un piccolo assaggio difficilmente provoca una reazione grave. Poiché le fonti non sono ugualmente severe, seguiamo il consiglio più prudente e sconsigliamo di darne al gatto.",
     "pt": "A ASPCA classifica o limoeiro como tóxico para os gatos: contém óleos essenciais e psoralenos e, embora o fruto seja comestível, as cascas e as partes da planta podem causar problemas. A Cats Protection diz que comer citrinos faz mal aos gatos e pode causar mal-estar no estômago, vómitos e diarreia, e o hospital veterinário da NC State inclui os citrinos entre os alimentos que podem causar vómitos ou diarreia em gatos e cães. A Cats Protection acrescenta que provar só um bocadinho dificilmente causa uma reação grave. Como as fontes não são igualmente exigentes, seguimos o conselho mais prudente e não aconselhamos dar.",
-    "nl": "De ASPCA noemt de citroenplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen."
+    "nl": "De ASPCA noemt de citroenplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
+    "pl": "ASPCA uznaje drzewo cytrynowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota cytrynami."
   },
   "signs": {
     "en": [
@@ -132,6 +137,13 @@
       "Maagklachten",
       "Futloosheid",
       "Mogelijke huidirritatie (dermatitis)"
+    ],
+    "pl": [
+      "Wymioty",
+      "Biegunka",
+      "Dolegliwości żołądkowe",
+      "Apatia",
+      "Możliwe podrażnienie skóry (zapalenie skóry)"
     ]
   },
   "what_to_do": {
@@ -144,7 +156,8 @@
     "es": "Si tu gato ha comido cáscara, hojas u otras partes de la planta, o tiene síntomas como vómitos o diarrea, contacta lo antes posible con tu veterinario o con una línea de información toxicológica para animales. Apunta qué comió y cuándo.",
     "it": "Se il tuo gatto ha mangiato buccia, foglie o altre parti della pianta, o mostra sintomi come vomito o diarrea, contatta il prima possibile il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato e quando.",
     "pt": "Se o teu gato comeu casca, folhas ou outras partes da planta, ou apresenta sinais como vómitos ou diarreia, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível. Anota o que ele comeu e quando.",
-    "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer."
+    "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
+    "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy."
   },
   "serving": null,
   "child": {
@@ -157,7 +170,8 @@
     "es": "Los limones son un alimento para personas. A los gatos no les gusta el olor y los cítricos pueden darles dolor de barriga. ¡Déjalos para las personas!",
     "it": "I limoni sono uno spuntino per le persone. Ai gatti non piace l’odore e gli agrumi possono far male alla pancia: i limoni sono solo per le persone.",
     "pt": "Os limões são um petisco para pessoas. Os gatos não gostam do cheiro e os citrinos podem dar-lhes dor de barriga, por isso os limões ficam para as pessoas.",
-    "nl": "Citroenen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar citroenen maar voor mensen."
+    "nl": "Citroenen zijn een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar citroenen maar voor mensen.",
+    "pl": "Cytryny to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc cytryny zostaw dla ludzi."
   },
   "faq": [
     {
@@ -171,7 +185,8 @@
         "es": "¿Qué parte causa el problema?",
         "it": "Qual è la parte pericolosa?",
         "pt": "Que parte causa problemas?",
-        "nl": "Welk deel is het probleem?"
+        "nl": "Welk deel is het probleem?",
+        "pl": "Która część szkodzi?"
       },
       "a": {
         "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -183,7 +198,8 @@
         "es": "La ASPCA indica que el fruto es comestible, pero la piel y el resto de la planta pueden causar problemas porque contienen aceites esenciales y psoralenos.",
         "it": "Secondo l’ASPCA il frutto è commestibile, ma bucce e parti della pianta possono causare problemi perché contengono oli essenziali e psoraleni.",
         "pt": "A ASPCA diz que o fruto é comestível, mas que as cascas e as partes da planta podem causar problemas porque contêm óleos essenciais e psoralenos.",
-        "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten."
+        "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
+        "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny."
       }
     },
     {
@@ -197,7 +213,8 @@
         "es": "Mi gato ha probado un poquito. ¿Es una urgencia?",
         "it": "Il mio gatto ne ha assaggiato un pezzettino. È un’emergenza?",
         "pt": "O meu gato provou só um bocadinho. É uma emergência?",
-        "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?"
+        "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
+        "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -209,7 +226,8 @@
         "es": "Cats Protection indica que no hay que alarmarse si un gato prueba un gajo o te lame los dedos: tendría que comer mucho para correr el riesgo de una reacción grave. Vigila si tiene vómitos o diarrea y consulta a tu veterinario si te preocupa.",
         "it": "Cats Protection dice di non allarmarsi se un gatto assaggia uno spicchio o ti lecca le dita: un gatto dovrebbe mangiarne parecchio per rischiare una reazione grave. Osserva se compaiono vomito o diarrea e, se sei in pensiero, chiedi al veterinario.",
         "pt": "A Cats Protection aconselha a não entrar em pânico se o gato provar um gomo ou te lamber os dedos: só correria o risco de uma reação grave se comesse muito. Observa se aparecem vómitos ou diarreia e, se algo te preocupar, pergunta ao teu veterinário.",
-        "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt."
+        "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
+        "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza."
       }
     },
     {
@@ -223,7 +241,8 @@
         "es": "¿Por qué los gatos suelen evitar los cítricos?",
         "it": "Perché di solito i gatti evitano gli agrumi?",
         "pt": "Porque é que os gatos costumam evitar os citrinos?",
-        "nl": "Waarom mijden katten citrus meestal?"
+        "nl": "Waarom mijden katten citrus meestal?",
+        "pl": "Dlaczego koty zwykle unikają cytrusów?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -235,7 +254,8 @@
         "es": "Cats Protection explica que a los gatos les disgustan por naturaleza los olores intensos de los cítricos, así que suelen evitarlos.",
         "it": "Secondo Cats Protection i gatti non sopportano per natura gli odori intensi degli agrumi, quindi tendono a evitarli.",
         "pt": "A Cats Protection diz que os gatos têm uma aversão natural ao cheiro intenso dos citrinos, por isso tendem a evitá-los.",
-        "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten."
+        "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
+        "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych."
       }
     }
   ],
@@ -362,6 +382,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "13b695663a44d14873b424b5ec7b71edf19b50513765a14f7da70ba357dcf15d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe6308531777971581c004b1ba03c31b0f61ab2d2683d14cb84d6aaae5d53f93"
     }
   }
 }

@@ -11,7 +11,8 @@
     "es": "Mandarinas",
     "it": "Mandarini",
     "pt": "Tangerinas",
-    "nl": "Mandarijnen"
+    "nl": "Mandarijnen",
+    "pl": "Mandarynki"
   },
   "question": {
     "en": "Can dogs eat mandarins?",
@@ -23,7 +24,8 @@
     "es": "¿Pueden los perros comer mandarinas?",
     "it": "I cani possono mangiare i mandarini?",
     "pt": "Os cães podem comer tangerinas?",
-    "nl": "Mogen honden mandarijnen eten?"
+    "nl": "Mogen honden mandarijnen eten?",
+    "pl": "Czy psy mogą jeść mandarynki?"
   },
   "url_slug": {
     "en": "mandarins",
@@ -35,7 +37,8 @@
     "es": "mandarinas",
     "it": "mandarini",
     "pt": "tangerinas",
-    "nl": "mandarijnen"
+    "nl": "mandarijnen",
+    "pl": "mandarynki"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "es": "Sí, los perros pueden comer mandarina en pequeñas cantidades, porque no es tóxica, igual que la naranja. Quita antes la cáscara y las semillas, y dale porciones pequeñas, porque las mandarinas contienen azúcares naturales.",
     "it": "Sì, i mandarini non sono tossici per i cani e si possono dare in piccole quantità, più o meno come le arance. Togli prima la buccia e gli eventuali semi e tieni le porzioni piccole, perché i mandarini contengono zuccheri naturali.",
     "pt": "Sim, as tangerinas não são tóxicas para os cães e podem ser dadas em pequenas quantidades, tal como as laranjas. Tira primeiro a casca e as sementes e mantém as porções pequenas, porque as tangerinas têm açúcares naturais.",
-    "nl": "Ja, mandarijnen zijn niet giftig voor honden en mogen in kleine hoeveelheden, net als sinaasappels. Haal eerst de schil en eventuele pitten eraf en houd de porties klein, want mandarijnen bevatten natuurlijke suikers."
+    "nl": "Ja, mandarijnen zijn niet giftig voor honden en mogen in kleine hoeveelheden, net als sinaasappels. Haal eerst de schil en eventuele pitten eraf en houd de porties klein, want mandarijnen bevatten natuurlijke suikers.",
+    "pl": "Tak, mandarynki nie są toksyczne dla psów i można je dawać w małych ilościach, podobnie jak pomarańcze. Najpierw usuń skórkę i pestki, a porcje niech będą małe, bo mandarynki zawierają naturalne cukry."
   },
   "why": {
     "en": "Mandarins contain nutrients similar to oranges, including vitamin C and fibre, but also natural sugars. As with oranges, the peel is tough and hard to digest and can raise the risk of a blockage, and seeds can be a choking hazard, especially for smaller dogs. As with oranges, eating too much can cause digestive upset, including diarrhoea.",
@@ -60,7 +64,8 @@
     "es": "Las mandarinas contienen nutrientes parecidos a los de las naranjas, como vitamina C y fibra, pero también azúcares naturales. Igual que en las naranjas, la cáscara es dura y difícil de digerir y puede aumentar el riesgo de obstrucción, y las semillas pueden provocar atragantamiento, sobre todo en perros pequeños. Comer demasiada mandarina, como ocurre con las naranjas, puede causar malestar digestivo, por ejemplo diarrea.",
     "it": "I mandarini contengono nutrienti simili a quelli delle arance, tra cui vitamina C e fibre, ma anche zuccheri naturali. Come per le arance, la buccia è dura e difficile da digerire e può aumentare il rischio di ostruzione, e i semi possono far soffocare, soprattutto i cani più piccoli. Come per le arance, mangiarne troppi può causare disturbi digestivi, anche diarrea.",
     "pt": "As tangerinas têm nutrientes semelhantes aos das laranjas, incluindo vitamina C e fibra, mas também açúcares naturais. Tal como nas laranjas, a casca é rija e difícil de digerir e pode aumentar o risco de obstrução, e as sementes podem provocar engasgo, sobretudo nos cães mais pequenos. Tal como acontece com as laranjas, comer em excesso pode causar problemas digestivos, incluindo diarreia.",
-    "nl": "Mandarijnen bevatten vergelijkbare voedingsstoffen als sinaasappels, waaronder vitamine C en vezels, maar ook natuurlijke suikers. Net als bij sinaasappels is de schil taai en moeilijk verteerbaar en kan hij het risico op een verstopping vergroten, en pitten kunnen een verstikkingsgevaar vormen, vooral voor kleinere honden. Ook hier geldt: te veel eten kan spijsverteringsproblemen veroorzaken, waaronder diarree."
+    "nl": "Mandarijnen bevatten vergelijkbare voedingsstoffen als sinaasappels, waaronder vitamine C en vezels, maar ook natuurlijke suikers. Net als bij sinaasappels is de schil taai en moeilijk verteerbaar en kan hij het risico op een verstopping vergroten, en pitten kunnen een verstikkingsgevaar vormen, vooral voor kleinere honden. Ook hier geldt: te veel eten kan spijsverteringsproblemen veroorzaken, waaronder diarree.",
+    "pl": "Mandarynki zawierają podobne składniki odżywcze jak pomarańcze, w tym witaminę C i błonnik, ale też naturalne cukry. Tak jak w pomarańczy, skórka jest twarda i trudna do strawienia i może zwiększać ryzyko niedrożności, a pestki mogą grozić zadławieniem, zwłaszcza u mniejszych psów. Podobnie jak pomarańcze, w nadmiarze mogą rozstroić trawienie, w tym wywołać biegunkę."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "es": "No le des la cáscara a tu perro: igual que la de la naranja, es difícil de digerir y puede aumentar el riesgo de obstrucción intestinal, que a veces requiere atención veterinaria.",
     "it": "Non dare la buccia al tuo cane: come per le arance, è difficile da digerire e può aumentare il rischio di ostruzione intestinale, che in alcuni casi richiede l’intervento del veterinario.",
     "pt": "Não dês a casca ao teu cão: tal como a da laranja, é difícil de digerir e pode aumentar o risco de obstrução intestinal, que em alguns casos precisa de ajuda veterinária.",
-    "nl": "Geef je hond de schil niet: net als bij sinaasappels is die moeilijk verteerbaar en kan hij het risico op een darmverstopping vergroten, waarvoor soms de hulp van een dierenarts nodig is."
+    "nl": "Geef je hond de schil niet: net als bij sinaasappels is die moeilijk verteerbaar en kan hij het risico op een darmverstopping vergroten, waarvoor soms de hulp van een dierenarts nodig is.",
+    "pl": "Nie dawaj psu skórki: podobnie jak skórka pomarańczy jest trudna do strawienia i może zwiększać ryzyko niedrożności jelit, która w niektórych przypadkach wymaga pomocy weterynarza."
   },
   "serving": {
     "en": "Peeled, without seeds, in small pieces; small portions as an occasional treat.",
@@ -85,7 +91,8 @@
     "es": "Pelada, sin semillas y en trocitos; porciones pequeñas como premio ocasional.",
     "it": "Sbucciati, senza semi, a pezzetti; porzioni piccole come premio occasionale.",
     "pt": "Descascada, sem sementes, em pedacinhos; porções pequenas como guloseima ocasional.",
-    "nl": "Geschild, zonder pitten, in kleine stukjes; kleine porties als snoepje voor af en toe."
+    "nl": "Geschild, zonder pitten, in kleine stukjes; kleine porties als snoepje voor af en toe.",
+    "pl": "Obrane, bez pestek, w małych kawałkach; małe porcje jako okazjonalny smakołyk."
   },
   "child": {
     "en": "A dog can have a tiny piece of mandarin! A grown-up takes off the peel and the seeds first.",
@@ -97,7 +104,8 @@
     "es": "¡Un perro puede comer un trocito diminuto de mandarina! Un adulto le quita antes la cáscara y las semillas.",
     "it": "Il cane può assaggiare un pezzettino di mandarino! Prima un adulto toglie la buccia e i semi.",
     "pt": "Um cão pode comer um pedacinho minúsculo de tangerina! Um adulto tira primeiro a casca e as sementes.",
-    "nl": "Een hond mag een piepklein stukje mandarijn! Een volwassene haalt eerst de schil en de pitten eraf."
+    "nl": "Een hond mag een piepklein stukje mandarijn! Een volwassene haalt eerst de schil en de pitten eraf.",
+    "pl": "Pies może zjeść maleńki kawałek mandarynki! Dorosły najpierw zdejmuje skórkę i wyjmuje pestki."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "es": "¿Son diferentes las mandarinas y las naranjas para los perros?",
         "it": "Per i cani i mandarini sono diversi dalle arance?",
         "pt": "Para os cães, as tangerinas são diferentes das laranjas?",
-        "nl": "Zijn mandarijnen voor honden anders dan sinaasappels?"
+        "nl": "Zijn mandarijnen voor honden anders dan sinaasappels?",
+        "pl": "Czy dla psów mandarynki różnią się od pomarańczy?"
       },
       "a": {
         "en": "Not much: they have similar nutrients and natural sugars, and the same rules apply – peel off the skin, remove the seeds and keep portions small.",
@@ -123,7 +132,8 @@
         "es": "Apenas: tienen nutrientes y azúcares naturales parecidos, y se aplican las mismas reglas: quítales la piel y las semillas, y dales porciones pequeñas.",
         "it": "Non molto: hanno nutrienti e zuccheri naturali simili e valgono le stesse regole: togli la buccia, togli i semi e tieni le porzioni piccole.",
         "pt": "Pouco: têm nutrientes e açúcares naturais semelhantes, e aplicam-se as mesmas regras – tira a casca, tira as sementes e mantém as porções pequenas.",
-        "nl": "Nauwelijks: ze hebben vergelijkbare voedingsstoffen en natuurlijke suikers, en er gelden dezelfde regels – haal de schil eraf, verwijder de pitten en houd de porties klein."
+        "nl": "Nauwelijks: ze hebben vergelijkbare voedingsstoffen en natuurlijke suikers, en er gelden dezelfde regels – haal de schil eraf, verwijder de pitten en houd de porties klein.",
+        "pl": "Niewiele: mają podobne składniki odżywcze i naturalne cukry, a zasady są te same – zdejmij skórkę, usuń pestki i podawaj małe porcje."
       }
     }
   ],
@@ -217,6 +227,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3ff34ab31c4b0e9f0f96d5c70056beb294dde8dbdd827a9f4c0bb44b4922d18d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3f42d6f8b3ad30347410ef05a174628ddab8c362ddb74bc599e93a602be21493"
     }
   }
 }
