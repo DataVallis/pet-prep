@@ -723,6 +723,14 @@
 | RKC BOAS grading S670): a moderate short face with a visible nose and open nostrils — the dog trait `muzzle` carries it.
 | Red first with the highest weight (the portrait default); weights unsourced → `verified => false`.
 |
+| Irish Setter (M5-R10-89, docs/research/dog-data irish_setter.appearance):
+| "Must be racy, balanced and full of quality." (RKC breed standard, S677); "Rich chestnut with no trace of black; white on
+| chest, throat, and toes." (FCI-Standard N° 120, S675) — one standard colour; head "Long and lean" (S675), muzzle
+| "Moderately deep and fairly square at the end." (S675), eyes "Dark hazel to dark brown, not too large," (S677), ears
+| "set on low, well back and hanging in a neat fold close to head." (S677), coat flat with long silky feathering (AKC S680),
+| tail of moderate length, set low (S675; natural). Not a welfare breed (RKC Breed Watch Category 1, S676). One colour →
+| no weight to choose; still `verified => false` (the weight 1.0 is ours).
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3892,6 +3900,41 @@ return [
             'ear_carriage' => ['small, high-set, semi-erect natural ears'],
             'eye_color' => ['very dark, round, well-spaced eyes that do not bulge'],
             'tail' => ['natural high-set tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-89 (docs/research/dog-data/data.json irish_setter.appearance; runbook rules 2026-10-10: the one standard colour —
+    // FCI N° 120 S675 "Rich chestnut with no trace of black; white on chest, throat, and toes." = the portrait default;
+    // natural tail; never red and white, never black).
+    'irish_setter' => [
+        'display_name' => 'Irish Setter (Irish Red Setter)',
+        // One standard colour; its weight is in no source (irish_setter.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 120 (S675), RKC breed standard (S677) and AKC breed standard (S680) — for the traits listed in `sources`. The colour weight is unsourced.',
+        'sources' => [
+            'size' => 'S675 males "23 ins (58 cm) to 26.5 ins (67 cm)."; AKC S680 dog about 70 lb, bitch 60 lb; RKC S676 "Large"',
+            'build' => 'S677 "Must be racy, balanced and full of quality."; S675 "Racy and athletic full of quality, kindly in expression."',
+            'coat_length' => 'S680 "Short and fine on head and forelegs." / "On all other parts of moderate length and flat." / "Feathering long and silky on ears; on back of forelegs and thighs long and fine,"',
+            'coat_color' => 'S675 "Rich chestnut with no trace of black; white on chest, throat, and toes."; S677 "Rich chestnut with no trace of black." (weight unsourced)',
+            'head' => 'S675 "Long and lean, and not coarse at the ears."',
+            'muzzle' => 'S675 "Moderately deep and fairly square at the end."',
+            'ear_carriage' => 'S677 "Of moderate size, fine in texture, set on low, well back and hanging in a neat fold close to head."',
+            'eye_color' => 'S677 "Dark hazel to dark brown, not too large," (kind expression)',
+            'tail' => 'S675 "Moderate length, proportionate to size of body, set on rather low." (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'racy, balanced, athletic large gundog with long legs', 'weight' => 3], 'elegant, athletic large gundog'],
+            'coat_length' => ['flat, silky coat of moderate length, free from curl or wave, with long feathering on the ears, legs, belly and tail'],
+            // The only standard colour → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'rich chestnut red with no black (at most a small white mark on the chest or toes)', 'weight' => 100],
+            ],
+            'head' => ['long, lean head with a kind expression'],
+            'muzzle' => ['moderately deep, fairly square muzzle'],
+            'ear_carriage' => ['low-set ears hanging in a neat fold close to the head, with silky feathering'],
+            'eye_color' => ['dark hazel to dark brown, almond-shaped eyes'],
+            'tail' => ['natural tail of moderate length, set low, with a tapering fringe'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
