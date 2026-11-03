@@ -1,9 +1,9 @@
 {
   "note": "What production app users have (store build or OTA update). Written by scripts/record-app-release.mjs — never by hand. The register export marks these breeds in_app; breeds on main but not here are coming_soon.",
   "kind": "ota",
-  "version": "4.0.0",
-  "commit": "18d2d6b129f516549ab8e2266c2cce59222f796f",
-  "date": "2026-11-02",
+  "version": "4.1.0",
+  "commit": "3b67bb388f87f63062f4478e99372cecf77865cc",
+  "date": "2026-11-03",
   "breeds": [
     "mutt",
     "border_collie",
@@ -87,6 +87,9 @@
     "rat_terrier",
     "greater_swiss_mountain_dog",
     "shar_pei",
+    "brussels_griffon",
+    "irish_setter",
+    "anatolian_shepherd_dog",
     "domestic_cat",
     "maine_coon",
     "british_shorthair",

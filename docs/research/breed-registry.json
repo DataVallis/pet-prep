@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "f9070f9af166aab92d4c93af55767995287c21906f47dfc0ac2e90680b3db58b"
+      "sha256": "628712b6ae77d98c2457b7c31734acd41cd8a5ef365a2b096c08a8347b36d0bd"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -49007,7 +49007,7 @@
       "id": "brussels_griffon",
       "species": "dog",
       "order": 81,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Brussels Griffon",
         "sl": "Bruseljski grifon"
@@ -49671,7 +49671,7 @@
       "id": "irish_setter",
       "species": "dog",
       "order": 82,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Irish Setter",
         "sl": "Irski seter"
@@ -50327,7 +50327,7 @@
       "id": "anatolian_shepherd_dog",
       "species": "dog",
       "order": 83,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Anatolian Shepherd Dog",
         "sl": "Anatolski ovčar"
