@@ -8,7 +8,8 @@
 #   --expect-domain HOST: refuse (before any change) unless this server's API domain is HOST.
 #   --app-image REF@sha256:… --web-image REF@sha256:… (D28): pull exactly these digests
 #     (pushed by CI after its image checks) instead of building on this server; a failed
-#     pull falls back to the local build (old behaviour). CI logs in before; logout here.
+#     pull falls back to the local build (old behaviour). CI logs in into a private docker
+#     config ($PULL_DOCKER_CONFIG), which this script uses for the pull and then deletes.
 #
 # RUNTIME (M4-05b, DEPLOYMENT.md D14)
 #   The PHP containers (app = php-fpm, reverb, queue, queue-broadcasts, scheduler)
@@ -643,7 +644,11 @@ log "Previous release: ${PREV_SHA:-unknown}"
 pull_prebuilt() {
     local ref
     for ref in "$APP_IMAGE" "$WEB_IMAGE"; do
-        docker pull -q "$ref" > /dev/null || return 1
+        if [ -n "${PULL_DOCKER_CONFIG:-}" ]; then
+            DOCKER_CONFIG="$PULL_DOCKER_CONFIG" docker pull -q "$ref" > /dev/null || return 1
+        else
+            docker pull -q "$ref" > /dev/null || return 1
+        fi
     done
     docker tag "$APP_IMAGE" petprep-app:next || return 1
     docker tag "$WEB_IMAGE" petprep-web:next || return 1
@@ -660,8 +665,8 @@ if [ -n "$APP_IMAGE" ]; then
     else
         warn "could not pull the prebuilt images — building them on this server instead (slower)."
     fi
-    # The registry login (by CI, over ssh stdin) is needed only for the pull.
-    docker logout "${APP_IMAGE%%/*}" > /dev/null 2>&1 || true
+    # The registry login (by CI, over ssh stdin, private config) is needed only for the pull.
+    if [ -n "${PULL_DOCKER_CONFIG:-}" ]; then rm -rf "$PULL_DOCKER_CONFIG"; fi
 fi
 if [ "$PREBUILT" = 0 ]; then
     if ! docker buildx version > /dev/null 2>&1; then

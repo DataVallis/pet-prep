@@ -46,7 +46,8 @@ code=$(cat "${PETPREP_ROOT}/repo/backend/app.txt" 2>/dev/null || echo "?")
 tag=""; [ -n "${PETPREP_IMAGE_TAG:-}" ] && tag="PETPREP_IMAGE_TAG=${PETPREP_IMAGE_TAG} "
 # Server identity exported by the script for compose (D18), logged with `up`/`run` calls.
 case "$args" in *" up -d"*|*" run "*) tag="${tag}[sites=${PETPREP_CADDY_SITES:-unset} domain=${PETPREP_API_DOMAIN:-unset}] " ;; esac
-echo "docker ${tag}${args} [code=${code}]" >> "$CALL_LOG"
+cfg=""; [ -n "${DOCKER_CONFIG:-}" ] && cfg="DOCKER_CONFIG=${DOCKER_CONFIG} "
+echo "${cfg}docker ${tag}${args} [code=${code}]" >> "$CALL_LOG"
 bump() { local f="${PETPREP_ROOT}/.$1"; local n; n=$(cat "$f" 2>/dev/null || echo 0); n=$((n + 1)); echo "$n" > "$f"; echo "$n"; }
 if [[ "$args" == *"artisan up"* ]]; then
     n=$(bump up_calls); [ "$n" -le "${UP_FAILS:-0}" ] && exit 1
@@ -256,7 +257,15 @@ check "exit 0" rc_is 0
 check "pulls the app digest" called 'pull -q ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
 check "pulls the web digest" called 'pull -q ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
 check "tags them :next" called 'tag ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa petprep-app:next'
-check "logs out of the registry after the pull" before 'logout ghcr.io' 'run --rm --no-deps -T app php artisan optimize'
+check "never logs out of the shared ~/.docker" not_called 'logout'
+finish
+
+start prebuilt_private_config "prebuilt pull with a private docker config (D30)"
+new_root dir; mkdir -p "$ROOT/pullcfg"; echo '{}' > "$ROOT/pullcfg/config.json"
+run_deploy PULL_DOCKER_CONFIG="$ROOT/pullcfg" -- --from "$ROOT/incoming" --app-image ghcr.io/datavallis/petprep-app@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa --web-image ghcr.io/datavallis/petprep-web@sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb sha-v2
+check "exit 0" rc_is 0
+check "pulls with the private config" called 'DOCKER_CONFIG=.*/pullcfg docker pull -q ghcr.io/datavallis/petprep-app'
+check "private config deleted after the pull" eq "$( [ -e "$ROOT/pullcfg" ] && echo kept || echo gone)" gone
 check "no build on the server" not_called 'build app caddy'
 check "no local base-stage build" not_called 'buildx build -q --load --target base'
 check "pull before the smoke test" before 'pull -q ghcr.io/datavallis/petprep-app' 'run --rm --no-deps -T app php artisan optimize'
