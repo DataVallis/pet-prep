@@ -13,7 +13,7 @@
  */
 
 import { ApiError, api } from '@/api/client';
-import { errorReason, readParentPetItems, type ParentPetItem } from '@/modules/wishes/wishes';
+import { errorReason, readParentPetItems, type ParentPetItem, type WishDesignChoice } from '@/modules/wishes/wishes';
 import {
   pendingPurchasesOf,
   removePendingPurchase,
@@ -50,6 +50,8 @@ export interface RedeemRequest {
   wishId: number | null;
   transactionId: string | null;
   species?: 'dog' | 'cat';
+  /** M6-W03: the chosen design(s) — sent with every attempt (and kept with a pending purchase). */
+  choice?: WishDesignChoice;
 }
 
 /** Is this failure worth another attempt? */
@@ -66,7 +68,7 @@ export async function redeemWithRetry(req: RedeemRequest, deps: RedeemDeps = def
   const idempotent = req.transactionId !== null;
   for (let attempt = 0; ; attempt += 1) {
     try {
-      const res = await deps.redeem(req.petId, { product_id: req.productId, wish_id: req.wishId }, req.transactionId);
+      const res = await deps.redeem(req.petId, { product_id: req.productId, wish_id: req.wishId, ...(req.choice ?? {}) }, req.transactionId);
       return { status: 'assigned', items: readParentPetItems((res as { items?: unknown }).items, req.species ?? 'dog') };
     } catch (error) {
       if (retryable(error, idempotent) && attempt < REDEEM_RETRIES) {
@@ -89,7 +91,7 @@ export async function redeemPurchase(
 ): Promise<RedeemOutcome> {
   const { transactionId } = req;
   if (transactionId !== null) {
-    await savePendingPurchase({ parentId: req.parentId, petId: req.petId, wishId: req.wishId, productId: req.productId, transactionId, species: req.species });
+    await savePendingPurchase({ parentId: req.parentId, petId: req.petId, wishId: req.wishId, productId: req.productId, transactionId, species: req.species, ...(req.choice ? { choice: req.choice } : {}) });
   }
   const outcome = await redeemWithRetry(req, deps);
   if (transactionId !== null && outcome.status !== 'pending') await removePendingPurchase(transactionId);
@@ -109,7 +111,7 @@ export function retryPendingPurchases(parentId: number, deps: RedeemDeps = defau
     let settled = 0;
     for (const e of list) {
       const outcome = await redeemWithRetry(
-        { petId: e.petId, productId: e.productId, wishId: e.wishId, transactionId: e.transactionId, species: e.species },
+        { petId: e.petId, productId: e.productId, wishId: e.wishId, transactionId: e.transactionId, species: e.species, ...(e.choice ? { choice: e.choice } : {}) },
         deps,
       );
       if (outcome.status !== 'pending') {

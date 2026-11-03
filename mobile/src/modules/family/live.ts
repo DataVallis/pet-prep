@@ -17,6 +17,7 @@ import type { QueryClient } from '@tanstack/react-query';
 import type { ParentDashboardResponse } from '@/api/client';
 import type { WebSocketStatus } from '@/store/appStore';
 import type { PetUpdatedBroadcast } from '@/types';
+import { PARENT_WISHES_KEY, refreshesWishes } from '@/modules/wishes/keys';
 
 /** Poll interval while not every pet channel is subscribed (polling fallback). */
 export const PARENT_POLL_MS = 30_000;
@@ -117,6 +118,8 @@ export function applyParentBroadcast(queryClient: QueryClient, event: PetUpdated
   void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
   void queryClient.invalidateQueries({ queryKey: parentActivitiesKey(event.pet_id) });
   void queryClient.invalidateQueries({ queryKey: ['parent', 'childReport'] });
+  // M6-W03: »Na poti …« → »Že ima« on the parent's »Želje« list.
+  if (refreshesWishes(event.event_type)) void queryClient.invalidateQueries({ queryKey: PARENT_WISHES_KEY });
 }
 
 /**

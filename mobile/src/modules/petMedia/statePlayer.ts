@@ -25,6 +25,8 @@
  * "play once, then continue with X".
  */
 
+import { isBehaviourScene } from '@/modules/behaviour/behaviour';
+import { pickToy, sceneItemFor, sceneItemKey, sceneStatesFor, type SceneItemKey, type ToyKey } from '@/modules/petMedia/itemMedia';
 import {
   mediaKey,
   selectMediaSource,
@@ -45,8 +47,10 @@ export type PlayItem =
       transition: string | null;
       /** David 2026-10-23: start this many ms into the clip (a school performing clip with a short window). */
       startAtMs?: number;
+      /** M6-W03: a bought item's loop stands in for the state (bed → sleeping, toy → playing). */
+      item?: SceneItemKey;
     }
-  | { kind: 'image'; url: string; key: string; state: VideoState | null }
+  | { kind: 'image'; url: string; key: string; state: VideoState | null; item?: SceneItemKey }
   | { kind: 'placeholder' };
 
 export type MediaMode = 'video' | 'picture';
@@ -59,6 +63,11 @@ export interface PlaybackInput {
   petState: PetState;
   mode?: MediaMode;
   canPlayVideo?: (url: string) => boolean;
+  /**
+   * M6-W03: the toy of this play session (`pickToy`); undefined = the current turn's toy. Items
+   * themselves come from `media.items`.
+   */
+  toy?: ToyKey | null;
 }
 
 export interface Playback {
@@ -90,11 +99,35 @@ function imageItem(url: string | null, state: VideoState | null): PlayItem {
   return url === null ? { kind: 'placeholder' } : { kind: 'image', url, key: mediaKey(url), state };
 }
 
+/** The toy of the input (explicit, else the current play-session turn's). */
+function toyOf(input: PlaybackInput): ToyKey | null {
+  return input.toy === undefined ? pickToy(input.media.items) : input.toy;
+}
+
 /**
- * The steady item for a wanted state (no transition): its loop, else (state media) its key
- * image, else (older set) the substitute chain → reference image → placeholder.
+ * The steady item for a wanted state (no transition). M6-W03: a bought item that replaces the
+ * shown state (bed → sleeping, toy → playing; `itemMedia.ts`) wins — its loop, else its image
+ * (picture mode: its image); else the state's own media (`stateSteadyItem`).
  */
 export function steadyItem(input: PlaybackInput): PlayItem {
+  const base = stateSteadyItem(input);
+  const { media, wanted, petState, mode = 'video', canPlayVideo } = input;
+  if (wanted === null || Object.keys(media.items).length === 0) return base;
+  const shownState = base.kind === 'placeholder' ? null : base.state;
+  // A behaviour scene showing its OWN media (clip / key image) is never replaced.
+  const sceneShown = isBehaviourScene(wanted) && shownState === wanted && (base.kind === 'clip' || media.keyframes[wanted] !== undefined);
+  const toy = toyOf(input);
+  for (const state of sceneStatesFor(wanted, petState, shownState, sceneShown)) {
+    const pick = sceneItemFor(media.items, state, toy, mode, canPlayVideo);
+    if (pick === null) continue;
+    if (pick.video !== null) return { kind: 'clip', url: pick.video, key: mediaKey(pick.video), state, loop: true, transition: null, item: pick.key };
+    if (pick.image !== null) return { kind: 'image', url: pick.image, key: mediaKey(pick.image), state, item: pick.key };
+  }
+  return base;
+}
+
+/** The state's own steady media: its loop, else (state media) its key image, else (older set) the substitute chain → reference image → placeholder. */
+function stateSteadyItem(input: PlaybackInput): PlayItem {
   const { media, wanted, petState, mode = 'video', canPlayVideo } = input;
   const playable = (url: string | undefined): url is string => present(url) && (canPlayVideo?.(url) ?? true);
 
@@ -134,6 +167,10 @@ export function nextPlayback(input: PlaybackInput, previous: VideoState | null, 
   if (mode === 'picture' || transitionDone || previous === null || wanted === null || previous === wanted) {
     return { current: steady, preload: null };
   }
+  // M6-W03: a stored transition never leads into / out of a bought item's scene (its last frame
+  // is the plain scene) — the item loop crossfades in / out instead.
+  if (steady.kind !== 'placeholder' && steady.item !== undefined) return { current: steady, preload: null };
+  if (sceneItemKey(media.items, previous, toyOf(input)) !== null) return { current: steady, preload: null };
 
   const key = transitionKey(previous, wanted);
   const url = media.transitions[key];

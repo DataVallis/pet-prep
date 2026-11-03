@@ -28,6 +28,9 @@
  *   shows the key image of the current state only (idle / older set / v1 pet = the reference image):
  *   no player is mounted, so no video is downloaded, and transitions are skipped;
  *   `onVideoStateChange` then reports the state of the key image shown.
+ * - **Bought items (M6-W03, `modules/petMedia/itemMedia.ts`):** the bed's loop / image stands in
+ *   for the sleeping scene and the session's toy for `playing` (via `steadyItem`, `toy` prop);
+ *   bowls / treats are one-shot moments the host passes as `phase` and ends on `onPhaseEnd`.
  */
 
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
@@ -67,6 +70,7 @@ import {
   type TransitionState,
 } from '@/modules/petMedia/statePlayer';
 import type { PhasePlayback } from '@/modules/petMedia/phasePlayer';
+import type { ToyKey } from '@/modules/petMedia/itemMedia';
 import type { BehaviourScene } from '@/modules/behaviour/behaviour';
 import type { PetState, ShownBreed, Species } from '@/types';
 import { breedName } from '@/modules/species/species';
@@ -172,6 +176,13 @@ export interface PetMediaViewProps {
    * image (picture mode: always the pose). No transitions while it is set.
    */
   phase?: PhasePlayback | null;
+  /**
+   * M6-W03: a `phase` clip (played once) ended or failed — the host's one-shot item moment
+   * (bowls / treats) goes back to the normal stage. Not called for loops.
+   */
+  onPhaseEnd?: () => void;
+  /** M6-W03: the toy of this play session (`pickToy`); omitted = the current turn's toy. */
+  toy?: ToyKey | null;
   style?: StyleProp<ViewStyle>;
   testID?: string;
 }
@@ -307,6 +318,8 @@ export default function PetMediaView({
   placeholder,
   pendingNotice = 'overlay',
   phase = null,
+  onPhaseEnd,
+  toy,
   style,
   testID = 'pet-media',
 }: PetMediaViewProps) {
@@ -334,14 +347,14 @@ export default function PetMediaView({
   const canPlayNow = useCallback((url: string) => canPlayUrl(errors, url, Math.max(clock, Date.now())), [errors, clock]);
   // M5-T08b: a transition is marked pending only when it can play NOW into the target's own loop.
   const wantedTransition = onWantedChange(transition, mode === 'picture' || phase !== null ? null : wanted, (from, to) =>
-    canStartTransition({ media, wanted: to, petState, mode, canPlayVideo: canPlayNow }, from),
+    canStartTransition({ media, wanted: to, petState, mode, canPlayVideo: canPlayNow, toy }, from),
   );
 
   const playback = useMemo(() => {
-    const input = { media, wanted, petState, mode, canPlayVideo: canPlayNow };
+    const input = { media, wanted, petState, mode, canPlayVideo: canPlayNow, toy };
     if (wantedTransition.pending === null) return { current: steadyItem(input), preload: null };
     return nextPlayback(input, wantedTransition.pending.from);
-  }, [media, wanted, petState, mode, canPlayNow, wantedTransition]);
+  }, [media, wanted, petState, mode, canPlayNow, wantedTransition, toy]);
   // …and a pending one the player no longer picks (clip failed / loop gone) is settled, never played later.
   const nextTransition = settleTransition(wantedTransition, playback);
   if (nextTransition !== transition) setTransition(nextTransition);
@@ -365,6 +378,8 @@ export default function PetMediaView({
       ? phase.still
       : target.kind === 'image'
       ? target.url
+      : target.kind === 'clip' && target.item !== undefined && media.items[target.item]?.image
+        ? (media.items[target.item]?.image ?? null)
       : media.stateMedia
         ? (poseImageUrl(media, target.kind === 'clip' ? target.state : wanted) ?? media.referenceImageUrl)
         : media.referenceImageUrl;
@@ -377,7 +392,7 @@ export default function PetMediaView({
   // M5-T11: in picture mode the state's OWN key image is its media (the vet veil / scene card read
   // it); the reference image standing in for a missing key image reports null, like a substitute.
   const pictureState =
-    mode === 'picture' && target.kind === 'image' && target.state !== null && (target.state === 'idle' || media.keyframes[target.state] === target.url)
+    mode === 'picture' && target.kind === 'image' && target.state !== null && (target.state === 'idle' || target.item !== undefined || media.keyframes[target.state] === target.url)
       ? target.state
       : null;
   const targetVideoState = target.kind === 'clip' ? target.state : pictureState;
@@ -516,10 +531,19 @@ export default function PetMediaView({
   const onReadyRef = useRef(onReady);
   onReadyRef.current = onReady;
 
+  // M6-W03: the host's one-shot moment ends with its clip (end or failure).
+  const phaseEndRef = useRef(onPhaseEnd);
+  phaseEndRef.current = onPhaseEnd;
+  const phaseKeyRef = useRef<string | null>(null);
+  phaseKeyRef.current = phase !== null && phase.current.kind === 'clip' ? phase.current.key : null;
+
   const onEnd = useCallback(
     (id: string) => {
       const layer = layersRef.current.find((l) => l.id === id);
-      if (layer && !layer.loop) endTransition();
+      if (layer && !layer.loop) {
+        endTransition();
+        if (layer.key === phaseKeyRef.current) phaseEndRef.current?.();
+      }
     },
     [endTransition],
   );
@@ -541,6 +565,8 @@ export default function PetMediaView({
       if (result.refetch) expiredRef.current?.();
       // A transition that fails is skipped (the loop is already preloaded underneath).
       if (!layer.loop) endTransition();
+      // M6-W03: a failing one-shot moment ends at once (back to the normal stage).
+      if (!layer.loop && layer.key === phaseKeyRef.current) phaseEndRef.current?.();
     },
     [commit, endTransition],
   );

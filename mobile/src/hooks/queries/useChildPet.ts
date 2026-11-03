@@ -42,6 +42,7 @@ import { OUTAGE_QUERY_RETRIES } from '@/modules/connectivity/serverOutage';
 import { useAppStore } from '@/store/appStore';
 import { isDeployError } from '@/store/serverStatusStore';
 import type { PetUpdatedBroadcast } from '@/types';
+import { CHILD_WISHES_KEY, refreshesWishes } from '@/modules/wishes/keys';
 
 export const childPetKey = ['child', 'pet'] as const;
 
@@ -156,6 +157,9 @@ export function writeChildState(client: QueryClient, raw: ChildPetState): ChildP
  * Returns whether the event was applied.
  */
 export function applyBroadcastToCache(client: QueryClient, broadcast: PetUpdatedBroadcast): boolean {
+  // M6-W03: a bought item's content is ready → the »Želje« catalogue turns »Na poti …« into »Že ima«
+  // (the event itself refetches the pet state, and with it `media.items`).
+  if (refreshesWishes(broadcast.event_type)) void client.invalidateQueries({ queryKey: CHILD_WISHES_KEY });
   const current = client.getQueryData<ChildPetView>(childPetKey);
   if (!current) {
     void client.invalidateQueries({ queryKey: childPetKey });

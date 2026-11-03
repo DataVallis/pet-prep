@@ -179,3 +179,94 @@ describe('WishesScreen', () => {
     expect(screen.getByText('Želje na strežniku še niso na voljo.')).toBeTruthy();
   });
 });
+
+describe('WishesScreen — designs (M6-W03)', () => {
+  const BED_DESIGNS = [
+    { key: 'bed_round', name: 'Okrogla postelja', image: 'https://api.petprep.si/d/1.png' },
+    { key: 'bed_box', name: 'Postelja škatla', image: null },
+  ];
+  const BOWL_DESIGNS = [
+    { key: 'bowls_steel', name: 'Jeklene skledi', image: 'https://api.petprep.si/d/4.png' },
+    { key: 'bowls_clay', name: 'Glinene skledi', image: null },
+  ];
+  const PET = {
+    pet_id: 12,
+    pet_name: 'Suki',
+    species: 'dog',
+    bundle_eligible: true,
+    items: [
+      { key: 'bed', variant: 'dog_bed', product_id: 'petprep_wish_bed', owned: false, media_ready: false, designs: BED_DESIGNS },
+      { key: 'bowls', variant: 'dog_bowls', product_id: 'petprep_wish_bowls', owned: false, media_ready: false, designs: BOWL_DESIGNS },
+    ],
+  };
+  const DESIGN_WISH = { ...WISH, design: 'bowls_clay' };
+  const DESIGN_BODY = { ...BODY, wishes: [DESIGN_WISH], pets: [PET] };
+
+  it('a wish shows the requested design (placeholder without a picture) and buys exactly that design', async () => {
+    getParentWishes.mockResolvedValue(DESIGN_BODY);
+    getProducts.mockResolvedValue([product('petprep_wish_bowls', '5,99 €'), product('petprep_wish_bundle_welcome', '15,99 €')]);
+    purchaseStoreProduct.mockResolvedValue({ productIdentifier: 'petprep_wish_bowls', customerInfo: {}, transaction: { transactionIdentifier: 'tx-d' } });
+    redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    expect(screen.getByTestId('wish-design-name-31')).toHaveTextContent('Želi: Glinene skledi');
+    expect(screen.getByText('Kupi za 5,99 €')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('wish-buy-31'));
+    expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
+    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bowls', wish_id: 31, design: 'bowls_clay' }, 'tx-d', expect.anything());
+  });
+
+  it('the bundle from a wish: the wished design stays, the parent picks the other item\'s design', async () => {
+    getParentWishes.mockResolvedValue(DESIGN_BODY);
+    getProducts.mockResolvedValue([product('petprep_wish_bowls', '5,99 €'), product('petprep_wish_bundle_welcome', '15,99 €')]);
+    purchaseStoreProduct.mockResolvedValue({ productIdentifier: 'petprep_wish_bundle_welcome', customerInfo: {}, transaction: { transactionIdentifier: 'tx-b' } });
+    redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('wish-bundle-31'));
+    expect(purchaseStoreProduct).not.toHaveBeenCalled();
+    expect(screen.getByTestId('design-choice-wish-31')).toBeTruthy();
+    // Only the bed is the parent's to choose (bowls = the child's wish).
+    expect(screen.queryByTestId('design-choice-wish-31-bowls-bowls_steel')).toBeNull();
+    fireEvent.press(screen.getByTestId('design-choice-wish-31-bed-bed_box'));
+    fireEvent.press(screen.getByTestId('design-choice-confirm-wish-31'));
+    expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
+    expect(redeemPetItem).toHaveBeenCalledWith(
+      12,
+      { product_id: 'petprep_wish_bundle_welcome', wish_id: 31, designs: { bed: 'bed_box', bowls: 'bowls_clay' } },
+      'tx-b',
+      expect.anything(),
+    );
+  });
+
+  it('surprise: pet → item → design (first preselected, placeholder card without a picture)', async () => {
+    getParentWishes.mockResolvedValue({ ...DESIGN_BODY, wishes: [] });
+    getProducts.mockResolvedValue([product('petprep_wish_bed', '5,99 €')]);
+    purchaseStoreProduct.mockResolvedValue({ productIdentifier: 'petprep_wish_bed', customerInfo: {}, transaction: { transactionIdentifier: 'tx-s' } });
+    redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('surprise-pet-12'));
+    fireEvent.press(screen.getByTestId('surprise-buy-12-bed'));
+    expect(purchaseStoreProduct).not.toHaveBeenCalled();
+    expect(screen.getByTestId('design-choice-surprise-12-bed-bed-bed_round-image')).toBeTruthy();
+    expect(screen.getByTestId('design-choice-surprise-12-bed-bed-bed_box-placeholder')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('design-choice-surprise-12-bed-bed-bed_box'));
+    fireEvent.press(screen.getByTestId('design-choice-confirm-surprise-12-bed'));
+    expect(await screen.findByText('Kupljeno — stvar je dodana.')).toBeTruthy();
+    expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bed', wish_id: null, design: 'bed_box' }, 'tx-s', expect.anything());
+  });
+
+  it('»Komu?« for an item with designs asks for the design, then assigns it', async () => {
+    getParentWishes.mockResolvedValue({ ...DESIGN_BODY, wishes: [], unassigned_credits: [{ product_id: 'petprep_wish_bed', count: 1 }] });
+    getProducts.mockResolvedValue([]);
+    redeemPetItem.mockResolvedValue({ status: 'assigned', items: [], open_count: 0 });
+    renderWithQuery(<WishesScreen family={null} onBack={jest.fn()} />);
+    await flush();
+    fireEvent.press(screen.getByTestId('wishes-assign-petprep_wish_bed'));
+    fireEvent.press(screen.getByTestId('wishes-assign-petprep_wish_bed-12'));
+    expect(redeemPetItem).not.toHaveBeenCalled();
+    fireEvent.press(screen.getByTestId('design-choice-confirm-credit-petprep_wish_bed'));
+    await waitFor(() => expect(redeemPetItem).toHaveBeenCalledWith(12, { product_id: 'petprep_wish_bed', wish_id: null, design: 'bed_round' }, null, expect.anything()));
+  });
+});

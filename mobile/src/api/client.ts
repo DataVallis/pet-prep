@@ -3,6 +3,7 @@
  * Uses fetch with auth token from SecureStore.
  */
 
+import type { WishDesignChoice } from '@/modules/wishes/wishes';
 import * as SecureStore from 'expo-secure-store';
 import { ENV } from '@/config/env';
 import { currentLanguageTag } from '@/i18n';
@@ -1381,8 +1382,9 @@ export const api = {
   getChildWishes: () => apiRequest<ChildWishesResponse>('/api/child/wishes'),
 
   /** POST /api/child/wishes — ask a parent for an item. 422 / 423 `reason` (WISHES_API §3). */
-  createWish: (itemKey: components['schemas']['CreateWishRequest']['item_key']) =>
-    apiRequest<CreateWishResponse>('/api/child/wishes', { method: 'POST', body: { item_key: itemKey } }),
+  createWish: (itemKey: components['schemas']['CreateWishRequest']['item_key'], design: string | null = null) =>
+    // M6-W03: `design` when the item has designs (422 `invalid_design` otherwise).
+    apiRequest<CreateWishResponse>('/api/child/wishes', { method: 'POST', body: design === null ? { item_key: itemKey } : { item_key: itemKey, design } }),
 
   /** POST /api/child/pet/treat — give one treat. 422 no_treats / treat_limit_today / pet_sleeping, 423 lock. */
   giveTreat: () => apiRequest<GiveTreatResponse>('/api/child/pet/treat', { method: 'POST' }),
@@ -1400,14 +1402,20 @@ export const api = {
    */
   redeemPetItem: (
     petId: number,
-    body: components['schemas']['RedeemItemRequest'],
+    body: components['schemas']['RedeemItemRequest'] & WishDesignChoice,
     idempotencyKey: string | null,
     options: { timeoutMs?: number } = {},
   ) =>
     apiRequest<RedeemPetItemResponse>(`/api/parent/pets/${petId}/items/redeem`, {
       method: 'POST',
       ...(options.timeoutMs !== undefined ? { timeoutMs: options.timeoutMs } : {}),
-      body: { product_id: body.product_id, ...(body.wish_id != null ? { wish_id: body.wish_id } : {}) },
+      body: {
+        product_id: body.product_id,
+        ...(body.wish_id != null ? { wish_id: body.wish_id } : {}),
+        // M6-W03: the chosen design (one item) / designs (the welcome bundle).
+        ...(body.design != null ? { design: body.design } : {}),
+        ...(body.designs != null && Object.keys(body.designs).length > 0 ? { designs: body.designs } : {}),
+      },
       ...(idempotencyKey ? { headers: { 'Idempotency-Key': idempotencyKey } } : {}),
     }),
 

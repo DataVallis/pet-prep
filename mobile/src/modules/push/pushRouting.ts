@@ -8,6 +8,8 @@
  *    child caring for that pet, and refetch the dashboard. `challenge_completed`
  *    (M2-01d) opens the child whose challenge ended — the certificate card is on top.
  *    `wish_created` (M6-W05) opens the parent's wish list (and refetches it).
+ *  - `item_ready` (M6-W03, child): the HUD (the pet with its new item) — the pet state and the
+ *    »Želje« catalogue are refetched so »Na poti …« turns into »Že ima« and the new scene shows.
  */
 
 import type { QueryClient } from '@tanstack/react-query';
@@ -17,7 +19,7 @@ import { childPetKey } from '@/hooks/queries/useChildPet';
 import { parentDashboardKey } from '@/modules/family/live';
 import { isUrgentPush, parsePushData, type PushData } from '@/modules/push/pushData';
 import { useAppStore, type AppUser } from '@/store/appStore';
-import { PARENT_WISHES_KEY } from '@/modules/wishes/keys';
+import { CHILD_WISHES_KEY, PARENT_WISHES_KEY } from '@/modules/wishes/keys';
 
 let handlerConfigured = false;
 
@@ -56,6 +58,7 @@ export function routePushTap(
   if (role === 'child') {
     store.setAlbumVisible(false);
     void queryClient.invalidateQueries({ queryKey: childPetKey });
+    if (push.type === 'item_ready') void queryClient.invalidateQueries({ queryKey: CHILD_WISHES_KEY });
   } else {
     store.setPushTarget({ petId: push.petId, type: push.type });
     void queryClient.invalidateQueries({ queryKey: parentDashboardKey });

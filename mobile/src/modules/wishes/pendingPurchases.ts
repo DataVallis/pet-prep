@@ -13,6 +13,8 @@
 
 import * as SecureStore from 'expo-secure-store';
 
+import { isWishItemKey, type WishDesignChoice, type WishItemKey } from '@/modules/wishes/wishes';
+
 export const PENDING_WISH_PURCHASES_KEY = 'petprep.wish_pending_purchases';
 /** Keep the list small; older / extra entries are dropped (the credit still shows under »Komu?«). */
 export const MAX_PENDING = 10;
@@ -26,6 +28,8 @@ export interface PendingWishPurchase {
   transactionId: string;
   species: 'dog' | 'cat';
   savedAt: number;
+  /** M6-W03: the design(s) chosen for this purchase (absent = none / saved by an older build). */
+  choice?: WishDesignChoice;
 }
 
 export interface PendingStore {
@@ -52,6 +56,23 @@ export function memoryPendingStore(): PendingStore & { data: Map<string, string>
   };
 }
 
+/** M6-W03: keep only a well-formed stored design choice (strings only), else drop it. */
+function withValidChoice(e: PendingWishPurchase): PendingWishPurchase {
+  const raw: unknown = e.choice;
+  const rest: PendingWishPurchase = { ...e };
+  delete rest.choice;
+  if (typeof raw !== 'object' || raw === null) return rest;
+  const c = raw as Record<string, unknown>;
+  const choice: WishDesignChoice = {};
+  if (typeof c.design === 'string' && c.design !== '') choice.design = c.design;
+  if (typeof c.designs === 'object' && c.designs !== null && !Array.isArray(c.designs)) {
+    const designs: Partial<Record<WishItemKey, string>> = {};
+    for (const [k, v] of Object.entries(c.designs as Record<string, unknown>)) if (isWishItemKey(k) && typeof v === 'string' && v !== '') designs[k] = v;
+    if (Object.keys(designs).length > 0) choice.designs = designs;
+  }
+  return Object.keys(choice).length > 0 ? { ...rest, choice } : rest;
+}
+
 function isEntry(v: unknown): v is PendingWishPurchase {
   if (typeof v !== 'object' || v === null) return false;
   const e = v as Record<string, unknown>;
@@ -71,7 +92,7 @@ export function parsePending(raw: string | null, nowMs: number = Date.now()): Pe
   if (!raw) return [];
   try {
     const list: unknown = JSON.parse(raw);
-    return Array.isArray(list) ? list.filter(isEntry).filter((e) => nowMs - e.savedAt < PENDING_MAX_AGE_MS) : [];
+    return Array.isArray(list) ? list.filter(isEntry).filter((e) => nowMs - e.savedAt < PENDING_MAX_AGE_MS).map(withValidChoice) : [];
   } catch {
     return [];
   }

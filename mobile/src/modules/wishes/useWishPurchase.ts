@@ -16,7 +16,7 @@ import { PARENT_WISHES_KEY } from '@/modules/wishes/keys';
 import { api } from '@/api/client';
 import { useAppStore } from '@/store/appStore';
 import { redeemPurchase, redeemWithRetry, type RedeemOutcome } from '@/modules/wishes/redeem';
-import { purchaseStillPossible, readParentWishes, type PurchaseCheck } from '@/modules/wishes/wishes';
+import { purchaseStillPossible, readParentWishes, type PurchaseCheck, type WishDesignChoice } from '@/modules/wishes/wishes';
 
 export type WishPurchaseResult =
   | { kind: 'purchase'; failure: PurchaseFailure }
@@ -33,6 +33,8 @@ export interface WishPurchaseInput {
   petId: number;
   wishId: number | null;
   species: 'dog' | 'cat';
+  /** M6-W03: the design (one item) / designs (bundle) — a wish's own, or the parent's pick. */
+  choice?: WishDesignChoice;
 }
 
 export function wishResultText(result: WishPurchaseResult): string {
@@ -57,11 +59,11 @@ export function isGoodResult(result: WishPurchaseResult): boolean {
 export function useWishPurchase() {
   const client = useQueryClient();
   return useMutation<WishPurchaseResult, unknown, WishPurchaseInput>({
-    mutationFn: async ({ product, productId, petId, wishId, species }) => {
+    mutationFn: async ({ product, productId, petId, wishId, species, choice = {} }) => {
       const parentId = useAppStore.getState().user?.id ?? null;
       if (product === null) {
         // »Komu?«: assign an already bought credit — no store, no device record.
-        return { kind: 'redeem', outcome: await redeemWithRetry({ petId, productId, wishId, transactionId: null, species }) };
+        return { kind: 'redeem', outcome: await redeemWithRetry({ petId, productId, wishId, transactionId: null, species, choice }) };
       }
       // QA #416 m4: another parent may have bought / declined meanwhile — re-check on fresh data
       // right before the store sheet opens (nothing is charged when it is no longer possible).
@@ -80,8 +82,8 @@ export function useWishPurchase() {
       // QA #416 M2: remembered on the device until the server assigned it to THIS pet / wish.
       const outcome =
         parentId !== null
-          ? await redeemPurchase({ petId, productId, wishId, transactionId: bought.transactionId, species, parentId })
-          : await redeemWithRetry({ petId, productId, wishId, transactionId: bought.transactionId, species });
+          ? await redeemPurchase({ petId, productId, wishId, transactionId: bought.transactionId, species, parentId, choice })
+          : await redeemWithRetry({ petId, productId, wishId, transactionId: bought.transactionId, species, choice });
       return { kind: 'redeem', outcome };
     },
     retry: false,

@@ -49,6 +49,7 @@ import { CircleDot, HandHeart, Heart, X } from 'lucide-react-native';
 import PetMediaView from '@/components/PetMediaView';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
+import { hasPlayingMedia } from '@/modules/petMedia/itemMedia';
 import {
   BALL_START,
   BALL_THROWS,
@@ -157,11 +158,12 @@ function useAnnounce(text: string) {
 
 /**
  * Stage: the pet's own video (`playing`, else `idle`) when stored, else a calm illustration.
+ * M6-W03: a bought toy's loop stands in for `playing` (`PetMediaView` → `steadyItem`, the session's toy).
  * M5-T10: `phase` = the ball game's phase item (its clip once, else its pose) for a pet with
  * ball phase clips.
  */
 function Stage({ view, children, onMediaExpired, phase = null }: { view: ChildPetView; children?: ReactNode; onMediaExpired?: () => void; phase?: PhasePlayback | null }) {
-  const hasVideo = useMemo(() => phase !== null || selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media, phase]);
+  const hasVideo = useMemo(() => phase !== null || (hasPlayingMedia(view.pet.media) || selectMediaSource(view.pet.media, 'playing').kind === 'video'), [view.pet.media, phase]);
   return (
     <View style={styles.stage}>
       {hasVideo ? (
@@ -216,7 +218,7 @@ function BallGame({ view, reduceMotion, gestureMode = 'swipe', onDone, onMediaEx
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // M5-T10: a pet with ball phase clips: waiting → running (out of frame) → fetching (back).
   const phaseClips = usesPhaseClips(view.pet.media, 'ball');
-  const hasVideo = useMemo(() => phaseClips || selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media, phaseClips]);
+  const hasVideo = useMemo(() => phaseClips || (hasPlayingMedia(view.pet.media) || selectMediaSource(view.pet.media, 'playing').kind === 'video'), [view.pet.media, phaseClips]);
   const [throwPhase, setThrowPhase] = useState<'running' | 'fetching' | null>(null);
   const phaseTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -445,7 +447,7 @@ function CuddleGame({ view, reduceMotion, onDone, onMediaExpired }: GameProps) {
   const timers = useRef<Set<ReturnType<typeof setTimeout>>>(new Set());
   const holdTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const finished = useRef(false);
-  const hasVideo = useMemo(() => selectMediaSource(view.pet.media, 'playing').kind === 'video', [view.pet.media]);
+  const hasVideo = useMemo(() => (hasPlayingMedia(view.pet.media) || selectMediaSource(view.pet.media, 'playing').kind === 'video'), [view.pet.media]);
 
   useEffect(() => {
     const pending = timers.current;

@@ -52,21 +52,27 @@ export function useChildWishes(enabled: boolean) {
   });
 }
 
+/** A wish: the item and (M6-W03) the chosen design — null when the item has none. */
+export interface WishRequest {
+  key: WishItemKey;
+  design: string | null;
+}
+
 /** »Prosi starša«: the row turns »Prošnja poslana« on success; any answer refetches both. */
 export function useCreateWish() {
   const client = useQueryClient();
-  return useMutation<{ open_count: number | null; wish_id: number | null }, unknown, WishItemKey>({
-    mutationFn: async (key) => {
-      const res = (await api.createWish(key)) as { open_count?: unknown; wish?: { id?: unknown } };
+  return useMutation<{ open_count: number | null; wish_id: number | null }, unknown, WishRequest>({
+    mutationFn: async ({ key, design }) => {
+      const res = (await api.createWish(key, design)) as { open_count?: unknown; wish?: { id?: unknown } };
       return {
         open_count: typeof res.open_count === 'number' ? res.open_count : null,
         wish_id: typeof res.wish?.id === 'number' ? res.wish.id : null,
       };
     },
     retry: false,
-    onSuccess: (res, key) => {
+    onSuccess: (res, { key, design }) => {
       const current = client.getQueryData<ChildWishes>(CHILD_WISHES_KEY);
-      if (current) client.setQueryData<ChildWishes>(CHILD_WISHES_KEY, applyWishCreated(current, key, res.wish_id, res.open_count));
+      if (current) client.setQueryData<ChildWishes>(CHILD_WISHES_KEY, applyWishCreated(current, key, res.wish_id, res.open_count, design));
     },
     onSettled: () => {
       void client.invalidateQueries({ queryKey: CHILD_WISHES_KEY });

@@ -43,7 +43,8 @@
       "treats_still_left": "Priboljškov je še dovolj.",
       "blocked": "Zdaj ne moreš prositi za nove stvari.",
       "offline": "Ni povezave. Poskusi znova.",
-      "failed": "Ni uspelo. Poskusi znova."
+      "failed": "Ni uspelo. Poskusi znova.",
+      "invalid_design": "Te izbire ni več. Izberi znova."
     },
     "treat": {
       "button": "Priboljšek",
@@ -117,5 +118,15 @@
       }
     },
     "unknownItem": "Stvar"
+  },
+  "designs": {
+    "childHint": "Katero bi izbral? Tapni sliko.",
+    "pickFirst": "Najprej izberi",
+    "pickA11y": "Izberi: {{design}}",
+    "back": "Nazaj",
+    "requested": "Želi: {{design}}",
+    "parentPick": "Izberite videz: {{item}}",
+    "buyA11y": "Kupi izbrano za {{pet}} za {{price}}",
+    "cancel": "Prekliči"
   }
 }

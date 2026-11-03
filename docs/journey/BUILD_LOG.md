@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-03 — Kupljene stvari se pokažejo v prizorih ljubljenčka (M6-W03, aplikacija)
+
+**Kaj:** ko starš kupi posteljo, skledi, igračo ali priboljške in strežnik pripravi njihovo vsebino, jih otrok vidi v prizorih: ljubljenček spi na svoji postelji, po hranjenju ali vodi enkrat jé iz svojih skled, igra se s svojo igračo (z dvema igračama izmenično), gumb »Priboljšek« pa zavrti, kako poje priboljšek. Do takrat piše »Na poti …«, potem »Že ima«. Nova so tudi **videzi**: pri vsaki stvari otrok izbira med tremi slikami (npr. tremi posteljami), starš pa kupi točno izbranega.
+**Zakaj je pomembno:** nakup ima zdaj viden smisel — otrok vidi, da ljubljenček nekaj potrebuje in da starš odloča; hkrati ostaja samo videz (nikoli vpliva na igro ali oceno).
+**Kako povedati:** *starši* — »Otrok izbere videz, vi odločite; stvar se pokaže v ljubljenčkovem vsakdanu.« · *otroci* — »Tvoj kuža zdaj spi na postelji, ki si jo izbral.« · *investitorji* — prvi del trgovinice z vidnim učinkom; vsebina se ustvari enkrat na videz in se deli med kupci.
+
 ## 2026-11-02 — Igra s palico pri muci ne zapre več aplikacije
 
 **Kaj:** David je na iPhonu (TestFlight) odprl igro »Palica s peresom« pri muci in aplikacija se je po približno sekundi zaprla. Vzrok je bil v eni vrstici risbe igralnega polja: barvo je izračunala funkcija, ki ne sme teči na grafični niti telefona — taka napaka zapre celo aplikacijo, ne le igre. Popravek je majhen (barve so izračunane vnaprej), dobi ga obstoječa gradnja s posodobitvijo prek zraka. Testi zdaj takšno napako odkrijejo pri vsaki igri, še preden pride na telefon.

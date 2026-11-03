@@ -18,6 +18,7 @@ import { CAT_COMMON_STRINGS } from '@/modules/catCare/catCare';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import type { PetState } from '@/types';
 import { selectMediaSource } from '@/modules/petMedia/petMedia';
+import { hasPlayingMedia } from '@/modules/petMedia/itemMedia';
 import { MIN_TOUCH, alpha, fonts, palette, radius, tightTracking } from '@/theme';
 
 const C = CAT_COMMON_STRINGS;
@@ -83,6 +84,8 @@ export function CatOverlayFrame({ title, icon, onClose, closeMode = 'close', chi
  */
 export function useHasVideo(view: ChildPetView, state: PetState | BehaviourScene, scene = false): boolean {
   return useMemo(() => {
+    // M6-W03: a bought toy's loop is the cat's `playing` media.
+    if (!scene && state === 'playing' && hasPlayingMedia(view.pet.media)) return true;
     const source = selectMediaSource(view.pet.media, state);
     return source.kind === 'video' && (!scene || source.state === state);
   }, [view.pet.media, state, scene]);
