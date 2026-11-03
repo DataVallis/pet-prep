@@ -66,7 +66,7 @@
     "cs": "Ne. Káva obsahuje kofein, který je pro psy jedovatý; psi jsou na něj citlivější než lidé. Jedno či dvě olíznutí pravděpodobně otravu nezpůsobí, ale kávová sedlina a zrna mohou vyvolat vážnou otravu. Kávová zrna v čokoládě jsou dvojí hrozbou.",
     "hr": "Ne. Kava sadrži kofein, koji je otrovan za pse; psi su na njega osjetljiviji od ljudi. Jedno ili dva liznuća vjerojatno neće izazvati otrovanje, ali mljevena kava i zrna kave mogu izazvati ozbiljno otrovanje. Zrna kave obložena čokoladom dvostruka su prijetnja.",
     "sv": "Nej. Kaffe innehåller koffein, som är giftigt för hundar; hundar är känsligare för det än människor. Ett par slickar ger knappast förgiftning, men kaffesump och kaffebönor kan ge allvarlig förgiftning. Kaffebönor med chokladöverdrag är dubbelt farliga.",
-    "da": "Nej. Kaffe indeholder koffein, som er giftigt for hunde; hunde er mere følsomme over for det end mennesker. Et par slik af kaffen giver næppe forgiftning, men kaffegrums og kaffebønner kan give alvorlig forgiftning. Chokoladeovertrukne kaffebønner er en dobbelt trussel.",
+    "da": "Nej. Kaffe indeholder koffein, og det er giftigt for hunde, som er mere følsomme over for det end mennesker. Slikker hunden bare lidt kaffe i sig, giver det næppe forgiftning, men kaffegrums og kaffebønner kan give alvorlig forgiftning. Chokoladeovertrukne kaffebønner er dobbelt farlige.",
     "fi": "Ei saa. Kahvissa on kofeiinia, joka on koirille myrkyllistä; koirat ovat sille herkempiä kuin ihmiset. Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä, mutta jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen. Suklaalla kuorrutetut kahvipavut ovat kaksinkertainen vaara.",
     "nb": "Nei. Kaffe inneholder koffein, som er giftig for hunder; hunder er mer følsomme for det enn mennesker. Et slikk eller to gir neppe forgiftning, men kaffegrut og kaffebønner kan gi alvorlig forgiftning. Sjokoladetrukne kaffebønner er en dobbel fare."
   },
@@ -83,7 +83,7 @@
     "cs": "Kofein nadměrně stimuluje srdce a nervovou soustavu. Je to stejný druh látky, kvůli kterému je čokoláda jedovatá. Jedno či dvě olíznutí kávy pravděpodobně otravu nezpůsobí, ale nepoužitá kávová sedlina a zrna mohou vyvolat vážnou otravu a zrna v čokoládě jsou dvojí hrozbou.",
     "hr": "Kofein pretjerano potiče rad srca i živčanog sustava. To je ista vrsta tvari zbog koje je čokolada otrovna. Jedno ili dva liznuća kave vjerojatno neće izazvati otrovanje, ali neiskorištena mljevena kava i zrna mogu izazvati ozbiljno otrovanje, a zrna obložena čokoladom dvostruka su prijetnja.",
     "sv": "Koffein överstimulerar hjärtat och nervsystemet. Det är samma slags ämne som gör choklad giftig. Ett par slickar kaffe ger knappast förgiftning, men oanvänt malet kaffe och kaffebönor kan ge allvarlig förgiftning, och bönor med chokladöverdrag är dubbelt farliga.",
-    "da": "Koffein overstimulerer hjertet og nervesystemet. Det er samme slags stof som det, der gør chokolade giftigt. Et par slik af kaffen giver næppe forgiftning, men ubrugt kaffegrums og kaffebønner kan give alvorlig forgiftning, og chokoladeovertrukne bønner er en dobbelt trussel.",
+    "da": "Koffein overstimulerer hjertet og nervesystemet. Det er samme slags stof som det, der gør chokolade giftigt. Slikker hunden bare lidt kaffe i sig, giver det næppe forgiftning, men ubrugt kaffegrums og kaffebønner kan give alvorlig forgiftning, og chokoladeovertrukne bønner er dobbelt farlige.",
     "fi": "Kofeiini ylikiihottaa sydäntä ja hermostoa. Se on yksi niistä aineista, jotka tekevät suklaasta myrkyllistä. Nuolaisu tai kaksi kahvia tuskin aiheuttaa myrkytystä, mutta käyttämätön jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen, ja suklaalla kuorrutetut pavut ovat kaksinkertainen vaara.",
     "nb": "Koffein overstimulerer hjertet og nervesystemet. Det er samme type stoff som gjør sjokolade giftig. Et slikk eller to kaffe gir neppe forgiftning, men ubrukt malt kaffe og kaffebønner kan gi alvorlig forgiftning, og sjokoladetrukne bønner er en dobbel fare."
   },
@@ -190,7 +190,7 @@
       "Opkast og diarré",
       "Savlen",
       "Rysten",
-      "Tisser mere"
+      "Hyppigere vandladning"
     ],
     "fi": [
       "Levottomuus, ylivilkkaus, edestakaisin kulkeminen",
@@ -222,7 +222,7 @@
     "cs": "Jakmile zjistíte, že váš pes pozřel kofein, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, o co šlo (nápoj, sedlina, zrna, čajové sáčky) a zhruba kolik. Nečekejte, až se objeví příznaky: na včasné léčbě záleží.",
     "hr": "Obrati se veterinaru ili telefonskoj liniji za otrovanja životinja čim shvatiš da je pas pojeo ili popio nešto s kofeinom. Zapiši što je to bilo (piće, mljevena kava, zrna, vrećice čaja) i otprilike koliko. Ne čekaj da se pojave znakovi: rano liječenje je važno.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur så snart du förstår att hunden har fått i sig koffein. Notera vad det var (dryck, kaffesump, bönor, tepåsar) och ungefär hur mycket. Vänta inte på symtom: tidig behandling gör skillnad.",
-    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at hunden har fået koffein. Skriv ned hvad det var (drik, kaffegrums, bønner, tebreve) og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
+    "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr så snart du opdager at hunden har fået koffein. Skriv ned hvad det var (drik, kaffegrums, bønner, teposer) og omtrent hvor meget. Vent ikke på symptomer: tidlig behandling er vigtig.",
     "fi": "Ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan heti, kun huomaat koirasi saaneen kofeiinia. Kirjaa ylös, mitä se oli (juoma, jauhettu kahvi, pavut, teepussit) ja suunnilleen kuinka paljon. Älä odota oireita: varhainen hoito on tärkeää.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr så snart du oppdager at hunden har fått i seg koffein. Skriv ned hva det var (drikke, kaffegrut, bønner, teposer), og omtrent hvor mye. Ikke vent på symptomer – tidlig behandling er viktig."
   },
@@ -276,7 +276,7 @@
         "cs": "Jedno či dvě olíznutí většinu psů pravděpodobně neotráví. Pokud pes vypil víc nebo snědl sedlinu, zrna či čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata.",
         "hr": "Jedno ili dva liznuća vjerojatno neće otrovati većinu pasa. Ako je pas popio više ili pojeo mljevenu kavu, zrna ili vrećice čaja, nazovi veterinara ili telefonsku liniju za otrovanja životinja.",
         "sv": "Ett par slickar ger knappast förgiftning hos de flesta hundar. Om hunden drack mer, eller åt kaffesump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
-        "da": "Et par slik giver næppe forgiftning hos de fleste hunde. Hvis hunden har drukket mere eller spist kaffegrums, bønner eller tebreve, skal du ringe til din dyrlæge eller en giftrådgivning for dyr.",
+        "da": "Hvis hunden kun har slikket lidt, giver det næppe forgiftning hos de fleste hunde. Hvis hunden har drukket mere eller spist kaffegrums, bønner eller teposer, skal du ringe til din dyrlæge eller en giftrådgivning for dyr.",
         "fi": "Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä useimmille koirille. Jos koirasi joi enemmän tai söi jauhettua kahvia, papuja tai teepusseja, soita eläinlääkärille tai eläinten myrkytysneuvontaan.",
         "nb": "Ett eller to slikk gir neppe forgiftning hos de fleste hunder. Har hunden drukket mer, eller spist kaffegrut, bønner eller teposer, må du ringe dyrlegen eller giftinformasjon for dyr."
       }
@@ -463,7 +463,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "712f8e5897e60fc6e47633aebe44a5e8843a284e496abe3a9b51d632f6ba4d81"
+      "verified_hash": "67853e6112cbc73133e04b4c981c0a0125b5f0155affd36b98d709b69f9cc6d9"
     },
     "fi": {
       "status": "verified",

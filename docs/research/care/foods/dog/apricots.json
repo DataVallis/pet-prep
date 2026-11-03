@@ -66,7 +66,7 @@
     "cs": "Nedoporučuje se. Meruňka patří mezi rostliny jedovaté pro psy: její stonky, listy a semena obsahují kyanid, zvlášť když vadnou. Nikdy psovi nedovolte kousat meruňkové pecky, listy ani stonky.",
     "hr": "Ne preporučuje se. Biljka marelice ubraja se među otrovne za pse: njezine peteljke, listovi i sjemenke sadrže cijanid, osobito dok venu. Nikad ne dopusti psu da žvače koštice, listove ili peteljke marelice.",
     "sv": "Rekommenderas inte. Aprikosträdet anges som giftigt för hundar: skaft, blad och kärnor innehåller cyanid, särskilt när de vissnar. Låt aldrig hunden tugga på aprikoskärnor, blad eller skaft.",
-    "da": "Det frarådes. Abrikosplanten er opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke.",
+    "da": "Det frarådes. Abrikosplanten står opført som giftig for hunde: stilke, blade og kerner indeholder cyanid, især når de visner. Lad aldrig hunden tygge på abrikossten, -blade eller -stilke.",
     "fi": "Ei suositella. Aprikoosikasvi on luokiteltu koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia, etenkin kuihtuessaan. Älä koskaan anna koirasi pureskella aprikoosin kiviä, lehtiä tai varsia.",
     "nb": "Anbefales ikke. Aprikosplanten er oppført som giftig for hunder: Stilker, blader og frø inneholder cyanid, særlig når de visner. La aldri hunden tygge på aprikossteiner, -blader eller -stilker."
   },
@@ -83,7 +83,7 @@
     "cs": "Stonky, listy a semena meruňky obsahují kyanogenní glykosidy, ze kterých se uvolňuje kyanid. Kyanid snižuje schopnost těla využívat kyslík. Protože meruňka patří mezi rostliny jedovaté pro psy, nepovažujeme ji za bezpečný pamlsek.",
     "hr": "Peteljke, listovi i sjemenke marelice sadrže cijanogene glikozide, iz kojih se oslobađa cijanid. Cijanid smanjuje sposobnost tijela da iskoristi kisik. Budući da se biljka ubraja među otrovne za pse, marelice ne smatramo sigurnom poslasticom.",
     "sv": "Aprikosträdets skaft, blad och kärnor innehåller cyanogena glykosider, som frigör cyanid. Cyanid minskar kroppens förmåga att använda syre. Eftersom trädet anges som giftigt för hundar klassar vi inte aprikoser som en säker godbit.",
-    "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten er opført som giftig for hunde, vurderer vi ikke abrikoser som en sikker godbid.",
+    "da": "Abrikosens stilke, blade og kerner indeholder cyanogene glykosider, som frigiver cyanid. Cyanid nedsætter kroppens evne til at udnytte ilt. Fordi planten står opført som giftig for hunde, regner vi ikke abrikoser for en sikker godbid.",
     "fi": "Aprikoosin varret, lehdet ja siemenet sisältävät syanogeenisia glykosideja, joista vapautuu syanidia. Syanidi heikentää elimistön kykyä käyttää happea. Koska kasvi on luokiteltu koirille myrkylliseksi, emme pidä aprikoosia turvallisena herkkuna.",
     "nb": "Stilker, blader og frø fra aprikos inneholder cyanogene glykosider, som frigjør cyanid. Cyanid svekker kroppens evne til å bruke oksygen. Fordi planten er oppført som giftig for hunder, regner vi ikke aprikoser som en trygg godbit."
   },
@@ -163,7 +163,7 @@
     "da": [
       "Udvidede pupiller",
       "Teglstensrødt tandkød",
-      "Vejrtrækningsbesvær, hiven efter vejret",
+      "Vejrtrækningsbesvær, pesen",
       "Chok"
     ],
     "fi": [
@@ -348,7 +348,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "873284a2fec6f0d2556a725b91c09726b67498e129436d61210713dffbb8feef"
+      "verified_hash": "bc50308f7dee8718756f523c4143dfe89f1c57a3921389edac19aa4347c09d9c"
     },
     "fi": {
       "status": "verified",

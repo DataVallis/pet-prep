@@ -135,7 +135,7 @@
     "cs": "Sardinky ve vodě můžou být pro psa občas rybí pamlsek. Slaná ryba pro psy není.",
     "hr": "Srdele u vodi mogu biti riblja poslastica za psa, s vremena na vrijeme. Slana riba nije za pse.",
     "sv": "Sardiner i vatten kan vara en fiskig godbit för en hund ibland. Saltad fisk är inte för hundar.",
-    "da": "Sardiner i vand kan være en lækker fiskegodbid til en hund en gang imellem. Salt fisk er ikke til hunde.",
+    "da": "Sardiner i vand kan være en lækker fiskegodbid til en hund en gang imellem. Saltet fisk er ikke til hunde.",
     "fi": "Veteen säilötyt sardiinit voivat olla koiralle kalaherkku silloin tällöin. Suolainen kala ei sovi koirille.",
     "nb": "Sardiner i vann kan være en fiskegodbit for en hund av og til. Salt fisk er ikke noe for hunder."
   },
@@ -290,7 +290,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1ce277a8edff352fbd4bc7aac3b398c4aaac52da408a2897cd5c7a1564417fc4"
+      "verified_hash": "f5c68286299938d131b3673f49316b4f2baa16133b438d64d77b2f3829472e7d"
     },
     "fi": {
       "status": "verified",

@@ -135,7 +135,7 @@
     "cs": "Malinký kousek obyčejného uvařeného jehněčího může být pamlsek. Uvařit ho a vyndat z něj kosti by měl dospělý.",
     "hr": "Mrvica obične kuhane janjetine može biti poslastica. Neka je odrasla osoba skuha i izvadi kosti.",
     "sv": "En pytteliten bit kokt lammkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
-    "da": "En lille smule almindeligt kogt lammekød kan være en godbid. En voksen skal lave kødet og tage knoglerne ud.",
+    "da": "En lille smule almindeligt kogt lammekød kan være en godbid. En voksen skal tilberede kødet og tage knoglerne ud.",
     "fi": "Pikkuinen pala maustamatonta keitettyä lampaanlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut.",
     "nb": "En bitteliten bit kokt lammekjøtt uten krydder kan være en godbit. En voksen bør lage det og ta ut beina."
   },
@@ -258,7 +258,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "532b5a18bb409f0edf9bcff5f11728aaa19c535cdb926781e5e08e4c394bc98a"
+      "verified_hash": "96222d9eee38aa539749e0f035221694fdf7f8acc5adf08b5bb5f9f3bea5c777"
     },
     "fi": {
       "status": "verified",

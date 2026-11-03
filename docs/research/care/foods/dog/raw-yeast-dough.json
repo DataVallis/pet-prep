@@ -66,7 +66,7 @@
     "cs": "Ne. Syrové, nepečené kynuté těsto je pro psy nebezpečné. V teplém žaludku dál kyne a způsobuje nadmutí, které může vést až k torzi žaludku. Kvasinky navíc vytvářejí alkohol, který může způsobit otravu alkoholem. Nebezpečné je právě nepečené těsto.",
     "hr": "Ne. Sirovo, nepečeno tijesto s kvascem opasno je za pse. U toplom želucu nastavlja rasti i nadima ga, što može dovesti do torzije želuca. Kvasac stvara i alkohol, koji može izazvati trovanje alkoholom. Opasno je nepečeno tijesto.",
     "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Det är den ogräddade degen som är farlig.",
-    "da": "Nej. Rå, ubagt gærdej er farlig for hunde. Den fortsætter med at hæve i den varme mave og giver oppustethed, som kan føre til mavedrejning. Gæren danner også alkohol, som kan give alkoholforgiftning. Faren er den ubagte dej.",
+    "da": "Nej. Rå, ubagt gærdej er farlig for hunde. Den fortsætter med at hæve i den varme mave og giver oppustethed, som kan føre til mavedrejning. Gæren danner også alkohol, som kan give alkoholforgiftning. Det er den ubagte dej, der er farlig.",
     "fi": "Ei saa. Raaka, paistamaton hiivataikina on vaarallista koiralle. Se jatkaa kohoamistaan lämpimässä mahalaukussa ja aiheuttaa turvotusta, joka voi johtaa mahalaukun kiertymään. Hiiva tuottaa myös alkoholia, joka voi aiheuttaa alkoholimyrkytyksen. Vaarallista on nimenomaan paistamaton taikina.",
     "nb": "Nei. Rå, ustekt gjærdeig er farlig for hunder. Den fortsetter å heve i den varme magen og gir oppblåsthet som kan føre til magedreining. Gjæren lager også alkohol, som kan gi alkoholforgiftning. Det er den ustekte deigen som er farlig."
   },
@@ -83,7 +83,7 @@
     "cs": "Kvasinky v teplém, vlhkém žaludku dál pracují: těsto se zvětšuje a hromadí se plyn, který může ucpat trávicí trakt nebo vzácněji způsobit otočení žaludku (torzi žaludku). Kvasinky zároveň produkují alkohol, který se rychle vstřebává do krve. Nejčastěji to postihuje psy, protože sežerou, co najdou.",
     "hr": "Kvasac nastavlja djelovati u toplom i vlažnom želucu: tijesto se širi i nakupljaju se plinovi, što može začepiti crijeva ili, rjeđe, izazvati torziju želuca. Istodobno kvasac stvara alkohol, koji se brzo upija u krv. Najčešće stradaju psi jer pojedu sve što nađu.",
     "sv": "Jästen fortsätter att arbeta i den varma, fuktiga magen: degen sväller och gas samlas, vilket kan orsaka stopp i mag-tarmkanalen eller, mer sällan, magomvridning. Samtidigt bildar jästen alkohol, som snabbt tas upp i blodet. Hundar drabbas oftast eftersom de äter vad de än hittar.",
-    "da": "Gæren arbejder videre i den varme, fugtige mave: Dejen udvider sig, og der ophobes gas, som kan blokere tarmen eller, sjældnere, få mavesækken til at dreje (mavedrejning). Samtidig danner gæren alkohol, som hurtigt optages i blodet. Hunde rammes oftest, fordi de spiser hvad som helst de finder.",
+    "da": "Gæren arbejder videre i den varme, fugtige mave: dejen udvider sig, og der ophobes gas, som kan blokere tarmen eller, sjældnere, få mavesækken til at dreje (mavedrejning). Samtidig danner gæren alkohol, som hurtigt optages i blodet. Hunde rammes oftest, fordi de spiser hvad som helst de finder.",
     "fi": "Hiiva jatkaa toimintaansa lämpimässä ja kosteassa mahalaukussa: taikina laajenee ja kaasua kertyy, mikä voi tukkia ruoansulatuskanavan tai harvemmin aiheuttaa mahalaukun kiertymän. Samalla hiiva tuottaa alkoholia, joka imeytyy nopeasti vereen. Koirilla tätä esiintyy useimmin, koska ne syövät kaiken, mitä löytävät.",
     "nb": "Gjæren fortsetter å virke i den varme, fuktige magen: Deigen utvider seg, og det samler seg gass, som kan blokkere tarmen eller, sjeldnere, få magen til å vri seg (magedreining). Samtidig lager gjæren alkohol, som raskt tas opp i blodet. Hunder rammes oftest fordi de spiser alt de finner."
   },
@@ -164,7 +164,7 @@
       "Opsvulmet, spændt mave",
       "Opkast eller opkastningsforsøg uden at der kommer noget op",
       "Usikker gang og forvirring",
-      "Døsighed eller nedtrykthed"
+      "Døsighed eller sløvhed"
     ],
     "fi": [
       "Turvonnut, kireä vatsa",
@@ -192,7 +192,7 @@
     "cs": "Okamžitě se obraťte na veterináře. Poznamenejte si, kolik těsta pes zhruba snědl a kdy. Nečekejte, až se objeví příznaky: nafukující se žaludek i otrava alkoholem vyžadují rychlou péči.",
     "hr": "Odmah se obrati veterinaru. Zapiši otprilike koliko je tijesta pas pojeo i kada. Ne čekaj da se pojave znakovi: i želudac koji se nadima i trovanje alkoholom zahtijevaju brzu pomoć.",
     "sv": "Kontakta veterinären direkt. Notera ungefär hur mycket deg hunden åt och när. Vänta inte på symtom: både en svällande mage och alkoholförgiftning kräver snabb vård.",
-    "da": "Kontakt straks din dyrlæge. Skriv ned omtrent hvor meget dej hunden har spist, og hvornår. Vent ikke på symptomer: Både en mave der svulmer op, og alkoholforgiftning kræver hurtig behandling.",
+    "da": "Kontakt straks din dyrlæge. Skriv ned omtrent hvor meget dej hunden har spist, og hvornår. Vent ikke på symptomer: både en mave der svulmer op, og alkoholforgiftning kræver hurtig behandling.",
     "fi": "Ota heti yhteyttä eläinlääkäriin. Kirjaa ylös, suunnilleen kuinka paljon taikinaa koira söi ja milloin. Älä odota oireita: laajeneva mahalaukku ja alkoholimyrkytys vaativat kumpikin nopeaa hoitoa.",
     "nb": "Kontakt dyrlegen med en gang. Skriv ned omtrent hvor mye deig hunden har spist, og når. Ikke vent på symptomer – både en mage som svulmer opp og alkoholforgiftning krever rask behandling."
   },
@@ -246,7 +246,7 @@
         "cs": "Nebezpečí, které tu popisujeme, se týká syrového, nepečeného kynutého těsta, protože kvasinky jsou v něm ještě živé a v žaludku dál pracují.",
         "hr": "Ovdje opisana opasnost odnosi se na sirovo, nepečeno tijesto s kvascem, jer je kvasac još živ i nastavlja djelovati u želucu.",
         "sv": "Faran som beskrivs här gäller rå, ogräddad deg med jäst, eftersom jästen fortfarande lever och fortsätter att arbeta i magen.",
-        "da": "Faren der beskrives her, gælder rå, ubagt gærdej, fordi gæren stadig er levende og arbejder videre i maven.",
+        "da": "Det er rå, ubagt gærdej, der er farlig, fordi gæren stadig er levende og arbejder videre i maven.",
         "fi": "Tässä kuvattu vaara koskee raakaa, paistamatonta hiivataikinaa, koska siinä hiiva on vielä elävää ja jatkaa toimintaansa mahalaukussa.",
         "nb": "Faren som beskrives her, gjelder rå, ustekt gjærdeig, fordi gjæren fortsatt lever og fortsetter å virke i magen."
       }
@@ -404,7 +404,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b6d45d85db005287218f49d538e98c1d23b41103fced012255978db9fc37c825"
+      "verified_hash": "9ca3f66b8a65dfd2e461090846ccbe11b223086480422d0cd4045967e3bffc7c"
     },
     "fi": {
       "status": "verified",

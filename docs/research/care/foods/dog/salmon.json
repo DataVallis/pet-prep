@@ -171,7 +171,7 @@
         "cs": "Není to dobrá volba: uzený a nakládaný losos (lox) obsahuje hodně soli.",
         "hr": "To nije dobar izbor: dimljeni i soljeni losos imaju puno soli.",
         "sv": "Det är inget bra val: rökt och gravad lax innehåller mycket salt.",
-        "da": "Det er ikke et godt valg: Røget og saltet laks indeholder meget salt.",
+        "da": "Det er ikke et godt valg: røget og saltet laks indeholder meget salt.",
         "fi": "Se ei ole hyvä valinta: savulohessa ja graavilohessa on paljon suolaa.",
         "nb": "Det er ikke noe godt valg: Røkt og saltet laks (lox) inneholder mye salt."
       }
@@ -338,7 +338,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8c92a018276d5a0f059056c648f11be026905fe32847cb81cf0d32b624f41dc6"
+      "verified_hash": "aa25cee0dbd69e9a9f13e424f3b36caad2c1abff0ac79744a11e2dc59f6ae56c"
     },
     "fi": {
       "status": "verified",

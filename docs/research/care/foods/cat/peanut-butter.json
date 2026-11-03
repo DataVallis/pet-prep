@@ -177,7 +177,7 @@
     "cs": "Olíznutí obyčejného arašídového másla pravděpodobně nebude nic vážného; sledujte, zda se neobjeví zvracení nebo průjem. Pokud arašídové máslo obsahuje xylitol, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, poznamenejte si, kolik ho kočka snědla, a nečekejte na příznaky.",
     "hr": "Jedno liznuće običnog maslaca od kikirikija vjerojatno nije ozbiljno; prati pojavu povraćanja ili proljeva. Ako maslac od kikirikija sadrži ksilitol, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, zapiši koliko je pojedeno i ne čekaj da se pojave znakovi.",
     "sv": "Om katten bara har slickat i sig lite naturellt jordnötssmör är det sannolikt inte allvarligt; håll utkik efter kräkningar eller diarré. Om jordnötssmöret innehåller xylitol, vänd dig direkt till din veterinär eller en giftrådgivning för djur, notera hur mycket katten åt och vänta inte på symtom.",
-    "da": "Et enkelt slik naturel peanutbutter er næppe alvorligt; hold øje med opkast eller diarré. Hvis peanutbutteren indeholder xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr, skrive ned hvor meget der er spist, og ikke vente på symptomer.",
+    "da": "En enkelt slikning naturel peanutbutter er næppe alvorligt; hold øje med opkast eller diarré. Hvis peanutbutteren indeholder xylitol, skal du straks kontakte din dyrlæge eller en giftrådgivning for dyr, skrive ned hvor meget der er spist, og ikke vente på symptomer.",
     "fi": "Yksi nuolaisu maustamatonta maapähkinävoita ei todennäköisesti ole vakava asia; seuraa, tuleeko oksentelua tai ripulia. Jos maapähkinävoissa on ksylitolia, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, kirjaa ylös syöty määrä äläkä odota oireita.",
     "nb": "Et lite slikk naturelt peanøttsmør er neppe alvorlig; følg med på oppkast eller diaré. Hvis peanøttsmøret inneholder xylitol, må du kontakte dyrlegen eller giftinformasjon for dyr med en gang og skrive ned hvor mye som ble spist. Ikke vent på symptomer."
   },
@@ -194,7 +194,7 @@
     "cs": "Pokud s tím veterinář souhlasí: jen přírodní arašídové máslo bez xylitolu a konzervantů, výjimečně na olíznutí, ne pravidelně.",
     "hr": "Samo uz suglasnost veterinara: prirodni maslac od kikirikija, bez ksilitola i konzervansa, tek rijetko liznuće, ne kao navika.",
     "sv": "Om veterinären tycker att det går bra: bara naturellt jordnötssmör, utan xylitol och konserveringsmedel, bara lite att slicka på någon enstaka gång, inte som en vana.",
-    "da": "Hvis din dyrlæge synes det er i orden: kun naturel peanutbutter uden xylitol og konserveringsmidler, som et sjældent slik – ikke som en vane.",
+    "da": "Hvis din dyrlæge siger god for det: kun naturel peanutbutter uden xylitol og konserveringsmidler, som en sjælden slikning – ikke som en vane.",
     "fi": "Jos eläinlääkäri hyväksyy: vain luonnollista maapähkinävoita ilman ksylitolia ja säilöntäaineita, harvoin pieni nuolaisu, ei tapana.",
     "nb": "Hvis dyrlegen synes det er greit: bare naturlig peanøttsmør uten xylitol eller konserveringsmidler, som et sjeldent slikk, ikke som en vane."
   },
@@ -344,7 +344,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "73fbe040702984d9751a7b2cb9bbc0873e7e26ed638fcce09273ca21eba80c9a"
+      "verified_hash": "58fd5b222241005945b192bf2764898f4b5fa62f24f1323dc28b3c0e42e663cc"
     },
     "fi": {
       "status": "verified",

@@ -83,7 +83,7 @@
     "cs": "Pet Poison Helpline na stránce o podzimních potravinách bezpečných pro domácí zvířata, která zmiňuje i kočky, uvádí, že brusinky jsou pro domácí zvířata bezpečné syrové i zpracované. Sušené brusinky, džus, omáčka a želé často obsahují přidaný cukr nebo jiná sladidla a některé výrobky mohou obsahovat toxické složky, jako je xylitol nebo deriváty hroznů. Kočky jsou obligátní masožravci a ovoce nepotřebují, pamlsky by měly tvořit jen malou část denní stravy a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Pet Poison Helpline na stranici o jesenskim namirnicama sigurnima za ljubimce, koja spominje i mačke, navodi da su brusnice sigurne za ljubimce i sirove i prerađene. Sušene brusnice, sok, umak i žele često sadrže dodan šećer ili druga sladila, a neki proizvodi mogu sadržavati otrovne sastojke poput ksilitola ili derivata grožđa. Mačke su obligatni mesojedi i ne trebaju voće, poslastice trebaju ostati mali dio dnevnog obroka, a bilo koji biljni materijal može izazvati povraćanje ili želučane tegobe.",
     "sv": "Pet Poison Helpline skriver på en sida om höstens husdjurssäkra mat, som även nämner katter, att tranbär är säkra för husdjur både råa och bearbetade. Torkade tranbär, juice, sås och gelé innehåller ofta tillsatt socker eller andra sötningsmedel, och vissa produkter kan innehålla giftiga ingredienser som xylitol eller ingredienser från vindruvor. Katter är obligata köttätare och behöver inte frukt, godbitar ska bara vara en liten del av den dagliga maten, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "På en side om efterårsmad der er sikker for kæledyr, og som også nævner katte, skriver Pet Poison Helpline at tranebær er sikre for kæledyr, både rå og forarbejdede. Tørrede tranebær, juice, sauce og gelé indeholder ofte tilsat sukker eller andre sødestoffer, og nogle produkter kan indeholde giftige ingredienser som xylitol eller ingredienser fra vindruer. Katte er obligate kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af den daglige mad, og alt plantemateriale kan give opkast eller dårlig mave.",
+    "da": "På en side om efterårsmad der er sikker for kæledyr, og som også nævner katte, skriver Pet Poison Helpline at tranebær er sikre for kæledyr, både rå og forarbejdede. Tørrede tranebær, juice, sauce og gelé indeholder ofte tilsat sukker eller andre sødestoffer, og nogle produkter kan indeholde giftige ingredienser som xylitol eller ingredienser fra vindruer. Katte er rene kødædere og har ikke brug for frugt, godbidder bør kun udgøre en lille del af det daglige foder, og alt plantemateriale kan give opkast eller dårlig mave.",
     "fi": "Pet Poison Helpline kertoo lemmikeille turvallisia syysruokia käsittelevällä sivullaan, joka mainitsee myös kissat, että karpalot ovat lemmikeille turvallisia sekä raakoina että jalostettuina. Kuivatuissa karpaloissa, mehussa, kastikkeessa ja hyytelössä on usein lisättyä sokeria tai muita makeutusaineita, ja joissakin tuotteissa voi olla myrkyllisiä ainesosia, kuten ksylitolia tai viinirypäleestä peräisin olevia aineita. Kissat ovat pakollisia lihansyöjiä eivätkä tarvitse hedelmiä, herkkujen pitäisi olla vain pieni osa päivittäisestä ruoasta, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja.",
     "nb": "Pet Poison Helpline skriver på en side om trygg høstmat for kjæledyr, som også nevner katter, at tranebær er trygge for kjæledyr både rå og bearbeidede. Tørkede tranebær, juice, saus og gelé inneholder ofte tilsatt sukker eller andre søtstoffer, og noen produkter kan inneholde giftige ingredienser som xylitol eller ingredienser fra druer. Katter er obligate kjøttetere og trenger ikke frukt, godbiter bør være en liten del av den daglige maten, og alt plantemateriale kan gi oppkast eller urolig mage."
   },
@@ -118,7 +118,7 @@
     "cs": "Občas pár bobulí, započítaných do denní dávky krmiva vaší kočky. U sušených brusinek, džusu, omáčky nebo želé nejdřív zkontrolujte na etiketě, zda neobsahují xylitol nebo složky z hroznů.",
     "hr": "Nekoliko bobica povremeno, uračunato u dnevni obrok tvoje mačke. Kod sušenih brusnica, soka, umaka ili želea najprije na deklaraciji provjeri ima li ksilitola ili sastojaka od grožđa.",
     "sv": "Några bär då och då, inräknade i kattens dagliga matranson. För torkade tranbär, juice, sås eller gelé: kolla först innehållsförteckningen efter xylitol eller ingredienser från vindruvor.",
-    "da": "Nogle få bær en gang imellem, regnet med i kattens daglige mad. Ved tørrede tranebær, juice, sauce eller gelé skal du først tjekke varedeklarationen for xylitol eller ingredienser fra vindruer.",
+    "da": "Nogle få bær en gang imellem, medregnet i kattens daglige foder. Ved tørrede tranebær, juice, sauce eller gelé skal du først tjekke varedeklarationen for xylitol eller ingredienser fra vindruer.",
     "fi": "Muutama marja silloin tällöin, osana kissasi päivittäistä ruoka-annosta. Tarkista kuivattujen karpaloiden, mehun, kastikkeen tai hyytelön pakkausmerkinnöistä ensin, ettei niissä ole ksylitolia tai viinirypäleestä peräisin olevia ainesosia.",
     "nb": "Noen få bær nå og da, regnet med i kattens daglige matmengde. For tørkede tranebær, juice, saus eller gelé: Se først etter xylitol eller ingredienser fra druer på etiketten."
   },
@@ -171,7 +171,7 @@
         "cs": "Sušené brusinky často obsahují přidaný cukr nebo sladidla. Nejdřív zkontrolujte etiketu a vyhněte se všem výrobkům s xylitolem nebo se složkami z hroznů.",
         "hr": "Sušene brusnice često imaju dodan šećer ili sladila. Najprije provjeri deklaraciju i preskoči svaki proizvod s ksilitolom ili sastojcima od grožđa.",
         "sv": "Torkade tranbär har ofta tillsatt socker eller sötningsmedel. Kolla först innehållsförteckningen och hoppa över produkter med xylitol eller ingredienser från vindruvor.",
-        "da": "Tørrede tranebær har ofte tilsat sukker eller sødestoffer. Tjek først varedeklarationen, og spring ethvert produkt med xylitol eller ingredienser fra vindruer over.",
+        "da": "Tørrede tranebær har ofte tilsat sukker eller sødestoffer. Tjek først varedeklarationen, og drop produkter med xylitol eller ingredienser fra vindruer.",
         "fi": "Kuivatuissa karpaloissa on usein lisättyä sokeria tai makeutusaineita. Tarkista ensin pakkausmerkinnät ja jätä väliin tuotteet, joissa on ksylitolia tai viinirypäleestä peräisin olevia ainesosia.",
         "nb": "Tørkede tranebær har ofte tilsatt sukker eller søtstoffer. Sjekk etiketten først, og hopp over alle produkter med xylitol eller ingredienser fra druer."
       }
@@ -338,7 +338,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "addf0ce6850aef0d730601193992010324a41dd837a649f7dd16d37fc6951dae"
+      "verified_hash": "8541333887cccf43f02169c6e90c507f976a8ff115bf6f0f76e22d43d6460cd6"
     },
     "fi": {
       "status": "verified",

@@ -298,7 +298,7 @@
         "cs": "Co se týče bakterií a parazitů, ne: lyofilizace není rovnocenná tepelné úpravě.",
         "hr": "Ne kad je riječ o klicama: što se tiče bakterija i parazita, liofilizacija nije isto što i termička obrada.",
         "sv": "Inte när det gäller smitta: mot bakterier och parasiter är frystorkning inte likvärdigt med tillagning.",
-        "da": "Ikke hvad angår bakterier: Frysetørring er ikke det samme som tilberedning, når det gælder bakterier og parasitter.",
+        "da": "Nej, ikke hvad angår smitstoffer: frysetørring er ikke det samme som tilberedning, når det gælder bakterier og parasitter.",
         "fi": "Ei taudinaiheuttajien osalta: bakteerien ja loisten kannalta pakastekuivaus ei vastaa kypsentämistä.",
         "nb": "Ikke med tanke på smitte: Frysetørking er ikke det samme som varmebehandling når det gjelder bakterier og parasitter."
       }
@@ -451,7 +451,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "93274c6c506dcf35cea1f1073eacc44038f6ab0206ab6568277b2daf56222681"
+      "verified_hash": "c745e4240de76e5b301f99817344779008cae7817acf85d9c6dc99535a02b1f8"
     },
     "fi": {
       "status": "verified",

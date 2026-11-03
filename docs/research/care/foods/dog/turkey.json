@@ -83,7 +83,7 @@
     "cs": "Krůtí maso není jedovaté, záleží ale na tom, jak je připravené. Kůže a tuk jsou těžké a mohou způsobit zánět slinivky břišní, zatímco koření navíc může podráždit psí žaludek. Cibule a česnek mohou být pro psy jedovaté. Tepelně upravené drůbeží kosti jsou křehké a mohou se tříštit. Bílé maso je libovější než tmavé.",
     "hr": "Puretina nije otrovna, ali važno je kako je pripremljena. Koža i masnoća teško se probavljaju i mogu izazvati upalu gušterače, a dodatni začini mogu nadražiti pseći želudac. Luk i češnjak mogu biti otrovni za pse. Termički obrađene kosti peradi krhke su i mogu se raspucati na oštre komadiće. Bijelo meso posnije je od tamnog.",
     "sv": "Kalkon är inte giftig, men tillagningen spelar roll. Skinn och fett är mäktiga och kan orsaka bukspottkörtelinflammation (pankreatit), och extra kryddor kan irritera hundens mage. Lök och vitlök kan vara giftiga för hundar. Tillagade fågelben är sköra och kan splittras. Ljust kött är magrare än mörkt.",
-    "da": "Kalkun er ikke giftig, men tilberedningen betyder noget. Skind og fedt er meget fedtrige og kan give betændelse i bugspytkirtlen, mens ekstra krydderier kan irritere hundens mave. Løg og hvidløg kan være giftige for hunde. Tilberedte fjerkræknogler er skøre og kan splintre. Lyst kød er magrere end mørkt kød.",
+    "da": "Kalkun er ikke giftig, men tilberedningen betyder noget. Skind og fedt er meget fedtholdige og kan give betændelse i bugspytkirtlen, mens ekstra krydderier kan irritere hundens mave. Løg og hvidløg kan være giftige for hunde. Tilberedte fjerkræknogler er skøre og kan splintre. Lyst kød er magrere end mørkt kød.",
     "fi": "Kalkkuna ei ole myrkyllistä, mutta valmistustapa ratkaisee. Nahka ja rasva ovat raskaita ja voivat aiheuttaa haimatulehduksen, ja ylimääräiset mausteet voivat ärsyttää koiran vatsaa. Sipuli ja valkosipuli voivat olla koirille myrkyllisiä. Kypsennetyt siipikarjan luut ovat hauraita ja voivat sirpaloitua. Vaalea liha on vähärasvaisempaa kuin tumma.",
     "nb": "Kalkun er ikke giftig, men det har betydning hvordan den er tilberedt. Skinn og fett er tung kost og kan gi betennelse i bukspyttkjertelen, mens mye krydder kan irritere magen til hunden. Løk og hvitløk kan være giftig for hunder. Tilberedte fuglebein er skjøre og kan splintres. Lyst kjøtt er magrere enn mørkt kjøtt."
   },
@@ -308,7 +308,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "547104a719ec04c97f1ce8026a567a9fafdcb30942820c06505278b0a499efea"
+      "verified_hash": "dfb5284e0634423723761d9a81dc254470851527e5fcebdb53496500d6fd61fe"
     },
     "fi": {
       "status": "verified",

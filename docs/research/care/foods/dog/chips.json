@@ -83,7 +83,7 @@
     "cs": "Podle AKC může pes slaná jídla, jako jsou brambůrky, dostat v omezeném množství, ale nadbytek soli psům nesvědčí a může způsobit zadržování tekutin. Velké množství soli může vést k otravě solí. Cibule a česnek jsou pro psy jedovaté v jakékoli podobě, včetně prášku.",
     "hr": "AKC navodi da pas može dobiti slanu hranu poput čipsa u ograničenim količinama, ali da višak soli nije dobar za pse i može izazvati zadržavanje tekućine. Velike količine soli mogu dovesti do otrovanja solju. Luk i češnjak otrovni su za pse u svakom obliku, i u prahu.",
     "sv": "AKC skriver att en hund kan få salt mat som potatischips i begränsade mängder, men för mycket salt är inte bra för hundar och kan ge vätskeansamling. Stora mängder salt kan leda till saltförgiftning. Lök och vitlök är giftiga för hundar i alla former, även som pulver.",
-    "da": "AKC skriver at en hund kan få salt mad som chips i begrænsede mængder, men for meget salt er ikke godt for hunde og kan give væskeophobning. Store mængder salt kan føre til saltforgiftning. Løg og hvidløg er giftige for hunde i alle former, også som pulver.",
+    "da": "AKC skriver at en hund må få salt mad som chips i begrænsede mængder, men for meget salt er ikke godt for hunde og kan give væskeophobning. Store mængder salt kan føre til saltforgiftning. Løg og hvidløg er giftige for hunde i alle former, også som pulver.",
     "fi": "AKC:n mukaan koira voi syödä suolaisia ruokia, kuten perunalastuja, rajoitetusti, mutta liika suola ei ole koirille hyväksi ja voi aiheuttaa nesteen kertymistä elimistöön. Suuret määrät suolaa voivat johtaa suolamyrkytykseen. Sipuli ja valkosipuli ovat koirille myrkyllisiä kaikissa muodoissa, myös jauheina.",
     "nb": "AKC skriver at en hund kan få salt mat som potetgull i begrensede mengder, men for mye salt er ikke bra for hunder og kan gi væskeansamling. Store mengder salt kan føre til saltforgiftning. Løk og hvitløk er giftig for hunder i alle former, også som pulver."
   },
@@ -173,7 +173,7 @@
       "Darrningar eller kramper"
     ],
     "da": [
-      "Stor tørst og tisser meget",
+      "Stor tørst og hyppig vandladning",
       "Opkast, ofte inden for få timer",
       "Diarré",
       "Usikker gang, træthed",
@@ -400,7 +400,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "66acc7f3632aaec018f2b3c4ec271aea859849017f226804cc16a0e6463360e4"
+      "verified_hash": "0a490d1a61af7c9bb1b17aa108d57b4c25160ef51268aaca9587eef6964b16d1"
     },
     "fi": {
       "status": "verified",

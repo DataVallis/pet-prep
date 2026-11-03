@@ -66,7 +66,7 @@
     "cs": "Ne, jablečným jádrům je lepší se vyhnout. Obsahují kyanid a ohryzek se stopkou kolem nich může způsobit dušení. Malé množství jader pravděpodobně neublíží, ale než se o jablko podělíte, odstraňte jádra i ohryzek.",
     "hr": "Ne, sjemenke jabuke treba izbjegavati. Sadrže cijanid, a sjemena kućica i peteljka oko njih mogu izazvati gušenje. Malo sjemenki vjerojatno neće naštetiti, ali prije nego što psu daš jabuku, ukloni sjemenke i sjemenu kućicu.",
     "sv": "Nej, äppelkärnor ska undvikas. De innehåller cyanid, och kärnhuset och skaftet runt dem kan få hunden att sätta i halsen. Några få kärnor gör troligen ingen skada, men ta bort kärnor och kärnhus innan du delar med dig av äpplet.",
-    "da": "Nej, æblekerner bør undgås. De indeholder cyanid, og kernehuset og stilken omkring dem kan sætte sig fast i halsen på hunden. Nogle få kerner gør sandsynligvis ikke skade, men fjern kerner og kernehus før du deler æble med hunden.",
+    "da": "Nej, æblekerner bør undgås. De indeholder cyanid, og kernehuset og stilken omkring dem kan sætte sig fast i hundens hals. Nogle få kerner gør sandsynligvis ikke skade, men fjern kerner og kernehus før du deler æble med hunden.",
     "fi": "Ei, omenansiemeniä on syytä välttää. Ne sisältävät syanidia, ja niitä ympäröivä siemenkota ja varsi voivat tukehduttaa koirasi. Muutama siemen tuskin aiheuttaa haittaa, mutta poista siemenet ja siemenkota, ennen kuin annat koirallesi omenaa.",
     "nb": "Nei, eplekjerner bør unngås. De inneholder cyanid, og kjernehuset og stilken rundt dem kan sette seg fast i halsen på hunden. Noen få kjerner gjør neppe skade, men fjern kjerner og kjernehus før du deler eple med hunden."
   },
@@ -83,7 +83,7 @@
     "cs": "ASPCA uvádí jabloň mezi rostlinami jedovatými pro psy: její stonky, listy a semena obsahují kyanid (z kyanogenních glykosidů). Podle AKC malé množství jader pravděpodobně neublíží a podle Pet Poison Helpline by pes musel sníst obrovské množství, aby to bylo důvodem k obavám. Řídíme se přísnějším hodnocením, protože jádra obsahují kyanid a ohryzek může navíc způsobit dušení nebo ucpání střev.",
     "hr": "ASPCA jabuku ubraja među biljke otrovne za pse: njezine peteljke, listovi i sjemenke sadrže cijanid (iz cijanogenih glikozida). AKC navodi da malo sjemenki vjerojatno neće naštetiti, a Pet Poison Helpline da bi ljubimac morao pojesti ogromne količine da bi to bilo zabrinjavajuće. Držimo se strožeg stajališta jer sjemenke sadrže cijanid, a sjemena kućica može izazvati i gušenje ili začepljenje crijeva.",
     "sv": "ASPCA anger att äppelträdet är giftigt för hundar: skaft, blad och kärnor innehåller cyanid (från cyanogena glykosider). AKC skriver att några få kärnor troligen inte gör någon skada, och Pet Poison Helpline skriver att ett djur måste äta enorma mängder för att det ska bli ett problem. Vi följer den strängare bedömningen eftersom kärnorna innehåller cyanid och kärnhuset dessutom kan orsaka kvävning eller tarmstopp.",
-    "da": "ASPCA opfører æbleplanten som giftig for hunde: stilke, blade og kerner indeholder cyanid (fra cyanogene glykosider). AKC skriver at nogle få kerner sandsynligvis ikke gør skade, og Pet Poison Helpline skriver at et dyr skal spise meget store mængder, før det giver grund til bekymring. Vi følger den strengere vurdering, fordi kernerne indeholder cyanid og kernehuset også kan sætte sig fast i halsen eller give tarmblokering.",
+    "da": "ASPCA fører æbleplanten på listen over giftige planter for hunde: stilke, blade og kerner indeholder cyanid (fra cyanogene glykosider). AKC skriver at nogle få kerner sandsynligvis ikke gør skade, og Pet Poison Helpline skriver at et dyr skal spise meget store mængder, før det giver grund til bekymring. Vi følger den strengere vurdering, fordi kernerne indeholder cyanid og kernehuset også kan sætte sig fast i halsen eller give tarmblokering.",
     "fi": "ASPCA luokittelee omenakasvin koirille myrkylliseksi: sen varret, lehdet ja siemenet sisältävät syanidia (peräisin syanogeenisista glykosideista). AKC:n mukaan muutama siemen tuskin aiheuttaa haittaa, ja Pet Poison Helplinen mukaan lemmikin pitäisi syödä valtavia määriä, jotta siitä olisi syytä huolestua. Noudatamme tiukempaa linjaa, koska siemenet sisältävät syanidia ja siemenkota voi myös aiheuttaa tukehtumisen tai suolitukoksen.",
     "nb": "ASPCA oppgir epleplanten som giftig for hunder: Stilker, blader og kjerner inneholder cyanid (fra cyanogene glykosider). AKC skriver at noen få kjerner neppe gjør skade, og Pet Poison Helpline skriver at et dyr må spise enorme mengder før det blir grunn til bekymring. Vi følger det strengeste synet fordi kjernene inneholder cyanid og kjernehuset også kan føre til kvelning eller tarmblokkering."
   },
@@ -175,7 +175,7 @@
     "da": [
       "Teglstensrødt tandkød eller andre teglstensrøde slimhinder",
       "Udvidede pupiller",
-      "Vejrtrækningsbesvær, hiven efter vejret",
+      "Vejrtrækningsbesvær, pesen",
       "Chok",
       "Tegn på fordøjelsesproblemer eller blokering"
     ],
@@ -389,7 +389,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a7331ffbb78926f8013f266cddafd7ec3590fac1112a3e1185063cabf2198e87"
+      "verified_hash": "5d741be68d3fc3d1f4b97b418086a805f4bb713d62e7093ba10430f10eb139af"
     },
     "fi": {
       "status": "verified",

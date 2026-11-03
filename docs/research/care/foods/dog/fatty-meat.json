@@ -176,7 +176,7 @@
       "Opkast, som nogle gange begynder 1–4 dage efter det fede måltid",
       "Mavesmerter (hunden kan strække sig i en »bedestilling«)",
       "Diarré",
-      "Vil ikke spise",
+      "Spiser ikke",
       "Træthed, feber"
     ],
     "fi": [
@@ -448,7 +448,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6058cd9e6d9428338be1022441ae75f381cce25d6463f1384ed3d16beec74fac"
+      "verified_hash": "274aa8e87c382461c834bdb630a655e46367bb71e83be51f6b77df06fc4e19f2"
     },
     "fi": {
       "status": "verified",

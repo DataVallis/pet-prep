@@ -66,7 +66,7 @@
     "cs": "Ano. Čisté, nekořeněné tepelně upravené kuřecí maso, oddělené od kostí, můžete psovi podávat samotné. Nikdy nedávejte tepelně upravené kuřecí kosti, které se snadno tříští, a vynechte kořeněné, tučné nebo syrové kuřecí maso.",
     "hr": "Da. Obična, nezačinjena, termički obrađena piletina skinuta s kosti može se psu dati i sama, bez dodataka. Nikad ne daj termički obrađene pileće kosti, koje se lako lome u krhotine, i preskoči začinjenu, masnu ili sirovu piletinu.",
     "sv": "Ja. Okryddad, tillagad kyckling utan ben kan ges till hunden som den är. Ge aldrig tillagade kycklingben, som splittras lätt, och undvik kryddad, fet eller rå kyckling.",
-    "da": "Ja. Ren, ukrydret, tilberedt kylling, taget af benet, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over.",
+    "da": "Ja. Ren, ukrydret, tilberedt kylling, uden ben, kan gives til en hund uden tilbehør. Giv aldrig tilberedte kyllingeknogler, som let splintrer, og spring krydret, fed eller rå kylling over.",
     "fi": "Saa. Maustamatonta kypsennettyä kanaa voi antaa koiralle sellaisenaan, kun liha on irrotettu luista. Älä koskaan anna kypsennettyjä kananluita, jotka sirpaloituvat helposti, ja jätä väliin maustettu, rasvainen tai raaka kana.",
     "nb": "Ja. Naturell, ukrydret, tilberedt kylling uten bein kan gis til en hund som den er. Gi aldri tilberedte kyllingbein, som lett splintres, og dropp krydret, fet eller rå kylling."
   },
@@ -83,7 +83,7 @@
     "cs": "Nekořeněné pečené, pošírované, grilované nebo zapékané kuřecí maso je samotné v pořádku. Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva. Syrové kuřecí maso se nedoporučuje kvůli salmonele a dalším bakteriím. Stehenní maso má zhruba dvakrát víc tuku než prsa a tučná jídla mohou podráždit žaludek.",
     "hr": "Nezačinjena piletina – pečena, poširana, s roštilja ili iz pećnice – u redu je i sama. Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva. Sirova piletina ne preporučuje se zbog salmonele i drugih bakterija. Meso bataka ima otprilike dvostruko više masti od prsa, a masna hrana može izazvati probavne tegobe.",
     "sv": "Okryddad kyckling som är ugnsstekt, pocherad, grillad eller ugnsbakad går bra som den är. Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål i tarmen. Rå kyckling rekommenderas inte på grund av salmonella och andra bakterier. Lårkött har ungefär dubbelt så mycket fett som bröstfilé, och fet mat kan ge orolig mage.",
-    "da": "Ukrydret kylling der er ovnstegt, pocheret, grillet eller bagt, er fint i sig selv. Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen. Rå kylling frarådes på grund af salmonella og andre bakterier. Lårkød har omtrent dobbelt så meget fedt som brystkød, og fed mad kan give dårlig mave.",
+    "da": "Ukrydret kylling der er ovnstegt, pocheret, grillet eller bagt, er fint i sig selv. Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller gennembore tarmen. Rå kylling frarådes på grund af salmonella og andre bakterier. Lårkød har omtrent dobbelt så meget fedt som brystkød, og fed mad kan give dårlig mave.",
     "fi": "Maustamaton paahdettu, haudutettu, grillattu tai uunissa paistettu kana sopii sellaisenaan. Kypsennetyt kananluut sirpaloituvat helposti ja voivat aiheuttaa tukehtumisen tai puhkaista suoliston. Raakaa kanaa ei suositella salmonellan ja muiden bakteerien vuoksi. Reisilihassa on noin kaksi kertaa niin paljon rasvaa kuin rintalihassa, ja rasvaiset ruoat voivat aiheuttaa vatsavaivoja.",
     "nb": "Ukrydret kylling som er ovnsstekt, posjert, grillet eller bakt, går fint å gi som den er. Tilberedte kyllingbein splintres lett og kan sette seg fast i halsen eller lage hull i tarmen. Rå kylling anbefales ikke på grunn av salmonella og andre bakterier. Lårkjøtt har omtrent dobbelt så mye fett som bryst, og fet mat kan gi urolig mage."
   },
@@ -118,7 +118,7 @@
     "cs": "Čisté kuřecí maso (nejlibovější jsou prsa), bez koření, důkladně tepelně upravené, oddělené od kostí, v malých kouscích.",
     "hr": "Obična piletina (prsa su najposnija), potpuno termički obrađena, bez začina, skinuta s kosti, u malim komadićima.",
     "sv": "Okryddad, genomstekt eller genomkokt kyckling (bröstfilé är magrast), utan ben, i små bitar.",
-    "da": "Ren, tilberedt kylling (brystkød er magrest), ukrydret, gennemtilberedt, taget af benet, i små stykker.",
+    "da": "Ren, tilberedt kylling (brystkød er magrest), ukrydret, gennemtilberedt, uden ben, i små stykker.",
     "fi": "Pelkkää, kokonaan kypsennettyä kanaa (rintaliha on vähärasvaisinta) ilman mausteita, luista irrotettuna ja pieninä paloina.",
     "nb": "Naturell, tilberedt kylling (brystfilet er magrest), uten krydder, gjennomstekt, uten bein, i små biter."
   },
@@ -171,7 +171,7 @@
         "cs": "Tepelně upravené kuřecí kosti se snadno tříští a mohou způsobit dušení nebo protržení střeva.",
         "hr": "Termički obrađene pileće kosti lako se lome u krhotine i mogu izazvati gušenje ili probušiti crijeva.",
         "sv": "Tillagade kycklingben splittras lätt och kan orsaka kvävning eller hål i tarmen.",
-        "da": "Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller lave hul i tarmen.",
+        "da": "Tilberedte kyllingeknogler splintrer let og kan sætte sig fast i halsen eller gennembore tarmen.",
         "fi": "Kypsennetyt kananluut sirpaloituvat helposti ja voivat aiheuttaa tukehtumisen tai puhkaista suoliston.",
         "nb": "Tilberedte kyllingbein splintres lett og kan sette seg fast i halsen eller lage hull i tarmen."
       }
@@ -300,7 +300,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "345b6c1d7ff879279272ba66cc212c0ba0b37a6749b36a40c43976266d38bfca"
+      "verified_hash": "640684896b5cf497cb6023bb1e06a6f7cc9f11d093e434f0e96037288a8a9006"
     },
     "fi": {
       "status": "verified",

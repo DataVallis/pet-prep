@@ -192,7 +192,7 @@
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka spolkla (nápoj, mletou kávu, zrna, čajový sáček nebo tablety), kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je mačka progutala (piće, talog, zrna, vrećicu čaja ili tablete), koliko i kada. Ne čekaj da se pojave znakovi i ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Vänd dig direkt till din veterinär eller en giftrådgivning för djur. Notera vad katten fick i sig (dryck, kaffesump, bönor, tepåse eller tabletter), hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drik, kaffegrums, bønner, tebrev eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har slugt (drikkevare, kaffegrums, bønner, tepose eller tabletter), hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi nieli (juomaa, jauhettua kahvia, papuja, teepussin tai tabletteja), kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva katten har fått i seg (drikke, kaffegrut, bønner, tepose eller tabletter), hvor mye og når. Ikke vent på symptomer, og ikke prøv å få katten til å kaste opp selv."
   },
@@ -381,7 +381,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ea8b3f96337128a9946e11fdd6a0d86317f998c1a31565b07d44be8754fd3e45"
+      "verified_hash": "6980227576b0ff7827f89252195c59fd1fb8f30d86d2e2e02cc0611a0238969b"
     },
     "fi": {
       "status": "verified",

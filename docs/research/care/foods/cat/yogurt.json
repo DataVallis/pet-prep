@@ -66,7 +66,7 @@
     "cs": "Ne, jogurtu se raději vyhněte. Je to mléčný výrobek a dospělé kočky mají málo enzymu, který tráví mléčný cukr, takže mléčné výrobky mohou způsobit průjem nebo podráždění žaludku. Veterinární příručky nedoporučují krmit kočky mléčnými výrobky.",
     "hr": "Ne, jogurt je bolje izbjegavati. Mliječni je proizvod, a odrasle mačke imaju malo enzima koji probavlja mliječni šećer, pa mliječni proizvodi mogu izazvati proljev ili želučane tegobe. Veterinarski priručnici savjetuju da se mačkama ne daju mliječni proizvodi.",
     "sv": "Nej, yoghurt är bäst att undvika. Det är en mejeriprodukt, och vuxna katter har lite av enzymet som bryter ner mjölksocker, så mejeriprodukter kan ge diarré eller orolig mage. Veterinärguider avråder från att ge katter mejeriprodukter.",
-    "da": "Nej, yoghurt bør undgås. Yoghurt er et mejeriprodukt, og voksne katte har kun lidt af det enzym der fordøjer mælkesukker, så mejeriprodukter kan give diarré eller dårlig mave. Veterinære vejledninger fraråder at give katte mejeriprodukter.",
+    "da": "Nej, yoghurt bør undgås. Yoghurt er et mejeriprodukt, og voksne katte har kun lidt af det enzym der fordøjer mælkesukker, så mejeriprodukter kan give diarré eller dårlig mave. Dyrlægers vejledninger fraråder at give katte mejeriprodukter.",
     "fi": "Ei, jogurttia on parasta välttää. Se on maitotuote, ja aikuisilla kissoilla on vähän maitosokeria pilkkovaa entsyymiä, joten maitotuotteet voivat aiheuttaa ripulia tai vatsavaivoja. Eläinlääkäreiden oppaat neuvovat olemaan antamatta kissoille maitotuotteita.",
     "nb": "Nei, yoghurt bør unngås. Den er et meieriprodukt, og voksne katter har lite av enzymet som fordøyer melkesukker, så meieriprodukter kan gi diaré eller urolig mage. Veterinærmedisinske veiledninger fraråder å gi katter meieriprodukter."
   },
@@ -365,7 +365,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "466c60b0d1954e94526627d6c6a84528467e0660448a6ef99a2a06eb933fe45c"
+      "verified_hash": "3a006c4d24bb0411a8087e0ea7b6e92e57a2aa8200013c281644b5f34f1b1a62"
     },
     "fi": {
       "status": "verified",

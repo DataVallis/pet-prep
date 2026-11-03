@@ -66,7 +66,7 @@
     "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou.",
     "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne.",
     "sv": "Ja, några bitar helt genomkokta räkor utan tillsatser går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte.",
-    "da": "Ja, nogle få stykker almindelige, gennemtilberedte rejer er fine til hunde. Fjern først skal, hoved, ben og hale. Rå rejer kan indeholde skadelige smitstoffer, og friturestegte, panerede eller krydrede rejer er ikke egnede.",
+    "da": "Ja, nogle få stykker almindelige, gennemtilberedte rejer er fine til hunde. Fjern først skal, hoved, ben og hale. Rå rejer kan indeholde sygdomsfremkaldende bakterier, og friturestegte, panerede eller krydrede rejer er ikke egnede.",
     "fi": "Saa, muutama pala maustamatonta, täysin kypsennettyä katkarapua sopii koiralle. Poista ensin kuori, pää, jalat ja pyrstö. Raa’assa katkaravussa voi olla haitallisia taudinaiheuttajia, eivätkä friteeratut, leivitetyt tai maustetut katkaravut sovi koiralle.",
     "nb": "Ja, noen få biter gjennomkokte reker uten noe tilsatt er greit for hunder. Fjern skall, hode, bein og hale først. Rå reker kan inneholde skadelige smittestoffer, og frityrstekte, panerte eller krydrede reker passer ikke."
   },
@@ -83,7 +83,7 @@
     "cs": "Syrové korýše a měkkýše mohou obsahovat choroboplodné zárodky, které tepelná úprava zničí. Krunýře krevet mohou způsobit dušení a ucpání střev. Smažené nebo obalované krevety obsahují zbytečný tuk a olej. Krevety mají málo tuku a kalorií, ale hodně cholesterolu, takže klíčová je střídmost.",
     "hr": "Sirovi plodovi mora sadrže štetne uzročnike bolesti, koje termička obrada uništava. Oklop kozice može izazvati gušenje i začepljenje. Pržene ili pohane kozice donose nepotrebne masti i ulja. Kozice imaju malo masti i kalorija, ali puno kolesterola, pa je umjerenost ključna.",
     "sv": "Råa skaldjur innehåller skadliga smittämnen, som man undviker genom att tillaga dem. Räkskal kan orsaka kvävning och tarmstopp. Friterade eller panerade räkor tillför onödigt fett och olja. Räkor innehåller lite fett och kalorier men mycket kolesterol, så ge dem bara med måtta.",
-    "da": "Rå skaldyr indeholder skadelige smitstoffer, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde.",
+    "da": "Rå skaldyr kan indeholde sygdomsfremkaldende bakterier, som man undgår ved tilberedning. Rejeskaller kan sætte sig fast i halsen og give blokeringer. Friturestegte eller panerede rejer tilfører unødvendigt fedt og olie. Rejer indeholder lidt fedt og få kalorier, men meget kolesterol, så det vigtigste er at give dem med måde.",
     "fi": "Raa’oissa äyriäisissä on haitallisia taudinaiheuttajia, jotka kypsentäminen poistaa. Katkaravun kuoret aiheuttavat tukehtumisvaaran ja voivat johtaa tukoksiin. Friteeratuissa tai leivitetyissä katkaravuissa on tarpeettomia rasvoja ja öljyjä. Katkaravuissa on vähän rasvaa ja kaloreita mutta paljon kolesterolia, joten kohtuus on tärkeää.",
     "nb": "Rå skalldyr inneholder skadelige smittestoffer som du unngår ved å tilberede dem. Rekeskall kan sette seg fast i halsen og gi blokkering. Frityrstekte eller panerte reker gir unødvendig fett og olje. Reker inneholder lite fett og kalorier, men mye kolesterol, så det viktigste er måtehold."
   },
@@ -292,7 +292,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4702f09109b21832f4182c66f9ce5bb153f69b6b1e7d74bec10fae4fad653339"
+      "verified_hash": "e4d8bb0d661e8269709571df44d51c0841c22278fffef2ac7b256b8254db6e88"
     },
     "fi": {
       "status": "verified",

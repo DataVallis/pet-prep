@@ -214,7 +214,7 @@
         "cs": "Je guacamole pro psy bezpečné?",
         "hr": "Je li guacamole siguran za pse?",
         "sv": "Är guacamole säkert för hundar?",
-        "da": "Er guacamole sikkert for hunde?",
+        "da": "Er guacamole sikker for hunde?",
         "fi": "Onko guacamole koirille turvallista?",
         "nb": "Er guacamole trygt for hunder?"
       },
@@ -303,7 +303,7 @@
         "cs": "Zdroje se neshodují: některé uvádějí, že dužnina jedovatá není, jiné označují avokádo za jedovaté pro psy. Protože je navíc velmi tučné a pecka je nebezpečná, doporučujeme držet ho mimo dosah psa.",
         "hr": "Izvori se ne slažu: neki kažu da meso ploda nije otrovno, drugi avokado nazivaju otrovnim za pse. Budući da je i vrlo mastan, a koštica je opasna, savjetujemo da ga držiš podalje.",
         "sv": "Källorna är oense: vissa säger att fruktköttet inte är giftigt, andra kallar avokado giftig för hundar. Eftersom den också är mycket fet och kärnan är en fara råder vi dig att hålla den borta.",
-        "da": "Kilderne er uenige: nogle siger at frugtkødet ikke er giftigt, andre kalder avocado giftig for hunde. Fordi avocado også er meget fed og stenen er en risiko, råder vi til at holde den væk.",
+        "da": "Kilderne er uenige: nogle siger at frugtkødet ikke er giftigt, andre kalder avocado giftig for hunde. Fordi avocado også er meget fed og stenen er en risiko, anbefaler vi at holde den væk.",
         "fi": "Lähteet ovat eri mieltä: joidenkin mukaan hedelmäliha ei ole myrkyllistä, toisten mukaan avokado on koirille myrkyllinen. Koska se on myös hyvin rasvainen ja kivi on vaarallinen, suosittelemme pitämään sen poissa koiran ulottuvilta.",
         "nb": "Kildene er uenige: Noen sier at fruktkjøttet ikke er giftig, andre kaller avokado giftig for hunder. Fordi avokado også er svært fet og steinen er en fare, anbefaler vi å holde den unna."
       }
@@ -454,7 +454,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "270ead723eb347e7893c4441ec83bd8b24487f991eba0c15239e99debefcaea9"
+      "verified_hash": "1362032dc202c5889f6d96f2efb320e07bdb6d585591d53810624d6346763fd9"
     },
     "fi": {
       "status": "verified",

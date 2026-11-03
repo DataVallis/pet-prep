@@ -255,7 +255,7 @@
     "cs": "Pórek je bratranec cibule, takže pro kočky není bezpečný. Když ho kočička ochutná, řekni to dospělému.",
     "hr": "Poriluk je rođak luka, pa nije siguran za mace. Ako ga maca malo grickne, reci odrasloj osobi.",
     "sv": "Purjolök är släkt med vanlig lök, så den är inte säker för katter. Säg till en vuxen om katten smakar på den.",
-    "da": "Porrer er i familie med løg, så de er ikke sikre for katte. Sig det til en voksen hvis katten smager på en porre.",
+    "da": "Porrer er i familie med løg, så de er ikke sikre for katte. Sig det til en voksen hvis katten nasker af dem.",
     "fi": "Purjo on sipulin serkku, joten se ei ole turvallista kissoille. Kerro aikuiselle, jos kisu näykkii sitä.",
     "nb": "Purre er i slekt med løk, så den er ikke trygg for katter. Si fra til en voksen hvis pusen smaker på litt."
   },
@@ -457,7 +457,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7f2ada0920d1e99ccfe953a2228f8266627f86295c1d5b8acb0d1d2f858765d2"
+      "verified_hash": "b02f85fb2e65a7187b90e36cd93ec3346debd1311fa9ef4e17667542055226c3"
     },
     "fi": {
       "status": "verified",

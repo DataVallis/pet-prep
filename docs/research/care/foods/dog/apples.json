@@ -171,7 +171,7 @@
         "cs": "Čisté jablečné pyré je s mírou v pořádku, ale většina pyré má přidaný cukr, proto vždy volte neslazené.",
         "hr": "Obični pire od jabuka u redu je u umjerenim količinama, ali većina ima dodani šećer, zato uvijek biraj nezaslađeni.",
         "sv": "Osötat äppelmos går bra med måtta, men det mesta äppelmoset har tillsatt socker, så välj alltid osötat.",
-        "da": "Almindelig æblemos er fint med måde, men det meste æblemos er tilsat sukker, så vælg altid usødet.",
+        "da": "Almindelig æblemos er fint med måde, men det meste æblemos indeholder tilsat sukker, så vælg altid usødet.",
         "fi": "Tavallinen omenasose sopii kohtuudella, mutta useimpiin omenasoseisiin on lisätty sokeria, joten valitse aina makeuttamaton.",
         "nb": "Naturell eplemos er greit med måte, men det meste av eplemos har tilsatt sukker, så velg alltid usøtet."
       }
@@ -207,7 +207,7 @@
         "cs": "Ne. Přidaného cukru a těsta je pro psa příliš; vyhněte se jablečným jídlům s přidaným cukrem nebo kořením, například muškátovým oříškem.",
         "hr": "Ne. Dodani šećer i tijesto previše su za pse; izbjegavaj jela od jabuka s dodanim šećerom ili začinima poput muškatnog oraščića.",
         "sv": "Nej. Det tillsatta sockret och pajdegen är för mycket för hundar. Undvik äppelrätter med tillsatt socker eller kryddor som muskot.",
-        "da": "Nej. Det tilsatte sukker og dejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
+        "da": "Nej. Det tilsatte sukker og tærtedejen er for meget for hunde; undgå æbleretter med tilsat sukker eller krydderier som muskatnød.",
         "fi": "Ei saa. Lisätty sokeri ja piirakkapohja ovat koirille liikaa; vältä omenaruokia, joissa on lisättyä sokeria tai mausteita, kuten muskottipähkinää.",
         "nb": "Nei. Det tilsatte sukkeret og paibunnen er for mye for hunder; unngå mat med eple som har tilsatt sukker eller krydder, som muskatnøtt."
       }
@@ -357,7 +357,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3320cbd2aa55291130e020b825f8faa84fee79e5e28364a18f624ddb898301ae"
+      "verified_hash": "c8c91d0172fd0dd5d7e96d2e21a4bfdf6591a8b0bc962cb59f5009781d66e23c"
     },
     "fi": {
       "status": "verified",

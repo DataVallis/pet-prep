@@ -83,7 +83,7 @@
     "cs": "Cats Protection řadí tepelně upraveného lososa bez kostí a koření mezi bezpečné sváteční pokrmy a uvádí, že malé množství tepelně upravené ryby, například lososa, je vhodné. Podle RSPCA Australia může být losos z konzervy v pramenité vodě občasným pamlskem. Syrové ryby jsou něco jiného: mohou přenášet bakterie a parazity.",
     "hr": "Cats Protection navodi termički obrađen losos bez kostiju i začina među sigurnom blagdanskom hranom i kaže da su male količine termički obrađene ribe, poput lososa, prikladne. RSPCA Australia navodi da losos iz konzerve u izvorskoj vodi može biti povremena poslastica. Sirova riba nešto je drugo: može sadržavati bakterije i parazite.",
     "sv": "Cats Protection räknar tillagad lax utan ben och kryddor till säker högtidsmat och skriver att små mängder tillagad fisk som lax passar. RSPCA Australia skriver att konserverad lax i vatten kan vara en godbit ibland. Rå fisk är något annat: den kan innehålla bakterier och parasiter.",
-    "da": "Cats Protection nævner tilberedt laks uden ben og krydderier blandt de sikre julefødevarer og skriver at små mængder tilberedt fisk som laks er egnede. Ifølge RSPCA Australia kan laks på dåse i vand være en godbid en gang imellem. Rå fisk er noget andet: Den kan indeholde bakterier og parasitter.",
+    "da": "Cats Protection nævner tilberedt laks uden ben og krydderier blandt sikker julemad og skriver at små mængder tilberedt fisk som laks er i orden. Ifølge RSPCA Australia kan laks på dåse i vand være en godbid en gang imellem. Rå fisk er noget andet: Den kan indeholde bakterier og parasitter.",
     "fi": "Cats Protection mainitsee kypsennetyn, ruodottoman ja maustamattoman lohen turvallisten juhlaruokien joukossa ja kertoo, että pienet määrät kypsennettyä kalaa, kuten lohta, sopivat kissalle. RSPCA Australian mukaan lähdeveteen säilötty purkkilohi voi olla satunnainen herkku. Raaka kala on eri asia: siinä voi olla bakteereja ja loisia.",
     "nb": "Cats Protection nevner tilberedt laks uten bein eller krydder blant trygg høytidsmat og skriver at små mengder tilberedt fisk, som laks, passer. RSPCA Australia skriver at hermetisk laks i kildevann kan være en godbit en gang iblant. Rå fisk er noe annet: Den kan inneholde bakterier og parasitter."
   },
@@ -274,7 +274,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2e875af01d16a24031fedab766df8c8b41093581d94859e13ebf5aa1289979b0"
+      "verified_hash": "90d18e2b8d2de946769e80fcb0dda36f0576ce478afe7b3018845d42b8defaf0"
     },
     "fi": {
       "status": "verified",

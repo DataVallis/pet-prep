@@ -66,7 +66,7 @@
     "cs": "Nedoporučuje se. Někteří veterináři připouštějí čerstvou dužinu broskve nakrájenou na malé kostičky bez stopky a pecky, pecka je však opravdu nebezpečná: může způsobit dušení nebo ucpání střev a obsahuje formu kyanidu.",
     "hr": "Ne preporučuje se. Neki veterinari dopuštaju svježe meso breskve narezano na male kockice, bez peteljke i koštice, ali koštica je prava opasnost: može izazvati gušenje ili začepljenje crijeva i sadrži oblik cijanida.",
     "sv": "Rekommenderas inte. Vissa veterinärer tillåter färskt persikokött i små tärningar utan stjälk och kärna, men kärnan är en verklig fara: den kan orsaka kvävning eller tarmstopp och innehåller en form av cyanid.",
-    "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: Den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid.",
+    "da": "Det frarådes. Nogle dyrlæger tillader frisk ferskenkød i små tern uden stilk og sten, men stenen er en reel fare: den kan sætte sig fast i halsen eller give tarmblokering og indeholder en form for cyanid.",
     "fi": "Ei suositella. Jotkut eläinlääkärit sallivat tuoretta persikan hedelmälihaa pieninä kuutioina, kun varsi ja kivi on poistettu, mutta kivi on todellinen vaara: se voi aiheuttaa tukehtumisen tai suolitukoksen, ja siinä on syanidiyhdistettä.",
     "nb": "Anbefales ikke. Noen dyrleger godtar ferskt fruktkjøtt i små terninger med stilk og stein fjernet, men steinen er en reell fare: Den kan sette seg fast i halsen eller gi tarmblokkering, og den inneholder en form for cyanid."
   },
@@ -422,7 +422,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f037d470413394d880282db04fee9a8e407a4badfc8c3cab8b3daa999bbb5ef5"
+      "verified_hash": "85aacf4a2a0033bbd2168939afdd3c7680b2b3f281d794404e1beaabd27e40f6"
     },
     "fi": {
       "status": "verified",

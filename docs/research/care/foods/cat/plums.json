@@ -66,7 +66,7 @@
     "cs": "Ne, raději ne. ASPCA uvádí slivoň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Švestky kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku šljive kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi mački šljive, koštice i dijelove biljke drži izvan njezina dosega i nazovi veterinara ako mačka išta od toga sažvače.",
     "sv": "Nej, helst inte. ASPCA anger att plommonträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten plommon, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
-    "da": "Nej, helst ikke. ASPCA opfører blommetræet som giftigt for katte: Dets stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke din kat blommer, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
+    "da": "Nej, helst ikke. ASPCA betragter blommetræet som giftigt for katte: Dets stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke din kat blommer, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
     "fi": "Ei, parempi olla antamatta. ASPCA luokittelee luumukasvin kissalle myrkylliseksi: sen varsissa, lehdissä ja siemenissä (kivessä) on syanidia. Älä tarjoa luumua kissallesi, pidä kivet ja kasvinosat poissa sen ulottuvilta ja soita eläinlääkärille, jos kissasi pureskelee niitä.",
     "nb": "Nei, helst ikke. ASPCA regner plommetreet som giftig for katter: Stilkene, bladene og frøene (steinen) inneholder cyanid. Ikke gi katten plommer, hold steiner og plantedeler utenfor rekkevidde, og ring dyrlegen hvis katten tygger på noe av det."
   },
@@ -368,7 +368,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "657a411a4e754fa94079bcf846772ec3ccfcc47c151b3d9c2abdd32fe7915654"
+      "verified_hash": "dfc84c8d48e5c6e926ac383d9b9ebcb2b1646a14fa9c8d72daa2d53fffd46afd"
     },
     "fi": {
       "status": "verified",

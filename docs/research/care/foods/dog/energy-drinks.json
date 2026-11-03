@@ -190,7 +190,7 @@
       "Opkast og diarré",
       "Savlen",
       "Rysten",
-      "Tisser mere"
+      "Hyppigere vandladning"
     ],
     "fi": [
       "Levottomuus, ylivilkkaus, edestakaisin kulkeminen",
@@ -415,7 +415,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "99d016fb94ec67e227cb37610c2ea1a91c7ed1d9b4001f84371d35798efbd6f1"
+      "verified_hash": "b4183ec2d53a2db7f7a50296178d3d35822d4568c53694c052aa05591020c219"
     },
     "fi": {
       "status": "verified",

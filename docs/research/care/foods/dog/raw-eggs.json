@@ -262,7 +262,7 @@
         "cs": "Na to se nedá spolehnout: syrový bílek může blokovat vstřebávání biotinu, což může vést k potížím s kůží a srstí.",
         "hr": "Ne pouzdano: sirovi bjelanjak može blokirati apsorpciju biotina, što može dovesti do problema s kožom i dlakom.",
         "sv": "Inte säkert: rå äggvita kan blockera upptaget av biotin, vilket kan leda till problem med hud och päls.",
-        "da": "Det kan man ikke regne med: Rå æggehvide kan blokere optagelsen af biotin, hvilket kan give problemer med hud og pels.",
+        "da": "Det kan man ikke regne med: rå æggehvide kan blokere optagelsen af biotin, hvilket kan give problemer med hud og pels.",
         "fi": "Ei luotettavasti: raaka munanvalkuainen voi estää biotiinin imeytymistä, mikä voi johtaa iho- ja turkkiongelmiin.",
         "nb": "Ikke sikkert: Rå eggehvite kan hindre opptaket av biotin, og det kan føre til problemer med hud og pels."
       }
@@ -388,7 +388,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "520c4a280a84eec6afbe5fe7fab0f28b8663a1368134d02f97dde75cf4157748"
+      "verified_hash": "aa5f51a424fd94207fc11fb2ea646444d0f2757548b050ba9c912645d3c9767f"
     },
     "fi": {
       "status": "verified",

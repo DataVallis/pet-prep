@@ -135,7 +135,7 @@
     "cs": "Malinký kousek obyčejného uvařeného vepřového může být pamlsek. Uvařit ho a vyndat z něj kosti by měl dospělý.",
     "hr": "Mrvica obične kuhane svinjetine može biti poslastica. Neka je odrasla osoba skuha i izvadi kosti.",
     "sv": "En pytteliten bit kokt fläskkött utan kryddor kan bli en godbit. En vuxen ska koka köttet och ta bort benen.",
-    "da": "En lille smule almindeligt kogt svinekød kan være en godbid. En voksen skal lave kødet og tage knoglerne ud.",
+    "da": "En lille smule almindeligt kogt svinekød kan være en godbid. En voksen skal tilberede kødet og tage knoglerne ud.",
     "fi": "Pikkuinen pala maustamatonta keitettyä sianlihaa voi olla herkku. Aikuisen pitää kypsentää se ja poistaa luut.",
     "nb": "En bitteliten bit kokt svinekjøtt uten krydder kan være en godbit. En voksen bør lage det og ta ut beina."
   },
@@ -257,7 +257,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "26409a9f8be87e20608b08bba5dde62e4660dd66b68c8b0be663140e6912a04a"
+      "verified_hash": "ebf275a02c8356b96395a921385003b523bebcff8a35567148d4dac22f0fad6e"
     },
     "fi": {
       "status": "verified",

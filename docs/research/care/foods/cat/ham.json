@@ -83,7 +83,7 @@
     "cs": "Šunka je tučné maso s vysokým obsahem sodíku a obojí může způsobit zdravotní potíže. Příliš mnoho tuku ovlivňuje trávicí trakt, zejména slinivku břišní. Přísady, jako je cibule nebo česnek, z ní dělají toxickou potravinu. Malé množství nemusí být mimořádně škodlivé, dobrý pamlsek to ale není. Slané jídlo může kočky také víc dehydratovat a kočky s potížemi s ledvinami, srdcem nebo močovými cestami by se šunce měly obzvlášť vyhýbat.",
     "hr": "Šunka je masno meso koje ima i mnogo natrija, a oboje može izazvati zdravstvene probleme. Previše masti utječe na probavni sustav, osobito na gušteraču. Začini poput luka ili češnjaka čine je otrovnom. Male količine možda nisu iznimno štetne, ali šunka nije dobra poslastica. Slana hrana može mačke i dodatno dehidrirati, a mačke s problemima s bubrezima, srcem ili mokraćnim sustavom trebaju šunku osobito izbjegavati.",
     "sv": "Skinka är ett fett kött som också innehåller mycket natrium, och båda kan ge hälsoproblem. För mycket fett påverkar matsmältningskanalen, särskilt bukspottkörteln. Kryddor som lök eller vitlök gör den giftig. Små mängder är kanske inte extremt skadliga, men det är ingen bra godbit. Salt mat kan också göra katter mer uttorkade, och katter med njur-, hjärt- eller urinvägsproblem bör särskilt undvika skinka.",
-    "da": "Skinke er fedt kød der også har et højt natriumindhold, og begge dele kan give helbredsproblemer. For meget fedt påvirker fordøjelseskanalen, især bugspytkirtlen. Krydderier som løg eller hvidløg gør den giftig. Små mængder er måske ikke ekstremt skadelige, men skinke er ikke en god godbid. Salt mad kan også gøre katte mere dehydrerede, og katte med nyre-, hjerte- eller urinvejsproblemer bør især undgå skinke.",
+    "da": "Skinke er fedt kød med et højt natriumindhold, og begge dele kan give helbredsproblemer. For meget fedt påvirker fordøjelseskanalen, især bugspytkirtlen. Krydderier som løg eller hvidløg gør den giftig. Små mængder er måske ikke ekstremt skadelige, men skinke er ikke en god godbid. Salt mad kan også gøre katte mere dehydrerede, og katte med nyre-, hjerte- eller urinvejsproblemer bør især undgå skinke.",
     "fi": "Kinkku on rasvaista lihaa, jossa on myös paljon natriumia, ja kumpikin voi aiheuttaa terveysongelmia. Liika rasva vaikuttaa ruoansulatuskanavaan, etenkin haimaan. Mausteet, kuten sipuli tai valkosipuli, tekevät siitä myrkyllistä. Pienet määrät eivät välttämättä ole kovin haitallisia, mutta kinkku ei ole hyvä herkku. Suolainen ruoka voi myös pahentaa kissan nestehukkaa, ja kissojen, joilla on munuais-, sydän- tai virtsatievaivoja, pitäisi erityisesti välttää kinkkua.",
     "nb": "Skinke er fett kjøtt som også inneholder mye natrium, og begge deler kan gi helseproblemer. For mye fett påvirker fordøyelsen, særlig bukspyttkjertelen. Krydder som løk eller hvitløk gjør den giftig. Små mengder er kanskje ikke svært skadelige, men skinke er ikke en god godbit. Salt mat kan også gjøre katter mer dehydrerte, og katter med nyre-, hjerte- eller urinveisproblemer bør særlig unngå skinke."
   },
@@ -177,7 +177,7 @@
     "cs": "Pokud kočka snědla šunku ochucenou cibulí nebo česnekem, okamžitě se obraťte na veterináře. Pokud snědla hodně obyčejné šunky nebo zvrací či má průjem, zavolejte veterináři a poraďte se.",
     "hr": "Ako je tvoja mačka pojela šunku začinjenu lukom ili češnjakom, odmah se obrati veterinaru. Ako je pojela mnogo obične šunke ili povraća ili ima proljev, nazovi veterinara za savjet.",
     "sv": "Om katten har ätit skinka kryddad med lök eller vitlök, kontakta veterinären direkt. Om den har ätit mycket naturell skinka, eller kräks eller har diarré, ring veterinären för råd.",
-    "da": "Hvis din kat har spist skinke krydret med løg eller hvidløg, så kontakt straks din dyrlæge. Hvis den har spist meget almindelig skinke eller kaster op eller har diarré, så ring til din dyrlæge for at få råd.",
+    "da": "Hvis din kat har spist skinke krydret med løg eller hvidløg, så kontakt straks din dyrlæge. Hvis den har spist meget ukrydret skinke, kaster op eller har diarré, så ring til din dyrlæge for at få råd.",
     "fi": "Jos kissasi söi sipulilla tai valkosipulilla maustettua kinkkua, ota heti yhteyttä eläinlääkäriin. Jos se söi paljon maustamatonta kinkkua tai jos se oksentaa tai sillä on ripuli, soita eläinlääkärille ja kysy neuvoa.",
     "nb": "Hvis katten har spist skinke krydret med løk eller hvitløk, kontakt dyrlegen med en gang. Hvis den har spist mye skinke uten krydder, eller kaster opp eller har diaré, ring dyrlegen for råd."
   },
@@ -351,7 +351,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1ede6a8df20b18dd156065d9f0ddbe8cca5f3c279e11745445762d528ac310e1"
+      "verified_hash": "d71ed7011e514cdac6bc7e193287d83af254a62cc95bbbc0d2e3c7fbcc37b026"
     },
     "fi": {
       "status": "verified",

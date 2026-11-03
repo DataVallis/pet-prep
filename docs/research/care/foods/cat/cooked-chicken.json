@@ -66,7 +66,7 @@
     "cs": "Ano, obyčejné tepelně upravené kuřecí maso je pro kočky jako občasný pamlsek v pořádku. Uvařte ho, odstraňte všechny kosti a kůži a nekořeňte ho. Započítejte ho do denní dávky krmiva kočky, nenahrazujte jím krmivo.",
     "hr": "Da, obična kuhana piletina u redu je kao povremena poslastica za mačke. Skuhaj je, ukloni sve kosti i kožu i ne dodavaj začine. Uračunaj je u dnevni obrok svoje mačke, a ne umjesto njega.",
     "sv": "Ja, naturell kokt kyckling går bra som godbit för katter någon gång ibland. Koka den, ta bort alla ben och skinnet, och krydda inte. Räkna in den i kattens dagliga matranson – den ersätter inte maten.",
-    "da": "Ja, naturel, tilberedt kylling er fin som en godbid en gang imellem til katte. Kog den, fjern alle knogler og skindet, og tilsæt ingen krydderier. Regn den med i kattens daglige mad – den erstatter den ikke.",
+    "da": "Ja, naturel, tilberedt kylling er fin som en godbid en gang imellem til katte. Kog den, fjern alle knogler og skindet, og tilsæt ingen krydderier. Medregn den som en del af kattens daglige foder – den må ikke erstatte det.",
     "fi": "Saa, maustamaton kypsennetty kana sopii kissalle satunnaiseksi herkuksi. Keitä se, poista kaikki luut ja nahka äläkä lisää mausteita. Laske se mukaan kissasi päivittäiseen ruoka-annokseen, älä korvaa sillä ruokaa.",
     "nb": "Ja, naturell, tilberedt kylling er greit som en godbit en gang iblant for katter. Kok den, fjern alle bein og skinnet, og ikke bruk krydder. Regn den som en del av kattens daglige mat, ikke som en erstatning for den."
   },
@@ -118,7 +118,7 @@
     "cs": "Vařené nebo napařené, bez přísad, bez kostí, kůže a koření; malé kousky v rámci denní dávky krmiva.",
     "hr": "Kuhana u vodi ili na pari, obična, bez kostiju, kože i začina; mali komadići unutar dnevnog obroka.",
     "sv": "Kokt eller ångkokt, naturell, utan ben, skinn och kryddor; små bitar inom den dagliga matransonen.",
-    "da": "Kogt eller dampet, naturel, uden knogler, skind eller krydderier; små stykker inden for den daglige madmængde.",
+    "da": "Kogt eller dampet, naturel, uden knogler, skind eller krydderier; små stykker inden for den daglige foderportion.",
     "fi": "Keitettynä tai höyrytettynä, maustamattomana, ilman luita, nahkaa ja mausteita; pieninä paloina osana päivittäistä ruoka-annosta.",
     "nb": "Kokt eller dampet, naturell, uten bein, skinn eller krydder; små biter innenfor den daglige matmengden."
   },
@@ -135,7 +135,7 @@
     "cs": "Obyčejné uvařené kuřecí maso bez kostí je pro kočku mňamózní pamlsek. Požádej dospělého, ať ho připraví.",
     "hr": "Obična kuhana piletina bez kostiju fina je poslastica za macu. Zamoli odraslu osobu da je pripremi.",
     "sv": "Kokt kyckling utan ben och kryddor är en jättegod godbit för katter. Be en vuxen att göra i ordning den.",
-    "da": "Almindelig kogt kylling uden knogler er en lækker godbid til katte. Bed en voksen om at gøre den klar.",
+    "da": "Almindelig kogt kylling uden knogler er en lækker godbid til katte. Bed en voksen om at tilberede den.",
     "fi": "Maustamaton keitetty kana ilman luita on kisulle oikeaa herkkua. Pyydä aikuista valmistamaan se.",
     "nb": "Kokt kylling uten bein og uten krydder er en god kattegodbit. Be en voksen om å gjøre den klar."
   },
@@ -286,7 +286,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5cf0e5aff6828b205b2251474fb22844eef941082e925e45adb2b4adcc891c6e"
+      "verified_hash": "96a514d708dea3261f72885936e412dc7a7b52dea488ed526b97d0a6b3fd2dcd"
     },
     "fi": {
       "status": "verified",

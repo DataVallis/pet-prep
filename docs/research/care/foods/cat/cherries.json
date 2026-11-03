@@ -66,7 +66,7 @@
     "cs": "Ne, raději ne. ASPCA uvádí třešeň jako rostlinu toxickou pro kočky: její stonky, listy a semena (pecka) obsahují kyanid. Třešně kočce nenabízejte, pecky a části rostliny uchovávejte mimo její dosah, a pokud kočka něco z toho okouše, zavolejte veterináři.",
     "hr": "Ne, bolje ne. ASPCA navodi biljku trešnje kao otrovnu za mačke: njezine peteljke, listovi i sjemenke (koštica) sadrže cijanid. Ne nudi trešnje svojoj mački, koštice i dijelove biljke drži izvan njezina dosega, a ako je mačka nešto od toga žvakala, nazovi veterinara.",
     "sv": "Nej, helst inte. ASPCA anger att körsbärsträdet är giftigt för katter: skaft, blad och kärnor (stenen) innehåller cyanid. Ge inte katten körsbär, håll stenar och växtdelar utom räckhåll, och ring veterinären om katten tuggar på något av dem.",
-    "da": "Nej, det er bedst at lade være. ASPCA opfører kirsebærplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke kirsebær til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
+    "da": "Nej, det er bedst at lade være. ASPCA betragter kirsebærplanten som giftig for katte: Dens stilke, blade og kerner (stenen) indeholder cyanid. Giv ikke kirsebær til din kat, hold sten og plantedele uden for rækkevidde, og ring til din dyrlæge hvis din kat tygger på noget af det.",
     "fi": "Ei kannata. ASPCA luokittelee kirsikkakasvin kissoille myrkylliseksi: sen varret, lehdet ja siemenet (kivi) sisältävät syanidia. Älä tarjoa kirsikoita kissallesi, pidä kivet ja kasvinosat sen ulottumattomissa ja soita eläinlääkärille, jos kissasi pureskelee niitä.",
     "nb": "Nei, helst ikke. ASPCA regner kirsebærtreet som giftig for katter: Stilkene, bladene og frøene (steinen) inneholder cyanid. Ikke gi katten kirsebær, hold steiner og plantedeler utenfor rekkevidde, og ring dyrlegen hvis katten tygger på noe av det."
   },
@@ -368,7 +368,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7ef01dd22c8be260e257ea9cd45e1fa7cbd910182b4693d757826ea24d9fab30"
+      "verified_hash": "38bc027d4c51a4c131045d688017493bc1590f341ccf27d8b9134c7041818226"
     },
     "fi": {
       "status": "verified",

@@ -195,7 +195,7 @@
     "cs": "Zmrzlina je mlsání pro lidi. Kočku z ní může bolet bříško, tak si kornoutek nech pro sebe.",
     "hr": "Sladoled je poslastica za ljude. Od njega mace može zaboljeti trbuščić, zato kornet zadrži za sebe.",
     "sv": "Glass är godis för människor. Den kan ge katter ont i magen, så ät upp din glass själv.",
-    "da": "Is er en godbid for mennesker. Den kan give katte ondt i maven, så behold din isvaffel selv.",
+    "da": "Is er en godbid for mennesker. Den kan give katte ondt i maven, så spis din is selv.",
     "fi": "Jäätelö on ihmisten herkku. Se voi tehdä kissan masun kipeäksi, joten pidä tötterö itselläsi.",
     "nb": "Iskrem er godteri for mennesker. Den kan gi katter vondt i magen, så behold isen for deg selv."
   },
@@ -346,7 +346,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "9e20cd3dee56bc0c300901882866defa4c471e6e5a8324a115db986813695ad8"
+      "verified_hash": "28674113d55ffdd376b51d195c3c321d2c6f1c947dc903f47a97dca9a4e87853"
     },
     "fi": {
       "status": "verified",

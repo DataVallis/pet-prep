@@ -83,7 +83,7 @@
     "cs": "Zdroje se rozcházejí. Cats Protection řadí avokádo mezi potraviny toxické pro kočky kvůli vysokému obsahu tuku a persinu, přičemž potíže nastávají při snědení velkého množství. Rostlinná databáze ASPCA uvádí avokádo jako toxické pouze pro koně a píše, že je problémem hlavně pro ptáky, králíky, koně a přežvýkavce. Držíme se přísnějšího pohledu a nedoporučujeme ho.",
     "hr": "Izvori se ne slažu. Cats Protection navodi avokado među namirnicama otrovnima za mačke zbog visokog udjela masti i persina, uz probleme kad se pojede velika količina. Baza biljaka ASPCA-e navodi avokado kao otrovan samo za konje i kaže da je problem uglavnom za ptice, kuniće, konje i preživače. Držimo se strožeg stajališta i ne preporučujemo ga.",
     "sv": "Källorna är oense. Cats Protection räknar avokado till livsmedel som är giftiga för katter på grund av den höga fetthalten och persinet, med problem när katten äter stora mängder. ASPCA:s växtdatabas anger avokado som giftig endast för hästar och skriver att den främst är ett problem för fåglar, kaniner, hästar och idisslare. Vi följer den strängare bedömningen och avråder från den.",
-    "da": "Kilderne er uenige. Cats Protection nævner avocado blandt fødevarer der er giftige for katte, på grund af det høje fedtindhold og persin, og problemerne opstår når der spises store mængder. ASPCA’s plantedatabase opfører kun avocado som giftig for heste og skriver at den først og fremmest er et problem for fugle, kaniner, heste og drøvtyggere. Vi bruger den strengeste vurdering og anbefaler det ikke.",
+    "da": "Kilderne er uenige. Cats Protection nævner avocado blandt fødevarer der er giftige for katte, på grund af det høje fedtindhold og persin, og problemerne opstår når der spises store mængder. ASPCA’s plantedatabase betragter kun avocado som giftig for heste og skriver at den først og fremmest er et problem for fugle, kaniner, heste og drøvtyggere. Vi bruger den strengeste vurdering og anbefaler det ikke.",
     "fi": "Lähteet ovat eri mieltä. Cats Protection mainitsee avokadon kissoille myrkyllisten ruokien joukossa sen runsaan rasvan ja persiinin vuoksi; ongelmia tulee, kun sitä syödään paljon. ASPCA:n kasvitietokanta luokittelee avokadon myrkylliseksi vain hevosille ja kertoo sen olevan ongelma lähinnä linnuille, kaneille, hevosille ja märehtijöille. Noudatamme tiukempaa näkemystä emmekä suosittele sitä.",
     "nb": "Kildene er uenige. Cats Protection regner avokado blant matvarer som er giftige for katter, på grunn av det høye fettinnholdet og persin, med problemer når katten spiser store mengder. ASPCAs plantedatabase oppgir avokado som giftig bare for hester og skriver at det først og fremst er et problem for fugler, kaniner, hester og drøvtyggere. Vi følger det strengere synet og anbefaler det ikke."
   },
@@ -303,7 +303,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5d0bbe0c193f53479c6b06c7165d7643266ce7a1cebed8307d3e6a9488b55764"
+      "verified_hash": "207067db7d09f6f5ea1a0f757a1754be1374eb5e3deba3c77cb36e3224176957"
     },
     "fi": {
       "status": "verified",

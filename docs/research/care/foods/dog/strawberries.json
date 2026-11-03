@@ -207,7 +207,7 @@
         "cs": "Kdykoli zařazujete do jídelníčku psa novou potravinu, je nejlepší se nejdřív poradit s veterinářem.",
         "hr": "Kad god psu u prehranu uvodiš novu namirnicu, najbolje je da prvo razgovaraš s veterinarom.",
         "sv": "När du inför ett nytt livsmedel i hundens kost är det bäst att prata med veterinären först.",
-        "da": "Når du introducerer en ny fødevare i hundens kost, er det altid bedst at tale med din dyrlæge først.",
+        "da": "Når du tilføjer en ny fødevare til hundens kost, er det altid bedst at tale med din dyrlæge først.",
         "fi": "Aina kun tuot koirasi ruokavalioon uuden ruoan, on parasta keskustella ensin eläinlääkärin kanssa.",
         "nb": "Når du gir hunden en ny matvare, er det best å snakke med dyrlegen først."
       }
@@ -338,7 +338,7 @@
     "da": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a24ae4deb57fdd853590f97a276eb8e368531035d49ad817c793211c4f5af7e4"
+      "verified_hash": "50e9572fa1ea3a6ee93bb1557820a1a746077f1b9fc8b5bcdaf3a6da769a6340"
     },
     "fi": {
       "status": "verified",
