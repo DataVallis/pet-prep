@@ -15,7 +15,8 @@
     "pl": "Mango",
     "sv": "Mango",
     "da": "Mango",
-    "fi": "Mango"
+    "fi": "Mango",
+    "nb": "Mango"
   },
   "question": {
     "en": "Can dogs eat mango?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść mango?",
     "sv": "Får hundar äta mango?",
     "da": "Må hunde spise mango?",
-    "fi": "Saako koira syödä mangoa?"
+    "fi": "Saako koira syödä mangoa?",
+    "nb": "Kan hunder spise mango?"
   },
   "url_slug": {
     "en": "mango",
@@ -47,7 +49,8 @@
     "pl": "mango",
     "sv": "mango",
     "da": "mango",
-    "fi": "mango"
+    "fi": "mango",
+    "nb": "mango"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, psy mogą jeść mango z umiarem, o ile jest odpowiednio przygotowane: obierz je i usuń pestkę. Mango ma dużo cukru, więc niech będzie okazjonalnym smakołykiem, zwłaszcza dla psów z problemami z wagą.",
     "sv": "Ja, hundar kan äta mango med måtta, så länge du förbereder den rätt: skala den och ta bort kärnan. Mango innehåller mycket socker, så ge den bara som en godbit då och då, särskilt till hundar som har problem med vikten.",
     "da": "Ja, med måde. Hunde kan godt få mango, hvis du først skræller den og fjerner stenen. Mango indeholder meget sukker, så giv den kun som en godbid en gang imellem, især til hunde der har tendens til at tage på.",
-    "fi": "Kyllä, koira voi syödä mangoa kohtuudella, kunhan se on valmisteltu oikein: kuori se ja poista kivi. Mangossa on paljon sokeria, joten anna sitä vain satunnaisena herkkuna, etenkin jos koirasi painonhallinta on vaikeaa."
+    "fi": "Kyllä, koira voi syödä mangoa kohtuudella, kunhan se on valmisteltu oikein: kuori se ja poista kivi. Mangossa on paljon sokeria, joten anna sitä vain satunnaisena herkkuna, etenkin jos koirasi painonhallinta on vaikeaa.",
+    "nb": "Ja, hunder kan spise mango med måte, forutsatt at du skreller den og fjerner steinen. Mango inneholder mye sukker, så la det bli en godbit av og til, særlig for hunder som sliter med vekten."
   },
   "why": {
     "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
@@ -80,7 +84,8 @@
     "pl": "Mango zawiera błonnik oraz witaminy A, B6, C i E. Pestka stanowi poważne zagrożenie zadławieniem, może utknąć w przewodzie pokarmowym i zawiera niewielkie ilości cyjanku. Skórka jest trudna do strawienia. Zbyt duża ilość owocu może wywołać ból brzucha i biegunkę.",
     "sv": "Mango innehåller fiber och vitamin A, B6, C och E. Kärnan är en allvarlig kvävningsrisk, kan fastna i matsmältningskanalen och innehåller små mängder cyanid. Skalet är svårsmält. För mycket frukt kan ge magont och diarré.",
     "da": "Mango indeholder fibre samt A-, B6-, C- og E-vitamin. Stenen udgør en alvorlig kvælningsfare, kan sætte sig fast i fordøjelseskanalen og indeholder små mængder cyanid. Skrællen er svær at fordøje. For meget frugt kan give mavepine og diarré.",
-    "fi": "Mangossa on kuitua sekä A-, B6-, C- ja E-vitamiineja. Kivi on vakava tukehtumisvaara, voi juuttua ruoansulatuskanavaan ja sisältää pieniä määriä syanidia. Kuori on vaikeasti sulavaa. Liian suuri määrä mangoa voi aiheuttaa vatsakipua ja ripulia."
+    "fi": "Mangossa on kuitua sekä A-, B6-, C- ja E-vitamiineja. Kivi on vakava tukehtumisvaara, voi juuttua ruoansulatuskanavaan ja sisältää pieniä määriä syanidia. Kuori on vaikeasti sulavaa. Liian suuri määrä mangoa voi aiheuttaa vatsakipua ja ripulia.",
+    "nb": "Mango inneholder fiber og vitamin A, B6, C og E. Steinen er en alvorlig kvelningsfare, kan sette seg fast i fordøyelseskanalen og inneholder små mengder cyanid. Skallet er tungt å fordøye. For mye frukt kan gi vondt i magen og diaré."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Jeśli masz pytania lub wątpliwości dotyczące podawania psu mango, zapytaj weterynarza.",
     "sv": "Har du frågor eller funderingar om att ge hunden mango, fråga veterinären.",
     "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund mango.",
-    "fi": "Jos mangon antaminen koirallesi mietityttää, kysy neuvoa eläinlääkäriltä."
+    "fi": "Jos mangon antaminen koirallesi mietityttää, kysy neuvoa eläinlääkäriltä.",
+    "nb": "Er du usikker eller bekymret for å gi hunden mango, kan du spørre dyrlegen."
   },
   "serving": {
     "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
@@ -113,7 +119,8 @@
     "pl": "Obrane, z usuniętą pestką, pokrojone w małe kawałki; jako okazjonalny smakołyk.",
     "sv": "Skalad, med kärnan borttagen, skuren i små bitar; som en godbit då och då.",
     "da": "Skrællet og uden sten, skåret i små stykker; som en godbid en gang imellem.",
-    "fi": "Kuorittuna, kivi poistettuna ja pieniksi paloiksi leikattuna; satunnaisena herkkuna."
+    "fi": "Kuorittuna, kivi poistettuna ja pieniksi paloiksi leikattuna; satunnaisena herkkuna.",
+    "nb": "Skrellet, med steinen fjernet og skåret i små biter; som en godbit av og til."
   },
   "child": {
     "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
@@ -129,7 +136,8 @@
     "pl": "Psy mogą spróbować odrobiny mango! Dorosły najpierw je obiera i wyjmuje dużą pestkę.",
     "sv": "Hundar kan smaka lite mango! En vuxen skalar den och tar först bort den stora kärnan.",
     "da": "Hunde må gerne smage lidt mango! En voksen skræller den og tager først den store sten ud.",
-    "fi": "Koira saa maistaa vähän mangoa! Aikuinen kuorii sen ja ottaa ensin pois ison kiven."
+    "fi": "Koira saa maistaa vähän mangoa! Aikuinen kuorii sen ja ottaa ensin pois ison kiven.",
+    "nb": "Hunder kan smake litt mango! En voksen skreller den og tar først ut den store steinen."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Dlaczego trzeba usuwać pestkę mango?",
         "sv": "Varför måste mangokärnan tas bort?",
         "da": "Hvorfor skal mangostenen fjernes?",
-        "fi": "Miksi mangon kivi pitää poistaa?"
+        "fi": "Miksi mangon kivi pitää poistaa?",
+        "nb": "Hvorfor må mangosteinen fjernes?"
       },
       "a": {
         "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
@@ -163,7 +172,8 @@
         "pl": "Pestka może spowodować zadławienie lub utknąć w przewodzie pokarmowym psa, a do tego zawiera niewielkie ilości cyjanku.",
         "sv": "Hunden kan sätta kärnan i halsen, eller så kan den fastna i matsmältningskanalen, och den innehåller små mängder cyanid.",
         "da": "En hund kan blive kvalt af stenen, og den kan sætte sig fast i fordøjelseskanalen. Den indeholder også små mængder cyanid.",
-        "fi": "Kivi voi saada koiran tukehtumaan tai juuttua sen ruoansulatuskanavaan, ja se sisältää pieniä määriä syanidia."
+        "fi": "Kivi voi saada koiran tukehtumaan tai juuttua sen ruoansulatuskanavaan, ja se sisältää pieniä määriä syanidia.",
+        "nb": "Steinen kan gi hunden kvelningsfare eller sette seg fast i fordøyelseskanalen, og den inneholder små mengder cyanid."
       }
     },
     {
@@ -181,7 +191,8 @@
         "pl": "Czy psy mogą jeść skórkę mango?",
         "sv": "Får hundar äta mangoskal?",
         "da": "Må hunde spise mangoskræl?",
-        "fi": "Saako koira syödä mangon kuorta?"
+        "fi": "Saako koira syödä mangon kuorta?",
+        "nb": "Kan hunder spise mangoskall?"
       },
       "a": {
         "en": "It is difficult to digest, so it is best to remove it before serving.",
@@ -197,7 +208,8 @@
         "pl": "Jest trudna do strawienia, więc przed podaniem najlepiej ją usunąć.",
         "sv": "Det är svårsmält, så det är bäst att ta bort det innan du serverar.",
         "da": "Den er svær at fordøje, så det er bedst at fjerne den inden du serverer mangoen.",
-        "fi": "Se on vaikeasti sulavaa, joten se on parasta poistaa ennen tarjoamista."
+        "fi": "Se on vaikeasti sulavaa, joten se on parasta poistaa ennen tarjoamista.",
+        "nb": "Skallet er tungt å fordøye, så det er best å fjerne det før du serverer."
       }
     }
   ],
@@ -327,6 +339,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "81c901f46ce25b45fd1fecfdf49c697cfa9eb105232a03dbd3b9151139182879"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "121e291d1f51989c9f0b1e89759762a783f675547f6cd73e20097217e5ffc8b0"
     }
   }
 }

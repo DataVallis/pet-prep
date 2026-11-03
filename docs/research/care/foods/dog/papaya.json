@@ -15,7 +15,8 @@
     "pl": "Papaja",
     "sv": "Papaya",
     "da": "Papaya",
-    "fi": "Papaija"
+    "fi": "Papaija",
+    "nb": "Papaya"
   },
   "question": {
     "en": "Can dogs eat papaya?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść papaję?",
     "sv": "Får hundar äta papaya?",
     "da": "Må hunde spise papaya?",
-    "fi": "Saako koira syödä papaijaa?"
+    "fi": "Saako koira syödä papaijaa?",
+    "nb": "Kan hunder spise papaya?"
   },
   "url_slug": {
     "en": "papaya",
@@ -47,7 +49,8 @@
     "pl": "papaja",
     "sv": "papaya",
     "da": "papaya",
-    "fi": "papaija"
+    "fi": "papaija",
+    "nb": "papaya"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Tak, psy mogą jeść niewielkie ilości świeżej papai, o ile najpierw usuniesz pestki i skórkę. Papaja z natury zawiera dużo cukru, więc niech będzie okazjonalnym smakołykiem.",
     "sv": "Ja, hundar kan äta små mängder färsk papaya, så länge fröna och skalet tas bort först. Papaya är naturligt rik på socker, så ge den bara som en godbit då och då.",
     "da": "Ja, hunde kan få lidt frisk papaya, hvis du først fjerner kerner og skræl. Papaya indeholder af natur meget sukker, så giv den kun en gang imellem.",
-    "fi": "Kyllä, koira voi syödä pieniä määriä tuoretta papaijaa, kunhan siemenet ja kuori poistetaan ensin. Papaijassa on luonnostaan paljon sokeria, joten anna sitä vain satunnaisena herkkuna."
+    "fi": "Kyllä, koira voi syödä pieniä määriä tuoretta papaijaa, kunhan siemenet ja kuori poistetaan ensin. Papaijassa on luonnostaan paljon sokeria, joten anna sitä vain satunnaisena herkkuna.",
+    "nb": "Ja, hunder kan spise små mengder fersk papaya, forutsatt at frøene og skallet fjernes først. Papaya inneholder av natur mye sukker, så la det bli en godbit av og til."
   },
   "why": {
     "en": "Papaya seeds contain small amounts of cyanogenic compounds, which can be harmful in larger quantities. The skin is tough and hard to digest and can cause stomach discomfort. Papaya is naturally sugary and rich in fibre, so too much can cause an upset stomach or diarrhoea; dogs with diabetes need their fruit intake carefully managed. Dried papaya often contains added sugar or preservatives.",
@@ -80,7 +84,8 @@
     "pl": "Pestki papai zawierają niewielkie ilości związków cyjanogennych, które w większych ilościach mogą szkodzić. Skórka jest twarda, trudna do strawienia i może wywołać dolegliwości żołądkowe. Papaja jest z natury słodka i bogata w błonnik, więc zbyt dużo może rozstroić żołądek lub wywołać biegunkę; u psów z cukrzycą ilość owoców trzeba dokładnie kontrolować. Suszona papaja często zawiera dodatek cukru lub konserwanty.",
     "sv": "Papayafrön innehåller små mängder cyanogena ämnen, som kan vara skadliga i större mängder. Skalet är segt och svårsmält och kan ge obehag i magen. Papaya är naturligt sockerrik och fiberrik, så för mycket kan ge orolig mage eller diarré; för hundar med diabetes måste fruktintaget styras noga. Torkad papaya innehåller ofta tillsatt socker eller konserveringsmedel.",
     "da": "Papayakerner indeholder små mængder cyanogene forbindelser, som kan være skadelige i større mængder. Skrællen er sej og svær at fordøje og kan give ubehag i maven. Papaya er af natur sukkerholdig og rig på fibre, så for meget kan give dårlig mave eller diarré. Hunde med diabetes skal have deres frugtindtag nøje styret. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler.",
-    "fi": "Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, jotka suurina määrinä voivat olla haitallisia. Kuori on sitkeää ja vaikeasti sulavaa ja voi aiheuttaa vatsavaivoja. Papaija on luonnostaan sokeripitoista ja kuiturikasta, joten liika voi aiheuttaa vatsavaivoja tai ripulia; diabetesta sairastavien koirien hedelmien määrää on seurattava tarkasti. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita."
+    "fi": "Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, jotka suurina määrinä voivat olla haitallisia. Kuori on sitkeää ja vaikeasti sulavaa ja voi aiheuttaa vatsavaivoja. Papaija on luonnostaan sokeripitoista ja kuiturikasta, joten liika voi aiheuttaa vatsavaivoja tai ripulia; diabetesta sairastavien koirien hedelmien määrää on seurattava tarkasti. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita.",
+    "nb": "Papayafrø inneholder små mengder cyanogene stoffer, som kan være skadelige i større mengder. Skallet er seigt og tungt å fordøye og kan gi ubehag i magen. Papaya er av natur rik på sukker og fiber, så for mye kan gi urolig mage eller diaré; hunder med diabetes trenger nøye kontrollert fruktinntak. Tørket papaya inneholder ofte tilsatt sukker eller konserveringsmidler."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "pl": "Zanim dodasz papaję do diety psa, porozmawiaj z weterynarzem, zwłaszcza jeśli pies ma problem zdrowotny, taki jak cukrzyca.",
     "sv": "Prata med veterinären innan du lägger till papaya i hundens mat, särskilt om hunden har en sjukdom som diabetes.",
     "da": "Tal med din dyrlæge, inden papaya bliver en fast del af din hunds kost, især hvis din hund har en sygdom som diabetes.",
-    "fi": "Keskustele eläinlääkärin kanssa ennen kuin lisäät papaijaa koirasi ruokavalioon, etenkin jos koirallasi on jokin terveysongelma, kuten diabetes."
+    "fi": "Keskustele eläinlääkärin kanssa ennen kuin lisäät papaijaa koirasi ruokavalioon, etenkin jos koirallasi on jokin terveysongelma, kuten diabetes.",
+    "nb": "Snakk med dyrlegen før du legger papaya til hundens kosthold, særlig hvis hunden har en sykdom som diabetes."
   },
   "serving": {
     "en": "Fresh, not dried: cut in half, scoop out the seeds, remove the skin and cut the flesh into small, bite-sized cubes.",
@@ -113,7 +119,8 @@
     "pl": "Świeża, nie suszona: przekrój na pół, wyjmij pestki łyżką, usuń skórkę, a miąższ pokrój w kostkę na jeden kęs.",
     "sv": "Färsk, inte torkad: dela den på mitten, skrapa ut fröna, ta bort skalet och skär fruktköttet i små, lagom stora tärningar.",
     "da": "Frisk, ikke tørret. Del den på midten, skrab kernerne ud, fjern skrællen, og skær frugtkødet i små, mundrette tern.",
-    "fi": "Tuoretta, ei kuivattua: halkaise, kaavi siemenet pois, poista kuori ja leikkaa hedelmäliha pieniksi suupaloiksi."
+    "fi": "Tuoretta, ei kuivattua: halkaise, kaavi siemenet pois, poista kuori ja leikkaa hedelmäliha pieniksi suupaloiksi.",
+    "nb": "Fersk, ikke tørket: Del den på midten, skrap ut frøene, fjern skallet og skjær fruktkjøttet i passe små terninger."
   },
   "child": {
     "en": "Dogs can try a little papaya! A grown-up scoops out the seeds, cuts off the skin and makes tiny pieces.",
@@ -129,7 +136,8 @@
     "pl": "Psy mogą spróbować odrobiny papai! Dorosły wyjmuje pestki łyżką, odkrawa skórkę i kroi owoc na maleńkie kawałki.",
     "sv": "Hundar kan smaka lite papaya! En vuxen skrapar ur fröna, skär bort skalet och gör pyttesmå bitar.",
     "da": "Hunde kan prøve lidt papaya! En voksen skraber kernerne ud, skærer skrællen af og skærer frugtkødet i helt små stykker.",
-    "fi": "Koira saa maistaa vähän papaijaa! Aikuinen kaapii siemenet pois, kuorii hedelmän ja pilkkoo sen pieniksi paloiksi."
+    "fi": "Koira saa maistaa vähän papaijaa! Aikuinen kaapii siemenet pois, kuorii hedelmän ja pilkkoo sen pieniksi paloiksi.",
+    "nb": "Hunder kan smake litt papaya! En voksen skraper ut frøene, skjærer bort skallet og lager bitte små biter."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "pl": "Czy psy mogą jeść pestki papai?",
         "sv": "Får hundar äta papayafrön?",
         "da": "Må hunde spise papayakerner?",
-        "fi": "Saako koira syödä papaijan siemeniä?"
+        "fi": "Saako koira syödä papaijan siemeniä?",
+        "nb": "Kan hunder spise papayafrø?"
       },
       "a": {
         "en": "No. Papaya seeds contain small amounts of cyanogenic compounds, so remove them before serving.",
@@ -163,7 +172,8 @@
         "pl": "Nie. Pestki papai zawierają niewielkie ilości związków cyjanogennych, więc przed podaniem je usuń.",
         "sv": "Nej. Papayafrön innehåller små mängder cyanogena ämnen, så ta bort dem innan du serverar.",
         "da": "Nej. Papayakerner indeholder små mængder cyanogene forbindelser, så fjern dem inden du serverer frugten.",
-        "fi": "Ei. Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, joten poista ne ennen tarjoamista."
+        "fi": "Ei. Papaijan siemenet sisältävät pieniä määriä syanogeenisia yhdisteitä, joten poista ne ennen tarjoamista.",
+        "nb": "Nei. Papayafrø inneholder små mengder cyanogene stoffer, så fjern dem før du serverer."
       }
     },
     {
@@ -181,7 +191,8 @@
         "pl": "Czy suszona papaja jest dla psów w porządku?",
         "sv": "Är torkad papaya okej för hundar?",
         "da": "Er tørret papaya i orden til hunde?",
-        "fi": "Sopiiko kuivattu papaija koirille?"
+        "fi": "Sopiiko kuivattu papaija koirille?",
+        "nb": "Er tørket papaya greit for hunder?"
       },
       "a": {
         "en": "Fresh is better. Dried papaya often contains added sugar or preservatives that are not suitable for dogs.",
@@ -197,7 +208,8 @@
         "pl": "Lepsza jest świeża. Suszona papaja często zawiera dodatek cukru lub konserwanty, które nie są odpowiednie dla psów.",
         "sv": "Färsk är bättre. Torkad papaya innehåller ofta tillsatt socker eller konserveringsmedel som inte passar hundar.",
         "da": "Frisk er bedre. Tørret papaya indeholder ofte tilsat sukker eller konserveringsmidler der ikke egner sig til hunde.",
-        "fi": "Tuore on parempi. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita, jotka eivät sovi koirille."
+        "fi": "Tuore on parempi. Kuivattu papaija sisältää usein lisättyä sokeria tai säilöntäaineita, jotka eivät sovi koirille.",
+        "nb": "Fersk er bedre. Tørket papaya inneholder ofte tilsatt sukker eller konserveringsmidler som ikke er bra for hunder."
       }
     }
   ],
@@ -343,6 +355,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e7f5d1a58552fb761d6acada57cd1220d3a782189fc8416fb46e92bd1b4fec67"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8f8901ea9be43e2a12992ef006cca2ed118ed982490dc0068c772dc98e476b5b"
     }
   }
 }

@@ -15,7 +15,8 @@
     "pl": "Grejpfrut",
     "sv": "Grapefrukt",
     "da": "Grapefrugt",
-    "fi": "Greippi"
+    "fi": "Greippi",
+    "nb": "Grapefrukt"
   },
   "question": {
     "en": "Can dogs eat grapefruit?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść grejpfruta?",
     "sv": "Får hundar äta grapefrukt?",
     "da": "Må hunde spise grapefrugt?",
-    "fi": "Saako koira syödä greippiä?"
+    "fi": "Saako koira syödä greippiä?",
+    "nb": "Kan hunder spise grapefrukt?"
   },
   "url_slug": {
     "en": "grapefruit",
@@ -47,7 +49,8 @@
     "pl": "grejpfrut",
     "sv": "grapefrukt",
     "da": "grapefrugt",
-    "fi": "greippi"
+    "fi": "greippi",
+    "nb": "grapefrukt"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie, grejpfruta lepiej psom nie podawać. Miąższ nie jest toksyczny, ale dużo kwasu cytrynowego może rozstroić psi żołądek, a skórka jest dla psów toksyczna z powodu olejków eterycznych.",
     "sv": "Nej, det är bäst att inte ge grapefrukt till hundar. Fruktköttet är inte giftigt, men den höga halten citronsyra kan ge hunden orolig mage, och skalet är giftigt för hundar på grund av de eteriska oljorna.",
     "da": "Nej, det er bedst ikke at give hunde grapefrugt. Frugtkødet er ikke giftigt, men det høje indhold af citronsyre kan give hunden dårlig mave, og skallen er giftig for hunde på grund af de æteriske olier.",
-    "fi": "Ei, greippiä ei kannata antaa koiralle. Hedelmäliha ei ole myrkyllistä, mutta runsas sitruunahappo voi sekoittaa koiran vatsan, ja kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi."
+    "fi": "Ei, greippiä ei kannata antaa koiralle. Hedelmäliha ei ole myrkyllistä, mutta runsas sitruunahappo voi sekoittaa koiran vatsan, ja kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi.",
+    "nb": "Nei, det er best å la være å gi hunder grapefrukt. Fruktkjøttet er ikke giftig, men det høye innholdet av sitronsyre kan gi hunden urolig mage, og skallet er giftig for hunder på grunn av de eteriske oljene."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
@@ -80,7 +84,8 @@
     "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. Według AKC miąższ nie jest toksyczny, ale lepiej go unikać, m.in. z powodu dużej zawartości kwasu cytrynowego, a skórka jest toksyczna przez naturalne olejki eteryczne. PDSA zalicza grejpfruta do owoców niebezpiecznych, bo jest bardzo kwaśny. Używamy określenia „niezalecane”, ponieważ sam miąższ nie jest toksyczny, a zagrożeniem jest skórka.",
     "sv": "ASPCA anger att grapefruktväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att fruktköttet inte är giftigt men bäst undviks, delvis på grund av den höga halten citronsyra, och att skalet är giftigt på grund av de naturliga eteriska oljorna. PDSA anger att grapefrukt inte är säker för hundar eftersom den är mycket sur. Vi använder ”rekommenderas inte” eftersom själva fruktköttet inte är giftigt, medan skalet är det som är farligt.",
     "da": "ASPCA regner grapefrugtplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at frugtkødet ikke er giftigt, men bedst undgås, blandt andet på grund af det høje indhold af citronsyre, og at skallen er giftig på grund af de naturlige æteriske olier. PDSA anser grapefrugt for at være usikker, fordi den er meget sur. Vi bruger »frarådes«, fordi frugtkødet i sig selv ikke er giftigt, mens skallen er det farlige.",
-    "fi": "ASPCA luokittelee greippikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan hedelmäliha ei ole myrkyllistä mutta sitä kannattaa välttää, osittain runsaan sitruunahapon vuoksi, ja kuori on myrkyllistä sen luontaisten eteeristen öljyjen takia. PDSA pitää greippiä koiralle turvattomana, koska se on hyvin hapan. Luokitus on ”ei suositella”, koska hedelmäliha sinänsä ei ole myrkyllistä, vaan vaarana on kuori."
+    "fi": "ASPCA luokittelee greippikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan hedelmäliha ei ole myrkyllistä mutta sitä kannattaa välttää, osittain runsaan sitruunahapon vuoksi, ja kuori on myrkyllistä sen luontaisten eteeristen öljyjen takia. PDSA pitää greippiä koiralle turvattomana, koska se on hyvin hapan. Luokitus on ”ei suositella”, koska hedelmäliha sinänsä ei ole myrkyllistä, vaan vaarana on kuori.",
+    "nb": "ASPCA oppgir at grapefruktplanten er giftig for hunder på grunn av eteriske oljer og psoralener, men understreker at frukten er spiselig, og at det er skallet og plantematerialet som gir problemene. AKC skriver at fruktkjøttet ikke er giftig, men at det er best å unngå det, blant annet på grunn av det høye innholdet av sitronsyre, og at skallet er giftig på grunn av de naturlige eteriske oljene. PDSA oppgir grapefrukt som utrygg fordi den er svært sur. Vi bruker «anbefales ikke» fordi selve fruktkjøttet ikke er giftig, mens faren ligger i skallet."
   },
   "signs": {
     "en": [
@@ -180,6 +185,13 @@
       "Ripuli",
       "Alakuloisuus (vähän energiaa, vaikuttaa masentuneelta)",
       "Ihoärsytys"
+    ],
+    "nb": [
+      "Urolig mage",
+      "Oppkast",
+      "Diaré",
+      "Sløvhet (lite energi, virker nedfor)",
+      "Hudirritasjon"
     ]
   },
   "what_to_do": {
@@ -196,7 +208,8 @@
     "pl": "Jeśli pies zjadł skórkę grejpfruta, od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Jeśli zjadł dużą ilość miąższu, również skontaktuj się z weterynarzem.",
     "sv": "Om hunden har ätit grapefruktskal, ring din veterinär eller ett djursjukhus med akutjour direkt. Om den har ätit en stor mängd fruktkött, kontakta också veterinären.",
     "da": "Hvis din hund har spist grapefrugtskal, skal du straks ringe til din dyrlæge eller en akut dyreklinik. Kontakt også din dyrlæge hvis hunden har spist en stor mængde af frugtkødet.",
-    "fi": "Jos koirasi on syönyt greipin kuorta, soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Jos se söi paljon hedelmälihaa, ota yhteyttä eläinlääkäriin siinäkin tapauksessa."
+    "fi": "Jos koirasi on syönyt greipin kuorta, soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Jos se söi paljon hedelmälihaa, ota yhteyttä eläinlääkäriin siinäkin tapauksessa.",
+    "nb": "Hvis hunden har spist grapefruktskall, ring dyrlegen eller en dyreklinikk med døgnvakt med en gang. Har den spist mye fruktkjøtt, bør du også kontakte dyrlegen."
   },
   "serving": null,
   "child": {
@@ -213,7 +226,8 @@
     "pl": "Grejpfrut jest dla psów za kwaśny i może wywołać ból brzucha. Grejpfruta i jego skórkę zostaw dla ludzi.",
     "sv": "Grapefrukt är för sur för hundar och kan ge dem ont i magen. Grapefrukt och grapefruktskal är till för människor.",
     "da": "Grapefrugt er for sur til hunde og kan give dem ondt i maven. Lad grapefrugten og skallen være til os mennesker.",
-    "fi": "Greippi on koirille liian hapan ja voi aiheuttaa niille vatsakipua. Jätä greippi ja sen kuori ihmisille."
+    "fi": "Greippi on koirille liian hapan ja voi aiheuttaa niille vatsakipua. Jätä greippi ja sen kuori ihmisille.",
+    "nb": "Grapefrukt er for sur for hunder og kan gi dem vondt i magen. Grapefrukt og skall er bare for oss mennesker."
   },
   "faq": [
     {
@@ -231,7 +245,8 @@
         "pl": "Co zrobić, jeśli pies zjadł skórkę grejpfruta?",
         "sv": "Vad gör jag om hunden har ätit grapefruktskal?",
         "da": "Hvad hvis min hund har spist grapefrugtskal?",
-        "fi": "Entä jos koirani söi greipin kuorta?"
+        "fi": "Entä jos koirani söi greipin kuorta?",
+        "nb": "Hva gjør jeg hvis hunden har spist grapefruktskall?"
       },
       "a": {
         "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
@@ -247,7 +262,8 @@
         "pl": "Od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Skórka jest toksyczna dla psów z powodu olejków eterycznych.",
         "sv": "Ring din veterinär eller ett djursjukhus med akutjour direkt. Skalet är giftigt för hundar på grund av de eteriska oljorna.",
         "da": "Ring straks til din dyrlæge eller en akut dyreklinik. Skallen er giftig for hunde på grund af de æteriske olier.",
-        "fi": "Soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi."
+        "fi": "Soita heti eläinlääkärille tai eläinlääkäripäivystykseen. Kuori on koirille myrkyllistä sen eteeristen öljyjen vuoksi.",
+        "nb": "Ring dyrlegen eller en dyreklinikk med døgnvakt med en gang. Skallet er giftig for hunder på grunn av de eteriske oljene."
       }
     }
   ],
@@ -377,6 +393,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "609b22eaba73ae5c6a979babb40a5bf76bf7b0cd7c1c231f43623f371d5b2937"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1706272256c54bab6a4fb8dd9eabf54df0a9e3f778476d269b743b2a9f7f84c0"
     }
   }
 }

@@ -15,7 +15,8 @@
     "pl": "Limonki",
     "sv": "Lime",
     "da": "Limefrugter",
-    "fi": "Limetit"
+    "fi": "Limetit",
+    "nb": "Lime"
   },
   "question": {
     "en": "Can dogs eat limes?",
@@ -31,7 +32,8 @@
     "pl": "Czy psy mogą jeść limonki?",
     "sv": "Får hundar äta lime?",
     "da": "Må hunde spise limefrugter?",
-    "fi": "Saako koira syödä limettejä?"
+    "fi": "Saako koira syödä limettejä?",
+    "nb": "Kan hunder spise lime?"
   },
   "url_slug": {
     "en": "limes",
@@ -47,7 +49,8 @@
     "pl": "limonki",
     "sv": "lime",
     "da": "limefrugter",
-    "fi": "limetit"
+    "fi": "limetit",
+    "nb": "lime"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "pl": "Nie, limonek lepiej psom nie podawać. Sam owoc nie jest toksyczny, ale skórka limonki i zawarte w niej olejki są dla psów niebezpieczne, a kwas może rozstroić żołądek. Większość psów i tak nie lubi ich smaku ani zapachu.",
     "sv": "Nej, det är bäst att inte ge lime till hundar. Själva frukten är inte giftig, men limeskal och oljorna i dem är farliga för hundar, och syran kan ge orolig mage. De flesta hundar tycker ändå inte om smaken eller lukten.",
     "da": "Nej, det er bedst ikke at give hunde limefrugter. Selve frugten er ikke giftig, men limeskaller og olierne i dem er farlige for hunde, og syren kan give dårlig mave. De fleste hunde bryder sig alligevel ikke om smagen og duften.",
-    "fi": "Ei, limettejä ei kannata antaa koiralle. Hedelmäliha ei sinänsä ole myrkyllistä, mutta limetin kuori ja sen öljyt ovat koiralle vaarallisia, ja happo voi sekoittaa vatsan. Useimmat koirat eivät muutenkaan pidä limetin mausta ja tuoksusta."
+    "fi": "Ei, limettejä ei kannata antaa koiralle. Hedelmäliha ei sinänsä ole myrkyllistä, mutta limetin kuori ja sen öljyt ovat koiralle vaarallisia, ja happo voi sekoittaa vatsan. Useimmat koirat eivät muutenkaan pidä limetin mausta ja tuoksusta.",
+    "nb": "Nei, det er best å la være å gi hunder lime. Selve frukten er ikke giftig, men limeskall og oljene i skallet er farlige for hunder, og syren kan gi urolig mage. De fleste hunder liker uansett ikke smaken og lukten."
   },
   "why": {
     "en": "The ASPCA lists the lime plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says limes are not toxic but advises against feeding them, and PDSA lists them as unsafe because they are very acidic. In large amounts, citric acid can cause stomach upsets and even depression of the nervous system and loss of coordination. Lime juice is concentrated and shouldn't be given to dogs. We use 'not recommended' because the flesh is not toxic, while the rind, oils and large amounts are the danger.",
@@ -80,7 +84,8 @@
     "pl": "ASPCA uznaje drzewo limonkowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. AKC podaje, że limonki nie są toksyczne, ale odradza ich podawanie, a PDSA uznaje je za niebezpieczne, bo są bardzo kwaśne. W dużych ilościach kwas cytrynowy może wywołać rozstrój żołądka, a nawet zahamowanie czynności ośrodkowego układu nerwowego i utratę koordynacji. Sok z limonki jest skoncentrowany i nie należy go podawać psom. Używamy określenia „niezalecane”, ponieważ miąższ nie jest toksyczny, a zagrożeniem są skórka, olejki i duże ilości.",
     "sv": "ASPCA anger att limeväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att lime inte är giftig men avråder från att ge den, och PDSA anger att lime inte är säker för hundar eftersom den är mycket sur. I stora mängder kan citronsyra ge magbesvär och till och med dämpad funktion i nervsystemet och nedsatt koordination. Limesaft är koncentrerad och ska inte ges till hundar. Vi använder ”rekommenderas inte” eftersom fruktköttet inte är giftigt, medan skalet, oljorna och stora mängder är det som är farligt.",
     "da": "ASPCA regner limeplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at limefrugter ikke er giftige, men fraråder at give dem, og PDSA anser dem for at være usikre, fordi de er meget sure. I store mængder kan citronsyre give maveproblemer og endda dæmpe nervesystemets aktivitet og give tab af koordination. Limesaft er koncentreret og bør ikke gives til hunde. Vi bruger »frarådes«, fordi frugtkødet ikke er giftigt, mens skallen, olierne og store mængder er det farlige.",
-    "fi": "ASPCA luokittelee limettikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan limetit eivät ole myrkyllisiä, mutta niitä ei kannata antaa, ja PDSA pitää niitä turvattomina, koska ne ovat hyvin happamia. Suurina määrinä sitruunahappo voi aiheuttaa vatsavaivoja ja jopa hermoston toiminnan lamaantumista ja koordinaatiohäiriöitä. Limettimehu on väkevää, eikä sitä pidä antaa koiralle. Luokitus on ”ei suositella”, koska hedelmäliha ei ole myrkyllistä, vaan vaarana ovat kuori, öljyt ja suuret määrät."
+    "fi": "ASPCA luokittelee limettikasvin koirille myrkylliseksi eteeristen öljyjen ja psoraleenien vuoksi, mutta toteaa, että hedelmä on syötävä ja ongelmat johtuvat kuorista ja muista kasvinosista. AKC:n mukaan limetit eivät ole myrkyllisiä, mutta niitä ei kannata antaa, ja PDSA pitää niitä turvattomina, koska ne ovat hyvin happamia. Suurina määrinä sitruunahappo voi aiheuttaa vatsavaivoja ja jopa hermoston toiminnan lamaantumista ja koordinaatiohäiriöitä. Limettimehu on väkevää, eikä sitä pidä antaa koiralle. Luokitus on ”ei suositella”, koska hedelmäliha ei ole myrkyllistä, vaan vaarana ovat kuori, öljyt ja suuret määrät.",
+    "nb": "ASPCA oppgir at limeplanten er giftig for hunder på grunn av eteriske oljer og psoralener, men understreker at frukten er spiselig, og at det er skallet og plantematerialet som gir problemene. AKC skriver at lime ikke er giftig, men fraråder å gi den, og PDSA oppgir den som utrygg fordi den er svært sur. I store mengder kan sitronsyre gi magebesvær og til og med depresjon av sentralnervesystemet (nedsatt aktivitet) og dårligere koordinasjon. Limesaft er konsentrert og skal ikke gis til hunder. Vi bruker «anbefales ikke» fordi fruktkjøttet ikke er giftig, mens skallet, oljene og store mengder er faren."
   },
   "signs": {
     "en": [
@@ -208,6 +213,15 @@
       "Suolitukoksen merkit",
       "Vapina tai tärinä",
       "Runsas kuolaaminen"
+    ],
+    "nb": [
+      "Trøtthet, sløvhet",
+      "Oppkast",
+      "Diaré",
+      "Nedsatt appetitt",
+      "Tegn på blokkering i tarmen",
+      "Skjelvinger eller risting",
+      "Mye sikling"
     ]
   },
   "what_to_do": {
@@ -224,7 +238,8 @@
     "pl": "Jeśli pies zjadł dużo limonek, obserwuj, czy nie występują wymienione wyżej objawy, i od razu skontaktuj się z weterynarzem. Skórki wyrzucaj tak, by pies nie mógł ich zjeść, i nie zachęcaj go do zabawy opadłymi limonkami.",
     "sv": "Om hunden har ätit mycket lime, håll utkik efter de här tecknen och kontakta veterinären direkt. Släng skalen så att hunden inte kommer åt dem, och uppmuntra inte hunden att leka med nedfallna limefrukter.",
     "da": "Hvis din hund har spist mange limefrugter, skal du holde øje med disse tegn og straks kontakte din dyrlæge. Smid skallerne ud, så din hund ikke kan komme til dem, og lad ikke hunden lege med limefrugter der er faldet ned.",
-    "fi": "Jos koirasi on syönyt paljon limettejä, tarkkaile näitä oireita ja ota heti yhteyttä eläinlääkäriin. Hävitä kuoret niin, ettei koirasi yllä niihin, äläkä anna sen leikkiä maahan pudonneilla limeteillä."
+    "fi": "Jos koirasi on syönyt paljon limettejä, tarkkaile näitä oireita ja ota heti yhteyttä eläinlääkäriin. Hävitä kuoret niin, ettei koirasi yllä niihin, äläkä anna sen leikkiä maahan pudonneilla limeteillä.",
+    "nb": "Hvis hunden har spist mye lime, må du følge med på tegnene nedenfor og kontakte dyrlegen med en gang. Kast skallene slik at hunden ikke kommer til dem, og ikke oppmuntre hunden til å leke med limefrukter som har falt ned."
   },
   "serving": null,
   "child": {
@@ -241,7 +256,8 @@
     "pl": "Limonki są dla psów za kwaśne i mogą rozstroić im brzuszek. Limonki i ich skórki trzymaj z dala od psa.",
     "sv": "Lime är för sur för hundar och kan ge dem ont i magen. Håll lime och limeskal borta från hunden.",
     "da": "Limefrugter er for sure til hunde og kan give dem ondt i maven. Hold limefrugter og skaller væk fra din hund.",
-    "fi": "Limetit ovat koirille liian happamia ja voivat sekoittaa niiden vatsan. Pidä limetit ja niiden kuoret poissa koirasi ulottuvilta."
+    "fi": "Limetit ovat koirille liian happamia ja voivat sekoittaa niiden vatsan. Pidä limetit ja niiden kuoret poissa koirasi ulottuvilta.",
+    "nb": "Lime er for sur for hunder og kan gi dem vondt i magen. Hold lime og limeskall unna hunden."
   },
   "faq": [
     {
@@ -259,7 +275,8 @@
         "pl": "Czy psy mogą dostać sok z limonki?",
         "sv": "Får hundar limesaft?",
         "da": "Må hunde få limesaft?",
-        "fi": "Saako koira juoda limettimehua?"
+        "fi": "Saako koira juoda limettimehua?",
+        "nb": "Kan hunder få limesaft?"
       },
       "a": {
         "en": "No. Lime juice is a concentrated form of the fruit's flesh, so it shouldn't be given to dogs.",
@@ -275,7 +292,8 @@
         "pl": "Nie. Sok z limonki to skoncentrowana postać owocu, więc nie należy go podawać psom.",
         "sv": "Nej. Limesaft är en koncentrerad form av fruktköttet och ska inte ges till hundar.",
         "da": "Nej. Limesaft er frugtkødet i koncentreret form og bør ikke gives til hunde.",
-        "fi": "Ei. Limettimehu on väkevää tiivistelmää hedelmälihasta, joten sitä ei pidä antaa koiralle."
+        "fi": "Ei. Limettimehu on väkevää tiivistelmää hedelmälihasta, joten sitä ei pidä antaa koiralle.",
+        "nb": "Nei. Limesaft er en konsentrert form av fruktkjøttet og skal ikke gis til hunder."
       }
     }
   ],
@@ -441,6 +459,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a57dabc8afad93214c2d644ec0b03c3c1140fe14000677837e0511046af6b6b5"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb0eb562ff00ac3321b8935d6289946e64fa39a4bbec6b99330408b632153637"
     }
   }
 }
