@@ -9,7 +9,8 @@
     "de": "Mango",
     "fr": "Mangue",
     "es": "Mango",
-    "it": "Mango"
+    "it": "Mango",
+    "pt": "Manga"
   },
   "question": {
     "en": "Can dogs eat mango?",
@@ -19,7 +20,8 @@
     "de": "Dürfen Hunde Mango fressen?",
     "fr": "Les chiens peuvent-ils manger de la mangue ?",
     "es": "¿Pueden los perros comer mango?",
-    "it": "I cani possono mangiare il mango?"
+    "it": "I cani possono mangiare il mango?",
+    "pt": "Os cães podem comer manga?"
   },
   "url_slug": {
     "en": "mango",
@@ -29,7 +31,8 @@
     "de": "mango",
     "fr": "mangue",
     "es": "mango",
-    "it": "mango"
+    "it": "mango",
+    "pt": "manga"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "de": "Ja, in Maßen: Hunde dürfen Mango fressen, wenn sie richtig vorbereitet ist. Schälen Sie die Frucht und entfernen Sie den Kern. Mango enthält viel Zucker und sollte deshalb ein gelegentliches Leckerli bleiben, besonders bei Hunden mit Gewichtsproblemen.",
     "fr": "Oui, avec modération : les chiens peuvent manger de la mangue si elle est bien préparée. Pelez-la et retirez le noyau. La mangue est riche en sucre ; elle doit donc rester une friandise occasionnelle, surtout pour les chiens qui ont des problèmes de poids.",
     "es": "Sí, los perros pueden comer mango con moderación, siempre que esté bien preparado: pélalo y quítale el hueso. El mango tiene mucho azúcar, así que dáselo solo como premio ocasional, sobre todo si tu perro tiene problemas de peso.",
-    "it": "Sì, i cani possono mangiare il mango con moderazione, purché sia preparato bene: sbucciato e senza nocciolo. Il mango contiene molto zucchero, quindi deve restare un premio occasionale, soprattutto per i cani che hanno problemi di peso."
+    "it": "Sì, i cani possono mangiare il mango con moderazione, purché sia preparato bene: sbucciato e senza nocciolo. Il mango contiene molto zucchero, quindi deve restare un premio occasionale, soprattutto per i cani che hanno problemi di peso.",
+    "pt": "Sim, os cães podem comer manga com moderação, desde que seja bem preparada: descasca-a e tira o caroço. A manga tem muito açúcar, por isso mantém-na como guloseima ocasional, sobretudo para cães com problemas de peso."
   },
   "why": {
     "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
@@ -50,7 +54,8 @@
     "de": "Mango enthält Ballaststoffe sowie die Vitamine A, B6, C und E. Der Kern stellt eine ernste Erstickungsgefahr dar, kann im Verdauungstrakt stecken bleiben und enthält geringe Mengen Cyanid. Die Schale ist schwer verdaulich. Zu viel Obst kann Bauchschmerzen und Durchfall verursachen.",
     "fr": "La mangue contient des fibres et les vitamines A, B6, C et E. Le noyau présente un sérieux risque d’étouffement, peut se bloquer dans le tube digestif et contient de petites quantités de cyanure. La peau est difficile à digérer. En manger trop peut provoquer des maux de ventre et de la diarrhée.",
     "es": "El mango contiene fibra y las vitaminas A, B6, C y E. El hueso supone un grave riesgo de atragantamiento, puede quedarse atascado en el aparato digestivo y contiene pequeñas cantidades de cianuro. La piel es difícil de digerir. Demasiada fruta puede causar dolor de barriga y diarrea.",
-    "it": "Il mango contiene fibre e vitamine A, B6, C ed E. Il nocciolo è un serio rischio di soffocamento, può bloccarsi nell’apparato digerente e contiene piccole quantità di cianuro. La buccia è difficile da digerire. Troppa frutta può causare mal di pancia e diarrea."
+    "it": "Il mango contiene fibre e vitamine A, B6, C ed E. Il nocciolo è un serio rischio di soffocamento, può bloccarsi nell’apparato digerente e contiene piccole quantità di cianuro. La buccia è difficile da digerire. Troppa frutta può causare mal di pancia e diarrea.",
+    "pt": "A manga contém fibra e as vitaminas A, B6, C e E. O caroço é um grande risco de engasgo, pode ficar preso no tubo digestivo e contém pequenas quantidades de cianeto. A casca é difícil de digerir. Fruta a mais pode causar dor de barriga e diarreia."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "de": "Wenn Sie unsicher sind, ob Sie Ihrem Hund Mango geben dürfen, fragen Sie Ihren Tierarzt.",
     "fr": "Si vous avez des questions ou des doutes sur le fait de donner de la mangue à votre chien, demandez conseil à votre vétérinaire.",
     "es": "Si tienes dudas sobre si darle mango a tu perro, pregúntaselo a tu veterinario.",
-    "it": "Se hai domande o dubbi sul dare il mango al tuo cane, chiedi al veterinario."
+    "it": "Se hai domande o dubbi sul dare il mango al tuo cane, chiedi al veterinario.",
+    "pt": "Se tiveres dúvidas sobre dar manga ao teu cão, pergunta ao teu veterinário."
   },
   "serving": {
     "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
@@ -71,7 +77,8 @@
     "de": "Geschält, ohne Kern und in kleine Stücke geschnitten; als gelegentliches Leckerli.",
     "fr": "Pelée, sans noyau, coupée en petits morceaux ; en friandise occasionnelle.",
     "es": "Pelado, sin hueso y cortado en trocitos; como premio ocasional.",
-    "it": "Sbucciato, senza nocciolo e tagliato a pezzetti; come premio occasionale."
+    "it": "Sbucciato, senza nocciolo e tagliato a pezzetti; come premio occasionale.",
+    "pt": "Descascada, sem caroço, cortada em pedacinhos; como guloseima ocasional."
   },
   "child": {
     "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
@@ -81,7 +88,8 @@
     "de": "Hunde dürfen ein bisschen Mango probieren! Ein Erwachsener schält sie zuerst und nimmt den großen Kern heraus.",
     "fr": "Les chiens peuvent goûter un peu de mangue ! Un adulte commence par la peler et retirer le gros noyau.",
     "es": "¡Los perros pueden probar un poquito de mango! Un adulto lo pela y le quita antes el hueso grande.",
-    "it": "I cani possono assaggiare un po’ di mango! Prima un adulto lo sbuccia e toglie il grosso nocciolo."
+    "it": "I cani possono assaggiare un po’ di mango! Prima un adulto lo sbuccia e toglie il grosso nocciolo.",
+    "pt": "Os cães podem provar um bocadinho de manga! Um adulto descasca-a e tira primeiro o caroço grande."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "de": "Warum muss der Mangokern entfernt werden?",
         "fr": "Pourquoi faut-il retirer le noyau de la mangue ?",
         "es": "¿Por qué hay que quitar el hueso del mango?",
-        "it": "Perché bisogna togliere il nocciolo del mango?"
+        "it": "Perché bisogna togliere il nocciolo del mango?",
+        "pt": "Porque é que se tem de tirar o caroço da manga?"
       },
       "a": {
         "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
@@ -103,7 +112,8 @@
         "de": "Ein Hund kann am Kern ersticken, und der Kern kann im Verdauungstrakt stecken bleiben; außerdem enthält er geringe Mengen Cyanid.",
         "fr": "Le noyau présente un risque d’étouffement, peut se bloquer dans le tube digestif du chien et contient de petites quantités de cyanure.",
         "es": "El hueso puede atragantar al perro o quedarse atascado en su aparato digestivo, y contiene pequeñas cantidades de cianuro.",
-        "it": "Il nocciolo può far soffocare il cane o bloccarsi nell’apparato digerente, e contiene piccole quantità di cianuro."
+        "it": "Il nocciolo può far soffocare il cane o bloccarsi nell’apparato digerente, e contiene piccole quantità di cianuro.",
+        "pt": "O caroço pode fazer o cão engasgar-se ou ficar preso no tubo digestivo, e contém pequenas quantidades de cianeto."
       }
     },
     {
@@ -115,7 +125,8 @@
         "de": "Dürfen Hunde Mangoschale fressen?",
         "fr": "Les chiens peuvent-ils manger la peau de la mangue ?",
         "es": "¿Pueden los perros comer la piel del mango?",
-        "it": "I cani possono mangiare la buccia del mango?"
+        "it": "I cani possono mangiare la buccia del mango?",
+        "pt": "Os cães podem comer a casca da manga?"
       },
       "a": {
         "en": "It is difficult to digest, so it is best to remove it before serving.",
@@ -125,7 +136,8 @@
         "de": "Sie ist schwer verdaulich; entfernen Sie sie daher am besten vor dem Füttern.",
         "fr": "Elle est difficile à digérer ; mieux vaut donc la retirer avant de servir.",
         "es": "Es difícil de digerir, así que lo mejor es quitarla antes de servirlo.",
-        "it": "È difficile da digerire, quindi è meglio toglierla prima di servire."
+        "it": "È difficile da digerire, quindi è meglio toglierla prima di servire.",
+        "pt": "É difícil de digerir, por isso é melhor tirá-la antes de servir."
       }
     }
   ],
@@ -225,6 +237,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3753e8da13c6e7e201acb44d035d7a8c32ccabc203da9415c9a0b238ffa8ddfc"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e7d3cd12a63862b18bec2e6dbe1491fb964841989e153e32bebd038af129fb14"
     }
   }
 }
