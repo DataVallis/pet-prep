@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "be944583c56f006e5c1d10a927f87fa47db963eb621834da1b9e73740c45a655"
+      "sha256": "065c58045328abf27f4bbebdcd04c10ebad968e393f4e0d84c5fda130d2a32f2"
     }
   },
   "suitability_vocabulary": {
@@ -50816,7 +50816,12 @@
           "S688"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "anatolian-shepherd-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
