@@ -7,7 +7,8 @@
     "hr": "Grejpfrut",
     "cs": "Grapefruit",
     "de": "Grapefruit",
-    "fr": "Pamplemousse"
+    "fr": "Pamplemousse",
+    "es": "Pomelo"
   },
   "question": {
     "en": "Can dogs eat grapefruit?",
@@ -15,7 +16,8 @@
     "hr": "Smiju li psi jesti grejpfrut?",
     "cs": "Mohou psi jíst grapefruit?",
     "de": "Dürfen Hunde Grapefruit fressen?",
-    "fr": "Les chiens peuvent-ils manger du pamplemousse ?"
+    "fr": "Les chiens peuvent-ils manger du pamplemousse ?",
+    "es": "¿Pueden los perros comer pomelo?"
   },
   "url_slug": {
     "en": "grapefruit",
@@ -23,7 +25,8 @@
     "hr": "grejpfrut",
     "cs": "grapefruit",
     "de": "grapefruit",
-    "fr": "pamplemousse"
+    "fr": "pamplemousse",
+    "es": "pomelo"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "hr": "Ne, bolje je da psu ne daješ grejpfrut. Meso ploda nije otrovno, ali zbog mnogo limunske kiseline može nadražiti psu želudac, a kora je otrovna za pse zbog eteričnih ulja.",
     "cs": "Ne, grapefruit psům raději nedávejte. Dužina sice není toxická, ale vysoký obsah kyseliny citronové může psovi podráždit žaludek a slupka i kůra jsou pro psy kvůli éterickým olejům toxické.",
     "de": "Nein, füttern Sie Hunden besser keine Grapefruit. Das Fruchtfleisch ist nicht giftig, aber der hohe Gehalt an Zitronensäure kann den Magen eines Hundes reizen, und Haut und Schale sind wegen ihrer ätherischen Öle für Hunde giftig.",
-    "fr": "Non, mieux vaut ne pas donner de pamplemousse aux chiens. La chair n’est pas toxique, mais sa forte teneur en acide citrique peut irriter l’estomac du chien, et la peau et l’écorce sont toxiques pour les chiens à cause de leurs huiles essentielles."
+    "fr": "Non, mieux vaut ne pas donner de pamplemousse aux chiens. La chair n’est pas toxique, mais sa forte teneur en acide citrique peut irriter l’estomac du chien, et la peau et l’écorce sont toxiques pour les chiens à cause de leurs huiles essentielles.",
+    "es": "No, es mejor no dar pomelo a los perros. La pulpa no es tóxica, pero tiene mucho ácido cítrico y puede sentarles mal al estómago, y la piel y la corteza son tóxicas para los perros por sus aceites esenciales."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
@@ -40,7 +44,8 @@
     "hr": "ASPCA biljku grejpfruta ubraja među biljke otrovne za pse zbog eteričnih ulja i psoralena, uz napomenu da je plod jestiv te da tegobe uzrokuju kora i dijelovi biljke. AKC navodi da meso ploda nije otrovno, ali da ga je bolje izbjegavati, dijelom zbog mnogo limunske kiseline, te da je kora otrovna zbog prirodnih eteričnih ulja. PDSA grejpfrut ubraja među nesigurnu hranu, jer je vrlo kiseo. Koristimo ocjenu „ne preporučuje se“ jer meso ploda samo po sebi nije otrovno, a opasnost je kora.",
     "cs": "ASPCA řadí grapefruitovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům a zároveň poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC uvádí, že dužina není toxická, ale je lepší se jí vyhnout, mimo jiné kvůli vysokému obsahu kyseliny citronové, a že slupka a kůra jsou toxické kvůli přirozeným éterickým olejům. PDSA řadí grapefruit mezi nebezpečné potraviny, protože je velmi kyselý. Používáme označení „nedoporučuje se“, protože dužina sama toxická není, nebezpečná je slupka a kůra.",
     "de": "Die ASPCA führt die Grapefruitpflanze als giftig für Hunde auf – wegen ätherischer Öle und Psoralene –, weist aber darauf hin, dass die Frucht essbar ist und die Probleme von Schalen und Pflanzenteilen ausgehen. Der AKC sagt, das Fruchtfleisch sei nicht giftig, solle aber gemieden werden, unter anderem wegen des hohen Zitronensäuregehalts, und Haut und Schale seien wegen ihrer natürlichen ätherischen Öle giftig. Die PDSA stuft Grapefruit als nicht sicher ein, weil sie sehr sauer ist. Wir verwenden „nicht empfohlen“, weil das Fruchtfleisch selbst nicht giftig ist, die Gefahr aber von Haut und Schale ausgeht.",
-    "fr": "L’ASPCA classe le pamplemoussier parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, tout en précisant que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC indique que la chair n’est pas toxique mais qu’il vaut mieux l’éviter, notamment à cause de sa forte teneur en acide citrique, et que la peau et l’écorce sont toxiques à cause de leurs huiles essentielles naturelles. La PDSA range le pamplemousse parmi les aliments dangereux parce qu’il est très acide. Nous utilisons la mention « déconseillé » parce que la chair elle-même n’est pas toxique, alors que la peau et l’écorce sont dangereuses."
+    "fr": "L’ASPCA classe le pamplemoussier parmi les plantes toxiques pour les chiens à cause de ses huiles essentielles et de ses psoralènes, tout en précisant que le fruit est comestible et que ce sont les écorces et les autres parties de la plante qui posent problème. L’AKC indique que la chair n’est pas toxique mais qu’il vaut mieux l’éviter, notamment à cause de sa forte teneur en acide citrique, et que la peau et l’écorce sont toxiques à cause de leurs huiles essentielles naturelles. La PDSA range le pamplemousse parmi les aliments dangereux parce qu’il est très acide. Nous utilisons la mention « déconseillé » parce que la chair elle-même n’est pas toxique, alors que la peau et l’écorce sont dangereuses.",
+    "es": "La ASPCA considera tóxica para los perros la planta del pomelo por sus aceites esenciales y psoralenos, aunque señala que el fruto es comestible y que los problemas los causan la piel y el resto de la planta. El AKC dice que la pulpa no es tóxica, pero que es mejor evitarla, en parte por el ácido cítrico que contiene, y que la piel y la corteza son tóxicas por sus aceites esenciales naturales. La PDSA incluye el pomelo entre los alimentos que no son seguros porque es muy ácido. Usamos «no recomendado» porque la pulpa en sí no es tóxica, mientras que el peligro está en la piel y la corteza."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Diarrhée",
       "Abattement (peu d’énergie, air triste)",
       "Irritation cutanée"
+    ],
+    "es": [
+      "Malestar de estómago",
+      "Vómitos",
+      "Diarrea",
+      "Decaimiento (poca energía, aspecto apagado)",
+      "Irritación de la piel"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "hr": "Ako je pas pojeo koru grejpfruta, odmah nazovi veterinara ili dežurnu veterinarsku ambulantu. Ako je pojeo veću količinu mesa ploda, također se obrati veterinaru.",
     "cs": "Pokud váš pes snědl slupku nebo kůru grapefruitu, okamžitě zavolejte veterináři nebo na nonstop veterinární pohotovost. Také když snědl velké množství dužiny, obraťte se na veterináře.",
     "de": "Hat Ihr Hund Grapefruithaut oder -schale gefressen, rufen Sie sofort Ihren Tierarzt oder eine tierärztliche Notfallklinik an. Hat er eine große Menge Fruchtfleisch gefressen, wenden Sie sich ebenfalls an Ihren Tierarzt.",
-    "fr": "Si votre chien a mangé de la peau ou de l’écorce de pamplemousse, appelez immédiatement votre vétérinaire ou une clinique vétérinaire d’urgence. S’il a mangé une grande quantité de chair, contactez aussi votre vétérinaire."
+    "fr": "Si votre chien a mangé de la peau ou de l’écorce de pamplemousse, appelez immédiatement votre vétérinaire ou une clinique vétérinaire d’urgence. S’il a mangé une grande quantité de chair, contactez aussi votre vétérinaire.",
+    "es": "Si tu perro se ha comido la piel o la corteza del pomelo, llama enseguida a tu veterinario o a una clínica de urgencias veterinarias. Si ha comido mucha pulpa, contacta también con tu veterinario."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "hr": "Grejpfrut je psima prekiseo i može ih zaboljeti trbuh. Grejpfrut i njegovu koru ostavi ljudima.",
     "cs": "Grapefruit je pro psy příliš kyselý a může je z něj rozbolet bříško. Grapefruit i jeho slupku nech lidem.",
     "de": "Grapefruit ist für Hunde zu sauer und kann ihnen Bauchweh machen. Grapefruit und ihre Schale sind nur etwas für Menschen.",
-    "fr": "Le pamplemousse est trop acide pour les chiens et peut leur donner mal au ventre. Garde le pamplemousse et sa peau pour les humains."
+    "fr": "Le pamplemousse est trop acide pour les chiens et peut leur donner mal au ventre. Garde le pamplemousse et sa peau pour les humains.",
+    "es": "El pomelo es demasiado ácido para los perros y puede darles dolor de barriga. El pomelo, con su cáscara, es solo para las personas."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "hr": "Što ako je pas pojeo koru grejpfruta?",
         "cs": "Co když můj pes snědl slupku grapefruitu?",
         "de": "Was ist, wenn mein Hund Grapefruitschale gefressen hat?",
-        "fr": "Que faire si mon chien a mangé de l’écorce de pamplemousse ?"
+        "fr": "Que faire si mon chien a mangé de l’écorce de pamplemousse ?",
+        "es": "¿Y si mi perro se ha comido cáscara de pomelo?"
       },
       "a": {
         "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
@@ -119,7 +134,8 @@
         "hr": "Odmah nazovi veterinara ili dežurnu veterinarsku ambulantu. Kora je otrovna za pse zbog eteričnih ulja.",
         "cs": "Okamžitě zavolejte veterináři nebo na nonstop veterinární pohotovost. Slupka a kůra jsou pro psy toxické kvůli éterickým olejům.",
         "de": "Rufen Sie sofort Ihren Tierarzt oder eine tierärztliche Notfallklinik an. Haut und Schale sind wegen ihrer ätherischen Öle für Hunde giftig.",
-        "fr": "Appelez immédiatement votre vétérinaire ou une clinique vétérinaire d’urgence. La peau et l’écorce sont toxiques pour les chiens à cause de leurs huiles essentielles."
+        "fr": "Appelez immédiatement votre vétérinaire ou une clinique vétérinaire d’urgence. La peau et l’écorce sont toxiques pour les chiens à cause de leurs huiles essentielles.",
+        "es": "Llama enseguida a tu veterinario o a una clínica de urgencias veterinarias. La piel y la corteza son tóxicas para los perros por sus aceites esenciales."
       }
     }
   ],
@@ -209,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e74bf2ee54acc383b4643d5b0ef862719e24b973191792380640ccbce90f4267"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3d6d80f7ce8873ea116581fbe37e88e6a9435307b5d9d146a58f9a814b15a730"
     }
   }
 }
