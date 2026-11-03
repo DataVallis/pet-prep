@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Pomegranate",
-    "sl": "Granatno jabolko"
+    "sl": "Granatno jabolko",
+    "de": "Granatapfel"
   },
   "question": {
     "en": "Can dogs eat pomegranate?",
-    "sl": "Ali lahko psi jedo granatno jabolko?"
+    "sl": "Ali lahko psi jedo granatno jabolko?",
+    "de": "Dürfen Hunde Granatapfel fressen?"
   },
   "url_slug": {
     "en": "pomegranate",
-    "sl": "granatno-jabolko"
+    "sl": "granatno-jabolko",
+    "de": "granatapfel"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
-    "sl": "Ni priporočljivo. Granatno jabolko za pse ni strupeno, a to še ne pomeni, da je varno: semena lahko povzročijo prebavne težave in zaporo prebavil, koščki lupine in peclja pa zamašitev. Varneje je, da psu svežega granatnega jabolka ne dajete."
+    "sl": "Ni priporočljivo. Granatno jabolko za pse ni strupeno, a to še ne pomeni, da je varno: semena lahko povzročijo prebavne težave in zaporo prebavil, koščki lupine in peclja pa zamašitev. Varneje je, da psu svežega granatnega jabolka ne dajete.",
+    "de": "Nicht empfohlen. Granatäpfel sind für Hunde nicht giftig, doch das macht die Frucht nicht sicher: Die Kerne können Magenprobleme und eine Blockade im Verdauungstrakt verursachen, und Stücke von Schale und Stiel können einen Darmverschluss auslösen. Frischen Granatapfel geben Sie besser nicht."
   },
   "why": {
     "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
-    "sl": "Glavni veterinar AKC pravi, da granatno jabolko za pse ni strupeno. Semena, ki jih ljudje običajno jemo, pa lahko vseeno povzročijo prebavne težave in zaporo prebavil. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih. Izvleček granatnega jabolka v izdelkih, narejenih za pse, je nekaj drugega kot svež sadež."
+    "sl": "Glavni veterinar AKC pravi, da granatno jabolko za pse ni strupeno. Semena, ki jih ljudje običajno jemo, pa lahko vseeno povzročijo prebavne težave in zaporo prebavil. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih. Izvleček granatnega jabolka v izdelkih, narejenih za pse, je nekaj drugega kot svež sadež.",
+    "de": "Laut dem Chefveterinär des AKC sind Granatäpfel für Hunde nicht giftig. Die Kerne, also der Teil, den Menschen meist essen, können dennoch Magen-Darm-Beschwerden und eine Blockade im Verdauungstrakt verursachen. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden. Granatapfelextrakt in Produkten für Hunde ist etwas anderes als die frische Frucht."
   },
   "signs": {
     "en": [
@@ -30,36 +35,46 @@
     "sl": [
       "Driska",
       "Bruhanje"
+    ],
+    "de": [
+      "Durchfall",
+      "Erbrechen"
     ]
   },
   "what_to_do": {
     "en": "If your dog gets into pomegranate seeds, contact your vet right away.",
-    "sl": "Če pes poje semena granatnega jabolka, se takoj obrnite na veterinarja."
+    "sl": "Če pes poje semena granatnega jabolka, se takoj obrnite na veterinarja.",
+    "de": "Hat Ihr Hund Granatapfelkerne gefressen, wenden Sie sich sofort an Ihren Tierarzt."
   },
   "serving": null,
   "child": {
     "en": "Pomegranate is a people fruit. Its seeds and peel can upset a dog's tummy, so keep it out of reach.",
-    "sl": "Granatno jabolko je sadež za ljudi. Njegova semena in lupina lahko psu razburijo trebušček, zato ga pospravi."
+    "sl": "Granatno jabolko je sadež za ljudi. Njegova semena in lupina lahko psu razburijo trebušček, zato ga pospravi.",
+    "de": "Granatapfel ist eine Frucht für Menschen. Kerne und Schale können Hunden auf den Bauch schlagen, also halte sie von deinem Hund fern."
   },
   "faq": [
     {
       "q": {
         "en": "Is pomegranate in dog food okay?",
-        "sl": "Je granatno jabolko v pasji hrani v redu?"
+        "sl": "Je granatno jabolko v pasji hrani v redu?",
+        "de": "Ist Granatapfel im Hundefutter in Ordnung?"
       },
       "a": {
         "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
-        "sl": "Izvleček granatnega jabolka ima lahko za pse koristi. Če ga želite dajati, izberite izdelke, narejene posebej za pse, in se posvetujte z veterinarjem."
+        "sl": "Izvleček granatnega jabolka ima lahko za pse koristi. Če ga želite dajati, izberite izdelke, narejene posebej za pse, in se posvetujte z veterinarjem.",
+        "de": "Granatapfelextrakt kann für Hunde gesundheitliche Vorteile haben. Wenn Sie ihn geben möchten, achten Sie auf Produkte, die speziell für Hunde hergestellt sind, und sprechen Sie mit Ihrem Tierarzt."
       }
     },
     {
       "q": {
         "en": "Can dogs eat the pomegranate peel?",
-        "sl": "Ali lahko psi jedo lupino granatnega jabolka?"
+        "sl": "Ali lahko psi jedo lupino granatnega jabolka?",
+        "de": "Dürfen Hunde die Granatapfelschale fressen?"
       },
       "a": {
         "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
-        "sl": "Ne. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih, zato jih psu ne dajajte."
+        "sl": "Ne. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih, zato jih psu ne dajajte.",
+        "de": "Nein. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden – füttern Sie sie also nicht."
       }
     }
   ],
@@ -137,6 +152,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d644ebf124115813dd8f4c2f787a2949d70bfeb3599b6f0c16e4b2115accb722"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2875dc6f4778c1ac45c6f683437f1ee1406849d065d93b21672332efe36185f7"
     }
   }
 }

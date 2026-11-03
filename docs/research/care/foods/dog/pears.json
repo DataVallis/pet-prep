@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Pears",
-    "sl": "Hruške"
+    "sl": "Hruške",
+    "de": "Birnen"
   },
   "question": {
     "en": "Can dogs eat pears?",
-    "sl": "Ali lahko psi jedo hruške?"
+    "sl": "Ali lahko psi jedo hruške?",
+    "de": "Dürfen Hunde Birnen fressen?"
   },
   "url_slug": {
     "en": "pears",
-    "sl": "hruske"
+    "sl": "hruske",
+    "de": "birnen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
-    "sl": "Da, psi lahko zmerno jedo hruške. Odstranite peščišče in semena, sadež narežite na majhne koščke in ne dajajte hrušk iz konzerve v sladkem sirupu. Preveč hrušk lahko psu razburi želodec."
+    "sl": "Da, psi lahko zmerno jedo hruške. Odstranite peščišče in semena, sadež narežite na majhne koščke in ne dajajte hrušk iz konzerve v sladkem sirupu. Preveč hrušk lahko psu razburi želodec.",
+    "de": "Ja, Hunde dürfen in Maßen Birnen fressen. Entfernen Sie Kerngehäuse und Kerne, schneiden Sie die Frucht in mundgerechte Stücke und verzichten Sie auf Dosenbirnen in zuckrigem Sirup. Zu viele Birnen können den Magen eines Hundes verstimmen."
   },
   "why": {
     "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
-    "sl": "Hruške vsebujejo vitamin C, vitamin A, baker in vlaknine. Semena vsebujejo sledi cianida in lahko povzročijo tudi dušenje, zato peščišča psu ne dajajte. Hruške iz konzerve vsebujejo preveč sladkorja, ki lahko draži prebavila in vodi v debelost. Tudi varna hrana, kot so hruške, lahko povzroči dušenje."
+    "sl": "Hruške vsebujejo vitamin C, vitamin A, baker in vlaknine. Semena vsebujejo sledi cianida in lahko povzročijo tudi dušenje, zato peščišča psu ne dajajte. Hruške iz konzerve vsebujejo preveč sladkorja, ki lahko draži prebavila in vodi v debelost. Tudi varna hrana, kot so hruške, lahko povzroči dušenje.",
+    "de": "Birnen enthalten Vitamin C, Vitamin A, Kupfer und Ballaststoffe. Die Kerne enthalten Spuren von Cyanid und können außerdem zum Ersticken führen, deshalb sollte das Kerngehäuse nicht an den Hund weitergegeben werden. Dosenbirnen enthalten zu viel Zucker, der den Verdauungstrakt reizen und zu Fettleibigkeit führen kann. Auch an sich unbedenkliche Lebensmittel wie Birnen können eine Erstickungsgefahr darstellen."
   },
   "signs": null,
   "what_to_do": {
     "en": "The first time you give pears, watch for signs of stomach upset, and contact your vet if you have any concerns.",
-    "sl": "Ko psu prvič date hruško, bodite pozorni na znake prebavnih težav in se ob kakršnih koli skrbeh obrnite na veterinarja."
+    "sl": "Ko psu prvič date hruško, bodite pozorni na znake prebavnih težav in se ob kakršnih koli skrbeh obrnite na veterinarja.",
+    "de": "Wenn Sie Birnen zum ersten Mal füttern, achten Sie auf Anzeichen einer Magenverstimmung, und wenden Sie sich an Ihren Tierarzt, wenn Sie Bedenken haben."
   },
   "serving": {
     "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
-    "sl": "Sveža, zrela hruška brez peščišča in semen, narezana na majhne koščke; psa med jedjo opazujte. Kot občasen prigrizek."
+    "sl": "Sveža, zrela hruška brez peščišča in semen, narezana na majhne koščke; psa med jedjo opazujte. Kot občasen prigrizek.",
+    "de": "Frische, reife Birne ohne Kerngehäuse und Kerne, in mundgerechte Stücke geschnitten, als gelegentlicher Snack; beobachten Sie Ihren Hund beim Fressen."
   },
   "child": {
     "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
-    "sl": "Psi lahko pojedo nekaj koščkov hruške! Odrasli najprej odstrani sredico s semeni."
+    "sl": "Psi lahko pojedo nekaj koščkov hruške! Odrasli najprej odstrani sredico s semeni.",
+    "de": "Hunde dürfen ein paar kleine Birnenstücke haben! Ein Erwachsener nimmt vorher die Mitte mit den Kernen heraus."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat the pear core?",
-        "sl": "Ali lahko psi jedo peščišče hruške?"
+        "sl": "Ali lahko psi jedo peščišče hruške?",
+        "de": "Dürfen Hunde das Birnenkerngehäuse fressen?"
       },
       "a": {
         "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
-        "sl": "Ne. Psu ne dajajte delov hruške s semeni; semena vsebujejo sledi cianida in lahko povzročijo dušenje."
+        "sl": "Ne. Psu ne dajajte delov hruške s semeni; semena vsebujejo sledi cianida in lahko povzročijo dušenje.",
+        "de": "Nein. Geben Sie Ihrem Hund keine Teile der Birne, in denen Kerne stecken; die Kerne enthalten Spuren von Cyanid und können zum Ersticken führen."
       }
     },
     {
       "q": {
         "en": "Are canned pears okay?",
-        "sl": "So hruške iz konzerve v redu?"
+        "sl": "So hruške iz konzerve v redu?",
+        "de": "Sind Dosenbirnen in Ordnung?"
       },
       "a": {
         "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
-        "sl": "Ne. Hruške iz konzerve vsebujejo preveč sladkorja. Ne dajajte hrušk iz konzerve ali kozarca v sirupu, tudi ne tistih z oznako »v lastnem soku«. Najboljša izbira so sveže, zrele hruške."
+        "sl": "Ne. Hruške iz konzerve vsebujejo preveč sladkorja. Ne dajajte hrušk iz konzerve ali kozarca v sirupu, tudi ne tistih z oznako »v lastnem soku«. Najboljša izbira so sveže, zrele hruške.",
+        "de": "Nein. Dosenbirnen enthalten zu viel Zucker. Verzichten Sie auf Birnen aus Dose oder Glas, die in Sirup eingelegt sind, auch auf solche mit dem Aufdruck „im eigenen Saft“. Frische, reife Birnen sind die beste Wahl."
       }
     }
   ],
@@ -147,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "930298a9b80d9a0b8dc15d3f38b9c3d473950d9a422c604f0270a9af1e9ec4a1"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "979fe34d6af556b15dc3d732595de252f43c9815e58bb9c0665381cb6c7ca1b9"
     }
   }
 }
