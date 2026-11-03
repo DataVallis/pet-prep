@@ -59,7 +59,7 @@
     "de": "Nein, koffeinhaltiger Tee ist nichts für Hunde. Tee enthält Koffein, das für Hunde giftig ist. Ein kleiner Schluck schadet kaum, aber größere Mengen können gefährlich sein, besonders für kleine Hunde, und gefressene Teebeutel können eine schwere Vergiftung verursachen.",
     "fr": "Non, le thé caféiné n’est pas pour les chiens. Il contient de la caféine, toxique pour eux. Une petite gorgée a peu de chances de faire du mal, mais de plus grandes quantités peuvent être dangereuses, surtout pour les petits chiens, et des sachets de thé avalés peuvent provoquer une intoxication grave.",
     "es": "No, el té con cafeína no es para perros. El té contiene cafeína, que es tóxica para los perros. Probar un poquito difícilmente le hará daño, pero cantidades mayores pueden ser peligrosas, sobre todo para los perros pequeños, y comerse bolsitas de té puede causar una intoxicación grave.",
-    "it": "No, il tè con caffeina non è per i cani. Il tè contiene caffeina, che è tossica per i cani. Un piccolo assaggio difficilmente fa male, ma quantità maggiori possono essere pericolose, soprattutto per i cani piccoli, e le bustine di tè mangiate possono causare un avvelenamento grave.",
+    "it": "No, il tè con caffeina non è per i cani. Contiene caffeina, che è tossica per i cani. Un piccolo assaggio difficilmente fa male, ma quantità maggiori possono essere pericolose, soprattutto per i cani piccoli, e le bustine di tè mangiate possono causare un avvelenamento grave.",
     "pt": "Não, o chá com cafeína não é para cães. O chá contém cafeína, que é tóxica para os cães. Provar um pouco dificilmente faz mal, mas quantidades maiores podem ser perigosas, sobretudo para cães pequenos, e as saquetas de chá engolidas podem causar uma intoxicação grave.",
     "nl": "Nee, thee met cafeïne is niet voor honden. Thee bevat cafeïne, en dat is giftig voor honden. Een klein slokje doet waarschijnlijk geen kwaad, maar grotere hoeveelheden kunnen gevaarlijk zijn, vooral voor kleine honden, en opgegeten theezakjes kunnen ernstige vergiftiging veroorzaken.",
     "pl": "Nie, herbata z kofeiną nie jest dla psów. Herbata zawiera kofeinę, która jest toksyczna dla psów. Mały łyk raczej nie zaszkodzi, ale większe ilości mogą być niebezpieczne, zwłaszcza dla małych psów, a zjedzone torebki herbaty mogą wywołać poważne zatrucie.",
@@ -420,7 +420,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "829aaf66bccb4f00654b3e50e496030e9b051e3aaabb6a6465296ba43f29d071"
+      "verified_hash": "955874e8142b72db2385934afc1cca0ad36446385cc4e1976317340c8bb92b92"
     },
     "pt": {
       "status": "verified",

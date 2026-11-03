@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "a23442a19dc922fc5e2d7576fe273d0c62067b3fa2a22643e087fdedd8c18964"
+      "sha256": "57651b01a926ce9f811c22adeab06beb9efaed69e1e441ef93915ee74a2d8a02"
     }
   },
   "suitability_vocabulary": {
@@ -47664,7 +47664,12 @@
           "S650"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "rat-terrier.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -48306,7 +48311,12 @@
           "S658"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "greater-swiss-mountain-dog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -48920,7 +48930,12 @@
           "S667"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "shar-pei.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

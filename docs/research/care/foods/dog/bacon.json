@@ -59,7 +59,7 @@
     "de": "Nicht empfohlen. Speck ist nicht giftig, aber als fettes Essen vom Tisch kann er Erbrechen und Durchfall verursachen oder eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen, die schwer verlaufen kann. Teilen Sie im Zweifel kein Essen vom Tisch mit Ihrem Hund.",
     "fr": "Déconseillé. Le bacon n’est pas toxique, mais c’est un aliment de table gras qui peut provoquer vomissements et diarrhée, ou déclencher une pancréatite, parfois grave. Dans le doute, ne partagez pas les restes de table avec votre chien.",
     "es": "No se recomienda. El beicon no es tóxico, pero es una comida grasa de la mesa que puede causar vómitos y diarrea o desencadenar una pancreatitis, que puede ser grave. Ante la duda, no compartas comida de la mesa con tu perro.",
-    "it": "Sconsigliato. Il bacon non è tossico, ma è un cibo grasso della tavola che può causare vomito e diarrea o scatenare una pancreatite, anche grave. Nel dubbio, non condividere con il tuo cane il cibo della tavola.",
+    "it": "Sconsigliato. Il bacon non è tossico, ma è un cibo grasso da tavola che può causare vomito e diarrea o scatenare una pancreatite, anche grave. Nel dubbio, non condividere con il tuo cane il cibo da tavola.",
     "pt": "Não é recomendado. O bacon não é tóxico, mas é comida gorda da mesa que pode causar vómitos e diarreia ou desencadear uma pancreatite, que pode ser grave. Na dúvida, não partilhes comida da mesa com o teu cão.",
     "nl": "Niet aan te raden. Spek is niet giftig, maar het is vet tafelvoedsel dat braken en diarree kan veroorzaken of alvleesklierontsteking kan uitlokken, en die kan ernstig zijn. Twijfel je? Deel dan geen tafelvoedsel met je hond.",
     "pl": "Nie zaleca się. Boczek nie jest toksyczny, ale to tłuste jedzenie ze stołu, które może wywołać wymioty i biegunkę albo zapalenie trzustki, czasem ciężkie. W razie wątpliwości nie dziel się z psem jedzeniem ze stołu.",
@@ -76,7 +76,7 @@
     "de": "Pet Poison Helpline zählt Speck zu den fetten Speisen vom Tisch, die Probleme von leichter Magenverstimmung bis zu schwerer Pankreatitis verursachen. Eine fette Mahlzeit ist ein bekannter Auslöser für Pankreatitis, und manche Rassen wie der Zwergschnauzer sind dafür anfälliger.",
     "fr": "Le Pet Poison Helpline cite le bacon parmi les aliments de table gras qui causent des problèmes allant de légers troubles digestifs à une pancréatite grave. Un repas gras est un déclencheur connu de la pancréatite, et certaines races, comme le schnauzer nain, y sont plus sujettes.",
     "es": "Pet Poison Helpline incluye el beicon entre las comidas grasas de la mesa que causan problemas, desde un leve malestar de estómago hasta una pancreatitis grave. Una comida grasa es un desencadenante conocido de la pancreatitis, y algunas razas, como el schnauzer miniatura, son más propensas a sufrirla.",
-    "it": "Pet Poison Helpline cita il bacon tra i cibi grassi della tavola che causano problemi che vanno da un lieve mal di stomaco a una pancreatite grave. Un pasto grasso è un noto fattore scatenante della pancreatite, e alcune razze, come lo schnauzer nano, sono più predisposte.",
+    "it": "Pet Poison Helpline cita il bacon tra i cibi grassi da tavola che causano problemi che vanno da un lieve mal di stomaco a una pancreatite grave. Un pasto grasso è un noto fattore scatenante della pancreatite, e alcune razze, come lo schnauzer nano, sono più predisposte.",
     "pt": "A Pet Poison Helpline inclui o bacon entre os alimentos gordos da mesa que causam problemas que vão de uma ligeira perturbação do estômago a uma pancreatite grave. Uma refeição gorda é um desencadeador conhecido de pancreatite, e algumas raças, como o schnauzer miniatura, são mais propensas.",
     "nl": "Pet Poison Helpline rekent spek tot het vette tafelvoedsel dat problemen geeft, van een lichte maagstoornis tot ernstige alvleesklierontsteking. Een vette maaltijd is een bekende uitlokker van alvleesklierontsteking, en sommige rassen, zoals de dwergschnauzer, zijn er gevoeliger voor.",
     "pl": "Pet Poison Helpline wymienia boczek wśród tłustych potraw ze stołu, które powodują problemy – od łagodnych dolegliwości żołądkowych po ciężkie zapalenie trzustki. Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki, a niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
@@ -124,7 +124,7 @@
       "Cansancio, fiebre"
     ],
     "it": [
-      "Vomito, a volte 1–4 giorni dopo il pasto grasso",
+      "Vomito, a volte 1–4 giorni dopo il pasto grasso",
       "Mal di pancia (il cane può allungarsi nella posizione «della preghiera»)",
       "Diarrea",
       "Rifiuto del cibo",
@@ -254,7 +254,7 @@
         "de": "Speck ist nicht giftig, aber fettes Essen vom Tisch kann einem Hund auf den Magen schlagen oder eine Pankreatitis auslösen – teilen Sie es deshalb besser nicht.",
         "fr": "Le bacon n’est pas toxique, mais les aliments de table gras peuvent déranger l’estomac d’un chien ou déclencher une pancréatite : mieux vaut ne pas en partager.",
         "es": "El beicon no es tóxico, pero la comida grasa de la mesa puede sentar mal al estómago del perro o desencadenar una pancreatitis, así que es mejor no compartirlo.",
-        "it": "Il bacon non è tossico, ma il cibo grasso della tavola può disturbare lo stomaco del cane o scatenare una pancreatite, quindi è meglio non condividerlo.",
+        "it": "Il bacon non è tossico, ma il cibo grasso da tavola può disturbare lo stomaco del cane o scatenare una pancreatite, quindi è meglio non condividerlo.",
         "pt": "O bacon não é tóxico, mas a comida gorda da mesa pode perturbar o estômago do cão ou desencadear uma pancreatite, por isso é melhor não o partilhar.",
         "nl": "Spek is niet giftig, maar vet tafelvoedsel kan de maag van een hond van streek maken of alvleesklierontsteking uitlokken. Je kunt het dus beter niet delen.",
         "pl": "Boczek nie jest toksyczny, ale tłuste jedzenie ze stołu może podrażnić żołądek psa lub wywołać zapalenie trzustki, więc lepiej się nim nie dzielić.",
@@ -353,7 +353,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "5aa12c2e2c1d26d97960c64defc704626b6b9158c4cb5bdfa9ede1fdb2c00ec8"
+      "verified_hash": "061b7a5a5ab99b24cdf9a94949688b31547ba8b7b997c07a321928b1d89e6e09"
     },
     "pt": {
       "status": "verified",

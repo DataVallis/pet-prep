@@ -158,7 +158,7 @@
     "de": "Avocado ist Essen für Menschen. Für Katzen ist sie zu fettig, also gib deiner Katze lieber ihre eigenen Katzenleckerlis.",
     "fr": "L’avocat, c’est pour les humains. Il est trop gras pour les chats : donne plutôt à ton chat ses friandises à lui.",
     "es": "El aguacate es comida para personas. Tiene demasiada grasa para los gatos, así que dale a tu gatito sus propios premios para gatos.",
-    "it": "L’avocado è un cibo per le persone. È troppo grasso per i gatti, quindi dai al micio i suoi premi per gatti.",
+    "it": "L’avocado è un cibo per le persone. È troppo grasso per i gatti, quindi dai al micio i suoi premietti.",
     "pt": "O abacate é comida de pessoas. Tem demasiada gordura para gatos, por isso dá ao gatinho as guloseimas próprias para gatos.",
     "nl": "Avocado is eten voor mensen. Het is te vet voor katten, dus geef je poes liever haar eigen kattensnoepjes.",
     "pl": "Awokado to jedzenie dla ludzi. Jest za tłuste dla kotów, więc daj kotkowi jego własne kocie smakołyki.",
@@ -268,7 +268,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b70a7d36f1e95cadb6466fe866171e256bd4faa1a5b1c1c3e2ad1e0edb6f35ab"
+      "verified_hash": "8700800ca7355ff0b50553381088c73413d91110ed8890b132c55de6d678a412"
     },
     "pt": {
       "status": "verified",

@@ -59,7 +59,7 @@
     "de": "Nein, nicht in großen Mengen. Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, viel Salz aber schon – zum Beispiel aus selbst gemachtem Salzteig, Knete oder viel Meerwasser. Zu den Anzeichen zählen Erbrechen, starker Durst, Zittern und Krampfanfälle.",
     "fr": "Non, pas en grande quantité. Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais une grande quantité de sel – par exemple de la pâte à sel maison, de la pâte à modeler ou beaucoup d’eau de mer – peut en provoquer une. Les signes comprennent vomissements, soif intense, tremblements et convulsions.",
     "es": "No en grandes cantidades. La comida salada con moderación no debería causar una intoxicación por sal, pero comer mucha sal sí puede, por ejemplo, con masa de sal casera, plastilina casera o mucha agua de mar. Entre los síntomas están vómitos, mucha sed, temblores y convulsiones.",
-    "it": "No, non in grandi quantità. Cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma ingerire molto sale può farlo, per esempio con la pasta di sale fatta in casa, la pasta da modellare o bevendo molta acqua di mare. I sintomi includono vomito, sete intensa, tremori e convulsioni.",
+    "it": "No, non in grandi quantità. Mangiati con moderazione, i cibi salati non dovrebbero causare un avvelenamento da sale, ma ingerire molto sale può farlo, per esempio con la pasta di sale fatta in casa, la pasta da modellare o bevendo molta acqua di mare. I sintomi includono vomito, sete intensa, tremori e convulsioni.",
     "pt": "Não, não em grandes quantidades. A comida salgada com moderação não deve causar intoxicação por sal, mas comer muito sal, por exemplo de massa de sal caseira, plasticina caseira ou muita água do mar, pode. Os sinais incluem vómitos, muita sede, tremores e convulsões.",
     "nl": "Nee, niet in grote hoeveelheden. Zout eten met mate zou geen zoutvergiftiging moeten veroorzaken, maar veel zout eten kan dat wel, bijvoorbeeld van zelfgemaakt zoutdeeg, speelklei of veel zeewater. Verschijnselen zijn onder meer braken, veel dorst, trillingen en toevallen.",
     "pl": "Nie w dużych ilościach. Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale zjedzenie dużej ilości soli, np. z domowej masy solnej, ciastoliny lub dużej ilości wody morskiej, już może. Objawy to m.in. wymioty, silne pragnienie, drżenie mięśni i drgawki.",
@@ -413,7 +413,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6dd10791ebc042073f62070d8357977e271ddbbb2fb78890f32e1f9172d7dedc"
+      "verified_hash": "b46322c6108bf9f17ab77ca4f7eb9bb43811ba06305db8ed5cf49288222420d2"
     },
     "pt": {
       "status": "verified",

@@ -254,7 +254,7 @@
         "de": "Gekochte Geflügelknochen sind besonders brüchig und splittern leicht, aber jeder gekochte Knochen vom Tisch kann Verletzungen verursachen.",
         "fr": "Les os de volaille cuits sont particulièrement cassants et éclatent facilement, mais tout os cuit venant de la table peut blesser un chien.",
         "es": "Los huesos de ave cocinados son especialmente frágiles y se astillan con facilidad, pero cualquier hueso cocinado de la mesa puede causar heridas.",
-        "it": "Le ossa cotte di pollame sono particolarmente fragili e si scheggiano facilmente, ma qualsiasi osso cotto della tavola può causare ferite.",
+        "it": "Le ossa cotte di pollame sono particolarmente fragili e si scheggiano facilmente, ma qualsiasi osso cotto avanzato dalla tavola può causare ferite.",
         "pt": "Os ossos de aves cozinhados são especialmente quebradiços e lascam com facilidade, mas qualquer osso cozinhado da mesa pode causar ferimentos.",
         "nl": "Gekookte botten van gevogelte zijn extra broos en splinteren makkelijk, maar elk gekookt bot van tafel kan letsel veroorzaken.",
         "pl": "Gotowane kości drobiowe są szczególnie kruche i łatwo się łamią na odłamki, ale każda gotowana kość ze stołu może spowodować uraz.",
@@ -290,7 +290,7 @@
         "de": "Stellen Sie Platten beim Kochen und Essen außer Reichweite und achten Sie darauf, was in den Müll kommt: Hunde durchwühlen oft den Mülleimer nach Gerippen und Steakknochen.",
         "fr": "Gardez les plats hors de portée pendant la cuisine et les repas, et faites attention à ce que vous jetez : les chiens fouillent souvent la poubelle à la recherche de carcasses et d’os de steak.",
         "es": "Deja las fuentes fuera de su alcance mientras cocinas y durante las comidas, y ten cuidado con lo que tiras a la basura: los perros suelen rebuscar en ella las carcasas y los huesos de chuleta.",
-        "it": "Tieni i vassoi lontano dal cane mentre cucini e mentre mangiate, e fai attenzione a cosa butti nella spazzatura: i cani spesso frugano nei rifiuti in cerca di carcasse e ossa di bistecca.",
+        "it": "Tieni i piatti da portata lontano dal cane mentre cucini e mentre siete a tavola, e fai attenzione a cosa butti nella spazzatura: i cani spesso frugano nei rifiuti in cerca di carcasse e ossa di bistecca.",
         "pt": "Mantém as travessas fora do alcance enquanto cozinhas e comes, e tem cuidado com o que deitas ao lixo: os cães vão muitas vezes ao lixo à procura de carcaças e ossos de bife.",
         "nl": "Zet schalen buiten bereik tijdens het koken en eten, en let op wat je in de vuilnisbak gooit: honden plunderen vaak de vuilnisbak op zoek naar karkassen en biefstukbotten.",
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często przeszukują śmieci w poszukiwaniu resztek drobiu i kości ze steków.",
@@ -409,7 +409,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e45d3f2009688268ba450f2fdba150b3f6aff207ac31484170ec9e8eeb5065dd"
+      "verified_hash": "501a25c6a5749fe0fa6fe648a65f9b026e28f73e2536fec891036dffdda8556a"
     },
     "pt": {
       "status": "verified",

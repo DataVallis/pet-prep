@@ -76,7 +76,7 @@
     "de": "Stiele, Blätter und Samen enthalten Cyanid (in Form cyanogener Glykoside) und sind beim Welken besonders giftig. Die von uns gefundenen Quellen beschreiben das Risiko dieser Pflanzenteile und sagen nicht, dass das Fruchtfleisch für Katzen unbedenklich ist. Deshalb empfehlen wir nicht, es mit Ihrer Katze zu teilen.",
     "fr": "Les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles se flétrissent. Les sources que nous avons trouvées décrivent le risque lié à ces parties de la plante et n’indiquent pas que la chair du fruit est sans danger pour les chats ; nous déconseillons donc de la partager.",
     "es": "Los tallos, las hojas y las semillas contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando se están marchitando. Las fuentes que hemos encontrado describen el riesgo de estas partes de la planta y no dicen que la pulpa de la fruta sea segura para los gatos, así que no recomendamos compartirla.",
-    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenetici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
+    "it": "Steli, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono. Le fonti che abbiamo trovato descrivono il rischio legato a queste parti della pianta e non affermano che la polpa del frutto sia sicura per i gatti, quindi sconsigliamo di condividerla.",
     "pt": "Os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos quando estão a murchar. As fontes que encontrámos descrevem o risco destas partes da planta e não dizem que a polpa do fruto seja segura para gatos, por isso não recomendamos partilhá-la.",
     "nl": "De stelen, bladeren en zaden bevatten cyanide (in de vorm van cyanogene glycosiden) en zijn vooral giftig als ze verwelken. De bronnen die we hebben gevonden beschrijven het risico van deze plantendelen en zeggen niet dat het vruchtvlees veilig is voor katten. Daarom raden we af om het te delen.",
     "pl": "Łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne podczas więdnięcia. Źródła, które znaleźliśmy, opisują ryzyko związane z tymi częściami rośliny i nie podają, że miąższ owocu jest bezpieczny dla kotów, dlatego nie zalecamy dzielenia się nim.",
@@ -333,7 +333,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "51ad0d760ca3798a7f52cef38437136db9d8e92d5d6ea44cf68ce09b48245f41"
+      "verified_hash": "a8277fb600ecc589e6d110ea79171e34e601829a719863636312f4bf51cf72d0"
     },
     "pt": {
       "status": "verified",

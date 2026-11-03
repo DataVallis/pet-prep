@@ -200,7 +200,7 @@
     "de": "Achten Sie auf Erbrechen, Durchfall oder Mattigkeit und rufen Sie Ihren Tierarzt an, wenn die Beschwerden stark sind oder nicht aufhören. Hat Ihr Hund rohen Lachs oder rohe Forelle aus dem pazifischen Nordwesten gefressen, rufen Sie umgehend Ihren Tierarzt an und erwähnen Sie das – Anzeichen können bis zu einer Woche später auftreten.",
     "fr": "Surveillez les vomissements, la diarrhée ou le manque d’énergie, et appelez votre vétérinaire s’ils sont importants ou ne s’arrêtent pas. Si votre chien a mangé du saumon ou de la truite crus du Nord-Ouest Pacifique, appelez rapidement votre vétérinaire et signalez-le – les signes peuvent mettre jusqu’à une semaine à apparaître.",
     "es": "Vigila si tiene vómitos, diarrea o poca energía y llama a tu veterinario si son intensos o no se pasan. Si tu perro ha comido salmón o trucha crudos del noroeste del Pacífico, llama pronto a tu veterinario y díselo: los síntomas pueden tardar hasta una semana en aparecer.",
-    "it": "Controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Se il tuo cane ha mangiato salmone o trota crudi del Pacifico nord-occidentale, chiama presto il veterinario e diglielo – i sintomi possono comparire fino a una settimana dopo.",
+    "it": "Controlla se compaiono vomito, diarrea o poca energia e chiama il veterinario se sono forti o non passano. Se il tuo cane ha mangiato salmone o trota crudi del Pacifico nord-occidentale, chiama presto il veterinario e diglielo: i sintomi possono comparire fino a una settimana dopo.",
     "pt": "Vigia se há vómitos, diarreia ou pouca energia e liga ao teu veterinário se forem fortes ou não pararem. Se o teu cão comeu salmão ou truta crus do noroeste do Pacífico, liga logo ao teu veterinário e diz-lhe isso – os sinais podem demorar até uma semana a aparecer.",
     "nl": "Let op braken, diarree of weinig energie en bel je dierenarts als die ernstig zijn of niet ophouden. Heeft je hond rauwe zalm of forel uit het noordwesten van de VS gegeten? Bel dan snel je dierenarts en vertel het erbij – verschijnselen kunnen tot een week later komen.",
     "pl": "Obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli są silne albo nie ustępują. Jeśli twój pies zjadł surowego łososia lub pstrąga z północno-zachodniego wybrzeża Pacyfiku, szybko zadzwoń do weterynarza i o tym powiedz – objawy mogą pojawić się nawet po tygodniu.",
@@ -217,7 +217,7 @@
     "de": "Nur vollständig gegarter Fisch (gebacken, gedämpft oder gegrillt), pur und ohne Gräten.",
     "fr": "Uniquement du poisson bien cuit (au four, à la vapeur ou grillé), nature, sans aucune arête.",
     "es": "Solo pescado bien cocinado (al horno, al vapor o a la plancha), al natural y sin ninguna espina.",
-    "it": "Solo pesce ben cotto (al forno, al vapore o alla griglia), semplice e senza nessuna lisca.",
+    "it": "Solo pesce ben cotto (al forno, al vapore o alla griglia), semplice e senza lische.",
     "pt": "Só peixe bem cozinhado (no forno, a vapor ou grelhado), simples, sem nenhuma espinha.",
     "nl": "Alleen helemaal gare vis (uit de oven, gestoomd of gegrild), puur, met alle graten eruit.",
     "pl": "Tylko dobrze ugotowana ryba (pieczona, gotowana na parze lub grillowana), zwykła, bez żadnych ości.",
@@ -390,7 +390,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c615ed082b35725c9e11fe2185c3b2eeb2e777360982b4fa18ae47ccd7ddfeb4"
+      "verified_hash": "9709017c131d5fd00011c66a981bb19c7b4202d707cf0e088d2e5b14debdf632"
     },
     "pt": {
       "status": "verified",

@@ -76,7 +76,7 @@
     "de": "Fettes Essen vom Tisch ist kein Vergiftungsproblem, aber fette Lebensmittel wie Butter, Öle und Bratenfett können eine Pankreatitis auslösen. Manche Rassen, vor allem Zwergschnauzer, sind dafür anfälliger. Tierärzte raten außerdem, Essen für Hunde, etwa Eier oder Kartoffelbrei, ohne Butter zuzubereiten.",
     "fr": "Les aliments de table gras ne posent pas de problème de toxicité, mais les aliments gras comme le beurre, les huiles et les jus de cuisson de viande peuvent provoquer une pancréatite. Certaines races, en particulier le schnauzer nain, y sont plus sujettes. Les vétérinaires conseillent aussi de préparer sans beurre les aliments destinés aux chiens, comme les œufs ou la purée.",
     "es": "La comida grasa de la mesa no es un problema de toxicidad, pero los alimentos grasos como la mantequilla, los aceites y la grasa que suelta la carne al cocinarse pueden provocar pancreatitis. Algunas razas, sobre todo el schnauzer miniatura, son más propensas a sufrirla. Los veterinarios también aconsejan preparar sin mantequilla la comida que se da a los perros, como los huevos o el puré de patatas.",
-    "it": "I cibi grassi della tavola non sono un problema di tossicità, ma cibi grassi come burro, oli e sughi di cottura della carne possono causare pancreatite. Alcune razze, soprattutto lo schnauzer nano, sono più predisposte. I veterinari consigliano anche di preparare il cibo per i cani, come uova o purè di patate, senza burro.",
+    "it": "I cibi grassi da tavola non sono un problema di tossicità, ma cibi grassi come burro, oli e sughi di cottura della carne possono causare pancreatite. Alcune razze, soprattutto lo schnauzer nano, sono più predisposte. I veterinari consigliano anche di preparare il cibo per i cani, come uova o purè di patate, senza burro.",
     "pt": "Os alimentos gordos da mesa não são um problema de toxicidade, mas alimentos gordos como a manteiga, os óleos e a gordura da carne podem causar pancreatite. Algumas raças, sobretudo o schnauzer miniatura, são mais propensas. Os veterinários também sugerem preparar a comida para cães, como ovos ou puré de batata, sem manteiga.",
     "nl": "Vet tafelvoedsel is geen vergiftigingsprobleem, maar vet eten zoals boter, olie en braadvet kan alvleesklierontsteking veroorzaken. Sommige rassen, vooral de dwergschnauzer, zijn er gevoeliger voor. Dierenartsen raden ook aan eten voor honden, zoals ei of aardappelpuree, zonder boter klaar te maken.",
     "pl": "W przypadku tłustego jedzenia ze stołu nie chodzi o toksyczność, ale tłuste produkty, takie jak masło, oleje i tłuszcz spod pieczeni, mogą wywołać zapalenie trzustki. Niektóre rasy, zwłaszcza sznaucer miniaturowy, są na nie bardziej podatne. Weterynarze radzą też przygotowywać jedzenie dla psa, np. jajka czy puree ziemniaczane, bez masła.",
@@ -119,7 +119,7 @@
       "Poco apetito y poca energía"
     ],
     "it": [
-      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
+      "Vomito, a volte 1–4 giorni dopo un pasto grasso",
       "Mal di pancia",
       "Diarrea",
       "Poco appetito e poca energia"
@@ -322,7 +322,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b400144487e8fd5efc1abb6fd47305f020f832f11b06f7ca3a8962e2cac5cb94"
+      "verified_hash": "16c17d5ef687362b7016b2483ddf01b2999c464ec5b5609e18bcebc75de4d935"
     },
     "pt": {
       "status": "verified",

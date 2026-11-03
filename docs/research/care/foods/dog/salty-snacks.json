@@ -76,7 +76,7 @@
     "de": "Salziges Essen in Maßen sollte keine Salzvergiftung verursachen, aber zu viel Salz kann zu Wassereinlagerungen und in großen Mengen zu einer Salzvergiftung führen. Kleine Hunde mit gesundheitlichen Problemen sind stärker gefährdet, wenn kein frisches Wasser verfügbar ist. Essen für Hunde serviert man am besten ohne zugesetztes Salz und ohne Gewürze.",
     "fr": "Des aliments salés avec modération ne devraient pas provoquer d’intoxication au sel, mais trop de sel peut entraîner une rétention d’eau et, en grande quantité, une intoxication au sel. Les petits chiens ayant des problèmes de santé sont plus à risque lorsqu’ils n’ont pas d’eau fraîche. Les aliments destinés au chien sont à servir de préférence sans sel ajouté ni assaisonnement.",
     "es": "La comida salada con moderación no debería causar una intoxicación por sal, pero demasiada sal puede provocar retención de líquidos y, en grandes cantidades, intoxicación por sal. Los perros pequeños con problemas de salud corren más riesgo cuando no tienen agua fresca a mano. Lo mejor es servir la comida de los perros sin sal añadida ni condimentos.",
-    "it": "I cibi salati con moderazione non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti.",
+    "it": "Mangiati con moderazione, i cibi salati non dovrebbero causare un avvelenamento da sale, ma troppo sale può portare a ritenzione di liquidi e, in grandi quantità, ad avvelenamento da sale. I cani piccoli con problemi di salute sono più a rischio quando non hanno acqua fresca. Il cibo per il cane va servito senza sale e senza condimenti aggiunti.",
     "pt": "A comida salgada com moderação não deve causar intoxicação por sal, mas sal a mais pode levar à retenção de líquidos e, em grandes quantidades, a intoxicação por sal. Os cães pequenos com problemas de saúde correm mais risco quando não têm água fresca. A comida para cães deve ser servida sem sal adicionado nem temperos.",
     "nl": "Zout eten met mate zou geen zoutvergiftiging moeten veroorzaken, maar te veel zout kan ervoor zorgen dat het lichaam vocht vasthoudt, en in grote hoeveelheden tot zoutvergiftiging leiden. Kleine honden met gezondheidsproblemen lopen meer risico als er geen vers water is. Eten voor honden geef je het best zonder toegevoegd zout of kruiden.",
     "pl": "Słone jedzenie w umiarkowanej ilości nie powinno wywołać zatrucia solą, ale nadmiar soli może prowadzić do zatrzymywania wody w organizmie, a w dużych ilościach – do zatrucia solą. Małe psy z problemami zdrowotnymi są bardziej zagrożone, gdy nie mają dostępu do świeżej wody. Jedzenie dla psa najlepiej podawać bez dodatku soli i przypraw.",
@@ -381,7 +381,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "386c999e02b71c956c84a70cfe11f0c4e699e5f2944f38e8e985808ff629bdf1"
+      "verified_hash": "9d1bff4a9dc2fadbfbb0390eb10b8a8fe97a49929bc41d2671c63d4d22e25b59"
     },
     "pt": {
       "status": "verified",

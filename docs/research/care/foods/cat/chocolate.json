@@ -136,9 +136,9 @@
     "it": [
       "Vomito",
       "Diarrea",
-      "Sete aumentata",
+      "Più sete del solito",
       "Respiro affannoso o irrequietezza",
-      "Fa pipì più del solito",
+      "Urina più del solito",
       "Battito cardiaco accelerato",
       "Nei casi gravi: tremori muscolari o convulsioni"
     ],
@@ -447,7 +447,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cf7244f59a108c6b0066a4fd4cc5548cf878983ea53608d7672c6b7460ba056e"
+      "verified_hash": "37ed894ad4bee136a6b1524b7ee679b9b5043a9bd0ad1c0e13aa8e19c440a3ca"
     },
     "pt": {
       "status": "verified",

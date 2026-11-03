@@ -76,7 +76,7 @@
     "de": "Die Hefe arbeitet im warmen, feuchten Magen weiter: Der Teig dehnt sich aus und Gas sammelt sich an, was den Magen-Darm-Trakt blockieren oder, seltener, zu einer Magendrehung führen kann. Gleichzeitig bildet die Hefe Alkohol, der rasch ins Blut aufgenommen wird. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden.",
     "fr": "La levure continue d’agir dans l’estomac chaud et humide : la pâte gonfle et des gaz s’accumulent, ce qui peut bloquer l’intestin ou, plus rarement, provoquer une torsion de l’estomac (dilatation-torsion). En même temps, la levure produit de l’alcool, qui passe rapidement dans le sang. Les chiens sont les plus souvent touchés parce qu’ils mangent tout ce qu’ils trouvent.",
     "es": "La levadura sigue actuando en el estómago, que es cálido y húmedo: la masa se expande y se acumulan gases, lo que puede obstruir el intestino o, con menos frecuencia, provocar una torsión de estómago (dilatación-torsión gástrica). Al mismo tiempo, la levadura produce alcohol, que pasa rápidamente a la sangre. Los perros son los más afectados porque se comen lo que encuentran.",
-    "it": "Il lievito continua a lavorare nello stomaco caldo e umido: l’impasto si espande e si accumula gas, che può ostruire l’intestino o, più raramente, far torcere lo stomaco (dilatazione-torsione gastrica). Allo stesso tempo il lievito produce alcol, che passa rapidamente nel sangue. I cani sono i più colpiti perché mangiano tutto quello che trovano.",
+    "it": "Il lievito continua a lavorare nello stomaco caldo e umido: l’impasto si espande e si accumula gas, che può ostruire l’intestino o, più raramente, far torcere lo stomaco (dilatazione-torsione gastrica). Allo stesso tempo il lievito produce alcol, che passa rapidamente nel sangue. I cani sono i più colpiti perché mangiano di tutto.",
     "pt": "O fermento continua a trabalhar no estômago quente e húmido: a massa expande-se e acumulam-se gases, o que pode obstruir o intestino ou, menos vezes, torcer o estômago (dilatação gástrica). Ao mesmo tempo, o fermento produz álcool, que é rapidamente absorvido para o sangue. Os cães são os mais afetados porque comem tudo o que encontram.",
     "nl": "Gist blijft werken in de warme, vochtige maag: het deeg zet uit en er hoopt zich gas op, wat de darmen kan verstoppen of, minder vaak, de maag kan laten draaien (maagtorsie). Tegelijk maakt de gist alcohol, die snel in het bloed wordt opgenomen. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden.",
     "pl": "Drożdże pracują dalej w ciepłym, wilgotnym żołądku: ciasto się powiększa i gromadzą się gazy, co może zatkać przewód pokarmowy lub, rzadziej, doprowadzić do skrętu żołądka. Jednocześnie drożdże wytwarzają alkohol, który szybko wchłania się do krwi. Najczęściej dotyczy to psów, bo jedzą wszystko, co znajdą.",
@@ -369,7 +369,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f7ba5eca0ef2ddfa00c22c3344ae1015fc93d7a53af1edd15600c3fc92541599"
+      "verified_hash": "6046cac59bcfb09a3f8da20e534530304b1532955695cc9aa937cd8de5a8cec9"
     },
     "pt": {
       "status": "verified",

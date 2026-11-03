@@ -129,7 +129,7 @@
       "Temblores"
     ],
     "it": [
-      "Vomito o diarrea, spesso entro 6–24 ore",
+      "Vomito o diarrea, spesso entro 6–24 ore",
       "Stanchezza e debolezza",
       "Rifiuto del cibo",
       "Mal di pancia",
@@ -404,7 +404,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7093cc3c266c23315b6c3c1178fe605c6cfeb83ef238a5b061f55dee39ed4432"
+      "verified_hash": "cc69ccaa7dac5beb7cb81d3a24e2e066136d61a1f67667b47080b69c918ad17e"
     },
     "pt": {
       "status": "verified",

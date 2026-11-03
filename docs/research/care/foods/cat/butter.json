@@ -59,7 +59,7 @@
     "de": "Nein, auf Butter verzichten Sie besser. Sie ist ein fettes Milchprodukt: Ratgeber zur Katzenhaltung zählen fettreiche Lebensmittel zu den Dingen, die Katzen nie bekommen sollten, Milchprodukte können den Magen einer Katze verstimmen, und ihr Fett treibt das Gewicht nach oben.",
     "fr": "Non, mieux vaut éviter le beurre. C’est un produit laitier gras : les guides de soins félins classent les aliments gras parmi ceux à ne jamais donner aux chats, les produits laitiers peuvent leur déranger l’estomac et leurs graisses font prendre du poids.",
     "es": "No, es mejor evitar la mantequilla. Es un lácteo graso: las guías de cuidado de gatos incluyen los alimentos grasos entre los que nunca hay que dar a un gato, los lácteos pueden sentarle mal al estómago y su grasa hace engordar.",
-    "it": "No, è meglio evitare il burro. È un latticino grasso: le guide sulla cura dei gatti mettono i cibi grassi tra quelli da non dare mai, i latticini possono disturbare lo stomaco del gatto e i loro grassi fanno ingrassare.",
+    "it": "No, è meglio evitare il burro. È un latticino grasso: le guide sulla cura dei gatti mettono i cibi grassi tra quelli da non dare mai, i latticini possono disturbare lo stomaco del gatto e il loro contenuto di grassi fa ingrassare.",
     "pt": "Não, é melhor evitar a manteiga. É um laticínio gordo: os guias de cuidados com gatos incluem os alimentos gordos entre o que nunca se deve dar a gatos, os laticínios podem fazer mal ao estômago do gato e a gordura que têm faz engordar.",
     "nl": "Nee, boter kun je beter vermijden. Het is een vet zuivelproduct: kattenverzorgingsgidsen noemen vet voedsel bij de dingen die je katten nooit moet geven, zuivel kan de maag van een kat van streek maken en het vet zorgt voor extra gewicht.",
     "pl": "Nie, lepiej unikać masła. To tłusty produkt mleczny: poradniki o opiece nad kotami wymieniają tłuste jedzenie wśród rzeczy, których nigdy nie wolno dawać kotom, produkty mleczne mogą wywołać u kota rozstrój żołądka, a ich tłuszcz sprzyja tyciu.",
@@ -269,7 +269,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3989dfd676baff45ac6506b3ef67c1199237ebf422e2f0a5396ca962bb9aff63"
+      "verified_hash": "0b5527e8287c8766d8095e96f5119abd7bfc55989b4337625e16900dd0064ec3"
     },
     "pt": {
       "status": "verified",

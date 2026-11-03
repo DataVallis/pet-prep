@@ -295,7 +295,7 @@
         "de": "Ist Katzenmilch aus dem Handel in Ordnung?",
         "fr": "Le lait pour chats du commerce convient-il ?",
         "es": "¿Está bien la leche para gatos de la tienda?",
-        "it": "Il latte per gatti del negozio va bene?",
+        "it": "Il latte per gatti che si compra in negozio va bene?",
         "pt": "Posso dar o leite para gatos que se vende nas lojas?",
         "nl": "Is kattenmelk uit de winkel oké?",
         "pl": "Czy mleko dla kotów ze sklepu jest w porządku?",
@@ -412,7 +412,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "912ee55cc0aea7c1cbfee37aeabda064264f3a3b8ff8517c2d090bfcfc1c7190"
+      "verified_hash": "636e81344dcfcd83dfa3c3230eec5cc30b18ce7beba87a20d5f2928d4ac07410"
     },
     "pt": {
       "status": "verified",

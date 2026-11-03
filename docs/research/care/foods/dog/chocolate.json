@@ -76,7 +76,7 @@
     "de": "Schokolade enthält Methylxanthine, vor allem Theobromin und Koffein, die für Hunde giftig sind. Zartbitterschokolade, Kochschokolade und Kakaopulver enthalten mehr davon als Milchschokolade. Hunde sind am häufigsten betroffen, weil sie fressen, was sie finden, und leicht an Schokolade kommen. Süßigkeiten und Gebäck können außerdem weitere schädliche Zutaten enthalten.",
     "fr": "Le chocolat contient des méthylxanthines, surtout de la théobromine et de la caféine, toxiques pour les chiens. Le chocolat noir, le chocolat pâtissier et le cacao en poudre en contiennent plus que le chocolat au lait. Les chiens sont les plus souvent touchés, car ils mangent n’importe quoi et ont facilement accès au chocolat. Les confiseries et les pâtisseries peuvent aussi contenir d’autres ingrédients nocifs.",
     "es": "El chocolate contiene metilxantinas, sobre todo teobromina y cafeína, que son tóxicas para los perros. El chocolate negro, el chocolate para repostería y el cacao en polvo contienen más que el chocolate con leche. Los perros son los más afectados porque se comen lo que encuentran y pueden alcanzar el chocolate con facilidad. Los dulces y la bollería también pueden llevar otros ingredientes perjudiciales.",
-    "it": "Il cioccolato contiene metilxantine, soprattutto teobromina e caffeina, che sono tossiche per i cani. Il cioccolato fondente, quello da cucina e il cacao in polvere ne contengono più del cioccolato al latte. I cani sono i più colpiti perché mangiano tutto ciò che trovano e arrivano facilmente al cioccolato. Dolci e prodotti da forno possono contenere anche altri ingredienti dannosi.",
+    "it": "Il cioccolato contiene metilxantine, soprattutto teobromina e caffeina, che sono tossiche per i cani. Il cioccolato fondente, quello da cucina e il cacao in polvere ne contengono più del cioccolato al latte. I cani sono i più colpiti perché mangiano di tutto e arrivano facilmente al cioccolato. Dolci e prodotti da forno possono contenere anche altri ingredienti dannosi.",
     "pt": "O chocolate contém metilxantinas, sobretudo teobromina e cafeína, que são tóxicas para os cães. O chocolate preto, o chocolate de culinária e o cacau em pó têm mais destas substâncias do que o chocolate de leite. Os cães são os mais afetados porque comem tudo o que encontram e chegam facilmente ao chocolate. Os doces e os bolos podem ter também outros ingredientes nocivos.",
     "nl": "Chocolade bevat methylxanthinen, vooral theobromine en cafeïne, die giftig zijn voor honden. Pure chocolade, bakchocolade en cacaopoeder bevatten er meer van dan melkchocolade. Honden worden het vaakst getroffen, omdat ze alles eten wat ze vinden en makkelijk bij chocolade kunnen. Snoep en gebak kunnen ook nog andere schadelijke ingrediënten bevatten.",
     "pl": "Czekolada zawiera metyloksantyny, głównie teobrominę i kofeinę, które są toksyczne dla psów. Gorzka czekolada, czekolada do pieczenia i kakao zawierają ich więcej niż czekolada mleczna. Najczęściej zatruwają się psy, bo jedzą wszystko, co znajdą, i łatwo dosięgają czekolady. Słodycze i wypieki mogą też zawierać inne szkodliwe składniki.",
@@ -134,7 +134,7 @@
       "Irrequietezza e iperattività",
       "Battito cardiaco accelerato o irregolare",
       "Tremori o convulsioni",
-      "I sintomi compaiono di solito entro 6–12 ore"
+      "I sintomi compaiono di solito entro 6–12 ore"
     ],
     "pt": [
       "Vómitos e diarreia",
@@ -341,7 +341,7 @@
         "de": "Meist innerhalb von 6–12 Stunden nach dem Fressen. Deshalb sollten Sie sofort den Tierarzt anrufen, statt abzuwarten.",
         "fr": "Généralement 6 à 12 heures après l’ingestion : c’est pourquoi il faut appeler le vétérinaire tout de suite au lieu d’attendre.",
         "es": "Normalmente en un plazo de 6 a 12 horas después de comerlo; por eso hay que llamar al veterinario enseguida en lugar de esperar.",
-        "it": "Di solito entro 6–12 ore dall’ingestione: per questo devi chiamare subito il veterinario invece di aspettare.",
+        "it": "Di solito entro 6–12 ore dall’ingestione: per questo devi chiamare subito il veterinario invece di aspettare.",
         "pt": "Normalmente nas 6–12 horas seguintes a tê-lo comido, e é por isso que deves ligar logo ao veterinário em vez de esperar.",
         "nl": "Meestal binnen 6–12 uur na het eten. Bel daarom meteen de dierenarts in plaats van af te wachten.",
         "pl": "Zwykle w ciągu 6–12 godzin od zjedzenia, dlatego zadzwoń do weterynarza od razu, zamiast czekać.",
@@ -453,7 +453,7 @@
     "it": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "dac6a25cf4e89cacb1773b373f8266ffcfd253debb0a11592574f2566453adb2"
+      "verified_hash": "163e57220439c56bbd34c38cfa1a4e683dea990bea19e0c1f55aa842f5d1048d"
     },
     "pt": {
       "status": "verified",
