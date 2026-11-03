@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Oranges",
-    "sl": "Pomaranče"
+    "sl": "Pomaranče",
+    "cs": "Pomeranče"
   },
   "question": {
     "en": "Can dogs eat oranges?",
-    "sl": "Ali lahko psi jedo pomaranče?"
+    "sl": "Ali lahko psi jedo pomaranče?",
+    "cs": "Mohou psi jíst pomeranče?"
   },
   "url_slug": {
     "en": "oranges",
-    "sl": "pomarance"
+    "sl": "pomarance",
+    "cs": "pomerance"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat the flesh of an orange in limited amounts, without the peel and seeds. Oranges are high in natural sugar, so keep them an occasional treat; many dogs dislike the strong citrus smell anyway.",
-    "sl": "Da, psi lahko v omejenih količinah jedo meso pomaranče, brez lupine in pečk. Pomaranče imajo veliko naravnega sladkorja, zato naj ostanejo občasen priboljšek; mnogim psom močan vonj citrusov tako ali tako ni všeč."
+    "sl": "Da, psi lahko v omejenih količinah jedo meso pomaranče, brez lupine in pečk. Pomaranče imajo veliko naravnega sladkorja, zato naj ostanejo občasen priboljšek; mnogim psom močan vonj citrusov tako ali tako ni všeč.",
+    "cs": "Ano, psi mohou jíst dužinu pomeranče v omezeném množství, bez slupky a semínek. Pomeranče obsahují hodně přirozeného cukru, proto z nich dělejte jen občasný pamlsek; spousta psů stejně nemá ráda silnou citrusovou vůni."
   },
   "why": {
     "en": "The ASPCA lists the orange plant as toxic to dogs because of essential oils and psoralens, but notes that the fruit is edible and that the skins and plant material cause the problems. AKC, PDSA and Blue Cross say the flesh is fine in moderation. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage; seeds can be a choking hazard. Too much orange can cause digestive upset, including diarrhoea.",
-    "sl": "ASPCA pomarančevec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC, PDSA in Blue Cross pravijo, da je meso v zmernih količinah v redu. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo; s pečkami se pes lahko zaduši. Preveč pomaranče lahko povzroči prebavne težave, tudi drisko."
+    "sl": "ASPCA pomarančevec zaradi eteričnih olj in psoralenov uvršča med rastline, strupene za pse, a navaja, da je sadež užiten, težave pa povzročajo lupine in drugi deli rastline. AKC, PDSA in Blue Cross pravijo, da je meso v zmernih količinah v redu. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo; s pečkami se pes lahko zaduši. Preveč pomaranče lahko povzroči prebavne težave, tudi drisko.",
+    "cs": "ASPCA řadí pomerančovník mezi rostliny toxické pro psy kvůli éterickým olejům a psoralenům, ale poznamenává, že plod je jedlý a že potíže způsobují slupky a ostatní části rostliny. AKC, PDSA i Blue Cross uvádějí, že dužina je s mírou v pořádku. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev; semínka mohou způsobit dušení. Příliš mnoho pomeranče může způsobit zažívací potíže, včetně průjmu."
   },
   "signs": null,
   "what_to_do": {
     "en": "Don't give your dog the peel: it is hard to digest and can raise the risk of a blockage in the gut, which in some cases needs veterinary help.",
-    "sl": "Psu ne dajajte lupine: težko je prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč."
+    "sl": "Psu ne dajajte lupine: težko je prebavljiva in lahko poveča tveganje za zaporo v prebavilih, ki v nekaterih primerih zahteva veterinarsko pomoč.",
+    "cs": "Slupku psovi nedávejte: špatně se tráví a může zvýšit riziko ucpání střev, které v některých případech vyžaduje veterinární pomoc."
   },
   "serving": {
     "en": "Only the flesh, without the peel and seeds, cut into small pieces; as an occasional treat.",
-    "sl": "Samo meso, brez lupine in pečk, narezano na majhne koščke; kot občasen priboljšek."
+    "sl": "Samo meso, brez lupine in pečk, narezano na majhne koščke; kot občasen priboljšek.",
+    "cs": "Jen dužina, bez slupky a semínek, nakrájená na malé kousky; jako občasný pamlsek."
   },
   "child": {
     "en": "Some dogs like a small piece of orange, and some don't like the smell! A grown-up peels it and takes out the seeds.",
-    "sl": "Nekaterim psom je košček pomaranče všeč, drugim pa vonj ne diši! Odrasel jo olupi in odstrani pečke."
+    "sl": "Nekaterim psom je košček pomaranče všeč, drugim pa vonj ne diši! Odrasel jo olupi in odstrani pečke.",
+    "cs": "Někteří psi mají rádi malý kousek pomeranče a jiným se jeho vůně nelíbí! Dospělý ho oloupe a vybere semínka."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat orange peel?",
-        "sl": "Ali lahko psi jedo pomarančno lupino?"
+        "sl": "Ali lahko psi jedo pomarančno lupino?",
+        "cs": "Mohou psi jíst pomerančovou slupku?"
       },
       "a": {
         "en": "No. The peel is tough and hard to digest, can upset the stomach and can raise the risk of a blockage. The ASPCA says the skins and plant material are what cause problems.",
-        "sl": "Ne. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo. ASPCA navaja, da težave povzročajo prav lupine in drugi deli rastline."
+        "sl": "Ne. Lupina je trda in težko prebavljiva, lahko razburi želodec in poveča tveganje za zaporo. ASPCA navaja, da težave povzročajo prav lupine in drugi deli rastline.",
+        "cs": "Ne. Slupka je tuhá a špatně stravitelná, může podráždit žaludek a zvýšit riziko ucpání střev. ASPCA uvádí, že potíže způsobují právě slupky a ostatní části rostliny."
       }
     },
     {
       "q": {
         "en": "Can dogs drink orange juice?",
-        "sl": "Ali lahko psi pijejo pomarančni sok?"
+        "sl": "Ali lahko psi pijejo pomarančni sok?",
+        "cs": "Mohou psi pít pomerančový džus?"
       },
       "a": {
         "en": "Orange juice isn't toxic, but it is generally not a good choice: it has concentrated natural sugars and lacks the fibre of the whole fruit.",
-        "sl": "Pomarančni sok ni strupen, a na splošno ni dobra izbira: ima zgoščene naravne sladkorje in nima vlaknin celega sadeža."
+        "sl": "Pomarančni sok ni strupen, a na splošno ni dobra izbira: ima zgoščene naravne sladkorje in nima vlaknin celega sadeža.",
+        "cs": "Pomerančový džus není toxický, ale obecně to není dobrá volba: obsahuje koncentrované přirozené cukry a chybí v něm vláknina, kterou má celý plod."
       }
     }
   ],
@@ -155,6 +167,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "be88a56c3eefdc826dd211536f7922406926986635585b616b038122e7da059d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "755adcdd513d0d79aeb4c5df28ff321daaa184de77b0305971d49a9500ec8a7b"
     }
   }
 }
