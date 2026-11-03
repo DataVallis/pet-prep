@@ -13,7 +13,8 @@
     "pt": "Toranja",
     "nl": "Grapefruit",
     "pl": "Grejpfrut",
-    "sv": "Grapefrukt"
+    "sv": "Grapefrukt",
+    "da": "Grapefrugt"
   },
   "question": {
     "en": "Can dogs eat grapefruit?",
@@ -27,7 +28,8 @@
     "pt": "Os cães podem comer toranja?",
     "nl": "Mogen honden grapefruit eten?",
     "pl": "Czy psy mogą jeść grejpfruta?",
-    "sv": "Får hundar äta grapefrukt?"
+    "sv": "Får hundar äta grapefrukt?",
+    "da": "Må hunde spise grapefrugt?"
   },
   "url_slug": {
     "en": "grapefruit",
@@ -41,7 +43,8 @@
     "pt": "toranja",
     "nl": "grapefruit",
     "pl": "grejpfrut",
-    "sv": "grapefrukt"
+    "sv": "grapefrukt",
+    "da": "grapefrugt"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Não, é melhor não dar toranja aos cães. A polpa não é tóxica, mas o elevado teor de ácido cítrico pode irritar o estômago do cão, e a casca é tóxica para os cães por causa dos óleos essenciais que contém.",
     "nl": "Nee, geef honden liever geen grapefruit. Het vruchtvlees is niet giftig, maar door het vele citroenzuur kan de maag van een hond van streek raken, en de schil is giftig voor honden vanwege de etherische oliën.",
     "pl": "Nie, grejpfruta lepiej psom nie podawać. Miąższ nie jest toksyczny, ale dużo kwasu cytrynowego może rozstroić psi żołądek, a skórka jest dla psów toksyczna z powodu olejków eterycznych.",
-    "sv": "Nej, det är bäst att inte ge grapefrukt till hundar. Fruktköttet är inte giftigt, men den höga halten citronsyra kan ge hunden orolig mage, och skalet är giftigt för hundar på grund av de eteriska oljorna."
+    "sv": "Nej, det är bäst att inte ge grapefrukt till hundar. Fruktköttet är inte giftigt, men den höga halten citronsyra kan ge hunden orolig mage, och skalet är giftigt för hundar på grund av de eteriska oljorna.",
+    "da": "Nej, det er bedst ikke at give hunde grapefrugt. Frugtkødet er ikke giftigt, men det høje indhold af citronsyre kan give hunden dårlig mave, og skallen er giftig for hunde på grund af de æteriske olier."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to dogs because of essential oils and psoralens, while noting that the fruit is edible and that the skins and plant material cause the problems. AKC says the flesh isn't toxic but is best avoided, partly because of its high citric acid, and that the skin and rind are toxic because of their natural essential oils. PDSA lists grapefruit as unsafe because it is very acidic. We use 'not recommended' because the flesh itself is not toxic, while the skin and rind are the danger.",
@@ -70,7 +74,8 @@
     "pt": "A ASPCA classifica a toranjeira como tóxica para os cães por causa dos óleos essenciais e dos psoralenos, mas refere que o fruto é comestível e que os problemas vêm das cascas e das partes da planta. A AKC diz que a polpa não é tóxica, mas que é melhor evitá-la, em parte por causa do elevado teor de ácido cítrico, e que a casca é tóxica por causa dos óleos essenciais que contém naturalmente. A PDSA classifica a toranja como não segura, por ser muito ácida. Usamos «não recomendado» porque a polpa em si não é tóxica; o perigo está na casca.",
     "nl": "De ASPCA noemt de grapefruitplant giftig voor honden vanwege etherische oliën en psoralenen, maar wijst erop dat de vrucht eetbaar is en dat de problemen door de schillen en het plantaardige materiaal komen. De AKC zegt dat het vruchtvlees niet giftig is maar beter vermeden kan worden, mede door het vele citroenzuur, en dat de schil giftig is door de natuurlijke etherische oliën. De PDSA noemt grapefruit onveilig omdat het erg zuur is. Wij kiezen voor “niet aan te raden”, omdat het vruchtvlees zelf niet giftig is en de schil het gevaar vormt.",
     "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla psów z powodu olejków eterycznych i psoralenów, zaznaczając jednak, że owoc jest jadalny, a problemy powodują skórki i części rośliny. Według AKC miąższ nie jest toksyczny, ale lepiej go unikać, m.in. z powodu dużej zawartości kwasu cytrynowego, a skórka jest toksyczna przez naturalne olejki eteryczne. PDSA zalicza grejpfruta do owoców niebezpiecznych, bo jest bardzo kwaśny. Używamy określenia „niezalecane”, ponieważ sam miąższ nie jest toksyczny, a zagrożeniem jest skórka.",
-    "sv": "ASPCA anger att grapefruktväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att fruktköttet inte är giftigt men bäst undviks, delvis på grund av den höga halten citronsyra, och att skalet är giftigt på grund av de naturliga eteriska oljorna. PDSA anger att grapefrukt inte är säker för hundar eftersom den är mycket sur. Vi använder ”rekommenderas inte” eftersom själva fruktköttet inte är giftigt, medan skalet är det som är farligt."
+    "sv": "ASPCA anger att grapefruktväxten är giftig för hundar på grund av eteriska oljor och psoralener, men påpekar att frukten går att äta och att det är skalet och växtmaterialet som orsakar problemen. AKC skriver att fruktköttet inte är giftigt men bäst undviks, delvis på grund av den höga halten citronsyra, och att skalet är giftigt på grund av de naturliga eteriska oljorna. PDSA anger att grapefrukt inte är säker för hundar eftersom den är mycket sur. Vi använder ”rekommenderas inte” eftersom själva fruktköttet inte är giftigt, medan skalet är det som är farligt.",
+    "da": "ASPCA regner grapefrugtplanten for giftig for hunde på grund af æteriske olier og psoralener, men skriver at frugten er spiselig, og at det er skallerne og plantematerialet der giver problemer. AKC skriver at frugtkødet ikke er giftigt, men bedst undgås, blandt andet på grund af det høje indhold af citronsyre, og at skallen er giftig på grund af de naturlige æteriske olier. PDSA anser grapefrugt for at være usikker, fordi den er meget sur. Vi bruger »frarådes«, fordi frugtkødet i sig selv ikke er giftigt, mens skallen er det farlige."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Diarré",
       "Slöhet (orkeslös, verkar nedstämd)",
       "Hudirritation"
+    ],
+    "da": [
+      "Dårlig mave",
+      "Opkast",
+      "Diarré",
+      "Nedtrykthed (lavt energiniveau, virker nedtrykt)",
+      "Hudirritation"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "pt": "Se o teu cão comeu casca de toranja, liga imediatamente ao teu veterinário ou a uma clínica veterinária de urgência. Se comeu muita polpa, contacta também o veterinário.",
     "nl": "Heeft je hond grapefruitschil gegeten? Bel dan meteen je dierenarts of een spoedkliniek voor dieren. Heeft je hond veel vruchtvlees gegeten, neem dan ook contact op met je dierenarts.",
     "pl": "Jeśli pies zjadł skórkę grejpfruta, od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Jeśli zjadł dużą ilość miąższu, również skontaktuj się z weterynarzem.",
-    "sv": "Om hunden har ätit grapefruktskal, ring din veterinär eller ett djursjukhus med akutjour direkt. Om den har ätit en stor mängd fruktkött, kontakta också veterinären."
+    "sv": "Om hunden har ätit grapefruktskal, ring din veterinär eller ett djursjukhus med akutjour direkt. Om den har ätit en stor mängd fruktkött, kontakta också veterinären.",
+    "da": "Hvis din hund har spist grapefrugtskal, skal du straks ringe til din dyrlæge eller en akut dyreklinik. Kontakt også din dyrlæge hvis hunden har spist en stor mængde af frugtkødet."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "pt": "A toranja é azeda demais para os cães e pode dar-lhes dor de barriga. A toranja e a casca são só para as pessoas.",
     "nl": "Grapefruit is te zuur voor honden en kan buikpijn geven. Bewaar grapefruit en de schil maar voor mensen.",
     "pl": "Grejpfrut jest dla psów za kwaśny i może wywołać ból brzucha. Grejpfruta i jego skórkę zostaw dla ludzi.",
-    "sv": "Grapefrukt är för sur för hundar och kan ge dem ont i magen. Grapefrukt och grapefruktskal är till för människor."
+    "sv": "Grapefrukt är för sur för hundar och kan ge dem ont i magen. Grapefrukt och grapefruktskal är till för människor.",
+    "da": "Grapefrugt er for sur til hunde og kan give dem ondt i maven. Lad grapefrugten og skallen være til os mennesker."
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "pt": "E se o meu cão comeu casca de toranja?",
         "nl": "Wat als mijn hond grapefruitschil heeft gegeten?",
         "pl": "Co zrobić, jeśli pies zjadł skórkę grejpfruta?",
-        "sv": "Vad gör jag om hunden har ätit grapefruktskal?"
+        "sv": "Vad gör jag om hunden har ätit grapefruktskal?",
+        "da": "Hvad hvis min hund har spist grapefrugtskal?"
       },
       "a": {
         "en": "Call your vet or an emergency vet clinic right away. The skin and rind are toxic to dogs because of their essential oils.",
@@ -215,7 +230,8 @@
         "pt": "Liga imediatamente ao teu veterinário ou a uma clínica veterinária de urgência. A casca é tóxica para os cães por causa dos óleos essenciais.",
         "nl": "Bel meteen je dierenarts of een spoedkliniek voor dieren. De schil is giftig voor honden vanwege de etherische oliën.",
         "pl": "Od razu zadzwoń do weterynarza lub do całodobowej przychodni weterynaryjnej. Skórka jest toksyczna dla psów z powodu olejków eterycznych.",
-        "sv": "Ring din veterinär eller ett djursjukhus med akutjour direkt. Skalet är giftigt för hundar på grund av de eteriska oljorna."
+        "sv": "Ring din veterinär eller ett djursjukhus med akutjour direkt. Skalet är giftigt för hundar på grund av de eteriska oljorna.",
+        "da": "Ring straks til din dyrlæge eller en akut dyreklinik. Skallen er giftig for hunde på grund af de æteriske olier."
       }
     }
   ],
@@ -335,6 +351,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6a3b3bb61077918fd55cec8b571981f0a1d71fdab78bd8b7ca444e09555d9073"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c8883d1a5930529829bfd8d090322bfc64a2e01949a990a6c756d0f3a0f0b12c"
     }
   }
 }
