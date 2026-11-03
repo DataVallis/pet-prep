@@ -180,6 +180,7 @@
       "shar_pei": "Part of the 12-week challenge · brushing 1× a week",
       "brussels_griffon": "Part of the 12-week challenge · brushing 2× a week",
       "irish_setter": "Part of the 12-week challenge · brushing 3× a week",
+      "anatolian_shepherd_dog": "Part of the 12-week challenge · brushing 1× a week",
       "domestic_cat": "Short coat · free",
       "maine_coon": "Long coat · brushing 3× a week",
       "british_shorthair": "Short, dense coat · brushing 1× a week",
@@ -543,6 +544,12 @@
         "senior": "2 meals a day; shorter walks — 2,300 steps a day."
       },
       "irish_setter": {
+        "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
+        "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
+        "adult": "2 meals a day; walks of 12,000 steps a day.",
+        "senior": "2 meals a day; shorter walks — 9,000 steps a day."
+      },
+      "anatolian_shepherd_dog": {
         "puppy": "Arrives at 2 months old. 4 meals a day (then 3, and 2 from 6 months); walks of 2,000 steps a day, more each week up to 12,000 at 12 months.",
         "young": "2 meals a day; walks of 9,000 steps a day, more each week up to 12,000 at 12 months.",
         "adult": "2 meals a day; walks of 12,000 steps a day.",
