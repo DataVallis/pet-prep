@@ -57953,6 +57953,7 @@
       "phone": "+44 1412306575",
       "emergency_24h": true,
       "duty": "7am - 7am next day, every day incl. bank holidays",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/glasgow/",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/glasgow/",
       "checked": "2026-11-03"
@@ -57967,6 +57968,7 @@
       "phone": "+44 1412605555",
       "emergency_24h": true,
       "duty": "Open 24hrs a day, every day",
+      "duty_i18n": null,
       "url": "https://emergencyvetsglasgow.com/",
       "source_url": "https://emergencyvetsglasgow.com/",
       "checked": "2026-11-03"
@@ -57981,6 +57983,7 @@
       "phone": "+44 1413305848",
       "emergency_24h": true,
       "duty": "Open 24/7 (consultations by appointment only; emergency service 24-7)",
+      "duty_i18n": null,
       "url": "https://www.gla.ac.uk/schools/bohvm/sah/",
       "source_url": "https://www.gla.ac.uk/schools/bohvm/sah/contact",
       "checked": "2026-11-03"
@@ -57995,6 +57998,7 @@
       "phone": "+44 1312413382",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 6pm - 8.30am, Sat 12pm - 8.30am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/edinburgh",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/edinburgh",
       "checked": "2026-11-03"
@@ -58009,6 +58013,7 @@
       "phone": "+44 1316507650",
       "emergency_24h": true,
       "duty": "Emergency referrals 24 hours a day, 365 days a year",
+      "duty_i18n": null,
       "url": "https://vet.ed.ac.uk/clinical",
       "source_url": "https://vet.ed.ac.uk/sites/default/files/2024-09/HfSA%20-%20Emergency%20%26amp%3B%20Critical%20Care%20Unit.pdf",
       "checked": "2026-11-03"
@@ -58023,6 +58028,7 @@
       "phone": "+44 1224969854",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8am, Sat 12pm - 8am, Sun 8am - 8am next day; open bank holidays",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/aberdeen",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/aberdeen",
       "checked": "2026-11-03"
@@ -58037,6 +58043,7 @@
       "phone": "+44 1382690733",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8:30am, Sat 12pm - 8:30am, Sun open 24h from 8:30am",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/dundee",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/dundee",
       "checked": "2026-11-03"
@@ -58051,6 +58058,7 @@
       "phone": "+44 1563258494",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 6pm - 8.30am, Sat 12pm - 8am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kilmarnock",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kilmarnock",
       "checked": "2026-11-03"
@@ -58065,6 +58073,7 @@
       "phone": "+44 1592308825",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8.30am, Sat 12pm - 8.30am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": null,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kirkcaldy",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kirkcaldy",
       "checked": "2026-11-03"
@@ -58078,7 +58087,8 @@
       "address": "Inside Pets at Home, Unit 13 The Forge Retail Park, 71 Biggar Street, Glasgow, G31 4BH",
       "phone": "+44 1415513630",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Emergency Vets Glasgow.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets-in-glasgow/vets4pets-glasgow-forge/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-glasgow/vets4pets-glasgow-forge/",
       "checked": "2026-11-03"
@@ -58092,7 +58102,8 @@
       "address": "Inside Pets at Home, 4 Gylemuir Road, Corstorphine, Edinburgh, EH12 7UF",
       "phone": "+44 1313340052",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Edinburgh.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets-in-edinburgh/vets4pets-corstorphine/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-edinburgh/vets4pets-corstorphine/",
       "checked": "2026-11-03"
@@ -58106,7 +58117,8 @@
       "address": "Inside Pets at Home, Beach Boulevard Retail Park, Links Road, Aberdeen, AB11 5EJ",
       "phone": "+44 1224577930",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Aberdeen.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets-in-aberdeenshire/vets4pets-aberdeen/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-aberdeenshire/vets4pets-aberdeen/",
       "checked": "2026-11-03"
@@ -58120,7 +58132,8 @@
       "address": "Inside Pets at Home, Kingsway East Retail Park, Dundee",
       "phone": "+44 1382519200",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Dundee. No postcode on page.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets4pets-dundee/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-dundee/",
       "checked": "2026-11-03"
@@ -58134,7 +58147,8 @@
       "address": "Springkerse Retail Park, Stirling, FK7 7TL",
       "phone": "+44 1786468060",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Glasgow.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets4pets-stirling/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-stirling/",
       "checked": "2026-11-03"
@@ -58148,7 +58162,8 @@
       "address": "Falkirk Retail Park, 15 Grahams Road, Falkirk, FK1 1LD",
       "phone": "+44 1324619920",
       "emergency_24h": false,
-      "duty": "Not 24 h; opens until 8pm weekdays, out-of-hours via Vets Now.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-falkirk/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-falkirk/",
       "checked": "2026-11-03"
@@ -58162,7 +58177,8 @@
       "address": "Unit 3 Allison Street Retail Park, Allison Street, Ayr, KA8 8HD",
       "phone": "+44 1292430530",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Kilmarnock.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-ayr/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-ayr/",
       "checked": "2026-11-03"
@@ -58176,7 +58192,8 @@
       "address": "Inside Pets at Home, Unit 4 Almondvale Retail Park, Livingston, EH54 6QX",
       "phone": "+44 1506463085",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Edinburgh.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.vets4pets.com/livingston/",
       "source_url": "https://www.vets4pets.com/livingston/",
       "checked": "2026-11-03"
@@ -58190,7 +58207,8 @@
       "address": "28 Bank Street, Alloa, FK10 1HH",
       "phone": "+44 1259721576",
       "emergency_24h": false,
-      "duty": "Not 24 h; out-of-hours via Vets Now Kirkcaldy.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.medivetgroup.com/vet-practices/alloa/",
       "source_url": "https://www.medivetgroup.com/vet-practices/alloa/",
       "checked": "2026-11-03"
@@ -58204,7 +58222,8 @@
       "address": null,
       "phone": "+44 1414270848",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; night/weekend via Vets Now Glasgow.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.cvsvets.com/scotland/champion-vets-east-glasgow",
       "source_url": "https://www.cvsvets.com/scotland/champion-vets-east-glasgow",
       "checked": "2026-11-03"
@@ -58218,7 +58237,8 @@
       "address": null,
       "phone": "+44 1418838118",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; night/weekend via University of Glasgow Small Animal Hospital or Vets Now Glasgow.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.cvsvets.com/scotland/3-mile-veterinary-centre-glasgow",
       "source_url": "https://www.cvsvets.com/scotland/3-mile-veterinary-centre-glasgow",
       "checked": "2026-11-03"
@@ -58232,7 +58252,8 @@
       "address": null,
       "phone": "+44 1312297619",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; night/weekend via Vets Now Edinburgh.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.cvsvets.com/scotland/west-end-veterinary-centre-tollcross",
       "source_url": "https://www.cvsvets.com/scotland/west-end-veterinary-centre-tollcross",
       "checked": "2026-11-03"
@@ -58246,7 +58267,8 @@
       "address": null,
       "phone": "+44 1324472915",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; night/weekend via E-Vets Edinburgh (0131 662 1689).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.cvsvets.com/scotland/grangemouth-veterinary-clinic",
       "source_url": "https://www.cvsvets.com/scotland/grangemouth-veterinary-clinic",
       "checked": "2026-11-03"
@@ -58260,7 +58282,8 @@
       "address": "203 Fenwick Road, Giffnock, Glasgow, G46 6JD",
       "phone": "+44 1417371540",
       "emergency_24h": false,
-      "duty": "Own 24 h emergency service Monday-Friday only; weekends via Emergency Vets Glasgow. Not marked 24 h (weekdays only).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.southsidevet.co.uk/ooh",
       "source_url": "https://www.southsidevet.co.uk/ooh",
       "checked": "2026-11-03"
@@ -58274,7 +58297,8 @@
       "address": null,
       "phone": "+44 1786231010",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; also Callander 01877 381213; out-of-hours via Emergency Vets Glasgow / Vets Now Glasgow.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://riversidevetclinics.com/emergencies/",
       "source_url": "https://riversidevetclinics.com/emergencies/",
       "checked": "2026-11-03"
@@ -58288,7 +58312,8 @@
       "address": null,
       "phone": "+44 1315397539",
       "emergency_24h": false,
-      "duty": "Not 24 h; no street address on page; out-of-hours via E-Vets Edinburgh (0131 662 1689).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://oaktreevet.co.uk/emergency",
       "source_url": "https://oaktreevet.co.uk/emergency",
       "checked": "2026-11-03"
@@ -58303,6 +58328,7 @@
       "phone": "+44 1595810456",
       "emergency_24h": true,
       "duty": "24/7 on-call emergency service via answering service; vet calls back usually within 5-10 minutes",
+      "duty_i18n": null,
       "url": "https://www.shetlandvets.co.uk/emergencies",
       "source_url": "https://www.shetlandvets.co.uk/emergencies",
       "checked": "2026-11-03"
@@ -58316,7 +58342,8 @@
       "address": "Sandwick Road, Stornoway, Isle of Lewis, HS1 2SL",
       "phone": "+44 1851705900",
       "emergency_24h": false,
-      "duty": "Not 24 h; emergencies during surgery hours by phone; no out-of-hours cover described on page.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.oldmillvets.co.uk/emergencies/",
       "source_url": "https://www.oldmillvets.co.uk/emergencies/",
       "checked": "2026-11-03"
@@ -58330,7 +58357,8 @@
       "address": "Harrapool, Broadford, Isle of Skye, IV49 9AQ",
       "phone": "+44 1471822922",
       "emergency_24h": false,
-      "duty": "Not 24 h; has an Emergency page (not opened).",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://oldschoolvet.uk/kyle/",
       "source_url": "https://oldschoolvet.uk/kyle/",
       "checked": "2026-11-03"
@@ -58344,7 +58372,8 @@
       "address": "Portree, Isle of Skye, IV51 9BD",
       "phone": "+44 1478611269",
       "emergency_24h": false,
-      "duty": "Page says \"Emergency services are available out of hours\"; not 24 h wording; no street address on page.",
+      "duty": null,
+      "duty_i18n": null,
       "url": "https://www.rhonacampbellvets.co.uk/",
       "source_url": "https://www.rhonacampbellvets.co.uk/",
       "checked": "2026-11-03"
