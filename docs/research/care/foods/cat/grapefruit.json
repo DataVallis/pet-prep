@@ -13,7 +13,8 @@
     "pt": "Toranja",
     "nl": "Grapefruit",
     "pl": "Grejpfrut",
-    "sv": "Grapefrukt"
+    "sv": "Grapefrukt",
+    "da": "Grapefrugt"
   },
   "question": {
     "en": "Can cats eat grapefruit?",
@@ -27,7 +28,8 @@
     "pt": "Os gatos podem comer toranja?",
     "nl": "Mogen katten grapefruit eten?",
     "pl": "Czy koty mogą jeść grejpfruta?",
-    "sv": "Får katter äta grapefrukt?"
+    "sv": "Får katter äta grapefrukt?",
+    "da": "Må katte spise grapefrugt?"
   },
   "url_slug": {
     "en": "grapefruit",
@@ -41,7 +43,8 @@
     "pt": "toranja",
     "nl": "grapefruit",
     "pl": "grejpfrut",
-    "sv": "grapefrukt"
+    "sv": "grapefrukt",
+    "da": "grapefrugt"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Não, é melhor não dar. A ASPCA classifica a toranjeira como tóxica para os gatos por causa dos óleos essenciais e dos psoralenos. A polpa do fruto é comestível, mas a casca e as outras partes da planta podem causar problemas, e os citrinos fazem mal aos gatos, por isso a toranja fica para as pessoas.",
     "nl": "Nee, liever niet. De ASPCA noemt de grapefruitplant giftig voor katten vanwege de etherische oliën en psoralenen. Het vruchtvlees is eetbaar, maar de schil en andere plantendelen kunnen problemen geven, en citrusvruchten zijn slecht voor katten, dus bewaar grapefruit maar voor mensen.",
     "pl": "Nie, lepiej tego unikać. ASPCA uznaje drzewo grejpfrutowe za toksyczne dla kotów z powodu olejków eterycznych i psoralenów. Miąższ owocu jest jadalny, ale skórka i części rośliny mogą szkodzić, a owoce cytrusowe są dla kotów szkodliwe, więc grejpfruta zostaw dla ludzi.",
-    "sv": "Nej, det är bäst att låta bli. ASPCA anger att grapefruktväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt grapefrukten vara människomat."
+    "sv": "Nej, det är bäst att låta bli. ASPCA anger att grapefruktväxten är giftig för katter på grund av eteriska oljor och psoralener. Fruktköttet går att äta, men skalet och växtdelarna kan orsaka problem, och citrusfrukter är inte bra för katter, så låt grapefrukten vara människomat.",
+    "da": "Nej, det er bedst at lade være. ASPCA regner grapefrugtplanten for giftig for katte på grund af æteriske olier og psoralener. Frugtkødet er spiseligt, men skallen og plantedelene kan give problemer, og citrusfrugter er dårlige for katte, så lad grapefrugten være til os mennesker."
   },
   "why": {
     "en": "The ASPCA lists the grapefruit plant as toxic to cats: it contains essential oils and psoralens, and while the fruit is edible, the skins and plant material can cause problems. Cats Protection says eating citrus fruits is bad for cats and can cause stomach discomfort, vomiting and diarrhoea, and NC State's veterinary hospital lists citrus fruits among foods that may cause vomiting or diarrhoea in cats and dogs. Cats Protection adds that a small taste is unlikely to cause a severe reaction. Because the sources differ in how strict they are, we follow the stricter advice and do not recommend sharing it.",
@@ -70,7 +74,8 @@
     "pt": "A ASPCA classifica a toranjeira como tóxica para os gatos: contém óleos essenciais e psoralenos e, embora o fruto seja comestível, as cascas e as partes da planta podem causar problemas. A Cats Protection diz que comer citrinos faz mal aos gatos e pode causar mal-estar no estômago, vómitos e diarreia, e o hospital veterinário da NC State inclui os citrinos entre os alimentos que podem causar vómitos ou diarreia em gatos e cães. A Cats Protection acrescenta que provar só um bocadinho dificilmente causa uma reação grave. Como as fontes não são igualmente exigentes, seguimos o conselho mais prudente e não aconselhamos dar.",
     "nl": "De ASPCA noemt de grapefruitplant giftig voor katten: de plant bevat etherische oliën en psoralenen, en hoewel de vrucht eetbaar is, kunnen de schillen en het plantaardige materiaal problemen geven. Cats Protection zegt dat het eten van citrusvruchten slecht is voor katten en maagklachten, braken en diarree kan veroorzaken, en het dierenziekenhuis van NC State rekent citrusvruchten tot het voedsel dat bij katten en honden braken of diarree kan veroorzaken. Cats Protection voegt eraan toe dat een klein hapje waarschijnlijk geen ernstige reactie uitlokt. Omdat de bronnen niet even streng zijn, volgen wij het strengere advies en raden we af om het te delen.",
     "pl": "ASPCA uznaje drzewo grejpfrutowe za toksyczne dla kotów: zawiera olejki eteryczne i psoraleny, a choć owoc jest jadalny, skórki i części rośliny mogą szkodzić. Cats Protection podaje, że jedzenie owoców cytrusowych jest dla kotów szkodliwe i może wywołać dolegliwości żołądkowe, wymioty i biegunkę, a szpital weterynaryjny NC State wymienia owoce cytrusowe wśród pokarmów, które mogą wywołać wymioty lub biegunkę u kotów i psów. Cats Protection dodaje, że gdy kot tylko skosztuje odrobiny, ciężka reakcja jest mało prawdopodobna. Źródła różnią się stopniem surowości, więc kierujemy się ostrzejszą radą i nie zalecamy częstowania kota grejpfrutem.",
-    "sv": "ASPCA anger att grapefruktväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka."
+    "sv": "ASPCA anger att grapefruktväxten är giftig för katter: den innehåller eteriska oljor och psoralener, och även om frukten går att äta kan skalet och växtmaterialet orsaka problem. Cats Protection skriver att citrusfrukter inte är bra för katter och kan ge obehag i magen, kräkningar och diarré, och NC States djursjukhus tar upp citrusfrukter bland livsmedel som kan ge kräkningar eller diarré hos katter och hundar. Cats Protection tillägger att en liten smakbit sannolikt inte ger någon allvarlig reaktion. Källorna är olika stränga, så vi följer det strängare rådet och rekommenderar inte att du låter katten smaka.",
+    "da": "ASPCA regner grapefrugtplanten for giftig for katte: Den indeholder æteriske olier og psoralener, og selvom frugten er spiselig, kan skallerne og plantematerialet give problemer. Cats Protection skriver at det er dårligt for katte at spise citrusfrugter, og at det kan give ubehag i maven, opkast og diarré. Dyrehospitalet ved NC State nævner citrusfrugter blandt de fødevarer der kan give katte og hunde opkast eller diarré. Cats Protection tilføjer at en lille smagsprøve næppe udløser en alvorlig reaktion. Fordi kilderne ikke er lige strenge, følger vi det strengeste råd og anbefaler ikke at dele grapefrugten med katten."
   },
   "signs": {
     "en": [
@@ -156,6 +161,13 @@
       "Obehag i magen",
       "Slöhet",
       "Eventuell hudirritation (dermatit)"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Ubehag i maven",
+      "Nedtrykthed",
+      "Mulig hudirritation (dermatitis)"
     ]
   },
   "what_to_do": {
@@ -170,7 +182,8 @@
     "pt": "Se o teu gato comeu casca, folhas ou outras partes da planta, ou apresenta sinais como vómitos ou diarreia, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível. Anota o que ele comeu e quando.",
     "nl": "Heeft je kat schil, bladeren of andere plantendelen gegeten, of krijgt je kat verschijnselen zoals braken of diarree? Neem dan zo snel mogelijk contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer.",
     "pl": "Jeśli kot zjadł skórkę, liście lub inne części rośliny albo ma objawy, takie jak wymioty czy biegunka, jak najszybciej skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy.",
-    "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när."
+    "sv": "Om katten har ätit skal, blad eller andra växtdelar, eller visar tecken som kräkningar eller diarré, kontakta din veterinär eller en giftrådgivning för djur så snart som möjligt. Notera vad katten åt och när.",
+    "da": "Hvis din kat har spist skal, blade eller andre plantedele, eller hvis den viser tegn som opkast eller diarré, skal du kontakte din dyrlæge eller en giftrådgivning for dyr hurtigst muligt. Skriv ned hvad den har spist, og hvornår."
   },
   "serving": null,
   "child": {
@@ -185,7 +198,8 @@
     "pt": "A toranja é um petisco para pessoas. Os gatos não gostam do cheiro e os citrinos podem dar-lhes dor de barriga, por isso a toranja fica para as pessoas.",
     "nl": "Grapefruit is een snack voor mensen. Katten houden niet van de geur en van citrus kunnen ze buikpijn krijgen, dus bewaar grapefruit maar voor mensen.",
     "pl": "Grejpfrut to przekąska dla ludzi. Koty nie lubią tego zapachu, a cytrusy mogą rozstroić im brzuszek, więc grejpfruta zostaw dla ludzi.",
-    "sv": "Grapefrukt är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så den får vi människor äta själva."
+    "sv": "Grapefrukt är ett mellanmål för människor. Katter tycker inte om lukten, och citrus kan ge dem ont i magen, så den får vi människor äta själva.",
+    "da": "Grapefrugt er noget for os mennesker. Katte bryder sig ikke om lugten, og citrusfrugter kan give dem ondt i maven, så lad grapefrugten være til os."
   },
   "faq": [
     {
@@ -201,7 +215,8 @@
         "pt": "Que parte causa problemas?",
         "nl": "Welk deel is het probleem?",
         "pl": "Która część szkodzi?",
-        "sv": "Vilken del orsakar problemen?"
+        "sv": "Vilken del orsakar problemen?",
+        "da": "Hvilken del er problemet?"
       },
       "a": {
         "en": "The ASPCA says the fruit is edible, but the skins and plant material can cause problems because they contain essential oils and psoralens.",
@@ -215,7 +230,8 @@
         "pt": "A ASPCA diz que o fruto é comestível, mas que as cascas e as partes da planta podem causar problemas porque contêm óleos essenciais e psoralenos.",
         "nl": "De ASPCA zegt dat de vrucht eetbaar is, maar dat de schillen en het plantaardige materiaal problemen kunnen geven, omdat ze etherische oliën en psoralenen bevatten.",
         "pl": "ASPCA podaje, że owoc jest jadalny, ale skórki i części rośliny mogą szkodzić, bo zawierają olejki eteryczne i psoraleny.",
-        "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener."
+        "sv": "ASPCA skriver att frukten går att äta, men att skalet och växtmaterialet kan orsaka problem eftersom de innehåller eteriska oljor och psoralener.",
+        "da": "ASPCA skriver at frugten er spiselig, men at skallerne og plantematerialet kan give problemer, fordi de indeholder æteriske olier og psoralener."
       }
     },
     {
@@ -231,7 +247,8 @@
         "pt": "O meu gato provou só um bocadinho. É uma emergência?",
         "nl": "Mijn kat heeft er even van geproefd. Is dat een noodgeval?",
         "pl": "Mój kot tylko troszkę spróbował. Czy to nagły przypadek?",
-        "sv": "Min katt smakade bara lite. Är det akut?"
+        "sv": "Min katt smakade bara lite. Är det akut?",
+        "da": "Min kat har fået en lille smagsprøve. Er det akut?"
       },
       "a": {
         "en": "Cats Protection says not to panic if a cat samples a segment or licks your fingers; a cat would need to eat a lot to be in danger of a severe reaction. Watch for vomiting or diarrhoea and ask your vet if you are worried.",
@@ -245,7 +262,8 @@
         "pt": "A Cats Protection aconselha a não entrar em pânico se o gato provar um gomo ou te lamber os dedos: só correria o risco de uma reação grave se comesse muito. Observa se aparecem vómitos ou diarreia e, se algo te preocupar, pergunta ao teu veterinário.",
         "nl": "Cats Protection zegt dat je niet in paniek hoeft te raken als een kat even aan een partje proeft of aan je vingers likt; een kat moet er veel van eten om een ernstige reactie te krijgen. Let erop of je kat gaat braken of diarree krijgt, en vraag je dierenarts om advies als je je zorgen maakt.",
         "pl": "Cats Protection radzi nie panikować, jeśli kot spróbuje cząstki owocu lub poliże ci palce; ciężka reakcja groziłaby mu dopiero po zjedzeniu dużej ilości. Obserwuj, czy nie pojawią się wymioty lub biegunka, a jeśli się niepokoisz, zapytaj weterynarza.",
-        "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig."
+        "sv": "Cats Protection skriver att du inte behöver få panik om en katt smakar på en klyfta eller slickar dina fingrar; för att få en allvarlig reaktion måste katten äta mycket. Håll utkik efter kräkningar eller diarré och fråga veterinären om du är orolig.",
+        "da": "Cats Protection skriver at man ikke skal gå i panik hvis en kat smager på en båd eller slikker dine fingre. En kat skal spise meget for at være i fare for en alvorlig reaktion. Hold øje med opkast eller diarré, og spørg din dyrlæge hvis du er bekymret."
       }
     },
     {
@@ -261,7 +279,8 @@
         "pt": "Porque é que os gatos costumam evitar os citrinos?",
         "nl": "Waarom mijden katten citrus meestal?",
         "pl": "Dlaczego koty zwykle unikają cytrusów?",
-        "sv": "Varför brukar katter undvika citrus?"
+        "sv": "Varför brukar katter undvika citrus?",
+        "da": "Hvorfor holder katte sig som regel fra citrus?"
       },
       "a": {
         "en": "Cats Protection says cats have a natural dislike of strong citrus smells, so they tend to avoid eating citrus fruits.",
@@ -275,7 +294,8 @@
         "pt": "A Cats Protection diz que os gatos têm uma aversão natural ao cheiro intenso dos citrinos, por isso tendem a evitá-los.",
         "nl": "Cats Protection zegt dat katten van nature een hekel hebben aan sterke citrusgeuren en daarom meestal geen citrusvruchten eten.",
         "pl": "Cats Protection podaje, że koty naturalnie nie znoszą intensywnego zapachu cytrusów, więc zazwyczaj nie jedzą owoców cytrusowych.",
-        "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter."
+        "sv": "Cats Protection skriver att katter har en naturlig motvilja mot starka citrusdofter, så de brukar hålla sig borta från citrusfrukter.",
+        "da": "Cats Protection skriver at katte af natur ikke kan lide den stærke duft af citrus, så de som regel holder sig fra citrusfrugter."
       }
     }
   ],
@@ -408,6 +428,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "601d0fd0bab52f1d68e1810edc8799eac82636c4582af31b74eca3fbe485fcd4"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3b78e1ff91bd4686ebee7573f58468f254152297993314f8539fa70a8421292f"
     }
   }
 }

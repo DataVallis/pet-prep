@@ -13,7 +13,8 @@
     "pt": "Melão honeydew",
     "nl": "Honingmeloen",
     "pl": "Melon miodowy",
-    "sv": "Honungsmelon"
+    "sv": "Honungsmelon",
+    "da": "Honningmelon"
   },
   "question": {
     "en": "Can dogs eat honeydew melon?",
@@ -27,7 +28,8 @@
     "pt": "Os cães podem comer melão honeydew?",
     "nl": "Mogen honden honingmeloen eten?",
     "pl": "Czy psy mogą jeść melona miodowego?",
-    "sv": "Får hundar äta honungsmelon?"
+    "sv": "Får hundar äta honungsmelon?",
+    "da": "Må hunde spise honningmelon?"
   },
   "url_slug": {
     "en": "honeydew",
@@ -41,7 +43,8 @@
     "pt": "melao-honeydew",
     "nl": "honingmeloen",
     "pl": "melon-miodowy",
-    "sv": "honungsmelon"
+    "sv": "honungsmelon",
+    "da": "honningmelon"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Sim, com moderação. O melão honeydew não é tóxico para os cães, mas tem muito açúcar, por isso dá só um bocadinho como guloseima ocasional e pergunta primeiro ao teu veterinário se o teu cão tiver diabetes. Tira a casca e as sementes.",
     "nl": "Ja, maar spaarzaam. Honingmeloen is niet giftig voor honden, maar bevat veel suiker, dus geef er af en toe een klein beetje van als snoepje, en vraag eerst je dierenarts om advies als je hond diabetes heeft. Haal de schil en de pitten eruit.",
     "pl": "Tak, z umiarem. Melon miodowy nie jest toksyczny dla psów, ale ma dużo cukru, więc dawaj tylko odrobinę jako okazjonalny smakołyk, a jeśli twój pies ma cukrzycę, najpierw zapytaj weterynarza. Usuń skórkę i pestki.",
-    "sv": "Ja, med måtta. Honungsmelon är inte giftig för hundar, men den innehåller mycket socker, så ge bara lite som en godbit då och då, och fråga veterinären först om hunden har diabetes. Ta bort skalet och kärnorna."
+    "sv": "Ja, med måtta. Honungsmelon är inte giftig för hundar, men den innehåller mycket socker, så ge bara lite som en godbit då och då, och fråga veterinären först om hunden har diabetes. Ta bort skalet och kärnorna.",
+    "da": "Ja, men sparsomt. Honningmelon er ikke giftig for hunde, men den indeholder meget sukker, så giv kun lidt som en godbid en gang imellem, og spørg først din dyrlæge hvis din hund har diabetes. Fjern skræl og kerner."
   },
   "why": {
     "en": "The ASPCA lists honeydew melon as non-toxic to dogs, and AKC's chief veterinarian suggests it among melons for frozen treats. The fruit is high in sugar, which may make it unsuitable for dogs with diabetes. The rind can cause digestive upset or an intestinal blockage, and the seeds are not toxic but can be a choking hazard.",
@@ -70,7 +74,8 @@
     "pt": "A ASPCA classifica o melão honeydew como não tóxico para os cães, e o veterinário-chefe da AKC inclui-o entre os melões indicados para guloseimas congeladas. O fruto tem muito açúcar, o que pode torná-lo inadequado para cães com diabetes. A casca pode causar problemas digestivos ou uma obstrução intestinal, e as sementes não são tóxicas, mas podem provocar engasgo.",
     "nl": "De ASPCA noemt honingmeloen niet giftig voor honden, en de hoofddierenarts van de AKC stelt het voor onder de meloenen voor bevroren snoepjes. De vrucht bevat veel suiker, waardoor ze misschien niet geschikt is voor honden met diabetes. De schil kan spijsverteringsproblemen of een darmverstopping veroorzaken, en de pitten zijn niet giftig maar kunnen een verstikkingsgevaar vormen.",
     "pl": "ASPCA uznaje melon miodowy za nietoksyczny dla psów, a główny lekarz weterynarii AKC poleca go wśród melonów do mrożonych smakołyków. Owoc zawiera dużo cukru, więc może nie być odpowiedni dla psów z cukrzycą. Skórka może wywołać rozstrój trawienia lub niedrożność jelit, a pestki nie są toksyczne, ale mogą grozić zadławieniem.",
-    "sv": "ASPCA anger att honungsmelon inte är giftig för hundar, och AKC:s chefsveterinär nämner den bland de meloner som passar som frysta godbitar. Frukten innehåller mycket socker, vilket kan göra den olämplig för hundar med diabetes. Skalet kan ge matsmältningsbesvär eller tarmstopp, och kärnorna är inte giftiga men innebär en kvävningsrisk."
+    "sv": "ASPCA anger att honungsmelon inte är giftig för hundar, och AKC:s chefsveterinär nämner den bland de meloner som passar som frysta godbitar. Frukten innehåller mycket socker, vilket kan göra den olämplig för hundar med diabetes. Skalet kan ge matsmältningsbesvär eller tarmstopp, och kärnorna är inte giftiga men innebär en kvävningsrisk.",
+    "da": "ASPCA regner honningmelon for ugiftig for hunde, og AKC's chefdyrlæge nævner den blandt de meloner der egner sig til frosne godbidder. Frugten indeholder meget sukker, så den kan være uegnet til hunde med diabetes. Skrællen kan give fordøjelsesproblemer eller tarmblokering, og kernerne er ikke giftige, men kan udgøre en kvælningsfare."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pt": "Fala com o teu veterinário antes de juntares melão honeydew à alimentação do teu cão, sobretudo se ele tiver diabetes.",
     "nl": "Overleg met je dierenarts voordat je honingmeloen aan het voer van je hond toevoegt, vooral als je hond diabetes heeft.",
     "pl": "Zanim dodasz melon miodowy do diety psa, porozmawiaj z weterynarzem, zwłaszcza jeśli pies ma cukrzycę.",
-    "sv": "Prata med veterinären innan du lägger till honungsmelon i hundens mat, särskilt om hunden har diabetes."
+    "sv": "Prata med veterinären innan du lägger till honungsmelon i hundens mat, särskilt om hunden har diabetes.",
+    "da": "Tal med din dyrlæge, inden honningmelon bliver en fast del af din hunds kost, især hvis din hund har diabetes."
   },
   "serving": {
     "en": "Only the flesh, without the rind and seeds, cut into small cubes; it can also be pureed and frozen as a treat.",
@@ -99,7 +105,8 @@
     "pt": "Só a polpa, sem casca nem sementes, cortada em cubinhos; também pode ser reduzida a puré e congelada como guloseima.",
     "nl": "Alleen het vruchtvlees, zonder schil en pitten, in kleine blokjes; je kunt het ook pureren en invriezen als snoepje.",
     "pl": "Tylko miąższ, bez skórki i pestek, pokrojony w małą kostkę; można go też zmiksować na przecier i zamrozić jako smakołyk.",
-    "sv": "Bara fruktköttet, utan skal och kärnor, skuret i små tärningar; det kan också mixas till puré och frysas som en godbit."
+    "sv": "Bara fruktköttet, utan skal och kärnor, skuret i små tärningar; det kan också mixas till puré och frysas som en godbit.",
+    "da": "Kun frugtkødet, uden skræl og kerner, skåret i små tern. Det kan også moses og fryses som en godbid."
   },
   "child": {
     "en": "Dogs can enjoy a small piece of honeydew melon! A grown-up removes the hard skin and the seeds first.",
@@ -113,7 +120,8 @@
     "pt": "Os cães podem gostar de um pedacinho de melão honeydew! Um adulto tira primeiro a casca dura e as sementes.",
     "nl": "Honden kunnen genieten van een klein stukje honingmeloen! Een volwassene haalt eerst de harde schil en de pitten eraf.",
     "pl": "Psy mogą zjeść mały kawałek melona miodowego! Dorosły najpierw usuwa twardą skórkę i pestki.",
-    "sv": "Hundar kan få en liten bit honungsmelon! En vuxen tar först bort det hårda skalet och kärnorna."
+    "sv": "Hundar kan få en liten bit honungsmelon! En vuxen tar först bort det hårda skalet och kärnorna.",
+    "da": "Hunde kan godt få et lille stykke honningmelon! En voksen fjerner først den hårde skræl og kernerne."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pt": "O melão honeydew é adequado para um cão com diabetes?",
         "nl": "Is honingmeloen oké voor een hond met diabetes?",
         "pl": "Czy melon miodowy jest odpowiedni dla psa z cukrzycą?",
-        "sv": "Är honungsmelon okej för en hund med diabetes?"
+        "sv": "Är honungsmelon okej för en hund med diabetes?",
+        "da": "Er honningmelon i orden til en hund med diabetes?"
       },
       "a": {
         "en": "It might not be, because honeydew is very high in sugar. Ask your vet first.",
@@ -143,7 +152,8 @@
         "pt": "Talvez não, porque tem muito açúcar. Pergunta primeiro ao teu veterinário.",
         "nl": "Misschien niet, want honingmeloen bevat erg veel suiker. Vraag het eerst aan je dierenarts.",
         "pl": "Niekoniecznie, bo melon miodowy ma bardzo dużo cukru. Najpierw zapytaj weterynarza.",
-        "sv": "Kanske inte, eftersom honungsmelon innehåller mycket socker. Fråga veterinären först."
+        "sv": "Kanske inte, eftersom honungsmelon innehåller mycket socker. Fråga veterinären först.",
+        "da": "Det er den måske ikke, fordi honningmelon indeholder meget sukker. Spørg din dyrlæge først."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pt": "E se o meu cão engoliu uma semente?",
         "nl": "Wat als mijn hond een pit heeft ingeslikt?",
         "pl": "Co zrobić, jeśli pies połknął pestkę?",
-        "sv": "Vad gör jag om min hund har svalt en kärna?"
+        "sv": "Vad gör jag om min hund har svalt en kärna?",
+        "da": "Hvad hvis min hund har slugt en kerne?"
       },
       "a": {
         "en": "Honeydew seeds are not toxic, and one seed is probably no cause for worry, but seeds can be a choking hazard, so remove them before serving.",
@@ -173,7 +184,8 @@
         "pt": "As sementes do melão honeydew não são tóxicas e uma única semente provavelmente não é motivo de preocupação, mas as sementes podem provocar engasgo, por isso tira-as antes de servir.",
         "nl": "Honingmeloenpitten zijn niet giftig, en één pit is waarschijnlijk geen reden tot zorg, maar pitten kunnen een verstikkingsgevaar vormen, dus haal ze eruit voordat je de meloen geeft.",
         "pl": "Pestki melona miodowego nie są toksyczne i jedna pestka raczej nie jest powodem do niepokoju, ale mogą grozić zadławieniem, więc przed podaniem je usuń.",
-        "sv": "Honungsmelonkärnor är inte giftiga, och en enda kärna är förmodligen ingen anledning till oro, men kärnor innebär en kvävningsrisk, så ta bort dem innan du serverar."
+        "sv": "Honungsmelonkärnor är inte giftiga, och en enda kärna är förmodligen ingen anledning till oro, men kärnor innebär en kvävningsrisk, så ta bort dem innan du serverar.",
+        "da": "Honningmelonkerner er ikke giftige, og én kerne er sandsynligvis ikke noget at bekymre sig om, men kerner kan udgøre en kvælningsfare, så fjern dem inden du serverer melonen."
       }
     }
   ],
@@ -285,6 +297,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7e52e86aecbcaec6c049faae53d1b294304a0317e990cd15164f50924365eae2"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7421ef9a5f42594c8b685efe4db6b94bb70af140cf282fdf886dc318f3f4d944"
     }
   }
 }

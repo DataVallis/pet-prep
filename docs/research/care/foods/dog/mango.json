@@ -13,7 +13,8 @@
     "pt": "Manga",
     "nl": "Mango",
     "pl": "Mango",
-    "sv": "Mango"
+    "sv": "Mango",
+    "da": "Mango"
   },
   "question": {
     "en": "Can dogs eat mango?",
@@ -27,7 +28,8 @@
     "pt": "Os cães podem comer manga?",
     "nl": "Mogen honden mango eten?",
     "pl": "Czy psy mogą jeść mango?",
-    "sv": "Får hundar äta mango?"
+    "sv": "Får hundar äta mango?",
+    "da": "Må hunde spise mango?"
   },
   "url_slug": {
     "en": "mango",
@@ -41,7 +43,8 @@
     "pt": "manga",
     "nl": "mango",
     "pl": "mango",
-    "sv": "mango"
+    "sv": "mango",
+    "da": "mango"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pt": "Sim, os cães podem comer manga com moderação, desde que seja bem preparada: descasca-a e tira o caroço. A manga tem muito açúcar, por isso mantém-na como guloseima ocasional, sobretudo para cães com problemas de peso.",
     "nl": "Ja, honden mogen met mate mango eten, mits goed klaargemaakt: schil de mango en haal de pit eruit. Mango bevat veel suiker, dus geef er maar af en toe wat van als snoepje, vooral aan honden die moeite hebben met hun gewicht.",
     "pl": "Tak, psy mogą jeść mango z umiarem, o ile jest odpowiednio przygotowane: obierz je i usuń pestkę. Mango ma dużo cukru, więc niech będzie okazjonalnym smakołykiem, zwłaszcza dla psów z problemami z wagą.",
-    "sv": "Ja, hundar kan äta mango med måtta, så länge du förbereder den rätt: skala den och ta bort kärnan. Mango innehåller mycket socker, så ge den bara som en godbit då och då, särskilt till hundar som har problem med vikten."
+    "sv": "Ja, hundar kan äta mango med måtta, så länge du förbereder den rätt: skala den och ta bort kärnan. Mango innehåller mycket socker, så ge den bara som en godbit då och då, särskilt till hundar som har problem med vikten.",
+    "da": "Ja, med måde. Hunde kan godt få mango, hvis du først skræller den og fjerner stenen. Mango indeholder meget sukker, så giv den kun som en godbid en gang imellem, især til hunde der har tendens til at tage på."
   },
   "why": {
     "en": "Mango contains fibre and vitamins A, B6, C and E. The pit is a serious choking hazard, can get stuck in the digestive tract and contains small amounts of cyanide. The skin is hard to digest. Too much fruit can cause bellyache and diarrhoea.",
@@ -70,7 +74,8 @@
     "pt": "A manga contém fibra e as vitaminas A, B6, C e E. O caroço é um grande risco de engasgo, pode ficar preso no tubo digestivo e contém pequenas quantidades de cianeto. A casca é difícil de digerir. Fruta a mais pode causar dor de barriga e diarreia.",
     "nl": "Mango bevat vezels en de vitamines A, B6, C en E. De pit vormt een groot verstikkingsgevaar, kan in het spijsverteringskanaal vast komen te zitten en bevat kleine hoeveelheden cyanide. De schil is moeilijk verteerbaar. Te veel fruit kan buikpijn en diarree veroorzaken.",
     "pl": "Mango zawiera błonnik oraz witaminy A, B6, C i E. Pestka stanowi poważne zagrożenie zadławieniem, może utknąć w przewodzie pokarmowym i zawiera niewielkie ilości cyjanku. Skórka jest trudna do strawienia. Zbyt duża ilość owocu może wywołać ból brzucha i biegunkę.",
-    "sv": "Mango innehåller fiber och vitamin A, B6, C och E. Kärnan är en allvarlig kvävningsrisk, kan fastna i matsmältningskanalen och innehåller små mängder cyanid. Skalet är svårsmält. För mycket frukt kan ge magont och diarré."
+    "sv": "Mango innehåller fiber och vitamin A, B6, C och E. Kärnan är en allvarlig kvävningsrisk, kan fastna i matsmältningskanalen och innehåller små mängder cyanid. Skalet är svårsmält. För mycket frukt kan ge magont och diarré.",
+    "da": "Mango indeholder fibre samt A-, B6-, C- og E-vitamin. Stenen udgør en alvorlig kvælningsfare, kan sætte sig fast i fordøjelseskanalen og indeholder små mængder cyanid. Skrællen er svær at fordøje. For meget frugt kan give mavepine og diarré."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pt": "Se tiveres dúvidas sobre dar manga ao teu cão, pergunta ao teu veterinário.",
     "nl": "Heb je vragen of twijfels over mango voor je hond? Vraag het dan aan je dierenarts.",
     "pl": "Jeśli masz pytania lub wątpliwości dotyczące podawania psu mango, zapytaj weterynarza.",
-    "sv": "Har du frågor eller funderingar om att ge hunden mango, fråga veterinären."
+    "sv": "Har du frågor eller funderingar om att ge hunden mango, fråga veterinären.",
+    "da": "Spørg din dyrlæge hvis du har spørgsmål eller er bekymret for at give din hund mango."
   },
   "serving": {
     "en": "Peeled, with the pit removed, cut into small pieces; as an occasional treat.",
@@ -99,7 +105,8 @@
     "pt": "Descascada, sem caroço, cortada em pedacinhos; como guloseima ocasional.",
     "nl": "Geschild, zonder pit, in kleine stukjes; als snoepje voor af en toe.",
     "pl": "Obrane, z usuniętą pestką, pokrojone w małe kawałki; jako okazjonalny smakołyk.",
-    "sv": "Skalad, med kärnan borttagen, skuren i små bitar; som en godbit då och då."
+    "sv": "Skalad, med kärnan borttagen, skuren i små bitar; som en godbit då och då.",
+    "da": "Skrællet og uden sten, skåret i små stykker; som en godbid en gang imellem."
   },
   "child": {
     "en": "Dogs can taste a little mango! A grown-up peels it and takes out the big stone first.",
@@ -113,7 +120,8 @@
     "pt": "Os cães podem provar um bocadinho de manga! Um adulto descasca-a e tira primeiro o caroço grande.",
     "nl": "Honden mogen een klein beetje mango proeven! Een volwassene schilt de mango en haalt eerst de grote pit eruit.",
     "pl": "Psy mogą spróbować odrobiny mango! Dorosły najpierw je obiera i wyjmuje dużą pestkę.",
-    "sv": "Hundar kan smaka lite mango! En vuxen skalar den och tar först bort den stora kärnan."
+    "sv": "Hundar kan smaka lite mango! En vuxen skalar den och tar först bort den stora kärnan.",
+    "da": "Hunde må gerne smage lidt mango! En voksen skræller den og tager først den store sten ud."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pt": "Porque é que se tem de tirar o caroço da manga?",
         "nl": "Waarom moet de pit van de mango eruit?",
         "pl": "Dlaczego trzeba usuwać pestkę mango?",
-        "sv": "Varför måste mangokärnan tas bort?"
+        "sv": "Varför måste mangokärnan tas bort?",
+        "da": "Hvorfor skal mangostenen fjernes?"
       },
       "a": {
         "en": "The pit can make a dog choke or get stuck in its digestive tract, and it contains small amounts of cyanide.",
@@ -143,7 +152,8 @@
         "pt": "O caroço pode fazer o cão engasgar-se ou ficar preso no tubo digestivo, e contém pequenas quantidades de cianeto.",
         "nl": "Een hond kan in de pit stikken, de pit kan in het spijsverteringskanaal blijven steken en bevat bovendien kleine hoeveelheden cyanide.",
         "pl": "Pestka może spowodować zadławienie lub utknąć w przewodzie pokarmowym psa, a do tego zawiera niewielkie ilości cyjanku.",
-        "sv": "Hunden kan sätta kärnan i halsen, eller så kan den fastna i matsmältningskanalen, och den innehåller små mängder cyanid."
+        "sv": "Hunden kan sätta kärnan i halsen, eller så kan den fastna i matsmältningskanalen, och den innehåller små mängder cyanid.",
+        "da": "En hund kan blive kvalt af stenen, og den kan sætte sig fast i fordøjelseskanalen. Den indeholder også små mængder cyanid."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pt": "Os cães podem comer a casca da manga?",
         "nl": "Mogen honden de schil van mango eten?",
         "pl": "Czy psy mogą jeść skórkę mango?",
-        "sv": "Får hundar äta mangoskal?"
+        "sv": "Får hundar äta mangoskal?",
+        "da": "Må hunde spise mangoskræl?"
       },
       "a": {
         "en": "It is difficult to digest, so it is best to remove it before serving.",
@@ -173,7 +184,8 @@
         "pt": "É difícil de digerir, por isso é melhor tirá-la antes de servir.",
         "nl": "De schil is moeilijk verteerbaar, dus haal hem het best eraf voordat je de mango geeft.",
         "pl": "Jest trudna do strawienia, więc przed podaniem najlepiej ją usunąć.",
-        "sv": "Det är svårsmält, så det är bäst att ta bort det innan du serverar."
+        "sv": "Det är svårsmält, så det är bäst att ta bort det innan du serverar.",
+        "da": "Den er svær at fordøje, så det er bedst at fjerne den inden du serverer mangoen."
       }
     }
   ],
@@ -293,6 +305,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "727bf2b06242eecf634d60f7430a59b138df1ef771db93e96b94c3d0dfb75278"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a236196294f896613142c7b2d0829b9a76a40d4678de9950cdc319e51fbc6aae"
     }
   }
 }
