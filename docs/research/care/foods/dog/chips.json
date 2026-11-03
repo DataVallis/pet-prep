@@ -65,7 +65,7 @@
     "pl": "Nie zaleca się. Kilka chipsów ziemniaczanych raczej nie spowoduje zatrucia solą, ale chipsy są słone, a nadmiar słonego jedzenia nie jest dobry dla psów, zwłaszcza tych z problemami z sercem. Chipsy o smaku cebulowym lub czosnkowym to dodatkowe ryzyko, bo cebula i czosnek są toksyczne dla psów.",
     "cs": "Nedoporučuje se. Pár brambůrků pravděpodobně otravu solí nezpůsobí, ale brambůrky jsou slané a nadměrné množství slaných jídel psům nesvědčí, zvlášť psům se srdečními potížemi. Brambůrky s příchutí cibule nebo česneku přinášejí další riziko, protože cibule a česnek jsou pro psy jedovaté.",
     "hr": "Ne preporučuje se. Nekoliko listića čipsa vjerojatno neće izazvati otrovanje solju, ali čips je slan, a previše slane hrane nije dobro za pse, osobito za one sa srčanim tegobama. Čips s okusom luka ili češnjaka nosi dodatni rizik, jer su luk i češnjak otrovni za pse.",
-    "sv": "Rekommenderas inte. Några få chips ger knappast saltförgiftning, men chips är salta och för mycket salt mat är inte bra för hundar, särskilt inte för hundar med hjärtproblem. Chips med lök- eller vitlökssmak ger en extra risk, eftersom lök och vitlök är giftiga för hundar.",
+    "sv": "Rekommenderas inte. Några få chips ger knappast saltförgiftning, men chips är salta och för mycket salt mat är inte bra för hundar, särskilt inte för hundar med hjärtproblem. Chips med lök- eller vitlökssmak innebär en extra risk, eftersom lök och vitlök är giftiga för hundar.",
     "da": "Det frarådes. Nogle få chips giver næppe saltforgiftning, men chips er salte, og for meget salt mad er ikke godt for hunde, især ikke for hunde med hjerteproblemer. Chips med løg- eller hvidløgssmag giver en ekstra risiko, fordi løg og hvidløg er giftige for hunde.",
     "fi": "Ei suositella. Muutama perunalastu tuskin aiheuttaa suolamyrkytystä, mutta lastut ovat suolaisia, eikä suolaisen ruoan liiallinen syöminen ole hyväksi koirille, etenkään niille, joilla on sydänongelmia. Sipulin- tai valkosipulinmakuiset lastut lisäävät riskiä, koska sipuli ja valkosipuli ovat koirille myrkyllisiä.",
     "nb": "Anbefales ikke. Noen få potetgullbiter gir neppe saltforgiftning, men chips er salt, og mye salt mat er ikke bra for hunder, særlig ikke for hunder med hjerteproblemer. Chips med løk- eller hvitløkssmak gir ekstra risiko, fordi løk og hvitløk er giftig for hunder."
@@ -166,7 +166,7 @@
       "Drhtanje mišića ili napadaji"
     ],
     "sv": [
-      "Stark törst och kissar mycket",
+      "Kraftig törst och mycket kissande",
       "Kräkningar, ofta inom några timmar",
       "Diarré",
       "Vinglighet, trötthet",
@@ -224,7 +224,7 @@
     "pl": "Chipsy to słona przekąska dla ludzi. Nie są dobre dla psów, więc trzymaj paczkę zamkniętą i daj psu jego własny smakołyk.",
     "cs": "Brambůrky jsou slaná svačinka pro lidi. Psům nesvědčí, a tak sáček zavři a dej psovi jeho vlastní pamlsek.",
     "hr": "Čips je slana grickalica za ljude. Nije dobar za pse, zato drži vrećicu zatvorenom i daj psu njegovu poslasticu.",
-    "sv": "Chips är ett salt mellanmål för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
+    "sv": "Chips är ett salt tilltugg för människor. De är inte bra för hundar, så håll påsen stängd och ge hunden en egen godbit.",
     "da": "Chips er en salt snack til mennesker. De er ikke gode for hunde, så hold posen lukket, og giv din hund dens egen godbid.",
     "fi": "Perunalastut ovat suolaista ihmisten naposteltavaa. Ne eivät ole hyväksi koirille, joten pidä pussi kiinni ja anna koirallesi sen omaa herkkua.",
     "nb": "Chips er salt snacks for mennesker. Det er ikke bra for hunder, så hold posen lukket og gi hunden sin egen godbit."
@@ -395,7 +395,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d5dab326f25b39920a4d0edcf65b1d9fee1854d3a448d902bc410210d5ade260"
+      "verified_hash": "5182c6ecfe662e7646f96051d3fd6cb23715ba10b4e209bdbe0664c6d4532626"
     },
     "da": {
       "status": "verified",

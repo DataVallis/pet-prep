@@ -65,7 +65,7 @@
     "pl": "Tak, kilka kawałków zwykłych, dobrze ugotowanych krewetek jest dla psów w porządku. Najpierw usuń pancerz, głowę, odnóża i ogon. Surowe krewetki mogą przenosić szkodliwe drobnoustroje, a krewetki smażone, panierowane lub przyprawione się nie nadają.",
     "cs": "Ano, pár kousků obyčejných, důkladně tepelně upravených krevet je pro psy v pořádku. Nejdřív odstraňte krunýř, hlavu, nožičky a ocásek. Syrové krevety mohou obsahovat škodlivé mikroorganismy a smažené, obalované nebo kořeněné krevety vhodné nejsou.",
     "hr": "Da, nekoliko komada običnih, potpuno termički obrađenih kozica u redu je za pse. Prije toga ukloni oklop, glavu, nožice i rep. Sirove kozice mogu sadržavati štetne klice, a pržene, pohane ili začinjene kozice nisu prikladne.",
-    "sv": "Ja, några bitar naturella, helt tillagade räkor går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte.",
+    "sv": "Ja, några bitar helt genomkokta räkor utan tillsatser går bra för hundar. Ta först bort skal, huvud, ben och stjärt. Råa räkor kan bära på skadliga bakterier, och friterade, panerade eller kryddade räkor passar inte.",
     "da": "Ja, nogle få stykker almindelige, gennemtilberedte rejer er fine til hunde. Fjern først skal, hoved, ben og hale. Rå rejer kan indeholde skadelige smitstoffer, og friturestegte, panerede eller krydrede rejer er ikke egnede.",
     "fi": "Saa, muutama pala maustamatonta, täysin kypsennettyä katkarapua sopii koiralle. Poista ensin kuori, pää, jalat ja pyrstö. Raa’assa katkaravussa voi olla haitallisia taudinaiheuttajia, eivätkä friteeratut, leivitetyt tai maustetut katkaravut sovi koiralle.",
     "nb": "Ja, noen få biter gjennomkokte reker uten noe tilsatt er greit for hunder. Fjern skall, hode, bein og hale først. Rå reker kan inneholde skadelige smittestoffer, og frityrstekte, panerte eller krydrede reker passer ikke."
@@ -100,7 +100,7 @@
     "pl": "Przestań dawać krewetki, jeśli twój pies ma dolegliwości żołądkowe lub wydaje się chory, i zadzwoń do weterynarza, jeśli objawy się nasilą. Zadzwoń też, jeśli pies połknął pancerze i wygląda, jakby się dławił.",
     "cs": "Pokud má váš pes po krevetách zažívací potíže nebo se zdá, že mu není dobře, přestaňte mu je dávat, a pokud se příznaky zhorší, zavolejte veterináři. Veterináři zavolejte také tehdy, když pes spolkl krunýře a zdá se, že se dusí.",
     "hr": "Ako pas pokazuje nelagodu u trbuhu ili djeluje loše, prestani mu davati kozice, a ako se znakovi pogoršaju, nazovi veterinara. Nazovi veterinara i ako je pas progutao oklope i čini se da se guši.",
-    "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden svalt skal och verkar ha satt något i halsen.",
+    "sv": "Sluta ge räkor om hunden visar obehag i magen eller verkar må dåligt, och ring veterinären om symtomen blir värre. Ring också veterinären om hunden har svalt skal och verkar ha fått något i halsen.",
     "da": "Stop med at give rejer hvis din hund får ubehag i maven eller virker utilpas, og kontakt din dyrlæge hvis symptomerne bliver værre. Kontakt også din dyrlæge hvis hunden har slugt skaller og ser ud til at være ved at blive kvalt.",
     "fi": "Lopeta katkarapujen antaminen, jos koirallasi on vatsavaivoja tai se vaikuttaa sairaalta, ja soita eläinlääkärille, jos oireet pahenevat. Soita eläinlääkärille myös, jos koirasi nieli kuoria ja näyttää olevan tukehtumassa.",
     "nb": "Slutt å gi reker hvis hunden får ubehag i magen eller virker uvel, og ring dyrlegen hvis symptomene blir verre. Ring også dyrlegen hvis hunden har svelget skall og ser ut til å ha satt noe i halsen."
@@ -117,7 +117,7 @@
     "pl": "Kilka kawałków dobrze ugotowanych (najlepiej na parze), zwykłych, bez pancerza, głowy, odnóży i ogona; nie smażonych, panierowanych ani przyprawionych.",
     "cs": "Pár kousků, důkladně tepelně upravených (nejlépe v páře), bez přísad, bez krunýře, hlavy, nožiček a ocásku; ne smažené, obalované ani kořeněné.",
     "hr": "Nekoliko komada, potpuno termički obrađenih (najbolje kuhanih na pari), bez dodataka, bez oklopa, glave, nožica i repa; ne pržene, pohane ni začinjene.",
-    "sv": "Några bitar, helt tillagade (helst ångkokta), naturella, utan skal, huvud, ben och stjärt; inte friterade, panerade eller kryddade.",
+    "sv": "Några bitar, helt genomkokta (helst ångkokta), utan tillsatser, med skal, huvud, ben och stjärt borttagna; inte friterade, panerade eller kryddade.",
     "da": "Nogle få stykker, gennemtilberedte (helst dampede), uden tilsætning og med skal, hoved, ben og hale fjernet; ikke friturestegte, panerede eller krydrede.",
     "fi": "Muutama pala täysin kypsennettynä (mieluiten höyrytettynä), maustamattomana, kuori, pää, jalat ja pyrstö poistettuina; ei friteerattuna, leivitettynä tai maustettuna.",
     "nb": "Noen få biter, gjennomkokt (dampet er best), uten noe tilsatt, med skall, hode, bein og hale fjernet; ikke frityrstekt, panert eller krydret."
@@ -134,7 +134,7 @@
     "pl": "Pies może dostać jedną czy dwie ugotowane, obrane krewetki. Pancerzyki i ogonki nie są dla psów.",
     "cs": "Pes může dostat pár uvařených, oloupaných krevet. Krunýře a ocásky psům nepatří.",
     "hr": "Pas smije pojesti jednu ili dvije kuhane, očišćene kozice. Oklopi i repovi nisu za pse.",
-    "sv": "En hund får äta ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar.",
+    "sv": "En hund kan få ett par kokta, skalade räkor. Skalen och stjärtarna är inte för hundar.",
     "da": "En hund må gerne få et par kogte, pillede rejer. Skallerne og halerne er ikke til hunde.",
     "fi": "Koira saa syödä pari keitettyä, kuorittua katkarapua. Kuoret ja pyrstöt eivät sovi koirille.",
     "nb": "En hund kan få et par kokte, pillede reker. Skallene og halene er ikke noe for hunder."
@@ -287,7 +287,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2155d263cf5bdccfeacd5df31249605805bf1f5683be91843bc3917c5de05e7b"
+      "verified_hash": "931875a4c193f6c32f56cbf0cdd583f516146b6a996dc5a7f9304ab165c78b7f"
     },
     "da": {
       "status": "verified",

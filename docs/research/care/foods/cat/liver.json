@@ -82,7 +82,7 @@
     "pl": "Według VCA do zatrucia witaminą A dochodzi najczęściej, gdy zwierzęta dostają surową wątróbkę lub suplementy bogate w witaminę A przez wiele tygodni lub miesięcy. Merck Veterinary Manual podaje, że u kotów może do niego dojść, gdy rosnące kocięta są karmione dietą bogatą w wątróbkę, oraz że może je wywołać karmienie wyłącznie wątróbką. VCA zaleca zamiast tego gotową, zbilansowaną karmę.",
     "cs": "Podle VCA k otravě vitaminem A nejčastěji dochází, když domácí zvířata týdny až měsíce dostávají syrová játra nebo doplňky bohaté na vitamin A. Merck Veterinary Manual uvádí, že u koček k ní může dojít, když rostoucí koťata dostávají stravu s vysokým podílem jater, a že ji může způsobit krmení samotnými játry. VCA místo toho doporučuje komerčně vyráběnou vyváženou stravu.",
     "hr": "VCA navodi da se otrovanje vitaminom A najčešće javlja kad ljubimci tjednima do mjesecima dobivaju sirovu jetru ili dodatke prehrani bogate vitaminom A. Priručnik Merck Veterinary Manual navodi da se kod mačaka može javiti kad mačići u rastu jedu hranu s puno jetre te da ga može izazvati hranjenje samo jetrom. VCA umjesto toga preporučuje komercijalno pripremljenu, uravnoteženu hranu.",
-    "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när kattungar som växer får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
+    "sv": "Enligt VCA uppstår A-vitaminförgiftning oftast när husdjur under veckor till månader får rå lever eller kosttillskott rika på A-vitamin. Merck Veterinary Manual påpekar att det hos katter kan hända när växande kattungar får en kost med mycket lever, och att en kost med bara lever kan orsaka det. VCA rekommenderar i stället ett färdigt, balanserat kattfoder.",
     "da": "Ifølge VCA opstår A-vitaminforgiftning oftest når kæledyr får rå lever eller A-vitaminrige kosttilskud i uger til måneder. Merck Veterinary Manual skriver at det hos katte kan ske når killinger i vækst får en kost med meget lever, og at det kan give A-vitaminforgiftning udelukkende at fodre med lever. VCA anbefaler i stedet en færdigfremstillet, balanceret kost.",
     "fi": "VCA:n mukaan A-vitamiinimyrkytys syntyy useimmiten, kun lemmikeille syötetään raakaa maksaa tai runsaasti A-vitamiinia sisältäviä lisäravinteita viikkojen tai kuukausien ajan. Merck Veterinary Manualin mukaan kissoilla sitä voi esiintyä, kun kasvaville kissanpennuille syötetään paljon maksaa sisältävää ruokaa, ja pelkkä maksa ruokana voi aiheuttaa sen. VCA suosittelee sen sijaan tasapainoista valmisruokaa.",
     "nb": "Ifølge VCA oppstår A-vitaminforgiftning oftest når dyr får rå lever eller kosttilskudd rike på vitamin A over uker til måneder. Merck Veterinary Manual skriver at det hos katter kan oppstå når kattunger i vekst får et kosthold med mye lever, og at det å bare gi lever kan føre til forgiftningen. VCA anbefaler i stedet et ferdiglaget, balansert fôr."
@@ -258,7 +258,7 @@
         "pl": "W karmie mojego kota jest wątróbka. Czy to problem?",
         "cs": "Ve složení krmiva mé kočky jsou játra. Je to problém?",
         "hr": "Hrana moje mačke sadrži jetru. Je li to problem?",
-        "sv": "Det står lever på mitt kattfoder. Är det ett problem?",
+        "sv": "Det står lever bland ingredienserna i min kattmat. Är det ett problem?",
         "da": "Der står lever på ingredienslisten til mit kattefoder. Er det et problem?",
         "fi": "Kissani ruoan ainesosaluettelossa on maksaa. Onko se ongelma?",
         "nb": "Kattefôret mitt inneholder lever. Er det et problem?"
@@ -275,7 +275,7 @@
         "pl": "Nie. Wątróbka to częsty składnik karm puszkowych dla kotów, a weterynarze zalecają właśnie pełnoporcjową, zbilansowaną karmę dla kotów.",
         "cs": "Ne. Játra jsou běžnou složkou konzervovaných krmiv pro kočky a veterináři doporučují právě kompletní, vyvážené krmivo.",
         "hr": "Nije. Jetra je čest sastojak konzervirane hrane za mačke, a veterinari preporučuju upravo potpunu, uravnoteženu hranu za mačke.",
-        "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och ett komplett, balanserat kattfoder är det som veterinärer rekommenderar.",
+        "sv": "Nej. Lever är en vanlig ingrediens i kattmat på burk, och komplett, balanserad kattmat är det som veterinärer rekommenderar.",
         "da": "Nej. Lever er en almindelig ingrediens i kattefoder på dåse, og et komplet, balanceret kattefoder er netop det dyrlæger anbefaler.",
         "fi": "Ei ole. Maksa on tavallinen ainesosa kissojen märkäruoissa, ja eläinlääkärit suosittelevat tasapainoista täysravintoa.",
         "nb": "Nei. Lever er en vanlig ingrediens i kattefôr på boks, og et komplett, balansert kattefôr er det dyrleger anbefaler."
@@ -377,7 +377,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "f48b8f95f025d4344ca21d228f72849200d2495560b83711368b975b333a2515"
+      "verified_hash": "7749a810a1cae16376d67e7968ed0154630fc193dda603f21a8f01882aae50ec"
     },
     "da": {
       "status": "verified",

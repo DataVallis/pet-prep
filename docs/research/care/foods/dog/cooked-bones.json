@@ -65,7 +65,7 @@
     "pl": "Nie. Nigdy nie dawaj psu gotowanych kości. Gotowane kości rozpadają się na ostre odłamki, które mogą skaleczyć pysk, spowodować zadławienie lub zatkać przewód pokarmowy. Gotowane kości drobiowe są szczególnie kruche i mogą doprowadzić do sytuacji wymagającej pilnej pomocy weterynarza.",
     "cs": "Ne. Nikdy psovi nedávejte tepelně upravené kosti. Tepelně upravené kosti se tříští na ostré úlomky, které mohou poranit tlamu, způsobit dušení nebo ucpat střeva. Tepelně upravené drůbeží kosti jsou zvlášť křehké a mohou skončit na veterinární pohotovosti.",
     "hr": "Ne. Nikad ne daj psu termički obrađene kosti. One se lome u oštre krhotine koje mogu porezati usta, izazvati gušenje ili začepiti crijeva. Termički obrađene kosti peradi osobito su krhke i mogu postati hitan slučaj za veterinara.",
-    "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller ge stopp i tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
+    "sv": "Nej. Ge aldrig en hund tillagade ben. Tillagade ben splittras i vassa flisor som kan skära i munnen, orsaka kvävning eller blockera tarmen. Tillagade fågelben är särskilt sköra och kan kräva akut veterinärvård.",
     "da": "Nej. Giv aldrig en hund tilberedte knogler. Tilberedte knogler splintrer i skarpe stykker, som kan skære i munden, sætte sig fast i halsen eller blokere tarmen. Tilberedte fjerkræknogler er særligt skøre og kan ende som et akut tilfælde hos dyrlægen.",
     "fi": "Ei saa. Älä koskaan anna koiralle kypsennettyjä luita. Kypsennetyt luut hajoavat teräviksi sirpaleiksi, jotka voivat haavoittaa suuta, aiheuttaa tukehtumisen tai tukkia suoliston. Kypsennetyt siipikarjan luut ovat erityisen hauraita, ja niistä voi seurata eläinlääkärin hoitoa vaativa hätätilanne.",
     "nb": "Nei. Gi aldri en hund tilberedte bein. Tilberedte bein splintres til skarpe biter som kan kutte munnen, sette seg fast i halsen eller blokkere tarmen. Tilberedte bein fra fjærfe er særlig skjøre og kan føre til at du må oppsøke dyrlegevakt."
@@ -82,7 +82,7 @@
     "pl": "Gotowanie sprawia, że kości stają się kruche i łamią się na ostre odłamki. Kości kurczaka i indyka to klasyczny przykład, ale każda kość ze stołu może zranić psa. Do FDA wpłynęły zgłoszenia zadławień, ran w pysku, wymiotów, biegunki, krwawienia z odbytu i niedrożności jelit u psów, które zjadły kości lub gryzaki z kości.",
     "cs": "Tepelnou úpravou kosti zkřehnou, takže se lámou na ostré střípky. Typickým příkladem jsou kuřecí a krůtí kosti, ale psa může poranit jakákoli kost ze stolu. FDA obdržela hlášení o dušení, poraněních tlamy, zvracení, průjmu, krvácení z konečníku a ucpání střev u psů, kteří snědli kosti nebo kostěné pamlsky.",
     "hr": "Termičkom obradom kosti postaju krhke pa se lome u oštre krhotine. Pileće i pureće kosti klasičan su primjer, ali svaka kost sa stola može ozlijediti psa. FDA je zaprimila prijave gušenja, rana u ustima, povraćanja, proljeva, rektalnog krvarenja i začepljenja crijeva kod pasa koji su jeli kosti ili poslastice od kostiju.",
-    "sv": "Tillagning gör benen sköra, så de bryts i vassa flisor. Kyckling- och kalkonben är det klassiska exemplet, men alla ben från matbordet kan skada en hund. FDA har fått rapporter om kvävning, sår i munnen, kräkningar, diarré, blödning från ändtarmen och tarmstopp hos hundar som ätit ben eller godbitar av ben.",
+    "sv": "Tillagning gör benen sköra, så de bryts i vassa flisor. Kyckling- och kalkonben är det klassiska exemplet, men alla ben från matbordet kan skada en hund. FDA har fått rapporter om kvävning, sår i munnen, kräkningar, diarré, blödning från ändtarmen och tarmstopp hos hundar som ätit ben eller benbaserade godbitar.",
     "da": "Tilberedning gør knogler skøre, så de brækker i skarpe splinter. Kyllinge- og kalkunknogler er det klassiske eksempel, men alle knogler fra middagsbordet kan skade en hund. FDA har modtaget indberetninger om kvælningstilfælde, sår i munden, opkast, diarré, blødning fra endetarmen og tarmblokeringer hos hunde der havde spist knogler eller knoglegodbidder.",
     "fi": "Kypsentäminen tekee luista hauraita, joten ne murtuvat teräviksi sirpaleiksi. Kanan- ja kalkkunanluut ovat tunnetuin esimerkki, mutta mitkä tahansa ruokapöydän luut voivat vahingoittaa koiraa. Yhdysvaltain elintarvike- ja lääkevirasto FDA on saanut ilmoituksia tukehtumisesta, suun haavoista, oksentelusta, ripulista, peräsuolen verenvuodosta ja suolitukoksista koirilla, jotka olivat syöneet luita tai luuherkkuja.",
     "nb": "Tilberedning gjør bein skjøre, så de brekker i skarpe splinter. Kylling- og kalkunbein er det klassiske eksempelet, men alle bein fra middagsbordet kan skade en hund. FDA har fått meldinger om kvelning, sår i munnen, oppkast, diaré, blødning fra endetarmen og tarmblokkering hos hunder som har spist bein eller beingodbiter."
@@ -170,7 +170,7 @@
       "Sår eller blödning i munnen",
       "Kräkningar",
       "Diarré",
-      "Blödning från stjärten"
+      "Blödning från ändan"
     ],
     "da": [
       "Kvælningstegn eller opkastningsbevægelser",
@@ -206,7 +206,7 @@
     "pl": "Od razu skontaktuj się z weterynarzem, jeśli twój pies zjadł gotowane kości, nawet jeśli wydaje się, że nic mu nie jest. Zanotuj, jaka to była kość i mniej więcej ile zjadł. Nie czekaj na objawy niedrożności.",
     "cs": "Pokud váš pes snědl tepelně upravené kosti, okamžitě se obraťte na veterináře, i když se zdá, že je v pořádku. Poznamenejte si, o jakou kost šlo a zhruba kolik pes snědl. Nečekejte na známky ucpání.",
     "hr": "Odmah se obrati veterinaru ako je pas pojeo termički obrađene kosti, čak i ako se čini da je dobro. Zapiši o kakvoj je kosti riječ i otprilike koliko je pojeo. Ne čekaj da se pojave znakovi začepljenja.",
-    "sv": "Kontakta veterinären direkt om hunden har ätit tillagade ben, även om den verkar må bra. Notera vilken sorts ben det var och ungefär hur mycket den åt. Vänta inte på tecken på stopp.",
+    "sv": "Kontakta veterinären direkt om hunden har ätit tillagade ben, även om den verkar må bra. Notera vilken sorts ben det var och ungefär hur mycket den åt. Vänta inte tills du ser tecken på stopp.",
     "da": "Kontakt din dyrlæge med det samme hvis hunden har spist tilberedte knogler, også selvom den virker upåvirket. Skriv ned hvilken slags knogle det var og omtrent hvor meget hunden har spist. Vent ikke på tegn på blokering.",
     "fi": "Ota heti yhteyttä eläinlääkäriin, jos koirasi on syönyt kypsennettyjä luita, vaikka se vaikuttaisi voivan hyvin. Kirjaa ylös, millainen luu se oli ja suunnilleen kuinka paljon koira söi. Älä odota suolitukoksen oireita.",
     "nb": "Kontakt dyrlegen med en gang hvis hunden har spist tilberedte bein, selv om den virker helt fin. Skriv ned hva slags bein det var, og omtrent hvor mye den spiste. Ikke vent på tegn på tarmblokkering."
@@ -279,7 +279,7 @@
         "pl": "Jak sprawić, żeby pies nie dobierał się do kości?",
         "cs": "Jak zabránit tomu, aby se pes ke kostem dostal?",
         "hr": "Kako spriječiti da pas dođe do kostiju?",
-        "sv": "Hur hindrar jag att hunden får tag på ben?",
+        "sv": "Hur ser jag till att hunden inte får tag på ben?",
         "da": "Hvordan forhindrer jeg at min hund får fat i knogler?",
         "fi": "Miten estän koiraani saamasta luita?",
         "nb": "Hvordan hindrer jeg at hunden får tak i bein?"
@@ -296,7 +296,7 @@
         "pl": "Podczas gotowania i jedzenia trzymaj półmiski poza zasięgiem psa i uważaj, co wyrzucasz do kosza: psy często grzebią w śmieciach i wyciągają z nich kości z drobiu i ze steków.",
         "cs": "Při vaření a jídle mějte mísy mimo dosah psa a dávejte pozor, co vyhazujete do koše: psi se často přehrabují v odpadcích a hledají zbytky drůbeže a kosti ze steaků.",
         "hr": "Dok kuhaš i jedeš, drži pladnjeve izvan dosega psa i pazi što bacaš u smeće: psi često prekapaju po smeću tražeći ostatke peradi i kosti od odrezaka.",
-        "sv": "Ställ fat utom räckhåll när du lagar mat och äter, och tänk på vad du slänger i soporna: hundar letar ofta i soporna efter kycklingskrov och benbitar från stekar.",
+        "sv": "Ställ undan fat med mat så att hunden inte når dem medan du lagar mat och äter, och tänk på vad du slänger i soporna: hundar går ofta i soporna efter kycklingskrov och ben från stekar.",
         "da": "Hold fade uden for rækkevidde, mens du laver mad og spiser, og pas på med hvad der ryger i skraldespanden: hunde roder ofte i skraldet efter skrog og bøfben.",
         "fi": "Pidä tarjoiluvadit koiran ulottumattomissa ruoanlaiton ja ruokailun aikana ja mieti, mitä heität roskiin: koirat penkovat usein roskiksesta linnunruhoja ja pihvin luita.",
         "nb": "Hold fat utenfor rekkevidde mens du lager mat og når dere spiser, og vær forsiktig med hva du kaster i søppelbøtten: Hunder roter ofte i søppelet etter skrotter og biffbein."
@@ -439,7 +439,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "e2e92d70ac1e57881869da2e0e7e2694e278ce57171851b6f9aa15de53a5e3d9"
+      "verified_hash": "f3582f923acff46331b68fe95d8f2d3a77dee73c09310850a5f833bfc0bc72a9"
     },
     "da": {
       "status": "verified",

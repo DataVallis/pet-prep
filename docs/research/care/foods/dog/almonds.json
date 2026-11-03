@@ -65,7 +65,7 @@
     "pl": "Lepiej nie. Migdały nie są tak niebezpieczne jak orzechy makadamia, ale są tłuste i mogą wywołać wymioty, biegunkę, a możliwe, że także zapalenie trzustki. Całe migdały mogą też utknąć, zwłaszcza u małych psów.",
     "cs": "Raději ne. Mandle nejsou tak nebezpečné jako makadamové ořechy, ale jsou tučné a mohou způsobit zvracení, průjem a případně i zánět slinivky břišní. Celé mandle mohou také uvíznout, zvlášť u malých psů.",
     "hr": "Bolje ne. Bademi nisu opasni kao makadamija, ali su masni i mogu izazvati povraćanje, proljev, a moguće i upalu gušterače. Cijeli bademi mogu i zapeti, osobito kod malih pasa.",
-    "sv": "Nej, helst inte. Mandlar är inte lika farliga som macadamianötter, men de är feta och kan ge kräkningar, diarré och möjligen bukspottkörtelinflammation. Hela mandlar kan också fastna, särskilt hos små hundar.",
+    "sv": "Nej, helst inte. Mandlar är inte lika farliga som macadamianötter, men de innehåller mycket fett och kan ge kräkningar, diarré och möjligen bukspottkörtelinflammation. Hela mandlar kan också fastna, särskilt hos små hundar.",
     "da": "Nej, helst ikke. Mandler er ikke lige så farlige som macadamianødder, men de er fede og kan give opkast, diarré og muligvis betændelse i bugspytkirtlen (pankreatitis). Hele mandler kan også sætte sig fast, især hos små hunde.",
     "fi": "Ei kannata. Mantelit eivät ole yhtä vaarallisia kuin makadamiapähkinät, mutta ne ovat rasvaisia ja voivat aiheuttaa oksentelua, ripulia ja mahdollisesti haimatulehduksen. Kokonaiset mantelit voivat myös juuttua kiinni, etenkin pienillä koirilla.",
     "nb": "Nei, helst ikke. Mandler er ikke like farlige som macadamianøtter, men de er fete og kan gi oppkast, diaré og muligens betennelse i bukspyttkjertelen. Hele mandler kan også sette seg fast, særlig hos små hunder."
@@ -82,7 +82,7 @@
     "pl": "Migdały, jak większość orzechów, zawierają dużo tłuszczu, który może podrażnić żołądek i narazić psa na zapalenie trzustki. Całe migdały mogą zatkać przełyk, jelita lub tchawicę, zwłaszcza u małych ras. Migdały solone i smakowe wiążą się z dodatkowym ryzykiem ze względu na sól i przyprawy.",
     "cs": "Mandle mají jako většina ořechů vysoký obsah tuku, který může podráždit žaludek a vystavit psa riziku zánětu slinivky břišní. Celé mandle mohou ucpat jícen, střeva nebo průdušnici, zvlášť u malých plemen. Solené a ochucené mandle přinášejí další rizika kvůli soli a koření.",
     "hr": "Bademi, kao i većina orašastih plodova, sadrže mnogo masti, koja može izazvati probavne tegobe i izložiti psa riziku od upale gušterače. Cijeli bademi mogu začepiti jednjak, crijeva ili dušnik, osobito kod malih pasmina. Slani bademi i bademi s okusima nose dodatne rizike zbog soli i začina.",
-    "sv": "Mandlar är, som de flesta nötter, mycket feta, vilket kan ge orolig mage och göra att hunden riskerar bukspottkörtelinflammation (pankreatit). Hela mandlar kan blockera matstrupen, tarmarna eller luftstrupen, särskilt hos små raser. Saltade och smaksatta mandlar ger extra risker från salt och kryddor.",
+    "sv": "Mandlar innehåller, som de flesta nötter, mycket fett, vilket kan ge orolig mage och öka risken för bukspottkörtelinflammation (pankreatit). Hela mandlar kan blockera matstrupen, tarmarna eller luftstrupen, särskilt hos små raser. Saltade och smaksatta mandlar innebär extra risker på grund av salt och kryddor.",
     "da": "Mandler har ligesom de fleste nødder et højt fedtindhold, som kan give dårlig mave og øge risikoen for betændelse i bugspytkirtlen. Hele mandler kan blokere spiserøret, tarmene eller luftrøret, især hos små racer. Saltede mandler og mandler med smag giver ekstra risiko på grund af salt og krydderier.",
     "fi": "Mantelit sisältävät useimpien pähkinöiden tavoin paljon rasvaa, joka voi aiheuttaa vatsavaivoja ja altistaa koiran haimatulehdukselle. Kokonaiset mantelit voivat tukkia ruokatorven, suoliston tai henkitorven etenkin pienillä roduilla. Suolatuissa ja maustetuissa manteleissa lisäriskinä ovat suola ja mausteet.",
     "nb": "Mandler har, som de fleste nøtter, mye fett, som kan gi urolig mage og gjøre hunden utsatt for betennelse i bukspyttkjertelen. Hele mandler kan blokkere spiserøret, tarmen eller luftrøret, særlig hos små raser. Saltede mandler og mandler med smak gir ekstra risiko på grunn av salt og krydder."
@@ -157,8 +157,8 @@
     "sv": [
       "Kräkningar",
       "Diarré",
-      "Ont i magen, illamående eller låg energi (möjlig bukspottkörtelinflammation)",
-      "Kvävning eller tecken på stopp"
+      "Ont i magen, illamående eller orkeslöshet (möjlig bukspottkörtelinflammation)",
+      "Kvävning eller tecken på att något har fastnat"
     ],
     "da": [
       "Opkast",
@@ -191,7 +191,7 @@
     "pl": "Jeden czy dwa migdały zwykle nie są powodem do paniki: obserwuj, czy u psa nie pojawiają się wymioty, biegunka lub ból brzucha. Zadzwoń do weterynarza, jeśli pies zjadł dużo migdałów lub migdały smakowe, wygląda, jakby się dławił, albo ma któryś z tych objawów.",
     "cs": "Jedna nebo dvě mandle obvykle nejsou důvodem k panice: sledujte, zda se u psa neobjeví zvracení, průjem nebo bolest břicha. Zavolejte veterináři, pokud váš pes snědl hodně mandlí nebo ochucené mandle, zdá se, že se dusí, nebo má některý z těchto příznaků.",
     "hr": "Jedan ili dva badema obično nisu razlog za paniku: prati pojavljuju li se kod psa povraćanje, proljev ili bolovi u trbuhu. Nazovi veterinara ako je pas pojeo mnogo badema ili bademe s okusima, ako se čini da se guši ili ako pokazuje neki od ovih znakova.",
-    "sv": "En eller två mandlar är oftast ingen anledning till panik: håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av dessa symtom.",
+    "sv": "En eller två mandlar är oftast ingen anledning till oro. Håll utkik efter kräkningar, diarré eller ont i magen. Ring veterinären om hunden har ätit många mandlar eller smaksatta mandlar, verkar kvävas eller visar något av symtomen ovan.",
     "da": "En eller to mandler er som regel ingen grund til panik: hold øje med opkast, diarré eller mavesmerter. Ring til din dyrlæge hvis hunden har spist mange mandler eller mandler med smag, ser ud til at være ved at blive kvalt eller viser nogle af disse symptomer.",
     "fi": "Yksi tai kaksi mantelia ei yleensä ole syy paniikkiin: seuraa, ilmeneekö koirallasi oksentelua, ripulia tai vatsakipua. Soita eläinlääkärille, jos koirasi söi paljon manteleita tai maustettuja manteleita, näyttää tukehtuvan tai sillä on jokin näistä oireista.",
     "nb": "Én eller to mandler er vanligvis ingen grunn til panikk: Følg med på om hunden får oppkast, diaré eller magesmerter. Ring dyrlegen hvis hunden har spist mange mandler eller mandler med smak, ser ut til å holde på å kveles eller viser noen av disse symptomene."
@@ -405,7 +405,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "07878bf1d971fc97903e2fc2d869869c5d65c6affadc4020b9d593f1f2928f8c"
+      "verified_hash": "442941895ad041becb6700303ea61a36c21aae7411cba84a4201574221f5c0cc"
     },
     "da": {
       "status": "verified",

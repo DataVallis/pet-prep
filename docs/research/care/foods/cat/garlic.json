@@ -65,7 +65,7 @@
     "pl": "Nie. Czosnek jest dla kotów toksyczny – to najbardziej toksyczny dla nich przedstawiciel rodziny cebulowatych. Czosnek surowy, gotowany, suszony i w proszku może uszkadzać czerwone krwinki i wywołać anemię. Zadzwoń do weterynarza, jeśli kot zje choć trochę.",
     "cs": "Ne. Česnek je pro kočky toxický a ze všech cibulovin (rod Allium) je pro ně nejtoxičtější. Syrový, tepelně upravený, sušený i práškový česnek může poškodit červené krvinky a způsobit chudokrevnost (anémii). Pokud ho kočka sní, zavolejte veterináři.",
     "hr": "Ne. Češnjak je otrovan za mačke i za njih je najotrovniji član porodice luka. Sirov, termički obrađen, sušen i češnjak u prahu mogu oštetiti crvene krvne stanice i izazvati anemiju. Ako tvoja mačka pojede imalo češnjaka, nazovi veterinara.",
-    "sv": "Nej. Vitlök är giftig för katter och är för dem den giftigaste medlemmen i lökfamiljen. Rå, tillagad, torkad vitlök och vitlökspulver kan alla skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon vitlök.",
+    "sv": "Nej. Vitlök är giftig för katter och är den giftigaste växten i lökfamiljen för dem. Både rå, tillagad och torkad vitlök samt vitlökspulver kan skada de röda blodkropparna och orsaka blodbrist (anemi). Ring veterinären om katten äter någon vitlök.",
     "da": "Nej. Hvidløg er giftigt for katte og er for dem det mest giftige medlem af løgfamilien. Råt, tilberedt, tørret og pulveriseret hvidløg kan alt sammen skade de røde blodlegemer og give blodmangel (anæmi). Ring til din dyrlæge hvis din kat spiser noget af det.",
     "fi": "Ei saa. Valkosipuli on kissoille myrkyllistä, ja se on kissoille sipulikasveista myrkyllisin. Raaka, kypsennetty, kuivattu ja jauhettu valkosipuli voivat kaikki vaurioittaa punasoluja ja aiheuttaa anemiaa. Soita eläinlääkärille, jos kissasi syö sitä.",
     "nb": "Nei. Hvitløk er giftig for katter og er den giftigste av løkplantene for dem. Rå, tilberedt, tørket hvitløk og hvitløkspulver kan alle skade de røde blodcellene og gi blodmangel (anemi). Ring dyrlegen hvis katten spiser noe."
@@ -326,7 +326,7 @@
         "pl": "Nie dawaj kotu czosnku z żadnego powodu. Każda jego postać jest dla kotów trująca, a Blue Cross zwraca też uwagę na obawy, że długotrwałe stosowanie czosnku może powodować problemy. Zapytaj weterynarza o bezpieczne środki na pchły.",
         "cs": "Nedávejte kočce česnek z žádného důvodu. Pro kočky jsou jedovaté všechny jeho formy a Blue Cross navíc upozorňuje na obavy, že dlouhodobé užívání česneku může způsobovat potíže. Na bezpečnou ochranu proti blechám se zeptejte veterináře.",
         "hr": "Ne daj mački češnjak ni iz kojeg razloga. Svi su oblici otrovni za mačke, a Blue Cross napominje da postoji i zabrinutost da dugotrajna upotreba češnjaka može izazvati probleme. Pitaj veterinara za sigurnu zaštitu od buha.",
-        "sv": "Ge inte katten vitlök av någon anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
+        "sv": "Ge aldrig katten vitlök, oavsett anledning. Alla former är giftiga för katter, och Blue Cross påpekar att det också finns oro för att vitlök som används under lång tid kan ge problem. Fråga veterinären om säker loppbehandling.",
         "da": "Giv aldrig din kat hvidløg, uanset grunden. Alle former er giftige for katte, og Blue Cross påpeger at der også er bekymring for at langvarig brug af hvidløg kan give problemer. Spørg din dyrlæge om sikker loppebehandling.",
         "fi": "Älä anna kissallesi valkosipulia mistään syystä. Kaikki muodot ovat kissoille myrkyllisiä, ja Blue Crossin mukaan on myös huolta siitä, että valkosipulin pitkäaikainen käyttö voi aiheuttaa ongelmia. Kysy eläinlääkäriltä turvallisesta kirppuhoidosta.",
         "nb": "Ikke gi katten hvitløk av noen grunn. Alle former er giftige for katter, og Blue Cross skriver at det også er bekymring for at langvarig bruk av hvitløk kan gi problemer. Spør dyrlegen om trygg loppebehandling."
@@ -484,7 +484,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "58c0297083c06866fa4f4d50fc1312479d5018591677f094822779f70aa2c4dc"
+      "verified_hash": "c3aaa320617e8d39abd66617b1c0066e3fcaaa2b213f76f432877d34bdc0bdae"
     },
     "da": {
       "status": "verified",

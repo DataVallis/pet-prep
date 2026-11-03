@@ -82,7 +82,7 @@
     "pl": "Alkohol (etanol) szybko przenika do krwi i hamuje działanie układu nerwowego. Nie ma go tylko w napojach: znajdziesz go też w słodyczach z alkoholowym nadzieniem, w surowym wyrastającym cieście drożdżowym, w płynie do dezynfekcji rąk i w płynie do płukania ust. Zagrożone są wszystkie zwierzęta.",
     "cs": "Alkohol (etanol) se rychle vstřebává do krve a tlumí nervovou soustavu. Nenajdete ho jen v nápojích: obsahují ho i likérové bonbony, syrové kynuté těsto, dezinfekce na ruce a ústní voda. Ohrožena jsou všechna zvířata.",
     "hr": "Alkohol (etanol) brzo prelazi u krv i usporava rad živčanog sustava. Nema ga samo u pićima: ima ga i u slatkišima punjenima likerom, sirovom tijestu za kruh koje se diže, sredstvu za dezinfekciju ruku i vodici za ispiranje usta. Ugrožene su sve životinje.",
-    "sv": "Alkohol (etanol) tas snabbt upp i blodet och dämpar nervsystemet. Den finns inte bara i drycker utan också i godis med spritfyllning, rå jäsande bröddeg, handsprit och munskölj. Alla djur är i riskzonen.",
+    "sv": "Alkohol (etanol) tas snabbt upp i blodet och dämpar nervsystemet. Alkohol finns inte bara i drycker utan också i godis med spritfyllning, rå bröddeg som jäser, handsprit och munskölj. Alla djur är i riskzonen.",
     "da": "Alkohol (ethanol) optages hurtigt i blodet og dæmper nervesystemet. Det findes ikke kun i drikkevarer, men også i slik med spiritusfyld, rå gærdej, håndsprit og mundskyl. Alle dyr er i fare.",
     "fi": "Alkoholi (etanoli) imeytyy nopeasti vereen ja lamaa hermostoa. Sitä ei ole vain juomissa: sitä on myös likööritäytteisissä makeisissa, raa’assa kohoavassa leipätaikinassa, käsidesissä ja suuvedessä. Alkoholimyrkytys uhkaa kaikkia eläimiä.",
     "nb": "Alkohol (etanol) tas raskt opp i blodet og demper nervesystemet. Det finnes ikke bare i drikke, men også i likørfylt godteri, rå brøddeig som hever, håndsprit og munnskyll. Alle dyr er utsatt."
@@ -178,7 +178,7 @@
     ],
     "sv": [
       "Kräkningar och diarré",
-      "Vinglighet och dålig koordination",
+      "Vinglighet och nedsatt koordination",
       "Dåsighet, slöhet",
       "Svårt att andas",
       "Darrningar",
@@ -221,7 +221,7 @@
     "pl": "Natychmiast skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co twój pies wypił lub zjadł i mniej więcej ile. Nie czekaj na objawy: alkohol działa szybko, a wczesne leczenie jest kluczowe.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co váš pes vypil nebo snědl a zhruba kolik. Nečekejte, až se objeví příznaky: alkohol působí rychle a včasná léčba je klíčová.",
     "hr": "Odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je pas popio ili pojeo i otprilike koliko. Ne čekaj da se pojave znakovi: alkohol djeluje brzo, a rano liječenje je ključno.",
-    "sv": "Kontakta veterinären eller en giftrådgivning för djur omedelbart. Notera vad hunden drack eller åt och ungefär hur mycket. Vänta inte på symtom: alkohol verkar snabbt, och tidig behandling är avgörande.",
+    "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad hunden drack eller åt och ungefär hur mycket. Vänta inte på symtom: alkohol tar snabbt effekt, och tidig behandling är avgörande.",
     "da": "Kontakt din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad hunden har drukket eller spist og omtrent hvor meget. Vent ikke på symptomer: alkohol virker hurtigt, og tidlig behandling er afgørende.",
     "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä koirasi joi tai söi ja suunnilleen kuinka paljon. Älä odota oireita: alkoholi vaikuttaa nopeasti, ja varhainen hoito on ratkaisevaa.",
     "nb": "Kontakt dyrlegen eller giftinformasjon for dyr med en gang. Skriv ned hva hunden drakk eller spiste, og omtrent hvor mye. Ikke vent på symptomer – alkohol virker raskt, og tidlig behandling er avgjørende."
@@ -438,7 +438,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "fc5605adb754dcefe9ddc2c48dcfcddd40c1803f01ad62dfcef4560d4b1b37e4"
+      "verified_hash": "6b7e5354b252519dca6b526aae8f855cac9b7291e14ae649bccab74b97c673f7"
     },
     "da": {
       "status": "verified",

@@ -65,7 +65,7 @@
     "pl": "Tylko po rozmowie z weterynarzem. Gotowane kości łamią się na odłamki, ale surowe też wiążą się z ryzykiem: mogą złamać zęby, spowodować zadławienie lub zatkać przewód pokarmowy, a mięso na nich może przenosić bakterie, takie jak Salmonella. Niektórzy weterynarze dopuszczają je pod nadzorem, inni odradzają kości.",
     "cs": "Jen po poradě s veterinářem. Tepelně upravené kosti se tříští, rizika ale nesou i syrové kosti: mohou zlomit zuby, způsobit dušení nebo ucpat střeva a syrové maso na nich může obsahovat bakterie, například salmonelu. Někteří veterináři je pod dohledem povolují, jiní kosti nedoporučují.",
     "hr": "Samo nakon razgovora s veterinarom. Termički obrađene kosti pucaju u oštre krhotine, ali i sirove kosti nose rizike: mogu slomiti zube, uzrokovati gušenje ili začepiti crijeva, a sirovo meso na njima može sadržavati bakterije poput salmonele. Neki ih veterinari dopuštaju uz nadzor, a drugi odvraćaju od davanja kostiju.",
-    "sv": "Bara efter att du pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
+    "sv": "Bara efter att du har pratat med veterinären. Tillagade ben splittras, men även råa ben innebär risker: de kan bryta av tänder, orsaka kvävning eller tarmstopp, och rått kött på dem kan bära på bakterier som salmonella. Vissa veterinärer tillåter dem under uppsikt; andra avråder från ben.",
     "da": "Kun efter en snak med din dyrlæge. Tilberedte knogler splintrer, men rå knogler har også risici: De kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og råt kød på knoglerne kan indeholde bakterier som salmonella. Nogle dyrlæger tillader dem under opsyn; andre fraråder knogler.",
     "fi": "Vain, jos olet ensin keskustellut eläinlääkärin kanssa. Kypsennetyt luut sirpaloituvat, mutta myös raakoihin luihin liittyy riskejä: ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja niissä olevassa raa’assa lihassa voi olla bakteereja, kuten salmonellaa. Jotkut eläinlääkärit sallivat ne valvotusti; toiset neuvovat välttämään luita.",
     "nb": "Bare etter at du har snakket med dyrlegen. Tilberedte bein splintres, men også rå bein innebærer risiko: De kan knekke tenner, sette seg fast i halsen eller blokkere tarmen, og rått kjøtt på dem kan inneholde bakterier som salmonella. Noen dyrleger godtar dem under tilsyn; andre fraråder bein."
@@ -206,7 +206,7 @@
     "pl": "Jeśli twój pies połknął duży kawałek kości lub ma któryś z tych objawów, od razu skontaktuj się z weterynarzem. Zanotuj rodzaj i wielkość kości.",
     "cs": "Pokud váš pes spolkl velký kus kosti nebo má některý z těchto příznaků, okamžitě se obraťte na veterináře. Poznamenejte si druh a velikost kosti.",
     "hr": "Ako je tvoj pas progutao velik komad kosti ili pokazuje bilo koji od ovih znakova, odmah se obrati veterinaru. Zapiši o kakvoj je kosti riječ i koliko je velika.",
-    "sv": "Om hunden har svalt en stor bit ben eller visar något av dessa symtom, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var.",
+    "sv": "Om hunden har svalt en stor bit ben eller visar något av symtomen ovan, kontakta veterinären direkt. Notera vilken sorts ben det var och hur stort det var.",
     "da": "Kontakt straks din dyrlæge hvis din hund har slugt et stort stykke knogle eller viser nogle af disse symptomer. Skriv ned hvilken slags knogle det var, og hvor stor den var.",
     "fi": "Jos koirasi nieli ison palan luuta tai sillä on jokin näistä oireista, ota heti yhteyttä eläinlääkäriin. Kirjaa ylös luun laatu ja koko.",
     "nb": "Hvis hunden har svelget en stor beinbit eller viser noen av disse symptomene, må du kontakte dyrlegen med en gang. Skriv ned hva slags bein det var, og hvor stort det var."
@@ -276,7 +276,7 @@
         "pl": "Gotowane kości łamią się na odłamki, dlatego nigdy nie wolno ich podawać. Surowe kości nadal wiążą się z ryzykiem złamania zębów, niedrożności i zakażenia bakteriami, więc najpierw zapytaj weterynarza.",
         "cs": "Tepelně upravené kosti se tříští, a proto se nesmějí dávat nikdy. Syrové kosti s sebou ale stále nesou riziko zlomených zubů, ucpání střev a bakterií, proto se nejdřív zeptejte veterináře.",
         "hr": "Termički obrađene kosti pucaju u oštre krhotine, zato ih psu nikad ne smiješ davati. I sirove kosti nose rizik od slomljenih zuba, začepljenja i bakterija, zato prvo pitaj veterinara.",
-        "sv": "Tillagade ben splittras, och därför ska de aldrig ges. Råa ben innebär ändå risk för avbrutna tänder, tarmstopp och bakterier, så fråga veterinären först.",
+        "sv": "Tillagade ben splittras, och därför ska de aldrig ges. Råa ben innebär ändå risk för brutna tänder, tarmstopp och bakterier, så fråga veterinären först.",
         "da": "Tilberedte knogler splintrer, og derfor må de aldrig gives. Rå knogler har stadig risiko for knækkede tænder, blokeringer og bakterier, så spørg din dyrlæge først.",
         "fi": "Kypsennetyt luut sirpaloituvat, ja siksi niitä ei pidä antaa koskaan. Myös raakoihin luihin liittyy hampaiden rikkoutumisen, tukosten ja bakteerien riski, joten kysy ensin eläinlääkäriltä.",
         "nb": "Tilberedte bein splintres, og derfor skal de aldri gis. Rå bein har likevel risiko for knekte tenner, blokkering og bakterier, så spør dyrlegen først."
@@ -471,7 +471,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "d76791315b1b4828e83eda53449e98edc4e5f8839080b3788dea0657a2042683"
+      "verified_hash": "04a552fe68fdc4ac9aae330d9021f220ba7ac7f17369cb4e26a40a7aa0930cb4"
     },
     "da": {
       "status": "verified",

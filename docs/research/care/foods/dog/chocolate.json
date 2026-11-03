@@ -65,7 +65,7 @@
     "pl": "Nie. Czekolada jest toksyczna dla psów, nawet w dość małych ilościach. Zawiera teobrominę i kofeinę, a im ciemniejsza czekolada, tym większe ryzyko. Najbardziej niebezpieczne są czekolada do pieczenia i kakao; biała czekolada zawiera tych substancji najmniej.",
     "cs": "Ne. Čokoláda je pro psy jedovatá, i v poměrně malém množství. Obsahuje theobromin a kofein a čím je čokoláda tmavší, tím větší je riziko. Nejnebezpečnější je čokoláda na vaření a kakaový prášek; bílá čokoláda obsahuje těchto látek nejméně.",
     "hr": "Ne. Čokolada je otrovna za pse, čak i u prilično malim količinama. Sadrži teobromin i kofein, a što je čokolada tamnija, rizik je veći. Najopasniji su čokolada za kuhanje i kakao prah; bijela čokolada ima najmanje tih tvari.",
-    "sv": "Nej. Choklad är giftig för hundar, även i ganska små mängder. Den innehåller teobromin och koffein, och ju mörkare chokladen är, desto större är risken. Bakchoklad och kakao är farligast; vit choklad innehåller minst av dessa ämnen.",
+    "sv": "Nej. Choklad är giftig för hundar, även i ganska små mängder. Den innehåller teobromin och koffein, och ju mörkare chokladen är, desto större är risken. Bakchoklad och kakaopulver är farligast; vit choklad innehåller minst av dessa ämnen.",
     "da": "Nej. Chokolade er giftigt for hunde, selv i ret små mængder. Det indeholder theobromin og koffein, og jo mørkere chokoladen er, desto større er risikoen. Bagechokolade og kakaopulver er farligst; hvid chokolade indeholder mindst af disse stoffer.",
     "fi": "Ei saa. Suklaa on koirille myrkyllistä jo melko pieninä määrinä. Siinä on teobromiinia ja kofeiinia, ja mitä tummempaa suklaa on, sitä suurempi riski. Leivontasuklaa ja kaakaojauhe ovat vaarallisimpia; valkoisessa suklaassa näitä aineita on vähiten.",
     "nb": "Nei. Sjokolade er giftig for hunder, selv i ganske små mengder. Den inneholder teobromin og koffein, og jo mørkere sjokoladen er, desto større er risikoen. Kokesjokolade og kakaopulver er farligst; hvit sjokolade har minst av disse stoffene."
@@ -178,7 +178,7 @@
     ],
     "sv": [
       "Kräkningar och diarré",
-      "Flämtning, stark törst och kissar mer",
+      "Flåsande, kraftig törst och ökat kissande",
       "Rastlöshet och överaktivitet",
       "Snabb eller oregelbunden puls",
       "Darrningar eller kramper",
@@ -275,7 +275,7 @@
         "pl": "To nie jest bezpieczny smakołyk. Biała czekolada zawiera najmniej szkodliwych substancji, ale ryzyko i tak zależy od rodzaju i zjedzonej ilości, więc zadzwoń do weterynarza, jeśli twój pies ją zjadł.",
         "cs": "Není to bezpečný pamlsek. Bílá čokoláda obsahuje nejméně škodlivých látek, ale riziko přesto závisí na druhu a snědeném množství, proto zavolejte veterináři, pokud ji pes snědl.",
         "hr": "Nije sigurna poslastica. Bijela čokolada ima najmanje štetnih tvari, ali rizik ipak ovisi o vrsti i količini, zato nazovi veterinara ako ju je pas pojeo.",
-        "sv": "Den är ingen säker godbit. Vit choklad innehåller minst av de skadliga ämnena, men risken beror ändå på sort och mängd, så ring veterinären om hunden har ätit av den.",
+        "sv": "Det är ingen säker godbit. Vit choklad innehåller minst av de skadliga ämnena, men risken beror ändå på sort och mängd, så ring veterinären om hunden har ätit av den.",
         "da": "Det er ikke en sikker godbid. Hvid chokolade har det laveste indhold af de skadelige stoffer, men risikoen afhænger stadig af typen og mængden, så ring til din dyrlæge hvis hunden har spist noget.",
         "fi": "Se ei ole turvallinen herkku. Valkoisessa suklaassa on vähiten haitallisia aineita, mutta riski riippuu silti suklaan lajista ja syödystä määrästä, joten soita eläinlääkärille, jos koirasi söi sitä.",
         "nb": "Det er ikke en trygg godbit. Hvit sjokolade har lavest innhold av de skadelige stoffene, men risikoen avhenger likevel av type og mengde, så ring dyrlegen hvis hunden har spist noe."
@@ -311,7 +311,7 @@
         "pl": "Czekolada do pieczenia i kakao, a zaraz po nich gorzka czekolada. Im ciemniejsza czekolada, tym większe ryzyko.",
         "cs": "Čokoláda na vaření a kakaový prášek, po nich hořká čokoláda. Čím tmavší čokoláda, tím větší riziko.",
         "hr": "Čokolada za kuhanje i kakao prah, a zatim tamna čokolada. Što je čokolada tamnija, rizik je veći.",
-        "sv": "Bakchoklad och kakao, följt av mörk choklad. Ju mörkare chokladen är, desto större är risken.",
+        "sv": "Bakchoklad och kakaopulver, följt av mörk choklad. Ju mörkare chokladen är, desto större är risken.",
         "da": "Bagechokolade og kakaopulver, derefter mørk chokolade. Jo mørkere chokoladen er, desto større er risikoen.",
         "fi": "Leivontasuklaa ja kaakaojauhe, sitten tumma suklaa. Mitä tummempaa suklaa on, sitä suurempi riski.",
         "nb": "Kokesjokolade og kakaopulver, deretter mørk sjokolade. Jo mørkere sjokoladen er, desto større er risikoen."
@@ -347,7 +347,7 @@
         "pl": "Zwykle w ciągu 6–12 godzin od zjedzenia, dlatego zadzwoń do weterynarza od razu, zamiast czekać.",
         "cs": "Obvykle do 6–12 hodin po snědení, proto veterináři zavolejte hned a nečekejte.",
         "hr": "Obično unutar 6–12 sati nakon što pas pojede čokoladu, zato odmah nazovi veterinara umjesto da čekaš.",
-        "sv": "Oftast inom 6–12 timmar efter att hunden ätit, och därför ska du ringa veterinären direkt i stället för att vänta.",
+        "sv": "Oftast inom 6–12 timmar efter att hunden har ätit choklad, så ring veterinären direkt i stället för att vänta.",
         "da": "Som regel inden for 6–12 timer efter at hunden har spist chokoladen, og derfor skal du ringe til dyrlægen med det samme i stedet for at vente.",
         "fi": "Yleensä 6–12 tunnin kuluessa syömisestä, minkä vuoksi eläinlääkärille on syytä soittaa heti eikä jäädä odottamaan.",
         "nb": "Vanligvis innen 6–12 timer etter at hunden har spist den, og derfor bør du ringe dyrlegen med en gang i stedet for å vente."
@@ -483,7 +483,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "4727656041ce1ffafea56c7b164d8ecd6385ae29cf000e7690aaeb828658868c"
+      "verified_hash": "8ff655f5be8ec9054f43f5e7cedf2e390f46dcf091cba074db6ffa59fa682952"
     },
     "da": {
       "status": "verified",

@@ -65,7 +65,7 @@
     "pl": "Lepiej nie. Lody są pełne laktozy, tłuszczu i cukru, które mogą podrażnić żołądek psa, a niektóre smaki zawierają czekoladę lub słodzik ksylitol, które są toksyczne dla psów.",
     "cs": "Raději ne. Zmrzlina je plná laktózy, tuku a cukru, které mohou psovi podráždit žaludek, a některé příchutě obsahují čokoládu nebo sladidlo xylitol, které jsou pro psy jedovaté.",
     "hr": "Bolje ne. Sladoled je pun laktoze, masti i šećera, koji mogu izazvati probavne tegobe, a neki okusi sadrže čokoladu ili sladilo ksilitol, koji su otrovni za pse.",
-    "sv": "Nej, helst inte. Glass är full av laktos, fett och socker, som kan ge hunden magbesvär, och vissa smaker innehåller choklad eller sötningsmedlet xylitol, som är giftiga för hundar.",
+    "sv": "Nej, helst inte. Glass innehåller mycket laktos, fett och socker, som kan ge hunden magbesvär, och vissa smaker innehåller choklad eller sötningsmedlet xylitol, som är giftiga för hundar.",
     "da": "Nej, helst ikke. Is er fuld af laktose, fedt og sukker, som kan give hunden dårlig mave, og nogle smagsvarianter indeholder chokolade eller sødemidlet xylitol, som er giftige for hunde.",
     "fi": "Ei kannata. Jäätelössä on paljon laktoosia, rasvaa ja sokeria, jotka voivat aiheuttaa koiralle vatsavaivoja, ja joissakin makuvaihtoehdoissa on suklaata tai makeutusaine ksylitolia, jotka ovat koirille myrkyllisiä.",
     "nb": "Nei, helst ikke. Iskrem er full av laktose, fett og sukker, som kan gi hunden urolig mage, og noen smaker inneholder sjokolade eller søtstoffet xylitol, som er giftig for hunder."
@@ -82,7 +82,7 @@
     "pl": "Wiele dorosłych psów w pewnym stopniu nie toleruje laktozy i nie potrafi prawidłowo trawić produktów mlecznych. Tłusty nabiał może wywołać zapalenie trzustki, a cukier sprzyja przybieraniu na wadze. Nawet lody „bez cukru” mogą zawierać ksylitol, a smaki czekoladowe są toksyczne.",
     "cs": "Mnoho dospělých psů do jisté míry nesnáší laktózu a neumí mléčné výrobky správně strávit. Tučné mléčné výrobky mohou způsobit zánět slinivky břišní a cukr přispívá k přibírání na váze. I zmrzlina „bez cukru“ může obsahovat xylitol a čokoládové příchutě jsou jedovaté.",
     "hr": "Mnogi odrasli psi u nekoj mjeri ne podnose laktozu i ne mogu pravilno probaviti mliječne proizvode. Masni mliječni proizvodi mogu izazvati upalu gušterače, a šećer pridonosi debljanju. Čak i sladoled „bez šećera“ može sadržavati ksilitol, a okusi s čokoladom otrovni su.",
-    "sv": "Många vuxna hundar är i olika grad laktosintoleranta och kan inte smälta mjölkprodukter ordentligt. Feta mejeriprodukter kan orsaka bukspottkörtelinflammation (pankreatit), och sockret bidrar till viktökning. Även ”sockerfri” glass kan innehålla xylitol, och glass med chokladsmak är giftig.",
+    "sv": "Många vuxna hundar är i olika grad laktosintoleranta och kan inte smälta mejeriprodukter ordentligt. Feta mejeriprodukter kan orsaka bukspottkörtelinflammation (pankreatit), och sockret bidrar till viktökning. Även ”sockerfri” glass kan innehålla xylitol, och glass med chokladsmak är giftig.",
     "da": "Mange voksne hunde er i et vist omfang laktoseintolerante og kan ikke fordøje mælkeprodukter ordentligt. Fede mejeriprodukter kan give betændelse i bugspytkirtlen (pankreatitis), og sukkeret bidrager til vægtøgning. Selv »sukkerfri« is kan indeholde xylitol, og is med chokoladesmag er giftig.",
     "fi": "Monet aikuiset koirat ovat jossain määrin laktoosi-intolerantteja eivätkä pysty sulattamaan maitotuotteita kunnolla. Rasvaiset maitotuotteet voivat aiheuttaa haimatulehduksen, ja sokeri lihottaa. Jopa ”sokerittomassa” jäätelössä voi olla ksylitolia, ja suklaanmakuiset jäätelöt ovat myrkyllisiä.",
     "nb": "Mange voksne hunder er i større eller mindre grad laktoseintolerante og kan ikke fordøye melkeprodukter skikkelig. Fete melkeprodukter kan gi betennelse i bukspyttkjertelen, og sukkeret bidrar til vektøkning. Selv «sukkerfri» iskrem kan inneholde xylitol, og iskrem med sjokoladesmak er giftig."
@@ -366,7 +366,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "712191ce14e9df556f53f310c894717265bab6f2e28bd4468c9c362ffe678013"
+      "verified_hash": "f24397216c255d913ff73fe9fbdef9fb5b071c08b1f41c58db643f4dd83d4696"
     },
     "da": {
       "status": "verified",

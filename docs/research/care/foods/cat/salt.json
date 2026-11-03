@@ -193,7 +193,7 @@
       "Minskad aptit",
       "Slöhet",
       "Vinglig gång",
-      "Onormal törst eller kissar mycket",
+      "Ovanligt stor törst eller mycket kissande",
       "Darrningar eller kramper"
     ],
     "da": [
@@ -432,7 +432,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "0003d6423bfe8697e29153b9bef30540e96a230586a621fd3a33717f778b84bc"
+      "verified_hash": "4f95a815c9131fc0553f5383605617d531f65d9dc7a3cf44d1763ef412f08354"
     },
     "da": {
       "status": "verified",

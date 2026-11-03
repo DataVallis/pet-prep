@@ -146,7 +146,7 @@
     "sv": [
       "Kvävning",
       "Kräkningar",
-      "Ont i magen (gömmer sig, morrar, vill inte bli berörd)"
+      "Ont i magen (gömmer sig, morrar, vill inte bli tagen på)"
     ],
     "da": [
       "Kvælningstegn (noget sidder fast i halsen)",
@@ -300,7 +300,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "c8e268565537ba8004cbfd6721ad1ea490fd4a62197e5bd4f9361e9370379548"
+      "verified_hash": "26de90dc78a7fa118bcafc6df29724c12901f0cbe3cf96ffc15fe3b1f5cfb5fd"
     },
     "da": {
       "status": "verified",

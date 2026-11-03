@@ -254,7 +254,7 @@
     "pl": "Cebula nie jest dla kotów, nawet ugotowana w jedzeniu. Jeśli kotek trochę zje, powiedz dorosłemu, żeby mógł zadzwonić do weterynarza.",
     "cs": "Cibule není pro kočky, ani když je uvařená nebo upečená v jídle. Když ji kočička sní, řekni to dospělému, aby mohl zavolat veterináři.",
     "hr": "Luk nije za mace, čak ni kuhan u jelu. Ako ga maca pojede, reci odrasloj osobi da nazove veterinara.",
-    "sv": "Lök är inte för katter, inte ens tillagad i maten. Om katten äter lite, säg till en vuxen så att den vuxna kan ringa veterinären.",
+    "sv": "Lök är inte för katter, inte ens tillagad i maten. Om katten äter lite, säg till en vuxen, som kan ringa veterinären.",
     "da": "Løg er ikke for katte, heller ikke når de er kogt i maden. Hvis katten spiser noget, så sig det til en voksen, så den voksne kan ringe til dyrlægen.",
     "fi": "Sipuli ei sovi kissoille, ei edes keitettynä ruoassa. Jos kisu syö sitä, kerro aikuiselle, niin hän voi soittaa eläinlääkärille.",
     "nb": "Løk er ikke for katter, heller ikke når den er kokt i maten. Hvis pusen spiser litt, si fra til en voksen, så den voksne kan ringe dyrlegen."
@@ -485,7 +485,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "7a959cb6d58932456d4a451aa091e0ff66507a4090205e53bfbfd030eec89c97"
+      "verified_hash": "771f80c77be72528ecf6b71090a1d3dc3f3a348c0c445ae4ccc045cb3e398b1e"
     },
     "da": {
       "status": "verified",

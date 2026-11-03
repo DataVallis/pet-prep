@@ -146,7 +146,7 @@
     "sv": [
       "Kvävning",
       "Kräkningar",
-      "Ont i magen (gömmer sig, morrar, vill inte bli berörd)"
+      "Ont i magen (gömmer sig, morrar, vill inte bli tagen på)"
     ],
     "da": [
       "Kvælningstegn (noget sidder fast i halsen)",
@@ -193,7 +193,7 @@
     "pl": "Jeśli dzielisz się zwykłym gotowanym kurczakiem lub indykiem, dawaj tylko mięso bez kości.",
     "cs": "Pokud se s kočkou dělíte o obyčejné tepelně upravené kuřecí nebo krůtí maso, dávejte jí pouze maso bez kostí.",
     "hr": "Ako s mačkom dijeliš običnu termički obrađenu piletinu ili puretinu, daj joj samo meso bez kostiju.",
-    "sv": "Om du delar med dig av naturell tillagad kyckling eller kalkon, ge bara benfritt kött.",
+    "sv": "Om du delar med dig av naturell, tillagad kyckling eller kalkon, ge bara benfritt kött.",
     "da": "Hvis du deler naturel, tilberedt kylling eller kalkun, så giv kun kød uden knogler.",
     "fi": "Jos annat kissalle maustamatonta kypsennettyä kanaa tai kalkkunaa, anna vain luutonta lihaa.",
     "nb": "Hvis du deler naturell, tilberedt kylling eller kalkun, gi bare kjøtt uten bein."
@@ -366,7 +366,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "b92e4c0cbb81f4754c51cc177f345692e7e79357246b1bc33d12ff1fb280b79c"
+      "verified_hash": "5ccc63839327ec7539d0ff5a4be172942eaa651b34a00c12ca09ea23b7417441"
     },
     "da": {
       "status": "verified",

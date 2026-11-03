@@ -65,7 +65,7 @@
     "pl": "Nie, czereśni lepiej unikać. Sam dojrzały miąższ nie jest toksyczny, ale pestki, szypułki i liście zawierają związki, które mogą uwalniać cyjanek, a pestki mogą zatkać jelita psa. Pet Poison Helpline podaje, że ryzyko przewyższa wszelkie korzyści.",
     "cs": "Ne, třešním je lepší se vyhnout. Zralá dužnina sama jedovatá není, ale pecky, stopky a listy obsahují látky, ze kterých se může uvolnit kyanid, a pecky mohou psovi ucpat střeva. Podle Pet Poison Helpline riziko převažuje nad jakýmkoli přínosem.",
     "hr": "Ne, trešnje je bolje izbjegavati. Zrelo meso ploda nije otrovni dio, ali koštice, peteljke i listovi sadrže spojeve iz kojih se može osloboditi cijanid, a koštice mogu psu začepiti crijeva. Pet Poison Helpline navodi da rizik nadmašuje svaku korist.",
-    "sv": "Nej, körsbär är bäst att undvika. Det mogna fruktköttet är inte den giftiga delen, men kärnor, skaft och blad innehåller ämnen som kan frigöra cyanid, och kärnorna kan ge stopp i hundens tarmar. Pet Poison Helpline menar att risken väger tyngre än nyttan.",
+    "sv": "Nej, körsbär är bäst att undvika. Det mogna fruktköttet är inte den giftiga delen, men kärnor, skaft och blad innehåller ämnen som kan frigöra cyanid, och kärnorna kan blockera hundens tarmar. Pet Poison Helpline menar att risken väger tyngre än nyttan.",
     "da": "Nej, kirsebær er bedst at undgå. Det modne frugtkød er ikke den giftige del, men stenene, stilkene og bladene indeholder stoffer der kan frigive cyanid, og stenene kan blokere hundens tarme. Pet Poison Helpline siger at risikoen overstiger enhver fordel.",
     "fi": "Ei, kirsikoita on parasta välttää. Kypsä hedelmäliha ei ole kirsikan myrkyllinen osa, mutta kivet, varret ja lehdet sisältävät yhdisteitä, joista voi vapautua syanidia, ja kivet voivat tukkia koiran suoliston. Pet Poison Helplinen mukaan riski on hyötyä suurempi.",
     "nb": "Nei, kirsebær bør helst unngås. Det modne fruktkjøttet er ikke den giftige delen, men steinene, stilkene og bladene inneholder stoffer som kan frigjøre cyanid, og steinene kan blokkere tarmen. Pet Poison Helpline mener at risikoen er større enn nytten."
@@ -82,7 +82,7 @@
     "pl": "Pestki, szypułki i liście czereśni zawierają glikozydy cyjanogenne, które mogą przekształcić się w cyjanek. Cyjanek uwalnia się, gdy pestka zostanie rozgryziona i rozkruszona; połknięta w całości pestka raczej nie wywoła zatrucia, ale może utknąć i spowodować niedrożność. Jedna czereśnia nie spowoduje zatrucia cyjankiem, ale i tak nie warto ryzykować.",
     "cs": "Třešňové pecky, stopky a listy obsahují kyanogenní glykosidy, ze kterých může vznikat kyanid. Kyanid se uvolní, když pes pecku rozkouše nebo rozlomí; u celé spolknuté pecky se otrava nepředpokládá, ale pecka může uvíznout a způsobit ucpání. Jedna třešeň otravu kyanidem nezpůsobí, přesto riziko nestojí za to.",
     "hr": "Koštice, peteljke i listovi trešnje sadrže cijanogene glikozide, koji se mogu pretvoriti u cijanid. Cijanid se oslobađa kad se koštica sažvače i razbije; od cijele progutane koštice ne očekuje se otrovanje, ali ona može zapeti i izazvati začepljenje. Jedna trešnja neće izazvati otrovanje cijanidom, no rizik se ne isplati.",
-    "sv": "Körsbärens kärnor, skaft och blad innehåller cyanogena glykosider, som kan omvandlas till cyanid. Cyanid frigörs när en kärna tuggas sönder; en kärna som sväljs hel väntas inte ge förgiftning, men den kan fastna och orsaka stopp. Ett körsbär ger ingen cyanidförgiftning, men risken är inte värd det.",
+    "sv": "Körsbärens kärnor, skaft och blad innehåller cyanogena glykosider, som kan omvandlas till cyanid. Cyanid frigörs när en kärna tuggas sönder; en kärna som sväljs hel förväntas inte ge förgiftning, men den kan fastna och orsaka stopp. Ett körsbär ger ingen cyanidförgiftning, men risken är det inte värt.",
     "da": "Kirsebærsten, -stilke og -blade indeholder cyanogene glykosider, som kan omdannes til cyanid. Cyanid frigives når en sten tygges og knækkes; en sten der sluges hel, forventes ikke at give forgiftning, men den kan sætte sig fast og give blokering. Ét kirsebær giver ikke cyanidforgiftning, men risikoen er ikke det værd.",
     "fi": "Kirsikan kivet, varret ja lehdet sisältävät syanogeenisia glykosideja, jotka voivat muuttua syanidiksi. Syanidia vapautuu, kun kivi pureskellaan rikki; kokonaisena nielaistun kiven ei odoteta aiheuttavan myrkytystä, mutta se voi juuttua kiinni ja aiheuttaa tukoksen. Yksi kirsikka ei aiheuta syanidimyrkytystä, mutta riski ei ole sen arvoinen.",
     "nb": "Kirsebærsteiner, -stilker og -blader inneholder cyanogene glykosider, som kan omdannes til cyanid. Cyanid frigjøres når en stein tygges og knuses; en stein som svelges hel, ventes ikke å gi forgiftning, men den kan sette seg fast og gi blokkering. Ett kirsebær gir ikke cyanidforgiftning, men risikoen er ikke verdt det."
@@ -168,7 +168,7 @@
     "sv": [
       "Vidgade pupiller",
       "Tegelrött tandkött",
-      "Svårt att andas, flämtning",
+      "Svårt att andas, flåsande",
       "Orolig mage eller diarré",
       "Chock"
     ],
@@ -224,7 +224,7 @@
     "pl": "Czereśnie mają w środku twarde pestki, które szkodzą psom. Czereśnie zostaw dla ludzi i powiedz dorosłemu, jeśli twój pies jakieś zje.",
     "cs": "Třešně mají uvnitř tvrdé pecky, které psům škodí. Třešně nech pro lidi, a když je pes sní, řekni to dospělému.",
     "hr": "Trešnje u sebi imaju tvrde koštice koje štete psima. Trešnje ostavi ljudima, a ako ih pas pojede, reci odrasloj osobi.",
-    "sv": "Körsbär har hårda kärnor inuti som är dåliga för hundar. Spara körsbär till människor och säg till en vuxen om hunden äter några.",
+    "sv": "Körsbär har hårda kärnor inuti som inte är bra för hundar. Körsbär är till för människor, och säg till en vuxen om hunden äter några.",
     "da": "Kirsebær har hårde sten indeni, som er dårlige for hunde. Lad kirsebærrene være til mennesker, og sig det til en voksen hvis din hund spiser nogle.",
     "fi": "Kirsikoiden sisällä on kovia kiviä, jotka ovat koirille pahasta. Jätä kirsikat ihmisille ja kerro aikuiselle, jos koirasi syö niitä.",
     "nb": "Kirsebær har harde steiner inni som ikke er bra for hunder. La kirsebærene være for mennesker, og si fra til en voksen hvis hunden spiser noen."
@@ -423,7 +423,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "a6dd01d6b06f296d86fdda2258bc96d5577a75fa7441ab4e9bc528a96257162d"
+      "verified_hash": "18cf8f5ea70217014c9588e4e284651119091a0cd85e4d743700ceb085b3cecf"
     },
     "da": {
       "status": "verified",

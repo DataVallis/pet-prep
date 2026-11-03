@@ -65,7 +65,7 @@
     "pl": "Nie. Surowe, niewypieczone ciasto drożdżowe jest niebezpieczne dla psów. Nadal rośnie w ciepłym żołądku i powoduje wzdęcie, które może doprowadzić do skrętu żołądka. Drożdże wytwarzają też alkohol, który może wywołać zatrucie alkoholem. Zagrożeniem jest niewypieczone ciasto.",
     "cs": "Ne. Syrové, nepečené kynuté těsto je pro psy nebezpečné. V teplém žaludku dál kyne a způsobuje nadmutí, které může vést až k torzi žaludku. Kvasinky navíc vytvářejí alkohol, který může způsobit otravu alkoholem. Nebezpečné je právě nepečené těsto.",
     "hr": "Ne. Sirovo, nepečeno tijesto s kvascem opasno je za pse. U toplom želucu nastavlja rasti i nadima ga, što može dovesti do torzije želuca. Kvasac stvara i alkohol, koji može izazvati trovanje alkoholom. Opasno je nepečeno tijesto.",
-    "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Faran är den ogräddade degen.",
+    "sv": "Nej. Rå, ogräddad deg med jäst är farlig för hundar. Den fortsätter att jäsa i den varma magen och orsakar uppblåsthet som kan leda till magomvridning. Jästen bildar också alkohol, som kan orsaka alkoholförgiftning. Det är den ogräddade degen som är farlig.",
     "da": "Nej. Rå, ubagt gærdej er farlig for hunde. Den fortsætter med at hæve i den varme mave og giver oppustethed, som kan føre til mavedrejning. Gæren danner også alkohol, som kan give alkoholforgiftning. Faren er den ubagte dej.",
     "fi": "Ei saa. Raaka, paistamaton hiivataikina on vaarallista koiralle. Se jatkaa kohoamistaan lämpimässä mahalaukussa ja aiheuttaa turvotusta, joka voi johtaa mahalaukun kiertymään. Hiiva tuottaa myös alkoholia, joka voi aiheuttaa alkoholimyrkytyksen. Vaarallista on nimenomaan paistamaton taikina.",
     "nb": "Nei. Rå, ustekt gjærdeig er farlig for hunder. Den fortsetter å heve i den varme magen og gir oppblåsthet som kan føre til magedreining. Gjæren lager også alkohol, som kan gi alkoholforgiftning. Det er den ustekte deigen som er farlig."
@@ -156,7 +156,7 @@
     ],
     "sv": [
       "Uppsvälld, spänd mage",
-      "Kräkningar eller kräkreflexer utan att något kommer upp",
+      "Kräkningar eller kväljningar utan att något kommer upp",
       "Ostadighet och förvirring",
       "Dåsighet eller nedstämdhet"
     ],
@@ -399,7 +399,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6464ff410e5b162c6ab7b72f4e083af3d481d8474dc2ec4fcc2e257e78062fed"
+      "verified_hash": "562186ba8c00c686916811de3589cd615da5b824dc5ab87e7a3f6f79e5c83473"
     },
     "da": {
       "status": "verified",

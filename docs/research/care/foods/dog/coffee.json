@@ -65,7 +65,7 @@
     "pl": "Nie. Kawa zawiera kofeinę, która jest toksyczna dla psów; psy są na nią bardziej wrażliwe niż ludzie. Jedno czy dwa liźnięcia raczej nie spowodują zatrucia, ale fusy i ziarna kawy mogą wywołać poważne zatrucie. Ziarna kawy w czekoladzie to podwójne zagrożenie.",
     "cs": "Ne. Káva obsahuje kofein, který je pro psy jedovatý; psi jsou na něj citlivější než lidé. Jedno či dvě olíznutí pravděpodobně otravu nezpůsobí, ale kávová sedlina a zrna mohou vyvolat vážnou otravu. Kávová zrna v čokoládě jsou dvojí hrozbou.",
     "hr": "Ne. Kava sadrži kofein, koji je otrovan za pse; psi su na njega osjetljiviji od ljudi. Jedno ili dva liznuća vjerojatno neće izazvati otrovanje, ali mljevena kava i zrna kave mogu izazvati ozbiljno otrovanje. Zrna kave obložena čokoladom dvostruka su prijetnja.",
-    "sv": "Nej. Kaffe innehåller koffein, som är giftigt för hundar; hundar är känsligare för det än människor. En eller två slickningar ger knappast förgiftning, men kaffesump och kaffebönor kan ge allvarlig förgiftning. Chokladöverdragna kaffebönor är ett dubbelt hot.",
+    "sv": "Nej. Kaffe innehåller koffein, som är giftigt för hundar; hundar är känsligare för det än människor. Ett par slickar ger knappast förgiftning, men kaffesump och kaffebönor kan ge allvarlig förgiftning. Kaffebönor med chokladöverdrag är dubbelt farliga.",
     "da": "Nej. Kaffe indeholder koffein, som er giftigt for hunde; hunde er mere følsomme over for det end mennesker. Et par slik af kaffen giver næppe forgiftning, men kaffegrums og kaffebønner kan give alvorlig forgiftning. Chokoladeovertrukne kaffebønner er en dobbelt trussel.",
     "fi": "Ei saa. Kahvissa on kofeiinia, joka on koirille myrkyllistä; koirat ovat sille herkempiä kuin ihmiset. Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä, mutta jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen. Suklaalla kuorrutetut kahvipavut ovat kaksinkertainen vaara.",
     "nb": "Nei. Kaffe inneholder koffein, som er giftig for hunder; hunder er mer følsomme for det enn mennesker. Et slikk eller to gir neppe forgiftning, men kaffegrut og kaffebønner kan gi alvorlig forgiftning. Sjokoladetrukne kaffebønner er en dobbel fare."
@@ -82,7 +82,7 @@
     "pl": "Kofeina nadmiernie pobudza serce i układ nerwowy. To ten sam rodzaj substancji, który sprawia, że czekolada jest toksyczna. Jedno czy dwa liźnięcia kawy raczej nie zatrują psa, ale niewykorzystane fusy i ziarna kawy mogą wywołać poważne zatrucie, a ziarna w czekoladzie to podwójne zagrożenie.",
     "cs": "Kofein nadměrně stimuluje srdce a nervovou soustavu. Je to stejný druh látky, kvůli kterému je čokoláda jedovatá. Jedno či dvě olíznutí kávy pravděpodobně otravu nezpůsobí, ale nepoužitá kávová sedlina a zrna mohou vyvolat vážnou otravu a zrna v čokoládě jsou dvojí hrozbou.",
     "hr": "Kofein pretjerano potiče rad srca i živčanog sustava. To je ista vrsta tvari zbog koje je čokolada otrovna. Jedno ili dva liznuća kave vjerojatno neće izazvati otrovanje, ali neiskorištena mljevena kava i zrna mogu izazvati ozbiljno otrovanje, a zrna obložena čokoladom dvostruka su prijetnja.",
-    "sv": "Koffein överstimulerar hjärtat och nervsystemet. Det är samma slags ämne som gör choklad giftig. Att slicka i sig lite kaffe en eller två gånger ger knappast förgiftning, men oanvänt malet kaffe och kaffebönor kan ge allvarlig förgiftning, och chokladöverdragna bönor är ett dubbelt hot.",
+    "sv": "Koffein överstimulerar hjärtat och nervsystemet. Det är samma slags ämne som gör choklad giftig. Ett par slickar kaffe ger knappast förgiftning, men oanvänt malet kaffe och kaffebönor kan ge allvarlig förgiftning, och bönor med chokladöverdrag är dubbelt farliga.",
     "da": "Koffein overstimulerer hjertet og nervesystemet. Det er samme slags stof som det, der gør chokolade giftigt. Et par slik af kaffen giver næppe forgiftning, men ubrugt kaffegrums og kaffebønner kan give alvorlig forgiftning, og chokoladeovertrukne bønner er en dobbelt trussel.",
     "fi": "Kofeiini ylikiihottaa sydäntä ja hermostoa. Se on yksi niistä aineista, jotka tekevät suklaasta myrkyllistä. Nuolaisu tai kaksi kahvia tuskin aiheuttaa myrkytystä, mutta käyttämätön jauhettu kahvi ja kahvipavut voivat aiheuttaa vakavan myrkytyksen, ja suklaalla kuorrutetut pavut ovat kaksinkertainen vaara.",
     "nb": "Koffein overstimulerer hjertet og nervesystemet. Det er samme type stoff som gjør sjokolade giftig. Et slikk eller to kaffe gir neppe forgiftning, men ubrukt malt kaffe og kaffebønner kan gi alvorlig forgiftning, og sjokoladetrukne bønner er en dobbel fare."
@@ -177,12 +177,12 @@
       "Češće mokrenje"
     ],
     "sv": [
-      "Rastlöshet, överaktivitet, går fram och tillbaka",
+      "Rastlöshet, överaktivitet, vandrar av och an",
       "Snabb puls",
       "Kräkningar och diarré",
-      "Dreglar",
+      "Dregling",
       "Darrningar",
-      "Kissar mer"
+      "Ökat kissande"
     ],
     "da": [
       "Rastløshed, hyperaktivitet, går frem og tilbage",
@@ -275,7 +275,7 @@
         "pl": "Jedno czy dwa liźnięcia raczej nie zatrują większości psów. Jeśli pies wypił więcej albo zjadł fusy, ziarna lub torebki herbaty, zadzwoń do weterynarza lub na telefon informacji toksykologicznej dla zwierząt.",
         "cs": "Jedno či dvě olíznutí většinu psů pravděpodobně neotráví. Pokud pes vypil víc nebo snědl sedlinu, zrna či čajové sáčky, zavolejte veterináři nebo na toxikologickou linku pro zvířata.",
         "hr": "Jedno ili dva liznuća vjerojatno neće otrovati većinu pasa. Ako je pas popio više ili pojeo mljevenu kavu, zrna ili vrećice čaja, nazovi veterinara ili telefonsku liniju za otrovanja životinja.",
-        "sv": "En eller två slickningar ger knappast förgiftning hos de flesta hundar. Om hunden drack mer, eller åt kaffesump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
+        "sv": "Ett par slickar ger knappast förgiftning hos de flesta hundar. Om hunden drack mer, eller åt kaffesump, bönor eller tepåsar, ring veterinären eller en giftrådgivning för djur.",
         "da": "Et par slik giver næppe forgiftning hos de fleste hunde. Hvis hunden har drukket mere eller spist kaffegrums, bønner eller tebreve, skal du ringe til din dyrlæge eller en giftrådgivning for dyr.",
         "fi": "Nuolaisu tai kaksi tuskin aiheuttaa myrkytystä useimmille koirille. Jos koirasi joi enemmän tai söi jauhettua kahvia, papuja tai teepusseja, soita eläinlääkärille tai eläinten myrkytysneuvontaan.",
         "nb": "Ett eller to slikk gir neppe forgiftning hos de fleste hunder. Har hunden drukket mer, eller spist kaffegrut, bønner eller teposer, må du ringe dyrlegen eller giftinformasjon for dyr."
@@ -458,7 +458,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "04118bdd98cc1419d27f3a2d52ea3b8addc57e81ee573a9c14f3974ef5aec952"
+      "verified_hash": "53746887336f042d49845d99f51cae4fe629e7760657190575dbf526b42411d6"
     },
     "da": {
       "status": "verified",

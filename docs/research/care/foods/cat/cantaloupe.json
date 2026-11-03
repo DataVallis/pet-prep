@@ -65,7 +65,7 @@
     "pl": "Tak, mały kawałek melona kantalupy jest w porządku jako okazjonalny smakołyk. ASPCA podaje, że kantalupa nie jest toksyczna dla kotów, ale koty są mięsożercami i nie potrzebują owoców, a każda roślina może podrażnić żołądek, więc niech to będzie tylko drobny dodatek.",
     "cs": "Ano, malý kousek cukrového melounu je jako občasný pamlsek v pořádku. ASPCA uvádí cukrový meloun jako netoxický pro kočky, kočky jsou ale masožravci a ovoce nepotřebují a jakákoli rostlina může podráždit žaludek, takže ať je to jen malinký doplněk.",
     "hr": "Da, mali komadić dinje u redu je kao povremena poslastica. ASPCA navodi dinju kao neotrovnu za mačke, ali mačke su mesojedi i ne trebaju voće, a bilo koja biljka može izazvati želučane tegobe, pa neka ostane samo sitan dodatak.",
-    "sv": "Ja, en liten bit cantaloupemelon går bra som godbit någon gång ibland. ASPCA anger att cantaloupemelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och alla växter kan ge orolig mage, så låt det bara vara något pyttelitet extra.",
+    "sv": "Ja, en liten bit cantaloupemelon går bra som godbit någon gång ibland. ASPCA anger att cantaloupemelon inte är giftig för katter, men katter är köttätare och behöver inte frukt, och alla växter kan ge orolig mage, så se det bara som ett pyttelitet extra.",
     "da": "Ja, et lille stykke cantaloupemelon er fint som en godbid en gang imellem. ASPCA opfører cantaloupemelon som ikke giftig for katte, men katte er kødædere og har ikke brug for frugt, og alle planter kan give dårlig mave, så lad det kun være et bitte lille ekstra.",
     "fi": "Kyllä, pieni pala cantaloupe-melonia sopii satunnaiseksi herkuksi. ASPCA luokittelee cantaloupe-melonin kissoille myrkyttömäksi, mutta kissat ovat lihansyöjiä eivätkä tarvitse hedelmiä, ja mikä tahansa kasvi voi aiheuttaa vatsavaivoja, joten pidä se pikkuisena lisänä.",
     "nb": "Ja, en liten bit cantaloupemelon er greit som en godbit en gang iblant. ASPCA oppgir cantaloupe som ikke giftig for katter, men katter er kjøttetere og trenger ikke frukt, og alle planter kan gi urolig mage, så la det bare være litt ekstra."
@@ -276,7 +276,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "ec6eec98bd2c49baa75300377bd40603f987a783f7e560e0d47dc23c64148be7"
+      "verified_hash": "2cd30c3b6bf699d4025fa606c4ecf4acfa4449783386f2231dce01b80cb17baf"
     },
     "da": {
       "status": "verified",

@@ -65,7 +65,7 @@
     "pl": "Nie zaleca się. Tłuste mięso, skóra drobiu i chrząstki nie są toksyczne, ale mogą wywołać wymioty i biegunkę albo zapalenie trzustki – bolesny, czasem ciężki stan zapalny. Niektóre rasy, np. sznaucer miniaturowy, są na nie bardziej podatne.",
     "cs": "Nedoporučuje se. Tučné maso, drůbeží kůže a chrupavky nejsou jedovaté, ale mohou vyvolat zvracení a průjem nebo spustit zánět slinivky břišní, bolestivý a někdy těžký zánět. Některá plemena, například knírač malý, jsou k němu náchylnější.",
     "hr": "Ne preporučuje se. Masno meso, koža peradi i hrskavica nisu otrovni, ali mogu izazvati povraćanje i proljev ili potaknuti upalu gušterače, koja je bolna i ponekad teška. Neke su joj pasmine, poput patuljastog šnaucera, sklonije.",
-    "sv": "Nej, det rekommenderas inte. Fett kött, fågelskinn och senor är inte giftiga, men de kan orsaka kräkningar och diarré eller utlösa bukspottkörtelinflammation (pankreatit), en smärtsam och ibland allvarlig inflammation. Vissa raser, som dvärgschnauzer, är mer benägna att drabbas.",
+    "sv": "Rekommenderas inte. Fett kött, fågelskinn och senor är inte giftiga, men de kan orsaka kräkningar och diarré eller utlösa bukspottkörtelinflammation (pankreatit), en smärtsam och ibland allvarlig inflammation. Vissa raser, som dvärgschnauzer, drabbas lättare.",
     "da": "Det frarådes. Fedt kød, skind fra fjerkræ og brusk er ikke giftigt, men det kan give opkast og diarré eller udløse betændelse i bugspytkirtlen (pankreatitis), som er smertefuld og nogle gange alvorlig. Nogle racer, fx dværgschnauzer, er mere tilbøjelige til det.",
     "fi": "Ei suositella. Rasvainen liha, linnun nahka ja rustot eivät ole myrkyllisiä, mutta ne voivat aiheuttaa oksentelua ja ripulia tai laukaista haimatulehduksen, joka on kivulias ja joskus vakava tulehdus. Jotkin rodut, kuten kääpiösnautserit, ovat sille alttiimpia.",
     "nb": "Anbefales ikke. Fett kjøtt, skinn fra fjærfe og brusk er ikke giftig, men kan gi oppkast og diaré eller utløse betennelse i bukspyttkjertelen, som er smertefullt og noen ganger alvorlig. Noen raser, som dvergschnauzer, er mer utsatt."
@@ -82,7 +82,7 @@
     "pl": "Tłusty posiłek to znany czynnik wywołujący zapalenie trzustki u psów. Skutki wahają się od łagodnego rozstroju żołądka po ciężkie, a nawet zagrażające życiu zapalenie trzustki. Psy, które już przeszły zapalenie trzustki, powinny unikać tłustego jedzenia.",
     "cs": "Tučné jídlo je u psů známým spouštěčem zánětu slinivky břišní. Následky sahají od lehce podrážděného žaludku až po těžký, dokonce život ohrožující zánět slinivky břišní. Psi, kteří už zánět slinivky břišní prodělali, by se tučným jídlům měli vyhýbat.",
     "hr": "Masni obrok poznat je okidač upale gušterače kod pasa. Posljedice sežu od blagih želučanih smetnji do teške, čak i po život opasne upale gušterače. Psi koji su već imali upalu gušterače trebaju izbjegavati masnu hranu.",
-    "sv": "En fet måltid är en känd utlösande faktor för bukspottkörtelinflammation hos hundar. Följderna kan variera från lätta magbesvär till en svår, till och med livshotande bukspottkörtelinflammation. Hundar som haft bukspottkörtelinflammation tidigare bör undvika fet mat.",
+    "sv": "En fet måltid kan utlösa bukspottkörtelinflammation hos hundar. Följderna sträcker sig från lätta magbesvär till svår, till och med livshotande bukspottkörtelinflammation. Hundar som haft bukspottkörtelinflammation tidigare bör undvika fet mat.",
     "da": "Et fedt måltid er en kendt udløser af betændelse i bugspytkirtlen hos hunde. Følgerne spænder fra let dårlig mave til alvorlig, endda livstruende betændelse i bugspytkirtlen. Hunde der tidligere har haft betændelse i bugspytkirtlen, bør undgå fed mad.",
     "fi": "Rasvainen ateria on tunnettu haimatulehduksen laukaisija koirilla. Vaikutukset vaihtelevat lievistä vatsavaivoista vakavaan, jopa hengenvaaralliseen haimatulehdukseen. Koirien, joilla on aiemmin ollut haimatulehdus, pitäisi välttää rasvaisia ruokia.",
     "nb": "Et fett måltid er en kjent utløser av betennelse i bukspyttkjertelen hos hunder. Følgene kan variere fra lett urolig mage til alvorlig, til og med livstruende betennelse i bukspyttkjertelen. Hunder som har hatt betennelse i bukspyttkjertelen tidligere, bør unngå fet mat."
@@ -167,7 +167,7 @@
     ],
     "sv": [
       "Kräkningar, ibland först 1–4 dagar efter den feta måltiden",
-      "Ont i magen (hunden kan sträcka på sig i ”bönställning”)",
+      "Ont i magen (hunden kan sträcka på sig i en ”bönställning”)",
       "Diarré",
       "Ingen matlust",
       "Trötthet, feber"
@@ -223,7 +223,7 @@
     "pl": "Jeśli dzielisz się mięsem, wybierz zwykłe, chude, gotowane mięso bez skóry, tłuszczu, przypraw i kości.",
     "cs": "Pokud se o maso dělíte, zvolte čisté, libové, tepelně upravené maso bez kůže, tuku a koření a bez kostí.",
     "hr": "Ako dijeliš meso, izaberi obično, posno, termički obrađeno meso bez kože, masnoće i začina, i bez kostiju.",
-    "sv": "Om du delar med dig av kött: välj naturellt, magert, tillagat kött utan skinn, fett, kryddor och ben.",
+    "sv": "Om du delar med dig av kött: välj magert, tillagat kött utan skinn, fett, kryddor och ben.",
     "da": "Hvis du deler kød, så vælg rent, magert, tilberedt kød uden skind, fedt og krydderier og uden ben.",
     "fi": "Jos annat koiralle lihaa, valitse pelkkää, vähärasvaista, kypsennettyä lihaa ilman nahkaa, rasvaa, mausteita ja luita.",
     "nb": "Hvis du deler kjøtt: Velg naturelt, magert, tilberedt kjøtt uten skinn, fett eller krydder, og uten bein."
@@ -240,7 +240,7 @@
     "pl": "Od tłustych kawałków mięsa może psa rozboleć brzuszek. Zostaw tłuszcz na swoim talerzu i daj psu jego własne jedzenie.",
     "cs": "Tučné kousky masa můžou psa rozbolet bříško. Tuk nech na talíři a dej psovi jeho vlastní jídlo.",
     "hr": "Masni komadići mesa mogu psa zaboljeti u trbuščiću. Masnoću ostavi na tanjuru, a psu daj njegovu hranu.",
-    "sv": "Feta köttbitar kan ge hundar ont i magen. Låt fettet ligga kvar på din tallrik och ge hunden dess egen mat.",
+    "sv": "Feta köttbitar kan ge hundar ont i magen. Låt fettet ligga kvar på din tallrik och ge hunden sin egen mat.",
     "da": "Fedtstykker fra kød kan give hunde ondt i maven. Lad fedtet blive på din tallerken, og giv din hund dens egen mad.",
     "fi": "Lihan rasvaiset palat voivat tehdä koiran masun kipeäksi. Jätä rasva lautaselle ja anna koiralle sen omaa ruokaa.",
     "nb": "Fete kjøttbiter kan gi hunder vondt i magen. La fettet ligge igjen på tallerkenen, og gi hunden sin egen mat."
@@ -312,7 +312,7 @@
         "pl": "Nie. Skóra z indyka i inne tłuste jedzenie ze stołu mogą wywołać różne problemy – od rozstroju żołądka po ciężkie zapalenie trzustki.",
         "cs": "Ne. Krůtí kůže a další tučná jídla ze stolu mohou způsobit cokoli od podrážděného žaludku až po těžký zánět slinivky břišní.",
         "hr": "Ne. Pureća koža i druga masna hrana sa stola mogu izazvati sve od želučanih smetnji do teške upale gušterače.",
-        "sv": "Nej. Kalkonskinn och annan fet mat från bordet kan orsaka allt från magbesvär till svår bukspottkörtelinflammation.",
+        "sv": "Nej. Kalkonskinn och annan fet mat från matbordet kan orsaka allt från magbesvär till svår bukspottkörtelinflammation.",
         "da": "Nej. Kalkunskind og anden fed mad fra bordet kan give alt fra dårlig mave til alvorlig betændelse i bugspytkirtlen.",
         "fi": "Ei saa. Kalkkunan nahka ja muut rasvaiset pöytäruoat voivat aiheuttaa mitä tahansa vatsavaivoista vakavaan haimatulehdukseen.",
         "nb": "Nei. Kalkunskinn og annen fet menneskemat kan gi alt fra urolig mage til alvorlig betennelse i bukspyttkjertelen."
@@ -443,7 +443,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8172c7f99703167115e2b8a3fc4a81bcb10c00fc30219bb1f96caede1da97d63"
+      "verified_hash": "ab55cbbad082712df5cec957f891895bceb23bd2abe911381859c31eb06c6714"
     },
     "da": {
       "status": "verified",

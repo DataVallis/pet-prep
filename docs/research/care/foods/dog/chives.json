@@ -65,7 +65,7 @@
     "pl": "Nie. Szczypiorek należy do rodziny czosnkowatych, tak jak cebula i czosnek, i jest toksyczny dla psów. Surowy, gotowany i suszony szczypiorek może uszkadzać czerwone krwinki, a objawy często pojawiają się dopiero po kilku dniach.",
     "cs": "Ne. Pažitka patří stejně jako cibule a česnek mezi cibuloviny (rod Allium) a je pro psy jedovatá. Syrová, tepelně upravená i sušená pažitka může poškodit červené krvinky a příznaky se často objeví až po několika dnech.",
     "hr": "Ne. Vlasac pripada biljkama iz roda Allium, kao luk i češnjak, i otrovan je za pse. Sirov, termički obrađen i sušen vlasac može oštetiti crvene krvne stanice, a znakovi se često pojave tek nakon nekoliko dana.",
-    "sv": "Nej. Gräslök tillhör lökväxterna (Allium), precis som lök och vitlök, och är giftig för hundar. Rå, tillagad och torkad gräslök kan alla skada de röda blodkropparna, och symtomen tar ofta några dagar att visa sig.",
+    "sv": "Nej. Gräslök tillhör lökväxterna (Allium), precis som lök och vitlök, och är giftig för hundar. Gräslök kan skada de röda blodkropparna, oavsett om den är rå, tillagad eller torkad, och symtomen dröjer ofta några dagar.",
     "da": "Nej. Purløg hører ligesom løg og hvidløg til løgplanterne og er giftigt for hunde. Purløg kan skade de røde blodlegemer, uanset om det er råt, tilberedt eller tørret, og symptomerne viser sig ofte først efter nogle dage.",
     "fi": "Ei saa. Ruohosipuli kuuluu sipulin ja valkosipulin tavoin sipulikasveihin, ja se on koirille myrkyllistä. Raaka, kypsennetty ja kuivattu ruohosipuli voivat kaikki vaurioittaa punasoluja, ja oireet ilmaantuvat usein vasta muutaman päivän kuluttua.",
     "nb": "Nei. Gressløk hører til løkplantene (Allium), som løk og hvitløk, og er giftig for hunder. Rå, tilberedt og tørket gressløk kan alle skade de røde blodcellene, og symptomene viser seg ofte først etter noen dager."
@@ -82,7 +82,7 @@
     "pl": "Szczypiorek należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
-    "sv": "Den tillhör lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Dessa växter innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: rå, tillagad, torkad och pulveriserad. Magbesvär kan uppstå vid vilken mängd som helst; större mängder skadar blodet.",
+    "sv": "Den tillhör lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Dessa växter innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: rå, tillagad, torkad och pulveriserad. Magbesvär kan uppstå oavsett mängd; större mängder skadar blodet.",
     "da": "Det hører til løgplanterne (løg, hvidløg, porre, purløg), som er giftige for hunde. Disse planter indeholder stoffer der skader de røde blodlegemer og kan føre til blodmangel (anæmi). Alle dele og alle former er skadelige: rå, tilberedte, tørrede og i pulverform. Dårlig mave kan opstå efter enhver mængde; større mængder skader blodet.",
     "fi": "Ruohosipuli kuuluu sipulikasveihin (sipuli, valkosipuli, purjo, ruohosipuli), jotka ovat koirille myrkyllisiä. Näissä kasveissa on yhdisteitä, jotka vaurioittavat punasoluja ja voivat johtaa anemiaan. Kaikki kasvin osat ja kaikki muodot ovat haitallisia: raaka, kypsennetty, kuivattu ja jauhettu. Vatsavaivoja voi tulla mistä tahansa määrästä; suuremmat määrät vaurioittavat verta.",
     "nb": "Den hører til løkplantene (Allium – løk, hvitløk, purre, gressløk), som er giftige for hunder. Disse plantene inneholder stoffer som skader de røde blodcellene og kan føre til blodmangel (anemi). Alle deler og alle former er skadelige: rå, tilberedt, tørket og som pulver. Urolig mage kan oppstå uansett mengde; større mengder skader blodet."
@@ -245,7 +245,7 @@
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
-        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar.",
+        "sv": "Nej. Gräslök är giftig för hundar i alla former: rå, tillagad, torkad, som pulver och som vätska.",
         "da": "Nej. Rå, tilberedte, tørrede, pulveriserede og flydende former er alle giftige for hunde.",
         "fi": "Ei ole. Raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen muoto ovat kaikki koirille myrkyllisiä.",
         "nb": "Nei. Rå, tilberedte, tørkede, pulveriserte og flytende former er alle giftige for hunder."
@@ -281,7 +281,7 @@
         "pl": "Objawy mogą wystąpić w ciągu 24 godzin, ale częściej pojawiają się po kilku dniach; objawy anemii zwykle rozwijają się kilka dni po zjedzeniu.",
         "cs": "Příznaky mohou začít do 24 hodin, ale častěji se objeví až po několika dnech; známky chudokrevnosti se obvykle rozvinou několik dní po snědení.",
         "hr": "Simptomi se mogu pojaviti unutar 24 sata, ali se češće pojave tek nakon nekoliko dana; znakovi anemije obično se razviju nekoliko dana nakon što pas pojede vlasac.",
-        "sv": "Symtomen kan börja inom 24 timmar men tar oftare några dagar att visa sig; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit.",
+        "sv": "Symtomen kan börja inom 24 timmar, men oftare dröjer det några dagar; tecken på blodbrist utvecklas vanligtvis flera dagar efter att hunden ätit gräslök.",
         "da": "Symptomerne kan begynde inden for 24 timer, men viser sig oftere først efter nogle dage; tegn på blodmangel udvikler sig typisk flere dage efter at hunden har spist det.",
         "fi": "Oireet voivat alkaa 24 tunnin kuluessa, mutta useammin niiden ilmaantuminen kestää muutaman päivän; anemian oireet kehittyvät tyypillisesti useita päiviä syömisen jälkeen.",
         "nb": "Symptomene kan starte innen 24 timer, men viser seg oftere først etter noen dager; tegn på blodmangel kommer vanligvis flere dager etter at hunden har spist."
@@ -431,7 +431,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "2c0cfc48cb7213c3047815278e60a22a0e530f64566f368596915e2c185ee4f5"
+      "verified_hash": "338a81e628ab48c62caafb34f4697c14121031c074442fd3b9d42b557683249d"
     },
     "da": {
       "status": "verified",

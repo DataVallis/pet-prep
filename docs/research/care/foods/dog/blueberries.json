@@ -65,7 +65,7 @@
     "pl": "Tak, z umiarem. Borówki mają mało kalorii i dostarczają błonnika, witaminy C i przeciwutleniaczy, ale powinny być okazjonalnym smakołykiem, a nie stanowić większej części diety psa.",
     "cs": "Ano, s mírou. Borůvky mají málo kalorií a obsahují vlákninu, vitamin C a antioxidanty, ale měly by být spíš občasným pamlskem než velkou součástí psí stravy.",
     "hr": "Da, umjereno. Borovnice imaju malo kalorija, a sadrže vlakna, vitamin C i antioksidanse, ali trebaju biti povremena poslastica, a ne velik dio prehrane tvog psa.",
-    "sv": "Ja, med måtta. Blåbär har få kalorier och ger fibrer, C-vitamin och antioxidanter, men de ska vara en godbit ibland och inte en stor del av hundens kost.",
+    "sv": "Ja, med måtta. Blåbär är kalorisnåla och innehåller fiber, vitamin C och antioxidanter, men de bör vara en godbit ibland, inte en stor del av hundens mat.",
     "da": "Ja, med måde. Blåbær har få kalorier og giver fibre, C-vitamin og antioxidanter, men de bør være en godbid en gang imellem og ikke en stor del af hundens kost.",
     "fi": "Kyllä, kohtuudella. Mustikat ovat vähäkalorisia, ja niissä on kuitua, C-vitamiinia ja antioksidantteja, mutta niiden pitäisi olla satunnainen herkku eikä suuri osa koirasi ruokavaliota.",
     "nb": "Ja, med måte. Blåbær har få kalorier og gir fiber, vitamin C og antioksidanter, men de bør være en godbit av og til og ikke en stor del av hundens kost."
@@ -285,7 +285,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "cf4b9326da4ea385ba217dbfaaffcd3e68db9c75bdf5ceb9a52af885f5a88e3d"
+      "verified_hash": "c072e626af07ebcede1645976ea58de83619c2bb5de2a6adabf03afe41b3b6be"
     },
     "da": {
       "status": "verified",

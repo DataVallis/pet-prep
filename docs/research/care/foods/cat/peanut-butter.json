@@ -65,7 +65,7 @@
     "pl": "Lepiej nie robić z tego zwyczaju. Niektórzy weterynarze uważają, że naturalne masło orzechowe może być okazjonalnym smakołykiem, ale nigdy nie może zawierać ksylitolu, a Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia.",
     "cs": "Raději z toho nedělejte zvyk. Někteří veterináři říkají, že přírodní arašídové máslo může být občasným pamlskem, nikdy však nesmí obsahovat xylitol, a Cats Protection doporučuje dávat místo lidských potravin raději pamlsky pro kočky.",
     "hr": "Bolje da to ne postane navika. Neki veterinari kažu da prirodni maslac od kikirikija može biti povremena poslastica, ali nikad ne smije sadržavati ksilitol, a Cats Protection savjetuje da se umjesto ljudske hrane držiš poslastica za mačke.",
-    "sv": "Gör det helst inte till en vana. Vissa veterinärer menar att naturellt jordnötssmör kan vara en godbit någon gång ibland, men det får aldrig innehålla xylitol, och Cats Protection råder till att hålla sig till kattgodis i stället för människomat.",
+    "sv": "Gör det helst inte till en vana. Vissa veterinärer menar att naturellt jordnötssmör kan vara en godbit någon gång ibland, men det får aldrig innehålla xylitol, och Cats Protection rekommenderar att hålla sig till kattgodis i stället för människomat.",
     "da": "Helst ikke som en fast vane. Nogle dyrlæger mener at naturel peanutbutter kan være en godbid en gang imellem, men den må aldrig indeholde xylitol, og Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad.",
     "fi": "Siitä ei kannata tehdä tapaa. Joidenkin eläinlääkärien mukaan luonnollinen maapähkinävoi voi olla satunnainen herkku, mutta siinä ei saa koskaan olla ksylitolia, ja Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan.",
     "nb": "Det er best å ikke gjøre det til en vane. Noen dyrleger mener at naturlig peanøttsmør kan være en godbit en gang iblant, men det må aldri inneholde xylitol, og Cats Protection anbefaler å holde seg til godbiter for katter i stedet for menneskemat."
@@ -82,7 +82,7 @@
     "pl": "Źródła podają różne informacje. VCA opisuje naturalne masło orzechowe jako smakołyk, który koty uwielbiają, pod warunkiem że nie zawiera konserwantów ani zagrażających życiu dodatków, takich jak ksylitol. Cats Protection radzi trzymać się kocich smakołyków zamiast ludzkiego jedzenia i ostrzega, że orzechy mogą sprawiać kotom problemy. Przyjmujemy surowszą ocenę.",
     "cs": "Zdroje se rozcházejí. VCA popisuje přírodní arašídové máslo jako pamlsek, který kočky milují, pokud neobsahuje konzervanty a život ohrožující přísady, jako je xylitol. Cats Protection doporučuje držet se pamlsků pro kočky místo lidského jídla a varuje, že ořechy mohou kočkám způsobit potíže. Používáme přísnější hodnocení.",
     "hr": "Izvori se ne slažu. VCA opisuje prirodni maslac od kikirikija kao poslasticu koju mačke obožavaju, pod uvjetom da nema konzervansa ni dodataka opasnih po život, kao što je ksilitol. Cats Protection savjetuje držati se poslastica za mačke umjesto ljudske hrane i upozorava da orašasti plodovi mačkama mogu stvarati probleme. Primjenjujemo strožu razinu.",
-    "sv": "Källorna är oense. VCA beskriver naturellt jordnötssmör som en godbit som katter älskar, så länge det är fritt från konserveringsmedel och livsfarliga tillsatser som xylitol. Cats Protection råder till att hålla sig till kattgodis i stället för människomat och varnar för att nötter kan ge katter problem. Vi använder den strängare nivån.",
+    "sv": "Källorna är oense. VCA beskriver naturellt jordnötssmör som en godbit som katter älskar, så länge det är fritt från konserveringsmedel och livsfarliga tillsatser som xylitol. Cats Protection rekommenderar att hålla sig till kattgodis i stället för människomat och varnar för att nötter kan ge katter problem. Vi använder den strängare nivån.",
     "da": "Kilderne er uenige. VCA beskriver naturel peanutbutter som en godbid katte elsker så længe den er fri for konserveringsmidler og livsfarlige tilsætningsstoffer som xylitol. Cats Protection anbefaler at holde sig til kattegodbidder frem for menneskemad og advarer om at nødder kan give katte problemer. Vi bruger det strengere niveau.",
     "fi": "Lähteet ovat eri mieltä. VCA kuvaa luonnollista maapähkinävoita herkuksi, jota kissat rakastavat, kunhan siinä ei ole säilöntäaineita eikä hengenvaarallisia lisäaineita, kuten ksylitolia. Cats Protection neuvoo pysymään kissanherkuissa ihmisten ruokien sijaan ja varoittaa, että pähkinät voivat aiheuttaa kissoille ongelmia. Käytämme tiukempaa luokitusta.",
     "nb": "Kildene er uenige. VCA beskriver naturlig peanøttsmør som en godbit katter elsker, så lenge det er fritt for konserveringsmidler og livsfarlige tilsetninger som xylitol. Cats Protection anbefaler å holde seg til kattegodbiter i stedet for menneskemat og advarer om at nøtter kan skape problemer for katter. Vi bruker det strengere nivået."
@@ -339,7 +339,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "1fa319e9bb79993c93cd5f29c4eddf170a0e0926b953446584ea9529577a437a"
+      "verified_hash": "4d85879a71f4443793f03ad47fb7628babe5192fefd094882739b042f8f0857a"
     },
     "da": {
       "status": "verified",

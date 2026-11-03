@@ -65,7 +65,7 @@
     "pl": "Nie. Cebula jest toksyczna dla psów w każdej postaci: surowa, gotowana, suszona i w proszku. Uszkadza czerwone krwinki i może wywołać anemię, a objawy często pojawiają się dopiero po kilku dniach. Dotyczy to także przypraw i zup w proszku.",
     "cs": "Ne. Cibule je pro psy jedovatá v jakékoli podobě: syrová, tepelně upravená, sušená i v prášku. Poškozuje červené krvinky a může způsobit chudokrevnost (anémii), přičemž příznaky se často objeví až po několika dnech. Platí to i pro koření v prášku a polévkové směsi.",
     "hr": "Ne. Luk je otrovan za pse u svakom obliku: sirov, termički obrađen, sušen ili u prahu. Oštećuje crvene krvne stanice i može izazvati anemiju, a znakovi se često pojave tek nakon nekoliko dana. Opasni su i proizvodi u prahu te mješavine za juhu.",
-    "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Lökpulver och soppmixar räknas också.",
+    "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad eller i pulverform. Den skadar de röda blodkropparna och kan orsaka blodbrist (anemi), och symtomen visar sig ofta först efter några dagar. Det gäller även lökpulver och soppmixer.",
     "da": "Nej. Løg er giftigt for hunde i alle former: rå, tilberedt, tørret eller som pulver. Det skader de røde blodlegemer og kan give blodmangel (anæmi), og symptomerne viser sig ofte først efter flere dage. Løgpulver og suppeblandinger tæller også med.",
     "fi": "Ei saa. Sipuli on koiralle myrkyllistä kaikissa muodoissa: raakana, kypsennettynä, kuivattuna tai jauheena. Se vaurioittaa punasoluja ja voi aiheuttaa anemiaa, ja oireet ilmaantuvat usein vasta päivien kuluttua. Myös sipulijauhe ja pussikeitot kuuluvat tähän.",
     "nb": "Nei. Løk er giftig for hunder i alle former: rå, tilberedt, tørket eller som pulver. Den skader de røde blodcellene og kan gi blodmangel (anemi), og symptomene viser seg ofte først etter noen dager. Pulver og suppemikser teller også."
@@ -82,7 +82,7 @@
     "pl": "Cebula należy do rodziny czosnkowatych (cebula, czosnek, por, szczypiorek), toksycznej dla psów. Te rośliny zawierają związki, które uszkadzają czerwone krwinki i mogą prowadzić do anemii. Szkodliwe są wszystkie części i wszystkie postacie: surowa, gotowana, suszona i w proszku. Dolegliwości żołądkowe mogą wystąpić po każdej ilości; większe ilości uszkadzają krew.",
     "cs": "Patří mezi cibuloviny (rod Allium: cibule, česnek, pórek, pažitka), které jsou pro psy jedovaté. Tyto rostliny obsahují látky, které poškozují červené krvinky a mohou vést k chudokrevnosti (anémii). Škodlivé jsou všechny části a všechny podoby: syrová, tepelně upravená, sušená i v prášku. Podrážděný žaludek může způsobit jakékoli množství; větší množství poškozuje krev.",
     "hr": "Pripada biljkama iz roda Allium (luk, češnjak, poriluk, vlasac), koje su otrovne za pse. Te biljke sadrže spojeve koji oštećuju crvene krvne stanice i mogu dovesti do anemije. Štetni su svi dijelovi i svi oblici: sirovi, termički obrađeni, sušeni i u prahu. Probavne tegobe mogu se pojaviti nakon bilo koje količine, a veće količine oštećuju krv.",
-    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå efter vilken mängd som helst; större mängder skadar blodet.",
+    "sv": "Den hör till lökväxterna (lök, vitlök, purjolök, gräslök), som är giftiga för hundar. Växterna innehåller ämnen som skadar de röda blodkropparna och kan leda till blodbrist (anemi). Alla delar och alla former är skadliga: råa, tillagade, torkade och i pulverform. Magbesvär kan uppstå oavsett mängd; större mängder skadar blodet.",
     "da": "Løg hører til løgplanterne (løg, hvidløg, porre, purløg), som er giftige for hunde. Planterne indeholder stoffer der skader de røde blodlegemer og kan føre til blodmangel (anæmi). Alle dele og alle former er skadelige: rå, tilberedte, tørrede og i pulverform. Maveproblemer kan opstå ved enhver mængde; større mængder skader blodet.",
     "fi": "Sipuli kuuluu sipulikasveihin (sipuli, valkosipuli, purjo, ruohosipuli), jotka ovat koiralle myrkyllisiä. Näissä kasveissa on yhdisteitä, jotka vaurioittavat punasoluja ja voivat johtaa anemiaan. Kaikki osat ja kaikki muodot ovat haitallisia: raaka, kypsennetty, kuivattu ja jauhettu sipuli. Vatsavaivoja voi aiheuttaa mikä tahansa määrä; suuremmat määrät vaurioittavat verta.",
     "nb": "Løk hører til løkplantene (Allium – løk, hvitløk, purre, gressløk), som er giftige for hunder. Disse plantene inneholder stoffer som skader de røde blodcellene og kan føre til blodmangel (anemi). Alle deler og alle former er skadelige: rå, tilberedt, tørket og som pulver. Urolig mage kan oppstå uansett mengde; større mengder skader blodet."
@@ -245,7 +245,7 @@
         "pl": "Nie. Postać surowa, gotowana, suszona, w proszku i płynna – wszystkie są trujące dla psów.",
         "cs": "Ne. Syrová, tepelně upravená, sušená, prášková i tekutá podoba je pro psy jedovatá.",
         "hr": "Nije. Otrovan je za pse u svakom obliku: sirov, termički obrađen, sušen, u prahu i u tekućem obliku.",
-        "sv": "Nej. Råa, tillagade, torkade, pulveriserade och flytande former är alla giftiga för hundar.",
+        "sv": "Nej. Lök är giftig för hundar i alla former: rå, tillagad, torkad, som pulver och som vätska.",
         "da": "Nej. Alle former er giftige for hunde: rå, tilberedte, tørrede, i pulverform og flydende.",
         "fi": "Ei ole. Kaikki muodot ovat koiralle myrkyllisiä: raaka, kypsennetty, kuivattu, jauhettu ja nestemäinen.",
         "nb": "Nei. Rå, tilberedte, tørkede, pulveriserte og flytende former er alle giftige for hunder."
@@ -436,7 +436,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "8032c244bc39a10305f9322cd0de4e72afcd062096082f0a90bb28b3be80f263"
+      "verified_hash": "3f3158defac2ff86c015ca84af053f5b34837cd9ca3ba7668d6dee7932b3bea6"
     },
     "da": {
       "status": "verified",

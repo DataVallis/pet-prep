@@ -82,7 +82,7 @@
     "pl": "RSPCA Australia podaje, że ryby takie jak sardynki z puszki w wodzie źródlanej można dawać jako okazjonalny smakołyk, uważając na ości, ale nie nadają się na główną część diety. Cats Protection radzi, by ryba była dobrze ugotowana, bez ości i podawana tylko po kilka kawałków naraz.",
     "cs": "Podle RSPCA Australia lze ryby, jako jsou sardinky z konzervy v pramenité vodě, nabízet jako občasný pamlsek, je však třeba dávat pozor na kosti, a jako hlavní složka stravy nejsou vhodné. Cats Protection doporučuje, aby ryby byly řádně tepelně upravené, zbavené kostí a podávané vždy jen po několika kouscích.",
     "hr": "RSPCA Australia navodi da se riba poput srdela iz konzerve u izvorskoj vodi može ponuditi kao povremena poslastica, uz oprez zbog kostiju, ali da nije prikladna kao glavni dio prehrane. Cats Protection savjetuje da riba bude dobro termički obrađena i bez kostiju te da se daje samo nekoliko komadića odjednom.",
-    "sv": "RSPCA Australia skriver att fisk som konserverade sardiner i vatten kan ges som en godbit ibland, med försiktighet kring benen, men passar inte som huvuddel av kosten. Cats Protection råder att fisk ska vara ordentligt tillagad och benfri och att katten bara ska få några bitar åt gången.",
+    "sv": "RSPCA Australia skriver att fisk som konserverade sardiner i vatten kan ges som en godbit ibland, men att man ska vara försiktig med benen och att de inte passar som huvuddel av kosten. Cats Protection rekommenderar att fisk ska vara ordentligt tillagad och benfri och att katten bara ska få några bitar åt gången.",
     "da": "Ifølge RSPCA Australia kan fisk som sardiner på dåse i vand gives som en godbid en gang imellem hvis man passer på benene, men de egner sig ikke som hoveddelen af kosten. Cats Protection anbefaler at fisk er ordentligt tilberedt og uden ben og kun gives et par stykker ad gangen.",
     "fi": "RSPCA Australian mukaan kalaa, kuten lähdeveteen säilöttyjä purkkisardiineja, voi tarjota satunnaisena herkkuna ruotoja varoen, mutta se ei sovi ruokavalion pääosaksi. Cats Protection neuvoo, että kala kypsennetään kunnolla, ruodot poistetaan ja kerrallaan annetaan vain muutama pala.",
     "nb": "RSPCA Australia skriver at fisk som hermetiske sardiner i kildevann kan gis som en godbit en gang iblant, med forsiktighet når det gjelder bein, men at de ikke passer som hoveddelen av kostholdet. Cats Protection anbefaler at fisk er ordentlig tilberedt og uten bein, og at katten bare får noen få biter om gangen."
@@ -224,7 +224,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "6087978c30d095b1ab399b931ecb332d659d819abbdc321b85f4da939479712d"
+      "verified_hash": "b9df932f66a7cba55c67de105389eb0f5beda38fb55c004d6c852107962c1cf2"
     },
     "da": {
       "status": "verified",

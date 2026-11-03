@@ -65,7 +65,7 @@
     "pl": "Lepiej nie. Surowe jajka mogą przenosić bakterie, takie jak Salmonella, które mogą zaszkodzić zarówno psom, jak i domownikom, a surowe białko jaja może zaburzać przyswajanie jednej z witamin. Zanim podzielisz się jajkami, dobrze je ugotuj.",
     "cs": "Ne, raději ne. Syrová vejce mohou obsahovat bakterie, například salmonelu, které mohou uškodit psům i lidem kolem nich, a syrový bílek může blokovat jeden z vitaminů. Vejce před podáním důkladně tepelně upravte.",
     "hr": "Ne, bolje ne. Sirova jaja mogu sadržavati bakterije poput salmonele, koje mogu naštetiti psima i ljudima oko njih, a sirovi bjelanjak može ometati iskorištavanje jednog vitamina. Jaja prije nego što ih podijeliš s psom potpuno termički obradi.",
-    "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen helt innan du delar med dig.",
+    "sv": "Nej, helst inte. Råa ägg kan bära på bakterier som salmonella, som kan skada både hundar och människorna omkring dem, och rå äggvita kan störa upptaget av ett vitamin. Tillaga äggen ordentligt innan du delar med dig.",
     "da": "Nej, det er bedst at lade være. Rå æg kan indeholde bakterier som salmonella, der kan skade både hunde og menneskerne omkring dem, og rå æggehvide kan påvirke optagelsen af et vitamin. Tilbered æggene helt før du deler dem.",
     "fi": "Ei, parempi olla antamatta. Raaoissa kananmunissa voi olla bakteereja, kuten salmonellaa, jotka voivat olla haitallisia koirille ja niiden lähellä oleville ihmisille, ja raaka munanvalkuainen voi häiritä erään vitamiinin imeytymistä. Kypsennä kananmunat kunnolla ennen kuin jaat niitä.",
     "nb": "Nei, det er best å la være. Rå egg kan inneholde bakterier som salmonella, som kan skade både hunder og menneskene rundt dem, og rå eggehvite kan hindre opptaket av et vitamin. Sørg for at eggene er helt tilberedt før du deler dem."
@@ -191,7 +191,7 @@
     "pl": "Jeśli twój pies zlizał surowe jajko, przez kolejne dni obserwuj, czy nie pojawiają się wymioty, biegunka lub osłabienie, i zadzwoń do weterynarza, jeśli wymioty lub biegunka są silne albo nie ustępują. Umyj ręce i dokładnie posprzątaj.",
     "cs": "Pokud váš pes olízal syrové vejce, sledujte v následujících dnech, zda nezvrací, nemá průjem nebo není malátný, a pokud je zvracení nebo průjem silný nebo neustává, zavolejte veterináři. Umyjte si ruce a vše důkladně ukliďte.",
     "hr": "Ako je tvoj pas polizao sirovo jaje, sljedećih dana prati pojavljuju li se povraćanje, proljev ili bezvoljnost i nazovi veterinara ako su povraćanje ili proljev jaki ili ne prestaju. Operi ruke i dobro očisti prostor.",
-    "sv": "Om hunden slickat i sig ett rått ägg, håll utkik efter kräkningar, diarré eller orkeslöshet de närmaste dagarna och ring veterinären om kräkningarna eller diarrén är svåra eller inte går över. Tvätta händerna och städa noga.",
+    "sv": "Om hunden har slickat i sig ett rått ägg, håll utkik efter kräkningar, diarré eller orkeslöshet de närmaste dagarna och ring veterinären om kräkningarna eller diarrén är kraftiga eller inte går över. Tvätta händerna och städa noga.",
     "da": "Hvis din hund har slikket et råt æg op, så hold øje med opkast, diarré eller lavt energiniveau de næste dage, og kontakt din dyrlæge hvis opkastet eller diarréen er voldsom eller ikke holder op. Vask hænder, og gør grundigt rent.",
     "fi": "Jos koirasi nuoli raakaa kananmunaa, seuraa seuraavina päivinä, tuleeko oksentelua, ripulia tai voimattomuutta, ja soita eläinlääkärille, jos oksentelu tai ripuli on voimakasta tai ei lopu. Pese kätesi ja siivoa huolellisesti.",
     "nb": "Hvis hunden har slikket i seg et rått egg, må du følge med på oppkast, diaré eller lite energi de neste dagene og ringe dyrlegen hvis oppkastet eller diaréen er kraftig eller ikke går over. Vask hendene og gjør godt rent."
@@ -208,7 +208,7 @@
     "pl": "Podawaj jajko dobrze ugotowane (na twardo lub jako jajecznicę), zwykłe, bez oleju, masła, soli i przypraw.",
     "cs": "Vejce důkladně tepelně upravte (natvrdo uvařené nebo míchané), bez přísad, bez oleje, másla, soli a koření.",
     "hr": "Jaje potpuno termički obradi (tvrdo kuhano ili kajgana), bez ulja, maslaca, soli i začina.",
-    "sv": "Tillaga ägget helt (hårdkokt eller som äggröra), naturellt, utan olja, smör, salt eller kryddor.",
+    "sv": "Tillaga ägget ordentligt (hårdkokt eller som äggröra), utan olja, smör, salt eller kryddor.",
     "da": "Tilbered ægget helt (hårdkogt eller røræg), og server det uden olie, smør, salt eller krydderier.",
     "fi": "Kypsennä kananmuna kunnolla (kovaksi keitettynä tai munakokkelina), pelkkänä, ilman öljyä, voita, suolaa tai mausteita.",
     "nb": "Tilbered egget helt (hardkokt eller som eggerøre), uten noe tilsatt – ingen olje, smør, salt eller krydder."
@@ -383,7 +383,7 @@
     "sv": {
       "status": "verified",
       "verified_by": "claude-verifier",
-      "verified_hash": "3193da36d2bd13e55f2a4ecd70fe68887a93e66e586f837200a6c16cfba9ca95"
+      "verified_hash": "7756bec487c6c9d3af036c993044999caedbaf0bb4915830b8698f0d0db51353"
     },
     "da": {
       "status": "verified",
