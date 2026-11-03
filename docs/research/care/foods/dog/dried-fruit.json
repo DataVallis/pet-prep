@@ -4,28 +4,33 @@
   "name": {
     "en": "Dried fruit",
     "sl": "Suho sadje",
-    "de": "Trockenfrüchte"
+    "de": "Trockenfrüchte",
+    "fr": "Fruits secs"
   },
   "question": {
     "en": "Can dogs eat dried fruit?",
     "sl": "Ali lahko psi jedo suho sadje?",
-    "de": "Dürfen Hunde Trockenfrüchte fressen?"
+    "de": "Dürfen Hunde Trockenfrüchte fressen?",
+    "fr": "Les chiens peuvent-ils manger des fruits secs ?"
   },
   "url_slug": {
     "en": "dried-fruit",
     "sl": "suho-sadje",
-    "de": "trockenfruechte"
+    "de": "trockenfruechte",
+    "fr": "fruits-secs"
   },
   "level": "toxic",
   "answer": {
     "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
     "sl": "Odvisno od sadja, mešanice pa so tvegane. Rozine, sultanine in korinte so posušeno grozdje in so za pse strupene, tudi v zelo majhnih količinah. Drugo suho sadje, na primer fige in breskve, ima lahko veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico.",
-    "de": "Das hängt von der Frucht ab, und Mischungen sind riskant. Rosinen, Sultaninen und Korinthen sind getrocknete Weintrauben und für Hunde giftig, schon in sehr kleinen Mengen. Andere Trockenfrüchte wie Feigen und Pfirsiche können viel Zucker enthalten, und getrocknete Datteln haben noch ihren Kern."
+    "de": "Das hängt von der Frucht ab, und Mischungen sind riskant. Rosinen, Sultaninen und Korinthen sind getrocknete Weintrauben und für Hunde giftig, schon in sehr kleinen Mengen. Andere Trockenfrüchte wie Feigen und Pfirsiche können viel Zucker enthalten, und getrocknete Datteln haben noch ihren Kern.",
+    "fr": "Cela dépend du fruit, et les mélanges sont risqués. Le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont des raisins séchés toxiques pour les chiens, même en toute petite quantité. Les autres fruits secs, comme les figues et les pêches, peuvent être riches en sucre, et les dattes séchées contiennent encore leur noyau."
   },
   "why": {
     "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
     "sl": "Grozdje, rozine, sultanine in korinte so za pse lahko strupeni; ni mogoče vedeti, ali bo pes hudo zbolel, in nekateri psi zbolijo že po zelo majhnih količinah, zlasti posušenih. Suhe brusnice so včasih pomešane z rozinami. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda, sušene breskve pa pogosto vsebujejo preveč sladkorja. Ker se v mešanici suhega sadja lahko skrivajo rozine, pri katerih je treba takoj k veterinarju, uporabljamo strožjo stopnjo in suho sadje na splošno, tako kot rozine, uvrščamo med strupena živila.",
-    "de": "Weintrauben, Rosinen, Sultaninen und Korinthen sind für Hunde alle potenziell giftig; es lässt sich nicht vorhersagen, ob ein Hund schwer betroffen sein wird, und manche Hunde erkranken schon nach sehr kleinen Mengen, besonders bei getrockneten Früchten. Getrocknete Cranberrys werden manchmal mit Rosinen gemischt. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil das Wasser entzogen wurde, und getrocknete Pfirsiche enthalten oft zu viel Zucker. Weil eine Trockenfruchtmischung Rosinen verbergen kann, bei denen man sofort zum Tierarzt muss, wählen wir die strengere Stufe und stufen Trockenfrüchte insgesamt wie Rosinen als giftig ein."
+    "de": "Weintrauben, Rosinen, Sultaninen und Korinthen sind für Hunde alle potenziell giftig; es lässt sich nicht vorhersagen, ob ein Hund schwer betroffen sein wird, und manche Hunde erkranken schon nach sehr kleinen Mengen, besonders bei getrockneten Früchten. Getrocknete Cranberrys werden manchmal mit Rosinen gemischt. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil das Wasser entzogen wurde, und getrocknete Pfirsiche enthalten oft zu viel Zucker. Weil eine Trockenfruchtmischung Rosinen verbergen kann, bei denen man sofort zum Tierarzt muss, wählen wir die strengere Stufe und stufen Trockenfrüchte insgesamt wie Rosinen als giftig ein.",
+    "fr": "Le raisin, le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont tous potentiellement toxiques pour les chiens ; impossible de savoir si un chien sera gravement touché, et certains tombent malades après de très petites quantités, surtout de fruits secs. Les canneberges séchées sont parfois vendues mélangées à des raisins secs. Les figues séchées contiennent beaucoup plus de sucre concentré, car l’eau a été retirée, et les pêches déshydratées contiennent souvent trop de sucre. Comme un mélange de fruits secs peut cacher des raisins secs, qui exigent de consulter un vétérinaire sans attendre, nous retenons le niveau le plus strict et classons les fruits secs comme toxiques dans l’ensemble, au même titre que le raisin sec."
   },
   "signs": {
     "en": [
@@ -51,42 +56,56 @@
       "Blut im Kot",
       "Müdigkeit",
       "Appetitlosigkeit"
+    ],
+    "fr": [
+      "Vomissements",
+      "Diarrhée",
+      "Douleurs au ventre",
+      "Sang dans les selles",
+      "Manque d’énergie",
+      "Perte d’appétit"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate raisins, sultanas, currants or a dried fruit mix that may contain them, contact your vet immediately. Don't wait for signs.",
     "sl": "Če je pes pojedel rozine, sultanine, korinte ali mešanico suhega sadja, ki jih morda vsebuje, takoj pokličite veterinarja. Ne čakajte na znake.",
-    "de": "Hat Ihr Hund Rosinen, Sultaninen, Korinthen oder eine Trockenfruchtmischung gefressen, in der sie stecken könnten, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht auf Anzeichen."
+    "de": "Hat Ihr Hund Rosinen, Sultaninen, Korinthen oder eine Trockenfruchtmischung gefressen, in der sie stecken könnten, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht auf Anzeichen.",
+    "fr": "Si votre chien a mangé des raisins secs, des raisins de Smyrne, des raisins de Corinthe ou un mélange de fruits secs qui peut en contenir, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition des signes."
   },
   "serving": null,
   "child": {
     "en": "Dried fruit like raisins is not for dogs. Keep snack mixes away from your dog and tell a grown-up if it eats some.",
     "sl": "Suho sadje, kot so rozine, ni za pse. Mešanice prigrizkov drži stran od psa in povej odraslemu, če jih pes poje.",
-    "de": "Trockenfrüchte wie Rosinen sind nichts für Hunde. Halte Snackmischungen von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn er welche frisst."
+    "de": "Trockenfrüchte wie Rosinen sind nichts für Hunde. Halte Snackmischungen von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn er welche frisst.",
+    "fr": "Les fruits secs, comme les raisins secs, ne sont pas pour les chiens. Garde les mélanges à grignoter loin de lui, et préviens un adulte s’il en mange."
   },
   "faq": [
     {
       "q": {
         "en": "Which foods hide dried grapes?",
         "sl": "V kateri hrani se skriva posušeno grozdje?",
-        "de": "In welchen Lebensmitteln stecken getrocknete Weintrauben?"
+        "de": "In welchen Lebensmitteln stecken getrocknete Weintrauben?",
+        "fr": "Dans quels aliments trouve-t-on du raisin séché ?"
       },
       "a": {
         "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
         "sl": "Rozine, sultanine in korinte so pogosto v hrani, kot so božični kolač, velikonočne žemlje in piškoti, suhe brusnice pa so včasih pomešane z rozinami.",
-        "de": "Rosinen, Sultaninen und Korinthen stecken oft in Lebensmitteln wie Weihnachtskuchen, Hot Cross Buns (britischen Rosinenbrötchen) und Keksen, und getrocknete Cranberrys sind manchmal mit Rosinen gemischt."
+        "de": "Rosinen, Sultaninen und Korinthen stecken oft in Lebensmitteln wie Weihnachtskuchen, Hot Cross Buns (britischen Rosinenbrötchen) und Keksen, und getrocknete Cranberrys sind manchmal mit Rosinen gemischt.",
+        "fr": "Le raisin sec, le raisin de Smyrne et le raisin de Corinthe se cachent souvent dans des aliments comme le gâteau de Noël aux fruits, les brioches de Pâques (hot cross buns) et les cookies, et les canneberges séchées sont parfois mélangées à des raisins secs."
       }
     },
     {
       "q": {
         "en": "Are other dried fruits safe?",
         "sl": "Je drugo suho sadje varno?",
-        "de": "Sind andere Trockenfrüchte unbedenklich?"
+        "de": "Sind andere Trockenfrüchte unbedenklich?",
+        "fr": "Les autres fruits secs sont-ils sans danger ?"
       },
       "a": {
         "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
         "sl": "Ne kot reden priboljšek. Suhe fige in sušene breskve imajo veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico, ki jo je treba odstraniti.",
-        "de": "Nicht als regelmäßiges Leckerli. Getrocknete Feigen und Pfirsiche enthalten viel Zucker, und getrocknete Datteln haben noch einen Kern, der entfernt werden muss."
+        "de": "Nicht als regelmäßiges Leckerli. Getrocknete Feigen und Pfirsiche enthalten viel Zucker, und getrocknete Datteln haben noch einen Kern, der entfernt werden muss.",
+        "fr": "Pas comme friandise habituelle. Les figues séchées et les pêches déshydratées sont riches en sucre, et les dattes séchées contiennent encore un noyau qu’il faut retirer."
       }
     }
   ],
@@ -191,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "baf272a8722ed6dc9c95c736e807b59f4466e6e2583a1c5516d7b33a3c018e70"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d861fce6d30eeb706906427a4d7c47f94496f00ddf2b8dd7e442e60c62bcd57a"
     }
   }
 }

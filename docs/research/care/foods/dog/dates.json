@@ -4,80 +4,94 @@
   "name": {
     "en": "Dates",
     "sl": "Datlji",
-    "de": "Datteln"
+    "de": "Datteln",
+    "fr": "Dattes"
   },
   "question": {
     "en": "Can dogs eat dates?",
     "sl": "Ali lahko psi jedo datlje?",
-    "de": "Dürfen Hunde Datteln fressen?"
+    "de": "Dürfen Hunde Datteln fressen?",
+    "fr": "Les chiens peuvent-ils manger des dattes ?"
   },
   "url_slug": {
     "en": "dates",
     "sl": "datlji",
-    "de": "datteln"
+    "de": "datteln",
+    "fr": "dattes"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can eat dates in moderation, as an occasional treat. Always remove the pit first, because it is a choking hazard, and give small pieces rather than the whole fruit. Dates are high in sugar and fibre, so too many can upset the stomach.",
     "sl": "Da, psi lahko zmerno jedo datlje kot občasen priboljšek. Vedno najprej odstranite koščico, ker lahko povzroči dušenje, in dajajte majhne koščke, ne celega sadeža. Datlji vsebujejo veliko sladkorja in vlaknin, zato lahko preveč datljev razburi želodec.",
-    "de": "Ja, in Maßen: Als gelegentliches Leckerli dürfen Hunde Datteln fressen. Entfernen Sie immer zuerst den Kern, denn er stellt eine Erstickungsgefahr dar, und geben Sie kleine Stücke statt der ganzen Frucht. Datteln enthalten viel Zucker und Ballaststoffe, deshalb können zu viele den Magen verstimmen."
+    "de": "Ja, in Maßen: Als gelegentliches Leckerli dürfen Hunde Datteln fressen. Entfernen Sie immer zuerst den Kern, denn er stellt eine Erstickungsgefahr dar, und geben Sie kleine Stücke statt der ganzen Frucht. Datteln enthalten viel Zucker und Ballaststoffe, deshalb können zu viele den Magen verstimmen.",
+    "fr": "Oui, avec modération, comme friandise occasionnelle. Retirez toujours le noyau avant, car il présente un risque d’étouffement, et donnez de petits morceaux plutôt que le fruit entier. Les dattes sont riches en sucre et en fibres : en manger trop peut donc irriter l’estomac."
   },
   "why": {
     "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
     "sl": "Datlji niso zelo strupeni kot grozdje, a naj ne bodo vsakdanji priboljšek. Koščica ni strupena, lahko pa povzroči dušenje in, če jo pes pogoltne, zaporo črevesja. Datlji imajo veliko sladkorja in kalorij, kar lahko ob prekomernem hranjenju hitro poveča telesno težo, veliko vlaknin pa lahko povzroči drisko ali zaprtje.",
-    "de": "Datteln sind nicht hochgiftig wie Weintrauben, sollten aber nicht zu den Standard-Leckerli gehören. Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird. Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und ihr hoher Ballaststoffgehalt kann zu Durchfall oder Verstopfung führen."
+    "de": "Datteln sind nicht hochgiftig wie Weintrauben, sollten aber nicht zu den Standard-Leckerli gehören. Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird. Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und ihr hoher Ballaststoffgehalt kann zu Durchfall oder Verstopfung führen.",
+    "fr": "Les dattes ne sont pas aussi toxiques que le raisin, mais elles ne doivent pas devenir une friandise courante. Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé. Les dattes sont riches en sucre et en calories, ce qui fait vite grossir un chien suralimenté, et leur forte teneur en fibres peut causer de la diarrhée ou de la constipation."
   },
   "signs": null,
   "what_to_do": {
     "en": "Ask your vet before you start giving dates. After your dog has eaten some, watch for vomiting, diarrhoea or constipation.",
     "sl": "Preden psu začnete dajati datlje, se posvetujte z veterinarjem. Ko jih pes poje, bodite pozorni na bruhanje, drisko ali zaprtje.",
-    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Datteln füttern. Beobachten Sie Ihren Hund, nachdem er welche gefressen hat, auf Erbrechen, Durchfall oder Verstopfung."
+    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Datteln füttern. Beobachten Sie Ihren Hund, nachdem er welche gefressen hat, auf Erbrechen, Durchfall oder Verstopfung.",
+    "fr": "Demandez conseil à votre vétérinaire avant de commencer à donner des dattes à votre chien. Une fois que votre chien en a mangé, surveillez l’apparition de vomissements, de diarrhée ou de constipation."
   },
   "serving": {
     "en": "Pit removed, cut into small pieces, as an occasional treat only.",
     "sl": "Brez koščice, narezani na majhne koščke, le kot občasen priboljšek.",
-    "de": "Ohne Kern, in kleine Stücke geschnitten, nur als gelegentliches Leckerli."
+    "de": "Ohne Kern, in kleine Stücke geschnitten, nur als gelegentliches Leckerli.",
+    "fr": "Sans noyau, coupées en petits morceaux, uniquement en friandise occasionnelle."
   },
   "child": {
     "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
     "sl": "Psi lahko včasih dobijo majhen košček datlja. Odrasli najprej odstrani trdo koščico.",
-    "de": "Hunde dürfen manchmal ein kleines Stück Dattel haben. Ein Erwachsener nimmt vorher den harten Kern heraus."
+    "de": "Hunde dürfen manchmal ein kleines Stück Dattel haben. Ein Erwachsener nimmt vorher den harten Kern heraus.",
+    "fr": "Les chiens peuvent parfois manger un petit morceau de datte. Un adulte retire d’abord le noyau dur."
   },
   "faq": [
     {
       "q": {
         "en": "Is a date pit poisonous to dogs?",
         "sl": "Je koščica datlja za pse strupena?",
-        "de": "Ist ein Dattelkern für Hunde giftig?"
+        "de": "Ist ein Dattelkern für Hunde giftig?",
+        "fr": "Le noyau de datte est-il toxique pour les chiens ?"
       },
       "a": {
         "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
         "sl": "Koščica ni strupena, lahko pa povzroči dušenje in, če jo pes pogoltne, zaporo črevesja, zato jo vedno odstranite.",
-        "de": "Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird – entfernen Sie ihn also immer."
+        "de": "Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird – entfernen Sie ihn also immer.",
+        "fr": "Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé : retirez-le donc toujours."
       }
     },
     {
       "q": {
         "en": "Why only a little?",
         "sl": "Zakaj le malo?",
-        "de": "Warum nur ein bisschen?"
+        "de": "Warum nur ein bisschen?",
+        "fr": "Pourquoi seulement un peu ?"
       },
       "a": {
         "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
         "sl": "Datlji imajo veliko kalorij in sladkorja, kar lahko ob prekomernem hranjenju hitro poveča težo, preveč sladkorja pa lahko psa pusti oslabelega in žejnega.",
-        "de": "Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und zu viel Zucker kann einen Hund kraftlos machen und starken Durst auslösen."
+        "de": "Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und zu viel Zucker kann einen Hund kraftlos machen und starken Durst auslösen.",
+        "fr": "Les dattes sont riches en calories et en sucre, ce qui fait vite grossir un chien suralimenté, et trop de sucre peut le laisser sans force et très assoiffé."
       }
     },
     {
       "q": {
         "en": "Are dried dates okay?",
         "sl": "So suhi datlji v redu?",
-        "de": "Sind getrocknete Datteln in Ordnung?"
+        "de": "Sind getrocknete Datteln in Ordnung?",
+        "fr": "Les dattes séchées conviennent-elles ?"
       },
       "a": {
         "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
         "sl": "Suhi datlji imajo več sladkorja in kalorij in še vedno vsebujejo trdo koščico, zato jo odstranite, preden psu daste majhen košček.",
-        "de": "Getrocknete Datteln enthalten noch mehr Zucker und Kalorien und haben ihren harten Kern noch – entfernen Sie ihn, bevor Sie ein kleines Stück abgeben."
+        "de": "Getrocknete Datteln enthalten noch mehr Zucker und Kalorien und haben ihren harten Kern noch – entfernen Sie ihn, bevor Sie ein kleines Stück abgeben.",
+        "fr": "Les dattes séchées contiennent encore plus de sucre et de calories, et elles ont toujours leur noyau dur : retirez-le avant de donner un petit morceau."
       }
     }
   ],
@@ -185,6 +199,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5a58917eac892e1b2cf80dc442864fdf75518d455be53318ebda42b0d1312ed8"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7cc7cefe64452fa806a31df875656a2df252a04be06fc5d1470d7e3f5f6e6404"
     }
   }
 }
