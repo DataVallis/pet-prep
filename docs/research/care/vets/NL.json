@@ -91,6 +91,41 @@
       "name": "Ameland-site.nl - Dierenarts",
       "url": "https://www.ameland-site.nl/artsen-hulpmiddelen-zorg-dierenarts",
       "note": "Island information site (not clinic own site); H. Schols, Nes."
+    },
+    {
+      "name": "Dierenkliniek ABC voor Dieren",
+      "url": "https://www.abcvoordieren.nl/de-kliniek",
+      "note": "Own site, contact and kliniek pages (Amersfoort)."
+    },
+    {
+      "name": "Dierenkliniek Zielhorst",
+      "url": "https://dierenkliniekzielhorst.nl/",
+      "note": "Own site (Amersfoort)."
+    },
+    {
+      "name": "Dierenartsen Bosweide",
+      "url": "https://www.bosweidedierenartsen.nl/contact",
+      "note": "Own site (Bennekom), 24/7 phone wording."
+    },
+    {
+      "name": "Dierenkliniek De Aam",
+      "url": "https://www.dierenkliniekdeaam.nl/",
+      "note": "Own site (Nijmegen region), 24/7 spoed number."
+    },
+    {
+      "name": "Dierenartspraktijk Geesteren en Almelo",
+      "url": "https://www.dierenartspraktijkgeesteren.nl/dierenartspraktijk-geesteren-ov",
+      "note": "Own site, 24/7 spoedlijn."
+    },
+    {
+      "name": "Mijn Dierenarts Arnhem",
+      "url": "https://www.mijndierenartsarnhem.nl/contactgegevens/contact",
+      "note": "Own site, three Arnhem-area locations."
+    },
+    {
+      "name": "Dijkstra Dierenkliniek",
+      "url": "https://www.dijkstradierenkliniek.nl/spoed/",
+      "note": "Own site spoed page (Arnhem Schuytgraaf)."
     }
   ],
   "entries": [
@@ -1117,7 +1152,200 @@
       "checked": "2026-11-03",
       "note": "Outside hours the answering machine names the on-duty vet; page lists clinics in the Gezelschapsdieren Spoeddienst Twente. No 24-h wording.",
       "quote": "Buiten openingstijden hoort u op ons antwoordapparaat hoe u in contact kunt komen met de dienstdoende dierenarts."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek ABC voor Dieren",
+      "city": "Amersfoort",
+      "region": "Utrecht",
+      "address": "Ringweg Kruiskamp 68, 3814 TE Amersfoort",
+      "phone": "033-4721827",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.abcvoordieren.nl/",
+      "source_url": "https://www.abcvoordieren.nl/de-kliniek",
+      "checked": "2026-11-03",
+      "note": "Mon-Fri 08:30-17:00. Outside hours the page refers emergencies to Evidensia Dierenziekenhuis Nieuwegein, 030-2027070. No 24-h wording.",
+      "quote": "Voor spoedgevallen maken we altijd ruimte!"
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Zielhorst",
+      "city": "Amersfoort",
+      "region": "Utrecht",
+      "address": "Trombonestraat 121, 3822 CW Amersfoort",
+      "phone": "033-4553013",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://dierenkliniekzielhorst.nl/",
+      "source_url": "https://dierenkliniekzielhorst.nl/",
+      "checked": "2026-11-03",
+      "note": "Mon/Wed/Fri 09:00-19:00, Tue/Thu 09:00-17:00. Outside hours calls are connected to Spoedkliniek Gezelschapsdieren Midden Nederland (Yalelaan 108, Utrecht), 0900-2223000. No 24-h wording.",
+      "quote": "Buiten deze uren verbinden we u door met Spoedkliniek Gezelschapsdieren Midden Nederland"
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Keistad",
+      "city": "Amersfoort",
+      "region": "Utrecht",
+      "address": "Van Bemmelstraat 1, 3818 PA Amersfoort",
+      "phone": "033-2864772",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dierenkliniek-keistad.nl/",
+      "source_url": "https://www.dierenkliniek-keistad.nl/",
+      "checked": "2026-11-03",
+      "note": "By appointment only; has a separate Spoed page that was not opened. No 24-h wording on the opened page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenarts Hoogland",
+      "city": "Hoogland (Amersfoort)",
+      "region": "Utrecht",
+      "address": "Zevenhuizerstraat 118a, Hoogland",
+      "phone": "033-4807819",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://dierenartshoogland.nl/",
+      "source_url": "https://dierenartshoogland.nl/contact/",
+      "checked": "2026-11-03",
+      "note": "Weekday hours 08:00/09:00-17:30/19:30. Emergencies outside opening hours: 0900-2223000. No 24-h wording.",
+      "quote": "Spoedgevallen buiten openingstijden bel: 0900-2223000"
+    },
+    {
+      "kind": "clinic",
+      "name": "Bosweide Dierenartsen (Bennekom)",
+      "city": "Bennekom",
+      "region": "Gelderland",
+      "address": "Kaardebol 20, 6721 RX Bennekom",
+      "phone": "0318-416500",
+      "emergency_24h": true,
+      "duty": "Outside opening hours the normal number is forwarded automatically to the on-duty vet; Saturday 09-13 h calls go to Dierenkliniek Kortenoord, Wageningen (0317-412432).",
+      "small_animals": true,
+      "url": "https://www.bosweidedierenartsen.nl/",
+      "source_url": "https://www.bosweidedierenartsen.nl/contact",
+      "checked": "2026-11-03",
+      "note": "Phone-based 24/7 availability, not a staffed night hospital. Mon/Tue/Fri 08-19, Wed/Thu 08-17.",
+      "quote": "In geval van spoed krijgt u 24/7 een dierenarts aan de telefoon."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Kortenoord",
+      "city": "Wageningen",
+      "region": "Gelderland",
+      "address": "Rietveldlaan 80, 6708 SB Wageningen",
+      "phone": "0317-412432",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dierenkliniek-kortenoord.nl/",
+      "source_url": "https://www.dierenkliniek-kortenoord.nl/contact",
+      "checked": "2026-11-03",
+      "note": "Mon/Wed/Fri 08:30-18:30, Tue/Thu 08:30-17:00. Outside hours the number is forwarded to the spoedkliniek in Arnhem (Meander 10, 6825 MB). No 24-h wording.",
+      "quote": "Buiten openingstijden wordt u via ons gewone telefoonnummer 0317- 412 432 doorgeschakeld naar de spoedkliniek in Arnhem."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Velp - Veluwezoom (Velp and Rheden)",
+      "city": "Velp",
+      "region": "Gelderland",
+      "address": "Arnhemsestraatweg 2, 6881 NG Velp",
+      "phone": "026-3647260",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dierenkliniekvelp.nl/",
+      "source_url": "https://www.dierenkliniekvelp.nl/contact",
+      "checked": "2026-11-03",
+      "note": "Second location Rheden, Groenestraat 12, 6991 GE, 026-4953603 (by appointment). Velp Mon-Fri 08:00-17:30. No emergency or 24-h info on the opened pages."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Lent",
+      "city": "Nijmegen (Lent)",
+      "region": "Gelderland",
+      "address": "Laauwikstraat 20, 6663 CK Lent",
+      "phone": "024-3606422",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dierenklinieklent.nl/",
+      "source_url": "https://www.dierenklinieklent.nl/contact/",
+      "checked": "2026-11-03",
+      "note": "Mon-Fri 09:00-18:00. Evenings and weekends: service number 0900-1120123 reaches the on-duty vet. No 24-h wording.",
+      "quote": "u krijgt dan de dienstdoende dierenarts aan de telefoon."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek De Aam (Elst, Groesbeek, Kekerdom, Nijmegen)",
+      "city": "Nijmegen",
+      "region": "Gelderland",
+      "address": "Berg en Dalseweg 34, 6521 JJ Nijmegen",
+      "phone": "085-4000124",
+      "emergency_24h": true,
+      "duty": "Spoed number 085-4000124 for all locations.",
+      "small_animals": true,
+      "url": "https://www.dierenkliniekdeaam.nl/",
+      "source_url": "https://www.dierenkliniekdeaam.nl/",
+      "checked": "2026-11-03",
+      "note": "Other locations: Elst, Nieuwe Aamsestraat 26c; Groesbeek, Bredeweg 109; Kekerdom, Botsestraat 31. Phone-based 24/7; consulting hours differ per location (Nijmegen Mon/Fri 08:30-19:00, Tue-Thu 08:30-18:00).",
+      "quote": "24/7 en 365 dagen per jaar bereikbaar"
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenkliniek Dukenburg",
+      "city": "Nijmegen",
+      "region": "Gelderland",
+      "address": "Zwanenveld 6605, 6538 RX Nijmegen",
+      "phone": "024-3449449",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dierenkliniekdukenburg.nl/",
+      "source_url": "https://www.dierenkliniekdukenburg.nl/contact",
+      "checked": "2026-11-03",
+      "note": "Mon-Fri 09:00-18:00. Outside hours: 0900-1120123. No 24-h wording."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dierenartspraktijk Geesteren en Almelo",
+      "city": "Almelo",
+      "region": "Overijssel",
+      "address": "Ootmarsumsestraat 428, 7603 AX Almelo",
+      "phone": "0546-769139",
+      "emergency_24h": true,
+      "duty": "Spoed and weekend duty on 0546-631260 and 0546-769139.",
+      "small_animals": true,
+      "url": "https://www.dierenartspraktijkgeesteren.nl/",
+      "source_url": "https://www.dierenartspraktijkgeesteren.nl/dierenartspraktijk-geesteren-ov",
+      "checked": "2026-11-03",
+      "note": "Second location Geesteren, Langeveenseweg 24, 7678 VE, 0546-631260. Weekdays 09:00-17:00. Marked 24 h on the strength of the page header '24/7 Dierenarts Spoedlijn' (phone-based).",
+      "quote": "24/7 Dierenarts Spoedlijn 0546 631260"
+    },
+    {
+      "kind": "clinic",
+      "name": "Mijn Dierenarts Arnhem (Presikhaaf, Nederrijn, Oosterbeek)",
+      "city": "Arnhem",
+      "region": "Gelderland",
+      "address": "Honigkamp 54, 6826 PR Arnhem",
+      "phone": "026-3613351",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.mijndierenartsarnhem.nl/",
+      "source_url": "https://www.mijndierenartsarnhem.nl/contactgegevens/contact",
+      "checked": "2026-11-03",
+      "note": "Other locations: Nederrijn, Huissensestraat 1A, Arnhem, 026-3218144; Oosterbeek, Sint Bernulphusstraat 15, 026-3030430. By appointment, Mon-Fri 08:30-18:00. Emergency outside hours: 026-3333730 (shown on the page as 026-333 37 30). No 24-h wording."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dijkstra Dierenkliniek",
+      "city": "Arnhem (Schuytgraaf)",
+      "region": "Gelderland",
+      "address": "Bergamotte 1, 6846 HP Arnhem",
+      "phone": "026-3830138",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.dijkstradierenkliniek.nl/",
+      "source_url": "https://www.dijkstradierenkliniek.nl/spoed/",
+      "checked": "2026-11-03",
+      "note": "Outside hours a recorded message gives the emergency clinic: Evidensia Dierenziekenhuis Arnhem, Meander 10, 026-3333730. No 24-h wording."
     }
   ],
-  "notes": "First NL run 2026-11-03. Every entry source page was opened with WebFetch; search snippets and aggregators (dierenkliniek.nl directory, petla.app, openingstijden.nl, job sites) were used only to discover URLs, never as data. 24 h marked only where an opened page says 24 uur / 24/7 / 00-24 / dag en nacht. 24-h clinics (14): Spoedkliniek Midden-Nederland Utrecht (weekday nights 17-09, weekends 24/7), AniCura MCD Amsterdam, AniCura Haaglanden Rijswijk, AniCura Dordrecht, Evidensia Barendrecht, Geldrop, Waalwijk, Arnhem, Amstelveen (Amsterdam), Nieuwegein, Eelderwolde (Groningen), AniCura Tilburg (Berkel-Enschot), AniCura Oldenzaal (the last two and Zwolle rest on the 'Elke dag 00 - 24' spoed schedule), AniCura De Tweede Lijn Zwolle (18-08 weekdays + 24/7 weekends). Phone-only 24-h on-call, flagged in duty/note: AniCura Breda, AniCura Zeeuws-Vlaanderen (Terneuzen), Dierenartspraktijk Terschelling, Dierenartsenpraktijk Texel, Dierenartsen Dokkum (Schiermonnikoog). Not marked 24 h despite 24/7 wording: AniCura Maaspoort Den Bosch (meta description only), Velserbroek (meta only), Noordwijk (inconsistent page), AniCura Maastricht (page titled PERMANENT GESLOTEN yet meta says 24/7 - skipped entirely), SDU Utrecht (24/7 for vets only). The Evidensia 'Spoed' overview page claims all hospitals 7 days/24 h but also lists 'Spoed Overdag Mon-Fri 06:00-18:00'; only hospitals whose own page states 24/7 are marked. Duty rotas (3): AniCura Zeeuws-Vlaanderen weekend roster, AniCura Den Helder out-of-hours rota (MCD Amsterdam / 't Ossehoofd), AniCura Leeuwarden shared roster. The Netherlands has no national or chamber-run (KNMvD) public duty list that could be opened. Poison line (1): NVIC (030-274 88 88) from a 2017 KNMvD infographic; no animal-specific owner line was found, the NVIC is a human centre that also advises vets; the RIVM page states vergiftigingen.info is professionals-only. Phone and owner access must be re-verified. News/parliament context (NOS, NH Nieuws, Kamervragen 2024Z09637): spoed care is shrinking; Evidensia Den Haag night service was closed (owners sent to Amsterdam or Barendrecht), so Den Haag has no 24-h clinic of its own - Rijswijk is the nearest (AniCura Haaglanden). NH Nieuws 2021 (West-Friesland night rota Bovenkarspel/Zwaag/Enkhuizen) is outdated and not included. Not reachable / not obtained: evidensia.nl root (provenance), AniCura Hilversum contact page (client error), dierenartsentexel.nl (not fetchable), vvvameland.nl dierenwelzijn page (not fetchable), own clinic sites for Nijmegen, Maastricht (AniCura closed), Enschede, Amersfoort, Haarlem-based practices other than DierenDokters, Zandvoort (no clinic in town found; Bloemendaal/Velserbroek/Noordwijk are the nearest), Vlieland (vlieland.net search found no vet page), Ameland (vet listing not opened), Schiermonnikoog (no island practice, see Dokkum). Cats: De Kattenkliniek van Groningen (Van Lenneplaan 15, 050-8531899) and Dierenkliniek de Ark Oost-Souburg, Dierenkliniek Almeloord Almelo, Dierenziekenhuis Assen (Pelikaanstraat 2) appear in a third-party directory as 24/7 but their own sites were not found, so none were added. Left for follow-up: own-site research for Nijmegen, Maastricht, Enschede, Almelo, Assen, Amersfoort, Ede, Zandvoort; Ameland and Vlieland vets; KNMvD regional duty lists; confirm NVIC number on a current official page; Evidensia Den Haag status; remaining AniCura locations (84 listed) and non-chain independent clinics. Independent check 2026-11-03 (random seed 20261103): 26 entries opened (23 mandatory + 3 random of 17 other clinics); 0 phone/address errors found, 2 notes amended; 3 downgraded to emergency_24h false (AniCura Tilburg and Oldenzaal: only a '00 - 24' schedule; Dierenartsen Dokkum: phone/address not on the cited page); 1 removed (NVIC poison line: current page says the line is for doctors and other healthcare professionals, no owner access). Superseded statements above: 24-h count is now 16 (12 staffed + 4 phone-only on-call: Breda, Terneuzen, Terschelling, Texel); Tilburg/Oldenzaal/Dokkum are no longer 24 h; the NVIC entry is deleted. Confirmed entries carry checked 2026-11-03. Follow-up run 2026-11-03 (Nijmegen, Maastricht, Enschede, Amersfoort, Ede, Zandvoort, Vlieland, Ameland, AniCura/Evidensia remainder): added 29 entries. 24 h (phone-based or hospital, wording quoted from the clinic page): Nova Spoed- en Verwijskliniek Baarn (staffed 24/7, nearest to Amersfoort/Hilversum), Dierenkliniek de Waalsprong Nijmegen, Dierenkliniek Enschede (via duty circle), DAP Boekelo, Dierenarts Ede, Kruizinga Ede, De Klomp Ede, DAP Noord-West Friesland (Vlieland), A7 Noord Drachten. Duty rotas (3): Nijmegen out-of-hours arrangement (Broerdijk; Evidensia Arnhem after 21 h), Enschede-Hengelo-Lonneker circle, A7 Noord weekly table. Checked AniCura's own spoed overview (84 clinics): it has no clinic in Nijmegen, Enschede, Amersfoort, Ede, Zandvoort, Vlieland or Ameland and AniCura Maastricht is permanently closed, so no further AniCura 24-h location exists beyond those already listed (the overview shows 'Geopend voor spoed 00 - 24' for Amsterdam, Berkel-Enschot, Oldenzaal, Dordrecht verwijscentrum, Rijswijk and 00:00-23:59 for Zwolle; 24-h status of Tilburg/Oldenzaal stays false per the earlier independent check). Evidensia's own site lists only the seven hospitals already included. Not reachable / skipped: dierenartsenamersfoort.nl and dierenkliniek-glanerbrug.nl (302 redirect loop between https and http, twice), almeloord.nl (client error, twice), boerskotten.nl (redirect, not retried further), AniCura/Evidensia pages not linked from search (provenance-blocked). Ameland: only an island info site was reachable for the vet (no clinic site found), Vlieland has no island practice (mainland consultations). Ede and Nijmegen: further independent clinics exist (e.g. Dierenkliniek Lent, Dierenartspraktijk Wijchen, Dierenkliniek Velp/Kortenoord Wageningen) but their own pages were not opened. Left for follow-up: Almelo (Almeloord), Glanerbrug, Amersfoort (dierenartsenamersfoort.nl, ABC voor Dieren, Zielhorst), Nijmegen Lent/Wijchen, Wageningen, remaining non-chain clinics in other provinces. Independent check 2026-11-03 (follow-up): a second agent opened the source_url of all 9 new 24-h clinics, all 3 new duty rotas and 4 random other new clinics (seed 20261103: Maastricht Heer, Frowijn & Vermeulen Enschede, Schols Ameland, De Kooikershof Almelo) - 16 checked / 0 fixed / 0 downgraded / 0 removed. Name, phone, address and the explicit 24 uur / 24-7 / dag en nacht wording (or the phone-only duty-circle basis stated in the entry) were confirmed on the pages; the Maastricht 046-4512417 spoed number is on the clinic's /spoed page, not on /contact."
+  "notes": "First NL run 2026-11-03. Every entry source page was opened with WebFetch; search snippets and aggregators (dierenkliniek.nl directory, petla.app, openingstijden.nl, job sites) were used only to discover URLs, never as data. 24 h marked only where an opened page says 24 uur / 24/7 / 00-24 / dag en nacht. 24-h clinics (14): Spoedkliniek Midden-Nederland Utrecht (weekday nights 17-09, weekends 24/7), AniCura MCD Amsterdam, AniCura Haaglanden Rijswijk, AniCura Dordrecht, Evidensia Barendrecht, Geldrop, Waalwijk, Arnhem, Amstelveen (Amsterdam), Nieuwegein, Eelderwolde (Groningen), AniCura Tilburg (Berkel-Enschot), AniCura Oldenzaal (the last two and Zwolle rest on the 'Elke dag 00 - 24' spoed schedule), AniCura De Tweede Lijn Zwolle (18-08 weekdays + 24/7 weekends). Phone-only 24-h on-call, flagged in duty/note: AniCura Breda, AniCura Zeeuws-Vlaanderen (Terneuzen), Dierenartspraktijk Terschelling, Dierenartsenpraktijk Texel, Dierenartsen Dokkum (Schiermonnikoog). Not marked 24 h despite 24/7 wording: AniCura Maaspoort Den Bosch (meta description only), Velserbroek (meta only), Noordwijk (inconsistent page), AniCura Maastricht (page titled PERMANENT GESLOTEN yet meta says 24/7 - skipped entirely), SDU Utrecht (24/7 for vets only). The Evidensia 'Spoed' overview page claims all hospitals 7 days/24 h but also lists 'Spoed Overdag Mon-Fri 06:00-18:00'; only hospitals whose own page states 24/7 are marked. Duty rotas (3): AniCura Zeeuws-Vlaanderen weekend roster, AniCura Den Helder out-of-hours rota (MCD Amsterdam / 't Ossehoofd), AniCura Leeuwarden shared roster. The Netherlands has no national or chamber-run (KNMvD) public duty list that could be opened. Poison line (1): NVIC (030-274 88 88) from a 2017 KNMvD infographic; no animal-specific owner line was found, the NVIC is a human centre that also advises vets; the RIVM page states vergiftigingen.info is professionals-only. Phone and owner access must be re-verified. News/parliament context (NOS, NH Nieuws, Kamervragen 2024Z09637): spoed care is shrinking; Evidensia Den Haag night service was closed (owners sent to Amsterdam or Barendrecht), so Den Haag has no 24-h clinic of its own - Rijswijk is the nearest (AniCura Haaglanden). NH Nieuws 2021 (West-Friesland night rota Bovenkarspel/Zwaag/Enkhuizen) is outdated and not included. Not reachable / not obtained: evidensia.nl root (provenance), AniCura Hilversum contact page (client error), dierenartsentexel.nl (not fetchable), vvvameland.nl dierenwelzijn page (not fetchable), own clinic sites for Nijmegen, Maastricht (AniCura closed), Enschede, Amersfoort, Haarlem-based practices other than DierenDokters, Zandvoort (no clinic in town found; Bloemendaal/Velserbroek/Noordwijk are the nearest), Vlieland (vlieland.net search found no vet page), Ameland (vet listing not opened), Schiermonnikoog (no island practice, see Dokkum). Cats: De Kattenkliniek van Groningen (Van Lenneplaan 15, 050-8531899) and Dierenkliniek de Ark Oost-Souburg, Dierenkliniek Almeloord Almelo, Dierenziekenhuis Assen (Pelikaanstraat 2) appear in a third-party directory as 24/7 but their own sites were not found, so none were added. Left for follow-up: own-site research for Nijmegen, Maastricht, Enschede, Almelo, Assen, Amersfoort, Ede, Zandvoort; Ameland and Vlieland vets; KNMvD regional duty lists; confirm NVIC number on a current official page; Evidensia Den Haag status; remaining AniCura locations (84 listed) and non-chain independent clinics. Independent check 2026-11-03 (random seed 20261103): 26 entries opened (23 mandatory + 3 random of 17 other clinics); 0 phone/address errors found, 2 notes amended; 3 downgraded to emergency_24h false (AniCura Tilburg and Oldenzaal: only a '00 - 24' schedule; Dierenartsen Dokkum: phone/address not on the cited page); 1 removed (NVIC poison line: current page says the line is for doctors and other healthcare professionals, no owner access). Superseded statements above: 24-h count is now 16 (12 staffed + 4 phone-only on-call: Breda, Terneuzen, Terschelling, Texel); Tilburg/Oldenzaal/Dokkum are no longer 24 h; the NVIC entry is deleted. Confirmed entries carry checked 2026-11-03. Follow-up run 2026-11-03 (Nijmegen, Maastricht, Enschede, Amersfoort, Ede, Zandvoort, Vlieland, Ameland, AniCura/Evidensia remainder): added 29 entries. 24 h (phone-based or hospital, wording quoted from the clinic page): Nova Spoed- en Verwijskliniek Baarn (staffed 24/7, nearest to Amersfoort/Hilversum), Dierenkliniek de Waalsprong Nijmegen, Dierenkliniek Enschede (via duty circle), DAP Boekelo, Dierenarts Ede, Kruizinga Ede, De Klomp Ede, DAP Noord-West Friesland (Vlieland), A7 Noord Drachten. Duty rotas (3): Nijmegen out-of-hours arrangement (Broerdijk; Evidensia Arnhem after 21 h), Enschede-Hengelo-Lonneker circle, A7 Noord weekly table. Checked AniCura's own spoed overview (84 clinics): it has no clinic in Nijmegen, Enschede, Amersfoort, Ede, Zandvoort, Vlieland or Ameland and AniCura Maastricht is permanently closed, so no further AniCura 24-h location exists beyond those already listed (the overview shows 'Geopend voor spoed 00 - 24' for Amsterdam, Berkel-Enschot, Oldenzaal, Dordrecht verwijscentrum, Rijswijk and 00:00-23:59 for Zwolle; 24-h status of Tilburg/Oldenzaal stays false per the earlier independent check). Evidensia's own site lists only the seven hospitals already included. Not reachable / skipped: dierenartsenamersfoort.nl and dierenkliniek-glanerbrug.nl (302 redirect loop between https and http, twice), almeloord.nl (client error, twice), boerskotten.nl (redirect, not retried further), AniCura/Evidensia pages not linked from search (provenance-blocked). Ameland: only an island info site was reachable for the vet (no clinic site found), Vlieland has no island practice (mainland consultations). Ede and Nijmegen: further independent clinics exist (e.g. Dierenkliniek Lent, Dierenartspraktijk Wijchen, Dierenkliniek Velp/Kortenoord Wageningen) but their own pages were not opened. Left for follow-up: Almelo (Almeloord), Glanerbrug, Amersfoort (dierenartsenamersfoort.nl, ABC voor Dieren, Zielhorst), Nijmegen Lent/Wijchen, Wageningen, remaining non-chain clinics in other provinces. Independent check 2026-11-03 (follow-up): a second agent opened the source_url of all 9 new 24-h clinics, all 3 new duty rotas and 4 random other new clinics (seed 20261103: Maastricht Heer, Frowijn & Vermeulen Enschede, Schols Ameland, De Kooikershof Almelo) - 16 checked / 0 fixed / 0 downgraded / 0 removed. Name, phone, address and the explicit 24 uur / 24-7 / dag en nacht wording (or the phone-only duty-circle basis stated in the entry) were confirmed on the pages; the Maastricht 046-4512417 spoed number is on the clinic's /spoed page, not on /contact. Follow-up 2 run 2026-11-03 (Almelo, Glanerbrug, Amersfoort, Nijmegen Lent/Wijchen, Wageningen, Velp, other independents): added 13 entries, all from the clinics' own pages opened with WebFetch. 24 h (phone-based, explicit wording): Bosweide Dierenartsen Bennekom ('24/7 een dierenarts aan de telefoon'), Dierenkliniek De Aam Nijmegen/Elst/Groesbeek/Kekerdom ('24/7 en 365 dagen per jaar bereikbaar'), Dierenartspraktijk Geesteren en Almelo ('24/7 Dierenarts Spoedlijn'). No new duty rotas. Not 24 h (checked, no wording): ABC voor Dieren, Zielhorst, Keistad, Hoogland (Amersfoort area), Kortenoord (Wageningen), Velp-Veluwezoom, Lent, Dukenburg, Mijn Dierenarts Arnhem group, Dijkstra Arnhem. Unreachable / skipped: almeloord.nl (client error, again twice), Glanerbrug - dierenkliniek-glanerbrug.nl not retried successfully (redirect loop earlier) and the only opened page (dcce.nl) is a Gronau (Germany) cardiology centre, so no Glanerbrug entry; daptweestromenland.nl (Wijchen; robots disallowed) - Dierenartsenpraktijk Wijchen therefore left; dierenartsenamersfoort.nl not surfaced again. Amersfoort 'Spoed' sub-pages of Keistad not opened. Left for follow-up: Wijchen (own site not accessible), Almelo Almeloord and Vriezenveen, Glanerbrug, other independents in remaining provinces, Evidensia/AniCura Gelderland small practices."
 }
