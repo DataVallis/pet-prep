@@ -88,8 +88,17 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [x] lemons
 - [x] limes
 - [x] grapefruit
-- [ ] pears · figs · dates · pomegranate · coconut · coconut-oil · lychee · persimmon
-- [ ] dried-fruit · fruit-pits · rhubarb · star-fruit · passion-fruit · olives
+- [d] pears — no source cat 2026-11-03 (only a general "pets" page; verifier rejected)
+- [d] figs — no source cat 2026-11-03
+- [d] dates — no source cat 2026-11-03
+- [d] pomegranate — no source cat 2026-11-03
+- [d] coconut — no source cat 2026-11-03
+- [d] coconut-oil — no source cat 2026-11-03
+- [-] lychee — no source dog 2026-11-03 — no source cat 2026-11-03
+- [d] persimmon — no source cat 2026-11-03
+- [x] dried-fruit
+- [x] fruit-pits
+- [ ] rhubarb · star-fruit · passion-fruit · olives
 
 ## W3 — vegetables and plants we eat
 - [ ] carrots · cucumber · green-beans · peas · broccoli · cauliflower · brussels-sprouts · cabbage · kale

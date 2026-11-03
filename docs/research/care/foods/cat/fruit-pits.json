@@ -1,0 +1,136 @@
+{
+  "slug": "fruit-pits",
+  "species": "cat",
+  "name": {
+    "en": "Fruit pits and stones",
+    "sl": "Koščice sadja"
+  },
+  "question": {
+    "en": "Can cats eat fruit pits?",
+    "sl": "Ali lahko mačke jedo koščice sadja?"
+  },
+  "url_slug": {
+    "en": "fruit-pits",
+    "sl": "koscice-sadja"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
+    "sl": "Ne. Koščice in semena koščičastega sadja naj bodo daleč od mačk. ASPCA češnjo, breskev, slivo in marelico navaja kot rastline, strupene za mačke, ker njihova semena, peclji in listi vsebujejo cianid. Pokličite veterinarja, če mačka koščico grizlja ali pogoltne."
+  },
+  "why": {
+    "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
+    "sl": "Pri češnji, breskvi, slivi in marelici ASPCA navaja, da peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo, vse štiri rastline pa uvršča med strupene za mačke. Koščica teh sadežev je njihovo seme, zato je mački nikoli ne dajajte."
+  },
+  "signs": {
+    "en": [
+      "Brick-red gums",
+      "Dilated pupils",
+      "Difficulty breathing",
+      "Panting",
+      "Shock"
+    ],
+    "sl": [
+      "Opečnato rdeče dlesni",
+      "Razširjene zenice",
+      "Težave z dihanjem",
+      "Sopihanje",
+      "Šok"
+    ]
+  },
+  "what_to_do": {
+    "en": "Contact your vet or a pet poison helpline right away if your cat chewed or swallowed a pit, stone or seed. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+    "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala ali pogoltnila koščico ali seme. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Fruit stones are not safe for cats. If kitty chews one, tell a grown-up.",
+    "sl": "Koščice sadja niso varne za muce. Če jih muca grizlja, povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which fruits does this cover?",
+        "sl": "Na katero sadje se to nanaša?"
+      },
+      "a": {
+        "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
+        "sl": "ASPCA češnjo, breskev, slivo in marelico navaja kot strupene za mačke in za vsako od njih piše, da peclji, listi in semena vsebujejo cianid."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC16",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC16",
+      "quote": "Cyanogenic glycosides"
+    },
+    {
+      "id": "KC16",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting:"
+    },
+    {
+      "id": "KC16",
+      "quote": "brick red mucous membranes, dilated pupils, difficulty breathing, panting, shock."
+    },
+    {
+      "id": "KC17",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC17",
+      "quote": "Cyanogenic glycosides found in some species"
+    },
+    {
+      "id": "KC17",
+      "quote": "If you suspect your pet may have ingested a potentially toxic substance, call the ASPCA Poison Control at (888) 426-4435"
+    },
+    {
+      "id": "KC18",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC18",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting: brick red mucous membranes,"
+    },
+    {
+      "id": "KC19",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KC19",
+      "quote": "Stems, leaves, seeds contain cyanide, particularly toxic in the process of wilting:"
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "cherries",
+    "peaches",
+    "plums",
+    "apricots",
+    "apple-seeds"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "725a6bf987f783bd1c77e2cf31406796c87c7f2afa6a96fcab1f4cb98b1d7f7c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9d73b66325f9356055cd1c29ab7aed7d489f8122b1e979170b3e2c06017e697"
+    }
+  }
+}

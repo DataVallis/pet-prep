@@ -1,0 +1,172 @@
+{
+  "slug": "dried-fruit",
+  "species": "dog",
+  "name": {
+    "en": "Dried fruit",
+    "sl": "Suho sadje"
+  },
+  "question": {
+    "en": "Can dogs eat dried fruit?",
+    "sl": "Ali lahko psi jedo suho sadje?"
+  },
+  "url_slug": {
+    "en": "dried-fruit",
+    "sl": "suho-sadje"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
+    "sl": "Odvisno od sadja, mešanice pa so tvegane. Rozine, sultanine in korinte so posušeno grozdje in so za pse strupene, tudi v zelo majhnih količinah. Drugo suho sadje, na primer fige in breskve, ima lahko veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico."
+  },
+  "why": {
+    "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
+    "sl": "Grozdje, rozine, sultanine in korinte so za pse lahko strupeni; ni mogoče vedeti, ali bo pes hudo zbolel, in nekateri psi zbolijo že po zelo majhnih količinah, zlasti posušenih. Suhe brusnice so včasih pomešane z rozinami. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda, sušene breskve pa pogosto vsebujejo preveč sladkorja. Ker se v mešanici suhega sadja lahko skrivajo rozine, pri katerih je treba takoj k veterinarju, uporabljamo strožjo stopnjo in suho sadje na splošno, tako kot rozine, uvrščamo med strupena živila."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Painful belly",
+      "Blood in poo",
+      "Low energy",
+      "Reduced appetite"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Boleč trebuh",
+      "Kri v blatu",
+      "Pomanjkanje energije",
+      "Manjši apetit"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate raisins, sultanas, currants or a dried fruit mix that may contain them, contact your vet immediately. Don't wait for signs.",
+    "sl": "Če je pes pojedel rozine, sultanine, korinte ali mešanico suhega sadja, ki jih morda vsebuje, takoj pokličite veterinarja. Ne čakajte na znake."
+  },
+  "serving": null,
+  "child": {
+    "en": "Dried fruit like raisins is not for dogs. Keep snack mixes away from your dog and tell a grown-up if it eats some.",
+    "sl": "Suho sadje, kot so rozine, ni za pse. Mešanice prigrizkov drži stran od psa in povej odraslemu, če jih pes poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Which foods hide dried grapes?",
+        "sl": "V kateri hrani se skriva posušeno grozdje?"
+      },
+      "a": {
+        "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
+        "sl": "Rozine, sultanine in korinte so pogosto v hrani, kot so božični kolač, velikonočne žemlje in piškoti, suhe brusnice pa so včasih pomešane z rozinami."
+      }
+    },
+    {
+      "q": {
+        "en": "Are other dried fruits safe?",
+        "sl": "Je drugo suho sadje varno?"
+      },
+      "a": {
+        "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
+        "sl": "Ne kot reden priboljšek. Suhe fige in sušene breskve imajo veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico, ki jo je treba odstraniti."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD126",
+      "quote": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs."
+    },
+    {
+      "id": "KD126",
+      "quote": "when the fruits are readily available in foods such as Christmas cake, hot cross buns, cookies and"
+    },
+    {
+      "id": "KD126",
+      "quote": "after eating very small amounts of them (especially the dried fruits)."
+    },
+    {
+      "id": "KD126",
+      "quote": "Unfortunately, it's impossible to know whether a dog will be severely affected or not,"
+    },
+    {
+      "id": "KD126",
+      "quote": "Contact your vet immediately if you believe your dog has eaten grapes, raisins, currants or sultanas"
+    },
+    {
+      "id": "KD126",
+      "quote": "do not wait to see if they develop symptoms."
+    },
+    {
+      "id": "KD126",
+      "quote": "Symptoms of grape/raisin/currant/sultana poisoning tend to include:"
+    },
+    {
+      "id": "KD126",
+      "quote": "Vomiting"
+    },
+    {
+      "id": "KD126",
+      "quote": "Diarrhoea"
+    },
+    {
+      "id": "KD126",
+      "quote": "Painful abdomen (tummy)"
+    },
+    {
+      "id": "KD126",
+      "quote": "Blood in poo"
+    },
+    {
+      "id": "KD126",
+      "quote": "Low energy"
+    },
+    {
+      "id": "KD126",
+      "quote": "Reduced appetite"
+    },
+    {
+      "id": "KD125",
+      "quote": "Raisins are dried grapes, which are highly toxic to dogs."
+    },
+    {
+      "id": "KD125",
+      "quote": "Another peril of dried dates is that these fruits still contain the stone-like pit in the center."
+    },
+    {
+      "id": "KD95",
+      "quote": "Dried cranberries sometimes come mixed with other dried fruits, like raisins."
+    },
+    {
+      "id": "KD118",
+      "quote": "Dried figs are much higher in concentrated sugar because the water has been removed during the drying process."
+    },
+    {
+      "id": "KD118",
+      "quote": "Because of their high sugar content, dried figs aren’t a great treat option"
+    },
+    {
+      "id": "KD28",
+      "quote": "Canned or dehydrated peaches often contain excess sugars and ingredients that are not recommended."
+    }
+  ],
+  "related": [
+    "raisins",
+    "grapes",
+    "dates",
+    "figs",
+    "cranberries"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b484032ed6b7277e8e75eeab824a8259294fe6215200739a6c0ebb58d124fb77"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7e74fd0bd33d22bc091b14b7261b5aacfdde67477e878fa4f70f8b8d4df90c95"
+    }
+  }
+}

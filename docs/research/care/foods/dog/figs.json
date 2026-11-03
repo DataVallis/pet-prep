@@ -1,0 +1,145 @@
+{
+  "slug": "figs",
+  "species": "dog",
+  "name": {
+    "en": "Figs",
+    "sl": "Fige"
+  },
+  "question": {
+    "en": "Can dogs eat figs?",
+    "sl": "Ali lahko psi jedo fige?"
+  },
+  "url_slug": {
+    "en": "figs",
+    "sl": "fige"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
+    "sl": "Da, sveže fige so za pse na splošno varne, če so pravilno pripravljene, a le kot občasen priboljšek. Ponudite samo mehko notranjost v majhnih koščkih in psu nikoli ne pustite jesti figovih listov, lubja ali vej. Suhe fige so presladke."
+  },
+  "why": {
+    "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
+    "sl": "Same fige ne veljajo za strupene kot grozdje in češnje, figovec kot rastlina pa je lahko škodljiv. Fige vsebujejo vitamina A in C, kalcij, kalij, magnezij in železo. Ker sadje vsebuje naravni sladkor in vlaknine, ima lahko preveč fig odvajalni učinek in povzroči drisko. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog eats any part of the fig plant, get veterinary care right away. If your dog eats several figs and its symptoms don't improve, or it starts to vomit, contact your vet.",
+    "sl": "Če pes poje kateri koli del figovca, takoj poiščite veterinarsko pomoč. Če pes poje več fig in se mu znaki ne izboljšajo ali začne bruhati, se obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
+    "sl": "Samo mehka notranjost sveže fige brez vseh delov rastline, narezana na majhne koščke. Začnite z drobnim koščkom in bodite pozorni na prebavne težave ali alergijsko reakcijo."
+  },
+  "child": {
+    "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
+    "sl": "Psi lahko poskusijo droben košček mehke fige. Figovi listi in veje niso za pse, zato najprej vprašaj odraslega."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat dried figs?",
+        "sl": "Ali lahko psi jedo suhe fige?"
+      },
+      "a": {
+        "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
+        "sl": "Suhe fige niso dobra izbira za priboljšek. Imajo veliko bolj zgoščen sladkor, ker jim je bila med sušenjem odvzeta voda."
+      }
+    },
+    {
+      "q": {
+        "en": "What if my dog chews a fig tree?",
+        "sl": "Kaj, če pes gloda figovo drevo?"
+      },
+      "a": {
+        "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
+        "sl": "Figovec je lahko škodljiv. Znaki so lahko bruhanje, močno slinjenje, draženje kože in izpuščaji. Če pes poje kateri koli del rastline, takoj poiščite veterinarsko pomoč."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD118",
+      "quote": "Fresh figs are generally safe for dogs to eat when prepared properly."
+    },
+    {
+      "id": "KD118",
+      "quote": "While figs themselves aren’t considered toxic like grapes and cherries, the fig plan can be harmful."
+    },
+    {
+      "id": "KD118",
+      "quote": "Figs contain vitamins A and C, along with minerals such as calcium, potassium, magnesium, and iron."
+    },
+    {
+      "id": "KD118",
+      "quote": "Dried figs are much higher in concentrated sugar because the water has been removed during the drying process."
+    },
+    {
+      "id": "KD118",
+      "quote": "Because of their high sugar content, dried figs aren’t a great treat option"
+    },
+    {
+      "id": "KD118",
+      "quote": "Don’t let your dog to eat fig leaves, bark, branches, or other plant material."
+    },
+    {
+      "id": "KD118",
+      "quote": "While figs offer some nutritional benefits, they should only be an occasional treat and never replace a balanced diet."
+    },
+    {
+      "id": "KD118",
+      "quote": "For the safest option, offer only the soft interior of a fresh fig and remove any plant material before serving."
+    },
+    {
+      "id": "KD118",
+      "quote": "To reduce the risk of choking, cut the fruit into small, manageable pieces."
+    },
+    {
+      "id": "KD118",
+      "quote": "Whenever you introduce a new food, start small."
+    },
+    {
+      "id": "KD118",
+      "quote": "Only give your dog a tiny piece of the inside of the fruit to see how they’ll react."
+    },
+    {
+      "id": "KD118",
+      "quote": "Monitor them for any signs of stomach upset or an allergic reaction."
+    },
+    {
+      "id": "KD118",
+      "quote": "Because fruit contains natural sugars and fiber, excessive amounts can have a laxative effect and lead to diarrhea."
+    },
+    {
+      "id": "KD118",
+      "quote": "Symptoms can include vomiting, excessive drooling, skin irritation, and rashes."
+    },
+    {
+      "id": "KD118",
+      "quote": "If your dog eats any part of the plant, seek veterinary care immediately."
+    },
+    {
+      "id": "KD118",
+      "quote": "Contact your veterinarian if your dog’s symptoms don’t improve or they begin to vomit."
+    }
+  ],
+  "related": [
+    "dates",
+    "dried-fruit",
+    "grapes",
+    "cherries"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80eeacde9ebb6ed8fc982e42a3a9553b91be20fe4d2ae90c632a093f79223b91"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b5c607aa7cb1d35c1eead5ea5e47c472a405487b283df653a270db431d82e12b"
+    }
+  }
+}

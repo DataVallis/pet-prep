@@ -1,0 +1,145 @@
+{
+  "slug": "fruit-pits",
+  "species": "dog",
+  "name": {
+    "en": "Fruit pits and stones",
+    "sl": "Koščice sadja"
+  },
+  "question": {
+    "en": "Can dogs eat fruit pits?",
+    "sl": "Ali lahko psi jedo koščice sadja?"
+  },
+  "url_slug": {
+    "en": "fruit-pits",
+    "sl": "koscice-sadja"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
+    "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena."
+  },
+  "why": {
+    "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
+    "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer."
+  },
+  "signs": {
+    "en": [
+      "Gagging",
+      "Drooling",
+      "Vomiting",
+      "Difficulty passing stool",
+      "Belly pain",
+      "Difficulty breathing"
+    ],
+    "sl": [
+      "Siljenje na bruhanje",
+      "Slinjenje",
+      "Bruhanje",
+      "Težave pri iztrebljanju",
+      "Bolečine v trebuhu",
+      "Težko dihanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Call your vet right away if your dog breaks open a pit. If your dog swallowed a pit and shows any of these signs, call your vet.",
+    "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Fruit stones are not for dogs. Throw them in the bin where your dog can't reach, and tell a grown-up if your dog eats one.",
+    "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is the fruit itself okay?",
+        "sl": "Je sam sadež v redu?"
+      },
+      "a": {
+        "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
+        "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje."
+      }
+    },
+    {
+      "q": {
+        "en": "Which fruits have pits?",
+        "sl": "Katero sadje ima koščice?"
+      },
+      "a": {
+        "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
+        "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD127",
+      "quote": "Fruits like cherries, nectarines, and peaches are called stone fruits."
+    },
+    {
+      "id": "KD127",
+      "quote": "Hard pits can fracture teeth, cause choking, or obstruct the GI tract."
+    },
+    {
+      "id": "KD127",
+      "quote": "And pits with rough edges can injure the esophagus as they are swallowed, resulting in esophageal ulcers or tears."
+    },
+    {
+      "id": "KD127",
+      "quote": "After swallowing a pit, your dog may gag, drool, vomit, have difficulty passing stool, and experience abdominal pain."
+    },
+    {
+      "id": "KD127",
+      "quote": "If you note any of these signs, call your veterinarian."
+    },
+    {
+      "id": "KD127",
+      "quote": "Also, the pit contains a small amount of cyanide."
+    },
+    {
+      "id": "KD127",
+      "quote": "Cyanide poisoning from stone fruits is rare, but pets can become ill after ingesting just a tiny amount."
+    },
+    {
+      "id": "KD127",
+      "quote": "Cyanide toxicity in any amount is an emergency."
+    },
+    {
+      "id": "KD127",
+      "quote": "They may salivate, have difficulty breathing, or convulse."
+    },
+    {
+      "id": "KD127",
+      "quote": "Call your veterinarian right away if your pet breaks open a pit."
+    },
+    {
+      "id": "KD89",
+      "quote": "Seeds, pits, cores, rinds, and plant stems should generally be removed before feeding."
+    },
+    {
+      "id": "KD89",
+      "quote": "but just like cherries, the pit contains cyanide."
+    }
+  ],
+  "related": [
+    "cherries",
+    "peaches",
+    "plums",
+    "apricots",
+    "apple-seeds",
+    "mango"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67baf9adc67450a3e3ce1fbeca8fead210833c3c11398419579d3871ec1924a1"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a9d9c20efd9a478abc3415c001c4471307416eb357130a6cc10a1889921eba3"
+    }
+  }
+}

@@ -5441,6 +5441,96 @@
       "updated": "2026-11-01"
     },
     {
+      "slug": "dried-fruit",
+      "species": "cat",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Dried fruit",
+        "sl": "Suho sadje"
+      },
+      "question": {
+        "en": "Can cats eat dried fruit?",
+        "sl": "Ali lahko mačke jedo suho sadje?"
+      },
+      "url_slug": {
+        "en": "dried-fruit",
+        "sl": "suho-sadje"
+      },
+      "answer": {
+        "en": "No, keep dried fruit away from cats. Raisins, sultanas and currants are highly toxic to pets, raisins and currants can cause kidney failure in cats, and sugar is unhealthy for cats. Watch out for cakes and mince pies too, and call your vet if your cat eats any.",
+        "sl": "Ne, suho sadje hranite zunaj dosega mačk. Rozine, sultanine in korintske rozine so za hišne ljubljenčke zelo strupene, rozine in korintske rozine lahko pri mačkah povzročijo odpoved ledvic, sladkor pa je za mačke nezdrav. Pazite tudi na kolače in pite s suhim sadjem ter pokličite veterinarja, če ga mačka poje."
+      },
+      "why": {
+        "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
+        "sl": "Cats Protection grozdje, rozine in korintske rozine uvršča med človeško hrano, ki je za mačke strupena, in navaja, da lahko pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Cats Protection dodaja, da sladkor za mačke sicer ni strupen, je pa nezdrav. Zastrupitev z grozdjem in rozinami je pri mačkah redka in slabo pojasnjena, vira, ki bi katero koli suho sadje označil za varno za mačke, pa nismo našli, zato uporabljamo strožjo stopnjo."
+      },
+      "signs": {
+        "en": [
+          "Vomiting, usually within a day"
+        ],
+        "sl": [
+          "Bruhanje, običajno znotraj enega dneva"
+        ]
+      },
+      "what_to_do": {
+        "en": "Contact your vet or a pet poison helpline right away. Note what your cat ate (which dried fruit or which food containing it), how much and when, and keep the packaging. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+        "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka pojedla (katero suho sadje ali katero hrano z njim), koliko in kdaj, ter shranite embalažo. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Dried fruit like raisins is not a cat snack. Keep it away from kitty, and tell a grown-up if she eats some.",
+        "sl": "Suho sadje, kot so rozine, ni prigrizek za muce. Naj bo daleč od muce. Če ga muca poje, povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What about mince pies and Christmas cake?",
+            "sl": "Kaj pa pite s suhim sadjem in božični kolač?"
+          },
+          "a": {
+            "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
+            "sl": "PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Hranite jih zunaj mačjega dosega."
+          }
+        },
+        {
+          "q": {
+            "en": "Is the sugar a problem too?",
+            "sl": "Ali je težava tudi sladkor?"
+          },
+          "a": {
+            "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
+            "sl": "Cats Protection navaja, da sladkor za mačke ni strupen, je pa nezdrav. Mačke sladkega okusa ne zaznajo, sladkor jim ne daje nobene hranilne vrednosti, redno dajanje sladke hrane pa lahko vodi v zdravstvene težave."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC5",
+        "KC5",
+        "KC5",
+        "KC25",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC53",
+        "KC29",
+        "KC29",
+        "KC29",
+        "KC8",
+        "KC8",
+        "KC22"
+      ],
+      "related": [
+        "raisins",
+        "grapes",
+        "fruit-pits"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "energy-drinks",
       "species": "cat",
       "level": "toxic",
@@ -5986,6 +6076,95 @@
         "butter"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "fruit-pits",
+      "species": "cat",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Fruit pits and stones",
+        "sl": "Koščice sadja"
+      },
+      "question": {
+        "en": "Can cats eat fruit pits?",
+        "sl": "Ali lahko mačke jedo koščice sadja?"
+      },
+      "url_slug": {
+        "en": "fruit-pits",
+        "sl": "koscice-sadja"
+      },
+      "answer": {
+        "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
+        "sl": "Ne. Koščice in semena koščičastega sadja naj bodo daleč od mačk. ASPCA češnjo, breskev, slivo in marelico navaja kot rastline, strupene za mačke, ker njihova semena, peclji in listi vsebujejo cianid. Pokličite veterinarja, če mačka koščico grizlja ali pogoltne."
+      },
+      "why": {
+        "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
+        "sl": "Pri češnji, breskvi, slivi in marelici ASPCA navaja, da peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo, vse štiri rastline pa uvršča med strupene za mačke. Koščica teh sadežev je njihovo seme, zato je mački nikoli ne dajajte."
+      },
+      "signs": {
+        "en": [
+          "Brick-red gums",
+          "Dilated pupils",
+          "Difficulty breathing",
+          "Panting",
+          "Shock"
+        ],
+        "sl": [
+          "Opečnato rdeče dlesni",
+          "Razširjene zenice",
+          "Težave z dihanjem",
+          "Sopihanje",
+          "Šok"
+        ]
+      },
+      "what_to_do": {
+        "en": "Contact your vet or a pet poison helpline right away if your cat chewed or swallowed a pit, stone or seed. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
+        "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala ali pogoltnila koščico ali seme. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Fruit stones are not safe for cats. If kitty chews one, tell a grown-up.",
+        "sl": "Koščice sadja niso varne za muce. Če jih muca grizlja, povej odraslemu."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which fruits does this cover?",
+            "sl": "Na katero sadje se to nanaša?"
+          },
+          "a": {
+            "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
+            "sl": "ASPCA češnjo, breskev, slivo in marelico navaja kot strupene za mačke in za vsako od njih piše, da peclji, listi in semena vsebujejo cianid."
+          }
+        }
+      ],
+      "source_ids": [
+        "KC16",
+        "KC16",
+        "KC16",
+        "KC16",
+        "KC17",
+        "KC17",
+        "KC17",
+        "KC18",
+        "KC18",
+        "KC19",
+        "KC19",
+        "KC8",
+        "KC22"
+      ],
+      "related": [
+        "cherries",
+        "peaches",
+        "plums",
+        "apricots",
+        "apple-seeds"
+      ],
+      "updated": "2026-11-03"
     },
     {
       "slug": "garlic",
@@ -22018,6 +22197,191 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "coconut-oil",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Coconut oil",
+        "sl": "Kokosovo olje"
+      },
+      "question": {
+        "en": "Can dogs eat coconut oil?",
+        "sl": "Ali lahko psi jedo kokosovo olje?"
+      },
+      "url_slug": {
+        "en": "coconut-oil",
+        "sl": "kokosovo-olje"
+      },
+      "answer": {
+        "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
+        "sl": "Ni priporočljivo kot redni dodatek. Če pes malo poliže, verjetno ne bo škode, a kokosovo olje je večinoma nasičena maščoba: lahko povzroči prebavne težave, mastno blato in drisko, dolgotrajno hranjenje pa lahko vodi v debelost in celo vnetje trebušne slinavke. Najprej se posvetujte z veterinarjem."
+      },
+      "why": {
+        "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
+        "sl": "Kokosovo olje je večinoma iz nasičenih maščob. Hranjenje z njim lahko vodi v povečanje telesne teže in prebavne težave, dolgotrajno hranjenje pa v debelost in lahko sproži vnetje trebušne slinavke. Obsežnih raziskav, ki bi dokazovale, da psom koristi, ni. Drug članek AKC pravi, da vsakodnevno hranjenje ni priporočljivo in da so majhne, občasne količine varnejše; sledimo strožjemu nasvetu in ga uvrščamo med odsvetovane."
+      },
+      "signs": {
+        "en": [
+          "Upset stomach",
+          "Greasy stools",
+          "Diarrhoea"
+        ],
+        "sl": [
+          "Prebavne težave",
+          "Mastno blato",
+          "Driska"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog licked a little coconut oil, it likely won't cause much harm. Before giving coconut oil to eat or putting it on the skin, discuss it with your vet.",
+        "sl": "Če je pes polizal malo kokosovega olja, verjetno ne bo večje škode. Preden mu kokosovo olje date jesti ali ga nanesete na kožo, se posvetujte z veterinarjem."
+      },
+      "serving": null,
+      "child": {
+        "en": "Coconut oil is very fatty and can upset a dog's tummy. Only a grown-up and the vet decide about it.",
+        "sl": "Kokosovo olje je zelo mastno in lahko psu razburi trebušček. O njem odločata samo odrasli in veterinar."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can I put coconut oil on my dog's skin?",
+            "sl": "Ali lahko psu kokosovo olje namažem na kožo?"
+          },
+          "a": {
+            "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
+            "sl": "Kokosovo olje lahko pomiri razdražena mesta ali suho, srbečo kožo, a maže in lahko zamaši pore. Pred uporabo se posvetujte z veterinarjem."
+          }
+        },
+        {
+          "q": {
+            "en": "Is coconut oil good for dogs' health?",
+            "sl": "Je kokosovo olje dobro za zdravje psa?"
+          },
+          "a": {
+            "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
+            "sl": "Obsežnih raziskav, ki bi dokazovale, da kokosovo olje zagotovo pomaga pri številnih vidikih pasjega zdravja, ni."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD123",
+        "KD122",
+        "KD122",
+        "KD1"
+      ],
+      "related": [
+        "coconut",
+        "butter",
+        "fatty-meat"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
+      "slug": "coconut",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Coconut",
+        "sl": "Kokos"
+      },
+      "question": {
+        "en": "Can dogs eat coconut?",
+        "sl": "Ali lahko psi jedo kokos?"
+      },
+      "url_slug": {
+        "en": "coconut",
+        "sl": "kokos"
+      },
+      "answer": {
+        "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
+        "sl": "Da, v majhnih količinah. Nesladkano kokosovo meso je za pse varno, če ga dajete zmerno, kokosove luščine in lupine pa nikoli. Kokos vsebuje veliko maščob in olja, ki lahko povzročijo prebavne težave in drisko."
+      },
+      "why": {
+        "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
+        "sl": "V majhnih količinah kokos verjetno ne povzroči resne škode, meso in mleko svežih kokosov pa vsebujeta olja, ki lahko povzročijo prebavne težave, mehko blato in drisko. Kokos ima več maščob, zato naj psi, ki ne smejo jesti mastne hrane ali imajo prekomerno težo, dobijo druge priboljške. Ima tudi veliko kalija, zato je pri psih z boleznijo ledvic potrebna previdnost. Luščina in lupina lahko povzročita zaporo črevesja."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Ask your vet before adding coconut to your dog's diet, especially if your dog has had pancreatitis.",
+        "sl": "Preden psu v prehrano dodate kokos, se posvetujte z veterinarjem, zlasti če je pes že imel vnetje trebušne slinavke."
+      },
+      "serving": {
+        "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
+        "sl": "Samo nesladkano meso v majhnih količinah, brez luščine in lupine. Kokosovo mleko le nesladkano in brez ksilitola; kokosovo vodo le kot priboljšek, nikoli namesto vode."
+      },
+      "child": {
+        "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
+        "sl": "Psi lahko poskusijo malo kokosa! Trda lupina ni za pse, zato ga pripravi odrasli."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs drink coconut water or coconut milk?",
+            "sl": "Ali lahko psi pijejo kokosovo vodo ali kokosovo mleko?"
+          },
+          "a": {
+            "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
+            "sl": "Kokosovo vodo le kot priboljšek, ne namesto navadne vode. Kokosovo mleko le nesladkano in brez umetnih sladil, kot je ksilitol, ki je za pse strupen."
+          }
+        },
+        {
+          "q": {
+            "en": "Why not the coconut shell?",
+            "sl": "Zakaj ne kokosove lupine?"
+          },
+          "a": {
+            "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
+            "sl": "Luščina in lupina lahko povzročita resne prebavne težave, tudi zaporo črevesja in draženje želodca, podobno kot če bi pes pojedel palice ali les."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD1",
+        "KD1",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122",
+        "KD122"
+      ],
+      "related": [
+        "coconut-oil",
+        "xylitol",
+        "pineapple",
+        "mango"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "coffee",
       "species": "dog",
       "level": "toxic",
@@ -23808,6 +24172,216 @@
       "updated": "2026-11-01"
     },
     {
+      "slug": "dates",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Dates",
+        "sl": "Datlji"
+      },
+      "question": {
+        "en": "Can dogs eat dates?",
+        "sl": "Ali lahko psi jedo datlje?"
+      },
+      "url_slug": {
+        "en": "dates",
+        "sl": "datlji"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat dates in moderation, as an occasional treat. Always remove the pit first, because it is a choking hazard, and give small pieces rather than the whole fruit. Dates are high in sugar and fibre, so too many can upset the stomach.",
+        "sl": "Da, psi lahko zmerno jedo datlje kot občasen priboljšek. Vedno najprej odstranite koščico, ker lahko povzroči dušenje, in dajajte majhne koščke, ne celega sadeža. Datlji vsebujejo veliko sladkorja in vlaknin, zato lahko preveč datljev razburi želodec."
+      },
+      "why": {
+        "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
+        "sl": "Datlji niso zelo strupeni kot grozdje, a naj ne bodo vsakdanji priboljšek. Koščica ni strupena, lahko pa povzroči dušenje in, če jo pes pogoltne, zaporo črevesja. Datlji imajo veliko sladkorja in kalorij, kar lahko ob prekomernem hranjenju hitro poveča telesno težo, veliko vlaknin pa lahko povzroči drisko ali zaprtje."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "Ask your vet before you start giving dates. After your dog has eaten some, watch for vomiting, diarrhoea or constipation.",
+        "sl": "Preden psu začnete dajati datlje, se posvetujte z veterinarjem. Ko jih pes poje, bodite pozorni na bruhanje, drisko ali zaprtje."
+      },
+      "serving": {
+        "en": "Pit removed, cut into small pieces, as an occasional treat only.",
+        "sl": "Brez koščice, narezani na majhne koščke, le kot občasen priboljšek."
+      },
+      "child": {
+        "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
+        "sl": "Psi lahko včasih dobijo majhen košček datlja. Odrasli najprej odstrani trdo koščico."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is a date pit poisonous to dogs?",
+            "sl": "Je koščica datlja za pse strupena?"
+          },
+          "a": {
+            "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
+            "sl": "Koščica ni strupena, lahko pa povzroči dušenje in, če jo pes pogoltne, zaporo črevesja, zato jo vedno odstranite."
+          }
+        },
+        {
+          "q": {
+            "en": "Why only a little?",
+            "sl": "Zakaj le malo?"
+          },
+          "a": {
+            "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
+            "sl": "Datlji imajo veliko kalorij in sladkorja, kar lahko ob prekomernem hranjenju hitro poveča težo, preveč sladkorja pa lahko psa pusti oslabelega in žejnega."
+          }
+        },
+        {
+          "q": {
+            "en": "Are dried dates okay?",
+            "sl": "So suhi datlji v redu?"
+          },
+          "a": {
+            "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
+            "sl": "Suhi datlji imajo več sladkorja in kalorij in še vedno vsebujejo trdo koščico, zato jo odstranite, preden psu daste majhen košček."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD119",
+        "KD120",
+        "KD120",
+        "KD120",
+        "KD120",
+        "KD120",
+        "KD120",
+        "KD125",
+        "KD125",
+        "KD125",
+        "KD125",
+        "KD125"
+      ],
+      "related": [
+        "figs",
+        "dried-fruit",
+        "fruit-pits",
+        "raisins"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
+      "slug": "dried-fruit",
+      "species": "dog",
+      "level": "toxic",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Dried fruit",
+        "sl": "Suho sadje"
+      },
+      "question": {
+        "en": "Can dogs eat dried fruit?",
+        "sl": "Ali lahko psi jedo suho sadje?"
+      },
+      "url_slug": {
+        "en": "dried-fruit",
+        "sl": "suho-sadje"
+      },
+      "answer": {
+        "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
+        "sl": "Odvisno od sadja, mešanice pa so tvegane. Rozine, sultanine in korinte so posušeno grozdje in so za pse strupene, tudi v zelo majhnih količinah. Drugo suho sadje, na primer fige in breskve, ima lahko veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico."
+      },
+      "why": {
+        "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
+        "sl": "Grozdje, rozine, sultanine in korinte so za pse lahko strupeni; ni mogoče vedeti, ali bo pes hudo zbolel, in nekateri psi zbolijo že po zelo majhnih količinah, zlasti posušenih. Suhe brusnice so včasih pomešane z rozinami. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda, sušene breskve pa pogosto vsebujejo preveč sladkorja. Ker se v mešanici suhega sadja lahko skrivajo rozine, pri katerih je treba takoj k veterinarju, uporabljamo strožjo stopnjo in suho sadje na splošno, tako kot rozine, uvrščamo med strupena živila."
+      },
+      "signs": {
+        "en": [
+          "Vomiting",
+          "Diarrhoea",
+          "Painful belly",
+          "Blood in poo",
+          "Low energy",
+          "Reduced appetite"
+        ],
+        "sl": [
+          "Bruhanje",
+          "Driska",
+          "Boleč trebuh",
+          "Kri v blatu",
+          "Pomanjkanje energije",
+          "Manjši apetit"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog ate raisins, sultanas, currants or a dried fruit mix that may contain them, contact your vet immediately. Don't wait for signs.",
+        "sl": "Če je pes pojedel rozine, sultanine, korinte ali mešanico suhega sadja, ki jih morda vsebuje, takoj pokličite veterinarja. Ne čakajte na znake."
+      },
+      "serving": null,
+      "child": {
+        "en": "Dried fruit like raisins is not for dogs. Keep snack mixes away from your dog and tell a grown-up if it eats some.",
+        "sl": "Suho sadje, kot so rozine, ni za pse. Mešanice prigrizkov drži stran od psa in povej odraslemu, če jih pes poje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Which foods hide dried grapes?",
+            "sl": "V kateri hrani se skriva posušeno grozdje?"
+          },
+          "a": {
+            "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
+            "sl": "Rozine, sultanine in korinte so pogosto v hrani, kot so božični kolač, velikonočne žemlje in piškoti, suhe brusnice pa so včasih pomešane z rozinami."
+          }
+        },
+        {
+          "q": {
+            "en": "Are other dried fruits safe?",
+            "sl": "Je drugo suho sadje varno?"
+          },
+          "a": {
+            "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
+            "sl": "Ne kot reden priboljšek. Suhe fige in sušene breskve imajo veliko sladkorja, suhi datlji pa še vedno vsebujejo koščico, ki jo je treba odstraniti."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD126",
+        "KD125",
+        "KD125",
+        "KD95",
+        "KD118",
+        "KD118",
+        "KD28"
+      ],
+      "related": [
+        "raisins",
+        "grapes",
+        "dates",
+        "figs",
+        "cranberries"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "energy-drinks",
       "species": "dog",
       "level": "toxic",
@@ -24494,6 +25068,196 @@
         "pork"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "figs",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Figs",
+        "sl": "Fige"
+      },
+      "question": {
+        "en": "Can dogs eat figs?",
+        "sl": "Ali lahko psi jedo fige?"
+      },
+      "url_slug": {
+        "en": "figs",
+        "sl": "fige"
+      },
+      "answer": {
+        "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
+        "sl": "Da, sveže fige so za pse na splošno varne, če so pravilno pripravljene, a le kot občasen priboljšek. Ponudite samo mehko notranjost v majhnih koščkih in psu nikoli ne pustite jesti figovih listov, lubja ali vej. Suhe fige so presladke."
+      },
+      "why": {
+        "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
+        "sl": "Same fige ne veljajo za strupene kot grozdje in češnje, figovec kot rastlina pa je lahko škodljiv. Fige vsebujejo vitamina A in C, kalcij, kalij, magnezij in železo. Ker sadje vsebuje naravni sladkor in vlaknine, ima lahko preveč fig odvajalni učinek in povzroči drisko. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog eats any part of the fig plant, get veterinary care right away. If your dog eats several figs and its symptoms don't improve, or it starts to vomit, contact your vet.",
+        "sl": "Če pes poje kateri koli del figovca, takoj poiščite veterinarsko pomoč. Če pes poje več fig in se mu znaki ne izboljšajo ali začne bruhati, se obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
+        "sl": "Samo mehka notranjost sveže fige brez vseh delov rastline, narezana na majhne koščke. Začnite z drobnim koščkom in bodite pozorni na prebavne težave ali alergijsko reakcijo."
+      },
+      "child": {
+        "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
+        "sl": "Psi lahko poskusijo droben košček mehke fige. Figovi listi in veje niso za pse, zato najprej vprašaj odraslega."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat dried figs?",
+            "sl": "Ali lahko psi jedo suhe fige?"
+          },
+          "a": {
+            "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
+            "sl": "Suhe fige niso dobra izbira za priboljšek. Imajo veliko bolj zgoščen sladkor, ker jim je bila med sušenjem odvzeta voda."
+          }
+        },
+        {
+          "q": {
+            "en": "What if my dog chews a fig tree?",
+            "sl": "Kaj, če pes gloda figovo drevo?"
+          },
+          "a": {
+            "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
+            "sl": "Figovec je lahko škodljiv. Znaki so lahko bruhanje, močno slinjenje, draženje kože in izpuščaji. Če pes poje kateri koli del rastline, takoj poiščite veterinarsko pomoč."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118",
+        "KD118"
+      ],
+      "related": [
+        "dates",
+        "dried-fruit",
+        "grapes",
+        "cherries"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
+      "slug": "fruit-pits",
+      "species": "dog",
+      "level": "dangerous",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Fruit pits and stones",
+        "sl": "Koščice sadja"
+      },
+      "question": {
+        "en": "Can dogs eat fruit pits?",
+        "sl": "Ali lahko psi jedo koščice sadja?"
+      },
+      "url_slug": {
+        "en": "fruit-pits",
+        "sl": "koscice-sadja"
+      },
+      "answer": {
+        "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
+        "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena."
+      },
+      "why": {
+        "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
+        "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer."
+      },
+      "signs": {
+        "en": [
+          "Gagging",
+          "Drooling",
+          "Vomiting",
+          "Difficulty passing stool",
+          "Belly pain",
+          "Difficulty breathing"
+        ],
+        "sl": [
+          "Siljenje na bruhanje",
+          "Slinjenje",
+          "Bruhanje",
+          "Težave pri iztrebljanju",
+          "Bolečine v trebuhu",
+          "Težko dihanje"
+        ]
+      },
+      "what_to_do": {
+        "en": "Call your vet right away if your dog breaks open a pit. If your dog swallowed a pit and shows any of these signs, call your vet.",
+        "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Fruit stones are not for dogs. Throw them in the bin where your dog can't reach, and tell a grown-up if your dog eats one.",
+        "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is the fruit itself okay?",
+            "sl": "Je sam sadež v redu?"
+          },
+          "a": {
+            "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
+            "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje."
+          }
+        },
+        {
+          "q": {
+            "en": "Which fruits have pits?",
+            "sl": "Katero sadje ima koščice?"
+          },
+          "a": {
+            "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
+            "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD127",
+        "KD89",
+        "KD89"
+      ],
+      "related": [
+        "cherries",
+        "peaches",
+        "plums",
+        "apricots",
+        "apple-seeds",
+        "mango"
+      ],
+      "updated": "2026-11-03"
     },
     {
       "slug": "garlic",
@@ -31033,6 +31797,96 @@
       "updated": "2026-10-31"
     },
     {
+      "slug": "pears",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pears",
+        "sl": "Hruške"
+      },
+      "question": {
+        "en": "Can dogs eat pears?",
+        "sl": "Ali lahko psi jedo hruške?"
+      },
+      "url_slug": {
+        "en": "pears",
+        "sl": "hruske"
+      },
+      "answer": {
+        "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
+        "sl": "Da, psi lahko zmerno jedo hruške. Odstranite peščišče in semena, sadež narežite na majhne koščke in ne dajajte hrušk iz konzerve v sladkem sirupu. Preveč hrušk lahko psu razburi želodec."
+      },
+      "why": {
+        "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
+        "sl": "Hruške vsebujejo vitamin C, vitamin A, baker in vlaknine. Semena vsebujejo sledi cianida in lahko povzročijo tudi dušenje, zato peščišča psu ne dajajte. Hruške iz konzerve vsebujejo preveč sladkorja, ki lahko draži prebavila in vodi v debelost. Tudi varna hrana, kot so hruške, lahko povzroči dušenje."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "The first time you give pears, watch for signs of stomach upset, and contact your vet if you have any concerns.",
+        "sl": "Ko psu prvič date hruško, bodite pozorni na znake prebavnih težav in se ob kakršnih koli skrbeh obrnite na veterinarja."
+      },
+      "serving": {
+        "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
+        "sl": "Sveža, zrela hruška brez peščišča in semen, narezana na majhne koščke; psa med jedjo opazujte. Kot občasen prigrizek."
+      },
+      "child": {
+        "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
+        "sl": "Psi lahko pojedo nekaj koščkov hruške! Odrasli najprej odstrani sredico s semeni."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can dogs eat the pear core?",
+            "sl": "Ali lahko psi jedo peščišče hruške?"
+          },
+          "a": {
+            "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
+            "sl": "Ne. Psu ne dajajte delov hruške s semeni; semena vsebujejo sledi cianida in lahko povzročijo dušenje."
+          }
+        },
+        {
+          "q": {
+            "en": "Are canned pears okay?",
+            "sl": "So hruške iz konzerve v redu?"
+          },
+          "a": {
+            "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
+            "sl": "Ne. Hruške iz konzerve vsebujejo preveč sladkorja. Ne dajajte hrušk iz konzerve ali kozarca v sirupu, tudi ne tistih z oznako »v lastnem soku«. Najboljša izbira so sveže, zrele hruške."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD117",
+        "KD89",
+        "KD89",
+        "KD89"
+      ],
+      "related": [
+        "apples",
+        "apple-seeds",
+        "peaches"
+      ],
+      "updated": "2026-11-03"
+    },
+    {
       "slug": "pecans",
       "species": "dog",
       "level": "dangerous",
@@ -31322,6 +32176,79 @@
         "hazelnuts"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "persimmon",
+      "species": "dog",
+      "level": "small_amounts",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Persimmon",
+        "sl": "Kaki"
+      },
+      "question": {
+        "en": "Can dogs eat persimmon?",
+        "sl": "Ali lahko psi jedo kakije?"
+      },
+      "url_slug": {
+        "en": "persimmon",
+        "sl": "kaki"
+      },
+      "answer": {
+        "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
+        "sl": "Da, v omejenih količinah. Meso kakija je za pse varno, a najprej odstranite semena: lahko povzročijo dušenje in zaporo črevesja, zlasti pri majhnih psih. Kaki lahko deluje odvajalno in povzroči drisko in bruhanje."
+      },
+      "why": {
+        "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
+        "sl": "Sam sadež kakija psom ne škodi, semena in koščice pa lahko povzročijo zaporo črevesja. Večji psi jih morda izločijo brez težav, pri manjših pasmah pa grozita dušenje in zapora črevesja. Kaki deluje odvajalno in lahko povzroči drisko, slabost, bruhanje in krče v trebuhu."
+      },
+      "signs": null,
+      "what_to_do": {
+        "en": "If your dog shows vomiting, belly pain, dehydration or loss of appetite after eating persimmon, get veterinary help right away.",
+        "sl": "Če ima pes po zaužitju kakija bruhanje, bolečine v trebuhu, znake dehidracije ali izgubo apetita, takoj poiščite veterinarsko pomoč."
+      },
+      "serving": {
+        "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
+        "sl": "Sadež operite, odstranite semena in ga narežite na majhne koščke. Samo zmerno."
+      },
+      "child": {
+        "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
+        "sl": "Psi lahko dobijo malo kakija. Odrasli odstrani semena in ga nareže na majhne koščke."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Are persimmon seeds dangerous?",
+            "sl": "So semena kakija nevarna?"
+          },
+          "a": {
+            "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
+            "sl": "Da, odstraniti jih je treba. Lahko povzročijo dušenje in zaporo črevesja, najbolj ogroženi so majhni psi."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124",
+        "KD124"
+      ],
+      "related": [
+        "fruit-pits",
+        "mango",
+        "dates"
+      ],
+      "updated": "2026-11-03"
     },
     {
       "slug": "pineapple",
@@ -32163,6 +33090,98 @@
         "grapes"
       ],
       "updated": "2026-10-31"
+    },
+    {
+      "slug": "pomegranate",
+      "species": "dog",
+      "level": "not_recommended",
+      "locales": [
+        "en",
+        "sl"
+      ],
+      "name": {
+        "en": "Pomegranate",
+        "sl": "Granatno jabolko"
+      },
+      "question": {
+        "en": "Can dogs eat pomegranate?",
+        "sl": "Ali lahko psi jedo granatno jabolko?"
+      },
+      "url_slug": {
+        "en": "pomegranate",
+        "sl": "granatno-jabolko"
+      },
+      "answer": {
+        "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
+        "sl": "Ni priporočljivo. Granatno jabolko za pse ni strupeno, a to še ne pomeni, da je varno: semena lahko povzročijo prebavne težave in zaporo prebavil, koščki lupine in peclja pa zamašitev. Varneje je, da psu svežega granatnega jabolka ne dajete."
+      },
+      "why": {
+        "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
+        "sl": "Glavni veterinar AKC pravi, da granatno jabolko za pse ni strupeno. Semena, ki jih ljudje običajno jemo, pa lahko vseeno povzročijo prebavne težave in zaporo prebavil. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih. Izvleček granatnega jabolka v izdelkih, narejenih za pse, je nekaj drugega kot svež sadež."
+      },
+      "signs": {
+        "en": [
+          "Diarrhoea",
+          "Vomiting"
+        ],
+        "sl": [
+          "Driska",
+          "Bruhanje"
+        ]
+      },
+      "what_to_do": {
+        "en": "If your dog gets into pomegranate seeds, contact your vet right away.",
+        "sl": "Če pes poje semena granatnega jabolka, se takoj obrnite na veterinarja."
+      },
+      "serving": null,
+      "child": {
+        "en": "Pomegranate is a people fruit. Its seeds and peel can upset a dog's tummy, so keep it out of reach.",
+        "sl": "Granatno jabolko je sadež za ljudi. Njegova semena in lupina lahko psu razburijo trebušček, zato ga pospravi."
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is pomegranate in dog food okay?",
+            "sl": "Je granatno jabolko v pasji hrani v redu?"
+          },
+          "a": {
+            "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
+            "sl": "Izvleček granatnega jabolka ima lahko za pse koristi. Če ga želite dajati, izberite izdelke, narejene posebej za pse, in se posvetujte z veterinarjem."
+          }
+        },
+        {
+          "q": {
+            "en": "Can dogs eat the pomegranate peel?",
+            "sl": "Ali lahko psi jedo lupino granatnega jabolka?"
+          },
+          "a": {
+            "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
+            "sl": "Ne. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih, zato jih psu ne dajajte."
+          }
+        }
+      ],
+      "source_ids": [
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121",
+        "KD121"
+      ],
+      "related": [
+        "grapes",
+        "cherries",
+        "watermelon"
+      ],
+      "updated": "2026-11-03"
     },
     {
       "slug": "pork",
@@ -39053,11 +40072,99 @@
     },
     {
       "species": "dog",
+      "id": "KD117",
+      "tier": "B",
+      "publisher": "American Kennel Club, Anna Burke (updated 2025-08-27)",
+      "title": "Can Dogs Eat Pears?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pears/"
+    },
+    {
+      "species": "dog",
+      "id": "KD118",
+      "tier": "B",
+      "publisher": "American Kennel Club, Rylee Johnston (updated 2026-08-20)",
+      "title": "Can Dogs Eat Figs?",
+      "url": "https://www.akc.org/expert-advice/advice/can-dog-eat-figs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD119",
+      "tier": "B",
+      "publisher": "Noble Veterinary Clinics (ARENA Veterinary Group), Dubai; Dr. Soheyl Simaei (updated 2025-02-04)",
+      "title": "Can Dogs Eat Dates? A Guide to Safe and Healthy Treats",
+      "url": "https://noblevetclinic.com/blog/can-dogs-eat-dates"
+    },
+    {
+      "species": "dog",
       "id": "KD12",
       "tier": "A",
       "publisher": "Merck Veterinary Manual",
       "title": "Bread Dough Toxicosis in Animals",
       "url": "https://www.merckvetmanual.com/toxicology/food-hazards/bread-dough-toxicosis-in-animals"
+    },
+    {
+      "species": "dog",
+      "id": "KD120",
+      "tier": "C",
+      "publisher": "Dial A Vet (telehealth), reviewed by Dr. Margarette, DVM (published 2025-07-07; updated 2026-05-08)",
+      "title": "Can Dogs Eat Dates? What You Should Know About Feeding Dates",
+      "url": "https://www.dialavet.com/blog/can-dogs-eat-dates"
+    },
+    {
+      "species": "dog",
+      "id": "KD121",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2025-07-02)",
+      "title": "Can Dogs Eat Pomegranates?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-pomegranates/"
+    },
+    {
+      "species": "dog",
+      "id": "KD122",
+      "tier": "B",
+      "publisher": "American Kennel Club, Sassafras Patterdale (updated 2026-08-11)",
+      "title": "Can Dogs Eat Coconut?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-coconut/"
+    },
+    {
+      "species": "dog",
+      "id": "KD123",
+      "tier": "B",
+      "publisher": "American Kennel Club, Nandini Maharaj (updated 2025-10-28)",
+      "title": "Coconut Oil for Dogs: Is It Really Good for Them?",
+      "url": "https://www.akc.org/expert-advice/health/coconut-oil-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD124",
+      "tier": "B",
+      "publisher": "Pet First Veterinary Clinic, Dubai; Rico Alanan, medically reviewed by Dr. Diana Lavareda (published 2024-04-11; updated 2026-05-03)",
+      "title": "Are Persimmons Safe For Dogs?",
+      "url": "https://petfirst.ae/are-persimmons-safe-for-dogs/"
+    },
+    {
+      "species": "dog",
+      "id": "KD125",
+      "tier": "B",
+      "publisher": "American Kennel Club, Gemma Johnstone (updated 2025-12-04)",
+      "title": "Can Dogs Eat Dates?",
+      "url": "https://www.akc.org/expert-advice/nutrition/can-dogs-eat-dates/"
+    },
+    {
+      "species": "dog",
+      "id": "KD126",
+      "tier": "B",
+      "publisher": "PDSA (published 2020-11)",
+      "title": "Grape, raisin, currant and sultana poisoning in dogs",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/pet-health-hub/conditions/grape-raisin-currant-and-sultana-poisoning-in-dogs"
+    },
+    {
+      "species": "dog",
+      "id": "KD127",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals, Tammy Hunter DVM & Lynn Buzhardt DVM (updated 2023-08-23)",
+      "title": "Summer Fun and Follies",
+      "url": "https://vcahospitals.com/know-your-pet/summer-fun-and-follies"
     },
     {
       "species": "dog",

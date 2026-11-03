@@ -1,0 +1,144 @@
+{
+  "slug": "coconut-oil",
+  "species": "dog",
+  "name": {
+    "en": "Coconut oil",
+    "sl": "Kokosovo olje"
+  },
+  "question": {
+    "en": "Can dogs eat coconut oil?",
+    "sl": "Ali lahko psi jedo kokosovo olje?"
+  },
+  "url_slug": {
+    "en": "coconut-oil",
+    "sl": "kokosovo-olje"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
+    "sl": "Ni priporočljivo kot redni dodatek. Če pes malo poliže, verjetno ne bo škode, a kokosovo olje je večinoma nasičena maščoba: lahko povzroči prebavne težave, mastno blato in drisko, dolgotrajno hranjenje pa lahko vodi v debelost in celo vnetje trebušne slinavke. Najprej se posvetujte z veterinarjem."
+  },
+  "why": {
+    "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
+    "sl": "Kokosovo olje je večinoma iz nasičenih maščob. Hranjenje z njim lahko vodi v povečanje telesne teže in prebavne težave, dolgotrajno hranjenje pa v debelost in lahko sproži vnetje trebušne slinavke. Obsežnih raziskav, ki bi dokazovale, da psom koristi, ni. Drug članek AKC pravi, da vsakodnevno hranjenje ni priporočljivo in da so majhne, občasne količine varnejše; sledimo strožjemu nasvetu in ga uvrščamo med odsvetovane."
+  },
+  "signs": {
+    "en": [
+      "Upset stomach",
+      "Greasy stools",
+      "Diarrhoea"
+    ],
+    "sl": [
+      "Prebavne težave",
+      "Mastno blato",
+      "Driska"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog licked a little coconut oil, it likely won't cause much harm. Before giving coconut oil to eat or putting it on the skin, discuss it with your vet.",
+    "sl": "Če je pes polizal malo kokosovega olja, verjetno ne bo večje škode. Preden mu kokosovo olje date jesti ali ga nanesete na kožo, se posvetujte z veterinarjem."
+  },
+  "serving": null,
+  "child": {
+    "en": "Coconut oil is very fatty and can upset a dog's tummy. Only a grown-up and the vet decide about it.",
+    "sl": "Kokosovo olje je zelo mastno in lahko psu razburi trebušček. O njem odločata samo odrasli in veterinar."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can I put coconut oil on my dog's skin?",
+        "sl": "Ali lahko psu kokosovo olje namažem na kožo?"
+      },
+      "a": {
+        "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
+        "sl": "Kokosovo olje lahko pomiri razdražena mesta ali suho, srbečo kožo, a maže in lahko zamaši pore. Pred uporabo se posvetujte z veterinarjem."
+      }
+    },
+    {
+      "q": {
+        "en": "Is coconut oil good for dogs' health?",
+        "sl": "Je kokosovo olje dobro za zdravje psa?"
+      },
+      "a": {
+        "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
+        "sl": "Obsežnih raziskav, ki bi dokazovale, da kokosovo olje zagotovo pomaga pri številnih vidikih pasjega zdravja, ni."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD123",
+      "quote": "The answer is \"maybe.\""
+    },
+    {
+      "id": "KD123",
+      "quote": "Coconut oil consists of at least 90% saturated fats, most of which are medium-chain triglycerides (MCTs)."
+    },
+    {
+      "id": "KD123",
+      "quote": "But feeding it to them can definitely lead to both weight gain and gastrointestinal disturbances,"
+    },
+    {
+      "id": "KD123",
+      "quote": "For example, instead of helping with digestion, the fats in coconut oil can cause upset stomachs or diarrhea in dogs."
+    },
+    {
+      "id": "KD123",
+      "quote": "In the short term, your dog may experience greasy stool or diarrhea."
+    },
+    {
+      "id": "KD123",
+      "quote": "Dr. Simon agrees, explaining that long-term feeding of coconut oil can lead to obesity in dogs and even trigger pancreat"
+    },
+    {
+      "id": "KD123",
+      "quote": "There hasn't been extensive research proving that coconut oil will definitively aid in many aspects of canine health."
+    },
+    {
+      "id": "KD123",
+      "quote": "If you do put a small amount of coconut oil on your dog and they lick it off, that likely won't cause much harm."
+    },
+    {
+      "id": "KD123",
+      "quote": "Coconut oil can help soothe irritated areas like hot spots or restore moisture to itchy, dry skin."
+    },
+    {
+      "id": "KD123",
+      "quote": "there's no harm in utilizing topical coconut oil on a dog. However, it is messy, can clog pores"
+    },
+    {
+      "id": "KD123",
+      "quote": "Before applying coconut oil topically or giving your dog some to eat, discuss these options with your vet."
+    },
+    {
+      "id": "KD122",
+      "quote": "Daily feeding isn't recommended. Small, occasional amounts are safer to avoid digestive upset and excess calorie intake."
+    },
+    {
+      "id": "KD122",
+      "quote": "Just be aware that if fed large amounts of oil, diarrhea can occur."
+    },
+    {
+      "id": "KD1",
+      "quote": "When ingested in small amounts, coconut and coconut-based products are not likely to cause serious harm to your pet."
+    }
+  ],
+  "related": [
+    "coconut",
+    "butter",
+    "fatty-meat"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6378e0f492ff4d1661c3e2a1bd4731eecbed1e6d848241e4576f5ec8182b0c7b"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "50d4402be74fea31325806b73e88686d7abd9557e70850afedaa529a31fed076"
+    }
+  }
+}

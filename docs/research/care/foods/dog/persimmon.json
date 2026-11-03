@@ -1,0 +1,114 @@
+{
+  "slug": "persimmon",
+  "species": "dog",
+  "name": {
+    "en": "Persimmon",
+    "sl": "Kaki"
+  },
+  "question": {
+    "en": "Can dogs eat persimmon?",
+    "sl": "Ali lahko psi jedo kakije?"
+  },
+  "url_slug": {
+    "en": "persimmon",
+    "sl": "kaki"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
+    "sl": "Da, v omejenih količinah. Meso kakija je za pse varno, a najprej odstranite semena: lahko povzročijo dušenje in zaporo črevesja, zlasti pri majhnih psih. Kaki lahko deluje odvajalno in povzroči drisko in bruhanje."
+  },
+  "why": {
+    "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
+    "sl": "Sam sadež kakija psom ne škodi, semena in koščice pa lahko povzročijo zaporo črevesja. Večji psi jih morda izločijo brez težav, pri manjših pasmah pa grozita dušenje in zapora črevesja. Kaki deluje odvajalno in lahko povzroči drisko, slabost, bruhanje in krče v trebuhu."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog shows vomiting, belly pain, dehydration or loss of appetite after eating persimmon, get veterinary help right away.",
+    "sl": "Če ima pes po zaužitju kakija bruhanje, bolečine v trebuhu, znake dehidracije ali izgubo apetita, takoj poiščite veterinarsko pomoč."
+  },
+  "serving": {
+    "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
+    "sl": "Sadež operite, odstranite semena in ga narežite na majhne koščke. Samo zmerno."
+  },
+  "child": {
+    "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
+    "sl": "Psi lahko dobijo malo kakija. Odrasli odstrani semena in ga nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are persimmon seeds dangerous?",
+        "sl": "So semena kakija nevarna?"
+      },
+      "a": {
+        "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
+        "sl": "Da, odstraniti jih je treba. Lahko povzročijo dušenje in zaporo črevesja, najbolj ogroženi so majhni psi."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD124",
+      "quote": "Yes, persimmons are totally safe for dogs and can be a valuable addition to their diet in limited quantities."
+    },
+    {
+      "id": "KD124",
+      "quote": "While eating persimmon fruit doesn’t pose any harm, it should be served after removing the seed to avoid choking hazards."
+    },
+    {
+      "id": "KD124",
+      "quote": "While no part of the persimmon fruit itself is harmful to dogs, it’s crucial to avoid feeding them seeds and pits, which"
+    },
+    {
+      "id": "KD124",
+      "quote": "pose a risk of intestinal blockage."
+    },
+    {
+      "id": "KD124",
+      "quote": "While larger dogs may handle seeds and pits without a hitch, smaller breeds face the threat of choking and bowel obstruction."
+    },
+    {
+      "id": "KD124",
+      "quote": "The laxatives in persimmons may cause diarrhea, accompanied by nausea, vomiting, and abdominal cramps."
+    },
+    {
+      "id": "KD124",
+      "quote": "Start by giving the persimmon a refreshing rinse under cool water to wash away any dirt or residue."
+    },
+    {
+      "id": "KD124",
+      "quote": "Next, grab your knife and carefully chop the persimmon into small, bite-sized slices."
+    },
+    {
+      "id": "KD124",
+      "quote": "Even the sweetest treats should be enjoyed in moderation, sparing your dog from an unpleasant aftermath."
+    },
+    {
+      "id": "KD124",
+      "quote": "If your dog exhibits symptoms like vomiting, abdominal pain, dehydration, or loss of appetite after consuming persimmons"
+    },
+    {
+      "id": "KD124",
+      "quote": "It’s crucial to seek immediate veterinary assistance."
+    }
+  ],
+  "related": [
+    "fruit-pits",
+    "mango",
+    "dates"
+  ],
+  "updated": "2026-11-03",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6176e2f8a27de1e9eb7979049bb44c229a1fc4418e298fc185e5dbcada1ffd19"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cb3144fd2cd8561f873274873c4b3901cc259afc69f938b47b2101f315f36b64"
+    }
+  }
+}
