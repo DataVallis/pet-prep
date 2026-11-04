@@ -3385,6 +3385,23 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (dog-data S685, 2026-11-03, reachable with a trailing slash): Good Practice lists only 'Prioritising genetic diversity' (key inbreeding_coi, Irish Wolfhound precedent); Best Practice: the BVA/KC hip scheme (test names as returned verbatim). PetMD (S687): breeders should screen for growth and eye disorders (paraphrase only — no other_scheme item)."
+    },
+    "pekingese": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K40",
+        "quote": "who has received an updated list of breeds that can be assessed under the Scheme from the Royal Kennel Club:"
+      },
+      "tests": [
+        {
+          "key": "boas_grading",
+          "level": "other_scheme",
+          "name": "Breathing testing (for brachycephalic obstructive airway syndrome (BOAS)) under the Respiratory Function Grading scheme",
+          "source_id": "K40",
+          "quote": "Pekingese"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/toy/pekingese; the thekennelclub.org.uk address redirects there) could not be fetched on 2026-11-04 → no minimum / best_practice level. Dogs NSW news (K40, April 2026): the updated RKC list of breeds that can be assessed under the Respiratory Function Grading scheme includes 'Pekingese' (it names the breed among the high-risk BOAS breeds — no figure kept here) → other_scheme. PDSA (dog-data S693): ask for the parents' health screening results and choose a Kennel Club Assured Breeder (paraphrase). No new test key."
     }
   }
 }
