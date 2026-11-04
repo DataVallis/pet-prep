@@ -26,6 +26,11 @@
       "name": "Uprava za bezbjednost hrane, veterinu i fitosanitarne poslove - report on selected veterinary clinics (public tender)",
       "url": "https://www.gov.me/en/documents/c06cd176-600a-483d-9859-89a1749f5bf7",
       "note": "Not opened for content; related gov.me report page (c06cd176-...) shows a 19 MB .docx with no readable text; not usable."
+    },
+    {
+      "name": "Opština Bijelo Polje - Važni telefoni",
+      "url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
+      "note": "Official municipality page listing 3 veterinary ambulances in Bijelo Polje (phones only)."
     }
   ],
   "entries": [
@@ -271,7 +276,48 @@
       "source_url": "https://kotorkitties.org/de/partner-veterinary-clinics/",
       "checked": "2026-11-04",
       "note": "Address/phone from Kotor Kitties partner page; hours from CG Stray guide."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinarska ambulanta Bijelo Polje",
+      "city": "Bijelo Polje",
+      "region": "Northern Montenegro",
+      "address": "Voja Lješnjaka 64, 84000 Bijelo Polje",
+      "phone": "+382 50 431 733",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
+      "checked": "2026-11-04",
+      "note": "Municipality of Bijelo Polje 'Važni telefoni' page (official), section Veterinarske stanice: local number only, no hours, no 24h claim. Page shows local numbers only; the same page states '+ 382 (0) 50' as 'Pozivni kod za Bijelo Polje' (confirmed by independent check 2026-11-04), so +382 50 prefix is correct. Small vs large animal practice not stated. Also listed as 'Veterinarska stanica Bijelo Polje' under general numbers (same number)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinarska ambulanta Grandov",
+      "city": "Bijelo Polje",
+      "region": "Northern Montenegro",
+      "address": "Radomira Medojevića 12, 84000 Bijelo Polje",
+      "phone": "+382 50 432 602",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
+      "checked": "2026-11-04",
+      "note": "Municipality of Bijelo Polje 'Važni telefoni' page (official), section Veterinarske stanice: local number only, no hours, no 24h claim. Page shows local numbers only; the same page states '+ 382 (0) 50' as 'Pozivni kod za Bijelo Polje' (confirmed by independent check 2026-11-04), so +382 50 prefix is correct. Small vs large animal practice not stated."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinarska ambulanta Vet-Sanus",
+      "city": "Bijelo Polje",
+      "region": "Northern Montenegro",
+      "phone": "+382 50 482 390",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "source_url": "https://www.bijelopolje.co.me/index.php/gradani/obavjestenja/oglasna-tabla/4392-vazni-telefoni",
+      "checked": "2026-11-04",
+      "note": "Municipality of Bijelo Polje 'Važni telefoni' page (official), section Veterinarske stanice: local number only, no hours, no 24h claim. Page shows local numbers only; the same page states '+ 382 (0) 50' as 'Pozivni kod za Bijelo Polje' (confirmed by independent check 2026-11-04), so +382 50 prefix is correct. Small vs large animal practice not stated. No address on the page."
     }
   ],
-  "notes": "No official Montenegrin register with phones/hours was readable: gov.me pages of the Uprava za bezbjednost hrane, veterinu i fitosanitarne poslove only expose document titles (the clinic list is a 19 MB docx without an accessible link), and no Veterinarska komora Crne Gore page was found. No duty rota (dežurstvo) and no animal poison line found for Montenegro. Only Hasvet (Podgorica) states 24/7. The WebFetch tool could only open URLs that appeared in earlier results, and animavet.me forbids automated access (robots), canis.me loops on redirect and vetport.me failed to load, so these clinics rely on the CG Stray / Kotor Kitties NGO pages. Left to do: Budva and Kotor additional clinics, Nikšić others, Bijelo Polje, Pljevlja, Kolašin/Žabljak, Berane, Danilovgrad, Rožaje, Bar/Ulcinj others (only planplus.rs aggregator listings found, not used); Univerzitet Crne Gore has no veterinary faculty hospital; clinic own sites for Adria Vet, Vet Medica, Novi Vet, PetVet, MedicusVet (Instagram/Facebook only)."
+  "notes": "No official Montenegrin register with phones/hours was readable: gov.me pages of the Uprava za bezbjednost hrane, veterinu i fitosanitarne poslove only expose document titles (the clinic list is a 19 MB docx without an accessible link), and no Veterinarska komora Crne Gore page was found. No duty rota (dežurstvo) and no animal poison line found for Montenegro. Only Hasvet (Podgorica) states 24/7. The WebFetch tool could only open URLs that appeared in earlier results, and animavet.me forbids automated access (robots), canis.me loops on redirect and vetport.me failed to load, so these clinics rely on the CG Stray / Kotor Kitties NGO pages. Left to do: Budva and Kotor additional clinics, Nikšić others, Bijelo Polje, Pljevlja, Kolašin/Žabljak, Berane, Danilovgrad, Rožaje, Bar/Ulcinj others (only planplus.rs aggregator listings found, not used); Univerzitet Crne Gore has no veterinary faculty hospital; clinic own sites for Adria Vet, Vet Medica, Novi Vet, PetVet, MedicusVet (Instagram/Facebook only). Run 2 (2026-11-04): added 3 Bijelo Polje clinics from the municipality's official phone list. Nothing verifiable found for Pljevlja, Berane, Rožaje, Kolašin, Žabljak, Danilovgrad (only companywall/ekapija/planplus aggregator listings; gov.me veterinary documents are PDFs whose content WebFetch cannot read: 'Veterinarske ambulante - dopis' 2022, 'VA Berane Petnjica' 2019); more Budva/Ulcinj/Nikšić/Bar clinics have no own site found (Budva only Vet Medica, already listed). No duty rota or poison line found (balkanica.me emergency page has only human numbers)."
 }
