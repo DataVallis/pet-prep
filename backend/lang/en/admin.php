@@ -439,6 +439,7 @@ return [
             'heartbeat' => 'Scheduler heartbeat',
             'heartbeat_desc' => 'Last game-loop tick :at (red after 5 min)',
             'heartbeat_never_desc' => 'No game-loop tick recorded yet',
+            'heartbeat_stalled_desc' => 'GAME LOOP STALLED since :at — usually a stale schedule lock: php artisan schedule:clear-cache (DEPLOYMENT.md D34)',
             'never' => 'Never',
             'stuck_ledger' => 'Stuck routine ledgers',
             'stuck_ledger_desc' => 'Active pets with days unclosed for more than :days days',
@@ -579,6 +580,14 @@ return [
             'title' => 'Game loop: :count pet(s) failed (:total this run) — the other pets were processed',
             'body' => 'The minute tick (`pets:process-decay`) threw for these pets; their step was rolled back and skipped, every other pet was processed. The pets are retried every minute. System health has the error (class, file, trace). At most one post per pet per day.',
             'pet' => 'Pet #:id',
+        ],
+    ],
+    'game_loop_stalled' => [
+        'discord' => [
+            'title' => 'Game loop stalled: no tick for :minutes min',
+            'body' => 'The minute tick (`pets:process-decay`) has not finished for longer than :threshold min — no decay, escalation, quiet-hour sleep or day close for any pet. Usual cause: a stale schedule lock after a reboot / killed run (DEPLOYMENT.md D34). Fix: in /opt/petprep/repo/backend run `docker compose -p backend -f compose.production.yaml exec -T app php artisan schedule:clear-cache`, or restart the scheduler container. One post per stall; the next one only after the loop has run again.',
+            'minutes' => 'Minutes since the last tick',
+            'threshold' => 'Alert after (min)',
         ],
     ],
     'disk_space' => [

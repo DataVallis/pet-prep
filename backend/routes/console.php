@@ -16,12 +16,26 @@ Artisan::command('inspire', function () {
 | The minutely cron job processes metric decay for all active pets
 | and runs the escalation matrix checks. This is the core game loop.
 |
+| Overlap locks (DEPLOYMENT.md D34, incident 2026-11-04): EVERY withoutOverlapping()
+| names an explicit expiry in minutes. Laravel's default is 1440 (24 h): a run killed
+| before it finished (reboot, OOM, container stop) leaves its mutex in the Redis cache
+| (AOF — it survives a reboot) and the scheduler silently skips the event until it
+| expires — after the reboot of 2026-11-04 the game loop stood still for ~9 h. The
+| expiry = the longest a killed run may block it; keep it just above the longest
+| legitimate run. Every per-row write behind these commands is claimed or row-locked,
+| so a rare overlap after an expiry is harmless. The scheduler container also clears
+| all schedule mutexes when it starts (docker/production/entrypoint.sh), and
+| `system-health:game-loop-check` alerts when the game loop stalls anyway.
+|
 */
 
-// Minutely: Process pet metric decay + escalation checks
+// Minutely: Process pet metric decay + escalation checks.
+// Overlap lock 3 min: a tick takes seconds (per-pet units, PetLoopGuard) and every
+// pet write re-reads the pet under lockForUpdate(), so an overlapping second tick only
+// waits for the row locks; a killed tick blocks at most 3 ticks (< the 5-min stall alert).
 Schedule::command('pets:process-decay')
     ->everyMinute()
-    ->withoutOverlapping()
+    ->withoutOverlapping(3)
     ->runInBackground()
     ->name('pet-decay-loop')
     ->description('Minutely metric decay and escalation for active pets');
@@ -30,7 +44,8 @@ Schedule::command('pets:process-decay')
 // 03:17 UTC — off the hour, outside the families' evening rush.
 Schedule::command('pins:prune')
     ->dailyAt('03:17')
-    ->withoutOverlapping()
+    // One DELETE query; 30 min covers any run (D34: explicit expiry).
+    ->withoutOverlapping(30)
     ->name('prune-child-login-pins')
     ->description('Delete expired / used child login PINs older than 7 days');
 
@@ -39,14 +54,16 @@ Schedule::command('pins:prune')
 // just after the budget day rolls over (AI_BUDGET_TIMEZONE defaults to UTC).
 Schedule::command('media:retry')
     ->dailyAt('00:23')
-    ->withoutOverlapping()
+    // Only queues jobs (each slot is claimed atomically); 60 min is far above a run (D34).
+    ->withoutOverlapping(60)
     ->name('retry-reference-images')
     ->description('Re-queue AI reference images / state videos blocked by the AI budget / fal balance');
 
 // Hourly: fail AI Lab results stuck in `running` for over an hour.
 Schedule::command('media:sweep-lab')
     ->hourlyAt(41)
-    ->withoutOverlapping()
+    // One UPDATE; below the hourly cadence (D34).
+    ->withoutOverlapping(30)
     ->name('sweep-media-lab')
     ->description('Fail AI Lab results running for more than an hour');
 
@@ -54,7 +71,8 @@ Schedule::command('media:sweep-lab')
 // a webhook after 2 h fail as timed_out, lost downloads and dead claims re-queue.
 Schedule::command('media:sweep')
     ->hourlyAt(47)
-    ->withoutOverlapping()
+    // Free fal status polls + re-queues of claimed slots; below the hourly cadence (D34).
+    ->withoutOverlapping(30)
     ->name('sweep-pet-media')
     ->description('Recover pet media slots stuck after a lost job or webhook');
 
@@ -67,13 +85,16 @@ Schedule::command('media:sweep')
 // owned item (also items bought before W03 — the automatic backfill), lost requests, self-healing.
 Schedule::command('media:item-media')
     ->everyTenMinutes()
-    ->withoutOverlapping()
+    // = the cadence: rows are read in batches of 500 and every job claims its row, so a
+    // killed run blocks at most one run (D34).
+    ->withoutOverlapping(10)
     ->name('item-media')
     ->description('AI content of bought items (catalogue pictures, pet-with-item pictures / clips), self-healing');
 
 Schedule::command('media:retry-activity-clips')
     ->hourlyAt(17)
-    ->withoutOverlapping()
+    // Retries are capped inside a conditional UPDATE (auto_retries); below the hourly cadence (D34).
+    ->withoutOverlapping(30)
     ->name('retry-activity-clips')
     ->description('Heal failed school / game clips; exhausted activities switch to simple mode');
 
@@ -85,7 +106,9 @@ Schedule::command('media:retry-activity-clips')
 Schedule::command('media:still-check --items')
     ->dailyAt('05:13')
     ->timezone('Europe/Ljubljana')
-    ->withoutOverlapping()
+    // Few rows, one vision call each (a checked generation is never paid twice); 60 min is far
+    // above a run and still releases a killed run's lock long before the next day (D34).
+    ->withoutOverlapping(60)
     ->name('still-check-items')
     ->description('AI still check of stored item key images never checked; failures regenerated (enforce)');
 
@@ -110,7 +133,8 @@ Schedule::command('media:school-derivatives')
 // box headers of files that are already fine. Also fixes files stored before the fix.
 Schedule::command('media:faststart')
     ->hourlyAt(17)
-    ->withoutOverlapping()
+    // Reads box headers only (fixed files rewritten once); below the hourly cadence (D34).
+    ->withoutOverlapping(50)
     ->name('faststart-pet-media')
     ->description('Move the MP4 index to the front of stored pet videos');
 
@@ -149,7 +173,10 @@ Schedule::command('pets:care-tasks')
 // game over after quiet hours, the daily walk reminder at its earliest time).
 Schedule::command('push:dispatch-scheduled')
     ->everyMinute()
-    ->withoutOverlapping()
+    // Overlap lock 3 min (D34 — the incident of 2026-11-04 blocked it for ~9 h too): a run
+    // queues at most DISPATCH_BATCH rows and claims each with a conditional UPDATE, so an
+    // overlap never queues a push twice.
+    ->withoutOverlapping(3)
     ->name('push-dispatch-scheduled')
     ->description('Queue held push notifications whose send_after has passed');
 
@@ -157,7 +184,8 @@ Schedule::command('push:dispatch-scheduled')
 // device disabled) and delete push rows older than 30 days. Off the quarter hour.
 Schedule::command('push:receipts')
     ->cron('7,22,37,52 * * * *')
-    ->withoutOverlapping()
+    // Only queues one job; = the 15-min cadence (D34).
+    ->withoutOverlapping(15)
     ->name('push-receipts')
     ->description('Check Expo push receipts and prune old push rows');
 
@@ -166,7 +194,8 @@ Schedule::command('push:receipts')
 // reports not seen for 30 days. 03:29 UTC.
 Schedule::command('system-health:prune')
     ->dailyAt('03:29')
-    ->withoutOverlapping()
+    // A few DELETE queries; 60 min covers any run (D34).
+    ->withoutOverlapping(60)
     ->name('prune-system-errors')
     ->description('Delete old resolved / stale rows of the system error log and app error reports older than 30 days');
 
@@ -178,6 +207,20 @@ Schedule::command('system-health:disk-check')
     ->withoutOverlapping(10)
     ->name('disk-space-check')
     ->description('Discord alert once per day when the root disk is ≥ 80 % full');
+
+// Every minute (DEPLOYMENT.md D34, incident 2026-11-04: a stale overlap lock stopped the game
+// loop for ~9 h and nothing alerted): its OWN event, never part of the tick it watches. The
+// `pets:process-decay` heartbeat older than system_health.heartbeat_stale_minutes (5) → ONE
+// Discord `game_loop_stalled` alert per stall episode (minutes since the last tick only),
+// re-armed when a tick finishes again. Sent directly, not queued (independent of the queue
+// worker), so in the background — a slow Discord never holds up push:dispatch-scheduled.
+// Overlap lock 2 min: a run is one cache read + at most one post (10 s timeout).
+Schedule::command('system-health:game-loop-check')
+    ->everyMinute()
+    ->withoutOverlapping(2)
+    ->runInBackground()
+    ->name('game-loop-check')
+    ->description('Discord alert once per stall when the game-loop heartbeat is older than 5 min');
 
 // Every 5 min (M5-T15, David 2026-10-22): queue the AI budget warning check —
 // ≥ 80 % / 100 % of the production and AI Lab daily / monthly caps and a low

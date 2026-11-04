@@ -438,6 +438,7 @@ return [
             'heartbeat' => 'Utrip razporejevalnika',
             'heartbeat_desc' => 'Zadnji tik igralne zanke :at (rdeče po 5 min)',
             'heartbeat_never_desc' => 'Tik igralne zanke še ni zabeležen',
+            'heartbeat_stalled_desc' => 'IGRALNA ZANKA STOJI od :at — običajno zastarela zapora razporejevalnika: php artisan schedule:clear-cache (DEPLOYMENT.md D34)',
             'never' => 'Nikoli',
             'stuck_ledger' => 'Zataknjene rutine',
             'stuck_ledger_desc' => 'Aktivni ljubljenčki z dnevi, nezaprtimi več kot :days dni',
@@ -578,6 +579,14 @@ return [
             'title' => 'Igralna zanka: napaka pri :count ljubljenčkih (:total v tem zagonu) — ostali so obdelani',
             'body' => 'Minutna obdelava (`pets:process-decay`) je pri teh ljubljenčkih vrgla napako; njihov korak je razveljavljen in preskočen, vsi ostali ljubljenčki so obdelani. Poskus se ponovi vsako minuto. Napaka (razred, datoteka, sled) je v System health. Največ eno obvestilo na ljubljenčka na dan.',
             'pet' => 'Ljubljenček #:id',
+        ],
+    ],
+    'game_loop_stalled' => [
+        'discord' => [
+            'title' => 'Igralna zanka stoji: brez tika :minutes min',
+            'body' => 'Minutna obdelava (`pets:process-decay`) se ni končala več kot :threshold min — noben ljubljenček nima upada, eskalacije, nočnega spanja ali zaključka dneva. Običajen vzrok: zastarela zapora razporejevalnika po ponovnem zagonu / prekinjenem zagonu (DEPLOYMENT.md D34). Popravek: v /opt/petprep/repo/backend zaženi `docker compose -p backend -f compose.production.yaml exec -T app php artisan schedule:clear-cache` ali znova zaženi vsebnik scheduler. Eno obvestilo na zastoj; naslednje šele, ko zanka spet teče.',
+            'minutes' => 'Minut od zadnjega tika',
+            'threshold' => 'Opozorilo po (min)',
         ],
     ],
     'disk_space' => [

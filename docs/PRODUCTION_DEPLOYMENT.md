@@ -437,6 +437,20 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 docker image ls 'petprep-*'
 ```
 
+**After a reboot / crash — is the game loop running? (DEPLOYMENT.md D34, incident 2026-11-04).** A reboot or a killed scheduler can leave a scheduled command's overlap lock behind; the scheduler then skips that command silently. Since D34 the locks expire after minutes (not 24 h), the `scheduler` container clears them when it starts, and a stall > 5 min posts one Discord `game_loop_stalled` alert. Check after every reboot / crash (or when that alert arrives, or the *Scheduler heartbeat* tile on `/admin/system-health` is red):
+
+```bash
+cd /opt/petprep/repo/backend
+docker compose -p backend -f compose.production.yaml ps scheduler              # Up?
+docker compose -p backend -f compose.production.yaml logs --since 10m scheduler | grep -E 'process-decay|clear-cache|Deleting mutex'
+# Stale lock (the tick does not appear in the log every minute) → delete every schedule mutex:
+docker compose -p backend -f compose.production.yaml exec -T app php artisan schedule:clear-cache
+# Scheduler container down / stuck → restart it (its entrypoint clears the mutexes too):
+docker compose -p backend -f compose.production.yaml restart scheduler
+```
+
+Verify: within 1–2 min the heartbeat tile is green again (»Last game-loop tick …« a few seconds ago). `schedule:clear-cache` is safe at any time as far as data goes — at worst one run overlaps a still-running one, and every scheduled write is row-locked or claimed.
+
 **Errors without SSH (System health, David 2026-10-19).** Every reported exception and every error-level log line is also stored in the `system_errors` table and shown on **`/admin/system-health`** (superadmin): open errors, failed jobs (retry / forget), queue backlog, stuck routine ledgers, AI media failures, scheduler heartbeat (red after 5 min without a `pets:process-decay` tick) and disk usage (yellow ≥ 80 %, red ≥ 90 %; D31: at ≥ 80 % `system-health:disk-check` posts one Discord `disk_space` alert per day). Check it first; the log file above is the fallback (full context). Kill switch: `SYSTEM_HEALTH_CAPTURE=false`.
 
 **Breed catalogue cache (M5-R06-01).** Free / paid and the picker catalogue are read from `breed_configs` through a cache (`breed-catalog:v1`, 5 min). Filament edits and the deploy seeder clear it automatically. After a **manual SQL edit** of `breed_configs` clear it yourself, otherwise the old values apply for up to 5 minutes:

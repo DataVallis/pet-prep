@@ -1318,6 +1318,21 @@ flowchart LR
   F --> H[heartbeat]
 ```
 
+**Game-loop stall guard (DEPLOYMENT.md D34, incident 2026-11-04).** A killed run can block its event only until its overlap lock expires; a stall is reported by a separate event.
+
+```mermaid
+flowchart LR
+  BOOT["scheduler container start<br/>(reboot, deploy, restart)"] --> CC["entrypoint: schedule:clear-cache<br/>(stale mutexes of killed runs)"] --> SW[schedule:work]
+  SW --> D["pets:process-decay<br/>withoutOverlapping(3)"] --> HB[(heartbeat<br/>Redis cache)]
+  SW --> C["system-health:game-loop-check<br/>every minute, own lock (2 min), background"]
+  HB --> C
+  C -- "heartbeat > 5 min old,<br/>previous check ran (no gap)" --> CL{"Cache::add claim<br/>per stall episode<br/>(= last heartbeat)"}
+  CL -- new --> DC["Discord game_loop_stalled<br/>(minutes only, sent directly)"]
+  CL -- taken --> X[nothing]
+  DC -- "post failed" --> R[claim released → next minute retries]
+  HB --> SH["/admin/system-health tile red<br/>+ recovery hint"]
+```
+
 ## 9a. Parent app on real data (M2-05 mobile)
 
 The parent app reads only server results (no scoring on the phone). Live events patch the cached dashboard; anything other than a decay tick refetches the computed parts; without a subscribed channel the dashboard polls every 30 s.
