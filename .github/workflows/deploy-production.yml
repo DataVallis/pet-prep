@@ -4,7 +4,7 @@ name: CI & Deploy
 #   plan ─┬─ backend-tests ───────┐
 #         ├─ mobile-checks ───────┤
 #         ├─ deploy-script-tests ─┼─ ci-ok (the one required status) ─ deploy (Run workflow, target production)
-#         └─ production-image ────┘
+#         └─ production-image ────┘                                                    └─ mobile-ota (dispatch, D33)
 # `plan` (scripts/ci-plan.sh) runs only the suites whose paths changed and, on a push to
 # main, skips a suite that already passed in a successful PR run on the identical git
 # tree (marker artifacts "ci-green-<suite>-<tree>", uploaded on every event) or proven by the merged
@@ -17,6 +17,8 @@ name: CI & Deploy
 # when main has new commits and their push CI is green (D21, David 2026-10-15), or manually by
 # David — agents never dispatch it. The deploy job runs only when plan and ci-ok succeeded
 # (explicit result checks — see the job) and its first step refuses a re-run of an older commit.
+# After a successful deploy the job mobile-ota dispatches "Mobile OTA update" for the deployed
+# commit (D33 — also for the daily deploy, whose GITHUB_TOKEN run creates no workflow_run event).
 
 on:
   push:
@@ -717,3 +719,38 @@ jobs:
           REGISTRY_USER: ${{ github.actor }}
           REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: bash scripts/ci-remote-deploy.sh
+
+  # D33 (2026-11-04): the OTA must follow EVERY production deploy. mobile-ota.yml's
+  # workflow_run trigger fires only for runs started with a user token; the daily deploy
+  # starts this workflow with GITHUB_TOKEN, which creates no workflow_run event, so its OTA
+  # never ran (deploy 41807838886, bb3450c9). This job dispatches the OTA explicitly
+  # (workflow_dispatch from GITHUB_TOKEN is allowed) for exactly this run's deployed commit;
+  # mobile-ota-plan.sh checks the run, the commit and the deploy job, and publishes once per
+  # commit (a manual deploy also fires workflow_run). continue-on-error: a failed dispatch
+  # must not turn the deploy run red — ci-plan.sh, daily-deploy.sh and the OTA plan find the
+  # last production deploy among the SUCCESSFUL Run workflow runs.
+  mobile-ota:
+    name: Mobile OTA (after the production deploy)
+    needs: [deploy]
+    if: needs.deploy.result == 'success'
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write # gh workflow run mobile-ota.yml
+    steps:
+      - name: Dispatch mobile-ota.yml (channel production, this deployed commit)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          SHA: ${{ github.sha }}
+        run: |
+          if ! gh workflow run mobile-ota.yml --repo "$REPO" --ref main \
+               -f channel=production -f dry_run=false -f deploy_run_id="$RUN_ID" -f sha="$SHA"; then
+            echo "::error title=Mobile OTA not started::dispatch failed — start it by hand: Actions → Mobile OTA update → Run workflow, channel production"
+            echo "**Mobile OTA not started** — Actions → Mobile OTA update → Run workflow, channel production." >>"$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+          echo "Dispatched \"Mobile OTA after production deploy ${RUN_ID}\" for ${SHA:0:7} (channel production; it publishes only if mobile/ changed since the last release)." | tee -a "$GITHUB_STEP_SUMMARY"

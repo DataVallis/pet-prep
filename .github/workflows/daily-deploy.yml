@@ -3,7 +3,10 @@ name: Daily production deploy
 # D21 (David 2026-10-15) + D24 (David 2026-10-26): every day at 03:17 Europe/Ljubljana, deploy production when main has
 # commits production does not run yet AND the push CI ("CI & Deploy") of the main head is
 # green — by starting exactly the manual path: CI & Deploy → Run workflow on main, target
-# production (full tests, deploy guard, deploy job, mobile OTA chain unchanged). Logic and
+# production (plan, deploy guard, deploy job as for a manual run). The OTA: a run started with
+# GITHUB_TOKEN creates no workflow_run event, so mobile-ota.yml's workflow_run trigger never
+# fires for it — deploy-production.yml's job "Mobile OTA (after the production deploy)"
+# dispatches mobile-ota.yml after every successful deploy instead (D33, 2026-11-04). Logic and
 # rules: scripts/daily-deploy.sh (harness scripts/tests/daily-deploy.test.sh).
 # GitHub cron is UTC only: 01:17 UTC = 03:17 CEST, 02:17 UTC = 03:17 CET; the script lets
 # only the matching one through (judged by the cron string, so a late start still counts).

@@ -11,6 +11,20 @@ name: Mobile OTA update
 #   succeeded (exactly the deployed commit, if mobile/ changed since the last release in
 #   docs/research/app-release.json), or by this workflow's own Run workflow with an
 #   explicit channel.
+#
+# Two triggers follow a production deploy (D33, 2026-11-04):
+#   - workflow_run: GitHub creates it only when the CI run was started with a user token
+#     (a manual Run workflow), and then sometimes minutes late (deploy 41880114612 finished
+#     17:49:40Z, its workflow_run OTA 41881107754 was created 17:51:22Z) — NOT relied upon. The daily deploy (daily-deploy.yml) starts CI & Deploy
+#     with GITHUB_TOKEN, which creates NO workflow_run event — its OTA never ran (daily
+#     deploy 41806778939 → deploy 41807838886 on bb3450c9, no OTA; M6-W03 app half stuck).
+#   - workflow_dispatch with deploy_run_id + sha: CI & Deploy's job "Mobile OTA (after the
+#     production deploy)" dispatches this after EVERY successful production deploy
+#     (workflow_dispatch from GITHUB_TOKEN is allowed).
+#   A manual deploy fires both; the plan publishes once per deployed commit (it reads the
+#   release record from the current main and skips a commit that is already released).
+
+run-name: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_run_id != '' && format('Mobile OTA after production deploy {0}', inputs.deploy_run_id) || 'Mobile OTA update' }}
 
 on:
   workflow_run:
@@ -31,9 +45,22 @@ on:
         description: 'Only report OTA vs store build, publish nothing'
         type: boolean
         default: false
+      deploy_run_id:
+        description: 'Set by CI & Deploy after a successful production deploy (D33) — leave empty for a manual run'
+        type: string
+        required: false
+        default: ''
+      sha:
+        description: 'With deploy_run_id: the deployed commit (checked against that run) — leave empty for a manual run'
+        type: string
+        required: false
+        default: ''
 
+# Publishing runs queue one after another (GitHub keeps ONE pending run per group and cancels
+# an older pending one). The no-op runs after every push CI get their own group (D33), so they
+# can never replace a pending OTA that follows a production deploy.
 concurrency:
-  group: mobile-ota
+  group: ${{ (github.event_name == 'workflow_run' && github.event.workflow_run.event == 'push') && format('mobile-ota-push-{0}', github.run_id) || 'mobile-ota' }}
   cancel-in-progress: false
 
 permissions:
@@ -53,16 +80,19 @@ jobs:
       EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
     steps:
       # Full history without blobs: the production plan diffs mobile/ against the commit of
-      # the last production release (docs/research/app-release.json).
+      # the last production release (docs/research/app-release.json). Dispatch from CI &
+      # Deploy (D33): the deployed commit (inputs.sha) — the plan refuses it unless it is the
+      # head_sha of run deploy_run_id.
       - name: Checkout the tested commit
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          ref: ${{ inputs.sha || github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 0
           filter: blob:none
 
       # Channel + "did mobile/ change?" (scripts/mobile-ota-plan.sh). After a production
-      # deploy: exactly the deployed commit, if mobile/ changed since the last release.
+      # deploy: exactly the deployed commit, if mobile/ changed since the last release and it
+      # is not released yet (D33: one publish per deployed commit).
       # Manual runs publish only the current head of main (dry runs excepted).
       - name: Plan (channel, did mobile/ change?)
         id: changed
@@ -72,6 +102,7 @@ jobs:
           WR_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
           WR_RUN_ID: ${{ github.event.workflow_run.id }}
           INPUT_CHANNEL: ${{ inputs.channel }}
+          DEPLOY_RUN_ID: ${{ inputs.deploy_run_id }}
           DRY_RUN: ${{ inputs.dry_run }}
           REPO: ${{ github.repository }}
           GH_TOKEN: ${{ github.token }}
@@ -123,7 +154,7 @@ jobs:
       - name: Record the release for the website register
         if: steps.ota.outputs.released == 'true'
         env:
-          SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+          SHA: ${{ steps.changed.outputs.sha }}
           PLATFORMS: ${{ steps.ota.outputs.platforms }}
         run: |
           git fetch -q --depth=50 origin main

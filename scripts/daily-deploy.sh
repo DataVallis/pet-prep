@@ -6,9 +6,13 @@
 # 04:00 / 05:00 UTC they started 4.5–6 h late in October 2026): when main has commits that production does not run
 # yet AND the push CI of the main head is green, start exactly what David starts by hand —
 # "CI & Deploy" → Run workflow on main with target production. The dispatched run is an
-# ordinary workflow_dispatch run (GITHUB_TOKEN may start workflow_dispatch runs): full
-# tests, the deploy guard, the deploy job and the mobile-ota workflow_run chain behave as
-# for a manual run. Manual "Run workflow" is unchanged.
+# ordinary workflow_dispatch run (GITHUB_TOKEN may start workflow_dispatch runs): the plan,
+# the deploy guard and the deploy job behave as for a manual run. One difference: a run
+# started with GITHUB_TOKEN creates NO workflow_run event, so mobile-ota.yml's workflow_run
+# trigger never fires for it (no OTA after the daily deploy of 2026-11-04, D33). The OTA
+# follows because deploy-production.yml's job "Mobile OTA (after the production deploy)"
+# dispatches mobile-ota.yml itself after every successful deploy. Manual "Run workflow" is
+# unchanged.
 #
 #   a. schedule: GitHub cron is UTC only; the workflow fires at 01:17 and 02:17 UTC. Only the
 #      cron whose hour is DEPLOY_LOCAL_HOUR (03) in Europe/Ljubljana today proceeds (01 UTC in
