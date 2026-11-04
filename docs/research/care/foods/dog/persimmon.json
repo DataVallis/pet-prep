@@ -15,7 +15,8 @@
     "cs": "Kaki",
     "sv": "Kaki",
     "da": "Kakifrugt",
-    "fi": "Kaki"
+    "fi": "Kaki",
+    "nb": "Kaki"
   },
   "question": {
     "en": "Can dogs eat persimmon?",
@@ -31,7 +32,8 @@
     "cs": "Mohou psi jíst kaki?",
     "sv": "Får hundar äta kaki?",
     "da": "Må hunde spise kakifrugt?",
-    "fi": "Saako koira syödä kakia?"
+    "fi": "Saako koira syödä kakia?",
+    "nb": "Kan hunder spise kaki?"
   },
   "url_slug": {
     "en": "persimmon",
@@ -47,7 +49,8 @@
     "cs": "kaki",
     "sv": "kaki",
     "da": "kakifrugt",
-    "fi": "kaki"
+    "fi": "kaki",
+    "nb": "kaki"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "cs": "Ano, v omezeném množství. Dužina kaki je pro psy bezpečná, ale nejdřív odstraňte semínka: mohou způsobit dušení a ucpání střev, zvláště u malých psů. Kaki může působit projímavě a způsobit průjem a zvracení.",
     "sv": "Ja, i begränsade mängder. Kakins fruktkött är ofarligt för hundar, men ta först bort kärnorna: de kan orsaka kvävning och tarmstopp, särskilt hos små hundar. Kaki kan verka laxerande och ge diarré och kräkningar.",
     "da": "Ja, i begrænsede mængder. Kødet i kakifrugt er sikkert for hunde, men fjern først kernerne: de kan sætte sig fast i halsen og give tarmblokering, især hos små hunde. Kakifrugt kan virke afførende og give diarré og opkast.",
-    "fi": "Kyllä, mutta vain rajoitettu määrä. Kakin hedelmäliha on koiralle turvallista, mutta poista ensin siemenet: ne voivat aiheuttaa tukehtumisen ja suolitukoksen etenkin pienillä koirilla. Kaki voi vaikuttaa ulostavasti ja aiheuttaa ripulia ja oksentelua."
+    "fi": "Kyllä, mutta vain rajoitettu määrä. Kakin hedelmäliha on koiralle turvallista, mutta poista ensin siemenet: ne voivat aiheuttaa tukehtumisen ja suolitukoksen etenkin pienillä koirilla. Kaki voi vaikuttaa ulostavasti ja aiheuttaa ripulia ja oksentelua.",
+    "nb": "Ja, i begrensede mengder. Fruktkjøttet i kaki er trygt for hunder, men fjern kjernene først: De kan gi kvelning og tarmblokkering, særlig hos små hunder. Kaki kan virke avførende og gi diaré og oppkast."
   },
   "why": {
     "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -80,7 +84,8 @@
     "cs": "Samotný plod kaki psům neškodí, ale semínka a pecky představují riziko ucpání střev. Větší psi je mohou vyloučit bez potíží, zatímco menší plemena ohrožuje dušení a ucpání střev. Kaki působí projímavě a může způsobit průjem, nevolnost, zvracení a žaludeční křeče.",
     "sv": "Själva kakifrukten är inte skadlig för hundar, men kärnorna innebär risk för tarmstopp. Större hundar kan klara att få ut dem utan problem, medan små raser riskerar kvävning och tarmstopp. Kaki verkar laxerande och kan ge diarré, illamående, kräkningar och magkramper.",
     "da": "Selve kakifrugten er ikke skadelig for hunde, men kerner og sten giver risiko for tarmblokering. Store hunde kan måske komme af med dem uden problemer, mens mindre hunderacer risikerer at få dem galt i halsen og få tarmblokering. Kakifrugt virker afførende og kan give diarré, kvalme, opkast og mavekramper.",
-    "fi": "Itse kakihedelmä ei ole koiralle haitallinen, mutta siemenissä ja kivissä on suolitukoksen vaara. Isommilla koirilla ne saattavat kulkea läpi ilman ongelmia, kun taas pienemmillä roduilla on tukehtumisen ja suolitukoksen vaara. Kakilla on ulostava vaikutus, ja se voi aiheuttaa ripulia, pahoinvointia, oksentelua ja vatsakramppeja."
+    "fi": "Itse kakihedelmä ei ole koiralle haitallinen, mutta siemenissä ja kivissä on suolitukoksen vaara. Isommilla koirilla ne saattavat kulkea läpi ilman ongelmia, kun taas pienemmillä roduilla on tukehtumisen ja suolitukoksen vaara. Kakilla on ulostava vaikutus, ja se voi aiheuttaa ripulia, pahoinvointia, oksentelua ja vatsakramppeja.",
+    "nb": "Selve kakifrukten er ikke skadelig for hunder, men kjernene og steinene kan gi tarmblokkering. Større hunder kan få dem ut uten problemer, mens mindre raser står i fare for kvelning og tarmblokkering. Kaki virker avførende og kan gi diaré, kvalme, oppkast og magekramper."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "cs": "Pokud pes po snězení kaki zvrací, má bolesti břicha, je dehydrovaný nebo ztratil chuť k jídlu, okamžitě vyhledejte veterinární pomoc.",
     "sv": "Om hunden får kräkningar, ont i magen, uttorkning eller tappar matlusten efter att ha ätit kaki, sök veterinärvård direkt.",
     "da": "Hvis din hund kaster op, har mavesmerter, er dehydreret eller har mistet appetitten efter at have spist kakifrugt, skal du straks søge dyrlægehjælp.",
-    "fi": "Jos koirasi oksentelee kakin syömisen jälkeen tai sillä on vatsakipua, nestehukkaa tai ruokahaluttomuutta, hakeudu heti eläinlääkäriin."
+    "fi": "Jos koirasi oksentelee kakin syömisen jälkeen tai sillä on vatsakipua, nestehukkaa tai ruokahaluttomuutta, hakeudu heti eläinlääkäriin.",
+    "nb": "Hvis hunden får oppkast, magesmerter, dehydrering eller mister matlysten etter å ha spist kaki, må du oppsøke dyrlege med en gang."
   },
   "serving": {
     "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -113,7 +119,8 @@
     "cs": "Plod opláchněte, odstraňte semínka a nakrájejte ho na malé plátky na jedno sousto. Jen s mírou.",
     "sv": "Skölj frukten, ta bort kärnorna och skär den i små munsbitar. Bara med måtta.",
     "da": "Skyl frugten, fjern kernerne, og skær den i små mundrette skiver. Kun med måde.",
-    "fi": "Huuhtele hedelmä, poista siemenet ja leikkaa se pieniksi, suupalan kokoisiksi viipaleiksi. Vain kohtuudella."
+    "fi": "Huuhtele hedelmä, poista siemenet ja leikkaa se pieniksi, suupalan kokoisiksi viipaleiksi. Vain kohtuudella.",
+    "nb": "Skyll frukten, fjern kjernene og skjær den i små, passe store skiver. Bare med måte."
   },
   "child": {
     "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -129,7 +136,8 @@
     "cs": "Psi můžou dostat trochu kaki. Dospělý vyndá semínka a nakrájí ho na malé kousky.",
     "sv": "Hundar kan få lite kaki. En vuxen tar bort kärnorna och skär den i små bitar.",
     "da": "Hunde må gerne få lidt kakifrugt. En voksen tager kernerne ud og skærer den i små stykker.",
-    "fi": "Koira saa maistaa vähän kakia. Aikuinen poistaa siemenet ja leikkaa hedelmän pieniksi paloiksi."
+    "fi": "Koira saa maistaa vähän kakia. Aikuinen poistaa siemenet ja leikkaa hedelmän pieniksi paloiksi.",
+    "nb": "Hunder kan få litt kaki. En voksen tar ut kjernene og skjærer frukten i små biter."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "cs": "Jsou semínka kaki nebezpečná?",
         "sv": "Är kakikärnor farliga?",
         "da": "Er kakifrugtkerner farlige?",
-        "fi": "Ovatko kakin siemenet vaarallisia?"
+        "fi": "Ovatko kakin siemenet vaarallisia?",
+        "nb": "Er kakikjerner farlige?"
       },
       "a": {
         "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -163,7 +172,8 @@
         "cs": "Ano, je třeba je odstranit. Mohou způsobit dušení a ucpání střev, nejvíc jsou ohroženi malí psi.",
         "sv": "Ja, de ska tas bort. De kan orsaka kvävning och tarmstopp, och små hundar löper störst risk.",
         "da": "Ja, de skal fjernes. De kan sætte sig fast i halsen og give tarmblokering, og små hunde er mest udsatte.",
-        "fi": "Kyllä, ne pitää poistaa. Ne voivat aiheuttaa tukehtumisen ja suolitukoksen, ja riski on suurin pienillä koirilla."
+        "fi": "Kyllä, ne pitää poistaa. Ne voivat aiheuttaa tukehtumisen ja suolitukoksen, ja riski on suurin pienillä koirilla.",
+        "nb": "Ja, de bør fjernes. De kan gi kvelning og tarmblokkering, og små hunder er mest utsatt."
       }
     }
   ],
@@ -289,6 +299,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0c8101e2fd9cdc2043ec30907dcdec12a89b44be1c610235e0a5428382048419"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d37e3150b6baaeaa479c64b7d3220e12f8ec5e090f5588b6609191e5e439d5c2"
     }
   }
 }

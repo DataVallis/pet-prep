@@ -15,7 +15,8 @@
     "cs": "Ovocné pecky",
     "sv": "Fruktkärnor och stenar",
     "da": "Frugtsten",
-    "fi": "Hedelmien kivet"
+    "fi": "Hedelmien kivet",
+    "nb": "Fruktsteiner"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
@@ -31,7 +32,8 @@
     "cs": "Mohou psi jíst ovocné pecky?",
     "sv": "Får hundar äta fruktkärnor?",
     "da": "Må hunde spise frugtsten?",
-    "fi": "Saako koira syödä hedelmien kiviä?"
+    "fi": "Saako koira syödä hedelmien kiviä?",
+    "nb": "Kan hunder spise fruktsteiner?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -47,7 +49,8 @@
     "cs": "ovocne-pecky",
     "sv": "fruktkarnor-och-stenar",
     "da": "frugtsten",
-    "fi": "hedelmien-kivet"
+    "fi": "hedelmien-kivet",
+    "nb": "fruktsteiner"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka.",
     "sv": "Nej. Kärnor och stenar från frukter som körsbär, persikor och nektariner ska aldrig ges till hundar. De kan knäcka tänder, orsaka kvävning eller täppa till tarmen, och de innehåller lite cyanid. Ta alltid bort kärnor och frön innan du delar med dig av frukt.",
     "da": "Nej. Sten fra frugter som kirsebær, ferskner og nektariner må aldrig gives til hunde. De kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og de indeholder en lille mængde cyanid. Fjern altid sten og kerner før du deler frugt.",
-    "fi": "Ei saa. Kirsikoiden, persikoiden ja nektariinien kaltaisten hedelmien kiviä ei pidä koskaan antaa koirille. Ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja ne sisältävät pienen määrän syanidia. Poista kivet ja siemenet aina, ennen kuin annat koiralle hedelmää."
+    "fi": "Ei saa. Kirsikoiden, persikoiden ja nektariinien kaltaisten hedelmien kiviä ei pidä koskaan antaa koirille. Ne voivat rikkoa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja ne sisältävät pienen määrän syanidia. Poista kivet ja siemenet aina, ennen kuin annat koiralle hedelmää.",
+    "nb": "Nei. Steiner fra frukt som kirsebær, fersken og nektarin skal aldri gis til hunder. De kan knekke tenner, føre til kvelning eller blokkere tarmen, og de inneholder en liten mengde cyanid. Fjern alltid steiner og frø før du deler frukt."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -80,7 +84,8 @@
     "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ.",
     "sv": "Hårda kärnor kan spräcka tänder, orsaka kvävning eller täppa till tarmen, och kärnor med vassa kanter kan skada matstrupen när de sväljs. Kärnan innehåller också lite cyanid. Cyanidförgiftning av stenfrukt är sällsynt, men djur kan bli sjuka av en liten mängd, så en sönderbiten kärna ska behandlas som ett akutfall.",
     "da": "Hårde sten kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og sten med ru kanter kan skade spiserøret når de sluges. Stenen indeholder også en lille mængde cyanid. Cyanidforgiftning fra stenfrugt er sjælden, men dyr kan blive syge af en helt lille mængde, så en sten der er knækket op, betragtes som en nødsituation.",
-    "fi": "Kovat kivet voivat murtaa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja reunoiltaan karheat kivet voivat vahingoittaa ruokatorvea nieltäessä. Kivessä on myös pieni määrä syanidia. Kivihedelmien aiheuttama syanidimyrkytys on harvinainen, mutta lemmikit voivat sairastua jo aivan pienestä määrästä, joten rikki purtu kivi on kiireellinen tapaus."
+    "fi": "Kovat kivet voivat murtaa hampaita, aiheuttaa tukehtumisen tai tukkia suoliston, ja reunoiltaan karheat kivet voivat vahingoittaa ruokatorvea nieltäessä. Kivessä on myös pieni määrä syanidia. Kivihedelmien aiheuttama syanidimyrkytys on harvinainen, mutta lemmikit voivat sairastua jo aivan pienestä määrästä, joten rikki purtu kivi on kiireellinen tapaus.",
+    "nb": "Harde steiner kan knekke tenner, føre til kvelning eller blokkere tarmen, og steiner med ru kanter kan skade spiserøret når de svelges. Steinen inneholder også en liten mengde cyanid. Cyanidforgiftning fra steinfrukt er sjelden, men dyr kan bli syke av en bitteliten mengde, så en stein som er knekt opp, regnes som noe som haster."
   },
   "signs": {
     "en": [
@@ -194,6 +199,14 @@
       "Ulostamisvaikeudet",
       "Vatsakipu",
       "Hengitysvaikeudet"
+    ],
+    "nb": [
+      "Brekninger",
+      "Sikling",
+      "Oppkast",
+      "Vansker med å få ut avføring",
+      "Magesmerter",
+      "Pustevansker"
     ]
   },
   "what_to_do": {
@@ -210,7 +223,8 @@
     "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři.",
     "sv": "Ring veterinären direkt om hunden har bitit sönder en kärna. Om hunden har svalt en kärna och visar något av de här tecknen, ring veterinären.",
     "da": "Ring straks til din dyrlæge hvis din hund har knækket en sten op. Hvis hunden har slugt en sten og viser nogle af disse symptomer, skal du ringe til din dyrlæge.",
-    "fi": "Jos koirasi on purrut kiven rikki, soita heti eläinlääkärille. Jos koirasi on niellyt kiven ja sillä on jokin näistä oireista, soita eläinlääkärille."
+    "fi": "Jos koirasi on purrut kiven rikki, soita heti eläinlääkärille. Jos koirasi on niellyt kiven ja sillä on jokin näistä oireista, soita eläinlääkärille.",
+    "nb": "Ring dyrlegen med en gang hvis hunden knekker opp en stein. Hvis hunden har svelget en stein og viser noen av disse symptomene, må du ringe dyrlegen."
   },
   "serving": null,
   "child": {
@@ -227,7 +241,8 @@
     "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému.",
     "sv": "Fruktstenar är inte för hundar. Släng dem i en soptunna som hunden inte kommer åt, och säg till en vuxen om hunden äter en.",
     "da": "Frugtsten er ikke til hunde. Smid dem i en skraldespand som din hund ikke kan nå, og sig det til en voksen hvis hunden spiser en.",
-    "fi": "Hedelmien kivet eivät ole koirille. Heitä ne roskikseen, johon koira ei ylety, ja kerro aikuiselle, jos koira syö sellaisen."
+    "fi": "Hedelmien kivet eivät ole koirille. Heitä ne roskikseen, johon koira ei ylety, ja kerro aikuiselle, jos koira syö sellaisen.",
+    "nb": "Fruktsteiner er ikke for hunder. Kast dem i en søppelkasse som hunden ikke kommer til, og si fra til en voksen hvis hunden har spist en."
   },
   "faq": [
     {
@@ -245,7 +260,8 @@
         "cs": "Je v pořádku samotné ovoce?",
         "sv": "Är själva frukten okej?",
         "da": "Er selve frugten i orden?",
-        "fi": "Onko itse hedelmä kunnossa?"
+        "fi": "Onko itse hedelmä kunnossa?",
+        "nb": "Er selve frukten greit?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -261,7 +277,8 @@
         "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky.",
         "sv": "Det beror på frukten, så titta på respektive frukts sida. Som huvudregel bör frön, kärnor, kärnhus, skal och växtstjälkar tas bort innan hunden får frukt.",
         "da": "Det afhænger af frugten; se frugtens egen side. Som hovedregel bør kerner, sten, kernehuse, skaller og stilke fjernes før man giver en hund frugt.",
-        "fi": "Se riippuu hedelmästä; katso kunkin hedelmän oma sivu. Yleensä siemenet, kivet, siemenkodat, kuoret ja kasvin varret pitäisi poistaa ennen hedelmän antamista koiralle."
+        "fi": "Se riippuu hedelmästä; katso kunkin hedelmän oma sivu. Yleensä siemenet, kivet, siemenkodat, kuoret ja kasvin varret pitäisi poistaa ennen hedelmän antamista koiralle.",
+        "nb": "Det kommer an på frukten; se siden for hver enkelt frukt. Generelt bør frø, steiner, kjernehus, skall og stilker fjernes før hunden får frukt."
       }
     },
     {
@@ -279,7 +296,8 @@
         "cs": "Které ovoce má pecky?",
         "sv": "Vilka frukter har kärna eller sten?",
         "da": "Hvilke frugter har sten?",
-        "fi": "Millä hedelmillä on kivi?"
+        "fi": "Millä hedelmillä on kivi?",
+        "nb": "Hvilke frukter har steiner?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -295,7 +313,8 @@
         "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid.",
         "sv": "Frukter som körsbär, nektariner och persikor kallas stenfrukter. Precis som körsbär innehåller persikokärnor cyanid.",
         "da": "Frugter som kirsebær, nektariner og ferskner kaldes stenfrugter. Ligesom kirsebærsten indeholder ferskensten cyanid.",
-        "fi": "Kirsikoita, nektariineja ja persikoita kutsutaan kivihedelmiksi. Kirsikoiden tavoin myös persikan kivi sisältää syanidia."
+        "fi": "Kirsikoita, nektariineja ja persikoita kutsutaan kivihedelmiksi. Kirsikoiden tavoin myös persikan kivi sisältää syanidia.",
+        "nb": "Frukter som kirsebær, nektariner og ferskener kalles steinfrukter. Akkurat som kirsebær inneholder ferskensteiner cyanid."
       }
     }
   ],
@@ -428,6 +447,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3414a472cd2b233d440ad9ae3f9665fc7b397d4f00681ec6c7b31d898ae042db"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "85c086aebca0ed5263d8428182921998dc3c89da506a1e8fbcb2eea59e40b686"
     }
   }
 }

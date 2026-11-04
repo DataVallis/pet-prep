@@ -15,7 +15,8 @@
     "cs": "Datle",
     "sv": "Dadlar",
     "da": "Dadler",
-    "fi": "Taatelit"
+    "fi": "Taatelit",
+    "nb": "Dadler"
   },
   "question": {
     "en": "Can dogs eat dates?",
@@ -31,7 +32,8 @@
     "cs": "Mohou psi jíst datle?",
     "sv": "Får hundar äta dadlar?",
     "da": "Må hunde spise dadler?",
-    "fi": "Saako koira syödä taateleita?"
+    "fi": "Saako koira syödä taateleita?",
+    "nb": "Kan hunder spise dadler?"
   },
   "url_slug": {
     "en": "dates",
@@ -47,7 +49,8 @@
     "cs": "datle",
     "sv": "dadlar",
     "da": "dadler",
-    "fi": "taatelit"
+    "fi": "taatelit",
+    "nb": "dadler"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "cs": "Ano, psi mohou datle jíst s mírou, jako příležitostný pamlsek. Vždy nejdřív odstraňte pecku, protože by se pes mohl udusit, a dávejte malé kousky, ne celý plod. Datle obsahují hodně cukru a vlákniny, takže větší množství může psovi podráždit žaludek.",
     "sv": "Ja, hundar kan äta dadlar med måtta, som en godbit då och då. Ta alltid bort kärnan först, eftersom den är en kvävningsrisk, och ge små bitar i stället för hela frukten. Dadlar innehåller mycket socker och fibrer, så för många kan ge orolig mage.",
     "da": "Ja, hunde må gerne få dadler med måde, som en godbid en gang imellem. Fjern altid stenen først fordi den kan sætte sig fast i halsen, og giv små stykker i stedet for hele frugter. Dadler har et højt indhold af sukker og fibre, så for mange kan give hunden dårlig mave.",
-    "fi": "Kyllä, koira voi syödä taateleita kohtuudella satunnaisena herkkuna. Poista kivi aina ensin, koska se aiheuttaa tukehtumisvaaran, ja anna hedelmä pieninä paloina, älä kokonaisena. Taatelit sisältävät paljon sokeria ja kuitua, joten liian monta voi sekoittaa vatsan."
+    "fi": "Kyllä, koira voi syödä taateleita kohtuudella satunnaisena herkkuna. Poista kivi aina ensin, koska se aiheuttaa tukehtumisvaaran, ja anna hedelmä pieninä paloina, älä kokonaisena. Taatelit sisältävät paljon sokeria ja kuitua, joten liian monta voi sekoittaa vatsan.",
+    "nb": "Ja, hunder kan spise dadler med måte, som en godbit av og til. Fjern alltid steinen først, for den er en kvelningsfare, og gi små biter i stedet for hele frukten. Dadler inneholder mye sukker og fiber, så for mange kan gi urolig mage."
   },
   "why": {
     "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -80,7 +84,8 @@
     "cs": "Datle nejsou vysoce toxické jako hrozny, ale neměly by se stát oblíbeným pamlskem. Pecka není jedovatá, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev. Datle mají hodně cukru a kalorií, takže při překrmování pes rychle přibere, a vysoký obsah vlákniny může vést k průjmu nebo zácpě.",
     "sv": "Till skillnad från vindruvor är dadlar inte starkt giftiga, men de bör inte vara det man oftast ger som godbit. Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs. Dadlar innehåller mycket socker och kalorier, vilket snabbt ger viktuppgång om hunden får för mycket, och den höga fiberhalten kan leda till diarré eller förstoppning.",
     "da": "Dadler er ikke stærkt giftige som vindruer, men de bør ikke være en fast godbid. Stenen er ikke giftig, men den kan sætte sig fast i halsen og give tarmblokering hvis den sluges. Dadler har et højt indhold af sukker og kalorier, og det kan hurtigt give vægtøgning hvis hunden får for mange. Det høje fiberindhold kan give diarré eller forstoppelse.",
-    "fi": "Taatelit eivät ole viinirypäleiden tavoin erittäin myrkyllisiä, mutta niistä ei kannata tehdä koiran vakioherkkua. Kivi ei ole myrkyllinen, mutta se aiheuttaa tukehtumisvaaran ja voi nieltynä aiheuttaa suolitukoksen. Taateleissa on paljon sokeria ja kaloreita, joten ne voivat lihottaa nopeasti, jos koiralle annetaan liikaa, ja runsas kuitu voi aiheuttaa ripulia tai ummetusta."
+    "fi": "Taatelit eivät ole viinirypäleiden tavoin erittäin myrkyllisiä, mutta niistä ei kannata tehdä koiran vakioherkkua. Kivi ei ole myrkyllinen, mutta se aiheuttaa tukehtumisvaaran ja voi nieltynä aiheuttaa suolitukoksen. Taateleissa on paljon sokeria ja kaloreita, joten ne voivat lihottaa nopeasti, jos koiralle annetaan liikaa, ja runsas kuitu voi aiheuttaa ripulia tai ummetusta.",
+    "nb": "Dadler er ikke svært giftige slik druer er, men de bør ikke være en fast godbit. Steinen er ikke giftig, men den er en kvelningsfare og kan gi tarmblokkering hvis hunden svelger den. Dadler inneholder mye sukker og mange kalorier, noe som raskt kan gi vektøkning hvis hunden får for mye, og det høye fiberinnholdet kan gi diaré eller forstoppelse."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "cs": "Než psovi začnete datle dávat, poraďte se s veterinářem. Poté, co pes nějaké snědl, sledujte, jestli nezvrací a jestli nemá průjem nebo zácpu.",
     "sv": "Fråga veterinären innan du börjar ge dadlar. Håll utkik efter kräkningar, diarré eller förstoppning efter att hunden har ätit några.",
     "da": "Spørg din dyrlæge før du begynder at give hunden dadler. Når hunden har spist nogle, skal du holde øje med opkast, diarré eller forstoppelse.",
-    "fi": "Kysy eläinlääkäriltä, ennen kuin alat antaa taateleita. Kun koira on syönyt niitä, seuraa, ilmeneekö oksentelua, ripulia tai ummetusta."
+    "fi": "Kysy eläinlääkäriltä, ennen kuin alat antaa taateleita. Kun koira on syönyt niitä, seuraa, ilmeneekö oksentelua, ripulia tai ummetusta.",
+    "nb": "Spør dyrlegen før du begynner å gi hunden dadler. Når hunden har spist noen, må du følge med på oppkast, diaré og forstoppelse."
   },
   "serving": {
     "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -113,7 +119,8 @@
     "cs": "Bez pecky, nakrájené na malé kousky, jen jako příležitostný pamlsek.",
     "sv": "Utan kärna, skuren i små bitar, bara som en godbit då och då.",
     "da": "Uden sten, skåret i små stykker og kun som godbid en gang imellem.",
-    "fi": "Kivi poistettuna, pieniksi paloiksi leikattuna, vain satunnaisena herkkuna."
+    "fi": "Kivi poistettuna, pieniksi paloiksi leikattuna, vain satunnaisena herkkuna.",
+    "nb": "Uten stein, skåret i små biter, bare som godbit av og til."
   },
   "child": {
     "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -129,7 +136,8 @@
     "cs": "Pes může někdy dostat malý kousek datle. Tvrdou pecku nejdřív vyndá dospělý.",
     "sv": "Hundar kan få en liten bit dadel ibland. En vuxen tar först bort den hårda kärnan.",
     "da": "Hunde kan af og til få et lille stykke dadel. En voksen tager først den hårde sten ud.",
-    "fi": "Koira saa joskus pienen palan taatelia. Aikuinen ottaa ensin pois kovan kiven."
+    "fi": "Koira saa joskus pienen palan taatelia. Aikuinen ottaa ensin pois kovan kiven.",
+    "nb": "Hunder kan av og til få en liten bit dadel. En voksen tar ut den harde steinen først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "cs": "Je datlová pecka pro psy jedovatá?",
         "sv": "Är en dadelkärna giftig för hundar?",
         "da": "Er en dadelsten giftig for hunde?",
-        "fi": "Onko taatelin kivi myrkyllinen koirille?"
+        "fi": "Onko taatelin kivi myrkyllinen koirille?",
+        "nb": "Er dadelsteinen giftig for hunder?"
       },
       "a": {
         "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -163,7 +172,8 @@
         "cs": "Pecka není toxická, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev, proto ji vždy odstraňte.",
         "sv": "Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs, så ta alltid bort den.",
         "da": "Stenen er ikke giftig, men den kan sætte sig fast i halsen og give tarmblokering hvis den sluges, så fjern den altid.",
-        "fi": "Kivi ei ole myrkyllinen, mutta se aiheuttaa tukehtumisvaaran ja voi nieltynä aiheuttaa suolitukoksen, joten poista se aina."
+        "fi": "Kivi ei ole myrkyllinen, mutta se aiheuttaa tukehtumisvaaran ja voi nieltynä aiheuttaa suolitukoksen, joten poista se aina.",
+        "nb": "Steinen er ikke giftig, men den er en kvelningsfare og kan gi tarmblokkering hvis hunden svelger den, så fjern den alltid."
       }
     },
     {
@@ -181,7 +191,8 @@
         "cs": "Proč jen trochu?",
         "sv": "Varför bara lite?",
         "da": "Hvorfor kun lidt?",
-        "fi": "Miksi vain vähän?"
+        "fi": "Miksi vain vähän?",
+        "nb": "Hvorfor bare litt?"
       },
       "a": {
         "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -197,7 +208,8 @@
         "cs": "Datle mají hodně kalorií a cukru, takže při překrmování pes rychle přibere, a z přemíry cukru může být slabý a mít velkou žízeň.",
         "sv": "Dadlar innehåller mycket kalorier och socker, vilket snabbt ger viktuppgång om hunden får för mycket, och för mycket socker kan göra en hund orkeslös och törstig.",
         "da": "Dadler har et højt indhold af kalorier og sukker, og det kan hurtigt give vægtøgning hvis hunden får for meget. For meget sukker kan gøre en hund svag og tørstig.",
-        "fi": "Taateleissa on paljon kaloreita ja sokeria, joten ne voivat lihottaa nopeasti, jos koiralle annetaan liikaa, ja liika sokeri voi tehdä koirasta voimattoman ja janoisen."
+        "fi": "Taateleissa on paljon kaloreita ja sokeria, joten ne voivat lihottaa nopeasti, jos koiralle annetaan liikaa, ja liika sokeri voi tehdä koirasta voimattoman ja janoisen.",
+        "nb": "Dadler inneholder mange kalorier og mye sukker, noe som raskt kan gi vektøkning hvis hunden får for mye, og for mye sukker kan gjøre en hund svak og tørst."
       }
     },
     {
@@ -215,7 +227,8 @@
         "cs": "Jsou v pořádku sušené datle?",
         "sv": "Är torkade dadlar okej?",
         "da": "Er tørrede dadler i orden?",
-        "fi": "Käyvätkö kuivatut taatelit?"
+        "fi": "Käyvätkö kuivatut taatelit?",
+        "nb": "Går det bra med tørkede dadler?"
       },
       "a": {
         "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -231,7 +244,8 @@
         "cs": "Sušené datle mají ještě víc cukru a kalorií a pořád mají tvrdou pecku, proto ji odstraňte, než psovi dáte malý kousek.",
         "sv": "Torkade dadlar innehåller ännu mer socker och kalorier, och de har fortfarande den hårda kärnan, så ta bort den innan du delar med dig av en liten bit.",
         "da": "Tørrede dadler har mere sukker og flere kalorier, og de indeholder stadig den hårde sten, så fjern den før du deler et lille stykke.",
-        "fi": "Kuivatuissa taateleissa on enemmän sokeria ja kaloreita, ja niissä on edelleen kova kivi, joten poista se, ennen kuin annat pienen palan."
+        "fi": "Kuivatuissa taateleissa on enemmän sokeria ja kaloreita, ja niissä on edelleen kova kivi, joten poista se, ennen kuin annat pienen palan.",
+        "nb": "Tørkede dadler inneholder enda mer sukker og flere kalorier, og de har fortsatt den harde steinen i seg, så fjern den før du deler en liten bit."
       }
     }
   ],
@@ -394,6 +408,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "01b53f7f54de53ade8e4ab5143488d146d3f4e42fe2faeb6ee0d24b92c792d88"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1338fdafa391319010f22fb27126f9f3fed470716e87071e37489f232ae0527d"
     }
   }
 }

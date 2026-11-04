@@ -15,7 +15,8 @@
     "cs": "Fíky",
     "sv": "Fikon",
     "da": "Figner",
-    "fi": "Viikunat"
+    "fi": "Viikunat",
+    "nb": "Fikener"
   },
   "question": {
     "en": "Can dogs eat figs?",
@@ -31,7 +32,8 @@
     "cs": "Mohou psi jíst fíky?",
     "sv": "Får hundar äta fikon?",
     "da": "Må hunde spise figner?",
-    "fi": "Saako koira syödä viikunoita?"
+    "fi": "Saako koira syödä viikunoita?",
+    "nb": "Kan hunder spise fikener?"
   },
   "url_slug": {
     "en": "figs",
@@ -47,7 +49,8 @@
     "cs": "fiky",
     "sv": "fikon",
     "da": "figner",
-    "fi": "viikunat"
+    "fi": "viikunat",
+    "nb": "fikener"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "cs": "Ano, čerstvé fíky jsou pro psy obvykle bezpečné, pokud je správně připravíte, ale jen jako příležitostný pamlsek. Nabídněte jen měkkou vnitřní část v malých kouscích a nikdy nenechte psa jíst listy, kůru ani větve fíkovníku. Sušené fíky jsou příliš sladké.",
     "sv": "Ja, färska fikon är oftast ofarliga för hundar när de förbereds på rätt sätt, men bara som en godbit då och då. Ge bara den mjuka insidan, i små bitar, och låt aldrig hunden äta fikonblad, bark eller grenar. Torkade fikon innehåller för mycket socker.",
     "da": "Ja, friske figner er som regel sikre for hunde når de er tilberedt rigtigt, men kun som en godbid en gang imellem. Giv kun det bløde indre i små stykker, og lad aldrig hunden spise figenblade, bark eller grene. Tørrede figner er for sukkerholdige.",
-    "fi": "Kyllä, tuoreet viikunat ovat yleensä koiralle turvallisia, kun ne on valmisteltu oikein, mutta vain satunnaisena herkkuna. Tarjoa vain pehmeä sisus pieninä paloina äläkä koskaan anna koiran syödä viikunapuun lehtiä, kaarnaa tai oksia. Kuivatut viikunat ovat liian sokeripitoisia."
+    "fi": "Kyllä, tuoreet viikunat ovat yleensä koiralle turvallisia, kun ne on valmisteltu oikein, mutta vain satunnaisena herkkuna. Tarjoa vain pehmeä sisus pieninä paloina äläkä koskaan anna koiran syödä viikunapuun lehtiä, kaarnaa tai oksia. Kuivatut viikunat ovat liian sokeripitoisia.",
+    "nb": "Ja, ferske fikener er vanligvis trygge for hunder når de er riktig tilberedt, men bare som godbit av og til. Gi bare den myke innsiden, i små biter, og la aldri hunden spise fikenblader, bark eller greiner. Tørkede fikener inneholder for mye sukker."
   },
   "why": {
     "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
@@ -80,7 +84,8 @@
     "cs": "Samotné fíky se nepovažují za toxické, jako jsou hrozny a třešně, ale rostlina fíkovníku může být škodlivá. Fíky obsahují vitaminy A a C, vápník, draslík, hořčík a železo. Ovoce obsahuje přírodní cukr a vlákninu, takže při větším množství může působit projímavě a způsobit průjem. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda.",
     "sv": "Själva fikonen anses inte giftiga på det sätt som vindruvor och körsbär är, men fikonväxten kan vara skadlig. Fikon innehåller vitamin A och C, kalcium, kalium, magnesium och järn. Eftersom frukt innehåller naturligt socker och fibrer kan för mycket verka laxerande och ge diarré. Torkade fikon innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort.",
     "da": "Figner anses ikke for at være giftige som vindruer og kirsebær, men figenplanten kan være skadelig. Figner indeholder A- og C-vitamin, calcium, kalium, magnesium og jern. Fordi frugt indeholder naturligt sukker og fibre, kan for meget virke afførende og give diarré. Tørrede figner har et langt mere koncentreret sukkerindhold, fordi vandet er fjernet.",
-    "fi": "Viikunoita ei pidetä itsessään myrkyllisinä, toisin kuin viinirypäleitä ja kirsikoita, mutta viikunakasvi voi olla haitallinen. Viikunoissa on A- ja C-vitamiinia, kalsiumia, kaliumia, magnesiumia ja rautaa. Koska hedelmissä on luonnollista sokeria ja kuitua, liiallinen määrä voi vaikuttaa ulostavasti ja aiheuttaa ripulia. Kuivatuissa viikunoissa sokeri on paljon tiivistyneempää, koska vesi on poistettu."
+    "fi": "Viikunoita ei pidetä itsessään myrkyllisinä, toisin kuin viinirypäleitä ja kirsikoita, mutta viikunakasvi voi olla haitallinen. Viikunoissa on A- ja C-vitamiinia, kalsiumia, kaliumia, magnesiumia ja rautaa. Koska hedelmissä on luonnollista sokeria ja kuitua, liiallinen määrä voi vaikuttaa ulostavasti ja aiheuttaa ripulia. Kuivatuissa viikunoissa sokeri on paljon tiivistyneempää, koska vesi on poistettu.",
+    "nb": "Fikener regnes ikke som giftige slik druer og kirsebær er, men fikenplanten kan være skadelig. Fikener inneholder vitamin A og C, kalsium, kalium, magnesium og jern. Fordi frukt inneholder naturlig sukker og fiber, kan for mye virke avførende og gi diaré. Tørkede fikener har mye mer konsentrert sukker fordi vannet er fjernet."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "cs": "Pokud pes sní jakoukoli část fíkovníku, okamžitě vyhledejte veterinární péči. Pokud pes sní několik fíků a potíže se nezlepší nebo začne zvracet, obraťte se na veterináře.",
     "sv": "Om hunden äter någon del av fikonväxten, sök veterinärvård direkt. Om hunden äter flera fikon och besvären inte går över, eller om den börjar kräkas, kontakta veterinären.",
     "da": "Hvis din hund spiser en del af figenplanten, skal du straks søge dyrlægehjælp. Hvis din hund har spist flere figner, og symptomerne ikke bedres, eller den begynder at kaste op, skal du kontakte din dyrlæge.",
-    "fi": "Jos koirasi on syönyt jotakin viikunakasvin osaa, hakeudu heti eläinlääkäriin. Jos koirasi on syönyt useita viikunoita ja sen oireet eivät lievity tai se alkaa oksentaa, ota yhteyttä eläinlääkäriin."
+    "fi": "Jos koirasi on syönyt jotakin viikunakasvin osaa, hakeudu heti eläinlääkäriin. Jos koirasi on syönyt useita viikunoita ja sen oireet eivät lievity tai se alkaa oksentaa, ota yhteyttä eläinlääkäriin.",
+    "nb": "Hvis hunden spiser noe av fikenplanten, må du oppsøke dyrlege med en gang. Hvis hunden har spist flere fikener og symptomene ikke går over, eller den begynner å kaste opp, må du kontakte dyrlegen."
   },
   "serving": {
     "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
@@ -113,7 +119,8 @@
     "cs": "Jen měkká vnitřní část čerstvého fíku, bez zbytků rostliny, nakrájená na malé kousky. Začněte s drobným kouskem a sledujte, jestli se neobjeví podrážděný žaludek nebo alergická reakce.",
     "sv": "Bara den mjuka insidan av ett färskt fikon, utan några växtdelar, skuren i små bitar. Börja med en liten bit och håll utkik efter orolig mage eller allergisk reaktion.",
     "da": "Kun det bløde indre af en frisk figen, uden planterester og skåret i små stykker. Start med et helt lille stykke, og hold øje med dårlig mave eller allergisk reaktion.",
-    "fi": "Vain tuoreen viikunan pehmeä sisus, kaikki kasvinosat poistettuina, pieniksi paloiksi leikattuna. Aloita pienellä palalla ja seuraa, ilmeneekö vatsavaivoja tai allergista reaktiota."
+    "fi": "Vain tuoreen viikunan pehmeä sisus, kaikki kasvinosat poistettuina, pieniksi paloiksi leikattuna. Aloita pienellä palalla ja seuraa, ilmeneekö vatsavaivoja tai allergista reaktiota.",
+    "nb": "Bare den myke innsiden av en frisk fiken, uten deler av planten, skåret i små biter. Begynn med en bitteliten bit, og følg med på symptomer på urolig mage eller allergisk reaksjon."
   },
   "child": {
     "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
@@ -129,7 +136,8 @@
     "cs": "Pes může ochutnat drobný kousíček měkkého fíku. Listy a větvičky fíkovníku pro psy nejsou, tak se nejdřív zeptej dospělého.",
     "sv": "Hundar kan prova en liten bit mjukt fikon. Fikonblad och grenar är inte för hundar, så fråga en vuxen först.",
     "da": "Hunde kan prøve et helt lille stykke blød figen. Figenblade og grene er ikke til hunde, så spørg først en voksen.",
-    "fi": "Koira saa maistaa pienen palan pehmeää viikunaa. Viikunan lehdet ja oksat eivät ole koirille, joten kysy ensin aikuiselta."
+    "fi": "Koira saa maistaa pienen palan pehmeää viikunaa. Viikunan lehdet ja oksat eivät ole koirille, joten kysy ensin aikuiselta.",
+    "nb": "Hunder kan smake på en bitteliten bit av en myk fiken. Fikenblader og greiner er ikke for hunder, så spør en voksen først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "cs": "Mohou psi jíst sušené fíky?",
         "sv": "Får hundar äta torkade fikon?",
         "da": "Må hunde spise tørrede figner?",
-        "fi": "Saako koira syödä kuivattuja viikunoita?"
+        "fi": "Saako koira syödä kuivattuja viikunoita?",
+        "nb": "Kan hunder spise tørkede fikener?"
       },
       "a": {
         "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
@@ -163,7 +172,8 @@
         "cs": "Sušené fíky nejsou ideální pamlsek. Jsou mnohem cukernatější, protože se při sušení odstraní voda.",
         "sv": "Torkade fikon är ingen bra godbit. De innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort när de torkades.",
         "da": "Tørrede figner er ikke en god godbid. De har et langt mere koncentreret sukkerindhold, fordi vandet er fjernet under tørringen.",
-        "fi": "Kuivatut viikunat eivät ole paras herkkuvaihtoehto. Niissä sokeri on paljon tiivistyneempää, koska vesi on poistettu kuivatessa."
+        "fi": "Kuivatut viikunat eivät ole paras herkkuvaihtoehto. Niissä sokeri on paljon tiivistyneempää, koska vesi on poistettu kuivatessa.",
+        "nb": "Tørkede fikener er ikke noe godt valg som godbit. De inneholder mye mer konsentrert sukker fordi vannet er fjernet under tørkingen."
       }
     },
     {
@@ -181,7 +191,8 @@
         "cs": "Co když pes okusuje fíkovník?",
         "sv": "Vad gör jag om hunden tuggar på ett fikonträd?",
         "da": "Hvad hvis min hund tygger på et figentræ?",
-        "fi": "Entä jos koirani pureskelee viikunapuuta?"
+        "fi": "Entä jos koirani pureskelee viikunapuuta?",
+        "nb": "Hva om hunden min tygger på et fikentre?"
       },
       "a": {
         "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
@@ -197,7 +208,8 @@
         "cs": "Rostlina fíkovníku může být škodlivá. Příznaky mohou zahrnovat zvracení, nadměrné slinění, podráždění kůže a vyrážku. Pokud pes sní jakoukoli část rostliny, okamžitě vyhledejte veterinární péči.",
         "sv": "Fikonväxten kan vara skadlig. Tecken kan vara kräkningar, kraftig dregling, hudirritation och utslag. Om hunden äter någon del av växten, sök veterinärvård direkt.",
         "da": "Figenplanten kan være skadelig. Symptomer kan være opkast, kraftig savlen, hudirritation og udslæt. Hvis din hund spiser en del af planten, skal du straks søge dyrlægehjælp.",
-        "fi": "Viikunakasvi voi olla haitallinen. Oireita voivat olla oksentelu, runsas kuolaaminen, ihoärsytys ja ihottuma. Jos koirasi on syönyt jotakin kasvin osaa, hakeudu heti eläinlääkäriin."
+        "fi": "Viikunakasvi voi olla haitallinen. Oireita voivat olla oksentelu, runsas kuolaaminen, ihoärsytys ja ihottuma. Jos koirasi on syönyt jotakin kasvin osaa, hakeudu heti eläinlääkäriin.",
+        "nb": "Fikenplanten kan være skadelig. Symptomer kan være oppkast, kraftig sikling, hudirritasjon og utslett. Hvis hunden spiser noe av planten, må du oppsøke dyrlege med en gang."
       }
     }
   ],
@@ -344,6 +356,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a3720550d3b4f52a6f4a6f9a0f3f6bea56ebecde68092a30a532645edd68e6d8"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1b348af0cd0efda82bd8259be1b048f744bb18bfe7bd49ea46368046f67b454f"
     }
   }
 }
