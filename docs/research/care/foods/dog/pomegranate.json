@@ -4,6 +4,7 @@
   "name": {
     "en": "Pomegranate",
     "sl": "Granatno jabolko",
+    "hr": "Nar",
     "de": "Granatapfel",
     "fr": "Grenade",
     "es": "Granada",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat pomegranate?",
     "sl": "Ali lahko psi jedo granatno jabolko?",
+    "hr": "Smiju li psi jesti nar?",
     "de": "Dürfen Hunde Granatapfel fressen?",
     "fr": "Les chiens peuvent-ils manger de la grenade ?",
     "es": "¿Pueden los perros comer granada?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "pomegranate",
     "sl": "granatno-jabolko",
+    "hr": "nar",
     "de": "granatapfel",
     "fr": "grenade",
     "es": "granada",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
     "sl": "Ni priporočljivo. Granatno jabolko za pse ni strupeno, a to še ne pomeni, da je varno: semena lahko povzročijo prebavne težave in zaporo prebavil, koščki lupine in peclja pa zamašitev. Varneje je, da psu svežega granatnega jabolka ne dajete.",
+    "hr": "Ne preporučuje se. Nar nije otrovan za pse, ali to ne znači da je plod siguran: sjemenke mogu izazvati želučane tegobe i začepljenje probavnog sustava, a komadići kore i peteljke mogu izazvati začepljenje. Sigurnije je ne davati svježi nar.",
     "de": "Nicht empfohlen. Granatäpfel sind für Hunde nicht giftig, doch das macht die Frucht nicht sicher: Die Kerne können Magenprobleme und eine Blockade im Verdauungstrakt verursachen, und Stücke von Schale und Stiel können einen Darmverschluss auslösen. Frischen Granatapfel geben Sie besser nicht.",
     "fr": "Déconseillée. Les grenades ne sont pas toxiques pour les chiens, mais ce n’est pas pour autant un fruit sans danger : les graines peuvent causer des troubles digestifs et une occlusion, et des morceaux d’écorce ou de tige peuvent provoquer une obstruction. Mieux vaut ne pas donner de grenade fraîche.",
     "es": "No se recomienda. Las granadas no son tóxicas para los perros, pero eso no significa que la fruta sea segura: las semillas pueden causar problemas de estómago y una obstrucción digestiva, y los trozos de corteza y de tallo también pueden provocarla. Es más seguro no darle granada fresca a tu perro.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
     "sl": "Glavni veterinar AKC pravi, da granatno jabolko za pse ni strupeno. Semena, ki jih ljudje običajno jemo, pa lahko vseeno povzročijo prebavne težave in zaporo prebavil. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih. Izvleček granatnega jabolka v izdelkih, narejenih za pse, je nekaj drugega kot svež sadež.",
+    "hr": "Glavni veterinar AKC-a navodi da nar nije otrovan za pse. Sjemenke, dio koji ljudi obično jedu, ipak mogu izazvati probavne smetnje i začepljenje probavnog sustava. Komadići kore i peteljke mogu izazvati začepljenje, osobito kod manjih pasa. Ekstrakt nara u proizvodima za pse nešto je drugo nego svježi plod.",
     "de": "Laut dem Chefveterinär des AKC sind Granatäpfel für Hunde nicht giftig. Die Kerne, also der Teil, den Menschen meist essen, können dennoch Magen-Darm-Beschwerden und eine Blockade im Verdauungstrakt verursachen. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden. Granatapfelextrakt in Produkten für Hunde ist etwas anderes als die frische Frucht.",
     "fr": "Le vétérinaire en chef de l’AKC indique que les grenades ne sont pas toxiques pour les chiens. Les graines, la partie que l’on mange habituellement, peuvent pourtant provoquer des troubles gastro-intestinaux et une occlusion du tube digestif. Des morceaux d’écorce et de tige peuvent causer une obstruction, surtout chez les petits chiens. L’extrait de grenade présent dans certains produits pour chiens est un tout autre sujet que le fruit frais.",
     "es": "El veterinario jefe del AKC explica que las granadas no son tóxicas para los perros. Aun así, las semillas, la parte que suele comer la gente, pueden causar problemas gastrointestinales y una obstrucción digestiva. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños. El extracto de granada que llevan algunos productos para perros no es lo mismo que la fruta fresca.",
@@ -70,6 +75,10 @@
     "sl": [
       "Driska",
       "Bruhanje"
+    ],
+    "hr": [
+      "Proljev",
+      "Povraćanje"
     ],
     "de": [
       "Durchfall",
@@ -107,6 +116,7 @@
   "what_to_do": {
     "en": "If your dog gets into pomegranate seeds, contact your vet right away.",
     "sl": "Če pes poje semena granatnega jabolka, se takoj obrnite na veterinarja.",
+    "hr": "Ako pas pojede sjemenke nara, odmah se obrati veterinaru.",
     "de": "Hat Ihr Hund Granatapfelkerne gefressen, wenden Sie sich sofort an Ihren Tierarzt.",
     "fr": "Si votre chien a mangé des graines de grenade, contactez immédiatement votre vétérinaire.",
     "es": "Si tu perro se ha comido semillas de granada, contacta enseguida con tu veterinario.",
@@ -120,6 +130,7 @@
   "child": {
     "en": "Pomegranate is a people fruit. Its seeds and peel can upset a dog's tummy, so keep it out of reach.",
     "sl": "Granatno jabolko je sadež za ljudi. Njegova semena in lupina lahko psu razburijo trebušček, zato ga pospravi.",
+    "hr": "Nar je voće za ljude. Sjemenke i kora mogu smetati psećem trbuščiću, zato ga drži izvan dosega.",
     "de": "Granatapfel ist eine Frucht für Menschen. Kerne und Schale können Hunden auf den Bauch schlagen, also halte sie von deinem Hund fern.",
     "fr": "La grenade est un fruit pour les gens. Ses graines et sa peau peuvent donner mal au ventre aux chiens, alors garde-la hors de leur portée.",
     "es": "La granada es una fruta para las personas. Las semillas y la corteza pueden sentarle mal a la barriga de un perro, así que mantenla fuera de su alcance.",
@@ -134,6 +145,7 @@
       "q": {
         "en": "Is pomegranate in dog food okay?",
         "sl": "Je granatno jabolko v pasji hrani v redu?",
+        "hr": "Smije li nar biti sastojak hrane za pse?",
         "de": "Ist Granatapfel im Hundefutter in Ordnung?",
         "fr": "La grenade dans l’alimentation pour chiens, c’est possible ?",
         "es": "¿Puede llevar granada la comida para perros?",
@@ -146,6 +158,7 @@
       "a": {
         "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
         "sl": "Izvleček granatnega jabolka ima lahko za pse koristi. Če ga želite dajati, izberite izdelke, narejene posebej za pse, in se posvetujte z veterinarjem.",
+        "hr": "Ekstrakt nara može imati zdravstvene koristi za pse. Ako ga želiš dati, traži proizvode napravljene posebno za pse i porazgovaraj s veterinarom.",
         "de": "Granatapfelextrakt kann für Hunde gesundheitliche Vorteile haben. Wenn Sie ihn geben möchten, achten Sie auf Produkte, die speziell für Hunde hergestellt sind, und sprechen Sie mit Ihrem Tierarzt.",
         "fr": "L’extrait de grenade peut avoir des effets bénéfiques pour les chiens. Si vous souhaitez en donner, choisissez des produits conçus spécialement pour les chiens et parlez-en à votre vétérinaire.",
         "es": "El extracto de granada puede tener beneficios para la salud de los perros. Si quieres dárselo, busca productos elaborados específicamente para perros y habla con tu veterinario.",
@@ -160,6 +173,7 @@
       "q": {
         "en": "Can dogs eat the pomegranate peel?",
         "sl": "Ali lahko psi jedo lupino granatnega jabolka?",
+        "hr": "Smiju li psi jesti koru nara?",
         "de": "Dürfen Hunde die Granatapfelschale fressen?",
         "fr": "Les chiens peuvent-ils manger la peau de la grenade ?",
         "es": "¿Pueden los perros comer la corteza de la granada?",
@@ -172,6 +186,7 @@
       "a": {
         "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
         "sl": "Ne. Koščki lupine in peclja lahko povzročijo zamašitev, zlasti pri manjših psih, zato jih psu ne dajajte.",
+        "hr": "Ne. Komadići kore i peteljke mogu izazvati začepljenje, osobito kod manjih pasa, zato ih ne daj.",
         "de": "Nein. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden – füttern Sie sie also nicht.",
         "fr": "Non. Des morceaux d’écorce et de tige peuvent provoquer une obstruction, surtout chez les petits chiens : ne leur en donnez pas.",
         "es": "No. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños, así que no se los des.",
@@ -257,6 +272,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d644ebf124115813dd8f4c2f787a2949d70bfeb3599b6f0c16e4b2115accb722"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1a5ac88ed6b4e7e9c7bfe8b5e4f92db1f58bd62f288e527c18412b07fc0f5e89"
     },
     "de": {
       "status": "verified",

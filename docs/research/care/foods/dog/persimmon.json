@@ -4,6 +4,7 @@
   "name": {
     "en": "Persimmon",
     "sl": "Kaki",
+    "hr": "Kaki",
     "de": "Kaki",
     "fr": "Kaki",
     "es": "Caqui",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat persimmon?",
     "sl": "Ali lahko psi jedo kakije?",
+    "hr": "Smiju li psi jesti kaki?",
     "de": "Dürfen Hunde Kaki fressen?",
     "fr": "Les chiens peuvent-ils manger du kaki ?",
     "es": "¿Pueden los perros comer caqui?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "persimmon",
     "sl": "kaki",
+    "hr": "kaki",
     "de": "kaki",
     "fr": "kaki",
     "es": "caqui",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
     "sl": "Da, v omejenih količinah. Meso kakija je za pse varno, a najprej odstranite semena: lahko povzročijo dušenje in zaporo črevesja, zlasti pri majhnih psih. Kaki lahko deluje odvajalno in povzroči drisko in bruhanje.",
+    "hr": "Da, u ograničenim količinama. Meso kakija sigurno je za pse, ali prvo ukloni sjemenke: mogu izazvati gušenje i začepljenje crijeva, osobito kod malih pasa. Kaki može djelovati laksativno i izazvati proljev i povraćanje.",
     "de": "Ja, in begrenzten Mengen. Das Fruchtfleisch der Kaki ist für Hunde unbedenklich, aber entfernen Sie vorher die Kerne: Sie können zum Ersticken und zu einem Darmverschluss führen, besonders bei kleinen Hunden. Kaki kann abführend wirken und Durchfall und Erbrechen verursachen.",
     "fr": "Oui, en quantité limitée. La chair du kaki est sans danger pour les chiens, mais retirez d’abord les pépins : ils peuvent provoquer un étouffement et une occlusion intestinale, surtout chez les petits chiens. Le kaki peut avoir un effet laxatif et provoquer de la diarrhée et des vomissements.",
     "es": "Sí, en cantidades limitadas. La pulpa del caqui es segura para los perros, pero quita antes las semillas: pueden causar atragantamiento y una obstrucción intestinal, sobre todo en perros pequeños. El caqui puede ser laxante y provocar diarrea y vómitos.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
     "sl": "Sam sadež kakija psom ne škodi, semena in koščice pa lahko povzročijo zaporo črevesja. Večji psi jih morda izločijo brez težav, pri manjših pasmah pa grozita dušenje in zapora črevesja. Kaki deluje odvajalno in lahko povzroči drisko, slabost, bruhanje in krče v trebuhu.",
+    "hr": "Sam plod kakija nije štetan za pse, ali sjemenke i koštice nose rizik od začepljenja crijeva. Kod većih pasa mogu proći bez problema, dok je manjim pasminama veća opasnost od gušenja i začepljenja crijeva. Kaki djeluje laksativno i može izazvati proljev, mučninu, povraćanje i grčeve u trbuhu.",
     "de": "Die Kaki selbst ist für Hunde nicht schädlich, aber Kerne bergen die Gefahr eines Darmverschlusses. Größere Hunde scheiden sie womöglich problemlos aus, während für kleinere Rassen die Gefahr des Erstickens und eines Darmverschlusses besteht. Kakis wirken abführend und können Durchfall, Übelkeit, Erbrechen und Magenkrämpfe verursachen.",
     "fr": "Le fruit du kaki lui-même n’est pas nocif pour les chiens, mais les pépins et les noyaux risquent de provoquer une occlusion intestinale. Les grands chiens peuvent les évacuer sans problème, alors que les petits chiens risquent l’étouffement et l’occlusion intestinale. Les kakis ont un effet laxatif et peuvent causer de la diarrhée, des nausées, des vomissements et des crampes d’estomac.",
     "es": "El caqui en sí no es perjudicial para los perros, pero las semillas y los huesos suponen un riesgo de obstrucción intestinal. Los perros grandes pueden expulsarlos sin problema, mientras que los de razas pequeñas pueden atragantarse y sufrir una obstrucción intestinal. Los caquis tienen un efecto laxante y pueden causar diarrea, náuseas, vómitos y retortijones.",
@@ -66,6 +71,7 @@
   "what_to_do": {
     "en": "If your dog shows vomiting, belly pain, dehydration or loss of appetite after eating persimmon, get veterinary help right away.",
     "sl": "Če ima pes po zaužitju kakija bruhanje, bolečine v trebuhu, znake dehidracije ali izgubo apetita, takoj poiščite veterinarsko pomoč.",
+    "hr": "Ako pas nakon što pojede kaki povraća, ima bolove u trbuhu, dehidrira ili gubi apetit, odmah potraži veterinarsku pomoć.",
     "de": "Zeigt Ihr Hund nach dem Fressen von Kaki Erbrechen, Bauchschmerzen, Austrocknung oder Appetitlosigkeit, suchen Sie sofort einen Tierarzt auf.",
     "fr": "Si votre chien vomit, a mal au ventre, se déshydrate ou perd l’appétit après avoir mangé du kaki, consultez un vétérinaire sans attendre.",
     "es": "Si tu perro tiene vómitos, dolor de barriga, deshidratación o pérdida de apetito después de comer caqui, acude enseguida a un veterinario.",
@@ -78,6 +84,7 @@
   "serving": {
     "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
     "sl": "Sadež operite, odstranite semena in ga narežite na majhne koščke. Samo zmerno.",
+    "hr": "Operi plod, ukloni sjemenke i nareži ga na male kriške veličine zalogaja. Samo umjereno.",
     "de": "Spülen Sie die Frucht ab, entfernen Sie die Kerne und schneiden Sie sie in kleine, mundgerechte Scheiben. Nur in Maßen.",
     "fr": "Rincez le fruit, retirez les pépins et coupez-le en petites tranches. Uniquement avec modération.",
     "es": "Lava la fruta, quita las semillas y córtala en rodajas pequeñas, del tamaño de un bocado. Solo con moderación.",
@@ -90,6 +97,7 @@
   "child": {
     "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
     "sl": "Psi lahko dobijo malo kakija. Odrasli odstrani semena in ga nareže na majhne koščke.",
+    "hr": "Psi smiju dobiti malo kakija. Odrasla osoba izvadi sjemenke i nareže ga na male komadiće.",
     "de": "Hunde dürfen ein bisschen Kaki haben. Ein Erwachsener nimmt die Kerne heraus und schneidet sie in kleine Stücke.",
     "fr": "Les chiens peuvent manger un peu de kaki. Un adulte retire les pépins et le coupe en petits morceaux.",
     "es": "Los perros pueden comer un poco de caqui. Un adulto le quita las semillas y lo corta en trocitos.",
@@ -104,6 +112,7 @@
       "q": {
         "en": "Are persimmon seeds dangerous?",
         "sl": "So semena kakija nevarna?",
+        "hr": "Jesu li sjemenke kakija opasne?",
         "de": "Sind Kakikerne gefährlich?",
         "fr": "Les pépins de kaki sont-ils dangereux ?",
         "es": "¿Son peligrosas las semillas del caqui?",
@@ -116,6 +125,7 @@
       "a": {
         "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
         "sl": "Da, odstraniti jih je treba. Lahko povzročijo dušenje in zaporo črevesja, najbolj ogroženi so majhni psi.",
+        "hr": "Da, treba ih ukloniti. Mogu izazvati gušenje i začepljenje crijeva, a najviše su ugroženi mali psi.",
         "de": "Ja, sie sollten entfernt werden. Sie können zum Ersticken und zu einem Darmverschluss führen, am stärksten gefährdet sind kleine Hunde.",
         "fr": "Oui, il faut les retirer. Ils peuvent provoquer un étouffement et une occlusion intestinale, et les petits chiens sont les plus exposés.",
         "es": "Sí, hay que quitarlas. Pueden causar atragantamiento y una obstrucción intestinal, y los perros pequeños son los que corren más riesgo.",
@@ -189,6 +199,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cb3144fd2cd8561f873274873c4b3901cc259afc69f938b47b2101f315f36b64"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ab2da2a80d13daa9d29be9e31cd76d8d58712308fbfb390e1e6764be1c6865fe"
     },
     "de": {
       "status": "verified",
