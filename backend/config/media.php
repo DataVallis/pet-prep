@@ -224,6 +224,9 @@ return [
     | (new fal request); a second fail → »Needs review« in /admin, not shown (the app's fallback).
     | Shadow (default until calibrated, QA #363 M1): verdict + metrics recorded, the clip is
     | always served. Mode: /admin → Feature switches »Quality check« (app_settings `quality_check`).
+    | Still images (David 2026-11-04, StillQualityService): key / pose / item key images and
+    | catalogue pictures get the vision check BEFORE a video is made from them — own mode
+    | `stills_mode` (default enforce), ≤ `max_still_retries` regenerations with a new seed.
     */
     'quality_check' => [
         // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has

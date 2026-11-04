@@ -369,8 +369,8 @@ describe('pipeline: candidate → check → servable / one retry / needs review'
     });
 
     it('budget out for the vision call → the technical result decides, served as »not AI-checked«', function () {
-        // The 5 s video (0.56 $) fits, the 0.01 $ vision reservation does not.
-        config(['media.budget.daily_usd' => 0.565]);
+        // The 5 s video (0.56 $) fits, the 0.003 $ vision reservation does not (price verified 2026-11-04).
+        config(['media.budget.daily_usd' => 0.562]);
         mqFakeFal(['moving']);
         $pet = mqPet();
         $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);

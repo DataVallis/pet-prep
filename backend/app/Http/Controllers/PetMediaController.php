@@ -114,8 +114,9 @@ class PetMediaController extends Controller
     /**
      * GET /api/media/candidates/{media}?expires=…&signature=… (QA #363 M3)
      *
-     * The CANDIDATE clip of a slot (downloaded, waiting for or failed in the quality check) —
-     * issued only to superadmins in Pet → AI media so »Approve anyway« shows what is approved.
+     * The CANDIDATE of a slot (a clip, or since 2026-11-04 a key / pose image — downloaded,
+     * waiting for or failed in the quality check) — issued to superadmins in Pet → AI media so
+     * »Approve anyway« shows what is approved, and to fal's vision model (StillQualityService).
      * Same capability rules as show(); 404 without a candidate. Internal (not in the API docs).
      */
     #[ExcludeRouteFromDocs]

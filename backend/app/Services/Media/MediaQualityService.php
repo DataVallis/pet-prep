@@ -50,6 +50,9 @@ use Throwable;
  * Stored clips: checkStored() (media:quality-check) runs the same checks on a READY
  * file; a failure sets `quality = flagged` (not shown — PetMedia::isShown) and
  * regenerateFlagged() re-queues it once.
+ *
+ * Key / pose image candidates (David 2026-11-04) are delegated to StillQualityService (AI
+ * still check before any video is made from them; its own mode `stills_mode`).
  */
 class MediaQualityService
 {

@@ -1934,6 +1934,41 @@ flowchart LR
   FL & SF -->|--regenerate: cost + budget pre-check| RG[re-queued ONCE as the chain's retry → a 2nd fail = »Needs review« in enforce]
 ```
 
+### 10h. Still image check before videos (David 2026-11-04)
+
+Every key / pose image (pet slot or look row), item key image and catalogue picture is checked by the vision model before a video is made from it; a regeneration always sends a new seed. See ARCHITECTURE *Still image check*.
+
+```mermaid
+flowchart TD
+  W[fal webhook OK — key / pose / item image / catalogue picture] --> D[StorePetMedia / StoreItemMedia: download]
+  D --> M{stills_mode}
+  M -->|off| ST[stored at once — old behaviour]
+  M -->|shadow / enforce default| C[candidate_path set · row running · old file still served<br/>loops · transitions · phase clips · item clip wait]
+  C --> J[CheckPetMediaQuality → StillQualityService / CheckItemMediaQuality]
+  J --> G{vision profile + budget?}
+  G -->|no profile / fal off| UC[stored, quality unchecked]
+  G -->|no budget| WT[WAIT — nothing claimed or paid<br/>media:sweep / item sweep re-run it hourly]
+  G -->|yes| CL{claim check row<br/>row + generation + trigger}
+  CL -->|decided| AP[apply that verdict — never a 2nd call]
+  CL -->|ours| AI[ONE picture → FalGateway → openrouter/router/vision · Gemini 2.5 Flash<br/>quality_check, production budget, ≈ $0.001<br/>one_animal · legs_ok · no_ghost_parts · scene_ok · clean]
+  AI -->|pass / error| P[promoteCandidate → stored · its video follows]
+  AI -->|fail| F{mode}
+  F -->|shadow| SH[stored, quality shadow_failed]
+  F -->|enforce, retries < 2| R[NEW request: generation + 1 · fresh seed · next prompt variant] --> W
+  F -->|enforce, 2 retries used| NR[»Needs review«: quality_failed, candidate kept]
+  NR --> FB[pose → activity simple mode + alert · item → shown without content + alert · key image → no new loop + 1 Discord post]
+  NR --> ADM[/admin »Approve anyway« · »Regenerate« = new chain + new seed/]
+```
+
+```mermaid
+flowchart LR
+  CR[media:still-check --items<br/>daily 05:13 Ljubljana] --> SEL[READY item key images whose generation was never checked]
+  SEL --> V[vision check, $0.003 reserved each]
+  V -->|fail, enforce| RG[flagged → new chain, fresh seed → pipeline check → clip remade]
+  V -->|pass| OK[quality passed]
+  PETS[media:still-check --pets — manual only, --dry-run = count × cost] --> REC[verdict recorded only — shadow_failed shown, never regenerated]
+```
+
 ## 11. Push notifications (M3-02, 2026-10-05)
 
 ### 11a. Escalation → push

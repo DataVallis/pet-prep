@@ -8,6 +8,13 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-04 — AI pregleda vsako sliko, preden iz nje nastane video
+
+**Kaj:** na produkciji je imela slika kužka na novi postelji odvečno tačko pod posteljo in dve prosojni »duhovni« tački na tleh (ostanek prejšnje poze), 3-sekundni posnetek iz nje pa enako. Ponovno ustvarjanje je vrnilo isto sliko, ker je strežnik poslal popolnoma enake vhode (isto seme). Zdaj vsako novo ključno sliko, pozo, sliko s kupljeno stvarjo in sliko v katalogu pred posnetkom pregleda AI model (Gemini 2.5 Flash prek fal): ena žival, štiri tačke, nič prosojnega, stvar je tam. Slaba slika se naredi znova z novim semenom (največ dvakrat); če še vedno ni dobra, se ne uporabi — igra teče v preprostem načinu ali stvar brez posnetka — in admin dobi eno sporočilo. Vsak ročni »Regenerate« ima zdaj novo seme. Že narejene slike stvari se enkrat samodejno preverijo — tudi Davidova postelja se tako popravi sama.
+**Številke:** pregled ene slike ≈ 0,001 $ (OpenRouter cena: 0,30 $ / 2,50 $ na milijon žetonov; fal-ov vzorec 0,0008 $), slika sama 0,15 $, posnetek iz nje 0,34–0,56 $ — preverjanje stane < 1 % tega, kar varuje.
+**Zakaj je pomembno:** otrok nikoli ne sme videti psa s petimi tačkami; zdaj to ujamemo, preden plačamo posnetek, ne šele potem.
+**Kako povedati:** 👩 »Vsako sliko vašega ljubljenčka pred uporabo pregleda še ena umetna inteligenca — kot lektor.« · 💼 samodejna kontrola kakovosti za ~0,1 % stroška medijev, brez ročnega pregledovanja. · 🛠 »Isti seed + isti prompt + isti input = ista slika; ›Regenerate‹ mora vedno spremeniti vsaj seed. In: preveri still, preden plačaš video iz njega.«
+
 ## 2026-11-04 — Kupljene stvari tudi v albumu (M6-W03)
 
 **Kaj:** v albumu »Moj kuža« (in pri staršu v »Posnetkih«) ploščica »Spi« zdaj pokaže ljubljenčka na njegovi postelji, vsaka kupljena stvar pa ima svojo ploščico — prej je album kazal še star posnetek spanja na tleh.
