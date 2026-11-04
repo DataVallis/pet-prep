@@ -6,21 +6,24 @@
     "sl": "Suho sadje",
     "de": "Trockenfrüchte",
     "fr": "Fruits secs",
-    "es": "Fruta deshidratada"
+    "es": "Fruta deshidratada",
+    "it": "Frutta essiccata"
   },
   "question": {
     "en": "Can cats eat dried fruit?",
     "sl": "Ali lahko mačke jedo suho sadje?",
     "de": "Dürfen Katzen Trockenfrüchte fressen?",
     "fr": "Les chats peuvent-ils manger des fruits secs ?",
-    "es": "¿Pueden los gatos comer fruta deshidratada?"
+    "es": "¿Pueden los gatos comer fruta deshidratada?",
+    "it": "I gatti possono mangiare la frutta essiccata?"
   },
   "url_slug": {
     "en": "dried-fruit",
     "sl": "suho-sadje",
     "de": "trockenfruechte",
     "fr": "fruits-secs",
-    "es": "fruta-deshidratada"
+    "es": "fruta-deshidratada",
+    "it": "frutta-essiccata"
   },
   "level": "toxic",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Ne, suho sadje hranite zunaj dosega mačk. Rozine, sultanine in korintske rozine so za hišne ljubljenčke zelo strupene, rozine in korintske rozine lahko pri mačkah povzročijo odpoved ledvic, sladkor pa je za mačke nezdrav. Pazite tudi na kolače in pite s suhim sadjem ter pokličite veterinarja, če ga mačka poje.",
     "de": "Nein, halten Sie Trockenfrüchte von Katzen fern. Rosinen, Sultaninen und Korinthen sind für Haustiere hochgiftig, Rosinen und Korinthen können bei Katzen Nierenversagen verursachen, und Zucker ist für Katzen ungesund. Auch bei Kuchen und Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) ist Vorsicht geboten – rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon gefressen hat.",
     "fr": "Non, gardez les fruits secs hors de portée des chats. Les raisins secs, de Smyrne et de Corinthe sont très toxiques, ceux de Corinthe et les raisins secs pouvant causer une insuffisance rénale chez le chat, et le sucre lui est nocif. Méfiez-vous des gâteaux et des mince pies, et appelez votre vétérinaire si votre chat en a mangé.",
-    "es": "No, mantén la fruta deshidratada fuera del alcance de tu gato. Las pasas, las sultanas y las pasas de Corinto son muy tóxicas: las pasas y las de Corinto pueden causar insuficiencia renal en gatos, y el azúcar no es saludable para ellos. Cuidado con los mince pies y los pasteles: si tu gato come alguno, llama al veterinario."
+    "es": "No, mantén la fruta deshidratada fuera del alcance de tu gato. Las pasas, las sultanas y las pasas de Corinto son muy tóxicas: las pasas y las de Corinto pueden causar insuficiencia renal en gatos, y el azúcar no es saludable para ellos. Cuidado con los mince pies y los pasteles: si tu gato come alguno, llama al veterinario.",
+    "it": "No, tieni la frutta essiccata lontana dai gatti. Uvetta, uva sultanina e uva passa di Corinto sono molto tossiche per gli animali domestici; uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e per loro anche lo zucchero non è salutare. Attenzione anche a torte e mince pie: se il tuo gatto ne mangia, chiama il veterinario."
   },
   "why": {
     "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
     "sl": "Cats Protection grozdje, rozine in korintske rozine uvršča med človeško hrano, ki je za mačke strupena, in navaja, da lahko pri mačkah povzročijo odpoved ledvic, mačke s kronično ledvično boleznijo pa so morda še bolj ogrožene. PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Cats Protection dodaja, da sladkor za mačke sicer ni strupen, je pa nezdrav. Zastrupitev z grozdjem in rozinami je pri mačkah redka in slabo pojasnjena, vira, ki bi katero koli suho sadje označil za varno za mačke, pa nismo našli, zato uporabljamo strožjo stopnjo.",
     "de": "Cats Protection nennt Weintrauben, Rosinen und Korinthen unter den für Katzen giftigen Lebensmitteln und sagt, dass sie bei Katzen Nierenversagen verursachen können; Katzen mit chronischer Nierenerkrankung sind möglicherweise stärker gefährdet. Die PDSA warnt, dass Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen Rosinen, Sultaninen und Korinthen enthalten, die für Haustiere hochgiftig sind. Außerdem weist Cats Protection darauf hin, dass Zucker für Katzen zwar nicht giftig, aber dennoch ungesund ist. Vergiftungen durch Weintrauben und Rosinen sind bei Katzen selten und wenig erforscht, und wir haben keine Quelle zu Katzen gefunden, die eine Trockenfrucht als unbedenklich einstuft – deshalb wählen wir die strengere Stufe.",
     "fr": "Cats Protection range le raisin, le raisin sec et le raisin de Corinthe parmi les aliments humains toxiques pour les chats et indique qu’ils peuvent provoquer une insuffisance rénale ; les chats atteints d’une maladie rénale chronique pourraient être plus exposés. La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Cats Protection rappelle aussi que le sucre n’est pas toxique pour les chats, mais qu’il reste mauvais pour leur santé. Les intoxications au raisin chez le chat sont rares et mal comprises, et nous n’avons trouvé aucune source sur les chats présentant un fruit sec comme sans danger : nous retenons donc le niveau le plus strict.",
-    "es": "Cats Protection incluye las uvas, las pasas y las pasas de Corinto entre los alimentos humanos tóxicos para los gatos: pueden causarles insuficiencia renal, y los gatos con enfermedad renal crónica quizá corran más riesgo. PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Cats Protection añade que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. La intoxicación por uvas y pasas en gatos es poco frecuente y se conoce poco, y no hemos encontrado ninguna fuente sobre gatos que diga que alguna fruta deshidratada sea segura, así que aplicamos el nivel más estricto."
+    "es": "Cats Protection incluye las uvas, las pasas y las pasas de Corinto entre los alimentos humanos tóxicos para los gatos: pueden causarles insuficiencia renal, y los gatos con enfermedad renal crónica quizá corran más riesgo. PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Cats Protection añade que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. La intoxicación por uvas y pasas en gatos es poco frecuente y se conoce poco, y no hemos encontrado ninguna fuente sobre gatos que diga que alguna fruta deshidratada sea segura, así que aplicamos el nivel más estricto.",
+    "it": "Cats Protection include uva, uvetta e uva passa di Corinto tra i cibi umani tossici per i gatti e afferma che possono causare insufficienza renale; i gatti con malattia renale cronica potrebbero essere più a rischio. PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Cats Protection precisa inoltre che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. L’intossicazione da uva e uvetta nei gatti è rara e poco conosciuta, e non abbiamo trovato alcuna fonte sui gatti che consideri sicuro un qualsiasi tipo di frutta essiccata, quindi applichiamo il livello più prudente."
   },
   "signs": {
     "en": [
@@ -52,6 +57,9 @@
     ],
     "es": [
       "Vómitos, normalmente en el plazo de un día"
+    ],
+    "it": [
+      "Vomito, di solito entro un giorno"
     ]
   },
   "what_to_do": {
@@ -59,7 +67,8 @@
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je mačka pojedla (katero suho sadje ali katero hrano z njim), koliko in kdaj, ter shranite embalažo. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat (welche Trockenfrucht oder welches Lebensmittel mit Trockenfrüchten), wie viel und wann, und heben Sie die Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a mangé (quel fruit sec ou quel aliment en contenant), en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
-    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (qué fruta deshidratada o qué alimento la lleva), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa."
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (qué fruta deshidratada o qué alimento la lleva), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (quale frutta essiccata o quale alimento che la contiene), in che quantità e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa."
   },
   "serving": null,
   "child": {
@@ -67,7 +76,8 @@
     "sl": "Suho sadje, kot so rozine, ni prigrizek za muce. Naj bo daleč od muce. Če ga muca poje, povej odraslemu.",
     "de": "Trockenfrüchte wie Rosinen sind kein Snack für Katzen. Halte sie von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie welche frisst.",
     "fr": "Les fruits secs, comme les raisins secs, ne sont pas des friandises pour les chats. Garde-les loin de ton chat, et préviens un adulte s’il en mange.",
-    "es": "La fruta deshidratada, como las pasas, no es una golosina para gatos. Mantenla lejos de tu gato y avisa a un adulto si se come alguna."
+    "es": "La fruta deshidratada, como las pasas, no es una golosina para gatos. Mantenla lejos de tu gato y avisa a un adulto si se come alguna.",
+    "it": "La frutta essiccata, come l’uvetta, non è uno spuntino per i gatti. Tienila lontana dal tuo micio e, se ne mangia un po’, dillo a un adulto."
   },
   "faq": [
     {
@@ -76,14 +86,16 @@
         "sl": "Kaj pa pite s suhim sadjem in božični kolač?",
         "de": "Und was ist mit Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen?",
         "fr": "Et les mince pies et le gâteau de Noël ?",
-        "es": "¿Y los mince pies y el pastel de Navidad?"
+        "es": "¿Y los mince pies y el pastel de Navidad?",
+        "it": "E i mince pie e il Christmas cake?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
         "sl": "PDSA opozarja, da pite s suhim sadjem in božični kolač vsebujejo rozine, sultanine in korintske rozine, ki so za hišne ljubljenčke zelo strupene. Hranite jih zunaj mačjega dosega.",
         "de": "Die PDSA warnt, dass Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen Rosinen, Sultaninen und Korinthen enthalten, die für Haustiere hochgiftig sind. Lagern Sie sie so, dass Ihre Katze nicht herankommt.",
         "fr": "La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Rangez-les hors de portée de votre chat.",
-        "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato."
+        "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
+        "it": "PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto."
       }
     },
     {
@@ -92,14 +104,16 @@
         "sl": "Ali je težava tudi sladkor?",
         "de": "Ist auch der Zucker ein Problem?",
         "fr": "Le sucre pose-t-il aussi problème ?",
-        "es": "¿El azúcar también es un problema?"
+        "es": "¿El azúcar también es un problema?",
+        "it": "Anche lo zucchero è un problema?"
       },
       "a": {
         "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
         "sl": "Cats Protection navaja, da sladkor za mačke ni strupen, je pa nezdrav. Mačke sladkega okusa ne zaznajo, sladkor jim ne daje nobene hranilne vrednosti, redno dajanje sladke hrane pa lahko vodi v zdravstvene težave.",
         "de": "Cats Protection weist darauf hin, dass Zucker für Katzen zwar nicht giftig, aber dennoch ungesund ist. Katzen können Süßes gar nicht schmecken, Zucker hat für sie keinen Nährwert, und wer ihnen regelmäßig Zuckriges gibt, riskiert gesundheitliche Probleme.",
         "fr": "Selon Cats Protection, le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé. Les chats ne perçoivent pas le goût sucré, le sucre n’a aucune valeur nutritive pour eux, et leur donner régulièrement des aliments sucrés peut entraîner des problèmes de santé.",
-        "es": "Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. Los gatos no perciben el sabor dulce, el azúcar no les aporta ningún valor nutricional y, si se les dan alimentos azucarados con regularidad, podrían tener problemas de salud."
+        "es": "Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. Los gatos no perciben el sabor dulce, el azúcar no les aporta ningún valor nutricional y, si se les dan alimentos azucarados con regularidad, podrían tener problemas de salud.",
+        "it": "Cats Protection afferma che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. I gatti non sentono il sapore dolce, lo zucchero non ha per loro alcun valore nutrizionale e, se gli dai spesso cibi zuccherati, potrebbero avere problemi di salute."
       }
     }
   ],
@@ -192,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8540fbd5b615c6f109be39dabba4a9b403def17d7ef9e0e9da8595d30cb279c2"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7e78a11ab8e84c94bfe50eb63bec933fb5c514a1ead9da2731e07ee8bb1b3d7"
     }
   }
 }
