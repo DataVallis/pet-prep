@@ -652,8 +652,8 @@ describe('media:still-check', function () {
 
         config(['media.quality_check.stills_mode' => 'enforce']);
         $this->artisan('media:still-check --dry-run')->assertSuccessful()
-            ->expectsOutputToContain('Unchecked stored stills: 1 item key image(s)')
-            ->expectsOutputToContain('1 × ≈ $0.0030 = ≈ $0.0030')
+            // One output line = one expectation (each expectation consumes its own write).
+            ->expectsOutputToContain('Unchecked stored stills: 1 item key image(s), 0 pet key / pose image(s) (pets not selected — --pets). To check now: 1 × ≈ $0.0030 = ≈ $0.0030')
             ->expectsOutputToContain('Dry run');
         expect(sqVisionCalls())->toBe(0);
 
