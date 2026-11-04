@@ -5451,7 +5451,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Dried fruit",
@@ -5460,7 +5461,8 @@
         "fr": "Fruits secs",
         "es": "Fruta deshidratada",
         "it": "Frutta essiccata",
-        "pt": "Fruta desidratada"
+        "pt": "Fruta desidratada",
+        "nl": "Gedroogd fruit"
       },
       "question": {
         "en": "Can cats eat dried fruit?",
@@ -5469,7 +5471,8 @@
         "fr": "Les chats peuvent-ils manger des fruits secs ?",
         "es": "¿Pueden los gatos comer fruta deshidratada?",
         "it": "I gatti possono mangiare la frutta essiccata?",
-        "pt": "Os gatos podem comer fruta desidratada?"
+        "pt": "Os gatos podem comer fruta desidratada?",
+        "nl": "Mogen katten gedroogd fruit eten?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -5478,7 +5481,8 @@
         "fr": "fruits-secs",
         "es": "fruta-deshidratada",
         "it": "frutta-essiccata",
-        "pt": "fruta-desidratada"
+        "pt": "fruta-desidratada",
+        "nl": "gedroogd-fruit"
       },
       "answer": {
         "en": "No, keep dried fruit away from cats. Raisins, sultanas and currants are highly toxic to pets, raisins and currants can cause kidney failure in cats, and sugar is unhealthy for cats. Watch out for cakes and mince pies too, and call your vet if your cat eats any.",
@@ -5487,7 +5491,8 @@
         "fr": "Non, gardez les fruits secs hors de portée des chats. Les raisins secs, de Smyrne et de Corinthe sont très toxiques, ceux de Corinthe et les raisins secs pouvant causer une insuffisance rénale chez le chat, et le sucre lui est nocif. Méfiez-vous des gâteaux et des mince pies, et appelez votre vétérinaire si votre chat en a mangé.",
         "es": "No, mantén la fruta deshidratada fuera del alcance de tu gato. Las pasas, las sultanas y las pasas de Corinto son muy tóxicas: las pasas y las de Corinto pueden causar insuficiencia renal en gatos, y el azúcar no es saludable para ellos. Cuidado con los mince pies y los pasteles: si tu gato come alguno, llama al veterinario.",
         "it": "No, tieni la frutta essiccata lontana dai gatti. Uvetta, uva sultanina e uva passa di Corinto sono molto tossiche per gli animali domestici; uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e per loro anche lo zucchero non è salutare. Attenzione anche a torte e mince pie: se il tuo gatto ne mangia, chiama il veterinario.",
-        "pt": "Não, mantém a fruta desidratada longe dos gatos. Passas, sultanas e passas de Corinto são muito tóxicas para os animais de estimação, passas e passas de Corinto podem causar insuficiência renal nos gatos e o açúcar não lhes faz bem. Cuidado também com bolos e mince pies, e liga ao teu veterinário se o teu gato comer algum."
+        "pt": "Não, mantém a fruta desidratada longe dos gatos. Passas, sultanas e passas de Corinto são muito tóxicas para os animais de estimação, passas e passas de Corinto podem causar insuficiência renal nos gatos e o açúcar não lhes faz bem. Cuidado também com bolos e mince pies, e liga ao teu veterinário se o teu gato comer algum.",
+        "nl": "Nee, houd gedroogd fruit uit de buurt van je kat. Rozijnen, sultanarozijnen en krenten zijn zeer giftig voor huisdieren. Rozijnen en krenten kunnen bij katten nierfalen veroorzaken en suiker is ongezond voor katten. Pas ook op voor cake en kerstgebakjes met rozijnen en bel je dierenarts als je kat daar iets van heeft gegeten."
       },
       "why": {
         "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
@@ -5496,7 +5501,8 @@
         "fr": "Cats Protection range le raisin, le raisin sec et le raisin de Corinthe parmi les aliments humains toxiques pour les chats et indique qu’ils peuvent provoquer une insuffisance rénale ; les chats atteints d’une maladie rénale chronique pourraient être plus exposés. La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Cats Protection rappelle aussi que le sucre n’est pas toxique pour les chats, mais qu’il reste mauvais pour leur santé. Les intoxications au raisin chez le chat sont rares et mal comprises, et nous n’avons trouvé aucune source sur les chats présentant un fruit sec comme sans danger : nous retenons donc le niveau le plus strict.",
         "es": "Cats Protection incluye las uvas, las pasas y las pasas de Corinto entre los alimentos humanos tóxicos para los gatos: pueden causarles insuficiencia renal, y los gatos con enfermedad renal crónica quizá corran más riesgo. PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Cats Protection añade que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. La intoxicación por uvas y pasas en gatos es poco frecuente y se conoce poco, y no hemos encontrado ninguna fuente sobre gatos que diga que alguna fruta deshidratada sea segura, así que aplicamos el nivel más estricto.",
         "it": "Cats Protection include uva, uvetta e uva passa di Corinto tra i cibi umani tossici per i gatti e afferma che possono causare insufficienza renale; i gatti con malattia renale cronica potrebbero essere più a rischio. PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Cats Protection precisa inoltre che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. L’intossicazione da uva e uvetta nei gatti è rara e poco conosciuta, e non abbiamo trovato alcuna fonte sui gatti che consideri sicuro un qualsiasi tipo di frutta essiccata, quindi applichiamo il livello più prudente.",
-        "pt": "A Cats Protection inclui as uvas, as passas e as passas de Corinto entre os alimentos humanos tóxicos para os gatos e diz que podem causar insuficiência renal nos gatos, sendo possível que os gatos com doença renal crónica corram mais risco. A PDSA avisa que as mince pies e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. A Cats Protection diz também que o açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles. A intoxicação por uvas e passas nos gatos é rara e pouco conhecida, e não encontrámos nenhuma fonte sobre gatos que diga que alguma fruta desidratada é segura, por isso seguimos o nível mais rigoroso."
+        "pt": "A Cats Protection inclui as uvas, as passas e as passas de Corinto entre os alimentos humanos tóxicos para os gatos e diz que podem causar insuficiência renal nos gatos, sendo possível que os gatos com doença renal crónica corram mais risco. A PDSA avisa que as mince pies e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. A Cats Protection diz também que o açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles. A intoxicação por uvas e passas nos gatos é rara e pouco conhecida, e não encontrámos nenhuma fonte sobre gatos que diga que alguma fruta desidratada é segura, por isso seguimos o nível mais rigoroso.",
+        "nl": "Cats Protection noemt druiven, rozijnen en krenten onder het menselijk voedsel dat giftig is voor katten en zegt dat ze nierfalen kunnen veroorzaken; katten met een chronische nierziekte lopen mogelijk een groter risico. De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Cats Protection zegt ook dat suiker niet giftig is voor katten, maar wel ongezond. Vergiftiging door druiven en rozijnen komt bij katten zelden voor en wordt niet goed begrepen. We vonden geen enkele bron over katten die zegt dat gedroogd fruit veilig is, dus volgen we het strengere advies."
       },
       "signs": {
         "en": [
@@ -5519,6 +5525,9 @@
         ],
         "pt": [
           "Vómitos, normalmente no espaço de um dia"
+        ],
+        "nl": [
+          "Braken, meestal binnen een dag"
         ]
       },
       "what_to_do": {
@@ -5528,7 +5537,8 @@
         "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a mangé (quel fruit sec ou quel aliment en contenant), en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
         "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (qué fruta deshidratada o qué alimento la lleva), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
         "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (quale frutta essiccata o quale alimento che la contiene), in che quantità e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
-        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato comeu (que fruta desidratada ou que alimento a contém), a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato comeu (que fruta desidratada ou que alimento a contém), a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+        "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (welk gedroogd fruit of welk gerecht met gedroogd fruit), hoeveel en wanneer, en bewaar de verpakking. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken."
       },
       "serving": null,
       "child": {
@@ -5538,7 +5548,8 @@
         "fr": "Les fruits secs, comme les raisins secs, ne sont pas des friandises pour les chats. Garde-les loin de ton chat, et préviens un adulte s’il en mange.",
         "es": "La fruta deshidratada, como las pasas, no es una golosina para gatos. Mantenla lejos de tu gato y avisa a un adulto si se come alguna.",
         "it": "La frutta essiccata, come l’uvetta, non è uno spuntino per i gatti. Tienila lontana dal tuo micio e, se ne mangia un po’, dillo a un adulto.",
-        "pt": "A fruta desidratada, como as passas, não é um petisco para gatos. Mantém-na longe do gatinho e avisa um adulto se ele comer alguma."
+        "pt": "A fruta desidratada, como as passas, não é um petisco para gatos. Mantém-na longe do gatinho e avisa um adulto se ele comer alguma.",
+        "nl": "Gedroogd fruit zoals rozijnen is geen traktatie voor katten. Houd het uit de buurt van je kat en vertel het aan een volwassene als ze er toch iets van eet."
       },
       "faq": [
         {
@@ -5549,7 +5560,8 @@
             "fr": "Et les mince pies et le gâteau de Noël ?",
             "es": "¿Y los mince pies y el pastel de Navidad?",
             "it": "E i mince pie e il Christmas cake?",
-            "pt": "E as mince pies e o bolo de Natal?"
+            "pt": "E as mince pies e o bolo de Natal?",
+            "nl": "En kerstgebakjes en kerstcake?"
           },
           "a": {
             "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -5558,7 +5570,8 @@
             "fr": "La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Rangez-les hors de portée de votre chat.",
             "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
             "it": "PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
-            "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato."
+            "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
+            "nl": "De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten het bereik van je kat."
           }
         },
         {
@@ -5569,7 +5582,8 @@
             "fr": "Le sucre pose-t-il aussi problème ?",
             "es": "¿El azúcar también es un problema?",
             "it": "Anche lo zucchero è un problema?",
-            "pt": "O açúcar também é um problema?"
+            "pt": "O açúcar também é um problema?",
+            "nl": "Is de suiker ook een probleem?"
           },
           "a": {
             "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
@@ -5578,7 +5592,8 @@
             "fr": "Selon Cats Protection, le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé. Les chats ne perçoivent pas le goût sucré, le sucre n’a aucune valeur nutritive pour eux, et leur donner régulièrement des aliments sucrés peut entraîner des problèmes de santé.",
             "es": "Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. Los gatos no perciben el sabor dulce, el azúcar no les aporta ningún valor nutricional y, si se les dan alimentos azucarados con regularidad, podrían tener problemas de salud.",
             "it": "Cats Protection afferma che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. I gatti non sentono il sapore dolce, lo zucchero non ha per loro alcun valore nutrizionale e, se gli dai spesso cibi zuccherati, potrebbero avere problemi di salute.",
-            "pt": "A Cats Protection diz que o açúcar não é tóxico para os gatos, mas continua a não lhes fazer bem. Os gatos não sentem o sabor doce, o açúcar não tem valor nutricional para eles e dar-lhes alimentos açucarados com regularidade pode levar a problemas de saúde."
+            "pt": "A Cats Protection diz que o açúcar não é tóxico para os gatos, mas continua a não lhes fazer bem. Os gatos não sentem o sabor doce, o açúcar não tem valor nutricional para eles e dar-lhes alimentos açucarados com regularidade pode levar a problemas de saúde.",
+            "nl": "Cats Protection zegt dat suiker niet giftig is voor katten, maar wel ongezond. Katten kunnen geen zoet proeven en suiker heeft voor hen geen voedingswaarde. Geef je ze regelmatig suikerrijk eten, dan kan dat tot gezondheidsproblemen leiden."
           }
         }
       ],
@@ -6163,7 +6178,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -6172,7 +6188,8 @@
         "fr": "Noyaux de fruits",
         "es": "Huesos y semillas de fruta",
         "it": "Noccioli e semi di frutta",
-        "pt": "Caroços e sementes de fruta"
+        "pt": "Caroços e sementes de fruta",
+        "nl": "Fruitpitten en -stenen"
       },
       "question": {
         "en": "Can cats eat fruit pits?",
@@ -6181,7 +6198,8 @@
         "fr": "Les chats peuvent-ils manger des noyaux de fruits ?",
         "es": "¿Pueden los gatos comer huesos de fruta?",
         "it": "I gatti possono mangiare i noccioli di frutta?",
-        "pt": "Os gatos podem comer caroços de fruta?"
+        "pt": "Os gatos podem comer caroços de fruta?",
+        "nl": "Mogen katten fruitpitten eten?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -6190,7 +6208,8 @@
         "fr": "noyaux-de-fruits",
         "es": "huesos-y-semillas-de-fruta",
         "it": "noccioli-e-semi-di-frutta",
-        "pt": "carocos-e-sementes-de-fruta"
+        "pt": "carocos-e-sementes-de-fruta",
+        "nl": "fruitpitten"
       },
       "answer": {
         "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
@@ -6199,7 +6218,8 @@
         "fr": "Non. Gardez les noyaux et les pépins des fruits à noyau hors de portée des chats. L’ASPCA classe les cerisiers, pêchers, pruniers et abricotiers parmi les plantes toxiques pour les chats, car leurs graines, leurs tiges et leurs feuilles contiennent du cyanure. Appelez votre vétérinaire si votre chat mâchonne ou avale un noyau.",
         "es": "No. Mantén los huesos y las semillas de las frutas de hueso fuera del alcance de los gatos. La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, porque sus semillas, tallos y hojas contienen cianuro. Llama a tu veterinario si tu gato muerde o se traga alguno.",
         "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno.",
-        "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum."
+        "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum.",
+        "nl": "Nee. Houd de pitten, stenen en zaden van steenfruit uit de buurt van katten. De ASPCA noemt kersen-, perzik-, pruimen- en abrikozenplanten giftig voor katten, omdat de zaden, stelen en bladeren cyanide bevatten. Bel je dierenarts als je kat op een pit kauwt of er een doorslikt."
       },
       "why": {
         "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -6208,7 +6228,8 @@
         "fr": "Pour la cerise, la pêche, la prune et l’abricot, l’ASPCA indique que les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles flétrissent ; elle classe ces quatre plantes comme toxiques pour les chats. Le noyau de ces fruits est la graine : il ne faut donc jamais en donner à un chat.",
         "es": "Según la ASPCA, los tallos, las hojas y las semillas del cerezo, el melocotonero, el ciruelo y el albaricoquero contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando están marchitos; por eso incluye las cuatro plantas entre las tóxicas para los gatos. El hueso de estas frutas es la semilla, así que nunca se le debe dar a un gato.",
         "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto.",
-        "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato."
+        "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato.",
+        "nl": "Over kers, perzik, pruim en abrikoos zegt de ASPCA dat de stelen, bladeren en zaden cyanide bevatten (als cyanogene glycosiden) en vooral giftig zijn terwijl ze verwelken. De ASPCA noemt alle vier de planten giftig voor katten. De pit of steen van deze vruchten is het zaad en mag een kat dus nooit krijgen."
       },
       "signs": {
         "en": [
@@ -6259,6 +6280,13 @@
           "Dificuldade em respirar",
           "Respiração ofegante",
           "Choque"
+        ],
+        "nl": [
+          "Steenrood tandvlees",
+          "Verwijde pupillen",
+          "Moeite met ademen",
+          "Hijgen",
+          "Shocktoestand"
         ]
       },
       "what_to_do": {
@@ -6268,7 +6296,8 @@
         "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchonné ou avalé un noyau ou une graine. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
         "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordido o se ha tragado un hueso o una semilla. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
         "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
-        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
+        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
+        "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat een pit, steen of zaad heeft gekauwd of doorgeslikt. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken."
       },
       "serving": null,
       "child": {
@@ -6278,7 +6307,8 @@
         "fr": "Les noyaux de fruits ne sont pas sans danger pour les chats. Si ton chat en mâchonne un, préviens un adulte.",
         "es": "Los huesos de fruta no son seguros para los gatos. Si tu gato muerde uno, díselo a un adulto.",
         "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto.",
-        "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto."
+        "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto.",
+        "nl": "Fruitpitten zijn niet veilig voor katten. Als je kat op een pit kauwt, vertel het dan aan een volwassene."
       },
       "faq": [
         {
@@ -6289,7 +6319,8 @@
             "fr": "De quels fruits parle-t-on ?",
             "es": "¿A qué frutas se aplica esto?",
             "it": "Di quali frutti si tratta?",
-            "pt": "Que frutas estão incluídas?"
+            "pt": "Que frutas estão incluídas?",
+            "nl": "Om welk fruit gaat het?"
           },
           "a": {
             "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -6298,7 +6329,8 @@
             "fr": "L’ASPCA classe la cerise, la pêche, la prune et l’abricot parmi les plantes toxiques pour les chats, et précise pour chacune que les tiges, les feuilles et les graines contiennent du cyanure.",
             "es": "La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, y de cada uno dice que los tallos, las hojas y las semillas contienen cianuro.",
             "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro.",
-            "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto."
+            "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto.",
+            "nl": "De ASPCA noemt kers, perzik, pruim en abrikoos giftig voor katten en zegt bij elk daarvan dat de stelen, bladeren en zaden cyanide bevatten."
           }
         }
       ],
@@ -22367,7 +22399,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Coconut oil",
@@ -22376,7 +22409,8 @@
         "fr": "Huile de coco",
         "es": "Aceite de coco",
         "it": "Olio di cocco",
-        "pt": "Óleo de coco"
+        "pt": "Óleo de coco",
+        "nl": "Kokosolie"
       },
       "question": {
         "en": "Can dogs eat coconut oil?",
@@ -22385,7 +22419,8 @@
         "fr": "Les chiens peuvent-ils manger de l’huile de coco ?",
         "es": "¿Pueden los perros comer aceite de coco?",
         "it": "I cani possono mangiare l’olio di cocco?",
-        "pt": "Os cães podem comer óleo de coco?"
+        "pt": "Os cães podem comer óleo de coco?",
+        "nl": "Mogen honden kokosolie eten?"
       },
       "url_slug": {
         "en": "coconut-oil",
@@ -22394,7 +22429,8 @@
         "fr": "huile-de-coco",
         "es": "aceite-de-coco",
         "it": "olio-di-cocco",
-        "pt": "oleo-de-coco"
+        "pt": "oleo-de-coco",
+        "nl": "kokosolie"
       },
       "answer": {
         "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
@@ -22403,7 +22439,8 @@
         "fr": "Déconseillée en complément régulier. Une petite léchée a peu de chances de faire du mal, mais l’huile de coco est surtout composée de graisses saturées : elle peut provoquer des troubles digestifs, des selles grasses et de la diarrhée, et, donnée sur la durée, favoriser la prise de poids, voire une pancréatite. Demandez d’abord conseil à votre vétérinaire.",
         "es": "No se recomienda como complemento habitual. Es poco probable que un lametón cause daño, pero el aceite de coco es sobre todo grasa saturada: puede provocar malestar de estómago, heces grasas y diarrea, y, si se da durante mucho tiempo, aumento de peso e incluso pancreatitis. Consúltalo antes con tu veterinario.",
         "it": "Non consigliato come aggiunta abituale. Una piccola leccata difficilmente fa male, ma l’olio di cocco è composto per lo più da grassi saturi: può causare mal di stomaco, feci grasse e diarrea, e se lo si dà a lungo può portare ad aumento di peso e perfino a pancreatite. Parlane prima con il veterinario.",
-        "pt": "Não é recomendado como complemento regular. Uma pequena lambidela dificilmente faz mal, mas o óleo de coco é sobretudo gordura saturada: pode causar mal-estar no estômago, fezes gordurosas e diarreia, e, se for dado durante muito tempo, pode levar a aumento de peso e até a pancreatite. Fala primeiro com o teu veterinário."
+        "pt": "Não é recomendado como complemento regular. Uma pequena lambidela dificilmente faz mal, mas o óleo de coco é sobretudo gordura saturada: pode causar mal-estar no estômago, fezes gordurosas e diarreia, e, se for dado durante muito tempo, pode levar a aumento de peso e até a pancreatite. Fala primeiro com o teu veterinário.",
+        "nl": "Liever niet als vast onderdeel van het voer. Een likje is waarschijnlijk niet schadelijk, maar kokosolie bestaat vooral uit verzadigd vet: het kan buikklachten, vette ontlasting en diarree veroorzaken, en bij langdurig gebruik kan het leiden tot gewichtstoename en zelfs alvleesklierontsteking. Overleg eerst met je dierenarts."
       },
       "why": {
         "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
@@ -22412,7 +22449,8 @@
         "fr": "L’huile de coco est surtout composée de graisses saturées. En donner peut entraîner une prise de poids et des troubles digestifs, et, sur la durée, de l’obésité et une pancréatite. Aucune étude approfondie ne prouve qu’elle soit bénéfique pour la santé des chiens. Un autre article de l’AKC déconseille de la donner tous les jours et juge plus sûres de petites quantités occasionnelles ; nous suivons le conseil le plus strict et la classons parmi les aliments déconseillés.",
         "es": "El aceite de coco está formado sobre todo por grasas saturadas. Si se le da a un perro, puede provocar aumento de peso y molestias digestivas, y, tomado durante mucho tiempo, obesidad y pancreatitis. No hay estudios amplios que demuestren que mejore la salud de los perros. Otro artículo del AKC dice que no se recomienda dárselo a diario y que las cantidades pequeñas y ocasionales son más seguras; seguimos el consejo más estricto y lo clasificamos como no recomendado.",
         "it": "L’olio di cocco è composto per lo più da grassi saturi. Somministrarlo può causare aumento di peso e disturbi digestivi; se l’uso è prolungato, può portare a obesità e scatenare una pancreatite. Non esistono studi approfonditi che dimostrino che faccia bene alla salute dei cani. Un altro articolo dell’AKC sconsiglia di darlo ogni giorno e indica come più sicure quantità piccole e occasionali; noi seguiamo l’indicazione più prudente e lo classifichiamo come non consigliato.",
-        "pt": "O óleo de coco é constituído sobretudo por gorduras saturadas. Dar óleo de coco pode levar ao aumento de peso e a problemas digestivos e, se for dado a longo prazo, à obesidade e a pancreatite. Não existem estudos abrangentes que provem que faz bem à saúde dos cães. Outro artigo do AKC diz que não se recomenda dar óleo de coco todos os dias e que quantidades pequenas e ocasionais são mais seguras; seguimos o conselho mais rigoroso e classificamo-lo como não recomendado."
+        "pt": "O óleo de coco é constituído sobretudo por gorduras saturadas. Dar óleo de coco pode levar ao aumento de peso e a problemas digestivos e, se for dado a longo prazo, à obesidade e a pancreatite. Não existem estudos abrangentes que provem que faz bem à saúde dos cães. Outro artigo do AKC diz que não se recomenda dar óleo de coco todos os dias e que quantidades pequenas e ocasionais são mais seguras; seguimos o conselho mais rigoroso e classificamo-lo como não recomendado.",
+        "nl": "Kokosolie bestaat grotendeels uit verzadigde vetten. Het kan leiden tot gewichtstoename en spijsverteringsklachten, en bij langdurig gebruik kan het obesitas veroorzaken en alvleesklierontsteking uitlokken. Er is geen uitgebreid onderzoek dat aantoont dat het gezond is voor honden. Een ander AKC-artikel zegt dat dagelijks geven niet wordt aanbevolen en dat kleine, incidentele hoeveelheden veiliger zijn; wij volgen het strengere advies en beoordelen het als niet aan te raden."
       },
       "signs": {
         "en": [
@@ -22449,6 +22487,11 @@
           "Mal-estar no estômago",
           "Fezes gordurosas",
           "Diarreia"
+        ],
+        "nl": [
+          "Buikklachten",
+          "Vette ontlasting",
+          "Diarree"
         ]
       },
       "what_to_do": {
@@ -22458,7 +22501,8 @@
         "fr": "Si votre chien a léché un peu d’huile de coco, cela ne devrait pas poser de gros problème. Parlez-en à votre vétérinaire avant de lui en donner à manger ou de l’appliquer sur sa peau.",
         "es": "Si tu perro ha lamido un poco de aceite de coco, es probable que no pase nada grave. Antes de darle aceite de coco para comer o de aplicárselo en la piel, coméntalo con tu veterinario.",
         "it": "Se il tuo cane ha leccato un po’ di olio di cocco, probabilmente non succederà niente di grave. Prima di darglielo da mangiare o di applicarlo sulla pelle, parlane con il veterinario.",
-        "pt": "Se o teu cão lambeu um pouco de óleo de coco, provavelmente não vai fazer grande mal. Antes de lhe dares óleo de coco para comer ou de o aplicares na pele, fala com o teu veterinário."
+        "pt": "Se o teu cão lambeu um pouco de óleo de coco, provavelmente não vai fazer grande mal. Antes de lhe dares óleo de coco para comer ou de o aplicares na pele, fala com o teu veterinário.",
+        "nl": "Als je hond een beetje kokosolie heeft gelikt, zal dat waarschijnlijk geen kwaad kunnen. Overleg met je dierenarts voordat je kokosolie te eten geeft of op de huid smeert."
       },
       "serving": null,
       "child": {
@@ -22468,7 +22512,8 @@
         "fr": "L’huile de coco est très grasse et peut donner mal au ventre aux chiens. Seuls un adulte et le vétérinaire décident si on peut en donner.",
         "es": "El aceite de coco es muy graso y puede sentarle mal a la barriga de un perro. Solo un adulto y el veterinario deciden si se le da.",
         "it": "L’olio di cocco è molto grasso e può far male alla pancia del cane. Ne decidono solo un adulto e il veterinario.",
-        "pt": "O óleo de coco é muito gordo e pode fazer mal à barriguinha do cão. Quem decide é um adulto, com a ajuda do veterinário."
+        "pt": "O óleo de coco é muito gordo e pode fazer mal à barriguinha do cão. Quem decide é um adulto, com a ajuda do veterinário.",
+        "nl": "Kokosolie zit vol vet en kan de buik van een hond van streek maken. Alleen een volwassene en de dierenarts beslissen daarover."
       },
       "faq": [
         {
@@ -22479,7 +22524,8 @@
             "fr": "Puis-je mettre de l’huile de coco sur la peau de mon chien ?",
             "es": "¿Puedo ponerle aceite de coco en la piel a mi perro?",
             "it": "Posso mettere l’olio di cocco sulla pelle del mio cane?",
-            "pt": "Posso pôr óleo de coco na pele do meu cão?"
+            "pt": "Posso pôr óleo de coco na pele do meu cão?",
+            "nl": "Mag ik kokosolie op de huid van mijn hond smeren?"
           },
           "a": {
             "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
@@ -22488,7 +22534,8 @@
             "fr": "L’huile de coco peut aider à apaiser les zones irritées ou la peau sèche qui démange, mais elle est salissante et peut boucher les pores. Parlez-en à votre vétérinaire avant de l’utiliser.",
             "es": "El aceite de coco puede aliviar las zonas irritadas o la piel seca y con picor, pero mancha mucho y puede obstruir los poros. Coméntalo con tu veterinario antes de usarlo.",
             "it": "L’olio di cocco può aiutare a lenire le zone irritate o la pelle secca e pruriginosa, ma unge parecchio e può ostruire i pori. Parlane con il veterinario prima di usarlo.",
-            "pt": "O óleo de coco pode ajudar a aliviar zonas irritadas ou a pele seca e com comichão, mas suja muito e pode entupir os poros. Fala com o teu veterinário antes de o usar."
+            "pt": "O óleo de coco pode ajudar a aliviar zonas irritadas ou a pele seca e com comichão, mas suja muito e pode entupir os poros. Fala com o teu veterinário antes de o usar.",
+            "nl": "Kokosolie kan geïrriteerde plekken of een droge, jeukende huid verzachten, maar het maakt een rommeltje en kan de poriën verstoppen. Overleg met je dierenarts voordat je het gebruikt."
           }
         },
         {
@@ -22499,7 +22546,8 @@
             "fr": "L’huile de coco est-elle bonne pour la santé des chiens ?",
             "es": "¿Es bueno el aceite de coco para la salud de los perros?",
             "it": "L’olio di cocco fa bene alla salute dei cani?",
-            "pt": "O óleo de coco faz bem à saúde dos cães?"
+            "pt": "O óleo de coco faz bem à saúde dos cães?",
+            "nl": "Is kokosolie goed voor de gezondheid van honden?"
           },
           "a": {
             "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
@@ -22508,7 +22556,8 @@
             "fr": "Aucune étude approfondie ne prouve à ce jour que l’huile de coco améliore à coup sûr de nombreux aspects de la santé du chien.",
             "es": "No hay estudios amplios que demuestren que el aceite de coco ayude con seguridad en muchos aspectos de la salud de un perro.",
             "it": "Non esistono studi approfonditi che dimostrino con certezza che l’olio di cocco faccia bene a molti aspetti della salute del cane.",
-            "pt": "Não existem estudos abrangentes que provem que o óleo de coco ajuda de certeza em muitos aspetos da saúde de um cão."
+            "pt": "Não existem estudos abrangentes que provem que o óleo de coco ajuda de certeza em muitos aspetos da saúde de um cão.",
+            "nl": "Er is geen uitgebreid onderzoek dat aantoont dat kokosolie op veel vlakken zeker goed is voor de gezondheid van een hond."
           }
         }
       ],
@@ -22546,7 +22595,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Coconut",
@@ -22555,7 +22605,8 @@
         "fr": "Noix de coco",
         "es": "Coco",
         "it": "Cocco",
-        "pt": "Coco"
+        "pt": "Coco",
+        "nl": "Kokosnoot"
       },
       "question": {
         "en": "Can dogs eat coconut?",
@@ -22564,7 +22615,8 @@
         "fr": "Les chiens peuvent-ils manger de la noix de coco ?",
         "es": "¿Pueden los perros comer coco?",
         "it": "I cani possono mangiare il cocco?",
-        "pt": "Os cães podem comer coco?"
+        "pt": "Os cães podem comer coco?",
+        "nl": "Mogen honden kokosnoot eten?"
       },
       "url_slug": {
         "en": "coconut",
@@ -22573,7 +22625,8 @@
         "fr": "noix-de-coco",
         "es": "coco",
         "it": "cocco",
-        "pt": "coco"
+        "pt": "coco",
+        "nl": "kokosnoot"
       },
       "answer": {
         "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
@@ -22582,7 +22635,8 @@
         "fr": "Oui, en petites quantités. La chair de noix de coco non sucrée est sans danger pour les chiens avec modération, mais ne leur donnez jamais la bourre ni la coque. La noix de coco est riche en graisses et contient des huiles qui peuvent provoquer des maux d’estomac et de la diarrhée.",
         "es": "Sí, en pequeñas cantidades. La pulpa de coco sin azúcar es segura para los perros con moderación, pero nunca les des la envoltura fibrosa ni la cáscara. El coco es rico en grasa y contiene aceites que pueden provocar molestias de estómago y diarrea.",
         "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea.",
-        "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia."
+        "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia.",
+        "nl": "Ja, in kleine hoeveelheden. Ongezoet kokosvlees is met mate veilig voor honden, maar geef nooit de vezelige buitenschil of de harde dop. Kokos bevat veel vet en oliën, die buikklachten en diarree kunnen veroorzaken."
       },
       "why": {
         "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -22591,7 +22645,8 @@
         "fr": "En petites quantités, la noix de coco ne risque guère de causer de problème grave, mais la chair et le lait des noix de coco fraîches contiennent des huiles qui peuvent provoquer des maux d’estomac, des selles molles et de la diarrhée. Comme la noix de coco est assez grasse, les chiens qui ne doivent pas suivre un régime riche en graisses ou qui sont en surpoids devraient recevoir d’autres friandises. Elle est aussi riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale. La bourre et la coque peuvent provoquer une occlusion intestinale.",
         "es": "En pequeñas cantidades, es poco probable que el coco cause daños graves, pero la pulpa y la leche del coco fresco contienen aceites que pueden provocar molestias de estómago, heces blandas y diarrea. El coco es bastante graso, así que a los perros que no deben seguir una dieta rica en grasa o que tienen sobrepeso es mejor darles otros premios. También es rico en potasio, por lo que hay que tener cuidado con los perros con enfermedad renal. La envoltura fibrosa y la cáscara pueden causar una obstrucción intestinal.",
         "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale.",
-        "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal."
+        "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal.",
+        "nl": "In kleine hoeveelheden is kokos waarschijnlijk niet ernstig schadelijk, maar het vruchtvlees en de melk van verse kokosnoten bevatten oliën die buikklachten, zachte ontlasting en diarree kunnen geven. Kokos bevat relatief veel vet, dus geef je honden die geen vetrijk voer mogen eten of overgewicht hebben beter een ander snoepje. Het bevat ook veel kalium, dus voorzichtigheid is geboden bij honden met een nierziekte. De vezelige buitenschil en de dop kunnen een darmverstopping veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -22601,7 +22656,8 @@
         "fr": "Demandez conseil à votre vétérinaire avant d’ajouter de la noix de coco à l’alimentation de votre chien, surtout s’il a déjà eu une pancréatite.",
         "es": "Consulta con tu veterinario antes de incluir coco en la dieta de tu perro, sobre todo si ha tenido pancreatitis.",
         "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite.",
-        "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite."
+        "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite.",
+        "nl": "Vraag je dierenarts om advies voordat je kokos aan het voer van je hond toevoegt, zeker als je hond ooit alvleesklierontsteking heeft gehad."
       },
       "serving": {
         "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -22610,7 +22666,8 @@
         "fr": "Uniquement de la chair non sucrée, en petites quantités, sans bourre ni coque. Le lait de coco seulement non sucré et sans xylitol ; l’eau de coco seulement en friandise, jamais à la place de l’eau.",
         "es": "Solo pulpa sin azúcar, en pequeñas cantidades y sin la envoltura fibrosa ni la cáscara. Leche de coco, solo sin azúcar y sin xilitol; agua de coco, solo como premio y nunca en lugar del agua.",
         "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua.",
-        "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água."
+        "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água.",
+        "nl": "Alleen ongezoet vruchtvlees, in kleine hoeveelheden, zonder buitenschil of dop. Kokosmelk alleen ongezoet en zonder xylitol; kokoswater alleen als snoepje, nooit in plaats van water."
       },
       "child": {
         "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -22619,7 +22676,8 @@
         "fr": "Les chiens peuvent goûter un tout petit peu de noix de coco ! La coque dure n’est pas pour eux, c’est donc un adulte qui prépare la noix de coco.",
         "es": "¡Los perros pueden probar un poquito de coco! La cáscara dura no es para perros, así que la prepara un adulto.",
         "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto.",
-        "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara."
+        "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara.",
+        "nl": "Honden mogen een beetje kokos proeven! De harde dop is niets voor honden, dus een volwassene maakt het klaar."
       },
       "faq": [
         {
@@ -22630,7 +22688,8 @@
             "fr": "Les chiens peuvent-ils boire de l’eau de coco ou du lait de coco ?",
             "es": "¿Pueden los perros beber agua de coco o leche de coco?",
             "it": "I cani possono bere acqua di cocco o latte di cocco?",
-            "pt": "Os cães podem beber água de coco ou leite de coco?"
+            "pt": "Os cães podem beber água de coco ou leite de coco?",
+            "nl": "Mogen honden kokoswater of kokosmelk drinken?"
           },
           "a": {
             "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -22639,7 +22698,8 @@
             "fr": "L’eau de coco seulement en friandise, jamais à la place de l’eau habituelle. Le lait de coco seulement non sucré et sans édulcorants artificiels comme le xylitol, qui est toxique pour les chiens.",
             "es": "El agua de coco, solo como premio y nunca en lugar del agua normal. La leche de coco, solo sin azúcar y sin edulcorantes artificiales como el xilitol, que es tóxico para los perros.",
             "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani.",
-            "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães."
+            "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães.",
+            "nl": "Kokoswater alleen als snoepje, niet in plaats van gewoon water. Kokosmelk alleen ongezoet en zonder kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden."
           }
         },
         {
@@ -22650,7 +22710,8 @@
             "fr": "Pourquoi pas la coque de la noix de coco ?",
             "es": "¿Por qué no se le puede dar la cáscara del coco?",
             "it": "Perché niente guscio di cocco?",
-            "pt": "Porque é que não se pode dar a casca do coco?"
+            "pt": "Porque é que não se pode dar a casca do coco?",
+            "nl": "Waarom niet de kokosdop?"
           },
           "a": {
             "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -22659,7 +22720,8 @@
             "fr": "La bourre et la coque peuvent causer de graves problèmes digestifs, notamment une occlusion intestinale et des irritations de l’estomac, comme lorsqu’un chien avale des bouts de bois.",
             "es": "La envoltura fibrosa y la cáscara pueden causar problemas digestivos graves, como una obstrucción intestinal o irritación de estómago, igual que si el perro comiera palos o madera.",
             "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno.",
-            "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira."
+            "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira.",
+            "nl": "De vezelige buitenschil en de dop kunnen ernstige spijsverteringsproblemen veroorzaken, zoals een darmverstopping en maagirritatie, net als wanneer een hond stokken of hout eet."
           }
         }
       ],
@@ -24492,7 +24554,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Dates",
@@ -24501,7 +24564,8 @@
         "fr": "Dattes",
         "es": "Dátiles",
         "it": "Datteri",
-        "pt": "Tâmaras"
+        "pt": "Tâmaras",
+        "nl": "Dadels"
       },
       "question": {
         "en": "Can dogs eat dates?",
@@ -24510,7 +24574,8 @@
         "fr": "Les chiens peuvent-ils manger des dattes ?",
         "es": "¿Pueden los perros comer dátiles?",
         "it": "I cani possono mangiare i datteri?",
-        "pt": "Os cães podem comer tâmaras?"
+        "pt": "Os cães podem comer tâmaras?",
+        "nl": "Mogen honden dadels eten?"
       },
       "url_slug": {
         "en": "dates",
@@ -24519,7 +24584,8 @@
         "fr": "dattes",
         "es": "datiles",
         "it": "datteri",
-        "pt": "tamaras"
+        "pt": "tamaras",
+        "nl": "dadels"
       },
       "answer": {
         "en": "Yes, dogs can eat dates in moderation, as an occasional treat. Always remove the pit first, because it is a choking hazard, and give small pieces rather than the whole fruit. Dates are high in sugar and fibre, so too many can upset the stomach.",
@@ -24528,7 +24594,8 @@
         "fr": "Oui, avec modération, comme friandise occasionnelle. Retirez toujours le noyau avant, car il présente un risque d’étouffement, et donnez de petits morceaux plutôt que le fruit entier. Les dattes sont riches en sucre et en fibres : en manger trop peut donc irriter l’estomac.",
         "es": "Sí, con moderación y como premio ocasional. Quítale siempre el hueso antes, porque puede atragantarlo, y dale trocitos en lugar de la fruta entera. Los dátiles tienen mucho azúcar y mucha fibra, así que, si come demasiados, puede sentarle mal al estómago.",
         "it": "Sì, i cani possono mangiare i datteri con moderazione, come premio occasionale. Togli sempre prima il nocciolo, perché può far soffocare il cane, e offri pezzetti piccoli anziché il frutto intero. I datteri sono ricchi di zuccheri e di fibre, quindi se ne mangia troppi il cane può avere mal di stomaco.",
-        "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago."
+        "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago.",
+        "nl": "Ja, met mate: af en toe een dadel als snoepje. Haal eerst altijd de pit eruit, want die vormt een verstikkingsgevaar, en geef kleine stukjes in plaats van de hele vrucht. Dadels bevatten veel suiker en vezels, dus te veel kan de maag van streek maken."
       },
       "why": {
         "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -24537,7 +24604,8 @@
         "fr": "Les dattes ne sont pas aussi toxiques que le raisin, mais elles ne doivent pas devenir une friandise courante. Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé. Les dattes sont riches en sucre et en calories, ce qui fait vite grossir un chien suralimenté, et leur forte teneur en fibres peut causer de la diarrhée ou de la constipation.",
         "es": "Los dátiles no son tan tóxicos como las uvas, pero no deberían ser el premio de todos los días. El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal. Los dátiles tienen mucho azúcar y muchas calorías, así que, si se abusa de ellos, el perro engorda rápido, y su alto contenido en fibra puede provocar diarrea o estreñimiento.",
         "it": "A differenza dell’uva, i datteri non sono altamente tossici, ma non devono diventare il premio di tutti i giorni. Il nocciolo non è tossico, però può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale. I datteri sono ricchi di zuccheri e di calorie, che, se se ne dà troppo, fanno ingrassare in fretta, e l’alto contenuto di fibre può portare a diarrea o stitichezza.",
-        "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre."
+        "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre.",
+        "nl": "Dadels zijn niet zo giftig als druiven, maar ze zijn geen standaardsnoepje. De pit is niet giftig, maar vormt wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als je hond hem doorslikt. Dadels bevatten veel suiker en calorieën, waardoor een hond snel aankomt als hij er te veel van krijgt, en door het hoge vezelgehalte kunnen ze diarree of obstipatie veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -24547,7 +24615,8 @@
         "fr": "Demandez conseil à votre vétérinaire avant de commencer à donner des dattes à votre chien. Une fois que votre chien en a mangé, surveillez l’apparition de vomissements, de diarrhée ou de constipation.",
         "es": "Consulta con tu veterinario antes de empezar a darle dátiles. Si tu perro ya ha comido algunos, vigila si vomita o tiene diarrea o estreñimiento.",
         "it": "Chiedi al veterinario prima di iniziare a dare i datteri al tuo cane. Dopo che ne ha mangiati, controlla se compaiono vomito, diarrea o stitichezza.",
-        "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre."
+        "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre.",
+        "nl": "Vraag je dierenarts om advies voordat je dadels gaat geven. Let na het eten op braken, diarree of obstipatie."
       },
       "serving": {
         "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -24556,7 +24625,8 @@
         "fr": "Sans noyau, coupées en petits morceaux, uniquement en friandise occasionnelle.",
         "es": "Sin hueso, en trocitos y solo como premio ocasional.",
         "it": "Dattero senza nocciolo, tagliato a pezzetti, solo come premio occasionale.",
-        "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional."
+        "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional.",
+        "nl": "Zonder pit, in kleine stukjes, alleen af en toe als snoepje."
       },
       "child": {
         "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -24565,7 +24635,8 @@
         "fr": "Les chiens peuvent parfois manger un petit morceau de datte. Un adulte retire d’abord le noyau dur.",
         "es": "Los perros pueden comer un trocito de dátil de vez en cuando. Antes, un adulto le quita el hueso duro.",
         "it": "Ogni tanto i cani possono avere un pezzetto di dattero. Prima un adulto toglie il nocciolo duro.",
-        "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro."
+        "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro.",
+        "nl": "Honden mogen soms een klein stukje dadel. Een volwassene haalt eerst de harde pit eruit."
       },
       "faq": [
         {
@@ -24576,7 +24647,8 @@
             "fr": "Le noyau de datte est-il toxique pour les chiens ?",
             "es": "¿Es tóxico el hueso del dátil para los perros?",
             "it": "Il nocciolo del dattero è velenoso per i cani?",
-            "pt": "O caroço da tâmara é venenoso para os cães?"
+            "pt": "O caroço da tâmara é venenoso para os cães?",
+            "nl": "Is een dadelpit giftig voor honden?"
           },
           "a": {
             "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -24585,7 +24657,8 @@
             "fr": "Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé : retirez-le donc toujours.",
             "es": "El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal, así que quítalo siempre.",
             "it": "Il nocciolo non è tossico, ma può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale: toglilo sempre.",
-            "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre."
+            "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre.",
+            "nl": "De pit is niet giftig, maar wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als hij wordt doorgeslikt. Haal hem er dus altijd uit."
           }
         },
         {
@@ -24596,7 +24669,8 @@
             "fr": "Pourquoi seulement un peu ?",
             "es": "¿Por qué solo un poco?",
             "it": "Perché solo un po’?",
-            "pt": "Porque só um bocadinho?"
+            "pt": "Porque só um bocadinho?",
+            "nl": "Waarom maar een beetje?"
           },
           "a": {
             "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -24605,7 +24679,8 @@
             "fr": "Les dattes sont riches en calories et en sucre, ce qui fait vite grossir un chien suralimenté, et trop de sucre peut le laisser sans force et très assoiffé.",
             "es": "Los dátiles tienen muchas calorías y mucho azúcar, así que, si se abusa de ellos, el perro engorda rápido, y demasiado azúcar puede dejarlo débil y con mucha sed.",
             "it": "I datteri sono ricchi di calorie e di zuccheri, che, se se ne dà troppo, fanno ingrassare in fretta, e troppo zucchero può lasciare il cane molto debole e assetato.",
-            "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede."
+            "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede.",
+            "nl": "Dadels bevatten veel calorieën en suiker. Daar kan een hond snel van aankomen, en te veel suiker kan een hond zwak en dorstig maken."
           }
         },
         {
@@ -24616,7 +24691,8 @@
             "fr": "Les dattes séchées conviennent-elles ?",
             "es": "¿Y los dátiles secos?",
             "it": "I datteri secchi vanno bene?",
-            "pt": "Posso dar tâmaras secas?"
+            "pt": "Posso dar tâmaras secas?",
+            "nl": "Zijn gedroogde dadels goed?"
           },
           "a": {
             "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -24625,7 +24701,8 @@
             "fr": "Les dattes séchées contiennent encore plus de sucre et de calories, et elles ont toujours leur noyau dur : retirez-le avant de donner un petit morceau.",
             "es": "Los dátiles secos tienen más azúcar y más calorías, y siguen llevando el hueso duro, así que quítaselo antes de darle un trocito.",
             "it": "I datteri secchi contengono più zuccheri e più calorie e hanno comunque il nocciolo duro: toglilo prima di dare un pezzetto.",
-            "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho."
+            "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho.",
+            "nl": "Gedroogde dadels bevatten meer suiker en calorieën en hebben nog steeds de harde pit. Haal die eruit voordat je een klein stukje geeft."
           }
         }
       ],
@@ -24670,7 +24747,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Dried fruit",
@@ -24679,7 +24757,8 @@
         "fr": "Fruits secs",
         "es": "Fruta deshidratada",
         "it": "Frutta essiccata",
-        "pt": "Fruta desidratada"
+        "pt": "Fruta desidratada",
+        "nl": "Gedroogd fruit"
       },
       "question": {
         "en": "Can dogs eat dried fruit?",
@@ -24688,7 +24767,8 @@
         "fr": "Les chiens peuvent-ils manger des fruits secs ?",
         "es": "¿Pueden los perros comer fruta deshidratada?",
         "it": "I cani possono mangiare la frutta essiccata?",
-        "pt": "Os cães podem comer fruta desidratada?"
+        "pt": "Os cães podem comer fruta desidratada?",
+        "nl": "Mogen honden gedroogd fruit eten?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -24697,7 +24777,8 @@
         "fr": "fruits-secs",
         "es": "fruta-deshidratada",
         "it": "frutta-essiccata",
-        "pt": "fruta-desidratada"
+        "pt": "fruta-desidratada",
+        "nl": "gedroogd-fruit"
       },
       "answer": {
         "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
@@ -24706,7 +24787,8 @@
         "fr": "Cela dépend du fruit, et les mélanges sont risqués. Le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont des raisins séchés toxiques pour les chiens, même en toute petite quantité. Les autres fruits secs, comme les figues et les pêches, peuvent être riches en sucre, et les dattes séchées contiennent encore leur noyau.",
         "es": "Depende de la fruta, y las mezclas son peligrosas. Las pasas, las sultanas y las pasas de Corinto son uvas secas, venenosas para los perros incluso en cantidades muy pequeñas. Otras frutas deshidratadas, como los higos y los melocotones, pueden tener mucho azúcar, y los dátiles secos siguen llevando hueso.",
         "it": "Dipende dalla frutta, e i mix sono rischiosi. Uvetta, uva sultanina e uva passa di Corinto sono tutte uva essiccata e sono velenose per i cani, anche in quantità minime. Anche altri tipi di frutta essiccata, come fichi e pesche, possono essere ricchi di zuccheri, e i datteri secchi hanno comunque il nocciolo.",
-        "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço."
+        "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço.",
+        "nl": "Dat hangt af van het fruit, en mengsels zijn riskant. Rozijnen, sultanarozijnen en krenten zijn gedroogde druiven en giftig voor honden, zelfs in heel kleine hoeveelheden. Ander gedroogd fruit, zoals vijgen en perziken, kan veel suiker bevatten, en gedroogde dadels hebben nog steeds een pit."
       },
       "why": {
         "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
@@ -24715,7 +24797,8 @@
         "fr": "Le raisin, le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont tous potentiellement toxiques pour les chiens ; impossible de savoir si un chien sera gravement touché, et certains tombent malades après de très petites quantités, surtout de fruits secs. Les canneberges séchées sont parfois vendues mélangées à des raisins secs. Les figues séchées contiennent beaucoup plus de sucre concentré, car l’eau a été retirée, et les pêches déshydratées contiennent souvent trop de sucre. Comme un mélange de fruits secs peut cacher des raisins secs, qui exigent de consulter un vétérinaire sans attendre, nous retenons le niveau le plus strict et classons les fruits secs comme toxiques dans l’ensemble, au même titre que le raisin sec.",
         "es": "Las uvas, las pasas, las sultanas y las pasas de Corinto son potencialmente venenosas para los perros. Es imposible saber si un perro se verá gravemente afectado, y algunos enferman con cantidades muy pequeñas, sobre todo de las versiones secas. Los arándanos rojos deshidratados a veces vienen mezclados con pasas. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua, y los melocotones deshidratados suelen llevar azúcar de más. Como una mezcla de fruta deshidratada puede esconder pasas, que exigen acudir al veterinario de inmediato, aplicamos el nivel más estricto y clasificamos la fruta deshidratada como tóxica en general, igual que las pasas.",
         "it": "Uva, uvetta, uva sultanina e uva passa di Corinto sono tutte potenzialmente velenose per i cani; è impossibile sapere se un cane ne sarà colpito gravemente, e alcuni cani si ammalano dopo quantità piccolissime, soprattutto di frutta essiccata. A volte i mirtilli rossi essiccati sono venduti mescolati all’uvetta. I fichi secchi contengono zuccheri molto più concentrati perché è stata eliminata l’acqua, e le pesche essiccate spesso contengono troppo zucchero. Poiché un mix di frutta essiccata può nascondere dell’uvetta, e in quel caso serve subito il veterinario, applichiamo il livello più prudente e classifichiamo la frutta essiccata nel complesso come tossica, come l’uvetta.",
-        "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas."
+        "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas.",
+        "nl": "Druiven, rozijnen, sultanarozijnen en krenten zijn allemaal mogelijk giftig voor honden; je kunt niet voorspellen of een hond er ernstig ziek van wordt, en sommige honden worden al ziek van heel kleine hoeveelheden, vooral van gedroogd fruit. Gedroogde veenbessen zitten soms vermengd met rozijnen. Gedroogde vijgen bevatten veel meer geconcentreerde suiker omdat het water is onttrokken, en gedroogde perziken bevatten vaak te veel suiker. Omdat een mengsel van gedroogd fruit rozijnen kan verbergen, waarbij je direct naar de dierenarts moet, volgen we het strengere advies en beoordelen we gedroogd fruit als giftig, net als rozijnen."
       },
       "signs": {
         "en": [
@@ -24773,6 +24856,14 @@
           "Sangue nas fezes",
           "Pouca energia",
           "Falta de vontade de comer"
+        ],
+        "nl": [
+          "Braken",
+          "Diarree",
+          "Pijnlijke buik",
+          "Bloed in de ontlasting",
+          "Weinig energie",
+          "Minder zin in eten"
         ]
       },
       "what_to_do": {
@@ -24782,7 +24873,8 @@
         "fr": "Si votre chien a mangé des raisins secs, des raisins de Smyrne, des raisins de Corinthe ou un mélange de fruits secs qui peut en contenir, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition des signes.",
         "es": "Si tu perro se ha comido pasas, sultanas, pasas de Corinto o una mezcla de fruta deshidratada que podría llevarlas, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
         "it": "Se il tuo cane ha mangiato uvetta, uva sultanina, uva passa di Corinto o un mix di frutta essiccata che potrebbe contenerne, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
-        "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais."
+        "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais.",
+        "nl": "Heeft je hond rozijnen, sultanarozijnen, krenten of een mengsel van gedroogd fruit gegeten waar die tussen kunnen zitten? Neem dan meteen contact op met je dierenarts. Wacht niet af tot je verschijnselen ziet."
       },
       "serving": null,
       "child": {
@@ -24792,7 +24884,8 @@
         "fr": "Les fruits secs, comme les raisins secs, ne sont pas pour les chiens. Garde les mélanges à grignoter loin de lui, et préviens un adulte s’il en mange.",
         "es": "La fruta deshidratada, como las pasas, no es para perros. Mantén lejos de tu perro las mezclas para picar y avisa a un adulto si se come alguna.",
         "it": "La frutta essiccata, come l’uvetta, non è per i cani. Tieni i mix di snack lontani dal tuo cane e, se ne mangia un po’, dillo a un adulto.",
-        "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma."
+        "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma.",
+        "nl": "Gedroogd fruit zoals rozijnen is niets voor honden. Houd het uit de buurt van je hond en vertel het een volwassene als hij er toch van eet."
       },
       "faq": [
         {
@@ -24803,7 +24896,8 @@
             "fr": "Dans quels aliments trouve-t-on du raisin séché ?",
             "es": "¿Qué alimentos esconden uvas secas?",
             "it": "In quali cibi si nasconde l’uva essiccata?",
-            "pt": "Que alimentos escondem uvas secas?"
+            "pt": "Que alimentos escondem uvas secas?",
+            "nl": "In welk eten zitten gedroogde druiven verstopt?"
           },
           "a": {
             "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
@@ -24812,7 +24906,8 @@
             "fr": "Le raisin sec, le raisin de Smyrne et le raisin de Corinthe se cachent souvent dans des aliments comme le gâteau de Noël aux fruits, les brioches de Pâques (hot cross buns) et les cookies, et les canneberges séchées sont parfois mélangées à des raisins secs.",
             "es": "Es habitual encontrar pasas, sultanas y pasas de Corinto en alimentos como el pastel de Navidad, los hot cross buns (panecillos dulces de Semana Santa) y las galletas, y a veces los arándanos rojos deshidratados vienen mezclados con pasas.",
             "it": "Uvetta, uva sultanina e uva passa di Corinto si trovano spesso in cibi come il Christmas cake, gli hot cross bun e i biscotti, e i mirtilli rossi essiccati a volte sono mescolati all’uvetta.",
-            "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas."
+            "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas.",
+            "nl": "Rozijnen, sultanarozijnen en krenten zitten vaak in kerstcake, paasbroodjes en koekjes, en gedroogde veenbessen zijn soms vermengd met rozijnen."
           }
         },
         {
@@ -24823,7 +24918,8 @@
             "fr": "Les autres fruits secs sont-ils sans danger ?",
             "es": "¿Son seguras las demás frutas deshidratadas?",
             "it": "Le altre varietà di frutta essiccata vanno bene?",
-            "pt": "As outras frutas desidratadas são seguras?"
+            "pt": "As outras frutas desidratadas são seguras?",
+            "nl": "Is ander gedroogd fruit veilig?"
           },
           "a": {
             "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
@@ -24832,7 +24928,8 @@
             "fr": "Pas comme friandise habituelle. Les figues séchées et les pêches déshydratées sont riches en sucre, et les dattes séchées contiennent encore un noyau qu’il faut retirer.",
             "es": "No para darlas con frecuencia. Los higos secos y los melocotones deshidratados tienen mucho azúcar, y los dátiles secos siguen llevando un hueso que hay que quitar.",
             "it": "Non come premio abituale. I fichi secchi e le pesche essiccate sono ricchi di zuccheri, e i datteri secchi hanno comunque un nocciolo che va tolto.",
-            "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado."
+            "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado.",
+            "nl": "Niet als vast snoepje. Gedroogde vijgen en gedroogde perziken bevatten veel suiker, en gedroogde dadels hebben nog een pit die eruit moet."
           }
         }
       ],
@@ -25565,7 +25662,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Figs",
@@ -25574,7 +25672,8 @@
         "fr": "Figues",
         "es": "Higos",
         "it": "Fichi",
-        "pt": "Figos"
+        "pt": "Figos",
+        "nl": "Vijgen"
       },
       "question": {
         "en": "Can dogs eat figs?",
@@ -25583,7 +25682,8 @@
         "fr": "Les chiens peuvent-ils manger des figues ?",
         "es": "¿Pueden los perros comer higos?",
         "it": "I cani possono mangiare i fichi?",
-        "pt": "Os cães podem comer figos?"
+        "pt": "Os cães podem comer figos?",
+        "nl": "Mogen honden vijgen eten?"
       },
       "url_slug": {
         "en": "figs",
@@ -25592,7 +25692,8 @@
         "fr": "figues",
         "es": "higos",
         "it": "fichi",
-        "pt": "figos"
+        "pt": "figos",
+        "nl": "vijgen"
       },
       "answer": {
         "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
@@ -25601,7 +25702,8 @@
         "fr": "Oui, les figues fraîches sont en général sans danger pour les chiens si elles sont bien préparées, mais seulement en friandise occasionnelle. Ne proposez que l’intérieur tendre, en petits morceaux, et ne laissez jamais votre chien manger les feuilles, l’écorce ou les branches du figuier. Les figues séchées sont trop sucrées.",
         "es": "Sí, los higos frescos suelen ser seguros para los perros si se preparan bien, pero solo como premio ocasional. Dale únicamente el interior blando, en trocitos, y no dejes nunca que tu perro coma hojas, corteza ni ramas de higuera. Los higos secos tienen demasiado azúcar.",
         "it": "Sì, i fichi freschi di solito sono sicuri per i cani se preparati nel modo giusto, ma solo come premio occasionale. Dai solo l’interno morbido, a pezzetti, e non lasciare mai che il cane mangi foglie, corteccia o rami del fico. I fichi secchi contengono troppo zucchero.",
-        "pt": "Sim, os figos frescos são geralmente seguros para os cães se forem bem preparados, mas só como guloseima ocasional. Dá apenas o interior macio, em pedaços pequenos, e nunca deixes o teu cão comer folhas, casca ou ramos de figueira. Os figos secos têm demasiado açúcar."
+        "pt": "Sim, os figos frescos são geralmente seguros para os cães se forem bem preparados, mas só como guloseima ocasional. Dá apenas o interior macio, em pedaços pequenos, e nunca deixes o teu cão comer folhas, casca ou ramos de figueira. Os figos secos têm demasiado açúcar.",
+        "nl": "Ja, verse vijgen zijn over het algemeen veilig voor honden als ze goed worden klaargemaakt, maar alleen als af en toe een snoepje. Geef alleen het zachte binnenste, in kleine stukjes, en laat je hond nooit bladeren, schors of takken van de vijgenboom eten. Gedroogde vijgen bevatten te veel suiker."
       },
       "why": {
         "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
@@ -25610,7 +25712,8 @@
         "fr": "Les figues ne sont pas considérées comme toxiques, contrairement au raisin et aux cerises, mais le figuier, lui, peut être nocif. Les figues contiennent des vitamines A et C, du calcium, du potassium, du magnésium et du fer. Comme les fruits contiennent du sucre naturel et des fibres, en manger trop peut avoir un effet laxatif et provoquer de la diarrhée. Les figues séchées contiennent un sucre beaucoup plus concentré, car l’eau a été retirée.",
         "es": "No se considera que los higos sean tóxicos, a diferencia de las uvas o las cerezas, pero la higuera sí puede ser perjudicial. Los higos contienen vitaminas A y C, calcio, potasio, magnesio y hierro. Como la fruta contiene azúcar natural y fibra, si se come demasiada puede tener un efecto laxante y causar diarrea. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua.",
         "it": "I fichi in sé non sono considerati tossici come l’uva e le ciliegie, ma la pianta del fico può essere dannosa. I fichi contengono vitamine A e C, calcio, potassio, magnesio e ferro. Poiché la frutta contiene zuccheri naturali e fibre, quantità eccessive possono avere un effetto lassativo e causare diarrea. I fichi secchi contengono zuccheri molto più concentrati perché è stata tolta l’acqua.",
-        "pt": "Os figos em si não são considerados tóxicos, ao contrário das uvas e das cerejas, mas a figueira pode ser prejudicial. Os figos contêm vitaminas A e C, cálcio, potássio, magnésio e ferro. Como a fruta contém açúcar natural e fibra, demasiada pode ter um efeito laxante e causar diarreia. Os figos secos têm o açúcar muito mais concentrado, porque se retirou a água."
+        "pt": "Os figos em si não são considerados tóxicos, ao contrário das uvas e das cerejas, mas a figueira pode ser prejudicial. Os figos contêm vitaminas A e C, cálcio, potássio, magnésio e ferro. Como a fruta contém açúcar natural e fibra, demasiada pode ter um efeito laxante e causar diarreia. Os figos secos têm o açúcar muito mais concentrado, porque se retirou a água.",
+        "nl": "Vijgen zelf gelden niet als giftig, in tegenstelling tot druiven en kersen, maar de vijgenplant kan schadelijk zijn. Vijgen bevatten vitamine A en C, calcium, kalium, magnesium en ijzer. Omdat fruit natuurlijke suiker en vezels bevat, kan te veel een laxerend effect hebben en diarree veroorzaken. Gedroogde vijgen bevatten veel meer geconcentreerde suiker, omdat het water is onttrokken."
       },
       "signs": null,
       "what_to_do": {
@@ -25620,7 +25723,8 @@
         "fr": "Si votre chien mange n’importe quelle partie du figuier, consultez un vétérinaire sans attendre. S’il mange plusieurs figues et que les signes ne s’améliorent pas, ou s’il se met à vomir, contactez votre vétérinaire.",
         "es": "Si tu perro come cualquier parte de la higuera, acude enseguida a un veterinario. Si se come varios higos y los síntomas no mejoran, o empieza a vomitar, contacta con tu veterinario.",
         "it": "Se il tuo cane mangia una qualsiasi parte della pianta del fico, portalo subito dal veterinario. Se il tuo cane mangia diversi fichi e i sintomi non migliorano, o inizia a vomitare, contatta il veterinario.",
-        "pt": "Se o teu cão comer qualquer parte da figueira, procura imediatamente cuidados veterinários. Se o teu cão comer vários figos e os sinais não melhorarem, ou se começar a vomitar, contacta o teu veterinário."
+        "pt": "Se o teu cão comer qualquer parte da figueira, procura imediatamente cuidados veterinários. Se o teu cão comer vários figos e os sinais não melhorarem, ou se começar a vomitar, contacta o teu veterinário.",
+        "nl": "Eet je hond een deel van de vijgenplant, ga dan meteen naar de dierenarts. Eet je hond meerdere vijgen en worden de verschijnselen niet beter, of gaat je hond braken, neem dan contact op met je dierenarts."
       },
       "serving": {
         "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
@@ -25629,7 +25733,8 @@
         "fr": "Uniquement l’intérieur tendre d’une figue fraîche, débarrassé de toute partie de la plante, coupé en petits morceaux. Commencez par un tout petit morceau et surveillez l’apparition de troubles digestifs ou d’une réaction allergique.",
         "es": "Solo el interior blando de un higo fresco, sin ningún resto de la planta y cortado en trocitos. Empieza con un trocito minúsculo y vigila si aparecen molestias de estómago o una reacción alérgica.",
         "it": "Solo l’interno morbido di un fico fresco, senza alcuna parte della pianta, tagliato a pezzetti. Inizia con un pezzetto minuscolo e controlla se compaiono mal di stomaco o una reazione allergica.",
-        "pt": "Só o interior macio de um figo fresco, sem qualquer material da planta, cortado em pedaços pequenos. Começa com um pedacinho minúsculo e fica atento a mal-estar no estômago ou a uma reação alérgica."
+        "pt": "Só o interior macio de um figo fresco, sem qualquer material da planta, cortado em pedaços pequenos. Começa com um pedacinho minúsculo e fica atento a mal-estar no estômago ou a uma reação alérgica.",
+        "nl": "Alleen het zachte binnenste van een verse vijg, zonder stukjes van de plant, in kleine stukjes gesneden. Begin met een heel klein stukje en let op buikklachten of een allergische reactie."
       },
       "child": {
         "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
@@ -25638,7 +25743,8 @@
         "fr": "Les chiens peuvent goûter un tout petit peu de figue bien tendre. Les feuilles et les branches du figuier ne sont pas pour eux : demande d’abord à un adulte.",
         "es": "Los perros pueden probar un poquito de higo blando. Las hojas y las ramas de la higuera no son para perros, así que pregunta antes a un adulto.",
         "it": "I cani possono assaggiare un pezzettino di fico morbido. Foglie e rami del fico non sono per i cani, quindi chiedi prima a un adulto.",
-        "pt": "Os cães podem provar um bocadinho de figo macio. As folhas e os ramos da figueira não são para cães, por isso pergunta primeiro a um adulto."
+        "pt": "Os cães podem provar um bocadinho de figo macio. As folhas e os ramos da figueira não são para cães, por isso pergunta primeiro a um adulto.",
+        "nl": "Honden mogen een klein stukje zachte vijg proeven. Bladeren en takken van de vijgenboom zijn niets voor honden, dus vraag het eerst aan een volwassene."
       },
       "faq": [
         {
@@ -25649,7 +25755,8 @@
             "fr": "Les chiens peuvent-ils manger des figues séchées ?",
             "es": "¿Pueden los perros comer higos secos?",
             "it": "I cani possono mangiare i fichi secchi?",
-            "pt": "Os cães podem comer figos secos?"
+            "pt": "Os cães podem comer figos secos?",
+            "nl": "Mogen honden gedroogde vijgen eten?"
           },
           "a": {
             "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
@@ -25658,7 +25765,8 @@
             "fr": "Les figues séchées ne sont pas une bonne friandise. Elles contiennent un sucre beaucoup plus concentré, car l’eau a été retirée au séchage.",
             "es": "Los higos secos no son un buen premio. Tienen el azúcar mucho más concentrado porque se les quita el agua al secarlos.",
             "it": "I fichi secchi non sono un premio ideale: contengono zuccheri molto più concentrati perché durante l’essiccazione è stata tolta l’acqua.",
-            "pt": "Os figos secos não são uma grande opção de guloseima. Têm muito mais açúcar concentrado, porque se retirou a água durante a secagem."
+            "pt": "Os figos secos não são uma grande opção de guloseima. Têm muito mais açúcar concentrado, porque se retirou a água durante a secagem.",
+            "nl": "Gedroogde vijgen zijn niet echt een goed snoepje. Ze bevatten veel meer geconcentreerde suiker, omdat het water tijdens het drogen is onttrokken."
           }
         },
         {
@@ -25669,7 +25777,8 @@
             "fr": "Que faire si mon chien mâchonne un figuier ?",
             "es": "¿Y si mi perro mordisquea una higuera?",
             "it": "E se il mio cane mastica un albero di fico?",
-            "pt": "E se o meu cão mastigar uma figueira?"
+            "pt": "E se o meu cão mastigar uma figueira?",
+            "nl": "Wat als mijn hond aan een vijgenboom knaagt?"
           },
           "a": {
             "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
@@ -25678,7 +25787,8 @@
             "fr": "Le figuier peut être nocif. Les signes possibles sont des vomissements, une salivation excessive, une irritation de la peau et des éruptions cutanées. Si votre chien mange n’importe quelle partie de la plante, consultez un vétérinaire sans attendre.",
             "es": "La higuera puede ser perjudicial. Los síntomas pueden ser vómitos, babeo excesivo, irritación de la piel y erupciones. Si tu perro come cualquier parte de la planta, acude enseguida a un veterinario.",
             "it": "La pianta del fico può essere dannosa. Possono comparire vomito, salivazione eccessiva, irritazione della pelle ed eruzioni cutanee. Se il tuo cane mangia una qualsiasi parte della pianta, portalo subito dal veterinario.",
-            "pt": "A figueira pode ser prejudicial. Os sinais podem incluir vómitos, salivação excessiva, irritação da pele e erupções cutâneas. Se o teu cão comer qualquer parte da planta, procura imediatamente cuidados veterinários."
+            "pt": "A figueira pode ser prejudicial. Os sinais podem incluir vómitos, salivação excessiva, irritação da pele e erupções cutâneas. Se o teu cão comer qualquer parte da planta, procura imediatamente cuidados veterinários.",
+            "nl": "De vijgenplant kan schadelijk zijn. Mogelijke verschijnselen zijn braken, overmatig kwijlen, huidirritatie en uitslag. Eet je hond een deel van de plant, ga dan meteen naar de dierenarts."
           }
         }
       ],
@@ -25719,7 +25829,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -25728,7 +25839,8 @@
         "fr": "Noyaux de fruits",
         "es": "Huesos y semillas de fruta",
         "it": "Noccioli e semi di frutta",
-        "pt": "Caroços e sementes de fruta"
+        "pt": "Caroços e sementes de fruta",
+        "nl": "Fruitpitten en -stenen"
       },
       "question": {
         "en": "Can dogs eat fruit pits?",
@@ -25737,7 +25849,8 @@
         "fr": "Les chiens peuvent-ils manger des noyaux de fruits ?",
         "es": "¿Pueden los perros comer huesos y semillas de fruta?",
         "it": "I cani possono mangiare i noccioli di frutta?",
-        "pt": "Os cães podem comer caroços de fruta?"
+        "pt": "Os cães podem comer caroços de fruta?",
+        "nl": "Mogen honden fruitpitten eten?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -25746,7 +25859,8 @@
         "fr": "noyaux-de-fruits",
         "es": "huesos-y-semillas-de-fruta",
         "it": "noccioli-e-semi-di-frutta",
-        "pt": "carocos-e-sementes-de-fruta"
+        "pt": "carocos-e-sementes-de-fruta",
+        "nl": "fruitpitten"
       },
       "answer": {
         "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
@@ -25755,7 +25869,8 @@
         "fr": "Non. Ne donnez jamais à un chien de noyaux de cerises, de pêches ou de nectarines. Ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et ils contiennent un peu de cyanure. Retirez toujours noyaux et pépins avant de partager un fruit.",
         "es": "No. Nunca se deben dar a un perro los huesos de frutas como las cerezas, los melocotones o las nectarinas. Pueden romperle los dientes, atragantarlo u obstruirle el intestino, y contienen una pequeña cantidad de cianuro. Quita siempre los huesos y las semillas antes de compartir fruta.",
         "it": "No. I noccioli di frutti come ciliegie, pesche e pesche noci non vanno mai dati ai cani. Possono rompere i denti, far soffocare o ostruire l’intestino, e contengono una piccola quantità di cianuro. Togli sempre noccioli e semi prima di dare un po’ di frutta.",
-        "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta."
+        "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta.",
+        "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt."
       },
       "why": {
         "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -25764,7 +25879,8 @@
         "fr": "Les noyaux durs peuvent casser des dents, provoquer un étouffement ou obstruer l’intestin, et ceux aux bords rugueux peuvent blesser l’œsophage lorsqu’ils sont avalés. Le noyau contient aussi un peu de cyanure. Les intoxications au cyanure dues aux fruits à noyau sont rares, mais un animal peut tomber malade après une infime quantité : un noyau brisé est donc traité comme une urgence.",
         "es": "Los huesos duros pueden fracturar los dientes, causar atragantamiento u obstruir el intestino, y los de bordes ásperos pueden lesionar el esófago al tragarlos. El hueso también contiene una pequeña cantidad de cianuro. La intoxicación por cianuro con frutas de hueso es rara, pero las mascotas pueden enfermar con una cantidad mínima, así que un hueso roto se trata como una urgencia.",
         "it": "I noccioli duri possono fratturare i denti, far soffocare o ostruire l’intestino, e quelli con i bordi ruvidi possono ferire l’esofago mentre vengono ingoiati. Il nocciolo contiene anche una piccola quantità di cianuro. L’intossicazione da cianuro dovuta alla frutta a nocciolo è rara, ma gli animali possono stare male anche dopo una quantità minima, quindi un nocciolo spaccato va trattato come un’urgenza.",
-        "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente."
+        "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente.",
+        "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval."
       },
       "signs": {
         "en": [
@@ -25822,6 +25938,14 @@
           "Dificuldade em defecar",
           "Dor de barriga",
           "Dificuldade em respirar"
+        ],
+        "nl": [
+          "Kokhalzen",
+          "Kwijlen",
+          "Braken",
+          "Moeite met ontlasting",
+          "Buikpijn",
+          "Moeite met ademen"
         ]
       },
       "what_to_do": {
@@ -25831,7 +25955,8 @@
         "fr": "Appelez immédiatement votre vétérinaire si votre chien a brisé un noyau. Si votre chien a avalé un noyau et présente l’un de ces signes, appelez votre vétérinaire.",
         "es": "Llama enseguida a tu veterinario si tu perro muerde y rompe un hueso. Si se ha tragado un hueso y presenta alguno de estos síntomas, llama también a tu veterinario.",
         "it": "Chiama subito il veterinario se il tuo cane spacca un nocciolo. Chiamalo anche se ne ha ingoiato uno e mostra uno di questi segni.",
-        "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário."
+        "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário.",
+        "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts."
       },
       "serving": null,
       "child": {
@@ -25841,7 +25966,8 @@
         "fr": "Les noyaux de fruits ne sont pas pour les chiens. Jette-les à la poubelle, hors de portée de ton chien, et préviens un adulte s’il en mange un.",
         "es": "Los huesos de fruta no son para perros. Tíralos a la basura, donde tu perro no llegue, y avisa a un adulto si se come alguno.",
         "it": "I noccioli della frutta non sono per i cani. Buttali in un cestino che il tuo cane non possa raggiungere e, se ne mangia uno, dillo a un adulto.",
-        "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum."
+        "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum.",
+        "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet."
       },
       "faq": [
         {
@@ -25852,7 +25978,8 @@
             "fr": "Le fruit lui-même est-il sans danger ?",
             "es": "¿Se puede dar la fruta en sí?",
             "it": "La frutta in sé va bene?",
-            "pt": "A fruta em si é segura?"
+            "pt": "A fruta em si é segura?",
+            "nl": "Is het fruit zelf wel goed?"
           },
           "a": {
             "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -25861,7 +25988,8 @@
             "fr": "Cela dépend du fruit ; voir la page de chaque fruit. En général, il faut retirer les graines, les noyaux, les trognons, les peaux et les tiges avant de donner un fruit à un chien.",
             "es": "Depende de la fruta; consulta la página de cada una. En general, hay que quitar las semillas, los huesos, los corazones, las cortezas y los tallos de la planta antes de dar fruta a un perro.",
             "it": "Dipende dalla frutta: guarda la pagina di ciascun frutto. In generale, semi, noccioli, torsoli, bucce e gambi vanno tolti prima di dare la frutta a un cane.",
-            "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão."
+            "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão.",
+            "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft."
           }
         },
         {
@@ -25872,7 +26000,8 @@
             "fr": "Quels fruits ont un noyau ?",
             "es": "¿Qué frutas tienen hueso?",
             "it": "Quali frutti hanno il nocciolo?",
-            "pt": "Que frutas têm caroço?"
+            "pt": "Que frutas têm caroço?",
+            "nl": "Welk fruit heeft pitten?"
           },
           "a": {
             "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -25881,7 +26010,8 @@
             "fr": "Les cerises, les nectarines et les pêches sont des fruits à noyau. Comme celui des cerises, le noyau de la pêche contient du cyanure.",
             "es": "Frutas como las cerezas, las nectarinas y los melocotones se llaman frutas de hueso. Igual que las cerezas, los huesos de melocotón contienen cianuro.",
             "it": "Frutti come ciliegie, pesche noci e pesche si chiamano frutti a nocciolo. Come quello delle ciliegie, il nocciolo della pesca contiene cianuro.",
-            "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto."
+            "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto.",
+            "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide."
           }
         }
       ],
@@ -32457,7 +32587,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Pears",
@@ -32466,7 +32597,8 @@
         "fr": "Poires",
         "es": "Peras",
         "it": "Pere",
-        "pt": "Peras"
+        "pt": "Peras",
+        "nl": "Peren"
       },
       "question": {
         "en": "Can dogs eat pears?",
@@ -32475,7 +32607,8 @@
         "fr": "Les chiens peuvent-ils manger des poires ?",
         "es": "¿Pueden los perros comer peras?",
         "it": "I cani possono mangiare le pere?",
-        "pt": "Os cães podem comer peras?"
+        "pt": "Os cães podem comer peras?",
+        "nl": "Mogen honden peren eten?"
       },
       "url_slug": {
         "en": "pears",
@@ -32484,7 +32617,8 @@
         "fr": "poires",
         "es": "peras",
         "it": "pere",
-        "pt": "peras"
+        "pt": "peras",
+        "nl": "peren"
       },
       "answer": {
         "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
@@ -32493,7 +32627,8 @@
         "fr": "Oui, les chiens peuvent manger des poires avec modération. Retirez le trognon et les pépins, coupez le fruit en petits morceaux et évitez les poires au sirop. Trop de poires peuvent irriter l’estomac d’un chien.",
         "es": "Sí, los perros pueden comer peras con moderación. Quita el corazón y las semillas, corta la fruta en trozos pequeños y evita las peras en conserva con almíbar. Si come demasiadas, puede sentarle mal al estómago.",
         "it": "Sì, i cani possono mangiare le pere con moderazione. Togli il torsolo e i semi, taglia la frutta in pezzetti da un boccone ed evita le pere sciroppate in scatola. Se ne mangia troppe, il cane può avere mal di stomaco.",
-        "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão."
+        "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão.",
+        "nl": "Ja, honden mogen met mate peren eten. Haal het klokhuis en de pitjes eruit, snijd de peer in hapklare stukjes en sla ingeblikte peren in suikersiroop over. Te veel peren kunnen de maag van een hond van streek maken."
       },
       "why": {
         "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -32502,7 +32637,8 @@
         "fr": "Les poires contiennent de la vitamine C, de la vitamine A, du cuivre et des fibres. Les pépins contiennent des traces de cyanure et peuvent aussi provoquer un étouffement : ne partagez donc pas le trognon. Les poires au sirop contiennent trop de sucre, qui peut irriter le système digestif et favoriser l’obésité. Même un aliment sans danger comme la poire peut présenter un risque d’étouffement.",
         "es": "Las peras contienen vitamina C, vitamina A, cobre y fibra. Las semillas contienen trazas de cianuro y también pueden provocar atragantamiento, así que no hay que compartir el corazón. Las peras en conserva tienen demasiado azúcar, que puede irritar el aparato digestivo y llevar a la obesidad. Incluso un alimento seguro como la pera puede suponer un riesgo de atragantamiento.",
         "it": "Le pere contengono vitamina C, vitamina A, rame e fibre. I semi contengono tracce di cianuro e possono anche far soffocare, quindi il torsolo non va condiviso. Le pere in scatola contengono troppo zucchero, che può irritare l’apparato digerente e portare all’obesità. Anche cibi sicuri come le pere possono far soffocare.",
-        "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo."
+        "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo.",
+        "nl": "Peren bevatten vitamine C, vitamine A, koper en vezels. De pitjes bevatten sporen cyanide en kunnen ook verstikking veroorzaken, dus deel het klokhuis niet. Ingeblikte peren bevatten te veel suiker, wat het maag-darmkanaal kan irriteren en tot obesitas kan leiden. Zelfs veilig eten zoals peren kan verstikking veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -32512,7 +32648,8 @@
         "fr": "La première fois que vous donnez de la poire, surveillez l’apparition de troubles digestifs, et contactez votre vétérinaire au moindre doute.",
         "es": "La primera vez que le des pera, vigila si aparecen signos de malestar de estómago y contacta con tu veterinario si tienes alguna duda.",
         "it": "La prima volta che dai le pere, controlla se compaiono segni di mal di stomaco e, se hai dubbi, contatta il veterinario.",
-        "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação."
+        "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação.",
+        "nl": "Let de eerste keer dat je je hond peer geeft op buikklachten en neem contact op met je dierenarts als je je zorgen maakt."
       },
       "serving": {
         "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -32521,7 +32658,8 @@
         "fr": "Poire fraîche et mûre, sans trognon ni pépins, coupée en petits morceaux ; surveillez votre chien pendant qu’il mange. En petite collation occasionnelle.",
         "es": "Pera fresca y madura, sin el corazón ni las semillas y cortada en trozos pequeños; vigila a tu perro mientras come. Solo como premio ocasional.",
         "it": "Pera fresca e matura, senza torsolo né semi, tagliata a pezzetti da un boccone; tieni d’occhio il cane mentre mangia. Come spuntino occasionale.",
-        "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional."
+        "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional.",
+        "nl": "Verse, rijpe peer zonder klokhuis en pitjes, in hapklare stukjes gesneden; houd je hond in de gaten terwijl hij eet. Alleen af en toe als tussendoortje."
       },
       "child": {
         "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -32530,7 +32668,8 @@
         "fr": "Les chiens peuvent manger quelques petits morceaux de poire ! Un adulte retire d’abord le cœur avec les pépins.",
         "es": "¡Los perros pueden comer unos trocitos de pera! Antes, un adulto le quita el corazón con las semillas.",
         "it": "I cani possono avere qualche pezzetto di pera! Prima un adulto toglie il centro con i semi.",
-        "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes."
+        "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes.",
+        "nl": "Honden mogen een paar kleine stukjes peer! Een volwassene haalt eerst het middenstuk met de pitjes eruit."
       },
       "faq": [
         {
@@ -32541,7 +32680,8 @@
             "fr": "Les chiens peuvent-ils manger le trognon de la poire ?",
             "es": "¿Pueden los perros comer el corazón de la pera?",
             "it": "I cani possono mangiare il torsolo della pera?",
-            "pt": "Os cães podem comer o carolo da pera?"
+            "pt": "Os cães podem comer o carolo da pera?",
+            "nl": "Mogen honden het klokhuis van de peer eten?"
           },
           "a": {
             "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -32550,7 +32690,8 @@
             "fr": "Non. Évitez de donner à votre chien les parties de la poire qui contiennent des pépins : ils renferment des traces de cyanure et peuvent provoquer un étouffement.",
             "es": "No. No le des a tu perro la parte de la pera donde están las semillas: contienen trazas de cianuro y pueden provocar atragantamiento.",
             "it": "No. Evita di dare al cane le parti della pera con i semi: i semi contengono tracce di cianuro e possono far soffocare.",
-            "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo."
+            "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo.",
+            "nl": "Nee. Geef je hond geen delen van de peer waar pitjes in zitten; de pitjes bevatten sporen cyanide en kunnen verstikking veroorzaken."
           }
         },
         {
@@ -32561,7 +32702,8 @@
             "fr": "Les poires en conserve conviennent-elles ?",
             "es": "¿Se pueden dar peras en conserva?",
             "it": "Le pere in scatola vanno bene?",
-            "pt": "Posso dar peras em conserva?"
+            "pt": "Posso dar peras em conserva?",
+            "nl": "Zijn ingeblikte peren goed?"
           },
           "a": {
             "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -32570,7 +32712,8 @@
             "fr": "Non. Les poires en conserve contiennent trop de sucre. Évitez les poires au sirop, en boîte ou en bocal, même celles étiquetées « au jus naturel ». Les poires fraîches et mûres sont le meilleur choix.",
             "es": "No. Las peras en conserva tienen demasiado azúcar. Evita las peras en lata o en frasco con almíbar, incluso las que dicen «en su jugo». Las peras frescas y maduras son la mejor opción.",
             "it": "No. Le pere in scatola contengono troppo zucchero. Evita quelle in scatola o in barattolo con lo sciroppo, anche se sull’etichetta c’è scritto «nel loro succo». Le pere fresche e mature sono la scelta migliore.",
-            "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção."
+            "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção.",
+            "nl": "Nee. Ingeblikte peren bevatten te veel suiker. Sla ingeblikte peren of peren op pot in siroop over, ook als er “in eigen sap” op staat. Verse, rijpe peren zijn de beste keuze."
           }
         }
       ],
@@ -32903,7 +33046,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Persimmon",
@@ -32912,7 +33056,8 @@
         "fr": "Kaki",
         "es": "Caqui",
         "it": "Cachi",
-        "pt": "Dióspiro"
+        "pt": "Dióspiro",
+        "nl": "Kaki"
       },
       "question": {
         "en": "Can dogs eat persimmon?",
@@ -32921,7 +33066,8 @@
         "fr": "Les chiens peuvent-ils manger du kaki ?",
         "es": "¿Pueden los perros comer caqui?",
         "it": "I cani possono mangiare i cachi?",
-        "pt": "Os cães podem comer dióspiro?"
+        "pt": "Os cães podem comer dióspiro?",
+        "nl": "Mogen honden kaki eten?"
       },
       "url_slug": {
         "en": "persimmon",
@@ -32930,7 +33076,8 @@
         "fr": "kaki",
         "es": "caqui",
         "it": "cachi",
-        "pt": "diospiro"
+        "pt": "diospiro",
+        "nl": "kaki"
       },
       "answer": {
         "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
@@ -32939,7 +33086,8 @@
         "fr": "Oui, en quantité limitée. La chair du kaki est sans danger pour les chiens, mais retirez d’abord les pépins : ils peuvent provoquer un étouffement et une occlusion intestinale, surtout chez les petits chiens. Le kaki peut avoir un effet laxatif et provoquer de la diarrhée et des vomissements.",
         "es": "Sí, en cantidades limitadas. La pulpa del caqui es segura para los perros, pero quita antes las semillas: pueden causar atragantamiento y una obstrucción intestinal, sobre todo en perros pequeños. El caqui puede ser laxante y provocar diarrea y vómitos.",
         "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito.",
-        "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos."
+        "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos.",
+        "nl": "Ja, in beperkte hoeveelheden. Het vruchtvlees van kaki is veilig voor honden, maar haal eerst de pitten eruit: die kunnen verstikking en een darmverstopping veroorzaken, vooral bij kleine honden. Kaki kan laxerend werken en diarree en braken veroorzaken."
       },
       "why": {
         "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -32948,7 +33096,8 @@
         "fr": "Le fruit du kaki lui-même n’est pas nocif pour les chiens, mais les pépins et les noyaux risquent de provoquer une occlusion intestinale. Les grands chiens peuvent les évacuer sans problème, alors que les petits chiens risquent l’étouffement et l’occlusion intestinale. Les kakis ont un effet laxatif et peuvent causer de la diarrhée, des nausées, des vomissements et des crampes d’estomac.",
         "es": "El caqui en sí no es perjudicial para los perros, pero las semillas y los huesos suponen un riesgo de obstrucción intestinal. Los perros grandes pueden expulsarlos sin problema, mientras que los de razas pequeñas pueden atragantarse y sufrir una obstrucción intestinal. Los caquis tienen un efecto laxante y pueden causar diarrea, náuseas, vómitos y retortijones.",
         "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco.",
-        "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas."
+        "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas.",
+        "nl": "De kaki zelf is niet schadelijk voor honden, maar de pitten en stenen kunnen een darmverstopping veroorzaken. Grotere honden scheiden ze mogelijk zonder problemen weer uit met de ontlasting, terwijl kleinere rassen het risico lopen op verstikking en een darmafsluiting. Kaki werkt laxerend en kan diarree, misselijkheid, braken en maagkrampen veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -32958,7 +33107,8 @@
         "fr": "Si votre chien vomit, a mal au ventre, se déshydrate ou perd l’appétit après avoir mangé du kaki, consultez un vétérinaire sans attendre.",
         "es": "Si tu perro tiene vómitos, dolor de barriga, deshidratación o pérdida de apetito después de comer caqui, acude enseguida a un veterinario.",
         "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario.",
-        "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária."
+        "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária.",
+        "nl": "Heeft je hond na het eten van kaki last van braken, buikpijn, uitdroging of verlies van eetlust, ga dan meteen naar de dierenarts."
       },
       "serving": {
         "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -32967,7 +33117,8 @@
         "fr": "Rincez le fruit, retirez les pépins et coupez-le en petites tranches. Uniquement avec modération.",
         "es": "Lava la fruta, quita las semillas y córtala en rodajas pequeñas, del tamaño de un bocado. Solo con moderación.",
         "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione.",
-        "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação."
+        "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação.",
+        "nl": "Spoel de vrucht af, haal de pitten eruit en snijd hem in kleine, hapklare plakjes. Alleen met mate."
       },
       "child": {
         "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -32976,7 +33127,8 @@
         "fr": "Les chiens peuvent manger un peu de kaki. Un adulte retire les pépins et le coupe en petits morceaux.",
         "es": "Los perros pueden comer un poco de caqui. Un adulto le quita las semillas y lo corta en trocitos.",
         "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli.",
-        "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos."
+        "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos.",
+        "nl": "Honden mogen een beetje kaki. Een volwassene haalt de pitten eruit en snijdt de vrucht in kleine stukjes."
       },
       "faq": [
         {
@@ -32987,7 +33139,8 @@
             "fr": "Les pépins de kaki sont-ils dangereux ?",
             "es": "¿Son peligrosas las semillas del caqui?",
             "it": "I semi del cachi sono pericolosi?",
-            "pt": "As sementes do dióspiro são perigosas?"
+            "pt": "As sementes do dióspiro são perigosas?",
+            "nl": "Zijn kakipitten gevaarlijk?"
           },
           "a": {
             "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -32996,7 +33149,8 @@
             "fr": "Oui, il faut les retirer. Ils peuvent provoquer un étouffement et une occlusion intestinale, et les petits chiens sont les plus exposés.",
             "es": "Sí, hay que quitarlas. Pueden causar atragantamiento y una obstrucción intestinal, y los perros pequeños son los que corren más riesgo.",
             "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio.",
-            "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco."
+            "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco.",
+            "nl": "Ja, die moeten eruit. Ze kunnen verstikking en een darmverstopping veroorzaken, en kleine honden lopen het meeste risico."
           }
         }
       ],
@@ -33872,7 +34026,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Pomegranate",
@@ -33881,7 +34036,8 @@
         "fr": "Grenade",
         "es": "Granada",
         "it": "Melagrana",
-        "pt": "Romã"
+        "pt": "Romã",
+        "nl": "Granaatappel"
       },
       "question": {
         "en": "Can dogs eat pomegranate?",
@@ -33890,7 +34046,8 @@
         "fr": "Les chiens peuvent-ils manger de la grenade ?",
         "es": "¿Pueden los perros comer granada?",
         "it": "I cani possono mangiare la melagrana?",
-        "pt": "Os cães podem comer romã?"
+        "pt": "Os cães podem comer romã?",
+        "nl": "Mogen honden granaatappel eten?"
       },
       "url_slug": {
         "en": "pomegranate",
@@ -33899,7 +34056,8 @@
         "fr": "grenade",
         "es": "granada",
         "it": "melograno",
-        "pt": "roma"
+        "pt": "roma",
+        "nl": "granaatappel"
       },
       "answer": {
         "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
@@ -33908,7 +34066,8 @@
         "fr": "Déconseillée. Les grenades ne sont pas toxiques pour les chiens, mais ce n’est pas pour autant un fruit sans danger : les graines peuvent causer des troubles digestifs et une occlusion, et des morceaux d’écorce ou de tige peuvent provoquer une obstruction. Mieux vaut ne pas donner de grenade fraîche.",
         "es": "No se recomienda. Las granadas no son tóxicas para los perros, pero eso no significa que la fruta sea segura: las semillas pueden causar problemas de estómago y una obstrucción digestiva, y los trozos de corteza y de tallo también pueden provocarla. Es más seguro no darle granada fresca a tu perro.",
         "it": "Non consigliato. Le melagrane non sono tossiche per i cani, ma questo non rende il frutto sicuro: i semi possono causare problemi di stomaco e ostruire l’apparato digerente, e anche pezzi di buccia e di picciolo possono provocare un’ostruzione. È più prudente non dare melagrana fresca.",
-        "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca."
+        "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca.",
+        "nl": "Liever niet. Granaatappels zijn niet giftig voor honden, maar daarmee is de vrucht nog niet veilig: de zaadjes kunnen maagproblemen en een verstopping van het spijsverteringskanaal veroorzaken, en stukjes schil en steel kunnen een afsluiting geven. Het is veiliger om geen verse granaatappel te geven."
       },
       "why": {
         "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -33917,7 +34076,8 @@
         "fr": "Le vétérinaire en chef de l’AKC indique que les grenades ne sont pas toxiques pour les chiens. Les graines, la partie que l’on mange habituellement, peuvent pourtant provoquer des troubles gastro-intestinaux et une occlusion du tube digestif. Des morceaux d’écorce et de tige peuvent causer une obstruction, surtout chez les petits chiens. L’extrait de grenade présent dans certains produits pour chiens est un tout autre sujet que le fruit frais.",
         "es": "El veterinario jefe del AKC explica que las granadas no son tóxicas para los perros. Aun así, las semillas, la parte que suele comer la gente, pueden causar problemas gastrointestinales y una obstrucción digestiva. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños. El extracto de granada que llevan algunos productos para perros no es lo mismo que la fruta fresca.",
         "it": "Il veterinario capo dell’AKC afferma che le melagrane non sono tossiche per i cani. I semi, la parte che di solito si mangia, possono comunque causare disturbi gastrointestinali e un’ostruzione dell’apparato digerente. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli. L’estratto di melagrana presente nei prodotti pensati per i cani è un altro discorso rispetto al frutto fresco.",
-        "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca."
+        "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca.",
+        "nl": "De hoofddierenarts van de AKC zegt dat granaatappels niet giftig zijn voor honden. De zaadjes, het deel dat mensen meestal eten, kunnen toch maag- en darmklachten en een verstopping van het spijsverteringskanaal veroorzaken. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden. Granaatappelextract in producten die voor honden zijn gemaakt is iets anders dan de verse vrucht."
       },
       "signs": {
         "en": [
@@ -33947,6 +34107,10 @@
         "pt": [
           "Diarreia",
           "Vómitos"
+        ],
+        "nl": [
+          "Diarree",
+          "Braken"
         ]
       },
       "what_to_do": {
@@ -33956,7 +34120,8 @@
         "fr": "Si votre chien a mangé des graines de grenade, contactez immédiatement votre vétérinaire.",
         "es": "Si tu perro se ha comido semillas de granada, contacta enseguida con tu veterinario.",
         "it": "Se il tuo cane ha mangiato dei semi di melagrana, contatta subito il veterinario.",
-        "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário."
+        "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário.",
+        "nl": "Heeft je hond granaatappelzaadjes gegeten? Neem dan meteen contact op met je dierenarts."
       },
       "serving": null,
       "child": {
@@ -33966,7 +34131,8 @@
         "fr": "La grenade est un fruit pour les gens. Ses graines et sa peau peuvent donner mal au ventre aux chiens, alors garde-la hors de leur portée.",
         "es": "La granada es una fruta para las personas. Las semillas y la corteza pueden sentarle mal a la barriga de un perro, así que mantenla fuera de su alcance.",
         "it": "La melagrana è un frutto per le persone. I semi e la buccia possono far male alla pancia del cane, quindi tienila fuori dalla sua portata.",
-        "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance."
+        "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance.",
+        "nl": "Granaatappel is fruit voor mensen. De zaadjes en de schil kunnen de buik van een hond van streek maken, dus houd het buiten het bereik van je hond."
       },
       "faq": [
         {
@@ -33977,7 +34143,8 @@
             "fr": "La grenade dans l’alimentation pour chiens, c’est possible ?",
             "es": "¿Puede llevar granada la comida para perros?",
             "it": "La melagrana nel cibo per cani va bene?",
-            "pt": "Pode haver romã na comida para cães?"
+            "pt": "Pode haver romã na comida para cães?",
+            "nl": "Is granaatappel in hondenvoer goed?"
           },
           "a": {
             "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -33986,7 +34153,8 @@
             "fr": "L’extrait de grenade peut avoir des effets bénéfiques pour les chiens. Si vous souhaitez en donner, choisissez des produits conçus spécialement pour les chiens et parlez-en à votre vétérinaire.",
             "es": "El extracto de granada puede tener beneficios para la salud de los perros. Si quieres dárselo, busca productos elaborados específicamente para perros y habla con tu veterinario.",
             "it": "L’estratto di melagrana può far bene alla salute dei cani. Se vuoi darglielo, cerca prodotti fatti apposta per i cani e parlane con il veterinario.",
-            "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário."
+            "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário.",
+            "nl": "Granaatappelextract kan gezondheidsvoordelen hebben voor honden. Wil je het geven, kies dan producten die speciaal voor honden zijn gemaakt en overleg met je dierenarts."
           }
         },
         {
@@ -33997,7 +34165,8 @@
             "fr": "Les chiens peuvent-ils manger la peau de la grenade ?",
             "es": "¿Pueden los perros comer la corteza de la granada?",
             "it": "I cani possono mangiare la buccia della melagrana?",
-            "pt": "Os cães podem comer a casca da romã?"
+            "pt": "Os cães podem comer a casca da romã?",
+            "nl": "Mogen honden de schil van de granaatappel eten?"
           },
           "a": {
             "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -34006,7 +34175,8 @@
             "fr": "Non. Des morceaux d’écorce et de tige peuvent provoquer une obstruction, surtout chez les petits chiens : ne leur en donnez pas.",
             "es": "No. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños, así que no se los des.",
             "it": "No. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli, quindi non darglieli.",
-            "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês."
+            "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês.",
+            "nl": "Nee. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden, dus geef ze niet."
           }
         }
       ],

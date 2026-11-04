@@ -8,7 +8,8 @@
     "fr": "Poires",
     "es": "Peras",
     "it": "Pere",
-    "pt": "Peras"
+    "pt": "Peras",
+    "nl": "Peren"
   },
   "question": {
     "en": "Can dogs eat pears?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des poires ?",
     "es": "¿Pueden los perros comer peras?",
     "it": "I cani possono mangiare le pere?",
-    "pt": "Os cães podem comer peras?"
+    "pt": "Os cães podem comer peras?",
+    "nl": "Mogen honden peren eten?"
   },
   "url_slug": {
     "en": "pears",
@@ -26,7 +28,8 @@
     "fr": "poires",
     "es": "peras",
     "it": "pere",
-    "pt": "peras"
+    "pt": "peras",
+    "nl": "peren"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, les chiens peuvent manger des poires avec modération. Retirez le trognon et les pépins, coupez le fruit en petits morceaux et évitez les poires au sirop. Trop de poires peuvent irriter l’estomac d’un chien.",
     "es": "Sí, los perros pueden comer peras con moderación. Quita el corazón y las semillas, corta la fruta en trozos pequeños y evita las peras en conserva con almíbar. Si come demasiadas, puede sentarle mal al estómago.",
     "it": "Sì, i cani possono mangiare le pere con moderazione. Togli il torsolo e i semi, taglia la frutta in pezzetti da un boccone ed evita le pere sciroppate in scatola. Se ne mangia troppe, il cane può avere mal di stomaco.",
-    "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão."
+    "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão.",
+    "nl": "Ja, honden mogen met mate peren eten. Haal het klokhuis en de pitjes eruit, snijd de peer in hapklare stukjes en sla ingeblikte peren in suikersiroop over. Te veel peren kunnen de maag van een hond van streek maken."
   },
   "why": {
     "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -45,7 +49,8 @@
     "fr": "Les poires contiennent de la vitamine C, de la vitamine A, du cuivre et des fibres. Les pépins contiennent des traces de cyanure et peuvent aussi provoquer un étouffement : ne partagez donc pas le trognon. Les poires au sirop contiennent trop de sucre, qui peut irriter le système digestif et favoriser l’obésité. Même un aliment sans danger comme la poire peut présenter un risque d’étouffement.",
     "es": "Las peras contienen vitamina C, vitamina A, cobre y fibra. Las semillas contienen trazas de cianuro y también pueden provocar atragantamiento, así que no hay que compartir el corazón. Las peras en conserva tienen demasiado azúcar, que puede irritar el aparato digestivo y llevar a la obesidad. Incluso un alimento seguro como la pera puede suponer un riesgo de atragantamiento.",
     "it": "Le pere contengono vitamina C, vitamina A, rame e fibre. I semi contengono tracce di cianuro e possono anche far soffocare, quindi il torsolo non va condiviso. Le pere in scatola contengono troppo zucchero, che può irritare l’apparato digerente e portare all’obesità. Anche cibi sicuri come le pere possono far soffocare.",
-    "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo."
+    "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo.",
+    "nl": "Peren bevatten vitamine C, vitamine A, koper en vezels. De pitjes bevatten sporen cyanide en kunnen ook verstikking veroorzaken, dus deel het klokhuis niet. Ingeblikte peren bevatten te veel suiker, wat het maag-darmkanaal kan irriteren en tot obesitas kan leiden. Zelfs veilig eten zoals peren kan verstikking veroorzaken."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "La première fois que vous donnez de la poire, surveillez l’apparition de troubles digestifs, et contactez votre vétérinaire au moindre doute.",
     "es": "La primera vez que le des pera, vigila si aparecen signos de malestar de estómago y contacta con tu veterinario si tienes alguna duda.",
     "it": "La prima volta che dai le pere, controlla se compaiono segni di mal di stomaco e, se hai dubbi, contatta il veterinario.",
-    "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação."
+    "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação.",
+    "nl": "Let de eerste keer dat je je hond peer geeft op buikklachten en neem contact op met je dierenarts als je je zorgen maakt."
   },
   "serving": {
     "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -64,7 +70,8 @@
     "fr": "Poire fraîche et mûre, sans trognon ni pépins, coupée en petits morceaux ; surveillez votre chien pendant qu’il mange. En petite collation occasionnelle.",
     "es": "Pera fresca y madura, sin el corazón ni las semillas y cortada en trozos pequeños; vigila a tu perro mientras come. Solo como premio ocasional.",
     "it": "Pera fresca e matura, senza torsolo né semi, tagliata a pezzetti da un boccone; tieni d’occhio il cane mentre mangia. Come spuntino occasionale.",
-    "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional."
+    "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional.",
+    "nl": "Verse, rijpe peer zonder klokhuis en pitjes, in hapklare stukjes gesneden; houd je hond in de gaten terwijl hij eet. Alleen af en toe als tussendoortje."
   },
   "child": {
     "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -73,7 +80,8 @@
     "fr": "Les chiens peuvent manger quelques petits morceaux de poire ! Un adulte retire d’abord le cœur avec les pépins.",
     "es": "¡Los perros pueden comer unos trocitos de pera! Antes, un adulto le quita el corazón con las semillas.",
     "it": "I cani possono avere qualche pezzetto di pera! Prima un adulto toglie il centro con i semi.",
-    "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes."
+    "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes.",
+    "nl": "Honden mogen een paar kleine stukjes peer! Een volwassene haalt eerst het middenstuk met de pitjes eruit."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Les chiens peuvent-ils manger le trognon de la poire ?",
         "es": "¿Pueden los perros comer el corazón de la pera?",
         "it": "I cani possono mangiare il torsolo della pera?",
-        "pt": "Os cães podem comer o carolo da pera?"
+        "pt": "Os cães podem comer o carolo da pera?",
+        "nl": "Mogen honden het klokhuis van de peer eten?"
       },
       "a": {
         "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -93,7 +102,8 @@
         "fr": "Non. Évitez de donner à votre chien les parties de la poire qui contiennent des pépins : ils renferment des traces de cyanure et peuvent provoquer un étouffement.",
         "es": "No. No le des a tu perro la parte de la pera donde están las semillas: contienen trazas de cianuro y pueden provocar atragantamiento.",
         "it": "No. Evita di dare al cane le parti della pera con i semi: i semi contengono tracce di cianuro e possono far soffocare.",
-        "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo."
+        "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo.",
+        "nl": "Nee. Geef je hond geen delen van de peer waar pitjes in zitten; de pitjes bevatten sporen cyanide en kunnen verstikking veroorzaken."
       }
     },
     {
@@ -104,7 +114,8 @@
         "fr": "Les poires en conserve conviennent-elles ?",
         "es": "¿Se pueden dar peras en conserva?",
         "it": "Le pere in scatola vanno bene?",
-        "pt": "Posso dar peras em conserva?"
+        "pt": "Posso dar peras em conserva?",
+        "nl": "Zijn ingeblikte peren goed?"
       },
       "a": {
         "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -113,7 +124,8 @@
         "fr": "Non. Les poires en conserve contiennent trop de sucre. Évitez les poires au sirop, en boîte ou en bocal, même celles étiquetées « au jus naturel ». Les poires fraîches et mûres sont le meilleur choix.",
         "es": "No. Las peras en conserva tienen demasiado azúcar. Evita las peras en lata o en frasco con almíbar, incluso las que dicen «en su jugo». Las peras frescas y maduras son la mejor opción.",
         "it": "No. Le pere in scatola contengono troppo zucchero. Evita quelle in scatola o in barattolo con lo sciroppo, anche se sull’etichetta c’è scritto «nel loro succo». Le pere fresche e mature sono la scelta migliore.",
-        "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção."
+        "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção.",
+        "nl": "Nee. Ingeblikte peren bevatten te veel suiker. Sla ingeblikte peren of peren op pot in siroop over, ook als er “in eigen sap” op staat. Verse, rijpe peren zijn de beste keuze."
       }
     }
   ],
@@ -232,6 +244,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f206821363084dc731d0dd9461447af69458bd08afa56bfd8239420ff01b6e80"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7117ee4e830b23c9700e3a6d747a169f0deb6a870e1277818cf2d03937895651"
     }
   }
 }
