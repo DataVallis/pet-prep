@@ -6,7 +6,8 @@ use App\Enums\AdminAlertKind;
 
 /**
  * One admin alert for an external channel (Discord, M5-T19). Carries only
- * operational facts (amounts, levels) — never a pet, family or child.
+ * operational facts (amounts, levels) — never a family or child; the only pet
+ * reference is the internal pet id of `game_loop_pet_error` (David 2026-11-04).
  */
 final readonly class AdminAlert
 {

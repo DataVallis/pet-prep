@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use App\Services\GameLoop\PetLoopGuard;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
@@ -161,7 +162,7 @@ class PetBirthdayService
             } catch (Throwable $e) {
                 // One pet never stops the tick; it is retried a few minutes later.
                 Log::error('PetBirthdayService: birthday check failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
-                report($e);
+                app(PetLoopGuard::class)->failed('birthday', $pet->id, $e); // report() + run count + daily alert
                 $this->setNextCheck($pet->id, $now->addMinutes(self::LOCKED_RECHECK_MINUTES));
             }
         }

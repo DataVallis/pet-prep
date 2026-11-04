@@ -15,6 +15,7 @@ use App\Models\PetCaretaker;
 use App\Models\PetContract;
 use App\Models\PetStatusPeriod;
 use App\Models\User;
+use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Media\PetMediaService;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -164,7 +165,7 @@ class ChallengeCertificateService
             } catch (Throwable $e) {
                 // One pet never stops the tick; it moves to the back and is retried later.
                 Log::error('ChallengeCertificateService: completion failed', ['pet_id' => $pet->id, 'error' => $e->getMessage()]);
-                report($e);
+                app(PetLoopGuard::class)->failed('certificate', $pet->id, $e); // report() + run count + daily alert
                 $this->setNextCheck($pet, $now->addMinutes(self::RETRY_MINUTES));
             }
         }

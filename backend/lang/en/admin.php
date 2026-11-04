@@ -574,6 +574,13 @@ return [
             'body' => 'An (old) reversed transition or a ping-pong loop could not be made with ffmpeg 3 times, so that clip is now generated the normal way (usual price). Check ffmpeg / memory on the server (System health).',
         ],
     ],
+    'game_loop' => [
+        'discord' => [
+            'title' => 'Game loop: :count pet(s) failed (:total this run) — the other pets were processed',
+            'body' => 'The minute tick (`pets:process-decay`) threw for these pets; their step was rolled back and skipped, every other pet was processed. The pets are retried every minute. System health has the error (class, file, trace). At most one post per pet per day.',
+            'pet' => 'Pet #:id',
+        ],
+    ],
     'disk_space' => [
         'discord' => [
             'title' => 'Server disk :percent full',

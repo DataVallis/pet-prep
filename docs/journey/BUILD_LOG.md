@@ -15,6 +15,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** otrok nikoli ne sme videti psa s petimi tačkami; zdaj to ujamemo, preden plačamo posnetek, ne šele potem.
 **Kako povedati:** 👩 »Vsako sliko vašega ljubljenčka pred uporabo pregleda še ena umetna inteligenca — kot lektor.« · 💼 samodejna kontrola kakovosti za ~0,1 % stroška medijev, brez ročnega pregledovanja. · 🛠 »Isti seed + isti prompt + isti input = ista slika; ›Regenerate‹ mora vedno spremeniti vsaj seed. In: preveri still, preden plačaš video iz njega.«
 
+## 2026-11-04 — En pokvarjen kuža ne ustavi več vseh ostalih
+
+**Kaj:** minutna obdelava zdaj vsakega ljubljenčka obdela posebej — če pri enem pride do napake, se razveljavi samo njegov korak, vsi ostali kužki pa normalno lačnijo, žejajo in se jim alarmi pravočasno spustijo; skrbnik dobi eno obvestilo na Discord na kužka na dan.
+**Zakaj je pomembno:** napaka pri enem psu je 4. 11. najverjetneje za eno uro zamrznila alarm pri drugem (»Nujno« pri Suki) — igra mora biti pravična do vsakega otroka, ne glede na to, kaj se zgodi drugje.
+**Kako povedati:** 🛠 »Ena slaba vrstica v bazi ne sme ustaviti igre tisočim drugim: vsak kuža v svoji transakciji, napaka se zabeleži in zanka gre naprej.«
+
 ## 2026-11-04 — »Nujno« pomeni: nekaj je treba narediti zdaj
 
 **Kaj:** David je na pregledu družine pri Suki videl rdeče »Nujno« z razlogom »Kuža že več kot uro nima hrane, vode ali čistoče.«, čeprav je bilo vse počiščeno, nahranjeno in napojeno že uro prej (vse metrike zelene). Semafor je bral shranjeno raven alarma, ki se je spustila šele, ko so bile vse metrike nad 30 %. Zdaj strežnik »Nujno« zaradi alarma pokaže samo, dokler metrika **ta trenutek** kaže 0 % več kot 1 uro; zamujena rutina od prej danes ostane pod »Zamujeno«.
