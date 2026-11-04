@@ -214,7 +214,8 @@ function sqPet(): Pet
     $child = createChildUser(['parent_id' => $parent->id]);
     $type = BreedType::LabradorRetriever;
     $profile = new PetProfileChoice($type, PetOrigin::Bought, LifeStage::Young, [], $type->species(), 'black');
-    $pet = DB::transaction(fn () => app(PairingService::class)->attachChildToPet($family, $child, null, $profile, PetPlan::Challenge)['pet'])->fresh();
+    $plan = $type->isPremium() ? PetPlan::Challenge : PetPlan::Free;
+    $pet = DB::transaction(fn () => app(PairingService::class)->attachChildToPet($family, $child, null, $profile, $plan)['pet'])->fresh();
     $pet->forceFill(['plan' => PetPlan::Challenge, 'challenge_paid_at' => now(), 'challenge_paid_source' => ChallengePaidSource::Purchase])->saveQuietly();
     $pet->giveBirth(now());
     $pet->save();
@@ -438,7 +439,7 @@ function sqItemPet(string $itemKey = 'bed', string $design = 'dog_bed_round_grey
     $path = "{$pet->id}/reference-g1.jpg";
     Storage::disk('pet_media')->put($path, SQ_JPEG.str_repeat("\x00", 64));
     PetMedia::query()->updateOrCreate(['pet_id' => $pet->id, 'kind' => 'image', 'state' => null], ['status' => 'ready', 'storage_path' => $path, 'life_stage' => 'young', 'mime' => 'image/jpeg', 'generation' => 1]);
-    PetItem::create(['pet_id' => $pet->id, 'item_key' => $itemKey, 'kind' => 'durable', 'design' => $design, 'acquired_at' => now()]);
+    PetItem::create(['pet_id' => $pet->id, 'item_key' => $itemKey, 'kind' => 'durable', 'variant' => "dog_{$itemKey}", 'design' => $design, 'quantity_total' => 1, 'quantity_left' => 1, 'acquired_at' => now()]);
 
     return $pet->fresh();
 }
