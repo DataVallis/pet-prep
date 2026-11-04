@@ -928,6 +928,14 @@
     "mute": "Izklopi zvok",
     "unmute": "Vklopi zvok",
     "position": "{{index}} / {{total}}",
+    "items": {
+      "bed": "Na svoji postelji",
+      "bowls": "Je iz svoje sklede",
+      "toy": "Igra se z igračo",
+      "toy_1": "Igra se z igračo 1",
+      "toy_2": "Igra se z igračo 2",
+      "treats": "Poje priboljšek"
+    },
     "states": {
       "idle": "Miruje",
       "sleeping": "Spi",

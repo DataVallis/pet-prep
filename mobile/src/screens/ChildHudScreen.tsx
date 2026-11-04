@@ -768,7 +768,7 @@ export default function ChildHudScreen() {
   const iconSize = compactDock ? 20 : 24;
   // The deploy banner replaces the amber "no connection" one (never both).
   const stale = petQuery.isError && !serverUpdating;
-  const albumAvailable = hasAlbum(pet.media);
+  const albumAvailable = hasAlbum(pet.media, mediaModeOf(view));
   // M5-T06: the set-up screen replaces the old »Kuža se pripravlja…« pill while it shows.
   const mediaPending = isMediaPending(pet.media) && !preparingNow;
   const showAlbum = isAlbumVisible && !locked && albumAvailable;
@@ -1524,6 +1524,8 @@ export default function ChildHudScreen() {
           growth={growth}
           timeZone={view.timezone}
           onGrowthExpired={onGrowthExpired}
+          // M6-W03: picture mode → bought items show their image in the album too.
+          mode={mediaModeOf(view)}
           testID="hud-album"
         />
       )}

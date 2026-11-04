@@ -12,9 +12,19 @@
  * Nothing stored at all and generation `disabled` / `failed` → an empty album (and no
  * HUD button): greyed tiles would promise videos that are not coming. While `pending` /
  * `partial` the greyed tiles stay ("Še ni posnetka" — they are on their way).
+ *
+ * Bought items (M6-W03, David 2026-11-04 — `media.items`, only while owned + ready):
+ * - the »Spi« tile shows the bed (`sceneItemFor(items, 'sleeping', …)`, the same pick as the
+ *   live sleeping scene — they never disagree): its clip (poster = the bed image), in picture
+ *   mode / without a clip its image; also when the sleeping clip itself isn't stored yet;
+ * - after the state tiles one tile per owned item (bed only when no »Spi« tile carries it,
+ *   bowls, toy_1, toy_2, treats) through `itemPick` — clip, else / in picture mode the image;
+ *   an item with nothing usable gets no tile. A failing URL behaves like every album URL
+ *   (placeholder poster, »Poskusi znova« + refetch in the viewer).
  */
 
-import { mediaKey, PET_STATES, type PetMediaInfo, type VideoState } from '@/modules/petMedia/petMedia';
+import { itemPick, sceneItemFor, type ItemPick } from '@/modules/petMedia/itemMedia';
+import { mediaKey, PET_STATES, type ItemMediaKey, type PetMediaInfo, type VideoState } from '@/modules/petMedia/petMedia';
 import type { PetState } from '@/types';
 import { t } from '@/i18n';
 import { strings } from '@/i18n/strings';
@@ -24,10 +34,51 @@ export const ALBUM_STRINGS = strings('pet', 'album', {
   position: (index: number, total: number) => t('pet:album.position', { index, total }),
 });
 
+/** Tile id: the reference photo, a state, or a bought item (M6-W03). */
+export type AlbumItemId = 'photo' | PetState | ItemMediaKey;
+
 export type AlbumItem =
-  | { kind: 'photo'; id: 'photo'; label: string; url: string; key: string }
-  | { kind: 'video'; id: PetState; state: PetState; label: string; url: string; key: string }
+  | { kind: 'photo'; id: AlbumItemId; label: string; url: string; key: string }
+  | {
+      kind: 'video';
+      id: AlbumItemId;
+      /** The state of a state tile; null for an item tile. */
+      state: PetState | null;
+      label: string;
+      url: string;
+      key: string;
+      /** The clip's own first frame (an item's image); undefined = the reference photo. */
+      poster?: string;
+    }
   | { kind: 'missing'; id: PetState; state: PetState; label: string };
+
+/** Album order of the item tiles. */
+export const ALBUM_ITEM_ORDER: readonly ItemMediaKey[] = ['bed', 'bowls', 'toy_1', 'toy_2', 'treats'];
+
+function itemLabel(key: ItemMediaKey, bothToys: boolean): string {
+  const s = ALBUM_STRINGS.items;
+  switch (key) {
+    case 'bed':
+      return s.bed;
+    case 'bowls':
+      return s.bowls;
+    case 'treats':
+      return s.treats;
+    case 'toy_1':
+      return bothToys ? s.toy_1 : s.toy;
+    case 'toy_2':
+      return bothToys ? s.toy_2 : s.toy;
+  }
+}
+
+/** A playable tile from an item pick (clip → video tile with the item image as poster). */
+function pickTile(id: AlbumItemId, state: PetState | null, label: string, pick: ItemPick): AlbumItem | null {
+  if (pick.video !== null) {
+    return { kind: 'video', id, state, label, url: pick.video, key: mediaKey(pick.video), ...(pick.image !== null ? { poster: pick.image } : {}) };
+  }
+  if (pick.image !== null) return { kind: 'photo', id, label, url: pick.image, key: mediaKey(pick.image) };
+  return null;
+}
 
 /** Items that can be opened in the viewer (photo + stored videos). */
 export type PlayableAlbumItem = Exclude<AlbumItem, { kind: 'missing' }>;
@@ -42,7 +93,8 @@ function ordered(states: readonly VideoState[]): PetState[] {
   return PET_STATES.filter((s) => set.has(s));
 }
 
-export function buildAlbumItems(media: PetMediaInfo): AlbumItem[] {
+/** `mode` = the child's »Prikaz« (picture → item tiles show their image); the parent passes nothing. */
+export function buildAlbumItems(media: PetMediaInfo, mode: 'video' | 'picture' = 'video'): AlbumItem[] {
   const items: AlbumItem[] = [];
   if (media.referenceImageUrl) {
     items.push({
@@ -56,7 +108,18 @@ export function buildAlbumItems(media: PetMediaInfo): AlbumItem[] {
 
   const stored = Object.keys(media.videos) as VideoState[];
   const entitled = media.states.length > 0 ? ordered(media.states) : ordered(stored);
+  let bedShown = false;
   for (const state of entitled) {
+    const label = ALBUM_STRINGS.states[state];
+    if (state === 'sleeping') {
+      const bed = sceneItemFor(media.items, 'sleeping', null, mode);
+      const tile = bed === null ? null : pickTile(state, state, label, bed);
+      if (tile !== null) {
+        items.push(tile);
+        bedShown = true;
+        continue;
+      }
+    }
     const url = media.videos[state];
     items.push(
       url
@@ -77,14 +140,22 @@ export function buildAlbumItems(media: PetMediaInfo): AlbumItem[] {
     });
   }
 
+  const bothToys = media.items.toy_1 !== undefined && media.items.toy_2 !== undefined;
+  for (const key of ALBUM_ITEM_ORDER) {
+    if (key === 'bed' && bedShown) continue;
+    const pick = itemPick(media.items[key], mode);
+    const tile = pick === null ? null : pickTile(key, null, itemLabel(key, bothToys), pick);
+    if (tile !== null) items.push(tile);
+  }
+
   const nothingComing = media.status === 'disabled' || media.status === 'failed';
   if (nothingComing && !items.some(isPlayable)) return [];
   return items;
 }
 
 /** The HUD shows the album button only when the album has something to show. */
-export function hasAlbum(media: PetMediaInfo): boolean {
-  return buildAlbumItems(media).length > 0;
+export function hasAlbum(media: PetMediaInfo, mode: 'video' | 'picture' = 'video'): boolean {
+  return buildAlbumItems(media, mode).length > 0;
 }
 
 /**

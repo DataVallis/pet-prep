@@ -22,6 +22,8 @@
  * - Android hardware back: viewer → grid, grid → close (both callers).
  * - The caller pauses its own player (HUD / parent card) while the album is open.
  *
+ * - Bought items (M6-W03, 2026-11-04): »Spi« shows the bed, every owned item has its own tile
+ *   (`album.ts`); an item clip's poster is the item image (its real first frame).
  * - "Kako je kuža rasel" (M5-R04 "Album rasti"): with ≥ 2 growth pictures (`growth`,
  *   fetched by the caller only while the album is open) a horizontal strip above the grid —
  *   stage, age then, family-local date, the current one marked "Zdaj". Tap → the same
@@ -87,6 +89,11 @@ export interface PetAlbumProps {
    * "Kako je muca rasla", "Mucek"). The child's album leaves it out (its text species applies).
    */
   species?: string | null;
+  /**
+   * M6-W03: the child's »Prikaz« (`mediaModeOf(view)`) — picture → the bought items' tiles (and
+   * the bed on »Spi«) show their image instead of their clip. The parent leaves it out (video).
+   */
+  mode?: 'video' | 'picture';
   testID?: string;
 }
 
@@ -355,7 +362,7 @@ function Tile({
       style={({ pressed }) => [styles.tile, sized, pressed && styles.pressed]}
     >
       <TileBackdrop
-        url={isVideo ? posterUrl : item.url}
+        url={isVideo ? (item.poster ?? posterUrl) : item.url}
         kind={item.kind}
         onExpired={onExpired}
         testID={isVideo ? `${testID}-poster` : testID}
@@ -448,13 +455,14 @@ export default function PetAlbum({
   timeZone = null,
   onGrowthExpired,
   species = null,
+  mode = 'video',
   testID = 'pet-album',
 }: PetAlbumProps) {
   const insets = useContext(SafeAreaInsetsContext) ?? ZERO_INSETS;
   // Item labels are translated when built → rebuild on a language change (M1-18).
   const { i18n } = useTranslation();
   const language = i18n.language;
-  const items = useMemo(() => buildAlbumItems(media), [media, language]);
+  const items = useMemo(() => buildAlbumItems(media, mode), [media, mode, language]);
   const playable = useMemo(() => items.filter(isPlayable), [items]);
   const growthItems = useMemo(
     () => (hasGrowthSection(growth) ? growthViewerItems(growth, timeZone, species) : []),
@@ -553,7 +561,7 @@ export default function PetAlbum({
               <AlbumVideo
                 key={`${selected.key}#${attempt}`}
                 url={selected.url}
-                posterUrl={media.referenceImageUrl}
+                posterUrl={selected.poster ?? media.referenceImageUrl}
                 muted={muted}
                 onExpired={onViewerExpired}
                 onRetry={retry}

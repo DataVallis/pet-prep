@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-04 — Kupljene stvari tudi v albumu (M6-W03)
+
+**Kaj:** v albumu »Moj kuža« (in pri staršu v »Posnetkih«) ploščica »Spi« zdaj pokaže ljubljenčka na njegovi postelji, vsaka kupljena stvar pa ima svojo ploščico — prej je album kazal še star posnetek spanja na tleh.
+
 ## 2026-11-04 — Poln disk je ustavil produkcijo; zdaj se to ne more več zgoditi neopazno (D31)
 
 **Kaj:** ponoči (~3.00–4.15) se je disk strežnika (38 GB) napolnil do 100 %, baza se je ustavila in aplikacija je kazala »Ni povezave«. Krivec: 20,5 GB starih slik izdaj — od hitrejšega deploya (D28) vsak deploy prenese novo sliko, stare pa nihče ni brisal. David je ročno počistil (48 %). Zdaj deploy sam obdrži samo trenutno in prejšnjo izdajo (za povrnitev), se ne začne, če ostane manj kot 5 GB prostega, in ob ≥ 80 % pride v Discord eno opozorilo na dan; disk je viden tudi v »Zdravju sistema«.
