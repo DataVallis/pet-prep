@@ -2940,7 +2940,7 @@ test('Chow Chow (M5-R10-92): PDSA minimum 1 hour, FCI 205 height + PDSA 20–30 
   assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task'), []);
   assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), []);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['not_for_small_children', 'independent_experienced_owner', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['not_for_small_children', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets']);
   assert.deepEqual(d.health.map((h) => h.key), ['hip_elbow_dysplasia', 'bloat_gdv', 'entropion', 'skin_fold_infections', 'panosteitis', 'hypothyroidism']);
   assert.equal(d.breeder_checklist.status, 'not_found');
   const json = JSON.stringify(d);

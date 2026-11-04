@@ -59,7 +59,7 @@ describe('M5-R10-92 Chow Chow', () => {
     expect(dog?.search_keywords).toEqual(['chow chow', 'chow', 'chow-chow', 'chowchow', 'čau čau', 'cau cau', 'čau-čau', 'čavčav', 'kitajski levji pes']);
     expect(dog?.suitability).toEqual({
       suits: [],
-      consider: ['not_for_small_children', 'independent_experienced_owner', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'],
+      consider: ['not_for_small_children', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'],
     });
   });
 
@@ -80,7 +80,7 @@ describe('M5-R10-92 Chow Chow', () => {
     expect(screen.queryByTestId(`breed-suitability-${KEY}-suits`)).toBeNull();
     const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
     expect(consider).toHaveTextContent(/ni za dom z majhnimi otroki/);
-    expect(consider).toHaveTextContent(/najbolje z izkušenim lastnikom/);
+    expect(consider).not.toHaveTextContent(/izkušenim lastnikom/);
     expect(consider).toHaveTextContent(/rad ima družbo/);
     expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
     expect(consider).toHaveTextContent(/slabo prenaša vročino/);
@@ -112,7 +112,6 @@ describe('M5-R10-92 Chow Chow', () => {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
       expect(consider).toHaveTextContent(/not for homes with small children/);
-      expect(consider).toHaveTextContent(/best with an experienced owner/);
       expect(consider).toHaveTextContent(/struggles in hot weather/);
       expect(consider).toHaveTextContent(/shorter lifespan/);
       expect(consider).not.toHaveTextContent(/hypoallergenic/i);

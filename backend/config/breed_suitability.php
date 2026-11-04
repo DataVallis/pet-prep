@@ -2321,8 +2321,6 @@ return [
             'consider' => [
                 // S700 "We really wouldn't recommend having a Chow Chow if you have small children"
                 ['tag' => 'not_for_small_children', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.children']],
-                // S700 "They ideally suit experienced owners with a good knowledge of the breed"; S696 "Independent, loyal, yet aloof."
-                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S700', 'S696'], 'refs' => ['chow_chow.behaviour.experienced_owner', 'chow_chow.behaviour.temperament']],
                 // S700 "… may not tolerate being alone."
                 ['tag' => 'needs_company', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.time_alone']],
                 // S700 "Chow Chows are clever and get bored easily, so it's really important that you give them lots of puzzle toys"

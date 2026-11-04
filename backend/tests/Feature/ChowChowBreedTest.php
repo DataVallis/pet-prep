@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | with the PDSA quote (M5-R17), the 60-minute meal / exercise gap warning (PDSA, M5-R16). No care task (no sourced
 | frequency), no heat warning (not flat-faced). Open for David: the senior boundary / senior arrival 90 (0.75 × 10 y, the
 | PDSA band "Under 10 years" — Claude's proposal). Not a flat-faced breed → in marketing; no suits chip; consider
-| not_for_small_children / independent_experienced_owner / needs_company / needs_mental_stimulation / heat_sensitive /
+| not_for_small_children / needs_company / needs_mental_stimulation / heat_sensitive /
 | eyelid_problems / sensitive_skin / shorter_lifespan / sheds / frequent_grooming / chases_small_pets; red portrait.
 */
 
@@ -426,7 +426,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('chow_chow')['search_keywords'], 'sort_order' => 860,
             'suitability' => [
                 'suits' => [],
-                'consider' => ['not_for_small_children', 'independent_experienced_owner', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'],
+                'consider' => ['not_for_small_children', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'],
             ],
         ]);
     });
@@ -508,11 +508,11 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('has no suits chip; consider small children, experienced owner, company, stimulation, heat, eyelids, folds, lifespan, shedding, grooming and prey drive', function () {
+    it('has no suits chip; consider small children, company, stimulation, heat, eyelids, folds, lifespan, shedding, grooming and prey drive', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::ChowChow);
         expect($tags['suits'])->toBe([])
-            ->and($tags['consider'])->toBe(['not_for_small_children', 'independent_experienced_owner', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'])
-            ->and($tags['consider'])->not->toContain('older_children')->not->toContain('experienced_owner')->not->toContain('long_daily_exercise');
+            ->and($tags['consider'])->toBe(['not_for_small_children', 'needs_company', 'needs_mental_stimulation', 'heat_sensitive', 'eyelid_problems', 'sensitive_skin', 'shorter_lifespan', 'sheds', 'frequent_grooming', 'chases_small_pets'])
+            ->and($tags['consider'])->not->toContain('older_children')->not->toContain('experienced_owner')->not->toContain('independent_experienced_owner')->not->toContain('long_daily_exercise');
 
         expect(chcData('chow_chow.exercise.adult.quote'))->toContain('one hour')
             ->and(chcData('chow_chow.behaviour.children.quote'))->toContain('small children')

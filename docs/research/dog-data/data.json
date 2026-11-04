@@ -48000,7 +48000,7 @@
         "source_id": "S700",
         "quote": "They ideally suit experienced owners with a good knowledge of the breed",
         "confidence": "high",
-        "notes": "PDSA (S700) fragment as returned; 'They need consistent positive, reward-based training from a young age.' With the FCI temperament 'Independent' (S696) → independent_experienced_owner (Shiba Inu precedent; not experienced_owner — no source calls the breed powerful)."
+        "notes": "PDSA (S700) fragment as returned; 'They need consistent positive, reward-based training from a young age.' No chip: experienced_owner names a powerful dog and independent_experienced_owner says 'stubborn' (neither sourced for this breed) — open for David."
       },
       "mental_stimulation": {
         "value": "clever, bored easily — puzzle toys",
@@ -71994,18 +71994,6 @@
             "quote": "S700 'We really wouldn't recommend having a Chow Chow if you have small children'"
           },
           {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S700",
-              "S696"
-            ],
-            "refs": [
-              "chow_chow.behaviour.experienced_owner",
-              "chow_chow.behaviour.temperament"
-            ],
-            "quote": "S700 'They ideally suit experienced owners with a good knowledge of the breed'; S696 'Quiet dog, good guard. Independent, loyal, yet aloof.'"
-          },
-          {
             "tag": "needs_company",
             "source_ids": [
               "S700"
@@ -72105,16 +72093,17 @@
           "children": "PDSA: not with small children; adult-only homes or older children (S700) → not_for_small_children.",
           "small_children": "PDSA (S700) advises against.",
           "older_children": "That chip names a small dog (Pomeranian / Chihuahua precedent); PDSA's sentence is an advice against small children → not_for_small_children.",
-          "experienced_owner": "No source calls the breed powerful → independent_experienced_owner (FCI 'Independent', S696).",
+          "experienced_owner": "No source calls the breed powerful (that chip names a powerful dog).",
           "other_pets": "PDSA high prey drive (S700) → chases_small_pets.",
           "often_alone": "PDSA 'may not tolerate being alone' (S700) — the opposite → needs_company.",
           "long_daily_exercise": "60 minutes a day (S700).",
           "brachycephalic_breathing": "Not flat-faced: FCI muzzle 'Moderate in length' (S696); no breathing statement in an A/B source.",
           "short_muzzle_breathing": "No A/B breathing-problem statement (PetMD names the short snout only for overheating → heat_sensitive).",
           "hips_hind_legs": "RKC Breed Watch not reachable — PDSA lists hip / elbow dysplasia, but the chip follows Breed Watch (Rottweiler precedent); open for David.",
-          "hypoallergenic": "Never a tag (runbook)."
+          "hypoallergenic": "Never a tag (runbook).",
+          "independent_experienced_owner": "PDSA 'experienced owners' (S700) + FCI 'Independent' (S696) would fit, but the chip text says 'stubborn' (no source says so) and the key is the Shiba Inu's own (ShibaInuBreedTest) — open for David."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): no suits chip; consider not_for_small_children, independent_experienced_owner, needs_company, needs_mental_stimulation, heat_sensitive, eyelid_problems, sensitive_skin, shorter_lifespan, sheds, frequent_grooming, chases_small_pets"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): no suits chip; consider not_for_small_children, needs_company, needs_mental_stimulation, heat_sensitive, eyelid_problems, sensitive_skin, shorter_lifespan, sheds, frequent_grooming, chases_small_pets"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising this breed type)",

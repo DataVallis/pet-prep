@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "ad3317a53eddc46a9faf0a8b0c186527dfff4eff927111c0a364a8a7132dda08"
+      "sha256": "00df3fbcbdde5554c6cc6948e90ea22c0c65632fdec8d9fa7eb1cf6ed2a8e151"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "2f9d02bb0ac809ec7f98e5d4bf3bd85a0d91e26728089f735d1a135cfbc344ba"
+      "sha256": "adff1b6e5fb8126449166a4fc39748943d26472a29e2c1265f6954c3eeb2c623"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -51828,17 +51828,6 @@
             ],
             "refs": [
               "chow_chow.behaviour.children"
-            ]
-          },
-          {
-            "tag": "independent_experienced_owner",
-            "source_ids": [
-              "S696",
-              "S700"
-            ],
-            "refs": [
-              "chow_chow.behaviour.experienced_owner",
-              "chow_chow.behaviour.temperament"
             ]
           },
           {
