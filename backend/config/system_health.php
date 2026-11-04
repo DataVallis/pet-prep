@@ -66,7 +66,15 @@ return [
     // Page thresholds.
     'heartbeat_stale_minutes' => 5,
     'stuck_ledger_days' => 2,
+    // Disk (D31, incident 2026-11-04: the root disk filled up and took production down).
+    // The page tile turns yellow at disk_alert_percent and red at disk_warn_percent;
+    // `system-health:disk-check` (hourly) posts ONE Discord `disk_space` alert per day
+    // (Europe/Ljubljana) at disk_alert_percent. disk_path = a path on the root disk
+    // (storage/ = the app_storage volume under /var/lib/docker on the same disk).
+    'disk_alert_percent' => (int) env('SYSTEM_HEALTH_DISK_ALERT_PERCENT', 80),
     'disk_warn_percent' => 90,
+    'disk_alert_timezone' => 'Europe/Ljubljana',
+    'disk_path' => env('SYSTEM_HEALTH_DISK_PATH'),
 
     // Queues the workers listen on (compose.production.yaml).
     'queues' => ['auth', 'default', 'broadcasts', 'notifications'],

@@ -14,6 +14,11 @@
 #           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0, CADDY_RUNNING=0,
 #           PHP_BASE_ID / CADDY_BASE_ID (base image ids), BASE_BUILD_FAIL=1,
 #           LABEL_APP / LABEL_WEB (org.petprep.base-id of the pulled :next images, D28).
+#           D31 disk: $PETPREP_ROOT/images.txt = `docker image ls` rows (repo TAB tag TAB
+#           digest TAB id), containers.txt = `docker ps -aq`, container-images.txt =
+#           `docker inspect --format {{.Image}}`; PS_FAIL=1 (`ps -aq` fails).
+#   df      prints DF_AVAIL_KB (default 100 GB) as the free KiB and DF_USED_PCT (default 40);
+#           DF_AVAIL_KB_AFTER = the value from the second call on (after a full builder prune).
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
 #   git     logs the call, then runs the real git (git-mode cases use a real temp repo).
 #   curl    prints CURL_STATUS (default 200).
@@ -76,8 +81,24 @@ case "$args" in
     *"exec -T caddy cat /etc/caddy/Caddyfile"*)
         [ -f "${PETPREP_ROOT}/caddy.running" ] || exit 1
         cat "${PETPREP_ROOT}/caddy.running" ;;
+    # D31 disk: release image retention.
+    "ps -aq")
+        [ "${PS_FAIL:-0}" = "1" ] && exit 1
+        cat "${PETPREP_ROOT}/containers.txt" 2>/dev/null || true ;;
+    "inspect --format {{.Image}} "*) cat "${PETPREP_ROOT}/container-images.txt" 2>/dev/null || true ;;
+    "image ls --no-trunc --format "*) cat "${PETPREP_ROOT}/images.txt" 2>/dev/null || true ;;
+    "info --format "*) echo "/" ;;
 esac
 exit 0
+EOF
+cat > "${SHIMS}/df" <<'EOF'
+#!/usr/bin/env bash
+echo "df $*" >> "$CALL_LOG"
+f="${PETPREP_ROOT}/.df_calls"; n=$(cat "$f" 2>/dev/null || echo 0); n=$((n + 1)); echo "$n" > "$f"
+avail="${DF_AVAIL_KB:-104857600}"
+if [ "$n" -gt 1 ] && [ -n "${DF_AVAIL_KB_AFTER:-}" ]; then avail="$DF_AVAIL_KB_AFTER"; fi
+echo "Filesystem 1024-blocks Used Available Capacity Mounted on"
+echo "/dev/sda1 39845888 20000000 ${avail} ${DF_USED_PCT:-40}% /"
 EOF
 cat > "${SHIMS}/git" <<EOF
 #!/usr/bin/env bash
@@ -438,7 +459,7 @@ check "app left maintenance" called 'artisan up \[code=v2\]'
 check "5 attempts, TLS name then IP site each time" test "$(grep -c '^curl' "$CALL_LOG")" -eq 10
 check "IP-site fallback with Host header" called 'curl .*-H Host: 138.199.172.97 http://127.0.0.1/up'
 check "reports status" out_has "Health check failed with status 502"
-check "no prune after a failed deploy" not_called 'image prune'
+check "no prune after a failed deploy (only the disk preflight's, before the build)" eq "$(grep -c 'image prune' "$CALL_LOG")" 1
 finish
 
 start up_once "artisan up fails once, then succeeds"
@@ -520,7 +541,7 @@ finish
 start git_unknown "git mode: unknown SHA → fails before maintenance"
 new_root git; run_deploy -- deadbeefdeadbeefdeadbeefdeadbeefdeadbeef
 check "exit != 0" rc_nonzero
-check "no docker call" not_called '^docker'
+check "no docker call beyond the disk preflight (no build, no compose)" not_called '^docker .*(compose|buildx)'
 finish
 
 start caddy_changed "Caddyfile changed → validated before migrate, caddy recreated after"
@@ -907,6 +928,103 @@ start ops-lock-free "the lock is free again after a reset"
 new_root dir; run_deploy DEPLOY_LOCK_WAIT=1 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "lock acquired" out_has "Ops lock acquired."
+finish
+
+# ---- D31: disk (release image retention, free-space preflight) --------------------
+write_images() { # rows "repo tag digest id" (space separated) → images.txt (tab separated)
+    : > "$ROOT/images.txt"
+    local row
+    for row in "$@"; do echo "$row" | tr ' ' '\t' >> "$ROOT/images.txt"; done
+}
+DG="sha256:$(printf 'a%.0s' $(seq 1 64))"
+start disk_prune "old release images pruned; :production, :previous and in-use images kept"
+new_root dir
+write_images \
+    "petprep-app production <none> sha256:cur" \
+    "ghcr.io/datavallis/petprep-app <none> ${DG} sha256:cur" \
+    "petprep-app previous <none> sha256:prev" \
+    "ghcr.io/datavallis/petprep-app <none> sha256:p2 sha256:prev" \
+    "ghcr.io/datavallis/petprep-app <none> sha256:o1 sha256:old1" \
+    "ghcr.io/datavallis/petprep-app <none> sha256:o2 sha256:old2" \
+    "petprep-app next <none> sha256:stale" \
+    "ghcr.io/datavallis/petprep-web <none> sha256:w1 sha256:oldweb" \
+    "petprep-web production <none> sha256:curweb" \
+    "ghcr.io/datavallis/petprep-app <none> sha256:k1 sha256:inuse" \
+    "petprep-backend production <none> sha256:sail" \
+    "petprep-website previous <none> sha256:site" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:s1 sha256:siteold" \
+    "postgres 18-alpine <none> sha256:pg" \
+    "<none> <none> <none> sha256:dangling"
+printf 'c1\nc2\n' > "$ROOT/containers.txt"
+printf 'sha256:inuse\nsha256:pg\n' > "$ROOT/container-images.txt"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "old ghcr app image removed by digest ref" called "image rm ghcr.io/datavallis/petprep-app@sha256:o1"
+check "second old app image removed" called "image rm ghcr.io/datavallis/petprep-app@sha256:o2"
+check "old web image removed" called "image rm ghcr.io/datavallis/petprep-web@sha256:w1"
+check "stale :next of a failed deploy removed" called "image rm petprep-app:next"
+check ":production kept (no name of its id removed)" not_called "image rm (petprep-app:production|ghcr.io/datavallis/petprep-app@${DG})"
+check ":previous kept (rollback)" not_called "image rm (petprep-app:previous|ghcr.io/datavallis/petprep-app@sha256:p2)"
+check "web :production kept" not_called "image rm petprep-web:production"
+check "image a container uses kept" not_called "image rm ghcr.io/datavallis/petprep-app@sha256:k1"
+check "other repositories untouched (Sail image, website, postgres)" not_called "image rm (petprep-backend|petprep-website|ghcr.io/datavallis/petprep-website|postgres)"
+check "no volume / system prune" not_called "volume (rm|prune)|system prune"
+check "prune in the preflight BEFORE the build" before "image rm ghcr.io/datavallis/petprep-app@sha256:o1" "build app caddy"
+check "prune again after success (after the health check)" after_last "image rm ghcr.io/datavallis/petprep-app@sha256:o1" "curl "
+check "dangling images + capped build cache pruned" called "builder prune -af --keep-storage 2GB"
+check "full build cache NOT dropped with enough space" not_called "builder prune -af > |builder prune -af \[code"
+check "preflight reports free space" out_has "Disk preflight OK (100 GB free, need 5 GB)."
+finish
+
+start disk_ps_fails "containers cannot be listed → no release image removed (fail safe), deploy goes on"
+new_root dir
+write_images "ghcr.io/datavallis/petprep-app <none> sha256:o1 sha256:old1"
+run_deploy PS_FAIL=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "nothing removed" not_called "image rm "
+check "warns" out_has "cannot list containers"
+finish
+
+start disk_full "too little free space after pruning → refuse before pulling / building, nothing changed"
+new_root dir
+run_deploy DF_AVAIL_KB=2097152 -- --from "$ROOT/incoming" sha-v2
+check "exit != 0" rc_nonzero
+check "clear message" out_has "only 2 GB free on the Docker disk"
+check "whole build cache dropped as a last resort" called "^docker builder prune -af \[code"
+check "no build / pull" not_called "build app caddy|pull "
+check "no maintenance" not_called "artisan down"
+check "code untouched" eq "$(code_on_disk)" v1
+check "sha untouched" sha_is sha-v1
+finish
+
+start disk_full_prebuilt "too little space → the prebuilt images are not pulled either"
+new_root dir
+run_deploy DF_AVAIL_KB=1048576 -- --from "$ROOT/incoming" \
+    --app-image "ghcr.io/datavallis/petprep-app@${DG}" --web-image "ghcr.io/datavallis/petprep-web@${DG}" sha-v2
+check "exit != 0" rc_nonzero
+check "no pull" not_called "pull "
+finish
+
+start disk_recovered "the full build-cache prune frees enough → deploy goes on"
+new_root dir
+run_deploy DF_AVAIL_KB=2097152 DF_AVAIL_KB_AFTER=8388608 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "full build cache dropped" called "^docker builder prune -af \[code"
+check "reports the new free space" out_has "Disk preflight OK (8 GB free, need 5 GB)."
+finish
+
+start disk_check_off "DEPLOY_MIN_FREE_GB=0 → no free-space refusal (prune still runs)"
+new_root dir
+run_deploy DEPLOY_MIN_FREE_GB=0 DF_AVAIL_KB=1024 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "prune still ran" called "builder prune -af --keep-storage 2GB"
+finish
+
+start disk_bad_value "DEPLOY_MIN_FREE_GB not a number → refuse"
+new_root dir
+run_deploy DEPLOY_MIN_FREE_GB=lots -- --from "$ROOT/incoming" sha-v2
+check "exit 2" rc_is 2
+check "no docker call" not_called "^docker "
 finish
 
 echo

@@ -158,6 +158,15 @@ Schedule::command('system-health:prune')
     ->name('prune-system-errors')
     ->description('Delete old resolved / stale rows of the system error log and app error reports older than 30 days');
 
+// Hourly (DEPLOYMENT.md D31, incident 2026-11-04: the root disk hit 100 % and took
+// production down): root disk ≥ system_health.disk_alert_percent (80 %) → ONE Discord
+// `disk_space` alert per day (Europe/Ljubljana), numbers only. Off the hour.
+Schedule::command('system-health:disk-check')
+    ->hourlyAt(11)
+    ->withoutOverlapping(10)
+    ->name('disk-space-check')
+    ->description('Discord alert once per day when the root disk is ≥ 80 % full');
+
 // Every 5 min (M5-T15, David 2026-10-22): queue the AI budget warning check —
 // ≥ 80 % / 100 % of the production and AI Lab daily / monthly caps and a low
 // fal.ai balance → Filament notification (+ e-mail with a real mailer) to the

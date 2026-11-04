@@ -133,6 +133,9 @@ Docker images on the server (M4-05b):
 | `petprep-app:previous` / `petprep-web:previous` | the release before (automatic revert of a failed deploy; manual rollback) |
 | `petprep-app:next` / `petprep-web:next` | built by the last deploy (same image ID as `:production` after a successful deploy) |
 | `petprep-backend:production` | the old Sail runtime image (rollback to the pre-M4-05b compose file) — remove after a stable week |
+| `ghcr.io/datavallis/petprep-{app,web}@sha256:…` | the CI image pulled by a deploy (D28) — same image id as `:next` / `:production` |
+
+**Retention (D31):** every deploy (disk preflight + after success) removes all names of `petprep-app` / `petprep-web` images except the ids of `:production` and `:previous` and images a container uses — so exactly the current and the previous release stay on disk. Older releases: redeploy (GHCR keeps 60 versions).
 
 ---
 
@@ -149,6 +152,7 @@ Every pull request and push to `main` runs `.github/workflows/deploy-production.
    - First step `scripts/ci-deploy-guard.sh`: push runs and every re-run fail (red) unless the run's commit is still the head of `main` on origin — an older commit never overwrites a newer deploy. "Run workflow" (attempt 1) is not checked.
    - Uses `rsync` over SSH to upload the exact commit tree to the staging dir `/opt/petprep/incoming` — **never directly into `repo/`**, because every PHP container bind-mounts `repo/backend` and would run the new code immediately.
    - Logs the server in to ghcr.io with the job's `GITHUB_TOKEN` over ssh stdin (D28; logout in the same command) and executes `/opt/petprep/incoming/scripts/deploy-production.sh --from /opt/petprep/incoming --app-image ghcr.io/datavallis/petprep-app@sha256:… --web-image …@sha256:… <COMMIT_SHA>` on the server (digests from `scripts/ci-image-refs.sh`: this run's image job or the marker of the run that tested the tree), which: checks the env (before any git/docker call) → records the previous release → **pulls exactly those digests as `petprep-app:next` + `petprep-web:next` and logs out (D28; no digests / a failed pull → checks `docker buildx` and builds them from `incoming/` as before)** and smoke-tests them (`php artisan optimize` with the production env) while the old release keeps serving** → chowns the `app_storage` volume to uid 1000 and verifies it is writable as uid 1000 (abort otherwise — the FPM image is non-root) → **asks the new image whether migrations are pending (`migrate:status --pending=3`, D19); none → no maintenance mode at all (workers recreated first, then app; Caddy retries the app for up to 10 s during the swap; reverb and caddy not restarted when their inputs are unchanged)** → otherwise `artisan down` on the old code (as uid 1000) → DB backup → syncs `incoming/` into `repo/` → promotes the images (`:production` → `:previous`, `:next` → `:production`) → validates a changed Caddyfile with the new caddy image (caddy is recreated after the migrations, because its single-file bind mount never sees a replaced file) → migrate → recreates all containers on the new images → waits for PHP-FPM (`php-fpm-ping`) → `queue:restart` → `artisan up` (3 attempts) → verifies `/up` through Caddy (`--resolve <API domain>:443:127.0.0.1` — the API domain comes from the server's `APP_URL`; fallback the raw-IP site on production only; 5 attempts) → prunes dangling images and build cache older than 7 days beyond 5 GB.
+   - **Disk preflight (D31):** before pulling, the script prunes old release images + build cache and stops (nothing changed) when less than `DEPLOY_MIN_FREE_GB` (default 5) GB are free.
    - Pulling takes ~30–60 s (only changed layers). The fallback build on the server took 5 min 24 s on 2026-11-02 (the PHP extensions recompile after each build-cache prune). All of it happens **before** maintenance mode.
    - A failing build or smoke test changes nothing (exit ≠ 0, no maintenance). On failure **before** migrations succeeded the script reverts `repo/` to the previous release (from `releases/previous`) **and the images** (`:previous` → `:production`) and leaves maintenance; on failure **after** migrations it keeps the new release (schema is new), restarts containers, leaves maintenance and fails loudly. Details: comment block in the script, DEPLOYMENT.md D10 / D14.
 
@@ -433,7 +437,7 @@ docker compose -f /opt/petprep/repo/backend/compose.production.yaml exec -T app 
 docker image ls 'petprep-*'
 ```
 
-**Errors without SSH (System health, David 2026-10-19).** Every reported exception and every error-level log line is also stored in the `system_errors` table and shown on **`/admin/system-health`** (superadmin): open errors, failed jobs (retry / forget), queue backlog, stuck routine ledgers, AI media failures, scheduler heartbeat (red after 5 min without a `pets:process-decay` tick) and disk usage. Check it first; the log file above is the fallback (full context). Kill switch: `SYSTEM_HEALTH_CAPTURE=false`.
+**Errors without SSH (System health, David 2026-10-19).** Every reported exception and every error-level log line is also stored in the `system_errors` table and shown on **`/admin/system-health`** (superadmin): open errors, failed jobs (retry / forget), queue backlog, stuck routine ledgers, AI media failures, scheduler heartbeat (red after 5 min without a `pets:process-decay` tick) and disk usage (yellow ≥ 80 %, red ≥ 90 %; D31: at ≥ 80 % `system-health:disk-check` posts one Discord `disk_space` alert per day). Check it first; the log file above is the fallback (full context). Kill switch: `SYSTEM_HEALTH_CAPTURE=false`.
 
 **Breed catalogue cache (M5-R06-01).** Free / paid and the picker catalogue are read from `breed_configs` through a cache (`breed-catalog:v1`, 5 min). Filament edits and the deploy seeder clear it automatically. After a **manual SQL edit** of `breed_configs` clear it yourself, otherwise the old values apply for up to 5 minutes:
 
@@ -524,25 +528,34 @@ The public website is a separate repository, `DataVallis/pet-prep-website`, depl
 - **Logs / restart:** `docker logs -f petprep-website`; `docker compose -f /opt/petprep/website/incoming/deploy/compose.yaml up -d --force-recreate`.
 - **Rollback:** `docker tag petprep-website:previous petprep-website:production` and the restart command above.
 
-## Disk hygiene (David 2026-10-15)
+## Disk hygiene (David 2026-10-15; incident 2026-11-04, D31)
 
 Measured 2026-10-15: 30 GB used on the 38 GB disk — **23.4 GB Docker build cache**, 5.4 GB images (incl. an unused 3 GB `petprep-backend:production` from the Sail era), 0.6 GB journald; the app itself (DB + pet media + backups) < 1 GB.
+**2026-11-04 the disk reached 100 % and production was down ~1 h** (postgres stopped): 20.5 GB of old pulled GHCR release images (`ghcr.io/…/petprep-app@sha256:…` names are never »dangling«, so `docker image prune -f` never removed them) + 4.9 GB build cache (DEPLOYMENT.md D31).
 
-Automatic since then:
-- `scripts/deploy-production.sh`: `docker builder prune -af --keep-storage 2GB` (was "older than 7 days", which never matched with several builds a day), `docker image prune -f`, and a warning when `/` is ≥ 70 % full.
-- Website `deploy/deploy.sh`: same cache cap (1 GB).
-- `compose.production.yaml` (all services) and the website compose: container logs `json-file` 3 × 10 MB.
+Automatic:
+- `scripts/deploy-production.sh` (D31), in the disk preflight AND after a successful deploy: old `petprep-app` / `petprep-web` images removed — **kept: the ids of `:production` and `:previous` (rollback) and every image a container uses**; other repositories (postgres, redis, `petprep-website`, `petprep-backend`) and volumes are never touched; then `docker image prune -f` and `docker builder prune -af --keep-storage 2GB`. A deploy refuses to start (before any pull) when less than `DEPLOY_MIN_FREE_GB` (default 5) GB stay free after that, and warns in its log at ≥ 70 %.
+- **Alert:** `system-health:disk-check` (hourly) → one Discord `disk_space` alert per day at ≥ 80 % (`SYSTEM_HEALTH_DISK_ALERT_PERCENT`); `/admin/system-health` tile »Disk used« yellow ≥ 80 %, red ≥ 90 %.
+- Website `deploy/deploy.sh`: same cache cap (1 GB). Its pulled `petprep-website@sha256:…` images are not pruned yet (open, website repo).
+- `compose.production.yaml` (all services) and the website compose: container logs `json-file` 3 × 10 MB. One-off containers (`run --rm`) leave nothing behind.
 
-One-time on the server (root) — journald cap:
+One-time on the server (root) — journald cap (survives updates of `journald.conf`; idempotent):
 ```bash
-sed -i 's/^#\?SystemMaxUse=.*/SystemMaxUse=200M/' /etc/systemd/journald.conf && systemctl restart systemd-journald
+install -d /etc/systemd/journald.conf.d
+printf '[Journal]\nSystemMaxUse=200M\nSystemKeepFree=2G\n' > /etc/systemd/journald.conf.d/petprep.conf
+systemctl restart systemd-journald
+journalctl --disk-usage            # ≤ 200M
 ```
 
-Manual cleanup if ever needed (safe while the app runs):
+Manual cleanup if ever needed (safe while the app runs; keeps the rollback images):
 ```bash
+df -h /
 docker system df
+docker image ls 'petprep-*'; docker image ls 'ghcr.io/*/petprep-*'
+# old release images = everything the next deploy would prune (it runs the same rule first)
 docker builder prune -af          # build cache
 docker image prune -f             # untagged images
 journalctl --vacuum-size=200M
 ```
+Do **not** use `docker image prune -a` while a release is in `:previous` only (it deletes every image no container runs — the rollback image too) and never `docker system prune --volumes`.
 

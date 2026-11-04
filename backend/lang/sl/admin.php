@@ -441,6 +441,7 @@ return [
             'unchecked_desc' => 'ffmpeg manjka ali ni bilo mogoče meriti — preveri sliko aplikacije',
             'disk' => 'Zasedenost diska',
             'disk_desc' => ':free prostega od :total',
+            'disk_alert' => 'Opozorilo od :percent % (Discord, enkrat na dan)',
             'disk_unknown' => 'Velikost diska ni na voljo',
             'storage' => 'Shramba medijev',
             'storage_local' => 'Lokalni disk',
@@ -561,6 +562,16 @@ return [
         'discord' => [
             'title' => 'Varčni posnetki: :count posnetkov s strežnika ni uspelo — naredi jih fal',
             'body' => '(Starega) obrnjenega prehoda ali zanke naprej-nazaj ffmpeg 3-krat ni mogel narediti, zato se ta posnetek ustvari po običajni poti (običajna cena). Preveri ffmpeg / pomnilnik na strežniku (Zdravje sistema).',
+        ],
+    ],
+    'disk_space' => [
+        'discord' => [
+            'title' => 'Disk strežnika je poln :percent',
+            'body' => 'Korenski disk produkcije je na ali nad :threshold %. Pri 100 % se PostgreSQL in API ustavita (incident 4. 11. 2026). Na strežniku preveri `docker system df`; deploy stare slike izdaj pobriše samodejno (DEPLOYMENT.md D31).',
+            'used' => 'Zasedeno',
+            'free' => 'Prosto',
+            'total' => 'Skupaj',
+            'threshold' => 'Opozorilo pri',
         ],
     ],
     'activity_media' => [
