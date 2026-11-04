@@ -1277,7 +1277,7 @@ flowchart LR
   T & L --> CS["CareScoreService"]
   CS --> PS["Pet: done / expected × 100 − 10 × illnesses"]
   CS --> KS["Child (fair share): min(100, own done / Σ 1/n × 100)<br/>− 10 × illnesses since start"]
-  CS --> TL["Traffic light today:<br/>red = game over · phase 3 · ill today<br/>yellow = > 2 missed · else green"]
+  CS --> TL["Traffic light today:<br/>red = game over · phase 3 now (0 % > 1 h) · ill today<br/>yellow = > 2 missed · else green"]
   PS & KS & TL --> API["GET /api/parent/dashboard (family.children[] / pets[])<br/>GET /api/parent/children/{id}/report (7, 30 or 84 days)"]
 ```
 

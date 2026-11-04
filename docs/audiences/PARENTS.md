@@ -135,7 +135,7 @@ Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo 
 
 ## Kaj vidite vi
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:
-  - 🔴 **rdeča** — pes je danes zbolel, več kot uro je brez hrane, vode ali čistoče (alarm), ali pa ga je "odpeljalo zavetišče";
+  - 🔴 **rdeča** — pes je danes zbolel, je **zdaj** že več kot uro brez hrane, vode ali čistoče (alarm — ko otrok poskrbi, rdeča izgine; zamujeno od prej danes vidite pod »Zamujeno«), ali pa ga je "odpeljalo zavetišče";
   - 🟡 **rumena** — danes so bile zamujene **več kot 2 rutini**;
   - 🟢 **zelena** — vse v redu.
   Pri skupnem psu se vsaka zamujena rutina pokaže pri vseh otrocih, ki skrbijo zanj (nihče se ne skrije za bratom ali sestro). Ob semaforju aplikacija z besedami pove, zakaj je rumen ali rdeč (npr. "Danes so zamujene že 3 rutine.", "Kuža je danes zbolel in je pri veterinarju."). *(v aplikaciji od 4. 10. 2026)*
