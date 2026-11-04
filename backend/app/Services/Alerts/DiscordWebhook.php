@@ -21,7 +21,8 @@ use Throwable;
  *    Retry-After header) and retries, at most MAX_RETRIES times and only when
  *    the wait is ≤ MAX_RETRY_WAIT_SECONDS.
  *  - Never inside a DB transaction (LogicException) — call it from a queued
- *    job (CheckAiBudgetAlerts) or an admin action.
+ *    job (CheckAiBudgetAlerts), an admin action or `system-health:game-loop-check`
+ *    (D34: sent directly so a stalled loop is reported without a queue worker).
  *  - Errors are thrown as DiscordWebhookException with a message that never
  *    contains the webhook URL (the underlying exception — whose message may
  *    contain it — is not chained), so report() and System health stay clean.
