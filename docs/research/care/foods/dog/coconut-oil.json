@@ -9,7 +9,8 @@
     "es": "Aceite de coco",
     "it": "Olio di cocco",
     "pt": "Óleo de coco",
-    "nl": "Kokosolie"
+    "nl": "Kokosolie",
+    "pl": "Olej kokosowy"
   },
   "question": {
     "en": "Can dogs eat coconut oil?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer aceite de coco?",
     "it": "I cani possono mangiare l’olio di cocco?",
     "pt": "Os cães podem comer óleo de coco?",
-    "nl": "Mogen honden kokosolie eten?"
+    "nl": "Mogen honden kokosolie eten?",
+    "pl": "Czy psy mogą jeść olej kokosowy?"
   },
   "url_slug": {
     "en": "coconut-oil",
@@ -29,7 +31,8 @@
     "es": "aceite-de-coco",
     "it": "olio-di-cocco",
     "pt": "oleo-de-coco",
-    "nl": "kokosolie"
+    "nl": "kokosolie",
+    "pl": "olej-kokosowy"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No se recomienda como complemento habitual. Es poco probable que un lametón cause daño, pero el aceite de coco es sobre todo grasa saturada: puede provocar malestar de estómago, heces grasas y diarrea, y, si se da durante mucho tiempo, aumento de peso e incluso pancreatitis. Consúltalo antes con tu veterinario.",
     "it": "Non consigliato come aggiunta abituale. Una piccola leccata difficilmente fa male, ma l’olio di cocco è composto per lo più da grassi saturi: può causare mal di stomaco, feci grasse e diarrea, e se lo si dà a lungo può portare ad aumento di peso e perfino a pancreatite. Parlane prima con il veterinario.",
     "pt": "Não é recomendado como complemento regular. Uma pequena lambidela dificilmente faz mal, mas o óleo de coco é sobretudo gordura saturada: pode causar mal-estar no estômago, fezes gordurosas e diarreia, e, se for dado durante muito tempo, pode levar a aumento de peso e até a pancreatite. Fala primeiro com o teu veterinário.",
-    "nl": "Liever niet als vast onderdeel van het voer. Een likje is waarschijnlijk niet schadelijk, maar kokosolie bestaat vooral uit verzadigd vet: het kan buikklachten, vette ontlasting en diarree veroorzaken, en bij langdurig gebruik kan het leiden tot gewichtstoename en zelfs alvleesklierontsteking. Overleg eerst met je dierenarts."
+    "nl": "Liever niet als vast onderdeel van het voer. Een likje is waarschijnlijk niet schadelijk, maar kokosolie bestaat vooral uit verzadigd vet: het kan buikklachten, vette ontlasting en diarree veroorzaken, en bij langdurig gebruik kan het leiden tot gewichtstoename en zelfs alvleesklierontsteking. Overleg eerst met je dierenarts.",
+    "pl": "Nie zaleca się jako stałego dodatku. Jeśli pies zliże odrobinę, raczej nic się nie stanie, ale olej kokosowy to głównie tłuszcze nasycone: może wywołać rozstrój żołądka, tłuste stolce i biegunkę, a długotrwałe podawanie może prowadzić do przyrostu masy ciała, a nawet zapalenia trzustki. Najpierw porozmawiaj z weterynarzem."
   },
   "why": {
     "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
@@ -50,7 +54,8 @@
     "es": "El aceite de coco está formado sobre todo por grasas saturadas. Si se le da a un perro, puede provocar aumento de peso y molestias digestivas, y, tomado durante mucho tiempo, obesidad y pancreatitis. No hay estudios amplios que demuestren que mejore la salud de los perros. Otro artículo del AKC dice que no se recomienda dárselo a diario y que las cantidades pequeñas y ocasionales son más seguras; seguimos el consejo más estricto y lo clasificamos como no recomendado.",
     "it": "L’olio di cocco è composto per lo più da grassi saturi. Somministrarlo può causare aumento di peso e disturbi digestivi; se l’uso è prolungato, può portare a obesità e scatenare una pancreatite. Non esistono studi approfonditi che dimostrino che faccia bene alla salute dei cani. Un altro articolo dell’AKC sconsiglia di darlo ogni giorno e indica come più sicure quantità piccole e occasionali; noi seguiamo l’indicazione più prudente e lo classifichiamo come non consigliato.",
     "pt": "O óleo de coco é constituído sobretudo por gorduras saturadas. Dar óleo de coco pode levar ao aumento de peso e a problemas digestivos e, se for dado a longo prazo, à obesidade e a pancreatite. Não existem estudos abrangentes que provem que faz bem à saúde dos cães. Outro artigo do AKC diz que não se recomenda dar óleo de coco todos os dias e que quantidades pequenas e ocasionais são mais seguras; seguimos o conselho mais rigoroso e classificamo-lo como não recomendado.",
-    "nl": "Kokosolie bestaat grotendeels uit verzadigde vetten. Het kan leiden tot gewichtstoename en spijsverteringsklachten, en bij langdurig gebruik kan het obesitas veroorzaken en alvleesklierontsteking uitlokken. Er is geen uitgebreid onderzoek dat aantoont dat het gezond is voor honden. Een ander AKC-artikel zegt dat dagelijks geven niet wordt aanbevolen en dat kleine, incidentele hoeveelheden veiliger zijn; wij volgen het strengere advies en beoordelen het als niet aan te raden."
+    "nl": "Kokosolie bestaat grotendeels uit verzadigde vetten. Het kan leiden tot gewichtstoename en spijsverteringsklachten, en bij langdurig gebruik kan het obesitas veroorzaken en alvleesklierontsteking uitlokken. Er is geen uitgebreid onderzoek dat aantoont dat het gezond is voor honden. Een ander AKC-artikel zegt dat dagelijks geven niet wordt aanbevolen en dat kleine, incidentele hoeveelheden veiliger zijn; wij volgen het strengere advies en beoordelen het als niet aan te raden.",
+    "pl": "Olej kokosowy składa się głównie z tłuszczów nasyconych. Podawanie go może prowadzić do przyrostu masy ciała i problemów trawiennych, a długotrwałe karmienie nim może prowadzić do otyłości i wywołać zapalenie trzustki. Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej pomaga zdrowiu psów. Inny artykuł AKC podaje, że codzienne podawanie nie jest zalecane, a małe, okazjonalne ilości są bezpieczniejsze; stosujemy surowszą radę i uznajemy olej kokosowy za niezalecany."
   },
   "signs": {
     "en": [
@@ -92,6 +97,11 @@
       "Buikklachten",
       "Vette ontlasting",
       "Diarree"
+    ],
+    "pl": [
+      "Rozstrój żołądka",
+      "Tłuste stolce",
+      "Biegunka"
     ]
   },
   "what_to_do": {
@@ -102,7 +112,8 @@
     "es": "Si tu perro ha lamido un poco de aceite de coco, es probable que no pase nada grave. Antes de darle aceite de coco para comer o de aplicárselo en la piel, coméntalo con tu veterinario.",
     "it": "Se il tuo cane ha leccato un po’ di olio di cocco, probabilmente non succederà niente di grave. Prima di darglielo da mangiare o di applicarlo sulla pelle, parlane con il veterinario.",
     "pt": "Se o teu cão lambeu um pouco de óleo de coco, provavelmente não vai fazer grande mal. Antes de lhe dares óleo de coco para comer ou de o aplicares na pele, fala com o teu veterinário.",
-    "nl": "Als je hond een beetje kokosolie heeft gelikt, zal dat waarschijnlijk geen kwaad kunnen. Overleg met je dierenarts voordat je kokosolie te eten geeft of op de huid smeert."
+    "nl": "Als je hond een beetje kokosolie heeft gelikt, zal dat waarschijnlijk geen kwaad kunnen. Overleg met je dierenarts voordat je kokosolie te eten geeft of op de huid smeert.",
+    "pl": "Jeśli twój pies zlizał odrobinę oleju kokosowego, raczej nie zaszkodzi mu to znacząco. Zanim zaczniesz dodawać olej kokosowy do jedzenia albo smarować nim skórę psa, omów to z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -113,7 +124,8 @@
     "es": "El aceite de coco es muy graso y puede sentarle mal a la barriga de un perro. Solo un adulto y el veterinario deciden si se le da.",
     "it": "L’olio di cocco è molto grasso e può far male alla pancia del cane. Ne decidono solo un adulto e il veterinario.",
     "pt": "O óleo de coco é muito gordo e pode fazer mal à barriguinha do cão. Quem decide é um adulto, com a ajuda do veterinário.",
-    "nl": "Kokosolie zit vol vet en kan de buik van een hond van streek maken. Alleen een volwassene en de dierenarts beslissen daarover."
+    "nl": "Kokosolie zit vol vet en kan de buik van een hond van streek maken. Alleen een volwassene en de dierenarts beslissen daarover.",
+    "pl": "Olej kokosowy jest bardzo tłusty i może psu rozstroić brzuszek. Decydować o nim mogą tylko dorosły i weterynarz."
   },
   "faq": [
     {
@@ -125,7 +137,8 @@
         "es": "¿Puedo ponerle aceite de coco en la piel a mi perro?",
         "it": "Posso mettere l’olio di cocco sulla pelle del mio cane?",
         "pt": "Posso pôr óleo de coco na pele do meu cão?",
-        "nl": "Mag ik kokosolie op de huid van mijn hond smeren?"
+        "nl": "Mag ik kokosolie op de huid van mijn hond smeren?",
+        "pl": "Czy mogę smarować skórę psa olejem kokosowym?"
       },
       "a": {
         "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
@@ -135,7 +148,8 @@
         "es": "El aceite de coco puede aliviar las zonas irritadas o la piel seca y con picor, pero mancha mucho y puede obstruir los poros. Coméntalo con tu veterinario antes de usarlo.",
         "it": "L’olio di cocco può aiutare a lenire le zone irritate o la pelle secca e pruriginosa, ma unge parecchio e può ostruire i pori. Parlane con il veterinario prima di usarlo.",
         "pt": "O óleo de coco pode ajudar a aliviar zonas irritadas ou a pele seca e com comichão, mas suja muito e pode entupir os poros. Fala com o teu veterinário antes de o usar.",
-        "nl": "Kokosolie kan geïrriteerde plekken of een droge, jeukende huid verzachten, maar het maakt een rommeltje en kan de poriën verstoppen. Overleg met je dierenarts voordat je het gebruikt."
+        "nl": "Kokosolie kan geïrriteerde plekken of een droge, jeukende huid verzachten, maar het maakt een rommeltje en kan de poriën verstoppen. Overleg met je dierenarts voordat je het gebruikt.",
+        "pl": "Olej kokosowy może łagodzić podrażnione miejsca lub suchą, swędzącą skórę, ale brudzi i może zatykać pory. Przed użyciem omów to z weterynarzem."
       }
     },
     {
@@ -147,7 +161,8 @@
         "es": "¿Es bueno el aceite de coco para la salud de los perros?",
         "it": "L’olio di cocco fa bene alla salute dei cani?",
         "pt": "O óleo de coco faz bem à saúde dos cães?",
-        "nl": "Is kokosolie goed voor de gezondheid van honden?"
+        "nl": "Is kokosolie goed voor de gezondheid van honden?",
+        "pl": "Czy olej kokosowy jest dobry dla zdrowia psów?"
       },
       "a": {
         "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
@@ -157,7 +172,8 @@
         "es": "No hay estudios amplios que demuestren que el aceite de coco ayude con seguridad en muchos aspectos de la salud de un perro.",
         "it": "Non esistono studi approfonditi che dimostrino con certezza che l’olio di cocco faccia bene a molti aspetti della salute del cane.",
         "pt": "Não existem estudos abrangentes que provem que o óleo de coco ajuda de certeza em muitos aspetos da saúde de um cão.",
-        "nl": "Er is geen uitgebreid onderzoek dat aantoont dat kokosolie op veel vlakken zeker goed is voor de gezondheid van een hond."
+        "nl": "Er is geen uitgebreid onderzoek dat aantoont dat kokosolie op veel vlakken zeker goed is voor de gezondheid van een hond.",
+        "pl": "Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej kokosowy na pewno pomaga w wielu aspektach zdrowia psa."
       }
     }
   ],
@@ -265,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0d4f3a2d07cc6389972c2487cbc083809b76a25c2a3bbf8ab9f0eb318f94184c"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b8e0dd4a3e9b9a698385005dfdcba9b7f75e7bf5bfad81607e2929df5f6955f1"
     }
   }
 }

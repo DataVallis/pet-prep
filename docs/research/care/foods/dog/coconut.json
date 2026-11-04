@@ -9,7 +9,8 @@
     "es": "Coco",
     "it": "Cocco",
     "pt": "Coco",
-    "nl": "Kokosnoot"
+    "nl": "Kokosnoot",
+    "pl": "Kokos"
   },
   "question": {
     "en": "Can dogs eat coconut?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer coco?",
     "it": "I cani possono mangiare il cocco?",
     "pt": "Os cães podem comer coco?",
-    "nl": "Mogen honden kokosnoot eten?"
+    "nl": "Mogen honden kokosnoot eten?",
+    "pl": "Czy psy mogą jeść kokos?"
   },
   "url_slug": {
     "en": "coconut",
@@ -29,7 +31,8 @@
     "es": "coco",
     "it": "cocco",
     "pt": "coco",
-    "nl": "kokosnoot"
+    "nl": "kokosnoot",
+    "pl": "kokos"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, en pequeñas cantidades. La pulpa de coco sin azúcar es segura para los perros con moderación, pero nunca les des la envoltura fibrosa ni la cáscara. El coco es rico en grasa y contiene aceites que pueden provocar molestias de estómago y diarrea.",
     "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea.",
     "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia.",
-    "nl": "Ja, in kleine hoeveelheden. Ongezoet kokosvlees is met mate veilig voor honden, maar geef nooit de vezelige buitenschil of de harde dop. Kokos bevat veel vet en oliën, die buikklachten en diarree kunnen veroorzaken."
+    "nl": "Ja, in kleine hoeveelheden. Ongezoet kokosvlees is met mate veilig voor honden, maar geef nooit de vezelige buitenschil of de harde dop. Kokos bevat veel vet en oliën, die buikklachten en diarree kunnen veroorzaken.",
+    "pl": "Tak, w małych ilościach. Niesłodzony miąższ kokosa jest dla psów bezpieczny, o ile podajesz go z umiarem, ale nigdy nie dawaj łupiny ani skorupy. Kokos jest bogaty w tłuszcz i zawiera oleje, które mogą wywołać rozstrój żołądka i biegunkę."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -50,7 +54,8 @@
     "es": "En pequeñas cantidades, es poco probable que el coco cause daños graves, pero la pulpa y la leche del coco fresco contienen aceites que pueden provocar molestias de estómago, heces blandas y diarrea. El coco es bastante graso, así que a los perros que no deben seguir una dieta rica en grasa o que tienen sobrepeso es mejor darles otros premios. También es rico en potasio, por lo que hay que tener cuidado con los perros con enfermedad renal. La envoltura fibrosa y la cáscara pueden causar una obstrucción intestinal.",
     "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale.",
     "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal.",
-    "nl": "In kleine hoeveelheden is kokos waarschijnlijk niet ernstig schadelijk, maar het vruchtvlees en de melk van verse kokosnoten bevatten oliën die buikklachten, zachte ontlasting en diarree kunnen geven. Kokos bevat relatief veel vet, dus geef je honden die geen vetrijk voer mogen eten of overgewicht hebben beter een ander snoepje. Het bevat ook veel kalium, dus voorzichtigheid is geboden bij honden met een nierziekte. De vezelige buitenschil en de dop kunnen een darmverstopping veroorzaken."
+    "nl": "In kleine hoeveelheden is kokos waarschijnlijk niet ernstig schadelijk, maar het vruchtvlees en de melk van verse kokosnoten bevatten oliën die buikklachten, zachte ontlasting en diarree kunnen geven. Kokos bevat relatief veel vet, dus geef je honden die geen vetrijk voer mogen eten of overgewicht hebben beter een ander snoepje. Het bevat ook veel kalium, dus voorzichtigheid is geboden bij honden met een nierziekte. De vezelige buitenschil en de dop kunnen een darmverstopping veroorzaken.",
+    "pl": "W małych ilościach kokos raczej nie wyrządzi poważnej szkody, ale miąższ i mleko świeżych kokosów zawierają oleje, które mogą wywołać rozstrój żołądka, luźne stolce i biegunkę. Kokos jest dość tłusty, więc psy, którym nie wolno jeść dużo tłuszczu, oraz psy z nadwagą powinny dostawać inne smakołyki. Zawiera też dużo potasu, dlatego u psów z chorobą nerek trzeba zachować ostrożność. Łupina i skorupa mogą spowodować niedrożność jelit."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Consulta con tu veterinario antes de incluir coco en la dieta de tu perro, sobre todo si ha tenido pancreatitis.",
     "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite.",
     "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite.",
-    "nl": "Vraag je dierenarts om advies voordat je kokos aan het voer van je hond toevoegt, zeker als je hond ooit alvleesklierontsteking heeft gehad."
+    "nl": "Vraag je dierenarts om advies voordat je kokos aan het voer van je hond toevoegt, zeker als je hond ooit alvleesklierontsteking heeft gehad.",
+    "pl": "Zanim dodasz kokos do diety psa, zapytaj weterynarza, zwłaszcza jeśli twój pies miał zapalenie trzustki."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -71,7 +77,8 @@
     "es": "Solo pulpa sin azúcar, en pequeñas cantidades y sin la envoltura fibrosa ni la cáscara. Leche de coco, solo sin azúcar y sin xilitol; agua de coco, solo como premio y nunca en lugar del agua.",
     "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua.",
     "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água.",
-    "nl": "Alleen ongezoet vruchtvlees, in kleine hoeveelheden, zonder buitenschil of dop. Kokosmelk alleen ongezoet en zonder xylitol; kokoswater alleen als snoepje, nooit in plaats van water."
+    "nl": "Alleen ongezoet vruchtvlees, in kleine hoeveelheden, zonder buitenschil of dop. Kokosmelk alleen ongezoet en zonder xylitol; kokoswater alleen als snoepje, nooit in plaats van water.",
+    "pl": "Tylko niesłodzony miąższ, w małych ilościach, bez łupiny i skorupy. Mleko kokosowe tylko niesłodzone i bez ksylitolu; woda kokosowa wyłącznie jako smakołyk, nigdy zamiast wody."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -81,7 +88,8 @@
     "es": "¡Los perros pueden probar un poquito de coco! La cáscara dura no es para perros, así que la prepara un adulto.",
     "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto.",
     "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara.",
-    "nl": "Honden mogen een beetje kokos proeven! De harde dop is niets voor honden, dus een volwassene maakt het klaar."
+    "nl": "Honden mogen een beetje kokos proeven! De harde dop is niets voor honden, dus een volwassene maakt het klaar.",
+    "pl": "Psy mogą spróbować odrobiny kokosa! Twarda skorupa nie jest dla psów, więc przygotowuje go dorosły."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Pueden los perros beber agua de coco o leche de coco?",
         "it": "I cani possono bere acqua di cocco o latte di cocco?",
         "pt": "Os cães podem beber água de coco ou leite de coco?",
-        "nl": "Mogen honden kokoswater of kokosmelk drinken?"
+        "nl": "Mogen honden kokoswater of kokosmelk drinken?",
+        "pl": "Czy psy mogą pić wodę kokosową lub mleko kokosowe?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -103,7 +112,8 @@
         "es": "El agua de coco, solo como premio y nunca en lugar del agua normal. La leche de coco, solo sin azúcar y sin edulcorantes artificiales como el xilitol, que es tóxico para los perros.",
         "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani.",
         "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães.",
-        "nl": "Kokoswater alleen als snoepje, niet in plaats van gewoon water. Kokosmelk alleen ongezoet en zonder kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden."
+        "nl": "Kokoswater alleen als snoepje, niet in plaats van gewoon water. Kokosmelk alleen ongezoet en zonder kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
+        "pl": "Woda kokosowa tylko jako smakołyk, nie zamiast zwykłej wody. Mleko kokosowe tylko niesłodzone i bez sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów."
       }
     },
     {
@@ -115,7 +125,8 @@
         "es": "¿Por qué no se le puede dar la cáscara del coco?",
         "it": "Perché niente guscio di cocco?",
         "pt": "Porque é que não se pode dar a casca do coco?",
-        "nl": "Waarom niet de kokosdop?"
+        "nl": "Waarom niet de kokosdop?",
+        "pl": "Dlaczego nie skorupa kokosa?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -125,7 +136,8 @@
         "es": "La envoltura fibrosa y la cáscara pueden causar problemas digestivos graves, como una obstrucción intestinal o irritación de estómago, igual que si el perro comiera palos o madera.",
         "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno.",
         "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira.",
-        "nl": "De vezelige buitenschil en de dop kunnen ernstige spijsverteringsproblemen veroorzaken, zoals een darmverstopping en maagirritatie, net als wanneer een hond stokken of hout eet."
+        "nl": "De vezelige buitenschil en de dop kunnen ernstige spijsverteringsproblemen veroorzaken, zoals een darmverstopping en maagirritatie, net als wanneer een hond stokken of hout eet.",
+        "pl": "Łupina i skorupa mogą powodować poważne problemy trawienne, w tym niedrożność jelit i podrażnienie żołądka, podobnie jak zjadanie patyków czy drewna."
       }
     }
   ],
@@ -250,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8e8afd978a390d2b83e78274a8b233b5253c3917f8fc5f827108aea55cfe4844"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c9dcc1aaf73043c8b7f3e80ab69e11dafa31f206687d183351acf98d8ebba72a"
     }
   }
 }

@@ -9,7 +9,8 @@
     "es": "Fruta deshidratada",
     "it": "Frutta essiccata",
     "pt": "Fruta desidratada",
-    "nl": "Gedroogd fruit"
+    "nl": "Gedroogd fruit",
+    "pl": "Suszone owoce"
   },
   "question": {
     "en": "Can cats eat dried fruit?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer fruta deshidratada?",
     "it": "I gatti possono mangiare la frutta essiccata?",
     "pt": "Os gatos podem comer fruta desidratada?",
-    "nl": "Mogen katten gedroogd fruit eten?"
+    "nl": "Mogen katten gedroogd fruit eten?",
+    "pl": "Czy koty mogą jeść suszone owoce?"
   },
   "url_slug": {
     "en": "dried-fruit",
@@ -29,7 +31,8 @@
     "es": "fruta-deshidratada",
     "it": "frutta-essiccata",
     "pt": "fruta-desidratada",
-    "nl": "gedroogd-fruit"
+    "nl": "gedroogd-fruit",
+    "pl": "suszone-owoce"
   },
   "level": "toxic",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No, mantén la fruta deshidratada fuera del alcance de tu gato. Las pasas, las sultanas y las pasas de Corinto son muy tóxicas: las pasas y las de Corinto pueden causar insuficiencia renal en gatos, y el azúcar no es saludable para ellos. Cuidado con los mince pies y los pasteles: si tu gato come alguno, llama al veterinario.",
     "it": "No, tieni la frutta essiccata lontana dai gatti. Uvetta, uva sultanina e uva passa di Corinto sono molto tossiche per gli animali domestici; uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e per loro anche lo zucchero non è salutare. Attenzione anche a torte e mince pie: se il tuo gatto ne mangia, chiama il veterinario.",
     "pt": "Não, mantém a fruta desidratada longe dos gatos. Passas, sultanas e passas de Corinto são muito tóxicas para os animais de estimação, passas e passas de Corinto podem causar insuficiência renal nos gatos e o açúcar não lhes faz bem. Cuidado também com bolos e mince pies, e liga ao teu veterinário se o teu gato comer algum.",
-    "nl": "Nee, houd gedroogd fruit uit de buurt van je kat. Rozijnen, sultanarozijnen en krenten zijn zeer giftig voor huisdieren. Rozijnen en krenten kunnen bij katten nierfalen veroorzaken en suiker is ongezond voor katten. Pas ook op voor cake en kerstgebakjes met rozijnen en bel je dierenarts als je kat daar iets van heeft gegeten."
+    "nl": "Nee, houd gedroogd fruit uit de buurt van je kat. Rozijnen, sultanarozijnen en krenten zijn zeer giftig voor huisdieren. Rozijnen en krenten kunnen bij katten nierfalen veroorzaken en suiker is ongezond voor katten. Pas ook op voor cake en kerstgebakjes met rozijnen en bel je dierenarts als je kat daar iets van heeft gegeten.",
+    "pl": "Nie, trzymaj suszone owoce z dala od kotów. Rodzynki, sułtanki i korynki są wysoce toksyczne dla zwierząt domowych, rodzynki i korynki mogą wywołać u kotów niewydolność nerek, a cukier jest dla kotów niezdrowy. Uważaj też na ciasta i słodkie wypieki z bakaliami, a jeśli kot cokolwiek zje, zadzwoń do weterynarza."
   },
   "why": {
     "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
@@ -50,7 +54,8 @@
     "es": "Cats Protection incluye las uvas, las pasas y las pasas de Corinto entre los alimentos humanos tóxicos para los gatos: pueden causarles insuficiencia renal, y los gatos con enfermedad renal crónica quizá corran más riesgo. PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Cats Protection añade que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. La intoxicación por uvas y pasas en gatos es poco frecuente y se conoce poco, y no hemos encontrado ninguna fuente sobre gatos que diga que alguna fruta deshidratada sea segura, así que aplicamos el nivel más estricto.",
     "it": "Cats Protection include uva, uvetta e uva passa di Corinto tra i cibi umani tossici per i gatti e afferma che possono causare insufficienza renale; i gatti con malattia renale cronica potrebbero essere più a rischio. PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Cats Protection precisa inoltre che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. L’intossicazione da uva e uvetta nei gatti è rara e poco conosciuta, e non abbiamo trovato alcuna fonte sui gatti che consideri sicuro un qualsiasi tipo di frutta essiccata, quindi applichiamo il livello più prudente.",
     "pt": "A Cats Protection inclui as uvas, as passas e as passas de Corinto entre os alimentos humanos tóxicos para os gatos e diz que podem causar insuficiência renal nos gatos, sendo possível que os gatos com doença renal crónica corram mais risco. A PDSA avisa que as mince pies e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. A Cats Protection diz também que o açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles. A intoxicação por uvas e passas nos gatos é rara e pouco conhecida, e não encontrámos nenhuma fonte sobre gatos que diga que alguma fruta desidratada é segura, por isso seguimos o nível mais rigoroso.",
-    "nl": "Cats Protection noemt druiven, rozijnen en krenten onder het menselijk voedsel dat giftig is voor katten en zegt dat ze nierfalen kunnen veroorzaken; katten met een chronische nierziekte lopen mogelijk een groter risico. De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Cats Protection zegt ook dat suiker niet giftig is voor katten, maar wel ongezond. Vergiftiging door druiven en rozijnen komt bij katten zelden voor en wordt niet goed begrepen. We vonden geen enkele bron over katten die zegt dat gedroogd fruit veilig is, dus volgen we het strengere advies."
+    "nl": "Cats Protection noemt druiven, rozijnen en krenten onder het menselijk voedsel dat giftig is voor katten en zegt dat ze nierfalen kunnen veroorzaken; katten met een chronische nierziekte lopen mogelijk een groter risico. De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Cats Protection zegt ook dat suiker niet giftig is voor katten, maar wel ongezond. Vergiftiging door druiven en rozijnen komt bij katten zelden voor en wordt niet goed begrepen. We vonden geen enkele bron over katten die zegt dat gedroogd fruit veilig is, dus volgen we het strengere advies.",
+    "pl": "Cats Protection wymienia winogrona, rodzynki i korynki wśród ludzkich produktów toksycznych dla kotów i podaje, że mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. PDSA ostrzega, że mince pies (angielskie babeczki z bakaliowym nadzieniem) i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Cats Protection dodaje też, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Zatrucie winogronami i rodzynkami u kotów jest rzadkie i słabo poznane, a nie znaleźliśmy żadnego źródła o kotach, które uznawałoby suszone owoce za bezpieczne, dlatego przyjmujemy surowszą ocenę."
   },
   "signs": {
     "en": [
@@ -76,6 +81,9 @@
     ],
     "nl": [
       "Braken, meestal binnen een dag"
+    ],
+    "pl": [
+      "Wymioty, zwykle w ciągu doby"
     ]
   },
   "what_to_do": {
@@ -86,7 +94,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (qué fruta deshidratada o qué alimento la lleva), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (quale frutta essiccata o quale alimento che la contiene), in che quantità e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato comeu (que fruta desidratada ou que alimento a contém), a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (welk gedroogd fruit of welk gerecht met gedroogd fruit), hoeveel en wanneer, en bewaar de verpakking. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (welk gedroogd fruit of welk gerecht met gedroogd fruit), hoeveel en wanneer, en bewaar de verpakking. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken.",
+    "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł kot (jakie suszone owoce albo jaki produkt je zawierający), ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -97,7 +106,8 @@
     "es": "La fruta deshidratada, como las pasas, no es una golosina para gatos. Mantenla lejos de tu gato y avisa a un adulto si se come alguna.",
     "it": "La frutta essiccata, come l’uvetta, non è uno spuntino per i gatti. Tienila lontana dal tuo micio e, se ne mangia un po’, dillo a un adulto.",
     "pt": "A fruta desidratada, como as passas, não é um petisco para gatos. Mantém-na longe do gatinho e avisa um adulto se ele comer alguma.",
-    "nl": "Gedroogd fruit zoals rozijnen is geen traktatie voor katten. Houd het uit de buurt van je kat en vertel het aan een volwassene als ze er toch iets van eet."
+    "nl": "Gedroogd fruit zoals rozijnen is geen traktatie voor katten. Houd het uit de buurt van je kat en vertel het aan een volwassene als ze er toch iets van eet.",
+    "pl": "Suszone owoce, takie jak rodzynki, to nie przekąska dla kota. Trzymaj je z dala od kotka i powiedz dorosłemu, jeśli zje trochę."
   },
   "faq": [
     {
@@ -109,7 +119,8 @@
         "es": "¿Y los mince pies y el pastel de Navidad?",
         "it": "E i mince pie e il Christmas cake?",
         "pt": "E as mince pies e o bolo de Natal?",
-        "nl": "En kerstgebakjes en kerstcake?"
+        "nl": "En kerstgebakjes en kerstcake?",
+        "pl": "A co z mince pies i świątecznym ciastem owocowym?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -119,7 +130,8 @@
         "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
         "it": "PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
         "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
-        "nl": "De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten het bereik van je kat."
+        "nl": "De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten het bereik van je kat.",
+        "pl": "PDSA ostrzega, że mince pies i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Trzymaj je poza zasięgiem kota."
       }
     },
     {
@@ -131,7 +143,8 @@
         "es": "¿El azúcar también es un problema?",
         "it": "Anche lo zucchero è un problema?",
         "pt": "O açúcar também é um problema?",
-        "nl": "Is de suiker ook een probleem?"
+        "nl": "Is de suiker ook een probleem?",
+        "pl": "Czy cukier też jest problemem?"
       },
       "a": {
         "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
@@ -141,7 +154,8 @@
         "es": "Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. Los gatos no perciben el sabor dulce, el azúcar no les aporta ningún valor nutricional y, si se les dan alimentos azucarados con regularidad, podrían tener problemas de salud.",
         "it": "Cats Protection afferma che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. I gatti non sentono il sapore dolce, lo zucchero non ha per loro alcun valore nutrizionale e, se gli dai spesso cibi zuccherati, potrebbero avere problemi di salute.",
         "pt": "A Cats Protection diz que o açúcar não é tóxico para os gatos, mas continua a não lhes fazer bem. Os gatos não sentem o sabor doce, o açúcar não tem valor nutricional para eles e dar-lhes alimentos açucarados com regularidade pode levar a problemas de saúde.",
-        "nl": "Cats Protection zegt dat suiker niet giftig is voor katten, maar wel ongezond. Katten kunnen geen zoet proeven en suiker heeft voor hen geen voedingswaarde. Geef je ze regelmatig suikerrijk eten, dan kan dat tot gezondheidsproblemen leiden."
+        "nl": "Cats Protection zegt dat suiker niet giftig is voor katten, maar wel ongezond. Katten kunnen geen zoet proeven en suiker heeft voor hen geen voedingswaarde. Geef je ze regelmatig suikerrijk eten, dan kan dat tot gezondheidsproblemen leiden.",
+        "pl": "Cats Protection podaje, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Koty nie czują słodkiego smaku, cukier nie ma dla nich wartości odżywczej, a regularne podawanie słodkich produktów może prowadzić do problemów zdrowotnych."
       }
     }
   ],
@@ -249,6 +263,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0b4a66c732e8475cd69bf76808fe14fb99c2c1adbe66d20c6cadcac6fe58a219"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2c2e2672b99fcec985e44edd380dfae01600a094526ae8b080b6bd8085fe9953"
     }
   }
 }
