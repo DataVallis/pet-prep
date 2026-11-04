@@ -92,13 +92,22 @@ describe('GET /api/parent/dashboard', function () {
         expect(getJson('/api/parent/dashboard')->json('traffic_light'))->toBe('amber');
     });
 
-    it('returns red traffic light when escalation level is 3', function () {
+    it('returns red traffic light while the phase-3 alarm is active (0 % for more than 1 h)', function () {
         [$parent, $child, $pet] = createParentWithChildAndPet();
-        $pet->update(['escalation_level' => 3]);
+        $pet->update(['escalation_level' => 3, 'hunger_level' => 0, 'hunger_zero_since' => now()->subMinutes(90)]);
 
         actingAs($parent, 'sanctum');
 
         expect(getJson('/api/parent/dashboard')->json('traffic_light'))->toBe('red');
+    });
+
+    it('a stored level 3 without a current alarm is amber, not red (fix 2026-11-04)', function () {
+        [$parent, $child, $pet] = createParentWithChildAndPet();
+        $pet->update(['escalation_level' => 3, 'hunger_level' => 90, 'hunger_zero_since' => null]);
+
+        actingAs($parent, 'sanctum');
+
+        expect(getJson('/api/parent/dashboard')->json('traffic_light'))->toBe('amber');
     });
 
     it('returns red traffic light when pet is in game over', function () {

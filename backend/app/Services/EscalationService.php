@@ -236,6 +236,23 @@ class EscalationService
             return false;
         }
 
+        // Phase 3 is over once no metric has shown 0 % for more than 1 h
+        // (fix 2026-11-04, »Nujno« on the parent dashboard): the ladder steps
+        // down to the phase that applies NOW instead of keeping level 3 until
+        // every metric is back above 30 %. No push for a step down; a new
+        // 0 % > 1 h later is a new phase-3 alarm.
+        if ($currentLevel >= 3) {
+            $level = self::phaseFor($lowestMetric);
+            $pet->update(['escalation_level' => $level]);
+            PetUpdated::afterCommit($pet, 'escalation_reset');
+            Log::info('EscalationService: phase 3 ended — ladder stepped down', [
+                'pet_id' => $pet->id,
+                'level' => $level,
+            ]);
+
+            return true;
+        }
+
         // Phase 2: Critical Alert at 10%
         if ($lowestMetric <= self::CRITICAL_ALERT_THRESHOLD) {
             if ($currentLevel < 2) {
@@ -547,6 +564,50 @@ class EscalationService
     private function neglectSecondsOutsideQuietHours(?QuietHours $quietHours, CarbonInterface $zeroSince): float
     {
         return QuietHours::splitSecondsBetween($quietHours, $zeroSince, now())['normal'];
+    }
+
+    /**
+     * Ladder phase (0–2) for the lowest displayed metric, without phase 3
+     * (that one needs a neglect clock, see parentAlarmMetric()).
+     */
+    private static function phaseFor(int $lowestMetric): int
+    {
+        return match (true) {
+            $lowestMetric <= self::CRITICAL_ALERT_THRESHOLD => 2,
+            $lowestMetric <= self::SOFT_WARNING_THRESHOLD => 1,
+            default => 0,
+        };
+    }
+
+    /**
+     * Is the phase-3 condition true NOW (PRODUCT_SPEC §6 / §9: a metric shows
+     * 0 % for more than 1 h)? Returns the metric (hunger | thirst | hygiene)
+     * or null. Read-only: the parent's traffic light uses it instead of the
+     * stored `escalation_level`, which only the minute tick lowers (fix
+     * 2026-11-04 — a stale level 3 showed »Nujno« with every meter green).
+     * Neglect time runs to `frozen_at` while the pet is frozen (hard stop,
+     * payment lock, illness — the clocks stand still, M1-02).
+     */
+    public static function parentAlarmMetric(Pet $pet, ?CarbonInterface $now = null): ?string
+    {
+        if ($pet->is_game_over || $pet->isUnborn()) {
+            return null;
+        }
+
+        $end = $pet->isFrozen() && $pet->frozen_at !== null ? $pet->frozen_at : ($now ?? now());
+        $clocks = [
+            'hunger' => ['hunger_level', $pet->hunger_zero_since],
+            'thirst' => ['thirst_level', $pet->thirst_zero_since],
+            'hygiene' => ['hygiene_level', $pet->hygiene_zero_since],
+        ];
+        foreach ($clocks as $metric => [$column, $zeroSince]) {
+            if ($zeroSince !== null && $pet->displayMetric($column) <= 0
+                && $zeroSince->diffInSeconds($end, false) >= self::PARENT_INTERVENTION_HOURS * 3600) {
+                return $metric;
+            }
+        }
+
+        return null;
     }
 
     /**
