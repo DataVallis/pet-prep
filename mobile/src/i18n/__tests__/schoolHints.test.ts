@@ -1,9 +1,9 @@
 /**
  * School v2 praise / tap hints in every language (David 2026-10-31: »naj piše tudi v slovenskem pa
  * v vseh bodočih jezikih«). The »Zdaj!« / "Now!" hint shows in every session, so every locale
- * folder under `locales/` — including one added later — must carry non-empty `school.now`,
- * `school.tapHint` and `school.hintA11y`, and must be a registered language (so the generic parity
- * test covers it too).
+ * folder under `locales/` — including one added later — must carry non-empty `school.now`
+ * and `school.hintA11y`, and must be a registered language (so the generic parity test covers it
+ * too). The »Tapni« tap hint was removed from school on 2026-11-04 (David) — no `school.tapHint`.
  */
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
@@ -11,7 +11,7 @@ import { join } from 'node:path';
 import { SUPPORTED_LANGUAGES } from '@/i18n/language';
 
 const LOCALES_DIR = join(__dirname, '..', 'locales');
-const HINT_KEYS = ['now', 'tapHint', 'hintA11y'] as const;
+const HINT_KEYS = ['now', 'hintA11y'] as const;
 
 const localeDirs = readdirSync(LOCALES_DIR).filter((name) => statSync(join(LOCALES_DIR, name)).isDirectory());
 
@@ -32,11 +32,12 @@ describe('school hints exist in every locale', () => {
     expect(SUPPORTED_LANGUAGES as readonly string[]).toContain(locale);
   });
 
-  it.each(localeDirs)('%s has non-empty school.now, school.tapHint and school.hintA11y', (locale) => {
+  it.each(localeDirs)('%s has non-empty school.now and school.hintA11y and no school.tapHint', (locale) => {
     const school = schoolStrings(locale);
     for (const key of HINT_KEYS) {
       const value = school[key];
       expect({ locale, key, ok: typeof value === 'string' && value.trim() !== '' }).toEqual({ locale, key, ok: true });
     }
+    expect(school.tapHint).toBeUndefined();
   });
 });

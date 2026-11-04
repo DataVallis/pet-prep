@@ -31,7 +31,6 @@ import {
   schoolFrameAt,
   starCount,
   tapFeedback,
-  tapHintOn,
   isTokenDrag,
   TOKEN_DRAG_START_PT,
 } from '@/modules/training/schoolV2/schoolV2';
@@ -304,26 +303,12 @@ describe('clarity layer (David\'s device test 2026-10-31)', () => {
     expect(tokenWaiting(at(5_500))).toBe(false);
   });
 
-  it('tap hint (David 31. 10.): always on — before and after a tap — except while the token says »Počakaj«', () => {
-    for (const ms of [0, 2_000, 2_600, 5_600, 7_100, 8_900, 23_000]) expect(tapHintOn(at(ms))).toBe(true);
-    // while the dog visibly ignores the token says »Počakaj« — no »Tapni« next to it
-    expect(tapHintOn(at(10_600))).toBe(false);
-    for (let ms = 0; ms < V2.duration_ms; ms += 50) if (!tapHintOn(at(ms))) expect(at(ms).kind).toBe('ignoring');
-  });
-
   it('a drag starts only after the finger moved TOKEN_DRAG_START_PT', () => {
     expect(TOKEN_DRAG_START_PT).toBe(8);
     expect(isTokenDrag(0, 0)).toBe(false);
     expect(isTokenDrag(5, 5)).toBe(false);
     expect(isTokenDrag(0, -8)).toBe(true);
     expect(isTokenDrag(-30, -120)).toBe(true);
-  });
-
-  it('the tap hint text fits a small pill (sl + en)', async () => {
-    expect(SCHOOL_V2_STRINGS.tapHint).toBe('Tapni');
-    await i18n.changeLanguage('en');
-    expect(SCHOOL_V2_STRINGS.tapHint).toBe('Tap');
-    await i18n.changeLanguage('sl');
   });
 
   it('break countdown: ≤ 3 s, counted to round 2\'s start, never past it (break 2.5 s → 3, 2, 1)', () => {
