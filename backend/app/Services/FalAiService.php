@@ -751,6 +751,12 @@ class FalAiService
                 .'with a moderate short face and an evident muzzle (not extreme), a visible black nose with clearly open nostrils and no heavy wrinkle over the nose, '
                 .'clear round dark eyes that do not bulge, heart-shaped feathered drop ears, a tail set high and curved over the back, '
                 .'dignified and alert expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-92: FCI-Standard N° 205 (S696) — a compact, lion-like spitz with a stand-off rough coat; moderate muzzle and
+            // open, healthy eyes (entropion is a PDSA health point, S700).
+            BreedType::ChowChow => 'A compact, short-coupled, lion-like Chow Chow spitz dog, a profuse, dense, straight stand-off rough coat '
+                .'with a full mane around the head and neck (not excessive in length), solid red, a broad flat skull with a broad muzzle of moderate length '
+                .'(not a flat face) and a large black nose, dark oval eyes that are clean and open, small thick erect ears tilting forward, '
+                .'a tail set high and carried well over the back, proud and dignified expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1815,6 +1821,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'moderately long, straight coat with a mane and feathering',
                 'markings' => 'black nose, lips and eye rims, moderate short face with an evident muzzle and open nostrils, never albino, liver or merle',
+            ],
+            // M5-R10-92: whole colours only (FCI S696) — never patches, parti-colour or merle.
+            BreedType::ChowChow => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1 => 'solid red, light golden to deep red',
+                    2 => 'solid black',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse, dense, straight stand-off rough coat with a full mane',
+                'markings' => 'whole-coloured, black nose, moderate broad muzzle, clean open eyes, never patches, parti-colour or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

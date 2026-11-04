@@ -599,6 +599,16 @@ return [
         ['key' => 'white', 'value' => 'white with black nose and eye rims', 'en' => 'White', 'sl' => 'Bel'],
         ['key' => 'parti-colour', 'value' => 'parti-colour, white with evenly broken coloured patches', 'en' => 'Parti-colour', 'sl' => 'Lisast (bel z barvnimi lisami)'],
     ],
+    // M5-R10-92: FCI-Standard N° 205 (S696) "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but not
+    // in patches or parti-coloured" — six standard colours; red first (= the portrait default).
+    'chow_chow' => [
+        ['key' => 'red', 'value' => 'solid red, light golden to deep red, frequently shaded', 'en' => 'Red', 'sl' => 'Rdeč'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'cream', 'value' => 'solid cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'fawn', 'value' => 'solid fawn', 'en' => 'Fawn', 'sl' => 'Plav'],
+        ['key' => 'blue', 'value' => 'solid blue (slate grey)', 'en' => 'Blue', 'sl' => 'Moder (skrilasto siv)'],
+        ['key' => 'white', 'value' => 'solid white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

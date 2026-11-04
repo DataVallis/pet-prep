@@ -2314,5 +2314,34 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S693', 'S694'], 'refs' => ['pekingese.suitability.pdsa_grooming', 'pekingese.suitability.petmd_grooming']],
             ],
         ],
+        // M5-R10-92 Chow Chow — not a flat-faced breed (FCI muzzle "Moderate in length", S696); PDSA (S700) eyelid / skin-fold
+        // points, lifespan band "Under 10 years". No suits chip. No new vocabulary key.
+        'chow_chow' => [
+            'suits' => [],
+            'consider' => [
+                // S700 "We really wouldn't recommend having a Chow Chow if you have small children"
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.children']],
+                // S700 "They ideally suit experienced owners with a good knowledge of the breed"; S696 "Independent, loyal, yet aloof."
+                ['tag' => 'independent_experienced_owner', 'source_ids' => ['S700', 'S696'], 'refs' => ['chow_chow.behaviour.experienced_owner', 'chow_chow.behaviour.temperament']],
+                // S700 "… may not tolerate being alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.time_alone']],
+                // S700 "Chow Chows are clever and get bored easily, so it's really important that you give them lots of puzzle toys"
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.mental_stimulation']],
+                // S701 "Chow Chows are more likely to overheat because of their thick coats and short snout,"
+                ['tag' => 'heat_sensitive', 'source_ids' => ['S701'], 'refs' => ['chow_chow.exercise.petmd_heat']],
+                // S700 entropion "inward rolling of the eyelids, which causes constant irritation and pain to the eye."
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S700'], 'refs' => ['chow_chow.health.entropion']],
+                // S700 "It's important to make sure the folds are kept clean and dry otherwise they could develop infections."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S700'], 'refs' => ['chow_chow.health.skin_folds']],
+                // S700 "Under 10 years" (runbook: an A/B upper bound of 10 years or less).
+                ['tag' => 'shorter_lifespan', 'source_ids' => ['S700'], 'refs' => ['chow_chow.lifespan.pdsa']],
+                // S700 "they shed pretty much all year round, …"
+                ['tag' => 'sheds', 'source_ids' => ['S700'], 'refs' => ['chow_chow.suitability.pdsa_shedding']],
+                // S700 brushing every day; S701 a few hours of grooming every week.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S700', 'S701'], 'refs' => ['chow_chow.suitability.pdsa_grooming', 'chow_chow.suitability.petmd_grooming']],
+                // S700 "… so a high prey drive can come quite naturally to them."
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
