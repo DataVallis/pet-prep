@@ -7,7 +7,8 @@
     "de": "Trockenfrüchte",
     "fr": "Fruits secs",
     "es": "Fruta deshidratada",
-    "it": "Frutta essiccata"
+    "it": "Frutta essiccata",
+    "pt": "Fruta desidratada"
   },
   "question": {
     "en": "Can dogs eat dried fruit?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Trockenfrüchte fressen?",
     "fr": "Les chiens peuvent-ils manger des fruits secs ?",
     "es": "¿Pueden los perros comer fruta deshidratada?",
-    "it": "I cani possono mangiare la frutta essiccata?"
+    "it": "I cani possono mangiare la frutta essiccata?",
+    "pt": "Os cães podem comer fruta desidratada?"
   },
   "url_slug": {
     "en": "dried-fruit",
@@ -23,7 +25,8 @@
     "de": "trockenfruechte",
     "fr": "fruits-secs",
     "es": "fruta-deshidratada",
-    "it": "frutta-essiccata"
+    "it": "frutta-essiccata",
+    "pt": "fruta-desidratada"
   },
   "level": "toxic",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Das hängt von der Frucht ab, und Mischungen sind riskant. Rosinen, Sultaninen und Korinthen sind getrocknete Weintrauben und für Hunde giftig, schon in sehr kleinen Mengen. Andere Trockenfrüchte wie Feigen und Pfirsiche können viel Zucker enthalten, und getrocknete Datteln haben noch ihren Kern.",
     "fr": "Cela dépend du fruit, et les mélanges sont risqués. Le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont des raisins séchés toxiques pour les chiens, même en toute petite quantité. Les autres fruits secs, comme les figues et les pêches, peuvent être riches en sucre, et les dattes séchées contiennent encore leur noyau.",
     "es": "Depende de la fruta, y las mezclas son peligrosas. Las pasas, las sultanas y las pasas de Corinto son uvas secas, venenosas para los perros incluso en cantidades muy pequeñas. Otras frutas deshidratadas, como los higos y los melocotones, pueden tener mucho azúcar, y los dátiles secos siguen llevando hueso.",
-    "it": "Dipende dalla frutta, e i mix sono rischiosi. Uvetta, uva sultanina e uva passa di Corinto sono tutte uva essiccata e sono velenose per i cani, anche in quantità minime. Anche altri tipi di frutta essiccata, come fichi e pesche, possono essere ricchi di zuccheri, e i datteri secchi hanno comunque il nocciolo."
+    "it": "Dipende dalla frutta, e i mix sono rischiosi. Uvetta, uva sultanina e uva passa di Corinto sono tutte uva essiccata e sono velenose per i cani, anche in quantità minime. Anche altri tipi di frutta essiccata, come fichi e pesche, possono essere ricchi di zuccheri, e i datteri secchi hanno comunque il nocciolo.",
+    "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço."
   },
   "why": {
     "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
@@ -40,7 +44,8 @@
     "de": "Weintrauben, Rosinen, Sultaninen und Korinthen sind für Hunde alle potenziell giftig; es lässt sich nicht vorhersagen, ob ein Hund schwer betroffen sein wird, und manche Hunde erkranken schon nach sehr kleinen Mengen, besonders bei getrockneten Früchten. Getrocknete Cranberrys werden manchmal mit Rosinen gemischt. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil das Wasser entzogen wurde, und getrocknete Pfirsiche enthalten oft zu viel Zucker. Weil eine Trockenfruchtmischung Rosinen verbergen kann, bei denen man sofort zum Tierarzt muss, wählen wir die strengere Stufe und stufen Trockenfrüchte insgesamt wie Rosinen als giftig ein.",
     "fr": "Le raisin, le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont tous potentiellement toxiques pour les chiens ; impossible de savoir si un chien sera gravement touché, et certains tombent malades après de très petites quantités, surtout de fruits secs. Les canneberges séchées sont parfois vendues mélangées à des raisins secs. Les figues séchées contiennent beaucoup plus de sucre concentré, car l’eau a été retirée, et les pêches déshydratées contiennent souvent trop de sucre. Comme un mélange de fruits secs peut cacher des raisins secs, qui exigent de consulter un vétérinaire sans attendre, nous retenons le niveau le plus strict et classons les fruits secs comme toxiques dans l’ensemble, au même titre que le raisin sec.",
     "es": "Las uvas, las pasas, las sultanas y las pasas de Corinto son potencialmente venenosas para los perros. Es imposible saber si un perro se verá gravemente afectado, y algunos enferman con cantidades muy pequeñas, sobre todo de las versiones secas. Los arándanos rojos deshidratados a veces vienen mezclados con pasas. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua, y los melocotones deshidratados suelen llevar azúcar de más. Como una mezcla de fruta deshidratada puede esconder pasas, que exigen acudir al veterinario de inmediato, aplicamos el nivel más estricto y clasificamos la fruta deshidratada como tóxica en general, igual que las pasas.",
-    "it": "Uva, uvetta, uva sultanina e uva passa di Corinto sono tutte potenzialmente velenose per i cani; è impossibile sapere se un cane ne sarà colpito gravemente, e alcuni cani si ammalano dopo quantità piccolissime, soprattutto di frutta essiccata. A volte i mirtilli rossi essiccati sono venduti mescolati all’uvetta. I fichi secchi contengono zuccheri molto più concentrati perché è stata eliminata l’acqua, e le pesche essiccate spesso contengono troppo zucchero. Poiché un mix di frutta essiccata può nascondere dell’uvetta, e in quel caso serve subito il veterinario, applichiamo il livello più prudente e classifichiamo la frutta essiccata nel complesso come tossica, come l’uvetta."
+    "it": "Uva, uvetta, uva sultanina e uva passa di Corinto sono tutte potenzialmente velenose per i cani; è impossibile sapere se un cane ne sarà colpito gravemente, e alcuni cani si ammalano dopo quantità piccolissime, soprattutto di frutta essiccata. A volte i mirtilli rossi essiccati sono venduti mescolati all’uvetta. I fichi secchi contengono zuccheri molto più concentrati perché è stata eliminata l’acqua, e le pesche essiccate spesso contengono troppo zucchero. Poiché un mix di frutta essiccata può nascondere dell’uvetta, e in quel caso serve subito il veterinario, applichiamo il livello più prudente e classifichiamo la frutta essiccata nel complesso come tossica, come l’uvetta.",
+    "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas."
   },
   "signs": {
     "en": [
@@ -90,6 +95,14 @@
       "Sangue nelle feci",
       "Stanchezza",
       "Calo dell’appetito"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Dor de barriga",
+      "Sangue nas fezes",
+      "Pouca energia",
+      "Falta de vontade de comer"
     ]
   },
   "what_to_do": {
@@ -98,7 +111,8 @@
     "de": "Hat Ihr Hund Rosinen, Sultaninen, Korinthen oder eine Trockenfruchtmischung gefressen, in der sie stecken könnten, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht auf Anzeichen.",
     "fr": "Si votre chien a mangé des raisins secs, des raisins de Smyrne, des raisins de Corinthe ou un mélange de fruits secs qui peut en contenir, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition des signes.",
     "es": "Si tu perro se ha comido pasas, sultanas, pasas de Corinto o una mezcla de fruta deshidratada que podría llevarlas, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
-    "it": "Se il tuo cane ha mangiato uvetta, uva sultanina, uva passa di Corinto o un mix di frutta essiccata che potrebbe contenerne, contatta subito il veterinario. Non aspettare che compaiano i sintomi."
+    "it": "Se il tuo cane ha mangiato uvetta, uva sultanina, uva passa di Corinto o un mix di frutta essiccata che potrebbe contenerne, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
+    "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais."
   },
   "serving": null,
   "child": {
@@ -107,7 +121,8 @@
     "de": "Trockenfrüchte wie Rosinen sind nichts für Hunde. Halte Snackmischungen von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn er welche frisst.",
     "fr": "Les fruits secs, comme les raisins secs, ne sont pas pour les chiens. Garde les mélanges à grignoter loin de lui, et préviens un adulte s’il en mange.",
     "es": "La fruta deshidratada, como las pasas, no es para perros. Mantén lejos de tu perro las mezclas para picar y avisa a un adulto si se come alguna.",
-    "it": "La frutta essiccata, come l’uvetta, non è per i cani. Tieni i mix di snack lontani dal tuo cane e, se ne mangia un po’, dillo a un adulto."
+    "it": "La frutta essiccata, come l’uvetta, non è per i cani. Tieni i mix di snack lontani dal tuo cane e, se ne mangia un po’, dillo a un adulto.",
+    "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma."
   },
   "faq": [
     {
@@ -117,7 +132,8 @@
         "de": "In welchen Lebensmitteln stecken getrocknete Weintrauben?",
         "fr": "Dans quels aliments trouve-t-on du raisin séché ?",
         "es": "¿Qué alimentos esconden uvas secas?",
-        "it": "In quali cibi si nasconde l’uva essiccata?"
+        "it": "In quali cibi si nasconde l’uva essiccata?",
+        "pt": "Que alimentos escondem uvas secas?"
       },
       "a": {
         "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
@@ -125,7 +141,8 @@
         "de": "Rosinen, Sultaninen und Korinthen stecken oft in Lebensmitteln wie Weihnachtskuchen, Hot Cross Buns (britischen Rosinenbrötchen) und Keksen, und getrocknete Cranberrys sind manchmal mit Rosinen gemischt.",
         "fr": "Le raisin sec, le raisin de Smyrne et le raisin de Corinthe se cachent souvent dans des aliments comme le gâteau de Noël aux fruits, les brioches de Pâques (hot cross buns) et les cookies, et les canneberges séchées sont parfois mélangées à des raisins secs.",
         "es": "Es habitual encontrar pasas, sultanas y pasas de Corinto en alimentos como el pastel de Navidad, los hot cross buns (panecillos dulces de Semana Santa) y las galletas, y a veces los arándanos rojos deshidratados vienen mezclados con pasas.",
-        "it": "Uvetta, uva sultanina e uva passa di Corinto si trovano spesso in cibi come il Christmas cake, gli hot cross bun e i biscotti, e i mirtilli rossi essiccati a volte sono mescolati all’uvetta."
+        "it": "Uvetta, uva sultanina e uva passa di Corinto si trovano spesso in cibi come il Christmas cake, gli hot cross bun e i biscotti, e i mirtilli rossi essiccati a volte sono mescolati all’uvetta.",
+        "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas."
       }
     },
     {
@@ -135,7 +152,8 @@
         "de": "Sind andere Trockenfrüchte unbedenklich?",
         "fr": "Les autres fruits secs sont-ils sans danger ?",
         "es": "¿Son seguras las demás frutas deshidratadas?",
-        "it": "Le altre varietà di frutta essiccata vanno bene?"
+        "it": "Le altre varietà di frutta essiccata vanno bene?",
+        "pt": "As outras frutas desidratadas são seguras?"
       },
       "a": {
         "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
@@ -143,7 +161,8 @@
         "de": "Nicht als regelmäßiges Leckerli. Getrocknete Feigen und Pfirsiche enthalten viel Zucker, und getrocknete Datteln haben noch einen Kern, der entfernt werden muss.",
         "fr": "Pas comme friandise habituelle. Les figues séchées et les pêches déshydratées sont riches en sucre, et les dattes séchées contiennent encore un noyau qu’il faut retirer.",
         "es": "No para darlas con frecuencia. Los higos secos y los melocotones deshidratados tienen mucho azúcar, y los dátiles secos siguen llevando un hueso que hay que quitar.",
-        "it": "Non come premio abituale. I fichi secchi e le pesche essiccate sono ricchi di zuccheri, e i datteri secchi hanno comunque un nocciolo che va tolto."
+        "it": "Non come premio abituale. I fichi secchi e le pesche essiccate sono ricchi di zuccheri, e i datteri secchi hanno comunque un nocciolo che va tolto.",
+        "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado."
       }
     }
   ],
@@ -263,6 +282,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fb43cb6fa6ac6e8d901ac6756165c134192bc4a92fdc0c68fe936e92516a32ca"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2af17f5ee5bae3654bce77152f1b9a27b577d7a644926504710ef9d63440090"
     }
   }
 }
