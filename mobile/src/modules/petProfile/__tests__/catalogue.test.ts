@@ -760,8 +760,8 @@ describe('breed search', () => {
     expect(find('angleški buldog')).toEqual(['bulldog']);
     // M5-R10-34: »angleški« is also the start of the English Springer Spaniel's SL name — still never the French Bulldog.
     // M5-R10-41: … and the English Cocker Spaniel (»angleški koker španjel«); M5-R10-45: … and the Mastiff (»angleški mastif«);
-    // M5-R10-54: … and the Whippet (»mali angleški hrt«).
-    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff', 'whippet']);
+    // M5-R10-54: … and the Whippet (»mali angleški hrt«); M5-R10-93: … and the Old English Sheepdog (»staroangleški ovčar«).
+    expect(find('angleski')).toEqual(['bulldog', 'english_springer_spaniel', 'english_cocker_spaniel', 'mastiff', 'whippet', 'old_english_sheepdog']);
     expect(find('english bulldog')).toEqual(['bulldog']);
     expect(find('british')).toEqual(['bulldog']);
   });
