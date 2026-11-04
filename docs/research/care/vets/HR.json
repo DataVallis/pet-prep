@@ -218,7 +218,7 @@
       "address": "Lazinska 28, Zagreb",
       "phone": "+385 1 3024 765",
       "emergency_24h": true,
-      "duty": "Hitan prijem 0-24 h with prior call to 098 214 099; Mon-Fri 9-12 and 16-20, Sat 9-12",
+      "duty": "Emergency admission 0–24 h with prior call to 098 214 099; Mon-Fri 9-12 and 16-20, Sat 9-12",
       "small_animals": true,
       "url": "https://veterinarska-bolnica.hr/",
       "source_url": "https://veterinarska-bolnica.hr/radno-vrijeme-i-dezurni-veterinar/",
@@ -234,7 +234,7 @@
       "address": "Donje Svetice 31, 10000 Zagreb",
       "phone": "+385 1 2316 052",
       "emergency_24h": true,
-      "duty": "Hitne intervencije 0-24 (mobile number on site); Mon-Fri 9-19:30, Sat 9-12",
+      "duty": "Emergency interventions 0-24 (mobile number on clinic site); Mon-Fri 9-19:30, Sat 9-12",
       "small_animals": true,
       "url": "https://morna.hr/",
       "source_url": "https://www.morna.hr/kontakt.html",
@@ -250,7 +250,7 @@
       "address": "Tratinska 53/I, 10000 Zagreb",
       "phone": "+385 1 3095 340",
       "emergency_24h": true,
-      "duty": "Dežurstvo 00-24 on +385 1 3095 340; Mon-Fri 9-19:30, Sat 9-11:30",
+      "duty": "On-call duty 00-24 on +385 1 3095 340; Mon-Fri 9-19:30, Sat 9-11:30",
       "small_animals": true,
       "url": "https://www.fabela.hr/",
       "source_url": "https://www.fabela.hr/",
@@ -280,7 +280,7 @@
       "address": "Heinzelova 68, Zagreb",
       "phone": "+385 1 6040 186",
       "emergency_24h": false,
-      "duty": "Mon-Fri 7-20, Sat 8-14, Sun/holidays 8-12; out of hours: Veterinarska klinika Buba 060 600 100; veterinar u pripravnosti 098 339 671",
+      "duty": "Mon-Fri 7-20, Sat 8-14, Sun/holidays 8-12; out of hours: Veterinarska klinika Buba 060 600 100; vet on standby 098 339 671",
       "small_animals": true,
       "url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
       "source_url": "https://www.vs-grada-zagreba.hr/veterinarske-ambulante/",
@@ -322,11 +322,12 @@
       "address": "Ul. Josipa Kozarca 38, 10000 Zagreb",
       "phone": "+385 1 4823 730",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8-20, Sat 9-13; emergency number 099 250 3208 (hours not stated)",
+      "duty": "Mon-Fri 8-20, Sat 9-13; emergency number 099 250 3208",
       "small_animals": true,
       "url": "https://vetiva.hr/",
       "source_url": "https://vetiva.hr/",
-      "checked": "2026-10-31"
+      "checked": "2026-10-31",
+      "note": "Emergency number hours not stated."
     },
     {
       "kind": "clinic",
@@ -336,7 +337,7 @@
       "address": "Ratarska ulica 35, 10000 Zagreb",
       "phone": "+385 1 3883 403",
       "emergency_24h": false,
-      "duty": "Appointments required except emergencies; emergency/dežurstvo 091 633 8896",
+      "duty": "Appointments required except emergencies; emergency/on-call 091 633 8896",
       "small_animals": true,
       "url": "https://vetpoint.hr/",
       "source_url": "https://vetpoint.hr/",
@@ -350,11 +351,12 @@
       "address": "Šestinski dol 8d, 10000 Zagreb",
       "phone": "+385 1 3771 509",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9-12 and 16-20, Sat 8-13; Hitni pozivi 098 411 042 (hours not stated)",
+      "duty": "Mon-Fri 9-12 and 16-20, Sat 8-13; emergency calls 098 411 042",
       "small_animals": true,
       "url": "https://www.vet-makar.com/",
       "source_url": "https://www.vet-makar.com/kontakt/",
-      "checked": "2026-10-31"
+      "checked": "2026-10-31",
+      "note": "Emergency number hours not stated."
     },
     {
       "kind": "clinic",
@@ -378,7 +380,7 @@
       "address": "Školska 47, 10410 Velika Gorica",
       "phone": "+385 1 6226 101",
       "emergency_24h": true,
-      "duty": "Hitne intervencije 0-24 h via on-call mobiles published on the site; summer hours Mon-Fri 8-13 and 17-20, Sat 9-13, Sun 9-11",
+      "duty": "Emergency interventions 0-24 h via on-call mobiles published on the clinic site; summer hours Mon-Fri 8-13 and 17-20, Sat 9-13, Sun 9-11",
       "small_animals": true,
       "url": "https://www.ava-vet.hr/",
       "source_url": "https://www.ava-vet.hr/",
@@ -394,7 +396,7 @@
       "address": "Ul. Pavla Lončara 1c, Zaprešić",
       "phone": "+385 91 789 7777",
       "emergency_24h": false,
-      "duty": "Mon-Fri 13-20, Sat 10-13, Sun listed as 00:00-24:00; emergency contact +385 91 789 7777",
+      "duty": "Mon-Fri 13-20, Sat 10-13, Sun 0-24; emergency contact +385 91 789 7777",
       "small_animals": true,
       "url": "https://pet-it.com.hr/",
       "source_url": "https://pet-it.com.hr/",
@@ -557,7 +559,7 @@
       "address": "Josipa Kulfaneka 4, Rijeka",
       "phone": "+385 51 216 042",
       "emergency_24h": false,
-      "duty": "Hitnoće +385 91 567 1918",
+      "duty": "Emergencies +385 91 567 1918",
       "small_animals": true,
       "url": "https://veterinar-polic.com/",
       "source_url": "https://veterinar-polic.com/slikovna-dijagnostika/",
@@ -571,7 +573,7 @@
       "address": "Kozala 51, Rijeka",
       "phone": "+385 51 514 399",
       "emergency_24h": false,
-      "duty": "Hitni slučajevi 091 762 6462",
+      "duty": "Emergencies 091 762 6462",
       "url": "https://www.ferarica.com/",
       "source_url": "https://www.ferarica.com/",
       "checked": "2026-10-31"
@@ -614,7 +616,7 @@
       "address": "Joakima Rakovca 10 d, 52470 Umag",
       "phone": "+385 52 741 725",
       "emergency_24h": true,
-      "duty": "Hitne intervencije 0-24 h (mobiles 098 398 003 / 098 334 403 / 099 814 5105); Mon-Fri 8-12 and 17-19, Sat 8-12",
+      "duty": "Emergency interventions 0-24 h (mobiles 098 398 003 / 098 334 403 / 099 814 5105); Mon-Fri 8-12 and 17-19, Sat 8-12",
       "url": "https://vetkk.hr/",
       "source_url": "https://vetkk.hr/",
       "checked": "2026-10-31",
@@ -692,7 +694,7 @@
       "address": "Vinkovačka cesta 59, 31000 Osijek",
       "phone": "+385 31 275 066",
       "emergency_24h": false,
-      "duty": "Mon-Fri 7-19, Sat 8-18; pripravnost 099 2000 250 (Sundays/holidays)",
+      "duty": "Mon-Fri 7-19, Sat 8-18; on-call 099 2000 250 (Sundays/holidays)",
       "small_animals": true,
       "url": "https://vetos.hr/",
       "source_url": "https://vetos.hr/kontakt/",
@@ -722,7 +724,7 @@
       "address": "Bartola Kašića 18, 31000 Osijek",
       "phone": "+385 31 208 500",
       "emergency_24h": false,
-      "duty": "Dežurni mobitel 098 411 888 (own patients; outside hours life-threatening cases only); Mon/Wed/Fri 8-16, Tue/Thu 12-20",
+      "duty": "On-duty mobile 098 411 888 (own patients; outside hours life-threatening cases only); Mon/Wed/Fri 8-16, Tue/Thu 12-20",
       "small_animals": true,
       "url": "https://vetosan.com.hr/",
       "source_url": "https://vetosan.com.hr/",
@@ -777,7 +779,7 @@
       "region": "Varaždinska",
       "phone": "+385 99 6240 123",
       "emergency_24h": true,
-      "duty": "Dežurstvo non-stop on 099 6240 123 (20-07 h outside clinic hours)",
+      "duty": "On-call non-stop on 099 6240 123 (20-07 h outside clinic hours)",
       "small_animals": true,
       "url": "https://www.vsv.hr/",
       "source_url": "https://www.vsv.hr/ambulante/veterinarske-ambulante/veterinarska-klinika-varazdin-za-kucne-ljubimce/a15",
@@ -793,7 +795,7 @@
       "address": "V. Mačeka 33, 47000 Karlovac",
       "phone": "+385 47 648 075",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8-20, Sat 8-13; Sundays and holidays dežurstvo 0-24 h",
+      "duty": "Mon-Fri 8-20, Sat 8-13; Sundays and holidays on-call duty 0-24 h",
       "small_animals": true,
       "url": "https://www.vsklc.hr/",
       "source_url": "https://www.vsklc.hr/ambulante.html",
@@ -982,11 +984,11 @@
       "address": "Matije Ivanića 19, 10000 Zagreb",
       "phone": "+385 1 3750 339",
       "emergency_24h": false,
-      "duty": "The footer gives Mon-Fri 08-20, Sat 08-12, Sun 09-11. A notice on the same page gives Mon-Fri 8-13 & 15-20, Sat 8-12, closed Sunday.",
+      "duty": "Hours unclear (sources differ): Mon-Fri 8-20, Sat 8-12, Sun 9-11, or Mon-Fri 8-13 & 15-20, Sat 8-12, Sun closed; call to confirm.",
       "small_animals": true,
       "url": "https://ljubimac.net/",
       "source_url": "https://ljubimac.net/",
-      "note": "The page contradicts itself. It says 'Hitne intervencije svaki dan od 0-24 sata, potrebno se najaviti' but also 'HITNE INTERVENCIJE VIKENDOM NE RADIMO', so this entry is not marked 24 h.",
+      "note": "The page contradicts itself. It says 'Hitne intervencije svaki dan od 0-24 sata, potrebno se najaviti' but also 'HITNE INTERVENCIJE VIKENDOM NE RADIMO', so this entry is not marked 24 h. Footer and a notice on the same page give conflicting hours.",
       "checked": "2026-10-31"
     },
     {
@@ -1040,7 +1042,6 @@
       "address": "Orhideja 89, 10360 Sesvete",
       "phone": "+385 1 2012 068",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "url": "http://www.veterina-brestje.hr/",
@@ -1054,7 +1055,6 @@
       "address": "Kustošijanska 97, 10000 Zagreb",
       "phone": "+385 1 3702 867",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1082,7 +1082,6 @@
       "address": "Kotorska 28, 51260 Crikvenica",
       "phone": "+385 51 241 932",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. veterinari-crikvenica.hr is blocked by robots.txt.",
       "checked": "2026-10-31"
@@ -1095,7 +1094,6 @@
       "address": "Palit 403, 51280 Rab",
       "phone": "+385 51 847 840",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1108,7 +1106,6 @@
       "address": "M. C. Nehajeva 27, 53270 Senj",
       "phone": "+385 53 881 404",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1135,7 +1132,6 @@
       "address": "Pulska 17, 52220 Labin",
       "phone": "+385 52 856 003",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1148,7 +1144,6 @@
       "address": "Dubravica 5, 52000 Pazin",
       "phone": "+385 52 624 410",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "url": "http://www.veterina-pazin.hr/",
@@ -1177,11 +1172,11 @@
       "region": "Zadarska",
       "phone": "+385 23 224 310",
       "emergency_24h": false,
-      "duty": "The header gives Mon-Fri 08:30-17:00, Sat 08:30-12:00. The footer gives Mon-Fri 08:30-19:00, Sat 08:30-13:00. Appointments by phone.",
+      "duty": "Mon-Fri 8:30-17:00 or 8:30-19:00, Sat 8:30-12:00 or 8:30-13:00 (sources differ). Appointments by phone.",
       "small_animals": true,
       "url": "https://www.veterina-zilic.hr/",
       "source_url": "https://www.veterina-zilic.hr/",
-      "note": "Dogs and cats only. Street address is not on the homepage.",
+      "note": "Dogs and cats only. Street address is not on the homepage. Page header and footer give different hours.",
       "checked": "2026-10-31"
     },
     {
@@ -1192,7 +1187,6 @@
       "address": "Zagrebačka 10a, 23250 Pag",
       "phone": "+385 23 600 068",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. Part of Veterinarska ambulanta Bokanjac d.o.o.",
       "checked": "2026-10-31"
@@ -1205,7 +1199,6 @@
       "address": "Splitska b.b., 23250 Pag",
       "phone": "+385 23 600 438",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. vet-pag.com (Pag/Novalja) is blocked by robots.txt.",
       "checked": "2026-10-31"
@@ -1233,7 +1226,6 @@
       "address": "113. Šibenske brigade HV-a 157, 22000 Šibenik",
       "phone": "+385 22 333 711",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1276,7 +1268,6 @@
       "address": "Kukuljevićeva 1, 21000 Split",
       "phone": "+385 21 567 403",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1289,10 +1280,10 @@
       "address": "Kralja Zvonimira 33, Solin",
       "phone": "+385 21 212 352",
       "emergency_24h": false,
-      "duty": "Hours not published on the clinic's site",
       "url": "https://vetsolin.hr/",
       "source_url": "https://vetsolin.hr/",
-      "checked": "2026-10-31"
+      "checked": "2026-10-31",
+      "note": "Hours not published in source."
     },
     {
       "kind": "clinic",
@@ -1302,7 +1293,6 @@
       "address": "Put blata 14 a, 21216 Kaštel Stari",
       "phone": "+385 21 232 254",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1315,7 +1305,6 @@
       "address": "Dr. Franje Tuđmana 78, 21250 Šestanovac",
       "phone": "+385 21 861 129",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. The register gives a Šestanovac address for the Omiš company. No Omiš-town address was confirmed from an official or own source.",
       "checked": "2026-10-31"
@@ -1328,7 +1317,6 @@
       "address": "Antuna Gustava Matoša 7, 21260 Imotski",
       "phone": "+385 21 842 385",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1341,10 +1329,9 @@
       "address": "Šime Buzolić Tome 15a, 21450 Hvar",
       "phone": "+385 21 88 00 22",
       "emergency_24h": false,
-      "duty": "Hours not published",
       "small_animals": true,
       "source_url": "https://tzjelsa.hr/en/4700/information-for-visitors-with-pets/",
-      "note": "Listed by the Jelsa tourist board (TZ Jelsa), under the vet's name, for small animals and grooming. The tourist board page also gives a mobile number.",
+      "note": "Listed by the Jelsa tourist board (TZ Jelsa), under the vet's name, for small animals and grooming. The tourist board page also gives a mobile number. Hours not published in source.",
       "checked": "2026-10-31"
     },
     {
@@ -1355,11 +1342,10 @@
       "address": "Put Rudine 3, 21460 Stari Grad",
       "phone": "+385 21 244 337",
       "emergency_24h": false,
-      "duty": "Hours not published",
       "small_animals": true,
       "url": "https://veterinarska-ambulanta-lota.business.site/",
       "source_url": "https://tzjelsa.hr/en/4700/information-for-visitors-with-pets/",
-      "note": "TZ Jelsa: large and small animals, pet shop on premises. Address and phone also appear in the official open-data register (P.M.V. Animalis d.o.o.).",
+      "note": "TZ Jelsa: large and small animals, pet shop on premises. Address and phone also appear in the official open-data register (P.M.V. Animalis d.o.o.). Hours not published in source.",
       "checked": "2026-10-31"
     },
     {
@@ -1370,7 +1356,6 @@
       "address": "Put Rudine b.b., 21460 Stari Grad",
       "phone": "+385 21 765 388",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1383,7 +1368,6 @@
       "address": "Dolčić 4a, 21400 Supetar",
       "phone": "+385 21 384 766",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. Part of Vet Vision j.d.o.o. vetvision.hr is blocked by robots.txt.",
       "url": "http://vet-vision.hr/",
@@ -1397,7 +1381,6 @@
       "address": "Ulica 56 14, 20270 Vela Luka",
       "phone": "+385 20 812 603",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. Business status not verified. korculainfo.com could not be fetched.",
       "checked": "2026-10-31"
@@ -1410,7 +1393,6 @@
       "address": "Rožat 32, 20000 Dubrovnik",
       "phone": "+385 20 451 466",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. No own website found.",
       "checked": "2026-10-31"
@@ -1423,7 +1405,6 @@
       "address": "Gruda 416, 20215 Gruda",
       "phone": "+385 20 791 450",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1436,12 +1417,12 @@
       "address": "Ivana Rendića 3, 49000 Krapina",
       "phone": "+385 49 371 373",
       "emergency_24h": true,
-      "duty": "Small-animal clinic Mon-Fri 07:00-14:30, Sat 07:00-12:00. The contact page gives Mon-Fri 07:30-19:00 (break 16:30-17:30), Sat 07:00-13:00. On-duty vet 24/7.",
+      "duty": "Small-animal clinic Mon-Fri 07:00-14:30, Sat 07:00-12:00 (other source: Mon-Fri 07:30-19:00 with break 16:30-17:30, Sat 07:00-13:00). On-duty vet 24/7.",
       "small_animals": true,
       "url": "https://www.vs-krapina.hr/",
       "source_url": "https://www.vs-krapina.hr/usluge/ambulanta-za-male-zivotinje/",
       "quote": "Dežurni veterinar 24/7 Tel: +385 49 371 373",
-      "note": "House number 3 is from the City of Krapina page (krapina.hr).",
+      "note": "House number 3 is from the City of Krapina page (krapina.hr). The contact page gives the second set of hours.",
       "checked": "2026-10-31"
     },
     {
@@ -1482,7 +1463,6 @@
       "address": "Matije Gupca 2, 31400 Đakovo",
       "phone": "+385 31 812 240",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1495,7 +1475,6 @@
       "address": "Ljudevita Gaja 7, 31500 Našice",
       "phone": "+385 31 781 8038",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "checked": "2026-10-31"
@@ -1522,7 +1501,6 @@
       "address": "I Lijevi pododvojak 12, 44000 Sisak",
       "phone": "+385 44 720 285",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "url": "http://www.mario-veterina.hr/",
@@ -1536,7 +1514,6 @@
       "address": "Istarska 39, 35000 Slavonski Brod",
       "phone": "+385 35 411 831",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source. veto-doo.hr (Veto, Slavonski Brod) could not be fetched (client error).",
       "checked": "2026-10-31"
@@ -1549,7 +1526,6 @@
       "address": "Pešćenica 8, 47300 Ogulin",
       "phone": "+385 47 522 681",
       "emergency_24h": false,
-      "duty": "Hours not published in source",
       "source_url": "https://dev-data.gov.hr/ckan/en/datastore/dump/3551096c-fcf0-4705-88e4-190d34282c60?bom=True",
       "note": "From the official open-data list 'Veterinarske ambulante' (data.gov.hr, Ministry of Agriculture). This is an older snapshot, so check it before use. Hours not published in source.",
       "url": "http://www.veterinarska-ambulantaogulin.hr/",

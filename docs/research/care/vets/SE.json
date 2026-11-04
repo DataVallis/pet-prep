@@ -227,12 +227,12 @@
       "address": "Industrigatan 18, 386 32 Färjestaden",
       "phone": "010-122 94 20",
       "emergency_24h": false,
-      "duty": "Page says a vet can be reached around the clock by phone on 010-122 94 20, but does not state that the round-the-clock line covers small animals (small-animal clinic on Öland is listed separately). Not counted as 24 h.",
+      "duty": "Vet reachable by phone around the clock on 010-122 94 20; unclear whether the line covers small animals.",
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
       "checked": "2026-11-03",
-      "note": "Holiday island Öland. Phone on-call line, species of the 24-h line not stated; no rota table published.",
+      "note": "Holiday island Öland. Phone on-call line, species of the 24-h line not stated; no rota table published. Page says a vet can be reached around the clock by phone on 010-122 94 20 but does not state that the round-the-clock line covers small animals (small-animal clinic on Öland is listed separately). Not counted as 24 h.",
       "quote": "Veterinär nås dygnet runt på telefon 010-122 94 20."
     },
     {
@@ -242,11 +242,12 @@
       "region": "Östergötlands län",
       "phone": "013-31 54 40",
       "emergency_24h": false,
-      "duty": "Clinic/emergency reception every day 07:30-23:00 (stated hours, not 24 h).",
+      "duty": "Open every day 07:30–23:00.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Stated hours, not 24 h."
     },
     {
       "kind": "clinic",
@@ -270,7 +271,7 @@
       "address": "Renvägen 2, 352 45 Växjö",
       "phone": "0470-71 90 50",
       "emergency_24h": false,
-      "duty": "Weekdays 07-22, weekends 09-20 (page); emergency line weekdays 07-22, weekends 09-20.",
+      "duty": "Mon–Fri 7–22, Sat–Sun 9–20; emergency line same hours.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
@@ -284,11 +285,12 @@
       "address": "Mätslinga 18, 187 66 Täby",
       "phone": "08-630 02 90",
       "emergency_24h": false,
-      "duty": "Emergency care weekdays about 08-19/20, weekends 09-16 (page shows slightly differing times).",
+      "duty": "Emergency care Mon–Fri about 8–19/20, Sat–Sun 9–16.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Page shows slightly differing times."
     },
     {
       "kind": "clinic",
@@ -311,12 +313,12 @@
       "region": "Västra Götalands län",
       "phone": "031-21 40 40",
       "emergency_24h": false,
-      "duty": "Open Mon-Fri 07-24, Sat/Sun/holidays 09-24 (not 24 h).",
+      "duty": "Mon–Fri 7–24, Sat/Sun/holidays 9–24.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
       "checked": "2026-11-03",
-      "note": "Listed under Mölnlycke on https://evidensia.se/sommaroppna-djursjukhus/."
+      "note": "Listed under Mölnlycke on https://evidensia.se/sommaroppna-djursjukhus/. Not 24 h."
     },
     {
       "kind": "clinic",
@@ -325,11 +327,12 @@
       "region": "Skåne län",
       "phone": "046-270 40 00",
       "emergency_24h": false,
-      "duty": "Open every day 08:00-00:00 (not 24 h).",
+      "duty": "Open every day 8–24.",
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "source_url": "https://evidensia.se/sommaroppna-djursjukhus/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Not 24 h."
     },
     {
       "kind": "clinic",
@@ -338,12 +341,12 @@
       "region": "Värmlands län",
       "phone": "054-17 52 50",
       "emergency_24h": false,
-      "duty": "Open about 08-20 weekdays, 09-20 weekends (the clinic page gives partly conflicting hours; not 24 h).",
+      "duty": "Open about 8–20 weekdays, 9–20 weekends.",
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "source_url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "checked": "2026-11-03",
-      "note": "Clinic page https://evidensia.se/klinik/karlstad-djursjukhus/vara-oppettider/ lists emergency hours to 20:00."
+      "note": "Clinic page https://evidensia.se/klinik/karlstad-djursjukhus/vara-oppettider/ lists emergency hours to 20:00. Clinic page gives partly conflicting hours; not 24 h."
     },
     {
       "kind": "clinic",
@@ -365,11 +368,12 @@
       "region": "Örebro län",
       "phone": "019-127 000",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08-17; no emergency reception stated; points to Evidensia 24-h hospitals.",
+      "duty": "Mon–Fri 8–17; out of hours the clinic points to Evidensia 24-h hospitals.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No emergency reception stated."
     },
     {
       "kind": "clinic",
@@ -418,11 +422,12 @@
       "address": "Endrevägen 3, 621 43 Visby",
       "phone": "0498-24 71 81",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08-17; no after-hours number on the page. Out of hours see Distriktsveterinärerna Gotland on-call.",
+      "duty": "Mon–Fri 8–17; out of hours see Distriktsveterinärerna Gotland on-call.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djurkliniken-visby/",
       "source_url": "https://evidensia.se/klinik/djurkliniken-visby/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No after-hours number on the page."
     },
     {
       "kind": "clinic",
@@ -431,12 +436,13 @@
       "region": "Västra Götalands län",
       "phone": "031-450 700",
       "emergency_24h": false,
-      "duty": "Emergency 08-21 (list) - clinic page: emergency reception closed at night, staff monitor inpatients around the clock.",
+      "duty": "Emergency reception 8–21, closed at night (inpatients monitored around the clock).",
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/goteborg/vastra-djursjukhuset/mottagningar/akutmottagningen/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
       "checked": "2026-11-03",
-      "address": "August Barks gata 8, 421 32 Västra Frölunda"
+      "address": "August Barks gata 8, 421 32 Västra Frölunda",
+      "note": "Hours from list; clinic page says emergency reception closed at night."
     },
     {
       "kind": "clinic",
@@ -446,12 +452,13 @@
       "address": "Rinkebyvägen 21A, 182 36 Danderyd",
       "phone": "010-147 90 00",
       "emergency_24h": false,
-      "duty": "Emergency 08-21 (list); at night refers to AniCura Regiondjursjukhuset Bagarmossen (24 h).",
+      "duty": "Emergency 8–21; at night refers to AniCura Regiondjursjukhuset Bagarmossen (24 h).",
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
       "source_url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
       "checked": "2026-11-03",
-      "quote": "Nattetid hänvisar vi till AniCura Regiondjursjukhuset Bagarmossen som har öppet dygnet runt."
+      "quote": "Nattetid hänvisar vi till AniCura Regiondjursjukhuset Bagarmossen som har öppet dygnet runt.",
+      "note": "Hours from list."
     },
     {
       "kind": "clinic",
@@ -460,12 +467,13 @@
       "region": "Östergötlands län",
       "phone": "013-212510",
       "emergency_24h": false,
-      "duty": "Emergency care 08:15-20:00; staffed ward around the clock but emergency reception not 24 h.",
+      "duty": "Emergency care 8:15–20:00; ward staffed around the clock.",
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/ostergotland/jagarvallens-djursjukhus/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
       "checked": "2026-11-03",
-      "address": "Jägarvallsvägen 2, 584 22 Linköping"
+      "address": "Jägarvallsvägen 2, 584 22 Linköping",
+      "note": "Emergency reception not 24 h."
     },
     {
       "kind": "clinic",
@@ -500,11 +508,12 @@
       "region": "Skåne län",
       "phone": "0451-846 00",
       "emergency_24h": false,
-      "duty": "Emergency hours 08-24 (midnight); not 24 h.",
+      "duty": "Emergency hours 8–24.",
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Not 24 h."
     },
     {
       "kind": "clinic",
@@ -592,11 +601,12 @@
       "address": "Kungstensgatan 58, 113 29 Stockholm",
       "phone": "08-301900",
       "emergency_24h": false,
-      "duty": "Emergency and care clinic; opening hours not stated on the contact page; refers to other animal hospitals when closed. No 24-h claim.",
+      "duty": "Emergency and care clinic; refers to other animal hospitals when closed.",
       "small_animals": true,
       "url": "https://www.djurakuten.se/",
       "source_url": "https://www.djurakuten.se/contact",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Opening hours not stated on the contact page. No 24-h claim."
     },
     {
       "kind": "clinic",
@@ -606,11 +616,12 @@
       "address": "Danmarks-Bärby 37, 754 55 Uppsala",
       "phone": "018-444 20 00",
       "emergency_24h": false,
-      "duty": "Acute patients weekdays about 09-17, drop-in Sat 10-14, Sun 12-16; emergency phone 018-781 41 60. No 24-h claim.",
+      "duty": "Acute patients weekdays about 9–17, drop-in Sat 10–14, Sun 12–16; emergency phone 018-781 41 60.",
       "small_animals": true,
       "url": "https://www.rembacken.se/",
       "source_url": "https://www.rembacken.se/infor-besoket/akutfall/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No 24-h claim."
     },
     {
       "kind": "clinic",
@@ -682,7 +693,7 @@
       "address": "Bölevägen 92, 904 34 Umeå",
       "phone": "010-122 83 30",
       "emergency_24h": false,
-      "duty": "Clinic weekdays 08-16; page refers acutely sick animals to the Vännäs clinic.",
+      "duty": "Clinic weekdays 8–16; acutely sick animals are referred to the Vännäs clinic.",
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
@@ -1014,7 +1025,7 @@
       "address": "Spinnarvägen 3, 611 37 Nyköping",
       "phone": "0155-26 73 60",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-17:00; closed Sat-Sun; acutely ill animals seen 'i mån av plats' during opening hours.",
+      "duty": "Mon–Fri 8:00–17:00; closed Sat–Sun; acutely ill animals seen subject to availability during opening hours.",
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
@@ -1154,7 +1165,7 @@
       "address": "Söndrumsvägen 35, 302 37 Halmstad",
       "phone": "035-10 72 63",
       "emergency_24h": false,
-      "duty": "Mon 08-18, Tue/Thu/Fri 08-17, Wed 08-16 (lunch 12-13); outside hours the page links to a list of emergency clinics.",
+      "duty": "Mon 8–18, Tue/Thu/Fri 8–17, Wed 8–16 (lunch 12–13); out of hours see list of emergency clinics.",
       "small_animals": true,
       "url": "https://halmstadsdjurklinik.se/",
       "source_url": "https://halmstadsdjurklinik.se/",
@@ -1168,11 +1179,12 @@
       "address": "Anderstorg 2, 931 57 Skellefteå",
       "phone": "0910-560 04",
       "emergency_24h": false,
-      "duty": "Clinic Mon-Fri 08:00-16:30; telephone answered 07:00-22:00 on weekdays (all Lapplands clinics). 'Akutmottagning' is listed as a service but no separate emergency hours are given.",
+      "duty": "Clinic Mon–Fri 8:00–16:30; telephone answered 7:00–22:00 on weekdays (all Lapplands clinics). No separate emergency hours.",
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
       "source_url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "'Akutmottagning' is listed as a service."
     },
     {
       "kind": "clinic",
@@ -1182,11 +1194,12 @@
       "address": "Gammelstadsvägen 17, 973 34 Luleå",
       "phone": "0920-217 000",
       "emergency_24h": false,
-      "duty": "Clinic Mon-Fri 08:00-16:30; telephone answered 07:00-22:00 on weekdays (all Lapplands clinics). 'Akutmottagning' is listed as a service but no separate emergency hours are given.",
+      "duty": "Clinic Mon–Fri 8:00–16:30; telephone answered 7:00–22:00 on weekdays (all Lapplands clinics). No separate emergency hours.",
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
       "source_url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "'Akutmottagning' is listed as a service."
     },
     {
       "kind": "clinic",
@@ -1196,11 +1209,12 @@
       "address": "Nygårdsvägen 25, 781 70 Borlänge",
       "phone": "0243-844 85",
       "emergency_24h": false,
-      "duty": "Clinic 08:00-12:00 and 13:00-17:00; phone 08:00-09:00; no emergency phone or after-hours details on the page.",
+      "duty": "Clinic 8:00–12:00 and 13:00–17:00; phone 8:00–9:00.",
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",
       "source_url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No emergency phone or after-hours details on the page."
     }
   ],
   "notes": "Sweden has no national duty rota and no regional duty-rota pages were found: night/weekend cover is organised by the chains (Evidensia, AniCura) and by Distriktsveterinärerna's county on-call, which is a phone standby service, not a published rota table. 11 entries count as 24 h after independent check on 2026-11-03: 8 staffed 24-h small-animal hospitals (Bagarmossen/Stockholm, SLU UDS/Uppsala, Malmö, Helsingborg, Strömsholm, Gammelstad/Luleå, Sundsvall, Östersund) and 3 Distriktsveterinärerna phone on-call entries (Gotland, Vimmerby, Västervik) whose pages state round-the-clock vet availability explicitly and list dogs/cats. Distriktsveterinärerna Öland (Färjestaden): page says a vet is reachable around the clock but does not state that small animals are covered, so it is listed as a clinic with emergency_24h false. Notably NOT 24 h despite assumptions: Göteborg (Evidensia Göteborgs Djursjukhus to 24:00, AniCura Västra to 21:00), Linköping (Valla to 23:00, Jägarvallen to 20:00), Kungens Kurva to 22:00, Växjö, Jönköping, Kalmar, Hässleholm, Karlstad, Örebro, Västerås, Gävle. Poison line: none. No animal poison line found; Giftinformationscentralen serves humans, and Agria's sjukvårdsrådgivning is included for Agria insurance customers (not stated to be open to the public), so it is not listed. Sites not usable: svf.se (bot check page), jordbruksverket.se/sva.se. Not used: PrivatVet / vetsverige / allaveterinarer / eniro (aggregators); Skellefteå and Umeå clinics only on PrivatVet. Left to research: Umeå and Skellefteå clinics via their own sites, other Distriktsveterinärerna county on-call pages (Norrbotten, Jämtland, Västerbotten, Skåne etc.), Uppsala district DV on-call, tourist-area clinics (Åre, Dalarna, Bohuslän coast), Sörmland, Kristianstad, Halmstad, Borås, Skövde, Trollhättan, and Stockholm night options outside Bagarmossen. Follow-up 2026-11-03 (feat/M6-K-vets-se-followup): added 40 entries; 21 are Distriktsveterinärerna phone on-call entries (explicit 'dygnet runt' text plus dogs/cats on the clinic page; not staffed hospitals). DV county pages for Norrbotten, Västerbotten, Jämtland, Dalarna, Södermanland, Uppsala and Skåne checked; DV Umåker (Umeå) refers acutely sick animals to Vännäs and Haparanda/Vilhelmina pages carry no on-call text, so they are not 24 h. Still unresearched or unreachable: Borås, Trollhättan town clinics, Skövde/Halmstad night options (none found; Skövde refers to Alingsås Djursjukhus), Umeå Lapplands/Djurkliniken i Umeå own pages (not reachable, only aggregator found), Stockholm night options beyond Bagarmossen (none found; Nacka emergency to 20:00, Alvik to 21:00, Farsta to 21:00), AniCura Katrineholm/Strängnäs/Södertälje/Ängelholm pages (WebFetch refused), DV Brunflo/Sveg/Överkalix/Rimbo/Haparanda-adjacent pages, Bohuslän coast and Åre beyond Åre Djurklinik (no 24-h found), Gotland/Öland already covered."

@@ -34,7 +34,7 @@
       "address": "Ole Deviks vei 10, 0666 Oslo",
       "phone": "+47 22 68 35 00",
       "emergency_24h": true,
-      "duty": "Akuttmottak open every day, around the clock, all year",
+      "duty": "Emergency reception open every day, around the clock, all year",
       "url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/oslo-dyresykehus/",
       "quote": "Vårt akuttmottak er åpen hver dag, hele døgnet, året rundt."
@@ -49,7 +49,7 @@
       "address": "Krittveien 2, 4636 Kristiansand S",
       "phone": "38 60 15 05",
       "emergency_24h": true,
-      "duty": "Døgnåpent every day; regular hours Mon-Fri 08:00-18:00, Sat 09:00-15:00",
+      "duty": "Open 24 h every day; regular hours Mon–Fri 8–18, Sat 9–15",
       "url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/sorlandet-dyresykehus/",
       "quote": "tilbyr døgnvakt hver eneste dag hele året rundt"
@@ -64,7 +64,7 @@
       "address": "Østre Rosten 78B, 7075 Tiller, Trondheim",
       "phone": "+47 73 91 80 01",
       "emergency_24h": true,
-      "duty": "Døgnåpen smådyrvakt every day all year; regular hours Mon-Fri 07:30-20:00, Sat 09:00-16:00",
+      "duty": "24-h small-animal duty every day all year; regular hours Mon–Fri 7:30–20, Sat 9–16",
       "url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/trondheim-dyresykehus/",
       "quote": "Døgnåpen smådyrvakt!"
@@ -78,7 +78,7 @@
       "region": "Troms",
       "phone": "77 63 50 35",
       "emergency_24h": true,
-      "duty": "Akuttvakt 00 - 24",
+      "duty": "Emergency duty 00–24",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
       "note": "Address not published on the pages opened. Evidensia Tromsø Veterinærsenter is a separate clinic.",
@@ -94,7 +94,7 @@
       "address": "Greakervegen 14, Kongsvinger",
       "phone": "62 81 60 11",
       "emergency_24h": true,
-      "duty": "Akuttvakt 00 - 24; clinic hours 08:00-18:00",
+      "duty": "Emergency duty 00–24; clinic hours 8–18",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/?clinic-id=21683",
       "quote": "Akuttvakt 00 - 24"
@@ -109,7 +109,7 @@
       "address": "Oluf Thesens vei 30, Ås",
       "phone": "67 23 23 23",
       "emergency_24h": true,
-      "duty": "Døgnåpen akutt- og telefonvakt",
+      "duty": "24-h emergency and phone duty",
       "url": "https://www.nmbu.no/aktuelt/tema/veterinaerhogskolen/dyresykehuset-smadyr?page=2",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikk-osteras/akuttvakt/",
       "note": "24 h statement and phone taken from AniCura Østerås page (third-party); the NMBU pages opened did not give hours or phone. NMBU duty number 820 90 102 is given on the AniCura Eidsvoll page for after-hours/weekends.",
@@ -124,7 +124,7 @@
       "region": "Vestland",
       "url": "https://www.bergen.kommune.no/innbyggerhjelpen/kultur-idrett-og-fritid/fritid/dyrehold/veterinarvakt-i-bergen-kommune",
       "source_url": "https://www.bergen.kommune.no/innbyggerhjelpen/kultur-idrett-og-fritid/fritid/dyrehold/veterinarvakt-i-bergen-kommune",
-      "duty": "Weekly rota Fri 16:00 to next Fri 08:00, rotating between clinics (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); many weeks have NO vakt (Oct-Dec 2026). Always phone the vakt number before travelling.",
+      "duty": "Weekly rota Fri 16:00 to next Fri 08:00, rotating between clinics (Fanafjorden, Myrbø, Dyreklinikken Bergen Vest, AniCura Bergen Nord, Gården); many weeks have NO duty (Oct–Dec 2026). Always phone the duty number before travelling.",
       "note": "No small-animal vakt phone published on the page. No night emergency service when no vakt. Bergen kommune news (updated 2026-10-09): long periods without small-animal vakt 9 Oct-19 Dec 2026; new tender answer deadline 10 Nov 2026. Do not use the horse/production-animal numbers for pets."
     },
     {
@@ -137,8 +137,9 @@
       "phone": "820 90 020",
       "url": "https://evidensia.no/dyreklinikk/haugaland/",
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/",
-      "duty": "Small-animal on-call for Haugaland; hours not given",
-      "quote": "Ring smådyrvakta på Haugalandet på 820 90 020"
+      "duty": "Small-animal on-call for Haugaland",
+      "quote": "Ring smådyrvakta på Haugalandet på 820 90 020",
+      "note": "Hours not given."
     },
     {
       "small_animals": true,
@@ -176,7 +177,7 @@
       "phone": "907 69 918",
       "url": "https://www.anicura.no/klinikker/eidsvoll-dyreklinikk/kontakt/akuttvakt/",
       "source_url": "https://www.anicura.no/klinikker/eidsvoll-dyreklinikk/kontakt/akuttvakt/",
-      "duty": "Municipal vakt small and large animals; weekdays AniCura Dyresykehus Oslo 08:00-23:00; after hours/weekends NMBU vakt 820 90 102"
+      "duty": "Municipal duty service for small and large animals; weekdays AniCura Dyresykehus Oslo 08:00–23:00; after hours/weekends NMBU duty 820 90 102"
     },
     {
       "small_animals": true,
@@ -188,7 +189,7 @@
       "phone": "22 12 00 00",
       "url": "https://evidensia.no/veterinaervakt-dyrlegevakt/",
       "source_url": "https://evidensia.no/veterinaervakt-dyrlegevakt/",
-      "duty": "Evidensia Alltid 22 12 00 00 covers Oslo, Trondheim and Kristiansand around the clock; per-clinic vakt numbers listed",
+      "duty": "Evidensia Alltid 22 12 00 00 covers Oslo, Trondheim and Kristiansand around the clock; per-clinic duty numbers listed",
       "note": "Page says the Alltid number is for Oslo, Trondheim and Kristiansand and not tied to one clinic."
     },
     {
@@ -201,7 +202,7 @@
       "address": "Strandveien 134, 9006 Tromsø",
       "phone": "+47 77 65 93 10",
       "emergency_24h": false,
-      "duty": "Part of Tromsø small-animal vakt; døgnvakt every Thursday and every fourth weekend; Mon-Wed, Fri 08:00-16:00, Thu 08:00-18:30, Sat 10:00-13:00",
+      "duty": "Part of Tromsø small-animal duty; 24-h duty every Thursday and every fourth weekend; Mon–Wed, Fri 8–16, Thu 8–18:30, Sat 10–13",
       "url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
       "source_url": "https://evidensia.no/dyreklinikk/tromso-veterinaersenter/",
       "quote": "Vi har døgnvakt hver torsdag, samt hver fjerde helg."
@@ -216,7 +217,7 @@
       "address": "Austlyveien 6, 8020 Bodø",
       "phone": "75 56 52 60",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-15:30; outside hours calls forwarded to vakthavende veterinær",
+      "duty": "Mon–Fri 8:00–15:30; outside hours calls forwarded to the duty vet",
       "url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/",
       "source_url": "https://evidensia.no/dyreklinikk/bodo-dyresykehus/"
     },
@@ -243,10 +244,10 @@
       "region": "Vestland",
       "phone": "55 09 05 05",
       "emergency_24h": false,
-      "duty": "Emergency duty every evening and weekend until 22:00; not 24 h",
+      "duty": "Emergency duty every evening and weekend until 22:00",
       "url": "https://evidensia.no/dyreklinikk/fana/",
       "source_url": "https://evidensia.no/dyreklinikk/fana/akuttvakt",
-      "note": "Street address not shown on the page."
+      "note": "Street address not shown on the page. Not 24 h."
     },
     {
       "small_animals": true,
@@ -258,7 +259,7 @@
       "address": "Sandviksbodene 65B, 5035 Bergen",
       "phone": "+47 41 57 00 07",
       "emergency_24h": false,
-      "duty": "Mon-Wed, Fri 08:00-16:00, Thu 08:00-18:00; part of the Bergen small-animal vakt outside hours",
+      "duty": "Mon–Wed, Fri 8–16, Thu 8–18; part of the Bergen small-animal duty outside hours",
       "url": "https://evidensia.no/dyreklinikk/sandviken/",
       "source_url": "https://evidensia.no/dyreklinikk/sandviken/"
     },
@@ -272,7 +273,7 @@
       "address": "Smidjebergveien 2, 4265 Håvik",
       "phone": "+47 52 82 09 80",
       "emergency_24h": false,
-      "duty": "Mon, Wed-Fri 08:30-16:00, Tue 08:30-21:00; smådyrvakta 820 90 020",
+      "duty": "Mon, Wed–Fri 8:30–16, Tue 8:30–21; small-animal duty 820 90 020",
       "url": "https://evidensia.no/dyreklinikk/haugaland/",
       "source_url": "https://evidensia.no/dyreklinikk/haugaland/"
     },
@@ -286,9 +287,10 @@
       "address": "Lalandsvegen 441, 4341 Bryne",
       "phone": "+47 51 22 55 20",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-18:00, Sat 09:00-16:00; not part of an akuttvaktordning",
+      "duty": "Mon–Fri 8–18, Sat 9–16",
       "url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
-      "source_url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/"
+      "source_url": "https://evidensia.no/dyreklinikk/rogaland-dyresykehus/",
+      "note": "Not part of an akuttvaktordning (emergency duty scheme)."
     },
     {
       "small_animals": true,
@@ -385,7 +387,7 @@
       "address": "Hoffsveien 70c, 0377 Oslo",
       "phone": "21 52 53 00",
       "emergency_24h": false,
-      "duty": "Akuttvakt 08:00-21:00 (call ahead)",
+      "duty": "Emergency duty 8–21 (call ahead)",
       "url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
       "source_url": "https://www.anicura.no/klinikker/dyresykehus-oslo/",
       "note": "Sandvika page says Oslo is staffed around the clock for urgent cases and Eidsvoll meta says hele døgnet, but own pages show 08:00-21:00, so not marked 24 h."
@@ -398,7 +400,7 @@
       "city": "Oslo",
       "region": "Oslo",
       "phone": "23 03 15 00",
-      "duty": "Akuttvakt 08:00-19:00",
+      "duty": "Emergency duty 8–19",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -410,7 +412,7 @@
       "city": "Oslo",
       "region": "Oslo",
       "phone": "22 51 58 00",
-      "duty": "Akuttvakt 08:00-15:30",
+      "duty": "Emergency duty 8–15:30",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -436,7 +438,7 @@
       "city": "Trondheim",
       "region": "Trøndelag",
       "phone": "72 88 77 00",
-      "duty": "Akuttvakt 08:00-19:00",
+      "duty": "Emergency duty 8–19",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/",
       "note": "Listed as Tiller."
@@ -449,7 +451,7 @@
       "city": "Rådal (Bergen)",
       "region": "Vestland",
       "phone": "55 11 60 60",
-      "duty": "Akuttvakt 08:00-17:00",
+      "duty": "Emergency duty 8–17",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -461,7 +463,7 @@
       "city": "Ulset (Bergen)",
       "region": "Vestland",
       "phone": "55 53 52 20",
-      "duty": "Akuttvakt 08:00-16:00; takes part in Bergen vakt rota",
+      "duty": "Emergency duty 8–16; takes part in Bergen duty rota",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -473,7 +475,7 @@
       "city": "Straume",
       "region": "Vestland",
       "phone": "56 32 14 20",
-      "duty": "Akuttvakt 08:00-16:00",
+      "duty": "Emergency duty 8–16",
       "url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/",
       "source_url": "https://www.anicura.no/klinikker/dyreklinikken-sotra/kontakt/veterinarvakt-bergen/"
     },
@@ -485,7 +487,7 @@
       "city": "Kristiansand",
       "region": "Agder",
       "phone": "380 95 500",
-      "duty": "Akuttvakt 08:00-18:00",
+      "duty": "Emergency duty 8–18",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -497,7 +499,7 @@
       "city": "Sandnes",
       "region": "Rogaland",
       "phone": "51 66 69 98",
-      "duty": "Akuttvakt 08:00-19:00",
+      "duty": "Emergency duty 8–19",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -509,7 +511,7 @@
       "city": "Hafrsfjord",
       "region": "Rogaland",
       "phone": "51 89 20 02",
-      "duty": "Akuttvakt 08:00-18:00",
+      "duty": "Emergency duty 8–18",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -521,7 +523,7 @@
       "city": "Gjøvik",
       "region": "Innlandet",
       "phone": "61 13 73 33",
-      "duty": "Akuttvakt 08:00-19:00",
+      "duty": "Emergency duty 8–19",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -533,7 +535,7 @@
       "city": "Elverum",
       "region": "Innlandet",
       "phone": "62 41 16 60",
-      "duty": "Akuttvakt 08:00-16:00",
+      "duty": "Emergency duty 8–16",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -545,7 +547,7 @@
       "city": "Molde",
       "region": "Møre og Romsdal",
       "phone": "+47 71 25 44 20",
-      "duty": "Akuttvakt 08:00-16:00",
+      "duty": "Emergency duty 8–16",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     },
@@ -557,7 +559,7 @@
       "city": "Harstad",
       "region": "Troms",
       "phone": "77 06 13 20",
-      "duty": "Akuttvakt 08:00-18:00",
+      "duty": "Emergency duty 8–18",
       "url": "https://www.anicura.no/klinikker/",
       "source_url": "https://www.anicura.no/akuttkliniker/"
     }
