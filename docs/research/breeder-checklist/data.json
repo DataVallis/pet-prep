@@ -3407,6 +3407,44 @@
       "status": "not_found",
       "tests": [],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/utility/chow-chow; the thekennelclub.org.uk address redirects there) could not be fetched on 2026-11-04 → no minimum / best_practice level. PDSA (dog-data S700) and PetMD (S701) name conditions (hip / elbow dysplasia, entropion, hypothyroidism) but no tests; DogWellNet (IPFD) lists test categories only by country, without naming a scheme — not used. Show the general dog checklist only."
+    },
+    "old_english_sheepdog": {
+      "status": "listed",
+      "basis": {
+        "source_id": "K41",
+        "quote": "Hip Evaluation"
+      },
+      "tests": [
+        {
+          "key": "hip_scheme",
+          "level": "other_scheme",
+          "name": "Hip evaluation of breeding dogs (US breed club recommendation)",
+          "source_id": "K41",
+          "quote": "Hip Evaluation"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "other_scheme",
+          "name": "Eye examination by a veterinary ophthalmologist (US breed club recommendation)",
+          "source_id": "K41",
+          "quote": "Ophthalmologist Evaluation"
+        },
+        {
+          "key": "thyroid_scheme",
+          "level": "other_scheme",
+          "name": "Thyroid testing of breeding dogs (US breed club recommendation)",
+          "source_id": "K41",
+          "quote": "Thyroid Evaluation"
+        },
+        {
+          "key": "dna_eic",
+          "level": "other_scheme",
+          "name": "DNA test for exercise-induced collapse (EIC) (US breed club recommendation)",
+          "source_id": "K41",
+          "quote": "Exercise-Induced Collapse (EIC) - DNA Test"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/pastoral/old-english-sheepdog; the thekennelclub.org.uk address redirects there) could not be fetched on 2026-11-04 → no RKC minimum / best_practice level. AKC Herding Group health-testing page (K41): 'Recommended Health Tests from the National Breed Club' 'Hip Evaluation', 'Ophthalmologist Evaluation', 'Thyroid Evaluation', 'Exercise-Induced Collapse (EIC) - DNA Test' → other_scheme. No new key."
     }
   }
 }
