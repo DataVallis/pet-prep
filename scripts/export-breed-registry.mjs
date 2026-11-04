@@ -476,6 +476,7 @@ const SPECIES = [
       { id: 'anatolian_shepherd_dog', synonyms: { en: ['Anatolian Shepherd', 'Kangal Shepherd Dog', 'Karabash'], sl: ['anatolski pastirski pes', 'kangal', 'kangalski ovčar'] } },
       { id: 'pekingese', synonyms: { en: ['Peke', 'Pekinese', 'Lion Dog'], sl: ['pekinez', 'pekinški pes', 'peke'] } },
       { id: 'chow_chow', synonyms: { en: ['Chow', 'Chow-Chow'], sl: ['chow chow', 'čau-čau', 'čau'] } },
+      { id: 'old_english_sheepdog', synonyms: { en: ['Bobtail', 'Bob-tail', 'OES', "Shepherd's Dog"], sl: ['bobtail', 'bobtejl', 'staroangleški ovčar bobtail'] } },
     ],
   },
   {
@@ -2452,6 +2453,28 @@ const DOG_FACTS = {
       ['hypothyroidism', 'health.hypothyroidism'],
     ],
   },
+  // M5-R10-93. The RKC page was not reachable → PDSA (S705): height 56–61 cm, average weight 27–30 kg, lifespan 'Over 10 years'
+  // + PetMD 10–12 y (S706), exercise 'minimum 2 hours' (at_least), coat 'Long', grooming 'a daily brush' (Every day). Shedding not
+  // exported: PDSA 'shed surprisingly little' (if brushed) vs Dogs Trust 'shed heavily' (S707) conflict. Coren rank 63. FCI origin
+  // Great Britain (GB). Not exported: lifespan.dogs_trust (same band), lifespan.mcmillan_2024 (null, 12.1 y only via Wikipedia) /
+  // senior_from, health.pcd (no register key yet — a new key needs words in every website language), health.mdr1
+  // (PetMD name only). No new health key.
+  old_english_sheepdog: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.old_english_sheepdog.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['bloat_gdv', 'health.gdv'],
+      ['deafness', 'health.deafness'],
+      ['cataracts', 'health.eyes'],
+    ],
+  },
 
 
 };
@@ -2508,6 +2531,7 @@ export const DOG_CARE_TASKS = {
   brussels_griffon: [['fold_cleaning', 1, 7, 'proposed_game_parameters.brussels_griffon.face_fold_cleaning'], ['tooth_brushing', 7, 7, 'proposed_game_parameters.brussels_griffon.tooth_brushing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.brussels_griffon.professional_grooming']],
   irish_setter: [['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_setter.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.irish_setter.nail_trimming']],
   anatolian_shepherd_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing']],
+  old_english_sheepdog: [['groomer_visit', 1, 42, 'proposed_game_parameters.old_english_sheepdog.professional_grooming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3218,6 +3242,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.chow_chow.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.chow_chow.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.chow_chow.exercise_minutes_senior',
+  },
+  old_english_sheepdog: {
+    adult_minutes: ['proposed_game_parameters.old_english_sheepdog.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.old_english_sheepdog.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.old_english_sheepdog.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.old_english_sheepdog.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.old_english_sheepdog.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.old_english_sheepdog.exercise_minutes_senior',
   },
 
 

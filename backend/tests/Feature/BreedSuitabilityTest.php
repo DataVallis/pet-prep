@@ -474,7 +474,7 @@ it('gives the Cane Corso the new not_for_small_children and drools tags, active_
         if (! in_array($breed, [BreedType::CaneCorso, BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::Bullmastiff], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('drools');
         }
-        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow], true)) {
+        if (! in_array($breed, [BreedType::CaneCorso, BreedType::Dobermann, BreedType::Boxer, BreedType::GreatDane, BreedType::BelgianMalinois, BreedType::HungarianVizsla, BreedType::Mastiff, BreedType::RhodesianRidgeback, BreedType::Dalmatian, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::Bullmastiff, BreedType::PyreneanMountainDog, BreedType::IrishWolfhound, BreedType::AlaskanMalamute, BreedType::AnatolianShepherdDog, BreedType::ChowChow, BreedType::OldEnglishSheepdog], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('not_for_small_children');
         }
     }
@@ -533,7 +533,7 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
     // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39), the Hungarian Vizsla (PDSA S329, M5-R10-40), the English Cocker Spaniel (PDSA S339, M5-R10-41) the Maltese (PetMD S351, M5-R10-42), the Pug (PDSA S357, M5-R10-43), the Rough Collie (PetMD S368, M5-R10-44), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Papillon (PetMD S400, M5-R10-48), the Bichon Frise (VCA S414, M5-R10-50), the Newfoundland (PetMD S424, M5-R10-51), the Dalmatian (PDSA S430, M5-R10-52), the Whippet (PDSA S444, M5-R10-54), the Chesapeake Bay Retriever (PetMD S461, M5-R10-56), the Samoyed (PDSA S467, M5-R10-57), the Scottish Terrier (PetMD S475, M5-R10-58), the Weimaraner (PetMD S481, M5-R10-59), the Giant Schnauzer (PetMD S497, M5-R10-61), the Akita (PDSA S508, M5-R10-63), the German Wirehaired Pointer (PetMD S524, M5-R10-65), the Saint Bernard (PetMD S533, M5-R10-66), the Staffordshire Bull Terrier (PDSA S540, M5-R10-67), the Airedale Terrier (PetMD S549, M5-R10-68), the Bull Terrier (PDSA S591, M5-R10-76), the Soft Coated Wheaten Terrier (PetMD S613, M5-R10-79) and the American Staffordshire Terrier (PetMD S628, M5-R10-81) and the Lagotto Romagnolo (Woodgreen S636, M5-R10-82) and the Alaskan Malamute (PDSA S639, M5-R10-83) and the Rat Terrier (PetMD S648, M5-R10-85) and the Brussels Griffon (PetMD S672, M5-R10-88) and the Irish Setter (PetMD S679, M5-R10-89) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::Whippet, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Akita, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::Bullmastiff, BreedType::BullTerrier, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::RatTerrier, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::Pekingese, BreedType::ChowChow], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::Whippet, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Akita, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::Bullmastiff, BreedType::BullTerrier, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::RatTerrier, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         // M5-R10-71: the Bullmastiff (PDSA S568 BOAS "caused by their shorter faces"); M5-R10-87: the Shar Pei (PDSA S660 BOAS
@@ -622,6 +622,8 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         BreedType::SharPei->value => 'shar_pei.behaviour.other_pets',
         // M5-R10-92: PDSA S700 "The Chow Chow breed history includes hunting, so a high prey drive can come quite naturally to them."
         BreedType::ChowChow->value => 'chow_chow.behaviour.other_pets',
+        // M5-R10-93: PDSA S705 "Remember to keep a tight grip on your dog's lead while out, as the herding and prey drive is quite strong"
+        BreedType::OldEnglishSheepdog->value => 'old_english_sheepdog.behaviour.other_pets',
     ];
 
     foreach (BreedType::cases() as $breed) {
@@ -639,8 +641,9 @@ it('gives chases_small_pets only to the ten breeds whose own entry quotes a high
         $entry = collect(config("breed_suitability.breeds.{$breed->value}.consider"))->firstWhere('tag', 'chases_small_pets');
         expect($entry['refs'])->toContain($expected[$breed->value]);
         foreach ($entry['refs'] as $ref) {
-            // Every ref is a verbatim quote naming a high (or strong) prey drive.
-            expect(bsEntry($ref)['quote'])->toMatch('/(high|strong) prey drive/');
+            // Every ref is a verbatim quote naming a high (or strong) prey drive (M5-R10-93 Old English Sheepdog, PDSA S705:
+            // "… the herding and prey drive is quite strong").
+            expect(bsEntry($ref)['quote'])->toMatch('/(high|strong) prey drive|prey drive is quite strong/');
         }
     }
 

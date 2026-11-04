@@ -609,6 +609,13 @@ return [
         ['key' => 'blue', 'value' => 'solid blue (slate grey)', 'en' => 'Blue', 'sl' => 'Moder (skrilasto siv)'],
         ['key' => 'white', 'value' => 'solid white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-93: FCI-Standard N° 16 (S703) "Any shade of grey, grizzle or blue." with a white head, neck, forequarters and
+    // underbelly — three standard colours; grey first (= the portrait default).
+    'old_english_sheepdog' => [
+        ['key' => 'grey-white', 'value' => 'grey body and hindquarters with a white head, neck, forequarters and underbelly', 'en' => 'Grey and white', 'sl' => 'Sivo-bel'],
+        ['key' => 'blue-white', 'value' => 'blue body and hindquarters with a white head, neck, forequarters and underbelly', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
+        ['key' => 'grizzle-white', 'value' => 'grizzle body and hindquarters with a white head, neck, forequarters and underbelly', 'en' => 'Grizzle and white', 'sl' => 'Sivo prošarano-bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

@@ -757,6 +757,12 @@ class FalAiService
                 .'with a full mane around the head and neck (not excessive in length), solid red, a broad flat skull with a broad muzzle of moderate length '
                 .'(not a flat face) and a large black nose, dark oval eyes that are clean and open, small thick erect ears tilting forward, '
                 .'a tail set high and carried well over the back, proud and dignified expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-93: FCI-Standard N° 16 (S703) — a strong, square, shaggy sheepdog; grey body with a white head, neck and
+            // forequarters; natural (undocked) tail.
+            BreedType::OldEnglishSheepdog => 'A strong, square, symmetrical Old English Sheepdog, a profuse, harsh, shaggy coat (not curly) '
+                .'covering the whole body, grey body and hindquarters with a white head, neck, forequarters and underbelly, a capacious square head '
+                .'with a strong, square muzzle and a large black nose, dark eyes partly hidden by the fringe, small ears carried flat to the head, '
+                .'a natural, well-feathered tail, gentle and even-tempered expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1831,6 +1837,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'profuse, dense, straight stand-off rough coat with a full mane',
                 'markings' => 'whole-coloured, black nose, moderate broad muzzle, clean open eyes, never patches, parti-colour or merle',
+            ],
+            // M5-R10-93: grey, grizzle or blue with white (FCI S703) — never brown or merle.
+            BreedType::OldEnglishSheepdog => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1 => 'grey body with a white head, neck, forequarters and underbelly',
+                    2 => 'blue-grey body with a white head, neck, forequarters and underbelly',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'profuse, harsh, shaggy coat, not straight and free from curl',
+                'markings' => 'white head and forequarters, black nose, natural feathered tail, never brown or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

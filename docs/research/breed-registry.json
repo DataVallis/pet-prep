@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "00df3fbcbdde5554c6cc6948e90ea22c0c65632fdec8d9fa7eb1cf6ed2a8e151"
+      "sha256": "c5d9aceb371a4f91a6ec24b5de4418feb0082c3e64bb786307e2401298b5f7a2"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "cc18dd305fa312027091ab41d968faac71a29c4a2851c53ffd73d49e096c6a91"
+      "sha256": "d12e6bf08cf59fca9c88a612ec4028cc9b05b4970fc950fed5c4085e286d11a7"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "adff1b6e5fb8126449166a4fc39748943d26472a29e2c1265f6954c3eeb2c623"
+      "sha256": "14098d91eb0d5d12d6e02bfb21892b248cd3bed3d9f4ee464c475b2ff82f7ed2"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "e5058c8ae19ccb609fdcf27b6beaa58c858e8d734409a4c30f2ad5297337c497"
+      "sha256": "3a80c6d6501fcfc201c3735fa37bd0291b54e102d5db8e9d8944340d9f0bd565"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "a36ca37aac2cc85499f4b3ad8d91bd3d41a09660045aa2a75f7ecf13e349cd6d"
+      "sha256": "62da0a49fe38c5f8c8ee9220c7e1f43086f387b69d30ea0b573fefb301a7ede5"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "bade4b9698cdaa8ff5aa53f35e4c723d732ea41bd4f189f0c7ab1f0666e553f7"
+      "sha256": "5fa3fa8fa8c12d06d3d292ee18fce9a6ab6d9c2a8b7443ea967399d0e42ce417"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "c8557cf3b2ca8db15f99603b847762b986b08867e73d8bc523071cd55d3ba6d3"
+      "sha256": "f9f817d19052b561166c6c5fa24b94aba410ad64a3ec3c9edc5c559042b71c77"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "b48058e9d5b719456e9320afa2888e15d72d9284a153aa368b41db1fb2d9a09d"
+      "sha256": "b59e781a5a310e17e78a0e3267462ba54dc01095915993b390585792af48ff36"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 86,
+      "breed_count": 87,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -52142,6 +52142,590 @@
       ]
     },
     {
+      "id": "old_english_sheepdog",
+      "species": "dog",
+      "order": 86,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Old English Sheepdog",
+        "sl": "Staroangleški ovčar"
+      },
+      "slug": {
+        "en": "old-english-sheepdog",
+        "sl": "staroangleski-ovcar"
+      },
+      "synonyms": {
+        "en": [
+          "Bobtail",
+          "Bob-tail",
+          "OES",
+          "Shepherd's Dog"
+        ],
+        "sl": [
+          "bobtail",
+          "bobtejl",
+          "staroangleški ovčar bobtail"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "over_2h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              56,
+              61
+            ],
+            "female": [
+              56,
+              61
+            ]
+          },
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.height.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              27,
+              30
+            ],
+            "female": [
+              27,
+              30
+            ]
+          },
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "old_english_sheepdog.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            10,
+            12
+          ],
+          "source_ids": [
+            "S706"
+          ],
+          "ref": "old_english_sheepdog.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 120,
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "proposed_game_parameters.old_english_sheepdog.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 63,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "old_english_sheepdog.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 16,
+            "group": 1,
+            "section": 1,
+            "origin": "GB"
+          },
+          "source_ids": [
+            "S704"
+          ],
+          "ref": "old_english_sheepdog.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.health.gdv",
+          "confidence": "medium"
+        },
+        {
+          "key": "deafness",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.health.deafness",
+          "confidence": "medium"
+        },
+        {
+          "key": "cataracts",
+          "source_ids": [
+            "S705"
+          ],
+          "ref": "old_english_sheepdog.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.exercise.adult",
+              "old_english_sheepdog.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.family"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.exercise.adult",
+              "old_english_sheepdog.suitability.pdsa_exercise"
+            ]
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.children"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S705",
+              "S706"
+            ],
+            "refs": [
+              "old_english_sheepdog.suitability.pdsa_grooming",
+              "old_english_sheepdog.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 12000,
+              "cap_month": 12
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_range",
+              "from": 9000,
+              "to": 12000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 12000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 9000
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 12000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 120,
+              "steps": 12000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.7
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 42
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S705"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S705 'minimum of two hours')"
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S705"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 63, Fair, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.grooming",
+            "basis_source_ids": [
+              "S705"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »a daily brush«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.old_english_sheepdog.professional_grooming",
+            "basis_source_ids": [
+              "S705"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every six weeks or so« → 6 tednov = 42 dni"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S705"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "hip_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K41"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K41"
+            ]
+          },
+          {
+            "key": "thyroid_scheme",
+            "level": "other_scheme",
+            "source_ids": [
+              "K41"
+            ]
+          },
+          {
+            "key": "dna_eic",
+            "level": "other_scheme",
+            "source_ids": [
+              "K41"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "K41"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S704",
+        "S705",
+        "S706",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19",
+        "K41"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -57686,6 +58270,27 @@
       "url": "https://www.petmd.com/dog/breeds/chow-chow"
     },
     {
+      "id": "S704",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Old English Sheepdog (16)",
+      "url": "https://fci.be/en/nomenclature/OLD-ENGLISH-SHEEPDOG-16.html"
+    },
+    {
+      "id": "S705",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Old English Sheepdog breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/large-dogs/old-english-sheepdog"
+    },
+    {
+      "id": "S706",
+      "tier": "B",
+      "publisher": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated 2023-07-24)",
+      "title": "Old English Sheepdog",
+      "url": "https://www.petmd.com/dog/breeds/c_dg_old_english_sheepdog"
+    },
+    {
       "id": "C1",
       "tier": "A (via B summary)",
       "publisher": "AAHA / AAFP, *JFMS* / *JAAHA* 2021. Read through the AVMA JAVMA News summary of 2021-04-15.",
@@ -58132,6 +58737,13 @@
       "publisher": "Dogs NSW (from Dogs Australia; Dr Arthur House, Chief Assessor Australia, Respiratory Function Grading Scheme)",
       "title": "From Dogs Australia: Updated list of breeds that can be assessed under the RFG scheme (April 2026)",
       "url": "https://www.dogsnsw.org.au/about-us/news-updates/2026/april/from-dogs-australia-updated-list-of-breeds-that-can-be-assessed-under-the-rfg-scheme/"
+    },
+    {
+      "id": "K41",
+      "tier": "B",
+      "publisher": "American Kennel Club",
+      "title": "Herding Group Health Testing Requirements (breeder programs)",
+      "url": "https://www.akc.org/breeder-programs/breed-health-testing-requirements/herding-group-health-testing-requirements/"
     }
   ]
 }

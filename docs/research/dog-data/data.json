@@ -48275,6 +48275,447 @@
       }
     }
   },
+  "old_english_sheepdog": {
+    "_note": "Added 2026-11-04 (M5-R10-93, unattended run — appended after the Chow Chow: AKC 2024 No. 89 'Old English Sheepdog', S174 full-list table '89 | Old English Sheepdog'). Quotes as returned by the web-fetch tool on 2026-11-04 (fragments marked as such); paraphrase only in notes, marked '(paraphrase)'. The RKC Breeds A–Z page and the RKC breed standard (thekennelclub.org.uk → royalkennelclub.com redirect refused by the fetch tool) and the Dogs Trust McMillan 2024 table (S123) were not reachable → PDSA (S705) for exercise, weight, lifespan band and suitability; FCI-Standard N° 16 (S703) for identity, height and appearance.",
+    "identity": {
+      "value": "FCI No. 16, Group 1 Section 1 (Sheepdogs), Great Britain",
+      "unit": "—",
+      "source_id": "S704",
+      "quote": "OLD ENGLISH SHEEPDOG",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S704, as returned): 'OLD ENGLISH SHEEPDOG' (16), group 'n°1 - Sheepdogs and Cattledogs (except Swiss Cattledogs)', section 'Sheepdogs', country of origin 'GREAT BRITAIN', definitive acceptance 11/25/1963. FCI-Standard N° 16 (S703): 'Group 1 Sheepdogs and Cattle Dogs (except Swiss Cattle Dogs). Section 1 Sheepdogs.'; ORIGIN 'Great Britain.'"
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S705",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S705, value as returned). 27-30 kg ≈ 60–66 lb (PDSA) and PetMD 60–100 lb (S706) → S10 class 'Large (59–99 pounds)' for growth."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            56,
+            61
+          ],
+          "female": [
+            56,
+            61
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S705",
+        "quote": "56-61 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S705), one range for both sexes (stored per sex). FCI-Standard N° 16 (S703) gives minimums only: 'Males 61 cms and upwards.' / 'Females 56 cms and upwards.' — the PDSA range spans exactly the two FCI minimums."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            27,
+            30
+          ],
+          "female": [
+            27,
+            30
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S705",
+        "quote": "27-30 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S705), one range for both sexes (stored per sex). The FCI standard (S703) gives no weight ('The standard does not specify a weight' — tool summary). PetMD (S706): '(60–100 pounds)' (fragment, no sex split). Wikipedia (S708, tier C) males 36–46 kg, females 30–40 kg — background only."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA size 'Large' (S705), PetMD 60–100 lb (S706). No breed source gives the age of full growth."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Old English Sheepdog growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S705",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S705, value as returned). The basis of the senior boundary (Claude's proposal — the runbook's lifespan list names McMillan 2024, a VetCompass median and the RKC lower bound; none was reachable; the PDSA band has the same form as the RKC band; Basenji / Pekingese precedent). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "petmd": {
+        "value": "10–12",
+        "unit": "years",
+        "source_id": "S706",
+        "quote": "a life span of 10–12 years",
+        "confidence": "medium",
+        "notes": "PetMD (S706, tier B, US) fragment as returned. Consistent with the PDSA lower bound."
+      },
+      "dogs_trust": {
+        "value": "10+",
+        "unit": "years",
+        "source_id": "S707",
+        "quote": "typically 10+ years",
+        "confidence": "medium",
+        "notes": "Dogs Trust breed page (S707) — consistent with the PDSA band."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Nature PDF (S54) has the breed estimates only in Supplementary Table 3 (not reached; 'Old English Sheepdog' only as a Fig. 5 phylogeny label, per the fetch tool); the Dogs Trust breed table (S123) was not in the fetch tool's provenance. Wikipedia (S708, tier C): life expectancy '12.1 years' citing McMillan 2024 (paraphrase) — would give 0.75 × 12.1 × 12 = 108.9 → 109. Verify in S123 before replacing the PDSA lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived (Claude's proposal, waiting for David): AAHA senior = last 25 % of lifespan (S11) × 10 y (PDSA lower bound 'Over 10 years', S705) → 0.75 × 10 = 7.5 y = 90 months. PetMD lower bound 10 y (S706) gives the same. McMillan 12.1 y via Wikipedia (tier C) would give 109; Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S705"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 120",
+        "unit": "minutes/day",
+        "source_id": "S705",
+        "quote": "Your Old English Sheepdog will need a minimum of two hours exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S705) exercise sentence; key fact 'Minimum exercise' '2 hours' (as returned). Runbook rule 'minimum N' → 120 (the RKC page was not reachable, PDSA next). PDSA: 'This should be split into several walks with off-lead time in a secure area, spread across the day.' PetMD (S706): 'need daily physical and mental enrichment' (no number). Dogs Trust (S707): 'daily walks, plus plenty of time and opportunity to explore, burn energy, and play.' (no number)."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S705), in the feeding section; PDSA lists Gastric Dilatation Volvulus ('bloat'). Basis of the 60-minute 'wait with the walk' warning (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "biddable, even disposition; bold, faithful, trustworthy",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "A biddable dog of even disposition.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 16 (S703); 'Bold, faithful and trustworthy, with no suggestion of nervousness or unprovoked aggression.' PDSA (S705): very attached to their owners (paraphrase); 'They have a loud, deep bark so remember this if you have close neighbours!'"
+      },
+      "family": {
+        "value": "easy-going, popular family pets",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Old English Sheepdogs have such easy-going personalities that they have quickly become popular family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S705). Basis of family_pet."
+      },
+      "children": {
+        "value": "better suited to families with older children; supervise around children",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "they are better suited to families with older children who can recognise when playtime is getting too much.",
+        "confidence": "high",
+        "notes": "PDSA (S705) fragment as returned; supervision with children and vulnerable adults advised (paraphrase). PetMD (S706): 'Interactions with small children should be closely monitored to avoid their being unintentionally harmed.' Basis of not_for_small_children (a large dog, Cane Corso precedent)."
+      },
+      "other_pets": {
+        "value": "strong herding and prey drive — better without smaller pets",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Remember to keep a tight grip on your dog's lead while out, as the herding and prey drive is quite strong",
+        "confidence": "high",
+        "notes": "PDSA (S705) fragment as returned; 'Old English Sheepdogs do have strong hunting instincts, so it's probably better not to have smaller pets with your dog.'; generally fine with cats they grew up with, supervise with other pets (paraphrase). Basis of chases_small_pets (runbook: a quote naming a strong prey drive)."
+      },
+      "time_alone": {
+        "value": "can suffer from separation anxiety, even for short periods",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "They can suffer from separation anxiety when left alone, even for very short periods",
+        "confidence": "high",
+        "notes": "PDSA (S705) fragment as returned. Basis of needs_company; never often_alone."
+      },
+      "socialisation": {
+        "value": "a well-socialised dog grows into a happy, confident dog",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "a well-socialised Old English Sheepdog is likely to grow into a happy and confident dog.",
+        "confidence": "high",
+        "notes": "PDSA (S705) fragment as returned (a condition — runbook M5-R17: 'if socialised correctly …' form). Basis of the breed's own socialisation row."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found. PDSA (S705): 'Treats shouldn't make up more than 10% of their daily calorie intake' — general advice, not used."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch category not fetched (page refused) → no Breed Watch chip; open for David.",
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S705) list item (name only as returned). PetMD (S706) also lists hip dysplasia. No Breed Watch quote → no hips_hind_legs chip."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat)",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S705) list item 'Gastric Dilatation Volvulus (GDV, often called \"bloat\")' (name as returned). Basis of the meal / exercise gap warning (exercise.after_meals)."
+      },
+      "deafness": {
+        "value": "deafness",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S705) list item; PetMD (S706) 'Congenital deafness' (name only)."
+      },
+      "eyes": {
+        "value": "eye problems — hereditary cataracts",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S705) list item: eye problems, including hereditary cataracts and congenital hereditary cataracts (names as returned). PetMD (S706) also names progressive retinal atrophy. PetMD: 'Check their eyes daily for potential problems, especially after outside play.' — no care-task kind for eyes (runbook »Breed care tasks«)."
+      },
+      "pcd": {
+        "value": "primary ciliary dyskinesia",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S705) list item 'Primary Ciliary Dyskinesia' (name only); PetMD (S706) lists it too."
+      },
+      "mdr1": {
+        "value": "multidrug (MDR1) drug sensitivity",
+        "unit": "—",
+        "source_id": "S706",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PetMD (S706) list item 'Multidrug (MDR1) drug sensitivity' (name only). Background only (not exported)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 63,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 63 | Old English Sheepdog |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-04): rank 63 (table row as returned); tier 'Fair Working/Obedience Intelligence' (ranks 55–69). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Fair",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 55–69 (as returned: 'Fair Working/Obedience Intelligence')."
+      },
+      "training_notes": {
+        "value": "positive, reward-based training from a young age",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "positive, reward-based training from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S705) fragment as returned ('start positive, reward-based training from a young age' — paraphrase of the full sentence)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.old_english_sheepdog.learning_multiplier (0.7, runbook rule: Fair tier, rank 63).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "strong, square-looking, great symmetry and soundness; profuse shaggy coat",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Strong, square-looking dog of great symmetry and overall soundness.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 16 (S703)."
+      },
+      "colours": {
+        "value": [
+          "grey and white",
+          "grizzle and white",
+          "blue and white"
+        ],
+        "unit": "list",
+        "source_id": "S703",
+        "quote": "Any shade of grey, grizzle or blue.",
+        "confidence": "high",
+        "notes": "FCI (S703): 'Any shade of grey, grizzle or blue.'; 'Body and hindquarters of solid colour with or without white socks.'; 'White patches in the solid area to be discouraged.'; 'Head, neck, forequarters and under belly to be white with or without markings.'; 'Any shade of brown undesirable.' → never brown, never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): grey and white 0.5 (the portrait default), blue and white 0.3, grizzle and white 0.2."
+      },
+      "coat": {
+        "value": "profuse, harsh, shaggy, not straight, free from curl",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Profuse, of good harsh texture, not straight, but shaggy and free from curl.",
+        "confidence": "high",
+        "notes": "FCI (S703)."
+      },
+      "head": {
+        "value": "capacious, rather square skull; strong, square, truncated muzzle; large black nose, wide nostrils",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Strong, square and truncated.",
+        "confidence": "high",
+        "notes": "FCI (S703) muzzle; skull 'Capacious, rather square.'; nose 'Large and black.', 'Nostrils wide.' Not a flat-faced breed."
+      },
+      "eyes": {
+        "value": "dark or wall eyes; two blue eyes acceptable",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Dark or wall eyes. Two blue eyes acceptable. Light eyes undesirable.",
+        "confidence": "high",
+        "notes": "FCI (S703). The portrait shows dark eyes (often hidden by the coat)."
+      },
+      "ears": {
+        "value": "small, carried flat to the side of the head",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Small and carried flat to side of head.",
+        "confidence": "high",
+        "notes": "FCI (S703)."
+      },
+      "tail": {
+        "value": "customarily docked in the standard; natural tail well feathered",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Natural carriage. Well feathered with abundant hardtextured coat.",
+        "confidence": "high",
+        "notes": "FCI (S703): docked 'Customarily completely docked.'; undocked 'Natural carriage. Well feathered with abundant hardtextured coat.' The game draws the natural (undocked) tail — Claude's proposal (German Shorthaired Pointer / Rottweiler precedent), open for David."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA key facts and text (S705), PetMD (S706), Dogs Trust (S707). The RKC Breeds A–Z page was refused by the fetch tool → no rkc_* key facts (no apartment / large_home chip).",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S705)."
+      },
+      "pdsa_exercise": {
+        "value": "2 hours",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise' (S705). Basis of active_family / long_daily_exercise."
+      },
+      "pdsa_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Long",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S705)."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "They have long fur which will need a daily brush to make sure it doesn't get matted and tangled.",
+        "confidence": "high",
+        "notes": "PDSA (S705) — daily brushing → 7 per week (runbook dog-grooming rule 'every day' → 7). PetMD (S706): 'spend three to four hours every week thoroughly brushing it out' — alternative (no session count). Basis of frequent_grooming.",
+        "alternatives": {
+          "petmd_hours_per_week": "spend three to four hours every week thoroughly brushing it out"
+        }
+      },
+      "pdsa_groomer": {
+        "value": "professional trim every six weeks or so",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "you will need to take your dog to a professional groomer for a regular trim every six weeks or so.",
+        "confidence": "high",
+        "notes": "PDSA (S705) fragment as returned. Basis of the groomer reminder (M5-R18, every 6 program weeks). PetMD (S706): 'Regular trims at the groomer' (no frequency)."
+      },
+      "pdsa_shedding": {
+        "value": "little if brushed regularly",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "if you make sure you regularly brush your Old English Sheepdog, they'll shed surprisingly little.",
+        "confidence": "medium",
+        "notes": "PDSA (S705) fragment as returned. Dogs Trust (S707): 'Old English Sheepdogs shed heavily.' — sources conflict → neither sheds nor low_shedding (runbook)."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S705",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S705)."
+      },
+      "petmd_grooming": {
+        "value": "at least three hours a week of brushing; regular trims at the groomer",
+        "unit": "—",
+        "source_id": "S706",
+        "quote": "you do need to set aside a minimum of three or four hours a week",
+        "confidence": "high",
+        "notes": "PetMD (S706) fragment as returned; 'All that fluff requires a weekly commitment to regular brushing and care'. No bath / tooth / ear / nail frequency → no such task (runbook »Breed care tasks«)."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -72122,6 +72563,289 @@
         "confidence": "high",
         "notes": "FCI (S696). Welfare: open, healthy eyes (entropion, PDSA S700) and a moderate muzzle (FCI 'Moderate in length') — dog trait `muzzle`. Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (AKC lists red first, S699); moderate muzzle, open eyes, standard whole colours only (never parti-colour or merle)"
+      }
+    },
+    "old_english_sheepdog": {
+      "_note": "Unattended run M5-R10-93 (2026-11-04): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S705 'a minimum of two hours' → 120; RKC page not reachable). The senior boundary is Claude's proposal (verified=false) — no McMillan 2024 / VetCompass / RKC value reachable; PDSA band 'Over 10 years' (Basenji / Pekingese precedent).",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S705",
+        "quote": "2 hours",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise | 2 hours' (S705) and 'a minimum of two hours exercise every day' → rule 'minimum N' → 120 (RKC page not reachable).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (PDSA S705 'minimum of two hours')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S705",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 90 at 9 months (end of the puppy stage), 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + the PDSA lower bound 'Over 10 years', S705 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion (verified=false).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S705"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 109,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × the PDSA lower bound 'Over 10 years', S705). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool. PetMD 10–12 y (S706) has the same lower bound. Seeded verified=false.",
+        "derived_from": [
+          "S11",
+          "S705"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 109,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-93) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (the senior arrival follows Claude's senior proposal, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 90 = the proposed boundary)"
+      },
+      "learning_multiplier": {
+        "value": 0.7,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 63 'Old English Sheepdog' (S35, checked 2026-11-04) → tier Fair (55–69) → 0.7. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.7 (Coren rank 63, Fair, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S705",
+        "quote": "They have long fur which will need a daily brush to make sure it doesn't get matted and tangled.",
+        "confidence": "high",
+        "notes": "old_english_sheepdog.suitability.pdsa_grooming. PDSA 'a daily brush' → runbook rule 'every day' → 7 (M5-R13). Matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": {
+          "petmd_hours_per_week": "spend three to four hours every week thoroughly brushing it out"
+        },
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »a daily brush«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S705",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "old_english_sheepdog.exercise.after_meals (PDSA S705, GDV listed). Warning only; steps still count.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S705",
+        "quote": "a well-socialised Old English Sheepdog is likely to grow into a happy and confident dog.",
+        "confidence": "high",
+        "notes": "old_english_sheepdog.behaviour.socialisation (PDSA S705). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S705)"
+      },
+      "professional_grooming": {
+        "value": "professional trim every six weeks or so (long coat)",
+        "unit": "visits (sourced need)",
+        "source_id": "S705",
+        "quote": "you will need to take your dog to a professional groomer for a regular trim every six weeks or so.",
+        "confidence": "high",
+        "notes": "PDSA (S705), old_english_sheepdog.suitability.pdsa_groomer. Built: the parent's groomer reminder every 6 program weeks (DOG_CARE_TASKS groomer_visit [1, six_weeks], M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every six weeks or so« → 6 tednov = 42 dni"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-93); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.exercise.adult",
+              "old_english_sheepdog.suitability.pdsa_exercise"
+            ],
+            "quote": "S705 'Your Old English Sheepdog will need a minimum of two hours exercise every day.'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.family"
+            ],
+            "quote": "S705 'Old English Sheepdogs have such easy-going personalities that they have quickly become popular family pets.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.exercise.adult",
+              "old_english_sheepdog.suitability.pdsa_exercise"
+            ],
+            "quote": "S705 '… a minimum of two hours exercise every day.'"
+          },
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.children"
+            ],
+            "quote": "S705 'they are better suited to families with older children who can recognise when playtime is getting too much.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.time_alone"
+            ],
+            "quote": "S705 'They can suffer from separation anxiety when left alone, even for very short periods'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S705",
+              "S706"
+            ],
+            "refs": [
+              "old_english_sheepdog.suitability.pdsa_grooming",
+              "old_english_sheepdog.suitability.petmd_grooming"
+            ],
+            "quote": "S705 '… a daily brush …'; S706 'you do need to set aside a minimum of three or four hours a week'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S705"
+            ],
+            "refs": [
+              "old_english_sheepdog.behaviour.other_pets"
+            ],
+            "quote": "S705 '… as the herding and prey drive is quite strong'",
+            "note": "Runbook (David 2026-10-12): appended at the end of the consider list."
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC page not reachable (runbook: only from RKC Flat/ Apartment).",
+          "large_home": "RKC page not reachable (runbook: only from RKC Size of home: Large house); PDSA's large secure garden is a paraphrase.",
+          "children": "PDSA: better suited to families with older children (S705) → not_for_small_children.",
+          "small_children": "PDSA (S705) and PetMD (S706) advise care / supervision.",
+          "other_pets": "PDSA strong prey drive, better without smaller pets (S705) → chases_small_pets.",
+          "often_alone": "PDSA separation anxiety (S705) — the opposite → needs_company.",
+          "sheds": "PDSA 'shed surprisingly little' if brushed (S705) vs Dogs Trust 'shed heavily' (S707) — conflict → neither.",
+          "low_shedding": "Same conflict → neither.",
+          "hips_hind_legs": "RKC Breed Watch not reachable — PDSA lists hip dysplasia, but the chip follows Breed Watch (Rottweiler precedent); open for David.",
+          "needs_mental_stimulation": "No verbatim A/B quote about boredom or mental stimulation (PetMD 'daily physical and mental enrichment' is general).",
+          "may_herd_children": "No source says the breed herds children.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet; consider long_daily_exercise, not_for_small_children, needs_company, frequent_grooming, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising this breed type)",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI muzzle 'Strong, square and truncated', nostrils wide, S703) and not named brachycephalic by an A/B source → the BVA advertising advice (S92) does not apply. Marketing never promises the breed's health; the app shows its chips.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa); nikoli z majhnimi otroki = predlog Claude"
+      },
+      "ai_appearance": {
+        "value": "adult Old English Sheepdog, grey with white head, neck, forequarters and underbelly: strong, square, symmetrical; profuse, harsh, shaggy coat (not curly) covering the body; capacious square head, strong square muzzle, large black nose; dark eyes partly hidden by the coat; small ears flat to the head; natural, well-feathered tail",
+        "unit": "—",
+        "source_id": "S703",
+        "quote": "Any shade of grey, grizzle or blue.",
+        "confidence": "high",
+        "notes": "FCI (S703). Not a welfare breed in the standards; natural tail (the standard allows both). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white is the portrait default (FCI lists grey first, S703); standard colours only (never brown or merle); natural tail = Claude's proposal"
       }
     }
   }
