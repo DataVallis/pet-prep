@@ -442,6 +442,7 @@ return [
             'unchecked_desc' => 'ffmpeg missing or nothing measurable — check the app image',
             'disk' => 'Disk used',
             'disk_desc' => ':free free of :total',
+            'disk_alert' => 'Alert from :percent % (Discord, once a day)',
             'disk_unknown' => 'Disk size not available',
             'storage' => 'Media storage',
             'storage_local' => 'Local disk',
@@ -562,6 +563,16 @@ return [
         'discord' => [
             'title' => 'Frugal clips: :count server-made clip(s) failed — made by fal instead',
             'body' => 'An (old) reversed transition or a ping-pong loop could not be made with ffmpeg 3 times, so that clip is now generated the normal way (usual price). Check ffmpeg / memory on the server (System health).',
+        ],
+    ],
+    'disk_space' => [
+        'discord' => [
+            'title' => 'Server disk :percent full',
+            'body' => 'The production root disk is at or above :threshold %. At 100 % PostgreSQL and the API stop (incident 2026-11-04). Check `docker system df` on the server; deploys prune old release images automatically (DEPLOYMENT.md D31).',
+            'used' => 'Used',
+            'free' => 'Free',
+            'total' => 'Total',
+            'threshold' => 'Alert at',
         ],
     ],
     'activity_media' => [

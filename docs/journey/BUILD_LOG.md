@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-04 — Poln disk je ustavil produkcijo; zdaj se to ne more več zgoditi neopazno (D31)
+
+**Kaj:** ponoči (~3.00–4.15) se je disk strežnika (38 GB) napolnil do 100 %, baza se je ustavila in aplikacija je kazala »Ni povezave«. Krivec: 20,5 GB starih slik izdaj — od hitrejšega deploya (D28) vsak deploy prenese novo sliko, stare pa nihče ni brisal. David je ročno počistil (48 %). Zdaj deploy sam obdrži samo trenutno in prejšnjo izdajo (za povrnitev), se ne začne, če ostane manj kot 5 GB prostega, in ob ≥ 80 % pride v Discord eno opozorilo na dan; disk je viden tudi v »Zdravju sistema«.
+**Zakaj je pomembno:** izpad ni bil hrošč v igri, ampak gospodinjstvo strežnika — takšne stvari morajo biti avtomatske, preden pride beta.
+**Kako povedati:** 🛠 »Digest-pulled Docker slike niso nikoli ›dangling‹ — `image prune -f` jih ne pobere. Pravilo: obdrži `:production` + `:previous` + kar teče, vse ostalo stran.« · 💼 en izpad ~1 h pred beto, vzrok odpravljen v istem dnevu, z opozorilom vnaprej.
+
 ## 2026-11-03 — Strežnik naredi vsebino kupljenih stvari: dizajni, slike v katalogu, ljubljenček s svojo posteljo (M6-W03, strežnik)
 
 **Kaj:** vsaka stvar v »Željah« ima zdaj tri dizajne za kužka in tri za muco (npr. okrogla siva postelja, modra blazina, pletena košara) — 24 dizajnov. Za vsakega strežnik enkrat naredi sliko v katalogu (24 slik, skupaj 3,60 $). Ko starš kupi izbrani dizajn, strežnik iz ljubljenčkove trenutne slike naredi njegovo sliko z novo stvarjo in kratek video (spi na postelji, jé iz skled, se igra z igračo, poje priboljšek) — približno 0,49 $ na stvar, a samo prvič za isti videz pasme, barve in obdobja; vsak naslednji kupec istega dizajna stane 0 $. Ko ljubljenček zraste, dobi stvar novo vsebino za novo obdobje. Če AI kaj zavrne, strežnik sam poskusi drugače (največ dvakrat oz. z drugačnim opisom); če ne gre, se stvar pokaže brez posebnega videa — otrok nikoli ne obtiči na »Na poti«, skrbnik dobi eno obvestilo. Postelja, ki jo je David kupil pred dnevi, dobi svojo vsebino sama po namestitvi.

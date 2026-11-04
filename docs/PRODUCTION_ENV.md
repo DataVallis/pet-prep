@@ -47,6 +47,8 @@ This document describes all environment variables used by the PetPrep production
 | `REDIS_TIMEOUT` / `REDIS_READ_TIMEOUT` | Optional | No | Redis connect / read timeout in seconds (fail fast when Redis is down) | `2.0` |
 | `SYSTEM_HEALTH_CAPTURE` | Optional | No | Store reported exceptions + error log lines in `system_errors` for `/admin/system-health` (`false` = kill switch) | `true` |
 | `SYSTEM_HEALTH_ISOLATED_CONNECTION` | Optional | No | Write captured errors over a second PostgreSQL connection (`system_health`, opened only when an error is recorded; `lock_timeout` 2 s, `statement_timeout` 3 s) so a rolled-back transaction keeps the row. Each PHP process may hold 1 extra PG connection. | `true` |
+| `SYSTEM_HEALTH_DISK_ALERT_PERCENT` | Optional (D31) | No | Root disk usage (%) from which `system-health:disk-check` posts one Discord `disk_space` alert per day and the System health disk tile turns yellow | `80` |
+| `SYSTEM_HEALTH_DISK_PATH` | Optional (D31) | No | Path whose file system is measured (must be on the server's root disk) | `storage_path()` (the `app_storage` volume) |
 | `SESSION_DRIVER` | Required | No | Session storage driver | `database` or `redis` |
 
 ---
@@ -154,3 +156,5 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `DEPLOY_RECREATE_CADDY` | deploy script env | `1` = recreate caddy even when its inputs are unchanged (D19) | `0` |
 | `DEPLOY_COMPOSE_PROJECT` | deploy script env | Compose project (network + volume prefix, e.g. `backend_app_storage`). Only if production ever runs under another project name — the deploy aborts when the volume is missing while the app runs | `backend` |
 | `DEPLOY_APP_UID` | deploy script env | uid the FPM image runs as; storage is chowned to it before every deploy | `1000` |
+
+**Deploy-script variables (not in `.env`, D31):** `DEPLOY_MIN_FREE_GB` (default `5`) — free GB the Docker disk must have after the disk preflight's prune, else the deploy stops before pulling; `0` disables the check.

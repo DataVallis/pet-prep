@@ -118,6 +118,17 @@
     4. `cd .. && git add backend/composer.lock && git commit -m "chore(backend): lock Laravel 12 dependencies [M0-07]" && git push`
     5. Če Composer javi napako (»Your requirements could not be resolved…«, konflikt) — **nič ne popravljaj ročno**, celoten izpis ukaza pošlji Claudu. Po pushu Claude počaka zeleni CI (celoten Pest na PHP 8.3 + produkcijska slika), naredi en krog QA (avtentikacija, podpisani URL-ji, Sanctum) in PR združi; v produkcijo gre z naslednjim dnevnim deployem (Reverb in Caddy se enkrat znova zaženeta — aplikacije se same znova povežejo).
 
+18. **Disk strežnika — enkratni korak po izpadu 4. 11. 2026 (D31, PR `fix/prod-disk-full`).** Brisanje starih slik in preverjanje prostora naredi deploy sam (nič ročnega). Ročno ostane samo omejitev dnevnika journald (enkrat, kot `root`):
+    ```bash
+    ssh root@138.199.172.97
+    install -d /etc/systemd/journald.conf.d
+    printf '[Journal]\nSystemMaxUse=200M\nSystemKeepFree=2G\n' > /etc/systemd/journald.conf.d/petprep.conf
+    systemctl restart systemd-journald
+    journalctl --disk-usage
+    df -h /
+    ```
+    Pričakovano: `journalctl --disk-usage` ≤ 200 M. Po naslednjem deployu (ročno ali dnevni ob 3.17) v dnevniku deploya poišči `Disk preflight OK (… GB free …)` in `Old release images: removed N name(s)`; nato `docker image ls 'petprep-*'` pokaže le `:production` / `:previous` (+ `:next` = isti ID kot `:production`). Neobvezno: `docker image rm petprep-backend:production` (stara slika Sail, ~3 GB — od M4-05b je povrnitev na Sail zaradi kasnejših migracij tako ali tako neuporabna). Opozorilo v Discordu pride samodejno pri ≥ 80 % (nič za nastaviti). Pozor: ročni `docker image prune -a -f` 4. 11. je pobrisal tudi `petprep-{app,web}:previous` (ni ga uporabljal noben vsebnik) — do naslednjega deploya hitre povrnitve s slike ni (povrnitev = redeploy prejšnjega commita iz GHCR); `docker image prune -a` odslej ne uporabljaj.
+
 ## 2. Decisions
 
 All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top; ~73 rows still marked »čaka Davida«). Standing rules worth knowing before any work:
@@ -187,6 +198,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 6. **M6-W »Želje«** — merged 2026-10-27: server W01 + W02 server part (#417), app W04 / W05 (#416), one QA round done (#417 / #416 fixes on the same PRs). Reaches users with the next daily deploy + OTA. **Next:** David creates the six store products (§1b.9); M6-W03 item media + designs: app #652 + server #655 merged 2026-11-03 (one QA round, fixes on the PR) — reaches users with the next production deploy (David's bed gets its content ~10–20 min after it, automatically); device check of the child catalogue (designs), treat chip, parent list, push, redeem after reopening »Želje«, and of a bought bed's content.
 
 ## 6. Session log
+
+### 2026-11-04 (cloud) — production disk full → outage; automatic disk hygiene (`fix/prod-disk-full`, DEPLOYMENT.md D31)
+Root disk 100 % (20.5 GB old digest-pulled GHCR release images never pruned since D28) took postgres + the API down ~03:00–04:15; David cleaned by hand. Now the deploy prunes old `petprep-{app,web}` images (keeps `:production`, `:previous`, in use) in a new disk preflight and after success, refuses to start below 5 GB free; hourly `system-health:disk-check` → one Discord `disk_space` alert per day at ≥ 80 %; System health tile yellow ≥ 80 %. David: journald drop-in (§1b step 18). Open: same leak in the website repo's deploy.
 
 ### 2026-11-03 (cloud) — website deploy faster (pet-prep-website `ci/D30-fast-deploy`, DEPLOYMENT.md D30)
 Website: one `next build` per run (in node:22-alpine), image to GHCR after the smoke test, server pulls the digest; main reuses the image of a green run on the same tree. New single gate check »Website CI OK« — ADD_BREED_RUNBOOK §9 now waits for it. Was: PR ~13 min, live 17–20 min.

@@ -318,17 +318,7 @@ class SystemHealthService
      */
     public function diskUsage(): ?array
     {
-        $path = storage_path();
-        $free = @disk_free_space($path);
-        $total = @disk_total_space($path);
-        if ($free === false || $total === false || $total <= 0) {
-            return null;
-        }
-
-        return [
-            'free' => (int) $free,
-            'total' => (int) $total,
-            'used_percent' => round(100 * (1 - $free / $total), 1),
-        ];
+        // D31: the storage volume sits on the server's root disk (DiskSpace).
+        return app(DiskSpace::class)->usage();
     }
 }

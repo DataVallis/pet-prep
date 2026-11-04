@@ -174,8 +174,23 @@
 #
 # Idempotent: re-running with the same SHA re-applies the same tree (the image build
 # is a cache hit), migrations are no-ops, `artisan down/up` tolerate being repeated.
-# After success: `docker image prune -f` (dangling only) and `docker builder prune`
-# (build cache older than 7 days beyond 5 GB) — both warn-only.
+# DISK (D31, incident 2026-11-04: the root disk reached 100 % — 20.5 GB of old pulled
+#   GHCR release images that `docker image prune -f` never removed, because a digest-pulled
+#   image keeps its `ghcr.io/…/petprep-app@sha256:…` name and so is never "dangling").
+#   prune_release_images removes every name of a petprep-app / petprep-web image (local
+#   tag or ghcr.io digest ref) whose image id is NOT kept. KEPT: the ids tagged
+#   petprep-{app,web}:production (current release) and :previous (the release before =
+#   what the automatic revert and the manual rollback, PRODUCTION_DEPLOYMENT.md §7, use)
+#   and every image any container uses (running or stopped, e.g. a kept reverb). Other
+#   repositories (postgres, redis, caddy base, petprep-website — its own deploy and
+#   rollback —, petprep-backend:production) and volumes are never touched; no
+#   `docker system prune`. It runs (a) in the disk preflight (step 1b) and (b) after a
+#   successful deploy, followed by `docker image prune -f` (dangling) and
+#   `docker builder prune -af --keep-storage 2GB` (build cache capped) — all warn-only.
+#   Preflight: after that prune the Docker disk needs >= DEPLOY_MIN_FREE_GB (default 5) GB
+#   free; below it the whole build cache is dropped once more, and if it is still below,
+#   the deploy stops BEFORE pulling anything (nothing changed). DEPLOY_MIN_FREE_GB=0
+#   skips the check (the prune still runs).
 # No env values except the three preflight keys are printed.
 #
 # Test harness (stubbed docker/git/curl, no server): scripts/tests/deploy-production.test.sh
@@ -206,6 +221,10 @@ WORKER_SERVICES=(reverb queue queue-broadcasts scheduler)
 BASE_APP_ID=""          # base stage of the new app image (step 3; D19 fingerprints)
 BASE_WEB_ID=""          # caddy base image of the new web image
 IMAGES=(petprep-app petprep-web)
+# Release images (D31): petprep-app / petprep-web, local or ghcr.io/<owner>/… names.
+RELEASE_IMAGE_RE='(^|/)petprep-(app|web)$'
+KEEP_TAG_RE='^(production|previous)$'
+MIN_FREE_GB="${DEPLOY_MIN_FREE_GB:-5}"
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
 # (incoming/backend, releases/build-src/backend) addresses the SAME volumes.
@@ -387,6 +406,69 @@ restore_images() {
         docker tag "${img}:previous" "${img}:production" || rc=1
     done
     return "$rc"
+}
+
+# ---- Disk (DISK above, D31) --------------------------------------------------------
+# prune_release_images: remove every name of a release image whose id is not kept
+# (:production, :previous, or used by any container). Returns 1 (prunes nothing) when the
+# containers or images cannot be listed — never guess what is in use.
+prune_release_images() {
+    local containers keep="" listing repo tag digest id ref removed=0 failed=0
+    if ! containers="$(docker ps -aq)"; then
+        warn "cannot list containers — old release images not pruned."
+        return 1
+    fi
+    if [ -n "$containers" ]; then
+        # shellcheck disable=SC2086  # one container id per word
+        if ! keep="$(docker inspect --format '{{.Image}}' $containers)"; then
+            warn "cannot read the containers' images — old release images not pruned."
+            return 1
+        fi
+    fi
+    if ! listing="$(docker image ls --no-trunc --format '{{.Repository}}\t{{.Tag}}\t{{.Digest}}\t{{.ID}}')"; then
+        warn "cannot list images — old release images not pruned."
+        return 1
+    fi
+    while IFS=$'\t' read -r repo tag digest id; do
+        if [[ "$repo" =~ $RELEASE_IMAGE_RE ]] && [[ "$tag" =~ $KEEP_TAG_RE ]]; then
+            keep+=$'\n'"$id"
+        fi
+    done <<< "$listing"
+    while IFS=$'\t' read -r repo tag digest id; do
+        [ -n "$id" ] || continue
+        [[ "$repo" =~ $RELEASE_IMAGE_RE ]] || continue
+        if grep -qxF -- "$id" <<< "$keep"; then continue; fi
+        if [ -n "$tag" ] && [ "$tag" != "<none>" ]; then
+            ref="${repo}:${tag}"
+        elif [ -n "$digest" ] && [ "$digest" != "<none>" ]; then
+            ref="${repo}@${digest}"
+        else
+            continue  # dangling: `docker image prune -f` removes it
+        fi
+        if docker image rm "$ref" > /dev/null; then
+            removed=$((removed + 1))
+        else
+            failed=$((failed + 1))
+        fi
+    done <<< "$listing"
+    log "Old release images: removed ${removed} name(s) (kept: petprep-{app,web}:production + :previous and every image a container uses)."
+    if [ "$failed" -gt 0 ]; then warn "${failed} old release image name(s) could not be removed (docker image ls 'petprep-*')."; fi
+    return 0
+}
+
+prune_disk() {
+    prune_release_images || true
+    docker image prune -f > /dev/null || warn "docker image prune failed."
+    # Build cache: capped at 2 GB, most recently used kept (the fallback build, D28).
+    docker builder prune -af --keep-storage 2GB > /dev/null || warn "docker builder prune failed."
+}
+
+# Free KiB on the file system of Docker's data root (falls back to /); empty = unknown.
+disk_free_kb() {
+    local dir
+    dir="$(docker info --format '{{.DockerRootDir}}' 2>/dev/null || true)"
+    if [ -z "$dir" ] || [ ! -e "$dir" ]; then dir=/; fi
+    df -Pk "$dir" 2>/dev/null | awk 'NR==2 {print $4}' || true
 }
 
 # Inputs per kept-able service (REVERB / CADDY above), relative to the tree root.
@@ -609,6 +691,36 @@ else
     HEALTH_IP_HOST="${DEPLOY_HEALTH_IP_HOST:-}"
 fi
 log "Env preflight OK (API domain ${PETPREP_API_DOMAIN}, Caddy sites ${PETPREP_CADDY_SITES})."
+
+# ---- 1b. Disk preflight (DISK above, D31) ------------------------------------------
+# Still nothing changed: prune old release images + build cache, then refuse to pull /
+# build when the disk would fill up mid-deploy.
+if ! [[ "$MIN_FREE_GB" =~ ^[0-9]+$ ]]; then
+    echo "ERROR: DEPLOY_MIN_FREE_GB must be a whole number of GB (found '${MIN_FREE_GB}')." >&2
+    exit 2
+fi
+log "Disk preflight: pruning old release images and the build cache..."
+prune_disk
+if [ "$MIN_FREE_GB" -gt 0 ]; then
+    need_kb=$((MIN_FREE_GB * 1024 * 1024))
+    free_kb="$(disk_free_kb)"
+    if [[ "$free_kb" =~ ^[0-9]+$ ]] && [ "$free_kb" -lt "$need_kb" ]; then
+        warn "only $((free_kb / 1024 / 1024)) GB free — dropping the whole build cache too."
+        docker builder prune -af > /dev/null || warn "docker builder prune failed."
+        free_kb="$(disk_free_kb)"
+    fi
+    if ! [[ "$free_kb" =~ ^[0-9]+$ ]]; then
+        warn "could not measure the free disk space — continuing without the disk check."
+    elif [ "$free_kb" -lt "$need_kb" ]; then
+        echo "ERROR: only $((free_kb / 1024 / 1024)) GB free on the Docker disk after pruning old release images and the build cache;" >&2
+        echo "       a deploy needs at least ${MIN_FREE_GB} GB (image pull, DB backup, logs). Nothing was changed." >&2
+        echo "       Check on the server: df -h /; docker system df; journalctl --disk-usage; du -sh /opt/petprep/backups" >&2
+        echo "       (docs/PRODUCTION_DEPLOYMENT.md, Disk hygiene; DEPLOYMENT.md D31)." >&2
+        exit 1
+    else
+        log "Disk preflight OK ($((free_kb / 1024 / 1024)) GB free, need ${MIN_FREE_GB} GB)."
+    fi
+fi
 
 # ---- 2. Record the previous release ----------------------------------------------
 cd "$REPO_DIR"
@@ -927,13 +1039,11 @@ if [ "$KEEP_CADDY" = "0" ] && [ -n "$CADDY_FP_NEW" ]; then
     echo "$CADDY_FP_NEW" > "${PETPREP_ROOT}/releases/caddy.fingerprint" || warn "could not record the caddy fingerprint (next deploy recreates caddy)."
 fi
 
-# Untagged images of older releases (keeps :production, :previous and the Sail image;
-# an image a container still runs — e.g. a kept reverb — is never pruned).
-docker image prune -f > /dev/null || warn "docker image prune failed."
-# Build cache: always capped at 2 GB, most recently used kept (the PHP extension layers
-# stay warm). The old "older than 7 days" filter never matched with several builds a
-# day and let the cache reach ~23 GB (disk hygiene, David 2026-10-15).
-docker builder prune -af --keep-storage 2GB > /dev/null || warn "docker builder prune failed."
+# Old releases (DISK above, D31): every petprep-app / petprep-web image except the ids of
+# :production (this release) and :previous (the one before — rollback), and except images
+# a container still runs (e.g. a kept reverb); then dangling images and the build cache
+# (capped at 2 GB — the "older than 7 days" filter of 2026-10-15 never matched).
+prune_disk
 
 # Disk guard: loud warning when the root disk is over 70 % (nothing is deleted here).
 disk_used_pct="$(df -P / 2>/dev/null | awk 'NR==2 {gsub("%","",$5); print $5}')"

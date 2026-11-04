@@ -117,9 +117,16 @@ class SystemHealthStats extends StatsOverviewWidget
             Stat::make(__('admin.system_health.stats.disk'), $disk === null ? '—' : $disk['used_percent'].' %')
                 ->description($disk === null
                     ? __('admin.system_health.stats.disk_unknown')
-                    : __('admin.system_health.stats.disk_desc', ['free' => Number::fileSize($disk['free'], 1), 'total' => Number::fileSize($disk['total'], 1)]))
+                    : __('admin.system_health.stats.disk_desc', ['free' => Number::fileSize($disk['free'], 1), 'total' => Number::fileSize($disk['total'], 1)])
+                        .' · '.__('admin.system_health.stats.disk_alert', ['percent' => (int) config('system_health.disk_alert_percent', 80)]))
                 ->descriptionIcon('heroicon-m-server')
-                ->color($disk === null ? 'gray' : ($disk['used_percent'] >= (int) config('system_health.disk_warn_percent', 90) ? 'danger' : 'success')),
+                // D31: yellow from the Discord alert threshold (80 %), red from disk_warn_percent (90 %).
+                ->color(match (true) {
+                    $disk === null => 'gray',
+                    $disk['used_percent'] >= (int) config('system_health.disk_warn_percent', 90) => 'danger',
+                    $disk['used_percent'] >= (int) config('system_health.disk_alert_percent', 80) => 'warning',
+                    default => 'success',
+                }),
             Stat::make(__('admin.system_health.stats.storage'), $storage['driver'] === 's3' ? __('admin.system_health.stats.storage_s3') : __('admin.system_health.stats.storage_local'))
                 ->description(match ($storage['reachable']) {
                     true => __('admin.system_health.stats.storage_bucket_ok', ['bucket' => $bucket]),
