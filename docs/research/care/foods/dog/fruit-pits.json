@@ -8,7 +8,8 @@
     "fr": "Noyaux de fruits",
     "es": "Huesos y semillas de fruta",
     "it": "Noccioli e semi di frutta",
-    "pt": "Caroços e sementes de fruta"
+    "pt": "Caroços e sementes de fruta",
+    "nl": "Fruitpitten en -stenen"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des noyaux de fruits ?",
     "es": "¿Pueden los perros comer huesos y semillas de fruta?",
     "it": "I cani possono mangiare i noccioli di frutta?",
-    "pt": "Os cães podem comer caroços de fruta?"
+    "pt": "Os cães podem comer caroços de fruta?",
+    "nl": "Mogen honden fruitpitten eten?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -26,7 +28,8 @@
     "fr": "noyaux-de-fruits",
     "es": "huesos-y-semillas-de-fruta",
     "it": "noccioli-e-semi-di-frutta",
-    "pt": "carocos-e-sementes-de-fruta"
+    "pt": "carocos-e-sementes-de-fruta",
+    "nl": "fruitpitten"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Ne donnez jamais à un chien de noyaux de cerises, de pêches ou de nectarines. Ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et ils contiennent un peu de cyanure. Retirez toujours noyaux et pépins avant de partager un fruit.",
     "es": "No. Nunca se deben dar a un perro los huesos de frutas como las cerezas, los melocotones o las nectarinas. Pueden romperle los dientes, atragantarlo u obstruirle el intestino, y contienen una pequeña cantidad de cianuro. Quita siempre los huesos y las semillas antes de compartir fruta.",
     "it": "No. I noccioli di frutti come ciliegie, pesche e pesche noci non vanno mai dati ai cani. Possono rompere i denti, far soffocare o ostruire l’intestino, e contengono una piccola quantità di cianuro. Togli sempre noccioli e semi prima di dare un po’ di frutta.",
-    "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta."
+    "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta.",
+    "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -45,7 +49,8 @@
     "fr": "Les noyaux durs peuvent casser des dents, provoquer un étouffement ou obstruer l’intestin, et ceux aux bords rugueux peuvent blesser l’œsophage lorsqu’ils sont avalés. Le noyau contient aussi un peu de cyanure. Les intoxications au cyanure dues aux fruits à noyau sont rares, mais un animal peut tomber malade après une infime quantité : un noyau brisé est donc traité comme une urgence.",
     "es": "Los huesos duros pueden fracturar los dientes, causar atragantamiento u obstruir el intestino, y los de bordes ásperos pueden lesionar el esófago al tragarlos. El hueso también contiene una pequeña cantidad de cianuro. La intoxicación por cianuro con frutas de hueso es rara, pero las mascotas pueden enfermar con una cantidad mínima, así que un hueso roto se trata como una urgencia.",
     "it": "I noccioli duri possono fratturare i denti, far soffocare o ostruire l’intestino, e quelli con i bordi ruvidi possono ferire l’esofago mentre vengono ingoiati. Il nocciolo contiene anche una piccola quantità di cianuro. L’intossicazione da cianuro dovuta alla frutta a nocciolo è rara, ma gli animali possono stare male anche dopo una quantità minima, quindi un nocciolo spaccato va trattato come un’urgenza.",
-    "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente."
+    "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente.",
+    "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval."
   },
   "signs": {
     "en": [
@@ -103,6 +108,14 @@
       "Dificuldade em defecar",
       "Dor de barriga",
       "Dificuldade em respirar"
+    ],
+    "nl": [
+      "Kokhalzen",
+      "Kwijlen",
+      "Braken",
+      "Moeite met ontlasting",
+      "Buikpijn",
+      "Moeite met ademen"
     ]
   },
   "what_to_do": {
@@ -112,7 +125,8 @@
     "fr": "Appelez immédiatement votre vétérinaire si votre chien a brisé un noyau. Si votre chien a avalé un noyau et présente l’un de ces signes, appelez votre vétérinaire.",
     "es": "Llama enseguida a tu veterinario si tu perro muerde y rompe un hueso. Si se ha tragado un hueso y presenta alguno de estos síntomas, llama también a tu veterinario.",
     "it": "Chiama subito il veterinario se il tuo cane spacca un nocciolo. Chiamalo anche se ne ha ingoiato uno e mostra uno di questi segni.",
-    "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário."
+    "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário.",
+    "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts."
   },
   "serving": null,
   "child": {
@@ -122,7 +136,8 @@
     "fr": "Les noyaux de fruits ne sont pas pour les chiens. Jette-les à la poubelle, hors de portée de ton chien, et préviens un adulte s’il en mange un.",
     "es": "Los huesos de fruta no son para perros. Tíralos a la basura, donde tu perro no llegue, y avisa a un adulto si se come alguno.",
     "it": "I noccioli della frutta non sono per i cani. Buttali in un cestino che il tuo cane non possa raggiungere e, se ne mangia uno, dillo a un adulto.",
-    "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum."
+    "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum.",
+    "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet."
   },
   "faq": [
     {
@@ -133,7 +148,8 @@
         "fr": "Le fruit lui-même est-il sans danger ?",
         "es": "¿Se puede dar la fruta en sí?",
         "it": "La frutta in sé va bene?",
-        "pt": "A fruta em si é segura?"
+        "pt": "A fruta em si é segura?",
+        "nl": "Is het fruit zelf wel goed?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -142,7 +158,8 @@
         "fr": "Cela dépend du fruit ; voir la page de chaque fruit. En général, il faut retirer les graines, les noyaux, les trognons, les peaux et les tiges avant de donner un fruit à un chien.",
         "es": "Depende de la fruta; consulta la página de cada una. En general, hay que quitar las semillas, los huesos, los corazones, las cortezas y los tallos de la planta antes de dar fruta a un perro.",
         "it": "Dipende dalla frutta: guarda la pagina di ciascun frutto. In generale, semi, noccioli, torsoli, bucce e gambi vanno tolti prima di dare la frutta a un cane.",
-        "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão."
+        "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão.",
+        "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft."
       }
     },
     {
@@ -153,7 +170,8 @@
         "fr": "Quels fruits ont un noyau ?",
         "es": "¿Qué frutas tienen hueso?",
         "it": "Quali frutti hanno il nocciolo?",
-        "pt": "Que frutas têm caroço?"
+        "pt": "Que frutas têm caroço?",
+        "nl": "Welk fruit heeft pitten?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -162,7 +180,8 @@
         "fr": "Les cerises, les nectarines et les pêches sont des fruits à noyau. Comme celui des cerises, le noyau de la pêche contient du cyanure.",
         "es": "Frutas como las cerezas, las nectarinas y los melocotones se llaman frutas de hueso. Igual que las cerezas, los huesos de melocotón contienen cianuro.",
         "it": "Frutti come ciliegie, pesche noci e pesche si chiamano frutti a nocciolo. Come quello delle ciliegie, il nocciolo della pesca contiene cianuro.",
-        "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto."
+        "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto.",
+        "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide."
       }
     }
   ],
@@ -260,6 +279,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a14c53c3b4c2571720224faf8e41bf07b6f44c073ae0f822444a4189bc7f7931"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1e89a30e892e694b7944024c4d5da2045c2b85d82f0f0bced7204f96d80d7263"
     }
   }
 }
