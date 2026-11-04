@@ -1,0 +1,119 @@
+{
+  "country": "RO",
+  "checked": "2026-11-04",
+  "sources": [
+    {
+      "name": "USAMV Bucharest, Faculty of Veterinary Medicine — University Veterinary Emergency Hospital Prof. Univ. Dr. Alin Bîrțoiu",
+      "url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
+      "note": "Faculty page (old site): working hours 24/7; hospital 021.410.8455, pharmacy 0737.504.069, ambulance service 0722.262.133. No street address on the page."
+    },
+    {
+      "name": "USAMV Iași (Ion Ionescu de la Brad) — Clinical Hospital for Pets, Emergency Service",
+      "url": "https://iuls.ro/medicina/en/emergency-service/",
+      "note": "University page: Emergency Department operates NON-STOP (24/7) since 8 March 2021; tel. 0232 407 362. No address on the page."
+    },
+    {
+      "name": "USAMV Cluj-Napoca, Faculty of Veterinary Medicine — contact page",
+      "url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
+      "note": "Lists Spitalul de Urgență 0264431910 (\"Numai urgențe!\") and Spital NAC Exotice 0753131712; no hours, no 24h wording."
+    },
+    {
+      "name": "Joyvet — own website",
+      "url": "https://joyvet.ro/?p=5749",
+      "note": "Clinic's own page: address, phone 0731803803; no hours and no 24h wording."
+    },
+    {
+      "name": "Bacău/Iași local news (bzi.ro) — Veterinari non-stop în Iași",
+      "url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
+      "note": "News article, secondary source only; names two Iași clinics under a 'non-stop' heading with address and phone. Clinic own sites could not be opened (not reachable from search results)."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "University Veterinary Emergency Hospital Prof. Univ. Dr. Alin Bîrțoiu (USAMV Bucharest)",
+      "city": "București",
+      "region": "București",
+      "phone": "+40 21 410 8455",
+      "emergency_24h": true,
+      "duty": "University emergency hospital, open 24/7. Phone ahead if you can.",
+      "small_animals": true,
+      "url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
+      "source_url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
+      "checked": "2026-11-04",
+      "note": "Page says 'Working hours: 24/7'. Street address not on the page (not guessed). Same page lists an ambulance service 0722.262.133 and a pharmacy 0737.504.069. Romania Insider (27 Feb 2020) and Edupedu (26 Feb 2020) say the hospital takes cases 24/7 / 24/24."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinical Hospital for Pets, Emergency Service (USAMV Iași)",
+      "city": "Iași",
+      "region": "Iași",
+      "phone": "+40 232 407 362",
+      "emergency_24h": true,
+      "duty": "University hospital emergency department, open non-stop 24/7.",
+      "small_animals": true,
+      "url": "https://iuls.ro/medicina/en/emergency-service/",
+      "source_url": "https://iuls.ro/medicina/en/emergency-service/",
+      "checked": "2026-11-04",
+      "note": "Page: 'the Emergency Department ... operates NON-STOP (24/7)' since 8 March 2021. Address not on the page. Spotmedia and bzi.ro articles say the same."
+    },
+    {
+      "kind": "clinic",
+      "name": "Emergency Hospital, Faculty of Veterinary Medicine USAMV Cluj-Napoca",
+      "city": "Cluj-Napoca",
+      "region": "Cluj",
+      "phone": "+40 264 431 910",
+      "emergency_24h": false,
+      "duty": "University emergency line, for emergencies only. Call ahead for hours.",
+      "small_animals": true,
+      "url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
+      "source_url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
+      "checked": "2026-11-04",
+      "note": "Faculty contact page lists 'Spitalul de Urgență 0264431910 - Numai urgențe!'; no hours or 24h wording, so emergency_24h false. Faculty address Calea Mănăștur 3-5; hospital address not stated. The linked hospital/emergency subpages could not be opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Joyvet",
+      "city": "București",
+      "region": "București",
+      "address": "Str. Lt. Dumitru Papazoglu 68, Sector 3",
+      "phone": "+40 731 803 803",
+      "emergency_24h": false,
+      "duty": "Same-day urgent evaluations may be possible during opening hours. Call ahead.",
+      "small_animals": true,
+      "url": "https://joyvet.ro/",
+      "source_url": "https://joyvet.ro/?p=5749",
+      "checked": "2026-11-04",
+      "note": "Own page; phone also on WhatsApp. Opening hours not stated on the opened page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Urgențe Veterinare Iași",
+      "city": "Iași",
+      "region": "Iași",
+      "address": "Șoseaua Bârnova 2",
+      "phone": "+40 745 306 272",
+      "emergency_24h": false,
+      "duty": "Emergency veterinary service. Call ahead to confirm hours.",
+      "small_animals": true,
+      "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
+      "checked": "2026-11-04",
+      "note": "Only a news article (bzi.ro) under the heading 'Cabinete veterinare în Iași, non-stop'; gives no hours, clinic site not opened, so 24h not asserted. Name, address and phone confirmed against the article by the independent check (2026-11-04)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Domevet",
+      "city": "Iași",
+      "region": "Iași",
+      "address": "Șoseaua Ștefan cel Mare și Sfânt 121",
+      "phone": "+40 722 517 821",
+      "emergency_24h": false,
+      "duty": "Veterinary clinic. Call ahead to confirm hours.",
+      "small_animals": true,
+      "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
+      "checked": "2026-11-04",
+      "note": "Only a news article (bzi.ro) under the 'non-stop' heading; no hours stated, clinic site not opened, so 24h not asserted. Name, address and phone confirmed against the article by the independent check (2026-11-04)."
+    }
+  ],
+  "notes": "Thin run (6 entries, 2 x 24 h). WebFetch only accepts URLs that appear in search results or in raw fetched pages, and search returned almost no clinic own-sites, so cmvro.ro, ANSVSA, USAMV Timișoara and most clinic sites could not be opened. Known 24-h / non-stop hospitals reported only by news (no phone or own page opened, therefore NOT listed): Pet Stuff (Bucharest, Sector 6), Vet 4 Life (Bucharest), SuperVet (Ilfov), Spitalul Veterinar Transilvania (Iulius Town Timișoara, non-stop). Cluj hospital subpages (fmv.usamvcluj.ro/servicii-de-urgenta etc.) exist but were not openable. No duty_rota or poison_line found: no Romanian veterinary duty-rota page or animal poison line was located (the human poison centre was not searched for animal use). Not covered: Constanța/Mamaia, Brașov and mountain resorts, Sibiu, Timișoara own clinics. A follow-up run with other sources is needed."
+}
