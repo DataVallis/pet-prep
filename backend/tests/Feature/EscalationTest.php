@@ -141,12 +141,12 @@ describe('EscalationService - 3-tier escalation matrix', function () {
             ->and($pet->fresh()->escalation_level)->toBe(1);
 
         // At 5 % (another metric at 0 % for less than 1 h counts as ≤ 10 %) → phase 2 on the next step down.
-        $pet->update(['escalation_level' => 3, 'hunger_level' => 0, 'hunger_zero_since' => now()->subMinutes(20)]);
+        Pet::whereKey($pet->id)->update(['escalation_level' => 3, 'hunger_level' => 0, 'hunger_zero_since' => now()->subMinutes(20)]);
         $service->processPetEscalation($pet->fresh());
         expect($pet->fresh()->escalation_level)->toBe(2);
 
         // A metric still at 0 % for more than 1 h keeps phase 3.
-        $pet->update(['escalation_level' => 3, 'hunger_zero_since' => now()->subMinutes(90)]);
+        Pet::whereKey($pet->id)->update(['escalation_level' => 3, 'hunger_zero_since' => now()->subMinutes(90)]);
         expect($service->processPetEscalation($pet->fresh()))->toBeFalse()
             ->and($pet->fresh()->escalation_level)->toBe(3);
     });
