@@ -52376,14 +52376,6 @@
           ],
           "ref": "old_english_sheepdog.health.eyes",
           "confidence": "medium"
-        },
-        {
-          "key": "primary_ciliary_dyskinesia",
-          "source_ids": [
-            "S705"
-          ],
-          "ref": "old_english_sheepdog.health.pcd",
-          "confidence": "medium"
         }
       ],
       "suitability": {

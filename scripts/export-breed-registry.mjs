@@ -2457,7 +2457,8 @@ const DOG_FACTS = {
   // + PetMD 10–12 y (S706), exercise 'minimum 2 hours' (at_least), coat 'Long', grooming 'a daily brush' (Every day). Shedding not
   // exported: PDSA 'shed surprisingly little' (if brushed) vs Dogs Trust 'shed heavily' (S707) conflict. Coren rank 63. FCI origin
   // Great Britain (GB). Not exported: lifespan.dogs_trust (same band), lifespan.mcmillan_2024 (null, 12.1 y only via Wikipedia) /
-  // senior_from, health.mdr1 (PetMD name only). New health key: primary_ciliary_dyskinesia.
+  // senior_from, health.pcd (no register key yet — a new key needs words in every website language), health.mdr1
+  // (PetMD name only). No new health key.
   old_english_sheepdog: {
     height: ['height.pdsa'],
     weight: [['adult_weight.pdsa', null]],
@@ -2472,7 +2473,6 @@ const DOG_FACTS = {
       ['bloat_gdv', 'health.gdv'],
       ['deafness', 'health.deafness'],
       ['cataracts', 'health.eyes'],
-      ['primary_ciliary_dyskinesia', 'health.pcd'],
     ],
   },
 

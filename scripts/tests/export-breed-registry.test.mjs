@@ -2970,7 +2970,7 @@ test('Old English Sheepdog (M5-R10-93): PDSA minimum 2 hours, 56–61 cm + 27–
   assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['active_family', 'family_pet']);
   assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['long_daily_exercise', 'not_for_small_children', 'needs_company', 'frequent_grooming', 'chases_small_pets']);
-  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'bloat_gdv', 'deafness', 'cataracts', 'primary_ciliary_dyskinesia']);
+  assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'bloat_gdv', 'deafness', 'cataracts']);
   assert.equal(d.breeder_checklist.status, 'listed');
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, never the Wikipedia McMillan figure, never a non-standard colour.
