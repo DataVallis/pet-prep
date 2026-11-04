@@ -103,6 +103,8 @@ class GameDataResetService
         // catalogue pictures go too (their files are on the emptied media disk) — media:item-media
         // makes them again.
         'item_media_notices',
+        // David 2026-11-04: checks of item files (→ item_media).
+        'item_media_quality_checks',
         'item_media',
         // M5-T15: budget warning dedupe (the ledger restarts, so do its warnings)
         // and the Filament database notifications (superadmin bell, no game data kept)

@@ -301,6 +301,15 @@ return [
         'quality_check_shadow' => 'Shadow — record verdicts, always show (default)',
         'quality_check_enforce' => 'Enforce — regenerate once, then hide failures',
         'quality_check' => 'Quality check mode',
+        'quality_clip_ai' => 'AI vision call of the clip check',
+        'quality_clip_ai_help' => 'QA #736: the clip check above makes one paid AI call per new clip (≈ $0.001–0.003, production AI budget) — also in Shadow, to calibrate. Off: clips are judged by the free technical check alone (»not AI-checked«); the still image checks below are not affected.',
+        'quality_stills' => 'Item image check mode (item key images, catalogue pictures)',
+        'quality_stills_help' => 'David 2026-11-04: every generated item key image (the pet with a bought item) and catalogue picture is checked by the AI vision model (one picture, ≈ $0.001, production AI budget) BEFORE a video is made from it — one animal, four legs / paws, no ghost or extra body parts, the item as described, no text / people. ENFORCE (default): a failed picture is regenerated with a new seed (≤ 2 times), then it is not used (the item is shown without that content, one Discord post per run). SHADOW: verdicts recorded, every picture is used. OFF: no check. Without AI budget the picture waits for the check; without a vision model it is used unchecked.',
+        'saved_body_quality_stills' => 'Item image check: :state',
+        'quality_pet_stills' => 'Pet image check mode (key images, pose images)',
+        'quality_pet_stills_help' => 'The same AI check for the pet\'s state key images and school / game pose images (own media and shared looks). SHADOW (default until calibrated): verdicts recorded in Pet → AI media (»would fail«), every picture is used. After ~48 h look at the verdicts, then switch to ENFORCE: a failed picture is regenerated with a new seed (≤ 2 times), then it is not used (»Needs review«; activities run in simple mode, a state keeps its current clip; one Discord post per 15 min with the count). OFF: no check.',
+        'saved_body_quality_pet_stills' => 'Pet image check: :state',
+        'saved_body_quality_clip_ai' => 'Clip AI call: :state',
         'saved_body_quality_check' => 'Quality check: :state',
         'saved_body_app_error_reports' => 'App error reports: :state',
         'app_error_reports_section' => 'App error reports',
@@ -438,8 +447,8 @@ return [
             'media_desc' => 'Pet images / videos that failed',
             'needs_review' => 'AI clips: needs review',
             'needs_review_desc' => 'Failed the quality check twice or flagged by media:quality-check — not shown',
-            'unchecked' => 'AI clips served unchecked (24 h)',
-            'unchecked_desc' => 'ffmpeg missing or nothing measurable — check the app image',
+            'unchecked' => 'AI media used unchecked (24 h)',
+            'unchecked_desc' => 'Clips: ffmpeg missing or nothing measurable. Pictures: the AI check gave no verdict (bad answer, timeout, no vision model) — see the error log',
             'disk' => 'Disk used',
             'disk_desc' => ':free free of :total',
             'disk_alert' => 'Alert from :percent % (Discord, once a day)',
@@ -589,6 +598,12 @@ return [
         ],
     ],
     // M6-W03: »Želje« item content given up after its automatic recovery (ItemMediaService::heal).
+    'still_check' => [
+        'discord' => [
+            'title' => 'Still check: :count key image(s) rejected after every automatic retry',
+            'body' => 'A state key image failed the AI still check (extra / ghost paws, a second animal, people, text …) also after its automatic regenerations with new seeds. It was not used — the pet keeps what it shows, that state gets no new loop yet. Optional: Pets → AI media → open the candidate → »Approve anyway« or Regenerate. Pose images (activities: simple mode) and item pictures (shown without content) are reported by their own alerts.',
+        ],
+    ],
     'item_media' => [
         'discord' => [
             'title' => 'Item content: :count item picture(s) / clip(s) failed for good',

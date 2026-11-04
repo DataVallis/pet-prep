@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\LifeStage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Carbon;
 
 /**
@@ -57,6 +58,13 @@ use Illuminate\Support\Carbon;
  * @property Carbon|null $exhausted_at
  * @property Carbon|null $alerted_at
  * @property Carbon|null $completed_at
+ * @property int|null $seed_override
+ * @property int $quality_retries
+ * @property string|null $candidate_path
+ * @property int|null $candidate_bytes
+ * @property string|null $candidate_mime
+ * @property string|null $quality
+ * @property string|null $quality_reason
  * @property Carbon|null $updated_at
  */
 class ItemMedia extends Model
@@ -92,6 +100,8 @@ class ItemMedia extends Model
         'status', 'generation', 'profile', 'request_id', 'status_url', 'response_url', 'source_url',
         'storage_path', 'bytes', 'mime', 'duration_seconds', 'cost_usd', 'error_reason', 'error',
         'attempts', 'auto_retries', 'prompt_variant', 'download_attempts', 'exhausted_at', 'alerted_at', 'completed_at',
+        // David 2026-11-04 (StillQualityService): seed of a regeneration, check retries, the file waiting for its check.
+        'seed_override', 'quality_retries', 'candidate_path', 'candidate_bytes', 'candidate_mime', 'quality', 'quality_reason',
     ];
 
     protected function casts(): array
@@ -105,6 +115,9 @@ class ItemMedia extends Model
             'auto_retries' => 'integer',
             'prompt_variant' => 'integer',
             'download_attempts' => 'integer',
+            'seed_override' => 'integer',
+            'quality_retries' => 'integer',
+            'candidate_bytes' => 'integer',
             'exhausted_at' => 'datetime',
             'alerted_at' => 'datetime',
             'completed_at' => 'datetime',
@@ -158,6 +171,24 @@ class ItemMedia extends Model
     public function isExhausted(): bool
     {
         return $this->status === self::STATUS_FAILED && $this->exhausted_at !== null;
+    }
+
+    /** David 2026-11-04: the image seed of this row's request (base seed until a regeneration wrote a fresh one). */
+    public function seedFor(int $base): int
+    {
+        return $this->seed_override !== null ? (int) $this->seed_override : $base;
+    }
+
+    /** The candidate failed its check for good and waits for »Approve anyway« (never shown). */
+    public function needsReview(): bool
+    {
+        return $this->status === self::STATUS_FAILED && $this->error_reason === 'quality_failed' && filled($this->candidate_path);
+    }
+
+    /** @return HasMany<ItemMediaQualityCheck, $this> */
+    public function qualityChecks(): HasMany
+    {
+        return $this->hasMany(ItemMediaQualityCheck::class);
     }
 
     public function stage(): ?LifeStage

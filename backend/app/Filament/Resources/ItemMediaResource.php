@@ -4,9 +4,11 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ItemMediaResource\Pages;
 use App\Models\ItemMedia;
+use App\Models\PetMedia;
 use App\Models\User;
 use App\Services\Media\ItemMediaService;
 use App\Services\Media\MediaProfiles;
+use App\Services\Media\StillQualityService;
 use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -15,9 +17,11 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * M6-W03 »Želje« item content (ItemMediaService) — superadmin only: every catalogue picture
- * and every look / pet row with its status, cost and self-healing state. The one action is
- * Regenerate (a new chain; a shared look row serves every pet of the look, 0 $ for them).
- * Nothing here is ever needed — the scheduled `media:item-media` heals by itself.
+ * and every look / pet row with its status, cost and self-healing state. Actions: Regenerate (a
+ * new chain with a fresh seed; a shared look row serves every pet of the look, 0 $ for them) and,
+ * since 2026-11-04, »Approve anyway« for a file that failed its check (AI still check / clip
+ * technical check — StillQualityService; audited). Nothing here is ever needed — the scheduled
+ * `media:item-media` heals by itself.
  */
 class ItemMediaResource extends Resource
 {
@@ -75,6 +79,9 @@ class ItemMediaResource extends Resource
                 ]),
                 Tables\Filters\Filter::make('exhausted')->label('Given up (shown without content)')
                     ->query(fn ($q) => $q->whereNotNull('exhausted_at')),
+                Tables\Filters\Filter::make('quality')->label('Needs review / failed check')
+                    ->query(fn ($q) => $q->where(fn ($q) => $q->where(fn ($q) => $q->where('error_reason', 'quality_failed')->whereNotNull('candidate_path'))
+                        ->orWhereIn('quality', [PetMedia::QUALITY_FLAGGED, PetMedia::QUALITY_SHADOW_FAILED]))),
             ]);
     }
 
@@ -98,6 +105,21 @@ class ItemMediaResource extends Resource
                     }),
                 Tables\Columns\TextColumn::make('error')->label('Error')->limit(60)->placeholder('—')
                     ->getStateUsing(fn (ItemMedia $r): ?string => $r->error_reason !== null ? $r->error_reason.': '.$r->error : null),
+                // David 2026-11-04: the check verdict (AI still check / clip technical check) + reason.
+                Tables\Columns\TextColumn::make('quality')->label('Check')->badge()
+                    ->getStateUsing(fn (ItemMedia $r): ?string => self::qualityLabel($r))
+                    ->color(fn (?string $state): string => match ($state) {
+                        'passed', 'approved', 'passed (technical)' => 'success',
+                        'needs review', 'failed' => 'danger',
+                        'would fail (shadow)' => 'warning',
+                        'checking', 'retrying' => 'info',
+                        default => 'gray',
+                    })
+                    ->description(fn (ItemMedia $r): ?string => self::qualityDetail($r))
+                    ->placeholder('—'),
+                Tables\Columns\TextColumn::make('candidate')->label('Candidate')
+                    ->getStateUsing(fn (ItemMedia $r): ?string => filled($r->candidate_path) ? 'open' : null)->placeholder('—')
+                    ->url(fn (ItemMedia $r): ?string => app(StillQualityService::class)->itemCandidateLink($r), shouldOpenInNewTab: true),
                 Tables\Columns\TextColumn::make('auto_retries')->label('Retries'),
                 Tables\Columns\TextColumn::make('prompt_variant')->label('Variant'),
                 Tables\Columns\TextColumn::make('exhausted_at')->label('Given up')->dateTime()->placeholder('—'),
@@ -113,6 +135,20 @@ class ItemMediaResource extends Resource
             ->defaultSort('id', 'desc')
             ->defaultKeySort()
             ->actions([
+                // David 2026-11-04: use a file that failed its check after its automatic retries (audited).
+                Tables\Actions\Action::make('approveQuality')
+                    ->label('Approve anyway')
+                    ->icon('heroicon-o-check-badge')
+                    ->color('warning')
+                    ->requiresConfirmation()
+                    ->modalDescription(fn (ItemMedia $r): string => sprintf('This %s failed its check (%s). Approving uses it as it is (a key image: its clip is made from it). Open the candidate first.', $r->label(), mb_strimwidth((string) $r->error, 0, 160, '…')))
+                    ->visible(fn (ItemMedia $r): bool => $r->needsReview())
+                    ->authorize(fn (): bool => ($u = auth()->user()) instanceof User && $u->isSuperadmin())
+                    ->action(function (ItemMedia $r): void {
+                        $user = auth()->user();
+                        $done = $user instanceof User && $user->isSuperadmin() && app(StillQualityService::class)->approveItem($r, $user);
+                        Notification::make()->title($done ? 'Approved — it is used now' : 'Nothing to approve (changed meanwhile)')->{$done ? 'success' : 'warning'}()->send();
+                    }),
                 Tables\Actions\Action::make('regenerate')
                     ->label('Regenerate')
                     ->icon('heroicon-o-arrow-path')
@@ -135,6 +171,31 @@ class ItemMediaResource extends Resource
                     }),
             ])
             ->bulkActions([]);
+    }
+
+    /** Check badge: the waiting candidate first, else the verdict of the stored file. */
+    private static function qualityLabel(ItemMedia $r): ?string
+    {
+        return match (true) {
+            $r->needsReview() => 'needs review',
+            $r->status === ItemMedia::STATUS_RUNNING && filled($r->candidate_path) => 'checking',
+            $r->isInFlight() && $r->quality_retries > 0 => 'retrying',
+            $r->quality === PetMedia::QUALITY_PASSED => 'passed',
+            $r->quality === PetMedia::QUALITY_PASSED_TECHNICAL => 'passed (technical)',
+            $r->quality === PetMedia::QUALITY_UNCHECKED => 'unchecked',
+            $r->quality === PetMedia::QUALITY_FLAGGED => 'failed',
+            $r->quality === PetMedia::QUALITY_SHADOW_FAILED => 'would fail (shadow)',
+            $r->quality === PetMedia::QUALITY_APPROVED => 'approved',
+            default => null,
+        };
+    }
+
+    /** The check's reason (failed / retrying: the row's error; else the stored file's verdict reason). */
+    private static function qualityDetail(ItemMedia $r): ?string
+    {
+        $text = $r->needsReview() || ($r->isInFlight() && $r->quality_retries > 0) ? $r->error : $r->quality_reason;
+
+        return $text !== null ? mb_strimwidth($text, 0, 160, '…') : null;
     }
 
     public static function getPages(): array

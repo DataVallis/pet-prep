@@ -115,6 +115,11 @@ Route::get('media/items/{itemMedia}', [PetMediaController::class, 'showItem'])
     ->whereNumber('itemMedia')
     ->middleware(['signed:relative', 'throttle:media'])
     ->name('media.item');
+// David 2026-11-04: an item file waiting for its check (StillQualityService) — fal's vision model and the superadmin.
+Route::get('media/items/{itemMedia}/candidate', [PetMediaController::class, 'showItemCandidate'])
+    ->whereNumber('itemMedia')
+    ->middleware(['signed:relative', 'throttle:media'])
+    ->name('media.item-candidate');
 // M5-R04 growth album: archived reference images of earlier life stages.
 Route::get('media/history/{history}', [PetMediaController::class, 'showHistory'])
     ->middleware(['signed:relative', 'throttle:media'])

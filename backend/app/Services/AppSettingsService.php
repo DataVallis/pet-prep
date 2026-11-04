@@ -62,6 +62,12 @@ use InvalidArgumentException;
  * clip; QA #363 M1: three modes) = {mode: off|shadow|enforce}. Shadow (default until the
  * thresholds are calibrated) records verdicts and always serves; enforce regenerates once
  * and hides a second failure; off = the old behaviour. No row → env AI_QUALITY_CHECK_MODE.
+ * David 2026-11-04 (+ QA #736 M2 / M3): `stills_mode` (off|shadow|enforce) = the AI check of
+ * ITEM key images and catalogue pictures before a video is made from them (no key → env
+ * AI_QUALITY_STILLS_MODE, default enforce); `pet_stills_mode` = the same check of PET / look key
+ * and pose images (no key → env AI_QUALITY_PET_STILLS_MODE, default SHADOW until the verdicts are
+ * calibrated); `clip_ai` (bool) = whether the CLIP check makes its paid vision call (no key → env
+ * AI_QUALITY_CLIP_AI, default on) — clip spend can be stopped without touching the stills.
  */
 class AppSettingsService
 {
@@ -580,14 +586,96 @@ class AppSettingsService
         return $this->qualityCheckMode($fresh) !== self::QUALITY_OFF;
     }
 
-    /** Save the quality check mode (superadmin), audit it and bust the cache. */
-    public function updateQualityCheck(User $actor, string $mode): void
+    /**
+     * Save the quality check settings (superadmin), audit them and bust the cache. A null argument
+     * keeps the stored value (David 2026-11-04, QA #736 M2 / M3).
+     */
+    public function updateQualityCheck(User $actor, string $mode, ?string $stillsMode = null, ?string $petStillsMode = null, ?bool $clipAi = null): void
     {
-        if (! in_array($mode, self::QUALITY_CHECK_MODES, true)) {
-            throw new InvalidArgumentException("Unknown quality check mode {$mode}.");
+        foreach (array_filter([$mode, $stillsMode, $petStillsMode], fn ($m) => $m !== null) as $value) {
+            if (! in_array($value, self::QUALITY_CHECK_MODES, true)) {
+                throw new InvalidArgumentException("Unknown quality check mode {$value}.");
+            }
         }
 
-        $this->store($actor, self::QUALITY_CHECK_KEY, ['mode' => $mode], ['mode' => self::qualityCheckDefault()]);
+        $this->store($actor, self::QUALITY_CHECK_KEY, [
+            'mode' => $mode,
+            'stills_mode' => $stillsMode ?? $this->qualityStillsMode(fresh: true),
+            'pet_stills_mode' => $petStillsMode ?? $this->qualityPetStillsMode(fresh: true),
+            'clip_ai' => $clipAi ?? $this->qualityClipAi(fresh: true),
+        ], [
+            'mode' => self::qualityCheckDefault(),
+            'stills_mode' => self::qualityStillsDefault(),
+            'pet_stills_mode' => self::qualityPetStillsDefault(),
+            'clip_ai' => self::qualityClipAiDefault(),
+        ]);
+    }
+
+    /** @return array<string, mixed> the stored `quality_check` value ([] without a row). */
+    private function qualityCheckValue(bool $fresh): array
+    {
+        return $fresh
+            ? (AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::QUALITY_CHECK_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? []);
+    }
+
+    /**
+     * David 2026-11-04: mode of the AI check of ITEM still images (item key images, catalogue
+     * pictures) before a video is made from them — `enforce` (default: a failed still is regenerated
+     * with a new seed, ≤ max_still_retries, then the self-healing fallback), `shadow` (verdict
+     * recorded, the still is used anyway) or `off`. Independent of the clip mode.
+     */
+    public function qualityStillsMode(bool $fresh = false): string
+    {
+        $mode = $this->qualityCheckValue($fresh)['stills_mode'] ?? null;
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::qualityStillsDefault();
+    }
+
+    /** The item still mode "no key" stands for (env AI_QUALITY_STILLS_MODE, default enforce). */
+    public static function qualityStillsDefault(): string
+    {
+        $mode = (string) config('media.quality_check.stills_mode', self::QUALITY_ENFORCE);
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_ENFORCE;
+    }
+
+    /**
+     * QA #736 M2 (orchestrator, 2026-11-04): mode of the still check of PET / look key and pose
+     * images — default `shadow` (verdicts recorded, every still used) until David has looked at the
+     * verdicts in /admin (~48 h), then `enforce`.
+     */
+    public function qualityPetStillsMode(bool $fresh = false): string
+    {
+        $mode = $this->qualityCheckValue($fresh)['pet_stills_mode'] ?? null;
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::qualityPetStillsDefault();
+    }
+
+    /** The pet still mode "no key" stands for (env AI_QUALITY_PET_STILLS_MODE, default shadow). */
+    public static function qualityPetStillsDefault(): string
+    {
+        $mode = (string) config('media.quality_check.pet_stills_mode', self::QUALITY_SHADOW);
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_SHADOW;
+    }
+
+    /**
+     * QA #736 M3: the CLIP check makes its paid AI vision call (default on — shadow calibration).
+     * Off → clips are judged by the free technical check alone (»not AI-checked«); stills unaffected.
+     */
+    public function qualityClipAi(bool $fresh = false): bool
+    {
+        $value = $this->qualityCheckValue($fresh)['clip_ai'] ?? null;
+
+        return is_bool($value) ? $value : self::qualityClipAiDefault();
+    }
+
+    /** `clip_ai` "no key" (env AI_QUALITY_CLIP_AI, default true). */
+    public static function qualityClipAiDefault(): bool
+    {
+        return (bool) config('media.quality_check.clip_ai', true);
     }
 
     /** The mode "no row" stands for (env AI_QUALITY_CHECK_MODE, default shadow). */

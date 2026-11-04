@@ -368,9 +368,24 @@ describe('pipeline: candidate → check → servable / one retry / needs review'
             ->sheet_path->not->toBeNull(); // kept for the review of a failed clip
     });
 
+    it('the clip AI switch off → no vision call, the technical result decides (QA #736 M3)', function () {
+        mqFakeFal(['moving']);
+        $settings = app(AppSettingsService::class);
+        $settings->updateQualityCheck(User::factory()->create(['role' => 'parent', 'is_superadmin' => true]), $settings->qualityCheckMode(fresh: true), clipAi: false);
+        $pet = mqPet();
+        $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);
+        app(PetMediaService::class)->submitVideo($slot->id);
+        mqRun($slot);
+
+        expect($slot->fresh())->status->toBe('ready')->quality->toBe('passed_technical')
+            ->and(mqVisionCalls())->toBe(0)
+            ->and(PetMediaQualityCheck::sole())->ai_status->toBe('disabled')
+            ->and(app(MediaQualityService::class)->visionUnavailable())->toBe('disabled');
+    });
+
     it('budget out for the vision call → the technical result decides, served as »not AI-checked«', function () {
-        // The 5 s video (0.56 $) fits, the 0.01 $ vision reservation does not.
-        config(['media.budget.daily_usd' => 0.565]);
+        // The 5 s video (0.56 $) fits, the 0.003 $ vision reservation does not (price verified 2026-11-04).
+        config(['media.budget.daily_usd' => 0.562]);
         mqFakeFal(['moving']);
         $pet = mqPet();
         $slot = app(PetMediaService::class)->slot($pet, 'video', PetStateEnum::Idle);

@@ -50,6 +50,9 @@ use Throwable;
  * Stored clips: checkStored() (media:quality-check) runs the same checks on a READY
  * file; a failure sets `quality = flagged` (not shown — PetMedia::isShown) and
  * regenerateFlagged() re-queues it once.
+ *
+ * Key / pose image candidates (David 2026-11-04) are delegated to StillQualityService (AI
+ * still check before any video is made from them; its own mode `stills_mode`).
  */
 class MediaQualityService
 {
@@ -84,6 +87,14 @@ class MediaQualityService
     public function checkCandidate(int $slotId): string
     {
         $slot = PetMedia::find($slotId);
+
+        // David 2026-11-04: a key / pose image candidate gets the AI still check (its own mode).
+        if ($slot !== null && $slot->isPoseStill()) {
+            $outcome = app(StillQualityService::class)->checkPetCandidate($slot);
+
+            // Waiting for the AI budget: nothing claimed — media:sweep re-runs it (StorePetMedia of a staged slot).
+            return $outcome === 'waiting' ? 'skipped' : $outcome;
+        }
 
         if ($slot === null || $slot->status !== PetMedia::STATUS_RUNNING || blank($slot->candidate_path) || ! $slot->isClip()) {
             return 'skipped';
@@ -379,9 +390,14 @@ class MediaQualityService
         return $this->vision->costUsd();
     }
 
-    /** Why the vision call would not run now (null = it would). */
+    /** Why the vision call of a CLIP check would not run now (null = it would). */
     public function visionUnavailable(): ?string
     {
+        // QA #736 M3: the clip check's paid AI call has its own switch (stills unaffected).
+        if (! app(AppSettingsService::class)->qualityClipAi(fresh: true)) {
+            return PetMediaQualityCheck::AI_DISABLED;
+        }
+
         return $this->vision->unavailableStatus();
     }
 
@@ -542,6 +558,11 @@ class MediaQualityService
      */
     private function aiCheck(PetMedia $slot, ?string $sheetPath, PetMediaQualityCheck $check, bool $stored): array
     {
+        // QA #736 M3: the clip AI call is switched off → the technical result decides (0 $).
+        if (! app(AppSettingsService::class)->qualityClipAi(fresh: true)) {
+            return ['status' => PetMediaQualityCheck::AI_DISABLED, 'verdict' => null, 'reason' => 'clip AI check switched off (Feature switches)', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
+        }
+
         $reference = $this->media->clipReferenceImage($slot);
 
         if ($sheetPath === null || $reference === null) {

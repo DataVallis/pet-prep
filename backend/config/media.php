@@ -224,6 +224,11 @@ return [
     | (new fal request); a second fail → »Needs review« in /admin, not shown (the app's fallback).
     | Shadow (default until calibrated, QA #363 M1): verdict + metrics recorded, the clip is
     | always served. Mode: /admin → Feature switches »Quality check« (app_settings `quality_check`).
+    | Still images (David 2026-11-04, StillQualityService): key / pose / item key images and
+    | catalogue pictures get the vision check BEFORE a video is made from them — own modes
+    | `stills_mode` (items, default enforce) and `pet_stills_mode` (pet / look key + pose images,
+    | default shadow — QA #736), ≤ `max_still_retries` regenerations with a new seed; `clip_ai`
+    | switches the clip check's paid AI call.
     */
     'quality_check' => [
         // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has
@@ -255,6 +260,26 @@ return [
         'max_tail_motion_share' => (float) env('AI_QC_MAX_TAIL_SHARE', 0.7),
         // Last frame vs the end image (SSIM 0–1, 144 × 256 grey) for clips with an end frame.
         'min_end_frame_ssim' => (float) env('AI_QC_MIN_END_SSIM', 0.45),
+
+        // David 2026-11-04 (StillQualityService): every generated key image, pose image, item key
+        // image and catalogue item picture is checked by the vision model BEFORE a video is made from
+        // it. Its own mode so the clip check can stay in shadow while it is calibrated:
+        // off | shadow | enforce — only the default while /admin → Feature switches has no
+        // `quality_check.stills_mode` (David: enforce). It applies to ITEM key images and catalogue
+        // pictures; PET / look key and pose images have their own mode (QA #736 M2): shadow until
+        // David has looked at the verdicts, then enforce.
+        'stills_mode' => env('AI_QUALITY_STILLS_MODE', 'enforce'),
+        'pet_stills_mode' => env('AI_QUALITY_PET_STILLS_MODE', 'shadow'),
+        // QA #736 M3: the clip check's paid AI vision call (on / off; off = technical check alone).
+        'clip_ai' => (bool) env('AI_QUALITY_CLIP_AI', true),
+        // Cap of automatic regenerations one media:still-check run may start (each ≈ a $0.15 image +
+        // its clip). The rest stay unchecked and are picked up by the next run.
+        'max_recheck_regenerations' => (int) env('AI_QUALITY_MAX_RECHECK_REGENERATIONS', 10),
+        // Automatic regenerations (new seed, next prompt variant where one exists) per chain after a
+        // failed still (item clips: a failed technical check); then the self-healing fallback.
+        'max_still_retries' => (int) env('AI_QUALITY_MAX_STILL_RETRIES', 2),
+        // Item clips that should barely move (the bed: the animal sleeps) — low-motion threshold.
+        'low_motion_items' => ['bed'],
     ],
 
     /*
@@ -448,32 +473,34 @@ return [
     'profiles' => [
 
         /*
-        | Vision LLMs for the clip quality check (David 2026-10-23). fal's OpenRouter router:
-        | endpoint `openrouter/router/vision` — schema checked on
-        | https://fal.ai/models/openrouter/router/vision/api (2026-10-23): prompt (required),
-        | model (required, e.g. google/gemini-2.5-flash, the page default), system_prompt,
-        | image_urls (list), temperature, max_tokens; output `output` (text) + `usage`
-        | {prompt_tokens, completion_tokens, cost}. PRICE NOT VERIFIED: fal bills it per input
-        | and output token ("charged based on the number of input and output tokens") but lists
-        | no rates (the page's sample request reports usage.cost 0.0008 $; OpenRouter lists
-        | Gemini 2.5 Flash at 0.30 $ / 2.50 $ per 1M in / out tokens). So the profile is OFF
-        | until David confirms the cost on the fal dashboard (AI_QUALITY_VISION_ENABLED=true);
-        | `usd` is a deliberately high per-call RESERVATION (≈ 10 × the expected cost) — the
-        | reported usage.cost of every call is stored in pet_media_quality_checks.
+        | Vision LLM of the quality check (clips since 2026-10-23, still images since 2026-11-04).
+        | fal's OpenRouter router: endpoint `openrouter/router/vision` — schema checked on
+        | https://fal.ai/models/openrouter/router/vision/api (2026-10-23, again 2026-11-04): prompt
+        | (required), model (required, e.g. google/gemini-2.5-flash, the page default), system_prompt,
+        | image_urls (list), reasoning (bool), temperature, max_tokens; output `output` (text) +
+        | `usage` {prompt_tokens, completion_tokens, cost}. No JSON mode — the rubric asks for JSON.
+        | PRICE VERIFIED 2026-11-04 (David approved switching it on): fal bills it per token at the
+        | OpenRouter rate of the model — google/gemini-2.5-flash $0.30 / 1M input + $2.50 / 1M output
+        | tokens (https://openrouter.ai/google/gemini-2.5-flash); fal's own sample run reports
+        | usage.cost 0.0008068 for 1856 input + 100 output tokens = exactly 1856 × 0.30 / 1M +
+        | 100 × 2.50 / 1M. One still check (1 image ≈ 260–1 100 tokens + ~500 prompt tokens,
+        | ≤ 600 output tokens) ≈ $0.0005–0.002; a clip check (3 images) ≈ $0.001–0.003. `usd` is the
+        | per-call RESERVATION = the upper bound (≤ 3 000 input + 600 output tokens = $0.0024 → $0.003);
+        | the reported usage.cost of every call is stored with its check.
         */
         'vision' => [
             'openrouter_vision_gemini_flash' => [
                 'label' => 'Gemini 2.5 Flash via fal OpenRouter vision (quality check)',
                 'endpoint' => env('FAL_MODEL_OPENROUTER_VISION', 'openrouter/router/vision'),
-                'enabled' => filter_var(env('AI_QUALITY_VISION_ENABLED', false), FILTER_VALIDATE_BOOL),
-                'verified' => false,
+                'enabled' => filter_var(env('AI_QUALITY_VISION_ENABLED', true), FILTER_VALIDATE_BOOL),
+                'verified' => true,
                 'lab' => false,
-                'source' => 'https://fal.ai/models/openrouter/router/vision/api (2026-10-23: billed per input / output token, no list rate; sample usage.cost $0.0008)',
-                'pricing' => ['unit' => 'request', 'usd' => 0.01],
+                'source' => 'https://fal.ai/models/openrouter/router/vision/api + https://openrouter.ai/google/gemini-2.5-flash (2026-11-04: per token at $0.30 / 1M in, $2.50 / 1M out; fal sample usage.cost $0.0008068 = 1856 in + 100 out at those rates)',
+                'pricing' => ['unit' => 'request', 'usd' => 0.003],
                 'params' => [
                     'model' => 'google/gemini-2.5-flash',
                     'temperature' => 0,
-                    'max_tokens' => 400,
+                    'max_tokens' => 600,
                 ],
             ],
         ],

@@ -50,7 +50,10 @@ class MediaDiskReportCommand extends Command
         $candidates = DB::table('pet_media')->whereNotNull('candidate_path')->selectRaw('count(*) as files, coalesce(sum(candidate_bytes), 0) as bytes')->first();
         $rows[] = ['derived school clips', (int) $derived->files, $mb((int) $derived->bytes), '–', '–'];
         $rows[] = ['growth album (history)', (int) $history->files, $mb((int) $history->bytes), '–', '–'];
-        $rows[] = ['open clip candidates', (int) $candidates->files, $mb((int) $candidates->bytes), '–', '–'];
+        $rows[] = ['open candidates (clips, key / pose images)', (int) $candidates->files, $mb((int) $candidates->bytes), '–', '–'];
+        // QA #736 m5: item files waiting for / failed in their check (item_media.candidate_*).
+        $itemCandidates = DB::table('item_media')->whereNotNull('candidate_path')->selectRaw('count(*) as files, coalesce(sum(candidate_bytes), 0) as bytes')->first();
+        $rows[] = ['open item candidates', (int) $itemCandidates->files, $mb((int) $itemCandidates->bytes), '–', '–'];
         // M6-W03: »Želje« item content (own table; catalogue pictures, shared look and own-pet rows).
         DB::table('item_media')->whereNotNull('storage_path')->groupBy('scope')->orderBy('scope')
             ->selectRaw('scope, count(*) as files, coalesce(sum(bytes), 0) as bytes')->get()
@@ -131,6 +134,12 @@ class MediaDiskReportCommand extends Command
         $this->line(sprintf('Clip candidates older than %d h: %d, %s.', $staleHours, $old->count(), $mb((int) $old->sum('candidate_bytes'))));
         foreach ($old->take($listMax) as $row) {
             $this->line(sprintf('  #%d %s %s (%s) %s since %s', $row->id, $row->kind, $row->state, $row->status, $row->candidate_path, $row->updated_at?->toIso8601String()));
+        }
+        $oldItems = DB::table('item_media')->whereNotNull('candidate_path')->where('updated_at', '<', now()->subHours($staleHours))
+            ->orderBy('id')->get(['id', 'kind', 'design', 'status', 'candidate_path', 'candidate_bytes', 'updated_at']);
+        $this->line(sprintf('Item candidates older than %d h: %d, %s.', $staleHours, $oldItems->count(), $mb((int) $oldItems->sum('candidate_bytes'))));
+        foreach ($oldItems->take($listMax) as $row) {
+            $this->line(sprintf('  item #%d %s %s (%s) %s since %s', $row->id, $row->kind, $row->design, $row->status, $row->candidate_path, (string) $row->updated_at));
         }
 
         $this->line('');

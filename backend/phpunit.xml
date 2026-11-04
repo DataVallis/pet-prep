@@ -30,6 +30,10 @@
         <env name="AI_STATE_MEDIA_ENABLED" value="false"/>
         <!-- Clip quality check (David 2026-10-23): off for the suite (the old store-at-once path); MediaQualityCheckTest picks a mode with useQualityCheck(). -->
         <env name="AI_QUALITY_CHECK_MODE" value="off"/>
+        <!-- Still image check (David 2026-11-04): off for the suite and the vision profile off (production default on); StillQualityCheckTest switches both on. -->
+        <env name="AI_QUALITY_STILLS_MODE" value="off"/>
+        <env name="AI_QUALITY_PET_STILLS_MODE" value="off"/>
+        <env name="AI_QUALITY_VISION_ENABLED" value="false"/>
         <env name="PUSH_ENABLED" value="false"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>

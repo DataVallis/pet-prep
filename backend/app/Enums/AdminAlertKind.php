@@ -27,6 +27,8 @@ enum AdminAlertKind: string
     case FrugalClipFallback = 'frugal_clip_fallback';
     /** M6-W03: AI content of »Želje« items given up after its automatic recovery (the items are shown without it — informative). */
     case ItemMediaStuck = 'item_media_stuck';
+    /** David 2026-11-04: a state key image failed the AI still check after its automatic regenerations (needs review — informative). */
+    case StillQualityRejected = 'still_quality_rejected';
     /** DEPLOYMENT.md D31 (incident 2026-11-04): the server's root disk is ≥ system_health.disk_alert_percent full (once per day, numbers only). */
     case DiskSpace = 'disk_space';
     /** David 2026-11-04 (after PR #737): a pet's game-loop work threw in `pets:process-decay` — the other pets were processed (once per pet per day; pet id + stage + exception class only). */
@@ -43,7 +45,7 @@ enum AdminAlertKind: string
     public function severity(): string
     {
         return match ($this) {
-            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck => 'warning',
+            self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck, self::StillQualityRejected => 'warning',
             self::DiskSpace, self::GameLoopPetError => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
@@ -65,7 +67,7 @@ enum AdminAlertKind: string
     {
         return match ($this) {
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
-            self::ActivityMediaStuck, self::FrugalClipFallback => '/admin/pets',
+            self::ActivityMediaStuck, self::FrugalClipFallback, self::StillQualityRejected => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
             self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::Test => '/admin/system-health',
         };

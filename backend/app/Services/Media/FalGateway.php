@@ -63,10 +63,10 @@ class FalGateway
      *
      * @throws AiCallException
      */
-    public function run(ModelProfile $profile, array $input, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, int $timeoutSeconds = 60, ?int $petMediaId = null): array
+    public function run(ModelProfile $profile, array $input, AiSpendPurpose $purpose, ?int $petId = null, ?int $labResultId = null, int $timeoutSeconds = 60, ?int $petMediaId = null, ?int $itemMediaId = null): array
     {
         $this->assertCallable($profile);
-        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId);
+        $entry = $this->guard->reserve($profile, $purpose, $petId, $labResultId, $petMediaId, $itemMediaId);
 
         $started = hrtime(true);
 

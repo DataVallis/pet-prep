@@ -427,6 +427,15 @@ class PetAppearancePrompt
     public const POSE_ANATOMY = 'Correct, natural %s anatomy: exactly four legs and four paws, one head and one tail; '
         .'the whole body is in the new pose, no part of it is left in the pose of the reference image.';
 
+    /**
+     * David 2026-11-04 (production: a bed key image kept two ghost-white paws of the original pose on
+     * the floor and a 4th paw under the bed): every edit in which the animal MOVES away from its pose
+     * in the reference image (state key images, pose images, item key images) says that nothing of the
+     * old pose stays behind. `%s` = dog | cat.
+     */
+    public const NO_REMNANTS = 'Nothing of the %1$s\'s pose in the reference image is left behind: no extra, ghost-like, faded or '
+        .'semi-transparent paws, legs or body parts on the floor or anywhere else, and no second %1$s — where it was before there is only the empty floor.';
+
     public const KEYFRAME_STYLE = 'Realistic 35mm photograph, sharp focus, true-to-life fur texture and colours. '
         .'Only the animal: no people, no children, no hands, no text, no watermark, no logo.';
 
@@ -471,7 +480,7 @@ class PetAppearancePrompt
         $subject = $traits !== [] ? $this->describe($breedKey, $traits, $stage) : $this->displayName($breedKey);
 
         return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$state->keyPose($species).'. '
-            .self::KEYFRAME_KEEP.' '.self::KEYFRAME_STYLE;
+            .self::KEYFRAME_KEEP.' '.sprintf(self::NO_REMNANTS, $noun).' '.self::KEYFRAME_STYLE;
     }
 
     /**
@@ -550,12 +559,12 @@ class PetAppearancePrompt
         if ($variant > 0) {
             return 'A realistic photograph of the same '.$noun.' as in the reference image ('.$subject.'), '.$pose->prompt().'. '
                 .sprintf(self::POSE_ANATOMY, $noun).' '
-                .self::KEYFRAME_KEEP.' No toys. '.self::KEYFRAME_STYLE;
+                .self::KEYFRAME_KEEP.' '.sprintf(self::NO_REMNANTS, $noun).' No toys. '.self::KEYFRAME_STYLE;
         }
 
         return 'The same '.$noun.' as in the reference image ('.$subject.'), now '.$pose->prompt().'. '
             .sprintf(self::POSE_ANATOMY, $noun).' '
-            .self::KEYFRAME_KEEP.' No toys. '.self::KEYFRAME_STYLE;
+            .self::KEYFRAME_KEEP.' '.sprintf(self::NO_REMNANTS, $noun).' No toys. '.self::KEYFRAME_STYLE;
     }
 
     /**
@@ -623,7 +632,8 @@ class PetAppearancePrompt
             ? $description.' — exactly the object shown in the second reference image (same shape, colours and materials)'
             : $description;
         $action = self::itemPose($itemKey, $species, $object);
-        $anatomy = sprintf(self::POSE_ANATOMY, $noun);
+        // David 2026-11-04: the animal fully on / with the item, exactly four legs, nothing else on the floor.
+        $anatomy = sprintf(self::POSE_ANATOMY, $noun).' '.self::itemPlacement($itemKey, $noun).' '.sprintf(self::NO_REMNANTS, $noun);
 
         return $variant === 0
             ? 'The same '.$noun.' as in the first reference image ('.$subject.'), now '.$action.'. '.$anatomy.' '.self::ITEM_KEEP.' '.self::KEYFRAME_STYLE
@@ -655,6 +665,26 @@ class PetAppearancePrompt
     public function itemClipNegativePrompt(Species $species): string
     {
         return $this->loopNegativePrompt($species);
+    }
+
+    /**
+     * David 2026-11-04: where the animal's body is in an item key image (the bed: entirely on it —
+     * production had a 4th paw sticking out under the bed). `$noun` = dog | cat.
+     */
+    private static function itemPlacement(string $itemKey, string $noun): string
+    {
+        return $itemKey === 'bed'
+            ? 'The whole '.$noun.' lies on the bed: its body, all four legs and paws and its tail are on the bed or tucked under its own body; no paw or leg hangs out under or beside the bed.'
+            : 'All four legs belong to the '.$noun.'\'s body; apart from the '.$noun.' and this one object nothing else is on the floor.';
+    }
+
+    /**
+     * What an item key image should show (the vision check's scene — StillQualityService): the
+     * same words as the prompt's action.
+     */
+    public static function itemScene(string $itemKey, Species $species, string $description): string
+    {
+        return self::itemPose($itemKey, $species, $description);
     }
 
     /** What the animal does with the item in its key image. */

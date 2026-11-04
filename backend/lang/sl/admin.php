@@ -300,6 +300,15 @@ return [
         'quality_check_shadow' => 'Senca — zapiši rezultate, vedno prikaži (privzeto)',
         'quality_check_enforce' => 'Uveljavi — enkrat znova, nato skrij neuspešne',
         'quality_check' => 'Način preverjanja kakovosti',
+        'quality_clip_ai' => 'AI klic pri preverjanju posnetkov',
+        'quality_clip_ai_help' => 'QA #736: preverjanje posnetkov zgoraj za vsak nov posnetek naredi en plačljiv AI klic (≈ 0,001–0,003 $, produkcijski AI proračun) — tudi v senci, za umerjanje. Izklop: posnetke presodi samo brezplačno tehnično preverjanje (»ni AI preverjeno«); preverjanje slik spodaj ostane.',
+        'quality_stills' => 'Način preverjanja slik stvari (ključne slike stvari, slike v katalogu)',
+        'quality_stills_help' => 'David 4. 11. 2026: vsako ustvarjeno ključno sliko stvari (ljubljenček s kupljeno stvarjo) in sliko v katalogu AI model preveri (ena slika, ≈ 0,001 $, produkcijski AI proračun), PREDEN iz nje nastane posnetek — ena žival, štiri noge / tačke, brez prosojnih ali odvečnih delov telesa, stvar kot je opisana, brez besedila / ljudi. UVELJAVI (privzeto): neuspešna slika se ustvari znova z novim semenom (največ 2-krat), nato se ne uporabi (stvar se pokaže brez te vsebine, eno Discord sporočilo na zagon). SENCA: rezultati se zapišejo, vsaka slika se uporabi. IZKLOP: brez preverjanja. Brez AI proračuna slika počaka na preverjanje; brez modela se uporabi nepreverjena.',
+        'saved_body_quality_stills' => 'Preverjanje slik stvari: :state',
+        'quality_pet_stills' => 'Način preverjanja slik ljubljenčka (ključne slike, poze)',
+        'quality_pet_stills_help' => 'Isto AI preverjanje za ključne slike stanj in poze šole / iger (lastni mediji in skupni videzi). SENCA (privzeto do umerjanja): rezultati se zapišejo v Ljubljenček → AI media (»would fail«), vsaka slika se uporabi. Po ~48 urah poglej rezultate in preklopi na UVELJAVI: neuspešna slika se ustvari znova z novim semenom (največ 2-krat), nato se ne uporabi (»Potrebuje pregled«; aktivnosti v preprostem načinu, stanje obdrži trenutni posnetek; eno Discord sporočilo na 15 minut s številom). IZKLOP: brez preverjanja.',
+        'saved_body_quality_pet_stills' => 'Preverjanje slik ljubljenčka: :state',
+        'saved_body_quality_clip_ai' => 'AI klic pri posnetkih: :state',
         'saved_body_quality_check' => 'Preverjanje kakovosti: :state',
         'saved_body_app_error_reports' => 'Poročila o napakah iz aplikacije: :state',
         'app_error_reports_section' => 'Poročila o napakah iz aplikacije',
@@ -437,8 +446,8 @@ return [
             'media_desc' => 'Neuspele slike / videi ljubljenčkov',
             'needs_review' => 'AI posnetki: potrebujejo pregled',
             'needs_review_desc' => 'Dvakrat padli na preverjanju kakovosti ali označeni z media:quality-check — niso prikazani',
-            'unchecked' => 'AI posnetki brez preverjanja (24 h)',
-            'unchecked_desc' => 'ffmpeg manjka ali ni bilo mogoče meriti — preveri sliko aplikacije',
+            'unchecked' => 'AI mediji brez preverjanja (24 h)',
+            'unchecked_desc' => 'Posnetki: ffmpeg manjka ali ni bilo mogoče meriti. Slike: AI preverjanje ni dalo odgovora (slab odgovor, časovna omejitev, ni modela) — glej dnevnik napak',
             'disk' => 'Zasedenost diska',
             'disk_desc' => ':free prostega od :total',
             'disk_alert' => 'Opozorilo od :percent % (Discord, enkrat na dan)',
@@ -588,6 +597,12 @@ return [
         ],
     ],
     // M6-W03: AI vsebine kupljenih stvari, ki niso uspele niti po samodejnih poskusih (ItemMediaService::heal).
+    'still_check' => [
+        'discord' => [
+            'title' => 'Preverjanje slik: :count ključnih slik zavrnjenih po vseh samodejnih poskusih',
+            'body' => 'Ključna slika stanja ni prestala AI preverjanja (odvečne / prosojne tačke, druga žival, ljudje, besedilo …) niti po samodejnih ponovitvah z novimi semeni. Ni bila uporabljena — ljubljenček obdrži, kar prikazuje, to stanje še nima nove zanke. Po želji: Ljubljenčki → AI media → odpri kandidata → »Approve anyway« ali Regenerate. Slike poz (aktivnosti: preprost način) in slike stvari (prikazane brez vsebine) javljajo svoja opozorila.',
+        ],
+    ],
     'item_media' => [
         'discord' => [
             'title' => 'Vsebine stvari: :count slik / posnetkov stvari dokončno neuspelih',

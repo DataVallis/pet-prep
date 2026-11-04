@@ -311,7 +311,8 @@ class MediaRelationManager extends RelationManager
                     ->icon('heroicon-o-check-badge')
                     ->color('warning')
                     ->requiresConfirmation()
-                    ->modalDescription(fn (PetMedia $record): string => sprintf('This clip failed the quality check (%s). Approving shows it to the children as it is. Open the file first.',
+                    ->modalDescription(fn (PetMedia $record): string => sprintf('This %s failed the quality check (%s). Approving uses it as it is (a key / pose image: its clips are made from it). Open the candidate first.',
+                        $record->isPoseStill() ? 'picture' : 'clip',
                         self::qualityDetail($record) ?? 'no reason recorded'))
                     ->visible(fn (PetMedia $record): bool => self::isSuperadmin() && self::reviewable($record))
                     ->authorize(fn (): bool => self::isSuperadmin())
@@ -320,7 +321,7 @@ class MediaRelationManager extends RelationManager
                         $done = $user instanceof User && app(MediaQualityService::class)->approve($record, $user);
 
                         Notification::make()
-                            ->title($done ? 'Approved — the clip is shown now' : 'Nothing to approve (changed meanwhile)')
+                            ->title($done ? 'Approved — it is used now' : 'Nothing to approve (changed meanwhile)')
                             ->status($done ? 'success' : 'warning')
                             ->send();
                     }),
@@ -382,10 +383,13 @@ class MediaRelationManager extends RelationManager
         return $record->needsReview() || $record->isFlaggedQuality() || $row->needsReview() || $row->isFlaggedQuality();
     }
 
-    /** Quality badge: the waiting candidate first, else the verdict of the stored file. */
+    /**
+     * Quality badge: the waiting candidate first, else the verdict of the stored file. Clips (David
+     * 2026-10-23) and, since 2026-11-04, key / pose images (AI still check before a video is made).
+     */
     private static function qualityLabel(PetMedia $record): ?string
     {
-        if (! $record->isClip()) {
+        if (! $record->isClip() && ! $record->isPoseStill()) {
             return null;
         }
 
@@ -394,6 +398,8 @@ class MediaRelationManager extends RelationManager
         return match (true) {
             $row->needsReview() => 'needs review',
             $row->status === PetMedia::STATUS_RUNNING && filled($row->candidate_path) => 'checking',
+            // Still check: an automatic regeneration with a new seed after a failed check is on its way.
+            $row->isPoseStill() && $row->isInFlight() && (int) $row->still_retries > 0 => 'retrying',
             $row->isInFlight() && $row->quality_retry_generation !== null && (int) $row->quality_retry_generation === (int) $row->generation => 'retrying',
             $row->quality === PetMedia::QUALITY_PASSED => 'passed',
             $row->quality === PetMedia::QUALITY_PASSED_TECHNICAL => 'not AI-checked',
@@ -409,7 +415,8 @@ class MediaRelationManager extends RelationManager
     private static function qualityDetail(PetMedia $record): ?string
     {
         $row = $record->look_media_id !== null && $record->lookMedia !== null ? $record->lookMedia : $record;
-        $text = $row->needsReview() ? $row->error : ($row->quality_reason ?? ($row->isInFlight() && $row->quality_retry_generation === $row->generation ? $row->error : null));
+        $stillRetry = $row->isPoseStill() && $row->isInFlight() && (int) $row->still_retries > 0;
+        $text = $row->needsReview() ? $row->error : ($stillRetry ? $row->error : ($row->quality_reason ?? ($row->isInFlight() && $row->quality_retry_generation === $row->generation ? $row->error : null)));
 
         return $text !== null ? mb_strimwidth($text, 0, 160, '…') : null;
     }

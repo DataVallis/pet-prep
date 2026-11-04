@@ -4,6 +4,7 @@ namespace App\Services\SystemHealth;
 
 use App\Filament\Resources\PetResource;
 use App\Models\FailedJob;
+use App\Models\ItemMedia;
 use App\Models\Pet;
 use App\Models\PetMedia;
 use App\Models\SystemError;
@@ -298,13 +299,20 @@ class SystemHealthService
             ->count();
     }
 
-    /** QA #363 m1: clips served UNCHECKED in the last $hours (ffmpeg missing / nothing measurable). */
+    /**
+     * QA #363 m1: AI media used UNCHECKED in the last $hours — clips (ffmpeg missing / nothing
+     * measurable) and, since 2026-11-04 (QA #736 m2), key / pose / item stills whose AI check gave no
+     * usable verdict (malformed answer, refusal, timeout, no vision model).
+     */
     public function uncheckedMediaCount(int $hours = 24): int
     {
+        $since = Carbon::now()->subHours($hours);
+
         return PetMedia::query()->where('quality', PetMedia::QUALITY_UNCHECKED)
             ->where(fn ($q) => $q->whereNull('look_media_id')->orWhereNull('pet_id'))
-            ->where('updated_at', '>=', Carbon::now()->subHours($hours))
-            ->count();
+            ->where('updated_at', '>=', $since)
+            ->count()
+            + ItemMedia::query()->where('quality', PetMedia::QUALITY_UNCHECKED)->where('updated_at', '>=', $since)->count();
     }
 
     /** URL of the pet list filtered to pets with an AI clip that needs review (QA #363 m7). */

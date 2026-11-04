@@ -114,8 +114,9 @@ class PetMediaController extends Controller
     /**
      * GET /api/media/candidates/{media}?expires=…&signature=… (QA #363 M3)
      *
-     * The CANDIDATE clip of a slot (downloaded, waiting for or failed in the quality check) —
-     * issued only to superadmins in Pet → AI media so »Approve anyway« shows what is approved.
+     * The CANDIDATE of a slot (a clip, or since 2026-11-04 a key / pose image — downloaded,
+     * waiting for or failed in the quality check) — issued to superadmins in Pet → AI media so
+     * »Approve anyway« shows what is approved, and to fal's vision model (StillQualityService).
      * Same capability rules as show(); 404 without a candidate. Internal (not in the API docs).
      */
     #[ExcludeRouteFromDocs]
@@ -172,6 +173,19 @@ class PetMediaController extends Controller
         abort_unless($belongs, 404);
 
         return $this->serve($pet, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service);
+    }
+
+    /**
+     * GET /api/media/items/{itemMedia}/candidate?expires=…&v=…&signature=… (David 2026-11-04)
+     *
+     * The downloaded item file waiting for its check (StillQualityService): fetched by fal's vision
+     * model and opened by the superadmin before »Approve anyway«. Signature only (like fal's start
+     * frame URLs) — a request with a Sanctum token is refused. 404 without a candidate. Internal.
+     */
+    #[ExcludeRouteFromDocs]
+    public function showItemCandidate(ItemMedia $itemMedia, PetMediaService $service): Response
+    {
+        return $this->serve(null, filled($itemMedia->candidate_path), (string) $itemMedia->candidate_path, (string) ($itemMedia->candidate_mime ?? 'image/jpeg'), $service);
     }
 
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service, bool $public = false): Response
