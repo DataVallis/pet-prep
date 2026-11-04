@@ -106,7 +106,9 @@ Schedule::command('media:retry-activity-clips')
 Schedule::command('media:still-check --items')
     ->dailyAt('05:13')
     ->timezone('Europe/Ljubljana')
-    ->withoutOverlapping()
+    // Few rows, one vision call each (a checked generation is never paid twice); 60 min is far
+    // above a run and still releases a killed run's lock long before the next day (D34).
+    ->withoutOverlapping(60)
     ->name('still-check-items')
     ->description('AI still check of stored item key images never checked; failures regenerated (enforce)');
 
