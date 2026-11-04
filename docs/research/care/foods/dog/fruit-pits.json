@@ -4,6 +4,7 @@
   "name": {
     "en": "Fruit pits and stones",
     "sl": "Koščice sadja",
+    "hr": "Koštice voća",
     "de": "Obstkerne",
     "fr": "Noyaux de fruits",
     "es": "Huesos y semillas de fruta",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat fruit pits?",
     "sl": "Ali lahko psi jedo koščice sadja?",
+    "hr": "Smiju li psi jesti koštice voća?",
     "de": "Dürfen Hunde Obstkerne fressen?",
     "fr": "Les chiens peuvent-ils manger des noyaux de fruits ?",
     "es": "¿Pueden los perros comer huesos y semillas de fruta?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "fruit-pits",
     "sl": "koscice-sadja",
+    "hr": "kostice-voca",
     "de": "obstkerne",
     "fr": "noyaux-de-fruits",
     "es": "huesos-y-semillas-de-fruta",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
     "sl": "Ne. Koščic sadja, kot so češnje, breskve in nektarine, psom nikoli ne dajajte. Lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, vsebujejo pa tudi majhno količino cianida. Preden psu daste sadje, vedno odstranite koščice in semena.",
+    "hr": "Ne. Psima nikada ne treba davati koštice voća poput trešanja, breskvi i nektarina. Mogu slomiti zube, izazvati gušenje ili začepiti crijeva, a sadrže i malu količinu cijanida. Prije nego što psu daš voće, uvijek ukloni koštice i sjemenke.",
     "de": "Nein. Kerne und Steine von Früchten wie Kirschen, Pfirsichen und Nektarinen sollten Hunden nie gegeben werden. Sie können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren und enthalten eine kleine Menge Cyanid. Wenn Sie Obst mit Ihrem Hund teilen, entfernen Sie vorher immer Kerne und Samen.",
     "fr": "Non. Ne donnez jamais à un chien de noyaux de cerises, de pêches ou de nectarines. Ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et ils contiennent un peu de cyanure. Retirez toujours noyaux et pépins avant de partager un fruit.",
     "es": "No. Nunca se deben dar a un perro los huesos de frutas como las cerezas, los melocotones o las nectarinas. Pueden romperle los dientes, atragantarlo u obstruirle el intestino, y contienen una pequeña cantidad de cianuro. Quita siempre los huesos y las semillas antes de compartir fruta.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
     "sl": "Trde koščice lahko zlomijo zob, povzročijo dušenje ali zamašijo prebavila, koščice z ostrimi robovi pa lahko pri požiranju poškodujejo požiralnik. Koščica vsebuje tudi majhno količino cianida. Zastrupitev s cianidom iz koščičastega sadja je redka, a živali lahko zbolijo že po drobni količini, zato je razgrizena koščica nujen primer.",
+    "hr": "Tvrde koštice mogu slomiti zube, izazvati gušenje ili začepiti crijeva, a koštice s hrapavim rubovima pri gutanju mogu ozlijediti jednjak. Koštica sadrži i malu količinu cijanida. Otrovanje cijanidom zbog koštičavog voća rijetko je, ali se ljubimci mogu razboljeti već od sitne količine, pa se razlomljena koštica smatra hitnim slučajem.",
     "de": "Harte Kerne können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren, und Kerne mit rauen Kanten können beim Verschlucken die Speiseröhre verletzen. Der Kern enthält außerdem eine kleine Menge Cyanid. Cyanidvergiftungen durch Steinobst sind selten, aber Tiere können schon nach einer winzigen Menge erkranken – ein aufgebissener Kern gilt deshalb als dringender Fall.",
     "fr": "Les noyaux durs peuvent casser des dents, provoquer un étouffement ou obstruer l’intestin, et ceux aux bords rugueux peuvent blesser l’œsophage lorsqu’ils sont avalés. Le noyau contient aussi un peu de cyanure. Les intoxications au cyanure dues aux fruits à noyau sont rares, mais un animal peut tomber malade après une infime quantité : un noyau brisé est donc traité comme une urgence.",
     "es": "Los huesos duros pueden fracturar los dientes, causar atragantamiento u obstruir el intestino, y los de bordes ásperos pueden lesionar el esófago al tragarlos. El hueso también contiene una pequeña cantidad de cianuro. La intoxicación por cianuro con frutas de hueso es rara, pero las mascotas pueden enfermar con una cantidad mínima, así que un hueso roto se trata como una urgencia.",
@@ -78,6 +83,14 @@
       "Težave pri iztrebljanju",
       "Bolečine v trebuhu",
       "Težko dihanje"
+    ],
+    "hr": [
+      "Nagon na povraćanje",
+      "Pojačano slinjenje",
+      "Povraćanje",
+      "Otežano izlučivanje stolice",
+      "Bolovi u trbuhu",
+      "Otežano disanje"
     ],
     "de": [
       "Würgen",
@@ -147,6 +160,7 @@
   "what_to_do": {
     "en": "Call your vet right away if your dog breaks open a pit. If your dog swallowed a pit and shows any of these signs, call your vet.",
     "sl": "Če pes razgrize koščico, takoj pokličite veterinarja. Če je pes koščico pogoltnil in opazite katerega od teh znakov, pokličite veterinarja.",
+    "hr": "Odmah nazovi veterinara ako pas razlomi košticu. Ako je pas progutao košticu i pokazuje bilo koji od ovih znakova, nazovi veterinara.",
     "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund einen Kern aufbeißt. Hat Ihr Hund einen Kern verschluckt und zeigt eines dieser Anzeichen, rufen Sie Ihren Tierarzt an.",
     "fr": "Appelez immédiatement votre vétérinaire si votre chien a brisé un noyau. Si votre chien a avalé un noyau et présente l’un de ces signes, appelez votre vétérinaire.",
     "es": "Llama enseguida a tu veterinario si tu perro muerde y rompe un hueso. Si se ha tragado un hueso y presenta alguno de estos síntomas, llama también a tu veterinario.",
@@ -160,6 +174,7 @@
   "child": {
     "en": "Fruit stones are not for dogs. Throw them in the bin where your dog can't reach, and tell a grown-up if your dog eats one.",
     "sl": "Koščice sadja niso za pse. Vrzi jih v koš, kamor pes ne seže, in povej odraslemu, če pes katero poje.",
+    "hr": "Koštice voća nisu za pse. Baci ih u smeće do kojeg pas ne može doći, a ako pas pojede jednu, reci odrasloj osobi.",
     "de": "Obstkerne sind nichts für Hunde. Wirf sie in einen Mülleimer, an den dein Hund nicht herankommt, und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
     "fr": "Les noyaux de fruits ne sont pas pour les chiens. Jette-les à la poubelle, hors de portée de ton chien, et préviens un adulte s’il en mange un.",
     "es": "Los huesos de fruta no son para perros. Tíralos a la basura, donde tu perro no llegue, y avisa a un adulto si se come alguno.",
@@ -174,6 +189,7 @@
       "q": {
         "en": "Is the fruit itself okay?",
         "sl": "Je sam sadež v redu?",
+        "hr": "A je li sâm plod u redu?",
         "de": "Ist die Frucht selbst in Ordnung?",
         "fr": "Le fruit lui-même est-il sans danger ?",
         "es": "¿Se puede dar la fruta en sí?",
@@ -186,6 +202,7 @@
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
         "sl": "Odvisno od sadja; poglejte stran posameznega sadeža. Na splošno je treba semena, koščice, peščišča, lupine in peclje odstraniti, preden psu daste sadje.",
+        "hr": "Ovisi o voću; pogledaj stranicu pojedinog voća. Općenito treba ukloniti sjemenke, koštice, jezgre, kore i peteljke prije nego što se voće da psu.",
         "de": "Das hängt von der Frucht ab; schauen Sie auf der jeweiligen Seite nach. Grundsätzlich sollten Samen, Kerne, Kerngehäuse, Schalen und Pflanzenstiele entfernt werden, bevor Sie Obst an Ihren Hund verfüttern.",
         "fr": "Cela dépend du fruit ; voir la page de chaque fruit. En général, il faut retirer les graines, les noyaux, les trognons, les peaux et les tiges avant de donner un fruit à un chien.",
         "es": "Depende de la fruta; consulta la página de cada una. En general, hay que quitar las semillas, los huesos, los corazones, las cortezas y los tallos de la planta antes de dar fruta a un perro.",
@@ -200,6 +217,7 @@
       "q": {
         "en": "Which fruits have pits?",
         "sl": "Katero sadje ima koščice?",
+        "hr": "Koje voće ima koštice?",
         "de": "Welche Früchte haben Kerne?",
         "fr": "Quels fruits ont un noyau ?",
         "es": "¿Qué frutas tienen hueso?",
@@ -212,6 +230,7 @@
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
         "sl": "Sadje, kot so češnje, nektarine in breskve, imenujemo koščičasto sadje. Tako kot češnjeve tudi breskove koščice vsebujejo cianid.",
+        "hr": "Voće poput trešanja, nektarina i breskvi zove se koštičavo voće. Kao i koštice trešanja, koštice breskve sadrže cijanid.",
         "de": "Früchte wie Kirschen, Nektarinen und Pfirsiche nennt man Steinobst. Wie bei Kirschen enthalten auch Pfirsichkerne Cyanid.",
         "fr": "Les cerises, les nectarines et les pêches sont des fruits à noyau. Comme celui des cerises, le noyau de la pêche contient du cyanure.",
         "es": "Frutas como las cerezas, las nectarinas y los melocotones se llaman frutas de hueso. Igual que las cerezas, los huesos de melocotón contienen cianuro.",
@@ -292,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5a9d9c20efd9a478abc3415c001c4471307416eb357130a6cc10a1889921eba3"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ee4e2ff0c9b89ae0a6c11fd62f84dc3e0b5643dc9533b0d6ad127895cfe839bf"
     },
     "de": {
       "status": "verified",

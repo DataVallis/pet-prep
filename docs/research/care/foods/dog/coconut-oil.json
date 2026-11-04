@@ -4,6 +4,7 @@
   "name": {
     "en": "Coconut oil",
     "sl": "Kokosovo olje",
+    "hr": "Kokosovo ulje",
     "de": "Kokosöl",
     "fr": "Huile de coco",
     "es": "Aceite de coco",
@@ -16,6 +17,7 @@
   "question": {
     "en": "Can dogs eat coconut oil?",
     "sl": "Ali lahko psi jedo kokosovo olje?",
+    "hr": "Smiju li psi jesti kokosovo ulje?",
     "de": "Dürfen Hunde Kokosöl fressen?",
     "fr": "Les chiens peuvent-ils manger de l’huile de coco ?",
     "es": "¿Pueden los perros comer aceite de coco?",
@@ -28,6 +30,7 @@
   "url_slug": {
     "en": "coconut-oil",
     "sl": "kokosovo-olje",
+    "hr": "kokosovo-ulje",
     "de": "kokosoel",
     "fr": "huile-de-coco",
     "es": "aceite-de-coco",
@@ -41,6 +44,7 @@
   "answer": {
     "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
     "sl": "Ni priporočljivo kot redni dodatek. Če pes malo poliže, verjetno ne bo škode, a kokosovo olje je večinoma nasičena maščoba: lahko povzroči prebavne težave, mastno blato in drisko, dolgotrajno hranjenje pa lahko vodi v debelost in celo vnetje trebušne slinavke. Najprej se posvetujte z veterinarjem.",
+    "hr": "Ne preporučuje se kao redoviti dodatak prehrani. Ako pas samo malo poliže ulje, to vjerojatno neće naškoditi, no kokosovo ulje uglavnom je zasićena mast: može izazvati želučane tegobe, masnu stolicu i proljev, a dugotrajno davanje može dovesti do debljanja, pa čak i do upale gušterače. Prvo se posavjetuj s veterinarom.",
     "de": "Als regelmäßiger Zusatz nicht empfohlen. Kurzes Ablecken schadet wahrscheinlich nicht, aber Kokosöl besteht größtenteils aus gesättigten Fetten: Es kann Magenverstimmung, Fettstuhl und Durchfall verursachen, und bei dauerhafter Fütterung drohen Gewichtszunahme und sogar eine Bauchspeicheldrüsenentzündung. Fragen Sie vorher Ihren Tierarzt.",
     "fr": "Déconseillée en complément régulier. Une petite léchée a peu de chances de faire du mal, mais l’huile de coco est surtout composée de graisses saturées : elle peut provoquer des troubles digestifs, des selles grasses et de la diarrhée, et, donnée sur la durée, favoriser la prise de poids, voire une pancréatite. Demandez d’abord conseil à votre vétérinaire.",
     "es": "No se recomienda como complemento habitual. Es poco probable que un lametón cause daño, pero el aceite de coco es sobre todo grasa saturada: puede provocar malestar de estómago, heces grasas y diarrea, y, si se da durante mucho tiempo, aumento de peso e incluso pancreatitis. Consúltalo antes con tu veterinario.",
@@ -53,6 +57,7 @@
   "why": {
     "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
     "sl": "Kokosovo olje je večinoma iz nasičenih maščob. Hranjenje z njim lahko vodi v povečanje telesne teže in prebavne težave, dolgotrajno hranjenje pa v debelost in lahko sproži vnetje trebušne slinavke. Obsežnih raziskav, ki bi dokazovale, da psom koristi, ni. Drug članek AKC pravi, da vsakodnevno hranjenje ni priporočljivo in da so majhne, občasne količine varnejše; sledimo strožjemu nasvetu in ga uvrščamo med odsvetovane.",
+    "hr": "Kokosovo ulje većinom se sastoji od zasićenih masti. Ako ga psu daješ, može dovesti do debljanja i probavnih smetnji, a dugotrajno davanje do pretilosti i upale gušterače. Nema opsežnih istraživanja koja dokazuju da pomaže zdravlju pasa. Još jedan članak AKC-a navodi da se svakodnevno davanje ne preporučuje, a da su male, povremene količine sigurnije. Slijedimo stroži savjet i ocjenjujemo ga kao nepreporučljivo.",
     "de": "Kokosöl besteht größtenteils aus gesättigten Fetten. Wer es füttert, riskiert Gewichtszunahme und Verdauungsbeschwerden, und bei langfristiger Gabe kann es zu Fettleibigkeit führen und eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Umfangreiche Studien, die einen Nutzen für die Gesundheit von Hunden belegen, gibt es nicht. Ein weiterer AKC-Artikel rät von täglicher Gabe ab und nennt kleine, gelegentliche Mengen als sicherer; wir folgen dem strengeren Rat und stufen es als „nicht empfohlen“ ein.",
     "fr": "L’huile de coco est surtout composée de graisses saturées. En donner peut entraîner une prise de poids et des troubles digestifs, et, sur la durée, de l’obésité et une pancréatite. Aucune étude approfondie ne prouve qu’elle soit bénéfique pour la santé des chiens. Un autre article de l’AKC déconseille de la donner tous les jours et juge plus sûres de petites quantités occasionnelles ; nous suivons le conseil le plus strict et la classons parmi les aliments déconseillés.",
     "es": "El aceite de coco está formado sobre todo por grasas saturadas. Si se le da a un perro, puede provocar aumento de peso y molestias digestivas, y, tomado durante mucho tiempo, obesidad y pancreatitis. No hay estudios amplios que demuestren que mejore la salud de los perros. Otro artículo del AKC dice que no se recomienda dárselo a diario y que las cantidades pequeñas y ocasionales son más seguras; seguimos el consejo más estricto y lo clasificamos como no recomendado.",
@@ -72,6 +77,11 @@
       "Prebavne težave",
       "Mastno blato",
       "Driska"
+    ],
+    "hr": [
+      "Želučane tegobe",
+      "Masna stolica",
+      "Proljev"
     ],
     "de": [
       "Magenverstimmung",
@@ -117,6 +127,7 @@
   "what_to_do": {
     "en": "If your dog licked a little coconut oil, it likely won't cause much harm. Before giving coconut oil to eat or putting it on the skin, discuss it with your vet.",
     "sl": "Če je pes polizal malo kokosovega olja, verjetno ne bo večje škode. Preden mu kokosovo olje date jesti ali ga nanesete na kožo, se posvetujte z veterinarjem.",
+    "hr": "Ako je pas polizao malo kokosova ulja, vjerojatno neće biti velike štete. Prije nego što psu daš kokosovo ulje, bilo u hrani ili na koži, porazgovaraj s veterinarom.",
     "de": "Hat Ihr Hund etwas Kokosöl abgeleckt, ist das vermutlich kein großes Problem. Besprechen Sie es mit Ihrem Tierarzt, bevor Sie Kokosöl füttern oder auf die Haut auftragen.",
     "fr": "Si votre chien a léché un peu d’huile de coco, cela ne devrait pas poser de gros problème. Parlez-en à votre vétérinaire avant de lui en donner à manger ou de l’appliquer sur sa peau.",
     "es": "Si tu perro ha lamido un poco de aceite de coco, es probable que no pase nada grave. Antes de darle aceite de coco para comer o de aplicárselo en la piel, coméntalo con tu veterinario.",
@@ -130,6 +141,7 @@
   "child": {
     "en": "Coconut oil is very fatty and can upset a dog's tummy. Only a grown-up and the vet decide about it.",
     "sl": "Kokosovo olje je zelo mastno in lahko psu razburi trebušček. O njem odločata samo odrasli in veterinar.",
+    "hr": "Kokosovo ulje je vrlo masno i može smetati psećem trbuščiću. O njemu odlučuju samo odrasla osoba i veterinar.",
     "de": "Kokosöl ist sehr fettig und kann Hunden auf den Bauch schlagen. Darüber entscheiden nur ein Erwachsener und der Tierarzt.",
     "fr": "L’huile de coco est très grasse et peut donner mal au ventre aux chiens. Seuls un adulte et le vétérinaire décident si on peut en donner.",
     "es": "El aceite de coco es muy graso y puede sentarle mal a la barriga de un perro. Solo un adulto y el veterinario deciden si se le da.",
@@ -144,6 +156,7 @@
       "q": {
         "en": "Can I put coconut oil on my dog's skin?",
         "sl": "Ali lahko psu kokosovo olje namažem na kožo?",
+        "hr": "Smijem li kokosovo ulje nanijeti psu na kožu?",
         "de": "Darf ich Kokosöl auf die Haut meines Hundes auftragen?",
         "fr": "Puis-je mettre de l’huile de coco sur la peau de mon chien ?",
         "es": "¿Puedo ponerle aceite de coco en la piel a mi perro?",
@@ -156,6 +169,7 @@
       "a": {
         "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
         "sl": "Kokosovo olje lahko pomiri razdražena mesta ali suho, srbečo kožo, a maže in lahko zamaši pore. Pred uporabo se posvetujte z veterinarjem.",
+        "hr": "Kokosovo ulje može ublažiti nadražena mjesta ili suhu kožu koja svrbi, ali je masno i može začepiti pore. Prije upotrebe porazgovaraj s veterinarom.",
         "de": "Kokosöl kann gereizte Stellen oder trockene, juckende Haut beruhigen, ist aber schmierig und kann die Poren verstopfen. Besprechen Sie es vor der Anwendung mit Ihrem Tierarzt.",
         "fr": "L’huile de coco peut aider à apaiser les zones irritées ou la peau sèche qui démange, mais elle est salissante et peut boucher les pores. Parlez-en à votre vétérinaire avant de l’utiliser.",
         "es": "El aceite de coco puede aliviar las zonas irritadas o la piel seca y con picor, pero mancha mucho y puede obstruir los poros. Coméntalo con tu veterinario antes de usarlo.",
@@ -170,6 +184,7 @@
       "q": {
         "en": "Is coconut oil good for dogs' health?",
         "sl": "Je kokosovo olje dobro za zdravje psa?",
+        "hr": "Je li kokosovo ulje dobro za zdravlje pasa?",
         "de": "Ist Kokosöl gut für die Gesundheit von Hunden?",
         "fr": "L’huile de coco est-elle bonne pour la santé des chiens ?",
         "es": "¿Es bueno el aceite de coco para la salud de los perros?",
@@ -182,6 +197,7 @@
       "a": {
         "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
         "sl": "Obsežnih raziskav, ki bi dokazovale, da kokosovo olje zagotovo pomaga pri številnih vidikih pasjega zdravja, ni.",
+        "hr": "Nema opsežnih istraživanja koja dokazuju da kokosovo ulje sigurno pomaže u mnogim aspektima zdravlja pasa.",
         "de": "Dass Kokosöl die Gesundheit von Hunden in vielerlei Hinsicht verbessert, ist durch umfangreiche Studien bisher nicht eindeutig belegt.",
         "fr": "Aucune étude approfondie ne prouve à ce jour que l’huile de coco améliore à coup sûr de nombreux aspects de la santé du chien.",
         "es": "No hay estudios amplios que demuestren que el aceite de coco ayude con seguridad en muchos aspectos de la salud de un perro.",
@@ -267,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "50d4402be74fea31325806b73e88686d7abd9557e70850afedaa529a31fed076"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fe2b5a1ffb17675f0b98b3192a3fb87674ffa2c93b72e8a731a2e46a71f7f416"
     },
     "de": {
       "status": "verified",
