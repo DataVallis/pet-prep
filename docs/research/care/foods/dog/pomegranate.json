@@ -12,7 +12,8 @@
     "pt": "Romã",
     "nl": "Granaatappel",
     "pl": "Granat",
-    "cs": "Granátové jablko"
+    "cs": "Granátové jablko",
+    "sv": "Granatäpple"
   },
   "question": {
     "en": "Can dogs eat pomegranate?",
@@ -25,7 +26,8 @@
     "pt": "Os cães podem comer romã?",
     "nl": "Mogen honden granaatappel eten?",
     "pl": "Czy psy mogą jeść granat?",
-    "cs": "Mohou psi jíst granátové jablko?"
+    "cs": "Mohou psi jíst granátové jablko?",
+    "sv": "Får hundar äta granatäpple?"
   },
   "url_slug": {
     "en": "pomegranate",
@@ -38,7 +40,8 @@
     "pt": "roma",
     "nl": "granaatappel",
     "pl": "granat",
-    "cs": "granatove-jablko"
+    "cs": "granatove-jablko",
+    "sv": "granatapple"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca.",
     "nl": "Liever niet. Granaatappels zijn niet giftig voor honden, maar daarmee is de vrucht nog niet veilig: de zaadjes kunnen maagproblemen en een verstopping van het spijsverteringskanaal veroorzaken, en stukjes schil en steel kunnen een afsluiting geven. Het is veiliger om geen verse granaatappel te geven.",
     "pl": "Nie zaleca się. Granat nie jest toksyczny dla psów, ale to nie znaczy, że owoc jest bezpieczny: pestki mogą wywołać dolegliwości żołądkowe i zatkać przewód pokarmowy, a kawałki skórki i szypułki mogą spowodować niedrożność. Bezpieczniej nie podawać świeżego granatu.",
-    "cs": "Nedoporučuje se. Granátová jablka pro psy nejsou toxická, ale to z nich nedělá bezpečné ovoce: semínka mohou způsobit žaludeční potíže a ucpání trávicího traktu a kousky slupky a stopky mohou způsobit ucpání. Bezpečnější je čerstvé granátové jablko nedávat."
+    "cs": "Nedoporučuje se. Granátová jablka pro psy nejsou toxická, ale to z nich nedělá bezpečné ovoce: semínka mohou způsobit žaludeční potíže a ucpání trávicího traktu a kousky slupky a stopky mohou způsobit ucpání. Bezpečnější je čerstvé granátové jablko nedávat.",
+    "sv": "Rekommenderas inte. Granatäpplen är inte giftiga för hundar, men det betyder inte att frukten är säker: kärnorna kan ge magproblem och stopp i matsmältningskanalen, och bitar av skal och stjälk kan orsaka stopp. Det är säkrare att inte ge färskt granatäpple."
   },
   "why": {
     "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -65,7 +69,8 @@
     "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca.",
     "nl": "De hoofddierenarts van de AKC zegt dat granaatappels niet giftig zijn voor honden. De zaadjes, het deel dat mensen meestal eten, kunnen toch maag- en darmklachten en een verstopping van het spijsverteringskanaal veroorzaken. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden. Granaatappelextract in producten die voor honden zijn gemaakt is iets anders dan de verse vrucht.",
     "pl": "Główny lekarz weterynarii AKC podaje, że granaty nie są toksyczne dla psów. Pestki, czyli część, którą ludzie zwykle jedzą, mogą jednak wywołać problemy żołądkowo-jelitowe i zablokować przewód pokarmowy. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów. Ekstrakt z granatu w produktach przeznaczonych dla psów to co innego niż świeży owoc.",
-    "cs": "Hlavní veterinář AKC uvádí, že granátová jablka nejsou pro psy toxická. Semínka, tedy část, kterou lidé obvykle jedí, však mohou způsobit zažívací potíže a ucpání trávicího traktu. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů. Výtažek z granátového jablka v produktech určených pro psy je něco jiného než čerstvý plod."
+    "cs": "Hlavní veterinář AKC uvádí, že granátová jablka nejsou pro psy toxická. Semínka, tedy část, kterou lidé obvykle jedí, však mohou způsobit zažívací potíže a ucpání trávicího traktu. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů. Výtažek z granátového jablka v produktech určených pro psy je něco jiného než čerstvý plod.",
+    "sv": "AKC:s chefsveterinär säger att granatäpplen inte är giftiga för hundar. Kärnorna, den del som människor oftast äter, kan ändå ge mag- och tarmproblem och stopp i matsmältningskanalen. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar. Granatäppelextrakt i produkter för hundar är en annan sak än den färska frukten."
   },
   "signs": {
     "en": [
@@ -111,6 +116,10 @@
     "cs": [
       "Průjem",
       "Zvracení"
+    ],
+    "sv": [
+      "Diarré",
+      "Kräkningar"
     ]
   },
   "what_to_do": {
@@ -124,7 +133,8 @@
     "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário.",
     "nl": "Heeft je hond granaatappelzaadjes gegeten? Neem dan meteen contact op met je dierenarts.",
     "pl": "Jeśli twój pies zjadł pestki granatu, od razu skontaktuj się z weterynarzem.",
-    "cs": "Pokud se váš pes dostane k semínkům granátového jablka, okamžitě se obraťte na veterináře."
+    "cs": "Pokud se váš pes dostane k semínkům granátového jablka, okamžitě se obraťte na veterináře.",
+    "sv": "Om hunden har ätit granatäppelkärnor, kontakta veterinären direkt."
   },
   "serving": null,
   "child": {
@@ -138,7 +148,8 @@
     "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance.",
     "nl": "Granaatappel is fruit voor mensen. De zaadjes en de schil kunnen de buik van een hond van streek maken, dus houd het buiten het bereik van je hond.",
     "pl": "Granat to owoc dla ludzi. Jego pestki i skórka mogą psu rozstroić brzuszek, więc trzymaj go z dala od psa.",
-    "cs": "Granátové jablko je ovoce pro lidi. Jeho semínka a slupka mohou psovi pokazit bříško, tak ho měj mimo dosah."
+    "cs": "Granátové jablko je ovoce pro lidi. Jeho semínka a slupka mohou psovi pokazit bříško, tak ho měj mimo dosah.",
+    "sv": "Granatäpple är en frukt för människor. Kärnorna och skalet kan ge hunden ont i magen, så håll det utom räckhåll."
   },
   "faq": [
     {
@@ -153,7 +164,8 @@
         "pt": "Pode haver romã na comida para cães?",
         "nl": "Is granaatappel in hondenvoer goed?",
         "pl": "Czy granat w karmie dla psów jest w porządku?",
-        "cs": "Je granátové jablko v krmivu pro psy v pořádku?"
+        "cs": "Je granátové jablko v krmivu pro psy v pořádku?",
+        "sv": "Går det bra med granatäpple i hundfoder?"
       },
       "a": {
         "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -166,7 +178,8 @@
         "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário.",
         "nl": "Granaatappelextract kan gezondheidsvoordelen hebben voor honden. Wil je het geven, kies dan producten die speciaal voor honden zijn gemaakt en overleg met je dierenarts.",
         "pl": "Ekstrakt z granatu może korzystnie wpływać na zdrowie psów. Jeśli chcesz go podawać, szukaj produktów przeznaczonych specjalnie dla psów i porozmawiaj z weterynarzem.",
-        "cs": "Výtažek z granátového jablka může psům prospívat. Pokud ho chcete psovi dávat, hledejte produkty určené přímo pro psy a poraďte se s veterinářem."
+        "cs": "Výtažek z granátového jablka může psům prospívat. Pokud ho chcete psovi dávat, hledejte produkty určené přímo pro psy a poraďte se s veterinářem.",
+        "sv": "Granatäppelextrakt kan ha hälsofördelar för hundar. Om du vill ge det, välj produkter som är särskilt framtagna för hundar och prata med veterinären."
       }
     },
     {
@@ -181,7 +194,8 @@
         "pt": "Os cães podem comer a casca da romã?",
         "nl": "Mogen honden de schil van de granaatappel eten?",
         "pl": "Czy psy mogą jeść skórkę granatu?",
-        "cs": "Mohou psi jíst slupku granátového jablka?"
+        "cs": "Mohou psi jíst slupku granátového jablka?",
+        "sv": "Får hundar äta granatäppelskal?"
       },
       "a": {
         "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -194,7 +208,8 @@
         "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês.",
         "nl": "Nee. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden, dus geef ze niet.",
         "pl": "Nie. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów, więc ich nie podawaj.",
-        "cs": "Ne. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů, proto je nedávejte."
+        "cs": "Ne. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů, proto je nedávejte.",
+        "sv": "Nej. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar, så ge inte hunden skalet."
       }
     }
   ],
@@ -317,6 +332,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6c86d697065716e744d2762a7cf875a46627e2285ae3b41dfc69f8e9f5cd5b6a"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "73e492112cbf8ed6f59b6019471b3489d6070854d84faa6c13f5f06175447566"
     }
   }
 }

@@ -12,7 +12,8 @@
     "pt": "Coco",
     "nl": "Kokosnoot",
     "pl": "Kokos",
-    "cs": "Kokos"
+    "cs": "Kokos",
+    "sv": "Kokos"
   },
   "question": {
     "en": "Can dogs eat coconut?",
@@ -25,7 +26,8 @@
     "pt": "Os cães podem comer coco?",
     "nl": "Mogen honden kokosnoot eten?",
     "pl": "Czy psy mogą jeść kokos?",
-    "cs": "Mohou psi jíst kokos?"
+    "cs": "Mohou psi jíst kokos?",
+    "sv": "Får hundar äta kokos?"
   },
   "url_slug": {
     "en": "coconut",
@@ -38,7 +40,8 @@
     "pt": "coco",
     "nl": "kokosnoot",
     "pl": "kokos",
-    "cs": "kokos"
+    "cs": "kokos",
+    "sv": "kokos"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia.",
     "nl": "Ja, in kleine hoeveelheden. Ongezoet kokosvlees is met mate veilig voor honden, maar geef nooit de vezelige buitenschil of de harde dop. Kokos bevat veel vet en oliën, die buikklachten en diarree kunnen veroorzaken.",
     "pl": "Tak, w małych ilościach. Niesłodzony miąższ kokosa jest dla psów bezpieczny, o ile podajesz go z umiarem, ale nigdy nie dawaj łupiny ani skorupy. Kokos jest bogaty w tłuszcz i zawiera oleje, które mogą wywołać rozstrój żołądka i biegunkę.",
-    "cs": "Ano, v malém množství. Neslazená kokosová dužina je pro psy v rozumné míře bezpečná, ale slupku ani skořápku jim nikdy nedávejte. Kokos je hodně tučný a obsahuje oleje, které mohou psovi podráždit žaludek a způsobit průjem."
+    "cs": "Ano, v malém množství. Neslazená kokosová dužina je pro psy v rozumné míře bezpečná, ale slupku ani skořápku jim nikdy nedávejte. Kokos je hodně tučný a obsahuje oleje, které mohou psovi podráždit žaludek a způsobit průjem.",
+    "sv": "Ja, i små mängder. Osötat fruktkött från kokosnöt är ofarligt för hundar med måtta, men ge aldrig ytterhöljet eller skalet. Kokos innehåller mycket fett och oljor som kan ge orolig mage och diarré."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -65,7 +69,8 @@
     "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal.",
     "nl": "In kleine hoeveelheden is kokos waarschijnlijk niet ernstig schadelijk, maar het vruchtvlees en de melk van verse kokosnoten bevatten oliën die buikklachten, zachte ontlasting en diarree kunnen geven. Kokos bevat relatief veel vet, dus geef je honden die geen vetrijk voer mogen eten of overgewicht hebben beter een ander snoepje. Het bevat ook veel kalium, dus voorzichtigheid is geboden bij honden met een nierziekte. De vezelige buitenschil en de dop kunnen een darmverstopping veroorzaken.",
     "pl": "W małych ilościach kokos raczej nie wyrządzi poważnej szkody, ale miąższ i mleko świeżych kokosów zawierają oleje, które mogą wywołać rozstrój żołądka, luźne stolce i biegunkę. Kokos jest dość tłusty, więc psy, którym nie wolno jeść dużo tłuszczu, oraz psy z nadwagą powinny dostawać inne smakołyki. Zawiera też dużo potasu, dlatego u psów z chorobą nerek trzeba zachować ostrożność. Łupina i skorupa mogą spowodować niedrożność jelit.",
-    "cs": "V malém množství kokos pravděpodobně vážně neublíží, ale dužina a mléko čerstvých kokosů obsahují oleje, které mohou způsobit podrážděný žaludek, řidší stolici a průjem. Kokos je tučnější, proto by psi, kterým se vysoký obsah tuku nedoporučuje, i psi s nadváhou měli dostávat jiné pamlsky. Obsahuje také hodně draslíku, takže u psů s nemocnými ledvinami je třeba opatrnosti. Slupka a skořápka mohou způsobit ucpání střev."
+    "cs": "V malém množství kokos pravděpodobně vážně neublíží, ale dužina a mléko čerstvých kokosů obsahují oleje, které mohou způsobit podrážděný žaludek, řidší stolici a průjem. Kokos je tučnější, proto by psi, kterým se vysoký obsah tuku nedoporučuje, i psi s nadváhou měli dostávat jiné pamlsky. Obsahuje také hodně draslíku, takže u psů s nemocnými ledvinami je třeba opatrnosti. Slupka a skořápka mohou způsobit ucpání střev.",
+    "sv": "I små mängder är det osannolikt att kokos orsakar allvarlig skada, men fruktköttet och mjölken från färska kokosnötter innehåller oljor som kan ge orolig mage, lös avföring och diarré. Kokos innehåller mycket fett, så hundar som inte ska ha fettrik kost eller som är överviktiga bör få andra godbitar. Kokos innehåller också mycket kalium, så var försiktig om hunden har njursjukdom. Ytterhöljet och skalet kan orsaka tarmstopp."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite.",
     "nl": "Vraag je dierenarts om advies voordat je kokos aan het voer van je hond toevoegt, zeker als je hond ooit alvleesklierontsteking heeft gehad.",
     "pl": "Zanim dodasz kokos do diety psa, zapytaj weterynarza, zwłaszcza jeśli twój pies miał zapalenie trzustki.",
-    "cs": "Než kokos zařadíte do jídelníčku svého psa, poraďte se s veterinářem, především pokud pes prodělal zánět slinivky břišní."
+    "cs": "Než kokos zařadíte do jídelníčku svého psa, poraďte se s veterinářem, především pokud pes prodělal zánět slinivky břišní.",
+    "sv": "Fråga veterinären innan du lägger till kokos i hundens kost, särskilt om hunden har haft bukspottkörtelinflammation."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -92,7 +98,8 @@
     "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água.",
     "nl": "Alleen ongezoet vruchtvlees, in kleine hoeveelheden, zonder buitenschil of dop. Kokosmelk alleen ongezoet en zonder xylitol; kokoswater alleen als snoepje, nooit in plaats van water.",
     "pl": "Tylko niesłodzony miąższ, w małych ilościach, bez łupiny i skorupy. Mleko kokosowe tylko niesłodzone i bez ksylitolu; woda kokosowa wyłącznie jako smakołyk, nigdy zamiast wody.",
-    "cs": "Pouze neslazená dužina, v malém množství, bez slupky a skořápky. Kokosové mléko jen neslazené a bez xylitolu; kokosová voda jen jako pamlsek, nikdy místo vody."
+    "cs": "Pouze neslazená dužina, v malém množství, bez slupky a skořápky. Kokosové mléko jen neslazené a bez xylitolu; kokosová voda jen jako pamlsek, nikdy místo vody.",
+    "sv": "Bara osötat fruktkött, i små mängder, utan ytterhölje och skal. Kokosmjölk bara om den är osötad och fri från xylitol; kokosvatten bara som godbit, aldrig i stället för vatten."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -105,7 +112,8 @@
     "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara.",
     "nl": "Honden mogen een beetje kokos proeven! De harde dop is niets voor honden, dus een volwassene maakt het klaar.",
     "pl": "Psy mogą spróbować odrobiny kokosa! Twarda skorupa nie jest dla psów, więc przygotowuje go dorosły.",
-    "cs": "Psi si můžou pochutnat na trošce kokosu! Tvrdá skořápka pro psy není, takže kokos připraví dospělý."
+    "cs": "Psi si můžou pochutnat na trošce kokosu! Tvrdá skořápka pro psy není, takže kokos připraví dospělý.",
+    "sv": "Hundar kan smaka lite kokos! Det hårda skalet är inte för hundar, så en vuxen förbereder det."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "pt": "Os cães podem beber água de coco ou leite de coco?",
         "nl": "Mogen honden kokoswater of kokosmelk drinken?",
         "pl": "Czy psy mogą pić wodę kokosową lub mleko kokosowe?",
-        "cs": "Mohou psi pít kokosovou vodu nebo kokosové mléko?"
+        "cs": "Mohou psi pít kokosovou vodu nebo kokosové mléko?",
+        "sv": "Får hundar dricka kokosvatten eller kokosmjölk?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -133,7 +142,8 @@
         "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães.",
         "nl": "Kokoswater alleen als snoepje, niet in plaats van gewoon water. Kokosmelk alleen ongezoet en zonder kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
         "pl": "Woda kokosowa tylko jako smakołyk, nie zamiast zwykłej wody. Mleko kokosowe tylko niesłodzone i bez sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów.",
-        "cs": "Kokosovou vodu jen jako pamlsek, ne místo běžné vody. Kokosové mléko jen neslazené a bez umělých sladidel, jako je xylitol, který je pro psy toxický."
+        "cs": "Kokosovou vodu jen jako pamlsek, ne místo běžné vody. Kokosové mléko jen neslazené a bez umělých sladidel, jako je xylitol, který je pro psy toxický.",
+        "sv": "Kokosvatten bara som godbit, inte i stället för vanligt vatten. Kokosmjölk bara om den är osötad och fri från konstgjorda sötningsmedel som xylitol, som är giftigt för hundar."
       }
     },
     {
@@ -148,7 +158,8 @@
         "pt": "Porque é que não se pode dar a casca do coco?",
         "nl": "Waarom niet de kokosdop?",
         "pl": "Dlaczego nie skorupa kokosa?",
-        "cs": "Proč ne kokosová skořápka?"
+        "cs": "Proč ne kokosová skořápka?",
+        "sv": "Varför inte kokosskalet?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -161,7 +172,8 @@
         "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira.",
         "nl": "De vezelige buitenschil en de dop kunnen ernstige spijsverteringsproblemen veroorzaken, zoals een darmverstopping en maagirritatie, net als wanneer een hond stokken of hout eet.",
         "pl": "Łupina i skorupa mogą powodować poważne problemy trawienne, w tym niedrożność jelit i podrażnienie żołądka, podobnie jak zjadanie patyków czy drewna.",
-        "cs": "Slupka a skořápka mohou způsobit vážné zažívací potíže, včetně ucpání střev a podráždění žaludku, podobně jako když pes sní klacky nebo kus dřeva."
+        "cs": "Slupka a skořápka mohou způsobit vážné zažívací potíže, včetně ucpání střev a podráždění žaludku, podobně jako když pes sní klacky nebo kus dřeva.",
+        "sv": "Ytterhöljet och skalet kan ge allvarliga matsmältningsproblem, bland annat tarmstopp och irriterad mage, ungefär som när hunden äter pinnar eller trä."
       }
     }
   ],
@@ -301,6 +313,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5d747016338b46d255f5fffdaddc78e27fc46169ca3cb6cbf2dc821b11cdd8a2"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "25ee497252b2592f3a3e0c4adb73f4e8b7c4d12b37ba296af3e151f3efa5cf49"
     }
   }
 }

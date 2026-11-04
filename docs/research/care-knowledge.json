@@ -5455,7 +5455,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Dried fruit",
@@ -5468,7 +5469,8 @@
         "pt": "Fruta desidratada",
         "nl": "Gedroogd fruit",
         "pl": "Suszone owoce",
-        "cs": "Sušené ovoce"
+        "cs": "Sušené ovoce",
+        "sv": "Torkad frukt"
       },
       "question": {
         "en": "Can cats eat dried fruit?",
@@ -5481,7 +5483,8 @@
         "pt": "Os gatos podem comer fruta desidratada?",
         "nl": "Mogen katten gedroogd fruit eten?",
         "pl": "Czy koty mogą jeść suszone owoce?",
-        "cs": "Mohou kočky jíst sušené ovoce?"
+        "cs": "Mohou kočky jíst sušené ovoce?",
+        "sv": "Får katter äta torkad frukt?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -5494,7 +5497,8 @@
         "pt": "fruta-desidratada",
         "nl": "gedroogd-fruit",
         "pl": "suszone-owoce",
-        "cs": "susene-ovoce"
+        "cs": "susene-ovoce",
+        "sv": "torkad-frukt"
       },
       "answer": {
         "en": "No, keep dried fruit away from cats. Raisins, sultanas and currants are highly toxic to pets, raisins and currants can cause kidney failure in cats, and sugar is unhealthy for cats. Watch out for cakes and mince pies too, and call your vet if your cat eats any.",
@@ -5507,7 +5511,8 @@
         "pt": "Não, mantém a fruta desidratada longe dos gatos. Passas, sultanas e passas de Corinto são muito tóxicas para os animais de estimação, passas e passas de Corinto podem causar insuficiência renal nos gatos e o açúcar não lhes faz bem. Cuidado também com bolos e mince pies, e liga ao teu veterinário se o teu gato comer algum.",
         "nl": "Nee, houd gedroogd fruit uit de buurt van je kat. Rozijnen, sultanarozijnen en krenten zijn zeer giftig voor huisdieren. Rozijnen en krenten kunnen bij katten nierfalen veroorzaken en suiker is ongezond voor katten. Pas ook op voor cake en kerstgebakjes met rozijnen en bel je dierenarts als je kat daar iets van heeft gegeten.",
         "pl": "Nie, trzymaj suszone owoce z dala od kotów. Rodzynki, sułtanki i korynki są wysoce toksyczne dla zwierząt domowych, rodzynki i korynki mogą wywołać u kotów niewydolność nerek, a cukier jest dla kotów niezdrowy. Uważaj też na ciasta i słodkie wypieki z bakaliami, a jeśli kot cokolwiek zje, zadzwoń do weterynarza.",
-        "cs": "Ne, sušené ovoce držte mimo dosah koček. Rozinky, sultánky a korintky jsou pro zvířata vysoce toxické, rozinky a korintky mohou u koček způsobit selhání ledvin a cukr kočkám škodí. Pozor i na koláče a mince pies (britské vánoční koláčky); pokud kočka něco z toho sní, zavolejte veterináři."
+        "cs": "Ne, sušené ovoce držte mimo dosah koček. Rozinky, sultánky a korintky jsou pro zvířata vysoce toxické, rozinky a korintky mohou u koček způsobit selhání ledvin a cukr kočkám škodí. Pozor i na koláče a mince pies (britské vánoční koláčky); pokud kočka něco z toho sní, zavolejte veterináři.",
+        "sv": "Nej, håll torkad frukt borta från katter. Russin, sultanrussin och korinter är mycket giftiga för husdjur, russin och korinter kan orsaka njursvikt hos katter, och socker är inte nyttigt för katter. Se även upp med kakor och mince pies, och ring veterinären om katten äter något av det."
       },
       "why": {
         "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
@@ -5520,7 +5525,8 @@
         "pt": "A Cats Protection inclui as uvas, as passas e as passas de Corinto entre os alimentos humanos tóxicos para os gatos e diz que podem causar insuficiência renal nos gatos, sendo possível que os gatos com doença renal crónica corram mais risco. A PDSA avisa que as mince pies e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. A Cats Protection diz também que o açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles. A intoxicação por uvas e passas nos gatos é rara e pouco conhecida, e não encontrámos nenhuma fonte sobre gatos que diga que alguma fruta desidratada é segura, por isso seguimos o nível mais rigoroso.",
         "nl": "Cats Protection noemt druiven, rozijnen en krenten onder het menselijk voedsel dat giftig is voor katten en zegt dat ze nierfalen kunnen veroorzaken; katten met een chronische nierziekte lopen mogelijk een groter risico. De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Cats Protection zegt ook dat suiker niet giftig is voor katten, maar wel ongezond. Vergiftiging door druiven en rozijnen komt bij katten zelden voor en wordt niet goed begrepen. We vonden geen enkele bron over katten die zegt dat gedroogd fruit veilig is, dus volgen we het strengere advies.",
         "pl": "Cats Protection wymienia winogrona, rodzynki i korynki wśród ludzkich produktów toksycznych dla kotów i podaje, że mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. PDSA ostrzega, że mince pies (angielskie babeczki z bakaliowym nadzieniem) i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Cats Protection dodaje też, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Zatrucie winogronami i rodzynkami u kotów jest rzadkie i słabo poznane, a nie znaleźliśmy żadnego źródła o kotach, które uznawałoby suszone owoce za bezpieczne, dlatego przyjmujemy surowszą ocenę.",
-        "cs": "Cats Protection uvádí hrozny, rozinky a korintky mezi lidskými potravinami toxickými pro kočky a říká, že mohou u koček způsobit selhání ledvin, přičemž kočky s chronickým onemocněním ledvin mohou být ohroženy víc. PDSA upozorňuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Cats Protection také uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Otrava hrozny a rozinkami je u koček vzácná a není dobře prozkoumaná. Nenašli jsme žádný zdroj o kočkách, který by označil nějaké sušené ovoce za bezpečné, proto používáme přísnější úroveň."
+        "cs": "Cats Protection uvádí hrozny, rozinky a korintky mezi lidskými potravinami toxickými pro kočky a říká, že mohou u koček způsobit selhání ledvin, přičemž kočky s chronickým onemocněním ledvin mohou být ohroženy víc. PDSA upozorňuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Cats Protection také uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Otrava hrozny a rozinkami je u koček vzácná a není dobře prozkoumaná. Nenašli jsme žádný zdroj o kočkách, který by označil nějaké sušené ovoce za bezpečné, proto používáme přísnější úroveň.",
+        "sv": "Cats Protection räknar upp vindruvor, russin och korinter bland de livsmedel för människor som är giftiga för katter och skriver att de kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom möjligen löper större risk. PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Cats Protection skriver också att socker inte är giftigt för katter men ändå inte nyttigt för dem. Förgiftning av vindruvor och russin hos katter är ovanlig och dåligt utredd, och vi har inte hittat någon källa om katter som säger att någon torkad frukt är säker, så vi använder den strängare nivån."
       },
       "signs": {
         "en": [
@@ -5555,6 +5561,9 @@
         ],
         "cs": [
           "Zvracení, obvykle do jednoho dne"
+        ],
+        "sv": [
+          "Kräkningar, oftast inom ett dygn"
         ]
       },
       "what_to_do": {
@@ -5568,7 +5577,8 @@
         "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato comeu (que fruta desidratada ou que alimento a contém), a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
         "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat je kat heeft gegeten (welk gedroogd fruit of welk gerecht met gedroogd fruit), hoeveel en wanneer, en bewaar de verpakking. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken.",
         "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł kot (jakie suszone owoce albo jaki produkt je zawierający), ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-        "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka snědla (jaké sušené ovoce nebo jaké jídlo, které ho obsahovalo), kolik a kdy, a uschovejte obal. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+        "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka snědla (jaké sušené ovoce nebo jaké jídlo, které ho obsahovalo), kolik a kdy, a uschovejte obal. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+        "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten åt (vilken torkad frukt eller vilken mat som innehöll den), hur mycket och när, och spara förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
       },
       "serving": null,
       "child": {
@@ -5582,7 +5592,8 @@
         "pt": "A fruta desidratada, como as passas, não é um petisco para gatos. Mantém-na longe do gatinho e avisa um adulto se ele comer alguma.",
         "nl": "Gedroogd fruit zoals rozijnen is geen traktatie voor katten. Houd het uit de buurt van je kat en vertel het aan een volwassene als ze er toch iets van eet.",
         "pl": "Suszone owoce, takie jak rodzynki, to nie przekąska dla kota. Trzymaj je z dala od kotka i powiedz dorosłemu, jeśli zje trochę.",
-        "cs": "Sušené ovoce, například rozinky, není svačinka pro kočky. Měj ho mimo dosah kočičky. A kdyby nějaké snědla, řekni to dospělému."
+        "cs": "Sušené ovoce, například rozinky, není svačinka pro kočky. Měj ho mimo dosah kočičky. A kdyby nějaké snědla, řekni to dospělému.",
+        "sv": "Russin och annan torkad frukt är ingen godbit för katter. Håll den borta från katten, och säg till en vuxen om den äter något."
       },
       "faq": [
         {
@@ -5597,7 +5608,8 @@
             "pt": "E as mince pies e o bolo de Natal?",
             "nl": "En kerstgebakjes en kerstcake?",
             "pl": "A co z mince pies i świątecznym ciastem owocowym?",
-            "cs": "A co mince pies a vánoční koláč?"
+            "cs": "A co mince pies a vánoční koláč?",
+            "sv": "Hur är det med mince pies och julbakelser?"
           },
           "a": {
             "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -5610,7 +5622,8 @@
             "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato.",
             "nl": "De PDSA waarschuwt dat kerstgebakjes en kerstcake rozijnen, sultanarozijnen en krenten bevatten, die zeer giftig zijn voor huisdieren. Houd ze buiten het bereik van je kat.",
             "pl": "PDSA ostrzega, że mince pies i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Trzymaj je poza zasięgiem kota.",
-            "cs": "PDSA varuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Mějte je mimo dosah kočky."
+            "cs": "PDSA varuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Mějte je mimo dosah kočky.",
+            "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten."
           }
         },
         {
@@ -5625,7 +5638,8 @@
             "pt": "O açúcar também é um problema?",
             "nl": "Is de suiker ook een probleem?",
             "pl": "Czy cukier też jest problemem?",
-            "cs": "Je problémem i cukr?"
+            "cs": "Je problémem i cukr?",
+            "sv": "Är sockret också ett problem?"
           },
           "a": {
             "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
@@ -5638,7 +5652,8 @@
             "pt": "A Cats Protection diz que o açúcar não é tóxico para os gatos, mas continua a não lhes fazer bem. Os gatos não sentem o sabor doce, o açúcar não tem valor nutricional para eles e dar-lhes alimentos açucarados com regularidade pode levar a problemas de saúde.",
             "nl": "Cats Protection zegt dat suiker niet giftig is voor katten, maar wel ongezond. Katten kunnen geen zoet proeven en suiker heeft voor hen geen voedingswaarde. Geef je ze regelmatig suikerrijk eten, dan kan dat tot gezondheidsproblemen leiden.",
             "pl": "Cats Protection podaje, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Koty nie czują słodkiego smaku, cukier nie ma dla nich wartości odżywczej, a regularne podawanie słodkich produktów może prowadzić do problemów zdrowotnych.",
-            "cs": "Cats Protection uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Kočky sladkou chuť nevnímají, cukr jim nepřináší žádnou výživovou hodnotu a pravidelné podávání sladkých potravin může vést ke zdravotním potížím."
+            "cs": "Cats Protection uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Kočky sladkou chuť nevnímají, cukr jim nepřináší žádnou výživovou hodnotu a pravidelné podávání sladkých potravin může vést ke zdravotním potížím.",
+            "sv": "Cats Protection skriver att socker inte är giftigt för katter men ändå inte nyttigt för dem. Katter kan inte känna sötma, socker ger dem inget näringsvärde, och om de ofta får sockrig mat kan det leda till hälsoproblem."
           }
         }
       ],
@@ -6227,7 +6242,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -6240,7 +6256,8 @@
         "pt": "Caroços e sementes de fruta",
         "nl": "Fruitpitten en -stenen",
         "pl": "Pestki owoców",
-        "cs": "Ovocné pecky"
+        "cs": "Ovocné pecky",
+        "sv": "Fruktkärnor och stenar"
       },
       "question": {
         "en": "Can cats eat fruit pits?",
@@ -6253,7 +6270,8 @@
         "pt": "Os gatos podem comer caroços de fruta?",
         "nl": "Mogen katten fruitpitten eten?",
         "pl": "Czy koty mogą jeść pestki owoców?",
-        "cs": "Mohou kočky jíst ovocné pecky?"
+        "cs": "Mohou kočky jíst ovocné pecky?",
+        "sv": "Får katter äta fruktkärnor?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -6266,7 +6284,8 @@
         "pt": "carocos-e-sementes-de-fruta",
         "nl": "fruitpitten",
         "pl": "pestki-owocow",
-        "cs": "ovocne-pecky"
+        "cs": "ovocne-pecky",
+        "sv": "fruktkarnor-och-stenar"
       },
       "answer": {
         "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
@@ -6279,7 +6298,8 @@
         "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum.",
         "nl": "Nee. Houd de pitten, stenen en zaden van steenfruit uit de buurt van katten. De ASPCA noemt kersen-, perzik-, pruimen- en abrikozenplanten giftig voor katten, omdat de zaden, stelen en bladeren cyanide bevatten. Bel je dierenarts als je kat op een pit kauwt of er een doorslikt.",
         "pl": "Nie. Trzymaj pestki i nasiona pestkowców z dala od kotów. ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako rośliny toksyczne dla kotów, ponieważ ich nasiona, łodygi i liście zawierają cyjanek. Jeśli kot przegryzie lub połknie pestkę, zadzwoń do weterynarza.",
-        "cs": "Ne. Pecky a semena peckovin držte mimo dosah koček. ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako rostliny toxické pro kočky, protože jejich semena, stonky a listy obsahují kyanid. Pokud kočka nějakou okouše nebo spolkne, zavolejte veterináři."
+        "cs": "Ne. Pecky a semena peckovin držte mimo dosah koček. ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako rostliny toxické pro kočky, protože jejich semena, stonky a listy obsahují kyanid. Pokud kočka nějakou okouše nebo spolkne, zavolejte veterináři.",
+        "sv": "Nej. Håll kärnor, stenar och frön från stenfrukt borta från katter. ASPCA anger att växterna körsbär, persika, plommon och aprikos är giftiga för katter eftersom deras frön, stjälkar och blad innehåller cyanid. Ring veterinären om katten tuggar på eller sväljer en sådan."
       },
       "why": {
         "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -6292,7 +6312,8 @@
         "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato.",
         "nl": "Over kers, perzik, pruim en abrikoos zegt de ASPCA dat de stelen, bladeren en zaden cyanide bevatten (als cyanogene glycosiden) en vooral giftig zijn terwijl ze verwelken. De ASPCA noemt alle vier de planten giftig voor katten. De pit of steen van deze vruchten is het zaad en mag een kat dus nooit krijgen.",
         "pl": "W przypadku czereśni, brzoskwini, śliwy i moreli ASPCA podaje, że łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne, gdy więdną, oraz wymienia wszystkie cztery rośliny jako toksyczne dla kotów. Pestka tych owoców jest nasionem, dlatego nigdy nie wolno jej dawać kotu.",
-        "cs": "U třešně, broskvoně, slivoně a meruňky ASPCA uvádí, že stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a jsou zvlášť toxické, když začnou vadnout, a všechny čtyři rostliny řadí mezi toxické pro kočky. Pecka těchto plodů je semeno, proto ji kočce nikdy nedávejte."
+        "cs": "U třešně, broskvoně, slivoně a meruňky ASPCA uvádí, že stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a jsou zvlášť toxické, když začnou vadnout, a všechny čtyři rostliny řadí mezi toxické pro kočky. Pecka těchto plodů je semeno, proto ji kočce nikdy nedávejte.",
+        "sv": "För körsbär, persika, plommon och aprikos skriver ASPCA att stjälkar, blad och frön innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar, och att alla fyra växterna är giftiga för katter. I de här frukterna är stenen eller kärnan själva fröet, så den ska aldrig ges till en katt."
       },
       "signs": {
         "en": [
@@ -6371,6 +6392,13 @@
           "Potíže s dýcháním",
           "Dýchání s otevřenou tlamou",
           "Šok"
+        ],
+        "sv": [
+          "Tegelrött tandkött",
+          "Vidgade pupiller",
+          "Andningssvårigheter",
+          "Flåsande",
+          "Chock"
         ]
       },
       "what_to_do": {
@@ -6384,7 +6412,8 @@
         "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
         "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat een pit, steen of zaad heeft gekauwd of doorgeslikt. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken.",
         "pl": "Jeśli kot przegryzł lub połknął pestkę albo nasiono, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
-        "cs": "Pokud kočka pecku nebo semeno okousala či spolkla, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení."
+        "cs": "Pokud kočka pecku nebo semeno okousala či spolkla, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
+        "sv": "Kontakta direkt din veterinär eller en giftrådgivning för djur om katten har tuggat på eller svalt en kärna, sten eller ett frö. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma."
       },
       "serving": null,
       "child": {
@@ -6398,7 +6427,8 @@
         "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto.",
         "nl": "Fruitpitten zijn niet veilig voor katten. Als je kat op een pit kauwt, vertel het dan aan een volwassene.",
         "pl": "Pestki owoców nie są bezpieczne dla kotów. Jeśli kotek jakąś przegryzie, powiedz dorosłemu.",
-        "cs": "Ovocné pecky nejsou pro kočky bezpečné. Kdyby nějakou kočička okusovala, řekni to dospělému."
+        "cs": "Ovocné pecky nejsou pro kočky bezpečné. Kdyby nějakou kočička okusovala, řekni to dospělému.",
+        "sv": "Stenar och kärnor från frukt är inte säkra för katter. Tuggar katten på en, säg till en vuxen."
       },
       "faq": [
         {
@@ -6413,7 +6443,8 @@
             "pt": "Que frutas estão incluídas?",
             "nl": "Om welk fruit gaat het?",
             "pl": "Jakich owoców to dotyczy?",
-            "cs": "Kterých druhů ovoce se to týká?"
+            "cs": "Kterých druhů ovoce se to týká?",
+            "sv": "Vilka frukter gäller det?"
           },
           "a": {
             "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -6426,7 +6457,8 @@
             "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto.",
             "nl": "De ASPCA noemt kers, perzik, pruim en abrikoos giftig voor katten en zegt bij elk daarvan dat de stelen, bladeren en zaden cyanide bevatten.",
             "pl": "ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako toksyczne dla kotów i przy każdej z nich podaje, że łodygi, liście i nasiona zawierają cyjanek.",
-            "cs": "ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako toxické pro kočky a u každé z nich uvádí, že stonky, listy a semena obsahují kyanid."
+            "cs": "ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako toxické pro kočky a u každé z nich uvádí, že stonky, listy a semena obsahují kyanid.",
+            "sv": "ASPCA anger körsbär, persika, plommon och aprikos som giftiga för katter och skriver för var och en att stjälkar, blad och frön innehåller cyanid."
           }
         }
       ],
@@ -22499,7 +22531,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Coconut oil",
@@ -22512,7 +22545,8 @@
         "pt": "Óleo de coco",
         "nl": "Kokosolie",
         "pl": "Olej kokosowy",
-        "cs": "Kokosový olej"
+        "cs": "Kokosový olej",
+        "sv": "Kokosolja"
       },
       "question": {
         "en": "Can dogs eat coconut oil?",
@@ -22525,7 +22559,8 @@
         "pt": "Os cães podem comer óleo de coco?",
         "nl": "Mogen honden kokosolie eten?",
         "pl": "Czy psy mogą jeść olej kokosowy?",
-        "cs": "Mohou psi jíst kokosový olej?"
+        "cs": "Mohou psi jíst kokosový olej?",
+        "sv": "Får hundar äta kokosolja?"
       },
       "url_slug": {
         "en": "coconut-oil",
@@ -22538,7 +22573,8 @@
         "pt": "oleo-de-coco",
         "nl": "kokosolie",
         "pl": "olej-kokosowy",
-        "cs": "kokosovy-olej"
+        "cs": "kokosovy-olej",
+        "sv": "kokosolja"
       },
       "answer": {
         "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
@@ -22551,7 +22587,8 @@
         "pt": "Não é recomendado como complemento regular. Uma pequena lambidela dificilmente faz mal, mas o óleo de coco é sobretudo gordura saturada: pode causar mal-estar no estômago, fezes gordurosas e diarreia, e, se for dado durante muito tempo, pode levar a aumento de peso e até a pancreatite. Fala primeiro com o teu veterinário.",
         "nl": "Liever niet als vast onderdeel van het voer. Een likje is waarschijnlijk niet schadelijk, maar kokosolie bestaat vooral uit verzadigd vet: het kan buikklachten, vette ontlasting en diarree veroorzaken, en bij langdurig gebruik kan het leiden tot gewichtstoename en zelfs alvleesklierontsteking. Overleg eerst met je dierenarts.",
         "pl": "Nie zaleca się jako stałego dodatku. Jeśli pies zliże odrobinę, raczej nic się nie stanie, ale olej kokosowy to głównie tłuszcze nasycone: może wywołać rozstrój żołądka, tłuste stolce i biegunkę, a długotrwałe podawanie może prowadzić do przyrostu masy ciała, a nawet zapalenia trzustki. Najpierw porozmawiaj z weterynarzem.",
-        "cs": "Jako pravidelná součást jídelníčku se nedoporučuje. Malé olíznutí nejspíš neuškodí, ale kokosový olej tvoří hlavně nasycené tuky: může způsobit podrážděný žaludek, mastnou stolici a průjem a při dlouhodobém podávání vést k nárůstu hmotnosti, ba dokonce k zánětu slinivky břišní. Nejdřív se poraďte s veterinářem."
+        "cs": "Jako pravidelná součást jídelníčku se nedoporučuje. Malé olíznutí nejspíš neuškodí, ale kokosový olej tvoří hlavně nasycené tuky: může způsobit podrážděný žaludek, mastnou stolici a průjem a při dlouhodobém podávání vést k nárůstu hmotnosti, ba dokonce k zánětu slinivky břišní. Nejdřív se poraďte s veterinářem.",
+        "sv": "Rekommenderas inte som ett regelbundet tillskott. Ett litet slick är knappast skadligt, men kokosolja består mest av mättat fett: den kan ge orolig mage, fettig avföring och diarré, och om hunden får den under lång tid kan det leda till viktuppgång och till och med bukspottkörtelinflammation (pankreatit). Prata med veterinären först."
       },
       "why": {
         "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
@@ -22564,7 +22601,8 @@
         "pt": "O óleo de coco é constituído sobretudo por gorduras saturadas. Dar óleo de coco pode levar ao aumento de peso e a problemas digestivos e, se for dado a longo prazo, à obesidade e a pancreatite. Não existem estudos abrangentes que provem que faz bem à saúde dos cães. Outro artigo do AKC diz que não se recomenda dar óleo de coco todos os dias e que quantidades pequenas e ocasionais são mais seguras; seguimos o conselho mais rigoroso e classificamo-lo como não recomendado.",
         "nl": "Kokosolie bestaat grotendeels uit verzadigde vetten. Het kan leiden tot gewichtstoename en spijsverteringsklachten, en bij langdurig gebruik kan het obesitas veroorzaken en alvleesklierontsteking uitlokken. Er is geen uitgebreid onderzoek dat aantoont dat het gezond is voor honden. Een ander AKC-artikel zegt dat dagelijks geven niet wordt aanbevolen en dat kleine, incidentele hoeveelheden veiliger zijn; wij volgen het strengere advies en beoordelen het als niet aan te raden.",
         "pl": "Olej kokosowy składa się głównie z tłuszczów nasyconych. Podawanie go może prowadzić do przyrostu masy ciała i problemów trawiennych, a długotrwałe karmienie nim może prowadzić do otyłości i wywołać zapalenie trzustki. Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej pomaga zdrowiu psów. Inny artykuł AKC podaje, że codzienne podawanie nie jest zalecane, a małe, okazjonalne ilości są bezpieczniejsze; stosujemy surowszą radę i uznajemy olej kokosowy za niezalecany.",
-        "cs": "Kokosový olej tvoří převážně nasycené tuky. Může vést k nárůstu hmotnosti a zažívacím potížím, při dlouhodobém krmení i k obezitě a může spustit zánět slinivky břišní. Žádný rozsáhlý výzkum neprokázal, že by psům prospíval. Další článek AKC uvádí, že se nedoporučuje dávat ho každý den a že malé, občasné množství je bezpečnější; my se řídíme přísnější radou a hodnotíme ho jako nedoporučený."
+        "cs": "Kokosový olej tvoří převážně nasycené tuky. Může vést k nárůstu hmotnosti a zažívacím potížím, při dlouhodobém krmení i k obezitě a může spustit zánět slinivky břišní. Žádný rozsáhlý výzkum neprokázal, že by psům prospíval. Další článek AKC uvádí, že se nedoporučuje dávat ho každý den a že malé, občasné množství je bezpečnější; my se řídíme přísnější radou a hodnotíme ho jako nedoporučený.",
+        "sv": "Kokosolja består till största delen av mättade fetter. Om hunden får den kan det leda till viktuppgång och magproblem, och långvarig utfodring kan leda till fetma och utlösa bukspottkörtelinflammation (pankreatit). Det finns ingen omfattande forskning som visar att den gör hundar friskare. I en annan AKC-artikel står det att daglig utfodring inte rekommenderas och att små mängder då och då är säkrare; vi följer det strängare rådet och bedömer den som ”rekommenderas inte”."
       },
       "signs": {
         "en": [
@@ -22621,6 +22659,11 @@
           "Podrážděný žaludek",
           "Mastná stolice",
           "Průjem"
+        ],
+        "sv": [
+          "Orolig mage",
+          "Fettig avföring",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -22634,7 +22677,8 @@
         "pt": "Se o teu cão lambeu um pouco de óleo de coco, provavelmente não vai fazer grande mal. Antes de lhe dares óleo de coco para comer ou de o aplicares na pele, fala com o teu veterinário.",
         "nl": "Als je hond een beetje kokosolie heeft gelikt, zal dat waarschijnlijk geen kwaad kunnen. Overleg met je dierenarts voordat je kokosolie te eten geeft of op de huid smeert.",
         "pl": "Jeśli twój pies zlizał odrobinę oleju kokosowego, raczej nie zaszkodzi mu to znacząco. Zanim zaczniesz dodawać olej kokosowy do jedzenia albo smarować nim skórę psa, omów to z weterynarzem.",
-        "cs": "Pokud pes olízl trochu kokosového oleje, nejspíš mu to moc neuškodí. Než mu kokosový olej dáte jíst nebo ho natřete na kůži, poraďte se s veterinářem."
+        "cs": "Pokud pes olízl trochu kokosového oleje, nejspíš mu to moc neuškodí. Než mu kokosový olej dáte jíst nebo ho natřete na kůži, poraďte se s veterinářem.",
+        "sv": "Om hunden har slickat i sig lite kokosolja orsakar det troligen ingen större skada. Prata med veterinären innan du ger kokosolja att äta eller stryker den på huden."
       },
       "serving": null,
       "child": {
@@ -22648,7 +22692,8 @@
         "pt": "O óleo de coco é muito gordo e pode fazer mal à barriguinha do cão. Quem decide é um adulto, com a ajuda do veterinário.",
         "nl": "Kokosolie zit vol vet en kan de buik van een hond van streek maken. Alleen een volwassene en de dierenarts beslissen daarover.",
         "pl": "Olej kokosowy jest bardzo tłusty i może psu rozstroić brzuszek. Decydować o nim mogą tylko dorosły i weterynarz.",
-        "cs": "Kokosový olej je hodně tučný a může psovi pokazit bříško. Rozhodují o něm jen dospělý a veterinář."
+        "cs": "Kokosový olej je hodně tučný a může psovi pokazit bříško. Rozhodují o něm jen dospělý a veterinář.",
+        "sv": "Kokosolja är väldigt fet och kan ge hunden ont i magen. Bara en vuxen och veterinären bestämmer om hunden får den."
       },
       "faq": [
         {
@@ -22663,7 +22708,8 @@
             "pt": "Posso pôr óleo de coco na pele do meu cão?",
             "nl": "Mag ik kokosolie op de huid van mijn hond smeren?",
             "pl": "Czy mogę smarować skórę psa olejem kokosowym?",
-            "cs": "Mohu psovi natírat kůži kokosovým olejem?"
+            "cs": "Mohu psovi natírat kůži kokosovým olejem?",
+            "sv": "Kan jag stryka kokosolja på hundens hud?"
           },
           "a": {
             "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
@@ -22676,7 +22722,8 @@
             "pt": "O óleo de coco pode ajudar a aliviar zonas irritadas ou a pele seca e com comichão, mas suja muito e pode entupir os poros. Fala com o teu veterinário antes de o usar.",
             "nl": "Kokosolie kan geïrriteerde plekken of een droge, jeukende huid verzachten, maar het maakt een rommeltje en kan de poriën verstoppen. Overleg met je dierenarts voordat je het gebruikt.",
             "pl": "Olej kokosowy może łagodzić podrażnione miejsca lub suchą, swędzącą skórę, ale brudzi i może zatykać pory. Przed użyciem omów to z weterynarzem.",
-            "cs": "Kokosový olej může zklidnit podrážděná místa nebo suchou, svědící kůži, ale dělá nepořádek a může ucpat póry. Než ho použijete, poraďte se s veterinářem."
+            "cs": "Kokosový olej může zklidnit podrážděná místa nebo suchou, svědící kůži, ale dělá nepořádek a může ucpat póry. Než ho použijete, poraďte se s veterinářem.",
+            "sv": "Kokosolja kan lindra irriterade ställen eller torr, kliande hud, men den kladdar och kan täppa till porerna. Prata med veterinären innan du använder den."
           }
         },
         {
@@ -22691,7 +22738,8 @@
             "pt": "O óleo de coco faz bem à saúde dos cães?",
             "nl": "Is kokosolie goed voor de gezondheid van honden?",
             "pl": "Czy olej kokosowy jest dobry dla zdrowia psów?",
-            "cs": "Je kokosový olej dobrý pro zdraví psů?"
+            "cs": "Je kokosový olej dobrý pro zdraví psů?",
+            "sv": "Är kokosolja bra för hundens hälsa?"
           },
           "a": {
             "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
@@ -22704,7 +22752,8 @@
             "pt": "Não existem estudos abrangentes que provem que o óleo de coco ajuda de certeza em muitos aspetos da saúde de um cão.",
             "nl": "Er is geen uitgebreid onderzoek dat aantoont dat kokosolie op veel vlakken zeker goed is voor de gezondheid van een hond.",
             "pl": "Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej kokosowy na pewno pomaga w wielu aspektach zdrowia psa.",
-            "cs": "Žádný rozsáhlý výzkum neprokázal, že by kokosový olej určitě prospíval zdraví psa v mnoha ohledech."
+            "cs": "Žádný rozsáhlý výzkum neprokázal, že by kokosový olej určitě prospíval zdraví psa v mnoha ohledech.",
+            "sv": "Det finns ingen omfattande forskning som visar att kokosolja med säkerhet är bra för hundens hälsa på många sätt."
           }
         }
       ],
@@ -22746,7 +22795,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Coconut",
@@ -22759,7 +22809,8 @@
         "pt": "Coco",
         "nl": "Kokosnoot",
         "pl": "Kokos",
-        "cs": "Kokos"
+        "cs": "Kokos",
+        "sv": "Kokos"
       },
       "question": {
         "en": "Can dogs eat coconut?",
@@ -22772,7 +22823,8 @@
         "pt": "Os cães podem comer coco?",
         "nl": "Mogen honden kokosnoot eten?",
         "pl": "Czy psy mogą jeść kokos?",
-        "cs": "Mohou psi jíst kokos?"
+        "cs": "Mohou psi jíst kokos?",
+        "sv": "Får hundar äta kokos?"
       },
       "url_slug": {
         "en": "coconut",
@@ -22785,7 +22837,8 @@
         "pt": "coco",
         "nl": "kokosnoot",
         "pl": "kokos",
-        "cs": "kokos"
+        "cs": "kokos",
+        "sv": "kokos"
       },
       "answer": {
         "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
@@ -22798,7 +22851,8 @@
         "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia.",
         "nl": "Ja, in kleine hoeveelheden. Ongezoet kokosvlees is met mate veilig voor honden, maar geef nooit de vezelige buitenschil of de harde dop. Kokos bevat veel vet en oliën, die buikklachten en diarree kunnen veroorzaken.",
         "pl": "Tak, w małych ilościach. Niesłodzony miąższ kokosa jest dla psów bezpieczny, o ile podajesz go z umiarem, ale nigdy nie dawaj łupiny ani skorupy. Kokos jest bogaty w tłuszcz i zawiera oleje, które mogą wywołać rozstrój żołądka i biegunkę.",
-        "cs": "Ano, v malém množství. Neslazená kokosová dužina je pro psy v rozumné míře bezpečná, ale slupku ani skořápku jim nikdy nedávejte. Kokos je hodně tučný a obsahuje oleje, které mohou psovi podráždit žaludek a způsobit průjem."
+        "cs": "Ano, v malém množství. Neslazená kokosová dužina je pro psy v rozumné míře bezpečná, ale slupku ani skořápku jim nikdy nedávejte. Kokos je hodně tučný a obsahuje oleje, které mohou psovi podráždit žaludek a způsobit průjem.",
+        "sv": "Ja, i små mängder. Osötat fruktkött från kokosnöt är ofarligt för hundar med måtta, men ge aldrig ytterhöljet eller skalet. Kokos innehåller mycket fett och oljor som kan ge orolig mage och diarré."
       },
       "why": {
         "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -22811,7 +22865,8 @@
         "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal.",
         "nl": "In kleine hoeveelheden is kokos waarschijnlijk niet ernstig schadelijk, maar het vruchtvlees en de melk van verse kokosnoten bevatten oliën die buikklachten, zachte ontlasting en diarree kunnen geven. Kokos bevat relatief veel vet, dus geef je honden die geen vetrijk voer mogen eten of overgewicht hebben beter een ander snoepje. Het bevat ook veel kalium, dus voorzichtigheid is geboden bij honden met een nierziekte. De vezelige buitenschil en de dop kunnen een darmverstopping veroorzaken.",
         "pl": "W małych ilościach kokos raczej nie wyrządzi poważnej szkody, ale miąższ i mleko świeżych kokosów zawierają oleje, które mogą wywołać rozstrój żołądka, luźne stolce i biegunkę. Kokos jest dość tłusty, więc psy, którym nie wolno jeść dużo tłuszczu, oraz psy z nadwagą powinny dostawać inne smakołyki. Zawiera też dużo potasu, dlatego u psów z chorobą nerek trzeba zachować ostrożność. Łupina i skorupa mogą spowodować niedrożność jelit.",
-        "cs": "V malém množství kokos pravděpodobně vážně neublíží, ale dužina a mléko čerstvých kokosů obsahují oleje, které mohou způsobit podrážděný žaludek, řidší stolici a průjem. Kokos je tučnější, proto by psi, kterým se vysoký obsah tuku nedoporučuje, i psi s nadváhou měli dostávat jiné pamlsky. Obsahuje také hodně draslíku, takže u psů s nemocnými ledvinami je třeba opatrnosti. Slupka a skořápka mohou způsobit ucpání střev."
+        "cs": "V malém množství kokos pravděpodobně vážně neublíží, ale dužina a mléko čerstvých kokosů obsahují oleje, které mohou způsobit podrážděný žaludek, řidší stolici a průjem. Kokos je tučnější, proto by psi, kterým se vysoký obsah tuku nedoporučuje, i psi s nadváhou měli dostávat jiné pamlsky. Obsahuje také hodně draslíku, takže u psů s nemocnými ledvinami je třeba opatrnosti. Slupka a skořápka mohou způsobit ucpání střev.",
+        "sv": "I små mängder är det osannolikt att kokos orsakar allvarlig skada, men fruktköttet och mjölken från färska kokosnötter innehåller oljor som kan ge orolig mage, lös avföring och diarré. Kokos innehåller mycket fett, så hundar som inte ska ha fettrik kost eller som är överviktiga bör få andra godbitar. Kokos innehåller också mycket kalium, så var försiktig om hunden har njursjukdom. Ytterhöljet och skalet kan orsaka tarmstopp."
       },
       "signs": null,
       "what_to_do": {
@@ -22825,7 +22880,8 @@
         "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite.",
         "nl": "Vraag je dierenarts om advies voordat je kokos aan het voer van je hond toevoegt, zeker als je hond ooit alvleesklierontsteking heeft gehad.",
         "pl": "Zanim dodasz kokos do diety psa, zapytaj weterynarza, zwłaszcza jeśli twój pies miał zapalenie trzustki.",
-        "cs": "Než kokos zařadíte do jídelníčku svého psa, poraďte se s veterinářem, především pokud pes prodělal zánět slinivky břišní."
+        "cs": "Než kokos zařadíte do jídelníčku svého psa, poraďte se s veterinářem, především pokud pes prodělal zánět slinivky břišní.",
+        "sv": "Fråga veterinären innan du lägger till kokos i hundens kost, särskilt om hunden har haft bukspottkörtelinflammation."
       },
       "serving": {
         "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -22838,7 +22894,8 @@
         "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água.",
         "nl": "Alleen ongezoet vruchtvlees, in kleine hoeveelheden, zonder buitenschil of dop. Kokosmelk alleen ongezoet en zonder xylitol; kokoswater alleen als snoepje, nooit in plaats van water.",
         "pl": "Tylko niesłodzony miąższ, w małych ilościach, bez łupiny i skorupy. Mleko kokosowe tylko niesłodzone i bez ksylitolu; woda kokosowa wyłącznie jako smakołyk, nigdy zamiast wody.",
-        "cs": "Pouze neslazená dužina, v malém množství, bez slupky a skořápky. Kokosové mléko jen neslazené a bez xylitolu; kokosová voda jen jako pamlsek, nikdy místo vody."
+        "cs": "Pouze neslazená dužina, v malém množství, bez slupky a skořápky. Kokosové mléko jen neslazené a bez xylitolu; kokosová voda jen jako pamlsek, nikdy místo vody.",
+        "sv": "Bara osötat fruktkött, i små mängder, utan ytterhölje och skal. Kokosmjölk bara om den är osötad och fri från xylitol; kokosvatten bara som godbit, aldrig i stället för vatten."
       },
       "child": {
         "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -22851,7 +22908,8 @@
         "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara.",
         "nl": "Honden mogen een beetje kokos proeven! De harde dop is niets voor honden, dus een volwassene maakt het klaar.",
         "pl": "Psy mogą spróbować odrobiny kokosa! Twarda skorupa nie jest dla psów, więc przygotowuje go dorosły.",
-        "cs": "Psi si můžou pochutnat na trošce kokosu! Tvrdá skořápka pro psy není, takže kokos připraví dospělý."
+        "cs": "Psi si můžou pochutnat na trošce kokosu! Tvrdá skořápka pro psy není, takže kokos připraví dospělý.",
+        "sv": "Hundar kan smaka lite kokos! Det hårda skalet är inte för hundar, så en vuxen förbereder det."
       },
       "faq": [
         {
@@ -22866,7 +22924,8 @@
             "pt": "Os cães podem beber água de coco ou leite de coco?",
             "nl": "Mogen honden kokoswater of kokosmelk drinken?",
             "pl": "Czy psy mogą pić wodę kokosową lub mleko kokosowe?",
-            "cs": "Mohou psi pít kokosovou vodu nebo kokosové mléko?"
+            "cs": "Mohou psi pít kokosovou vodu nebo kokosové mléko?",
+            "sv": "Får hundar dricka kokosvatten eller kokosmjölk?"
           },
           "a": {
             "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -22879,7 +22938,8 @@
             "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães.",
             "nl": "Kokoswater alleen als snoepje, niet in plaats van gewoon water. Kokosmelk alleen ongezoet en zonder kunstmatige zoetstoffen zoals xylitol, dat giftig is voor honden.",
             "pl": "Woda kokosowa tylko jako smakołyk, nie zamiast zwykłej wody. Mleko kokosowe tylko niesłodzone i bez sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów.",
-            "cs": "Kokosovou vodu jen jako pamlsek, ne místo běžné vody. Kokosové mléko jen neslazené a bez umělých sladidel, jako je xylitol, který je pro psy toxický."
+            "cs": "Kokosovou vodu jen jako pamlsek, ne místo běžné vody. Kokosové mléko jen neslazené a bez umělých sladidel, jako je xylitol, který je pro psy toxický.",
+            "sv": "Kokosvatten bara som godbit, inte i stället för vanligt vatten. Kokosmjölk bara om den är osötad och fri från konstgjorda sötningsmedel som xylitol, som är giftigt för hundar."
           }
         },
         {
@@ -22894,7 +22954,8 @@
             "pt": "Porque é que não se pode dar a casca do coco?",
             "nl": "Waarom niet de kokosdop?",
             "pl": "Dlaczego nie skorupa kokosa?",
-            "cs": "Proč ne kokosová skořápka?"
+            "cs": "Proč ne kokosová skořápka?",
+            "sv": "Varför inte kokosskalet?"
           },
           "a": {
             "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -22907,7 +22968,8 @@
             "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira.",
             "nl": "De vezelige buitenschil en de dop kunnen ernstige spijsverteringsproblemen veroorzaken, zoals een darmverstopping en maagirritatie, net als wanneer een hond stokken of hout eet.",
             "pl": "Łupina i skorupa mogą powodować poważne problemy trawienne, w tym niedrożność jelit i podrażnienie żołądka, podobnie jak zjadanie patyków czy drewna.",
-            "cs": "Slupka a skořápka mohou způsobit vážné zažívací potíže, včetně ucpání střev a podráždění žaludku, podobně jako když pes sní klacky nebo kus dřeva."
+            "cs": "Slupka a skořápka mohou způsobit vážné zažívací potíže, včetně ucpání střev a podráždění žaludku, podobně jako když pes sní klacky nebo kus dřeva.",
+            "sv": "Ytterhöljet och skalet kan ge allvarliga matsmältningsproblem, bland annat tarmstopp och irriterad mage, ungefär som när hunden äter pinnar eller trä."
           }
         }
       ],
@@ -24744,7 +24806,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Dates",
@@ -24757,7 +24820,8 @@
         "pt": "Tâmaras",
         "nl": "Dadels",
         "pl": "Daktyle",
-        "cs": "Datle"
+        "cs": "Datle",
+        "sv": "Dadlar"
       },
       "question": {
         "en": "Can dogs eat dates?",
@@ -24770,7 +24834,8 @@
         "pt": "Os cães podem comer tâmaras?",
         "nl": "Mogen honden dadels eten?",
         "pl": "Czy psy mogą jeść daktyle?",
-        "cs": "Mohou psi jíst datle?"
+        "cs": "Mohou psi jíst datle?",
+        "sv": "Får hundar äta dadlar?"
       },
       "url_slug": {
         "en": "dates",
@@ -24783,7 +24848,8 @@
         "pt": "tamaras",
         "nl": "dadels",
         "pl": "daktyle",
-        "cs": "datle"
+        "cs": "datle",
+        "sv": "dadlar"
       },
       "answer": {
         "en": "Yes, dogs can eat dates in moderation, as an occasional treat. Always remove the pit first, because it is a choking hazard, and give small pieces rather than the whole fruit. Dates are high in sugar and fibre, so too many can upset the stomach.",
@@ -24796,7 +24862,8 @@
         "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago.",
         "nl": "Ja, met mate: af en toe een dadel als snoepje. Haal eerst altijd de pit eruit, want die vormt een verstikkingsgevaar, en geef kleine stukjes in plaats van de hele vrucht. Dadels bevatten veel suiker en vezels, dus te veel kan de maag van streek maken.",
         "pl": "Tak, psy mogą jeść daktyle z umiarem, jako okazjonalny smakołyk. Zawsze najpierw usuń pestkę, bo grozi zadławieniem, i podawaj małe kawałki, a nie cały owoc. Daktyle zawierają dużo cukru i błonnika, więc zbyt duża porcja może rozstroić żołądek.",
-        "cs": "Ano, psi mohou datle jíst s mírou, jako příležitostný pamlsek. Vždy nejdřív odstraňte pecku, protože by se pes mohl udusit, a dávejte malé kousky, ne celý plod. Datle obsahují hodně cukru a vlákniny, takže větší množství může psovi podráždit žaludek."
+        "cs": "Ano, psi mohou datle jíst s mírou, jako příležitostný pamlsek. Vždy nejdřív odstraňte pecku, protože by se pes mohl udusit, a dávejte malé kousky, ne celý plod. Datle obsahují hodně cukru a vlákniny, takže větší množství může psovi podráždit žaludek.",
+        "sv": "Ja, hundar kan äta dadlar med måtta, som en godbit då och då. Ta alltid bort kärnan först, eftersom den är en kvävningsrisk, och ge små bitar i stället för hela frukten. Dadlar innehåller mycket socker och fibrer, så för många kan ge orolig mage."
       },
       "why": {
         "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -24809,7 +24876,8 @@
         "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre.",
         "nl": "Dadels zijn niet zo giftig als druiven, maar ze zijn geen standaardsnoepje. De pit is niet giftig, maar vormt wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als je hond hem doorslikt. Dadels bevatten veel suiker en calorieën, waardoor een hond snel aankomt als hij er te veel van krijgt, en door het hoge vezelgehalte kunnen ze diarree of obstipatie veroorzaken.",
         "pl": "Daktyle nie są silnie toksyczne jak winogrona, ale nie powinny być smakołykiem podawanym na co dzień. Pestka nie jest toksyczna, ale grozi zadławieniem, a po połknięciu może spowodować niedrożność jelit. Daktyle mają dużo cukru i kalorii, przez co przekarmiony pies szybko tyje, a duża zawartość błonnika może wywołać biegunkę lub zaparcia.",
-        "cs": "Datle nejsou vysoce toxické jako hrozny, ale neměly by se stát oblíbeným pamlskem. Pecka není jedovatá, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev. Datle mají hodně cukru a kalorií, takže při překrmování pes rychle přibere, a vysoký obsah vlákniny může vést k průjmu nebo zácpě."
+        "cs": "Datle nejsou vysoce toxické jako hrozny, ale neměly by se stát oblíbeným pamlskem. Pecka není jedovatá, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev. Datle mají hodně cukru a kalorií, takže při překrmování pes rychle přibere, a vysoký obsah vlákniny může vést k průjmu nebo zácpě.",
+        "sv": "Till skillnad från vindruvor är dadlar inte starkt giftiga, men de bör inte vara det man oftast ger som godbit. Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs. Dadlar innehåller mycket socker och kalorier, vilket snabbt ger viktuppgång om hunden får för mycket, och den höga fiberhalten kan leda till diarré eller förstoppning."
       },
       "signs": null,
       "what_to_do": {
@@ -24823,7 +24891,8 @@
         "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre.",
         "nl": "Vraag je dierenarts om advies voordat je dadels gaat geven. Let na het eten op braken, diarree of obstipatie.",
         "pl": "Zanim zaczniesz podawać daktyle, zapytaj weterynarza. Po zjedzeniu daktyla obserwuj psa, czy nie pojawią się wymioty, biegunka lub zaparcia.",
-        "cs": "Než psovi začnete datle dávat, poraďte se s veterinářem. Poté, co pes nějaké snědl, sledujte, jestli nezvrací a jestli nemá průjem nebo zácpu."
+        "cs": "Než psovi začnete datle dávat, poraďte se s veterinářem. Poté, co pes nějaké snědl, sledujte, jestli nezvrací a jestli nemá průjem nebo zácpu.",
+        "sv": "Fråga veterinären innan du börjar ge dadlar. Håll utkik efter kräkningar, diarré eller förstoppning efter att hunden har ätit några."
       },
       "serving": {
         "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -24836,7 +24905,8 @@
         "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional.",
         "nl": "Zonder pit, in kleine stukjes, alleen af en toe als snoepje.",
         "pl": "Bez pestki, pokrojony na małe kawałki, wyłącznie jako okazjonalny smakołyk.",
-        "cs": "Bez pecky, nakrájené na malé kousky, jen jako příležitostný pamlsek."
+        "cs": "Bez pecky, nakrájené na malé kousky, jen jako příležitostný pamlsek.",
+        "sv": "Utan kärna, skuren i små bitar, bara som en godbit då och då."
       },
       "child": {
         "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -24849,7 +24919,8 @@
         "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro.",
         "nl": "Honden mogen soms een klein stukje dadel. Een volwassene haalt eerst de harde pit eruit.",
         "pl": "Psy mogą czasem dostać mały kawałek daktyla. Dorosły najpierw wyjmuje twardą pestkę.",
-        "cs": "Pes může někdy dostat malý kousek datle. Tvrdou pecku nejdřív vyndá dospělý."
+        "cs": "Pes může někdy dostat malý kousek datle. Tvrdou pecku nejdřív vyndá dospělý.",
+        "sv": "Hundar kan få en liten bit dadel ibland. En vuxen tar först bort den hårda kärnan."
       },
       "faq": [
         {
@@ -24864,7 +24935,8 @@
             "pt": "O caroço da tâmara é venenoso para os cães?",
             "nl": "Is een dadelpit giftig voor honden?",
             "pl": "Czy pestka daktyla jest toksyczna dla psów?",
-            "cs": "Je datlová pecka pro psy jedovatá?"
+            "cs": "Je datlová pecka pro psy jedovatá?",
+            "sv": "Är en dadelkärna giftig för hundar?"
           },
           "a": {
             "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -24877,7 +24949,8 @@
             "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre.",
             "nl": "De pit is niet giftig, maar wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als hij wordt doorgeslikt. Haal hem er dus altijd uit.",
             "pl": "Pestka nie jest toksyczna, ale grozi zadławieniem, a po połknięciu może spowodować niedrożność jelit, więc zawsze ją usuwaj.",
-            "cs": "Pecka není toxická, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev, proto ji vždy odstraňte."
+            "cs": "Pecka není toxická, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev, proto ji vždy odstraňte.",
+            "sv": "Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs, så ta alltid bort den."
           }
         },
         {
@@ -24892,7 +24965,8 @@
             "pt": "Porque só um bocadinho?",
             "nl": "Waarom maar een beetje?",
             "pl": "Dlaczego tylko trochę?",
-            "cs": "Proč jen trochu?"
+            "cs": "Proč jen trochu?",
+            "sv": "Varför bara lite?"
           },
           "a": {
             "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -24905,7 +24979,8 @@
             "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede.",
             "nl": "Dadels bevatten veel calorieën en suiker. Daar kan een hond snel van aankomen, en te veel suiker kan een hond zwak en dorstig maken.",
             "pl": "Daktyle mają dużo kalorii i cukru, przez co przekarmiony pies szybko tyje, a nadmiar cukru może sprawić, że pies będzie osłabiony i spragniony.",
-            "cs": "Datle mají hodně kalorií a cukru, takže při překrmování pes rychle přibere, a z přemíry cukru může být slabý a mít velkou žízeň."
+            "cs": "Datle mají hodně kalorií a cukru, takže při překrmování pes rychle přibere, a z přemíry cukru může být slabý a mít velkou žízeň.",
+            "sv": "Dadlar innehåller mycket kalorier och socker, vilket snabbt ger viktuppgång om hunden får för mycket, och för mycket socker kan göra en hund orkeslös och törstig."
           }
         },
         {
@@ -24920,7 +24995,8 @@
             "pt": "Posso dar tâmaras secas?",
             "nl": "Zijn gedroogde dadels goed?",
             "pl": "Czy suszone daktyle są w porządku?",
-            "cs": "Jsou v pořádku sušené datle?"
+            "cs": "Jsou v pořádku sušené datle?",
+            "sv": "Är torkade dadlar okej?"
           },
           "a": {
             "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -24933,7 +25009,8 @@
             "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho.",
             "nl": "Gedroogde dadels bevatten meer suiker en calorieën en hebben nog steeds de harde pit. Haal die eruit voordat je een klein stukje geeft.",
             "pl": "Suszone daktyle mają więcej cukru i kalorii i też zawierają twardą pestkę, więc wyjmij ją, zanim podzielisz się małym kawałkiem.",
-            "cs": "Sušené datle mají ještě víc cukru a kalorií a pořád mají tvrdou pecku, proto ji odstraňte, než psovi dáte malý kousek."
+            "cs": "Sušené datle mají ještě víc cukru a kalorií a pořád mají tvrdou pecku, proto ji odstraňte, než psovi dáte malý kousek.",
+            "sv": "Torkade dadlar innehåller ännu mer socker och kalorier, och de har fortfarande den hårda kärnan, så ta bort den innan du delar med dig av en liten bit."
           }
         }
       ],
@@ -24982,7 +25059,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Dried fruit",
@@ -24995,7 +25073,8 @@
         "pt": "Fruta desidratada",
         "nl": "Gedroogd fruit",
         "pl": "Suszone owoce",
-        "cs": "Sušené ovoce"
+        "cs": "Sušené ovoce",
+        "sv": "Torkad frukt"
       },
       "question": {
         "en": "Can dogs eat dried fruit?",
@@ -25008,7 +25087,8 @@
         "pt": "Os cães podem comer fruta desidratada?",
         "nl": "Mogen honden gedroogd fruit eten?",
         "pl": "Czy psy mogą jeść suszone owoce?",
-        "cs": "Mohou psi jíst sušené ovoce?"
+        "cs": "Mohou psi jíst sušené ovoce?",
+        "sv": "Får hundar äta torkad frukt?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -25021,7 +25101,8 @@
         "pt": "fruta-desidratada",
         "nl": "gedroogd-fruit",
         "pl": "suszone-owoce",
-        "cs": "susene-ovoce"
+        "cs": "susene-ovoce",
+        "sv": "torkad-frukt"
       },
       "answer": {
         "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
@@ -25034,7 +25115,8 @@
         "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço.",
         "nl": "Dat hangt af van het fruit, en mengsels zijn riskant. Rozijnen, sultanarozijnen en krenten zijn gedroogde druiven en giftig voor honden, zelfs in heel kleine hoeveelheden. Ander gedroogd fruit, zoals vijgen en perziken, kan veel suiker bevatten, en gedroogde dadels hebben nog steeds een pit.",
         "pl": "To zależy od owocu, a mieszanki są ryzykowne. Rodzynki, sułtanki i korynki to suszone winogrona i są toksyczne dla psów, nawet w bardzo małych ilościach. Inne suszone owoce, jak figi i brzoskwinie, mogą zawierać dużo cukru, a suszone daktyle nadal mają pestkę.",
-        "cs": "Záleží na druhu ovoce a směsi jsou riziková. Rozinky, sultánky a korintky jsou sušené hrozny a pro psy jsou jedovaté už ve velmi malém množství. Jiné sušené ovoce, například fíky a broskve, může mít hodně cukru a sušené datle mohou mít pořád pecku."
+        "cs": "Záleží na druhu ovoce a směsi jsou riziková. Rozinky, sultánky a korintky jsou sušené hrozny a pro psy jsou jedovaté už ve velmi malém množství. Jiné sušené ovoce, například fíky a broskve, může mít hodně cukru a sušené datle mohou mít pořád pecku.",
+        "sv": "Det beror på frukten, och blandningar är riskabla. Russin, sultanrussin och korinter är torkade vindruvor och giftiga för hundar, även i mycket små mängder. Annan torkad frukt, som fikon och persikor, kan innehålla mycket socker, och torkade dadlar har fortfarande en kärna."
       },
       "why": {
         "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
@@ -25047,7 +25129,8 @@
         "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas.",
         "nl": "Druiven, rozijnen, sultanarozijnen en krenten zijn allemaal mogelijk giftig voor honden; je kunt niet voorspellen of een hond er ernstig ziek van wordt, en sommige honden worden al ziek van heel kleine hoeveelheden, vooral van gedroogd fruit. Gedroogde veenbessen zitten soms vermengd met rozijnen. Gedroogde vijgen bevatten veel meer geconcentreerde suiker omdat het water is onttrokken, en gedroogde perziken bevatten vaak te veel suiker. Omdat een mengsel van gedroogd fruit rozijnen kan verbergen, waarbij je direct naar de dierenarts moet, volgen we het strengere advies en beoordelen we gedroogd fruit als giftig, net als rozijnen.",
         "pl": "Winogrona, rodzynki, sułtanki i korynki są potencjalnie toksyczne dla psów; nie da się przewidzieć, czy pies ciężko zachoruje, a niektóre psy chorują po bardzo małych ilościach, zwłaszcza suszonych owoców. Suszona żurawina bywa mieszana z rodzynkami. W suszonych figach cukier jest znacznie bardziej skoncentrowany, bo usunięto z nich wodę, a suszone brzoskwinie często mają nadmiar cukru. Ponieważ w mieszance suszonych owoców mogą kryć się rodzynki, które wymagają natychmiastowej wizyty u weterynarza, stosujemy surowszą ocenę i uznajemy suszone owoce za toksyczne, tak jak rodzynki.",
-        "cs": "Hrozny, rozinky, sultánky a korintky mohou být pro psy jedovaté; nelze předem vědět, jak vážně pes zareaguje, a někteří psi onemocní už po velmi malém množství, zejména sušeného ovoce. Sušené brusinky se někdy prodávají smíchané s rozinkami. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda, a sušené broskve často obsahují nadbytek cukru. Protože se ve směsi sušeného ovoce mohou ukrývat rozinky, při nichž je nutné okamžitě k veterináři, volíme přísnější hodnocení a sušené ovoce celkově řadíme mezi toxické, stejně jako rozinky."
+        "cs": "Hrozny, rozinky, sultánky a korintky mohou být pro psy jedovaté; nelze předem vědět, jak vážně pes zareaguje, a někteří psi onemocní už po velmi malém množství, zejména sušeného ovoce. Sušené brusinky se někdy prodávají smíchané s rozinkami. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda, a sušené broskve často obsahují nadbytek cukru. Protože se ve směsi sušeného ovoce mohou ukrývat rozinky, při nichž je nutné okamžitě k veterináři, volíme přísnější hodnocení a sušené ovoce celkově řadíme mezi toxické, stejně jako rozinky.",
+        "sv": "Vindruvor, russin, sultanrussin och korinter är alla potentiellt giftiga för hundar; det går inte att veta om en hund blir allvarligt påverkad, och vissa hundar blir sjuka av mycket små mängder, särskilt av de torkade varianterna. Torkade tranbär säljs ibland blandade med russin. Torkade fikon innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort, och torkade persikor innehåller ofta för mycket socker. Eftersom en blandning av torkad frukt kan dölja russin, som kräver omedelbar veterinärvård, använder vi den strängare nivån och bedömer torkad frukt som giftig i sin helhet, precis som russin."
       },
       "signs": {
         "en": [
@@ -25137,6 +25220,14 @@
           "Krev ve stolici",
           "Malátnost",
           "Nechuť k jídlu"
+        ],
+        "sv": [
+          "Kräkningar",
+          "Diarré",
+          "Ont i magen",
+          "Blod i avföringen",
+          "Orkeslöshet",
+          "Sämre matlust"
         ]
       },
       "what_to_do": {
@@ -25150,7 +25241,8 @@
         "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais.",
         "nl": "Heeft je hond rozijnen, sultanarozijnen, krenten of een mengsel van gedroogd fruit gegeten waar die tussen kunnen zitten? Neem dan meteen contact op met je dierenarts. Wacht niet af tot je verschijnselen ziet.",
         "pl": "Jeśli twój pies zjadł rodzynki, sułtanki, korynki albo mieszankę suszonych owoców, która mogła je zawierać, od razu skontaktuj się z weterynarzem. Nie czekaj na objawy.",
-        "cs": "Pokud váš pes snědl rozinky, sultánky, korintky nebo směs sušeného ovoce, která je může obsahovat, okamžitě se obraťte na veterináře. Nečekejte na příznaky."
+        "cs": "Pokud váš pes snědl rozinky, sultánky, korintky nebo směs sušeného ovoce, která je může obsahovat, okamžitě se obraťte na veterináře. Nečekejte na příznaky.",
+        "sv": "Om hunden har ätit russin, sultanrussin, korinter eller en blandning av torkad frukt som kan innehålla dem, kontakta veterinären direkt. Vänta inte på symtom."
       },
       "serving": null,
       "child": {
@@ -25164,7 +25256,8 @@
         "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma.",
         "nl": "Gedroogd fruit zoals rozijnen is niets voor honden. Houd het uit de buurt van je hond en vertel het een volwassene als hij er toch van eet.",
         "pl": "Suszone owoce, takie jak rodzynki, nie są dla psów. Trzymaj mieszanki przekąsek z dala od psa i powiedz dorosłemu, jeśli zje trochę.",
-        "cs": "Sušené ovoce, například rozinky, není pro psy. Směsi na svačinu měj mimo dosah psa. A kdyby nějakou snědl, řekni to dospělému."
+        "cs": "Sušené ovoce, například rozinky, není pro psy. Směsi na svačinu měj mimo dosah psa. A kdyby nějakou snědl, řekni to dospělému.",
+        "sv": "Torkad frukt som russin är inte för hundar. Håll snacksblandningar borta från hunden, och säg till en vuxen om den äter något."
       },
       "faq": [
         {
@@ -25179,7 +25272,8 @@
             "pt": "Que alimentos escondem uvas secas?",
             "nl": "In welk eten zitten gedroogde druiven verstopt?",
             "pl": "W jakich produktach ukrywają się suszone winogrona?",
-            "cs": "V jakých potravinách se ukrývají sušené hrozny?"
+            "cs": "V jakých potravinách se ukrývají sušené hrozny?",
+            "sv": "I vilken mat kan det finnas gömda torkade vindruvor?"
           },
           "a": {
             "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
@@ -25192,7 +25286,8 @@
             "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas.",
             "nl": "Rozijnen, sultanarozijnen en krenten zitten vaak in kerstcake, paasbroodjes en koekjes, en gedroogde veenbessen zijn soms vermengd met rozijnen.",
             "pl": "Rodzynki, sułtanki i korynki często znajdziesz w wypiekach, takich jak świąteczny keks, słodkie bułeczki z bakaliami czy ciasteczka, a suszona żurawina bywa mieszana z rodzynkami.",
-            "cs": "Rozinky, sultánky a korintky bývají například ve vánočním koláči (Christmas cake), ve sladkých velikonočních houskách (hot cross buns) a v sušenkách, a sušené brusinky se někdy míchají s rozinkami."
+            "cs": "Rozinky, sultánky a korintky bývají například ve vánočním koláči (Christmas cake), ve sladkých velikonočních houskách (hot cross buns) a v sušenkách, a sušené brusinky se někdy míchají s rozinkami.",
+            "sv": "Russin, sultanrussin och korinter finns ofta i mat som julkaka, hot cross buns och kakor, och torkade tranbär är ibland blandade med russin."
           }
         },
         {
@@ -25207,7 +25302,8 @@
             "pt": "As outras frutas desidratadas são seguras?",
             "nl": "Is ander gedroogd fruit veilig?",
             "pl": "Czy inne suszone owoce są bezpieczne?",
-            "cs": "Je bezpečné i ostatní sušené ovoce?"
+            "cs": "Je bezpečné i ostatní sušené ovoce?",
+            "sv": "Är annan torkad frukt säker?"
           },
           "a": {
             "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
@@ -25220,7 +25316,8 @@
             "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado.",
             "nl": "Niet als vast snoepje. Gedroogde vijgen en gedroogde perziken bevatten veel suiker, en gedroogde dadels hebben nog een pit die eruit moet.",
             "pl": "Nie jako stały smakołyk. Suszone figi i suszone brzoskwinie zawierają dużo cukru, a suszone daktyle nadal mają twardą pestkę, którą trzeba usunąć.",
-            "cs": "Jako pravidelný pamlsek ne. Sušené fíky a sušené broskve mají hodně cukru a v sušených datlích může být pořád pecka, kterou je nutné vyndat."
+            "cs": "Jako pravidelný pamlsek ne. Sušené fíky a sušené broskve mají hodně cukru a v sušených datlích může být pořád pecka, kterou je nutné vyndat.",
+            "sv": "Inte som en vanlig godbit. Torkade fikon och torkade persikor innehåller mycket socker, och torkade dadlar har fortfarande en kärna som måste tas bort."
           }
         }
       ],
@@ -25957,7 +26054,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Figs",
@@ -25970,7 +26068,8 @@
         "pt": "Figos",
         "nl": "Vijgen",
         "pl": "Figi",
-        "cs": "Fíky"
+        "cs": "Fíky",
+        "sv": "Fikon"
       },
       "question": {
         "en": "Can dogs eat figs?",
@@ -25983,7 +26082,8 @@
         "pt": "Os cães podem comer figos?",
         "nl": "Mogen honden vijgen eten?",
         "pl": "Czy psy mogą jeść figi?",
-        "cs": "Mohou psi jíst fíky?"
+        "cs": "Mohou psi jíst fíky?",
+        "sv": "Får hundar äta fikon?"
       },
       "url_slug": {
         "en": "figs",
@@ -25996,7 +26096,8 @@
         "pt": "figos",
         "nl": "vijgen",
         "pl": "figi",
-        "cs": "fiky"
+        "cs": "fiky",
+        "sv": "fikon"
       },
       "answer": {
         "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
@@ -26009,7 +26110,8 @@
         "pt": "Sim, os figos frescos são geralmente seguros para os cães se forem bem preparados, mas só como guloseima ocasional. Dá apenas o interior macio, em pedaços pequenos, e nunca deixes o teu cão comer folhas, casca ou ramos de figueira. Os figos secos têm demasiado açúcar.",
         "nl": "Ja, verse vijgen zijn over het algemeen veilig voor honden als ze goed worden klaargemaakt, maar alleen als af en toe een snoepje. Geef alleen het zachte binnenste, in kleine stukjes, en laat je hond nooit bladeren, schors of takken van de vijgenboom eten. Gedroogde vijgen bevatten te veel suiker.",
         "pl": "Tak, świeże figi są zwykle bezpieczne dla psów, jeśli są dobrze przygotowane, ale tylko jako okazjonalny smakołyk. Podawaj wyłącznie miękki środek, w małych kawałkach, i nigdy nie pozwalaj psu jeść liści, kory ani gałązek figowca. Suszone figi są zbyt słodkie.",
-        "cs": "Ano, čerstvé fíky jsou pro psy obvykle bezpečné, pokud je správně připravíte, ale jen jako příležitostný pamlsek. Nabídněte jen měkkou vnitřní část v malých kouscích a nikdy nenechte psa jíst listy, kůru ani větve fíkovníku. Sušené fíky jsou příliš sladké."
+        "cs": "Ano, čerstvé fíky jsou pro psy obvykle bezpečné, pokud je správně připravíte, ale jen jako příležitostný pamlsek. Nabídněte jen měkkou vnitřní část v malých kouscích a nikdy nenechte psa jíst listy, kůru ani větve fíkovníku. Sušené fíky jsou příliš sladké.",
+        "sv": "Ja, färska fikon är oftast ofarliga för hundar när de förbereds på rätt sätt, men bara som en godbit då och då. Ge bara den mjuka insidan, i små bitar, och låt aldrig hunden äta fikonblad, bark eller grenar. Torkade fikon innehåller för mycket socker."
       },
       "why": {
         "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
@@ -26022,7 +26124,8 @@
         "pt": "Os figos em si não são considerados tóxicos, ao contrário das uvas e das cerejas, mas a figueira pode ser prejudicial. Os figos contêm vitaminas A e C, cálcio, potássio, magnésio e ferro. Como a fruta contém açúcar natural e fibra, demasiada pode ter um efeito laxante e causar diarreia. Os figos secos têm o açúcar muito mais concentrado, porque se retirou a água.",
         "nl": "Vijgen zelf gelden niet als giftig, in tegenstelling tot druiven en kersen, maar de vijgenplant kan schadelijk zijn. Vijgen bevatten vitamine A en C, calcium, kalium, magnesium en ijzer. Omdat fruit natuurlijke suiker en vezels bevat, kan te veel een laxerend effect hebben en diarree veroorzaken. Gedroogde vijgen bevatten veel meer geconcentreerde suiker, omdat het water is onttrokken.",
         "pl": "Same figi nie są uważane za toksyczne jak winogrona i czereśnie, ale roślina figowca może szkodzić. Figi zawierają witaminy A i C, wapń, potas, magnez i żelazo. Ponieważ owoce zawierają naturalny cukier i błonnik, zbyt duża porcja może działać przeczyszczająco i wywołać biegunkę. W suszonych figach cukier jest znacznie bardziej skoncentrowany, bo usunięto z nich wodę.",
-        "cs": "Samotné fíky se nepovažují za toxické, jako jsou hrozny a třešně, ale rostlina fíkovníku může být škodlivá. Fíky obsahují vitaminy A a C, vápník, draslík, hořčík a železo. Ovoce obsahuje přírodní cukr a vlákninu, takže při větším množství může působit projímavě a způsobit průjem. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda."
+        "cs": "Samotné fíky se nepovažují za toxické, jako jsou hrozny a třešně, ale rostlina fíkovníku může být škodlivá. Fíky obsahují vitaminy A a C, vápník, draslík, hořčík a železo. Ovoce obsahuje přírodní cukr a vlákninu, takže při větším množství může působit projímavě a způsobit průjem. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda.",
+        "sv": "Själva fikonen anses inte giftiga på det sätt som vindruvor och körsbär är, men fikonväxten kan vara skadlig. Fikon innehåller vitamin A och C, kalcium, kalium, magnesium och järn. Eftersom frukt innehåller naturligt socker och fibrer kan för mycket verka laxerande och ge diarré. Torkade fikon innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort."
       },
       "signs": null,
       "what_to_do": {
@@ -26036,7 +26139,8 @@
         "pt": "Se o teu cão comer qualquer parte da figueira, procura imediatamente cuidados veterinários. Se o teu cão comer vários figos e os sinais não melhorarem, ou se começar a vomitar, contacta o teu veterinário.",
         "nl": "Eet je hond een deel van de vijgenplant, ga dan meteen naar de dierenarts. Eet je hond meerdere vijgen en worden de verschijnselen niet beter, of gaat je hond braken, neem dan contact op met je dierenarts.",
         "pl": "Jeśli twój pies zje jakąkolwiek część figowca, od razu zgłoś się do weterynarza. Jeśli zje kilka fig, a jego objawy nie ustępują albo zacznie wymiotować, skontaktuj się z weterynarzem.",
-        "cs": "Pokud pes sní jakoukoli část fíkovníku, okamžitě vyhledejte veterinární péči. Pokud pes sní několik fíků a potíže se nezlepší nebo začne zvracet, obraťte se na veterináře."
+        "cs": "Pokud pes sní jakoukoli část fíkovníku, okamžitě vyhledejte veterinární péči. Pokud pes sní několik fíků a potíže se nezlepší nebo začne zvracet, obraťte se na veterináře.",
+        "sv": "Om hunden äter någon del av fikonväxten, sök veterinärvård direkt. Om hunden äter flera fikon och besvären inte går över, eller om den börjar kräkas, kontakta veterinären."
       },
       "serving": {
         "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
@@ -26049,7 +26153,8 @@
         "pt": "Só o interior macio de um figo fresco, sem qualquer material da planta, cortado em pedaços pequenos. Começa com um pedacinho minúsculo e fica atento a mal-estar no estômago ou a uma reação alérgica.",
         "nl": "Alleen het zachte binnenste van een verse vijg, zonder stukjes van de plant, in kleine stukjes gesneden. Begin met een heel klein stukje en let op buikklachten of een allergische reactie.",
         "pl": "Tylko miękki środek świeżej figi, bez żadnych części rośliny, pokrojony na małe kawałki. Zacznij od maleńkiego kawałka i obserwuj, czy nie pojawi się rozstrój żołądka lub reakcja alergiczna.",
-        "cs": "Jen měkká vnitřní část čerstvého fíku, bez zbytků rostliny, nakrájená na malé kousky. Začněte s drobným kouskem a sledujte, jestli se neobjeví podrážděný žaludek nebo alergická reakce."
+        "cs": "Jen měkká vnitřní část čerstvého fíku, bez zbytků rostliny, nakrájená na malé kousky. Začněte s drobným kouskem a sledujte, jestli se neobjeví podrážděný žaludek nebo alergická reakce.",
+        "sv": "Bara den mjuka insidan av ett färskt fikon, utan några växtdelar, skuren i små bitar. Börja med en liten bit och håll utkik efter orolig mage eller allergisk reaktion."
       },
       "child": {
         "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
@@ -26062,7 +26167,8 @@
         "pt": "Os cães podem provar um bocadinho de figo macio. As folhas e os ramos da figueira não são para cães, por isso pergunta primeiro a um adulto.",
         "nl": "Honden mogen een klein stukje zachte vijg proeven. Bladeren en takken van de vijgenboom zijn niets voor honden, dus vraag het eerst aan een volwassene.",
         "pl": "Psy mogą spróbować odrobiny miękkiej figi. Liście i gałązki figowca nie są dla psów, więc najpierw zapytaj dorosłego.",
-        "cs": "Pes může ochutnat drobný kousíček měkkého fíku. Listy a větvičky fíkovníku pro psy nejsou, tak se nejdřív zeptej dospělého."
+        "cs": "Pes může ochutnat drobný kousíček měkkého fíku. Listy a větvičky fíkovníku pro psy nejsou, tak se nejdřív zeptej dospělého.",
+        "sv": "Hundar kan prova en liten bit mjukt fikon. Fikonblad och grenar är inte för hundar, så fråga en vuxen först."
       },
       "faq": [
         {
@@ -26077,7 +26183,8 @@
             "pt": "Os cães podem comer figos secos?",
             "nl": "Mogen honden gedroogde vijgen eten?",
             "pl": "Czy psy mogą jeść suszone figi?",
-            "cs": "Mohou psi jíst sušené fíky?"
+            "cs": "Mohou psi jíst sušené fíky?",
+            "sv": "Får hundar äta torkade fikon?"
           },
           "a": {
             "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
@@ -26090,7 +26197,8 @@
             "pt": "Os figos secos não são uma grande opção de guloseima. Têm muito mais açúcar concentrado, porque se retirou a água durante a secagem.",
             "nl": "Gedroogde vijgen zijn niet echt een goed snoepje. Ze bevatten veel meer geconcentreerde suiker, omdat het water tijdens het drogen is onttrokken.",
             "pl": "Suszone figi nie są dobrym smakołykiem. Mają znacznie więcej skoncentrowanego cukru, bo podczas suszenia usunięto z nich wodę.",
-            "cs": "Sušené fíky nejsou ideální pamlsek. Jsou mnohem cukernatější, protože se při sušení odstraní voda."
+            "cs": "Sušené fíky nejsou ideální pamlsek. Jsou mnohem cukernatější, protože se při sušení odstraní voda.",
+            "sv": "Torkade fikon är ingen bra godbit. De innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort när de torkades."
           }
         },
         {
@@ -26105,7 +26213,8 @@
             "pt": "E se o meu cão mastigar uma figueira?",
             "nl": "Wat als mijn hond aan een vijgenboom knaagt?",
             "pl": "Co zrobić, jeśli pies pogryzie figowiec?",
-            "cs": "Co když pes okusuje fíkovník?"
+            "cs": "Co když pes okusuje fíkovník?",
+            "sv": "Vad gör jag om hunden tuggar på ett fikonträd?"
           },
           "a": {
             "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
@@ -26118,7 +26227,8 @@
             "pt": "A figueira pode ser prejudicial. Os sinais podem incluir vómitos, salivação excessiva, irritação da pele e erupções cutâneas. Se o teu cão comer qualquer parte da planta, procura imediatamente cuidados veterinários.",
             "nl": "De vijgenplant kan schadelijk zijn. Mogelijke verschijnselen zijn braken, overmatig kwijlen, huidirritatie en uitslag. Eet je hond een deel van de plant, ga dan meteen naar de dierenarts.",
             "pl": "Roślina figowca może szkodzić. Objawy to m.in. wymioty, nadmierne ślinienie się, podrażnienie skóry i wysypka. Jeśli twój pies zje jakąkolwiek część rośliny, od razu zgłoś się do weterynarza.",
-            "cs": "Rostlina fíkovníku může být škodlivá. Příznaky mohou zahrnovat zvracení, nadměrné slinění, podráždění kůže a vyrážku. Pokud pes sní jakoukoli část rostliny, okamžitě vyhledejte veterinární péči."
+            "cs": "Rostlina fíkovníku může být škodlivá. Příznaky mohou zahrnovat zvracení, nadměrné slinění, podráždění kůže a vyrážku. Pokud pes sní jakoukoli část rostliny, okamžitě vyhledejte veterinární péči.",
+            "sv": "Fikonväxten kan vara skadlig. Tecken kan vara kräkningar, kraftig dregling, hudirritation och utslag. Om hunden äter någon del av växten, sök veterinärvård direkt."
           }
         }
       ],
@@ -26163,7 +26273,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -26176,7 +26287,8 @@
         "pt": "Caroços e sementes de fruta",
         "nl": "Fruitpitten en -stenen",
         "pl": "Pestki owoców",
-        "cs": "Ovocné pecky"
+        "cs": "Ovocné pecky",
+        "sv": "Fruktkärnor och stenar"
       },
       "question": {
         "en": "Can dogs eat fruit pits?",
@@ -26189,7 +26301,8 @@
         "pt": "Os cães podem comer caroços de fruta?",
         "nl": "Mogen honden fruitpitten eten?",
         "pl": "Czy psy mogą jeść pestki owoców?",
-        "cs": "Mohou psi jíst ovocné pecky?"
+        "cs": "Mohou psi jíst ovocné pecky?",
+        "sv": "Får hundar äta fruktkärnor?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -26202,7 +26315,8 @@
         "pt": "carocos-e-sementes-de-fruta",
         "nl": "fruitpitten",
         "pl": "pestki-owocow",
-        "cs": "ovocne-pecky"
+        "cs": "ovocne-pecky",
+        "sv": "fruktkarnor-och-stenar"
       },
       "answer": {
         "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
@@ -26215,7 +26329,8 @@
         "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta.",
         "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt.",
         "pl": "Nie. Pestek owoców takich jak czereśnie, brzoskwinie i nektarynki nigdy nie należy dawać psom. Mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a poza tym zawierają niewielką ilość cyjanku. Zawsze usuwaj pestki i nasiona, zanim podzielisz się owocem.",
-        "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka."
+        "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka.",
+        "sv": "Nej. Kärnor och stenar från frukter som körsbär, persikor och nektariner ska aldrig ges till hundar. De kan knäcka tänder, orsaka kvävning eller täppa till tarmen, och de innehåller lite cyanid. Ta alltid bort kärnor och frön innan du delar med dig av frukt."
       },
       "why": {
         "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -26228,7 +26343,8 @@
         "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente.",
         "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval.",
         "pl": "Twarde pestki mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a pestki o ostrych krawędziach mogą uszkodzić przełyk podczas połykania. Pestka zawiera też niewielką ilość cyjanku. Zatrucie cyjankiem po zjedzeniu pestkowców zdarza się rzadko, ale zwierzęta domowe mogą zachorować już po znikomej ilości, dlatego rozgryzioną pestkę traktuje się jako nagły przypadek.",
-        "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ."
+        "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ.",
+        "sv": "Hårda kärnor kan spräcka tänder, orsaka kvävning eller täppa till tarmen, och kärnor med vassa kanter kan skada matstrupen när de sväljs. Kärnan innehåller också lite cyanid. Cyanidförgiftning av stenfrukt är sällsynt, men djur kan bli sjuka av en liten mängd, så en sönderbiten kärna ska behandlas som ett akutfall."
       },
       "signs": {
         "en": [
@@ -26318,6 +26434,14 @@
           "Potíže s vyprazdňováním",
           "Bolest břicha",
           "Potíže s dýcháním"
+        ],
+        "sv": [
+          "Kväljningar",
+          "Dregling",
+          "Kräkningar",
+          "Svårt att få ut avföring",
+          "Ont i magen",
+          "Svårt att andas"
         ]
       },
       "what_to_do": {
@@ -26331,7 +26455,8 @@
         "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário.",
         "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts.",
         "pl": "Od razu zadzwoń do weterynarza, jeśli twój pies rozgryzie pestkę. Jeśli pies połknął pestkę i pojawił się któryś z tych objawów, zadzwoń do weterynarza.",
-        "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři."
+        "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři.",
+        "sv": "Ring veterinären direkt om hunden har bitit sönder en kärna. Om hunden har svalt en kärna och visar något av de här tecknen, ring veterinären."
       },
       "serving": null,
       "child": {
@@ -26345,7 +26470,8 @@
         "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum.",
         "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet.",
         "pl": "Pestki owoców nie są dla psów. Wyrzucaj je do kosza, do którego pies nie sięgnie, i powiedz dorosłemu, jeśli pies jakąś zje.",
-        "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému."
+        "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému.",
+        "sv": "Fruktstenar är inte för hundar. Släng dem i en soptunna som hunden inte kommer åt, och säg till en vuxen om hunden äter en."
       },
       "faq": [
         {
@@ -26360,7 +26486,8 @@
             "pt": "A fruta em si é segura?",
             "nl": "Is het fruit zelf wel goed?",
             "pl": "Czy sam owoc jest w porządku?",
-            "cs": "Je v pořádku samotné ovoce?"
+            "cs": "Je v pořádku samotné ovoce?",
+            "sv": "Är själva frukten okej?"
           },
           "a": {
             "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -26373,7 +26500,8 @@
             "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão.",
             "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft.",
             "pl": "To zależy od owocu; zobacz stronę danego owocu. Zasadniczo przed podaniem owocu psu należy usunąć nasiona, pestki, gniazda nasienne, skórki i szypułki.",
-            "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky."
+            "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky.",
+            "sv": "Det beror på frukten, så titta på respektive frukts sida. Som huvudregel bör frön, kärnor, kärnhus, skal och växtstjälkar tas bort innan hunden får frukt."
           }
         },
         {
@@ -26388,7 +26516,8 @@
             "pt": "Que frutas têm caroço?",
             "nl": "Welk fruit heeft pitten?",
             "pl": "Które owoce mają pestki?",
-            "cs": "Které ovoce má pecky?"
+            "cs": "Které ovoce má pecky?",
+            "sv": "Vilka frukter har kärna eller sten?"
           },
           "a": {
             "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -26401,7 +26530,8 @@
             "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto.",
             "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide.",
             "pl": "Owoce takie jak czereśnie, nektarynki i brzoskwinie to tzw. pestkowce. Podobnie jak w czereśniach, pestki brzoskwini zawierają cyjanek.",
-            "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid."
+            "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid.",
+            "sv": "Frukter som körsbär, nektariner och persikor kallas stenfrukter. Precis som körsbär innehåller persikokärnor cyanid."
           }
         }
       ],
@@ -32981,7 +33111,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Pears",
@@ -32994,7 +33125,8 @@
         "pt": "Peras",
         "nl": "Peren",
         "pl": "Gruszki",
-        "cs": "Hrušky"
+        "cs": "Hrušky",
+        "sv": "Päron"
       },
       "question": {
         "en": "Can dogs eat pears?",
@@ -33007,7 +33139,8 @@
         "pt": "Os cães podem comer peras?",
         "nl": "Mogen honden peren eten?",
         "pl": "Czy psy mogą jeść gruszki?",
-        "cs": "Mohou psi jíst hrušky?"
+        "cs": "Mohou psi jíst hrušky?",
+        "sv": "Får hundar äta päron?"
       },
       "url_slug": {
         "en": "pears",
@@ -33020,7 +33153,8 @@
         "pt": "peras",
         "nl": "peren",
         "pl": "gruszki",
-        "cs": "hrusky"
+        "cs": "hrusky",
+        "sv": "paron"
       },
       "answer": {
         "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
@@ -33033,7 +33167,8 @@
         "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão.",
         "nl": "Ja, honden mogen met mate peren eten. Haal het klokhuis en de pitjes eruit, snijd de peer in hapklare stukjes en sla ingeblikte peren in suikersiroop over. Te veel peren kunnen de maag van een hond van streek maken.",
         "pl": "Tak, psy mogą jeść gruszki z umiarem. Usuń gniazdo nasienne z pestkami, pokrój owoc na kawałki wielkości jednego kęsa i nie podawaj gruszek z puszki w słodkim syropie. Zbyt wiele gruszek może rozstroić psu żołądek.",
-        "cs": "Ano, psi mohou hrušky jíst s mírou. Odstraňte ohryzek a semínka, nakrájejte hrušku na kousky na jedno sousto a vynechte hrušky z konzervy ve sladkém sirupu. Příliš mnoho hrušek může psovi podráždit žaludek."
+        "cs": "Ano, psi mohou hrušky jíst s mírou. Odstraňte ohryzek a semínka, nakrájejte hrušku na kousky na jedno sousto a vynechte hrušky z konzervy ve sladkém sirupu. Příliš mnoho hrušek může psovi podráždit žaludek.",
+        "sv": "Ja, hundar kan äta päron med måtta. Ta bort kärnhuset och kärnorna, skär frukten i munsbitar och undvik päron på burk i sockerlag. För många päron kan ge hunden orolig mage."
       },
       "why": {
         "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -33046,7 +33181,8 @@
         "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo.",
         "nl": "Peren bevatten vitamine C, vitamine A, koper en vezels. De pitjes bevatten sporen cyanide en kunnen ook verstikking veroorzaken, dus deel het klokhuis niet. Ingeblikte peren bevatten te veel suiker, wat het maag-darmkanaal kan irriteren en tot obesitas kan leiden. Zelfs veilig eten zoals peren kan verstikking veroorzaken.",
         "pl": "Gruszki zawierają witaminę C, witaminę A, miedź i błonnik. Pestki zawierają śladowe ilości cyjanku i mogą też spowodować zadławienie, dlatego nie należy dzielić się gniazdem nasiennym. Gruszki z puszki mają za dużo cukru, który może podrażniać przewód pokarmowy i prowadzić do otyłości. Nawet bezpieczne produkty, takie jak gruszki, mogą grozić zadławieniem.",
-        "cs": "Hrušky obsahují vitamin C, vitamin A, měď a vlákninu. Semínka obsahují stopy kyanidu a mohou také způsobit dušení, takže ohryzek psovi nedávejte. Hrušky z konzervy obsahují příliš mnoho cukru, který může dráždit trávicí trakt a vést k obezitě. I bezpečné potraviny, třeba hrušky, mohou být rizikem udušení."
+        "cs": "Hrušky obsahují vitamin C, vitamin A, měď a vlákninu. Semínka obsahují stopy kyanidu a mohou také způsobit dušení, takže ohryzek psovi nedávejte. Hrušky z konzervy obsahují příliš mnoho cukru, který může dráždit trávicí trakt a vést k obezitě. I bezpečné potraviny, třeba hrušky, mohou být rizikem udušení.",
+        "sv": "Päron innehåller C-vitamin, A-vitamin, koppar och fibrer. Kärnorna innehåller spår av cyanid och kan också orsaka kvävning, så kärnhuset ska inte delas med hunden. Päron på burk innehåller för mycket socker, som kan irritera matsmältningskanalen och leda till fetma. Även ofarlig mat som päron kan vara en kvävningsrisk."
       },
       "signs": null,
       "what_to_do": {
@@ -33060,7 +33196,8 @@
         "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação.",
         "nl": "Let de eerste keer dat je je hond peer geeft op buikklachten en neem contact op met je dierenarts als je je zorgen maakt.",
         "pl": "Gdy dajesz psu gruszki po raz pierwszy, obserwuj, czy nie pojawią się objawy rozstroju żołądka, a w razie wątpliwości skontaktuj się z weterynarzem.",
-        "cs": "Když psovi hrušky dáváte poprvé, sledujte, zda se neobjeví známky podrážděného žaludku, a pokud máte jakékoli obavy, obraťte se na veterináře."
+        "cs": "Když psovi hrušky dáváte poprvé, sledujte, zda se neobjeví známky podrážděného žaludku, a pokud máte jakékoli obavy, obraťte se na veterináře.",
+        "sv": "Första gången du ger päron: håll utkik efter tecken på orolig mage, och kontakta veterinären om du har några funderingar."
       },
       "serving": {
         "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -33073,7 +33210,8 @@
         "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional.",
         "nl": "Verse, rijpe peer zonder klokhuis en pitjes, in hapklare stukjes gesneden; houd je hond in de gaten terwijl hij eet. Alleen af en toe als tussendoortje.",
         "pl": "Świeża, dojrzała gruszka bez gniazda nasiennego i pestek, pokrojona na kawałki wielkości jednego kęsa; obserwuj psa podczas jedzenia. Jako okazjonalna przekąska.",
-        "cs": "Čerstvá zralá hruška bez ohryzku a semínek, nakrájená na kousky na jedno sousto; dohlížejte na psa, když jí. Jako občasná svačinka."
+        "cs": "Čerstvá zralá hruška bez ohryzku a semínek, nakrájená na kousky na jedno sousto; dohlížejte na psa, když jí. Jako občasná svačinka.",
+        "sv": "Färskt, moget päron utan kärnhus och kärnor, skuret i munsbitar; ha uppsikt över hunden medan den äter. Som mellanmål då och då."
       },
       "child": {
         "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -33086,7 +33224,8 @@
         "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes.",
         "nl": "Honden mogen een paar kleine stukjes peer! Een volwassene haalt eerst het middenstuk met de pitjes eruit.",
         "pl": "Psy mogą dostać kilka małych kawałków gruszki! Dorosły najpierw wyjmuje środek z pestkami.",
-        "cs": "Psi můžou dostat pár malých kousků hrušky! Nejdřív dospělý vyndá střed se semínky."
+        "cs": "Psi můžou dostat pár malých kousků hrušky! Nejdřív dospělý vyndá střed se semínky.",
+        "sv": "Hundar kan få några små bitar päron! En vuxen tar först bort mitten med kärnorna."
       },
       "faq": [
         {
@@ -33101,7 +33240,8 @@
             "pt": "Os cães podem comer o carolo da pera?",
             "nl": "Mogen honden het klokhuis van de peer eten?",
             "pl": "Czy psy mogą jeść ogryzek gruszki?",
-            "cs": "Mohou psi jíst ohryzek z hrušky?"
+            "cs": "Mohou psi jíst ohryzek z hrušky?",
+            "sv": "Får hundar äta kärnhuset?"
           },
           "a": {
             "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -33114,7 +33254,8 @@
             "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo.",
             "nl": "Nee. Geef je hond geen delen van de peer waar pitjes in zitten; de pitjes bevatten sporen cyanide en kunnen verstikking veroorzaken.",
             "pl": "Nie. Nie podawaj psu części gruszki z pestkami; pestki zawierają śladowe ilości cyjanku i mogą spowodować zadławienie.",
-            "cs": "Ne. Nedávejte psovi části hrušky se semínky; semínka obsahují stopy kyanidu a mohou způsobit dušení."
+            "cs": "Ne. Nedávejte psovi části hrušky se semínky; semínka obsahují stopy kyanidu a mohou způsobit dušení.",
+            "sv": "Nej. Ge inte hunden de delar av päronet där kärnorna sitter; kärnorna innehåller spår av cyanid och kan orsaka kvävning."
           }
         },
         {
@@ -33129,7 +33270,8 @@
             "pt": "Posso dar peras em conserva?",
             "nl": "Zijn ingeblikte peren goed?",
             "pl": "Czy gruszki z puszki są w porządku?",
-            "cs": "Jsou v pořádku hrušky z konzervy?"
+            "cs": "Jsou v pořádku hrušky z konzervy?",
+            "sv": "Går päron på burk bra?"
           },
           "a": {
             "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -33142,7 +33284,8 @@
             "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção.",
             "nl": "Nee. Ingeblikte peren bevatten te veel suiker. Sla ingeblikte peren of peren op pot in siroop over, ook als er “in eigen sap” op staat. Verse, rijpe peren zijn de beste keuze.",
             "pl": "Nie. Gruszki z puszki mają za dużo cukru. Nie podawaj gruszek z puszki ani ze słoika w syropie, nawet tych z napisem »we własnym soku«. Najlepsze są świeże, dojrzałe gruszki.",
-            "cs": "Ne. Hrušky z konzervy obsahují příliš mnoho cukru. Vynechte hrušky z konzervy nebo ze sklenice v sirupu, i ty označené „ve vlastní šťávě“. Nejlepší volbou jsou čerstvé zralé hrušky."
+            "cs": "Ne. Hrušky z konzervy obsahují příliš mnoho cukru. Vynechte hrušky z konzervy nebo ze sklenice v sirupu, i ty označené „ve vlastní šťávě“. Nejlepší volbou jsou čerstvé zralé hrušky.",
+            "sv": "Nej. Päron på burk innehåller för mycket socker. Undvik päron på burk eller glasburk i sirap, även de som är märkta ”i egen juice”. Färska, mogna päron är bäst."
           }
         }
       ],
@@ -33479,7 +33622,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Persimmon",
@@ -33492,7 +33636,8 @@
         "pt": "Dióspiro",
         "nl": "Kaki",
         "pl": "Persymona",
-        "cs": "Kaki"
+        "cs": "Kaki",
+        "sv": "Kaki"
       },
       "question": {
         "en": "Can dogs eat persimmon?",
@@ -33505,7 +33650,8 @@
         "pt": "Os cães podem comer dióspiro?",
         "nl": "Mogen honden kaki eten?",
         "pl": "Czy psy mogą jeść persymonę?",
-        "cs": "Mohou psi jíst kaki?"
+        "cs": "Mohou psi jíst kaki?",
+        "sv": "Får hundar äta kaki?"
       },
       "url_slug": {
         "en": "persimmon",
@@ -33518,7 +33664,8 @@
         "pt": "diospiro",
         "nl": "kaki",
         "pl": "persymona",
-        "cs": "kaki"
+        "cs": "kaki",
+        "sv": "kaki"
       },
       "answer": {
         "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
@@ -33531,7 +33678,8 @@
         "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos.",
         "nl": "Ja, in beperkte hoeveelheden. Het vruchtvlees van kaki is veilig voor honden, maar haal eerst de pitten eruit: die kunnen verstikking en een darmverstopping veroorzaken, vooral bij kleine honden. Kaki kan laxerend werken en diarree en braken veroorzaken.",
         "pl": "Tak, w ograniczonych ilościach. Miąższ persymony jest dla psów bezpieczny, ale najpierw usuń nasiona: mogą spowodować zadławienie i niedrożność jelit, zwłaszcza u małych psów. Persymona może działać przeczyszczająco i wywołać biegunkę oraz wymioty.",
-        "cs": "Ano, v omezeném množství. Dužina kaki je pro psy bezpečná, ale nejdřív odstraňte semínka: mohou způsobit dušení a ucpání střev, zvláště u malých psů. Kaki může působit projímavě a způsobit průjem a zvracení."
+        "cs": "Ano, v omezeném množství. Dužina kaki je pro psy bezpečná, ale nejdřív odstraňte semínka: mohou způsobit dušení a ucpání střev, zvláště u malých psů. Kaki může působit projímavě a způsobit průjem a zvracení.",
+        "sv": "Ja, i begränsade mängder. Kakins fruktkött är ofarligt för hundar, men ta först bort kärnorna: de kan orsaka kvävning och tarmstopp, särskilt hos små hundar. Kaki kan verka laxerande och ge diarré och kräkningar."
       },
       "why": {
         "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -33544,7 +33692,8 @@
         "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas.",
         "nl": "De kaki zelf is niet schadelijk voor honden, maar de pitten en stenen kunnen een darmverstopping veroorzaken. Grotere honden scheiden ze mogelijk zonder problemen weer uit met de ontlasting, terwijl kleinere rassen het risico lopen op verstikking en een darmafsluiting. Kaki werkt laxerend en kan diarree, misselijkheid, braken en maagkrampen veroorzaken.",
         "pl": "Sam owoc persymony nie szkodzi psom, ale pestki i nasiona grożą niedrożnością jelit. Większe psy mogą je wydalić bez problemu, natomiast mniejszym rasom grozi zadławienie i niedrożność jelit. Persymony działają przeczyszczająco i mogą wywołać biegunkę, nudności, wymioty i skurcze żołądka.",
-        "cs": "Samotný plod kaki psům neškodí, ale semínka a pecky představují riziko ucpání střev. Větší psi je mohou vyloučit bez potíží, zatímco menší plemena ohrožuje dušení a ucpání střev. Kaki působí projímavě a může způsobit průjem, nevolnost, zvracení a žaludeční křeče."
+        "cs": "Samotný plod kaki psům neškodí, ale semínka a pecky představují riziko ucpání střev. Větší psi je mohou vyloučit bez potíží, zatímco menší plemena ohrožuje dušení a ucpání střev. Kaki působí projímavě a může způsobit průjem, nevolnost, zvracení a žaludeční křeče.",
+        "sv": "Själva kakifrukten är inte skadlig för hundar, men kärnorna innebär risk för tarmstopp. Större hundar kan klara att få ut dem utan problem, medan små raser riskerar kvävning och tarmstopp. Kaki verkar laxerande och kan ge diarré, illamående, kräkningar och magkramper."
       },
       "signs": null,
       "what_to_do": {
@@ -33558,7 +33707,8 @@
         "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária.",
         "nl": "Heeft je hond na het eten van kaki last van braken, buikpijn, uitdroging of verlies van eetlust, ga dan meteen naar de dierenarts.",
         "pl": "Jeśli po zjedzeniu persymony u twojego psa wystąpią wymioty, ból brzucha, odwodnienie lub brak apetytu, od razu zgłoś się do weterynarza.",
-        "cs": "Pokud pes po snězení kaki zvrací, má bolesti břicha, je dehydrovaný nebo ztratil chuť k jídlu, okamžitě vyhledejte veterinární pomoc."
+        "cs": "Pokud pes po snězení kaki zvrací, má bolesti břicha, je dehydrovaný nebo ztratil chuť k jídlu, okamžitě vyhledejte veterinární pomoc.",
+        "sv": "Om hunden får kräkningar, ont i magen, uttorkning eller tappar matlusten efter att ha ätit kaki, sök veterinärvård direkt."
       },
       "serving": {
         "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -33571,7 +33721,8 @@
         "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação.",
         "nl": "Spoel de vrucht af, haal de pitten eruit en snijd hem in kleine, hapklare plakjes. Alleen met mate.",
         "pl": "Umyj owoc, usuń nasiona i pokrój na małe plasterki wielkości jednego kęsa. Tylko z umiarem.",
-        "cs": "Plod opláchněte, odstraňte semínka a nakrájejte ho na malé plátky na jedno sousto. Jen s mírou."
+        "cs": "Plod opláchněte, odstraňte semínka a nakrájejte ho na malé plátky na jedno sousto. Jen s mírou.",
+        "sv": "Skölj frukten, ta bort kärnorna och skär den i små munsbitar. Bara med måtta."
       },
       "child": {
         "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -33584,7 +33735,8 @@
         "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos.",
         "nl": "Honden mogen een beetje kaki. Een volwassene haalt de pitten eruit en snijdt de vrucht in kleine stukjes.",
         "pl": "Psy mogą dostać odrobinę persymony. Dorosły wyjmuje nasiona i kroi owoc na małe kawałki.",
-        "cs": "Psi můžou dostat trochu kaki. Dospělý vyndá semínka a nakrájí ho na malé kousky."
+        "cs": "Psi můžou dostat trochu kaki. Dospělý vyndá semínka a nakrájí ho na malé kousky.",
+        "sv": "Hundar kan få lite kaki. En vuxen tar bort kärnorna och skär den i små bitar."
       },
       "faq": [
         {
@@ -33599,7 +33751,8 @@
             "pt": "As sementes do dióspiro são perigosas?",
             "nl": "Zijn kakipitten gevaarlijk?",
             "pl": "Czy nasiona persymony są niebezpieczne?",
-            "cs": "Jsou semínka kaki nebezpečná?"
+            "cs": "Jsou semínka kaki nebezpečná?",
+            "sv": "Är kakikärnor farliga?"
           },
           "a": {
             "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -33612,7 +33765,8 @@
             "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco.",
             "nl": "Ja, die moeten eruit. Ze kunnen verstikking en een darmverstopping veroorzaken, en kleine honden lopen het meeste risico.",
             "pl": "Tak, należy je usunąć. Mogą spowodować zadławienie i niedrożność jelit, a największe ryzyko dotyczy małych psów.",
-            "cs": "Ano, je třeba je odstranit. Mohou způsobit dušení a ucpání střev, nejvíc jsou ohroženi malí psi."
+            "cs": "Ano, je třeba je odstranit. Mohou způsobit dušení a ucpání střev, nejvíc jsou ohroženi malí psi.",
+            "sv": "Ja, de ska tas bort. De kan orsaka kvävning och tarmstopp, och små hundar löper störst risk."
           }
         }
       ],
@@ -34492,7 +34646,8 @@
         "pt",
         "nl",
         "pl",
-        "cs"
+        "cs",
+        "sv"
       ],
       "name": {
         "en": "Pomegranate",
@@ -34505,7 +34660,8 @@
         "pt": "Romã",
         "nl": "Granaatappel",
         "pl": "Granat",
-        "cs": "Granátové jablko"
+        "cs": "Granátové jablko",
+        "sv": "Granatäpple"
       },
       "question": {
         "en": "Can dogs eat pomegranate?",
@@ -34518,7 +34674,8 @@
         "pt": "Os cães podem comer romã?",
         "nl": "Mogen honden granaatappel eten?",
         "pl": "Czy psy mogą jeść granat?",
-        "cs": "Mohou psi jíst granátové jablko?"
+        "cs": "Mohou psi jíst granátové jablko?",
+        "sv": "Får hundar äta granatäpple?"
       },
       "url_slug": {
         "en": "pomegranate",
@@ -34531,7 +34688,8 @@
         "pt": "roma",
         "nl": "granaatappel",
         "pl": "granat",
-        "cs": "granatove-jablko"
+        "cs": "granatove-jablko",
+        "sv": "granatapple"
       },
       "answer": {
         "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
@@ -34544,7 +34702,8 @@
         "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca.",
         "nl": "Liever niet. Granaatappels zijn niet giftig voor honden, maar daarmee is de vrucht nog niet veilig: de zaadjes kunnen maagproblemen en een verstopping van het spijsverteringskanaal veroorzaken, en stukjes schil en steel kunnen een afsluiting geven. Het is veiliger om geen verse granaatappel te geven.",
         "pl": "Nie zaleca się. Granat nie jest toksyczny dla psów, ale to nie znaczy, że owoc jest bezpieczny: pestki mogą wywołać dolegliwości żołądkowe i zatkać przewód pokarmowy, a kawałki skórki i szypułki mogą spowodować niedrożność. Bezpieczniej nie podawać świeżego granatu.",
-        "cs": "Nedoporučuje se. Granátová jablka pro psy nejsou toxická, ale to z nich nedělá bezpečné ovoce: semínka mohou způsobit žaludeční potíže a ucpání trávicího traktu a kousky slupky a stopky mohou způsobit ucpání. Bezpečnější je čerstvé granátové jablko nedávat."
+        "cs": "Nedoporučuje se. Granátová jablka pro psy nejsou toxická, ale to z nich nedělá bezpečné ovoce: semínka mohou způsobit žaludeční potíže a ucpání trávicího traktu a kousky slupky a stopky mohou způsobit ucpání. Bezpečnější je čerstvé granátové jablko nedávat.",
+        "sv": "Rekommenderas inte. Granatäpplen är inte giftiga för hundar, men det betyder inte att frukten är säker: kärnorna kan ge magproblem och stopp i matsmältningskanalen, och bitar av skal och stjälk kan orsaka stopp. Det är säkrare att inte ge färskt granatäpple."
       },
       "why": {
         "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -34557,7 +34716,8 @@
         "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca.",
         "nl": "De hoofddierenarts van de AKC zegt dat granaatappels niet giftig zijn voor honden. De zaadjes, het deel dat mensen meestal eten, kunnen toch maag- en darmklachten en een verstopping van het spijsverteringskanaal veroorzaken. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden. Granaatappelextract in producten die voor honden zijn gemaakt is iets anders dan de verse vrucht.",
         "pl": "Główny lekarz weterynarii AKC podaje, że granaty nie są toksyczne dla psów. Pestki, czyli część, którą ludzie zwykle jedzą, mogą jednak wywołać problemy żołądkowo-jelitowe i zablokować przewód pokarmowy. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów. Ekstrakt z granatu w produktach przeznaczonych dla psów to co innego niż świeży owoc.",
-        "cs": "Hlavní veterinář AKC uvádí, že granátová jablka nejsou pro psy toxická. Semínka, tedy část, kterou lidé obvykle jedí, však mohou způsobit zažívací potíže a ucpání trávicího traktu. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů. Výtažek z granátového jablka v produktech určených pro psy je něco jiného než čerstvý plod."
+        "cs": "Hlavní veterinář AKC uvádí, že granátová jablka nejsou pro psy toxická. Semínka, tedy část, kterou lidé obvykle jedí, však mohou způsobit zažívací potíže a ucpání trávicího traktu. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů. Výtažek z granátového jablka v produktech určených pro psy je něco jiného než čerstvý plod.",
+        "sv": "AKC:s chefsveterinär säger att granatäpplen inte är giftiga för hundar. Kärnorna, den del som människor oftast äter, kan ändå ge mag- och tarmproblem och stopp i matsmältningskanalen. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar. Granatäppelextrakt i produkter för hundar är en annan sak än den färska frukten."
       },
       "signs": {
         "en": [
@@ -34603,6 +34763,10 @@
         "cs": [
           "Průjem",
           "Zvracení"
+        ],
+        "sv": [
+          "Diarré",
+          "Kräkningar"
         ]
       },
       "what_to_do": {
@@ -34616,7 +34780,8 @@
         "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário.",
         "nl": "Heeft je hond granaatappelzaadjes gegeten? Neem dan meteen contact op met je dierenarts.",
         "pl": "Jeśli twój pies zjadł pestki granatu, od razu skontaktuj się z weterynarzem.",
-        "cs": "Pokud se váš pes dostane k semínkům granátového jablka, okamžitě se obraťte na veterináře."
+        "cs": "Pokud se váš pes dostane k semínkům granátového jablka, okamžitě se obraťte na veterináře.",
+        "sv": "Om hunden har ätit granatäppelkärnor, kontakta veterinären direkt."
       },
       "serving": null,
       "child": {
@@ -34630,7 +34795,8 @@
         "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance.",
         "nl": "Granaatappel is fruit voor mensen. De zaadjes en de schil kunnen de buik van een hond van streek maken, dus houd het buiten het bereik van je hond.",
         "pl": "Granat to owoc dla ludzi. Jego pestki i skórka mogą psu rozstroić brzuszek, więc trzymaj go z dala od psa.",
-        "cs": "Granátové jablko je ovoce pro lidi. Jeho semínka a slupka mohou psovi pokazit bříško, tak ho měj mimo dosah."
+        "cs": "Granátové jablko je ovoce pro lidi. Jeho semínka a slupka mohou psovi pokazit bříško, tak ho měj mimo dosah.",
+        "sv": "Granatäpple är en frukt för människor. Kärnorna och skalet kan ge hunden ont i magen, så håll det utom räckhåll."
       },
       "faq": [
         {
@@ -34645,7 +34811,8 @@
             "pt": "Pode haver romã na comida para cães?",
             "nl": "Is granaatappel in hondenvoer goed?",
             "pl": "Czy granat w karmie dla psów jest w porządku?",
-            "cs": "Je granátové jablko v krmivu pro psy v pořádku?"
+            "cs": "Je granátové jablko v krmivu pro psy v pořádku?",
+            "sv": "Går det bra med granatäpple i hundfoder?"
           },
           "a": {
             "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -34658,7 +34825,8 @@
             "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário.",
             "nl": "Granaatappelextract kan gezondheidsvoordelen hebben voor honden. Wil je het geven, kies dan producten die speciaal voor honden zijn gemaakt en overleg met je dierenarts.",
             "pl": "Ekstrakt z granatu może korzystnie wpływać na zdrowie psów. Jeśli chcesz go podawać, szukaj produktów przeznaczonych specjalnie dla psów i porozmawiaj z weterynarzem.",
-            "cs": "Výtažek z granátového jablka může psům prospívat. Pokud ho chcete psovi dávat, hledejte produkty určené přímo pro psy a poraďte se s veterinářem."
+            "cs": "Výtažek z granátového jablka může psům prospívat. Pokud ho chcete psovi dávat, hledejte produkty určené přímo pro psy a poraďte se s veterinářem.",
+            "sv": "Granatäppelextrakt kan ha hälsofördelar för hundar. Om du vill ge det, välj produkter som är särskilt framtagna för hundar och prata med veterinären."
           }
         },
         {
@@ -34673,7 +34841,8 @@
             "pt": "Os cães podem comer a casca da romã?",
             "nl": "Mogen honden de schil van de granaatappel eten?",
             "pl": "Czy psy mogą jeść skórkę granatu?",
-            "cs": "Mohou psi jíst slupku granátového jablka?"
+            "cs": "Mohou psi jíst slupku granátového jablka?",
+            "sv": "Får hundar äta granatäppelskal?"
           },
           "a": {
             "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -34686,7 +34855,8 @@
             "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês.",
             "nl": "Nee. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden, dus geef ze niet.",
             "pl": "Nie. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów, więc ich nie podawaj.",
-            "cs": "Ne. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů, proto je nedávejte."
+            "cs": "Ne. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů, proto je nedávejte.",
+            "sv": "Nej. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar, så ge inte hunden skalet."
           }
         }
       ],
