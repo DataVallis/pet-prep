@@ -136,12 +136,15 @@ it('does nothing when the disk size is unknown', function () {
 
 it('a failed post releases the day so the next hourly check retries', function () {
     dsDisk(88.0);
-    dsFakeDiscord(500);
+    // One fake with a sequence: a second Http::fake() would not replace the first stub.
+    Http::fake(['discord.com/api/webhooks/*' => Http::sequence()
+        ->push(['message' => 'nope'], 500)
+        ->push(null, 204)]);
 
     Artisan::call('system-health:disk-check');
+    Http::assertSentCount(1);
     expect(Cache::has(CheckDiskSpaceCommand::claimKey()))->toBeFalse();
 
-    dsFakeDiscord();
     Artisan::call('system-health:disk-check');
     Http::assertSentCount(2);
     expect(Cache::has(CheckDiskSpaceCommand::claimKey()))->toBeTrue();
