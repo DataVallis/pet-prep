@@ -203,7 +203,9 @@ function rgSeed(): array
     rgInsert('pet_treat_events', ['pet_id' => $pet->id, 'child_user_id' => $child->id, 'pet_item_id' => $itemId, 'given_at' => $now, 'local_date' => $today]);
     // M6-W03: item content (a catalogue picture + a pet row) and its notice go with the game data.
     rgInsert('item_media', ['scope' => 'catalogue', 'item_key' => 'bed', 'design' => 'dog_bed_round_grey', 'kind' => 'picture', 'status' => 'pending']);
-    rgInsert('item_media', ['scope' => 'pet', 'pet_id' => $pet->id, 'item_key' => 'treats', 'design' => 'dog_treats', 'kind' => 'image', 'status' => 'pending']);
+    $itemImageId = rgInsert('item_media', ['scope' => 'pet', 'pet_id' => $pet->id, 'item_key' => 'treats', 'design' => 'dog_treats', 'kind' => 'image', 'status' => 'pending']);
+    // David 2026-11-04: the still check of an item file (→ item_media).
+    rgInsert('item_media_quality_checks', ['item_media_id' => $itemImageId, 'generation' => 1, 'trigger' => 'pipeline', 'status' => 'decided', 'ai_status' => 'passed', 'ai_cost_usd' => 0.003, 'verdict' => 'pass']);
     rgInsert('item_media_notices', ['pet_id' => $pet->id, 'item_key' => 'treats', 'design' => 'dog_treats', 'life_stage' => '', 'outcome' => 'no_media', 'created_at' => $now]);
     // M2-01d: a finished challenge (certificate row) goes with the game data.
     rgInsert('challenge_certificates', [
