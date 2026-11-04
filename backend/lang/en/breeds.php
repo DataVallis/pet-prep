@@ -93,6 +93,7 @@ return [
     'irish_setter' => 'Irish Setter',
     'anatolian_shepherd_dog' => 'Anatolian Shepherd Dog',
     'pekingese' => 'Pekingese',
+    'chow_chow' => 'Chow Chow',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

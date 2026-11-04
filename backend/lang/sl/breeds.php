@@ -93,6 +93,7 @@ return [
     'irish_setter' => 'Irski seter',
     'anatolian_shepherd_dog' => 'Anatolski ovčar',
     'pekingese' => 'Pekinezer',
+    'chow_chow' => 'Čau čau',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

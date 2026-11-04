@@ -1118,6 +1118,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_PEKINGESE_SENIOR = 'predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-91) — čaka Davida';
 
     /**
+     * M5-R10-92 Chow Chow (unattended run 2026-11-04, data.json proposed_game_parameters.chow_chow.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PDSA S700 "a minimum of one hour exercise every day"; RKC page not reachable), senior 45 min, puppy 10 min ×
+     * age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 0.5 (Coren rank 76, Lowest); care
+     * rates the Border Collie's. The senior boundary uses the closest rule row (the only bound of the PDSA band "Under 10
+     * years", S700 — no McMillan 2024 / VetCompass median / RKC band reachable) and is NOT covered by the confirmation: see
+     * PROPOSED_R10_CHOW_CHOW_SENIOR.
+     */
+    public const CONFIRMED_R10_CHOW_CHOW = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-92)';
+
+    /**
+     * M5-R10-92 Chow Chow senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × 10 y, the PDSA band "Under 10 years", S700), verified=false until David decides
+     * (data.json proposed_game_parameters.chow_chow.senior_boundary_months).
+     */
+    public const PROPOSED_R10_CHOW_CHOW_SENIOR = 'predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-92) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1526,6 +1544,7 @@ class BreedStageParamsSeeder extends Seeder
         'irish_setter' => [3, 'S678', 'To keep the coat of the Irish Setter glossy and in top condition, they\'ll need grooming 2 or 3 times per week.', 'high', false],
         'anatolian_shepherd_dog' => [1, 'S687', 'Outside of this biannual coat blowing, their short outer coat is smooth and only requires weekly brushing for maintenance.', 'high', false],
         'pekingese' => [7, 'S693', 'Pekingese have really thick, long fur that will need a daily brush to stop it from getting tangled and matted.', 'high', false],
+        'chow_chow' => [7, 'S700', 'Chow Chows need brushing every day to keep their fur in good condition.', 'high', false],
     ];
 
     /**
@@ -1575,6 +1594,7 @@ class BreedStageParamsSeeder extends Seeder
         'greater_swiss_mountain_dog' => ['S656', 'avoid using elevated food bowls and do not exercise your dog directly before or after mealtimes'],
         'shar_pei' => ['S660', 'Remember to leave a gap between eating and exercising.'],
         'anatolian_shepherd_dog' => ['S687', 'feed your Anatolian Shepherd at least two or three small meals throughout the day and avoid exercise around mealtimes.'],
+        'chow_chow' => ['S700', 'Remember to leave a gap after eating and before exercising.'],
     ];
 
     /** M5-R17: David's decision of the weekly "new experience" (value 1, puppy stage, never scored). */
@@ -1674,13 +1694,14 @@ class BreedStageParamsSeeder extends Seeder
         'irish_setter' => ['S678', 'As with all breeds, early socialisation is important to ensure they grow up into confident, sociable dogs.'],
         'anatolian_shepherd_dog' => ['S687', 'Early socialization is key to help prevent an Anatolian Shepherd puppy from thinking everything new is a threat.'],
         'pekingese' => ['S693', 'It’s important to socialise your Pekingese from a young age with lots of different people, dogs and experiences.'],
+        'chow_chow' => ['S700', "it's really important to make sure your Chow Chow is well-socialised from a young age"],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2491,6 +2512,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::IrishSetter => self::irishSetterProfile(),
             BreedType::AnatolianShepherdDog => self::anatolianShepherdDogProfile(),
             BreedType::Pekingese => self::pekingeseProfile(),
+            BreedType::ChowChow => self::chowChowProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -8882,6 +8904,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'pekingese.lifespan.pdsa',
                 'quote' => 'Over 12 years',
                 'notes' => 'PDSA key fact lower bound (S693); PetMD 12–14 y (S694) is consistent. No McMillan 2024 value reachable (13.3 y only via Wikipedia S695, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Chow Chow (M5-R10-92). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the runbook's
+     * standing rules (CONFIRMED_R10_CHOW_CHOW); weight, growth, Coren rank and lifespan are sourced. The senior boundary is
+     * Claude's suggestion (PROPOSED_R10_CHOW_CHOW_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function chowChowProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_CHOW_CHOW;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S700', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.chow_chow.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog is full-grown at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S700', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chow_chow.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHOW_CHOW_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × 10 y, the only bound of the PDSA band "Under 10 years" (S700) = 7.5 y = 90 months. The Dogs Trust McMillan 2024 table (S123) and the RKC page could not be fetched; no VetCompass median; PetMD "eight to 12 years" (S701) is a span. Alternatives: 109 (McMillan 12.1 y via Wikipedia S702, tier C), 84 (Dogs Trust > 7 y, S14), 72 (PetMD lower bound 8 y).',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chow_chow.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.chow_chow.senior_boundary_months', 'decision' => self::PROPOSED_R10_CHOW_CHOW_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S700).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S700', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chow_chow.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => '1 hour',
+                'notes' => 'PDSA key facts "Minimum exercise (per day): 1 hour" and "a minimum of one hour exercise every day" (S700) → 60 min = 6,000 steps (runbook rule: "minimum N" → N; the RKC page was not reachable). PetMD (S701) "A couple of 20-minute walks every day is enough." (40 min) — alternative.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chow_chow.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[20, 30], [
+                'unit' => 'kg', 'source_id' => 'S700', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chow_chow.adult_weight.pdsa',
+                'quote' => '20-30 kg',
+                'notes' => 'PDSA key fact "Average weight" (S700), one range for both sexes; the FCI / KC / AKC standards give no weight. PetMD 45–70 lb (S701) agrees.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chow_chow.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA size "Large", S700 → the Large class of S10).',
+            ]],
+            'coren_rank' => [76, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'chow_chow.trainability.coren_rank',
+                'notes' => 'Coren rank 76 "Chow Chow", tier Lowest Degree of Working/Obedience Intelligence (ranks 70–79) — Wikipedia table (S35, checked 2026-11-04).',
+            ]],
+            'learning_multiplier' => [0.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.chow_chow.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 76 = Lowest (S35) → 0.5 (PDSA S700: consistent positive, reward-based training from a young age). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S700', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'chow_chow.lifespan.pdsa',
+                'quote' => 'Under 10 years',
+                'notes' => 'PDSA key fact band "Under 10 years" (S700) — 10 is its upper bound, not a median; PetMD eight to 12 years (S701). No McMillan 2024 value reachable (12.1 y only via Wikipedia S702, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

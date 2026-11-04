@@ -750,6 +750,16 @@
 | trait `muzzle` carries it. Red-gold with a black mask first with the highest weight (the portrait default, the most
 | common colour per Wikipedia S695 — tier C); weights unsourced → `verified => false`.
 |
+| Chow Chow (M5-R10-92, docs/research/dog-data chow_chow.appearance):
+| "Active, compact, short-coupled and essentially well balanced, leonine in appearance, proud, dignified bearing; well
+| knit frame;" (FCI-Standard N° 205, S696); "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but
+| not in patches or parti-coloured" (S696; KC S698 the same); rough coat "Profuse, abundant, dense, straight and stand-off
+| but not excessive in length." (S696); muzzle "Moderate in length, broad from eyes to end" (S696); eyes "Dark, oval
+| shaped, medium sized, clean and free from entropion." (S696); small, thick ears tilting forward; tail set high, carried
+| well over the back. Not a flat-faced breed; entropion is a PDSA health point (S700) → open, healthy eyes and a moderate
+| muzzle (dog trait `muzzle`). Red first with the highest weight (the portrait default; AKC S699 lists red first);
+| weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -4032,6 +4042,46 @@ return [
             'ear_carriage' => ['heart-shaped drop ears with long feathering, carried close to the head'],
             'eye_color' => ['clear, round, dark eyes that do not bulge'],
             'tail' => ['feathered tail set high and curved over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-92 (docs/research/dog-data/data.json chow_chow.appearance; runbook rules 2026-10-10: standard whole colours only —
+    // FCI S696 "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but not in patches or parti-coloured";
+    // red = the portrait default; moderate `muzzle` and open eyes — entropion is a PDSA health point, S700).
+    'chow_chow' => [
+        'display_name' => 'Chow Chow',
+        // Six standard colours; their weights are in no source (chow_chow.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 205 (S696), KC breed standard Chow Chow (S698, KUSA copy 07-2025) and AKC standard (S699) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S696 height males "48 - 56 cm", females "46 - 51 cm"; PDSA S700 "Large", "20-30 kg"',
+            'build' => 'S696 "Active, compact, short-coupled and essentially well balanced, leonine in appearance, proud, dignified bearing; well knit frame;"',
+            'coat_length' => 'S696 rough coat "Profuse, abundant, dense, straight and stand-off but not excessive in length."',
+            'coat_color' => 'S696 "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but not in patches or parti-coloured" (weights unsourced; never patches, parti-colour or merle)',
+            'head' => 'S696 "Large and wide in all cases, black" (nose); broad head (paraphrase)',
+            'muzzle' => 'S696 "Moderate in length, broad from eyes to end (not pointed at end like a fox)."; S699 "never less than one-third of the head length." — a moderate muzzle, not a flat face',
+            'ear_carriage' => 'S696 "Small, thick, slightly rounded at tip, carried stiffly and wide apart but tilting well forward over eyes"',
+            'eye_color' => 'S696 "Dark, oval shaped, medium sized, clean and free from entropion." (welfare: entropion, PDSA S700 — open, healthy eyes)',
+            'tail' => 'S696 "Set high, carried well over back."',
+        ],
+        'traits' => [
+            'size' => ['medium-large'],
+            'build' => [['value' => 'compact, short-coupled, lion-like spitz with a proud, dignified bearing', 'weight' => 3], 'sturdy, well-balanced, lion-like spitz'],
+            'coat_length' => ['profuse, dense, straight, stand-off rough coat with a full mane around the head and neck (not excessive in length)'],
+            // Red first, highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'solid red, light golden to deep red, frequently shaded', 'weight' => 40],
+                ['value' => 'solid black', 'weight' => 20],
+                ['value' => 'solid cream', 'weight' => 15],
+                ['value' => 'solid fawn', 'weight' => 10],
+                ['value' => 'solid blue (slate grey)', 'weight' => 10],
+                ['value' => 'solid white', 'weight' => 5],
+            ],
+            'head' => ['broad, flat skull with a large, wide black nose'],
+            'muzzle' => ['broad muzzle of moderate length (not a flat face), a visible black nose'],
+            'ear_carriage' => ['small, thick, slightly rounded erect ears set wide apart and tilting forward'],
+            'eye_color' => ['dark, oval, medium-sized eyes that are clean and open, no heavy skin folds over the eyes'],
+            'tail' => ['tail set high and carried well over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
