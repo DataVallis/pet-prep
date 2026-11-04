@@ -89,10 +89,10 @@
       "address": "ul. Nowoursynowska 159c, 02-776 Warszawa",
       "phone": "+48 787 205 830",
       "emergency_24h": true,
-      "duty": "Registration 8:00-20:00; page says the clinic is open around the clock, 7 days a week.",
+      "duty": "Registration 8:00–20:00; clinic open around the clock, 7 days a week.",
       "url": "https://klinikawet.sggw.edu.pl/",
       "source_url": "https://klinikawet.sggw.edu.pl/kontakt/",
-      "note": "University clinic (SGGW). Other numbers +48 22 847 37 40, +48 22 593 61 04.",
+      "note": "University clinic (SGGW). Other numbers +48 22 847 37 40, +48 22 593 61 04. Round-the-clock opening is as stated on the clinic page.",
       "quote": "całą dobę, 7 dni w tygodniu"
     },
     {
@@ -166,10 +166,10 @@
       "address": "ul. Taneczna 30, 02-829 Warszawa",
       "phone": "+48 22 150 38 20",
       "emergency_24h": true,
-      "duty": "Page lists daytime duty Mon-Fri 9:00-23:00, Sat-Sun 10:00-18:00 and calls itself round-the-clock.",
+      "duty": "Daytime duty Mon–Fri 9:00–23:00, Sat–Sun 10:00–18:00; also advertised as round-the-clock.",
       "url": "https://www.pulsvet.pl/",
       "source_url": "https://www.pulsvet.pl/",
-      "note": "Page also shows a notice of closure 4 Oct 18:00 to 5 Oct 11:00 (move to new address); call ahead.",
+      "note": "Page also shows a notice of closure 4 Oct 18:00 to 5 Oct 11:00 (move to new address); call ahead. Duty text said the page lists these hours and calls itself round-the-clock.",
       "quote": "Nasza przychodnia całodobowa, pracujemy także w święta!"
     },
     {
@@ -337,10 +337,10 @@
       "address": "ul. Ziębicka 32, Wrocław",
       "phone": "+48 71 735 17 40",
       "emergency_24h": true,
-      "duty": "Page: 24/7 veterinary care.",
+      "duty": "24/7 veterinary care.",
       "url": "https://dolvetwroclaw.pl/",
       "source_url": "https://dolvetwroclaw.pl/",
-      "note": "Page also gives +48 535 344 503 (meta description).",
+      "note": "Page also gives +48 535 344 503 (meta description). Duty text began 'Page:'.",
       "quote": "Całodobowa opieka weterynaryjna - jesteśmy dla Ciebie 24/7."
     },
     {
@@ -415,10 +415,10 @@
       "address": "ul. Stryjska 25, 81-506 Gdynia",
       "phone": "+48 58 622 21 48",
       "emergency_24h": false,
-      "duty": "Redłowo Mon-Fri 9:00-20:00, Sat-Sun/holidays 9:00-12:00; header says duty until 24:00; 2025 notice says night duty to 22:00.",
+      "duty": "Redłowo Mon–Fri 9:00–20:00, Sat–Sun/holidays 9:00–12:00; night duty after hours - call ahead for times.",
       "url": "https://lecznica.gdynia.pl/",
       "source_url": "https://lecznica.gdynia.pl/",
-      "note": "No 24-h claim on the own page (only a Facebook link title); hours conflict on the page. Second site Obłuże, ul. Cechowa 11."
+      "note": "No 24-h claim on the own page (only a Facebook link title); hours conflict on the page. Second site Obłuże, ul. Cechowa 11. Duty text said the header says duty until 24:00 while a 2025 notice says night duty to 22:00 (conflicting)."
     },
     {
       "kind": "clinic",
@@ -536,12 +536,12 @@
       "city": "Łódź",
       "region": "Łódzkie",
       "emergency_24h": false,
-      "duty": "City of Łódź article (30.10.2025) listing clinics for night/holiday help: Vet-Med, Lancet (both stated round the clock), SOWA (8:00-23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
+      "duty": "Night/holiday help in Łódź: Vet-Med and Lancet (round the clock), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
       "small_animals": true,
       "url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
       "source_url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
       "checked": "2026-11-02",
-      "note": "Official city page; a list article, not a live rota."
+      "note": "Official city page; a list article, not a live rota. Source: City of Łódź article of 30.10.2025 listing clinics for night/holiday help."
     },
     {
       "kind": "clinic",
@@ -673,10 +673,10 @@
       "address": "ul. Fordońska 44, 85-719 Bydgoszcz",
       "phone": "+48 533 750 750",
       "emergency_24h": false,
-      "duty": "Mon-Sat 20:00-8:00; Sundays and holidays 24 h (page wording).",
+      "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
-      "note": "Night emergency service; the page does not tie the schedule to a specific site, so not marked 24 h.",
+      "note": "Night emergency service; the page does not tie the schedule to a specific site, so not marked 24 h. Duty text said '(page wording)' for the Sunday/holiday 24 h.",
       "quote": "W niedzielę i święta 24h na dobę."
     },
     {
@@ -689,10 +689,10 @@
       "address": "ul. Koniuchy 15, 87-100 Toruń",
       "phone": "+48 530 248 052",
       "emergency_24h": false,
-      "duty": "Mon-Sat 20:00-8:00; Sundays and holidays 24 h (page wording).",
+      "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
-      "note": "Same group as Bydgoszcz; schedule not tied to a site, so not marked 24 h.",
+      "note": "Same group as Bydgoszcz; schedule not tied to a site, so not marked 24 h. Duty text said '(page wording)' for the Sunday/holiday 24 h.",
       "quote": "W niedzielę i święta 24h na dobę."
     },
     {
@@ -721,10 +721,10 @@
       "address": "ul. Wodociągowa 1J, Zawada",
       "phone": "518 852 739",
       "emergency_24h": true,
-      "duty": "City of Opole page describes it as a round-the-clock veterinary practice providing night-time care.",
+      "duty": "Round-the-clock veterinary practice providing night-time care; call ahead.",
       "url": "https://aquavet.opole.pl/",
       "source_url": "https://www.opole.pl/print/pdf/node/1884",
-      "note": "Conditional: 24 h claim comes from the City of Opole page only (clinic site blocks automated access, not opened); call ahead. Opolskie government reply 2024 says no formal night vet service exists in the voivodeship.",
+      "note": "Conditional: 24 h claim comes from the City of Opole page only (clinic site blocks automated access, not opened); call ahead. Opolskie government reply 2024 says no formal night vet service exists in the voivodeship. Duty text said the round-the-clock description is from the City of Opole page.",
       "quote": "Całodobowy gabinet weterynaryjny"
     },
     {
@@ -737,9 +737,10 @@
       "address": "ul. Armii Krajowej 23/1, 15-661 Białystok",
       "phone": "+48 608 242 920",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-19:00, Sat 9:00-14:00, Sun 10:00-12:00. No 24 h wording.",
+      "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 10:00–12:00.",
       "url": "https://weterynaria.bialystok.pl/",
-      "source_url": "https://weterynaria.bialystok.pl/"
+      "source_url": "https://weterynaria.bialystok.pl/",
+      "note": "Duty text said: no 24 h wording."
     },
     {
       "kind": "clinic",
@@ -751,9 +752,10 @@
       "address": "ul. Władysława Wysockiego 78, 15-167 Białystok",
       "phone": "+48 608 304 278",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-19:00, Sat by arrangement, Sun closed. Booking by phone. No 24 h wording.",
+      "duty": "Mon–Fri 9:00–19:00, Sat by arrangement, Sun closed. Booking by phone.",
       "url": "https://pupil.bialystok.pl/",
-      "source_url": "https://pupil.bialystok.pl/kontakt/"
+      "source_url": "https://pupil.bialystok.pl/kontakt/",
+      "note": "Duty text said: no 24 h wording."
     },
     {
       "kind": "clinic",
@@ -765,9 +767,10 @@
       "address": "ul. Antoniuk Fabryczny 55 lok. 1, Białystok",
       "phone": "+48 500 368 400",
       "emergency_24h": false,
-      "duty": "Mon-Fri 10:00-19:00, Sat 10:00-14:00. No 24 h wording.",
+      "duty": "Mon–Fri 10:00–19:00, Sat 10:00–14:00.",
       "url": "https://amicus.bialystok.pl/",
-      "source_url": "https://amicus.bialystok.pl/"
+      "source_url": "https://amicus.bialystok.pl/",
+      "note": "Duty text said: no 24 h wording."
     },
     {
       "kind": "clinic",
@@ -779,10 +782,10 @@
       "address": "ul. Węgierska 44, 65-001 Zielona Góra",
       "phone": "+48 68 323 23 04",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:00-19:00 (by appointment), Sat 8:00-13:00. No 24 h wording.",
+      "duty": "Mon–Fri 8:00–19:00 (by appointment), Sat 8:00–13:00.",
       "url": "https://help.zgora.pl/",
       "source_url": "https://help.zgora.pl/",
-      "note": "Mobile +48 722 020 633."
+      "note": "Mobile +48 722 020 633. Duty text said: no 24 h wording."
     },
     {
       "kind": "clinic",
@@ -794,10 +797,10 @@
       "address": "ul. Olbrychta 1A, 65-823 Zielona Góra",
       "phone": "+48 68 326 70 75",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:00-18:00, Sat 9:00-15:00, Sun 10:00-12:00. No 24 h reception wording (LuxVet group page says hospital wards are monitored 24/7, not a 24 h emergency claim).",
+      "duty": "Mon–Fri 8:00–18:00, Sat 9:00–15:00, Sun 10:00–12:00.",
       "url": "https://lecznica.zgora.pl/",
       "source_url": "https://lecznica.zgora.pl/kontakt/",
-      "note": "Second phone +48 68 455 63 00."
+      "note": "Second phone +48 68 455 63 00. Duty text said: no 24 h reception wording (LuxVet group page says hospital wards are monitored 24/7, not a 24 h emergency claim)."
     },
     {
       "kind": "clinic",
@@ -809,10 +812,10 @@
       "address": "ul. Kielecka 22, 81-303 Gdynia",
       "phone": "+48 58 620 55 55",
       "emergency_24h": false,
-      "duty": "Mon-Fri 7:00-20:00, Sat 8:00-16:00, Sun closed. Contact page has no 24 h wording.",
+      "duty": "Mon–Fri 7:00–20:00, Sat 8:00–16:00, Sun closed.",
       "url": "https://gswet.pl/",
       "source_url": "https://gswet.pl/strona-glowna/kontakt/",
-      "note": "LuxVet group page mentions a 24/7 supervised inpatient hospital, but the clinic's own page gives no 24 h emergency reception."
+      "note": "LuxVet group page mentions a 24/7 supervised inpatient hospital, but the clinic's own page gives no 24 h emergency reception. Duty text said the contact page has no 24 h wording."
     },
     {
       "kind": "clinic",
@@ -823,10 +826,11 @@
       "address": "ul. J. Kochanowskiego 9, 25-384 Kielce",
       "phone": "698 123 815",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-18:00, Sat 9:00-12:00 (follow-up treatment only). No emergency or 24 h wording.",
+      "duty": "Mon–Fri 9:00–18:00, Sat 9:00–12:00 (follow-up treatment only).",
       "url": "https://przychodniawet.pl/",
       "source_url": "https://przychodniawet.pl/kontakt/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Duty text said: no emergency or 24 h wording."
     },
     {
       "kind": "clinic",
@@ -837,10 +841,10 @@
       "address": "ul. J. Nowaka-Jeziorańskiego 140, 25-430 Kielce",
       "phone": "+48 41 362 88 50",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:00-20:00; Sat-Sun closed. Page lists \"Pomoc w nagłych przypadkach\" as a service but gives no after-hours contact or 24 h wording.",
+      "duty": "Mon–Fri 8:00–20:00; Sat–Sun closed. Emergency help is offered as a service; no after-hours contact.",
       "url": "https://czterylapy.com/",
       "source_url": "https://czterylapy.com/",
-      "note": "Rehabilitation line +48 732 784 444.",
+      "note": "Rehabilitation line +48 732 784 444. Duty text said the page lists 'Pomoc w nagłych przypadkach' as a service with no after-hours contact or 24 h wording.",
       "checked": "2026-11-03"
     },
     {
@@ -852,10 +856,10 @@
       "address": "ul. Wrzosowa 9, 25-211 Kielce",
       "phone": "+48 41 362 90 26",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-19:00, Sat 9:00-14:00, Sun 9:00-12:00; public holidays closed. No 24 h wording.",
+      "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 9:00–12:00; public holidays closed.",
       "url": "https://weterynarz-kielce.eu/",
       "source_url": "https://weterynarz-kielce.eu/kontakt/",
-      "note": "Page also shows +48 413 629 026.",
+      "note": "Page also shows +48 413 629 026. Duty text said: no 24 h wording.",
       "checked": "2026-11-03"
     },
     {
@@ -867,10 +871,10 @@
       "address": "ul. Piaskowa 4A/6A, 11-700 Mrągowo",
       "phone": "+48 739 156 377",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-12:00 and 17:00-20:00; Sat by appointment; Sun closed. No emergency or 24 h wording.",
+      "duty": "Mon–Fri 9:00–12:00 and 17:00–20:00; Sat by appointment; Sun closed.",
       "url": "https://na4lapy.mragowo.pl/",
       "source_url": "https://na4lapy.mragowo.pl/",
-      "note": "Mazury tourist area.",
+      "note": "Mazury tourist area. Duty text said: no emergency or 24 h wording.",
       "checked": "2026-11-03"
     }
   ],

@@ -2,7 +2,7 @@
 
 David 2026-11-03 — `docs/engineering/VET_TRANSLATION_RUNBOOK.md`. Status: `[ ]` todo · `[x]` done (counts, PRs, date) · `[!]` blocked (reason).
 
-- [ ] cleanup — make every `duty` visitor-only English text, research remarks → `note` (then also translate to sl in the same run if time allows; otherwise sl is the next run)
+- [x] cleanup — 591 entries made visitor-only English (research remarks → `note`, 190 moved, ~95 duties emptied); independent check of 65 entries: 0 problems; sl is the next run — 2026-11-04
 - [ ] sl Slovenian
 - [ ] hr Croatian
 - [ ] de German

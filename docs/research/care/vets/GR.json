@@ -108,12 +108,12 @@
       "address": "20th km Leoforos Lavriou, 190 02 Paiania, Attica",
       "phone": "+30 210 664 0552",
       "emergency_24h": true,
-      "duty": "Emergencies and hospitalisation 24 h / 7 days; outpatient visits by appointment Mon–Sat 11:00–20:00 (another section says daily 10:00–20:00); second line +30 210 664 0553",
+      "duty": "Emergencies and hospitalisation 24 h / 7 days; outpatient visits by appointment Mon–Sat 11:00–20:00; second line +30 210 664 0553",
       "small_animals": true,
       "url": "https://www.attikovet.gr/portal/",
       "source_url": "https://www.attikovet.gr/portal/%CE%BD%CE%BF%CF%83%CE%BF%CE%BA%CE%BF%CE%BC%CE%B5%CE%B9%CE%BF/%CF%80%CE%B1%CF%81%CE%BF%CF%87%CE%AD%CF%82/",
       "checked": "2026-11-02",
-      "note": "English page attiko.progressnet.gr/presentation also states '24 HOUR OPERATION, 365 DAYS A YEAR'.",
+      "note": "English page attiko.progressnet.gr/presentation also states '24 HOUR OPERATION, 365 DAYS A YEAR'. Another section says outpatient visits daily 10:00–20:00.",
       "quote": "Για έκτακτα περιστατικά καλέστε όλο το 24ωρο"
     },
     {
@@ -172,7 +172,7 @@
       "address": "Agias Paraskevis 128, 152 32 Chalandri, Athens",
       "phone": "+30 210 877 1111",
       "emergency_24h": true,
-      "duty": "Clinic hours 'Every Day 24/7'; visiting hours for hospitalised pets Mon–Fri 13:00–15:00; second line +30 210 811 1122",
+      "duty": "Open every day 24/7; visiting hours for hospitalised pets Mon–Fri 13:00–15:00; second line +30 210 811 1122",
       "small_animals": true,
       "url": "https://pawsitivevetcare.gr/en/",
       "source_url": "https://pawsitivevetcare.gr/en/",
@@ -445,12 +445,12 @@
       "address": "Zymvrakakidon 60B, Chania",
       "phone": "+30 28210 96338",
       "emergency_24h": false,
-      "duty": "Mon–Fri 9:00–20:00, Sat 10:00–14:00, Sun closed; page mentions 24/7 phone emergency triage but publishes no number for it",
+      "duty": "Mon–Fri 9:00–20:00, Sat 10:00–14:00, Sun closed; 24/7 phone emergency triage (no separate number)",
       "small_animals": true,
       "url": "https://www.siriusvetschania.gr/",
       "source_url": "https://www.siriusvetschania.gr/",
       "checked": "2026-11-02",
-      "note": "The page advertises 24/7 telephone emergency duty, but the only number published is reception, which it says is answered only during opening hours; no out-of-hours number given, so not marked 24 h."
+      "note": "The page advertises 24/7 telephone emergency duty, but the only number published is reception, which it says is answered only during opening hours; no out-of-hours number given, so not marked 24 h. Page mentions 24/7 phone emergency triage but publishes no number for it."
     },
     {
       "kind": "clinic",
@@ -530,12 +530,12 @@
       "region": "Crete",
       "phone": "+30 694 551 8212",
       "emergency_24h": false,
-      "duty": "Out of hours and emergencies (no hours stated)",
+      "duty": "Out of hours and emergencies",
       "small_animals": true,
       "url": "http://www.crete4animals.gr/?page_id=799",
       "source_url": "http://www.crete4animals.gr/?page_id=799",
       "checked": "2026-11-02",
-      "note": "Published by the Cretan Animal Welfare Society (also on catspyjamas.org), not an official body; operator not named. A 2022 reader letter in Cretalive complained Heraklion had no on-duty clinic — confirm by phone."
+      "note": "Published by the Cretan Animal Welfare Society (also on catspyjamas.org), not an official body; operator not named. A 2022 reader letter in Cretalive complained Heraklion had no on-duty clinic — confirm by phone. No hours stated."
     },
     {
       "kind": "clinic",
@@ -778,12 +778,12 @@
       "address": "Ethnikis Antistaseos (opposite the old FIX factory), Ioannina",
       "phone": "+30 26510 93166",
       "emergency_24h": false,
-      "duty": "Weekdays roughly 9:00–18:00, Sat partly (the page shows conflicting hours)",
+      "duty": "Weekdays roughly 9:00–18:00, Sat partly (hours unclear)",
       "small_animals": true,
       "url": "https://ygeiavet.gr/",
       "source_url": "https://ygeiavet.gr/",
       "checked": "2026-11-02",
-      "note": "Refers out-of-hours urgent cases to an emergency appointment number that the page does not show."
+      "note": "Refers out-of-hours urgent cases to an emergency appointment number that the page does not show. The page shows conflicting hours."
     },
     {
       "kind": "clinic",
@@ -899,12 +899,12 @@
       "address": "Βαλανάς Θυμιανά, έναντι κέντρου Κάραβελ, Χίος",
       "phone": "+30 22710 30422",
       "emergency_24h": true,
-      "duty": "Mon–Fri 10:00–18:00, Sat 10:00–14:00 (contact section also says daily 10:00–20:00); mobile +30 694 710 0924",
+      "duty": "Mon–Fri 10:00–18:00, Sat 10:00–14:00; mobile +30 694 710 0924",
       "small_animals": true,
       "url": "https://vet-med.gr/",
       "source_url": "https://vet-med.gr/",
       "checked": "2026-11-02",
-      "note": "24 h only by phone arrangement: out-of-hours and weekend emergencies accepted after calling.",
+      "note": "24 h only by phone arrangement: out-of-hours and weekend emergencies accepted after calling. Contact section also says daily 10:00–20:00.",
       "quote": "υψηλής ποιότητας εξυπηρέτηση στους πελάτες μας όλο το 24ωρο … Δεχόμαστε περιστατικά επείγοντα, εκτός ωραρίου και Σαββατοκύριακο, κατόπιν τηλεφωνικής συνεννόησης"
     },
     {
@@ -1553,11 +1553,11 @@
       "address": "Amalias 46 & Christou Giota, 42100 Trikala",
       "phone": "+30 2431 071 751",
       "emergency_24h": false,
-      "duty": "Mon & Wed 09:00–14:00 & 18:00–20:45; Tue, Thu 09:00–14:00; Fri 09:00–14:00 & evening (page text garbled: \"9:00-20:45\"); Sat closed",
+      "duty": "Mon & Wed 09:00–14:00 & 18:00–20:45; Tue, Thu 09:00–14:00; Fri 09:00–14:00 & evening; Sat closed",
       "small_animals": true,
       "url": "https://65f30c8884419.site123.me/",
       "source_url": "https://65f30c8884419.site123.me/",
-      "note": "Dogs and cats. Mobile +30 697 333 3766.",
+      "note": "Dogs and cats. Mobile +30 697 333 3766. Page text garbled: \"9:00-20:45\".",
       "checked": "2026-11-02"
     },
     {

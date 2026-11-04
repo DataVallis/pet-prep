@@ -67,7 +67,7 @@
       "address": "Poppelstykket 11, 2450 København SV",
       "phone": "+45 36 17 57 11",
       "emergency_24h": true,
-      "duty": "Skadestue every day around the clock (00-24); clinic weekdays 08:00-16:00. Call before arrival.",
+      "duty": "Emergency room open every day around the clock (00–24); clinic weekdays 8–16. Call before arrival.",
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koebenhavns-dyrehospital/",
       "source_url": "https://www.anicura.dk/klinikker/koebenhavns-dyrehospital/kontakt/",
@@ -82,12 +82,13 @@
       "address": "Ølbycenter 12, 4600 Køge",
       "phone": "+45 70 25 02 02",
       "emergency_24h": true,
-      "duty": "Listed as 'Døgnåben skadestue - ring før ankomst'; akut 00-24; daytime 08:00-18:00.",
+      "duty": "Emergency room open 24 h; call before arrival. Daytime 8–18.",
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/koge-dyrehospital/",
       "source_url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
       "checked": "2026-11-03",
-      "quote": "Døgnåben skadestue - ring før ankomst"
+      "quote": "Døgnåben skadestue - ring før ankomst",
+      "note": "Listed as 'Døgnåben skadestue - ring før ankomst'."
     },
     {
       "kind": "clinic",
@@ -97,7 +98,7 @@
       "address": "Greve Main 41, 2670 Greve",
       "phone": "+45 77 77 77 11",
       "emergency_24h": true,
-      "duty": "Acute line 77 77 77 11; general 46 15 15 25. Skadestue Mon 18-08, Tue-Fri 17-08, Sat-Sun 08-08; hospital open 24 h every day. Call before coming.",
+      "duty": "Emergency line 77 77 77 11; general 46 15 15 25. Emergency room Mon 18–08, Tue–Fri 17–08, Sat–Sun 08–08; hospital open 24 h every day. Call before coming.",
       "small_animals": true,
       "url": "https://evidensia.dk/dyreklinik/evidensia-karlslunde-dyrehospital/",
       "source_url": "https://evidensia.dk/dyreklinik/evidensia-karlslunde-dyrehospital/doegnaaben-skadestue/",
@@ -112,7 +113,7 @@
       "address": "Rugårdsvej 105, 5000 Odense C",
       "phone": "+45 66 16 02 80",
       "emergency_24h": true,
-      "duty": "Døgnåben skadestue all days of the year; phone reaches the duty vet at any time. Regular consultations weekdays 08:00-16:00. Call before coming.",
+      "duty": "24-h emergency room all days of the year; phone reaches the duty vet at any time. Regular consultations weekdays 8–16. Call before coming.",
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/odense-dyrehospital/",
       "source_url": "https://www.anicura.dk/klinikker/odense-dyrehospital/",
@@ -127,12 +128,13 @@
       "address": "Ribevej 37, 6800 Varde",
       "phone": "+45 88 44 42 22",
       "emergency_24h": true,
-      "duty": "Listed as 'Døgnåben skadestue - ring før ankomst'; akut 00-24; daytime 08:00-17:00.",
+      "duty": "Emergency room open 24 h; call before arrival. Daytime 8–17.",
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/varde-dyrehospital/",
       "source_url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
       "checked": "2026-11-03",
-      "quote": "Døgnåben skadestue - ring før ankomst"
+      "quote": "Døgnåben skadestue - ring før ankomst",
+      "note": "Listed as 'Døgnåben skadestue - ring før ankomst'."
     },
     {
       "kind": "clinic",
@@ -158,12 +160,13 @@
       "address": "Svenstrup Bane Alle 1, 9230 Svenstrup",
       "phone": "+45 98 38 10 56",
       "emergency_24h": true,
-      "duty": "Listed as 'Døgnåben skadestue - ring før ankomst'; akut 00-24; daytime 08:00-16:30.",
+      "duty": "Emergency room open 24 h; call before arrival. Daytime 8–16:30.",
       "small_animals": true,
       "url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
       "source_url": "https://www.anicura.dk/for-dyreejere/dyrlaegevagt/",
       "checked": "2026-11-03",
-      "quote": "Døgnåben skadestue - ring før ankomst"
+      "quote": "Døgnåben skadestue - ring før ankomst",
+      "note": "Listed as 'Døgnåben skadestue - ring før ankomst'."
     },
     {
       "kind": "clinic",
@@ -173,11 +176,12 @@
       "address": "Vandmanden 10 D, 9200 Aalborg SV",
       "phone": "+45 98 11 74 00",
       "emergency_24h": false,
-      "duty": "Dyrlægevagt outside regular hours on the same number; page says acutely ill or injured animals can be treated 'hele døgnet' but does not state 24 h hours explicitly.",
+      "duty": "Duty vet outside regular hours on the same number; acutely ill or injured animals can be treated 'hele døgnet' (around the clock).",
       "small_animals": true,
       "url": "https://www.anicura.dk/klinikker/dyrehospitalet-city-syd/",
       "source_url": "https://www.anicura.dk/klinikker/dyrehospitalet-city-syd/om-os/dyrlagevagt/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Page does not state 24 h hours explicitly."
     },
     {
       "kind": "clinic",
@@ -187,11 +191,12 @@
       "address": "Byleddet 4, 4000 Roskilde",
       "phone": "+45 46 36 22 66",
       "emergency_24h": false,
-      "duty": "Akut 08:00-23:00; regular hours 08:00-17:00 (not 24 h).",
+      "duty": "Emergency 8–23; regular hours 8–17.",
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
       "source_url": "https://www.anicura.dk/akutklinikker/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Not 24 h."
     },
     {
       "kind": "clinic",
@@ -201,11 +206,12 @@
       "address": "Skovlunde Byvej 94 A, 2740 Skovlunde",
       "phone": "+45 44 91 90 77",
       "emergency_24h": false,
-      "duty": "Akut 08:00-17:00 only (not 24 h).",
+      "duty": "Emergency 8–17 only.",
       "small_animals": true,
       "url": "https://www.anicura.dk/akutklinikker/",
       "source_url": "https://www.anicura.dk/akutklinikker/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Not 24 h."
     },
     {
       "kind": "duty_rota",
@@ -244,12 +250,12 @@
       "address": "Jespervej 96, 3400 Hillerød / Kajerødvej 19, 3460 Birkerød",
       "phone": "+45 48 22 15 30",
       "emergency_24h": false,
-      "duty": "On-call Thu-Fri 17:00-22:30 and Sat 08:00-17:00; a vet is not necessarily on site, call to arrange time and place. No 24-h wording.",
+      "duty": "On-call Thu–Fri 17:00–22:30 and Sat 8:00–17:00; a vet is not necessarily on site, call to arrange time and place.",
       "small_animals": true,
       "url": "https://evidensia.dk/dyrlaegevagten-akut-dyrlaege/",
       "source_url": "https://evidensia.dk/dyrlaegevagten-akut-dyrlaege/",
       "checked": "2026-11-03",
-      "note": "Addresses from the DDD training-clinic list; phone and hours from the Evidensia page."
+      "note": "Addresses from the DDD training-clinic list; phone and hours from the Evidensia page. No 24-h wording."
     },
     {
       "kind": "duty_rota",
@@ -259,7 +265,7 @@
       "address": "Fabriksvej 10, 3000 Helsingør",
       "phone": "+45 81 81 89 81",
       "emergency_24h": true,
-      "duty": "Daytime Helsingør +45 49 20 30 16 (Mon-Thu 8-17, Fri 8-16); after hours call Birkerød Dyrehospital +45 81 81 89 81 - \"her vil du altid kunne komme i kontakt med en dyrlæge\" (Birkerød offers døgnvagt).",
+      "duty": "Daytime Helsingør +45 49 20 30 16 (Mon–Thu 8–17, Fri 8–16); after hours call Birkerød Dyrehospital +45 81 81 89 81, where you can always reach a vet (Birkerød offers round-the-clock duty).",
       "small_animals": true,
       "url": "https://vetgruppen.dk/helsingoerdyrehospital/",
       "source_url": "https://vetgruppen.dk/helsingoerdyrehospital/vagtsamarbejde/",
@@ -288,7 +294,7 @@
       "address": "Københavnsvej 21, 4800 Nykøbing F",
       "phone": "+45 54 85 32 36",
       "emergency_24h": true,
-      "duty": "Vagthavende dyrlæge reachable outside opening hours (Mon-Thu 8-17, Fri 8-16) on the same number; on-call arrangement with Guldborgsund Dyrehospital; 100 % duty surcharge.",
+      "duty": "Duty vet reachable outside opening hours (Mon–Thu 8–17, Fri 8–16) on the same number; on-call arrangement with Guldborgsund Dyrehospital; 100 % duty surcharge.",
       "small_animals": true,
       "url": "https://vetgruppen.dk/nykfdyrehospital/",
       "source_url": "https://vetgruppen.dk/nykfdyrehospital/doegnvagt/",
@@ -303,11 +309,12 @@
       "address": "Elskjærbakken 5, 7800 Skive",
       "phone": "+45 97 51 30 45",
       "emergency_24h": false,
-      "duty": "Always reach the vet on duty on 97 51 30 45: from closing time to 22:00 Skive Dyrehospital, Morsø Dyreklinik and Dyrehospitalet Heden take turns; 22:00-08:00 Dyrehospitalet Heden, Herning. Gap 08:00-opening not stated; no explicit 24-h wording.",
+      "duty": "Call 97 51 30 45 to reach the vet on duty: from closing time to 22:00 Skive Dyrehospital, Morsø Dyreklinik and Dyrehospitalet Heden take turns; 22:00–08:00 Dyrehospitalet Heden, Herning.",
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/",
       "source_url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Gap 08:00-opening not stated; no explicit 24-h wording."
     },
     {
       "kind": "clinic",
@@ -317,11 +324,12 @@
       "address": "Dæmningen 23, 7400 Herning",
       "phone": "+45 70 40 50 40",
       "emergency_24h": false,
-      "duty": "Covers the night duty 22:00-08:00 for the Skive/Morsø/Herning duty rota (no explicit 24-h hospital claim).",
+      "duty": "Covers the night duty 22:00–08:00 for the Skive/Morsø/Herning duty rota.",
       "small_animals": true,
       "url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
       "source_url": "https://vetgruppen.dk/skivedyrehospital/vagtordning/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No explicit 24-h hospital claim."
     },
     {
       "kind": "duty_rota",
@@ -331,11 +339,12 @@
       "address": "Vodskovvej 19A, 9310 Vodskov",
       "phone": "+45 98 25 40 51",
       "emergency_24h": false,
-      "duty": "On-call weekdays 17:00-08:00, weekends from Friday 17:00 to Monday 08:00 and public holidays; call the main number to be told which vet is on duty. No explicit 24-h wording.",
+      "duty": "On-call weekdays 17:00–08:00, weekends from Friday 17:00 to Monday 08:00 and public holidays; call the main number to be told which vet is on duty.",
       "small_animals": true,
       "url": "https://vodskovdyreklinik.dk/",
       "source_url": "https://vodskovdyreklinik.dk/akut-dyrlaege/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "No explicit 24-h wording."
     },
     {
       "kind": "clinic",
@@ -345,7 +354,7 @@
       "address": "Sagavej 4, 3700 Rønne",
       "phone": "+45 56 91 19 99",
       "emergency_24h": true,
-      "duty": "Page lists 'Døgnvagt for akut tilskadekomne dyr' on the same number; open Mon-Fri 8-17 (closed 12-13). On-call service, not necessarily staffed on site.",
+      "duty": "24-h on-call for acutely injured animals on the same number; open Mon–Fri 8–17 (closed 12–13). On-call service, not necessarily staffed on site.",
       "small_animals": true,
       "url": "https://dyrlaegegaardenbornholm.dk/",
       "source_url": "https://dyrlaegegaardenbornholm.dk/kontakt/",
@@ -374,11 +383,12 @@
       "address": "Herningvej 74, 6950 Ringkøbing",
       "phone": "+45 70 22 44 42",
       "emergency_24h": false,
-      "duty": "A regional tourism page says \"The hospital offers round-the-clock service\"; not confirmed on the clinic's own or an official page, so not listed as 24 h. Call to confirm.",
+      "duty": "Call to confirm hours.",
       "small_animals": true,
       "url": "https://www.dcvest.dk",
       "source_url": "https://www.visitvesterhavet.com/northsea/information/find-veterinarian",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "A regional tourism page says \"The hospital offers round-the-clock service\"; not confirmed on the clinic's own or an official page, so not listed as 24 h."
     },
     {
       "kind": "clinic",
@@ -449,11 +459,12 @@
       "address": "Tarp Byvej 6 E, 6715 Esbjerg N",
       "phone": "+45 75 12 21 67",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-17:00; page links to a general 'Dyrlægevagt' page (vetgruppen.dk/dyrlaegevagt/) that was not opened.",
+      "duty": "Mon–Fri 8:00–17:00.",
       "small_animals": true,
       "url": "https://vetgruppen.dk/esbjergdyrehospital/",
       "source_url": "https://vetgruppen.dk/esbjergdyrehospital/kontakt/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Page links to a general 'Dyrlægevagt' page (vetgruppen.dk/dyrlaegevagt/) that was not opened."
     },
     {
       "kind": "clinic",

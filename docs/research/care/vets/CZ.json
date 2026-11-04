@@ -123,12 +123,12 @@
       "address": "Ke Kamýku 996/3, Praha 4",
       "phone": "+420 241 714 358",
       "emergency_24h": true,
-      "duty": "Open nonstop including outpatient care; Praha 11 page: regular hours Mon-Fri 08:00-20:00, emergency outside hours and at weekends with surcharge.",
+      "duty": "Open nonstop including outpatient care; regular hours Mon–Fri 08:00–20:00, emergency outside hours and at weekends with surcharge.",
       "small_animals": true,
       "url": "https://www.veterinarni-klinika.net/",
       "source_url": "https://www.veterinarni-klinika.net/",
       "checked": "2026-11-02",
-      "note": "Second phone +420 602 136 128.",
+      "note": "Second phone +420 602 136 128. Regular hours and surcharge are from the Praha 11 city page.",
       "quote": "Otevřeno nonstop včetně ambulantní péče."
     },
     {
@@ -155,12 +155,12 @@
       "address": "Na Šejdru 45, Praha 4 - Libuš",
       "phone": "+420 244 470 704",
       "emergency_24h": true,
-      "duty": "Nonstop operation; Praha 11 page: Mon-Fri 08:00-22:00, Sat-Sun 08:00-20:00, other times emergency service with surcharge, usually one vet at night - call ahead.",
+      "duty": "Nonstop operation; Mon–Fri 08:00–22:00, Sat–Sun 08:00–20:00, other times emergency service with surcharge, usually one vet at night - call ahead.",
       "small_animals": true,
       "url": "https://www.vetnemo.cz/",
       "source_url": "https://www.vetnemo.cz/",
       "checked": "2026-11-02",
-      "note": "Address from the Praha 11 city page (which lists +420 244 470 553 / +420 602 458 185); the clinic's own homepage shows no street address.",
+      "note": "Address from the Praha 11 city page (which lists +420 244 470 553 / +420 602 458 185); the clinic's own homepage shows no street address. Hours are from the Praha 11 city page.",
       "quote": "pracoviště s NONSTOP provozem"
     },
     {
@@ -171,12 +171,12 @@
       "address": "Voctářova 18, 186 00 Praha 8 - Palmovka",
       "phone": "+420 252 252 111",
       "emergency_24h": true,
-      "duty": "Emergency weekdays 20:00-08:30 and at weekends/holidays; between 23:30 and 08:30 patients only after phone arrangement (page also refers to Pet-Medic 724 184 840).",
+      "duty": "Emergency weekdays 20:00–08:30 and at weekends/holidays; between 23:30 and 08:30 patients only after phone arrangement (see also Pet-Medic 724 184 840).",
       "small_animals": true,
       "url": "https://www.medicanima.cz/",
       "source_url": "https://www.medicanima.cz/emergency",
       "checked": "2026-11-02",
-      "note": "Page is inconsistent about weekday emergency hours - always call first.",
+      "note": "Page is inconsistent about weekday emergency hours - always call first. Duty text said the Pet-Medic reference is on the clinic page.",
       "quote": "NONSTOP - Ve dne, v noci, každý den v roce"
     },
     {
@@ -203,11 +203,11 @@
       "address": "Do Čertous 2634/7, Praha 9 - Horní Počernice",
       "phone": "+420 773 588 031",
       "emergency_24h": true,
-      "duty": "Mon-Fri 09:00-21:00, weekends 14:00-20:00; outside hours by phone arrangement; described as available 24 h a day.",
+      "duty": "Mon–Fri 09:00–21:00, weekends 14:00–20:00; outside hours by phone arrangement; available 24 h a day.",
       "small_animals": true,
       "source_url": "https://www.praha11.cz/cs/mestska-cast/socialni-sluzby-a-zdravotnictvi/zdravotnictvi/veterinarni-pece.html",
       "checked": "2026-11-02",
-      "note": "From the Praha 11 city page; the clinic's own site (veterinapraha.cz) disallows automated access, so not verified there.",
+      "note": "From the Praha 11 city page; the clinic's own site (veterinapraha.cz) disallows automated access, so not verified there. Duty text said 'described as' available 24 h a day (from the Praha 11 city page).",
       "quote": "24 hodin denně"
     },
     {
@@ -233,12 +233,12 @@
       "address": "Reinerova 1712/9, Praha 6 - Řepy",
       "phone": "+420 235 097 540",
       "emergency_24h": false,
-      "duty": "Emergency weekdays 17:00-09:00; weekends and holidays 'Nonstop pohotovost'.",
+      "duty": "Emergency weekdays 17:00–09:00; weekends and holidays nonstop emergency.",
       "small_animals": true,
       "url": "https://jaggypraha.cz/",
       "source_url": "https://jaggypraha.cz/kontakt",
       "checked": "2026-11-02",
-      "note": "With day hours this covers the clock in practice, but the page does not call the clinic 24 h on weekdays."
+      "note": "With day hours this covers the clock in practice, but the page does not call the clinic 24 h on weekdays. Duty text quoted the page: 'Nonstop pohotovost'."
     },
     {
       "kind": "clinic",
@@ -341,12 +341,12 @@
       "address": "Komárovská 5, Brno - Komárov",
       "phone": "+420 545 234 035",
       "emergency_24h": false,
-      "duty": "Emergency weekdays 17:00-09:00; weekends and holidays 'Nonstop pohotovost'; surcharge 3300 Kč.",
+      "duty": "Emergency weekdays 17:00–09:00; weekends and holidays nonstop emergency; surcharge 3300 Kč.",
       "small_animals": true,
       "url": "https://jaggy.cz/",
       "source_url": "https://jaggy.cz/kontakt",
       "checked": "2026-11-02",
-      "note": "GSM gateway +420 775 157 691. Announce urgent arrivals by phone. Not described as 24 h on weekdays."
+      "note": "GSM gateway +420 775 157 691. Announce urgent arrivals by phone. Not described as 24 h on weekdays. Duty text quoted the page: 'Nonstop pohotovost'."
     },
     {
       "kind": "clinic",
@@ -462,12 +462,12 @@
       "address": "Lvovská 1, 708 00 Ostrava - Poruba",
       "phone": "+420 731 184 440",
       "emergency_24h": false,
-      "duty": "Emergency phone listed (also +420 603 485 093); Mon-Fri 08:00-18:00, Sat/Sun/holidays 09:00-12:00; no out-of-hours times stated.",
+      "duty": "Emergency phone +420 603 485 093; Mon–Fri 08:00–18:00, Sat/Sun/holidays 09:00–12:00.",
       "small_animals": true,
       "url": "https://www.vetcentrum.net/",
       "source_url": "https://www.vetcentrum.net/kontakty",
       "checked": "2026-11-02",
-      "note": "Clinic +420 596 939 292."
+      "note": "Clinic +420 596 939 292. Duty text said the emergency phone is 'listed' and no out-of-hours times are stated."
     },
     {
       "kind": "clinic",
@@ -491,12 +491,12 @@
       "city": "Liberec",
       "region": "Liberecký kraj",
       "emergency_24h": false,
-      "duty": "Hours and emergency service not stated in readable page content; call ahead.",
+      "duty": "Hours and emergency service unknown; call ahead.",
       "small_animals": true,
       "url": "https://veterinaruzodol.cz/",
       "source_url": "https://www.veterinaruzodol.cz/pohotovost",
       "checked": "2026-11-02",
-      "note": "Downgraded 2026-11-02 (independent check): the 24/7 claim appears only in the site's meta description, not in any visible page text; no phone or hours readable (script-rendered site) and firmy.cz lists normal opening hours (opens 07:00), no nonstop. Address from firmy.cz.",
+      "note": "Downgraded 2026-11-02 (independent check): the 24/7 claim appears only in the site's meta description, not in any visible page text; no phone or hours readable (script-rendered site) and firmy.cz lists normal opening hours (opens 07:00), no nonstop. Address from firmy.cz. Duty text said hours and emergency service were not stated in readable page content.",
       "quote": "pohotovosti 24/7",
       "address": "Ostašovská 584/26, Liberec XI - Růžodol I"
     },
@@ -601,12 +601,12 @@
       "address": "Pražská 1509, 543 01 Vrchlabí",
       "phone": "+420 499 422 315",
       "emergency_24h": false,
-      "duty": "Mon-Fri 07:30-09:00 and 15:00-19:00, Sun 18:00-19:00; no emergency information.",
+      "duty": "Mon–Fri 07:30–09:00 and 15:00–19:00, Sun 18:00–19:00.",
       "small_animals": true,
       "url": "https://www.veterina-vrchlabi.cz/",
       "source_url": "https://www.veterina-vrchlabi.cz/kontakt",
       "checked": "2026-11-02",
-      "note": "Krkonoše tourist area."
+      "note": "Krkonoše tourist area. Duty text said: no emergency information."
     },
     {
       "kind": "clinic",
@@ -616,12 +616,12 @@
       "address": "Kpt. Nálepky 237, 530 02 Pardubice",
       "phone": "+420 606 140 314",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-20:00, emergency Mon-Fri 20:00-08:00; weekends listed as closed.",
+      "duty": "Mon–Fri 08:00–20:00, emergency Mon–Fri 20:00–08:00; weekends closed.",
       "small_animals": true,
       "url": "https://veterina-aesculap.cz/",
       "source_url": "https://veterina-aesculap.cz/",
       "checked": "2026-11-02",
-      "note": "Page says 'funguje v non-stop provozu' but lists weekends closed - contradictory, so not marked 24 h; call ahead."
+      "note": "Page says 'funguje v non-stop provozu' but lists weekends closed - contradictory, so not marked 24 h; call ahead. Duty text said weekends 'listed as closed'."
     },
     {
       "kind": "clinic",
@@ -645,12 +645,12 @@
       "address": "U Lesa 1, 370 05 České Budějovice",
       "phone": "+420 385 310 797",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-18:00; weekends closed; no emergency information.",
+      "duty": "Mon–Fri 08:00–18:00; weekends closed.",
       "small_animals": true,
       "url": "https://cb-vet.cz/",
       "source_url": "https://cb-vet.cz/",
       "checked": "2026-11-02",
-      "note": "Also +420 725 186 788."
+      "note": "Also +420 725 186 788. Duty text said: no emergency information."
     },
     {
       "kind": "clinic",
@@ -794,12 +794,11 @@
       "address": "Hájkova 109, 342 01 Sušice III",
       "phone": "+420 376 524 332",
       "emergency_24h": false,
-      "duty": "No emergency information on the page.",
       "small_animals": true,
       "url": "https://www.zoo-veterina.cz/",
       "source_url": "https://www.zoo-veterina.cz/osetrovna-klatovy",
       "checked": "2026-11-02",
-      "note": "Šumava tourist area. Mobile +420 602 410 023. Branch Ošetřovna Klatovy, nám. Míru, +420 376 310 140."
+      "note": "Šumava tourist area. Mobile +420 602 410 023. Branch Ošetřovna Klatovy, nám. Míru, +420 376 310 140. Duty text said: no emergency information on the page."
     },
     {
       "kind": "clinic",
@@ -809,12 +808,12 @@
       "address": "Voříškova 167, 339 01 Klatovy",
       "phone": "+420 771 144 090",
       "emergency_24h": false,
-      "duty": "Mon-Fri daytime hours only; no emergency information.",
+      "duty": "Mon–Fri daytime hours only.",
       "small_animals": true,
       "url": "https://klatovyveterina.cz/",
       "source_url": "https://klatovyveterina.cz/",
       "checked": "2026-11-02",
-      "note": "Šumava gateway town."
+      "note": "Šumava gateway town. Duty text said: no emergency information."
     },
     {
       "kind": "duty_rota",
@@ -854,12 +853,12 @@
       "address": "Úzká 37, Karlovy Vary - Tašovice",
       "phone": "+420 776 161 092",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:00-11:00 and 13:00-17:00; no emergency information.",
+      "duty": "Mon–Fri 08:00–11:00 and 13:00–17:00.",
       "small_animals": true,
       "url": "https://www.elisvet.cz/",
       "source_url": "https://www.elisvet.cz/",
       "checked": "2026-11-02",
-      "note": "SMS preferred when busy; call ahead."
+      "note": "SMS preferred when busy; call ahead. Duty text said: no emergency information."
     },
     {
       "kind": "clinic",
@@ -869,12 +868,11 @@
       "address": "Kubelíkova 804, 353 01 Mariánské Lázně",
       "phone": "+420 737 622 157",
       "emergency_24h": false,
-      "duty": "Hours and emergency details not readable on the page.",
       "small_animals": true,
       "url": "https://veterina-ml.webnode.cz/",
       "source_url": "https://veterina-ml.webnode.cz/kontakt/",
       "checked": "2026-11-02",
-      "note": "Spa town."
+      "note": "Spa town. Duty text said: hours and emergency details not readable on the page."
     },
     {
       "kind": "poison_line",
@@ -975,11 +973,12 @@
       "address": "Francouzská 2457, Kladno",
       "phone": "+420 312 688 633",
       "emergency_24h": false,
-      "duty": "Opening hours not stated on the page; private line for acute cases +420 739 314 307 (availability not stated).",
+      "duty": "Private line for acute cases +420 739 314 307.",
       "small_animals": true,
       "url": "https://www.veterinakladno.cz/",
       "source_url": "https://www.veterinakladno.cz/",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Duty text said opening hours not stated on the page and availability of the private line not stated."
     },
     {
       "kind": "clinic",
@@ -989,11 +988,12 @@
       "address": "28. října 1226, Kladno - Švermov",
       "phone": "+420 777 762 679",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-21:00, weekends closed; book by phone. No emergency information on the page.",
+      "duty": "Mon–Fri 09:00–21:00, weekends closed; book by phone.",
       "small_animals": true,
       "url": "https://www.vetlife.cz/",
       "source_url": "https://www.vetlife.cz/kontakt/",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Duty text said: no emergency information on the page."
     },
     {
       "kind": "clinic",
@@ -1003,11 +1003,12 @@
       "address": "Šotnovská 157, 280 02 Kolín",
       "phone": "+420 734 325 915",
       "emergency_24h": false,
-      "duty": "Hours and emergency service not stated on the contact page; call ahead.",
+      "duty": "Hours and emergency service unknown; call ahead.",
       "small_animals": true,
       "url": "https://www.veterinakolin.cz/",
       "source_url": "https://www.veterinakolin.cz/kontakt",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Duty text said they were not stated on the contact page."
     },
     {
       "kind": "clinic",
@@ -1032,11 +1033,11 @@
       "address": "Třebízského 1866, 250 02 Stará Boleslav",
       "phone": "+420 724 246 456",
       "emergency_24h": false,
-      "duty": "Opening hours only in an image; no emergency information on the page.",
       "small_animals": true,
       "url": "https://www.veterina-petpoint.cz/",
       "source_url": "https://www.veterina-petpoint.cz/kontaktujte-nas/",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Duty text said: opening hours only in an image; no emergency information on the page."
     },
     {
       "kind": "clinic",
@@ -1046,12 +1047,12 @@
       "address": "Brněnská 1188, 434 01 Most",
       "phone": "+420 773 010 910",
       "emergency_24h": false,
-      "duty": "Hours and emergency details are on sub-pages that could not be read; call ahead. Also has a Litvínov practice (no appointments).",
+      "duty": "Hours and emergency details unknown; call ahead. Also has a Litvínov practice (no appointments).",
       "small_animals": true,
       "url": "https://www.veterinamost.cz/",
       "source_url": "https://www.veterinamost.cz/",
       "checked": "2026-11-02",
-      "note": "The site has a 'Pohotovost' page (veterinamost.cz/pohotovost) which returned a client error twice."
+      "note": "The site has a 'Pohotovost' page (veterinamost.cz/pohotovost) which returned a client error twice. Duty text said hours and emergency details are on sub-pages that could not be read."
     },
     {
       "kind": "clinic",
@@ -1076,12 +1077,12 @@
       "address": "Dělnická 59, 736 01 Havířov",
       "phone": "+420 596 440 607",
       "emergency_24h": false,
-      "duty": "Emergency out of hours for acute patients only, call +420 776 280 984 first; regular hours Mon-Fri 8:00-19:00, Sat-Sun 8:00-12:00 (page lists two differing hour versions).",
+      "duty": "Emergency out of hours for acute patients only, call +420 776 280 984 first; regular hours Mon–Fri 08:00–19:00, Sat–Sun 08:00–12:00.",
       "small_animals": true,
       "url": "https://veterinahavirov.cz/",
       "source_url": "https://veterinahavirov.cz/kontakt/",
       "checked": "2026-11-02",
-      "note": "No 24 h claim on the page. Pohotovost page lists +420 776 280 984 and also +420 776 289 484 (conflict); ctvet.cz lists the clinic under +420 776 280 741. Branch in Rychvald (Orlovská 404) not added.",
+      "note": "No 24 h claim on the page. Pohotovost page lists +420 776 280 984 and also +420 776 289 484 (conflict); ctvet.cz lists the clinic under +420 776 280 741. Branch in Rychvald (Orlovská 404) not added. Duty text said the page lists two differing hour versions.",
       "quote": "Pohotovost mimo ordinační dobu pouze pro akutní pacienty."
     },
     {
@@ -1136,12 +1137,12 @@
       "address": "Na Universitním statku 623/2a, 108 00 Praha 10 - Malešice",
       "phone": "+420 274 773 637",
       "emergency_24h": false,
-      "duty": "Mon-Fri 9:00-22:00 (two shifts per rota page), weekends closed.",
+      "duty": "Mon–Fri 09:00–22:00, weekends closed.",
       "small_animals": true,
       "url": "https://www.alta-vet.cz/",
       "source_url": "https://www.alta-vet.cz/kontakt",
       "checked": "2026-11-02",
-      "note": "No 24 h wording; weekday evening opening until 22:00. Second phone +420 774 103 709."
+      "note": "No 24 h wording; weekday evening opening until 22:00. Second phone +420 774 103 709. Duty text said '(two shifts per rota page)'."
     },
     {
       "kind": "clinic",

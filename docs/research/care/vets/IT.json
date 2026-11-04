@@ -239,12 +239,12 @@
       "city": "Trento",
       "region": "Trentino-Alto Adige",
       "emergency_24h": true,
-      "duty": "Official tourism board list of six vet practices in Trentino offering a 24h service (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
+      "duty": "Six vet practices in Trentino offering a 24h service (Trento, Mezzolombardo, Levico Terme, Borgo Valsugana, Villa Lagarina, Cles).",
       "small_animals": true,
       "url": "https://www.visittrentino.info/it/articoli/vacanze-a-quattro-zampe/veterinari-disponibili-24-7",
       "source_url": "https://www.visittrentino.info/it/articoli/vacanze-a-quattro-zampe/veterinari-disponibili-24-7",
       "quote": "studi veterinari che offrono un servizio 24 ore al giorno",
-      "note": "List, not a rota. Useful for Dolomites/Lake Garda (Trentino side) holidays.",
+      "note": "List, not a rota. Useful for Dolomites/Lake Garda (Trentino side) holidays. Source of duty text: official tourism board list.",
       "checked": "2026-11-01"
     },
     {
@@ -608,11 +608,11 @@
       "address": "Via Ettore Bugatti 53, 30016 Jesolo (VE)",
       "phone": "+39 0421 350609",
       "emergency_24h": false,
-      "duty": "Reception Mon-Fri 9-19, Sat 9-13; emergency service and overnight hospitalisation listed.",
+      "duty": "Reception Mon–Fri 9–19, Sat 9–13; emergency service and overnight hospitalisation.",
       "small_animals": true,
       "url": "https://www.clinicajesolo.com/",
       "source_url": "https://www.clinicajesolo.com/it/modalitaAccesso.html",
-      "note": "Site mentions 'assistenza continuativa nell’arco delle 24 ore giornaliere' (continuous care of patients), not an explicit 24h emergency room; call first.",
+      "note": "Site mentions 'assistenza continuativa nell’arco delle 24 ore giornaliere' (continuous care of patients), not an explicit 24h emergency room; call first. Duty text said these were 'listed'.",
       "checked": "2026-11-01"
     },
     {
@@ -623,10 +623,9 @@
       "address": "Via Maria Bazzana 9/A, San Michele al Tagliamento (VE)",
       "phone": "+39 0431 511644",
       "emergency_24h": false,
-      "duty": "No hours or emergency arrangement published in the listing.",
       "small_animals": true,
       "source_url": "https://lignano.it/it/mappa/assistenza_medica/elenco.html?categoria=veterinari&page=1&sort=nome&sortDirection=asc",
-      "note": "Listed by Lignano and Bibione tourist portals (bibione.net). Covers the Bibione/Lignano area; no own website checked.",
+      "note": "Listed by Lignano and Bibione tourist portals (bibione.net). Covers the Bibione/Lignano area; no own website checked. Duty text was: no hours or emergency arrangement published in the listing.",
       "checked": "2026-11-01"
     },
     {
@@ -666,11 +665,11 @@
       "region": "Friuli-Venezia Giulia",
       "phone": "+39 349 8778297",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency on-call number (reperibilità); intensive care H24 mentioned.",
+      "duty": "Out-of-hours emergency on-call number; intensive care H24.",
       "small_animals": true,
       "url": "https://www.clinicamiramare.it/",
       "source_url": "https://www.clinicamiramare.it/sos.html",
-      "note": "Address not on the SOS page; no explicit 24h emergency wording (only 'terapia intensiva h24').",
+      "note": "Address not on the SOS page; no explicit 24h emergency wording (only 'terapia intensiva h24'). Duty text said intensive care H24 was 'mentioned'.",
       "checked": "2026-11-01"
     },
     {
@@ -892,10 +891,10 @@
       "address": "Via Grammichele 3, 00132 Roma",
       "phone": "+39 06 2070648",
       "emergency_24h": false,
-      "duty": "Clinic 08:30–19:00; day and night emergency activity (hours widget lists emergencies 00–24)",
+      "duty": "Clinic 08:30–19:00; day and night emergency activity.",
       "url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
       "source_url": "https://www.anicura.it/cliniche/clinica-veterinaria-borghesiana/",
-      "note": "Text says 'pronto soccorso veterinario diurno e notturno'; no explicit '24 ore' phrase in body text, so not flagged 24h.",
+      "note": "Text says 'pronto soccorso veterinario diurno e notturno'; no explicit '24 ore' phrase in body text, so not flagged 24h. Hours widget lists emergencies 00–24.",
       "kind": "clinic",
       "small_animals": true,
       "checked": "2026-11-01"
@@ -938,11 +937,11 @@
       "address": "Via Ambra 28, 58100 Grosseto",
       "phone": "+39 0564 418021",
       "emergency_24h": true,
-      "duty": "Mon–Fri 9–13 & 14–18, Sat 9–13; on-call H24 (page title)",
+      "duty": "Mon–Fri 9–13 & 14–18, Sat 9–13; on-call H24.",
       "url": "https://www.veterinariagrosseto.it/",
       "source_url": "https://www.veterinariagrosseto.it/contatti/",
       "quote": "Reperibilità H24 veterinario Grosseto",
-      "note": "24h claim appears only in the page title (on-call, not walk-in); confirm by phone.",
+      "note": "24h claim appears only in the page title (on-call, not walk-in); confirm by phone. 24h claim from page title.",
       "kind": "clinic",
       "small_animals": true,
       "checked": "2026-11-01"
@@ -1076,12 +1075,13 @@
       "address": "Via Mortora San Liborio 93, 80063 Piano di Sorrento (NA)",
       "phone": "+39 081 8083693",
       "emergency_24h": false,
-      "duty": "Mon–Sat 9–13 & 16–19; for night/holiday emergencies the site refers to a pronto soccorso at +39 081 7763859",
+      "duty": "Mon–Sat 9–13 & 16–19; for night/holiday emergencies call the pronto soccorso at +39 081 7763859.",
       "url": "https://www.ambulatorioveterinarioiaccarino.it/",
       "source_url": "https://www.ambulatorioveterinarioiaccarino.it/",
       "kind": "clinic",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text: the site refers to that pronto soccorso."
     },
     {
       "name": "Ospedale Veterinario Santa Fara",
@@ -1496,11 +1496,12 @@
       "address": "Via Mazzini 109, Castiglione delle Stiviere (MN)",
       "phone": "+39 0376 632843",
       "emergency_24h": true,
-      "duty": "Emergency room open 24 hours (listed by the Ordine dei Veterinari di Mantova).",
+      "duty": "Emergency room open 24 hours.",
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
       "quote": "Pronto Soccorso aperto 24 ore su 24",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Listed by the Ordine dei Veterinari di Mantova."
     },
     {
       "kind": "clinic",
@@ -1510,11 +1511,12 @@
       "address": "Via della Costituzione 28, Levata di Curtatone (MN)",
       "phone": "+39 0376 478814",
       "emergency_24h": true,
-      "duty": "Emergency room open 24 hours (listed by the Ordine dei Veterinari di Mantova).",
+      "duty": "Emergency room open 24 hours.",
       "small_animals": true,
       "source_url": "https://ordineveterinarimantova.it/domande-frequenti/veterinari-reperibili-per-urgenze",
       "quote": "Pronto Soccorso aperto 24 ore su 24",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Listed by the Ordine dei Veterinari di Mantova."
     },
     {
       "kind": "clinic",
@@ -1787,12 +1789,12 @@
       "address": "Via Salvatore Quasimodo 290, 47522 Cesena (FC)",
       "phone": "+39 0547 335497",
       "emergency_24h": false,
-      "duty": "Open 7 days 09:00–19:00 by phone appointment; Sundays urgent cases only; telephone on-call for urgencies (hours unclear on page).",
+      "duty": "Open 7 days 09:00–19:00 by phone appointment; Sundays urgent cases only; telephone on-call for urgencies.",
       "small_animals": true,
       "url": "https://alfiobulgarelli.com/",
       "source_url": "https://alfiobulgarelli.com/",
       "quote": "PER URGENZE REPERIBILITÀ TELEFONICA",
-      "note": "Page wording on on-call hours conflicts (19:00 vs 24) — call to confirm.",
+      "note": "Page wording on on-call hours conflicts (19:00 vs 24) — call to confirm. Duty text said on-call hours unclear on page.",
       "checked": "2026-11-01"
     },
     {
@@ -1940,11 +1942,12 @@
       "address": "Via Celio Nanino 129/13, 33010 Reana del Rojale (UD)",
       "phone": "+39 0432 851466",
       "emergency_24h": false,
-      "duty": "Mon–Fri 09:00–19:00, Sat 09:00–14:00. No emergency service stated.",
+      "duty": "Mon–Fri 09:00–19:00, Sat 09:00–14:00.",
       "small_animals": true,
       "url": "https://www.clinicadiana.it/",
       "source_url": "https://www.clinicadiana.it/",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no emergency service stated."
     },
     {
       "kind": "clinic",
@@ -1970,13 +1973,13 @@
       "address": "Via Carlo Felice 54, Sassari",
       "phone": "+39 079 4122449",
       "emergency_24h": false,
-      "duty": "Pronto soccorso 7 days a week 9:00–20:00 (clinic page).",
+      "duty": "Pronto soccorso 7 days a week 9:00–20:00.",
       "small_animals": true,
       "url": "https://www.vetsassari.it/",
       "source_url": "https://www.vetsassari.it/servizi/pronto-soccorso/",
       "quote": "Il nostro servizio di Pronto Soccorso è attivo 7 giorni su 7, dalle 9:00 alle 20:00",
       "checked": "2026-11-01",
-      "note": "A blog (ameve.eu, 7 Sep 2026) reports that a municipal H24 emergency service run by this clinic started 5 Sep 2026 and is guaranteed until 31 Dec 2026; the clinic's own site does not mention H24, so not marked 24 h."
+      "note": "A blog (ameve.eu, 7 Sep 2026) reports that a municipal H24 emergency service run by this clinic started 5 Sep 2026 and is guaranteed until 31 Dec 2026; the clinic's own site does not mention H24, so not marked 24 h. Source of hours: clinic page."
     },
     {
       "kind": "clinic",
@@ -2276,11 +2279,12 @@
       "address": "Via Giovanni Lavaggi 233, 96011 Augusta (SR); branch Via Francesco Cilea 15, Lentini",
       "phone": "+39 0931 318305",
       "emergency_24h": false,
-      "duty": "Augusta Mon–Fri 9:00–13:00 and 15:15–19:30; Lentini Mon/Wed/Fri 9:30–12:00. Mobile +39 338 8827347; no 24-h statement.",
+      "duty": "Augusta Mon–Fri 9:00–13:00 and 15:15–19:30; Lentini Mon/Wed/Fri 9:30–12:00. Mobile +39 338 8827347.",
       "small_animals": true,
       "url": "https://www.animalhospitalsrls.it/",
       "source_url": "https://www.animalhospitalsrls.it/",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no 24-h statement."
     },
     {
       "kind": "clinic",
@@ -2338,11 +2342,12 @@
       "address": "Via Forlanini 86, Ragusa",
       "phone": "+39 0932 641231",
       "emergency_24h": false,
-      "duty": "Mon–Fri 9:00–12:30 and 15:30–19:00, Sat morning; no emergency service stated.",
+      "duty": "Mon–Fri 9:00–12:30 and 15:30–19:00, Sat morning.",
       "small_animals": true,
       "url": "https://www.clinicaveterinariaragusa.it/",
       "source_url": "https://www.clinicaveterinariaragusa.it/contatti-clinica-veterinaria-iblea/",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no emergency service stated."
     },
     {
       "kind": "clinic",
@@ -2383,12 +2388,12 @@
       "address": "Via Cicerone 31, 75100 Matera",
       "phone": "+39 333 6989063",
       "emergency_24h": false,
-      "duty": "Mon–Fri 8:30–12:30 and 16:30–19:30, Sat 8:30–12:00; urgent cases by phone during contact hours (no 24-h statement).",
+      "duty": "Mon–Fri 8:30–12:30 and 16:30–19:30, Sat 8:30–12:00; urgent cases by phone during contact hours.",
       "small_animals": true,
       "url": "https://www.veterinariovetland.it/",
       "source_url": "https://www.veterinariovetland.it/",
       "checked": "2026-11-01",
-      "note": "Second number +39 379 1564263."
+      "note": "Second number +39 379 1564263. Duty text said: no 24-h statement."
     },
     {
       "kind": "clinic",
@@ -2398,12 +2403,13 @@
       "address": "Via Montecassino 19, 09134 Cagliari",
       "phone": "+39 070 522518",
       "emergency_24h": false,
-      "duty": "Emergency service; available also on public holidays (no 24-h statement).",
+      "duty": "Emergency service; available also on public holidays.",
       "small_animals": true,
       "url": "https://www.centroveterinariosardo.it/",
       "source_url": "https://www.centroveterinariosardo.it/",
       "quote": "garantendo la massima reperibilità anche nei giorni festivi",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no 24-h statement."
     },
     {
       "kind": "clinic",
@@ -2413,13 +2419,13 @@
       "address": "Via Manzoni 80, 07041 Alghero (SS)",
       "phone": "+39 079 9371263",
       "emergency_24h": false,
-      "duty": "Urgent cases: +39 342 1758375 (hours not stated).",
+      "duty": "Urgent cases: +39 342 1758375.",
       "small_animals": true,
       "url": "https://www.ambulatorioveterinariodarwin.it/",
       "source_url": "https://www.ambulatorioveterinariodarwin.it/",
       "quote": "Per urgenze contattateci al 3421758375.",
       "checked": "2026-11-01",
-      "note": "Site footer gives Via Manzoni 127 and tel. 079 982436 – inconsistent on the page."
+      "note": "Site footer gives Via Manzoni 127 and tel. 079 982436 – inconsistent on the page. Duty text said: hours not stated."
     },
     {
       "kind": "clinic",
@@ -2429,12 +2435,13 @@
       "address": "Via Giovanni Spano 18, 07041 Alghero (SS)",
       "phone": "+39 079 953108",
       "emergency_24h": false,
-      "duty": "Mon–Fri 9:00–13:00 and 15:00–17:00; on-call number +39 328 0739567 (hours not stated).",
+      "duty": "Mon–Fri 9:00–13:00 and 15:00–17:00; on-call number +39 328 0739567.",
       "small_animals": true,
       "url": "https://www.ambvetderosi.com/",
       "source_url": "https://www.ambvetderosi.com/",
       "quote": "Reperibilità: 328 0739567",
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: hours not stated."
     },
     {
       "kind": "duty_rota",
@@ -3034,11 +3041,11 @@
       "address": "Viale Europa 67, 25018 Montichiari (BS)",
       "phone": "+39 030 9960444",
       "emergency_24h": false,
-      "duty": "Since 1 July 2023: Mon-Sat 09:00-23:00 (excl. holidays), Sun 09:00-12:00 and 15:00-19:00. Night and holiday H24 emergency service has ended despite the name.",
+      "duty": "Since 1 July 2023: Mon-Sat 09:00-23:00 (excl. holidays), Sun 09:00-12:00 and 15:00-19:00. Night and holiday 24h emergency service has ended.",
       "url": "https://www.ospedaleveterinarioh24.it/",
       "source_url": "https://www.ospedaleveterinarioh24.it/",
       "quote": "cessa il servizio di Pronto Soccorso notturno e festivo H24",
-      "note": "Name still says H24 and meta description still claims 24h; page article states the overnight/holiday service ended. Do NOT mark 24h. Footer also lists 030 9962484.",
+      "note": "Name still says H24 and meta description still claims 24h; page article states the overnight/holiday service ended. Do NOT mark 24h. Footer also lists 030 9962484. Duty text said the service ended 'despite the name'.",
       "small_animals": true,
       "checked": "2026-11-01"
     },
@@ -3080,11 +3087,12 @@
       "address": "Corso Roma 24, Seriate (BG)",
       "phone": "+39 035 291265",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-13:00 and 14:30-20:00; Sat-Sun 09:00-13:00 and 14:30-19:30 (open weekends). No 24h/emergency claim.",
+      "duty": "Mon-Fri 09:00-13:00 and 14:30-20:00; Sat-Sun 09:00-13:00 and 14:30-19:30 (open weekends).",
       "url": "https://www.cvvf.it/",
       "source_url": "https://www.cvvf.it/contatti",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no 24h/emergency claim."
     },
     {
       "kind": "clinic",
@@ -3109,12 +3117,13 @@
       "address": "Via Agello 70/D, 25015 Desenzano del Garda (BS)",
       "phone": "+39 030 9901570",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-13:00 and 15:00-19:00; visits by appointment. No emergency claim.",
+      "duty": "Mon-Fri 09:00-13:00 and 15:00-19:00; visits by appointment.",
       "url": "https://www.gardavet.com/",
       "source_url": "https://www.gardavet.com/",
       "quote": "Ti ricordiamo che le visite sono su appuntamento.",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no emergency claim."
     },
     {
       "kind": "clinic",
@@ -3124,11 +3133,12 @@
       "address": "Via S.S. Trinità 19, 25032 Chiari (BS)",
       "phone": "+39 030 7002768",
       "emergency_24h": false,
-      "duty": "Mon-Fri 10:00-12:00 and 16:00-19:00; Sat 10:00-12:00 and 15:00-17:00 (banner). No emergency claim.",
+      "duty": "Mon-Fri 10:00-12:00 and 16:00-19:00; Sat 10:00-12:00 and 15:00-17:00.",
       "url": "https://www.clinicavetchiari.com/",
       "source_url": "https://www.clinicavetchiari.com/",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no emergency claim; Saturday hours from a banner."
     },
     {
       "kind": "clinic",
@@ -3153,11 +3163,11 @@
       "address": "Via Marconi 10/B, 24021 Albino (BG)",
       "phone": "+39 035 773493",
       "emergency_24h": false,
-      "duty": "Hours on separate page (not checked). No emergency info.",
       "url": "https://veterinarialbino.com/",
       "source_url": "https://veterinarialbino.com/dove-siamo/",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text was: hours on separate page (not checked); no emergency info."
     },
     {
       "kind": "clinic",
@@ -3167,10 +3177,10 @@
       "address": "Via degli Orti 3, 24043 Caravaggio (BG)",
       "phone": "+39 0363 53628",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:30-19:30, Sat 09:30-17:00 (no lunch break); separate mobile line for urgent cases 10:00-19:30 published on site. No night/24h service (night/holiday on-call previously suspended per older page).",
+      "duty": "Mon-Fri 09:30-19:30, Sat 09:30-17:00 (no lunch break); separate mobile line for urgent cases 10:00-19:30. No night/24h service.",
       "url": "https://www.clinicaveterinariaguidi.info/",
       "source_url": "https://www.clinicaveterinariaguidi.info/",
-      "note": "Old wixsite page (webidoo.wixsite.com/veterinaria-guidi) shows different hours; main .info site used.",
+      "note": "Old wixsite page (webidoo.wixsite.com/veterinaria-guidi) shows different hours; main .info site used. Duty text said: night/holiday on-call previously suspended per older page; urgent-case line published on site.",
       "small_animals": true,
       "checked": "2026-11-01"
     },
@@ -3182,11 +3192,12 @@
       "address": "Circonvallazione Specchio 20/22, Caravaggio (BG)",
       "phone": "+39 0363 1900053",
       "emergency_24h": false,
-      "duty": "Mon-Sat 09:00-20:00 (call first for 9-10 and 12:30-15 slots). No emergency info.",
+      "duty": "Mon-Sat 09:00-20:00 (call first for 9-10 and 12:30-15 slots).",
       "url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
       "source_url": "https://clinicaveterinarinacaravaggio.jimdofree.com/",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: no emergency info."
     },
     {
       "kind": "clinic",
@@ -3196,11 +3207,12 @@
       "address": "Via Antonio Meucci 2, Curno (BG)",
       "phone": "+39 035 0159227",
       "emergency_24h": false,
-      "duty": "Mon-Sun 09:00-20:00 (7 days). Network's H24 sites are in Milano/Verano Brianza, not Curno.",
+      "duty": "Mon-Sun 09:00-20:00 (7 days).",
       "url": "https://mypetclinic.it/cliniche/curno/",
       "source_url": "https://mypetclinic.it/cliniche/curno/",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text said: network's H24 sites are in Milano/Verano Brianza, not Curno."
     },
     {
       "kind": "clinic",
@@ -3210,10 +3222,10 @@
       "address": "Via I° Maggio 1, 24062 Costa Volpino (BG)",
       "phone": "+39 035 972494",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-19:00, Sat 10:00-17:00, closed Sun (per Gruppo Animalia page). No emergency service.",
+      "duty": "Mon-Fri 09:00-19:00, Sat 10:00-17:00, closed Sun. No emergency service.",
       "url": "https://www.gruppoanimalia.it/cliniche/ambulatorio-veterinario-costa-volpino/",
       "source_url": "https://visitlakeiseo.info/en/info/vet/",
-      "note": "Phone from Visit Lake Iseo tourism page (listed as Ambulatorio Veterinario Associato Dr. Colajori, Dr.ssa Lanfranchi, Dr.ssa Zubboli, same address); hours from gruppoanimalia.it page.",
+      "note": "Phone from Visit Lake Iseo tourism page (listed as Ambulatorio Veterinario Associato Dr. Colajori, Dr.ssa Lanfranchi, Dr.ssa Zubboli, same address); hours from gruppoanimalia.it page. Hours per Gruppo Animalia page.",
       "small_animals": true,
       "checked": "2026-11-01"
     },
@@ -3277,12 +3289,13 @@
       "address": "Via Giuseppe Di Vittorio 52, 71043 Manfredonia (FG)",
       "phone": "+39 0884 538495",
       "emergency_24h": false,
-      "duty": "Mon-Fri 08:30-20:30 (another section says 09:30-20:00); Sat 09:30-13:00 and 17:00-20:00; appointment preferred. No emergency info.",
+      "duty": "Mon-Fri 08:30-20:30; Sat 09:30-13:00 and 17:00-20:00; appointment preferred.",
       "url": "https://www.studioveterinariotaraschi.it/",
       "source_url": "https://www.studioveterinariotaraschi.it/contatti/",
       "quote": "Gli orari potrebbero subire variazioni , è gradito prendere appuntamento.",
       "small_animals": true,
-      "checked": "2026-11-01"
+      "checked": "2026-11-01",
+      "note": "Duty text also said another section gives Mon-Fri 09:30-20:00; no emergency info."
     },
     {
       "kind": "clinic",
@@ -3360,10 +3373,10 @@
       "address": "Via Leonardo Da Vinci 134, 81020 San Nicola la Strada (CE)",
       "phone": "+39 0823 351261",
       "emergency_24h": false,
-      "duty": "Mon-Sat 09:30-19:00, closed Sun. No 24h claim on page.",
+      "duty": "Mon-Sat 09:30-19:00, closed Sun.",
       "url": "https://www.veterinariatac.com/index.htm",
       "source_url": "https://www.veterinariatac.com/index.htm",
-      "note": "Directories label it 'H24'; not confirmed on the page. clinicaveterinaria-casertana.it blocked by robots.txt.",
+      "note": "Directories label it 'H24'; not confirmed on the page. clinicaveterinaria-casertana.it blocked by robots.txt. Duty text said: no 24h claim on page.",
       "small_animals": true,
       "checked": "2026-11-01"
     },
