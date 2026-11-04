@@ -1175,8 +1175,11 @@ flowchart LR
   CI3 & CI4 --> M
   M --> CIM["CI on main only<br/>(no deploy, no OTA — D18)"]
   RW["David: Actions → CI & Deploy → Run workflow<br/>main · target production"] --> DEP["Deploy to Hetzner Production<br/>rsync → incoming/ → deploy-production.sh<br/>--expect-domain api.petprep.si"]
+  DD["daily-deploy.yml 03:17 (D21 / D24)<br/>main new + push CI green<br/>dispatch with GITHUB_TOKEN"] --> DEP
   DEP --> PROD[(api.petprep.si)]
-  DEP -.-> OTA["Mobile OTA channel production<br/>(mobile/ changed since the last release)"]
+  DEP --> OJ["job: Mobile OTA (after the production deploy)<br/>gh workflow run mobile-ota.yml<br/>deploy_run_id + sha (D33, every deploy)"]
+  OJ --> OTA["Mobile OTA channel production<br/>(mobile/ changed since the release on main;<br/>already released → nothing)"]
+  RW -.->|"workflow_run: user-token runs only<br/>(deduped by the release record)"| OTA
 ```
 
 ### 7a. deploy-production.sh (M2-01 / PR #24 / M4-05b)
