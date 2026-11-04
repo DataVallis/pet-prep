@@ -62,6 +62,9 @@ use InvalidArgumentException;
  * clip; QA #363 M1: three modes) = {mode: off|shadow|enforce}. Shadow (default until the
  * thresholds are calibrated) records verdicts and always serves; enforce regenerates once
  * and hides a second failure; off = the old behaviour. No row → env AI_QUALITY_CHECK_MODE.
+ * David 2026-11-04: + `stills_mode` (off|shadow|enforce) = the AI check of still images (key /
+ * pose / item images, catalogue pictures) before a video is made from them — its own mode so
+ * the clip check can stay in shadow. No key → env AI_QUALITY_STILLS_MODE (default enforce).
  */
 class AppSettingsService
 {
@@ -580,14 +583,48 @@ class AppSettingsService
         return $this->qualityCheckMode($fresh) !== self::QUALITY_OFF;
     }
 
-    /** Save the quality check mode (superadmin), audit it and bust the cache. */
-    public function updateQualityCheck(User $actor, string $mode): void
+    /**
+     * Save the quality check modes (superadmin), audit them and bust the cache. `$stillsMode` null
+     * keeps the stored still-image mode (David 2026-11-04).
+     */
+    public function updateQualityCheck(User $actor, string $mode, ?string $stillsMode = null): void
     {
-        if (! in_array($mode, self::QUALITY_CHECK_MODES, true)) {
-            throw new InvalidArgumentException("Unknown quality check mode {$mode}.");
+        foreach (array_filter([$mode, $stillsMode], fn ($m) => $m !== null) as $value) {
+            if (! in_array($value, self::QUALITY_CHECK_MODES, true)) {
+                throw new InvalidArgumentException("Unknown quality check mode {$value}.");
+            }
         }
 
-        $this->store($actor, self::QUALITY_CHECK_KEY, ['mode' => $mode], ['mode' => self::qualityCheckDefault()]);
+        $this->store($actor, self::QUALITY_CHECK_KEY,
+            ['mode' => $mode, 'stills_mode' => $stillsMode ?? $this->qualityStillsMode(fresh: true)],
+            ['mode' => self::qualityCheckDefault(), 'stills_mode' => self::qualityStillsDefault()]);
+    }
+
+    /**
+     * David 2026-11-04: mode of the AI check of STILL images (key / pose / item key images and
+     * catalogue pictures) before a video is made from them — `enforce` (default: a failed still is
+     * regenerated with a new seed, ≤ max_still_retries, then the self-healing fallback), `shadow`
+     * (verdict recorded, the still is used anyway) or `off`. Independent of the clip mode.
+     */
+    public function qualityStillsMode(bool $fresh = false): string
+    {
+        /** @var array{mode?: string, stills_mode?: string} $value */
+        $value = $fresh
+            ? (AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? [])
+            : Cache::remember(self::cacheKey(self::QUALITY_CHECK_KEY), self::CACHE_TTL_SECONDS,
+                fn (): array => AppSetting::find(self::QUALITY_CHECK_KEY)?->value ?? []);
+
+        $mode = $value['stills_mode'] ?? null;
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::qualityStillsDefault();
+    }
+
+    /** The still-image mode "no key" stands for (env AI_QUALITY_STILLS_MODE, default enforce). */
+    public static function qualityStillsDefault(): string
+    {
+        $mode = (string) config('media.quality_check.stills_mode', self::QUALITY_ENFORCE);
+
+        return in_array($mode, self::QUALITY_CHECK_MODES, true) ? $mode : self::QUALITY_ENFORCE;
     }
 
     /** The mode "no row" stands for (env AI_QUALITY_CHECK_MODE, default shadow). */

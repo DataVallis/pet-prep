@@ -8,6 +8,7 @@ use App\Enums\AiSpendPurpose;
 use App\Enums\LifeStage;
 use App\Enums\Species;
 use App\Events\PetUpdated;
+use App\Jobs\CheckItemMediaQuality;
 use App\Jobs\GenerateItemMedia;
 use App\Jobs\SendItemMediaAlert;
 use App\Jobs\StoreItemMedia;
@@ -19,6 +20,7 @@ use App\Models\PetItem;
 use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\ShopItem;
+use App\Services\AppSettingsService;
 use App\Services\FalAiService;
 use App\Services\NotificationService;
 use App\Services\Shop\ItemDesigns;
@@ -61,6 +63,14 @@ use Illuminate\Support\Facades\URL;
  * stores); budget / balance / switched-off failures wait for money (no retry counted). Exhausted
  * → the item is shown without that content + ONE Discord alert per run (counts only). No admin
  * click is ever needed; /admin can Regenerate a row or »Generate missing« for a pet.
+ *
+ * Quality check (David 2026-11-04, StillQualityService): a downloaded catalogue picture / key
+ * image (stills mode on) or clip (clip mode on) is a CANDIDATE (`candidate_path`) until its check
+ * passes — the AI vision check for stills, the free technical check for clips — so a clip is
+ * only made from a passed key image. A failed check regenerates with a fresh seed (and the next
+ * prompt variant) ≤ `max_still_retries` per chain, then the row fails `quality_failed` (candidate
+ * kept for »Approve anyway«) and heal() gives it up like any other failure (fallback + alert).
+ * Every regeneration (admin Regenerate, Generate missing, heal, check retry) gets a fresh seed.
  */
 class ItemMediaService
 {
@@ -479,11 +489,20 @@ class ItemMediaService
     }
 
     /** Start a new failure chain for $row from $source (pending, counters cleared, new generation when something was made / sent). */
-    public function resetChain(ItemMedia $row, ?string $source = null): void
+    public function resetChain(ItemMedia $row, ?string $source = null, int $qualityRetries = 0): void
     {
         $bump = $row->isServable() || $row->request_id !== null || $row->status === ItemMedia::STATUS_FAILED;
+        $candidate = $row->candidate_path;
 
         $row->update([
+            // David 2026-11-04: a new chain of a row that was made / sent before never resubmits the
+            // identical request (fresh seed), starts its check retries again and drops a »Needs review«
+            // candidate (the stored file stays servable).
+            'seed_override' => $bump ? PetMedia::freshSeed() : $row->seed_override,
+            'quality_retries' => $qualityRetries,
+            'candidate_path' => null,
+            'candidate_bytes' => null,
+            'candidate_mime' => null,
             'status' => ItemMedia::STATUS_PENDING,
             'generation' => $bump ? $row->generation + 1 : $row->generation,
             'target_path' => $source ?? $row->target_path,
@@ -500,6 +519,10 @@ class ItemMediaService
             'alerted_at' => null,
             'completed_at' => null,
         ]);
+
+        if (filled($candidate) && $candidate !== $row->storage_path) {
+            $this->media->disk()->delete((string) $candidate);
+        }
     }
 
     /**
@@ -612,7 +635,8 @@ class ItemMediaService
         }
 
         if ($row->isPicture()) {
-            $seed = (int) (crc32($row->design) & 0x7FFFFFFF);
+            // David 2026-11-04: a regeneration sends a fresh seed (never the same picture again).
+            $seed = $row->seedFor((int) (crc32($row->design) & 0x7FFFFFFF));
 
             return [
                 'target' => 'catalogue:'.$row->design,
@@ -625,6 +649,7 @@ class ItemMediaService
             return null;
         }
         [$breedKey, $traits, $seed, $sourceImage, $petId] = $owner;
+        $seed = $row->seedFor($seed);
         // A pet's own rows follow its picture's stage (regenerated in place); look rows are per stage.
         $stageValue = $row->scope === ItemMedia::SCOPE_PET && $row->kind === ItemMedia::KIND_IMAGE ? $sourceImage?->life_stage : $row->life_stage;
         $stage = $stageValue !== null ? LifeStage::tryFrom($stageValue) : null;
@@ -815,6 +840,14 @@ class ItemMediaService
             return true;
         }
 
+        // David 2026-11-04: already downloaded and waiting for its check (a lost check job, re-run by
+        // the sweep) — check it, never download it again.
+        if (filled($row->candidate_path)) {
+            CheckItemMediaQuality::dispatch((int) $row->id);
+
+            return true;
+        }
+
         $sourceUrl = (string) $row->source_url;
         $still = $row->isStill();
 
@@ -844,6 +877,12 @@ class ItemMediaService
             @unlink($file['path']);
         }
 
+        // David 2026-11-04: checked before it is used — a still by the AI vision check, a clip by the
+        // free technical check (StillQualityService); the stored file stays servable until then.
+        if ($this->wantsCandidate($row)) {
+            return $this->stageCandidate($row, $sourceUrl, $path, $file['bytes'], $file['mime']);
+        }
+
         $previous = null;
         $stored = DB::transaction(function () use ($row, $sourceUrl, $path, $file, &$previous): bool {
             $locked = ItemMedia::whereKey($row->id)->lockForUpdate()->first();
@@ -851,18 +890,7 @@ class ItemMediaService
                 return false;
             }
             $previous = $locked->storage_path;
-            $locked->update([
-                'status' => ItemMedia::STATUS_READY,
-                'storage_path' => $path,
-                'source_path' => $locked->target_path,
-                'bytes' => $file['bytes'],
-                'mime' => $file['mime'],
-                'error_reason' => null,
-                'error' => null,
-                'auto_retries' => 0,
-                'exhausted_at' => null,
-                'completed_at' => now(),
-            ]);
+            $this->markStored($locked, $path, $file['bytes'], $file['mime'], null, null);
 
             return true;
         });
@@ -882,6 +910,164 @@ class ItemMediaService
         $this->afterStored($row->fresh() ?? $row);
 
         return true;
+    }
+
+    /**
+     * David 2026-11-04: is a downloaded file of this row checked before it is used? Stills with the
+     * still check on (off | shadow | enforce, fresh read), clips with the clip check on.
+     */
+    public function wantsCandidate(ItemMedia $row): bool
+    {
+        $settings = app(AppSettingsService::class);
+
+        return $row->isStill()
+            ? $settings->qualityStillsMode(fresh: true) !== AppSettingsService::QUALITY_OFF
+            : $settings->qualityCheckMode(fresh: true) !== AppSettingsService::QUALITY_OFF;
+    }
+
+    /** Remember the downloaded file as the row's candidate (the row stays running) and queue its check. Idempotent. */
+    private function stageCandidate(ItemMedia $row, string $sourceUrl, string $path, int $bytes, string $mime): bool
+    {
+        $staged = DB::transaction(function () use ($row, $sourceUrl, $path, $bytes, $mime): bool {
+            $locked = ItemMedia::whereKey($row->id)->lockForUpdate()->first();
+            if ($locked === null || $locked->status !== ItemMedia::STATUS_RUNNING || $locked->source_url !== $sourceUrl || filled($locked->candidate_path)) {
+                return false;
+            }
+            $locked->update(['candidate_path' => $path, 'candidate_bytes' => $bytes, 'candidate_mime' => $mime]);
+
+            return true;
+        });
+
+        if (! $staged) {
+            $fresh = $row->fresh();
+            if (! in_array($path, [$fresh?->storage_path, $fresh?->candidate_path], true)) {
+                $this->media->disk()->delete($path);
+            }
+
+            return true;
+        }
+
+        CheckItemMediaQuality::dispatch((int) $row->id);
+
+        return true;
+    }
+
+    /**
+     * The check passed (or »Approve anyway«): the candidate becomes the stored file. Conditional on the
+     * row still holding it in one of `$fromStatuses` (running = a fresh check, failed = an approval).
+     *
+     * @param  list<string>  $fromStatuses
+     */
+    public function promoteCandidate(ItemMedia $row, string $candidate, ?string $quality, ?string $reason, array $fromStatuses = [ItemMedia::STATUS_RUNNING]): bool
+    {
+        $previous = null;
+        $promoted = DB::transaction(function () use ($row, $candidate, $quality, $reason, $fromStatuses, &$previous): bool {
+            $locked = ItemMedia::whereKey($row->id)->lockForUpdate()->first();
+            if ($locked === null || ! in_array($locked->status, $fromStatuses, true) || $locked->candidate_path !== $candidate) {
+                return false;
+            }
+            $previous = $locked->storage_path;
+            $this->markStored($locked, $candidate, (int) $locked->candidate_bytes, (string) $locked->candidate_mime, $quality, $reason);
+
+            return true;
+        });
+
+        if (! $promoted) {
+            return false;
+        }
+
+        if ($previous !== null && $previous !== $candidate) {
+            $this->media->disk()->delete($previous);
+        }
+
+        $this->afterStored($row->fresh() ?? $row);
+
+        return true;
+    }
+
+    /** Write a stored file into a LOCKED row (inside the caller's transaction). */
+    private function markStored(ItemMedia $locked, string $path, int $bytes, string $mime, ?string $quality, ?string $reason): void
+    {
+        $locked->update([
+            'status' => ItemMedia::STATUS_READY,
+            'storage_path' => $path,
+            'source_path' => $locked->target_path,
+            'bytes' => $bytes,
+            'mime' => $mime,
+            'candidate_path' => null,
+            'candidate_bytes' => null,
+            'candidate_mime' => null,
+            'quality' => $quality,
+            'quality_reason' => $quality === null ? null : $reason,
+            'error_reason' => null,
+            'error' => null,
+            'auto_retries' => 0,
+            'exhausted_at' => null,
+            'completed_at' => now(),
+        ]);
+    }
+
+    /**
+     * A failed check, retries left: a NEW request of the row (fresh seed, the next prompt variant while
+     * one exists, `quality_retries` + 1). The failed candidate is deleted; the stored file stays.
+     */
+    public function retryAfterCheck(ItemMedia $row, string $candidate, string $reason): bool
+    {
+        $variant = min($row->prompt_variant + 1, PetAppearancePrompt::ITEM_PROMPT_VARIANTS - 1);
+        $retried = ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_RUNNING)->where('candidate_path', $candidate)
+            ->update([
+                'status' => ItemMedia::STATUS_PENDING,
+                'generation' => DB::raw('generation + 1'),
+                'seed_override' => PetMedia::freshSeed(),
+                'quality_retries' => DB::raw('quality_retries + 1'),
+                'prompt_variant' => $variant,
+                'request_id' => null,
+                'status_url' => null,
+                'response_url' => null,
+                'source_url' => null,
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
+                'download_attempts' => 0,
+                'error_reason' => null,
+                'error' => mb_substr('Quality check failed, regenerating automatically: '.$reason, 0, 2000),
+                'updated_at' => now(),
+            ]) === 1;
+
+        if (! $retried) {
+            return false;
+        }
+
+        if ($candidate !== $row->storage_path) {
+            $this->media->disk()->delete($candidate);
+        }
+        GenerateItemMedia::dispatch((int) $row->id);
+
+        return true;
+    }
+
+    /**
+     * A failed check, no retries left: the row fails `quality_failed` with its candidate kept for
+     * »Approve anyway«; heal() gives the chain up (the item is shown without it + one alert).
+     */
+    public function failQuality(ItemMedia $row, string $candidate, string $reason): bool
+    {
+        return ItemMedia::query()->whereKey($row->id)->where('status', ItemMedia::STATUS_RUNNING)->where('candidate_path', $candidate)
+            ->update([
+                'status' => ItemMedia::STATUS_FAILED,
+                'error_reason' => AiCallFailure::QualityFailed->value,
+                'error' => mb_substr('Quality check failed — needs review: '.$reason, 0, 2000),
+                'completed_at' => now(),
+                'updated_at' => now(),
+            ]) === 1;
+    }
+
+    /** Record the verdict of a stored file (media:still-check); an approved file stays approved. */
+    public function recordQuality(ItemMedia $row, string $path, string $quality, ?string $reason): bool
+    {
+        return ItemMedia::query()->whereKey($row->id)->where('storage_path', $path)
+            ->where(fn ($q) => $q->whereNull('quality')->orWhere('quality', '!=', PetMedia::QUALITY_APPROVED))
+            ->update(['quality' => $quality, 'quality_reason' => $reason !== null ? mb_substr($reason, 0, 2000) : null]) === 1;
     }
 
     /** `items/{id}/…` (catalogue), `looks/{look}/item-…` (shared), `{pet}/item-…` (own; deleted with the pet). */
@@ -1199,6 +1385,8 @@ class ItemMediaService
             ->update(array_merge([
                 'status' => ItemMedia::STATUS_PENDING,
                 'generation' => $row->generation + 1,
+                // David 2026-11-04: every automatic retry is a new request (fresh seed).
+                'seed_override' => PetMedia::freshSeed(),
                 'download_attempts' => 0,
                 'request_id' => null,
                 'status_url' => null,

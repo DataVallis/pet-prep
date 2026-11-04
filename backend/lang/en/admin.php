@@ -301,6 +301,9 @@ return [
         'quality_check_shadow' => 'Shadow — record verdicts, always show (default)',
         'quality_check_enforce' => 'Enforce — regenerate once, then hide failures',
         'quality_check' => 'Quality check mode',
+        'quality_stills' => 'Still image check mode (key / pose / item images, catalogue pictures)',
+        'quality_stills_help' => 'David 2026-11-04: every generated key image, pose image, item key image and catalogue picture is checked by the AI vision model (one picture, ≈ $0.001, production AI budget) BEFORE a video is made from it — one animal, four legs / paws, no ghost or extra body parts, the item as described, no text / people. ENFORCE (default): a failed picture is regenerated with a new seed (≤ 2 times), then it is not used (»Needs review«; activities run in simple mode, items are shown without that content) and Discord gets one post. SHADOW: verdicts recorded, every picture is used. OFF: no check. Without AI budget the picture waits for the check; without a vision model it is used unchecked.',
+        'saved_body_quality_stills' => 'Still check: :state',
         'saved_body_quality_check' => 'Quality check: :state',
         'saved_body_app_error_reports' => 'App error reports: :state',
         'app_error_reports_section' => 'App error reports',
@@ -582,6 +585,12 @@ return [
         ],
     ],
     // M6-W03: »Želje« item content given up after its automatic recovery (ItemMediaService::heal).
+    'still_check' => [
+        'discord' => [
+            'title' => 'Still check: :count key image(s) rejected after every automatic retry',
+            'body' => 'A state key image failed the AI still check (extra / ghost paws, a second animal, people, text …) also after its automatic regenerations with new seeds. It was not used — the pet keeps what it shows, that state gets no new loop yet. Optional: Pets → AI media → open the candidate → »Approve anyway« or Regenerate. Pose images (activities: simple mode) and item pictures (shown without content) are reported by their own alerts.',
+        ],
+    ],
     'item_media' => [
         'discord' => [
             'title' => 'Item content: :count item picture(s) / clip(s) failed for good',

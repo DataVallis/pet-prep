@@ -174,6 +174,19 @@ class PetMediaController extends Controller
         return $this->serve($pet, $itemMedia->isServable(), (string) $itemMedia->storage_path, (string) $itemMedia->mime, $service);
     }
 
+    /**
+     * GET /api/media/items/{itemMedia}/candidate?expires=…&v=…&signature=… (David 2026-11-04)
+     *
+     * The downloaded item file waiting for its check (StillQualityService): fetched by fal's vision
+     * model and opened by the superadmin before »Approve anyway«. Signature only (like fal's start
+     * frame URLs) — a request with a Sanctum token is refused. 404 without a candidate. Internal.
+     */
+    #[ExcludeRouteFromDocs]
+    public function showItemCandidate(ItemMedia $itemMedia, PetMediaService $service): Response
+    {
+        return $this->serve(null, filled($itemMedia->candidate_path), (string) $itemMedia->candidate_path, (string) ($itemMedia->candidate_mime ?? 'image/jpeg'), $service);
+    }
+
     private function serve(?Pet $pet, bool $servable, string $path, string $mime, PetMediaService $service, bool $public = false): Response
     {
         $user = Auth::guard('sanctum')->user();

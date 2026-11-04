@@ -85,6 +85,14 @@ class MediaQualityService
     {
         $slot = PetMedia::find($slotId);
 
+        // David 2026-11-04: a key / pose image candidate gets the AI still check (its own mode).
+        if ($slot !== null && $slot->isPoseStill()) {
+            $outcome = app(StillQualityService::class)->checkPetCandidate($slot);
+
+            // Waiting for the AI budget: nothing claimed — media:sweep re-runs it (StorePetMedia of a staged slot).
+            return $outcome === 'waiting' ? 'skipped' : $outcome;
+        }
+
         if ($slot === null || $slot->status !== PetMedia::STATUS_RUNNING || blank($slot->candidate_path) || ! $slot->isClip()) {
             return 'skipped';
         }

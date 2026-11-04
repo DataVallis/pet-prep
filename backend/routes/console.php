@@ -77,6 +77,18 @@ Schedule::command('media:retry-activity-clips')
     ->name('retry-activity-clips')
     ->description('Heal failed school / game clips; exhausted activities switch to simple mode');
 
+// Daily (David 2026-11-04): the AI still check of stored item key images made before the check
+// existed (production bed: ghost paws). Self-limiting — a checked file generation is never
+// selected again, so after the first run it finds nothing (0 $). A fail (stills mode enforce)
+// regenerates the key image with a new seed; its clip follows. Pet key images: manual only
+// (`media:still-check --pets --dry-run` shows count + cost).
+Schedule::command('media:still-check --items')
+    ->dailyAt('05:13')
+    ->timezone('Europe/Ljubljana')
+    ->withoutOverlapping()
+    ->name('still-check-items')
+    ->description('AI still check of stored item key images never checked; failures regenerated (enforce)');
+
 // Daily (frugal clips, QA #451 m7): delete zero-cost previews older than frugal_preview_keep_hours.
 Schedule::command('media:frugal-preview --prune')
     ->dailyAt('04:41')

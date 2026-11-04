@@ -219,6 +219,9 @@ class PetMedia extends Model
         // David 2026-11-02 (self-healing activity clips, ActivityClipRetryService).
         'prompt_variant',
         'recovery_version',
+        // David 2026-11-04 (still check): the image seed of a regeneration, automatic still-check retries.
+        'seed_override',
+        'still_retries',
     ];
 
     /**
@@ -241,6 +244,8 @@ class PetMedia extends Model
             'auto_alerted_at' => 'datetime',
             'prompt_variant' => 'integer',
             'recovery_version' => 'integer',
+            'seed_override' => 'integer',
+            'still_retries' => 'integer',
             // David 2026-10-30: stored video compression (Media\VideoCompressionService).
             'compression_attempts' => 'integer',
             'compressed_at' => 'datetime',
@@ -357,6 +362,21 @@ class PetMedia extends Model
     {
         return $this->status === self::STATUS_FAILED && is_string($this->error)
             && str_contains($this->error, self::FAL_NO_MEDIA_GENERATED);
+    }
+
+    /**
+     * David 2026-11-04: the image seed of this slot's request — the deterministic base seed (DNA /
+     * look seed) until a regeneration wrote a fresh `seed_override` (never the identical request again).
+     */
+    public function seedFor(int $base): int
+    {
+        return $this->seed_override !== null ? (int) $this->seed_override : $base;
+    }
+
+    /** A fresh random seed for a regeneration (fal seeds are 32-bit; never 0). */
+    public static function freshSeed(): int
+    {
+        return random_int(1, 2_147_483_647);
     }
 
     /** A picture (reference image, key image or pose image): sync image call, image mimes. */

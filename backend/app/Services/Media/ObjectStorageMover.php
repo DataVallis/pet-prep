@@ -107,7 +107,7 @@ class ObjectStorageMover
     }
 
     /**
-     * Paths stored in the DB: pet / look media, clip candidates, growth album, contact sheets, derived school clips.
+     * Paths stored in the DB: pet / look media, clip + still candidates (pet and item), growth album, contact sheets, derived school clips.
      *
      * @return list<string>
      */
@@ -122,6 +122,8 @@ class ObjectStorageMover
             // M6-W03 (QA #655 M1): »Želje« item content — catalogue pictures (`items/…`), shared look
             // rows (`looks/…/item-…`) and own-pet rows (`{pet}/item-…`).
             ->merge(DB::table('item_media')->whereNotNull('storage_path')->pluck('storage_path'))
+            // David 2026-11-04: item files waiting for their check (StillQualityService).
+            ->merge(DB::table('item_media')->whereNotNull('candidate_path')->pluck('candidate_path'))
             ->filter(fn ($p): bool => is_string($p) && $p !== '')
             ->unique()->values()->all();
     }

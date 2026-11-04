@@ -85,6 +85,7 @@ class FeatureSwitches extends Page implements HasForms
             'phase_clips' => $settings->phaseClips(),
             'frugal_clips' => $settings->frugalClips(),
             'quality_check' => $settings->qualityCheckMode(),
+            'quality_stills' => $settings->qualityStillsMode(),
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
         ]);
@@ -168,6 +169,17 @@ class FeatureSwitches extends Page implements HasForms
                             ])
                             ->in(AppSettingsService::QUALITY_CHECK_MODES)
                             ->required(),
+                        // David 2026-11-04: the AI check of still images before a video is made (default enforce).
+                        Radio::make('quality_stills')
+                            ->label(__('admin.features.quality_stills'))
+                            ->helperText(__('admin.features.quality_stills_help'))
+                            ->options([
+                                AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
+                                AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
+                                AppSettingsService::QUALITY_ENFORCE => __('admin.features.quality_check_enforce'),
+                            ])
+                            ->in(AppSettingsService::QUALITY_CHECK_MODES)
+                            ->required(),
                     ]),
                 // M5-05 (QA #375 B1): app crash / render-error reports, default off.
                 Section::make(__('admin.features.app_error_reports_section'))
@@ -205,6 +217,7 @@ class FeatureSwitches extends Page implements HasForms
         $phaseClips = (bool) ($data['phase_clips'] ?? AppSettingsService::phaseClipsDefault());
         $frugalClips = (bool) ($data['frugal_clips'] ?? AppSettingsService::frugalClipsDefault());
         $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
+        $qualityStills = (string) ($data['quality_stills'] ?? AppSettingsService::qualityStillsDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
 
@@ -226,8 +239,8 @@ class FeatureSwitches extends Page implements HasForms
             if ($frugalClips !== $settings->frugalClips(fresh: true)) {
                 $settings->updateFrugalClips($this->admin(), $frugalClips);
             }
-            if ($qualityCheck !== $settings->qualityCheckMode()) {
-                $settings->updateQualityCheck($this->admin(), $qualityCheck);
+            if ($qualityCheck !== $settings->qualityCheckMode(fresh: true) || $qualityStills !== $settings->qualityStillsMode(fresh: true)) {
+                $settings->updateQualityCheck($this->admin(), $qualityCheck, $qualityStills);
             }
             if ($appErrors !== $settings->appErrorReports(fresh: true)) {
                 $settings->updateAppErrorReports($this->admin(), $appErrors);
@@ -249,6 +262,7 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_phase_clips', ['state' => $phases])
             .' · '.__('admin.features.saved_body_frugal_clips', ['state' => $settings->frugalClips(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())])
+            .' · '.__('admin.features.saved_body_quality_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityStillsMode())])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
     }
