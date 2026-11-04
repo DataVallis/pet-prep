@@ -90027,6 +90027,66 @@
       "url": "https://kestelveterinerklinigi.com.tr/en/index.html",
       "source_url": "https://kestelveterinerklinigi.com.tr/en/index.html",
       "checked": "2026-11-04"
+    },
+    {
+      "country": "TR",
+      "kind": "clinic",
+      "name": "Mavi Anka Veteriner Kliniği",
+      "city": "Antalya (Finike)",
+      "region": "Finike",
+      "address": "Kum Mah. İnönü 2 Cad. No: 26/B, Finike, Antalya",
+      "phone": "0505 410 99 09",
+      "emergency_24h": true,
+      "duty": "Opening hours 09:00-20:00; the clinic states it also provides 24-hour emergency service.",
+      "duty_i18n": null,
+      "url": "https://maviankaveteriner.com/",
+      "source_url": "https://maviankaveteriner.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "TR",
+      "kind": "clinic",
+      "name": "Koca Veteriner Kliniği",
+      "city": "Antalya (Manavgat)",
+      "region": "Manavgat",
+      "address": "Örnek Mah. 1528. Sk. No:3, 07600 Manavgat, Antalya",
+      "phone": "0531 271 09 22",
+      "emergency_24h": false,
+      "duty": "Open Monday-Saturday 08:00-20:00, closed Sundays.",
+      "duty_i18n": null,
+      "url": "https://kocavet.com.tr/",
+      "source_url": "https://kocavet.com.tr/iletisim.php",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "TR",
+      "kind": "clinic",
+      "name": "Vetopya Veteriner Kliniği",
+      "city": "Antalya (Döşemealtı)",
+      "region": "Döşemealtı",
+      "address": "Bahçeyaka Mah. 867. Sk., 07190 Döşemealtı, Antalya",
+      "phone": "0553 526 52 22",
+      "emergency_24h": false,
+      "duty": "Open Mon-Fri 10:00-19:00, Sat 10:00-18:00, Sun 11:00-17:00; in an emergency call first.",
+      "duty_i18n": null,
+      "url": "https://vetopya.com/",
+      "source_url": "https://vetopya.com/iletisim",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "TR",
+      "kind": "clinic",
+      "name": "Minik Patiler Veteriner Kliniği",
+      "city": "Antalya (Konyaaltı)",
+      "region": "Konyaaltı",
+      "address": "Hurma, Boğaçay Cd. No:91, 07130 Konyaaltı, Antalya",
+      "phone": "0532 478 18 89",
+      "emergency_24h": false,
+      "duty": "A 7/24 support phone line is listed: +90 542 213 66 36.",
+      "duty_i18n": null,
+      "url": "https://www.antalyaveterinerklinigi.com/",
+      "source_url": "https://www.antalyaveterinerklinigi.com/",
+      "checked": "2026-11-04"
     }
   ]
 }
