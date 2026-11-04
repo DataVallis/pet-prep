@@ -564,6 +564,13 @@ return [
             'body' => '(Starega) obrnjenega prehoda ali zanke naprej-nazaj ffmpeg 3-krat ni mogel narediti, zato se ta posnetek ustvari po običajni poti (običajna cena). Preveri ffmpeg / pomnilnik na strežniku (Zdravje sistema).',
         ],
     ],
+    'game_loop' => [
+        'discord' => [
+            'title' => 'Igralna zanka: napaka pri :count ljubljenčkih (:total v tem zagonu) — ostali so obdelani',
+            'body' => 'Minutna obdelava (`pets:process-decay`) je pri teh ljubljenčkih vrgla napako; njihov korak je razveljavljen in preskočen, vsi ostali ljubljenčki so obdelani. Poskus se ponovi vsako minuto. Napaka (razred, datoteka, sled) je v System health. Največ eno obvestilo na ljubljenčka na dan.',
+            'pet' => 'Ljubljenček #:id',
+        ],
+    ],
     'disk_space' => [
         'discord' => [
             'title' => 'Disk strežnika je poln :percent',

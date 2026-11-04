@@ -9,9 +9,11 @@ use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
+use App\Services\GameLoop\PetLoopGuard;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 /**
  * EscalationService — 3-Tier Escalation Matrix & Neglect Mechanics
@@ -75,7 +77,12 @@ class EscalationService
      * Process escalation checks for all active pets.
      * Called every minute by the scheduler after decay processing.
      *
-     * @return array{processed: int, escalated: int}
+     * Per-pet isolation (David 2026-11-04): each pet runs in its own
+     * transaction (a savepoint inside a caller's); an exception rolls back
+     * only that pet, goes to PetLoopGuard and the loop continues — one
+     * throwing pet never leaves another pet's level stale.
+     *
+     * @return array{processed: int, escalated: int, failed: int}
      */
     public function processAllActivePets(): array
     {
@@ -90,9 +97,17 @@ class EscalationService
 
         $processed = 0;
         $escalated = 0;
+        $failed = 0;
 
         foreach ($petIds as $petId) {
-            $wasEscalated = $this->processPetEscalationById($petId);
+            try {
+                $wasEscalated = $this->processPetEscalationById($petId, isolated: true);
+            } catch (Throwable $e) {
+                $failed++;
+                app(PetLoopGuard::class)->failed('escalation', (int) $petId, $e);
+
+                continue;
+            }
             if ($wasEscalated === null) {
                 continue; // deleted in the meantime
             }
@@ -103,7 +118,7 @@ class EscalationService
             }
         }
 
-        return ['processed' => $processed, 'escalated' => $escalated];
+        return ['processed' => $processed, 'escalated' => $escalated, 'failed' => $failed];
     }
 
     /**
@@ -127,7 +142,7 @@ class EscalationService
     /**
      * @return bool|null Null if the pet no longer exists.
      */
-    private function processPetEscalationById(int $petId, ?Pet $target = null): ?bool
+    private function processPetEscalationById(int $petId, ?Pet $target = null, bool $isolated = false): ?bool
     {
         $work = function () use ($petId): array {
             $locked = Pet::whereKey($petId)->lockForUpdate()->first();
@@ -140,7 +155,9 @@ class EscalationService
 
         // Own transaction from the scheduler; inside a caller's transaction
         // the lock lives until that one commits (see PetDecayService).
-        [$locked, $escalated] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+        // In the per-pet loop ($isolated) always a transaction / savepoint, so a
+        // failing pet rolls back alone (PetLoopGuard).
+        [$locked, $escalated] = DB::transactionLevel() > 0 && ! $isolated ? $work() : DB::transaction($work);
 
         if (! $locked) {
             return null;

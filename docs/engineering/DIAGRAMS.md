@@ -1305,6 +1305,19 @@ sequenceDiagram
   end
 ```
 
+**Per-pet isolation of the tick (David 2026-11-04, after PR #737).** One throwing pet never stops the loop for the others, and a failing stage never skips the next one.
+
+```mermaid
+flowchart LR
+  T["pets:process-decay<br/>guard.begin()"] --> ST["each stage: payment locks → decay → escalation<br/>→ routines → certificates → birthdays<br/>(a stage that throws as a whole: report, next stage still runs)"]
+  ST --> L{"per pet: own transaction + row lock<br/>(savepoint inside a caller's)"}
+  L -- ok --> N[next pet]
+  L -- throws --> RB["roll back this pet only<br/>PetLoopGuard::failed(stage, pet id, e)<br/>→ report() → System health"]
+  RB --> N
+  N --> F["guard.finish(): one log line per run (counts)<br/>+ one queued Discord game_loop_pet_error<br/>for pets not alerted today (Ljubljana day)"]
+  F --> H[heartbeat]
+```
+
 ## 9a. Parent app on real data (M2-05 mobile)
 
 The parent app reads only server results (no scoring on the phone). Live events patch the cached dashboard; anything other than a decay tick refetches the computed parts; without a subscribed channel the dashboard polls every 30 s.

@@ -19,6 +19,7 @@ use App\Models\PetDailyWalk;
 use App\Models\PetHygieneEvent;
 use App\Models\PetStatusPeriod;
 use App\Models\QuietHours;
+use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Results\Routine;
 use Carbon\CarbonImmutable;
 use Carbon\CarbonInterface;
@@ -307,7 +308,7 @@ class RoutineLedgerService
                 // Logged once per attempt; the pet is retried 30 min later
                 // instead of failing (and logging) every minute.
                 Log::error('RoutineLedgerService: closing days failed', ['pet_id' => $id, 'error' => $e->getMessage()]);
-                report($e);
+                app(PetLoopGuard::class)->failed('routines', (int) $id, $e); // report() + run count + daily alert
                 DB::table('pets')->where('id', $id)->update([
                     'routines_next_close_at' => $now->addMinutes(self::RETRY_AFTER_FAILURE_MINUTES),
                 ]);

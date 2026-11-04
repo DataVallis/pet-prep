@@ -75,6 +75,10 @@ return [
     'disk_warn_percent' => 90,
     'disk_alert_timezone' => 'Europe/Ljubljana',
     'disk_path' => env('SYSTEM_HEALTH_DISK_PATH'),
+    // Game loop (David 2026-11-04): a pet whose `pets:process-decay` work throws is skipped
+    // for that run (PetLoopGuard) and posted to Discord `game_loop_pet_error` at most once
+    // per pet per day in this timezone.
+    'game_loop_alert_timezone' => 'Europe/Ljubljana',
 
     // Queues the workers listen on (compose.production.yaml).
     'queues' => ['auth', 'default', 'broadcasts', 'notifications'],

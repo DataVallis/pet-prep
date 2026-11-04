@@ -29,6 +29,8 @@ enum AdminAlertKind: string
     case ItemMediaStuck = 'item_media_stuck';
     /** DEPLOYMENT.md D31 (incident 2026-11-04): the server's root disk is ≥ system_health.disk_alert_percent full (once per day, numbers only). */
     case DiskSpace = 'disk_space';
+    /** David 2026-11-04 (after PR #737): a pet's game-loop work threw in `pets:process-decay` — the other pets were processed (once per pet per day; pet id + stage + exception class only). */
+    case GameLoopPetError = 'game_loop_pet_error';
     case Test = 'test';
 
     public const COLOUR_INFO = 0x3B82F6;
@@ -42,7 +44,7 @@ enum AdminAlertKind: string
     {
         return match ($this) {
             self::AiBudgetWarning, self::FalBalanceLow, self::AppErrorNew, self::AppErrorSuppressed, self::ActivityMediaStuck, self::FrugalClipFallback, self::ItemMediaStuck => 'warning',
-            self::DiskSpace => 'danger',
+            self::DiskSpace, self::GameLoopPetError => 'danger',
             self::AiBudgetBlocked, self::FalBalanceExhausted, self::AppErrorSpike => 'danger',
             self::Test => 'info',
         };
@@ -65,7 +67,7 @@ enum AdminAlertKind: string
             self::AiBudgetWarning, self::AiBudgetBlocked => '/admin/ai-budget',
             self::ActivityMediaStuck, self::FrugalClipFallback => '/admin/pets',
             self::ItemMediaStuck => '/admin/item-media',
-            self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::Test => '/admin/system-health',
+            self::FalBalanceLow, self::FalBalanceExhausted, self::AppErrorNew, self::AppErrorSpike, self::AppErrorSuppressed, self::DiskSpace, self::GameLoopPetError, self::Test => '/admin/system-health',
         };
     }
 }

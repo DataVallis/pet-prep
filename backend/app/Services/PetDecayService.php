@@ -13,9 +13,11 @@ use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\PetDailyWalk;
 use App\Models\QuietHours;
+use App\Services\GameLoop\PetLoopGuard;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 /**
  * PetDecayService — Core Game Loop Engine
@@ -92,7 +94,13 @@ class PetDecayService
      * their decay clock if they are ever re-activated. Unborn pets (waiting
      * for the contract, M1-07b) are not loaded either; birth starts the clock.
      *
-     * @return array{processed: int, updated: int}
+     * Per-pet isolation (David 2026-11-04): each pet runs in its own
+     * transaction (a savepoint when a caller already holds one); an exception
+     * rolls back only that pet, goes to PetLoopGuard (report + alert) and the
+     * loop continues — hygiene / behaviour events and the walk day close of
+     * the other pets run inside their own units.
+     *
+     * @return array{processed: int, updated: int, failed: int}
      */
     public function processAllActivePets(): array
     {
@@ -104,9 +112,17 @@ class PetDecayService
 
         $processed = 0;
         $updated = 0;
+        $failed = 0;
 
         foreach ($petIds as $petId) {
-            $result = $this->processPetDecayById($petId);
+            try {
+                $result = $this->processPetDecayById($petId, isolated: true);
+            } catch (Throwable $e) {
+                $failed++;
+                $this->guard()->failed('decay', (int) $petId, $e);
+
+                continue;
+            }
             if ($result === null) {
                 continue; // deleted in the meantime
             }
@@ -117,7 +133,12 @@ class PetDecayService
             }
         }
 
-        return ['processed' => $processed, 'updated' => $updated];
+        return ['processed' => $processed, 'updated' => $updated, 'failed' => $failed];
+    }
+
+    private function guard(): PetLoopGuard
+    {
+        return app(PetLoopGuard::class);
     }
 
     /**
@@ -140,7 +161,7 @@ class PetDecayService
     /**
      * @return bool|null Null if the pet no longer exists.
      */
-    private function processPetDecayById(int $petId, ?Pet $target = null): ?bool
+    private function processPetDecayById(int $petId, ?Pet $target = null, bool $isolated = false): ?bool
     {
         $work = function () use ($petId): array {
             $locked = Pet::whereKey($petId)->lockForUpdate()->first();
@@ -173,8 +194,10 @@ class PetDecayService
 
         // The scheduler calls this outside any transaction → own transaction.
         // If a caller already opened one, the row lock lives in that
-        // transaction until it commits; a nested savepoint would add nothing.
-        [$locked, $changed, $playFlipped, $wandEnded, $careEnded] = DB::transactionLevel() > 0 ? $work() : DB::transaction($work);
+        // transaction until it commits; a nested savepoint would add nothing —
+        // except in the per-pet loop ($isolated), where a savepoint lets one
+        // failing pet roll back alone (PetLoopGuard).
+        [$locked, $changed, $playFlipped, $wandEnded, $careEnded] = DB::transactionLevel() > 0 && ! $isolated ? $work() : DB::transaction($work);
 
         if (! $locked) {
             return null;
