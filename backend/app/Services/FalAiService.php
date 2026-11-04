@@ -744,6 +744,13 @@ class FalAiService
                 .'slightly longer on the neck, a broad head with a blunt muzzle, almond-shaped dark brown eyes with black rims, '
                 .'medium triangular natural pendant ears, a long tail carried low with a curl at the tip, calm and observant expression, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-91: FCI-Standard N° 207 (S690) / KC standard (S692) — a small, lion-like toy dog with a moderately long,
+            // straight coat and a mane; flat-faced welfare breed (PDSA S693) → a moderate short face with an evident muzzle, open nostrils.
+            BreedType::Pekingese => 'A small, lion-like, moderately thick-set Pekingese toy dog, a moderately long straight coat with a mane '
+                .'to the shoulders and feathering on the ears, legs and tail (not excessive), red-gold with a black mask, a fairly large broad head '
+                .'with a moderate short face and an evident muzzle (not extreme), a visible black nose with clearly open nostrils and no heavy wrinkle over the nose, '
+                .'clear round dark eyes that do not bulge, heart-shaped feathered drop ears, a tail set high and curved over the back, '
+                .'dignified and alert expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1798,6 +1805,16 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'short to medium dense double coat, slightly longer on the neck',
                 'markings' => 'black mask on the muzzle, dark ears, at most a small white patch on the chest',
+            ],
+            // M5-R10-91: all colours are standard (KC S692 / FCI S690) — never albino, liver or merle.
+            BreedType::Pekingese => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1 => 'red-gold with a black mask',
+                    2 => 'fawn with a black mask',
+                },
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'moderately long, straight coat with a mane and feathering',
+                'markings' => 'black nose, lips and eye rims, moderate short face with an evident muzzle and open nostrils, never albino, liver or merle',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

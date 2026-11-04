@@ -1852,6 +1852,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.anatolian_shepherd_dog',
                 'search_keywords' => ['anatolian shepherd dog', 'anatolian shepherd', 'anatolian', 'kangal', 'kangal shepherd dog', 'karabash', 'anatolski ovčar', 'anatolski ovcar', 'anatolski pastirski pes', 'kangalski ovčar', 'kangalski ovcar'],
             ],
+            // M5-R10-91 Pekingese (docs/research/dog-data/data.json pekingese, sources S690–S695; runbook rules confirmed by
+            // David 2026-10-10: paid). daily_steps_required = the adult step goal (proposed_game_parameters.pekingese.step_goal_adult:
+            // 30 min × 100 steps/min — PDSA S693 "a minimum of half an hour exercise every day") — only the legacy-profile
+            // fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::Pekingese->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 850,
+                'label_key' => 'breeds.pekingese',
+                'search_keywords' => ['pekingese', 'pekinese', 'peke', 'lion dog', 'pekinezer', 'pekinez', 'pekinški pes', 'pekinski pes'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
