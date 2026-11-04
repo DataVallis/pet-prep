@@ -13,7 +13,8 @@
     "nl": "Peren",
     "pl": "Gruszki",
     "cs": "Hrušky",
-    "sv": "Päron"
+    "sv": "Päron",
+    "da": "Pærer"
   },
   "question": {
     "en": "Can dogs eat pears?",
@@ -27,7 +28,8 @@
     "nl": "Mogen honden peren eten?",
     "pl": "Czy psy mogą jeść gruszki?",
     "cs": "Mohou psi jíst hrušky?",
-    "sv": "Får hundar äta päron?"
+    "sv": "Får hundar äta päron?",
+    "da": "Må hunde spise pærer?"
   },
   "url_slug": {
     "en": "pears",
@@ -41,7 +43,8 @@
     "nl": "peren",
     "pl": "gruszki",
     "cs": "hrusky",
-    "sv": "paron"
+    "sv": "paron",
+    "da": "paerer"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "nl": "Ja, honden mogen met mate peren eten. Haal het klokhuis en de pitjes eruit, snijd de peer in hapklare stukjes en sla ingeblikte peren in suikersiroop over. Te veel peren kunnen de maag van een hond van streek maken.",
     "pl": "Tak, psy mogą jeść gruszki z umiarem. Usuń gniazdo nasienne z pestkami, pokrój owoc na kawałki wielkości jednego kęsa i nie podawaj gruszek z puszki w słodkim syropie. Zbyt wiele gruszek może rozstroić psu żołądek.",
     "cs": "Ano, psi mohou hrušky jíst s mírou. Odstraňte ohryzek a semínka, nakrájejte hrušku na kousky na jedno sousto a vynechte hrušky z konzervy ve sladkém sirupu. Příliš mnoho hrušek může psovi podráždit žaludek.",
-    "sv": "Ja, hundar kan äta päron med måtta. Ta bort kärnhuset och kärnorna, skär frukten i munsbitar och undvik päron på burk i sockerlag. För många päron kan ge hunden orolig mage."
+    "sv": "Ja, hundar kan äta päron med måtta. Ta bort kärnhuset och kärnorna, skär frukten i munsbitar och undvik päron på burk i sockerlag. För många päron kan ge hunden orolig mage.",
+    "da": "Ja, hunde må gerne få pærer med måde. Fjern kernehus og kerner, skær frugten i mundrette stykker, og undgå pærer på dåse i sukkerlage. For mange pærer kan give hunden dårlig mave."
   },
   "why": {
     "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -70,7 +74,8 @@
     "nl": "Peren bevatten vitamine C, vitamine A, koper en vezels. De pitjes bevatten sporen cyanide en kunnen ook verstikking veroorzaken, dus deel het klokhuis niet. Ingeblikte peren bevatten te veel suiker, wat het maag-darmkanaal kan irriteren en tot obesitas kan leiden. Zelfs veilig eten zoals peren kan verstikking veroorzaken.",
     "pl": "Gruszki zawierają witaminę C, witaminę A, miedź i błonnik. Pestki zawierają śladowe ilości cyjanku i mogą też spowodować zadławienie, dlatego nie należy dzielić się gniazdem nasiennym. Gruszki z puszki mają za dużo cukru, który może podrażniać przewód pokarmowy i prowadzić do otyłości. Nawet bezpieczne produkty, takie jak gruszki, mogą grozić zadławieniem.",
     "cs": "Hrušky obsahují vitamin C, vitamin A, měď a vlákninu. Semínka obsahují stopy kyanidu a mohou také způsobit dušení, takže ohryzek psovi nedávejte. Hrušky z konzervy obsahují příliš mnoho cukru, který může dráždit trávicí trakt a vést k obezitě. I bezpečné potraviny, třeba hrušky, mohou být rizikem udušení.",
-    "sv": "Päron innehåller C-vitamin, A-vitamin, koppar och fibrer. Kärnorna innehåller spår av cyanid och kan också orsaka kvävning, så kärnhuset ska inte delas med hunden. Päron på burk innehåller för mycket socker, som kan irritera matsmältningskanalen och leda till fetma. Även ofarlig mat som päron kan vara en kvävningsrisk."
+    "sv": "Päron innehåller C-vitamin, A-vitamin, koppar och fibrer. Kärnorna innehåller spår av cyanid och kan också orsaka kvävning, så kärnhuset ska inte delas med hunden. Päron på burk innehåller för mycket socker, som kan irritera matsmältningskanalen och leda till fetma. Även ofarlig mat som päron kan vara en kvävningsrisk.",
+    "da": "Pærer indeholder C-vitamin, A-vitamin, kobber og fibre. Kernerne indeholder spor af cyanid og kan også sætte sig fast i halsen, så kernehuset bør ikke deles. Pærer på dåse indeholder for meget sukker, som kan irritere fordøjelseskanalen og føre til fedme. Selv sikre fødevarer som pærer kan sætte sig fast i halsen."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "nl": "Let de eerste keer dat je je hond peer geeft op buikklachten en neem contact op met je dierenarts als je je zorgen maakt.",
     "pl": "Gdy dajesz psu gruszki po raz pierwszy, obserwuj, czy nie pojawią się objawy rozstroju żołądka, a w razie wątpliwości skontaktuj się z weterynarzem.",
     "cs": "Když psovi hrušky dáváte poprvé, sledujte, zda se neobjeví známky podrážděného žaludku, a pokud máte jakékoli obavy, obraťte se na veterináře.",
-    "sv": "Första gången du ger päron: håll utkik efter tecken på orolig mage, och kontakta veterinären om du har några funderingar."
+    "sv": "Första gången du ger päron: håll utkik efter tecken på orolig mage, och kontakta veterinären om du har några funderingar.",
+    "da": "Første gang du giver pærer, skal du holde øje med tegn på dårlig mave og kontakte din dyrlæge hvis du er i tvivl."
   },
   "serving": {
     "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -99,7 +105,8 @@
     "nl": "Verse, rijpe peer zonder klokhuis en pitjes, in hapklare stukjes gesneden; houd je hond in de gaten terwijl hij eet. Alleen af en toe als tussendoortje.",
     "pl": "Świeża, dojrzała gruszka bez gniazda nasiennego i pestek, pokrojona na kawałki wielkości jednego kęsa; obserwuj psa podczas jedzenia. Jako okazjonalna przekąska.",
     "cs": "Čerstvá zralá hruška bez ohryzku a semínek, nakrájená na kousky na jedno sousto; dohlížejte na psa, když jí. Jako občasná svačinka.",
-    "sv": "Färskt, moget päron utan kärnhus och kärnor, skuret i munsbitar; ha uppsikt över hunden medan den äter. Som mellanmål då och då."
+    "sv": "Färskt, moget päron utan kärnhus och kärnor, skuret i munsbitar; ha uppsikt över hunden medan den äter. Som mellanmål då och då.",
+    "da": "Frisk, moden pære uden kernehus og kerner, skåret i mundrette stykker. Hold øje med hunden, mens den spiser. Som snack en gang imellem."
   },
   "child": {
     "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -113,7 +120,8 @@
     "nl": "Honden mogen een paar kleine stukjes peer! Een volwassene haalt eerst het middenstuk met de pitjes eruit.",
     "pl": "Psy mogą dostać kilka małych kawałków gruszki! Dorosły najpierw wyjmuje środek z pestkami.",
     "cs": "Psi můžou dostat pár malých kousků hrušky! Nejdřív dospělý vyndá střed se semínky.",
-    "sv": "Hundar kan få några små bitar päron! En vuxen tar först bort mitten med kärnorna."
+    "sv": "Hundar kan få några små bitar päron! En vuxen tar först bort mitten med kärnorna.",
+    "da": "Hunde kan få nogle få små stykker pære! En voksen tager først midten med kernerne ud."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "nl": "Mogen honden het klokhuis van de peer eten?",
         "pl": "Czy psy mogą jeść ogryzek gruszki?",
         "cs": "Mohou psi jíst ohryzek z hrušky?",
-        "sv": "Får hundar äta kärnhuset?"
+        "sv": "Får hundar äta kärnhuset?",
+        "da": "Må hunde spise kernehuset fra en pære?"
       },
       "a": {
         "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -143,7 +152,8 @@
         "nl": "Nee. Geef je hond geen delen van de peer waar pitjes in zitten; de pitjes bevatten sporen cyanide en kunnen verstikking veroorzaken.",
         "pl": "Nie. Nie podawaj psu części gruszki z pestkami; pestki zawierają śladowe ilości cyjanku i mogą spowodować zadławienie.",
         "cs": "Ne. Nedávejte psovi části hrušky se semínky; semínka obsahují stopy kyanidu a mohou způsobit dušení.",
-        "sv": "Nej. Ge inte hunden de delar av päronet där kärnorna sitter; kärnorna innehåller spår av cyanid och kan orsaka kvävning."
+        "sv": "Nej. Ge inte hunden de delar av päronet där kärnorna sitter; kärnorna innehåller spår av cyanid och kan orsaka kvävning.",
+        "da": "Nej. Undgå at give hunden de dele af pæren hvor der er kerner. Kernerne indeholder spor af cyanid og kan sætte sig fast i halsen."
       }
     },
     {
@@ -159,7 +169,8 @@
         "nl": "Zijn ingeblikte peren goed?",
         "pl": "Czy gruszki z puszki są w porządku?",
         "cs": "Jsou v pořádku hrušky z konzervy?",
-        "sv": "Går päron på burk bra?"
+        "sv": "Går päron på burk bra?",
+        "da": "Er pærer på dåse i orden?"
       },
       "a": {
         "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -173,7 +184,8 @@
         "nl": "Nee. Ingeblikte peren bevatten te veel suiker. Sla ingeblikte peren of peren op pot in siroop over, ook als er “in eigen sap” op staat. Verse, rijpe peren zijn de beste keuze.",
         "pl": "Nie. Gruszki z puszki mają za dużo cukru. Nie podawaj gruszek z puszki ani ze słoika w syropie, nawet tych z napisem »we własnym soku«. Najlepsze są świeże, dojrzałe gruszki.",
         "cs": "Ne. Hrušky z konzervy obsahují příliš mnoho cukru. Vynechte hrušky z konzervy nebo ze sklenice v sirupu, i ty označené „ve vlastní šťávě“. Nejlepší volbou jsou čerstvé zralé hrušky.",
-        "sv": "Nej. Päron på burk innehåller för mycket socker. Undvik päron på burk eller glasburk i sirap, även de som är märkta ”i egen juice”. Färska, mogna päron är bäst."
+        "sv": "Nej. Päron på burk innehåller för mycket socker. Undvik päron på burk eller glasburk i sirap, även de som är märkta ”i egen juice”. Färska, mogna päron är bäst.",
+        "da": "Nej. Pærer på dåse indeholder for meget sukker. Undgå pærer på dåse eller glas i sirup, også dem der er mærket »i egen juice«. Friske, modne pærer er det bedste valg."
       }
     }
   ],
@@ -317,6 +329,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9b797d99d695ee9c418a0938ae317974898dcdc05b0c97863ad1f998b31baf52"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0bcde0f03d12bf3fe215925dbb2575fb04bb7b21321060608bb8e1c2119ee87e"
     }
   }
 }

@@ -13,7 +13,8 @@
     "nl": "Kaki",
     "pl": "Persymona",
     "cs": "Kaki",
-    "sv": "Kaki"
+    "sv": "Kaki",
+    "da": "Kakifrugt"
   },
   "question": {
     "en": "Can dogs eat persimmon?",
@@ -27,7 +28,8 @@
     "nl": "Mogen honden kaki eten?",
     "pl": "Czy psy mogą jeść persymonę?",
     "cs": "Mohou psi jíst kaki?",
-    "sv": "Får hundar äta kaki?"
+    "sv": "Får hundar äta kaki?",
+    "da": "Må hunde spise kakifrugt?"
   },
   "url_slug": {
     "en": "persimmon",
@@ -41,7 +43,8 @@
     "nl": "kaki",
     "pl": "persymona",
     "cs": "kaki",
-    "sv": "kaki"
+    "sv": "kaki",
+    "da": "kakifrugt"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "nl": "Ja, in beperkte hoeveelheden. Het vruchtvlees van kaki is veilig voor honden, maar haal eerst de pitten eruit: die kunnen verstikking en een darmverstopping veroorzaken, vooral bij kleine honden. Kaki kan laxerend werken en diarree en braken veroorzaken.",
     "pl": "Tak, w ograniczonych ilościach. Miąższ persymony jest dla psów bezpieczny, ale najpierw usuń nasiona: mogą spowodować zadławienie i niedrożność jelit, zwłaszcza u małych psów. Persymona może działać przeczyszczająco i wywołać biegunkę oraz wymioty.",
     "cs": "Ano, v omezeném množství. Dužina kaki je pro psy bezpečná, ale nejdřív odstraňte semínka: mohou způsobit dušení a ucpání střev, zvláště u malých psů. Kaki může působit projímavě a způsobit průjem a zvracení.",
-    "sv": "Ja, i begränsade mängder. Kakins fruktkött är ofarligt för hundar, men ta först bort kärnorna: de kan orsaka kvävning och tarmstopp, särskilt hos små hundar. Kaki kan verka laxerande och ge diarré och kräkningar."
+    "sv": "Ja, i begränsade mängder. Kakins fruktkött är ofarligt för hundar, men ta först bort kärnorna: de kan orsaka kvävning och tarmstopp, särskilt hos små hundar. Kaki kan verka laxerande och ge diarré och kräkningar.",
+    "da": "Ja, i begrænsede mængder. Kødet i kakifrugt er sikkert for hunde, men fjern først kernerne: de kan sætte sig fast i halsen og give tarmblokering, især hos små hunde. Kakifrugt kan virke afførende og give diarré og opkast."
   },
   "why": {
     "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -70,7 +74,8 @@
     "nl": "De kaki zelf is niet schadelijk voor honden, maar de pitten en stenen kunnen een darmverstopping veroorzaken. Grotere honden scheiden ze mogelijk zonder problemen weer uit met de ontlasting, terwijl kleinere rassen het risico lopen op verstikking en een darmafsluiting. Kaki werkt laxerend en kan diarree, misselijkheid, braken en maagkrampen veroorzaken.",
     "pl": "Sam owoc persymony nie szkodzi psom, ale pestki i nasiona grożą niedrożnością jelit. Większe psy mogą je wydalić bez problemu, natomiast mniejszym rasom grozi zadławienie i niedrożność jelit. Persymony działają przeczyszczająco i mogą wywołać biegunkę, nudności, wymioty i skurcze żołądka.",
     "cs": "Samotný plod kaki psům neškodí, ale semínka a pecky představují riziko ucpání střev. Větší psi je mohou vyloučit bez potíží, zatímco menší plemena ohrožuje dušení a ucpání střev. Kaki působí projímavě a může způsobit průjem, nevolnost, zvracení a žaludeční křeče.",
-    "sv": "Själva kakifrukten är inte skadlig för hundar, men kärnorna innebär risk för tarmstopp. Större hundar kan klara att få ut dem utan problem, medan små raser riskerar kvävning och tarmstopp. Kaki verkar laxerande och kan ge diarré, illamående, kräkningar och magkramper."
+    "sv": "Själva kakifrukten är inte skadlig för hundar, men kärnorna innebär risk för tarmstopp. Större hundar kan klara att få ut dem utan problem, medan små raser riskerar kvävning och tarmstopp. Kaki verkar laxerande och kan ge diarré, illamående, kräkningar och magkramper.",
+    "da": "Selve kakifrugten er ikke skadelig for hunde, men kerner og sten giver risiko for tarmblokering. Store hunde kan måske komme af med dem uden problemer, mens mindre hunderacer risikerer at få dem galt i halsen og få tarmblokering. Kakifrugt virker afførende og kan give diarré, kvalme, opkast og mavekramper."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "nl": "Heeft je hond na het eten van kaki last van braken, buikpijn, uitdroging of verlies van eetlust, ga dan meteen naar de dierenarts.",
     "pl": "Jeśli po zjedzeniu persymony u twojego psa wystąpią wymioty, ból brzucha, odwodnienie lub brak apetytu, od razu zgłoś się do weterynarza.",
     "cs": "Pokud pes po snězení kaki zvrací, má bolesti břicha, je dehydrovaný nebo ztratil chuť k jídlu, okamžitě vyhledejte veterinární pomoc.",
-    "sv": "Om hunden får kräkningar, ont i magen, uttorkning eller tappar matlusten efter att ha ätit kaki, sök veterinärvård direkt."
+    "sv": "Om hunden får kräkningar, ont i magen, uttorkning eller tappar matlusten efter att ha ätit kaki, sök veterinärvård direkt.",
+    "da": "Hvis din hund kaster op, har mavesmerter, er dehydreret eller har mistet appetitten efter at have spist kakifrugt, skal du straks søge dyrlægehjælp."
   },
   "serving": {
     "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -99,7 +105,8 @@
     "nl": "Spoel de vrucht af, haal de pitten eruit en snijd hem in kleine, hapklare plakjes. Alleen met mate.",
     "pl": "Umyj owoc, usuń nasiona i pokrój na małe plasterki wielkości jednego kęsa. Tylko z umiarem.",
     "cs": "Plod opláchněte, odstraňte semínka a nakrájejte ho na malé plátky na jedno sousto. Jen s mírou.",
-    "sv": "Skölj frukten, ta bort kärnorna och skär den i små munsbitar. Bara med måtta."
+    "sv": "Skölj frukten, ta bort kärnorna och skär den i små munsbitar. Bara med måtta.",
+    "da": "Skyl frugten, fjern kernerne, og skær den i små mundrette skiver. Kun med måde."
   },
   "child": {
     "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -113,7 +120,8 @@
     "nl": "Honden mogen een beetje kaki. Een volwassene haalt de pitten eruit en snijdt de vrucht in kleine stukjes.",
     "pl": "Psy mogą dostać odrobinę persymony. Dorosły wyjmuje nasiona i kroi owoc na małe kawałki.",
     "cs": "Psi můžou dostat trochu kaki. Dospělý vyndá semínka a nakrájí ho na malé kousky.",
-    "sv": "Hundar kan få lite kaki. En vuxen tar bort kärnorna och skär den i små bitar."
+    "sv": "Hundar kan få lite kaki. En vuxen tar bort kärnorna och skär den i små bitar.",
+    "da": "Hunde må gerne få lidt kakifrugt. En voksen tager kernerne ud og skærer den i små stykker."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "nl": "Zijn kakipitten gevaarlijk?",
         "pl": "Czy nasiona persymony są niebezpieczne?",
         "cs": "Jsou semínka kaki nebezpečná?",
-        "sv": "Är kakikärnor farliga?"
+        "sv": "Är kakikärnor farliga?",
+        "da": "Er kakifrugtkerner farlige?"
       },
       "a": {
         "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -143,7 +152,8 @@
         "nl": "Ja, die moeten eruit. Ze kunnen verstikking en een darmverstopping veroorzaken, en kleine honden lopen het meeste risico.",
         "pl": "Tak, należy je usunąć. Mogą spowodować zadławienie i niedrożność jelit, a największe ryzyko dotyczy małych psów.",
         "cs": "Ano, je třeba je odstranit. Mohou způsobit dušení a ucpání střev, nejvíc jsou ohroženi malí psi.",
-        "sv": "Ja, de ska tas bort. De kan orsaka kvävning och tarmstopp, och små hundar löper störst risk."
+        "sv": "Ja, de ska tas bort. De kan orsaka kvävning och tarmstopp, och små hundar löper störst risk.",
+        "da": "Ja, de skal fjernes. De kan sætte sig fast i halsen og give tarmblokering, og små hunde er mest udsatte."
       }
     }
   ],
@@ -259,6 +269,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a9768d14e44a9501e9281d7477f3bde0366d453fcb4cfb6d0930196907e6fcf3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4812e8706decdbc91047381d6498f21caab026daff588387412de009e79fd38b"
     }
   }
 }

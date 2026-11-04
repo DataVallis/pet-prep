@@ -13,7 +13,8 @@
     "nl": "Kokosolie",
     "pl": "Olej kokosowy",
     "cs": "Kokosový olej",
-    "sv": "Kokosolja"
+    "sv": "Kokosolja",
+    "da": "Kokosolie"
   },
   "question": {
     "en": "Can dogs eat coconut oil?",
@@ -27,7 +28,8 @@
     "nl": "Mogen honden kokosolie eten?",
     "pl": "Czy psy mogą jeść olej kokosowy?",
     "cs": "Mohou psi jíst kokosový olej?",
-    "sv": "Får hundar äta kokosolja?"
+    "sv": "Får hundar äta kokosolja?",
+    "da": "Må hunde spise kokosolie?"
   },
   "url_slug": {
     "en": "coconut-oil",
@@ -41,7 +43,8 @@
     "nl": "kokosolie",
     "pl": "olej-kokosowy",
     "cs": "kokosovy-olej",
-    "sv": "kokosolja"
+    "sv": "kokosolja",
+    "da": "kokosolie"
   },
   "level": "not_recommended",
   "answer": {
@@ -56,7 +59,8 @@
     "nl": "Liever niet als vast onderdeel van het voer. Een likje is waarschijnlijk niet schadelijk, maar kokosolie bestaat vooral uit verzadigd vet: het kan buikklachten, vette ontlasting en diarree veroorzaken, en bij langdurig gebruik kan het leiden tot gewichtstoename en zelfs alvleesklierontsteking. Overleg eerst met je dierenarts.",
     "pl": "Nie zaleca się jako stałego dodatku. Jeśli pies zliże odrobinę, raczej nic się nie stanie, ale olej kokosowy to głównie tłuszcze nasycone: może wywołać rozstrój żołądka, tłuste stolce i biegunkę, a długotrwałe podawanie może prowadzić do przyrostu masy ciała, a nawet zapalenia trzustki. Najpierw porozmawiaj z weterynarzem.",
     "cs": "Jako pravidelná součást jídelníčku se nedoporučuje. Malé olíznutí nejspíš neuškodí, ale kokosový olej tvoří hlavně nasycené tuky: může způsobit podrážděný žaludek, mastnou stolici a průjem a při dlouhodobém podávání vést k nárůstu hmotnosti, ba dokonce k zánětu slinivky břišní. Nejdřív se poraďte s veterinářem.",
-    "sv": "Rekommenderas inte som ett regelbundet tillskott. Ett litet slick är knappast skadligt, men kokosolja består mest av mättat fett: den kan ge orolig mage, fettig avföring och diarré, och om hunden får den under lång tid kan det leda till viktuppgång och till och med bukspottkörtelinflammation (pankreatit). Prata med veterinären först."
+    "sv": "Rekommenderas inte som ett regelbundet tillskott. Ett litet slick är knappast skadligt, men kokosolja består mest av mättat fett: den kan ge orolig mage, fettig avföring och diarré, och om hunden får den under lång tid kan det leda till viktuppgång och till och med bukspottkörtelinflammation (pankreatit). Prata med veterinären först.",
+    "da": "Det frarådes som fast tilskud. En lille slikning gør næppe skade, men kokosolie består mest af mættet fedt: den kan give dårlig mave, fedtet afføring og diarré, og fast brug over længere tid kan føre til vægtøgning og endda betændelse i bugspytkirtlen. Tal med din dyrlæge først."
   },
   "why": {
     "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
@@ -70,7 +74,8 @@
     "nl": "Kokosolie bestaat grotendeels uit verzadigde vetten. Het kan leiden tot gewichtstoename en spijsverteringsklachten, en bij langdurig gebruik kan het obesitas veroorzaken en alvleesklierontsteking uitlokken. Er is geen uitgebreid onderzoek dat aantoont dat het gezond is voor honden. Een ander AKC-artikel zegt dat dagelijks geven niet wordt aanbevolen en dat kleine, incidentele hoeveelheden veiliger zijn; wij volgen het strengere advies en beoordelen het als niet aan te raden.",
     "pl": "Olej kokosowy składa się głównie z tłuszczów nasyconych. Podawanie go może prowadzić do przyrostu masy ciała i problemów trawiennych, a długotrwałe karmienie nim może prowadzić do otyłości i wywołać zapalenie trzustki. Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej pomaga zdrowiu psów. Inny artykuł AKC podaje, że codzienne podawanie nie jest zalecane, a małe, okazjonalne ilości są bezpieczniejsze; stosujemy surowszą radę i uznajemy olej kokosowy za niezalecany.",
     "cs": "Kokosový olej tvoří převážně nasycené tuky. Může vést k nárůstu hmotnosti a zažívacím potížím, při dlouhodobém krmení i k obezitě a může spustit zánět slinivky břišní. Žádný rozsáhlý výzkum neprokázal, že by psům prospíval. Další článek AKC uvádí, že se nedoporučuje dávat ho každý den a že malé, občasné množství je bezpečnější; my se řídíme přísnější radou a hodnotíme ho jako nedoporučený.",
-    "sv": "Kokosolja består till största delen av mättade fetter. Om hunden får den kan det leda till viktuppgång och magproblem, och långvarig utfodring kan leda till fetma och utlösa bukspottkörtelinflammation (pankreatit). Det finns ingen omfattande forskning som visar att den gör hundar friskare. I en annan AKC-artikel står det att daglig utfodring inte rekommenderas och att små mängder då och då är säkrare; vi följer det strängare rådet och bedömer den som ”rekommenderas inte”."
+    "sv": "Kokosolja består till största delen av mättade fetter. Om hunden får den kan det leda till viktuppgång och magproblem, och långvarig utfodring kan leda till fetma och utlösa bukspottkörtelinflammation (pankreatit). Det finns ingen omfattande forskning som visar att den gör hundar friskare. I en annan AKC-artikel står det att daglig utfodring inte rekommenderas och att små mängder då och då är säkrare; vi följer det strängare rådet och bedömer den som ”rekommenderas inte”.",
+    "da": "Kokosolie består mest af mættede fedtstoffer. Den kan give vægtøgning og fordøjelsesproblemer, og fast brug over længere tid kan føre til fedme og udløse betændelse i bugspytkirtlen. Der findes ikke omfattende forskning der viser at den gavner hundes helbred. En anden artikel fra AKC siger at daglig fodring ikke anbefales og at små, sjældne mængder er sikrere; vi følger den strengeste anbefaling og vurderer kokosolie som frarådet."
   },
   "signs": {
     "en": [
@@ -132,6 +137,11 @@
       "Orolig mage",
       "Fettig avföring",
       "Diarré"
+    ],
+    "da": [
+      "Dårlig mave",
+      "Fedtet afføring",
+      "Diarré"
     ]
   },
   "what_to_do": {
@@ -146,7 +156,8 @@
     "nl": "Als je hond een beetje kokosolie heeft gelikt, zal dat waarschijnlijk geen kwaad kunnen. Overleg met je dierenarts voordat je kokosolie te eten geeft of op de huid smeert.",
     "pl": "Jeśli twój pies zlizał odrobinę oleju kokosowego, raczej nie zaszkodzi mu to znacząco. Zanim zaczniesz dodawać olej kokosowy do jedzenia albo smarować nim skórę psa, omów to z weterynarzem.",
     "cs": "Pokud pes olízl trochu kokosového oleje, nejspíš mu to moc neuškodí. Než mu kokosový olej dáte jíst nebo ho natřete na kůži, poraďte se s veterinářem.",
-    "sv": "Om hunden har slickat i sig lite kokosolja orsakar det troligen ingen större skada. Prata med veterinären innan du ger kokosolja att äta eller stryker den på huden."
+    "sv": "Om hunden har slickat i sig lite kokosolja orsakar det troligen ingen större skada. Prata med veterinären innan du ger kokosolja att äta eller stryker den på huden.",
+    "da": "Hvis din hund har slikket lidt kokosolie, gør det sandsynligvis ikke meget skade. Tal med din dyrlæge før du giver hunden kokosolie at spise eller smører den på hundens hud."
   },
   "serving": null,
   "child": {
@@ -161,7 +172,8 @@
     "nl": "Kokosolie zit vol vet en kan de buik van een hond van streek maken. Alleen een volwassene en de dierenarts beslissen daarover.",
     "pl": "Olej kokosowy jest bardzo tłusty i może psu rozstroić brzuszek. Decydować o nim mogą tylko dorosły i weterynarz.",
     "cs": "Kokosový olej je hodně tučný a může psovi pokazit bříško. Rozhodují o něm jen dospělý a veterinář.",
-    "sv": "Kokosolja är väldigt fet och kan ge hunden ont i magen. Bara en vuxen och veterinären bestämmer om hunden får den."
+    "sv": "Kokosolja är väldigt fet och kan ge hunden ont i magen. Bara en vuxen och veterinären bestämmer om hunden får den.",
+    "da": "Kokosolie er meget fedtholdig og kan give hunden ondt i maven. Kun en voksen og dyrlægen bestemmer, om hunden må få den."
   },
   "faq": [
     {
@@ -177,7 +189,8 @@
         "nl": "Mag ik kokosolie op de huid van mijn hond smeren?",
         "pl": "Czy mogę smarować skórę psa olejem kokosowym?",
         "cs": "Mohu psovi natírat kůži kokosovým olejem?",
-        "sv": "Kan jag stryka kokosolja på hundens hud?"
+        "sv": "Kan jag stryka kokosolja på hundens hud?",
+        "da": "Må jeg smøre kokosolie på min hunds hud?"
       },
       "a": {
         "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
@@ -191,7 +204,8 @@
         "nl": "Kokosolie kan geïrriteerde plekken of een droge, jeukende huid verzachten, maar het maakt een rommeltje en kan de poriën verstoppen. Overleg met je dierenarts voordat je het gebruikt.",
         "pl": "Olej kokosowy może łagodzić podrażnione miejsca lub suchą, swędzącą skórę, ale brudzi i może zatykać pory. Przed użyciem omów to z weterynarzem.",
         "cs": "Kokosový olej může zklidnit podrážděná místa nebo suchou, svědící kůži, ale dělá nepořádek a může ucpat póry. Než ho použijete, poraďte se s veterinářem.",
-        "sv": "Kokosolja kan lindra irriterade ställen eller torr, kliande hud, men den kladdar och kan täppa till porerna. Prata med veterinären innan du använder den."
+        "sv": "Kokosolja kan lindra irriterade ställen eller torr, kliande hud, men den kladdar och kan täppa till porerna. Prata med veterinären innan du använder den.",
+        "da": "Kokosolie kan lindre irriterede områder eller tør, kløende hud, men den sviner og kan tilstoppe hudens porer. Tal med din dyrlæge før du bruger den."
       }
     },
     {
@@ -207,7 +221,8 @@
         "nl": "Is kokosolie goed voor de gezondheid van honden?",
         "pl": "Czy olej kokosowy jest dobry dla zdrowia psów?",
         "cs": "Je kokosový olej dobrý pro zdraví psů?",
-        "sv": "Är kokosolja bra för hundens hälsa?"
+        "sv": "Är kokosolja bra för hundens hälsa?",
+        "da": "Er kokosolie sundt for hunde?"
       },
       "a": {
         "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
@@ -221,7 +236,8 @@
         "nl": "Er is geen uitgebreid onderzoek dat aantoont dat kokosolie op veel vlakken zeker goed is voor de gezondheid van een hond.",
         "pl": "Nie przeprowadzono szeroko zakrojonych badań, które potwierdzałyby, że olej kokosowy na pewno pomaga w wielu aspektach zdrowia psa.",
         "cs": "Žádný rozsáhlý výzkum neprokázal, že by kokosový olej určitě prospíval zdraví psa v mnoha ohledech.",
-        "sv": "Det finns ingen omfattande forskning som visar att kokosolja med säkerhet är bra för hundens hälsa på många sätt."
+        "sv": "Det finns ingen omfattande forskning som visar att kokosolja med säkerhet är bra för hundens hälsa på många sätt.",
+        "da": "Der findes ikke omfattende forskning der viser at kokosolie helt sikkert gavner hundens helbred på flere områder."
       }
     }
   ],
@@ -349,6 +365,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "574bd1631a18fca63a59c52c5a0f12be3f8b713465637019fd04fd3678ba5a7a"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "507fb388c4178e120473e490b1370d05c61d179cd7006d78a837838a190a7f22"
     }
   }
 }

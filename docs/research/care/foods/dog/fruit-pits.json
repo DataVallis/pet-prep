@@ -13,7 +13,8 @@
     "nl": "Fruitpitten en -stenen",
     "pl": "Pestki owoców",
     "cs": "Ovocné pecky",
-    "sv": "Fruktkärnor och stenar"
+    "sv": "Fruktkärnor och stenar",
+    "da": "Frugtsten"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
@@ -27,7 +28,8 @@
     "nl": "Mogen honden fruitpitten eten?",
     "pl": "Czy psy mogą jeść pestki owoców?",
     "cs": "Mohou psi jíst ovocné pecky?",
-    "sv": "Får hundar äta fruktkärnor?"
+    "sv": "Får hundar äta fruktkärnor?",
+    "da": "Må hunde spise frugtsten?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -41,7 +43,8 @@
     "nl": "fruitpitten",
     "pl": "pestki-owocow",
     "cs": "ovocne-pecky",
-    "sv": "fruktkarnor-och-stenar"
+    "sv": "fruktkarnor-och-stenar",
+    "da": "frugtsten"
   },
   "level": "dangerous",
   "answer": {
@@ -56,7 +59,8 @@
     "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt.",
     "pl": "Nie. Pestek owoców takich jak czereśnie, brzoskwinie i nektarynki nigdy nie należy dawać psom. Mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a poza tym zawierają niewielką ilość cyjanku. Zawsze usuwaj pestki i nasiona, zanim podzielisz się owocem.",
     "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka.",
-    "sv": "Nej. Kärnor och stenar från frukter som körsbär, persikor och nektariner ska aldrig ges till hundar. De kan knäcka tänder, orsaka kvävning eller täppa till tarmen, och de innehåller lite cyanid. Ta alltid bort kärnor och frön innan du delar med dig av frukt."
+    "sv": "Nej. Kärnor och stenar från frukter som körsbär, persikor och nektariner ska aldrig ges till hundar. De kan knäcka tänder, orsaka kvävning eller täppa till tarmen, och de innehåller lite cyanid. Ta alltid bort kärnor och frön innan du delar med dig av frukt.",
+    "da": "Nej. Sten fra frugter som kirsebær, ferskner og nektariner må aldrig gives til hunde. De kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og de indeholder en lille mængde cyanid. Fjern altid sten og kerner før du deler frugt."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -70,7 +74,8 @@
     "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval.",
     "pl": "Twarde pestki mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a pestki o ostrych krawędziach mogą uszkodzić przełyk podczas połykania. Pestka zawiera też niewielką ilość cyjanku. Zatrucie cyjankiem po zjedzeniu pestkowców zdarza się rzadko, ale zwierzęta domowe mogą zachorować już po znikomej ilości, dlatego rozgryzioną pestkę traktuje się jako nagły przypadek.",
     "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ.",
-    "sv": "Hårda kärnor kan spräcka tänder, orsaka kvävning eller täppa till tarmen, och kärnor med vassa kanter kan skada matstrupen när de sväljs. Kärnan innehåller också lite cyanid. Cyanidförgiftning av stenfrukt är sällsynt, men djur kan bli sjuka av en liten mängd, så en sönderbiten kärna ska behandlas som ett akutfall."
+    "sv": "Hårda kärnor kan spräcka tänder, orsaka kvävning eller täppa till tarmen, och kärnor med vassa kanter kan skada matstrupen när de sväljs. Kärnan innehåller också lite cyanid. Cyanidförgiftning av stenfrukt är sällsynt, men djur kan bli sjuka av en liten mängd, så en sönderbiten kärna ska behandlas som ett akutfall.",
+    "da": "Hårde sten kan knække tænder, sætte sig fast i halsen eller blokere tarmen, og sten med ru kanter kan skade spiserøret når de sluges. Stenen indeholder også en lille mængde cyanid. Cyanidforgiftning fra stenfrugt er sjælden, men dyr kan blive syge af en helt lille mængde, så en sten der er knækket op, betragtes som en nødsituation."
   },
   "signs": {
     "en": [
@@ -168,6 +173,14 @@
       "Svårt att få ut avföring",
       "Ont i magen",
       "Svårt att andas"
+    ],
+    "da": [
+      "Brækfornemmelser",
+      "Savlen",
+      "Opkast",
+      "Besvær med at få afføring",
+      "Mavesmerter",
+      "Vejrtrækningsbesvær"
     ]
   },
   "what_to_do": {
@@ -182,7 +195,8 @@
     "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts.",
     "pl": "Od razu zadzwoń do weterynarza, jeśli twój pies rozgryzie pestkę. Jeśli pies połknął pestkę i pojawił się któryś z tych objawów, zadzwoń do weterynarza.",
     "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři.",
-    "sv": "Ring veterinären direkt om hunden har bitit sönder en kärna. Om hunden har svalt en kärna och visar något av de här tecknen, ring veterinären."
+    "sv": "Ring veterinären direkt om hunden har bitit sönder en kärna. Om hunden har svalt en kärna och visar något av de här tecknen, ring veterinären.",
+    "da": "Ring straks til din dyrlæge hvis din hund har knækket en sten op. Hvis hunden har slugt en sten og viser nogle af disse symptomer, skal du ringe til din dyrlæge."
   },
   "serving": null,
   "child": {
@@ -197,7 +211,8 @@
     "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet.",
     "pl": "Pestki owoców nie są dla psów. Wyrzucaj je do kosza, do którego pies nie sięgnie, i powiedz dorosłemu, jeśli pies jakąś zje.",
     "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému.",
-    "sv": "Fruktstenar är inte för hundar. Släng dem i en soptunna som hunden inte kommer åt, och säg till en vuxen om hunden äter en."
+    "sv": "Fruktstenar är inte för hundar. Släng dem i en soptunna som hunden inte kommer åt, och säg till en vuxen om hunden äter en.",
+    "da": "Frugtsten er ikke til hunde. Smid dem i en skraldespand som din hund ikke kan nå, og sig det til en voksen hvis hunden spiser en."
   },
   "faq": [
     {
@@ -213,7 +228,8 @@
         "nl": "Is het fruit zelf wel goed?",
         "pl": "Czy sam owoc jest w porządku?",
         "cs": "Je v pořádku samotné ovoce?",
-        "sv": "Är själva frukten okej?"
+        "sv": "Är själva frukten okej?",
+        "da": "Er selve frugten i orden?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -227,7 +243,8 @@
         "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft.",
         "pl": "To zależy od owocu; zobacz stronę danego owocu. Zasadniczo przed podaniem owocu psu należy usunąć nasiona, pestki, gniazda nasienne, skórki i szypułki.",
         "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky.",
-        "sv": "Det beror på frukten, så titta på respektive frukts sida. Som huvudregel bör frön, kärnor, kärnhus, skal och växtstjälkar tas bort innan hunden får frukt."
+        "sv": "Det beror på frukten, så titta på respektive frukts sida. Som huvudregel bör frön, kärnor, kärnhus, skal och växtstjälkar tas bort innan hunden får frukt.",
+        "da": "Det afhænger af frugten; se frugtens egen side. Som hovedregel bør kerner, sten, kernehuse, skaller og stilke fjernes før man giver en hund frugt."
       }
     },
     {
@@ -243,7 +260,8 @@
         "nl": "Welk fruit heeft pitten?",
         "pl": "Które owoce mają pestki?",
         "cs": "Které ovoce má pecky?",
-        "sv": "Vilka frukter har kärna eller sten?"
+        "sv": "Vilka frukter har kärna eller sten?",
+        "da": "Hvilke frugter har sten?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -257,7 +275,8 @@
         "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide.",
         "pl": "Owoce takie jak czereśnie, nektarynki i brzoskwinie to tzw. pestkowce. Podobnie jak w czereśniach, pestki brzoskwini zawierają cyjanek.",
         "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid.",
-        "sv": "Frukter som körsbär, nektariner och persikor kallas stenfrukter. Precis som körsbär innehåller persikokärnor cyanid."
+        "sv": "Frukter som körsbär, nektariner och persikor kallas stenfrukter. Precis som körsbär innehåller persikokärnor cyanid.",
+        "da": "Frugter som kirsebær, nektariner og ferskner kaldes stenfrugter. Ligesom kirsebærsten indeholder ferskensten cyanid."
       }
     }
   ],
@@ -380,6 +399,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "002e6bfef9b92a0ff7bc268a3e0f17c42c6b8ac0525af4cc7b0317a92e8bbda8"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9e7f1ba513f6b8d256fc8ed36bfca8ae32eec17bf9acfbe3f8855ce8f5624971"
     }
   }
 }
