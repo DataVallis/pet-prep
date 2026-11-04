@@ -206,6 +206,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-04 (cloud, devops) — post-deploy OTA job no longer skipped (`fix/ota-dispatch-if`, DEPLOYMENT.md D33 follow-up)
+Manual deploy 41914978019 (`491e9585`): deploy green, »Mobile OTA (after the production deploy)« skipped — its `if: needs.deploy.result == 'success'` carried the implicit `success()`, false when any transitive ancestor (suites skipped on a reuse run) was skipped. Now `always() && needs.deploy.result == 'success'`; `ci-plan.test.sh` checks every job for this trap. `491e9585`'s JS still went out via the manual deploy's `workflow_run` OTA 41916133863 (a daily deploy would have had none). Next: the next production deploy must show the job green + a »Mobile OTA after production deploy <id>« run.
+
 ### 2026-11-04 (cloud, devops/backend) — a killed scheduled run can no longer block the game loop for 24 h (`fix/scheduler-mutex-expiry`, DEPLOYMENT.md D34, server only → live after the next production deploy)
 Incident: after the 13:19 reboot `pets:process-decay` + `push:dispatch-scheduled` were skipped ~9 h (stale `withoutOverlapping` mutex, default 24 h expiry, Redis AOF), fixed by hand at 22:15 with `schedule:clear-cache`. Now: explicit expiries on every `withoutOverlapping()` (tick + push dispatch 3 min), the scheduler container clears schedule mutexes on start (`entrypoint.sh`), new `system-health:game-loop-check` → one Discord `game_loop_stalled` per stall > 5 min (sent directly), System health tile shows the recovery hint. Runbook PRODUCTION_DEPLOYMENT.md §8 »After a reboot / crash«. Gap: a dead scheduler container alerts nobody (tile only). Next: after the deploy, check the scheduler log shows `schedule:clear-cache` at start.
 
