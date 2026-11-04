@@ -35,8 +35,10 @@ use Illuminate\Support\Collection;
  *        a child when the cat reached its goal AND that child had at least
  *        ⌈goal / n⌉ successful wand sessions that day. One caretaker = the
  *        pet formula. Pending routines (deadline ahead) are not scored yet.
- * Light: RED = game over, phase-3 alarm active (a metric shown 0 % > 1 h)
- *        or the pet fell ill today; else YELLOW = more than 2 routines
+ * Light: RED = game over, phase-3 alarm active NOW (a metric shows 0 % and
+ *        its neglect clock ran > 1 h — EscalationService::parentAlarmMetric,
+ *        not the stored escalation_level; fix 2026-11-04) or the pet fell ill
+ *        today; else YELLOW = more than 2 routines
  *        missed today — of today's date or with a deadline today (per
  *        child: every missed routine they shared — a sibling can't hide
  *        behind the other); else GREEN. Today = the family-local day.
@@ -602,7 +604,9 @@ class CareScoreService
         $reasons = [];
         if ($pet->is_game_over) {
             $reasons[] = 'game_over';
-        } elseif ($pet->escalation_level >= 3) {
+        } elseif (EscalationService::parentAlarmMetric($pet, $board['now']) !== null) {
+            // The phase-3 condition as it is NOW (a metric shows 0 % > 1 h), never the
+            // stored ladder level (fix 2026-11-04: a stale level 3 kept »Nujno«).
             $reasons[] = 'phase3_alarm';
         }
 

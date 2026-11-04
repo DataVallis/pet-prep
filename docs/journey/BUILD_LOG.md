@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-04 — »Nujno« pomeni: nekaj je treba narediti zdaj
+
+**Kaj:** David je na pregledu družine pri Suki videl rdeče »Nujno« z razlogom »Kuža že več kot uro nima hrane, vode ali čistoče.«, čeprav je bilo vse počiščeno, nahranjeno in napojeno že uro prej (vse metrike zelene). Semafor je bral shranjeno raven alarma, ki se je spustila šele, ko so bile vse metrike nad 30 %. Zdaj strežnik »Nujno« zaradi alarma pokaže samo, dokler metrika **ta trenutek** kaže 0 % več kot 1 uro; zamujena rutina od prej danes ostane pod »Zamujeno«.
+**Zakaj je pomembno:** starš mora rdečemu zaupati — če kaže »Nujno«, ko ni nič narobe, ga hitro začne ignorirati, tudi ko bo res nujno.
+**Kako povedati:** 👩 »Rdeča pomeni: ukrepaj zdaj. Kar je otrok zamudil prej v dnevu, vidite pod ›Zamujeno‹.« · 🛠 »Semafor naj bere stanje, ne shranjenega zastavice — zastavica je le zgodovina, kdo jo je zadnji postavil.«
+
 ## 2026-11-04 — Šola: brez zavajajočega napisa »Tapni«
 
 Na Davidov predlog smo iz šole odstranili napis »Tapni« pod gumbom, ker je otrok mislil, da mora tapniti takoj — zdaj mu pravi trenutek pokažeta samo utripajoči gumb in napis »Zdaj!«.

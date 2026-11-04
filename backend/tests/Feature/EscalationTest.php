@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\PetUpdated;
 use App\Models\ActivityLog;
 use App\Models\Pet;
 use App\Models\User;
@@ -7,6 +8,7 @@ use App\Services\EscalationService;
 use App\Services\PetDecayService;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -110,6 +112,43 @@ describe('EscalationService - 3-tier escalation matrix', function () {
 
         $pet->refresh();
         expect($pet->escalation_level)->toBe(0);
+    });
+
+    it('ends phase 3 once nothing shows 0 % for more than 1 h — steps down to the phase of now, no new log row (fix 2026-11-04)', function () {
+        // The mess that raised phase 3 was cleaned, the dog is still hungry (25 %):
+        // the ladder used to keep level 3 (= »Nujno« for the parent) until every metric was > 30 %.
+        $user = User::factory()->child()->create();
+        $pet = Pet::factory()->create([
+            'user_id' => $user->id,
+            'hunger_level' => 25,
+            'thirst_level' => 100,
+            'energy_level' => 100,
+            'hygiene_level' => 100,
+            'hygiene_zero_since' => null,
+            'escalation_level' => 3,
+        ]);
+        Event::fake([PetUpdated::class]);
+        $rows = ActivityLog::where('pet_id', $pet->id)->count();
+
+        $service = app(EscalationService::class);
+        expect($service->processPetEscalation($pet))->toBeTrue()
+            ->and($pet->fresh()->escalation_level)->toBe(1)
+            ->and(ActivityLog::where('pet_id', $pet->id)->count())->toBe($rows);
+        Event::assertDispatched(PetUpdated::class, fn (PetUpdated $e) => $e->petId === $pet->id && $e->eventType === 'escalation_reset');
+
+        // Stable afterwards: phase 1 is already reached, nothing more happens.
+        expect($service->processPetEscalation($pet->fresh()))->toBeFalse()
+            ->and($pet->fresh()->escalation_level)->toBe(1);
+
+        // At 5 % (another metric at 0 % for less than 1 h counts as ≤ 10 %) → phase 2 on the next step down.
+        $pet->update(['escalation_level' => 3, 'hunger_level' => 0, 'hunger_zero_since' => now()->subMinutes(20)]);
+        $service->processPetEscalation($pet->fresh());
+        expect($pet->fresh()->escalation_level)->toBe(2);
+
+        // A metric still at 0 % for more than 1 h keeps phase 3.
+        $pet->update(['escalation_level' => 3, 'hunger_zero_since' => now()->subMinutes(90)]);
+        expect($service->processPetEscalation($pet->fresh()))->toBeFalse()
+            ->and($pet->fresh()->escalation_level)->toBe(3);
     });
 
     it('escalates progressively from Phase 1 to Phase 2', function () {

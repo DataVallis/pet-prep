@@ -495,12 +495,14 @@ class FamilyDashboardService
     /**
      * Legacy pet-level traffic light (top-level `traffic_light` of the
      * dashboard, old app builds — deprecated since M2-06): red = game over,
-     * phase 3 or ill; amber = escalation 1–2; green otherwise. The spec
-     * light (PRODUCT_SPEC §9) is CareScoreService::petLight / childLight.
+     * phase 3 active now (EscalationService::parentAlarmMetric — fix
+     * 2026-11-04) or ill; amber = escalation 1–3 without a current alarm;
+     * green otherwise. The spec light (PRODUCT_SPEC §9) is
+     * CareScoreService::petLight / childLight.
      */
     public static function trafficLight(Pet $pet): string
     {
-        if ($pet->is_game_over || $pet->escalation_level >= 3 || $pet->isIll()) {
+        if ($pet->is_game_over || EscalationService::parentAlarmMetric($pet) !== null || $pet->isIll()) {
             return 'red';
         }
 

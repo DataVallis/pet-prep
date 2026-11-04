@@ -676,13 +676,70 @@ describe('traffic light', function () {
             ->and($scores->childLight($board, $luka->id, $pet))->toBe(['color' => 'yellow', 'reasons' => ['missed_routines']]);
     });
 
-    it('red when the phase-3 alarm is active', function () {
+    it('red when the phase-3 alarm is active (a metric shows 0 % for more than 1 h)', function () {
         [, $child, $pet] = rsFamily();
         rsAt('2026-10-13 06:00:00');
-        Pet::whereKey($pet->id)->update(['escalation_level' => 3]);
+        Pet::whereKey($pet->id)->update([
+            'escalation_level' => 3,
+            'hygiene_level' => 0,
+            'hygiene_zero_since' => Carbon::parse('2026-10-13 04:30:00', 'UTC'),
+        ]);
 
         expect(app(CareScoreService::class)->childLight(rsBoard($pet), $child->id, $pet->fresh()))
             ->toBe(['color' => 'red', 'reasons' => ['phase3_alarm']]);
+    });
+
+    it('phase 3 follows the current state, not the stored ladder level (fix 2026-11-04)', function () {
+        [, $child, $pet] = rsFamily();
+        rsAt('2026-10-13 06:00:00');
+        $scores = app(CareScoreService::class);
+
+        // 0 % for more than 1 h: red even before the minute tick raised the level.
+        Pet::whereKey($pet->id)->update(['escalation_level' => 0, 'hunger_level' => 0, 'hunger_zero_since' => Carbon::parse('2026-10-13 04:59:00', 'UTC')]);
+        expect($scores->childLight(rsBoard($pet), $child->id, $pet->fresh())['reasons'])->toBe(['phase3_alarm']);
+
+        // 0 % for less than 1 h: not (yet) urgent.
+        Pet::whereKey($pet->id)->update(['hunger_zero_since' => Carbon::parse('2026-10-13 05:01:00', 'UTC')]);
+        expect($scores->childLight(rsBoard($pet), $child->id, $pet->fresh())['color'])->toBe('green');
+
+        // Fed again (shows > 0 %) while a stale clock is still on the row: not urgent.
+        Pet::whereKey($pet->id)->update(['escalation_level' => 3, 'hunger_level' => 100, 'hunger_zero_since' => Carbon::parse('2026-10-13 03:00:00', 'UTC')]);
+        expect($scores->childLight(rsBoard($pet), $child->id, $pet->fresh())['color'])->toBe('green');
+
+        // Hard stop: the neglect clock stands still at frozen_at (0 % for 30 min before the stop → not urgent).
+        Pet::whereKey($pet->id)->update([
+            'hunger_level' => 0, 'hunger_zero_since' => Carbon::parse('2026-10-13 03:00:00', 'UTC'),
+            'is_hard_stopped' => true, 'frozen_at' => Carbon::parse('2026-10-13 03:30:00', 'UTC'),
+        ]);
+        expect($scores->childLight(rsBoard($pet), $child->id, $pet->fresh())['color'])->toBe('green');
+    });
+
+    it('David 2026-11-04: an alarm from a mess missed earlier today is not »Nujno« once everything is done', function () {
+        // Mess at 15:53 local (deadline 17:53) left until 19:49 → phase 3 was raised at 16:53.
+        // At 19:49 the child cleaned, fed and watered; at 20:49 the parent opens »Pregled družine«.
+        // The stored ladder level is still 3 (it is only lowered by the minute tick) — that alone
+        // used to show »Nujno« + »… več kot uro nima hrane, vode ali čistoče« with every meter green.
+        [$parent, $child, $pet] = rsFamily();
+        rsMess($pet, '2026-10-13 13:53:00', '2026-10-13 17:49:00', $child);
+        rsAct($pet, 'fed_pet', '2026-10-13 17:49:30', $child);
+        rsAct($pet, 'watered_pet', '2026-10-13 17:49:40', $child);
+        rsAt('2026-10-13 18:49:00');
+        Pet::whereKey($pet->id)->update([
+            'escalation_level' => 3,
+            'hunger_level' => 89, 'thirst_level' => 86, 'hygiene_level' => 100, 'energy_level' => 100,
+            'hunger_zero_since' => null, 'thirst_zero_since' => null, 'hygiene_zero_since' => null,
+        ]);
+
+        actingAsRole($parent);
+        $res = getJson('/api/parent/dashboard')->assertOk();
+
+        expect($res->json('family.children.0.traffic_light.reasons'))->not->toContain('phase3_alarm')
+            ->and($res->json('family.children.0.traffic_light.color'))->not->toBe('red')
+            ->and($res->json('family.pets.0.traffic_light.color'))->not->toBe('red')
+            // The missed clean stays visible where it belongs: »Zamujeno«.
+            ->and($res->json('family.children.0.today.missed_count'))->toBeGreaterThanOrEqual(1)
+            ->and(collect($res->json('family.children.0.today.missed'))->pluck('type')->all())->toContain('clean')
+            ->and(getJson("/api/parent/children/{$child->id}/report")->assertOk()->json('traffic_light.color'))->not->toBe('red');
     });
 
     it('red when the pet fell ill today, not for yesterday\'s illness', function () {
