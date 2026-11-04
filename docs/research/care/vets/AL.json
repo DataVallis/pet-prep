@@ -1,0 +1,55 @@
+{
+  "country": "AL",
+  "checked": "2026-11-04",
+  "sources": [
+    {
+      "name": "Albanian Prime Minister's office - Vet Hospital Tirana (newsroom)",
+      "url": "https://kryeministria.al/en/newsroom/vet-hospital-nje-destinacion-humanizmi-dhe-kujdesi-shendetesor/",
+      "note": "Official government page; states 24/7 emergency service, around the clock; no address/phone/website for the hospital."
+    },
+    {
+      "name": "A2 CNN - Vet Hospital Tirana opens",
+      "url": "https://a2news.com/english/shqiperia/aktualitet/hapet-vet-hospital-tirana-spitali-i-pare-me-i-madh-per-kafs-i1149201",
+      "note": "News article; confirms 24/7 emergency care; no contact data."
+    },
+    {
+      "name": "Discovering Albania - Klinika Veterinare Putrat, Shkodër",
+      "url": "https://discoveringalbania.com/2017/12/08/grand-re-opening-klinika-veterinare-putrat-shkoder/",
+      "note": "2017 blog post; address Rruga Hoxha Tasim, Shkodër; links the clinic's Facebook page."
+    },
+    {
+      "name": "village.ai - vet hospital tirana",
+      "url": "https://village.ai/company/vet-hospital-tirana",
+      "note": "Company directory (aggregator, not used as sole source); only gives the hospital's domain vethospitaltirana.com."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Vet Hospital Tirana",
+      "city": "Tirana",
+      "region": "Tirana",
+      "emergency_24h": true,
+      "duty": "Emergency service available 24 hours a day, 7 days a week.",
+      "small_animals": true,
+      "url": "https://vethospitaltirana.com",
+      "source_url": "https://kryeministria.al/en/newsroom/vet-hospital-nje-destinacion-humanizmi-dhe-kujdesi-shendetesor/",
+      "checked": "2026-11-04",
+      "note": "Official government newsroom page says '24/7 emergency service' and 'available around the clock, 24 hours a day' (A2 CNN, Albanian Times and Euronews.al say the same). No phone or street address on any opened page (the +355 4 2277 369 on the government page is the PM office). Domain vethospitaltirana.com taken from village.ai; the site itself could not be opened (WebFetch provenance block), so phone/address are missing. Travel blog camperstyle.de (2017) lists a 'Vet Hospital Tirana' at Rruga Hiqmet Buzi, Sauk Vjetër with +355 67 239 1111, but that predates the 2025 opening, so not used. Add phone/address once the own site can be read. Independent check 2026-11-04: source_url re-opened, name and explicit 24/7 claim confirmed; own site still blocked (provenance), domain-restricted search returned nothing."
+    },
+    {
+      "kind": "clinic",
+      "name": "Klinika Veterinare Putrat",
+      "city": "Shkodër",
+      "region": "Shkodër",
+      "address": "Rruga Hoxha Tasim, Shkodër",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://www.facebook.com/KLINIKA.VETERINARE.PUTRAT",
+      "source_url": "https://discoveringalbania.com/2017/12/08/grand-re-opening-klinika-veterinare-putrat-shkoder/",
+      "checked": "2026-11-04",
+      "note": "Only source is a Dec 2017 blog post (address, Facebook link, vet Dr. Rubin Piranaj - name not published). No phone, no hours, no 24h claim; Facebook page not opened. Current status unknown. Independent check 2026-11-04: source_url re-opened, name (Klinika Veterinare Putrat), address and Facebook link confirmed; page has no 24h claim, so emergency_24h stays false."
+    }
+  ],
+  "notes": "Very little verifiable data for Albania. Not found/opened: no readable register of the Dhoma e Veterinerëve (search returned nothing usable), no page of the Autoriteti Kombëtar i Ushqimit / ISUV / Ministry of Agriculture listing private clinics (qsut.gov.al is the human-health hospital centre, unrelated), Agricultural University of Tirana vet faculty has no clinic page found (WikiVet page is empty and from 2013). Own site of Vet Hospital Tirana (vethospitaltirana.com) could not be fetched (not in the allowed URL set), so no phone/address. No clinic with own website found for Durrës, Vlorë, Sarandë, Ksamil, Himarë, Velipojë, Korçë, Elbasan, Fier. Leads that need a better source: Pet Care Veterinary Clinic, Gjergj Arianiti road, Sarandë (Dr. Sheme Cela; named on wet-noses-saranda.netlify.app, no phone) ; Pets & Partners Albania, Tirana, +355 42 468 417 (bringfido listing only); 2017 travel-blog list (camperstyle.de) of Spitali Veterinar Ndërkombëtar i Tiranës (Rruga e Elbasanit, Sauk), Mobil Veterinary Albania (Rruga Frederik Shiroka), Klinika Veterinare Gogu (Rruga e Dibrës), Farmacia Veterinare Bega (Gjirokastër) - stale, not published. No duty rota (rojë) and no animal poison line found in Albania. Next run should search Facebook/Instagram-linked clinic pages and Albanian-language terms (klinika veterinare + city) with the allowed fetch route."
+}
