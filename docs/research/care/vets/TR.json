@@ -31,6 +31,21 @@
       "name": "Clinic websites opened with WebFetch",
       "url": "https://www.anatoliapet.com/",
       "note": "No official duty rota or poison line could be opened, so every clinic entry uses the clinic's own site as source_url (found via WebSearch)."
+    },
+    {
+      "name": "Antalya Büyükşehir Belediyesi – Veterinerlik Hizmetleri",
+      "url": "https://www.antalya.bel.tr/en/veterinerlik-hizmetleri",
+      "note": "Opened. Describes stray-animal care facilities (24/7) and animal ambulance; no private clinics, no duty rota, no animal hospital contact; not listed. Municipal switchboard 0242 249 50 00."
+    },
+    {
+      "name": "T.C. Tarım ve Orman Bakanlığı – Antalya İl Müdürlüğü, Hayvan Sağlığı",
+      "url": "https://antalya.tarimorman.gov.tr/menu/49/hayvan-sagligi-ve-yetistiriciligi",
+      "note": "Opened. Lists licensed animal hospitals by neighbourhood only, no phone numbers, no duty vet; used only as a lead."
+    },
+    {
+      "name": "Antalya clinic websites opened with WebFetch",
+      "url": "https://aksucoskunveteriner.com/antalya-hayvan-hastanesi",
+      "note": "Each Antalya entry uses the clinic's own site as source_url. Leads were found via WebSearch; aggregator pages (petzzshop, alanyaveterineri.com, mygazete) were opened only to get names and never used as source_url."
     }
   ],
   "entries": [
@@ -770,7 +785,143 @@
       "source_url": "https://www.fatihsifaveterinerklinigi.com/",
       "checked": "2026-11-04",
       "note": "Hours not published; the only '7 gün 24 saat' is inside a customer testimonial (not used as 24 h claim)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Çağlayan Veteriner Kliniği",
+      "city": "Antalya (Muratpaşa)",
+      "region": "Muratpaşa",
+      "address": "Çağlayan Mah. 2043. Sok. 14/A, Muratpaşa",
+      "phone": "+90 507 937 93 92",
+      "emergency_24h": true,
+      "duty": "Open 24 h, 7 days a week, also accepts night emergencies; phone also on WhatsApp",
+      "small_animals": true,
+      "url": "https://www.caglayanveterinerklinigi.com/",
+      "source_url": "https://caglayanveterinerklinigi.com/antalya-7-24-acik-veteriner-klinigi",
+      "checked": "2026-11-04",
+      "note": "Second number on site: +90 532 172 78 23.",
+      "quote": "Evet, kliniğimiz Antalya Muratpaşa’da 7/24 açıktır ve gece acil vakaları kabul eder."
+    },
+    {
+      "kind": "clinic",
+      "name": "Coşkun Veteriner Kliniği (Antalya Hayvan Hastanesi)",
+      "city": "Antalya (Aksu)",
+      "region": "Aksu",
+      "address": "Çalkaya Mah. Mevlana Cad. No:12B, Aksu",
+      "phone": "+90 545 371 13 14",
+      "emergency_24h": true,
+      "duty": "Open 24 h, 7 days a week for emergencies; phone also on WhatsApp",
+      "small_animals": true,
+      "url": "https://aksucoskunveteriner.com/",
+      "source_url": "https://aksucoskunveteriner.com/antalya-hayvan-hastanesi",
+      "checked": "2026-11-04",
+      "note": "Site lists hours 00:00-23:59 every day.",
+      "quote": "haftanın 7 günü, 24 saat açık"
+    },
+    {
+      "kind": "clinic",
+      "name": "Antalya Dünya Veteriner (Kepez)",
+      "city": "Antalya (Kepez)",
+      "region": "Kepez",
+      "phone": "+90 553 573 00 67",
+      "emergency_24h": true,
+      "duty": "Emergency service 7 days a week, 24 h, including Sundays; phone also on WhatsApp",
+      "small_animals": true,
+      "url": "https://www.antalyadunyaveteriner.com/",
+      "source_url": "https://www.antalyadunyaveteriner.com/",
+      "checked": "2026-11-04",
+      "note": "Page names only Dokuma Mahallesi, no street address, no hours; 24 h claim concerns emergencies.",
+      "quote": "7×24 acil durumlarda pazar günleri dahil olmak üzere hizmetinizdeyiz."
+    },
+    {
+      "kind": "clinic",
+      "name": "Premium VTM Veteriner Kliniği",
+      "city": "Antalya (Konyaaltı)",
+      "region": "Konyaaltı",
+      "address": "Gürsu Mah. Atatürk Bulvarı, UZAŞ Cumhuriyet Sitesi A3 Blok No:158AA, Konyaaltı",
+      "phone": "+90 535 042 14 51",
+      "emergency_24h": true,
+      "duty": "Open 24 h, 7 days a week; emergency line also on WhatsApp",
+      "small_animals": true,
+      "url": "https://www.premiumveteriner.com/",
+      "source_url": "https://www.premiumveteriner.com/",
+      "checked": "2026-11-04",
+      "note": "Phone labelled 'Acil 7/24' on site.",
+      "quote": "haftanın 7 günü 24 saat hizmet vermektedir"
+    },
+    {
+      "kind": "clinic",
+      "name": "Akdeniz Hayvan Hastanesi",
+      "city": "Antalya (Muratpaşa)",
+      "region": "Muratpaşa",
+      "address": "Güzeloba Mah. Bülent Ecevit Bulvarı 2160 Sok. 35/A, Muratpaşa",
+      "phone": "+90 242 321 98 99",
+      "emergency_24h": false,
+      "duty": "24/7 emergency support phone line; call ahead",
+      "small_animals": true,
+      "url": "https://akdenizhayvanhastanesi.com/",
+      "source_url": "https://akdenizhayvanhastanesi.com/",
+      "checked": "2026-11-04",
+      "note": "Site shows '7/24 ACİL DESTEK HATTI' and 'hastanemiz açık' but no explicit 24 h opening hours, so emergency_24h left false. Address on site differs from third-party listings (Havaalanı Cd. 62/B)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Laralife Veteriner Kliniği",
+      "city": "Antalya (Muratpaşa)",
+      "region": "Muratpaşa",
+      "address": "Fener Mah. Bülent Ecevit Bulvarı, Saraçoğlu Sitesi B Blok No:9/A, Muratpaşa",
+      "phone": "+90 544 856 26 32",
+      "emergency_24h": false,
+      "duty": "Reachable by phone 24 h a day, 7 days a week; confirm opening hours by phone",
+      "small_animals": true,
+      "url": "https://www.laralifevetclinic.com/",
+      "source_url": "https://www.laralifevetclinic.com/bizeulasin/",
+      "checked": "2026-11-04",
+      "note": "Site contradicts itself: header 9:00-20:00 vs footer '7/24'; home FAQ says 'Haftanın her günü ,günün 24 saati bize ulaşabilirsiniz' (reachability, not clinic opening). emergency_24h therefore false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Kemer Volga Veteriner Kliniği",
+      "city": "Antalya (Kemer)",
+      "region": "Kemer",
+      "address": "Yeni Mah. Dörtyol Blv. No:27/C, Kemer",
+      "phone": "+90 542 213 66 36",
+      "emergency_24h": false,
+      "duty": "24/7 support phone line; call ahead",
+      "small_animals": true,
+      "url": "https://www.kemervet.com/",
+      "source_url": "https://www.kemervet.com/",
+      "checked": "2026-11-04",
+      "note": "Site shows label '7/24 Destek Hattı' only; no opening hours, so emergency_24h false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Side Veteriner Kliniği",
+      "city": "Antalya (Manavgat)",
+      "region": "Manavgat",
+      "address": "Side Mah. Cemal Gürsel Bulvarı No:15, Manavgat",
+      "phone": "+90 242 753 61 63",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 09:30-19:00, Sun 10:00-16:00",
+      "small_animals": true,
+      "url": "https://www.sidevet.net/tr/iletisim",
+      "source_url": "https://www.sidevet.net/tr/iletisim",
+      "checked": "2026-11-04"
+    },
+    {
+      "kind": "clinic",
+      "name": "Kestel Veteriner Kliniği",
+      "city": "Antalya (Alanya)",
+      "region": "Alanya",
+      "address": "Kestel, Alanya",
+      "phone": "+90 532 688 85 74",
+      "emergency_24h": false,
+      "small_animals": true,
+      "url": "https://kestelveterinerklinigi.com.tr/en/index.html",
+      "source_url": "https://kestelveterinerklinigi.com.tr/en/index.html",
+      "checked": "2026-11-04",
+      "note": "Site gives only 'Kestel, Alanya' and a phone; no hours."
     }
   ],
-  "notes": "Not found/not done: no official duty (nöbetçi) rota and no animal poison line could be opened (İstanbul Veteriner Hekimler Odası ivho.org.tr and all İBB veterinary pages tarim.ibb.istanbul / vetnet.ibb.gov.tr are blocked by robots; TVHB odalar page lists the chamber contact 0212 292 01 00 but no rota). Aggregator duty lists (mihav.com etc.) were not used. İÜ-Cerrahpaşa animal hospital pages returned no contact/hours text. Unreachable (robots or error), skipped: Ola Veteriner, GomVet, Heka Vet (Beşiktaş), Sahrayıcedit, ModernVet, Medline Vet, Taksim Veteriner Kliniği, Anadolu Veteriner Polikliniği, PetPark Bakırköy, Marina Veteriner, Petricor, Greenpet, Papsivet, Dost Veteriner, LiveVet Bakırköy, Maltepe Platinum, Emar, TherapetVet. Left: more 24-h and small-animal clinics (Fatih, Beyoğlu, Şişli, Pendik, Ümraniye, Avcılar, Küçükçekmece, Bahçelievler), municipal animal hospitals, university hospital contact data, other Adalar clinics. 2026-11-04 follow-up (districts): added Ümraniye, Avcılar, Şişli, Pendik, Küçükçekmece, Bahçelievler, Beyoğlu, Fatih clinics from their own sites. Unreachable (robots or error), skipped: Nöbetçi Veteriner/Pethome Küçükçekmece, Gülbağ Veteriner, Neta Veteriner, Vital Veteriner, Bahçelievler Veteriner (bahcelievlerveteriner.com.tr), Kurtköy Veteriner Kliniği, Pets Ultimate, Africa Veteriner Pendik, Yıldız Veterinerlik, Lina Veteriner Fındıklı, Veteriner Anadolu, beyogluveteriner.com (empty page), Vethaven (redirect loop), Veticana /iletisim (not fetchable). Fatih Belediyesi veterinary page (fatih.bel.tr) has no clinic hours or address, only FABİM 0212 453 14 53, so no entry. Left: Adalar private clinics (only the municipal unit found), Beyoğlu/Fatih 24 h clinics (none found on own sites), more Pendik/Ümraniye/Şişli small-animal clinics, municipal animal hospitals, university hospital contact data."
+  "notes": "Not found/not done: no official duty (nöbetçi) rota and no animal poison line could be opened (İstanbul Veteriner Hekimler Odası ivho.org.tr and all İBB veterinary pages tarim.ibb.istanbul / vetnet.ibb.gov.tr are blocked by robots; TVHB odalar page lists the chamber contact 0212 292 01 00 but no rota). Aggregator duty lists (mihav.com etc.) were not used. İÜ-Cerrahpaşa animal hospital pages returned no contact/hours text. Unreachable (robots or error), skipped: Ola Veteriner, GomVet, Heka Vet (Beşiktaş), Sahrayıcedit, ModernVet, Medline Vet, Taksim Veteriner Kliniği, Anadolu Veteriner Polikliniği, PetPark Bakırköy, Marina Veteriner, Petricor, Greenpet, Papsivet, Dost Veteriner, LiveVet Bakırköy, Maltepe Platinum, Emar, TherapetVet. Left: more 24-h and small-animal clinics (Fatih, Beyoğlu, Şişli, Pendik, Ümraniye, Avcılar, Küçükçekmece, Bahçelievler), municipal animal hospitals, university hospital contact data, other Adalar clinics. 2026-11-04 follow-up (districts): added Ümraniye, Avcılar, Şişli, Pendik, Küçükçekmece, Bahçelievler, Beyoğlu, Fatih clinics from their own sites. Unreachable (robots or error), skipped: Nöbetçi Veteriner/Pethome Küçükçekmece, Gülbağ Veteriner, Neta Veteriner, Vital Veteriner, Bahçelievler Veteriner (bahcelievlerveteriner.com.tr), Kurtköy Veteriner Kliniği, Pets Ultimate, Africa Veteriner Pendik, Yıldız Veterinerlik, Lina Veteriner Fındıklı, Veteriner Anadolu, beyogluveteriner.com (empty page), Vethaven (redirect loop), Veticana /iletisim (not fetchable). Fatih Belediyesi veterinary page (fatih.bel.tr) has no clinic hours or address, only FABİM 0212 453 14 53, so no entry. Left: Adalar private clinics (only the municipal unit found), Beyoğlu/Fatih 24 h clinics (none found on own sites), more Pendik/Ümraniye/Şişli small-animal clinics, municipal animal hospitals, university hospital contact data. 2026-11-04 Antalya run: no official duty (nöbetçi) rota and no animal poison line found (Antalya Veteriner Hekimleri Odası site not found via search; antalya.bel.tr and Tarım ve Orman İl Müdürlüğü pages have no rota/phones; no Akdeniz University veterinary hospital exists in Antalya, the nearest university animal hospital is Burdur MAKÜ, outside the province, and no page for it was opened). Blocked by robots, skipped: antlarahayvanhastanesi.com, finkumveteriner.com, konyaaltihayvanhastanesi.com, animalveteriner.com, intvethospital.com (International/Lara Veteriner), vetmemorial.com.tr, kemerkoyveteriner.com, yogurtcuvet.com, animaveteriner.com, patibuveteriner.com. Unreachable/empty: mahmutlarvet.com, alanyaveteriner.com, pandavetklinik.com, vetsaglik.com. Opened but not listed: vetpalas.com (Lara; no address/phone on page). Aggregator-only 24 h claims NOT used (no clinic own page opened): Alanya (Bremen's, Alaiye, Old MacDonald, Aldeva), Gazipaşa (Simbiyoz, Tepe, Güneş, Tarık Günday), Kepez Hoyraz, Muratpaşa Lara/Medikal/Işıklar, Kaş (Mavi, Pati, Kaş, Albatros), Kemer Kardelen, Manavgat (Gün, Örnek, Kubilay), Serik Cebesoy, Korkuteli, Akseki, Gündoğmuş; own sites not found by search. Left: Belek/Serik, Kalkan, Demre, Finike, Kumluca, Döşemealtı, Konyaaltı and Alanya clinics with own sites."
 }
