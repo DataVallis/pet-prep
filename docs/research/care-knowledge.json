@@ -43139,6 +43139,36 @@
   ],
   "vets": [
     {
+      "country": "AL",
+      "kind": "clinic",
+      "name": "Vet Hospital Tirana",
+      "city": "Tirana",
+      "region": "Tirana",
+      "address": null,
+      "phone": null,
+      "emergency_24h": true,
+      "duty": "Emergency service available 24 hours a day, 7 days a week.",
+      "duty_i18n": null,
+      "url": "https://vethospitaltirana.com",
+      "source_url": "https://kryeministria.al/en/newsroom/vet-hospital-nje-destinacion-humanizmi-dhe-kujdesi-shendetesor/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "AL",
+      "kind": "clinic",
+      "name": "Klinika Veterinare Putrat",
+      "city": "Shkodër",
+      "region": "Shkodër",
+      "address": "Rruga Hoxha Tasim, Shkodër",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": "https://www.facebook.com/KLINIKA.VETERINARE.PUTRAT",
+      "source_url": "https://discoveringalbania.com/2017/12/08/grand-re-opening-klinika-veterinare-putrat-shkoder/",
+      "checked": "2026-11-04"
+    },
+    {
       "country": "AT",
       "kind": "clinic",
       "name": "Universitätsklinik für Kleintiere — Vetmeduni Vienna (Tierspital)",
