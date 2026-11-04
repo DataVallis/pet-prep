@@ -5,32 +5,37 @@
     "en": "Fruit pits and stones",
     "sl": "Koščice sadja",
     "de": "Obstkerne",
-    "fr": "Noyaux de fruits"
+    "fr": "Noyaux de fruits",
+    "es": "Huesos y semillas de fruta"
   },
   "question": {
     "en": "Can cats eat fruit pits?",
     "sl": "Ali lahko mačke jedo koščice sadja?",
     "de": "Dürfen Katzen Obstkerne fressen?",
-    "fr": "Les chats peuvent-ils manger des noyaux de fruits ?"
+    "fr": "Les chats peuvent-ils manger des noyaux de fruits ?",
+    "es": "¿Pueden los gatos comer huesos de fruta?"
   },
   "url_slug": {
     "en": "fruit-pits",
     "sl": "koscice-sadja",
     "de": "obstkerne",
-    "fr": "noyaux-de-fruits"
+    "fr": "noyaux-de-fruits",
+    "es": "huesos-y-semillas-de-fruta"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
     "sl": "Ne. Koščice in semena koščičastega sadja naj bodo daleč od mačk. ASPCA češnjo, breskev, slivo in marelico navaja kot rastline, strupene za mačke, ker njihova semena, peclji in listi vsebujejo cianid. Pokličite veterinarja, če mačka koščico grizlja ali pogoltne.",
     "de": "Nein. Halten Sie Kerne, Steine und Samen von Steinobst von Katzen fern. Die ASPCA führt Kirsch-, Pfirsich-, Pflaumen- und Aprikosenpflanzen als giftig für Katzen auf, weil ihre Samen, Stiele und Blätter Cyanid enthalten. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Kern kaut oder ihn verschluckt.",
-    "fr": "Non. Gardez les noyaux et les pépins des fruits à noyau hors de portée des chats. L’ASPCA classe les cerisiers, pêchers, pruniers et abricotiers parmi les plantes toxiques pour les chats, car leurs graines, leurs tiges et leurs feuilles contiennent du cyanure. Appelez votre vétérinaire si votre chat mâchonne ou avale un noyau."
+    "fr": "Non. Gardez les noyaux et les pépins des fruits à noyau hors de portée des chats. L’ASPCA classe les cerisiers, pêchers, pruniers et abricotiers parmi les plantes toxiques pour les chats, car leurs graines, leurs tiges et leurs feuilles contiennent du cyanure. Appelez votre vétérinaire si votre chat mâchonne ou avale un noyau.",
+    "es": "No. Mantén los huesos y las semillas de las frutas de hueso fuera del alcance de los gatos. La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, porque sus semillas, tallos y hojas contienen cianuro. Llama a tu veterinario si tu gato muerde o se traga alguno."
   },
   "why": {
     "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
     "sl": "Pri češnji, breskvi, slivi in marelici ASPCA navaja, da peclji, listi in semena vsebujejo cianid (v obliki cianogenih glikozidov) in so posebej strupeni, ko venejo, vse štiri rastline pa uvršča med strupene za mačke. Koščica teh sadežev je njihovo seme, zato je mački nikoli ne dajajte.",
     "de": "Bei Kirsche, Pfirsich, Pflaume und Aprikose sagt die ASPCA, dass Stiele, Blätter und Samen Cyanid (in Form cyanogener Glykoside) enthalten und besonders giftig sind, während sie welken; alle vier Pflanzen führt sie als giftig für Katzen auf. Der Kern oder Stein dieser Früchte ist der Samen und sollte einer Katze deshalb nie gegeben werden.",
-    "fr": "Pour la cerise, la pêche, la prune et l’abricot, l’ASPCA indique que les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles flétrissent ; elle classe ces quatre plantes comme toxiques pour les chats. Le noyau de ces fruits est la graine : il ne faut donc jamais en donner à un chat."
+    "fr": "Pour la cerise, la pêche, la prune et l’abricot, l’ASPCA indique que les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles flétrissent ; elle classe ces quatre plantes comme toxiques pour les chats. Le noyau de ces fruits est la graine : il ne faut donc jamais en donner à un chat.",
+    "es": "Según la ASPCA, los tallos, las hojas y las semillas del cerezo, el melocotonero, el ciruelo y el albaricoquero contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando están marchitos; por eso incluye las cuatro plantas entre las tóxicas para los gatos. El hueso de estas frutas es la semilla, así que nunca se le debe dar a un gato."
   },
   "signs": {
     "en": [
@@ -60,20 +65,29 @@
       "Difficultés à respirer",
       "Halètement",
       "État de choc"
+    ],
+    "es": [
+      "Encías de color rojo ladrillo",
+      "Pupilas dilatadas",
+      "Dificultad para respirar",
+      "Jadeo",
+      "Shock"
     ]
   },
   "what_to_do": {
     "en": "Contact your vet or a pet poison helpline right away if your cat chewed or swallowed a pit, stone or seed. Note what was eaten, how much and when. Don't wait for signs to appear, and don't try to make your cat sick at home.",
     "sl": "Takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali, če je mačka grizljala ali pogoltnila koščico ali seme. Zapišite si, kaj je pojedla, koliko in kdaj. Ne čakajte, da se pokažejo znaki, in mački ne poskušajte sami izzvati bruhanja.",
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze einen Kern, Stein oder Samen zerkaut oder verschluckt hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
-    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchonné ou avalé un noyau ou une graine. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison."
+    "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchonné ou avalé un noyau ou une graine. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
+    "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordido o se ha tragado un hueso o una semilla. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa."
   },
   "serving": null,
   "child": {
     "en": "Fruit stones are not safe for cats. If kitty chews one, tell a grown-up.",
     "sl": "Koščice sadja niso varne za muce. Če jih muca grizlja, povej odraslemu.",
     "de": "Obstkerne sind für Katzen nicht sicher. Wenn deine Katze auf einem herumkaut, sag einem Erwachsenen Bescheid.",
-    "fr": "Les noyaux de fruits ne sont pas sans danger pour les chats. Si ton chat en mâchonne un, préviens un adulte."
+    "fr": "Les noyaux de fruits ne sont pas sans danger pour les chats. Si ton chat en mâchonne un, préviens un adulte.",
+    "es": "Los huesos de fruta no son seguros para los gatos. Si tu gato muerde uno, díselo a un adulto."
   },
   "faq": [
     {
@@ -81,13 +95,15 @@
         "en": "Which fruits does this cover?",
         "sl": "Na katero sadje se to nanaša?",
         "de": "Welche Früchte sind gemeint?",
-        "fr": "De quels fruits parle-t-on ?"
+        "fr": "De quels fruits parle-t-on ?",
+        "es": "¿A qué frutas se aplica esto?"
       },
       "a": {
         "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
         "sl": "ASPCA češnjo, breskev, slivo in marelico navaja kot strupene za mačke in za vsako od njih piše, da peclji, listi in semena vsebujejo cianid.",
         "de": "Die ASPCA führt Kirsche, Pfirsich, Pflaume und Aprikose als giftig für Katzen auf und weist bei jeder darauf hin, dass Stiele, Blätter und Samen Cyanid enthalten.",
-        "fr": "L’ASPCA classe la cerise, la pêche, la prune et l’abricot parmi les plantes toxiques pour les chats, et précise pour chacune que les tiges, les feuilles et les graines contiennent du cyanure."
+        "fr": "L’ASPCA classe la cerise, la pêche, la prune et l’abricot parmi les plantes toxiques pour les chats, et précise pour chacune que les tiges, les feuilles et les graines contiennent du cyanure.",
+        "es": "La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, y de cada uno dice que los tallos, las hojas y las semillas contienen cianuro."
       }
     }
   ],
@@ -173,6 +189,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "619fe4ef06b251e6449aeed97f5baeffccd692fd1952bbb31032f5b9c0221af1"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9109f1b5243228e94a238f5a16730a6e35befe2bf488aaf2f3aaa9da54d29bc4"
     }
   }
 }
