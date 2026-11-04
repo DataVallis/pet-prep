@@ -47796,6 +47796,485 @@
       }
     }
   },
+  "chow_chow": {
+    "_note": "Added 2026-11-04 (M5-R10-92, unattended run — appended after the Pekingese: AKC 2024 No. 88 'Chow Chow', S174 full-list table '88 | Chow Chow'). Quotes as returned by the web-fetch tool on 2026-11-04 (fragments marked as such); paraphrase only in notes. Sources S696–S702 (+ S35 Coren, S10 growth, S11 AAHA, S14 Dogs Trust, S45 steps). No health percentages anywhere. Not a flat-faced breed in the standards (FCI muzzle 'Moderate in length', S696). The RKC Breeds A–Z page (thekennelclub.org.uk …/utility/chow-chow redirects to royalkennelclub.com) and the Dogs Trust McMillan 2024 table were refused by the fetch tool → exercise, lifespan band, weight and grooming from PDSA (S700).",
+    "identity": {
+      "value": "FCI No. 205, Group 5 Section 5 (Asian Spitz and related breeds), China",
+      "unit": "—",
+      "source_id": "S697",
+      "quote": "CHOW CHOW",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S697, as returned): 'CHOW CHOW' No. 205, group 'n°5 - Spitz and primitive types', section 'Asian Spitz and related breeds', country of origin 'CHINA', country of patronage 'GREAT BRITAIN', definitive acceptance 12/10/1957, English standard 10/6/2026. FCI-Standard N° 205 (S696): 'Group 5 Spitz and primitive type.' / 'Section 5 Asian Spitz and related breeds.' / 'ORIGIN: China'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S700",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S700, value as returned; the page sits under PDSA's 'medium-dogs' path). PDSA 20-30 kg ≈ 44–66 lb and PetMD 45–70 lb (S701) straddle the S10 Medium / Large classes → 'Large (59–99 pounds)' used for growth, after the PDSA size."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            48,
+            56
+          ],
+          "female": [
+            46,
+            51
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S696",
+        "quote": "48 - 56 cm",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 205 (S696): height at withers males '48 - 56 cm', females '46 - 51 cm' (as returned). KC standard (S698) the same: '48cm – 56cm (approx. 18½\" – 22\").' / '46cm – 51cm (approx. 18\" – 20\")'. AKC (S699): 'The average height of adult specimens is 17 to 20 inches at the withers' (fragment). PDSA (S700) '46-56 cm'."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            20,
+            30
+          ],
+          "female": [
+            20,
+            30
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S700",
+        "quote": "20-30 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S700), one range for both sexes (stored per sex). The FCI (S696), KC (S698) and AKC (S699) standards give no weight. PetMD (S701): 'A Chow Chow, full-grown, stands 17–20 inches tall and weighs 45–70 pounds.' (≈ 20–32 kg, agrees). Wikipedia (S702, tier C) 18–41 kg males / 16–39 kg females — background."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA size 'Large' (S700); 20-30 kg (S700) ≈ 44–66 lb straddles Medium / Large. No breed source gives the age of full growth (PetMD S701 does not). The game is unaffected (the puppy cap of 60 min is reached at 6 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Chow Chow growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "< 10",
+        "unit": "years",
+        "source_id": "S700",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S700, value as returned) — an upper bound only, no lower bound. Basis of shorter_lifespan (runbook: an A/B source gives an upper bound ≤ 10 years) and of the senior proposal (Claude, verified=false)."
+      },
+      "petmd": {
+        "value": "8–12",
+        "unit": "years",
+        "source_id": "S701",
+        "quote": "lifespan is shorter than some other dog breeds, at eight to 12 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S701, tier B, US) fragment as returned."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Nature PDF (S54) has the breed estimates only in Supplementary Table 3 (not reached; 'Chow Chow' only as a Fig. 5 phylogeny label); the Dogs Trust breed table (S123) and the LJMU / PMC copies were refused by the fetch tool. Wikipedia (S702, tier C): a UK study (McMillan 2024) put the life expectancy at 12.1 years (paraphrase) — would give round(0.75 × 12.1 × 12) = 109. Verify in S123; it conflicts with the PDSA band 'Under 10 years'."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived (Claude's proposal, waiting for David): AAHA senior = last 25 % of lifespan (S11) × 10 y (the only bound of the PDSA band 'Under 10 years', S700) → 0.75 × 10 = 7.5 y = 90 months. Alternatives: McMillan 12.1 y via Wikipedia (tier C) → 109; PetMD lower bound 8 y (S701) → 72; Dogs Trust rule of thumb > 7 y (S14) → 84.",
+        "derived_from": [
+          "S11",
+          "S700"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 60",
+        "unit": "minutes/day",
+        "source_id": "S700",
+        "quote": "Your Chow Chow will need a minimum of one hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S700) exercise sentence; key facts 'Minimum exercise (per day)' '1 hour' (as returned). Runbook rule 'minimum N' → 60 (the RKC page was not reachable, PDSA next). PetMD (S701): 'A couple of 20-minute walks every day is enough.' (= 40 min) — alternative.",
+        "alternatives": {
+          "petmd_two_20_min_walks": 40
+        }
+      },
+      "petmd_heat": {
+        "value": "short spurts of exercise; more likely to overheat (thick coat, short snout)",
+        "unit": "—",
+        "source_id": "S701",
+        "quote": "Chow Chows are more likely to overheat because of their thick coats and short snout,",
+        "confidence": "medium",
+        "notes": "PetMD (S701) fragment as returned, continued 'so short spurts of exercise are better for them.' No advice not to exercise in the heat of the day → no DOG_NO_WALK_IN_HEAT row (not a flat-faced breed in the standards). Basis of heat_sensitive."
+      },
+      "after_meals": {
+        "value": "leave a gap after eating and before exercising",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "PDSA (S700), in the feeding section; PDSA lists Gastric Dilatation Volvulus ('often known as 'bloat', this is a condition where the stomach twists.' — fragment). Basis of the 60-minute 'wait with the walk' warning (M5-R16)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "quiet, independent, loyal, yet aloof; good guard",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Quiet dog, good guard. Independent, loyal, yet aloof.",
+        "confidence": "high",
+        "notes": "FCI (S696). KC (S698): 'Independent, loyal, yet aloof.' PDSA (S700): 'Incredibly loyal dogs, though reportedly aloof, they will want to protect their family.' (fragment); may be unsure of strangers (paraphrase)."
+      },
+      "family": {
+        "value": "can be loving, loyal pets in the right household",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Chow Chows can be loving and loyal dogs who can be ideal pets in the right household.",
+        "confidence": "medium",
+        "notes": "PDSA (S700). Conditional ('in the right household') → no family_pet chip."
+      },
+      "children": {
+        "value": "not recommended with small children; adult-only homes or older children / teenagers who understand the breed",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "We really wouldn't recommend having a Chow Chow if you have small children",
+        "confidence": "high",
+        "notes": "PDSA (S700) fragment as returned; 'They best suit adult-only homes, or families with older children/teenagers who understand the breed.'; 'Remember to always supervise your dog around children.' PetMD (S701): 'Chow Chows tend to do better in families where children are older.' Basis of not_for_small_children (Cane Corso precedent); never children / small_children."
+      },
+      "other_pets": {
+        "value": "high prey drive can come naturally — bear in mind with smaller pets",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "The Chow Chow breed history includes hunting, so a high prey drive can come quite naturally to them.",
+        "confidence": "high",
+        "notes": "PDSA (S700); 'You should bear that in mind if wanting to keep them with other smaller pets.' PetMD (S701): 'a Chow Chow might prefer being the only pet at home.' (fragment). Basis of chases_small_pets (runbook: a quote naming a high prey drive)."
+      },
+      "time_alone": {
+        "value": "very attached; may not tolerate being alone — best with someone around all day",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Because they are such loyal dogs, Chow Chows can get very attached to their owners and may not tolerate being alone.",
+        "confidence": "high",
+        "notes": "PDSA (S700); 'it's best to have someone around all day to keep them company.' (fragment). Basis of needs_company; never often_alone."
+      },
+      "socialisation": {
+        "value": "well socialised from a young age, also with other dogs",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "it's really important to make sure your Chow Chow is well-socialised from a young age",
+        "confidence": "high",
+        "notes": "PDSA (S700) fragment as returned; 'It's really important for Chow Chows to socialise with other dogs from a young age' (fragment). PetMD (S701): 'with early socialization, they can be more welcoming.' (fragment). Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "experienced_owner": {
+        "value": "ideally an experienced owner with a good knowledge of the breed; consistent reward-based training",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "They ideally suit experienced owners with a good knowledge of the breed",
+        "confidence": "high",
+        "notes": "PDSA (S700) fragment as returned; 'They need consistent positive, reward-based training from a young age.' With the FCI temperament 'Independent' (S696) → independent_experienced_owner (Shiba Inu precedent; not experienced_owner — no source calls the breed powerful)."
+      },
+      "mental_stimulation": {
+        "value": "clever, bored easily — puzzle toys",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Chow Chows are clever and get bored easily, so it's really important that you give them lots of puzzle toys",
+        "confidence": "medium",
+        "notes": "PDSA (S700) fragment as returned. PetMD (S701): 'In addition to physical activity, Chow Chows require mental stimulation to help keep them engaged in activities.' Basis of needs_mental_stimulation."
+      },
+      "barking": {
+        "value": "not big barkers",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Chow Chows are not known for being big barkers.",
+        "confidence": "medium",
+        "notes": "PDSA (S700). Background only (no chip)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere (Wikipedia S702 lists prevalence figures — not used). RKC Breed Watch category not fetched (page refused) → no Breed Watch chip; open for David.",
+      "skin_folds": {
+        "value": "skin folds hidden by the thick coat — keep them clean and dry",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "It's important to make sure the folds are kept clean and dry otherwise they could develop infections.",
+        "confidence": "high",
+        "notes": "PDSA (S700); 'You'll also need to pay close attention to any skin folds which can be hidden by their thick coat.' No frequency → no fold-cleaning task (runbook »Breed care tasks«). Basis of sensitive_skin (Shar Pei precedent)."
+      },
+      "entropion": {
+        "value": "entropion — eyelids roll inwards (extra skin folds)",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "inward rolling of the eyelids, which causes constant irritation and pain to the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S700) fragment as returned, under 'Eye conditions due to their extra skin folds, such as:' — 'Entropion'. FCI (S696) eyes 'clean and free from entropion'. PetMD (S701): 'Entropion is a common eye problem in dogs when the eyelid rolls inward.' Basis of eyelid_problems."
+      },
+      "hips_elbows": {
+        "value": "hip and elbow dysplasia",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "where the hip joint doesn't fit together perfectly, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S700) fragment as returned (hip dysplasia); elbow dysplasia also listed (PDSA, PetMD S701 'elbow dysplasia is typically seen in younger dogs when the elbow doesn't develop properly.'). No Breed Watch quote → no hips_hind_legs chip."
+      },
+      "cruciate": {
+        "value": "cruciate ligament disease",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S700) list item (name only as returned)."
+      },
+      "gdv": {
+        "value": "gastric dilatation-volvulus (bloat) — an emergency",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "This is an emergency and requires urgent veterinary attention.",
+        "confidence": "high",
+        "notes": "PDSA (S700); PetMD (S701): 'Gastric dilatation-volvulus is a life-threatening form of bloat in dogs where the stomach fills with gas and rotates.' Basis of the meal / exercise gap warning (exercise.after_meals)."
+      },
+      "panosteitis": {
+        "value": "panosteitis — painful inflammatory bone disease",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "a painful, inflammatory bone disease.",
+        "confidence": "medium",
+        "notes": "PDSA (S700) fragment as returned."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": null,
+        "confidence": "low",
+        "notes": "PDSA (S700) list item (name only as returned)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 76,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 76 | Chow Chow |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-04): rank 76 (table row as returned); tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 70–79 (as returned)."
+      },
+      "training_notes": {
+        "value": "consistent positive, reward-based training from a young age",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "They need consistent positive, reward-based training from a young age.",
+        "confidence": "medium",
+        "notes": "PDSA (S700)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.chow_chow.learning_multiplier (0.5, runbook rule: Lowest tier, rank 76).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "active, compact, short-coupled, well balanced, lion-like; proud, dignified",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Active, compact, short-coupled and essentially well balanced, leonine in appearance, proud, dignified bearing; well knit frame;",
+        "confidence": "high",
+        "notes": "FCI (S696)."
+      },
+      "colours": {
+        "value": [
+          "red",
+          "black",
+          "cream",
+          "fawn",
+          "blue",
+          "white"
+        ],
+        "unit": "list",
+        "source_id": "S696",
+        "quote": "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but not in patches or parti-coloured",
+        "confidence": "high",
+        "notes": "FCI (S696); KC (S698) the same wording. AKC (S699): 'There are five colors in the Chow: red (light golden to deep mahogany), black, blue,' (fragment; also cinnamon and cream — paraphrase). Never parti-colour, patches or merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): red 0.4 (the portrait default), black 0.2, cream 0.15, fawn 0.1, blue 0.1, white 0.05."
+      },
+      "coat": {
+        "value": "rough (profuse, dense, straight, stand-off) or smooth (short, dense, plush)",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Profuse, abundant, dense, straight and stand-off but not excessive in length.",
+        "confidence": "high",
+        "notes": "FCI (S696) rough coat; smooth: 'Coat short, dense, straight, upstanding, not flat, plush-like in texture.' The game draws the rough coat (the common variety)."
+      },
+      "muzzle": {
+        "value": "moderate in length, broad from eyes to end",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Moderate in length, broad from eyes to end (not pointed at end like a fox).",
+        "confidence": "high",
+        "notes": "FCI (S696). AKC (S699): 'never less than one-third of the head length.' (fragment). Not a flat face — the portrait shows a moderate muzzle (dog trait `muzzle`)."
+      },
+      "nose": {
+        "value": "large, wide, black",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Large and wide in all cases, black",
+        "confidence": "high",
+        "notes": "FCI (S696) fragment as returned."
+      },
+      "eyes": {
+        "value": "dark, oval, medium-sized, free from entropion",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Dark, oval shaped, medium sized, clean and free from entropion.",
+        "confidence": "high",
+        "notes": "FCI (S696); KC (S698) the same."
+      },
+      "ears": {
+        "value": "small, thick, slightly rounded, carried stiffly, wide apart, tilting forward",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Small, thick, slightly rounded at tip, carried stiffly and wide apart but tilting well forward over eyes",
+        "confidence": "high",
+        "notes": "FCI (S696) fragment as returned."
+      },
+      "tail": {
+        "value": "set high, carried well over the back",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Set high, carried well over back.",
+        "confidence": "high",
+        "notes": "FCI (S696)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA key facts and text (S700), PetMD (S701). The RKC Breeds A–Z page was refused by the fetch tool → no rkc_* key facts (no apartment / large_home chip).",
+      "pdsa_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S700)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S700). Not long_daily_exercise / active_family."
+      },
+      "pdsa_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S700)."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Chow Chows need brushing every day to keep their fur in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S700) — daily brushing → 7 per week (runbook dog-grooming rule 'every day' → 7). PetMD (S701) 'Chow Chows must be brushed every other day to prevent matting and control shedding.' — alternative (≈ 3–4 per week). Basis of frequent_grooming.",
+        "alternatives": {
+          "petmd_every_other_day": "Chow Chows must be brushed every other day to prevent matting and control shedding."
+        }
+      },
+      "pdsa_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "they shed pretty much all year round, but 'blow' their coats seasonally (spring and autumn).",
+        "confidence": "high",
+        "notes": "PDSA (S700) fragment as returned; 'If you're quite house-proud, then they may not be the breed for you.' Basis of the sheds chip."
+      },
+      "pdsa_lifespan": {
+        "value": "Under 10 years",
+        "unit": "—",
+        "source_id": "S700",
+        "quote": "Under 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S700)."
+      },
+      "petmd_grooming": {
+        "value": "frequent brushing; a few hours of grooming every week; regular baths and groomer trips (no frequency)",
+        "unit": "—",
+        "source_id": "S701",
+        "quote": "Pet parents must be prepared to spend a few hours every week grooming your Chow dog.",
+        "confidence": "high",
+        "notes": "PetMD (S701); 'Regular bathing and grooming your Chow Chow may be needed to help maintain healthy skin.' / 'Regularly scheduled trips to a professional groomer can help remove some problem hairs from the face.' — no frequency → no bath / groomer task (runbook »Breed care tasks«). Nail / tooth care not mentioned."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -71335,6 +71814,325 @@
         "confidence": "high",
         "notes": "KC (S692): 'Nose not too short, broad, nostrils large and open.'; FCI (S690) muzzle 'Doit être évident mais peut être relativement courte et large.' Welfare trait: muzzle (moderate face, open nostrils) — dog trait `muzzle` (French Bulldog / Pug precedent). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): red / gold with a black mask is the portrait default (most common colour, S695 tier C); moderate face with an evident muzzle and open nostrils, standard colours only (never albino, liver or merle)"
+      }
+    },
+    "chow_chow": {
+      "_note": "Unattended run M5-R10-92 (2026-11-04): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S700 'a minimum of one hour' → 60; the RKC page was not reachable). Senior 90 from the only bound of the PDSA band 'Under 10 years' (S700) = Claude's proposal (verified=false, open for David). Coren rank 76 (Lowest) → 0.5. Built: brushing every day (PDSA, M5-R13), puppy socialisation with the PDSA quote (S700, M5-R17), the 60-minute meal / exercise gap warning (PDSA S700, M5-R16). No care task (no tooth / ear / nail / bath / groomer / fold frequency in the sources), no heat warning (not flat-faced; PetMD only 'more likely to overheat'). Not a welfare flat-faced breed → in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S700",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day) | 1 hour' (S700) and 'a minimum of one hour exercise every day' → rule 'minimum N' → 60 (RKC page not reachable). PetMD (S701) two 20-minute walks = 40 — alternative.",
+        "alternatives": {
+          "petmd_two_20_min_walks": 40
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S700 'minimum … one hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S700",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + the only bound of the PDSA band 'Under 10 years', S700 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S700"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 109,
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_lower_bound_8_y": 72
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × the PDSA band 'Under 10 years', S700, its only bound). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 and the RKC page were refused by the fetch tool, the McMillan 2024 paper (S54) has the breed estimates only in Supplementary Table 3, no VetCompass paper found. The PDSA band has no lower bound (Bernese precedent: then the closest row; no peer-reviewed median was reachable, so the band's bound is used). Alternatives: McMillan 12.1 y via Wikipedia (S702, tier C) → 109; Dogs Trust > 7 y (S14) → 84; PetMD lower bound 8 y (S701) → 72. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S700"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 109,
+          "senior_dogs_trust_7_y": 84,
+          "senior_petmd_lower_bound_8_y": 72
+        },
+        "decision": "predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-92) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (the senior arrival follows Claude's senior proposal, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 90 = the proposed boundary)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 76 'Chow Chow' (S35, checked 2026-11-04) → tier Lowest (70–79) → 0.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 76, Lowest, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S700",
+        "quote": "Chow Chows need brushing every day to keep their fur in good condition.",
+        "confidence": "high",
+        "notes": "chow_chow.suitability.pdsa_grooming. PDSA 'brushing every day' → runbook rule 'every day' → 7 (M5-R13). Matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": {
+          "petmd_every_other_day": "Chow Chows must be brushed every other day to prevent matting and control shedding."
+        },
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »brushing every day«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "meal_exercise_gap": {
+        "value": 60,
+        "unit": "minutes after a meal with the 'wait with the walk' warning (the source gives no number; 60 = David's decision)",
+        "source_id": "S700",
+        "quote": "Remember to leave a gap after eating and before exercising.",
+        "confidence": "high",
+        "notes": "chow_chow.exercise.after_meals (PDSA S700, GDV listed). Warning only; steps still count.",
+        "decision": "potrdil David 2026-10-12: 60 min, samo opozorilo, koraki se štejejo (ROADMAP M5-R16)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S700",
+        "quote": "it's really important to make sure your Chow Chow is well-socialised from a young age",
+        "confidence": "high",
+        "notes": "chow_chow.behaviour.socialisation (PDSA S700). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S700)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-92); refs = JSON paths in this file. No new vocabulary key. No suits chip (no RKC home size; PDSA 'ideal pets in the right household' is conditional; no explicit children / other-pets statement). No percentages in the app. Never hypoallergenic.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.children"
+            ],
+            "quote": "S700 'We really wouldn't recommend having a Chow Chow if you have small children'"
+          },
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S700",
+              "S696"
+            ],
+            "refs": [
+              "chow_chow.behaviour.experienced_owner",
+              "chow_chow.behaviour.temperament"
+            ],
+            "quote": "S700 'They ideally suit experienced owners with a good knowledge of the breed'; S696 'Quiet dog, good guard. Independent, loyal, yet aloof.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.time_alone"
+            ],
+            "quote": "S700 '… may not tolerate being alone.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.mental_stimulation"
+            ],
+            "quote": "S700 'Chow Chows are clever and get bored easily, so it's really important that you give them lots of puzzle toys'"
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S701"
+            ],
+            "refs": [
+              "chow_chow.exercise.petmd_heat"
+            ],
+            "quote": "S701 'Chow Chows are more likely to overheat because of their thick coats and short snout,'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.health.entropion"
+            ],
+            "quote": "S700 entropion 'inward rolling of the eyelids, which causes constant irritation and pain to the eye.'"
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.health.skin_folds"
+            ],
+            "quote": "S700 'It's important to make sure the folds are kept clean and dry otherwise they could develop infections.'"
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.lifespan.pdsa"
+            ],
+            "quote": "S700 'Under 10 years'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.suitability.pdsa_shedding"
+            ],
+            "quote": "S700 'they shed pretty much all year round, …'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S700",
+              "S701"
+            ],
+            "refs": [
+              "chow_chow.suitability.pdsa_grooming",
+              "chow_chow.suitability.petmd_grooming"
+            ],
+            "quote": "S700 'Chow Chows need brushing every day …'; S701 'Pet parents must be prepared to spend a few hours every week grooming your Chow dog.'"
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.other_pets"
+            ],
+            "quote": "S700 '… so a high prey drive can come quite naturally to them.'",
+            "note": "Runbook (David 2026-10-12): appended at the end of the consider list."
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC page not reachable (runbook: only from RKC Flat/ Apartment).",
+          "family_pet": "PDSA 'in the right household' (S700) — conditional.",
+          "children": "PDSA: not with small children; adult-only homes or older children (S700) → not_for_small_children.",
+          "small_children": "PDSA (S700) advises against.",
+          "older_children": "That chip names a small dog (Pomeranian / Chihuahua precedent); PDSA's sentence is an advice against small children → not_for_small_children.",
+          "experienced_owner": "No source calls the breed powerful → independent_experienced_owner (FCI 'Independent', S696).",
+          "other_pets": "PDSA high prey drive (S700) → chases_small_pets.",
+          "often_alone": "PDSA 'may not tolerate being alone' (S700) — the opposite → needs_company.",
+          "long_daily_exercise": "60 minutes a day (S700).",
+          "brachycephalic_breathing": "Not flat-faced: FCI muzzle 'Moderate in length' (S696); no breathing statement in an A/B source.",
+          "short_muzzle_breathing": "No A/B breathing-problem statement (PetMD names the short snout only for overheating → heat_sensitive).",
+          "hips_hind_legs": "RKC Breed Watch not reachable — PDSA lists hip / elbow dysplasia, but the chip follows Breed Watch (Rottweiler precedent); open for David.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): no suits chip; consider not_for_small_children, independent_experienced_owner, needs_company, needs_mental_stimulation, heat_sensitive, eyelid_problems, sensitive_skin, shorter_lifespan, sheds, frequent_grooming, chases_small_pets"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising this breed type)",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed in the standards (FCI muzzle 'Moderate in length', S696) and not named brachycephalic by an A/B source → the BVA advertising advice (S92) does not apply. Marketing never promises the breed's health; the app shows its chips (shorter_lifespan, eyelid_problems, sensitive_skin, not_for_small_children). Claude's suggestion: never with small children.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa); nikoli z majhnimi otroki = predlog Claude"
+      },
+      "ai_appearance": {
+        "value": "adult Chow Chow, solid red (light golden to deep red, frequently shaded): compact, short-coupled, lion-like spitz; profuse, dense, straight, stand-off rough coat with a mane (not excessive in length); broad head, muzzle moderate in length and broad, large black nose; dark, oval, medium-sized eyes, clean and open (no entropion, no heavy wrinkles over the eyes); small, thick, slightly rounded erect ears tilting forward; tail set high, carried well over the back; whole-coloured only, never patches, parti-colour or merle",
+        "unit": "—",
+        "source_id": "S696",
+        "quote": "Whole coloured black, red, blue, fawn, cream or white, frequently shaded but not in patches or parti-coloured",
+        "confidence": "high",
+        "notes": "FCI (S696). Welfare: open, healthy eyes (entropion, PDSA S700) and a moderate muzzle (FCI 'Moderate in length') — dog trait `muzzle`. Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red is the portrait default (AKC lists red first, S699); moderate muzzle, open eyes, standard whole colours only (never parti-colour or merle)"
       }
     }
   }

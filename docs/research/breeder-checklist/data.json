@@ -3402,6 +3402,11 @@
         }
       ],
       "notes": "RKC Breeds A–Z page (royalkennelclub.com …/toy/pekingese; the thekennelclub.org.uk address redirects there) could not be fetched on 2026-11-04 → no minimum / best_practice level. Dogs NSW news (K40, April 2026): the updated RKC list of breeds that can be assessed under the Respiratory Function Grading scheme includes 'Pekingese' (it names the breed among the high-risk BOAS breeds — no figure kept here) → other_scheme. PDSA (dog-data S693): ask for the parents' health screening results and choose a Kennel Club Assured Breeder (paraphrase). No new test key."
+    },
+    "chow_chow": {
+      "status": "not_found",
+      "tests": [],
+      "notes": "RKC Breeds A–Z page (royalkennelclub.com …/utility/chow-chow; the thekennelclub.org.uk address redirects there) could not be fetched on 2026-11-04 → no minimum / best_practice level. PDSA (dog-data S700) and PetMD (S701) name conditions (hip / elbow dysplasia, entropion, hypothyroidism) but no tests; DogWellNet (IPFD) lists test categories only by country, without naming a scheme — not used. Show the general dog checklist only."
     }
   }
 }

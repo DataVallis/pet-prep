@@ -74,3 +74,4 @@ that are new for this checklist get a K-id. Quotes in `data.json` are what the f
 - **Basenji parents' tests** (2026-10-31) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) → the Basenji Club of America health page (K37) used (other_scheme; new keys dna_fanconi, dna_pra_bj1, thyroid_scheme).
 - **Rat Terrier parents' tests** (2026-11-02) — not RKC-registered → the RTCA health statement (K39) and the AKC Terrier Group page (K38) used (other_scheme; no new key).
 - **Pekingese parents' tests** (2026-11-04) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) → the RKC Respiratory Function Grading breed list via Dogs NSW (K40) used (other_scheme; no new key).
+- **Chow Chow parents' tests** (2026-11-04) — RKC Breeds A–Z page not reachable (redirect to royalkennelclub.com refused) and no A/B breed-club or scheme page found → `not_found` (general checklist only).
