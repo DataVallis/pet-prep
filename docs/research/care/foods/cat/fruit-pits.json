@@ -9,7 +9,8 @@
     "es": "Huesos y semillas de fruta",
     "it": "Noccioli e semi di frutta",
     "pt": "Caroços e sementes de fruta",
-    "nl": "Fruitpitten en -stenen"
+    "nl": "Fruitpitten en -stenen",
+    "pl": "Pestki owoców"
   },
   "question": {
     "en": "Can cats eat fruit pits?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer huesos de fruta?",
     "it": "I gatti possono mangiare i noccioli di frutta?",
     "pt": "Os gatos podem comer caroços de fruta?",
-    "nl": "Mogen katten fruitpitten eten?"
+    "nl": "Mogen katten fruitpitten eten?",
+    "pl": "Czy koty mogą jeść pestki owoców?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -29,7 +31,8 @@
     "es": "huesos-y-semillas-de-fruta",
     "it": "noccioli-e-semi-di-frutta",
     "pt": "carocos-e-sementes-de-fruta",
-    "nl": "fruitpitten"
+    "nl": "fruitpitten",
+    "pl": "pestki-owocow"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. Mantén los huesos y las semillas de las frutas de hueso fuera del alcance de los gatos. La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, porque sus semillas, tallos y hojas contienen cianuro. Llama a tu veterinario si tu gato muerde o se traga alguno.",
     "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno.",
     "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum.",
-    "nl": "Nee. Houd de pitten, stenen en zaden van steenfruit uit de buurt van katten. De ASPCA noemt kersen-, perzik-, pruimen- en abrikozenplanten giftig voor katten, omdat de zaden, stelen en bladeren cyanide bevatten. Bel je dierenarts als je kat op een pit kauwt of er een doorslikt."
+    "nl": "Nee. Houd de pitten, stenen en zaden van steenfruit uit de buurt van katten. De ASPCA noemt kersen-, perzik-, pruimen- en abrikozenplanten giftig voor katten, omdat de zaden, stelen en bladeren cyanide bevatten. Bel je dierenarts als je kat op een pit kauwt of er een doorslikt.",
+    "pl": "Nie. Trzymaj pestki i nasiona pestkowców z dala od kotów. ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako rośliny toksyczne dla kotów, ponieważ ich nasiona, łodygi i liście zawierają cyjanek. Jeśli kot przegryzie lub połknie pestkę, zadzwoń do weterynarza."
   },
   "why": {
     "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -50,7 +54,8 @@
     "es": "Según la ASPCA, los tallos, las hojas y las semillas del cerezo, el melocotonero, el ciruelo y el albaricoquero contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando están marchitos; por eso incluye las cuatro plantas entre las tóxicas para los gatos. El hueso de estas frutas es la semilla, así que nunca se le debe dar a un gato.",
     "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto.",
     "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato.",
-    "nl": "Over kers, perzik, pruim en abrikoos zegt de ASPCA dat de stelen, bladeren en zaden cyanide bevatten (als cyanogene glycosiden) en vooral giftig zijn terwijl ze verwelken. De ASPCA noemt alle vier de planten giftig voor katten. De pit of steen van deze vruchten is het zaad en mag een kat dus nooit krijgen."
+    "nl": "Over kers, perzik, pruim en abrikoos zegt de ASPCA dat de stelen, bladeren en zaden cyanide bevatten (als cyanogene glycosiden) en vooral giftig zijn terwijl ze verwelken. De ASPCA noemt alle vier de planten giftig voor katten. De pit of steen van deze vruchten is het zaad en mag een kat dus nooit krijgen.",
+    "pl": "W przypadku czereśni, brzoskwini, śliwy i moreli ASPCA podaje, że łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne, gdy więdną, oraz wymienia wszystkie cztery rośliny jako toksyczne dla kotów. Pestka tych owoców jest nasionem, dlatego nigdy nie wolno jej dawać kotu."
   },
   "signs": {
     "en": [
@@ -108,6 +113,13 @@
       "Moeite met ademen",
       "Hijgen",
       "Shocktoestand"
+    ],
+    "pl": [
+      "Ceglastoczerwone dziąsła",
+      "Rozszerzone źrenice",
+      "Trudności z oddychaniem",
+      "Ziajanie",
+      "Wstrząs"
     ]
   },
   "what_to_do": {
@@ -118,7 +130,8 @@
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordido o se ha tragado un hueso o una semilla. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
     "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
     "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa.",
-    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat een pit, steen of zaad heeft gekauwd of doorgeslikt. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken."
+    "nl": "Neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren als je kat een pit, steen of zaad heeft gekauwd of doorgeslikt. Schrijf op wat er is gegeten, hoeveel en wanneer. Wacht niet af tot je verschijnselen ziet en probeer je kat thuis niet te laten braken.",
+    "pl": "Jeśli kot przegryzł lub połknął pestkę albo nasiono, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -129,7 +142,8 @@
     "es": "Los huesos de fruta no son seguros para los gatos. Si tu gato muerde uno, díselo a un adulto.",
     "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto.",
     "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto.",
-    "nl": "Fruitpitten zijn niet veilig voor katten. Als je kat op een pit kauwt, vertel het dan aan een volwassene."
+    "nl": "Fruitpitten zijn niet veilig voor katten. Als je kat op een pit kauwt, vertel het dan aan een volwassene.",
+    "pl": "Pestki owoców nie są bezpieczne dla kotów. Jeśli kotek jakąś przegryzie, powiedz dorosłemu."
   },
   "faq": [
     {
@@ -141,7 +155,8 @@
         "es": "¿A qué frutas se aplica esto?",
         "it": "Di quali frutti si tratta?",
         "pt": "Que frutas estão incluídas?",
-        "nl": "Om welk fruit gaat het?"
+        "nl": "Om welk fruit gaat het?",
+        "pl": "Jakich owoców to dotyczy?"
       },
       "a": {
         "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -151,7 +166,8 @@
         "es": "La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, y de cada uno dice que los tallos, las hojas y las semillas contienen cianuro.",
         "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro.",
         "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto.",
-        "nl": "De ASPCA noemt kers, perzik, pruim en abrikoos giftig voor katten en zegt bij elk daarvan dat de stelen, bladeren en zaden cyanide bevatten."
+        "nl": "De ASPCA noemt kers, perzik, pruim en abrikoos giftig voor katten en zegt bij elk daarvan dat de stelen, bladeren en zaden cyanide bevatten.",
+        "pl": "ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako toksyczne dla kotów i przy każdej z nich podaje, że łodygi, liście i nasiona zawierają cyjanek."
       }
     }
   ],
@@ -257,6 +273,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d7e5282ac43237e17c59c57da4cb84630673a4a5ef8cb825f9cd1091a6a29c8a"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bc956c65c7095e278a85b25489284ae1fc753e8cff19b38b7937c65b8b7f8e26"
     }
   }
 }

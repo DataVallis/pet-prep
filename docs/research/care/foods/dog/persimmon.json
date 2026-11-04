@@ -9,7 +9,8 @@
     "es": "Caqui",
     "it": "Cachi",
     "pt": "Dióspiro",
-    "nl": "Kaki"
+    "nl": "Kaki",
+    "pl": "Persymona"
   },
   "question": {
     "en": "Can dogs eat persimmon?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer caqui?",
     "it": "I cani possono mangiare i cachi?",
     "pt": "Os cães podem comer dióspiro?",
-    "nl": "Mogen honden kaki eten?"
+    "nl": "Mogen honden kaki eten?",
+    "pl": "Czy psy mogą jeść persymonę?"
   },
   "url_slug": {
     "en": "persimmon",
@@ -29,7 +31,8 @@
     "es": "caqui",
     "it": "cachi",
     "pt": "diospiro",
-    "nl": "kaki"
+    "nl": "kaki",
+    "pl": "persymona"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, en cantidades limitadas. La pulpa del caqui es segura para los perros, pero quita antes las semillas: pueden causar atragantamiento y una obstrucción intestinal, sobre todo en perros pequeños. El caqui puede ser laxante y provocar diarrea y vómitos.",
     "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito.",
     "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos.",
-    "nl": "Ja, in beperkte hoeveelheden. Het vruchtvlees van kaki is veilig voor honden, maar haal eerst de pitten eruit: die kunnen verstikking en een darmverstopping veroorzaken, vooral bij kleine honden. Kaki kan laxerend werken en diarree en braken veroorzaken."
+    "nl": "Ja, in beperkte hoeveelheden. Het vruchtvlees van kaki is veilig voor honden, maar haal eerst de pitten eruit: die kunnen verstikking en een darmverstopping veroorzaken, vooral bij kleine honden. Kaki kan laxerend werken en diarree en braken veroorzaken.",
+    "pl": "Tak, w ograniczonych ilościach. Miąższ persymony jest dla psów bezpieczny, ale najpierw usuń nasiona: mogą spowodować zadławienie i niedrożność jelit, zwłaszcza u małych psów. Persymona może działać przeczyszczająco i wywołać biegunkę oraz wymioty."
   },
   "why": {
     "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -50,7 +54,8 @@
     "es": "El caqui en sí no es perjudicial para los perros, pero las semillas y los huesos suponen un riesgo de obstrucción intestinal. Los perros grandes pueden expulsarlos sin problema, mientras que los de razas pequeñas pueden atragantarse y sufrir una obstrucción intestinal. Los caquis tienen un efecto laxante y pueden causar diarrea, náuseas, vómitos y retortijones.",
     "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco.",
     "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas.",
-    "nl": "De kaki zelf is niet schadelijk voor honden, maar de pitten en stenen kunnen een darmverstopping veroorzaken. Grotere honden scheiden ze mogelijk zonder problemen weer uit met de ontlasting, terwijl kleinere rassen het risico lopen op verstikking en een darmafsluiting. Kaki werkt laxerend en kan diarree, misselijkheid, braken en maagkrampen veroorzaken."
+    "nl": "De kaki zelf is niet schadelijk voor honden, maar de pitten en stenen kunnen een darmverstopping veroorzaken. Grotere honden scheiden ze mogelijk zonder problemen weer uit met de ontlasting, terwijl kleinere rassen het risico lopen op verstikking en een darmafsluiting. Kaki werkt laxerend en kan diarree, misselijkheid, braken en maagkrampen veroorzaken.",
+    "pl": "Sam owoc persymony nie szkodzi psom, ale pestki i nasiona grożą niedrożnością jelit. Większe psy mogą je wydalić bez problemu, natomiast mniejszym rasom grozi zadławienie i niedrożność jelit. Persymony działają przeczyszczająco i mogą wywołać biegunkę, nudności, wymioty i skurcze żołądka."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro tiene vómitos, dolor de barriga, deshidratación o pérdida de apetito después de comer caqui, acude enseguida a un veterinario.",
     "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario.",
     "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária.",
-    "nl": "Heeft je hond na het eten van kaki last van braken, buikpijn, uitdroging of verlies van eetlust, ga dan meteen naar de dierenarts."
+    "nl": "Heeft je hond na het eten van kaki last van braken, buikpijn, uitdroging of verlies van eetlust, ga dan meteen naar de dierenarts.",
+    "pl": "Jeśli po zjedzeniu persymony u twojego psa wystąpią wymioty, ból brzucha, odwodnienie lub brak apetytu, od razu zgłoś się do weterynarza."
   },
   "serving": {
     "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -71,7 +77,8 @@
     "es": "Lava la fruta, quita las semillas y córtala en rodajas pequeñas, del tamaño de un bocado. Solo con moderación.",
     "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione.",
     "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação.",
-    "nl": "Spoel de vrucht af, haal de pitten eruit en snijd hem in kleine, hapklare plakjes. Alleen met mate."
+    "nl": "Spoel de vrucht af, haal de pitten eruit en snijd hem in kleine, hapklare plakjes. Alleen met mate.",
+    "pl": "Umyj owoc, usuń nasiona i pokrój na małe plasterki wielkości jednego kęsa. Tylko z umiarem."
   },
   "child": {
     "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -81,7 +88,8 @@
     "es": "Los perros pueden comer un poco de caqui. Un adulto le quita las semillas y lo corta en trocitos.",
     "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli.",
     "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos.",
-    "nl": "Honden mogen een beetje kaki. Een volwassene haalt de pitten eruit en snijdt de vrucht in kleine stukjes."
+    "nl": "Honden mogen een beetje kaki. Een volwassene haalt de pitten eruit en snijdt de vrucht in kleine stukjes.",
+    "pl": "Psy mogą dostać odrobinę persymony. Dorosły wyjmuje nasiona i kroi owoc na małe kawałki."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Son peligrosas las semillas del caqui?",
         "it": "I semi del cachi sono pericolosi?",
         "pt": "As sementes do dióspiro são perigosas?",
-        "nl": "Zijn kakipitten gevaarlijk?"
+        "nl": "Zijn kakipitten gevaarlijk?",
+        "pl": "Czy nasiona persymony są niebezpieczne?"
       },
       "a": {
         "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -103,7 +112,8 @@
         "es": "Sí, hay que quitarlas. Pueden causar atragantamiento y una obstrucción intestinal, y los perros pequeños son los que corren más riesgo.",
         "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio.",
         "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco.",
-        "nl": "Ja, die moeten eruit. Ze kunnen verstikking en een darmverstopping veroorzaken, en kleine honden lopen het meeste risico."
+        "nl": "Ja, die moeten eruit. Ze kunnen verstikking en een darmverstopping veroorzaken, en kleine honden lopen het meeste risico.",
+        "pl": "Tak, należy je usunąć. Mogą spowodować zadławienie i niedrożność jelit, a największe ryzyko dotyczy małych psów."
       }
     }
   ],
@@ -199,6 +209,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "acd0069e576235c31e1471456b4320cb94ca8a5910b0d648d664e7291ec4eb19"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e2e8f47f067a580f31d3b6d1f1a6dd2eb50ed011c802d7b4d659c99d8afc90b9"
     }
   }
 }

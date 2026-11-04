@@ -9,7 +9,8 @@
     "es": "Granada",
     "it": "Melagrana",
     "pt": "Romã",
-    "nl": "Granaatappel"
+    "nl": "Granaatappel",
+    "pl": "Granat"
   },
   "question": {
     "en": "Can dogs eat pomegranate?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer granada?",
     "it": "I cani possono mangiare la melagrana?",
     "pt": "Os cães podem comer romã?",
-    "nl": "Mogen honden granaatappel eten?"
+    "nl": "Mogen honden granaatappel eten?",
+    "pl": "Czy psy mogą jeść granat?"
   },
   "url_slug": {
     "en": "pomegranate",
@@ -29,7 +31,8 @@
     "es": "granada",
     "it": "melograno",
     "pt": "roma",
-    "nl": "granaatappel"
+    "nl": "granaatappel",
+    "pl": "granat"
   },
   "level": "not_recommended",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No se recomienda. Las granadas no son tóxicas para los perros, pero eso no significa que la fruta sea segura: las semillas pueden causar problemas de estómago y una obstrucción digestiva, y los trozos de corteza y de tallo también pueden provocarla. Es más seguro no darle granada fresca a tu perro.",
     "it": "Non consigliato. Le melagrane non sono tossiche per i cani, ma questo non rende il frutto sicuro: i semi possono causare problemi di stomaco e ostruire l’apparato digerente, e anche pezzi di buccia e di picciolo possono provocare un’ostruzione. È più prudente non dare melagrana fresca.",
     "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca.",
-    "nl": "Liever niet. Granaatappels zijn niet giftig voor honden, maar daarmee is de vrucht nog niet veilig: de zaadjes kunnen maagproblemen en een verstopping van het spijsverteringskanaal veroorzaken, en stukjes schil en steel kunnen een afsluiting geven. Het is veiliger om geen verse granaatappel te geven."
+    "nl": "Liever niet. Granaatappels zijn niet giftig voor honden, maar daarmee is de vrucht nog niet veilig: de zaadjes kunnen maagproblemen en een verstopping van het spijsverteringskanaal veroorzaken, en stukjes schil en steel kunnen een afsluiting geven. Het is veiliger om geen verse granaatappel te geven.",
+    "pl": "Nie zaleca się. Granat nie jest toksyczny dla psów, ale to nie znaczy, że owoc jest bezpieczny: pestki mogą wywołać dolegliwości żołądkowe i zatkać przewód pokarmowy, a kawałki skórki i szypułki mogą spowodować niedrożność. Bezpieczniej nie podawać świeżego granatu."
   },
   "why": {
     "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -50,7 +54,8 @@
     "es": "El veterinario jefe del AKC explica que las granadas no son tóxicas para los perros. Aun así, las semillas, la parte que suele comer la gente, pueden causar problemas gastrointestinales y una obstrucción digestiva. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños. El extracto de granada que llevan algunos productos para perros no es lo mismo que la fruta fresca.",
     "it": "Il veterinario capo dell’AKC afferma che le melagrane non sono tossiche per i cani. I semi, la parte che di solito si mangia, possono comunque causare disturbi gastrointestinali e un’ostruzione dell’apparato digerente. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli. L’estratto di melagrana presente nei prodotti pensati per i cani è un altro discorso rispetto al frutto fresco.",
     "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca.",
-    "nl": "De hoofddierenarts van de AKC zegt dat granaatappels niet giftig zijn voor honden. De zaadjes, het deel dat mensen meestal eten, kunnen toch maag- en darmklachten en een verstopping van het spijsverteringskanaal veroorzaken. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden. Granaatappelextract in producten die voor honden zijn gemaakt is iets anders dan de verse vrucht."
+    "nl": "De hoofddierenarts van de AKC zegt dat granaatappels niet giftig zijn voor honden. De zaadjes, het deel dat mensen meestal eten, kunnen toch maag- en darmklachten en een verstopping van het spijsverteringskanaal veroorzaken. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden. Granaatappelextract in producten die voor honden zijn gemaakt is iets anders dan de verse vrucht.",
+    "pl": "Główny lekarz weterynarii AKC podaje, że granaty nie są toksyczne dla psów. Pestki, czyli część, którą ludzie zwykle jedzą, mogą jednak wywołać problemy żołądkowo-jelitowe i zablokować przewód pokarmowy. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów. Ekstrakt z granatu w produktach przeznaczonych dla psów to co innego niż świeży owoc."
   },
   "signs": {
     "en": [
@@ -84,6 +89,10 @@
     "nl": [
       "Diarree",
       "Braken"
+    ],
+    "pl": [
+      "Biegunka",
+      "Wymioty"
     ]
   },
   "what_to_do": {
@@ -94,7 +103,8 @@
     "es": "Si tu perro se ha comido semillas de granada, contacta enseguida con tu veterinario.",
     "it": "Se il tuo cane ha mangiato dei semi di melagrana, contatta subito il veterinario.",
     "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário.",
-    "nl": "Heeft je hond granaatappelzaadjes gegeten? Neem dan meteen contact op met je dierenarts."
+    "nl": "Heeft je hond granaatappelzaadjes gegeten? Neem dan meteen contact op met je dierenarts.",
+    "pl": "Jeśli twój pies zjadł pestki granatu, od razu skontaktuj się z weterynarzem."
   },
   "serving": null,
   "child": {
@@ -105,7 +115,8 @@
     "es": "La granada es una fruta para las personas. Las semillas y la corteza pueden sentarle mal a la barriga de un perro, así que mantenla fuera de su alcance.",
     "it": "La melagrana è un frutto per le persone. I semi e la buccia possono far male alla pancia del cane, quindi tienila fuori dalla sua portata.",
     "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance.",
-    "nl": "Granaatappel is fruit voor mensen. De zaadjes en de schil kunnen de buik van een hond van streek maken, dus houd het buiten het bereik van je hond."
+    "nl": "Granaatappel is fruit voor mensen. De zaadjes en de schil kunnen de buik van een hond van streek maken, dus houd het buiten het bereik van je hond.",
+    "pl": "Granat to owoc dla ludzi. Jego pestki i skórka mogą psu rozstroić brzuszek, więc trzymaj go z dala od psa."
   },
   "faq": [
     {
@@ -117,7 +128,8 @@
         "es": "¿Puede llevar granada la comida para perros?",
         "it": "La melagrana nel cibo per cani va bene?",
         "pt": "Pode haver romã na comida para cães?",
-        "nl": "Is granaatappel in hondenvoer goed?"
+        "nl": "Is granaatappel in hondenvoer goed?",
+        "pl": "Czy granat w karmie dla psów jest w porządku?"
       },
       "a": {
         "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -127,7 +139,8 @@
         "es": "El extracto de granada puede tener beneficios para la salud de los perros. Si quieres dárselo, busca productos elaborados específicamente para perros y habla con tu veterinario.",
         "it": "L’estratto di melagrana può far bene alla salute dei cani. Se vuoi darglielo, cerca prodotti fatti apposta per i cani e parlane con il veterinario.",
         "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário.",
-        "nl": "Granaatappelextract kan gezondheidsvoordelen hebben voor honden. Wil je het geven, kies dan producten die speciaal voor honden zijn gemaakt en overleg met je dierenarts."
+        "nl": "Granaatappelextract kan gezondheidsvoordelen hebben voor honden. Wil je het geven, kies dan producten die speciaal voor honden zijn gemaakt en overleg met je dierenarts.",
+        "pl": "Ekstrakt z granatu może korzystnie wpływać na zdrowie psów. Jeśli chcesz go podawać, szukaj produktów przeznaczonych specjalnie dla psów i porozmawiaj z weterynarzem."
       }
     },
     {
@@ -139,7 +152,8 @@
         "es": "¿Pueden los perros comer la corteza de la granada?",
         "it": "I cani possono mangiare la buccia della melagrana?",
         "pt": "Os cães podem comer a casca da romã?",
-        "nl": "Mogen honden de schil van de granaatappel eten?"
+        "nl": "Mogen honden de schil van de granaatappel eten?",
+        "pl": "Czy psy mogą jeść skórkę granatu?"
       },
       "a": {
         "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -149,7 +163,8 @@
         "es": "No. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños, así que no se los des.",
         "it": "No. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli, quindi non darglieli.",
         "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês.",
-        "nl": "Nee. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden, dus geef ze niet."
+        "nl": "Nee. Stukjes schil en steel kunnen een afsluiting veroorzaken, vooral bij kleinere honden, dus geef ze niet.",
+        "pl": "Nie. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów, więc ich nie podawaj."
       }
     }
   ],
@@ -257,6 +272,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4a4d5bc5b175de5a832428ba2c8d421d506ac4262e59895a468b1f0b0f247603"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5e55886e74fe94bb9f823674c057fe541e0584bf7658112fb0a79d9e40a59e1f"
     }
   }
 }
