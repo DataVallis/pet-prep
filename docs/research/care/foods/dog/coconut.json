@@ -7,7 +7,8 @@
     "de": "Kokosnuss",
     "fr": "Noix de coco",
     "es": "Coco",
-    "it": "Cocco"
+    "it": "Cocco",
+    "pt": "Coco"
   },
   "question": {
     "en": "Can dogs eat coconut?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Kokosnuss fressen?",
     "fr": "Les chiens peuvent-ils manger de la noix de coco ?",
     "es": "¿Pueden los perros comer coco?",
-    "it": "I cani possono mangiare il cocco?"
+    "it": "I cani possono mangiare il cocco?",
+    "pt": "Os cães podem comer coco?"
   },
   "url_slug": {
     "en": "coconut",
@@ -23,7 +25,8 @@
     "de": "kokosnuss",
     "fr": "noix-de-coco",
     "es": "coco",
-    "it": "cocco"
+    "it": "cocco",
+    "pt": "coco"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, in kleinen Mengen. Das ungesüßte Fruchtfleisch ist in Maßen für Hunde unbedenklich, aber geben Sie nie die Faserhülle oder die Schale. Kokosnuss ist fettreich und enthält Öle, die Magenbeschwerden und Durchfall verursachen können.",
     "fr": "Oui, en petites quantités. La chair de noix de coco non sucrée est sans danger pour les chiens avec modération, mais ne leur donnez jamais la bourre ni la coque. La noix de coco est riche en graisses et contient des huiles qui peuvent provoquer des maux d’estomac et de la diarrhée.",
     "es": "Sí, en pequeñas cantidades. La pulpa de coco sin azúcar es segura para los perros con moderación, pero nunca les des la envoltura fibrosa ni la cáscara. El coco es rico en grasa y contiene aceites que pueden provocar molestias de estómago y diarrea.",
-    "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea."
+    "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea.",
+    "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -40,7 +44,8 @@
     "de": "In kleinen Mengen ist Kokosnuss wahrscheinlich nicht ernsthaft schädlich, aber Fruchtfleisch und Milch frischer Kokosnüsse enthalten Öle, die Magenbeschwerden, weichen Kot und Durchfall auslösen können. Kokosnuss ist fettreich; Hunde, die keine fettreiche Kost bekommen sollten oder übergewichtig sind, sollten daher andere Leckerli erhalten. Sie enthält außerdem viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung Vorsicht geboten. Faserhülle und Schale können einen Darmverschluss verursachen.",
     "fr": "En petites quantités, la noix de coco ne risque guère de causer de problème grave, mais la chair et le lait des noix de coco fraîches contiennent des huiles qui peuvent provoquer des maux d’estomac, des selles molles et de la diarrhée. Comme la noix de coco est assez grasse, les chiens qui ne doivent pas suivre un régime riche en graisses ou qui sont en surpoids devraient recevoir d’autres friandises. Elle est aussi riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale. La bourre et la coque peuvent provoquer une occlusion intestinale.",
     "es": "En pequeñas cantidades, es poco probable que el coco cause daños graves, pero la pulpa y la leche del coco fresco contienen aceites que pueden provocar molestias de estómago, heces blandas y diarrea. El coco es bastante graso, así que a los perros que no deben seguir una dieta rica en grasa o que tienen sobrepeso es mejor darles otros premios. También es rico en potasio, por lo que hay que tener cuidado con los perros con enfermedad renal. La envoltura fibrosa y la cáscara pueden causar una obstrucción intestinal.",
-    "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale."
+    "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale.",
+    "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Fragen Sie Ihren Tierarzt, bevor Sie Kokosnuss in die Ernährung Ihres Hundes aufnehmen, besonders wenn Ihr Hund schon einmal eine Bauchspeicheldrüsenentzündung hatte.",
     "fr": "Demandez conseil à votre vétérinaire avant d’ajouter de la noix de coco à l’alimentation de votre chien, surtout s’il a déjà eu une pancréatite.",
     "es": "Consulta con tu veterinario antes de incluir coco en la dieta de tu perro, sobre todo si ha tenido pancreatitis.",
-    "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite."
+    "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite.",
+    "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -57,7 +63,8 @@
     "de": "Nur ungesüßtes Fruchtfleisch, in kleinen Mengen, ohne Faserhülle und Schale. Kokosmilch nur ungesüßt und xylitfrei; Kokoswasser nur als Leckerli, niemals anstelle von Wasser.",
     "fr": "Uniquement de la chair non sucrée, en petites quantités, sans bourre ni coque. Le lait de coco seulement non sucré et sans xylitol ; l’eau de coco seulement en friandise, jamais à la place de l’eau.",
     "es": "Solo pulpa sin azúcar, en pequeñas cantidades y sin la envoltura fibrosa ni la cáscara. Leche de coco, solo sin azúcar y sin xilitol; agua de coco, solo como premio y nunca en lugar del agua.",
-    "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua."
+    "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua.",
+    "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -65,7 +72,8 @@
     "de": "Hunde dürfen ein bisschen Kokosnuss probieren! Die harte Schale ist nichts für Hunde, deshalb bereitet ein Erwachsener sie vor.",
     "fr": "Les chiens peuvent goûter un tout petit peu de noix de coco ! La coque dure n’est pas pour eux, c’est donc un adulte qui prépare la noix de coco.",
     "es": "¡Los perros pueden probar un poquito de coco! La cáscara dura no es para perros, así que la prepara un adulto.",
-    "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto."
+    "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto.",
+    "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Dürfen Hunde Kokoswasser oder Kokosmilch trinken?",
         "fr": "Les chiens peuvent-ils boire de l’eau de coco ou du lait de coco ?",
         "es": "¿Pueden los perros beber agua de coco o leche de coco?",
-        "it": "I cani possono bere acqua di cocco o latte di cocco?"
+        "it": "I cani possono bere acqua di cocco o latte di cocco?",
+        "pt": "Os cães podem beber água de coco ou leite de coco?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -83,7 +92,8 @@
         "de": "Kokoswasser nur als Leckerli, nicht anstelle von normalem Wasser. Kokosmilch nur ungesüßt und frei von künstlichen Süßstoffen wie Xylit, das für Hunde giftig ist.",
         "fr": "L’eau de coco seulement en friandise, jamais à la place de l’eau habituelle. Le lait de coco seulement non sucré et sans édulcorants artificiels comme le xylitol, qui est toxique pour les chiens.",
         "es": "El agua de coco, solo como premio y nunca en lugar del agua normal. La leche de coco, solo sin azúcar y sin edulcorantes artificiales como el xilitol, que es tóxico para los perros.",
-        "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani."
+        "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani.",
+        "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães."
       }
     },
     {
@@ -93,7 +103,8 @@
         "de": "Warum nicht die Kokosschale?",
         "fr": "Pourquoi pas la coque de la noix de coco ?",
         "es": "¿Por qué no se le puede dar la cáscara del coco?",
-        "it": "Perché niente guscio di cocco?"
+        "it": "Perché niente guscio di cocco?",
+        "pt": "Porque é que não se pode dar a casca do coco?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -101,7 +112,8 @@
         "de": "Faserhülle und Schale können ernste Verdauungsprobleme verursachen, darunter einen Darmverschluss und Magenreizungen – ähnlich wie bei Stöcken oder Holz.",
         "fr": "La bourre et la coque peuvent causer de graves problèmes digestifs, notamment une occlusion intestinale et des irritations de l’estomac, comme lorsqu’un chien avale des bouts de bois.",
         "es": "La envoltura fibrosa y la cáscara pueden causar problemas digestivos graves, como una obstrucción intestinal o irritación de estómago, igual que si el perro comiera palos o madera.",
-        "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno."
+        "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno.",
+        "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira."
       }
     }
   ],
@@ -216,6 +228,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a5c0ba0ea4561bb5fe621aac0d87e79dbe5ffabbbce92d3ec6f794d052e5a57c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "60ff5503cfa7025fb45617b53abb1c9e1b12b93d174ffe4ddf73d4056543a723"
     }
   }
 }

@@ -7,7 +7,8 @@
     "de": "Kaki",
     "fr": "Kaki",
     "es": "Caqui",
-    "it": "Cachi"
+    "it": "Cachi",
+    "pt": "Dióspiro"
   },
   "question": {
     "en": "Can dogs eat persimmon?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Kaki fressen?",
     "fr": "Les chiens peuvent-ils manger du kaki ?",
     "es": "¿Pueden los perros comer caqui?",
-    "it": "I cani possono mangiare i cachi?"
+    "it": "I cani possono mangiare i cachi?",
+    "pt": "Os cães podem comer dióspiro?"
   },
   "url_slug": {
     "en": "persimmon",
@@ -23,7 +25,8 @@
     "de": "kaki",
     "fr": "kaki",
     "es": "caqui",
-    "it": "cachi"
+    "it": "cachi",
+    "pt": "diospiro"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, in begrenzten Mengen. Das Fruchtfleisch der Kaki ist für Hunde unbedenklich, aber entfernen Sie vorher die Kerne: Sie können zum Ersticken und zu einem Darmverschluss führen, besonders bei kleinen Hunden. Kaki kann abführend wirken und Durchfall und Erbrechen verursachen.",
     "fr": "Oui, en quantité limitée. La chair du kaki est sans danger pour les chiens, mais retirez d’abord les pépins : ils peuvent provoquer un étouffement et une occlusion intestinale, surtout chez les petits chiens. Le kaki peut avoir un effet laxatif et provoquer de la diarrhée et des vomissements.",
     "es": "Sí, en cantidades limitadas. La pulpa del caqui es segura para los perros, pero quita antes las semillas: pueden causar atragantamiento y una obstrucción intestinal, sobre todo en perros pequeños. El caqui puede ser laxante y provocar diarrea y vómitos.",
-    "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito."
+    "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito.",
+    "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos."
   },
   "why": {
     "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -40,7 +44,8 @@
     "de": "Die Kaki selbst ist für Hunde nicht schädlich, aber Kerne bergen die Gefahr eines Darmverschlusses. Größere Hunde scheiden sie womöglich problemlos aus, während für kleinere Rassen die Gefahr des Erstickens und eines Darmverschlusses besteht. Kakis wirken abführend und können Durchfall, Übelkeit, Erbrechen und Magenkrämpfe verursachen.",
     "fr": "Le fruit du kaki lui-même n’est pas nocif pour les chiens, mais les pépins et les noyaux risquent de provoquer une occlusion intestinale. Les grands chiens peuvent les évacuer sans problème, alors que les petits chiens risquent l’étouffement et l’occlusion intestinale. Les kakis ont un effet laxatif et peuvent causer de la diarrhée, des nausées, des vomissements et des crampes d’estomac.",
     "es": "El caqui en sí no es perjudicial para los perros, pero las semillas y los huesos suponen un riesgo de obstrucción intestinal. Los perros grandes pueden expulsarlos sin problema, mientras que los de razas pequeñas pueden atragantarse y sufrir una obstrucción intestinal. Los caquis tienen un efecto laxante y pueden causar diarrea, náuseas, vómitos y retortijones.",
-    "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco."
+    "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco.",
+    "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Zeigt Ihr Hund nach dem Fressen von Kaki Erbrechen, Bauchschmerzen, Austrocknung oder Appetitlosigkeit, suchen Sie sofort einen Tierarzt auf.",
     "fr": "Si votre chien vomit, a mal au ventre, se déshydrate ou perd l’appétit après avoir mangé du kaki, consultez un vétérinaire sans attendre.",
     "es": "Si tu perro tiene vómitos, dolor de barriga, deshidratación o pérdida de apetito después de comer caqui, acude enseguida a un veterinario.",
-    "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario."
+    "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario.",
+    "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária."
   },
   "serving": {
     "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -57,7 +63,8 @@
     "de": "Spülen Sie die Frucht ab, entfernen Sie die Kerne und schneiden Sie sie in kleine, mundgerechte Scheiben. Nur in Maßen.",
     "fr": "Rincez le fruit, retirez les pépins et coupez-le en petites tranches. Uniquement avec modération.",
     "es": "Lava la fruta, quita las semillas y córtala en rodajas pequeñas, del tamaño de un bocado. Solo con moderación.",
-    "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione."
+    "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione.",
+    "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação."
   },
   "child": {
     "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -65,7 +72,8 @@
     "de": "Hunde dürfen ein bisschen Kaki haben. Ein Erwachsener nimmt die Kerne heraus und schneidet sie in kleine Stücke.",
     "fr": "Les chiens peuvent manger un peu de kaki. Un adulte retire les pépins et le coupe en petits morceaux.",
     "es": "Los perros pueden comer un poco de caqui. Un adulto le quita las semillas y lo corta en trocitos.",
-    "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli."
+    "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli.",
+    "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Sind Kakikerne gefährlich?",
         "fr": "Les pépins de kaki sont-ils dangereux ?",
         "es": "¿Son peligrosas las semillas del caqui?",
-        "it": "I semi del cachi sono pericolosi?"
+        "it": "I semi del cachi sono pericolosi?",
+        "pt": "As sementes do dióspiro são perigosas?"
       },
       "a": {
         "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -83,7 +92,8 @@
         "de": "Ja, sie sollten entfernt werden. Sie können zum Ersticken und zu einem Darmverschluss führen, am stärksten gefährdet sind kleine Hunde.",
         "fr": "Oui, il faut les retirer. Ils peuvent provoquer un étouffement et une occlusion intestinale, et les petits chiens sont les plus exposés.",
         "es": "Sí, hay que quitarlas. Pueden causar atragantamiento y una obstrucción intestinal, y los perros pequeños son los que corren más riesgo.",
-        "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio."
+        "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio.",
+        "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco."
       }
     }
   ],
@@ -169,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4f646fe66fa670f8475d584b4308ef42e9a33c9b62838b07cb9797d979577657"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7ff7e0023558d73796f83bb3710fad83872c5a5947882c2246c98b1552a4eaa"
     }
   }
 }

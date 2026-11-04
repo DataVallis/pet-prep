@@ -5450,7 +5450,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Dried fruit",
@@ -5458,7 +5459,8 @@
         "de": "Trockenfrüchte",
         "fr": "Fruits secs",
         "es": "Fruta deshidratada",
-        "it": "Frutta essiccata"
+        "it": "Frutta essiccata",
+        "pt": "Fruta desidratada"
       },
       "question": {
         "en": "Can cats eat dried fruit?",
@@ -5466,7 +5468,8 @@
         "de": "Dürfen Katzen Trockenfrüchte fressen?",
         "fr": "Les chats peuvent-ils manger des fruits secs ?",
         "es": "¿Pueden los gatos comer fruta deshidratada?",
-        "it": "I gatti possono mangiare la frutta essiccata?"
+        "it": "I gatti possono mangiare la frutta essiccata?",
+        "pt": "Os gatos podem comer fruta desidratada?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -5474,7 +5477,8 @@
         "de": "trockenfruechte",
         "fr": "fruits-secs",
         "es": "fruta-deshidratada",
-        "it": "frutta-essiccata"
+        "it": "frutta-essiccata",
+        "pt": "fruta-desidratada"
       },
       "answer": {
         "en": "No, keep dried fruit away from cats. Raisins, sultanas and currants are highly toxic to pets, raisins and currants can cause kidney failure in cats, and sugar is unhealthy for cats. Watch out for cakes and mince pies too, and call your vet if your cat eats any.",
@@ -5482,7 +5486,8 @@
         "de": "Nein, halten Sie Trockenfrüchte von Katzen fern. Rosinen, Sultaninen und Korinthen sind für Haustiere hochgiftig, Rosinen und Korinthen können bei Katzen Nierenversagen verursachen, und Zucker ist für Katzen ungesund. Auch bei Kuchen und Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) ist Vorsicht geboten – rufen Sie Ihren Tierarzt an, wenn Ihre Katze davon gefressen hat.",
         "fr": "Non, gardez les fruits secs hors de portée des chats. Les raisins secs, de Smyrne et de Corinthe sont très toxiques, ceux de Corinthe et les raisins secs pouvant causer une insuffisance rénale chez le chat, et le sucre lui est nocif. Méfiez-vous des gâteaux et des mince pies, et appelez votre vétérinaire si votre chat en a mangé.",
         "es": "No, mantén la fruta deshidratada fuera del alcance de tu gato. Las pasas, las sultanas y las pasas de Corinto son muy tóxicas: las pasas y las de Corinto pueden causar insuficiencia renal en gatos, y el azúcar no es saludable para ellos. Cuidado con los mince pies y los pasteles: si tu gato come alguno, llama al veterinario.",
-        "it": "No, tieni la frutta essiccata lontana dai gatti. Uvetta, uva sultanina e uva passa di Corinto sono molto tossiche per gli animali domestici; uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e per loro anche lo zucchero non è salutare. Attenzione anche a torte e mince pie: se il tuo gatto ne mangia, chiama il veterinario."
+        "it": "No, tieni la frutta essiccata lontana dai gatti. Uvetta, uva sultanina e uva passa di Corinto sono molto tossiche per gli animali domestici; uvetta e uva passa di Corinto possono causare insufficienza renale nei gatti, e per loro anche lo zucchero non è salutare. Attenzione anche a torte e mince pie: se il tuo gatto ne mangia, chiama il veterinario.",
+        "pt": "Não, mantém a fruta desidratada longe dos gatos. Passas, sultanas e passas de Corinto são muito tóxicas para os animais de estimação, passas e passas de Corinto podem causar insuficiência renal nos gatos e o açúcar não lhes faz bem. Cuidado também com bolos e mince pies, e liga ao teu veterinário se o teu gato comer algum."
       },
       "why": {
         "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
@@ -5490,7 +5495,8 @@
         "de": "Cats Protection nennt Weintrauben, Rosinen und Korinthen unter den für Katzen giftigen Lebensmitteln und sagt, dass sie bei Katzen Nierenversagen verursachen können; Katzen mit chronischer Nierenerkrankung sind möglicherweise stärker gefährdet. Die PDSA warnt, dass Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen Rosinen, Sultaninen und Korinthen enthalten, die für Haustiere hochgiftig sind. Außerdem weist Cats Protection darauf hin, dass Zucker für Katzen zwar nicht giftig, aber dennoch ungesund ist. Vergiftungen durch Weintrauben und Rosinen sind bei Katzen selten und wenig erforscht, und wir haben keine Quelle zu Katzen gefunden, die eine Trockenfrucht als unbedenklich einstuft – deshalb wählen wir die strengere Stufe.",
         "fr": "Cats Protection range le raisin, le raisin sec et le raisin de Corinthe parmi les aliments humains toxiques pour les chats et indique qu’ils peuvent provoquer une insuffisance rénale ; les chats atteints d’une maladie rénale chronique pourraient être plus exposés. La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Cats Protection rappelle aussi que le sucre n’est pas toxique pour les chats, mais qu’il reste mauvais pour leur santé. Les intoxications au raisin chez le chat sont rares et mal comprises, et nous n’avons trouvé aucune source sur les chats présentant un fruit sec comme sans danger : nous retenons donc le niveau le plus strict.",
         "es": "Cats Protection incluye las uvas, las pasas y las pasas de Corinto entre los alimentos humanos tóxicos para los gatos: pueden causarles insuficiencia renal, y los gatos con enfermedad renal crónica quizá corran más riesgo. PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Cats Protection añade que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. La intoxicación por uvas y pasas en gatos es poco frecuente y se conoce poco, y no hemos encontrado ninguna fuente sobre gatos que diga que alguna fruta deshidratada sea segura, así que aplicamos el nivel más estricto.",
-        "it": "Cats Protection include uva, uvetta e uva passa di Corinto tra i cibi umani tossici per i gatti e afferma che possono causare insufficienza renale; i gatti con malattia renale cronica potrebbero essere più a rischio. PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Cats Protection precisa inoltre che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. L’intossicazione da uva e uvetta nei gatti è rara e poco conosciuta, e non abbiamo trovato alcuna fonte sui gatti che consideri sicuro un qualsiasi tipo di frutta essiccata, quindi applichiamo il livello più prudente."
+        "it": "Cats Protection include uva, uvetta e uva passa di Corinto tra i cibi umani tossici per i gatti e afferma che possono causare insufficienza renale; i gatti con malattia renale cronica potrebbero essere più a rischio. PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Cats Protection precisa inoltre che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. L’intossicazione da uva e uvetta nei gatti è rara e poco conosciuta, e non abbiamo trovato alcuna fonte sui gatti che consideri sicuro un qualsiasi tipo di frutta essiccata, quindi applichiamo il livello più prudente.",
+        "pt": "A Cats Protection inclui as uvas, as passas e as passas de Corinto entre os alimentos humanos tóxicos para os gatos e diz que podem causar insuficiência renal nos gatos, sendo possível que os gatos com doença renal crónica corram mais risco. A PDSA avisa que as mince pies e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. A Cats Protection diz também que o açúcar não é tóxico para os gatos, mas continua a não ser saudável para eles. A intoxicação por uvas e passas nos gatos é rara e pouco conhecida, e não encontrámos nenhuma fonte sobre gatos que diga que alguma fruta desidratada é segura, por isso seguimos o nível mais rigoroso."
       },
       "signs": {
         "en": [
@@ -5510,6 +5516,9 @@
         ],
         "it": [
           "Vomito, di solito entro un giorno"
+        ],
+        "pt": [
+          "Vómitos, normalmente no espaço de um dia"
         ]
       },
       "what_to_do": {
@@ -5518,7 +5527,8 @@
         "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was Ihre Katze gefressen hat (welche Trockenfrucht oder welches Lebensmittel mit Trockenfrüchten), wie viel und wann, und heben Sie die Verpackung auf. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
         "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce que votre chat a mangé (quel fruit sec ou quel aliment en contenant), en quelle quantité et à quelle heure, et gardez l’emballage. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
         "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales. Anota qué ha comido tu gato (qué fruta deshidratada o qué alimento la lleva), cuánto y cuándo, y guarda el envase. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
-        "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (quale frutta essiccata o quale alimento che la contiene), in che quantità e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa."
+        "it": "Contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato il tuo gatto (quale frutta essiccata o quale alimento che la contiene), in che quantità e quando, e conserva la confezione. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
+        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais. Anota o que o teu gato comeu (que fruta desidratada ou que alimento a contém), a quantidade e quando, e guarda a embalagem. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
       },
       "serving": null,
       "child": {
@@ -5527,7 +5537,8 @@
         "de": "Trockenfrüchte wie Rosinen sind kein Snack für Katzen. Halte sie von deiner Katze fern und sag einem Erwachsenen Bescheid, wenn sie welche frisst.",
         "fr": "Les fruits secs, comme les raisins secs, ne sont pas des friandises pour les chats. Garde-les loin de ton chat, et préviens un adulte s’il en mange.",
         "es": "La fruta deshidratada, como las pasas, no es una golosina para gatos. Mantenla lejos de tu gato y avisa a un adulto si se come alguna.",
-        "it": "La frutta essiccata, come l’uvetta, non è uno spuntino per i gatti. Tienila lontana dal tuo micio e, se ne mangia un po’, dillo a un adulto."
+        "it": "La frutta essiccata, come l’uvetta, non è uno spuntino per i gatti. Tienila lontana dal tuo micio e, se ne mangia un po’, dillo a un adulto.",
+        "pt": "A fruta desidratada, como as passas, não é um petisco para gatos. Mantém-na longe do gatinho e avisa um adulto se ele comer alguma."
       },
       "faq": [
         {
@@ -5537,7 +5548,8 @@
             "de": "Und was ist mit Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen?",
             "fr": "Et les mince pies et le gâteau de Noël ?",
             "es": "¿Y los mince pies y el pastel de Navidad?",
-            "it": "E i mince pie e il Christmas cake?"
+            "it": "E i mince pie e il Christmas cake?",
+            "pt": "E as mince pies e o bolo de Natal?"
           },
           "a": {
             "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -5545,7 +5557,8 @@
             "de": "Die PDSA warnt, dass Mince Pies (britisches Weihnachtsgebäck mit Trockenfrüchten) und Weihnachtskuchen Rosinen, Sultaninen und Korinthen enthalten, die für Haustiere hochgiftig sind. Lagern Sie sie so, dass Ihre Katze nicht herankommt.",
             "fr": "La PDSA prévient que les mince pies (petites tartelettes de Noël britanniques) et le gâteau de Noël contiennent des raisins secs, des raisins de Smyrne et des raisins de Corinthe, très toxiques pour les animaux de compagnie. Rangez-les hors de portée de votre chat.",
             "es": "PDSA advierte de que los mince pies (pastelitos de frutas) y el pastel de Navidad llevan pasas, sultanas y pasas de Corinto, muy tóxicas para las mascotas. Mantenlos fuera del alcance de tu gato.",
-            "it": "PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto."
+            "it": "PDSA avverte che i mince pie e il Christmas cake contengono uvetta, uva sultanina e uva passa di Corinto, molto tossiche per gli animali domestici. Tienili fuori dalla portata del tuo gatto.",
+            "pt": "A PDSA avisa que as mince pies (tartes de Natal inglesas) e o bolo de Natal contêm passas, sultanas e passas de Corinto, que são muito tóxicas para os animais de estimação. Mantém-nos fora do alcance do teu gato."
           }
         },
         {
@@ -5555,7 +5568,8 @@
             "de": "Ist auch der Zucker ein Problem?",
             "fr": "Le sucre pose-t-il aussi problème ?",
             "es": "¿El azúcar también es un problema?",
-            "it": "Anche lo zucchero è un problema?"
+            "it": "Anche lo zucchero è un problema?",
+            "pt": "O açúcar também é um problema?"
           },
           "a": {
             "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
@@ -5563,7 +5577,8 @@
             "de": "Cats Protection weist darauf hin, dass Zucker für Katzen zwar nicht giftig, aber dennoch ungesund ist. Katzen können Süßes gar nicht schmecken, Zucker hat für sie keinen Nährwert, und wer ihnen regelmäßig Zuckriges gibt, riskiert gesundheitliche Probleme.",
             "fr": "Selon Cats Protection, le sucre n’est pas toxique pour les chats, mais il reste mauvais pour leur santé. Les chats ne perçoivent pas le goût sucré, le sucre n’a aucune valeur nutritive pour eux, et leur donner régulièrement des aliments sucrés peut entraîner des problèmes de santé.",
             "es": "Cats Protection explica que el azúcar no es tóxico para los gatos, pero sigue sin ser saludable para ellos. Los gatos no perciben el sabor dulce, el azúcar no les aporta ningún valor nutricional y, si se les dan alimentos azucarados con regularidad, podrían tener problemas de salud.",
-            "it": "Cats Protection afferma che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. I gatti non sentono il sapore dolce, lo zucchero non ha per loro alcun valore nutrizionale e, se gli dai spesso cibi zuccherati, potrebbero avere problemi di salute."
+            "it": "Cats Protection afferma che lo zucchero non è tossico per i gatti, ma non fa comunque bene alla loro salute. I gatti non sentono il sapore dolce, lo zucchero non ha per loro alcun valore nutrizionale e, se gli dai spesso cibi zuccherati, potrebbero avere problemi di salute.",
+            "pt": "A Cats Protection diz que o açúcar não é tóxico para os gatos, mas continua a não lhes fazer bem. Os gatos não sentem o sabor doce, o açúcar não tem valor nutricional para eles e dar-lhes alimentos açucarados com regularidade pode levar a problemas de saúde."
           }
         }
       ],
@@ -6147,7 +6162,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -6155,7 +6171,8 @@
         "de": "Obstkerne",
         "fr": "Noyaux de fruits",
         "es": "Huesos y semillas de fruta",
-        "it": "Noccioli e semi di frutta"
+        "it": "Noccioli e semi di frutta",
+        "pt": "Caroços e sementes de fruta"
       },
       "question": {
         "en": "Can cats eat fruit pits?",
@@ -6163,7 +6180,8 @@
         "de": "Dürfen Katzen Obstkerne fressen?",
         "fr": "Les chats peuvent-ils manger des noyaux de fruits ?",
         "es": "¿Pueden los gatos comer huesos de fruta?",
-        "it": "I gatti possono mangiare i noccioli di frutta?"
+        "it": "I gatti possono mangiare i noccioli di frutta?",
+        "pt": "Os gatos podem comer caroços de fruta?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -6171,7 +6189,8 @@
         "de": "obstkerne",
         "fr": "noyaux-de-fruits",
         "es": "huesos-y-semillas-de-fruta",
-        "it": "noccioli-e-semi-di-frutta"
+        "it": "noccioli-e-semi-di-frutta",
+        "pt": "carocos-e-sementes-de-fruta"
       },
       "answer": {
         "en": "No. Keep the pits, stones and seeds of stone fruit away from cats. The ASPCA lists cherry, peach, plum and apricot plants as toxic to cats because their seeds, stems and leaves contain cyanide. Call your vet if your cat chews or swallows one.",
@@ -6179,7 +6198,8 @@
         "de": "Nein. Halten Sie Kerne, Steine und Samen von Steinobst von Katzen fern. Die ASPCA führt Kirsch-, Pfirsich-, Pflaumen- und Aprikosenpflanzen als giftig für Katzen auf, weil ihre Samen, Stiele und Blätter Cyanid enthalten. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Kern kaut oder ihn verschluckt.",
         "fr": "Non. Gardez les noyaux et les pépins des fruits à noyau hors de portée des chats. L’ASPCA classe les cerisiers, pêchers, pruniers et abricotiers parmi les plantes toxiques pour les chats, car leurs graines, leurs tiges et leurs feuilles contiennent du cyanure. Appelez votre vétérinaire si votre chat mâchonne ou avale un noyau.",
         "es": "No. Mantén los huesos y las semillas de las frutas de hueso fuera del alcance de los gatos. La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, porque sus semillas, tallos y hojas contienen cianuro. Llama a tu veterinario si tu gato muerde o se traga alguno.",
-        "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno."
+        "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno.",
+        "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum."
       },
       "why": {
         "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -6187,7 +6207,8 @@
         "de": "Bei Kirsche, Pfirsich, Pflaume und Aprikose sagt die ASPCA, dass Stiele, Blätter und Samen Cyanid (in Form cyanogener Glykoside) enthalten und besonders giftig sind, während sie welken; alle vier Pflanzen führt sie als giftig für Katzen auf. Der Kern oder Stein dieser Früchte ist der Samen und sollte einer Katze deshalb nie gegeben werden.",
         "fr": "Pour la cerise, la pêche, la prune et l’abricot, l’ASPCA indique que les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles flétrissent ; elle classe ces quatre plantes comme toxiques pour les chats. Le noyau de ces fruits est la graine : il ne faut donc jamais en donner à un chat.",
         "es": "Según la ASPCA, los tallos, las hojas y las semillas del cerezo, el melocotonero, el ciruelo y el albaricoquero contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando están marchitos; por eso incluye las cuatro plantas entre las tóxicas para los gatos. El hueso de estas frutas es la semilla, así que nunca se le debe dar a un gato.",
-        "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto."
+        "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto.",
+        "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato."
       },
       "signs": {
         "en": [
@@ -6231,6 +6252,13 @@
           "Difficoltà respiratorie",
           "Ansimare",
           "Shock"
+        ],
+        "pt": [
+          "Gengivas vermelho-tijolo",
+          "Pupilas dilatadas",
+          "Dificuldade em respirar",
+          "Respiração ofegante",
+          "Choque"
         ]
       },
       "what_to_do": {
@@ -6239,7 +6267,8 @@
         "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze einen Kern, Stein oder Samen zerkaut oder verschluckt hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
         "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchonné ou avalé un noyau ou une graine. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
         "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordido o se ha tragado un hueso o una semilla. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
-        "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa."
+        "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
+        "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
       },
       "serving": null,
       "child": {
@@ -6248,7 +6277,8 @@
         "de": "Obstkerne sind für Katzen nicht sicher. Wenn deine Katze auf einem herumkaut, sag einem Erwachsenen Bescheid.",
         "fr": "Les noyaux de fruits ne sont pas sans danger pour les chats. Si ton chat en mâchonne un, préviens un adulte.",
         "es": "Los huesos de fruta no son seguros para los gatos. Si tu gato muerde uno, díselo a un adulto.",
-        "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto."
+        "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto.",
+        "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto."
       },
       "faq": [
         {
@@ -6258,7 +6288,8 @@
             "de": "Welche Früchte sind gemeint?",
             "fr": "De quels fruits parle-t-on ?",
             "es": "¿A qué frutas se aplica esto?",
-            "it": "Di quali frutti si tratta?"
+            "it": "Di quali frutti si tratta?",
+            "pt": "Que frutas estão incluídas?"
           },
           "a": {
             "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -6266,7 +6297,8 @@
             "de": "Die ASPCA führt Kirsche, Pfirsich, Pflaume und Aprikose als giftig für Katzen auf und weist bei jeder darauf hin, dass Stiele, Blätter und Samen Cyanid enthalten.",
             "fr": "L’ASPCA classe la cerise, la pêche, la prune et l’abricot parmi les plantes toxiques pour les chats, et précise pour chacune que les tiges, les feuilles et les graines contiennent du cyanure.",
             "es": "La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, y de cada uno dice que los tallos, las hojas y las semillas contienen cianuro.",
-            "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro."
+            "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro.",
+            "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto."
           }
         }
       ],
@@ -22334,7 +22366,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Coconut oil",
@@ -22342,7 +22375,8 @@
         "de": "Kokosöl",
         "fr": "Huile de coco",
         "es": "Aceite de coco",
-        "it": "Olio di cocco"
+        "it": "Olio di cocco",
+        "pt": "Óleo de coco"
       },
       "question": {
         "en": "Can dogs eat coconut oil?",
@@ -22350,7 +22384,8 @@
         "de": "Dürfen Hunde Kokosöl fressen?",
         "fr": "Les chiens peuvent-ils manger de l’huile de coco ?",
         "es": "¿Pueden los perros comer aceite de coco?",
-        "it": "I cani possono mangiare l’olio di cocco?"
+        "it": "I cani possono mangiare l’olio di cocco?",
+        "pt": "Os cães podem comer óleo de coco?"
       },
       "url_slug": {
         "en": "coconut-oil",
@@ -22358,7 +22393,8 @@
         "de": "kokosoel",
         "fr": "huile-de-coco",
         "es": "aceite-de-coco",
-        "it": "olio-di-cocco"
+        "it": "olio-di-cocco",
+        "pt": "oleo-de-coco"
       },
       "answer": {
         "en": "Not recommended as a regular addition. A small lick is unlikely to cause harm, but coconut oil is mostly saturated fat: it can cause upset stomach, greasy stools and diarrhoea, and long-term feeding can lead to weight gain and even pancreatitis. Talk to your vet first.",
@@ -22366,7 +22402,8 @@
         "de": "Als regelmäßiger Zusatz nicht empfohlen. Kurzes Ablecken schadet wahrscheinlich nicht, aber Kokosöl besteht größtenteils aus gesättigten Fetten: Es kann Magenverstimmung, Fettstuhl und Durchfall verursachen, und bei dauerhafter Fütterung drohen Gewichtszunahme und sogar eine Bauchspeicheldrüsenentzündung. Fragen Sie vorher Ihren Tierarzt.",
         "fr": "Déconseillée en complément régulier. Une petite léchée a peu de chances de faire du mal, mais l’huile de coco est surtout composée de graisses saturées : elle peut provoquer des troubles digestifs, des selles grasses et de la diarrhée, et, donnée sur la durée, favoriser la prise de poids, voire une pancréatite. Demandez d’abord conseil à votre vétérinaire.",
         "es": "No se recomienda como complemento habitual. Es poco probable que un lametón cause daño, pero el aceite de coco es sobre todo grasa saturada: puede provocar malestar de estómago, heces grasas y diarrea, y, si se da durante mucho tiempo, aumento de peso e incluso pancreatitis. Consúltalo antes con tu veterinario.",
-        "it": "Non consigliato come aggiunta abituale. Una piccola leccata difficilmente fa male, ma l’olio di cocco è composto per lo più da grassi saturi: può causare mal di stomaco, feci grasse e diarrea, e se lo si dà a lungo può portare ad aumento di peso e perfino a pancreatite. Parlane prima con il veterinario."
+        "it": "Non consigliato come aggiunta abituale. Una piccola leccata difficilmente fa male, ma l’olio di cocco è composto per lo più da grassi saturi: può causare mal di stomaco, feci grasse e diarrea, e se lo si dà a lungo può portare ad aumento di peso e perfino a pancreatite. Parlane prima con il veterinario.",
+        "pt": "Não é recomendado como complemento regular. Uma pequena lambidela dificilmente faz mal, mas o óleo de coco é sobretudo gordura saturada: pode causar mal-estar no estômago, fezes gordurosas e diarreia, e, se for dado durante muito tempo, pode levar a aumento de peso e até a pancreatite. Fala primeiro com o teu veterinário."
       },
       "why": {
         "en": "Coconut oil consists mostly of saturated fats. Feeding it can lead to weight gain and digestive upset, and long-term feeding can lead to obesity and trigger pancreatitis. There hasn't been extensive research proving that it helps dogs' health. Another AKC article says daily feeding isn't recommended and small, occasional amounts are safer; we follow the stricter advice and rate it not recommended.",
@@ -22374,7 +22411,8 @@
         "de": "Kokosöl besteht größtenteils aus gesättigten Fetten. Wer es füttert, riskiert Gewichtszunahme und Verdauungsbeschwerden, und bei langfristiger Gabe kann es zu Fettleibigkeit führen und eine Bauchspeicheldrüsenentzündung (Pankreatitis) auslösen. Umfangreiche Studien, die einen Nutzen für die Gesundheit von Hunden belegen, gibt es nicht. Ein weiterer AKC-Artikel rät von täglicher Gabe ab und nennt kleine, gelegentliche Mengen als sicherer; wir folgen dem strengeren Rat und stufen es als „nicht empfohlen“ ein.",
         "fr": "L’huile de coco est surtout composée de graisses saturées. En donner peut entraîner une prise de poids et des troubles digestifs, et, sur la durée, de l’obésité et une pancréatite. Aucune étude approfondie ne prouve qu’elle soit bénéfique pour la santé des chiens. Un autre article de l’AKC déconseille de la donner tous les jours et juge plus sûres de petites quantités occasionnelles ; nous suivons le conseil le plus strict et la classons parmi les aliments déconseillés.",
         "es": "El aceite de coco está formado sobre todo por grasas saturadas. Si se le da a un perro, puede provocar aumento de peso y molestias digestivas, y, tomado durante mucho tiempo, obesidad y pancreatitis. No hay estudios amplios que demuestren que mejore la salud de los perros. Otro artículo del AKC dice que no se recomienda dárselo a diario y que las cantidades pequeñas y ocasionales son más seguras; seguimos el consejo más estricto y lo clasificamos como no recomendado.",
-        "it": "L’olio di cocco è composto per lo più da grassi saturi. Somministrarlo può causare aumento di peso e disturbi digestivi; se l’uso è prolungato, può portare a obesità e scatenare una pancreatite. Non esistono studi approfonditi che dimostrino che faccia bene alla salute dei cani. Un altro articolo dell’AKC sconsiglia di darlo ogni giorno e indica come più sicure quantità piccole e occasionali; noi seguiamo l’indicazione più prudente e lo classifichiamo come non consigliato."
+        "it": "L’olio di cocco è composto per lo più da grassi saturi. Somministrarlo può causare aumento di peso e disturbi digestivi; se l’uso è prolungato, può portare a obesità e scatenare una pancreatite. Non esistono studi approfonditi che dimostrino che faccia bene alla salute dei cani. Un altro articolo dell’AKC sconsiglia di darlo ogni giorno e indica come più sicure quantità piccole e occasionali; noi seguiamo l’indicazione più prudente e lo classifichiamo come non consigliato.",
+        "pt": "O óleo de coco é constituído sobretudo por gorduras saturadas. Dar óleo de coco pode levar ao aumento de peso e a problemas digestivos e, se for dado a longo prazo, à obesidade e a pancreatite. Não existem estudos abrangentes que provem que faz bem à saúde dos cães. Outro artigo do AKC diz que não se recomenda dar óleo de coco todos os dias e que quantidades pequenas e ocasionais são mais seguras; seguimos o conselho mais rigoroso e classificamo-lo como não recomendado."
       },
       "signs": {
         "en": [
@@ -22406,6 +22444,11 @@
           "Mal di stomaco",
           "Feci grasse",
           "Diarrea"
+        ],
+        "pt": [
+          "Mal-estar no estômago",
+          "Fezes gordurosas",
+          "Diarreia"
         ]
       },
       "what_to_do": {
@@ -22414,7 +22457,8 @@
         "de": "Hat Ihr Hund etwas Kokosöl abgeleckt, ist das vermutlich kein großes Problem. Besprechen Sie es mit Ihrem Tierarzt, bevor Sie Kokosöl füttern oder auf die Haut auftragen.",
         "fr": "Si votre chien a léché un peu d’huile de coco, cela ne devrait pas poser de gros problème. Parlez-en à votre vétérinaire avant de lui en donner à manger ou de l’appliquer sur sa peau.",
         "es": "Si tu perro ha lamido un poco de aceite de coco, es probable que no pase nada grave. Antes de darle aceite de coco para comer o de aplicárselo en la piel, coméntalo con tu veterinario.",
-        "it": "Se il tuo cane ha leccato un po’ di olio di cocco, probabilmente non succederà niente di grave. Prima di darglielo da mangiare o di applicarlo sulla pelle, parlane con il veterinario."
+        "it": "Se il tuo cane ha leccato un po’ di olio di cocco, probabilmente non succederà niente di grave. Prima di darglielo da mangiare o di applicarlo sulla pelle, parlane con il veterinario.",
+        "pt": "Se o teu cão lambeu um pouco de óleo de coco, provavelmente não vai fazer grande mal. Antes de lhe dares óleo de coco para comer ou de o aplicares na pele, fala com o teu veterinário."
       },
       "serving": null,
       "child": {
@@ -22423,7 +22467,8 @@
         "de": "Kokosöl ist sehr fettig und kann Hunden auf den Bauch schlagen. Darüber entscheiden nur ein Erwachsener und der Tierarzt.",
         "fr": "L’huile de coco est très grasse et peut donner mal au ventre aux chiens. Seuls un adulte et le vétérinaire décident si on peut en donner.",
         "es": "El aceite de coco es muy graso y puede sentarle mal a la barriga de un perro. Solo un adulto y el veterinario deciden si se le da.",
-        "it": "L’olio di cocco è molto grasso e può far male alla pancia del cane. Ne decidono solo un adulto e il veterinario."
+        "it": "L’olio di cocco è molto grasso e può far male alla pancia del cane. Ne decidono solo un adulto e il veterinario.",
+        "pt": "O óleo de coco é muito gordo e pode fazer mal à barriguinha do cão. Quem decide é um adulto, com a ajuda do veterinário."
       },
       "faq": [
         {
@@ -22433,7 +22478,8 @@
             "de": "Darf ich Kokosöl auf die Haut meines Hundes auftragen?",
             "fr": "Puis-je mettre de l’huile de coco sur la peau de mon chien ?",
             "es": "¿Puedo ponerle aceite de coco en la piel a mi perro?",
-            "it": "Posso mettere l’olio di cocco sulla pelle del mio cane?"
+            "it": "Posso mettere l’olio di cocco sulla pelle del mio cane?",
+            "pt": "Posso pôr óleo de coco na pele do meu cão?"
           },
           "a": {
             "en": "Coconut oil can help soothe irritated areas or dry, itchy skin, but it is messy and can clog pores. Discuss it with your vet before using it.",
@@ -22441,7 +22487,8 @@
             "de": "Kokosöl kann gereizte Stellen oder trockene, juckende Haut beruhigen, ist aber schmierig und kann die Poren verstopfen. Besprechen Sie es vor der Anwendung mit Ihrem Tierarzt.",
             "fr": "L’huile de coco peut aider à apaiser les zones irritées ou la peau sèche qui démange, mais elle est salissante et peut boucher les pores. Parlez-en à votre vétérinaire avant de l’utiliser.",
             "es": "El aceite de coco puede aliviar las zonas irritadas o la piel seca y con picor, pero mancha mucho y puede obstruir los poros. Coméntalo con tu veterinario antes de usarlo.",
-            "it": "L’olio di cocco può aiutare a lenire le zone irritate o la pelle secca e pruriginosa, ma unge parecchio e può ostruire i pori. Parlane con il veterinario prima di usarlo."
+            "it": "L’olio di cocco può aiutare a lenire le zone irritate o la pelle secca e pruriginosa, ma unge parecchio e può ostruire i pori. Parlane con il veterinario prima di usarlo.",
+            "pt": "O óleo de coco pode ajudar a aliviar zonas irritadas ou a pele seca e com comichão, mas suja muito e pode entupir os poros. Fala com o teu veterinário antes de o usar."
           }
         },
         {
@@ -22451,7 +22498,8 @@
             "de": "Ist Kokosöl gut für die Gesundheit von Hunden?",
             "fr": "L’huile de coco est-elle bonne pour la santé des chiens ?",
             "es": "¿Es bueno el aceite de coco para la salud de los perros?",
-            "it": "L’olio di cocco fa bene alla salute dei cani?"
+            "it": "L’olio di cocco fa bene alla salute dei cani?",
+            "pt": "O óleo de coco faz bem à saúde dos cães?"
           },
           "a": {
             "en": "There hasn't been extensive research proving that coconut oil will definitely help many aspects of a dog's health.",
@@ -22459,7 +22507,8 @@
             "de": "Dass Kokosöl die Gesundheit von Hunden in vielerlei Hinsicht verbessert, ist durch umfangreiche Studien bisher nicht eindeutig belegt.",
             "fr": "Aucune étude approfondie ne prouve à ce jour que l’huile de coco améliore à coup sûr de nombreux aspects de la santé du chien.",
             "es": "No hay estudios amplios que demuestren que el aceite de coco ayude con seguridad en muchos aspectos de la salud de un perro.",
-            "it": "Non esistono studi approfonditi che dimostrino con certezza che l’olio di cocco faccia bene a molti aspetti della salute del cane."
+            "it": "Non esistono studi approfonditi che dimostrino con certezza che l’olio di cocco faccia bene a molti aspetti della salute del cane.",
+            "pt": "Não existem estudos abrangentes que provem que o óleo de coco ajuda de certeza em muitos aspetos da saúde de um cão."
           }
         }
       ],
@@ -22496,7 +22545,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Coconut",
@@ -22504,7 +22554,8 @@
         "de": "Kokosnuss",
         "fr": "Noix de coco",
         "es": "Coco",
-        "it": "Cocco"
+        "it": "Cocco",
+        "pt": "Coco"
       },
       "question": {
         "en": "Can dogs eat coconut?",
@@ -22512,7 +22563,8 @@
         "de": "Dürfen Hunde Kokosnuss fressen?",
         "fr": "Les chiens peuvent-ils manger de la noix de coco ?",
         "es": "¿Pueden los perros comer coco?",
-        "it": "I cani possono mangiare il cocco?"
+        "it": "I cani possono mangiare il cocco?",
+        "pt": "Os cães podem comer coco?"
       },
       "url_slug": {
         "en": "coconut",
@@ -22520,7 +22572,8 @@
         "de": "kokosnuss",
         "fr": "noix-de-coco",
         "es": "coco",
-        "it": "cocco"
+        "it": "cocco",
+        "pt": "coco"
       },
       "answer": {
         "en": "Yes, in small amounts. Unsweetened coconut flesh is safe for dogs in moderation, but never give the husk or shell. Coconut is high in fat and contains oils that can cause stomach upset and diarrhoea.",
@@ -22528,7 +22581,8 @@
         "de": "Ja, in kleinen Mengen. Das ungesüßte Fruchtfleisch ist in Maßen für Hunde unbedenklich, aber geben Sie nie die Faserhülle oder die Schale. Kokosnuss ist fettreich und enthält Öle, die Magenbeschwerden und Durchfall verursachen können.",
         "fr": "Oui, en petites quantités. La chair de noix de coco non sucrée est sans danger pour les chiens avec modération, mais ne leur donnez jamais la bourre ni la coque. La noix de coco est riche en graisses et contient des huiles qui peuvent provoquer des maux d’estomac et de la diarrhée.",
         "es": "Sí, en pequeñas cantidades. La pulpa de coco sin azúcar es segura para los perros con moderación, pero nunca les des la envoltura fibrosa ni la cáscara. El coco es rico en grasa y contiene aceites que pueden provocar molestias de estómago y diarrea.",
-        "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea."
+        "it": "Sì, in piccole quantità. La polpa di cocco non zuccherata è sicura per i cani se data con moderazione, ma non dare mai l’involucro fibroso né il guscio. Il cocco è ricco di grassi e contiene oli che possono causare mal di stomaco e diarrea.",
+        "pt": "Sim, em pequenas quantidades. A polpa de coco sem açúcar é segura para os cães com moderação, mas nunca lhes dês a casca fibrosa nem a casca dura. O coco é rico em gordura e contém óleos que podem causar mal-estar no estômago e diarreia."
       },
       "why": {
         "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -22536,7 +22590,8 @@
         "de": "In kleinen Mengen ist Kokosnuss wahrscheinlich nicht ernsthaft schädlich, aber Fruchtfleisch und Milch frischer Kokosnüsse enthalten Öle, die Magenbeschwerden, weichen Kot und Durchfall auslösen können. Kokosnuss ist fettreich; Hunde, die keine fettreiche Kost bekommen sollten oder übergewichtig sind, sollten daher andere Leckerli erhalten. Sie enthält außerdem viel Kalium, deshalb ist bei Hunden mit Nierenerkrankung Vorsicht geboten. Faserhülle und Schale können einen Darmverschluss verursachen.",
         "fr": "En petites quantités, la noix de coco ne risque guère de causer de problème grave, mais la chair et le lait des noix de coco fraîches contiennent des huiles qui peuvent provoquer des maux d’estomac, des selles molles et de la diarrhée. Comme la noix de coco est assez grasse, les chiens qui ne doivent pas suivre un régime riche en graisses ou qui sont en surpoids devraient recevoir d’autres friandises. Elle est aussi riche en potassium : la prudence s’impose donc pour les chiens atteints d’une maladie rénale. La bourre et la coque peuvent provoquer une occlusion intestinale.",
         "es": "En pequeñas cantidades, es poco probable que el coco cause daños graves, pero la pulpa y la leche del coco fresco contienen aceites que pueden provocar molestias de estómago, heces blandas y diarrea. El coco es bastante graso, así que a los perros que no deben seguir una dieta rica en grasa o que tienen sobrepeso es mejor darles otros premios. También es rico en potasio, por lo que hay que tener cuidado con los perros con enfermedad renal. La envoltura fibrosa y la cáscara pueden causar una obstrucción intestinal.",
-        "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale."
+        "it": "In piccole quantità il cocco difficilmente provoca danni seri, ma la polpa e il latte del cocco fresco contengono oli che possono causare mal di stomaco, feci molli e diarrea. Il cocco è piuttosto grasso, perciò ai cani che devono evitare i cibi ricchi di grassi o che sono in sovrappeso conviene dare altri premi. È anche ricco di potassio, quindi serve cautela con i cani che hanno malattie renali. L’involucro fibroso e il guscio possono causare un’ostruzione intestinale.",
+        "pt": "Em pequenas quantidades, o coco dificilmente causa danos graves, mas a polpa e o leite do coco fresco contêm óleos que podem causar mal-estar no estômago, fezes moles e diarreia. O coco é mais rico em gordura, por isso os cães que não devem ter uma alimentação rica em gordura ou que têm excesso de peso devem comer outras guloseimas. Também é rico em potássio, pelo que é preciso ter cuidado com os cães com doença renal. A casca fibrosa e a casca dura podem causar uma obstrução intestinal."
       },
       "signs": null,
       "what_to_do": {
@@ -22545,7 +22600,8 @@
         "de": "Fragen Sie Ihren Tierarzt, bevor Sie Kokosnuss in die Ernährung Ihres Hundes aufnehmen, besonders wenn Ihr Hund schon einmal eine Bauchspeicheldrüsenentzündung hatte.",
         "fr": "Demandez conseil à votre vétérinaire avant d’ajouter de la noix de coco à l’alimentation de votre chien, surtout s’il a déjà eu une pancréatite.",
         "es": "Consulta con tu veterinario antes de incluir coco en la dieta de tu perro, sobre todo si ha tenido pancreatitis.",
-        "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite."
+        "it": "Chiedi al veterinario prima di inserire il cocco nell’alimentazione del tuo cane, soprattutto se ha già avuto una pancreatite.",
+        "pt": "Pergunta ao teu veterinário antes de acrescentares coco à alimentação do teu cão, sobretudo se ele já teve pancreatite."
       },
       "serving": {
         "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -22553,7 +22609,8 @@
         "de": "Nur ungesüßtes Fruchtfleisch, in kleinen Mengen, ohne Faserhülle und Schale. Kokosmilch nur ungesüßt und xylitfrei; Kokoswasser nur als Leckerli, niemals anstelle von Wasser.",
         "fr": "Uniquement de la chair non sucrée, en petites quantités, sans bourre ni coque. Le lait de coco seulement non sucré et sans xylitol ; l’eau de coco seulement en friandise, jamais à la place de l’eau.",
         "es": "Solo pulpa sin azúcar, en pequeñas cantidades y sin la envoltura fibrosa ni la cáscara. Leche de coco, solo sin azúcar y sin xilitol; agua de coco, solo como premio y nunca en lugar del agua.",
-        "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua."
+        "it": "Solo polpa non zuccherata, in piccole quantità, senza involucro fibroso né guscio. Latte di cocco solo non zuccherato e senza xilitolo; acqua di cocco solo come premio, mai al posto dell’acqua.",
+        "pt": "Só a polpa sem açúcar, em pequenas quantidades e sem a casca fibrosa nem a casca dura. O leite de coco só sem açúcar e sem xilitol; a água de coco só como guloseima, nunca em vez de água."
       },
       "child": {
         "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -22561,7 +22618,8 @@
         "de": "Hunde dürfen ein bisschen Kokosnuss probieren! Die harte Schale ist nichts für Hunde, deshalb bereitet ein Erwachsener sie vor.",
         "fr": "Les chiens peuvent goûter un tout petit peu de noix de coco ! La coque dure n’est pas pour eux, c’est donc un adulte qui prépare la noix de coco.",
         "es": "¡Los perros pueden probar un poquito de coco! La cáscara dura no es para perros, así que la prepara un adulto.",
-        "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto."
+        "it": "I cani possono assaggiare un po’ di cocco! Il guscio duro non è per i cani, quindi lo prepara un adulto.",
+        "pt": "Os cães podem provar um bocadinho de coco! A casca dura não é para cães, por isso um adulto é que o prepara."
       },
       "faq": [
         {
@@ -22571,7 +22629,8 @@
             "de": "Dürfen Hunde Kokoswasser oder Kokosmilch trinken?",
             "fr": "Les chiens peuvent-ils boire de l’eau de coco ou du lait de coco ?",
             "es": "¿Pueden los perros beber agua de coco o leche de coco?",
-            "it": "I cani possono bere acqua di cocco o latte di cocco?"
+            "it": "I cani possono bere acqua di cocco o latte di cocco?",
+            "pt": "Os cães podem beber água de coco ou leite de coco?"
           },
           "a": {
             "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -22579,7 +22638,8 @@
             "de": "Kokoswasser nur als Leckerli, nicht anstelle von normalem Wasser. Kokosmilch nur ungesüßt und frei von künstlichen Süßstoffen wie Xylit, das für Hunde giftig ist.",
             "fr": "L’eau de coco seulement en friandise, jamais à la place de l’eau habituelle. Le lait de coco seulement non sucré et sans édulcorants artificiels comme le xylitol, qui est toxique pour les chiens.",
             "es": "El agua de coco, solo como premio y nunca en lugar del agua normal. La leche de coco, solo sin azúcar y sin edulcorantes artificiales como el xilitol, que es tóxico para los perros.",
-            "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani."
+            "it": "L’acqua di cocco va data solo come premio, non al posto dell’acqua normale. Il latte di cocco va bene solo se non zuccherato e senza dolcificanti artificiali come lo xilitolo, che è tossico per i cani.",
+            "pt": "A água de coco só como guloseima, não em vez de água normal. O leite de coco só sem açúcar e sem adoçantes artificiais como o xilitol, que é tóxico para os cães."
           }
         },
         {
@@ -22589,7 +22649,8 @@
             "de": "Warum nicht die Kokosschale?",
             "fr": "Pourquoi pas la coque de la noix de coco ?",
             "es": "¿Por qué no se le puede dar la cáscara del coco?",
-            "it": "Perché niente guscio di cocco?"
+            "it": "Perché niente guscio di cocco?",
+            "pt": "Porque é que não se pode dar a casca do coco?"
           },
           "a": {
             "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -22597,7 +22658,8 @@
             "de": "Faserhülle und Schale können ernste Verdauungsprobleme verursachen, darunter einen Darmverschluss und Magenreizungen – ähnlich wie bei Stöcken oder Holz.",
             "fr": "La bourre et la coque peuvent causer de graves problèmes digestifs, notamment une occlusion intestinale et des irritations de l’estomac, comme lorsqu’un chien avale des bouts de bois.",
             "es": "La envoltura fibrosa y la cáscara pueden causar problemas digestivos graves, como una obstrucción intestinal o irritación de estómago, igual que si el perro comiera palos o madera.",
-            "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno."
+            "it": "L’involucro fibroso e il guscio possono causare gravi problemi digestivi, tra cui un’ostruzione intestinale e l’irritazione dello stomaco, un po’ come se il cane mangiasse rametti o pezzi di legno.",
+            "pt": "A casca fibrosa e a casca dura podem causar problemas digestivos graves, incluindo obstrução intestinal e irritação do estômago, tal como acontece com paus ou madeira."
           }
         }
       ],
@@ -24429,7 +24491,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Dates",
@@ -24437,7 +24500,8 @@
         "de": "Datteln",
         "fr": "Dattes",
         "es": "Dátiles",
-        "it": "Datteri"
+        "it": "Datteri",
+        "pt": "Tâmaras"
       },
       "question": {
         "en": "Can dogs eat dates?",
@@ -24445,7 +24509,8 @@
         "de": "Dürfen Hunde Datteln fressen?",
         "fr": "Les chiens peuvent-ils manger des dattes ?",
         "es": "¿Pueden los perros comer dátiles?",
-        "it": "I cani possono mangiare i datteri?"
+        "it": "I cani possono mangiare i datteri?",
+        "pt": "Os cães podem comer tâmaras?"
       },
       "url_slug": {
         "en": "dates",
@@ -24453,7 +24518,8 @@
         "de": "datteln",
         "fr": "dattes",
         "es": "datiles",
-        "it": "datteri"
+        "it": "datteri",
+        "pt": "tamaras"
       },
       "answer": {
         "en": "Yes, dogs can eat dates in moderation, as an occasional treat. Always remove the pit first, because it is a choking hazard, and give small pieces rather than the whole fruit. Dates are high in sugar and fibre, so too many can upset the stomach.",
@@ -24461,7 +24527,8 @@
         "de": "Ja, in Maßen: Als gelegentliches Leckerli dürfen Hunde Datteln fressen. Entfernen Sie immer zuerst den Kern, denn er stellt eine Erstickungsgefahr dar, und geben Sie kleine Stücke statt der ganzen Frucht. Datteln enthalten viel Zucker und Ballaststoffe, deshalb können zu viele den Magen verstimmen.",
         "fr": "Oui, avec modération, comme friandise occasionnelle. Retirez toujours le noyau avant, car il présente un risque d’étouffement, et donnez de petits morceaux plutôt que le fruit entier. Les dattes sont riches en sucre et en fibres : en manger trop peut donc irriter l’estomac.",
         "es": "Sí, con moderación y como premio ocasional. Quítale siempre el hueso antes, porque puede atragantarlo, y dale trocitos en lugar de la fruta entera. Los dátiles tienen mucho azúcar y mucha fibra, así que, si come demasiados, puede sentarle mal al estómago.",
-        "it": "Sì, i cani possono mangiare i datteri con moderazione, come premio occasionale. Togli sempre prima il nocciolo, perché può far soffocare il cane, e offri pezzetti piccoli anziché il frutto intero. I datteri sono ricchi di zuccheri e di fibre, quindi se ne mangia troppi il cane può avere mal di stomaco."
+        "it": "Sì, i cani possono mangiare i datteri con moderazione, come premio occasionale. Togli sempre prima il nocciolo, perché può far soffocare il cane, e offri pezzetti piccoli anziché il frutto intero. I datteri sono ricchi di zuccheri e di fibre, quindi se ne mangia troppi il cane può avere mal di stomaco.",
+        "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago."
       },
       "why": {
         "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -24469,7 +24536,8 @@
         "de": "Datteln sind nicht hochgiftig wie Weintrauben, sollten aber nicht zu den Standard-Leckerli gehören. Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird. Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und ihr hoher Ballaststoffgehalt kann zu Durchfall oder Verstopfung führen.",
         "fr": "Les dattes ne sont pas aussi toxiques que le raisin, mais elles ne doivent pas devenir une friandise courante. Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé. Les dattes sont riches en sucre et en calories, ce qui fait vite grossir un chien suralimenté, et leur forte teneur en fibres peut causer de la diarrhée ou de la constipation.",
         "es": "Los dátiles no son tan tóxicos como las uvas, pero no deberían ser el premio de todos los días. El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal. Los dátiles tienen mucho azúcar y muchas calorías, así que, si se abusa de ellos, el perro engorda rápido, y su alto contenido en fibra puede provocar diarrea o estreñimiento.",
-        "it": "A differenza dell’uva, i datteri non sono altamente tossici, ma non devono diventare il premio di tutti i giorni. Il nocciolo non è tossico, però può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale. I datteri sono ricchi di zuccheri e di calorie, che, se se ne dà troppo, fanno ingrassare in fretta, e l’alto contenuto di fibre può portare a diarrea o stitichezza."
+        "it": "A differenza dell’uva, i datteri non sono altamente tossici, ma non devono diventare il premio di tutti i giorni. Il nocciolo non è tossico, però può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale. I datteri sono ricchi di zuccheri e di calorie, che, se se ne dà troppo, fanno ingrassare in fretta, e l’alto contenuto di fibre può portare a diarrea o stitichezza.",
+        "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre."
       },
       "signs": null,
       "what_to_do": {
@@ -24478,7 +24546,8 @@
         "de": "Fragen Sie Ihren Tierarzt, bevor Sie Datteln füttern. Beobachten Sie Ihren Hund, nachdem er welche gefressen hat, auf Erbrechen, Durchfall oder Verstopfung.",
         "fr": "Demandez conseil à votre vétérinaire avant de commencer à donner des dattes à votre chien. Une fois que votre chien en a mangé, surveillez l’apparition de vomissements, de diarrhée ou de constipation.",
         "es": "Consulta con tu veterinario antes de empezar a darle dátiles. Si tu perro ya ha comido algunos, vigila si vomita o tiene diarrea o estreñimiento.",
-        "it": "Chiedi al veterinario prima di iniziare a dare i datteri al tuo cane. Dopo che ne ha mangiati, controlla se compaiono vomito, diarrea o stitichezza."
+        "it": "Chiedi al veterinario prima di iniziare a dare i datteri al tuo cane. Dopo che ne ha mangiati, controlla se compaiono vomito, diarrea o stitichezza.",
+        "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre."
       },
       "serving": {
         "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -24486,7 +24555,8 @@
         "de": "Ohne Kern, in kleine Stücke geschnitten, nur als gelegentliches Leckerli.",
         "fr": "Sans noyau, coupées en petits morceaux, uniquement en friandise occasionnelle.",
         "es": "Sin hueso, en trocitos y solo como premio ocasional.",
-        "it": "Dattero senza nocciolo, tagliato a pezzetti, solo come premio occasionale."
+        "it": "Dattero senza nocciolo, tagliato a pezzetti, solo come premio occasionale.",
+        "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional."
       },
       "child": {
         "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -24494,7 +24564,8 @@
         "de": "Hunde dürfen manchmal ein kleines Stück Dattel haben. Ein Erwachsener nimmt vorher den harten Kern heraus.",
         "fr": "Les chiens peuvent parfois manger un petit morceau de datte. Un adulte retire d’abord le noyau dur.",
         "es": "Los perros pueden comer un trocito de dátil de vez en cuando. Antes, un adulto le quita el hueso duro.",
-        "it": "Ogni tanto i cani possono avere un pezzetto di dattero. Prima un adulto toglie il nocciolo duro."
+        "it": "Ogni tanto i cani possono avere un pezzetto di dattero. Prima un adulto toglie il nocciolo duro.",
+        "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro."
       },
       "faq": [
         {
@@ -24504,7 +24575,8 @@
             "de": "Ist ein Dattelkern für Hunde giftig?",
             "fr": "Le noyau de datte est-il toxique pour les chiens ?",
             "es": "¿Es tóxico el hueso del dátil para los perros?",
-            "it": "Il nocciolo del dattero è velenoso per i cani?"
+            "it": "Il nocciolo del dattero è velenoso per i cani?",
+            "pt": "O caroço da tâmara é venenoso para os cães?"
           },
           "a": {
             "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -24512,7 +24584,8 @@
             "de": "Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird – entfernen Sie ihn also immer.",
             "fr": "Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé : retirez-le donc toujours.",
             "es": "El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal, así que quítalo siempre.",
-            "it": "Il nocciolo non è tossico, ma può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale: toglilo sempre."
+            "it": "Il nocciolo non è tossico, ma può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale: toglilo sempre.",
+            "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre."
           }
         },
         {
@@ -24522,7 +24595,8 @@
             "de": "Warum nur ein bisschen?",
             "fr": "Pourquoi seulement un peu ?",
             "es": "¿Por qué solo un poco?",
-            "it": "Perché solo un po’?"
+            "it": "Perché solo un po’?",
+            "pt": "Porque só um bocadinho?"
           },
           "a": {
             "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -24530,7 +24604,8 @@
             "de": "Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und zu viel Zucker kann einen Hund kraftlos machen und starken Durst auslösen.",
             "fr": "Les dattes sont riches en calories et en sucre, ce qui fait vite grossir un chien suralimenté, et trop de sucre peut le laisser sans force et très assoiffé.",
             "es": "Los dátiles tienen muchas calorías y mucho azúcar, así que, si se abusa de ellos, el perro engorda rápido, y demasiado azúcar puede dejarlo débil y con mucha sed.",
-            "it": "I datteri sono ricchi di calorie e di zuccheri, che, se se ne dà troppo, fanno ingrassare in fretta, e troppo zucchero può lasciare il cane molto debole e assetato."
+            "it": "I datteri sono ricchi di calorie e di zuccheri, che, se se ne dà troppo, fanno ingrassare in fretta, e troppo zucchero può lasciare il cane molto debole e assetato.",
+            "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede."
           }
         },
         {
@@ -24540,7 +24615,8 @@
             "de": "Sind getrocknete Datteln in Ordnung?",
             "fr": "Les dattes séchées conviennent-elles ?",
             "es": "¿Y los dátiles secos?",
-            "it": "I datteri secchi vanno bene?"
+            "it": "I datteri secchi vanno bene?",
+            "pt": "Posso dar tâmaras secas?"
           },
           "a": {
             "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -24548,7 +24624,8 @@
             "de": "Getrocknete Datteln enthalten noch mehr Zucker und Kalorien und haben ihren harten Kern noch – entfernen Sie ihn, bevor Sie ein kleines Stück abgeben.",
             "fr": "Les dattes séchées contiennent encore plus de sucre et de calories, et elles ont toujours leur noyau dur : retirez-le avant de donner un petit morceau.",
             "es": "Los dátiles secos tienen más azúcar y más calorías, y siguen llevando el hueso duro, así que quítaselo antes de darle un trocito.",
-            "it": "I datteri secchi contengono più zuccheri e più calorie e hanno comunque il nocciolo duro: toglilo prima di dare un pezzetto."
+            "it": "I datteri secchi contengono più zuccheri e più calorie e hanno comunque il nocciolo duro: toglilo prima di dare un pezzetto.",
+            "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho."
           }
         }
       ],
@@ -24592,7 +24669,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Dried fruit",
@@ -24600,7 +24678,8 @@
         "de": "Trockenfrüchte",
         "fr": "Fruits secs",
         "es": "Fruta deshidratada",
-        "it": "Frutta essiccata"
+        "it": "Frutta essiccata",
+        "pt": "Fruta desidratada"
       },
       "question": {
         "en": "Can dogs eat dried fruit?",
@@ -24608,7 +24687,8 @@
         "de": "Dürfen Hunde Trockenfrüchte fressen?",
         "fr": "Les chiens peuvent-ils manger des fruits secs ?",
         "es": "¿Pueden los perros comer fruta deshidratada?",
-        "it": "I cani possono mangiare la frutta essiccata?"
+        "it": "I cani possono mangiare la frutta essiccata?",
+        "pt": "Os cães podem comer fruta desidratada?"
       },
       "url_slug": {
         "en": "dried-fruit",
@@ -24616,7 +24696,8 @@
         "de": "trockenfruechte",
         "fr": "fruits-secs",
         "es": "fruta-deshidratada",
-        "it": "frutta-essiccata"
+        "it": "frutta-essiccata",
+        "pt": "fruta-desidratada"
       },
       "answer": {
         "en": "It depends on the fruit, and mixes are risky. Raisins, sultanas and currants are dried grapes and are poisonous to dogs, even in very small amounts. Other dried fruits, like figs and peaches, can be high in sugar, and dried dates still contain a pit.",
@@ -24624,7 +24705,8 @@
         "de": "Das hängt von der Frucht ab, und Mischungen sind riskant. Rosinen, Sultaninen und Korinthen sind getrocknete Weintrauben und für Hunde giftig, schon in sehr kleinen Mengen. Andere Trockenfrüchte wie Feigen und Pfirsiche können viel Zucker enthalten, und getrocknete Datteln haben noch ihren Kern.",
         "fr": "Cela dépend du fruit, et les mélanges sont risqués. Le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont des raisins séchés toxiques pour les chiens, même en toute petite quantité. Les autres fruits secs, comme les figues et les pêches, peuvent être riches en sucre, et les dattes séchées contiennent encore leur noyau.",
         "es": "Depende de la fruta, y las mezclas son peligrosas. Las pasas, las sultanas y las pasas de Corinto son uvas secas, venenosas para los perros incluso en cantidades muy pequeñas. Otras frutas deshidratadas, como los higos y los melocotones, pueden tener mucho azúcar, y los dátiles secos siguen llevando hueso.",
-        "it": "Dipende dalla frutta, e i mix sono rischiosi. Uvetta, uva sultanina e uva passa di Corinto sono tutte uva essiccata e sono velenose per i cani, anche in quantità minime. Anche altri tipi di frutta essiccata, come fichi e pesche, possono essere ricchi di zuccheri, e i datteri secchi hanno comunque il nocciolo."
+        "it": "Dipende dalla frutta, e i mix sono rischiosi. Uvetta, uva sultanina e uva passa di Corinto sono tutte uva essiccata e sono velenose per i cani, anche in quantità minime. Anche altri tipi di frutta essiccata, come fichi e pesche, possono essere ricchi di zuccheri, e i datteri secchi hanno comunque il nocciolo.",
+        "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço."
       },
       "why": {
         "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
@@ -24632,7 +24714,8 @@
         "de": "Weintrauben, Rosinen, Sultaninen und Korinthen sind für Hunde alle potenziell giftig; es lässt sich nicht vorhersagen, ob ein Hund schwer betroffen sein wird, und manche Hunde erkranken schon nach sehr kleinen Mengen, besonders bei getrockneten Früchten. Getrocknete Cranberrys werden manchmal mit Rosinen gemischt. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil das Wasser entzogen wurde, und getrocknete Pfirsiche enthalten oft zu viel Zucker. Weil eine Trockenfruchtmischung Rosinen verbergen kann, bei denen man sofort zum Tierarzt muss, wählen wir die strengere Stufe und stufen Trockenfrüchte insgesamt wie Rosinen als giftig ein.",
         "fr": "Le raisin, le raisin sec, le raisin de Smyrne et le raisin de Corinthe sont tous potentiellement toxiques pour les chiens ; impossible de savoir si un chien sera gravement touché, et certains tombent malades après de très petites quantités, surtout de fruits secs. Les canneberges séchées sont parfois vendues mélangées à des raisins secs. Les figues séchées contiennent beaucoup plus de sucre concentré, car l’eau a été retirée, et les pêches déshydratées contiennent souvent trop de sucre. Comme un mélange de fruits secs peut cacher des raisins secs, qui exigent de consulter un vétérinaire sans attendre, nous retenons le niveau le plus strict et classons les fruits secs comme toxiques dans l’ensemble, au même titre que le raisin sec.",
         "es": "Las uvas, las pasas, las sultanas y las pasas de Corinto son potencialmente venenosas para los perros. Es imposible saber si un perro se verá gravemente afectado, y algunos enferman con cantidades muy pequeñas, sobre todo de las versiones secas. Los arándanos rojos deshidratados a veces vienen mezclados con pasas. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua, y los melocotones deshidratados suelen llevar azúcar de más. Como una mezcla de fruta deshidratada puede esconder pasas, que exigen acudir al veterinario de inmediato, aplicamos el nivel más estricto y clasificamos la fruta deshidratada como tóxica en general, igual que las pasas.",
-        "it": "Uva, uvetta, uva sultanina e uva passa di Corinto sono tutte potenzialmente velenose per i cani; è impossibile sapere se un cane ne sarà colpito gravemente, e alcuni cani si ammalano dopo quantità piccolissime, soprattutto di frutta essiccata. A volte i mirtilli rossi essiccati sono venduti mescolati all’uvetta. I fichi secchi contengono zuccheri molto più concentrati perché è stata eliminata l’acqua, e le pesche essiccate spesso contengono troppo zucchero. Poiché un mix di frutta essiccata può nascondere dell’uvetta, e in quel caso serve subito il veterinario, applichiamo il livello più prudente e classifichiamo la frutta essiccata nel complesso come tossica, come l’uvetta."
+        "it": "Uva, uvetta, uva sultanina e uva passa di Corinto sono tutte potenzialmente velenose per i cani; è impossibile sapere se un cane ne sarà colpito gravemente, e alcuni cani si ammalano dopo quantità piccolissime, soprattutto di frutta essiccata. A volte i mirtilli rossi essiccati sono venduti mescolati all’uvetta. I fichi secchi contengono zuccheri molto più concentrati perché è stata eliminata l’acqua, e le pesche essiccate spesso contengono troppo zucchero. Poiché un mix di frutta essiccata può nascondere dell’uvetta, e in quel caso serve subito il veterinario, applichiamo il livello più prudente e classifichiamo la frutta essiccata nel complesso come tossica, come l’uvetta.",
+        "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas."
       },
       "signs": {
         "en": [
@@ -24682,6 +24765,14 @@
           "Sangue nelle feci",
           "Stanchezza",
           "Calo dell’appetito"
+        ],
+        "pt": [
+          "Vómitos",
+          "Diarreia",
+          "Dor de barriga",
+          "Sangue nas fezes",
+          "Pouca energia",
+          "Falta de vontade de comer"
         ]
       },
       "what_to_do": {
@@ -24690,7 +24781,8 @@
         "de": "Hat Ihr Hund Rosinen, Sultaninen, Korinthen oder eine Trockenfruchtmischung gefressen, in der sie stecken könnten, wenden Sie sich sofort an Ihren Tierarzt. Warten Sie nicht auf Anzeichen.",
         "fr": "Si votre chien a mangé des raisins secs, des raisins de Smyrne, des raisins de Corinthe ou un mélange de fruits secs qui peut en contenir, contactez immédiatement votre vétérinaire. N’attendez pas l’apparition des signes.",
         "es": "Si tu perro se ha comido pasas, sultanas, pasas de Corinto o una mezcla de fruta deshidratada que podría llevarlas, contacta enseguida con tu veterinario. No esperes a que aparezcan síntomas.",
-        "it": "Se il tuo cane ha mangiato uvetta, uva sultanina, uva passa di Corinto o un mix di frutta essiccata che potrebbe contenerne, contatta subito il veterinario. Non aspettare che compaiano i sintomi."
+        "it": "Se il tuo cane ha mangiato uvetta, uva sultanina, uva passa di Corinto o un mix di frutta essiccata che potrebbe contenerne, contatta subito il veterinario. Non aspettare che compaiano i sintomi.",
+        "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais."
       },
       "serving": null,
       "child": {
@@ -24699,7 +24791,8 @@
         "de": "Trockenfrüchte wie Rosinen sind nichts für Hunde. Halte Snackmischungen von deinem Hund fern und sag einem Erwachsenen Bescheid, wenn er welche frisst.",
         "fr": "Les fruits secs, comme les raisins secs, ne sont pas pour les chiens. Garde les mélanges à grignoter loin de lui, et préviens un adulte s’il en mange.",
         "es": "La fruta deshidratada, como las pasas, no es para perros. Mantén lejos de tu perro las mezclas para picar y avisa a un adulto si se come alguna.",
-        "it": "La frutta essiccata, come l’uvetta, non è per i cani. Tieni i mix di snack lontani dal tuo cane e, se ne mangia un po’, dillo a un adulto."
+        "it": "La frutta essiccata, come l’uvetta, non è per i cani. Tieni i mix di snack lontani dal tuo cane e, se ne mangia un po’, dillo a un adulto.",
+        "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma."
       },
       "faq": [
         {
@@ -24709,7 +24802,8 @@
             "de": "In welchen Lebensmitteln stecken getrocknete Weintrauben?",
             "fr": "Dans quels aliments trouve-t-on du raisin séché ?",
             "es": "¿Qué alimentos esconden uvas secas?",
-            "it": "In quali cibi si nasconde l’uva essiccata?"
+            "it": "In quali cibi si nasconde l’uva essiccata?",
+            "pt": "Que alimentos escondem uvas secas?"
           },
           "a": {
             "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
@@ -24717,7 +24811,8 @@
             "de": "Rosinen, Sultaninen und Korinthen stecken oft in Lebensmitteln wie Weihnachtskuchen, Hot Cross Buns (britischen Rosinenbrötchen) und Keksen, und getrocknete Cranberrys sind manchmal mit Rosinen gemischt.",
             "fr": "Le raisin sec, le raisin de Smyrne et le raisin de Corinthe se cachent souvent dans des aliments comme le gâteau de Noël aux fruits, les brioches de Pâques (hot cross buns) et les cookies, et les canneberges séchées sont parfois mélangées à des raisins secs.",
             "es": "Es habitual encontrar pasas, sultanas y pasas de Corinto en alimentos como el pastel de Navidad, los hot cross buns (panecillos dulces de Semana Santa) y las galletas, y a veces los arándanos rojos deshidratados vienen mezclados con pasas.",
-            "it": "Uvetta, uva sultanina e uva passa di Corinto si trovano spesso in cibi come il Christmas cake, gli hot cross bun e i biscotti, e i mirtilli rossi essiccati a volte sono mescolati all’uvetta."
+            "it": "Uvetta, uva sultanina e uva passa di Corinto si trovano spesso in cibi come il Christmas cake, gli hot cross bun e i biscotti, e i mirtilli rossi essiccati a volte sono mescolati all’uvetta.",
+            "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas."
           }
         },
         {
@@ -24727,7 +24822,8 @@
             "de": "Sind andere Trockenfrüchte unbedenklich?",
             "fr": "Les autres fruits secs sont-ils sans danger ?",
             "es": "¿Son seguras las demás frutas deshidratadas?",
-            "it": "Le altre varietà di frutta essiccata vanno bene?"
+            "it": "Le altre varietà di frutta essiccata vanno bene?",
+            "pt": "As outras frutas desidratadas são seguras?"
           },
           "a": {
             "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
@@ -24735,7 +24831,8 @@
             "de": "Nicht als regelmäßiges Leckerli. Getrocknete Feigen und Pfirsiche enthalten viel Zucker, und getrocknete Datteln haben noch einen Kern, der entfernt werden muss.",
             "fr": "Pas comme friandise habituelle. Les figues séchées et les pêches déshydratées sont riches en sucre, et les dattes séchées contiennent encore un noyau qu’il faut retirer.",
             "es": "No para darlas con frecuencia. Los higos secos y los melocotones deshidratados tienen mucho azúcar, y los dátiles secos siguen llevando un hueso que hay que quitar.",
-            "it": "Non come premio abituale. I fichi secchi e le pesche essiccate sono ricchi di zuccheri, e i datteri secchi hanno comunque un nocciolo che va tolto."
+            "it": "Non come premio abituale. I fichi secchi e le pesche essiccate sono ricchi di zuccheri, e i datteri secchi hanno comunque un nocciolo che va tolto.",
+            "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado."
           }
         }
       ],
@@ -25467,7 +25564,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Figs",
@@ -25475,7 +25573,8 @@
         "de": "Feigen",
         "fr": "Figues",
         "es": "Higos",
-        "it": "Fichi"
+        "it": "Fichi",
+        "pt": "Figos"
       },
       "question": {
         "en": "Can dogs eat figs?",
@@ -25483,7 +25582,8 @@
         "de": "Dürfen Hunde Feigen fressen?",
         "fr": "Les chiens peuvent-ils manger des figues ?",
         "es": "¿Pueden los perros comer higos?",
-        "it": "I cani possono mangiare i fichi?"
+        "it": "I cani possono mangiare i fichi?",
+        "pt": "Os cães podem comer figos?"
       },
       "url_slug": {
         "en": "figs",
@@ -25491,7 +25591,8 @@
         "de": "feigen",
         "fr": "figues",
         "es": "higos",
-        "it": "fichi"
+        "it": "fichi",
+        "pt": "figos"
       },
       "answer": {
         "en": "Yes, fresh figs are generally safe for dogs when prepared properly, but only as an occasional treat. Offer just the soft inside, in small pieces, and never let your dog eat fig leaves, bark or branches. Dried figs are too sugary.",
@@ -25499,7 +25600,8 @@
         "de": "Ja, frische Feigen sind für Hunde bei richtiger Zubereitung in der Regel unbedenklich, aber nur als gelegentliches Leckerli. Geben Sie nur das weiche Innere in kleinen Stücken und lassen Sie Ihren Hund niemals Feigenblätter, Rinde oder Zweige fressen. Getrocknete Feigen sind zu zuckrig.",
         "fr": "Oui, les figues fraîches sont en général sans danger pour les chiens si elles sont bien préparées, mais seulement en friandise occasionnelle. Ne proposez que l’intérieur tendre, en petits morceaux, et ne laissez jamais votre chien manger les feuilles, l’écorce ou les branches du figuier. Les figues séchées sont trop sucrées.",
         "es": "Sí, los higos frescos suelen ser seguros para los perros si se preparan bien, pero solo como premio ocasional. Dale únicamente el interior blando, en trocitos, y no dejes nunca que tu perro coma hojas, corteza ni ramas de higuera. Los higos secos tienen demasiado azúcar.",
-        "it": "Sì, i fichi freschi di solito sono sicuri per i cani se preparati nel modo giusto, ma solo come premio occasionale. Dai solo l’interno morbido, a pezzetti, e non lasciare mai che il cane mangi foglie, corteccia o rami del fico. I fichi secchi contengono troppo zucchero."
+        "it": "Sì, i fichi freschi di solito sono sicuri per i cani se preparati nel modo giusto, ma solo come premio occasionale. Dai solo l’interno morbido, a pezzetti, e non lasciare mai che il cane mangi foglie, corteccia o rami del fico. I fichi secchi contengono troppo zucchero.",
+        "pt": "Sim, os figos frescos são geralmente seguros para os cães se forem bem preparados, mas só como guloseima ocasional. Dá apenas o interior macio, em pedaços pequenos, e nunca deixes o teu cão comer folhas, casca ou ramos de figueira. Os figos secos têm demasiado açúcar."
       },
       "why": {
         "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
@@ -25507,7 +25609,8 @@
         "de": "Feigen selbst gelten nicht als giftig wie Weintrauben und Kirschen, aber die Feigenpflanze kann schädlich sein. Feigen enthalten die Vitamine A und C, Kalzium, Kalium, Magnesium und Eisen. Weil Obst natürlichen Zucker und Ballaststoffe enthält, können zu viele Feigen abführend wirken und Durchfall verursachen. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil ihnen das Wasser entzogen wurde.",
         "fr": "Les figues ne sont pas considérées comme toxiques, contrairement au raisin et aux cerises, mais le figuier, lui, peut être nocif. Les figues contiennent des vitamines A et C, du calcium, du potassium, du magnésium et du fer. Comme les fruits contiennent du sucre naturel et des fibres, en manger trop peut avoir un effet laxatif et provoquer de la diarrhée. Les figues séchées contiennent un sucre beaucoup plus concentré, car l’eau a été retirée.",
         "es": "No se considera que los higos sean tóxicos, a diferencia de las uvas o las cerezas, pero la higuera sí puede ser perjudicial. Los higos contienen vitaminas A y C, calcio, potasio, magnesio y hierro. Como la fruta contiene azúcar natural y fibra, si se come demasiada puede tener un efecto laxante y causar diarrea. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua.",
-        "it": "I fichi in sé non sono considerati tossici come l’uva e le ciliegie, ma la pianta del fico può essere dannosa. I fichi contengono vitamine A e C, calcio, potassio, magnesio e ferro. Poiché la frutta contiene zuccheri naturali e fibre, quantità eccessive possono avere un effetto lassativo e causare diarrea. I fichi secchi contengono zuccheri molto più concentrati perché è stata tolta l’acqua."
+        "it": "I fichi in sé non sono considerati tossici come l’uva e le ciliegie, ma la pianta del fico può essere dannosa. I fichi contengono vitamine A e C, calcio, potassio, magnesio e ferro. Poiché la frutta contiene zuccheri naturali e fibre, quantità eccessive possono avere un effetto lassativo e causare diarrea. I fichi secchi contengono zuccheri molto più concentrati perché è stata tolta l’acqua.",
+        "pt": "Os figos em si não são considerados tóxicos, ao contrário das uvas e das cerejas, mas a figueira pode ser prejudicial. Os figos contêm vitaminas A e C, cálcio, potássio, magnésio e ferro. Como a fruta contém açúcar natural e fibra, demasiada pode ter um efeito laxante e causar diarreia. Os figos secos têm o açúcar muito mais concentrado, porque se retirou a água."
       },
       "signs": null,
       "what_to_do": {
@@ -25516,7 +25619,8 @@
         "de": "Frisst Ihr Hund irgendeinen Teil der Feigenpflanze, suchen Sie sofort einen Tierarzt auf. Frisst Ihr Hund mehrere Feigen und bessern sich seine Beschwerden nicht oder muss er erbrechen, wenden Sie sich an Ihren Tierarzt.",
         "fr": "Si votre chien mange n’importe quelle partie du figuier, consultez un vétérinaire sans attendre. S’il mange plusieurs figues et que les signes ne s’améliorent pas, ou s’il se met à vomir, contactez votre vétérinaire.",
         "es": "Si tu perro come cualquier parte de la higuera, acude enseguida a un veterinario. Si se come varios higos y los síntomas no mejoran, o empieza a vomitar, contacta con tu veterinario.",
-        "it": "Se il tuo cane mangia una qualsiasi parte della pianta del fico, portalo subito dal veterinario. Se il tuo cane mangia diversi fichi e i sintomi non migliorano, o inizia a vomitare, contatta il veterinario."
+        "it": "Se il tuo cane mangia una qualsiasi parte della pianta del fico, portalo subito dal veterinario. Se il tuo cane mangia diversi fichi e i sintomi non migliorano, o inizia a vomitare, contatta il veterinario.",
+        "pt": "Se o teu cão comer qualquer parte da figueira, procura imediatamente cuidados veterinários. Se o teu cão comer vários figos e os sinais não melhorarem, ou se começar a vomitar, contacta o teu veterinário."
       },
       "serving": {
         "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
@@ -25524,7 +25628,8 @@
         "de": "Nur das weiche Innere einer frischen Feige, ohne Pflanzenteile, in kleine Stücke geschnitten. Beginnen Sie mit einem winzigen Stück und achten Sie auf Magenverstimmung oder eine allergische Reaktion.",
         "fr": "Uniquement l’intérieur tendre d’une figue fraîche, débarrassé de toute partie de la plante, coupé en petits morceaux. Commencez par un tout petit morceau et surveillez l’apparition de troubles digestifs ou d’une réaction allergique.",
         "es": "Solo el interior blando de un higo fresco, sin ningún resto de la planta y cortado en trocitos. Empieza con un trocito minúsculo y vigila si aparecen molestias de estómago o una reacción alérgica.",
-        "it": "Solo l’interno morbido di un fico fresco, senza alcuna parte della pianta, tagliato a pezzetti. Inizia con un pezzetto minuscolo e controlla se compaiono mal di stomaco o una reazione allergica."
+        "it": "Solo l’interno morbido di un fico fresco, senza alcuna parte della pianta, tagliato a pezzetti. Inizia con un pezzetto minuscolo e controlla se compaiono mal di stomaco o una reazione allergica.",
+        "pt": "Só o interior macio de um figo fresco, sem qualquer material da planta, cortado em pedaços pequenos. Começa com um pedacinho minúsculo e fica atento a mal-estar no estômago ou a uma reação alérgica."
       },
       "child": {
         "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
@@ -25532,7 +25637,8 @@
         "de": "Hunde dürfen ein winziges Stück weiche Feige probieren. Feigenblätter und -zweige sind nichts für Hunde, also frag zuerst einen Erwachsenen.",
         "fr": "Les chiens peuvent goûter un tout petit peu de figue bien tendre. Les feuilles et les branches du figuier ne sont pas pour eux : demande d’abord à un adulte.",
         "es": "Los perros pueden probar un poquito de higo blando. Las hojas y las ramas de la higuera no son para perros, así que pregunta antes a un adulto.",
-        "it": "I cani possono assaggiare un pezzettino di fico morbido. Foglie e rami del fico non sono per i cani, quindi chiedi prima a un adulto."
+        "it": "I cani possono assaggiare un pezzettino di fico morbido. Foglie e rami del fico non sono per i cani, quindi chiedi prima a un adulto.",
+        "pt": "Os cães podem provar um bocadinho de figo macio. As folhas e os ramos da figueira não são para cães, por isso pergunta primeiro a um adulto."
       },
       "faq": [
         {
@@ -25542,7 +25648,8 @@
             "de": "Dürfen Hunde getrocknete Feigen fressen?",
             "fr": "Les chiens peuvent-ils manger des figues séchées ?",
             "es": "¿Pueden los perros comer higos secos?",
-            "it": "I cani possono mangiare i fichi secchi?"
+            "it": "I cani possono mangiare i fichi secchi?",
+            "pt": "Os cães podem comer figos secos?"
           },
           "a": {
             "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
@@ -25550,7 +25657,8 @@
             "de": "Getrocknete Feigen sind kein gutes Leckerli. Sie enthalten viel mehr konzentrierten Zucker, weil beim Trocknen das Wasser entzogen wurde.",
             "fr": "Les figues séchées ne sont pas une bonne friandise. Elles contiennent un sucre beaucoup plus concentré, car l’eau a été retirée au séchage.",
             "es": "Los higos secos no son un buen premio. Tienen el azúcar mucho más concentrado porque se les quita el agua al secarlos.",
-            "it": "I fichi secchi non sono un premio ideale: contengono zuccheri molto più concentrati perché durante l’essiccazione è stata tolta l’acqua."
+            "it": "I fichi secchi non sono un premio ideale: contengono zuccheri molto più concentrati perché durante l’essiccazione è stata tolta l’acqua.",
+            "pt": "Os figos secos não são uma grande opção de guloseima. Têm muito mais açúcar concentrado, porque se retirou a água durante a secagem."
           }
         },
         {
@@ -25560,7 +25668,8 @@
             "de": "Was, wenn mein Hund an einem Feigenbaum knabbert?",
             "fr": "Que faire si mon chien mâchonne un figuier ?",
             "es": "¿Y si mi perro mordisquea una higuera?",
-            "it": "E se il mio cane mastica un albero di fico?"
+            "it": "E se il mio cane mastica un albero di fico?",
+            "pt": "E se o meu cão mastigar uma figueira?"
           },
           "a": {
             "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
@@ -25568,7 +25677,8 @@
             "de": "Die Feigenpflanze kann schädlich sein. Mögliche Anzeichen sind Erbrechen, starkes Sabbern, Hautreizungen und Ausschlag. Frisst Ihr Hund irgendeinen Teil der Pflanze, suchen Sie sofort einen Tierarzt auf.",
             "fr": "Le figuier peut être nocif. Les signes possibles sont des vomissements, une salivation excessive, une irritation de la peau et des éruptions cutanées. Si votre chien mange n’importe quelle partie de la plante, consultez un vétérinaire sans attendre.",
             "es": "La higuera puede ser perjudicial. Los síntomas pueden ser vómitos, babeo excesivo, irritación de la piel y erupciones. Si tu perro come cualquier parte de la planta, acude enseguida a un veterinario.",
-            "it": "La pianta del fico può essere dannosa. Possono comparire vomito, salivazione eccessiva, irritazione della pelle ed eruzioni cutanee. Se il tuo cane mangia una qualsiasi parte della pianta, portalo subito dal veterinario."
+            "it": "La pianta del fico può essere dannosa. Possono comparire vomito, salivazione eccessiva, irritazione della pelle ed eruzioni cutanee. Se il tuo cane mangia una qualsiasi parte della pianta, portalo subito dal veterinario.",
+            "pt": "A figueira pode ser prejudicial. Os sinais podem incluir vómitos, salivação excessiva, irritação da pele e erupções cutâneas. Se o teu cão comer qualquer parte da planta, procura imediatamente cuidados veterinários."
           }
         }
       ],
@@ -25608,7 +25718,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Fruit pits and stones",
@@ -25616,7 +25727,8 @@
         "de": "Obstkerne",
         "fr": "Noyaux de fruits",
         "es": "Huesos y semillas de fruta",
-        "it": "Noccioli e semi di frutta"
+        "it": "Noccioli e semi di frutta",
+        "pt": "Caroços e sementes de fruta"
       },
       "question": {
         "en": "Can dogs eat fruit pits?",
@@ -25624,7 +25736,8 @@
         "de": "Dürfen Hunde Obstkerne fressen?",
         "fr": "Les chiens peuvent-ils manger des noyaux de fruits ?",
         "es": "¿Pueden los perros comer huesos y semillas de fruta?",
-        "it": "I cani possono mangiare i noccioli di frutta?"
+        "it": "I cani possono mangiare i noccioli di frutta?",
+        "pt": "Os cães podem comer caroços de fruta?"
       },
       "url_slug": {
         "en": "fruit-pits",
@@ -25632,7 +25745,8 @@
         "de": "obstkerne",
         "fr": "noyaux-de-fruits",
         "es": "huesos-y-semillas-de-fruta",
-        "it": "noccioli-e-semi-di-frutta"
+        "it": "noccioli-e-semi-di-frutta",
+        "pt": "carocos-e-sementes-de-fruta"
       },
       "answer": {
         "en": "No. Pits and stones of fruits like cherries, peaches and nectarines should never be given to dogs. They can break teeth, cause choking or block the gut, and they contain a small amount of cyanide. Always remove pits and seeds before sharing fruit.",
@@ -25640,7 +25754,8 @@
         "de": "Nein. Kerne und Steine von Früchten wie Kirschen, Pfirsichen und Nektarinen sollten Hunden nie gegeben werden. Sie können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren und enthalten eine kleine Menge Cyanid. Wenn Sie Obst mit Ihrem Hund teilen, entfernen Sie vorher immer Kerne und Samen.",
         "fr": "Non. Ne donnez jamais à un chien de noyaux de cerises, de pêches ou de nectarines. Ils peuvent casser des dents, provoquer un étouffement ou bloquer l’intestin, et ils contiennent un peu de cyanure. Retirez toujours noyaux et pépins avant de partager un fruit.",
         "es": "No. Nunca se deben dar a un perro los huesos de frutas como las cerezas, los melocotones o las nectarinas. Pueden romperle los dientes, atragantarlo u obstruirle el intestino, y contienen una pequeña cantidad de cianuro. Quita siempre los huesos y las semillas antes de compartir fruta.",
-        "it": "No. I noccioli di frutti come ciliegie, pesche e pesche noci non vanno mai dati ai cani. Possono rompere i denti, far soffocare o ostruire l’intestino, e contengono una piccola quantità di cianuro. Togli sempre noccioli e semi prima di dare un po’ di frutta."
+        "it": "No. I noccioli di frutti come ciliegie, pesche e pesche noci non vanno mai dati ai cani. Possono rompere i denti, far soffocare o ostruire l’intestino, e contengono una piccola quantità di cianuro. Togli sempre noccioli e semi prima di dare un po’ di frutta.",
+        "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta."
       },
       "why": {
         "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -25648,7 +25763,8 @@
         "de": "Harte Kerne können Zähne abbrechen, zum Ersticken führen oder den Darm blockieren, und Kerne mit rauen Kanten können beim Verschlucken die Speiseröhre verletzen. Der Kern enthält außerdem eine kleine Menge Cyanid. Cyanidvergiftungen durch Steinobst sind selten, aber Tiere können schon nach einer winzigen Menge erkranken – ein aufgebissener Kern gilt deshalb als dringender Fall.",
         "fr": "Les noyaux durs peuvent casser des dents, provoquer un étouffement ou obstruer l’intestin, et ceux aux bords rugueux peuvent blesser l’œsophage lorsqu’ils sont avalés. Le noyau contient aussi un peu de cyanure. Les intoxications au cyanure dues aux fruits à noyau sont rares, mais un animal peut tomber malade après une infime quantité : un noyau brisé est donc traité comme une urgence.",
         "es": "Los huesos duros pueden fracturar los dientes, causar atragantamiento u obstruir el intestino, y los de bordes ásperos pueden lesionar el esófago al tragarlos. El hueso también contiene una pequeña cantidad de cianuro. La intoxicación por cianuro con frutas de hueso es rara, pero las mascotas pueden enfermar con una cantidad mínima, así que un hueso roto se trata como una urgencia.",
-        "it": "I noccioli duri possono fratturare i denti, far soffocare o ostruire l’intestino, e quelli con i bordi ruvidi possono ferire l’esofago mentre vengono ingoiati. Il nocciolo contiene anche una piccola quantità di cianuro. L’intossicazione da cianuro dovuta alla frutta a nocciolo è rara, ma gli animali possono stare male anche dopo una quantità minima, quindi un nocciolo spaccato va trattato come un’urgenza."
+        "it": "I noccioli duri possono fratturare i denti, far soffocare o ostruire l’intestino, e quelli con i bordi ruvidi possono ferire l’esofago mentre vengono ingoiati. Il nocciolo contiene anche una piccola quantità di cianuro. L’intossicazione da cianuro dovuta alla frutta a nocciolo è rara, ma gli animali possono stare male anche dopo una quantità minima, quindi un nocciolo spaccato va trattato come un’urgenza.",
+        "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente."
       },
       "signs": {
         "en": [
@@ -25698,6 +25814,14 @@
           "Difficoltà a evacuare",
           "Mal di pancia",
           "Difficoltà respiratorie"
+        ],
+        "pt": [
+          "Ânsias de vómito",
+          "Salivação excessiva",
+          "Vómitos",
+          "Dificuldade em defecar",
+          "Dor de barriga",
+          "Dificuldade em respirar"
         ]
       },
       "what_to_do": {
@@ -25706,7 +25830,8 @@
         "de": "Rufen Sie sofort Ihren Tierarzt an, wenn Ihr Hund einen Kern aufbeißt. Hat Ihr Hund einen Kern verschluckt und zeigt eines dieser Anzeichen, rufen Sie Ihren Tierarzt an.",
         "fr": "Appelez immédiatement votre vétérinaire si votre chien a brisé un noyau. Si votre chien a avalé un noyau et présente l’un de ces signes, appelez votre vétérinaire.",
         "es": "Llama enseguida a tu veterinario si tu perro muerde y rompe un hueso. Si se ha tragado un hueso y presenta alguno de estos síntomas, llama también a tu veterinario.",
-        "it": "Chiama subito il veterinario se il tuo cane spacca un nocciolo. Chiamalo anche se ne ha ingoiato uno e mostra uno di questi segni."
+        "it": "Chiama subito il veterinario se il tuo cane spacca un nocciolo. Chiamalo anche se ne ha ingoiato uno e mostra uno di questi segni.",
+        "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário."
       },
       "serving": null,
       "child": {
@@ -25715,7 +25840,8 @@
         "de": "Obstkerne sind nichts für Hunde. Wirf sie in einen Mülleimer, an den dein Hund nicht herankommt, und sag einem Erwachsenen Bescheid, wenn dein Hund einen frisst.",
         "fr": "Les noyaux de fruits ne sont pas pour les chiens. Jette-les à la poubelle, hors de portée de ton chien, et préviens un adulte s’il en mange un.",
         "es": "Los huesos de fruta no son para perros. Tíralos a la basura, donde tu perro no llegue, y avisa a un adulto si se come alguno.",
-        "it": "I noccioli della frutta non sono per i cani. Buttali in un cestino che il tuo cane non possa raggiungere e, se ne mangia uno, dillo a un adulto."
+        "it": "I noccioli della frutta non sono per i cani. Buttali in un cestino che il tuo cane non possa raggiungere e, se ne mangia uno, dillo a un adulto.",
+        "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum."
       },
       "faq": [
         {
@@ -25725,7 +25851,8 @@
             "de": "Ist die Frucht selbst in Ordnung?",
             "fr": "Le fruit lui-même est-il sans danger ?",
             "es": "¿Se puede dar la fruta en sí?",
-            "it": "La frutta in sé va bene?"
+            "it": "La frutta in sé va bene?",
+            "pt": "A fruta em si é segura?"
           },
           "a": {
             "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -25733,7 +25860,8 @@
             "de": "Das hängt von der Frucht ab; schauen Sie auf der jeweiligen Seite nach. Grundsätzlich sollten Samen, Kerne, Kerngehäuse, Schalen und Pflanzenstiele entfernt werden, bevor Sie Obst an Ihren Hund verfüttern.",
             "fr": "Cela dépend du fruit ; voir la page de chaque fruit. En général, il faut retirer les graines, les noyaux, les trognons, les peaux et les tiges avant de donner un fruit à un chien.",
             "es": "Depende de la fruta; consulta la página de cada una. En general, hay que quitar las semillas, los huesos, los corazones, las cortezas y los tallos de la planta antes de dar fruta a un perro.",
-            "it": "Dipende dalla frutta: guarda la pagina di ciascun frutto. In generale, semi, noccioli, torsoli, bucce e gambi vanno tolti prima di dare la frutta a un cane."
+            "it": "Dipende dalla frutta: guarda la pagina di ciascun frutto. In generale, semi, noccioli, torsoli, bucce e gambi vanno tolti prima di dare la frutta a un cane.",
+            "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão."
           }
         },
         {
@@ -25743,7 +25871,8 @@
             "de": "Welche Früchte haben Kerne?",
             "fr": "Quels fruits ont un noyau ?",
             "es": "¿Qué frutas tienen hueso?",
-            "it": "Quali frutti hanno il nocciolo?"
+            "it": "Quali frutti hanno il nocciolo?",
+            "pt": "Que frutas têm caroço?"
           },
           "a": {
             "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -25751,7 +25880,8 @@
             "de": "Früchte wie Kirschen, Nektarinen und Pfirsiche nennt man Steinobst. Wie bei Kirschen enthalten auch Pfirsichkerne Cyanid.",
             "fr": "Les cerises, les nectarines et les pêches sont des fruits à noyau. Comme celui des cerises, le noyau de la pêche contient du cyanure.",
             "es": "Frutas como las cerezas, las nectarinas y los melocotones se llaman frutas de hueso. Igual que las cerezas, los huesos de melocotón contienen cianuro.",
-            "it": "Frutti come ciliegie, pesche noci e pesche si chiamano frutti a nocciolo. Come quello delle ciliegie, il nocciolo della pesca contiene cianuro."
+            "it": "Frutti come ciliegie, pesche noci e pesche si chiamano frutti a nocciolo. Come quello delle ciliegie, il nocciolo della pesca contiene cianuro.",
+            "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto."
           }
         }
       ],
@@ -32326,7 +32456,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Pears",
@@ -32334,7 +32465,8 @@
         "de": "Birnen",
         "fr": "Poires",
         "es": "Peras",
-        "it": "Pere"
+        "it": "Pere",
+        "pt": "Peras"
       },
       "question": {
         "en": "Can dogs eat pears?",
@@ -32342,7 +32474,8 @@
         "de": "Dürfen Hunde Birnen fressen?",
         "fr": "Les chiens peuvent-ils manger des poires ?",
         "es": "¿Pueden los perros comer peras?",
-        "it": "I cani possono mangiare le pere?"
+        "it": "I cani possono mangiare le pere?",
+        "pt": "Os cães podem comer peras?"
       },
       "url_slug": {
         "en": "pears",
@@ -32350,7 +32483,8 @@
         "de": "birnen",
         "fr": "poires",
         "es": "peras",
-        "it": "pere"
+        "it": "pere",
+        "pt": "peras"
       },
       "answer": {
         "en": "Yes, dogs can eat pears in moderation. Remove the core and seeds, cut the fruit into bite-sized pieces and skip canned pears in sugary syrup. Too many pears can upset a dog's stomach.",
@@ -32358,7 +32492,8 @@
         "de": "Ja, Hunde dürfen in Maßen Birnen fressen. Entfernen Sie Kerngehäuse und Kerne, schneiden Sie die Frucht in mundgerechte Stücke und verzichten Sie auf Dosenbirnen in zuckrigem Sirup. Zu viele Birnen können den Magen eines Hundes verstimmen.",
         "fr": "Oui, les chiens peuvent manger des poires avec modération. Retirez le trognon et les pépins, coupez le fruit en petits morceaux et évitez les poires au sirop. Trop de poires peuvent irriter l’estomac d’un chien.",
         "es": "Sí, los perros pueden comer peras con moderación. Quita el corazón y las semillas, corta la fruta en trozos pequeños y evita las peras en conserva con almíbar. Si come demasiadas, puede sentarle mal al estómago.",
-        "it": "Sì, i cani possono mangiare le pere con moderazione. Togli il torsolo e i semi, taglia la frutta in pezzetti da un boccone ed evita le pere sciroppate in scatola. Se ne mangia troppe, il cane può avere mal di stomaco."
+        "it": "Sì, i cani possono mangiare le pere con moderazione. Togli il torsolo e i semi, taglia la frutta in pezzetti da un boccone ed evita le pere sciroppate in scatola. Se ne mangia troppe, il cane può avere mal di stomaco.",
+        "pt": "Sim, os cães podem comer peras com moderação. Retira o carolo e as sementes, corta a fruta em pedaços pequenos, de uma dentada, e evita as peras em conserva com xarope açucarado. Demasiadas peras podem fazer mal ao estômago do cão."
       },
       "why": {
         "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -32366,7 +32501,8 @@
         "de": "Birnen enthalten Vitamin C, Vitamin A, Kupfer und Ballaststoffe. Die Kerne enthalten Spuren von Cyanid und können außerdem zum Ersticken führen, deshalb sollte das Kerngehäuse nicht an den Hund weitergegeben werden. Dosenbirnen enthalten zu viel Zucker, der den Verdauungstrakt reizen und zu Fettleibigkeit führen kann. Auch an sich unbedenkliche Lebensmittel wie Birnen können eine Erstickungsgefahr darstellen.",
         "fr": "Les poires contiennent de la vitamine C, de la vitamine A, du cuivre et des fibres. Les pépins contiennent des traces de cyanure et peuvent aussi provoquer un étouffement : ne partagez donc pas le trognon. Les poires au sirop contiennent trop de sucre, qui peut irriter le système digestif et favoriser l’obésité. Même un aliment sans danger comme la poire peut présenter un risque d’étouffement.",
         "es": "Las peras contienen vitamina C, vitamina A, cobre y fibra. Las semillas contienen trazas de cianuro y también pueden provocar atragantamiento, así que no hay que compartir el corazón. Las peras en conserva tienen demasiado azúcar, que puede irritar el aparato digestivo y llevar a la obesidad. Incluso un alimento seguro como la pera puede suponer un riesgo de atragantamiento.",
-        "it": "Le pere contengono vitamina C, vitamina A, rame e fibre. I semi contengono tracce di cianuro e possono anche far soffocare, quindi il torsolo non va condiviso. Le pere in scatola contengono troppo zucchero, che può irritare l’apparato digerente e portare all’obesità. Anche cibi sicuri come le pere possono far soffocare."
+        "it": "Le pere contengono vitamina C, vitamina A, rame e fibre. I semi contengono tracce di cianuro e possono anche far soffocare, quindi il torsolo non va condiviso. Le pere in scatola contengono troppo zucchero, che può irritare l’apparato digerente e portare all’obesità. Anche cibi sicuri come le pere possono far soffocare.",
+        "pt": "As peras contêm vitamina C, vitamina A, cobre e fibra. As sementes contêm vestígios de cianeto e também podem causar engasgo, por isso o carolo não deve ser partilhado. As peras em conserva têm demasiado açúcar, que pode irritar o trato digestivo e levar à obesidade. Até alimentos seguros como as peras podem ser um perigo de engasgo."
       },
       "signs": null,
       "what_to_do": {
@@ -32375,7 +32511,8 @@
         "de": "Wenn Sie Birnen zum ersten Mal füttern, achten Sie auf Anzeichen einer Magenverstimmung, und wenden Sie sich an Ihren Tierarzt, wenn Sie Bedenken haben.",
         "fr": "La première fois que vous donnez de la poire, surveillez l’apparition de troubles digestifs, et contactez votre vétérinaire au moindre doute.",
         "es": "La primera vez que le des pera, vigila si aparecen signos de malestar de estómago y contacta con tu veterinario si tienes alguna duda.",
-        "it": "La prima volta che dai le pere, controlla se compaiono segni di mal di stomaco e, se hai dubbi, contatta il veterinario."
+        "it": "La prima volta che dai le pere, controlla se compaiono segni di mal di stomaco e, se hai dubbi, contatta il veterinario.",
+        "pt": "Na primeira vez que deres peras, fica atento a sinais de mal-estar no estômago e contacta o teu veterinário se tiveres alguma preocupação."
       },
       "serving": {
         "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -32383,7 +32520,8 @@
         "de": "Frische, reife Birne ohne Kerngehäuse und Kerne, in mundgerechte Stücke geschnitten, als gelegentlicher Snack; beobachten Sie Ihren Hund beim Fressen.",
         "fr": "Poire fraîche et mûre, sans trognon ni pépins, coupée en petits morceaux ; surveillez votre chien pendant qu’il mange. En petite collation occasionnelle.",
         "es": "Pera fresca y madura, sin el corazón ni las semillas y cortada en trozos pequeños; vigila a tu perro mientras come. Solo como premio ocasional.",
-        "it": "Pera fresca e matura, senza torsolo né semi, tagliata a pezzetti da un boccone; tieni d’occhio il cane mentre mangia. Come spuntino occasionale."
+        "it": "Pera fresca e matura, senza torsolo né semi, tagliata a pezzetti da un boccone; tieni d’occhio il cane mentre mangia. Come spuntino occasionale.",
+        "pt": "Pera fresca e madura, sem carolo nem sementes, cortada em pedaços pequenos, de uma dentada; vigia o teu cão enquanto come. Como petisco ocasional."
       },
       "child": {
         "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -32391,7 +32529,8 @@
         "de": "Hunde dürfen ein paar kleine Birnenstücke haben! Ein Erwachsener nimmt vorher die Mitte mit den Kernen heraus.",
         "fr": "Les chiens peuvent manger quelques petits morceaux de poire ! Un adulte retire d’abord le cœur avec les pépins.",
         "es": "¡Los perros pueden comer unos trocitos de pera! Antes, un adulto le quita el corazón con las semillas.",
-        "it": "I cani possono avere qualche pezzetto di pera! Prima un adulto toglie il centro con i semi."
+        "it": "I cani possono avere qualche pezzetto di pera! Prima un adulto toglie il centro con i semi.",
+        "pt": "Os cães podem comer uns pedacinhos de pera! Um adulto tira primeiro o carolo com as sementes."
       },
       "faq": [
         {
@@ -32401,7 +32540,8 @@
             "de": "Dürfen Hunde das Birnenkerngehäuse fressen?",
             "fr": "Les chiens peuvent-ils manger le trognon de la poire ?",
             "es": "¿Pueden los perros comer el corazón de la pera?",
-            "it": "I cani possono mangiare il torsolo della pera?"
+            "it": "I cani possono mangiare il torsolo della pera?",
+            "pt": "Os cães podem comer o carolo da pera?"
           },
           "a": {
             "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -32409,7 +32549,8 @@
             "de": "Nein. Geben Sie Ihrem Hund keine Teile der Birne, in denen Kerne stecken; die Kerne enthalten Spuren von Cyanid und können zum Ersticken führen.",
             "fr": "Non. Évitez de donner à votre chien les parties de la poire qui contiennent des pépins : ils renferment des traces de cyanure et peuvent provoquer un étouffement.",
             "es": "No. No le des a tu perro la parte de la pera donde están las semillas: contienen trazas de cianuro y pueden provocar atragantamiento.",
-            "it": "No. Evita di dare al cane le parti della pera con i semi: i semi contengono tracce di cianuro e possono far soffocare."
+            "it": "No. Evita di dare al cane le parti della pera con i semi: i semi contengono tracce di cianuro e possono far soffocare.",
+            "pt": "Não. Evita dar ao teu cão as partes da pera que têm sementes; as sementes contêm vestígios de cianeto e podem causar engasgo."
           }
         },
         {
@@ -32419,7 +32560,8 @@
             "de": "Sind Dosenbirnen in Ordnung?",
             "fr": "Les poires en conserve conviennent-elles ?",
             "es": "¿Se pueden dar peras en conserva?",
-            "it": "Le pere in scatola vanno bene?"
+            "it": "Le pere in scatola vanno bene?",
+            "pt": "Posso dar peras em conserva?"
           },
           "a": {
             "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -32427,7 +32569,8 @@
             "de": "Nein. Dosenbirnen enthalten zu viel Zucker. Verzichten Sie auf Birnen aus Dose oder Glas, die in Sirup eingelegt sind, auch auf solche mit dem Aufdruck „im eigenen Saft“. Frische, reife Birnen sind die beste Wahl.",
             "fr": "Non. Les poires en conserve contiennent trop de sucre. Évitez les poires au sirop, en boîte ou en bocal, même celles étiquetées « au jus naturel ». Les poires fraîches et mûres sont le meilleur choix.",
             "es": "No. Las peras en conserva tienen demasiado azúcar. Evita las peras en lata o en frasco con almíbar, incluso las que dicen «en su jugo». Las peras frescas y maduras son la mejor opción.",
-            "it": "No. Le pere in scatola contengono troppo zucchero. Evita quelle in scatola o in barattolo con lo sciroppo, anche se sull’etichetta c’è scritto «nel loro succo». Le pere fresche e mature sono la scelta migliore."
+            "it": "No. Le pere in scatola contengono troppo zucchero. Evita quelle in scatola o in barattolo con lo sciroppo, anche se sull’etichetta c’è scritto «nel loro succo». Le pere fresche e mature sono la scelta migliore.",
+            "pt": "Não. As peras em conserva têm demasiado açúcar. Evita as peras em lata ou em frasco com xarope, mesmo as que dizem «no seu próprio sumo». As peras frescas e maduras são a melhor opção."
           }
         }
       ],
@@ -32759,7 +32902,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Persimmon",
@@ -32767,7 +32911,8 @@
         "de": "Kaki",
         "fr": "Kaki",
         "es": "Caqui",
-        "it": "Cachi"
+        "it": "Cachi",
+        "pt": "Dióspiro"
       },
       "question": {
         "en": "Can dogs eat persimmon?",
@@ -32775,7 +32920,8 @@
         "de": "Dürfen Hunde Kaki fressen?",
         "fr": "Les chiens peuvent-ils manger du kaki ?",
         "es": "¿Pueden los perros comer caqui?",
-        "it": "I cani possono mangiare i cachi?"
+        "it": "I cani possono mangiare i cachi?",
+        "pt": "Os cães podem comer dióspiro?"
       },
       "url_slug": {
         "en": "persimmon",
@@ -32783,7 +32929,8 @@
         "de": "kaki",
         "fr": "kaki",
         "es": "caqui",
-        "it": "cachi"
+        "it": "cachi",
+        "pt": "diospiro"
       },
       "answer": {
         "en": "Yes, in limited amounts. Persimmon flesh is safe for dogs, but remove the seeds first: they can cause choking and a bowel blockage, especially in small dogs. Persimmon can have a laxative effect and may cause diarrhoea and vomiting.",
@@ -32791,7 +32938,8 @@
         "de": "Ja, in begrenzten Mengen. Das Fruchtfleisch der Kaki ist für Hunde unbedenklich, aber entfernen Sie vorher die Kerne: Sie können zum Ersticken und zu einem Darmverschluss führen, besonders bei kleinen Hunden. Kaki kann abführend wirken und Durchfall und Erbrechen verursachen.",
         "fr": "Oui, en quantité limitée. La chair du kaki est sans danger pour les chiens, mais retirez d’abord les pépins : ils peuvent provoquer un étouffement et une occlusion intestinale, surtout chez les petits chiens. Le kaki peut avoir un effet laxatif et provoquer de la diarrhée et des vomissements.",
         "es": "Sí, en cantidades limitadas. La pulpa del caqui es segura para los perros, pero quita antes las semillas: pueden causar atragantamiento y una obstrucción intestinal, sobre todo en perros pequeños. El caqui puede ser laxante y provocar diarrea y vómitos.",
-        "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito."
+        "it": "Sì, in quantità limitate. La polpa del cachi è sicura per i cani, ma togli prima i semi: possono far soffocare e causare un’ostruzione intestinale, soprattutto nei cani piccoli. Il cachi può avere un effetto lassativo e provocare diarrea e vomito.",
+        "pt": "Sim, em quantidades limitadas. A polpa do dióspiro é segura para os cães, mas retira primeiro as sementes: podem causar engasgo e uma obstrução intestinal, sobretudo nos cães pequenos. O dióspiro pode ter um efeito laxante e causar diarreia e vómitos."
       },
       "why": {
         "en": "The persimmon fruit itself is not harmful to dogs, but the seeds and pits risk an intestinal blockage. Larger dogs may pass them without trouble, while smaller breeds face the threat of choking and bowel obstruction. Persimmons have a laxative effect and may cause diarrhoea, nausea, vomiting and stomach cramps.",
@@ -32799,7 +32947,8 @@
         "de": "Die Kaki selbst ist für Hunde nicht schädlich, aber Kerne bergen die Gefahr eines Darmverschlusses. Größere Hunde scheiden sie womöglich problemlos aus, während für kleinere Rassen die Gefahr des Erstickens und eines Darmverschlusses besteht. Kakis wirken abführend und können Durchfall, Übelkeit, Erbrechen und Magenkrämpfe verursachen.",
         "fr": "Le fruit du kaki lui-même n’est pas nocif pour les chiens, mais les pépins et les noyaux risquent de provoquer une occlusion intestinale. Les grands chiens peuvent les évacuer sans problème, alors que les petits chiens risquent l’étouffement et l’occlusion intestinale. Les kakis ont un effet laxatif et peuvent causer de la diarrhée, des nausées, des vomissements et des crampes d’estomac.",
         "es": "El caqui en sí no es perjudicial para los perros, pero las semillas y los huesos suponen un riesgo de obstrucción intestinal. Los perros grandes pueden expulsarlos sin problema, mientras que los de razas pequeñas pueden atragantarse y sufrir una obstrucción intestinal. Los caquis tienen un efecto laxante y pueden causar diarrea, náuseas, vómitos y retortijones.",
-        "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco."
+        "it": "Il cachi in sé non fa male ai cani, ma semi e noccioli rischiano di causare un’ostruzione intestinale. I cani più grandi possono eliminarli senza problemi, mentre per quelli più piccoli c’è il rischio di soffocamento e di ostruzione intestinale. I cachi hanno un effetto lassativo e possono causare diarrea, nausea, vomito e crampi allo stomaco.",
+        "pt": "O dióspiro em si não faz mal aos cães, mas as sementes e os caroços implicam risco de obstrução intestinal. Os cães maiores podem expulsá-los sem problemas, ao passo que as raças pequenas correm o risco de engasgo e de obstrução intestinal. Os dióspiros têm um efeito laxante e podem causar diarreia, náuseas, vómitos e cólicas."
       },
       "signs": null,
       "what_to_do": {
@@ -32808,7 +32957,8 @@
         "de": "Zeigt Ihr Hund nach dem Fressen von Kaki Erbrechen, Bauchschmerzen, Austrocknung oder Appetitlosigkeit, suchen Sie sofort einen Tierarzt auf.",
         "fr": "Si votre chien vomit, a mal au ventre, se déshydrate ou perd l’appétit après avoir mangé du kaki, consultez un vétérinaire sans attendre.",
         "es": "Si tu perro tiene vómitos, dolor de barriga, deshidratación o pérdida de apetito después de comer caqui, acude enseguida a un veterinario.",
-        "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario."
+        "it": "Se dopo aver mangiato cachi il tuo cane ha vomito, mal di pancia, disidratazione o perdita di appetito, rivolgiti subito al veterinario.",
+        "pt": "Se o teu cão tiver vómitos, dor de barriga, desidratação ou perda de apetite depois de comer dióspiro, procura imediatamente ajuda veterinária."
       },
       "serving": {
         "en": "Rinse the fruit, remove the seeds and cut it into small, bite-sized slices. In moderation only.",
@@ -32816,7 +32966,8 @@
         "de": "Spülen Sie die Frucht ab, entfernen Sie die Kerne und schneiden Sie sie in kleine, mundgerechte Scheiben. Nur in Maßen.",
         "fr": "Rincez le fruit, retirez les pépins et coupez-le en petites tranches. Uniquement avec modération.",
         "es": "Lava la fruta, quita las semillas y córtala en rodajas pequeñas, del tamaño de un bocado. Solo con moderación.",
-        "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione."
+        "it": "Sciacqua il frutto, togli i semi e taglialo a fettine piccole, da un boccone. Solo con moderazione.",
+        "pt": "Lava a fruta, retira as sementes e corta-a em fatias pequenas, de uma dentada. Só com moderação."
       },
       "child": {
         "en": "Dogs can have a little persimmon. A grown-up takes out the seeds and cuts it into small pieces.",
@@ -32824,7 +32975,8 @@
         "de": "Hunde dürfen ein bisschen Kaki haben. Ein Erwachsener nimmt die Kerne heraus und schneidet sie in kleine Stücke.",
         "fr": "Les chiens peuvent manger un peu de kaki. Un adulte retire les pépins et le coupe en petits morceaux.",
         "es": "Los perros pueden comer un poco de caqui. Un adulto le quita las semillas y lo corta en trocitos.",
-        "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli."
+        "it": "I cani possono avere un po’ di cachi. Un adulto toglie i semi e lo taglia a pezzetti piccoli.",
+        "pt": "Os cães podem comer um pouco de dióspiro. Um adulto tira as sementes e corta-o em pedacinhos."
       },
       "faq": [
         {
@@ -32834,7 +32986,8 @@
             "de": "Sind Kakikerne gefährlich?",
             "fr": "Les pépins de kaki sont-ils dangereux ?",
             "es": "¿Son peligrosas las semillas del caqui?",
-            "it": "I semi del cachi sono pericolosi?"
+            "it": "I semi del cachi sono pericolosi?",
+            "pt": "As sementes do dióspiro são perigosas?"
           },
           "a": {
             "en": "Yes, they should be removed. They can cause choking and a bowel blockage, and small dogs are most at risk.",
@@ -32842,7 +32995,8 @@
             "de": "Ja, sie sollten entfernt werden. Sie können zum Ersticken und zu einem Darmverschluss führen, am stärksten gefährdet sind kleine Hunde.",
             "fr": "Oui, il faut les retirer. Ils peuvent provoquer un étouffement et une occlusion intestinale, et les petits chiens sont les plus exposés.",
             "es": "Sí, hay que quitarlas. Pueden causar atragantamiento y una obstrucción intestinal, y los perros pequeños son los que corren más riesgo.",
-            "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio."
+            "it": "Sì, vanno tolti. Possono far soffocare e causare un’ostruzione intestinale, e i cani piccoli sono quelli più a rischio.",
+            "pt": "Sim, devem ser retiradas. Podem causar engasgo e uma obstrução intestinal, e os cães pequenos são os que correm mais risco."
           }
         }
       ],
@@ -33717,7 +33871,8 @@
         "de",
         "fr",
         "es",
-        "it"
+        "it",
+        "pt"
       ],
       "name": {
         "en": "Pomegranate",
@@ -33725,7 +33880,8 @@
         "de": "Granatapfel",
         "fr": "Grenade",
         "es": "Granada",
-        "it": "Melagrana"
+        "it": "Melagrana",
+        "pt": "Romã"
       },
       "question": {
         "en": "Can dogs eat pomegranate?",
@@ -33733,7 +33889,8 @@
         "de": "Dürfen Hunde Granatapfel fressen?",
         "fr": "Les chiens peuvent-ils manger de la grenade ?",
         "es": "¿Pueden los perros comer granada?",
-        "it": "I cani possono mangiare la melagrana?"
+        "it": "I cani possono mangiare la melagrana?",
+        "pt": "Os cães podem comer romã?"
       },
       "url_slug": {
         "en": "pomegranate",
@@ -33741,7 +33898,8 @@
         "de": "granatapfel",
         "fr": "grenade",
         "es": "granada",
-        "it": "melograno"
+        "it": "melograno",
+        "pt": "roma"
       },
       "answer": {
         "en": "Not recommended. Pomegranates aren't toxic to dogs, but that doesn't make the fruit safe: the seeds can cause stomach trouble and a digestive tract blockage, and pieces of rind and stem can cause an obstruction. It's safer not to give fresh pomegranate.",
@@ -33749,7 +33907,8 @@
         "de": "Nicht empfohlen. Granatäpfel sind für Hunde nicht giftig, doch das macht die Frucht nicht sicher: Die Kerne können Magenprobleme und eine Blockade im Verdauungstrakt verursachen, und Stücke von Schale und Stiel können einen Darmverschluss auslösen. Frischen Granatapfel geben Sie besser nicht.",
         "fr": "Déconseillée. Les grenades ne sont pas toxiques pour les chiens, mais ce n’est pas pour autant un fruit sans danger : les graines peuvent causer des troubles digestifs et une occlusion, et des morceaux d’écorce ou de tige peuvent provoquer une obstruction. Mieux vaut ne pas donner de grenade fraîche.",
         "es": "No se recomienda. Las granadas no son tóxicas para los perros, pero eso no significa que la fruta sea segura: las semillas pueden causar problemas de estómago y una obstrucción digestiva, y los trozos de corteza y de tallo también pueden provocarla. Es más seguro no darle granada fresca a tu perro.",
-        "it": "Non consigliato. Le melagrane non sono tossiche per i cani, ma questo non rende il frutto sicuro: i semi possono causare problemi di stomaco e ostruire l’apparato digerente, e anche pezzi di buccia e di picciolo possono provocare un’ostruzione. È più prudente non dare melagrana fresca."
+        "it": "Non consigliato. Le melagrane non sono tossiche per i cani, ma questo non rende il frutto sicuro: i semi possono causare problemi di stomaco e ostruire l’apparato digerente, e anche pezzi di buccia e di picciolo possono provocare un’ostruzione. È più prudente non dare melagrana fresca.",
+        "pt": "Não é recomendado. As romãs não são tóxicas para os cães, mas isso não torna a fruta segura: as sementes podem causar problemas de estômago e uma obstrução do trato digestivo, e pedaços de casca e de pé podem causar uma obstrução. É mais seguro não dar romã fresca."
       },
       "why": {
         "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -33757,7 +33916,8 @@
         "de": "Laut dem Chefveterinär des AKC sind Granatäpfel für Hunde nicht giftig. Die Kerne, also der Teil, den Menschen meist essen, können dennoch Magen-Darm-Beschwerden und eine Blockade im Verdauungstrakt verursachen. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden. Granatapfelextrakt in Produkten für Hunde ist etwas anderes als die frische Frucht.",
         "fr": "Le vétérinaire en chef de l’AKC indique que les grenades ne sont pas toxiques pour les chiens. Les graines, la partie que l’on mange habituellement, peuvent pourtant provoquer des troubles gastro-intestinaux et une occlusion du tube digestif. Des morceaux d’écorce et de tige peuvent causer une obstruction, surtout chez les petits chiens. L’extrait de grenade présent dans certains produits pour chiens est un tout autre sujet que le fruit frais.",
         "es": "El veterinario jefe del AKC explica que las granadas no son tóxicas para los perros. Aun así, las semillas, la parte que suele comer la gente, pueden causar problemas gastrointestinales y una obstrucción digestiva. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños. El extracto de granada que llevan algunos productos para perros no es lo mismo que la fruta fresca.",
-        "it": "Il veterinario capo dell’AKC afferma che le melagrane non sono tossiche per i cani. I semi, la parte che di solito si mangia, possono comunque causare disturbi gastrointestinali e un’ostruzione dell’apparato digerente. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli. L’estratto di melagrana presente nei prodotti pensati per i cani è un altro discorso rispetto al frutto fresco."
+        "it": "Il veterinario capo dell’AKC afferma che le melagrane non sono tossiche per i cani. I semi, la parte che di solito si mangia, possono comunque causare disturbi gastrointestinali e un’ostruzione dell’apparato digerente. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli. L’estratto di melagrana presente nei prodotti pensati per i cani è un altro discorso rispetto al frutto fresco.",
+        "pt": "O veterinário-chefe do AKC diz que as romãs não são tóxicas para os cães. As sementes, a parte que as pessoas costumam comer, podem mesmo assim causar problemas gastrointestinais e uma obstrução do trato digestivo. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos. O extrato de romã em produtos feitos para cães é diferente da fruta fresca."
       },
       "signs": {
         "en": [
@@ -33783,6 +33943,10 @@
         "it": [
           "Diarrea",
           "Vomito"
+        ],
+        "pt": [
+          "Diarreia",
+          "Vómitos"
         ]
       },
       "what_to_do": {
@@ -33791,7 +33955,8 @@
         "de": "Hat Ihr Hund Granatapfelkerne gefressen, wenden Sie sich sofort an Ihren Tierarzt.",
         "fr": "Si votre chien a mangé des graines de grenade, contactez immédiatement votre vétérinaire.",
         "es": "Si tu perro se ha comido semillas de granada, contacta enseguida con tu veterinario.",
-        "it": "Se il tuo cane ha mangiato dei semi di melagrana, contatta subito il veterinario."
+        "it": "Se il tuo cane ha mangiato dei semi di melagrana, contatta subito il veterinario.",
+        "pt": "Se o teu cão comer sementes de romã, contacta imediatamente o teu veterinário."
       },
       "serving": null,
       "child": {
@@ -33800,7 +33965,8 @@
         "de": "Granatapfel ist eine Frucht für Menschen. Kerne und Schale können Hunden auf den Bauch schlagen, also halte sie von deinem Hund fern.",
         "fr": "La grenade est un fruit pour les gens. Ses graines et sa peau peuvent donner mal au ventre aux chiens, alors garde-la hors de leur portée.",
         "es": "La granada es una fruta para las personas. Las semillas y la corteza pueden sentarle mal a la barriga de un perro, así que mantenla fuera de su alcance.",
-        "it": "La melagrana è un frutto per le persone. I semi e la buccia possono far male alla pancia del cane, quindi tienila fuori dalla sua portata."
+        "it": "La melagrana è un frutto per le persone. I semi e la buccia possono far male alla pancia del cane, quindi tienila fuori dalla sua portata.",
+        "pt": "A romã é uma fruta para as pessoas. As sementes e a casca podem fazer mal à barriguinha do cão, por isso mantém-na fora do alcance."
       },
       "faq": [
         {
@@ -33810,7 +33976,8 @@
             "de": "Ist Granatapfel im Hundefutter in Ordnung?",
             "fr": "La grenade dans l’alimentation pour chiens, c’est possible ?",
             "es": "¿Puede llevar granada la comida para perros?",
-            "it": "La melagrana nel cibo per cani va bene?"
+            "it": "La melagrana nel cibo per cani va bene?",
+            "pt": "Pode haver romã na comida para cães?"
           },
           "a": {
             "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -33818,7 +33985,8 @@
             "de": "Granatapfelextrakt kann für Hunde gesundheitliche Vorteile haben. Wenn Sie ihn geben möchten, achten Sie auf Produkte, die speziell für Hunde hergestellt sind, und sprechen Sie mit Ihrem Tierarzt.",
             "fr": "L’extrait de grenade peut avoir des effets bénéfiques pour les chiens. Si vous souhaitez en donner, choisissez des produits conçus spécialement pour les chiens et parlez-en à votre vétérinaire.",
             "es": "El extracto de granada puede tener beneficios para la salud de los perros. Si quieres dárselo, busca productos elaborados específicamente para perros y habla con tu veterinario.",
-            "it": "L’estratto di melagrana può far bene alla salute dei cani. Se vuoi darglielo, cerca prodotti fatti apposta per i cani e parlane con il veterinario."
+            "it": "L’estratto di melagrana può far bene alla salute dei cani. Se vuoi darglielo, cerca prodotti fatti apposta per i cani e parlane con il veterinario.",
+            "pt": "O extrato de romã pode ter benefícios para a saúde dos cães. Se o quiseres dar, procura produtos feitos especificamente para cães e fala com o teu veterinário."
           }
         },
         {
@@ -33828,7 +33996,8 @@
             "de": "Dürfen Hunde die Granatapfelschale fressen?",
             "fr": "Les chiens peuvent-ils manger la peau de la grenade ?",
             "es": "¿Pueden los perros comer la corteza de la granada?",
-            "it": "I cani possono mangiare la buccia della melagrana?"
+            "it": "I cani possono mangiare la buccia della melagrana?",
+            "pt": "Os cães podem comer a casca da romã?"
           },
           "a": {
             "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -33836,7 +34005,8 @@
             "de": "Nein. Stücke von Schale und Stiel können einen Darmverschluss auslösen, besonders bei kleineren Hunden – füttern Sie sie also nicht.",
             "fr": "Non. Des morceaux d’écorce et de tige peuvent provoquer une obstruction, surtout chez les petits chiens : ne leur en donnez pas.",
             "es": "No. Los trozos de corteza y de tallo pueden provocar una obstrucción, sobre todo en perros pequeños, así que no se los des.",
-            "it": "No. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli, quindi non darglieli."
+            "it": "No. Pezzi di buccia e di picciolo possono causare un’ostruzione, soprattutto nei cani più piccoli, quindi non darglieli.",
+            "pt": "Não. Pedaços de casca e de pé podem causar uma obstrução, sobretudo nos cães mais pequenos, por isso não os dês."
           }
         }
       ],
@@ -68292,6 +68462,771 @@
       "url": null,
       "source_url": "https://maok.hu/storage/uploads/f3e6fc42-f5c8-412d-b5ef-22ede10194f6/aeu_intezmenyek_nograd_honlapra_2023marcius28.pdf",
       "checked": "2026-11-02"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Dundrum",
+      "city": "Dublin (Dundrum)",
+      "region": "Leinster - Dublin",
+      "address": "Apollo Building, Apollo Business Park, Dundrum Road, Dublin 14, D14 K2F8",
+      "phone": "+353 12987510",
+      "emergency_24h": true,
+      "duty": "Open 24/7, every day of the year; emergency walk-in service",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/clinics/dundrum-vets",
+      "source_url": "https://www.villagevets.ie/clinics/dundrum-vets",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Ashbourne",
+      "city": "Ashbourne",
+      "region": "Leinster - Meath",
+      "address": "Unit 14, Ashbourne Retail Park, Ballybin Road, Cookstown, Ashbourne, Co. Meath, A84 RW83",
+      "phone": "+353 18499973",
+      "emergency_24h": true,
+      "duty": "Open 24/7, every day of the year; emergency service open to clients of other Village Vets clinics",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/emergencies",
+      "source_url": "https://www.villagevets.ie/emergencies",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Grey Abbey",
+      "city": "Kildare",
+      "region": "Leinster - Kildare",
+      "address": "Grey Abbey Road, Kildare, R51 NV25",
+      "phone": "+353 45522390",
+      "emergency_24h": true,
+      "duty": "Open 24/7, every day of the year",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/emergencies",
+      "source_url": "https://www.villagevets.ie/emergencies",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "MyVet Lucan (24-hour emergency service)",
+      "city": "Lucan",
+      "region": "Leinster - Dublin",
+      "address": "Lucan Road, Ballydowd, Lucan, Co. Dublin, K78 F1W3",
+      "phone": "+353 16010060",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service, 365 days a year. Out-of-hours line 01 517 5213; extra fees outside normal hours",
+      "duty_i18n": null,
+      "url": "https://www.myvet.ie/emergencies",
+      "source_url": "https://www.myvet.ie/emergencies",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Wicklow Vets",
+      "city": "Wicklow",
+      "region": "Leinster - Wicklow",
+      "address": null,
+      "phone": "+353 40468520",
+      "emergency_24h": true,
+      "duty": "24/7 out-of-hours emergency service for registered clients",
+      "duty_i18n": null,
+      "url": "https://www.wicklowvets.ie/",
+      "source_url": "https://www.wicklowvets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Murphy Sheerin Vets",
+      "city": "Baltinglass",
+      "region": "Leinster - Wicklow",
+      "address": "Bawnogues, Baltinglass, Co. Wicklow, W91 W2P7",
+      "phone": "+353 596481441",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service available",
+      "duty_i18n": null,
+      "url": "https://www.murphysheerinvets.ie/",
+      "source_url": "https://www.murphysheerinvets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Pet Emergency Hospital (UCD Veterinary Hospital)",
+      "city": "Dublin (Belfield)",
+      "region": "Leinster - Dublin",
+      "address": "UCD Veterinary Hospital, University College Dublin, Belfield, Dublin 4",
+      "phone": "+353 12609920",
+      "emergency_24h": false,
+      "duty": "Out-of-hours emergency hospital: weeknights 6pm-8am; 24 hours on weekends and bank holidays. Phone before travelling",
+      "duty_i18n": null,
+      "url": "https://petemergencyhospital.ie/contact/",
+      "source_url": "https://petemergencyhospital.ie/contact/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Cara Veterinary Hospital",
+      "city": "Dublin 15 (Ballycoolin)",
+      "region": "Leinster - Dublin",
+      "address": "U233, Blanchardstown Corporate Park 2, Ballycoolin, Dublin 15, D15 Y384",
+      "phone": "+353 18853253",
+      "emergency_24h": false,
+      "duty": "Open seven days a week; out-of-hours emergencies via the Pet Emergency Hospital",
+      "duty_i18n": null,
+      "url": "https://www.caravetgroup.com/",
+      "source_url": "https://www.caravetgroup.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Cara Veterinary Clinic Phoenix Park Gate",
+      "city": "Dublin 7",
+      "region": "Leinster - Dublin",
+      "address": "Phoenix Park Gate, 1A North Circular Road, Dublin 7, D07 HE48",
+      "phone": "+353 18853253",
+      "emergency_24h": false,
+      "duty": "By appointment (Mon, Tue, Thu, Fri 4-6:30pm; Sat 9-11:30am). Out of hours: see emergency care page",
+      "duty_i18n": null,
+      "url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
+      "source_url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Sandymount Vets",
+      "city": "Dublin (Sandymount)",
+      "region": "Leinster - Dublin",
+      "address": "15c Gilford Road, Sandymount, Dublin 4",
+      "phone": "+353 12695830",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8am-7pm, Sat 9am-12pm; overnight and weekend emergencies via the Pet Emergency Hospital (phone first)",
+      "duty_i18n": null,
+      "url": "https://sandymountvets.ie/contact-us/",
+      "source_url": "https://sandymountvets.ie/contact-us/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Blackrock Vets",
+      "city": "Blackrock",
+      "region": "Leinster - Dublin",
+      "address": "25 Stillorgan Park, Blackrock, Co. Dublin, A94 XT71",
+      "phone": "+353 12889641",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8am-7pm, Sat 9:30am-12:30pm; out-of-hours emergencies via MyVet Lucan (01 601 0060)",
+      "duty_i18n": null,
+      "url": "https://www.blackrockvet.ie/",
+      "source_url": "https://www.blackrockvet.ie/about-us/after-hours",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Rathfarnham",
+      "city": "Dublin (Rathfarnham)",
+      "region": "Leinster - Dublin",
+      "address": "Mount Venus Road, Rathfarnham, Dublin 16, D16 N562",
+      "phone": "+353 14866654",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-7pm, Sat 9am-5pm; after hours calls are directed to the group's 24/7 emergency clinics",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
+      "source_url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Raheny",
+      "city": "Dublin (Raheny)",
+      "region": "Leinster - Dublin",
+      "address": "Raheny Shopping Centre, Howth Road, Dublin 5, D05 N7X2",
+      "phone": "+353 17265426",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-7pm, Sat 9am-5pm on selected Saturdays; urgent cases: call the nearest Village Vets clinic",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/clinics/raheny",
+      "source_url": "https://www.villagevets.ie/clinics/raheny",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Portmarnock",
+      "city": "Portmarnock",
+      "region": "Leinster - Dublin",
+      "address": "Unit 4, Saint Marnocks Bay, Portmarnock, Co. Dublin, D13 AKF1",
+      "phone": "+353 18129010",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-7pm; out-of-hours calls are transferred to a 24/7 emergency clinic",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/clinics/portmarnock",
+      "source_url": "https://www.villagevets.ie/clinics/portmarnock",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Lissenhall",
+      "city": "Swords",
+      "region": "Leinster - Dublin",
+      "address": "Lissenhall, Swords, Co. Dublin, K67 EH72",
+      "phone": "+353 18900375",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:30am-7pm, Sat 9am-1pm; out-of-hours calls transferred to the Ashbourne 24/7 clinic",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/clinics/lissenhall-vets",
+      "source_url": "https://www.villagevets.ie/clinics/lissenhall-vets",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "MyVet Celbridge",
+      "city": "Celbridge",
+      "region": "Leinster - Kildare",
+      "address": "Unit A10, M4 Business Park, Celbridge, Co. Kildare, W23 DFR8",
+      "phone": "+353 19631330",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-7:30pm, Sat 9am-4:30pm; 24-hour emergency care at MyVet Lucan (01 517 5213)",
+      "duty_i18n": null,
+      "url": "https://www.myvet.ie/about-us/celbridge",
+      "source_url": "https://www.myvet.ie/about-us/celbridge",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Wexford Veterinary Hospital (Bramley & O'Shea)",
+      "city": "Wexford",
+      "region": "Leinster - Wexford",
+      "address": null,
+      "phone": "+353 539145755",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8am-8pm, Sat 8:30am-4:30pm; out-of-hours emergencies via the duty vet (call the practice)",
+      "duty_i18n": null,
+      "url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
+      "source_url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Arena Veterinary Hospital",
+      "city": "Wexford",
+      "region": "Leinster - Wexford",
+      "address": null,
+      "phone": "+353 539142891",
+      "emergency_24h": false,
+      "duty": "Emergencies: call the practice",
+      "duty_i18n": null,
+      "url": "https://www.arenavets.ie/",
+      "source_url": "https://www.arenavets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Limerick Veterinary Hospital",
+      "city": "Castletroy (Limerick)",
+      "region": "Munster - Limerick",
+      "address": "Dublin Road, Castletroy, Limerick, V94 KD73",
+      "phone": "+353 61333033",
+      "emergency_24h": true,
+      "duty": "Open 24/7, 365 days a year",
+      "duty_i18n": null,
+      "url": "https://limerickveterinaryhospital.ie/",
+      "source_url": "https://limerickveterinaryhospital.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Treaty Veterinary Hospital",
+      "city": "Limerick (Thomondgate)",
+      "region": "Munster - Limerick",
+      "address": "High Road, Thomondgate, Limerick, V94 K2YW",
+      "phone": "+353 61328511",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service all year round; consultations by appointment",
+      "duty_i18n": null,
+      "url": "https://treatyveterinaryhospital.ie/limerick/",
+      "source_url": "https://treatyveterinaryhospital.ie/limerick/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Crescent Veterinary Clinic",
+      "city": "Limerick (Dooradoyle)",
+      "region": "Munster - Limerick",
+      "address": "Dooradoyle Road, Dooradoyle, Limerick",
+      "phone": "+353 61301841",
+      "emergency_24h": true,
+      "duty": "Emergency service 24 hours a day, 7 days a week; out-of-hours vet calls back; extra charge applies",
+      "duty_i18n": null,
+      "url": "https://www.cvcvets.ie/emergencies",
+      "source_url": "https://www.cvcvets.ie/emergencies",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Ennis Road Vets",
+      "city": "Limerick",
+      "region": "Munster - Limerick",
+      "address": "Ennis Road, Limerick, V94 D8N7",
+      "phone": "+353 61327900",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service",
+      "duty_i18n": null,
+      "url": "https://rockhallveterinary.ie/",
+      "source_url": "https://rockhallveterinary.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Clare Street Vets",
+      "city": "Limerick",
+      "region": "Munster - Limerick",
+      "address": "66 Clare Street, Limerick, V94 TW93",
+      "phone": "+353 61415104",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service",
+      "duty_i18n": null,
+      "url": "https://rockhallveterinary.ie/",
+      "source_url": "https://rockhallveterinary.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Shannon Vets",
+      "city": "Shannon",
+      "region": "Munster - Clare",
+      "address": "154 Drumgeely Hill, Shannon, Co. Clare, V14 E674",
+      "phone": "+353 61472161",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service",
+      "duty_i18n": null,
+      "url": "https://rockhallveterinary.ie/",
+      "source_url": "https://rockhallveterinary.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Ennis Vet Clinic",
+      "city": "Ennis",
+      "region": "Munster - Clare",
+      "address": "Clon Road, Ennis, Co. Clare",
+      "phone": null,
+      "emergency_24h": true,
+      "duty": "24 hours on call",
+      "duty_i18n": null,
+      "url": "https://www.ennisvetclinic.ie/",
+      "source_url": "https://www.ennisvetclinic.ie/about-ennis-veterinary-clinic/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Abbeyville Veterinary Hospital",
+      "city": "Cork (Togher)",
+      "region": "Munster - Cork",
+      "address": "1 Clashduv Road, Togher, Cork, T12 ET29",
+      "phone": "+353 214317019",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service, 365 days a year; Mon-Fri 8am-7pm, Sat 9am-5pm",
+      "duty_i18n": null,
+      "url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
+      "source_url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Gilabbey Veterinary Hospital and Referral Centre",
+      "city": "Cork (Togher)",
+      "region": "Munster - Cork",
+      "address": "Vicars Road, Togher, Cork, T12 K26P",
+      "phone": "+353 214962799",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service; call the hospital number",
+      "duty_i18n": null,
+      "url": "https://gilabbeyvet.com/",
+      "source_url": "https://gilabbeyvet.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Blackpool Veterinary Hospital",
+      "city": "Cork (Blackpool)",
+      "region": "Munster - Cork",
+      "address": "Millfield Industrial Estate, Commons Road, Blackpool, Cork",
+      "phone": "+353 212028090",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-4pm",
+      "duty_i18n": null,
+      "url": "https://www.blackpoolvets.ie/",
+      "source_url": "https://www.blackpoolvets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Sunbeam Veterinary Hospital",
+      "city": "Cork (Northpoint)",
+      "region": "Munster - Cork",
+      "address": "Northpoint Business Park, Cork, T23 FXY9",
+      "phone": "+353 214391600",
+      "emergency_24h": true,
+      "duty": "Hospital staffed 24/7; 24-hour emergency care",
+      "duty_i18n": null,
+      "url": "https://www.sunbeamvets.com/",
+      "source_url": "https://www.sunbeamvets.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Westside Veterinary Clinic",
+      "city": "Cork (Model Farm Road)",
+      "region": "Munster - Cork",
+      "address": "Unit 19, Westside Centre, Model Farm Road, Cork, T12 X642",
+      "phone": "+353 214343503",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-7pm, Sat 9am-1pm; out-of-hours emergencies via Sunbeam Veterinary Hospital (021 439 1600)",
+      "duty_i18n": null,
+      "url": "https://www.westsideveterinary.ie/contact-us",
+      "source_url": "https://www.westsideveterinary.ie/contact-us",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Mahon Point",
+      "city": "Cork (Mahon)",
+      "region": "Munster - Cork",
+      "address": "Mahon Link Road, Mahon, Cork, T12 FWX8",
+      "phone": "+353 214511122",
+      "emergency_24h": false,
+      "duty": "Out-of-hours emergencies: call the clinic number and you are directed to the out-of-hours service",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/locations/cork",
+      "source_url": "https://www.villagevets.ie/locations/cork",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Village Vets Douglas",
+      "city": "Cork (Douglas)",
+      "region": "Munster - Cork",
+      "address": "31a/b St Patrick's Woollen Mills, Douglas, Cork, T12 ET89",
+      "phone": "+353 214890101",
+      "emergency_24h": false,
+      "duty": "Out-of-hours emergencies: call the clinic number and you are directed to the out-of-hours service",
+      "duty_i18n": null,
+      "url": "https://www.villagevets.ie/locations/cork",
+      "source_url": "https://www.villagevets.ie/locations/cork",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Midleton Veterinary Hospital",
+      "city": "Midleton",
+      "region": "Munster - Cork",
+      "address": "Knockgriffin Industrial Park, Midleton, Co. Cork",
+      "phone": "+353 214613672",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:30am-6:30pm, Sat 9am-1pm; own emergency cover at all times (call the practice number)",
+      "duty_i18n": null,
+      "url": "https://midletonvets.ie/emergencies/",
+      "source_url": "https://midletonvets.ie/contacts/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Faxbridge Veterinary - Clonakilty",
+      "city": "Clonakilty",
+      "region": "Munster - Cork",
+      "address": "32 Strand Road, Clonakilty, Co. Cork, P85 A406",
+      "phone": "+353 238833252",
+      "emergency_24h": true,
+      "duty": "24/7 emergency services; Mon-Fri 9am-6pm, Sat 9am-1pm",
+      "duty_i18n": null,
+      "url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
+      "source_url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Viking Veterinary Clinic",
+      "city": "Waterford",
+      "region": "Munster - Waterford",
+      "address": "Ursuline Business Park, Waterford, X91 PY28",
+      "phone": "+353 51511319",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service; Mon-Fri 9am-5pm, Sat 9am-12pm",
+      "duty_i18n": null,
+      "url": "https://vikingvets.ie/opening-hours/",
+      "source_url": "https://vikingvets.ie/opening-hours/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Lismore Vets",
+      "city": "Lismore",
+      "region": "Munster - Waterford",
+      "address": "East Main Street, Lismore, Co. Waterford",
+      "phone": "+353 5854041",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service, 365 days a year, for small and large animals",
+      "duty_i18n": null,
+      "url": "https://lismorevets.ie/",
+      "source_url": "https://lismorevets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "All Care Veterinary Hospital",
+      "city": "Killarney",
+      "region": "Munster - Kerry",
+      "address": "Park Road, Ballycasheen, Killarney, Co. Kerry, V93 HF85",
+      "phone": "+353 646637333",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service outside clinic hours (Mon-Fri 8:30am-6pm, Sat 9am-6pm)",
+      "duty_i18n": null,
+      "url": "https://www.allcarevets.ie/contact-us",
+      "source_url": "https://www.allcarevets.ie/contact-us",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Abbey Veterinary Centre",
+      "city": "Tralee",
+      "region": "Munster - Kerry",
+      "address": "7 Church Street, Tralee, Co. Kerry",
+      "phone": "+353 667122100",
+      "emergency_24h": true,
+      "duty": "24-hour emergency care: 066 712 2100 in hours, 087 265 6611 after hours",
+      "duty_i18n": null,
+      "url": "https://abbeyvets.ie/contact-us/",
+      "source_url": "https://abbeyvets.ie/contact-us/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "All Creatures Vet Centre",
+      "city": "Kenmare",
+      "region": "Munster - Kerry",
+      "address": "Gortamullen Business Park, Mart Road, Kenmare, Co. Kerry, V93 AKT7",
+      "phone": "+353 646642695",
+      "emergency_24h": true,
+      "duty": "24/7 emergency line +353 83 152 2459; Mon-Fri 9am-5pm, Sat 9am-2pm by appointment",
+      "duty_i18n": null,
+      "url": "https://www.allcreaturesvetcentre.ie/",
+      "source_url": "https://www.allcreaturesvetcentre.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Dingle Veterinary Clinic",
+      "city": "Dingle",
+      "region": "Munster - Kerry",
+      "address": "Spa Road, Grove, Dingle, Co. Kerry, V92 Y008",
+      "phone": "+353 669151814",
+      "emergency_24h": true,
+      "duty": "24/7/365 emergency service; higher rates on Sundays, bank holidays and out of hours",
+      "duty_i18n": null,
+      "url": "https://dingleveterinaryclinic.com/contact/",
+      "source_url": "https://dingleveterinaryclinic.com/contact/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Bushypark Vets",
+      "city": "Galway",
+      "region": "Connacht - Galway",
+      "address": "60 Upper Newcastle, Galway, H91 W983",
+      "phone": "+353 91445005",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service, 365 days a year; call 091 445005",
+      "duty_i18n": null,
+      "url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
+      "source_url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Gorteen Acre Vets - Athenry",
+      "city": "Athenry",
+      "region": "Connacht - Galway",
+      "address": "Athenry, Co. Galway, H65 XF66",
+      "phone": "+353 91844209",
+      "emergency_24h": true,
+      "duty": "Emergency hours 24 hrs / 365 days",
+      "duty_i18n": null,
+      "url": "https://gorteenacrevets.ie/locations/",
+      "source_url": "https://gorteenacrevets.ie/locations/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Gorteen Acre Vets - Tuam",
+      "city": "Tuam",
+      "region": "Connacht - Galway",
+      "address": "Tuam Business Park, Tuam, Co. Galway, H54 A038",
+      "phone": "+353 9372474",
+      "emergency_24h": true,
+      "duty": "Emergency hours 24 hrs / 365 days",
+      "duty_i18n": null,
+      "url": "https://gorteenacrevets.ie/locations/",
+      "source_url": "https://gorteenacrevets.ie/locations/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Kelly Vets Athenry",
+      "city": "Athenry",
+      "region": "Connacht - Galway",
+      "address": "Old Church Street, Athenry, Co. Galway",
+      "phone": "+353 91844918",
+      "emergency_24h": true,
+      "duty": "24/7 emergency service: 087 914 5862",
+      "duty_i18n": null,
+      "url": "https://www.kellyvets.com/contact-2/",
+      "source_url": "https://www.kellyvets.com/services/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Athenry Pet Clinic",
+      "city": "Athenry",
+      "region": "Connacht - Galway",
+      "address": "Prospect House, Prospect, Athenry, Co. Galway",
+      "phone": "+353 91844085",
+      "emergency_24h": true,
+      "duty": "Open 6 days a week with 24-hour on-call cover",
+      "duty_i18n": null,
+      "url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
+      "source_url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Ark Vets Galway - Knocknacarra",
+      "city": "Galway (Knocknacarra)",
+      "region": "Connacht - Galway",
+      "address": "Miller's Hall, Bothar Stiofan, Western Distributor Road, Knocknacarra, Galway, H91 TD0F",
+      "phone": "+353 91510131",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:30am-6pm, Sat 9:30am-4pm",
+      "duty_i18n": null,
+      "url": "https://www.arkvetsgalway.com/",
+      "source_url": "https://www.arkvetsgalway.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Cuddy Vets Galway",
+      "city": "Galway",
+      "region": "Connacht - Galway",
+      "address": "Unit 18, Town Park Centre, Tuam Road, Galway, H91 V063",
+      "phone": "+353 91756588",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-6pm, Sat 10am-2pm",
+      "duty_i18n": null,
+      "url": "https://cuddyvets.com/",
+      "source_url": "https://cuddyvets.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Oran Vets",
+      "city": "Oranmore",
+      "region": "Connacht - Galway",
+      "address": "Unit 7B, Oranmore Business Park, Oranmore, Co. Galway, H91 XP3F",
+      "phone": "+353 91788270",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9am-6pm, Sat 9am-1pm; emergency line is the practice number",
+      "duty_i18n": null,
+      "url": "https://www.oranvets.com/",
+      "source_url": "https://www.oranvets.com/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "St Benedict's Veterinary Hospital",
+      "city": "Sligo",
+      "region": "Connacht - Sligo",
+      "address": "Pearse Road, Abbeyquarter South, Sligo",
+      "phone": "+353 719142435",
+      "emergency_24h": true,
+      "duty": "24-hour emergency care, 365 days a year; extra charge out of hours",
+      "duty_i18n": null,
+      "url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
+      "source_url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Letterkenny Small Animal Veterinary Hospital",
+      "city": "Letterkenny",
+      "region": "Ulster - Donegal",
+      "address": "Portroad, Ballyraine, Letterkenny, Co. Donegal, F92 W0FX",
+      "phone": "+353 749178762",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-3pm",
+      "duty_i18n": null,
+      "url": "https://letterkennyvets.ie/",
+      "source_url": "https://letterkennyvets.ie/",
+      "checked": "2026-11-04"
+    },
+    {
+      "country": "IE",
+      "kind": "clinic",
+      "name": "Mulroy Veterinary Milford",
+      "city": "Milford",
+      "region": "Ulster - Donegal",
+      "address": "Glenallen, Glenkeen, Milford, Co. Donegal, F92 NW02",
+      "phone": "+353 749163184",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-3pm",
+      "duty_i18n": null,
+      "url": "https://letterkennyvets.ie/",
+      "source_url": "https://letterkennyvets.ie/",
+      "checked": "2026-11-04"
     },
     {
       "country": "IT",

@@ -7,7 +7,8 @@
     "de": "Obstkerne",
     "fr": "Noyaux de fruits",
     "es": "Huesos y semillas de fruta",
-    "it": "Noccioli e semi di frutta"
+    "it": "Noccioli e semi di frutta",
+    "pt": "Caroços e sementes de fruta"
   },
   "question": {
     "en": "Can cats eat fruit pits?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Obstkerne fressen?",
     "fr": "Les chats peuvent-ils manger des noyaux de fruits ?",
     "es": "¿Pueden los gatos comer huesos de fruta?",
-    "it": "I gatti possono mangiare i noccioli di frutta?"
+    "it": "I gatti possono mangiare i noccioli di frutta?",
+    "pt": "Os gatos podem comer caroços de fruta?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -23,7 +25,8 @@
     "de": "obstkerne",
     "fr": "noyaux-de-fruits",
     "es": "huesos-y-semillas-de-fruta",
-    "it": "noccioli-e-semi-di-frutta"
+    "it": "noccioli-e-semi-di-frutta",
+    "pt": "carocos-e-sementes-de-fruta"
   },
   "level": "dangerous",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Nein. Halten Sie Kerne, Steine und Samen von Steinobst von Katzen fern. Die ASPCA führt Kirsch-, Pfirsich-, Pflaumen- und Aprikosenpflanzen als giftig für Katzen auf, weil ihre Samen, Stiele und Blätter Cyanid enthalten. Rufen Sie Ihren Tierarzt an, wenn Ihre Katze auf einem Kern kaut oder ihn verschluckt.",
     "fr": "Non. Gardez les noyaux et les pépins des fruits à noyau hors de portée des chats. L’ASPCA classe les cerisiers, pêchers, pruniers et abricotiers parmi les plantes toxiques pour les chats, car leurs graines, leurs tiges et leurs feuilles contiennent du cyanure. Appelez votre vétérinaire si votre chat mâchonne ou avale un noyau.",
     "es": "No. Mantén los huesos y las semillas de las frutas de hueso fuera del alcance de los gatos. La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, porque sus semillas, tallos y hojas contienen cianuro. Llama a tu veterinario si tu gato muerde o se traga alguno.",
-    "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno."
+    "it": "No. Tieni lontani dai gatti noccioli e semi della frutta a nocciolo. L’ASPCA classifica le piante di ciliegio, pesco, susino e albicocco come tossiche per i gatti perché semi, gambi e foglie contengono cianuro. Chiama il veterinario se il tuo gatto ne mastica o ne ingoia uno.",
+    "pt": "Não. Mantém os caroços e as sementes de fruta de caroço longe dos gatos. A ASPCA indica que as cerejeiras, os pessegueiros, as ameixeiras e os damasqueiros são tóxicos para os gatos, porque as sementes, os caules e as folhas contêm cianeto. Liga ao teu veterinário se o teu gato mastigar ou engolir algum."
   },
   "why": {
     "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -40,7 +44,8 @@
     "de": "Bei Kirsche, Pfirsich, Pflaume und Aprikose sagt die ASPCA, dass Stiele, Blätter und Samen Cyanid (in Form cyanogener Glykoside) enthalten und besonders giftig sind, während sie welken; alle vier Pflanzen führt sie als giftig für Katzen auf. Der Kern oder Stein dieser Früchte ist der Samen und sollte einer Katze deshalb nie gegeben werden.",
     "fr": "Pour la cerise, la pêche, la prune et l’abricot, l’ASPCA indique que les tiges, les feuilles et les graines contiennent du cyanure (sous forme de glycosides cyanogènes) et sont particulièrement toxiques lorsqu’elles flétrissent ; elle classe ces quatre plantes comme toxiques pour les chats. Le noyau de ces fruits est la graine : il ne faut donc jamais en donner à un chat.",
     "es": "Según la ASPCA, los tallos, las hojas y las semillas del cerezo, el melocotonero, el ciruelo y el albaricoquero contienen cianuro (en forma de glucósidos cianogénicos) y son especialmente tóxicos cuando están marchitos; por eso incluye las cuatro plantas entre las tóxicas para los gatos. El hueso de estas frutas es la semilla, así que nunca se le debe dar a un gato.",
-    "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto."
+    "it": "Per ciliegio, pesco, susino e albicocco l’ASPCA riferisce che gambi, foglie e semi contengono cianuro (sotto forma di glicosidi cianogenici) e sono particolarmente tossici quando appassiscono; tutte e quattro le piante sono incluse tra quelle tossiche per i gatti. Il nocciolo di questi frutti è il seme, quindi non va mai dato a un gatto.",
+    "pt": "Quanto à cereja, ao pêssego, à ameixa e ao alperce, a ASPCA diz que os caules, as folhas e as sementes contêm cianeto (sob a forma de glicosídeos cianogénicos) e são particularmente tóxicos enquanto murcham, e indica as quatro plantas como tóxicas para os gatos. O caroço destes frutos é a semente, por isso nunca deve ser dado a um gato."
   },
   "signs": {
     "en": [
@@ -84,6 +89,13 @@
       "Difficoltà respiratorie",
       "Ansimare",
       "Shock"
+    ],
+    "pt": [
+      "Gengivas vermelho-tijolo",
+      "Pupilas dilatadas",
+      "Dificuldade em respirar",
+      "Respiração ofegante",
+      "Choque"
     ]
   },
   "what_to_do": {
@@ -92,7 +104,8 @@
     "de": "Wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, wenn Ihre Katze einen Kern, Stein oder Samen zerkaut oder verschluckt hat. Notieren Sie, was gefressen wurde, wie viel und wann. Warten Sie nicht, bis Anzeichen auftreten, und versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
     "fr": "Contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire si votre chat a mâchonné ou avalé un noyau ou une graine. Notez ce qu’il a mangé, en quelle quantité et à quelle heure. N’attendez pas l’apparition des signes et n’essayez pas de faire vomir votre chat à la maison.",
     "es": "Contacta enseguida con tu veterinario o con una línea de información toxicológica para animales si tu gato ha mordido o se ha tragado un hueso o una semilla. Anota qué ha comido, cuánto y cuándo. No esperes a que aparezcan síntomas ni intentes provocarle el vómito en casa.",
-    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa."
+    "it": "Contatta subito il veterinario o un centro antiveleni veterinario se il tuo gatto ha masticato o ingoiato un nocciolo o un seme. Annota che cosa ha mangiato, in che quantità e quando. Non aspettare che compaiano i sintomi e non provare a far vomitare il gatto a casa.",
+    "pt": "Contacta imediatamente o teu veterinário ou uma linha de apoio toxicológico para animais se o teu gato tiver mastigado ou engolido um caroço ou uma semente. Anota o que comeu, a quantidade e quando. Não esperes que surjam sinais e não tentes provocar o vómito ao teu gato em casa."
   },
   "serving": null,
   "child": {
@@ -101,7 +114,8 @@
     "de": "Obstkerne sind für Katzen nicht sicher. Wenn deine Katze auf einem herumkaut, sag einem Erwachsenen Bescheid.",
     "fr": "Les noyaux de fruits ne sont pas sans danger pour les chats. Si ton chat en mâchonne un, préviens un adulte.",
     "es": "Los huesos de fruta no son seguros para los gatos. Si tu gato muerde uno, díselo a un adulto.",
-    "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto."
+    "it": "I noccioli della frutta non sono sicuri per i gatti. Se il tuo micio ne mastica uno, dillo a un adulto.",
+    "pt": "Os caroços de fruta não são seguros para os gatos. Se o gatinho mastigar um, avisa um adulto."
   },
   "faq": [
     {
@@ -111,7 +125,8 @@
         "de": "Welche Früchte sind gemeint?",
         "fr": "De quels fruits parle-t-on ?",
         "es": "¿A qué frutas se aplica esto?",
-        "it": "Di quali frutti si tratta?"
+        "it": "Di quali frutti si tratta?",
+        "pt": "Que frutas estão incluídas?"
       },
       "a": {
         "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -119,7 +134,8 @@
         "de": "Die ASPCA führt Kirsche, Pfirsich, Pflaume und Aprikose als giftig für Katzen auf und weist bei jeder darauf hin, dass Stiele, Blätter und Samen Cyanid enthalten.",
         "fr": "L’ASPCA classe la cerise, la pêche, la prune et l’abricot parmi les plantes toxiques pour les chats, et précise pour chacune que les tiges, les feuilles et les graines contiennent du cyanure.",
         "es": "La ASPCA considera tóxicos para los gatos el cerezo, el melocotonero, el ciruelo y el albaricoquero, y de cada uno dice que los tallos, las hojas y las semillas contienen cianuro.",
-        "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro."
+        "it": "L’ASPCA indica ciliegio, pesco, susino e albicocco come tossici per i gatti e, per ciascuno, precisa che gambi, foglie e semi contengono cianuro.",
+        "pt": "A ASPCA indica a cereja, o pêssego, a ameixa e o alperce como tóxicos para os gatos e, para cada um, diz que os caules, as folhas e as sementes contêm cianeto."
       }
     }
   ],
@@ -215,6 +231,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3f6f2726468e8a8da0bf8a8c378c9086ec55a2da99f790d088b1778eee0ffe11"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "466c33c25f9c446af21205546b977a58cbee50da898cb9fed1b3eeba6e83c66f"
     }
   }
 }
