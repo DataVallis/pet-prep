@@ -15,6 +15,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 **Zakaj je pomembno:** otrok nikoli ne sme videti psa s petimi tačkami; zdaj to ujamemo, preden plačamo posnetek, ne šele potem.
 **Kako povedati:** 👩 »Vsako sliko vašega ljubljenčka pred uporabo pregleda še ena umetna inteligenca — kot lektor.« · 💼 samodejna kontrola kakovosti za ~0,1 % stroška medijev, brez ročnega pregledovanja. · 🛠 »Isti seed + isti prompt + isti input = ista slika; ›Regenerate‹ mora vedno spremeniti vsaj seed. In: preveri still, preden plačaš video iz njega.«
 
+## 2026-11-04 — Šola: brez zavajajočega napisa »Tapni«
+
+Na Davidov predlog smo iz šole odstranili napis »Tapni« pod gumbom, ker je otrok mislil, da mora tapniti takoj — zdaj mu pravi trenutek pokažeta samo utripajoči gumb in napis »Zdaj!«.
+
 ## 2026-11-04 — Kupljene stvari tudi v albumu (M6-W03)
 
 **Kaj:** v albumu »Moj kuža« (in pri staršu v »Posnetkih«) ploščica »Spi« zdaj pokaže ljubljenčka na njegovi postelji, vsaka kupljena stvar pa ima svojo ploščico — prej je album kazal še star posnetek spanja na tleh.
