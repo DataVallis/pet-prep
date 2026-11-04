@@ -6,21 +6,24 @@
     "sl": "Fige",
     "de": "Feigen",
     "fr": "Figues",
-    "es": "Higos"
+    "es": "Higos",
+    "it": "Fichi"
   },
   "question": {
     "en": "Can dogs eat figs?",
     "sl": "Ali lahko psi jedo fige?",
     "de": "Dürfen Hunde Feigen fressen?",
     "fr": "Les chiens peuvent-ils manger des figues ?",
-    "es": "¿Pueden los perros comer higos?"
+    "es": "¿Pueden los perros comer higos?",
+    "it": "I cani possono mangiare i fichi?"
   },
   "url_slug": {
     "en": "figs",
     "sl": "fige",
     "de": "feigen",
     "fr": "figues",
-    "es": "higos"
+    "es": "higos",
+    "it": "fichi"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, sveže fige so za pse na splošno varne, če so pravilno pripravljene, a le kot občasen priboljšek. Ponudite samo mehko notranjost v majhnih koščkih in psu nikoli ne pustite jesti figovih listov, lubja ali vej. Suhe fige so presladke.",
     "de": "Ja, frische Feigen sind für Hunde bei richtiger Zubereitung in der Regel unbedenklich, aber nur als gelegentliches Leckerli. Geben Sie nur das weiche Innere in kleinen Stücken und lassen Sie Ihren Hund niemals Feigenblätter, Rinde oder Zweige fressen. Getrocknete Feigen sind zu zuckrig.",
     "fr": "Oui, les figues fraîches sont en général sans danger pour les chiens si elles sont bien préparées, mais seulement en friandise occasionnelle. Ne proposez que l’intérieur tendre, en petits morceaux, et ne laissez jamais votre chien manger les feuilles, l’écorce ou les branches du figuier. Les figues séchées sont trop sucrées.",
-    "es": "Sí, los higos frescos suelen ser seguros para los perros si se preparan bien, pero solo como premio ocasional. Dale únicamente el interior blando, en trocitos, y no dejes nunca que tu perro coma hojas, corteza ni ramas de higuera. Los higos secos tienen demasiado azúcar."
+    "es": "Sí, los higos frescos suelen ser seguros para los perros si se preparan bien, pero solo como premio ocasional. Dale únicamente el interior blando, en trocitos, y no dejes nunca que tu perro coma hojas, corteza ni ramas de higuera. Los higos secos tienen demasiado azúcar.",
+    "it": "Sì, i fichi freschi di solito sono sicuri per i cani se preparati nel modo giusto, ma solo come premio occasionale. Dai solo l’interno morbido, a pezzetti, e non lasciare mai che il cane mangi foglie, corteccia o rami del fico. I fichi secchi contengono troppo zucchero."
   },
   "why": {
     "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
     "sl": "Same fige ne veljajo za strupene kot grozdje in češnje, figovec kot rastlina pa je lahko škodljiv. Fige vsebujejo vitamina A in C, kalcij, kalij, magnezij in železo. Ker sadje vsebuje naravni sladkor in vlaknine, ima lahko preveč fig odvajalni učinek in povzroči drisko. Suhe fige imajo veliko bolj zgoščen sladkor, ker jim je bila odvzeta voda.",
     "de": "Feigen selbst gelten nicht als giftig wie Weintrauben und Kirschen, aber die Feigenpflanze kann schädlich sein. Feigen enthalten die Vitamine A und C, Kalzium, Kalium, Magnesium und Eisen. Weil Obst natürlichen Zucker und Ballaststoffe enthält, können zu viele Feigen abführend wirken und Durchfall verursachen. Getrocknete Feigen enthalten viel mehr konzentrierten Zucker, weil ihnen das Wasser entzogen wurde.",
     "fr": "Les figues ne sont pas considérées comme toxiques, contrairement au raisin et aux cerises, mais le figuier, lui, peut être nocif. Les figues contiennent des vitamines A et C, du calcium, du potassium, du magnésium et du fer. Comme les fruits contiennent du sucre naturel et des fibres, en manger trop peut avoir un effet laxatif et provoquer de la diarrhée. Les figues séchées contiennent un sucre beaucoup plus concentré, car l’eau a été retirée.",
-    "es": "No se considera que los higos sean tóxicos, a diferencia de las uvas o las cerezas, pero la higuera sí puede ser perjudicial. Los higos contienen vitaminas A y C, calcio, potasio, magnesio y hierro. Como la fruta contiene azúcar natural y fibra, si se come demasiada puede tener un efecto laxante y causar diarrea. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua."
+    "es": "No se considera que los higos sean tóxicos, a diferencia de las uvas o las cerezas, pero la higuera sí puede ser perjudicial. Los higos contienen vitaminas A y C, calcio, potasio, magnesio y hierro. Como la fruta contiene azúcar natural y fibra, si se come demasiada puede tener un efecto laxante y causar diarrea. Los higos secos tienen el azúcar mucho más concentrado porque se les ha quitado el agua.",
+    "it": "I fichi in sé non sono considerati tossici come l’uva e le ciliegie, ma la pianta del fico può essere dannosa. I fichi contengono vitamine A e C, calcio, potassio, magnesio e ferro. Poiché la frutta contiene zuccheri naturali e fibre, quantità eccessive possono avere un effetto lassativo e causare diarrea. I fichi secchi contengono zuccheri molto più concentrati perché è stata tolta l’acqua."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Če pes poje kateri koli del figovca, takoj poiščite veterinarsko pomoč. Če pes poje več fig in se mu znaki ne izboljšajo ali začne bruhati, se obrnite na veterinarja.",
     "de": "Frisst Ihr Hund irgendeinen Teil der Feigenpflanze, suchen Sie sofort einen Tierarzt auf. Frisst Ihr Hund mehrere Feigen und bessern sich seine Beschwerden nicht oder muss er erbrechen, wenden Sie sich an Ihren Tierarzt.",
     "fr": "Si votre chien mange n’importe quelle partie du figuier, consultez un vétérinaire sans attendre. S’il mange plusieurs figues et que les signes ne s’améliorent pas, ou s’il se met à vomir, contactez votre vétérinaire.",
-    "es": "Si tu perro come cualquier parte de la higuera, acude enseguida a un veterinario. Si se come varios higos y los síntomas no mejoran, o empieza a vomitar, contacta con tu veterinario."
+    "es": "Si tu perro come cualquier parte de la higuera, acude enseguida a un veterinario. Si se come varios higos y los síntomas no mejoran, o empieza a vomitar, contacta con tu veterinario.",
+    "it": "Se il tuo cane mangia una qualsiasi parte della pianta del fico, portalo subito dal veterinario. Se il tuo cane mangia diversi fichi e i sintomi non migliorano, o inizia a vomitare, contatta il veterinario."
   },
   "serving": {
     "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
     "sl": "Samo mehka notranjost sveže fige brez vseh delov rastline, narezana na majhne koščke. Začnite z drobnim koščkom in bodite pozorni na prebavne težave ali alergijsko reakcijo.",
     "de": "Nur das weiche Innere einer frischen Feige, ohne Pflanzenteile, in kleine Stücke geschnitten. Beginnen Sie mit einem winzigen Stück und achten Sie auf Magenverstimmung oder eine allergische Reaktion.",
     "fr": "Uniquement l’intérieur tendre d’une figue fraîche, débarrassé de toute partie de la plante, coupé en petits morceaux. Commencez par un tout petit morceau et surveillez l’apparition de troubles digestifs ou d’une réaction allergique.",
-    "es": "Solo el interior blando de un higo fresco, sin ningún resto de la planta y cortado en trocitos. Empieza con un trocito minúsculo y vigila si aparecen molestias de estómago o una reacción alérgica."
+    "es": "Solo el interior blando de un higo fresco, sin ningún resto de la planta y cortado en trocitos. Empieza con un trocito minúsculo y vigila si aparecen molestias de estómago o una reacción alérgica.",
+    "it": "Solo l’interno morbido di un fico fresco, senza alcuna parte della pianta, tagliato a pezzetti. Inizia con un pezzetto minuscolo e controlla se compaiono mal di stomaco o una reazione allergica."
   },
   "child": {
     "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
     "sl": "Psi lahko poskusijo droben košček mehke fige. Figovi listi in veje niso za pse, zato najprej vprašaj odraslega.",
     "de": "Hunde dürfen ein winziges Stück weiche Feige probieren. Feigenblätter und -zweige sind nichts für Hunde, also frag zuerst einen Erwachsenen.",
     "fr": "Les chiens peuvent goûter un tout petit peu de figue bien tendre. Les feuilles et les branches du figuier ne sont pas pour eux : demande d’abord à un adulte.",
-    "es": "Los perros pueden probar un poquito de higo blando. Las hojas y las ramas de la higuera no son para perros, así que pregunta antes a un adulto."
+    "es": "Los perros pueden probar un poquito de higo blando. Las hojas y las ramas de la higuera no son para perros, así que pregunta antes a un adulto.",
+    "it": "I cani possono assaggiare un pezzettino di fico morbido. Foglie e rami del fico non sono per i cani, quindi chiedi prima a un adulto."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo suhe fige?",
         "de": "Dürfen Hunde getrocknete Feigen fressen?",
         "fr": "Les chiens peuvent-ils manger des figues séchées ?",
-        "es": "¿Pueden los perros comer higos secos?"
+        "es": "¿Pueden los perros comer higos secos?",
+        "it": "I cani possono mangiare i fichi secchi?"
       },
       "a": {
         "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
         "sl": "Suhe fige niso dobra izbira za priboljšek. Imajo veliko bolj zgoščen sladkor, ker jim je bila med sušenjem odvzeta voda.",
         "de": "Getrocknete Feigen sind kein gutes Leckerli. Sie enthalten viel mehr konzentrierten Zucker, weil beim Trocknen das Wasser entzogen wurde.",
         "fr": "Les figues séchées ne sont pas une bonne friandise. Elles contiennent un sucre beaucoup plus concentré, car l’eau a été retirée au séchage.",
-        "es": "Los higos secos no son un buen premio. Tienen el azúcar mucho más concentrado porque se les quita el agua al secarlos."
+        "es": "Los higos secos no son un buen premio. Tienen el azúcar mucho más concentrado porque se les quita el agua al secarlos.",
+        "it": "I fichi secchi non sono un premio ideale: contengono zuccheri molto più concentrati perché durante l’essiccazione è stata tolta l’acqua."
       }
     },
     {
@@ -82,14 +92,16 @@
         "sl": "Kaj, če pes gloda figovo drevo?",
         "de": "Was, wenn mein Hund an einem Feigenbaum knabbert?",
         "fr": "Que faire si mon chien mâchonne un figuier ?",
-        "es": "¿Y si mi perro mordisquea una higuera?"
+        "es": "¿Y si mi perro mordisquea una higuera?",
+        "it": "E se il mio cane mastica un albero di fico?"
       },
       "a": {
         "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
         "sl": "Figovec je lahko škodljiv. Znaki so lahko bruhanje, močno slinjenje, draženje kože in izpuščaji. Če pes poje kateri koli del rastline, takoj poiščite veterinarsko pomoč.",
         "de": "Die Feigenpflanze kann schädlich sein. Mögliche Anzeichen sind Erbrechen, starkes Sabbern, Hautreizungen und Ausschlag. Frisst Ihr Hund irgendeinen Teil der Pflanze, suchen Sie sofort einen Tierarzt auf.",
         "fr": "Le figuier peut être nocif. Les signes possibles sont des vomissements, une salivation excessive, une irritation de la peau et des éruptions cutanées. Si votre chien mange n’importe quelle partie de la plante, consultez un vétérinaire sans attendre.",
-        "es": "La higuera puede ser perjudicial. Los síntomas pueden ser vómitos, babeo excesivo, irritación de la piel y erupciones. Si tu perro come cualquier parte de la planta, acude enseguida a un veterinario."
+        "es": "La higuera puede ser perjudicial. Los síntomas pueden ser vómitos, babeo excesivo, irritación de la piel y erupciones. Si tu perro come cualquier parte de la planta, acude enseguida a un veterinario.",
+        "it": "La pianta del fico può essere dannosa. Possono comparire vomito, salivazione eccessiva, irritazione della pelle ed eruzioni cutanee. Se il tuo cane mangia una qualsiasi parte della pianta, portalo subito dal veterinario."
       }
     }
   ],
@@ -191,6 +203,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2ab4cdb5498d3d4d995c56ff0775b437735c3afc72322706e5200763ab6c546c"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "286db30c949a6517ca2e36b4d6aaebd14db4f6d1a10f622fdd55bf4cc24aa501"
     }
   }
 }
