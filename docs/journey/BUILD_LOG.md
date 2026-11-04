@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-04 — Po ponovnem zagonu strežnika igra ne obstane več za ves dan
+
+**Kaj:** po ponovnem zagonu strežnika ob ~13:19 se igralna zanka (minutna obdelava vseh ljubljenčkov) ~9 ur ni izvajala — zagon je prekinil tekočo obdelavo, njena »zapora proti prekrivanju« pa je ostala in bi po privzetem veljala 24 ur. Kužki v tem času niso lačnili, ob 22:00 niso zaspali, pri staršu je ostal star »Nujno«. Ob 22:15 smo zaporo ročno pobrisali. Zdaj: (1) vsaka taka zapora poteče po nekaj minutah (minutna obdelava po 3 min), (2) razporejevalnik ob vsakem zagonu sam pobriše stare zapore, (3) če zanka stoji več kot 5 minut, dobi skrbnik eno sporočilo na Discord (samo število minut) in stran System health pokaže, kaj narediti.
+**Zakaj je pomembno:** igra mora teči tudi, ko strežnik pade ali se znova zažene — in če ne teče, moramo to izvedeti v 5 minutah, ne naslednji dan od staršev.
+**Kako povedati:** 🛠 »Zapora, ki naj prepreči dvojni zagon, je po ponovnem zagonu tiho ustavila igro za 9 ur. Popravek: kratek rok zapor, čiščenje ob zagonu in alarm, ki ni odvisen od same zanke.« · 💼 »Spremljamo srčni utrip igre vsako minuto; zastoj > 5 min sproži opozorilo.«
+
 ## 2026-11-04 — AI pregleda vsako sliko, preden iz nje nastane video
 
 **Kaj:** na produkciji je imela slika kužka na novi postelji odvečno tačko pod posteljo in dve prosojni »duhovni« tački na tleh (ostanek prejšnje poze), 3-sekundni posnetek iz nje pa enako. Ponovno ustvarjanje je vrnilo isto sliko, ker je strežnik poslal popolnoma enake vhode (isto seme). Zdaj vsako novo ključno sliko, pozo, sliko s kupljeno stvarjo in sliko v katalogu pred posnetkom pregleda AI model (Gemini 2.5 Flash prek fal): ena žival, štiri tačke, nič prosojnega, stvar je tam. Slaba slika stvari se naredi znova z novim semenom (največ dvakrat); če še vedno ni dobra, se ne uporabi — stvar se pokaže brez posnetka — in admin dobi eno sporočilo. Slike ljubljenčka se prve dni samo ocenjujejo (»senca«), dokler ne vidimo, ali model presoja pravilno; nato tudi zanje velja isto. Vsak ročni »Regenerate« ima zdaj novo seme. Že narejene slike stvari se enkrat samodejno preverijo — tudi Davidova postelja se tako popravi sama.

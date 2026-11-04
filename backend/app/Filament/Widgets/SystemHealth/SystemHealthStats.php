@@ -83,9 +83,12 @@ class SystemHealthStats extends StatsOverviewWidget
                 ->descriptionIcon('heroicon-m-inbox-stack')
                 ->color($known === [] ? 'gray' : (array_sum($known) > 100 ? 'warning' : 'success')),
             Stat::make(__('admin.system_health.stats.heartbeat'), $beat === null ? __('admin.system_health.stats.never') : $beat->diffForHumans())
-                ->description($beat === null
-                    ? __('admin.system_health.stats.heartbeat_never_desc')
-                    : __('admin.system_health.stats.heartbeat_desc', ['at' => $beat->copy()->timezone('Europe/Ljubljana')->format('Y-m-d H:i:s')]))
+                ->description(match (true) {
+                    $beat === null => __('admin.system_health.stats.heartbeat_never_desc'),
+                    // D34: a stalled game loop says how to recover (stale schedule lock).
+                    $stale => __('admin.system_health.stats.heartbeat_stalled_desc', ['at' => $beat->copy()->timezone('Europe/Ljubljana')->format('Y-m-d H:i:s')]),
+                    default => __('admin.system_health.stats.heartbeat_desc', ['at' => $beat->copy()->timezone('Europe/Ljubljana')->format('Y-m-d H:i:s')]),
+                })
                 ->descriptionIcon('heroicon-m-clock')
                 ->color($stale ? 'danger' : 'success'),
             Stat::make(__('admin.system_health.stats.stuck_ledger'), $stuck->count())

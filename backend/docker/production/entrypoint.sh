@@ -36,4 +36,17 @@ case "$mode" in
         ;;
 esac
 
+# Scheduler start (DEPLOYMENT.md D34, incident 2026-11-04): a reboot / container stop kills
+# running scheduled commands before they release their withoutOverlapping mutex (Redis cache,
+# AOF — it survives the reboot), and the scheduler then silently skipped the game loop for
+# ~9 h. At the start of the ONE scheduler container (compose service `scheduler`) no scheduled
+# run of this host is alive — they ran inside the previous container's process tree — so every
+# schedule mutex left over is stale: clear them before `schedule:work`. Not fatal: a failure
+# (Redis briefly unreachable) is logged and the explicit expiries in routes/console.php still
+# bound the block.
+if [ "${1:-}" = "php" ] && [ "${2:-}" = "artisan" ] && [ "${3:-}" = "schedule:work" ]; then
+    php artisan schedule:clear-cache --no-interaction \
+        || echo "petprep-entrypoint: schedule:clear-cache failed — stale overlap locks expire by themselves (D34)" >&2
+fi
+
 exec "$@"
