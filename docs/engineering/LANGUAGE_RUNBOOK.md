@@ -96,7 +96,7 @@ translator: two fresh agents who did not translate the language.
 1. pet-prep: `node scripts/export-care-knowledge.mjs` + `node --test scripts/tests/export-care-knowledge.test.mjs`,
    tick the queue line, PR `feat(i18n): <language> care knowledge [L3]`, `CI OK`, merge.
 2. Website: copy `docs/research/care-knowledge.json` → `src/content/care/care-knowledge.json`, tsc + lint + build,
-   PR `feat(i18n): <language> [L2]`, wait for all checks, merge (the merge deploys petprep.si; IndexNow runs).
+   PR `feat(i18n): <language> [L2]`, wait for all checks, merge (since 2026-11-04 the merge runs CI only; the language goes live on petprep.si with the next daily website deploy at 03:47 Europe/Ljubljana, up to ~1 day later, and IndexNow follows that deploy — DEPLOYMENT.md D32; never dispatch a website production deploy).
 3. Queue line → `[x] <code> <language> — address: <Sie/du/…>, PRs #…, #…, <date>`.
 
 Only these files change; never the shared docs (DECISIONS, HANDOFF, ROADMAP, FEATURES). Never force-push, merge
@@ -104,5 +104,5 @@ red CI, touch production data, `.env`, CLAUDE.md or the app (`mobile/`, app lang
 
 ## 5. Summary (Slovenian, one short message)
 
-Language, address form, strings translated, B fixes / C fixes, foods verified, PR numbers + merge SHAs, live URL
-(`https://petprep.si/<code>`), next language.
+Language, address form, strings translated, B fixes / C fixes, foods verified, PR numbers + merge SHAs, URL
+(`https://petprep.si/<code>` — live after the next daily website deploy, 03:47), next language.

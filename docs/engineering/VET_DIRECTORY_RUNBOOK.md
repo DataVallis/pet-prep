@@ -6,7 +6,7 @@ region, town and "24 h only". A scheduled task works through `docs/research/care
 per run** (a country, or one region of a large country), unattended, no questions.
 
 Data: `docs/research/care/vets/<CC>.json` (ISO-2 file name), exported by `scripts/export-care-knowledge.mjs` into
-`docs/research/care-knowledge.json` → the website syncs it hourly (`care-sync.yml`). Format below.
+`docs/research/care-knowledge.json` → the website syncs it hourly (`care-sync.yml`, a CI-only commit to its `main`) and shows it after its next daily deploy (03:47 Europe/Ljubljana — DEPLOYMENT.md D32). Format below.
 
 ## 0. Lock
 
@@ -48,8 +48,8 @@ node scripts/export-care-knowledge.mjs
 node --test scripts/tests/export-care-knowledge.test.mjs
 ```
 Tick the queue line (`[x] … — N entries, M × 24 h, <date>`; partial → `[~] … — left: …` and add a follow-up line
-under it). PR `feat(care): vets <country/region> [M6-K1]`, wait for `CI OK`, merge (squash). The website updates
-itself within an hour — no website PR, no deploy. Only `docs/research/care/**` and the export change; never the
+under it). PR `feat(care): vets <country/region> [M6-K1]`, wait for `CI OK`, merge (squash). The website syncs
+the export within an hour and shows it after its next daily deploy (03:47 Europe/Ljubljana, up to ~1 day; DEPLOYMENT.md D32) — no website PR, no deploy. Only `docs/research/care/**` and the export change; never the
 shared docs.
 
 ## 5. Rules

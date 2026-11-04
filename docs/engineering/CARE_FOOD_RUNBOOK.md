@@ -48,7 +48,7 @@ node --test scripts/tests/export-care-knowledge.test.mjs
 Tick the queue lines (`[d]` / `[c]` / `[x]`). Docs: this run touches only `docs/research/care/**`,
 `docs/research/care-knowledge.json` and `FOOD_QUEUE.md` — never the shared docs (DECISIONS, HANDOFF …),
 like unattended breed runs. PR `feat(care): foods <first>…<last> [M6-K4]`, wait for `CI OK`, merge
-(squash). The website picks the export up within an hour (`care-sync.yml`) — no website PR, no deploy.
+(squash). The website picks the export up within an hour (`care-sync.yml`) and shows it after its next daily deploy (03:47 Europe/Ljubljana, up to ~1 day; DEPLOYMENT.md D32) — no website PR, no deploy.
 
 ## 5. Stop conditions (mark the queue line, never ask)
 
