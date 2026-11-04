@@ -21,6 +21,11 @@
       "name": "Own clinic sites opened",
       "url": "https://drcupona.mk/",
       "note": "drcupona.mk, veterinarencentar.mk/kontakt, manopetvet.com/contact, remediumvet.mk, petvetaerodrom.mk."
+    },
+    {
+      "name": "University Veterinary Hospital (FVM Skopje) - clinic page",
+      "url": "https://fvm.ukim.edu.mk/en/fakultet/klinika",
+      "note": "Describes a hospital for companion animals and horses; no hours, no duty/24h statement, no phone (only uvb@fvm.ukim.edu.mk)."
     }
   ],
   "entries": [
@@ -740,5 +745,5 @@
       "note": "FVA (Food and Veterinary Agency) list of vets authorised for microchipping, row 44; undated PDF (c. 2018), name/address/phone re-checked against the PDF 2026-11-04 (independent check). No own page opened."
     }
   ],
-  "notes": "Only 1 explicit 24/7 clinic found (Dr. Čupona, Bitola). No official duty rota and no animal poison line found. Blocked by robots.txt / unreadable: Macedonian Veterinary Chamber (mvk.org.mk), veterinarnabolnica.com.mk (incl. /dezurna-sluzba, likely duty page - check manually), happypet.mk, cityvet.mk, dogcat.mk, zoovet.com.mk; vetsvet.mk loops on a 302 redirect; inovet.mk under construction; fvu.gov.mk/fva.gov.mk registry pages not fetchable (FVA PDFs used). Facebook pages not readable. Aggregators (zk.mk, pets.mk, abv.mk, wordpress reposts) were read only to find names and never used as the basis for 24h or hours. FVA-only entries have unverified, possibly stale phone/address. Not covered: 24h search in Tetovo, Kumanovo, Štip, Strumica, Veles, Prilep, Ohrid found nothing on own pages. Human poison centre does not count as animal poison line."
+  "notes": "Only 1 explicit 24/7 clinic found (Dr. Čupona, Bitola). No official duty rota and no animal poison line found. Blocked by robots.txt / unreadable: Macedonian Veterinary Chamber (mvk.org.mk), veterinarnabolnica.com.mk (incl. /dezurna-sluzba, likely duty page - check manually), happypet.mk, cityvet.mk, dogcat.mk, zoovet.com.mk; vetsvet.mk loops on a 302 redirect; inovet.mk under construction; fvu.gov.mk/fva.gov.mk registry pages not fetchable (FVA PDFs used). Facebook pages not readable. Aggregators (zk.mk, pets.mk, abv.mk, wordpress reposts) were read only to find names and never used as the basis for 24h or hours. FVA-only entries have unverified, possibly stale phone/address. Not covered: 24h search in Tetovo, Kumanovo, Štip, Strumica, Veles, Prilep, Ohrid found nothing on own pages. Human poison centre does not count as animal poison line. Follow-up run 2026-11-04 (Skopje/Ohrid/Tetovo/Kumanovo, Skopje Veterinary Hospital duty hours): no new entries added. WebSearch returned almost no Macedonian clinic sites, and own-site URLs could not be opened (not discoverable). Skopje Veterinary Hospital (Lazar Pop Trajkov 5/8) duty hours NOT found: veterinarnabolnica.com.mk not reachable again; aggregator zk.mk lists duty phones +389 75 404221 / +389 75 404222 but no hours and no 24h claim (not used as a basis). Other names seen only on aggregators (no phone/own site, so not added): Ultravet (Gemidzhiska 123-a, Skopje). Kajak.mk 'Pet hotel Brvenica, Tetovo' is a pet hotel attached to an unnamed vet clinic, not a clinic listing. Yo Pet Clinic Skopje page (yopetclinic.com) looks like a non-local template site (Indian WhatsApp number) - ignored. Facebook (Drachevo Vet) robots-blocked. Still no 24h clinic found in Ohrid, Tetovo, Kumanovo."
 }
