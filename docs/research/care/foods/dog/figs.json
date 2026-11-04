@@ -10,7 +10,8 @@
     "it": "Fichi",
     "pt": "Figos",
     "nl": "Vijgen",
-    "pl": "Figi"
+    "pl": "Figi",
+    "cs": "Fíky"
   },
   "question": {
     "en": "Can dogs eat figs?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare i fichi?",
     "pt": "Os cães podem comer figos?",
     "nl": "Mogen honden vijgen eten?",
-    "pl": "Czy psy mogą jeść figi?"
+    "pl": "Czy psy mogą jeść figi?",
+    "cs": "Mohou psi jíst fíky?"
   },
   "url_slug": {
     "en": "figs",
@@ -32,7 +34,8 @@
     "it": "fichi",
     "pt": "figos",
     "nl": "vijgen",
-    "pl": "figi"
+    "pl": "figi",
+    "cs": "fiky"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, i fichi freschi di solito sono sicuri per i cani se preparati nel modo giusto, ma solo come premio occasionale. Dai solo l’interno morbido, a pezzetti, e non lasciare mai che il cane mangi foglie, corteccia o rami del fico. I fichi secchi contengono troppo zucchero.",
     "pt": "Sim, os figos frescos são geralmente seguros para os cães se forem bem preparados, mas só como guloseima ocasional. Dá apenas o interior macio, em pedaços pequenos, e nunca deixes o teu cão comer folhas, casca ou ramos de figueira. Os figos secos têm demasiado açúcar.",
     "nl": "Ja, verse vijgen zijn over het algemeen veilig voor honden als ze goed worden klaargemaakt, maar alleen als af en toe een snoepje. Geef alleen het zachte binnenste, in kleine stukjes, en laat je hond nooit bladeren, schors of takken van de vijgenboom eten. Gedroogde vijgen bevatten te veel suiker.",
-    "pl": "Tak, świeże figi są zwykle bezpieczne dla psów, jeśli są dobrze przygotowane, ale tylko jako okazjonalny smakołyk. Podawaj wyłącznie miękki środek, w małych kawałkach, i nigdy nie pozwalaj psu jeść liści, kory ani gałązek figowca. Suszone figi są zbyt słodkie."
+    "pl": "Tak, świeże figi są zwykle bezpieczne dla psów, jeśli są dobrze przygotowane, ale tylko jako okazjonalny smakołyk. Podawaj wyłącznie miękki środek, w małych kawałkach, i nigdy nie pozwalaj psu jeść liści, kory ani gałązek figowca. Suszone figi są zbyt słodkie.",
+    "cs": "Ano, čerstvé fíky jsou pro psy obvykle bezpečné, pokud je správně připravíte, ale jen jako příležitostný pamlsek. Nabídněte jen měkkou vnitřní část v malých kouscích a nikdy nenechte psa jíst listy, kůru ani větve fíkovníku. Sušené fíky jsou příliš sladké."
   },
   "why": {
     "en": "Figs themselves are not considered toxic like grapes and cherries, but the fig plant can be harmful. Figs contain vitamins A and C, calcium, potassium, magnesium and iron. Because fruit contains natural sugar and fibre, too much can have a laxative effect and cause diarrhoea. Dried figs have much more concentrated sugar because the water has been removed.",
@@ -55,7 +59,8 @@
     "it": "I fichi in sé non sono considerati tossici come l’uva e le ciliegie, ma la pianta del fico può essere dannosa. I fichi contengono vitamine A e C, calcio, potassio, magnesio e ferro. Poiché la frutta contiene zuccheri naturali e fibre, quantità eccessive possono avere un effetto lassativo e causare diarrea. I fichi secchi contengono zuccheri molto più concentrati perché è stata tolta l’acqua.",
     "pt": "Os figos em si não são considerados tóxicos, ao contrário das uvas e das cerejas, mas a figueira pode ser prejudicial. Os figos contêm vitaminas A e C, cálcio, potássio, magnésio e ferro. Como a fruta contém açúcar natural e fibra, demasiada pode ter um efeito laxante e causar diarreia. Os figos secos têm o açúcar muito mais concentrado, porque se retirou a água.",
     "nl": "Vijgen zelf gelden niet als giftig, in tegenstelling tot druiven en kersen, maar de vijgenplant kan schadelijk zijn. Vijgen bevatten vitamine A en C, calcium, kalium, magnesium en ijzer. Omdat fruit natuurlijke suiker en vezels bevat, kan te veel een laxerend effect hebben en diarree veroorzaken. Gedroogde vijgen bevatten veel meer geconcentreerde suiker, omdat het water is onttrokken.",
-    "pl": "Same figi nie są uważane za toksyczne jak winogrona i czereśnie, ale roślina figowca może szkodzić. Figi zawierają witaminy A i C, wapń, potas, magnez i żelazo. Ponieważ owoce zawierają naturalny cukier i błonnik, zbyt duża porcja może działać przeczyszczająco i wywołać biegunkę. W suszonych figach cukier jest znacznie bardziej skoncentrowany, bo usunięto z nich wodę."
+    "pl": "Same figi nie są uważane za toksyczne jak winogrona i czereśnie, ale roślina figowca może szkodzić. Figi zawierają witaminy A i C, wapń, potas, magnez i żelazo. Ponieważ owoce zawierają naturalny cukier i błonnik, zbyt duża porcja może działać przeczyszczająco i wywołać biegunkę. W suszonych figach cukier jest znacznie bardziej skoncentrowany, bo usunięto z nich wodę.",
+    "cs": "Samotné fíky se nepovažují za toxické, jako jsou hrozny a třešně, ale rostlina fíkovníku může být škodlivá. Fíky obsahují vitaminy A a C, vápník, draslík, hořčík a železo. Ovoce obsahuje přírodní cukr a vlákninu, takže při větším množství může působit projímavě a způsobit průjem. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Se il tuo cane mangia una qualsiasi parte della pianta del fico, portalo subito dal veterinario. Se il tuo cane mangia diversi fichi e i sintomi non migliorano, o inizia a vomitare, contatta il veterinario.",
     "pt": "Se o teu cão comer qualquer parte da figueira, procura imediatamente cuidados veterinários. Se o teu cão comer vários figos e os sinais não melhorarem, ou se começar a vomitar, contacta o teu veterinário.",
     "nl": "Eet je hond een deel van de vijgenplant, ga dan meteen naar de dierenarts. Eet je hond meerdere vijgen en worden de verschijnselen niet beter, of gaat je hond braken, neem dan contact op met je dierenarts.",
-    "pl": "Jeśli twój pies zje jakąkolwiek część figowca, od razu zgłoś się do weterynarza. Jeśli zje kilka fig, a jego objawy nie ustępują albo zacznie wymiotować, skontaktuj się z weterynarzem."
+    "pl": "Jeśli twój pies zje jakąkolwiek część figowca, od razu zgłoś się do weterynarza. Jeśli zje kilka fig, a jego objawy nie ustępują albo zacznie wymiotować, skontaktuj się z weterynarzem.",
+    "cs": "Pokud pes sní jakoukoli část fíkovníku, okamžitě vyhledejte veterinární péči. Pokud pes sní několik fíků a potíže se nezlepší nebo začne zvracet, obraťte se na veterináře."
   },
   "serving": {
     "en": "Only the soft inside of a fresh fig, with all plant material removed, cut into small pieces. Start with a tiny piece and watch for stomach upset or an allergic reaction.",
@@ -78,7 +84,8 @@
     "it": "Solo l’interno morbido di un fico fresco, senza alcuna parte della pianta, tagliato a pezzetti. Inizia con un pezzetto minuscolo e controlla se compaiono mal di stomaco o una reazione allergica.",
     "pt": "Só o interior macio de um figo fresco, sem qualquer material da planta, cortado em pedaços pequenos. Começa com um pedacinho minúsculo e fica atento a mal-estar no estômago ou a uma reação alérgica.",
     "nl": "Alleen het zachte binnenste van een verse vijg, zonder stukjes van de plant, in kleine stukjes gesneden. Begin met een heel klein stukje en let op buikklachten of een allergische reactie.",
-    "pl": "Tylko miękki środek świeżej figi, bez żadnych części rośliny, pokrojony na małe kawałki. Zacznij od maleńkiego kawałka i obserwuj, czy nie pojawi się rozstrój żołądka lub reakcja alergiczna."
+    "pl": "Tylko miękki środek świeżej figi, bez żadnych części rośliny, pokrojony na małe kawałki. Zacznij od maleńkiego kawałka i obserwuj, czy nie pojawi się rozstrój żołądka lub reakcja alergiczna.",
+    "cs": "Jen měkká vnitřní část čerstvého fíku, bez zbytků rostliny, nakrájená na malé kousky. Začněte s drobným kouskem a sledujte, jestli se neobjeví podrážděný žaludek nebo alergická reakce."
   },
   "child": {
     "en": "Dogs can try a tiny bit of soft fig. Fig leaves and branches are not for dogs, so ask a grown-up first.",
@@ -89,7 +96,8 @@
     "it": "I cani possono assaggiare un pezzettino di fico morbido. Foglie e rami del fico non sono per i cani, quindi chiedi prima a un adulto.",
     "pt": "Os cães podem provar um bocadinho de figo macio. As folhas e os ramos da figueira não são para cães, por isso pergunta primeiro a um adulto.",
     "nl": "Honden mogen een klein stukje zachte vijg proeven. Bladeren en takken van de vijgenboom zijn niets voor honden, dus vraag het eerst aan een volwassene.",
-    "pl": "Psy mogą spróbować odrobiny miękkiej figi. Liście i gałązki figowca nie są dla psów, więc najpierw zapytaj dorosłego."
+    "pl": "Psy mogą spróbować odrobiny miękkiej figi. Liście i gałązki figowca nie są dla psów, więc najpierw zapytaj dorosłego.",
+    "cs": "Pes může ochutnat drobný kousíček měkkého fíku. Listy a větvičky fíkovníku pro psy nejsou, tak se nejdřív zeptej dospělého."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I cani possono mangiare i fichi secchi?",
         "pt": "Os cães podem comer figos secos?",
         "nl": "Mogen honden gedroogde vijgen eten?",
-        "pl": "Czy psy mogą jeść suszone figi?"
+        "pl": "Czy psy mogą jeść suszone figi?",
+        "cs": "Mohou psi jíst sušené fíky?"
       },
       "a": {
         "en": "Dried figs aren't a great treat option. They are much higher in concentrated sugar because the water has been removed during drying.",
@@ -113,7 +122,8 @@
         "it": "I fichi secchi non sono un premio ideale: contengono zuccheri molto più concentrati perché durante l’essiccazione è stata tolta l’acqua.",
         "pt": "Os figos secos não são uma grande opção de guloseima. Têm muito mais açúcar concentrado, porque se retirou a água durante a secagem.",
         "nl": "Gedroogde vijgen zijn niet echt een goed snoepje. Ze bevatten veel meer geconcentreerde suiker, omdat het water tijdens het drogen is onttrokken.",
-        "pl": "Suszone figi nie są dobrym smakołykiem. Mają znacznie więcej skoncentrowanego cukru, bo podczas suszenia usunięto z nich wodę."
+        "pl": "Suszone figi nie są dobrym smakołykiem. Mają znacznie więcej skoncentrowanego cukru, bo podczas suszenia usunięto z nich wodę.",
+        "cs": "Sušené fíky nejsou ideální pamlsek. Jsou mnohem cukernatější, protože se při sušení odstraní voda."
       }
     },
     {
@@ -126,7 +136,8 @@
         "it": "E se il mio cane mastica un albero di fico?",
         "pt": "E se o meu cão mastigar uma figueira?",
         "nl": "Wat als mijn hond aan een vijgenboom knaagt?",
-        "pl": "Co zrobić, jeśli pies pogryzie figowiec?"
+        "pl": "Co zrobić, jeśli pies pogryzie figowiec?",
+        "cs": "Co když pes okusuje fíkovník?"
       },
       "a": {
         "en": "The fig plant can be harmful. Signs can include vomiting, excessive drooling, skin irritation and rashes. If your dog eats any part of the plant, get veterinary care right away.",
@@ -137,7 +148,8 @@
         "it": "La pianta del fico può essere dannosa. Possono comparire vomito, salivazione eccessiva, irritazione della pelle ed eruzioni cutanee. Se il tuo cane mangia una qualsiasi parte della pianta, portalo subito dal veterinario.",
         "pt": "A figueira pode ser prejudicial. Os sinais podem incluir vómitos, salivação excessiva, irritação da pele e erupções cutâneas. Se o teu cão comer qualquer parte da planta, procura imediatamente cuidados veterinários.",
         "nl": "De vijgenplant kan schadelijk zijn. Mogelijke verschijnselen zijn braken, overmatig kwijlen, huidirritatie en uitslag. Eet je hond een deel van de plant, ga dan meteen naar de dierenarts.",
-        "pl": "Roślina figowca może szkodzić. Objawy to m.in. wymioty, nadmierne ślinienie się, podrażnienie skóry i wysypka. Jeśli twój pies zje jakąkolwiek część rośliny, od razu zgłoś się do weterynarza."
+        "pl": "Roślina figowca może szkodzić. Objawy to m.in. wymioty, nadmierne ślinienie się, podrażnienie skóry i wysypka. Jeśli twój pies zje jakąkolwiek część rośliny, od razu zgłoś się do weterynarza.",
+        "cs": "Rostlina fíkovníku může být škodlivá. Příznaky mohou zahrnovat zvracení, nadměrné slinění, podráždění kůže a vyrážku. Pokud pes sní jakoukoli část rostliny, okamžitě vyhledejte veterinární péči."
       }
     }
   ],
@@ -259,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6bf4845dcd71e5f1c88f61cfed14940c3624160ac14c0caf7014c6d1bf3d0cde"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "faa872a70401fe72e78dc4667ffc17364389c25fba190b29df88c96ec9d7685b"
     }
   }
 }

@@ -10,7 +10,8 @@
     "it": "Noccioli e semi di frutta",
     "pt": "Caroços e sementes de fruta",
     "nl": "Fruitpitten en -stenen",
-    "pl": "Pestki owoców"
+    "pl": "Pestki owoców",
+    "cs": "Ovocné pecky"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare i noccioli di frutta?",
     "pt": "Os cães podem comer caroços de fruta?",
     "nl": "Mogen honden fruitpitten eten?",
-    "pl": "Czy psy mogą jeść pestki owoców?"
+    "pl": "Czy psy mogą jeść pestki owoców?",
+    "cs": "Mohou psi jíst ovocné pecky?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -32,7 +34,8 @@
     "it": "noccioli-e-semi-di-frutta",
     "pt": "carocos-e-sementes-de-fruta",
     "nl": "fruitpitten",
-    "pl": "pestki-owocow"
+    "pl": "pestki-owocow",
+    "cs": "ovocne-pecky"
   },
   "level": "dangerous",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. I noccioli di frutti come ciliegie, pesche e pesche noci non vanno mai dati ai cani. Possono rompere i denti, far soffocare o ostruire l’intestino, e contengono una piccola quantità di cianuro. Togli sempre noccioli e semi prima di dare un po’ di frutta.",
     "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta.",
     "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt.",
-    "pl": "Nie. Pestek owoców takich jak czereśnie, brzoskwinie i nektarynki nigdy nie należy dawać psom. Mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a poza tym zawierają niewielką ilość cyjanku. Zawsze usuwaj pestki i nasiona, zanim podzielisz się owocem."
+    "pl": "Nie. Pestek owoców takich jak czereśnie, brzoskwinie i nektarynki nigdy nie należy dawać psom. Mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a poza tym zawierają niewielką ilość cyjanku. Zawsze usuwaj pestki i nasiona, zanim podzielisz się owocem.",
+    "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -55,7 +59,8 @@
     "it": "I noccioli duri possono fratturare i denti, far soffocare o ostruire l’intestino, e quelli con i bordi ruvidi possono ferire l’esofago mentre vengono ingoiati. Il nocciolo contiene anche una piccola quantità di cianuro. L’intossicazione da cianuro dovuta alla frutta a nocciolo è rara, ma gli animali possono stare male anche dopo una quantità minima, quindi un nocciolo spaccato va trattato come un’urgenza.",
     "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente.",
     "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval.",
-    "pl": "Twarde pestki mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a pestki o ostrych krawędziach mogą uszkodzić przełyk podczas połykania. Pestka zawiera też niewielką ilość cyjanku. Zatrucie cyjankiem po zjedzeniu pestkowców zdarza się rzadko, ale zwierzęta domowe mogą zachorować już po znikomej ilości, dlatego rozgryzioną pestkę traktuje się jako nagły przypadek."
+    "pl": "Twarde pestki mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a pestki o ostrych krawędziach mogą uszkodzić przełyk podczas połykania. Pestka zawiera też niewielką ilość cyjanku. Zatrucie cyjankiem po zjedzeniu pestkowców zdarza się rzadko, ale zwierzęta domowe mogą zachorować już po znikomej ilości, dlatego rozgryzioną pestkę traktuje się jako nagły przypadek.",
+    "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Trudności z oddawaniem stolca",
       "Ból brzucha",
       "Trudności z oddychaniem"
+    ],
+    "cs": [
+      "Dávení",
+      "Slinění",
+      "Zvracení",
+      "Potíže s vyprazdňováním",
+      "Bolest břicha",
+      "Potíže s dýcháním"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "it": "Chiama subito il veterinario se il tuo cane spacca un nocciolo. Chiamalo anche se ne ha ingoiato uno e mostra uno di questi segni.",
     "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário.",
     "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts.",
-    "pl": "Od razu zadzwoń do weterynarza, jeśli twój pies rozgryzie pestkę. Jeśli pies połknął pestkę i pojawił się któryś z tych objawów, zadzwoń do weterynarza."
+    "pl": "Od razu zadzwoń do weterynarza, jeśli twój pies rozgryzie pestkę. Jeśli pies połknął pestkę i pojawił się któryś z tych objawów, zadzwoń do weterynarza.",
+    "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "it": "I noccioli della frutta non sono per i cani. Buttali in un cestino che il tuo cane non possa raggiungere e, se ne mangia uno, dillo a un adulto.",
     "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum.",
     "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet.",
-    "pl": "Pestki owoców nie są dla psów. Wyrzucaj je do kosza, do którego pies nie sięgnie, i powiedz dorosłemu, jeśli pies jakąś zje."
+    "pl": "Pestki owoców nie są dla psów. Wyrzucaj je do kosza, do którego pies nie sięgnie, i powiedz dorosłemu, jeśli pies jakąś zje.",
+    "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému."
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "it": "La frutta in sé va bene?",
         "pt": "A fruta em si é segura?",
         "nl": "Is het fruit zelf wel goed?",
-        "pl": "Czy sam owoc jest w porządku?"
+        "pl": "Czy sam owoc jest w porządku?",
+        "cs": "Je v pořádku samotné ovoce?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -176,7 +192,8 @@
         "it": "Dipende dalla frutta: guarda la pagina di ciascun frutto. In generale, semi, noccioli, torsoli, bucce e gambi vanno tolti prima di dare la frutta a un cane.",
         "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão.",
         "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft.",
-        "pl": "To zależy od owocu; zobacz stronę danego owocu. Zasadniczo przed podaniem owocu psu należy usunąć nasiona, pestki, gniazda nasienne, skórki i szypułki."
+        "pl": "To zależy od owocu; zobacz stronę danego owocu. Zasadniczo przed podaniem owocu psu należy usunąć nasiona, pestki, gniazda nasienne, skórki i szypułki.",
+        "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky."
       }
     },
     {
@@ -189,7 +206,8 @@
         "it": "Quali frutti hanno il nocciolo?",
         "pt": "Que frutas têm caroço?",
         "nl": "Welk fruit heeft pitten?",
-        "pl": "Które owoce mają pestki?"
+        "pl": "Które owoce mają pestki?",
+        "cs": "Které ovoce má pecky?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -200,7 +218,8 @@
         "it": "Frutti come ciliegie, pesche noci e pesche si chiamano frutti a nocciolo. Come quello delle ciliegie, il nocciolo della pesca contiene cianuro.",
         "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto.",
         "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide.",
-        "pl": "Owoce takie jak czereśnie, nektarynki i brzoskwinie to tzw. pestkowce. Podobnie jak w czereśniach, pestki brzoskwini zawierają cyjanek."
+        "pl": "Owoce takie jak czereśnie, nektarynki i brzoskwinie to tzw. pestkowce. Podobnie jak w czereśniach, pestki brzoskwini zawierają cyjanek.",
+        "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid."
       }
     }
   ],
@@ -308,6 +327,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7b1d2e5194bc68059a6d826479be8622c3c7bf7495875eb37c6b68b2572cdb7e"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a4d35ebb8e875a6eb93faefa1ae4bf930ccb44ac172c1caf47c9a7d5f44731d4"
     }
   }
 }
