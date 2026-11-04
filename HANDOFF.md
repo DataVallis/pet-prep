@@ -199,6 +199,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-04 (cloud) — second disk outage 11:00–12:35 from website images (`fix/prod-disk-guard-website`, D31)
+The website repo's ~hourly deploys left ~2.85 GB `petprep-website` images → disk 100 % again. Website repo gets its own prune + daily cadence (separate PR). Guard here: the API deploy's prune also removes `petprep-website` images not `:production` / `:previous`, not in use and older than 6 h. Nothing for David beyond §1b step 18.
+
 ### 2026-11-04 (cloud) — production disk full → outage; automatic disk hygiene (`fix/prod-disk-full`, DEPLOYMENT.md D31)
 Root disk 100 % (20.5 GB old digest-pulled GHCR release images never pruned since D28) took postgres + the API down ~03:00–04:15; David cleaned by hand. Now the deploy prunes old `petprep-{app,web}` images (keeps `:production`, `:previous`, in use) in a new disk preflight and after success, refuses to start below 5 GB free; hourly `system-health:disk-check` → one Discord `disk_space` alert per day at ≥ 80 %; System health tile yellow ≥ 80 %. David: journald drop-in (§1b step 18). Open: same leak in the website repo's deploy.
 

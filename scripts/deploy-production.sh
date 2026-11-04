@@ -181,9 +181,14 @@
 #   tag or ghcr.io digest ref) whose image id is NOT kept. KEPT: the ids tagged
 #   petprep-{app,web}:production (current release) and :previous (the release before =
 #   what the automatic revert and the manual rollback, PRODUCTION_DEPLOYMENT.md §7, use)
-#   and every image any container uses (running or stopped, e.g. a kept reverb). Other
-#   repositories (postgres, redis, caddy base, petprep-website — its own deploy and
-#   rollback —, petprep-backend:production) and volumes are never touched; no
+#   and every image any container uses (running or stopped, e.g. a kept reverb).
+#   Website guard (D31, second incident 2026-11-04 11:00–12:35: the website repo's hourly
+#   deploys left ~2.85 GB per `ghcr.io/datavallis/petprep-website@sha256:…` image): the same
+#   rule for petprep-website images (keep :production, :previous, in use) PLUS an age floor —
+#   a website image is removed only when it was created more than DEPLOY_WEBSITE_MIN_AGE_HOURS
+#   (default 6) hours ago, so a website deploy running at the same time never loses its fresh
+#   pull; unknown creation time → kept. Other repositories (postgres, redis, caddy base,
+#   petprep-backend:production) and volumes are never touched; no
 #   `docker system prune`. It runs (a) in the disk preflight (step 1b) and (b) after a
 #   successful deploy, followed by `docker image prune -f` (dangling) and
 #   `docker builder prune -af --keep-storage 2GB` (build cache capped) — all warn-only.
@@ -224,6 +229,9 @@ IMAGES=(petprep-app petprep-web)
 # Release images (D31): petprep-app / petprep-web, local or ghcr.io/<owner>/… names.
 RELEASE_IMAGE_RE='(^|/)petprep-(app|web)$'
 KEEP_TAG_RE='^(production|previous)$'
+# Website images (D31 website guard): pruned like releases, but only when older than this.
+WEBSITE_IMAGE_RE='(^|/)petprep-website$'
+WEBSITE_MIN_AGE_HOURS="${DEPLOY_WEBSITE_MIN_AGE_HOURS:-6}"
 MIN_FREE_GB="${DEPLOY_MIN_FREE_GB:-5}"
 # Compose project = network + volume prefix. Default "backend" = the directory of
 # the compose file (what production has always used); explicit so the build tree
@@ -409,11 +417,23 @@ restore_images() {
 }
 
 # ---- Disk (DISK above, D31) --------------------------------------------------------
-# prune_release_images: remove every name of a release image whose id is not kept
-# (:production, :previous, or used by any container). Returns 1 (prunes nothing) when the
-# containers or images cannot be listed — never guess what is in use.
+# prune_release_images: remove every name of a release image (petprep-app / -web) and of
+# a website image (petprep-website, only when older than WEBSITE_MIN_AGE_HOURS) whose id is
+# not kept (:production / :previous of its own repository, or used by any container).
+# Returns 1 (prunes nothing) when the containers or images cannot be listed — never guess
+# what is in use.
+# image_older_than_min_age ID: 0 when ID was created > WEBSITE_MIN_AGE_HOURS ago; unknown → 1.
+image_older_than_min_age() {
+    local created created_s now_s
+    created="$(docker image inspect --format '{{.Created}}' "$1" 2>/dev/null)" || return 1
+    created_s="$(date -d "$created" +%s 2>/dev/null)" || return 1
+    [[ "$created_s" =~ ^[0-9]+$ ]] || return 1
+    now_s="$(date +%s)"
+    [ $((now_s - created_s)) -gt $((WEBSITE_MIN_AGE_HOURS * 3600)) ]
+}
+
 prune_release_images() {
-    local containers keep="" listing repo tag digest id ref removed=0 failed=0
+    local containers keep="" listing repo tag digest id ref removed=0 failed=0 young=0 website
     if ! containers="$(docker ps -aq)"; then
         warn "cannot list containers — old release images not pruned."
         return 1
@@ -430,14 +450,24 @@ prune_release_images() {
         return 1
     fi
     while IFS=$'\t' read -r repo tag digest id; do
-        if [[ "$repo" =~ $RELEASE_IMAGE_RE ]] && [[ "$tag" =~ $KEEP_TAG_RE ]]; then
+        if { [[ "$repo" =~ $RELEASE_IMAGE_RE ]] || [[ "$repo" =~ $WEBSITE_IMAGE_RE ]]; } \
+            && [[ "$tag" =~ $KEEP_TAG_RE ]]; then
             keep+=$'\n'"$id"
         fi
     done <<< "$listing"
     while IFS=$'\t' read -r repo tag digest id; do
         [ -n "$id" ] || continue
-        [[ "$repo" =~ $RELEASE_IMAGE_RE ]] || continue
+        website=0
+        if [[ "$repo" =~ $WEBSITE_IMAGE_RE ]]; then
+            website=1
+        elif ! [[ "$repo" =~ $RELEASE_IMAGE_RE ]]; then
+            continue
+        fi
         if grep -qxF -- "$id" <<< "$keep"; then continue; fi
+        if [ "$website" = 1 ] && ! image_older_than_min_age "$id"; then
+            young=$((young + 1))
+            continue
+        fi
         if [ -n "$tag" ] && [ "$tag" != "<none>" ]; then
             ref="${repo}:${tag}"
         elif [ -n "$digest" ] && [ "$digest" != "<none>" ]; then
@@ -451,7 +481,7 @@ prune_release_images() {
             failed=$((failed + 1))
         fi
     done <<< "$listing"
-    log "Old release images: removed ${removed} name(s) (kept: petprep-{app,web}:production + :previous and every image a container uses)."
+    log "Old release images: removed ${removed} name(s) (kept: petprep-{app,web,website}:production + :previous, every image a container uses, website images younger than ${WEBSITE_MIN_AGE_HOURS} h: ${young})."
     if [ "$failed" -gt 0 ]; then warn "${failed} old release image name(s) could not be removed (docker image ls 'petprep-*')."; fi
     return 0
 }
@@ -695,6 +725,10 @@ log "Env preflight OK (API domain ${PETPREP_API_DOMAIN}, Caddy sites ${PETPREP_C
 # ---- 1b. Disk preflight (DISK above, D31) ------------------------------------------
 # Still nothing changed: prune old release images + build cache, then refuse to pull /
 # build when the disk would fill up mid-deploy.
+if ! [[ "$WEBSITE_MIN_AGE_HOURS" =~ ^[0-9]+$ ]] || [ "$WEBSITE_MIN_AGE_HOURS" -lt 1 ]; then
+    echo "ERROR: DEPLOY_WEBSITE_MIN_AGE_HOURS must be a whole number of hours >= 1 (found '${WEBSITE_MIN_AGE_HOURS}')." >&2
+    exit 2
+fi
 if ! [[ "$MIN_FREE_GB" =~ ^[0-9]+$ ]]; then
     echo "ERROR: DEPLOY_MIN_FREE_GB must be a whole number of GB (found '${MIN_FREE_GB}')." >&2
     exit 2

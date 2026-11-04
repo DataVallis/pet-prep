@@ -12,6 +12,7 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 **Kaj:** ponoči (~3.00–4.15) se je disk strežnika (38 GB) napolnil do 100 %, baza se je ustavila in aplikacija je kazala »Ni povezave«. Krivec: 20,5 GB starih slik izdaj — od hitrejšega deploya (D28) vsak deploy prenese novo sliko, stare pa nihče ni brisal. David je ročno počistil (48 %). Zdaj deploy sam obdrži samo trenutno in prejšnjo izdajo (za povrnitev), se ne začne, če ostane manj kot 5 GB prostega, in ob ≥ 80 % pride v Discord eno opozorilo na dan; disk je viden tudi v »Zdravju sistema«.
 **Zakaj je pomembno:** izpad ni bil hrošč v igri, ampak gospodinjstvo strežnika — takšne stvari morajo biti avtomatske, preden pride beta.
+**Isti dan še enkrat (11.00–12.35):** disk je napolnila spletna stran (vsak njen deploy ~2,85 GB, skoraj vsako uro). Zdaj deploy API-ja pobriše tudi stare slike spletne strani (starejše od 6 ur, nikoli trenutne, prejšnje ali tiste v uporabi), spletna stran pa dobi lastno čiščenje.
 **Kako povedati:** 🛠 »Digest-pulled Docker slike niso nikoli ›dangling‹ — `image prune -f` jih ne pobere. Pravilo: obdrži `:production` + `:previous` + kar teče, vse ostalo stran.« · 💼 en izpad ~1 h pred beto, vzrok odpravljen v istem dnevu, z opozorilom vnaprej.
 
 ## 2026-11-03 — Strežnik naredi vsebino kupljenih stvari: dizajni, slike v katalogu, ljubljenček s svojo posteljo (M6-W03, strežnik)

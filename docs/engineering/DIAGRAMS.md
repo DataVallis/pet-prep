@@ -1183,7 +1183,7 @@ flowchart LR
 
 ```mermaid
 flowchart TD
-  A["1 env preflight<br/>(no git / docker before)<br/>server identity from APP_URL: API domain + Caddy sites<br/>--expect-domain mismatch → exit, nothing changed (D18)"] --> DK["1b disk preflight (D31)<br/>prune old petprep-{app,web} images (keep :production, :previous, in use)<br/>image prune -f · builder prune (keep 2 GB)<br/>&lt; 5 GB free → full builder prune → still &lt; 5 GB: exit, nothing changed"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
+  A["1 env preflight<br/>(no git / docker before)<br/>server identity from APP_URL: API domain + Caddy sites<br/>--expect-domain mismatch → exit, nothing changed (D18)"] --> DK["1b disk preflight (D31)<br/>prune old petprep-{app,web} images (keep :production, :previous, in use)<br/>+ old petprep-website images (same rule, only &gt; 6 h old)<br/>image prune -f · builder prune (keep 2 GB)<br/>&lt; 5 GB free → full builder prune → still &lt; 5 GB: exit, nothing changed"] --> B["2 record previous release<br/>.deployed-sha + releases/previous"]
   B --> C["3 pull ghcr.io …/petprep-{app,web}@sha256 (CI-built + checked, D28) → :next · logout<br/>pull fails → buildx preflight · build from the NEW tree (incoming/ or git archive)"]
   C --> D["smoke: run --rm app php artisan optimize<br/>(new image, production env)"]
   D --> ST["storage: chown -R 1000:1000 as root (new image)<br/>verify writable as uid 1000"]
@@ -1200,7 +1200,7 @@ flowchart TD
   HV --> I["7 postgres/redis · migrate --force"]
   I --> J["8 up -d app reverb queue queue-broadcasts scheduler caddy<br/>(entrypoint: per-container caches)<br/>no maintenance: queue + queue-broadcasts + scheduler first (D19)<br/>reverb / caddy not restarted (--no-deps) when releases/{reverb,caddy}.fingerprint matches<br/>caddy lb_try_duration 10s holds requests during the app swap<br/>+ force-recreate caddy if Caddyfile changed"]
   J --> K["re-chown storage (warn-only) · wait: php-fpm-ping"] --> L["queue:restart"] --> M2["9 artisan up (3×; one idempotent up without maintenance)"] --> N["health /up through Caddy (5×)<br/>--resolve API domain:443 → IP site fallback (production only)"]
-  N --> O["prune old release images (keep :production + :previous + in use, D31)<br/>image prune (dangling) · builder prune (keep 2 GB)"]
+  N --> O["prune old release images (keep :production + :previous + in use, D31)<br/>+ petprep-website images (same keep rule, only older than 6 h)<br/>image prune (dangling) · builder prune (keep 2 GB)"]
   G & HV & I -- "fails (pre-migration)" --> R1["revert code + images (:previous→:production)<br/>restart workers · artisan up"]
   J & K & N -- "fails (post-migration)" --> R2["keep new release (schema is new)<br/>up -d · restart workers · artisan up · loud error"]
 ```

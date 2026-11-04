@@ -16,7 +16,8 @@
 #           LABEL_APP / LABEL_WEB (org.petprep.base-id of the pulled :next images, D28).
 #           D31 disk: $PETPREP_ROOT/images.txt = `docker image ls` rows (repo TAB tag TAB
 #           digest TAB id), containers.txt = `docker ps -aq`, container-images.txt =
-#           `docker inspect --format {{.Image}}`; PS_FAIL=1 (`ps -aq` fails).
+#           `docker inspect --format {{.Image}}`; PS_FAIL=1 (`ps -aq` fails); created.txt =
+#           "id RFC3339" lines for `image inspect --format {{.Created}}` (missing id → fails).
 #   df      prints DF_AVAIL_KB (default 100 GB) as the free KiB and DF_USED_PCT (default 40);
 #           DF_AVAIL_KB_AFTER = the value from the second call on (after a full builder prune).
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
@@ -69,6 +70,12 @@ case "$args" in
     "buildx build -q --load --target base "*)
         [ "${BASE_BUILD_FAIL:-0}" = "1" ] && exit 1
         echo "${PHP_BASE_ID:-sha256:phpbase1}" ;;
+    # D31 website guard: creation time per image id from created.txt ("id RFC3339"); none → fail.
+    "image inspect --format {{.Created}} "*)
+        id="${args##* }"
+        line=$(grep -F -- "$id " "${PETPREP_ROOT}/created.txt" 2>/dev/null | head -n1)
+        [ -n "$line" ] || exit 1
+        echo "${line#* }" ;;
     "image inspect "*) [ "${NO_PREV_IMAGES:-0}" = "1" ] && exit 1 ;;
     "volume inspect "*) [ "${NO_VOLUME:-0}" = "1" ] && exit 1 ;;
     *" ps -q app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
@@ -1025,6 +1032,66 @@ new_root dir
 run_deploy DEPLOY_MIN_FREE_GB=lots -- --from "$ROOT/incoming" sha-v2
 check "exit 2" rc_is 2
 check "no docker call" not_called "^docker "
+finish
+
+start disk_website "website images: old unused ones pruned; :production, :previous, in use, young and unknown-age kept"
+new_root dir
+OLD="$(date -u -d '-7 hours' +%Y-%m-%dT%H:%M:%S.123456789Z)"
+YOUNG="$(date -u -d '-2 hours' +%Y-%m-%dT%H:%M:%SZ)"
+write_images \
+    "petprep-website production <none> sha256:wcur" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:c1 sha256:wcur" \
+    "petprep-website previous <none> sha256:wprev" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:p1 sha256:wprev" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:o2 sha256:wold2" \
+    "petprep-website next <none> sha256:wnext" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:y1 sha256:wyoung" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:u1 sha256:wunknown" \
+    "ghcr.io/datavallis/petprep-website <none> sha256:r1 sha256:wrun" \
+    "petprep-websitex old <none> sha256:other"
+printf 'sha256:wcur %s\nsha256:wprev %s\nsha256:wold1 %s\nsha256:wold2 %s\nsha256:wnext %s\nsha256:wyoung %s\nsha256:wrun %s\nsha256:other %s\n' \
+    "$OLD" "$OLD" "$OLD" "$OLD" "$OLD" "$YOUNG" "$OLD" "$OLD" > "$ROOT/created.txt"
+printf 'c1\n' > "$ROOT/containers.txt"
+printf 'sha256:wrun\n' > "$ROOT/container-images.txt"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "old website image removed by digest ref" called "image rm ghcr.io/datavallis/petprep-website@sha256:o1"
+check "second old website image removed" called "image rm ghcr.io/datavallis/petprep-website@sha256:o2"
+check "old stale website :next removed" called "image rm petprep-website:next"
+check "website :production kept" not_called "image rm (petprep-website:production|ghcr.io/datavallis/petprep-website@sha256:c1)"
+check "website :previous kept (its rollback)" not_called "image rm (petprep-website:previous|ghcr.io/datavallis/petprep-website@sha256:p1)"
+check "website image younger than 6 h kept (concurrent website deploy)" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:y1"
+check "website image of unknown age kept (fail safe)" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:u1"
+check "website image a container runs kept" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:r1"
+check "look-alike repository untouched" not_called "image rm petprep-websitex"
+check "age read only for website candidates" not_called "image inspect --format \{\{.Created\}\} sha256:(wcur|wprev|wrun|other)"
+check "reports the young ones" out_has "website images younger than 6 h: 2"
+finish
+
+start disk_website_age "DEPLOY_WEBSITE_MIN_AGE_HOURS=8 keeps a 7 h old website image"
+new_root dir
+write_images "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1"
+printf 'sha256:wold1 %s\n' "$(date -u -d '-7 hours' +%Y-%m-%dT%H:%M:%SZ)" > "$ROOT/created.txt"
+run_deploy DEPLOY_WEBSITE_MIN_AGE_HOURS=8 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "kept" not_called "image rm "
+finish
+
+start disk_website_bad "DEPLOY_WEBSITE_MIN_AGE_HOURS=0 → refuse (would race a website deploy)"
+new_root dir
+run_deploy DEPLOY_WEBSITE_MIN_AGE_HOURS=0 -- --from "$ROOT/incoming" sha-v2
+check "exit 2" rc_is 2
+check "no docker call" not_called "^docker "
+finish
+
+start disk_website_psfail "containers cannot be listed → no website image removed either"
+new_root dir
+write_images "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1"
+printf 'sha256:wold1 %s\n' "$(date -u -d '-9 hours' +%Y-%m-%dT%H:%M:%SZ)" > "$ROOT/created.txt"
+run_deploy PS_FAIL=1 -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "nothing removed" not_called "image rm "
 finish
 
 echo
