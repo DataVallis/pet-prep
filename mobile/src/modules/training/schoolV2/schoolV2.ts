@@ -350,17 +350,6 @@ export function tokenWaiting(frame: Pick<SchoolFrame, 'kind'>): boolean {
 }
 
 /**
- * Tap hint (David's device test 2026-10-31: he tried to DRAG the treat to the dog — »mogoče bi
- * lahko tak diskreten namig bil tap«): a small animated finger + »Tapni« on the token ALWAYS —
- * every session, any progress, also after the first counted tap (David 31. 10.; the earlier
- * »until the first counted tap« rule and the < 50 % gate are gone). Hidden only while the dog
- * ignores, because the token says »Počakaj« then and the two would contradict. Display only.
- */
-export function tapHintOn(frame: Pick<SchoolFrame, 'kind'>): boolean {
-  return frame.kind !== 'ignoring';
-}
-
-/**
  * Tap OR drag (David 2026-10-31): the praise counts at the touch-down (press-in) — timing is the
  * scored skill — once per cue (first tap decides, `addTap`). A finger that then moves at least this
  * far is a drag: the token follows the finger and the treat flies to the dog on release. A drag

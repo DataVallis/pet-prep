@@ -29,9 +29,8 @@
  * - tap OR drag (he tried to drag the treat to the dog): the praise counts at the press-in (first
  *   tap per cue decides, unchanged); a drag that follows moves the token with the finger and the
  *   treat flies to the dog from where it is let go (`TokenDrag`) — never a second tap, never a new
- *   time. A tap's flight starts at the release. Same for »Pohvali« ♥. A small bobbing finger +
- *   »Tapni« sits on the token in every session, also after a tap, hidden only while it says »Počakaj«
- *   (`tapHintOn`; reduce motion = static label).
+ *   time. A tap's flight starts at the release. Same for »Pohvali« ♥. No »Tapni« label on the token
+ *   (David 2026-11-04: it read as »tap now«; the cue is »Zdaj!« + the pulse in the praise window).
  *
  * Timing is the server's schedule only (`schoolV2.ts`); one timer per step boundary keeps every
  * switch on time. Sounds + haptics follow the parent's »Zvoki in vibracija v igrah«; reduce motion =
@@ -44,7 +43,7 @@ import { AccessibilityInfo, Platform, Pressable, StyleSheet, View, type GestureR
 import Animated, { Easing, cancelAnimation, useAnimatedStyle, useSharedValue, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
 import { SafeAreaInsetsContext } from 'react-native-safe-area-context';
 import { ActivityIndicator } from 'react-native';
-import { Bone, Ear, Heart, Pointer } from 'lucide-react-native';
+import { Bone, Ear, Heart } from 'lucide-react-native';
 
 import { Text } from '@/components/ui/Text';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
@@ -74,7 +73,6 @@ import {
   schoolFrameAt,
   starCount,
   tapFeedback,
-  tapHintOn,
   tokenWaiting,
   type SchoolFeedback,
   type SchoolFrame,
@@ -208,37 +206,6 @@ function TokenPulse({ on, reduceMotion, children }: { on: boolean; reduceMotion:
   }, [on, reduceMotion, scale]);
   const style = useAnimatedStyle(() => ({ transform: [{ scale: scale.value }] }));
   return <Animated.View style={style} testID={on && !reduceMotion ? 'school-v2-token-pulse' : undefined}>{children}</Animated.View>;
-}
-
-const TAP_BOB_MS = 520;
-
-/**
- * The discreet tap hint on the token (David 2026-10-31: »mogoče bi lahko tak diskreten namig bil
- * tap«): a small finger that bobs + »Tapni«; reduce motion = a static label. Hidden from the screen
- * reader — the token's button label already says what to do.
- */
-function TapHint({ reduceMotion, testID }: { reduceMotion: boolean; testID: string }) {
-  const bob = useSharedValue(0);
-  useEffect(() => {
-    if (reduceMotion) {
-      cancelAnimation(bob);
-      bob.value = 0;
-      return;
-    }
-    bob.value = withRepeat(withSequence(withTiming(-5, { duration: TAP_BOB_MS }), withTiming(0, { duration: TAP_BOB_MS })), -1, false);
-    return () => cancelAnimation(bob);
-  }, [reduceMotion, bob]);
-  const style = useAnimatedStyle(() => ({ transform: [{ translateY: bob.value }] }));
-  return (
-    <View pointerEvents="none" style={styles.tapHint} testID={testID} importantForAccessibility="no-hide-descendants" accessibilityElementsHidden>
-      <Animated.View style={style} testID={reduceMotion ? undefined : `${testID}-anim`}>
-        <Pointer color={palette.graphite} size={18} />
-      </Animated.View>
-      <Text style={styles.tapHintText} testID={`${testID}-text`}>
-        {S.tapHint}
-      </Text>
-    </View>
-  );
 }
 
 export default function SchoolGameV2({
@@ -389,7 +356,6 @@ export default function SchoolGameV2({
   const cooling = coolUntil !== 0;
   const canEndEarly = !finishing && inBreak && game.canEndEarly();
   const hintOn = clockRunning && praiseHintOn(frame);
-  const tapHint = clockRunning && tapHintOn(frame);
   const waiting = clockRunning && tokenWaiting(frame);
   const countdown = clockRunning ? breakCountdown(session, frame, e) : null;
   // »Nadaljuj« pressed in this break: only the countdown stays (it cannot shorten the server's break).
@@ -499,7 +465,6 @@ export default function SchoolGameV2({
         {waiting ? S.wait : tokenLabel}
       </Text>
     </Pressable>
-        {tapHint && <TapHint reduceMotion={reduceMotion} testID={`${testID}-tap-hint`} />}
       </TokenPulse>
       </TokenDrag>
     </>
@@ -629,20 +594,6 @@ const styles = StyleSheet.create({
   nowChip: { paddingHorizontal: 22, paddingVertical: 6, borderRadius: radius.button, backgroundColor: palette.white },
   nowText: { color: palette.graphite, fontSize: 22, letterSpacing: tightTracking(22), fontFamily: fonts.displayBold },
   tokenPressed: { transform: [{ scale: 0.95 }] },
-  /** The discreet tap hint: a small white pill on the token's lower edge. */
-  tapHint: {
-    position: 'absolute',
-    bottom: -10,
-    alignSelf: 'center',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 4,
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-    borderRadius: radius.button,
-    backgroundColor: alpha(palette.white, 0.92),
-  },
-  tapHintText: { color: palette.graphite, fontSize: 13, fontFamily: fonts.displayBold, letterSpacing: tightTracking(13) },
   tokenText: { color: palette.graphite, fontSize: 16, fontFamily: fonts.displayBold, letterSpacing: tightTracking(16) },
   breakDock: { alignItems: 'center', gap: 8 },
   continue: {
