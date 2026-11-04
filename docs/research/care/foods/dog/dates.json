@@ -7,7 +7,8 @@
     "de": "Datteln",
     "fr": "Dattes",
     "es": "Dátiles",
-    "it": "Datteri"
+    "it": "Datteri",
+    "pt": "Tâmaras"
   },
   "question": {
     "en": "Can dogs eat dates?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Datteln fressen?",
     "fr": "Les chiens peuvent-ils manger des dattes ?",
     "es": "¿Pueden los perros comer dátiles?",
-    "it": "I cani possono mangiare i datteri?"
+    "it": "I cani possono mangiare i datteri?",
+    "pt": "Os cães podem comer tâmaras?"
   },
   "url_slug": {
     "en": "dates",
@@ -23,7 +25,8 @@
     "de": "datteln",
     "fr": "dattes",
     "es": "datiles",
-    "it": "datteri"
+    "it": "datteri",
+    "pt": "tamaras"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, in Maßen: Als gelegentliches Leckerli dürfen Hunde Datteln fressen. Entfernen Sie immer zuerst den Kern, denn er stellt eine Erstickungsgefahr dar, und geben Sie kleine Stücke statt der ganzen Frucht. Datteln enthalten viel Zucker und Ballaststoffe, deshalb können zu viele den Magen verstimmen.",
     "fr": "Oui, avec modération, comme friandise occasionnelle. Retirez toujours le noyau avant, car il présente un risque d’étouffement, et donnez de petits morceaux plutôt que le fruit entier. Les dattes sont riches en sucre et en fibres : en manger trop peut donc irriter l’estomac.",
     "es": "Sí, con moderación y como premio ocasional. Quítale siempre el hueso antes, porque puede atragantarlo, y dale trocitos en lugar de la fruta entera. Los dátiles tienen mucho azúcar y mucha fibra, así que, si come demasiados, puede sentarle mal al estómago.",
-    "it": "Sì, i cani possono mangiare i datteri con moderazione, come premio occasionale. Togli sempre prima il nocciolo, perché può far soffocare il cane, e offri pezzetti piccoli anziché il frutto intero. I datteri sono ricchi di zuccheri e di fibre, quindi se ne mangia troppi il cane può avere mal di stomaco."
+    "it": "Sì, i cani possono mangiare i datteri con moderazione, come premio occasionale. Togli sempre prima il nocciolo, perché può far soffocare il cane, e offri pezzetti piccoli anziché il frutto intero. I datteri sono ricchi di zuccheri e di fibre, quindi se ne mangia troppi il cane può avere mal di stomaco.",
+    "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago."
   },
   "why": {
     "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -40,7 +44,8 @@
     "de": "Datteln sind nicht hochgiftig wie Weintrauben, sollten aber nicht zu den Standard-Leckerli gehören. Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird. Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und ihr hoher Ballaststoffgehalt kann zu Durchfall oder Verstopfung führen.",
     "fr": "Les dattes ne sont pas aussi toxiques que le raisin, mais elles ne doivent pas devenir une friandise courante. Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé. Les dattes sont riches en sucre et en calories, ce qui fait vite grossir un chien suralimenté, et leur forte teneur en fibres peut causer de la diarrhée ou de la constipation.",
     "es": "Los dátiles no son tan tóxicos como las uvas, pero no deberían ser el premio de todos los días. El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal. Los dátiles tienen mucho azúcar y muchas calorías, así que, si se abusa de ellos, el perro engorda rápido, y su alto contenido en fibra puede provocar diarrea o estreñimiento.",
-    "it": "A differenza dell’uva, i datteri non sono altamente tossici, ma non devono diventare il premio di tutti i giorni. Il nocciolo non è tossico, però può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale. I datteri sono ricchi di zuccheri e di calorie, che, se se ne dà troppo, fanno ingrassare in fretta, e l’alto contenuto di fibre può portare a diarrea o stitichezza."
+    "it": "A differenza dell’uva, i datteri non sono altamente tossici, ma non devono diventare il premio di tutti i giorni. Il nocciolo non è tossico, però può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale. I datteri sono ricchi di zuccheri e di calorie, che, se se ne dà troppo, fanno ingrassare in fretta, e l’alto contenuto di fibre può portare a diarrea o stitichezza.",
+    "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Fragen Sie Ihren Tierarzt, bevor Sie Datteln füttern. Beobachten Sie Ihren Hund, nachdem er welche gefressen hat, auf Erbrechen, Durchfall oder Verstopfung.",
     "fr": "Demandez conseil à votre vétérinaire avant de commencer à donner des dattes à votre chien. Une fois que votre chien en a mangé, surveillez l’apparition de vomissements, de diarrhée ou de constipation.",
     "es": "Consulta con tu veterinario antes de empezar a darle dátiles. Si tu perro ya ha comido algunos, vigila si vomita o tiene diarrea o estreñimiento.",
-    "it": "Chiedi al veterinario prima di iniziare a dare i datteri al tuo cane. Dopo che ne ha mangiati, controlla se compaiono vomito, diarrea o stitichezza."
+    "it": "Chiedi al veterinario prima di iniziare a dare i datteri al tuo cane. Dopo che ne ha mangiati, controlla se compaiono vomito, diarrea o stitichezza.",
+    "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre."
   },
   "serving": {
     "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -57,7 +63,8 @@
     "de": "Ohne Kern, in kleine Stücke geschnitten, nur als gelegentliches Leckerli.",
     "fr": "Sans noyau, coupées en petits morceaux, uniquement en friandise occasionnelle.",
     "es": "Sin hueso, en trocitos y solo como premio ocasional.",
-    "it": "Dattero senza nocciolo, tagliato a pezzetti, solo come premio occasionale."
+    "it": "Dattero senza nocciolo, tagliato a pezzetti, solo come premio occasionale.",
+    "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional."
   },
   "child": {
     "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -65,7 +72,8 @@
     "de": "Hunde dürfen manchmal ein kleines Stück Dattel haben. Ein Erwachsener nimmt vorher den harten Kern heraus.",
     "fr": "Les chiens peuvent parfois manger un petit morceau de datte. Un adulte retire d’abord le noyau dur.",
     "es": "Los perros pueden comer un trocito de dátil de vez en cuando. Antes, un adulto le quita el hueso duro.",
-    "it": "Ogni tanto i cani possono avere un pezzetto di dattero. Prima un adulto toglie il nocciolo duro."
+    "it": "Ogni tanto i cani possono avere un pezzetto di dattero. Prima un adulto toglie il nocciolo duro.",
+    "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Ist ein Dattelkern für Hunde giftig?",
         "fr": "Le noyau de datte est-il toxique pour les chiens ?",
         "es": "¿Es tóxico el hueso del dátil para los perros?",
-        "it": "Il nocciolo del dattero è velenoso per i cani?"
+        "it": "Il nocciolo del dattero è velenoso per i cani?",
+        "pt": "O caroço da tâmara é venenoso para os cães?"
       },
       "a": {
         "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -83,7 +92,8 @@
         "de": "Der Kern ist nicht giftig, stellt aber eine Erstickungsgefahr dar und kann einen Darmverschluss verursachen, wenn er verschluckt wird – entfernen Sie ihn also immer.",
         "fr": "Le noyau n’est pas toxique, mais il présente un risque d’étouffement et peut provoquer une occlusion intestinale s’il est avalé : retirez-le donc toujours.",
         "es": "El hueso no es tóxico, pero supone un riesgo de atragantamiento y, si se traga, puede causar una obstrucción intestinal, así que quítalo siempre.",
-        "it": "Il nocciolo non è tossico, ma può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale: toglilo sempre."
+        "it": "Il nocciolo non è tossico, ma può far soffocare e, se viene ingoiato, causare un’ostruzione intestinale: toglilo sempre.",
+        "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre."
       }
     },
     {
@@ -93,7 +103,8 @@
         "de": "Warum nur ein bisschen?",
         "fr": "Pourquoi seulement un peu ?",
         "es": "¿Por qué solo un poco?",
-        "it": "Perché solo un po’?"
+        "it": "Perché solo un po’?",
+        "pt": "Porque só um bocadinho?"
       },
       "a": {
         "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -101,7 +112,8 @@
         "de": "Datteln enthalten viel Zucker und Kalorien, die bei zu großen Mengen schnell zu Gewichtszunahme führen können, und zu viel Zucker kann einen Hund kraftlos machen und starken Durst auslösen.",
         "fr": "Les dattes sont riches en calories et en sucre, ce qui fait vite grossir un chien suralimenté, et trop de sucre peut le laisser sans force et très assoiffé.",
         "es": "Los dátiles tienen muchas calorías y mucho azúcar, así que, si se abusa de ellos, el perro engorda rápido, y demasiado azúcar puede dejarlo débil y con mucha sed.",
-        "it": "I datteri sono ricchi di calorie e di zuccheri, che, se se ne dà troppo, fanno ingrassare in fretta, e troppo zucchero può lasciare il cane molto debole e assetato."
+        "it": "I datteri sono ricchi di calorie e di zuccheri, che, se se ne dà troppo, fanno ingrassare in fretta, e troppo zucchero può lasciare il cane molto debole e assetato.",
+        "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede."
       }
     },
     {
@@ -111,7 +123,8 @@
         "de": "Sind getrocknete Datteln in Ordnung?",
         "fr": "Les dattes séchées conviennent-elles ?",
         "es": "¿Y los dátiles secos?",
-        "it": "I datteri secchi vanno bene?"
+        "it": "I datteri secchi vanno bene?",
+        "pt": "Posso dar tâmaras secas?"
       },
       "a": {
         "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -119,7 +132,8 @@
         "de": "Getrocknete Datteln enthalten noch mehr Zucker und Kalorien und haben ihren harten Kern noch – entfernen Sie ihn, bevor Sie ein kleines Stück abgeben.",
         "fr": "Les dattes séchées contiennent encore plus de sucre et de calories, et elles ont toujours leur noyau dur : retirez-le avant de donner un petit morceau.",
         "es": "Los dátiles secos tienen más azúcar y más calorías, y siguen llevando el hueso duro, así que quítaselo antes de darle un trocito.",
-        "it": "I datteri secchi contengono più zuccheri e più calorie e hanno comunque il nocciolo duro: toglilo prima di dare un pezzetto."
+        "it": "I datteri secchi contengono più zuccheri e più calorie e hanno comunque il nocciolo duro: toglilo prima di dare un pezzetto.",
+        "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho."
       }
     }
   ],
@@ -242,6 +256,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "da586d9898932004c3bf12d8e6bbacda699867d01a738a48214df420e8256a4f"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d038ebdb6b226a9d28f9e62a29a3dcfa7af1c813362509e20fc53454aa932276"
     }
   }
 }
