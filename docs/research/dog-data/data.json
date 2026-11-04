@@ -47288,6 +47288,514 @@
       }
     }
   },
+  "pekingese": {
+    "_note": "Added 2026-11-04 (M5-R10-91, unattended run — appended after the Anatolian Shepherd Dog: AKC 2024 No. 87 'Pekingese', S174 full-list table '87 | Pekingese'). Quotes as returned by the web-fetch tool on 2026-11-04 (fragments marked as such); paraphrase only in notes. Sources S690–S695 (+ S35 Coren, S10 growth, S11 AAHA, S14 Dogs Trust, S45 steps, S92 BVA). No health percentages anywhere. A flat-faced (brachycephalic) toy breed. The RKC Breeds A–Z page (thekennelclub.org.uk …/toy/pekingese redirects to royalkennelclub.com) and the Dogs Trust McMillan 2024 table were refused by the fetch tool → exercise, lifespan band and grooming from PDSA (S693).",
+    "identity": {
+      "value": "FCI No. 207, Group 9 Section 8 (Japan Chin and Pekingese), China",
+      "unit": "—",
+      "source_id": "S691",
+      "quote": "PEKINGESE",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S691, as returned): 'PEKINGESE' No. 207, group 'n°9 - Companion and Toy Dogs', section 'Japan Chin and Pekingese', country of origin 'CHINA', country of patronage 'GREAT BRITAIN', definitive acceptance 11/3/1966, standard published 10/6/2026 (the English PDF was not in the fetch tool's provenance). FCI-Standard N° 207 (S690, French PDF of 26.03.2009): 'Standard FCI N°207', 'Groupe 9 Chiens d'agrément et de compagnie.', 'Section 8 Epagneuls japonais et Pékinois.', 'ORIGINE : Chine.'"
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S693",
+      "quote": "Small",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S693, value as returned). FCI ≤ 5 kg males / ≤ 5.4 kg females (S690) ≈ ≤ 11–12 lb → the 'Toy (5–12 pounds)' class of S10 — used for growth."
+    },
+    "height": {
+      "pdsa": {
+        "value": {
+          "male": [
+            15,
+            22
+          ],
+          "female": [
+            15,
+            22
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S693",
+        "quote": "15-22 cm",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average height' (S693), one range for both sexes (stored per sex). The FCI (S690) and KC (S692) standards give no height; PetMD (S694) 'stand 6–9 inches high' (fragment) = 15–23 cm agrees."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            5,
+            5
+          ],
+          "female": [
+            5.4,
+            5.4
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S690",
+        "quote": "TAILLE ET POIDS : Le poids idéal ne dépasse pas 5 kg chez les mâles et 5,4 kg chez les femelles.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 207 (S690, French PDF): an upper limit only per sex ('ideal weight not exceeding 5 kg in males and 5.4 kg in females' — translation by us); the register shows it with the 'up_to' qualifier — the stored range is that limit, not a measured weight. KC standard (S692) 'Dogs should look small but be surprisingly heavy when picked up' (fragment)."
+      },
+      "pdsa": {
+        "value": {
+          "male": [
+            5,
+            5
+          ],
+          "female": [
+            5,
+            5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S693",
+        "quote": "5kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S693), one average for both sexes — the value the game stores (adult_weight_kg [5, 5]); within the FCI upper limits (S690). PetMD (S694) 'weigh up to 14 pounds' (fragment) = up to 6.4 kg; Wikipedia (S695, tier C) 3.2–6.4 kg — background."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA average 5 kg ≈ 11 lb (S693) and the FCI limits (≤ 5 / 5.4 kg ≈ ≤ 11.9 lb, S690) sit in 'Toy (5–12 pounds)'. The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Pekingese growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S693",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S693, value as returned). The basis of the senior boundary (Claude's proposal — the runbook's lifespan list names McMillan 2024, a VetCompass median and the RKC lower bound; none was reachable, the PDSA band has the same form as the RKC band; Basenji precedent, M5-R10-84). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S694",
+        "quote": "The typical Pekingese lifespan is 12–14 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S694, tier B, US). Consistent with the PDSA lower bound."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: the Nature PDF (S54) has the breed estimates only in Supplementary Table 3 (not reached; 'Pekingese' only as a Fig. 5 label); the Dogs Trust breed table (S123) could not be fetched (client error). Wikipedia (S695, tier C): a 2024 UK study (McMillan) 'life expectancy of 13.3 years' (fragment) — would give 0.75 × 13.3 × 12 = 119.7 → 120. Verify in S123 before replacing the PDSA lower bound."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived (Claude's proposal, waiting for David): AAHA senior = last 25 % of lifespan (S11) × 12 y (PDSA lower bound 'Over 12 years', S693) → 0.75 × 12 = 9 y = 108 months. PetMD lower bound 12 y (S694) gives the same. McMillan 13.3 y via Wikipedia (tier C) would give 120; Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S693"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≥ 30",
+        "unit": "minutes/day",
+        "source_id": "S693",
+        "quote": "Your Pekingese will need a minimum of half an hour exercise every day.",
+        "confidence": "high",
+        "notes": "PDSA (S693) exercise sentence; key facts table 'Minimum exercise (per day) | 30 minutes' (as returned). Runbook rule 'minimum N' → 30 (the RKC page was not reachable). PetMD (S694) 'they require moderate exercise' (fragment) gives no number. Wikipedia (S695, tier C) about 20 minutes a day (paraphrase) — background only."
+      },
+      "pdsa_walks": {
+        "value": "a couple of shorter walks with off-lead time; do not overdo it (flat nose)",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Due to their flatter noses, it's important not to overdo it as they can struggle to breath.",
+        "confidence": "high",
+        "notes": "PDSA (S693) fragments as returned: 'A couple of shorter walks with off-lead time in between.' / 'Remember to take a break if it looks like your Peke is struggling.'"
+      },
+      "heat_and_walk_timing": {
+        "value": "avoid exercise on hotter days; walk early in the morning or in the evening",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "avoid exercising them on hotter days.",
+        "confidence": "high",
+        "notes": "PDSA (S693) fragment as returned, continued 'Instead, try walking them early in the morning or in the evening when the temperature is cooler.'; PetMD (S694) 'so exercise in hot weather should be avoided.' (fragment). Basis of the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found on a gap between meals and exercise for this breed → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "fearless, loyal, aloof — not timid or aggressive",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": "Fearless, loyal, aloof, not timid or aggressive.",
+        "confidence": "high",
+        "notes": "KC breed standard (S692). FCI (S690): 'Sans peur, fidèle, distant mais ni craintif ni agressif.' PDSA (S693): 'Pekingese are intelligent dogs who are eager to please' (fragment)."
+      },
+      "family": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No explicit family-pet statement in an A/B source. No family_pet chip."
+      },
+      "children": {
+        "value": "better in adult-only households or families with older children; always supervise",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "they tend to do better in adult-only households or families with older children",
+        "confidence": "high",
+        "notes": "PDSA (S693) fragment as returned; younger children may not handle the dog respectfully and nipping can result (paraphrase); 'Always supervise your dog with children and vulnerable adults.' (fragment). Basis of the older_children chip (Pomeranian / Chihuahua precedent); never children / small_children."
+      },
+      "other_pets": {
+        "value": "no real prey drive; supervise around other pets; may chase unfamiliar cats",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Pekes don’t really have a prey drive",
+        "confidence": "medium",
+        "notes": "PDSA (S693) fragment as returned, continued 'it’s still important to supervise them around other pets in case they get the urge to chase.' and 'may well chase unfamiliar cats away' (fragment). No high prey drive → no chases_small_pets; no explicit 'good with other pets' → no other_pets chip."
+      },
+      "time_alone": {
+        "value": "very attached; can suffer from separation anxiety — only for a home where someone is around all day",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "This means that they can suffer from separation anxiety if they are left alone.",
+        "confidence": "high",
+        "notes": "PDSA (S693); preceded by 'Pekes get very attached to their owners.' (fragment) and followed by 'We’d only recommend getting a Peke if someone will be around all day with them.' Basis of the needs_company chip; never often_alone."
+      },
+      "socialisation": {
+        "value": "socialise from a young age with people, dogs and experiences",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "It’s important to socialise your Pekingese from a young age with lots of different people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "PDSA (S693); 'some Pekes are known to be wary of new things' (fragment). PetMD (S694): 'Exposing a Pekingese to lots of new people, animals, and experiences from an early age' (fragment). Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "intelligent and eager to please, but independent; positive reinforcement",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Pekingese are intelligent dogs who are eager to please",
+        "confidence": "medium",
+        "notes": "PDSA (S693) fragments as returned: 'They can be a little independent when it comes to training, though'; PetMD (S694): 'These strong-willed dogs will learn best with training games and positive reinforcement.'"
+      },
+      "barking": {
+        "value": "vocal",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Pekes are known for liking the sound of their own voice, though",
+        "confidence": "medium",
+        "notes": "PDSA (S693) fragment as returned. Background only (no chip)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. Flat-faced (brachycephalic) toy breed (PDSA S693, PetMD S694); on the RKC list of breeds assessable under the Respiratory Function Grading scheme, among the high-risk BOAS breeds (Dogs Australia via Dogs NSW, breeder checklist K40). RKC Breed Watch category not fetched (page refused).",
+      "brachycephaly": {
+        "value": "brachycephalic — very short nose; breathing problems, especially when too warm or after too much exercise",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Pekes are considered a ‘Brachycephalic’ breed as they have been bred to have very short noses.",
+        "confidence": "high",
+        "notes": "PDSA (S693); continued 'This means that they can often suffer with breathing problems, especially if they get too warm or exercise too much.' PetMD (S694): 'its structural abnormalities cause these dogs to have brachycephalic airway syndrome.' (fragment). Basis of brachycephalic_breathing and of the marketing exclusion (BVA S92)."
+      },
+      "skin_folds": {
+        "value": "facial wrinkles — risk of skin fold dermatitis; keep the folds clean and dry",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "As Pekingese have wrinkles on their faces, they’re more at risk of developing infections such as skin fold dermatitis.",
+        "confidence": "high",
+        "notes": "PDSA (S693); clean them with a cotton wool pad and dry them thoroughly afterwards (paraphrase). PetMD (S694): 'The Pekingese has facial folds around the eyes and mouth that require regular cleaning.' — no frequency → no fold-cleaning task (runbook »Breed care tasks«). Basis of sensitive_skin (Bulldog / Pug precedent)."
+      },
+      "eyes": {
+        "value": "eye problems — entropion / ectropion, corneal ulcers, dry eye, extra eyelashes; PetMD: wipe the eyes daily",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Entropion and ectropion – where the eyelids can turn inward or outwards irritating the eye.",
+        "confidence": "high",
+        "notes": "PDSA (S693) list items as returned: 'Corneal ulcers.'; extra eyelashes 'small eyelashes grow on the inner surface or the very edge of the eye' (fragment); dry eye (paraphrase). PetMD (S694): 'Wiping the eyes daily with a soft, moist cloth or face wipe will help remove any accumulated debris.' (no eye-care task exists in the game — fact only). Basis of eyelid_problems."
+      },
+      "dry_eye": {
+        "value": "dry eye (not enough tears)",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "occurs when a dog does not make enough tears.",
+        "confidence": "medium",
+        "notes": "PetMD (S694) fragment as returned."
+      },
+      "pra": {
+        "value": "progressive retinal atrophy (inherited)",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "In most cases PRA is an inherited disease, and there are currently no effective treatments.",
+        "confidence": "medium",
+        "notes": "PetMD (S694)."
+      },
+      "patella": {
+        "value": "luxating patella (kneecap slips out of its groove)",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "the kneecap slips out of its proper groove.",
+        "confidence": "medium",
+        "notes": "PetMD (S694) fragment as returned."
+      },
+      "dental": {
+        "value": "dental disease — daily tooth brushing",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "The best way to prevent dental disease is with daily tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S694) fragment as returned; 'Dental disease is one of the most common conditions seen in dogs as they age' (fragment). Basis of the daily tooth-brushing task (M5-R15)."
+      },
+      "ears": {
+        "value": "clean the ears every week or two",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "clean their Pekingese’s ears every week or two",
+        "confidence": "high",
+        "notes": "PetMD (S694) fragment as returned. Basis of the weekly ear-cleaning task (M5-R20, lower bound of »every week or two«)."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 73,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "| 73 | Pekingese |",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-04): rank 73 (table row as returned), not shared; tier 'Lowest Degree of Working/Obedience Intelligence' (ranks 70–79). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Lowest",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label on the rank-70 row, applying to ranks 70–79 (as returned)."
+      },
+      "training_notes": {
+        "value": "intelligent, eager to please, independent; positive reinforcement",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "These strong-willed dogs will learn best with training games and positive reinforcement.",
+        "confidence": "medium",
+        "notes": "PetMD (S694)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.pekingese.learning_multiplier (0.5, runbook rule: Lowest tier, rank 73).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "lion-like, small, well-balanced, moderately thick-set",
+        "unit": "—",
+        "source_id": "S690",
+        "quote": "D'aspect léonin avec une expression vive et intelligente.",
+        "confidence": "high",
+        "notes": "FCI (S690). KC (S692): small, well-balanced, moderately thick-set; respiratory distress is heavily penalised (paraphrase)."
+      },
+      "colours": {
+        "value": [
+          "red",
+          "fawn",
+          "sable",
+          "cream",
+          "black",
+          "black and tan",
+          "white",
+          "parti-colour"
+        ],
+        "unit": "list",
+        "source_id": "S692",
+        "quote": "All colours and markings are permissible and of equal merit.",
+        "confidence": "high",
+        "notes": "KC breed standard (S692); FCI (S690): 'Toutes les couleurs et marques sont admises et d'égale valeur, sauf l'albinos et la couleur marron (foie).' The list = common colours of that rule (Wikipedia S695, tier C: 'The majority of Pekingese are gold, red or sable.' — fragment); never albino, liver or merle (KC: albino, liver and merle unacceptable — paraphrase)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): red / gold with a black mask 0.3 (the portrait default), fawn with a black mask 0.2, sable 0.15, cream 0.1, black 0.08, black and tan 0.07, white 0.05, parti-colour 0.05."
+      },
+      "coat": {
+        "value": "moderately long, straight, mane not beyond the shoulders; coarse top coat over a thick, soft undercoat",
+        "unit": "—",
+        "source_id": "S690",
+        "quote": "Modérément long et droit avec une crinière qui ne doit pas s'étendre au-delà des épaules",
+        "confidence": "high",
+        "notes": "FCI (S690) fragment as returned; KC (S692): excessive coat highly undesirable (paraphrase)."
+      },
+      "head": {
+        "value": "fairly large, broader than deep; skull flat between the ears",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "KC (S692) paraphrase as returned (the fetch tool summarised this section)."
+      },
+      "nose": {
+        "value": "not too short, broad, nostrils large and open; black pigment",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": "Nose not too short, broad, nostrils large and open.",
+        "confidence": "high",
+        "notes": "KC (S692). FCI (S690): 'Il est essentiel que la truffe, les lèvres et le bord des paupières soient pigmentés de noir.' Welfare trait for the AI portrait (open nostrils; KC: pinched nostrils and heavy over-nose wrinkle heavily penalised — paraphrase)."
+      },
+      "muzzle": {
+        "value": "must be evident; may be relatively short and wide",
+        "unit": "—",
+        "source_id": "S690",
+        "quote": "Doit être évident mais peut être relativement courte et large.",
+        "confidence": "high",
+        "notes": "FCI (S690). Welfare trait: the game draws a moderate (not extreme) short face with a visible muzzle and open nostrils — dog trait `muzzle` (French Bulldog / Pug precedent)."
+      },
+      "eyes": {
+        "value": "clear, round, dark, lustrous, not too large",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": "Clear, round, dark, lustrous and not too large.",
+        "confidence": "high",
+        "notes": "KC (S692); FCI (S690) 'Pas trop grands, limpides, ronds, sombres et brillants.'"
+      },
+      "ears": {
+        "value": "heart-shaped, set level with the skull, carried close to the head, long feathering",
+        "unit": "—",
+        "source_id": "S690",
+        "quote": "Cordiformes (en forme de cœur), attachées au niveau du crâne et portées accolées à la tête,",
+        "confidence": "high",
+        "notes": "FCI (S690) fragment as returned."
+      },
+      "tail": {
+        "value": "set high, carried tightly, slightly curved over the back to either side, long feathering",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": "Set high, carried tightly, slightly curved over back to either side.",
+        "confidence": "high",
+        "notes": "KC (S692)."
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA key facts and text (S693), PetMD (S694). The RKC Breeds A–Z page was refused by the fetch tool → no rkc_* key facts (no apartment chip: runbook allows it only from RKC 'Flat/ Apartment').",
+      "pdsa_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Small",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S693)."
+      },
+      "pdsa_exercise": {
+        "value": "30 minutes",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "30 minutes",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S693, cell as returned). Not long_daily_exercise / active_family."
+      },
+      "pdsa_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Long",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S693)."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Pekingese have really thick, long fur that will need a daily brush to stop it from getting tangled and matted.",
+        "confidence": "high",
+        "notes": "PDSA (S693) — daily brushing → 7 per week (runbook dog-grooming rule 'daily' → 7). PetMD (S694) 'Brushing your Pekingese at least one hour each week will help remove tangles and knots' (fragment) — alternative (no session count). Basis of frequent_grooming. PDSA 'Some owners find their fur more manageable when they get them professionally groomed.' (optional, no frequency)."
+      },
+      "pdsa_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "They do shed a lot throughout the year, too, especially in spring and autumn",
+        "confidence": "high",
+        "notes": "PDSA (S693) fragment as returned. Basis of the sheds chip."
+      },
+      "pdsa_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S693",
+        "quote": "Over 12 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S693)."
+      },
+      "petmd_grooming": {
+        "value": "long coat: professional grooming every six to eight weeks; brushing at least one hour a week; not more than two baths a month",
+        "unit": "—",
+        "source_id": "S694",
+        "quote": "Most Pekingese with a long coat require professional grooming every six to eight weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S694). Basis of the groomer reminder every 6 program weeks (M5-R18, lower bound of 6–8 weeks). 'Bathing your Pekingese more than twice a month, however, may strip their skin of healthy oils' (fragment) is an upper limit, not a frequency → no bath reminder."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -70530,6 +71038,303 @@
         "confidence": "high",
         "notes": "FCI (S682), AKC (S686). Fawn with a black mask first (portrait default, the typical colour); weights unsourced.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): fawn with a black mask (FCI S682) is the portrait default; natural ears and tail; never blue or odd eyes, never without the mask"
+      }
+    },
+    "pekingese": {
+      "_note": "Unattended run M5-R10-91 (2026-11-04): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S693 'a minimum of half an hour' → 30; the RKC page was not reachable). Senior 108 from the PDSA lower bound 'Over 12 years' (S693) = Claude's proposal (verified=false, open for David — Basenji precedent). Coren rank 73 (Lowest) → 0.5. Built: brushing every day (PDSA 'a daily brush', M5-R13), puppy socialisation with the PDSA quote (S693, M5-R17), care tasks with a PetMD frequency (S694): tooth brushing every day (M5-R15), ear cleaning once a week (M5-R20, 'every week or two'), groomer reminder every 6 weeks (M5-R18), and the summer-midday walk warning (PDSA S693, M5-R14). No fold / nail / bath task (no frequency), no meal gap. Welfare breed (brachycephalic, PDSA S693 / PetMD S694) → chip brachycephalic_breathing; not in marketing (BVA S92). No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S693",
+        "quote": "30 minutes",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day) | 30 minutes' (S693) and 'a minimum of half an hour exercise every day' → rule 'minimum N' → 30 (RKC page not reachable).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (PDSA S693 'minimum … 30 minutes')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S693",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30) = round(22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + PDSA lower bound 'Over 12 years', S693 — the McMillan 2024 table S123 was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion — see senior_boundary_months.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S693"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 108 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 108,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 12 y × 12) = 108 (AAHA last 25 % of lifespan S11 × PDSA lower bound 12 y, S693; PetMD S694 '12–14 years' is a span, not a median). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: the Dogs Trust table S123 failed to fetch and the RKC page was refused by the fetch tool, the McMillan 2024 paper (S54) has the breed estimates only in Supplementary Table 3 (not reached), no VetCompass paper. Closest rule row (Basenji precedent, M5-R10-84) = the PDSA band of the same form as the RKC band. Alternatives: McMillan 13.3 y via Wikipedia (S695, tier C) → 120; Dogs Trust > 7 y (S14) → 84. Seeded with verified=false (also the senior arrival age); the seeder is insert-only, so a later change needs a Filament edit or a data migration.",
+        "derived_from": [
+          "S11",
+          "S693"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 120,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-91) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (the senior arrival follows Claude's senior proposal, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 108 = the proposed boundary)"
+      },
+      "learning_multiplier": {
+        "value": 0.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 73 'Pekingese' (S35, checked 2026-11-04) → tier Lowest (70–79) → 0.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 73, Lowest, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S693",
+        "quote": "Pekingese have really thick, long fur that will need a daily brush to stop it from getting tangled and matted.",
+        "confidence": "high",
+        "notes": "pekingese.suitability.pdsa_grooming. PDSA 'a daily brush' → runbook rule 'daily' → 7 (M5-R13). Matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": {
+          "petmd_at_least_one_hour_a_week": "no session count"
+        },
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »a daily brush«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S693",
+        "quote": "It’s important to socialise your Pekingese from a young age with lots of different people, dogs and experiences.",
+        "confidence": "high",
+        "notes": "pekingese.behaviour.socialisation (PDSA S693). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S693)"
+      },
+      "tooth_brushing": {
+        "value": 7,
+        "unit": "tooth-brushing sessions per week (sourced need)",
+        "source_id": "S694",
+        "quote": "The best way to prevent dental disease is with daily tooth brushing",
+        "confidence": "high",
+        "notes": "PetMD (S694), pekingese.health.dental. Built: child mini-game every day (DOG_CARE_TASKS tooth_brushing [7, day], M5-R15).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R15): »daily« → vsak dan"
+      },
+      "ear_care": {
+        "value": 1,
+        "unit": "ear-cleaning sessions per week (sourced need)",
+        "source_id": "S694",
+        "quote": "clean their Pekingese’s ears every week or two",
+        "confidence": "high",
+        "notes": "PetMD (S694), pekingese.health.ears. Built: child mini-game once a week (DOG_CARE_TASKS ear_cleaning [1, week], M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every week or two« → spodnja meja, 1× na teden"
+      },
+      "professional_grooming": {
+        "value": "professional grooming every six to eight weeks (long coat)",
+        "unit": "visits (sourced need)",
+        "source_id": "S694",
+        "quote": "Most Pekingese with a long coat require professional grooming every six to eight weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S694), pekingese.suitability.petmd_grooming. Built: the parent's groomer reminder every 6 program weeks (DOG_CARE_TASKS groomer_visit [1, six_weeks], M5-R18; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every six to eight weeks« → spodnja meja 6 tednov = 42 dni"
+      },
+      "no_exercise_in_heat": {
+        "value": "avoid exercise on hotter days (flat face, breathing problems when too warm)",
+        "unit": "walk timing (sourced need)",
+        "source_id": "S693",
+        "quote": "avoid exercising them on hotter days.",
+        "confidence": "high",
+        "notes": "PDSA (S693), pekingese.exercise.heat_and_walk_timing; 'This means that they can often suffer with breathing problems, especially if they get too warm or exercise too much.' Built: the summer-midday walk warning (DOG_NO_WALK_IN_HEAT, M5-R14; no weather data).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R14): ploskoobrazna pasma z virom o vročini → opozorilo za sprehod opoldne poleti"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-91); refs = JSON paths in this file. No new vocabulary key. No suits chip (no RKC home size, no explicit children / other-pets / family statement). No percentages in the app. Never hypoallergenic.",
+        "suits": [],
+        "consider": [
+          {
+            "tag": "brachycephalic_breathing",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.health.brachycephaly",
+              "pekingese.exercise.heat_and_walk_timing"
+            ],
+            "quote": "S693 'Pekes are considered a ‘Brachycephalic’ breed as they have been bred to have very short noses.'; 'avoid exercising them on hotter days.'",
+            "note": "Welfare rule §3: flat-faced breed with a sourced heat warning (French Bulldog, Bulldog, Boston Terrier, Pug, Brussels Griffon)."
+          },
+          {
+            "tag": "older_children",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.behaviour.children"
+            ],
+            "quote": "S693 'they tend to do better in adult-only households or families with older children'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.behaviour.time_alone"
+            ],
+            "quote": "S693 'This means that they can suffer from separation anxiety if they are left alone.'"
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.health.eyes"
+            ],
+            "quote": "S693 'Entropion and ectropion – where the eyelids can turn inward or outwards irritating the eye.'"
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.health.skin_folds"
+            ],
+            "quote": "S693 'As Pekingese have wrinkles on their faces, they’re more at risk of developing infections such as skin fold dermatitis.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S693"
+            ],
+            "refs": [
+              "pekingese.suitability.pdsa_shedding"
+            ],
+            "quote": "S693 'They do shed a lot throughout the year, too, especially in spring and autumn'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S693",
+              "S694"
+            ],
+            "refs": [
+              "pekingese.suitability.pdsa_grooming",
+              "pekingese.suitability.petmd_grooming"
+            ],
+            "quote": "S693 '… will need a daily brush …'; S694 'Most Pekingese with a long coat require professional grooming every six to eight weeks.'"
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC page not reachable (runbook: only from RKC Flat/ Apartment).",
+          "children": "PDSA prefers adult-only homes or older children (S693) → older_children.",
+          "small_children": "PDSA (S693) — younger children may not handle the dog respectfully.",
+          "other_pets": "PDSA 'supervise them around other pets' (S693) — no explicit statement.",
+          "chases_small_pets": "PDSA 'Pekes don’t really have a prey drive' (S693).",
+          "often_alone": "PDSA separation anxiety (S693) — the opposite → needs_company.",
+          "long_daily_exercise": "30 minutes a day (S693).",
+          "short_muzzle_breathing": "The source names the flat face together with heat → brachycephalic_breathing.",
+          "shorter_lifespan": "PDSA 'Over 12 years' (S693).",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): no suits chip; consider brachycephalic_breathing, older_children, needs_company, eyelid_problems, sensitive_skin, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing / store screenshots / social: no",
+        "unit": "—",
+        "source_id": "S92",
+        "quote": "avoiding imagery of brachycephalic dogs in advertising, marketing materials and social media campaigns",
+        "confidence": "medium",
+        "notes": "BVA position, executive summary (S92). PDSA (S693) 'Pekes are considered a ‘Brachycephalic’ breed' and the RKC Respiratory Function Grading list (K40) → the rule's brachycephalic exclusion (French Bulldog / Pug / Brussels Griffon precedent). A normal breed in the app (picker, register on the website), never in PetPrep advertising, store screenshots, social posts or decks. Open for David whether he wants it in marketing anyway.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu / posnetkih zaslona ne (BVA S92; brahicefalna pasma po PDSA S693); izjema odprta za Davida"
+      },
+      "ai_appearance": {
+        "value": "adult Pekingese, red / gold with a black mask: small, lion-like, moderately thick-set toy dog; moderately long, straight coat with a mane to the shoulders and feathering on ears, legs, tail and toes (not excessive); fairly large, broad head; moderate (not extreme) short face with an evident muzzle, a visible black nose and clearly open nostrils, no heavy over-nose wrinkle; clear, round, dark eyes that do not bulge; heart-shaped feathered drop ears; tail set high, curved over the back; any standard colour, never albino, liver or merle",
+        "unit": "—",
+        "source_id": "S692",
+        "quote": "All colours and markings are permissible and of equal merit.",
+        "confidence": "high",
+        "notes": "KC (S692): 'Nose not too short, broad, nostrils large and open.'; FCI (S690) muzzle 'Doit être évident mais peut être relativement courte et large.' Welfare trait: muzzle (moderate face, open nostrils) — dog trait `muzzle` (French Bulldog / Pug precedent). Colour weights are ours (unsourced).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): red / gold with a black mask is the portrait default (most common colour, S695 tier C); moderate face with an evident muzzle and open nostrils, standard colours only (never albino, liver or merle)"
       }
     }
   }

@@ -2293,5 +2293,26 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S685'], 'refs' => ['anatolian_shepherd_dog.suitability.rkc_shedding']],
             ],
         ],
+        // M5-R10-91 Pekingese — flat-faced welfare breed (PDSA S693 brachycephalic + avoid exercise on hotter days):
+        // brachycephalic_breathing. No suits chip (RKC page not reachable; no explicit children / other-pets statement). No new vocabulary key.
+        'pekingese' => [
+            'suits' => [],
+            'consider' => [
+                // S693 "Pekes are considered a ‘Brachycephalic’ breed as they have been bred to have very short noses."; "avoid exercising them on hotter days."
+                ['tag' => 'brachycephalic_breathing', 'source_ids' => ['S693'], 'refs' => ['pekingese.health.brachycephaly', 'pekingese.exercise.heat_and_walk_timing']],
+                // S693 "they tend to do better in adult-only households or families with older children"
+                ['tag' => 'older_children', 'source_ids' => ['S693'], 'refs' => ['pekingese.behaviour.children']],
+                // S693 "This means that they can suffer from separation anxiety if they are left alone."
+                ['tag' => 'needs_company', 'source_ids' => ['S693'], 'refs' => ['pekingese.behaviour.time_alone']],
+                // S693 "Entropion and ectropion – where the eyelids can turn inward or outwards irritating the eye."
+                ['tag' => 'eyelid_problems', 'source_ids' => ['S693'], 'refs' => ['pekingese.health.eyes']],
+                // S693 "… more at risk of developing infections such as skin fold dermatitis."
+                ['tag' => 'sensitive_skin', 'source_ids' => ['S693'], 'refs' => ['pekingese.health.skin_folds']],
+                // S693 "They do shed a lot throughout the year, too, especially in spring and autumn"
+                ['tag' => 'sheds', 'source_ids' => ['S693'], 'refs' => ['pekingese.suitability.pdsa_shedding']],
+                // S693 daily brush; S694 professional grooming every six to eight weeks (long coat).
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S693', 'S694'], 'refs' => ['pekingese.suitability.pdsa_grooming', 'pekingese.suitability.petmd_grooming']],
+            ],
+        ],
     ],
 ];

@@ -298,7 +298,7 @@ it('gives the West Highland White Terrier the new sensitive_skin tag (welfare ru
     // skin-fold dermatitis, M5-R10-39), the Pug (Breed Watch skin-fold dermatitis, M5-R10-43) and the Mastiff (PDSA atopy S370,
     // Breed Watch skin-fold dermatitis S375, M5-R10-45) carry the chip so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff, BreedType::SharPei], true)) {
+        if (! in_array($breed, [BreedType::WestHighlandWhiteTerrier, BreedType::Bulldog, BreedType::BassetHound, BreedType::Pug, BreedType::Mastiff, BreedType::SharPei, BreedType::Pekingese], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('sensitive_skin');
         }
     }
@@ -402,9 +402,9 @@ it('gives the Bulldog the flat-face and skin welfare chips, shorter_lifespan, sh
         // Weekly brushing only (RKC "Once a week"); up to 1 hour of exercise.
         ->and($bulldog['consider'])->not->toContain('frequent_grooming')->not->toContain('long_daily_exercise');
     // The flat-faced breeds are the only ones with the breathing chip (the moderately short-faced Boxer has its own, M5-R10-26;
-    // the Boston Terrier is flat-faced with a heat warning, M5-R10-31; the Pug too, M5-R10-43; the Brussels Griffon, PetMD S672, M5-R10-88).
+    // the Boston Terrier is flat-faced with a heat warning, M5-R10-31; the Pug too, M5-R10-43; the Brussels Griffon, PetMD S672, M5-R10-88; the Pekingese, PDSA S693, M5-R10-91).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog, BreedType::BostonTerrier, BreedType::Pug, BreedType::BrusselsGriffon], true)) {
+        if (! in_array($breed, [BreedType::FrenchBulldog, BreedType::Bulldog, BreedType::BostonTerrier, BreedType::Pug, BreedType::BrusselsGriffon, BreedType::Pekingese], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('brachycephalic_breathing');
         }
     }
@@ -533,7 +533,7 @@ it('gives the Boxer the new needs_company and short_muzzle_breathing tags and th
     // Only the Boxer, the Boston Terrier (AKC S260, M5-R10-31), the Miniature American Shepherd (PetMD S269, M5-R10-32)
     // the Chihuahua (PDSA S277, M5-R10-33), the English Springer Spaniel (AKC S286, M5-R10-34), the Brittany (PetMD S302, M5-R10-36), the Belgian Malinois (AKC S316, M5-R10-38), the Basset Hound (PDSA S323, M5-R10-39), the Hungarian Vizsla (PDSA S329, M5-R10-40), the English Cocker Spaniel (PDSA S339, M5-R10-41) the Maltese (PetMD S351, M5-R10-42), the Pug (PDSA S357, M5-R10-43), the Rough Collie (PetMD S368, M5-R10-44), the Rhodesian Ridgeback (PDSA S390, M5-R10-47), the Papillon (PetMD S400, M5-R10-48), the Bichon Frise (VCA S414, M5-R10-50), the Newfoundland (PetMD S424, M5-R10-51), the Dalmatian (PDSA S430, M5-R10-52), the Whippet (PDSA S444, M5-R10-54), the Chesapeake Bay Retriever (PetMD S461, M5-R10-56), the Samoyed (PDSA S467, M5-R10-57), the Scottish Terrier (PetMD S475, M5-R10-58), the Weimaraner (PetMD S481, M5-R10-59), the Giant Schnauzer (PetMD S497, M5-R10-61), the Akita (PDSA S508, M5-R10-63), the German Wirehaired Pointer (PetMD S524, M5-R10-65), the Saint Bernard (PetMD S533, M5-R10-66), the Staffordshire Bull Terrier (PDSA S540, M5-R10-67), the Airedale Terrier (PetMD S549, M5-R10-68), the Bull Terrier (PDSA S591, M5-R10-76), the Soft Coated Wheaten Terrier (PetMD S613, M5-R10-79) and the American Staffordshire Terrier (PetMD S628, M5-R10-81) and the Lagotto Romagnolo (Woodgreen S636, M5-R10-82) and the Alaskan Malamute (PDSA S639, M5-R10-83) and the Rat Terrier (PetMD S648, M5-R10-85) and the Brussels Griffon (PetMD S672, M5-R10-88) and the Irish Setter (PetMD S679, M5-R10-89) carry needs_company; short_muzzle_breathing also the Shih Tzu (M5-R10-28, no heat source).
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::Whippet, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Akita, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::Bullmastiff, BreedType::BullTerrier, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::RatTerrier, BreedType::BrusselsGriffon, BreedType::IrishSetter], true)) {
+        if (! in_array($breed, [BreedType::Boxer, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::Brittany, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::Whippet, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::GiantSchnauzer, BreedType::Akita, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::Bullmastiff, BreedType::BullTerrier, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::RatTerrier, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::Pekingese], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('needs_company');
         }
         // M5-R10-71: the Bullmastiff (PDSA S568 BOAS "caused by their shorter faces"); M5-R10-87: the Shar Pei (PDSA S660 BOAS
@@ -683,7 +683,7 @@ it('gives the Great Dane the new eyelid_problems tag and hips_hind_legs (welfare
     // Newfoundland (Breed Watch point via the Kennel Club BHCP S425, M5-R10-51) and the Bloodhound (RKC Breed Watch Category 2 S502,
     // PDSA eye problems S503, M5-R10-62) carry eyelid_problems so far.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::SharPei], true)) {
+        if (! in_array($breed, [BreedType::GreatDane, BreedType::BassetHound, BreedType::Mastiff, BreedType::Newfoundland, BreedType::Bloodhound, BreedType::SaintBernard, BreedType::SharPei, BreedType::Pekingese], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('eyelid_problems');
         }
     }
@@ -709,9 +709,9 @@ it('gives the Pomeranian the new older_children tag (AKC), apartment, family_pet
         ->and($pom['consider'])->not->toContain('fragile_older_children')->not->toContain('not_for_small_children')
         ->not->toContain('brachycephalic_breathing')->not->toContain('short_muzzle_breathing')->not->toContain('hips_hind_legs');
 
-    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33), the Shiba Inu (AKC S383, M5-R10-46), the Russell Terrier (PDSA S560, M5-R10-70) and the Miniature Pinscher (VCA S597, M5-R10-77) carry older_children.
+    // Only the Pomeranian, the Chihuahua (PDSA S277, M5-R10-33), the Shiba Inu (AKC S383, M5-R10-46), the Russell Terrier (PDSA S560, M5-R10-70), the Miniature Pinscher (VCA S597, M5-R10-77) and the Pekingese (PDSA S693, M5-R10-91) carry older_children.
     foreach (BreedType::cases() as $breed) {
-        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu, BreedType::RussellTerrier, BreedType::MiniaturePinscher], true)) {
+        if (! in_array($breed, [BreedType::Pomeranian, BreedType::Chihuahua, BreedType::ShibaInu, BreedType::RussellTerrier, BreedType::MiniaturePinscher, BreedType::Pekingese], true)) {
             expect(app(BreedSuitability::class)->for($breed)['consider'])->not->toContain('older_children');
         }
     }

@@ -474,6 +474,7 @@ const SPECIES = [
       { id: 'brussels_griffon', synonyms: { en: ['Griffon Bruxellois', 'Griffon', 'Belgium Griffon'], sl: ['grifon', 'griffon bruxellois', 'bruseljski grifon'] } },
       { id: 'irish_setter', synonyms: { en: ['Irish Red Setter', 'Red Setter'], sl: ['irski rdeči seter', 'rdeči seter', 'seter'] } },
       { id: 'anatolian_shepherd_dog', synonyms: { en: ['Anatolian Shepherd', 'Kangal Shepherd Dog', 'Karabash'], sl: ['anatolski pastirski pes', 'kangal', 'kangalski ovčar'] } },
+      { id: 'pekingese', synonyms: { en: ['Peke', 'Pekinese', 'Lion Dog'], sl: ['pekinez', 'pekinški pes', 'peke'] } },
     ],
   },
   {
@@ -2403,6 +2404,31 @@ const DOG_FACTS = {
       ['entropion', 'health.eyes'],
     ],
   },
+  // M5-R10-91. The RKC page was not reachable → PDSA (S693): height 15–22 cm, average weight 5 kg (+ FCI-Standard N° 207
+  // upper limits per sex, S690, 'up_to'), lifespan 'Over 12 years' + PetMD 12–14 y (S694), exercise 'minimum 30 minutes'
+  // (at_least), coat 'Long', grooming 'a daily brush' (Every day), shedding PDSA (S693). Coren rank 73. FCI origin China (CN).
+  // Not exported: lifespan.mcmillan_2024 (null, 13.3 y only via Wikipedia) / senior_from, health.skin_folds (chip
+  // sensitive_skin; no register sentence that does not add an unsourced daily check), health.ears (care task). No new health key.
+  pekingese: {
+    height: ['height.pdsa'],
+    weight: [['adult_weight.fci', 'up_to'], ['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.pekingese.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    health: [
+      ['flat_face_breathing', 'health.brachycephaly'],
+      ['heat_stroke_risk', 'exercise.heat_and_walk_timing'],
+      ['eyelids_turned', 'health.eyes'],
+      ['corneal_ulcers', 'health.eyes'],
+      ['dry_eye', 'health.dry_eye'],
+      ['pra_inherited_blindness', 'health.pra'],
+      ['kneecap_luxation', 'health.patella'],
+      ['dental_disease_home_brushing', 'health.dental'],
+    ],
+  },
 
 
 };
@@ -2459,6 +2485,7 @@ export const DOG_CARE_TASKS = {
   brussels_griffon: [['fold_cleaning', 1, 7, 'proposed_game_parameters.brussels_griffon.face_fold_cleaning'], ['tooth_brushing', 7, 7, 'proposed_game_parameters.brussels_griffon.tooth_brushing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.brussels_griffon.professional_grooming']],
   irish_setter: [['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_setter.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.irish_setter.nail_trimming']],
   anatolian_shepherd_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing']],
+  pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
 /** M5-R14: flat-faced breeds whose source says not to exercise them in the heat → data.json ref. */
@@ -2468,6 +2495,7 @@ export const DOG_NO_WALK_IN_HEAT = {
   boston_terrier: 'proposed_game_parameters.boston_terrier.no_exercise_in_heat',
   pug: 'proposed_game_parameters.pug.no_exercise_in_heat',
   brussels_griffon: 'proposed_game_parameters.brussels_griffon.no_exercise_in_heat',
+  pekingese: 'proposed_game_parameters.pekingese.no_exercise_in_heat',
 };
 
 /** M5-R14: the summer midday window of the heat warning (config/care_tasks.php heat; no weather data). */
@@ -3151,6 +3179,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.anatolian_shepherd_dog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.anatolian_shepherd_dog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.anatolian_shepherd_dog.exercise_minutes_senior',
+  },
+  pekingese: {
+    adult_minutes: ['proposed_game_parameters.pekingese.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.pekingese.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.pekingese.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.pekingese.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.pekingese.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.pekingese.exercise_minutes_senior',
   },
 
 

@@ -740,6 +740,16 @@
 | welfare breed (RKC Breed Watch Category 1, S685). Fawn first with the highest weight (the portrait default); weights
 | unsourced → `verified => false`.
 |
+| Pekingese (M5-R10-91, docs/research/dog-data pekingese.appearance):
+| "D'aspect léonin avec une expression vive et intelligente." (FCI-Standard N° 207, S690); "All colours and markings are
+| permissible and of equal merit." (KC breed standard, S692; FCI: except albino and liver; KC: merle unacceptable —
+| paraphrase); coat "Modérément long et droit avec une crinière qui ne doit pas s'étendre au-delà des épaules" (S690);
+| "Nose not too short, broad, nostrils large and open." / "Clear, round, dark, lustrous and not too large." (S692); muzzle
+| "Doit être évident mais peut être relativement courte et large." (S690); heart-shaped ears, tail set high and curved over
+| the back. Flat-faced welfare breed (PDSA S693): a moderate short face with an evident muzzle and open nostrils — the dog
+| trait `muzzle` carries it. Red-gold with a black mask first with the highest weight (the portrait default, the most
+| common colour per Wikipedia S695 — tier C); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -3980,6 +3990,48 @@ return [
             'ear_carriage' => ['medium triangular natural pendant ears close to the cheeks'],
             'eye_color' => ['almond-shaped dark brown eyes with black rims'],
             'tail' => ['long natural tail carried low with a curl at the tip'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-91 (docs/research/dog-data/data.json pekingese.appearance; runbook rules 2026-10-10: standard colours only —
+    // KC S692 "All colours and markings are permissible and of equal merit." — never albino, liver or merle; red-gold with a
+    // black mask = the portrait default; flat-faced welfare breed → moderate `muzzle`, open nostrils).
+    'pekingese' => [
+        'display_name' => 'Pekingese',
+        // Eight common standard colours; their weights are in no source (pekingese.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 207 (S690) and KC breed standard Pekingese (S692, KUSA copy 07-2025) — for the traits listed in `sources`. The colour list and weights are unsourced.',
+        'sources' => [
+            'size' => 'S690 "Le poids idéal ne dépasse pas 5 kg chez les mâles et 5,4 kg chez les femelles."; PDSA S693 "Small", "5kg"',
+            'build' => 'S690 "D\'aspect léonin avec une expression vive et intelligente."; S692 small, well-balanced, moderately thick-set (paraphrase)',
+            'coat_length' => 'S690 "Modérément long et droit avec une crinière qui ne doit pas s\'étendre au-delà des épaules"; S692 excessive coat highly undesirable (paraphrase)',
+            'coat_color' => 'S692 "All colours and markings are permissible and of equal merit." (the list and weights are unsourced; never albino, liver or merle)',
+            'head' => 'S692 head fairly large, broader than deep, skull flat between the ears (paraphrase)',
+            'muzzle' => 'Welfare rule (PDSA S693 brachycephalic): S692 "Nose not too short, broad, nostrils large and open."; S690 "Doit être évident mais peut être relativement courte et large." — a moderate short face, evident muzzle, nostrils clearly open',
+            'ear_carriage' => 'S690 "Cordiformes (en forme de cœur), attachées au niveau du crâne et portées accolées à la tête," (feathered drop ears)',
+            'eye_color' => 'S692 "Clear, round, dark, lustrous and not too large."',
+            'tail' => 'S692 "Set high, carried tightly, slightly curved over back to either side."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small, lion-like, moderately thick-set toy dog', 'weight' => 3], 'compact, well-balanced little toy dog with a lion-like look'],
+            'coat_length' => ['moderately long, straight coat with a mane to the shoulders and feathering on the ears, legs, tail and toes (not excessive)'],
+            // Red-gold with a black mask first, highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'red-gold with a black mask', 'weight' => 30],
+                ['value' => 'fawn with a black mask', 'weight' => 20],
+                ['value' => 'sable with a black mask', 'weight' => 15],
+                ['value' => 'cream', 'weight' => 10],
+                ['value' => 'solid black', 'weight' => 8],
+                ['value' => 'black and tan', 'weight' => 7],
+                ['value' => 'white with black nose and eye rims', 'weight' => 5],
+                ['value' => 'parti-colour, white with evenly broken coloured patches', 'weight' => 5],
+            ],
+            'head' => ['fairly large, broad head, flat between the ears'],
+            'muzzle' => ['moderate short face with an evident muzzle (not extreme), a visible black nose with clearly open nostrils and no heavy wrinkle over the nose'],
+            'ear_carriage' => ['heart-shaped drop ears with long feathering, carried close to the head'],
+            'eye_color' => ['clear, round, dark eyes that do not bulge'],
+            'tail' => ['feathered tail set high and curved over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

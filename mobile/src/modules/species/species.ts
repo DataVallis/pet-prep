@@ -105,6 +105,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   brussels_griffon: 'dog',
   irish_setter: 'dog',
   anatolian_shepherd_dog: 'dog',
+  pekingese: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -214,6 +215,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'brussels_griffon',
   'irish_setter',
   'anatolian_shepherd_dog',
+  'pekingese',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

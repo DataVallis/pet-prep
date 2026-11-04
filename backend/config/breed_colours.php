@@ -587,6 +587,18 @@ return [
         ['key' => 'fawn', 'value' => 'one-coloured fawn with a black mask and dark ears', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
         ['key' => 'wolf-sable', 'value' => 'one-coloured wolf sable with a black mask and dark ears', 'en' => 'Wolf sable with black mask', 'sl' => 'Volčje siv s črno masko'],
     ],
+    // M5-R10-91: KC breed standard (S692) "All colours and markings are permissible and of equal merit." — eight common colours
+    // (never albino, liver or merle); red-gold with a black mask first (= the portrait default).
+    'pekingese' => [
+        ['key' => 'red-gold', 'value' => 'red-gold with a black mask', 'en' => 'Red-gold with black mask', 'sl' => 'Rdeče zlat s črno masko'],
+        ['key' => 'fawn', 'value' => 'fawn with a black mask', 'en' => 'Fawn with black mask', 'sl' => 'Plav s črno masko'],
+        ['key' => 'sable', 'value' => 'sable with a black mask', 'en' => 'Sable with black mask', 'sl' => 'Sobolji s črno masko'],
+        ['key' => 'cream', 'value' => 'cream', 'en' => 'Cream', 'sl' => 'Kremast'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+        ['key' => 'black-tan', 'value' => 'black and tan', 'en' => 'Black and tan', 'sl' => 'Črno-rjav'],
+        ['key' => 'white', 'value' => 'white with black nose and eye rims', 'en' => 'White', 'sl' => 'Bel'],
+        ['key' => 'parti-colour', 'value' => 'parti-colour, white with evenly broken coloured patches', 'en' => 'Parti-colour', 'sl' => 'Lisast (bel z barvnimi lisami)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
