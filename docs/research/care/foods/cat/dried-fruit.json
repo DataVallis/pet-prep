@@ -14,7 +14,8 @@
     "pl": "Suszone owoce",
     "cs": "Sušené ovoce",
     "sv": "Torkad frukt",
-    "da": "Tørret frugt"
+    "da": "Tørret frugt",
+    "fi": "Kuivatut hedelmät"
   },
   "question": {
     "en": "Can cats eat dried fruit?",
@@ -29,7 +30,8 @@
     "pl": "Czy koty mogą jeść suszone owoce?",
     "cs": "Mohou kočky jíst sušené ovoce?",
     "sv": "Får katter äta torkad frukt?",
-    "da": "Må katte spise tørret frugt?"
+    "da": "Må katte spise tørret frugt?",
+    "fi": "Saako kissa syödä kuivattuja hedelmiä?"
   },
   "url_slug": {
     "en": "dried-fruit",
@@ -44,7 +46,8 @@
     "pl": "suszone-owoce",
     "cs": "susene-ovoce",
     "sv": "torkad-frukt",
-    "da": "toerret-frugt"
+    "da": "toerret-frugt",
+    "fi": "kuivatut-hedelmat"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "pl": "Nie, trzymaj suszone owoce z dala od kotów. Rodzynki, sułtanki i korynki są wysoce toksyczne dla zwierząt domowych, rodzynki i korynki mogą wywołać u kotów niewydolność nerek, a cukier jest dla kotów niezdrowy. Uważaj też na ciasta i słodkie wypieki z bakaliami, a jeśli kot cokolwiek zje, zadzwoń do weterynarza.",
     "cs": "Ne, sušené ovoce držte mimo dosah koček. Rozinky, sultánky a korintky jsou pro zvířata vysoce toxické, rozinky a korintky mohou u koček způsobit selhání ledvin a cukr kočkám škodí. Pozor i na koláče a mince pies (britské vánoční koláčky); pokud kočka něco z toho sní, zavolejte veterináři.",
     "sv": "Nej, håll torkad frukt borta från katter. Russin, sultanrussin och korinter är mycket giftiga för husdjur, russin och korinter kan orsaka njursvikt hos katter, och socker är inte nyttigt för katter. Se även upp med kakor och mince pies, och ring veterinären om katten äter något av det.",
-    "da": "Nej, hold tørret frugt væk fra katte. Rosiner, sultanarosiner og korender er meget giftige for kæledyr, rosiner og korender kan give nyresvigt hos katte, og sukker er usundt for katte. Vær også opmærksom på kager og mince pies, og ring til din dyrlæge hvis din kat spiser noget af det."
+    "da": "Nej, hold tørret frugt væk fra katte. Rosiner, sultanarosiner og korender er meget giftige for kæledyr, rosiner og korender kan give nyresvigt hos katte, og sukker er usundt for katte. Vær også opmærksom på kager og mince pies, og ring til din dyrlæge hvis din kat spiser noget af det.",
+    "fi": "Ei saa. Pidä kuivatut hedelmät poissa kissan ulottuvilta. Rusinat, sultaanirusinat ja korintit ovat lemmikeille erittäin myrkyllisiä, rusinat ja korintit voivat aiheuttaa kissoille munuaisten vajaatoiminnan, ja sokeri on kissoille epäterveellistä. Varo myös kakkuja ja mince pie -piirakoita ja soita eläinlääkärille, jos kissasi on syönyt niitä."
   },
   "why": {
     "en": "Cats Protection lists grapes, raisins and currants among human foods toxic to cats and says they can cause kidney failure in cats, with cats that have chronic kidney disease possibly at greater risk. PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Cats Protection also says sugar isn't toxic to cats but is still unhealthy for them. Grape and raisin poisoning in cats is rare and not well understood, and we found no cat source saying any dried fruit is safe, so we use the stricter level.",
@@ -75,7 +79,8 @@
     "pl": "Cats Protection wymienia winogrona, rodzynki i korynki wśród ludzkich produktów toksycznych dla kotów i podaje, że mogą wywołać u kotów niewydolność nerek, a koty z przewlekłą chorobą nerek mogą być bardziej narażone. PDSA ostrzega, że mince pies (angielskie babeczki z bakaliowym nadzieniem) i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Cats Protection dodaje też, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Zatrucie winogronami i rodzynkami u kotów jest rzadkie i słabo poznane, a nie znaleźliśmy żadnego źródła o kotach, które uznawałoby suszone owoce za bezpieczne, dlatego przyjmujemy surowszą ocenę.",
     "cs": "Cats Protection uvádí hrozny, rozinky a korintky mezi lidskými potravinami toxickými pro kočky a říká, že mohou u koček způsobit selhání ledvin, přičemž kočky s chronickým onemocněním ledvin mohou být ohroženy víc. PDSA upozorňuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Cats Protection také uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Otrava hrozny a rozinkami je u koček vzácná a není dobře prozkoumaná. Nenašli jsme žádný zdroj o kočkách, který by označil nějaké sušené ovoce za bezpečné, proto používáme přísnější úroveň.",
     "sv": "Cats Protection räknar upp vindruvor, russin och korinter bland de livsmedel för människor som är giftiga för katter och skriver att de kan orsaka njursvikt hos katter, och att katter med kronisk njursjukdom möjligen löper större risk. PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Cats Protection skriver också att socker inte är giftigt för katter men ändå inte nyttigt för dem. Förgiftning av vindruvor och russin hos katter är ovanlig och dåligt utredd, och vi har inte hittat någon källa om katter som säger att någon torkad frukt är säker, så vi använder den strängare nivån.",
-    "da": "Cats Protection nævner vindruer, rosiner og korender blandt de fødevarer til mennesker der er giftige for katte, og siger at de kan give nyresvigt hos katte; katte med kronisk nyresygdom kan have større risiko. PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Cats Protection siger også at sukker ikke er giftigt for katte, men alligevel usundt for dem. Forgiftning med vindruer og rosiner hos katte er sjælden og dårligt belyst, og vi har ikke fundet nogen kilde der siger at nogen form for tørret frugt er sikker for katte, så vi bruger det strengere niveau."
+    "da": "Cats Protection nævner vindruer, rosiner og korender blandt de fødevarer til mennesker der er giftige for katte, og siger at de kan give nyresvigt hos katte; katte med kronisk nyresygdom kan have større risiko. PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Cats Protection siger også at sukker ikke er giftigt for katte, men alligevel usundt for dem. Forgiftning med vindruer og rosiner hos katte er sjælden og dårligt belyst, og vi har ikke fundet nogen kilde der siger at nogen form for tørret frugt er sikker for katte, så vi bruger det strengere niveau.",
+    "fi": "Cats Protection luettelee viinirypäleet, rusinat ja korintit ihmisten ruokiin, jotka ovat kissoille myrkyllisiä, ja sanoo, että ne voivat aiheuttaa kissoille munuaisten vajaatoiminnan ja että kroonista munuaissairautta sairastavat kissat voivat olla suuremmassa vaarassa. PDSA varoittaa, että mince pie -piirakoissa ja joulukakussa on rusinoita, sultaanirusinoita ja korintteja, jotka ovat lemmikeille erittäin myrkyllisiä. Cats Protectionin mukaan sokeri ei ole kissoille myrkyllistä, mutta se on silti epäterveellistä. Viinirypäle- ja rusinamyrkytys on kissoilla harvinainen, eikä sitä tunneta hyvin. Emme löytäneet yhtään kissoja koskevaa lähdettä, jonka mukaan jokin kuivattu hedelmä olisi turvallinen, joten käytämme tiukempaa luokitusta."
   },
   "signs": {
     "en": [
@@ -116,6 +121,9 @@
     ],
     "da": [
       "Opkast, som regel inden for et døgn"
+    ],
+    "fi": [
+      "Oksentelu, yleensä vuorokauden kuluessa"
     ]
   },
   "what_to_do": {
@@ -131,7 +139,8 @@
     "pl": "Od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł kot (jakie suszone owoce albo jaki produkt je zawierający), ile i kiedy, i zachowaj opakowanie. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka snědla (jaké sušené ovoce nebo jaké jídlo, které ho obsahovalo), kolik a kdy, a uschovejte obal. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "sv": "Kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten åt (vilken torkad frukt eller vilken mat som innehöll den), hur mycket och när, och spara förpackningen. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har spist (hvilken tørret frugt eller hvilken mad der indeholder den), hvor meget og hvornår, og gem emballagen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr. Skriv ned hvad din kat har spist (hvilken tørret frugt eller hvilken mad der indeholder den), hvor meget og hvornår, og gem emballagen. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissasi söi (mitä kuivattua hedelmää tai sitä sisältävää ruokaa), kuinka paljon ja milloin, ja säilytä pakkaus. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
   },
   "serving": null,
   "child": {
@@ -147,7 +156,8 @@
     "pl": "Suszone owoce, takie jak rodzynki, to nie przekąska dla kota. Trzymaj je z dala od kotka i powiedz dorosłemu, jeśli zje trochę.",
     "cs": "Sušené ovoce, například rozinky, není svačinka pro kočky. Měj ho mimo dosah kočičky. A kdyby nějaké snědla, řekni to dospělému.",
     "sv": "Russin och annan torkad frukt är ingen godbit för katter. Håll den borta från katten, och säg till en vuxen om den äter något.",
-    "da": "Tørret frugt som rosiner er ikke en godbid til katte. Hold den væk fra katten, og sig det til en voksen hvis den spiser noget."
+    "da": "Tørret frugt som rosiner er ikke en godbid til katte. Hold den væk fra katten, og sig det til en voksen hvis den spiser noget.",
+    "fi": "Kuivatut hedelmät, kuten rusinat, eivät ole kissan herkkua. Pidä ne kaukana kisusta ja kerro aikuiselle, jos kisu syö niitä."
   },
   "faq": [
     {
@@ -164,7 +174,8 @@
         "pl": "A co z mince pies i świątecznym ciastem owocowym?",
         "cs": "A co mince pies a vánoční koláč?",
         "sv": "Hur är det med mince pies och julbakelser?",
-        "da": "Hvad med mince pies og engelsk julekage?"
+        "da": "Hvad med mince pies og engelsk julekage?",
+        "fi": "Entä mince pie -piirakat ja joulukakku?"
       },
       "a": {
         "en": "PDSA warns that mince pies and Christmas cake contain raisins, sultanas and currants, which are highly toxic to pets. Keep them out of your cat's reach.",
@@ -179,7 +190,8 @@
         "pl": "PDSA ostrzega, że mince pies i świąteczne ciasto owocowe zawierają rodzynki, sułtanki i korynki, które są wysoce toksyczne dla zwierząt domowych. Trzymaj je poza zasięgiem kota.",
         "cs": "PDSA varuje, že mince pies a vánoční koláč (Christmas cake) obsahují rozinky, sultánky a korintky, které jsou pro zvířata vysoce toxické. Mějte je mimo dosah kočky.",
         "sv": "PDSA varnar för att julbakelser som mince pies och engelsk fruktkaka innehåller russin, sultanrussin och korinter, som är mycket giftiga för husdjur. Håll dem utom räckhåll för katten.",
-        "da": "PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Hold dem uden for din kats rækkevidde."
+        "da": "PDSA advarer om at mince pies og engelsk julekage (Christmas cake) indeholder rosiner, sultanarosiner og korender, som er meget giftige for kæledyr. Hold dem uden for din kats rækkevidde.",
+        "fi": "PDSA varoittaa, että mince pie -piirakoissa ja joulukakussa on rusinoita, sultaanirusinoita ja korintteja, jotka ovat lemmikeille erittäin myrkyllisiä. Pidä ne poissa kissasi ulottuvilta."
       }
     },
     {
@@ -196,7 +208,8 @@
         "pl": "Czy cukier też jest problemem?",
         "cs": "Je problémem i cukr?",
         "sv": "Är sockret också ett problem?",
-        "da": "Er sukkeret også et problem?"
+        "da": "Er sukkeret også et problem?",
+        "fi": "Onko sokeri myös ongelma?"
       },
       "a": {
         "en": "Cats Protection says sugar isn't toxic to cats but is still unhealthy for them. Cats can't taste sweetness, sugar offers them no nutritional value, and regularly giving sugary foods could lead to health problems.",
@@ -211,7 +224,8 @@
         "pl": "Cats Protection podaje, że cukier nie jest toksyczny dla kotów, ale mimo to jest dla nich niezdrowy. Koty nie czują słodkiego smaku, cukier nie ma dla nich wartości odżywczej, a regularne podawanie słodkich produktów może prowadzić do problemów zdrowotnych.",
         "cs": "Cats Protection uvádí, že cukr pro kočky není toxický, ale přesto jim škodí. Kočky sladkou chuť nevnímají, cukr jim nepřináší žádnou výživovou hodnotu a pravidelné podávání sladkých potravin může vést ke zdravotním potížím.",
         "sv": "Cats Protection skriver att socker inte är giftigt för katter men ändå inte nyttigt för dem. Katter kan inte känna sötma, socker ger dem inget näringsvärde, och om de ofta får sockrig mat kan det leda till hälsoproblem.",
-        "da": "Cats Protection siger at sukker ikke er giftigt for katte, men alligevel usundt for dem. Katte kan ikke smage sødt, sukker giver dem ingen næring, og hvis de jævnligt får sukkerholdig mad, kan det føre til helbredsproblemer."
+        "da": "Cats Protection siger at sukker ikke er giftigt for katte, men alligevel usundt for dem. Katte kan ikke smage sødt, sukker giver dem ingen næring, og hvis de jævnligt får sukkerholdig mad, kan det føre til helbredsproblemer.",
+        "fi": "Cats Protectionin mukaan sokeri ei ole kissoille myrkyllistä, mutta se on silti epäterveellistä. Kissat eivät maista makeaa, sokerista ei ole kissoille ravitsemuksellista hyötyä, ja sokeripitoisten ruokien säännöllinen antaminen voi johtaa terveysongelmiin."
       }
     }
   ],
@@ -344,6 +358,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "887616120d9c8c4c43739d51cccde42ae06137c5d941823a068df4a2318c31ea"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "56965e902879a6bcf27219faaddf521b6cd78afc10896f4151b0f5cf8f509d95"
     }
   }
 }
