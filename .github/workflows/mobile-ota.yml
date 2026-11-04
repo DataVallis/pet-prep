@@ -14,7 +14,8 @@ name: Mobile OTA update
 #
 # Two triggers follow a production deploy (D33, 2026-11-04):
 #   - workflow_run: GitHub creates it only when the CI run was started with a user token
-#     (David's manual Run workflow). The daily deploy (daily-deploy.yml) starts CI & Deploy
+#     (a manual Run workflow), and then sometimes minutes late (deploy 41880114612 finished
+#     17:49:40Z, its workflow_run OTA 41881107754 was created 17:51:22Z) — NOT relied upon. The daily deploy (daily-deploy.yml) starts CI & Deploy
 #     with GITHUB_TOKEN, which creates NO workflow_run event — its OTA never ran (daily
 #     deploy 41806778939 → deploy 41807838886 on bb3450c9, no OTA; M6-W03 app half stuck).
 #   - workflow_dispatch with deploy_run_id + sha: CI & Deploy's job "Mobile OTA (after the

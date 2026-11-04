@@ -1179,7 +1179,7 @@ flowchart LR
   DEP --> PROD[(api.petprep.si)]
   DEP --> OJ["job: Mobile OTA (after the production deploy)<br/>gh workflow run mobile-ota.yml<br/>deploy_run_id + sha (D33, every deploy)"]
   OJ --> OTA["Mobile OTA channel production<br/>(mobile/ changed since the release on main;<br/>already released → nothing)"]
-  RW -.->|"workflow_run: user-token runs only<br/>(deduped by the release record)"| OTA
+  RW -.->|"workflow_run: user-token runs only, may be late<br/>not relied upon · deduped by the release record"| OTA
 ```
 
 ### 7a. deploy-production.sh (M2-01 / PR #24 / M4-05b)
