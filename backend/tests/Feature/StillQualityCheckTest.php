@@ -79,6 +79,8 @@ beforeEach(function () {
         'media.budget.timezone' => 'UTC',
         'media.profiles.vision.openrouter_vision_gemini_flash.enabled' => true,
         'media.quality_check.stills_mode' => 'enforce',
+        // QA #736 M2: pet / look stills have their own mode (production default shadow) — enforce here.
+        'media.quality_check.pet_stills_mode' => 'enforce',
     ]);
     useStateMedia();
     usePhaseClips(false);
@@ -300,6 +302,7 @@ describe('pet key images', function () {
             // Other states are not held up.
             ->and(sqLoopSubmits($pet, 'hungry'))->toBe(1);
         Queue::assertPushed(SendStillQualityAlert::class, 1);
+        expect(Cache::get(StillQualityService::ALERT_COUNT_KEY))->toBe(1);
 
         // »Approve anyway« uses it (audited) — its loop follows.
         $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
@@ -310,7 +313,7 @@ describe('pet key images', function () {
     });
 
     it('shadow mode records the verdict and uses the still anyway (no regeneration)', function () {
-        config(['media.quality_check.stills_mode' => 'shadow']);
+        config(['media.quality_check.stills_mode' => 'shadow', 'media.quality_check.pet_stills_mode' => 'shadow']);
         sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && $row->state === 'sleeping'));
         $pet = sqPet();
         app(PetMediaService::class)->queueStateVideos($pet);
@@ -335,6 +338,100 @@ describe('pet key images', function () {
         // Saving only the clip mode keeps the stored still mode.
         app(AppSettingsService::class)->updateQualityCheck($admin, 'enforce');
         expect(app(AppSettingsService::class)->qualityStillsMode(fresh: true))->toBe('off');
+
+        // QA #736 M2 / M3: item stills, pet stills and the clip AI call are separate settings.
+        app(AppSettingsService::class)->updateQualityCheck($admin, 'shadow', 'enforce', 'shadow', false);
+        expect(app(AppSettingsService::class)->qualityStillsMode(fresh: true))->toBe('enforce')
+            ->and(app(AppSettingsService::class)->qualityPetStillsMode(fresh: true))->toBe('shadow')
+            ->and(app(AppSettingsService::class)->qualityClipAi(fresh: true))->toBeFalse()
+            ->and(app(AppSettingsService::class)->qualityCheckMode(fresh: true))->toBe('shadow');
+        app(AppSettingsService::class)->updateQualityCheck($admin, 'enforce');
+        expect(app(AppSettingsService::class)->qualityPetStillsMode(fresh: true))->toBe('shadow')
+            ->and(app(AppSettingsService::class)->qualityClipAi(fresh: true))->toBeFalse();
+    });
+
+    it('pet stills in shadow while item stills enforce: a failed pet key image is used, never regenerated (QA #736 M2)', function () {
+        config(['media.quality_check.pet_stills_mode' => 'shadow']);
+        sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && $row->state === 'sleeping'));
+        $pet = sqPet();
+        app(PetMediaService::class)->queueStateVideos($pet);
+        sqCompletePet();
+
+        expect(sqKey($pet, 'sleeping')->quality)->toBe(PetMedia::QUALITY_SHADOW_FAILED)
+            ->and(sqKey($pet, 'sleeping')->still_retries)->toBe(0)
+            ->and(app(StillQualityService::class)->stillsMode())->toBe('enforce');
+    });
+
+    it('aggregates the key image alert: two given up in one window → ONE post with the count (QA #736 m1)', function () {
+        Queue::fake([SendStillQualityAlert::class]);
+        sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && in_array($row->state, ['sleeping', 'hungry'], true)));
+        $pet = sqPet();
+        app(PetMediaService::class)->queueStateVideos($pet);
+        sqCompletePet();
+
+        Queue::assertPushed(SendStillQualityAlert::class, 1);
+        expect(StillQualityService::takeAlertCount())->toBe(2)
+            ->and(StillQualityService::takeAlertCount())->toBe(0);
+    });
+
+    it('a »Needs review« look key image is never claimed again: a second pet of the look → 0 new edits, 0 new checks, 0 new alerts (QA #736 B1)', function () {
+        useUniquePetMedia(false);
+        Queue::fake([SendStillQualityAlert::class]);
+        sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && $row->state === 'sleeping'));
+        $first = sqPet();
+        app(PetMediaService::class)->queueStateVideos($first);
+        sqCompletePet();
+
+        $row = PetMedia::query()->where('pet_look_id', $first->pet_look_id)->whereNull('pet_id')->where('kind', 'keyframe')->where('state', 'sleeping')->sole();
+        expect($row->isQualityRejected())->toBeTrue()->and(Cache::get(StillQualityService::ALERT_COUNT_KEY))->toBe(1);
+        $generation = $row->generation;
+        $edits = sqEditSubmits()->count();
+        $vision = sqVisionCalls();
+
+        $second = sqPet();
+        expect($second->pet_look_id)->toBe($first->pet_look_id);
+        app(PetMediaService::class)->queueStateVideos($second);
+        sqCompletePet();
+        // Generate missing / a retry run of the first pet touch it neither.
+        app(PetMediaService::class)->queueStateVideos($first->fresh(), includeFailed: true);
+        sqCompletePet();
+
+        expect(sqEditSubmits()->count())->toBe($edits)
+            ->and(sqVisionCalls())->toBe($vision)
+            ->and($row->fresh()->isQualityRejected())->toBeTrue()
+            ->and($row->fresh()->generation)->toBe($generation)
+            ->and($row->fresh()->candidate_path)->not->toBeNull()
+            // The new pet's slot shares the verdict (its fallback), never a stuck »waiting«.
+            ->and(PetMedia::where('pet_id', $second->id)->where('kind', 'keyframe')->where('state', 'sleeping')->value('error_reason'))->toBe('quality_failed')
+            ->and(Cache::get(StillQualityService::ALERT_COUNT_KEY))->toBe(1);
+        Queue::assertPushed(SendStillQualityAlert::class, 1);
+    });
+
+    it('Generate missing never remakes a »Needs review« still; a reset of a checked still is always a new generation (QA #736 M1)', function () {
+        sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && $row->state === 'sleeping'));
+        $pet = sqPet();
+        $media = app(PetMediaService::class);
+        $media->queueStateVideos($pet);
+        sqCompletePet();
+
+        $key = sqKey($pet, 'sleeping');
+        expect($key->isQualityRejected())->toBeTrue();
+        $edits = sqEditSubmits()->count();
+        $media->queueStateVideos($pet->fresh(), includeFailed: true);
+        sqCompletePet();
+        expect(sqEditSubmits()->count())->toBe($edits)->and(sqKey($pet, 'sleeping')->generation)->toBe($key->generation);
+
+        // A reset without a bump of a still whose generation has a verdict → a new generation (own check).
+        $hungry = sqKey($pet, 'hungry');
+        $before = $hungry->generation;
+        expect(PetMediaQualityCheck::where('pet_media_id', $hungry->id)->where('generation', $before)->exists())->toBeTrue()
+            ->and($media->resetForNewGeneration($hungry, bump: false))->toBeTrue()
+            ->and($hungry->fresh()->generation)->toBe($before + 1);
+
+        // An explicit Regenerate still works on the rejected one (new generation, new seed).
+        $admin = User::factory()->create(['role' => 'parent', 'is_superadmin' => true]);
+        expect($media->resetForNewGeneration($key->fresh(), bump: true))->toBeTrue()
+            ->and(sqKey($pet, 'sleeping')->status)->toBe('pending');
     });
 
     it('waits without a claim or a charge while the AI budget is out, then checks once it allows', function () {
@@ -595,7 +692,7 @@ describe('item clips (free technical check)', function () {
             $this->markTestSkipped('ffmpeg / ffprobe not installed');
         }
         useQualityCheck('enforce');
-        config(['media.quality_check.stills_mode' => 'off']);
+        config(['media.quality_check.stills_mode' => 'off', 'media.quality_check.pet_stills_mode' => 'off']);
         $served = 0;
         sqFakeFal(null, function () use (&$served) {
             $served++;
@@ -624,7 +721,7 @@ describe('item clips (free technical check)', function () {
             $this->markTestSkipped('ffmpeg / ffprobe not installed');
         }
         useQualityCheck('shadow');
-        config(['media.quality_check.stills_mode' => 'off']);
+        config(['media.quality_check.stills_mode' => 'off', 'media.quality_check.pet_stills_mode' => 'off']);
         sqFakeFal(null, fn () => sqClip('frozen'));
         $pet = sqItemPet('toy_1', 'dog_rope_red_white');
         app(ItemMediaService::class)->ensure($pet);
@@ -641,7 +738,7 @@ describe('item clips (free technical check)', function () {
 describe('media:still-check', function () {
     it('re-checks stored item key images once: dry run shows count + cost, a fail regenerates key image + clip (David\'s bed)', function () {
         // The bed was made before the check existed (stills off), then the check is on.
-        config(['media.quality_check.stills_mode' => 'off']);
+        config(['media.quality_check.stills_mode' => 'off', 'media.quality_check.pet_stills_mode' => 'off']);
         sqFakeFal(fn ($row) => ! ($row instanceof ItemMedia && $row->kind === 'image' && $row->generation === 1));
         $pet = sqItemPet();
         app(ItemMediaService::class)->ensure($pet);
@@ -650,10 +747,12 @@ describe('media:still-check', function () {
         $oldClip = sqItemRow($pet, 'clip');
         expect($old->status)->toBe('ready')->and($old->quality)->toBeNull()->and(sqVisionCalls())->toBe(0);
 
-        config(['media.quality_check.stills_mode' => 'enforce']);
+        config(['media.quality_check.stills_mode' => 'enforce', 'media.quality_check.pet_stills_mode' => 'enforce']);
         $this->artisan('media:still-check --dry-run')->assertSuccessful()
             // One output line = one expectation (each expectation consumes its own write).
             ->expectsOutputToContain('Unchecked stored stills: 1 item key image(s), 0 pet key / pose image(s) (pets not selected — --pets). To check now: 1 × ≈ $0.0030 = ≈ $0.0030')
+            // QA #736 M2: the regeneration spend is in the estimate too.
+            ->expectsOutputToContain('Regenerations if they fail (enforce, at most 10 per run): up to 1 ×')
             ->expectsOutputToContain('Dry run');
         expect(sqVisionCalls())->toBe(0);
 
@@ -676,13 +775,28 @@ describe('media:still-check', function () {
         expect(sqVisionCalls())->toBe($calls);
     });
 
+    it('stops regenerating at the per-run cap: the rest stays unchecked for the next run (QA #736 M2)', function () {
+        config(['media.quality_check.stills_mode' => 'off', 'media.quality_check.pet_stills_mode' => 'off']);
+        sqFakeFal(fn ($row) => ! ($row instanceof ItemMedia && $row->kind === 'image'));
+        $pet = sqItemPet();
+        app(ItemMediaService::class)->ensure($pet);
+        sqCompleteItems();
+
+        config(['media.quality_check.stills_mode' => 'enforce', 'media.quality_check.max_recheck_regenerations' => 0]);
+        $this->artisan('media:still-check')->assertSuccessful()->expectsOutputToContain('Regeneration cap of this run reached (0)');
+
+        expect(sqVisionCalls())->toBe(0)
+            ->and(app(StillQualityService::class)->uncheckedItemImages()->count())->toBe(1)
+            ->and(sqItemRow($pet, 'image')->status)->toBe('ready');
+    });
+
     it('--pets is manual and only records verdicts (shown, never regenerated); the schedule runs items only', function () {
-        config(['media.quality_check.stills_mode' => 'off']);
+        config(['media.quality_check.stills_mode' => 'off', 'media.quality_check.pet_stills_mode' => 'off']);
         sqFakeFal(fn ($row) => ! ($row instanceof PetMedia && $row->state === 'sleeping'));
         $pet = sqPet();
         app(PetMediaService::class)->queueStateVideos($pet);
         sqCompletePet();
-        config(['media.quality_check.stills_mode' => 'enforce']);
+        config(['media.quality_check.stills_mode' => 'enforce', 'media.quality_check.pet_stills_mode' => 'enforce']);
         $count = app(StillQualityService::class)->uncheckedPetStills()->count();
 
         $this->artisan('media:still-check --pets --dry-run')->assertSuccessful()->expectsOutputToContain("{$count} pet key / pose image(s)");

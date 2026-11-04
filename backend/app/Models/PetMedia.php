@@ -271,6 +271,15 @@ class PetMedia extends Model
         return $this->error_reason === 'quality_failed' && filled($this->candidate_path);
     }
 
+    /**
+     * QA #736 B1 / M1: failed its quality check for good (»Needs review«, with or without a kept
+     * candidate) — only an explicit Regenerate or »Approve anyway« may touch it.
+     */
+    public function isQualityRejected(): bool
+    {
+        return $this->status === self::STATUS_FAILED && $this->error_reason === 'quality_failed';
+    }
+
     /** A stored clip with a failed verdict (enforce: flagged / hidden; shadow: would fail, shown). */
     public function isFlaggedQuality(): bool
     {

@@ -1503,6 +1503,18 @@ class ItemMediaService
      *
      * @return array{items: int, cost_usd: float, shared: bool}
      */
+    /**
+     * QA #736 M2: what regenerating ONE item key image costs at most — the key image, its still
+     * check(s) are separate — plus its clip (made again from the new key image).
+     */
+    public function keyImageRegenerationCostUsd(): float
+    {
+        $image = $this->profiles->itemImage()?->estimatedCostUsd() ?? 0.0;
+        $clip = $this->clipsEnabled() ? $this->profiles->clipVideo('item')->estimatedCostUsd() : 0.0;
+
+        return round($image + $clip, 4);
+    }
+
     public function missingCostFor(Pet $pet): array
     {
         $states = $this->statesFor($pet);

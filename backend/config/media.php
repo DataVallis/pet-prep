@@ -225,8 +225,10 @@ return [
     | Shadow (default until calibrated, QA #363 M1): verdict + metrics recorded, the clip is
     | always served. Mode: /admin → Feature switches »Quality check« (app_settings `quality_check`).
     | Still images (David 2026-11-04, StillQualityService): key / pose / item key images and
-    | catalogue pictures get the vision check BEFORE a video is made from them — own mode
-    | `stills_mode` (default enforce), ≤ `max_still_retries` regenerations with a new seed.
+    | catalogue pictures get the vision check BEFORE a video is made from them — own modes
+    | `stills_mode` (items, default enforce) and `pet_stills_mode` (pet / look key + pose images,
+    | default shadow — QA #736), ≤ `max_still_retries` regenerations with a new seed; `clip_ai`
+    | switches the clip check's paid AI call.
     */
     'quality_check' => [
         // QA #363 M1: off | shadow | enforce — only the default while /admin → Feature switches has
@@ -263,8 +265,16 @@ return [
         // image and catalogue item picture is checked by the vision model BEFORE a video is made from
         // it. Its own mode so the clip check can stay in shadow while it is calibrated:
         // off | shadow | enforce — only the default while /admin → Feature switches has no
-        // `quality_check.stills_mode` (David: enforce).
+        // `quality_check.stills_mode` (David: enforce). It applies to ITEM key images and catalogue
+        // pictures; PET / look key and pose images have their own mode (QA #736 M2): shadow until
+        // David has looked at the verdicts, then enforce.
         'stills_mode' => env('AI_QUALITY_STILLS_MODE', 'enforce'),
+        'pet_stills_mode' => env('AI_QUALITY_PET_STILLS_MODE', 'shadow'),
+        // QA #736 M3: the clip check's paid AI vision call (on / off; off = technical check alone).
+        'clip_ai' => (bool) env('AI_QUALITY_CLIP_AI', true),
+        // Cap of automatic regenerations one media:still-check run may start (each ≈ a $0.15 image +
+        // its clip). The rest stay unchecked and are picked up by the next run.
+        'max_recheck_regenerations' => (int) env('AI_QUALITY_MAX_RECHECK_REGENERATIONS', 10),
         // Automatic regenerations (new seed, next prompt variant where one exists) per chain after a
         // failed still (item clips: a failed technical check); then the self-healing fallback.
         'max_still_retries' => (int) env('AI_QUALITY_MAX_STILL_RETRIES', 2),

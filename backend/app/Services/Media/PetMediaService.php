@@ -25,6 +25,7 @@ use App\Models\PetItem;
 use App\Models\PetLook;
 use App\Models\PetMedia;
 use App\Models\PetMediaHistory;
+use App\Models\PetMediaQualityCheck;
 use App\Services\AppSettingsService;
 use App\Services\FalAiService;
 use App\Services\Results\LookRegeneration;
@@ -496,9 +497,13 @@ class PetMediaService
         }
 
         $stale = ! $key->isInFlight() && (int) $key->source_generation < $image->generation;
-        $retry = $includeFailed && $key->status === PetMedia::STATUS_FAILED;
+        // QA #736 M1: a still in »Needs review« (failed its still check after its retries) is touched
+        // only by an explicit Regenerate / »Approve anyway« — like queueClip's `$reviewing` guard. A
+        // new reference image (life-stage growth) still starts a new chain.
+        $reviewing = $key->isQualityRejected();
+        $retry = $includeFailed && $key->status === PetMedia::STATUS_FAILED && ! $reviewing;
 
-        if ($key->status !== PetMedia::STATUS_PENDING && ! $stale && ! $retry) {
+        if ($key->status !== PetMedia::STATUS_PENDING && ! $retry && (! $stale || $reviewing && (int) $key->source_generation >= $image->generation)) {
             return [$key, false];
         }
 
@@ -1182,10 +1187,10 @@ class PetMediaService
         return $this->stillCheckMode() !== AppSettingsService::QUALITY_OFF;
     }
 
-    /** David 2026-11-04: off | shadow | enforce of the still check (fresh read). */
+    /** David 2026-11-04: off | shadow | enforce of the PET still check (QA #736 M2: own mode, default shadow; fresh read). */
     public function stillCheckMode(): string
     {
-        return $this->settings->qualityStillsMode(fresh: true);
+        return $this->settings->qualityPetStillsMode(fresh: true);
     }
 
     /**
@@ -1588,6 +1593,13 @@ class PetMediaService
     public function resetForNewGeneration(PetMedia $slot, bool $bump, ?int $autoRetryBelow = null, ?int $variantBelow = null): bool
     {
         $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
+
+        // QA #736 M1: a key / pose image whose current generation already has a check verdict is
+        // always reset to a NEW generation — the old verdict must never decide a new paid image.
+        if (! $bump && $slot->isPoseStill() && PetMediaQualityCheck::query()->where('pet_media_id', $slot->id)
+            ->where('generation', PetMedia::whereKey($slot->id)->value('generation'))->exists()) {
+            $bump = true;
+        }
 
         $reset = PetMedia::query()
             ->whereKey($slot->id)
@@ -2991,6 +3003,16 @@ class PetMediaService
             return true;
         }
 
+        // QA #736 B1: a look row in »Needs review« (still check failed after its retries) is never
+        // claimed again by another pet of the look — no new edit, no new alert (claim() refuses it too).
+        if ($row->isQualityRejected()) {
+            // The pets waiting for it fail with it (quality_failed), like the pets that waited when it
+            // was rejected — their own guards then leave it alone too.
+            $this->fanOutFailure($row);
+
+            return true;
+        }
+
         // Fix 2026-10-28: a running row WITH a request id (queued at fal) is never claimed again.
         $deadClaimSince = $row->status === PetMedia::STATUS_RUNNING ? $row->updated_at : null;
 
@@ -3345,8 +3367,22 @@ class PetMediaService
      */
     private function claim(PetMedia $slot, array $from, array $extra = [], bool $requireNoRequest = false): bool
     {
+        $candidate = PetMedia::whereKey($slot->id)->value('candidate_path');
+
+        // QA #736 B1 / M1: a key / pose image whose CURRENT generation was already checked (a decided
+        // verdict exists) is a new request → a new generation, so its download gets its own check and
+        // never reuses the old verdict.
+        if ($slot->isPoseStill() && PetMediaQualityCheck::query()->where('pet_media_id', $slot->id)
+            ->where('generation', PetMedia::whereKey($slot->id)->value('generation'))->exists()) {
+            $extra['generation'] = DB::raw('generation + 1');
+        }
+
         $claimed = PetMedia::query()
             ->whereKey($slot->id)
+            // QA #736 B1 (QA #363 M4 for stills): »Needs review« (quality_failed) is never claimed by an
+            // automatic path — only an explicit Regenerate (resetForNewGeneration first) or »Approve anyway«.
+            ->where(fn ($q) => $q->where('status', '!=', PetMedia::STATUS_FAILED)->orWhereNull('error_reason')
+                ->orWhere('error_reason', '!=', AiCallFailure::QualityFailed->value))
             ->where(fn ($q) => $q->whereIn('status', $from)
                 // A worker died mid-call (no fal answer recorded): the slot may be claimed again.
                 ->orWhere(fn ($q) => $q->where('status', PetMedia::STATUS_RUNNING)
@@ -3359,11 +3395,20 @@ class PetMediaService
                 'attempts' => DB::raw('attempts + 1'),
                 'error_reason' => null,
                 'error' => null,
+                // QA #736 B1: a new request never inherits an old candidate (storeResult would skip
+                // the new download and re-check the old file).
+                'candidate_path' => null,
+                'candidate_bytes' => null,
+                'candidate_mime' => null,
                 'updated_at' => now(),
             ], $extra)) === 1;
 
         if ($claimed) {
             $slot->refresh();
+
+            if (is_string($candidate) && $candidate !== '' && $candidate !== $slot->storage_path) {
+                $this->disk()->delete($candidate);
+            }
         }
 
         return $claimed;

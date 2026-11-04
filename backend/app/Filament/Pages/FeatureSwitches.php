@@ -86,6 +86,8 @@ class FeatureSwitches extends Page implements HasForms
             'frugal_clips' => $settings->frugalClips(),
             'quality_check' => $settings->qualityCheckMode(),
             'quality_stills' => $settings->qualityStillsMode(),
+            'quality_pet_stills' => $settings->qualityPetStillsMode(),
+            'quality_clip_ai' => $settings->qualityClipAi(),
             'app_error_reports' => $settings->appErrorReports(),
             'video_compression' => $settings->videoCompression(fresh: true),
         ]);
@@ -169,10 +171,26 @@ class FeatureSwitches extends Page implements HasForms
                             ])
                             ->in(AppSettingsService::QUALITY_CHECK_MODES)
                             ->required(),
-                        // David 2026-11-04: the AI check of still images before a video is made (default enforce).
+                        // QA #736 M3: the clip check's paid AI call (default on — shadow calibration).
+                        Toggle::make('quality_clip_ai')
+                            ->label(__('admin.features.quality_clip_ai'))
+                            ->helperText(__('admin.features.quality_clip_ai_help'))
+                            ->default(true),
+                        // David 2026-11-04: the AI check of ITEM stills before a video is made (default enforce).
                         Radio::make('quality_stills')
                             ->label(__('admin.features.quality_stills'))
                             ->helperText(__('admin.features.quality_stills_help'))
+                            ->options([
+                                AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
+                                AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
+                                AppSettingsService::QUALITY_ENFORCE => __('admin.features.quality_check_enforce'),
+                            ])
+                            ->in(AppSettingsService::QUALITY_CHECK_MODES)
+                            ->required(),
+                        // QA #736 M2: the same check of PET / look key + pose images — default shadow until calibrated.
+                        Radio::make('quality_pet_stills')
+                            ->label(__('admin.features.quality_pet_stills'))
+                            ->helperText(__('admin.features.quality_pet_stills_help'))
                             ->options([
                                 AppSettingsService::QUALITY_OFF => __('admin.features.quality_check_off'),
                                 AppSettingsService::QUALITY_SHADOW => __('admin.features.quality_check_shadow'),
@@ -218,6 +236,8 @@ class FeatureSwitches extends Page implements HasForms
         $frugalClips = (bool) ($data['frugal_clips'] ?? AppSettingsService::frugalClipsDefault());
         $qualityCheck = (string) ($data['quality_check'] ?? AppSettingsService::qualityCheckDefault());
         $qualityStills = (string) ($data['quality_stills'] ?? AppSettingsService::qualityStillsDefault());
+        $qualityPetStills = (string) ($data['quality_pet_stills'] ?? AppSettingsService::qualityPetStillsDefault());
+        $qualityClipAi = (bool) ($data['quality_clip_ai'] ?? AppSettingsService::qualityClipAiDefault());
         $appErrors = (bool) ($data['app_error_reports'] ?? false);
         $compression = (bool) ($data['video_compression'] ?? false);
 
@@ -239,8 +259,9 @@ class FeatureSwitches extends Page implements HasForms
             if ($frugalClips !== $settings->frugalClips(fresh: true)) {
                 $settings->updateFrugalClips($this->admin(), $frugalClips);
             }
-            if ($qualityCheck !== $settings->qualityCheckMode(fresh: true) || $qualityStills !== $settings->qualityStillsMode(fresh: true)) {
-                $settings->updateQualityCheck($this->admin(), $qualityCheck, $qualityStills);
+            if ($qualityCheck !== $settings->qualityCheckMode(fresh: true) || $qualityStills !== $settings->qualityStillsMode(fresh: true)
+                || $qualityPetStills !== $settings->qualityPetStillsMode(fresh: true) || $qualityClipAi !== $settings->qualityClipAi(fresh: true)) {
+                $settings->updateQualityCheck($this->admin(), $qualityCheck, $qualityStills, $qualityPetStills, $qualityClipAi);
             }
             if ($appErrors !== $settings->appErrorReports(fresh: true)) {
                 $settings->updateAppErrorReports($this->admin(), $appErrors);
@@ -263,6 +284,8 @@ class FeatureSwitches extends Page implements HasForms
             .' · '.__('admin.features.saved_body_frugal_clips', ['state' => $settings->frugalClips(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_quality_check', ['state' => __('admin.features.quality_check_'.$settings->qualityCheckMode())])
             .' · '.__('admin.features.saved_body_quality_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityStillsMode())])
+            .' · '.__('admin.features.saved_body_quality_pet_stills', ['state' => __('admin.features.quality_check_'.$settings->qualityPetStillsMode())])
+            .' · '.__('admin.features.saved_body_quality_clip_ai', ['state' => $settings->qualityClipAi() ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_app_error_reports', ['state' => $settings->appErrorReports(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')])
             .' · '.__('admin.features.saved_body_video_compression', ['state' => $settings->videoCompression(fresh: true) ? __('admin.features.state_media_on') : __('admin.features.state_media_off')]))->success()->send();
     }

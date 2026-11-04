@@ -19,6 +19,7 @@ use App\Models\User;
 use App\Services\AppSettingsService;
 use App\Services\Shop\ItemDesigns;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\URL;
@@ -40,14 +41,19 @@ use Throwable;
  *  The reference image is NOT checked: it is generated during pairing, its failure path (pets.
  *  media_status, stage remakes) is separate, and every key / pose image made from it is checked.
  *
- * Mode `app_settings.quality_check.stills_mode` (default enforce, env AI_QUALITY_STILLS_MODE —
- * independent of the clip mode, which stays shadow while it is calibrated):
+ * Modes (independent of the clip mode, which stays shadow while it is calibrated):
+ * `app_settings.quality_check.stills_mode` for ITEM key images + catalogue pictures (default
+ * enforce, env AI_QUALITY_STILLS_MODE) and `pet_stills_mode` for PET / look key + pose images
+ * (QA #736 M2: default shadow until David has looked at the verdicts, env AI_QUALITY_PET_STILLS_MODE):
  *  - enforce: pass → stored; fail → a NEW request (fresh seed; poses / items: the next prompt
  *    variant) ≤ `max_still_retries` (2) per chain; then »Needs review« (failed `quality_failed`,
  *    candidate kept for »Approve anyway«) and the existing self-healing fallback: pose → the
  *    activity's simple mode (ActivityClipRetryService), item → shown without that content
- *    (ItemMediaService::heal(), one alert per run), key image → no loop for that state + ONE
- *    Discord alert (SendStillQualityAlert, counts only);
+ *    (ItemMediaService::heal(), one alert per run), key image → no loop for that state + one
+ *    Discord post per ALERT_WINDOW_MINUTES with the count (SendStillQualityAlert, counts only);
+ *  - a »Needs review« still (own slot or shared look row) is never claimed again by an automatic
+ *    path (QA #736 B1 — PetMediaService::claim / generateLookKeyframe / queuePoseStill); only an
+ *    explicit Regenerate (new generation, new seed) or »Approve anyway« touches it;
  *  - shadow: verdict recorded (`quality = shadow_failed`), the still is used anyway;
  *  - off: stored unchecked (the old behaviour).
  * Without a vision profile (off / fal disabled) a still is stored `unchecked`; without budget it
@@ -79,10 +85,45 @@ class StillQualityService
         return max(0, (int) config('media.quality_check.max_still_retries', 2));
     }
 
-    /** off | shadow | enforce of the still check (fresh read — workers follow the switch at once). */
+    /** Cache keys + window of the aggregated key image alert (QA #736 m1). */
+    public const ALERT_COUNT_KEY = 'still-quality-alert:count';
+
+    public const ALERT_WINDOW_KEY = 'still-quality-alert:window';
+
+    public const ALERT_WINDOW_MINUTES = 15;
+
+    /** off | shadow | enforce of the ITEM still check (fresh read — workers follow the switch at once). */
     public function stillsMode(): string
     {
         return $this->settings->qualityStillsMode(fresh: true);
+    }
+
+    /** off | shadow | enforce of the PET / look key + pose image check (QA #736 M2; fresh read). */
+    public function petStillsMode(): string
+    {
+        return $this->settings->qualityPetStillsMode(fresh: true);
+    }
+
+    /**
+     * QA #736 m1: count one given-up key image and send ONE Discord post per window with the count
+     * (the first one opens the window and queues the post, delayed to its end).
+     */
+    public static function countAlert(): void
+    {
+        Cache::add(self::ALERT_COUNT_KEY, 0, now()->addDay());
+        Cache::increment(self::ALERT_COUNT_KEY);
+
+        if (Cache::add(self::ALERT_WINDOW_KEY, true, now()->addMinutes(self::ALERT_WINDOW_MINUTES + 5))) {
+            SendStillQualityAlert::dispatch()->delay(now()->addMinutes(self::ALERT_WINDOW_MINUTES));
+        }
+    }
+
+    /** The count of the window that ends now (the window closes first, so a new failure opens the next one). */
+    public static function takeAlertCount(): int
+    {
+        Cache::forget(self::ALERT_WINDOW_KEY);
+
+        return (int) Cache::pull(self::ALERT_COUNT_KEY, 0);
     }
 
     /** Estimated cost of one still check (0 without a vision profile). */
@@ -113,7 +154,7 @@ class StillQualityService
         }
 
         $candidate = (string) $slot->candidate_path;
-        $mode = $this->stillsMode();
+        $mode = $this->petStillsMode();
 
         if ($mode === AppSettingsService::QUALITY_OFF) {
             return $this->promotePet($slot, $candidate, null, null);
@@ -237,7 +278,7 @@ class StillQualityService
         // Poses: ActivityClipRetryService reports the chain once (simple mode + its alert). Key images
         // have no other fallback report: one informative Discord post (counts only).
         if ($slot->isKeyframe()) {
-            SendStillQualityAlert::dispatch(1);
+            self::countAlert();
         }
 
         return true;
@@ -667,6 +708,12 @@ class StillQualityService
         ]);
 
         Log::info('StillQualityService: checked', ['check' => $check::class, 'id' => $check->id, 'verdict' => $failed ? 'fail' : 'pass', 'ai' => $ai['status'], 'reason' => $reason]);
+
+        // QA #736 m2: no usable verdict (malformed answer, refusal, timeout, dead worker) → the still is
+        // used UNCHECKED — an error the System health tile counts (quality = unchecked, 24 h).
+        if (! in_array($ai['status'], [PetMediaQualityCheck::AI_PASSED, PetMediaQualityCheck::AI_FAILED], true)) {
+            Log::error('StillQualityService: the AI still check gave no verdict — used unchecked', ['check' => $check::class, 'id' => $check->id, 'ai' => $ai['status'], 'reason' => $ai['reason']]);
+        }
 
         return 'decided';
     }

@@ -390,9 +390,14 @@ class MediaQualityService
         return $this->vision->costUsd();
     }
 
-    /** Why the vision call would not run now (null = it would). */
+    /** Why the vision call of a CLIP check would not run now (null = it would). */
     public function visionUnavailable(): ?string
     {
+        // QA #736 M3: the clip check's paid AI call has its own switch (stills unaffected).
+        if (! app(AppSettingsService::class)->qualityClipAi(fresh: true)) {
+            return PetMediaQualityCheck::AI_DISABLED;
+        }
+
         return $this->vision->unavailableStatus();
     }
 
@@ -553,6 +558,11 @@ class MediaQualityService
      */
     private function aiCheck(PetMedia $slot, ?string $sheetPath, PetMediaQualityCheck $check, bool $stored): array
     {
+        // QA #736 M3: the clip AI call is switched off → the technical result decides (0 $).
+        if (! app(AppSettingsService::class)->qualityClipAi(fresh: true)) {
+            return ['status' => PetMediaQualityCheck::AI_DISABLED, 'verdict' => null, 'reason' => 'clip AI check switched off (Feature switches)', 'cost_usd' => 0.0, 'reported_cost_usd' => null];
+        }
+
         $reference = $this->media->clipReferenceImage($slot);
 
         if ($sheetPath === null || $reference === null) {
