@@ -531,12 +531,12 @@ The public website is a separate repository, `DataVallis/pet-prep-website`, depl
 ## Disk hygiene (David 2026-10-15; incident 2026-11-04, D31)
 
 Measured 2026-10-15: 30 GB used on the 38 GB disk — **23.4 GB Docker build cache**, 5.4 GB images (incl. an unused 3 GB `petprep-backend:production` from the Sail era), 0.6 GB journald; the app itself (DB + pet media + backups) < 1 GB.
-**2026-11-04 the disk reached 100 % and production was down ~1 h** (postgres stopped): 20.5 GB of old pulled GHCR release images (`ghcr.io/…/petprep-app@sha256:…` names are never »dangling«, so `docker image prune -f` never removed them) + 4.9 GB build cache (DEPLOYMENT.md D31).
+**2026-11-04 the disk reached 100 % and production was down ~1 h** (postgres stopped): 20.5 GB of old pulled GHCR release images (`ghcr.io/…/petprep-app@sha256:…` names are never »dangling«, so `docker image prune -f` never removed them) + 4.9 GB build cache (DEPLOYMENT.md D31). The same day 11:00–12:35 again, from ~2.85 GB website images left by its hourly deploys.
 
 Automatic:
 - `scripts/deploy-production.sh` (D31), in the disk preflight AND after a successful deploy: old `petprep-app` / `petprep-web` images removed — **kept: the ids of `:production` and `:previous` (rollback) and every image a container uses**; other repositories (postgres, redis, `petprep-website`, `petprep-backend`) and volumes are never touched; then `docker image prune -f` and `docker builder prune -af --keep-storage 2GB`. A deploy refuses to start (before any pull) when less than `DEPLOY_MIN_FREE_GB` (default 5) GB stay free after that, and warns in its log at ≥ 70 %.
 - **Alert:** `system-health:disk-check` (hourly) → one Discord `disk_space` alert per day at ≥ 80 % (`SYSTEM_HEALTH_DISK_ALERT_PERCENT`); `/admin/system-health` tile »Disk used« yellow ≥ 80 %, red ≥ 90 %.
-- Website `deploy/deploy.sh`: same cache cap (1 GB). Its pulled `petprep-website@sha256:…` images are not pruned yet (open, website repo).
+- Website `deploy/deploy.sh`: same cache cap (1 GB); its own image prune is fixed in the website repo. **Guard here (D31, second incident 2026-11-04 11:00–12:35):** the API deploy's prune also removes `petprep-website` images that are not `petprep-website:production` / `:previous`, not used by a container AND older than 6 h (`DEPLOY_WEBSITE_MIN_AGE_HOURS`) — never a fresh pull of a running website deploy.
 - `compose.production.yaml` (all services) and the website compose: container logs `json-file` 3 × 10 MB. One-off containers (`run --rm`) leave nothing behind.
 
 One-time on the server (root) — journald cap (survives updates of `journald.conf`; idempotent):

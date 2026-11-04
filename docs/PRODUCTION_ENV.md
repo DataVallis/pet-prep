@@ -157,4 +157,4 @@ Set by the image, `compose.production.yaml` or `deploy-production.sh`; listed so
 | `DEPLOY_COMPOSE_PROJECT` | deploy script env | Compose project (network + volume prefix, e.g. `backend_app_storage`). Only if production ever runs under another project name — the deploy aborts when the volume is missing while the app runs | `backend` |
 | `DEPLOY_APP_UID` | deploy script env | uid the FPM image runs as; storage is chowned to it before every deploy | `1000` |
 
-**Deploy-script variables (not in `.env`, D31):** `DEPLOY_MIN_FREE_GB` (default `5`) — free GB the Docker disk must have after the disk preflight's prune, else the deploy stops before pulling; `0` disables the check.
+**Deploy-script variables (not in `.env`, D31):** `DEPLOY_MIN_FREE_GB` (default `5`) — free GB the Docker disk must have after the disk preflight's prune, else the deploy stops before pulling; `0` disables the check. `DEPLOY_WEBSITE_MIN_AGE_HOURS` (default `6`, ≥ 1) — a `petprep-website` image is pruned only when it is older than this (a concurrent website deploy keeps its fresh pull).
