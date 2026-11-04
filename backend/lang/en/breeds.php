@@ -94,6 +94,7 @@ return [
     'anatolian_shepherd_dog' => 'Anatolian Shepherd Dog',
     'pekingese' => 'Pekingese',
     'chow_chow' => 'Chow Chow',
+    'old_english_sheepdog' => 'Old English Sheepdog',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

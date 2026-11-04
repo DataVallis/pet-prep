@@ -94,6 +94,7 @@ return [
     'anatolian_shepherd_dog' => 'Anatolski ovčar',
     'pekingese' => 'Pekinezer',
     'chow_chow' => 'Čau čau',
+    'old_english_sheepdog' => 'Staroangleški ovčar',
     'domestic_cat' => 'Domača mačka',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'Britanska kratkodlaka mačka',

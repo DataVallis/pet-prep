@@ -760,6 +760,15 @@
 | muzzle (dog trait `muzzle`). Red first with the highest weight (the portrait default; AKC S699 lists red first);
 | weights unsourced → `verified => false`.
 |
+| Old English Sheepdog (M5-R10-93, docs/research/dog-data old_english_sheepdog.appearance):
+| "Strong, square-looking dog of great symmetry and overall soundness." (FCI-Standard N° 16, S703); colour "Any shade
+| of grey, grizzle or blue." / "Head, neck, forequarters and under belly to be white with or without markings." /
+| "Any shade of brown undesirable." (S703); coat "Profuse, of good harsh texture, not straight, but shaggy and free
+| from curl." (S703); muzzle "Strong, square and truncated." (S703); "Dark or wall eyes."; ears "Small and carried flat
+| to side of head."; tail docked or natural ("Natural carriage. Well feathered with abundant hardtextured coat.") — the
+| game draws the natural tail. Grey and white first with the highest weight (the portrait default; FCI lists grey
+| first); weights unsourced → `verified => false`.
+|
 |
 | British Shorthair (M5-R10-14, docs/research/cat-data british_shorthair.appearance):
 | large to medium, muscular, cobby, broad chest; round, massive head with a broad
@@ -4082,6 +4091,43 @@ return [
             'ear_carriage' => ['small, thick, slightly rounded erect ears set wide apart and tilting forward'],
             'eye_color' => ['dark, oval, medium-sized eyes that are clean and open, no heavy skin folds over the eyes'],
             'tail' => ['tail set high and carried well over the back'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-93 (docs/research/dog-data/data.json old_english_sheepdog.appearance; runbook rules 2026-10-10: standard colours
+    // only — FCI S703 "Any shade of grey, grizzle or blue." with a white head, neck, forequarters and underbelly; never brown
+    // or merle; grey and white = the portrait default; natural tail = Claude's proposal, the standard allows both).
+    'old_english_sheepdog' => [
+        'display_name' => 'Old English Sheepdog',
+        // Three standard colours; their weights are in no source (old_english_sheepdog.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 16 (S703) and PDSA (S705) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S703 height "Males 61 cms and upwards." / "Females 56 cms and upwards."; PDSA S705 "Large", "56-61 cm", "27-30 kg"',
+            'build' => 'S703 "Strong, square-looking dog of great symmetry and overall soundness."',
+            'coat_length' => 'S703 "Profuse, of good harsh texture, not straight, but shaggy and free from curl."',
+            'coat_color' => 'S703 "Any shade of grey, grizzle or blue." / "Head, neck, forequarters and under belly to be white with or without markings." (weights unsourced; never brown or merle)',
+            'head' => 'S703 skull "Capacious, rather square."; nose "Large and black."',
+            'muzzle' => 'S703 "Strong, square and truncated."; nostrils wide — not a flat face',
+            'ear_carriage' => 'S703 "Small and carried flat to side of head."',
+            'eye_color' => 'S703 "Dark or wall eyes. Two blue eyes acceptable. Light eyes undesirable."',
+            'tail' => 'S703 undocked "Natural carriage. Well feathered with abundant hardtextured coat." (natural tail = Claude\'s proposal)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'strong, square-looking, symmetrical sheepdog', 'weight' => 3], 'sturdy, thickset, well-balanced sheepdog'],
+            'coat_length' => ['profuse, harsh, shaggy coat covering the whole body, not straight and free from curl'],
+            // Grey and white first, highest weight → the register portrait (runbook AI-appearance rule).
+            'coat_color' => [
+                ['value' => 'grey body and hindquarters with a white head, neck, forequarters and underbelly', 'weight' => 50],
+                ['value' => 'blue body and hindquarters with a white head, neck, forequarters and underbelly', 'weight' => 30],
+                ['value' => 'grizzle body and hindquarters with a white head, neck, forequarters and underbelly', 'weight' => 20],
+            ],
+            'head' => ['capacious, rather square head with a large black nose'],
+            'muzzle' => ['strong, square muzzle with wide nostrils (not a flat face)'],
+            'ear_carriage' => ['small ears carried flat to the side of the head, hidden in the coat'],
+            'eye_color' => ['dark eyes partly hidden by the fringe'],
+            'tail' => ['natural, well-feathered tail'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

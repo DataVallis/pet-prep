@@ -2341,5 +2341,27 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S700'], 'refs' => ['chow_chow.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-93 Old English Sheepdog — not a flat-faced breed (FCI muzzle "Strong, square and truncated", S703). PDSA (S705)
+        // key facts and text; the RKC page was not reachable (no apartment / large_home chip). No new vocabulary key.
+        'old_english_sheepdog' => [
+            'suits' => [
+                // S705 "Your Old English Sheepdog will need a minimum of two hours exercise every day."
+                ['tag' => 'active_family', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.exercise.adult', 'old_english_sheepdog.suitability.pdsa_exercise']],
+                // S705 "Old English Sheepdogs have such easy-going personalities that they have quickly become popular family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.behaviour.family']],
+            ],
+            'consider' => [
+                // S705 "… a minimum of two hours exercise every day."
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.exercise.adult', 'old_english_sheepdog.suitability.pdsa_exercise']],
+                // S705 "they are better suited to families with older children who can recognise when playtime is getting too much."
+                ['tag' => 'not_for_small_children', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.behaviour.children']],
+                // S705 "They can suffer from separation anxiety when left alone, even for very short periods"
+                ['tag' => 'needs_company', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.behaviour.time_alone']],
+                // S705 a daily brush; S706 a minimum of three or four hours a week.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S705', 'S706'], 'refs' => ['old_english_sheepdog.suitability.pdsa_grooming', 'old_english_sheepdog.suitability.petmd_grooming']],
+                // S705 "… as the herding and prey drive is quite strong"
+                ['tag' => 'chases_small_pets', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.behaviour.other_pets']],
+            ],
+        ],
     ],
 ];
