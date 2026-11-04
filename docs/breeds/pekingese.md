@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pekingese` (viri S690–S695; ponovno S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: seznam pasem RKC za oceno dihanja prek Dogs NSW (K40) |
 | Izvor | FCI št. 207, skupina 9, sekcija 8 (japonski čin in pekinezer), Kitajska, pokroviteljstvo Velika Britanija (S691, S690) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 87. mesto »Pekingese« (S174, prebrano 2026-11-04) |
-| PR-ji | pet-prep #671 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #671 (pasma, združen `7e275db`) · portret: **ni narejen** — zagon `breed-portraits.yml` 41752022895 dvakrat neuspešen (na produkcijskem strežniku »No space left on device« in baza `postgres` ni dosegljiva v enkratnem vsebniku) · spletna stran: besedila na veji pet-prep-website `feat/register-pekingese` (PR šele s portretom) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-04 |
 | Ščetkanje zob vsak dan in čiščenje ušes 1× na teden (mini igri), opomnik za frizerja vsakih 6 tednov, opozorilo za sprehod poleti opoldne | 🛠 | 💶 izziv | M5-R14 / M5-R15 / M5-R18 / M5-R20 | 2026-11-04 |
 | Barva (izbirnik: 8 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-04 |
-| AI portret v registru | sledi (portretni PR) | — | M5-R11-04 | — |
+| AI portret v registru | 🗓 ni narejen (napaka strežnika 2026-11-04 — čaka Davida) | — | M5-R11-04 | — |
 | Stran na petprep.si (`/animals/dogs/pekingese`, `/sl/zivali/psi/pekinezer`) | sledi s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -54,6 +54,7 @@
 
 ## Odprto za Davida
 
+- **Portret ni narejen (2026-11-04):** `breed-portraits.yml` (zagon 41752022895, dva poskusa) se je na produkcijskem strežniku ustavil z »No space left on device« in »could not translate host name "postgres"«. Preverite prostor na disku strežnika (in ali vsebnik baze teče); naslednji nočni zagon nato najprej naredi portret (catch-up) in odpre PR spletne strani (besedila so pripravljena na veji `feat/register-pekingese`).
 - **Starejše obdobje od 108. meseca** je moj predlog (`verified=false`): runbook za življenjsko dobo našteje McMillan 2024, VetCompass in spodnjo mejo RKC — nič ni bilo dosegljivo, uporabljena je spodnja meja PDSA 12 let (kot pri basenjiju). Wikipedia navaja McMillan 2024 13,3 leta (to bi dalo 120). Potrdite ali določite drugo vrednost (seeder je samo-vstavljalni → sprememba prek Filamenta ali podatkovne migracije).
 - **Stran RKC ni bila dosegljiva** (preusmeritev na royalkennelclub.com zavrnjena): zato ni čipa »življenje v stanovanju«, ni kategorije Breed Watch in ni minimalnih testov RKC za vzreditelja. Ob naslednji priložnosti preverite.
 - **Marketing:** izključen po pravilu BVA (S92) — pasma je izrazito ploskoobrazna. Če jo želite v marketingu, povejte.
