@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "628712b6ae77d98c2457b7c31734acd41cd8a5ef365a2b096c08a8347b36d0bd"
+      "sha256": "aa2b11e248f66c21a1d69e9b022b3374854c204ada7cdb68e6f6f0b52eef88fe"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -50876,7 +50876,7 @@
       "id": "pekingese",
       "species": "dog",
       "order": 84,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Pekingese",
         "sl": "Pekinezer"
@@ -51559,7 +51559,7 @@
       "id": "chow_chow",
       "species": "dog",
       "order": 85,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Chow Chow",
         "sl": "Čau čau"
@@ -52145,7 +52145,7 @@
       "id": "old_english_sheepdog",
       "species": "dog",
       "order": 86,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Old English Sheepdog",
         "sl": "Staroangleški ovčar"
