@@ -14,7 +14,8 @@
     "pl": "Kokos",
     "cs": "Kokos",
     "sv": "Kokos",
-    "da": "Kokosnød"
+    "da": "Kokosnød",
+    "fi": "Kookos"
   },
   "question": {
     "en": "Can dogs eat coconut?",
@@ -29,7 +30,8 @@
     "pl": "Czy psy mogą jeść kokos?",
     "cs": "Mohou psi jíst kokos?",
     "sv": "Får hundar äta kokos?",
-    "da": "Må hunde spise kokosnød?"
+    "da": "Må hunde spise kokosnød?",
+    "fi": "Saako koira syödä kookosta?"
   },
   "url_slug": {
     "en": "coconut",
@@ -44,7 +46,8 @@
     "pl": "kokos",
     "cs": "kokos",
     "sv": "kokos",
-    "da": "kokosnoed"
+    "da": "kokosnoed",
+    "fi": "kookos"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "pl": "Tak, w małych ilościach. Niesłodzony miąższ kokosa jest dla psów bezpieczny, o ile podajesz go z umiarem, ale nigdy nie dawaj łupiny ani skorupy. Kokos jest bogaty w tłuszcz i zawiera oleje, które mogą wywołać rozstrój żołądka i biegunkę.",
     "cs": "Ano, v malém množství. Neslazená kokosová dužina je pro psy v rozumné míře bezpečná, ale slupku ani skořápku jim nikdy nedávejte. Kokos je hodně tučný a obsahuje oleje, které mohou psovi podráždit žaludek a způsobit průjem.",
     "sv": "Ja, i små mängder. Osötat fruktkött från kokosnöt är ofarligt för hundar med måtta, men ge aldrig ytterhöljet eller skalet. Kokos innehåller mycket fett och oljor som kan ge orolig mage och diarré.",
-    "da": "Ja, med måde. Usødet kokoskød er sikkert for hunde i moderate mængder, men giv aldrig hunden yderskallen eller den hårde skal. Kokos er fedtrigt og indeholder olier der kan give dårlig mave og diarré."
+    "da": "Ja, med måde. Usødet kokoskød er sikkert for hunde i moderate mængder, men giv aldrig hunden yderskallen eller den hårde skal. Kokos er fedtrigt og indeholder olier der kan give dårlig mave og diarré.",
+    "fi": "Kyllä, pieninä määrinä. Makeuttamatonta kookoksen hedelmälihaa voi antaa koiralle kohtuudella, mutta älä koskaan anna kuitukuorta tai kovaa kuorta. Kookos on runsasrasvainen ja sisältää öljyjä, jotka voivat aiheuttaa vatsavaivoja ja ripulia."
   },
   "why": {
     "en": "In small amounts coconut is not likely to cause serious harm, but the flesh and milk of fresh coconuts contain oils that may cause stomach upset, loose stools and diarrhoea. Coconut is higher in fat, so dogs that should not eat high-fat diets or are overweight should have other treats. It is also high in potassium, so caution is needed for dogs with kidney disease. The husk and shell can cause an intestinal blockage.",
@@ -75,7 +79,8 @@
     "pl": "W małych ilościach kokos raczej nie wyrządzi poważnej szkody, ale miąższ i mleko świeżych kokosów zawierają oleje, które mogą wywołać rozstrój żołądka, luźne stolce i biegunkę. Kokos jest dość tłusty, więc psy, którym nie wolno jeść dużo tłuszczu, oraz psy z nadwagą powinny dostawać inne smakołyki. Zawiera też dużo potasu, dlatego u psów z chorobą nerek trzeba zachować ostrożność. Łupina i skorupa mogą spowodować niedrożność jelit.",
     "cs": "V malém množství kokos pravděpodobně vážně neublíží, ale dužina a mléko čerstvých kokosů obsahují oleje, které mohou způsobit podrážděný žaludek, řidší stolici a průjem. Kokos je tučnější, proto by psi, kterým se vysoký obsah tuku nedoporučuje, i psi s nadváhou měli dostávat jiné pamlsky. Obsahuje také hodně draslíku, takže u psů s nemocnými ledvinami je třeba opatrnosti. Slupka a skořápka mohou způsobit ucpání střev.",
     "sv": "I små mängder är det osannolikt att kokos orsakar allvarlig skada, men fruktköttet och mjölken från färska kokosnötter innehåller oljor som kan ge orolig mage, lös avföring och diarré. Kokos innehåller mycket fett, så hundar som inte ska ha fettrik kost eller som är överviktiga bör få andra godbitar. Kokos innehåller också mycket kalium, så var försiktig om hunden har njursjukdom. Ytterhöljet och skalet kan orsaka tarmstopp.",
-    "da": "Små mængder kokos giver næppe alvorlig skade, men kødet og mælken fra friske kokosnødder indeholder olier der kan give dårlig mave, løs afføring og diarré. Kokos har et højere fedtindhold, så overvægtige hunde og hunde der ikke bør have fedtrig kost, bør have andre godbidder. Kokos indeholder også meget kalium, så vær forsigtig med hunde der har nyresygdom. Yderskallen og den hårde skal kan give tarmblokering."
+    "da": "Små mængder kokos giver næppe alvorlig skade, men kødet og mælken fra friske kokosnødder indeholder olier der kan give dårlig mave, løs afføring og diarré. Kokos har et højere fedtindhold, så overvægtige hunde og hunde der ikke bør have fedtrig kost, bør have andre godbidder. Kokos indeholder også meget kalium, så vær forsigtig med hunde der har nyresygdom. Yderskallen og den hårde skal kan give tarmblokering.",
+    "fi": "Pieninä määrinä kookos tuskin aiheuttaa vakavaa haittaa, mutta tuoreen kookoksen hedelmäliha ja maito sisältävät öljyjä, jotka voivat aiheuttaa vatsavaivoja, löysää ulostetta ja ripulia. Kookoksessa on runsaasti rasvaa, joten koirille, joille runsasrasvainen ruoka ei sovi, ja ylipainoisille koirille kannattaa antaa muita herkkuja. Kookoksessa on myös paljon kaliumia, joten munuaissairaiden koirien kohdalla on syytä olla varovainen. Kuitukuori ja kova kuori voivat aiheuttaa suolitukoksen."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "pl": "Zanim dodasz kokos do diety psa, zapytaj weterynarza, zwłaszcza jeśli twój pies miał zapalenie trzustki.",
     "cs": "Než kokos zařadíte do jídelníčku svého psa, poraďte se s veterinářem, především pokud pes prodělal zánět slinivky břišní.",
     "sv": "Fråga veterinären innan du lägger till kokos i hundens kost, särskilt om hunden har haft bukspottkörtelinflammation.",
-    "da": "Spørg din dyrlæge før du giver din hund kokos, især hvis den har haft betændelse i bugspytkirtlen."
+    "da": "Spørg din dyrlæge før du giver din hund kokos, især hvis den har haft betændelse i bugspytkirtlen.",
+    "fi": "Kysy eläinlääkäriltä ennen kuin lisäät kookosta koirasi ruokavalioon, etenkin jos koirallasi on ollut haimatulehdus."
   },
   "serving": {
     "en": "Unsweetened flesh only, in small amounts, without husk or shell. Coconut milk only unsweetened and free of xylitol; coconut water only as a treat, never instead of water.",
@@ -106,7 +112,8 @@
     "pl": "Tylko niesłodzony miąższ, w małych ilościach, bez łupiny i skorupy. Mleko kokosowe tylko niesłodzone i bez ksylitolu; woda kokosowa wyłącznie jako smakołyk, nigdy zamiast wody.",
     "cs": "Pouze neslazená dužina, v malém množství, bez slupky a skořápky. Kokosové mléko jen neslazené a bez xylitolu; kokosová voda jen jako pamlsek, nikdy místo vody.",
     "sv": "Bara osötat fruktkött, i små mängder, utan ytterhölje och skal. Kokosmjölk bara om den är osötad och fri från xylitol; kokosvatten bara som godbit, aldrig i stället för vatten.",
-    "da": "Kun usødet kokoskød i små mængder og uden yderskal og skal. Kokosmælk kun usødet og uden xylitol; kokosvand kun som godbid og aldrig i stedet for vand."
+    "da": "Kun usødet kokoskød i små mængder og uden yderskal og skal. Kokosmælk kun usødet og uden xylitol; kokosvand kun som godbid og aldrig i stedet for vand.",
+    "fi": "Vain makeuttamatonta hedelmälihaa, pieninä määrinä, ilman kuitukuorta ja kovaa kuorta. Kookosmaitoa vain makeuttamattomana ja ilman ksylitolia; kookosvettä vain herkkuna, ei koskaan veden tilalle."
   },
   "child": {
     "en": "Dogs can taste a little coconut! The hard shell is not for dogs, so a grown-up prepares it.",
@@ -121,7 +128,8 @@
     "pl": "Psy mogą spróbować odrobiny kokosa! Twarda skorupa nie jest dla psów, więc przygotowuje go dorosły.",
     "cs": "Psi si můžou pochutnat na trošce kokosu! Tvrdá skořápka pro psy není, takže kokos připraví dospělý.",
     "sv": "Hundar kan smaka lite kokos! Det hårda skalet är inte för hundar, så en vuxen förbereder det.",
-    "da": "Hunde må gerne smage lidt kokos! Den hårde skal er ikke til hunde, så en voksen gør kokosnødden klar."
+    "da": "Hunde må gerne smage lidt kokos! Den hårde skal er ikke til hunde, så en voksen gør kokosnødden klar.",
+    "fi": "Koira saa maistaa vähän kookosta! Kova kuori ei ole koirille, joten aikuinen valmistelee kookoksen."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "pl": "Czy psy mogą pić wodę kokosową lub mleko kokosowe?",
         "cs": "Mohou psi pít kokosovou vodu nebo kokosové mléko?",
         "sv": "Får hundar dricka kokosvatten eller kokosmjölk?",
-        "da": "Må hunde drikke kokosvand eller kokosmælk?"
+        "da": "Må hunde drikke kokosvand eller kokosmælk?",
+        "fi": "Saako koira juoda kookosvettä tai kookosmaitoa?"
       },
       "a": {
         "en": "Coconut water only as a treat, not instead of regular water. Coconut milk only unsweetened and free of artificial sweeteners like xylitol, which is toxic for dogs.",
@@ -153,7 +162,8 @@
         "pl": "Woda kokosowa tylko jako smakołyk, nie zamiast zwykłej wody. Mleko kokosowe tylko niesłodzone i bez sztucznych słodzików, takich jak ksylitol, który jest toksyczny dla psów.",
         "cs": "Kokosovou vodu jen jako pamlsek, ne místo běžné vody. Kokosové mléko jen neslazené a bez umělých sladidel, jako je xylitol, který je pro psy toxický.",
         "sv": "Kokosvatten bara som godbit, inte i stället för vanligt vatten. Kokosmjölk bara om den är osötad och fri från konstgjorda sötningsmedel som xylitol, som är giftigt för hundar.",
-        "da": "Kokosvand kun som godbid og ikke i stedet for almindeligt vand. Kokosmælk kun usødet og uden kunstige sødestoffer som xylitol, der er giftigt for hunde."
+        "da": "Kokosvand kun som godbid og ikke i stedet for almindeligt vand. Kokosmælk kun usødet og uden kunstige sødestoffer som xylitol, der er giftigt for hunde.",
+        "fi": "Kookosvettä vain herkkuna, ei tavallisen veden tilalle. Kookosmaitoa vain makeuttamattomana ja ilman keinotekoisia makeutusaineita, kuten ksylitolia, joka on koirille myrkyllistä."
       }
     },
     {
@@ -170,7 +180,8 @@
         "pl": "Dlaczego nie skorupa kokosa?",
         "cs": "Proč ne kokosová skořápka?",
         "sv": "Varför inte kokosskalet?",
-        "da": "Hvorfor ikke kokosnøddens skal?"
+        "da": "Hvorfor ikke kokosnøddens skal?",
+        "fi": "Miksi koira ei saa syödä kookoksen kuorta?"
       },
       "a": {
         "en": "The husk and shell can cause serious digestive problems, including an intestinal blockage and stomach irritation, much like eating sticks or wood.",
@@ -185,7 +196,8 @@
         "pl": "Łupina i skorupa mogą powodować poważne problemy trawienne, w tym niedrożność jelit i podrażnienie żołądka, podobnie jak zjadanie patyków czy drewna.",
         "cs": "Slupka a skořápka mohou způsobit vážné zažívací potíže, včetně ucpání střev a podráždění žaludku, podobně jako když pes sní klacky nebo kus dřeva.",
         "sv": "Ytterhöljet och skalet kan ge allvarliga matsmältningsproblem, bland annat tarmstopp och irriterad mage, ungefär som när hunden äter pinnar eller trä.",
-        "da": "Yderskallen og den hårde skal kan give alvorlige fordøjelsesproblemer, blandt andet tarmblokering og irritation af maven, på samme måde som hvis hunden spiste pinde eller træ."
+        "da": "Yderskallen og den hårde skal kan give alvorlige fordøjelsesproblemer, blandt andet tarmblokering og irritation af maven, på samme måde som hvis hunden spiste pinde eller træ.",
+        "fi": "Kuitukuori ja kova kuori voivat aiheuttaa vakavia ruoansulatusvaivoja, kuten suolitukoksen ja vatsan ärsytystä, aivan kuin koira söisi keppejä tai puuta."
       }
     }
   ],
@@ -335,6 +347,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "edfa1c067c539b9bfe1f6f035605cd43ceaf52466fa9f32c9ca2a48787857cb1"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5ec55c46ede02558ac47376085c30cc5da156ed9015426fceee86ab19a0393d7"
     }
   }
 }

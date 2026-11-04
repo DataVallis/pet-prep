@@ -14,7 +14,8 @@
     "pl": "Granat",
     "cs": "Granátové jablko",
     "sv": "Granatäpple",
-    "da": "Granatæble"
+    "da": "Granatæble",
+    "fi": "Granaattiomena"
   },
   "question": {
     "en": "Can dogs eat pomegranate?",
@@ -29,7 +30,8 @@
     "pl": "Czy psy mogą jeść granat?",
     "cs": "Mohou psi jíst granátové jablko?",
     "sv": "Får hundar äta granatäpple?",
-    "da": "Må hunde spise granatæble?"
+    "da": "Må hunde spise granatæble?",
+    "fi": "Saako koira syödä granaattiomenaa?"
   },
   "url_slug": {
     "en": "pomegranate",
@@ -44,7 +46,8 @@
     "pl": "granat",
     "cs": "granatove-jablko",
     "sv": "granatapple",
-    "da": "granataeble"
+    "da": "granataeble",
+    "fi": "granaattiomena"
   },
   "level": "not_recommended",
   "answer": {
@@ -60,7 +63,8 @@
     "pl": "Nie zaleca się. Granat nie jest toksyczny dla psów, ale to nie znaczy, że owoc jest bezpieczny: pestki mogą wywołać dolegliwości żołądkowe i zatkać przewód pokarmowy, a kawałki skórki i szypułki mogą spowodować niedrożność. Bezpieczniej nie podawać świeżego granatu.",
     "cs": "Nedoporučuje se. Granátová jablka pro psy nejsou toxická, ale to z nich nedělá bezpečné ovoce: semínka mohou způsobit žaludeční potíže a ucpání trávicího traktu a kousky slupky a stopky mohou způsobit ucpání. Bezpečnější je čerstvé granátové jablko nedávat.",
     "sv": "Rekommenderas inte. Granatäpplen är inte giftiga för hundar, men det betyder inte att frukten är säker: kärnorna kan ge magproblem och stopp i matsmältningskanalen, och bitar av skal och stjälk kan orsaka stopp. Det är säkrare att inte ge färskt granatäpple.",
-    "da": "Det frarådes. Granatæbler er ikke giftige for hunde, men det gør dem ikke ufarlige: kernerne kan give dårlig mave og tarmblokering, og stykker af skal og stilk kan også give blokering. Det er sikrest ikke at give hunden frisk granatæble."
+    "da": "Det frarådes. Granatæbler er ikke giftige for hunde, men det gør dem ikke ufarlige: kernerne kan give dårlig mave og tarmblokering, og stykker af skal og stilk kan også give blokering. Det er sikrest ikke at give hunden frisk granatæble.",
+    "fi": "Ei suositella. Granaattiomena ei ole koiralle myrkyllinen, mutta se ei silti tee hedelmästä turvallista: siemenet voivat aiheuttaa vatsavaivoja ja ruoansulatuskanavan tukoksen, ja kuoren ja varren palat voivat myös aiheuttaa tukoksen. Tuoretta granaattiomenaa on turvallisempaa olla antamatta."
   },
   "why": {
     "en": "The AKC's chief veterinarian says pomegranates aren't toxic to dogs. The seeds, the part people usually eat, can still cause gastrointestinal issues and a digestive tract blockage. Pieces of rind and stem can cause an obstruction, especially in smaller dogs. Pomegranate extract in products made for dogs is a different matter from the fresh fruit.",
@@ -75,7 +79,8 @@
     "pl": "Główny lekarz weterynarii AKC podaje, że granaty nie są toksyczne dla psów. Pestki, czyli część, którą ludzie zwykle jedzą, mogą jednak wywołać problemy żołądkowo-jelitowe i zablokować przewód pokarmowy. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów. Ekstrakt z granatu w produktach przeznaczonych dla psów to co innego niż świeży owoc.",
     "cs": "Hlavní veterinář AKC uvádí, že granátová jablka nejsou pro psy toxická. Semínka, tedy část, kterou lidé obvykle jedí, však mohou způsobit zažívací potíže a ucpání trávicího traktu. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů. Výtažek z granátového jablka v produktech určených pro psy je něco jiného než čerstvý plod.",
     "sv": "AKC:s chefsveterinär säger att granatäpplen inte är giftiga för hundar. Kärnorna, den del som människor oftast äter, kan ändå ge mag- och tarmproblem och stopp i matsmältningskanalen. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar. Granatäppelextrakt i produkter för hundar är en annan sak än den färska frukten.",
-    "da": "AKC's chefdyrlæge siger at granatæbler ikke er giftige for hunde. Kernerne, som er den del folk som regel spiser, kan alligevel give problemer med mave og tarme samt tarmblokering. Stykker af skal og stilk kan give blokering, især hos mindre hunde. Granatæbleekstrakt i produkter til hunde er noget andet end den friske frugt."
+    "da": "AKC's chefdyrlæge siger at granatæbler ikke er giftige for hunde. Kernerne, som er den del folk som regel spiser, kan alligevel give problemer med mave og tarme samt tarmblokering. Stykker af skal og stilk kan give blokering, især hos mindre hunde. Granatæbleekstrakt i produkter til hunde er noget andet end den friske frugt.",
+    "fi": "AKC:n eläinlääketieteellisen johtajan mukaan granaattiomenat eivät ole koirille myrkyllisiä. Siemenet, jotka ihmiset yleensä syövät, voivat silti aiheuttaa vatsa- ja suolivaivoja sekä ruoansulatuskanavan tukoksen. Kuoren ja varren palat voivat aiheuttaa tukoksen etenkin pienillä koirilla. Koirille tarkoitetuissa tuotteissa käytetty granaattiomenauute on eri asia kuin tuore hedelmä."
   },
   "signs": {
     "en": [
@@ -129,6 +134,10 @@
     "da": [
       "Diarré",
       "Opkast"
+    ],
+    "fi": [
+      "Ripuli",
+      "Oksentelu"
     ]
   },
   "what_to_do": {
@@ -144,7 +153,8 @@
     "pl": "Jeśli twój pies zjadł pestki granatu, od razu skontaktuj się z weterynarzem.",
     "cs": "Pokud se váš pes dostane k semínkům granátového jablka, okamžitě se obraťte na veterináře.",
     "sv": "Om hunden har ätit granatäppelkärnor, kontakta veterinären direkt.",
-    "da": "Hvis din hund har spist granatæblekerner, skal du kontakte din dyrlæge med det samme."
+    "da": "Hvis din hund har spist granatæblekerner, skal du kontakte din dyrlæge med det samme.",
+    "fi": "Jos koirasi on syönyt granaattiomenan siemeniä, ota heti yhteyttä eläinlääkäriin."
   },
   "serving": null,
   "child": {
@@ -160,7 +170,8 @@
     "pl": "Granat to owoc dla ludzi. Jego pestki i skórka mogą psu rozstroić brzuszek, więc trzymaj go z dala od psa.",
     "cs": "Granátové jablko je ovoce pro lidi. Jeho semínka a slupka mohou psovi pokazit bříško, tak ho měj mimo dosah.",
     "sv": "Granatäpple är en frukt för människor. Kärnorna och skalet kan ge hunden ont i magen, så håll det utom räckhåll.",
-    "da": "Granatæble er frugt til mennesker. Kernerne og skallen kan give hunden ondt i maven, så hold det uden for dens rækkevidde."
+    "da": "Granatæble er frugt til mennesker. Kernerne og skallen kan give hunden ondt i maven, så hold det uden for dens rækkevidde.",
+    "fi": "Granaattiomena on ihmisten hedelmä. Sen siemenet ja kuori voivat panna koiran mahan sekaisin, joten pidä se poissa koiran ulottuvilta."
   },
   "faq": [
     {
@@ -177,7 +188,8 @@
         "pl": "Czy granat w karmie dla psów jest w porządku?",
         "cs": "Je granátové jablko v krmivu pro psy v pořádku?",
         "sv": "Går det bra med granatäpple i hundfoder?",
-        "da": "Er granatæble i hundefoder i orden?"
+        "da": "Er granatæble i hundefoder i orden?",
+        "fi": "Voiko koiranruoassa olla granaattiomenaa?"
       },
       "a": {
         "en": "Pomegranate extract can have health benefits for dogs. If you want to give it, look for products made specifically for dogs and speak with your vet.",
@@ -192,7 +204,8 @@
         "pl": "Ekstrakt z granatu może korzystnie wpływać na zdrowie psów. Jeśli chcesz go podawać, szukaj produktów przeznaczonych specjalnie dla psów i porozmawiaj z weterynarzem.",
         "cs": "Výtažek z granátového jablka může psům prospívat. Pokud ho chcete psovi dávat, hledejte produkty určené přímo pro psy a poraďte se s veterinářem.",
         "sv": "Granatäppelextrakt kan ha hälsofördelar för hundar. Om du vill ge det, välj produkter som är särskilt framtagna för hundar och prata med veterinären.",
-        "da": "Granatæbleekstrakt kan have sundhedsmæssige fordele for hunde. Hvis du vil give det, så vælg produkter der er lavet specielt til hunde, og tal med din dyrlæge."
+        "da": "Granatæbleekstrakt kan have sundhedsmæssige fordele for hunde. Hvis du vil give det, så vælg produkter der er lavet specielt til hunde, og tal med din dyrlæge.",
+        "fi": "Granaattiomenauute voi tuoda koirille terveyshyötyjä. Jos haluat antaa sitä, valitse nimenomaan koirille tarkoitettuja tuotteita ja keskustele eläinlääkärin kanssa."
       }
     },
     {
@@ -209,7 +222,8 @@
         "pl": "Czy psy mogą jeść skórkę granatu?",
         "cs": "Mohou psi jíst slupku granátového jablka?",
         "sv": "Får hundar äta granatäppelskal?",
-        "da": "Må hunde spise skallen af granatæble?"
+        "da": "Må hunde spise skallen af granatæble?",
+        "fi": "Saako koira syödä granaattiomenan kuorta?"
       },
       "a": {
         "en": "No. Pieces of the rind and stem can cause an obstruction, especially in smaller dogs, so don't feed them.",
@@ -224,7 +238,8 @@
         "pl": "Nie. Kawałki skórki i szypułki mogą spowodować niedrożność, zwłaszcza u mniejszych psów, więc ich nie podawaj.",
         "cs": "Ne. Kousky slupky a stopky mohou způsobit ucpání, zejména u menších psů, proto je nedávejte.",
         "sv": "Nej. Bitar av skal och stjälk kan orsaka stopp, särskilt hos mindre hundar, så ge inte hunden skalet.",
-        "da": "Nej. Stykker af skal og stilk kan give blokering, især hos mindre hunde, så lad være med at give dem til hunden."
+        "da": "Nej. Stykker af skal og stilk kan give blokering, især hos mindre hunde, så lad være med at give dem til hunden.",
+        "fi": "Ei. Kuoren ja varren palat voivat aiheuttaa tukoksen etenkin pienillä koirilla, joten älä anna niitä."
       }
     }
   ],
@@ -357,6 +372,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0ebb229833edddfb9a82671734db5280ae8461fae75fc10e47d3170d6c1c2d0"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1cc81274bfde7bb8c261e05c14dbc57f7e6721d2cf0f8e26cd37d710bf225d6d"
     }
   }
 }

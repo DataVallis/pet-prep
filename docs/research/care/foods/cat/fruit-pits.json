@@ -14,7 +14,8 @@
     "pl": "Pestki owoców",
     "cs": "Ovocné pecky",
     "sv": "Fruktkärnor och stenar",
-    "da": "Frugtsten"
+    "da": "Frugtsten",
+    "fi": "Hedelmien kivet"
   },
   "question": {
     "en": "Can cats eat fruit pits?",
@@ -29,7 +30,8 @@
     "pl": "Czy koty mogą jeść pestki owoców?",
     "cs": "Mohou kočky jíst ovocné pecky?",
     "sv": "Får katter äta fruktkärnor?",
-    "da": "Må katte spise frugtsten?"
+    "da": "Må katte spise frugtsten?",
+    "fi": "Saako kissa syödä hedelmien kiviä?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -44,7 +46,8 @@
     "pl": "pestki-owocow",
     "cs": "ovocne-pecky",
     "sv": "fruktkarnor-och-stenar",
-    "da": "frugtsten"
+    "da": "frugtsten",
+    "fi": "hedelmien-kivet"
   },
   "level": "dangerous",
   "answer": {
@@ -60,7 +63,8 @@
     "pl": "Nie. Trzymaj pestki i nasiona pestkowców z dala od kotów. ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako rośliny toksyczne dla kotów, ponieważ ich nasiona, łodygi i liście zawierają cyjanek. Jeśli kot przegryzie lub połknie pestkę, zadzwoń do weterynarza.",
     "cs": "Ne. Pecky a semena peckovin držte mimo dosah koček. ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako rostliny toxické pro kočky, protože jejich semena, stonky a listy obsahují kyanid. Pokud kočka nějakou okouše nebo spolkne, zavolejte veterináři.",
     "sv": "Nej. Håll kärnor, stenar och frön från stenfrukt borta från katter. ASPCA anger att växterna körsbär, persika, plommon och aprikos är giftiga för katter eftersom deras frön, stjälkar och blad innehåller cyanid. Ring veterinären om katten tuggar på eller sväljer en sådan.",
-    "da": "Nej. Hold sten og kerner fra stenfrugt væk fra katte. ASPCA angiver kirsebær-, ferskens-, blomme- og abrikosplanter som giftige for katte fordi deres kerner, stilke og blade indeholder cyanid. Ring til din dyrlæge hvis din kat tygger på eller sluger en."
+    "da": "Nej. Hold sten og kerner fra stenfrugt væk fra katte. ASPCA angiver kirsebær-, ferskens-, blomme- og abrikosplanter som giftige for katte fordi deres kerner, stilke og blade indeholder cyanid. Ring til din dyrlæge hvis din kat tygger på eller sluger en.",
+    "fi": "Ei saa. Pidä kivihedelmien kivet ja siemenet poissa kissan ulottuvilta. ASPCA luokittelee kirsikka-, persikka-, luumu- ja aprikoosikasvit kissoille myrkyllisiksi, koska niiden siemenet, varret ja lehdet sisältävät syanidia. Soita eläinlääkärille, jos kissasi on pureskellut tai niellyt jonkin niistä."
   },
   "why": {
     "en": "For cherry, peach, plum and apricot, the ASPCA says the stems, leaves and seeds contain cyanide (as cyanogenic glycosides) and are particularly toxic while wilting, and it lists all four plants as toxic to cats. The pit or stone of these fruits is the seed, so it should never be given to a cat.",
@@ -75,7 +79,8 @@
     "pl": "W przypadku czereśni, brzoskwini, śliwy i moreli ASPCA podaje, że łodygi, liście i nasiona zawierają cyjanek (w postaci glikozydów cyjanogennych) i są szczególnie toksyczne, gdy więdną, oraz wymienia wszystkie cztery rośliny jako toksyczne dla kotów. Pestka tych owoców jest nasionem, dlatego nigdy nie wolno jej dawać kotu.",
     "cs": "U třešně, broskvoně, slivoně a meruňky ASPCA uvádí, že stonky, listy a semena obsahují kyanid (ve formě kyanogenních glykosidů) a jsou zvlášť toxické, když začnou vadnout, a všechny čtyři rostliny řadí mezi toxické pro kočky. Pecka těchto plodů je semeno, proto ji kočce nikdy nedávejte.",
     "sv": "För körsbär, persika, plommon och aprikos skriver ASPCA att stjälkar, blad och frön innehåller cyanid (i form av cyanogena glykosider) och är särskilt giftiga när de vissnar, och att alla fyra växterna är giftiga för katter. I de här frukterna är stenen eller kärnan själva fröet, så den ska aldrig ges till en katt.",
-    "da": "For kirsebær, fersken, blomme og abrikos siger ASPCA at stilkene, bladene og kernerne indeholder cyanid (som cyanogene glykosider) og er særligt giftige mens de visner, og alle fire planter angives som giftige for katte. Stenen i disse frugter er kernen, så den må aldrig gives til en kat."
+    "da": "For kirsebær, fersken, blomme og abrikos siger ASPCA at stilkene, bladene og kernerne indeholder cyanid (som cyanogene glykosider) og er særligt giftige mens de visner, og alle fire planter angives som giftige for katte. Stenen i disse frugter er kernen, så den må aldrig gives til en kat.",
+    "fi": "ASPCA:n mukaan kirsikan, persikan, luumun ja aprikoosin varret, lehdet ja siemenet sisältävät syanidia (syanogeenisina glykosideina) ja ovat erityisen myrkyllisiä kuihtuessaan, ja se luokittelee kaikki neljä kasvia kissoille myrkyllisiksi. Näiden hedelmien kivi on siemen, joten sitä ei pidä koskaan antaa kissalle."
   },
   "signs": {
     "en": [
@@ -168,6 +173,13 @@
       "Vejrtrækningsbesvær",
       "Pesen",
       "Chok"
+    ],
+    "fi": [
+      "Tiilenpunaiset ikenet",
+      "Laajentuneet pupillit",
+      "Hengitysvaikeudet",
+      "Läähätys",
+      "Sokki"
     ]
   },
   "what_to_do": {
@@ -183,7 +195,8 @@
     "pl": "Jeśli kot przegryzł lub połknął pestkę albo nasiono, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co zjadł, ile i kiedy. Nie czekaj, aż pojawią się objawy, i nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud kočka pecku nebo semeno okousala či spolkla, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co snědla, kolik a kdy. Nečekejte, až se objeví příznaky, a nesnažte se u kočky doma vyvolat zvracení.",
     "sv": "Kontakta direkt din veterinär eller en giftrådgivning för djur om katten har tuggat på eller svalt en kärna, sten eller ett frö. Notera vad den åt, hur mycket och när. Vänta inte på att symtom ska visa sig, och försök inte få katten att kräkas hemma.",
-    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din kat har tygget på eller slugt en sten eller kerne. Skriv ned hvad den har spist, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op."
+    "da": "Kontakt straks din dyrlæge eller en giftrådgivning for dyr hvis din kat har tygget på eller slugt en sten eller kerne. Skriv ned hvad den har spist, hvor meget og hvornår. Vent ikke på symptomer, og prøv ikke selv at få katten til at kaste op.",
+    "fi": "Ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, jos kissasi on pureskellut tai niellyt kiven tai siemenen. Kirjaa ylös, mitä se söi, kuinka paljon ja milloin. Älä odota oireita äläkä yritä itse oksennuttaa kissaasi."
   },
   "serving": null,
   "child": {
@@ -199,7 +212,8 @@
     "pl": "Pestki owoców nie są bezpieczne dla kotów. Jeśli kotek jakąś przegryzie, powiedz dorosłemu.",
     "cs": "Ovocné pecky nejsou pro kočky bezpečné. Kdyby nějakou kočička okusovala, řekni to dospělému.",
     "sv": "Stenar och kärnor från frukt är inte säkra för katter. Tuggar katten på en, säg till en vuxen.",
-    "da": "Frugtsten er ikke sikre for katte. Hvis katten tygger på en, så sig det til en voksen."
+    "da": "Frugtsten er ikke sikre for katte. Hvis katten tygger på en, så sig det til en voksen.",
+    "fi": "Hedelmien kivet eivät ole turvallisia kissoille. Jos kisu pureskelee sellaista, kerro aikuiselle."
   },
   "faq": [
     {
@@ -216,7 +230,8 @@
         "pl": "Jakich owoców to dotyczy?",
         "cs": "Kterých druhů ovoce se to týká?",
         "sv": "Vilka frukter gäller det?",
-        "da": "Hvilke frugter gælder det?"
+        "da": "Hvilke frugter gælder det?",
+        "fi": "Mitä hedelmiä tämä koskee?"
       },
       "a": {
         "en": "The ASPCA lists cherry, peach, plum and apricot as toxic to cats, and for each one it says the stems, leaves and seeds contain cyanide.",
@@ -231,7 +246,8 @@
         "pl": "ASPCA wymienia czereśnię, brzoskwinię, śliwę i morelę jako toksyczne dla kotów i przy każdej z nich podaje, że łodygi, liście i nasiona zawierają cyjanek.",
         "cs": "ASPCA uvádí třešeň, broskvoň, slivoň a meruňku jako toxické pro kočky a u každé z nich uvádí, že stonky, listy a semena obsahují kyanid.",
         "sv": "ASPCA anger körsbär, persika, plommon och aprikos som giftiga för katter och skriver för var och en att stjälkar, blad och frön innehåller cyanid.",
-        "da": "ASPCA angiver kirsebær, fersken, blomme og abrikos som giftige for katte, og for hver af dem siger organisationen at stilkene, bladene og kernerne indeholder cyanid."
+        "da": "ASPCA angiver kirsebær, fersken, blomme og abrikos som giftige for katte, og for hver af dem siger organisationen at stilkene, bladene og kernerne indeholder cyanid.",
+        "fi": "ASPCA luokittelee kirsikan, persikan, luumun ja aprikoosin kissoille myrkyllisiksi, ja jokaisesta kasvista se toteaa, että varret, lehdet ja siemenet sisältävät syanidia."
       }
     }
   ],
@@ -362,6 +378,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3ffcfcf619af9da2c2602d5c508b0c2d26ae1fda720be7e1c3ed1cc18380c99f"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e4a1540067c94af4b8f8986ce51c4cf1098e507177bdf499371a4c08372414bd"
     }
   }
 }
