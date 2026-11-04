@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "8527e75c4237764e01a59202ec21e535e6a421725dd052007705deb8cb7892e2"
+      "sha256": "ad3317a53eddc46a9faf0a8b0c186527dfff4eff927111c0a364a8a7132dda08"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "8f0ee6bd84f1995a57503c767d7287bf769187c82ee4a9d548ae3101cd22c992"
+      "sha256": "cc18dd305fa312027091ab41d968faac71a29c4a2851c53ffd73d49e096c6a91"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "c597780130bea0d711ebe7563587cabff557668e6c98edaa6335d57a6aff6fb0"
+      "sha256": "2f9d02bb0ac809ec7f98e5d4bf3bd85a0d91e26728089f735d1a135cfbc344ba"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,20 +40,20 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "069999f928fb636b134ac26b021575c18af9db994dce9b4cc0ebd0d9c0bd30f8"
+      "sha256": "e5058c8ae19ccb609fdcf27b6beaa58c858e8d734409a4c30f2ad5297337c497"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d2c5f5106d58631ef34affbdb95f0f814159cbb09136d9682a8ddf7f9a7f33d8"
+      "sha256": "a36ca37aac2cc85499f4b3ad8d91bd3d41a09660045aa2a75f7ecf13e349cd6d"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "1aae8b896651997841b46818d06b9025b94a77aacd597e55bac21e107ce14d5f"
+      "sha256": "bade4b9698cdaa8ff5aa53f35e4c723d732ea41bd4f189f0c7ab1f0666e553f7"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
-      "sha256": "ebf5b8b3feccff73fc1ff0784e414123aa25fe1ff64899b69c3decb89ef26db4"
+      "sha256": "c8557cf3b2ca8db15f99603b847762b986b08867e73d8bc523071cd55d3ba6d3"
     },
     "app_release": {
       "path": "docs/research/app-release.json",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "8c35921052584be83e7583078ab93beeef07bc2fd93d4ff4c9d9c934fcaab1de"
+      "sha256": "b48058e9d5b719456e9320afa2888e15d72d9284a153aa368b41db1fb2d9a09d"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 85,
+      "breed_count": 86,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -51556,6 +51556,603 @@
       ]
     },
     {
+      "id": "chow_chow",
+      "species": "dog",
+      "order": 85,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Chow Chow",
+        "sl": "Čau čau"
+      },
+      "slug": {
+        "en": "chow-chow",
+        "sl": "cau-cau"
+      },
+      "synonyms": {
+        "en": [
+          "Chow",
+          "Chow-Chow"
+        ],
+        "sl": [
+          "chow chow",
+          "čau-čau",
+          "čau"
+        ]
+      },
+      "facets": {
+        "size": "large",
+        "exercise": "h1_2",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "large",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              48,
+              56
+            ],
+            "female": [
+              46,
+              51
+            ]
+          },
+          "source_ids": [
+            "S696"
+          ],
+          "ref": "chow_chow.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              20,
+              30
+            ],
+            "female": [
+              20,
+              30
+            ]
+          },
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            15,
+            18
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "chow_chow.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "less_than",
+          "value": 10,
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S701"
+          ],
+          "ref": "chow_chow.lifespan.petmd",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "at_least",
+          "value": 60,
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "proposed_game_parameters.chow_chow.exercise_minutes_adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "yes",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.suitability.pdsa_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 76,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "chow_chow.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 205,
+            "group": 5,
+            "section": 5,
+            "origin": "CN"
+          },
+          "source_ids": [
+            "S697"
+          ],
+          "ref": "chow_chow.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "shedding": 9,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_elbow_dysplasia",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.hips_elbows",
+          "confidence": "medium"
+        },
+        {
+          "key": "bloat_gdv",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.gdv",
+          "confidence": "high"
+        },
+        {
+          "key": "entropion",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.entropion",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_fold_infections",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.skin_folds",
+          "confidence": "high"
+        },
+        {
+          "key": "panosteitis",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.panosteitis",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S700"
+          ],
+          "ref": "chow_chow.health.hypothyroidism",
+          "confidence": "low"
+        }
+      ],
+      "suitability": {
+        "suits": [],
+        "consider": [
+          {
+            "tag": "not_for_small_children",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.children"
+            ]
+          },
+          {
+            "tag": "independent_experienced_owner",
+            "source_ids": [
+              "S696",
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.experienced_owner",
+              "chow_chow.behaviour.temperament"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.time_alone"
+            ]
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "heat_sensitive",
+            "source_ids": [
+              "S701"
+            ],
+            "refs": [
+              "chow_chow.exercise.petmd_heat"
+            ]
+          },
+          {
+            "tag": "eyelid_problems",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.health.entropion"
+            ]
+          },
+          {
+            "tag": "sensitive_skin",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.health.skin_folds"
+            ]
+          },
+          {
+            "tag": "shorter_lifespan",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.lifespan.pdsa"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.suitability.pdsa_shedding"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S700",
+              "S701"
+            ],
+            "refs": [
+              "chow_chow.suitability.pdsa_grooming",
+              "chow_chow.suitability.petmd_grooming"
+            ]
+          },
+          {
+            "tag": "chases_small_pets",
+            "source_ids": [
+              "S700"
+            ],
+            "refs": [
+              "chow_chow.behaviour.other_pets"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 0.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.chow_chow.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S700"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S700 'minimum … one hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.chow_chow.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.chow_chow.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S700"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.chow_chow.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 0.5 (Coren rank 76, Lowest, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.chow_chow.grooming",
+            "basis_source_ids": [
+              "S700"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »brushing every day«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S700"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S696",
+        "S697",
+        "S700",
+        "S701",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -57070,6 +57667,34 @@
       "publisher": "PetMD — Virginia LaMon, DVM (2023-03-17)",
       "title": "Pekingese",
       "url": "https://www.petmd.com/dog/breeds/pekingese"
+    },
+    {
+      "id": "S696",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 205 — Chow Chow (English PDF, official valid standard 08.09.2026)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/205g05-en.pdf"
+    },
+    {
+      "id": "S697",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "Breeds nomenclature — Chow Chow (205)",
+      "url": "https://fci.be/en/nomenclature/CHOW-CHOW-205.html"
+    },
+    {
+      "id": "S700",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Chow Chow breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/chow-chow"
+    },
+    {
+      "id": "S701",
+      "tier": "B",
+      "publisher": "PetMD — Autumn Madden, DVM, reviewed by Teresa Manucy, DVM (updated 2025-10-16)",
+      "title": "Chow Chow Dog Breed: Health, Care, and Training",
+      "url": "https://www.petmd.com/dog/breeds/chow-chow"
     },
     {
       "id": "C1",

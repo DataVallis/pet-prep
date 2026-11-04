@@ -475,6 +475,7 @@ const SPECIES = [
       { id: 'irish_setter', synonyms: { en: ['Irish Red Setter', 'Red Setter'], sl: ['irski rdeči seter', 'rdeči seter', 'seter'] } },
       { id: 'anatolian_shepherd_dog', synonyms: { en: ['Anatolian Shepherd', 'Kangal Shepherd Dog', 'Karabash'], sl: ['anatolski pastirski pes', 'kangal', 'kangalski ovčar'] } },
       { id: 'pekingese', synonyms: { en: ['Peke', 'Pekinese', 'Lion Dog'], sl: ['pekinez', 'pekinški pes', 'peke'] } },
+      { id: 'chow_chow', synonyms: { en: ['Chow', 'Chow-Chow'], sl: ['chow chow', 'čau-čau', 'čau'] } },
     ],
   },
   {
@@ -2429,6 +2430,28 @@ const DOG_FACTS = {
       ['dental_disease_home_brushing', 'health.dental'],
     ],
   },
+  // M5-R10-92. The RKC page was not reachable → PDSA (S700): average weight 20–30 kg, lifespan 'Under 10 years' + PetMD
+  // eight to 12 years (S701), exercise 'minimum 1 hour' (at_least), coat 'Medium', grooming 'brushing every day' (Every day),
+  // shedding PDSA. Height FCI-Standard N° 205 (S696). Coren rank 76. FCI origin China (CN).
+  // Not exported: lifespan.mcmillan_2024 (null, 12.1 y only via Wikipedia) / senior_from, health.cruciate (name only). No new health key.
+  chow_chow: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'less_than'], ['lifespan.petmd', 'span']],
+    exercise: [['@proposed_game_parameters.chow_chow.exercise_minutes_adult', 'at_least']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: ['suitability.pdsa_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips_elbows'],
+      ['bloat_gdv', 'health.gdv'],
+      ['entropion', 'health.entropion'],
+      ['skin_fold_infections', 'health.skin_folds'],
+      ['panosteitis', 'health.panosteitis'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+    ],
+  },
 
 
 };
@@ -3187,6 +3210,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.pekingese.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.pekingese.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.pekingese.exercise_minutes_senior',
+  },
+  chow_chow: {
+    adult_minutes: ['proposed_game_parameters.chow_chow.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.chow_chow.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.chow_chow.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.chow_chow.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.chow_chow.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.chow_chow.exercise_minutes_senior',
   },
 
 
