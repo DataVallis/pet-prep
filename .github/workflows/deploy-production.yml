@@ -729,10 +729,14 @@ jobs:
   # commit (a manual deploy also fires workflow_run). continue-on-error: a failed dispatch
   # must not turn the deploy run red — ci-plan.sh, daily-deploy.sh and the OTA plan find the
   # last production deploy among the SUCCESSFUL Run workflow runs.
+  # always(): the implicit success() looks at every TRANSITIVE ancestor, and on a reuse run
+  # suites behind ci-ok are skipped — so `needs.deploy.result == 'success'` alone skipped
+  # this job after a green deploy (run 41914978019, 491e9585, 2026-11-04). Same trap as the
+  # deploy job above; ci-plan.test.sh checks every job for it.
   mobile-ota:
     name: Mobile OTA (after the production deploy)
     needs: [deploy]
-    if: needs.deploy.result == 'success'
+    if: always() && needs.deploy.result == 'success'
     continue-on-error: true
     runs-on: ubuntu-latest
     timeout-minutes: 5

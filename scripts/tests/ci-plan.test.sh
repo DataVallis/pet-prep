@@ -306,6 +306,42 @@ for want in "!cancelled()" "needs.plan.result == 'success'" "needs.ci-ok.result 
 done
 case "$deploy_if" in *"'push'"*) r=1 ;; *) r=0 ;; esac
 check "deploy if: a push can never deploy (D18)" 0 "$r"
+ota_if="$(job_if mobile-ota)"
+for want in "always()" "needs.deploy.result == 'success'"; do
+  case "$ota_if" in *"$want"*) r=0 ;; *) r=1 ;; esac
+  check "mobile-ota if: has $want (run 41914978019)" 0 "$r"
+done
+
+# Every job: a condition WITHOUT a status function (always() / !cancelled() / failure() /
+# cancelled()) — or no condition at all — carries the implicit success(), which is false as
+# soon as ANY transitive ancestor was skipped. Such a job may only have ancestors that never
+# skip (no `if:`) or that it requires itself (`needs.X.result == 'success'`, a direct need).
+# Prints the offending "job<-ancestor" pairs, one per line.
+implicit_success_traps() { # implicit_success_traps WORKFLOW_FILE
+  local wf="$1" j a jif
+  local -A needs=() cond=() ifs=()
+  while read -r j; do
+    needs[$j]="$(awk -v job="^  $j:\$" '$0 ~ job {d=1; next} d&&/^  [a-z0-9_-]+:/{exit} d&&/^    needs:/{sub(/^    needs:/,""); gsub(/[][,]/," "); print}' "$wf")"
+    ifs[$j]="$(WFFILE="$wf" job_if "$j")"
+    if [ -n "${ifs[$j]}" ]; then cond[$j]=1; else cond[$j]=0; fi
+  done < <(awk '/^jobs:/{x=1;next} x&&/^  [a-z0-9_-]+:$/{sub(/^  /,"");sub(/:$/,"");print}' "$wf")
+  ancestors() { local x; for x in ${needs[$1]}; do echo "$x"; ancestors "$x"; done; }
+  for j in "${!needs[@]}"; do
+    jif="${ifs[$j]}"
+    case "$jif" in *"always()"*|*"cancelled()"*|*"failure()"*) continue ;; esac
+    for a in $(ancestors "$j" | sort -u); do
+      [ "${cond[$a]}" = 1 ] || continue
+      case " ${needs[$j]} " in *" $a "*) case "$jif" in *"needs.$a.result == 'success'"*) continue ;; esac ;; esac
+      echo "$j<-$a"
+    done
+  done | sort
+}
+traps="$(implicit_success_traps "$WFFILE")"
+[ -z "$traps" ] || echo "  implicit success() traps: $(echo "$traps" | tr '\n' ' ')"
+check "no job inherits a skipped ancestor through the implicit success()" "" "$traps"
+sed "s/^    if: always() && needs.deploy.result == 'success'$/    if: needs.deploy.result == 'success'/" "$WFFILE" > "$TMP/wf-old-ota.yml"
+case "$(implicit_success_traps "$TMP/wf-old-ota.yml")" in *"mobile-ota<-ci-ok"*) r=0 ;; *) r=1 ;; esac
+check "the trap check flags the old mobile-ota condition (run 41914978019)" 0 "$r"
 r=1; grep -q '^    name: Deploy to Hetzner Production$' "$WFFILE" && r=0
 check "production job keeps its name (ci-plan.sh base lookup)" 0 "$r"
 r=0; grep -qE '^  deploy-dev:|vars\.DEV_HOST' "$WFFILE" && r=1
