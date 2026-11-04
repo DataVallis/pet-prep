@@ -12,7 +12,8 @@
     "pt": "Tâmaras",
     "nl": "Dadels",
     "pl": "Daktyle",
-    "cs": "Datle"
+    "cs": "Datle",
+    "sv": "Dadlar"
   },
   "question": {
     "en": "Can dogs eat dates?",
@@ -25,7 +26,8 @@
     "pt": "Os cães podem comer tâmaras?",
     "nl": "Mogen honden dadels eten?",
     "pl": "Czy psy mogą jeść daktyle?",
-    "cs": "Mohou psi jíst datle?"
+    "cs": "Mohou psi jíst datle?",
+    "sv": "Får hundar äta dadlar?"
   },
   "url_slug": {
     "en": "dates",
@@ -38,7 +40,8 @@
     "pt": "tamaras",
     "nl": "dadels",
     "pl": "daktyle",
-    "cs": "datle"
+    "cs": "datle",
+    "sv": "dadlar"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "pt": "Sim, os cães podem comer tâmaras com moderação, como guloseima ocasional. Tira sempre primeiro o caroço, porque é um perigo de engasgo, e dá pedaços pequenos em vez do fruto inteiro. As tâmaras são ricas em açúcar e fibra, por isso demasiadas podem fazer mal ao estômago.",
     "nl": "Ja, met mate: af en toe een dadel als snoepje. Haal eerst altijd de pit eruit, want die vormt een verstikkingsgevaar, en geef kleine stukjes in plaats van de hele vrucht. Dadels bevatten veel suiker en vezels, dus te veel kan de maag van streek maken.",
     "pl": "Tak, psy mogą jeść daktyle z umiarem, jako okazjonalny smakołyk. Zawsze najpierw usuń pestkę, bo grozi zadławieniem, i podawaj małe kawałki, a nie cały owoc. Daktyle zawierają dużo cukru i błonnika, więc zbyt duża porcja może rozstroić żołądek.",
-    "cs": "Ano, psi mohou datle jíst s mírou, jako příležitostný pamlsek. Vždy nejdřív odstraňte pecku, protože by se pes mohl udusit, a dávejte malé kousky, ne celý plod. Datle obsahují hodně cukru a vlákniny, takže větší množství může psovi podráždit žaludek."
+    "cs": "Ano, psi mohou datle jíst s mírou, jako příležitostný pamlsek. Vždy nejdřív odstraňte pecku, protože by se pes mohl udusit, a dávejte malé kousky, ne celý plod. Datle obsahují hodně cukru a vlákniny, takže větší množství může psovi podráždit žaludek.",
+    "sv": "Ja, hundar kan äta dadlar med måtta, som en godbit då och då. Ta alltid bort kärnan först, eftersom den är en kvävningsrisk, och ge små bitar i stället för hela frukten. Dadlar innehåller mycket socker och fibrer, så för många kan ge orolig mage."
   },
   "why": {
     "en": "Dates aren't highly toxic like grapes, but they shouldn't be a go-to treat. The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed. Dates are high in sugar and calories, which can quickly add weight when overfed, and their high fibre content can lead to diarrhoea or constipation.",
@@ -65,7 +69,8 @@
     "pt": "Ao contrário das uvas, as tâmaras não são altamente tóxicas, mas não devem ser a guloseima de eleição. O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido. As tâmaras são ricas em açúcar e calorias, o que pode fazer o cão ganhar peso depressa se comer demais, e o seu elevado teor de fibra pode causar diarreia ou prisão de ventre.",
     "nl": "Dadels zijn niet zo giftig als druiven, maar ze zijn geen standaardsnoepje. De pit is niet giftig, maar vormt wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als je hond hem doorslikt. Dadels bevatten veel suiker en calorieën, waardoor een hond snel aankomt als hij er te veel van krijgt, en door het hoge vezelgehalte kunnen ze diarree of obstipatie veroorzaken.",
     "pl": "Daktyle nie są silnie toksyczne jak winogrona, ale nie powinny być smakołykiem podawanym na co dzień. Pestka nie jest toksyczna, ale grozi zadławieniem, a po połknięciu może spowodować niedrożność jelit. Daktyle mają dużo cukru i kalorii, przez co przekarmiony pies szybko tyje, a duża zawartość błonnika może wywołać biegunkę lub zaparcia.",
-    "cs": "Datle nejsou vysoce toxické jako hrozny, ale neměly by se stát oblíbeným pamlskem. Pecka není jedovatá, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev. Datle mají hodně cukru a kalorií, takže při překrmování pes rychle přibere, a vysoký obsah vlákniny může vést k průjmu nebo zácpě."
+    "cs": "Datle nejsou vysoce toxické jako hrozny, ale neměly by se stát oblíbeným pamlskem. Pecka není jedovatá, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev. Datle mají hodně cukru a kalorií, takže při překrmování pes rychle přibere, a vysoký obsah vlákniny může vést k průjmu nebo zácpě.",
+    "sv": "Till skillnad från vindruvor är dadlar inte starkt giftiga, men de bör inte vara det man oftast ger som godbit. Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs. Dadlar innehåller mycket socker och kalorier, vilket snabbt ger viktuppgång om hunden får för mycket, och den höga fiberhalten kan leda till diarré eller förstoppning."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "pt": "Pergunta ao teu veterinário antes de começares a dar tâmaras. Depois de o teu cão comer algumas, fica atento a vómitos, diarreia ou prisão de ventre.",
     "nl": "Vraag je dierenarts om advies voordat je dadels gaat geven. Let na het eten op braken, diarree of obstipatie.",
     "pl": "Zanim zaczniesz podawać daktyle, zapytaj weterynarza. Po zjedzeniu daktyla obserwuj psa, czy nie pojawią się wymioty, biegunka lub zaparcia.",
-    "cs": "Než psovi začnete datle dávat, poraďte se s veterinářem. Poté, co pes nějaké snědl, sledujte, jestli nezvrací a jestli nemá průjem nebo zácpu."
+    "cs": "Než psovi začnete datle dávat, poraďte se s veterinářem. Poté, co pes nějaké snědl, sledujte, jestli nezvrací a jestli nemá průjem nebo zácpu.",
+    "sv": "Fråga veterinären innan du börjar ge dadlar. Håll utkik efter kräkningar, diarré eller förstoppning efter att hunden har ätit några."
   },
   "serving": {
     "en": "Pit removed, cut into small pieces, as an occasional treat only.",
@@ -92,7 +98,8 @@
     "pt": "Sem caroço, cortadas em pedaços pequenos, só como guloseima ocasional.",
     "nl": "Zonder pit, in kleine stukjes, alleen af en toe als snoepje.",
     "pl": "Bez pestki, pokrojony na małe kawałki, wyłącznie jako okazjonalny smakołyk.",
-    "cs": "Bez pecky, nakrájené na malé kousky, jen jako příležitostný pamlsek."
+    "cs": "Bez pecky, nakrájené na malé kousky, jen jako příležitostný pamlsek.",
+    "sv": "Utan kärna, skuren i små bitar, bara som en godbit då och då."
   },
   "child": {
     "en": "Dogs can have a small piece of date sometimes. A grown-up takes out the hard stone first.",
@@ -105,7 +112,8 @@
     "pt": "Os cães podem comer de vez em quando um pedacinho de tâmara. Um adulto tira primeiro o caroço duro.",
     "nl": "Honden mogen soms een klein stukje dadel. Een volwassene haalt eerst de harde pit eruit.",
     "pl": "Psy mogą czasem dostać mały kawałek daktyla. Dorosły najpierw wyjmuje twardą pestkę.",
-    "cs": "Pes může někdy dostat malý kousek datle. Tvrdou pecku nejdřív vyndá dospělý."
+    "cs": "Pes může někdy dostat malý kousek datle. Tvrdou pecku nejdřív vyndá dospělý.",
+    "sv": "Hundar kan få en liten bit dadel ibland. En vuxen tar först bort den hårda kärnan."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "pt": "O caroço da tâmara é venenoso para os cães?",
         "nl": "Is een dadelpit giftig voor honden?",
         "pl": "Czy pestka daktyla jest toksyczna dla psów?",
-        "cs": "Je datlová pecka pro psy jedovatá?"
+        "cs": "Je datlová pecka pro psy jedovatá?",
+        "sv": "Är en dadelkärna giftig för hundar?"
       },
       "a": {
         "en": "The pit is not toxic, but it is a choking hazard and can cause an intestinal blockage if swallowed, so always remove it.",
@@ -133,7 +142,8 @@
         "pt": "O caroço não é tóxico, mas é um perigo de engasgo e pode causar uma obstrução intestinal se for engolido, por isso tira-o sempre.",
         "nl": "De pit is niet giftig, maar wel een verstikkingsgevaar en kan een darmverstopping veroorzaken als hij wordt doorgeslikt. Haal hem er dus altijd uit.",
         "pl": "Pestka nie jest toksyczna, ale grozi zadławieniem, a po połknięciu może spowodować niedrożność jelit, więc zawsze ją usuwaj.",
-        "cs": "Pecka není toxická, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev, proto ji vždy odstraňte."
+        "cs": "Pecka není toxická, ale hrozí z ní udušení a po spolknutí může způsobit ucpání střev, proto ji vždy odstraňte.",
+        "sv": "Kärnan är inte giftig, men den är en kvävningsrisk och kan orsaka tarmstopp om den sväljs, så ta alltid bort den."
       }
     },
     {
@@ -148,7 +158,8 @@
         "pt": "Porque só um bocadinho?",
         "nl": "Waarom maar een beetje?",
         "pl": "Dlaczego tylko trochę?",
-        "cs": "Proč jen trochu?"
+        "cs": "Proč jen trochu?",
+        "sv": "Varför bara lite?"
       },
       "a": {
         "en": "Dates are high in calories and sugar, which can quickly add weight when overfed, and too much sugar can leave a dog weak and thirsty.",
@@ -161,7 +172,8 @@
         "pt": "As tâmaras são ricas em calorias e açúcar, o que pode fazer o cão ganhar peso depressa se comer demais, e açúcar a mais pode deixar o cão fraco e com muita sede.",
         "nl": "Dadels bevatten veel calorieën en suiker. Daar kan een hond snel van aankomen, en te veel suiker kan een hond zwak en dorstig maken.",
         "pl": "Daktyle mają dużo kalorii i cukru, przez co przekarmiony pies szybko tyje, a nadmiar cukru może sprawić, że pies będzie osłabiony i spragniony.",
-        "cs": "Datle mají hodně kalorií a cukru, takže při překrmování pes rychle přibere, a z přemíry cukru může být slabý a mít velkou žízeň."
+        "cs": "Datle mají hodně kalorií a cukru, takže při překrmování pes rychle přibere, a z přemíry cukru může být slabý a mít velkou žízeň.",
+        "sv": "Dadlar innehåller mycket kalorier och socker, vilket snabbt ger viktuppgång om hunden får för mycket, och för mycket socker kan göra en hund orkeslös och törstig."
       }
     },
     {
@@ -176,7 +188,8 @@
         "pt": "Posso dar tâmaras secas?",
         "nl": "Zijn gedroogde dadels goed?",
         "pl": "Czy suszone daktyle są w porządku?",
-        "cs": "Jsou v pořádku sušené datle?"
+        "cs": "Jsou v pořádku sušené datle?",
+        "sv": "Är torkade dadlar okej?"
       },
       "a": {
         "en": "Dried dates are higher in sugar and calories, and they still contain the hard pit, so remove it before sharing a small piece.",
@@ -189,7 +202,8 @@
         "pt": "As tâmaras secas têm mais açúcar e calorias e continuam a ter o caroço duro, por isso tira-o antes de partilhares um pedacinho.",
         "nl": "Gedroogde dadels bevatten meer suiker en calorieën en hebben nog steeds de harde pit. Haal die eruit voordat je een klein stukje geeft.",
         "pl": "Suszone daktyle mają więcej cukru i kalorii i też zawierają twardą pestkę, więc wyjmij ją, zanim podzielisz się małym kawałkiem.",
-        "cs": "Sušené datle mají ještě víc cukru a kalorií a pořád mají tvrdou pecku, proto ji odstraňte, než psovi dáte malý kousek."
+        "cs": "Sušené datle mají ještě víc cukru a kalorií a pořád mají tvrdou pecku, proto ji odstraňte, než psovi dáte malý kousek.",
+        "sv": "Torkade dadlar innehåller ännu mer socker och kalorier, och de har fortfarande den hårda kärnan, så ta bort den innan du delar med dig av en liten bit."
       }
     }
   ],
@@ -337,6 +351,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dfa4b1d861de5bb6587ed67b33d417b3937da1994646fa0ab5bb99553cbee8cc"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0b9317ae742f3bd178075929287bcd4d7221929f41bb80d63f1e776de1e5ba12"
     }
   }
 }

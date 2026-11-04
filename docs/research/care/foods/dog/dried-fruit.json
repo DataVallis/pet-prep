@@ -12,7 +12,8 @@
     "pt": "Fruta desidratada",
     "nl": "Gedroogd fruit",
     "pl": "Suszone owoce",
-    "cs": "Sušené ovoce"
+    "cs": "Sušené ovoce",
+    "sv": "Torkad frukt"
   },
   "question": {
     "en": "Can dogs eat dried fruit?",
@@ -25,7 +26,8 @@
     "pt": "Os cães podem comer fruta desidratada?",
     "nl": "Mogen honden gedroogd fruit eten?",
     "pl": "Czy psy mogą jeść suszone owoce?",
-    "cs": "Mohou psi jíst sušené ovoce?"
+    "cs": "Mohou psi jíst sušené ovoce?",
+    "sv": "Får hundar äta torkad frukt?"
   },
   "url_slug": {
     "en": "dried-fruit",
@@ -38,7 +40,8 @@
     "pt": "fruta-desidratada",
     "nl": "gedroogd-fruit",
     "pl": "suszone-owoce",
-    "cs": "susene-ovoce"
+    "cs": "susene-ovoce",
+    "sv": "torkad-frukt"
   },
   "level": "toxic",
   "answer": {
@@ -52,7 +55,8 @@
     "pt": "Depende da fruta, e as misturas são arriscadas. As passas, as sultanas e as passas de Corinto são uvas secas e são venenosas para os cães, mesmo em quantidades muito pequenas. Outras frutas desidratadas, como os figos e os pêssegos, podem ter muito açúcar, e as tâmaras secas continuam a ter caroço.",
     "nl": "Dat hangt af van het fruit, en mengsels zijn riskant. Rozijnen, sultanarozijnen en krenten zijn gedroogde druiven en giftig voor honden, zelfs in heel kleine hoeveelheden. Ander gedroogd fruit, zoals vijgen en perziken, kan veel suiker bevatten, en gedroogde dadels hebben nog steeds een pit.",
     "pl": "To zależy od owocu, a mieszanki są ryzykowne. Rodzynki, sułtanki i korynki to suszone winogrona i są toksyczne dla psów, nawet w bardzo małych ilościach. Inne suszone owoce, jak figi i brzoskwinie, mogą zawierać dużo cukru, a suszone daktyle nadal mają pestkę.",
-    "cs": "Záleží na druhu ovoce a směsi jsou riziková. Rozinky, sultánky a korintky jsou sušené hrozny a pro psy jsou jedovaté už ve velmi malém množství. Jiné sušené ovoce, například fíky a broskve, může mít hodně cukru a sušené datle mohou mít pořád pecku."
+    "cs": "Záleží na druhu ovoce a směsi jsou riziková. Rozinky, sultánky a korintky jsou sušené hrozny a pro psy jsou jedovaté už ve velmi malém množství. Jiné sušené ovoce, například fíky a broskve, může mít hodně cukru a sušené datle mohou mít pořád pecku.",
+    "sv": "Det beror på frukten, och blandningar är riskabla. Russin, sultanrussin och korinter är torkade vindruvor och giftiga för hundar, även i mycket små mängder. Annan torkad frukt, som fikon och persikor, kan innehålla mycket socker, och torkade dadlar har fortfarande en kärna."
   },
   "why": {
     "en": "Grapes, raisins, sultanas and currants are all potentially poisonous to dogs; it is impossible to know whether a dog will be badly affected, and some dogs fall ill after very small amounts, especially of the dried fruits. Dried cranberries sometimes come mixed with raisins. Dried figs contain much more concentrated sugar because the water has been removed, and dehydrated peaches often contain excess sugar. Because a dried fruit mix can hide raisins, which need a vet straight away, we use the stricter level and rate dried fruit as toxic overall, like raisins.",
@@ -65,7 +69,8 @@
     "pt": "As uvas, as passas, as sultanas e as passas de Corinto são todas potencialmente venenosas para os cães; é impossível saber se um cão vai ficar gravemente afetado, e alguns cães adoecem depois de quantidades muito pequenas, sobretudo das frutas desidratadas. Os arandos desidratados vêm por vezes misturados com passas. Os figos secos têm o açúcar muito mais concentrado porque se retirou a água, e os pêssegos desidratados têm muitas vezes açúcar em excesso. Como uma mistura de fruta desidratada pode esconder passas, que precisam de atendimento veterinário imediato, usamos o nível mais rigoroso e classificamos a fruta desidratada, em geral, como tóxica, tal como as passas.",
     "nl": "Druiven, rozijnen, sultanarozijnen en krenten zijn allemaal mogelijk giftig voor honden; je kunt niet voorspellen of een hond er ernstig ziek van wordt, en sommige honden worden al ziek van heel kleine hoeveelheden, vooral van gedroogd fruit. Gedroogde veenbessen zitten soms vermengd met rozijnen. Gedroogde vijgen bevatten veel meer geconcentreerde suiker omdat het water is onttrokken, en gedroogde perziken bevatten vaak te veel suiker. Omdat een mengsel van gedroogd fruit rozijnen kan verbergen, waarbij je direct naar de dierenarts moet, volgen we het strengere advies en beoordelen we gedroogd fruit als giftig, net als rozijnen.",
     "pl": "Winogrona, rodzynki, sułtanki i korynki są potencjalnie toksyczne dla psów; nie da się przewidzieć, czy pies ciężko zachoruje, a niektóre psy chorują po bardzo małych ilościach, zwłaszcza suszonych owoców. Suszona żurawina bywa mieszana z rodzynkami. W suszonych figach cukier jest znacznie bardziej skoncentrowany, bo usunięto z nich wodę, a suszone brzoskwinie często mają nadmiar cukru. Ponieważ w mieszance suszonych owoców mogą kryć się rodzynki, które wymagają natychmiastowej wizyty u weterynarza, stosujemy surowszą ocenę i uznajemy suszone owoce za toksyczne, tak jak rodzynki.",
-    "cs": "Hrozny, rozinky, sultánky a korintky mohou být pro psy jedovaté; nelze předem vědět, jak vážně pes zareaguje, a někteří psi onemocní už po velmi malém množství, zejména sušeného ovoce. Sušené brusinky se někdy prodávají smíchané s rozinkami. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda, a sušené broskve často obsahují nadbytek cukru. Protože se ve směsi sušeného ovoce mohou ukrývat rozinky, při nichž je nutné okamžitě k veterináři, volíme přísnější hodnocení a sušené ovoce celkově řadíme mezi toxické, stejně jako rozinky."
+    "cs": "Hrozny, rozinky, sultánky a korintky mohou být pro psy jedovaté; nelze předem vědět, jak vážně pes zareaguje, a někteří psi onemocní už po velmi malém množství, zejména sušeného ovoce. Sušené brusinky se někdy prodávají smíchané s rozinkami. Sušené fíky mají mnohem vyšší koncentraci cukru, protože z nich byla odstraněna voda, a sušené broskve často obsahují nadbytek cukru. Protože se ve směsi sušeného ovoce mohou ukrývat rozinky, při nichž je nutné okamžitě k veterináři, volíme přísnější hodnocení a sušené ovoce celkově řadíme mezi toxické, stejně jako rozinky.",
+    "sv": "Vindruvor, russin, sultanrussin och korinter är alla potentiellt giftiga för hundar; det går inte att veta om en hund blir allvarligt påverkad, och vissa hundar blir sjuka av mycket små mängder, särskilt av de torkade varianterna. Torkade tranbär säljs ibland blandade med russin. Torkade fikon innehåller mycket mer koncentrerat socker eftersom vattnet har tagits bort, och torkade persikor innehåller ofta för mycket socker. Eftersom en blandning av torkad frukt kan dölja russin, som kräver omedelbar veterinärvård, använder vi den strängare nivån och bedömer torkad frukt som giftig i sin helhet, precis som russin."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Krev ve stolici",
       "Malátnost",
       "Nechuť k jídlu"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Diarré",
+      "Ont i magen",
+      "Blod i avföringen",
+      "Orkeslöshet",
+      "Sämre matlust"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "pt": "Se o teu cão comeu passas, sultanas, passas de Corinto ou uma mistura de fruta desidratada que as possa conter, contacta imediatamente o teu veterinário. Não esperes pelos sinais.",
     "nl": "Heeft je hond rozijnen, sultanarozijnen, krenten of een mengsel van gedroogd fruit gegeten waar die tussen kunnen zitten? Neem dan meteen contact op met je dierenarts. Wacht niet af tot je verschijnselen ziet.",
     "pl": "Jeśli twój pies zjadł rodzynki, sułtanki, korynki albo mieszankę suszonych owoców, która mogła je zawierać, od razu skontaktuj się z weterynarzem. Nie czekaj na objawy.",
-    "cs": "Pokud váš pes snědl rozinky, sultánky, korintky nebo směs sušeného ovoce, která je může obsahovat, okamžitě se obraťte na veterináře. Nečekejte na příznaky."
+    "cs": "Pokud váš pes snědl rozinky, sultánky, korintky nebo směs sušeného ovoce, která je může obsahovat, okamžitě se obraťte na veterináře. Nečekejte na příznaky.",
+    "sv": "Om hunden har ätit russin, sultanrussin, korinter eller en blandning av torkad frukt som kan innehålla dem, kontakta veterinären direkt. Vänta inte på symtom."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "pt": "A fruta desidratada, como as passas, não é para cães. Mantém as misturas de petiscos longe do teu cão e avisa um adulto se ele comer alguma.",
     "nl": "Gedroogd fruit zoals rozijnen is niets voor honden. Houd het uit de buurt van je hond en vertel het een volwassene als hij er toch van eet.",
     "pl": "Suszone owoce, takie jak rodzynki, nie są dla psów. Trzymaj mieszanki przekąsek z dala od psa i powiedz dorosłemu, jeśli zje trochę.",
-    "cs": "Sušené ovoce, například rozinky, není pro psy. Směsi na svačinu měj mimo dosah psa. A kdyby nějakou snědl, řekni to dospělému."
+    "cs": "Sušené ovoce, například rozinky, není pro psy. Směsi na svačinu měj mimo dosah psa. A kdyby nějakou snědl, řekni to dospělému.",
+    "sv": "Torkad frukt som russin är inte för hundar. Håll snacksblandningar borta från hunden, och säg till en vuxen om den äter något."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "pt": "Que alimentos escondem uvas secas?",
         "nl": "In welk eten zitten gedroogde druiven verstopt?",
         "pl": "W jakich produktach ukrywają się suszone winogrona?",
-        "cs": "V jakých potravinách se ukrývají sušené hrozny?"
+        "cs": "V jakých potravinách se ukrývají sušené hrozny?",
+        "sv": "I vilken mat kan det finnas gömda torkade vindruvor?"
       },
       "a": {
         "en": "Raisins, sultanas and currants are often found in foods such as Christmas cake, hot cross buns and cookies, and dried cranberries are sometimes mixed with raisins.",
@@ -210,7 +226,8 @@
         "pt": "As passas, as sultanas e as passas de Corinto encontram-se muitas vezes em alimentos como o bolo de Natal, os hot cross buns (pãezinhos doces ingleses) e as bolachas, e os arandos desidratados vêm por vezes misturados com passas.",
         "nl": "Rozijnen, sultanarozijnen en krenten zitten vaak in kerstcake, paasbroodjes en koekjes, en gedroogde veenbessen zijn soms vermengd met rozijnen.",
         "pl": "Rodzynki, sułtanki i korynki często znajdziesz w wypiekach, takich jak świąteczny keks, słodkie bułeczki z bakaliami czy ciasteczka, a suszona żurawina bywa mieszana z rodzynkami.",
-        "cs": "Rozinky, sultánky a korintky bývají například ve vánočním koláči (Christmas cake), ve sladkých velikonočních houskách (hot cross buns) a v sušenkách, a sušené brusinky se někdy míchají s rozinkami."
+        "cs": "Rozinky, sultánky a korintky bývají například ve vánočním koláči (Christmas cake), ve sladkých velikonočních houskách (hot cross buns) a v sušenkách, a sušené brusinky se někdy míchají s rozinkami.",
+        "sv": "Russin, sultanrussin och korinter finns ofta i mat som julkaka, hot cross buns och kakor, och torkade tranbär är ibland blandade med russin."
       }
     },
     {
@@ -225,7 +242,8 @@
         "pt": "As outras frutas desidratadas são seguras?",
         "nl": "Is ander gedroogd fruit veilig?",
         "pl": "Czy inne suszone owoce są bezpieczne?",
-        "cs": "Je bezpečné i ostatní sušené ovoce?"
+        "cs": "Je bezpečné i ostatní sušené ovoce?",
+        "sv": "Är annan torkad frukt säker?"
       },
       "a": {
         "en": "Not as a regular treat. Dried figs and dehydrated peaches are high in sugar, and dried dates still contain a pit that must be removed.",
@@ -238,7 +256,8 @@
         "pt": "Não como guloseima habitual. Os figos secos e os pêssegos desidratados têm muito açúcar, e as tâmaras secas continuam a ter um caroço que tem de ser retirado.",
         "nl": "Niet als vast snoepje. Gedroogde vijgen en gedroogde perziken bevatten veel suiker, en gedroogde dadels hebben nog een pit die eruit moet.",
         "pl": "Nie jako stały smakołyk. Suszone figi i suszone brzoskwinie zawierają dużo cukru, a suszone daktyle nadal mają twardą pestkę, którą trzeba usunąć.",
-        "cs": "Jako pravidelný pamlsek ne. Sušené fíky a sušené broskve mají hodně cukru a v sušených datlích může být pořád pecka, kterou je nutné vyndat."
+        "cs": "Jako pravidelný pamlsek ne. Sušené fíky a sušené broskve mají hodně cukru a v sušených datlích může být pořád pecka, kterou je nutné vyndat.",
+        "sv": "Inte som en vanlig godbit. Torkade fikon och torkade persikor innehåller mycket socker, och torkade dadlar har fortfarande en kärna som måste tas bort."
       }
     }
   ],
@@ -383,6 +402,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1c20b81453a16b445fbf6f3ed708342b76a6e8039e47ce08cd4809a66d3a2681"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "46e257268b32295c71744f452b555239792f3017e1a434e278cb38dd71251799"
     }
   }
 }

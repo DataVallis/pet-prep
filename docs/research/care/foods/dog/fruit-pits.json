@@ -12,7 +12,8 @@
     "pt": "Caroços e sementes de fruta",
     "nl": "Fruitpitten en -stenen",
     "pl": "Pestki owoców",
-    "cs": "Ovocné pecky"
+    "cs": "Ovocné pecky",
+    "sv": "Fruktkärnor och stenar"
   },
   "question": {
     "en": "Can dogs eat fruit pits?",
@@ -25,7 +26,8 @@
     "pt": "Os cães podem comer caroços de fruta?",
     "nl": "Mogen honden fruitpitten eten?",
     "pl": "Czy psy mogą jeść pestki owoców?",
-    "cs": "Mohou psi jíst ovocné pecky?"
+    "cs": "Mohou psi jíst ovocné pecky?",
+    "sv": "Får hundar äta fruktkärnor?"
   },
   "url_slug": {
     "en": "fruit-pits",
@@ -38,7 +40,8 @@
     "pt": "carocos-e-sementes-de-fruta",
     "nl": "fruitpitten",
     "pl": "pestki-owocow",
-    "cs": "ovocne-pecky"
+    "cs": "ovocne-pecky",
+    "sv": "fruktkarnor-och-stenar"
   },
   "level": "dangerous",
   "answer": {
@@ -52,7 +55,8 @@
     "pt": "Não. Os caroços de frutas como cerejas, pêssegos e nectarinas nunca devem ser dados aos cães. Podem partir dentes, causar engasgo ou obstruir o intestino, e contêm uma pequena quantidade de cianeto. Retira sempre os caroços e as sementes antes de partilhares fruta.",
     "nl": "Nee. Pitten en stenen van fruit zoals kersen, perziken en nectarines mag je een hond nooit geven. Ze kunnen tanden breken, verstikking veroorzaken of de darmen blokkeren, en ze bevatten een kleine hoeveelheid cyanide. Haal altijd de pitten en zaden eruit voordat je fruit met je hond deelt.",
     "pl": "Nie. Pestek owoców takich jak czereśnie, brzoskwinie i nektarynki nigdy nie należy dawać psom. Mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a poza tym zawierają niewielką ilość cyjanku. Zawsze usuwaj pestki i nasiona, zanim podzielisz się owocem.",
-    "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka."
+    "cs": "Ne. Pecky třešní, broskví a nektarinek psům nikdy nedávejte. Mohou zlomit zuby, způsobit dušení nebo ucpat střeva a obsahují malé množství kyanidu. Než psovi dáte kousek ovoce, vždy odstraňte pecky i semínka.",
+    "sv": "Nej. Kärnor och stenar från frukter som körsbär, persikor och nektariner ska aldrig ges till hundar. De kan knäcka tänder, orsaka kvävning eller täppa till tarmen, och de innehåller lite cyanid. Ta alltid bort kärnor och frön innan du delar med dig av frukt."
   },
   "why": {
     "en": "Hard pits can fracture teeth, cause choking or obstruct the gut, and pits with rough edges can injure the food pipe as they are swallowed. The pit also contains a small amount of cyanide. Cyanide poisoning from stone fruits is rare, but pets can become ill after a tiny amount, so a broken-open pit is treated as urgent.",
@@ -65,7 +69,8 @@
     "pt": "Os caroços duros podem partir os dentes, causar engasgo ou obstruir o intestino, e os caroços com arestas ásperas podem ferir o esófago quando são engolidos. O caroço também contém uma pequena quantidade de cianeto. A intoxicação por cianeto causada por frutas de caroço é rara, mas os animais de estimação podem adoecer com uma quantidade minúscula, por isso um caroço partido é tratado como urgente.",
     "nl": "Harde pitten kunnen tanden breken, verstikking veroorzaken of de darmen afsluiten, en pitten met ruwe randen kunnen de slokdarm verwonden als ze worden doorgeslikt. In de pit zit ook een kleine hoeveelheid cyanide. Cyanidevergiftiging door steenfruit komt zelden voor, maar dieren kunnen ziek worden van een heel klein beetje, dus beschouwen we een opengebroken pit als een spoedgeval.",
     "pl": "Twarde pestki mogą złamać zęby, spowodować zadławienie lub zatkać jelita, a pestki o ostrych krawędziach mogą uszkodzić przełyk podczas połykania. Pestka zawiera też niewielką ilość cyjanku. Zatrucie cyjankiem po zjedzeniu pestkowców zdarza się rzadko, ale zwierzęta domowe mogą zachorować już po znikomej ilości, dlatego rozgryzioną pestkę traktuje się jako nagły przypadek.",
-    "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ."
+    "cs": "Tvrdé pecky mohou zlomit zuby, způsobit dušení nebo ucpat střeva a pecky s drsnými hranami mohou při polykání poranit jícen. Pecka také obsahuje malé množství kyanidu. Otrava kyanidem z peckovin je vzácná, ale zvířata mohou onemocnět už po nepatrném množství, proto se rozlomená pecka považuje za naléhavý případ.",
+    "sv": "Hårda kärnor kan spräcka tänder, orsaka kvävning eller täppa till tarmen, och kärnor med vassa kanter kan skada matstrupen när de sväljs. Kärnan innehåller också lite cyanid. Cyanidförgiftning av stenfrukt är sällsynt, men djur kan bli sjuka av en liten mängd, så en sönderbiten kärna ska behandlas som ett akutfall."
   },
   "signs": {
     "en": [
@@ -155,6 +160,14 @@
       "Potíže s vyprazdňováním",
       "Bolest břicha",
       "Potíže s dýcháním"
+    ],
+    "sv": [
+      "Kväljningar",
+      "Dregling",
+      "Kräkningar",
+      "Svårt att få ut avföring",
+      "Ont i magen",
+      "Svårt att andas"
     ]
   },
   "what_to_do": {
@@ -168,7 +181,8 @@
     "pt": "Liga imediatamente ao teu veterinário se o teu cão partir um caroço. Se o teu cão engoliu um caroço e mostra algum destes sinais, liga ao teu veterinário.",
     "nl": "Bel meteen je dierenarts als je hond een pit openbijt. Heeft je hond een pit doorgeslikt en krijgt hij een van deze verschijnselen, bel dan je dierenarts.",
     "pl": "Od razu zadzwoń do weterynarza, jeśli twój pies rozgryzie pestkę. Jeśli pies połknął pestkę i pojawił się któryś z tych objawów, zadzwoń do weterynarza.",
-    "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři."
+    "cs": "Pokud pes pecku rozkouše, ihned zavolejte veterináři. Pokud pes pecku spolkl a objeví se kterýkoli z těchto příznaků, také zavolejte veterináři.",
+    "sv": "Ring veterinären direkt om hunden har bitit sönder en kärna. Om hunden har svalt en kärna och visar något av de här tecknen, ring veterinären."
   },
   "serving": null,
   "child": {
@@ -182,7 +196,8 @@
     "pt": "Os caroços de fruta não são para cães. Deita-os no lixo, onde o teu cão não chegue, e avisa um adulto se o teu cão comer algum.",
     "nl": "Fruitpitten zijn niets voor honden. Gooi ze in de prullenbak, waar je hond er niet bij kan, en vertel het aan een volwassene als je hond er toch een eet.",
     "pl": "Pestki owoców nie są dla psów. Wyrzucaj je do kosza, do którego pies nie sięgnie, i powiedz dorosłemu, jeśli pies jakąś zje.",
-    "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému."
+    "cs": "Ovocné pecky nejsou pro psy. Vyhoď je do koše, kam pes nedosáhne, a když nějakou sní, řekni to dospělému.",
+    "sv": "Fruktstenar är inte för hundar. Släng dem i en soptunna som hunden inte kommer åt, och säg till en vuxen om hunden äter en."
   },
   "faq": [
     {
@@ -197,7 +212,8 @@
         "pt": "A fruta em si é segura?",
         "nl": "Is het fruit zelf wel goed?",
         "pl": "Czy sam owoc jest w porządku?",
-        "cs": "Je v pořádku samotné ovoce?"
+        "cs": "Je v pořádku samotné ovoce?",
+        "sv": "Är själva frukten okej?"
       },
       "a": {
         "en": "It depends on the fruit; see each fruit's page. In general, seeds, pits, cores, rinds and plant stems should be removed before feeding fruit to a dog.",
@@ -210,7 +226,8 @@
         "pt": "Depende da fruta; consulta a página de cada fruta. Em geral, as sementes, os caroços, os carolos, as cascas e os caules das plantas devem ser retirados antes de dar fruta a um cão.",
         "nl": "Dat hangt af van het fruit; kijk op de pagina van dat fruit. Verwijder in het algemeen zaden, pitten, klokhuizen, schillen en stelen voordat je een hond fruit geeft.",
         "pl": "To zależy od owocu; zobacz stronę danego owocu. Zasadniczo przed podaniem owocu psu należy usunąć nasiona, pestki, gniazda nasienne, skórki i szypułki.",
-        "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky."
+        "cs": "Záleží na druhu ovoce; podívejte se na stránku jednotlivého ovoce. Obecně je potřeba před podáním ovoce psovi odstranit semínka, pecky, ohryzky, kůru i stopky.",
+        "sv": "Det beror på frukten, så titta på respektive frukts sida. Som huvudregel bör frön, kärnor, kärnhus, skal och växtstjälkar tas bort innan hunden får frukt."
       }
     },
     {
@@ -225,7 +242,8 @@
         "pt": "Que frutas têm caroço?",
         "nl": "Welk fruit heeft pitten?",
         "pl": "Które owoce mają pestki?",
-        "cs": "Které ovoce má pecky?"
+        "cs": "Které ovoce má pecky?",
+        "sv": "Vilka frukter har kärna eller sten?"
       },
       "a": {
         "en": "Fruits like cherries, nectarines and peaches are called stone fruits. Like cherries, peach pits contain cyanide.",
@@ -238,7 +256,8 @@
         "pt": "Frutas como as cerejas, as nectarinas e os pêssegos chamam-se frutas de caroço. Tal como os caroços das cerejas, os caroços de pêssego contêm cianeto.",
         "nl": "Fruit zoals kersen, nectarines en perziken heet steenfruit. Net als bij kersen bevatten perzikpitten cyanide.",
         "pl": "Owoce takie jak czereśnie, nektarynki i brzoskwinie to tzw. pestkowce. Podobnie jak w czereśniach, pestki brzoskwini zawierają cyjanek.",
-        "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid."
+        "cs": "Ovoci, jako jsou třešně, nektarinky a broskve, se říká peckoviny. Stejně jako třešně obsahují i broskvové pecky kyanid.",
+        "sv": "Frukter som körsbär, nektariner och persikor kallas stenfrukter. Precis som körsbär innehåller persikokärnor cyanid."
       }
     }
   ],
@@ -356,6 +375,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a4d35ebb8e875a6eb93faefa1ae4bf930ccb44ac172c1caf47c9a7d5f44731d4"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "002e6bfef9b92a0ff7bc268a3e0f17c42c6b8ac0525af4cc7b0317a92e8bbda8"
     }
   }
 }
