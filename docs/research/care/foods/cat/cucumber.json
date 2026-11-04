@@ -1,0 +1,107 @@
+{
+  "slug": "cucumber",
+  "species": "cat",
+  "name": {
+    "en": "Cucumber",
+    "sl": "Kumare"
+  },
+  "question": {
+    "en": "Can cats eat cucumber?",
+    "sl": "Ali lahko mačke jedo kumare?"
+  },
+  "url_slug": {
+    "en": "cucumber",
+    "sl": "kumare"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
+    "sl": "Da, majhen košček navadne kumare je v redu kot občasen priboljšek. ASPCA kumaro navaja kot nestrupeno za mačke, vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko razdraži želodec, zato naj bo le majhen dodatek."
+  },
+  "why": {
+    "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+    "sl": "ASPCA navadno kumaro navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small plain piece now and then, counted in your cat's daily food.",
+    "sl": "Občasno majhen navaden košček, všteti ga je treba v dnevno količino hrane."
+  },
+  "child": {
+    "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Majhen košček kumare je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC75",
+      "quote": "Additional Common Names: Garden Cucumber"
+    },
+    {
+      "id": "KC75",
+      "quote": "Scientific Name: Cucumis sativus"
+    },
+    {
+      "id": "KC75",
+      "quote": "Non-Toxicity: Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC63",
+      "quote": "Treats should be given in measured amounts and accounted for in daily caloric intake."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "watermelon",
+    "cantaloupe",
+    "honeydew",
+    "carrots"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d00afd0efb190e9bee6349d99754836ae776634bcda79634862ec58f7d5f3d57"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6f826650d179e5edbe856da2fb5292007dbe460137ddf3d22a428511b60085dd"
+    }
+  }
+}

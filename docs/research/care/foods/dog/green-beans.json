@@ -1,0 +1,126 @@
+{
+  "slug": "green-beans",
+  "species": "dog",
+  "name": {
+    "en": "Green beans",
+    "sl": "Stročji fižol"
+  },
+  "question": {
+    "en": "Can dogs eat green beans?",
+    "sl": "Ali lahko psi jedo stročji fižol?"
+  },
+  "url_slug": {
+    "en": "green-beans",
+    "sl": "strocji-fizol"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Plain green beans, raw or cooked, are safe for most dogs in moderation and make a low-calorie treat. Never give green beans with added salt, butter, garlic or other seasonings.",
+    "sl": "Da. Navaden stročji fižol, surov ali kuhan, je za večino psov v zmernih količinah varen in je nizkokaloričen priboljšek. Nikoli ne dajajte stročjega fižola z dodano soljo, maslom, česnom ali drugimi začimbami."
+  },
+  "why": {
+    "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
+    "sl": "Stročji fižol vsebuje vitamine, minerale in vlaknine ter ima malo kalorij; dodatna prostornina in vlaknine psu pomagajo, da se počuti sitega, ne da bi dobil veliko kalorij. Veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli, običajni recepti s stročjim fižolom za ljudi pa za pse niso varni."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Ask your vet before giving your dog green beans. Never give green beans cooked with garlic or garlic salt.",
+    "sl": "Preden psu ponudite stročji fižol, se posvetujte z veterinarjem. Nikoli mu ne dajajte stročjega fižola, kuhanega s česnom ali česnovo soljo."
+  },
+  "serving": {
+    "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
+    "sl": "Ponudite ga surovega ali kuhanega v vodi ali na pari, a vedno navadnega. Izogibajte se stročjemu fižolu iz pločevinke in fižolu, pripravljenemu z maslom, česnom, česnovo soljo ali drugimi začimbami."
+  },
+  "child": {
+    "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
+    "sl": "Navaden stročji fižol je hrustljav pasji priboljšek. Fižol, kuhan s česnom ali maslom, ni za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat canned green beans?",
+        "sl": "Ali lahko psi jedo stročji fižol iz pločevinke?"
+      },
+      "a": {
+        "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
+        "sl": "Najbolje se mu je izogniti, ker veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD137",
+      "quote": "green beans are safe for dogs to eat in moderation."
+    },
+    {
+      "id": "KD137",
+      "quote": "Yes. Fresh, raw green beans are safe for most dogs in moderation and provide vitamins, minerals, and fiber."
+    },
+    {
+      "id": "KD137",
+      "quote": "Boil them in water or steam them, but keep them plain."
+    },
+    {
+      "id": "KD137",
+      "quote": "Do not give your dog green beens with added salt, butter, or garlic."
+    },
+    {
+      "id": "KD137",
+      "quote": "never feed dogs green beans cooked with garlic or garlic salt."
+    },
+    {
+      "id": "KD137",
+      "quote": "Avoid serving green beans prepared with butter, garlic, garlic salt, or other seasonings that may be harmful to dogs."
+    },
+    {
+      "id": "KD137",
+      "quote": "avoid canned green beans"
+    },
+    {
+      "id": "KD137",
+      "quote": "Many varieties contain high amounts of added salt, so plain fresh or cooked green beans are generally a better option."
+    },
+    {
+      "id": "KD137",
+      "quote": "plain cooked green beans can be a healthy treat for dogs."
+    },
+    {
+      "id": "KD137",
+      "quote": "Plain green beans are appropriate for dogs, but remember that commonly cooked human green bean recipes are not safe for dogs."
+    },
+    {
+      "id": "KD137",
+      "quote": "In general, you should only give your dog green beans as low-calorie treats."
+    },
+    {
+      "id": "KD137",
+      "quote": "The added bulk and fiber help the dog feel full, while not adding much in the way of calories"
+    },
+    {
+      "id": "KD137",
+      "quote": "Both Dr. Cantor and Dr. Burrington advise consulting with a veterinarian before giving your dog green beans."
+    },
+    {
+      "id": "KD89",
+      "quote": "Green beans are full of important vitamins and minerals and they're also full of fiber and low in calories."
+    }
+  ],
+  "related": [
+    "peas",
+    "carrots",
+    "garlic"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af9370b9b8fc983a0e8a5df789e4cf1e252d71411ccaa3516781680b02dc4305"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "946315aaaffe93a33ac3f8e288fcbb0dfb60cf45a1c21eda70fbc29f9650dd21"
+    }
+  }
+}

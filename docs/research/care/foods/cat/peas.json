@@ -1,0 +1,119 @@
+{
+  "slug": "peas",
+  "species": "cat",
+  "name": {
+    "en": "Peas",
+    "sl": "Grah"
+  },
+  "question": {
+    "en": "Can cats eat peas?",
+    "sl": "Ali lahko mačke jedo grah?"
+  },
+  "url_slug": {
+    "en": "peas",
+    "sl": "grah"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a few plain peas are fine as an occasional treat. Cats Protection and the ASPCA both name peas as a vegetable you can offer a cat, and the RSPCA says cats should only have a small amount as a treat.",
+    "sl": "Da, nekaj zrn navadnega graha je v redu kot občasen priboljšek. Cats Protection in ASPCA grah navajata kot zelenjavo, ki jo lahko ponudite mački, RSPCA pa pravi, naj mačke dobijo le malo, kot priboljšek."
+  },
+  "why": {
+    "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Cats Protection grah uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. ASPCA grah predlaga za mačke, RSPCA pa navaja, da lahko mačke dobijo navaden grah, vendar le malo, kot priboljšek. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
+    "sl": "Nekaj zrn navadnega graha, kuhanega na pari ali v vodi, brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Nekaj zrn navadnega graha je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "There are a few vegetables that you can feed your cat (if they’re keen)."
+    },
+    {
+      "id": "KC5",
+      "quote": "These include carrots, peas, corn, broccoli and spinach."
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC77",
+      "quote": "If you’re a cat person, you can also try peas, frozen corn, broccoli florets, and of course, cat nip!"
+    },
+    {
+      "id": "KC76",
+      "quote": "here are some pet-safe Christmas food options that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "Peas: Both cats and dogs can have plain peas, but dogs get more nutritional benefits from them."
+    },
+    {
+      "id": "KC76",
+      "quote": "Cats should only be given a small amount as a treat."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "carrots",
+    "green-beans",
+    "broccoli",
+    "cauliflower"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6e9a40a295838aaf6ab41f5204d0bd5437c68abd1cbbcefba8d6c20307fae014"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1773961334bc3749207ccf2f4e4d0dbbc4bacc62b671efe9f6cd4e0ec854d88e"
+    }
+  }
+}

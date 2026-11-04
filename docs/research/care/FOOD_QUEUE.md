@@ -98,10 +98,19 @@ Status per line: `[ ]` todo · `[d]` dog done · `[c]` cat done · `[x]` both ·
 - [d] persimmon — no source cat 2026-11-03
 - [x] dried-fruit
 - [x] fruit-pits
-- [ ] rhubarb · star-fruit · passion-fruit · olives
+- [x] rhubarb
+- [d] star-fruit — no source cat 2026-11-04 (only a general "pets" page; verifier rejected)
+- [-] passion-fruit — no source dog 2026-11-04 — no source cat 2026-11-04
+- [d] olives — no source cat 2026-11-04
 
 ## W3 — vegetables and plants we eat
-- [ ] carrots · cucumber · green-beans · peas · broccoli · cauliflower · brussels-sprouts · cabbage · kale
+- [x] carrots
+- [x] cucumber
+- [x] green-beans
+- [x] peas
+- [x] broccoli
+- [x] cauliflower
+- [ ] brussels-sprouts · cabbage · kale
 - [ ] spinach · lettuce · celery · zucchini · pumpkin · sweet-potato · potatoes-raw · potatoes-cooked
 - [ ] tomatoes · tomato-plant · peppers · chili-peppers · mushrooms-store · wild-mushrooms · asparagus
 - [ ] beetroot · corn · edamame · radish · eggplant · artichoke · seaweed · herbs-parsley · basil · mint

@@ -1,0 +1,126 @@
+{
+  "slug": "cucumber",
+  "species": "dog",
+  "name": {
+    "en": "Cucumber",
+    "sl": "Kumare"
+  },
+  "question": {
+    "en": "Can dogs eat cucumber?",
+    "sl": "Ali lahko psi jedo kumare?"
+  },
+  "url_slug": {
+    "en": "cucumber",
+    "sl": "kumare"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Cucumbers are perfectly safe for dogs and make a low-calorie, crunchy snack. Serve them plain, washed and cut into small pieces, introduce them gradually, and never give pickles.",
+    "sl": "Da. Kumare so za pse povsem varne in so nizkokaloričen, hrustljav prigrizek. Ponudite jih navadne, oprane in narezane na majhne koščke, uvajajte jih postopoma, kislih kumaric pa nikoli."
+  },
+  "why": {
+    "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
+    "sl": "Kumare imajo malo kalorij, zelo malo natrija in nič maščob ter veliko vode, zato so še posebej primerne za pse, ki morajo shujšati. Glavni tveganji sta prenajedanje, ki lahko povzroči prebavne težave, in dušenje, zlasti pri manjših psih ali psih, ki jedo hitro."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Introduce cucumber gradually and watch your dog when trying something new. Feeding too much, or introducing it too quickly, can cause a mild upset stomach.",
+    "sl": "Kumare uvajajte postopoma in psa opazujte, ko poskusi nekaj novega. Preveč kumar ali prehitro uvajanje lahko povzroči blage prebavne težave."
+  },
+  "serving": {
+    "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
+    "sl": "Kumaro dobro operite in jo narežite na majhne koščke, prilagojene velikosti psa in njegovemu načinu žvečenja; cele kumare ne dajajte. Samo navadne kumare."
+  },
+  "child": {
+    "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
+    "sl": "Psi lahko pohrustajo nekaj koščkov kumare. Odrasli kumaro najprej opere in nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat pickles?",
+        "sl": "Ali lahko psi jedo kisle kumarice?"
+      },
+      "a": {
+        "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
+        "sl": "Ne. Psu ne dajajte kislih kumaric, ker običajno vsebujejo dodano sol, začimbe in druge sestavine."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD136",
+      "quote": "Cucumbers are perfectly safe for dogs to eat, and offer a low-calorie, crunchy snack that many dogs love."
+    },
+    {
+      "id": "KD136",
+      "quote": "Cucumbers are also very low in sodium and fat-free."
+    },
+    {
+      "id": "KD136",
+      "quote": "They are especially good for pets that need to lose weight, as they are low in calories."
+    },
+    {
+      "id": "KD136",
+      "quote": "Cucumbers also have high water content."
+    },
+    {
+      "id": "KD136",
+      "quote": "While cucumbers are generally safe, there are two main concerns to keep in mind: overeating and choking."
+    },
+    {
+      "id": "KD136",
+      "quote": "Eating too much of any food, including cucumbers, can lead to gastrointestinal (GI) upset."
+    },
+    {
+      "id": "KD136",
+      "quote": "Choking is another potential risk, particularly for smaller dogs or dogs that tend to eat quickly."
+    },
+    {
+      "id": "KD136",
+      "quote": "Feeding a whole cucumber is not recommended, as it may be difficult for dogs to chew safely."
+    },
+    {
+      "id": "KD136",
+      "quote": "Always wash cucumbers thoroughly before serving to remove any dirt or residue."
+    },
+    {
+      "id": "KD136",
+      "quote": "Slice them into small, manageable pieces based on your dog’s size and chewing habits."
+    },
+    {
+      "id": "KD136",
+      "quote": "Plain cucumbers are the best choice."
+    },
+    {
+      "id": "KD136",
+      "quote": "Avoid feeding your dog pickles, as they typically contain added salt, spices, and other ingredients"
+    },
+    {
+      "id": "KD136",
+      "quote": "Always monitor your dog when trying something new."
+    },
+    {
+      "id": "KD136",
+      "quote": "feeding too much or introducing them too quickly can cause mild gastrointestinal upset"
+    }
+  ],
+  "related": [
+    "carrots",
+    "watermelon",
+    "green-beans"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6df50d677d84bb9503c2035d7ed89105dd901f27a335a7961af98cd34460b808"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "43db3f8025916444a95b01438c5856aa32430ce7ac9002fb22b1194b3ddea59e"
+    }
+  }
+}

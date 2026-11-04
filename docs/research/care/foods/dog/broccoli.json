@@ -1,0 +1,114 @@
+{
+  "slug": "broccoli",
+  "species": "dog",
+  "name": {
+    "en": "Broccoli",
+    "sl": "Brokoli"
+  },
+  "question": {
+    "en": "Can dogs eat broccoli?",
+    "sl": "Ali lahko psi jedo brokoli?"
+  },
+  "url_slug": {
+    "en": "broccoli",
+    "sl": "brokoli"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in small amounts as an occasional treat, raw or cooked, with no seasonings or oils. Cut it into bite-size pieces: the florets can irritate the stomach, and tough stalks can block the oesophagus, especially in small dogs.",
+    "sl": "Da, v majhnih količinah kot občasen priboljšek, surov ali kuhan, brez začimb in olja. Narežite ga na koščke za en grižljaj: cvetki lahko dražijo želodec, trda stebla pa lahko zamašijo požiralnik, zlasti pri majhnih psih."
+  },
+  "why": {
+    "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
+    "sl": "Cvetki brokolija vsebujejo izotiocianate, ki lahko povzročijo blago do potencialno hudo draženje želodca. Trda stebla brokolija so pri psih, zlasti majhnih, že povzročila zamašitev požiralnika, zato je boljša izbira kuhan brokoli, narezan na koščke za en grižljaj."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Watch how your dog reacts to broccoli and make sure there is no bad reaction before giving more.",
+    "sl": "Opazujte, kako se pes odzove na brokoli, in se prepričajte, da nima neželene reakcije, preden mu ga ponudite več."
+  },
+  "serving": {
+    "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
+    "sl": "Navaden, surov ali raje kuhan, brez začimb in olja, narezan na koščke za en grižljaj. Le majhne količine kot občasen priboljšek."
+  },
+  "child": {
+    "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
+    "sl": "Psi lahko poskusijo malo brokolija. Odrasli ga skuha brez dodatkov in nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are broccoli stalks safe for dogs?",
+        "sl": "So stebla brokolija za pse varna?"
+      },
+      "a": {
+        "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
+        "sl": "Trda stebla lahko psu zamašijo požiralnik, zlasti pri majhnih psih. Brokoli narežite na koščke za en grižljaj; kuhan brokoli pomaga preprečiti to težavo."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD139",
+      "quote": "Yes, dogs can eat broccoli."
+    },
+    {
+      "id": "KD139",
+      "quote": "Dogs can eat the vegetable both cooked and raw, as long as there are no seasonings or oils added."
+    },
+    {
+      "id": "KD139",
+      "quote": "It’s safe for dogs to eat in small amounts, raw or cooked, as long as you don’t add any seasonings."
+    },
+    {
+      "id": "KD139",
+      "quote": "The florets of this vegetable contain isothiocyanates, which can cause mild-to-potentially-severe gastric irritation"
+    },
+    {
+      "id": "KD139",
+      "quote": "Broccoli stalks can cause esophageal obstruction, especially in small dogs"
+    },
+    {
+      "id": "KD139",
+      "quote": "it’s important to cut up the broccoli into bite-sized chunks to prevent choking"
+    },
+    {
+      "id": "KD139",
+      "quote": "It’s very important to monitor your dog’s reaction to broccoli"
+    },
+    {
+      "id": "KD139",
+      "quote": "Make sure your dog doesn’t have an adverse reaction before feeding more."
+    },
+    {
+      "id": "KD89",
+      "quote": "Broccoli is safe for dogs to eat in small amounts, and is best served as an occasional treat."
+    },
+    {
+      "id": "KD89",
+      "quote": "Tough broccoli stalks have been known to cause obstruction in the esophagus in dogs."
+    },
+    {
+      "id": "KD89",
+      "quote": "If your dog likes broccoli, it's better to offer them cooked broccoli to help avoid these issues."
+    }
+  ],
+  "related": [
+    "cauliflower",
+    "carrots",
+    "green-beans"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bd107c5660e5d09d8ecef35524df0051e67a3457d99524edda2791e77a4b013f"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9880e0237cf239113430b21b37216e7d69364ea9a20bcc86b104fe5b67535d55"
+    }
+  }
+}

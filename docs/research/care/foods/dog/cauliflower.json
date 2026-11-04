@@ -1,0 +1,158 @@
+{
+  "slug": "cauliflower",
+  "species": "dog",
+  "name": {
+    "en": "Cauliflower",
+    "sl": "Cvetača"
+  },
+  "question": {
+    "en": "Can dogs eat cauliflower?",
+    "sl": "Ali lahko psi jedo cvetačo?"
+  },
+  "url_slug": {
+    "en": "cauliflower",
+    "sl": "cvetaca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as an occasional treat. Cauliflower is safe for dogs when served properly: cooked plainly, without seasonings, and chopped into bite-size pieces. Large portions may cause gas, bloating and diarrhoea.",
+    "sl": "Da, kot občasen priboljšek. Cvetača je za pse varna, če jo pravilno pripravite: kuhano brez dodatkov, brez začimb in narezano na koščke za en grižljaj. Velike količine lahko povzročijo vetrove, napihnjenost in drisko."
+  },
+  "why": {
+    "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
+    "sl": "Cvetača vsebuje vlaknine ter vitamina C in K in je dober prigrizek, kadar pes hujša. Iste vlaknine pa lahko pri preveliki količini povzročijo vetrove, napihnjenost in drisko. Surova cvetača je v majhnih količinah varna, a je lahko težko prebavljiva, veliki surovi kosi pa se lahko psu zataknejo; kuhanje na pari ali v vodi jo zmehča, zato jo pes lažje žveči in prebavi. Nekateri psi so lahko nanjo alergični ali občutljivi."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Give raw cauliflower slowly, in small pieces. Large portions may cause gas, bloating and diarrhoea, and some dogs can be sensitive to it.",
+    "sl": "Surovo cvetačo uvajajte počasi, v majhnih koščkih. Velike količine lahko povzročijo vetrove, napihnjenost in drisko, nekateri psi pa so nanjo lahko občutljivi."
+  },
+  "serving": {
+    "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
+    "sl": "Skuhajte jo na pari ali v vodi brez dodatkov, brez soli, olja, masla, česna ali čebule, in jo narežite na koščke za en grižljaj. Trda stebla skuhajte v vodi ali na pari. Občasen priboljšek, ne vsakodnevni prigrizek."
+  },
+  "child": {
+    "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
+    "sl": "Psi lahko dobijo nekaj majhnih koščkov navadne cvetače. Preveč jim lahko napihne trebušček!"
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat cauliflower leaves?",
+        "sl": "Ali lahko psi jedo liste cvetače?"
+      },
+      "a": {
+        "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
+        "sl": "Da. Listi so za pse varni in vsebujejo dragocena hranila; večina psov jih rada je, če so rahlo kuhani na pari, kot dodatek k obroku."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD140",
+      "quote": "Cauliflower is safe for dogs to eat when you serve it up properly."
+    },
+    {
+      "id": "KD140",
+      "quote": "Dogs can potentially have some allergic reactions or sensitivities to this vegetable."
+    },
+    {
+      "id": "KD140",
+      "quote": "Cauliflower has good amounts of fiber."
+    },
+    {
+      "id": "KD140",
+      "quote": "Because of this, cauliflower is a good snack to give when helping dogs lose weight."
+    },
+    {
+      "id": "KD140",
+      "quote": "Vitamin C acts as an antioxidant that protects your dog from free radicals."
+    },
+    {
+      "id": "KD140",
+      "quote": "On the flip side, vitamin K is used for proper blood clotting."
+    },
+    {
+      "id": "KD140",
+      "quote": "That same fiber component that helps a dog's digestion can also cause problems when too much is eaten."
+    },
+    {
+      "id": "KD140",
+      "quote": "Large portions of cauliflower may lead to gas, bloating, and diarrhea, which can be overwhelming."
+    },
+    {
+      "id": "KD140",
+      "quote": "However, raw cauliflower can be hard to digest."
+    },
+    {
+      "id": "KD140",
+      "quote": "If you’re going to give them some raw cauliflower, do so at a slow pace with some small pieces."
+    },
+    {
+      "id": "KD140",
+      "quote": "While raw cauliflower is safe in small amounts, steaming or boiling it makes it softer"
+    },
+    {
+      "id": "KD140",
+      "quote": "and easier for dogs to chew and digest."
+    },
+    {
+      "id": "KD140",
+      "quote": "Raw cauliflower florets, especially the stems, are tough and difficult to chew."
+    },
+    {
+      "id": "KD140",
+      "quote": "If given in large pieces, they can become a choking hazard"
+    },
+    {
+      "id": "KD140",
+      "quote": "Be sure to cook the cauliflower plainly."
+    },
+    {
+      "id": "KD140",
+      "quote": "Seasonings like butter, salt, garlic, or onion are harmful and should always be avoided."
+    },
+    {
+      "id": "KD140",
+      "quote": "Never add any seasonings such as salt, oil, butter, or any ingredient that dogs can't eat."
+    },
+    {
+      "id": "KD140",
+      "quote": "Chop cauliflower into bite-sized chunks before serving."
+    },
+    {
+      "id": "KD140",
+      "quote": "The leaves are completely safe for dogs and actually contain valuable nutrients."
+    },
+    {
+      "id": "KD140",
+      "quote": "They can be a healthy snack, and most dogs will enjoy them if they're lightly steamed as a meal topper."
+    },
+    {
+      "id": "KD140",
+      "quote": "So, be sure to boil or steam them in order to make them safer to eat."
+    },
+    {
+      "id": "KD140",
+      "quote": "Cauliflower should be an occasional treat, not a daily snack."
+    }
+  ],
+  "related": [
+    "broccoli",
+    "carrots",
+    "green-beans"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7acfc2d9378f55e5c815b96e925611121f8e200d326ab182467693ca1b091ad6"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "56fd4acc4fcf17b48fd0d7a0c4053f5125cd5b69fd8aa6c0f10e730c02f20b86"
+    }
+  }
+}

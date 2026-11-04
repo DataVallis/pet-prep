@@ -1,0 +1,115 @@
+{
+  "slug": "green-beans",
+  "species": "cat",
+  "name": {
+    "en": "Green beans",
+    "sl": "Stročji fižol"
+  },
+  "question": {
+    "en": "Can cats eat green beans?",
+    "sl": "Ali lahko mačke jedo stročji fižol?"
+  },
+  "url_slug": {
+    "en": "green-beans",
+    "sl": "strocji-fizol"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain green bean is fine as an occasional treat. The ASPCA says green beans can be a great green snack for a dog or cat, and Cats Protection suggests steamed or boiled green beans with no butter, salt or seasoning.",
+    "sl": "Da, majhen košček navadnega stročjega fižola je v redu kot občasen priboljšek. ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko, Cats Protection pa predlaga stročji fižol, kuhan na pari ali v vodi, brez masla, soli in začimb."
+  },
+  "why": {
+    "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
+    "sl": "ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko. Cats Protection predlaga zelenjavo, kot je stročji fižol, kuhano na pari ali v vodi, brez masla, soli in začimb, RSPCA pa stročji fižol navaja kot primeren za mačke in pse v zmernih količinah, surov ali kuhan, a nezačinjen. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
+    "sl": "Majhen košček, kuhan na pari ali v vodi, brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Majhen košček navadnega stročjega fižola je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC77",
+      "quote": "Green beans are very low in calories and have a satisfying crunch."
+    },
+    {
+      "id": "KC77",
+      "quote": "They can be a great green snack for your dog or cat."
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC76",
+      "quote": "here are some pet-safe Christmas food options that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "Green beans: These can be eaten raw or cooked, but make sure they’re unseasoned."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "peas",
+    "carrots",
+    "broccoli",
+    "cucumber"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b410bf4f4179019be6020bb2c14b31193aa3814ab46b08546eb45e595cddcaf2"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3cfe065edcd01ae76aa51a568d3f393cd4de54a5b9c9f8bf33c58cd8dfe9767d"
+    }
+  }
+}

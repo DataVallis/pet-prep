@@ -1,0 +1,124 @@
+{
+  "slug": "peas",
+  "species": "dog",
+  "name": {
+    "en": "Peas",
+    "sl": "Grah"
+  },
+  "question": {
+    "en": "Can dogs eat peas?",
+    "sl": "Ali lahko psi jedo grah?"
+  },
+  "url_slug": {
+    "en": "peas",
+    "sl": "grah"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, as an occasional treat. Green peas, including snow peas, sugar snap peas and garden peas, are not toxic to dogs. Give them fresh or frozen, but not canned, because canned peas usually contain a lot of added sodium.",
+    "sl": "Da, kot občasen priboljšek. Zeleni grah, tudi snežni grah, sladkorni grah in vrtni grah, za pse ni strupen. Ponudite ga svežega ali zamrznjenega, ne pa iz pločevinke, ker grah iz pločevinke običajno vsebuje veliko dodanega natrija."
+  },
+  "why": {
+    "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
+    "sl": "Grah za pse ni strupen, a sadje in zelenjava v pasji prehrani nista nujna in naj bosta le občasen priboljšek. Grah iz pločevinke običajno vsebuje veliko dodanega natrija, ki psom škodi. Stroki se lahko psu zataknejo v grlu in povzročijo dušenje."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "As with any new food, watch your dog for reactions such as diarrhoea or vomiting.",
+    "sl": "Kot pri vsaki novi hrani psa opazujte, ali se pojavijo težave, na primer driska ali bruhanje."
+  },
+  "serving": {
+    "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
+    "sl": "Samo svež, zamrznjen ali odmrznjen grah, nikoli iz pločevinke. Vrtni grah vedno oluščite, pri strokih pa bodite previdni, ker lahko povzročijo dušenje."
+  },
+  "child": {
+    "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
+    "sl": "Psi lahko za priboljšek dobijo nekaj zrn graha. Odrasli vrtni grah najprej olušči iz strokov."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can dogs eat pea pods?",
+        "sl": "Ali lahko psi jedo grahove stroke?"
+      },
+      "a": {
+        "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
+        "sl": "Če lahko strok jedo ljudje, ga lahko tudi pes, a bodite previdni: stroki se lahko zataknejo v grlu in povzročijo dušenje. Vrtni grah je treba vedno oluščiti."
+      }
+    },
+    {
+      "q": {
+        "en": "Are peas in dog food a problem?",
+        "sl": "Je grah v pasji hrani težava?"
+      },
+      "a": {
+        "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
+        "sl": "Raziskave o tem, ali ima grah vlogo pri bolezni srca pri psih, še potekajo. Če je pes jedel hrano, v kateri je grah glavna sestavina, se lahko posvetujete z veterinarjem."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD138",
+      "quote": "snow peas, sugar snap peas, and garden (or English) peas are not harmful in tiny amounts"
+    },
+    {
+      "id": "KD138",
+      "quote": "We’re talking about green peas, specifically: snow peas, sugar snap peas, and garden or English peas."
+    },
+    {
+      "id": "KD138",
+      "quote": "You can feed your dog peas when they are fresh, frozen, or thawed, but do not give your dog canned peas."
+    },
+    {
+      "id": "KD138",
+      "quote": "Like many canned vegetables, canned peas typically have a lot of added sodium, which is harmful to dogs (and humans)."
+    },
+    {
+      "id": "KD138",
+      "quote": "As far as pea pods go, as a rule of thumb, if humans can eat the pod, so can your dog."
+    },
+    {
+      "id": "KD138",
+      "quote": "Garden peas, of course, must always be shelled."
+    },
+    {
+      "id": "KD138",
+      "quote": "But be cautious with pods, because they can get stuck in your dog’s throat and cause choking."
+    },
+    {
+      "id": "KD138",
+      "quote": "Keeping in mind that fruits and vegetables are not necessary to a dog’s diet and should be thought of as an occasional treat, peas are not toxic or poisonous to dogs."
+    },
+    {
+      "id": "KD138",
+      "quote": "And as with any new food, watch for adverse reactions, such as diarrhea or vomiting."
+    },
+    {
+      "id": "KD138",
+      "quote": "Peas are often ingredients in commercial dog food, though there is ongoing research about the role they may or may not play in contributing to heart disease in dogs."
+    },
+    {
+      "id": "KD138",
+      "quote": "If your dog has already eaten a food with peas as a primary ingredient, you may also want to consult your veterinarian."
+    }
+  ],
+  "related": [
+    "green-beans",
+    "carrots",
+    "broccoli"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67e358ed6c58dd2db9ef2029781216d5c734eea968e400b9b835c69185dfe250"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "21b717352bf8d266f110fd59c535280213229946347f61e7b60a5d7da897a69f"
+    }
+  }
+}
