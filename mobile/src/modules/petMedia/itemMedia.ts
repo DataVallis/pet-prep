@@ -16,6 +16,9 @@
  *   a given treat (`itemMomentPlayback`), then the normal stage. Picture mode → the item image
  *   for `ITEM_PICTURE_MS`.
  * A missing / failing URL falls back to the item image, then to the normal scene — never blank.
+ * - The album (»Moj kuža« / parent »Posnetki«, `album.ts`, 2026-11-04): the »Spi« tile shows the
+ *   bed through `sceneItemFor(…, 'sleeping', …)` — the same pick as the live sleeping scene — and
+ *   every owned item gets its own tile through `itemPick`.
  */
 
 import { isBehaviourScene } from '@/modules/behaviour/behaviour';
@@ -70,16 +73,31 @@ export function sceneItemKey(items: ItemMediaMap, state: VideoState | null, toy:
   return null;
 }
 
-export interface SceneItemPick {
-  key: SceneItemKey;
-  /** The loop to play (null = show `image`). */
+export interface ItemPick {
+  /** The clip to play (null = show `image`). */
   video: string | null;
   image: string | null;
 }
 
+export interface SceneItemPick extends ItemPick {
+  key: SceneItemKey;
+}
+
 /**
- * The item media to show for a state, honouring the display mode and the player's failed URLs:
- * picture mode → its image; video → its loop when playable, else its image; nothing usable → null.
+ * What one item shows, honouring the display mode and the player's failed URLs: picture mode →
+ * its image; video → its clip when playable, else its image; nothing usable → null. The ONE rule
+ * for scenes (`sceneItemFor`) and the album (`album.ts`), so they never disagree.
+ */
+export function itemPick(item: ItemMedia | undefined, mode: 'video' | 'picture', canPlayVideo?: (url: string) => boolean): ItemPick | null {
+  if (item === undefined) return null;
+  const playable = item.video !== null && mode === 'video' && (canPlayVideo?.(item.video) ?? true);
+  if (playable) return { video: item.video, image: item.image };
+  if (item.image !== null) return { video: null, image: item.image };
+  return null;
+}
+
+/**
+ * The item media to show for a state (bed → sleeping, toy → playing) — `itemPick` of that item.
  */
 export function sceneItemFor(
   items: ItemMediaMap,
@@ -90,11 +108,8 @@ export function sceneItemFor(
 ): SceneItemPick | null {
   const key = sceneItemKey(items, state, toy);
   if (key === null) return null;
-  const item = items[key] as ItemMedia;
-  const playable = item.video !== null && mode === 'video' && (canPlayVideo?.(item.video) ?? true);
-  if (playable) return { key, video: item.video, image: item.image };
-  if (item.image !== null) return { key, video: null, image: item.image };
-  return null;
+  const pick = itemPick(items[key], mode, canPlayVideo);
+  return pick === null ? null : { key, ...pick };
 }
 
 /**

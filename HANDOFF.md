@@ -199,6 +199,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-04 (cloud, mobile) — M6-W03: bought items in the pet album (`fix/gallery-item-media`, JS only → OTA)
+David: bed owned + content ready, but the album's »Spi« still showed the floor clip and no item appeared. `album.ts` now uses the scene helpers: »Spi« = bed (`sceneItemFor`, same as the live sleeping scene), one tile per owned item (`itemPick`, picture mode → image, `PetAlbum mode` from the HUD); the parent album gets the same. Parent detail preview is always `idle` (no item applies). Debt: the album's state tiles still ignore picture mode (they always offer the clips) — unchanged, older behaviour.
+
 ### 2026-11-04 (cloud, devops) — OTA after every production deploy, also the daily one (`fix/ota-after-daily-deploy`, DEPLOYMENT.md D33)
 The daily deploy's `GITHUB_TOKEN` run creates no `workflow_run` event (and for manual deploys it can come minutes late — 7ef0009e evening: hand-dispatched OTA + late workflow_run = double publish), so since D21 no daily deploy got an OTA (found on `bb3450c9`: M6-W03 app half live on the server, not on phones). Now the deploy run's job »Mobile OTA (after the production deploy)« dispatches `mobile-ota.yml` (`deploy_run_id` + `sha`) after every successful deploy; the plan checks run / commit / deploy job, skips when a newer deploy exists, reads the release record from current `main` and publishes once per commit (manual deploys also fire `workflow_run` → »already released«). Push-CI no-op OTA runs got their own concurrency group. Verify on the next deploy: run »Mobile OTA after production deploy <id>« in Actions. Nothing for David.
 

@@ -920,6 +920,14 @@
     "mute": "Mute",
     "unmute": "Unmute",
     "position": "{{index}} / {{total}}",
+    "items": {
+      "bed": "On its own bed",
+      "bowls": "Eats from its bowl",
+      "toy": "Plays with its toy",
+      "toy_1": "Plays with toy 1",
+      "toy_2": "Plays with toy 2",
+      "treats": "Eats a treat"
+    },
     "states": {
       "idle": "Resting",
       "sleeping": "Sleeping",
