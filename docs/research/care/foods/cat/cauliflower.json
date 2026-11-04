@@ -1,0 +1,103 @@
+{
+  "slug": "cauliflower",
+  "species": "cat",
+  "name": {
+    "en": "Cauliflower",
+    "sl": "Cvetača"
+  },
+  "question": {
+    "en": "Can cats eat cauliflower?",
+    "sl": "Ali lahko mačke jedo cvetačo?"
+  },
+  "url_slug": {
+    "en": "cauliflower",
+    "sl": "cvetaca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
+    "sl": "Da, majhen košček navadne kuhane cvetače je v redu kot občasen priboljšek. RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, primerno za mačke in pse v zmernih količinah."
+  },
+  "why": {
+    "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
+    "sl": "RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, ki je varna in primerna za mačke in pse v zmernih količinah. Cats Protection svetuje zelenjavo brez masla, soli in začimb. Mačke zelenjave ne potrebujejo, priboljškov naj bo malo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
+    "sl": "Kuhana in narezana na majhne koščke, brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Majhen košček kuhane cvetače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC76",
+      "quote": "here are some pet-safe Christmas food options that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "Cauliflower: Cooked and cut into small pieces."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "broccoli",
+    "peas",
+    "carrots",
+    "green-beans"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fc0e3a27cf0707ced872d83cced4d61685145038cbba2a6123bd252345b3737a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b8e84a60305850488022ef14e6fc9eca877070364e968ea584da1daebb673006"
+    }
+  }
+}

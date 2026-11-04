@@ -1,0 +1,115 @@
+{
+  "slug": "broccoli",
+  "species": "cat",
+  "name": {
+    "en": "Broccoli",
+    "sl": "Brokoli"
+  },
+  "question": {
+    "en": "Can cats eat broccoli?",
+    "sl": "Ali lahko mačke jedo brokoli?"
+  },
+  "url_slug": {
+    "en": "broccoli",
+    "sl": "brokoli"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain broccoli is fine as an occasional treat. Cats Protection lists broccoli among vegetables you can feed your cat, the ASPCA suggests broccoli florets for cats, and the RSPCA advises boiled or steamed.",
+    "sl": "Da, majhen košček navadnega brokolija je v redu kot občasen priboljšek. Cats Protection brokoli navaja med zelenjavo, ki jo lahko daste mački, ASPCA za mačke predlaga cvetke brokolija, RSPCA pa svetuje kuhanega v vodi ali na pari."
+  },
+  "why": {
+    "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Cats Protection brokoli uvršča med redko zelenjavo, ki jo lahko daste mački, če ji je všeč. ASPCA za mačke predlaga cvetke brokolija, RSPCA pa brokoli, kuhan v vodi ali na pari, navaja med hrano, primerno za mačke in pse v zmernih količinah. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
+    "sl": "Majhna cvetka, kuhana v vodi ali na pari, brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Majhen košček kuhanega brokolija je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "There are a few vegetables that you can feed your cat (if they’re keen)."
+    },
+    {
+      "id": "KC5",
+      "quote": "These include carrots, peas, corn, broccoli and spinach."
+    },
+    {
+      "id": "KC77",
+      "quote": "If you’re a cat person, you can also try peas, frozen corn, broccoli florets, and of course, cat nip!"
+    },
+    {
+      "id": "KC76",
+      "quote": "here are some pet-safe Christmas food options that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "Broccoli: Boiled or steamed."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "cauliflower",
+    "peas",
+    "carrots",
+    "green-beans"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "af0d4cfddae74aa2c0e340d64094872e1811826fa78c8356ad8d2c05a937b10a"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c9d11998bfc0c1232aed5d8409f7a181111b4512271727e89471bb2194bb2f20"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "slug": "carrots",
+  "species": "dog",
+  "name": {
+    "en": "Carrots",
+    "sl": "Korenje"
+  },
+  "question": {
+    "en": "Can dogs eat carrots?",
+    "sl": "Ali lahko psi jedo korenje?"
+  },
+  "url_slug": {
+    "en": "carrots",
+    "sl": "korenje"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
+    "sl": "Da. Korenje je za pse varno in je zdrav, nizkokaloričen prigrizek, surovo ali kuhano. Najprej ga narežite na koščke za en grižljaj, da se pes ne zaduši."
+  },
+  "why": {
+    "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
+    "sl": "Korenje je odličen vir vitamina A, kalija in vlaknin ter vsebuje veliko betakarotena. Žvečenje korenja lahko tudi izboljša zdravje psovih zob. Glavno tveganje je dušenje, zato je treba celo korenje in tudi korenčkove paličice narezati na koščke za en grižljaj."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Talk to your vet about how many carrots suit your dog each day.",
+    "sl": "Z veterinarjem se posvetujte, koliko korenja na dan je primerno za vašega psa."
+  },
+  "serving": {
+    "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
+    "sl": "Korenje operite in/ali olupite, nato celo korenje in tudi korenčkove paličice narežite na koščke za en grižljaj. Primerno je surovo ali kuhano."
+  },
+  "child": {
+    "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
+    "sl": "Hrustljavo korenje je zdrav pasji prigrizek! Odrasli ga najprej opere in nareže na majhne koščke."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can teething puppies have cold or frozen carrots?",
+        "sl": "Lahko mladiči med rastjo zob dobijo hladno ali zamrznjeno korenje?"
+      },
+      "a": {
+        "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
+        "sl": "Nekateri veterinarji mladičem, ki jim rastejo zobje, priporočajo hladno ali zamrznjeno korenje, da jim olajša nelagodje."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD135",
+      "quote": "Yes, dogs can eat carrots."
+    },
+    {
+      "id": "KD135",
+      "quote": "In fact, not only is this vegetable safe, but it also can serve as a healthy, low-calorie snack for your pets."
+    },
+    {
+      "id": "KD135",
+      "quote": "Some vets even recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort."
+    },
+    {
+      "id": "KD135",
+      "quote": "Furthermore, chewing on carrots can also help improve your dog’s dental health."
+    },
+    {
+      "id": "KD135",
+      "quote": "More importantly, carrots are an excellent source of vitamin A, potassium, and fiber, among other vitamins."
+    },
+    {
+      "id": "KD135",
+      "quote": "Raw and cooked carrots are healthy options for dogs and make a nutritious add-on to meals."
+    },
+    {
+      "id": "KD135",
+      "quote": "While carrots are generally safe, it is important to cut whole carrots and even carrot sticks into bite-size chunks before feeding them to your dog to prevent choking."
+    },
+    {
+      "id": "KD135",
+      "quote": "Talk to your vet about the number of carrots you should feed your dog per day."
+    },
+    {
+      "id": "KD135",
+      "quote": "Just as you would for any other fruits and vegetables, make sure that carrots are thoroughly washed and/or peeled to remove all dirt and pesticides."
+    },
+    {
+      "id": "KD89",
+      "quote": "Carrots are an excellent low-calorie snack that is high in fiber and beta-carotene, which produces vitamin A."
+    }
+  ],
+  "related": [
+    "cucumber",
+    "green-beans",
+    "apples"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2c36886b214a2be5bb12640bd5e8f6a7b4740e48ced3389afc6ae92b37c5eb9"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c0dc8227a162ee6ddc85b8af368280f9942c736b41eb8273293804e93f5a30d2"
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "star-fruit",
+  "species": "dog",
+  "name": {
+    "en": "Star fruit",
+    "sl": "Karambola"
+  },
+  "question": {
+    "en": "Can dogs eat star fruit?",
+    "sl": "Ali lahko psi jedo karambolo?"
+  },
+  "url_slug": {
+    "en": "star-fruit",
+    "sl": "karambola"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
+    "sl": "Ne. Karambolo hranite stran od psov. Kisla karambola vsebuje topne oksalate v nevarnih koncentracijah, ki lahko povzročijo bruhanje, slinjenje, šibkost, tresenje, nizko raven kalcija v krvi in okvaro ledvic."
+  },
+  "why": {
+    "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
+    "sl": "Pet Poison Helpline navaja, da lahko karambola pri psih povzroči zastrupitev. Glavna težava so topni oksalati (oksalna kislina), ki so v kisli karamboli v nevarnih koncentracijah. Pet Poison Helpline sicer navaja tudi, da sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik pravi, da karambola za pse ni varna, zato izberemo strožjo oceno. Že majhne količine lahko povzročijo zdravstvene težave, zlasti pri psih s težavami z ledvicami, karambola pa lahko poslabša obstoječe težave z ledvicami."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Drooling",
+      "Weakness",
+      "Trembling",
+      "Low blood calcium",
+      "Signs of kidney injury, such as peeing a lot"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Slinjenje",
+      "Šibkost",
+      "Tresenje",
+      "Nizka raven kalcija v krvi",
+      "Znaki okvare ledvic, na primer pogosto uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "Remove any remaining star fruit and contact your vet or a pet poison helpline right away, especially if your dog has kidney problems. Signs can appear within a few hours.",
+    "sl": "Odstranite preostalo karambolo in se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali, zlasti če ima pes težave z ledvicami. Znaki se lahko pojavijo v nekaj urah."
+  },
+  "serving": null,
+  "child": {
+    "en": "Star fruit is not a dog treat. If your dog eats some, tell a grown-up right away.",
+    "sl": "Karambola ni priboljšek za pse. Če jo pes poje, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Is sweet star fruit safe for dogs?",
+        "sl": "Je sladka karambola za pse varna?"
+      },
+      "a": {
+        "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
+        "sl": "Sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik vseeno pravi, da karambola za pse ni varna, zato se ji je najbolje izogniti."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD132",
+      "quote": "it can result in poisoning in dogs, cats, & even humans."
+    },
+    {
+      "id": "KD132",
+      "quote": "Soluble oxalate/ oxalic acid are toxic compounds found in dangerous concentrations within sour Star Fruit."
+    },
+    {
+      "id": "KD132",
+      "quote": "Ingestion of soluble oxalate/ oxalic acid by pet animals results in gastrointestinal distress (e.g., vomiting, drooling),"
+    },
+    {
+      "id": "KD132",
+      "quote": "neurological signs (e.g., weakness, trembling), decreased blood calcium levels, and kidney injury"
+    },
+    {
+      "id": "KD132",
+      "quote": "(e.g. excessive urination containing calcium oxalate crystals)."
+    },
+    {
+      "id": "KD132",
+      "quote": "NOTE: Sweet Star Fruit contain very little soluble oxalate and are not poisonous to pets that have healthy kidneys"
+    },
+    {
+      "id": "KD132",
+      "quote": "If you think your pet has eaten something potentially toxic, call Pet Poison Helpline"
+    },
+    {
+      "id": "KD132",
+      "quote": "or seek immediate veterinary treatment."
+    },
+    {
+      "id": "KD133",
+      "quote": "No, starfruit is not safe for dogs."
+    },
+    {
+      "id": "KD133",
+      "quote": "Even small amounts of starfruit can lead to health problems, particularly in dogs with pre-existing kidney issues"
+    },
+    {
+      "id": "KD133",
+      "quote": "Starfruit can exacerbate kidney problems and lead to more severe symptoms, including acute kidney failure."
+    },
+    {
+      "id": "KD133",
+      "quote": "Symptoms can appear within a few hours of ingestion, so quick action is essential."
+    },
+    {
+      "id": "KD133",
+      "quote": "Remove any remaining starfruit to prevent further ingestion"
+    },
+    {
+      "id": "KD133",
+      "quote": "Call your veterinarian for guidance, especially if your dog has kidney issues"
+    }
+  ],
+  "related": [
+    "rhubarb",
+    "grapes",
+    "mango"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a0a15593cdd3140151f308300a793cee135beb13e4c7c9dbd7277dabc5484440"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a18fd566cb1ec84c490ce1227c54c5f6b59445d0b6f534e000deb9a886637b5f"
+    }
+  }
+}

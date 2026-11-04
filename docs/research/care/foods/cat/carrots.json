@@ -1,0 +1,129 @@
+{
+  "slug": "carrots",
+  "species": "cat",
+  "name": {
+    "en": "Carrots",
+    "sl": "Korenje"
+  },
+  "question": {
+    "en": "Can cats eat carrots?",
+    "sl": "Ali lahko mačke jedo korenje?"
+  },
+  "url_slug": {
+    "en": "carrots",
+    "sl": "korenje"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small piece of plain carrot is fine as an occasional treat. Cats Protection lists carrots among vegetables you can feed your cat. Cook it until soft, or chop raw carrot into small chunks to prevent choking.",
+    "sl": "Da, majhen košček navadnega korenja je v redu kot občasen priboljšek. Cats Protection korenje navaja med zelenjavo, ki jo lahko daste mački. Skuhajte ga do mehkega ali surovega narežite na majhne koščke, da se mačka ne zaduši."
+  },
+  "why": {
+    "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
+    "sl": "Cats Protection korenje uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. RSPCA navaja, da lahko mačke jedo surovo korenje le, če je narezano na majhne koščke, sicer naj bo kuhano do mehkega, da se ne zadušijo. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
+    "sl": "Kuhano na pari ali v vodi do mehkega, surovo pa le na majhne koščke. Brez masla, soli in začimb."
+  },
+  "child": {
+    "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
+    "sl": "Majhen košček mehkega kuhanega korenja je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Can cats eat raw carrot?",
+        "sl": "Ali lahko mačke jedo surovo korenje?"
+      },
+      "a": {
+        "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
+        "sl": "RSPCA navaja, da lahko mačke jedo surovo korenje le, če je narezano na majhne koščke; sicer ga skuhajte do mehkega, da se mačka ne zaduši."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC5",
+      "quote": "There are a few vegetables that you can feed your cat (if they’re keen)."
+    },
+    {
+      "id": "KC5",
+      "quote": "These include carrots, peas, corn, broccoli and spinach."
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC76",
+      "quote": "here are some pet-safe Christmas food options that are suitable for cats and dogs in moderation:"
+    },
+    {
+      "id": "KC76",
+      "quote": "Carrots: Dogs can eat carrots raw, but cats can only eat them raw if chopped into small chunks,"
+    },
+    {
+      "id": "KC76",
+      "quote": "otherwise cook until soft (to prevent choking)."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "Stick to a small number and don’t let treats exceed 10-15% of your cat’s daily calorie allowance."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "peas",
+    "green-beans",
+    "broccoli",
+    "cucumber"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8e4dc6f290ae8f0e32b7aae6c991de9f914afc615538f50a6846d99d12162e4e"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4f6888146593a5a209a1131f4e52a91edae33f42d45923779130aa033e9e4ba1"
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "slug": "olives",
+  "species": "dog",
+  "name": {
+    "en": "Olives",
+    "sl": "Olive"
+  },
+  "question": {
+    "en": "Can dogs eat olives?",
+    "sl": "Ali lahko psi jedo olive?"
+  },
+  "url_slug": {
+    "en": "olives",
+    "sl": "olive"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, in moderation, if they are plain, unsalted and pitted. Olives aren't toxic to dogs, but the pits can cause choking or a blockage, and canned or pickled olives often contain too much sodium.",
+    "sl": "Da, zmerno, če so navadne, nesoljene in brez koščic. Olive za pse niso strupene, koščice pa lahko povzročijo dušenje ali zaporo, olive iz pločevinke ali vložene olive pa pogosto vsebujejo preveč natrija."
+  },
+  "why": {
+    "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
+    "sl": "Olive same po sebi ne vsebujejo strupenih snovi, koščice pa lahko povzročijo dušenje, zaprejo dihalne poti in se zagozdijo v psovih prebavilih. Olive iz pločevinke ali vložene olive pogosto vsebujejo preveč natrija, preveč natrija pa lahko povzroči dehidracijo in v redkih primerih zastrupitev s soljo. Olive, prelite s česnom, začimbami ali olji, prinašajo dodatna tveganja, olivam, namočenim v alkohol, pa psa nikoli ne smete hraniti."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog eats a lot of olives, especially with the pits, contact your vet for advice.",
+    "sl": "Če pes poje veliko oliv, zlasti s koščicami, se za nasvet obrnite na veterinarja."
+  },
+  "serving": {
+    "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
+    "sl": "Samo navadne, nesoljene olive brez koščic, v majhnih količinah. Izogibajte se olivam iz pločevinke, vloženim olivam in olivam s česnom, začimbami, olji ali alkoholom."
+  },
+  "child": {
+    "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
+    "sl": "Psi lahko kdaj pa kdaj dobijo navadno olivo, iz katere odrasli odstrani koščico. Slane olive niso za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are olive pits dangerous for dogs?",
+        "sl": "So koščice oliv za pse nevarne?"
+      },
+      "a": {
+        "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
+        "sl": "Da. Koščice oliv lahko povzročijo dušenje ali zaporo dihalnih poti in se lahko zagozdijo v psovih prebavilih."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD134",
+      "quote": "This fruit isn’t toxic to dogs and it can be safe in small quantities."
+    },
+    {
+      "id": "KD134",
+      "quote": "Dogs can eat olives in moderation."
+    },
+    {
+      "id": "KD134",
+      "quote": "However, plain, unsalted olives can be a healthy snack for your dog."
+    },
+    {
+      "id": "KD134",
+      "quote": "While olives themselves don't contain any toxic ingredients, the pits pose some hazards."
+    },
+    {
+      "id": "KD134",
+      "quote": "Olive pits may cause choking or breathing obstructions in dogs."
+    },
+    {
+      "id": "KD134",
+      "quote": "They can also block airways and lodge in your dog’s intestinal tract."
+    },
+    {
+      "id": "KD134",
+      "quote": "Plain, pitted olives rarely cause problems in dogs."
+    },
+    {
+      "id": "KD134",
+      "quote": "However, ones that are canned or pickled often contain excessive amounts of sodium."
+    },
+    {
+      "id": "KD134",
+      "quote": "Too much sodium is unhealthy for dogs and can lead to dehydration and, in rare cases, salt toxicosis."
+    },
+    {
+      "id": "KD134",
+      "quote": "Olives coated in garlic, seasonings, or oils can also carry additional risks."
+    },
+    {
+      "id": "KD134",
+      "quote": "It probably goes without saying, but you should never feed your dog olives soaked in alcohol."
+    },
+    {
+      "id": "KD134",
+      "quote": "If your dog consumes a large amount of olives, contact your veterinarian for advice."
+    },
+    {
+      "id": "KD134",
+      "quote": "Eating too many is potentially dangerous, especially if they still contain the pits."
+    }
+  ],
+  "related": [
+    "salt",
+    "salty-snacks",
+    "garlic",
+    "fruit-pits"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "72b98d43fcd9dd705b71c7bc47f39d5295c41e2696a34e80a93b8aa9f42f8697"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9b5afeb1da5d56617935bdaadfd877f73e7a4df3b7fe7368807f05522446d242"
+    }
+  }
+}

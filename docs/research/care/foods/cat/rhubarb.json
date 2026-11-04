@@ -1,0 +1,56 @@
+{
+  "slug": "rhubarb",
+  "species": "cat",
+  "name": {"en": "Rhubarb", "sl": "Rabarbara"},
+  "question": {"en": "Can cats eat rhubarb?", "sl": "Ali lahko mačke jedo rabarbaro?"},
+  "url_slug": {"en": "rhubarb", "sl": "rabarbara"},
+  "level": "dangerous",
+  "answer": {
+    "en": "No. The ASPCA lists rhubarb as toxic to cats because it contains soluble calcium oxalates. The leaves and roots are the most toxic parts. Don't share rhubarb with your cat, and call your vet if your cat chews any.",
+    "sl": "Ne. ASPCA rabarbaro navaja kot strupeno za mačke, ker vsebuje topne kalcijeve oksalate. Najbolj strupeni so listi in korenine. Rabarbare ne delite z mačko in pokličite veterinarja, če jo mačka pogrizlja."
+  },
+  "why": {
+    "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
+    "sl": "Rabarbara vsebuje topne kalcijeve oksalate in ASPCA jo navaja kot strupeno za mačke; najbolj strupeni so listi in korenine. ASPCA ima za rabarbaro dva vnosa, ki se razlikujeta: eden navaja odpoved ledvic, tresenje in slinjenje, drugi pa bruhanje in slinjenje pri psih in mačkah ter odpoved ledvic pri pašnih živalih. Upoštevamo strožji vnos in navajamo tudi odpoved ledvic."
+  },
+  "signs": {
+    "en": ["Vomiting", "Drooling", "Tremors", "Kidney problems (kidney failure)"],
+    "sl": ["Bruhanje", "Slinjenje", "Tresenje", "Težave z ledvicami (odpoved ledvic)"]
+  },
+  "what_to_do": {
+    "en": "If your cat chewed any part of a rhubarb plant, especially the leaves or roots, contact your vet or a pet poison helpline right away. Note what was eaten and when. Don't try to make your cat sick at home.",
+    "sl": "Če je mačka grizljala katerikoli del rabarbare, zlasti liste ali korenine, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Rhubarb is not a cat food. The rhubarb plant is not safe for cats, so tell a grown-up if kitty chews some.",
+    "sl": "Rabarbara ni hrana za muce. Ta rastlina ni varna za muce, zato povej odraslemu, če jo muca pogrizlja."
+  },
+  "faq": [
+    {
+      "q": {"en": "Which part of rhubarb is the problem?", "sl": "Kateri del rabarbare je težava?"},
+      "a": {
+        "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
+        "sl": "ASPCA rastlino rabarbare navaja kot strupeno za mačke in pravi, da so najbolj strupeni listi in korenine."
+      }
+    }
+  ],
+  "sources": [
+    {"id": "KC72", "quote": "Toxicity: Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
+    {"id": "KC72", "quote": "Toxic Principles: Soluble calcium oxalates"},
+    {"id": "KC72", "quote": "Clinical Signs: Kidney failure, tremors, salivation."},
+    {"id": "KC73", "quote": "Additional Common Names: Rhubarb"},
+    {"id": "KC73", "quote": "Toxicity: Toxic to Dogs, Toxic to Cats, Toxic to Horses"},
+    {"id": "KC73", "quote": "Clinical Signs: Kidney failure (in grazing animals), vomiting, salivation in dogs/cats."},
+    {"id": "KC73", "quote": "Most toxic parts are leaves and roots."},
+    {"id": "KC73", "quote": "If you suspect your pet may have ingested a potentially toxic substance, call the ASPCA Poison Control at (888) 426-4435."},
+    {"id": "KC8", "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."},
+    {"id": "KC22", "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."}
+  ],
+  "related": ["cherries", "grapes"],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "7ee1eecd1507ffd77b037d19820a971c1f9c480724947f5aa197f80709d0be6a"},
+    "sl": {"status": "verified", "verified_by": "claude-verifier", "verified_hash": "f45f979925a2c483e1cd7e4602cd8b39a22dcb7094c25522d07d0129f9662a68"}
+  }
+}

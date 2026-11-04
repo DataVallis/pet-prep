@@ -1,0 +1,136 @@
+{
+  "slug": "rhubarb",
+  "species": "dog",
+  "name": {
+    "en": "Rhubarb",
+    "sl": "Rabarbara"
+  },
+  "question": {
+    "en": "Can dogs eat rhubarb?",
+    "sl": "Ali lahko psi jedo rabarbaro?"
+  },
+  "url_slug": {
+    "en": "rhubarb",
+    "sl": "rabarbara"
+  },
+  "level": "toxic",
+  "answer": {
+    "en": "No. Keep rhubarb away from dogs. Rhubarb is listed as toxic to dogs, and its leaves contain soluble oxalates in dangerous concentrations. Eating it can cause vomiting, drooling, trembling, low blood calcium and kidney injury.",
+    "sl": "Ne. Rabarbaro hranite stran od psov. Rabarbara je uvrščena med rastline, strupene za pse, njeni listi pa vsebujejo topne oksalate v nevarnih koncentracijah. Lahko povzroči bruhanje, slinjenje, tresenje, nizko raven kalcija v krvi in okvaro ledvic."
+  },
+  "why": {
+    "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
+    "sl": "Listi rabarbare vsebujejo topne oksalate (oksalno kislino), ki lahko psu povzročijo težave z živčevjem, prebavili in ledvicami ter znižajo raven kalcija. Pet Poison Helpline navaja, da stebla vsebujejo zelo malo oksalatov in niso strupena, ASPCA pa rabarbaro uvršča med rastline, strupene za pse, zato izberemo strožjo oceno in svetujemo, da psu ne dajete nobenega dela rabarbare. Psov rastlina redko zanima, ker so listi grenki."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Drooling",
+      "Weakness",
+      "Trembling",
+      "Low blood calcium",
+      "Signs of kidney injury, such as peeing a lot"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Slinjenje",
+      "Šibkost",
+      "Tresenje",
+      "Nizka raven kalcija v krvi",
+      "Znaki okvare ledvic, na primer pogosto uriniranje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate rhubarb, especially the leaves, contact your vet or a pet poison helpline right away.",
+    "sl": "Če je pes pojedel rabarbaro, zlasti liste, se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali."
+  },
+  "serving": null,
+  "child": {
+    "en": "Rhubarb and its leaves are not for dogs. If your dog nibbles some, tell a grown-up right away.",
+    "sl": "Rabarbara in njeni listi niso za pse. Če pes kaj pogrize, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are rhubarb stalks safe for dogs?",
+        "sl": "So stebla rabarbare za pse varna?"
+      },
+      "a": {
+        "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
+        "sl": "Stebla vsebujejo zelo malo oksalatov in Pet Poison Helpline jih ima za nestrupena. A ASPCA rabarbaro uvršča med rastline, strupene za pse, zato je najbolje, da psu ne dajete nobenega dela."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD128",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD128",
+      "quote": "Soluble calcium oxalates"
+    },
+    {
+      "id": "KD128",
+      "quote": "Kidney failure, tremors, salivation."
+    },
+    {
+      "id": "KD129",
+      "quote": "Soluble oxalate/oxalic acid are toxic compounds found in dangerous concentrations within Rhubarb greens or leaves."
+    },
+    {
+      "id": "KD129",
+      "quote": "Rhubarb stalks, used in making rhubarb jams and pies, contain very little soluble oxalate and are nontoxic."
+    },
+    {
+      "id": "KD129",
+      "quote": "gastrointestinal distress (e.g., vomiting, drooling), neurological signs (e.g., weakness, trembling),"
+    },
+    {
+      "id": "KD129",
+      "quote": "decreased blood calcium levels, and kidney injury (e.g. excessive urination containing calcium oxalate crystals)"
+    },
+    {
+      "id": "KD129",
+      "quote": "call Pet Poison Helpline or seek immediate veterinary treatment"
+    },
+    {
+      "id": "KD130",
+      "quote": "Rhubarb (or Rheum rhabarbarum) leaves contain soluble calcium oxalate crystals and oxalic acid."
+    },
+    {
+      "id": "KD130",
+      "quote": "Truth be told the stalk of the rhubarb contains only very small amounts of oxalates and is virtually non toxic."
+    },
+    {
+      "id": "KD130",
+      "quote": "Rarely are dogs or cats interested in the plant since the leaves have a bitter taste."
+    },
+    {
+      "id": "KD131",
+      "quote": "Rhubarb also contains oxalates, which can cause problems with your pet's nervous system, digestive tract, and kidneys."
+    },
+    {
+      "id": "KD131",
+      "quote": "Rhubarb can also lower calcium levels in your dog, causing renal failure and other health problems."
+    }
+  ],
+  "related": [
+    "star-fruit",
+    "grapes",
+    "raisins"
+  ],
+  "updated": "2026-11-04",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3de0dc456f203aff31cfe8357348c58180a78939606f31232e01aff26b247e21"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c528d7e5f21d35b61e5f824beb775b1f80a13705c970c2767212355eaafe5d20"
+    }
+  }
+}
