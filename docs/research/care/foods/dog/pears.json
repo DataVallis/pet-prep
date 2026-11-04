@@ -15,7 +15,8 @@
     "cs": "Hrušky",
     "sv": "Päron",
     "da": "Pærer",
-    "fi": "Päärynät"
+    "fi": "Päärynät",
+    "nb": "Pærer"
   },
   "question": {
     "en": "Can dogs eat pears?",
@@ -31,7 +32,8 @@
     "cs": "Mohou psi jíst hrušky?",
     "sv": "Får hundar äta päron?",
     "da": "Må hunde spise pærer?",
-    "fi": "Saako koira syödä päärynöitä?"
+    "fi": "Saako koira syödä päärynöitä?",
+    "nb": "Kan hunder spise pærer?"
   },
   "url_slug": {
     "en": "pears",
@@ -47,7 +49,8 @@
     "cs": "hrusky",
     "sv": "paron",
     "da": "paerer",
-    "fi": "paarynat"
+    "fi": "paarynat",
+    "nb": "paerer"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "cs": "Ano, psi mohou hrušky jíst s mírou. Odstraňte ohryzek a semínka, nakrájejte hrušku na kousky na jedno sousto a vynechte hrušky z konzervy ve sladkém sirupu. Příliš mnoho hrušek může psovi podráždit žaludek.",
     "sv": "Ja, hundar kan äta päron med måtta. Ta bort kärnhuset och kärnorna, skär frukten i munsbitar och undvik päron på burk i sockerlag. För många päron kan ge hunden orolig mage.",
     "da": "Ja, hunde må gerne få pærer med måde. Fjern kernehus og kerner, skær frugten i mundrette stykker, og undgå pærer på dåse i sukkerlage. For mange pærer kan give hunden dårlig mave.",
-    "fi": "Kyllä, koira voi syödä päärynää kohtuudella. Poista siemenkota ja siemenet, leikkaa hedelmä suupalan kokoisiksi paloiksi äläkä anna sokerisiirapissa säilöttyjä päärynöitä. Liian monta päärynää voi sekoittaa koiran vatsan."
+    "fi": "Kyllä, koira voi syödä päärynää kohtuudella. Poista siemenkota ja siemenet, leikkaa hedelmä suupalan kokoisiksi paloiksi äläkä anna sokerisiirapissa säilöttyjä päärynöitä. Liian monta päärynää voi sekoittaa koiran vatsan.",
+    "nb": "Ja, hunder kan spise pærer med måte. Fjern kjernehuset og kjernene, skjær frukten i passe store biter, og dropp hermetiske pærer i sukkersirup. For mange pærer kan gi hunden urolig mage."
   },
   "why": {
     "en": "Pears contain vitamin C, vitamin A, copper and fibre. The seeds contain traces of cyanide and can also cause choking, so the core should not be shared. Canned pears contain too much sugar, which can irritate the digestive tract and lead to obesity. Even safe foods like pears can be a choking hazard.",
@@ -80,7 +84,8 @@
     "cs": "Hrušky obsahují vitamin C, vitamin A, měď a vlákninu. Semínka obsahují stopy kyanidu a mohou také způsobit dušení, takže ohryzek psovi nedávejte. Hrušky z konzervy obsahují příliš mnoho cukru, který může dráždit trávicí trakt a vést k obezitě. I bezpečné potraviny, třeba hrušky, mohou být rizikem udušení.",
     "sv": "Päron innehåller C-vitamin, A-vitamin, koppar och fibrer. Kärnorna innehåller spår av cyanid och kan också orsaka kvävning, så kärnhuset ska inte delas med hunden. Päron på burk innehåller för mycket socker, som kan irritera matsmältningskanalen och leda till fetma. Även ofarlig mat som päron kan vara en kvävningsrisk.",
     "da": "Pærer indeholder C-vitamin, A-vitamin, kobber og fibre. Kernerne indeholder spor af cyanid og kan også sætte sig fast i halsen, så kernehuset bør ikke deles. Pærer på dåse indeholder for meget sukker, som kan irritere fordøjelseskanalen og føre til fedme. Selv sikre fødevarer som pærer kan sætte sig fast i halsen.",
-    "fi": "Päärynässä on C-vitamiinia, A-vitamiinia, kuparia ja kuitua. Siemenissä on pieniä määriä syanidia, ja ne voivat myös aiheuttaa tukehtumisen, joten siemenkotaa ei pidä jakaa. Säilykepäärynöissä on liikaa sokeria, joka voi ärsyttää ruoansulatuskanavaa ja johtaa lihavuuteen. Myös päärynän kaltaiset turvalliset ruoat voivat aiheuttaa tukehtumisvaaran."
+    "fi": "Päärynässä on C-vitamiinia, A-vitamiinia, kuparia ja kuitua. Siemenissä on pieniä määriä syanidia, ja ne voivat myös aiheuttaa tukehtumisen, joten siemenkotaa ei pidä jakaa. Säilykepäärynöissä on liikaa sokeria, joka voi ärsyttää ruoansulatuskanavaa ja johtaa lihavuuteen. Myös päärynän kaltaiset turvalliset ruoat voivat aiheuttaa tukehtumisvaaran.",
+    "nb": "Pærer inneholder vitamin C, vitamin A, kobber og fiber. Kjernene inneholder spor av cyanid og kan også gi kvelning, så kjernehuset skal ikke deles. Hermetiske pærer inneholder for mye sukker, som kan irritere fordøyelseskanalen og føre til fedme. Selv trygg mat som pærer kan være en kvelningsfare."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "cs": "Když psovi hrušky dáváte poprvé, sledujte, zda se neobjeví známky podrážděného žaludku, a pokud máte jakékoli obavy, obraťte se na veterináře.",
     "sv": "Första gången du ger päron: håll utkik efter tecken på orolig mage, och kontakta veterinären om du har några funderingar.",
     "da": "Første gang du giver pærer, skal du holde øje med tegn på dårlig mave og kontakte din dyrlæge hvis du er i tvivl.",
-    "fi": "Seuraa ensimmäisellä kerralla, ilmeneekö vatsavaivojen merkkejä, ja ota yhteyttä eläinlääkäriin, jos olet huolissasi."
+    "fi": "Seuraa ensimmäisellä kerralla, ilmeneekö vatsavaivojen merkkejä, ja ota yhteyttä eläinlääkäriin, jos olet huolissasi.",
+    "nb": "Første gang du gir hunden pære, bør du følge med på symptomer på urolig mage og kontakte dyrlegen hvis du er bekymret."
   },
   "serving": {
     "en": "Fresh, ripe pear without the core and seeds, cut into bite-sized pieces; watch your dog while it eats. As an occasional snack.",
@@ -113,7 +119,8 @@
     "cs": "Čerstvá zralá hruška bez ohryzku a semínek, nakrájená na kousky na jedno sousto; dohlížejte na psa, když jí. Jako občasná svačinka.",
     "sv": "Färskt, moget päron utan kärnhus och kärnor, skuret i munsbitar; ha uppsikt över hunden medan den äter. Som mellanmål då och då.",
     "da": "Frisk, moden pære uden kernehus og kerner, skåret i mundrette stykker. Hold øje med hunden, mens den spiser. Som snack en gang imellem.",
-    "fi": "Tuore, kypsä päärynä ilman siemenkotaa ja siemeniä, suupalan kokoisiksi paloiksi leikattuna; seuraa koiraa, kun se syö. Satunnaisena välipalana."
+    "fi": "Tuore, kypsä päärynä ilman siemenkotaa ja siemeniä, suupalan kokoisiksi paloiksi leikattuna; seuraa koiraa, kun se syö. Satunnaisena välipalana.",
+    "nb": "Frisk, moden pære uten kjernehus og kjerner, skåret i passe store biter. Følg med mens hunden spiser. Bare som godbit av og til."
   },
   "child": {
     "en": "Dogs can have a few small pieces of pear! A grown-up takes out the middle with the seeds first.",
@@ -129,7 +136,8 @@
     "cs": "Psi můžou dostat pár malých kousků hrušky! Nejdřív dospělý vyndá střed se semínky.",
     "sv": "Hundar kan få några små bitar päron! En vuxen tar först bort mitten med kärnorna.",
     "da": "Hunde kan få nogle få små stykker pære! En voksen tager først midten med kernerne ud.",
-    "fi": "Koira saa muutaman pienen palan päärynää! Aikuinen ottaa ensin pois keskiosan siemenineen."
+    "fi": "Koira saa muutaman pienen palan päärynää! Aikuinen ottaa ensin pois keskiosan siemenineen.",
+    "nb": "Hunder kan få noen små pærebiter! En voksen tar først ut midten med kjernene."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "cs": "Mohou psi jíst ohryzek z hrušky?",
         "sv": "Får hundar äta kärnhuset?",
         "da": "Må hunde spise kernehuset fra en pære?",
-        "fi": "Saako koira syödä päärynän siemenkotaa?"
+        "fi": "Saako koira syödä päärynän siemenkotaa?",
+        "nb": "Kan hunder spise kjernehuset på pæren?"
       },
       "a": {
         "en": "No. Avoid giving your dog the parts of the pear with seeds in them; the seeds contain traces of cyanide and can cause choking.",
@@ -163,7 +172,8 @@
         "cs": "Ne. Nedávejte psovi části hrušky se semínky; semínka obsahují stopy kyanidu a mohou způsobit dušení.",
         "sv": "Nej. Ge inte hunden de delar av päronet där kärnorna sitter; kärnorna innehåller spår av cyanid och kan orsaka kvävning.",
         "da": "Nej. Undgå at give hunden de dele af pæren hvor der er kerner. Kernerne indeholder spor af cyanid og kan sætte sig fast i halsen.",
-        "fi": "Ei. Älä anna koiralle päärynän osia, joissa on siemeniä; siemenissä on pieniä määriä syanidia, ja ne voivat aiheuttaa tukehtumisen."
+        "fi": "Ei. Älä anna koiralle päärynän osia, joissa on siemeniä; siemenissä on pieniä määriä syanidia, ja ne voivat aiheuttaa tukehtumisen.",
+        "nb": "Nei. Ikke gi hunden de delene av pæren som inneholder kjerner. Kjernene har spor av cyanid og kan gi kvelning."
       }
     },
     {
@@ -181,7 +191,8 @@
         "cs": "Jsou v pořádku hrušky z konzervy?",
         "sv": "Går päron på burk bra?",
         "da": "Er pærer på dåse i orden?",
-        "fi": "Käyvätkö säilykepäärynät?"
+        "fi": "Käyvätkö säilykepäärynät?",
+        "nb": "Går det bra med hermetiske pærer?"
       },
       "a": {
         "en": "No. Canned pears contain too much sugar. Skip canned or jarred pears in syrup, even those labelled \"in their own juice\". Fresh, ripe pears are the best option.",
@@ -197,7 +208,8 @@
         "cs": "Ne. Hrušky z konzervy obsahují příliš mnoho cukru. Vynechte hrušky z konzervy nebo ze sklenice v sirupu, i ty označené „ve vlastní šťávě“. Nejlepší volbou jsou čerstvé zralé hrušky.",
         "sv": "Nej. Päron på burk innehåller för mycket socker. Undvik päron på burk eller glasburk i sirap, även de som är märkta ”i egen juice”. Färska, mogna päron är bäst.",
         "da": "Nej. Pærer på dåse indeholder for meget sukker. Undgå pærer på dåse eller glas i sirup, også dem der er mærket »i egen juice«. Friske, modne pærer er det bedste valg.",
-        "fi": "Eivät. Säilykepäärynöissä on liikaa sokeria. Älä anna siirapissa säilöttyjä päärynöitä, myöskään sellaisia, joiden purkissa lukee ”omassa mehussaan”. Tuoreet, kypsät päärynät ovat paras vaihtoehto."
+        "fi": "Eivät. Säilykepäärynöissä on liikaa sokeria. Älä anna siirapissa säilöttyjä päärynöitä, myöskään sellaisia, joiden purkissa lukee ”omassa mehussaan”. Tuoreet, kypsät päärynät ovat paras vaihtoehto.",
+        "nb": "Nei. Hermetiske pærer inneholder for mye sukker. Dropp pærer på boks eller glass i sirup, også de som er merket «i egen saft». Ferske, modne pærer er det beste valget."
       }
     }
   ],
@@ -351,6 +363,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4150f7fe8c48489f923bbe3557cf70a1a3ca122a8a3f04dd016d6bebeca98245"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d064fc0cdc48d4c5d5beb91af7f8e4e213bf4ad36ef4b581f575f847926656d6"
     }
   }
 }
