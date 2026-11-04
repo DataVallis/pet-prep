@@ -870,12 +870,12 @@
       "address": "1601 Bristol Road South, Longbridge, Birmingham, B45 9UA",
       "phone": "+44 1212382007",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 6pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -885,12 +885,12 @@
       "address": "Zetland Vets, 32-34 Zetland Road, Redland, Bristol, BS6 7AB",
       "phone": "+44 1173361172",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 6pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -900,12 +900,12 @@
       "address": "Rosemary Lodge Vet Hospital, Rosemary Lodge, Bath, BA2 5RL",
       "phone": "+44 1225635616",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 7pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -915,12 +915,12 @@
       "address": "Wood Street Veterinary Hospital, 74 Wood Street, Barnet, EN5 4BW",
       "phone": "+44 2081093356",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 7pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -930,12 +930,12 @@
       "address": "Yorkshire Vets, 515 Bradford Road, Thornbury, Bradford, BD3 7BA",
       "phone": "+44 1274398905",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 6pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -945,12 +945,12 @@
       "address": "Dragon Vets, Prestbury Park, New Barn Lane, Cheltenham, GL50 4SH",
       "phone": "+44 1242373239",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 7pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -960,12 +960,12 @@
       "address": "Cinque Ports Veterinary Hospital, Ashford Road, Kingsnorth, Ashford, TN23 3EA",
       "phone": "+44 1233877636",
       "emergency_24h": false,
-      "duty": "Out-of-hours emergency clinic, opens at 7pm (finder page); not 24 h",
+      "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
       "checked": "2026-11-03",
-      "note": "Evening/night out-of-hours service run inside a day practice; phone first."
+      "note": "Evening/night out-of-hours service run inside a day practice; phone first. Duty source: finder page."
     },
     {
       "kind": "clinic",
@@ -2935,12 +2935,12 @@
       "address": "Unit 122 East Muirlands Road, Arbroath DD11 3ES",
       "phone": "+44 1241293777",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30am-5pm/6:30pm (see site). Small animal emergencies out of hours: Vets Now.",
+      "duty": "Mon-Fri 8:30am-5pm/6:30pm. Small animal emergencies out of hours: Vets Now.",
       "small_animals": true,
       "url": "https://www.parksidevets.com/",
       "source_url": "https://www.parksidevets.com/",
       "checked": "2026-11-03",
-      "note": "24 h support on page is for equine/farm only."
+      "note": "24 h support on page is for equine/farm only. Hours: see practice site for 5pm/6:30pm variation."
     },
     {
       "kind": "clinic",
@@ -3486,11 +3486,12 @@
       "address": "139 Glasgow Road, Garrowhill, Baillieston G69 6TA",
       "phone": "+44 1417715565",
       "emergency_24h": false,
-      "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm (practice-wide hours). Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm. Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
       "small_animals": true,
       "url": "https://www.realvets.co.uk/",
       "source_url": "https://www.realvets.co.uk/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Hours given as practice-wide hours."
     },
     {
       "kind": "clinic",
@@ -3500,11 +3501,12 @@
       "address": "84 Portland Place, Hamilton ML3 7LA",
       "phone": "+44 1698283400",
       "emergency_24h": false,
-      "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm (practice-wide hours). Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm. Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
       "small_animals": true,
       "url": "https://www.realvets.co.uk/",
       "source_url": "https://www.realvets.co.uk/",
-      "checked": "2026-11-03"
+      "checked": "2026-11-03",
+      "note": "Hours given as practice-wide hours."
     },
     {
       "kind": "clinic",

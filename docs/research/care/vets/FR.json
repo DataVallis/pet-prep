@@ -833,7 +833,7 @@
       "address": "12 avenue du XVème Corps, 55800 Revigny-sur-Ornain",
       "phone": "+33 3 29 75 18 09",
       "emergency_24h": true,
-      "duty": "Weekdays 8:30–12:00/13:30–19:00, Sat 8:30–16:00; emergency hours listed 00–24 every day",
+      "duty": "Weekdays 8:30–12:00/13:30–19:00, Sat 8:30–16:00; emergencies every day 00–24",
       "url": "https://www.anicura.fr/cliniques/airelles/",
       "source_url": "https://www.anicura.fr/cliniques/airelles/contact/",
       "quote": "Tous les jours 00 - 24",
@@ -1074,7 +1074,7 @@
       "address": "75 Boulevard Rosselli, 69220 Belleville-en-Beaujolais",
       "phone": "+33 4 74 66 12 67",
       "emergency_24h": false,
-      "duty": "Clinic weekdays 08:00–19:00, Sat 08:00–17:00; emergency service listed every day 08:00–19:00.",
+      "duty": "Clinic weekdays 08:00–19:00, Sat 08:00–17:00; emergency service every day 08:00–19:00.",
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/belleville/",
       "source_url": "https://www.anicura.fr/cliniques/belleville/contact/",
@@ -1117,7 +1117,7 @@
       "region": "Auvergne-Rhône-Alpes",
       "phone": "+33 4 58 17 32 32",
       "emergency_24h": false,
-      "duty": "Emergency home-visit service for the Grenoble and Chambéry areas; listed hours Mon–Fri 19:00–08:00, Sat from 14:00, Sundays and holidays continuous.",
+      "duty": "Emergency home-visit service for the Grenoble and Chambéry areas; hours Mon–Fri 19:00–08:00, Sat from 14:00, Sundays and holidays continuous.",
       "small_animals": true,
       "url": "https://www.veterinaire-de-garde-grenoble.fr/",
       "source_url": "https://www.veterinaire-de-garde-grenoble.fr/",
@@ -1205,11 +1205,11 @@
       "address": "163 Avenue Aristide Briand, 38520 Le Bourg-d'Oisans",
       "phone": "+33 4 76 80 17 42",
       "emergency_24h": false,
-      "duty": "Open all year, closed Sunday (times not published).",
+      "duty": "Open all year, closed Sunday.",
       "small_animals": true,
       "source_url": "https://www.oz-en-oisans.com/winter/offers/veterinary-surgery-le-bourg-doisans-en-winter-2795237",
       "checked": "2026-11-02",
-      "note": "Oisans ski area (Alpe d'Huez, Les 2 Alpes). Source: Oisans tourism listing; hours marked unsecured."
+      "note": "Oisans ski area (Alpe d'Huez, Les 2 Alpes). Source: Oisans tourism listing; hours marked unsecured. Times not published."
     },
     {
       "kind": "clinic",
@@ -1279,11 +1279,12 @@
       "city": "Toulouse",
       "region": "Occitanie",
       "emergency_24h": false,
-      "duty": "Official city page listing the out-of-hours vet options for Toulouse: ENVT emergencies, Vet-Urgentys, home-visit emergency service.",
+      "duty": "Out-of-hours vet options for Toulouse: ENVT emergencies, Vet-Urgentys, home-visit emergency service.",
       "small_animals": true,
       "url": "https://metropole.toulouse.fr/",
       "source_url": "https://metropole.toulouse.fr/demarches/trouver-un-veterinaire-de-garde-toulouse",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Official city page."
     },
     {
       "kind": "clinic",
@@ -1293,11 +1294,12 @@
       "address": "14 Chemin de l'Industrie, 31390 Carbonne",
       "phone": "+33 5 61 87 83 74",
       "emergency_24h": false,
-      "duty": "Small-animal clinic listed in AniCura's emergency network; call for advice.",
+      "duty": "Small-animal clinic; call for advice.",
       "small_animals": true,
       "url": "https://www.anicura.fr/cliniques/volvestre/",
       "source_url": "https://www.anicura.fr/cliniques/volvestre/nos-prestations/",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Listed in AniCura's emergency network."
     },
     {
       "kind": "clinic",
@@ -1483,7 +1485,7 @@
       "address": "344 boulevard de la Paix, 64000 Pau",
       "phone": "+33 5 59 62 30 52",
       "emergency_24h": true,
-      "duty": "Emergency clinic listed as open 24h every day.",
+      "duty": "Emergency clinic open 24 h every day.",
       "small_animals": true,
       "url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-la-paix-pau-pau/",
       "source_url": "https://sevetys.fr/cliniques-veterinaires/clinique-veterinaire-de-la-paix-pau-pau/",
@@ -1527,11 +1529,10 @@
       "address": "2 lotissement Larraidy, 64240 Hasparren",
       "phone": "+33 5 59 29 60 57",
       "emergency_24h": false,
-      "duty": "Hours not published on the source page.",
       "small_animals": true,
       "source_url": "https://www.en-pays-basque.fr/en/sit/clinique-veterinaire-arta-leku/",
       "checked": "2026-11-02",
-      "note": "Source: Pays Basque tourism board listing."
+      "note": "Source: Pays Basque tourism board listing. Hours not published on the source page."
     },
     {
       "kind": "clinic",
@@ -1721,11 +1722,11 @@
       "address": "138 Route des Plages, 83990 Saint-Tropez",
       "phone": "+33 4 94 97 72 42",
       "emergency_24h": false,
-      "duty": "Open all year (times not published).",
+      "duty": "Open all year.",
       "small_animals": true,
       "source_url": "https://cotedazurfrance.fr/offres/clinique-veterinaire-a-saint-tropez-saint-tropez-fr-3485477/",
       "checked": "2026-11-02",
-      "note": "Source: Côte d'Azur France tourism listing; its photo caption names 'Clinique vétérinaire du Moulin Blanc', so the name is uncertain."
+      "note": "Source: Côte d'Azur France tourism listing; its photo caption names 'Clinique vétérinaire du Moulin Blanc', so the name is uncertain. Times not published."
     },
     {
       "kind": "clinic",
@@ -2204,12 +2205,13 @@
       "address": "66 cours Napoléon, 20000 Ajaccio",
       "phone": "+33 4 12 05 23 23",
       "emergency_24h": false,
-      "duty": "Mon–Fri 8:00–12:00, 14:00–18:00 (page also shows Wednesday closed); Sat 8:00–12:00; emergencies during opening hours; nights/Sundays/holidays handled by Clinique vétérinaire des Vallées.",
+      "duty": "Mon–Fri 8:00–12:00, 14:00–18:00; Sat 8:00–12:00; emergencies during opening hours; nights/Sundays/holidays handled by Clinique vétérinaire des Vallées.",
       "small_animals": true,
       "url": "https://www.veterinaire-abbatucci.fr/",
       "source_url": "https://www.veterinaire-abbatucci.fr/",
       "quote": "Nights, Sundays and public holidays: Clinique Vétérinaire des Vallées (Z.I du Vazzio)",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Page also shows Wednesday closed."
     },
     {
       "kind": "clinic",
@@ -2309,12 +2311,13 @@
       "address": "Rue Louison Bobet, 24200 Sarlat-la-Canéda",
       "phone": "+33 5 53 29 34 30",
       "emergency_24h": false,
-      "duty": "Mon–Fri 8:30–12:30, 14:00–18:30; Sat 8:30–12:30; by appointment; on-call service page on the site.",
+      "duty": "Mon–Fri 8:30–12:30, 14:00–18:30; Sat 8:30–12:30; by appointment.",
       "small_animals": true,
       "url": "https://vetlouisonbobet.wixsite.com/clinvetsarlat",
       "source_url": "https://vetlouisonbobet.wixsite.com/clinvetsarlat",
       "quote": "En cas d'urgence contactez-nous au 05.53.29.34.30",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "On-call service page on the site."
     },
     {
       "kind": "clinic",
@@ -2445,12 +2448,13 @@
       "address": "7 rue des Pyrénées, 65310 Laloubère",
       "phone": "+33 5 62 93 30 29",
       "emergency_24h": false,
-      "duty": "Hours not published on the page; for out-of-hours emergencies in the Tarbes area see the Bizanos duty clinic (Urgences vétérinaires Pau–Tarbes).",
+      "duty": "For out-of-hours emergencies in the Tarbes area see the Bizanos duty clinic (Urgences vétérinaires Pau–Tarbes).",
       "small_animals": true,
       "url": "https://veterinairelaeropostale.fr/",
       "source_url": "https://veterinairelaeropostale.fr/urgences-veterinaires-tarbes/",
       "quote": "Urgences vétérinaires Tarbes (page title)",
-      "checked": "2026-11-02"
+      "checked": "2026-11-02",
+      "note": "Hours not published on the page."
     },
     {
       "kind": "clinic",

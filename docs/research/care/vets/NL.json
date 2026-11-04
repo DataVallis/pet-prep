@@ -137,12 +137,12 @@
       "address": "Yalelaan 108, 3584 CM Utrecht",
       "phone": "0900-222 3000",
       "emergency_24h": true,
-      "duty": "Mon-Fri 17:00-09:00 next morning; weekends and public holidays 24/7. Call first. Weekday daytime covered by the university clinic (UKG, 030-253 9411, vets refer via the Spoeddienst UKG which is stated as 24 uur per dag).",
+      "duty": "Mon–Fri 17:00–09:00 next morning; weekends and public holidays 24/7. Call first. Weekday daytime covered by the university clinic (UKG, 030-253 9411).",
       "small_animals": true,
       "url": "https://diergeneeskunde.nl/klinieken/spoedkliniek/",
       "source_url": "https://diergeneeskunde.nl/klinieken/spoedkliniek/",
       "checked": "2026-11-03",
-      "note": "University emergency clinic for dogs and cats, plus birds, small mammals, reptiles and amphibians with specialist back-up. Owners in Midden-Nederland can come directly outside office hours; see also /klinieken/gezelschapsdieren/spoeddienst/.",
+      "note": "University emergency clinic for dogs and cats, plus birds, small mammals, reptiles and amphibians with specialist back-up. Owners in Midden-Nederland can come directly outside office hours; see also /klinieken/gezelschapsdieren/spoeddienst/. Duty text said vets refer via the Spoeddienst UKG, which is stated as 24 uur per dag.",
       "quote": "In het weekend en op feestdagen zijn we 24/7 geopend."
     },
     {
@@ -309,12 +309,12 @@
       "address": "Koningsoordlaan 2, 5056 DA Berkel-Enschot",
       "phone": "013 - 540 02 15",
       "emergency_24h": false,
-      "duty": "Spoed listed 'Geopend voor spoed 00 - 24' every day (no explicit 24 uur / 24/7 / dag en nacht wording on the clinic or overview page); clinic hours Mon-Thu 08:30-19:00, Fri 08:30-18:00, Sat 09:30-12:30. Phone first.",
+      "duty": "Emergency open 00–24 every day; clinic hours Mon–Thu 8:30–19:00, Fri 8:30–18:00, Sat 9:30–12:30. Phone first to confirm night care.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-brabant/tilburg/",
       "source_url": "https://www.anicura.nl/klinieken/noord-brabant/tilburg/contact/",
       "checked": "2026-11-03",
-      "note": "Downgraded by independent check 2026-11-03: the only 24-h support is a '00 - 24' spoed schedule, no explicit 24-h wording; phone first to confirm night care. Name, phone, address confirmed.",
+      "note": "Downgraded by independent check 2026-11-03: the only 24-h support is a '00 - 24' spoed schedule, no explicit 24-h wording; phone first to confirm night care. Name, phone, address confirmed. Duty text said emergency listed as 'Geopend voor spoed 00 - 24' with no explicit 24 uur / 24/7 / dag en nacht wording on the clinic or overview page.",
       "quote": "Geopend voor spoed 00 - 24"
     },
     {
@@ -325,12 +325,12 @@
       "address": "Graveneslaan 1, 7576 BE Oldenzaal",
       "phone": "0541 - 533 220",
       "emergency_24h": false,
-      "duty": "Spoed listed 'Geopend voor spoed 00 - 24' every day (no explicit 24 uur / 24/7 / dag en nacht wording on the clinic or overview page); clinic hours Mon-Thu 08:30-19:00, Fri 08:30-18:00. Phone when in doubt.",
+      "duty": "Emergency open 00–24 every day; clinic hours Mon–Thu 8:30–19:00, Fri 8:30–18:00. Phone when in doubt.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/overijssel/oldenzaal/",
       "source_url": "https://www.anicura.nl/klinieken/overijssel/oldenzaal/contact/",
       "checked": "2026-11-03",
-      "note": "Downgraded by independent check 2026-11-03: the only 24-h support is a '00 - 24' spoed schedule, no explicit 24-h wording; phone first to confirm night care. Name, phone, address confirmed.",
+      "note": "Downgraded by independent check 2026-11-03: the only 24-h support is a '00 - 24' spoed schedule, no explicit 24-h wording; phone first to confirm night care. Name, phone, address confirmed. Duty text said emergency listed as 'Geopend voor spoed 00 - 24' with no explicit 24 uur / 24/7 / dag en nacht wording on the clinic or overview page.",
       "quote": "Geopend voor spoed 00 - 24"
     },
     {
@@ -388,12 +388,12 @@
       "region": "Zeeland",
       "phone": "0115 - 61 96 28",
       "emergency_24h": false,
-      "duty": "Four clinics rotate weekend emergency duty; on-duty vet reachable via 0115 - 61 96 28 (stated as staffed 24/7). Partners: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88).",
+      "duty": "Four clinics rotate weekend emergency duty; on-duty vet reachable 24/7 on 0115 - 61 96 28. Partners: Dierenkliniek Terneuzen (Vlietstraat 19, 0115 - 61 22 00), Dierenkliniek Sas van Gent (Zusterstraat 3, 0115 - 45 38 00), Dierenkliniek Axel (Oude Spoorbaan 2, 0115 - 56 14 88).",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zeeland/zeeuws-vlaanderen/contact/weekend-dienstrooster/",
       "source_url": "https://www.anicura.nl/klinieken/zeeland/zeeuws-vlaanderen/contact/weekend-dienstrooster/",
       "checked": "2026-11-03",
-      "note": "Roster lists clinic per weekend (3-5 Jan to 26-27 Dec); year not stated on the page. Night duty also shared since 1 May 2024 (contact page)."
+      "note": "Roster lists clinic per weekend (3-5 Jan to 26-27 Dec); year not stated on the page. Night duty also shared since 1 May 2024 (contact page). 24/7 staffing of 0115 - 61 96 28 is as stated on the page."
     },
     {
       "kind": "duty_rota",
@@ -448,12 +448,12 @@
       "address": "Ommoordseweg 25, Rotterdam",
       "phone": "010 - 420 66 66",
       "emergency_24h": false,
-      "duty": "Phone line 08:30-20:30; page says 'Emergency vet needed? Please contact our main location in Rotterdam Ommoord-Hillegersberg.' Contact before visit.",
+      "duty": "Phone line 08:30–20:30. For emergencies contact the main location in Rotterdam Ommoord-Hillegersberg. Contact before visit.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/rotterdam/veterinary-clinic/",
       "source_url": "https://www.anicura.nl/klinieken/rotterdam/veterinary-clinic/",
       "checked": "2026-11-03",
-      "note": "Address from the AniCura clinic overview page (https://www.anicura.nl/spoedklinieken/); clinic hours 08:30-21:00 there. Four more AniCura Rotterdam locations exist (Centrum, Kralingen, Capelle, Zevenkamp area)."
+      "note": "Address from the AniCura clinic overview page (https://www.anicura.nl/spoedklinieken/); clinic hours 08:30-21:00 there. Four more AniCura Rotterdam locations exist (Centrum, Kralingen, Capelle, Zevenkamp area). Duty text quoted the page: 'Emergency vet needed? Please contact our main location in Rotterdam Ommoord-Hillegersberg.'"
     },
     {
       "kind": "clinic",
@@ -535,12 +535,12 @@
       "address": "Noord Brabantlaan 80, 5652 LE Eindhoven",
       "phone": "+31 40 257 1517",
       "emergency_24h": false,
-      "duty": "Regular weekly hours not shown on the opened page; has a 'Spoed' link to the AniCura spoedklinieken page. Clinic hours 08:00-17:00 per the AniCura overview.",
+      "duty": "Clinic hours 08:00–17:00. For emergencies see the AniCura emergency clinics page.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/noord-brabant/t-heike-eindhoven/",
       "source_url": "https://www.anicura.nl/klinieken/noord-brabant/t-heike-eindhoven/",
       "checked": "2026-11-03",
-      "note": "Nearest 24-h option: Evidensia Dierenziekenhuis Zuidoost Brabant, Geldrop."
+      "note": "Nearest 24-h option: Evidensia Dierenziekenhuis Zuidoost Brabant, Geldrop. Duty text said regular weekly hours were not shown on the opened page and it has a 'Spoed' link to the AniCura spoedklinieken page."
     },
     {
       "kind": "clinic",
@@ -550,12 +550,12 @@
       "address": "De Verbetering 8, 9744 DZ Groningen",
       "phone": "050 - 501 55 00",
       "emergency_24h": false,
-      "duty": "Clinic weekdays 08:30-18:00; out-of-hours emergency number 050-5015500 (no 24-h wording).",
+      "duty": "Clinic weekdays 08:30–18:00; out-of-hours emergency number 050-5015500.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/groningen/groningen/",
       "source_url": "https://www.anicura.nl/klinieken/groningen/groningen/contact/",
       "checked": "2026-11-03",
-      "note": "Nearest 24-h option: Evidensia Dierenziekenhuis Het Noorden, Eelderwolde."
+      "note": "Nearest 24-h option: Evidensia Dierenziekenhuis Het Noorden, Eelderwolde. Duty text said no 24-h wording."
     },
     {
       "kind": "clinic",
@@ -611,12 +611,12 @@
       "address": "Hoofdweg 665, 2131 BB Hoofddorp",
       "phone": "023 - 564 26 26",
       "emergency_24h": false,
-      "duty": "Mon-Fri 09:00-12:45 and 13:15-19:30; no weekend hours on page; phone when in doubt.",
+      "duty": "Mon–Fri 09:00–12:45 and 13:15–19:30. Phone when in doubt.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/hoofddorp/hoofddorp-hoofdvaart/",
       "source_url": "https://www.anicura.nl/klinieken/hoofddorp/hoofddorp-hoofdvaart/contact/",
       "checked": "2026-11-03",
-      "note": "Page contains no 24-h wording (a third-party directory claims 24/7; not used)."
+      "note": "Page contains no 24-h wording (a third-party directory claims 24/7; not used). Duty text said no weekend hours on page."
     },
     {
       "kind": "clinic",
@@ -626,12 +626,12 @@
       "address": "Prins Bernhardstraat 63, 2202 LG Noordwijk",
       "phone": "071 361 5305",
       "emergency_24h": false,
-      "duty": "Mon-Tue 08:00-17:00, Wed-Fri 09:00-17:00 (closed 12:30-13:30). Banner says call 071 51 56 161 24 h a day for the on-duty vet; between 23:00 and 08:00 a recorded message refers to AniCura MCD Amsterdam.",
+      "duty": "Mon–Tue 08:00–17:00, Wed–Fri 09:00–17:00 (closed 12:30–13:30). Call 071 51 56 161 any time for the on-duty vet; between 23:00 and 08:00 a recorded message refers to AniCura MCD Amsterdam.",
       "small_animals": true,
       "url": "https://www.anicura.nl/klinieken/zuid-holland/noordwijk/",
       "source_url": "https://www.anicura.nl/klinieken/zuid-holland/noordwijk/contact/",
       "checked": "2026-11-03",
-      "note": "Page is internally inconsistent (banner promises 24-h phone, night spoed routed to Amsterdam; two different numbers), so not marked 24 h. Coast town.",
+      "note": "Page is internally inconsistent (banner promises 24-h phone, night spoed routed to Amsterdam; two different numbers), so not marked 24 h. Coast town. Duty text said this is from the page banner.",
       "quote": "Belt u ons 24 uur per dag op telefoonnummer 071 51 56 161."
     },
     {
@@ -672,12 +672,12 @@
       "address": "Westerdam 12, 8891 GM Midsland",
       "phone": "0562-449363",
       "emergency_24h": true,
-      "duty": "Page says reachable 24/7 for emergencies via the same phone number (phone on-call); appointments preferably by phone 08:00-09:30.",
+      "duty": "Reachable 24/7 for emergencies via the same phone number (phone on-call); appointments preferably by phone 08:00–09:30.",
       "small_animals": true,
       "url": "https://dierenartsterschelling.nl/",
       "source_url": "https://dierenartsterschelling.nl/",
       "checked": "2026-11-03",
-      "note": "Wadden island practice; phone on-call, not a 24-h open clinic.",
+      "note": "Wadden island practice; phone on-call, not a 24-h open clinic. Duty text said 'Page says' reachable 24/7.",
       "quote": "Bij spoed 24/7 bereikbaar."
     },
     {
@@ -688,12 +688,12 @@
       "address": "Keesomlaan 11, 1791 DA Den Burg",
       "phone": "+31 222 312527",
       "emergency_24h": true,
-      "duty": "Mon-Fri 08:00-18:00; tourist-board listing says available 24 hours a day for emergencies (phone on-call).",
+      "duty": "Mon–Fri 08:00–18:00; available 24 hours a day for emergencies by phone.",
       "small_animals": true,
       "url": "http://www.dierenartsentexel.nl/",
       "source_url": "https://www.texel.net/en/company/dierenartsenpraktijk-texel",
       "checked": "2026-11-03",
-      "note": "Source is the island tourist board's company listing, not the clinic's own site (the clinic site could not be opened under the fetch provenance rule). Verify 24-h wording on the clinic site before publishing. Independent check 2026-11-03: name, phone, address and '24 hours a day for emergencies' confirmed on the tourist-board page; clinic's own site (dierenartsentexel.nl) could not be opened.",
+      "note": "Source is the island tourist board's company listing, not the clinic's own site (the clinic site could not be opened under the fetch provenance rule). Verify 24-h wording on the clinic site before publishing. Independent check 2026-11-03: name, phone, address and '24 hours a day for emergencies' confirmed on the tourist-board page; clinic's own site (dierenartsentexel.nl) could not be opened. Duty text said the 24-h availability comes from the tourist-board listing.",
       "quote": "Available 24 hours a day for emergencies."
     },
     {
@@ -704,12 +704,12 @@
       "address": "Hogedijken 106, 9101 WZ Dokkum",
       "phone": "0519-292526",
       "emergency_24h": false,
-      "duty": "Mainland practice that covers Schiermonnikoog: no vet or emergency service on the island itself (clinic about once per 6 weeks, by appointment); the VVV page says Dierenartsen Dokkum can be contacted 24 h/7 days for emergencies by phone.",
+      "duty": "No vet or emergency service on Schiermonnikoog itself (clinic about once per 6 weeks, by appointment). Dierenartsen Dokkum on the mainland can be contacted by phone 24 h/7 days for emergencies.",
       "small_animals": true,
       "url": "https://www.vvvschiermonnikoog.nl/bedrijven/hulpdiensten/dierenarts",
       "source_url": "https://www.vvvschiermonnikoog.nl/vvv-info/veelgestelde-vragen/is-er-een-dierenarts-op-schiermonnikoog",
       "checked": "2026-11-03",
-      "note": "Downgraded by independent check 2026-11-03: the VVV page confirms the 24-h wording but lists no phone or address for the practice, and the clinic's own site could not be opened; phone/address NOT confirmed - verify before use. 24-h is phone contact only.",
+      "note": "Downgraded by independent check 2026-11-03: the VVV page confirms the 24-h wording but lists no phone or address for the practice, and the clinic's own site could not be opened; phone/address NOT confirmed - verify before use. 24-h is phone contact only. Duty text said this is per the VVV page; Dokkum is a mainland practice covering Schiermonnikoog.",
       "quote": "Wanneer u een spoedgeval heeft kunt u 24 uur per dag 7 dagen per week contact met Dierenartsen Dokkum opnemen."
     },
     {
@@ -751,12 +751,12 @@
       "address": "Broerdijk 1, 6523 GM Nijmegen",
       "phone": "024-3225331",
       "emergency_24h": false,
-      "duty": "Weekdays 18-21 h an unnamed Nijmegen practice is on duty; after 21 h and at weekends Evidensia Dierenziekenhuis Arnhem.",
+      "duty": "Weekdays 18–21 h a Nijmegen practice is on duty; after 21 h and at weekends Evidensia Dierenziekenhuis Arnhem.",
       "small_animals": true,
       "url": "https://dierenkliniekbroerdijk.nl/",
       "source_url": "https://dierenkliniekbroerdijk.nl/nieuws/actueel/spoedgeval-en-weekenddienst-dierenarts-nijmegen/",
       "checked": "2026-11-03",
-      "note": "Out-of-hours emergency line 0900-1120123 (page: 0900-112 0123). Page does not state 24-h care itself."
+      "note": "Out-of-hours emergency line 0900-1120123 (page: 0900-112 0123). Page does not state 24-h care itself. Duty text said the Nijmegen practice is unnamed."
     },
     {
       "kind": "duty_rota",
@@ -796,12 +796,12 @@
       "address": "Einsteinstraat 26, 6227 BX Maastricht",
       "phone": "043-2041091",
       "emergency_24h": false,
-      "duty": "Out of hours: usual number or 046-4512417 press 1 to the on-duty vet; no 24-h claim.",
+      "duty": "Out of hours: usual number or 046-4512417 press 1 to reach the on-duty vet.",
       "small_animals": true,
       "url": "https://www.dierenkliniekmaastricht.nl/",
       "source_url": "https://www.dierenkliniekmaastricht.nl/contact",
       "checked": "2026-11-03",
-      "note": "Three locations: Heer (043-2041091), Brusselsepoort, Mercatorplein 11, 6216 CJ (043-3433070), Amby, Ambyerstraat Noord 56, 6225 EG (043-3633772). Mon-Fri 09:00-17:30. Out of hours the usual number connects to the on-duty vet; spoed page gives 046-4512417 (press 1) for the service area Landgraaf, Maastricht, Heerlen, Nuth, Sittard, Brunssum, spoed duty by the clinics' daytime vets. No 24-h claim. AniCura Maastricht is permanently closed (since 28 March 2026).",
+      "note": "Three locations: Heer (043-2041091), Brusselsepoort, Mercatorplein 11, 6216 CJ (043-3433070), Amby, Ambyerstraat Noord 56, 6225 EG (043-3633772). Mon-Fri 09:00-17:30. Out of hours the usual number connects to the on-duty vet; spoed page gives 046-4512417 (press 1) for the service area Landgraaf, Maastricht, Heerlen, Nuth, Sittard, Brunssum, spoed duty by the clinics' daytime vets. No 24-h claim. AniCura Maastricht is permanently closed (since 28 March 2026). Duty text said no 24-h claim.",
       "quote": "Je wordt automatisch doorgeschakeld naar de dienstdoende dierenarts."
     },
     {
@@ -1115,12 +1115,12 @@
       "region": "Friesland",
       "phone": "0512-301444",
       "emergency_24h": false,
-      "duty": "Weekly rota table on the page; after 17:30 and after 22:00.",
+      "duty": "Weekly duty rota of clinics on duty after 17:30 and after 22:00.",
       "small_animals": true,
       "url": "https://www.a7noorddierenartsen.nl/spoedgevallen/wie-heeft-er-dienst/",
       "source_url": "https://www.a7noorddierenartsen.nl/spoedgevallen/wie-heeft-er-dienst/",
       "checked": "2026-11-03",
-      "note": "Weekly table of the clinic on duty after 17:30 and after 22:00 (page showed weeks 40-43, 26 Oct-22 Nov 2026) for companion animals; participants from 1 Jan 2026: Dierenartsen Sevenwolden, DAP Boonstra/Nijeholtwolde, DAP Mid-Fryslan/Akkrum, DK Wolvega, DZH Drachten, A7 Noord. Call 0512-301444, option 2 for companion animals (option 1 farm animals/horses).",
+      "note": "Weekly table of the clinic on duty after 17:30 and after 22:00 (page showed weeks 40-43, 26 Oct-22 Nov 2026) for companion animals; participants from 1 Jan 2026: Dierenartsen Sevenwolden, DAP Boonstra/Nijeholtwolde, DAP Mid-Fryslan/Akkrum, DK Wolvega, DZH Drachten, A7 Noord. Call 0512-301444, option 2 for companion animals (option 1 farm animals/horses). Duty text said the rota table is on the page.",
       "quote": "in het keuzemenu toetst u een 2"
     },
     {
@@ -1489,12 +1489,12 @@
       "address": "Herungerweg 172, 5913 HD Venlo",
       "phone": "077-3516231",
       "emergency_24h": false,
-      "duty": "Out of hours call 077-3516231, forwarded to the on-duty vet; back-up Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop. [Independent check 2026-11-03: not 24 h - 24/7 appears only in the page title; body says the vets sleep at night and out-of-hours care is handled by Evidensia Dierenziekenhuis Zuidoost Brabant (Geldrop).]",
+      "duty": "Out of hours call 077-3516231, forwarded to the on-duty vet; back-up Evidensia Dierenziekenhuis Zuidoost Brabant, Bogardeind 199, Geldrop.",
       "small_animals": true,
       "url": "https://www.depostwagen.nl/",
       "source_url": "https://www.depostwagen.nl/nl-nl/spoed",
       "checked": "2026-11-03",
-      "note": "Second site Tegelen (Keramiekstraat 43a, 077-3732247). Phone-based: out of hours the call is forwarded to the on-duty vet in cooperation with Evidensia Dierenziekenhuis Zuidoost Brabant (Geldrop). Page title only, no '24 uur' in body.",
+      "note": "Second site Tegelen (Keramiekstraat 43a, 077-3732247). Phone-based: out of hours the call is forwarded to the on-duty vet in cooperation with Evidensia Dierenziekenhuis Zuidoost Brabant (Geldrop). Page title only, no '24 uur' in body. [Independent check 2026-11-03: not 24 h - 24/7 appears only in the page title; body says the vets sleep at night and out-of-hours care is handled by Evidensia Dierenziekenhuis Zuidoost Brabant (Geldrop).]",
       "quote": "Spoed? 24/7 bereikbaar"
     },
     {
@@ -1565,12 +1565,12 @@
       "address": "Balkendwarsweg 1a, 9405 PT Assen",
       "phone": "0592-309903",
       "emergency_24h": false,
-      "duty": "Outside hours the line forwards to EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde. [Independent check 2026-11-03: not 24 h - 'Bel ons (24/7)' is only a header/footer label; body says the practice works by appointment on weekdays and out-of-hours calls are forwarded to EDZ Het Noorden.]",
+      "duty": "Outside hours the line forwards to EDZ Het Noorden, Ambitielaan 7, 9766 ZB Eelderwolde.",
       "small_animals": true,
       "url": "https://www.dierenartsassen.nl/nl-nl",
       "source_url": "https://www.dierenartsassen.nl/nl-nl/openingstijden-en-contact",
       "checked": "2026-11-03",
-      "note": "Appointments only, Mon-Fri 08:00-17:00. Header label 'Bel ons (24/7)'; outside hours the call is forwarded to Dierenziekenhuis EDZ Het Noorden (Ambitielaan 7, Eelderwolde). No '24 uur' in the body text.",
+      "note": "Appointments only, Mon-Fri 08:00-17:00. Header label 'Bel ons (24/7)'; outside hours the call is forwarded to Dierenziekenhuis EDZ Het Noorden (Ambitielaan 7, Eelderwolde). No '24 uur' in the body text. [Independent check 2026-11-03: not 24 h - 'Bel ons (24/7)' is only a header/footer label; body says the practice works by appointment on weekdays and out-of-hours calls are forwarded to EDZ Het Noorden.]",
       "quote": "Bel ons (24/7)"
     },
     {
@@ -1611,12 +1611,12 @@
       "address": "Lepelaar 70, 7943 SH Meppel",
       "phone": "0522-238508",
       "emergency_24h": true,
-      "duty": "Voor spoedgevallen buiten de openingstijden kunt u de dienstdoende dierenarts bereiken.",
+      "duty": "For emergencies outside opening hours you can reach the on-duty vet.",
       "small_animals": true,
       "url": "https://dierenartsenpraktijkmeppel.nl/",
       "source_url": "https://dierenartsenpraktijkmeppel.nl/contact/",
       "checked": "2026-11-03",
-      "note": "Appointments only; weekdays 08:00-17:30, Sat 08:00-12:00. Companion animals phone labelled '(24/7)'; livestock 0522-238518. Phone-based on-duty vet.",
+      "note": "Appointments only; weekdays 08:00-17:30, Sat 08:00-12:00. Companion animals phone labelled '(24/7)'; livestock 0522-238518. Phone-based on-duty vet. Duty text was in Dutch: 'Voor spoedgevallen buiten de openingstijden kunt u de dienstdoende dierenarts bereiken.'",
       "quote": "(0522) 238 508 (24/7)"
     },
     {
@@ -1670,12 +1670,12 @@
       "address": "Beurtschip 3, 8447 CL Heerenveen",
       "phone": "0513-624232",
       "emergency_24h": false,
-      "duty": "'Spoed buiten openingstijden': 050-2050160 (EDZ Het Noorden number; page does not state hours of that line).",
+      "duty": "Out-of-hours emergencies: 050-2050160 (EDZ Het Noorden).",
       "small_animals": true,
       "url": "https://www.dierenartsenheerenveen.nl/",
       "source_url": "https://www.dierenartsenheerenveen.nl/contact",
       "checked": "2026-11-03",
-      "note": "By appointment; Mon-Thu 08:30-18:30, Fri 08:30-17:30. No 24-h wording."
+      "note": "By appointment; Mon-Thu 08:30-18:30, Fri 08:30-17:30. No 24-h wording. Duty text said the page does not state hours of that line; heading on page 'Spoed buiten openingstijden'."
     },
     {
       "kind": "clinic",
@@ -1849,7 +1849,7 @@
       "region": "Overijssel",
       "phone": "074-2770010",
       "emergency_24h": true,
-      "duty": "After hours calls route to the on-duty vet, together with a neighbouring practice, 'dag en nacht en in het weekend'.",
+      "duty": "After hours calls route to the on-duty vet, shared with a neighbouring practice, day, night and weekends.",
       "small_animals": true,
       "url": "https://www.dierenkliniekslangenbeek.nl/",
       "source_url": "https://www.dierenkliniekslangenbeek.nl/",
@@ -1941,12 +1941,12 @@
       "address": "Culemborgse Grintweg 2, 4003 CJ Tiel",
       "phone": "0344-612976",
       "emergency_24h": false,
-      "duty": "Outside hours choose the on-duty vet option on 0344-612976; fallback De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900. [Independent check 2026-11-03: not 24 h - 24 uur per dag wording appears only in an image alt text; body says open Mon-Fri 08:00-19:30, outside hours referred to the on-duty vet.]",
+      "duty": "Outside hours choose the on-duty vet option on 0344-612976; fallback De Lingehoeve, Veldstraat 3a, Lienden, 0488-482900.",
       "small_animals": true,
       "url": "https://www.dierenkliniektiel.nl/",
       "source_url": "https://www.dierenkliniektiel.nl/over-ons/veel-gestelde-vragen/spoed/",
       "checked": "2026-11-03",
-      "note": "Mon-Fri 08:00-19:30. 24-h statement appears in an image caption; phone-based on-call vet.",
+      "note": "Mon-Fri 08:00-19:30. 24-h statement appears in an image caption; phone-based on-call vet. [Independent check 2026-11-03: not 24 h - 24 uur per dag wording appears only in an image alt text; body says open Mon-Fri 08:00-19:30, outside hours referred to the on-duty vet.]",
       "quote": "Voor een spoedgeval is er 24 uur per dag, 7 dagen per week een dierenarts oproepbaar."
     },
     {

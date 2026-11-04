@@ -42,12 +42,12 @@
       "address": "Komenského 73, 041 81 Košice",
       "phone": "+421 905 579 559",
       "emergency_24h": false,
-      "duty": "Mon-Fri 8:30-12:00 and 13:00-15:15; weekdays 15:30-20:00 reception +421 915 991 474; weekdays 20:00-8:00 emergency +421 905 579 559; Sat-Sun 'Nepretržitá pohotovosť'. A veterinarian is always on site; emergency surcharge applies.",
+      "duty": "Mon–Fri 8:30–12:00 and 13:00–15:15; weekdays 15:30–20:00 reception +421 915 991 474; weekdays 20:00–8:00 emergency +421 905 579 559; Sat–Sun nonstop emergency. A veterinarian is always on site; emergency surcharge applies.",
       "small_animals": true,
       "url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat",
       "source_url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat/otvaracie-hodiny",
       "checked": "2026-11-02",
-      "note": "Downgraded from 24 h on independent check 2026-11-02: page literally says 'Nepretržitá pohotovosť' only for Sat-Sun; weekdays emergency 20:00-8:00 (+421 905 579 559) and 15:30-20:00 reception, no explicit 24 h claim. Reception +421 915 991 474.",
+      "note": "Downgraded from 24 h on independent check 2026-11-02: page literally says 'Nepretržitá pohotovosť' only for Sat-Sun; weekdays emergency 20:00-8:00 (+421 905 579 559) and 15:30-20:00 reception, no explicit 24 h claim. Reception +421 915 991 474. Duty text quoted the page for Sat-Sun: 'Nepretržitá pohotovosť'.",
       "quote": "Nepretržitá pohotovosť (Sat-Sun)"
     },
     {
@@ -74,12 +74,13 @@
       "address": "Staromestská 6/D, Bratislava",
       "phone": "+421 2 5441 2869",
       "emergency_24h": true,
-      "duty": "Page advertises 24/7 emergency; individual vets' shifts listed incl. night shifts.",
+      "duty": "24/7 emergency, including night shifts.",
       "small_animals": true,
       "url": "https://vetline.sk/",
       "source_url": "https://vetline.sk/",
       "checked": "2026-11-02",
-      "quote": "Veterinárna nemocnica v Bratislave s nepretržitou pohotovosťou"
+      "quote": "Veterinárna nemocnica v Bratislave s nepretržitou pohotovosťou",
+      "note": "Duty text said the page advertises 24/7 emergency and lists individual vets' shifts."
     },
     {
       "kind": "clinic",
@@ -105,12 +106,12 @@
       "address": "Hodonínska 16, 841 03 Bratislava",
       "phone": "+421 911 55 50 55",
       "emergency_24h": false,
-      "duty": "Mon-Sun 8:00-20:00; page text says non-stop operation.",
+      "duty": "Mon–Sun 8:00–20:00; non-stop operation also advertised. Call ahead.",
       "small_animals": true,
       "url": "https://marfilvet.sk/",
       "source_url": "https://marfilvet.sk/",
       "checked": "2026-11-02",
-      "note": "Downgraded from 24 h on independent check 2026-11-02: page contradicts itself - header, hours block and meta say emergency 'Po-Ne 20:00-22:00' (regular hours 8:00-20:00), while OG meta, image label and about text say NONSTOP / 24 hodín denne. Phone 0911 55 50 55 confirmed (second line 0911 07 06 05). Call ahead.",
+      "note": "Downgraded from 24 h on independent check 2026-11-02: page contradicts itself - header, hours block and meta say emergency 'Po-Ne 20:00-22:00' (regular hours 8:00-20:00), while OG meta, image label and about text say NONSTOP / 24 hodín denne. Phone 0911 55 50 55 confirmed (second line 0911 07 06 05). Call ahead. Duty text said 'page text says non-stop operation'.",
       "quote": "Našim pacientom sme k dispozícii denne 24 hodín"
     },
     {
@@ -166,12 +167,12 @@
       "address": "Cyrila a Metoda 7, 010 08 Žilina - Vlčince",
       "phone": "+421 903 944 333",
       "emergency_24h": true,
-      "duty": "Mon-Fri 8:00-19:00, Sat-Sun 9:00-17:00; emergency line non-stop; vet on site 24 h (second page veterinar.zilina.sk).",
+      "duty": "Mon–Fri 8:00–19:00, Sat–Sun 9:00–17:00; emergency line non-stop; vet on site 24 h.",
       "small_animals": true,
       "url": "https://www.vetklinikazilina.sk/",
       "source_url": "https://www.vetklinikazilina.sk/",
       "checked": "2026-11-02",
-      "note": "Other phones 041 764 5645, 041 700 3487, +421 910 343 330.",
+      "note": "Other phones 041 764 5645, 041 700 3487, +421 910 343 330. Duty text referred to a second page, veterinar.zilina.sk.",
       "quote": "Stála prítomnosť lekára na klinike 24 hodín denne."
     },
     {

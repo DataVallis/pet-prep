@@ -143,7 +143,7 @@
       "address": "Péterhegyi út 46, 1112 Budapest (XI.)",
       "phone": "+36 1 310 1106",
       "emergency_24h": true,
-      "duty": "Open 0-24, 365 days a year; emergency duty listed as 20:00-08:00.",
+      "duty": "Open 0-24, 365 days a year; emergency duty 20:00-08:00.",
       "small_animals": true,
       "url": "https://juhaszallatkorhaz.hu/",
       "source_url": "https://juhaszallatkorhaz.hu/",
@@ -571,12 +571,12 @@
       "region": "Borsod-Abaúj-Zemplén",
       "phone": "+36 20 482 4101",
       "emergency_24h": false,
-      "duty": "Weekdays 18:00-22:00, weekends 10:00-22:00 (per Népkerti page); the group's own site lists Mon-Fri 18:00-20:00, Sat-Sun and holidays 12:00-18:00.",
+      "duty": "Weekdays 18:00-22:00, weekends 10:00-22:00; the group's own site lists Mon-Fri 18:00-20:00, Sat-Sun and holidays 12:00-18:00.",
       "small_animals": true,
       "url": "https://allatorvosiugyeletmiskolc.webnode.hu/",
       "source_url": "https://www.nepkertiallatklinika.hu/kapcsolat",
       "checked": "2026-11-02",
-      "note": "Voluntary substitute service of ~10 Miskolc-area practices, for urgent cases only, phone first; duty surcharge. Hours differ between pages - call. No overnight duty in Miskolc."
+      "note": "Voluntary substitute service of ~10 Miskolc-area practices, for urgent cases only, phone first; duty surcharge. Hours differ between pages - call. No overnight duty in Miskolc. First set of hours from the Népkerti page."
     },
     {
       "kind": "clinic",
@@ -1267,12 +1267,12 @@
       "address": "6000 Kecskemét, Március 15. u. 2.",
       "phone": "+36 70 776 5920",
       "emergency_24h": false,
-      "duty": "Participates in the Kecskemét duty service (per kutyabarathelyek.hu article)",
+      "duty": "Participates in the Kecskemét duty service",
       "small_animals": true,
       "url": "https://allatorvoskecskemet.hu/",
       "source_url": "https://allatorvoskecskemet.hu/",
       "checked": "2026-11-02",
-      "note": "Hours Mon-Fri 17:00-19:00; other times by phone appointment."
+      "note": "Hours Mon-Fri 17:00-19:00; other times by phone appointment. Per kutyabarathelyek.hu article."
     },
     {
       "kind": "clinic",

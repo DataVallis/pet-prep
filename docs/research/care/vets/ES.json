@@ -553,7 +553,7 @@
    "address": "Pintor Fortuny 4 baixos, 17320 Tossa de Mar",
    "phone": "+34 629 356 404",
    "emergency_24h": false,
-   "duty": "Urgències phone +34 629 356 404 (hours not stated).",
+   "duty": "Emergency phone +34 629 356 404.",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
    "note": "Listed in the Col·legi de Veterinaris de Girona centre finder with an 'URGENCIES' phone; 24 h not stated. Costa Brava.",
@@ -598,7 +598,7 @@
    "address": "C/ María Castillo 2, 43840 Salou",
    "phone": "+34 977 350 372",
    "emergency_24h": true,
-   "duty": "URGENCIAS 24H phone +34 689 526 816.",
+   "duty": "Emergency 24 h phone +34 689 526 816.",
    "small_animals": true,
    "url": "https://centreveterinarisalou.com/es/",
    "source_url": "https://centreveterinarisalou.com/es/",
@@ -780,7 +780,7 @@
    "quote": "Estamos abiertos las 24horas del día",
    "note": "The emergency section also gives 'Carretera Denia-Ondara km. 1, Denia' — confirm location by phone.",
    "checked": "2026-11-02",
-   "duty": "Emergency service at Carretera Denia-Ondara km. 1, Denia (\"Contamos con servicio de urgencias veterinarias en Carretera Denia-Ondara km. 1, Denia.\"); clinic address Partida Madrigueres Nord 17."
+   "duty": "Emergency service at Carretera Denia-Ondara km. 1, Denia; clinic at Partida Madrigueres Nord 17."
   },
   {
    "kind": "clinic",
@@ -804,7 +804,7 @@
    "address": "Rosa Molas 6 bajo, 12003 Castelló",
    "phone": "+34 964 723 697",
    "emergency_24h": true,
-   "duty": "Urgencias +34 699 017 914.",
+   "duty": "Emergency phone +34 699 017 914.",
    "small_animals": true,
    "url": "https://www.hospitalveterinariocostaazahar.com/",
    "source_url": "https://www.hospitalveterinariocostaazahar.com/",
@@ -940,11 +940,11 @@
    "address": "Camí des Caragol 14, local 2, Ciutadella de Menorca",
    "phone": "+34 871 503 718",
    "emergency_24h": false,
-   "duty": "Urgencias phone +34 613 547 693 (24 h not stated).",
+   "duty": "Emergency phone +34 613 547 693.",
    "small_animals": true,
    "url": "https://salutanimal.es/es",
    "source_url": "https://salutanimal.es/es",
-   "note": "Menorca. Mon–Fri split hours, Saturday morning.",
+   "note": "Menorca. Mon–Fri split hours, Saturday morning. 24 h not stated.",
    "checked": "2026-11-02"
   },
   {
@@ -1058,7 +1058,7 @@
    "address": "Calle Jose Miguel Barandiaran 15, 48980 Santurtzi",
    "phone": "+34 944 615 077",
    "emergency_24h": false,
-   "duty": "Emergency line +34 688 699 987 (hours not stated).",
+   "duty": "Emergency line +34 688 699 987.",
    "small_animals": true,
    "url": "https://hospitaltucan.com",
    "source_url": "https://turismo.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
@@ -1088,7 +1088,7 @@
    "address": "Calle Nueva 27, 31192 Mutilva Alta",
    "phone": "+34 948 230 802",
    "emergency_24h": false,
-   "duty": "Urgencias Mon–Sun 09:00–21:00, phone +34 626 614 106.",
+   "duty": "Emergencies daily 9–21, phone +34 626 614 106.",
    "small_animals": true,
    "url": "https://www.anicura.es/clinicas/san-fermin-hospital-veterinario/",
    "source_url": "https://www.anicura.es/clinicas/san-fermin-hospital-veterinario/",
@@ -1147,7 +1147,7 @@
    "region": "Castilla y León",
    "phone": "+34 987 293 063",
    "emergency_24h": true,
-   "duty": "Consultas L–V 9:00–15:00 (cita previa); urgencias 24 h todos los días. Cita previa y urgencias: +34 987 293 063 / +34 630 502 382 (contact page).",
+   "duty": "Consultations Mon–Fri 9–15 (by appointment); emergencies 24 h every day. Appointments and emergencies: +34 987 293 063 / +34 630 502 382.",
    "small_animals": true,
    "url": "https://servicios.unileon.es/hospital-veterinario/",
    "source_url": "https://servicios.unileon.es/hospital-veterinario/horarios/",
@@ -1163,7 +1163,7 @@
    "address": "Edificio Hospital Clínico Veterinario, Campus Universitario de Espinardo, 30100 Murcia",
    "phone": "+34 868 887 502",
    "emergency_24h": true,
-   "duty": "Urgencias y hospitalización 24 h, 365 días. Teléfonos +34 868 887 502 / +34 609 625 853.",
+   "duty": "Emergencies and hospitalisation 24 h, 365 days. Phones +34 868 887 502 / +34 609 625 853.",
    "small_animals": true,
    "url": "https://www.um.es/web/hcv/",
    "source_url": "https://www.um.es/web/hcv/urgencias-y-hospitalizacion",
@@ -1179,7 +1179,7 @@
    "address": "Campus de Arucas, Trasmontaña s/n, 35413 Arucas (Las Palmas)",
    "phone": "+34 928 454 300",
    "emergency_24h": true,
-   "duty": "Abierto 24 h todos los días; en urgencia se puede acudir directamente.",
+   "duty": "Open 24 h every day; emergencies can walk in directly.",
    "small_animals": true,
    "url": "https://hcv.ulpgc.es/",
    "source_url": "https://hcv.ulpgc.es/",
@@ -1195,7 +1195,7 @@
    "address": "Avda. de la Universidad, Cáceres",
    "phone": "+34 661 317 588",
    "emergency_24h": true,
-   "duty": "Urgencias pequeños animales +34 661 317 588 (grandes animales +34 661 316 698), 24 h todo el año. Centralita/citas +34 927 257 102, L–V 8:30–18:00.",
+   "duty": "Small-animal emergencies +34 661 317 588 (large animals +34 661 316 698), 24 h all year. Switchboard/appointments +34 927 257 102, Mon–Fri 8:30–18:00.",
    "small_animals": true,
    "url": "https://www.uexfundacion.es/actividad/hcv/",
    "source_url": "https://www.uexfundacion.es/actividad/hcv/",
@@ -1240,7 +1240,7 @@
    "address": "Carretera Coín, 61, 29120 Alhaurín el Grande (Málaga)",
    "phone": "+34 608 953 937",
    "emergency_24h": true,
-   "duty": "Urgencias +34 608 953 937; clínica +34 952 595 354.",
+   "duty": "Emergencies +34 608 953 937; clinic +34 952 595 354.",
    "small_animals": true,
    "url": "https://www.anicura.es/clinicas/alhaurin-el-grande-hospital-veterinario/",
    "source_url": "https://www.anicura.es/clinicas/alhaurin-el-grande-hospital-veterinario/urgencias-24h/",
@@ -1255,7 +1255,7 @@
    "address": "Calle Spengler, 20, 29007 Málaga",
    "phone": "+34 952 317 692",
    "emergency_24h": true,
-   "duty": "Urgencias sin cita por la entrada principal de C/ Spengler.",
+   "duty": "Emergencies without appointment via the main entrance on C/ Spengler.",
    "small_animals": true,
    "url": "https://hospitalveterinariomalaga.es/",
    "source_url": "https://hospitalveterinariomalaga.es/",
@@ -1313,7 +1313,7 @@
    "address": "Av. Miguel de Cervantes, Edificio Albatros V, Local 13-14, 29660 Marbella (Málaga)",
    "phone": "+34 613 131 373",
    "emergency_24h": true,
-   "duty": "Urgencias +34 613 131 373; general +34 951 690 724.",
+   "duty": "Emergencies +34 613 131 373; general +34 951 690 724.",
    "small_animals": true,
    "url": "https://vetmamut.es/",
    "source_url": "https://vetmamut.es/urgencias/",
@@ -1343,7 +1343,7 @@
    "address": "Avda. Los Pacos 4, 29640 Fuengirola (Málaga)",
    "phone": "+34 952 660 596",
    "emergency_24h": false,
-   "duty": "Consulta L–V 8:00–21:00, sáb 9:00–13:00. Urgencias +34 650 176 854: sáb 17–20 h; dom/festivos 10–13 h y 17–20 h. 'Por la noche no hay servicio' (refers callers to an on-duty hospital).",
+   "duty": "Consultations Mon–Fri 8–21, Sat 9–13. Emergencies +34 650 176 854: Sat 17–20; Sun/holidays 10–13 and 17–20. No night service (callers are referred to an on-duty hospital).",
    "small_animals": true,
    "url": "https://www.clinicaveterinariavetsur.com/",
    "source_url": "https://www.clinicaveterinariavetsur.com/urgencias-veterinarias-fuengirola",
@@ -1358,7 +1358,7 @@
    "address": "Avda. Juan Luis Peralta 44, 29639 Benalmádena Pueblo (Málaga)",
    "phone": "+34 952 568 198",
    "emergency_24h": true,
-   "duty": "L–V 10–20 h, sáb 10–13:30 h. 24 h line +34 608 953 106 — only for the clinic's own patients ('Sólo pacientes de la clínica').",
+   "duty": "Mon–Fri 10–20, Sat 10–13:30. 24 h line +34 608 953 106, only for the clinic's own patients.",
    "small_animals": true,
    "url": "https://www.doctorgorriti.com/",
    "source_url": "https://www.doctorgorriti.com/veterinario-24-horas-en-benalmadena.php",
@@ -1374,7 +1374,7 @@
    "address": "Carretera A-356, km 47, Vélez-Málaga",
    "phone": "+34 616 403 350",
    "emergency_24h": true,
-   "duty": "Urgencias +34 616 403 350 '365 días x 24 horas' (phone; care at the clinics or at home depending on availability). Centro Veterinario 365: +34 634 467 333, L–V 9:30–20:00, sáb/dom/festivos 10:00–18:00.",
+   "duty": "Emergencies +34 616 403 350, 365 days x 24 h (phone; care at the clinics or at home depending on availability). Centro Veterinario 365: +34 634 467 333, Mon–Fri 9:30–20:00, Sat/Sun/holidays 10:00–18:00.",
    "small_animals": true,
    "url": "https://centroveterinariovelez.com/",
    "source_url": "https://centroveterinariovelez.com/",
@@ -1390,7 +1390,7 @@
    "address": "C/ Rodríguez Acosta, 10, 29780 Nerja (Málaga)",
    "phone": "+34 952 521 507",
    "emergency_24h": false,
-   "duty": "Urgencias +34 656 825 319 (hours not stated).",
+   "duty": "Emergency phone +34 656 825 319.",
    "small_animals": true,
    "url": "https://almijaravet.com/",
    "source_url": "https://almijaravet.com/",
@@ -1434,7 +1434,7 @@
    "address": "C. Malasmañanas, 13, 41500 Alcalá de Guadaíra (Sevilla)",
    "phone": "+34 955 612 672",
    "emergency_24h": true,
-   "duty": "Teléfono de urgencias del grupo: +34 650 822 777.",
+   "duty": "Group emergency phone: +34 650 822 777.",
    "small_animals": true,
    "url": "https://somosvet.com/",
    "source_url": "https://somosvet.com/",
@@ -1450,7 +1450,7 @@
    "address": "C. Darwin, 18, Local 7 B, 18100 Armilla (Granada)",
    "phone": "+34 679 100 130",
    "emergency_24h": true,
-   "duty": "Urgencias +34 679 100 130 (incl. weekends and holidays); clinic +34 958 977 185, L–V 9–21 h, sáb 10–13:30 h.",
+   "duty": "Emergencies +34 679 100 130 (incl. weekends and holidays); clinic +34 958 977 185, Mon–Fri 9–21, Sat 10–13:30.",
    "small_animals": true,
    "url": "https://ispevet.es/",
    "source_url": "https://ispevet.es/urgencias-24-h/",
@@ -1493,7 +1493,7 @@
    "region": "Andalucía",
    "phone": "+34 956 870 717",
    "emergency_24h": true,
-   "duty": "Urgencias presenciales y hospitalización 24 h; also urgencias +34 662 305 968. Consultas con cita L–V 9–21 h, sáb 9–14 h.",
+   "duty": "In-person emergencies and hospitalisation 24 h; also emergency phone +34 662 305 968. Appointments Mon–Fri 9–21, Sat 9–14.",
    "small_animals": true,
    "url": "https://clinicasavila.com/",
    "source_url": "https://clinicasavila.com/veterinario-urgencias-24h-cadiz/",
@@ -1523,7 +1523,7 @@
    "address": "Camino del Saladillo, 3, 21007 Huelva",
    "phone": "+34 634 997 806",
    "emergency_24h": true,
-   "duty": "Urgencias +34 634 997 806 (24 h / 365 días); citas +34 959 730 929, recepción 9–21 h.",
+   "duty": "Emergencies +34 634 997 806 (24 h / 365 days); appointments +34 959 730 929, reception 9–21.",
    "small_animals": true,
    "url": "https://animalvetxelsaladillo.com/",
    "source_url": "https://animalvetxelsaladillo.com/",
@@ -1595,7 +1595,7 @@
    "address": "C/ Benartemi, 108, Vecindario (Las Palmas)",
    "phone": "+34 928 793 148",
    "emergency_24h": true,
-   "duty": "Consultas L–V 9:30–14:30 y 15:30–20:30, sáb 9:30–13:00; urgencias 24 h.",
+   "duty": "Consultations Mon–Fri 9:30–14:30 and 15:30–20:30, Sat 9:30–13:00; emergencies 24 h.",
    "small_animals": true,
    "url": "https://www.medivetgroup.com/es-es/veterinario-urgencia-24-horas/24-horas-benartemi/",
    "source_url": "https://www.medivetgroup.com/es-es/veterinario-urgencia-24-horas/24-horas-benartemi/",
@@ -1611,7 +1611,7 @@
    "address": "C/ Doctor Juan Negrín 34, 35500 Arrecife",
    "phone": "+34 630 917 136",
    "emergency_24h": false,
-   "duty": "Night/holiday emergency line: 20–8 h; sábado 15–0 h; festivos 24 h.",
+   "duty": "Night/holiday emergency line: 20–8; Sat 15–24; holidays 24 h.",
    "small_animals": true,
    "source_url": "https://www.loscharcosvet.com/urgencias",
    "note": "Listed on the emergency page of Consulta Veterinaria Los Charcos (Costa Teguise) together with other Lanzarote emergency contacts; operator not named. Not a 24 h service.",
@@ -1625,11 +1625,11 @@
    "address": "Calle Triana 85, 35500 Arrecife (Lanzarote)",
    "phone": "+34 607 687 299",
    "emergency_24h": false,
-   "duty": "Teléfono de urgencias +34 607 687 299 (hours not stated); cita previa number on the page is misprinted.",
+   "duty": "Emergency phone +34 607 687 299.",
    "small_animals": true,
    "url": "https://www.clinicaveterinariajameos.es/",
    "source_url": "https://www.clinicaveterinariajameos.es/",
-   "note": "No 24 h claim.",
+   "note": "No 24 h claim. Hours not stated; appointment number on the page is misprinted.",
    "checked": "2026-11-02"
   },
   {
@@ -1640,7 +1640,7 @@
    "address": "Calle Ramón González Brito, La Oliva (Fuerteventura)",
    "phone": "+34 928 868 414",
    "emergency_24h": false,
-   "duty": "L–V 10:00–13:30 y 17:00–20:30, sáb 10:00–13:30. Emergency phone +34 608 642 016.",
+   "duty": "Mon–Fri 10:00–13:30 and 17:00–20:30, Sat 10:00–13:30. Emergency phone +34 608 642 016.",
    "small_animals": true,
    "source_url": "https://www.corralejo.info/en/activity/clinica-veterinaria-fuerteventura/",
    "note": "Source is the Corralejo local information portal (clinic has no own site listed) — verify. Canarias7 (Jan 2026) reports there is no 24 h vet emergency service on Fuerteventura.",
@@ -1683,7 +1683,7 @@
    "address": "Avenida de Pinatar, 34, San Javier (Murcia)",
    "phone": "+34 968 190 952",
    "emergency_24h": false,
-   "duty": "L–V 9:30–13:30 y tardes 16:30–19:30 (verano) / 16:00–19:00 (invierno). Urgencias +34 647 100 061, non-presential until 23:00.",
+   "duty": "Mon–Fri 9:30–13:30 and afternoons 16:30–19:30 (summer) / 16:00–19:00 (winter). Emergency phone +34 647 100 061, not in person, until 23:00.",
    "small_animals": true,
    "url": "https://www.veterinarianatura.com/",
    "source_url": "https://www.veterinarianatura.com/veterinario-urgencias-torre-pacheco/",
@@ -1698,7 +1698,7 @@
    "address": "Marqués de Amboage, 24 bajo, 15006 A Coruña",
    "phone": "+34 981 153 232",
    "emergency_24h": true,
-   "duty": "Consulta L–V 10:30–20:00, sáb 10:30–14:00; urgencias 24 h (contact page).",
+   "duty": "Consultations Mon–Fri 10:30–20:00, Sat 10:30–14:00; emergencies 24 h.",
    "small_animals": true,
    "url": "https://www.hospitalveterinarioabeiro.com/",
    "source_url": "https://www.hospitalveterinarioabeiro.com/veterinario-urgencias-y-uci/",
@@ -1743,7 +1743,7 @@
    "address": "Rúa das Teixugueiras 27, bajo, 36212 Vigo (Pontevedra)",
    "phone": "+34 986 117 056",
    "emergency_24h": true,
-   "duty": "Clínica 9:30–21:30; urgencias 00–24.",
+   "duty": "Clinic 9:30–21:30; emergencies 24 h.",
    "small_animals": true,
    "url": "https://www.anicura.es/clinicas/anicura-navia-clinica-veterinaria/",
    "source_url": "https://www.anicura.es/clinicas/anicura-navia-clinica-veterinaria/",
@@ -1758,7 +1758,7 @@
    "address": "Av. de Santiago, 45, Santa Comba (A Coruña)",
    "phone": "+34 667 416 750",
    "emergency_24h": true,
-   "duty": "Urgencias 24 h +34 667 416 750; atención al cliente L–V 9:30–20:30, sáb 9:30–13:30.",
+   "duty": "Emergencies 24 h +34 667 416 750; customer service Mon–Fri 9:30–20:30, Sat 9:30–13:30.",
    "small_animals": true,
    "url": "https://guvetveterinaria.es/",
    "source_url": "https://guvetveterinaria.es/veterinario-urgencias-24h-santiago-de-compostela/",
@@ -1789,7 +1789,7 @@
    "address": "Avda. Pablo Iglesias, 73, 33204 Gijón",
    "phone": "+34 608 472 984",
    "emergency_24h": true,
-   "duty": "Servicio de Urgencias 24 h: +34 608 472 984 (page also lists +34 985 131 545).",
+   "duty": "Emergency service 24 h: +34 608 472 984 (also +34 985 131 545).",
    "small_animals": true,
    "url": "https://www.hospitalveterinarioasturias.com/",
    "source_url": "https://www.hospitalveterinarioasturias.com/servicio-urgencias/",
@@ -1804,7 +1804,7 @@
    "address": "Rafael Altamira 3-Bajo, 33006 Oviedo",
    "phone": "+34 985 240 489",
    "emergency_24h": true,
-   "duty": "Clínica 09:00–21:00; urgencias 00–24.",
+   "duty": "Clinic 9–21; emergencies 24 h.",
    "small_animals": true,
    "url": "https://www.anicura.es/clinicas/buenavista-hospital-veterinario/",
    "source_url": "https://www.anicura.es/clinicas/buenavista-hospital-veterinario/",
@@ -1819,7 +1819,7 @@
    "address": "Polígono Industrial de Guarnizo, Edificio La Canaluca, Nave 15, 39611 Guarnizo",
    "phone": "+34 608 483 821",
    "emergency_24h": true,
-   "duty": "Urgencias +34 608 483 821, 24 h / 365 días; consultas L–V 9:30–17:30, cita previa +34 942 558 862.",
+   "duty": "Emergencies +34 608 483 821, 24 h / 365 days; consultations Mon–Fri 9:30–17:30, appointments +34 942 558 862.",
    "small_animals": true,
    "url": "https://hospitalveterinariocantabria.es/",
    "source_url": "https://hospitalveterinariocantabria.es/contacto/",
@@ -1849,7 +1849,7 @@
    "address": "Calle Riaño 28, 37006 Salamanca",
    "phone": "+34 634 965 353",
    "emergency_24h": true,
-   "duty": "Urgencias +34 634 965 353; general +34 923 120 462, L–V 9–21 h, sáb 10–14 h.",
+   "duty": "Emergencies +34 634 965 353; general +34 923 120 462, Mon–Fri 9–21, Sat 10–14.",
    "small_animals": true,
    "url": "https://veterinariasalinero.com/",
    "source_url": "https://veterinariasalinero.com/",
@@ -1864,7 +1864,7 @@
    "address": "C/ Barco 22, 37008 Salamanca",
    "phone": "+34 923 218 442",
    "emergency_24h": true,
-   "duty": "L–V 9:30–14:00 y 16:00–20:00; sáb 10–14 h y urgencias; dom solo urgencias.",
+   "duty": "Mon–Fri 9:30–14:00 and 16:00–20:00; Sat 10–14 and emergencies; Sun emergencies only.",
    "small_animals": true,
    "url": "https://www.cvlavega.com/",
    "source_url": "https://www.cvlavega.com/veterinario-urgencias-salamanca-clinica-veterinaria-24-horas.html",
@@ -1879,7 +1879,7 @@
    "address": "C/ Roa de la Vega 30, 24001 León",
    "phone": "+34 666 706 831",
    "emergency_24h": true,
-   "duty": "Clínica +34 987 228 801, L–V 9:30–19:30, sáb 10–14 h. Outside hours call the 24 h urgencias line first.",
+   "duty": "Clinic +34 987 228 801, Mon–Fri 9:30–19:30, Sat 10–14. Outside hours call the 24 h emergency line first.",
    "small_animals": true,
    "url": "https://leonveterinaria.com/",
    "source_url": "https://leonveterinaria.com/urgencias-24h/",
@@ -1895,7 +1895,7 @@
    "address": "C. Carmen, 17, 13003 Ciudad Real",
    "phone": "+34 926 920 930",
    "emergency_24h": true,
-   "duty": "L–V 9–20 h, sáb 10–14 h; urgencias 24 h all week.",
+   "duty": "Mon–Fri 9–20, Sat 10–14; emergencies 24 h all week.",
    "small_animals": true,
    "url": "https://www.hv-ciudadreal.com/",
    "source_url": "https://www.hv-ciudadreal.com/contacto",
@@ -1910,7 +1910,7 @@
    "address": "Calle Jacinto Benavente, 1, 45600 Talavera de la Reina (Toledo)",
    "phone": "+34 680 905 575",
    "emergency_24h": true,
-   "duty": "Urgencias localizables (phone on-call) +34 680 905 575; cita previa +34 925 671 993.",
+   "duty": "Emergencies on call by phone +34 680 905 575; appointments +34 925 671 993.",
    "small_animals": true,
    "url": "https://www.cvelparque.net/",
    "source_url": "https://www.cvelparque.net/",
@@ -1926,7 +1926,7 @@
    "address": "C/ de la Guardia Civil, 7, 16003 Cuenca",
    "phone": "+34 969 690 882",
    "emergency_24h": false,
-   "duty": "L–V 10–14 h y 17–20:30 h, sáb 11–14 h. Urgencias +34 616 678 964 'según disponibilidad'.",
+   "duty": "Mon–Fri 10–14 and 17–20:30, Sat 11–14. Emergencies +34 616 678 964, subject to availability.",
    "small_animals": true,
    "url": "https://www.tuveterinarioencuenca.com/",
    "source_url": "https://www.tuveterinarioencuenca.com/",
@@ -1956,7 +1956,7 @@
    "address": "Calle Santiago Caldera, 4, 10004 Cáceres",
    "phone": "+34 639 969 170",
    "emergency_24h": true,
-   "duty": "Urgencias +34 639 969 170; clínica +34 927 180 733, L–V 10–14 h y 17–20 h, sáb 11–14 h.",
+   "duty": "Emergencies +34 639 969 170; clinic +34 927 180 733, Mon–Fri 10–14 and 17–20, Sat 11–14.",
    "small_animals": true,
    "url": "https://veterinariasanfranciscodeasis.es/",
    "source_url": "https://veterinariasanfranciscodeasis.es/",
@@ -1972,7 +1972,7 @@
    "address": "C/ Jacinta García Hernández, 17 A, 06011 Badajoz",
    "phone": "+34 924 248 474",
    "emergency_24h": false,
-   "duty": "L–V 9:30–14:00 y 17:30–20:30, sáb 10–13 h. 'Urgencias localizadas fuera del horario de clínica' +34 606 343 940.",
+   "duty": "Mon–Fri 9:30–14:00 and 17:30–20:30, Sat 10–13. On-call emergencies outside clinic hours +34 606 343 940.",
    "small_animals": true,
    "url": "https://dovet.es/",
    "source_url": "https://dovet.es/",
@@ -1988,7 +1988,7 @@
    "address": "Avenida Miguel Delibes 25, 28052 Madrid",
    "phone": "+34 912 404 150",
    "emergency_24h": true,
-   "duty": "Urgencias 24 horas",
+   "duty": "Emergencies 24 h",
    "url": "https://www.mascotiti.es/",
    "source_url": "https://www.colvema.org/centro-veterinario/26996-mascotiti-hospital-veterinario",
    "quote": "Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2004,7 +2004,7 @@
    "address": "C/ Emilio Ferrari 92, 28017 Madrid",
    "phone": "+34 912 404 150",
    "emergency_24h": true,
-   "duty": "Urgencias 24 horas",
+   "duty": "Emergencies 24 h",
    "url": "https://www.mascotiti.es/",
    "source_url": "https://www.mascotiti.es/",
    "quote": "ofrecemos atención veterinaria de Urgencias las 24 horas",
@@ -2020,7 +2020,7 @@
    "address": "Tordesillas 4, Local Izdo, 28925 Alcorcón",
    "phone": "+34 916 126 338",
    "emergency_24h": true,
-   "duty": "Servicio de urgencias, abierto 24 horas",
+   "duty": "Emergency service, open 24 h",
    "url": "https://www.ervet.es",
    "source_url": "https://www.colvema.org/centro-veterinario/3950-ervet-urgencias-veterinarias",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas.",
@@ -2035,7 +2035,7 @@
    "address": "Paseo Reina Cristina 18, 28014 Madrid",
    "phone": "+34 915 040 651",
    "emergency_24h": true,
-   "duty": "Servicio de urgencias, abierto 24 horas",
+   "duty": "Emergency service, open 24 h",
    "url": "https://www.gattos.net",
    "source_url": "https://www.colvema.org/centro-veterinario/1252-gattos-centro-clinico-felino",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas.",
@@ -2051,7 +2051,7 @@
    "address": "Calle Arrastaria 23, 28022 Madrid",
    "phone": "+34 912 909 447",
    "emergency_24h": true,
-   "duty": "Urgencias 24 horas",
+   "duty": "Emergencies 24 h",
    "url": "https://www.veterios.com",
    "source_url": "https://www.colvema.org/centro-veterinario/26430-hospital-veterios",
    "quote": "Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2066,7 +2066,7 @@
    "address": "Calle Illescas 215, Local 3, 28047 Madrid",
    "phone": "+34 917 177 328",
    "emergency_24h": true,
-   "duty": "Servicio de urgencias, abierto 24 horas",
+   "duty": "Emergency service, open 24 h",
    "source_url": "https://www.colvema.org/centro-veterinario/27473-hospital-veterinario-privet-aluche",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "note": "Also small exotic animals. No own website listed on COLVEMA.",
@@ -2081,7 +2081,7 @@
    "address": "Avda. de Portugal 4, 28931 Móstoles",
    "phone": "+34 916 466 625",
    "emergency_24h": true,
-   "duty": "Urgencias 24 horas",
+   "duty": "Emergencies 24 h",
    "url": "https://www.anicura.es",
    "source_url": "https://www.colvema.org/centro-veterinario/5934-anicura-estoril-hospital-veterinario",
    "quote": "Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2096,7 +2096,7 @@
    "address": "Ctra. M-104 km 1,200, 28750 San Agustín del Guadalix",
    "phone": "+34 918 435 143",
    "emergency_24h": true,
-   "duty": "Urgencias 24 horas (équidos)",
+   "duty": "Emergencies 24 h (equines)",
    "url": "https://hvsmveterinario.com/",
    "source_url": "https://www.colvema.org/centro-veterinario/4463-hospital-veterinario-sierra-de-madrid-s-l",
    "quote": "Abierto 24 horas. Atención telefónica 24 horas.",
@@ -2112,7 +2112,7 @@
    "address": "C/ Martínez Izquierdo 11, 28028 Madrid",
    "phone": "+34 609 277 678",
    "emergency_24h": false,
-   "duty": "Servicio de urgencias; atención telefónica 24 horas",
+   "duty": "Emergency service; 24 h telephone line",
    "source_url": "https://www.colvema.org/centro-veterinario/6052-hospital-felino-madrid",
    "note": "COLVEMA states only 'Atención telefónica 24 horas' (24 h phone line), not open 24 h — set false. Cats only.",
    "checked": "2026-11-02"
@@ -2126,7 +2126,7 @@
    "address": "Avenida de la Técnica 43, Local 16, 28522 Rivas-Vaciamadrid",
    "phone": "+34 915 296 535",
    "emergency_24h": false,
-   "duty": "Urgencias; atención telefónica 24 horas",
+   "duty": "Emergencies; 24 h telephone line",
    "url": "https://www.centroveterinarioaldavet.es",
    "source_url": "https://www.colvema.org/centro-veterinario/26156-hospital-veterinario-aldavet",
    "note": "COLVEMA says only 'Atención telefónica 24 horas' — 24 h phone line, not stated open 24 h.",
@@ -2141,7 +2141,7 @@
    "address": "Avenida de la Libertad 93, Local 14-16, 28770 Colmenar Viejo",
    "phone": "+34 918 461 446",
    "emergency_24h": false,
-   "duty": "Atención telefónica 24 horas",
+   "duty": "24 h telephone line",
    "url": "https://www.centroveterinariosananton.es",
    "source_url": "https://www.colvema.org/centro-veterinario/6658-hospital-veterinario-san-anton",
    "note": "COLVEMA says only 'Atención telefónica 24 horas' — not stated open 24 h.",
@@ -2156,7 +2156,7 @@
    "address": "Ronda de Atocha 13, 28012 Madrid",
    "phone": "+34 911 299 329",
    "emergency_24h": false,
-   "duty": "Urgencias; atención telefónica 24 horas",
+   "duty": "Emergencies; 24 h telephone line",
    "url": "https://www.lider-veterinaria.es",
    "source_url": "https://www.colvema.org/centro-veterinario/2233-liderveterinaria-clinica-veterinaria",
    "note": "COLVEMA says only 'Atención telefónica 24 horas' — not stated open 24 h.",
@@ -2171,7 +2171,7 @@
    "address": "Zirgariak Etorbidea 32, 48950 Erandio",
    "phone": "+34 944 170 832",
    "emergency_24h": true,
-   "duty": "Urgencias presenciales 24 h; consultas L-V 9-21, S 9-15",
+   "duty": "In-person emergencies 24 h; consultations Mon–Fri 9–21, Sat 9–15",
    "url": "https://www.unavets.com/tartanga/es/servicios/",
    "source_url": "https://www.unavets.com/tartanga/es/servicios/",
    "quote": "Se atienden presencialmente en el Hospital Veterinario Tartanga UNAVETS en Erandio 24 horas.",
@@ -2187,7 +2187,7 @@
    "address": "Askatasun Etorbidea 21, 48200 Durango",
    "phone": "+34 946 201 742",
    "emergency_24h": true,
-   "duty": "Consultas L-V 9-20, S 10:30-13:30; urgencias 24 h; urgencias +34 689 391 119 (Gobierno Vasco list)",
+   "duty": "Consultations Mon–Fri 9–20, Sat 10:30–13:30; emergencies 24 h; emergency phone +34 689 391 119",
    "url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
    "source_url": "https://www.unavets.com/etorbidevet/es/urgencias-24h/",
    "quote": "Proporcionamos servicio de urgencias las 24h",
@@ -2203,7 +2203,7 @@
    "address": "Juan Luis Seisdedos Kalea 2, bajo, 20304 Irun",
    "phone": "+34 943 245 973",
    "emergency_24h": true,
-   "duty": "L-V 10-13:30 y 16-19:30, S 10-13; domingo solo urgencias; urgencias +34 606 122 091",
+   "duty": "Mon–Fri 10–13:30 and 16–19:30, Sat 10–13; Sun emergencies only; emergency phone +34 606 122 091",
    "url": "https://www.irunvet.es/",
    "source_url": "https://www.irunvet.es/",
    "quote": "Servicios para Urgencias Veterinarias 24 horas en Irun",
@@ -2219,7 +2219,7 @@
    "address": "Colon Ibilbidea 27, 20302 Irun",
    "phone": "+34 943 620 230",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 618 893 420",
+   "duty": "Emergency line +34 618 893 420",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "note": "Listed by Basque Government as clinic with emergency services; 24 h not stated on an opened page (own site amaita.com could not be fetched).",
    "checked": "2026-11-02"
@@ -2233,7 +2233,7 @@
    "address": "Calle Lope de Irigoyen 17, 20301 Irun",
    "phone": "+34 943 614 942",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 687 409 777",
+   "duty": "Emergency line +34 687 409 777",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "note": "Basque Government list; own site not fetched.",
    "checked": "2026-11-02"
@@ -2247,7 +2247,7 @@
    "address": "Calle Elcano 3, 20302 Irun",
    "phone": "+34 608 576 505",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 608 576 505",
+   "duty": "Emergency line +34 608 576 505",
    "url": "https://txingudivet.com/",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "note": "Main number printed malformed on the government page, so only the emergency line is given. Own site robots-disallowed.",
@@ -2262,7 +2262,7 @@
    "address": "Calle de Madalen Errota 4, 48480 Arrigorriaga",
    "phone": "+34 946 712 726",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 675 673 610",
+   "duty": "Emergency line +34 675 673 610",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "note": "Basque Government list; 24 h not stated.",
    "checked": "2026-11-02"
@@ -2276,7 +2276,7 @@
    "address": "Murueta Torre Auzunea Etxetaldea 6, 48200 Durango",
    "phone": "+34 946 030 671",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 607 323 006",
+   "duty": "Emergency line +34 607 323 006",
    "url": "https://zaunka.es/",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "note": "Own site title mentions 'urgencias 24 horas' but it is robots-disallowed, so 24 h not verified.",
@@ -2291,7 +2291,7 @@
    "address": "Polígono Arzubia, Edificio 10B, Local 19, 48220 Abadiño",
    "phone": "+34 946 201 621",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 655 881 422",
+   "duty": "Emergency line +34 655 881 422",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2304,7 +2304,7 @@
    "address": "Maskuribai Kalea, 01470 Amurrio",
    "phone": "+34 945 028 910",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 656 788 800",
+   "duty": "Emergency line +34 656 788 800",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2317,7 +2317,7 @@
    "address": "Calle Castillo de Fontecha 3, 01007 Vitoria-Gasteiz",
    "phone": "+34 945 064 644",
    "emergency_24h": false,
-   "duty": "L-J 9:30-13:30 y 16-19, V 9-13 y 15-18; urgencias solo telefónicas +34 688 629 509",
+   "duty": "Mon–Thu 9:30–13:30 and 16–19, Fri 9–13 and 15–18; emergencies by phone only +34 688 629 509",
    "url": "https://clinicaveterinariaariznabarra.com/",
    "source_url": "https://icova.es/centros/clinica-veterinaria-ariznabarra/",
    "note": "Colegio de Veterinarios de Álava page: 'A PARTIR DEL 28 DE JUNIO DE 2024, SÓLO URGENCIAS TELEFÓNICAS, NO PRESENCIALES'. No 24 h claim. Also on Basque Government list. Own contact page contains unrelated spam links.",
@@ -2332,7 +2332,7 @@
    "address": "Bizkaiko Jaurerria Kalea 23, 48370 Bermeo",
    "phone": "+34 944 650 512",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 688 639 855",
+   "duty": "Emergency line +34 688 639 855",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2345,7 +2345,7 @@
    "address": "Santa Katalina Ibilpidea 5, 48280 Lekeitio",
    "phone": "+34 946 840 671",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 607 323 006",
+   "duty": "Emergency line +34 607 323 006",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2358,7 +2358,7 @@
    "address": "Calle Cubo s/n, 48800 Balmaseda",
    "phone": "+34 946 800 998",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 677 502 775",
+   "duty": "Emergency line +34 677 502 775",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2371,7 +2371,7 @@
    "address": "Glorietako Enparantza 2, 48550 Muskiz",
    "phone": "+34 946 852 985",
    "emergency_24h": false,
-   "duty": "Línea de urgencias +34 688 818 525",
+   "duty": "Emergency line +34 688 818 525",
    "source_url": "https://www.moveuskadi.euskadi.eus/contenidos/informacion/euskadi_con_perros/en_def/dog-services.html",
    "checked": "2026-11-02"
   },
@@ -2384,10 +2384,9 @@
    "address": "Pol. Ind. Mas Xirgu, Can Pau Birol 38, 17006 Girona",
    "phone": "+34 972 218 668",
    "emergency_24h": false,
-   "duty": "Registered as Hospital (COVGI reg. 492)",
    "url": "https://canisgirona.com/",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/",
-   "note": "Official Col·legi de Veterinaris de Girona directory lists it as a Hospital; 24 h not verified because canisgirona.com is robots-disallowed and the COVGI listing has no hours.",
+   "note": "Official Col·legi de Veterinaris de Girona directory lists it as a Hospital; 24 h not verified because canisgirona.com is robots-disallowed and the COVGI listing has no hours. Registered as Hospital (COVGI reg. 492).",
    "checked": "2026-11-02"
   },
   {
@@ -2399,10 +2398,10 @@
    "address": "Avda. Salvador Dalí 13, 17600 Figueres",
    "phone": "+34 972 670 179",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 486)",
    "url": "https://canisgirona.com/",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 486)."
   },
   {
    "kind": "clinic",
@@ -2413,9 +2412,9 @@
    "address": "Avda. S'Agaró 148, 17250 Platja d'Aro",
    "phone": "+34 972 851 055",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 546)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 546)."
   },
   {
    "kind": "clinic",
@@ -2426,9 +2425,9 @@
    "address": "Málaga 1, 17300 Blanes",
    "phone": "+34 972 980 029",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 659)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 659)."
   },
   {
    "kind": "clinic",
@@ -2439,9 +2438,9 @@
    "address": "Amberes 64, local dret, 17300 Blanes",
    "phone": "+34 972 355 420",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 582)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 582)."
   },
   {
    "kind": "clinic",
@@ -2452,9 +2451,9 @@
    "address": "Avda. Pau Casals 25, 17490 Llançà",
    "phone": "+34 972 120 852",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 501)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 501)."
   },
   {
    "kind": "clinic",
@@ -2465,9 +2464,9 @@
    "address": "Figueres 8, 17257 Torroella de Montgrí",
    "phone": "+34 972 760 185",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI reg. 541)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/3",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI reg. 541)."
   },
   {
    "kind": "clinic",
@@ -2478,9 +2477,9 @@
    "address": "Carretera de Girona 320-322, 17220 Sant Feliu de Guíxols",
    "phone": "+34 972 324 055",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -2491,9 +2490,9 @@
    "address": "Avda. Girona 74, 17130 L'Escala",
    "phone": "+34 972 772 437",
    "emergency_24h": false,
-   "duty": "Consultori (COVGI)",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Consultori (COVGI)."
   },
   {
    "kind": "clinic",
@@ -2504,7 +2503,7 @@
    "address": "Ronda de S'Estància 66, local, 07740 Es Mercadal",
    "phone": "+34 971 154 046",
    "emergency_24h": false,
-   "duty": "L-V 10-13:30 y 17-20, S 11-13; casos urgentes atendidos 'a la mayor brevedad posible'",
+   "duty": "Mon–Fri 10–13:30 and 17–20, Sat 11–13; urgent cases seen as soon as possible",
    "url": "https://www.cvesmercadal.com/",
    "source_url": "https://www.cvesmercadal.com/contacto",
    "note": "Second phone +34 690 942 588. No 24 h claim.",
@@ -2517,7 +2516,7 @@
    "city": "Santa Eulària des Riu (Ibiza)",
    "region": "Illes Balears",
    "emergency_24h": false,
-   "duty": "Urgencias durante el horario de apertura",
+   "duty": "Emergencies during opening hours",
    "url": "https://www.centroveterinariopitiuso.com/",
    "source_url": "https://www.centroveterinariopitiuso.com/servicios-veterinarios/",
    "note": "Dogs and cats, cat-friendly. Page gives no address or phone (contact link only).",
@@ -2576,7 +2575,7 @@
    "address": "C. C. Myrtea, Av. Severo Ochoa, s/n, 30100 Murcia",
    "phone": "+34 868 048 813",
    "emergency_24h": true,
-   "duty": "Urgencias 24 h",
+   "duty": "Emergencies 24 h",
    "small_animals": true,
    "url": "https://www.vetterhospital.com/",
    "source_url": "https://www.vetterhospital.com/",
@@ -2591,7 +2590,7 @@
    "address": "Avenida Bélgica, Bloque 8, Local 11, Algeciras (Cádiz)",
    "phone": "+34 956 667 352",
    "emergency_24h": true,
-   "duty": "24 h, 365 days; urgencias line +34 648 119 512",
+   "duty": "24 h, 365 days; emergency line +34 648 119 512",
    "small_animals": true,
    "url": "https://www.hospitalveterinarioalba.es/",
    "source_url": "https://www.hospitalveterinarioalba.es/",
@@ -2622,7 +2621,7 @@
    "address": "C/ Victoria Balfe, 8, 09006 Burgos",
    "phone": "+34 947 040 264",
    "emergency_24h": true,
-   "duty": "Mon–Fri 9:00–21:00, Sat 10:00–14:00; urgencias 24 h on the same number",
+   "duty": "Mon–Fri 9:00–21:00, Sat 10:00–14:00; emergencies 24 h on the same number",
    "small_animals": true,
    "url": "https://veterinariavistalegre.com/",
    "source_url": "https://evidensia.es/burgos/hospital-veterinario-vistalegre-burgos",
@@ -2638,7 +2637,7 @@
    "address": "C/ Farmacéutico Obdulio Fernández 42, 09006 Burgos",
    "phone": "+34 947 277 843",
    "emergency_24h": true,
-   "duty": "Mon–Fri 10:00–19:00, Sat 10:00–13:00; urgencias 24 h; also +34 625 539 474 (WhatsApp)",
+   "duty": "Mon–Fri 10:00–19:00, Sat 10:00–13:00; emergencies 24 h; also +34 625 539 474 (WhatsApp)",
    "small_animals": true,
    "url": "https://hospitalveterinarioburgos.com/",
    "source_url": "https://hospitalveterinarioburgos.com/contacto",
@@ -2653,7 +2652,7 @@
    "address": "Av. del Madroño nº 6, Urb. Valparaíso, Toledo",
    "phone": "+34 925 229 209",
    "emergency_24h": true,
-   "duty": "Urgencias line +34 656 304 866, 24 h / 365 days",
+   "duty": "Emergency line +34 656 304 866, 24 h / 365 days",
    "small_animals": true,
    "url": "https://cqvet-tucan.com/",
    "source_url": "https://cqvet-tucan.com/",
@@ -2668,7 +2667,7 @@
    "address": "Pº Ezequiel González 41, 40002 Segovia",
    "phone": "+34 921 431 610",
    "emergency_24h": true,
-   "duty": "Servicio de urgencias 24 h; also +34 652 993 742",
+   "duty": "Emergency service 24 h; also +34 652 993 742",
    "small_animals": true,
    "url": "https://wecansegovia.es/hospital-veterinario.php",
    "source_url": "https://wecansegovia.es/hospital-veterinario.php",
@@ -2699,7 +2698,7 @@
    "address": "Avda. Río Boladíez, 34, 45007 Toledo",
    "phone": "+34 925 240 928",
    "emergency_24h": false,
-   "duty": "Urgencias 24 h line +34 616 919 360 for existing clients only",
+   "duty": "Emergency 24 h line +34 616 919 360 for existing clients only",
    "small_animals": true,
    "url": "https://www.dobican.com/",
    "source_url": "https://www.dobican.com/contacto.php",
@@ -2714,11 +2713,12 @@
    "address": "Calle Prado Taracena, 13, 19005 Guadalajara",
    "phone": "+34 949 217 184",
    "emergency_24h": false,
-   "duty": "Weekdays 10:00–14:00 / 16:00–19:00; \"Servicio de urgencias en el teléfono\" (hours not stated)",
+   "duty": "Weekdays 10:00–14:00 / 16:00–19:00; emergency service by phone",
    "small_animals": true,
    "url": "https://www.clinicaveterinarialc.es/",
    "source_url": "https://www.clinicaveterinarialc.es/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Emergency service hours not stated."
   },
   {
    "kind": "clinic",
@@ -2772,11 +2772,11 @@
    "address": "Calle García Mas, 8, 02005 Albacete",
    "phone": "+34 967 237 957",
    "emergency_24h": false,
-   "duty": "Mon–Thu 10:00–13:30 / 17:00–20:00, Fri 10:00–18:00; emergency contact +34 666 557 182 (hours not stated)",
+   "duty": "Mon–Thu 10:00–13:30 / 17:00–20:00, Fri 10:00–18:00; emergency contact +34 666 557 182",
    "small_animals": true,
    "url": "https://www.clinicaveterinariaal-beitar.es/",
    "source_url": "https://www.clinicaveterinariaal-beitar.es/contacto/",
-   "note": "Also treats exotic animals.",
+   "note": "Also treats exotic animals. Emergency contact hours not stated.",
    "checked": "2026-11-02"
   },
   {
@@ -2801,7 +2801,7 @@
    "address": "Cam. del Sanatorio Marítimo 3, 29620 Torremolinos (Málaga)",
    "phone": "+34 952 635 433",
    "emergency_24h": false,
-   "duty": "Mon–Tue 8:00–15:00 / 17:00–20:00, Wed–Fri 8:00–20:30, Sat 9:00–13:30; urgencias during opening hours; Sat afternoon, Sun and holidays at VetSur Fuengirola (already listed)",
+   "duty": "Mon–Tue 8:00–15:00 / 17:00–20:00, Wed–Fri 8:00–20:30, Sat 9:00–13:30; emergencies during opening hours; Sat afternoon, Sun and holidays at VetSur Fuengirola",
    "small_animals": true,
    "url": "https://www.clinicaveterinariavetsur.com/torremolinos",
    "source_url": "https://www.clinicaveterinariavetsur.com/torremolinos",
@@ -2830,7 +2830,7 @@
    "address": "C. Francisco García de Sola, 12, 11008 Cádiz",
    "phone": "+34 856 171 417",
    "emergency_24h": false,
-   "duty": "Mon & Wed 9:30–14:00 / 17:00–20:30, Tue & Thu 10:00–18:00, Fri 10:00–15:00; urgencias walk-in during opening hours",
+   "duty": "Mon & Wed 9:30–14:00 / 17:00–20:30, Tue & Thu 10:00–18:00, Fri 10:00–15:00; emergencies walk-in during opening hours",
    "small_animals": true,
    "url": "https://clinicavarela.com/",
    "source_url": "https://clinicavarela.com/",
@@ -2844,7 +2844,7 @@
    "address": "Plaza Asdrúbal, 4, Cádiz",
    "phone": "+34 956 060 602",
    "emergency_24h": false,
-   "duty": "Urgencias at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+   "duty": "Emergencies at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
    "small_animals": true,
    "url": "https://clinicasavila.com/",
    "source_url": "https://clinicasavila.com/contacta-con-nosotros/",
@@ -2858,7 +2858,7 @@
    "address": "Avda. Cayetano del Toro 17, Cádiz",
    "phone": "+34 687 136 785",
    "emergency_24h": false,
-   "duty": "Mon–Fri 9:00–20:00, Sat 9:00–14:00; urgencias in person at El Puerto de Santa María hospital (24 h)",
+   "duty": "Mon–Fri 9:00–20:00, Sat 9:00–14:00; emergencies in person at El Puerto de Santa María hospital (24 h)",
    "small_animals": true,
    "url": "https://clinicasavila.com/",
    "source_url": "https://clinicasavila.com/contacta-con-nosotros/",
@@ -2873,7 +2873,7 @@
    "address": "Avenida León Herrero 5, San Fernando",
    "phone": "+34 956 266 788",
    "emergency_24h": false,
-   "duty": "Urgencias at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+   "duty": "Emergencies at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
    "small_animals": true,
    "url": "https://clinicasavila.com/",
    "source_url": "https://clinicasavila.com/contacta-con-nosotros/",
@@ -2887,7 +2887,7 @@
    "address": "Fernando Magallanes 17, Chiclana de la Frontera",
    "phone": "+34 956 402 972",
    "emergency_24h": false,
-   "duty": "Urgencias at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
+   "duty": "Emergencies at Hospital Veterinario Ávila El Puerto de Santa María (24 h), +34 956 870 717",
    "small_animals": true,
    "url": "https://clinicasavila.com/",
    "source_url": "https://clinicasavila.com/contacta-con-nosotros/",
@@ -2916,7 +2916,7 @@
    "address": "Avenida Mª Auxiliadora, 76, 2ª planta, 11520 Rota (Cádiz)",
    "phone": "+34 956 812 634",
    "emergency_24h": false,
-   "duty": "Mon–Wed & Fri 10:00–14:00 / 17:30–20:00, Thu 9:30–16:00, Sat 10:00–13:30; urgencias +34 669 479 972 (\"cuando nos necesite\")",
+   "duty": "Mon–Wed & Fri 10:00–14:00 / 17:30–20:00, Thu 9:30–16:00, Sat 10:00–13:30; emergencies +34 669 479 972 (when you need us)",
    "small_animals": true,
    "url": "https://anubisrota.es/",
    "source_url": "https://anubisrota.es/contacto.html",
@@ -2931,7 +2931,7 @@
    "address": "C. Castellar de la Frontera, 221, 11380 La Vega, Tarifa (Cádiz)",
    "phone": "+34 956 685 343",
    "emergency_24h": false,
-   "duty": "Mon & Fri 9:00–18:00, Tue–Thu 10:00–17:30; urgencias +34 699 280 334",
+   "duty": "Mon & Fri 9:00–18:00, Tue–Thu 10:00–17:30; emergencies +34 699 280 334",
    "small_animals": true,
    "url": "https://veterinario-tarifa.com/",
    "source_url": "https://veterinario-tarifa.com/contacto-veterinario-tarifa",
@@ -2946,11 +2946,11 @@
    "address": "Av. Valladolid, 73, 42004 Soria",
    "phone": "+34 975 030 639",
    "emergency_24h": false,
-   "duty": "Mon–Fri 9:00–21:00, Sat 10:30–13:30; Servicio de urgencias +34 673 761 007 (hours not stated)",
+   "duty": "Mon–Fri 9:00–21:00, Sat 10:30–13:30; emergency service +34 673 761 007",
    "small_animals": true,
    "url": "https://veterinariosurbion.com/",
    "source_url": "https://veterinariosurbion.com/",
-   "note": "\"24 horas\" on the page refers to hospitalisation monitoring only.",
+   "note": "\"24 horas\" on the page refers to hospitalisation monitoring only. Emergency service hours not stated.",
    "checked": "2026-11-02"
   },
   {
@@ -2961,11 +2961,12 @@
    "address": "Avenida de Vigo, 8 bajo, 49026 Zamora",
    "phone": "+34 980 523 625",
    "emergency_24h": false,
-   "duty": "Urgencias attended; separate emergency number mentioned but not listed; also +34 616 757 225",
+   "duty": "Emergencies attended; also +34 616 757 225",
    "small_animals": true,
    "url": "https://www.asivet.es/",
    "source_url": "https://www.asivet.es/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "A separate emergency number is mentioned but not listed."
   },
   {
    "kind": "clinic",
@@ -2975,11 +2976,10 @@
    "address": "Carretera de La Hiniesta, nº 119, Zamora",
    "phone": "+34 980 031 613",
    "emergency_24h": false,
-   "duty": "Hours not published on page",
    "small_animals": true,
    "url": "https://sylvestralia.es/",
    "source_url": "https://sylvestralia.es/clinica-veterinaria/",
-   "note": "Dogs, cats and exotics.",
+   "note": "Dogs, cats and exotics. Hours not published on page.",
    "checked": "2026-11-02"
   },
   {
@@ -3005,11 +3005,12 @@
    "address": "C/ Jacinto Benavente, 1, 05001 Ávila",
    "phone": "+34 920 225 026",
    "emergency_24h": false,
-   "duty": "Mon–Fri 9:00–19:30, Sat 10:00–14:00; atención continuada para emergencias +34 608 421 993 (hours not stated). Second site: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
+   "duty": "Mon–Fri 9:00–19:30, Sat 10:00–14:00; continuous emergency care +34 608 421 993. Second site: Albéitar Sur, P.º Ntra. Sra. Sonsoles 4, local 6, +34 920 039 988",
    "small_animals": true,
    "url": "https://www.clinicaalbeitar.es/",
    "source_url": "https://www.clinicaalbeitar.es/contacto",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Emergency care hours not stated."
   },
   {
    "kind": "clinic",
@@ -3019,11 +3020,12 @@
    "address": "Avenida Vicente Aleixandre, nº 17, 40006 Segovia",
    "phone": "+34 921 433 450",
    "emergency_24h": false,
-   "duty": "Hours not published on page; mobile +34 696 649 550",
+   "duty": "Mobile +34 696 649 550",
    "small_animals": true,
    "url": "https://veterinarianuevasegovia.com/",
    "source_url": "https://veterinarianuevasegovia.com/",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Hours not published on page."
   },
   {
    "kind": "clinic",
@@ -3038,7 +3040,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 915 514 859",
    "url": "https://www.clinicamediterraneo.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3053,8 +3056,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 911 193 103",
    "url": "https://www.vetcon.es/",
-   "duty": "COLVEMA listing: open 24 h with emergency service.",
-   "note": "Exotic-animal clinic."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Exotic-animal clinic. Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3069,7 +3072,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 914 093 600",
    "url": "https://www.hospitalveterinarioretiro.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3084,7 +3088,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 916 124 444",
    "url": "https://fortuna.mivet.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3099,7 +3104,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 914 984 112",
    "url": "https://www.vetsia.es/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3113,7 +3119,8 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 913 511 422",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3128,8 +3135,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 910 441 861",
    "url": "https://www.tresvallescv.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service.",
-   "note": "Mobile +34 654 916 566."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Mobile +34 654 916 566. Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3143,7 +3150,8 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 917 557 559",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3158,7 +3166,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 918 945 265",
    "url": "https://www.hospitalveterinariosanmartin.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3172,8 +3181,8 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 914 454 305",
-   "duty": "COLVEMA listing: open 24 h with emergency service.",
-   "note": "Mobile +34 608 112 251."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Mobile +34 608 112 251. Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3188,7 +3197,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 918 925 315",
    "url": "https://www.hcvpostas.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3203,7 +3213,8 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "phone": "+34 918 511 393",
    "url": "https://www.cvvillalbaif.com/",
-   "duty": "COLVEMA listing: open 24 h with emergency service."
+   "duty": "Open 24 h with emergency service.",
+   "note": "Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3217,8 +3228,8 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Abierto 24 horas. Atención telefónica 24 horas.",
    "url": "https://www.colvema.org/centro-veterinario/26526-hospital-de-urgencias-veterinarias-oeste",
-   "duty": "COLVEMA listing: open 24 h with emergency service.",
-   "note": "COLVEMA listing gives no phone and no website (url = COLVEMA listing); contact by e-mail only on the listing."
+   "duty": "Open 24 h with emergency service.",
+   "note": "COLVEMA listing gives no phone and no website (url = COLVEMA listing); contact by e-mail only on the listing. Hours per COLVEMA listing."
   },
   {
    "kind": "clinic",
@@ -3233,7 +3244,7 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 912 298 520",
    "url": "https://www.centroveterinarioapi.es/",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3248,7 +3259,7 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 918 042 452",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3264,7 +3275,7 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 918 310 010",
    "url": "https://canitasveterinaria.com/",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3280,7 +3291,7 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 914 129 637",
    "url": "https://veterinariomajadahonda.com/",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3296,7 +3307,7 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 918 813 995",
    "url": "https://www.clinicaveterinarium.es/",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3311,7 +3322,7 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 916 900 757",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3326,7 +3337,7 @@
    "checked": "2026-11-02",
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 916 492 487",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3342,7 +3353,7 @@
    "quote": "Este centro dispone de servicio de urgencias veterinarias. Atención telefónica 24 horas.",
    "phone": "+34 913 928 358",
    "url": "https://www.clinicaveterinariaboavet.com/",
-   "duty": "24-h phone line only (COLVEMA: 'Atención telefónica 24 horas'); not stated as open 24 h — call first.",
+   "duty": "24 h phone line only; call first.",
    "note": "COLVEMA lists only \"Atención telefónica 24 horas\" (24-h phone line); set to not 24 h, same rule as earlier ES runs."
   },
   {
@@ -3353,10 +3364,10 @@
    "address": "Girona 3, 17300 Blanes",
    "phone": "+34 972 351 134",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3366,10 +3377,10 @@
    "address": "Avda. Josep Pla i Casadevall 25, 17310 Lloret de Mar",
    "phone": "+34 972 377 550",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3379,10 +3390,10 @@
    "address": "Nou 67, 17600 Figueres",
    "phone": "+34 972 505 460",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3392,10 +3403,10 @@
    "address": "Méndez Núñez 34-36, 17600 Figueres",
    "phone": "+34 972 673 843",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3405,10 +3416,10 @@
    "address": "Emili Grahit 19, 17002 Girona",
    "phone": "+34 972 296 291",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3418,11 +3429,11 @@
    "address": "Ave Maria 15-17, 17130 L'Escala",
    "phone": "+34 972 770 323",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "checked": "2026-11-02",
-   "url": "https://www.lescalavet.com/"
+   "url": "https://www.lescalavet.com/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3432,10 +3443,10 @@
    "address": "Sant Pere 8, 17220 Sant Feliu de Guíxols",
    "phone": "+34 972 822 025",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3445,10 +3456,10 @@
    "address": "Fivaller 2, 17240 Llagostera",
    "phone": "+34 972 831 053",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3458,10 +3469,10 @@
    "address": "Avda. Caritat Serinyana 23, 17488 Cadaqués",
    "phone": "+34 691 675 643",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3471,11 +3482,10 @@
    "address": "Tina 2, 17251 Calonge",
    "phone": "+34 972 651 027",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "note": "WhatsApp contact +34 667 758 605 per COVGI listing."
+   "note": "WhatsApp contact +34 667 758 605 per COVGI listing. Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3485,11 +3495,11 @@
    "address": "Noguera 50, 17487 Empuriabrava",
    "phone": "+34 972 451 263",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "url": "https://www.clinicagomis.com/"
+   "url": "https://www.clinicagomis.com/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3499,10 +3509,10 @@
    "address": "Avda. Rieral 38, 17310 Lloret de Mar",
    "phone": "+34 972 372 687",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3512,11 +3522,11 @@
    "address": "Josep Joan 31, 17230 Palamós",
    "phone": "+34 972 315 912",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "url": "https://www.mendietavet.com/"
+   "url": "https://www.mendietavet.com/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3526,10 +3536,10 @@
    "address": "Passeig Barcelona 12, 17800 Olot",
    "phone": "+34 972 268 416",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3539,11 +3549,11 @@
    "address": "Riu Güell 50, 17005 Girona",
    "phone": "+34 972 911 548",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "url": "https://www.clinicaveterinariaquissos.com/"
+   "url": "https://www.clinicaveterinariaquissos.com/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3553,10 +3563,10 @@
    "address": "Josep Tarradellas 6-8, 17300 Blanes",
    "phone": "+34 972 352 046",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3566,11 +3576,11 @@
    "address": "Plaça Sardana 8, 17250 Platja d'Aro",
    "phone": "+34 972 816 551",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "url": "https://www.clinicaveterinariapou.net/"
+   "url": "https://www.clinicaveterinariapou.net/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3580,10 +3590,10 @@
    "address": "C/ del Freu 50, 17258 L'Estartit",
    "phone": "+34 972 751 703",
    "emergency_24h": false,
-   "duty": "Consultori (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Consultori (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3593,11 +3603,11 @@
    "address": "Avda. Arquitecte Gaudí 16, 17480 Roses",
    "phone": "+34 972 256 996",
    "emergency_24h": false,
-   "duty": "Consultori (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "checked": "2026-11-02",
-   "url": "https://www.clinicagomis.com/"
+   "url": "https://www.clinicagomis.com/",
+   "note": "Registered as Consultori (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3607,10 +3617,10 @@
    "address": "Nou 170-172, 17600 Figueres",
    "phone": "+34 972 674 360",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3620,10 +3630,10 @@
    "address": "Llibertat 137, 17820 Banyoles",
    "phone": "+34 872 047 640",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3633,11 +3643,11 @@
    "address": "Cienfuegos 5, 17310 Lloret de Mar",
    "phone": "+34 972 901 607",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "checked": "2026-11-02",
-   "url": "https://www.elvellmari.com/"
+   "url": "https://www.elvellmari.com/",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3647,10 +3657,10 @@
    "address": "Av. del Nord 79, 17480 Roses",
    "phone": "+34 872 453 319",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3660,10 +3670,10 @@
    "address": "Jacint Verdaguer 4, local 6, 17246 Santa Cristina d'Aro",
    "phone": "+34 972 835 981",
    "emergency_24h": false,
-   "duty": "Clínica (COVGI)",
    "small_animals": true,
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
-   "checked": "2026-11-02"
+   "checked": "2026-11-02",
+   "note": "Registered as Clínica (COVGI)."
   },
   {
    "kind": "clinic",
@@ -3789,7 +3799,7 @@
    "address": "Calle de la Mogaba 15, 41960 Gines (Sevilla)",
    "phone": "+34 954 717 300",
    "emergency_24h": true,
-   "duty": "'Urgencias 24h' listed as a service without details; second site Tomares, Av. Blas Infante 1, +34 954 152 208 — call first.",
+   "duty": "24 h emergency service; second site Tomares, Av. Blas Infante 1, +34 954 152 208; call first.",
    "small_animals": true,
    "url": "https://www.unavets.com/catdog/es/servicios/",
    "source_url": "https://www.unavets.com/catdog/es/urgencias-24h/",
@@ -4179,12 +4189,11 @@
    "address": "Passeig del Mar, 10, 17230 Palamós",
    "phone": "+34 972 316 454",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4194,12 +4203,11 @@
    "address": "C/ Miquel Rasset, 39, 17488 Cadaqués",
    "phone": "+34 653 904 187",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori. COVGI lists the same phone (653 904 187) for Naturcan (Roses) and Es Cau d'en Pinxo (Cadaqués)."
+   "note": "COVGI homologated centre, category: consultori. COVGI lists the same phone (653 904 187) for Naturcan (Roses) and Es Cau d'en Pinxo (Cadaqués). Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4209,12 +4217,11 @@
    "address": "C/ Les Hortes, 29-31, local 3, 17600 Figueres",
    "phone": "+34 872 095 448",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/2",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4224,12 +4231,11 @@
    "address": "Plaça Farners, 14, 17430 Santa Coloma de Farners",
    "phone": "+34 972 843 086",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.clinicaveterinarialaselva.cat",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/4",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: clínica."
+   "note": "COVGI homologated centre, category: clínica. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4239,12 +4245,11 @@
    "address": "C/ Pou del Glaç, 14, 17800 Olot",
    "phone": "+34 972 271 341",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4254,12 +4259,11 @@
    "address": "C/ Caldes de Montbui, 99, baixos, 17003 Girona",
    "phone": "+34 972 203 936",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4269,12 +4273,11 @@
    "address": "Avda. Europa, 48, 17490 Llançà",
    "phone": "+34 607 394 310",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/5",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4284,12 +4287,11 @@
    "address": "C/ Anselm Clavé, 50, local 1, 17300 Blanes",
    "phone": "+34 972 338 498",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4299,12 +4301,11 @@
    "address": "C/ Pep Ventura, 17, 17480 Roses",
    "phone": "+34 653 904 187",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori. COVGI lists the same phone (653 904 187) for Naturcan (Roses) and Es Cau d'en Pinxo (Cadaqués)."
+   "note": "COVGI homologated centre, category: consultori. COVGI lists the same phone (653 904 187) for Naturcan (Roses) and Es Cau d'en Pinxo (Cadaqués). Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4314,12 +4315,11 @@
    "address": "C/ Torroella, 116 B, 17200 Palafrugell",
    "phone": "+34 972 616 559",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/6",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4329,12 +4329,11 @@
    "address": "Passeig Josep Pla, 2, 17520 Puigcerdà",
    "phone": "+34 972 880 245",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: clínica."
+   "note": "COVGI homologated centre, category: clínica. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4344,12 +4343,11 @@
    "address": "Plaça Celestina Vigneaux i Cibils, 1-3, 17003 Girona",
    "phone": "+34 972 296 283",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: clínica."
+   "note": "COVGI homologated centre, category: clínica. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4359,12 +4357,11 @@
    "address": "C/ Carme, 57, 17004 Girona",
    "phone": "+34 972 201 810",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.veterhouse.com",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: clínica."
+   "note": "COVGI homologated centre, category: clínica. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4374,12 +4371,11 @@
    "address": "Rbla. Joaquim Ruyra, 75, 17300 Blanes",
    "phone": "+34 972 331 248",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.cinos.cat",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: clínica."
+   "note": "COVGI homologated centre, category: clínica. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4389,12 +4385,11 @@
    "address": "C/ Frederic Marés, 1, 17497 Portbou",
    "phone": "+34 972 125 215",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
@@ -4404,12 +4399,11 @@
    "address": "C/ Jaume I, 12, 17100 La Bisbal d'Empordà",
    "phone": "+34 972 640 873",
    "emergency_24h": false,
-   "duty": "Hours not published in COVGI directory",
    "small_animals": true,
    "url": "https://serveisveterinaris.cat",
    "source_url": "https://www.covgi.cat/ca/ciutadania/cercador-centres-veterinaris-homologats/7",
    "checked": "2026-11-02",
-   "note": "COVGI homologated centre, category: consultori."
+   "note": "COVGI homologated centre, category: consultori. Hours not published in COVGI directory."
   },
   {
    "kind": "clinic",
