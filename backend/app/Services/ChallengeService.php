@@ -8,12 +8,14 @@ use App\Enums\PetPlan;
 use App\Enums\PushType;
 use App\Events\PetUpdated;
 use App\Models\Pet;
+use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\Media\PetMediaService;
 use App\Services\Media\PetPreparationService;
 use Carbon\CarbonInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 /**
  * The pet side of the 12-week challenge (M3-11, PAYMENTS_SPEC; M3-13 — no
@@ -121,7 +123,13 @@ class ChallengeService
 
         $locked = 0;
         foreach ($due as $id) {
-            $locked += $this->lockIfDue((int) $id, $now) ? 1 : 0;
+            // Per-pet isolation (David 2026-11-04): a failing pet rolls back alone
+            // (own transaction / savepoint) and is retried on the next tick.
+            try {
+                $locked += $this->lockIfDue((int) $id, $now) ? 1 : 0;
+            } catch (Throwable $e) {
+                app(PetLoopGuard::class)->failed('payment_lock', (int) $id, $e);
+            }
         }
 
         return ['locked' => $locked];
@@ -228,7 +236,7 @@ class ChallengeService
                         app(PetMediaService::class)->queueStateVideos($paid);
                     }
                 }
-            } catch (\Throwable $e) {
+            } catch (Throwable $e) {
                 Log::error('Challenge: full media set not queued', ['pet_id' => $petId, 'error' => $e->getMessage()]);
                 report($e);
             }

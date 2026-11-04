@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\BreedCatalogService;
+use App\Services\GameLoop\PetLoopGuard;
 use App\Services\Media\MediaEntitlementService;
 use App\Services\SystemHealth\ErrorRecorder;
 use App\Support\ClientIp;
@@ -63,6 +64,10 @@ class AppServiceProvider extends ServiceProvider
         // System health (David 2026-10-19): one recorder per process (its
         // re-entry guard and failure pause must outlive a single job).
         $this->app->singleton(ErrorRecorder::class);
+
+        // Game loop (David 2026-11-04): the per-run failure list of `pets:process-decay`
+        // is shared by every per-pet loop of the tick (begin() / finish() in the command).
+        $this->app->singleton(PetLoopGuard::class);
     }
 
     /**
