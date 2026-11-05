@@ -5,32 +5,37 @@
     "en": "Star fruit",
     "sl": "Karambola",
     "de": "Sternfrucht (Karambole)",
-    "fr": "Carambole"
+    "fr": "Carambole",
+    "es": "Carambola"
   },
   "question": {
     "en": "Can dogs eat star fruit?",
     "sl": "Ali lahko psi jedo karambolo?",
     "de": "Dürfen Hunde Sternfrucht fressen?",
-    "fr": "Les chiens peuvent-ils manger de la carambole ?"
+    "fr": "Les chiens peuvent-ils manger de la carambole ?",
+    "es": "¿Pueden los perros comer carambola?"
   },
   "url_slug": {
     "en": "star-fruit",
     "sl": "karambola",
     "de": "sternfrucht",
-    "fr": "carambole"
+    "fr": "carambole",
+    "es": "carambola"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
     "sl": "Ne. Karambolo hranite stran od psov. Kisla karambola vsebuje topne oksalate v nevarnih koncentracijah, ki lahko povzročijo bruhanje, slinjenje, šibkost, tresenje, nizko raven kalcija v krvi in okvaro ledvic.",
     "de": "Nein. Halten Sie Sternfrucht von Hunden fern. Saure Sternfrucht enthält lösliches Oxalat in gefährlicher Konzentration, das Erbrechen, Sabbern, Schwäche, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen kann.",
-    "fr": "Non. Gardez la carambole hors de portée des chiens. La carambole acide contient de l’oxalate soluble en concentrations dangereuses, ce qui peut provoquer des vomissements, une salivation excessive, une faiblesse, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale."
+    "fr": "Non. Gardez la carambole hors de portée des chiens. La carambole acide contient de l’oxalate soluble en concentrations dangereuses, ce qui peut provoquer des vomissements, une salivation excessive, une faiblesse, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale.",
+    "es": "No. Mantén la carambola fuera del alcance de los perros. La carambola ácida contiene oxalato soluble en concentraciones peligrosas, que puede causar vómitos, babeo, debilidad, temblores, calcio bajo en la sangre y lesión renal."
   },
   "why": {
     "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
     "sl": "Pet Poison Helpline navaja, da lahko karambola pri psih povzroči zastrupitev. Glavna težava so topni oksalati (oksalna kislina), ki so v kisli karamboli v nevarnih koncentracijah. Pet Poison Helpline sicer navaja tudi, da sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik pravi, da karambola za pse ni varna, zato izberemo strožjo oceno. Že majhne količine lahko povzročijo zdravstvene težave, zlasti pri psih s težavami z ledvicami, karambola pa lahko poslabša obstoječe težave z ledvicami.",
     "de": "Laut Pet Poison Helpline kann Sternfrucht bei Hunden zu einer Vergiftung führen. Das Hauptproblem ist lösliches Oxalat (Oxalsäure), das in saurer Sternfrucht in gefährlicher Konzentration vorkommt. Pet Poison Helpline weist außerdem darauf hin, dass süße Sternfrucht nur sehr wenig lösliches Oxalat enthält und für Tiere mit gesunden Nieren nicht giftig ist; ein von Tierärzten geprüfter Ratgeber sagt jedoch, dass Sternfrucht für Hunde nicht sicher ist, deshalb legen wir die strengere Stufe zugrunde. Schon kleine Mengen können zu gesundheitlichen Problemen führen, vor allem bei Hunden mit Nierenproblemen, und Sternfrucht kann bestehende Nierenprobleme verschlimmern.",
-    "fr": "Pet Poison Helpline indique que la carambole peut provoquer une intoxication chez les chiens. La principale préoccupation est l’oxalate soluble (acide oxalique), présent en concentrations dangereuses dans la carambole acide. Pet Poison Helpline note aussi que la carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme que la carambole n’est pas sans danger pour les chiens ; nous retenons donc le niveau le plus strict. Même de petites quantités peuvent entraîner des problèmes de santé, en particulier chez les chiens ayant des problèmes rénaux, et la carambole peut aggraver des problèmes rénaux existants."
+    "fr": "Pet Poison Helpline indique que la carambole peut provoquer une intoxication chez les chiens. La principale préoccupation est l’oxalate soluble (acide oxalique), présent en concentrations dangereuses dans la carambole acide. Pet Poison Helpline note aussi que la carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme que la carambole n’est pas sans danger pour les chiens ; nous retenons donc le niveau le plus strict. Même de petites quantités peuvent entraîner des problèmes de santé, en particulier chez les chiens ayant des problèmes rénaux, et la carambole peut aggraver des problèmes rénaux existants.",
+    "es": "Pet Poison Helpline indica que la carambola puede intoxicar a los perros. La principal preocupación es el oxalato soluble (ácido oxálico), presente en concentraciones peligrosas en la carambola ácida. Pet Poison Helpline señala también que la carambola dulce contiene muy poco oxalato soluble y no es venenosa para las mascotas con riñones sanos, pero una guía revisada por veterinarios dice que la carambola no es segura para los perros, así que aplicamos el nivel más estricto. Incluso las cantidades pequeñas pueden causar problemas de salud, sobre todo en perros con problemas renales, y la carambola puede empeorar los problemas renales que ya existan."
   },
   "signs": {
     "en": [
@@ -64,20 +69,30 @@
       "Tremblements",
       "Taux de calcium sanguin bas",
       "Signes d’atteinte rénale, comme uriner beaucoup"
+    ],
+    "es": [
+      "Vómitos",
+      "Babeo",
+      "Debilidad",
+      "Temblores",
+      "Calcio bajo en la sangre",
+      "Síntomas de lesión renal, como orinar mucho"
     ]
   },
   "what_to_do": {
     "en": "Remove any remaining star fruit and contact your vet or a pet poison helpline right away, especially if your dog has kidney problems. Signs can appear within a few hours.",
     "sl": "Odstranite preostalo karambolo in se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali, zlasti če ima pes težave z ledvicami. Znaki se lahko pojavijo v nekaj urah.",
     "de": "Räumen Sie übrige Sternfrucht weg und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, vor allem wenn Ihr Hund Nierenprobleme hat. Anzeichen können innerhalb weniger Stunden auftreten.",
-    "fr": "Retirez ce qui reste de carambole et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, surtout si votre chien a des problèmes rénaux. Les signes peuvent apparaître en quelques heures."
+    "fr": "Retirez ce qui reste de carambole et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, surtout si votre chien a des problèmes rénaux. Les signes peuvent apparaître en quelques heures.",
+    "es": "Retira los restos de carambola y ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, sobre todo si tu perro tiene problemas renales. Los síntomas pueden aparecer en pocas horas."
   },
   "serving": null,
   "child": {
     "en": "Star fruit is not a dog treat. If your dog eats some, tell a grown-up right away.",
     "sl": "Karambola ni priboljšek za pse. Če jo pes poje, takoj povej odraslemu.",
     "de": "Sternfrucht ist kein Leckerli für Hunde. Wenn dein Hund etwas davon frisst, sag sofort einem Erwachsenen Bescheid.",
-    "fr": "La carambole n’est pas une friandise pour chien. Si ton chien en mange, préviens tout de suite un adulte."
+    "fr": "La carambole n’est pas une friandise pour chien. Si ton chien en mange, préviens tout de suite un adulte.",
+    "es": "La carambola no es un premio para perros. Si tu perro come un poco, avisa enseguida a un adulto."
   },
   "faq": [
     {
@@ -85,13 +100,15 @@
         "en": "Is sweet star fruit safe for dogs?",
         "sl": "Je sladka karambola za pse varna?",
         "de": "Ist süße Sternfrucht für Hunde unbedenklich?",
-        "fr": "La carambole sucrée est-elle sans danger pour les chiens ?"
+        "fr": "La carambole sucrée est-elle sans danger pour les chiens ?",
+        "es": "¿Es segura la carambola dulce para los perros?"
       },
       "a": {
         "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
         "sl": "Sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik vseeno pravi, da karambola za pse ni varna, zato se ji je najbolje izogniti.",
         "de": "Süße Sternfrucht enthält nur sehr wenig lösliches Oxalat und ist für Tiere mit gesunden Nieren nicht giftig, doch ein von Tierärzten geprüfter Ratgeber sagt trotzdem, dass Sternfrucht für Hunde nicht sicher ist; meiden Sie sie am besten.",
-        "fr": "La carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme tout de même que la carambole n’est pas sans danger pour les chiens ; mieux vaut donc l’éviter."
+        "fr": "La carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme tout de même que la carambole n’est pas sans danger pour les chiens ; mieux vaut donc l’éviter.",
+        "es": "La carambola dulce contiene muy poco oxalato soluble y no es venenosa para las mascotas con riñones sanos, pero una guía revisada por veterinarios sigue diciendo que la carambola no es segura para los perros, así que es mejor evitarla."
       }
     }
   ],
@@ -179,6 +196,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "814e193fa7048f2b10694622693ed9f1a733a13305178e89eaf54df03026e7c3"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f2f62314b96b5d51081e38d7c548a35b5712b41210860390ee38095e6c5ed0ac"
     }
   }
 }

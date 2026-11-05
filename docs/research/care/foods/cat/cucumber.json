@@ -5,51 +5,59 @@
     "en": "Cucumber",
     "sl": "Kumare",
     "de": "Gurke",
-    "fr": "Concombre"
+    "fr": "Concombre",
+    "es": "Pepino"
   },
   "question": {
     "en": "Can cats eat cucumber?",
     "sl": "Ali lahko mačke jedo kumare?",
     "de": "Dürfen Katzen Gurken fressen?",
-    "fr": "Les chats peuvent-ils manger du concombre ?"
+    "fr": "Les chats peuvent-ils manger du concombre ?",
+    "es": "¿Pueden los gatos comer pepino?"
   },
   "url_slug": {
     "en": "cucumber",
     "sl": "kumare",
     "de": "gurke",
-    "fr": "concombre"
+    "fr": "concombre",
+    "es": "pepino"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
     "sl": "Da, majhen košček navadne kumare je v redu kot občasen priboljšek. ASPCA kumaro navaja kot nestrupeno za mačke, vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
     "de": "Ja, ein kleines Stück pure Gurke ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Gurke als ungiftig für Katzen ein. Katzen brauchen jedoch kein Gemüse, und jedes Pflanzenmaterial kann den Magen verstimmen – bleiben Sie also bei einem winzigen Extra.",
-    "fr": "Oui, un petit morceau de concombre nature convient comme friandise occasionnelle. L’ASPCA classe le concombre parmi les aliments non toxiques pour les chats, mais les chats n’ont pas besoin de légumes et toute matière végétale peut irriter l’estomac : gardez-le pour un tout petit extra."
+    "fr": "Oui, un petit morceau de concombre nature convient comme friandise occasionnelle. L’ASPCA classe le concombre parmi les aliments non toxiques pour les chats, mais les chats n’ont pas besoin de légumes et toute matière végétale peut irriter l’estomac : gardez-le pour un tout petit extra.",
+    "es": "Sí, un trocito de pepino sin condimentar está bien como premio ocasional. La ASPCA considera el pepino no tóxico para los gatos, pero los gatos no necesitan verdura y cualquier materia vegetal puede sentarles mal al estómago, así que ofrécelo solo como un pequeño extra."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "ASPCA navadno kumaro navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
     "de": "Die ASPCA stuft die Gartengurke als ungiftig für Katzen ein. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten sparsam bleiben, und laut ASPCA kann Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
-    "fr": "L’ASPCA classe le concombre de jardin parmi les plantes non toxiques pour les chats. Les chats n’ont pas besoin de fruits ni de légumes dans leur alimentation, les friandises doivent rester peu nombreuses, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat."
+    "fr": "L’ASPCA classe le concombre de jardin parmi les plantes non toxiques pour les chats. Les chats n’ont pas besoin de fruits ni de légumes dans leur alimentation, les friandises doivent rester peu nombreuses, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat.",
+    "es": "La ASPCA considera el pepino de huerta no tóxico para los gatos. Los gatos no necesitan fruta ni verdura en su dieta, los premios deben ser pocos y la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
-    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
+    "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
     "sl": "Občasno majhen navaden košček, všteti ga je treba v dnevno količino hrane.",
     "de": "Ab und zu ein kleines Stück pur; es zählt zur täglichen Futtermenge Ihrer Katze.",
-    "fr": "Un petit morceau nature de temps en temps, compté dans la ration quotidienne de votre chat."
+    "fr": "Un petit morceau nature de temps en temps, compté dans la ration quotidienne de votre chat.",
+    "es": "Un trocito pequeño, sin condimentar y de vez en cuando; cuéntalo dentro de la comida diaria de tu gato."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček kumare je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
     "de": "Ein kleines Stück Gurke kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
-    "fr": "Un petit morceau de concombre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
+    "fr": "Un petit morceau de concombre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
+    "es": "Un trocito de pepino puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "de": "Brauchen Katzen Gemüse?",
-        "fr": "Les chats ont-ils besoin de légumes ?"
+        "fr": "Les chats ont-ils besoin de légumes ?",
+        "es": "¿Necesitan verdura los gatos?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
-        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
+        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
+        "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra."
       }
     }
   ],
@@ -132,6 +142,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "03eb4b39ecc6aa7526df1d2f94add0c35ced5b66b94c231955e6d3e742d2faed"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6fc332f0a4c359ccedf016d46f771005ea10c0b0be43d3f330f0d89dc3665262"
     }
   }
 }

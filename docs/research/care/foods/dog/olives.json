@@ -5,51 +5,59 @@
     "en": "Olives",
     "sl": "Olive",
     "de": "Oliven",
-    "fr": "Olives"
+    "fr": "Olives",
+    "es": "Aceitunas"
   },
   "question": {
     "en": "Can dogs eat olives?",
     "sl": "Ali lahko psi jedo olive?",
     "de": "Dürfen Hunde Oliven fressen?",
-    "fr": "Les chiens peuvent-ils manger des olives ?"
+    "fr": "Les chiens peuvent-ils manger des olives ?",
+    "es": "¿Pueden los perros comer aceitunas?"
   },
   "url_slug": {
     "en": "olives",
     "sl": "olive",
     "de": "oliven",
-    "fr": "olives"
+    "fr": "olives",
+    "es": "aceitunas"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in moderation, if they are plain, unsalted and pitted. Olives aren't toxic to dogs, but the pits can cause choking or a blockage, and canned or pickled olives often contain too much sodium.",
     "sl": "Da, zmerno, če so navadne, nesoljene in brez koščic. Olive za pse niso strupene, koščice pa lahko povzročijo dušenje ali zaporo, olive iz pločevinke ali vložene olive pa pogosto vsebujejo preveč natrija.",
     "de": "Ja, in Maßen, wenn sie pur, ungesalzen und entsteint sind. Oliven sind für Hunde nicht giftig, aber die Kerne können zum Ersticken oder zu einer Blockade führen, und Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium.",
-    "fr": "Oui, avec modération, si elles sont nature, non salées et dénoyautées. Les olives ne sont pas toxiques pour les chiens, mais les noyaux peuvent provoquer un étouffement ou une obstruction, et les olives en conserve ou marinées contiennent souvent trop de sodium."
+    "fr": "Oui, avec modération, si elles sont nature, non salées et dénoyautées. Les olives ne sont pas toxiques pour les chiens, mais les noyaux peuvent provoquer un étouffement ou une obstruction, et les olives en conserve ou marinées contiennent souvent trop de sodium.",
+    "es": "Sí, con moderación, si son naturales, sin sal y sin hueso. Las aceitunas no son tóxicas para los perros, pero los huesos pueden causar atragantamiento u obstrucción, y las aceitunas en conserva o en salmuera suelen llevar demasiado sodio."
   },
   "why": {
     "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
     "sl": "Olive same po sebi ne vsebujejo strupenih snovi, koščice pa lahko povzročijo dušenje, zaprejo dihalne poti in se zagozdijo v psovih prebavilih. Olive iz pločevinke ali vložene olive pogosto vsebujejo preveč natrija, preveč natrija pa lahko povzroči dehidracijo in v redkih primerih zastrupitev s soljo. Olive, prelite s česnom, začimbami ali olji, prinašajo dodatna tveganja, olivam, namočenim v alkohol, pa psa nikoli ne smete hraniti.",
     "de": "Oliven selbst enthalten keine giftigen Inhaltsstoffe, aber die Kerne können zum Ersticken führen, die Atemwege blockieren und im Darm eines Hundes stecken bleiben. Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium, und zu viel Natrium kann zu Austrocknung und in seltenen Fällen zu einer Salzvergiftung führen. Oliven mit Knoblauch, Gewürzen oder Öl bergen zusätzliche Risiken, und in Alkohol eingelegte Oliven dürfen einem Hund niemals gegeben werden.",
-    "fr": "Les olives elles-mêmes ne contiennent aucun ingrédient toxique, mais les noyaux peuvent provoquer un étouffement, obstruer les voies respiratoires et se loger dans l’intestin d’un chien. Les olives en conserve ou marinées contiennent souvent un excès de sodium, et trop de sodium peut entraîner une déshydratation et, dans de rares cas, une intoxication au sel. Les olives enrobées d’ail, d’assaisonnements ou d’huiles présentent des risques supplémentaires, et les olives macérées dans l’alcool ne doivent jamais être données à un chien."
+    "fr": "Les olives elles-mêmes ne contiennent aucun ingrédient toxique, mais les noyaux peuvent provoquer un étouffement, obstruer les voies respiratoires et se loger dans l’intestin d’un chien. Les olives en conserve ou marinées contiennent souvent un excès de sodium, et trop de sodium peut entraîner une déshydratation et, dans de rares cas, une intoxication au sel. Les olives enrobées d’ail, d’assaisonnements ou d’huiles présentent des risques supplémentaires, et les olives macérées dans l’alcool ne doivent jamais être données à un chien.",
+    "es": "Las aceitunas en sí no contienen ingredientes tóxicos, pero los huesos pueden causar atragantamiento, bloquear las vías respiratorias y quedarse atascados en los intestinos del perro. Las aceitunas en conserva o en salmuera suelen llevar un exceso de sodio, y demasiado sodio puede provocar deshidratación y, en casos raros, intoxicación por sal. Las aceitunas aliñadas con ajo, condimentos o aceites suponen riesgos adicionales, y las aceitunas maceradas en alcohol no deben darse nunca a un perro."
   },
   "signs": null,
   "what_to_do": {
     "en": "If your dog eats a lot of olives, especially with the pits, contact your vet for advice.",
     "sl": "Če pes poje veliko oliv, zlasti s koščicami, se za nasvet obrnite na veterinarja.",
     "de": "Wenn Ihr Hund viele Oliven gefressen hat, vor allem mit Kernen, lassen Sie sich von Ihrem Tierarzt beraten.",
-    "fr": "Si votre chien mange beaucoup d’olives, surtout avec les noyaux, contactez votre vétérinaire pour avoir son avis."
+    "fr": "Si votre chien mange beaucoup d’olives, surtout avec les noyaux, contactez votre vétérinaire pour avoir son avis.",
+    "es": "Si tu perro come muchas aceitunas, sobre todo con hueso, ponte en contacto con tu veterinario para que te aconseje."
   },
   "serving": {
     "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
     "sl": "Samo navadne, nesoljene olive brez koščic, v majhnih količinah. Izogibajte se olivam iz pločevinke, vloženim olivam in olivam s česnom, začimbami, olji ali alkoholom.",
     "de": "Nur pure, ungesalzene, entsteinte Oliven in kleinen Mengen. Vermeiden Sie Oliven aus der Dose oder eingelegte Oliven sowie Oliven mit Knoblauch, Gewürzen, Öl oder Alkohol.",
-    "fr": "Uniquement des olives nature, non salées et dénoyautées, en petites quantités. Évitez les olives en conserve ou marinées, ainsi que celles à l’ail, aux assaisonnements, à l’huile ou à l’alcool."
+    "fr": "Uniquement des olives nature, non salées et dénoyautées, en petites quantités. Évitez les olives en conserve ou marinées, ainsi que celles à l’ail, aux assaisonnements, à l’huile ou à l’alcool.",
+    "es": "Solo aceitunas naturales, sin sal y sin hueso, en pequeñas cantidades. Evita las aceitunas en conserva o en salmuera y las que llevan ajo, condimentos, aceites o alcohol."
   },
   "child": {
     "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
     "sl": "Psi lahko kdaj pa kdaj dobijo navadno olivo, iz katere odrasli odstrani koščico. Slane olive niso za pse.",
     "de": "Hunde dürfen ab und zu eine pure Olive naschen – aber nur, wenn ein Erwachsener den Kern entfernt hat. Salzige Oliven sind nichts für Hunde.",
-    "fr": "Les chiens peuvent avoir une olive nature de temps en temps, dont un adulte a retiré le noyau. Les olives salées ne sont pas pour les chiens."
+    "fr": "Les chiens peuvent avoir une olive nature de temps en temps, dont un adulte a retiré le noyau. Les olives salées ne sont pas pour les chiens.",
+    "es": "Los perros pueden tomar una aceituna natural de vez en cuando, con el hueso quitado por un adulto. Las aceitunas saladas no son para los perros."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Are olive pits dangerous for dogs?",
         "sl": "So koščice oliv za pse nevarne?",
         "de": "Sind Olivenkerne für Hunde gefährlich?",
-        "fr": "Les noyaux d’olive sont-ils dangereux pour les chiens ?"
+        "fr": "Les noyaux d’olive sont-ils dangereux pour les chiens ?",
+        "es": "¿Son peligrosos los huesos de aceituna para los perros?"
       },
       "a": {
         "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
         "sl": "Da. Koščice oliv lahko povzročijo dušenje ali zaporo dihalnih poti in se lahko zagozdijo v psovih prebavilih.",
         "de": "Ja. Olivenkerne können zum Ersticken oder zu einer Verlegung der Atemwege führen und im Darm eines Hundes stecken bleiben.",
-        "fr": "Oui. Les noyaux d’olive peuvent provoquer un étouffement ou une obstruction des voies respiratoires, et ils peuvent se loger dans l’intestin d’un chien."
+        "fr": "Oui. Les noyaux d’olive peuvent provoquer un étouffement ou une obstruction des voies respiratoires, et ils peuvent se loger dans l’intestin d’un chien.",
+        "es": "Sí. Los huesos de aceituna pueden causar atragantamiento u obstrucciones respiratorias y pueden quedarse atascados en los intestinos del perro."
       }
     }
   ],
@@ -148,6 +158,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "9cdf4f2da87097c5cd5dc99740549cae926d7a03920da5b269079a3eed3781ae"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "80289828fee7a0996bb23c42d6f5529386d12a3b1d79c84ce5e36cb661f0db9e"
     }
   }
 }
