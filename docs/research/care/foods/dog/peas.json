@@ -8,7 +8,8 @@
     "fr": "Petits pois",
     "es": "Guisantes",
     "it": "Piselli",
-    "pt": "Ervilhas"
+    "pt": "Ervilhas",
+    "nl": "Erwten"
   },
   "question": {
     "en": "Can dogs eat peas?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des petits pois ?",
     "es": "¿Pueden los perros comer guisantes?",
     "it": "I cani possono mangiare i piselli?",
-    "pt": "Os cães podem comer ervilhas?"
+    "pt": "Os cães podem comer ervilhas?",
+    "nl": "Mogen honden erwten eten?"
   },
   "url_slug": {
     "en": "peas",
@@ -26,7 +28,8 @@
     "fr": "petits-pois",
     "es": "guisantes",
     "it": "piselli",
-    "pt": "ervilhas"
+    "pt": "ervilhas",
+    "nl": "erwten"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui, comme friandise occasionnelle. Les pois verts, y compris les pois mange-tout, les pois gourmands et les petits pois de jardin, ne sont pas toxiques pour les chiens. Donnez-les frais ou surgelés, mais pas en conserve, car les petits pois en conserve contiennent généralement beaucoup de sodium ajouté.",
     "es": "Sí, como premio ocasional. Los guisantes verdes, incluidos los tirabeques, los guisantes dulces y los guisantes de huerta, no son tóxicos para los perros. Dáselos frescos o congelados, pero no en conserva, porque los guisantes en conserva suelen llevar mucho sodio añadido.",
     "it": "Sì, come premio occasionale. I piselli verdi, comprese le taccole, i piselli zuccherini (sugar snap) e i piselli da sgusciare, non sono tossici per i cani. Dalli freschi o surgelati, ma non in scatola, perché i piselli in scatola contengono di solito molto sodio aggiunto.",
-    "pt": "Sim, como guloseima ocasional. As ervilhas verdes, incluindo as ervilhas-tortas, as ervilhas-de-quebrar (sugar snap) e as ervilhas de debulhar, não são tóxicas para os cães. Dá-as frescas ou congeladas, mas não em conserva, porque as ervilhas em conserva costumam ter muito sódio adicionado."
+    "pt": "Sim, como guloseima ocasional. As ervilhas verdes, incluindo as ervilhas-tortas, as ervilhas-de-quebrar (sugar snap) e as ervilhas de debulhar, não são tóxicas para os cães. Dá-as frescas ou congeladas, mas não em conserva, porque as ervilhas em conserva costumam ter muito sódio adicionado.",
+    "nl": "Ja, af en toe als snoepje. Groene erwten, waaronder peultjes, suikererwten en doperwten, zijn niet giftig voor honden. Geef ze vers of diepgevroren, maar niet uit blik, want erwten uit blik bevatten meestal veel toegevoegd natrium."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -45,7 +49,8 @@
     "fr": "Les petits pois ne sont pas toxiques pour les chiens, mais les fruits et les légumes ne sont pas nécessaires dans l’alimentation d’un chien et doivent être considérés comme une friandise occasionnelle. Les petits pois en conserve contiennent généralement beaucoup de sodium ajouté, ce qui est nocif pour les chiens. Les cosses peuvent se coincer dans la gorge d’un chien et provoquer un étouffement.",
     "es": "Los guisantes no son tóxicos ni venenosos para los perros, pero la fruta y la verdura no son necesarias en la dieta de un perro y deben considerarse un premio ocasional. Los guisantes en conserva suelen llevar mucho sodio añadido, que es perjudicial para los perros. Las vainas pueden quedarse atascadas en la garganta del perro y provocar atragantamiento.",
     "it": "I piselli non sono tossici né velenosi per i cani, ma frutta e verdura non sono necessarie nella dieta del cane e vanno considerate come un premio occasionale. I piselli in scatola hanno di solito molto sodio aggiunto, dannoso per i cani. I baccelli possono incastrarsi in gola al cane e farlo soffocare.",
-    "pt": "As ervilhas não são tóxicas nem venenosas para os cães, mas a fruta e os legumes não são necessários na alimentação de um cão e devem ser vistos como uma guloseima ocasional. As ervilhas em conserva costumam ter muito sódio adicionado, o que faz mal aos cães. As vagens podem ficar presas na garganta do cão e causar engasgamento."
+    "pt": "As ervilhas não são tóxicas nem venenosas para os cães, mas a fruta e os legumes não são necessários na alimentação de um cão e devem ser vistos como uma guloseima ocasional. As ervilhas em conserva costumam ter muito sódio adicionado, o que faz mal aos cães. As vagens podem ficar presas na garganta do cão e causar engasgamento.",
+    "nl": "Erwten zijn niet giftig voor honden, maar een hond heeft geen fruit of groente nodig; zie het als een snoepje voor af en toe. Erwten uit blik bevatten meestal veel toegevoegd natrium, wat schadelijk is voor honden. Peulen kunnen in de keel van een hond blijven steken en verstikking veroorzaken."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Comme pour tout nouvel aliment, surveillez chez votre chien d’éventuelles réactions comme de la diarrhée ou des vomissements.",
     "es": "Como con cualquier alimento nuevo, vigila que tu perro no tenga reacciones como diarrea o vómitos.",
     "it": "Come per ogni alimento nuovo, osserva il tuo cane per individuare eventuali reazioni, come diarrea o vomito.",
-    "pt": "Como com qualquer alimento novo, observa se o teu cão tem reações como diarreia ou vómitos."
+    "pt": "Como com qualquer alimento novo, observa se o teu cão tem reações como diarreia ou vómitos.",
+    "nl": "Let, net als bij elk nieuw voedsel, op reacties van je hond, zoals diarree of braken."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -64,7 +70,8 @@
     "fr": "Uniquement des petits pois frais, surgelés ou décongelés, jamais en conserve. Écossez toujours les petits pois de jardin, et faites attention aux cosses, qui peuvent provoquer un étouffement.",
     "es": "Solo guisantes frescos, congelados o descongelados, nunca en conserva. Desgrana siempre los guisantes de huerta y ten cuidado con las vainas, que pueden causar atragantamiento.",
     "it": "Solo piselli freschi, surgelati o scongelati, mai in scatola. Se sono piselli da sgusciare, sgusciali sempre e fai attenzione ai baccelli, che possono causare soffocamento.",
-    "pt": "Apenas ervilhas frescas, congeladas ou descongeladas, nunca em conserva. Tira sempre as ervilhas de debulhar das vagens e tem cuidado com as vagens, que podem causar engasgamento."
+    "pt": "Apenas ervilhas frescas, congeladas ou descongeladas, nunca em conserva. Tira sempre as ervilhas de debulhar das vagens e tem cuidado com as vagens, que podem causar engasgamento.",
+    "nl": "Alleen verse, diepgevroren of ontdooide erwten, nooit uit blik. Dop doperwten altijd uit de peul en wees voorzichtig met peulen, want die kunnen verstikking veroorzaken."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -73,7 +80,8 @@
     "fr": "Les chiens peuvent avoir quelques petits pois en friandise. Un adulte écosse d’abord les petits pois de jardin.",
     "es": "Los perros pueden tomar unos pocos guisantes como premio. Un adulto desgrana antes los guisantes de huerta.",
     "it": "I cani possono mangiare qualche pisello come premietto. Prima un adulto li toglie dal baccello.",
-    "pt": "Os cães podem comer umas ervilhas como guloseima. Um adulto tira primeiro as ervilhas das vagens."
+    "pt": "Os cães podem comer umas ervilhas como guloseima. Um adulto tira primeiro as ervilhas das vagens.",
+    "nl": "Honden mogen een paar erwten als snoepje. Een volwassene haalt doperwten eerst uit hun peul."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Les chiens peuvent-ils manger des cosses de pois ?",
         "es": "¿Pueden los perros comer vainas de guisante?",
         "it": "I cani possono mangiare i baccelli dei piselli?",
-        "pt": "Os cães podem comer vagens de ervilha?"
+        "pt": "Os cães podem comer vagens de ervilha?",
+        "nl": "Mogen honden de peul van erwten eten?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -93,7 +102,8 @@
         "fr": "Si la cosse est comestible pour nous, elle l’est aussi pour votre chien, mais soyez prudent : les cosses peuvent se coincer dans la gorge et provoquer un étouffement. Les petits pois de jardin doivent toujours être écossés.",
         "es": "Si las personas pueden comerse la vaina, tu perro también, pero ten cuidado: las vainas pueden quedarse atascadas en la garganta y provocar atragantamiento. Los guisantes de huerta hay que desgranarlos siempre.",
         "it": "Se il baccello è commestibile per le persone, lo è anche per il cane, ma fai attenzione: i baccelli possono incastrarsi in gola e causare soffocamento. I piselli da sgusciare vanno sempre sgusciati.",
-        "pt": "Se as pessoas podem comer a vagem, o teu cão também pode, mas atenção: as vagens podem ficar presas na garganta e causar engasgamento. As ervilhas de debulhar têm de ser sempre tiradas da vagem."
+        "pt": "Se as pessoas podem comer a vagem, o teu cão também pode, mas atenção: as vagens podem ficar presas na garganta e causar engasgamento. As ervilhas de debulhar têm de ser sempre tiradas da vagem.",
+        "nl": "Als mensen de peul mogen eten, mag je hond dat ook, maar wees voorzichtig: peulen kunnen in de keel blijven steken en verstikking veroorzaken. Doperwten moet je altijd doppen."
       }
     },
     {
@@ -104,7 +114,8 @@
         "fr": "Les petits pois dans les croquettes posent-ils un problème ?",
         "es": "¿Son un problema los guisantes en la comida para perros?",
         "it": "I piselli nel cibo per cani sono un problema?",
-        "pt": "As ervilhas na ração para cães são um problema?"
+        "pt": "As ervilhas na ração para cães são um problema?",
+        "nl": "Zijn erwten in hondenvoer een probleem?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -113,7 +124,8 @@
         "fr": "Des recherches sont en cours pour savoir si les petits pois jouent un rôle dans les maladies cardiaques du chien. Si votre chien a mangé un aliment dont les petits pois sont un ingrédient principal, vous pouvez en parler à votre vétérinaire.",
         "es": "Se investiga si los guisantes influyen en las enfermedades del corazón de los perros. Si tu perro ha comido un alimento con guisantes como ingrediente principal, quizá convenga que lo hables con tu veterinario.",
         "it": "Sono in corso studi per capire se i piselli c’entrino con le malattie cardiache dei cani. Se il tuo cane mangia un alimento in cui i piselli sono l’ingrediente principale, può essere utile parlarne con il veterinario.",
-        "pt": "Continuam a decorrer estudos para saber se as ervilhas contribuem para doenças cardíacas nos cães. Se o teu cão comeu um alimento com ervilhas como ingrediente principal, talvez queiras falar com o teu veterinário."
+        "pt": "Continuam a decorrer estudos para saber se as ervilhas contribuem para doenças cardíacas nos cães. Se o teu cão comeu um alimento com ervilhas como ingrediente principal, talvez queiras falar com o teu veterinário.",
+        "nl": "Er loopt nog onderzoek naar de vraag of erwten een rol spelen bij hartziekten bij honden. Heeft je hond voer met erwten als hoofdingrediënt gegeten, dan kun je dit misschien met je dierenarts bespreken."
       }
     }
   ],
@@ -204,6 +216,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "42296e38f12a3266022635181ac3f347318438c4e5598bf447d91aa81ebe8ee6"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33a041bed809e4b4b7daea7f76a9df2cdfe3595a3760722d0015153ac1250ff9"
     }
   }
 }

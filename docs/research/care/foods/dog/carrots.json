@@ -8,7 +8,8 @@
     "fr": "Carottes",
     "es": "Zanahorias",
     "it": "Carote",
-    "pt": "Cenouras"
+    "pt": "Cenouras",
+    "nl": "Wortels"
   },
   "question": {
     "en": "Can dogs eat carrots?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des carottes ?",
     "es": "¿Pueden los perros comer zanahorias?",
     "it": "I cani possono mangiare le carote?",
-    "pt": "Os cães podem comer cenouras?"
+    "pt": "Os cães podem comer cenouras?",
+    "nl": "Mogen honden wortels eten?"
   },
   "url_slug": {
     "en": "carrots",
@@ -26,7 +28,8 @@
     "fr": "carottes",
     "es": "zanahorias",
     "it": "carote",
-    "pt": "cenouras"
+    "pt": "cenouras",
+    "nl": "wortels"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui. Les carottes sont sans danger pour les chiens et constituent un en-cas sain et peu calorique, crues ou cuites. Coupez-les d’abord en morceaux de la taille d’une bouchée pour éviter l’étouffement.",
     "es": "Sí. Las zanahorias son seguras para los perros y un tentempié sano y bajo en calorías, crudas o cocidas. Córtalas antes en trozos del tamaño de un bocado para evitar atragantamientos.",
     "it": "Sì. Le carote sono sicure per i cani: uno spuntino sano e poco calorico, crude o cotte. Tagliale prima in pezzetti da un boccone per evitare il soffocamento.",
-    "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar."
+    "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar.",
+    "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -45,7 +49,8 @@
     "fr": "Les carottes sont une excellente source de vitamine A, de potassium et de fibres, et sont riches en bêta-carotène. Croquer des carottes peut aussi contribuer à la santé dentaire de votre chien. Le principal risque est l’étouffement : c’est pourquoi les carottes entières, et même les bâtonnets de carotte, doivent être coupés en morceaux de la taille d’une bouchée.",
     "es": "Las zanahorias son una excelente fuente de vitamina A, potasio y fibra y tienen mucho betacaroteno. Además, masticarlas puede ayudar a mejorar la salud dental de tu perro. El principal riesgo es el atragantamiento, por lo que las zanahorias enteras, e incluso los palitos de zanahoria, deben cortarse en trozos del tamaño de un bocado.",
     "it": "Le carote sono un’ottima fonte di vitamina A, potassio e fibre e sono ricche di betacarotene. Inoltre, masticarle può fare bene ai denti del cane. Il rischio principale è il soffocamento: per questo le carote intere, e perfino i bastoncini di carota, vanno tagliati in pezzetti da un boccone.",
-    "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada."
+    "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada.",
+    "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Demandez à votre vétérinaire quelle quantité de carottes convient à votre chien chaque jour.",
     "es": "Consulta con tu veterinario cuántas zanahorias le convienen a tu perro cada día.",
     "it": "Chiedi al veterinario quante carote al giorno puoi dare al tuo cane.",
-    "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia."
+    "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia.",
+    "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -64,7 +70,8 @@
     "fr": "Lavez et/ou épluchez les carottes, puis coupez les carottes entières, et même les bâtonnets, en morceaux de la taille d’une bouchée. Crues ou cuites, les carottes conviennent.",
     "es": "Lava o pela las zanahorias y luego corta las enteras, e incluso los palitos, en trozos del tamaño de un bocado. Tanto crudas como cocidas están bien.",
     "it": "Lava o sbuccia le carote, poi tagliale in pezzetti da un boccone, anche se sono bastoncini. Vanno bene sia crude sia cotte.",
-    "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas."
+    "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas.",
+    "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -73,7 +80,8 @@
     "fr": "Les carottes croquantes sont un en-cas sain pour le chien ! Un adulte les lave et les coupe d’abord en petits morceaux.",
     "es": "¡Las zanahorias crujientes son un tentempié sano para perros! Un adulto las lava y las corta antes en trocitos.",
     "it": "Le carote croccanti sono uno spuntino sano per i cani! Prima un adulto le lava e le taglia in pezzetti piccoli.",
-    "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos."
+    "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos.",
+    "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Les chiots qui font leurs dents peuvent-ils manger des carottes froides ou congelées ?",
         "es": "¿Pueden los cachorros que están echando los dientes tomar zanahoria fría o congelada?",
         "it": "I cuccioli che mettono i denti possono mangiare carote fredde o congelate?",
-        "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?"
+        "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?",
+        "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -93,7 +102,8 @@
         "fr": "Certains vétérinaires recommandent des carottes froides ou congelées pour les chiots qui font leurs dents, afin de soulager leur inconfort.",
         "es": "Algunos veterinarios recomiendan zanahorias frías o congeladas para los cachorros que están echando los dientes, como forma de aliviar las molestias.",
         "it": "Alcuni veterinari consigliano ai cuccioli che mettono i denti carote fredde o congelate, per alleviare il fastidio.",
-        "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto."
+        "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto.",
+        "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten."
       }
     }
   ],
@@ -180,6 +190,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "12d5a7eaaec6027923db347f8aa7d5bd43177dd9837acdfefe4b484b39cd25be"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6c74ad057d81aac0b75cccd34c84b483730203d1356105d7e91ba4696e295321"
     }
   }
 }
