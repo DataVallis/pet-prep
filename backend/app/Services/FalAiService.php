@@ -769,6 +769,14 @@ class FalAiService
                 .'grey-shaded (silver-grey with black hair tips), a dark muzzle and ears, delicately pencilled spectacles around the eyes, '
                 .'a wedge-shaped foxy head with a small black nose, dark almond eyes, small pointed upright ears, '
                 .'a very bushy tail rolled over the back, alert and lively expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-95: FCI-Standard N° 182 (S712) — pepper and salt with a dark facial mask as the anchor (pure black is the
+            // other standard colour); natural ears and tail, never cropped or docked.
+            BreedType::StandardSchnauzer => 'A lively, alert Standard Schnauzer with a pepper and salt (banded grey) coat and a dark facial mask, '
+                .'harsh, wiry, dense coat with arched bushy eyebrows and a beard, '
+                .'medium sized, strong and stocky, nearly square, '
+                .'strong, long head with a blunt wedge-shaped muzzle, black nose, dark oval eyes, '
+                .'natural uncropped V-shaped ears folding forward, natural undocked sabre-shaped tail, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1860,6 +1868,17 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'long, straight, stand-off double coat with a thick mane',
                 'markings' => 'dark muzzle and ears, pencilled spectacles around the eyes, black nose, never white markings',
+            ],
+            // M5-R10-95: FCI-Standard N° 182 (S712) colours (pepper and salt, pure black; never black and silver, white, brown
+            // or patches).
+            BreedType::StandardSchnauzer => [
+                'color_scheme' => match ($variantIndex) {
+                    0, 1 => 'pepper and salt with a dark facial mask',
+                    2 => 'solid black',
+                },
+                'eye_color' => 'dark',
+                'fur_texture' => 'harsh, wiry, dense coat with bushy eyebrows and a beard',
+                'markings' => 'no white patches, natural uncropped V-shaped ears, natural undocked tail',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

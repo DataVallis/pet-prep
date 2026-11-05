@@ -478,6 +478,7 @@ const SPECIES = [
       { id: 'chow_chow', synonyms: { en: ['Chow', 'Chow-Chow'], sl: ['chow chow', 'čau-čau', 'čau'] } },
       { id: 'old_english_sheepdog', synonyms: { en: ['Bobtail', 'Bob-tail', 'OES', "Shepherd's Dog"], sl: ['bobtail', 'bobtejl', 'staroangleški ovčar bobtail'] } },
       { id: 'keeshond', synonyms: { en: ['Wolfsspitz', 'Wolfspitz', 'German Wolfspitz', 'Keeshonden'], sl: ['volčji špic', 'nemški volčji špic', 'wolfspitz'] } },
+      { id: 'standard_schnauzer', synonyms: { en: ['Schnauzer', 'Mittelschnauzer', 'Wire-Haired Pinscher'], sl: ['srednji snavcer', 'šnavcer', 'mittelschnauzer'] } },
     ],
   },
   {
@@ -2496,6 +2497,30 @@ const DOG_FACTS = {
       ['kneecap_luxation', 'health.patella'],
     ],
   },
+  // M5-R10-95. RKC page (S714): exercise 'Up to 1 hour per day', coat 'Medium', grooming 'More than once a week', lifespan
+  // 'Over 10 years' (+ VCA 12–14 y, S716); FCI 182 (S712) height 45–50 cm and weight 14–20 kg (both sexes). Coren rank 18.
+  // FCI origin Germany (DE). Not exported: shedding (RKC 'Sheds: Yes' conflicts with VCA 'below average' / PetMD
+  // 'minimal'), lifespan.petmd (13–16 y — kept in research), lifespan.mcmillan_2024 (null; 13 y only via Wikipedia, tier C)
+  // / senior_from (derived), health.pulmonic_stenosis and health.haemophilia_a (no register key with website words — kept
+  // in data.json). Eyes = pra_inherited_blindness (no test claim; PetMD lists headings only). No new health key.
+  standard_schnauzer: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than'], ['lifespan.vca', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['heart_muscle_disease', 'health.cardiomyopathy'],
+      ['skin_comedo_allergy', 'health.skin'],
+      ['pra_inherited_blindness', 'health.eyes'],
+      ['hypothyroidism', 'health.hypothyroidism'],
+      ['bladder_stones', 'health.bladder_stones'],
+    ],
+  },
 
 
 };
@@ -2554,6 +2579,7 @@ export const DOG_CARE_TASKS = {
   anatolian_shepherd_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing']],
   old_english_sheepdog: [['groomer_visit', 1, 42, 'proposed_game_parameters.old_english_sheepdog.professional_grooming']],
   keeshond: [['bath', 1, 28, 'keeshond.suitability.vca_bath']],
+  standard_schnauzer: [['nail_trim', 1, 7, 'proposed_game_parameters.standard_schnauzer.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.standard_schnauzer.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.standard_schnauzer.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.standard_schnauzer.professional_grooming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3280,6 +3306,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.keeshond.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.keeshond.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.keeshond.exercise_minutes_senior',
+  },
+  standard_schnauzer: {
+    adult_minutes: ['proposed_game_parameters.standard_schnauzer.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.standard_schnauzer.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.standard_schnauzer.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.standard_schnauzer.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.standard_schnauzer.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.standard_schnauzer.exercise_minutes_senior',
   },
 
 

@@ -768,6 +768,14 @@
 | (approximately 2:3)"; small pointed upright ears; tail rolled over the back. One standard colour (weight 100);
 | `verified => false` like every new breed.
 |
+| Standard Schnauzer (M5-R10-95, docs/research/dog-data standard_schnauzer.appearance): "Medium sized, strong, stocky
+| rather than slim, rough haired." (FCI-Standard N° 182, S712); colours "pepper and salt" — "the aim is a medium shading with
+| evenly distributed, well pigmented pepper colouring." — and "Pure black with black undercoat." (S712; FCI nomenclature S711,
+| RKC standard S713, AKC S718 "Pepper and salt or pure black."); never black and silver (Miniature / Giant only), white,
+| brown or patches. Natural V-shaped drop ears and a natural tail (never cropped or docked). Pepper and salt first with the
+| highest weight (the portrait default; FCI and AKC list it first); weights unsourced → `verified => false`. Colour values
+| and wording reuse the Miniature / Giant Schnauzer blocks.
+|
 | Old English Sheepdog (M5-R10-93, docs/research/dog-data old_english_sheepdog.appearance):
 | "Strong, square-looking dog of great symmetry and overall soundness." (FCI-Standard N° 16, S703); colour "Any shade
 | of grey, grizzle or blue." / "Head, neck, forequarters and under belly to be white with or without markings." /
@@ -4172,6 +4180,39 @@ return [
             'tail' => ['very bushy tail rolled forward over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-95 (docs/research/dog-data/data.json standard_schnauzer.appearance; runbook rules 2026-10-10: standard colours
+    // only — pepper and salt, pure black; natural ears and tail).
+    'standard_schnauzer' => [
+        'display_name' => 'Standard Schnauzer',
+        // Colour frequencies are in no source (standard_schnauzer.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 182 (S712), FCI nomenclature (S711), RKC breed standard (S713), RKC breed page (S714), AKC standard (S718) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S714 "Size: Medium"; S712 "Height at withers : Dogs and bitches: 45 to 50 cm"',
+            'build' => 'S712 "Medium sized, strong, stocky rather than slim, rough haired."',
+            'coat_length' => 'S712 "The coat should be wiry, harsh and dense."; S713 "Medium sized, dark, oval, set forward with arched bushy eyebrows."',
+            'coat_color' => 'S712 "the aim is a medium shading with evenly distributed, well pigmented pepper colouring." / "Pure black with black undercoat."; S718 "Pepper and salt or pure black." (never black and silver, white, brown or patches; weights unsourced)',
+            'head' => 'S712 "Strong, long without markedly protruding occiput."; muzzle "Ending in a blunt wedge."; nose "Well developed nose leather with large nostrils, always black."',
+            'ear_carriage' => 'S712 "Drop ears, set high, V-shaped with inner edges lying close to the cheeks." (never cropped)',
+            'eye_color' => 'S712 "Medium sized, oval, facing forward, dark with lively expression."',
+            'tail' => 'S712 "Natural; a sabre or sickle carriage is sought after." (never docked)',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => [['value' => 'strong, stocky and nearly square', 'weight' => 3], 'sturdily built, robust and sinewy'],
+            'coat_length' => ['harsh, wiry, dense coat with arched bushy eyebrows and a beard'],
+            // Standard colours only (S712, S713, S718); pepper and salt highest → the register portrait. Never black and silver.
+            'coat_color' => [
+                ['value' => 'pepper and salt (banded grey) with a dark facial mask', 'weight' => 3],
+                ['value' => 'solid black', 'weight' => 1],
+            ],
+            'head' => ['strong, long head with a blunt wedge-shaped muzzle and a black nose'],
+            'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
+            'eye_color' => ['dark, oval eyes'],
+            'tail' => ['natural undocked sabre-shaped tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',

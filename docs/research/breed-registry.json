@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "961f956234c91586298686770ba0b6e66e935475ab13830afbc52af7251ac93e"
+      "sha256": "f82089bd4ebfd9eae6cc01cd91cf377d1b2e67b745672bbfd80b3be6c52f6928"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "826449226f70b4d3c6575b910da076865a44c47b6b1f4eaad8cef735de163b8f"
+      "sha256": "26b13fbf9036b83367f748053b50291d76c1ce7f6f6566df48ee857ac3b7a6d5"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "c2dcb807068ce11f6a7d3aba4f423c194d6f751710be862a2ba750669b384dd7"
+      "sha256": "9bc6b12eb49cb6c9753a16fd78dedb9c215271db1aa5155c1dc3f0e468e193fc"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "62af06b43d823b37b0b84e141f7e1d822812d176c32e8952c0612bebfded56ae"
+      "sha256": "859dc7d19f4dde089a65adaee06d0c8752c261e5669a629aa39d06676f49dfb5"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "d18c2d30be4eb6c06320a1159d6f392535cebb1e0fe190a2cbdf9ce3b12e3f52"
+      "sha256": "6ae6de7a05d45e01940dfd9b3d303b3c5a28faee45ea2d6817b29a5e2b4944da"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "5f6679428355fd6340d9f633fc6ef65554bc63620907cf60cada2d436ad2c7c0"
+      "sha256": "c502ad393b552ea9a1315b601f8cf58996be976e469672f66ab63175cb46b20e"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "0df9415214b7d55c4d447ce1b35bff3ed1d7483a0ca14ead2a482a2eceab82e5"
+      "sha256": "5a7675f27e19522bf65c5a0bb703d0f3afb5c373d20b36abeeb5d34771d20e96"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 88,
+      "breed_count": 89,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -53269,6 +53269,623 @@
       ]
     },
     {
+      "id": "standard_schnauzer",
+      "species": "dog",
+      "order": 88,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Standard Schnauzer",
+        "sl": "Srednji šnavcer"
+      },
+      "slug": {
+        "en": "standard-schnauzer",
+        "sl": "srednji-snavcer"
+      },
+      "synonyms": {
+        "en": [
+          "Schnauzer",
+          "Mittelschnauzer",
+          "Wire-Haired Pinscher"
+        ],
+        "sl": [
+          "srednji snavcer",
+          "šnavcer",
+          "mittelschnauzer"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "several_weekly"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              45,
+              50
+            ],
+            "female": [
+              45,
+              50
+            ]
+          },
+          "source_ids": [
+            "S712"
+          ],
+          "ref": "standard_schnauzer.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              14,
+              20
+            ],
+            "female": [
+              14,
+              20
+            ]
+          },
+          "source_ids": [
+            "S712"
+          ],
+          "ref": "standard_schnauzer.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "standard_schnauzer.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S716"
+          ],
+          "ref": "standard_schnauzer.lifespan.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "more_than_once_a_week",
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 18,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "standard_schnauzer.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 182,
+            "group": 2,
+            "section": 1,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S711"
+          ],
+          "ref": "standard_schnauzer.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S715"
+          ],
+          "ref": "standard_schnauzer.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "heart_muscle_disease",
+          "source_ids": [
+            "S714"
+          ],
+          "ref": "standard_schnauzer.health.cardiomyopathy",
+          "confidence": "high"
+        },
+        {
+          "key": "skin_comedo_allergy",
+          "source_ids": [
+            "S715"
+          ],
+          "ref": "standard_schnauzer.health.skin",
+          "confidence": "high"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S717"
+          ],
+          "ref": "standard_schnauzer.health.eyes",
+          "confidence": "medium"
+        },
+        {
+          "key": "hypothyroidism",
+          "source_ids": [
+            "S717"
+          ],
+          "ref": "standard_schnauzer.health.hypothyroidism",
+          "confidence": "medium"
+        },
+        {
+          "key": "bladder_stones",
+          "source_ids": [
+            "S717"
+          ],
+          "ref": "standard_schnauzer.health.bladder_stones",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S717"
+            ],
+            "refs": [
+              "standard_schnauzer.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S715",
+              "S716"
+            ],
+            "refs": [
+              "standard_schnauzer.suitability.pdsa_children",
+              "standard_schnauzer.suitability.vca_children",
+              "standard_schnauzer.behaviour.children"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S716"
+            ],
+            "refs": [
+              "standard_schnauzer.behaviour.mental_stimulation"
+            ]
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S714",
+              "S715"
+            ],
+            "refs": [
+              "standard_schnauzer.suitability.rkc_grooming",
+              "standard_schnauzer.suitability.pdsa_grooming"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 3
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "nail_trim",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "groomer_visit",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 84
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S714"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S714 'Up to 1 hour per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S714"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S714)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 18, Excellent, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.grooming",
+            "basis_source_ids": [
+              "S715"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3 (RKC »More than once a week« brez števila → PDSA »2-3 times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.nail_trimming",
+            "basis_source_ids": [
+              "S717"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every one to two weeks« → spodnja meja, 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.ear_care",
+            "basis_source_ids": [
+              "S717"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one to two weeks« → spodnja meja, 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.bathing",
+            "basis_source_ids": [
+              "S717"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »Monthly« → vsake 4 tedne"
+          },
+          {
+            "ref": "proposed_game_parameters.standard_schnauzer.professional_grooming",
+            "basis_source_ids": [
+              "S717"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »quarterly« → vsake 3 mesece = 12 tednov (84 dni)"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S714",
+          "S715",
+          "S717"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S714"
+            ]
+          },
+          {
+            "key": "dna_dcm",
+            "level": "best_practice",
+            "source_ids": [
+              "S714"
+            ]
+          },
+          {
+            "key": "hip_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S714"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S714"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S711",
+        "S712",
+        "S714",
+        "S715",
+        "S716",
+        "S717",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -58846,6 +59463,48 @@
       "publisher": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
       "title": "Keeshond — dog breed page",
       "url": "https://vcahospitals.com/know-your-pet/dog-breeds/keeshond"
+    },
+    {
+      "id": "S711",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — SCHNAUZER (182)",
+      "url": "https://www.fci.be/en/nomenclature/SCHNAUZER-182.html"
+    },
+    {
+      "id": "S712",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 182 — Schnauzer (English PDF, 18.04.2007/EN)",
+      "url": "https://dev.fci.be/Nomenclature/Standards/182g02-en.pdf"
+    },
+    {
+      "id": "S714",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Schnauzer",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/utility/schnauzer/"
+    },
+    {
+      "id": "S715",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Schnauzer breed information",
+      "url": "https://pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/schnauzer"
+    },
+    {
+      "id": "S716",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
+      "title": "Standard Schnauzer — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/standard-schnauzer"
+    },
+    {
+      "id": "S717",
+      "tier": "B",
+      "publisher": "PetMD — Katie Grzyb, DVM (published Oct. 14, 2022)",
+      "title": "Standard Schnauzer",
+      "url": "https://petmd.com/dog/breeds/standard-schnauzer"
     },
     {
       "id": "C1",
