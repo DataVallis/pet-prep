@@ -1,0 +1,291 @@
+{
+  "country": "MT",
+  "checked": "2026-11-05",
+  "sources": [
+    {
+      "name": "Veterinary Services Directorate - licensed veterinary clinics (register PDF)",
+      "url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "note": "Opened: 35 licensed clinics with addresses; no phone numbers published (only department line +356 2095 3791)."
+    },
+    {
+      "name": "Veterinary Services Directorate - licensed consultancy practices (PDF)",
+      "url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-consultancy-practice.pdf",
+      "note": "Opened: 37 consultancy practices (Mellieha, St Paul's Bay, Qawra, Bugibba, Rabat, Zejtun etc.) with addresses, no phones or websites."
+    },
+    {
+      "name": "Veterinary Surgeons Council - 24/7 Emergency Service",
+      "url": "https://vsc.gov.mt/?p=970",
+      "note": "Opened: freephone 153 ext 22, Servizz.gov. Home page opened too."
+    },
+    {
+      "name": "Veterinary Surgeons Council - After-hours EOI 001/2025",
+      "url": "https://vsc.gov.mt/?p=963",
+      "note": "Opened: rota scheme for nights, Sundays, public holidays across Gozo, North, South; no clinic names."
+    },
+    {
+      "name": "vsd.gov.mt National Veterinary Emergency Service page",
+      "url": "https://vsd.gov.mt/en/?p=6216",
+      "note": "Opened: describes service, no phones or clinic names."
+    },
+    {
+      "name": "Yellow Pages Malta - veterinary clinics",
+      "url": "https://www.yellow.com.mt/veterinary-clinics/",
+      "note": "Opened; used ONLY for phone numbers of clinics that are in the official register (clinics' own sites could not be opened)."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "duty_rota",
+      "name": "National Veterinary Emergency Service helpline (Servizz.gov, freephone 153 ext. 22)",
+      "city": "Valletta",
+      "region": "Malta",
+      "phone": "153 (extension 22)",
+      "emergency_24h": true,
+      "duty": "24/7 emergency helpline: call freephone 153 and choose extension 22; staff assess the case and refer you to suitable veterinary help. Out-of-hours emergency clinics rotate across Gozo, northern and southern Malta, nightly 8pm-8am and Sundays/public holidays.",
+      "small_animals": true,
+      "url": "https://vsc.gov.mt/?p=970",
+      "source_url": "https://vsc.gov.mt/?p=970",
+      "checked": "2026-11-05",
+      "note": "Veterinary Surgeons Council pages vsc.gov.mt/?p=970 and home page opened: heading '24/7 - Emergency Service', freephone 153 ext 22, run by Servizz.gov. Rota hours from EOI page vsc.gov.mt/?p=963 (nights, Sundays, public holidays; Gozo/North/South rotation) and news articles (Malta Independent 2025-07-01, Malta Daily, Maltese Herald: nightly 8pm-8am from 26 Jan 2026). No published rota of which clinic is on duty found; owners are triaged via 153. City set to Valletta as national service (no physical location). Independent check 2026-11-05: vsc.gov.mt/?p=970 re-opened; heading '24/7 - Emergency Service', freephone 153 ext 22 confirmed.",
+      "quote": "24/7 - Emergency Service"
+    },
+    {
+      "kind": "clinic",
+      "name": "National Veterinary Emergency Service - out-of-hours clinic (Reggie Miller Square)",
+      "city": "Fgura",
+      "region": "South",
+      "address": "Reggie Miller Square, Fgura",
+      "phone": "153 (extension 22)",
+      "emergency_24h": false,
+      "duty": "Out-of-hours emergency clinic, 8pm-8am; call the 153 ext. 22 helpline first.",
+      "small_animals": true,
+      "url": "https://vsc.gov.mt/?p=970",
+      "source_url": "https://www.maltatoday.com.mt/news/national/139382/emergency_vet_clinic_to_open_in_fgura",
+      "checked": "2026-11-05",
+      "note": "MaltaToday article (opened) says an emergency vet clinic opens at Reggie Miller Square, Fgura, 8pm-8am; operator and phone not stated; article date unknown, may be superseded by regional rota. Not a 24h clinic. Independent check 2026-11-05: article re-opened; address and 8pm-8am hours confirmed, no phone and no 24h in article; 153 ext 22 comes from vsc.gov.mt/?p=970 (helpline to call first). Register also lists 'The Veterinary Clinic, 7 Wesgha Reggie Miller, Fgura'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinary Emergency transport for small pets (Gozo)",
+      "city": "Victoria",
+      "region": "Gozo",
+      "phone": "153 (extension 22)",
+      "emergency_24h": false,
+      "duty": "Gozo: on Sundays and public holidays a standby transport takes small pets in genuine emergencies to a clinic in Malta; call the national emergency line first.",
+      "small_animals": true,
+      "url": "https://vsc.gov.mt/?p=970",
+      "source_url": "https://www.independent.com.mt/articles/2026-05-11/local-news/Government-introduces-emergency-veterinary-transport-service-for-small-pets-in-Gozo-6736289618",
+      "checked": "2026-11-05",
+      "note": "Malta Independent article (opened, 2026-05-11): standby transport Sundays/public holidays from a marked Gozo site. Location not stated; kept as an info entry, not a clinic. Independent check 2026-11-05: article re-opened; Sundays/public holidays standby transport confirmed, no phone or location in article; 153 ext 22 from vsc.gov.mt/?p=970."
+    },
+    {
+      "kind": "clinic",
+      "name": "St Simon Vet Clinic",
+      "city": "Mosta",
+      "region": "North",
+      "address": "53, Grognet Street, Mosta, MST 3611",
+      "phone": "+356 2143 2280",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Highrise Veterinary Clinic",
+      "city": "Ta' Xbiex",
+      "region": "Central",
+      "address": "Triq L-Imradd, Ta' Xbiex",
+      "phone": "+356 2132 2150",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Aid",
+      "city": "Msida",
+      "region": "Central",
+      "address": "Prof. Oscar Zammit Street, Msida, MSD 1282",
+      "phone": "+356 2783 8838",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Blue Cross Clinic",
+      "city": "Msida",
+      "region": "Central",
+      "address": "Valley Road, Msida",
+      "phone": "+356 2149 2174",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false. Register shows an inconsistent postcode (BKR13) for a Msida address."
+    },
+    {
+      "kind": "clinic",
+      "name": "Qormi Vet Clinic",
+      "city": "Qormi",
+      "region": "Central",
+      "address": "74, Triq San Bastjan, Qormi",
+      "phone": "+356 2148 0480",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Dr Trevor's Clinic Sliema",
+      "city": "Sliema",
+      "region": "Central",
+      "address": "61, High Street, Sliema",
+      "phone": "+356 2755 5234",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Medical Centre",
+      "city": "Attard",
+      "region": "Central",
+      "address": "22, Triq Zaghfran, Attard",
+      "phone": "+356 2010 4020",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Vetcare Animal Clinic",
+      "city": "San Gwann",
+      "region": "Central",
+      "address": "Misrah Lourdes, San Gwann, SGN 2010",
+      "phone": "+356 2138 2936",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "All Animal Clinic",
+      "city": "Tarxien",
+      "region": "South",
+      "address": "6, Triq ir-Raheb, Tarxien",
+      "phone": "+356 2169 3061",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Christa's Pet Clinic",
+      "city": "Tarxien",
+      "region": "South",
+      "address": "62, Triq Gianni Faure, Tarxien",
+      "phone": "+356 7902 1491",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Happy Paws Animal Clinic",
+      "city": "Marsa",
+      "region": "Central",
+      "address": "41, Triq is-Salib tal-Marsa, Marsa",
+      "phone": "+356 2122 7127",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Monark Veterinary Clinic",
+      "city": "Zebbug",
+      "region": "West",
+      "address": "Triq Frangisku Caruana Dingli, Zebbug",
+      "phone": "+356 7980 8909",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Pets and Vets Vet Clinic",
+      "city": "Naxxar",
+      "region": "North",
+      "address": "139, Paul House, 21st September Avenue, Naxxar",
+      "phone": "+356 2180 0806",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "The Veterinary Clinic",
+      "city": "Birkirkara",
+      "region": "Central",
+      "address": "1, Triq Frangisk Scerri c/w Triq Dun Karm, Birkirkara",
+      "phone": "+356 9992 2777",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed clinics (opened) with this address. Clinic's own website not reachable via WebFetch; phone taken from the yellow.com.mt directory listing page (opened)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Galea Veterinary Clinic",
+      "city": "Victoria",
+      "region": "Gozo",
+      "address": "Triq Wied Is-Seqer, Victoria, VCT 2810, Gozo",
+      "phone": "+356 2155 4257",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-clinic.pdf",
+      "checked": "2026-11-05",
+      "note": "Independent check 2026-11-05: name+town confirmed in the vsd.gov.mt clinic register PDF (opened); phone matches yellow.com.mt listing page (opened, aggregator only; clinic's own site not checked). No 24-h claim on the listing, emergency_24h stays false."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Pharm",
+      "city": "Balzan",
+      "region": "Central",
+      "address": "69 Balzan Valley, Balzan",
+      "phone": "+356 2144 9058",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://vsd.gov.mt/wp-content/uploads/2026/05/warranted-veterinarians-licenced-to-run-a-veterinary-consultancy-practice.pdf",
+      "checked": "2026-11-05",
+      "note": "Listed in the Veterinary Services Directorate register of licensed consultancy practices (opened) at 69 Balzan Valley; phone from yellow.com.mt listing page (opened). Own website not reachable."
+    }
+  ],
+  "notes": "No animal poison information line for Malta found (vsd.gov.mt/?p=6028 opened: no poisoning line; advice is to contact a vet / 153 ext 22). No public clinic-by-clinic duty rota found; the 153 ext 22 helpline triages and refers. No clinic page was opened that explicitly says 24 hours, so no clinic is marked 24h; the helpline is marked 24h because the VSC page is headed '24/7 - Emergency Service'. Ta' Qali national animal hospital: MaltaToday says closed since Aug 2023, current status unverified, not listed. Own websites of clinics could not be fetched (WebFetch provenance restriction: only URLs seen in search/fetch results are allowed; clinic sites never appeared) - hence phones come from the yellow.com.mt directory for register-licensed clinics; verify before publishing. Register clinics left out for lack of a reliable phone/url: Best Friends (Tarxien, directory lists Paola number - conflict), Animal Doctors Hamrun (conflicting numbers), The Animal Doctor and Dr William's Vet Surgery (Victoria, Gozo), Dr Trevor's Attard, Pets Vet Clinic Zabbar, St Francis Zurrieq, Healthy Pets/Drs Borg Birkirkara, St Anne's Swieqi, Animal Kingdom Paola, Pet Medical Clinic Qormi, Il-Veterinarju Mosta, Vet 4 Pet Zebbug, QVC Marsaskala, Tat-Targa Naxxar, Vets on Wheels Marsa, My Pet San Gwann, Fgura clinic. Consultancy practices in Mellieha (The Pet Practice, Pet Centre), St Paul's Bay/Qawra/Bugibba (several), Rabat, Zejtun, Burmarrad also have no phone/url. Marsaxlokk and Valletta: no licensed clinic found in either register. Unreachable by provenance: agriculture.gov.mt, animalmedicalcentremalta.com, vetcaremalta.com."
+}
