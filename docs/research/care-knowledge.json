@@ -94456,7 +94456,9 @@
       "phone": "+90 312 229 93 78",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week; phone also on WhatsApp",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; telefon tudi na WhatsAppu"
+      },
       "url": "https://www.westvet.com.tr/",
       "source_url": "https://www.westvet.com.tr/tr/blog/cayyolu-veteriner",
       "checked": "2026-11-05"
@@ -94471,7 +94473,9 @@
       "phone": "+90 312 256 39 40",
       "emergency_24h": true,
       "duty": "Emergency veterinary service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna veterinarska služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.batikentveteriner.com.tr/",
       "source_url": "https://www.batikentveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -94486,7 +94490,9 @@
       "phone": "+90 312 250 50 10",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.humanimal.com.tr/",
       "source_url": "https://www.humanimal.com.tr/ankara-7-gun-24-saat-acik-veteriner/",
       "checked": "2026-11-05"
@@ -94501,7 +94507,9 @@
       "phone": "+90 551 810 80 30",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.starvetveteriner.com/",
       "source_url": "https://www.starvetveteriner.com/",
       "checked": "2026-11-05"
@@ -94516,7 +94524,9 @@
       "phone": "+90 312 315 03 15",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.veterinerankara.com/",
       "source_url": "https://www.veterinerankara.com/",
       "checked": "2026-11-05"
@@ -94531,7 +94541,9 @@
       "phone": "+90 312 481 30 80",
       "emergency_24h": true,
       "duty": "Emergency on-duty service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Dežurna nujna služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://dorukgiller.com/ankara-nobetci-veteriner-klinigi/",
       "source_url": "https://dorukgiller.com/ankara-nobetci-veteriner-klinigi/",
       "checked": "2026-11-05"
@@ -94546,7 +94558,9 @@
       "phone": "+90 312 557 77 33",
       "emergency_24h": true,
       "duty": "Emergency and outpatient service 24 h, 7 days a week; laboratory only on weekday working hours",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna pomoč in ambulanta 24 ur na dan, 7 dni v tednu; laboratorij samo ob delavnikih v rednem delovnem času"
+      },
       "url": "https://hayvanhastanesi.xn--yaamkent-owb.com.tr/",
       "source_url": "https://hayvanhastanesi.xn--yaamkent-owb.com.tr/",
       "checked": "2026-11-05"
@@ -94561,7 +94575,9 @@
       "phone": "+90 507 456 19 31",
       "emergency_24h": true,
       "duty": "Emergency service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.izmirhayvanhastanesi.com.tr/",
       "source_url": "https://www.izmirhayvanhastanesi.com.tr/",
       "checked": "2026-11-05"
@@ -94576,7 +94592,9 @@
       "phone": "+90 232 351 52 53",
       "emergency_24h": true,
       "duty": "Regular hours Mon-Sat 09:00-21:00, Sun 12:00-17:00; emergencies day and night by phone +90 538 694 44 55",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Redni delovni čas pon–sob 9–21, ned 12–17; nujni primeri podnevi in ponoči po telefonu +90 538 694 44 55"
+      },
       "url": "https://www.kiymetveteriner.com/",
       "source_url": "https://www.kiymetveteriner.com/",
       "checked": "2026-11-05"
@@ -94591,7 +94609,9 @@
       "phone": "+90 554 012 20 00",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://vethovenveteriner.com.tr/",
       "source_url": "https://vethovenveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -94606,7 +94626,9 @@
       "phone": "+90 507 008 20 70",
       "emergency_24h": true,
       "duty": "Open 24 h, every day",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan"
+      },
       "url": "https://www.vetsim.com.tr/",
       "source_url": "https://www.vetsim.com.tr/",
       "checked": "2026-11-05"
@@ -94621,7 +94643,9 @@
       "phone": "+90 232 520 25 75",
       "emergency_24h": true,
       "duty": "Emergency service open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba odprta 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.dogavet.net/contact.php",
       "source_url": "https://www.dogavet.net/acil_hekimligi.php",
       "checked": "2026-11-05"
@@ -94636,7 +94660,9 @@
       "phone": "+90 232 463 60 99",
       "emergency_24h": true,
       "duty": "Regular hours Mon-Sat 09:00-19:00; 24 h emergency care for registered patients",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Redni delovni čas pon–sob 9–19; nujna pomoč 24 ur na dan za registrirane paciente"
+      },
       "url": "https://www.alsancakveteriner.com/",
       "source_url": "https://www.alsancakveteriner.com/",
       "checked": "2026-11-05"
@@ -94651,7 +94677,9 @@
       "phone": "+90 553 300 77 35",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-24:00, Sun 10:00-19:00; emergencies without appointment, call first",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 9–24, ned 10–19; nujni primeri brez naročila, najprej pokličite"
+      },
       "url": "https://pityvet.com/tr",
       "source_url": "https://pityvet.com/tr",
       "checked": "2026-11-05"
@@ -94666,7 +94694,9 @@
       "phone": "+90 533 500 37 17",
       "emergency_24h": true,
       "duty": "Open 24 h; emergencies reachable 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan; za nujne primere dosegljivi 7 dni v tednu"
+      },
       "url": "https://www.drfimarine.com/",
       "source_url": "https://www.drfimarine.com/",
       "checked": "2026-11-05"
@@ -94681,7 +94711,9 @@
       "phone": "+90 533 404 50 96",
       "emergency_24h": true,
       "duty": "Round-the-clock service",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Služba 24 ur na dan"
+      },
       "url": "https://www.siriusveteriner.com.tr/",
       "source_url": "https://www.siriusveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -94696,7 +94728,9 @@
       "phone": "+90 252 313 22 99",
       "emergency_24h": true,
       "duty": "Emergency service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba 7 dni v tednu, 24 ur na dan"
+      },
       "url": "https://www.newlifeveteriner.com/",
       "source_url": "https://www.newlifeveteriner.com/",
       "checked": "2026-11-05"
@@ -94711,7 +94745,9 @@
       "phone": "+90 530 850 32 95",
       "emergency_24h": true,
       "duty": "Regular hours 09:00-20:00; emergency service around the clock",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Redni delovni čas 9–20; nujna služba 24 ur na dan"
+      },
       "url": "https://bodrumarvenveterinerklinigi.com.tr/",
       "source_url": "https://bodrumarvenveterinerklinigi.com.tr/",
       "checked": "2026-11-05"
@@ -94726,7 +94762,9 @@
       "phone": "+90 546 838 48 68",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:30-19:30, Sat 09:30-19:00, Sun 10:00-18:00",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–pet 9.30–19.30, sob 9.30–19, ned 10–18"
+      },
       "url": "https://horizonveteriner.com/",
       "source_url": "https://horizonveteriner.com/",
       "checked": "2026-11-05"
@@ -94741,7 +94779,9 @@
       "phone": "+90 541 913 47 48",
       "emergency_24h": true,
       "duty": "On-duty emergency clinic, 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Dežurna nujna ambulanta 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.patipark.com.tr/",
       "source_url": "https://www.patipark.com.tr/blog/fethiye-nobetci-veteriner.html",
       "checked": "2026-11-05"
@@ -94756,7 +94796,9 @@
       "phone": "+90 536 915 73 44",
       "emergency_24h": false,
       "duty": "Emergency service listed; call ahead",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Navedena je nujna služba; vnaprej pokličite"
+      },
       "url": "https://fethiyevetpati.com/",
       "source_url": "https://fethiyevetpati.com/",
       "checked": "2026-11-05"
@@ -94771,7 +94813,9 @@
       "phone": "+90 252 612 08 62",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-19:30, Sun 10:00-19:00; emergencies after hours by phone",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 9–19.30, ned 10–19; nujni primeri zunaj delovnega časa po telefonu"
+      },
       "url": "https://enpativet.com/",
       "source_url": "https://enpativet.com/",
       "checked": "2026-11-05"
@@ -94801,7 +94845,9 @@
       "phone": "+90 532 449 17 48",
       "emergency_24h": false,
       "duty": "Daily 09:00-19:00; call for emergencies",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Vsak dan 9–19; za nujne primere pokličite"
+      },
       "url": "https://www.dalamanveterinerklinigi.com/",
       "source_url": "https://www.dalamanveterinerklinigi.com/",
       "checked": "2026-11-05"
@@ -94816,7 +94862,9 @@
       "phone": "+90 252 502 03 55",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00, Sun 09:00-15:00",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–pet 9–19, ned 9–15"
+      },
       "url": "https://kayavetdatca.com/",
       "source_url": "https://kayavetdatca.com/",
       "checked": "2026-11-05"
@@ -94831,7 +94879,9 @@
       "phone": "+90 252 712 96 97",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-19:00, Sun closed",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 9–19, ned zaprto"
+      },
       "url": "https://datcaveteriner.com/",
       "source_url": "https://datcaveteriner.com/",
       "checked": "2026-11-05"
@@ -94846,7 +94896,9 @@
       "phone": "+90 543 277 76 82",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week, no appointment needed",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, naročanje ni potrebno"
+      },
       "url": "https://www.rotaveteriner.com.tr/",
       "source_url": "https://www.rotaveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -94861,7 +94913,9 @@
       "phone": "+90 538 453 87 02",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week for emergencies",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu za nujne primere"
+      },
       "url": "https://www.pet224.com/",
       "source_url": "https://www.pet224.com/",
       "checked": "2026-11-05"
@@ -94876,7 +94930,9 @@
       "phone": "+90 541 962 66 97",
       "emergency_24h": true,
       "duty": "Veterinary service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Veterinarska služba 7 dni v tednu, 24 ur na dan"
+      },
       "url": "https://petclassveteriner.com/bursa-nilufer-nobetci-veteriner/",
       "source_url": "https://petclassveteriner.com/bursa-nilufer-nobetci-veteriner/",
       "checked": "2026-11-05"
@@ -94891,7 +94947,9 @@
       "phone": "+90 224 294 08 01",
       "emergency_24h": false,
       "duty": "University animal hospital; call to confirm hours",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Univerzitetna bolnišnica za male živali; za delovni čas pokličite in preverite"
+      },
       "url": "https://uludag.edu.tr/hayvanhastanesi/about-us-69221",
       "source_url": "https://uludag.edu.tr/hayvanhastanesi/about-us-69221",
       "checked": "2026-11-05"
@@ -94906,7 +94964,9 @@
       "phone": "+90 533 193 72 84",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week, including holidays",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih"
+      },
       "url": "https://heypati.com.tr/",
       "source_url": "https://heypati.com.tr/adana-acil-veteriner/",
       "checked": "2026-11-05"
@@ -94921,7 +94981,9 @@
       "phone": "+90 533 396 49 30",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week; emergencies without appointment",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu; nujni primeri brez naročila"
+      },
       "url": "https://adanaartemishayvanhastanesi.com/",
       "source_url": "https://adanaartemishayvanhastanesi.com/",
       "checked": "2026-11-05"
@@ -94936,7 +94998,9 @@
       "phone": "+90 505 704 43 01",
       "emergency_24h": true,
       "duty": "Open every day, 7/24; phone also on WhatsApp",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto vsak dan, 24 ur na dan; telefon tudi na WhatsAppu"
+      },
       "url": "https://adanaferahveterinerklinigi.com/",
       "source_url": "https://adanaferahveterinerklinigi.com/nobetci-veteriner-adana/",
       "checked": "2026-11-05"
@@ -94951,7 +95015,9 @@
       "phone": "+90 444 3 738",
       "emergency_24h": true,
       "duty": "Emergency veterinary service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna veterinarska služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.petical.com.tr/",
       "source_url": "https://www.petical.com.tr/hizmetler/acil-servis-7-24/",
       "checked": "2026-11-05"
@@ -94966,7 +95032,9 @@
       "phone": "+90 505 820 17 17",
       "emergency_24h": true,
       "duty": "Duty vet service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Dežurna veterinarska služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.veterinoloji.com/",
       "source_url": "https://www.veterinoloji.com/",
       "checked": "2026-11-05"
@@ -94981,7 +95049,9 @@
       "phone": "+90 546 239 87 28",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.canakkalevetlandvet.com/",
       "source_url": "https://www.canakkalevetlandvet.com/",
       "checked": "2026-11-05"
@@ -94996,7 +95066,9 @@
       "phone": "+90 535 213 34 17",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://ankahayvanhastanesi.com/",
       "source_url": "https://ankahayvanhastanesi.com/",
       "checked": "2026-11-05"
@@ -95011,7 +95083,9 @@
       "phone": "+90 541 736 41 86",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://canakkalepetikoveteriner.com/",
       "source_url": "https://canakkalepetikoveteriner.com/",
       "checked": "2026-11-05"
@@ -95026,7 +95100,9 @@
       "phone": "+90 534 319 01 33",
       "emergency_24h": true,
       "duty": "Emergency intervention 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujni posegi 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.acarveterinerlik.com.tr/",
       "source_url": "https://www.acarveterinerlik.com.tr/",
       "checked": "2026-11-05"
@@ -95040,8 +95116,10 @@
       "address": "Erciyes Siteleri, Barış Manço Parkı yanı, Kocasinan",
       "phone": "+90 352 231 88 04",
       "emergency_24h": false,
-      "duty": "Hours not stated on the page (24-h claim appears only in the page metadata); call to confirm",
-      "duty_i18n": null,
+      "duty": "Hours not stated; call to confirm",
+      "duty_i18n": {
+        "sl": "Delovni čas ni naveden; za potrditev pokličite"
+      },
       "url": "https://isikveterinerlik.com/",
       "source_url": "https://isikveterinerlik.com/",
       "checked": "2026-11-05"
@@ -95056,7 +95134,9 @@
       "phone": "+90 534 344 63 67",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week, including holidays",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih"
+      },
       "url": "https://www.vetpet.com.tr/gaziantep-veteriner/",
       "source_url": "https://www.vetpet.com.tr/gaziantep-veteriner/",
       "checked": "2026-11-05"
@@ -95071,7 +95151,9 @@
       "phone": "+90 542 773 54 91",
       "emergency_24h": true,
       "duty": "Emergency service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba 7 dni v tednu, 24 ur na dan"
+      },
       "url": "https://www.petkingveteriner.com/",
       "source_url": "https://www.petkingveteriner.com/",
       "checked": "2026-11-05"
@@ -95086,7 +95168,9 @@
       "phone": "+90 539 744 74 70",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-21:00, Sun 10:00-21:00; emergency phone line around the clock",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 9–21, ned 10–21; telefon za nujne primere 24 ur na dan"
+      },
       "url": "https://www.dogtorveteriner.com/",
       "source_url": "https://www.dogtorveteriner.com/",
       "checked": "2026-11-05"
@@ -95101,7 +95185,9 @@
       "phone": "+90 544 290 94 55",
       "emergency_24h": false,
       "duty": "Mon-Sat 10:00-19:00, Sun closed; call before coming in emergencies",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 10–19, ned zaprto; v nujnih primerih pokličite, preden pridete"
+      },
       "url": "https://www.canakbasveteriner.com/iletisim",
       "source_url": "https://www.canakbasveteriner.com/iletisim",
       "checked": "2026-11-05"
@@ -95116,7 +95202,9 @@
       "phone": "+90 540 838 26 26",
       "emergency_24h": true,
       "duty": "Regular hours weekdays 09:30-19:00; emergency service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Redni delovni čas ob delavnikih 9.30–19; nujna služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://odunpazariveteriner.com.tr/",
       "source_url": "https://odunpazariveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -95131,7 +95219,9 @@
       "phone": "+90 222 234 96 96",
       "emergency_24h": false,
       "duty": "Mon-Sat 09:00-21:00; emergency clinic, call ahead",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 9–21; nujna ambulanta, vnaprej pokličite"
+      },
       "url": "https://www.sayinveteriner.com/",
       "source_url": "https://www.sayinveteriner.com/",
       "checked": "2026-11-05"
@@ -95146,7 +95236,9 @@
       "phone": "+90 544 286 19 71",
       "emergency_24h": false,
       "duty": "Mon-Sat 10:00-22:00, Sun 12:00-19:00",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Pon–sob 10–22, ned 12–19"
+      },
       "url": "https://melodimveteriner.com/tepebasi-nobetci-veterinerler/",
       "source_url": "https://melodimveteriner.com/tepebasi-nobetci-veterinerler/",
       "checked": "2026-11-05"
@@ -95161,7 +95253,9 @@
       "phone": "+90 533 502 47 24",
       "emergency_24h": true,
       "duty": "Emergency service open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba odprta 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://trakyahayvanhastanesi.org/",
       "source_url": "https://trakyahayvanhastanesi.org/",
       "checked": "2026-11-05"
@@ -95176,7 +95270,9 @@
       "phone": "+90 543 112 59 59",
       "emergency_24h": true,
       "duty": "Service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Služba 7 dni v tednu, 24 ur na dan"
+      },
       "url": "https://www.vivaveteriner.com/",
       "source_url": "https://www.vivaveteriner.com/",
       "checked": "2026-11-05"
@@ -95191,7 +95287,9 @@
       "phone": "+90 542 530 31 33",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.cerkezkoyveteriner.com.tr/",
       "source_url": "https://www.cerkezkoyveteriner.com.tr/",
       "checked": "2026-11-05"
@@ -95206,7 +95304,9 @@
       "phone": "+90 262 323 90 66",
       "emergency_24h": true,
       "duty": "Emergency service 7 days a week, 24 h",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba 7 dni v tednu, 24 ur na dan"
+      },
       "url": "https://marmaraveterinerlik.com/",
       "source_url": "https://marmaraveterinerlik.com/",
       "checked": "2026-11-05"
@@ -95221,7 +95321,9 @@
       "phone": "+90 262 503 04 58",
       "emergency_24h": true,
       "duty": "Open 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://ventusvet.com/sayfa/gebze-nobetci-veteriner",
       "source_url": "https://ventusvet.com/sayfa/gebze-nobetci-veteriner",
       "checked": "2026-11-05"
@@ -95235,8 +95337,10 @@
       "address": "Kadıköy Mah. Atatürk Bulvarı, Atatürk Ortaokulu karşısı, İzmit",
       "phone": "+90 544 938 66 73",
       "emergency_24h": false,
-      "duty": "Mon-Sat 09:00-20:00, Sun 09:00-19:00; says emergency 7/24, call ahead",
-      "duty_i18n": null,
+      "duty": "Mon-Sat 09:00-20:00, Sun 09:00-19:00; emergency care advertised 24/7, call ahead",
+      "duty_i18n": {
+        "sl": "pon–sob 9–20, ned 9–19; nujna pomoč se oglašuje 24 ur na dan, 7 dni v tednu; pokličite vnaprej"
+      },
       "url": "https://izmitacilveteriner.com/",
       "source_url": "https://izmitacilveteriner.com/",
       "checked": "2026-11-05"
@@ -95251,7 +95355,9 @@
       "phone": "+90 530 959 69 20",
       "emergency_24h": true,
       "duty": "Emergency veterinary service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna veterinarska služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://denizlimerkezveteriner.com/",
       "source_url": "https://denizlimerkezveteriner.com/",
       "checked": "2026-11-05"
@@ -95266,7 +95372,9 @@
       "phone": "+90 506 771 23 12",
       "emergency_24h": true,
       "duty": "Emergency service 24 h, 7 days a week",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, 7 dni v tednu"
+      },
       "url": "https://www.vet20.com/",
       "source_url": "https://www.vet20.com/",
       "checked": "2026-11-05"
@@ -95281,7 +95389,9 @@
       "phone": "+90 272 218 28 34",
       "emergency_24h": true,
       "duty": "University animal hospital, open 24 h; emergency clinic 7 days a week, patients admitted by urgency",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Univerzitetna bolnišnica za male živali, odprta 24 ur na dan; nujna ambulanta 7 dni v tednu, pacienti se sprejemajo po nujnosti"
+      },
       "url": "https://hayvanhastanesi.aku.edu.tr/",
       "source_url": "https://hayvanhastanesi.aku.edu.tr/",
       "checked": "2026-11-05"
@@ -95296,7 +95406,9 @@
       "phone": "+90 546 866 55 03",
       "emergency_24h": false,
       "duty": "Weekdays 09:00-19:00, weekends 10:00-18:00",
-      "duty_i18n": null,
+      "duty_i18n": {
+        "sl": "Ob delavnikih 9–19, ob koncih tedna 10–18"
+      },
       "url": "https://hatayaslanveteriner.kolay.vet/",
       "source_url": "https://hatayaslanveteriner.kolay.vet/",
       "checked": "2026-11-05"
