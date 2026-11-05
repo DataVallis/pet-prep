@@ -13,7 +13,8 @@
     "pl": "Kalafior",
     "cs": "Květák",
     "hr": "Cvjetača",
-    "sv": "Blomkål"
+    "sv": "Blomkål",
+    "da": "Blomkål"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść kalafior?",
     "cs": "Mohou kočky jíst květák?",
     "hr": "Smiju li mačke jesti cvjetaču?",
-    "sv": "Får katter äta blomkål?"
+    "sv": "Får katter äta blomkål?",
+    "da": "Må katte spise blomkål?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -41,7 +43,8 @@
     "pl": "kalafior",
     "cs": "kvetak",
     "hr": "cvjetaca",
-    "sv": "blomkal"
+    "sv": "blomkal",
+    "da": "blomkal"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, od czasu do czasu mały kawałek ugotowanego kalafiora bez dodatków jest w porządku. RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów, które w umiarkowanych ilościach nadają się dla kotów i psów.",
     "cs": "Ano, malý kousek tepelně upraveného květáku bez dodatků je jako občasný pamlsek v pořádku. RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny vhodné pro kočky i psy s mírou.",
     "hr": "Da, mali komadić termički obrađene cvjetače bez dodataka u redu je kao povremena poslastica. RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama.",
-    "sv": "Ja, en liten bit kokt blomkål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt blomkål, skuren i små bitar, bland maten som passar katter och hundar med måtta."
+    "sv": "Ja, en liten bit kokt blomkål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt blomkål, skuren i små bitar, bland maten som passar katter och hundar med måtta.",
+    "da": "Ja, et lille stykke kogt blomkål uden tilsætninger er fint som godbid af og til. RSPCA har kogt blomkål skåret i små stykker på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -70,7 +74,8 @@
     "pl": "RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Cats Protection radzi podawać warzywa bez masła, soli i przypraw. Koty nie potrzebują warzyw, smakołyków powinno być mało, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny bezpečné pro domácí zvířata, vhodné pro kočky i psy s mírou. Cats Protection doporučuje zeleninu bez másla, soli a koření. Kočky zeleninu nepotřebují, pamlsků má být málo a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, ubraja među hranu sigurnu za ljubimce, prikladnu za mačke i pse u umjerenim količinama. Cats Protection savjetuje povrće bez maslaca, soli i začina. Mačkama povrće nije potrebno, poslastica ne bi smjelo biti mnogo, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
-    "sv": "RSPCA nämner kokt blomkål, skuren i små bitar, bland husdjurssäker mat som passar katter och hundar med måtta. Cats Protection rekommenderar grönsaker utan smör, salt eller kryddor. Katter behöver inte grönsaker, godbitar ska ges sparsamt och allt växtmaterial kan ge kräkningar eller orolig mage."
+    "sv": "RSPCA nämner kokt blomkål, skuren i små bitar, bland husdjurssäker mat som passar katter och hundar med måtta. Cats Protection rekommenderar grönsaker utan smör, salt eller kryddor. Katter behöver inte grönsaker, godbitar ska ges sparsamt och allt växtmaterial kan ge kräkningar eller orolig mage.",
+    "da": "RSPCA har kogt blomkål skåret i små stykker på sin liste over sikre fødevarer, der i moderate mængder egner sig til både katte og hunde. Cats Protection anbefaler grøntsager uden smør, salt eller krydderier. Katte har ikke brug for grøntsager, godbidder bør begrænses, og planteføde generelt kan give opkast eller ondt i maven."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -99,7 +105,8 @@
     "pl": "Ugotowany i pokrojony na małe kawałki, bez masła, soli i przypraw.",
     "cs": "Květák tepelně upravený a nakrájený na malé kousky, bez másla, soli a koření.",
     "hr": "Termički obrađena i narezana na male komadiće, bez maslaca, soli i začina.",
-    "sv": "Kokt och skuren i små bitar, utan smör, salt eller kryddor."
+    "sv": "Kokt och skuren i små bitar, utan smör, salt eller kryddor.",
+    "da": "Kogt og skåret i små stykker, uden smør, salt eller krydderier."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -113,7 +120,8 @@
     "pl": "Małym kawałkiem ugotowanego kalafiora można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Kousek uvařeného květáku může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
     "hr": "Komadić kuhane cvjetače mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-    "sv": "En liten bit kokt blomkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+    "sv": "En liten bit kokt blomkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+    "da": "Et lille stykke kogt blomkål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
-        "sv": "Behöver katter grönsaker?"
+        "sv": "Behöver katter grönsaker?",
+        "da": "Har katte brug for grøntsager?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -143,7 +152,8 @@
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
       }
     }
   ],
@@ -248,6 +258,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "501c7312608b0ce960ab551ca528501c7ad0bff6be42cdeedc3fb0f094b53e15"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f35b2fa69ac72659521ec16b29921f48c9da565cdafdebbd1223339ee3e58b14"
     }
   }
 }

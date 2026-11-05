@@ -13,7 +13,8 @@
     "pl": "Fasolka szparagowa",
     "cs": "Zelené fazolky",
     "hr": "Zelene mahune",
-    "sv": "Gröna bönor"
+    "sv": "Gröna bönor",
+    "da": "Grønne bønner"
   },
   "question": {
     "en": "Can dogs eat green beans?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść fasolkę szparagową?",
     "cs": "Mohou psi jíst zelené fazolky?",
     "hr": "Smiju li psi jesti zelene mahune?",
-    "sv": "Får hundar äta gröna bönor?"
+    "sv": "Får hundar äta gröna bönor?",
+    "da": "Må hunde spise grønne bønner?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -41,7 +43,8 @@
     "pl": "fasolka-szparagowa",
     "cs": "zelene-fazolky",
     "hr": "zelene-mahune",
-    "sv": "grona-bonor"
+    "sv": "grona-bonor",
+    "da": "gronne-bonner"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak. Fasolka szparagowa bez dodatków, surowa lub gotowana, jest dla większości psów bezpieczna w rozsądnych ilościach – to niskokaloryczny smakołyk. Nigdy nie dawaj fasolki z dodatkiem soli, masła, czosnku ani innych przypraw.",
     "cs": "Ano. Zelené fazolky bez dodatků, syrové i tepelně upravené, jsou pro většinu psů s mírou bezpečné a jsou nízkokalorickým pamlskem. Nikdy nedávejte zelené fazolky s přidanou solí, máslem, česnekem nebo jiným kořením.",
     "hr": "Da. Zelene mahune bez dodataka, sirove ili termički obrađene, sigurne su za većinu pasa u umjerenim količinama i poslastica su s malo kalorija. Nikad ne daj zelene mahune s dodanom soli, maslacem, češnjakom ili drugim začinima.",
-    "sv": "Ja. Gröna bönor utan tillsatser, råa eller kokta, är säkra för de flesta hundar med måtta och ger en kalorisnål godbit. Ge aldrig gröna bönor med tillsatt salt, smör, vitlök eller andra kryddor."
+    "sv": "Ja. Gröna bönor utan tillsatser, råa eller kokta, är säkra för de flesta hundar med måtta och ger en kalorisnål godbit. Ge aldrig gröna bönor med tillsatt salt, smör, vitlök eller andra kryddor.",
+    "da": "Ja. Grønne bønner uden tilsætninger, rå eller kogte, er ufarlige for de fleste hunde i moderate mængder og en godbid med få kalorier. Giv aldrig grønne bønner med tilsat salt, smør, hvidløg eller andre krydderier."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -70,7 +74,8 @@
     "pl": "Fasolka szparagowa dostarcza witamin, składników mineralnych i błonnika, a ma mało kalorii; dodatkowa objętość i błonnik pomagają psu poczuć się najedzonym przy niewielu kaloriach. Wiele fasolek z puszki ma dużo dodanej soli, a fasolka przyrządzana według typowych przepisów dla ludzi nie jest bezpieczna dla psów.",
     "cs": "Zelené fazolky obsahují vitaminy, minerály a vlákninu a mají málo kalorií; díky objemu a vláknině se pes cítí sytý, aniž by dostal mnoho kalorií. Mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli a běžné recepty na zelené fazolky pro lidi nejsou pro psy bezpečné.",
     "hr": "Zelene mahune sadrže vitamine, minerale i vlakna te imaju malo kalorija; dodatni volumen i vlakna pomažu psu da se osjeća sit, a da ne unese mnogo kalorija. Mnoge zelene mahune iz konzerve sadrže mnogo dodane soli, a uobičajena jela od zelenih mahuna za ljude nisu sigurna za pse.",
-    "sv": "Gröna bönor innehåller vitaminer, mineraler och fibrer och är kalorisnåla; volymen och fibrerna hjälper hunden att känna sig mätt utan att tillföra många kalorier. Många gröna bönor på burk innehåller mycket tillsatt salt, och vanliga recept på gröna bönor för människor passar inte hundar."
+    "sv": "Gröna bönor innehåller vitaminer, mineraler och fibrer och är kalorisnåla; volymen och fibrerna hjälper hunden att känna sig mätt utan att tillföra många kalorier. Många gröna bönor på burk innehåller mycket tillsatt salt, och vanliga recept på gröna bönor för människor passar inte hundar.",
+    "da": "Grønne bønner indeholder vitaminer, mineraler og fibre og har få kalorier. Volumen og fibrene gør at hunden føler sig mæt uden at få mange kalorier. Mange grønne bønner på dåse indeholder store mængder tilsat salt, og almindelige opskrifter med grønne bønner til mennesker er ikke ufarlige for hunde."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Zapytaj weterynarza, zanim dasz psu fasolkę szparagową. Nigdy nie podawaj fasolki ugotowanej z czosnkiem ani z solą czosnkową.",
     "cs": "Než psovi zelené fazolky dáte, zeptejte se veterináře. Nikdy nedávejte zelené fazolky vařené s česnekem nebo česnekovou solí.",
     "hr": "Prije nego što psu daš zelene mahune, pitaj veterinara. Nikad ne daj zelene mahune kuhane s češnjakom ili solju od češnjaka.",
-    "sv": "Fråga din veterinär innan du ger hunden gröna bönor. Ge aldrig gröna bönor som har tillagats med vitlök eller vitlökssalt."
+    "sv": "Fråga din veterinär innan du ger hunden gröna bönor. Ge aldrig gröna bönor som har tillagats med vitlök eller vitlökssalt.",
+    "da": "Spørg din dyrlæge før du giver hunden grønne bønner. Giv aldrig grønne bønner, der er tilberedt med hvidløg eller hvidløgssalt."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -99,7 +105,8 @@
     "pl": "Podawaj ją surową, ugotowaną w wodzie lub na parze, ale zawsze bez dodatków. Unikaj fasolki z puszki oraz przygotowanej z masłem, czosnkiem, solą czosnkową lub innymi przyprawami.",
     "cs": "Podávejte je syrové, vařené ve vodě nebo napařené, ale vždy bez dodatků. Vyhněte se konzervovaným zeleným fazolkám a těm, které jsou připravené s máslem, česnekem, česnekovou solí nebo jiným kořením.",
     "hr": "Daj ih sirove, kuhane u vodi ili na pari, ali neka ostanu bez dodataka. Izbjegavaj zelene mahune iz konzerve i sve pripremljene s maslacem, češnjakom, solju od češnjaka ili drugim začinima.",
-    "sv": "Servera dem råa, kokta i vatten eller ångade, men utan tillsatser. Undvik gröna bönor på burk och bönor som har tillagats med smör, vitlök, vitlökssalt eller andra kryddor."
+    "sv": "Servera dem råa, kokta i vatten eller ångade, men utan tillsatser. Undvik gröna bönor på burk och bönor som har tillagats med smör, vitlök, vitlökssalt eller andra kryddor.",
+    "da": "Server dem rå, kogt i vand eller dampet, men uden tilsætninger. Undgå grønne bønner på dåse og bønner tilberedt med smør, hvidløg, hvidløgssalt eller andre krydderier."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -113,7 +120,8 @@
     "pl": "Zwykła fasolka szparagowa to chrupiący smakołyk dla psa. Fasolka ugotowana z czosnkiem lub masłem nie jest dla psów.",
     "cs": "Zelené fazolky bez dodatků jsou křupavý pamlsek pro psy. Fazolky vařené s česnekem nebo máslem psům nepatří.",
     "hr": "Zelene mahune bez dodataka hrskava su poslastica za pse. Zelene mahune kuhane s češnjakom ili maslacem nisu za pse.",
-    "sv": "Gröna bönor utan tillsatser är en knaprig hundgodbit. Bönor som har tillagats med vitlök eller smör passar inte hundar."
+    "sv": "Gröna bönor utan tillsatser är en knaprig hundgodbit. Bönor som har tillagats med vitlök eller smör passar inte hundar.",
+    "da": "Grønne bønner uden tilsætninger er en sprød godbid til hunde. Bønner kogt med hvidløg eller smør er ikke til hunde."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść fasolkę szparagową z puszki?",
         "cs": "Mohou psi jíst konzervované zelené fazolky?",
         "hr": "Smiju li psi jesti zelene mahune iz konzerve?",
-        "sv": "Får hundar äta gröna bönor på burk?"
+        "sv": "Får hundar äta gröna bönor på burk?",
+        "da": "Må hunde spise grønne bønner på dåse?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -143,7 +152,8 @@
         "pl": "Najlepiej jej unikać, bo wiele fasolek z puszki ma dużo dodanej soli.",
         "cs": "Raději je nedávejte, protože mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli.",
         "hr": "Najbolje ih je izbjegavati, jer mnoge zelene mahune iz konzerve sadrže mnogo dodane soli.",
-        "sv": "Det är bäst att undvika dem, eftersom många gröna bönor på burk innehåller mycket tillsatt salt."
+        "sv": "Det är bäst att undvika dem, eftersom många gröna bönor på burk innehåller mycket tillsatt salt.",
+        "da": "Det er bedst at undgå dem, fordi mange grønne bønner på dåse indeholder store mængder tilsat salt."
       }
     }
   ],
@@ -271,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "36e045f43bb456e71690dabc59226406751224e740b33a354ef0b0bbf7d5a479"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94d287be2920c304d6e386e9643d3552a8456c57cb85738de070d8e07fd2ced1"
     }
   }
 }

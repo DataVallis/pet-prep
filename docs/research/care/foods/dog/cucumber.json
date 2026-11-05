@@ -13,7 +13,8 @@
     "pl": "Ogórek",
     "cs": "Okurka",
     "hr": "Krastavac",
-    "sv": "Gurka"
+    "sv": "Gurka",
+    "da": "Agurk"
   },
   "question": {
     "en": "Can dogs eat cucumber?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść ogórek?",
     "cs": "Mohou psi jíst okurku?",
     "hr": "Smiju li psi jesti krastavac?",
-    "sv": "Får hundar äta gurka?"
+    "sv": "Får hundar äta gurka?",
+    "da": "Må hunde spise agurk?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -41,7 +43,8 @@
     "pl": "ogorek",
     "cs": "okurka",
     "hr": "krastavac",
-    "sv": "gurka"
+    "sv": "gurka",
+    "da": "agurk"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak. Ogórki są dla psów całkowicie bezpieczne – to niskokaloryczna, chrupiąca przekąska. Podawaj je bez dodatków, umyte i pokrojone na małe kawałki, wprowadzaj stopniowo i nigdy nie dawaj ogórków kiszonych ani konserwowych.",
     "cs": "Ano. Okurky jsou pro psy naprosto bezpečné a jsou nízkokalorickým, křupavým pamlskem. Podávejte je bez dodatků, umyté a nakrájené na malé kousky, zařazujte je do jídelníčku postupně a nikdy nedávejte nakládané okurky.",
     "hr": "Da. Krastavci su potpuno sigurni za pse i hrskava su užina s malo kalorija. Daj ih bez dodataka, oprane i narezane na male komadiće, uvodi ih postupno i nikad ne daj kisele krastavce.",
-    "sv": "Ja. Gurka är helt säker för hundar och ett kalorisnålt, knaprigt mellanmål. Servera den utan tillsatser, tvättad och skuren i små bitar, introducera den gradvis och ge aldrig inlagd gurka."
+    "sv": "Ja. Gurka är helt säker för hundar och ett kalorisnålt, knaprigt mellanmål. Servera den utan tillsatser, tvättad och skuren i små bitar, introducera den gradvis och ge aldrig inlagd gurka.",
+    "da": "Ja. Agurker er helt ufarlige for hunde og en sprød snack med få kalorier. Server dem uden tilsætninger, vasket og skåret i små stykker, vænn hunden langsomt til dem, og giv aldrig syltede agurker."
   },
   "why": {
     "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
@@ -70,7 +74,8 @@
     "pl": "Ogórki mają mało kalorii, bardzo mało sodu, nie zawierają tłuszczu i składają się głównie z wody, więc są szczególnie dobre dla psów, które mają schudnąć. Warto uważać na dwie rzeczy: przejedzenie, które może rozstroić żołądek, i zadławienie, zwłaszcza u małych psów albo psów jedzących łapczywie.",
     "cs": "Okurky mají málo kalorií, velmi málo sodíku, neobsahují tuk a mají vysoký obsah vody, proto jsou zvlášť vhodné pro psy, kteří potřebují zhubnout. Rizika jsou dvě: přejedení, které může podráždit žaludek, a dušení, zejména u menších psů nebo psů, kteří hltají.",
     "hr": "Krastavci imaju malo kalorija, vrlo malo natrija, ne sadrže masti i imaju mnogo vode, pa su osobito dobri za pse koji moraju smršaviti. Dva su glavna problema prejedanje, koje može nadražiti želudac, i gušenje, osobito kod manjih pasa ili pasa koji jedu brzo.",
-    "sv": "Gurka är kalorisnål, innehåller mycket lite natrium och inget fett och har ett högt vatteninnehåll, så den passar särskilt bra för hundar som behöver gå ner i vikt. De två största riskerna är att hunden äter för mycket, vilket kan ge orolig mage, och kvävning, särskilt hos små hundar och hundar som äter snabbt."
+    "sv": "Gurka är kalorisnål, innehåller mycket lite natrium och inget fett och har ett högt vatteninnehåll, så den passar särskilt bra för hundar som behöver gå ner i vikt. De två största riskerna är att hunden äter för mycket, vilket kan ge orolig mage, och kvävning, särskilt hos små hundar och hundar som äter snabbt.",
+    "da": "Agurker har få kalorier, meget lidt natrium og intet fedt, og de har et højt vandindhold, så de er især gode til hunde, der skal tabe sig. De to største risici er, at hunden spiser for meget, hvilket kan give ondt i maven, og at stykkerne sætter sig fast i halsen, især hos mindre hunde eller hunde der spiser hurtigt."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Wprowadzaj ogórek stopniowo i obserwuj psa, gdy próbuje czegoś nowego. Zbyt duża porcja albo zbyt szybkie wprowadzenie ogórka do diety może wywołać łagodny rozstrój żołądka.",
     "cs": "Okurku zařazujte do jídelníčku postupně a psa při zkoušení nových potravin sledujte. Příliš velké množství nebo příliš rychlé zařazení může způsobit mírné podráždění žaludku.",
     "hr": "Krastavac uvodi postupno i pazi na psa kad proba nešto novo. Ako ga daš previše ili ga uvedeš prebrzo, može doći do blagih želučanih tegoba.",
-    "sv": "Introducera gurkan gradvis och håll koll på hunden när den får prova något nytt. Om du ger för mycket, eller introducerar den för snabbt, kan hunden få lindriga magbesvär."
+    "sv": "Introducera gurkan gradvis och håll koll på hunden när den får prova något nytt. Om du ger för mycket, eller introducerar den för snabbt, kan hunden få lindriga magbesvär.",
+    "da": "Vænn hunden langsomt til agurk, og hold øje med den, når den prøver noget nyt. Hvis du giver for meget eller for hurtigt, kan hunden få lidt ondt i maven."
   },
   "serving": {
     "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
@@ -99,7 +105,8 @@
     "pl": "Dokładnie umyj ogórek i pokrój go na małe kawałki, które pies łatwo pogryzie – dopasuj je do jego wielkości i do tego, jak gryzie. Nie dawaj całego ogórka. Tylko ogórek bez żadnych dodatków.",
     "cs": "Okurku důkladně omyjte a nakrájejte na malé kousky, které pes snadno zvládne, podle jeho velikosti a způsobu žvýkání; celou okurku nedávejte. Jen okurky bez dodatků.",
     "hr": "Temeljito ga operi i nareži na male komade, prilagođene veličini psa i načinu na koji žvače; ne daj cijeli krastavac. Samo krastavci bez dodataka.",
-    "sv": "Tvätta noga och skär i små bitar som passar hundens storlek och sätt att tugga; ge inte en hel gurka. Bara gurka utan tillsatser."
+    "sv": "Tvätta noga och skär i små bitar som passar hundens storlek och sätt att tugga; ge inte en hel gurka. Bara gurka utan tillsatser.",
+    "da": "Vask agurken grundigt, og skær den i små stykker, der passer til hundens størrelse og måde at tygge på; giv ikke en hel agurk. Kun agurk uden tilsætninger."
   },
   "child": {
     "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
@@ -113,7 +120,8 @@
     "pl": "Psy mogą schrupać kilka kawałków ogórka. Dorosły najpierw myje ogórek i kroi go na małe kawałki.",
     "cs": "Psi si můžou pochutnat na pár kouscích okurky. Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
     "hr": "Psi smiju pojesti nekoliko komadića krastavca. Odrasla osoba krastavac opere i prvo ga nareže na sitne komadiće.",
-    "sv": "Hundar kan knapra på några gurkbitar. En vuxen tvättar gurkan och skär den i små bitar först."
+    "sv": "Hundar kan knapra på några gurkbitar. En vuxen tvättar gurkan och skär den i små bitar först.",
+    "da": "Hunde kan gnaske nogle få stykker agurk. En voksen vasker agurken og skærer den først i små stykker."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść ogórki kiszone?",
         "cs": "Mohou psi jíst nakládané okurky?",
         "hr": "Smiju li psi jesti kisele krastavce?",
-        "sv": "Får hundar äta inlagd gurka?"
+        "sv": "Får hundar äta inlagd gurka?",
+        "da": "Må hunde spise syltede agurker?"
       },
       "a": {
         "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
@@ -143,7 +152,8 @@
         "pl": "Nie. Nie podawaj psu ogórków kiszonych ani konserwowych, bo zwykle zawierają sól, przyprawy i inne dodatki.",
         "cs": "Ne. Nakládané okurky psovi nedávejte, protože obvykle obsahují přidanou sůl, koření a další přísady.",
         "hr": "Ne. Psu ne daj kisele krastavce, jer obično sadrže dodanu sol, začine i druge sastojke.",
-        "sv": "Nej. Ge inte hunden inlagd gurka, eftersom den oftast innehåller tillsatt salt, kryddor och andra ingredienser."
+        "sv": "Nej. Ge inte hunden inlagd gurka, eftersom den oftast innehåller tillsatt salt, kryddor och andra ingredienser.",
+        "da": "Nej. Undgå at give hunden syltede agurker, da de som regel indeholder tilsat salt, krydderier og andre ingredienser."
       }
     }
   ],
@@ -271,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4f17b82b3dae41ddd7c4dd2db762b56f88e6a92242a6bfa0d02f3fb69d931d02"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d8619a19cb3d63752dc35c533404616eed7ed152e072a93d277e50adeff77429"
     }
   }
 }
