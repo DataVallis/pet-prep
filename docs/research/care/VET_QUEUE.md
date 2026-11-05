@@ -103,7 +103,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [!] US United States — Texas — 0 entries, 2026-11-05: WebFetch refused every URL (PROVENANCE_REQUIRED: vetmed.tamu.edu, tvma.org); no page opened, nothing invented; needs a manual run with the URLs supplied
 - [!] US United States — other states — 0 entries, 2026-11-05: WebFetch refused every URL (PROVENANCE_REQUIRED: petpoisonhelpline.com, aspca.org, vet.osu.edu, vet.cornell.edu, vetmed.illinois.edu); no page opened, nothing invented; needs a manual run with the URLs supplied
 - [~] CA Canada — Ontario — 29 entries, 12 × 24 h (10 hospitals in Toronto/GTA, Ottawa, London, Hamilton; 2 poison lines ASPCA APCC and Pet Poison Helpline), no duty rota, check: 16 checked, 0 fixed, 0 removed, 2026-11-05 — left: OVC Guelph, Windsor, Kingston, Sudbury, Thunder Bay, Niagara Falls, Collingwood/Blue Mountains, Waterloo/Niagara own-site 24-h confirmation; ovma.com, ovchsc.ca, ctvrc.ca, vectoronto.com unreachable (see `vets/CA.json` notes)
-- [ ] CA Canada — Quebec
+- [~] CA Canada — Quebec — 15 entries, 8 × 24 h (Vet et nous Montréal/Laval/Rive-Sud, CENTREDMVET Lachine/Saint-Hubert/Blainville, Daubigny Québec, CHUV Saint-Hyacinthe), no duty rota, no poison line, check: 11 checked, 0 fixed, 0 removed, 2026-11-05 — left: Gatineau, Sherbrooke, Laurentides, Gaspé, Saguenay, other Vet et nous sites, OMVQ 1-844-ANIMAUX line (omvq.qc.ca refused; see `vets/CA.json` notes)
 - [ ] CA Canada — British Columbia
 - [ ] CA Canada — other provinces
 - [ ] AU Australia — New South Wales
