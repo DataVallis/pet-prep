@@ -67,8 +67,8 @@ describe('M5-R10-61 Giant Schnauzer', () => {
     expect(find('Veliki šnavcer')).toEqual(['giant_schnauzer']);
     expect(find('veliki snavcer')).toEqual(['giant_schnauzer']);
     expect(find('Riesenschnauzer')).toEqual(['giant_schnauzer']);
-    // »šnavcer« alone also finds the Miniature Schnauzer (»pritlikavi šnavcer«).
-    expect(find('šnavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer']);
+    // »šnavcer« alone also finds the Miniature (»pritlikavi šnavcer«) and, since M5-R10-95, the Standard Schnauzer (»srednji šnavcer«).
+    expect(find('šnavcer')).toEqual(['miniature_schnauzer', 'giant_schnauzer', 'standard_schnauzer']);
   });
 
   it('shows its chips in the picker, quotes 12.000 / 9.000 steps and confirms as a challenge dog', () => {
