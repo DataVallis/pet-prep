@@ -626,6 +626,10 @@ return [
         ['key' => 'pepper-salt', 'value' => 'pepper and salt (banded grey) with a dark facial mask', 'en' => 'Pepper and salt', 'sl' => 'Poper in sol'],
         ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
     ],
+    // M5-R10-96: FCI-Standard N° 283 (S722) "Ground colour: White." — the only standard colour.
+    'coton_de_tulear' => [
+        ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

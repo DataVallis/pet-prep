@@ -49780,6 +49780,581 @@
       }
     }
   },
+  "coton_de_tulear": {
+    "_note": "Added 2026-11-05 (M5-R10-96, unattended run — appended after the Standard Schnauzer: AKC 2024 No. 92 'Coton de Tulear', S174 full-list table). Quotes as returned by the web-fetch tool on 2026-11-05; paraphrase only in notes, marked '(paraphrase)'. Sources S721–S728 (reused S8, S10, S11, S14, S24, S35, S45, S54, S92, S174). No health percentages anywhere. Identity from the FCI nomenclature (S721, 'COTON DE TULEAR' (283), Madagascar, patronage France); weight, height and colour from FCI-Standard N° 283 (S722, 04.02.2000/EN — the only standard with a weight); RKC breed standard (S723, last updated 1 April 2026) for the RKC heights and appearance; RKC Breeds A–Z page (S724) key facts, Breed Watch Category 1 and the health tests; PDSA (S725); PetMD (S726). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused (not in provenance) and McMillan 2024 (S54, Nature PDF re-read 2026-11-05) shows the breed only as a Fig. 5 label → RKC lower bound 'Over 12 years' (runbook order). EN name 'Coton de Tulear' (AKC S174 / FCI S721; RKC writes 'Coton De Tulear'); Slovenian »coton de tulear« (S728, tier C — no Slovenian breed club page found; the name is the same in Slovenian).",
+    "identity": {
+      "value": "FCI No. 283, Group 9 Section 1 (Bichons and related breeds), Madagascar",
+      "unit": "—",
+      "source_id": "S721",
+      "quote": "COTON DE TULEAR",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S721, as returned): breed name 'COTON DE TULEAR' (all languages), 'Group : n°9 - Companion and Toy Dogs', 'Section | Bichons and related breeds', 'Subsection | Coton de Tuléar', 'Country of origin of the breed | MADAGASCAR', 'Country of patronage of the breed | FRANCE', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '9/2/1970', valid standard '11/25/1999'. FCI-Standard N° 283 (S722): 'FCI-CLASSIFICATION: Group 9 Companion and Toy Dogs.' 'Section 1.2 Coton de Tuléar.' 'ORIGIN: Madagascar.' 'PATRONAGE: France.' Madagascar is new in FCI_ORIGINS (MG). Wikipedia (S727, tier C) common nickname 'Coton'."
+    },
+    "size_class": {
+      "value": "small",
+      "unit": "—",
+      "source_id": "S724",
+      "quote": "Size: Small",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S724, value 'Small' as returned); PDSA (S725) 'Size' 'Small' (its page sits under 'small-dogs'). FCI 3.5–6 kg (S722) ≈ 7.7–13.2 lb → S10 'Toy (5–12 pounds)' for growth (the top touches 'Small (12–24 pounds)'). RKC places the breed in the Toy group."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            26,
+            28
+          ],
+          "female": [
+            23,
+            25
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S722",
+        "quote": "Height at withers: Males: 26-28 cm, tolerance of 2 cm above and 1 cm below. Females: 23-25 cm, tolerance of 2 cm above and 1 cm below.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 283 (S722); disqualifying fault 'Size and weight outside the requirements and tolerance of the standard.' The tolerance (+2 / −1 cm) is not part of the stored range. PDSA (S725) 'Average height' '22-30 cm'; PetMD (S726) '9–11 inches tall at the shoulder' (≈ 23–28 cm); Wikipedia (S727, tier C) males 25–30 cm, females 22–27 cm — alternatives."
+      },
+      "rkc_standard": {
+        "value": {
+          "male": [
+            25,
+            30
+          ],
+          "female": [
+            22,
+            27
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S723",
+        "quote": "Dogs 25-30 cms (9¾ - 11¾ ins); bitches 22-27 cms (8¾ - 10½ ins).",
+        "confidence": "high",
+        "notes": "Royal Kennel Club breed standard (S723, last updated 1 April 2026), Size. No weight in the RKC standard."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            4,
+            6
+          ],
+          "female": [
+            3.5,
+            5
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S722",
+        "quote": "Weight: Males: From 4 kg to a maximum of 6 kg. Females: From 3,5 kg to a maximum of 5 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 283 (S722), the game range (adult_weight_kg). The RKC standard (S723) gives no weight. PDSA (S725) 'Average weight' '3-6 kg'; PetMD (S726) 'weigh 8–15 pounds' (≈ 3.6–6.8 kg) — alternatives. Wikipedia's body text (S727, tier C) names other FCI figures (6–8 kg for males) that the FCI PDF does not contain — not used.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                3,
+                6
+              ],
+              "female": [
+                3,
+                6
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S725",
+            "quote": "3-6 kg",
+            "notes": "PDSA key fact 'Average weight' (S725), one range for both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "I (<6.5 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 3.5–6 kg is band I. Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "8–12 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Toy (5–12 pounds): 8–12 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific. FCI 3.5–6 kg (S722) ≈ 7.7–13.2 lb → the 'Toy (5–12 pounds)' class (the top touches 'Small (12–24 pounds): 9–12 months', which ends at the same 12 months). The game is unaffected (the puppy cap of 30 min is reached at 3 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Coton de Tulear growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S724",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S724, value 'Over 12 years' as returned). PDSA (S725) 'Average lifespan' 'Over 12 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "pdsa": {
+        "value": "> 12",
+        "unit": "years",
+        "source_id": "S725",
+        "quote": "Over 12 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S725). Same lower bound as the RKC."
+      },
+      "petmd": {
+        "value": "15–19",
+        "unit": "years",
+        "source_id": "S726",
+        "quote": "Coton de Tulear dogs live long lifespans (typically 15–19 years), are generally healthy, and rarely get sick, according to the USCTC.",
+        "confidence": "low",
+        "notes": "PetMD (S726) citing a US breed club (USCTC) — not a runbook lifespan source; would give 0.75 × 15 × 12 = 135 months (alternative only)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (S54, Nature PDF re-read 2026-11-05): 'Coton de Tulear' appears only as a Fig. 5 phylogeny label (median shown by colour, no number); the breed estimate is in Supplementary Table 3 (not reached); the Dogs Trust table (S123) was refused by the fetch tool. Wikipedia (S727, tier C): 'A 2024 UK study found a life expectancy of 14.2 years from a sample size of 44 dogs for the breed compared to an average of 12.7 for purebreeds and 12 for crossbreeds.' (cites McMillan 2024) — not verified in the paper → open for David (0.75 × 14.2 × 12 = 127.8 → 128 if confirmed)."
+      },
+      "senior_from": {
+        "value": 9,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 12 y (S724) → 0.75 × 12 = 9 y = 108 months. Runbook order: McMillan 2024 (table not reachable; 14.2 y only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 128 (14.2 y, Wikipedia S727); 135 (PetMD 15 y, S726); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S724"
+        ],
+        "months": 108,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 30",
+        "unit": "minutes/day",
+        "source_id": "S724",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S724, value 'Up to 30 minutes per day' as returned), runbook first choice → 30 min. PDSA (S725) 'Minimum exercise (per day)' '30 minutes' agrees; PDSA text 'around 30-40 minutes exercise per day' → alternative (range lower bound 30, same value). PetMD (S726): daily playtime and walks, no minutes."
+      },
+      "daily_text": {
+        "value": "around 30–40 minutes a day; happily joins in with games at home",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "Coton De Tulears will need around 30-40 minutes exercise per day, and will happily join in with games at home.",
+        "confidence": "high",
+        "notes": "PDSA (S725), exercise requirements."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No advice to leave a gap between eating and exercising found: RKC (S724), PDSA (S725) and PetMD (S726) do not name bloat / GDV → no meal_exercise_gap row (never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "happy, stable, very sociable with humans and other dogs; adapts to all ways of life; loyal, friendly, lively, intelligent",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Of a happy temperament, stable, very sociable with humans and with other dogs; it adapts perfectly to all ways of life.",
+        "confidence": "high",
+        "notes": "FCI (S722), Behaviour / temperament; 'The temperament of the Coton de Tuléar is one of the main characteristics of the breed.' RKC standard (S723): 'Loyal, friendly and good natured. Lively, intelligent, adaptable and agile.'"
+      },
+      "family": {
+        "value": "loyal and loving; thrives on family life; an excellent family pet",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "Coton De Tulears are loyal and loving dogs that thrive on family life, making them excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S725). Basis of family_pet."
+      },
+      "children": {
+        "value": "generally gets along great with children, especially when introductions are done properly; good playmates for kids who know how to interact with pets",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "They generally get along great with children and other pets—especially when introductions are done properly—and are easily trained.",
+        "confidence": "high",
+        "notes": "PetMD (S726) — an explicit statement with a proper-introduction condition (kept here); FAQ: 'They make good playmates for kids who know how to properly interact with pets.' → children (runbook); no small-children rating → no small_children chip."
+      },
+      "time_alone": {
+        "value": "can develop separation anxiety if left alone for more than a few hours",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "a Coton de Tulear can develop separation anxiety if her pet parents leave her alone for more than a few hours at a time.",
+        "confidence": "high",
+        "notes": "PetMD (S726, fragment as returned). Basis of needs_company (Boxer precedent: separation anxiety when left alone); never often_alone."
+      },
+      "other_pets": {
+        "value": "very sociable with other dogs; generally gets along great with other pets when introductions are done properly",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "They generally get along great with children and other pets—especially when introductions are done properly—and are easily trained.",
+        "confidence": "high",
+        "notes": "PetMD (S726); FCI (S722): 'very sociable with humans and with other dogs' (fragment). Basis of other_pets (introduction condition kept here). No source names a prey drive → no chases_small_pets."
+      },
+      "socialisation": {
+        "value": "early socialisation; puppies must be exposed to a variety of new places, people and experiences",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about.",
+        "confidence": "high",
+        "notes": "PetMD (S726), a condition (runbook M5-R17); PetMD also: 'Socialization is equally important. Coton de Tulear puppies must be exposed to a variety of new places, people, and experiences so they grow into confident, well-adjusted dogs.' → proposed_game_parameters.coton_de_tulear.socialisation (DOG_SOCIALISATION row)."
+      },
+      "strangers": {
+        "value": "may bark at strange noises or surprising movements",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "they do tend to bark at strange noises or surprising movements.",
+        "confidence": "medium",
+        "notes": "PetMD (S726, fragment). Not a chip."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found → no food_motivated_weight tag."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": null,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not ranked: the Coton de Tulear is not in the Wikipedia table of Coren's ranking (S35, 79 ranks, checked 2026-11-05 — 'Coton de Tulear' / 'Coton' do not appear). Runbook: unranked → learning multiplier 1.0 (Havanese precedent)."
+      },
+      "coren_tier": {
+        "value": null,
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Unranked (S35)."
+      },
+      "training_notes": {
+        "value": "intelligent and keen to learn, training relatively easy; people-pleasers; short, positive, game-like sessions",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "They're intelligent dogs that are keen to learn, so training is relatively easy.",
+        "confidence": "high",
+        "notes": "PDSA (S725). PetMD (S726): 'Cotons are people-pleasers, making them a relatively easy dog to train.' and 'Keep training sessions positive, short, and like a game.' The game uses Coren's rank only (unranked → 1.0)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.coton_de_tulear.learning_multiplier (1.0, runbook rule: unranked).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "small, long-haired companion dog with a white cotton-textured coat, round dark eyes and a lively, intelligent expression; slightly longer than high",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Small, long-haired, companion dog with a white cotton textured coat, with round, dark eyes and a lively, intelligent expression.",
+        "confidence": "high",
+        "notes": "FCI (S722), General appearance. RKC standard (S723): 'Small dog of white appearance with dark pigmentation. Slightly longer than high. Long coat of distinctive cotton texture.'"
+      },
+      "colours": {
+        "value": [
+          "white"
+        ],
+        "unit": "list (ground colour white; slight light grey or red-roan / fawn shadings permitted on the ears)",
+        "source_id": "S722",
+        "quote": "Ground colour: White.",
+        "confidence": "high",
+        "notes": "FCI (S722): 'A few slight shadings of light grey colour (mixture of white and black hairs) or of red-roan (mixture of white and fawn hairs), are permitted on the ears. On the other parts of the body, such shadings can be tolerated, if they do not alter the general appearance of white coat. They are however not sought after.'; disqualifying 'Heavily marked; any marking of a definite black.' RKC standard (S723): 'Predominantly white, a few slight shadings of light grey or fawn/apricot permitted on the ears.' 'Any other colour or combination of colours unacceptable.' One game colour: white (never black, tan, tricolour or patches — Wikipedia's 'white and grey, tan, black, or tricolor' (S727, tier C) is not the FCI / RKC standard)."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). One standard colour (white, weight 100) → the portrait default."
+      },
+      "coat": {
+        "value": "very soft, supple, cotton-textured, dense and profuse long coat; can be very slightly wavy; no woolly undercoat; never trimmed except the feet",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Very soft and supple, with the texture of cotton, never hard or rough, the coat is dense, profuse and can be very slightly wavy.",
+        "confidence": "high",
+        "notes": "FCI (S722). RKC standard (S723): 'Of unique cotton texture without woolly undercoat. The coat is full and supple, standing away from the body.' 'Never trimmed except to tidy feet.' RKC 'Coat length: Long' (S724)."
+      },
+      "head": {
+        "value": "short, triangular viewed from above; skull slightly rounded; slight stop; straight muzzle",
+        "unit": "—",
+        "source_id": "S723",
+        "quote": "Triangular viewed from above.",
+        "confidence": "high",
+        "notes": "RKC standard (S723): 'Skull, viewed from the front, slightly rounded, rather wide in relation to length. Slight stop, slight frontal groove. Ratio of muzzle length to skull length 5:9. Muzzle straight with definite underjaw.' Not a flat-faced breed."
+      },
+      "nose": {
+        "value": "black (brown tolerated), nostrils wide open",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "In the extension of the nasal bridge; black; brown is tolerated; nostrils wide open.",
+        "confidence": "high",
+        "notes": "FCI (S722). RKC (S723): 'Nose black with open nostrils.'"
+      },
+      "ears": {
+        "value": "pendulous, triangular, high set, carried close to the cheeks, covered with white hair",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Pendulous, triangular, high set on the skull, fine at the tips; carried close to the cheeks, reaching the corners of the lips.",
+        "confidence": "high",
+        "notes": "FCI (S722). RKC (S723): 'High set slightly above the level of the eyes, pendulous, slender, well covered with fine long hair.'"
+      },
+      "eyes": {
+        "value": "rather rounded, dark, lively, wide apart, black eye rims",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Rather rounded, dark, lively, wide apart; the rims of the eyelids are well pigmented with black or brown according to the colour of the nose.",
+        "confidence": "high",
+        "notes": "FCI (S722). RKC (S723): 'Round, dark and expressive. Spaced well apart. Black eye rims.'"
+      },
+      "tail": {
+        "value": "low set; carried below the hock at rest with the tip raised; gaily curved over the back on the move",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "On the move: Carried « gaily » curved over the back, with the point towards the nape, the withers, the back or the loin.",
+        "confidence": "high",
+        "notes": "FCI (S722): 'Low set, in the axis of the spinal column.' 'At rest: carried below the hock, the tip being raised.' RKC (S723): 'Well feathered, low set, tapering and curved.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page key facts (S724, reached 2026-11-05), PDSA (S725), PetMD (S726). Dogs Trust / Woodgreen breed pages not found.",
+      "rkc_size": {
+        "value": "Small",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Size: Small",
+        "confidence": "high",
+        "notes": "RKC key fact (S724)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 30 minutes per day",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S724). Not a long-exercise breed (no active_family / long_daily_exercise)."
+      },
+      "rkc_size_of_home": {
+        "value": "Flat/ Apartment",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Size of home: Flat/ Apartment",
+        "confidence": "high",
+        "notes": "RKC key fact (S724) → apartment chip (runbook: only from RKC 'Flat/ Apartment')."
+      },
+      "rkc_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S724)."
+      },
+      "rkc_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "RKC key fact (S724) → brushing every day (M5-R13 rule 'Every day' → 7). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Long",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Coat length: Long",
+        "confidence": "high",
+        "notes": "RKC key fact (S724); PDSA (S725) 'Coat length' 'Long'."
+      },
+      "rkc_shedding": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Sheds: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S724); PetMD (S726) 'the Coton's coat is low-shedding' agrees → low_shedding. Never hypoallergenic (PetMD itself: 'There is actually no such thing as a truly hypoallergenic dog.')."
+      },
+      "rkc_lifespan": {
+        "value": "Over 12 years",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Lifespan: Over 12 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S724). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S724)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S724)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S724), Category 1, '… other than those covered routinely by The Kennel Club's breed standard.' (fragment) → no welfare chip."
+      },
+      "pdsa_family": {
+        "value": "excellent family pets",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "Coton De Tulears are loyal and loving dogs that thrive on family life, making them excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S725). Basis of family_pet."
+      },
+      "pdsa_grooming": {
+        "value": "daily grooming",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "Daily grooming is needed to keep their coat in tip-top condition.",
+        "confidence": "high",
+        "notes": "PDSA (S725). Agrees with RKC 'Every day' (S724) → 7."
+      },
+      "petmd_children": {
+        "value": "gets along great with children and other pets when introductions are done properly",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "They generally get along great with children and other pets—especially when introductions are done properly—and are easily trained.",
+        "confidence": "high",
+        "notes": "PetMD (S726). Basis of children and other_pets (introduction condition → never small_children)."
+      },
+      "petmd_grooming": {
+        "value": "brushing three to four times a week; near-daily grooming",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "Coton de Tulear pet parents must brush these little fluffballs three to four times per week.",
+        "confidence": "high",
+        "notes": "PetMD (S726); FAQ 'Cotons require near-daily grooming to keep their coat soft and healthy.' → alternative (4); RKC 'Every day' (S724) and PDSA 'Daily' (S725) win (M5-R13: 'Every day' → 7)."
+      },
+      "petmd_bath": {
+        "value": "a once-a-month bath",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "Cotons don't usually require special skin care aside from a once-a-month bath.",
+        "confidence": "high",
+        "notes": "PetMD (S726) → parent bath reminder every 4 weeks (M5-R19)."
+      },
+      "petmd_ears": {
+        "value": "check the ears at least once a week; trim hair in the ear; ear wipes",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "Check your Coton de Tulear's ears at least once a week for signs of infection.",
+        "confidence": "high",
+        "notes": "PetMD (S726): 'Hair growing inside the ear cavity should be trimmed, and ear wipes can help minimize the buildup of dirt and wax.' → the child's ear-care mini-game once a week (M5-R20; Papillon / Alaskan Malamute precedent for a weekly ear check)."
+      },
+      "petmd_shedding": {
+        "value": "low-shedding",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": "But the Coton's coat is low-shedding, meaning they can be a good fit for some people allergic to dogs.",
+        "confidence": "medium",
+        "notes": "PetMD (S726). Agrees with RKC 'Sheds: No' (S724). The allergy remark is never shown; never hypoallergenic."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S724: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC minimum (Good Practice) — genetic diversity; Best Practice — BVA/KC/ISDS eye scheme (S724); a breed club health scheme is mentioned (cdtclubuk.org, not fetched).",
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S725, text after 'Hip dysplasia'); PDSA: 'For some conditions, there are screening programmes available through the British Veterinary Association (BVA) and the Kennel Club.' No Breed Watch point → no hips_hind_legs chip. Register health key hip_dysplasia."
+      },
+      "von_willebrand": {
+        "value": "von Willebrand's disease (blood clotting)",
+        "unit": "—",
+        "source_id": "S725",
+        "quote": "deficiency in blood platelet function resulting in excessive bleeding.",
+        "confidence": "high",
+        "notes": "PDSA (S725, text after 'Von Willebrand's disease'). Register health key bleeding_disorder_vwd."
+      },
+      "luxating_patella": {
+        "value": "luxating patella (kneecap)",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S726) health list 'Luxating patella' (heading only). Register health key kneecap_luxation."
+      },
+      "eyes": {
+        "value": "progressive retinal atrophy (eye)",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S726) health list 'Progressive retinal atrophy' (heading only); RKC Best Practice eye scheme (S724). Register health key pra_inherited_blindness (no test claim)."
+      },
+      "degenerative_myelopathy": {
+        "value": "canine degenerative myelopathy (spinal cord)",
+        "unit": "—",
+        "source_id": "S726",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S726) health list 'Canine degenerative myelopathy' (heading only). Not exported: the website sentence promises a DNA test and the RKC page (S724) lists no breed DNA package (Bernese Mountain Dog precedent) — research only."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -74435,6 +75010,286 @@
         "confidence": "high",
         "notes": "Colours of the FCI standard (S712, S711) and RKC standard (S713): pepper and salt, pure black. Weights unsourced in prompts. Pepper and salt as the portrait default — Claude's choice (listed first by FCI S711 and AKC S718; the most typical colour).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): pepper and salt is the portrait default; standard colours only (pepper and salt, pure black), natural ears and tail"
+      }
+    },
+    "coton_de_tulear": {
+      "_note": "Unattended run M5-R10-96 (2026-11-05): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from RKC (S724 'Up to 30 minutes per day' → 30; PDSA S725 agrees). Senior 108 from the RKC lower bound 'Over 12 years' (S724; McMillan 2024 14.2 y only via Wikipedia S727 → 128, open for David). Not in Coren's ranking → 1.0. Built: brushing every day (RKC 'Every day', PDSA 'Daily', M5-R13), puppy socialisation with the PetMD quote (S726, M5-R17), care tasks with a PetMD frequency (S726): ear check / care once a week ('at least once a week', M5-R20), bath every 4 weeks ('once-a-month', M5-R19). No tooth, nail or groomer task (no frequency), no meal gap, no heat warning. RKC Breed Watch Category 1 → no welfare chip; in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": "S724",
+        "quote": "Exercise: Up to 30 minutes per day",
+        "confidence": "high",
+        "notes": "RKC 'Up to 30 minutes per day' (S724). Rule: one number N ('up to N') → N = 30. PDSA (S725) 'Minimum exercise (per day)' '30 minutes' agrees; PDSA text 'around 30-40 minutes' → lower bound 30 (same value).",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S725",
+            "notes": "PDSA 'Coton De Tulears will need around 30-40 minutes exercise per day' → range lower bound."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S724 'Up to 30 minutes per day')"
+      },
+      "step_goal_adult": {
+        "value": 3000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 30 min × 100 steps/min (S45) = 3,000.",
+        "derived_from": [
+          "S724",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min × 100 steps/min → 3,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 23,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 30 = 22.5) = 23 min (half up) → 2,300 steps.",
+        "steps": 2300,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 30,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 30 reached at 3 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 30 min (reached at 3 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 108 = round(0.75 × 12 y × 12) (S11 + RKC lower bound 'Over 12 years', S724; PDSA 'Over 12 years', S725, agrees). The Dogs Trust McMillan 2024 table (S123) could not be fetched; McMillan 2024 (S54) names the breed only in Fig. 5; no VetCompass median found. Alternatives: 128 (14.2 y — Wikipedia S727 citing McMillan 2024, tier C — open for David); 135 (PetMD 15 y, S726, citing a US breed club); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S724"
+        ],
+        "alternatives": {
+          "senior_wikipedia_14_2_y": 128,
+          "senior_petmd_15_y": 135,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S724)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 108
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 108)"
+      },
+      "learning_multiplier": {
+        "value": 1.0,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not in Coren's ranking (S35, 79 ranks, checked 2026-11-05) → unranked → 1.0 (Havanese precedent). No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not in Coren's ranking, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S724",
+        "quote": "Grooming: Every day",
+        "confidence": "high",
+        "notes": "coton_de_tulear.suitability.rkc_grooming. RKC 'Every day' (S724) → 7; PDSA 'Daily grooming is needed to keep their coat in tip-top condition.' (S725) agrees. PetMD (S726) 'three to four times per week' → alternative (4). Built in M5-R13; matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": [
+          {
+            "value": 4,
+            "source_id": "S726",
+            "quote": "Coton de Tulear pet parents must brush these little fluffballs three to four times per week."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): »Every day« → 7 (RKC S724, PDSA S725); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S726",
+        "quote": "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about.",
+        "confidence": "high",
+        "notes": "coton_de_tulear.behaviour.socialisation (PetMD S726, a need). Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S726)"
+      },
+      "ear_care": {
+        "value": 1,
+        "unit": "ear-care sessions per week (sourced need)",
+        "source_id": "S726",
+        "quote": "Check your Coton de Tulear's ears at least once a week for signs of infection.",
+        "confidence": "high",
+        "notes": "PetMD (S726), coton_de_tulear.suitability.petmd_ears. Built: the child's ear-cleaning mini-game once a program week (DOG_CARE_TASKS ear_cleaning [1, week], M5-R20; Papillon / Alaskan Malamute precedent for a weekly check).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »at least once a week« → 1× na teden"
+      },
+      "bathing": {
+        "value": "monthly bath",
+        "unit": "baths (sourced need)",
+        "source_id": "S726",
+        "quote": "Cotons don't usually require special skin care aside from a once-a-month bath.",
+        "confidence": "high",
+        "notes": "PetMD (S726), coton_de_tulear.suitability.petmd_bath. Built: the parent's bath reminder every 4 program weeks (DOG_CARE_TASKS bath [1, month], M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once-a-month« → vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-96); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S724"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_size_of_home",
+              "coton_de_tulear.suitability.rkc_garden"
+            ],
+            "quote": "S724 'Size of home: Flat/ Apartment'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S725"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.pdsa_family",
+              "coton_de_tulear.behaviour.family"
+            ],
+            "quote": "S725 'Coton De Tulears are loyal and loving dogs that thrive on family life, making them excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.petmd_children",
+              "coton_de_tulear.behaviour.children"
+            ],
+            "quote": "S726 'They generally get along great with children and other pets—especially when introductions are done properly—and are easily trained.' (introduction condition → never small_children)"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.petmd_children",
+              "coton_de_tulear.behaviour.other_pets"
+            ],
+            "quote": "S726 same sentence; FCI S722 'very sociable with humans and with other dogs'"
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S724"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_shedding"
+            ],
+            "quote": "S724 'Sheds: No'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S724",
+              "S725"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_grooming",
+              "coton_de_tulear.suitability.pdsa_grooming"
+            ],
+            "quote": "S724 'Grooming: Every day'; S725 'Daily grooming is needed to keep their coat in tip-top condition.'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.behaviour.time_alone"
+            ],
+            "quote": "S726 'a Coton de Tulear can develop separation anxiety if her pet parents leave her alone for more than a few hours at a time.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No explicit small-children rating; PetMD is conditional (proper introductions, kids who know how to interact with pets, S726).",
+          "large_home": "RKC 'Flat/ Apartment' (S724).",
+          "first_time_owner": "No A/B statement about first-time owners (PDSA 'training is relatively easy' is a training note, S725).",
+          "active_family": "RKC 'Up to 30 minutes per day' (S724).",
+          "long_daily_exercise": "30 minutes a day (S724, S725).",
+          "often_alone": "PetMD: separation anxiety when left alone for more than a few hours (S726) → needs_company instead.",
+          "chases_small_pets": "No A/B source names a prey drive — runbook rule.",
+          "sheds": "RKC 'Sheds: No' (S724).",
+          "needs_mental_stimulation": "No A/B statement (PetMD: 'they do not need constant entertainment or activity to be happy', S726).",
+          "food_motivated_weight": "No food-motivation statement.",
+          "chews_when_bored": "No chewing statement.",
+          "shorter_lifespan": "RKC 'Over 12 years' (S724).",
+          "experienced_owner": "No source.",
+          "hypoallergenic": "Never (runbook; PetMD itself: 'There is actually no such thing as a truly hypoallergenic dog.', S726)."
+        }
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S724",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S724); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92; RKC muzzle 'straight with definite underjaw', nose 'with open nostrils', S723). Marketing never promises the breed's health and never shows it as hypoallergenic or as a dog that can be left alone.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa)"
+      },
+      "ai_appearance": {
+        "value": "adult Coton de Tulear, white coat (the only standard colour; at most a faint light-grey or lemon shading on the ears); small, slightly longer than high; long, very soft, cotton-textured, dense coat standing away from the body, slightly wavy, untrimmed except the feet; short triangular head with a slightly rounded skull and a slight stop; black nose with open nostrils; round dark eyes with black rims, wide apart; high-set pendulous triangular ears covered with white hair; low-set, well-feathered tail carried in a curve over the back; never black, tan, tricolour or patches",
+        "unit": "—",
+        "source_id": "S722",
+        "quote": "Ground colour: White.",
+        "confidence": "high",
+        "notes": "Colour of the FCI standard (S722) and RKC standard (S723): white. Weights unsourced in prompts. White as the portrait default — the only standard colour.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): white is the portrait default (the only standard colour); natural, untrimmed cotton coat"
       }
     }
   }

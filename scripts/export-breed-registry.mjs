@@ -479,6 +479,7 @@ const SPECIES = [
       { id: 'old_english_sheepdog', synonyms: { en: ['Bobtail', 'Bob-tail', 'OES', "Shepherd's Dog"], sl: ['bobtail', 'bobtejl', 'staroangleški ovčar bobtail'] } },
       { id: 'keeshond', synonyms: { en: ['Wolfsspitz', 'Wolfspitz', 'German Wolfspitz', 'Keeshonden'], sl: ['volčji špic', 'nemški volčji špic', 'wolfspitz'] } },
       { id: 'standard_schnauzer', synonyms: { en: ['Schnauzer', 'Mittelschnauzer', 'Wire-Haired Pinscher'], sl: ['srednji snavcer', 'šnavcer', 'mittelschnauzer'] } },
+      { id: 'coton_de_tulear', synonyms: { en: ['Coton', 'Coton de Tuléar', 'Royal Dog of Madagascar'], sl: ['coton', 'cotonček', 'coton de tuléar'] } },
     ],
   },
   {
@@ -503,7 +504,7 @@ const SPECIES = [
 // ─── dogs ────────────────────────────────────────────────────────────────────
 
 /** FCI country of origin as written at the end of a breed's `identity` value → ISO code (the website words it). */
-const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR' };
+const FCI_ORIGINS = { 'Great Britain': 'GB', France: 'FR', Germany: 'DE', USA: 'US', Cuba: 'CU', Switzerland: 'CH', Italy: 'IT', 'Tibet (China)': 'CN-XZ', Mexico: 'MX', Belgium: 'BE', Hungary: 'HU', Japan: 'JP', 'South Africa': 'ZA', 'Belgium / France': 'BE-FR', China: 'CN', Portugal: 'PT', Canada: 'CA', Croatia: 'HR', Australia: 'AU', Russia: 'RU', Ireland: 'IE', 'Central Africa': 'AF-C', Turkey: 'TR', Madagascar: 'MG' };
 
 /** Per-breed fact refs (dog data.json); only these are read, so nothing appears by accident. */
 const DOG_FACTS = {
@@ -2521,6 +2522,30 @@ const DOG_FACTS = {
       ['bladder_stones', 'health.bladder_stones'],
     ],
   },
+  // M5-R10-96. RKC page (S724): exercise 'Up to 30 minutes per day', coat 'Long', grooming 'Every day', sheds 'No',
+  // lifespan 'Over 12 years'; FCI 283 (S722) height males 26–28 / females 23–25 cm and weight males 4–6 / females 3.5–5 kg.
+  // Not in Coren's ranking (no coren_rank fact). FCI origin Madagascar (MG, new). Not exported: lifespan.petmd (15–19 y,
+  // citing a US breed club — research only), lifespan.mcmillan_2024 (null; 14.2 y only via Wikipedia, tier C) / senior_from
+  // (derived), adult_weight.salt_category (our assignment), health.degenerative_myelopathy (the website sentence promises
+  // a DNA test; the RKC page S724 lists no breed DNA package — Bernese precedent). Eyes = pra_inherited_blindness (no test
+  // claim; PetMD lists a heading only). No new health key.
+  coton_de_tulear: {
+    height: ['height.fci'],
+    weight: [['adult_weight.fci', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    coren_rank: false,
+    health: [
+      ['hip_dysplasia', 'health.hip_dysplasia'],
+      ['bleeding_disorder_vwd', 'health.von_willebrand'],
+      ['kneecap_luxation', 'health.luxating_patella'],
+      ['pra_inherited_blindness', 'health.eyes'],
+    ],
+  },
 
 
 };
@@ -2580,6 +2605,7 @@ export const DOG_CARE_TASKS = {
   old_english_sheepdog: [['groomer_visit', 1, 42, 'proposed_game_parameters.old_english_sheepdog.professional_grooming']],
   keeshond: [['bath', 1, 28, 'keeshond.suitability.vca_bath']],
   standard_schnauzer: [['nail_trim', 1, 7, 'proposed_game_parameters.standard_schnauzer.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.standard_schnauzer.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.standard_schnauzer.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.standard_schnauzer.professional_grooming']],
+  coton_de_tulear: [['ear_cleaning', 1, 7, 'proposed_game_parameters.coton_de_tulear.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.coton_de_tulear.bathing']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3314,6 +3340,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.standard_schnauzer.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.standard_schnauzer.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.standard_schnauzer.exercise_minutes_senior',
+  },
+  coton_de_tulear: {
+    adult_minutes: ['proposed_game_parameters.coton_de_tulear.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.coton_de_tulear.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.coton_de_tulear.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.coton_de_tulear.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.coton_de_tulear.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.coton_de_tulear.exercise_minutes_senior',
   },
 
 

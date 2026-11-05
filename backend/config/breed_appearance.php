@@ -768,6 +768,13 @@
 | (approximately 2:3)"; small pointed upright ears; tail rolled over the back. One standard colour (weight 100);
 | `verified => false` like every new breed.
 |
+| Coton de Tulear (M5-R10-96, docs/research/dog-data coton_de_tulear.appearance): "Small, long-haired, companion dog
+| with a white cotton textured coat, with round, dark eyes and a lively, intelligent expression." (FCI-Standard N° 283,
+| S722); colour "Ground colour: White." with slight light grey / red-roan shadings permitted on the ears (S722; RKC
+| standard S723 "Any other colour or combination of colours unacceptable."); never black markings, tan, tricolour or
+| patches. Coat never trimmed except the feet (S723). One standard colour (weight 100); `verified => false` like every
+| new breed.
+|
 | Standard Schnauzer (M5-R10-95, docs/research/dog-data standard_schnauzer.appearance): "Medium sized, strong, stocky
 | rather than slim, rough haired." (FCI-Standard N° 182, S712); colours "pepper and salt" — "the aim is a medium shading with
 | evenly distributed, well pigmented pepper colouring." — and "Pure black with black undercoat." (S712; FCI nomenclature S711,
@@ -4211,6 +4218,38 @@ return [
             'ear_carriage' => ['natural uncropped V-shaped ears folding forward'],
             'eye_color' => ['dark, oval eyes'],
             'tail' => ['natural undocked sabre-shaped tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-96 (docs/research/dog-data/data.json coton_de_tulear.appearance; runbook rules 2026-10-10: standard colours
+    // only — white; natural, untrimmed cotton coat).
+    'coton_de_tulear' => [
+        'display_name' => 'Coton de Tulear',
+        // Colour frequencies are in no source (coton_de_tulear.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 283 (S722), FCI nomenclature (S721), RKC breed standard (S723), RKC breed page (S724) — for the traits listed in `sources`. Colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S724 "Size: Small"; S722 "Height at withers: Males: 26-28 cm, tolerance of 2 cm above and 1 cm below. Females: 23-25 cm, tolerance of 2 cm above and 1 cm below."',
+            'build' => 'S723 "Small dog of white appearance with dark pigmentation. Slightly longer than high."',
+            'coat_length' => 'S722 "Very soft and supple, with the texture of cotton, never hard or rough, the coat is dense, profuse and can be very slightly wavy."; S723 "Never trimmed except to tidy feet."',
+            'coat_color' => 'S722 "Ground colour: White." (slight light grey / red-roan shadings permitted on the ears only; never black markings, tan, tricolour or patches; weights unsourced)',
+            'head' => 'S723 "Triangular viewed from above."; nose "Nose black with open nostrils."',
+            'ear_carriage' => 'S722 "Pendulous, triangular, high set on the skull, fine at the tips; carried close to the cheeks, reaching the corners of the lips."',
+            'eye_color' => 'S723 "Round, dark and expressive. Spaced well apart. Black eye rims."',
+            'tail' => 'S722 "On the move: Carried « gaily » curved over the back, with the point towards the nape, the withers, the back or the loin."',
+        ],
+        'traits' => [
+            'size' => ['small'],
+            'build' => [['value' => 'small and slightly longer than high', 'weight' => 3], 'small, lively and agile'],
+            'coat_length' => ['long, very soft, cotton-textured coat standing away from the body, slightly wavy, untrimmed'],
+            // Standard colour only (S722, S723) → the register portrait.
+            'coat_color' => [
+                ['value' => 'pure white', 'weight' => 1],
+            ],
+            'head' => ['short triangular head with a slightly rounded skull, a slight stop and a black nose'],
+            'ear_carriage' => ['high-set pendulous triangular ears covered with white hair'],
+            'eye_color' => ['round, dark eyes with black rims'],
+            'tail' => ['low-set, well-feathered tail curved over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
     ],

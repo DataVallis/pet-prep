@@ -110,6 +110,7 @@ export const BREED_SPECIES: Readonly<Record<BreedType, Species>> = {
   old_english_sheepdog: 'dog',
   keeshond: 'dog',
   standard_schnauzer: 'dog',
+  coton_de_tulear: 'dog',
   domestic_cat: 'cat',
   maine_coon: 'cat',
   british_shorthair: 'cat',
@@ -224,6 +225,7 @@ export const GROOMING_DOG_BREEDS: readonly BreedType[] = [
   'old_english_sheepdog',
   'keeshond',
   'standard_schnauzer',
+  'coton_de_tulear',
 ];
 
 /** The breed has a weekly brushing routine (a brushed cat, or — M5-R13 — a brushed dog breed). */

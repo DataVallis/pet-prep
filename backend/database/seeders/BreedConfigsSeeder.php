@@ -1954,6 +1954,26 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.standard_schnauzer',
                 'search_keywords' => ['standard schnauzer', 'srednji šnavcer', 'srednji snavcer', 'mittelschnauzer', 'schnauzer', 'šnavcer'],
             ],
+            // M5-R10-96 Coton de Tulear (docs/research/dog-data/data.json coton_de_tulear, sources S721–S728; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.coton_de_tulear.step_goal_adult: 30 min × 100 steps/min — RKC S724 "Exercise: Up to 30
+            // minutes per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the Border Collie's.
+            [
+                'breed_slug' => BreedType::CotonDeTulear->slug(),
+                'daily_steps_required' => 3000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 900,
+                'label_key' => 'breeds.coton_de_tulear',
+                'search_keywords' => ['coton de tulear', 'coton de tuléar', 'coton', 'cotonček', 'cotonek', 'tulear', 'royal dog of madagascar'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and

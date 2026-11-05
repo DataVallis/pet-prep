@@ -777,6 +777,13 @@ class FalAiService
                 .'strong, long head with a blunt wedge-shaped muzzle, black nose, dark oval eyes, '
                 .'natural uncropped V-shaped ears folding forward, natural undocked sabre-shaped tail, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-96: FCI-Standard N° 283 (S722) — white is the only standard colour (slight light grey / lemon shadings on
+            // the ears at most); the long cotton coat is never trimmed except the feet (RKC S723).
+            BreedType::CotonDeTulear => 'A happy, lively Coton de Tulear with a pure white, long, very soft cotton-textured coat standing away from the body, '
+                .'small and slightly longer than high, '
+                .'short triangular head with a slightly rounded skull, black nose, round dark eyes with black rims, '
+                .'high-set pendulous ears covered with white hair, low-set well-feathered tail curved over the back, '
+                .'photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1879,6 +1886,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'harsh, wiry, dense coat with bushy eyebrows and a beard',
                 'markings' => 'no white patches, natural uncropped V-shaped ears, natural undocked tail',
+            ],
+            // M5-R10-96: FCI-Standard N° 283 (S722) colour — white only (never black markings, tan, tricolour or patches).
+            BreedType::CotonDeTulear => [
+                'color_scheme' => 'pure white',
+                'eye_color' => 'dark',
+                'fur_texture' => 'long, very soft, cotton-textured coat, slightly wavy',
+                'markings' => 'black nose and black eye rims, no coloured patches',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),
