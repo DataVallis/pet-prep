@@ -14,7 +14,8 @@
     "cs": "Mrkev",
     "hr": "Mrkva",
     "sv": "Morötter",
-    "da": "Gulerødder"
+    "da": "Gulerødder",
+    "fi": "Porkkanat"
   },
   "question": {
     "en": "Can cats eat carrots?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst mrkev?",
     "hr": "Smiju li mačke jesti mrkvu?",
     "sv": "Får katter äta morötter?",
-    "da": "Må katte spise gulerødder?"
+    "da": "Må katte spise gulerødder?",
+    "fi": "Saako kissa syödä porkkanaa?"
   },
   "url_slug": {
     "en": "carrots",
@@ -44,7 +46,8 @@
     "cs": "mrkev",
     "hr": "mrkva",
     "sv": "morotter",
-    "da": "gulerodder"
+    "da": "gulerodder",
+    "fi": "porkkanat"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, malý kousek mrkve bez dodatků je jako občasný pamlsek v pořádku. Cats Protection řadí mrkev mezi zeleninu, kterou můžete kočce dát. Uvařte ji do měkka, nebo syrovou mrkev nakrájejte na malé kousky, aby se kočka neudusila.",
     "hr": "Da, mali komadić mrkve bez dodataka u redu je kao povremena poslastica. Cats Protection mrkvu navodi među povrćem koje možeš dati mački. Skuhaj je dok ne omekša ili sirovu mrkvu nareži na sitne komadiće, jer veliki komadi mogu izazvati gušenje.",
     "sv": "Ja, en liten bit morot utan tillsatser går bra som en godbit då och då. Cats Protection räknar morötter bland de grönsaker du kan ge katten. Koka moroten tills den är mjuk, eller skär rå morot i små bitar för att undvika kvävning.",
-    "da": "Ja, et lille stykke naturel gulerod er fint som godbid af og til. Cats Protection nævner gulerødder blandt de grøntsager, man kan give sin kat. Kog gulerodden, til den er blød, eller skær den rå i små stykker, så den ikke kan sætte sig fast i halsen."
+    "da": "Ja, et lille stykke naturel gulerod er fint som godbid af og til. Cats Protection nævner gulerødder blandt de grøntsager, man kan give sin kat. Kog gulerodden, til den er blød, eller skær den rå i små stykker, så den ikke kan sætte sig fast i halsen.",
+    "fi": "Saa, pieni pala maustamatonta porkkanaa sopii satunnaiseksi herkuksi. Cats Protection mainitsee porkkanan kasvisten joukossa, joita kissalle voi antaa. Kypsennä porkkana pehmeäksi tai pilko raaka porkkana pieniksi paloiksi, ettei kissa tukehdu."
   },
   "why": {
     "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -75,7 +79,8 @@
     "cs": "Cats Protection uvádí mrkev mezi několika druhy zeleniny, které můžete kočce dát, a doporučuje zeleninu napařenou nebo vařenou, bez másla, soli a koření. Podle RSPCA mohou kočky dostat syrovou mrkev jen nakrájenou na malé kousky; jinak ji uvařte do měkka, aby se kočka neudusila. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Cats Protection mrkvu ubraja među nekoliko vrsta povrća koje možeš dati mački i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. RSPCA navodi da mačke sirovu mrkvu smiju jesti samo ako je narezana na sitne komadiće, a inače je treba kuhati dok ne omekša, jer veliki komadi mogu izazvati gušenje. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
     "sv": "Cats Protection nämner morötter bland de få grönsaker du kan ge en katt och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. RSPCA skriver att katter bara kan äta råa morötter om de skärs i små bitar, annars ska de kokas tills de är mjuka för att undvika kvävning. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "Cats Protection nævner gulerødder blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker, ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+    "da": "Cats Protection nævner gulerødder blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker, ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+    "fi": "Cats Protection mainitsee porkkanan yhtenä niistä harvoista kasviksista, joita kissalle voi antaa, ja suosittelee höyrytettyjä tai keitettyjä kasviksia ilman voita, suolaa tai mausteita. RSPCA:n mukaan kissa voi syödä porkkanaa raakana vain pieniksi paloiksi pilkottuna; muuten porkkana pitää kypsentää pehmeäksi, ettei kissa tukehdu. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
@@ -106,7 +112,8 @@
     "cs": "Napařená nebo vařená do měkka, nebo syrová jen v malých kouscích. Bez másla, soli a koření.",
     "hr": "Kuhana na pari ili u vodi dok ne omekša, a sirova samo narezana na sitne komadiće. Bez maslaca, soli i začina.",
     "sv": "Ångad eller kokt tills den är mjuk, eller rå bara i små bitar. Inget smör, salt eller kryddor.",
-    "da": "Dampet eller kogt, til den er blød, eller kun rå i små stykker. Uden smør, salt eller krydderier."
+    "da": "Dampet eller kogt, til den er blød, eller kun rå i små stykker. Uden smør, salt eller krydderier.",
+    "fi": "Höyrytettynä tai keitettynä pehmeäksi – tai raakana vain pieninä paloina. Ilman voita, suolaa tai mausteita."
   },
   "child": {
     "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -121,7 +128,8 @@
     "cs": "Kousek měkce uvařené mrkve může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
     "hr": "Komadić meke kuhane mrkve mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "En mjuk bit kokt morot kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-    "da": "Et blødt, kogt stykke gulerod kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+    "da": "Et blødt, kogt stykke gulerod kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+    "fi": "Pehmeäksi kypsennetty porkkanapala voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou kočky jíst syrovou mrkev?",
         "hr": "Smiju li mačke jesti sirovu mrkvu?",
         "sv": "Får katter äta rå morot?",
-        "da": "Må katte spise rå gulerod?"
+        "da": "Må katte spise rå gulerod?",
+        "fi": "Saako kissa syödä raakaa porkkanaa?"
       },
       "a": {
         "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
@@ -153,7 +162,8 @@
         "cs": "Podle RSPCA mohou kočky dostat syrovou mrkev jen nakrájenou na malé kousky; jinak ji uvařte do měkka, aby se kočka neudusila.",
         "hr": "RSPCA navodi da mačke sirovu mrkvu smiju jesti samo ako je narezana na sitne komadiće; inače je treba kuhati dok ne omekša, jer veliki komadi mogu izazvati gušenje.",
         "sv": "RSPCA skriver att katter bara kan äta råa morötter om de skärs i små bitar; annars ska de kokas tills de är mjuka för att undvika kvävning.",
-        "da": "RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker; ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen."
+        "da": "RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker; ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen.",
+        "fi": "RSPCA:n mukaan kissa voi syödä porkkanaa raakana vain pieniksi paloiksi pilkottuna; muuten porkkana pitää kypsentää pehmeäksi, ettei kissa tukehdu."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
-        "da": "Har katte brug for grøntsager?"
+        "da": "Har katte brug for grøntsager?",
+        "fi": "Tarvitsevatko kissat kasviksia?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -185,7 +196,8 @@
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -311,6 +323,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1d0ff96788039a6af2977f0e447700787888673ecac34e306cc218df044e2564"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f0e1e511e11a019dd0c5d100bd11af8e8a8b81e0315ade4de9c5575399693341"
     }
   }
 }

@@ -14,7 +14,8 @@
     "cs": "Rebarbora",
     "hr": "Rabarbara",
     "sv": "Rabarber",
-    "da": "Rabarber"
+    "da": "Rabarber",
+    "fi": "Raparperi"
   },
   "question": {
     "en": "Can cats eat rhubarb?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst rebarboru?",
     "hr": "Smiju li mačke jesti rabarbaru?",
     "sv": "Får katter äta rabarber?",
-    "da": "Må katte spise rabarber?"
+    "da": "Må katte spise rabarber?",
+    "fi": "Saako kissa syödä raparperia?"
   },
   "url_slug": {
     "en": "rhubarb",
@@ -44,7 +46,8 @@
     "cs": "rebarbora",
     "hr": "rabarbara",
     "sv": "rabarber",
-    "da": "rabarber"
+    "da": "rabarber",
+    "fi": "raparperi"
   },
   "level": "dangerous",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. ASPCA uvádí rebarboru jako toxickou pro kočky, protože obsahuje rozpustné šťavelany vápenaté. Nejtoxičtější jsou listy a kořeny. Kočce rebarboru nedávejte, a pokud ji kočka okusila, zavolejte veterináři.",
     "hr": "Ne. ASPCA rabarbaru navodi kao otrovnu za mačke, jer sadrži topive kalcijeve oksalate. Najotrovniji su listovi i korijenje. Ne daj mački rabarbaru, a ako mačka požvače bilo koji njezin dio, nazovi veterinara.",
     "sv": "Nej. ASPCA anger rabarber som giftig för katter eftersom den innehåller lösliga kalciumoxalater. Bladen och rötterna är de mest giftiga delarna. Dela inte rabarber med katten, och ring veterinären om katten tuggar på rabarber.",
-    "da": "Nej. ASPCA klassificerer rabarber som giftig for katte, fordi den indeholder opløselige calciumoxalater. Bladene og rødderne er de giftigste dele. Giv ikke din kat rabarber, og ring til din dyrlæge, hvis din kat har tygget på den."
+    "da": "Nej. ASPCA klassificerer rabarber som giftig for katte, fordi den indeholder opløselige calciumoxalater. Bladene og rødderne er de giftigste dele. Giv ikke din kat rabarber, og ring til din dyrlæge, hvis din kat har tygget på den.",
+    "fi": "Ei saa. ASPCA luokittelee raparperin kissoille myrkylliseksi, koska siinä on liukoisia kalsiumoksalaatteja. Lehdet ja juuret ovat kasvin myrkyllisimmät osat. Älä anna raparperia kissallesi ja soita eläinlääkärille, jos kissasi pureskelee sitä."
   },
   "why": {
     "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
@@ -75,7 +79,8 @@
     "cs": "Rebarbora obsahuje rozpustné šťavelany vápenaté a ASPCA ji uvádí jako toxickou pro kočky; nejtoxičtější jsou listy a kořeny. Dva záznamy ASPCA o rebarboře se liší: jeden uvádí selhání ledvin, třes a slinění, druhý zvracení a slinění u psů a koček a selhání ledvin u pasoucích se zvířat. Řídíme se přísnějším záznamem, a proto uvádíme i selhání ledvin.",
     "hr": "Rabarbara sadrži topive kalcijeve oksalate, a ASPCA je navodi kao otrovnu za mačke, pri čemu su listovi i korijenje najotrovniji dijelovi. Dva ASPCA-ina zapisa o rabarbari razlikuju se: jedan navodi zatajenje bubrega, drhtanje i slinjenje, a drugi povraćanje i slinjenje kod pasa i mačaka te zatajenje bubrega kod životinja koje pasu. Mi slijedimo stroži zapis pa navodimo i zatajenje bubrega.",
     "sv": "Rabarber innehåller lösliga kalciumoxalater, och ASPCA anger den som giftig för katter, med bladen och rötterna som de mest giftiga delarna. ASPCA:s två uppgifter om rabarber skiljer sig åt: den ena anger njursvikt, darrningar och dregling, den andra kräkningar och dregling hos hundar och katter samt njursvikt hos betesdjur. Vi följer den strängare uppgiften och tar också med njursvikt.",
-    "da": "Rabarber indeholder opløselige calciumoxalater, og ASPCA klassificerer den som giftig for katte, hvor blade og rødder er de giftigste dele. ASPCAs to opslag om rabarber er ikke helt ens: den ene nævner nyresvigt, rysten og savlen, den anden opkast og savlen hos hunde og katte og nyresvigt hos græssende dyr. Vi følger det strengeste opslag og nævner også nyresvigt."
+    "da": "Rabarber indeholder opløselige calciumoxalater, og ASPCA klassificerer den som giftig for katte, hvor blade og rødder er de giftigste dele. ASPCAs to opslag om rabarber er ikke helt ens: den ene nævner nyresvigt, rysten og savlen, den anden opkast og savlen hos hunde og katte og nyresvigt hos græssende dyr. Vi følger det strengeste opslag og nævner også nyresvigt.",
+    "fi": "Raparperissa on liukoisia kalsiumoksalaatteja, ja ASPCA luokittelee sen kissoille myrkylliseksi; myrkyllisimpiä osia ovat lehdet ja juuret. ASPCA:n kaksi raparperia koskevaa merkintää eroavat toisistaan: toisessa mainitaan munuaisten vajaatoiminta, vapina ja kuolaaminen, toisessa koirien ja kissojen oksentelu ja kuolaaminen sekä laiduneläinten munuaisten vajaatoiminta. Noudatamme tiukempaa merkintää ja mainitsemme myös munuaisten vajaatoiminnan."
   },
   "signs": {
     "en": [
@@ -155,6 +160,12 @@
       "Savlen",
       "Rysten",
       "Nyreproblemer (nyresvigt)"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Kuolaaminen",
+      "Vapina",
+      "Munuaisongelmat (munuaisten vajaatoiminta)"
     ]
   },
   "what_to_do": {
@@ -170,7 +181,8 @@
     "cs": "Pokud kočka okusila jakoukoli část rostliny rebarbory, zejména listy nebo kořeny, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka snědla a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
     "hr": "Ako je mačka žvakala bilo koji dio biljke rabarbare, osobito listove ili korijenje, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i kada pojela. Ne pokušavaj kod kuće izazvati povraćanje.",
     "sv": "Om katten har tuggat på någon del av en rabarberväxt, särskilt bladen eller rötterna, kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten åt och när. Försök inte få katten att kräkas hemma.",
-    "da": "Hvis din kat har tygget på en del af en rabarberplante, især bladene eller rødderne, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad den har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op."
+    "da": "Hvis din kat har tygget på en del af en rabarberplante, især bladene eller rødderne, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad den har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op.",
+    "fi": "Jos kissasi on pureskellut mitä tahansa raparperin osaa, etenkin lehtiä tai juuria, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaasi."
   },
   "serving": null,
   "child": {
@@ -186,7 +198,8 @@
     "cs": "Rebarbora není jídlo pro kočky. Rostlina rebarbory pro kočky není bezpečná, takže když ji kočička okusuje, řekni to dospělému.",
     "hr": "Rabarbara nije hrana za mačke. Biljka rabarbare nije sigurna za mačke, zato reci odrasloj osobi ako mačka nešto od nje požvače.",
     "sv": "Rabarber är ingen kattmat. Rabarberväxten är inte säker för katter, så säg till en vuxen om katten tuggar på den.",
-    "da": "Rabarber er ikke mad til katte. Rabarberplanten er ikke sikker for katte, så sig det til en voksen, hvis katten tygger på den."
+    "da": "Rabarber er ikke mad til katte. Rabarberplanten er ikke sikker for katte, så sig det til en voksen, hvis katten tygger på den.",
+    "fi": "Raparperi ei ole kissanruokaa. Raparperikasvi ei ole turvallinen kissoille, joten kerro aikuiselle, jos kisu pureskelee sitä."
   },
   "faq": [
     {
@@ -203,7 +216,8 @@
         "cs": "Která část rebarbory je nebezpečná?",
         "hr": "Koji je dio rabarbare problematičan?",
         "sv": "Vilken del av rabarbern är problemet?",
-        "da": "Hvilken del af rabarberen er farlig?"
+        "da": "Hvilken del af rabarberen er farlig?",
+        "fi": "Mikä raparperin osa aiheuttaa ongelmia?"
       },
       "a": {
         "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
@@ -218,7 +232,8 @@
         "cs": "ASPCA označuje rebarboru za toxickou pro kočky a uvádí, že nejtoxičtější jsou listy a kořeny.",
         "hr": "ASPCA biljku rabarbare navodi kao otrovnu za mačke i kaže da su listovi i korijenje najotrovniji dijelovi.",
         "sv": "ASPCA anger rabarberväxten som giftig för katter och skriver att bladen och rötterna är de mest giftiga delarna.",
-        "da": "ASPCA klassificerer rabarberplanten som giftig for katte og skriver at bladene og rødderne er de giftigste dele."
+        "da": "ASPCA klassificerer rabarberplanten som giftig for katte og skriver at bladene og rødderne er de giftigste dele.",
+        "fi": "ASPCA luokittelee raparperikasvin kissoille myrkylliseksi, ja sen mukaan lehdet ja juuret ovat kasvin myrkyllisimmät osat."
       }
     }
   ],
@@ -334,6 +349,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b08fe523cf4c35e8e2abe533e87a5b4a79a683dd01dc4bffe0516277438f1d9f"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c3cbf06ca54967015b47e5218c99dd95256bfb30d692c6edac1bab2e07f3051"
     }
   }
 }

@@ -14,7 +14,8 @@
     "cs": "Okurka",
     "hr": "Krastavac",
     "sv": "Gurka",
-    "da": "Agurk"
+    "da": "Agurk",
+    "fi": "Kurkku"
   },
   "question": {
     "en": "Can cats eat cucumber?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst okurku?",
     "hr": "Smiju li mačke jesti krastavac?",
     "sv": "Får katter äta gurka?",
-    "da": "Må katte spise agurk?"
+    "da": "Må katte spise agurk?",
+    "fi": "Saako kissa syödä kurkkua?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -44,7 +46,8 @@
     "cs": "okurka",
     "hr": "krastavac",
     "sv": "gurka",
-    "da": "agurk"
+    "da": "agurk",
+    "fi": "kurkku"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, malý kousek okurky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí okurku jako netoxickou pro kočky, ale kočky zeleninu nepotřebují a jakákoli rostlinná potrava může podráždit žaludek, takže ať je to jen malinký doplněk.",
     "hr": "Da, mali komadić krastavca bez dodataka u redu je kao povremena poslastica. ASPCA krastavac navodi kao neotrovan za mačke, ali mačkama povrće nije potrebno i bilo koja biljna tvar može nadražiti želudac, zato neka to bude samo sasvim mali dodatak.",
     "sv": "Ja, en liten bit gurka utan tillsatser går bra som en godbit då och då. ASPCA anger att gurka inte är giftig för katter, men katter behöver inte grönsaker och allt växtmaterial kan ge orolig mage, så se det som ett litet extra.",
-    "da": "Ja, et lille stykke agurk uden tilsætninger er fint som godbid af og til. ASPCA klassificerer agurk som ugiftig for katte, men katte har ikke brug for grøntsager, og planteføde generelt kan give ondt i maven, så giv kun lidt som ekstra."
+    "da": "Ja, et lille stykke agurk uden tilsætninger er fint som godbid af og til. ASPCA klassificerer agurk som ugiftig for katte, men katte har ikke brug for grøntsager, og planteføde generelt kan give ondt i maven, så giv kun lidt som ekstra.",
+    "fi": "Saa, pieni pala maustamatonta kurkkua sopii satunnaiseksi herkuksi. ASPCA luokittelee kurkun kissoille myrkyttömäksi, mutta kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -75,7 +79,8 @@
     "cs": "ASPCA uvádí okurku setou jako netoxickou pro kočky. Kočky ovoce ani zeleninu ve stravě nepotřebují, pamlsků má být málo a podle ASPCA může jakákoli rostlinná potrava u koček vyvolat zvracení a podráždění žaludku.",
     "hr": "ASPCA vrtni krastavac navodi kao neotrovan za mačke. Mačkama voće i povrće nisu potrebni u prehrani, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
     "sv": "ASPCA anger att trädgårdsgurka inte är giftig för katter. Katter behöver varken frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA noterar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
-    "da": "ASPCA klassificerer almindelig agurk som ugiftig for katte. Katte har ikke brug for frugt og grønt i kosten, godbidder bør begrænses, og ASPCA bemærker at planteføde generelt kan give opkast og ondt i maven hos katte."
+    "da": "ASPCA klassificerer almindelig agurk som ugiftig for katte. Katte har ikke brug for frugt og grønt i kosten, godbidder bør begrænses, og ASPCA bemærker at planteføde generelt kan give opkast og ondt i maven hos katte.",
+    "fi": "ASPCA luokittelee tavallisen kurkun kissoille myrkyttömäksi. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja pitää antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -106,7 +112,8 @@
     "cs": "Občas malý kousek bez dodatků, započítaný do denní dávky krmiva vaší kočky.",
     "hr": "Povremeno mali komadić bez dodataka, uračunan u dnevnu količinu hrane tvoje mačke.",
     "sv": "En liten bit gurka utan tillsatser då och då. Räkna in den i kattens dagliga matportion.",
-    "da": "Et lille stykke naturel agurk en gang imellem. Tæl det med i kattens daglige foder."
+    "da": "Et lille stykke naturel agurk en gang imellem. Tæl det med i kattens daglige foder.",
+    "fi": "Silloin tällöin pieni maustamaton pala; laske se mukaan kissasi päivittäiseen ruokamäärään."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -121,7 +128,8 @@
     "cs": "Kousek okurky může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
     "hr": "Komadić krastavca mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "En liten bit gurka kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-    "da": "Et lille stykke agurk kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+    "da": "Et lille stykke agurk kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+    "fi": "Pieni pala kurkkua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
-        "da": "Har katte brug for grøntsager?"
+        "da": "Har katte brug for grøntsager?",
+        "fi": "Tarvitsevatko kissat kasviksia?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -153,7 +162,8 @@
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -267,6 +277,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cdaf24b3df5b26448857f5e66ca50571535e2d9a1ac59a7079a9b64734f96974"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8d39c2b32dfe1352535cd63b74dcdd0f87403f466cf2d92ae55cc3fcddc9e994"
     }
   }
 }

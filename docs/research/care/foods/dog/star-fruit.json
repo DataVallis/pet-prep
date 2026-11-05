@@ -14,7 +14,8 @@
     "cs": "Karambola",
     "hr": "Karambola",
     "sv": "Stjärnfrukt",
-    "da": "Stjernefrugt"
+    "da": "Stjernefrugt",
+    "fi": "Tähtihedelmä"
   },
   "question": {
     "en": "Can dogs eat star fruit?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst karambolu?",
     "hr": "Smiju li psi jesti karambolu?",
     "sv": "Får hundar äta stjärnfrukt?",
-    "da": "Må hunde spise stjernefrugt?"
+    "da": "Må hunde spise stjernefrugt?",
+    "fi": "Saako koira syödä tähtihedelmää?"
   },
   "url_slug": {
     "en": "star-fruit",
@@ -44,7 +46,8 @@
     "cs": "karambola",
     "hr": "karambola",
     "sv": "stjarnfrukt",
-    "da": "stjernefrugt"
+    "da": "stjernefrugt",
+    "fi": "tahtihedelma"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Karambolu držte mimo dosah psů. Kyselá karambola obsahuje rozpustný šťavelan v nebezpečných koncentracích, který může způsobit zvracení, slinění, slabost, třes, nízkou hladinu vápníku v krvi a poškození ledvin.",
     "hr": "Ne. Karambolu drži podalje od pasa. Kisela karambola sadrži topivi oksalat u opasnim koncentracijama, koji može izazvati povraćanje, slinjenje, slabost, drhtanje, nisku razinu kalcija u krvi i oštećenje bubrega.",
     "sv": "Nej. Håll stjärnfrukt borta från hundar. Sur stjärnfrukt innehåller lösligt oxalat i farliga koncentrationer, vilket kan ge kräkningar, dregling, svaghet, darrningar, lågt kalcium i blodet och njurskada.",
-    "da": "Nej. Hold stjernefrugt væk fra hunde. Sur stjernefrugt indeholder opløseligt oxalat i farlige mængder, som kan give opkast, savlen, svaghed, rysten, lavt calciumindhold i blodet og nyreskade."
+    "da": "Nej. Hold stjernefrugt væk fra hunde. Sur stjernefrugt indeholder opløseligt oxalat i farlige mængder, som kan give opkast, savlen, svaghed, rysten, lavt calciumindhold i blodet og nyreskade.",
+    "fi": "Ei saa. Pidä tähtihedelmä poissa koiran ulottuvilta. Happamassa tähtihedelmässä on liukoista oksalaattia vaarallisina pitoisuuksina, ja se voi aiheuttaa oksentelua, kuolaamista, heikkoutta, vapinaa, veren kalsiumpitoisuuden laskua ja munuaisvaurioita."
   },
   "why": {
     "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
@@ -75,7 +79,8 @@
     "cs": "Podle Pet Poison Helpline může karambola u psů vést k otravě. Hlavním problémem je rozpustný šťavelan (kyselina šťavelová), který se v nebezpečných koncentracích vyskytuje v kyselé karambole. Pet Poison Helpline také uvádí, že sladká karambola obsahuje jen velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři říká, že karambola pro psy není bezpečná, proto používáme přísnější hodnocení. I malé množství může vést ke zdravotním potížím, zejména u psů s nemocnými ledvinami, a karambola může stávající potíže s ledvinami zhoršit.",
     "hr": "Pet Poison Helpline navodi da karambola kod pasa može dovesti do otrovanja. Glavni je problem topivi oksalat (oksalna kiselina), koji se u opasnim koncentracijama nalazi u kiseloj karamboli. Pet Poison Helpline također napominje da slatka karambola sadrži vrlo malo topivog oksalata i nije otrovna za ljubimce sa zdravim bubrezima, ali vodič koji je pregledao veterinar navodi da karambola nije sigurna za pse, pa primjenjujemo strožu razinu. Čak i male količine mogu dovesti do zdravstvenih problema, osobito kod pasa s tegobama s bubrezima, a karambola može pogoršati postojeće probleme s bubrezima.",
     "sv": "Pet Poison Helpline skriver att stjärnfrukt kan leda till förgiftning hos hundar. Det största problemet är lösligt oxalat (oxalsyra), som finns i farliga koncentrationer i sur stjärnfrukt. Pet Poison Helpline noterar också att söt stjärnfrukt innehåller mycket lite lösligt oxalat och inte är giftig för djur med friska njurar, men en veterinärgranskad guide skriver att stjärnfrukt inte är säker för hundar, så vi använder den strängare nivån. Redan små mängder kan ge hälsoproblem, särskilt hos hundar med njurproblem, och stjärnfrukt kan förvärra befintliga njurproblem.",
-    "da": "Pet Poison Helpline skriver at stjernefrugt kan give forgiftning hos hunde. Den største risiko er opløseligt oxalat (oxalsyre), som findes i farlige mængder i sur stjernefrugt. Pet Poison Helpline bemærker også at sød stjernefrugt indeholder meget lidt opløseligt oxalat og ikke er giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver at stjernefrugt ikke er sikker at give hunde, så vi følger den strengeste vurdering. Selv små mængder kan give helbredsproblemer, især hos hunde med nyreproblemer, og stjernefrugt kan forværre eksisterende nyreproblemer."
+    "da": "Pet Poison Helpline skriver at stjernefrugt kan give forgiftning hos hunde. Den største risiko er opløseligt oxalat (oxalsyre), som findes i farlige mængder i sur stjernefrugt. Pet Poison Helpline bemærker også at sød stjernefrugt indeholder meget lidt opløseligt oxalat og ikke er giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver at stjernefrugt ikke er sikker at give hunde, så vi følger den strengeste vurdering. Selv små mængder kan give helbredsproblemer, især hos hunde med nyreproblemer, og stjernefrugt kan forværre eksisterende nyreproblemer.",
+    "fi": "Pet Poison Helplinen mukaan tähtihedelmä voi aiheuttaa koiralle myrkytyksen. Suurin huolenaihe on liukoinen oksalaatti (oksaalihappo), jota on vaarallisina pitoisuuksina happamassa tähtihedelmässä. Pet Poison Helpline toteaa myös, että makeassa tähtihedelmässä on hyvin vähän liukoista oksalaattia eikä se ole myrkyllinen lemmikeille, joiden munuaiset ovat terveet, mutta eläinlääkärin tarkastaman oppaan mukaan tähtihedelmä ei ole koirille turvallinen, joten noudatamme tiukempaa luokitusta. Jo pienet määrät voivat aiheuttaa terveysongelmia etenkin koirille, joilla on munuaisvaivoja, ja tähtihedelmä voi pahentaa olemassa olevia munuaisongelmia."
   },
   "signs": {
     "en": [
@@ -181,6 +186,14 @@
       "Rysten",
       "Lavt calciumindhold i blodet",
       "Tegn på nyreskade, fx at hunden tisser meget"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Kuolaaminen",
+      "Heikkous",
+      "Vapina",
+      "Veren kalsiumpitoisuuden lasku",
+      "Munuaisvaurion oireet, kuten runsas virtsaaminen"
     ]
   },
   "what_to_do": {
@@ -196,7 +209,8 @@
     "cs": "Odstraňte zbylou karambolu a okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, zejména pokud má pes potíže s ledvinami. Příznaky se mohou objevit během několika hodin.",
     "hr": "Ukloni preostalu karambolu i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, osobito ako pas ima tegobe s bubrezima. Znakovi se mogu pojaviti u roku od nekoliko sati.",
     "sv": "Ta bort eventuella rester av stjärnfrukten och kontakta veterinären eller en giftrådgivning för djur direkt, särskilt om hunden har njurproblem. Tecken kan visa sig inom några timmar.",
-    "da": "Fjern resterne af stjernefrugten, og kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, især hvis din hund har nyreproblemer. Symptomer kan opstå inden for et par timer."
+    "da": "Fjern resterne af stjernefrugten, og kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, især hvis din hund har nyreproblemer. Symptomer kan opstå inden for et par timer.",
+    "fi": "Vie jäljellä oleva tähtihedelmä pois koiran ulottuvilta ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, etenkin jos koirallasi on munuaisongelmia. Oireet voivat ilmaantua muutaman tunnin kuluessa."
   },
   "serving": null,
   "child": {
@@ -212,7 +226,8 @@
     "cs": "Karambola není pamlsek pro psy. Když ji pes sní, hned to řekni dospělému.",
     "hr": "Karambola nije poslastica za pse. Ako pas pojede malo, odmah reci odrasloj osobi.",
     "sv": "Stjärnfrukt är ingen hundgodbit. Om hunden äter av den, säg till en vuxen direkt.",
-    "da": "Stjernefrugt er ikke en godbid til hunde. Hvis din hund spiser noget af den, så sig det til en voksen med det samme."
+    "da": "Stjernefrugt er ikke en godbid til hunde. Hvis din hund spiser noget af den, så sig det til en voksen med det samme.",
+    "fi": "Tähtihedelmä ei ole koiran herkku. Jos koirasi syö sitä, kerro heti aikuiselle."
   },
   "faq": [
     {
@@ -229,7 +244,8 @@
         "cs": "Je sladká karambola pro psy bezpečná?",
         "hr": "Je li slatka karambola sigurna za pse?",
         "sv": "Är söt stjärnfrukt säker för hundar?",
-        "da": "Er sød stjernefrugt ufarlig for hunde?"
+        "da": "Er sød stjernefrugt ufarlig for hunde?",
+        "fi": "Onko makea tähtihedelmä turvallinen koirille?"
       },
       "a": {
         "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
@@ -244,7 +260,8 @@
         "cs": "Sladká karambola obsahuje velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři přesto říká, že karambola pro psy není bezpečná, proto je nejlepší se jí vyhnout.",
         "hr": "Slatka karambola sadrži vrlo malo topivog oksalata i nije otrovna za ljubimce sa zdravim bubrezima, ali vodič koji je pregledao veterinar ipak navodi da karambola nije sigurna za pse, pa je najbolje izbjegavati je.",
         "sv": "Söt stjärnfrukt innehåller mycket lite lösligt oxalat och är inte giftig för djur med friska njurar, men en veterinärgranskad guide skriver ändå att stjärnfrukt inte är säker för hundar, så det är bäst att undvika den.",
-        "da": "Sød stjernefrugt indeholder meget lidt opløseligt oxalat og er ikke giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver alligevel at stjernefrugt ikke er sikker at give hunde, så den bør undgås."
+        "da": "Sød stjernefrugt indeholder meget lidt opløseligt oxalat og er ikke giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver alligevel at stjernefrugt ikke er sikker at give hunde, så den bør undgås.",
+        "fi": "Makeassa tähtihedelmässä on hyvin vähän liukoista oksalaattia, eikä se ole myrkyllinen lemmikeille, joiden munuaiset ovat terveet. Eläinlääkärin tarkastaman oppaan mukaan tähtihedelmä ei silti ole koirille turvallinen, joten sitä on parasta välttää."
       }
     }
   ],
@@ -377,6 +394,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a6a8ae062ee38749729c8415a66e4708d4f9b853076d3f16b33ca4457e9cee9d"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5e5d5fc3e21cd3f2f469a25824c648ed1a97f0ed651045c1f8ef6eff10a4cab8"
     }
   }
 }
