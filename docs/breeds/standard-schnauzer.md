@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `standard_schnauzer` (viri S711–S720; ponovno S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: RKC (`listed`) — genetska raznolikost (minimum), DNA test za DCM in rentgen kolkov BVA/KC (dobra praksa) |
 | Izvor | FCI št. 182 »Schnauzer«, skupina 2, sekcija 1 (pinčem in šnavcerjem podobni psi), Nemčija (S711, S712) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 91. mesto »Standard Schnauzer« (S174, prebrano 2026-11-05) |
-| PR-ji | pet-prep #758 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #758 (pasma, združen `7995bad`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 41960080045, koda `7995bad`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-standard-schnauzer` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca; 4 → 3 → 2 obroka; učenje 1,5×) | 🛠 | 💶 izziv | M5-R10-95 | 2026-11-05 |
 | Česanje 3× na teden, »Nova izkušnja« za mladička, striženje krempljev in čiščenje ušes 1× na teden, opomnika staršu za kopanje (4 tedni) in frizerja (12 tednov) | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R18 / M5-R19 / M5-R20 | 2026-11-05 |
 | Barva (izbirnik: 2 barvi standarda — poper in sol, črn) | 🛠 | 💶 izziv | M5-R21 | 2026-11-05 |
-| AI portret v registru | 🗓 po naslednji produkcijski objavi | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; poper in sol, naravna ušesa in rep) | — | M5-R11-04 | 2026-11-05 |
 | Stran na petprep.si (`/animals/dogs/standard-schnauzer`, `/sl/zivali/psi/srednji-snavcer`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -61,4 +61,4 @@
 - **Izpadanje dlake:** viri si nasprotujejo (RKC »Sheds: Yes« proti VCA »below average« in PetMD »minimal«) → ni čipa ne »izpada mu dlaka« ne »malo izpada«. Odločite, če želite enega.
 - **Izkušen lastnik — dejstvo brez čipa:** PetMD (S717) piše »This breed does best with patient, experienced pet parents.«, PDSA (S715) »They can be stubborn …«, VCA (S716) »can be quite headstrong«. Čip `experienced_owner` (»močan pes — potrebuje izkušenega lastnika«) se z besedilom ne ujema, za `independent_experienced_owner` (»samostojen in trmast — najbolje z izkušenim lastnikom«) pa ni enega citata, ki bi povezal oboje (pri shiba inu: AKC »Due to their stubborn nature, a Shiba Inu is a better pick for an experienced dog owner.«). Zato pasma nima čipa za lastnika — odločite, ali želite `independent_experienced_owner` (ali nov ključ).
 - **Zdravstveno besedilo za kožo:** ključ `skin_comedo_allergy` (kot pri pritlikavem šnavcerju) omenja tudi kožne alergije, viri za srednjega šnavcerja pa navajajo le Schnauzer comedo sindrom (folikularni dermatitis). Morda nov, ožji ključ — odločite.
-- **Portret in spletna stran:** sledita (ločena PR-ja).
+- **Portret:** narejen 2026-11-05 (zagon 41960080045, brez produkcijske namestitve), sprejet v prvem poskusu. **Spletna stran:** sledi (ločen PR, šele s portretom).
