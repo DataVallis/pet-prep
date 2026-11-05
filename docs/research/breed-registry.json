@@ -57,7 +57,7 @@
     },
     "app_release": {
       "path": "docs/research/app-release.json",
-      "sha256": "d18f5a48c44d92a225c23e77b347cab0c399fc1c6817b621a428a873f66e1e14"
+      "sha256": "363e51bb1babec06ebc8ae81f0efab9f0489a2a98dcb6ad4e29b772d1e3a9fbc"
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
@@ -52744,7 +52744,7 @@
       "id": "keeshond",
       "species": "dog",
       "order": 87,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Keeshond",
         "sl": "Keeshond"
@@ -53272,7 +53272,7 @@
       "id": "standard_schnauzer",
       "species": "dog",
       "order": 88,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Standard Schnauzer",
         "sl": "Srednji šnavcer"
@@ -53894,7 +53894,7 @@
       "id": "coton_de_tulear",
       "species": "dog",
       "order": 89,
-      "availability": "coming_soon",
+      "availability": "in_app",
       "name": {
         "en": "Coton de Tulear",
         "sl": "Coton de Tulear"
