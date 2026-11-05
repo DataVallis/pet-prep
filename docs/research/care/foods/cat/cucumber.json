@@ -15,7 +15,8 @@
     "hr": "Krastavac",
     "sv": "Gurka",
     "da": "Agurk",
-    "fi": "Kurkku"
+    "fi": "Kurkku",
+    "nb": "Agurk"
   },
   "question": {
     "en": "Can cats eat cucumber?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li mačke jesti krastavac?",
     "sv": "Får katter äta gurka?",
     "da": "Må katte spise agurk?",
-    "fi": "Saako kissa syödä kurkkua?"
+    "fi": "Saako kissa syödä kurkkua?",
+    "nb": "Kan katter spise agurk?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -47,7 +49,8 @@
     "hr": "krastavac",
     "sv": "gurka",
     "da": "agurk",
-    "fi": "kurkku"
+    "fi": "kurkku",
+    "nb": "agurk"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, mali komadić krastavca bez dodataka u redu je kao povremena poslastica. ASPCA krastavac navodi kao neotrovan za mačke, ali mačkama povrće nije potrebno i bilo koja biljna tvar može nadražiti želudac, zato neka to bude samo sasvim mali dodatak.",
     "sv": "Ja, en liten bit gurka utan tillsatser går bra som en godbit då och då. ASPCA anger att gurka inte är giftig för katter, men katter behöver inte grönsaker och allt växtmaterial kan ge orolig mage, så se det som ett litet extra.",
     "da": "Ja, et lille stykke agurk uden tilsætninger er fint som godbid af og til. ASPCA klassificerer agurk som ugiftig for katte, men katte har ikke brug for grøntsager, og planteføde generelt kan give ondt i maven, så giv kun lidt som ekstra.",
-    "fi": "Saa, pieni pala maustamatonta kurkkua sopii satunnaiseksi herkuksi. ASPCA luokittelee kurkun kissoille myrkyttömäksi, mutta kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä."
+    "fi": "Saa, pieni pala maustamatonta kurkkua sopii satunnaiseksi herkuksi. ASPCA luokittelee kurkun kissoille myrkyttömäksi, mutta kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä.",
+    "nb": "Ja, en liten bit agurk uten tilsetninger er greit som en godbit en gang iblant. ASPCA oppgir agurk som ikke giftig for katter, men katter trenger ikke grønnsaker, og alt plantemateriale kan gi urolig mage, så la det bare være et lite tillegg."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "hr": "ASPCA vrtni krastavac navodi kao neotrovan za mačke. Mačkama voće i povrće nisu potrebni u prehrani, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
     "sv": "ASPCA anger att trädgårdsgurka inte är giftig för katter. Katter behöver varken frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA noterar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
     "da": "ASPCA klassificerer almindelig agurk som ugiftig for katte. Katte har ikke brug for frugt og grønt i kosten, godbidder bør begrænses, og ASPCA bemærker at planteføde generelt kan give opkast og ondt i maven hos katte.",
-    "fi": "ASPCA luokittelee tavallisen kurkun kissoille myrkyttömäksi. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja pitää antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
+    "fi": "ASPCA luokittelee tavallisen kurkun kissoille myrkyttömäksi. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja pitää antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja.",
+    "nb": "ASPCA oppgir hageagurk som ikke giftig for katter. Katter trenger ikke frukt eller grønnsaker i kostholdet, godbiter bør gis sjelden, og ASPCA påpeker at alt plantemateriale kan gi oppkast og urolig mage hos katter."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
     "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
-    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä.",
+    "nb": "Begynn med en liten bit. Hvis katten kaster opp eller får urolig mage etterpå, slutt å gi katten agurk og spør dyrlegen."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -113,7 +119,8 @@
     "hr": "Povremeno mali komadić bez dodataka, uračunan u dnevnu količinu hrane tvoje mačke.",
     "sv": "En liten bit gurka utan tillsatser då och då. Räkna in den i kattens dagliga matportion.",
     "da": "Et lille stykke naturel agurk en gang imellem. Tæl det med i kattens daglige foder.",
-    "fi": "Silloin tällöin pieni maustamaton pala; laske se mukaan kissasi päivittäiseen ruokamäärään."
+    "fi": "Silloin tällöin pieni maustamaton pala; laske se mukaan kissasi päivittäiseen ruokamäärään.",
+    "nb": "En liten bit uten tilsetninger nå og da, som regnes med i kattens daglige matmengde."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "hr": "Komadić krastavca mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "En liten bit gurka kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
     "da": "Et lille stykke agurk kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
-    "fi": "Pieni pala kurkkua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
+    "fi": "Pieni pala kurkkua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä.",
+    "nb": "En liten bit agurk kan være en godbit for pusen nå og da. Katter trenger mest kjøtt, så grønnsaker er bare et lite tillegg."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
         "da": "Har katte brug for grøntsager?",
-        "fi": "Tarvitsevatko kissat kasviksia?"
+        "fi": "Tarvitsevatko kissat kasviksia?",
+        "nb": "Trenger katter grønnsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -163,7 +172,8 @@
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
-        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
+        "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg."
       }
     }
   ],
@@ -282,6 +292,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8d39c2b32dfe1352535cd63b74dcdd0f87403f466cf2d92ae55cc3fcddc9e994"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1c2533e9666eb7e78a107b0a2659ed45c9d32d01368d198473fcdfa779a5f93e"
     }
   }
 }

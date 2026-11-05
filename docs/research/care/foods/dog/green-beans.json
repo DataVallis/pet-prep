@@ -15,7 +15,8 @@
     "hr": "Zelene mahune",
     "sv": "Gröna bönor",
     "da": "Grønne bønner",
-    "fi": "Vihreät pavut"
+    "fi": "Vihreät pavut",
+    "nb": "Grønne bønner"
   },
   "question": {
     "en": "Can dogs eat green beans?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti zelene mahune?",
     "sv": "Får hundar äta gröna bönor?",
     "da": "Må hunde spise grønne bønner?",
-    "fi": "Saako koira syödä vihreitä papuja?"
+    "fi": "Saako koira syödä vihreitä papuja?",
+    "nb": "Kan hunder spise grønne bønner?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -47,7 +49,8 @@
     "hr": "zelene-mahune",
     "sv": "grona-bonor",
     "da": "gronne-bonner",
-    "fi": "vihreat-pavut"
+    "fi": "vihreat-pavut",
+    "nb": "gronne-bonner"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da. Zelene mahune bez dodataka, sirove ili termički obrađene, sigurne su za većinu pasa u umjerenim količinama i poslastica su s malo kalorija. Nikad ne daj zelene mahune s dodanom soli, maslacem, češnjakom ili drugim začinima.",
     "sv": "Ja. Gröna bönor utan tillsatser, råa eller kokta, är säkra för de flesta hundar med måtta och ger en kalorisnål godbit. Ge aldrig gröna bönor med tillsatt salt, smör, vitlök eller andra kryddor.",
     "da": "Ja. Grønne bønner uden tilsætninger, rå eller kogte, er ufarlige for de fleste hunde i moderate mængder og en godbid med få kalorier. Giv aldrig grønne bønner med tilsat salt, smør, hvidløg eller andre krydderier.",
-    "fi": "Saa. Maustamattomat vihreät pavut ovat kohtuullisina määrinä turvallisia useimmille koirille raakoina tai kypsennettyinä, ja ne ovat vähäkalorinen herkku. Älä koskaan anna vihreitä papuja, joihin on lisätty suolaa, voita, valkosipulia tai muita mausteita."
+    "fi": "Saa. Maustamattomat vihreät pavut ovat kohtuullisina määrinä turvallisia useimmille koirille raakoina tai kypsennettyinä, ja ne ovat vähäkalorinen herkku. Älä koskaan anna vihreitä papuja, joihin on lisätty suolaa, voita, valkosipulia tai muita mausteita.",
+    "nb": "Ja. Grønne bønner uten tilsetninger, rå eller kokte, er trygge for de fleste hunder i moderate mengder og en kalorifattig godbit. Gi aldri grønne bønner med tilsatt salt, smør, hvitløk eller annet krydder."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -80,7 +84,8 @@
     "hr": "Zelene mahune sadrže vitamine, minerale i vlakna te imaju malo kalorija; dodatni volumen i vlakna pomažu psu da se osjeća sit, a da ne unese mnogo kalorija. Mnoge zelene mahune iz konzerve sadrže mnogo dodane soli, a uobičajena jela od zelenih mahuna za ljude nisu sigurna za pse.",
     "sv": "Gröna bönor innehåller vitaminer, mineraler och fibrer och är kalorisnåla; volymen och fibrerna hjälper hunden att känna sig mätt utan att tillföra många kalorier. Många gröna bönor på burk innehåller mycket tillsatt salt, och vanliga recept på gröna bönor för människor passar inte hundar.",
     "da": "Grønne bønner indeholder vitaminer, mineraler og fibre og har få kalorier. Volumen og fibrene gør at hunden føler sig mæt uden at få mange kalorier. Mange grønne bønner på dåse indeholder store mængder tilsat salt, og almindelige opskrifter med grønne bønner til mennesker er ikke ufarlige for hunde.",
-    "fi": "Vihreissä pavuissa on vitamiineja, kivennäisaineita ja kuitua mutta vähän kaloreita; niiden täyttävyys ja kuitu auttavat koiraa pysymään kylläisenä ilman paljon lisäkaloreita. Monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa, eivätkä ihmisille tehdyt tavalliset papuruoat ole koirille turvallisia."
+    "fi": "Vihreissä pavuissa on vitamiineja, kivennäisaineita ja kuitua mutta vähän kaloreita; niiden täyttävyys ja kuitu auttavat koiraa pysymään kylläisenä ilman paljon lisäkaloreita. Monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa, eivätkä ihmisille tehdyt tavalliset papuruoat ole koirille turvallisia.",
+    "nb": "Grønne bønner gir vitaminer, mineraler og fiber og har få kalorier. Volumet og fibrene hjelper hunden å føle seg mett uten at den får i seg mange kalorier. Mange grønne bønner på boks inneholder mye tilsatt salt, og grønne bønner tilberedt slik de vanligvis lages til mennesker, er ikke trygge for hunder."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Prije nego što psu daš zelene mahune, pitaj veterinara. Nikad ne daj zelene mahune kuhane s češnjakom ili solju od češnjaka.",
     "sv": "Fråga din veterinär innan du ger hunden gröna bönor. Ge aldrig gröna bönor som har tillagats med vitlök eller vitlökssalt.",
     "da": "Spørg din dyrlæge før du giver hunden grønne bønner. Giv aldrig grønne bønner, der er tilberedt med hvidløg eller hvidløgssalt.",
-    "fi": "Kysy eläinlääkäriltä, ennen kuin annat koirallesi vihreitä papuja. Älä koskaan anna vihreitä papuja, jotka on kypsennetty valkosipulin tai valkosipulisuolan kanssa."
+    "fi": "Kysy eläinlääkäriltä, ennen kuin annat koirallesi vihreitä papuja. Älä koskaan anna vihreitä papuja, jotka on kypsennetty valkosipulin tai valkosipulisuolan kanssa.",
+    "nb": "Spør dyrlegen før du gir hunden grønne bønner. Gi aldri grønne bønner som er tilberedt med hvitløk eller hvitløkssalt."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -113,7 +119,8 @@
     "hr": "Daj ih sirove, kuhane u vodi ili na pari, ali neka ostanu bez dodataka. Izbjegavaj zelene mahune iz konzerve i sve pripremljene s maslacem, češnjakom, solju od češnjaka ili drugim začinima.",
     "sv": "Servera dem råa, kokta i vatten eller ångade, men utan tillsatser. Undvik gröna bönor på burk och bönor som har tillagats med smör, vitlök, vitlökssalt eller andra kryddor.",
     "da": "Server dem rå, kogt i vand eller dampet, men uden tilsætninger. Undgå grønne bønner på dåse og bønner tilberedt med smør, hvidløg, hvidløgssalt eller andre krydderier.",
-    "fi": "Anna ne raakoina, vedessä keitettyinä tai höyrytettyinä, mutta maustamattomina. Vältä säilöttyjä vihreitä papuja ja papuja, joiden valmistuksessa on käytetty voita, valkosipulia, valkosipulisuolaa tai muita mausteita."
+    "fi": "Anna ne raakoina, vedessä keitettyinä tai höyrytettyinä, mutta maustamattomina. Vältä säilöttyjä vihreitä papuja ja papuja, joiden valmistuksessa on käytetty voita, valkosipulia, valkosipulisuolaa tai muita mausteita.",
+    "nb": "Server dem rå, kokt i vann eller dampet, men uten tilsetninger. Unngå grønne bønner på boks og bønner tilberedt med smør, hvitløk, hvitløkssalt eller annet krydder."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -129,7 +136,8 @@
     "hr": "Zelene mahune bez dodataka hrskava su poslastica za pse. Zelene mahune kuhane s češnjakom ili maslacem nisu za pse.",
     "sv": "Gröna bönor utan tillsatser är en knaprig hundgodbit. Bönor som har tillagats med vitlök eller smör passar inte hundar.",
     "da": "Grønne bønner uden tilsætninger er en sprød godbid til hunde. Bønner kogt med hvidløg eller smør er ikke til hunde.",
-    "fi": "Maustamattomat vihreät pavut ovat koiralle rapea herkku. Valkosipulin tai voin kanssa kypsennetyt pavut eivät ole koirille."
+    "fi": "Maustamattomat vihreät pavut ovat koiralle rapea herkku. Valkosipulin tai voin kanssa kypsennetyt pavut eivät ole koirille.",
+    "nb": "Grønne bønner uten salt og krydder er en sprø godbit for hunder. Bønner kokt med hvitløk eller smør er ikke for hunder."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti zelene mahune iz konzerve?",
         "sv": "Får hundar äta gröna bönor på burk?",
         "da": "Må hunde spise grønne bønner på dåse?",
-        "fi": "Saako koira syödä vihreitä papuja purkista?"
+        "fi": "Saako koira syödä vihreitä papuja purkista?",
+        "nb": "Kan hunder spise grønne bønner på boks?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -163,7 +172,8 @@
         "hr": "Najbolje ih je izbjegavati, jer mnoge zelene mahune iz konzerve sadrže mnogo dodane soli.",
         "sv": "Det är bäst att undvika dem, eftersom många gröna bönor på burk innehåller mycket tillsatt salt.",
         "da": "Det er bedst at undgå dem, fordi mange grønne bønner på dåse indeholder store mængder tilsat salt.",
-        "fi": "Niitä on parasta välttää, koska monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa."
+        "fi": "Niitä on parasta välttää, koska monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa.",
+        "nb": "Det er best å unngå dem, for mange grønne bønner på boks inneholder mye tilsatt salt."
       }
     }
   ],
@@ -301,6 +311,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f375ebbc17a4ea37fbcc09c8e9d2aaad35932cf631d6453868f313b1652951cd"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d077f8cfdc6dbcc3d415296795eae1bbb6f1c495df3d33f7f2b7fd43a5d67257"
     }
   }
 }

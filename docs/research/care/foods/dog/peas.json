@@ -15,7 +15,8 @@
     "hr": "Grašak",
     "sv": "Ärtor",
     "da": "Ærter",
-    "fi": "Herneet"
+    "fi": "Herneet",
+    "nb": "Erter"
   },
   "question": {
     "en": "Can dogs eat peas?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti grašak?",
     "sv": "Får hundar äta ärtor?",
     "da": "Må hunde spise ærter?",
-    "fi": "Saako koira syödä herneitä?"
+    "fi": "Saako koira syödä herneitä?",
+    "nb": "Kan hunder spise erter?"
   },
   "url_slug": {
     "en": "peas",
@@ -47,7 +49,8 @@
     "hr": "grasak",
     "sv": "artor",
     "da": "aerter",
-    "fi": "herneet"
+    "fi": "herneet",
+    "nb": "erter"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, kao povremena poslastica. Zeleni grašak nije otrovan za pse, ni onaj čija se mahuna jede, ni vrtni grašak koji se ljušti. Daj ga svježeg ili smrznutog, ali ne iz konzerve, jer grašak iz konzerve obično sadrži mnogo dodanog natrija.",
     "sv": "Ja, som en godbit då och då. Gröna ärtor, även sockerärtor, snöärtor och trädgårdsärtor, är inte giftiga för hundar. Ge dem färska eller frysta, men inte ärtor på burk, eftersom de oftast innehåller mycket tillsatt natrium.",
     "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium.",
-    "fi": "Saa, satunnaisena herkkuna. Vihreät herneet, kuten lumi-, sokeri- ja silpoherneet, eivät ole koirille myrkyllisiä. Anna niitä tuoreina tai pakastettuina mutta ei säilykkeinä, koska säilykeherneissä on yleensä paljon lisättyä natriumia."
+    "fi": "Saa, satunnaisena herkkuna. Vihreät herneet, kuten lumi-, sokeri- ja silpoherneet, eivät ole koirille myrkyllisiä. Anna niitä tuoreina tai pakastettuina mutta ei säilykkeinä, koska säilykeherneissä on yleensä paljon lisättyä natriumia.",
+    "nb": "Ja, som en godbit av og til. Grønne erter, også snøerter, sukkererter og palerter, er ikke giftige for hunder. Gi dem ferske eller frosne, men ikke på boks, for erter på boks inneholder vanligvis mye tilsatt natrium."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -80,7 +84,8 @@
     "hr": "Grašak nije otrovan za pse, ali voće i povrće nisu nužni u prehrani psa i trebaju biti samo povremena poslastica. Grašak iz konzerve obično sadrži mnogo dodanog natrija, koji je štetan za pse. Mahune graška mogu zaglaviti psu u grlu i izazvati gušenje.",
     "sv": "Ärtor är inte giftiga för hundar, men frukt och grönsaker behövs inte i hundens kost och bör ses som en godbit då och då. Ärtor på burk innehåller oftast mycket tillsatt natrium, vilket är skadligt för hundar. Ärtskidor kan fastna i hundens hals och orsaka kvävning.",
     "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals.",
-    "fi": "Herneet eivät ole koirille myrkyllisiä, mutta hedelmät ja kasvikset eivät ole koiran ruokavaliossa välttämättömiä, ja niitä kannattaa pitää satunnaisena herkkuna. Säilykeherneissä on yleensä paljon lisättyä natriumia, joka on koirille haitallista. Palot voivat juuttua koiran kurkkuun ja aiheuttaa tukehtumisen."
+    "fi": "Herneet eivät ole koirille myrkyllisiä, mutta hedelmät ja kasvikset eivät ole koiran ruokavaliossa välttämättömiä, ja niitä kannattaa pitää satunnaisena herkkuna. Säilykeherneissä on yleensä paljon lisättyä natriumia, joka on koirille haitallista. Palot voivat juuttua koiran kurkkuun ja aiheuttaa tukehtumisen.",
+    "nb": "Erter er ikke giftige for hunder, men frukt og grønnsaker er ikke nødvendige i hundens kosthold og bør regnes som en godbit av og til. Erter på boks inneholder vanligvis mye tilsatt natrium, som er skadelig for hunder. Belger kan sette seg fast i halsen på en hund og gi kvelningsfare."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Kao i kod svake nove hrane, prati ima li pas reakcije poput proljeva ili povraćanja.",
     "sv": "Som med all ny mat: håll utkik efter reaktioner som diarré eller kräkningar.",
     "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast.",
-    "fi": "Kun koira syö jotain uutta, seuraa aina, ilmeneekö sillä reaktioita, kuten ripulia tai oksentelua."
+    "fi": "Kun koira syö jotain uutta, seuraa aina, ilmeneekö sillä reaktioita, kuten ripulia tai oksentelua.",
+    "nb": "Som med all ny mat: følg med på om hunden reagerer, for eksempel med diaré eller oppkast."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -113,7 +119,8 @@
     "hr": "Samo svjež, smrznut ili odmrznut grašak, nikad iz konzerve. Vrtni grašak uvijek oljušti, a s mahunama pazi, jer mogu izazvati gušenje.",
     "sv": "Bara färska, frysta eller upptinade ärtor, aldrig ärtor på burk. Ta alltid ut trädgårdsärtorna ur skidorna och var försiktig med ärtskidor, som kan orsaka kvävning.",
     "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen.",
-    "fi": "Vain tuoreita, pakastettuja tai sulatettuja herneitä, ei koskaan säilykkeitä. Silpoherneet pitää aina kuoria, ja palkojen kanssa kannattaa olla varovainen, koska ne voivat aiheuttaa tukehtumisen."
+    "fi": "Vain tuoreita, pakastettuja tai sulatettuja herneitä, ei koskaan säilykkeitä. Silpoherneet pitää aina kuoria, ja palkojen kanssa kannattaa olla varovainen, koska ne voivat aiheuttaa tukehtumisen.",
+    "nb": "Bare ferske, frosne eller tinte erter, aldri på boks. Palerter skal alltid pales før du gir dem til hunden, og vær forsiktig med belger, som kan gi kvelningsfare."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -129,7 +136,8 @@
     "hr": "Psi smiju dobiti nekoliko zrna graška kao poslasticu. Odrasla osoba prvo oljušti vrtni grašak.",
     "sv": "Hundar kan få några ärtor som godbit. En vuxen tar först ut trädgårdsärtorna ur skidorna.",
     "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene.",
-    "fi": "Koira saa muutaman herneen herkuksi. Aikuinen ottaa ensin silpoherneet pois palkojen sisältä."
+    "fi": "Koira saa muutaman herneen herkuksi. Aikuinen ottaa ensin silpoherneet pois palkojen sisältä.",
+    "nb": "Hunder kan få noen få erter som godbit. En voksen tar først ertene ut av belgene."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li psi jesti mahune graška?",
         "sv": "Får hundar äta ärtskidor?",
         "da": "Må hunde spise ærtebælge?",
-        "fi": "Saako koira syödä herneenpalkoja?"
+        "fi": "Saako koira syödä herneenpalkoja?",
+        "nb": "Kan hunder spise ertebelger?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -163,7 +172,8 @@
         "hr": "Ako ljudi mogu jesti mahunu, može je jesti i tvoj pas, ali pazi: mahune mogu zaglaviti u grlu i izazvati gušenje. Vrtni grašak uvijek treba oljuštiti.",
         "sv": "Om skidan går att äta för människor går den också bra för hunden, men var försiktig: ärtskidor kan fastna i halsen och orsaka kvävning. Trädgårdsärtor ska alltid tas ur skidorna.",
         "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles.",
-        "fi": "Jos palko on ihmiselle syötävä, myös koira voi syödä sen, mutta ole varovainen: palot voivat juuttua kurkkuun ja aiheuttaa tukehtumisen. Silpoherneet pitää aina kuoria."
+        "fi": "Jos palko on ihmiselle syötävä, myös koira voi syödä sen, mutta ole varovainen: palot voivat juuttua kurkkuun ja aiheuttaa tukehtumisen. Silpoherneet pitää aina kuoria.",
+        "nb": "Hvis belgen er spiselig for mennesker, kan hunden din også få den, men vær forsiktig: belger kan sette seg fast i halsen og gi kvelningsfare. Palerter må alltid pales."
       }
     },
     {
@@ -181,7 +191,8 @@
         "hr": "Je li grašak u hrani za pse problem?",
         "sv": "Är ärtor i hundfoder ett problem?",
         "da": "Er ærter i hundefoder et problem?",
-        "fi": "Ovatko koiranruoan herneet ongelma?"
+        "fi": "Ovatko koiranruoan herneet ongelma?",
+        "nb": "Er erter i hundefôr et problem?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -197,7 +208,8 @@
         "hr": "Istraživanja o tome ima li grašak ulogu u bolestima srca kod pasa još traju. Ako je tvoj pas jeo hranu u kojoj je grašak glavni sastojak, možda želiš razgovarati s veterinarom.",
         "sv": "Forskning pågår om huruvida ärtor kan bidra till hjärtsjukdom hos hundar. Om hunden har ätit foder med ärtor som huvudingrediens kan det vara bra att prata med veterinären.",
         "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge.",
-        "fi": "Edelleen tutkitaan, onko herneillä osuutta koirien sydänsairauksiin. Jos koirasi on syönyt ruokaa, jonka pääainesosa on herne, voi olla hyvä keskustella asiasta eläinlääkärin kanssa."
+        "fi": "Edelleen tutkitaan, onko herneillä osuutta koirien sydänsairauksiin. Jos koirasi on syönyt ruokaa, jonka pääainesosa on herne, voi olla hyvä keskustella asiasta eläinlääkärin kanssa.",
+        "nb": "Det forskes fortsatt på om erter spiller en rolle for hjertesykdom hos hunder. Hvis hunden din har fått fôr der erter er en hovedingrediens, kan det være lurt å snakke med dyrlegen."
       }
     }
   ],
@@ -323,6 +335,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c4fd43591ed66ae048ae8ad3e0657db53fc22783f3c29250ca4fb3885ba9e897"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "71524503ce2bdda43d0402f8a4579adf58e17daea3cca0f3a21fd39aa1f8fe22"
     }
   }
 }
