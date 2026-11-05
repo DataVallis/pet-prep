@@ -43,6 +43,9 @@
       "phone": "+421 905 579 559",
       "emergency_24h": false,
       "duty": "Mon–Fri 8:30–12:00 and 13:00–15:15; weekdays 15:30–20:00 reception +421 915 991 474; weekdays 20:00–8:00 emergency +421 905 579 559; Sat–Sun nonstop emergency. A veterinarian is always on site; emergency surcharge applies.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–12 in 13–15.15; ob delavnikih 15.30–20 sprejem +421 915 991 474; ob delavnikih 20–8 nujna pomoč +421 905 579 559; sob–ned nepretrgana nujna pomoč. Veterinar je vedno prisoten; velja doplačilo za nujne primere."
+      },
       "small_animals": true,
       "url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat",
       "source_url": "https://www.uvlf.sk/organizacna-struktura/univerzitna-veterinarna-nemocnica/klinika-malych-zvierat/otvaracie-hodiny",
@@ -59,6 +62,9 @@
       "phone": "+421 905 579 559",
       "emergency_24h": false,
       "duty": "Small-animal emergency service 20:00-8:00 (+421 905 579 559); 15:30-20:00 reception +421 915 991 474. Horse clinic 24 h on non-working days.",
+      "duty_i18n": {
+        "sl": "Nujna služba za male živali 20–8 (+421 905 579 559); 15.30–20 sprejem +421 915 991 474. Konjska klinika 24 ur na dan ob nedelavnih dneh."
+      },
       "small_animals": true,
       "url": "https://www.uvlf.sk/kliniky-sluzby/pohotovost",
       "source_url": "https://www.uvlf.sk/kliniky-sluzby/pohotovost",
@@ -75,6 +81,9 @@
       "phone": "+421 2 5441 2869",
       "emergency_24h": true,
       "duty": "24/7 emergency, including night shifts.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24/7, tudi ponoči."
+      },
       "small_animals": true,
       "url": "https://vetline.sk/",
       "source_url": "https://vetline.sk/",
@@ -91,6 +100,9 @@
       "phone": "+421 949 247 294",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-20:00; weekday evenings/nights 20:00-9:00 on call; Sat, Sun and holidays round-the-clock on call (surcharge).",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20; ob delavnikih zvečer in ponoči 20–9 v pripravljenosti; sob, ned in prazniki neprekinjena pripravljenost (doplačilo)."
+      },
       "small_animals": true,
       "url": "https://www.smallvet.sk/",
       "source_url": "https://www.smallvet.sk/kontakty/",
@@ -107,6 +119,9 @@
       "phone": "+421 911 55 50 55",
       "emergency_24h": false,
       "duty": "Mon–Sun 8:00–20:00; non-stop operation also advertised. Call ahead.",
+      "duty_i18n": {
+        "sl": "pon–ned 8–20; oglašujejo tudi nepretrgano delovanje. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://marfilvet.sk/",
       "source_url": "https://marfilvet.sk/",
@@ -123,6 +138,9 @@
       "phone": "+421 2 2051 2095",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-19:00, Sat 9:00-14:00, Sun 9:00-12:00; emergency by phone arrangement daily until 24:00, afterwards only hospitalised animals.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 9–14, ned 9–12; nujna pomoč po telefonskem dogovoru vsak dan do 24, nato samo hospitalizirane živali."
+      },
       "small_animals": true,
       "url": "https://www.primavet.sk/",
       "source_url": "https://www.primavet.sk/",
@@ -138,6 +156,9 @@
       "phone": "+421 2 2211 3113",
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-24:00, Sat-Sun 8:00-24:00; emergency daily, call first.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–24, sob–ned 8–24; nujna pomoč vsak dan, najprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.mypet.sk/",
       "source_url": "https://www.mypet.sk/",
@@ -153,6 +174,9 @@
       "phone": "+421 948 10 10 12",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-12:00 and 14:00-18:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–12 in 14–18."
+      },
       "small_animals": true,
       "url": "https://x-vet.sk/",
       "source_url": "https://x-vet.sk/",
@@ -168,6 +192,9 @@
       "phone": "+421 903 944 333",
       "emergency_24h": true,
       "duty": "Mon–Fri 8:00–19:00, Sat–Sun 9:00–17:00; emergency line non-stop; vet on site 24 h.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob–ned 9–17; nujna linija nepretrgano; veterinar prisoten 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://www.vetklinikazilina.sk/",
       "source_url": "https://www.vetklinikazilina.sk/",
@@ -184,6 +211,9 @@
       "phone": "+421 915 983 343",
       "emergency_24h": true,
       "duty": "Mon-Fri 10:00-15:30, Sat 10:00-12:00; outside these hours on-call emergency line.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–15.30, sob 10–12; zunaj tega časa dežurna nujna linija."
+      },
       "small_animals": true,
       "url": "https://www.klinikafenix.sk/",
       "source_url": "https://www.klinikafenix.sk/",
@@ -200,6 +230,9 @@
       "phone": "+421 905 332 599",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-19:00, Sat-Sun 9:00-12:00; emergency 24/7 outside hours.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob–ned 9–12; nujna pomoč 24/7 zunaj delovnega časa."
+      },
       "small_animals": true,
       "url": "https://www.petclinic.sk/",
       "source_url": "https://www.petclinic.sk/",
@@ -216,6 +249,9 @@
       "phone": "+421 902 357 660",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-12:00 and 14:00-17:00; Sat-Sun 8:00-10:00; emergency line non-stop for acute, life-threatening cases.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–12 in 14–17; sob–ned 8–10; nujna linija nepretrgano za akutne, življenjsko nevarne primere."
+      },
       "small_animals": true,
       "url": "https://veterinanz.sk/",
       "source_url": "https://veterinanz.sk/kontakt/",
@@ -232,6 +268,9 @@
       "phone": "+421 917 213 934",
       "emergency_24h": true,
       "duty": "Clinic hours Mon-Fri 9:00-12:00 and 13:00-18:00; non-stop emergency line.",
+      "duty_i18n": {
+        "sl": "Delovni čas ambulante pon–pet 9–12 in 13–18; nepretrgana nujna linija."
+      },
       "small_animals": true,
       "url": "https://www.trivet.sk/",
       "source_url": "https://www.trivet.sk/",
@@ -248,6 +287,9 @@
       "phone": "+421 952 209 967",
       "emergency_24h": true,
       "duty": "Mon-Fri 9:00-17:00; non-stop emergency line Mon-Sun.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17; nepretrgana nujna linija pon–ned."
+      },
       "small_animals": true,
       "url": "https://scarvet.sk/",
       "source_url": "https://scarvet.sk/kontakt",
@@ -263,6 +305,9 @@
       "phone": "+421 908 252 898",
       "emergency_24h": true,
       "duty": "Round-the-clock emergency service; covers districts Poprad, Kežmarok, Levoča, Spišská Nová Ves.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan; pokriva okraje Poprad, Kežmarok, Levoča, Spišská Nová Ves."
+      },
       "small_animals": true,
       "url": "https://www.veterinar-pohotovost.sk/",
       "source_url": "https://www.veterinar-pohotovost.sk/kontakt/",
@@ -279,6 +324,9 @@
       "phone": "+421 948 115 386",
       "emergency_24h": true,
       "duty": "Mon-Fri daytime consulting hours; 24-h emergency for regular clients, surcharge applies.",
+      "duty_i18n": {
+        "sl": "pon–pet dnevne ordinacijske ure; nujna pomoč 24 ur na dan za redne stranke, velja doplačilo."
+      },
       "small_animals": true,
       "url": "https://www.veterinamartin.sk/",
       "source_url": "https://www.veterinamartin.sk/",
@@ -295,6 +343,9 @@
       "phone": "+421 52 381 1184",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-20:00, weekends and holidays 9:00-15:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, ob koncih tedna in praznikih 9–15."
+      },
       "small_animals": true,
       "url": "https://tatryvet.sk/",
       "source_url": "https://tatryvet.sk/",
@@ -310,6 +361,9 @@
       "phone": "+421 55 643 5848",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-18:00, Sat-Sun 9:00-16:00; emergency until 24:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob–ned 9–16; nujna pomoč do 24."
+      },
       "small_animals": true,
       "url": "http://www.cassovet.sk/kontakty/",
       "source_url": "http://www.cassovet.sk/kontakty/",
@@ -325,6 +379,9 @@
       "phone": "+421 904 687 003",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-19:00, Sat 9:00-12:00; emergency mode Sat 12:00-19:00, Sun 9:00-12:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 9–12; nujna pomoč sob 12–19, ned 9–12."
+      },
       "small_animals": true,
       "url": "https://www.petstar.sk/",
       "source_url": "https://www.petstar.sk/",
@@ -370,6 +427,9 @@
       "phone": "+421 905 341 107",
       "emergency_24h": false,
       "duty": "Weekdays 8:00-18:00; emergency by phone arrangement weekdays until 22:00, Sat-Sun 8:00-22:00; none 22:00-8:00 (surcharge).",
+      "duty_i18n": {
+        "sl": "Ob delavnikih 8–18; nujna pomoč po telefonskem dogovoru ob delavnikih do 22, sob–ned 8–22; od 22 do 8 je ni (doplačilo)."
+      },
       "small_animals": true,
       "url": "https://veterinapresov.sk/",
       "source_url": "https://veterinapresov.sk/",
@@ -385,6 +445,9 @@
       "phone": "+421 907 887 986",
       "emergency_24h": false,
       "duty": "Mon-Fri daytime, Sat 9:00-12:00, Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet čez dan, sob 9–12, ned zaprto."
+      },
       "small_animals": true,
       "url": "https://vetklinikapkb.sk/",
       "source_url": "https://vetklinikapkb.sk/",
@@ -399,6 +462,9 @@
       "phone": "+421 905 184 429",
       "emergency_24h": false,
       "duty": "Emergency Mon-Fri 16:00-22:00, Sat-Sun 8:00-22:00 (0905 184 429); Radvaň clinic workdays 8:00-16:00.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč pon–pet 16–22, sob–ned 8–22 (0905 184 429); ambulanta Radvaň ob delavnikih 8–16."
+      },
       "small_animals": true,
       "url": "https://petservis.sk/",
       "source_url": "https://petservis.sk/",
@@ -413,6 +479,9 @@
       "phone": "+421 918 749 578",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:00, Sat 8:30-11:00; emergency for registered clients after phone call.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–11; nujna pomoč za registrirane stranke po telefonskem klicu."
+      },
       "small_animals": true,
       "url": "https://banby-vet.sk/",
       "source_url": "https://banby-vet.sk/",
@@ -441,6 +510,9 @@
       "phone": "+421 948 349 814",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-19:00; emergency Sat 12:00-19:00, Sun 9:00-19:00; surcharge for out-of-hours emergencies.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19; nujna pomoč sob 12–19, ned 9–19; doplačilo za nujne primere zunaj delovnega časa."
+      },
       "small_animals": true,
       "url": "https://elpa-tn.sk/",
       "source_url": "https://elpa-tn.sk/",
@@ -456,6 +528,9 @@
       "phone": "+421 37 651 3913",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-12:00; emergency Mon-Fri until 22:00 by phone arrangement.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–12; nujna pomoč pon–pet do 22 po telefonskem dogovoru."
+      },
       "small_animals": true,
       "url": "https://www.veterinarnaklinikanitra.sk/",
       "source_url": "https://www.veterinarnaklinikanitra.sk/",
@@ -471,6 +546,9 @@
       "phone": "+421 37 655 5673",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-19:00, Sat 8:30-11:30, Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 8.30–11.30, ned zaprto."
+      },
       "small_animals": true,
       "url": "https://fazivet.sk/",
       "source_url": "https://fazivet.sk/",
@@ -485,6 +563,9 @@
       "phone": "+421 948 388 388",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-19:00, Sat-Sun and holidays 9:00-16:00 (weekend surcharge).",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob–ned in prazniki 9–16 (doplačilo ob koncih tedna)."
+      },
       "small_animals": true,
       "url": "https://www.zkp.sk/",
       "source_url": "https://www.zkp.sk/",
@@ -499,6 +580,9 @@
       "phone": "+421 908 630 981",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-12:00 and 16:00-19:00; weekend closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–12 in 16–19; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://www.vetpo.sk/",
       "source_url": "https://www.vetpo.sk/",

@@ -68,6 +68,9 @@
       "phone": "+353 12987510",
       "emergency_24h": true,
       "duty": "Open 24/7, every day of the year; emergency walk-in service",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan v letu; nujna pomoč brez predhodnega naročila"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/dundrum-vets",
       "source_url": "https://www.villagevets.ie/clinics/dundrum-vets",
@@ -84,6 +87,9 @@
       "phone": "+353 18499973",
       "emergency_24h": true,
       "duty": "Open 24/7, every day of the year; emergency service open to clients of other Village Vets clinics",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan v letu; nujna pomoč na voljo tudi strankam drugih klinik Village Vets"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
       "source_url": "https://www.villagevets.ie/emergencies",
@@ -100,6 +106,9 @@
       "phone": "+353 45522390",
       "emergency_24h": true,
       "duty": "Open 24/7, every day of the year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan v letu"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/emergencies",
       "source_url": "https://www.villagevets.ie/emergencies",
@@ -116,6 +125,9 @@
       "phone": "+353 16010060",
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year. Out-of-hours line 01 517 5213; extra fees outside normal hours",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu. Številka zunaj delovnega časa 01 517 5213; zunaj rednega delovnega časa doplačilo"
+      },
       "small_animals": true,
       "url": "https://www.myvet.ie/emergencies",
       "source_url": "https://www.myvet.ie/emergencies",
@@ -131,6 +143,9 @@
       "phone": "+353 40468520",
       "emergency_24h": true,
       "duty": "24/7 out-of-hours emergency service for registered clients",
+      "duty_i18n": {
+        "sl": "Nujna pomoč zunaj delovnega časa 24 ur na dan za registrirane stranke"
+      },
       "small_animals": true,
       "url": "https://www.wicklowvets.ie/",
       "source_url": "https://www.wicklowvets.ie/",
@@ -147,6 +162,9 @@
       "phone": "+353 596481441",
       "emergency_24h": true,
       "duty": "24-hour emergency service available",
+      "duty_i18n": {
+        "sl": "Na voljo nujna pomoč 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.murphysheerinvets.ie/",
       "source_url": "https://www.murphysheerinvets.ie/",
@@ -163,6 +181,9 @@
       "phone": "+353 12609920",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency hospital: weeknights 6pm-8am; 24 hours on weekends and bank holidays. Phone before travelling",
+      "duty_i18n": {
+        "sl": "Bolnišnica za nujne primere zunaj delovnega časa: ob delavnikih zvečer in ponoči 18–8; ob vikendih in praznikih 24 ur na dan. Pred prihodom pokličite"
+      },
       "small_animals": true,
       "url": "https://petemergencyhospital.ie/contact/",
       "source_url": "https://petemergencyhospital.ie/contact/",
@@ -178,6 +199,9 @@
       "phone": "+353 18853253",
       "emergency_24h": false,
       "duty": "Open seven days a week; out-of-hours emergencies via the Pet Emergency Hospital",
+      "duty_i18n": {
+        "sl": "Odprto sedem dni v tednu; nujni primeri zunaj delovnega časa prek Pet Emergency Hospital"
+      },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/",
       "source_url": "https://www.caravetgroup.com/",
@@ -193,6 +217,9 @@
       "phone": "+353 18853253",
       "emergency_24h": false,
       "duty": "By appointment (Mon, Tue, Thu, Fri 4-6:30pm; Sat 9-11:30am). Out of hours: see emergency care page",
+      "duty_i18n": {
+        "sl": "Po dogovoru (pon, tor, čet, pet 16–18.30; sob 9–11.30). Zunaj delovnega časa: glejte stran o nujni pomoči"
+      },
       "small_animals": true,
       "url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
       "source_url": "https://www.caravetgroup.com/about-us/cara-vet-opening-hours/cara-vets-in-dublin-7",
@@ -208,6 +235,9 @@
       "phone": "+353 12695830",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-7pm, Sat 9am-12pm; overnight and weekend emergencies via the Pet Emergency Hospital (phone first)",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 9–12; nujni primeri ponoči in ob vikendih prek Pet Emergency Hospital (najprej pokličite)"
+      },
       "small_animals": true,
       "url": "https://sandymountvets.ie/contact-us/",
       "source_url": "https://sandymountvets.ie/contact-us/",
@@ -222,6 +252,9 @@
       "phone": "+353 12889641",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-7pm, Sat 9:30am-12:30pm; out-of-hours emergencies via MyVet Lucan (01 601 0060)",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 9.30–12.30; nujni primeri zunaj delovnega časa prek MyVet Lucan (01 601 0060)"
+      },
       "small_animals": true,
       "url": "https://www.blackrockvet.ie/",
       "source_url": "https://www.blackrockvet.ie/about-us/after-hours",
@@ -237,6 +270,9 @@
       "phone": "+353 14866654",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm, Sat 9am-5pm; after hours calls are directed to the group's 24/7 emergency clinics",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–17; klici zunaj delovnega časa se preusmerijo na nujne klinike skupine, ki delujejo 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
       "source_url": "https://www.villagevets.ie/clinics/rathfarnham-vets-dspca",
@@ -252,6 +288,9 @@
       "phone": "+353 17265426",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm, Sat 9am-5pm on selected Saturdays; urgent cases: call the nearest Village Vets clinic",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–17 ob izbranih sobotah; nujni primeri: pokličite najbližjo kliniko Village Vets"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/raheny",
       "source_url": "https://www.villagevets.ie/clinics/raheny",
@@ -266,6 +305,9 @@
       "phone": "+353 18129010",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm; out-of-hours calls are transferred to a 24/7 emergency clinic",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19; klici zunaj delovnega časa se preusmerijo na nujno kliniko, ki deluje 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/portmarnock",
       "source_url": "https://www.villagevets.ie/clinics/portmarnock",
@@ -280,6 +322,9 @@
       "phone": "+353 18900375",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-7pm, Sat 9am-1pm; out-of-hours calls transferred to the Ashbourne 24/7 clinic",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–13; klici zunaj delovnega časa se preusmerijo na kliniko v Ashbourne, ki deluje 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/clinics/lissenhall-vets",
       "source_url": "https://www.villagevets.ie/clinics/lissenhall-vets",
@@ -295,6 +340,9 @@
       "phone": "+353 19631330",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7:30pm, Sat 9am-4:30pm; 24-hour emergency care at MyVet Lucan (01 517 5213)",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19.30, sob 9–16.30; nujna oskrba 24 ur na dan v MyVet Lucan (01 517 5213)"
+      },
       "small_animals": true,
       "url": "https://www.myvet.ie/about-us/celbridge",
       "source_url": "https://www.myvet.ie/about-us/celbridge",
@@ -308,6 +356,9 @@
       "phone": "+353 539145755",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-8pm, Sat 8:30am-4:30pm; out-of-hours emergencies via the duty vet (call the practice)",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 8.30–16.30; nujni primeri zunaj delovnega časa prek dežurnega veterinarja (pokličite ambulanto)"
+      },
       "small_animals": true,
       "url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
       "source_url": "https://www.wexfordvethospital.ie/small-animals/in-an-emergency",
@@ -322,6 +373,9 @@
       "phone": "+353 539142891",
       "emergency_24h": false,
       "duty": "Emergencies: call the practice",
+      "duty_i18n": {
+        "sl": "Nujni primeri: pokličite ambulanto"
+      },
       "small_animals": true,
       "url": "https://www.arenavets.ie/",
       "source_url": "https://www.arenavets.ie/",
@@ -337,6 +391,9 @@
       "phone": "+353 61333033",
       "emergency_24h": true,
       "duty": "Open 24/7, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://limerickveterinaryhospital.ie/",
       "source_url": "https://limerickveterinaryhospital.ie/",
@@ -353,6 +410,9 @@
       "phone": "+353 61328511",
       "emergency_24h": true,
       "duty": "24-hour emergency service all year round; consultations by appointment",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan vse leto; pregledi po dogovoru"
+      },
       "small_animals": true,
       "url": "https://treatyveterinaryhospital.ie/limerick/",
       "source_url": "https://treatyveterinaryhospital.ie/limerick/",
@@ -368,6 +428,9 @@
       "phone": "+353 61301841",
       "emergency_24h": true,
       "duty": "Emergency service 24 hours a day, 7 days a week; out-of-hours vet calls back; extra charge applies",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 7 dni v tednu; dežurni veterinar vas pokliče nazaj; doplačilo"
+      },
       "small_animals": true,
       "url": "https://www.cvcvets.ie/emergencies",
       "source_url": "https://www.cvcvets.ie/emergencies",
@@ -383,6 +446,9 @@
       "phone": "+353 61327900",
       "emergency_24h": true,
       "duty": "24-hour emergency service",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
       "source_url": "https://rockhallveterinary.ie/",
@@ -399,6 +465,9 @@
       "phone": "+353 61415104",
       "emergency_24h": true,
       "duty": "24-hour emergency service",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
       "source_url": "https://rockhallveterinary.ie/",
@@ -415,6 +484,9 @@
       "phone": "+353 61472161",
       "emergency_24h": true,
       "duty": "24-hour emergency service",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://rockhallveterinary.ie/",
       "source_url": "https://rockhallveterinary.ie/",
@@ -429,6 +501,9 @@
       "address": "Clon Road, Ennis, Co. Clare",
       "emergency_24h": true,
       "duty": "24 hours on call",
+      "duty_i18n": {
+        "sl": "Dežurstvo 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.ennisvetclinic.ie/",
       "source_url": "https://www.ennisvetclinic.ie/about-ennis-veterinary-clinic/",
@@ -445,6 +520,9 @@
       "phone": "+353 214317019",
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year; Mon-Fri 8am-7pm, Sat 9am-5pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; pon–pet 8–19, sob 9–17"
+      },
       "small_animals": true,
       "url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
       "source_url": "https://abbeyvillevet.ie/about-abbeyville-veterinary-hospital/",
@@ -460,6 +538,9 @@
       "phone": "+353 214962799",
       "emergency_24h": true,
       "duty": "24-hour emergency service; call the hospital number",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pokličite številko bolnišnice"
+      },
       "small_animals": true,
       "url": "https://gilabbeyvet.com/",
       "source_url": "https://gilabbeyvet.com/",
@@ -476,6 +557,9 @@
       "phone": "+353 212028090",
       "emergency_24h": true,
       "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-4pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–18, sob 9–16"
+      },
       "small_animals": true,
       "url": "https://www.blackpoolvets.ie/",
       "source_url": "https://www.blackpoolvets.ie/",
@@ -491,6 +575,9 @@
       "phone": "+353 214391600",
       "emergency_24h": true,
       "duty": "Hospital staffed 24/7; 24-hour emergency care",
+      "duty_i18n": {
+        "sl": "Bolnišnica deluje 24 ur na dan; nujna oskrba 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.sunbeamvets.com/",
       "source_url": "https://www.sunbeamvets.com/",
@@ -507,6 +594,9 @@
       "phone": "+353 214343503",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm, Sat 9am-1pm; out-of-hours emergencies via Sunbeam Veterinary Hospital (021 439 1600)",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–13; nujni primeri zunaj delovnega časa prek Sunbeam Veterinary Hospital (021 439 1600)"
+      },
       "small_animals": true,
       "url": "https://www.westsideveterinary.ie/contact-us",
       "source_url": "https://www.westsideveterinary.ie/contact-us",
@@ -522,6 +612,9 @@
       "phone": "+353 214511122",
       "emergency_24h": false,
       "duty": "Out-of-hours emergencies: call the clinic number and you are directed to the out-of-hours service",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: pokličite številko klinike in boste preusmerjeni na službo zunaj delovnega časa"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
       "source_url": "https://www.villagevets.ie/locations/cork",
@@ -537,6 +630,9 @@
       "phone": "+353 214890101",
       "emergency_24h": false,
       "duty": "Out-of-hours emergencies: call the clinic number and you are directed to the out-of-hours service",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: pokličite številko klinike in boste preusmerjeni na službo zunaj delovnega časa"
+      },
       "small_animals": true,
       "url": "https://www.villagevets.ie/locations/cork",
       "source_url": "https://www.villagevets.ie/locations/cork",
@@ -551,6 +647,9 @@
       "phone": "+353 214613672",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30pm, Sat 9am-1pm; own emergency cover at all times (call the practice number)",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 9–13; lastna nujna pomoč ves čas (pokličite številko ambulante)"
+      },
       "small_animals": true,
       "url": "https://midletonvets.ie/emergencies/",
       "source_url": "https://midletonvets.ie/contacts/",
@@ -566,6 +665,9 @@
       "phone": "+353 238833252",
       "emergency_24h": true,
       "duty": "24/7 emergency services; Mon-Fri 9am-6pm, Sat 9am-1pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–18, sob 9–13"
+      },
       "small_animals": true,
       "url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
       "source_url": "https://faxbridgevets.ie/faxbridge-veterinary/contact-faxbridge-veterinary/",
@@ -582,6 +684,9 @@
       "phone": "+353 51511319",
       "emergency_24h": true,
       "duty": "24-hour emergency service; Mon-Fri 9am-5pm, Sat 9am-12pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–17, sob 9–12"
+      },
       "small_animals": true,
       "url": "https://vikingvets.ie/opening-hours/",
       "source_url": "https://vikingvets.ie/opening-hours/",
@@ -597,6 +702,9 @@
       "phone": "+353 5854041",
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year, for small and large animals",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu, za male in velike živali"
+      },
       "small_animals": true,
       "url": "https://lismorevets.ie/",
       "source_url": "https://lismorevets.ie/",
@@ -612,6 +720,9 @@
       "phone": "+353 646637333",
       "emergency_24h": true,
       "duty": "24-hour emergency service outside clinic hours (Mon-Fri 8:30am-6pm, Sat 9am-6pm)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan zunaj delovnega časa klinike (pon–pet 8.30–18, sob 9–18)"
+      },
       "small_animals": true,
       "url": "https://www.allcarevets.ie/contact-us",
       "source_url": "https://www.allcarevets.ie/contact-us",
@@ -627,6 +738,9 @@
       "phone": "+353 667122100",
       "emergency_24h": true,
       "duty": "24-hour emergency care: 066 712 2100 in hours, 087 265 6611 after hours",
+      "duty_i18n": {
+        "sl": "Nujna oskrba 24 ur na dan: 066 712 2100 v delovnem času, 087 265 6611 zunaj delovnega časa"
+      },
       "small_animals": true,
       "url": "https://abbeyvets.ie/contact-us/",
       "source_url": "https://abbeyvets.ie/contact-us/",
@@ -642,6 +756,9 @@
       "phone": "+353 646642695",
       "emergency_24h": true,
       "duty": "24/7 emergency line +353 83 152 2459; Mon-Fri 9am-5pm, Sat 9am-2pm by appointment",
+      "duty_i18n": {
+        "sl": "Številka za nujne primere 24 ur na dan +353 83 152 2459; pon–pet 9–17, sob 9–14 po dogovoru"
+      },
       "small_animals": true,
       "url": "https://www.allcreaturesvetcentre.ie/",
       "source_url": "https://www.allcreaturesvetcentre.ie/",
@@ -658,6 +775,9 @@
       "phone": "+353 669151814",
       "emergency_24h": true,
       "duty": "24/7/365 emergency service; higher rates on Sundays, bank holidays and out of hours",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; višje cene ob nedeljah, praznikih in zunaj delovnega časa"
+      },
       "small_animals": true,
       "url": "https://dingleveterinaryclinic.com/contact/",
       "source_url": "https://dingleveterinaryclinic.com/contact/",
@@ -673,6 +793,9 @@
       "phone": "+353 91445005",
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year; call 091 445005",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; pokličite 091 445005"
+      },
       "small_animals": true,
       "url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
       "source_url": "https://bushyparkvets.ie/24-7-emergency-vet-service/",
@@ -688,6 +811,9 @@
       "phone": "+353 91844209",
       "emergency_24h": true,
       "duty": "Emergency hours 24 hrs / 365 days",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
       "source_url": "https://gorteenacrevets.ie/locations/",
@@ -704,6 +830,9 @@
       "phone": "+353 9372474",
       "emergency_24h": true,
       "duty": "Emergency hours 24 hrs / 365 days",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://gorteenacrevets.ie/locations/",
       "source_url": "https://gorteenacrevets.ie/locations/",
@@ -720,6 +849,9 @@
       "phone": "+353 91844918",
       "emergency_24h": true,
       "duty": "24/7 emergency service: 087 914 5862",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, vse dni v tednu: 087 914 5862"
+      },
       "small_animals": true,
       "url": "https://www.kellyvets.com/contact-2/",
       "source_url": "https://www.kellyvets.com/services/",
@@ -736,6 +868,9 @@
       "phone": "+353 91844085",
       "emergency_24h": true,
       "duty": "Open 6 days a week with 24-hour on-call cover",
+      "duty_i18n": {
+        "sl": "Odprto 6 dni v tednu, 24-urna dežurna služba"
+      },
       "small_animals": true,
       "url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
       "source_url": "https://www.athenrypetclinic.ie/about-athenry-pet-clinic/",
@@ -751,6 +886,9 @@
       "phone": "+353 91510131",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm, Sat 9:30am-4pm",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 9.30–16"
+      },
       "small_animals": true,
       "url": "https://www.arkvetsgalway.com/",
       "source_url": "https://www.arkvetsgalway.com/",
@@ -766,6 +904,9 @@
       "phone": "+353 91756588",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6pm, Sat 10am-2pm",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 10–14"
+      },
       "small_animals": true,
       "url": "https://cuddyvets.com/",
       "source_url": "https://cuddyvets.com/",
@@ -781,6 +922,9 @@
       "phone": "+353 91788270",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6pm, Sat 9am-1pm; emergency line is the practice number",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–13; številka za nujne primere je številka ambulante"
+      },
       "small_animals": true,
       "url": "https://www.oranvets.com/",
       "source_url": "https://www.oranvets.com/",
@@ -796,6 +940,9 @@
       "phone": "+353 719142435",
       "emergency_24h": true,
       "duty": "24-hour emergency care, 365 days a year; extra charge out of hours",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan, 365 dni v letu; zunaj delovnega časa doplačilo"
+      },
       "small_animals": true,
       "url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
       "source_url": "https://www.sligovet.ie/contact-vet-in-sligo.html",
@@ -812,6 +959,9 @@
       "phone": "+353 749178762",
       "emergency_24h": true,
       "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-3pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–18, sob 9–15"
+      },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",
       "source_url": "https://letterkennyvets.ie/",
@@ -828,6 +978,9 @@
       "phone": "+353 749163184",
       "emergency_24h": true,
       "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-3pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–18, sob 9–15"
+      },
       "small_animals": true,
       "url": "https://letterkennyvets.ie/",
       "source_url": "https://letterkennyvets.ie/",

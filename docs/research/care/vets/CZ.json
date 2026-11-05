@@ -108,6 +108,9 @@
       "phone": "+420 284 821 784",
       "emergency_24h": true,
       "duty": "Regular hours Mon-Fri 08:00-18:00; emergency service weekdays 18:00-08:00 and all day at weekends and holidays.",
+      "duty_i18n": {
+        "sl": "Redni delovni čas pon–pet 8–18; nujna pomoč ob delavnikih 18–8 ter ob koncih tedna in praznikih ves dan."
+      },
       "small_animals": true,
       "url": "https://vet-klin-erika.cz/",
       "source_url": "https://vet-klin-erika.cz/",
@@ -124,6 +127,9 @@
       "phone": "+420 241 714 358",
       "emergency_24h": true,
       "duty": "Open nonstop including outpatient care; regular hours Mon–Fri 08:00–20:00, emergency outside hours and at weekends with surcharge.",
+      "duty_i18n": {
+        "sl": "Odprto neprekinjeno, vključno z ambulantno oskrbo; redni delovni čas pon–pet 8–20, nujna pomoč izven delovnega časa in ob koncih tedna z doplačilom."
+      },
       "small_animals": true,
       "url": "https://www.veterinarni-klinika.net/",
       "source_url": "https://www.veterinarni-klinika.net/",
@@ -140,6 +146,9 @@
       "phone": "+420 604 242 789",
       "emergency_24h": true,
       "duty": "Night and weekend emergency service, 24 h a day, 365 days a year.",
+      "duty_i18n": {
+        "sl": "Nočna in vikend nujna pomoč, 24 ur na dan, 365 dni v letu."
+      },
       "small_animals": true,
       "url": "https://www.aavet.cz/",
       "source_url": "https://www.aavet.cz/non-stop-pohotovost/",
@@ -156,6 +165,9 @@
       "phone": "+420 244 470 704",
       "emergency_24h": true,
       "duty": "Nonstop operation; Mon–Fri 08:00–22:00, Sat–Sun 08:00–20:00, other times emergency service with surcharge, usually one vet at night - call ahead.",
+      "duty_i18n": {
+        "sl": "Neprekinjeno obratovanje; pon–pet 8–22, sob, ned 8–20, ob drugih urah nujna pomoč z doplačilom, ponoči običajno en veterinar – vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.vetnemo.cz/",
       "source_url": "https://www.vetnemo.cz/",
@@ -172,6 +184,9 @@
       "phone": "+420 252 252 111",
       "emergency_24h": true,
       "duty": "Emergency weekdays 20:00–08:30 and at weekends/holidays; between 23:30 and 08:30 patients only after phone arrangement (see also Pet-Medic 724 184 840).",
+      "duty_i18n": {
+        "sl": "Nujna pomoč ob delavnikih 20–8.30 ter ob koncih tedna in praznikih; med 23.30 in 8.30 sprejem le po telefonskem dogovoru (glejte tudi Pet-Medic 724 184 840)."
+      },
       "small_animals": true,
       "url": "https://www.medicanima.cz/",
       "source_url": "https://www.medicanima.cz/emergency",
@@ -188,6 +203,9 @@
       "phone": "+420 724 184 840",
       "emergency_24h": true,
       "duty": "Mobile veterinary emergency service (call-outs), nonstop; order by phone.",
+      "duty_i18n": {
+        "sl": "Mobilna veterinarska nujna pomoč (obiski na domu), neprekinjeno; naročilo po telefonu."
+      },
       "small_animals": true,
       "url": "https://pet-medic.cz/",
       "source_url": "https://pet-medic.cz/kontakt/",
@@ -204,6 +222,9 @@
       "phone": "+420 773 588 031",
       "emergency_24h": true,
       "duty": "Mon–Fri 09:00–21:00, weekends 14:00–20:00; outside hours by phone arrangement; available 24 h a day.",
+      "duty_i18n": {
+        "sl": "Pon–pet 9–21, ob koncih tedna 14–20; izven delovnega časa po telefonskem dogovoru; na voljo 24 ur na dan."
+      },
       "small_animals": true,
       "source_url": "https://www.praha11.cz/cs/mestska-cast/socialni-sluzby-a-zdravotnictvi/zdravotnictvi/veterinarni-pece.html",
       "checked": "2026-11-02",
@@ -219,6 +240,9 @@
       "phone": "+420 251 511 651",
       "emergency_24h": false,
       "duty": "Emergency daily 08:00-24:00 incl. weekends and holidays; night 24:00-08:00 only via Pet-Medic (+420 724 184 840), no walk-ins at night.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč vsak dan 8–24, tudi ob koncih tedna in praznikih; ponoči 24–8 samo prek Pet-Medic (+420 724 184 840), ponoči sprejema brez najave ni."
+      },
       "small_animals": true,
       "url": "https://www.vetcentrum.cz/",
       "source_url": "https://www.vetcentrum.cz/pohotovost",
@@ -234,6 +258,9 @@
       "phone": "+420 235 097 540",
       "emergency_24h": false,
       "duty": "Emergency weekdays 17:00–09:00; weekends and holidays nonstop emergency.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč ob delavnikih 17–9; ob koncih tedna in praznikih neprekinjena nujna pomoč."
+      },
       "small_animals": true,
       "url": "https://jaggypraha.cz/",
       "source_url": "https://jaggypraha.cz/kontakt",
@@ -248,6 +275,9 @@
       "phone": "+420 321 622 460",
       "emergency_24h": true,
       "duty": "Weekdays emergency 19:00-08:00; weekends/holidays 09:00-12:00 and 13:00-08:59.",
+      "duty_i18n": {
+        "sl": "Ob delavnikih nujna pomoč 19–8; ob koncih tedna in praznikih 9–12 in 13–8.59."
+      },
       "small_animals": true,
       "url": "https://vetnem.cz/",
       "source_url": "https://vetnem.cz/pohotovost/",
@@ -264,6 +294,9 @@
       "phone": "+420 724 277 230",
       "emergency_24h": false,
       "duty": "Emergency only during ordinary hours; out-of-hours emergency service discontinued (evening opening partly replaces it).",
+      "duty_i18n": {
+        "sl": "Nujna pomoč le med običajnim delovnim časom; nujna služba izven delovnega časa je ukinjena (delno jo nadomešča večerni delovni čas)."
+      },
       "small_animals": true,
       "url": "https://www.weilovna.cz/",
       "source_url": "https://www.weilovna.cz/veterinarni-sluzby/veterinarni-pohotovost/",
@@ -279,6 +312,9 @@
       "phone": "+420 778 011 112",
       "emergency_24h": true,
       "duty": "Non-stop dogs and cats emergency; call the dispatch line.",
+      "duty_i18n": {
+        "sl": "Neprekinjena nujna pomoč za pse in mačke; pokličite dispečersko številko."
+      },
       "small_animals": true,
       "url": "https://www.zvireplus.cz/",
       "source_url": "https://www.zvireplus.cz/veterinarni-pohotovost-brno-akutni-stavy",
@@ -294,6 +330,9 @@
       "phone": "+420 777 478 007",
       "emergency_24h": true,
       "duty": "Emergency service for Brno and surroundings, 365 days a year.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč za Brno in okolico, 365 dni v letu."
+      },
       "small_animals": true,
       "url": "https://www.veterina-seman.cz/",
       "source_url": "https://www.veterina-seman.cz/veterinarni-pohotovost-brno",
@@ -310,6 +349,9 @@
       "phone": "+420 603 103 377",
       "emergency_24h": true,
       "duty": "Round-the-clock emergency with a vet on site; phone before arriving.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan z veterinarjem na kraju; pred prihodom pokličite."
+      },
       "small_animals": true,
       "url": "http://hosek-vet.cz/",
       "source_url": "https://www.brnolove.cz/hosek-vet-brno/",
@@ -326,6 +368,9 @@
       "phone": "+420 541 562 392",
       "emergency_24h": true,
       "duty": "Clinics weekdays 08:00-15:00/15:30; emergency weekdays 15:00/15:30-08:00 and all day at weekends/holidays. Dispatch +420 541 562 392 (08-20), ICU +420 607 055 474 (20-08), internal-medicine emergency +420 724 706 366, surgery emergency +420 724 706 320.",
+      "duty_i18n": {
+        "sl": "Ambulante ob delavnikih 8–15/15.30; nujna pomoč ob delavnikih 15/15.30–8 ter ob koncih tedna in praznikih ves dan. Dispečerska številka +420 541 562 392 (8–20), intenzivna enota +420 607 055 474 (20–8), nujna pomoč za interno medicino +420 724 706 366, nujna kirurška pomoč +420 724 706 320."
+      },
       "small_animals": true,
       "url": "https://fvl.vetuni.cz/",
       "source_url": "https://fvl.vetuni.cz/veterinarni-ambulance-kliniky",
@@ -342,6 +387,9 @@
       "phone": "+420 545 234 035",
       "emergency_24h": false,
       "duty": "Emergency weekdays 17:00–09:00; weekends and holidays nonstop emergency; surcharge 3300 Kč.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč ob delavnikih 17–9; ob koncih tedna in praznikih neprekinjena nujna pomoč; doplačilo 3300 Kč."
+      },
       "small_animals": true,
       "url": "https://jaggy.cz/",
       "source_url": "https://jaggy.cz/kontakt",
@@ -357,6 +405,9 @@
       "phone": "+420 517 330 436",
       "emergency_24h": false,
       "duty": "Night emergency partner of Zlín-region clinics; emergency mobile +420 602 835 564.",
+      "duty_i18n": {
+        "sl": "Nočni partner za nujno pomoč ambulant v zlínski regiji; mobilna številka za nujne primere +420 602 835 564."
+      },
       "small_animals": true,
       "url": "https://www.veterinar-vyskov.cz/",
       "source_url": "https://www.medipet.cz/kontakt",
@@ -372,6 +423,9 @@
       "phone": "+420 778 149 895",
       "emergency_24h": false,
       "duty": "Emergency weekdays 18:00-20:00, Sat 11:00-20:00, Sun/holidays 08:00-20:00; no night emergency (refers to VyVet Vyškov).",
+      "duty_i18n": {
+        "sl": "Nujna pomoč ob delavnikih 18–20, sob 11–20, ned in ob praznikih 8–20; ponoči nujne pomoči ni (napoti v VyVet Vyškov)."
+      },
       "small_animals": true,
       "url": "https://www.veterina-slusovice.cz/",
       "source_url": "https://www.veterina-slusovice.cz/veterinarni-pohotovost/",
@@ -388,6 +442,9 @@
       "phone": "+420 577 222 737",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-14:00; out of hours: partner VyVet Vyškov.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–20, sob 8–14; izven delovnega časa: partner VyVet Vyškov."
+      },
       "small_animals": true,
       "url": "https://www.medipet.cz/",
       "source_url": "https://www.medipet.cz/kontakt",
@@ -403,6 +460,9 @@
       "phone": "+420 577 210 229",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, Sat 09:00-12:00, Sun 16:00-18:00; holidays closed with emergency line +420 724 922 955.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18, sob 9–12, ned 16–18; ob praznikih zaprto, številka za nujne primere +420 724 922 955."
+      },
       "small_animals": true,
       "url": "https://www.veterina-lazy.cz/",
       "source_url": "https://www.veterina-lazy.cz/kontakty.html",
@@ -417,6 +477,9 @@
       "phone": "+420 585 428 351",
       "emergency_24h": true,
       "duty": "Emergency daily 06:00-24:00 incl. weekends/holidays; 24:00-06:00 only after phone arrangement.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč vsak dan 6–24, tudi ob koncih tedna in praznikih; 24–6 samo po telefonskem dogovoru."
+      },
       "small_animals": true,
       "url": "https://www.veterina-olomouc.cz/",
       "source_url": "https://www.veterina-olomouc.cz/pohotovost",
@@ -433,6 +496,9 @@
       "phone": "+420 722 358 616",
       "emergency_24h": false,
       "duty": "Emergency for acute cases outside hours until 23:00, after phone arrangement.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč za akutne primere izven delovnega časa do 23, po telefonskem dogovoru."
+      },
       "small_animals": true,
       "url": "https://www.veterinatesar.cz/",
       "source_url": "https://www.veterinatesar.cz/",
@@ -448,6 +514,9 @@
       "phone": "+420 603 545 022",
       "emergency_24h": true,
       "duty": "Continuous operation 24/7.",
+      "duty_i18n": {
+        "sl": "Neprekinjeno obratovanje 24 ur na dan, 7 dni v tednu."
+      },
       "small_animals": true,
       "source_url": "https://www.veterinagottwaldova.cz/pohotovost",
       "checked": "2026-11-02",
@@ -463,6 +532,9 @@
       "phone": "+420 731 184 440",
       "emergency_24h": false,
       "duty": "Emergency phone +420 603 485 093; Mon–Fri 08:00–18:00, Sat/Sun/holidays 09:00–12:00.",
+      "duty_i18n": {
+        "sl": "Telefon za nujne primere +420 603 485 093; pon–pet 8–18, sob, ned in ob praznikih 9–12."
+      },
       "small_animals": true,
       "url": "https://www.vetcentrum.net/",
       "source_url": "https://www.vetcentrum.net/kontakty",
@@ -478,6 +550,9 @@
       "phone": "+420 736 175 107",
       "emergency_24h": true,
       "duty": "Nonstop emergency phone line; clinic +420 482 770 371.",
+      "duty_i18n": {
+        "sl": "Telefonska številka za nujne primere neprekinjeno dosegljiva; ambulanta +420 482 770 371."
+      },
       "small_animals": true,
       "url": "https://veterina-liberec.cz/",
       "source_url": "https://veterina-liberec.cz/o-klinice/",
@@ -492,6 +567,9 @@
       "region": "Liberecký kraj",
       "emergency_24h": false,
       "duty": "Hours and emergency service unknown; call ahead.",
+      "duty_i18n": {
+        "sl": "Delovni čas in nujna pomoč nista znana; vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://veterinaruzodol.cz/",
       "source_url": "https://www.veterinaruzodol.cz/pohotovost",
@@ -509,6 +587,9 @@
       "phone": "+420 739 164 703",
       "emergency_24h": false,
       "duty": "Emergency weekdays 20:00-08:00; weekends and holidays NONSTOP. Call before coming.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč ob delavnikih 20–8; ob koncih tedna in praznikih NEPREKINJENO. Pred prihodom pokličite."
+      },
       "small_animals": true,
       "url": "https://www.veterinahk.cz/",
       "source_url": "https://www.veterinahk.cz/pohotovost/",
@@ -525,6 +606,9 @@
       "phone": "+420 603 554 962",
       "emergency_24h": false,
       "duty": "Outside opening hours the clinic is in emergency mode with a vet on site; weekdays 18:00-08:00, weekends/holidays.",
+      "duty_i18n": {
+        "sl": "Izven delovnega časa je ambulanta v načinu nujne pomoči z veterinarjem na kraju; ob delavnikih 18–8, ob koncih tedna in praznikih."
+      },
       "small_animals": true,
       "url": "https://hkvet.cz/",
       "source_url": "https://hkvet.cz/kontakt",
@@ -541,6 +625,9 @@
       "phone": "+420 777 305 410",
       "emergency_24h": true,
       "duty": "24-h emergency by phone; vet (and nurse) comes to the clinic for urgent cases - no continuous on-site operation. Hours Mon-Fri 08-17, Sat 08-12, Sun 16-19.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč po telefonu 24 ur na dan; veterinar (in veterinarska sestra) pride v ambulanto za nujne primere – neprekinjenega obratovanja na kraju ni. Delovni čas pon–pet 8–17, sob 8–12, ned 16–19."
+      },
       "small_animals": true,
       "url": "https://www.veterinatrutnov.cz/",
       "source_url": "https://www.veterinatrutnov.cz/pohotovost/",
@@ -557,6 +644,9 @@
       "phone": "+420 734 223 252",
       "emergency_24h": true,
       "duty": "Nonstop emergency on the mobile line; Mon-Fri 07:00-19:00, weekends/holidays 07:00-08:00 and 13:00-15:00.",
+      "duty_i18n": {
+        "sl": "Neprekinjena nujna pomoč na mobilni liniji; pon–pet 7–19, ob koncih tedna in praznikih 7–8 in 13–15."
+      },
       "small_animals": true,
       "url": "https://www.veterinarsro.cz/",
       "source_url": "https://www.veterinarsro.cz/",
@@ -573,6 +663,9 @@
       "phone": "+420 736 180 186",
       "emergency_24h": false,
       "duty": "No own emergency; out of hours Horská veterinární klinika +420 777 305 410.",
+      "duty_i18n": {
+        "sl": "Lastne nujne pomoči nimajo; izven delovnega časa Horská veterinární klinika +420 777 305 410."
+      },
       "small_animals": true,
       "url": "https://trutnov-vet.cz/",
       "source_url": "https://trutnov-vet.cz/",
@@ -586,6 +679,9 @@
       "address": "Českých bratří 826, 543 01 Vrchlabí",
       "emergency_24h": false,
       "duty": "No emergency service; by arrangement refers to Horská veterinární klinika Trutnov (+420 777 305 410) or HKvet Hradec Králové (+420 603 554 962).",
+      "duty_i18n": {
+        "sl": "Nujne pomoči ni; po dogovoru napoti v Horská veterinární klinika Trutnov (+420 777 305 410) ali HKvet Hradec Králové (+420 603 554 962)."
+      },
       "small_animals": true,
       "url": "https://www.ambuvet.cz/",
       "source_url": "https://www.ambuvet.cz/akutni-zasahy/",
@@ -602,6 +698,9 @@
       "phone": "+420 499 422 315",
       "emergency_24h": false,
       "duty": "Mon–Fri 07:30–09:00 and 15:00–19:00, Sun 18:00–19:00.",
+      "duty_i18n": {
+        "sl": "Pon–pet 7.30–9 in 15–19, ned 18–19."
+      },
       "small_animals": true,
       "url": "https://www.veterina-vrchlabi.cz/",
       "source_url": "https://www.veterina-vrchlabi.cz/kontakt",
@@ -617,6 +716,9 @@
       "phone": "+420 606 140 314",
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–20:00, emergency Mon–Fri 20:00–08:00; weekends closed.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–20, nujna pomoč pon–pet 20–8; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://veterina-aesculap.cz/",
       "source_url": "https://veterina-aesculap.cz/",
@@ -632,6 +734,9 @@
       "phone": "+420 776 260 110",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00; treatment outside hours possible with 1000 Kč surcharge.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18; zdravljenje izven delovnega časa je mogoče z doplačilom 1000 Kč."
+      },
       "small_animals": true,
       "url": "https://www.vetopet.cz/",
       "source_url": "https://www.vetopet.cz/",
@@ -646,6 +751,9 @@
       "phone": "+420 385 310 797",
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–18:00; weekends closed.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://cb-vet.cz/",
       "source_url": "https://cb-vet.cz/",
@@ -661,6 +769,9 @@
       "phone": "+420 385 346 033",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun 09:00-13:00 and 17:00-19:00; emergency +420 605 866 733 by phone arrangement, acute life-threatening cases only.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–20, sob, ned 9–13 in 17–19; nujna pomoč +420 605 866 733 po telefonskem dogovoru, samo za akutne življenjsko nevarne primere."
+      },
       "small_animals": true,
       "url": "https://lapacek.cz/",
       "source_url": "https://lapacek.cz/pohotovost",
@@ -675,6 +786,9 @@
       "phone": "+420 775 662 484",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-10:00; emergency surcharges listed for evenings, nights 20:00-08:00, Sundays and holidays.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18, sob 8–10; doplačila za nujno pomoč so navedena za večere, noči 20–8, nedelje in praznike."
+      },
       "small_animals": true,
       "url": "https://www.budvet.cz/",
       "source_url": "https://www.budvet.cz/kontakt/",
@@ -690,6 +804,9 @@
       "phone": "+420 724 757 931",
       "emergency_24h": false,
       "duty": "Hours 06:00-22:00; helps with urgent cases outside hours - call first.",
+      "duty_i18n": {
+        "sl": "Delovni čas 6–22; pomaga tudi pri nujnih primerih izven delovnega časa – najprej pokličite."
+      },
       "small_animals": true,
       "url": "https://uberanku.cz/",
       "source_url": "https://uberanku.cz/pohotovost",
@@ -705,6 +822,9 @@
       "phone": "+420 724 049 364",
       "emergency_24h": true,
       "duty": "Nonstop emergency phone, except during the vet's holidays.",
+      "duty_i18n": {
+        "sl": "Neprekinjeno dosegljiva telefonska številka za nujne primere, razen med dopustom veterinarja."
+      },
       "small_animals": true,
       "url": "https://www.veterinaokrina.cz/",
       "source_url": "https://www.veterinaokrina.cz/products/veterinarni-pohotovost/",
@@ -721,6 +841,9 @@
       "phone": "+420 603 823 973",
       "emergency_24h": false,
       "duty": "Emergency phone weekdays 08:00-20:00, weekends/holidays 08:00-14:00.",
+      "duty_i18n": {
+        "sl": "Telefon za nujne primere ob delavnikih 8–20, ob koncih tedna in praznikih 8–14."
+      },
       "small_animals": true,
       "url": "https://www.veterinanaslunci.cz/",
       "source_url": "https://www.veterinanaslunci.cz/",
@@ -735,6 +858,9 @@
       "phone": "+420 602 120 555",
       "emergency_24h": false,
       "duty": "Emergency Mon-Fri 19:00-08:00 and weekends/holidays non-stop, by prior arrangement on +420 602 120 555; surcharge 2000 Kč.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč pon–pet 19–8 ter ob koncih tedna in praznikih neprekinjeno, po predhodnem dogovoru na +420 602 120 555; doplačilo 2000 Kč."
+      },
       "small_animals": true,
       "url": "https://www.mi-vet.cz/",
       "source_url": "https://www.mi-vet.cz/",
@@ -750,6 +876,9 @@
       "phone": "+420 472 717 935",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00; emergency weekdays 20:00-22:00 and weekends/holidays 14:00-22:00 on +420 606 511 357 (resumed 1.10.2026).",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–20; nujna pomoč ob delavnikih 20–22 ter ob koncih tedna in praznikih 14–22 na +420 606 511 357 (ponovno od 1.10.2026)."
+      },
       "small_animals": true,
       "url": "https://www.veterinahelion.cz/",
       "source_url": "https://www.veterinahelion.cz/contact.php",
@@ -765,6 +894,9 @@
       "phone": "+420 602 951 259",
       "emergency_24h": false,
       "duty": "Weekend emergency Sat 11:00-22:00, Sun 08:00-22:00 by phone at least 30 min ahead; weekday evening emergency suspended since 1.11.2025.",
+      "duty_i18n": {
+        "sl": "Vikend nujna pomoč sob 11–22, ned 8–22, po telefonu vsaj 30 minut vnaprej; večerna nujna pomoč ob delavnikih je od 1.11.2025 ukinjena."
+      },
       "small_animals": true,
       "url": "https://www.veterina-plzen.cz/",
       "source_url": "https://www.veterina-plzen.cz/pohotovost/",
@@ -781,6 +913,9 @@
       "phone": "+420 777 802 165",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00 (no emergency outside); Sat-Sun emergency 09:00-21:00 by phone arrangement.",
+      "duty_i18n": {
+        "sl": "Pon–pet 9–19 (izven tega časa nujne pomoči ni); sob, ned nujna pomoč 9–21 po telefonskem dogovoru."
+      },
       "small_animals": true,
       "url": "https://rpvet.cz/",
       "source_url": "https://rpvet.cz/veterinarni-pohotovost-plzen/",
@@ -809,6 +944,9 @@
       "phone": "+420 771 144 090",
       "emergency_24h": false,
       "duty": "Mon–Fri daytime hours only.",
+      "duty_i18n": {
+        "sl": "Pon–pet samo čez dan."
+      },
       "small_animals": true,
       "url": "https://klatovyveterina.cz/",
       "source_url": "https://klatovyveterina.cz/",
@@ -822,6 +960,9 @@
       "region": "Karlovarský kraj",
       "emergency_24h": false,
       "duty": "Region-funded weekend/holiday first-aid rota: Sat, Sun and holidays 14:00-17:00 at a rotating practice (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); monthly schedule with phone numbers on the page; phone first.",
+      "duty_i18n": {
+        "sl": "Regionalno financirana prva pomoč ob koncih tedna in praznikih po izmeničnem razporedu: sob, ned in ob praznikih 14–17 v ordinaciji po vrsti (Cheb, Sokolov, Ostrov, Františkovy Lázně, Chodov, Karlovy Vary); mesečni razpored s telefonskimi številkami je na strani; najprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.kr-karlovarsky.cz/temata/zdravotnictvi/lekarska-lekarenska-pohotovostni-sluzba/veterinarni-sluzba-prvni-pomoci",
       "source_url": "https://www.kr-karlovarsky.cz/temata/zdravotnictvi/lekarska-lekarenska-pohotovostni-sluzba/veterinarni-sluzba-prvni-pomoci",
@@ -838,6 +979,9 @@
       "phone": "+420 724 034 732",
       "emergency_24h": false,
       "duty": "Weekday hours; urgent care outside hours only for existing clients by arrangement. Takes part in the regional weekend rota.",
+      "duty_i18n": {
+        "sl": "Delovni čas ob delavnikih; nujna pomoč izven delovnega časa samo za obstoječe stranke po dogovoru. Sodeluje v regionalnem vikend dežurstvu."
+      },
       "small_animals": true,
       "url": "https://www.pet-vet.cz/",
       "source_url": "https://www.pet-vet.cz/",
@@ -854,6 +998,9 @@
       "phone": "+420 776 161 092",
       "emergency_24h": false,
       "duty": "Mon–Fri 08:00–11:00 and 13:00–17:00.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–11 in 13–17."
+      },
       "small_animals": true,
       "url": "https://www.elisvet.cz/",
       "source_url": "https://www.elisvet.cz/",
@@ -883,6 +1030,9 @@
       "phone": "+420 224 919 293",
       "emergency_24h": true,
       "duty": "Acute poisoning enquiries 24 h a day for people and animals; second line +420 224 915 402.",
+      "duty_i18n": {
+        "sl": "Nujno svetovanje ob akutnih zastrupitvah 24 ur na dan, za ljudi in živali; druga linija +420 224 915 402."
+      },
       "small_animals": true,
       "url": "https://www.tis-cz.cz/",
       "source_url": "https://www.tis-cz.cz/index.php/informace-o-stredisku/kontakty",
@@ -898,6 +1048,9 @@
       "phone": "+420 553 662 467",
       "emergency_24h": false,
       "duty": "Regular hours Mon-Fri 09:00-18:30, weekends/holidays 09:00-11:30; emergency Mon-Fri 07:00-09:00 and 18:30-21:00, weekends/holidays 07:00-09:00 and 11:30-21:00 by phone; surcharge 2420 Kc.",
+      "duty_i18n": {
+        "sl": "Redni urnik pon–pet 9–18.30, ob koncih tedna in praznikih 9–11.30; nujna pomoč po telefonu pon–pet 7–9 in 18.30–21, ob koncih tedna in praznikih 7–9 in 11.30–21; doplačilo 2420 Kc."
+      },
       "small_animals": true,
       "url": "https://veterinarnipoliklinika.cz/",
       "source_url": "https://veterinarnipoliklinika.cz/",
@@ -913,6 +1066,9 @@
       "phone": "+420 605 507 060",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, closed on public holidays; out-of-hours emergency covered by Veterinární poliklinika Hynar (+420 553 662 467).",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18, ob praznikih zaprto; nujno pomoč izven delovnega časa zagotavlja Veterinární poliklinika Hynar (+420 553 662 467)."
+      },
       "small_animals": true,
       "url": "https://veterinarniklinika.net/",
       "source_url": "https://veterinarniklinika.net/",
@@ -929,6 +1085,9 @@
       "phone": "+420 558 736 474",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-12:00 and 14:00-18:00, Sat 09:00-12:00, Sun 09:00-11:00; outside hours emergency phone +420 734 232 575 for cases that cannot wait (surcharge).",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–12 in 14–18, sob 9–12, ned 9–11; izven delovnega časa nujna telefonska številka +420 734 232 575 za primere, ki ne morejo počakati (doplačilo)."
+      },
       "small_animals": true,
       "url": "https://ctvet.cz/",
       "source_url": "https://ctvet.cz/pohotovost/",
@@ -945,6 +1104,9 @@
       "phone": "+420 596 530 155",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-11:00 and 13:00-18:00, Sat 08:00-12:00, Sun 09:00-11:00; emergency until 22:00 by prior phone arrangement on +420 776 015 533.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–11 in 13–18, sob 8–12, ned 9–11; nujna pomoč do 22. ure po predhodnem telefonskem dogovoru na +420 776 015 533."
+      },
       "small_animals": true,
       "url": "https://www.veticea.cz/",
       "source_url": "https://www.veticea.cz/kontakty/",
@@ -959,6 +1121,9 @@
       "phone": "+420 558 632 435",
       "emergency_24h": false,
       "duty": "Mon-Fri 07:00-18:00, Sat-Sun 14:00-17:00; on-call vet on site Mon-Fri 18:00-23:00, Sat-Sun 17:00-23:00, holidays 16:00-23:00 (surcharge); no night service.",
+      "duty_i18n": {
+        "sl": "Pon–pet 7–18, sob–ned 14–17; dežurni veterinar v ambulanti pon–pet 18–23, sob–ned 17–23, ob praznikih 16–23 (doplačilo); ponoči ni dežurne službe."
+      },
       "small_animals": true,
       "url": "https://www.alfavet.cz/",
       "source_url": "https://www.alfavet.cz/kontakt/",
@@ -974,6 +1139,9 @@
       "phone": "+420 312 688 633",
       "emergency_24h": false,
       "duty": "Private line for acute cases +420 739 314 307.",
+      "duty_i18n": {
+        "sl": "Zasebna številka za akutne primere +420 739 314 307."
+      },
       "small_animals": true,
       "url": "https://www.veterinakladno.cz/",
       "source_url": "https://www.veterinakladno.cz/",
@@ -989,6 +1157,9 @@
       "phone": "+420 777 762 679",
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–21:00, weekends closed; book by phone.",
+      "duty_i18n": {
+        "sl": "Pon–pet 9–21, ob koncih tedna zaprto; naročanje po telefonu."
+      },
       "small_animals": true,
       "url": "https://www.vetlife.cz/",
       "source_url": "https://www.vetlife.cz/kontakt/",
@@ -1004,6 +1175,9 @@
       "phone": "+420 734 325 915",
       "emergency_24h": false,
       "duty": "Hours and emergency service unknown; call ahead.",
+      "duty_i18n": {
+        "sl": "Delovni čas in nujna pomoč nista znana; vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.veterinakolin.cz/",
       "source_url": "https://www.veterinakolin.cz/kontakt",
@@ -1019,6 +1193,9 @@
       "phone": "+420 720 512 990",
       "emergency_24h": false,
       "duty": "Mon 08-17, Tue 08-15, Wed 08-14, Thu 12-18, Fri 08-11; closed weekends and holidays; call before each visit. No emergency service.",
+      "duty_i18n": {
+        "sl": "Pon 8–17, tor 8–15, sre 8–14, čet 12–18, pet 8–11; ob koncih tedna in praznikih zaprto; pred vsakim obiskom pokličite. Nujne pomoči ni."
+      },
       "small_animals": true,
       "url": "https://mbvet.cz/",
       "source_url": "https://mbvet.cz/kontakt/",
@@ -1048,6 +1225,9 @@
       "phone": "+420 773 010 910",
       "emergency_24h": false,
       "duty": "Hours and emergency details unknown; call ahead. Also has a Litvínov practice (no appointments).",
+      "duty_i18n": {
+        "sl": "Delovni čas in podrobnosti o nujni pomoči niso znani; vnaprej pokličite. Ima tudi ordinacijo v Litvínovu (brez naročanja)."
+      },
       "small_animals": true,
       "url": "https://www.veterinamost.cz/",
       "source_url": "https://www.veterinamost.cz/",
@@ -1063,6 +1243,9 @@
       "phone": "+420 732 512 181",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00; weekday emergency 20:00-24:00 by phone arrangement; no weekend emergency.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–20; nujna pomoč ob delavnikih 20–24 po telefonskem dogovoru; ob koncih tedna nujne pomoči ni."
+      },
       "small_animals": true,
       "url": "https://www.zoovet.cz/",
       "source_url": "https://www.zoovet.cz/oteviraci-doba/",
@@ -1078,6 +1261,9 @@
       "phone": "+420 596 440 607",
       "emergency_24h": false,
       "duty": "Emergency out of hours for acute patients only, call +420 776 280 984 first; regular hours Mon–Fri 08:00–19:00, Sat–Sun 08:00–12:00.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč izven delovnega časa samo za akutne primere, najprej pokličite +420 776 280 984; redni urnik pon–pet 8–19, sob–ned 8–12."
+      },
       "small_animals": true,
       "url": "https://veterinahavirov.cz/",
       "source_url": "https://veterinahavirov.cz/kontakt/",
@@ -1108,6 +1294,9 @@
       "phone": "+420 704 704 334",
       "emergency_24h": false,
       "duty": "Mon 9-20, Tue 9-14, Wed/Thu 9-14 and 18-20, Fri 9-14 (16-18 by appointment); Sat/Sun by phone arrangement.",
+      "duty_i18n": {
+        "sl": "Pon 9–20, tor 9–14, sre/čet 9–14 in 18–20, pet 9–14 (16–18 po dogovoru); sob/ned po telefonskem dogovoru."
+      },
       "small_animals": true,
       "url": "https://veterinanavozovne.cz/",
       "source_url": "https://veterinanavozovne.cz/kontakt/",
@@ -1123,6 +1312,9 @@
       "phone": "+420 485 102 277",
       "emergency_24h": false,
       "duty": "Mon-Fri 8-18, closed weekends and holidays.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18, ob koncih tedna in praznikih zaprto."
+      },
       "small_animals": true,
       "url": "https://www.klinikanisa.cz/",
       "source_url": "https://www.klinikanisa.cz/kontakt/",
@@ -1138,6 +1330,9 @@
       "phone": "+420 274 773 637",
       "emergency_24h": false,
       "duty": "Mon–Fri 09:00–22:00, weekends closed.",
+      "duty_i18n": {
+        "sl": "Pon–pet 9–22, ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://www.alta-vet.cz/",
       "source_url": "https://www.alta-vet.cz/kontakt",
@@ -1153,6 +1348,9 @@
       "phone": "+420 555 333 738",
       "emergency_24h": false,
       "duty": "Mon-Fri 8-18, Sat 9-12, Sun 9-11; emergency Sat, Sun and holidays until 18:00.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8–18, sob 9–12, ned 9–11; nujna pomoč ob sobotah, nedeljah in praznikih do 18. ure."
+      },
       "small_animals": true,
       "url": "https://www.abvet.cz/",
       "source_url": "https://www.abvet.cz/kontakty/",
@@ -1169,6 +1367,9 @@
       "phone": "+420 775 935 080",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-17:00, Sat 9:00-11:30; Pohotovost phone +420 602 743 813 (no hours given); question line +420 775 935 080.",
+      "duty_i18n": {
+        "sl": "Pon–pet 8.30–17, sob 9–11.30; telefon za nujne primere (Pohotovost) +420 602 743 813 (ure niso navedene); telefon za vprašanja +420 775 935 080."
+      },
       "small_animals": true,
       "url": "https://herriovet.cz/",
       "source_url": "https://herriovet.cz/kontakt/",

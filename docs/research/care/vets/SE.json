@@ -58,6 +58,9 @@
       "phone": "010-147 90 00",
       "emergency_24h": true,
       "duty": "Emergency department open around the clock every day; call before coming in (night referral hub for AniCura Albano).",
+      "duty_i18n": {
+        "sl": "Nujni oddelek je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite (nočno napotitveno središče za AniCura Albano)."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/regiondjursjukhuset-bagarmossen/",
       "source_url": "https://www.anicura.se/hitta-klinik/stockholm/regiondjursjukhuset-bagarmossen/vara-avdelningar/akutmottagningen2/",
@@ -74,6 +77,9 @@
       "phone": "+46 18-67 26 80",
       "emergency_24h": true,
       "duty": "Emergency department Monday-Sunday 24 hours; call for initial assessment. Dogs, cats, rabbits, rodents.",
+      "duty_i18n": {
+        "sl": "Nujni oddelek pon–ned 24 ur na dan; za prvo oceno pokličite. Psi, mačke, zajci, glodavci."
+      },
       "small_animals": true,
       "url": "https://www.slu.se/universitetsdjursjukhuset/",
       "source_url": "https://www.slu.se/en/universitetsdjursjukhuset/pet-owners/cat/emergency-department/",
@@ -90,6 +96,9 @@
       "phone": "040-55 22 00 (akut 040-55 22 55)",
       "emergency_24h": true,
       "duty": "Emergency reception open around the clock, all days; call before coming in.",
+      "duty_i18n": {
+        "sl": "Nujni sprejem je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-malmo/",
       "source_url": "https://evidensia.se/klinik/evidensia-djursjukhuset-malmo/",
@@ -105,6 +114,9 @@
       "phone": "042-16 80 00",
       "emergency_24h": true,
       "duty": "Open around the clock, all year (small animals; the equine hospital shares the number).",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vse leto (male živali; konjska bolnišnica ima isto številko)."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-helsingborg/",
       "source_url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-helsingborg/",
@@ -120,6 +132,9 @@
       "phone": "0220-458 00",
       "emergency_24h": true,
       "duty": "Emergency reception open around the clock, all days; call before coming in. Dogs and cats.",
+      "duty_i18n": {
+        "sl": "Nujni sprejem je odprt 24 ur na dan, vse dni v tednu; pred prihodom pokličite. Psi in mačke."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-stromsholm/",
       "source_url": "https://evidensia.se/klinik/evidensia-specialistdjursjukhuset-stromsholm/",
@@ -135,6 +150,9 @@
       "phone": "0920-25 30 20",
       "emergency_24h": true,
       "duty": "Emergency department open around the clock, all days; emergency line is the same number, call before coming in.",
+      "duty_i18n": {
+        "sl": "Nujni oddelek je odprt 24 ur na dan, vse dni v tednu; številka nujne linije je ista, pred prihodom pokličite."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-gammelstad/",
       "source_url": "https://evidensia.se/klinik/evidensia-djursjukhuset-gammelstad/vara-oppettider/",
@@ -150,6 +168,9 @@
       "phone": "060-14 70 10",
       "emergency_24h": true,
       "duty": "Open 24 hours, all days of the year.",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vse dni v letu."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djursjukhuset-sundsvall/",
       "source_url": "https://evidensia.se/klinik/djursjukhuset-sundsvall/",
@@ -165,6 +186,9 @@
       "phone": "063-13 40 00",
       "emergency_24h": true,
       "duty": "Emergency reception every day around the clock; the reception number is also the emergency line.",
+      "duty_i18n": {
+        "sl": "Nujni sprejem vsak dan 24 ur na dan; številka sprejema je hkrati nujna linija."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/ostersunds-djursjukhus/",
       "source_url": "https://evidensia.se/klinik/ostersunds-djursjukhus/vara-oppettider/",
@@ -180,6 +204,9 @@
       "phone": "010-122 96 60",
       "emergency_24h": true,
       "duty": "Veterinarian on standby (on-call) around the clock, all year, for small and large animals; clinic itself open Mon-Fri 08-18.",
+      "duty_i18n": {
+        "sl": "Veterinar je v pripravljenosti (dežurstvo) 24 ur na dan, vse leto, za male in velike živali; ambulanta sama je odprta pon–pet 8–18."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/gotlands-lan/gotland",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/gotlands-lan/gotland",
@@ -196,6 +223,9 @@
       "phone": "010-122 96 20",
       "emergency_24h": false,
       "duty": "Vet can be contacted around the clock for acutely sick animals (dogs, cats, horses, farm animals); urgent cases may be referred onward depending on resources.",
+      "duty_i18n": {
+        "sl": "Veterinarja lahko pokličete 24 ur na dan za akutno bolne živali (psi, mačke, konji, gospodarske živali); nujne primere glede na zmogljivosti lahko napotijo naprej."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vimmerby",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vimmerby",
@@ -212,6 +242,9 @@
       "phone": "010-122 96 00",
       "emergency_24h": true,
       "duty": "Vet on standby reachable around the clock for acute cases (dogs, cats); urgent cases may be referred onward.",
+      "duty_i18n": {
+        "sl": "Veterinar v pripravljenosti je dosegljiv 24 ur na dan za akutne primere (psi, mačke); nujne primere lahko napotijo naprej."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vastervik",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/vastervik",
@@ -228,6 +261,9 @@
       "phone": "010-122 94 20",
       "emergency_24h": false,
       "duty": "Vet reachable by phone around the clock on 010-122 94 20; unclear whether the line covers small animals.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan na 010-122 94 20; ni jasno, ali linija pokriva male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/kalmar-lan/kalmar",
@@ -243,6 +279,9 @@
       "phone": "013-31 54 40",
       "emergency_24h": false,
       "duty": "Open every day 07:30–23:00.",
+      "duty_i18n": {
+        "sl": "Odprto vsak dan 7.30–23."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/evidensia-valla-djursjukhus-linkoping/vara-oppettider/",
@@ -258,6 +297,9 @@
       "phone": "08-505 288 00",
       "emergency_24h": false,
       "duty": "Emergency clinic weekdays 07-22, weekends 09-22.",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta ob delavnikih 7–22, ob koncih tedna 9–22."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-sodra-djursjukhuset-kungens-kurva/oppettider-tjanster/",
       "source_url": "https://evidensia.se/klinik/evidensia-sodra-djursjukhuset-kungens-kurva/oppettider-tjanster/",
@@ -272,6 +314,9 @@
       "phone": "0470-71 90 50",
       "emergency_24h": false,
       "duty": "Mon–Fri 7–22, Sat–Sun 9–20; emergency line same hours.",
+      "duty_i18n": {
+        "sl": "pon–pet 7–22, sob–ned 9–20; nujna linija ob istih urah."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vaxjo/vara-oppettider/",
@@ -286,6 +331,9 @@
       "phone": "08-630 02 90",
       "emergency_24h": false,
       "duty": "Emergency care Mon–Fri about 8–19/20, Sat–Sun 9–16.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč pon–pet približno 8–19/20, sob–ned 9–16."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/taby-djursjukhus/vara-oppettider/",
@@ -301,6 +349,9 @@
       "phone": "08-36 26 70",
       "emergency_24h": false,
       "duty": "Emergency reception weekdays 08-17, Saturdays and public holidays 10-16.",
+      "duty_i18n": {
+        "sl": "Nujni sprejem ob delavnikih 8–17, ob sobotah in praznikih 10–16."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vasterort/",
       "source_url": "https://evidensia.se/klinik/evidensia-djursjukhuset-vasterort/",
@@ -314,6 +365,9 @@
       "phone": "031-21 40 40",
       "emergency_24h": false,
       "duty": "Mon–Fri 7–24, Sat/Sun/holidays 9–24.",
+      "duty_i18n": {
+        "sl": "pon–pet 7–24, sob/ned/prazniki 9–24."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/goteborgs-djursjukhus-evidensia/vara-oppettider/",
@@ -328,6 +382,9 @@
       "phone": "046-270 40 00",
       "emergency_24h": false,
       "duty": "Open every day 8–24.",
+      "duty_i18n": {
+        "sl": "Odprto vsak dan 8–24."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "source_url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -342,6 +399,9 @@
       "phone": "054-17 52 50",
       "emergency_24h": false,
       "duty": "Open about 8–20 weekdays, 9–20 weekends.",
+      "duty_i18n": {
+        "sl": "Odprto približno 8–20 ob delavnikih, 9–20 ob koncih tedna."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "source_url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -356,6 +416,9 @@
       "phone": "0300-104 02",
       "emergency_24h": false,
       "duty": "Weekdays 07-20, Saturday 10-16, Sunday closed.",
+      "duty_i18n": {
+        "sl": "Ob delavnikih 7–20, sob 10–16, ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/sommaroppna-djursjukhus/",
       "source_url": "https://evidensia.se/sommaroppna-djursjukhus/",
@@ -369,6 +432,9 @@
       "phone": "019-127 000",
       "emergency_24h": false,
       "duty": "Mon–Fri 8–17; out of hours the clinic points to Evidensia 24-h hospitals.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; zunaj delovnega časa ambulanta napoti na 24-urne bolnišnice Evidensia."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-orebro/akutvard/",
@@ -383,6 +449,9 @@
       "phone": "021-41 10 86",
       "emergency_24h": false,
       "duty": "Mon 07:30-20, Tue-Fri 07:30-17; weekends closed.",
+      "duty_i18n": {
+        "sl": "pon 7.30–20, tor–pet 7.30–17; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-vasteras/akutvard/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-vasteras/akutvard/",
@@ -396,6 +465,9 @@
       "phone": "026-10 63 10",
       "emergency_24h": false,
       "duty": "Mon-Thu 07:30-20, Fri 07:30-17; weekends closed.",
+      "duty_i18n": {
+        "sl": "pon–čet 7.30–20, pet 7.30–17; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-gefle/akutvard/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-gefle/akutvard/",
@@ -408,6 +480,9 @@
       "region": "Östergötlands län",
       "emergency_24h": false,
       "duty": "Mon-Fri 08-17; when closed refers to Evidensia Valla Djursjukhus Linköping or Specialistdjursjukhuset Strömsholm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; ko je zaprto, napoti na Evidensia Valla Djursjukhus Linköping ali Specialistdjursjukhuset Strömsholm."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-norrkoping/vara-oppettider/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-norrkoping/vara-oppettider/",
@@ -423,6 +498,9 @@
       "phone": "0498-24 71 81",
       "emergency_24h": false,
       "duty": "Mon–Fri 8–17; out of hours see Distriktsveterinärerna Gotland on-call.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; zunaj delovnega časa glejte dežurno službo Distriktsveterinärerna Gotland."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/djurkliniken-visby/",
       "source_url": "https://evidensia.se/klinik/djurkliniken-visby/",
@@ -437,6 +515,9 @@
       "phone": "031-450 700",
       "emergency_24h": false,
       "duty": "Emergency reception 8–21, closed at night (inpatients monitored around the clock).",
+      "duty_i18n": {
+        "sl": "Nujni sprejem 8–21, ponoči zaprto (hospitalizirane živali nadzirajo 24 ur na dan)."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/goteborg/vastra-djursjukhuset/mottagningar/akutmottagningen/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -453,6 +534,9 @@
       "phone": "010-147 90 00",
       "emergency_24h": false,
       "duty": "Emergency 8–21; at night refers to AniCura Regiondjursjukhuset Bagarmossen (24 h).",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–21; ponoči napoti na AniCura Regiondjursjukhuset Bagarmossen (24 ur)."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
       "source_url": "https://www.anicura.se/hitta-klinik/stockholm/djursjukhuset-albano/mottagningar/akutmottagningen/",
@@ -468,6 +552,9 @@
       "phone": "013-212510",
       "emergency_24h": false,
       "duty": "Emergency care 8:15–20:00; ward staffed around the clock.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8.15–20; na oddelku je osebje 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/ostergotland/jagarvallens-djursjukhus/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -483,6 +570,9 @@
       "phone": "036-34 18 80",
       "emergency_24h": false,
       "duty": "Emergency hours 07-21.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 7–21."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -496,6 +586,9 @@
       "phone": "0480-270 50",
       "emergency_24h": false,
       "duty": "Emergency hours 08-22.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–22."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -509,6 +602,9 @@
       "phone": "0451-846 00",
       "emergency_24h": false,
       "duty": "Emergency hours 8–24.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–24."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -523,6 +619,9 @@
       "phone": "023-646 10",
       "emergency_24h": false,
       "duty": "Emergency hours 08-20.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–20."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -536,6 +635,9 @@
       "phone": "0522-81770",
       "emergency_24h": false,
       "duty": "Emergency hours 08-20.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–20."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -549,6 +651,9 @@
       "phone": "08-505 102 00",
       "emergency_24h": false,
       "duty": "Emergency hours 08-15:30.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 8–15.30."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -562,6 +667,9 @@
       "phone": "019-26 36 66",
       "emergency_24h": false,
       "duty": "Open 08-16.",
+      "duty_i18n": {
+        "sl": "Odprto 8–16."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -575,6 +683,9 @@
       "phone": "0455-499 10",
       "emergency_24h": false,
       "duty": "Open 08-17.",
+      "duty_i18n": {
+        "sl": "Odprto 8–17."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -588,6 +699,9 @@
       "phone": "046-14 20 20",
       "emergency_24h": false,
       "duty": "Open 08-17.",
+      "duty_i18n": {
+        "sl": "Odprto 8–17."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/akutmottagningar/",
       "source_url": "https://www.anicura.se/akutmottagningar/",
@@ -602,6 +716,9 @@
       "phone": "08-301900",
       "emergency_24h": false,
       "duty": "Emergency and care clinic; refers to other animal hospitals when closed.",
+      "duty_i18n": {
+        "sl": "Klinika za nujno pomoč in oskrbo; ko je zaprto, napoti v druge veterinarske bolnišnice."
+      },
       "small_animals": true,
       "url": "https://www.djurakuten.se/",
       "source_url": "https://www.djurakuten.se/contact",
@@ -617,6 +734,9 @@
       "phone": "018-444 20 00",
       "emergency_24h": false,
       "duty": "Acute patients weekdays about 9–17, drop-in Sat 10–14, Sun 12–16; emergency phone 018-781 41 60.",
+      "duty_i18n": {
+        "sl": "Akutni pacienti ob delavnikih približno 9–17, brez naročanja sob 10–14, ned 12–16; telefon za nujne primere 018-781 41 60."
+      },
       "small_animals": true,
       "url": "https://www.rembacken.se/",
       "source_url": "https://www.rembacken.se/infor-besoket/akutfall/",
@@ -632,6 +752,9 @@
       "phone": "010-122 82 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/skelleftea",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/skelleftea",
@@ -648,6 +771,9 @@
       "phone": "010-122 83 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/vannas",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/vannas",
@@ -664,6 +790,9 @@
       "phone": "010-122 82 20",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/bygdea",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/bygdea",
@@ -679,6 +808,9 @@
       "phone": "010-122 82 60",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/lycksele",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/lycksele",
@@ -694,6 +826,9 @@
       "phone": "010-122 83 30",
       "emergency_24h": false,
       "duty": "Clinic weekdays 8–16; acutely sick animals are referred to the Vännäs clinic.",
+      "duty_i18n": {
+        "sl": "Ambulanta ob delavnikih 8–16; akutno bolne živali napotijo na kliniko v Vännäsu."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/vasterbottens-lan/umaker",
@@ -708,6 +843,9 @@
       "phone": "010-122 81 60",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/pitea",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/pitea",
@@ -724,6 +862,9 @@
       "phone": "010-122 81 40",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/kalix",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/kalix",
@@ -739,6 +880,9 @@
       "phone": "010-122 81 70",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/alvsbyn",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/alvsbyn",
@@ -755,6 +899,9 @@
       "phone": "010-122 81 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/norra-lappland",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/norrbottens-lan/norra-lappland",
@@ -770,6 +917,9 @@
       "phone": "010-122 84 40",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/jamtlands-lan/hede",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/jamtlands-lan/hede",
@@ -786,6 +936,9 @@
       "phone": "010-122 86 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/mora",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/mora",
@@ -802,6 +955,9 @@
       "phone": "010-122 86 30",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/sodra-dalarna",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/dalarna-lan/sodra-dalarna",
@@ -817,6 +973,9 @@
       "phone": "010-122 89 40",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/nykoping",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/nykoping",
@@ -833,6 +992,9 @@
       "phone": "010-122 89 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/eskilstuna",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/eskilstuna",
@@ -848,6 +1010,9 @@
       "phone": "010-122 89 20",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/flen",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/sodermanlands-lan/flen",
@@ -863,6 +1028,9 @@
       "phone": "010-122 88 10",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/tierp",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/tierp",
@@ -878,6 +1046,9 @@
       "phone": "010-122 88 20",
       "emergency_24h": false,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/fjardhundra",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/fjardhundra",
@@ -894,6 +1065,9 @@
       "phone": "010-122 88 00",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/osthammar",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/uppsala-lan/osthammar",
@@ -909,6 +1083,9 @@
       "phone": "010-122 97 60",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/kristianstad",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/kristianstad",
@@ -924,6 +1101,9 @@
       "phone": "010-122 95 60",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/nordvastra-skane",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/nordvastra-skane",
@@ -939,6 +1119,9 @@
       "phone": "010-122 98 20",
       "emergency_24h": false,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/sjobo-osterlen",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/sjobo-osterlen",
@@ -955,6 +1138,9 @@
       "phone": "010-122 98 40",
       "emergency_24h": true,
       "duty": "Veterinarian reachable around the clock by phone for acutely ill animals (on-call standby, not a staffed 24-h hospital); clinic itself open weekdays only. Dogs, cats and other small animals listed.",
+      "duty_i18n": {
+        "sl": "Veterinar je po telefonu dosegljiv 24 ur na dan za akutno bolne živali (dežurstvo v pripravljenosti, ne 24-urna bolnišnica z osebjem); ambulanta sama je odprta samo ob delavnikih. Navedeni so psi, mačke in druge male živali."
+      },
       "small_animals": true,
       "url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/flyinge",
       "source_url": "https://distriktsveterinarerna.se/hitta-veterinar/skane-lan/flyinge",
@@ -970,6 +1156,9 @@
       "phone": "090-13 25 00",
       "emergency_24h": false,
       "duty": "Mon-Fri 07:30-12:00 and 13:00-16:30; no out-of-hours emergency number on the page.",
+      "duty_i18n": {
+        "sl": "pon–pet 7.30–12 in 13–16.30; številke za nujne primere zunaj delovnega časa na strani ni."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/bjorkstadens-djurklinik/",
       "source_url": "https://evidensia.se/klinik/bjorkstadens-djurklinik/",
@@ -984,6 +1173,9 @@
       "phone": "0647-321 21",
       "emergency_24h": false,
       "duty": "Mon 10:00-13:30 and 14:30-19:00; Tue-Fri 08:00-12:00 and 13:00-16:45; closed Sat-Sun; no out-of-hours emergency line (ski/tourist area; nearest 24-h: Östersunds Djursjukhus).",
+      "duty_i18n": {
+        "sl": "pon 10–13.30 in 14.30–19, tor–pet 8–12 in 13–16.45; sob–ned zaprto; nujne linije zunaj delovnega časa ni (smučarsko/turistično območje; najbližja 24-urna: Östersunds Djursjukhus)."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/are-djurklinik/",
       "source_url": "https://evidensia.se/klinik/are-djurklinik/",
@@ -998,6 +1190,9 @@
       "phone": "044-24 77 97",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-17:00; closed Sat-Sun; advice only during opening hours.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; sob–ned zaprto; nasveti samo v delovnem času."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-kristianstad/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-kristianstad/",
@@ -1012,6 +1207,9 @@
       "phone": "016-13 70 40",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-17:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-eskilstuna/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-eskilstuna/",
@@ -1026,6 +1224,9 @@
       "phone": "0155-26 73 60",
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–17:00; closed Sat–Sun; acutely ill animals seen subject to availability during opening hours.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; sob–ned zaprto; akutno bolne živali v delovnem času sprejmejo glede na razpoložljivost."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-nykoping/",
@@ -1040,6 +1241,9 @@
       "phone": "0521-25 50 53",
       "emergency_24h": false,
       "duty": "Mon, Wed, Fri 08:00-16:30; Tue, Thu 08:00-20:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon, sre, pet 8–16.30; tor, čet 8–20; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/trestad-djurklinik-evidensia/",
       "source_url": "https://evidensia.se/klinik/trestad-djurklinik-evidensia/",
@@ -1054,6 +1258,9 @@
       "phone": "08-80 84 01",
       "emergency_24h": false,
       "duty": "Mon-Wed 08:00-21:00; Thu-Fri 08:00-17:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–sre 8–21; čet–pet 8–17; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/alviks-veterinarklinik/",
       "source_url": "https://evidensia.se/klinik/alviks-veterinarklinik/",
@@ -1068,6 +1275,9 @@
       "phone": "08-604 80 70",
       "emergency_24h": false,
       "duty": "Emergency reception Mon-Thu 07:30-21:00, Fri 07:30-18:00; no weekend emergency hours on the page.",
+      "duty_i18n": {
+        "sl": "Nujni sprejem pon–čet 7.30–21, pet 7.30–18; ur za nujne primere ob koncih tedna na strani ni."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-farsta/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-farsta/",
@@ -1082,6 +1292,9 @@
       "phone": "08-519 798 00",
       "emergency_24h": false,
       "duty": "Mon, Wed 07:00-19:00; Tue, Thu, Fri 07:00-17:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon, sre 7–19; tor, čet, pet 7–17; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/kungsholmen-veterinarklinik-evidensia/",
       "source_url": "https://evidensia.se/klinik/kungsholmen-veterinarklinik-evidensia/",
@@ -1096,6 +1309,9 @@
       "phone": "08-716 52 53",
       "emergency_24h": false,
       "duty": "Clinic Mon-Fri 07:00-20:00; emergency care Mon-Fri 07:00-20:00 and Sat 10:00-17:00; call before coming.",
+      "duty_i18n": {
+        "sl": "Ambulanta pon–pet 7–20; nujna pomoč pon–pet 7–20 in sob 10–17; pred prihodom pokličite."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/evidensia-djurkliniken-nacka/",
       "source_url": "https://evidensia.se/klinik/evidensia-djurkliniken-nacka/",
@@ -1110,6 +1326,9 @@
       "phone": "08-580 068 20",
       "emergency_24h": false,
       "duty": "Mon-Thu 08:00-19:00; Fri 08:00-17:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–čet 8–19; pet 8–17; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/lidingo-veterinarklinik/",
       "source_url": "https://evidensia.se/klinik/lidingo-veterinarklinik/",
@@ -1124,6 +1343,9 @@
       "phone": "08-12 139 139",
       "emergency_24h": false,
       "duty": "Mon-Thu 07:00-19:00; Fri 07:00-17:45; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–čet 7–19; pet 7–17.45; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/vasastans-veterinarklinik/",
       "source_url": "https://evidensia.se/klinik/vasastans-veterinarklinik/akutvard/",
@@ -1138,6 +1360,9 @@
       "phone": "08-717 47 92",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-17:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://evidensia.se/klinik/saltsjobadens-djurklinik/",
       "source_url": "https://evidensia.se/klinik/saltsjobadens-djurklinik/",
@@ -1152,6 +1377,9 @@
       "phone": "0500-488 600",
       "emergency_24h": false,
       "duty": "Mon-Thu 07:30-20:00; Fri 07:30-17:00; Sat-Sun 10:00-16:00 on uneven weeks only. Out-of-hours emergencies referred to Alingsås Djursjukhus (0322-632 000, daily 08-21).",
+      "duty_i18n": {
+        "sl": "pon–čet 7.30–20; pet 7.30–17; sob–ned 10–16 samo ob lihih tednih. Nujne primere zunaj delovnega časa napotijo na Alingsås Djursjukhus (0322-632 000, vsak dan 8–21)."
+      },
       "small_animals": true,
       "url": "https://www.skovdedjurklinik.se/",
       "source_url": "https://www.skovdedjurklinik.se/kontakt/",
@@ -1166,6 +1394,9 @@
       "phone": "035-10 72 63",
       "emergency_24h": false,
       "duty": "Mon 8–18, Tue/Thu/Fri 8–17, Wed 8–16 (lunch 12–13); out of hours see list of emergency clinics.",
+      "duty_i18n": {
+        "sl": "pon 8–18, tor/čet/pet 8–17, sre 8–16 (odmor za kosilo 12–13); zunaj delovnega časa glejte seznam nujnih klinik."
+      },
       "small_animals": true,
       "url": "https://halmstadsdjurklinik.se/",
       "source_url": "https://halmstadsdjurklinik.se/",
@@ -1180,6 +1411,9 @@
       "phone": "0910-560 04",
       "emergency_24h": false,
       "duty": "Clinic Mon–Fri 8:00–16:30; telephone answered 7:00–22:00 on weekdays (all Lapplands clinics). No separate emergency hours.",
+      "duty_i18n": {
+        "sl": "Ambulanta pon–pet 8–16.30; telefon je ob delavnikih dosegljiv 7–22 (vse ambulante Lapplands). Posebnih ur za nujne primere ni."
+      },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
       "source_url": "https://lapplandsdjurklinik.se/kliniken-i-skelleftea-anderstorg/",
@@ -1195,6 +1429,9 @@
       "phone": "0920-217 000",
       "emergency_24h": false,
       "duty": "Clinic Mon–Fri 8:00–16:30; telephone answered 7:00–22:00 on weekdays (all Lapplands clinics). No separate emergency hours.",
+      "duty_i18n": {
+        "sl": "Ambulanta pon–pet 8–16.30; telefon je ob delavnikih dosegljiv 7–22 (vse ambulante Lapplands). Posebnih ur za nujne primere ni."
+      },
       "small_animals": true,
       "url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
       "source_url": "https://lapplandsdjurklinik.se/kliniken-i-lulea/",
@@ -1210,6 +1447,9 @@
       "phone": "0243-844 85",
       "emergency_24h": false,
       "duty": "Clinic 8:00–12:00 and 13:00–17:00; phone 8:00–9:00.",
+      "duty_i18n": {
+        "sl": "Ambulanta 8–12 in 13–17; telefon 8–9."
+      },
       "small_animals": true,
       "url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",
       "source_url": "https://www.anicura.se/hitta-klinik/dalarna/borlangekliniken/",

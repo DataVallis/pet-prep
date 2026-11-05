@@ -193,6 +193,9 @@
       "phone": "+44 1512204668",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-alder/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-alder/",
@@ -208,6 +211,9 @@
       "phone": "+44 1773832218",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-alfreton/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-alfreton/",
@@ -223,6 +229,9 @@
       "phone": "+44 1457837900",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-ashton/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-ashton/",
@@ -238,6 +247,9 @@
       "phone": "+44 2086502003",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-beckenham/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-beckenham/",
@@ -253,6 +265,9 @@
       "phone": "+44 2038161010",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-camberwell/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-camberwell/",
@@ -268,6 +283,9 @@
       "phone": "+44 1322897977",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-dartford/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-dartford/",
@@ -283,6 +301,9 @@
       "phone": "+44 1305262913",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-dorchester/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-dorchester/",
@@ -298,6 +319,9 @@
       "phone": "+44 1992762699",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-enfield/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-enfield/",
@@ -313,6 +337,9 @@
       "phone": "+44 1293851122",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-faygate/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-faygate/",
@@ -328,6 +355,9 @@
       "phone": "+44 2082026344",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-hendon/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-hendon/",
@@ -343,6 +373,9 @@
       "phone": "+44 2075842019",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-kensington/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-kensington/",
@@ -358,6 +391,9 @@
       "phone": "+44 1926423161",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-leamington-spa/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-leamington-spa/",
@@ -373,6 +409,9 @@
       "phone": "+44 1270610322",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-nantwich/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-nantwich/",
@@ -388,6 +427,9 @@
       "phone": "+44 1202747678",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-poole/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-poole/",
@@ -403,6 +445,9 @@
       "phone": "+44 2088786080",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-richmond/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-richmond/",
@@ -418,6 +463,9 @@
       "phone": "+44 1743465554",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-shrewsbury/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-shrewsbury/",
@@ -433,6 +481,9 @@
       "phone": "+44 1702526666",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-southend/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-southend/",
@@ -448,6 +499,9 @@
       "phone": "+44 2086429100",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-sutton/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-sutton/",
@@ -463,6 +517,9 @@
       "phone": "+44 1482633888",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-swanland/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-swanland/",
@@ -478,6 +535,9 @@
       "phone": "+44 1845522297",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-thirsk/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-thirsk/",
@@ -493,6 +553,9 @@
       "phone": "+44 1162609565",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-thurmaston/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-thurmaston/",
@@ -508,6 +571,9 @@
       "phone": "+44 1923243429",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-watford/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-watford/",
@@ -523,6 +589,9 @@
       "phone": "+44 1189790551",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-wokingham/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-wokingham/",
@@ -538,6 +607,9 @@
       "phone": "+44 1993811355",
       "emergency_24h": true,
       "duty": "Open 24 hours, 365 days a year",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-woodstock/",
       "source_url": "https://www.medivetgroup.com/24-hour-emergency-vet/24-hour-woodstock/",
@@ -552,6 +624,9 @@
       "phone": "+44 1883348483",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/the-village-veterinary-hospital-caterham",
       "source_url": "https://www.cvsvets.com/south-east/the-village-veterinary-hospital-caterham",
@@ -567,6 +642,9 @@
       "phone": "+44 1709377241",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/yorkshire-and-humber/springfield-veterinary-hospital-rotherham",
       "source_url": "https://www.cvsvets.com/yorkshire-and-humber/springfield-veterinary-hospital-rotherham",
@@ -582,6 +660,9 @@
       "phone": "+44 1642242338",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/yorkshire-and-humber/bridge-veterinary-hospital-middlesbrough",
       "source_url": "https://www.cvsvets.com/yorkshire-and-humber/bridge-veterinary-hospital-middlesbrough",
@@ -597,6 +678,9 @@
       "phone": "+44 1423637333",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/yorkshire-and-humber/the-harrogate-vet-veterinary-hospital-ripon-way",
       "source_url": "https://www.cvsvets.com/yorkshire-and-humber/the-harrogate-vet-veterinary-hospital-ripon-way",
@@ -612,6 +696,9 @@
       "phone": "+44 1302534999",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/yorkshire-and-humber/doncaster/beechwood-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/yorkshire-and-humber/doncaster/beechwood-veterinary-hospital",
@@ -627,6 +714,9 @@
       "phone": "+44 1493661833",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/east/the-veterinary-hospital-gorleston",
       "source_url": "https://www.cvsvets.com/east/the-veterinary-hospital-gorleston",
@@ -642,6 +732,9 @@
       "phone": "+44 1752700600",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-west/woodlands-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/south-west/woodlands-veterinary-hospital",
@@ -657,6 +750,9 @@
       "phone": "+44 1332810395",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/east-midlands/dovecote-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/east-midlands/dovecote-veterinary-hospital",
@@ -672,6 +768,9 @@
       "phone": "+44 1216474100",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/west-midlands/solihull-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/west-midlands/solihull-veterinary-hospital",
@@ -687,6 +786,9 @@
       "phone": "+44 1329833112",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/animed-veterinary-hospital-shedfield",
       "source_url": "https://www.cvsvets.com/south-east/animed-veterinary-hospital-shedfield",
@@ -702,6 +804,9 @@
       "phone": "+44 1189733466",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/nine-mile-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/south-east/nine-mile-veterinary-hospital",
@@ -717,6 +822,9 @@
       "phone": "+44 1628628121",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/summerleaze-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/south-east/summerleaze-veterinary-hospital",
@@ -732,6 +840,9 @@
       "phone": "+44 1425473683",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/cedar-veterinary-hospital-ringwood",
       "source_url": "https://www.cvsvets.com/south-east/cedar-veterinary-hospital-ringwood",
@@ -747,6 +858,9 @@
       "phone": "+44 1227765522",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/barton-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/south-east/barton-veterinary-hospital",
@@ -762,6 +876,9 @@
       "phone": "+44 2392668916",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/harbour-veterinary-hospital-portsmouth",
       "source_url": "https://www.cvsvets.com/south-east/harbour-veterinary-hospital-portsmouth",
@@ -777,6 +894,9 @@
       "phone": "+44 1962854088",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-east/mildmay-veterinary-hospital-winchester",
       "source_url": "https://www.cvsvets.com/south-east/mildmay-veterinary-hospital-winchester",
@@ -793,6 +913,9 @@
       "phone": "+44 1707666399",
       "emergency_24h": true,
       "duty": "Emergency Referrals Service 24 h, 365 days",
+      "duty_i18n": {
+        "sl": "Služba za nujne napotitve 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.rvc.ac.uk/small-animal-vet/specialist-referrals/clinical-services/veterinary-emergency-referrals",
       "source_url": "https://www.rvc.ac.uk/small-animal-vet/specialist-referrals/clinical-services/veterinary-emergency-referrals",
@@ -809,6 +932,9 @@
       "phone": "+44 1223337621",
       "emergency_24h": true,
       "duty": "Phone staffed 24 h for emergency referrals",
+      "duty_i18n": {
+        "sl": "Telefon je za nujne napotitve dosegljiv 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.hospital.vet.cam.ac.uk/small-animal-services",
       "source_url": "https://www.hospital.vet.cam.ac.uk/Refer-a-case-to-us/emergency-referrals",
@@ -825,6 +951,9 @@
       "phone": "+44 1217127070",
       "emergency_24h": true,
       "duty": "Emergency service 24/7, 365 days",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://www.willows.uk.net/",
       "source_url": "https://www.willows.uk.net/in-patient-care/out-of-hours-emergency-service/",
@@ -841,6 +970,9 @@
       "phone": "+44 1483423761",
       "emergency_24h": true,
       "duty": "Emergency referrals 24/7",
+      "duty_i18n": {
+        "sl": "Nujne napotitve 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.fitzpatrickreferrals.co.uk/",
       "source_url": "https://www.fitzpatrickreferrals.co.uk/contact-us/",
@@ -857,6 +989,9 @@
       "phone": "+44 1612226101",
       "emergency_24h": true,
       "duty": "24/7 emergency and referral hospital",
+      "duty_i18n": {
+        "sl": "Nujna in napotna bolnišnica 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/professionals/247-hospitals/vets-now-manchester",
       "source_url": "https://www.vets-now.com/professionals/247-hospitals/vets-now-manchester",
@@ -873,6 +1008,9 @@
       "phone": "+44 1962767920",
       "emergency_24h": true,
       "duty": "Emergency service day or night",
+      "duty_i18n": {
+        "sl": "Nujna služba podnevi in ponoči"
+      },
       "small_animals": true,
       "url": "https://www.andersonmoores.com/?p=8635",
       "source_url": "https://www.andersonmoores.com/?p=8635",
@@ -889,6 +1027,9 @@
       "phone": "+44 1173940513",
       "emergency_24h": true,
       "duty": "Emergencies 24/7 by referral",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan po napotitvi"
+      },
       "small_animals": true,
       "url": "https://langfordvets.co.uk/help-emergencies",
       "source_url": "https://langfordvets.co.uk/help-emergencies",
@@ -905,6 +1046,9 @@
       "phone": "+44 1243765247",
       "emergency_24h": true,
       "duty": "Open 24/7, accepts all emergency cases",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, sprejema vse nujne primere"
+      },
       "small_animals": true,
       "url": "https://thelighthousevets.com/",
       "source_url": "https://thelighthousevets.com/",
@@ -921,6 +1065,9 @@
       "phone": "+44 1212382007",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 18; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -936,6 +1083,9 @@
       "phone": "+44 1173361172",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 18; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -951,6 +1101,9 @@
       "phone": "+44 1225635616",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 19; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -966,6 +1119,9 @@
       "phone": "+44 2081093356",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 19; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -981,6 +1137,9 @@
       "phone": "+44 1274398905",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 6pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 18; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -996,6 +1155,9 @@
       "phone": "+44 1242373239",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 19; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -1011,6 +1173,9 @@
       "phone": "+44 1233877636",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic, opens at 7pm; not 24 h",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa, odpre ob 19; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet",
@@ -1026,6 +1191,9 @@
       "phone": "+44 1902218179",
       "emergency_24h": false,
       "duty": "Out-of-hours: Mon-Fri 6pm-8.30am, Sat 12pm-8.30am, Sun 8am-8.30am next day, open bank holidays; not 24 h",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 18–8.30, sob 12–8.30, ned 8–8.30 naslednji dan, odprto tudi ob praznikih; ni odprta 24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/wolverhampton/",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/wolverhampton/",
@@ -1040,6 +1208,9 @@
       "phone": "+44 1202509000",
       "emergency_24h": true,
       "duty": "24 hours a day",
+      "duty_i18n": {
+        "sl": "24 ur na dan"
+      },
       "small_animals": true,
       "url": "https://www.animalpoisonline.co.uk/",
       "source_url": "https://www.animalpoisonline.co.uk/",
@@ -1056,6 +1227,9 @@
       "phone": "+44 1903954329",
       "emergency_24h": false,
       "duty": "Mon-Fri 6.30pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18.30–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/worthing",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/worthing",
@@ -1071,6 +1245,9 @@
       "phone": "+44 1278553526",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8.30am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8.30–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/bridgwater",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/bridgwater",
@@ -1086,6 +1263,9 @@
       "phone": "+44 1582967089",
       "emergency_24h": false,
       "duty": "Mon: open 24h from 8:30am; Tue-Fri 7:00pm - 8:30am; Sat 12:00pm - 8:30am; Sun: open 24h from 8:30am",
+      "duty_i18n": {
+        "sl": "pon: odprto 24 ur od 8.30; tor–pet 19–8.30; sob 12–8.30; ned: odprto 24 ur od 8.30"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/barton-le-clay",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/barton-le-clay",
@@ -1101,6 +1281,9 @@
       "phone": "+44 1202859933",
       "emergency_24h": false,
       "duty": "Mon: open 24h from 8:30am; Tue-Fri 6:00pm - 8:30am; Sat 12:00pm - 8:30am; Sun: open 24h from 8:30am",
+      "duty_i18n": {
+        "sl": "pon: odprto 24 ur od 8.30; tor–pet 18–8.30; sob 12–8.30; ned: odprto 24 ur od 8.30"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/bournemouth",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/bournemouth",
@@ -1116,6 +1299,9 @@
       "phone": "+44 1246930569",
       "emergency_24h": false,
       "duty": "Mon-Fri 6.30pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18.30–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/chesterfield",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/chesterfield",
@@ -1131,6 +1317,9 @@
       "phone": "+44 2477110901",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/coventry",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/coventry",
@@ -1146,6 +1335,9 @@
       "phone": "+44 1332405502",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/derby",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/derby",
@@ -1161,6 +1353,9 @@
       "phone": "+44 1302273221",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8am; Sat 12pm - 8am; Sun 8am - 8am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8; sob 12–8; ned 8–8 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/doncaster",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/doncaster",
@@ -1176,6 +1371,9 @@
       "phone": "+44 1323301292",
       "emergency_24h": false,
       "duty": "Mon-Fri 7:00pm - 8:30am; Sat 12:00pm - 8:30am; Sun: open 24h from 8:30am",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned: odprto 24 ur od 8.30"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/eastbourne",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/eastbourne",
@@ -1191,6 +1389,9 @@
       "phone": "+44 1252444686",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/farnham",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/farnham",
@@ -1206,6 +1407,9 @@
       "phone": "+44 1913121665",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/gateshead",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/gateshead",
@@ -1221,6 +1425,9 @@
       "phone": "+44 1634787266",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/gillingham",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/gillingham",
@@ -1236,6 +1443,9 @@
       "phone": "+44 1483313474",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8am; Sat 12pm - 8am; Sun 8am - 8am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8; sob 12–8; ned 8–8 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/guildford",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/guildford",
@@ -1251,6 +1461,9 @@
       "phone": "+44 1442768484",
       "emergency_24h": false,
       "duty": "Mon-Fri 7:00pm - 8:30am; Sat 12:00pm - 8:30am; Sun: open 24h from 8:30am",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned: odprto 24 ur od 8.30"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/hemel-hempstead",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/hemel-hempstead",
@@ -1266,6 +1479,9 @@
       "phone": "+44 1227504766",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/herne-bay",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/herne-bay",
@@ -1281,6 +1497,9 @@
       "phone": "+44 1494931644",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/high-wycombe",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/high-wycombe",
@@ -1296,6 +1515,9 @@
       "phone": "+44 1482908817",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/hull",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/hull",
@@ -1311,6 +1533,9 @@
       "phone": "+44 1539232228",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8.30am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8.30–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kendal",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kendal",
@@ -1326,6 +1551,9 @@
       "phone": "+44 1553340467",
       "emergency_24h": false,
       "duty": "Mon-Fri 6.30pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18.30–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kings-lynn",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kings-lynn",
@@ -1341,6 +1569,9 @@
       "phone": "+44 1522441416",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8am; Sat 12pm - 8am; Sun 8am - 8am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8; sob 12–8; ned 8–8 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/lincoln",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/lincoln",
@@ -1356,6 +1587,9 @@
       "phone": "+44 1512715727",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/liverpool",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/liverpool",
@@ -1371,6 +1605,9 @@
       "phone": "+44 1625402747",
       "emergency_24h": false,
       "duty": "Mon-Fri 6.30pm - 8am; Sat 12pm - 8am; Sun 8am - 8am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18.30–8; sob 12–8; ned 8–8 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/macclesfield",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/macclesfield",
@@ -1386,6 +1623,9 @@
       "phone": "+44 1206355917",
       "emergency_24h": false,
       "duty": "Mon-Fri 6.30pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18.30–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/manningtree",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/manningtree",
@@ -1401,6 +1641,9 @@
       "phone": "+44 1642965044",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/middlesbrough",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/middlesbrough",
@@ -1416,6 +1659,9 @@
       "phone": "+44 1908509500",
       "emergency_24h": false,
       "duty": "Mon-Fri 7:00pm - 8:00am; Sat 12:00pm - 8:00am; Sun: open 24h from 8:00am",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8; sob 12–8; ned: odprto 24 ur od 8"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/milton-keynes",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/milton-keynes",
@@ -1431,6 +1677,9 @@
       "phone": "+44 1604945402",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/northampton",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/northampton",
@@ -1446,6 +1695,9 @@
       "phone": "+44 1159981373",
       "emergency_24h": false,
       "duty": "Mon-Fri 6pm - 8.30am; Sat 12pm - 8am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 18–8.30; sob 12–8; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/nottingham",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/nottingham",
@@ -1461,6 +1713,9 @@
       "phone": "+44 1733685282",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/peterborough",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/peterborough",
@@ -1476,6 +1731,9 @@
       "phone": "+44 1483313441",
       "emergency_24h": false,
       "duty": "Mon-Fri 7pm - 8.30am; Sat 12pm - 8.30am; Sun 8am - 8.30am next day",
+      "duty_i18n": {
+        "sl": "pon–pet 19–8.30; sob 12–8.30; ned 8–8.30 naslednji dan"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/staines",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/staines",
@@ -1490,6 +1748,9 @@
       "phone": "+44 1392271221",
       "emergency_24h": true,
       "duty": "Open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/south-west/exeter/st-davids-veterinary-hospital-exeter",
       "source_url": "https://www.cvsvets.com/south-west/exeter/st-davids-veterinary-hospital-exeter",
@@ -1504,6 +1765,9 @@
       "region": "England – North West",
       "emergency_24h": true,
       "duty": "Open 24 hours a day for emergency care only; no routine appointments",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan samo za nujno oskrbo; brez rednih pregledov"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/north-west/cvs-vets-24-7-chester",
       "source_url": "https://www.cvsvets.com/north-west/cvs-vets-24-7-chester",
@@ -1519,6 +1783,9 @@
       "phone": "+44 1746763998",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/west-midlands/minightvet-bridgnorth",
       "source_url": "https://www.cvsvets.com/west-midlands/minightvet-bridgnorth",
@@ -1534,6 +1801,9 @@
       "phone": "+44 1159430898",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/east-midlands/minightvet-nottingham",
       "source_url": "https://www.cvsvets.com/east-midlands/minightvet-nottingham",
@@ -1549,6 +1819,9 @@
       "phone": "+44 1622734555",
       "emergency_24h": true,
       "duty": "Emergency: open 24 hours a day every day (CVS Vets 24/7)",
+      "duty_i18n": {
+        "sl": "Nujna pomoč: odprto 24 ur na dan, vsak dan (CVS Vets 24/7)"
+      },
       "small_animals": true,
       "url": "https://dev.cvsvets.com/south-east/newnham-court-veterinary-hospital",
       "source_url": "https://dev.cvsvets.com/south-east/newnham-court-veterinary-hospital",
@@ -1565,6 +1838,9 @@
       "phone": "+44 1924441144",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-leeds/vets4pets-leeds-birstall/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-leeds/vets4pets-leeds-birstall/",
@@ -1581,6 +1857,9 @@
       "phone": "+44 1604753300",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-northampton/vetsforpets-northampton/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-northampton/vetsforpets-northampton/",
@@ -1597,6 +1876,9 @@
       "phone": "+44 1226289000",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-barnsley/vets4pets-barnsley/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-barnsley/vets4pets-barnsley/",
@@ -1613,6 +1895,9 @@
       "phone": "+44 1268585700",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-basildon/vets4pets-basildon/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-basildon/vets4pets-basildon/",
@@ -1629,6 +1914,9 @@
       "phone": "+44 1206771984",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-colchester/vets4pets-colchester-advanced/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-colchester/vets4pets-colchester-advanced/",
@@ -1645,6 +1933,9 @@
       "phone": "+44 1708720920",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, 7 days a week (Vets4Pets 24-hour hospital)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu (24-urna bolnišnica Vets4Pets)"
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-essex/vets4pets-romford/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-essex/vets4pets-romford/",
@@ -1661,6 +1952,9 @@
       "phone": "+44 1412306575",
       "emergency_24h": true,
       "duty": "7am - 7am next day, every day incl. bank holidays",
+      "duty_i18n": {
+        "sl": "7–7 naslednji dan, vsak dan, tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/glasgow/",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/glasgow/",
@@ -1677,6 +1971,9 @@
       "phone": "+44 1412605555",
       "emergency_24h": true,
       "duty": "Open 24hrs a day, every day",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan"
+      },
       "small_animals": true,
       "url": "https://emergencyvetsglasgow.com/",
       "source_url": "https://emergencyvetsglasgow.com/",
@@ -1693,6 +1990,9 @@
       "phone": "+44 1413305848",
       "emergency_24h": true,
       "duty": "Open 24/7 (consultations by appointment only; emergency service 24-7)",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vse dni v tednu (pregledi samo po dogovoru; nujna služba 24 ur na dan)"
+      },
       "small_animals": true,
       "url": "https://www.gla.ac.uk/schools/bohvm/sah/",
       "source_url": "https://www.gla.ac.uk/schools/bohvm/sah/contact",
@@ -1709,6 +2009,9 @@
       "phone": "+44 1312413382",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 6pm - 8.30am, Sat 12pm - 8.30am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 18–8.30, sob 12–8.30, ned 8–8.30 naslednji dan; odprto tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/edinburgh",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/edinburgh",
@@ -1724,6 +2027,9 @@
       "phone": "+44 1316507650",
       "emergency_24h": true,
       "duty": "Emergency referrals 24 hours a day, 365 days a year",
+      "duty_i18n": {
+        "sl": "Nujne napotitve 24 ur na dan, 365 dni v letu"
+      },
       "small_animals": true,
       "url": "https://vet.ed.ac.uk/clinical",
       "source_url": "https://vet.ed.ac.uk/sites/default/files/2024-09/HfSA%20-%20Emergency%20%26amp%3B%20Critical%20Care%20Unit.pdf",
@@ -1740,6 +2046,9 @@
       "phone": "+44 1224969854",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8am, Sat 12pm - 8am, Sun 8am - 8am next day; open bank holidays",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 19–8, sob 12–8, ned 8–8 naslednji dan; odprto tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/aberdeen",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/aberdeen",
@@ -1755,6 +2064,9 @@
       "phone": "+44 1382690733",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8:30am, Sat 12pm - 8:30am, Sun open 24h from 8:30am",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 19–8.30, sob 12–8.30, ned odprto 24 ur od 8.30"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/dundee",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/dundee",
@@ -1770,6 +2082,9 @@
       "phone": "+44 1563258494",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 6pm - 8.30am, Sat 12pm - 8am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 18–8.30, sob 12–8, ned 8–8.30 naslednji dan; odprto tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kilmarnock",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kilmarnock",
@@ -1785,6 +2100,9 @@
       "phone": "+44 1592308825",
       "emergency_24h": false,
       "duty": "Out of hours: Mon-Fri 7pm - 8.30am, Sat 12pm - 8.30am, Sun 8am - 8.30am next day; open bank holidays",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: pon–pet 19–8.30, sob 12–8.30, ned 8–8.30 naslednji dan; odprto tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/kirkcaldy",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/kirkcaldy",
@@ -2018,6 +2336,9 @@
       "phone": "+44 1595810456",
       "emergency_24h": true,
       "duty": "24/7 on-call emergency service via answering service; vet calls back usually within 5-10 minutes",
+      "duty_i18n": {
+        "sl": "Nujna dežurna služba 24 ur na dan prek telefonske tajnice; veterinar vas običajno pokliče nazaj v 5–10 minutah"
+      },
       "small_animals": true,
       "url": "https://www.shetlandvets.co.uk/emergencies",
       "source_url": "https://www.shetlandvets.co.uk/emergencies",
@@ -2713,6 +3034,9 @@
       "phone": "+44 1887820771",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-5pm. If closed, call the number to be connected to the on-call vet.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17. Če je zaprto, pokličite številko in vas povežejo z dežurnim veterinarjem."
+      },
       "small_animals": true,
       "url": "https://www.heartlandvets.co.uk/",
       "source_url": "https://www.heartlandvets.co.uk/contact-us",
@@ -2727,6 +3051,9 @@
       "phone": "+44 1890882322",
       "emergency_24h": false,
       "duty": "Consultations by appointment. Out-of-hours emergency care via Galedin / E-Vets Galashiels.",
+      "duty_i18n": {
+        "sl": "Pregledi po dogovoru. Nujna pomoč zunaj delovnega časa prek Galedin / E-Vets Galashiels."
+      },
       "small_animals": true,
       "url": "https://www.galedinvet.com/",
       "source_url": "https://www.galedinvet.com/contact-us",
@@ -2741,6 +3068,9 @@
       "phone": "+44 1289330066",
       "emergency_24h": false,
       "duty": "Consultations by appointment. Out-of-hours emergency care via Galedin / E-Vets Galashiels.",
+      "duty_i18n": {
+        "sl": "Pregledi po dogovoru. Nujna pomoč zunaj delovnega časa prek Galedin / E-Vets Galashiels."
+      },
       "small_animals": true,
       "url": "https://www.galedinvet.com/",
       "source_url": "https://www.galedinvet.com/contact-us",
@@ -2755,6 +3085,9 @@
       "phone": "+44 1896809447",
       "emergency_24h": false,
       "duty": "Consultations by appointment. Out-of-hours emergency care via Galedin / E-Vets Galashiels.",
+      "duty_i18n": {
+        "sl": "Pregledi po dogovoru. Nujna pomoč zunaj delovnega časa prek Galedin / E-Vets Galashiels."
+      },
       "small_animals": true,
       "url": "https://galedinvet.com/branch/innerleithen",
       "source_url": "https://www.galedinvet.com/contact-us",
@@ -2770,6 +3103,9 @@
       "phone": "+44 1349863117",
       "emergency_24h": false,
       "duty": "Mon-Tue 8am-5pm, Wed 8am-7pm, Thu-Fri 8am-5pm, by appointment. Emergencies: 01349 861203 (Conon Bridge).",
+      "duty_i18n": {
+        "sl": "pon–tor 8–17, sre 8–19, čet–pet 8–17, po dogovoru. Nujni primeri: 01349 861203 (Conon Bridge)."
+      },
       "small_animals": true,
       "url": "https://conanvet.co.uk/",
       "source_url": "https://conanvet.co.uk/contact-us/",
@@ -2783,6 +3119,9 @@
       "phone": "+44 1349861203",
       "emergency_24h": false,
       "duty": "Part-time branch, by appointment only. Emergencies: 01349 861203.",
+      "duty_i18n": {
+        "sl": "Podružnica s skrajšanim delovnim časom, samo po dogovoru. Nujni primeri: 01349 861203."
+      },
       "small_animals": true,
       "url": "https://conanvet.co.uk/",
       "source_url": "https://conanvet.co.uk/contact-us/",
@@ -2797,6 +3136,9 @@
       "phone": "+44 1349861203",
       "emergency_24h": false,
       "duty": "Part-time branch, by appointment only. Emergencies: 01349 861203.",
+      "duty_i18n": {
+        "sl": "Podružnica s skrajšanim delovnim časom, samo po dogovoru. Nujni primeri: 01349 861203."
+      },
       "small_animals": true,
       "url": "https://conanvet.co.uk/",
       "source_url": "https://conanvet.co.uk/contact-us/",
@@ -2811,6 +3153,9 @@
       "phone": "+44 1349861203",
       "emergency_24h": false,
       "duty": "Part-time branch, by appointment only. Emergencies: 01349 861203.",
+      "duty_i18n": {
+        "sl": "Podružnica s skrajšanim delovnim časom, samo po dogovoru. Nujni primeri: 01349 861203."
+      },
       "small_animals": true,
       "url": "https://conanvet.co.uk/",
       "source_url": "https://conanvet.co.uk/contact-us/",
@@ -2826,6 +3171,9 @@
       "phone": "+44 1315571819",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm, Sat 8:30am-12pm. Out of hours: E-Vets, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob 8.30–12. Zunaj delovnega časa: E-Vets, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.dundasvetgroup.co.uk/",
       "source_url": "https://www.dundasvetgroup.co.uk/contact",
@@ -2841,6 +3189,9 @@
       "phone": "+44 1315511407",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm. Out of hours: E-Vets, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18. Zunaj delovnega časa: E-Vets, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.dundasvetgroup.co.uk/",
       "source_url": "https://www.dundasvetgroup.co.uk/contact",
@@ -2855,6 +3206,9 @@
       "phone": "+44 1314455777",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm, Sat 8:30am-12pm. Out of hours: E-Vets, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–12. Zunaj delovnega časa: E-Vets, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.dundasvetgroup.co.uk/",
       "source_url": "https://www.dundasvetgroup.co.uk/contact",
@@ -2869,6 +3223,9 @@
       "phone": "+44 1316596648",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6pm. Out of hours: E-Vets, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18. Zunaj delovnega časa: E-Vets, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.dundasvetgroup.co.uk/",
       "source_url": "https://www.dundasvetgroup.co.uk/contact",
@@ -2882,6 +3239,9 @@
       "phone": "+44 1313320458",
       "emergency_24h": false,
       "duty": "Call the practice in opening hours. Nights and weekends: Vets Now Edinburgh, 0131 444 0990.",
+      "duty_i18n": {
+        "sl": "V delovnem času pokličite ambulanto. Ponoči in ob koncih tedna: Vets Now Edinburgh, 0131 444 0990."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/scotland/batchelor-davidson-watson-hillhouse/",
       "source_url": "https://www.cvsvets.com/scotland/batchelor-davidson-watson-hillhouse/",
@@ -2896,6 +3256,9 @@
       "phone": "+44 1315536017",
       "emergency_24h": false,
       "duty": "Urgent: call the practice. When closed: Vets Now Edinburgh, 0131 444 0990.",
+      "duty_i18n": {
+        "sl": "Nujno: pokličite ambulanto. Ko je zaprto: Vets Now Edinburgh, 0131 444 0990."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/scotland/batchelor-davidson-watson-newhaven/",
       "source_url": "https://dev.cvsvets.com/scotland/batchelor-davidson-watson-newhaven/contact",
@@ -2911,6 +3274,9 @@
       "phone": "+44 1382549600",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-8:30pm, Sat-Sun 9am-4pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20.30, sob–ned 9–16."
+      },
       "small_animals": true,
       "url": "https://wallacevets.com/",
       "source_url": "https://wallacevets.com/",
@@ -2926,6 +3292,9 @@
       "phone": "+44 1382549600",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5:30pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17.30."
+      },
       "small_animals": true,
       "url": "https://wallacevets.com/",
       "source_url": "https://wallacevets.com/",
@@ -2941,6 +3310,9 @@
       "phone": "+44 1382549600",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5:30pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17.30."
+      },
       "small_animals": true,
       "url": "https://wallacevets.com/",
       "source_url": "https://wallacevets.com/",
@@ -2956,6 +3328,9 @@
       "phone": "+44 1382810777",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-7pm, Sat 8:30am-5pm. Small animal emergencies out of hours: Vets Now.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 8.30–17. Nujni primeri za male živali zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.parksidevets.com/",
       "source_url": "https://www.parksidevets.com/",
@@ -2971,6 +3346,9 @@
       "phone": "+44 1382739634",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30pm, Sat 9am-12pm. Small animal emergencies out of hours: Vets Now.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 9–12. Nujni primeri za male živali zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.parksidevets.com/",
       "source_url": "https://www.parksidevets.com/",
@@ -2986,6 +3364,9 @@
       "phone": "+44 1241293777",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-5pm/6:30pm. Small animal emergencies out of hours: Vets Now.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–17/18.30. Nujni primeri za male živali zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.parksidevets.com/",
       "source_url": "https://www.parksidevets.com/",
@@ -3001,6 +3382,9 @@
       "phone": "+44 1382884411",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-7pm, Sat 8am-12pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 8–12."
+      },
       "small_animals": true,
       "url": "https://tayvet.co.uk/",
       "source_url": "https://tayvet.co.uk/",
@@ -3016,6 +3400,9 @@
       "phone": "+44 1334650888",
       "emergency_24h": true,
       "duty": "Mon-Fri 8:30am-7pm, Sat 9am-1pm. Out of hours: on-call vet on the same number.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–13. Zunaj delovnega časa: dežurni veterinar na isti številki."
+      },
       "small_animals": true,
       "url": "https://www.edenvets.co.uk/",
       "source_url": "https://www.edenvets.co.uk/",
@@ -3031,6 +3418,9 @@
       "phone": "+44 1334479279",
       "emergency_24h": false,
       "duty": "Mon-Tue 9am-7pm, Wed-Fri 9am-5pm, Sat 9am-12pm. Out-of-hours emergencies via Cupar surgery 01334 652273.",
+      "duty_i18n": {
+        "sl": "pon–tor 9–19, sre–pet 9–17, sob 9–12. Nujni primeri zunaj delovnega časa prek ambulante Cupar, 01334 652273."
+      },
       "small_animals": true,
       "url": "https://www.wilsonandpartners.co.uk/",
       "source_url": "https://www.wilsonandpartners.co.uk/standrews/",
@@ -3046,6 +3436,9 @@
       "phone": "+44 1334652273",
       "emergency_24h": false,
       "duty": "Emergency out-of-hours number 01334 652273.",
+      "duty_i18n": {
+        "sl": "Številka za nujne primere zunaj delovnega časa: 01334 652273."
+      },
       "small_animals": true,
       "url": "https://www.wilsonandpartners.co.uk/",
       "source_url": "https://www.wilsonandpartners.co.uk/standrews/",
@@ -3075,6 +3468,9 @@
       "phone": "+44 1592599500",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency cover: Vets Now.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.stclairvet.co.uk/",
       "source_url": "https://www.stclairvet.co.uk/",
@@ -3090,6 +3486,9 @@
       "phone": "+44 1592757373",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency cover: Vets Now.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.stclairvet.co.uk/",
       "source_url": "https://www.stclairvet.co.uk/",
@@ -3105,6 +3504,9 @@
       "phone": "+44 1333423396",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency cover: Vets Now.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč zunaj delovnega časa: Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.stclairvet.co.uk/",
       "source_url": "https://www.stclairvet.co.uk/",
@@ -3120,6 +3522,9 @@
       "phone": "+44 1383738796",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm. Out of hours: Vets Now Kirkcaldy 01592 328336 or Vets Now Edinburgh 0131 444 0990.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18. Zunaj delovnega časa: Vets Now Kirkcaldy 01592 328336 ali Vets Now Edinburgh 0131 444 0990."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-dunfermline/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-dunfermline/",
@@ -3135,6 +3540,9 @@
       "phone": "+44 1698269796",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:30am-5pm. Out of hours: Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "pon–pet 9.30–17. Zunaj delovnega časa: Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.robbvetclinic.co.uk/",
       "source_url": "https://www.robbvetclinic.co.uk/dog-cat-vet-emergency",
@@ -3149,6 +3557,9 @@
       "phone": "+44 1563522701",
       "emergency_24h": false,
       "duty": "Out-of-hours small animal emergencies: Vets Now Kilmarnock, 21 Hill Street, 01563 258028.",
+      "duty_i18n": {
+        "sl": "Nujni primeri za male živali zunaj delovnega časa: Vets Now Kilmarnock, 21 Hill Street, 01563 258028."
+      },
       "small_animals": true,
       "url": "https://www.mbmvetgroup.com/",
       "source_url": "https://www.mbmvetgroup.com/contact-us/emergencies",
@@ -3163,6 +3574,9 @@
       "phone": "+44 1290550452",
       "emergency_24h": false,
       "duty": "Out-of-hours small animal emergencies: Vets Now Kilmarnock, 01563 258028.",
+      "duty_i18n": {
+        "sl": "Nujni primeri za male živali zunaj delovnega časa: Vets Now Kilmarnock, 01563 258028."
+      },
       "small_animals": true,
       "url": "https://www.mbmvetgroup.com/",
       "source_url": "https://www.mbmvetgroup.com/contact-us/emergencies",
@@ -3177,6 +3591,9 @@
       "phone": "+44 1505502126",
       "emergency_24h": false,
       "duty": "Out-of-hours small animal emergencies: Vets Now Kilmarnock, 01563 258028.",
+      "duty_i18n": {
+        "sl": "Nujni primeri za male živali zunaj delovnega časa: Vets Now Kilmarnock, 01563 258028."
+      },
       "small_animals": true,
       "url": "https://www.mbmvetgroup.com/",
       "source_url": "https://www.mbmvetgroup.com/contact-us/emergencies",
@@ -3192,6 +3609,9 @@
       "phone": "+44 1355271540",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm, Sat 9am-6pm. No overnight care: Vets Now Glasgow 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–18. Brez nočne oskrbe: Vets Now Glasgow 0141 332 3212 ali Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-east-kilbride/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-east-kilbride/",
@@ -3206,6 +3626,9 @@
       "phone": "+44 1355261262",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-2:30pm and 3:30pm-7pm; closed weekends.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–14.30 in 15.30–19; ob koncih tedna zaprto."
+      },
       "small_animals": true,
       "url": "https://www.petsnvets.org/our-practices/hairmyres-vets",
       "source_url": "https://www.petsnvets.org/our-practices/hairmyres-vets",
@@ -3221,6 +3644,9 @@
       "phone": "+44 1294322550",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30pm, Sat 8:30am-5pm. Out of hours: Vets Now Kilmarnock 01563 258028.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 8.30–17. Zunaj delovnega časa: Vets Now Kilmarnock 01563 258028."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-irvine/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-irvine/",
@@ -3235,6 +3661,9 @@
       "phone": "+44 1419420283",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-7pm, Sat 9am-12pm. Out of hours: University of Glasgow Small Animal Hospital 0141 330 7690.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–12. Zunaj delovnega časa: University of Glasgow Small Animal Hospital 0141 330 7690."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-glasgow/vets4pets-bearsden/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-glasgow/vets4pets-bearsden/",
@@ -3249,6 +3678,9 @@
       "phone": "+44 1224706258",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-5pm, by appointment. Out of hours: Vets Now Aberdeen 01224 379091.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17, po dogovoru. Zunaj delovnega časa: Vets Now Aberdeen 01224 379091."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-aberdeenshire/vets4pets-aberdeen-bridge-of-don/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-aberdeenshire/vets4pets-aberdeen-bridge-of-don/",
@@ -3263,6 +3695,9 @@
       "phone": "+44 1419421487",
       "emergency_24h": false,
       "duty": "Call the practice in opening hours. Nights and weekends: University of Glasgow Small Animal Hospital 0141 330 7690 or Vets Now Glasgow.",
+      "duty_i18n": {
+        "sl": "V delovnem času pokličite ambulanto. Ponoči in ob koncih tedna: University of Glasgow Small Animal Hospital 0141 330 7690 ali Vets Now Glasgow."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/scotland/bearsden-veterinary-centre",
       "source_url": "https://www.cvsvets.com/scotland/bearsden-veterinary-centre",
@@ -3277,6 +3712,9 @@
       "phone": "+44 1779472460",
       "emergency_24h": false,
       "duty": "Nights and weekends: Vets Now Aberdeen.",
+      "duty_i18n": {
+        "sl": "Ponoči in ob koncih tedna: Vets Now Aberdeen."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/scotland/buchan-veterinary-clinics-peterhead",
       "source_url": "https://www.cvsvets.com/scotland/buchan-veterinary-clinics-peterhead",
@@ -3292,6 +3730,9 @@
       "phone": "+44 1467621429",
       "emergency_24h": true,
       "duty": "Mon-Tue 8am-7pm, Wed-Fri 8am-6pm, Sat 8:30am-1pm (urgent only). 24-hour pet emergency service on the same number.",
+      "duty_i18n": {
+        "sl": "pon–tor 8–19, sre–pet 8–18, sob 8.30–13 (samo nujni primeri). Nujna pomoč za hišne ljubljenčke 24 ur na dan na isti številki."
+      },
       "small_animals": true,
       "url": "https://donviewvets.co.uk/contact-us/inverurie-surgery",
       "source_url": "https://donviewvets.co.uk/contact-us/inverurie-surgery",
@@ -3307,6 +3748,9 @@
       "phone": "+44 1330822648",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6pm, Sat 8:30am-12pm, by appointment. Emergencies via Vets Now.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–12, po dogovoru. Nujni primeri prek Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.townandcountryvet.co.uk/",
       "source_url": "https://www.townandcountryvet.co.uk/our-practice/banchory/",
@@ -3364,6 +3808,9 @@
       "phone": "+44 1224722437",
       "emergency_24h": false,
       "duty": "Mon-Wed 8am-7pm, Thu 8am-6pm, Fri 8am-7pm, Sat 8am-1pm, by appointment. Out of hours: Vets Now (Kingswells).",
+      "duty_i18n": {
+        "sl": "pon–sre 8–19, čet 8–18, pet 8–19, sob 8–13, po dogovoru. Zunaj delovnega časa: Vets Now (Kingswells)."
+      },
       "small_animals": true,
       "url": "https://www.swanveterinarypractice.co.uk/",
       "source_url": "https://www.swanveterinarypractice.co.uk/",
@@ -3378,6 +3825,9 @@
       "phone": "+44 1224580327",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30/7pm, by appointment. Out of hours: Vets Now (Kingswells).",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30/19, po dogovoru. Zunaj delovnega časa: Vets Now (Kingswells)."
+      },
       "small_animals": true,
       "url": "https://www.swanveterinarypractice.co.uk/",
       "source_url": "https://www.swanveterinarypractice.co.uk/",
@@ -3392,6 +3842,9 @@
       "phone": "+44 1651872481",
       "emergency_24h": false,
       "duty": "Open six days a week by appointment; 24-hour emergency call-out service.",
+      "duty_i18n": {
+        "sl": "Odprto šest dni v tednu po dogovoru; nujna služba z obiski na terenu 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://meadowsvets.co.uk/",
       "source_url": "https://meadowsvets.co.uk/",
@@ -3406,6 +3859,9 @@
       "phone": "+44 1418874111",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30pm, Sat 8:30am-2:30pm, Sun 9am-1pm emergencies only. Out of hours: Vets Now Glasgow.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 8.30–14.30, ned 9–13 samo nujni primeri. Zunaj delovnega časa: Vets Now Glasgow."
+      },
       "small_animals": true,
       "url": "https://www.abbey-vetgroup.co.uk/",
       "source_url": "https://www.abbey-vetgroup.co.uk/emergency",
@@ -3420,6 +3876,9 @@
       "phone": "+44 1475721155",
       "emergency_24h": false,
       "duty": "Out of hours: Vets Now Glasgow.",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: Vets Now Glasgow."
+      },
       "small_animals": true,
       "url": "https://www.abbey-vetgroup.co.uk/",
       "source_url": "https://www.abbey-vetgroup.co.uk/emergency",
@@ -3435,6 +3894,9 @@
       "phone": "+44 1418893010",
       "emergency_24h": false,
       "duty": "Emergencies out of hours: Emergency Vets Glasgow 0141 260 5555 or Vets Now Glasgow.",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: Emergency Vets Glasgow 0141 260 5555 ali Vets Now Glasgow."
+      },
       "small_animals": true,
       "url": "https://www.lovestreetvets.com/",
       "source_url": "https://www.lovestreetvets.com/",
@@ -3450,6 +3912,9 @@
       "phone": "+44 1418865289",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30am-6:30pm, Sat 8:30am-3:30pm. Out of hours 6:30pm-8:30am: University of Glasgow Small Animal Hospital 0141 330 7690.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 8.30–15.30. Zunaj delovnega časa 18.30–8.30: University of Glasgow Small Animal Hospital 0141 330 7690."
+      },
       "small_animals": true,
       "url": "https://www.allanvet.scot/",
       "source_url": "https://www.allanvet.scot/",
@@ -3464,6 +3929,9 @@
       "phone": "+44 1415541911",
       "emergency_24h": false,
       "duty": "Alternating Saturday service with Firstvets Glasgow; call ahead to check which practice is open. Nights and weekends: Vets Now Glasgow, 123-145 North Street, G3 7DA, 0141 332 3212.",
+      "duty_i18n": {
+        "sl": "Izmenična sobotna služba s Firstvets Glasgow; vnaprej pokličite in preverite, katera ambulanta je odprta. Ponoči in ob koncih tedna: Vets Now Glasgow, 123-145 North Street, G3 7DA, 0141 332 3212."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/scotland/albavet-dennistoun",
       "source_url": "https://www.cvsvets.com/scotland/albavet-dennistoun",
@@ -3479,6 +3947,9 @@
       "phone": "+44 1555751560",
       "emergency_24h": false,
       "duty": "Appointments Mon-Fri 2.30pm-5pm; closed weekends. Emergencies: call the Motherwell clinic (01698 269 796); out of hours Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "Naročeni pregledi pon–pet 14.30–17; ob koncih tedna zaprto. Nujni primeri: pokličite kliniko Motherwell (01698 269 796); zunaj delovnega časa Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.robbvetclinic.co.uk/",
       "source_url": "https://www.robbvetclinic.co.uk/contact-us",
@@ -3493,6 +3964,9 @@
       "phone": "+44 1555662579",
       "emergency_24h": false,
       "duty": "Appointments Mon-Fri 9am-12pm; closed weekends. Emergencies: call the Motherwell clinic (01698 269 796); out of hours Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "Naročeni pregledi pon–pet 9–12; ob koncih tedna zaprto. Nujni primeri: pokličite kliniko Motherwell (01698 269 796); zunaj delovnega časa Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.robbvetclinic.co.uk/",
       "source_url": "https://www.robbvetclinic.co.uk/contact-us",
@@ -3508,6 +3982,9 @@
       "phone": "+44 1856873403",
       "emergency_24h": false,
       "duty": "Pets surgery Mon, Tue and Thu 3pm-5pm, by appointment. Main practice in Kirkwall: 01856 873403.",
+      "duty_i18n": {
+        "sl": "Ambulanta za hišne ljubljenčke pon, tor in čet 15–17, po dogovoru. Glavna ambulanta (Kirkwall): 01856 873403."
+      },
       "small_animals": true,
       "url": "https://northvet.co.uk/",
       "source_url": "https://northvet.co.uk/contact/",
@@ -3523,6 +4000,9 @@
       "phone": "+44 1698477340",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6.30pm, Sat 9am-6pm, Sun 10am-6pm. Out of hours: Vets Now Glasgow, 123-145 North Street, G3 7DA, 0141 332 3212 (consultations from about £218).",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18.30, sob 9–18, ned 10–18. Zunaj delovnega časa: Vets Now Glasgow, 123-145 North Street, G3 7DA, 0141 332 3212 (pregledi od približno 218 £)."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-hamilton/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-hamilton/",
@@ -3537,6 +4017,9 @@
       "phone": "+44 1417715565",
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm. Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "pon, tor, čet 8.30–19; sre, pet 8.30–17; sob 9–12.30. Zunaj delovnega časa: Vets Now 0141 332 3212 ali Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.realvets.co.uk/",
       "source_url": "https://www.realvets.co.uk/",
@@ -3552,6 +4035,9 @@
       "phone": "+44 1698283400",
       "emergency_24h": false,
       "duty": "Mon, Tue, Thu 8.30am-7pm; Wed, Fri 8.30am-5pm; Sat 9am-12.30pm. Out of hours: Vets Now 0141 332 3212 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "pon, tor, čet 8.30–19; sre, pet 8.30–17; sob 9–12.30. Zunaj delovnega časa: Vets Now 0141 332 3212 ali Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://www.realvets.co.uk/",
       "source_url": "https://www.realvets.co.uk/",
@@ -3565,6 +4051,9 @@
       "region": "Scotland – Lanarkshire",
       "emergency_24h": false,
       "duty": "Call the practice in an emergency during the day. After hours: Emergency Vets Glasgow 0141 260 5555 or Vets Now Charing Cross 0141 230 6443.",
+      "duty_i18n": {
+        "sl": "Ob nujnem primeru podnevi pokličite ambulanto. Zunaj delovnega časa: Emergency Vets Glasgow 0141 260 5555 ali Vets Now Charing Cross 0141 230 6443."
+      },
       "small_animals": true,
       "url": "https://www.julieinnesvets.co.uk/",
       "source_url": "https://www.julieinnesvets.co.uk/page5.html",
@@ -3580,6 +4069,9 @@
       "phone": "+44 1655883531",
       "emergency_24h": true,
       "duty": "Mon-Fri 8.30am-6pm, Sat 9am-2pm. Emergency care 24/7, 365 days a year from the Maybole surgery; call 01655 883 531 at any time.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 9–14. Nujna pomoč 24 ur na dan, 365 dni v letu iz ambulante Maybole; pokličite kadar koli na 01655 883 531."
+      },
       "small_animals": true,
       "url": "https://county-vets.co.uk/",
       "source_url": "https://county-vets.co.uk/surgery-info/surgery-hours/",
@@ -3595,6 +4087,9 @@
       "phone": "+44 1292880110",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6pm; closed weekends. Emergencies at any time via the Maybole surgery, 01655 883 531.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18; ob koncih tedna zaprto. Nujni primeri kadar koli prek ambulante Maybole, 01655 883 531."
+      },
       "small_animals": true,
       "url": "https://county-vets.co.uk/",
       "source_url": "https://county-vets.co.uk/surgery-info/surgery-hours/",
@@ -3610,6 +4105,9 @@
       "phone": "+44 1292264778",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-7pm, Sat 9am-12pm, Sun emergency clinic 10.30am-11.30am. Out of hours: Vets Now 01563 258489.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–12, ned nujna ambulanta 10.30–11.30. Zunaj delovnega časa: Vets Now 01563 258489."
+      },
       "small_animals": true,
       "url": "https://www.dalblairvets.com/",
       "source_url": "https://www.dalblairvets.com/contact/",
@@ -3624,6 +4122,9 @@
       "phone": "+44 1292477082",
       "emergency_24h": false,
       "duty": "Mon-Thu 8.30am-7pm, Fri 8.30am-6pm; closed weekends. Out of hours: Vets Now 01563 258489.",
+      "duty_i18n": {
+        "sl": "pon–čet 8.30–19, pet 8.30–18; ob koncih tedna zaprto. Zunaj delovnega časa: Vets Now 01563 258489."
+      },
       "small_animals": true,
       "url": "https://www.dalblairvets.com/",
       "source_url": "https://www.dalblairvets.com/contact/",
@@ -3638,6 +4139,9 @@
       "phone": "+44 1294832503",
       "emergency_24h": false,
       "duty": "Own clinic by day; out of hours in conjunction with Vets Now Kilmarnock and Glasgow.",
+      "duty_i18n": {
+        "sl": "Lastna klinika podnevi; zunaj delovnega časa v sodelovanju z Vets Now Kilmarnock in Glasgow."
+      },
       "small_animals": true,
       "url": "https://www.mctaggartvets.co.uk/",
       "source_url": "https://www.mctaggartvets.co.uk/",
@@ -3653,6 +4157,9 @@
       "phone": "+44 1315161550",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6pm, Sat 8.30am-2.30pm. Emergencies: call ICR Vets Loanhead 0131 440 4229, option 1.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–14.30. Nujni primeri: pokličite ICR Vets Loanhead 0131 440 4229, izberite 1."
+      },
       "small_animals": true,
       "url": "https://www.leithvets.co.uk/",
       "source_url": "https://www.leithvets.co.uk/",
@@ -3667,6 +4174,9 @@
       "phone": "+44 1314667110",
       "emergency_24h": false,
       "duty": "Cats only. Mon-Fri 8.30am-6.30pm, Sat 9am-12pm. Out of hours emergency cover via Vets Now.",
+      "duty_i18n": {
+        "sl": "Samo mačke; pon–pet 8.30–18.30, sob 9–12. Nujna pomoč zunaj delovnega časa prek Vets Now."
+      },
       "small_animals": true,
       "url": "https://www.catclinic.co.uk/",
       "source_url": "https://www.catclinic.co.uk/contact/",
@@ -3682,6 +4192,9 @@
       "phone": "+44 1316693790",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6pm, Sat 9am-12pm. Out of hours emergencies: E-Vets, 171 Mayfield Road, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–12. Nujni primeri zunaj delovnega časa: E-Vets, 171 Mayfield Road, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.abercornvets.co.uk/",
       "source_url": "https://www.abercornvets.co.uk/branches/portobello-high-st",
@@ -3695,6 +4208,9 @@
       "phone": "+44 1313329207",
       "emergency_24h": false,
       "duty": "Out of hours emergencies: E-Vets, 171 Mayfield Road, 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: E-Vets, 171 Mayfield Road, 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.abercornvets.co.uk/",
       "source_url": "https://www.abercornvets.co.uk/emergency/",
@@ -3709,6 +4225,9 @@
       "phone": "+44 1316581673",
       "emergency_24h": false,
       "duty": "Out of hours emergencies for the group: E-Vets 0131 662 1689.",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa za skupino: E-Vets 0131 662 1689."
+      },
       "small_animals": true,
       "url": "https://www.abercornvets.co.uk/",
       "source_url": "https://www.abercornvets.co.uk/emergency/",
@@ -3724,6 +4243,9 @@
       "phone": "+44 1314404229",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-7.30pm, Sat-Sun 8.30am-6pm. On-site emergency out-of-hours care: call first, then go to the hospital.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19.30, sob–ned 8.30–18. Nujna oskrba zunaj delovnega časa na kraju samem: najprej pokličite, nato pridite v bolnišnico."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/icr-vet-hospital-loanhead",
       "source_url": "https://ivc.co.uk/find-a-vet/icr-vet-hospital-loanhead",
@@ -3739,6 +4261,9 @@
       "phone": "+44 1314515111",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6pm, Sat 9am-1pm. Out of hours: call 0131 440 4229, then go to ICR Vet Hospital, 44 Fountain Place, Loanhead.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 9–13. Zunaj delovnega časa pokličite 0131 440 4229, nato pridite v ICR Vet Hospital, 44 Fountain Place, Loanhead."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/icr-vets-pentland",
       "source_url": "https://ivc.co.uk/find-a-vet/icr-vets-pentland",
@@ -3753,6 +4278,9 @@
       "phone": "+44 1413573139",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-4pm. Out of hours: University of Glasgow Small Animal Hospital emergency line 0141 330 7690, or Vets Now 0141 328 7513.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–16. Zunaj delovnega časa: nujna linija University of Glasgow Small Animal Hospital 0141 330 7690 ali Vets Now 0141 328 7513."
+      },
       "small_animals": true,
       "url": "https://www.hyndlandstreetvet.co.uk/",
       "source_url": "https://www.hyndlandstreetvet.co.uk/emergency",
@@ -3768,6 +4296,9 @@
       "phone": "+44 1417242111",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6pm, Sat 8.30am-12.30pm. Out of hours: University of Glasgow Small Animal Hospital 0141 330 7690 or Emergency Vets Glasgow 0141 260 5555.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–12.30. Zunaj delovnega časa: University of Glasgow Small Animal Hospital 0141 330 7690 ali Emergency Vets Glasgow 0141 260 5555."
+      },
       "small_animals": true,
       "url": "https://naismithvets.co.uk/",
       "source_url": "https://naismithvets.co.uk/contact/",
@@ -3782,6 +4313,9 @@
       "phone": "+44 1307463582",
       "emergency_24h": true,
       "duty": "Mon-Wed and Fri 8.30am-6pm, Thu 8.30am-7.30pm, Sat 9am-12pm. 24/7 emergency care from the practice's own vets; call 01307 463582.",
+      "duty_i18n": {
+        "sl": "pon–sre in pet 8.30–18, čet 8.30–19.30, sob 9–12. Nujna pomoč 24 ur na dan, vse dni v tednu, ki jo izvajajo veterinarji ambulante; pokličite 01307 463582."
+      },
       "small_animals": true,
       "url": "https://www.kiddvets.co.uk/",
       "source_url": "https://www.kiddvets.co.uk/services/24-hour-emergency",
@@ -3797,6 +4331,9 @@
       "phone": "+44 1324829989",
       "emergency_24h": true,
       "duty": "24/7 emergency service for registered clients, with staff on site around the clock.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, vse dni v tednu, za registrirane stranke; osebje je prisotno na kraju samem noč in dan."
+      },
       "small_animals": true,
       "url": "https://www.apexvets.com/",
       "source_url": "https://www.apexvets.com/24-7-emergencies/",
@@ -3812,6 +4349,9 @@
       "phone": "+44 1324815888",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-6.30pm, Sat 8am-12pm. Out of hours: Emergency Vets Glasgow 0141 260 5555 (6.30pm-9am weekdays, 24 hours at weekends).",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18.30, sob 8–12. Zunaj delovnega časa: Emergency Vets Glasgow 0141 260 5555 (ob delavnikih 18.30–9, ob koncih tedna 24 ur na dan)."
+      },
       "small_animals": true,
       "url": "https://www.aandgvets.com/",
       "source_url": "https://www.aandgvets.com/emergencies/",
@@ -3827,6 +4367,9 @@
       "phone": "+44 1786445665",
       "emergency_24h": false,
       "duty": "Clinicians on duty round the clock at the Stirling hospital; out-of-hours consultations carry an extra charge payable at the visit.",
+      "duty_i18n": {
+        "sl": "Klinični veterinarji so v bolnišnici Stirling dežurni 24 ur na dan; pregledi zunaj delovnega časa se doplačajo ob obisku."
+      },
       "small_animals": true,
       "url": "https://www.broadleysvets.co.uk/",
       "source_url": "https://www.broadleysvets.co.uk/clinic-information/out-of-hours-services/",
@@ -3842,6 +4385,9 @@
       "phone": "+44 1358720223",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6.30pm, Sat 9am-12.30pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 9–12.30."
+      },
       "small_animals": true,
       "url": "https://www.glenythanvetgroup.com/",
       "source_url": "https://www.glenythanvetgroup.com/contact-us",
@@ -3857,6 +4403,9 @@
       "phone": "+44 1651806212",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-1pm.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–13."
+      },
       "small_animals": true,
       "url": "https://www.glenythanvetgroup.com/",
       "source_url": "https://www.glenythanvetgroup.com/contact-us",
@@ -3872,6 +4421,9 @@
       "phone": "+44 1358293101",
       "emergency_24h": false,
       "duty": "Referral surgical practice; Mon-Fri 8am-7pm. Referrals from vets only.",
+      "duty_i18n": {
+        "sl": "Napotna kirurška ambulanta; pon–pet 8–19. Sprejem samo na napotnico veterinarja."
+      },
       "small_animals": true,
       "url": "https://www.cumath.co.uk/",
       "source_url": "https://www.cumath.co.uk/",
@@ -3887,6 +4439,9 @@
       "phone": "+44 1463230893",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-5pm, Sat 9am-11am.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17, sob 9–11."
+      },
       "small_animals": true,
       "url": "https://www.maclellanvets.com/",
       "source_url": "https://www.maclellanvets.com/",
@@ -3901,6 +4456,9 @@
       "phone": "+44 1340871385",
       "emergency_24h": false,
       "duty": "Call 01340 871385 outside opening hours for the emergency service.",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa za nujno pomoč pokličite 01340 871385."
+      },
       "small_animals": true,
       "url": "https://www.speysidevets.co.uk/",
       "source_url": "https://www.speysidevets.co.uk/",
@@ -3915,6 +4473,9 @@
       "phone": "+44 1343820898",
       "emergency_24h": false,
       "duty": "Out of hours emergencies: call 01340 871385.",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: pokličite 01340 871385."
+      },
       "small_animals": true,
       "url": "https://www.speysidevets.co.uk/",
       "source_url": "https://www.speysidevets.co.uk/",
@@ -3930,6 +4491,9 @@
       "phone": "+44 2920001454",
       "emergency_24h": true,
       "duty": "24/7 emergency service from the hospital; emergency consultation from £263. Call ahead.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, vse dni v tednu, v bolnišnici; nujni pregled od 263 £. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.valleyvets.net/emergency/",
       "source_url": "https://www.valleyvets.net/emergency/",
@@ -3946,6 +4510,9 @@
       "phone": "+44 2920023800",
       "emergency_24h": true,
       "duty": "24-hour emergency care in-house, 7 days a week. Routine hours Mon-Fri 8:30-18:30, Sat 9-15.",
+      "duty_i18n": {
+        "sl": "Nujna oskrba 24 ur na dan v ambulanti, 7 dni v tednu. Redni delovni čas pon–pet 8.30–18.30, sob 9–15."
+      },
       "small_animals": true,
       "url": "https://cardiffvetcentre.com/",
       "source_url": "https://cardiffvetcentre.com/",
@@ -3962,6 +4529,9 @@
       "phone": "+44 1633547379",
       "emergency_24h": true,
       "duty": "Open 24 hours, 7 days a week, including bank holidays.",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, 7 dni v tednu, tudi ob praznikih."
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/newport",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/newport",
@@ -3978,6 +4548,9 @@
       "phone": "+44 1792205000",
       "emergency_24h": true,
       "duty": "24/7 emergency hospital, 365 days a year. Out-of-hours emergency line 01792 200900.",
+      "duty_i18n": {
+        "sl": "Nujna bolnišnica 24 ur na dan, 365 dni v letu. Nujna linija zunaj delovnega časa 01792 200900."
+      },
       "small_animals": true,
       "url": "https://stjamesvet.co.uk/emergency-vet-swansea/",
       "source_url": "https://stjamesvet.co.uk/branches/parkway/",
@@ -3994,6 +4567,9 @@
       "phone": "+44 1267220404",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, every day, for emergencies; on-site night staff. Acts as out-of-hours hospital for much of west Wales.",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan, za nujne primere; ponoči je osebje prisotno na kraju samem. Deluje kot bolnišnica zunaj delovnega časa za velik del zahodnega Walesa."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/carmarthen-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/wales/carmarthen-veterinary-hospital",
@@ -4010,6 +4586,9 @@
       "phone": "+44 1656653918",
       "emergency_24h": true,
       "duty": "In-house 24/7 emergency service at the Bridgend hospital for registered clients. Consultations by appointment.",
+      "duty_i18n": {
+        "sl": "Lastna nujna služba 24 ur na dan v bolnišnici Bridgend za registrirane stranke. Pregledi po dogovoru."
+      },
       "small_animals": true,
       "url": "https://www.shepherdsthevets.co.uk/locations/bridgend/",
       "source_url": "https://www.shepherdsthevets.co.uk/locations/bridgend/",
@@ -4026,6 +4605,9 @@
       "phone": "+44 1656652751",
       "emergency_24h": true,
       "duty": "Bridgend hospital offers 24/7 care. Day hours Mon-Fri 8:30-18:30, Sat 9:30-12:30.",
+      "duty_i18n": {
+        "sl": "Bolnišnica Bridgend nudi oskrbo 24 ur na dan, vse dni v tednu. Dnevni delovni čas pon–pet 8.30–18.30, sob 9.30–12.30."
+      },
       "small_animals": true,
       "url": "https://www.maesglasvets.co.uk/contact-us/brackla-bridgend",
       "source_url": "https://www.maesglasvets.co.uk/contact-us/brackla-bridgend",
@@ -4042,6 +4624,9 @@
       "phone": "+44 1970612526",
       "emergency_24h": true,
       "duty": "24-hour emergency cover by phone on 01970 612526. Practice hours Mon-Fri 9-18, Sat 9-12.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč po telefonu 24 ur na dan na 01970 612526. Delovni čas ambulante pon–pet 9–18, sob 9–12."
+      },
       "small_animals": true,
       "url": "https://ystwythvets.co.uk/contact-us/",
       "source_url": "https://ystwythvets.co.uk/contact-us/",
@@ -4058,6 +4643,9 @@
       "phone": "+44 1970624173",
       "emergency_24h": true,
       "duty": "Vets on call 24/7 by phone. Surgery Mon-Fri 8:30-19, Sat 8:30-12.",
+      "duty_i18n": {
+        "sl": "Veterinarji so po telefonu dosegljivi 24 ur na dan. Ambulanta pon–pet 8.30–19, sob 8.30–12."
+      },
       "small_animals": true,
       "url": "https://downesvet.co.uk/",
       "source_url": "https://downesvet.co.uk/",
@@ -4074,6 +4662,9 @@
       "phone": "+44 1691830235",
       "emergency_24h": true,
       "duty": "24-hour emergency service: two vets always on call, call 01691 830235 or 01691 648226. Consultations by appointment.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan: vedno sta dežurna dva veterinarja, pokličite 01691 830235 ali 01691 648226. Pregledi po dogovoru."
+      },
       "small_animals": true,
       "url": "https://www.fourcrossesvets.co.uk/",
       "source_url": "https://www.fourcrossesvets.co.uk/",
@@ -4090,6 +4681,9 @@
       "phone": "+44 1978860246",
       "emergency_24h": true,
       "duty": "24-hour emergency service, 365 days a year, by phone on 01978 860246.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan, 365 dni v letu, po telefonu na 01978 860246."
+      },
       "small_animals": true,
       "url": "https://www.deevalleyvets.com/",
       "source_url": "https://www.deevalleyvets.com/",
@@ -4105,6 +4699,9 @@
       "address": "Pendre Enterprise Park, Tywyn, LL36 9LW",
       "emergency_24h": true,
       "duty": "Own 24-hour emergency service from the Tywyn and Cemmaes Road (Machynlleth) centres; Barmouth clients are sent to these. Coast and Snowdonia area.",
+      "duty_i18n": {
+        "sl": "Lastna nujna služba 24 ur na dan iz centrov Tywyn in Cemmaes Road (Machynlleth); stranke iz kraja Barmouth usmerijo tja. Območje obale in Snowdonia."
+      },
       "small_animals": true,
       "url": "https://www.williamsvets.co.uk/",
       "source_url": "https://www.williamsvets.co.uk/",
@@ -4121,6 +4718,9 @@
       "phone": "+44 1834218210",
       "emergency_24h": true,
       "duty": "24-hour emergency line 01834 218210; out-of-hours support from the Carmarthen hospital. Open Mon-Fri 9-17.",
+      "duty_i18n": {
+        "sl": "Nujna linija 24 ur na dan 01834 218210; podpora zunaj delovnega časa iz bolnišnice Carmarthen. Odprto pon–pet 9–17."
+      },
       "small_animals": true,
       "url": "https://www.malthousevets.com/",
       "source_url": "https://www.malthousevets.com/",
@@ -4136,6 +4736,9 @@
       "phone": "+44 1352752919",
       "emergency_24h": true,
       "duty": "24/7 emergency out-of-hours cover by its own vets; weekend emergency clinic Sat 18:00 and Sun 14:00. Open weekdays 8:30-19, Sat 8:30-12.",
+      "duty_i18n": {
+        "sl": "Lastni veterinarji zagotavljajo nujno pomoč zunaj delovnega časa 24 ur na dan; ob koncih tedna nujna ambulanta ob sobotah ob 18. uri in ob nedeljah ob 14. uri. Odprto ob delavnikih 8.30–19, sob 8.30–12."
+      },
       "small_animals": true,
       "url": "https://moldvets.co.uk/contact-us/",
       "source_url": "https://moldvets.co.uk/contact-us/",
@@ -4152,6 +4755,9 @@
       "phone": "+44 1978592818",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: Mon-Fri 18:30-08:30, Sat 12:00-08:30, Sun 08:00 to 08:30 next day; open bank holidays. Not 24 hours.",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa: pon–pet 18.30–8.30, sob 12–8.30, ned 8–8.30 naslednji dan; odprto tudi ob praznikih. Ni odprta 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/wrexham",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/wrexham",
@@ -4167,6 +4773,9 @@
       "phone": "+44 1492471556",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: Mon-Fri 19:00-08:00, Sat 12:00-08:00, Sun 08:00 to 08:00 next day; open bank holidays. Not 24 hours.",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa: pon–pet 19–8, sob 12–8, ned 8–8 naslednji dan; odprto tudi ob praznikih. Ni odprta 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/colwyn-bay",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/colwyn-bay",
@@ -4182,6 +4791,9 @@
       "phone": "+44 1792775572",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic for nights, weekends and bank holidays; call ahead. Not 24 hours.",
+      "duty_i18n": {
+        "sl": "Nujna ambulanta zunaj delovnega časa ponoči, ob koncih tedna in praznikih; vnaprej pokličite. Ni odprta 24 ur na dan."
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/swansea",
       "source_url": "https://www.cvsvets.com/wales/swansea/campbells-veterinary-centre",
@@ -4197,6 +4809,9 @@
       "phone": "+44 2920576600",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:00, Sat-Sun 9:00-17:00. Out of hours: Valley Veterinary Hospital, 02920 001454.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob–ned 9–17. Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://epi-prod.medivet.co.uk/vet-practices/llandaff-north",
       "source_url": "https://epi-prod.medivet.co.uk/vet-practices/llandaff-north",
@@ -4211,6 +4826,9 @@
       "phone": "+44 2920513838",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:00, Sat 9:00-13:00. Out of hours: Valley Veterinary Hospital, 02920 001454.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 9–13. Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/vet-practices/dinas-powys/",
       "source_url": "https://www.medivetgroup.com/vet-practices/dinas-powys/",
@@ -4225,6 +4843,9 @@
       "phone": "+44 1446794972",
       "emergency_24h": false,
       "duty": "Limited hours (Tue and Thu afternoons, Fri morning). Out of hours: Valley Veterinary Hospital, 02920 001454.",
+      "duty_i18n": {
+        "sl": "Omejen delovni čas (tor in čet popoldne, pet dopoldne). Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/vet-practices/llantwit-major/",
       "source_url": "https://www.medivetgroup.com/vet-practices/llantwit-major/",
@@ -4238,6 +4859,9 @@
       "phone": "+44 2920491235",
       "emergency_24h": false,
       "duty": "Day practice in Roath. Nights and weekends: Valley Veterinary Hospital, 02920 001454.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta Roath. Ponoči in ob koncih tedna: Valley Veterinary Hospital, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/marlborough-road-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/marlborough-road-veterinary-centre",
@@ -4251,6 +4875,9 @@
       "phone": "+44 2920361767",
       "emergency_24h": false,
       "duty": "Day practice. Nights and weekends: Valley 24/7, 02920 001454.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči in ob koncih tedna: Valley 24/7, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/celtic-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/celtic-veterinary-centre",
@@ -4266,6 +4893,9 @@
       "phone": "+44 2920232957",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19, Sat 9-17. Out of hours: Valley Veterinary Hospital, 02920 001454 (weekday nights 18:00-08:30).",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–17. Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454 (ob delavnikih ponoči 18–8.30)."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-cardiff/vets4pets-cardiff-bay/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-cardiff/vets4pets-cardiff-bay/",
@@ -4280,6 +4910,9 @@
       "phone": "+44 2920453535",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19, Sat 9-17. Out of hours: Vets Now Newport, 01633 546126.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–17. Zunaj delovnega časa: Vets Now Newport, 01633 546126."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-cardiff/vetsforpets-cardiff-newport-road/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-cardiff/vetsforpets-cardiff-newport-road/",
@@ -4294,6 +4927,9 @@
       "phone": "+44 2920790222",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:00 (Tue to 20:00). Out of hours: Vets Now Newport, 01633 546126.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18 (tor do 20). Zunaj delovnega časa: Vets Now Newport, 01633 546126."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-in-cardiff/vetsforpets-cardiff-llanrumney/",
       "source_url": "https://www.vets4pets.com/practices/vets-in-cardiff/vetsforpets-cardiff-llanrumney/",
@@ -4307,6 +4943,9 @@
       "phone": "+44 1446733406",
       "emergency_24h": false,
       "duty": "Day practice, Briscombe Retail Park. Nights and weekends: Valley 24/7, 02920 001454.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta, Briscombe Retail Park. Ponoči in ob koncih tedna: Valley 24/7, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/barry-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/barry-veterinary-centre",
@@ -4321,6 +4960,9 @@
       "phone": "+44 1656663334",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-18:30, Sat 9-17. Out of hours: Valley Veterinary Hospital, 02920 001454.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18.30, sob 9–17. Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-bridgend/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-bridgend/",
@@ -4335,6 +4977,9 @@
       "phone": "+44 1685358190",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-18. Out of hours: Valley Veterinary Hospital, 02920 001454; call 0333 332 4471 for advice.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18. Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454; za nasvet pokličite 0333 332 4471."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-merthyr-tydfil/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-merthyr-tydfil/",
@@ -4349,6 +4994,9 @@
       "phone": "+44 1443561730",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19. Out of hours: Vets Now Newport, 01633 546126.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19. Zunaj delovnega časa: Vets Now Newport, 01633 546126."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-pontypridd/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-pontypridd/",
@@ -4363,6 +5011,9 @@
       "phone": "+44 1443491433",
       "emergency_24h": false,
       "duty": "For emergencies outside practice hours call 01443 491433; out-of-hours care at Valley 24/7.",
+      "duty_i18n": {
+        "sl": "Za nujne primere zunaj delovnega časa pokličite 01443 491433; oskrba zunaj delovnega časa v Valley 24/7."
+      },
       "small_animals": true,
       "url": "https://www.treforestvets.com/out-of-hours-care/",
       "source_url": "https://www.treforestvets.com/out-of-hours-care/",
@@ -4378,6 +5029,9 @@
       "phone": "+44 1443403535",
       "emergency_24h": false,
       "duty": "Mon-Thu 8:30-18:00, Fri 8:30-17:30. Out of hours: call the branch number for the emergency service.",
+      "duty_i18n": {
+        "sl": "pon–čet 8.30–18, pet 8.30–17.30. Zunaj delovnega časa: za nujno službo pokličite številko podružnice."
+      },
       "small_animals": true,
       "url": "https://www.park-vets.com/branches/pontypridd",
       "source_url": "https://www.park-vets.com/branches/pontypridd",
@@ -4391,6 +5045,9 @@
       "phone": "+44 2920869928",
       "emergency_24h": false,
       "duty": "Outside opening hours call 02920 869928 to be transferred to Valley 24/7 (evenings, weekends, bank holidays).",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa pokličite 02920 869928 in vas preusmerijo v Valley 24/7 (zvečer, ob koncih tedna, ob praznikih)."
+      },
       "small_animals": true,
       "url": "https://www.caerphillyvets.com/contact-us/emergency",
       "source_url": "https://www.caerphillyvets.com/contact-us/emergency",
@@ -4405,6 +5062,9 @@
       "phone": "+44 1633265110",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:30. Out of hours: call 0333 332 4471; Vets Now Newport, 01633 546126.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30. Zunaj delovnega časa: pokličite 0333 332 4471; Vets Now Newport, 01633 546126."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-newport/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-newport/",
@@ -4418,6 +5078,9 @@
       "phone": "+44 1874622464",
       "emergency_24h": false,
       "duty": "Out of hours: Valley Veterinary Hospital, 02920 001454. Sister branches in Abergavenny, Monmouth and Tredegar.",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa: Valley Veterinary Hospital, 02920 001454. Sestrske podružnice v Abergavenny, Monmouth in Tredegar."
+      },
       "small_animals": true,
       "url": "https://www.abbeyvets.co.uk/emergency",
       "source_url": "https://www.abbeyvets.co.uk/emergency",
@@ -4432,6 +5095,9 @@
       "phone": "+44 1792655110",
       "emergency_24h": false,
       "duty": "Day practice. Nights and weekends: Vets Now Swansea, 01792 775572.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči in ob koncih tedna: Vets Now Swansea, 01792 775572."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/swansea/campbells-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/swansea/campbells-veterinary-centre",
@@ -4445,6 +5111,9 @@
       "phone": "+44 1792201688",
       "emergency_24h": false,
       "duty": "Day practice. Nights and weekends: Vets Now Swansea, 01792 775572.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči in ob koncih tedna: Vets Now Swansea, 01792 775572."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/swansea/tawe-veterinary-group-sketty",
       "source_url": "https://www.cvsvets.com/wales/swansea/tawe-veterinary-group-sketty",
@@ -4459,6 +5128,9 @@
       "phone": "+44 1792461217",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19, Sat 9-18. Out of hours: Vets Now Swansea, 01792 775572.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–18. Zunaj delovnega časa: Vets Now Swansea, 01792 775572."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-swansea/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-swansea/",
@@ -4473,6 +5145,9 @@
       "phone": "+44 1792299111",
       "emergency_24h": false,
       "duty": "Gower practice. Out of hours emergencies: Vets Now Swansea.",
+      "duty_i18n": {
+        "sl": "Ambulanta Gower. Nujni primeri zunaj delovnega časa: Vets Now Swansea."
+      },
       "small_animals": true,
       "url": "https://www.gowervets.co.uk/emergency-vets-near-me",
       "source_url": "https://www.gowervets.co.uk/emergency-vets-near-me",
@@ -4488,6 +5163,9 @@
       "phone": "+44 1792842437",
       "emergency_24h": false,
       "duty": "Out of hours emergencies: Vets Now Swansea.",
+      "duty_i18n": {
+        "sl": "Nujni primeri zunaj delovnega časa: Vets Now Swansea."
+      },
       "small_animals": true,
       "url": "https://www.animaldoctorsclydach.co.uk/out-of-hours/",
       "source_url": "https://www.animaldoctorsclydach.co.uk/out-of-hours/",
@@ -4502,6 +5180,9 @@
       "phone": "+44 1639844488",
       "emergency_24h": false,
       "duty": "Limited weekday hours. Out of hours: Vets Now Swansea.",
+      "duty_i18n": {
+        "sl": "Omejen delovni čas ob delavnikih. Zunaj delovnega časa: Vets Now Swansea."
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/vet-practices/ystradgynlais/",
       "source_url": "https://www.medivetgroup.com/vet-practices/ystradgynlais/",
@@ -4516,6 +5197,9 @@
       "phone": "+44 1554899190",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-18:30, Sat 9-17:30, Sun 10:30-16. Out of hours: Vets Now Swansea, 01792 775572.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18.30, sob 9–17.30, ned 10.30–16. Zunaj delovnega časa: Vets Now Swansea, 01792 775572."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-llanelli/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-llanelli/",
@@ -4529,6 +5213,9 @@
       "phone": "+44 1267238810",
       "emergency_24h": false,
       "duty": "Day practice. Nights, weekends and bank holidays: 24/7 care at Carmarthen Veterinary Hospital, 01267 220404.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči, ob vikendih in praznikih: oskrba 24 ur na dan v Carmarthen Veterinary Hospital, 01267 220404."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/towy-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/towy-veterinary-centre",
@@ -4543,6 +5230,9 @@
       "phone": "+44 1646622943",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:30, Sat 9-13. Out of hours: Carmarthen Veterinary Hospital, 01267 220404 (consult from £144).",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 9–13. Zunaj delovnega časa: Carmarthen Veterinary Hospital, 01267 220404 (pregled od 144 £)."
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/vet-practices/pembroke/",
       "source_url": "https://www.medivetgroup.com/vet-practices/pembroke/",
@@ -4557,6 +5247,9 @@
       "phone": "+44 1437760111",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-19, Sat 8:30-13. Emergency line 01437 760111. Branches in Fishguard and St Davids.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 8.30–13. Številka za nujne primere 01437 760111. Podružnici: Fishguard in St Davids."
+      },
       "small_animals": true,
       "url": "https://www.oakvetgroup.co.uk/contact-us",
       "source_url": "https://www.oakvetgroup.co.uk/contact-us",
@@ -4572,6 +5265,9 @@
       "phone": "+44 1834860378",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-18, Sat 9-12 emergencies only. Out of hours via the Carmarthen hospital (emergencies only).",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–12 samo nujni primeri. Zunaj delovnega časa prek bolnišnice Carmarthen (samo nujni primeri)."
+      },
       "small_animals": true,
       "url": "https://arberthvets.co.uk/",
       "source_url": "https://arberthvets.co.uk/",
@@ -4585,6 +5281,9 @@
       "phone": "+44 1239612479",
       "emergency_24h": false,
       "duty": "Emergencies: call 01239 612479. Weeknights 18:30-08:00 and weekends from Sat 14:00 handled by the Carmarthen hospital.",
+      "duty_i18n": {
+        "sl": "Nujni primeri: pokličite 01239 612479. Ob delavnikih zvečer od 18.30 do 8 in ob vikendih od sobote ob 14 naprej jih obravnava bolnišnica Carmarthen."
+      },
       "small_animals": true,
       "url": "https://www.prioryvetscardigan.co.uk/contact-us/out-of-hours-service",
       "source_url": "https://www.prioryvetscardigan.co.uk/contact-us/out-of-hours-service",
@@ -4600,6 +5299,9 @@
       "phone": "+44 1559363318",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18, Sat 9-13. Pets out of hours: call 01559 363318 and press 2 (Carmarthen hospital).",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 9–13. Hišni ljubljenčki zunaj delovnega časa: pokličite 01559 363318 in pritisnite 2 (bolnišnica Carmarthen)."
+      },
       "small_animals": true,
       "url": "https://www.tysulvets.co.uk/opening-times",
       "source_url": "https://www.tysulvets.co.uk/opening-times",
@@ -4615,6 +5317,9 @@
       "phone": "+44 1686625344",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-17:30, Sat 8:30-13. Emergency out-of-hours: call 01686 625344.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–17.30, sob 8.30–13. Nujni primeri zunaj delovnega časa: pokličite 01686 625344."
+      },
       "small_animals": true,
       "url": "https://www.hafrenvets.co.uk/practices/newtown/",
       "source_url": "https://www.hafrenvets.co.uk/practices/newtown/",
@@ -4629,6 +5334,9 @@
       "phone": "+44 1938559088",
       "emergency_24h": false,
       "duty": "Day practice. Nights, weekends and bank holidays: 24/7 care at Haygate Veterinary Centre, Wellington (Telford), 01952 453300.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči, ob vikendih in praznikih: oskrba 24 ur na dan v Haygate Veterinary Centre, Wellington (Telford), 01952 453300."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/camlas-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/camlas-veterinary-centre",
@@ -4643,6 +5351,9 @@
       "phone": "+44 1978802658",
       "emergency_24h": false,
       "duty": "Mon-Sat 8:30-18:30. Out of hours: Pet A&E 24/7 hospital in Ellesmere Port, 01978 802658; out-of-hours consult £80. Call ahead.",
+      "duty_i18n": {
+        "sl": "pon–sob 8.30–18.30. Zunaj delovnega časa: bolnišnica Pet A&E, odprta 24 ur na dan, v Ellesmere Port, 01978 802658; pregled zunaj delovnega časa 80 £. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.animaltrust.org.uk/wrexham-clinic",
       "source_url": "https://www.animaltrust.org.uk/wrexham-clinic",
@@ -4657,6 +5368,9 @@
       "phone": "+44 1978352499",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-19, Sat 8:30-16:30. Out of hours: Vets Now Wrexham.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 8.30–16.30. Zunaj delovnega časa: Vets Now Wrexham."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets-for-pets-wrexham-plas-coch/",
       "source_url": "https://www.vets4pets.com/practices/vets-for-pets-wrexham-plas-coch/",
@@ -4671,6 +5385,9 @@
       "phone": "+44 1745778316",
       "emergency_24h": false,
       "duty": "Mon-Sat 8:30-18:30. Out of hours: Pet A&E 24/7 hospital in Ellesmere Port; call ahead.",
+      "duty_i18n": {
+        "sl": "pon–sob 8.30–18.30. Zunaj delovnega časa: bolnišnica Pet A&E, odprta 24 ur na dan, v Ellesmere Port; vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.animaltrust.org.uk/surgery/vets-in-rhyl",
       "source_url": "https://www.animaltrust.org.uk/surgery/vets-in-rhyl",
@@ -4685,6 +5402,9 @@
       "phone": "+44 1745824557",
       "emergency_24h": false,
       "duty": "Opening hours vary by day. Out of hours: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "Delovni čas se po dnevih razlikuje. Zunaj delovnega časa: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/celyn-vets-abergele",
       "source_url": "https://ivc.co.uk/find-a-vet/celyn-vets-abergele",
@@ -4699,6 +5419,9 @@
       "phone": "+44 1492581920",
       "emergency_24h": false,
       "duty": "Weekdays, shorter hours; closed weekends. Out of hours: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "Med tednom krajši delovni čas; ob vikendih zaprto. Zunaj delovnega časa: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/cater-vets-llandudno-junction",
       "source_url": "https://ivc.co.uk/find-a-vet/cater-vets-llandudno-junction",
@@ -4713,6 +5436,9 @@
       "phone": "+44 1492868970",
       "emergency_24h": false,
       "duty": "Mon-Fri 9-19, Sat 9-17. Out of hours: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–17. Zunaj delovnega časa: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-llandudno/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-llandudno/",
@@ -4727,6 +5453,9 @@
       "phone": "+44 1248353175",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-19, Sat 8:30-16. Out of hours: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 8.30–16. Zunaj delovnega časa: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://www.vets4pets.com/practices/vets4pets-bangor-north-wales/",
       "source_url": "https://www.vets4pets.com/practices/vets4pets-bangor-north-wales/",
@@ -4741,6 +5470,9 @@
       "phone": "+44 1286673026",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:30-18:30, Sat 8:30-12:30. Out of hours: call first, on-site emergency care. Snowdonia gateway.",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 8.30–12.30. Zunaj delovnega časa: najprej pokličite, nujna oskrba na kraju samem. Vrata v Snowdonijo."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/cibyn-vets-caernarfon",
       "source_url": "https://ivc.co.uk/find-a-vet/cibyn-vets-caernarfon",
@@ -4756,6 +5488,9 @@
       "phone": "+44 1248750255",
       "emergency_24h": false,
       "duty": "Mon-Fri 8-19, Sat 8:30-12. Out of hours: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 8.30–12. Zunaj delovnega časa: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://ivc.co.uk/find-a-vet/aran-vets-llangefni",
       "source_url": "https://ivc.co.uk/find-a-vet/aran-vets-llangefni",
@@ -4769,6 +5504,9 @@
       "phone": "+44 1248422373",
       "emergency_24h": false,
       "duty": "Day practice. Nights and weekends: Vets Now Colwyn Bay.",
+      "duty_i18n": {
+        "sl": "Dnevna ambulanta. Ponoči in ob vikendih: Vets Now Colwyn Bay."
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/wales/bennett-williams-veterinary-centre",
       "source_url": "https://www.cvsvets.com/wales/bennett-williams-veterinary-centre",
@@ -4783,6 +5521,9 @@
       "phone": "+44 28 9508 0117",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency clinic: Mon-Fri 7pm-8.30am, Sat 12pm-8.30am, Sun 8am-8.30am next day; open bank holidays",
+      "duty_i18n": {
+        "sl": "Nujna klinika zunaj delovnega časa: pon–pet 19–8.30, sob 12–8.30, ned 8–8.30 naslednji dan; odprto tudi ob praznikih"
+      },
       "small_animals": true,
       "url": "https://www.vets-now.com/find-an-emergency-vet/belfast",
       "source_url": "https://www.vets-now.com/find-an-emergency-vet/belfast",
@@ -4798,6 +5539,9 @@
       "phone": "+44 28 9268 3711",
       "emergency_24h": true,
       "duty": "Open 24 hours a day, every day, for emergencies (on-site night staff); emergency line 028 9268 0680",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur na dan, vsak dan, za nujne primere (nočno osebje na kraju samem); številka za nujne primere 028 9268 0680"
+      },
       "small_animals": true,
       "url": "https://www.cvsvets.com/northern-ireland/cromlyn-house-veterinary-hospital",
       "source_url": "https://www.cvsvets.com/northern-ireland/cromlyn-house-veterinary-hospital",
@@ -4810,6 +5554,9 @@
       "city": "Hillsborough",
       "region": "Northern Ireland – Down",
       "duty": "Overnight and weekend emergency service for pets",
+      "duty_i18n": {
+        "sl": "Nujna pomoč za hišne ljubljenčke ponoči in ob vikendih"
+      },
       "address": "50 Old Coach Road, Hillsborough, Lisburn BT26 6PB",
       "emergency_24h": false,
       "small_animals": true,
@@ -4827,6 +5574,9 @@
       "phone": "+44 28 2565 6023",
       "emergency_24h": false,
       "duty": "Mon and Wed-Fri hours 9am-5pm (Tue, Thu to 6.30pm), Sat 9am-12pm; out of hours via Vets Now Belfast",
+      "duty_i18n": {
+        "sl": "pon in sre–pet 9–17 (tor, čet do 18.30), sob 9–12; zunaj delovnega časa prek Vets Now Belfast"
+      },
       "small_animals": true,
       "url": "https://www.medivetgroup.com/vet-practices/ballymena-grove-rd/",
       "source_url": "https://www.medivetgroup.com/vet-practices/ballymena-grove-rd/",
@@ -4841,6 +5591,9 @@
       "address": "Campsie Veterinary Centre, 25 Knocknamoe Road, Killyclogher, Omagh BT79 7LB",
       "emergency_24h": false,
       "duty": "Night emergency service (nights and weekends, emergencies only) at Campsie Veterinary Centre",
+      "duty_i18n": {
+        "sl": "Nočna nujna pomoč (ponoči in ob vikendih, samo nujni primeri) v Campsie Veterinary Centre"
+      },
       "small_animals": true,
       "url": "https://threevalleysvet.co.uk/small-animals/emergency-service/",
       "source_url": "https://threevalleysvet.co.uk/small-animals/emergency-service/",
@@ -4856,6 +5609,9 @@
       "phone": "+44 28 7134 6399",
       "emergency_24h": true,
       "duty": "24-hour emergency service; Mon-Fri 9am-6pm, Sat 9am-1pm",
+      "duty_i18n": {
+        "sl": "Nujna pomoč 24 ur na dan; pon–pet 9–18, sob 9–13"
+      },
       "url": "https://foyleviewvetclinic.co.uk/",
       "source_url": "https://foyleviewvetclinic.co.uk/contact/",
       "note": "check 2026-11-04: confirmed; page says 'We also offer 24-hour emergency service at our veterinary clinic'; hours, phone, address match. DAERA lists BT47 2RL.",
@@ -4871,6 +5627,9 @@
       "phone": "+44 28 7126 2596",
       "emergency_24h": false,
       "duty": "Mon-Fri 8am-5.30pm; on-site emergency out-of-hours care (call the practice)",
+      "duty_i18n": {
+        "sl": "pon–pet 8–17.30; nujna oskrba zunaj delovnega časa na kraju samem (pokličite ambulanto)"
+      },
       "url": "https://www.whitehousevc.co.uk/",
       "source_url": "https://ivc.co.uk/find-a-vet/whitehouse-veterinary-clinic-londonderry-derry",
       "note": "Own domain redirects to IVC group page (opened). Page lists on-site emergency out-of-hours care without hours; 'Open 24 hours' text is a generic widget label so not used.",
@@ -4886,6 +5645,9 @@
       "phone": "+44 28 7135 3538",
       "emergency_24h": false,
       "duty": "Out-of-hours emergency care via shared on-call rota across 5 County Derry practices; call the practice",
+      "duty_i18n": {
+        "sl": "Nujna oskrba zunaj delovnega časa po skupnem dežurnem razporedu 5 ambulant v grofiji Derry; pokličite ambulanto"
+      },
       "url": "https://www.cvsvets.com/northern-ireland/st-elmo-veterinary-centre-derry",
       "source_url": "https://www.cvsvets.com/northern-ireland/st-elmo-veterinary-centre-derry",
       "note": "Page has no street address (address from DAERA list) and no explicit 24-hour wording.",
@@ -4901,6 +5663,9 @@
       "phone": "+44 28 8775 2299",
       "emergency_24h": true,
       "duty": "24-hour emergency care on weekdays, weekends and bank holidays; Mon-Fri 8.30am-7pm, Sat 9am-5pm",
+      "duty_i18n": {
+        "sl": "Nujna oskrba 24 ur na dan med tednom, ob vikendih in praznikih; pon–pet 8.30–19, sob 9–17"
+      },
       "url": "https://parklandsvets.com/branches/dungannon",
       "source_url": "https://parklandsvets.com/branches/dungannon",
       "note": "check 2026-11-04: confirmed; branch page says '24-hour emergency care on weekdays, weekends and bank holidays'.",
@@ -4916,6 +5681,9 @@
       "phone": "+44 28 7187 6140",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-5pm, Sat 8.30am-12pm; out of hours call the Parklands emergency line",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–17, sob 8.30–12; zunaj delovnega časa pokličite številko za nujne primere Parklands"
+      },
       "url": "https://parklandsvets.com/branches/drumahoe",
       "source_url": "https://parklandsvets.com/emergency",
       "note": "check 2026-11-04: address fixed (branch page). Branch page has no 24-hour wording; emergency page only group-level '24/7', so downgraded to false.",
@@ -4931,6 +5699,9 @@
       "phone": "+44 28 2582 1239",
       "emergency_24h": true,
       "duty": "24-hour emergency care on weekdays, weekends and bank holidays; Mon-Fri 9am-7pm, Sat 9am-5pm",
+      "duty_i18n": {
+        "sl": "Nujna oskrba 24 ur na dan med tednom, ob vikendih in praznikih; pon–pet 9–19, sob 9–17"
+      },
       "url": "https://parklandsvets.com/branches/portglenone",
       "source_url": "https://parklandsvets.com/branches/portglenone",
       "note": "check 2026-11-04: address fixed; branch page says 'offers 24-hour emergency care on weekdays, weekends and bank holidays' and '24/7 emergency cover for pets and farm animals'.",
@@ -4946,6 +5717,9 @@
       "phone": "+44 28 9266 2661",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6.30pm, Sat 9am-12pm; pet out-of-hours line 028 9268 0680",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 9–12; številka za hišne ljubljenčke zunaj delovnega časa 028 9268 0680"
+      },
       "url": "https://lisburnvets.co.uk/lisburn-clinic/",
       "source_url": "https://lisburnvets.co.uk/lisburn-clinic/",
       "note": "Only the meta description mentions '24-hour emergency vets'; body does not, so false.",
@@ -4961,6 +5735,9 @@
       "phone": "+44 28 9084 9350",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7.30pm, Sat 8.30am-5.30pm; out of hours via Vets Now Belfast (call first)",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19.30, sob 8.30–17.30; zunaj delovnega časa prek Vets Now Belfast (najprej pokličite)"
+      },
       "url": "https://ivc.co.uk/find-a-vet/glenburn-veterinary-surgeons-glengormley-newtownabbey",
       "source_url": "https://ivc.co.uk/find-a-vet/glenburn-veterinary-surgeons-glengormley-newtownabbey",
       "note": "Own domain glenburnvets.co.uk redirects to IVC pages. 'We're open 24/7' is a widget label, ignored. Out-of-hours phone on page 028 9065 1729.",
@@ -4976,6 +5753,9 @@
       "phone": "+44 28 9066 6881",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-4pm; out-of-hours emergencies via MiNightVet Hillsborough (call clinic, press 1)",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–16; nujni primeri zunaj delovnega časa prek MiNightVet Hillsborough (pokličite kliniko, pritisnite 1)"
+      },
       "url": "https://flynnvets.com/balmoral-veterinary-clinic/",
       "source_url": "https://flynnvets.com/balmoral-veterinary-clinic/",
       "note": "check 2026-11-04: confirmed; Flynn emergency page: group 24hr/365 out-of-hours service delivered at MiNightVet Hillsborough, not at this clinic.",
@@ -5019,6 +5799,9 @@
       "phone": "+44 28 9073 1958",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-1pm; by appointment",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–13; po dogovoru"
+      },
       "url": "https://www.belfastcityvets.com/ravenhill",
       "source_url": "https://www.belfastcityvets.com/ravenhill",
       "note": "Group page spells postcode BT8 8AW; DAERA and branch page BT6 8AW used. No 24h wording.",
@@ -5034,6 +5817,9 @@
       "phone": "+44 28 9560 8777",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6pm, Sat 9am-1pm",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–13"
+      },
       "url": "https://www.belfastcityvets.com/",
       "source_url": "https://www.belfastcityvets.com/",
       "note": "check 2026-11-04: confirmed; No 24h wording.",
@@ -5049,6 +5835,9 @@
       "phone": "+44 28 9061 7600",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-1pm",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–13"
+      },
       "url": "https://www.belfastcityvets.com/",
       "source_url": "https://www.belfastcityvets.com/",
       "note": "check 2026-11-04: confirmed; Group page BT11 9AN (DAERA BT11 9AE). No 24h wording.",
@@ -5064,6 +5853,9 @@
       "phone": "+44 28 9181 8898",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-7pm, Sat 9am-2pm; emergencies accepted in opening hours, out of hours via MiNightVet or Vets Now Belfast",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–19, sob 9–14; nujne primere sprejemajo v delovnem času, zunaj delovnega časa prek MiNightVet ali Vets Now Belfast"
+      },
       "url": "https://www.acevetsni.co.uk/newtownards",
       "source_url": "https://www.acevetsni.co.uk/contact-3",
       "note": "Emergency arrangement from contact-3 page. DAERA lists 4 North Street; website address used.",
@@ -5079,6 +5871,9 @@
       "phone": "+44 28 9124 0873",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-5pm; out of hours via MiNightVet or Vets Now Belfast",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–17; zunaj delovnega časa prek MiNightVet ali Vets Now Belfast"
+      },
       "url": "https://www.acevetsni.co.uk/donaghadee",
       "source_url": "https://www.acevetsni.co.uk/donaghadee",
       "note": "Out-of-hours providers from acevetsni.co.uk/contact-3.",
@@ -5093,6 +5888,9 @@
       "address": "24 Brook Lane, Bangor",
       "emergency_24h": false,
       "duty": "Tue-Fri 9am-7pm, Sat 9am-12pm; offers emergency cover",
+      "duty_i18n": {
+        "sl": "tor–pet 9–19, sob 9–12; zagotavlja nujno pomoč"
+      },
       "url": "https://www.bangorvets.com/rathgael-veterinary-clinic",
       "source_url": "https://www.bangorvets.com/rathgael-veterinary-clinic",
       "note": "No phone on page; no 24-hour wording. Postcode BT19 1ST from DAERA.",
@@ -5107,6 +5905,9 @@
       "address": "67 Bryansburn Road, Bangor",
       "emergency_24h": false,
       "duty": "Tue-Fri 8.30am-7pm, Sat 9am-1pm; offers emergency veterinary care",
+      "duty_i18n": {
+        "sl": "tor–pet 8.30–19, sob 9–13; zagotavlja nujno veterinarsko pomoč"
+      },
       "url": "https://www.bangorvets.com/cedarmount-veterinary-clinic",
       "source_url": "https://www.bangorvets.com/cedarmount-veterinary-clinic",
       "note": "check 2026-11-04: confirmed; No phone on page; no 24-hour wording.",
@@ -5122,6 +5923,9 @@
       "phone": "+44 28 3026 2266",
       "emergency_24h": false,
       "duty": "Mon-Fri 9am-6pm, Sat 9am-12pm; out-of-hours emergencies via triage line (may be referred to MiNightVet Lisburn)",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–12; nujni primeri zunaj delovnega časa prek triažne linije (možna napotitev v MiNightVet Lisburn)"
+      },
       "url": "https://www.newryvets.co.uk/branches/newry",
       "source_url": "https://www.newryvets.co.uk/emergency",
       "note": "Emergency page: out-of-hours pet line 028 3026 2266; 'any time' wording only for farm emergencies (not used). Initial fee GBP 167/206 not published.",
@@ -5137,6 +5941,9 @@
       "phone": "+44 28 7034 3425",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6pm, Sat 8.30am-1pm; emergency out-of-hours service available (phone surgery)",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18, sob 8.30–13; na voljo nujna služba zunaj delovnega časa (telefon ambulante)"
+      },
       "url": "https://www.colerainevets.co.uk/",
       "source_url": "https://www.colerainevets.co.uk/contact-us",
       "note": "Page lists same number for surgery and out of hours; emergency out-of-hours page not opened (no explicit 24h wording).",
@@ -5152,6 +5959,9 @@
       "phone": "+44 28 2074 1252",
       "emergency_24h": false,
       "duty": "Mon-Fri 8.30am-6.30pm, Sat 8.30am-1.30pm",
+      "duty_i18n": {
+        "sl": "pon–pet 8.30–18.30, sob 8.30–13.30"
+      },
       "url": "https://www.knockanboyvets.co.uk/contact-us",
       "source_url": "https://www.knockanboyvets.co.uk/contact-us",
       "note": "Emergency out-of-hours page linked but not opened.",
@@ -5167,6 +5977,9 @@
       "phone": "+44 28 8224 6644",
       "emergency_24h": false,
       "duty": "Out of hours via practice cover or CVS Vets 24/7 at Cromlyn House; MiNightVet Omagh night service on site",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa prek dežurstva ambulante ali CVS Vets, odprto 24 ur na dan, v Cromlyn House; nočna služba MiNightVet Omagh na kraju samem"
+      },
       "url": "https://www.cvsvets.com/northern-ireland/campsie-veterinary-centre",
       "source_url": "https://www.cvsvets.com/northern-ireland/campsie-veterinary-centre",
       "note": "Practice itself not described as 24 h. Address from threevalleysvet.co.uk emergency page.",
@@ -5182,6 +5995,9 @@
       "phone": "+44 28 6862 2333",
       "emergency_24h": false,
       "duty": "Out of hours via on-call service, diverted to MiNightVet Omagh (028 8230 6400)",
+      "duty_i18n": {
+        "sl": "Zunaj delovnega časa prek dežurne službe, preusmeritev na MiNightVet Omagh (028 8230 6400)"
+      },
       "url": "https://threevalleysvet.co.uk/small-animals/emergency-service/",
       "source_url": "https://threevalleysvet.co.uk/small-animals/emergency-service/",
       "note": "check 2026-11-04: confirmed; Fivemiletown branch phone 028 8952 1248. Address from DAERA list. No 24h wording.",

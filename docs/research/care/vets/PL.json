@@ -90,6 +90,9 @@
       "phone": "+48 787 205 830",
       "emergency_24h": true,
       "duty": "Registration 8:00–20:00; clinic open around the clock, 7 days a week.",
+      "duty_i18n": {
+        "sl": "Registracija 8–20; klinika odprta 24 ur na dan, 7 dni v tednu."
+      },
       "url": "https://klinikawet.sggw.edu.pl/",
       "source_url": "https://klinikawet.sggw.edu.pl/kontakt/",
       "note": "University clinic (SGGW). Other numbers +48 22 847 37 40, +48 22 593 61 04. Round-the-clock opening is as stated on the clinic page.",
@@ -106,6 +109,9 @@
       "phone": "+48 22 667 55 77",
       "emergency_24h": true,
       "duty": "Emergency room ER 24 H/7; urgent patients admitted without referral; call ahead.",
+      "duty_i18n": {
+        "sl": "Urgenca ER 24 H/7; nujne primere sprejmejo brez napotnice; vnaprej pokličite."
+      },
       "url": "https://veterio.pl/en/",
       "source_url": "https://veterio.pl/en/contact/",
       "quote": "ER: 24 H/7"
@@ -121,6 +127,9 @@
       "phone": "+48 22 815 35 54",
       "emergency_24h": true,
       "duty": "Clinic open around the clock.",
+      "duty_i18n": {
+        "sl": "Klinika odprta 24 ur na dan."
+      },
       "url": "https://klinikasfora.pl/",
       "source_url": "https://klinikasfora.pl/kontakt/",
       "quote": "Klinika jest czynna całą dobę"
@@ -136,6 +145,9 @@
       "phone": "+48 788 778 333",
       "emergency_24h": true,
       "duty": "Open 24/7 incl. nights, Sundays and holidays.",
+      "duty_i18n": {
+        "sl": "Odprto 24/7, tudi ponoči, ob nedeljah in praznikih."
+      },
       "url": "https://mkw-24.pl/",
       "source_url": "https://mkw-24.pl/o-nas.html",
       "quote": "Jesteśmy dostępni 24 godziny na dobę, 7 dni w tygodniu."
@@ -151,6 +163,9 @@
       "phone": "+48 22 487 70 70",
       "emergency_24h": true,
       "duty": "Open 24/7, 365 days.",
+      "duty_i18n": {
+        "sl": "Odprto 24/7, 365 dni v letu."
+      },
       "url": "https://klinikavet.pl/",
       "source_url": "https://klinikavet.pl/calodobowa-klinika-weterynaryjna-w-warszawie/",
       "note": "Same page lists a second, non-24h site: Ursynów, ul. Strzeleckiego 10E, +48 22 644 95 31 (8:00-22:00).",
@@ -167,6 +182,9 @@
       "phone": "+48 22 150 38 20",
       "emergency_24h": true,
       "duty": "Daytime duty Mon–Fri 9:00–23:00, Sat–Sun 10:00–18:00; also advertised as round-the-clock.",
+      "duty_i18n": {
+        "sl": "Dnevno dežurstvo pon–pet 9–23, sob–ned 10–18; oglašujejo tudi kot odprto 24 ur na dan."
+      },
       "url": "https://www.pulsvet.pl/",
       "source_url": "https://www.pulsvet.pl/",
       "note": "Page also shows a notice of closure 4 Oct 18:00 to 5 Oct 11:00 (move to new address); call ahead. Duty text said the page lists these hours and calls itself round-the-clock.",
@@ -183,6 +201,9 @@
       "phone": "+48 22 841 44 40",
       "emergency_24h": true,
       "duty": "Emergency duty around the clock; reception 8:00-21:00.",
+      "duty_i18n": {
+        "sl": "Nujna služba 24 ur na dan; recepcija 8–21."
+      },
       "url": "https://www.multiwet.pl/",
       "source_url": "https://www.multiwet.pl/",
       "note": "Second number +48 22 841 40 22.",
@@ -199,6 +220,9 @@
       "phone": "+48 22 610 27 65",
       "emergency_24h": false,
       "duty": "Mon-Sun 7:00-23:00; holidays 9:00-21:00.",
+      "duty_i18n": {
+        "sl": "pon–ned 7–23; prazniki 9–21."
+      },
       "url": "https://wetwitolin.waw.pl/",
       "source_url": "https://wetwitolin.waw.pl/kontakt/",
       "note": "No 24-h wording on the page (aggregator names it Całodobowa, own page does not)."
@@ -214,6 +238,9 @@
       "phone": "+48 794 409 433",
       "emergency_24h": true,
       "duty": "Mon-Thu 8:00-24:00; Fri-Sun marked 24-hour.",
+      "duty_i18n": {
+        "sl": "pon–čet 8–24; pet–ned označeno kot 24-urno."
+      },
       "url": "https://oiomvet.pl/",
       "source_url": "https://oiomvet.pl/",
       "note": "Page says 24h/7 hospital but hours block shows 24 h only Fri-Sun (conditional). South of Warsaw.",
@@ -230,6 +257,9 @@
       "phone": "+48 12 889 97 00",
       "emergency_24h": true,
       "duty": "Mon-Fri 8:00-21:00, Sat 9:00-20:00; Dyżur EMERGENCY 24h; hospital care round the clock.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–21, sob 9–20; Dyżur EMERGENCY 24h; bolnišnična oskrba 24 ur na dan."
+      },
       "url": "https://krakow.amvet.pl/",
       "source_url": "https://krakow.amvet.pl/szpital-24h/",
       "note": "Page does not say which days the 24 h duty covers (Sunday not listed); call ahead.",
@@ -246,6 +276,9 @@
       "phone": "+48 12 204 17 00",
       "emergency_24h": true,
       "duty": "Mon-Fri day 9:00-20:00, night 20:00-9:00; Sat 10:00-13:00 day, 13:00-24:00 interventional; Sun interventional.",
+      "duty_i18n": {
+        "sl": "pon–pet dan 9–20, noč 20–9; sob 10–13 dan, 13–24 interventno; ned interventno."
+      },
       "url": "https://luxvet24.pl/",
       "source_url": "https://luxvet24.pl/",
       "note": "Weekend cover is interventional duty (call first).",
@@ -262,6 +295,9 @@
       "phone": "+48 12 204 14 20",
       "emergency_24h": true,
       "duty": "Mon-Sun 00:00-00:00 (całodobowo).",
+      "duty_i18n": {
+        "sl": "pon–ned 0–24 (całodobowo)."
+      },
       "url": "https://www.skotnicka24.pl/",
       "source_url": "https://www.skotnicka24.pl/",
       "quote": "Całodobowa klinika weterynaryjna w Krakowie"
@@ -277,6 +313,9 @@
       "phone": "+48 727 777 901",
       "emergency_24h": true,
       "duty": "Open 24/7 incl. nights, Sundays and holidays.",
+      "duty_i18n": {
+        "sl": "Odprto 24/7, tudi ponoči, ob nedeljah in praznikih."
+      },
       "url": "https://kwt24.pl/",
       "source_url": "https://kwt24.pl/",
       "quote": "Otwarte 24/7!"
@@ -292,6 +331,9 @@
       "phone": "+48 609 190 490",
       "emergency_24h": true,
       "duty": "Mon-Fri 8:00-21:00, Sat 8:00-16:00; Sun/holidays and other hours emergency duty.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–21, sob 8–16; ned/prazniki in ob drugih urah nujna služba."
+      },
       "url": "https://upw.urk.edu.pl/",
       "source_url": "https://upw.urk.edu.pl/",
       "note": "University clinic (Uniwersytet Rolniczy). Page says 24/7 but hours show regular opening times with emergency cover otherwise (conditional). Second number +48 12 662 49 73.",
@@ -308,6 +350,9 @@
       "phone": "+48 608 347 452",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-18:00, Sat 9:00-14:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–14."
+      },
       "url": "https://www.wetzakopianka.pl/",
       "source_url": "https://www.wetzakopianka.pl/",
       "note": "Tourist area (Tatras). No emergency or 24-h wording on the page. Second number +48 18 533 17 70."
@@ -323,6 +368,9 @@
       "phone": "+48 791 998 999",
       "emergency_24h": true,
       "duty": "Registration Mon-Fri 8:00-20:30, Sat-Sun/holidays 9:00-16:00; clinic open around the clock; night duty surcharge.",
+      "duty_i18n": {
+        "sl": "Registracija pon–pet 8–20.30, sob–ned/prazniki 9–16; klinika odprta 24 ur na dan; nočno dežurstvo z doplačilom."
+      },
       "url": "https://www.skvet.pl/",
       "source_url": "https://www.skvet.pl/",
       "quote": "Klinika czynna całą dobę"
@@ -338,6 +386,9 @@
       "phone": "+48 71 735 17 40",
       "emergency_24h": true,
       "duty": "24/7 veterinary care.",
+      "duty_i18n": {
+        "sl": "Veterinarska oskrba 24/7."
+      },
       "url": "https://dolvetwroclaw.pl/",
       "source_url": "https://dolvetwroclaw.pl/",
       "note": "Page also gives +48 535 344 503 (meta description). Duty text began 'Page:'.",
@@ -354,6 +405,9 @@
       "phone": "+48 698 922 911",
       "emergency_24h": true,
       "duty": "Ołtaszyn Mon-Fri 9:00-22:00, Sat 9:00-16:00, Sun 11:00-13:00; separate \"Pogotowie całodobowe\" number 698 922 911.",
+      "duty_i18n": {
+        "sl": "Ołtaszyn pon–pet 9–22, sob 9–16, ned 11–13; ločena številka „Pogotowie całodobowe“ 698 922 911."
+      },
       "url": "https://oltaszynska.pl/",
       "source_url": "https://oltaszynska.pl/kontakt/",
       "note": "24 h is the emergency number, not walk-in hours (conditional). Clinic phone +48 71 368 74 29; second site Zakrzów, ul. Okulickiego 19a, +48 71 781 31 31.",
@@ -370,6 +424,9 @@
       "phone": "+48 58 776 44 00",
       "emergency_24h": true,
       "duty": "Mon-Fri 8:00-21:00; Sat-Sun Dyżur EMERGENCY 24h; outside planned visits 24/7 emergency duty mode.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–21; sob–ned Dyżur EMERGENCY 24h; zunaj načrtovanih pregledov nujna služba 24/7."
+      },
       "url": "https://gdansk.amvet.pl/",
       "source_url": "https://gdansk.amvet.pl/uslugi/dyzury-emergency/",
       "note": "Phone may not be answered at night; page recommends coming directly in an emergency.",
@@ -386,6 +443,9 @@
       "phone": "+48 58 302 00 02",
       "emergency_24h": true,
       "duty": "Open every day around the clock.",
+      "duty_i18n": {
+        "sl": "Odprto vsak dan 24 ur na dan."
+      },
       "url": "https://lecznicazwierzyniec.pl/",
       "source_url": "https://lecznicazwierzyniec.pl/",
       "quote": "Czynne codziennie, całą dobę."
@@ -401,6 +461,9 @@
       "phone": "+48 586 004 992",
       "emergency_24h": true,
       "duty": "Reception Mon-Fri 9:00-20:00, Sat 9:00-16:00; night duty otherwise.",
+      "duty_i18n": {
+        "sl": "Recepcija pon–pet 9–20, sob 9–16; sicer nočno dežurstvo."
+      },
       "url": "https://sosken.pl/",
       "source_url": "https://sosken.pl/",
       "quote": "Pracujemy 24 godziny na dobę"
@@ -416,6 +479,9 @@
       "phone": "+48 58 622 21 48",
       "emergency_24h": false,
       "duty": "Redłowo Mon–Fri 9:00–20:00, Sat–Sun/holidays 9:00–12:00; night duty after hours - call ahead for times.",
+      "duty_i18n": {
+        "sl": "Redłowo pon–pet 9–20, sob–ned/prazniki 9–12; po delovnem času nočno dežurstvo – za urnik vnaprej pokličite."
+      },
       "url": "https://lecznica.gdynia.pl/",
       "source_url": "https://lecznica.gdynia.pl/",
       "note": "No 24-h claim on the own page (only a Facebook link title); hours conflict on the page. Second site Obłuże, ul. Cechowa 11. Duty text said the header says duty until 24:00 while a 2025 notice says night duty to 22:00 (conflicting)."
@@ -431,6 +497,9 @@
       "phone": "+48 32 220 10 10",
       "emergency_24h": true,
       "duty": "Mon-Fri 8:00-20:00, Sat 8:00-15:00, Sun emergency duty only; emergency duty around the clock.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 8–15, ned samo nujna služba; nujna služba 24 ur na dan."
+      },
       "url": "https://wetklinika.pl/",
       "source_url": "https://wetklinika.pl/",
       "note": "24 h is the emergency duty/hospital; regular hours shorter (conditional). Also a Gliwice page on the site.",
@@ -447,6 +516,9 @@
       "phone": "+48 32 111 95 10",
       "emergency_24h": true,
       "duty": "Day duty 8:00-19:30, holidays 9:00-17:30, then night duty for emergencies (come in person).",
+      "duty_i18n": {
+        "sl": "Dnevno dežurstvo 8–19.30, prazniki 9–17.30, nato nočno dežurstvo za nujne primere (pridite osebno)."
+      },
       "url": "https://www.lecznica-brynow.pl/",
       "source_url": "https://www.lecznica-brynow.pl/medycyna-ratunkowa/",
       "quote": "Nasza klinika weterynaryjna jest czynna 24 godziny na dobę, 7 dni w tygodniu"
@@ -462,6 +534,9 @@
       "phone": "+48 32 111 95 30",
       "emergency_24h": true,
       "duty": "Open 24/7.",
+      "duty_i18n": {
+        "sl": "Odprto 24/7."
+      },
       "url": "https://tauzenwet.pl/",
       "source_url": "https://tauzen-wet.pl/ostry-dyzur-weterynaryjny-katowice/",
       "note": "Page also shows 22 150 39 10 for the emergency banner.",
@@ -477,6 +552,9 @@
       "phone": "+48 61 600 65 40",
       "emergency_24h": true,
       "duty": "Open 24/7; at night visit in person (phone contact hard).",
+      "duty_i18n": {
+        "sl": "Odprto 24/7; ponoči pridite osebno (telefonski stik je težaven)."
+      },
       "url": "https://www.weterynaria-poznan.pl/",
       "source_url": "https://www.weterynaria-poznan.pl/dyzur-weterynaryjny/",
       "note": "Address not stated on the page.",
@@ -493,6 +571,9 @@
       "phone": "+48 61 823 09 97",
       "emergency_24h": true,
       "duty": "Open 24 h / 7 days.",
+      "duty_i18n": {
+        "sl": "Odprto 24 ur / 7 dni."
+      },
       "url": "https://www.klinwet.pl/",
       "source_url": "https://www.klinwet.pl/kontakt",
       "note": "Appointments +48 61 828 56 01.",
@@ -509,6 +590,9 @@
       "phone": "+48 42 207 40 46",
       "emergency_24h": true,
       "duty": "24 h, 7 days incl. holidays.",
+      "duty_i18n": {
+        "sl": "24 ur, 7 dni, tudi ob praznikih."
+      },
       "url": "https://www.vet-med-lodz.pl/",
       "source_url": "https://www.vet-med-lodz.pl/",
       "note": "City of Łódź list gives ul. Bratysławska 15A and 880 823 650; own site used.",
@@ -525,6 +609,9 @@
       "phone": "+48 42 657 35 15",
       "emergency_24h": true,
       "duty": "24/7.",
+      "duty_i18n": {
+        "sl": "24/7."
+      },
       "url": "https://lancet.pl/",
       "source_url": "https://lancet.pl/",
       "note": "Second number +48 605 848 613.",
@@ -537,6 +624,9 @@
       "region": "Łódzkie",
       "emergency_24h": false,
       "duty": "Night/holiday help in Łódź: Vet-Med and Lancet (round the clock), SOWA (8:00–23:00), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki).",
+      "duty_i18n": {
+        "sl": "Nočna pomoč in pomoč ob praznikih v Łódźu: Vet-Med in Lancet (24 ur na dan), SOWA (8–23), Pod Koniem, CM-VET, Braci Mniejszych (Konstantynów Łódzki)."
+      },
       "small_animals": true,
       "url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
       "source_url": "https://lodz.pl/artykul/nocna-pomoc-weterenaryjna-w-lodzi-sprawdz-gdzie-calodobowo-pomagaja-zwierzetom-lista-70367/",
@@ -554,6 +644,9 @@
       "phone": "+48 81 527 92 92",
       "emergency_24h": true,
       "duty": "24 h / 7 days / 365 days.",
+      "duty_i18n": {
+        "sl": "24 ur / 7 dni / 365 dni."
+      },
       "url": "https://klinikaszmaragdowa.pl/",
       "source_url": "https://klinikaszmaragdowa.pl/kontakt/",
       "quote": "CAŁODOBOWA KLINIKA WETERYNARYJNA"
@@ -569,6 +662,9 @@
       "phone": "+48 81 740 75 75",
       "emergency_24h": true,
       "duty": "Clinic 24 h; hospital 24/7.",
+      "duty_i18n": {
+        "sl": "Klinika 24 ur; bolnišnica 24/7."
+      },
       "url": "https://lcmz.pl/",
       "source_url": "https://lcmz.pl/",
       "note": "Second number +48 81 740 42 77.",
@@ -585,6 +681,9 @@
       "phone": "+48 81 445 61 21",
       "emergency_24h": false,
       "duty": "Registration Mon-Fri 8:00-20:00, Sat-Sun 8:00-14:00; on-call vet after hours, weekends and holidays at +48 81 528 46 27 or +48 515 078 885.",
+      "duty_i18n": {
+        "sl": "Registracija pon–pet 8–20, sob–ned 8–14; dežurni veterinar zunaj delovnega časa, ob vikendih in praznikih na +48 81 528 46 27 ali +48 515 078 885."
+      },
       "url": "https://up.lublin.pl/en/services/veterinary-clinic/",
       "source_url": "https://up.lublin.pl/en/services/veterinary-clinic/",
       "note": "University clinic with on-call duty phones; no 24-h wording on the page."
@@ -614,6 +713,9 @@
       "phone": "+48 661 44 44 11",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-17:00, Sat 9:00-13:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17, sob 9–13."
+      },
       "url": "https://vetmaria.mazury.pl/",
       "source_url": "https://vetmaria.mazury.pl/",
       "note": "Mazury tourist area; no emergency wording on the page."
@@ -629,6 +731,9 @@
       "phone": "+48 91 500 11 10",
       "emergency_24h": true,
       "duty": "Day shift Mon-Fri 8:00-20:00; night shift 20:00-8:00 Mon-Sun; Sat-Sun day interventional duty 8:00-20:00.",
+      "duty_i18n": {
+        "sl": "Dnevna izmena pon–pet 8–20; nočna izmena 20–8 pon–ned; sob–ned dnevno interventno dežurstvo 8–20."
+      },
       "url": "https://www.klinikavet24h.pl/",
       "source_url": "https://www.klinikavet24h.pl/kontakt/",
       "quote": "Całodobowa opieka weterynaryjna w Szczecinie"
@@ -644,6 +749,9 @@
       "phone": "+48 52 345 40 45",
       "emergency_24h": true,
       "duty": "Day shift 8:00-22:00, night shift 22:00-8:00 for emergencies; phone appointments only.",
+      "duty_i18n": {
+        "sl": "Dnevna izmena 8–22, nočna izmena 22–8 za nujne primere; samo po telefonskem dogovoru."
+      },
       "url": "https://klinikacentrum.pl/",
       "source_url": "https://klinikacentrum.pl/",
       "quote": "Czynne całą dobę"
@@ -659,6 +767,9 @@
       "phone": "+48 52 341 04 88",
       "emergency_24h": false,
       "duty": "Mon-Fri 7:00-22:00, Sat-Sun/holidays 8:00-20:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 7–22, sob–ned/prazniki 8–20."
+      },
       "url": "https://www.lecznica-kora.pl/",
       "source_url": "https://www.lecznica-kora.pl/",
       "note": "Page says \"Czynna przez całą dobę\" but its own hours end in the evening, so not marked 24 h; call ahead."
@@ -674,6 +785,9 @@
       "phone": "+48 533 750 750",
       "emergency_24h": false,
       "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
+      "duty_i18n": {
+        "sl": "pon–sob 20–8; ob nedeljah in praznikih 24 ur."
+      },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
       "note": "Night emergency service; the page does not tie the schedule to a specific site, so not marked 24 h. Duty text said '(page wording)' for the Sunday/holiday 24 h.",
@@ -690,6 +804,9 @@
       "phone": "+48 530 248 052",
       "emergency_24h": false,
       "duty": "Mon–Sat 20:00–8:00; Sundays and holidays 24 h.",
+      "duty_i18n": {
+        "sl": "pon–sob 20–8; ob nedeljah in praznikih 24 ur."
+      },
       "url": "https://www.pogotowieweterynaryjne.pl/",
       "source_url": "https://www.pogotowieweterynaryjne.pl/kontakt",
       "note": "Same group as Bydgoszcz; schedule not tied to a site, so not marked 24 h. Duty text said '(page wording)' for the Sunday/holiday 24 h.",
@@ -706,6 +823,9 @@
       "phone": "+48 507 314 727",
       "emergency_24h": true,
       "duty": "Clinic hours Mon-Sat daytime/evening; separate Pogotowie 24/7 number for emergencies, fixed call-out fee.",
+      "duty_i18n": {
+        "sl": "Delovni čas ambulante pon–sob podnevi/zvečer; ločena številka Pogotowie 24/7 za nujne primere, fiksna cena obiska."
+      },
       "url": "https://przychodnia-arka.pl/",
       "source_url": "https://przychodnia-arka.pl/kontakt",
       "note": "24 h is the on-call emergency number (conditional). Clinic phone +48 793 703 103.",
@@ -722,6 +842,9 @@
       "phone": "518 852 739",
       "emergency_24h": true,
       "duty": "Round-the-clock veterinary practice providing night-time care; call ahead.",
+      "duty_i18n": {
+        "sl": "Veterinarska ambulanta, odprta 24 ur na dan, nudi nočno oskrbo; vnaprej pokličite."
+      },
       "url": "https://aquavet.opole.pl/",
       "source_url": "https://www.opole.pl/print/pdf/node/1884",
       "note": "Conditional: 24 h claim comes from the City of Opole page only (clinic site blocks automated access, not opened); call ahead. Opolskie government reply 2024 says no formal night vet service exists in the voivodeship. Duty text said the round-the-clock description is from the City of Opole page.",
@@ -738,6 +861,9 @@
       "phone": "+48 608 242 920",
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 10:00–12:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–14, ned 10–12."
+      },
       "url": "https://weterynaria.bialystok.pl/",
       "source_url": "https://weterynaria.bialystok.pl/",
       "note": "Duty text said: no 24 h wording."
@@ -753,6 +879,9 @@
       "phone": "+48 608 304 278",
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–19:00, Sat by arrangement, Sun closed. Booking by phone.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob po dogovoru, ned zaprto. Naročanje po telefonu."
+      },
       "url": "https://pupil.bialystok.pl/",
       "source_url": "https://pupil.bialystok.pl/kontakt/",
       "note": "Duty text said: no 24 h wording."
@@ -768,6 +897,9 @@
       "phone": "+48 500 368 400",
       "emergency_24h": false,
       "duty": "Mon–Fri 10:00–19:00, Sat 10:00–14:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–19, sob 10–14."
+      },
       "url": "https://amicus.bialystok.pl/",
       "source_url": "https://amicus.bialystok.pl/",
       "note": "Duty text said: no 24 h wording."
@@ -783,6 +915,9 @@
       "phone": "+48 68 323 23 04",
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–19:00 (by appointment), Sat 8:00–13:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19 (po dogovoru), sob 8–13."
+      },
       "url": "https://help.zgora.pl/",
       "source_url": "https://help.zgora.pl/",
       "note": "Mobile +48 722 020 633. Duty text said: no 24 h wording."
@@ -798,6 +933,9 @@
       "phone": "+48 68 326 70 75",
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–18:00, Sat 9:00–15:00, Sun 10:00–12:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob 9–15, ned 10–12."
+      },
       "url": "https://lecznica.zgora.pl/",
       "source_url": "https://lecznica.zgora.pl/kontakt/",
       "note": "Second phone +48 68 455 63 00. Duty text said: no 24 h reception wording (LuxVet group page says hospital wards are monitored 24/7, not a 24 h emergency claim)."
@@ -813,6 +951,9 @@
       "phone": "+48 58 620 55 55",
       "emergency_24h": false,
       "duty": "Mon–Fri 7:00–20:00, Sat 8:00–16:00, Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 7–20, sob 8–16, ned zaprto."
+      },
       "url": "https://gswet.pl/",
       "source_url": "https://gswet.pl/strona-glowna/kontakt/",
       "note": "LuxVet group page mentions a 24/7 supervised inpatient hospital, but the clinic's own page gives no 24 h emergency reception. Duty text said the contact page has no 24 h wording."
@@ -827,6 +968,9 @@
       "phone": "698 123 815",
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–18:00, Sat 9:00–12:00 (follow-up treatment only).",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18, sob 9–12 (samo kontrolno zdravljenje)."
+      },
       "url": "https://przychodniawet.pl/",
       "source_url": "https://przychodniawet.pl/kontakt/",
       "checked": "2026-11-03",
@@ -842,6 +986,9 @@
       "phone": "+48 41 362 88 50",
       "emergency_24h": false,
       "duty": "Mon–Fri 8:00–20:00; Sat–Sun closed. Emergency help is offered as a service; no after-hours contact.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20; sob–ned zaprto. Nujna pomoč se nudi kot storitev; zunaj delovnega časa ni stika."
+      },
       "url": "https://czterylapy.com/",
       "source_url": "https://czterylapy.com/",
       "note": "Rehabilitation line +48 732 784 444. Duty text said the page lists 'Pomoc w nagłych przypadkach' as a service with no after-hours contact or 24 h wording.",
@@ -857,6 +1004,9 @@
       "phone": "+48 41 362 90 26",
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–19:00, Sat 9:00–14:00, Sun 9:00–12:00; public holidays closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–14, ned 9–12; ob praznikih zaprto."
+      },
       "url": "https://weterynarz-kielce.eu/",
       "source_url": "https://weterynarz-kielce.eu/kontakt/",
       "note": "Page also shows +48 413 629 026. Duty text said: no 24 h wording.",
@@ -872,6 +1022,9 @@
       "phone": "+48 739 156 377",
       "emergency_24h": false,
       "duty": "Mon–Fri 9:00–12:00 and 17:00–20:00; Sat by appointment; Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–12 in 17–20; sob po dogovoru; ned zaprto."
+      },
       "url": "https://na4lapy.mragowo.pl/",
       "source_url": "https://na4lapy.mragowo.pl/",
       "note": "Mazury tourist area. Duty text said: no emergency or 24 h wording.",
