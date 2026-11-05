@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Green beans",
-    "sl": "Stročji fižol"
+    "sl": "Stročji fižol",
+    "de": "Grüne Bohnen"
   },
   "question": {
     "en": "Can dogs eat green beans?",
-    "sl": "Ali lahko psi jedo stročji fižol?"
+    "sl": "Ali lahko psi jedo stročji fižol?",
+    "de": "Dürfen Hunde grüne Bohnen fressen?"
   },
   "url_slug": {
     "en": "green-beans",
-    "sl": "strocji-fizol"
+    "sl": "strocji-fizol",
+    "de": "gruene-bohnen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Plain green beans, raw or cooked, are safe for most dogs in moderation and make a low-calorie treat. Never give green beans with added salt, butter, garlic or other seasonings.",
-    "sl": "Da. Navaden stročji fižol, surov ali kuhan, je za večino psov v zmernih količinah varen in je nizkokaloričen priboljšek. Nikoli ne dajajte stročjega fižola z dodano soljo, maslom, česnom ali drugimi začimbami."
+    "sl": "Da. Navaden stročji fižol, surov ali kuhan, je za večino psov v zmernih količinah varen in je nizkokaloričen priboljšek. Nikoli ne dajajte stročjega fižola z dodano soljo, maslom, česnom ali drugimi začimbami.",
+    "de": "Ja. Grüne Bohnen pur, roh oder gekocht, sind für die meisten Hunde in Maßen unbedenklich und ein kalorienarmes Leckerli. Geben Sie niemals grüne Bohnen mit Salz, Butter, Knoblauch oder anderen Gewürzen."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
-    "sl": "Stročji fižol vsebuje vitamine, minerale in vlaknine ter ima malo kalorij; dodatna prostornina in vlaknine psu pomagajo, da se počuti sitega, ne da bi dobil veliko kalorij. Veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli, običajni recepti s stročjim fižolom za ljudi pa za pse niso varni."
+    "sl": "Stročji fižol vsebuje vitamine, minerale in vlaknine ter ima malo kalorij; dodatna prostornina in vlaknine psu pomagajo, da se počuti sitega, ne da bi dobil veliko kalorij. Veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli, običajni recepti s stročjim fižolom za ljudi pa za pse niso varni.",
+    "de": "Grüne Bohnen liefern Vitamine, Mineralstoffe und Ballaststoffe und sind kalorienarm; die Masse und die Ballaststoffe sorgen dafür, dass ein Hund sich satt fühlt, ohne viele Kalorien aufzunehmen. Viele Dosenbohnen enthalten viel zugesetztes Salz, und gängige Rezepte für grüne Bohnen aus der Menschenküche sind für Hunde nicht unbedenklich."
   },
   "signs": null,
   "what_to_do": {
     "en": "Ask your vet before giving your dog green beans. Never give green beans cooked with garlic or garlic salt.",
-    "sl": "Preden psu ponudite stročji fižol, se posvetujte z veterinarjem. Nikoli mu ne dajajte stročjega fižola, kuhanega s česnom ali česnovo soljo."
+    "sl": "Preden psu ponudite stročji fižol, se posvetujte z veterinarjem. Nikoli mu ne dajajte stročjega fižola, kuhanega s česnom ali česnovo soljo.",
+    "de": "Fragen Sie Ihren Tierarzt, bevor Sie Ihrem Hund grüne Bohnen geben. Geben Sie niemals grüne Bohnen, die mit Knoblauch oder Knoblauchsalz zubereitet wurden."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
-    "sl": "Ponudite ga surovega ali kuhanega v vodi ali na pari, a vedno navadnega. Izogibajte se stročjemu fižolu iz pločevinke in fižolu, pripravljenemu z maslom, česnom, česnovo soljo ali drugimi začimbami."
+    "sl": "Ponudite ga surovega ali kuhanega v vodi ali na pari, a vedno navadnega. Izogibajte se stročjemu fižolu iz pločevinke in fižolu, pripravljenemu z maslom, česnom, česnovo soljo ali drugimi začimbami.",
+    "de": "Roh, in Wasser gekocht oder gedämpft, aber pur. Vermeiden Sie Dosenbohnen und alles, was mit Butter, Knoblauch, Knoblauchsalz oder anderen Gewürzen zubereitet wurde."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
-    "sl": "Navaden stročji fižol je hrustljav pasji priboljšek. Fižol, kuhan s česnom ali maslom, ni za pse."
+    "sl": "Navaden stročji fižol je hrustljav pasji priboljšek. Fižol, kuhan s česnom ali maslom, ni za pse.",
+    "de": "Grüne Bohnen pur sind ein knackiges Leckerli für Hunde. Bohnen mit Knoblauch oder Butter sind nichts für Hunde."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat canned green beans?",
-        "sl": "Ali lahko psi jedo stročji fižol iz pločevinke?"
+        "sl": "Ali lahko psi jedo stročji fižol iz pločevinke?",
+        "de": "Dürfen Hunde grüne Bohnen aus der Dose fressen?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
-        "sl": "Najbolje se mu je izogniti, ker veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli."
+        "sl": "Najbolje se mu je izogniti, ker veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli.",
+        "de": "Besser nicht, denn viele Dosenbohnen enthalten viel zugesetztes Salz."
       }
     }
   ],
@@ -121,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "946315aaaffe93a33ac3f8e288fcbb0dfb60cf45a1c21eda70fbc29f9650dd21"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3599a2bf471e96e8ae860c9833d64b44a3952f6716a7f5e831eb0255ac8de2ca"
     }
   }
 }

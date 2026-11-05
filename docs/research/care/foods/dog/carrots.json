@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Carrots",
-    "sl": "Korenje"
+    "sl": "Korenje",
+    "de": "Karotten"
   },
   "question": {
     "en": "Can dogs eat carrots?",
-    "sl": "Ali lahko psi jedo korenje?"
+    "sl": "Ali lahko psi jedo korenje?",
+    "de": "Dürfen Hunde Karotten fressen?"
   },
   "url_slug": {
     "en": "carrots",
-    "sl": "korenje"
+    "sl": "korenje",
+    "de": "karotten"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
-    "sl": "Da. Korenje je za pse varno in je zdrav, nizkokaloričen prigrizek, surovo ali kuhano. Najprej ga narežite na koščke za en grižljaj, da se pes ne zaduši."
+    "sl": "Da. Korenje je za pse varno in je zdrav, nizkokaloričen prigrizek, surovo ali kuhano. Najprej ga narežite na koščke za en grižljaj, da se pes ne zaduši.",
+    "de": "Ja. Karotten sind für Hunde unbedenklich und ein gesunder, kalorienarmer Snack, roh oder gekocht. Schneiden Sie sie vorher mundgerecht klein, damit der Hund nicht daran erstickt."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
-    "sl": "Korenje je odličen vir vitamina A, kalija in vlaknin ter vsebuje veliko betakarotena. Žvečenje korenja lahko tudi izboljša zdravje psovih zob. Glavno tveganje je dušenje, zato je treba celo korenje in tudi korenčkove paličice narezati na koščke za en grižljaj."
+    "sl": "Korenje je odličen vir vitamina A, kalija in vlaknin ter vsebuje veliko betakarotena. Žvečenje korenja lahko tudi izboljša zdravje psovih zob. Glavno tveganje je dušenje, zato je treba celo korenje in tudi korenčkove paličice narezati na koščke za en grižljaj.",
+    "de": "Karotten sind eine hervorragende Quelle für Vitamin A, Kalium und Ballaststoffe und enthalten viel Beta-Carotin. Auf Karotten herumzukauen kann außerdem die Zahngesundheit Ihres Hundes fördern. Das Hauptrisiko ist Ersticken; deshalb sollten ganze Karotten und sogar Karottenstifte in mundgerechte Stücke geschnitten werden."
   },
   "signs": null,
   "what_to_do": {
     "en": "Talk to your vet about how many carrots suit your dog each day.",
-    "sl": "Z veterinarjem se posvetujte, koliko korenja na dan je primerno za vašega psa."
+    "sl": "Z veterinarjem se posvetujte, koliko korenja na dan je primerno za vašega psa.",
+    "de": "Besprechen Sie mit Ihrem Tierarzt, wie viele Karotten Ihr Hund täglich bekommen darf."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
-    "sl": "Korenje operite in/ali olupite, nato celo korenje in tudi korenčkove paličice narežite na koščke za en grižljaj. Primerno je surovo ali kuhano."
+    "sl": "Korenje operite in/ali olupite, nato celo korenje in tudi korenčkove paličice narežite na koščke za en grižljaj. Primerno je surovo ali kuhano.",
+    "de": "Waschen und/oder schälen Sie die Karotten und schneiden Sie ganze Karotten und sogar Karottenstifte in mundgerechte Stücke. Rohe und gekochte Karotten sind beide in Ordnung."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
-    "sl": "Hrustljavo korenje je zdrav pasji prigrizek! Odrasli ga najprej opere in nareže na majhne koščke."
+    "sl": "Hrustljavo korenje je zdrav pasji prigrizek! Odrasli ga najprej opere in nareže na majhne koščke.",
+    "de": "Knackige Karotten sind ein gesunder Snack für Hunde! Ein Erwachsener wäscht sie vorher und schneidet sie klein."
   },
   "faq": [
     {
       "q": {
         "en": "Can teething puppies have cold or frozen carrots?",
-        "sl": "Lahko mladiči med rastjo zob dobijo hladno ali zamrznjeno korenje?"
+        "sl": "Lahko mladiči med rastjo zob dobijo hladno ali zamrznjeno korenje?",
+        "de": "Dürfen zahnende Welpen kalte oder gefrorene Karotten bekommen?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
-        "sl": "Nekateri veterinarji mladičem, ki jim rastejo zobje, priporočajo hladno ali zamrznjeno korenje, da jim olajša nelagodje."
+        "sl": "Nekateri veterinarji mladičem, ki jim rastejo zobje, priporočajo hladno ali zamrznjeno korenje, da jim olajša nelagodje.",
+        "de": "Manche Tierärzte empfehlen kalte oder gefrorene Karotten für zahnende Welpen, um Beschwerden zu lindern."
       }
     }
   ],
@@ -105,6 +115,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c0dc8227a162ee6ddc85b8af368280f9942c736b41eb8273293804e93f5a30d2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "94e2859326106106ad3727d2205c12a74cbfbfec137ed72fad0a094f7248e36d"
     }
   }
 }

@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Peas",
-    "sl": "Grah"
+    "sl": "Grah",
+    "de": "Erbsen"
   },
   "question": {
     "en": "Can cats eat peas?",
-    "sl": "Ali lahko mačke jedo grah?"
+    "sl": "Ali lahko mačke jedo grah?",
+    "de": "Dürfen Katzen Erbsen fressen?"
   },
   "url_slug": {
     "en": "peas",
-    "sl": "grah"
+    "sl": "grah",
+    "de": "erbsen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain peas are fine as an occasional treat. Cats Protection and the ASPCA both name peas as a vegetable you can offer a cat, and the RSPCA says cats should only have a small amount as a treat.",
-    "sl": "Da, nekaj zrn navadnega graha je v redu kot občasen priboljšek. Cats Protection in ASPCA grah navajata kot zelenjavo, ki jo lahko ponudite mački, RSPCA pa pravi, naj mačke dobijo le malo, kot priboljšek."
+    "sl": "Da, nekaj zrn navadnega graha je v redu kot občasen priboljšek. Cats Protection in ASPCA grah navajata kot zelenjavo, ki jo lahko ponudite mački, RSPCA pa pravi, naj mačke dobijo le malo, kot priboljšek.",
+    "de": "Ja, ein paar ungewürzte Erbsen sind als gelegentliches Leckerli in Ordnung. Cats Protection und die ASPCA nennen beide Erbsen unter dem Gemüse, das Sie einer Katze anbieten können, und laut RSPCA sollten Katzen nur eine kleine Menge als Leckerli bekommen."
   },
   "why": {
     "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Cats Protection grah uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. ASPCA grah predlaga za mačke, RSPCA pa navaja, da lahko mačke dobijo navaden grah, vendar le malo, kot priboljšek. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+    "sl": "Cats Protection grah uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. ASPCA grah predlaga za mačke, RSPCA pa navaja, da lahko mačke dobijo navaden grah, vendar le malo, kot priboljšek. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
+    "de": "Cats Protection zählt Erbsen zu den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Die ASPCA empfiehlt Erbsen für Katzen, und laut RSPCA dürfen Katzen ungewürzte Erbsen fressen, aber nur in kleiner Menge als Leckerli. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit einer kleinen Menge. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
-    "sl": "Nekaj zrn navadnega graha, kuhanega na pari ali v vodi, brez masla, soli in začimb."
+    "sl": "Nekaj zrn navadnega graha, kuhanega na pari ali v vodi, brez masla, soli in začimb.",
+    "de": "Ein paar ungewürzte Erbsen, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze."
   },
   "child": {
     "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Nekaj zrn navadnega graha je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Nekaj zrn navadnega graha je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "de": "Ein paar ungewürzte Erbsen können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "de": "Brauchen Katzen Gemüse?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
       }
     }
   ],
@@ -114,6 +124,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1773961334bc3749207ccf2f4e4d0dbbc4bacc62b671efe9f6cd4e0ec854d88e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "429fa7368a206ded9a6f39d82161dbba14b028a3805d868093a861b20076f291"
     }
   }
 }

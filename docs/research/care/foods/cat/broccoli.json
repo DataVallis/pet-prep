@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Broccoli",
-    "sl": "Brokoli"
+    "sl": "Brokoli",
+    "de": "Brokkoli"
   },
   "question": {
     "en": "Can cats eat broccoli?",
-    "sl": "Ali lahko mačke jedo brokoli?"
+    "sl": "Ali lahko mačke jedo brokoli?",
+    "de": "Dürfen Katzen Brokkoli fressen?"
   },
   "url_slug": {
     "en": "broccoli",
-    "sl": "brokoli"
+    "sl": "brokoli",
+    "de": "brokkoli"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain broccoli is fine as an occasional treat. Cats Protection lists broccoli among vegetables you can feed your cat, the ASPCA suggests broccoli florets for cats, and the RSPCA advises boiled or steamed.",
-    "sl": "Da, majhen košček navadnega brokolija je v redu kot občasen priboljšek. Cats Protection brokoli navaja med zelenjavo, ki jo lahko daste mački, ASPCA za mačke predlaga cvetke brokolija, RSPCA pa svetuje kuhanega v vodi ali na pari."
+    "sl": "Da, majhen košček navadnega brokolija je v redu kot občasen priboljšek. Cats Protection brokoli navaja med zelenjavo, ki jo lahko daste mački, ASPCA za mačke predlaga cvetke brokolija, RSPCA pa svetuje kuhanega v vodi ali na pari.",
+    "de": "Ja, ein kleines Stück ungewürzter Brokkoli ist als gelegentliches Leckerli in Ordnung. Cats Protection führt Brokkoli unter den Gemüsesorten auf, die Sie Ihrer Katze geben können, die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA rät zu gekochtem oder gedämpftem Brokkoli."
   },
   "why": {
     "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
-    "sl": "Cats Protection brokoli uvršča med redko zelenjavo, ki jo lahko daste mački, če ji je všeč. ASPCA za mačke predlaga cvetke brokolija, RSPCA pa brokoli, kuhan v vodi ali na pari, navaja med hrano, primerno za mačke in pse v zmernih količinah. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+    "sl": "Cats Protection brokoli uvršča med redko zelenjavo, ki jo lahko daste mački, če ji je všeč. ASPCA za mačke predlaga cvetke brokolija, RSPCA pa brokoli, kuhan v vodi ali na pari, navaja med hrano, primerno za mačke in pse v zmernih količinah. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
+    "de": "Cats Protection zählt Brokkoli zu den wenigen Gemüsesorten, die Sie einer Katze geben können, wenn sie Interesse zeigt. Die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA führt gekochten oder gedämpften Brokkoli unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
-    "sl": "Majhna cvetka, kuhana v vodi ali na pari, brez masla, soli in začimb."
+    "sl": "Majhna cvetka, kuhana v vodi ali na pari, brez masla, soli in začimb.",
+    "de": "Ein kleines Röschen, gekocht oder gedämpft, ohne Butter, Salz oder Gewürze."
   },
   "child": {
     "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Majhen košček kuhanega brokolija je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Majhen košček kuhanega brokolija je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "de": "Ein kleines Stück gekochter Brokkoli kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "de": "Brauchen Katzen Gemüse?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
       }
     }
   ],
@@ -110,6 +120,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c9d11998bfc0c1232aed5d8409f7a181111b4512271727e89471bb2194bb2f20"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "33953ecea9494383b34c8ceae13592cca39ff7ef3d8846caba45b774285f5768"
     }
   }
 }
