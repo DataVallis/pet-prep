@@ -1,0 +1,85 @@
+{
+  "country": "LT",
+  "checked": "2026-11-05",
+  "sources": [
+    {
+      "name": "LSMU Veterinary Academy - Dr. L. Kriaučeliūnas Small Animal Clinic",
+      "url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
+      "note": "Opened 2026-11-05: 'The 24-hour Small Animal Clinic provides emergency and planned outpatient and inpatient services'; Tilžės g. 18 Kaunas, +370 620 78353."
+    },
+    {
+      "name": "Druskininkai municipality - pet friendly Druskininkai",
+      "url": "https://druskininkai.lt/en/pet-friendly",
+      "note": "Opened 2026-11-05: lists three veterinary clinics with address and phone; no hours, no 24 h wording."
+    },
+    {
+      "name": "Lietuvos veterinarijos gydytojų asociacija (state register entry)",
+      "url": "https://lrvalstybe.lt/index.php/valstybine-institucija/lietuvos-veterinarijos-gydytoju-asociacija",
+      "note": "Opened 2026-11-05: association contact only (K. Donelaičio g. 2 Kaunas, +370 695 34879); no duty rota, no emergency info, no clinic list."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "LSMU Veterinarijos akademija - Dr. L. Kriaučeliūno smulkiųjų gyvūnų klinika",
+      "city": "Kaunas",
+      "region": "Kauno apskritis",
+      "address": "Tilžės g. 18, LT-47181 Kaunas",
+      "phone": "+370 620 78353",
+      "emergency_24h": true,
+      "duty": "University small animal clinic described as 24-hour: emergency and planned outpatient and inpatient care. Call ahead on +370 620 78353.",
+      "small_animals": true,
+      "url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
+      "source_url": "https://lsmu.lt/en/about-lsmu/structure/veterinary-practice/small-animal-clinic/",
+      "checked": "2026-11-05",
+      "note": "Own LSMU page opened 2026-11-05; email gyvunu.klinika@lsmu.lt. Postcode on page LT-47181, academy page says LT-57181 (inconsistent). Page lists no opening hours, only the '24-hour' wording. Academy switchboard +370 37 362 383.",
+      "quote": "The 24-hour Small Animal Clinic provides emergency and planned outpatient and inpatient services"
+    },
+    {
+      "kind": "clinic",
+      "name": "Kurortinė veterinarijos klinika (Resort veterinary clinic)",
+      "city": "Druskininkai",
+      "region": "Alytaus apskritis",
+      "address": "Gardino g. 72, Druskininkai",
+      "phone": "+370 676 64525",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "https://druskininkai.lt/en/pet-friendly",
+      "source_url": "https://druskininkai.lt/en/pet-friendly",
+      "checked": "2026-11-05",
+      "note": "Listed on the municipality page (English name 'Resort veterinary clinic'; Lithuanian name not verified). No hours, no 24 h wording. Clinic's own site not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "D. Jakšaitienė veterinarijos vaistinė - klinika",
+      "city": "Druskininkai",
+      "region": "Alytaus apskritis",
+      "address": "Turgaus g. 3, Druskininkai",
+      "phone": "+370 313 52919",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "https://druskininkai.lt/en/pet-friendly",
+      "source_url": "https://druskininkai.lt/en/pet-friendly",
+      "checked": "2026-11-05",
+      "note": "Listed on the municipality page; no hours, no 24 h wording. Clinic's own site not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Veterinarijos klinika Druskininkuose (Neravai)",
+      "city": "Neravai (Druskininkai)",
+      "region": "Alytaus apskritis",
+      "address": "Sodžiaus g. 18, Neravų k., Druskininkų sav.",
+      "phone": "+370 699 35788",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "https://druskininkai.lt/en/pet-friendly",
+      "source_url": "https://druskininkai.lt/en/pet-friendly",
+      "checked": "2026-11-05",
+      "note": "Listed on the municipality page as 'Veterinary clinic in Druskininkai'; no hours, no 24 h wording. Clinic's own site not opened."
+    }
+  ],
+  "notes": "Lithuania 2026-11-05, INCOMPLETE run. Tooling limit: WebFetch only opened URLs returned by search, so no clinic's own website could be opened (sites named in directory pages, e.g. 8drambliai.lt, mambaveterinaras.lt, vetmed.lt, bravoveta.lt, vetpagalba.lt, bvkklinika.lt, vmvt.lt, lsmuni.lt, were refused as not-in-provenance; lrvalstybe.lt/kontaktai/administracija-872 failed). Only aggregator pages (1551.lt, petla.app) described the following clinics, so they were NOT published per runbook: '8 drambliai' hospital Vilnius (Nemenčinės pl. 4C / Tolimoji g. 2B, +370 612 88788, hours 08-24, 1551 title says 'visą parą' but its own fields conflict) and Antakalnis/Pilaitė branches; '8 drambliai' referentinė veterinarijos ligoninė Klaipėda (Liepų g. 73; 1551 title 'visą parą veikianti'); MB Mambavet Klaipėda (Paryžiaus Komunos g. 2, +370 671 02331, 1551 says 'budinti visą parą' but lists Mon-Fri 9-18); Jakovo veterinarijos centras Vilnius (vetmed.lt); Bravoveta Šilutė; Naujosios Vilnios veterinarijos gydykla; Buivydiškių klinika; Vetfauna; Zookomfort; Gedmino vet Šiauliai. These are strong 24 h candidates to verify on their own sites next run (8drambliai.lt, mambaveterinaras.lt). No national duty rota found (VMVT/LVGA pages checked via register entry contain none). No animal poison line found (searches returned only human toxicology/foreign services). Lietuvos veterinarijos gydytojų asociacija contact: K. Donelaičio g. 2 Kaunas, +370 695 34879 (not a clinic, not added). Not covered: Vilnius, Klaipėda, Šiauliai, Panevėžys, Alytus, Palanga, Birštonas, Nida clinics (no own-source page opened)."
+}
