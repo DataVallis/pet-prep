@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-05 — Čiščenje diska po deployu zdaj res briše stare slike
+
+**Kaj:** samodejno čiščenje starih Docker slik ob deployu na produkciji ni odstranilo ničesar (disk je bil spet na 89 %), ker produkcijski Docker prenesene slike izpiše brez oznake (`ghcr.io/…:<none>`); zdaj jih briše po ID-ju slike, ohrani trenutno, prejšnjo in vse, kar teče, test pa preverja točno tak izpis kot na strežniku.
+
 ## 2026-11-05 — Pod imenom kužka piše, kako je in kaj rabi
 
 **Kaj:** v glavi otroškega zaslona je pod imenom in pasmo zdaj ena kratka vrstica z ikono: »Spi«, »Lačen«, »Žejen«, »Utrujen — rabi sprehod« (muca: »Utrujena — rabi igro«), »Bolan«, »Igriv«, »Zadovoljen«; pri neredu »Luža na tleh — počisti«, pri ustavljeni igri »Igra ustavljena«. Ista vrstica je pri staršu na kartici v »Pregled družine« in na podrobnostih otroka. Prej je tam pisalo »Kupljen pri vzreditelju · datum« — to je zdaj v listu »O tvojem kužku« (tap na glavo).

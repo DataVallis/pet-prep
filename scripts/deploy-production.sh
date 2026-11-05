@@ -177,14 +177,17 @@
 # DISK (D31, incident 2026-11-04: the root disk reached 100 % — 20.5 GB of old pulled
 #   GHCR release images that `docker image prune -f` never removed, because a digest-pulled
 #   image keeps its `ghcr.io/…/petprep-app@sha256:…` name and so is never "dangling").
-#   prune_release_images removes every name of a petprep-app / petprep-web image (local
-#   tag or ghcr.io digest ref) whose image id is NOT kept. KEPT: the ids tagged
-#   petprep-{app,web}:production (current release) and :previous (the release before =
-#   what the automatic revert and the manual rollback, PRODUCTION_DEPLOYMENT.md §7, use)
-#   and every image any container uses (running or stopped, e.g. a kept reverb).
+#   prune_release_images removes, BY IMAGE ID, every petprep-app / petprep-web image (local
+#   tag or ghcr.io digest ref) whose id is NOT kept (follow-up 2026-11-05: the first version
+#   removed names built from {{.Repository}}/{{.Tag}}/{{.Digest}} and matched nothing on the
+#   containerd image store, where a digest-pulled image lists as `ghcr.io/…:<none>`). KEPT:
+#   the ids tagged petprep-{app,web}:production (current release), :previous (the release
+#   before = what the automatic revert and the manual rollback, PRODUCTION_DEPLOYMENT.md §7,
+#   use) and :next, and every image any container uses (running or stopped, e.g. a kept
+#   reverb). Never `docker image rm -f`; a refusal is a warning and the image stays.
 #   Website guard (D31, second incident 2026-11-04 11:00–12:35: the website repo's hourly
 #   deploys left ~2.85 GB per `ghcr.io/datavallis/petprep-website@sha256:…` image): the same
-#   rule for petprep-website images (keep :production, :previous, in use) PLUS an age floor —
+#   rule for petprep-website images (keep :production, :previous, :next, in use) PLUS an age floor —
 #   a website image is removed only when it was created more than DEPLOY_WEBSITE_MIN_AGE_HOURS
 #   (default 6) hours ago, so a website deploy running at the same time never loses its fresh
 #   pull; unknown creation time → kept. Other repositories (postgres, redis, caddy base,
@@ -228,7 +231,7 @@ BASE_WEB_ID=""          # caddy base image of the new web image
 IMAGES=(petprep-app petprep-web)
 # Release images (D31): petprep-app / petprep-web, local or ghcr.io/<owner>/… names.
 RELEASE_IMAGE_RE='(^|/)petprep-(app|web)$'
-KEEP_TAG_RE='^(production|previous)$'
+KEEP_TAG_RE='^(production|previous|next)$'
 # Website images (D31 website guard): pruned like releases, but only when older than this.
 WEBSITE_IMAGE_RE='(^|/)petprep-website$'
 WEBSITE_MIN_AGE_HOURS="${DEPLOY_WEBSITE_MIN_AGE_HOURS:-6}"
@@ -417,72 +420,110 @@ restore_images() {
 }
 
 # ---- Disk (DISK above, D31) --------------------------------------------------------
-# prune_release_images: remove every name of a release image (petprep-app / -web) and of
-# a website image (petprep-website, only when older than WEBSITE_MIN_AGE_HOURS) whose id is
-# not kept (:production / :previous of its own repository, or used by any container).
-# Returns 1 (prunes nothing) when the containers or images cannot be listed — never guess
-# what is in use.
-# image_older_than_min_age ID: 0 when ID was created > WEBSITE_MIN_AGE_HOURS ago; unknown → 1.
+# prune_release_images works on IMAGE IDS (D31 follow-up 2026-11-05: the first version built
+# `repo:tag` / `repo@digest` names from `{{.Repository}}` `{{.Tag}}` `{{.Digest}}`; on the
+# production Docker (containerd image store) a digest-pulled image lists as `ghcr.io/…:<none>`
+# and the prune matched nothing — "removed 0", no warning). Candidates = every image id with a
+# name in petprep-app / petprep-web / petprep-website (local tag or ghcr.io ref). KEPT ids:
+# those tagged :production, :previous or :next in one of these repositories, and every image
+# any container uses (running or stopped; `docker inspect {{.Image}}` of each container PLUS
+# `docker ps -a {{.Image}}` — a name or a short id — resolved with `docker image inspect`).
+# Website ids are removed only when created more than WEBSITE_MIN_AGE_HOURS ago (unknown → kept).
+# Removal: the id's local tags (`repo:tag`), then `docker image rm <id>` for its digest refs —
+# never -f; a refusal (in use, referenced elsewhere) is a warning and the image stays.
+# Returns 1 (prunes nothing) when the containers or images cannot be listed.
+PRUNE_LS_FORMAT='{{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.CreatedAt}}'
+
+# short_image_id ID: "sha256:<hex>" / "<hex>" (full or short) → the 12-hex short id.
+short_image_id() {
+    local i=${1#sha256:}
+    printf '%s' "${i:0:12}"
+}
+
+# image_older_than_min_age ID CREATED_AT: 0 when the image was created > WEBSITE_MIN_AGE_HOURS
+# ago. CREATED_AT = `docker image ls` {{.CreatedAt}} ("2026-11-05 03:20:11 +0100 CET" — the
+# trailing zone name is dropped, GNU date cannot parse it after the offset); unparseable →
+# `docker image inspect {{.Created}}` (RFC3339); still unknown → 1 (kept).
 image_older_than_min_age() {
-    local created created_s now_s
-    created="$(docker image inspect --format '{{.Created}}' "$1" 2>/dev/null)" || return 1
-    created_s="$(date -d "$created" +%s 2>/dev/null)" || return 1
-    [[ "$created_s" =~ ^[0-9]+$ ]] || return 1
+    local id=$1 created=$2 day="" clock="" offset="" created_s="" now_s
+    if [ -n "$created" ]; then
+        read -r day clock offset _ <<< "$created"
+        created_s="$(date -d "${day} ${clock} ${offset}" +%s 2>/dev/null)" || created_s=""
+    fi
+    if ! [[ "$created_s" =~ ^[0-9]+$ ]]; then
+        created="$(docker image inspect --format '{{.Created}}' "$id" 2>/dev/null < /dev/null)" || return 1
+        created_s="$(date -d "$created" +%s 2>/dev/null)" || return 1
+        [[ "$created_s" =~ ^[0-9]+$ ]] || return 1
+    fi
     now_s="$(date +%s)"
     [ $((now_s - created_s)) -gt $((WEBSITE_MIN_AGE_HOURS * 3600)) ]
 }
 
 prune_release_images() {
-    local containers keep="" listing repo tag digest id ref removed=0 failed=0 young=0 website
+    local containers ids ps_images ref listing id repo tag created sid t all_ok
+    local removed=0 kept=0 failed=0 young=0
+    local -A keep=() cand=() is_web=() created_of=() untagged=() tags_of=()
     if ! containers="$(docker ps -aq)"; then
         warn "cannot list containers — old release images not pruned."
         return 1
     fi
     if [ -n "$containers" ]; then
         # shellcheck disable=SC2086  # one container id per word
-        if ! keep="$(docker inspect --format '{{.Image}}' $containers)"; then
+        if ! ids="$(docker inspect --format '{{.Image}}' $containers)" \
+            || ! ps_images="$(docker ps -a --format '{{.Image}}')"; then
             warn "cannot read the containers' images — old release images not pruned."
             return 1
         fi
+        for id in $ids; do keep[$(short_image_id "$id")]=1; done
+        while read -r ref; do
+            [ -n "$ref" ] || continue
+            id="$(docker image inspect --format '{{.Id}}' "$ref" 2>/dev/null < /dev/null)" || continue
+            if [ -n "$id" ]; then keep[$(short_image_id "$id")]=1; fi
+        done <<< "$ps_images"
     fi
-    if ! listing="$(docker image ls --no-trunc --format '{{.Repository}}\t{{.Tag}}\t{{.Digest}}\t{{.ID}}')"; then
+    if ! listing="$(docker image ls --no-trunc --format "$PRUNE_LS_FORMAT")"; then
         warn "cannot list images — old release images not pruned."
         return 1
     fi
-    while IFS=$'\t' read -r repo tag digest id; do
-        if { [[ "$repo" =~ $RELEASE_IMAGE_RE ]] || [[ "$repo" =~ $WEBSITE_IMAGE_RE ]]; } \
-            && [[ "$tag" =~ $KEEP_TAG_RE ]]; then
-            keep+=$'\n'"$id"
-        fi
-    done <<< "$listing"
-    while IFS=$'\t' read -r repo tag digest id; do
+    while IFS=$'\t' read -r id repo tag created; do
         [ -n "$id" ] || continue
-        website=0
+        sid="$(short_image_id "$id")"
+        [[ "$sid" =~ ^[0-9a-f]{12}$ ]] || continue
         if [[ "$repo" =~ $WEBSITE_IMAGE_RE ]]; then
-            website=1
+            is_web[$sid]=1
         elif ! [[ "$repo" =~ $RELEASE_IMAGE_RE ]]; then
             continue
         fi
-        if grep -qxF -- "$id" <<< "$keep"; then continue; fi
-        if [ "$website" = 1 ] && ! image_older_than_min_age "$id"; then
+        if [[ "$tag" =~ $KEEP_TAG_RE ]]; then keep[$sid]=1; fi
+        cand[$sid]="$id"
+        created_of[$sid]="$created"
+        if [ -z "$tag" ] || [ "$tag" = "<none>" ]; then
+            untagged[$sid]=1            # a digest-pulled ghcr.io/… ref
+        else
+            tags_of[$sid]+="${repo}:${tag}"$'\n'
+        fi
+    done <<< "$listing"
+    while read -r sid; do
+        [ -n "$sid" ] || continue
+        if [ -n "${keep[$sid]:-}" ]; then kept=$((kept + 1)); continue; fi
+        if [ -n "${is_web[$sid]:-}" ] && ! image_older_than_min_age "${cand[$sid]}" "${created_of[$sid]}"; then
             young=$((young + 1))
             continue
         fi
-        if [ -n "$tag" ] && [ "$tag" != "<none>" ]; then
-            ref="${repo}:${tag}"
-        elif [ -n "$digest" ] && [ "$digest" != "<none>" ]; then
-            ref="${repo}@${digest}"
-        else
-            continue  # dangling: `docker image prune -f` removes it
+        all_ok=1
+        # Local tags first: an id with a tag AND a digest ref is "referenced in multiple
+        # repositories" for `docker image rm <id>` without -f.
+        while read -r t; do
+            [ -n "$t" ] || continue
+            docker image rm "$t" > /dev/null < /dev/null || all_ok=0
+        done <<< "${tags_of[$sid]:-}"
+        if [ "$all_ok" = 1 ] && [ -n "${untagged[$sid]:-}" ]; then
+            docker image rm "${cand[$sid]}" > /dev/null < /dev/null || all_ok=0
         fi
-        if docker image rm "$ref" > /dev/null; then
-            removed=$((removed + 1))
-        else
-            failed=$((failed + 1))
-        fi
-    done <<< "$listing"
-    log "Old release images: removed ${removed} name(s) (kept: petprep-{app,web,website}:production + :previous, every image a container uses, website images younger than ${WEBSITE_MIN_AGE_HOURS} h: ${young})."
-    if [ "$failed" -gt 0 ]; then warn "${failed} old release image name(s) could not be removed (docker image ls 'petprep-*')."; fi
+        if [ "$all_ok" = 1 ]; then removed=$((removed + 1)); else failed=$((failed + 1)); fi
+    done < <(printf '%s\n' "${!cand[@]}" | sort)
+    log "Old release images: removed ${removed} image(s), kept ${kept} (petprep-{app,web,website}:production/:previous/:next ids + every image a container uses), website images younger than ${WEBSITE_MIN_AGE_HOURS} h kept: ${young}."
+    if [ "$failed" -gt 0 ]; then warn "${failed} old release image(s) could not be removed (in use or referenced elsewhere — kept; docker image ls 'petprep-*')."; fi
     return 0
 }
 
