@@ -31,6 +31,21 @@
       "name": "cyprusnet.com listings (Peyia, Paw Care), What's On Cyprus (Tasos Kefalas), Angloinfo, cyprus-faq",
       "url": "https://www.cyprusnet.com/peyia-veterinary-clinic",
       "note": "Secondary listings."
+    },
+    {
+      "name": "Angloinfo Cyprus pets & animals directory",
+      "url": "https://www.angloinfo.com/cyprus/directory/family/pets-animals",
+      "note": "Georgia Pashias, Erimi Vets."
+    },
+    {
+      "name": "Hopsa listing Paphiakos Animal Clinic",
+      "url": "https://hopsa.io/en/attractions/cypr,swiat-zwierzat,paphiakos-animal-clinic-8ef9ce30aa",
+      "note": "Phone/address/hours."
+    },
+    {
+      "name": "Cyprus FAQ listing Animal Health Veterinary Clinic",
+      "url": "https://www.cyprus-faq.com/en/south/organizations/pets/vet-clinics/animal-health-veterinary-clinic",
+      "note": "Address, hours."
     }
   ],
   "entries": [
@@ -44,7 +59,7 @@
       "url": "http://www.dnvet.com",
       "emergency_24h": true,
       "duty": "Full emergency service with in-house staff 24 hours a day, 365 days a year. Emergency phone +357 99 371508.",
-      "note": "24/7/365 claim is from a promotional magazine feature (Cyprus Lifestyle), not the clinic's own site (dnvet.com could not be opened: not surfaced by search so WebFetch refused it). Emergency phone 99371508. Hours in article: Mon-Fri 08-21, Sat 08-17, Sun 09-12.",
+      "note": "24/7/365 claim is from a promotional magazine feature (Cyprus Lifestyle), not the clinic's own site (dnvet.com could not be opened: not surfaced by search so WebFetch refused it). Emergency phone 99371508. Hours in article: Mon-Fri 08-21, Sat 08-17, Sun 09-12. 2026-11-05: topodigos listing quotes \"24 hours a day, 7 days a week, 365 days a year\" (3rd confirmation); dnvet.com not openable (provenance).",
       "small_animals": true,
       "source_url": "https://issuu.com/cypruslifestylemagazine/docs/d_and_n_vets_resize_1",
       "checked": "2026-11-05"
@@ -97,10 +112,10 @@
       "city": "Limassol",
       "region": "Limassol",
       "phone": "+357 25 583334",
-      "address": "130 Griva Digeni, 3101 Limassol",
+      "address": "Georgiou Griva Digeni 130, Limassol 3101",
       "url": "https://animalhealth.com.cy",
-      "duty": "Hours listed: Mon-Fri 09:00-19:00, Sat 09:00-14:00. Call ahead for urgent cases.",
-      "note": "Cyprus Inform promo claims '24/7' and a 99 386 999 consultation line but lists 09-20 hours and a reader says it refused a night emergency; no explicit own-site claim, so false. animalhealth.com.cy not opened.",
+      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-14:00",
+      "note": "Cyprus Inform promo claims '24/7' and a 99 386 999 consultation line but lists 09-20 hours and a reader says it refused a night emergency; no explicit own-site claim, so false. animalhealth.com.cy not opened. 2026-11-05: address/hours from cyprus-faq listing (no 24-h claim there); own site not openable.",
       "emergency_24h": false,
       "small_animals": true,
       "source_url": "https://www.cyprus-faq.com/en/south/organizations/pets/vet-clinics/animal-health-veterinary-clinic",
@@ -113,8 +128,8 @@
       "region": "Limassol",
       "address": "Edessis 3A, Potamos Germasogeia, Limassol",
       "url": "https://en.alphavets.net/",
-      "duty": "Mon-Fri 09:00-14:00 and 15:00-19:00, Sat 09:00-14:00. On-call home visits.",
-      "note": "Phone hidden on the page; url from page, site not opened.",
+      "duty": "Mon-Fri 09:00-14:00 and 15:00-19:00, Sat 09:00-14:00; on-call home visits offered",
+      "note": "Phone hidden on the page; url from page, site not opened. 2026-11-05: address/hours from kiprinform page (clinic own site still not openable); phone hidden on page; 993 992 28 is a pet-food delivery line, not used.",
       "emergency_24h": false,
       "small_animals": true,
       "source_url": "https://www.kiprinform.com/en/cyprus_services/alphavets-veterinary-clinic-in-limassol/amp/",
@@ -156,8 +171,8 @@
       "region": "Famagusta",
       "phone": "+357 23 816060",
       "address": "Cheimaras 4, Paralimni 5285",
-      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-14:00, Sun closed.",
-      "note": "Email domain pawcarevet.com.cy; site not opened.",
+      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-14:00, Sun closed",
+      "note": "Email domain pawcarevet.com.cy; site not opened. 2026-11-05: address/hours from cyprusnet listing.",
       "emergency_24h": false,
       "small_animals": true,
       "source_url": "https://www.cyprusnet.com/paw-care-veterinary-clinic",
@@ -525,7 +540,45 @@
       "small_animals": true,
       "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
       "checked": "2026-11-05"
+    },
+    {
+      "kind": "clinic",
+      "name": "Paphiakos Animal Clinic",
+      "city": "Paphos",
+      "region": "Paphos",
+      "address": "Agion Anargiron Ave 603-618, Paphos 8049",
+      "phone": "+357 26 946461",
+      "emergency_24h": false,
+      "duty": "Daily 07:00-19:00 (as listed)",
+      "small_animals": true,
+      "source_url": "https://hopsa.io/en/attractions/cypr,swiat-zwierzat,paphiakos-animal-clinic-8ef9ce30aa",
+      "checked": "2026-11-05",
+      "note": "Third-party directory only (hopsa.io); no 24-h claim. Related charity Paphiakos Animal Welfare (cyprusnet) advertises a 24-h emergency helpline 99655581 - not a clinic, not poison line, not added."
+    },
+    {
+      "kind": "clinic",
+      "name": "Georgia Pashias Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "phone": "+357 25 751999",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.angloinfo.com/cyprus/directory/family/pets-animals",
+      "checked": "2026-11-05",
+      "note": "Angloinfo directory listing only."
+    },
+    {
+      "kind": "clinic",
+      "name": "Erimi Vets",
+      "city": "Erimi",
+      "region": "Limassol",
+      "phone": "+357 99 440860",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.angloinfo.com/cyprus/directory/family/pets-animals",
+      "checked": "2026-11-05",
+      "note": "Angloinfo directory listing only."
     }
   ],
-  "notes": "Run 2026-11-05, CY (Republic of Cyprus). LIMITATION: the fetch tool refused any URL not surfaced by search/previous result, so official sites (vs.moa.gov.cy Veterinary Services - also robots-disallowed on its search form, pvacyprus.com Pancyprian Veterinary Association, Cyprus Veterinary Council register, clinics' own sites such as dnvet.com, animalhealth.com.cy, limassolvet.com, v3tshospital.com.cy, alphavets.net) could NOT be opened. All data therefore comes from third-party pages (news, directories) and every entry needs a second-pass check against the clinic's own site. DUTY ROTA: none found; no public 'εφημερεύοντες κτηνίατροι' page located (Pancyprian Vet Association / Veterinary Services pages unreachable). POISON LINE: no animal poison information line found for Cyprus (searches only returned news on poisoned-bait incidents). NORTHERN CYPRUS: skipped (only directory pages; no official/own-site source opened). LEFT: Nicosia 24h clinics beyond Pet Doctors (no contact data), Paphos town/Polis, Ayia Napa/Protaras beyond Paralimni, Limassol 24h hospitals' own pages, Kyrenia not covered. DROPPED for lack of any phone/url: Pet Doctors Veterinary Hospital (Nicosia, expatfocus says 'open 24/7'), Small Animal Hospital (Mesa Geitonia, DOM blog '24/7 on-call'), Happy Valley Veterinary Clinic & Pet Hotel (Erimi, DOM blog '24/7 on-call') - candidates for a follow-up run once their own sites can be opened. Phone conflicts noted per entry (Antoniou 99725411/99735411, MP West 25933555/99150823). INDEPENDENT CHECK 2026-11-05 (separate agent): opened source pages of all 3 emergency_24h entries (D&N, Antoniou, V3TS) and 7 of 37 others picked with random.seed(20261105) (Tasos Kefalas, Oroklini Vets, Blue Cross, hosPETal, Vetorama, Dr. Pet, Ierodiakonou); the Cyprus Mail page also re-confirmed name+phone of every other Cyprus Mail entry in the list (all matched; MP West 25933555 and Antoniou 99725411 confirmed there). 24-h claims confirmed on pages for D&N (24/7/365, address, hours, phones 26819942/99371508 match), Antoniou ('24h emergency service', Kolossi address and hours match; phone hidden on the page, taken from Cyprus Mail) and V3TS ('24/7 emergency veterinary care', phone 24253373 matches Cyprus Mail). Fixed 0, downgraded 0, removed 1: Oroklini Vets (only a name on the UNIC page, no phone or own website, so it fails the phone-or-url rule). Clinics' own sites (dnvet.com, v3tshospital.com.cy) could not be opened (fetch tool refused URLs not surfaced by search), so no own-site url/address additions were possible; 24-h claims still rest on a promotional magazine feature, a directory listing and a university page, not on the clinics' own sites."
+  "notes": "Run 2026-11-05, CY (Republic of Cyprus). LIMITATION: the fetch tool refused any URL not surfaced by search/previous result, so official sites (vs.moa.gov.cy Veterinary Services - also robots-disallowed on its search form, pvacyprus.com Pancyprian Veterinary Association, Cyprus Veterinary Council register, clinics' own sites such as dnvet.com, animalhealth.com.cy, limassolvet.com, v3tshospital.com.cy, alphavets.net) could NOT be opened. All data therefore comes from third-party pages (news, directories) and every entry needs a second-pass check against the clinic's own site. DUTY ROTA: none found; no public 'εφημερεύοντες κτηνίατροι' page located (Pancyprian Vet Association / Veterinary Services pages unreachable). POISON LINE: no animal poison information line found for Cyprus (searches only returned news on poisoned-bait incidents). NORTHERN CYPRUS: skipped (only directory pages; no official/own-site source opened). LEFT: Nicosia 24h clinics beyond Pet Doctors (no contact data), Paphos town/Polis, Ayia Napa/Protaras beyond Paralimni, Limassol 24h hospitals' own pages, Kyrenia not covered. DROPPED for lack of any phone/url: Pet Doctors Veterinary Hospital (Nicosia, expatfocus says 'open 24/7'), Small Animal Hospital (Mesa Geitonia, DOM blog '24/7 on-call'), Happy Valley Veterinary Clinic & Pet Hotel (Erimi, DOM blog '24/7 on-call') - candidates for a follow-up run once their own sites can be opened. Phone conflicts noted per entry (Antoniou 99725411/99735411, MP West 25933555/99150823). INDEPENDENT CHECK 2026-11-05 (separate agent): opened source pages of all 3 emergency_24h entries (D&N, Antoniou, V3TS) and 7 of 37 others picked with random.seed(20261105) (Tasos Kefalas, Oroklini Vets, Blue Cross, hosPETal, Vetorama, Dr. Pet, Ierodiakonou); the Cyprus Mail page also re-confirmed name+phone of every other Cyprus Mail entry in the list (all matched; MP West 25933555 and Antoniou 99725411 confirmed there). 24-h claims confirmed on pages for D&N (24/7/365, address, hours, phones 26819942/99371508 match), Antoniou ('24h emergency service', Kolossi address and hours match; phone hidden on the page, taken from Cyprus Mail) and V3TS ('24/7 emergency veterinary care', phone 24253373 matches Cyprus Mail). Fixed 0, downgraded 0, removed 1: Oroklini Vets (only a name on the UNIC page, no phone or own website, so it fails the phone-or-url rule). Clinics' own sites (dnvet.com, v3tshospital.com.cy) could not be opened (fetch tool refused URLs not surfaced by search), so no own-site url/address additions were possible; 24-h claims still rest on a promotional magazine feature, a directory listing and a university page, not on the clinics' own sites. FOLLOW-UP RUN 2026-11-05: WebFetch again refused every own-site/official URL (dnvet.com, v3tshospital.com.cy, pvacyprus.com, vs.moa.gov.cy: PROVENANCE_REQUIRED; domain-restricted site: searches returned none of them) - unreachable twice, skip in future runs. Added 3 clinics (Paphiakos Animal Clinic, Georgia Pashias, Erimi Vets); upgraded AlphaVets, Animal Health, Paw Care with address/hours from third-party pages. Retry candidates still without phone/url on any opened page: Pet Doctors Veterinary Hospital Nicosia (expatfocus: 'open 24/7', no contact), Small Animal Hospital Mesa Geitonia and Happy Valley (DOM: '24/7 on-call', no contact, Google Maps links only). Also: DOM lists V3ts Mobile 99253372 and Pelekanis 99150823 (Episkopi per cyprus-faq; same number as MP West in Cyprus Mail - unresolved, not added). Medvets second Paralimni number 99720508 (angloinfo). No duty rota, no animal poison line found. Ayia Napa/Protaras/Polis: no new clinics found on opened pages. SECOND INDEPENDENT CHECK 2026-11-05 (follow-up run): re-opened source pages of the 3 emergency_24h entries (D&N 24/7/365 + phones + address confirmed; Antoniou '24h emergency service' confirmed, phone hidden on page, 99725411 confirmed on Cyprus Mail; V3TS '24/7 emergency veterinary care' confirmed, phone 24253373 confirmed on Cyprus Mail), the 3 new entries (Paphiakos, Pashias, Erimi: name/phone match, no 24-h claim), the 3 upgraded entries (AlphaVets, Animal Health, Paw Care: address/hours match) and Limassol Vet Clinic, Zookosmos, Peyia, Medvets, plus the Cyprus Mail phone list (all matched). Fixed 0, downgraded 0, removed 0, unreachable 0."
 }
