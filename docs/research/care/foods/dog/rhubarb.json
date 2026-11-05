@@ -4,28 +4,33 @@
   "name": {
     "en": "Rhubarb",
     "sl": "Rabarbara",
-    "de": "Rhabarber"
+    "de": "Rhabarber",
+    "fr": "Rhubarbe"
   },
   "question": {
     "en": "Can dogs eat rhubarb?",
     "sl": "Ali lahko psi jedo rabarbaro?",
-    "de": "Dürfen Hunde Rhabarber fressen?"
+    "de": "Dürfen Hunde Rhabarber fressen?",
+    "fr": "Les chiens peuvent-ils manger de la rhubarbe ?"
   },
   "url_slug": {
     "en": "rhubarb",
     "sl": "rabarbara",
-    "de": "rhabarber"
+    "de": "rhabarber",
+    "fr": "rhubarbe"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Keep rhubarb away from dogs. Rhubarb is listed as toxic to dogs, and its leaves contain soluble oxalates in dangerous concentrations. Eating it can cause vomiting, drooling, trembling, low blood calcium and kidney injury.",
     "sl": "Ne. Rabarbaro hranite stran od psov. Rabarbara je uvrščena med rastline, strupene za pse, njeni listi pa vsebujejo topne oksalate v nevarnih koncentracijah. Lahko povzroči bruhanje, slinjenje, tresenje, nizko raven kalcija v krvi in okvaro ledvic.",
-    "de": "Nein. Halten Sie Rhabarber von Hunden fern. Rhabarber gilt als giftig für Hunde, und seine Blätter enthalten lösliche Oxalate in gefährlicher Konzentration. Der Verzehr kann Erbrechen, Sabbern, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen."
+    "de": "Nein. Halten Sie Rhabarber von Hunden fern. Rhabarber gilt als giftig für Hunde, und seine Blätter enthalten lösliche Oxalate in gefährlicher Konzentration. Der Verzehr kann Erbrechen, Sabbern, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen.",
+    "fr": "Non. Gardez la rhubarbe hors de portée des chiens. La rhubarbe est classée comme toxique pour les chiens, et ses feuilles contiennent des oxalates solubles en concentrations dangereuses. En manger peut provoquer des vomissements, une salivation excessive, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale."
   },
   "why": {
     "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
     "sl": "Listi rabarbare vsebujejo topne oksalate (oksalno kislino), ki lahko psu povzročijo težave z živčevjem, prebavili in ledvicami ter znižajo raven kalcija. Pet Poison Helpline navaja, da stebla vsebujejo zelo malo oksalatov in niso strupena, ASPCA pa rabarbaro uvršča med rastline, strupene za pse, zato izberemo strožjo oceno in svetujemo, da psu ne dajete nobenega dela rabarbare. Psov rastlina redko zanima, ker so listi grenki.",
-    "de": "Rhabarberblätter enthalten lösliche Oxalate (Oxalsäure), die Probleme im Nervensystem, im Verdauungstrakt und in den Nieren eines Hundes verursachen und den Calciumspiegel senken können. Laut Pet Poison Helpline enthalten die Stiele nur sehr wenig Oxalat und sind ungiftig, doch die ASPCA stuft Rhabarber als giftig für Hunde ein; deshalb legen wir die strengere Stufe zugrunde und raten, alles davon fernzuhalten. Hunde interessieren sich selten für die Pflanze, weil die Blätter bitter schmecken."
+    "de": "Rhabarberblätter enthalten lösliche Oxalate (Oxalsäure), die Probleme im Nervensystem, im Verdauungstrakt und in den Nieren eines Hundes verursachen und den Calciumspiegel senken können. Laut Pet Poison Helpline enthalten die Stiele nur sehr wenig Oxalat und sind ungiftig, doch die ASPCA stuft Rhabarber als giftig für Hunde ein; deshalb legen wir die strengere Stufe zugrunde und raten, alles davon fernzuhalten. Hunde interessieren sich selten für die Pflanze, weil die Blätter bitter schmecken.",
+    "fr": "Les feuilles de rhubarbe contiennent des oxalates solubles (acide oxalique), qui peuvent causer des problèmes au système nerveux, au tube digestif et aux reins d’un chien et faire baisser le taux de calcium. Pet Poison Helpline indique que les tiges contiennent très peu d’oxalate et sont non toxiques, mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; nous retenons donc le niveau le plus strict et conseillons de tout tenir à l’écart. Les chiens s’intéressent rarement à la plante, car les feuilles ont un goût amer."
   },
   "signs": {
     "en": [
@@ -51,30 +56,42 @@
       "Zittern",
       "Niedriger Calciumspiegel im Blut",
       "Anzeichen für Nierenschäden, etwa häufiges Urinieren"
+    ],
+    "fr": [
+      "Vomissements",
+      "Salivation excessive",
+      "Faiblesse",
+      "Tremblements",
+      "Taux de calcium sanguin bas",
+      "Signes d’atteinte rénale, comme uriner beaucoup"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate rhubarb, especially the leaves, contact your vet or a pet poison helpline right away.",
     "sl": "Če je pes pojedel rabarbaro, zlasti liste, se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali.",
-    "de": "Hat Ihr Hund Rhabarber gefressen, vor allem die Blätter, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere."
+    "de": "Hat Ihr Hund Rhabarber gefressen, vor allem die Blätter, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
+    "fr": "Si votre chien a mangé de la rhubarbe, surtout des feuilles, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire."
   },
   "serving": null,
   "child": {
     "en": "Rhubarb and its leaves are not for dogs. If your dog nibbles some, tell a grown-up right away.",
     "sl": "Rabarbara in njeni listi niso za pse. Če pes kaj pogrize, takoj povej odraslemu.",
-    "de": "Rhabarber und seine Blätter sind nichts für Hunde. Wenn dein Hund daran knabbert, sag sofort einem Erwachsenen Bescheid."
+    "de": "Rhabarber und seine Blätter sind nichts für Hunde. Wenn dein Hund daran knabbert, sag sofort einem Erwachsenen Bescheid.",
+    "fr": "La rhubarbe et ses feuilles ne sont pas pour les chiens. Si ton chien en grignote, préviens tout de suite un adulte."
   },
   "faq": [
     {
       "q": {
         "en": "Are rhubarb stalks safe for dogs?",
         "sl": "So stebla rabarbare za pse varna?",
-        "de": "Sind Rhabarberstiele für Hunde unbedenklich?"
+        "de": "Sind Rhabarberstiele für Hunde unbedenklich?",
+        "fr": "Les tiges de rhubarbe sont-elles sans danger pour les chiens ?"
       },
       "a": {
         "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
         "sl": "Stebla vsebujejo zelo malo oksalatov in Pet Poison Helpline jih ima za nestrupena. A ASPCA rabarbaro uvršča med rastline, strupene za pse, zato je najbolje, da psu ne dajete nobenega dela.",
-        "de": "Die Stiele enthalten sehr wenig Oxalat, und Pet Poison Helpline bezeichnet sie als ungiftig. Die ASPCA stuft Rhabarber aber als giftig für Hunde ein, halten Sie deshalb am besten alles davon fern."
+        "de": "Die Stiele enthalten sehr wenig Oxalat, und Pet Poison Helpline bezeichnet sie als ungiftig. Die ASPCA stuft Rhabarber aber als giftig für Hunde ein, halten Sie deshalb am besten alles davon fern.",
+        "fr": "Les tiges contiennent très peu d’oxalate, et Pet Poison Helpline les considère comme non toxiques. Mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; il vaut donc mieux tout tenir à l’écart."
       }
     }
   ],
@@ -153,6 +170,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "3d09c9c467af9d4f395c6932904ca5eaba0b8ccaef4bd04ca679d75de4084c54"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "866ba5a225bf3e69cc762ce1d401b3e939366633c3a6b69a32918fd5cc3bcc86"
     }
   }
 }
