@@ -1104,6 +1104,45 @@
             "prompt_hash": "sha256:38dd8540603c531e29355eb4a4aeebbf5086c03e923030c1b55bfc4dda68611f",
             "generated_at": "2026-11-03T06:45:54+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "pekingese",
+            "species": "dog",
+            "colour": "red-gold",
+            "file": "dog/pekingese.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:5ad639575361552b8f4a008732935d59e7849ece2ecd57d58d7d7ed95847386e",
+            "generated_at": "2026-11-05T00:13:32+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "chow_chow",
+            "species": "dog",
+            "colour": "red",
+            "file": "dog/chow-chow.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c8371dadff5b3a21ed9baa994c2153a356b7357ad413fefbf8d484c4551bafe9",
+            "generated_at": "2026-11-05T00:13:50+00:00",
+            "cost_usd": 0.15
+        },
+        {
+            "breed": "old_english_sheepdog",
+            "species": "dog",
+            "colour": "grey-white",
+            "file": "dog/old-english-sheepdog.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:625fbd06a35dcad7d329a4b2c6d039d0b4e029b155060a23d2b4d538b1ff879e",
+            "generated_at": "2026-11-05T00:14:09+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
