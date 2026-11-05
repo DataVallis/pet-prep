@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Cucumber",
-    "sl": "Kumare"
+    "sl": "Kumare",
+    "de": "Gurke"
   },
   "question": {
     "en": "Can dogs eat cucumber?",
-    "sl": "Ali lahko psi jedo kumare?"
+    "sl": "Ali lahko psi jedo kumare?",
+    "de": "Dürfen Hunde Gurken fressen?"
   },
   "url_slug": {
     "en": "cucumber",
-    "sl": "kumare"
+    "sl": "kumare",
+    "de": "gurke"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Cucumbers are perfectly safe for dogs and make a low-calorie, crunchy snack. Serve them plain, washed and cut into small pieces, introduce them gradually, and never give pickles.",
-    "sl": "Da. Kumare so za pse povsem varne in so nizkokaloričen, hrustljav prigrizek. Ponudite jih navadne, oprane in narezane na majhne koščke, uvajajte jih postopoma, kislih kumaric pa nikoli."
+    "sl": "Da. Kumare so za pse povsem varne in so nizkokaloričen, hrustljav prigrizek. Ponudite jih navadne, oprane in narezane na majhne koščke, uvajajte jih postopoma, kislih kumaric pa nikoli.",
+    "de": "Ja. Gurken sind für Hunde völlig unbedenklich und ein kalorienarmer, knackiger Snack. Geben Sie sie pur, gewaschen und in kleine Stücke geschnitten, führen Sie sie nach und nach ein und geben Sie niemals Essiggurken."
   },
   "why": {
     "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
-    "sl": "Kumare imajo malo kalorij, zelo malo natrija in nič maščob ter veliko vode, zato so še posebej primerne za pse, ki morajo shujšati. Glavni tveganji sta prenajedanje, ki lahko povzroči prebavne težave, in dušenje, zlasti pri manjših psih ali psih, ki jedo hitro."
+    "sl": "Kumare imajo malo kalorij, zelo malo natrija in nič maščob ter veliko vode, zato so še posebej primerne za pse, ki morajo shujšati. Glavni tveganji sta prenajedanje, ki lahko povzroči prebavne težave, in dušenje, zlasti pri manjših psih ali psih, ki jedo hitro.",
+    "de": "Gurken sind kalorienarm, enthalten sehr wenig Natrium und kein Fett und haben einen hohen Wassergehalt; deshalb eignen sie sich besonders für Hunde, die abnehmen müssen. Die beiden Hauptrisiken sind zu große Mengen, die den Magen verstimmen können, und Ersticken, vor allem bei kleineren Hunden oder Hunden, die schnell fressen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Introduce cucumber gradually and watch your dog when trying something new. Feeding too much, or introducing it too quickly, can cause a mild upset stomach.",
-    "sl": "Kumare uvajajte postopoma in psa opazujte, ko poskusi nekaj novega. Preveč kumar ali prehitro uvajanje lahko povzroči blage prebavne težave."
+    "sl": "Kumare uvajajte postopoma in psa opazujte, ko poskusi nekaj novega. Preveč kumar ali prehitro uvajanje lahko povzroči blage prebavne težave.",
+    "de": "Führen Sie Gurke nach und nach ein und beobachten Sie Ihren Hund, wenn er etwas Neues probiert. Zu große Mengen oder eine zu rasche Eingewöhnung können eine leichte Magenverstimmung verursachen."
   },
   "serving": {
     "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
-    "sl": "Kumaro dobro operite in jo narežite na majhne koščke, prilagojene velikosti psa in njegovemu načinu žvečenja; cele kumare ne dajajte. Samo navadne kumare."
+    "sl": "Kumaro dobro operite in jo narežite na majhne koščke, prilagojene velikosti psa in njegovemu načinu žvečenja; cele kumare ne dajajte. Samo navadne kumare.",
+    "de": "Gründlich waschen und in kleine, handliche Stücke schneiden, passend zu Größe und Kauverhalten Ihres Hundes. Keine ganze Gurke geben, nur Gurke pur."
   },
   "child": {
     "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
-    "sl": "Psi lahko pohrustajo nekaj koščkov kumare. Odrasli kumaro najprej opere in nareže na majhne koščke."
+    "sl": "Psi lahko pohrustajo nekaj koščkov kumare. Odrasli kumaro najprej opere in nareže na majhne koščke.",
+    "de": "Hunde dürfen ein paar Gurkenstücke knabbern. Ein Erwachsener wäscht die Gurke und schneidet sie vorher klein."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat pickles?",
-        "sl": "Ali lahko psi jedo kisle kumarice?"
+        "sl": "Ali lahko psi jedo kisle kumarice?",
+        "de": "Dürfen Hunde Essiggurken fressen?"
       },
       "a": {
         "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
-        "sl": "Ne. Psu ne dajajte kislih kumaric, ker običajno vsebujejo dodano sol, začimbe in druge sestavine."
+        "sl": "Ne. Psu ne dajajte kislih kumaric, ker običajno vsebujejo dodano sol, začimbe in druge sestavine.",
+        "de": "Nein. Geben Sie Ihrem Hund keine Essiggurken, denn sie enthalten meist zugesetztes Salz, Gewürze und andere Zutaten."
       }
     }
   ],
@@ -121,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "43db3f8025916444a95b01438c5856aa32430ce7ac9002fb22b1194b3ddea59e"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5762ec9a1070d4227380432c0539b9b600d6a54ae36bedec7c750000eb27d2ae"
     }
   }
 }

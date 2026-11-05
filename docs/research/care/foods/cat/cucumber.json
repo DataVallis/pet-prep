@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Cucumber",
-    "sl": "Kumare"
+    "sl": "Kumare",
+    "de": "Gurke"
   },
   "question": {
     "en": "Can cats eat cucumber?",
-    "sl": "Ali lahko mačke jedo kumare?"
+    "sl": "Ali lahko mačke jedo kumare?",
+    "de": "Dürfen Katzen Gurken fressen?"
   },
   "url_slug": {
     "en": "cucumber",
-    "sl": "kumare"
+    "sl": "kumare",
+    "de": "gurke"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
-    "sl": "Da, majhen košček navadne kumare je v redu kot občasen priboljšek. ASPCA kumaro navaja kot nestrupeno za mačke, vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko razdraži želodec, zato naj bo le majhen dodatek."
+    "sl": "Da, majhen košček navadne kumare je v redu kot občasen priboljšek. ASPCA kumaro navaja kot nestrupeno za mačke, vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
+    "de": "Ja, ein kleines Stück pure Gurke ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Gurke als ungiftig für Katzen ein. Katzen brauchen jedoch kein Gemüse, und jedes Pflanzenmaterial kann den Magen verstimmen – bleiben Sie also bei einem winzigen Extra."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
-    "sl": "ASPCA navadno kumaro navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+    "sl": "ASPCA navadno kumaro navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "de": "Die ASPCA stuft die Gartengurke als ungiftig für Katzen ein. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten sparsam bleiben, und laut ASPCA kann Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
-    "sl": "Občasno majhen navaden košček, všteti ga je treba v dnevno količino hrane."
+    "sl": "Občasno majhen navaden košček, všteti ga je treba v dnevno količino hrane.",
+    "de": "Ab und zu ein kleines Stück pur; es zählt zur täglichen Futtermenge Ihrer Katze."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Majhen košček kumare je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Majhen košček kumare je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "de": "Ein kleines Stück Gurke kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "de": "Brauchen Katzen Gemüse?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
       }
     }
   ],
@@ -102,6 +112,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6f826650d179e5edbe856da2fb5292007dbe460137ddf3d22a428511b60085dd"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f7a37d36f9aba8ff1f34e520b2c303ecb0a5fc469c339c3a3b9c20165b52546a"
     }
   }
 }

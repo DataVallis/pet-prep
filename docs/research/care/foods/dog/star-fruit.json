@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Star fruit",
-    "sl": "Karambola"
+    "sl": "Karambola",
+    "de": "Sternfrucht (Karambole)"
   },
   "question": {
     "en": "Can dogs eat star fruit?",
-    "sl": "Ali lahko psi jedo karambolo?"
+    "sl": "Ali lahko psi jedo karambolo?",
+    "de": "Dürfen Hunde Sternfrucht fressen?"
   },
   "url_slug": {
     "en": "star-fruit",
-    "sl": "karambola"
+    "sl": "karambola",
+    "de": "sternfrucht"
   },
   "level": "toxic",
   "answer": {
     "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
-    "sl": "Ne. Karambolo hranite stran od psov. Kisla karambola vsebuje topne oksalate v nevarnih koncentracijah, ki lahko povzročijo bruhanje, slinjenje, šibkost, tresenje, nizko raven kalcija v krvi in okvaro ledvic."
+    "sl": "Ne. Karambolo hranite stran od psov. Kisla karambola vsebuje topne oksalate v nevarnih koncentracijah, ki lahko povzročijo bruhanje, slinjenje, šibkost, tresenje, nizko raven kalcija v krvi in okvaro ledvic.",
+    "de": "Nein. Halten Sie Sternfrucht von Hunden fern. Saure Sternfrucht enthält lösliches Oxalat in gefährlicher Konzentration, das Erbrechen, Sabbern, Schwäche, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen kann."
   },
   "why": {
     "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
-    "sl": "Pet Poison Helpline navaja, da lahko karambola pri psih povzroči zastrupitev. Glavna težava so topni oksalati (oksalna kislina), ki so v kisli karamboli v nevarnih koncentracijah. Pet Poison Helpline sicer navaja tudi, da sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik pravi, da karambola za pse ni varna, zato izberemo strožjo oceno. Že majhne količine lahko povzročijo zdravstvene težave, zlasti pri psih s težavami z ledvicami, karambola pa lahko poslabša obstoječe težave z ledvicami."
+    "sl": "Pet Poison Helpline navaja, da lahko karambola pri psih povzroči zastrupitev. Glavna težava so topni oksalati (oksalna kislina), ki so v kisli karamboli v nevarnih koncentracijah. Pet Poison Helpline sicer navaja tudi, da sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik pravi, da karambola za pse ni varna, zato izberemo strožjo oceno. Že majhne količine lahko povzročijo zdravstvene težave, zlasti pri psih s težavami z ledvicami, karambola pa lahko poslabša obstoječe težave z ledvicami.",
+    "de": "Laut Pet Poison Helpline kann Sternfrucht bei Hunden zu einer Vergiftung führen. Das Hauptproblem ist lösliches Oxalat (Oxalsäure), das in saurer Sternfrucht in gefährlicher Konzentration vorkommt. Pet Poison Helpline weist außerdem darauf hin, dass süße Sternfrucht nur sehr wenig lösliches Oxalat enthält und für Tiere mit gesunden Nieren nicht giftig ist; ein von Tierärzten geprüfter Ratgeber sagt jedoch, dass Sternfrucht für Hunde nicht sicher ist, deshalb legen wir die strengere Stufe zugrunde. Schon kleine Mengen können zu gesundheitlichen Problemen führen, vor allem bei Hunden mit Nierenproblemen, und Sternfrucht kann bestehende Nierenprobleme verschlimmern."
   },
   "signs": {
     "en": [
@@ -38,26 +43,38 @@
       "Tresenje",
       "Nizka raven kalcija v krvi",
       "Znaki okvare ledvic, na primer pogosto uriniranje"
+    ],
+    "de": [
+      "Erbrechen",
+      "Sabbern",
+      "Schwäche",
+      "Zittern",
+      "Niedriger Calciumspiegel im Blut",
+      "Anzeichen für Nierenschäden, etwa häufiges Urinieren"
     ]
   },
   "what_to_do": {
     "en": "Remove any remaining star fruit and contact your vet or a pet poison helpline right away, especially if your dog has kidney problems. Signs can appear within a few hours.",
-    "sl": "Odstranite preostalo karambolo in se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali, zlasti če ima pes težave z ledvicami. Znaki se lahko pojavijo v nekaj urah."
+    "sl": "Odstranite preostalo karambolo in se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali, zlasti če ima pes težave z ledvicami. Znaki se lahko pojavijo v nekaj urah.",
+    "de": "Räumen Sie übrige Sternfrucht weg und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, vor allem wenn Ihr Hund Nierenprobleme hat. Anzeichen können innerhalb weniger Stunden auftreten."
   },
   "serving": null,
   "child": {
     "en": "Star fruit is not a dog treat. If your dog eats some, tell a grown-up right away.",
-    "sl": "Karambola ni priboljšek za pse. Če jo pes poje, takoj povej odraslemu."
+    "sl": "Karambola ni priboljšek za pse. Če jo pes poje, takoj povej odraslemu.",
+    "de": "Sternfrucht ist kein Leckerli für Hunde. Wenn dein Hund etwas davon frisst, sag sofort einem Erwachsenen Bescheid."
   },
   "faq": [
     {
       "q": {
         "en": "Is sweet star fruit safe for dogs?",
-        "sl": "Je sladka karambola za pse varna?"
+        "sl": "Je sladka karambola za pse varna?",
+        "de": "Ist süße Sternfrucht für Hunde unbedenklich?"
       },
       "a": {
         "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
-        "sl": "Sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik vseeno pravi, da karambola za pse ni varna, zato se ji je najbolje izogniti."
+        "sl": "Sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik vseeno pravi, da karambola za pse ni varna, zato se ji je najbolje izogniti.",
+        "de": "Süße Sternfrucht enthält nur sehr wenig lösliches Oxalat und ist für Tiere mit gesunden Nieren nicht giftig, doch ein von Tierärzten geprüfter Ratgeber sagt trotzdem, dass Sternfrucht für Hunde nicht sicher ist; meiden Sie sie am besten."
       }
     }
   ],
@@ -135,6 +152,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a18fd566cb1ec84c490ce1227c54c5f6b59445d0b6f534e000deb9a886637b5f"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01643b90509e9aafae1545acb27d3514544d4b8d4dd28607e7d7f120f7f8fafc"
     }
   }
 }

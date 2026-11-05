@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Peas",
-    "sl": "Grah"
+    "sl": "Grah",
+    "de": "Erbsen"
   },
   "question": {
     "en": "Can dogs eat peas?",
-    "sl": "Ali lahko psi jedo grah?"
+    "sl": "Ali lahko psi jedo grah?",
+    "de": "Dürfen Hunde Erbsen fressen?"
   },
   "url_slug": {
     "en": "peas",
-    "sl": "grah"
+    "sl": "grah",
+    "de": "erbsen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Green peas, including snow peas, sugar snap peas and garden peas, are not toxic to dogs. Give them fresh or frozen, but not canned, because canned peas usually contain a lot of added sodium.",
-    "sl": "Da, kot občasen priboljšek. Zeleni grah, tudi snežni grah, sladkorni grah in vrtni grah, za pse ni strupen. Ponudite ga svežega ali zamrznjenega, ne pa iz pločevinke, ker grah iz pločevinke običajno vsebuje veliko dodanega natrija."
+    "sl": "Da, kot občasen priboljšek. Zeleni grah, tudi snežni grah, sladkorni grah in vrtni grah, za pse ni strupen. Ponudite ga svežega ali zamrznjenega, ne pa iz pločevinke, ker grah iz pločevinke običajno vsebuje veliko dodanega natrija.",
+    "de": "Ja, als gelegentliches Leckerli. Grüne Erbsen, darunter Kaiserschoten, Zuckerschoten und Gartenerbsen, sind für Hunde nicht giftig. Geben Sie sie frisch oder tiefgekühlt, aber nicht aus der Dose, denn Dosenerbsen enthalten meist viel zugesetztes Natrium."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
-    "sl": "Grah za pse ni strupen, a sadje in zelenjava v pasji prehrani nista nujna in naj bosta le občasen priboljšek. Grah iz pločevinke običajno vsebuje veliko dodanega natrija, ki psom škodi. Stroki se lahko psu zataknejo v grlu in povzročijo dušenje."
+    "sl": "Grah za pse ni strupen, a sadje in zelenjava v pasji prehrani nista nujna in naj bosta le občasen priboljšek. Grah iz pločevinke običajno vsebuje veliko dodanega natrija, ki psom škodi. Stroki se lahko psu zataknejo v grlu in povzročijo dušenje.",
+    "de": "Erbsen sind für Hunde nicht giftig, aber Obst und Gemüse sind in der Ernährung eines Hundes nicht notwendig und gehören nur als gelegentliches Leckerli in den Napf. Dosenerbsen enthalten meist viel zugesetztes Natrium, das für Hunde schädlich ist. Schoten können im Hals eines Hundes stecken bleiben und zum Ersticken führen."
   },
   "signs": null,
   "what_to_do": {
     "en": "As with any new food, watch your dog for reactions such as diarrhoea or vomiting.",
-    "sl": "Kot pri vsaki novi hrani psa opazujte, ali se pojavijo težave, na primer driska ali bruhanje."
+    "sl": "Kot pri vsaki novi hrani psa opazujte, ali se pojavijo težave, na primer driska ali bruhanje.",
+    "de": "Beobachten Sie Ihren Hund wie bei jedem neuen Futter auf Reaktionen wie Durchfall oder Erbrechen."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
-    "sl": "Samo svež, zamrznjen ali odmrznjen grah, nikoli iz pločevinke. Vrtni grah vedno oluščite, pri strokih pa bodite previdni, ker lahko povzročijo dušenje."
+    "sl": "Samo svež, zamrznjen ali odmrznjen grah, nikoli iz pločevinke. Vrtni grah vedno oluščite, pri strokih pa bodite previdni, ker lahko povzročijo dušenje.",
+    "de": "Nur frische, tiefgekühlte oder aufgetaute Erbsen, niemals aus der Dose. Gartenerbsen immer aus der Schote lösen, und Vorsicht mit Schoten: Sie können zum Ersticken führen."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
-    "sl": "Psi lahko za priboljšek dobijo nekaj zrn graha. Odrasli vrtni grah najprej olušči iz strokov."
+    "sl": "Psi lahko za priboljšek dobijo nekaj zrn graha. Odrasli vrtni grah najprej olušči iz strokov.",
+    "de": "Hunde dürfen ein paar Erbsen als Leckerli bekommen. Ein Erwachsener löst Gartenerbsen vorher aus der Schote."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat pea pods?",
-        "sl": "Ali lahko psi jedo grahove stroke?"
+        "sl": "Ali lahko psi jedo grahove stroke?",
+        "de": "Dürfen Hunde Erbsenschoten fressen?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
-        "sl": "Če lahko strok jedo ljudje, ga lahko tudi pes, a bodite previdni: stroki se lahko zataknejo v grlu in povzročijo dušenje. Vrtni grah je treba vedno oluščiti."
+        "sl": "Če lahko strok jedo ljudje, ga lahko tudi pes, a bodite previdni: stroki se lahko zataknejo v grlu in povzročijo dušenje. Vrtni grah je treba vedno oluščiti.",
+        "de": "Wenn Menschen die Schote mitessen können, darf sie auch Ihr Hund fressen – aber Vorsicht: Schoten können im Hals stecken bleiben und zum Ersticken führen. Gartenerbsen müssen immer aus der Schote gelöst werden."
       }
     },
     {
       "q": {
         "en": "Are peas in dog food a problem?",
-        "sl": "Je grah v pasji hrani težava?"
+        "sl": "Je grah v pasji hrani težava?",
+        "de": "Sind Erbsen im Hundefutter ein Problem?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
-        "sl": "Raziskave o tem, ali ima grah vlogo pri bolezni srca pri psih, še potekajo. Če je pes jedel hrano, v kateri je grah glavna sestavina, se lahko posvetujete z veterinarjem."
+        "sl": "Raziskave o tem, ali ima grah vlogo pri bolezni srca pri psih, še potekajo. Če je pes jedel hrano, v kateri je grah glavna sestavina, se lahko posvetujete z veterinarjem.",
+        "de": "Ob Erbsen bei Herzerkrankungen von Hunden eine Rolle spielen, wird noch erforscht. Wenn Ihr Hund ein Futter mit Erbsen als Hauptzutat bekommen hat, sprechen Sie am besten mit Ihrem Tierarzt darüber."
       }
     }
   ],
@@ -119,6 +131,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "21b717352bf8d266f110fd59c535280213229946347f61e7b60a5d7da897a69f"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a3022c65d8314e495155da4098232b451167756c7383bc51bc00baefe9aa008"
     }
   }
 }

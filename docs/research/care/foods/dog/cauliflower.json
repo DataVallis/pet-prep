@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Cauliflower",
-    "sl": "Cvetača"
+    "sl": "Cvetača",
+    "de": "Blumenkohl"
   },
   "question": {
     "en": "Can dogs eat cauliflower?",
-    "sl": "Ali lahko psi jedo cvetačo?"
+    "sl": "Ali lahko psi jedo cvetačo?",
+    "de": "Dürfen Hunde Blumenkohl fressen?"
   },
   "url_slug": {
     "en": "cauliflower",
-    "sl": "cvetaca"
+    "sl": "cvetaca",
+    "de": "blumenkohl"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, as an occasional treat. Cauliflower is safe for dogs when served properly: cooked plainly, without seasonings, and chopped into bite-size pieces. Large portions may cause gas, bloating and diarrhoea.",
-    "sl": "Da, kot občasen priboljšek. Cvetača je za pse varna, če jo pravilno pripravite: kuhano brez dodatkov, brez začimb in narezano na koščke za en grižljaj. Velike količine lahko povzročijo vetrove, napihnjenost in drisko."
+    "sl": "Da, kot občasen priboljšek. Cvetača je za pse varna, če jo pravilno pripravite: kuhano brez dodatkov, brez začimb in narezano na koščke za en grižljaj. Velike količine lahko povzročijo vetrove, napihnjenost in drisko.",
+    "de": "Ja, als gelegentliches Leckerli. Blumenkohl ist für Hunde unbedenklich, wenn er richtig zubereitet ist: ohne Gewürze gekocht und in mundgerechte Stücke geschnitten. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen."
   },
   "why": {
     "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
-    "sl": "Cvetača vsebuje vlaknine ter vitamina C in K in je dober prigrizek, kadar pes hujša. Iste vlaknine pa lahko pri preveliki količini povzročijo vetrove, napihnjenost in drisko. Surova cvetača je v majhnih količinah varna, a je lahko težko prebavljiva, veliki surovi kosi pa se lahko psu zataknejo; kuhanje na pari ali v vodi jo zmehča, zato jo pes lažje žveči in prebavi. Nekateri psi so lahko nanjo alergični ali občutljivi."
+    "sl": "Cvetača vsebuje vlaknine ter vitamina C in K in je dober prigrizek, kadar pes hujša. Iste vlaknine pa lahko pri preveliki količini povzročijo vetrove, napihnjenost in drisko. Surova cvetača je v majhnih količinah varna, a je lahko težko prebavljiva, veliki surovi kosi pa se lahko psu zataknejo; kuhanje na pari ali v vodi jo zmehča, zato jo pes lažje žveči in prebavi. Nekateri psi so lahko nanjo alergični ali občutljivi.",
+    "de": "Blumenkohl enthält Ballaststoffe, Vitamin C und Vitamin K und ist ein guter Snack für Hunde, die abnehmen sollen. Dieselben Ballaststoffe können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, wenn zu viel gefressen wird. Roher Blumenkohl ist in kleinen Mengen unbedenklich, kann aber schwer verdaulich sein, und große rohe Stücke können zum Ersticken führen; Dämpfen oder Kochen macht ihn weicher und leichter zu kauen und zu verdauen. Manche Hunde können allergisch oder empfindlich darauf reagieren."
   },
   "signs": null,
   "what_to_do": {
     "en": "Give raw cauliflower slowly, in small pieces. Large portions may cause gas, bloating and diarrhoea, and some dogs can be sensitive to it.",
-    "sl": "Surovo cvetačo uvajajte počasi, v majhnih koščkih. Velike količine lahko povzročijo vetrove, napihnjenost in drisko, nekateri psi pa so nanjo lahko občutljivi."
+    "sl": "Surovo cvetačo uvajajte počasi, v majhnih koščkih. Velike količine lahko povzročijo vetrove, napihnjenost in drisko, nekateri psi pa so nanjo lahko občutljivi.",
+    "de": "Führen Sie rohen Blumenkohl langsam ein und geben Sie ihn nur in kleinen Stücken. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, und manche Hunde reagieren empfindlich darauf."
   },
   "serving": {
     "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
-    "sl": "Skuhajte jo na pari ali v vodi brez dodatkov, brez soli, olja, masla, česna ali čebule, in jo narežite na koščke za en grižljaj. Trda stebla skuhajte v vodi ali na pari. Občasen priboljšek, ne vsakodnevni prigrizek."
+    "sl": "Skuhajte jo na pari ali v vodi brez dodatkov, brez soli, olja, masla, česna ali čebule, in jo narežite na koščke za en grižljaj. Trda stebla skuhajte v vodi ali na pari. Občasen priboljšek, ne vsakodnevni prigrizek.",
+    "de": "Dämpfen oder kochen Sie ihn pur, ohne Salz, Öl, Butter, Knoblauch oder Zwiebeln, und schneiden Sie ihn mundgerecht klein. Auch die zähen Strünke sollten Sie kochen oder dämpfen. Ein gelegentliches Leckerli, kein täglicher Snack."
   },
   "child": {
     "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
-    "sl": "Psi lahko dobijo nekaj majhnih koščkov navadne cvetače. Preveč jim lahko napihne trebušček!"
+    "sl": "Psi lahko dobijo nekaj majhnih koščkov navadne cvetače. Preveč jim lahko napihne trebušček!",
+    "de": "Hunde dürfen ein paar kleine Stücke Blumenkohl ohne Gewürze fressen. Zu viel davon gibt einen Blähbauch!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat cauliflower leaves?",
-        "sl": "Ali lahko psi jedo liste cvetače?"
+        "sl": "Ali lahko psi jedo liste cvetače?",
+        "de": "Dürfen Hunde Blumenkohlblätter fressen?"
       },
       "a": {
         "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
-        "sl": "Da. Listi so za pse varni in vsebujejo dragocena hranila; večina psov jih rada je, če so rahlo kuhani na pari, kot dodatek k obroku."
+        "sl": "Da. Listi so za pse varni in vsebujejo dragocena hranila; večina psov jih rada je, če so rahlo kuhani na pari, kot dodatek k obroku.",
+        "de": "Ja. Die Blätter sind für Hunde unbedenklich und enthalten wertvolle Nährstoffe; die meisten Hunde mögen sie leicht gedämpft als Zugabe zum Futter."
       }
     }
   ],
@@ -153,6 +163,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "56fd4acc4fcf17b48fd0d7a0c4053f5125cd5b69fd8aa6c0f10e730c02f20b86"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "23b2eaae515fe1d0a8d86a0e5dd15ea0984ea26a9c76bdc82a6817db1bf7bcb6"
     }
   }
 }

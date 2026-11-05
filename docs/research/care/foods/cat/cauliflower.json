@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Cauliflower",
-    "sl": "Cvetača"
+    "sl": "Cvetača",
+    "de": "Blumenkohl"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
-    "sl": "Ali lahko mačke jedo cvetačo?"
+    "sl": "Ali lahko mačke jedo cvetačo?",
+    "de": "Dürfen Katzen Blumenkohl fressen?"
   },
   "url_slug": {
     "en": "cauliflower",
-    "sl": "cvetaca"
+    "sl": "cvetaca",
+    "de": "blumenkohl"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
-    "sl": "Da, majhen košček navadne kuhane cvetače je v redu kot občasen priboljšek. RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, primerno za mačke in pse v zmernih količinah."
+    "sl": "Da, majhen košček navadne kuhane cvetače je v redu kot občasen priboljšek. RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, primerno za mačke in pse v zmernih količinah.",
+    "de": "Ja, ein kleines Stück ungewürzter, gekochter Blumenkohl ist als gelegentliches Leckerli in Ordnung. Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
-    "sl": "RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, ki je varna in primerna za mačke in pse v zmernih količinah. Cats Protection svetuje zelenjavo brez masla, soli in začimb. Mačke zelenjave ne potrebujejo, priboljškov naj bo malo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave."
+    "sl": "RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, ki je varna in primerna za mačke in pse v zmernih količinah. Cats Protection svetuje zelenjavo brez masla, soli in začimb. Mačke zelenjave ne potrebujejo, priboljškov naj bo malo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
+    "de": "Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Cats Protection rät zu Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen kein Gemüse, Leckerlis sollten sparsam bleiben, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
-    "sl": "Kuhana in narezana na majhne koščke, brez masla, soli in začimb."
+    "sl": "Kuhana in narezana na majhne koščke, brez masla, soli in začimb.",
+    "de": "Gekocht und in kleine Stücke geschnitten, ohne Butter, Salz oder Gewürze."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Majhen košček kuhane cvetače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Majhen košček kuhane cvetače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "de": "Ein kleines Stück gekochter Blumenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "de": "Brauchen Katzen Gemüse?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
       }
     }
   ],
@@ -98,6 +108,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b8e84a60305850488022ef14e6fc9eca877070364e968ea584da1daebb673006"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6216add3e7ca0eaffb8332c70c9c94012c979cdd6c4228878bd7d21323a090d2"
     }
   }
 }
