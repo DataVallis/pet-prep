@@ -60,6 +60,8 @@ export function patchDashboardPet(
     is_hard_stopped: event.is_hard_stopped,
     is_ill: event.is_ill,
     escalation_level: event.escalation_level,
+    // Mood label (2026-11-05): the server's pet state from the snapshot.
+    pet_state: event.pet_state,
     awaiting_contract: event.awaiting_contract ?? pet.awaiting_contract,
     born_at: event.born_at !== undefined ? event.born_at : pet.born_at,
     // Freshly signed media (M4-05) — e.g. the reference image appears on `reference_image_ready`.

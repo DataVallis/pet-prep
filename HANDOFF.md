@@ -206,6 +206,9 @@ All decisions with who / why / where: `docs/product/DECISIONS.md` (newest on top
 
 ## 6. Session log
 
+### 2026-11-05 (cloud, mobile) — mood label in the HUD header + parent pet card (`feat/pet-mood-label`, David option A)
+Child HUD header third line = mood label (`modules/petMood`, `components/PetMoodLabel`; lock › mess scene › server `pet_state`, thirst refinement of `hungry`); the origin · next-stage line moved out of the header (still in the »O tvojem kužku« sheet). Parent: same label on `ChildOverviewCard` + `ChildDetailScreen` (not while a lock / payment status shows). Additive backend field `family.pets[].pet_state` on `GET /api/parent/dashboard` (needs the next production deploy; older servers → no parent label). JS only (OTA-able), no native module. Not on a device yet.
+
 ### 2026-11-04 (cloud, devops) — post-deploy OTA job no longer skipped (`fix/ota-dispatch-if`, DEPLOYMENT.md D33 follow-up)
 Manual deploy 41914978019 (`491e9585`): deploy green, »Mobile OTA (after the production deploy)« skipped — its `if: needs.deploy.result == 'success'` carried the implicit `success()`, false when any transitive ancestor (suites skipped on a reuse run) was skipped. Now `always() && needs.deploy.result == 'success'`; `ci-plan.test.sh` checks every job for this trap. `491e9585`'s JS still went out via the manual deploy's `workflow_run` OTA 41916133863 (a daily deploy would have had none). Next: the next production deploy must show the job green + a »Mobile OTA after production deploy <id>« run.
 

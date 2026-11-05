@@ -616,8 +616,14 @@ export function makeScoredDashboard(children: FamilyChild[], pets: FamilyPetRaw[
   };
 }
 
+/**
+ * `family.pets[]` with `pet_state` (2026-11-05, additive backend field; `schema.ts` gets it
+ * with the next `npm run generate-api-types` — the app reads it loosely via `readPetState`).
+ */
+export type FamilyPetFixture = FamilyPetRaw & { pet_state?: string };
+
 /** A pet of `family.pets`. */
-export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetRaw {
+export function makeFamilyPet(overrides: Partial<FamilyPetFixture> = {}): FamilyPetFixture {
   return {
     id: 7,
     breed_type: 'mutt',
@@ -631,6 +637,8 @@ export function makeFamilyPet(overrides: Partial<FamilyPetRaw> = {}): FamilyPetR
     is_hard_stopped: false,
     is_ill: false,
     escalation_level: 0,
+    // Mood label (2026-11-05, additive): the server's pet state.
+    pet_state: 'idle',
     // M3-11 (additive): plan + payment status — a grandfathered paid challenge.
     plan: { type: 'challenge', status: 'paid', trial_ends_at: '2026-10-08T10:00:00+02:00', paid_at: '2026-10-01T10:00:00+02:00', payments_enforced: true, display_type: 'challenge' },
     profile: makePetProfile(),

@@ -79,6 +79,8 @@ import {
 } from '@/modules/family/scoring';
 import { clockText, localParts } from '@/modules/childPet/familyTime';
 import { mealsLine, nextStageLine, originLine, readPetProfile, stageLine } from '@/modules/petProfile/petProfile';
+import PetMoodLabel from '@/components/PetMoodLabel';
+import { familyPetMood } from '@/modules/petMood/petMood';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { careGuideTitle, readCareGuide } from '@/modules/careGuide/careGuide';
 import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
@@ -212,6 +214,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   // M5-F13: the deploy banner (on the dashboard root) explains it; the last report stays.
   const serverUpdating = useServerOutage();
   const pet = petOfChild(child, family);
+  const mood = pet !== null ? familyPetMood(pet) : null;
   const queryClient = useQueryClient();
   const [albumOpen, setAlbumOpen] = useState(false);
   // Memoised: a new object per render would make the album's expiry timer / items churn.
@@ -310,6 +313,10 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
               style={styles.petMedia}
               testID="detail-pet-media"
             />
+          )}
+          {/* Mood label (David 2026-11-05): how the pet is now — only while no lock status applies. */}
+          {mood !== null && pet !== null && (
+            <PetMoodLabel mood={mood} species={pet.species} theme="light" testID="detail-pet-mood" />
           )}
           {/* M5-T06: while the pet's first things are on their way — the same neutral words the child sees. */}
           {pet !== null && preparation.preparing && (

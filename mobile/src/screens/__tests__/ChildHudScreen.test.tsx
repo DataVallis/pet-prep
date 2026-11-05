@@ -109,7 +109,10 @@ describe('ChildHudScreen', () => {
     expect(screen.getByText('Mešanček')).toBeTruthy();
     // M5-R04: a profiled pet shows stage · age, origin and the next stage instead of the old age.
     expect(screen.getByTestId('hud-stage')).toHaveTextContent('Mladiček · 2 meseca');
-    expect(screen.getByTestId('hud-profile-sub')).toHaveTextContent('Kupljen pri vzreditelju · 24. 11. 2026 postane mlad pes');
+    // Mood label (David 2026-11-05) replaced the origin / next-stage line (both stay in the profile sheet).
+    expect(screen.queryByTestId('hud-profile-sub')).toBeNull();
+    expect(screen.queryByText(/Kupljen pri vzreditelju/)).toBeNull();
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Zadovoljen');
     expect(screen.queryByText(formatChallengeWeek(0))).toBeNull();
   });
 
@@ -118,7 +121,7 @@ describe('ChildHudScreen', () => {
     renderWithQuery(<ChildHudScreen />);
     expect(await screen.findByText(formatChallengeWeek(0))).toBeTruthy();
     expect(screen.queryByTestId('hud-stage')).toBeNull();
-    expect(screen.queryByTestId('hud-profile-sub')).toBeNull();
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Zadovoljen');
   });
 
   it('load error without any state → retry + logout', async () => {
@@ -391,6 +394,8 @@ describe('ChildHudScreen', () => {
     });
     expect(await screen.findByTestId('locked-screen')).toBeTruthy();
     expect(screen.getByText(LOCKED_STRINGS.hard_stop.title)).toBeTruthy();
+    // Mood label (2026-11-05): the header says the game is paused.
+    await waitFor(() => expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Igra ustavljena'));
     expect(useAppStore.getState().lockState).toBe('hard_stop');
 
     getChildPet.mockResolvedValue(makeLiveChildState({ server_time: '2026-10-04T12:05:00+02:00' }));
@@ -582,7 +587,9 @@ describe('ChildHudScreen — AI dog media (M4-03)', () => {
       );
       renderWithQuery(<AppNavigator />);
       expect(await screen.findByTestId('locked-card-glass')).toBeTruthy();
-      expect(screen.getByText(LOCKED_STRINGS.illness.title)).toBeTruthy();
+      expect(within(screen.getByTestId('locked-screen')).getByText(LOCKED_STRINGS.illness.title)).toBeTruthy();
+      // Mood label (2026-11-05): the header under the translucent lock reuses the lock's wording.
+      expect(screen.getByTestId('hud-mood-text')).toHaveTextContent(LOCKED_STRINGS.illness.title);
       expect(screen.getByText(LOCKED_STRINGS.illness.body('18:30'))).toBeTruthy();
       const flat = [screen.getByTestId('locked-screen').props.style].flat(3) as Array<{ backgroundColor?: string } | undefined>;
       expect(flat.some((st) => st?.backgroundColor === 'rgba(90, 99, 93, 0.55)')).toBe(true);

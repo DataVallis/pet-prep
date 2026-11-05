@@ -134,6 +134,7 @@ Kot v resnici: dva psa iste pasme nista enaka. Ob rojstvu vsak kuža dobi svojo 
 **Preverjeni posnetki** *(na strežniku od 23. 10. 2026 — za zdaj v poskusnem načinu, ki samo beleži; še ni preverjeno s pravim posnetkom)*: vsak nov AI posnetek se samodejno preveri (zamrznjena slika, nenaravno gibanje, »taljenje« telesa, napake). *Načrt (ko bodo meje umerjene):* posnetek z napako se enkrat naredi znova; če je spet slab, ga otrok ne vidi — namesto njega vidi sliko poze, dokler posnetka ne pregledamo. Posnetek »izvede ukaz« v šoli traja 5 sekund, da je gib naraven.
 
 ## Kaj vidite vi
+- **Razpoloženje ljubljenčka** na kartici v »Pregled družine« in na podrobnostih otroka: ena vrstica, kako je ljubljenček zdaj in kaj rabi (»Spi«, »Lačen«, »Žejen«, »Utrujen — rabi sprehod«, »Bolan« …), enako kot ga vidi otrok. *(v aplikaciji od 5. 11. 2026 — še ni v trgovini)*
 - **Semafor** za vsakega otroka in vsakega psa, za današnji dan po vašem času:
   - 🔴 **rdeča** — pes je danes zbolel, je **zdaj** že več kot uro brez hrane, vode ali čistoče (alarm — ko otrok poskrbi, rdeča izgine; zamujeno od prej danes vidite pod »Zamujeno«), ali pa ga je "odpeljalo zavetišče";
   - 🟡 **rumena** — danes so bile zamujene **več kot 2 rutini**;

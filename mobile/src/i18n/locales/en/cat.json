@@ -461,6 +461,14 @@
           "bought": "Bought from a breeder",
           "adopted": "Adopted from a shelter or friends"
         }
+      },
+      "mood": {
+        "idle": "Content",
+        "playing": "Playful",
+        "low_energy": "Tired — needs play",
+        "hungry": "Hungry",
+        "thirsty": "Thirsty",
+        "sick": "Sick"
       }
     },
     "push": {

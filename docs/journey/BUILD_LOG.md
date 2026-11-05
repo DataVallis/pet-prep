@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-05 — Pod imenom kužka piše, kako je in kaj rabi
+
+**Kaj:** v glavi otroškega zaslona je pod imenom in pasmo zdaj ena kratka vrstica z ikono: »Spi«, »Lačen«, »Žejen«, »Utrujen — rabi sprehod« (muca: »Utrujena — rabi igro«), »Bolan«, »Igriv«, »Zadovoljen«; pri neredu »Luža na tleh — počisti«, pri ustavljeni igri »Igra ustavljena«. Ista vrstica je pri staršu na kartici v »Pregled družine« in na podrobnostih otroka. Prej je tam pisalo »Kupljen pri vzreditelju · datum« — to je zdaj v listu »O tvojem kužku« (tap na glavo).
+**Zakaj je pomembno:** otrok ne rabi brati štirih merilnikov, da ve, kaj narediti; starš na prvi pogled vidi, kako je ljubljenček. Odloča samo stanje, ki ga izračuna strežnik — nobenih novih pravil (David 5. 11. 2026, možnost A).
+**Kako povedati:** 🧒 »Pod imenom kužka ti piše, kaj rabi.« · 👩 »Na prvi pogled vidite, kako je ljubljenček — enako kot otrok.« · 🛠 »Ena čista funkcija nad strežnikovim stanjem, zaklepom in neredom; aplikacija ničesar ne preračunava.«
+
 ## 2026-11-04 — Po ponovnem zagonu strežnika igra ne obstane več za ves dan
 
 **Kaj:** po ponovnem zagonu strežnika ob ~13:19 se igralna zanka (minutna obdelava vseh ljubljenčkov) ~9 ur ni izvajala — zagon je prekinil tekočo obdelavo, njena »zapora proti prekrivanju« pa je ostala in bi po privzetem veljala 24 ur. Kužki v tem času niso lačnili, ob 22:00 niso zaspali, pri staršu je ostal star »Nujno«. Ob 22:15 smo zaporo ročno pobrisali. Zdaj: (1) vsaka taka zapora poteče po nekaj minutah (minutna obdelava po 3 min), (2) razporejevalnik ob vsakem zagonu sam pobriše stare zapore, (3) če zanka stoji več kot 5 minut, dobi skrbnik eno sporočilo na Discord (samo število minut) in stran System health pokaže, kaj narediti.
