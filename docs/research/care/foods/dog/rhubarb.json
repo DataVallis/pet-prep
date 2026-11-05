@@ -8,7 +8,8 @@
     "fr": "Rhubarbe",
     "es": "Ruibarbo",
     "it": "Rabarbaro",
-    "pt": "Ruibarbo"
+    "pt": "Ruibarbo",
+    "nl": "Rabarber"
   },
   "question": {
     "en": "Can dogs eat rhubarb?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger de la rhubarbe ?",
     "es": "¿Pueden los perros comer ruibarbo?",
     "it": "I cani possono mangiare il rabarbaro?",
-    "pt": "Os cães podem comer ruibarbo?"
+    "pt": "Os cães podem comer ruibarbo?",
+    "nl": "Mogen honden rabarber eten?"
   },
   "url_slug": {
     "en": "rhubarb",
@@ -26,7 +28,8 @@
     "fr": "rhubarbe",
     "es": "ruibarbo",
     "it": "rabarbaro",
-    "pt": "ruibarbo"
+    "pt": "ruibarbo",
+    "nl": "rabarber"
   },
   "level": "toxic",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Non. Gardez la rhubarbe hors de portée des chiens. La rhubarbe est classée comme toxique pour les chiens, et ses feuilles contiennent des oxalates solubles en concentrations dangereuses. En manger peut provoquer des vomissements, une salivation excessive, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale.",
     "es": "No. Mantén el ruibarbo fuera del alcance de los perros. El ruibarbo figura como tóxico para los perros y sus hojas contienen oxalatos solubles en concentraciones peligrosas. Comerlo puede causar vómitos, babeo, temblores, calcio bajo en la sangre y lesión renal.",
     "it": "No. Tieni il rabarbaro lontano dai cani. Il rabarbaro è indicato come tossico per i cani e le sue foglie contengono ossalati solubili in concentrazioni pericolose. Mangiarlo può causare vomito, salivazione eccessiva, tremori, calcio basso nel sangue e danni ai reni.",
-    "pt": "Não. Mantém o ruibarbo longe dos cães. O ruibarbo é considerado tóxico para os cães, e as suas folhas contêm oxalatos solúveis em concentrações perigosas. Comê-lo pode causar vómitos, salivação excessiva, tremores, cálcio baixo no sangue e lesões nos rins."
+    "pt": "Não. Mantém o ruibarbo longe dos cães. O ruibarbo é considerado tóxico para os cães, e as suas folhas contêm oxalatos solúveis em concentrações perigosas. Comê-lo pode causar vómitos, salivação excessiva, tremores, cálcio baixo no sangue e lesões nos rins.",
+    "nl": "Nee. Houd rabarber uit de buurt van honden. Rabarber staat als giftig voor honden te boek en de bladeren bevatten oplosbare oxalaten in gevaarlijke concentraties. Als een hond rabarber eet, kan dat braken, kwijlen, beven, een laag calciumgehalte in het bloed en nierschade veroorzaken."
   },
   "why": {
     "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
@@ -45,7 +49,8 @@
     "fr": "Les feuilles de rhubarbe contiennent des oxalates solubles (acide oxalique), qui peuvent causer des problèmes au système nerveux, au tube digestif et aux reins d’un chien et faire baisser le taux de calcium. Pet Poison Helpline indique que les tiges contiennent très peu d’oxalate et sont non toxiques, mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; nous retenons donc le niveau le plus strict et conseillons de tout tenir à l’écart. Les chiens s’intéressent rarement à la plante, car les feuilles ont un goût amer.",
     "es": "Las hojas de ruibarbo contienen oxalatos solubles (ácido oxálico), que pueden causar problemas en el sistema nervioso, el aparato digestivo y los riñones de un perro y bajar sus niveles de calcio. Pet Poison Helpline indica que los tallos contienen muy poco oxalato y no son tóxicos, pero la ASPCA considera el ruibarbo tóxico para los perros, así que aplicamos el nivel más estricto y aconsejamos mantener toda la planta fuera de su alcance. A los perros rara vez les interesa la planta, porque las hojas tienen un sabor amargo.",
     "it": "Le foglie di rabarbaro contengono ossalati solubili (acido ossalico), che possono causare problemi al sistema nervoso, all’apparato digerente e ai reni del cane e abbassare il calcio nel sangue. Secondo Pet Poison Helpline i gambi contengono pochissimo ossalato e non sono tossici, ma l’ASPCA indica il rabarbaro come tossico per i cani, quindi seguiamo la valutazione più severa e consigliamo di tenere lontana tutta la pianta. I cani si interessano di rado alla pianta, perché le foglie hanno un sapore amaro.",
-    "pt": "As folhas de ruibarbo contêm oxalatos solúveis (ácido oxálico), que podem causar problemas no sistema nervoso, no aparelho digestivo e nos rins do cão e baixar os níveis de cálcio. A Pet Poison Helpline diz que os talos contêm muito pouco oxalato e não são tóxicos, mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso seguimos o nível mais rigoroso e aconselhamos a manter tudo longe deles. Os cães raramente se interessam pela planta, porque as folhas têm um sabor amargo."
+    "pt": "As folhas de ruibarbo contêm oxalatos solúveis (ácido oxálico), que podem causar problemas no sistema nervoso, no aparelho digestivo e nos rins do cão e baixar os níveis de cálcio. A Pet Poison Helpline diz que os talos contêm muito pouco oxalato e não são tóxicos, mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso seguimos o nível mais rigoroso e aconselhamos a manter tudo longe deles. Os cães raramente se interessam pela planta, porque as folhas têm um sabor amargo.",
+    "nl": "De bladeren van rabarber bevatten oplosbare oxalaten (oxaalzuur), die het zenuwstelsel, het spijsverteringskanaal en de nieren van een hond kunnen aantasten en het calciumgehalte kunnen verlagen. Volgens Pet Poison Helpline bevatten de stelen heel weinig oxalaat en zijn ze niet giftig, maar de ASPCA noemt rabarber giftig voor honden, dus volgen wij het strengere advies en raden we aan alles uit de buurt te houden. Honden hebben zelden belangstelling voor de plant, omdat de bladeren bitter smaken."
   },
   "signs": {
     "en": [
@@ -103,6 +108,14 @@
       "Tremores",
       "Cálcio baixo no sangue",
       "Sinais de lesão renal, como urinar muito"
+    ],
+    "nl": [
+      "Braken",
+      "Kwijlen",
+      "Zwakte",
+      "Beven",
+      "Laag calciumgehalte in het bloed",
+      "Tekenen van nierschade, zoals veel plassen"
     ]
   },
   "what_to_do": {
@@ -112,7 +125,8 @@
     "fr": "Si votre chien a mangé de la rhubarbe, surtout des feuilles, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire.",
     "es": "Si tu perro ha comido ruibarbo, sobre todo hojas, ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales.",
     "it": "Se il tuo cane ha mangiato rabarbaro, soprattutto le foglie, contatta subito il veterinario o un centro antiveleni veterinario.",
-    "pt": "Se o teu cão comeu ruibarbo, sobretudo as folhas, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível."
+    "pt": "Se o teu cão comeu ruibarbo, sobretudo as folhas, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível.",
+    "nl": "Heeft je hond rabarber gegeten, vooral de bladeren, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren."
   },
   "serving": null,
   "child": {
@@ -122,7 +136,8 @@
     "fr": "La rhubarbe et ses feuilles ne sont pas pour les chiens. Si ton chien en grignote, préviens tout de suite un adulte.",
     "es": "El ruibarbo y sus hojas no son para los perros. Si tu perro mordisquea un poco, avisa enseguida a un adulto.",
     "it": "Il rabarbaro e le sue foglie non sono per i cani. Se il tuo cane ne mordicchia un po’, dillo subito a un adulto.",
-    "pt": "O ruibarbo e as suas folhas não são para cães. Se o teu cão trincar um bocadinho, diz logo a um adulto."
+    "pt": "O ruibarbo e as suas folhas não são para cães. Se o teu cão trincar um bocadinho, diz logo a um adulto.",
+    "nl": "Rabarber en de bladeren ervan zijn niet voor honden. Knabbelt je hond eraan, vertel het dan meteen aan een volwassene."
   },
   "faq": [
     {
@@ -133,7 +148,8 @@
         "fr": "Les tiges de rhubarbe sont-elles sans danger pour les chiens ?",
         "es": "¿Son seguros los tallos de ruibarbo para los perros?",
         "it": "I gambi del rabarbaro sono sicuri per i cani?",
-        "pt": "Os talos de ruibarbo são seguros para os cães?"
+        "pt": "Os talos de ruibarbo são seguros para os cães?",
+        "nl": "Zijn rabarberstelen veilig voor honden?"
       },
       "a": {
         "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
@@ -142,7 +158,8 @@
         "fr": "Les tiges contiennent très peu d’oxalate, et Pet Poison Helpline les considère comme non toxiques. Mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; il vaut donc mieux tout tenir à l’écart.",
         "es": "Los tallos contienen muy poco oxalato y Pet Poison Helpline los considera no tóxicos. Pero la ASPCA considera el ruibarbo tóxico para los perros, así que lo mejor es mantener toda la planta fuera de su alcance.",
         "it": "I gambi contengono pochissimo ossalato e per Pet Poison Helpline non sono tossici. Tuttavia l’ASPCA indica il rabarbaro come tossico per i cani, quindi è meglio tenerlo lontano.",
-        "pt": "Os talos contêm muito pouco oxalato, e a Pet Poison Helpline considera-os não tóxicos. Mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso o melhor é manter tudo longe deles."
+        "pt": "Os talos contêm muito pouco oxalato, e a Pet Poison Helpline considera-os não tóxicos. Mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso o melhor é manter tudo longe deles.",
+        "nl": "De stelen bevatten heel weinig oxalaat en Pet Poison Helpline noemt ze niet giftig. Maar de ASPCA noemt rabarber giftig voor honden, dus je kunt alles het best uit de buurt houden."
       }
     }
   ],
@@ -241,6 +258,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "392df0ed71b1ea217acbb26be8e1d920ce86256cd72236d0023eb3d2f61d96b7"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6794f6e1e9067beaded61b009c5c94efe40ac3ca847b4bfce2d55ab35dfcdce5"
     }
   }
 }

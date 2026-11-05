@@ -2364,7 +2364,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Broccoli",
@@ -2373,7 +2374,8 @@
         "fr": "Brocoli",
         "es": "Brócoli",
         "it": "Broccoli",
-        "pt": "Brócolos"
+        "pt": "Brócolos",
+        "nl": "Broccoli"
       },
       "question": {
         "en": "Can cats eat broccoli?",
@@ -2382,7 +2384,8 @@
         "fr": "Les chats peuvent-ils manger du brocoli ?",
         "es": "¿Pueden los gatos comer brócoli?",
         "it": "I gatti possono mangiare i broccoli?",
-        "pt": "Os gatos podem comer brócolos?"
+        "pt": "Os gatos podem comer brócolos?",
+        "nl": "Mogen katten broccoli eten?"
       },
       "url_slug": {
         "en": "broccoli",
@@ -2391,7 +2394,8 @@
         "fr": "brocoli",
         "es": "brocoli",
         "it": "broccoli",
-        "pt": "brocolos"
+        "pt": "brocolos",
+        "nl": "broccoli"
       },
       "answer": {
         "en": "Yes, a small piece of plain broccoli is fine as an occasional treat. Cats Protection lists broccoli among vegetables you can feed your cat, the ASPCA suggests broccoli florets for cats, and the RSPCA advises boiled or steamed.",
@@ -2400,7 +2404,8 @@
         "fr": "Oui, un petit morceau de brocoli nature convient comme friandise occasionnelle. Cats Protection cite le brocoli parmi les légumes que l’on peut donner à un chat, l’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA conseille de le faire bouillir ou cuire à la vapeur.",
         "es": "Sí, un trocito de brócoli sin condimentar está bien como premio ocasional. Cats Protection incluye el brócoli entre las verduras que se pueden dar a un gato, la ASPCA sugiere ramilletes de brócoli para gatos y la RSPCA aconseja darlo hervido o al vapor.",
         "it": "Sì, un pezzettino di broccolo senza condimenti va bene come premio occasionale. Cats Protection mette i broccoli tra le verdure che si possono dare al gatto, l’ASPCA consiglia le cimette di broccolo e la RSPCA li suggerisce lessati o cotti al vapore.",
-        "pt": "Sim, um pedacinho de brócolos sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui os brócolos entre os legumes que se podem dar a um gato, a ASPCA sugere floretes de brócolos para gatos e a RSPCA aconselha-os cozidos em água ou a vapor."
+        "pt": "Sim, um pedacinho de brócolos sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui os brócolos entre os legumes que se podem dar a um gato, a ASPCA sugere floretes de brócolos para gatos e a RSPCA aconselha-os cozidos em água ou a vapor.",
+        "nl": "Ja, een klein stukje ongekruide broccoli is af en toe prima als traktatie. Cats Protection rekent broccoli tot de groenten die je je kat mag geven, de ASPCA stelt broccoliroosjes voor katten voor en de RSPCA adviseert gekookte of gestoomde broccoli."
       },
       "why": {
         "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -2409,7 +2414,8 @@
         "fr": "Cats Protection cite le brocoli parmi les rares légumes que l’on peut donner à un chat, si votre chat y goûte volontiers. L’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA range le brocoli, bouilli ou cuit à la vapeur, parmi les aliments qui conviennent aux chats et aux chiens avec modération. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
         "es": "Cats Protection cita el brócoli entre las pocas verduras que se pueden dar a un gato, si le apetece. La ASPCA sugiere ramilletes de brócoli para gatos, y la RSPCA incluye el brócoli, hervido o al vapor, entre los alimentos adecuados para gatos y perros con moderación. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
         "it": "Cats Protection cita i broccoli tra le poche verdure che si possono dare a un gatto, se li gradisce. L’ASPCA consiglia le cimette di broccolo per i gatti, e la RSPCA elenca i broccoli, lessati o cotti al vapore, tra gli alimenti adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
-        "pt": "A Cats Protection inclui os brócolos entre os poucos legumes que se podem dar a um gato, se ele gostar. A ASPCA sugere floretes de brócolos para gatos, e a RSPCA refere os brócolos, cozidos em água ou a vapor, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
+        "pt": "A Cats Protection inclui os brócolos entre os poucos legumes que se podem dar a um gato, se ele gostar. A ASPCA sugere floretes de brócolos para gatos, e a RSPCA refere os brócolos, cozidos em água ou a vapor, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
+        "nl": "Cats Protection noemt broccoli als een van de weinige groenten die je een kat kunt geven, als je kat er zin in heeft. De ASPCA stelt broccoliroosjes voor katten voor, en de RSPCA rekent gekookte of gestoomde broccoli tot het eten dat met mate geschikt is voor katten en honden. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -2419,7 +2425,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
@@ -2428,7 +2435,8 @@
         "fr": "Un petit bouquet, bouilli ou cuit à la vapeur, sans beurre, sel ni assaisonnement.",
         "es": "Un ramillete pequeño, hervido o al vapor, sin mantequilla, sal ni condimentos.",
         "it": "Una cimetta piccola, lessata o cotta al vapore, senza burro, sale o condimenti.",
-        "pt": "Um florete pequeno, cozido em água ou a vapor, sem manteiga, sal nem temperos."
+        "pt": "Um florete pequeno, cozido em água ou a vapor, sem manteiga, sal nem temperos.",
+        "nl": "Een klein roosje, gekookt of gestoomd, zonder boter, zout of kruiden."
       },
       "child": {
         "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -2437,7 +2445,8 @@
         "fr": "Un petit morceau de brocoli cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Un trocito de brócoli cocido puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere un pezzettino di broccolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Um pedacinho de brócolos cozidos pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Um pedacinho de brócolos cozidos pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een klein stukje gekookte broccoli kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -2448,7 +2457,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -2457,7 +2467,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -2942,7 +2953,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Carrots",
@@ -2951,7 +2963,8 @@
         "fr": "Carottes",
         "es": "Zanahorias",
         "it": "Carote",
-        "pt": "Cenouras"
+        "pt": "Cenouras",
+        "nl": "Wortels"
       },
       "question": {
         "en": "Can cats eat carrots?",
@@ -2960,7 +2973,8 @@
         "fr": "Les chats peuvent-ils manger des carottes ?",
         "es": "¿Pueden los gatos comer zanahorias?",
         "it": "I gatti possono mangiare le carote?",
-        "pt": "Os gatos podem comer cenouras?"
+        "pt": "Os gatos podem comer cenouras?",
+        "nl": "Mogen katten wortels eten?"
       },
       "url_slug": {
         "en": "carrots",
@@ -2969,7 +2983,8 @@
         "fr": "carottes",
         "es": "zanahorias",
         "it": "carote",
-        "pt": "cenouras"
+        "pt": "cenouras",
+        "nl": "wortels"
       },
       "answer": {
         "en": "Yes, a small piece of plain carrot is fine as an occasional treat. Cats Protection lists carrots among vegetables you can feed your cat. Cook it until soft, or chop raw carrot into small chunks to prevent choking.",
@@ -2978,7 +2993,8 @@
         "fr": "Oui, un petit morceau de carotte nature convient comme friandise occasionnelle. Cats Protection cite les carottes parmi les légumes que l’on peut donner à un chat. Faites-la cuire jusqu’à ce qu’elle soit tendre, ou coupez la carotte crue en petits morceaux pour éviter l’étouffement.",
         "es": "Sí, un trocito de zanahoria sin condimentar está bien como premio ocasional. Cats Protection incluye la zanahoria entre las verduras que se pueden dar a un gato. Cuécela hasta que esté blanda o corta la zanahoria cruda en trozos pequeños para evitar atragantamientos.",
         "it": "Sì, un pezzettino di carota senza condimenti va bene come premio occasionale. Cats Protection mette le carote tra le verdure che si possono dare al gatto. Cuocila fino a renderla morbida oppure, se è cruda, tagliala in pezzetti piccoli per evitare il soffocamento.",
-        "pt": "Sim, um pedacinho de cenoura sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui as cenouras entre os legumes que se podem dar a um gato. Cozinha a cenoura até ficar macia ou, se a deres crua, corta-a em pedaços pequenos para o gato não se engasgar."
+        "pt": "Sim, um pedacinho de cenoura sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui as cenouras entre os legumes que se podem dar a um gato. Cozinha a cenoura até ficar macia ou, se a deres crua, corta-a em pedaços pequenos para o gato não se engasgar.",
+        "nl": "Ja, een klein stukje ongekruide wortel is af en toe prima als traktatie. Cats Protection rekent wortels tot de groenten die je je kat mag geven. Maak de wortel gaar tot hij zacht is, of snijd rauwe wortel in kleine stukjes om verstikking te voorkomen."
       },
       "why": {
         "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -2987,7 +3003,8 @@
         "fr": "Cats Protection cite les carottes parmi les rares légumes que l’on peut donner à un chat, et recommande des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. La RSPCA indique que les chats ne peuvent manger des carottes crues que si elles sont coupées en petits morceaux ; sinon, faites-les cuire jusqu’à ce qu’elles soient tendres pour éviter l’étouffement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
         "es": "Cats Protection cita la zanahoria entre las pocas verduras que se pueden dar a un gato y sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos. La RSPCA indica que los gatos solo pueden comer zanahoria cruda si está cortada en trozos pequeños; si no, hay que cocerla hasta que esté blanda para evitar atragantamientos. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
         "it": "Cats Protection cita le carote tra le poche verdure che si possono dare a un gatto e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. Secondo la RSPCA i gatti possono mangiare le carote crude solo se tagliate in pezzetti piccoli; altrimenti vanno cotte fino a diventare morbide, per evitare il soffocamento. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
-        "pt": "A Cats Protection inclui as cenouras entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
+        "pt": "A Cats Protection inclui as cenouras entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
+        "nl": "Cats Protection noemt wortels als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -2997,7 +3014,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselas y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
@@ -3006,7 +3024,8 @@
         "fr": "Cuite à la vapeur ou bouillie jusqu’à ce qu’elle soit tendre, ou crue uniquement en petits morceaux. Sans beurre, sel ni assaisonnement.",
         "es": "Al vapor o hervida hasta que esté blanda, o cruda solo en trozos pequeños. Sin mantequilla, sal ni condimentos.",
         "it": "Cotta al vapore o lessata fino a diventare morbida, oppure cruda ma solo in pezzetti piccoli. Senza burro, sale o condimenti.",
-        "pt": "Cozida a vapor ou em água até ficar macia, ou crua apenas em pedaços pequenos. Sem manteiga, sal nem temperos."
+        "pt": "Cozida a vapor ou em água até ficar macia, ou crua apenas em pedaços pequenos. Sem manteiga, sal nem temperos.",
+        "nl": "Gestoomd of gekookt tot ze zacht zijn, of rauw alleen in kleine stukjes. Zonder boter, zout of kruiden."
       },
       "child": {
         "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -3015,7 +3034,8 @@
         "fr": "Un petit morceau de carotte cuite et tendre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Un trocito de zanahoria cocida y blanda puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere un pezzettino di carota cotta e morbida come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Um pedacinho de cenoura cozida e macia pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Um pedacinho de cenoura cozida e macia pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een stukje zachte, gekookte wortel kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -3026,7 +3046,8 @@
             "fr": "Les chats peuvent-ils manger de la carotte crue ?",
             "es": "¿Pueden los gatos comer zanahoria cruda?",
             "it": "I gatti possono mangiare la carota cruda?",
-            "pt": "Os gatos podem comer cenoura crua?"
+            "pt": "Os gatos podem comer cenoura crua?",
+            "nl": "Mogen katten rauwe wortel eten?"
           },
           "a": {
             "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
@@ -3035,7 +3056,8 @@
             "fr": "La RSPCA indique que les chats ne peuvent manger des carottes crues que si elles sont coupées en petits morceaux ; sinon, faites-les cuire jusqu’à ce qu’elles soient tendres pour éviter l’étouffement.",
             "es": "La RSPCA indica que los gatos solo pueden comer zanahoria cruda si está cortada en trozos pequeños; si no, hay que cocerla hasta que esté blanda para evitar atragantamientos.",
             "it": "Secondo la RSPCA i gatti possono mangiare le carote crude solo se tagliate in pezzetti piccoli; altrimenti vanno cotte fino a diventare morbide, per evitare il soffocamento.",
-            "pt": "A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem."
+            "pt": "A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem.",
+            "nl": "Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen."
           }
         },
         {
@@ -3046,7 +3068,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3055,7 +3078,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -3092,7 +3116,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cauliflower",
@@ -3101,7 +3126,8 @@
         "fr": "Chou-fleur",
         "es": "Coliflor",
         "it": "Cavolfiore",
-        "pt": "Couve-flor"
+        "pt": "Couve-flor",
+        "nl": "Bloemkool"
       },
       "question": {
         "en": "Can cats eat cauliflower?",
@@ -3110,7 +3136,8 @@
         "fr": "Les chats peuvent-ils manger du chou-fleur ?",
         "es": "¿Pueden los gatos comer coliflor?",
         "it": "I gatti possono mangiare il cavolfiore?",
-        "pt": "Os gatos podem comer couve-flor?"
+        "pt": "Os gatos podem comer couve-flor?",
+        "nl": "Mogen katten bloemkool eten?"
       },
       "url_slug": {
         "en": "cauliflower",
@@ -3119,7 +3146,8 @@
         "fr": "chou-fleur",
         "es": "coliflor",
         "it": "cavolfiore",
-        "pt": "couve-flor"
+        "pt": "couve-flor",
+        "nl": "bloemkool"
       },
       "answer": {
         "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
@@ -3128,7 +3156,8 @@
         "fr": "Oui, un petit morceau de chou-fleur cuit nature convient comme friandise occasionnelle. La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments qui conviennent aux chats et aux chiens avec modération.",
         "es": "Sí, un trocito de coliflor cocida y sin condimentar está bien como premio ocasional. La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos adecuados para gatos y perros con moderación.",
         "it": "Sì, un pezzettino di cavolfiore cotto, senza condimenti, va bene come premio occasionale. La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti adatti a gatti e cani in piccole quantità.",
-        "pt": "Sim, um pedacinho de couve-flor cozinhada e sem tempero não faz mal como guloseima ocasional. A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos que gatos e cães podem comer com moderação."
+        "pt": "Sim, um pedacinho de couve-flor cozinhada e sem tempero não faz mal como guloseima ocasional. A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos que gatos e cães podem comer com moderação.",
+        "nl": "Ja, een klein stukje gare, ongekruide bloemkool is af en toe prima als traktatie. De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het eten dat met mate geschikt is voor katten en honden."
       },
       "why": {
         "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -3137,7 +3166,8 @@
         "fr": "La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments sans danger qui conviennent aux chats et aux chiens avec modération. Cats Protection recommande des légumes sans beurre, sel ni assaisonnement. Les chats n’ont pas besoin de légumes, les friandises doivent rester peu nombreuses, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
         "es": "La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos seguros para mascotas, adecuados para gatos y perros con moderación. Cats Protection aconseja dar la verdura sin mantequilla, sal ni condimentos. Los gatos no necesitan verdura, los premios deben ser pocos y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
         "it": "La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti sicuri per gatti e cani in piccole quantità. Cats Protection consiglia verdure senza burro, sale o condimenti. I gatti non hanno bisogno di verdure, i premi vanno dati con parsimonia e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
-        "pt": "A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos seguros que gatos e cães podem comer com moderação. A Cats Protection aconselha legumes sem manteiga, sal nem temperos. Os gatos não precisam de legumes, as guloseimas devem ser poucas, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
+        "pt": "A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos seguros que gatos e cães podem comer com moderação. A Cats Protection aconselha legumes sem manteiga, sal nem temperos. Os gatos não precisam de legumes, as guloseimas devem ser poucas, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
+        "nl": "De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het voor huisdieren veilige eten dat met mate geschikt is voor katten en honden. Cats Protection adviseert groente zonder boter, zout of kruiden. Katten hebben geen groente nodig, geef traktaties spaarzaam, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -3147,7 +3177,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dársela y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -3156,7 +3187,8 @@
         "fr": "Cuit et coupé en petits morceaux, sans beurre, sel ni assaisonnement.",
         "es": "Cocida y cortada en trozos pequeños, sin mantequilla, sal ni condimentos.",
         "it": "Cotto e tagliato a pezzetti, senza burro, sale o condimenti.",
-        "pt": "Cozinhada e cortada em pedaços pequenos, sem manteiga, sal nem temperos."
+        "pt": "Cozinhada e cortada em pedaços pequenos, sem manteiga, sal nem temperos.",
+        "nl": "Gaar en in kleine stukjes gesneden, zonder boter, zout of kruiden."
       },
       "child": {
         "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -3165,7 +3197,8 @@
         "fr": "Un petit morceau de chou-fleur cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Un trocito de coliflor cocida puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere un pezzettino di cavolfiore cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Um pedacinho de couve-flor cozinhada pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Um pedacinho de couve-flor cozinhada pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een klein stukje gekookte bloemkool kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -3176,7 +3209,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3185,7 +3219,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -5856,7 +5891,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cucumber",
@@ -5865,7 +5901,8 @@
         "fr": "Concombre",
         "es": "Pepino",
         "it": "Cetriolo",
-        "pt": "Pepino"
+        "pt": "Pepino",
+        "nl": "Komkommer"
       },
       "question": {
         "en": "Can cats eat cucumber?",
@@ -5874,7 +5911,8 @@
         "fr": "Les chats peuvent-ils manger du concombre ?",
         "es": "¿Pueden los gatos comer pepino?",
         "it": "I gatti possono mangiare il cetriolo?",
-        "pt": "Os gatos podem comer pepino?"
+        "pt": "Os gatos podem comer pepino?",
+        "nl": "Mogen katten komkommer eten?"
       },
       "url_slug": {
         "en": "cucumber",
@@ -5883,7 +5921,8 @@
         "fr": "concombre",
         "es": "pepino",
         "it": "cetriolo",
-        "pt": "pepino"
+        "pt": "pepino",
+        "nl": "komkommer"
       },
       "answer": {
         "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
@@ -5892,7 +5931,8 @@
         "fr": "Oui, un petit morceau de concombre nature convient comme friandise occasionnelle. L’ASPCA classe le concombre parmi les aliments non toxiques pour les chats, mais les chats n’ont pas besoin de légumes et toute matière végétale peut irriter l’estomac : gardez-le pour un tout petit extra.",
         "es": "Sí, un trocito de pepino sin condimentar está bien como premio ocasional. La ASPCA considera el pepino no tóxico para los gatos, pero los gatos no necesitan verdura y cualquier materia vegetal puede sentarles mal al estómago, así que ofrécelo solo como un pequeño extra.",
         "it": "Sì, un pezzettino di cetriolo al naturale va bene come premio occasionale. Per l’ASPCA il cetriolo non è tossico per i gatti, ma i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può far venire mal di stomaco: consideralo solo un piccolissimo extra.",
-        "pt": "Sim, um pedacinho de pepino natural não faz mal como guloseima ocasional. A ASPCA considera o pepino não tóxico para os gatos, mas os gatos não precisam de legumes e qualquer matéria vegetal pode causar indisposição de estômago, por isso deve ser só um extra pequenino."
+        "pt": "Sim, um pedacinho de pepino natural não faz mal como guloseima ocasional. A ASPCA considera o pepino não tóxico para os gatos, mas os gatos não precisam de legumes e qualquer matéria vegetal pode causar indisposição de estômago, por isso deve ser só um extra pequenino.",
+        "nl": "Ja, een klein stukje naturel komkommer is af en toe prima als traktatie. De ASPCA vermeldt komkommer als niet giftig voor katten, maar katten hebben geen groente nodig en elk plantaardig materiaal kan de maag van streek maken, dus houd het bij een piepklein extraatje."
       },
       "why": {
         "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -5901,7 +5941,8 @@
         "fr": "L’ASPCA classe le concombre de jardin parmi les plantes non toxiques pour les chats. Les chats n’ont pas besoin de fruits ni de légumes dans leur alimentation, les friandises doivent rester peu nombreuses, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat.",
         "es": "La ASPCA considera el pepino de huerta no tóxico para los gatos. Los gatos no necesitan fruta ni verdura en su dieta, los premios deben ser pocos y la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
         "it": "L’ASPCA indica il cetriolo comune come non tossico per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
-        "pt": "A ASPCA considera o pepino de horta não tóxico para os gatos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e indisposição de estômago nos gatos."
+        "pt": "A ASPCA considera o pepino de horta não tóxico para os gatos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e indisposição de estômago nos gatos.",
+        "nl": "De ASPCA vermeldt de gewone komkommer als niet giftig voor katten. Katten hebben geen fruit of groente in hun voeding nodig, geef traktaties spaarzaam, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -5911,7 +5952,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -5920,7 +5962,8 @@
         "fr": "Un petit morceau nature de temps en temps, compté dans la ration quotidienne de votre chat.",
         "es": "Un trocito pequeño, sin condimentar y de vez en cuando; cuéntalo dentro de la comida diaria de tu gato.",
         "it": "Ogni tanto un pezzettino di cetriolo al naturale, da conteggiare nella razione giornaliera del gatto.",
-        "pt": "Um pedacinho natural, de vez em quando, a contar para a ração diária do teu gato."
+        "pt": "Um pedacinho natural, de vez em quando, a contar para a ração diária do teu gato.",
+        "nl": "Af en toe een klein, naturel stukje, meegeteld bij de dagelijkse voeding van je kat."
       },
       "child": {
         "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -5929,7 +5972,8 @@
         "fr": "Un petit morceau de concombre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Un trocito de pepino puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere un pezzettino di cetriolo come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Um pedacinho de pepino pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Um pedacinho de pepino pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een klein stukje komkommer kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -5940,7 +5984,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -5949,7 +5994,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -8136,7 +8182,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Green beans",
@@ -8145,7 +8192,8 @@
         "fr": "Haricots verts",
         "es": "Judías verdes",
         "it": "Fagiolini",
-        "pt": "Feijão-verde"
+        "pt": "Feijão-verde",
+        "nl": "Sperziebonen"
       },
       "question": {
         "en": "Can cats eat green beans?",
@@ -8154,7 +8202,8 @@
         "fr": "Les chats peuvent-ils manger des haricots verts ?",
         "es": "¿Pueden los gatos comer judías verdes?",
         "it": "I gatti possono mangiare i fagiolini?",
-        "pt": "Os gatos podem comer feijão-verde?"
+        "pt": "Os gatos podem comer feijão-verde?",
+        "nl": "Mogen katten sperziebonen eten?"
       },
       "url_slug": {
         "en": "green-beans",
@@ -8163,7 +8212,8 @@
         "fr": "haricots-verts",
         "es": "judias-verdes",
         "it": "fagiolini",
-        "pt": "feijao-verde"
+        "pt": "feijao-verde",
+        "nl": "sperziebonen"
       },
       "answer": {
         "en": "Yes, a small piece of plain green bean is fine as an occasional treat. The ASPCA says green beans can be a great green snack for a dog or cat, and Cats Protection suggests steamed or boiled green beans with no butter, salt or seasoning.",
@@ -8172,7 +8222,8 @@
         "fr": "Oui, un petit morceau de haricot vert nature convient comme friandise occasionnelle. L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat, et Cats Protection suggère des haricots verts cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement.",
         "es": "Sí, un trocito de judía verde sin condimentar está bien como premio ocasional. La ASPCA dice que las judías verdes pueden ser un estupendo tentempié verde para perros y gatos, y Cats Protection sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos.",
         "it": "Sì, un pezzettino di fagiolino senza condimenti va bene come premio occasionale. L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti, e Cats Protection consiglia fagiolini cotti al vapore o lessati, senza burro, sale o condimenti.",
-        "pt": "Sim, um pedacinho de feijão-verde sem tempero não faz mal como guloseima ocasional. A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos, e a Cats Protection sugere-o cozido a vapor ou em água, sem manteiga, sal nem temperos."
+        "pt": "Sim, um pedacinho de feijão-verde sem tempero não faz mal como guloseima ocasional. A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos, e a Cats Protection sugere-o cozido a vapor ou em água, sem manteiga, sal nem temperos.",
+        "nl": "Ja, een klein stukje ongekruide sperzieboon is af en toe prima als traktatie. Volgens de ASPCA kunnen sperziebonen een prima groen tussendoortje zijn voor een hond of kat, en Cats Protection adviseert gestoomde of gekookte sperziebonen zonder boter, zout of kruiden."
       },
       "why": {
         "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -8181,7 +8232,8 @@
         "fr": "L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat. Cats Protection suggère des légumes cuits à la vapeur ou bouillis, comme les haricots verts, sans beurre, sel ni assaisonnement, et la RSPCA range les haricots verts parmi les aliments qui conviennent aux chats et aux chiens avec modération, crus ou cuits mais sans assaisonnement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
         "es": "La ASPCA dice que las judías verdes pueden ser un estupendo tentempié verde para perros y gatos. Cats Protection sugiere dar verduras como las judías verdes al vapor o hervidas, sin mantequilla, sal ni condimentos, y la RSPCA incluye las judías verdes entre los alimentos adecuados para gatos y perros con moderación, crudas o cocidas pero sin condimentar. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
         "it": "L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti. Cats Protection consiglia verdure cotte al vapore o lessate, come i fagiolini, senza burro, sale o condimenti, e la RSPCA mette i fagiolini tra gli alimenti adatti a gatti e cani in piccole quantità, crudi o cotti ma senza condimenti. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
-        "pt": "A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos. A Cats Protection sugere legumes como o feijão-verde cozidos a vapor ou em água, sem manteiga, sal nem temperos, e a RSPCA refere o feijão-verde, cru ou cozinhado mas sem temperos, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
+        "pt": "A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos. A Cats Protection sugere legumes como o feijão-verde cozidos a vapor ou em água, sem manteiga, sal nem temperos, e a RSPCA refere o feijão-verde, cru ou cozinhado mas sem temperos, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
+        "nl": "De ASPCA zegt dat sperziebonen een prima groen tussendoortje kunnen zijn voor een hond of kat. Cats Protection adviseert gestoomde of gekookte groente zoals sperziebonen, zonder boter, zout of kruiden, en de RSPCA rekent sperziebonen, rauw of gaar maar zonder kruiden, tot het eten dat met mate geschikt is voor katten en honden. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -8191,7 +8243,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselas y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
@@ -8200,7 +8253,8 @@
         "fr": "Un petit morceau, cuit à la vapeur ou bouilli, sans beurre, sel ni assaisonnement.",
         "es": "Un trocito, al vapor o hervido, sin mantequilla, sal ni condimentos.",
         "it": "Un pezzettino, cotto al vapore o lessato, senza burro, sale o condimenti.",
-        "pt": "Um pedacinho, cozido a vapor ou em água, sem manteiga, sal nem temperos."
+        "pt": "Um pedacinho, cozido a vapor ou em água, sem manteiga, sal nem temperos.",
+        "nl": "Een klein stukje, gestoomd of gekookt, zonder boter, zout of kruiden."
       },
       "child": {
         "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -8209,7 +8263,8 @@
         "fr": "Un petit morceau de haricot vert nature fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Un trocito de judía verde sin condimentar puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere un pezzettino di fagiolino senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Um pedacinho de feijão-verde sem tempero pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Um pedacinho de feijão-verde sem tempero pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een stukje sperzieboon zonder toevoegingen kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -8220,7 +8275,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -8229,7 +8285,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -12995,7 +13052,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Peas",
@@ -13004,7 +13062,8 @@
         "fr": "Petits pois",
         "es": "Guisantes",
         "it": "Piselli",
-        "pt": "Ervilhas"
+        "pt": "Ervilhas",
+        "nl": "Erwten"
       },
       "question": {
         "en": "Can cats eat peas?",
@@ -13013,7 +13072,8 @@
         "fr": "Les chats peuvent-ils manger des petits pois ?",
         "es": "¿Pueden los gatos comer guisantes?",
         "it": "I gatti possono mangiare i piselli?",
-        "pt": "Os gatos podem comer ervilhas?"
+        "pt": "Os gatos podem comer ervilhas?",
+        "nl": "Mogen katten erwten eten?"
       },
       "url_slug": {
         "en": "peas",
@@ -13022,7 +13082,8 @@
         "fr": "petits-pois",
         "es": "guisantes",
         "it": "piselli",
-        "pt": "ervilhas"
+        "pt": "ervilhas",
+        "nl": "erwten"
       },
       "answer": {
         "en": "Yes, a few plain peas are fine as an occasional treat. Cats Protection and the ASPCA both name peas as a vegetable you can offer a cat, and the RSPCA says cats should only have a small amount as a treat.",
@@ -13031,7 +13092,8 @@
         "fr": "Oui, quelques petits pois nature conviennent comme friandise occasionnelle. Cats Protection et l’ASPCA citent tous deux les petits pois parmi les légumes que l’on peut proposer à un chat, et la RSPCA précise que les chats ne doivent en avoir qu’une petite quantité en friandise.",
         "es": "Sí, unos pocos guisantes sin condimentar están bien como premio ocasional. Cats Protection y la ASPCA citan los guisantes como una verdura que se puede ofrecer a un gato, y la RSPCA indica que los gatos solo deben tomar una pequeña cantidad como premio.",
         "it": "Sì, qualche pisello senza condimenti va bene come premio occasionale. Cats Protection e l’ASPCA citano entrambe i piselli tra le verdure che si possono offrire a un gatto, e la RSPCA precisa che se ne deve dare solo una piccola quantità, come premio.",
-        "pt": "Sim, algumas ervilhas sem tempero não fazem mal como guloseima ocasional. A Cats Protection e a ASPCA referem as ervilhas entre os legumes que se podem oferecer a um gato, e a RSPCA diz que os gatos só devem comer uma pequena quantidade como guloseima."
+        "pt": "Sim, algumas ervilhas sem tempero não fazem mal como guloseima ocasional. A Cats Protection e a ASPCA referem as ervilhas entre os legumes que se podem oferecer a um gato, e a RSPCA diz que os gatos só devem comer uma pequena quantidade como guloseima.",
+        "nl": "Ja, een paar ongekruide erwten zijn af en toe prima als traktatie. Cats Protection en de ASPCA noemen allebei erwten als groente die je een kat kunt geven, en volgens de RSPCA mogen katten er maar een klein beetje van krijgen, als traktatie."
       },
       "why": {
         "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -13040,7 +13102,8 @@
         "fr": "Cats Protection cite les petits pois parmi les rares légumes que l’on peut donner à un chat et suggère des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. L’ASPCA suggère les petits pois pour les chats, et la RSPCA indique que les chats peuvent manger des petits pois nature, mais seulement en petite quantité, en friandise. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
         "es": "Cats Protection incluye los guisantes entre las pocas verduras que se pueden dar a un gato y sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos. La ASPCA sugiere los guisantes para gatos, y la RSPCA indica que los gatos pueden tomar guisantes sin condimentar, pero solo una pequeña cantidad como premio. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
         "it": "Cats Protection mette i piselli tra le poche verdure che si possono dare a un gatto e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. L’ASPCA consiglia i piselli per i gatti, e la RSPCA dice che i gatti possono mangiare piselli senza condimenti, ma solo in piccola quantità, come premio. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
-        "pt": "A Cats Protection inclui as ervilhas entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A ASPCA sugere ervilhas para gatos, e a RSPCA diz que os gatos podem comer ervilhas sem tempero, mas apenas uma pequena quantidade como guloseima. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
+        "pt": "A Cats Protection inclui as ervilhas entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A ASPCA sugere ervilhas para gatos, e a RSPCA diz que os gatos podem comer ervilhas sem tempero, mas apenas uma pequena quantidade como guloseima. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
+        "nl": "Cats Protection noemt erwten als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. De ASPCA stelt erwten voor katten voor, en volgens de RSPCA mogen katten ongekruide erwten, maar alleen een klein beetje als traktatie. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -13050,7 +13113,8 @@
         "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
         "es": "Empieza por un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselos y consulta con tu veterinario.",
         "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
+        "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
@@ -13059,7 +13123,8 @@
         "fr": "Quelques petits pois nature, cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement.",
         "es": "Unos pocos guisantes sin condimentar, al vapor o hervidos, sin mantequilla, sal ni condimentos.",
         "it": "Qualche pisello, cotto al vapore o lessato, senza burro, sale o condimenti.",
-        "pt": "Algumas ervilhas sem tempero, cozidas a vapor ou em água, sem manteiga, sal nem temperos."
+        "pt": "Algumas ervilhas sem tempero, cozidas a vapor ou em água, sem manteiga, sal nem temperos.",
+        "nl": "Een paar ongekruide erwten, gestoomd of gekookt, zonder boter, zout of kruiden."
       },
       "child": {
         "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -13068,7 +13133,8 @@
         "fr": "Quelques petits pois nature font parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
         "es": "Unos pocos guisantes sin condimentar pueden ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
         "it": "Ogni tanto il gatto può avere qualche pisello senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
-        "pt": "Algumas ervilhas sem tempero podem ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
+        "pt": "Algumas ervilhas sem tempero podem ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
+        "nl": "Een paar ongekruide erwten kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
@@ -13079,7 +13145,8 @@
             "fr": "Les chats ont-ils besoin de légumes ?",
             "es": "¿Necesitan verdura los gatos?",
             "it": "I gatti hanno bisogno di verdure?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -13088,7 +13155,8 @@
             "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
             "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
             "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
-            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
+            "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -15369,7 +15437,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Rhubarb",
@@ -15378,7 +15447,8 @@
         "fr": "Rhubarbe",
         "es": "Ruibarbo",
         "it": "Rabarbaro",
-        "pt": "Ruibarbo"
+        "pt": "Ruibarbo",
+        "nl": "Rabarber"
       },
       "question": {
         "en": "Can cats eat rhubarb?",
@@ -15387,7 +15457,8 @@
         "fr": "Les chats peuvent-ils manger de la rhubarbe ?",
         "es": "¿Pueden los gatos comer ruibarbo?",
         "it": "I gatti possono mangiare il rabarbaro?",
-        "pt": "Os gatos podem comer ruibarbo?"
+        "pt": "Os gatos podem comer ruibarbo?",
+        "nl": "Mogen katten rabarber eten?"
       },
       "url_slug": {
         "en": "rhubarb",
@@ -15396,7 +15467,8 @@
         "fr": "rhubarbe",
         "es": "ruibarbo",
         "it": "rabarbaro",
-        "pt": "ruibarbo"
+        "pt": "ruibarbo",
+        "nl": "rabarber"
       },
       "answer": {
         "en": "No. The ASPCA lists rhubarb as toxic to cats because it contains soluble calcium oxalates. The leaves and roots are the most toxic parts. Don't share rhubarb with your cat, and call your vet if your cat chews any.",
@@ -15405,7 +15477,8 @@
         "fr": "Non. L’ASPCA classe la rhubarbe parmi les plantes toxiques pour les chats, car elle contient des oxalates de calcium solubles. Les feuilles et les racines sont les parties les plus toxiques. Ne partagez pas de rhubarbe avec votre chat, et appelez votre vétérinaire s’il en a mâchouillé.",
         "es": "No. La ASPCA considera el ruibarbo tóxico para los gatos porque contiene oxalatos de calcio solubles. Las hojas y las raíces son las partes más tóxicas. No compartas ruibarbo con tu gato y llama a tu veterinario si mastica un poco.",
         "it": "No. L’ASPCA indica il rabarbaro come tossico per i gatti perché contiene ossalati di calcio solubili. Le parti più tossiche sono le foglie e le radici. Non dare rabarbaro al tuo gatto e, se ne mastica anche solo un po’, chiama il veterinario.",
-        "pt": "Não. A ASPCA classifica o ruibarbo como tóxico para os gatos, porque contém oxalatos de cálcio solúveis. As folhas e as raízes são as partes mais tóxicas. Não partilhes ruibarbo com o teu gato e liga ao teu veterinário se ele mastigar um pouco."
+        "pt": "Não. A ASPCA classifica o ruibarbo como tóxico para os gatos, porque contém oxalatos de cálcio solúveis. As folhas e as raízes são as partes mais tóxicas. Não partilhes ruibarbo com o teu gato e liga ao teu veterinário se ele mastigar um pouco.",
+        "nl": "Nee. De ASPCA noemt rabarber giftig voor katten, omdat het oplosbare calciumoxalaten bevat. De bladeren en wortels zijn het giftigst. Deel geen rabarber met je kat en bel je dierenarts als je kat er iets van heeft gekauwd."
       },
       "why": {
         "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
@@ -15414,7 +15487,8 @@
         "fr": "La rhubarbe contient des oxalates de calcium solubles, et l’ASPCA la classe parmi les plantes toxiques pour les chats, les feuilles et les racines étant les parties les plus toxiques. Les deux fiches de l’ASPCA sur la rhubarbe ne sont pas identiques : l’une mentionne une insuffisance rénale, des tremblements et une salivation excessive, l’autre des vomissements et une salivation excessive chez les chiens et les chats, et une insuffisance rénale chez les animaux qui broutent. Nous suivons la fiche la plus stricte et mentionnons aussi l’insuffisance rénale.",
         "es": "El ruibarbo contiene oxalatos de calcio solubles, y la ASPCA lo considera tóxico para los gatos, con las hojas y las raíces como las partes más tóxicas. Las dos fichas del ruibarbo de la ASPCA no coinciden: una indica insuficiencia renal, temblores y salivación; la otra, vómitos y salivación en perros y gatos e insuficiencia renal en animales de pastoreo. Seguimos la ficha más estricta e incluimos también la insuficiencia renal.",
         "it": "Il rabarbaro contiene ossalati di calcio solubili e l’ASPCA lo indica come tossico per i gatti; le parti più tossiche sono le foglie e le radici. Le due schede dell’ASPCA sul rabarbaro non coincidono: una elenca insufficienza renale, tremori e salivazione, l’altra vomito e salivazione in cani e gatti e insufficienza renale negli animali al pascolo. Seguiamo la scheda più severa e includiamo anche l’insufficienza renale.",
-        "pt": "O ruibarbo contém oxalatos de cálcio solúveis, e a ASPCA classifica-o como tóxico para os gatos, sendo as folhas e as raízes as partes mais tóxicas. As duas fichas da ASPCA sobre o ruibarbo diferem: uma refere insuficiência renal, tremores e salivação, a outra refere vómitos e salivação em cães e gatos e insuficiência renal em animais que pastam. Seguimos a ficha mais rigorosa e incluímos também a insuficiência renal."
+        "pt": "O ruibarbo contém oxalatos de cálcio solúveis, e a ASPCA classifica-o como tóxico para os gatos, sendo as folhas e as raízes as partes mais tóxicas. As duas fichas da ASPCA sobre o ruibarbo diferem: uma refere insuficiência renal, tremores e salivação, a outra refere vómitos e salivação em cães e gatos e insuficiência renal em animais que pastam. Seguimos a ficha mais rigorosa e incluímos também a insuficiência renal.",
+        "nl": "Rabarber bevat oplosbare calciumoxalaten en de ASPCA noemt het giftig voor katten, met de bladeren en wortels als giftigste delen. De twee vermeldingen over rabarber bij de ASPCA verschillen: de ene noemt nierfalen, beven en kwijlen, de andere noemt braken en kwijlen bij honden en katten en nierfalen bij grazende dieren. Wij volgen de strengere vermelding en noemen dus ook nierfalen."
       },
       "signs": {
         "en": [
@@ -15458,6 +15532,12 @@
           "Salivação excessiva",
           "Tremores",
           "Problemas nos rins (insuficiência renal)"
+        ],
+        "nl": [
+          "Braken",
+          "Kwijlen",
+          "Beven",
+          "Nierproblemen (nierfalen)"
         ]
       },
       "what_to_do": {
@@ -15467,7 +15547,8 @@
         "fr": "Si votre chat a mâchonné n’importe quelle partie d’un plant de rhubarbe, surtout les feuilles ou les racines, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et à quel moment. N’essayez pas de faire vomir votre chat vous-même.",
         "es": "Si tu gato ha masticado cualquier parte de una planta de ruibarbo, sobre todo las hojas o las raíces, ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido y cuándo. No intentes provocarle el vómito en casa.",
         "it": "Se il tuo gatto ha masticato una qualsiasi parte della pianta di rabarbaro, soprattutto le foglie o le radici, contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato e quando. Non provare a farlo vomitare a casa.",
-        "pt": "Se o teu gato mastigou qualquer parte de uma planta de ruibarbo, sobretudo as folhas ou as raízes, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível. Anota o que foi comido e quando. Não tentes fazer o teu gato vomitar em casa."
+        "pt": "Se o teu gato mastigou qualquer parte de uma planta de ruibarbo, sobretudo as folhas ou as raízes, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível. Anota o que foi comido e quando. Não tentes fazer o teu gato vomitar em casa.",
+        "nl": "Heeft je kat op een deel van een rabarberplant gekauwd, vooral op de bladeren of wortels, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken."
       },
       "serving": null,
       "child": {
@@ -15477,7 +15558,8 @@
         "fr": "La rhubarbe n’est pas un aliment pour chat. Le plant de rhubarbe est dangereux pour les chats : préviens un adulte si ton chat en mâchouille.",
         "es": "El ruibarbo no es comida para gatos. La planta del ruibarbo no es segura para ellos, así que avisa a un adulto si tu gatito mastica un poco.",
         "it": "Il rabarbaro non è cibo per gatti: la pianta non è sicura per loro. Se il tuo gatto ne mastica un po’, dillo subito a un adulto.",
-        "pt": "O ruibarbo não é comida para gatos. A planta não é segura para eles, por isso avisa um adulto se o teu gatinho mastigar um bocadinho."
+        "pt": "O ruibarbo não é comida para gatos. A planta não é segura para eles, por isso avisa um adulto se o teu gatinho mastigar um bocadinho.",
+        "nl": "Rabarber is geen eten voor katten. De rabarberplant is niet veilig voor katten, dus vertel het aan een volwassene als je kat erop kauwt."
       },
       "faq": [
         {
@@ -15488,7 +15570,8 @@
             "fr": "Quelle partie de la rhubarbe pose problème ?",
             "es": "¿Qué parte del ruibarbo es el problema?",
             "it": "Quale parte del rabarbaro è pericolosa?",
-            "pt": "Que parte do ruibarbo faz mal aos gatos?"
+            "pt": "Que parte do ruibarbo faz mal aos gatos?",
+            "nl": "Welk deel van rabarber is het probleem?"
           },
           "a": {
             "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
@@ -15497,7 +15580,8 @@
             "fr": "L’ASPCA classe le plant de rhubarbe parmi les plantes toxiques pour les chats et précise que les feuilles et les racines sont les parties les plus toxiques.",
             "es": "La ASPCA considera la planta del ruibarbo tóxica para los gatos y señala que las hojas y las raíces son las partes más tóxicas.",
             "it": "L’ASPCA indica la pianta di rabarbaro come tossica per i gatti e dice che le parti più tossiche sono le foglie e le radici.",
-            "pt": "A ASPCA classifica a planta de ruibarbo como tóxica para os gatos e refere que as folhas e as raízes são as partes mais tóxicas."
+            "pt": "A ASPCA classifica a planta de ruibarbo como tóxica para os gatos e refere que as folhas e as raízes são as partes mais tóxicas.",
+            "nl": "De ASPCA noemt de rabarberplant giftig voor katten en zegt dat de bladeren en wortels het giftigst zijn."
           }
         }
       ],
@@ -21111,7 +21195,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Broccoli",
@@ -21120,7 +21205,8 @@
         "fr": "Brocoli",
         "es": "Brócoli",
         "it": "Broccoli",
-        "pt": "Brócolos"
+        "pt": "Brócolos",
+        "nl": "Broccoli"
       },
       "question": {
         "en": "Can dogs eat broccoli?",
@@ -21129,7 +21215,8 @@
         "fr": "Les chiens peuvent-ils manger du brocoli ?",
         "es": "¿Pueden los perros comer brócoli?",
         "it": "I cani possono mangiare i broccoli?",
-        "pt": "Os cães podem comer brócolos?"
+        "pt": "Os cães podem comer brócolos?",
+        "nl": "Mogen honden broccoli eten?"
       },
       "url_slug": {
         "en": "broccoli",
@@ -21138,7 +21225,8 @@
         "fr": "brocoli",
         "es": "brocoli",
         "it": "broccoli",
-        "pt": "brocolos"
+        "pt": "brocolos",
+        "nl": "broccoli"
       },
       "answer": {
         "en": "Yes, in small amounts as an occasional treat, raw or cooked, with no seasonings or oils. Cut it into bite-size pieces: the florets can irritate the stomach, and tough stalks can block the oesophagus, especially in small dogs.",
@@ -21147,7 +21235,8 @@
         "fr": "Oui, en petite quantité comme friandise occasionnelle, cru ou cuit, sans assaisonnement ni huile. Coupez-le en morceaux de la taille d’une bouchée : les bouquets peuvent irriter l’estomac, et les tiges dures peuvent obstruer l’œsophage, surtout chez les petits chiens.",
         "es": "Sí, en pequeñas cantidades y como premio ocasional, crudo o cocido, sin condimentos ni aceites. Córtalo en trozos del tamaño de un bocado: los ramilletes pueden irritar el estómago y los tallos duros pueden obstruir el esófago, sobre todo en perros pequeños.",
         "it": "Sì, in piccole quantità come premio occasionale, crudi o cotti, senza condimenti e senza olio. Tagliali in pezzetti da un boccone: le cimette possono irritare lo stomaco e i gambi duri possono ostruire l’esofago, soprattutto nei cani di piccola taglia.",
-        "pt": "Sim, em pequenas quantidades e como guloseima ocasional, crus ou cozinhados, sem temperos nem óleos. Corta-os em pedaços que caibam numa dentada: os floretes podem irritar o estômago e os talos duros podem obstruir o esófago, sobretudo nos cães pequenos."
+        "pt": "Sim, em pequenas quantidades e como guloseima ocasional, crus ou cozinhados, sem temperos nem óleos. Corta-os em pedaços que caibam numa dentada: os floretes podem irritar o estômago e os talos duros podem obstruir o esófago, sobretudo nos cães pequenos.",
+        "nl": "Ja, met mate en af en toe als snoepje, rauw of gaar, zonder kruiden of olie. Snijd de broccoli in hapklare stukjes: de roosjes kunnen de maag irriteren en harde stronken kunnen de slokdarm blokkeren, vooral bij kleine honden."
       },
       "why": {
         "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
@@ -21156,7 +21245,8 @@
         "fr": "Les bouquets de brocoli contiennent des isothiocyanates, qui peuvent provoquer une irritation de l’estomac légère à potentiellement sévère. Les tiges dures du brocoli sont connues pour provoquer des obstructions de l’œsophage, surtout chez les petits chiens ; le brocoli cuit, coupé en morceaux de la taille d’une bouchée, est donc le meilleur choix.",
         "es": "Los ramilletes de brócoli contienen isotiocianatos, que pueden causar una irritación de estómago que va de leve a potencialmente grave. Los tallos duros del brócoli han llegado a obstruir el esófago, sobre todo en perros pequeños, así que lo mejor es dárselo cocido y cortado en trozos del tamaño de un bocado.",
         "it": "Le cimette di broccolo contengono isotiocianati, che possono causare un’irritazione gastrica da lieve a potenzialmente grave. I gambi duri dei broccoli possono provocare un’ostruzione dell’esofago, soprattutto nei cani di piccola taglia, quindi i broccoli cotti e tagliati in pezzetti da un boccone sono la scelta migliore.",
-        "pt": "Os floretes de brócolos contêm isotiocianatos, que podem causar uma irritação do estômago, de ligeira a possivelmente grave. Os talos duros de brócolos já provocaram obstruções no esófago, sobretudo em cães pequenos, por isso os brócolos cozinhados e cortados em pedaços de uma dentada são a melhor escolha."
+        "pt": "Os floretes de brócolos contêm isotiocianatos, que podem causar uma irritação do estômago, de ligeira a possivelmente grave. Os talos duros de brócolos já provocaram obstruções no esófago, sobretudo em cães pequenos, por isso os brócolos cozinhados e cortados em pedaços de uma dentada são a melhor escolha.",
+        "nl": "Broccoliroosjes bevatten isothiocyanaten, die milde tot mogelijk ernstige maagirritatie kunnen veroorzaken. Van harde broccolistronken is bekend dat ze een verstopping in de slokdarm kunnen veroorzaken, vooral bij kleine honden. Daarom is gekookte broccoli in hapklare stukjes de betere keuze."
       },
       "signs": null,
       "what_to_do": {
@@ -21166,7 +21256,8 @@
         "fr": "Observez la réaction de votre chien au brocoli et assurez-vous qu’il n’y a pas de mauvaise réaction avant d’en donner davantage.",
         "es": "Observa cómo reacciona tu perro al brócoli y asegúrate de que no le sienta mal antes de darle más.",
         "it": "Osserva come reagisce il tuo cane e dagliene ancora solo se non ha nessuna reazione negativa.",
-        "pt": "Vê como o teu cão reage aos brócolos e confirma que não há nenhuma reação adversa antes de lhe dares mais."
+        "pt": "Vê como o teu cão reage aos brócolos e confirma que não há nenhuma reação adversa antes de lhe dares mais.",
+        "nl": "Let op hoe je hond op broccoli reageert en geef pas meer als er geen nare reactie is geweest."
       },
       "serving": {
         "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
@@ -21175,7 +21266,8 @@
         "fr": "Nature, cru ou de préférence cuit, sans assaisonnement ni huile, coupé en morceaux de la taille d’une bouchée. Seulement de petites quantités, en friandise occasionnelle.",
         "es": "Crudo o, mejor, cocido, sin condimentos ni aceites y cortado en trozos del tamaño de un bocado. Solo en pequeñas cantidades como premio ocasional.",
         "it": "Crudi o, meglio ancora, cotti, senza condimenti e senza olio, tagliati in pezzetti da un boccone. Solo in piccole quantità, come premio occasionale.",
-        "pt": "Sem tempero nem óleos, crus ou, de preferência, cozinhados, cortados em pedaços de uma dentada. Apenas em pequenas quantidades, como guloseima ocasional."
+        "pt": "Sem tempero nem óleos, crus ou, de preferência, cozinhados, cortados em pedaços de uma dentada. Apenas em pequenas quantidades, como guloseima ocasional.",
+        "nl": "Naturel, rauw of liever gaar, zonder kruiden of olie, in hapklare stukjes gesneden. Alleen kleine hoeveelheden, af en toe als snoepje."
       },
       "child": {
         "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
@@ -21184,7 +21276,8 @@
         "fr": "Les chiens peuvent goûter un peu de brocoli. Un adulte le fait cuire nature et le coupe en petits morceaux.",
         "es": "Los perros pueden probar un poco de brócoli. Un adulto lo cocina sin nada añadido y lo corta en trocitos.",
         "it": "I cani possono assaggiare qualche pezzetto di broccolo. Prima un adulto lo cuoce senza condimenti e lo taglia in pezzetti piccoli.",
-        "pt": "Os cães podem provar um bocadinho de brócolos. Um adulto cozinha-os sem tempero e corta-os em pedaços pequenos."
+        "pt": "Os cães podem provar um bocadinho de brócolos. Um adulto cozinha-os sem tempero e corta-os em pedaços pequenos.",
+        "nl": "Honden mogen een beetje broccoli proeven. Een volwassene kookt hem zonder iets erbij en snijdt hem in kleine stukjes."
       },
       "faq": [
         {
@@ -21195,7 +21288,8 @@
             "fr": "Les tiges de brocoli sont-elles sans danger pour les chiens ?",
             "es": "¿Son seguros los tallos de brócoli para los perros?",
             "it": "I gambi dei broccoli sono sicuri per i cani?",
-            "pt": "Os talos de brócolos são seguros para os cães?"
+            "pt": "Os talos de brócolos são seguros para os cães?",
+            "nl": "Zijn broccolistronken veilig voor honden?"
           },
           "a": {
             "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
@@ -21204,7 +21298,8 @@
             "fr": "Les tiges dures peuvent obstruer l’œsophage d’un chien, surtout chez les petits chiens. Coupez le brocoli en morceaux de la taille d’une bouchée ; le brocoli cuit aide à éviter ce problème.",
             "es": "Los tallos duros pueden obstruir el esófago de un perro, sobre todo en perros pequeños. Corta el brócoli en trozos del tamaño de un bocado; el brócoli cocido ayuda a evitar este problema.",
             "it": "I gambi duri possono ostruire l’esofago del cane, soprattutto se è di piccola taglia. Taglia i broccoli in pezzetti da un boccone; con i broccoli cotti questo problema si evita.",
-            "pt": "Os talos duros podem obstruir o esófago de um cão, sobretudo nos cães pequenos. Corta os brócolos em pedaços de uma dentada; se estiverem cozinhados, evita-se este problema."
+            "pt": "Os talos duros podem obstruir o esófago de um cão, sobretudo nos cães pequenos. Corta os brócolos em pedaços de uma dentada; se estiverem cozinhados, evita-se este problema.",
+            "nl": "Harde stronken kunnen de slokdarm van een hond blokkeren, vooral bij kleine honden. Snijd broccoli in hapklare stukjes; gekookte broccoli helpt om dit te voorkomen."
           }
         }
       ],
@@ -21743,7 +21838,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Carrots",
@@ -21752,7 +21848,8 @@
         "fr": "Carottes",
         "es": "Zanahorias",
         "it": "Carote",
-        "pt": "Cenouras"
+        "pt": "Cenouras",
+        "nl": "Wortels"
       },
       "question": {
         "en": "Can dogs eat carrots?",
@@ -21761,7 +21858,8 @@
         "fr": "Les chiens peuvent-ils manger des carottes ?",
         "es": "¿Pueden los perros comer zanahorias?",
         "it": "I cani possono mangiare le carote?",
-        "pt": "Os cães podem comer cenouras?"
+        "pt": "Os cães podem comer cenouras?",
+        "nl": "Mogen honden wortels eten?"
       },
       "url_slug": {
         "en": "carrots",
@@ -21770,7 +21868,8 @@
         "fr": "carottes",
         "es": "zanahorias",
         "it": "carote",
-        "pt": "cenouras"
+        "pt": "cenouras",
+        "nl": "wortels"
       },
       "answer": {
         "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
@@ -21779,7 +21878,8 @@
         "fr": "Oui. Les carottes sont sans danger pour les chiens et constituent un en-cas sain et peu calorique, crues ou cuites. Coupez-les d’abord en morceaux de la taille d’une bouchée pour éviter l’étouffement.",
         "es": "Sí. Las zanahorias son seguras para los perros y un tentempié sano y bajo en calorías, crudas o cocidas. Córtalas antes en trozos del tamaño de un bocado para evitar atragantamientos.",
         "it": "Sì. Le carote sono sicure per i cani: uno spuntino sano e poco calorico, crude o cotte. Tagliale prima in pezzetti da un boccone per evitare il soffocamento.",
-        "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar."
+        "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar.",
+        "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen."
       },
       "why": {
         "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -21788,7 +21888,8 @@
         "fr": "Les carottes sont une excellente source de vitamine A, de potassium et de fibres, et sont riches en bêta-carotène. Croquer des carottes peut aussi contribuer à la santé dentaire de votre chien. Le principal risque est l’étouffement : c’est pourquoi les carottes entières, et même les bâtonnets de carotte, doivent être coupés en morceaux de la taille d’une bouchée.",
         "es": "Las zanahorias son una excelente fuente de vitamina A, potasio y fibra y tienen mucho betacaroteno. Además, masticarlas puede ayudar a mejorar la salud dental de tu perro. El principal riesgo es el atragantamiento, por lo que las zanahorias enteras, e incluso los palitos de zanahoria, deben cortarse en trozos del tamaño de un bocado.",
         "it": "Le carote sono un’ottima fonte di vitamina A, potassio e fibre e sono ricche di betacarotene. Inoltre, masticarle può fare bene ai denti del cane. Il rischio principale è il soffocamento: per questo le carote intere, e perfino i bastoncini di carota, vanno tagliati in pezzetti da un boccone.",
-        "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada."
+        "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada.",
+        "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden."
       },
       "signs": null,
       "what_to_do": {
@@ -21798,7 +21899,8 @@
         "fr": "Demandez à votre vétérinaire quelle quantité de carottes convient à votre chien chaque jour.",
         "es": "Consulta con tu veterinario cuántas zanahorias le convienen a tu perro cada día.",
         "it": "Chiedi al veterinario quante carote al giorno puoi dare al tuo cane.",
-        "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia."
+        "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia.",
+        "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen."
       },
       "serving": {
         "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -21807,7 +21909,8 @@
         "fr": "Lavez et/ou épluchez les carottes, puis coupez les carottes entières, et même les bâtonnets, en morceaux de la taille d’une bouchée. Crues ou cuites, les carottes conviennent.",
         "es": "Lava o pela las zanahorias y luego corta las enteras, e incluso los palitos, en trozos del tamaño de un bocado. Tanto crudas como cocidas están bien.",
         "it": "Lava o sbuccia le carote, poi tagliale in pezzetti da un boccone, anche se sono bastoncini. Vanno bene sia crude sia cotte.",
-        "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas."
+        "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas.",
+        "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima."
       },
       "child": {
         "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -21816,7 +21919,8 @@
         "fr": "Les carottes croquantes sont un en-cas sain pour le chien ! Un adulte les lave et les coupe d’abord en petits morceaux.",
         "es": "¡Las zanahorias crujientes son un tentempié sano para perros! Un adulto las lava y las corta antes en trocitos.",
         "it": "Le carote croccanti sono uno spuntino sano per i cani! Prima un adulto le lava e le taglia in pezzetti piccoli.",
-        "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos."
+        "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos.",
+        "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes."
       },
       "faq": [
         {
@@ -21827,7 +21931,8 @@
             "fr": "Les chiots qui font leurs dents peuvent-ils manger des carottes froides ou congelées ?",
             "es": "¿Pueden los cachorros que están echando los dientes tomar zanahoria fría o congelada?",
             "it": "I cuccioli che mettono i denti possono mangiare carote fredde o congelate?",
-            "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?"
+            "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?",
+            "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?"
           },
           "a": {
             "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -21836,7 +21941,8 @@
             "fr": "Certains vétérinaires recommandent des carottes froides ou congelées pour les chiots qui font leurs dents, afin de soulager leur inconfort.",
             "es": "Algunos veterinarios recomiendan zanahorias frías o congeladas para los cachorros que están echando los dientes, como forma de aliviar las molestias.",
             "it": "Alcuni veterinari consigliano ai cuccioli che mettono i denti carote fredde o congelate, per alleviare il fastidio.",
-            "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto."
+            "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto.",
+            "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten."
           }
         }
       ],
@@ -22089,7 +22195,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cauliflower",
@@ -22098,7 +22205,8 @@
         "fr": "Chou-fleur",
         "es": "Coliflor",
         "it": "Cavolfiore",
-        "pt": "Couve-flor"
+        "pt": "Couve-flor",
+        "nl": "Bloemkool"
       },
       "question": {
         "en": "Can dogs eat cauliflower?",
@@ -22107,7 +22215,8 @@
         "fr": "Les chiens peuvent-ils manger du chou-fleur ?",
         "es": "¿Pueden los perros comer coliflor?",
         "it": "I cani possono mangiare il cavolfiore?",
-        "pt": "Os cães podem comer couve-flor?"
+        "pt": "Os cães podem comer couve-flor?",
+        "nl": "Mogen honden bloemkool eten?"
       },
       "url_slug": {
         "en": "cauliflower",
@@ -22116,7 +22225,8 @@
         "fr": "chou-fleur",
         "es": "coliflor",
         "it": "cavolfiore",
-        "pt": "couve-flor"
+        "pt": "couve-flor",
+        "nl": "bloemkool"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Cauliflower is safe for dogs when served properly: cooked plainly, without seasonings, and chopped into bite-size pieces. Large portions may cause gas, bloating and diarrhoea.",
@@ -22125,7 +22235,8 @@
         "fr": "Oui, comme friandise occasionnelle. Le chou-fleur est sans danger pour les chiens lorsqu’il est bien préparé : cuit nature, sans assaisonnement, et coupé en morceaux de la taille d’une bouchée. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée.",
         "es": "Sí, como premio ocasional. La coliflor es segura para los perros si se sirve bien: cocida sin nada añadido, sin condimentos y cortada en trozos del tamaño de un bocado. Las raciones grandes pueden causar gases, hinchazón y diarrea.",
         "it": "Sì, come premio occasionale. Il cavolfiore è sicuro per i cani se preparato nel modo giusto: cotto, senza condimenti e tagliato in pezzetti da un boccone. Le porzioni abbondanti possono causare gas, gonfiore e diarrea.",
-        "pt": "Sim, como guloseima ocasional. A couve-flor é segura para os cães quando bem preparada: cozinhada sem tempero e cortada em pedaços de uma dentada. Porções grandes podem causar gases, inchaço e diarreia."
+        "pt": "Sim, como guloseima ocasional. A couve-flor é segura para os cães quando bem preparada: cozinhada sem tempero e cortada em pedaços de uma dentada. Porções grandes podem causar gases, inchaço e diarreia.",
+        "nl": "Ja, af en toe als snoepje. Bloemkool is veilig voor honden als je het goed klaarmaakt: gaar, zonder kruiden en in hapklare stukjes gesneden. Grote porties kunnen winderigheid, een opgeblazen buik en diarree geven."
       },
       "why": {
         "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
@@ -22134,7 +22245,8 @@
         "fr": "Le chou-fleur contient des fibres, de la vitamine C et de la vitamine K, et constitue un bon en-cas pour aider les chiens à perdre du poids. Ces mêmes fibres peuvent provoquer des gaz, des ballonnements et de la diarrhée quand on en donne trop. Le chou-fleur cru est sans danger en petite quantité mais peut être difficile à digérer, et de gros morceaux crus peuvent présenter un risque d’étouffement ; la cuisson à la vapeur ou à l’eau le rend plus tendre, plus facile à mâcher et à digérer. Certains chiens peuvent y être allergiques ou sensibles.",
         "es": "La coliflor aporta fibra, vitamina C y vitamina K, y es un buen tentempié cuando se quiere ayudar a un perro a perder peso. Esa misma fibra puede causar gases, hinchazón y diarrea si se come demasiada. La coliflor cruda es segura en pequeñas cantidades, pero puede ser difícil de digerir, y los trozos grandes crudos pueden provocar atragantamiento; al vapor o hervida queda más blanda y es más fácil de masticar y digerir. Algunos perros pueden tener reacciones alérgicas o sensibilidad a la coliflor.",
         "it": "Il cavolfiore contiene fibre, vitamina C e vitamina K ed è uno spuntino adatto ai cani che devono perdere peso. Le stesse fibre, se ne viene mangiato troppo, possono causare gas, gonfiore e diarrea. Il cavolfiore crudo è sicuro in piccole quantità, ma può essere difficile da digerire, e i pezzi grandi, se crudi, possono far soffocare; cuocerlo al vapore o lessarlo lo rende più morbido, più facile da masticare e da digerire. Alcuni cani possono avere reazioni allergiche o essere sensibili al cavolfiore.",
-        "pt": "A couve-flor tem fibra, vitamina C e vitamina K, e é uma boa guloseima para ajudar os cães a perder peso. A mesma fibra pode causar gases, inchaço e diarreia se for dada em excesso. A couve-flor crua é segura em pequenas quantidades, mas pode ser difícil de digerir, e pedaços grandes e crus podem provocar engasgamento; cozida a vapor ou em água fica mais macia e mais fácil de mastigar e digerir. Alguns cães podem ter reações alérgicas ou sensibilidade à couve-flor."
+        "pt": "A couve-flor tem fibra, vitamina C e vitamina K, e é uma boa guloseima para ajudar os cães a perder peso. A mesma fibra pode causar gases, inchaço e diarreia se for dada em excesso. A couve-flor crua é segura em pequenas quantidades, mas pode ser difícil de digerir, e pedaços grandes e crus podem provocar engasgamento; cozida a vapor ou em água fica mais macia e mais fácil de mastigar e digerir. Alguns cães podem ter reações alérgicas ou sensibilidade à couve-flor.",
+        "nl": "Bloemkool bevat vezels, vitamine C en vitamine K en is een goed tussendoortje voor een hond die moet afvallen. Diezelfde vezels kunnen winderigheid, een opgeblazen buik en diarree veroorzaken als een hond er te veel van eet. Rauwe bloemkool is in kleine hoeveelheden veilig maar kan moeilijk verteerbaar zijn, en grote rauwe stukken kunnen verstikking veroorzaken; stomen of koken maakt hem zachter en makkelijker te kauwen en te verteren. Sommige honden kunnen er allergisch of gevoelig voor reageren."
       },
       "signs": null,
       "what_to_do": {
@@ -22144,7 +22256,8 @@
         "fr": "Donnez le chou-fleur cru progressivement, en petits morceaux. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée, et certains chiens peuvent y être sensibles.",
         "es": "Dale la coliflor cruda poco a poco y en trozos pequeños. Las raciones grandes pueden causar gases, hinchazón y diarrea, y algunos perros pueden ser sensibles a ella.",
         "it": "Se lo dai crudo, introducilo gradualmente e a pezzetti piccoli. Le porzioni abbondanti possono causare gas, gonfiore e diarrea, e alcuni cani possono essere sensibili.",
-        "pt": "Dá a couve-flor crua aos poucos, em pedaços pequenos. Porções grandes podem causar gases, inchaço e diarreia, e alguns cães podem ser sensíveis à couve-flor."
+        "pt": "Dá a couve-flor crua aos poucos, em pedaços pequenos. Porções grandes podem causar gases, inchaço e diarreia, e alguns cães podem ser sensíveis à couve-flor.",
+        "nl": "Geef rauwe bloemkool rustig aan, in kleine stukjes. Grote porties kunnen winderigheid, een opgeblazen buik en diarree geven, en sommige honden zijn er gevoelig voor."
       },
       "serving": {
         "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
@@ -22153,7 +22266,8 @@
         "fr": "Faites-le cuire à la vapeur ou à l’eau, nature, sans sel, huile, beurre, ail ni oignon, et coupez-le en morceaux de la taille d’une bouchée. Les tiges dures doivent aussi être bouillies ou cuites à la vapeur. Une friandise occasionnelle, pas un en-cas quotidien.",
         "es": "Cuécela al vapor o hiérvela, sin sal, aceite, mantequilla, ajo ni cebolla, y córtala en trozos del tamaño de un bocado. Cuece también los tallos duros, al vapor o hervidos. Es un premio ocasional, no un tentempié diario.",
         "it": "Cuocilo al vapore o lessalo, senza sale, olio, burro, aglio o cipolla, e taglialo in pezzetti da un boccone. Cuoci i gambi duri al vapore o lessali. Un premio occasionale, non uno spuntino quotidiano.",
-        "pt": "Cozinha-a a vapor ou em água, sem sal, óleo, manteiga, alho nem cebola, e corta-a em pedaços de uma dentada. Cozinha também os talos duros, a vapor ou em água. É uma guloseima ocasional, não para todos os dias."
+        "pt": "Cozinha-a a vapor ou em água, sem sal, óleo, manteiga, alho nem cebola, e corta-a em pedaços de uma dentada. Cozinha também os talos duros, a vapor ou em água. É uma guloseima ocasional, não para todos os dias.",
+        "nl": "Stoom of kook hem zonder iets toe te voegen, dus zonder zout, olie, boter, knoflook of ui, en snijd hem in hapklare stukjes. Kook of stoom ook de taaie stronken. Af en toe als snoepje, niet als dagelijks tussendoortje."
       },
       "child": {
         "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
@@ -22162,7 +22276,8 @@
         "fr": "Les chiens peuvent avoir quelques petits morceaux de chou-fleur nature. Trop de chou-fleur peut leur donner un ventre plein de gaz !",
         "es": "Los perros pueden tomar unos pocos trocitos de coliflor sin condimentar. ¡Si comen demasiada, les puede doler la barriguita por los gases!",
         "it": "I cani possono mangiare qualche pezzettino di cavolfiore senza condimenti. Se ne mangiano troppo, però, gli può venire la pancia gonfia e tante puzzette!",
-        "pt": "Os cães podem comer uns pedacinhos de couve-flor sem tempero. Se comerem demais, podem ficar com a barriga cheia de gases!"
+        "pt": "Os cães podem comer uns pedacinhos de couve-flor sem tempero. Se comerem demais, podem ficar com a barriga cheia de gases!",
+        "nl": "Honden mogen een paar kleine stukjes bloemkool zonder toevoegingen. Van te veel krijgen ze een winderig buikje!"
       },
       "faq": [
         {
@@ -22173,7 +22288,8 @@
             "fr": "Les chiens peuvent-ils manger les feuilles de chou-fleur ?",
             "es": "¿Pueden los perros comer hojas de coliflor?",
             "it": "I cani possono mangiare le foglie del cavolfiore?",
-            "pt": "Os cães podem comer folhas de couve-flor?"
+            "pt": "Os cães podem comer folhas de couve-flor?",
+            "nl": "Mogen honden de bladeren van bloemkool eten?"
           },
           "a": {
             "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
@@ -22182,7 +22298,8 @@
             "fr": "Oui. Les feuilles sont sans danger pour les chiens et contiennent de précieux nutriments ; la plupart des chiens les apprécient légèrement cuites à la vapeur, en complément du repas.",
             "es": "Sí. Las hojas son seguras para los perros y contienen nutrientes valiosos; a la mayoría de los perros les gustan ligeramente cocidas al vapor, como complemento de su comida.",
             "it": "Sì. Le foglie sono sicure per i cani e ricche di sostanze nutritive; a molti cani piacciono leggermente cotte al vapore, come aggiunta al pasto.",
-            "pt": "Sim. As folhas são seguras para os cães e têm nutrientes valiosos; a maioria dos cães gosta delas ligeiramente cozidas a vapor, por cima da comida."
+            "pt": "Sim. As folhas são seguras para os cães e têm nutrientes valiosos; a maioria dos cães gosta delas ligeiramente cozidas a vapor, por cima da comida.",
+            "nl": "Ja. De bladeren zijn veilig voor honden en bevatten waardevolle voedingsstoffen; de meeste honden vinden ze lekker, licht gestoomd als topping op hun eten."
           }
         }
       ],
@@ -26334,7 +26451,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cucumber",
@@ -26343,7 +26461,8 @@
         "fr": "Concombre",
         "es": "Pepino",
         "it": "Cetriolo",
-        "pt": "Pepino"
+        "pt": "Pepino",
+        "nl": "Komkommer"
       },
       "question": {
         "en": "Can dogs eat cucumber?",
@@ -26352,7 +26471,8 @@
         "fr": "Les chiens peuvent-ils manger du concombre ?",
         "es": "¿Pueden los perros comer pepino?",
         "it": "I cani possono mangiare il cetriolo?",
-        "pt": "Os cães podem comer pepino?"
+        "pt": "Os cães podem comer pepino?",
+        "nl": "Mogen honden komkommer eten?"
       },
       "url_slug": {
         "en": "cucumber",
@@ -26361,7 +26481,8 @@
         "fr": "concombre",
         "es": "pepino",
         "it": "cetriolo",
-        "pt": "pepino"
+        "pt": "pepino",
+        "nl": "komkommer"
       },
       "answer": {
         "en": "Yes. Cucumbers are perfectly safe for dogs and make a low-calorie, crunchy snack. Serve them plain, washed and cut into small pieces, introduce them gradually, and never give pickles.",
@@ -26370,7 +26491,8 @@
         "fr": "Oui. Les concombres sont tout à fait sans danger pour les chiens et constituent un en-cas croquant et peu calorique. Servez-les nature, lavés et coupés en petits morceaux, introduisez-les progressivement, et ne donnez jamais de cornichons.",
         "es": "Sí. Los pepinos son totalmente seguros para los perros y un tentempié crujiente y bajo en calorías. Sírvelos sin condimentar, lavados y cortados en trozos pequeños, introdúcelos poco a poco y nunca des pepinillos.",
         "it": "Sì. I cetrioli sono del tutto sicuri per i cani: uno spuntino croccante e poco calorico. Servili al naturale, lavati e tagliati a pezzetti, introducili gradualmente e non dare mai i cetriolini sott’aceto.",
-        "pt": "Sim. Os pepinos são perfeitamente seguros para os cães e uma guloseima estaladiça e pouco calórica. Serve-os naturais, lavados e cortados em pedaços pequenos, introduz-os aos poucos e nunca dês pepinos em conserva."
+        "pt": "Sim. Os pepinos são perfeitamente seguros para os cães e uma guloseima estaladiça e pouco calórica. Serve-os naturais, lavados e cortados em pedaços pequenos, introduz-os aos poucos e nunca dês pepinos em conserva.",
+        "nl": "Ja. Komkommer is helemaal veilig voor honden en een caloriearm, knapperig tussendoortje. Geef hem zonder iets erbij, gewassen en in kleine stukjes, laat je hond er rustig aan wennen en geef nooit augurken."
       },
       "why": {
         "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
@@ -26379,7 +26501,8 @@
         "fr": "Les concombres sont peu caloriques, très pauvres en sodium et sans matières grasses, avec une forte teneur en eau : ils conviennent donc particulièrement aux chiens qui doivent perdre du poids. Il y a deux points de vigilance : l’excès, qui peut perturber la digestion, et l’étouffement, en particulier chez les petits chiens ou les chiens qui mangent vite.",
         "es": "Los pepinos tienen pocas calorías, muy poco sodio, no tienen grasa y contienen mucha agua, por lo que son especialmente buenos para los perros que necesitan adelgazar. Los dos riesgos principales son comer demasiado, lo que puede sentar mal al estómago, y el atragantamiento, sobre todo en perros pequeños o que comen muy deprisa.",
         "it": "I cetrioli hanno poche calorie, pochissimo sodio, niente grassi e un alto contenuto d’acqua, quindi sono particolarmente adatti ai cani che devono perdere peso. I rischi principali sono due: mangiarne troppi, che può far venire mal di stomaco, e il soffocamento, in particolare nei cani di piccola taglia o che mangiano in fretta.",
-        "pt": "Os pepinos têm poucas calorias, muito pouco sódio e nenhuma gordura, e são ricos em água, por isso são especialmente indicados para os cães que precisam de perder peso. As duas principais preocupações são o excesso, que pode causar indisposição de estômago, e o engasgamento, sobretudo nos cães mais pequenos ou nos que comem depressa."
+        "pt": "Os pepinos têm poucas calorias, muito pouco sódio e nenhuma gordura, e são ricos em água, por isso são especialmente indicados para os cães que precisam de perder peso. As duas principais preocupações são o excesso, que pode causar indisposição de estômago, e o engasgamento, sobretudo nos cães mais pequenos ou nos que comem depressa.",
+        "nl": "Komkommer bevat weinig calorieën, heel weinig natrium en geen vet, en bestaat voor een groot deel uit water; daarom is hij vooral goed voor honden die moeten afvallen. De twee belangrijkste aandachtspunten zijn te veel eten, wat de maag van streek kan maken, en verstikking, vooral bij kleinere honden of honden die snel eten."
       },
       "signs": null,
       "what_to_do": {
@@ -26389,7 +26512,8 @@
         "fr": "Introduisez le concombre progressivement et surveillez votre chien lorsqu’il goûte quelque chose de nouveau. En donner trop, ou l’introduire trop vite, peut provoquer de légers troubles digestifs.",
         "es": "Introduce el pepino poco a poco y vigila a tu perro cuando pruebe algo nuevo. Darle demasiado, o dárselo demasiado deprisa, puede provocarle un ligero malestar de estómago.",
         "it": "Introduci il cetriolo gradualmente e osserva il tuo cane quando assaggia qualcosa di nuovo. Se ne dai troppo, o troppo in fretta, può venirgli un lieve mal di stomaco.",
-        "pt": "Introduz o pepino aos poucos e observa o teu cão quando experimenta algo novo. Dar demasiado, ou introduzi-lo depressa demais, pode causar uma ligeira indisposição de estômago."
+        "pt": "Introduz o pepino aos poucos e observa o teu cão quando experimenta algo novo. Dar demasiado, ou introduzi-lo depressa demais, pode causar uma ligeira indisposição de estômago.",
+        "nl": "Laat je hond rustig aan komkommer wennen en let goed op als hij iets nieuws probeert. Te veel geven of er te snel mee beginnen kan een milde maagklacht veroorzaken."
       },
       "serving": {
         "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
@@ -26398,7 +26522,8 @@
         "fr": "Lavez-le soigneusement et coupez-le en petits morceaux faciles à manger, adaptés à la taille de votre chien et à sa façon de mâcher ; ne donnez pas un concombre entier. Uniquement des concombres nature.",
         "es": "Lávalo bien y córtalo en trozos pequeños y fáciles de manejar, adecuados para el tamaño de tu perro y su forma de masticar; no le des un pepino entero. Solo pepino natural, sin condimentar.",
         "it": "Lavalo bene e taglialo in pezzetti piccoli, adatti alla taglia del tuo cane e al suo modo di mangiare; non dare un cetriolo intero. Solo cetrioli al naturale, senza aggiunte.",
-        "pt": "Lava bem o pepino e corta-o em pedaços pequenos, adequados ao tamanho do teu cão e à forma como ele mastiga; não dês um pepino inteiro. Apenas pepinos naturais."
+        "pt": "Lava bem o pepino e corta-o em pedaços pequenos, adequados ao tamanho do teu cão e à forma como ele mastiga; não dês um pepino inteiro. Apenas pepinos naturais.",
+        "nl": "Was de komkommer grondig en snijd hem in kleine, handzame stukjes die passen bij de grootte en het kauwgedrag van je hond; geef geen hele komkommer. Alleen komkommer zonder toevoegingen."
       },
       "child": {
         "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
@@ -26407,7 +26532,8 @@
         "fr": "Les chiens peuvent croquer quelques morceaux de concombre. Un adulte lave le concombre et le coupe d’abord en petits morceaux.",
         "es": "Los perros pueden mordisquear unos trocitos de pepino. Un adulto lava el pepino y lo corta antes en trocitos.",
         "it": "I cani possono sgranocchiare qualche pezzetto di cetriolo. Prima un adulto lo lava e lo taglia in pezzetti piccoli.",
-        "pt": "Os cães podem trincar uns pedacinhos de pepino. Um adulto lava o pepino e corta-o primeiro em pedaços pequenos."
+        "pt": "Os cães podem trincar uns pedacinhos de pepino. Um adulto lava o pepino e corta-o primeiro em pedaços pequenos.",
+        "nl": "Honden mogen knabbelen op een paar stukjes komkommer. Een volwassene wast de komkommer en snijdt hem eerst klein."
       },
       "faq": [
         {
@@ -26418,7 +26544,8 @@
             "fr": "Les chiens peuvent-ils manger des cornichons ?",
             "es": "¿Pueden los perros comer pepinillos?",
             "it": "I cani possono mangiare i cetriolini sott’aceto?",
-            "pt": "Os cães podem comer pepinos em conserva?"
+            "pt": "Os cães podem comer pepinos em conserva?",
+            "nl": "Mogen honden augurken eten?"
           },
           "a": {
             "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
@@ -26427,7 +26554,8 @@
             "fr": "Non. Évitez de donner des cornichons à votre chien, car ils contiennent généralement du sel ajouté, des épices et d’autres ingrédients.",
             "es": "No. Evita dar pepinillos a tu perro, porque suelen llevar sal, especias y otros ingredientes añadidos.",
             "it": "No. Evita di dare al tuo cane i cetriolini sott’aceto, perché di solito contengono sale, spezie e altri ingredienti aggiunti.",
-            "pt": "Não. Evita dar pepinos em conserva ao teu cão, porque normalmente levam sal, especiarias e outros ingredientes."
+            "pt": "Não. Evita dar pepinos em conserva ao teu cão, porque normalmente levam sal, especiarias e outros ingredientes.",
+            "nl": "Nee. Geef je hond geen augurken, want die bevatten meestal extra zout, specerijen en andere ingrediënten."
           }
         }
       ],
@@ -29477,7 +29605,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Green beans",
@@ -29486,7 +29615,8 @@
         "fr": "Haricots verts",
         "es": "Judías verdes",
         "it": "Fagiolini",
-        "pt": "Feijão-verde"
+        "pt": "Feijão-verde",
+        "nl": "Sperziebonen"
       },
       "question": {
         "en": "Can dogs eat green beans?",
@@ -29495,7 +29625,8 @@
         "fr": "Les chiens peuvent-ils manger des haricots verts ?",
         "es": "¿Pueden los perros comer judías verdes?",
         "it": "I cani possono mangiare i fagiolini?",
-        "pt": "Os cães podem comer feijão-verde?"
+        "pt": "Os cães podem comer feijão-verde?",
+        "nl": "Mogen honden sperziebonen eten?"
       },
       "url_slug": {
         "en": "green-beans",
@@ -29504,7 +29635,8 @@
         "fr": "haricots-verts",
         "es": "judias-verdes",
         "it": "fagiolini",
-        "pt": "feijao-verde"
+        "pt": "feijao-verde",
+        "nl": "sperziebonen"
       },
       "answer": {
         "en": "Yes. Plain green beans, raw or cooked, are safe for most dogs in moderation and make a low-calorie treat. Never give green beans with added salt, butter, garlic or other seasonings.",
@@ -29513,7 +29645,8 @@
         "fr": "Oui. Les haricots verts nature, crus ou cuits, sont sans danger, avec modération, pour la plupart des chiens et constituent une friandise peu calorique. Ne donnez jamais de haricots verts additionnés de sel, de beurre, d’ail ou d’autres assaisonnements.",
         "es": "Sí. Las judías verdes sin condimentar, crudas o cocidas, son seguras con moderación para la mayoría de los perros y constituyen un premio bajo en calorías. Nunca des judías verdes con sal, mantequilla, ajo u otros condimentos añadidos.",
         "it": "Sì. I fagiolini senza condimenti, crudi o cotti, sono sicuri per la maggior parte dei cani in quantità moderate e sono un premio poco calorico. Non dare mai fagiolini con sale, burro, aglio o altri condimenti.",
-        "pt": "Sim. O feijão-verde sem tempero, cru ou cozinhado, é seguro para a maioria dos cães, com moderação, e é uma guloseima pouco calórica. Nunca dês feijão-verde com sal, manteiga, alho ou outros temperos."
+        "pt": "Sim. O feijão-verde sem tempero, cru ou cozinhado, é seguro para a maioria dos cães, com moderação, e é uma guloseima pouco calórica. Nunca dês feijão-verde com sal, manteiga, alho ou outros temperos.",
+        "nl": "Ja. Ongekruide sperziebonen, rauw of gaar, zijn met mate veilig voor de meeste honden en een caloriearm snoepje. Geef nooit sperziebonen met toegevoegd zout, boter, knoflook of andere kruiden."
       },
       "why": {
         "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -29522,7 +29655,8 @@
         "fr": "Les haricots verts apportent des vitamines, des minéraux et des fibres et sont peu caloriques ; leur volume et leurs fibres aident le chien à se sentir rassasié sans ajouter beaucoup de calories. Beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté, et les recettes de haricots verts que l’on prépare habituellement pour soi ne sont pas sans danger pour les chiens.",
         "es": "Las judías verdes aportan vitaminas, minerales y fibra y tienen pocas calorías; el volumen y la fibra extra ayudan al perro a sentirse saciado sin añadir muchas calorías. Muchas judías verdes en conserva llevan mucha sal añadida, y las recetas habituales de judías verdes para personas no son seguras para los perros.",
         "it": "I fagiolini forniscono vitamine, minerali e fibre e hanno poche calorie; il volume e le fibre aiutano il cane a sentirsi sazio senza aggiungere molte calorie. Molti fagiolini in scatola contengono molto sale aggiunto, e le ricette di fagiolini più comuni per le persone non sono sicure per i cani.",
-        "pt": "O feijão-verde fornece vitaminas, minerais e fibra e tem poucas calorias; o volume e a fibra ajudam o cão a ficar saciado sem acrescentar muitas calorias. Muito do feijão-verde em conserva leva bastante sal, e as receitas habituais de feijão-verde para pessoas não são seguras para os cães."
+        "pt": "O feijão-verde fornece vitaminas, minerais e fibra e tem poucas calorias; o volume e a fibra ajudam o cão a ficar saciado sem acrescentar muitas calorias. Muito do feijão-verde em conserva leva bastante sal, e as receitas habituais de feijão-verde para pessoas não são seguras para os cães.",
+        "nl": "Sperziebonen leveren vitamines, mineralen en vezels en bevatten weinig calorieën; door het extra volume en de vezels voelt een hond zich verzadigd zonder veel extra calorieën binnen te krijgen. Veel sperziebonen uit blik bevatten veel toegevoegd zout, en gangbare sperziebonenrecepten voor mensen zijn niet veilig voor honden."
       },
       "signs": null,
       "what_to_do": {
@@ -29532,7 +29666,8 @@
         "fr": "Demandez conseil à votre vétérinaire avant de donner des haricots verts à votre chien. Ne donnez jamais de haricots verts cuits avec de l’ail ou du sel d’ail.",
         "es": "Pregunta a tu veterinario antes de darle judías verdes a tu perro. Nunca le des judías verdes cocinadas con ajo o sal de ajo.",
         "it": "Chiedi al veterinario prima di dare fagiolini al tuo cane. Non dare mai fagiolini cotti con aglio o sale all’aglio.",
-        "pt": "Pergunta ao teu veterinário antes de dares feijão-verde ao teu cão. Nunca dês feijão-verde cozinhado com alho ou sal de alho."
+        "pt": "Pergunta ao teu veterinário antes de dares feijão-verde ao teu cão. Nunca dês feijão-verde cozinhado com alho ou sal de alho.",
+        "nl": "Vraag je dierenarts om advies voordat je je hond sperziebonen geeft. Geef nooit sperziebonen die met knoflook of knoflookzout zijn bereid."
       },
       "serving": {
         "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -29541,7 +29676,8 @@
         "fr": "Servez-les crus, bouillis à l’eau ou cuits à la vapeur, mais gardez-les nature. Évitez les haricots verts en conserve et ceux préparés avec du beurre, de l’ail, du sel d’ail ou d’autres assaisonnements.",
         "es": "Sírvelas crudas, hervidas en agua o al vapor, pero siempre sin condimentar. Evita las judías verdes en conserva y las preparadas con mantequilla, ajo, sal de ajo u otros condimentos.",
         "it": "Servili crudi, lessati in acqua o cotti al vapore, ma sempre senza condimenti. Evita i fagiolini in scatola e quelli preparati con burro, aglio, sale all’aglio o altri condimenti.",
-        "pt": "Serve-o cru, cozido em água ou a vapor, mas sempre sem tempero. Evita o feijão-verde em conserva e o que for preparado com manteiga, alho, sal de alho ou outros temperos."
+        "pt": "Serve-o cru, cozido em água ou a vapor, mas sempre sem tempero. Evita o feijão-verde em conserva e o que for preparado com manteiga, alho, sal de alho ou outros temperos.",
+        "nl": "Geef ze rauw, gekookt in water of gestoomd, maar zonder toevoegingen. Vermijd sperziebonen uit blik en sperziebonen die met boter, knoflook, knoflookzout of andere kruiden zijn bereid."
       },
       "child": {
         "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -29550,7 +29686,8 @@
         "fr": "Les haricots verts nature sont une friandise croquante pour le chien. Les haricots cuisinés avec de l’ail ou du beurre ne sont pas faits pour les chiens.",
         "es": "Las judías verdes sin condimentar son un premio crujiente para perros. Las judías cocinadas con ajo o mantequilla no son para perros.",
         "it": "I fagiolini senza condimenti sono un premio croccante per i cani. Quelli cotti con aglio o burro non vanno bene per loro.",
-        "pt": "O feijão-verde sem tempero é uma guloseima estaladiça para cães. O feijão cozinhado com alho ou manteiga não é para cães."
+        "pt": "O feijão-verde sem tempero é uma guloseima estaladiça para cães. O feijão cozinhado com alho ou manteiga não é para cães.",
+        "nl": "Sperziebonen zonder toevoegingen zijn een knapperig snoepje voor honden. Bonen die met knoflook of boter zijn bereid, zijn niet voor honden."
       },
       "faq": [
         {
@@ -29561,7 +29698,8 @@
             "fr": "Les chiens peuvent-ils manger des haricots verts en conserve ?",
             "es": "¿Pueden los perros comer judías verdes en conserva?",
             "it": "I cani possono mangiare i fagiolini in scatola?",
-            "pt": "Os cães podem comer feijão-verde em conserva?"
+            "pt": "Os cães podem comer feijão-verde em conserva?",
+            "nl": "Mogen honden sperziebonen uit blik eten?"
           },
           "a": {
             "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -29570,7 +29708,8 @@
             "fr": "Il vaut mieux les éviter, car beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté.",
             "es": "Es mejor evitarlas, porque muchas judías verdes en conserva llevan mucha sal añadida.",
             "it": "Meglio evitarli, perché molti fagiolini in scatola contengono molto sale aggiunto.",
-            "pt": "O melhor é evitá-lo, porque muito do feijão-verde em conserva leva bastante sal."
+            "pt": "O melhor é evitá-lo, porque muito do feijão-verde em conserva leva bastante sal.",
+            "nl": "Je kunt ze beter vermijden, want veel sperziebonen uit blik bevatten veel toegevoegd zout."
           }
         }
       ],
@@ -33441,7 +33580,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Olives",
@@ -33450,7 +33590,8 @@
         "fr": "Olives",
         "es": "Aceitunas",
         "it": "Olive",
-        "pt": "Azeitonas"
+        "pt": "Azeitonas",
+        "nl": "Olijven"
       },
       "question": {
         "en": "Can dogs eat olives?",
@@ -33459,7 +33600,8 @@
         "fr": "Les chiens peuvent-ils manger des olives ?",
         "es": "¿Pueden los perros comer aceitunas?",
         "it": "I cani possono mangiare le olive?",
-        "pt": "Os cães podem comer azeitonas?"
+        "pt": "Os cães podem comer azeitonas?",
+        "nl": "Mogen honden olijven eten?"
       },
       "url_slug": {
         "en": "olives",
@@ -33468,7 +33610,8 @@
         "fr": "olives",
         "es": "aceitunas",
         "it": "olive",
-        "pt": "azeitonas"
+        "pt": "azeitonas",
+        "nl": "olijven"
       },
       "answer": {
         "en": "Yes, in moderation, if they are plain, unsalted and pitted. Olives aren't toxic to dogs, but the pits can cause choking or a blockage, and canned or pickled olives often contain too much sodium.",
@@ -33477,7 +33620,8 @@
         "fr": "Oui, avec modération, si elles sont nature, non salées et dénoyautées. Les olives ne sont pas toxiques pour les chiens, mais les noyaux peuvent provoquer un étouffement ou une obstruction, et les olives en conserve ou marinées contiennent souvent trop de sodium.",
         "es": "Sí, con moderación, si son naturales, sin sal y sin hueso. Las aceitunas no son tóxicas para los perros, pero los huesos pueden causar atragantamiento u obstrucción, y las aceitunas en conserva o en salmuera suelen llevar demasiado sodio.",
         "it": "Sì, con moderazione, se non sono condite, senza sale e denocciolate. Le olive non sono tossiche per i cani, ma i noccioli possono causare soffocamento o un’ostruzione, e le olive in scatola o in salamoia contengono spesso troppo sodio.",
-        "pt": "Sim, com moderação, se forem naturais, sem sal e sem caroço. As azeitonas não são tóxicas para os cães, mas os caroços podem causar engasgamento ou obstrução, e as azeitonas em conserva ou em salmoura costumam ter sódio a mais."
+        "pt": "Sim, com moderação, se forem naturais, sem sal e sem caroço. As azeitonas não são tóxicas para os cães, mas os caroços podem causar engasgamento ou obstrução, e as azeitonas em conserva ou em salmoura costumam ter sódio a mais.",
+        "nl": "Ja, met mate, als ze naturel, zonder zout en zonder pit zijn. Olijven zijn niet giftig voor honden, maar de pitten kunnen verstikking of een darmverstopping veroorzaken, en olijven uit blik of ingelegde olijven bevatten vaak te veel natrium."
       },
       "why": {
         "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
@@ -33486,7 +33630,8 @@
         "fr": "Les olives elles-mêmes ne contiennent aucun ingrédient toxique, mais les noyaux peuvent provoquer un étouffement, obstruer les voies respiratoires et se loger dans l’intestin d’un chien. Les olives en conserve ou marinées contiennent souvent un excès de sodium, et trop de sodium peut entraîner une déshydratation et, dans de rares cas, une intoxication au sel. Les olives enrobées d’ail, d’assaisonnements ou d’huiles présentent des risques supplémentaires, et les olives macérées dans l’alcool ne doivent jamais être données à un chien.",
         "es": "Las aceitunas en sí no contienen ingredientes tóxicos, pero los huesos pueden causar atragantamiento, bloquear las vías respiratorias y quedarse atascados en los intestinos del perro. Las aceitunas en conserva o en salmuera suelen llevar un exceso de sodio, y demasiado sodio puede provocar deshidratación y, en casos raros, intoxicación por sal. Las aceitunas aliñadas con ajo, condimentos o aceites suponen riesgos adicionales, y las aceitunas maceradas en alcohol no deben darse nunca a un perro.",
         "it": "Le olive in sé non contengono ingredienti tossici, ma i noccioli possono causare soffocamento, bloccare le vie respiratorie e incastrarsi nell’intestino del cane. Le olive in scatola o in salamoia contengono spesso un eccesso di sodio, e troppo sodio può portare a disidratazione e, in rari casi, a intossicazione da sale. Le olive condite con aglio, altri condimenti o oli comportano rischi aggiuntivi, e le olive messe a bagno nell’alcol non vanno mai date a un cane.",
-        "pt": "As azeitonas em si não contêm ingredientes tóxicos, mas os caroços podem causar engasgamento, obstruir as vias respiratórias e ficar presos no intestino do cão. As azeitonas em conserva ou em salmoura costumam ter sódio a mais, e demasiado sódio pode levar à desidratação e, em casos raros, a uma intoxicação por sal. As azeitonas com alho, temperos ou óleos trazem riscos adicionais, e as azeitonas conservadas em álcool nunca devem ser dadas a um cão."
+        "pt": "As azeitonas em si não contêm ingredientes tóxicos, mas os caroços podem causar engasgamento, obstruir as vias respiratórias e ficar presos no intestino do cão. As azeitonas em conserva ou em salmoura costumam ter sódio a mais, e demasiado sódio pode levar à desidratação e, em casos raros, a uma intoxicação por sal. As azeitonas com alho, temperos ou óleos trazem riscos adicionais, e as azeitonas conservadas em álcool nunca devem ser dadas a um cão.",
+        "nl": "Olijven zelf bevatten geen giftige stoffen, maar de pitten kunnen verstikking veroorzaken, de luchtwegen blokkeren en vast komen te zitten in de darmen van een hond. Olijven uit blik of ingelegde olijven bevatten vaak te veel natrium, en te veel natrium kan tot uitdroging leiden en in zeldzame gevallen tot zoutvergiftiging. Olijven met knoflook, kruiden of olie brengen extra risico’s met zich mee, en olijven die in alcohol zijn gedrenkt mag je een hond nooit geven."
       },
       "signs": null,
       "what_to_do": {
@@ -33496,7 +33641,8 @@
         "fr": "Si votre chien mange beaucoup d’olives, surtout avec les noyaux, contactez votre vétérinaire pour avoir son avis.",
         "es": "Si tu perro come muchas aceitunas, sobre todo con hueso, ponte en contacto con tu veterinario para que te aconseje.",
         "it": "Se il tuo cane mangia molte olive, soprattutto con i noccioli, contatta il veterinario per un consiglio.",
-        "pt": "Se o teu cão comer muitas azeitonas, sobretudo com caroço, pede conselho ao teu veterinário."
+        "pt": "Se o teu cão comer muitas azeitonas, sobretudo com caroço, pede conselho ao teu veterinário.",
+        "nl": "Als je hond veel olijven heeft gegeten, vooral met pit, neem dan contact op met je dierenarts voor advies."
       },
       "serving": {
         "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
@@ -33505,7 +33651,8 @@
         "fr": "Uniquement des olives nature, non salées et dénoyautées, en petites quantités. Évitez les olives en conserve ou marinées, ainsi que celles à l’ail, aux assaisonnements, à l’huile ou à l’alcool.",
         "es": "Solo aceitunas naturales, sin sal y sin hueso, en pequeñas cantidades. Evita las aceitunas en conserva o en salmuera y las que llevan ajo, condimentos, aceites o alcohol.",
         "it": "Solo olive non condite, senza sale e denocciolate, in piccole quantità. Evita le olive in scatola o in salamoia e quelle con aglio, condimenti, oli o alcol.",
-        "pt": "Apenas azeitonas naturais, sem sal e sem caroço, em pequenas quantidades. Evita as azeitonas em conserva ou em salmoura e as que levam alho, temperos, óleos ou álcool."
+        "pt": "Apenas azeitonas naturais, sem sal e sem caroço, em pequenas quantidades. Evita as azeitonas em conserva ou em salmoura e as que levam alho, temperos, óleos ou álcool.",
+        "nl": "Alleen naturel, ongezouten olijven zonder pit, in kleine hoeveelheden. Vermijd olijven uit blik of ingelegde olijven en olijven met knoflook, kruiden, olie of alcohol."
       },
       "child": {
         "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
@@ -33514,7 +33661,8 @@
         "fr": "Les chiens peuvent avoir une olive nature de temps en temps, dont un adulte a retiré le noyau. Les olives salées ne sont pas pour les chiens.",
         "es": "Los perros pueden tomar una aceituna natural de vez en cuando, con el hueso quitado por un adulto. Las aceitunas saladas no son para los perros.",
         "it": "Ogni tanto i cani possono mangiare un’oliva non condita, a cui un adulto ha tolto il nocciolo. Le olive salate non sono per i cani.",
-        "pt": "Os cães podem comer uma azeitona natural de vez em quando, com o caroço retirado por um adulto. As azeitonas salgadas não são para cães."
+        "pt": "Os cães podem comer uma azeitona natural de vez em quando, com o caroço retirado por um adulto. As azeitonas salgadas não são para cães.",
+        "nl": "Honden mogen af en toe een olijf zonder toevoegingen, als een volwassene eerst de pit eruit haalt. Zoute olijven zijn niet voor honden."
       },
       "faq": [
         {
@@ -33525,7 +33673,8 @@
             "fr": "Les noyaux d’olive sont-ils dangereux pour les chiens ?",
             "es": "¿Son peligrosos los huesos de aceituna para los perros?",
             "it": "I noccioli delle olive sono pericolosi per i cani?",
-            "pt": "Os caroços de azeitona são perigosos para os cães?"
+            "pt": "Os caroços de azeitona são perigosos para os cães?",
+            "nl": "Zijn olijfpitten gevaarlijk voor honden?"
           },
           "a": {
             "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
@@ -33534,7 +33683,8 @@
             "fr": "Oui. Les noyaux d’olive peuvent provoquer un étouffement ou une obstruction des voies respiratoires, et ils peuvent se loger dans l’intestin d’un chien.",
             "es": "Sí. Los huesos de aceituna pueden causar atragantamiento u obstrucciones respiratorias y pueden quedarse atascados en los intestinos del perro.",
             "it": "Sì. I noccioli delle olive possono causare soffocamento, ostruire le vie respiratorie e incastrarsi nell’intestino del cane.",
-            "pt": "Sim. Os caroços de azeitona podem causar engasgamento ou obstrução das vias respiratórias, e podem ficar presos no intestino do cão."
+            "pt": "Sim. Os caroços de azeitona podem causar engasgamento ou obstrução das vias respiratórias, e podem ficar presos no intestino do cão.",
+            "nl": "Ja. Olijfpitten kunnen verstikking veroorzaken of de luchtwegen blokkeren, en ze kunnen vast komen te zitten in de darmen van een hond."
           }
         }
       ],
@@ -35495,7 +35645,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Peas",
@@ -35504,7 +35655,8 @@
         "fr": "Petits pois",
         "es": "Guisantes",
         "it": "Piselli",
-        "pt": "Ervilhas"
+        "pt": "Ervilhas",
+        "nl": "Erwten"
       },
       "question": {
         "en": "Can dogs eat peas?",
@@ -35513,7 +35665,8 @@
         "fr": "Les chiens peuvent-ils manger des petits pois ?",
         "es": "¿Pueden los perros comer guisantes?",
         "it": "I cani possono mangiare i piselli?",
-        "pt": "Os cães podem comer ervilhas?"
+        "pt": "Os cães podem comer ervilhas?",
+        "nl": "Mogen honden erwten eten?"
       },
       "url_slug": {
         "en": "peas",
@@ -35522,7 +35675,8 @@
         "fr": "petits-pois",
         "es": "guisantes",
         "it": "piselli",
-        "pt": "ervilhas"
+        "pt": "ervilhas",
+        "nl": "erwten"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Green peas, including snow peas, sugar snap peas and garden peas, are not toxic to dogs. Give them fresh or frozen, but not canned, because canned peas usually contain a lot of added sodium.",
@@ -35531,7 +35685,8 @@
         "fr": "Oui, comme friandise occasionnelle. Les pois verts, y compris les pois mange-tout, les pois gourmands et les petits pois de jardin, ne sont pas toxiques pour les chiens. Donnez-les frais ou surgelés, mais pas en conserve, car les petits pois en conserve contiennent généralement beaucoup de sodium ajouté.",
         "es": "Sí, como premio ocasional. Los guisantes verdes, incluidos los tirabeques, los guisantes dulces y los guisantes de huerta, no son tóxicos para los perros. Dáselos frescos o congelados, pero no en conserva, porque los guisantes en conserva suelen llevar mucho sodio añadido.",
         "it": "Sì, come premio occasionale. I piselli verdi, comprese le taccole, i piselli zuccherini (sugar snap) e i piselli da sgusciare, non sono tossici per i cani. Dalli freschi o surgelati, ma non in scatola, perché i piselli in scatola contengono di solito molto sodio aggiunto.",
-        "pt": "Sim, como guloseima ocasional. As ervilhas verdes, incluindo as ervilhas-tortas, as ervilhas-de-quebrar (sugar snap) e as ervilhas de debulhar, não são tóxicas para os cães. Dá-as frescas ou congeladas, mas não em conserva, porque as ervilhas em conserva costumam ter muito sódio adicionado."
+        "pt": "Sim, como guloseima ocasional. As ervilhas verdes, incluindo as ervilhas-tortas, as ervilhas-de-quebrar (sugar snap) e as ervilhas de debulhar, não são tóxicas para os cães. Dá-as frescas ou congeladas, mas não em conserva, porque as ervilhas em conserva costumam ter muito sódio adicionado.",
+        "nl": "Ja, af en toe als snoepje. Groene erwten, waaronder peultjes, suikererwten en doperwten, zijn niet giftig voor honden. Geef ze vers of diepgevroren, maar niet uit blik, want erwten uit blik bevatten meestal veel toegevoegd natrium."
       },
       "why": {
         "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -35540,7 +35695,8 @@
         "fr": "Les petits pois ne sont pas toxiques pour les chiens, mais les fruits et les légumes ne sont pas nécessaires dans l’alimentation d’un chien et doivent être considérés comme une friandise occasionnelle. Les petits pois en conserve contiennent généralement beaucoup de sodium ajouté, ce qui est nocif pour les chiens. Les cosses peuvent se coincer dans la gorge d’un chien et provoquer un étouffement.",
         "es": "Los guisantes no son tóxicos ni venenosos para los perros, pero la fruta y la verdura no son necesarias en la dieta de un perro y deben considerarse un premio ocasional. Los guisantes en conserva suelen llevar mucho sodio añadido, que es perjudicial para los perros. Las vainas pueden quedarse atascadas en la garganta del perro y provocar atragantamiento.",
         "it": "I piselli non sono tossici né velenosi per i cani, ma frutta e verdura non sono necessarie nella dieta del cane e vanno considerate come un premio occasionale. I piselli in scatola hanno di solito molto sodio aggiunto, dannoso per i cani. I baccelli possono incastrarsi in gola al cane e farlo soffocare.",
-        "pt": "As ervilhas não são tóxicas nem venenosas para os cães, mas a fruta e os legumes não são necessários na alimentação de um cão e devem ser vistos como uma guloseima ocasional. As ervilhas em conserva costumam ter muito sódio adicionado, o que faz mal aos cães. As vagens podem ficar presas na garganta do cão e causar engasgamento."
+        "pt": "As ervilhas não são tóxicas nem venenosas para os cães, mas a fruta e os legumes não são necessários na alimentação de um cão e devem ser vistos como uma guloseima ocasional. As ervilhas em conserva costumam ter muito sódio adicionado, o que faz mal aos cães. As vagens podem ficar presas na garganta do cão e causar engasgamento.",
+        "nl": "Erwten zijn niet giftig voor honden, maar een hond heeft geen fruit of groente nodig; zie het als een snoepje voor af en toe. Erwten uit blik bevatten meestal veel toegevoegd natrium, wat schadelijk is voor honden. Peulen kunnen in de keel van een hond blijven steken en verstikking veroorzaken."
       },
       "signs": null,
       "what_to_do": {
@@ -35550,7 +35706,8 @@
         "fr": "Comme pour tout nouvel aliment, surveillez chez votre chien d’éventuelles réactions comme de la diarrhée ou des vomissements.",
         "es": "Como con cualquier alimento nuevo, vigila que tu perro no tenga reacciones como diarrea o vómitos.",
         "it": "Come per ogni alimento nuovo, osserva il tuo cane per individuare eventuali reazioni, come diarrea o vomito.",
-        "pt": "Como com qualquer alimento novo, observa se o teu cão tem reações como diarreia ou vómitos."
+        "pt": "Como com qualquer alimento novo, observa se o teu cão tem reações como diarreia ou vómitos.",
+        "nl": "Let, net als bij elk nieuw voedsel, op reacties van je hond, zoals diarree of braken."
       },
       "serving": {
         "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -35559,7 +35716,8 @@
         "fr": "Uniquement des petits pois frais, surgelés ou décongelés, jamais en conserve. Écossez toujours les petits pois de jardin, et faites attention aux cosses, qui peuvent provoquer un étouffement.",
         "es": "Solo guisantes frescos, congelados o descongelados, nunca en conserva. Desgrana siempre los guisantes de huerta y ten cuidado con las vainas, que pueden causar atragantamiento.",
         "it": "Solo piselli freschi, surgelati o scongelati, mai in scatola. Se sono piselli da sgusciare, sgusciali sempre e fai attenzione ai baccelli, che possono causare soffocamento.",
-        "pt": "Apenas ervilhas frescas, congeladas ou descongeladas, nunca em conserva. Tira sempre as ervilhas de debulhar das vagens e tem cuidado com as vagens, que podem causar engasgamento."
+        "pt": "Apenas ervilhas frescas, congeladas ou descongeladas, nunca em conserva. Tira sempre as ervilhas de debulhar das vagens e tem cuidado com as vagens, que podem causar engasgamento.",
+        "nl": "Alleen verse, diepgevroren of ontdooide erwten, nooit uit blik. Dop doperwten altijd uit de peul en wees voorzichtig met peulen, want die kunnen verstikking veroorzaken."
       },
       "child": {
         "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -35568,7 +35726,8 @@
         "fr": "Les chiens peuvent avoir quelques petits pois en friandise. Un adulte écosse d’abord les petits pois de jardin.",
         "es": "Los perros pueden tomar unos pocos guisantes como premio. Un adulto desgrana antes los guisantes de huerta.",
         "it": "I cani possono mangiare qualche pisello come premietto. Prima un adulto li toglie dal baccello.",
-        "pt": "Os cães podem comer umas ervilhas como guloseima. Um adulto tira primeiro as ervilhas das vagens."
+        "pt": "Os cães podem comer umas ervilhas como guloseima. Um adulto tira primeiro as ervilhas das vagens.",
+        "nl": "Honden mogen een paar erwten als snoepje. Een volwassene haalt doperwten eerst uit hun peul."
       },
       "faq": [
         {
@@ -35579,7 +35738,8 @@
             "fr": "Les chiens peuvent-ils manger des cosses de pois ?",
             "es": "¿Pueden los perros comer vainas de guisante?",
             "it": "I cani possono mangiare i baccelli dei piselli?",
-            "pt": "Os cães podem comer vagens de ervilha?"
+            "pt": "Os cães podem comer vagens de ervilha?",
+            "nl": "Mogen honden de peul van erwten eten?"
           },
           "a": {
             "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -35588,7 +35748,8 @@
             "fr": "Si la cosse est comestible pour nous, elle l’est aussi pour votre chien, mais soyez prudent : les cosses peuvent se coincer dans la gorge et provoquer un étouffement. Les petits pois de jardin doivent toujours être écossés.",
             "es": "Si las personas pueden comerse la vaina, tu perro también, pero ten cuidado: las vainas pueden quedarse atascadas en la garganta y provocar atragantamiento. Los guisantes de huerta hay que desgranarlos siempre.",
             "it": "Se il baccello è commestibile per le persone, lo è anche per il cane, ma fai attenzione: i baccelli possono incastrarsi in gola e causare soffocamento. I piselli da sgusciare vanno sempre sgusciati.",
-            "pt": "Se as pessoas podem comer a vagem, o teu cão também pode, mas atenção: as vagens podem ficar presas na garganta e causar engasgamento. As ervilhas de debulhar têm de ser sempre tiradas da vagem."
+            "pt": "Se as pessoas podem comer a vagem, o teu cão também pode, mas atenção: as vagens podem ficar presas na garganta e causar engasgamento. As ervilhas de debulhar têm de ser sempre tiradas da vagem.",
+            "nl": "Als mensen de peul mogen eten, mag je hond dat ook, maar wees voorzichtig: peulen kunnen in de keel blijven steken en verstikking veroorzaken. Doperwten moet je altijd doppen."
           }
         },
         {
@@ -35599,7 +35760,8 @@
             "fr": "Les petits pois dans les croquettes posent-ils un problème ?",
             "es": "¿Son un problema los guisantes en la comida para perros?",
             "it": "I piselli nel cibo per cani sono un problema?",
-            "pt": "As ervilhas na ração para cães são um problema?"
+            "pt": "As ervilhas na ração para cães são um problema?",
+            "nl": "Zijn erwten in hondenvoer een probleem?"
           },
           "a": {
             "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -35608,7 +35770,8 @@
             "fr": "Des recherches sont en cours pour savoir si les petits pois jouent un rôle dans les maladies cardiaques du chien. Si votre chien a mangé un aliment dont les petits pois sont un ingrédient principal, vous pouvez en parler à votre vétérinaire.",
             "es": "Se investiga si los guisantes influyen en las enfermedades del corazón de los perros. Si tu perro ha comido un alimento con guisantes como ingrediente principal, quizá convenga que lo hables con tu veterinario.",
             "it": "Sono in corso studi per capire se i piselli c’entrino con le malattie cardiache dei cani. Se il tuo cane mangia un alimento in cui i piselli sono l’ingrediente principale, può essere utile parlarne con il veterinario.",
-            "pt": "Continuam a decorrer estudos para saber se as ervilhas contribuem para doenças cardíacas nos cães. Se o teu cão comeu um alimento com ervilhas como ingrediente principal, talvez queiras falar com o teu veterinário."
+            "pt": "Continuam a decorrer estudos para saber se as ervilhas contribuem para doenças cardíacas nos cães. Se o teu cão comeu um alimento com ervilhas como ingrediente principal, talvez queiras falar com o teu veterinário.",
+            "nl": "Er loopt nog onderzoek naar de vraag of erwten een rol spelen bij hartziekten bij honden. Heeft je hond voer met erwten als hoofdingrediënt gegeten, dan kun je dit misschien met je dierenarts bespreken."
           }
         }
       ],
@@ -39868,7 +40031,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Rhubarb",
@@ -39877,7 +40041,8 @@
         "fr": "Rhubarbe",
         "es": "Ruibarbo",
         "it": "Rabarbaro",
-        "pt": "Ruibarbo"
+        "pt": "Ruibarbo",
+        "nl": "Rabarber"
       },
       "question": {
         "en": "Can dogs eat rhubarb?",
@@ -39886,7 +40051,8 @@
         "fr": "Les chiens peuvent-ils manger de la rhubarbe ?",
         "es": "¿Pueden los perros comer ruibarbo?",
         "it": "I cani possono mangiare il rabarbaro?",
-        "pt": "Os cães podem comer ruibarbo?"
+        "pt": "Os cães podem comer ruibarbo?",
+        "nl": "Mogen honden rabarber eten?"
       },
       "url_slug": {
         "en": "rhubarb",
@@ -39895,7 +40061,8 @@
         "fr": "rhubarbe",
         "es": "ruibarbo",
         "it": "rabarbaro",
-        "pt": "ruibarbo"
+        "pt": "ruibarbo",
+        "nl": "rabarber"
       },
       "answer": {
         "en": "No. Keep rhubarb away from dogs. Rhubarb is listed as toxic to dogs, and its leaves contain soluble oxalates in dangerous concentrations. Eating it can cause vomiting, drooling, trembling, low blood calcium and kidney injury.",
@@ -39904,7 +40071,8 @@
         "fr": "Non. Gardez la rhubarbe hors de portée des chiens. La rhubarbe est classée comme toxique pour les chiens, et ses feuilles contiennent des oxalates solubles en concentrations dangereuses. En manger peut provoquer des vomissements, une salivation excessive, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale.",
         "es": "No. Mantén el ruibarbo fuera del alcance de los perros. El ruibarbo figura como tóxico para los perros y sus hojas contienen oxalatos solubles en concentraciones peligrosas. Comerlo puede causar vómitos, babeo, temblores, calcio bajo en la sangre y lesión renal.",
         "it": "No. Tieni il rabarbaro lontano dai cani. Il rabarbaro è indicato come tossico per i cani e le sue foglie contengono ossalati solubili in concentrazioni pericolose. Mangiarlo può causare vomito, salivazione eccessiva, tremori, calcio basso nel sangue e danni ai reni.",
-        "pt": "Não. Mantém o ruibarbo longe dos cães. O ruibarbo é considerado tóxico para os cães, e as suas folhas contêm oxalatos solúveis em concentrações perigosas. Comê-lo pode causar vómitos, salivação excessiva, tremores, cálcio baixo no sangue e lesões nos rins."
+        "pt": "Não. Mantém o ruibarbo longe dos cães. O ruibarbo é considerado tóxico para os cães, e as suas folhas contêm oxalatos solúveis em concentrações perigosas. Comê-lo pode causar vómitos, salivação excessiva, tremores, cálcio baixo no sangue e lesões nos rins.",
+        "nl": "Nee. Houd rabarber uit de buurt van honden. Rabarber staat als giftig voor honden te boek en de bladeren bevatten oplosbare oxalaten in gevaarlijke concentraties. Als een hond rabarber eet, kan dat braken, kwijlen, beven, een laag calciumgehalte in het bloed en nierschade veroorzaken."
       },
       "why": {
         "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
@@ -39913,7 +40081,8 @@
         "fr": "Les feuilles de rhubarbe contiennent des oxalates solubles (acide oxalique), qui peuvent causer des problèmes au système nerveux, au tube digestif et aux reins d’un chien et faire baisser le taux de calcium. Pet Poison Helpline indique que les tiges contiennent très peu d’oxalate et sont non toxiques, mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; nous retenons donc le niveau le plus strict et conseillons de tout tenir à l’écart. Les chiens s’intéressent rarement à la plante, car les feuilles ont un goût amer.",
         "es": "Las hojas de ruibarbo contienen oxalatos solubles (ácido oxálico), que pueden causar problemas en el sistema nervioso, el aparato digestivo y los riñones de un perro y bajar sus niveles de calcio. Pet Poison Helpline indica que los tallos contienen muy poco oxalato y no son tóxicos, pero la ASPCA considera el ruibarbo tóxico para los perros, así que aplicamos el nivel más estricto y aconsejamos mantener toda la planta fuera de su alcance. A los perros rara vez les interesa la planta, porque las hojas tienen un sabor amargo.",
         "it": "Le foglie di rabarbaro contengono ossalati solubili (acido ossalico), che possono causare problemi al sistema nervoso, all’apparato digerente e ai reni del cane e abbassare il calcio nel sangue. Secondo Pet Poison Helpline i gambi contengono pochissimo ossalato e non sono tossici, ma l’ASPCA indica il rabarbaro come tossico per i cani, quindi seguiamo la valutazione più severa e consigliamo di tenere lontana tutta la pianta. I cani si interessano di rado alla pianta, perché le foglie hanno un sapore amaro.",
-        "pt": "As folhas de ruibarbo contêm oxalatos solúveis (ácido oxálico), que podem causar problemas no sistema nervoso, no aparelho digestivo e nos rins do cão e baixar os níveis de cálcio. A Pet Poison Helpline diz que os talos contêm muito pouco oxalato e não são tóxicos, mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso seguimos o nível mais rigoroso e aconselhamos a manter tudo longe deles. Os cães raramente se interessam pela planta, porque as folhas têm um sabor amargo."
+        "pt": "As folhas de ruibarbo contêm oxalatos solúveis (ácido oxálico), que podem causar problemas no sistema nervoso, no aparelho digestivo e nos rins do cão e baixar os níveis de cálcio. A Pet Poison Helpline diz que os talos contêm muito pouco oxalato e não são tóxicos, mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso seguimos o nível mais rigoroso e aconselhamos a manter tudo longe deles. Os cães raramente se interessam pela planta, porque as folhas têm um sabor amargo.",
+        "nl": "De bladeren van rabarber bevatten oplosbare oxalaten (oxaalzuur), die het zenuwstelsel, het spijsverteringskanaal en de nieren van een hond kunnen aantasten en het calciumgehalte kunnen verlagen. Volgens Pet Poison Helpline bevatten de stelen heel weinig oxalaat en zijn ze niet giftig, maar de ASPCA noemt rabarber giftig voor honden, dus volgen wij het strengere advies en raden we aan alles uit de buurt te houden. Honden hebben zelden belangstelling voor de plant, omdat de bladeren bitter smaken."
       },
       "signs": {
         "en": [
@@ -39971,6 +40140,14 @@
           "Tremores",
           "Cálcio baixo no sangue",
           "Sinais de lesão renal, como urinar muito"
+        ],
+        "nl": [
+          "Braken",
+          "Kwijlen",
+          "Zwakte",
+          "Beven",
+          "Laag calciumgehalte in het bloed",
+          "Tekenen van nierschade, zoals veel plassen"
         ]
       },
       "what_to_do": {
@@ -39980,7 +40157,8 @@
         "fr": "Si votre chien a mangé de la rhubarbe, surtout des feuilles, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire.",
         "es": "Si tu perro ha comido ruibarbo, sobre todo hojas, ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales.",
         "it": "Se il tuo cane ha mangiato rabarbaro, soprattutto le foglie, contatta subito il veterinario o un centro antiveleni veterinario.",
-        "pt": "Se o teu cão comeu ruibarbo, sobretudo as folhas, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível."
+        "pt": "Se o teu cão comeu ruibarbo, sobretudo as folhas, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível.",
+        "nl": "Heeft je hond rabarber gegeten, vooral de bladeren, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren."
       },
       "serving": null,
       "child": {
@@ -39990,7 +40168,8 @@
         "fr": "La rhubarbe et ses feuilles ne sont pas pour les chiens. Si ton chien en grignote, préviens tout de suite un adulte.",
         "es": "El ruibarbo y sus hojas no son para los perros. Si tu perro mordisquea un poco, avisa enseguida a un adulto.",
         "it": "Il rabarbaro e le sue foglie non sono per i cani. Se il tuo cane ne mordicchia un po’, dillo subito a un adulto.",
-        "pt": "O ruibarbo e as suas folhas não são para cães. Se o teu cão trincar um bocadinho, diz logo a um adulto."
+        "pt": "O ruibarbo e as suas folhas não são para cães. Se o teu cão trincar um bocadinho, diz logo a um adulto.",
+        "nl": "Rabarber en de bladeren ervan zijn niet voor honden. Knabbelt je hond eraan, vertel het dan meteen aan een volwassene."
       },
       "faq": [
         {
@@ -40001,7 +40180,8 @@
             "fr": "Les tiges de rhubarbe sont-elles sans danger pour les chiens ?",
             "es": "¿Son seguros los tallos de ruibarbo para los perros?",
             "it": "I gambi del rabarbaro sono sicuri per i cani?",
-            "pt": "Os talos de ruibarbo são seguros para os cães?"
+            "pt": "Os talos de ruibarbo são seguros para os cães?",
+            "nl": "Zijn rabarberstelen veilig voor honden?"
           },
           "a": {
             "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
@@ -40010,7 +40190,8 @@
             "fr": "Les tiges contiennent très peu d’oxalate, et Pet Poison Helpline les considère comme non toxiques. Mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; il vaut donc mieux tout tenir à l’écart.",
             "es": "Los tallos contienen muy poco oxalato y Pet Poison Helpline los considera no tóxicos. Pero la ASPCA considera el ruibarbo tóxico para los perros, así que lo mejor es mantener toda la planta fuera de su alcance.",
             "it": "I gambi contengono pochissimo ossalato e per Pet Poison Helpline non sono tossici. Tuttavia l’ASPCA indica il rabarbaro come tossico per i cani, quindi è meglio tenerlo lontano.",
-            "pt": "Os talos contêm muito pouco oxalato, e a Pet Poison Helpline considera-os não tóxicos. Mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso o melhor é manter tudo longe deles."
+            "pt": "Os talos contêm muito pouco oxalato, e a Pet Poison Helpline considera-os não tóxicos. Mas a ASPCA classifica o ruibarbo como tóxico para os cães, por isso o melhor é manter tudo longe deles.",
+            "nl": "De stelen bevatten heel weinig oxalaat en Pet Poison Helpline noemt ze niet giftig. Maar de ASPCA noemt rabarber giftig voor honden, dus je kunt alles het best uit de buurt houden."
           }
         }
       ],
@@ -41410,7 +41591,8 @@
         "fr",
         "es",
         "it",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Star fruit",
@@ -41419,7 +41601,8 @@
         "fr": "Carambole",
         "es": "Carambola",
         "it": "Carambola",
-        "pt": "Carambola"
+        "pt": "Carambola",
+        "nl": "Carambola"
       },
       "question": {
         "en": "Can dogs eat star fruit?",
@@ -41428,7 +41611,8 @@
         "fr": "Les chiens peuvent-ils manger de la carambole ?",
         "es": "¿Pueden los perros comer carambola?",
         "it": "I cani possono mangiare la carambola?",
-        "pt": "Os cães podem comer carambola?"
+        "pt": "Os cães podem comer carambola?",
+        "nl": "Mogen honden carambola eten?"
       },
       "url_slug": {
         "en": "star-fruit",
@@ -41437,7 +41621,8 @@
         "fr": "carambole",
         "es": "carambola",
         "it": "carambola",
-        "pt": "carambola"
+        "pt": "carambola",
+        "nl": "carambola"
       },
       "answer": {
         "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
@@ -41446,7 +41631,8 @@
         "fr": "Non. Gardez la carambole hors de portée des chiens. La carambole acide contient de l’oxalate soluble en concentrations dangereuses, ce qui peut provoquer des vomissements, une salivation excessive, une faiblesse, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale.",
         "es": "No. Mantén la carambola fuera del alcance de los perros. La carambola ácida contiene oxalato soluble en concentraciones peligrosas, que puede causar vómitos, babeo, debilidad, temblores, calcio bajo en la sangre y lesión renal.",
         "it": "No. Tieni la carambola lontana dai cani. La carambola acida contiene ossalato solubile in concentrazioni pericolose, che può causare vomito, salivazione eccessiva, debolezza, tremori, calcio basso nel sangue e danni ai reni.",
-        "pt": "Não. Mantém a carambola longe dos cães. A carambola ácida contém oxalato solúvel em concentrações perigosas, que pode causar vómitos, salivação excessiva, fraqueza, tremores, cálcio baixo no sangue e lesões nos rins."
+        "pt": "Não. Mantém a carambola longe dos cães. A carambola ácida contém oxalato solúvel em concentrações perigosas, que pode causar vómitos, salivação excessiva, fraqueza, tremores, cálcio baixo no sangue e lesões nos rins.",
+        "nl": "Nee. Houd carambola uit de buurt van honden. Zure carambola bevat oplosbaar oxalaat in gevaarlijke concentraties, wat braken, kwijlen, zwakte, beven, een laag calciumgehalte in het bloed en nierschade kan veroorzaken."
       },
       "why": {
         "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
@@ -41455,7 +41641,8 @@
         "fr": "Pet Poison Helpline indique que la carambole peut provoquer une intoxication chez les chiens. La principale préoccupation est l’oxalate soluble (acide oxalique), présent en concentrations dangereuses dans la carambole acide. Pet Poison Helpline note aussi que la carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme que la carambole n’est pas sans danger pour les chiens ; nous retenons donc le niveau le plus strict. Même de petites quantités peuvent entraîner des problèmes de santé, en particulier chez les chiens ayant des problèmes rénaux, et la carambole peut aggraver des problèmes rénaux existants.",
         "es": "Pet Poison Helpline indica que la carambola puede intoxicar a los perros. La principal preocupación es el oxalato soluble (ácido oxálico), presente en concentraciones peligrosas en la carambola ácida. Pet Poison Helpline señala también que la carambola dulce contiene muy poco oxalato soluble y no es venenosa para las mascotas con riñones sanos, pero una guía revisada por veterinarios dice que la carambola no es segura para los perros, así que aplicamos el nivel más estricto. Incluso las cantidades pequeñas pueden causar problemas de salud, sobre todo en perros con problemas renales, y la carambola puede empeorar los problemas renales que ya existan.",
         "it": "Secondo Pet Poison Helpline la carambola può avvelenare i cani. Il problema principale è l’ossalato solubile (acido ossalico), presente in concentrazioni pericolose nella carambola acida. Pet Poison Helpline osserva anche che la carambola dolce contiene pochissimo ossalato solubile e non è velenosa per gli animali con reni sani, ma una guida revisionata da veterinari dice che la carambola non è sicura per i cani, quindi seguiamo la valutazione più severa. Anche piccole quantità possono causare problemi di salute, in particolare nei cani con problemi ai reni, e la carambola può peggiorare i problemi già esistenti.",
-        "pt": "A Pet Poison Helpline diz que a carambola pode envenenar os cães. A principal preocupação é o oxalato solúvel (ácido oxálico), presente em concentrações perigosas na carambola ácida. A Pet Poison Helpline observa também que a carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários diz que a carambola não é segura para os cães, por isso seguimos o nível mais rigoroso. Mesmo pequenas quantidades podem causar problemas de saúde, sobretudo em cães com problemas nos rins, e a carambola pode agravar problemas renais que já existam."
+        "pt": "A Pet Poison Helpline diz que a carambola pode envenenar os cães. A principal preocupação é o oxalato solúvel (ácido oxálico), presente em concentrações perigosas na carambola ácida. A Pet Poison Helpline observa também que a carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários diz que a carambola não é segura para os cães, por isso seguimos o nível mais rigoroso. Mesmo pequenas quantidades podem causar problemas de saúde, sobretudo em cães com problemas nos rins, e a carambola pode agravar problemas renais que já existam.",
+        "nl": "Volgens Pet Poison Helpline kan carambola bij honden tot vergiftiging leiden. Het grootste punt van zorg is oplosbaar oxalaat (oxaalzuur), dat in gevaarlijke concentraties in zure carambola zit. Pet Poison Helpline merkt ook op dat zoete carambola heel weinig oplosbaar oxalaat bevat en niet giftig is voor dieren met gezonde nieren, maar een gids die door dierenartsen is nagekeken zegt dat carambola niet veilig is voor honden, dus volgen wij het strengere advies. Zelfs kleine hoeveelheden kunnen gezondheidsproblemen veroorzaken, vooral bij honden met nierproblemen, en carambola kan bestaande nierproblemen verergeren."
       },
       "signs": {
         "en": [
@@ -41513,6 +41700,14 @@
           "Tremores",
           "Cálcio baixo no sangue",
           "Sinais de lesão renal, como urinar muito"
+        ],
+        "nl": [
+          "Braken",
+          "Kwijlen",
+          "Zwakte",
+          "Beven",
+          "Laag calciumgehalte in het bloed",
+          "Tekenen van nierschade, zoals veel plassen"
         ]
       },
       "what_to_do": {
@@ -41522,7 +41717,8 @@
         "fr": "Retirez ce qui reste de carambole et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, surtout si votre chien a des problèmes rénaux. Les signes peuvent apparaître en quelques heures.",
         "es": "Retira los restos de carambola y ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales, sobre todo si tu perro tiene problemas renales. Los síntomas pueden aparecer en pocas horas.",
         "it": "Porta via la carambola rimasta e contatta subito il veterinario o un centro antiveleni veterinario, soprattutto se il tuo cane ha problemi ai reni. I sintomi possono comparire nel giro di poche ore.",
-        "pt": "Retira a carambola que tenha sobrado e contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível, sobretudo se o teu cão tiver problemas nos rins. Os sinais podem surgir em poucas horas."
+        "pt": "Retira a carambola que tenha sobrado e contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível, sobretudo se o teu cão tiver problemas nos rins. Os sinais podem surgir em poucas horas.",
+        "nl": "Haal de resterende carambola weg en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, vooral als je hond nierproblemen heeft. Verschijnselen kunnen binnen enkele uren optreden."
       },
       "serving": null,
       "child": {
@@ -41532,7 +41728,8 @@
         "fr": "La carambole n’est pas une friandise pour chien. Si ton chien en mange, préviens tout de suite un adulte.",
         "es": "La carambola no es un premio para perros. Si tu perro come un poco, avisa enseguida a un adulto.",
         "it": "La carambola non è un premio per i cani. Se il tuo cane ne mangia un po’, dillo subito a un adulto.",
-        "pt": "A carambola não é uma guloseima para cães. Se o teu cão comer um bocadinho, diz logo a um adulto."
+        "pt": "A carambola não é uma guloseima para cães. Se o teu cão comer um bocadinho, diz logo a um adulto.",
+        "nl": "Carambola is geen snoepje voor honden. Eet je hond er wat van, vertel het dan meteen aan een volwassene."
       },
       "faq": [
         {
@@ -41543,7 +41740,8 @@
             "fr": "La carambole sucrée est-elle sans danger pour les chiens ?",
             "es": "¿Es segura la carambola dulce para los perros?",
             "it": "La carambola dolce è sicura per i cani?",
-            "pt": "A carambola doce é segura para os cães?"
+            "pt": "A carambola doce é segura para os cães?",
+            "nl": "Is zoete carambola veilig voor honden?"
           },
           "a": {
             "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
@@ -41552,7 +41750,8 @@
             "fr": "La carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme tout de même que la carambole n’est pas sans danger pour les chiens ; mieux vaut donc l’éviter.",
             "es": "La carambola dulce contiene muy poco oxalato soluble y no es venenosa para las mascotas con riñones sanos, pero una guía revisada por veterinarios sigue diciendo que la carambola no es segura para los perros, así que es mejor evitarla.",
             "it": "La carambola dolce contiene pochissimo ossalato solubile e non è velenosa per gli animali con reni sani, ma una guida revisionata da veterinari dice comunque che la carambola non è sicura per i cani, quindi è meglio evitarla.",
-            "pt": "A carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários continua a dizer que a carambola não é segura para os cães, por isso o melhor é evitá-la."
+            "pt": "A carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários continua a dizer que a carambola não é segura para os cães, por isso o melhor é evitá-la.",
+            "nl": "Zoete carambola bevat heel weinig oplosbaar oxalaat en is niet giftig voor dieren met gezonde nieren, maar een gids die door dierenartsen is nagekeken zegt toch dat carambola niet veilig is voor honden, dus mijd hem het best."
           }
         }
       ],
@@ -55516,12 +55715,12 @@
       "city": "Tallinn",
       "region": "Harju maakond",
       "address": "Rannamõisa tee 8, Tallinn",
-      "phone": "15222",
+      "phone": "+372 602 0888",
       "emergency_24h": true,
-      "duty": "Pet emergency service (PetCity lemmikute kiirabi) at the Rannamõisa clinic provides round-the-clock help, short number 15222. Regular clinic hours Mon-Sat 10:00-20:00, Sun 10:00-18:00.",
+      "duty": "Pet emergency clinic, open 24 hours every day including public holidays, with a vet and assistant on site. Phone +372 602 0888 or short number 15222. Call ahead because doors are locked after regular hours; a 50% surcharge applies to out-of-hours emergency visits.",
       "duty_i18n": null,
-      "url": "https://www.petcity.ee",
-      "source_url": "https://en.astri.ee/astri-keskus/petcity-loomakliinik",
+      "url": "https://www.petcity.ee/petcity-rannamoisa",
+      "source_url": "https://www.petcity.ee/petcity-rannamoisa",
       "checked": "2026-11-05"
     },
     {
@@ -55532,11 +55731,11 @@
       "region": "Harju maakond",
       "address": "Mustamäe tee 44/2, 10621 Tallinn",
       "phone": "+372 502 3191",
-      "emergency_24h": false,
-      "duty": "Animal emergency clinic; call ahead. Out-of-hours visits carry a surcharge.",
+      "emergency_24h": true,
+      "duty": "Animal emergency clinic open 24 hours, 7 days a week; call ahead on +372 502 3191. Out-of-hours visits carry a surcharge.",
       "duty_i18n": null,
-      "url": "https://www.loomakiirabi.ee",
-      "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/loomade-kiirabikliinik/",
       "checked": "2026-11-05"
     },
     {
@@ -55567,6 +55766,246 @@
       "duty_i18n": null,
       "url": "http://www.toometikliinik.ee",
       "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Tartu Väikeloomakliinik (Evidensia)",
+      "city": "Tartu",
+      "region": "Tartu maakond",
+      "address": "Kalda tee 41, 50707 Tartu",
+      "phone": "+372 525 8012",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week for emergencies (appointments Mon-Fri 09:00-19:00). Phone ahead before arriving at the emergency department so the team can prepare.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/tartu-vaikeloomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Billy Loomakliinik (Evidensia)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Ehitajate tee 103a, 12915 Tallinn",
+      "phone": "+372 6570 310",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/billy-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Fahle Loomakliinik (Evidensia)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Tartu mnt 82, 10112 Tallinn",
+      "phone": "+372 682 7672",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/fahle-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Timmu Loomakliinik (Evidensia)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Mustamäe tee 44/1, 10621 Tallinn",
+      "phone": "+372 667 5676",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/timmu-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Univet Loomakliinik (Evidensia)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Kadaka tee 133, 12915 Tallinn",
+      "phone": "+372 5886 7736",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/univet-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Viimsi Loomakliinik (Evidensia)",
+      "city": "Viimsi",
+      "region": "Harju maakond",
+      "address": "Paadi tee 3, Haabneeme, 74001 Viimsi",
+      "phone": "+372 600 6675",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; for night and weekend emergencies use a 24-hour clinic.",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/viimsi-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Rakvere Loomakliinik (Evidensia)",
+      "city": "Rakvere",
+      "region": "Lääne-Viru maakond",
+      "address": "Vabaduse 14, 44308 Rakvere",
+      "phone": "+372 322 7707",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 09:00-19:00, closed Sat-Sun. Call ahead; night and weekend emergencies need a 24-hour clinic (Tallinn).",
+      "duty_i18n": null,
+      "url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
+      "source_url": "https://evidensia.ee/loomakliinik/rakvere-loomakliinik/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Narva Loomakliinik",
+      "city": "Narva",
+      "region": "Ida-Viru maakond",
+      "address": "Tallinna mnt 41, Narva",
+      "phone": "+372 534 40485",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-18:00 by pre-registration only. For night and weekend emergencies the nearest 24-hour PetCity clinic is Rannamõisa in Tallinn, +372 602 0888.",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/narva-loomakliinik",
+      "source_url": "https://www.petcity.ee/narva-loomakliinik",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Tähesaju Loomakliinik",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Mustakivi tee 17, Tallinn",
+      "phone": "+372 530 55622",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. In emergencies call the clinic first; 24-hour care is at PetCity Rannamõisa, +372 602 0888.",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/tahesaju-loomakliinik",
+      "source_url": "https://www.petcity.ee/tahesaju-loomakliinik",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Ülemiste Loomakliinik",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Suur-Sõjamäe 4, Tallinn",
+      "phone": "+372 513 6990",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-21:00, Sun 10:00-19:00. 24-hour emergency care is at PetCity Rannamõisa, +372 602 0888.",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
+      "source_url": "https://www.petcity.ee/petcity-ulemiste-loomakliinik-tallinnas",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Lõunakeskuse Loomakliinik",
+      "city": "Tartu",
+      "region": "Tartu maakond",
+      "address": "Lääneringtee 35, Tartu",
+      "phone": "+372 530 35388",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-19:00 per the published hours. In life-threatening cases call the clinic directly.",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
+      "source_url": "https://www.petcity.ee/lounakeskuse-loomakliinik",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Rakvere Loomakliinik",
+      "city": "Rakvere",
+      "region": "Lääne-Viru maakond",
+      "address": "Haljala tee 4, Rakvere",
+      "phone": "+372 524 1485",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 10:00-20:00, Sun 10:00-19:00. The page states there is currently no vet at this clinic; for night and public-holiday emergencies call 15222 (24-hour clinic in Tallinn).",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
+      "source_url": "https://www.petcity.ee/petcity-rakvere-loomakliinik",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "PetCity Pärnu Loomakliinik",
+      "city": "Pärnu",
+      "region": "Pärnu maakond",
+      "address": "Pärnu Keskus, 1st floor (entrances Aida and Põhja street), Pärnu",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-20:00, Sat 10:00-20:00, Sun 10:00-18:00 (Pärnu Centre).",
+      "duty_i18n": null,
+      "url": "https://www.petcity.ee/petcity-parnu-keskuse-loomakliinik",
+      "source_url": "https://www.astri.ee/parnu-keskus/en/stores/store/petcity-loomakliinik/?st=PK-108",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Terveks Loomakliinik (Pärnu Loomaarst)",
+      "city": "Pärnu",
+      "region": "Pärnu maakond",
+      "address": "Riia mnt 109, 80020 Pärnu",
+      "phone": "+372 5130 701",
+      "emergency_24h": false,
+      "duty": "Mon-Sat 08:00-18:00 as published (may vary; call ahead). Alternative phone +372 447 0023.",
+      "duty_i18n": null,
+      "url": "https://terveks.ee/",
+      "source_url": "https://terveks.ee/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Kuldbis Veterinaarmeditsiinikeskus",
+      "city": "Narva",
+      "region": "Ida-Viru maakond",
+      "address": "Kangelaste 30, Narva",
+      "phone": "+372 566 28566",
+      "emergency_24h": false,
+      "duty": "Sep-May Mon-Fri 10:00-18:00, Sat 10:00-13:00; Jun-Aug Mon-Fri 10:00-17:00. Out of hours, message by WhatsApp/Telegram/Viber; help is not guaranteed.",
+      "duty_i18n": null,
+      "url": "https://www.kuldbis.eu/ru/",
+      "source_url": "https://www.kuldbis.eu/ru/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "EE",
+      "kind": "clinic",
+      "name": "Vetdok Iidla Clinic",
+      "city": "Kohtla-Järve",
+      "region": "Ida-Viru maakond",
+      "address": "Maleva 31, Ahtme, Kohtla-Järve",
+      "phone": "+372 3377463",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-18:00, Sat 09:00-14:00, closed Sun.",
+      "duty_i18n": null,
+      "url": "https://vetdok.eu/en/index.php?route=information/contact",
+      "source_url": "https://vetdok.eu/en/index.php?route=information/contact",
       "checked": "2026-11-05"
     },
     {
