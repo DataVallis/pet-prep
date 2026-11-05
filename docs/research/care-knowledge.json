@@ -2360,60 +2360,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Broccoli",
         "sl": "Brokoli",
-        "de": "Brokkoli"
+        "de": "Brokkoli",
+        "fr": "Brocoli"
       },
       "question": {
         "en": "Can cats eat broccoli?",
         "sl": "Ali lahko mačke jedo brokoli?",
-        "de": "Dürfen Katzen Brokkoli fressen?"
+        "de": "Dürfen Katzen Brokkoli fressen?",
+        "fr": "Les chats peuvent-ils manger du brocoli ?"
       },
       "url_slug": {
         "en": "broccoli",
         "sl": "brokoli",
-        "de": "brokkoli"
+        "de": "brokkoli",
+        "fr": "brocoli"
       },
       "answer": {
         "en": "Yes, a small piece of plain broccoli is fine as an occasional treat. Cats Protection lists broccoli among vegetables you can feed your cat, the ASPCA suggests broccoli florets for cats, and the RSPCA advises boiled or steamed.",
         "sl": "Da, majhen košček navadnega brokolija je v redu kot občasen priboljšek. Cats Protection brokoli navaja med zelenjavo, ki jo lahko daste mački, ASPCA za mačke predlaga cvetke brokolija, RSPCA pa svetuje kuhanega v vodi ali na pari.",
-        "de": "Ja, ein kleines Stück ungewürzter Brokkoli ist als gelegentliches Leckerli in Ordnung. Cats Protection führt Brokkoli unter den Gemüsesorten auf, die Sie Ihrer Katze geben können, die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA rät zu gekochtem oder gedämpftem Brokkoli."
+        "de": "Ja, ein kleines Stück ungewürzter Brokkoli ist als gelegentliches Leckerli in Ordnung. Cats Protection führt Brokkoli unter den Gemüsesorten auf, die Sie Ihrer Katze geben können, die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA rät zu gekochtem oder gedämpftem Brokkoli.",
+        "fr": "Oui, un petit morceau de brocoli nature convient comme friandise occasionnelle. Cats Protection cite le brocoli parmi les légumes que l’on peut donner à un chat, l’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA conseille de le faire bouillir ou cuire à la vapeur."
       },
       "why": {
         "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
         "sl": "Cats Protection brokoli uvršča med redko zelenjavo, ki jo lahko daste mački, če ji je všeč. ASPCA za mačke predlaga cvetke brokolija, RSPCA pa brokoli, kuhan v vodi ali na pari, navaja med hrano, primerno za mačke in pse v zmernih količinah. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-        "de": "Cats Protection zählt Brokkoli zu den wenigen Gemüsesorten, die Sie einer Katze geben können, wenn sie Interesse zeigt. Die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA führt gekochten oder gedämpften Brokkoli unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+        "de": "Cats Protection zählt Brokkoli zu den wenigen Gemüsesorten, die Sie einer Katze geben können, wenn sie Interesse zeigt. Die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA führt gekochten oder gedämpften Brokkoli unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+        "fr": "Cats Protection cite le brocoli parmi les rares légumes que l’on peut donner à un chat, si votre chat y goûte volontiers. L’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA range le brocoli, bouilli ou cuit à la vapeur, parmi les aliments qui conviennent aux chats et aux chiens avec modération. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
         "sl": "Majhna cvetka, kuhana v vodi ali na pari, brez masla, soli in začimb.",
-        "de": "Ein kleines Röschen, gekocht oder gedämpft, ohne Butter, Salz oder Gewürze."
+        "de": "Ein kleines Röschen, gekocht oder gedämpft, ohne Butter, Salz oder Gewürze.",
+        "fr": "Un petit bouquet, bouilli ou cuit à la vapeur, sans beurre, sel ni assaisonnement."
       },
       "child": {
         "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Majhen košček kuhanega brokolija je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein kleines Stück gekochter Brokkoli kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein kleines Stück gekochter Brokkoli kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Un petit morceau de brocoli cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -2894,72 +2905,85 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Carrots",
         "sl": "Korenje",
-        "de": "Karotten"
+        "de": "Karotten",
+        "fr": "Carottes"
       },
       "question": {
         "en": "Can cats eat carrots?",
         "sl": "Ali lahko mačke jedo korenje?",
-        "de": "Dürfen Katzen Karotten fressen?"
+        "de": "Dürfen Katzen Karotten fressen?",
+        "fr": "Les chats peuvent-ils manger des carottes ?"
       },
       "url_slug": {
         "en": "carrots",
         "sl": "korenje",
-        "de": "karotten"
+        "de": "karotten",
+        "fr": "carottes"
       },
       "answer": {
         "en": "Yes, a small piece of plain carrot is fine as an occasional treat. Cats Protection lists carrots among vegetables you can feed your cat. Cook it until soft, or chop raw carrot into small chunks to prevent choking.",
         "sl": "Da, majhen košček navadnega korenja je v redu kot občasen priboljšek. Cats Protection korenje navaja med zelenjavo, ki jo lahko daste mački. Skuhajte ga do mehkega ali surovega narežite na majhne koščke, da se mačka ne zaduši.",
-        "de": "Ja, ein kleines Stück ungewürzte Karotte ist als gelegentliches Leckerli in Ordnung. Cats Protection nennt Karotten unter den Gemüsesorten, die Sie Ihrer Katze geben können. Garen Sie sie weich, oder schneiden Sie rohe Karotten in kleine Stücke, damit die Katze nicht daran erstickt."
+        "de": "Ja, ein kleines Stück ungewürzte Karotte ist als gelegentliches Leckerli in Ordnung. Cats Protection nennt Karotten unter den Gemüsesorten, die Sie Ihrer Katze geben können. Garen Sie sie weich, oder schneiden Sie rohe Karotten in kleine Stücke, damit die Katze nicht daran erstickt.",
+        "fr": "Oui, un petit morceau de carotte nature convient comme friandise occasionnelle. Cats Protection cite les carottes parmi les légumes que l’on peut donner à un chat. Faites-la cuire jusqu’à ce qu’elle soit tendre, ou coupez la carotte crue en petits morceaux pour éviter l’étouffement."
       },
       "why": {
         "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
         "sl": "Cats Protection korenje uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. RSPCA navaja, da lahko mačke jedo surovo korenje le, če je narezano na majhne koščke, sicer naj bo kuhano do mehkega, da se ne zadušijo. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-        "de": "Cats Protection nennt Karotten unter den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Laut RSPCA dürfen Katzen Karotten nur roh fressen, wenn sie in kleine Stücke geschnitten sind; andernfalls sollten sie weich gekocht werden, damit die Katze nicht daran erstickt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+        "de": "Cats Protection nennt Karotten unter den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Laut RSPCA dürfen Katzen Karotten nur roh fressen, wenn sie in kleine Stücke geschnitten sind; andernfalls sollten sie weich gekocht werden, damit die Katze nicht daran erstickt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+        "fr": "Cats Protection cite les carottes parmi les rares légumes que l’on peut donner à un chat, et recommande des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. La RSPCA indique que les chats ne peuvent manger des carottes crues que si elles sont coupées en petits morceaux ; sinon, faites-les cuire jusqu’à ce qu’elles soient tendres pour éviter l’étouffement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
         "sl": "Kuhano na pari ali v vodi do mehkega, surovo pa le na majhne koščke. Brez masla, soli in začimb.",
-        "de": "Gedämpft oder gekocht, bis sie weich sind, oder roh nur in kleinen Stücken. Ohne Butter, Salz oder Gewürze."
+        "de": "Gedämpft oder gekocht, bis sie weich sind, oder roh nur in kleinen Stücken. Ohne Butter, Salz oder Gewürze.",
+        "fr": "Cuite à la vapeur ou bouillie jusqu’à ce qu’elle soit tendre, ou crue uniquement en petits morceaux. Sans beurre, sel ni assaisonnement."
       },
       "child": {
         "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Majhen košček mehkega kuhanega korenja je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein Stück weich gekochte Karotte kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein Stück weich gekochte Karotte kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Un petit morceau de carotte cuite et tendre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Can cats eat raw carrot?",
             "sl": "Ali lahko mačke jedo surovo korenje?",
-            "de": "Dürfen Katzen rohe Karotten fressen?"
+            "de": "Dürfen Katzen rohe Karotten fressen?",
+            "fr": "Les chats peuvent-ils manger de la carotte crue ?"
           },
           "a": {
             "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
             "sl": "RSPCA navaja, da lahko mačke jedo surovo korenje le, če je narezano na majhne koščke; sicer ga skuhajte do mehkega, da se mačka ne zaduši.",
-            "de": "Laut RSPCA dürfen Katzen Karotten nur roh fressen, wenn sie in kleine Stücke geschnitten sind; andernfalls sollten sie weich gekocht werden, damit sie nicht daran ersticken."
+            "de": "Laut RSPCA dürfen Katzen Karotten nur roh fressen, wenn sie in kleine Stücke geschnitten sind; andernfalls sollten sie weich gekocht werden, damit sie nicht daran ersticken.",
+            "fr": "La RSPCA indique que les chats ne peuvent manger des carottes crues que si elles sont coupées en petits morceaux ; sinon, faites-les cuire jusqu’à ce qu’elles soient tendres pour éviter l’étouffement."
           }
         },
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -2992,60 +3016,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Cauliflower",
         "sl": "Cvetača",
-        "de": "Blumenkohl"
+        "de": "Blumenkohl",
+        "fr": "Chou-fleur"
       },
       "question": {
         "en": "Can cats eat cauliflower?",
         "sl": "Ali lahko mačke jedo cvetačo?",
-        "de": "Dürfen Katzen Blumenkohl fressen?"
+        "de": "Dürfen Katzen Blumenkohl fressen?",
+        "fr": "Les chats peuvent-ils manger du chou-fleur ?"
       },
       "url_slug": {
         "en": "cauliflower",
         "sl": "cvetaca",
-        "de": "blumenkohl"
+        "de": "blumenkohl",
+        "fr": "chou-fleur"
       },
       "answer": {
         "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
         "sl": "Da, majhen košček navadne kuhane cvetače je v redu kot občasen priboljšek. RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, primerno za mačke in pse v zmernih količinah.",
-        "de": "Ja, ein kleines Stück ungewürzter, gekochter Blumenkohl ist als gelegentliches Leckerli in Ordnung. Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind."
+        "de": "Ja, ein kleines Stück ungewürzter, gekochter Blumenkohl ist als gelegentliches Leckerli in Ordnung. Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind.",
+        "fr": "Oui, un petit morceau de chou-fleur cuit nature convient comme friandise occasionnelle. La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments qui conviennent aux chats et aux chiens avec modération."
       },
       "why": {
         "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
         "sl": "RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, ki je varna in primerna za mačke in pse v zmernih količinah. Cats Protection svetuje zelenjavo brez masla, soli in začimb. Mačke zelenjave ne potrebujejo, priboljškov naj bo malo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-        "de": "Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Cats Protection rät zu Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen kein Gemüse, Leckerlis sollten sparsam bleiben, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+        "de": "Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Cats Protection rät zu Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen kein Gemüse, Leckerlis sollten sparsam bleiben, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+        "fr": "La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments sans danger qui conviennent aux chats et aux chiens avec modération. Cats Protection recommande des légumes sans beurre, sel ni assaisonnement. Les chats n’ont pas besoin de légumes, les friandises doivent rester peu nombreuses, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
         "sl": "Kuhana in narezana na majhne koščke, brez masla, soli in začimb.",
-        "de": "Gekocht und in kleine Stücke geschnitten, ohne Butter, Salz oder Gewürze."
+        "de": "Gekocht und in kleine Stücke geschnitten, ohne Butter, Salz oder Gewürze.",
+        "fr": "Cuit et coupé en petits morceaux, sans beurre, sel ni assaisonnement."
       },
       "child": {
         "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Majhen košček kuhane cvetače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein kleines Stück gekochter Blumenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein kleines Stück gekochter Blumenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Un petit morceau de chou-fleur cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -5712,60 +5747,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Cucumber",
         "sl": "Kumare",
-        "de": "Gurke"
+        "de": "Gurke",
+        "fr": "Concombre"
       },
       "question": {
         "en": "Can cats eat cucumber?",
         "sl": "Ali lahko mačke jedo kumare?",
-        "de": "Dürfen Katzen Gurken fressen?"
+        "de": "Dürfen Katzen Gurken fressen?",
+        "fr": "Les chats peuvent-ils manger du concombre ?"
       },
       "url_slug": {
         "en": "cucumber",
         "sl": "kumare",
-        "de": "gurke"
+        "de": "gurke",
+        "fr": "concombre"
       },
       "answer": {
         "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
         "sl": "Da, majhen košček navadne kumare je v redu kot občasen priboljšek. ASPCA kumaro navaja kot nestrupeno za mačke, vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko razdraži želodec, zato naj bo le majhen dodatek.",
-        "de": "Ja, ein kleines Stück pure Gurke ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Gurke als ungiftig für Katzen ein. Katzen brauchen jedoch kein Gemüse, und jedes Pflanzenmaterial kann den Magen verstimmen – bleiben Sie also bei einem winzigen Extra."
+        "de": "Ja, ein kleines Stück pure Gurke ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Gurke als ungiftig für Katzen ein. Katzen brauchen jedoch kein Gemüse, und jedes Pflanzenmaterial kann den Magen verstimmen – bleiben Sie also bei einem winzigen Extra.",
+        "fr": "Oui, un petit morceau de concombre nature convient comme friandise occasionnelle. L’ASPCA classe le concombre parmi les aliments non toxiques pour les chats, mais les chats n’ont pas besoin de légumes et toute matière végétale peut irriter l’estomac : gardez-le pour un tout petit extra."
       },
       "why": {
         "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
         "sl": "ASPCA navadno kumaro navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-        "de": "Die ASPCA stuft die Gartengurke als ungiftig für Katzen ein. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten sparsam bleiben, und laut ASPCA kann Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen."
+        "de": "Die ASPCA stuft die Gartengurke als ungiftig für Katzen ein. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten sparsam bleiben, und laut ASPCA kann Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
+        "fr": "L’ASPCA classe le concombre de jardin parmi les plantes non toxiques pour les chats. Les chats n’ont pas besoin de fruits ni de légumes dans leur alimentation, les friandises doivent rester peu nombreuses, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "A small plain piece now and then, counted in your cat's daily food.",
         "sl": "Občasno majhen navaden košček, všteti ga je treba v dnevno količino hrane.",
-        "de": "Ab und zu ein kleines Stück pur; es zählt zur täglichen Futtermenge Ihrer Katze."
+        "de": "Ab und zu ein kleines Stück pur; es zählt zur täglichen Futtermenge Ihrer Katze.",
+        "fr": "Un petit morceau nature de temps en temps, compté dans la ration quotidienne de votre chat."
       },
       "child": {
         "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Majhen košček kumare je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein kleines Stück Gurke kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein kleines Stück Gurke kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Un petit morceau de concombre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -7948,60 +7994,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Green beans",
         "sl": "Stročji fižol",
-        "de": "Grüne Bohnen"
+        "de": "Grüne Bohnen",
+        "fr": "Haricots verts"
       },
       "question": {
         "en": "Can cats eat green beans?",
         "sl": "Ali lahko mačke jedo stročji fižol?",
-        "de": "Dürfen Katzen grüne Bohnen fressen?"
+        "de": "Dürfen Katzen grüne Bohnen fressen?",
+        "fr": "Les chats peuvent-ils manger des haricots verts ?"
       },
       "url_slug": {
         "en": "green-beans",
         "sl": "strocji-fizol",
-        "de": "gruene-bohnen"
+        "de": "gruene-bohnen",
+        "fr": "haricots-verts"
       },
       "answer": {
         "en": "Yes, a small piece of plain green bean is fine as an occasional treat. The ASPCA says green beans can be a great green snack for a dog or cat, and Cats Protection suggests steamed or boiled green beans with no butter, salt or seasoning.",
         "sl": "Da, majhen košček navadnega stročjega fižola je v redu kot občasen priboljšek. ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko, Cats Protection pa predlaga stročji fižol, kuhan na pari ali v vodi, brez masla, soli in začimb.",
-        "de": "Ja, ein kleines Stück ungewürzte grüne Bohne ist als gelegentliches Leckerli in Ordnung. Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein, und Cats Protection empfiehlt gedämpfte oder gekochte grüne Bohnen ohne Butter, Salz oder Gewürze."
+        "de": "Ja, ein kleines Stück ungewürzte grüne Bohne ist als gelegentliches Leckerli in Ordnung. Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein, und Cats Protection empfiehlt gedämpfte oder gekochte grüne Bohnen ohne Butter, Salz oder Gewürze.",
+        "fr": "Oui, un petit morceau de haricot vert nature convient comme friandise occasionnelle. L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat, et Cats Protection suggère des haricots verts cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement."
       },
       "why": {
         "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
         "sl": "ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko. Cats Protection predlaga zelenjavo, kot je stročji fižol, kuhano na pari ali v vodi, brez masla, soli in začimb, RSPCA pa stročji fižol navaja kot primeren za mačke in pse v zmernih količinah, surov ali kuhan, a nezačinjen. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-        "de": "Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein. Cats Protection empfiehlt gedämpftes oder gekochtes Gemüse wie grüne Bohnen ohne Butter, Salz oder Gewürze, und laut RSPCA sind grüne Bohnen in Maßen für Katzen und Hunde geeignet, roh oder gekocht, aber ungewürzt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+        "de": "Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein. Cats Protection empfiehlt gedämpftes oder gekochtes Gemüse wie grüne Bohnen ohne Butter, Salz oder Gewürze, und laut RSPCA sind grüne Bohnen in Maßen für Katzen und Hunde geeignet, roh oder gekocht, aber ungewürzt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+        "fr": "L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat. Cats Protection suggère des légumes cuits à la vapeur ou bouillis, comme les haricots verts, sans beurre, sel ni assaisonnement, et la RSPCA range les haricots verts parmi les aliments qui conviennent aux chats et aux chiens avec modération, crus ou cuits mais sans assaisonnement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
         "sl": "Majhen košček, kuhan na pari ali v vodi, brez masla, soli in začimb.",
-        "de": "Ein kleines Stück, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze."
+        "de": "Ein kleines Stück, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
+        "fr": "Un petit morceau, cuit à la vapeur ou bouilli, sans beurre, sel ni assaisonnement."
       },
       "child": {
         "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Majhen košček navadnega stročjega fižola je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein ungewürztes Stück grüne Bohne kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein ungewürztes Stück grüne Bohne kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Un petit morceau de haricot vert nature fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -12763,60 +12820,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Peas",
         "sl": "Grah",
-        "de": "Erbsen"
+        "de": "Erbsen",
+        "fr": "Petits pois"
       },
       "question": {
         "en": "Can cats eat peas?",
         "sl": "Ali lahko mačke jedo grah?",
-        "de": "Dürfen Katzen Erbsen fressen?"
+        "de": "Dürfen Katzen Erbsen fressen?",
+        "fr": "Les chats peuvent-ils manger des petits pois ?"
       },
       "url_slug": {
         "en": "peas",
         "sl": "grah",
-        "de": "erbsen"
+        "de": "erbsen",
+        "fr": "petits-pois"
       },
       "answer": {
         "en": "Yes, a few plain peas are fine as an occasional treat. Cats Protection and the ASPCA both name peas as a vegetable you can offer a cat, and the RSPCA says cats should only have a small amount as a treat.",
         "sl": "Da, nekaj zrn navadnega graha je v redu kot občasen priboljšek. Cats Protection in ASPCA grah navajata kot zelenjavo, ki jo lahko ponudite mački, RSPCA pa pravi, naj mačke dobijo le malo, kot priboljšek.",
-        "de": "Ja, ein paar ungewürzte Erbsen sind als gelegentliches Leckerli in Ordnung. Cats Protection und die ASPCA nennen beide Erbsen unter dem Gemüse, das Sie einer Katze anbieten können, und laut RSPCA sollten Katzen nur eine kleine Menge als Leckerli bekommen."
+        "de": "Ja, ein paar ungewürzte Erbsen sind als gelegentliches Leckerli in Ordnung. Cats Protection und die ASPCA nennen beide Erbsen unter dem Gemüse, das Sie einer Katze anbieten können, und laut RSPCA sollten Katzen nur eine kleine Menge als Leckerli bekommen.",
+        "fr": "Oui, quelques petits pois nature conviennent comme friandise occasionnelle. Cats Protection et l’ASPCA citent tous deux les petits pois parmi les légumes que l’on peut proposer à un chat, et la RSPCA précise que les chats ne doivent en avoir qu’une petite quantité en friandise."
       },
       "why": {
         "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
         "sl": "Cats Protection grah uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. ASPCA grah predlaga za mačke, RSPCA pa navaja, da lahko mačke dobijo navaden grah, vendar le malo, kot priboljšek. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-        "de": "Cats Protection zählt Erbsen zu den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Die ASPCA empfiehlt Erbsen für Katzen, und laut RSPCA dürfen Katzen ungewürzte Erbsen fressen, aber nur in kleiner Menge als Leckerli. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+        "de": "Cats Protection zählt Erbsen zu den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Die ASPCA empfiehlt Erbsen für Katzen, und laut RSPCA dürfen Katzen ungewürzte Erbsen fressen, aber nur in kleiner Menge als Leckerli. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+        "fr": "Cats Protection cite les petits pois parmi les rares légumes que l’on peut donner à un chat et suggère des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. L’ASPCA suggère les petits pois pour les chats, et la RSPCA indique que les chats peuvent manger des petits pois nature, mais seulement en petite quantité, en friandise. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "de": "Beginnen Sie mit einer kleinen Menge. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+        "de": "Beginnen Sie mit einer kleinen Menge. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+        "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
       },
       "serving": {
         "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
         "sl": "Nekaj zrn navadnega graha, kuhanega na pari ali v vodi, brez masla, soli in začimb.",
-        "de": "Ein paar ungewürzte Erbsen, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze."
+        "de": "Ein paar ungewürzte Erbsen, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
+        "fr": "Quelques petits pois nature, cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement."
       },
       "child": {
         "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Nekaj zrn navadnega graha je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "de": "Ein paar ungewürzte Erbsen können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+        "de": "Ein paar ungewürzte Erbsen können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+        "fr": "Quelques petits pois nature font parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "de": "Brauchen Katzen Gemüse?"
+            "de": "Brauchen Katzen Gemüse?",
+            "fr": "Les chats ont-ils besoin de légumes ?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+            "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+            "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
           }
         }
       ],
@@ -15093,32 +15161,38 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Rhubarb",
         "sl": "Rabarbara",
-        "de": "Rhabarber"
+        "de": "Rhabarber",
+        "fr": "Rhubarbe"
       },
       "question": {
         "en": "Can cats eat rhubarb?",
         "sl": "Ali lahko mačke jedo rabarbaro?",
-        "de": "Dürfen Katzen Rhabarber fressen?"
+        "de": "Dürfen Katzen Rhabarber fressen?",
+        "fr": "Les chats peuvent-ils manger de la rhubarbe ?"
       },
       "url_slug": {
         "en": "rhubarb",
         "sl": "rabarbara",
-        "de": "rhabarber"
+        "de": "rhabarber",
+        "fr": "rhubarbe"
       },
       "answer": {
         "en": "No. The ASPCA lists rhubarb as toxic to cats because it contains soluble calcium oxalates. The leaves and roots are the most toxic parts. Don't share rhubarb with your cat, and call your vet if your cat chews any.",
         "sl": "Ne. ASPCA rabarbaro navaja kot strupeno za mačke, ker vsebuje topne kalcijeve oksalate. Najbolj strupeni so listi in korenine. Rabarbare ne delite z mačko in pokličite veterinarja, če jo mačka pogrizlja.",
-        "de": "Nein. Die ASPCA stuft Rhabarber als giftig für Katzen ein, weil er lösliche Calciumoxalate enthält. Blätter und Wurzeln sind die giftigsten Teile. Geben Sie Ihrer Katze keinen Rhabarber, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze daran gekaut hat."
+        "de": "Nein. Die ASPCA stuft Rhabarber als giftig für Katzen ein, weil er lösliche Calciumoxalate enthält. Blätter und Wurzeln sind die giftigsten Teile. Geben Sie Ihrer Katze keinen Rhabarber, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze daran gekaut hat.",
+        "fr": "Non. L’ASPCA classe la rhubarbe parmi les plantes toxiques pour les chats, car elle contient des oxalates de calcium solubles. Les feuilles et les racines sont les parties les plus toxiques. Ne partagez pas de rhubarbe avec votre chat, et appelez votre vétérinaire s’il en a mâchouillé."
       },
       "why": {
         "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
         "sl": "Rabarbara vsebuje topne kalcijeve oksalate in ASPCA jo navaja kot strupeno za mačke; najbolj strupeni so listi in korenine. ASPCA ima za rabarbaro dva vnosa, ki se razlikujeta: eden navaja odpoved ledvic, tresenje in slinjenje, drugi pa bruhanje in slinjenje pri psih in mačkah ter odpoved ledvic pri pašnih živalih. Upoštevamo strožji vnos in navajamo tudi odpoved ledvic.",
-        "de": "Rhabarber enthält lösliche Calciumoxalate, und die ASPCA stuft ihn als giftig für Katzen ein, wobei Blätter und Wurzeln die giftigsten Teile sind. Die beiden Rhabarber-Einträge der ASPCA unterscheiden sich: Der eine nennt Nierenversagen, Zittern und Sabbern, der andere Erbrechen und Sabbern bei Hunden und Katzen sowie Nierenversagen bei Weidetieren. Wir folgen dem strengeren Eintrag und nennen daher auch Nierenversagen."
+        "de": "Rhabarber enthält lösliche Calciumoxalate, und die ASPCA stuft ihn als giftig für Katzen ein, wobei Blätter und Wurzeln die giftigsten Teile sind. Die beiden Rhabarber-Einträge der ASPCA unterscheiden sich: Der eine nennt Nierenversagen, Zittern und Sabbern, der andere Erbrechen und Sabbern bei Hunden und Katzen sowie Nierenversagen bei Weidetieren. Wir folgen dem strengeren Eintrag und nennen daher auch Nierenversagen.",
+        "fr": "La rhubarbe contient des oxalates de calcium solubles, et l’ASPCA la classe parmi les plantes toxiques pour les chats, les feuilles et les racines étant les parties les plus toxiques. Les deux fiches de l’ASPCA sur la rhubarbe ne sont pas identiques : l’une mentionne une insuffisance rénale, des tremblements et une salivation excessive, l’autre des vomissements et une salivation excessive chez les chiens et les chats, et une insuffisance rénale chez les animaux qui broutent. Nous suivons la fiche la plus stricte et mentionnons aussi l’insuffisance rénale."
       },
       "signs": {
         "en": [
@@ -15138,30 +15212,40 @@
           "Sabbern",
           "Zittern",
           "Nierenprobleme (Nierenversagen)"
+        ],
+        "fr": [
+          "Vomissements",
+          "Salivation excessive",
+          "Tremblements",
+          "Problèmes rénaux (insuffisance rénale)"
         ]
       },
       "what_to_do": {
         "en": "If your cat chewed any part of a rhubarb plant, especially the leaves or roots, contact your vet or a pet poison helpline right away. Note what was eaten and when. Don't try to make your cat sick at home.",
         "sl": "Če je mačka grizljala katerikoli del rabarbare, zlasti liste ali korenine, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
-        "de": "Hat Ihre Katze an einer Rhabarberpflanze gekaut, vor allem Blätter oder Wurzeln, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+        "de": "Hat Ihre Katze an einer Rhabarberpflanze gekaut, vor allem Blätter oder Wurzeln, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+        "fr": "Si votre chat a mâchonné n’importe quelle partie d’un plant de rhubarbe, surtout les feuilles ou les racines, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et à quel moment. N’essayez pas de faire vomir votre chat vous-même."
       },
       "serving": null,
       "child": {
         "en": "Rhubarb is not a cat food. The rhubarb plant is not safe for cats, so tell a grown-up if kitty chews some.",
         "sl": "Rabarbara ni hrana za muce. Ta rastlina ni varna za muce, zato povej odraslemu, če jo muca pogrizlja.",
-        "de": "Rhabarber ist nichts für Katzen. Die Pflanze ist für Katzen gefährlich – sag also einem Erwachsenen Bescheid, wenn deine Katze daran knabbert."
+        "de": "Rhabarber ist nichts für Katzen. Die Pflanze ist für Katzen gefährlich – sag also einem Erwachsenen Bescheid, wenn deine Katze daran knabbert.",
+        "fr": "La rhubarbe n’est pas un aliment pour chat. Le plant de rhubarbe est dangereux pour les chats : préviens un adulte si ton chat en mâchouille."
       },
       "faq": [
         {
           "q": {
             "en": "Which part of rhubarb is the problem?",
             "sl": "Kateri del rabarbare je težava?",
-            "de": "Welcher Teil des Rhabarbers ist gefährlich?"
+            "de": "Welcher Teil des Rhabarbers ist gefährlich?",
+            "fr": "Quelle partie de la rhubarbe pose problème ?"
           },
           "a": {
             "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
             "sl": "ASPCA rastlino rabarbare navaja kot strupeno za mačke in pravi, da so najbolj strupeni listi in korenine.",
-            "de": "Die ASPCA stuft die Rhabarberpflanze als giftig für Katzen ein und nennt Blätter und Wurzeln als giftigste Teile."
+            "de": "Die ASPCA stuft die Rhabarberpflanze als giftig für Katzen ein und nennt Blätter und Wurzeln als giftigste Teile.",
+            "fr": "L’ASPCA classe le plant de rhubarbe parmi les plantes toxiques pour les chats et précise que les feuilles et les racines sont les parties les plus toxiques."
           }
         }
       ],
@@ -20771,60 +20855,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Broccoli",
         "sl": "Brokoli",
-        "de": "Brokkoli"
+        "de": "Brokkoli",
+        "fr": "Brocoli"
       },
       "question": {
         "en": "Can dogs eat broccoli?",
         "sl": "Ali lahko psi jedo brokoli?",
-        "de": "Dürfen Hunde Brokkoli fressen?"
+        "de": "Dürfen Hunde Brokkoli fressen?",
+        "fr": "Les chiens peuvent-ils manger du brocoli ?"
       },
       "url_slug": {
         "en": "broccoli",
         "sl": "brokoli",
-        "de": "brokkoli"
+        "de": "brokkoli",
+        "fr": "brocoli"
       },
       "answer": {
         "en": "Yes, in small amounts as an occasional treat, raw or cooked, with no seasonings or oils. Cut it into bite-size pieces: the florets can irritate the stomach, and tough stalks can block the oesophagus, especially in small dogs.",
         "sl": "Da, v majhnih količinah kot občasen priboljšek, surov ali kuhan, brez začimb in olja. Narežite ga na koščke za en grižljaj: cvetki lahko dražijo želodec, trda stebla pa lahko zamašijo požiralnik, zlasti pri majhnih psih.",
-        "de": "Ja, in kleinen Mengen als gelegentliches Leckerli, roh oder gekocht, ohne Gewürze oder Öle. Schneiden Sie ihn mundgerecht klein: Die Röschen können den Magen reizen, und zähe Stiele können die Speiseröhre verstopfen, vor allem bei kleinen Hunden."
+        "de": "Ja, in kleinen Mengen als gelegentliches Leckerli, roh oder gekocht, ohne Gewürze oder Öle. Schneiden Sie ihn mundgerecht klein: Die Röschen können den Magen reizen, und zähe Stiele können die Speiseröhre verstopfen, vor allem bei kleinen Hunden.",
+        "fr": "Oui, en petite quantité comme friandise occasionnelle, cru ou cuit, sans assaisonnement ni huile. Coupez-le en morceaux de la taille d’une bouchée : les bouquets peuvent irriter l’estomac, et les tiges dures peuvent obstruer l’œsophage, surtout chez les petits chiens."
       },
       "why": {
         "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
         "sl": "Cvetki brokolija vsebujejo izotiocianate, ki lahko povzročijo blago do potencialno hudo draženje želodca. Trda stebla brokolija so pri psih, zlasti majhnih, že povzročila zamašitev požiralnika, zato je boljša izbira kuhan brokoli, narezan na koščke za en grižljaj.",
-        "de": "Brokkoliröschen enthalten Isothiocyanate, die leichte bis unter Umständen starke Magenreizungen verursachen können. Zähe Brokkolistiele haben bekanntermaßen schon Verstopfungen der Speiseröhre ausgelöst, vor allem bei kleinen Hunden. Gekochter Brokkoli in mundgerechten Stücken ist deshalb die bessere Wahl."
+        "de": "Brokkoliröschen enthalten Isothiocyanate, die leichte bis unter Umständen starke Magenreizungen verursachen können. Zähe Brokkolistiele haben bekanntermaßen schon Verstopfungen der Speiseröhre ausgelöst, vor allem bei kleinen Hunden. Gekochter Brokkoli in mundgerechten Stücken ist deshalb die bessere Wahl.",
+        "fr": "Les bouquets de brocoli contiennent des isothiocyanates, qui peuvent provoquer une irritation de l’estomac légère à potentiellement sévère. Les tiges dures du brocoli sont connues pour provoquer des obstructions de l’œsophage, surtout chez les petits chiens ; le brocoli cuit, coupé en morceaux de la taille d’une bouchée, est donc le meilleur choix."
       },
       "signs": null,
       "what_to_do": {
         "en": "Watch how your dog reacts to broccoli and make sure there is no bad reaction before giving more.",
         "sl": "Opazujte, kako se pes odzove na brokoli, in se prepričajte, da nima neželene reakcije, preden mu ga ponudite več.",
-        "de": "Beobachten Sie, wie Ihr Hund Brokkoli verträgt, und geben Sie erst mehr, wenn keine schlechte Reaktion auftritt."
+        "de": "Beobachten Sie, wie Ihr Hund Brokkoli verträgt, und geben Sie erst mehr, wenn keine schlechte Reaktion auftritt.",
+        "fr": "Observez la réaction de votre chien au brocoli et assurez-vous qu’il n’y a pas de mauvaise réaction avant d’en donner davantage."
       },
       "serving": {
         "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
         "sl": "Navaden, surov ali raje kuhan, brez začimb in olja, narezan na koščke za en grižljaj. Le majhne količine kot občasen priboljšek.",
-        "de": "Pur, roh oder besser gekocht, ohne Gewürze oder Öle und in mundgerechte Stücke geschnitten. Nur kleine Mengen als gelegentliches Leckerli."
+        "de": "Pur, roh oder besser gekocht, ohne Gewürze oder Öle und in mundgerechte Stücke geschnitten. Nur kleine Mengen als gelegentliches Leckerli.",
+        "fr": "Nature, cru ou de préférence cuit, sans assaisonnement ni huile, coupé en morceaux de la taille d’une bouchée. Seulement de petites quantités, en friandise occasionnelle."
       },
       "child": {
         "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
         "sl": "Psi lahko poskusijo malo brokolija. Odrasli ga skuha brez dodatkov in nareže na majhne koščke.",
-        "de": "Hunde dürfen ein bisschen Brokkoli probieren. Ein Erwachsener kocht ihn pur und schneidet ihn klein."
+        "de": "Hunde dürfen ein bisschen Brokkoli probieren. Ein Erwachsener kocht ihn pur und schneidet ihn klein.",
+        "fr": "Les chiens peuvent goûter un peu de brocoli. Un adulte le fait cuire nature et le coupe en petits morceaux."
       },
       "faq": [
         {
           "q": {
             "en": "Are broccoli stalks safe for dogs?",
             "sl": "So stebla brokolija za pse varna?",
-            "de": "Sind Brokkolistiele für Hunde unbedenklich?"
+            "de": "Sind Brokkolistiele für Hunde unbedenklich?",
+            "fr": "Les tiges de brocoli sont-elles sans danger pour les chiens ?"
           },
           "a": {
             "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
             "sl": "Trda stebla lahko psu zamašijo požiralnik, zlasti pri majhnih psih. Brokoli narežite na koščke za en grižljaj; kuhan brokoli pomaga preprečiti to težavo.",
-            "de": "Zähe Stiele können die Speiseröhre eines Hundes verstopfen, vor allem bei kleinen Hunden. Schneiden Sie Brokkoli mundgerecht klein; mit gekochtem Brokkoli lässt sich dieses Problem vermeiden."
+            "de": "Zähe Stiele können die Speiseröhre eines Hundes verstopfen, vor allem bei kleinen Hunden. Schneiden Sie Brokkoli mundgerecht klein; mit gekochtem Brokkoli lässt sich dieses Problem vermeiden.",
+            "fr": "Les tiges dures peuvent obstruer l’œsophage d’un chien, surtout chez les petits chiens. Coupez le brocoli en morceaux de la taille d’une bouchée ; le brocoli cuit aide à éviter ce problème."
           }
         }
       ],
@@ -21359,60 +21454,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Carrots",
         "sl": "Korenje",
-        "de": "Karotten"
+        "de": "Karotten",
+        "fr": "Carottes"
       },
       "question": {
         "en": "Can dogs eat carrots?",
         "sl": "Ali lahko psi jedo korenje?",
-        "de": "Dürfen Hunde Karotten fressen?"
+        "de": "Dürfen Hunde Karotten fressen?",
+        "fr": "Les chiens peuvent-ils manger des carottes ?"
       },
       "url_slug": {
         "en": "carrots",
         "sl": "korenje",
-        "de": "karotten"
+        "de": "karotten",
+        "fr": "carottes"
       },
       "answer": {
         "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
         "sl": "Da. Korenje je za pse varno in je zdrav, nizkokaloričen prigrizek, surovo ali kuhano. Najprej ga narežite na koščke za en grižljaj, da se pes ne zaduši.",
-        "de": "Ja. Karotten sind für Hunde unbedenklich und ein gesunder, kalorienarmer Snack, roh oder gekocht. Schneiden Sie sie vorher mundgerecht klein, damit der Hund nicht daran erstickt."
+        "de": "Ja. Karotten sind für Hunde unbedenklich und ein gesunder, kalorienarmer Snack, roh oder gekocht. Schneiden Sie sie vorher mundgerecht klein, damit der Hund nicht daran erstickt.",
+        "fr": "Oui. Les carottes sont sans danger pour les chiens et constituent un en-cas sain et peu calorique, crues ou cuites. Coupez-les d’abord en morceaux de la taille d’une bouchée pour éviter l’étouffement."
       },
       "why": {
         "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
         "sl": "Korenje je odličen vir vitamina A, kalija in vlaknin ter vsebuje veliko betakarotena. Žvečenje korenja lahko tudi izboljša zdravje psovih zob. Glavno tveganje je dušenje, zato je treba celo korenje in tudi korenčkove paličice narezati na koščke za en grižljaj.",
-        "de": "Karotten sind eine hervorragende Quelle für Vitamin A, Kalium und Ballaststoffe und enthalten viel Beta-Carotin. Auf Karotten herumzukauen kann außerdem die Zahngesundheit Ihres Hundes fördern. Das Hauptrisiko ist Ersticken; deshalb sollten ganze Karotten und sogar Karottenstifte in mundgerechte Stücke geschnitten werden."
+        "de": "Karotten sind eine hervorragende Quelle für Vitamin A, Kalium und Ballaststoffe und enthalten viel Beta-Carotin. Auf Karotten herumzukauen kann außerdem die Zahngesundheit Ihres Hundes fördern. Das Hauptrisiko ist Ersticken; deshalb sollten ganze Karotten und sogar Karottenstifte in mundgerechte Stücke geschnitten werden.",
+        "fr": "Les carottes sont une excellente source de vitamine A, de potassium et de fibres, et sont riches en bêta-carotène. Croquer des carottes peut aussi contribuer à la santé dentaire de votre chien. Le principal risque est l’étouffement : c’est pourquoi les carottes entières, et même les bâtonnets de carotte, doivent être coupés en morceaux de la taille d’une bouchée."
       },
       "signs": null,
       "what_to_do": {
         "en": "Talk to your vet about how many carrots suit your dog each day.",
         "sl": "Z veterinarjem se posvetujte, koliko korenja na dan je primerno za vašega psa.",
-        "de": "Besprechen Sie mit Ihrem Tierarzt, wie viele Karotten Ihr Hund täglich bekommen darf."
+        "de": "Besprechen Sie mit Ihrem Tierarzt, wie viele Karotten Ihr Hund täglich bekommen darf.",
+        "fr": "Demandez à votre vétérinaire quelle quantité de carottes convient à votre chien chaque jour."
       },
       "serving": {
         "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
         "sl": "Korenje operite in/ali olupite, nato celo korenje in tudi korenčkove paličice narežite na koščke za en grižljaj. Primerno je surovo ali kuhano.",
-        "de": "Waschen und/oder schälen Sie die Karotten und schneiden Sie ganze Karotten und sogar Karottenstifte in mundgerechte Stücke. Rohe und gekochte Karotten sind beide in Ordnung."
+        "de": "Waschen und/oder schälen Sie die Karotten und schneiden Sie ganze Karotten und sogar Karottenstifte in mundgerechte Stücke. Rohe und gekochte Karotten sind beide in Ordnung.",
+        "fr": "Lavez et/ou épluchez les carottes, puis coupez les carottes entières, et même les bâtonnets, en morceaux de la taille d’une bouchée. Crues ou cuites, les carottes conviennent."
       },
       "child": {
         "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
         "sl": "Hrustljavo korenje je zdrav pasji prigrizek! Odrasli ga najprej opere in nareže na majhne koščke.",
-        "de": "Knackige Karotten sind ein gesunder Snack für Hunde! Ein Erwachsener wäscht sie vorher und schneidet sie klein."
+        "de": "Knackige Karotten sind ein gesunder Snack für Hunde! Ein Erwachsener wäscht sie vorher und schneidet sie klein.",
+        "fr": "Les carottes croquantes sont un en-cas sain pour le chien ! Un adulte les lave et les coupe d’abord en petits morceaux."
       },
       "faq": [
         {
           "q": {
             "en": "Can teething puppies have cold or frozen carrots?",
             "sl": "Lahko mladiči med rastjo zob dobijo hladno ali zamrznjeno korenje?",
-            "de": "Dürfen zahnende Welpen kalte oder gefrorene Karotten bekommen?"
+            "de": "Dürfen zahnende Welpen kalte oder gefrorene Karotten bekommen?",
+            "fr": "Les chiots qui font leurs dents peuvent-ils manger des carottes froides ou congelées ?"
           },
           "a": {
             "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
             "sl": "Nekateri veterinarji mladičem, ki jim rastejo zobje, priporočajo hladno ali zamrznjeno korenje, da jim olajša nelagodje.",
-            "de": "Manche Tierärzte empfehlen kalte oder gefrorene Karotten für zahnende Welpen, um Beschwerden zu lindern."
+            "de": "Manche Tierärzte empfehlen kalte oder gefrorene Karotten für zahnende Welpen, um Beschwerden zu lindern.",
+            "fr": "Certains vétérinaires recommandent des carottes froides ou congelées pour les chiots qui font leurs dents, afin de soulager leur inconfort."
           }
         }
       ],
@@ -21661,60 +21767,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Cauliflower",
         "sl": "Cvetača",
-        "de": "Blumenkohl"
+        "de": "Blumenkohl",
+        "fr": "Chou-fleur"
       },
       "question": {
         "en": "Can dogs eat cauliflower?",
         "sl": "Ali lahko psi jedo cvetačo?",
-        "de": "Dürfen Hunde Blumenkohl fressen?"
+        "de": "Dürfen Hunde Blumenkohl fressen?",
+        "fr": "Les chiens peuvent-ils manger du chou-fleur ?"
       },
       "url_slug": {
         "en": "cauliflower",
         "sl": "cvetaca",
-        "de": "blumenkohl"
+        "de": "blumenkohl",
+        "fr": "chou-fleur"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Cauliflower is safe for dogs when served properly: cooked plainly, without seasonings, and chopped into bite-size pieces. Large portions may cause gas, bloating and diarrhoea.",
         "sl": "Da, kot občasen priboljšek. Cvetača je za pse varna, če jo pravilno pripravite: kuhano brez dodatkov, brez začimb in narezano na koščke za en grižljaj. Velike količine lahko povzročijo vetrove, napihnjenost in drisko.",
-        "de": "Ja, als gelegentliches Leckerli. Blumenkohl ist für Hunde unbedenklich, wenn er richtig zubereitet ist: ohne Gewürze gekocht und in mundgerechte Stücke geschnitten. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen."
+        "de": "Ja, als gelegentliches Leckerli. Blumenkohl ist für Hunde unbedenklich, wenn er richtig zubereitet ist: ohne Gewürze gekocht und in mundgerechte Stücke geschnitten. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen.",
+        "fr": "Oui, comme friandise occasionnelle. Le chou-fleur est sans danger pour les chiens lorsqu’il est bien préparé : cuit nature, sans assaisonnement, et coupé en morceaux de la taille d’une bouchée. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée."
       },
       "why": {
         "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
         "sl": "Cvetača vsebuje vlaknine ter vitamina C in K in je dober prigrizek, kadar pes hujša. Iste vlaknine pa lahko pri preveliki količini povzročijo vetrove, napihnjenost in drisko. Surova cvetača je v majhnih količinah varna, a je lahko težko prebavljiva, veliki surovi kosi pa se lahko psu zataknejo; kuhanje na pari ali v vodi jo zmehča, zato jo pes lažje žveči in prebavi. Nekateri psi so lahko nanjo alergični ali občutljivi.",
-        "de": "Blumenkohl enthält Ballaststoffe, Vitamin C und Vitamin K und ist ein guter Snack für Hunde, die abnehmen sollen. Dieselben Ballaststoffe können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, wenn zu viel gefressen wird. Roher Blumenkohl ist in kleinen Mengen unbedenklich, kann aber schwer verdaulich sein, und große rohe Stücke können zum Ersticken führen; Dämpfen oder Kochen macht ihn weicher und leichter zu kauen und zu verdauen. Manche Hunde können allergisch oder empfindlich darauf reagieren."
+        "de": "Blumenkohl enthält Ballaststoffe, Vitamin C und Vitamin K und ist ein guter Snack für Hunde, die abnehmen sollen. Dieselben Ballaststoffe können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, wenn zu viel gefressen wird. Roher Blumenkohl ist in kleinen Mengen unbedenklich, kann aber schwer verdaulich sein, und große rohe Stücke können zum Ersticken führen; Dämpfen oder Kochen macht ihn weicher und leichter zu kauen und zu verdauen. Manche Hunde können allergisch oder empfindlich darauf reagieren.",
+        "fr": "Le chou-fleur contient des fibres, de la vitamine C et de la vitamine K, et constitue un bon en-cas pour aider les chiens à perdre du poids. Ces mêmes fibres peuvent provoquer des gaz, des ballonnements et de la diarrhée quand on en donne trop. Le chou-fleur cru est sans danger en petite quantité mais peut être difficile à digérer, et de gros morceaux crus peuvent présenter un risque d’étouffement ; la cuisson à la vapeur ou à l’eau le rend plus tendre, plus facile à mâcher et à digérer. Certains chiens peuvent y être allergiques ou sensibles."
       },
       "signs": null,
       "what_to_do": {
         "en": "Give raw cauliflower slowly, in small pieces. Large portions may cause gas, bloating and diarrhoea, and some dogs can be sensitive to it.",
         "sl": "Surovo cvetačo uvajajte počasi, v majhnih koščkih. Velike količine lahko povzročijo vetrove, napihnjenost in drisko, nekateri psi pa so nanjo lahko občutljivi.",
-        "de": "Führen Sie rohen Blumenkohl langsam ein und geben Sie ihn nur in kleinen Stücken. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, und manche Hunde reagieren empfindlich darauf."
+        "de": "Führen Sie rohen Blumenkohl langsam ein und geben Sie ihn nur in kleinen Stücken. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, und manche Hunde reagieren empfindlich darauf.",
+        "fr": "Donnez le chou-fleur cru progressivement, en petits morceaux. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée, et certains chiens peuvent y être sensibles."
       },
       "serving": {
         "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
         "sl": "Skuhajte jo na pari ali v vodi brez dodatkov, brez soli, olja, masla, česna ali čebule, in jo narežite na koščke za en grižljaj. Trda stebla skuhajte v vodi ali na pari. Občasen priboljšek, ne vsakodnevni prigrizek.",
-        "de": "Dämpfen oder kochen Sie ihn pur, ohne Salz, Öl, Butter, Knoblauch oder Zwiebeln, und schneiden Sie ihn mundgerecht klein. Auch die zähen Strünke sollten Sie kochen oder dämpfen. Ein gelegentliches Leckerli, kein täglicher Snack."
+        "de": "Dämpfen oder kochen Sie ihn pur, ohne Salz, Öl, Butter, Knoblauch oder Zwiebeln, und schneiden Sie ihn mundgerecht klein. Auch die zähen Strünke sollten Sie kochen oder dämpfen. Ein gelegentliches Leckerli, kein täglicher Snack.",
+        "fr": "Faites-le cuire à la vapeur ou à l’eau, nature, sans sel, huile, beurre, ail ni oignon, et coupez-le en morceaux de la taille d’une bouchée. Les tiges dures doivent aussi être bouillies ou cuites à la vapeur. Une friandise occasionnelle, pas un en-cas quotidien."
       },
       "child": {
         "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
         "sl": "Psi lahko dobijo nekaj majhnih koščkov navadne cvetače. Preveč jim lahko napihne trebušček!",
-        "de": "Hunde dürfen ein paar kleine Stücke Blumenkohl ohne Gewürze fressen. Zu viel davon gibt einen Blähbauch!"
+        "de": "Hunde dürfen ein paar kleine Stücke Blumenkohl ohne Gewürze fressen. Zu viel davon gibt einen Blähbauch!",
+        "fr": "Les chiens peuvent avoir quelques petits morceaux de chou-fleur nature. Trop de chou-fleur peut leur donner un ventre plein de gaz !"
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat cauliflower leaves?",
             "sl": "Ali lahko psi jedo liste cvetače?",
-            "de": "Dürfen Hunde Blumenkohlblätter fressen?"
+            "de": "Dürfen Hunde Blumenkohlblätter fressen?",
+            "fr": "Les chiens peuvent-ils manger les feuilles de chou-fleur ?"
           },
           "a": {
             "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
             "sl": "Da. Listi so za pse varni in vsebujejo dragocena hranila; večina psov jih rada je, če so rahlo kuhani na pari, kot dodatek k obroku.",
-            "de": "Ja. Die Blätter sind für Hunde unbedenklich und enthalten wertvolle Nährstoffe; die meisten Hunde mögen sie leicht gedämpft als Zugabe zum Futter."
+            "de": "Ja. Die Blätter sind für Hunde unbedenklich und enthalten wertvolle Nährstoffe; die meisten Hunde mögen sie leicht gedämpft als Zugabe zum Futter.",
+            "fr": "Oui. Les feuilles sont sans danger pour les chiens et contiennent de précieux nutriments ; la plupart des chiens les apprécient légèrement cuites à la vapeur, en complément du repas."
           }
         }
       ],
@@ -25862,60 +25979,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Cucumber",
         "sl": "Kumare",
-        "de": "Gurke"
+        "de": "Gurke",
+        "fr": "Concombre"
       },
       "question": {
         "en": "Can dogs eat cucumber?",
         "sl": "Ali lahko psi jedo kumare?",
-        "de": "Dürfen Hunde Gurken fressen?"
+        "de": "Dürfen Hunde Gurken fressen?",
+        "fr": "Les chiens peuvent-ils manger du concombre ?"
       },
       "url_slug": {
         "en": "cucumber",
         "sl": "kumare",
-        "de": "gurke"
+        "de": "gurke",
+        "fr": "concombre"
       },
       "answer": {
         "en": "Yes. Cucumbers are perfectly safe for dogs and make a low-calorie, crunchy snack. Serve them plain, washed and cut into small pieces, introduce them gradually, and never give pickles.",
         "sl": "Da. Kumare so za pse povsem varne in so nizkokaloričen, hrustljav prigrizek. Ponudite jih navadne, oprane in narezane na majhne koščke, uvajajte jih postopoma, kislih kumaric pa nikoli.",
-        "de": "Ja. Gurken sind für Hunde völlig unbedenklich und ein kalorienarmer, knackiger Snack. Geben Sie sie pur, gewaschen und in kleine Stücke geschnitten, führen Sie sie nach und nach ein und geben Sie niemals Essiggurken."
+        "de": "Ja. Gurken sind für Hunde völlig unbedenklich und ein kalorienarmer, knackiger Snack. Geben Sie sie pur, gewaschen und in kleine Stücke geschnitten, führen Sie sie nach und nach ein und geben Sie niemals Essiggurken.",
+        "fr": "Oui. Les concombres sont tout à fait sans danger pour les chiens et constituent un en-cas croquant et peu calorique. Servez-les nature, lavés et coupés en petits morceaux, introduisez-les progressivement, et ne donnez jamais de cornichons."
       },
       "why": {
         "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
         "sl": "Kumare imajo malo kalorij, zelo malo natrija in nič maščob ter veliko vode, zato so še posebej primerne za pse, ki morajo shujšati. Glavni tveganji sta prenajedanje, ki lahko povzroči prebavne težave, in dušenje, zlasti pri manjših psih ali psih, ki jedo hitro.",
-        "de": "Gurken sind kalorienarm, enthalten sehr wenig Natrium und kein Fett und haben einen hohen Wassergehalt; deshalb eignen sie sich besonders für Hunde, die abnehmen müssen. Die beiden Hauptrisiken sind zu große Mengen, die den Magen verstimmen können, und Ersticken, vor allem bei kleineren Hunden oder Hunden, die schnell fressen."
+        "de": "Gurken sind kalorienarm, enthalten sehr wenig Natrium und kein Fett und haben einen hohen Wassergehalt; deshalb eignen sie sich besonders für Hunde, die abnehmen müssen. Die beiden Hauptrisiken sind zu große Mengen, die den Magen verstimmen können, und Ersticken, vor allem bei kleineren Hunden oder Hunden, die schnell fressen.",
+        "fr": "Les concombres sont peu caloriques, très pauvres en sodium et sans matières grasses, avec une forte teneur en eau : ils conviennent donc particulièrement aux chiens qui doivent perdre du poids. Il y a deux points de vigilance : l’excès, qui peut perturber la digestion, et l’étouffement, en particulier chez les petits chiens ou les chiens qui mangent vite."
       },
       "signs": null,
       "what_to_do": {
         "en": "Introduce cucumber gradually and watch your dog when trying something new. Feeding too much, or introducing it too quickly, can cause a mild upset stomach.",
         "sl": "Kumare uvajajte postopoma in psa opazujte, ko poskusi nekaj novega. Preveč kumar ali prehitro uvajanje lahko povzroči blage prebavne težave.",
-        "de": "Führen Sie Gurke nach und nach ein und beobachten Sie Ihren Hund, wenn er etwas Neues probiert. Zu große Mengen oder eine zu rasche Eingewöhnung können eine leichte Magenverstimmung verursachen."
+        "de": "Führen Sie Gurke nach und nach ein und beobachten Sie Ihren Hund, wenn er etwas Neues probiert. Zu große Mengen oder eine zu rasche Eingewöhnung können eine leichte Magenverstimmung verursachen.",
+        "fr": "Introduisez le concombre progressivement et surveillez votre chien lorsqu’il goûte quelque chose de nouveau. En donner trop, ou l’introduire trop vite, peut provoquer de légers troubles digestifs."
       },
       "serving": {
         "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
         "sl": "Kumaro dobro operite in jo narežite na majhne koščke, prilagojene velikosti psa in njegovemu načinu žvečenja; cele kumare ne dajajte. Samo navadne kumare.",
-        "de": "Gründlich waschen und in kleine, handliche Stücke schneiden, passend zu Größe und Kauverhalten Ihres Hundes. Keine ganze Gurke geben, nur Gurke pur."
+        "de": "Gründlich waschen und in kleine, handliche Stücke schneiden, passend zu Größe und Kauverhalten Ihres Hundes. Keine ganze Gurke geben, nur Gurke pur.",
+        "fr": "Lavez-le soigneusement et coupez-le en petits morceaux faciles à manger, adaptés à la taille de votre chien et à sa façon de mâcher ; ne donnez pas un concombre entier. Uniquement des concombres nature."
       },
       "child": {
         "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
         "sl": "Psi lahko pohrustajo nekaj koščkov kumare. Odrasli kumaro najprej opere in nareže na majhne koščke.",
-        "de": "Hunde dürfen ein paar Gurkenstücke knabbern. Ein Erwachsener wäscht die Gurke und schneidet sie vorher klein."
+        "de": "Hunde dürfen ein paar Gurkenstücke knabbern. Ein Erwachsener wäscht die Gurke und schneidet sie vorher klein.",
+        "fr": "Les chiens peuvent croquer quelques morceaux de concombre. Un adulte lave le concombre et le coupe d’abord en petits morceaux."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat pickles?",
             "sl": "Ali lahko psi jedo kisle kumarice?",
-            "de": "Dürfen Hunde Essiggurken fressen?"
+            "de": "Dürfen Hunde Essiggurken fressen?",
+            "fr": "Les chiens peuvent-ils manger des cornichons ?"
           },
           "a": {
             "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
             "sl": "Ne. Psu ne dajajte kislih kumaric, ker običajno vsebujejo dodano sol, začimbe in druge sestavine.",
-            "de": "Nein. Geben Sie Ihrem Hund keine Essiggurken, denn sie enthalten meist zugesetztes Salz, Gewürze und andere Zutaten."
+            "de": "Nein. Geben Sie Ihrem Hund keine Essiggurken, denn sie enthalten meist zugesetztes Salz, Gewürze und andere Zutaten.",
+            "fr": "Non. Évitez de donner des cornichons à votre chien, car ils contiennent généralement du sel ajouté, des épices et d’autres ingrédients."
           }
         }
       ],
@@ -28961,60 +29089,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Green beans",
         "sl": "Stročji fižol",
-        "de": "Grüne Bohnen"
+        "de": "Grüne Bohnen",
+        "fr": "Haricots verts"
       },
       "question": {
         "en": "Can dogs eat green beans?",
         "sl": "Ali lahko psi jedo stročji fižol?",
-        "de": "Dürfen Hunde grüne Bohnen fressen?"
+        "de": "Dürfen Hunde grüne Bohnen fressen?",
+        "fr": "Les chiens peuvent-ils manger des haricots verts ?"
       },
       "url_slug": {
         "en": "green-beans",
         "sl": "strocji-fizol",
-        "de": "gruene-bohnen"
+        "de": "gruene-bohnen",
+        "fr": "haricots-verts"
       },
       "answer": {
         "en": "Yes. Plain green beans, raw or cooked, are safe for most dogs in moderation and make a low-calorie treat. Never give green beans with added salt, butter, garlic or other seasonings.",
         "sl": "Da. Navaden stročji fižol, surov ali kuhan, je za večino psov v zmernih količinah varen in je nizkokaloričen priboljšek. Nikoli ne dajajte stročjega fižola z dodano soljo, maslom, česnom ali drugimi začimbami.",
-        "de": "Ja. Grüne Bohnen pur, roh oder gekocht, sind für die meisten Hunde in Maßen unbedenklich und ein kalorienarmes Leckerli. Geben Sie niemals grüne Bohnen mit Salz, Butter, Knoblauch oder anderen Gewürzen."
+        "de": "Ja. Grüne Bohnen pur, roh oder gekocht, sind für die meisten Hunde in Maßen unbedenklich und ein kalorienarmes Leckerli. Geben Sie niemals grüne Bohnen mit Salz, Butter, Knoblauch oder anderen Gewürzen.",
+        "fr": "Oui. Les haricots verts nature, crus ou cuits, sont sans danger, avec modération, pour la plupart des chiens et constituent une friandise peu calorique. Ne donnez jamais de haricots verts additionnés de sel, de beurre, d’ail ou d’autres assaisonnements."
       },
       "why": {
         "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
         "sl": "Stročji fižol vsebuje vitamine, minerale in vlaknine ter ima malo kalorij; dodatna prostornina in vlaknine psu pomagajo, da se počuti sitega, ne da bi dobil veliko kalorij. Veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli, običajni recepti s stročjim fižolom za ljudi pa za pse niso varni.",
-        "de": "Grüne Bohnen liefern Vitamine, Mineralstoffe und Ballaststoffe und sind kalorienarm; die Masse und die Ballaststoffe sorgen dafür, dass ein Hund sich satt fühlt, ohne viele Kalorien aufzunehmen. Viele Dosenbohnen enthalten viel zugesetztes Salz, und gängige Rezepte für grüne Bohnen aus der Menschenküche sind für Hunde nicht unbedenklich."
+        "de": "Grüne Bohnen liefern Vitamine, Mineralstoffe und Ballaststoffe und sind kalorienarm; die Masse und die Ballaststoffe sorgen dafür, dass ein Hund sich satt fühlt, ohne viele Kalorien aufzunehmen. Viele Dosenbohnen enthalten viel zugesetztes Salz, und gängige Rezepte für grüne Bohnen aus der Menschenküche sind für Hunde nicht unbedenklich.",
+        "fr": "Les haricots verts apportent des vitamines, des minéraux et des fibres et sont peu caloriques ; leur volume et leurs fibres aident le chien à se sentir rassasié sans ajouter beaucoup de calories. Beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté, et les recettes de haricots verts que l’on prépare habituellement pour soi ne sont pas sans danger pour les chiens."
       },
       "signs": null,
       "what_to_do": {
         "en": "Ask your vet before giving your dog green beans. Never give green beans cooked with garlic or garlic salt.",
         "sl": "Preden psu ponudite stročji fižol, se posvetujte z veterinarjem. Nikoli mu ne dajajte stročjega fižola, kuhanega s česnom ali česnovo soljo.",
-        "de": "Fragen Sie Ihren Tierarzt, bevor Sie Ihrem Hund grüne Bohnen geben. Geben Sie niemals grüne Bohnen, die mit Knoblauch oder Knoblauchsalz zubereitet wurden."
+        "de": "Fragen Sie Ihren Tierarzt, bevor Sie Ihrem Hund grüne Bohnen geben. Geben Sie niemals grüne Bohnen, die mit Knoblauch oder Knoblauchsalz zubereitet wurden.",
+        "fr": "Demandez conseil à votre vétérinaire avant de donner des haricots verts à votre chien. Ne donnez jamais de haricots verts cuits avec de l’ail ou du sel d’ail."
       },
       "serving": {
         "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
         "sl": "Ponudite ga surovega ali kuhanega v vodi ali na pari, a vedno navadnega. Izogibajte se stročjemu fižolu iz pločevinke in fižolu, pripravljenemu z maslom, česnom, česnovo soljo ali drugimi začimbami.",
-        "de": "Roh, in Wasser gekocht oder gedämpft, aber pur. Vermeiden Sie Dosenbohnen und alles, was mit Butter, Knoblauch, Knoblauchsalz oder anderen Gewürzen zubereitet wurde."
+        "de": "Roh, in Wasser gekocht oder gedämpft, aber pur. Vermeiden Sie Dosenbohnen und alles, was mit Butter, Knoblauch, Knoblauchsalz oder anderen Gewürzen zubereitet wurde.",
+        "fr": "Servez-les crus, bouillis à l’eau ou cuits à la vapeur, mais gardez-les nature. Évitez les haricots verts en conserve et ceux préparés avec du beurre, de l’ail, du sel d’ail ou d’autres assaisonnements."
       },
       "child": {
         "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
         "sl": "Navaden stročji fižol je hrustljav pasji priboljšek. Fižol, kuhan s česnom ali maslom, ni za pse.",
-        "de": "Grüne Bohnen pur sind ein knackiges Leckerli für Hunde. Bohnen mit Knoblauch oder Butter sind nichts für Hunde."
+        "de": "Grüne Bohnen pur sind ein knackiges Leckerli für Hunde. Bohnen mit Knoblauch oder Butter sind nichts für Hunde.",
+        "fr": "Les haricots verts nature sont une friandise croquante pour le chien. Les haricots cuisinés avec de l’ail ou du beurre ne sont pas faits pour les chiens."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat canned green beans?",
             "sl": "Ali lahko psi jedo stročji fižol iz pločevinke?",
-            "de": "Dürfen Hunde grüne Bohnen aus der Dose fressen?"
+            "de": "Dürfen Hunde grüne Bohnen aus der Dose fressen?",
+            "fr": "Les chiens peuvent-ils manger des haricots verts en conserve ?"
           },
           "a": {
             "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
             "sl": "Najbolje se mu je izogniti, ker veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli.",
-            "de": "Besser nicht, denn viele Dosenbohnen enthalten viel zugesetztes Salz."
+            "de": "Besser nicht, denn viele Dosenbohnen enthalten viel zugesetztes Salz.",
+            "fr": "Il vaut mieux les éviter, car beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté."
           }
         }
       ],
@@ -32881,60 +33020,71 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Olives",
         "sl": "Olive",
-        "de": "Oliven"
+        "de": "Oliven",
+        "fr": "Olives"
       },
       "question": {
         "en": "Can dogs eat olives?",
         "sl": "Ali lahko psi jedo olive?",
-        "de": "Dürfen Hunde Oliven fressen?"
+        "de": "Dürfen Hunde Oliven fressen?",
+        "fr": "Les chiens peuvent-ils manger des olives ?"
       },
       "url_slug": {
         "en": "olives",
         "sl": "olive",
-        "de": "oliven"
+        "de": "oliven",
+        "fr": "olives"
       },
       "answer": {
         "en": "Yes, in moderation, if they are plain, unsalted and pitted. Olives aren't toxic to dogs, but the pits can cause choking or a blockage, and canned or pickled olives often contain too much sodium.",
         "sl": "Da, zmerno, če so navadne, nesoljene in brez koščic. Olive za pse niso strupene, koščice pa lahko povzročijo dušenje ali zaporo, olive iz pločevinke ali vložene olive pa pogosto vsebujejo preveč natrija.",
-        "de": "Ja, in Maßen, wenn sie pur, ungesalzen und entsteint sind. Oliven sind für Hunde nicht giftig, aber die Kerne können zum Ersticken oder zu einer Blockade führen, und Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium."
+        "de": "Ja, in Maßen, wenn sie pur, ungesalzen und entsteint sind. Oliven sind für Hunde nicht giftig, aber die Kerne können zum Ersticken oder zu einer Blockade führen, und Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium.",
+        "fr": "Oui, avec modération, si elles sont nature, non salées et dénoyautées. Les olives ne sont pas toxiques pour les chiens, mais les noyaux peuvent provoquer un étouffement ou une obstruction, et les olives en conserve ou marinées contiennent souvent trop de sodium."
       },
       "why": {
         "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
         "sl": "Olive same po sebi ne vsebujejo strupenih snovi, koščice pa lahko povzročijo dušenje, zaprejo dihalne poti in se zagozdijo v psovih prebavilih. Olive iz pločevinke ali vložene olive pogosto vsebujejo preveč natrija, preveč natrija pa lahko povzroči dehidracijo in v redkih primerih zastrupitev s soljo. Olive, prelite s česnom, začimbami ali olji, prinašajo dodatna tveganja, olivam, namočenim v alkohol, pa psa nikoli ne smete hraniti.",
-        "de": "Oliven selbst enthalten keine giftigen Inhaltsstoffe, aber die Kerne können zum Ersticken führen, die Atemwege blockieren und im Darm eines Hundes stecken bleiben. Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium, und zu viel Natrium kann zu Austrocknung und in seltenen Fällen zu einer Salzvergiftung führen. Oliven mit Knoblauch, Gewürzen oder Öl bergen zusätzliche Risiken, und in Alkohol eingelegte Oliven dürfen einem Hund niemals gegeben werden."
+        "de": "Oliven selbst enthalten keine giftigen Inhaltsstoffe, aber die Kerne können zum Ersticken führen, die Atemwege blockieren und im Darm eines Hundes stecken bleiben. Oliven aus der Dose oder eingelegte Oliven enthalten oft zu viel Natrium, und zu viel Natrium kann zu Austrocknung und in seltenen Fällen zu einer Salzvergiftung führen. Oliven mit Knoblauch, Gewürzen oder Öl bergen zusätzliche Risiken, und in Alkohol eingelegte Oliven dürfen einem Hund niemals gegeben werden.",
+        "fr": "Les olives elles-mêmes ne contiennent aucun ingrédient toxique, mais les noyaux peuvent provoquer un étouffement, obstruer les voies respiratoires et se loger dans l’intestin d’un chien. Les olives en conserve ou marinées contiennent souvent un excès de sodium, et trop de sodium peut entraîner une déshydratation et, dans de rares cas, une intoxication au sel. Les olives enrobées d’ail, d’assaisonnements ou d’huiles présentent des risques supplémentaires, et les olives macérées dans l’alcool ne doivent jamais être données à un chien."
       },
       "signs": null,
       "what_to_do": {
         "en": "If your dog eats a lot of olives, especially with the pits, contact your vet for advice.",
         "sl": "Če pes poje veliko oliv, zlasti s koščicami, se za nasvet obrnite na veterinarja.",
-        "de": "Wenn Ihr Hund viele Oliven gefressen hat, vor allem mit Kernen, lassen Sie sich von Ihrem Tierarzt beraten."
+        "de": "Wenn Ihr Hund viele Oliven gefressen hat, vor allem mit Kernen, lassen Sie sich von Ihrem Tierarzt beraten.",
+        "fr": "Si votre chien mange beaucoup d’olives, surtout avec les noyaux, contactez votre vétérinaire pour avoir son avis."
       },
       "serving": {
         "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
         "sl": "Samo navadne, nesoljene olive brez koščic, v majhnih količinah. Izogibajte se olivam iz pločevinke, vloženim olivam in olivam s česnom, začimbami, olji ali alkoholom.",
-        "de": "Nur pure, ungesalzene, entsteinte Oliven in kleinen Mengen. Vermeiden Sie Oliven aus der Dose oder eingelegte Oliven sowie Oliven mit Knoblauch, Gewürzen, Öl oder Alkohol."
+        "de": "Nur pure, ungesalzene, entsteinte Oliven in kleinen Mengen. Vermeiden Sie Oliven aus der Dose oder eingelegte Oliven sowie Oliven mit Knoblauch, Gewürzen, Öl oder Alkohol.",
+        "fr": "Uniquement des olives nature, non salées et dénoyautées, en petites quantités. Évitez les olives en conserve ou marinées, ainsi que celles à l’ail, aux assaisonnements, à l’huile ou à l’alcool."
       },
       "child": {
         "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
         "sl": "Psi lahko kdaj pa kdaj dobijo navadno olivo, iz katere odrasli odstrani koščico. Slane olive niso za pse.",
-        "de": "Hunde dürfen ab und zu eine pure Olive naschen – aber nur, wenn ein Erwachsener den Kern entfernt hat. Salzige Oliven sind nichts für Hunde."
+        "de": "Hunde dürfen ab und zu eine pure Olive naschen – aber nur, wenn ein Erwachsener den Kern entfernt hat. Salzige Oliven sind nichts für Hunde.",
+        "fr": "Les chiens peuvent avoir une olive nature de temps en temps, dont un adulte a retiré le noyau. Les olives salées ne sont pas pour les chiens."
       },
       "faq": [
         {
           "q": {
             "en": "Are olive pits dangerous for dogs?",
             "sl": "So koščice oliv za pse nevarne?",
-            "de": "Sind Olivenkerne für Hunde gefährlich?"
+            "de": "Sind Olivenkerne für Hunde gefährlich?",
+            "fr": "Les noyaux d’olive sont-ils dangereux pour les chiens ?"
           },
           "a": {
             "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
             "sl": "Da. Koščice oliv lahko povzročijo dušenje ali zaporo dihalnih poti in se lahko zagozdijo v psovih prebavilih.",
-            "de": "Ja. Olivenkerne können zum Ersticken oder zu einer Verlegung der Atemwege führen und im Darm eines Hundes stecken bleiben."
+            "de": "Ja. Olivenkerne können zum Ersticken oder zu einer Verlegung der Atemwege führen und im Darm eines Hundes stecken bleiben.",
+            "fr": "Oui. Les noyaux d’olive peuvent provoquer un étouffement ou une obstruction des voies respiratoires, et ils peuvent se loger dans l’intestin d’un chien."
           }
         }
       ],
@@ -34891,72 +35041,85 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Peas",
         "sl": "Grah",
-        "de": "Erbsen"
+        "de": "Erbsen",
+        "fr": "Petits pois"
       },
       "question": {
         "en": "Can dogs eat peas?",
         "sl": "Ali lahko psi jedo grah?",
-        "de": "Dürfen Hunde Erbsen fressen?"
+        "de": "Dürfen Hunde Erbsen fressen?",
+        "fr": "Les chiens peuvent-ils manger des petits pois ?"
       },
       "url_slug": {
         "en": "peas",
         "sl": "grah",
-        "de": "erbsen"
+        "de": "erbsen",
+        "fr": "petits-pois"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Green peas, including snow peas, sugar snap peas and garden peas, are not toxic to dogs. Give them fresh or frozen, but not canned, because canned peas usually contain a lot of added sodium.",
         "sl": "Da, kot občasen priboljšek. Zeleni grah, tudi snežni grah, sladkorni grah in vrtni grah, za pse ni strupen. Ponudite ga svežega ali zamrznjenega, ne pa iz pločevinke, ker grah iz pločevinke običajno vsebuje veliko dodanega natrija.",
-        "de": "Ja, als gelegentliches Leckerli. Grüne Erbsen, darunter Kaiserschoten, Zuckerschoten und Gartenerbsen, sind für Hunde nicht giftig. Geben Sie sie frisch oder tiefgekühlt, aber nicht aus der Dose, denn Dosenerbsen enthalten meist viel zugesetztes Natrium."
+        "de": "Ja, als gelegentliches Leckerli. Grüne Erbsen, darunter Kaiserschoten, Zuckerschoten und Gartenerbsen, sind für Hunde nicht giftig. Geben Sie sie frisch oder tiefgekühlt, aber nicht aus der Dose, denn Dosenerbsen enthalten meist viel zugesetztes Natrium.",
+        "fr": "Oui, comme friandise occasionnelle. Les pois verts, y compris les pois mange-tout, les pois gourmands et les petits pois de jardin, ne sont pas toxiques pour les chiens. Donnez-les frais ou surgelés, mais pas en conserve, car les petits pois en conserve contiennent généralement beaucoup de sodium ajouté."
       },
       "why": {
         "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
         "sl": "Grah za pse ni strupen, a sadje in zelenjava v pasji prehrani nista nujna in naj bosta le občasen priboljšek. Grah iz pločevinke običajno vsebuje veliko dodanega natrija, ki psom škodi. Stroki se lahko psu zataknejo v grlu in povzročijo dušenje.",
-        "de": "Erbsen sind für Hunde nicht giftig, aber Obst und Gemüse sind in der Ernährung eines Hundes nicht notwendig und gehören nur als gelegentliches Leckerli in den Napf. Dosenerbsen enthalten meist viel zugesetztes Natrium, das für Hunde schädlich ist. Schoten können im Hals eines Hundes stecken bleiben und zum Ersticken führen."
+        "de": "Erbsen sind für Hunde nicht giftig, aber Obst und Gemüse sind in der Ernährung eines Hundes nicht notwendig und gehören nur als gelegentliches Leckerli in den Napf. Dosenerbsen enthalten meist viel zugesetztes Natrium, das für Hunde schädlich ist. Schoten können im Hals eines Hundes stecken bleiben und zum Ersticken führen.",
+        "fr": "Les petits pois ne sont pas toxiques pour les chiens, mais les fruits et les légumes ne sont pas nécessaires dans l’alimentation d’un chien et doivent être considérés comme une friandise occasionnelle. Les petits pois en conserve contiennent généralement beaucoup de sodium ajouté, ce qui est nocif pour les chiens. Les cosses peuvent se coincer dans la gorge d’un chien et provoquer un étouffement."
       },
       "signs": null,
       "what_to_do": {
         "en": "As with any new food, watch your dog for reactions such as diarrhoea or vomiting.",
         "sl": "Kot pri vsaki novi hrani psa opazujte, ali se pojavijo težave, na primer driska ali bruhanje.",
-        "de": "Beobachten Sie Ihren Hund wie bei jedem neuen Futter auf Reaktionen wie Durchfall oder Erbrechen."
+        "de": "Beobachten Sie Ihren Hund wie bei jedem neuen Futter auf Reaktionen wie Durchfall oder Erbrechen.",
+        "fr": "Comme pour tout nouvel aliment, surveillez chez votre chien d’éventuelles réactions comme de la diarrhée ou des vomissements."
       },
       "serving": {
         "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
         "sl": "Samo svež, zamrznjen ali odmrznjen grah, nikoli iz pločevinke. Vrtni grah vedno oluščite, pri strokih pa bodite previdni, ker lahko povzročijo dušenje.",
-        "de": "Nur frische, tiefgekühlte oder aufgetaute Erbsen, niemals aus der Dose. Gartenerbsen immer aus der Schote lösen, und Vorsicht mit Schoten: Sie können zum Ersticken führen."
+        "de": "Nur frische, tiefgekühlte oder aufgetaute Erbsen, niemals aus der Dose. Gartenerbsen immer aus der Schote lösen, und Vorsicht mit Schoten: Sie können zum Ersticken führen.",
+        "fr": "Uniquement des petits pois frais, surgelés ou décongelés, jamais en conserve. Écossez toujours les petits pois de jardin, et faites attention aux cosses, qui peuvent provoquer un étouffement."
       },
       "child": {
         "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
         "sl": "Psi lahko za priboljšek dobijo nekaj zrn graha. Odrasli vrtni grah najprej olušči iz strokov.",
-        "de": "Hunde dürfen ein paar Erbsen als Leckerli bekommen. Ein Erwachsener löst Gartenerbsen vorher aus der Schote."
+        "de": "Hunde dürfen ein paar Erbsen als Leckerli bekommen. Ein Erwachsener löst Gartenerbsen vorher aus der Schote.",
+        "fr": "Les chiens peuvent avoir quelques petits pois en friandise. Un adulte écosse d’abord les petits pois de jardin."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat pea pods?",
             "sl": "Ali lahko psi jedo grahove stroke?",
-            "de": "Dürfen Hunde Erbsenschoten fressen?"
+            "de": "Dürfen Hunde Erbsenschoten fressen?",
+            "fr": "Les chiens peuvent-ils manger des cosses de pois ?"
           },
           "a": {
             "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
             "sl": "Če lahko strok jedo ljudje, ga lahko tudi pes, a bodite previdni: stroki se lahko zataknejo v grlu in povzročijo dušenje. Vrtni grah je treba vedno oluščiti.",
-            "de": "Wenn Menschen die Schote mitessen können, darf sie auch Ihr Hund fressen – aber Vorsicht: Schoten können im Hals stecken bleiben und zum Ersticken führen. Gartenerbsen müssen immer aus der Schote gelöst werden."
+            "de": "Wenn Menschen die Schote mitessen können, darf sie auch Ihr Hund fressen – aber Vorsicht: Schoten können im Hals stecken bleiben und zum Ersticken führen. Gartenerbsen müssen immer aus der Schote gelöst werden.",
+            "fr": "Si la cosse est comestible pour nous, elle l’est aussi pour votre chien, mais soyez prudent : les cosses peuvent se coincer dans la gorge et provoquer un étouffement. Les petits pois de jardin doivent toujours être écossés."
           }
         },
         {
           "q": {
             "en": "Are peas in dog food a problem?",
             "sl": "Je grah v pasji hrani težava?",
-            "de": "Sind Erbsen im Hundefutter ein Problem?"
+            "de": "Sind Erbsen im Hundefutter ein Problem?",
+            "fr": "Les petits pois dans les croquettes posent-ils un problème ?"
           },
           "a": {
             "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
             "sl": "Raziskave o tem, ali ima grah vlogo pri bolezni srca pri psih, še potekajo. Če je pes jedel hrano, v kateri je grah glavna sestavina, se lahko posvetujete z veterinarjem.",
-            "de": "Ob Erbsen bei Herzerkrankungen von Hunden eine Rolle spielen, wird noch erforscht. Wenn Ihr Hund ein Futter mit Erbsen als Hauptzutat bekommen hat, sprechen Sie am besten mit Ihrem Tierarzt darüber."
+            "de": "Ob Erbsen bei Herzerkrankungen von Hunden eine Rolle spielen, wird noch erforscht. Wenn Ihr Hund ein Futter mit Erbsen als Hauptzutat bekommen hat, sprechen Sie am besten mit Ihrem Tierarzt darüber.",
+            "fr": "Des recherches sont en cours pour savoir si les petits pois jouent un rôle dans les maladies cardiaques du chien. Si votre chien a mangé un aliment dont les petits pois sont un ingrédient principal, vous pouvez en parler à votre vétérinaire."
           }
         }
       ],
@@ -39212,32 +39375,38 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Rhubarb",
         "sl": "Rabarbara",
-        "de": "Rhabarber"
+        "de": "Rhabarber",
+        "fr": "Rhubarbe"
       },
       "question": {
         "en": "Can dogs eat rhubarb?",
         "sl": "Ali lahko psi jedo rabarbaro?",
-        "de": "Dürfen Hunde Rhabarber fressen?"
+        "de": "Dürfen Hunde Rhabarber fressen?",
+        "fr": "Les chiens peuvent-ils manger de la rhubarbe ?"
       },
       "url_slug": {
         "en": "rhubarb",
         "sl": "rabarbara",
-        "de": "rhabarber"
+        "de": "rhabarber",
+        "fr": "rhubarbe"
       },
       "answer": {
         "en": "No. Keep rhubarb away from dogs. Rhubarb is listed as toxic to dogs, and its leaves contain soluble oxalates in dangerous concentrations. Eating it can cause vomiting, drooling, trembling, low blood calcium and kidney injury.",
         "sl": "Ne. Rabarbaro hranite stran od psov. Rabarbara je uvrščena med rastline, strupene za pse, njeni listi pa vsebujejo topne oksalate v nevarnih koncentracijah. Lahko povzroči bruhanje, slinjenje, tresenje, nizko raven kalcija v krvi in okvaro ledvic.",
-        "de": "Nein. Halten Sie Rhabarber von Hunden fern. Rhabarber gilt als giftig für Hunde, und seine Blätter enthalten lösliche Oxalate in gefährlicher Konzentration. Der Verzehr kann Erbrechen, Sabbern, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen."
+        "de": "Nein. Halten Sie Rhabarber von Hunden fern. Rhabarber gilt als giftig für Hunde, und seine Blätter enthalten lösliche Oxalate in gefährlicher Konzentration. Der Verzehr kann Erbrechen, Sabbern, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen.",
+        "fr": "Non. Gardez la rhubarbe hors de portée des chiens. La rhubarbe est classée comme toxique pour les chiens, et ses feuilles contiennent des oxalates solubles en concentrations dangereuses. En manger peut provoquer des vomissements, une salivation excessive, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale."
       },
       "why": {
         "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
         "sl": "Listi rabarbare vsebujejo topne oksalate (oksalno kislino), ki lahko psu povzročijo težave z živčevjem, prebavili in ledvicami ter znižajo raven kalcija. Pet Poison Helpline navaja, da stebla vsebujejo zelo malo oksalatov in niso strupena, ASPCA pa rabarbaro uvršča med rastline, strupene za pse, zato izberemo strožjo oceno in svetujemo, da psu ne dajete nobenega dela rabarbare. Psov rastlina redko zanima, ker so listi grenki.",
-        "de": "Rhabarberblätter enthalten lösliche Oxalate (Oxalsäure), die Probleme im Nervensystem, im Verdauungstrakt und in den Nieren eines Hundes verursachen und den Calciumspiegel senken können. Laut Pet Poison Helpline enthalten die Stiele nur sehr wenig Oxalat und sind ungiftig, doch die ASPCA stuft Rhabarber als giftig für Hunde ein; deshalb legen wir die strengere Stufe zugrunde und raten, alles davon fernzuhalten. Hunde interessieren sich selten für die Pflanze, weil die Blätter bitter schmecken."
+        "de": "Rhabarberblätter enthalten lösliche Oxalate (Oxalsäure), die Probleme im Nervensystem, im Verdauungstrakt und in den Nieren eines Hundes verursachen und den Calciumspiegel senken können. Laut Pet Poison Helpline enthalten die Stiele nur sehr wenig Oxalat und sind ungiftig, doch die ASPCA stuft Rhabarber als giftig für Hunde ein; deshalb legen wir die strengere Stufe zugrunde und raten, alles davon fernzuhalten. Hunde interessieren sich selten für die Pflanze, weil die Blätter bitter schmecken.",
+        "fr": "Les feuilles de rhubarbe contiennent des oxalates solubles (acide oxalique), qui peuvent causer des problèmes au système nerveux, au tube digestif et aux reins d’un chien et faire baisser le taux de calcium. Pet Poison Helpline indique que les tiges contiennent très peu d’oxalate et sont non toxiques, mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; nous retenons donc le niveau le plus strict et conseillons de tout tenir à l’écart. Les chiens s’intéressent rarement à la plante, car les feuilles ont un goût amer."
       },
       "signs": {
         "en": [
@@ -39263,30 +39432,42 @@
           "Zittern",
           "Niedriger Calciumspiegel im Blut",
           "Anzeichen für Nierenschäden, etwa häufiges Urinieren"
+        ],
+        "fr": [
+          "Vomissements",
+          "Salivation excessive",
+          "Faiblesse",
+          "Tremblements",
+          "Taux de calcium sanguin bas",
+          "Signes d’atteinte rénale, comme uriner beaucoup"
         ]
       },
       "what_to_do": {
         "en": "If your dog ate rhubarb, especially the leaves, contact your vet or a pet poison helpline right away.",
         "sl": "Če je pes pojedel rabarbaro, zlasti liste, se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali.",
-        "de": "Hat Ihr Hund Rhabarber gefressen, vor allem die Blätter, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere."
+        "de": "Hat Ihr Hund Rhabarber gefressen, vor allem die Blätter, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere.",
+        "fr": "Si votre chien a mangé de la rhubarbe, surtout des feuilles, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire."
       },
       "serving": null,
       "child": {
         "en": "Rhubarb and its leaves are not for dogs. If your dog nibbles some, tell a grown-up right away.",
         "sl": "Rabarbara in njeni listi niso za pse. Če pes kaj pogrize, takoj povej odraslemu.",
-        "de": "Rhabarber und seine Blätter sind nichts für Hunde. Wenn dein Hund daran knabbert, sag sofort einem Erwachsenen Bescheid."
+        "de": "Rhabarber und seine Blätter sind nichts für Hunde. Wenn dein Hund daran knabbert, sag sofort einem Erwachsenen Bescheid.",
+        "fr": "La rhubarbe et ses feuilles ne sont pas pour les chiens. Si ton chien en grignote, préviens tout de suite un adulte."
       },
       "faq": [
         {
           "q": {
             "en": "Are rhubarb stalks safe for dogs?",
             "sl": "So stebla rabarbare za pse varna?",
-            "de": "Sind Rhabarberstiele für Hunde unbedenklich?"
+            "de": "Sind Rhabarberstiele für Hunde unbedenklich?",
+            "fr": "Les tiges de rhubarbe sont-elles sans danger pour les chiens ?"
           },
           "a": {
             "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
             "sl": "Stebla vsebujejo zelo malo oksalatov in Pet Poison Helpline jih ima za nestrupena. A ASPCA rabarbaro uvršča med rastline, strupene za pse, zato je najbolje, da psu ne dajete nobenega dela.",
-            "de": "Die Stiele enthalten sehr wenig Oxalat, und Pet Poison Helpline bezeichnet sie als ungiftig. Die ASPCA stuft Rhabarber aber als giftig für Hunde ein, halten Sie deshalb am besten alles davon fern."
+            "de": "Die Stiele enthalten sehr wenig Oxalat, und Pet Poison Helpline bezeichnet sie als ungiftig. Die ASPCA stuft Rhabarber aber als giftig für Hunde ein, halten Sie deshalb am besten alles davon fern.",
+            "fr": "Les tiges contiennent très peu d’oxalate, et Pet Poison Helpline les considère comme non toxiques. Mais l’ASPCA classe la rhubarbe comme toxique pour les chiens ; il vaut donc mieux tout tenir à l’écart."
           }
         }
       ],
@@ -40682,32 +40863,38 @@
       "locales": [
         "en",
         "sl",
-        "de"
+        "de",
+        "fr"
       ],
       "name": {
         "en": "Star fruit",
         "sl": "Karambola",
-        "de": "Sternfrucht (Karambole)"
+        "de": "Sternfrucht (Karambole)",
+        "fr": "Carambole"
       },
       "question": {
         "en": "Can dogs eat star fruit?",
         "sl": "Ali lahko psi jedo karambolo?",
-        "de": "Dürfen Hunde Sternfrucht fressen?"
+        "de": "Dürfen Hunde Sternfrucht fressen?",
+        "fr": "Les chiens peuvent-ils manger de la carambole ?"
       },
       "url_slug": {
         "en": "star-fruit",
         "sl": "karambola",
-        "de": "sternfrucht"
+        "de": "sternfrucht",
+        "fr": "carambole"
       },
       "answer": {
         "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
         "sl": "Ne. Karambolo hranite stran od psov. Kisla karambola vsebuje topne oksalate v nevarnih koncentracijah, ki lahko povzročijo bruhanje, slinjenje, šibkost, tresenje, nizko raven kalcija v krvi in okvaro ledvic.",
-        "de": "Nein. Halten Sie Sternfrucht von Hunden fern. Saure Sternfrucht enthält lösliches Oxalat in gefährlicher Konzentration, das Erbrechen, Sabbern, Schwäche, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen kann."
+        "de": "Nein. Halten Sie Sternfrucht von Hunden fern. Saure Sternfrucht enthält lösliches Oxalat in gefährlicher Konzentration, das Erbrechen, Sabbern, Schwäche, Zittern, einen niedrigen Calciumspiegel im Blut und Nierenschäden verursachen kann.",
+        "fr": "Non. Gardez la carambole hors de portée des chiens. La carambole acide contient de l’oxalate soluble en concentrations dangereuses, ce qui peut provoquer des vomissements, une salivation excessive, une faiblesse, des tremblements, un faible taux de calcium dans le sang et une atteinte rénale."
       },
       "why": {
         "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
         "sl": "Pet Poison Helpline navaja, da lahko karambola pri psih povzroči zastrupitev. Glavna težava so topni oksalati (oksalna kislina), ki so v kisli karamboli v nevarnih koncentracijah. Pet Poison Helpline sicer navaja tudi, da sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik pravi, da karambola za pse ni varna, zato izberemo strožjo oceno. Že majhne količine lahko povzročijo zdravstvene težave, zlasti pri psih s težavami z ledvicami, karambola pa lahko poslabša obstoječe težave z ledvicami.",
-        "de": "Laut Pet Poison Helpline kann Sternfrucht bei Hunden zu einer Vergiftung führen. Das Hauptproblem ist lösliches Oxalat (Oxalsäure), das in saurer Sternfrucht in gefährlicher Konzentration vorkommt. Pet Poison Helpline weist außerdem darauf hin, dass süße Sternfrucht nur sehr wenig lösliches Oxalat enthält und für Tiere mit gesunden Nieren nicht giftig ist; ein von Tierärzten geprüfter Ratgeber sagt jedoch, dass Sternfrucht für Hunde nicht sicher ist, deshalb legen wir die strengere Stufe zugrunde. Schon kleine Mengen können zu gesundheitlichen Problemen führen, vor allem bei Hunden mit Nierenproblemen, und Sternfrucht kann bestehende Nierenprobleme verschlimmern."
+        "de": "Laut Pet Poison Helpline kann Sternfrucht bei Hunden zu einer Vergiftung führen. Das Hauptproblem ist lösliches Oxalat (Oxalsäure), das in saurer Sternfrucht in gefährlicher Konzentration vorkommt. Pet Poison Helpline weist außerdem darauf hin, dass süße Sternfrucht nur sehr wenig lösliches Oxalat enthält und für Tiere mit gesunden Nieren nicht giftig ist; ein von Tierärzten geprüfter Ratgeber sagt jedoch, dass Sternfrucht für Hunde nicht sicher ist, deshalb legen wir die strengere Stufe zugrunde. Schon kleine Mengen können zu gesundheitlichen Problemen führen, vor allem bei Hunden mit Nierenproblemen, und Sternfrucht kann bestehende Nierenprobleme verschlimmern.",
+        "fr": "Pet Poison Helpline indique que la carambole peut provoquer une intoxication chez les chiens. La principale préoccupation est l’oxalate soluble (acide oxalique), présent en concentrations dangereuses dans la carambole acide. Pet Poison Helpline note aussi que la carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme que la carambole n’est pas sans danger pour les chiens ; nous retenons donc le niveau le plus strict. Même de petites quantités peuvent entraîner des problèmes de santé, en particulier chez les chiens ayant des problèmes rénaux, et la carambole peut aggraver des problèmes rénaux existants."
       },
       "signs": {
         "en": [
@@ -40733,30 +40920,42 @@
           "Zittern",
           "Niedriger Calciumspiegel im Blut",
           "Anzeichen für Nierenschäden, etwa häufiges Urinieren"
+        ],
+        "fr": [
+          "Vomissements",
+          "Salivation excessive",
+          "Faiblesse",
+          "Tremblements",
+          "Taux de calcium sanguin bas",
+          "Signes d’atteinte rénale, comme uriner beaucoup"
         ]
       },
       "what_to_do": {
         "en": "Remove any remaining star fruit and contact your vet or a pet poison helpline right away, especially if your dog has kidney problems. Signs can appear within a few hours.",
         "sl": "Odstranite preostalo karambolo in se takoj obrnite na veterinarja ali na službo za pomoč pri zastrupitvah živali, zlasti če ima pes težave z ledvicami. Znaki se lahko pojavijo v nekaj urah.",
-        "de": "Räumen Sie übrige Sternfrucht weg und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, vor allem wenn Ihr Hund Nierenprobleme hat. Anzeichen können innerhalb weniger Stunden auftreten."
+        "de": "Räumen Sie übrige Sternfrucht weg und wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere, vor allem wenn Ihr Hund Nierenprobleme hat. Anzeichen können innerhalb weniger Stunden auftreten.",
+        "fr": "Retirez ce qui reste de carambole et contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire, surtout si votre chien a des problèmes rénaux. Les signes peuvent apparaître en quelques heures."
       },
       "serving": null,
       "child": {
         "en": "Star fruit is not a dog treat. If your dog eats some, tell a grown-up right away.",
         "sl": "Karambola ni priboljšek za pse. Če jo pes poje, takoj povej odraslemu.",
-        "de": "Sternfrucht ist kein Leckerli für Hunde. Wenn dein Hund etwas davon frisst, sag sofort einem Erwachsenen Bescheid."
+        "de": "Sternfrucht ist kein Leckerli für Hunde. Wenn dein Hund etwas davon frisst, sag sofort einem Erwachsenen Bescheid.",
+        "fr": "La carambole n’est pas une friandise pour chien. Si ton chien en mange, préviens tout de suite un adulte."
       },
       "faq": [
         {
           "q": {
             "en": "Is sweet star fruit safe for dogs?",
             "sl": "Je sladka karambola za pse varna?",
-            "de": "Ist süße Sternfrucht für Hunde unbedenklich?"
+            "de": "Ist süße Sternfrucht für Hunde unbedenklich?",
+            "fr": "La carambole sucrée est-elle sans danger pour les chiens ?"
           },
           "a": {
             "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
             "sl": "Sladka karambola vsebuje zelo malo topnih oksalatov in ni strupena za živali z zdravimi ledvicami, a veterinarsko pregledan vodnik vseeno pravi, da karambola za pse ni varna, zato se ji je najbolje izogniti.",
-            "de": "Süße Sternfrucht enthält nur sehr wenig lösliches Oxalat und ist für Tiere mit gesunden Nieren nicht giftig, doch ein von Tierärzten geprüfter Ratgeber sagt trotzdem, dass Sternfrucht für Hunde nicht sicher ist; meiden Sie sie am besten."
+            "de": "Süße Sternfrucht enthält nur sehr wenig lösliches Oxalat und ist für Tiere mit gesunden Nieren nicht giftig, doch ein von Tierärzten geprüfter Ratgeber sagt trotzdem, dass Sternfrucht für Hunde nicht sicher ist; meiden Sie sie am besten.",
+            "fr": "La carambole sucrée contient très peu d’oxalate soluble et n’est pas toxique pour les animaux dont les reins sont sains, mais un guide relu par des vétérinaires affirme tout de même que la carambole n’est pas sans danger pour les chiens ; mieux vaut donc l’éviter."
           }
         }
       ],
@@ -49302,6 +49501,591 @@
       "url": "https://www.centroveterinario.ch/",
       "source_url": "https://www.centroveterinario.ch/",
       "checked": "2026-11-04"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "D&N Vets (Dimitriou)",
+      "city": "Paphos (Mesogi)",
+      "region": "Paphos",
+      "address": "Mesogi Avenue 124, Mesogi, 8280 Paphos",
+      "phone": "+357 26 819942",
+      "emergency_24h": true,
+      "duty": "Full emergency service with in-house staff 24 hours a day, 365 days a year. Emergency phone +357 99 371508.",
+      "duty_i18n": null,
+      "url": "http://www.dnvet.com",
+      "source_url": "https://issuu.com/cypruslifestylemagazine/docs/d_and_n_vets_resize_1",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Dr Andreas Antoniou Veterinary Clinic",
+      "city": "Kolossi",
+      "region": "Limassol",
+      "address": "11 Ithakis, Kolossi, Limassol",
+      "phone": "+357 99 725411",
+      "emergency_24h": true,
+      "duty": "24-hour emergency service. Regular hours Mon-Fri 08:00-13:00 and 15:00-18:00, Sat 08:00-13:00.",
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://www.kiprinform.com/en/cyprus_services/vet-clinic-in-kolossi",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "V3TS Veterinary Clinic & Mobile Services",
+      "city": "Larnaca",
+      "region": "Larnaca",
+      "address": null,
+      "phone": "+357 24 253373",
+      "emergency_24h": true,
+      "duty": "24/7 emergency veterinary care. Mobile line +357 99 253372.",
+      "duty_i18n": null,
+      "url": "https://v3tshospital.com.cy/",
+      "source_url": "https://www.unic.ac.cy/health/healthcare/partner-veterinary-clinics/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Limassol Veterinary Clinic Ltd",
+      "city": "Kato Polemidia",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 338877",
+      "emergency_24h": false,
+      "duty": "Emergency support on call; call ahead.",
+      "duty_i18n": null,
+      "url": "https://www.limassolvet.com/",
+      "source_url": "https://dom.com.cy/en/live/blogs/overview-of-veterinary-clinics-in-limassol/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Animal Health Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": "130 Griva Digeni, 3101 Limassol",
+      "phone": "+357 25 583334",
+      "emergency_24h": false,
+      "duty": "Hours listed: Mon-Fri 09:00-19:00, Sat 09:00-14:00. Call ahead for urgent cases.",
+      "duty_i18n": null,
+      "url": "https://animalhealth.com.cy",
+      "source_url": "https://www.cyprus-faq.com/en/south/organizations/pets/vet-clinics/animal-health-veterinary-clinic",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "AlphaVets Veterinary Clinic",
+      "city": "Germasogeia (Limassol)",
+      "region": "Limassol",
+      "address": "Edessis 3A, Potamos Germasogeia, Limassol",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-14:00 and 15:00-19:00, Sat 09:00-14:00. On-call home visits.",
+      "duty_i18n": null,
+      "url": "https://en.alphavets.net/",
+      "source_url": "https://www.kiprinform.com/en/cyprus_services/alphavets-veterinary-clinic-in-limassol/amp/",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Zookosmos Veterinary Clinic",
+      "city": "Aradippou (Larnaca)",
+      "region": "Larnaca",
+      "address": "Leoforos Grigori Afxentiou 18, Aradippou, 7103 Larnaca",
+      "phone": null,
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-13:30 and 15:30-18:30, Sat 09:00-13:30.",
+      "duty_i18n": null,
+      "url": "https://www.kiprinform.com/en/services/zookosmos-veterinary-clinic-in-larnaca/",
+      "source_url": "https://kiprinform.com/en/cyprus_services/zookosmos-veterinary-clinic-in-larnaca",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Peyia Veterinary Clinic",
+      "city": "Peyia",
+      "region": "Paphos",
+      "address": "Pegeia, Paphos",
+      "phone": "+357 26 622775",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 08:00-17:00, Sat 09:00-13:00, Sun closed.",
+      "duty_i18n": null,
+      "url": "http://peyiaveterinaryclinic.com",
+      "source_url": "https://www.cyprusnet.com/peyia-veterinary-clinic",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Paw Care Veterinary Clinic",
+      "city": "Paralimni",
+      "region": "Famagusta",
+      "address": "Cheimaras 4, Paralimni 5285",
+      "phone": "+357 23 816060",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-14:00, Sun closed.",
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://www.cyprusnet.com/paw-care-veterinary-clinic",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Tasos Kefalas Veterinary Clinic",
+      "city": "Paralimni",
+      "region": "Famagusta",
+      "address": "1st April Avenue, Paralimni (traffic lights, opposite the banks)",
+      "phone": "+357 99 477775",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 09:00-19:00, Sat 09:00-13:00. Home and emergency visits available; emergency phone +357 99 477775.",
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://whatsoncy.com/2023/12/11/tasos-kefalas-veterinary-clinic-paralimni-2-2-2-2-2",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Medvets Veterinary Clinic",
+      "city": "Paralimni",
+      "region": "Famagusta",
+      "address": null,
+      "phone": "+357 23 730505",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": "https://www.facebook.com/MedvetsVeterinaryClinic",
+      "source_url": "https://angloinfo.com/cyprus/directory/family/pets-animals",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Blue Cross Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 570444",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "hosPETal Vet Clinic (C. Vasiadou)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 253939",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Healthy Pet Veterinary Clinic (Dr Avgoustinos Theodorou)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 101352",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Love4pets Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 70 009082",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Pet Center (Marios Nikolaou Vasou)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 310792",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Pawsitive Animal Care Vet Clinic (Dr Aliki Konstantinou)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 011611",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Smart Vet Hub & Mobile Services",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 70 000820",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "SH Small Animal Hospital",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 724437",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "The Limassol Vets",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 352040",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Vet Clinic Damianos Damianou",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 711284",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Happy-Tail Vet Clinic (Daniella Katsiari)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 96 647888",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Vet Cure Vet Clinic (Dr Constantinos Andreou)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 251323",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Pet People Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 96 615918",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Marios Tornou Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 727500",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "MP West Limassol Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 933555",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Veterinary Medical Center (VMC)",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 250035",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "At The Vets Veterinary Clinic",
+      "city": "Limassol",
+      "region": "Limassol",
+      "address": null,
+      "phone": "+357 25 722120",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Vetorama Veterinary Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 22 341234",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Dr. Pet Veterinary Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 22 260515",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Nicosia Animal Medical Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 22 038038",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Paws & Claws Veterinary Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 99 044404",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "VetCare Veterinary Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 22 019900",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Ierodiakonou Vet Clinic",
+      "city": "Nicosia",
+      "region": "Nicosia",
+      "address": null,
+      "phone": "+357 22 254647",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Animal Lovers Vet Clinic",
+      "city": "Larnaca",
+      "region": "Larnaca",
+      "address": null,
+      "phone": "+357 24 332392",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "MyVet Veterinary Centre",
+      "city": "Larnaca",
+      "region": "Larnaca",
+      "address": null,
+      "phone": "+357 24 250270",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "Dr Stavros Onoufriou Veterinary Clinic",
+      "city": "Larnaca",
+      "region": "Larnaca",
+      "address": null,
+      "phone": "+357 99 531449",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "ZIKKOS' Vet Clinic and Pet Care Centre",
+      "city": "Larnaca",
+      "region": "Larnaca",
+      "address": null,
+      "phone": "+357 24 668255",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
+    },
+    {
+      "country": "CY",
+      "kind": "clinic",
+      "name": "CYVETS Veterinary Centre",
+      "city": "Paphos",
+      "region": "Paphos",
+      "address": null,
+      "phone": "+357 26 811111",
+      "emergency_24h": false,
+      "duty": null,
+      "duty_i18n": null,
+      "url": null,
+      "source_url": "https://cyprus-mail.com/2025/07/24/lack-of-support-for-animals-affected-by-wildfires",
+      "checked": "2026-11-05"
     },
     {
       "country": "CZ",

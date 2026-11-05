@@ -4,28 +4,33 @@
   "name": {
     "en": "Rhubarb",
     "sl": "Rabarbara",
-    "de": "Rhabarber"
+    "de": "Rhabarber",
+    "fr": "Rhubarbe"
   },
   "question": {
     "en": "Can cats eat rhubarb?",
     "sl": "Ali lahko mačke jedo rabarbaro?",
-    "de": "Dürfen Katzen Rhabarber fressen?"
+    "de": "Dürfen Katzen Rhabarber fressen?",
+    "fr": "Les chats peuvent-ils manger de la rhubarbe ?"
   },
   "url_slug": {
     "en": "rhubarb",
     "sl": "rabarbara",
-    "de": "rhabarber"
+    "de": "rhabarber",
+    "fr": "rhubarbe"
   },
   "level": "dangerous",
   "answer": {
     "en": "No. The ASPCA lists rhubarb as toxic to cats because it contains soluble calcium oxalates. The leaves and roots are the most toxic parts. Don't share rhubarb with your cat, and call your vet if your cat chews any.",
     "sl": "Ne. ASPCA rabarbaro navaja kot strupeno za mačke, ker vsebuje topne kalcijeve oksalate. Najbolj strupeni so listi in korenine. Rabarbare ne delite z mačko in pokličite veterinarja, če jo mačka pogrizlja.",
-    "de": "Nein. Die ASPCA stuft Rhabarber als giftig für Katzen ein, weil er lösliche Calciumoxalate enthält. Blätter und Wurzeln sind die giftigsten Teile. Geben Sie Ihrer Katze keinen Rhabarber, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze daran gekaut hat."
+    "de": "Nein. Die ASPCA stuft Rhabarber als giftig für Katzen ein, weil er lösliche Calciumoxalate enthält. Blätter und Wurzeln sind die giftigsten Teile. Geben Sie Ihrer Katze keinen Rhabarber, und rufen Sie Ihren Tierarzt an, wenn Ihre Katze daran gekaut hat.",
+    "fr": "Non. L’ASPCA classe la rhubarbe parmi les plantes toxiques pour les chats, car elle contient des oxalates de calcium solubles. Les feuilles et les racines sont les parties les plus toxiques. Ne partagez pas de rhubarbe avec votre chat, et appelez votre vétérinaire s’il en a mâchouillé."
   },
   "why": {
     "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
     "sl": "Rabarbara vsebuje topne kalcijeve oksalate in ASPCA jo navaja kot strupeno za mačke; najbolj strupeni so listi in korenine. ASPCA ima za rabarbaro dva vnosa, ki se razlikujeta: eden navaja odpoved ledvic, tresenje in slinjenje, drugi pa bruhanje in slinjenje pri psih in mačkah ter odpoved ledvic pri pašnih živalih. Upoštevamo strožji vnos in navajamo tudi odpoved ledvic.",
-    "de": "Rhabarber enthält lösliche Calciumoxalate, und die ASPCA stuft ihn als giftig für Katzen ein, wobei Blätter und Wurzeln die giftigsten Teile sind. Die beiden Rhabarber-Einträge der ASPCA unterscheiden sich: Der eine nennt Nierenversagen, Zittern und Sabbern, der andere Erbrechen und Sabbern bei Hunden und Katzen sowie Nierenversagen bei Weidetieren. Wir folgen dem strengeren Eintrag und nennen daher auch Nierenversagen."
+    "de": "Rhabarber enthält lösliche Calciumoxalate, und die ASPCA stuft ihn als giftig für Katzen ein, wobei Blätter und Wurzeln die giftigsten Teile sind. Die beiden Rhabarber-Einträge der ASPCA unterscheiden sich: Der eine nennt Nierenversagen, Zittern und Sabbern, der andere Erbrechen und Sabbern bei Hunden und Katzen sowie Nierenversagen bei Weidetieren. Wir folgen dem strengeren Eintrag und nennen daher auch Nierenversagen.",
+    "fr": "La rhubarbe contient des oxalates de calcium solubles, et l’ASPCA la classe parmi les plantes toxiques pour les chats, les feuilles et les racines étant les parties les plus toxiques. Les deux fiches de l’ASPCA sur la rhubarbe ne sont pas identiques : l’une mentionne une insuffisance rénale, des tremblements et une salivation excessive, l’autre des vomissements et une salivation excessive chez les chiens et les chats, et une insuffisance rénale chez les animaux qui broutent. Nous suivons la fiche la plus stricte et mentionnons aussi l’insuffisance rénale."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Sabbern",
       "Zittern",
       "Nierenprobleme (Nierenversagen)"
+    ],
+    "fr": [
+      "Vomissements",
+      "Salivation excessive",
+      "Tremblements",
+      "Problèmes rénaux (insuffisance rénale)"
     ]
   },
   "what_to_do": {
     "en": "If your cat chewed any part of a rhubarb plant, especially the leaves or roots, contact your vet or a pet poison helpline right away. Note what was eaten and when. Don't try to make your cat sick at home.",
     "sl": "Če je mačka grizljala katerikoli del rabarbare, zlasti liste ali korenine, takoj pokličite veterinarja ali telefonsko linijo za zastrupitve živali. Zapišite si, kaj je pojedla in kdaj. Mački ne poskušajte sami izzvati bruhanja.",
-    "de": "Hat Ihre Katze an einer Rhabarberpflanze gekaut, vor allem Blätter oder Wurzeln, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Hat Ihre Katze an einer Rhabarberpflanze gekaut, vor allem Blätter oder Wurzeln, wenden Sie sich sofort an Ihren Tierarzt oder einen Giftnotruf für Tiere. Notieren Sie, was gefressen wurde und wann. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mâchonné n’importe quelle partie d’un plant de rhubarbe, surtout les feuilles ou les racines, contactez immédiatement votre vétérinaire ou un centre antipoison vétérinaire. Notez ce qu’il a mangé et à quel moment. N’essayez pas de faire vomir votre chat vous-même."
   },
   "serving": null,
   "child": {
     "en": "Rhubarb is not a cat food. The rhubarb plant is not safe for cats, so tell a grown-up if kitty chews some.",
     "sl": "Rabarbara ni hrana za muce. Ta rastlina ni varna za muce, zato povej odraslemu, če jo muca pogrizlja.",
-    "de": "Rhabarber ist nichts für Katzen. Die Pflanze ist für Katzen gefährlich – sag also einem Erwachsenen Bescheid, wenn deine Katze daran knabbert."
+    "de": "Rhabarber ist nichts für Katzen. Die Pflanze ist für Katzen gefährlich – sag also einem Erwachsenen Bescheid, wenn deine Katze daran knabbert.",
+    "fr": "La rhubarbe n’est pas un aliment pour chat. Le plant de rhubarbe est dangereux pour les chats : préviens un adulte si ton chat en mâchouille."
   },
   "faq": [
     {
       "q": {
         "en": "Which part of rhubarb is the problem?",
         "sl": "Kateri del rabarbare je težava?",
-        "de": "Welcher Teil des Rhabarbers ist gefährlich?"
+        "de": "Welcher Teil des Rhabarbers ist gefährlich?",
+        "fr": "Quelle partie de la rhubarbe pose problème ?"
       },
       "a": {
         "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
         "sl": "ASPCA rastlino rabarbare navaja kot strupeno za mačke in pravi, da so najbolj strupeni listi in korenine.",
-        "de": "Die ASPCA stuft die Rhabarberpflanze als giftig für Katzen ein und nennt Blätter und Wurzeln als giftigste Teile."
+        "de": "Die ASPCA stuft die Rhabarberpflanze als giftig für Katzen ein und nennt Blätter und Wurzeln als giftigste Teile.",
+        "fr": "L’ASPCA classe le plant de rhubarbe parmi les plantes toxiques pour les chats et précise que les feuilles et les racines sont les parties les plus toxiques."
       }
     }
   ],
@@ -134,6 +149,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6bc16d94dae7f815bfacdb9bc8b4428a3cd5a0b80721efae21d4d9b564b5dbec"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "1c7c939d5355e532333a2bef3f56de58377bd24f4c9932492361a4e4e78e08de"
     }
   }
 }
