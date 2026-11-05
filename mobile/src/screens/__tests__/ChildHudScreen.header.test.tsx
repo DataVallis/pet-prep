@@ -15,7 +15,7 @@ import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profil
 import { readPetProfile } from '@/modules/petProfile/petProfile';
 import { useAppStore } from '@/store/appStore';
 import { i18n } from '@/i18n';
-import { makeLegacyPetProfile, makeLiveChildState, makeMedia, makePet, makePetProfile } from '@/test-utils/fixtures';
+import { makeBehaviourEvent, makeLegacyPetProfile, makeLiveChildState, makeMedia, makePet, makePetProfile } from '@/test-utils/fixtures';
 import { renderWithQuery } from '@/test-utils/renderWithQuery';
 
 jest.mock('@/api/client', () => {
@@ -99,8 +99,10 @@ describe('ChildHudScreen header sheet (M5-F05)', () => {
     const header = screen.getByTestId('hud-profile-open');
     expect(header.props.accessibilityRole).toBe('button');
     expect(header.props.accessibilityLabel).toContain('Kupljen pri vzreditelju');
-    // One short line in the header — the full text lives in the sheet.
-    expect(screen.getByTestId('hud-profile-sub').props.numberOfLines).toBe(1);
+    // David 2026-11-05: the third line is the mood label (one line); origin + next stage only in the sheet.
+    expect(header.props.accessibilityLabel).toMatch(/, Zadovoljen$/);
+    expect(screen.queryByTestId('hud-profile-sub')).toBeNull();
+    expect(screen.getByTestId('hud-mood-text').props.numberOfLines).toBe(1);
     expect(screen.queryByTestId('hud-profile-sheet')).toBeNull();
 
     fireEvent.press(header);
@@ -167,5 +169,34 @@ describe('ChildHudScreen "getting ready" notice (M5-F06)', () => {
   it('ready media: no notice', async () => {
     await renderHud(makeLiveChildState({ pet: { profile: makePetProfile(), media: makeMedia({ status: 'ready' }) } }));
     expect(screen.queryByTestId('hud-pet-media-pending')).toBeNull();
+  });
+});
+
+describe('ChildHudScreen header mood label (David 2026-11-05, option A)', () => {
+  it('the third line is the mood from the server state — never the purchase line', async () => {
+    await renderHud(makeLiveChildState({ pet: { profile: makePetProfile(), pet_state: 'low_energy' } }));
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Utrujen — rabi sprehod');
+    expect(screen.getByTestId('hud-mood').props.accessibilityLabel).toBe('Utrujen — rabi sprehod');
+    expect(within(screen.getByTestId('hud-header')).queryByText(/Kupljen pri vzreditelju/)).toBeNull();
+  });
+
+  it('hungry because of thirst → »Žejen«', async () => {
+    await renderHud(makeLiveChildState({ pet: { pet_state: 'hungry', hunger_level: 70, thirst_level: 20 } }));
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Žejen');
+  });
+
+  it('an open accident overrides the state', async () => {
+    await renderHud(
+      makeLiveChildState({
+        pet: { pet_state: 'hungry', hunger_level: 20 },
+        behaviour: { take_out: null, active_events: [makeBehaviourEvent('accident')], scene: 'accident' },
+      }),
+    );
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Luža na tleh — počisti');
+  });
+
+  it('a legacy pet (no profile) shows the label too', async () => {
+    await renderHud(makeLiveChildState({ pet: { pet_state: 'sleeping' } }));
+    expect(screen.getByTestId('hud-mood-text')).toHaveTextContent('Spi');
   });
 });

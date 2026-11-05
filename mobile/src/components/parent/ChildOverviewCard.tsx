@@ -55,6 +55,8 @@ import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { petLabel } from '@/modules/petName/petName';
 import NoPushesHint from '@/components/parent/NoPushesHint';
+import PetMoodLabel from '@/components/PetMoodLabel';
+import { familyPetMood } from '@/modules/petMood/petMood';
 import { noPushesHintDue } from '@/modules/steps/adaptedPushHint';
 
 /** All user-visible strings of the card (`parent:childCard`, M1-18). */
@@ -106,6 +108,8 @@ function WeekBars({ days }: { days: DayRow[] }) {
 export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChildPin, onOpenChallenge, onLogWalk }: ChildOverviewCardProps) {
   const id = child.id;
   const status = pet ? petStatus(pet) : null;
+  /** Mood label (David 2026-11-05): only while no lock / payment status line is shown. */
+  const mood = pet ? familyPetMood(pet) : null;
   /** M5-R06-08c: texts follow the species of the pet shown (a family may have a dog and a cat). */
   const species = pet?.species ?? null;
   const waitsForContract = pet !== null && (pet.awaiting_contract || !child.contract_signed);
@@ -289,6 +293,9 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
                   {petStatusText(status, species)}
                 </Text>
               )}
+              {mood !== null && (
+                <PetMoodLabel mood={mood} species={species} theme="light" style={styles.mood} testID={`child-pet-mood-${id}`} />
+              )}
             </View>
           </View>
           <MetricRow label={S.metrics.hunger} value={pet.metrics.hunger} />
@@ -388,6 +395,7 @@ const styles = StyleSheet.create({
   weekLabel: { fontSize: 10, fontWeight: '600', color: C.muted },
   status: { fontSize: 13, fontWeight: '600', color: C.yellowText },
   statusRed: { color: C.redText },
+  mood: { marginTop: 2 },
   petHeader: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   secondaryButton: {
     flexDirection: 'row',

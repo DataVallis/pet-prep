@@ -31,6 +31,8 @@ import { t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { breedName, isSpecies } from '@/modules/species/species';
 import { readCertificate, type ParentCertificate } from '@/modules/certificate/certificate';
+import { readPetState } from '@/modules/petMood/readPetState';
+import type { PetState } from '@/types';
 
 /** One pet of the family as the generated schema types it (raw API). */
 export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'][number];
@@ -39,7 +41,9 @@ export type FamilyPetRaw = NonNullable<ParentDashboardResponse['family']>['pets'
  * One pet of the family after normalisation: the schema's loose `timeline` and
  * union-typed `traffic_light` replaced by real types (M2-05).
  */
-export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan' | 'play_today'> & {
+export type FamilyPet = Omit<FamilyPetRaw, 'timeline' | 'traffic_light' | 'care_score' | 'today' | 'behaviour' | 'training' | 'plan' | 'play_today' | 'pet_state'> & {
+  /** The server's pet state (mood label, 2026-11-05); null from an older server. */
+  pet_state: PetState | null;
   /** M3-11 / M3-13: free mutt sandbox or the challenge (payment_required / paid; trial = a pre-M3-13 trial); legacy → paid. */
   plan: PetPlan;
   traffic_light: TrafficLight;
@@ -192,6 +196,7 @@ export function normalizePet(raw: FamilyPetRaw): FamilyPet {
     training: readPetTraining(p.training),
     play_today: readPlayToday(p.play_today),
     plan: readPetPlan(p.plan),
+    pet_state: readPetState(p.pet_state),
   };
 }
 

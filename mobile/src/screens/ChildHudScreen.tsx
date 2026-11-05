@@ -154,7 +154,9 @@ import MetricBar from '@/components/MetricBar';
 import PetMediaView, { MediaPendingNotice, PET_MEDIA_STRINGS } from '@/components/PetMediaView';
 import WalkTrackerOverlay from '@/modules/walk/WalkTrackerOverlay';
 import { usePushPromptOnFirstView } from '@/modules/push/usePushPromptOnFirstView';
-import { nextStageLine, originLine, stageLine } from '@/modules/petProfile/petProfile';
+import { stageLine } from '@/modules/petProfile/petProfile';
+import PetMoodLabel from '@/components/PetMoodLabel';
+import { moodText, petMoodOf } from '@/modules/petMood/petMood';
 import { profileHeaderA11y, profileSheetRows } from '@/modules/petProfile/profileSheet';
 import PetProfileSheet from '@/components/PetProfileSheet';
 import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
@@ -237,11 +239,6 @@ function headerA11y(name: string | null, profile: string): string {
   return name === null ? profile : `${name}, ${profile}`;
 }
 
-/** HUD second line of a profiled pet: "Posvojen iz zavetišča · 24. 11. 2026 postane mlad pes". */
-function profileSubline(profile: NonNullable<ChildPetView['pet']['profile']>): string | null {
-  const parts = [originLine(profile), nextStageLine(profile, 'child')].filter((x): x is string => x !== null);
-  return parts.length > 0 ? parts.join(' · ') : null;
-}
 
 
 /**
@@ -721,7 +718,15 @@ export default function ChildHudScreen() {
   }
 
   const { pet } = view;
-  const profileSub = pet.profile ? profileSubline(pet.profile) : null;
+  // Mood label (David 2026-11-05, option A): replaced the »Kupljen pri vzreditelju · …« line —
+  // origin and next stage stay in the profile sheet (`profileSheetRows`).
+  const mood = petMoodOf({
+    petState: pet.pet_state,
+    lockReason: view.lock.reason,
+    scene: view.behaviour.scene,
+    hunger: pet.hunger_level,
+    thirst: pet.thirst_level,
+  });
   const profileRows = pet.profile ? profileSheetRows(breedName(pet.breed_type, pet.species), pet.profile) : [];
   const locked = view.lock.is_locked;
   const opaqueLock = view.lock.reason === 'game_over' || view.lock.reason === 'inactive';
@@ -1015,7 +1020,7 @@ export default function ChildHudScreen() {
             onPress={pet.profile ? () => setProfileVisible(true) : undefined}
             disabled={!pet.profile}
             accessibilityRole={pet.profile ? 'button' : undefined}
-            accessibilityLabel={pet.profile ? headerA11y(pet.name, profileHeaderA11y(profileRows)) : undefined}
+            accessibilityLabel={pet.profile ? `${headerA11y(pet.name, profileHeaderA11y(profileRows))}, ${moodText(mood, pet.species)}` : undefined}
             accessibilityHint={pet.profile ? t('child:hud.profileSheet.openHint') : undefined}
             testID="hud-profile-open"
           >
@@ -1039,16 +1044,12 @@ export default function ChildHudScreen() {
                   <Text style={styles.petAgeText} numberOfLines={1} testID="hud-stage">
                     {stageLine(pet.profile)}
                   </Text>
-                  {profileSub && (
-                    <Text style={styles.petProfileText} numberOfLines={1} ellipsizeMode="tail" testID="hud-profile-sub">
-                      {profileSub}
-                    </Text>
-                  )}
                 </>
               ) : (
                 // Free plan = sandbox without the 12-week programme (PAYMENTS_SPEC §2): no week label.
                 pet.plan.type !== 'free' && <Text style={styles.petAgeText}>{formatChallengeWeek(pet.virtual_age_months)}</Text>
               )}
+              <PetMoodLabel mood={mood} species={pet.species} theme="dark" style={styles.petMoodLabel} testID="hud-mood" />
             </View>
             {pet.profile && <ChevronDown color={alpha(palette.white, 0.6)} size={16} />}
           </Pressable>
@@ -1639,11 +1640,7 @@ const styles = StyleSheet.create({
   petNameTitle: { textTransform: 'none' },
   petNameBreed: { fontSize: 13, fontWeight: '600', textTransform: 'capitalize', color: alpha(palette.white, 0.7) },
   petInfoText: { flex: 1, minWidth: 0 },
-  petProfileText: {
-    marginTop: 2,
-    fontSize: 11,
-    color: alpha(palette.white, 0.7),
-  },
+  petMoodLabel: { marginTop: 2 },
   petAgeText: {
     fontSize: 10,
     fontWeight: '600',

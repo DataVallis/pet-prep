@@ -963,5 +963,18 @@
     "current": "Now",
     "photo": "Photo",
     "hint": "Open photo"
+  },
+  "mood": {
+    "idle": "Content",
+    "playing": "Playful",
+    "sleeping": "Asleep",
+    "low_energy": "Tired — needs a walk",
+    "hungry": "Hungry",
+    "thirsty": "Thirsty",
+    "sick": "Sick",
+    "accident": "Puddle on the floor — clean up",
+    "chewing": "Chewed slipper — tidy up",
+    "scratching": "Scratched sofa",
+    "hard_stopped": "Game paused"
   }
 }

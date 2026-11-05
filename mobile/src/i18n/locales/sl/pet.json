@@ -971,5 +971,18 @@
     "current": "Zdaj",
     "photo": "Fotografija",
     "hint": "Odpri fotografijo"
+  },
+  "mood": {
+    "idle": "Zadovoljen",
+    "playing": "Igriv",
+    "sleeping": "Spi",
+    "low_energy": "Utrujen — rabi sprehod",
+    "hungry": "Lačen",
+    "thirsty": "Žejen",
+    "sick": "Bolan",
+    "accident": "Luža na tleh — počisti",
+    "chewing": "Pregrizen copat — pospravi",
+    "scratching": "Opraskan kavč",
+    "hard_stopped": "Igra ustavljena"
   }
 }

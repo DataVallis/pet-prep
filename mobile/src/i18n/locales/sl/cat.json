@@ -463,6 +463,14 @@
           "bought": "Kupljena pri vzreditelju",
           "adopted": "Posvojena iz zavetišča ali od znancev"
         }
+      },
+      "mood": {
+        "idle": "Zadovoljna",
+        "playing": "Igriva",
+        "low_energy": "Utrujena — rabi igro",
+        "hungry": "Lačna",
+        "thirsty": "Žejna",
+        "sick": "Bolna"
       }
     },
     "push": {

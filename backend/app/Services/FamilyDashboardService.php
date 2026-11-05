@@ -253,6 +253,9 @@ class FamilyDashboardService
                     'is_hard_stopped' => (bool) $pet->is_hard_stopped,
                     'is_ill' => $pet->isIll(),
                     'escalation_level' => (int) $pet->escalation_level,
+                    // Mood label (David 2026-11-05): the server's pet state, the same value
+                    // the child state and the PetUpdated broadcast carry — the app never re-derives it.
+                    'pet_state' => $pet->pet_state->value,
                     // M3-11: plan + payment status (paywall per pet).
                     'plan' => PetPlanPayload::for($pet, $tz)->toArray(),
                     // M5-R01: origin, age, life stage and today's rules (meals by

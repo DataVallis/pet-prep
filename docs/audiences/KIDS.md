@@ -38,6 +38,7 @@ Starši izberejo, ali je tvoj kuža **mladiček**, **mlad pes**, **odrasel** ali
 Če je čas za hrano, ko si v šoli ali spiš, ga nahrani starš — ti nisi nič zamudil.
 
 ## Kaj kuža potrebuje
+*Pod imenom tvojega kužka vedno piše, kako je in kaj rabi — npr. »Lačen«, »Žejen«, »Utrujen — rabi sprehod« (muca: »Utrujena — rabi igro«) ali »Spi«. (v aplikaciji od 5. 11. 2026 — še ni v trgovini)*
 *Kako skrbiš ravno za svojega kužka ali muco, ti pove kartica **»Kako skrbim za …«** — pokaže se sama prvič, ko odpreš aplikacijo, potem pa jo odpreš v **»Nastavitve«** (zobnik zgoraj) → **»Kako skrbim«**. Tam so prave številke tvojega ljubljenčka (obroki, koraki, voda, česanje, spanje). (od 21. 10. 2026 — še ni v trgovini)*
 
 - 🍖 **Hrano** — odrasel kuža zjutraj (med 6. in 10. uro) in zvečer (med 17. in 21. uro), enkrat vsakič; mladiček večkrat na dan (aplikacija ti pokaže, kdaj). Ob drugih urah je gumb zasenčen in pod njim piše, kdaj je naslednji obrok (npr. "ob 17:00"). **Če si obrok zamudil in je kuža zelo lačen** (hrana 20 % ali manj), se gumb spremeni v **»Nujni obrok«** in ga lahko nahraniš takoj — a pomni: obrok si zamudil, zato ne šteje kot pravočasen. Če kužka hraniš ob pravem času, nujnega obroka ne potrebuješ. Naslednji obrok ob pravem času ne pozabi! *(v naslednji različici aplikacije)*

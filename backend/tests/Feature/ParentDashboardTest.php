@@ -1,6 +1,7 @@
 <?php
 
 use App\Enums\ActivityType;
+use App\Enums\PetStateEnum;
 use App\Enums\PetStatusPeriodKind;
 use App\Events\PetUpdated;
 use App\Models\ActivityLog;
@@ -72,6 +73,19 @@ describe('GET /api/parent/dashboard', function () {
         expect($response->json('child.name'))->toBe($child->name);
         expect($response->json('recent_activities'))->toHaveCount(1);
         expect($response->json('recent_activities.0.is_positive'))->toBeTrue();
+    });
+
+    it('carries the server pet state on every family pet (mood label, David 2026-11-05)', function () {
+        [$parent, , $pet] = createParentWithChildAndPet();
+        $pet->update(['pet_state' => PetStateEnum::Hungry]);
+
+        actingAs($parent, 'sanctum');
+
+        $response = getJson('/api/parent/dashboard')->assertOk();
+
+        expect($response->json('family.pets.0.id'))->toBe($pet->id)
+            ->and($response->json('family.pets.0.pet_state'))->toBe('hungry')
+            ->and($response->json('family.pets.0.pet_state'))->toBe($pet->fresh()->pet_state->value);
     });
 
     it('returns green traffic light when all metrics are healthy', function () {
