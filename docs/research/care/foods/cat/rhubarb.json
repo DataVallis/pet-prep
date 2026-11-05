@@ -9,7 +9,8 @@
     "es": "Ruibarbo",
     "it": "Rabarbaro",
     "pt": "Ruibarbo",
-    "nl": "Rabarber"
+    "nl": "Rabarber",
+    "pl": "Rabarbar"
   },
   "question": {
     "en": "Can cats eat rhubarb?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer ruibarbo?",
     "it": "I gatti possono mangiare il rabarbaro?",
     "pt": "Os gatos podem comer ruibarbo?",
-    "nl": "Mogen katten rabarber eten?"
+    "nl": "Mogen katten rabarber eten?",
+    "pl": "Czy koty mogą jeść rabarbar?"
   },
   "url_slug": {
     "en": "rhubarb",
@@ -29,7 +31,8 @@
     "es": "ruibarbo",
     "it": "rabarbaro",
     "pt": "ruibarbo",
-    "nl": "rabarber"
+    "nl": "rabarber",
+    "pl": "rabarbar"
   },
   "level": "dangerous",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "No. La ASPCA considera el ruibarbo tóxico para los gatos porque contiene oxalatos de calcio solubles. Las hojas y las raíces son las partes más tóxicas. No compartas ruibarbo con tu gato y llama a tu veterinario si mastica un poco.",
     "it": "No. L’ASPCA indica il rabarbaro come tossico per i gatti perché contiene ossalati di calcio solubili. Le parti più tossiche sono le foglie e le radici. Non dare rabarbaro al tuo gatto e, se ne mastica anche solo un po’, chiama il veterinario.",
     "pt": "Não. A ASPCA classifica o ruibarbo como tóxico para os gatos, porque contém oxalatos de cálcio solúveis. As folhas e as raízes são as partes mais tóxicas. Não partilhes ruibarbo com o teu gato e liga ao teu veterinário se ele mastigar um pouco.",
-    "nl": "Nee. De ASPCA noemt rabarber giftig voor katten, omdat het oplosbare calciumoxalaten bevat. De bladeren en wortels zijn het giftigst. Deel geen rabarber met je kat en bel je dierenarts als je kat er iets van heeft gekauwd."
+    "nl": "Nee. De ASPCA noemt rabarber giftig voor katten, omdat het oplosbare calciumoxalaten bevat. De bladeren en wortels zijn het giftigst. Deel geen rabarber met je kat en bel je dierenarts als je kat er iets van heeft gekauwd.",
+    "pl": "Nie. ASPCA uznaje rabarbar za toksyczny dla kotów, ponieważ zawiera rozpuszczalne szczawiany wapnia. Najbardziej toksyczne są liście i korzenie. Nie częstuj kota rabarbarem, a jeśli kot cokolwiek z niego pogryzł, zadzwoń do weterynarza."
   },
   "why": {
     "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
@@ -50,7 +54,8 @@
     "es": "El ruibarbo contiene oxalatos de calcio solubles, y la ASPCA lo considera tóxico para los gatos, con las hojas y las raíces como las partes más tóxicas. Las dos fichas del ruibarbo de la ASPCA no coinciden: una indica insuficiencia renal, temblores y salivación; la otra, vómitos y salivación en perros y gatos e insuficiencia renal en animales de pastoreo. Seguimos la ficha más estricta e incluimos también la insuficiencia renal.",
     "it": "Il rabarbaro contiene ossalati di calcio solubili e l’ASPCA lo indica come tossico per i gatti; le parti più tossiche sono le foglie e le radici. Le due schede dell’ASPCA sul rabarbaro non coincidono: una elenca insufficienza renale, tremori e salivazione, l’altra vomito e salivazione in cani e gatti e insufficienza renale negli animali al pascolo. Seguiamo la scheda più severa e includiamo anche l’insufficienza renale.",
     "pt": "O ruibarbo contém oxalatos de cálcio solúveis, e a ASPCA classifica-o como tóxico para os gatos, sendo as folhas e as raízes as partes mais tóxicas. As duas fichas da ASPCA sobre o ruibarbo diferem: uma refere insuficiência renal, tremores e salivação, a outra refere vómitos e salivação em cães e gatos e insuficiência renal em animais que pastam. Seguimos a ficha mais rigorosa e incluímos também a insuficiência renal.",
-    "nl": "Rabarber bevat oplosbare calciumoxalaten en de ASPCA noemt het giftig voor katten, met de bladeren en wortels als giftigste delen. De twee vermeldingen over rabarber bij de ASPCA verschillen: de ene noemt nierfalen, beven en kwijlen, de andere noemt braken en kwijlen bij honden en katten en nierfalen bij grazende dieren. Wij volgen de strengere vermelding en noemen dus ook nierfalen."
+    "nl": "Rabarber bevat oplosbare calciumoxalaten en de ASPCA noemt het giftig voor katten, met de bladeren en wortels als giftigste delen. De twee vermeldingen over rabarber bij de ASPCA verschillen: de ene noemt nierfalen, beven en kwijlen, de andere noemt braken en kwijlen bij honden en katten en nierfalen bij grazende dieren. Wij volgen de strengere vermelding en noemen dus ook nierfalen.",
+    "pl": "Rabarbar zawiera rozpuszczalne szczawiany wapnia, a ASPCA uznaje go za toksyczny dla kotów; najbardziej toksyczne są liście i korzenie. Dwa wpisy ASPCA o rabarbarze podają różne informacje: jeden wymienia niewydolność nerek, drżenie i ślinotok, drugi – wymioty i ślinotok u psów i kotów oraz niewydolność nerek u zwierząt wypasanych. Kierujemy się ostrzejszym wpisem i podajemy także niewydolność nerek."
   },
   "signs": {
     "en": [
@@ -100,6 +105,12 @@
       "Kwijlen",
       "Beven",
       "Nierproblemen (nierfalen)"
+    ],
+    "pl": [
+      "Wymioty",
+      "Ślinotok",
+      "Drżenie",
+      "Problemy z nerkami (niewydolność nerek)"
     ]
   },
   "what_to_do": {
@@ -110,7 +121,8 @@
     "es": "Si tu gato ha masticado cualquier parte de una planta de ruibarbo, sobre todo las hojas o las raíces, ponte en contacto enseguida con tu veterinario o con una línea de información toxicológica para animales. Apunta qué ha comido y cuándo. No intentes provocarle el vómito en casa.",
     "it": "Se il tuo gatto ha masticato una qualsiasi parte della pianta di rabarbaro, soprattutto le foglie o le radici, contatta subito il veterinario o un centro antiveleni veterinario. Annota che cosa ha mangiato e quando. Non provare a farlo vomitare a casa.",
     "pt": "Se o teu gato mastigou qualquer parte de uma planta de ruibarbo, sobretudo as folhas ou as raízes, contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível. Anota o que foi comido e quando. Não tentes fazer o teu gato vomitar em casa.",
-    "nl": "Heeft je kat op een deel van een rabarberplant gekauwd, vooral op de bladeren of wortels, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken."
+    "nl": "Heeft je kat op een deel van een rabarberplant gekauwd, vooral op de bladeren of wortels, neem dan meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren. Schrijf op wat er is gegeten en wanneer. Probeer je kat thuis niet te laten braken.",
+    "pl": "Jeśli kot pogryzł jakąkolwiek część rabarbaru, zwłaszcza liście lub korzenie, od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Zanotuj, co kot zjadł i kiedy. Nie próbuj prowokować wymiotów w domu."
   },
   "serving": null,
   "child": {
@@ -121,7 +133,8 @@
     "es": "El ruibarbo no es comida para gatos. La planta del ruibarbo no es segura para ellos, así que avisa a un adulto si tu gatito mastica un poco.",
     "it": "Il rabarbaro non è cibo per gatti: la pianta non è sicura per loro. Se il tuo gatto ne mastica un po’, dillo subito a un adulto.",
     "pt": "O ruibarbo não é comida para gatos. A planta não é segura para eles, por isso avisa um adulto se o teu gatinho mastigar um bocadinho.",
-    "nl": "Rabarber is geen eten voor katten. De rabarberplant is niet veilig voor katten, dus vertel het aan een volwassene als je kat erop kauwt."
+    "nl": "Rabarber is geen eten voor katten. De rabarberplant is niet veilig voor katten, dus vertel het aan een volwassene als je kat erop kauwt.",
+    "pl": "Rabarbar nie jest jedzeniem dla kotów. Cała roślina nie jest dla kotów bezpieczna, więc powiedz dorosłemu, jeśli kot coś pogryzie."
   },
   "faq": [
     {
@@ -133,7 +146,8 @@
         "es": "¿Qué parte del ruibarbo es el problema?",
         "it": "Quale parte del rabarbaro è pericolosa?",
         "pt": "Que parte do ruibarbo faz mal aos gatos?",
-        "nl": "Welk deel van rabarber is het probleem?"
+        "nl": "Welk deel van rabarber is het probleem?",
+        "pl": "Która część rabarbaru jest niebezpieczna?"
       },
       "a": {
         "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
@@ -143,7 +157,8 @@
         "es": "La ASPCA considera la planta del ruibarbo tóxica para los gatos y señala que las hojas y las raíces son las partes más tóxicas.",
         "it": "L’ASPCA indica la pianta di rabarbaro come tossica per i gatti e dice che le parti più tossiche sono le foglie e le radici.",
         "pt": "A ASPCA classifica a planta de ruibarbo como tóxica para os gatos e refere que as folhas e as raízes são as partes mais tóxicas.",
-        "nl": "De ASPCA noemt de rabarberplant giftig voor katten en zegt dat de bladeren en wortels het giftigst zijn."
+        "nl": "De ASPCA noemt de rabarberplant giftig voor katten en zegt dat de bladeren en wortels het giftigst zijn.",
+        "pl": "ASPCA uznaje rabarbar za roślinę toksyczną dla kotów i podaje, że najbardziej toksyczne są liście i korzenie."
       }
     }
   ],
@@ -234,6 +249,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4e5260be144ec20fd8431e8c96a3612783c75763da97481bef6698a0c8239e09"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e6ffdf12eeac6e41d3df58457f6893b1c8de71082ca1c52f9899c1647d73ae2a"
     }
   }
 }

@@ -9,7 +9,8 @@
     "es": "Zanahorias",
     "it": "Carote",
     "pt": "Cenouras",
-    "nl": "Wortels"
+    "nl": "Wortels",
+    "pl": "Marchewka"
   },
   "question": {
     "en": "Can cats eat carrots?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer zanahorias?",
     "it": "I gatti possono mangiare le carote?",
     "pt": "Os gatos podem comer cenouras?",
-    "nl": "Mogen katten wortels eten?"
+    "nl": "Mogen katten wortels eten?",
+    "pl": "Czy koty mogą jeść marchewkę?"
   },
   "url_slug": {
     "en": "carrots",
@@ -29,7 +31,8 @@
     "es": "zanahorias",
     "it": "carote",
     "pt": "cenouras",
-    "nl": "wortels"
+    "nl": "wortels",
+    "pl": "marchewka"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, un trocito de zanahoria sin condimentar está bien como premio ocasional. Cats Protection incluye la zanahoria entre las verduras que se pueden dar a un gato. Cuécela hasta que esté blanda o corta la zanahoria cruda en trozos pequeños para evitar atragantamientos.",
     "it": "Sì, un pezzettino di carota senza condimenti va bene come premio occasionale. Cats Protection mette le carote tra le verdure che si possono dare al gatto. Cuocila fino a renderla morbida oppure, se è cruda, tagliala in pezzetti piccoli per evitare il soffocamento.",
     "pt": "Sim, um pedacinho de cenoura sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui as cenouras entre os legumes que se podem dar a um gato. Cozinha a cenoura até ficar macia ou, se a deres crua, corta-a em pedaços pequenos para o gato não se engasgar.",
-    "nl": "Ja, een klein stukje ongekruide wortel is af en toe prima als traktatie. Cats Protection rekent wortels tot de groenten die je je kat mag geven. Maak de wortel gaar tot hij zacht is, of snijd rauwe wortel in kleine stukjes om verstikking te voorkomen."
+    "nl": "Ja, een klein stukje ongekruide wortel is af en toe prima als traktatie. Cats Protection rekent wortels tot de groenten die je je kat mag geven. Maak de wortel gaar tot hij zacht is, of snijd rauwe wortel in kleine stukjes om verstikking te voorkomen.",
+    "pl": "Tak, od czasu do czasu mały kawałek marchewki bez dodatków jest w porządku. Cats Protection wymienia marchewkę wśród warzyw, które można dawać kotu. Ugotuj ją do miękkości albo pokrój surową na małe kawałki, żeby kot się nie zadławił."
   },
   "why": {
     "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -50,7 +54,8 @@
     "es": "Cats Protection cita la zanahoria entre las pocas verduras que se pueden dar a un gato y sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos. La RSPCA indica que los gatos solo pueden comer zanahoria cruda si está cortada en trozos pequeños; si no, hay que cocerla hasta que esté blanda para evitar atragantamientos. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "Cats Protection cita le carote tra le poche verdure che si possono dare a un gatto e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. Secondo la RSPCA i gatti possono mangiare le carote crude solo se tagliate in pezzetti piccoli; altrimenti vanno cotte fino a diventare morbide, per evitare il soffocamento. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
     "pt": "A Cats Protection inclui as cenouras entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
-    "nl": "Cats Protection noemt wortels als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
+    "nl": "Cats Protection noemt wortels als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
+    "pl": "Cats Protection wymienia marchewkę wśród niewielu warzyw, które można podawać kotu, i radzi gotować warzywa na parze lub w wodzie, bez masła, soli i przypraw. RSPCA podaje, że koty mogą jeść surową marchewkę tylko pokrojoną na małe kawałki, a w przeciwnym razie trzeba ją ugotować do miękkości, żeby nie doszło do zadławienia. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselas y consulta con tu veterinario.",
     "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
-    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
@@ -71,7 +77,8 @@
     "es": "Al vapor o hervida hasta que esté blanda, o cruda solo en trozos pequeños. Sin mantequilla, sal ni condimentos.",
     "it": "Cotta al vapore o lessata fino a diventare morbida, oppure cruda ma solo in pezzetti piccoli. Senza burro, sale o condimenti.",
     "pt": "Cozida a vapor ou em água até ficar macia, ou crua apenas em pedaços pequenos. Sem manteiga, sal nem temperos.",
-    "nl": "Gestoomd of gekookt tot ze zacht zijn, of rauw alleen in kleine stukjes. Zonder boter, zout of kruiden."
+    "nl": "Gestoomd of gekookt tot ze zacht zijn, of rauw alleen in kleine stukjes. Zonder boter, zout of kruiden.",
+    "pl": "Ugotowana na parze lub w wodzie do miękkości albo surowa, ale tylko w małych kawałkach. Bez masła, soli i przypraw."
   },
   "child": {
     "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -81,7 +88,8 @@
     "es": "Un trocito de zanahoria cocida y blanda puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
     "it": "Ogni tanto il gatto può avere un pezzettino di carota cotta e morbida come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
     "pt": "Um pedacinho de cenoura cozida e macia pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
-    "nl": "Een stukje zachte, gekookte wortel kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
+    "nl": "Een stukje zachte, gekookte wortel kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
+    "pl": "Miękkim kawałkiem ugotowanej marchewki można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Pueden los gatos comer zanahoria cruda?",
         "it": "I gatti possono mangiare la carota cruda?",
         "pt": "Os gatos podem comer cenoura crua?",
-        "nl": "Mogen katten rauwe wortel eten?"
+        "nl": "Mogen katten rauwe wortel eten?",
+        "pl": "Czy koty mogą jeść surową marchewkę?"
       },
       "a": {
         "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
@@ -103,7 +112,8 @@
         "es": "La RSPCA indica que los gatos solo pueden comer zanahoria cruda si está cortada en trozos pequeños; si no, hay que cocerla hasta que esté blanda para evitar atragantamientos.",
         "it": "Secondo la RSPCA i gatti possono mangiare le carote crude solo se tagliate in pezzetti piccoli; altrimenti vanno cotte fino a diventare morbide, per evitare il soffocamento.",
         "pt": "A RSPCA diz que os gatos só podem comer cenouras cruas se estas forem cortadas em pedaços pequenos; caso contrário, devem ser cozinhadas até ficarem macias, para não se engasgarem.",
-        "nl": "Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen."
+        "nl": "Volgens de RSPCA mogen katten wortels alleen rauw eten als ze in kleine stukjes zijn gesneden; anders maak je ze gaar tot ze zacht zijn, om verstikking te voorkomen.",
+        "pl": "RSPCA podaje, że koty mogą jeść surową marchewkę tylko pokrojoną na małe kawałki; w przeciwnym razie należy ją ugotować do miękkości, żeby nie doszło do zadławienia."
       }
     },
     {
@@ -115,7 +125,8 @@
         "es": "¿Necesitan verdura los gatos?",
         "it": "I gatti hanno bisogno di verdure?",
         "pt": "Os gatos precisam de legumes?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -125,7 +136,8 @@
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
         "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
-        "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
+        "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -226,6 +238,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1fa851ba4de40d99da59f50ab2a36d114e92c376935d545e8e1e169ffaca56aa"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8a9c7a9c9d7fb4d74ad300a745cc09578eeb8fbb430fc0776ae196e96df64024"
     }
   }
 }

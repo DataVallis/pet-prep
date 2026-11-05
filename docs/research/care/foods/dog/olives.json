@@ -9,7 +9,8 @@
     "es": "Aceitunas",
     "it": "Olive",
     "pt": "Azeitonas",
-    "nl": "Olijven"
+    "nl": "Olijven",
+    "pl": "Oliwki"
   },
   "question": {
     "en": "Can dogs eat olives?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer aceitunas?",
     "it": "I cani possono mangiare le olive?",
     "pt": "Os cães podem comer azeitonas?",
-    "nl": "Mogen honden olijven eten?"
+    "nl": "Mogen honden olijven eten?",
+    "pl": "Czy psy mogą jeść oliwki?"
   },
   "url_slug": {
     "en": "olives",
@@ -29,7 +31,8 @@
     "es": "aceitunas",
     "it": "olive",
     "pt": "azeitonas",
-    "nl": "olijven"
+    "nl": "olijven",
+    "pl": "oliwki"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, con moderación, si son naturales, sin sal y sin hueso. Las aceitunas no son tóxicas para los perros, pero los huesos pueden causar atragantamiento u obstrucción, y las aceitunas en conserva o en salmuera suelen llevar demasiado sodio.",
     "it": "Sì, con moderazione, se non sono condite, senza sale e denocciolate. Le olive non sono tossiche per i cani, ma i noccioli possono causare soffocamento o un’ostruzione, e le olive in scatola o in salamoia contengono spesso troppo sodio.",
     "pt": "Sim, com moderação, se forem naturais, sem sal e sem caroço. As azeitonas não são tóxicas para os cães, mas os caroços podem causar engasgamento ou obstrução, e as azeitonas em conserva ou em salmoura costumam ter sódio a mais.",
-    "nl": "Ja, met mate, als ze naturel, zonder zout en zonder pit zijn. Olijven zijn niet giftig voor honden, maar de pitten kunnen verstikking of een darmverstopping veroorzaken, en olijven uit blik of ingelegde olijven bevatten vaak te veel natrium."
+    "nl": "Ja, met mate, als ze naturel, zonder zout en zonder pit zijn. Olijven zijn niet giftig voor honden, maar de pitten kunnen verstikking of een darmverstopping veroorzaken, en olijven uit blik of ingelegde olijven bevatten vaak te veel natrium.",
+    "pl": "Tak, z umiarem, jeśli są zwykłe, niesolone i bez pestek. Oliwki nie są dla psów toksyczne, ale pestki mogą wywołać zadławienie lub niedrożność, a oliwki z puszki lub marynowane często zawierają zbyt dużo sodu."
   },
   "why": {
     "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
@@ -50,7 +54,8 @@
     "es": "Las aceitunas en sí no contienen ingredientes tóxicos, pero los huesos pueden causar atragantamiento, bloquear las vías respiratorias y quedarse atascados en los intestinos del perro. Las aceitunas en conserva o en salmuera suelen llevar un exceso de sodio, y demasiado sodio puede provocar deshidratación y, en casos raros, intoxicación por sal. Las aceitunas aliñadas con ajo, condimentos o aceites suponen riesgos adicionales, y las aceitunas maceradas en alcohol no deben darse nunca a un perro.",
     "it": "Le olive in sé non contengono ingredienti tossici, ma i noccioli possono causare soffocamento, bloccare le vie respiratorie e incastrarsi nell’intestino del cane. Le olive in scatola o in salamoia contengono spesso un eccesso di sodio, e troppo sodio può portare a disidratazione e, in rari casi, a intossicazione da sale. Le olive condite con aglio, altri condimenti o oli comportano rischi aggiuntivi, e le olive messe a bagno nell’alcol non vanno mai date a un cane.",
     "pt": "As azeitonas em si não contêm ingredientes tóxicos, mas os caroços podem causar engasgamento, obstruir as vias respiratórias e ficar presos no intestino do cão. As azeitonas em conserva ou em salmoura costumam ter sódio a mais, e demasiado sódio pode levar à desidratação e, em casos raros, a uma intoxicação por sal. As azeitonas com alho, temperos ou óleos trazem riscos adicionais, e as azeitonas conservadas em álcool nunca devem ser dadas a um cão.",
-    "nl": "Olijven zelf bevatten geen giftige stoffen, maar de pitten kunnen verstikking veroorzaken, de luchtwegen blokkeren en vast komen te zitten in de darmen van een hond. Olijven uit blik of ingelegde olijven bevatten vaak te veel natrium, en te veel natrium kan tot uitdroging leiden en in zeldzame gevallen tot zoutvergiftiging. Olijven met knoflook, kruiden of olie brengen extra risico’s met zich mee, en olijven die in alcohol zijn gedrenkt mag je een hond nooit geven."
+    "nl": "Olijven zelf bevatten geen giftige stoffen, maar de pitten kunnen verstikking veroorzaken, de luchtwegen blokkeren en vast komen te zitten in de darmen van een hond. Olijven uit blik of ingelegde olijven bevatten vaak te veel natrium, en te veel natrium kan tot uitdroging leiden en in zeldzame gevallen tot zoutvergiftiging. Olijven met knoflook, kruiden of olie brengen extra risico’s met zich mee, en olijven die in alcohol zijn gedrenkt mag je een hond nooit geven.",
+    "pl": "Same oliwki nie zawierają składników toksycznych, ale pestki mogą wywołać zadławienie, zablokować drogi oddechowe i utknąć w przewodzie pokarmowym psa. Oliwki z puszki lub marynowane często zawierają nadmiar sodu, a zbyt dużo sodu może prowadzić do odwodnienia i, w rzadkich przypadkach, do zatrucia solą. Oliwki w czosnku, przyprawach lub oleju niosą dodatkowe ryzyko, a oliwek nasączonych alkoholem nigdy nie wolno podawać psu."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Si tu perro come muchas aceitunas, sobre todo con hueso, ponte en contacto con tu veterinario para que te aconseje.",
     "it": "Se il tuo cane mangia molte olive, soprattutto con i noccioli, contatta il veterinario per un consiglio.",
     "pt": "Se o teu cão comer muitas azeitonas, sobretudo com caroço, pede conselho ao teu veterinário.",
-    "nl": "Als je hond veel olijven heeft gegeten, vooral met pit, neem dan contact op met je dierenarts voor advies."
+    "nl": "Als je hond veel olijven heeft gegeten, vooral met pit, neem dan contact op met je dierenarts voor advies.",
+    "pl": "Jeśli pies zjadł dużo oliwek, zwłaszcza z pestkami, skontaktuj się z weterynarzem."
   },
   "serving": {
     "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
@@ -71,7 +77,8 @@
     "es": "Solo aceitunas naturales, sin sal y sin hueso, en pequeñas cantidades. Evita las aceitunas en conserva o en salmuera y las que llevan ajo, condimentos, aceites o alcohol.",
     "it": "Solo olive non condite, senza sale e denocciolate, in piccole quantità. Evita le olive in scatola o in salamoia e quelle con aglio, condimenti, oli o alcol.",
     "pt": "Apenas azeitonas naturais, sem sal e sem caroço, em pequenas quantidades. Evita as azeitonas em conserva ou em salmoura e as que levam alho, temperos, óleos ou álcool.",
-    "nl": "Alleen naturel, ongezouten olijven zonder pit, in kleine hoeveelheden. Vermijd olijven uit blik of ingelegde olijven en olijven met knoflook, kruiden, olie of alcohol."
+    "nl": "Alleen naturel, ongezouten olijven zonder pit, in kleine hoeveelheden. Vermijd olijven uit blik of ingelegde olijven en olijven met knoflook, kruiden, olie of alcohol.",
+    "pl": "Tylko zwykłe, niesolone oliwki bez pestek, w małych ilościach. Unikaj oliwek z puszki, marynowanych oraz z czosnkiem, przyprawami, olejem lub alkoholem."
   },
   "child": {
     "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
@@ -81,7 +88,8 @@
     "es": "Los perros pueden tomar una aceituna natural de vez en cuando, con el hueso quitado por un adulto. Las aceitunas saladas no son para los perros.",
     "it": "Ogni tanto i cani possono mangiare un’oliva non condita, a cui un adulto ha tolto il nocciolo. Le olive salate non sono per i cani.",
     "pt": "Os cães podem comer uma azeitona natural de vez em quando, com o caroço retirado por um adulto. As azeitonas salgadas não são para cães.",
-    "nl": "Honden mogen af en toe een olijf zonder toevoegingen, als een volwassene eerst de pit eruit haalt. Zoute olijven zijn niet voor honden."
+    "nl": "Honden mogen af en toe een olijf zonder toevoegingen, als een volwassene eerst de pit eruit haalt. Zoute olijven zijn niet voor honden.",
+    "pl": "Psy mogą dostać czasem zwykłą oliwkę, z której dorosły wyjął pestkę. Słone oliwki nie są dla psów."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Son peligrosos los huesos de aceituna para los perros?",
         "it": "I noccioli delle olive sono pericolosi per i cani?",
         "pt": "Os caroços de azeitona são perigosos para os cães?",
-        "nl": "Zijn olijfpitten gevaarlijk voor honden?"
+        "nl": "Zijn olijfpitten gevaarlijk voor honden?",
+        "pl": "Czy pestki oliwek są niebezpieczne dla psów?"
       },
       "a": {
         "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
@@ -103,7 +112,8 @@
         "es": "Sí. Los huesos de aceituna pueden causar atragantamiento u obstrucciones respiratorias y pueden quedarse atascados en los intestinos del perro.",
         "it": "Sì. I noccioli delle olive possono causare soffocamento, ostruire le vie respiratorie e incastrarsi nell’intestino del cane.",
         "pt": "Sim. Os caroços de azeitona podem causar engasgamento ou obstrução das vias respiratórias, e podem ficar presos no intestino do cão.",
-        "nl": "Ja. Olijfpitten kunnen verstikking veroorzaken of de luchtwegen blokkeren, en ze kunnen vast komen te zitten in de darmen van een hond."
+        "nl": "Ja. Olijfpitten kunnen verstikking veroorzaken of de luchtwegen blokkeren, en ze kunnen vast komen te zitten in de darmen van een hond.",
+        "pl": "Tak. Pestki oliwek mogą spowodować zadławienie lub niedrożność dróg oddechowych i utknąć w przewodzie pokarmowym psa."
       }
     }
   ],
@@ -208,6 +218,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7a40e99990cd92738d591656f3384f6dabf4bc30baec85e47340216ed1194ea8"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ce5a750b8204b8b137084a4cc2f3241abac54ff53158590d5795b3131c10ae8b"
     }
   }
 }

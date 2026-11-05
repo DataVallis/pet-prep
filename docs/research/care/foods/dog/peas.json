@@ -9,7 +9,8 @@
     "es": "Guisantes",
     "it": "Piselli",
     "pt": "Ervilhas",
-    "nl": "Erwten"
+    "nl": "Erwten",
+    "pl": "Groszek"
   },
   "question": {
     "en": "Can dogs eat peas?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer guisantes?",
     "it": "I cani possono mangiare i piselli?",
     "pt": "Os cães podem comer ervilhas?",
-    "nl": "Mogen honden erwten eten?"
+    "nl": "Mogen honden erwten eten?",
+    "pl": "Czy psy mogą jeść groszek?"
   },
   "url_slug": {
     "en": "peas",
@@ -29,7 +31,8 @@
     "es": "guisantes",
     "it": "piselli",
     "pt": "ervilhas",
-    "nl": "erwten"
+    "nl": "erwten",
+    "pl": "groszek"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, como premio ocasional. Los guisantes verdes, incluidos los tirabeques, los guisantes dulces y los guisantes de huerta, no son tóxicos para los perros. Dáselos frescos o congelados, pero no en conserva, porque los guisantes en conserva suelen llevar mucho sodio añadido.",
     "it": "Sì, come premio occasionale. I piselli verdi, comprese le taccole, i piselli zuccherini (sugar snap) e i piselli da sgusciare, non sono tossici per i cani. Dalli freschi o surgelati, ma non in scatola, perché i piselli in scatola contengono di solito molto sodio aggiunto.",
     "pt": "Sim, como guloseima ocasional. As ervilhas verdes, incluindo as ervilhas-tortas, as ervilhas-de-quebrar (sugar snap) e as ervilhas de debulhar, não são tóxicas para os cães. Dá-as frescas ou congeladas, mas não em conserva, porque as ervilhas em conserva costumam ter muito sódio adicionado.",
-    "nl": "Ja, af en toe als snoepje. Groene erwten, waaronder peultjes, suikererwten en doperwten, zijn niet giftig voor honden. Geef ze vers of diepgevroren, maar niet uit blik, want erwten uit blik bevatten meestal veel toegevoegd natrium."
+    "nl": "Ja, af en toe als snoepje. Groene erwten, waaronder peultjes, suikererwten en doperwten, zijn niet giftig voor honden. Geef ze vers of diepgevroren, maar niet uit blik, want erwten uit blik bevatten meestal veel toegevoegd natrium.",
+    "pl": "Tak, jako okazjonalny smakołyk. Groszek zielony, w tym groszek cukrowy, groszek sugar snap i zwykły groszek ogrodowy, nie jest dla psów toksyczny. Podawaj go świeży lub mrożony, ale nie z puszki, bo groszek z puszki zwykle ma dużo dodanego sodu."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -50,7 +54,8 @@
     "es": "Los guisantes no son tóxicos ni venenosos para los perros, pero la fruta y la verdura no son necesarias en la dieta de un perro y deben considerarse un premio ocasional. Los guisantes en conserva suelen llevar mucho sodio añadido, que es perjudicial para los perros. Las vainas pueden quedarse atascadas en la garganta del perro y provocar atragantamiento.",
     "it": "I piselli non sono tossici né velenosi per i cani, ma frutta e verdura non sono necessarie nella dieta del cane e vanno considerate come un premio occasionale. I piselli in scatola hanno di solito molto sodio aggiunto, dannoso per i cani. I baccelli possono incastrarsi in gola al cane e farlo soffocare.",
     "pt": "As ervilhas não são tóxicas nem venenosas para os cães, mas a fruta e os legumes não são necessários na alimentação de um cão e devem ser vistos como uma guloseima ocasional. As ervilhas em conserva costumam ter muito sódio adicionado, o que faz mal aos cães. As vagens podem ficar presas na garganta do cão e causar engasgamento.",
-    "nl": "Erwten zijn niet giftig voor honden, maar een hond heeft geen fruit of groente nodig; zie het als een snoepje voor af en toe. Erwten uit blik bevatten meestal veel toegevoegd natrium, wat schadelijk is voor honden. Peulen kunnen in de keel van een hond blijven steken en verstikking veroorzaken."
+    "nl": "Erwten zijn niet giftig voor honden, maar een hond heeft geen fruit of groente nodig; zie het als een snoepje voor af en toe. Erwten uit blik bevatten meestal veel toegevoegd natrium, wat schadelijk is voor honden. Peulen kunnen in de keel van een hond blijven steken en verstikking veroorzaken.",
+    "pl": "Groszek nie jest dla psów trujący ani toksyczny, ale pies nie potrzebuje w diecie owoców ani warzyw, więc traktuj je jako okazjonalny smakołyk. Groszek z puszki zwykle ma dużo dodanego sodu, który szkodzi psom. Strąki mogą utknąć psu w gardle i spowodować zadławienie."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Como con cualquier alimento nuevo, vigila que tu perro no tenga reacciones como diarrea o vómitos.",
     "it": "Come per ogni alimento nuovo, osserva il tuo cane per individuare eventuali reazioni, come diarrea o vomito.",
     "pt": "Como com qualquer alimento novo, observa se o teu cão tem reações como diarreia ou vómitos.",
-    "nl": "Let, net als bij elk nieuw voedsel, op reacties van je hond, zoals diarree of braken."
+    "nl": "Let, net als bij elk nieuw voedsel, op reacties van je hond, zoals diarree of braken.",
+    "pl": "Jak przy każdym nowym pokarmie obserwuj psa, czy nie pojawiają się reakcje, takie jak biegunka lub wymioty."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -71,7 +77,8 @@
     "es": "Solo guisantes frescos, congelados o descongelados, nunca en conserva. Desgrana siempre los guisantes de huerta y ten cuidado con las vainas, que pueden causar atragantamiento.",
     "it": "Solo piselli freschi, surgelati o scongelati, mai in scatola. Se sono piselli da sgusciare, sgusciali sempre e fai attenzione ai baccelli, che possono causare soffocamento.",
     "pt": "Apenas ervilhas frescas, congeladas ou descongeladas, nunca em conserva. Tira sempre as ervilhas de debulhar das vagens e tem cuidado com as vagens, que podem causar engasgamento.",
-    "nl": "Alleen verse, diepgevroren of ontdooide erwten, nooit uit blik. Dop doperwten altijd uit de peul en wees voorzichtig met peulen, want die kunnen verstikking veroorzaken."
+    "nl": "Alleen verse, diepgevroren of ontdooide erwten, nooit uit blik. Dop doperwten altijd uit de peul en wees voorzichtig met peulen, want die kunnen verstikking veroorzaken.",
+    "pl": "Tylko świeży, mrożony lub rozmrożony groszek, nigdy z puszki. Groszek ogrodowy zawsze wyłuskuj ze strąków i uważaj, bo strąki mogą spowodować zadławienie."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -81,7 +88,8 @@
     "es": "Los perros pueden tomar unos pocos guisantes como premio. Un adulto desgrana antes los guisantes de huerta.",
     "it": "I cani possono mangiare qualche pisello come premietto. Prima un adulto li toglie dal baccello.",
     "pt": "Os cães podem comer umas ervilhas como guloseima. Um adulto tira primeiro as ervilhas das vagens.",
-    "nl": "Honden mogen een paar erwten als snoepje. Een volwassene haalt doperwten eerst uit hun peul."
+    "nl": "Honden mogen een paar erwten als snoepje. Een volwassene haalt doperwten eerst uit hun peul.",
+    "pl": "Psy mogą dostać kilka groszków jako smakołyk. Dorosły najpierw wyłuskuje groszek ze strąków."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Pueden los perros comer vainas de guisante?",
         "it": "I cani possono mangiare i baccelli dei piselli?",
         "pt": "Os cães podem comer vagens de ervilha?",
-        "nl": "Mogen honden de peul van erwten eten?"
+        "nl": "Mogen honden de peul van erwten eten?",
+        "pl": "Czy psy mogą jeść strąki groszku?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -103,7 +112,8 @@
         "es": "Si las personas pueden comerse la vaina, tu perro también, pero ten cuidado: las vainas pueden quedarse atascadas en la garganta y provocar atragantamiento. Los guisantes de huerta hay que desgranarlos siempre.",
         "it": "Se il baccello è commestibile per le persone, lo è anche per il cane, ma fai attenzione: i baccelli possono incastrarsi in gola e causare soffocamento. I piselli da sgusciare vanno sempre sgusciati.",
         "pt": "Se as pessoas podem comer a vagem, o teu cão também pode, mas atenção: as vagens podem ficar presas na garganta e causar engasgamento. As ervilhas de debulhar têm de ser sempre tiradas da vagem.",
-        "nl": "Als mensen de peul mogen eten, mag je hond dat ook, maar wees voorzichtig: peulen kunnen in de keel blijven steken en verstikking veroorzaken. Doperwten moet je altijd doppen."
+        "nl": "Als mensen de peul mogen eten, mag je hond dat ook, maar wees voorzichtig: peulen kunnen in de keel blijven steken en verstikking veroorzaken. Doperwten moet je altijd doppen.",
+        "pl": "Jeśli strąki są jadalne dla ludzi, pies też może je zjeść, ale zachowaj ostrożność: mogą utknąć w gardle i spowodować zadławienie. Groszek ogrodowy zawsze trzeba wyłuskać."
       }
     },
     {
@@ -115,7 +125,8 @@
         "es": "¿Son un problema los guisantes en la comida para perros?",
         "it": "I piselli nel cibo per cani sono un problema?",
         "pt": "As ervilhas na ração para cães são um problema?",
-        "nl": "Zijn erwten in hondenvoer een probleem?"
+        "nl": "Zijn erwten in hondenvoer een probleem?",
+        "pl": "Czy groszek w karmie dla psów jest problemem?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -125,7 +136,8 @@
         "es": "Se investiga si los guisantes influyen en las enfermedades del corazón de los perros. Si tu perro ha comido un alimento con guisantes como ingrediente principal, quizá convenga que lo hables con tu veterinario.",
         "it": "Sono in corso studi per capire se i piselli c’entrino con le malattie cardiache dei cani. Se il tuo cane mangia un alimento in cui i piselli sono l’ingrediente principale, può essere utile parlarne con il veterinario.",
         "pt": "Continuam a decorrer estudos para saber se as ervilhas contribuem para doenças cardíacas nos cães. Se o teu cão comeu um alimento com ervilhas como ingrediente principal, talvez queiras falar com o teu veterinário.",
-        "nl": "Er loopt nog onderzoek naar de vraag of erwten een rol spelen bij hartziekten bij honden. Heeft je hond voer met erwten als hoofdingrediënt gegeten, dan kun je dit misschien met je dierenarts bespreken."
+        "nl": "Er loopt nog onderzoek naar de vraag of erwten een rol spelen bij hartziekten bij honden. Heeft je hond voer met erwten als hoofdingrediënt gegeten, dan kun je dit misschien met je dierenarts bespreken.",
+        "pl": "Trwają badania, czy groszek w karmie ma związek z chorobami serca u psów. Jeśli twój pies jadł karmę, w której groszek jest jednym z głównych składników, warto porozmawiać z weterynarzem."
       }
     }
   ],
@@ -221,6 +233,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "33a041bed809e4b4b7daea7f76a9df2cdfe3595a3760722d0015153ac1250ff9"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cc2a2910285f12cfb64439a3bae3bbd48925deff2ae7c016e517ea26cb837b93"
     }
   }
 }
