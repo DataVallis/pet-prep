@@ -2363,5 +2363,23 @@ return [
                 ['tag' => 'chases_small_pets', 'source_ids' => ['S705'], 'refs' => ['old_english_sheepdog.behaviour.other_pets']],
             ],
         ],
+        // M5-R10-94 Keeshond — not a flat-faced breed (FCI muzzle "not overlong … approximately 2:3", S246). PDSA (S709) key
+        // facts and text, VCA (S710); the RKC page was not reachable (no apartment / large_home chip). No new vocabulary key.
+        'keeshond' => [
+            'suits' => [
+                // S709 "Affectionate and loving, Keeshonds make excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S709'], 'refs' => ['keeshond.behaviour.family']],
+                // S710 "Playful and careful with children."
+                ['tag' => 'children', 'source_ids' => ['S710'], 'refs' => ['keeshond.behaviour.children', 'keeshond.suitability.vca_children']],
+                // S709 "They'll also get along happily with other pets in the household."
+                ['tag' => 'other_pets', 'source_ids' => ['S709'], 'refs' => ['keeshond.behaviour.other_pets']],
+            ],
+            'consider' => [
+                // S709 "Grooming is a daily requirement to keep their thick double coat in good condition."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S709'], 'refs' => ['keeshond.suitability.pdsa_grooming']],
+                // S710 "Shedding is above average."
+                ['tag' => 'sheds', 'source_ids' => ['S710'], 'refs' => ['keeshond.suitability.vca_shedding']],
+            ],
+        ],
     ],
 ];

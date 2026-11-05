@@ -1913,6 +1913,27 @@ class BreedConfigsSeeder extends Seeder
                 'label_key' => 'breeds.old_english_sheepdog',
                 'search_keywords' => ['old english sheepdog', 'bobtail', 'bob-tail', 'oes', 'shepherd\'s dog', 'staroangleški ovčar', 'staroangleski ovcar', 'bobtejl', 'bobtail ovčar'],
             ],
+            // M5-R10-94 Keeshond (docs/research/dog-data/data.json keeshond, sources S709–S710 + S246; runbook rules
+            // confirmed by David 2026-10-10: paid). daily_steps_required = the adult step goal
+            // (proposed_game_parameters.keeshond.step_goal_adult: 60 min × 100 steps/min — PDSA S709 "They need up to an hour
+            // of exercise per day") — only the legacy-profile fallback. Hunger / thirst decay, poops and water are the
+            // Border Collie's.
+            [
+                'breed_slug' => BreedType::Keeshond->slug(),
+                'daily_steps_required' => 6000,
+                'hunger_decay_rate' => 12.0,
+                'thirst_decay_rate' => 15.0,
+                'poops_per_day' => 2,
+                'feed_windows' => BreedConfig::DEFAULT_FEED_WINDOWS,
+                'water_times_per_day' => 3,
+                'water_min_gap_minutes' => 180,
+                'water_refill_below' => 60,
+                'premium_unlock' => true,
+                'species' => 'dog',
+                'sort_order' => 880,
+                'label_key' => 'breeds.keeshond',
+                'search_keywords' => ['keeshond', 'keeshonden', 'wolfsspitz', 'wolfspitz', 'wolf spitz', 'german wolfspitz', 'volčji špic', 'volcji spic', 'nemški volčji špic', 'kesond'],
+            ],
             // M5-R06-01 cats (CAT_SPEC Q5 / Q6 / Q9, docs/research/cat-data/data.json,
             // potrdil David 2026-10-08 13:47). Hidden until PETPREP_CATS_ENABLED.
             // Water 2× per day ≥ 240 min apart (general.water.game_*), hunger and
