@@ -10,7 +10,8 @@
     "it": "Broccoli",
     "pt": "Brócolos",
     "nl": "Broccoli",
-    "pl": "Brokuły"
+    "pl": "Brokuły",
+    "cs": "Brokolice"
   },
   "question": {
     "en": "Can cats eat broccoli?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare i broccoli?",
     "pt": "Os gatos podem comer brócolos?",
     "nl": "Mogen katten broccoli eten?",
-    "pl": "Czy koty mogą jeść brokuły?"
+    "pl": "Czy koty mogą jeść brokuły?",
+    "cs": "Mohou kočky jíst brokolici?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -32,7 +34,8 @@
     "it": "broccoli",
     "pt": "brocolos",
     "nl": "broccoli",
-    "pl": "brokuly"
+    "pl": "brokuly",
+    "cs": "brokolice"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, un pezzettino di broccolo senza condimenti va bene come premio occasionale. Cats Protection mette i broccoli tra le verdure che si possono dare al gatto, l’ASPCA consiglia le cimette di broccolo e la RSPCA li suggerisce lessati o cotti al vapore.",
     "pt": "Sim, um pedacinho de brócolos sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui os brócolos entre os legumes que se podem dar a um gato, a ASPCA sugere floretes de brócolos para gatos e a RSPCA aconselha-os cozidos em água ou a vapor.",
     "nl": "Ja, een klein stukje ongekruide broccoli is af en toe prima als traktatie. Cats Protection rekent broccoli tot de groenten die je je kat mag geven, de ASPCA stelt broccoliroosjes voor katten voor en de RSPCA adviseert gekookte of gestoomde broccoli.",
-    "pl": "Tak, od czasu do czasu mały kawałek brokuła bez dodatków jest w porządku. Cats Protection wymienia brokuły wśród warzyw, które można dawać kotu, ASPCA poleca kotom różyczki brokułów, a RSPCA radzi podawać je gotowane w wodzie lub na parze."
+    "pl": "Tak, od czasu do czasu mały kawałek brokuła bez dodatków jest w porządku. Cats Protection wymienia brokuły wśród warzyw, które można dawać kotu, ASPCA poleca kotom różyczki brokułów, a RSPCA radzi podawać je gotowane w wodzie lub na parze.",
+    "cs": "Ano, malý kousek brokolice bez dodatků je jako občasný pamlsek v pořádku. Cats Protection řadí brokolici mezi zeleninu, kterou můžete kočce dát, ASPCA pro kočky navrhuje růžičky brokolice a RSPCA radí brokolici vařenou nebo napařenou."
   },
   "why": {
     "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -55,7 +59,8 @@
     "it": "Cats Protection cita i broccoli tra le poche verdure che si possono dare a un gatto, se li gradisce. L’ASPCA consiglia le cimette di broccolo per i gatti, e la RSPCA elenca i broccoli, lessati o cotti al vapore, tra gli alimenti adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
     "pt": "A Cats Protection inclui os brócolos entre os poucos legumes que se podem dar a um gato, se ele gostar. A ASPCA sugere floretes de brócolos para gatos, e a RSPCA refere os brócolos, cozidos em água ou a vapor, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
     "nl": "Cats Protection noemt broccoli als een van de weinige groenten die je een kat kunt geven, als je kat er zin in heeft. De ASPCA stelt broccoliroosjes voor katten voor, en de RSPCA rekent gekookte of gestoomde broccoli tot het eten dat met mate geschikt is voor katten en honden. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
-    "pl": "Cats Protection wymienia brokuły wśród niewielu warzyw, które można podawać kotu, jeśli ma na nie ochotę. ASPCA poleca kotom różyczki brokułów, a RSPCA wymienia brokuły gotowane w wodzie lub na parze wśród pokarmów odpowiednich w umiarkowanych ilościach dla kotów i psów. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka."
+    "pl": "Cats Protection wymienia brokuły wśród niewielu warzyw, które można podawać kotu, jeśli ma na nie ochotę. ASPCA poleca kotom różyczki brokułów, a RSPCA wymienia brokuły gotowane w wodzie lub na parze wśród pokarmów odpowiednich w umiarkowanych ilościach dla kotów i psów. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
+    "cs": "Cats Protection uvádí brokolici mezi několika druhy zeleniny, které můžete kočce dát, pokud o ni stojí. ASPCA pro kočky navrhuje růžičky brokolice a RSPCA řadí vařenou nebo napařenou brokolici mezi potraviny vhodné pro kočky i psy s mírou. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
-    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
+    "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
@@ -78,7 +84,8 @@
     "it": "Una cimetta piccola, lessata o cotta al vapore, senza burro, sale o condimenti.",
     "pt": "Um florete pequeno, cozido em água ou a vapor, sem manteiga, sal nem temperos.",
     "nl": "Een klein roosje, gekookt of gestoomd, zonder boter, zout of kruiden.",
-    "pl": "Mała różyczka, ugotowana w wodzie lub na parze, bez masła, soli i przypraw."
+    "pl": "Mała różyczka, ugotowana w wodzie lub na parze, bez masła, soli i przypraw.",
+    "cs": "Malá růžička, vařená nebo napařená, bez másla, soli a koření."
   },
   "child": {
     "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -89,7 +96,8 @@
     "it": "Ogni tanto il gatto può avere un pezzettino di broccolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
     "pt": "Um pedacinho de brócolos cozidos pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
     "nl": "Een klein stukje gekookte broccoli kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
-    "pl": "Małym kawałkiem ugotowanych brokułów można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
+    "pl": "Małym kawałkiem ugotowanych brokułów można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
+    "cs": "Kousek uvařené brokolice může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I gatti hanno bisogno di verdure?",
         "pt": "Os gatos precisam de legumes?",
         "nl": "Hebben katten groente nodig?",
-        "pl": "Czy koty potrzebują warzyw?"
+        "pl": "Czy koty potrzebują warzyw?",
+        "cs": "Potřebují kočky zeleninu?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +122,8 @@
         "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
-        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
+        "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -215,6 +225,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7104ac6ed9ab591de67dc832256d6ecab203b8a0ede663691382846ee23af61d"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "728c174f76cc176621400088bddaa7f7b85d6071c9895f1916a1f8ce39ab7514"
     }
   }
 }

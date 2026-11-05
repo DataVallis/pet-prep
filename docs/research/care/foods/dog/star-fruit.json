@@ -10,7 +10,8 @@
     "it": "Carambola",
     "pt": "Carambola",
     "nl": "Carambola",
-    "pl": "Karambola"
+    "pl": "Karambola",
+    "cs": "Karambola"
   },
   "question": {
     "en": "Can dogs eat star fruit?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare la carambola?",
     "pt": "Os cães podem comer carambola?",
     "nl": "Mogen honden carambola eten?",
-    "pl": "Czy psy mogą jeść karambolę?"
+    "pl": "Czy psy mogą jeść karambolę?",
+    "cs": "Mohou psi jíst karambolu?"
   },
   "url_slug": {
     "en": "star-fruit",
@@ -32,7 +34,8 @@
     "it": "carambola",
     "pt": "carambola",
     "nl": "carambola",
-    "pl": "karambola"
+    "pl": "karambola",
+    "cs": "karambola"
   },
   "level": "toxic",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "No. Tieni la carambola lontana dai cani. La carambola acida contiene ossalato solubile in concentrazioni pericolose, che può causare vomito, salivazione eccessiva, debolezza, tremori, calcio basso nel sangue e danni ai reni.",
     "pt": "Não. Mantém a carambola longe dos cães. A carambola ácida contém oxalato solúvel em concentrações perigosas, que pode causar vómitos, salivação excessiva, fraqueza, tremores, cálcio baixo no sangue e lesões nos rins.",
     "nl": "Nee. Houd carambola uit de buurt van honden. Zure carambola bevat oplosbaar oxalaat in gevaarlijke concentraties, wat braken, kwijlen, zwakte, beven, een laag calciumgehalte in het bloed en nierschade kan veroorzaken.",
-    "pl": "Nie. Trzymaj karambolę z dala od psów. Kwaśna karambola zawiera rozpuszczalne szczawiany w niebezpiecznych stężeniach, które mogą wywołać wymioty, ślinotok, osłabienie, drżenie, niski poziom wapnia we krwi i uszkodzenie nerek."
+    "pl": "Nie. Trzymaj karambolę z dala od psów. Kwaśna karambola zawiera rozpuszczalne szczawiany w niebezpiecznych stężeniach, które mogą wywołać wymioty, ślinotok, osłabienie, drżenie, niski poziom wapnia we krwi i uszkodzenie nerek.",
+    "cs": "Ne. Karambolu držte mimo dosah psů. Kyselá karambola obsahuje rozpustný šťavelan v nebezpečných koncentracích, který může způsobit zvracení, slinění, slabost, třes, nízkou hladinu vápníku v krvi a poškození ledvin."
   },
   "why": {
     "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
@@ -55,7 +59,8 @@
     "it": "Secondo Pet Poison Helpline la carambola può avvelenare i cani. Il problema principale è l’ossalato solubile (acido ossalico), presente in concentrazioni pericolose nella carambola acida. Pet Poison Helpline osserva anche che la carambola dolce contiene pochissimo ossalato solubile e non è velenosa per gli animali con reni sani, ma una guida revisionata da veterinari dice che la carambola non è sicura per i cani, quindi seguiamo la valutazione più severa. Anche piccole quantità possono causare problemi di salute, in particolare nei cani con problemi ai reni, e la carambola può peggiorare i problemi già esistenti.",
     "pt": "A Pet Poison Helpline diz que a carambola pode envenenar os cães. A principal preocupação é o oxalato solúvel (ácido oxálico), presente em concentrações perigosas na carambola ácida. A Pet Poison Helpline observa também que a carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários diz que a carambola não é segura para os cães, por isso seguimos o nível mais rigoroso. Mesmo pequenas quantidades podem causar problemas de saúde, sobretudo em cães com problemas nos rins, e a carambola pode agravar problemas renais que já existam.",
     "nl": "Volgens Pet Poison Helpline kan carambola bij honden tot vergiftiging leiden. Het grootste punt van zorg is oplosbaar oxalaat (oxaalzuur), dat in gevaarlijke concentraties in zure carambola zit. Pet Poison Helpline merkt ook op dat zoete carambola heel weinig oplosbaar oxalaat bevat en niet giftig is voor dieren met gezonde nieren, maar een gids die door dierenartsen is nagekeken zegt dat carambola niet veilig is voor honden, dus volgen wij het strengere advies. Zelfs kleine hoeveelheden kunnen gezondheidsproblemen veroorzaken, vooral bij honden met nierproblemen, en carambola kan bestaande nierproblemen verergeren.",
-    "pl": "Pet Poison Helpline podaje, że karambola może zatruć psy. Głównym problemem są rozpuszczalne szczawiany (kwas szczawiowy), występujące w niebezpiecznych stężeniach w kwaśnej karamboli. Pet Poison Helpline zaznacza też, że słodka karambola zawiera bardzo mało rozpuszczalnych szczawianów i nie jest trująca dla zwierząt ze zdrowymi nerkami, ale przewodnik sprawdzony przez weterynarzy podaje, że karambola nie jest bezpieczna dla psów, dlatego przyjmujemy ostrzejszą ocenę. Nawet niewielkie ilości mogą prowadzić do problemów zdrowotnych, zwłaszcza u psów z chorobami nerek, a karambola może nasilić już istniejące problemy z nerkami."
+    "pl": "Pet Poison Helpline podaje, że karambola może zatruć psy. Głównym problemem są rozpuszczalne szczawiany (kwas szczawiowy), występujące w niebezpiecznych stężeniach w kwaśnej karamboli. Pet Poison Helpline zaznacza też, że słodka karambola zawiera bardzo mało rozpuszczalnych szczawianów i nie jest trująca dla zwierząt ze zdrowymi nerkami, ale przewodnik sprawdzony przez weterynarzy podaje, że karambola nie jest bezpieczna dla psów, dlatego przyjmujemy ostrzejszą ocenę. Nawet niewielkie ilości mogą prowadzić do problemów zdrowotnych, zwłaszcza u psów z chorobami nerek, a karambola może nasilić już istniejące problemy z nerkami.",
+    "cs": "Podle Pet Poison Helpline může karambola u psů vést k otravě. Hlavním problémem je rozpustný šťavelan (kyselina šťavelová), který se v nebezpečných koncentracích vyskytuje v kyselé karambole. Pet Poison Helpline také uvádí, že sladká karambola obsahuje jen velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři říká, že karambola pro psy není bezpečná, proto používáme přísnější hodnocení. I malé množství může vést ke zdravotním potížím, zejména u psů s nemocnými ledvinami, a karambola může stávající potíže s ledvinami zhoršit."
   },
   "signs": {
     "en": [
@@ -129,6 +134,14 @@
       "Drżenie",
       "Niski poziom wapnia we krwi",
       "Objawy uszkodzenia nerek, takie jak częste oddawanie moczu"
+    ],
+    "cs": [
+      "Zvracení",
+      "Slinění",
+      "Slabost",
+      "Třes",
+      "Nízká hladina vápníku v krvi",
+      "Známky poškození ledvin, například hojné močení"
     ]
   },
   "what_to_do": {
@@ -140,7 +153,8 @@
     "it": "Porta via la carambola rimasta e contatta subito il veterinario o un centro antiveleni veterinario, soprattutto se il tuo cane ha problemi ai reni. I sintomi possono comparire nel giro di poche ore.",
     "pt": "Retira a carambola que tenha sobrado e contacta o teu veterinário ou uma linha de apoio toxicológico para animais o mais depressa possível, sobretudo se o teu cão tiver problemas nos rins. Os sinais podem surgir em poucas horas.",
     "nl": "Haal de resterende carambola weg en neem meteen contact op met je dierenarts of een vergiftigingenlijn voor dieren, vooral als je hond nierproblemen heeft. Verschijnselen kunnen binnen enkele uren optreden.",
-    "pl": "Zabierz psu resztki karamboli i od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zwłaszcza jeśli pies ma problemy z nerkami. Objawy mogą pojawić się w ciągu kilku godzin."
+    "pl": "Zabierz psu resztki karamboli i od razu skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt, zwłaszcza jeśli pies ma problemy z nerkami. Objawy mogą pojawić się w ciągu kilku godzin.",
+    "cs": "Odstraňte zbylou karambolu a okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, zejména pokud má pes potíže s ledvinami. Příznaky se mohou objevit během několika hodin."
   },
   "serving": null,
   "child": {
@@ -152,7 +166,8 @@
     "it": "La carambola non è un premio per i cani. Se il tuo cane ne mangia un po’, dillo subito a un adulto.",
     "pt": "A carambola não é uma guloseima para cães. Se o teu cão comer um bocadinho, diz logo a um adulto.",
     "nl": "Carambola is geen snoepje voor honden. Eet je hond er wat van, vertel het dan meteen aan een volwassene.",
-    "pl": "Karambola to nie smakołyk dla psa. Jeśli pies zje jej choć trochę, od razu powiedz dorosłemu."
+    "pl": "Karambola to nie smakołyk dla psa. Jeśli pies zje jej choć trochę, od razu powiedz dorosłemu.",
+    "cs": "Karambola není pamlsek pro psy. Když ji pes sní, hned to řekni dospělému."
   },
   "faq": [
     {
@@ -165,7 +180,8 @@
         "it": "La carambola dolce è sicura per i cani?",
         "pt": "A carambola doce é segura para os cães?",
         "nl": "Is zoete carambola veilig voor honden?",
-        "pl": "Czy słodka karambola jest bezpieczna dla psów?"
+        "pl": "Czy słodka karambola jest bezpieczna dla psów?",
+        "cs": "Je sladká karambola pro psy bezpečná?"
       },
       "a": {
         "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
@@ -176,7 +192,8 @@
         "it": "La carambola dolce contiene pochissimo ossalato solubile e non è velenosa per gli animali con reni sani, ma una guida revisionata da veterinari dice comunque che la carambola non è sicura per i cani, quindi è meglio evitarla.",
         "pt": "A carambola doce contém muito pouco oxalato solúvel e não é venenosa para animais com rins saudáveis, mas um guia revisto por veterinários continua a dizer que a carambola não é segura para os cães, por isso o melhor é evitá-la.",
         "nl": "Zoete carambola bevat heel weinig oplosbaar oxalaat en is niet giftig voor dieren met gezonde nieren, maar een gids die door dierenartsen is nagekeken zegt toch dat carambola niet veilig is voor honden, dus mijd hem het best.",
-        "pl": "Słodka karambola zawiera bardzo mało rozpuszczalnych szczawianów i nie jest trująca dla zwierząt ze zdrowymi nerkami, ale przewodnik sprawdzony przez weterynarzy nadal podaje, że karambola nie jest bezpieczna dla psów, więc należy jej unikać."
+        "pl": "Słodka karambola zawiera bardzo mało rozpuszczalnych szczawianów i nie jest trująca dla zwierząt ze zdrowymi nerkami, ale przewodnik sprawdzony przez weterynarzy nadal podaje, że karambola nie jest bezpieczna dla psów, więc należy jej unikać.",
+        "cs": "Sladká karambola obsahuje velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři přesto říká, že karambola pro psy není bezpečná, proto je nejlepší se jí vyhnout."
       }
     }
   ],
@@ -289,6 +306,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "be8bc1913fa48ca748816142943b686ce12bf90dc2c770a0b5d51af87c75cebb"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f960b788681acd6daec179cc2514efe5bf717633a4f828314e94b2ed86af3455"
     }
   }
 }

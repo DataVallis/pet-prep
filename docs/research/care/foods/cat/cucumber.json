@@ -10,7 +10,8 @@
     "it": "Cetriolo",
     "pt": "Pepino",
     "nl": "Komkommer",
-    "pl": "Ogórek"
+    "pl": "Ogórek",
+    "cs": "Okurka"
   },
   "question": {
     "en": "Can cats eat cucumber?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare il cetriolo?",
     "pt": "Os gatos podem comer pepino?",
     "nl": "Mogen katten komkommer eten?",
-    "pl": "Czy koty mogą jeść ogórek?"
+    "pl": "Czy koty mogą jeść ogórek?",
+    "cs": "Mohou kočky jíst okurku?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -32,7 +34,8 @@
     "it": "cetriolo",
     "pt": "pepino",
     "nl": "komkommer",
-    "pl": "ogorek"
+    "pl": "ogorek",
+    "cs": "okurka"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, un pezzettino di cetriolo al naturale va bene come premio occasionale. Per l’ASPCA il cetriolo non è tossico per i gatti, ma i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può far venire mal di stomaco: consideralo solo un piccolissimo extra.",
     "pt": "Sim, um pedacinho de pepino natural não faz mal como guloseima ocasional. A ASPCA considera o pepino não tóxico para os gatos, mas os gatos não precisam de legumes e qualquer matéria vegetal pode causar indisposição de estômago, por isso deve ser só um extra pequenino.",
     "nl": "Ja, een klein stukje naturel komkommer is af en toe prima als traktatie. De ASPCA vermeldt komkommer als niet giftig voor katten, maar katten hebben geen groente nodig en elk plantaardig materiaal kan de maag van streek maken, dus houd het bij een piepklein extraatje.",
-    "pl": "Tak, od czasu do czasu mały kawałek ogórka bez dodatków jest w porządku. ASPCA uznaje ogórek za nietoksyczny dla kotów, ale koty nie potrzebują warzyw, a każdy pokarm roślinny może rozstroić żołądek, więc niech to będzie tylko malutki dodatek."
+    "pl": "Tak, od czasu do czasu mały kawałek ogórka bez dodatków jest w porządku. ASPCA uznaje ogórek za nietoksyczny dla kotów, ale koty nie potrzebują warzyw, a każdy pokarm roślinny może rozstroić żołądek, więc niech to będzie tylko malutki dodatek.",
+    "cs": "Ano, malý kousek okurky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí okurku jako netoxickou pro kočky, ale kočky zeleninu nepotřebují a jakákoli rostlinná potrava může podráždit žaludek, takže ať je to jen malinký doplněk."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -55,7 +59,8 @@
     "it": "L’ASPCA indica il cetriolo comune come non tossico per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
     "pt": "A ASPCA considera o pepino de horta não tóxico para os gatos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e indisposição de estômago nos gatos.",
     "nl": "De ASPCA vermeldt de gewone komkommer als niet giftig voor katten. Katten hebben geen fruit of groente in hun voeding nodig, geef traktaties spaarzaam, en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken.",
-    "pl": "ASPCA uznaje ogórek za nietoksyczny dla kotów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka."
+    "pl": "ASPCA uznaje ogórek za nietoksyczny dla kotów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że każdy pokarm roślinny może wywołać u kotów wymioty i rozstrój żołądka.",
+    "cs": "ASPCA uvádí okurku setou jako netoxickou pro kočky. Kočky ovoce ani zeleninu ve stravě nepotřebují, pamlsků má být málo a podle ASPCA může jakákoli rostlinná potrava u koček vyvolat zvracení a podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
-    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
+    "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -78,7 +84,8 @@
     "it": "Ogni tanto un pezzettino di cetriolo al naturale, da conteggiare nella razione giornaliera del gatto.",
     "pt": "Um pedacinho natural, de vez em quando, a contar para a ração diária do teu gato.",
     "nl": "Af en toe een klein, naturel stukje, meegeteld bij de dagelijkse voeding van je kat.",
-    "pl": "Mały kawałek ogórka bez dodatków od czasu do czasu, wliczony w dzienną porcję jedzenia kota."
+    "pl": "Mały kawałek ogórka bez dodatków od czasu do czasu, wliczony w dzienną porcję jedzenia kota.",
+    "cs": "Občas malý kousek bez dodatků, započítaný do denní dávky krmiva vaší kočky."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -89,7 +96,8 @@
     "it": "Ogni tanto il gatto può avere un pezzettino di cetriolo come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
     "pt": "Um pedacinho de pepino pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
     "nl": "Een klein stukje komkommer kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
-    "pl": "Małym kawałkiem ogórka można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
+    "pl": "Małym kawałkiem ogórka można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
+    "cs": "Kousek okurky může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I gatti hanno bisogno di verdure?",
         "pt": "Os gatos precisam de legumes?",
         "nl": "Hebben katten groente nodig?",
-        "pl": "Czy koty potrzebują warzyw?"
+        "pl": "Czy koty potrzebują warzyw?",
+        "cs": "Potřebují kočky zeleninu?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +122,8 @@
         "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
-        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
+        "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -207,6 +217,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "464d9483cf9c0cc29a7f113b33118d005b62cd42307ec83a9631687284dcf758"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3991ba1e11e5a9d9e5247fed3679bda27897499d60572f63acd766b50913c94e"
     }
   }
 }

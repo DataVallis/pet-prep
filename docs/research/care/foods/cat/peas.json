@@ -10,7 +10,8 @@
     "it": "Piselli",
     "pt": "Ervilhas",
     "nl": "Erwten",
-    "pl": "Groszek"
+    "pl": "Groszek",
+    "cs": "Hrášek"
   },
   "question": {
     "en": "Can cats eat peas?",
@@ -21,7 +22,8 @@
     "it": "I gatti possono mangiare i piselli?",
     "pt": "Os gatos podem comer ervilhas?",
     "nl": "Mogen katten erwten eten?",
-    "pl": "Czy koty mogą jeść groszek?"
+    "pl": "Czy koty mogą jeść groszek?",
+    "cs": "Mohou kočky jíst hrášek?"
   },
   "url_slug": {
     "en": "peas",
@@ -32,7 +34,8 @@
     "it": "piselli",
     "pt": "ervilhas",
     "nl": "erwten",
-    "pl": "groszek"
+    "pl": "groszek",
+    "cs": "hrasek"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì, qualche pisello senza condimenti va bene come premio occasionale. Cats Protection e l’ASPCA citano entrambe i piselli tra le verdure che si possono offrire a un gatto, e la RSPCA precisa che se ne deve dare solo una piccola quantità, come premio.",
     "pt": "Sim, algumas ervilhas sem tempero não fazem mal como guloseima ocasional. A Cats Protection e a ASPCA referem as ervilhas entre os legumes que se podem oferecer a um gato, e a RSPCA diz que os gatos só devem comer uma pequena quantidade como guloseima.",
     "nl": "Ja, een paar ongekruide erwten zijn af en toe prima als traktatie. Cats Protection en de ASPCA noemen allebei erwten als groente die je een kat kunt geven, en volgens de RSPCA mogen katten er maar een klein beetje van krijgen, als traktatie.",
-    "pl": "Tak, od czasu do czasu kilka groszków bez dodatków jest w porządku. Cats Protection i ASPCA wymieniają groszek wśród warzyw, które można zaproponować kotu, a RSPCA podaje, że kot może dostać tylko niewielką ilość, jako smakołyk."
+    "pl": "Tak, od czasu do czasu kilka groszków bez dodatków jest w porządku. Cats Protection i ASPCA wymieniają groszek wśród warzyw, które można zaproponować kotu, a RSPCA podaje, że kot może dostać tylko niewielką ilość, jako smakołyk.",
+    "cs": "Ano, pár zrnek hrášku bez dodatků je jako občasný pamlsek v pořádku. Cats Protection i ASPCA uvádějí hrášek jako zeleninu, kterou můžete kočce nabídnout, a RSPCA říká, že kočky ho mají dostat jen v malém množství jako pamlsek."
   },
   "why": {
     "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -55,7 +59,8 @@
     "it": "Cats Protection mette i piselli tra le poche verdure che si possono dare a un gatto e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. L’ASPCA consiglia i piselli per i gatti, e la RSPCA dice che i gatti possono mangiare piselli senza condimenti, ma solo in piccola quantità, come premio. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
     "pt": "A Cats Protection inclui as ervilhas entre os poucos legumes que se podem dar a um gato e sugere legumes cozidos a vapor ou em água, sem manteiga, sal nem temperos. A ASPCA sugere ervilhas para gatos, e a RSPCA diz que os gatos podem comer ervilhas sem tempero, mas apenas uma pequena quantidade como guloseima. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
     "nl": "Cats Protection noemt erwten als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. De ASPCA stelt erwten voor katten voor, en volgens de RSPCA mogen katten ongekruide erwten, maar alleen een klein beetje als traktatie. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
-    "pl": "Cats Protection wymienia groszek wśród niewielu warzyw, które można podawać kotu, i radzi gotować warzywa na parze lub w wodzie, bez masła, soli i przypraw. ASPCA poleca kotom groszek, a RSPCA podaje, że koty mogą jeść zwykły groszek, ale tylko w niewielkiej ilości, jako smakołyk. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka."
+    "pl": "Cats Protection wymienia groszek wśród niewielu warzyw, które można podawać kotu, i radzi gotować warzywa na parze lub w wodzie, bez masła, soli i przypraw. ASPCA poleca kotom groszek, a RSPCA podaje, że koty mogą jeść zwykły groszek, ale tylko w niewielkiej ilości, jako smakołyk. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
+    "cs": "Cats Protection řadí hrášek mezi několik druhů zeleniny, které můžete kočce dát, a doporučuje zeleninu napařenou nebo vařenou, bez másla, soli a koření. ASPCA hrášek pro kočky navrhuje a RSPCA uvádí, že kočky mohou dostat hrášek bez dodatků, ale jen v malém množství jako pamlsek. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
-    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
+    "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
@@ -78,7 +84,8 @@
     "it": "Qualche pisello, cotto al vapore o lessato, senza burro, sale o condimenti.",
     "pt": "Algumas ervilhas sem tempero, cozidas a vapor ou em água, sem manteiga, sal nem temperos.",
     "nl": "Een paar ongekruide erwten, gestoomd of gekookt, zonder boter, zout of kruiden.",
-    "pl": "Kilka groszków bez dodatków, ugotowanych na parze lub w wodzie, bez masła, soli i przypraw."
+    "pl": "Kilka groszków bez dodatków, ugotowanych na parze lub w wodzie, bez masła, soli i przypraw.",
+    "cs": "Pár zrnek hrášku, napařených nebo vařených, bez másla, soli a koření."
   },
   "child": {
     "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -89,7 +96,8 @@
     "it": "Ogni tanto il gatto può avere qualche pisello senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
     "pt": "Algumas ervilhas sem tempero podem ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
     "nl": "Een paar ongekruide erwten kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
-    "pl": "Kilkoma zwykłymi groszkami można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
+    "pl": "Kilkoma zwykłymi groszkami można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
+    "cs": "Pár zrnek hrášku bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I gatti hanno bisogno di verdure?",
         "pt": "Os gatos precisam de legumes?",
         "nl": "Hebben katten groente nodig?",
-        "pl": "Czy koty potrzebują warzyw?"
+        "pl": "Czy koty potrzebują warzyw?",
+        "cs": "Potřebují kočky zeleninu?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +122,8 @@
         "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
-        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
+        "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem."
       }
     }
   ],
@@ -219,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2e629a9dc265f7ce8b1f1ff234561a6810d4690a8fd250dd7077056befcf2c5c"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0a7b7a1abfcb13b86198b7385309bc1c8506bf2702a997b16bb21e72020a70bb"
     }
   }
 }

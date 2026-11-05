@@ -10,7 +10,8 @@
     "it": "Fagiolini",
     "pt": "Feijão-verde",
     "nl": "Sperziebonen",
-    "pl": "Fasolka szparagowa"
+    "pl": "Fasolka szparagowa",
+    "cs": "Zelené fazolky"
   },
   "question": {
     "en": "Can dogs eat green beans?",
@@ -21,7 +22,8 @@
     "it": "I cani possono mangiare i fagiolini?",
     "pt": "Os cães podem comer feijão-verde?",
     "nl": "Mogen honden sperziebonen eten?",
-    "pl": "Czy psy mogą jeść fasolkę szparagową?"
+    "pl": "Czy psy mogą jeść fasolkę szparagową?",
+    "cs": "Mohou psi jíst zelené fazolky?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -32,7 +34,8 @@
     "it": "fagiolini",
     "pt": "feijao-verde",
     "nl": "sperziebonen",
-    "pl": "fasolka-szparagowa"
+    "pl": "fasolka-szparagowa",
+    "cs": "zelene-fazolky"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "it": "Sì. I fagiolini senza condimenti, crudi o cotti, sono sicuri per la maggior parte dei cani in quantità moderate e sono un premio poco calorico. Non dare mai fagiolini con sale, burro, aglio o altri condimenti.",
     "pt": "Sim. O feijão-verde sem tempero, cru ou cozinhado, é seguro para a maioria dos cães, com moderação, e é uma guloseima pouco calórica. Nunca dês feijão-verde com sal, manteiga, alho ou outros temperos.",
     "nl": "Ja. Ongekruide sperziebonen, rauw of gaar, zijn met mate veilig voor de meeste honden en een caloriearm snoepje. Geef nooit sperziebonen met toegevoegd zout, boter, knoflook of andere kruiden.",
-    "pl": "Tak. Fasolka szparagowa bez dodatków, surowa lub gotowana, jest dla większości psów bezpieczna w rozsądnych ilościach – to niskokaloryczny smakołyk. Nigdy nie dawaj fasolki z dodatkiem soli, masła, czosnku ani innych przypraw."
+    "pl": "Tak. Fasolka szparagowa bez dodatków, surowa lub gotowana, jest dla większości psów bezpieczna w rozsądnych ilościach – to niskokaloryczny smakołyk. Nigdy nie dawaj fasolki z dodatkiem soli, masła, czosnku ani innych przypraw.",
+    "cs": "Ano. Zelené fazolky bez dodatků, syrové i tepelně upravené, jsou pro většinu psů s mírou bezpečné a jsou nízkokalorickým pamlskem. Nikdy nedávejte zelené fazolky s přidanou solí, máslem, česnekem nebo jiným kořením."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -55,7 +59,8 @@
     "it": "I fagiolini forniscono vitamine, minerali e fibre e hanno poche calorie; il volume e le fibre aiutano il cane a sentirsi sazio senza aggiungere molte calorie. Molti fagiolini in scatola contengono molto sale aggiunto, e le ricette di fagiolini più comuni per le persone non sono sicure per i cani.",
     "pt": "O feijão-verde fornece vitaminas, minerais e fibra e tem poucas calorias; o volume e a fibra ajudam o cão a ficar saciado sem acrescentar muitas calorias. Muito do feijão-verde em conserva leva bastante sal, e as receitas habituais de feijão-verde para pessoas não são seguras para os cães.",
     "nl": "Sperziebonen leveren vitamines, mineralen en vezels en bevatten weinig calorieën; door het extra volume en de vezels voelt een hond zich verzadigd zonder veel extra calorieën binnen te krijgen. Veel sperziebonen uit blik bevatten veel toegevoegd zout, en gangbare sperziebonenrecepten voor mensen zijn niet veilig voor honden.",
-    "pl": "Fasolka szparagowa dostarcza witamin, składników mineralnych i błonnika, a ma mało kalorii; dodatkowa objętość i błonnik pomagają psu poczuć się najedzonym przy niewielu kaloriach. Wiele fasolek z puszki ma dużo dodanej soli, a fasolka przyrządzana według typowych przepisów dla ludzi nie jest bezpieczna dla psów."
+    "pl": "Fasolka szparagowa dostarcza witamin, składników mineralnych i błonnika, a ma mało kalorii; dodatkowa objętość i błonnik pomagają psu poczuć się najedzonym przy niewielu kaloriach. Wiele fasolek z puszki ma dużo dodanej soli, a fasolka przyrządzana według typowych przepisów dla ludzi nie jest bezpieczna dla psów.",
+    "cs": "Zelené fazolky obsahují vitaminy, minerály a vlákninu a mají málo kalorií; díky objemu a vláknině se pes cítí sytý, aniž by dostal mnoho kalorií. Mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli a běžné recepty na zelené fazolky pro lidi nejsou pro psy bezpečné."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "it": "Chiedi al veterinario prima di dare fagiolini al tuo cane. Non dare mai fagiolini cotti con aglio o sale all’aglio.",
     "pt": "Pergunta ao teu veterinário antes de dares feijão-verde ao teu cão. Nunca dês feijão-verde cozinhado com alho ou sal de alho.",
     "nl": "Vraag je dierenarts om advies voordat je je hond sperziebonen geeft. Geef nooit sperziebonen die met knoflook of knoflookzout zijn bereid.",
-    "pl": "Zapytaj weterynarza, zanim dasz psu fasolkę szparagową. Nigdy nie podawaj fasolki ugotowanej z czosnkiem ani z solą czosnkową."
+    "pl": "Zapytaj weterynarza, zanim dasz psu fasolkę szparagową. Nigdy nie podawaj fasolki ugotowanej z czosnkiem ani z solą czosnkową.",
+    "cs": "Než psovi zelené fazolky dáte, zeptejte se veterináře. Nikdy nedávejte zelené fazolky vařené s česnekem nebo česnekovou solí."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -78,7 +84,8 @@
     "it": "Servili crudi, lessati in acqua o cotti al vapore, ma sempre senza condimenti. Evita i fagiolini in scatola e quelli preparati con burro, aglio, sale all’aglio o altri condimenti.",
     "pt": "Serve-o cru, cozido em água ou a vapor, mas sempre sem tempero. Evita o feijão-verde em conserva e o que for preparado com manteiga, alho, sal de alho ou outros temperos.",
     "nl": "Geef ze rauw, gekookt in water of gestoomd, maar zonder toevoegingen. Vermijd sperziebonen uit blik en sperziebonen die met boter, knoflook, knoflookzout of andere kruiden zijn bereid.",
-    "pl": "Podawaj ją surową, ugotowaną w wodzie lub na parze, ale zawsze bez dodatków. Unikaj fasolki z puszki oraz przygotowanej z masłem, czosnkiem, solą czosnkową lub innymi przyprawami."
+    "pl": "Podawaj ją surową, ugotowaną w wodzie lub na parze, ale zawsze bez dodatków. Unikaj fasolki z puszki oraz przygotowanej z masłem, czosnkiem, solą czosnkową lub innymi przyprawami.",
+    "cs": "Podávejte je syrové, vařené ve vodě nebo napařené, ale vždy bez dodatků. Vyhněte se konzervovaným zeleným fazolkám a těm, které jsou připravené s máslem, česnekem, česnekovou solí nebo jiným kořením."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -89,7 +96,8 @@
     "it": "I fagiolini senza condimenti sono un premio croccante per i cani. Quelli cotti con aglio o burro non vanno bene per loro.",
     "pt": "O feijão-verde sem tempero é uma guloseima estaladiça para cães. O feijão cozinhado com alho ou manteiga não é para cães.",
     "nl": "Sperziebonen zonder toevoegingen zijn een knapperig snoepje voor honden. Bonen die met knoflook of boter zijn bereid, zijn niet voor honden.",
-    "pl": "Zwykła fasolka szparagowa to chrupiący smakołyk dla psa. Fasolka ugotowana z czosnkiem lub masłem nie jest dla psów."
+    "pl": "Zwykła fasolka szparagowa to chrupiący smakołyk dla psa. Fasolka ugotowana z czosnkiem lub masłem nie jest dla psów.",
+    "cs": "Zelené fazolky bez dodatků jsou křupavý pamlsek pro psy. Fazolky vařené s česnekem nebo máslem psům nepatří."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "it": "I cani possono mangiare i fagiolini in scatola?",
         "pt": "Os cães podem comer feijão-verde em conserva?",
         "nl": "Mogen honden sperziebonen uit blik eten?",
-        "pl": "Czy psy mogą jeść fasolkę szparagową z puszki?"
+        "pl": "Czy psy mogą jeść fasolkę szparagową z puszki?",
+        "cs": "Mohou psi jíst konzervované zelené fazolky?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -113,7 +122,8 @@
         "it": "Meglio evitarli, perché molti fagiolini in scatola contengono molto sale aggiunto.",
         "pt": "O melhor é evitá-lo, porque muito do feijão-verde em conserva leva bastante sal.",
         "nl": "Je kunt ze beter vermijden, want veel sperziebonen uit blik bevatten veel toegevoegd zout.",
-        "pl": "Najlepiej jej unikać, bo wiele fasolek z puszki ma dużo dodanej soli."
+        "pl": "Najlepiej jej unikać, bo wiele fasolek z puszki ma dużo dodanej soli.",
+        "cs": "Raději je nedávejte, protože mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli."
       }
     }
   ],
@@ -226,6 +236,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7de5f02bf9e65fc61cc1f2837702ba09de873962c315c2279fe536a572612672"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b242c8693b95f0772251b577303d83d57d1ccf5c5269b8d0eb2fc7eb5f3bee58"
     }
   }
 }
