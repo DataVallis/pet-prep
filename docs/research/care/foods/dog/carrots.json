@@ -11,7 +11,8 @@
     "pt": "Cenouras",
     "nl": "Wortels",
     "pl": "Marchewka",
-    "cs": "Mrkev"
+    "cs": "Mrkev",
+    "hr": "Mrkva"
   },
   "question": {
     "en": "Can dogs eat carrots?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer cenouras?",
     "nl": "Mogen honden wortels eten?",
     "pl": "Czy psy mogą jeść marchewkę?",
-    "cs": "Mohou psi jíst mrkev?"
+    "cs": "Mohou psi jíst mrkev?",
+    "hr": "Smiju li psi jesti mrkvu?"
   },
   "url_slug": {
     "en": "carrots",
@@ -35,7 +37,8 @@
     "pt": "cenouras",
     "nl": "wortels",
     "pl": "marchewka",
-    "cs": "mrkev"
+    "cs": "mrkev",
+    "hr": "mrkva"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar.",
     "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen.",
     "pl": "Tak. Marchewka jest dla psów bezpieczna – to zdrowa, niskokaloryczna przekąska, surowa lub gotowana. Najpierw pokrój ją na kawałki wielkości jednego kęsa, żeby pies się nie zadławił.",
-    "cs": "Ano. Mrkev je pro psy bezpečná a je zdravým nízkokalorickým pamlskem, syrová i tepelně upravená. Nejdřív ji nakrájejte na kousky na jedno sousto, aby se pes neudusil."
+    "cs": "Ano. Mrkev je pro psy bezpečná a je zdravým nízkokalorickým pamlskem, syrová i tepelně upravená. Nejdřív ji nakrájejte na kousky na jedno sousto, aby se pes neudusil.",
+    "hr": "Da. Mrkva je sigurna za pse i zdrava je užina s malo kalorija, sirova ili termički obrađena. Prvo je nareži na komadiće veličine zalogaja da se pas ne uguši."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -60,7 +64,8 @@
     "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada.",
     "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden.",
     "pl": "Marchewka jest doskonałym źródłem witaminy A, potasu i błonnika, a do tego zawiera dużo beta-karotenu. Gryzienie marchewki może też pomagać w dbaniu o zdrowie zębów psa. Głównym zagrożeniem jest zadławienie, dlatego całą marchewkę, a nawet paluszki marchewkowe, trzeba kroić na kawałki wielkości jednego kęsa.",
-    "cs": "Mrkev je vynikajícím zdrojem vitaminu A, draslíku a vlákniny a obsahuje hodně beta-karotenu. Žvýkání mrkve může také prospívat zubům vašeho psa. Hlavním rizikem je dušení, proto by se celé mrkve a dokonce i mrkvové tyčinky měly nakrájet na kousky na jedno sousto."
+    "cs": "Mrkev je vynikajícím zdrojem vitaminu A, draslíku a vlákniny a obsahuje hodně beta-karotenu. Žvýkání mrkve může také prospívat zubům vašeho psa. Hlavním rizikem je dušení, proto by se celé mrkve a dokonce i mrkvové tyčinky měly nakrájet na kousky na jedno sousto.",
+    "hr": "Mrkva je odličan izvor vitamina A, kalija i vlakana te sadrži mnogo beta-karotena. Grickanje mrkve može pomoći i zdravlju psećih zubi. Glavni je rizik gušenje, zato cijelu mrkvu, pa i štapiće mrkve, treba narezati na komadiće veličine zalogaja."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia.",
     "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen.",
     "pl": "Zapytaj weterynarza, ile marchewki dziennie możesz dać swojemu psu.",
-    "cs": "Poraďte se s veterinářem, kolik mrkve denně je pro vašeho psa vhodné."
+    "cs": "Poraďte se s veterinářem, kolik mrkve denně je pro vašeho psa vhodné.",
+    "hr": "Pitaj veterinara koliko mrkve dnevno odgovara tvom psu."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -85,7 +91,8 @@
     "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas.",
     "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima.",
     "pl": "Umyj lub obierz marchewkę i pokrój ją na kawałki wielkości jednego kęsa – dotyczy to także całych marchewek i paluszków marchewkowych. Zarówno surowa, jak i gotowana marchewka jest w porządku.",
-    "cs": "Mrkev umyjte, případně oloupejte, a celé mrkve i mrkvové tyčinky nakrájejte na kousky na jedno sousto. Syrová i tepelně upravená mrkev je v pořádku."
+    "cs": "Mrkev umyjte, případně oloupejte, a celé mrkve i mrkvové tyčinky nakrájejte na kousky na jedno sousto. Syrová i tepelně upravená mrkev je v pořádku.",
+    "hr": "Mrkvu operi ili oguli, a zatim cijelu mrkvu, pa i štapiće mrkve, nareži na komadiće veličine zalogaja. Sirova i termički obrađena mrkva jednako su dobre."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -97,7 +104,8 @@
     "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos.",
     "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes.",
     "pl": "Chrupiąca marchewka to zdrowa przekąska dla psa! Dorosły najpierw ją myje i kroi na małe kawałki.",
-    "cs": "Křupavá mrkev je zdravý pamlsek pro psy! Dospělý ji nejdřív umyje a nakrájí na malé kousky."
+    "cs": "Křupavá mrkev je zdravý pamlsek pro psy! Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
+    "hr": "Hrskava mrkva zdrava je užina za pse! Odrasla osoba je prvo opere i nareže na male komadiće."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?",
         "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?",
         "pl": "Czy ząbkującym szczeniakom można dać zimną lub mrożoną marchewkę?",
-        "cs": "Mohou štěňata, kterým se prořezávají zuby, dostat studenou nebo mraženou mrkev?"
+        "cs": "Mohou štěňata, kterým se prořezávají zuby, dostat studenou nebo mraženou mrkev?",
+        "hr": "Smiju li štenci kojima izbijaju zubi dobiti hladnu ili smrznutu mrkvu?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -123,7 +132,8 @@
         "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto.",
         "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten.",
         "pl": "Niektórzy weterynarze zalecają ząbkującym szczeniakom zimną lub mrożoną marchewkę, bo może przynosić ulgę.",
-        "cs": "Někteří veterináři doporučují štěňatům, kterým se prořezávají zuby, studenou nebo mraženou mrkev, která jim může ulevit."
+        "cs": "Někteří veterináři doporučují štěňatům, kterým se prořezávají zuby, studenou nebo mraženou mrkev, která jim může ulevit.",
+        "hr": "Neki veterinari preporučuju hladnu ili smrznutu mrkvu za štence kojima izbijaju zubi, kao način da im se ublaži nelagoda."
       }
     }
   ],
@@ -225,6 +235,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2d73f04fa68899d6fd7707bd865b7a75515286b397483b567bf257f4293b074a"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e758ff9125661cbaf65094691f317342b21492e562f920f6708ed111596add78"
     }
   }
 }

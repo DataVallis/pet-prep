@@ -11,7 +11,8 @@
     "pt": "Feijão-verde",
     "nl": "Sperziebonen",
     "pl": "Fasolka szparagowa",
-    "cs": "Zelené fazolky"
+    "cs": "Zelené fazolky",
+    "hr": "Zelene mahune"
   },
   "question": {
     "en": "Can cats eat green beans?",
@@ -23,7 +24,8 @@
     "pt": "Os gatos podem comer feijão-verde?",
     "nl": "Mogen katten sperziebonen eten?",
     "pl": "Czy koty mogą jeść fasolkę szparagową?",
-    "cs": "Mohou kočky jíst zelené fazolky?"
+    "cs": "Mohou kočky jíst zelené fazolky?",
+    "hr": "Smiju li mačke jesti zelene mahune?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -35,7 +37,8 @@
     "pt": "feijao-verde",
     "nl": "sperziebonen",
     "pl": "fasolka-szparagowa",
-    "cs": "zelene-fazolky"
+    "cs": "zelene-fazolky",
+    "hr": "zelene-mahune"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, um pedacinho de feijão-verde sem tempero não faz mal como guloseima ocasional. A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos, e a Cats Protection sugere-o cozido a vapor ou em água, sem manteiga, sal nem temperos.",
     "nl": "Ja, een klein stukje ongekruide sperzieboon is af en toe prima als traktatie. Volgens de ASPCA kunnen sperziebonen een prima groen tussendoortje zijn voor een hond of kat, en Cats Protection adviseert gestoomde of gekookte sperziebonen zonder boter, zout of kruiden.",
     "pl": "Tak, od czasu do czasu mały kawałek fasolki szparagowej bez dodatków jest w porządku. ASPCA podaje, że fasolka szparagowa może być świetną zieloną przekąską dla psa lub kota, a Cats Protection radzi podawać ją ugotowaną na parze lub w wodzie, bez masła, soli i przypraw.",
-    "cs": "Ano, malý kousek zelené fazolky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku, a Cats Protection doporučuje zelené fazolky napařené nebo vařené, bez másla, soli a koření."
+    "cs": "Ano, malý kousek zelené fazolky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku, a Cats Protection doporučuje zelené fazolky napařené nebo vařené, bez másla, soli a koření.",
+    "hr": "Da, mali komadić zelene mahune bez dodataka u redu je kao povremena poslastica. ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku, a Cats Protection predlaže zelene mahune kuhane na pari ili u vodi, bez maslaca, soli i začina."
   },
   "why": {
     "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -60,7 +64,8 @@
     "pt": "A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos. A Cats Protection sugere legumes como o feijão-verde cozidos a vapor ou em água, sem manteiga, sal nem temperos, e a RSPCA refere o feijão-verde, cru ou cozinhado mas sem temperos, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
     "nl": "De ASPCA zegt dat sperziebonen een prima groen tussendoortje kunnen zijn voor een hond of kat. Cats Protection adviseert gestoomde of gekookte groente zoals sperziebonen, zonder boter, zout of kruiden, en de RSPCA rekent sperziebonen, rauw of gaar maar zonder kruiden, tot het eten dat met mate geschikt is voor katten en honden. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "ASPCA podaje, że fasolka szparagowa może być świetną zieloną przekąską dla psa lub kota. Cats Protection radzi podawać warzywa, takie jak fasolka szparagowa, ugotowane na parze lub w wodzie, bez masła, soli i przypraw, a RSPCA wymienia fasolkę szparagową, surową lub gotowaną, ale bez przypraw, wśród pokarmów, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
-    "cs": "ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku. Cats Protection doporučuje zeleninu, například zelené fazolky, napařenou nebo vařenou, bez másla, soli a koření, a RSPCA řadí zelené fazolky mezi potraviny vhodné pro kočky i psy s mírou, syrové nebo tepelně upravené, ale bez koření. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku."
+    "cs": "ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku. Cats Protection doporučuje zeleninu, například zelené fazolky, napařenou nebo vařenou, bez másla, soli a koření, a RSPCA řadí zelené fazolky mezi potraviny vhodné pro kočky i psy s mírou, syrové nebo tepelně upravené, ale bez koření. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
+    "hr": "ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku. Cats Protection predlaže povrće poput zelenih mahuna kuhano na pari ili u vodi, bez maslaca, soli i začina, a RSPCA zelene mahune ubraja među hranu prikladnu za mačke i pse u umjerenim količinama, sirovu ili termički obrađenu, ali bez začina. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
-    "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem."
+    "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
   },
   "serving": {
     "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
@@ -85,7 +91,8 @@
     "pt": "Um pedacinho, cozido a vapor ou em água, sem manteiga, sal nem temperos.",
     "nl": "Een klein stukje, gestoomd of gekookt, zonder boter, zout of kruiden.",
     "pl": "Mały kawałek, ugotowany na parze lub w wodzie, bez masła, soli i przypraw.",
-    "cs": "Malý kousek, napařený nebo vařený, bez másla, soli a koření."
+    "cs": "Malý kousek, napařený nebo vařený, bez másla, soli a koření.",
+    "hr": "Mali komadić, kuhan na pari ili u vodi, bez maslaca, soli i začina."
   },
   "child": {
     "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -97,7 +104,8 @@
     "pt": "Um pedacinho de feijão-verde sem tempero pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
     "nl": "Een stukje sperzieboon zonder toevoegingen kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Kawałkiem zwykłej fasolki szparagowej można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
-    "cs": "Kousek zelené fazolky bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek."
+    "cs": "Kousek zelené fazolky bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
+    "hr": "Komadić zelene mahune bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Os gatos precisam de legumes?",
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
-        "cs": "Potřebují kočky zeleninu?"
+        "cs": "Potřebují kočky zeleninu?",
+        "hr": "Treba li mačkama povrće?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -123,7 +132,8 @@
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
-        "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem."
+        "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
       }
     }
   ],
@@ -230,6 +240,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0756c1a4de3deb051aad4cc55f68ab418bf0acfa2a26ca4799ea91cc26aa7b91"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c184b1c187ec22e95f19c6507641ff584e9762349c3e7f219cfee06f1e5f8a77"
     }
   }
 }

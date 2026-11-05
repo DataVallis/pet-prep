@@ -11,7 +11,8 @@
     "pt": "Brócolos",
     "nl": "Broccoli",
     "pl": "Brokuły",
-    "cs": "Brokolice"
+    "cs": "Brokolice",
+    "hr": "Brokula"
   },
   "question": {
     "en": "Can dogs eat broccoli?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer brócolos?",
     "nl": "Mogen honden broccoli eten?",
     "pl": "Czy psy mogą jeść brokuły?",
-    "cs": "Mohou psi jíst brokolici?"
+    "cs": "Mohou psi jíst brokolici?",
+    "hr": "Smiju li psi jesti brokulu?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -35,7 +37,8 @@
     "pt": "brocolos",
     "nl": "broccoli",
     "pl": "brokuly",
-    "cs": "brokolice"
+    "cs": "brokolice",
+    "hr": "brokula"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, em pequenas quantidades e como guloseima ocasional, crus ou cozinhados, sem temperos nem óleos. Corta-os em pedaços que caibam numa dentada: os floretes podem irritar o estômago e os talos duros podem obstruir o esófago, sobretudo nos cães pequenos.",
     "nl": "Ja, met mate en af en toe als snoepje, rauw of gaar, zonder kruiden of olie. Snijd de broccoli in hapklare stukjes: de roosjes kunnen de maag irriteren en harde stronken kunnen de slokdarm blokkeren, vooral bij kleine honden.",
     "pl": "Tak, w małych ilościach, jako okazjonalny smakołyk – surowe lub gotowane, bez przypraw i oleju. Pokrój je na kawałki wielkości jednego kęsa: różyczki mogą podrażniać żołądek, a twarde łodygi mogą zablokować przełyk, zwłaszcza u małych psów.",
-    "cs": "Ano, v malém množství jako občasný pamlsek, syrová nebo tepelně upravená, bez koření a oleje. Nakrájejte ji na kousky na jedno sousto: růžičky mohou dráždit žaludek a tuhé stonky mohou ucpat jícen, zejména u malých psů."
+    "cs": "Ano, v malém množství jako občasný pamlsek, syrová nebo tepelně upravená, bez koření a oleje. Nakrájejte ji na kousky na jedno sousto: růžičky mohou dráždit žaludek a tuhé stonky mohou ucpat jícen, zejména u malých psů.",
+    "hr": "Da, u malim količinama kao povremena poslastica, sirova ili termički obrađena, bez začina i ulja. Nareži je na komadiće veličine zalogaja: cvjetići mogu nadražiti želudac, a žilave stabljike mogu začepiti jednjak, osobito kod malih pasa."
   },
   "why": {
     "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
@@ -60,7 +64,8 @@
     "pt": "Os floretes de brócolos contêm isotiocianatos, que podem causar uma irritação do estômago, de ligeira a possivelmente grave. Os talos duros de brócolos já provocaram obstruções no esófago, sobretudo em cães pequenos, por isso os brócolos cozinhados e cortados em pedaços de uma dentada são a melhor escolha.",
     "nl": "Broccoliroosjes bevatten isothiocyanaten, die milde tot mogelijk ernstige maagirritatie kunnen veroorzaken. Van harde broccolistronken is bekend dat ze een verstopping in de slokdarm kunnen veroorzaken, vooral bij kleine honden. Daarom is gekookte broccoli in hapklare stukjes de betere keuze.",
     "pl": "Różyczki brokułów zawierają izotiocyjaniany, które mogą wywołać podrażnienie żołądka od łagodnego do potencjalnie silnego. Twarde łodygi brokułów bywały przyczyną niedrożności przełyku, zwłaszcza u małych psów, dlatego lepszym wyborem są ugotowane brokuły pokrojone na kawałki wielkości jednego kęsa.",
-    "cs": "Růžičky brokolice obsahují isothiokyanáty, které mohou způsobit mírné až potenciálně závažné podráždění žaludku. U tuhých stonků brokolice jsou známy případy ucpání jícnu, zejména u malých psů, proto je lepší volbou tepelně upravená brokolice nakrájená na kousky na jedno sousto."
+    "cs": "Růžičky brokolice obsahují isothiokyanáty, které mohou způsobit mírné až potenciálně závažné podráždění žaludku. U tuhých stonků brokolice jsou známy případy ucpání jícnu, zejména u malých psů, proto je lepší volbou tepelně upravená brokolice nakrájená na kousky na jedno sousto.",
+    "hr": "Cvjetići brokule sadrže izotiocijanate, koji mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Poznato je da žilave stabljike brokule mogu uzrokovati začepljenje jednjaka, osobito kod malih pasa, pa je bolji izbor termički obrađena brokula narezana na komadiće veličine zalogaja."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Vê como o teu cão reage aos brócolos e confirma que não há nenhuma reação adversa antes de lhe dares mais.",
     "nl": "Let op hoe je hond op broccoli reageert en geef pas meer als er geen nare reactie is geweest.",
     "pl": "Zobacz, jak pies zniesie brokuły, i dopiero gdy nie pojawi się żadna niepokojąca reakcja, podaj mu więcej.",
-    "cs": "Sledujte, jak pes na brokolici reaguje, a než mu dáte víc, ujistěte se, že se neobjevila žádná nežádoucí reakce."
+    "cs": "Sledujte, jak pes na brokolici reaguje, a než mu dáte víc, ujistěte se, že se neobjevila žádná nežádoucí reakce.",
+    "hr": "Prati kako pas reagira na brokulu i prije nego što mu daš više, provjeri je li se javila neželjena reakcija."
   },
   "serving": {
     "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
@@ -85,7 +91,8 @@
     "pt": "Sem tempero nem óleos, crus ou, de preferência, cozinhados, cortados em pedaços de uma dentada. Apenas em pequenas quantidades, como guloseima ocasional.",
     "nl": "Naturel, rauw of liever gaar, zonder kruiden of olie, in hapklare stukjes gesneden. Alleen kleine hoeveelheden, af en toe als snoepje.",
     "pl": "Zwykłe, surowe lub najlepiej ugotowane, bez przypraw i oleju, pokrojone na kawałki wielkości jednego kęsa. Tylko małe ilości, jako okazjonalny smakołyk.",
-    "cs": "Syrová nebo raději tepelně upravená, bez dodatků, koření a oleje, nakrájená na kousky na jedno sousto. Jen v malém množství jako občasný pamlsek."
+    "cs": "Syrová nebo raději tepelně upravená, bez dodatků, koření a oleje, nakrájená na kousky na jedno sousto. Jen v malém množství jako občasný pamlsek.",
+    "hr": "Bez dodataka, sirova ili po mogućnosti termički obrađena, bez začina i ulja, narezana na komadiće veličine zalogaja. Samo male količine kao povremena poslastica."
   },
   "child": {
     "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
@@ -97,7 +104,8 @@
     "pt": "Os cães podem provar um bocadinho de brócolos. Um adulto cozinha-os sem tempero e corta-os em pedaços pequenos.",
     "nl": "Honden mogen een beetje broccoli proeven. Een volwassene kookt hem zonder iets erbij en snijdt hem in kleine stukjes.",
     "pl": "Psy mogą spróbować odrobiny brokułów. Dorosły gotuje je bez dodatków i kroi na małe kawałki.",
-    "cs": "Psi si můžou dát trochu brokolice. Dospělý ji uvaří bez dodatků a nakrájí na malé kousky."
+    "cs": "Psi si můžou dát trochu brokolice. Dospělý ji uvaří bez dodatků a nakrájí na malé kousky.",
+    "hr": "Psi smiju probati malo brokule. Odrasla osoba je skuha bez dodataka i nareže na male komadiće."
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Os talos de brócolos são seguros para os cães?",
         "nl": "Zijn broccolistronken veilig voor honden?",
         "pl": "Czy łodygi brokułów są bezpieczne dla psów?",
-        "cs": "Jsou stonky brokolice pro psy bezpečné?"
+        "cs": "Jsou stonky brokolice pro psy bezpečné?",
+        "hr": "Jesu li stabljike brokule sigurne za pse?"
       },
       "a": {
         "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
@@ -123,7 +132,8 @@
         "pt": "Os talos duros podem obstruir o esófago de um cão, sobretudo nos cães pequenos. Corta os brócolos em pedaços de uma dentada; se estiverem cozinhados, evita-se este problema.",
         "nl": "Harde stronken kunnen de slokdarm van een hond blokkeren, vooral bij kleine honden. Snijd broccoli in hapklare stukjes; gekookte broccoli helpt om dit te voorkomen.",
         "pl": "Twarde łodygi mogą zablokować psu przełyk, zwłaszcza małemu. Pokrój brokuły na kawałki wielkości jednego kęsa; ugotowane brokuły pomagają uniknąć tego problemu.",
-        "cs": "Tuhé stonky mohou psovi ucpat jícen, zejména malému psovi. Brokolici nakrájejte na kousky na jedno sousto; tepelně upravená brokolice pomáhá tomuto problému předejít."
+        "cs": "Tuhé stonky mohou psovi ucpat jícen, zejména malému psovi. Brokolici nakrájejte na kousky na jedno sousto; tepelně upravená brokolice pomáhá tomuto problému předejít.",
+        "hr": "Žilave stabljike mogu začepiti jednjak psa, osobito kod malih pasa. Brokulu nareži na komadiće veličine zalogaja; termički obrađena brokula pomaže izbjeći taj problem."
       }
     }
   ],
@@ -229,6 +239,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ba0a82420270a426e966790c343142710a167c0aa1836af380ad17b916089147"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0cf6c757e9e83d7c01589ccd3f1bcfcf2805d0ed3a8c1a2287684751217ca228"
     }
   }
 }
