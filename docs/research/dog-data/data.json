@@ -49781,7 +49781,7 @@
     }
   },
   "coton_de_tulear": {
-    "_note": "Added 2026-11-05 (M5-R10-96, unattended run — appended after the Standard Schnauzer: AKC 2024 No. 92 'Coton de Tulear', S174 full-list table). Quotes as returned by the web-fetch tool on 2026-11-05; paraphrase only in notes, marked '(paraphrase)'. Sources S721–S728 (reused S10, S11, S14, S24, S35, S45, S54, S92, S174). No health percentages anywhere. Identity from the FCI nomenclature (S721, 'COTON DE TULEAR' (283), Madagascar, patronage France); weight, height and colour from FCI-Standard N° 283 (S722, 04.02.2000/EN — the only standard with a weight); RKC breed standard (S723, last updated 1 April 2026) for the RKC heights and appearance; RKC Breeds A–Z page (S724) key facts, Breed Watch Category 1 and the health tests; PDSA (S725); PetMD (S726). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused (not in provenance) and McMillan 2024 (S54, Nature PDF re-read 2026-11-05) shows the breed only as a Fig. 5 label → RKC lower bound 'Over 12 years' (runbook order). EN name 'Coton de Tulear' (AKC S174 / FCI S721; RKC writes 'Coton De Tulear'); Slovenian »coton de tulear« (S728, tier C — no Slovenian breed club page found; the name is the same in Slovenian).",
+    "_note": "Added 2026-11-05 (M5-R10-96, unattended run — appended after the Standard Schnauzer: AKC 2024 No. 92 'Coton de Tulear', S174 full-list table). Quotes as returned by the web-fetch tool on 2026-11-05; paraphrase only in notes, marked '(paraphrase)'. Sources S721–S728 (reused S8, S10, S11, S14, S24, S35, S45, S54, S92, S174). No health percentages anywhere. Identity from the FCI nomenclature (S721, 'COTON DE TULEAR' (283), Madagascar, patronage France); weight, height and colour from FCI-Standard N° 283 (S722, 04.02.2000/EN — the only standard with a weight); RKC breed standard (S723, last updated 1 April 2026) for the RKC heights and appearance; RKC Breeds A–Z page (S724) key facts, Breed Watch Category 1 and the health tests; PDSA (S725); PetMD (S726). Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused (not in provenance) and McMillan 2024 (S54, Nature PDF re-read 2026-11-05) shows the breed only as a Fig. 5 label → RKC lower bound 'Over 12 years' (runbook order). EN name 'Coton de Tulear' (AKC S174 / FCI S721; RKC writes 'Coton De Tulear'); Slovenian »coton de tulear« (S728, tier C — no Slovenian breed club page found; the name is the same in Slovenian).",
     "identity": {
       "value": "FCI No. 283, Group 9 Section 1 (Bichons and related breeds), Madagascar",
       "unit": "—",
@@ -50019,12 +50019,12 @@
         "notes": "PetMD (S726); FCI (S722): 'very sociable with humans and with other dogs' (fragment). Basis of other_pets (introduction condition kept here). No source names a prey drive → no chases_small_pets."
       },
       "socialisation": {
-        "value": "puppies must be exposed to a variety of new places, people and experiences",
+        "value": "early socialisation; puppies must be exposed to a variety of new places, people and experiences",
         "unit": "—",
         "source_id": "S726",
-        "quote": "Coton de Tulear puppies must be exposed to a variety of new places, people, and experiences so they grow into confident, well-adjusted dogs.",
+        "quote": "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about.",
         "confidence": "high",
-        "notes": "PetMD (S726), a need (runbook M5-R17): 'Socialization is equally important.' → proposed_game_parameters.coton_de_tulear.socialisation (DOG_SOCIALISATION row)."
+        "notes": "PetMD (S726), a condition (runbook M5-R17); PetMD also: 'Socialization is equally important. Coton de Tulear puppies must be exposed to a variety of new places, people, and experiences so they grow into confident, well-adjusted dogs.' → proposed_game_parameters.coton_de_tulear.socialisation (DOG_SOCIALISATION row)."
       },
       "strangers": {
         "value": "may bark at strange noises or surprising movements",
@@ -75151,7 +75151,7 @@
         "value": 1,
         "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
         "source_id": "S726",
-        "quote": "Coton de Tulear puppies must be exposed to a variety of new places, people, and experiences so they grow into confident, well-adjusted dogs.",
+        "quote": "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about.",
         "confidence": "high",
         "notes": "coton_de_tulear.behaviour.socialisation (PetMD S726, a need). Built in M5-R17.",
         "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S726)"
