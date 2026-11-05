@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "f925bd409ead770e228fef10ab63ec23f3096098372c3943b7226292a2549bb3"
+      "sha256": "58879af4ba9957c100f1ebbc7ca9cc1a89284046032243d028699b0e26f6dedd"
     }
   },
   "suitability_vocabulary": {
@@ -53231,7 +53231,12 @@
           "S710"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "keeshond.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
