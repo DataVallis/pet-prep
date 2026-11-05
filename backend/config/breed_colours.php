@@ -616,6 +616,10 @@ return [
         ['key' => 'blue-white', 'value' => 'blue body and hindquarters with a white head, neck, forequarters and underbelly', 'en' => 'Blue and white', 'sl' => 'Modro-bel'],
         ['key' => 'grizzle-white', 'value' => 'grizzle body and hindquarters with a white head, neck, forequarters and underbelly', 'en' => 'Grizzle and white', 'sl' => 'Sivo prošarano-bel'],
     ],
+    // M5-R10-94: FCI-Standard N° 97 (S246) "Colour: Wolfsspitz/Keeshond: Grey-shaded." — the only standard colour.
+    'keeshond' => [
+        ['key' => 'grey-shaded', 'value' => 'grey-shaded: silver-grey with black hair tips, dark muzzle and ears, pencilled spectacles around the eyes, lighter mane and shoulder ring, silver-grey legs, black tail tip', 'en' => 'Grey-shaded (wolf grey)', 'sl' => 'Volčje siv'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],

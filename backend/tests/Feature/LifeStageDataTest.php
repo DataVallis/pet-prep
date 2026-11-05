@@ -167,7 +167,7 @@ describe('import provenance', function () {
         // M5-R10-78: likewise the Pyrenean Mountain Dog's brushing (RKC "More than once a week"; VCA / PetMD
         // "weekly" would contradict it) — Claude's proposal 2 per week, open for David.
         $dogOpen = BreedStageParam::whereIn('breed_slug', BreedConfig::query()->select('breed_slug')->where('species', 'dog'))->where('verified', false);
-        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog'])->pluck('key')->unique()->values()->all())
+        expect((clone $dogOpen)->whereNotIn('breed_slug', ['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'belgian-malinois', 'samoyed', 'scottish-terrier', 'bloodhound', 'akita', 'saint-bernard', 'bull-terrier', 'miniature-pinscher', 'pyrenean-mountain-dog', 'irish-wolfhound', 'lagotto-romagnolo', 'alaskan-malamute', 'basenji', 'rat-terrier', 'brussels-griffon', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond'])->pluck('key')->unique()->values()->all())
             ->toEqualCanonicalizing([
                 StageParamKey::ChewingChancePerDay->value,
             ]);
@@ -186,7 +186,7 @@ describe('import provenance', function () {
         // M5-R10-78: the Pyrenean Mountain Dog's senior boundary / arrival (90) and its brushing (2 per week) are open.
         expect((clone $dogOpen)->where('breed_slug', 'pyrenean-mountain-dog')->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
             ->toBe(['all.'.StageParamKey::GroomingSessionsPerWeek->value, 'senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value]);
-        foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'bull-terrier', 'miniature-pinscher', 'alaskan-malamute', 'basenji', 'rat-terrier', 'pekingese', 'chow-chow', 'old-english-sheepdog'] as $slug) {
+        foreach (['bernese-mountain-dog', 'cane-corso', 'miniature-american-shepherd', 'chihuahua', 'bull-terrier', 'miniature-pinscher', 'alaskan-malamute', 'basenji', 'rat-terrier', 'pekingese', 'chow-chow', 'old-english-sheepdog', 'keeshond'] as $slug) {
             expect((clone $dogOpen)->where('breed_slug', $slug)->whereNotIn('key', [StageParamKey::ChewingChancePerDay->value])->get()->map(fn ($r) => "{$r->stage}.{$r->key}")->sort()->values()->all())
                 ->toBe(['senior.'.StageParamKey::ArrivalAgeMonths->value, 'senior.'.StageParamKey::StartsAtMonths->value], $slug);
         }

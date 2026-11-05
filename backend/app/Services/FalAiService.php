@@ -763,6 +763,12 @@ class FalAiService
                 .'covering the whole body, grey body and hindquarters with a white head, neck, forequarters and underbelly, a capacious square head '
                 .'with a strong, square muzzle and a large black nose, dark eyes partly hidden by the fringe, small ears carried flat to the head, '
                 .'a natural, well-feathered tail, gentle and even-tempered expression, photorealistic, studio quality, natural lighting',
+            // M5-R10-94: FCI-Standard N° 97 (S246) — the Wolfsspitz / Keeshond: grey-shaded stand-off coat with a thick mane,
+            // spectacles, small upright ears, bushy tail over the back.
+            BreedType::Keeshond => 'A compact, medium-sized Keeshond (Wolfsspitz), a long, straight stand-off double coat with a thick mane, '
+                .'grey-shaded (silver-grey with black hair tips), a dark muzzle and ears, delicately pencilled spectacles around the eyes, '
+                .'a wedge-shaped foxy head with a small black nose, dark almond eyes, small pointed upright ears, '
+                .'a very bushy tail rolled over the back, alert and lively expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1847,6 +1853,13 @@ class FalAiService
                 'eye_color' => 'dark brown',
                 'fur_texture' => 'profuse, harsh, shaggy coat, not straight and free from curl',
                 'markings' => 'white head and forequarters, black nose, natural feathered tail, never brown or merle',
+            ],
+            // M5-R10-94: grey-shaded only (FCI S246) — never white markings.
+            BreedType::Keeshond => [
+                'color_scheme' => 'grey-shaded silver-grey with black hair tips, lighter mane, black tail tip',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'long, straight, stand-off double coat with a thick mane',
+                'markings' => 'dark muzzle and ears, pencilled spectacles around the eyes, black nose, never white markings',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

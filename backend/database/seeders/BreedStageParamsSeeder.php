@@ -1154,6 +1154,24 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_OLD_ENGLISH_SHEEPDOG_SENIOR = 'predlog Claude 2026-11-04 (najbližja vrstica pravila runbooka, M5-R10-93) — čaka Davida';
 
     /**
+     * M5-R10-94 Keeshond (unattended run 2026-11-05, data.json proposed_game_parameters.keeshond.*.decision): every value
+     * follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 — exercise
+     * 60 min (PDSA S709 "They need up to an hour of exercise per day"; RKC page not reachable), senior 45 min, puppy
+     * 10 min × age capped at 60, stages young 9 / adult 36, arrival 2 / 9 / 36, learning multiplier 1.5 (Coren rank 16,
+     * Excellent); care rates the Border Collie's. The senior boundary uses the closest rule row (the PDSA lower bound
+     * "Over 10 years", S709 — no McMillan 2024 / VetCompass median / RKC band reachable) and is NOT covered by the
+     * confirmation: see PROPOSED_R10_KEESHOND_SENIOR.
+     */
+    public const CONFIRMED_R10_KEESHOND = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-94)';
+
+    /**
+     * M5-R10-94 Keeshond senior boundary / senior arrival (90 months): Claude's suggestion from the closest rule row
+     * (0.75 × 10 y, the PDSA band "Over 10 years", S709), verified=false until David decides
+     * (data.json proposed_game_parameters.keeshond.senior_boundary_months).
+     */
+    public const PROPOSED_R10_KEESHOND_SENIOR = 'predlog Claude 2026-11-05 (najbližja vrstica pravila runbooka, M5-R10-94) — čaka Davida';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1455,6 +1473,9 @@ class BreedStageParamsSeeder extends Seeder
         'old_english_sheepdog' => [
             'groomer_visit' => [1, 'six_weeks', 'S705', 'you will need to take your dog to a professional groomer for a regular trim every six weeks or so.', 'proposed_game_parameters.old_english_sheepdog.professional_grooming', '"every six weeks or so" → 6 weeks (eyes checked daily — no task kind; no bath / teeth / ear / nail frequency → no task)'],
         ],
+        'keeshond' => [
+            'bath' => [1, 'month', 'S710', 'It needs bathing every month or so.', 'keeshond.suitability.vca_bath', '"every month or so" → every 4 weeks (no tooth / ear / nail / groomer frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1567,6 +1588,7 @@ class BreedStageParamsSeeder extends Seeder
         'pekingese' => [7, 'S693', 'Pekingese have really thick, long fur that will need a daily brush to stop it from getting tangled and matted.', 'high', false],
         'chow_chow' => [7, 'S700', 'Chow Chows need brushing every day to keep their fur in good condition.', 'high', false],
         'old_english_sheepdog' => [7, 'S705', 'They have long fur which will need a daily brush to make sure it doesn\'t get matted and tangled.', 'high', false],
+        'keeshond' => [7, 'S709', 'Grooming is a daily requirement to keep their thick double coat in good condition.', 'high', false],
     ];
 
     /**
@@ -1725,7 +1747,7 @@ class BreedStageParamsSeeder extends Seeder
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2538,6 +2560,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::Pekingese => self::pekingeseProfile(),
             BreedType::ChowChow => self::chowChowProfile(),
             BreedType::OldEnglishSheepdog => self::oldEnglishSheepdogProfile(),
+            BreedType::Keeshond => self::keeshondProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9097,6 +9120,90 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'old_english_sheepdog.lifespan.pdsa',
                 'quote' => 'Over 10 years',
                 'notes' => 'PDSA key fact lower bound (S705); PetMD 10–12 y (S706) and Dogs Trust "typically 10+ years" (S707) are consistent. No McMillan 2024 value reachable (12.1 y only via Wikipedia S708, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Keeshond (M5-R10-94). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the runbook's
+     * standing rules (CONFIRMED_R10_KEESHOND); weight, growth, Coren rank and lifespan are sourced. The senior boundary is
+     * Claude's suggestion (PROPOSED_R10_KEESHOND_SENIOR, verified=false).
+     *
+     * @return array<string, mixed>
+     */
+    private static function keeshondProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_KEESHOND;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S709', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.keeshond.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog is full-grown at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, [
+                    'unit' => 'months', 'source_id' => 'S11,S709', 'confidence' => 'low', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.keeshond.senior_boundary_months', 'decision' => self::PROPOSED_R10_KEESHOND_SENIOR,
+                    'notes' => 'UNCONFIRMED suggestion (Claude, waiting for David) — derived game boundary: last 25 % of lifespan (S11) × 10 y, the lower bound of the PDSA band "Over 10 years" (S709) = 7.5 y = 90 months. McMillan 2024\'s breed table and the RKC page could not be fetched; no VetCompass median. Alternatives: 108 (VCA 12–14 years, S710), 84 (Dogs Trust > 7 y, S14).',
+                ]],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.keeshond.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'arrival_meta_overrides' => [
+                'senior' => [
+                    'unit' => 'months', 'verified' => false,
+                    'ref' => 'proposed_game_parameters.keeshond.senior_boundary_months', 'decision' => self::PROPOSED_R10_KEESHOND_SENIOR,
+                    'notes' => 'UNCONFIRMED (waiting for David): first month of the senior stage, which is Claude\'s suggestion of 90 months (0.75 × 10 y, S709).',
+                ],
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S709', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.keeshond.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => '1 hour',
+                'notes' => 'PDSA key fact "Minimum exercise (per day): 1 hour" and "They need up to an hour of exercise per day" (S709) → 60 min = 6,000 steps (runbook rule: one number N → N; the RKC page was not reachable).',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.keeshond.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[16, 20], [
+                'unit' => 'kg', 'source_id' => 'S709', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'keeshond.adult_weight.pdsa',
+                'quote' => '16-20 kg',
+                'notes' => 'PDSA key fact "Average weight" (S709), one range for both sexes; the FCI standard gives no number. VCA 35–45 lb (S710).',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'keeshond.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (PDSA size "Medium", 16-20 kg, S709 → the Medium class of S10).',
+            ]],
+            'coren_rank' => [16, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'keeshond.trainability.coren_rank',
+                'notes' => 'Coren rank 16 "Keeshond" (with the Collie), tier Excellent Working Dogs (ranks 11–26) — Wikipedia table (S35, checked 2026-11-05).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.keeshond.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 16 = Excellent (S35) → 1.5 (FCI S246: "very teachable and easy to train"). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S709', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'keeshond.lifespan.pdsa',
+                'quote' => 'Over 10 years',
+                'notes' => 'PDSA key fact lower bound (S709); VCA 12–14 years (S710) is consistent. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

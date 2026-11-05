@@ -477,6 +477,7 @@ const SPECIES = [
       { id: 'pekingese', synonyms: { en: ['Peke', 'Pekinese', 'Lion Dog'], sl: ['pekinez', 'pekinški pes', 'peke'] } },
       { id: 'chow_chow', synonyms: { en: ['Chow', 'Chow-Chow'], sl: ['chow chow', 'čau-čau', 'čau'] } },
       { id: 'old_english_sheepdog', synonyms: { en: ['Bobtail', 'Bob-tail', 'OES', "Shepherd's Dog"], sl: ['bobtail', 'bobtejl', 'staroangleški ovčar bobtail'] } },
+      { id: 'keeshond', synonyms: { en: ['Wolfsspitz', 'Wolfspitz', 'German Wolfspitz', 'Keeshonden'], sl: ['volčji špic', 'nemški volčji špic', 'wolfspitz'] } },
     ],
   },
   {
@@ -2475,6 +2476,26 @@ const DOG_FACTS = {
       ['cataracts', 'health.eyes'],
     ],
   },
+  // M5-R10-94. The RKC page was not reachable → FCI 97 height 43–55 cm (S246), PDSA (S709) average weight 16–20 kg, lifespan
+  // 'Over 10 years' + VCA 12–14 y (S710), exercise '1 hour' (PDSA 'up to an hour' — the game's 60 min), coat 'Medium', grooming
+  // 'Grooming is a daily requirement' (Every day). Coren rank 16. FCI origin Germany (DE). Not exported: shedding (VCA 'above
+  // average' is no register category word — the sheds chip shows it), lifespan.mcmillan_2024 (null) / senior_from (derived),
+  // behaviour.heat (VCA, kept in research). No new health key.
+  keeshond: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.pdsa', 'more_than'], ['lifespan.vca', 'span']],
+    exercise: [['exercise.adult', 'up_to']],
+    coat: ['suitability.pdsa_coat_length'],
+    grooming: [['suitability.pdsa_grooming', 'grooming_frequency']],
+    shedding: [],
+    food_motivation: null,
+    health: [
+      ['hip_dysplasia', 'health.hips'],
+      ['epilepsy', 'health.epilepsy'],
+      ['kneecap_luxation', 'health.patella'],
+    ],
+  },
 
 
 };
@@ -2532,6 +2553,7 @@ export const DOG_CARE_TASKS = {
   irish_setter: [['ear_cleaning', 1, 7, 'proposed_game_parameters.irish_setter.ear_care'], ['nail_trim', 1, 28, 'proposed_game_parameters.irish_setter.nail_trimming']],
   anatolian_shepherd_dog: [['tooth_brushing', 7, 7, 'proposed_game_parameters.anatolian_shepherd_dog.tooth_brushing']],
   old_english_sheepdog: [['groomer_visit', 1, 42, 'proposed_game_parameters.old_english_sheepdog.professional_grooming']],
+  keeshond: [['bath', 1, 28, 'keeshond.suitability.vca_bath']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3250,6 +3272,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.old_english_sheepdog.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.old_english_sheepdog.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.old_english_sheepdog.exercise_minutes_senior',
+  },
+  keeshond: {
+    adult_minutes: ['proposed_game_parameters.keeshond.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.keeshond.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.keeshond.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.keeshond.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.keeshond.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.keeshond.exercise_minutes_senior',
   },
 
 

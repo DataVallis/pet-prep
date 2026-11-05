@@ -760,6 +760,14 @@
 | muzzle (dog trait `muzzle`). Red first with the highest weight (the portrait default; AKC S699 lists red first);
 | weights unsourced → `verified => false`.
 |
+| Keeshond (M5-R10-94, docs/research/dog-data keeshond.appearance): the Wolfsspitz variety of the German Spitz —
+| "Spitz breeds are captivating on account of their beautiful coats, made to stand off by plentiful undercoat."
+| (FCI-Standard N° 97, S246); colour "Colour: Wolfsspitz/Keeshond: Grey-shaded." — "a silver-grey with black
+| hair-tips. Muzzle and ears are dark in colour, round the eyes well defined <spectacles> …" (S246); coat "Long, straight
+| and firm standing off top coat and short, thick, cotton-woollike undercoat." + "a thick mane"; muzzle "not overlong …
+| (approximately 2:3)"; small pointed upright ears; tail rolled over the back. One standard colour (weight 100);
+| `verified => false` like every new breed.
+|
 | Old English Sheepdog (M5-R10-93, docs/research/dog-data old_english_sheepdog.appearance):
 | "Strong, square-looking dog of great symmetry and overall soundness." (FCI-Standard N° 16, S703); colour "Any shade
 | of grey, grizzle or blue." / "Head, neck, forequarters and under belly to be white with or without markings." /
@@ -4128,6 +4136,40 @@ return [
             'ear_carriage' => ['small ears carried flat to the side of the head, hidden in the coat'],
             'eye_color' => ['dark eyes partly hidden by the fringe'],
             'tail' => ['natural, well-feathered tail'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-94 (docs/research/dog-data/data.json keeshond.appearance; runbook rules 2026-10-10: standard colours only —
+    // FCI S246 "Colour: Wolfsspitz/Keeshond: Grey-shaded." is the only colour; never white markings).
+    'keeshond' => [
+        'display_name' => 'Keeshond',
+        // One standard colour; the draft is unverified like every new breed (keeshond.appearance.colour_weights).
+        'verified' => false,
+        'source' => 'FCI-Standard N° 97 (S246) and PDSA (S709) — for the traits listed in `sources`.',
+        'sources' => [
+            'size' => 'S246 "Height at the withers: Wolfsspitz/Keeshond: 49 ± 6 cm."; PDSA S709 "Medium", "43-46 cm", "16-20 kg"',
+            'build' => 'S246 "Spitz breeds are captivating on account of their beautiful coats, made to stand off by plentiful undercoat."',
+            'coat_length' => 'S246 "Long, straight and firm standing off top coat and short, thick, cotton-woollike undercoat." / "Neck and shoulders are covered by a thick mane."',
+            'coat_color' => 'S246 "Colour: Wolfsspitz/Keeshond: Grey-shaded." / "Grey-shaded is a silver-grey with black hair-tips." (never white markings)',
+            'head' => 'S246 "appears broadest at the back and tapers wedge-shaped to the tip of the nose"; "The nose is round, small and pure black."',
+            'muzzle' => 'S246 "The muzzle is not overlong and stands in pleasing proportion to the skull (approximately 2:3)." — not a flat face',
+            'ear_carriage' => 'S246 "triangular pointed; they are always carried upright, stiff at the tips."',
+            'eye_color' => 'S246 "The eyes are of medium size, almond-shaped, slightly slanting and dark. The eyelids are black."',
+            'tail' => 'S246 "It reaches upwards and rolls forward over the back" / "covered with very bushy hair."',
+        ],
+        'traits' => [
+            'size' => ['medium'],
+            'build' => ['compact, square medium-sized Spitz with a plush stand-off coat'],
+            'coat_length' => ['long, straight, stand-off double coat with a thick mane around the neck and shoulders'],
+            // The only standard colour → the register portrait.
+            'coat_color' => [
+                ['value' => 'grey-shaded: silver-grey with black hair tips, dark muzzle and ears, pencilled spectacles around the eyes, lighter mane and shoulder ring, silver-grey legs, black tail tip', 'weight' => 100],
+            ],
+            'head' => ['wedge-shaped foxy head with a small, round, black nose'],
+            'muzzle' => ['moderate muzzle, not overlong (not a flat face)'],
+            'ear_carriage' => ['small, pointed, triangular ears carried upright'],
+            'eye_color' => ['dark almond-shaped eyes with black eyelids'],
+            'tail' => ['very bushy tail rolled forward over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],

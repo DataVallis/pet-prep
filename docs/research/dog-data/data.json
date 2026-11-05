@@ -48716,6 +48716,413 @@
       }
     }
   },
+  "keeshond": {
+    "_note": "Added 2026-11-05 (M5-R10-94, unattended run — appended after the Old English Sheepdog: AKC 2024 No. 90 'Keeshond', S174 full-list table '90 Keeshond'). Quotes as returned by the web-fetch tool on 2026-11-05; paraphrase only in notes, marked '(paraphrase)'. The FCI breed is the German Spitz (97) — the Keeshond is its Wolfsspitz variety ('In nonGerman speaking countries Wolfsspitz dogs are known as Keeshonds.', S246). The RKC Breeds A–Z page (thekennelclub.org.uk → royalkennelclub.com redirect refused by the fetch tool) and the McMillan 2024 breed table (Supplementary Table 3 of S54, not reached) were not reachable → PDSA (S709) for exercise, weight, lifespan band and suitability; FCI-Standard N° 97 (S246) for identity, height and appearance; VCA (S710) for grooming / bathing / children / other pets.",
+    "identity": {
+      "value": "FCI No. 97, Group 5 Section 4 (European Spitz), Germany",
+      "unit": "—",
+      "source_id": "S246",
+      "quote": "FCI-CLASSIFICATION: Group 5 Spitz and primitive types. Section 4 European Spitz. Without working trial.",
+      "confidence": "high",
+      "notes": "FCI-Standard N° 97 German Spitz (S246, EN PDF re-read 2026-11-05: '12.11.2019/ EN', 'DATE OF PUBLICATION OF THE OFFICIAL VALID STANDARD: 04/09/2019.'); 'ORIGIN: Germany'; 'In nonGerman speaking countries Wolfsspitz dogs are known as Keeshonds.' FCI nomenclature (S245): 'DEUTSCHER SPITZ (97)', varieties 'a) Keeshond … e) Pomeranian'. AKC name: Keeshond (S174)."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S709",
+      "quote": "Medium",
+      "confidence": "high",
+      "notes": "PDSA key fact 'Size' (S709, value as returned). 16-20 kg ≈ 35–44 lb (PDSA); VCA 35–45 lb (S710) → S10 class 'Medium (24–59 pounds)' for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            43,
+            55
+          ],
+          "female": [
+            43,
+            55
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S246",
+        "quote": "Height at the withers: Wolfsspitz/Keeshond: 49 ± 6 cm.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 97 (S246), one value for both sexes → 43–55 cm (stored per sex). PDSA (S709): 'Average height | 43-46 cm'; VCA (S710): '17 - 18 inches'."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            16,
+            20
+          ],
+          "female": [
+            16,
+            20
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S709",
+        "quote": "16-20 kg",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average weight' (S709), one range for both sexes (stored per sex). The FCI standard (S246) gives no number: 'The Wolfsspitz dog/Keeshond should have a weight corresponding to its size.' VCA (S710): '35 - 45 pounds' (≈ 16–20 kg, consistent)."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: PDSA size 'Medium', 16-20 kg (S709). No breed source gives the age of full growth."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Keeshond growth curve found."
+      }
+    },
+    "lifespan": {
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S709",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S709, value as returned). The basis of the senior boundary (Claude's proposal — the runbook's lifespan list names McMillan 2024, a VetCompass median and the RKC lower bound; none was reachable; the PDSA band has the same form as the RKC band; Basenji / Pekingese / Old English Sheepdog precedent). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "vca": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S710",
+        "quote": "12 - 14 years",
+        "confidence": "medium",
+        "notes": "VCA key fact 'Lifespan' (S710, tier B, US). Would give 0.75 × 12 × 12 = 108 months (alternative)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (S54, 'Longevity of companion dog breeds: those at risk from early death'): 'Keeshond' appears as a Fig. 5 phylogeny label (median shown only by colour, per the fetch tool); the breed estimates are in Supplementary Table 3 (not reached); the Dogs Trust table (S123) was not fetched."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Derived (Claude's proposal, waiting for David): AAHA senior = last 25 % of lifespan (S11) × 10 y (PDSA lower bound 'Over 10 years', S709) → 0.75 × 10 = 7.5 y = 90 months. VCA lower bound 12 y (S710) would give 108; Dogs Trust rule of thumb > 7 y = 84 months (S14).",
+        "derived_from": [
+          "S11",
+          "S709"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S709",
+        "quote": "They need up to an hour of exercise per day to keep them mentally and physically fit.",
+        "confidence": "high",
+        "notes": "PDSA (S709) exercise sentence; key fact 'Minimum exercise (per day) | 1 hour' (as returned). Runbook rule 'up to N' / one number → 60 (the RKC page was not reachable, PDSA next). VCA (S710): 'Requires a moderate walk or jog every day.' (no number)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "attentive, lively, very attached to its owner; neither timid nor aggressive",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "The German Wolfsspitz/Keeshond is always attentive, lively and extraordinarily attached to its owner.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 97 (S246); 'It is very teachable and easy to train. Its natural distrust of strangers and lack of hunting instinct make it the ideal companion and family dog and watch dog for home and farm. It is neither timid nor aggressive.' PDSA (S709): 'Keeshonds are energetic and playful and are always keen to join in on games and adventure!'"
+      },
+      "family": {
+        "value": "affectionate, loving, excellent family pets",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "Affectionate and loving, Keeshonds make excellent family pets.",
+        "confidence": "high",
+        "notes": "PDSA (S709). Basis of family_pet."
+      },
+      "children": {
+        "value": "playful and careful with children",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "Playful and careful with children.",
+        "confidence": "medium",
+        "notes": "VCA (S710); also 'Sociable with children.' and the trait score 'Good With Children' 5 (of 5). An explicit statement → children (runbook). No statement about small children specifically → no small_children chip."
+      },
+      "other_pets": {
+        "value": "gets along with other pets in the household",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "They'll also get along happily with other pets in the household.",
+        "confidence": "high",
+        "notes": "PDSA (S709); VCA (S710): 'Good with other dogs and pets.' FCI (S246): 'lack of hunting instinct'. Basis of other_pets; never chases_small_pets."
+      },
+      "time_alone": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific statement about being left alone found (PDSA, VCA, FCI)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found. VCA (S710): 'Keeshonden have a tendency to put on weight. The thick coat can obscure weight problems, so be sure to use your hands to feel the ribs to identify obesity.' — a weight tendency, not food motivation → no food_motivated_weight chip."
+      },
+      "heat": {
+        "value": "thick coat — may overheat",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "Its thick coat provides good protection against cold weather but may make it prone to overheating.",
+        "confidence": "medium",
+        "notes": "VCA (S710); trait score 'Warm Weather' 1 (of 5). Not a flat-faced breed → no DOG_NO_WALK_IN_HEAT row (runbook: flat-faced breeds only); kept as a fact in the breed text."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch / health-testing section not fetched (page refused).",
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "medium",
+        "notes": "PDSA (S709) list item 'Hip dysplasia' with this description. No Breed Watch quote → no hips_hind_legs chip (Rottweiler precedent)."
+      },
+      "epilepsy": {
+        "value": "epilepsy",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "a brain disorder which can lead to seizures.",
+        "confidence": "medium",
+        "notes": "PDSA (S709) list item 'Epilepsy'."
+      },
+      "patella": {
+        "value": "luxating patellas",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "the kneecaps slipping temporarily out of place.",
+        "confidence": "medium",
+        "notes": "PDSA (S709) list item 'Luxating patellas'. PDSA: 'For some conditions, there are screening programmes available through the British Veterinary Association (BVA) and the Kennel Club.'"
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 16,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Keeshond",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-05): 'Keeshond' listed under rank 16 together with '| 16 | Collie |' (as returned); tier 'Excellent Working Dogs' (ranks 11–26). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 11–26 (as returned: 'Excellent Working Dogs')."
+      },
+      "training_notes": {
+        "value": "very teachable and easy to train; reward-based training",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "It is very teachable and easy to train.",
+        "confidence": "high",
+        "notes": "FCI (S246). PDSA (S709): 'They respond well to training if given time and patience.' VCA (S710): 'Learns quickly.', 'Does best with reward-based training involving food or games.'"
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.keeshond.learning_multiplier (1.5, runbook rule: Excellent tier, rank 16).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "Spitz with a beautiful stand-off coat, plentiful undercoat, foxy head, small pointed ears",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "Spitz breeds are captivating on account of their beautiful coats, made to stand off by plentiful undercoat.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 97 (S246); 'The foxy head with alert eyes and the small pointed, closely set ears give the Spitz its unique characteristic, cheeky appearance.'"
+      },
+      "colours": {
+        "value": [
+          "grey-shaded (silver-grey with black hair tips)"
+        ],
+        "unit": "list",
+        "source_id": "S246",
+        "quote": "Colour: Wolfsspitz/Keeshond: Grey-shaded.",
+        "confidence": "high",
+        "notes": "FCI (S246): 'Grey-shaded is a silver-grey with black hair-tips. Muzzle and ears are dark in colour, round the eyes well defined <spectacles> shown as a delicately pencilled black line slanting from outer corner of eye to lower corner of ear, coupled with distinct markings and shading forming short but expressive eyebrows; mane and ring on shoulder lighter; fore- and hind legs silver-grey without any black markings under the elbows or stifles, except slight pencilling on the toes; black tip of tail; underside of tail and trousers pale silver-grey.' Disqualifying: 'Definite white markings or spots.' → one standard colour only."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Not needed — one standard colour (weight 100 in breed_appearance.php; verified=false like every new breed)."
+      },
+      "coat": {
+        "value": "double coat: long, straight, firm stand-off top coat; short, thick, cotton-wool-like undercoat; thick mane",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "Hair: German Wolfsspitz/Keeshond has a double coat: Long, straight and firm standing off top coat and short, thick, cotton-woollike undercoat.",
+        "confidence": "high",
+        "notes": "FCI (S246); 'Neck and shoulders are covered by a thick mane.'"
+      },
+      "head": {
+        "value": "medium-sized wedge-shaped head; moderate stop; small round black nose; muzzle not overlong (about 2:3 to the skull)",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "Muzzle: The muzzle is not overlong and stands in pleasing proportion to the skull (approximately 2:3).",
+        "confidence": "high",
+        "notes": "FCI (S246): 'The Spitz's medium-sized head, seen from above, appears broadest at the back and tapers wedge-shaped to the tip of the nose.'; 'Stop: Moderate to marked, never abrupt.'; 'Nose: The nose is round, small and pure black.' Not a flat-faced breed."
+      },
+      "eyes": {
+        "value": "medium, almond-shaped, slightly slanting, dark; black eyelids",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "The eyes are of medium size, almond-shaped, slightly slanting and dark. The eyelids are black.",
+        "confidence": "high",
+        "notes": "FCI (S246)."
+      },
+      "ears": {
+        "value": "small, high-set, triangular, pointed, always upright",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "The small ears are set high and relatively close to each other, triangular pointed; they are always carried upright, stiff at the tips.",
+        "confidence": "high",
+        "notes": "FCI (S246). Disqualifying: 'Ears not fully erected.'"
+      },
+      "tail": {
+        "value": "set high, rolls forward over the back, very bushy",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "It reaches upwards and rolls forward over the back, straight from the root.",
+        "confidence": "high",
+        "notes": "FCI (S246): 'The tail is set on high and of medium length.' 'It lies firmly over the back and is covered with very bushy hair. A double curl at tip of tail is tolerated.'"
+      }
+    },
+    "suitability": {
+      "_note": "Source = PDSA key facts and text (S709), VCA (S710). The RKC Breeds A–Z page was refused by the fetch tool → no rkc_* key facts (no apartment / large_home chip).",
+      "pdsa_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Size' (S709)."
+      },
+      "pdsa_exercise": {
+        "value": "1 hour",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day)' (S709)."
+      },
+      "pdsa_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Coat length' (S709)."
+      },
+      "pdsa_grooming": {
+        "value": "Every day",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "Grooming is a daily requirement to keep their thick double coat in good condition.",
+        "confidence": "high",
+        "notes": "PDSA (S709) — daily brushing → 7 per week (runbook dog-grooming rule 'every day' → 7; PDSA preferred like the exercise rule, the RKC page not reachable). VCA (S710): 'The coat needs brushing once or twice weekly-more when shedding heavily.' — alternative (would give 2). Basis of frequent_grooming.",
+        "alternatives": {
+          "vca_per_week": "The coat needs brushing once or twice weekly-more when shedding heavily."
+        }
+      },
+      "pdsa_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S709",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Average lifespan' (S709)."
+      },
+      "vca_grooming": {
+        "value": "brushing once or twice weekly, more when shedding; bath every month or so",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "The coat needs brushing once or twice weekly-more when shedding heavily.",
+        "confidence": "high",
+        "notes": "VCA (S710). Also 'It needs bathing every month or so.' (→ bath reminder every 4 weeks, M5-R20). No tooth / ear / nail frequency → no such task (runbook »Breed care tasks«)."
+      },
+      "vca_bath": {
+        "value": "bath every month or so",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "It needs bathing every month or so.",
+        "confidence": "high",
+        "notes": "VCA (S710). Basis of the parent's bath reminder (DOG_CARE_TASKS bath [1, month])."
+      },
+      "vca_shedding": {
+        "value": "above average",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "Shedding is above average.",
+        "confidence": "high",
+        "notes": "VCA (S710); trait score 'Shedding' 4 (of 5). PDSA gives no shedding statement → no conflict → sheds."
+      },
+      "vca_children": {
+        "value": "playful and careful with children",
+        "unit": "—",
+        "source_id": "S710",
+        "quote": "Playful and careful with children.",
+        "confidence": "medium",
+        "notes": "VCA (S710). Basis of children."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -72846,6 +73253,247 @@
         "confidence": "high",
         "notes": "FCI (S703). Not a welfare breed in the standards; natural tail (the standard allows both). Colour weights are ours (unsourced).",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey and white is the portrait default (FCI lists grey first, S703); standard colours only (never brown or merle); natural tail = Claude's proposal"
+      }
+    },
+    "keeshond": {
+      "_note": "Unattended run M5-R10-94 (2026-11-05): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from PDSA (S709 'up to an hour' → 60; RKC page not reachable). The senior boundary is Claude's proposal (verified=false) — no McMillan 2024 / VetCompass / RKC value reachable; PDSA band 'Over 10 years' (Basenji / Pekingese / Old English Sheepdog precedent).",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S709",
+        "quote": "1 hour",
+        "confidence": "high",
+        "notes": "PDSA key fact 'Minimum exercise (per day) | 1 hour' and 'They need up to an hour of exercise per day' (S709) → rule 'up to N' → 60 (RKC page not reachable).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S709 'up to an hour')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S709",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + the PDSA lower bound 'Over 10 years', S709 — the McMillan 2024 table was not reachable, no VetCompass median, the RKC page was not reachable). The senior value is Claude's suggestion (verified=false).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S709"
+        ],
+        "alternatives": {
+          "senior_vca_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × the PDSA lower bound 'Over 10 years', S709). The runbook rule (McMillan 2024, else a VetCompass median, else the RKC lower bound) yields no value in this run: McMillan's Supplementary Table 3 and the RKC page were not reachable. VCA 12–14 y (S710) would give 108. Seeded verified=false.",
+        "derived_from": [
+          "S11",
+          "S709"
+        ],
+        "alternatives": {
+          "senior_vca_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "predlog Claude 2026-11-05 (najbližja vrstica pravila runbooka, M5-R10-94) — čaka Davida; ni potrjeno"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage (the senior arrival follows Claude's senior proposal, verified=false).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36; senior 90 = the proposed boundary)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 16 'Keeshond' (S35, checked 2026-11-05) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 16, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 7,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S709",
+        "quote": "Grooming is a daily requirement to keep their thick double coat in good condition.",
+        "confidence": "high",
+        "notes": "keeshond.suitability.pdsa_grooming. PDSA 'a daily requirement' → runbook rule 'every day' → 7 (M5-R13). Matted coat at ceil(7 / 2) = 4 missed.",
+        "alternatives": {
+          "vca_per_week": "The coat needs brushing once or twice weekly-more when shedding heavily."
+        },
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »Grooming is a daily requirement«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "bath": {
+        "value": "bath every month or so",
+        "unit": "reminders (sourced need)",
+        "source_id": "S710",
+        "quote": "It needs bathing every month or so.",
+        "confidence": "high",
+        "notes": "VCA (S710), keeshond.suitability.vca_bath. Built: the parent's bath reminder every 4 program weeks (DOG_CARE_TASKS bath [1, month], M5-R20; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every month or so« → 1× na mesec = 28 dni"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-94); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.behaviour.family"
+            ],
+            "quote": "S709 'Affectionate and loving, Keeshonds make excellent family pets.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S710"
+            ],
+            "refs": [
+              "keeshond.behaviour.children",
+              "keeshond.suitability.vca_children"
+            ],
+            "quote": "S710 'Playful and careful with children.'"
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.behaviour.other_pets"
+            ],
+            "quote": "S709 'They'll also get along happily with other pets in the household.'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.suitability.pdsa_grooming"
+            ],
+            "quote": "S709 'Grooming is a daily requirement to keep their thick double coat in good condition.'"
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S710"
+            ],
+            "refs": [
+              "keeshond.suitability.vca_shedding"
+            ],
+            "quote": "S710 'Shedding is above average.'"
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC page not reachable (runbook: only from RKC Flat/ Apartment).",
+          "large_home": "RKC page not reachable.",
+          "small_children": "VCA rates 'Good With Children' but no explicit small-children statement (runbook: small_children only with an explicit rating for small children and no supervision caveat).",
+          "active_family": "60 minutes a day — not a long-exercise breed.",
+          "long_daily_exercise": "60 minutes a day.",
+          "needs_company": "No source about being left alone.",
+          "often_alone": "No source.",
+          "chases_small_pets": "No prey-drive quote; FCI 'lack of hunting instinct' (S246).",
+          "food_motivated_weight": "VCA names a weight tendency, not food motivation.",
+          "low_shedding": "VCA 'Shedding is above average.' — the opposite.",
+          "hips_hind_legs": "RKC Breed Watch not reachable — PDSA lists hip dysplasia, but the chip follows Breed Watch (Rottweiler precedent).",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children, other_pets; consider frequent_grooming, sheds"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (no veterinary advice against advertising this breed type)",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a flat-faced breed (FCI muzzle 'not overlong … approximately 2:3', S246) and not named brachycephalic by an A/B source → the BVA advertising advice (S92) does not apply. Marketing never promises the breed's health; the app shows its chips.",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa)"
+      },
+      "ai_appearance": {
+        "value": "adult Keeshond (Wolfsspitz), medium-sized Spitz: grey-shaded coat (silver-grey with black hair tips), dark muzzle and ears, pencilled 'spectacles' around the eyes, lighter mane and shoulder ring, silver-grey legs, pale silver-grey trousers, black tail tip; long, straight stand-off top coat with a thick mane; wedge-shaped foxy head, small black nose; dark almond eyes; small pointed upright ears; bushy tail rolled over the back",
+        "unit": "—",
+        "source_id": "S246",
+        "quote": "Colour: Wolfsspitz/Keeshond: Grey-shaded.",
+        "confidence": "high",
+        "notes": "FCI (S246). Not a welfare breed. One standard colour.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey-shaded is the only standard colour and the portrait default (FCI S246); never white markings, never another colour"
       }
     }
   }
