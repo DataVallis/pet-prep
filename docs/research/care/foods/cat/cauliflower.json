@@ -12,7 +12,8 @@
     "nl": "Bloemkool",
     "pl": "Kalafior",
     "cs": "Květák",
-    "hr": "Cvjetača"
+    "hr": "Cvjetača",
+    "sv": "Blomkål"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten bloemkool eten?",
     "pl": "Czy koty mogą jeść kalafior?",
     "cs": "Mohou kočky jíst květák?",
-    "hr": "Smiju li mačke jesti cvjetaču?"
+    "hr": "Smiju li mačke jesti cvjetaču?",
+    "sv": "Får katter äta blomkål?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -38,7 +40,8 @@
     "nl": "bloemkool",
     "pl": "kalafior",
     "cs": "kvetak",
-    "hr": "cvjetaca"
+    "hr": "cvjetaca",
+    "sv": "blomkal"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een klein stukje gare, ongekruide bloemkool is af en toe prima als traktatie. De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het eten dat met mate geschikt is voor katten en honden.",
     "pl": "Tak, od czasu do czasu mały kawałek ugotowanego kalafiora bez dodatków jest w porządku. RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów, które w umiarkowanych ilościach nadają się dla kotów i psów.",
     "cs": "Ano, malý kousek tepelně upraveného květáku bez dodatků je jako občasný pamlsek v pořádku. RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny vhodné pro kočky i psy s mírou.",
-    "hr": "Da, mali komadić termički obrađene cvjetače bez dodataka u redu je kao povremena poslastica. RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama."
+    "hr": "Da, mali komadić termički obrađene cvjetače bez dodataka u redu je kao povremena poslastica. RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama.",
+    "sv": "Ja, en liten bit kokt blomkål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt blomkål, skuren i små bitar, bland maten som passar katter och hundar med måtta."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -65,7 +69,8 @@
     "nl": "De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het voor huisdieren veilige eten dat met mate geschikt is voor katten en honden. Cats Protection adviseert groente zonder boter, zout of kruiden. Katten hebben geen groente nodig, geef traktaties spaarzaam, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Cats Protection radzi podawać warzywa bez masła, soli i przypraw. Koty nie potrzebują warzyw, smakołyków powinno być mało, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny bezpečné pro domácí zvířata, vhodné pro kočky i psy s mírou. Cats Protection doporučuje zeleninu bez másla, soli a koření. Kočky zeleninu nepotřebují, pamlsků má být málo a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, ubraja među hranu sigurnu za ljubimce, prikladnu za mačke i pse u umjerenim količinama. Cats Protection savjetuje povrće bez maslaca, soli i začina. Mačkama povrće nije potrebno, poslastica ne bi smjelo biti mnogo, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe."
+    "hr": "RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, ubraja među hranu sigurnu za ljubimce, prikladnu za mačke i pse u umjerenim količinama. Cats Protection savjetuje povrće bez maslaca, soli i začina. Mačkama povrće nije potrebno, poslastica ne bi smjelo biti mnogo, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
+    "sv": "RSPCA nämner kokt blomkål, skuren i små bitar, bland husdjurssäker mat som passar katter och hundar med måtta. Cats Protection rekommenderar grönsaker utan smör, salt eller kryddor. Katter behöver inte grönsaker, godbitar ska ges sparsamt och allt växtmaterial kan ge kräkningar eller orolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
-    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -92,7 +98,8 @@
     "nl": "Gaar en in kleine stukjes gesneden, zonder boter, zout of kruiden.",
     "pl": "Ugotowany i pokrojony na małe kawałki, bez masła, soli i przypraw.",
     "cs": "Květák tepelně upravený a nakrájený na malé kousky, bez másla, soli a koření.",
-    "hr": "Termički obrađena i narezana na male komadiće, bez maslaca, soli i začina."
+    "hr": "Termički obrađena i narezana na male komadiće, bez maslaca, soli i začina.",
+    "sv": "Kokt och skuren i små bitar, utan smör, salt eller kryddor."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -105,7 +112,8 @@
     "nl": "Een klein stukje gekookte bloemkool kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Małym kawałkiem ugotowanego kalafiora można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Kousek uvařeného květáku může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
-    "hr": "Komadić kuhane cvjetače mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak."
+    "hr": "Komadić kuhane cvjetače mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
+    "sv": "En liten bit kokt blomkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
-        "hr": "Treba li mačkama povrće?"
+        "hr": "Treba li mačkama povrće?",
+        "sv": "Behöver katter grönsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
-        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
       }
     }
   ],
@@ -233,6 +243,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f079d84b4821361daa18ec3c7ec60895a873b29a78d54073fad921fb3981f005"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "501c7312608b0ce960ab551ca528501c7ad0bff6be42cdeedc3fb0f094b53e15"
     }
   }
 }
