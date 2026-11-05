@@ -11,7 +11,8 @@
     "pt": "Couve-flor",
     "nl": "Bloemkool",
     "pl": "Kalafior",
-    "cs": "Květák"
+    "cs": "Květák",
+    "hr": "Cvjetača"
   },
   "question": {
     "en": "Can dogs eat cauliflower?",
@@ -23,7 +24,8 @@
     "pt": "Os cães podem comer couve-flor?",
     "nl": "Mogen honden bloemkool eten?",
     "pl": "Czy psy mogą jeść kalafior?",
-    "cs": "Mohou psi jíst květák?"
+    "cs": "Mohou psi jíst květák?",
+    "hr": "Smiju li psi jesti cvjetaču?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -35,7 +37,8 @@
     "pt": "couve-flor",
     "nl": "bloemkool",
     "pl": "kalafior",
-    "cs": "kvetak"
+    "cs": "kvetak",
+    "hr": "cvjetaca"
   },
   "level": "small_amounts",
   "answer": {
@@ -48,7 +51,8 @@
     "pt": "Sim, como guloseima ocasional. A couve-flor é segura para os cães quando bem preparada: cozinhada sem tempero e cortada em pedaços de uma dentada. Porções grandes podem causar gases, inchaço e diarreia.",
     "nl": "Ja, af en toe als snoepje. Bloemkool is veilig voor honden als je het goed klaarmaakt: gaar, zonder kruiden en in hapklare stukjes gesneden. Grote porties kunnen winderigheid, een opgeblazen buik en diarree geven.",
     "pl": "Tak, jako okazjonalny smakołyk. Kalafior jest dla psów bezpieczny, jeśli podasz go odpowiednio: ugotowany, bez dodatków i przypraw, pokrojony na kawałki wielkości jednego kęsa. Duże porcje mogą wywołać gazy, wzdęcia i biegunkę.",
-    "cs": "Ano, jako občasný pamlsek. Květák je pro psy bezpečný, pokud se správně připraví: tepelně upravený bez koření a nakrájený na kousky na jedno sousto. Velké porce mohou způsobit plynatost, nadýmání a průjem."
+    "cs": "Ano, jako občasný pamlsek. Květák je pro psy bezpečný, pokud se správně připraví: tepelně upravený bez koření a nakrájený na kousky na jedno sousto. Velké porce mohou způsobit plynatost, nadýmání a průjem.",
+    "hr": "Da, kao povremena poslastica. Cvjetača je sigurna za pse ako je pravilno pripremljena: termički obrađena bez dodataka i začina te narezana na komadiće veličine zalogaja. Velike količine mogu izazvati plinove, nadutost i proljev."
   },
   "why": {
     "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
@@ -60,7 +64,8 @@
     "pt": "A couve-flor tem fibra, vitamina C e vitamina K, e é uma boa guloseima para ajudar os cães a perder peso. A mesma fibra pode causar gases, inchaço e diarreia se for dada em excesso. A couve-flor crua é segura em pequenas quantidades, mas pode ser difícil de digerir, e pedaços grandes e crus podem provocar engasgamento; cozida a vapor ou em água fica mais macia e mais fácil de mastigar e digerir. Alguns cães podem ter reações alérgicas ou sensibilidade à couve-flor.",
     "nl": "Bloemkool bevat vezels, vitamine C en vitamine K en is een goed tussendoortje voor een hond die moet afvallen. Diezelfde vezels kunnen winderigheid, een opgeblazen buik en diarree veroorzaken als een hond er te veel van eet. Rauwe bloemkool is in kleine hoeveelheden veilig maar kan moeilijk verteerbaar zijn, en grote rauwe stukken kunnen verstikking veroorzaken; stomen of koken maakt hem zachter en makkelijker te kauwen en te verteren. Sommige honden kunnen er allergisch of gevoelig voor reageren.",
     "pl": "Kalafior zawiera błonnik oraz witaminy C i K i jest dobrą przekąską dla psów, które mają schudnąć. Ten sam błonnik może jednak wywołać gazy, wzdęcia i biegunkę, jeśli pies zje za dużo. Surowy kalafior jest bezpieczny w małych ilościach, ale może być trudny do strawienia, a duże surowe kawałki grożą zadławieniem; po ugotowaniu na parze lub w wodzie jest miększy, łatwiejszy do pogryzienia i strawienia. U niektórych psów może też wywołać reakcje alergiczne lub nadwrażliwość.",
-    "cs": "Květák obsahuje vlákninu, vitamin C a vitamin K a je dobrým pamlskem, když chcete psovi pomoci zhubnout. Stejná vláknina může při přejedení způsobit plynatost, nadýmání a průjem. Syrový květák je v malém množství bezpečný, ale může se hůře trávit a velké syrové kousky mohou způsobit dušení; napařením nebo uvařením se stane měkčím a snáze se žvýká i tráví. Někteří psi na něj mohou mít alergickou reakci nebo citlivost."
+    "cs": "Květák obsahuje vlákninu, vitamin C a vitamin K a je dobrým pamlskem, když chcete psovi pomoci zhubnout. Stejná vláknina může při přejedení způsobit plynatost, nadýmání a průjem. Syrový květák je v malém množství bezpečný, ale může se hůře trávit a velké syrové kousky mohou způsobit dušení; napařením nebo uvařením se stane měkčím a snáze se žvýká i tráví. Někteří psi na něj mohou mít alergickou reakci nebo citlivost.",
+    "hr": "Cvjetača sadrži vlakna, vitamin C i vitamin K te je dobra užina kad psu pomažeš smršaviti. Ista vlakna mogu izazvati plinove, nadutost i proljev ako se pojede previše. Sirova cvjetača u malim je količinama sigurna, ali može biti teško probavljiva, a veliki sirovi komadi mogu izazvati gušenje; kuhanje na pari ili u vodi čini je mekšom pa se lakše žvače i probavlja. Neki psi mogu imati alergijske reakcije ili osjetljivost na nju."
   },
   "signs": null,
   "what_to_do": {
@@ -73,7 +78,8 @@
     "pt": "Dá a couve-flor crua aos poucos, em pedaços pequenos. Porções grandes podem causar gases, inchaço e diarreia, e alguns cães podem ser sensíveis à couve-flor.",
     "nl": "Geef rauwe bloemkool rustig aan, in kleine stukjes. Grote porties kunnen winderigheid, een opgeblazen buik en diarree geven, en sommige honden zijn er gevoelig voor.",
     "pl": "Surowy kalafior wprowadzaj stopniowo i w małych kawałkach. Duże porcje mogą wywołać gazy, wzdęcia i biegunkę, a niektóre psy są na niego wrażliwe.",
-    "cs": "Syrový květák dávejte opatrně a po malých kouscích. Velké porce mohou způsobit plynatost, nadýmání a průjem a někteří psi na něj mohou být citliví."
+    "cs": "Syrový květák dávejte opatrně a po malých kouscích. Velké porce mohou způsobit plynatost, nadýmání a průjem a někteří psi na něj mohou být citliví.",
+    "hr": "Sirovu cvjetaču uvodi postupno, u malim komadićima. Velike količine mogu izazvati plinove, nadutost i proljev, a neki psi mogu biti osjetljivi na nju."
   },
   "serving": {
     "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
@@ -85,7 +91,8 @@
     "pt": "Cozinha-a a vapor ou em água, sem sal, óleo, manteiga, alho nem cebola, e corta-a em pedaços de uma dentada. Cozinha também os talos duros, a vapor ou em água. É uma guloseima ocasional, não para todos os dias.",
     "nl": "Stoom of kook hem zonder iets toe te voegen, dus zonder zout, olie, boter, knoflook of ui, en snijd hem in hapklare stukjes. Kook of stoom ook de taaie stronken. Af en toe als snoepje, niet als dagelijks tussendoortje.",
     "pl": "Ugotuj kalafior na parze lub w wodzie – bez soli, oleju, masła, czosnku i cebuli – i pokrój na kawałki wielkości jednego kęsa. Twarde łodygi koniecznie ugotuj w wodzie lub na parze. To okazjonalny smakołyk, nie codzienna przekąska.",
-    "cs": "Květák napařte nebo uvařte bez soli, oleje, másla, česneku a cibule a nakrájejte na kousky na jedno sousto. Tuhé košťály uvařte nebo napařte. Občasný pamlsek, ne denní svačina."
+    "cs": "Květák napařte nebo uvařte bez soli, oleje, másla, česneku a cibule a nakrájejte na kousky na jedno sousto. Tuhé košťály uvařte nebo napařte. Občasný pamlsek, ne denní svačina.",
+    "hr": "Skuhaj je u vodi ili na pari, bez soli, ulja, maslaca, češnjaka i luka, i nareži na komadiće veličine zalogaja. Žilave stabljike skuhaj u vodi ili na pari. Povremena poslastica, a ne svakodnevna užina."
   },
   "child": {
     "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
@@ -97,7 +104,8 @@
     "pt": "Os cães podem comer uns pedacinhos de couve-flor sem tempero. Se comerem demais, podem ficar com a barriga cheia de gases!",
     "nl": "Honden mogen een paar kleine stukjes bloemkool zonder toevoegingen. Van te veel krijgen ze een winderig buikje!",
     "pl": "Psy mogą zjeść kilka małych kawałków zwykłego kalafiora. Za dużo może napełnić im brzuszek gazami!",
-    "cs": "Psi můžou dostat pár malých kousků květáku bez dodatků. Když ho sní moc, budou mít v bříšku plyny!"
+    "cs": "Psi můžou dostat pár malých kousků květáku bez dodatků. Když ho sní moc, budou mít v bříšku plyny!",
+    "hr": "Psi smiju dobiti nekoliko malih komadića cvjetače bez dodataka. Previše cvjetače može im napuhati trbuščić!"
   },
   "faq": [
     {
@@ -111,7 +119,8 @@
         "pt": "Os cães podem comer folhas de couve-flor?",
         "nl": "Mogen honden de bladeren van bloemkool eten?",
         "pl": "Czy psy mogą jeść liście kalafiora?",
-        "cs": "Mohou psi jíst květákové listy?"
+        "cs": "Mohou psi jíst květákové listy?",
+        "hr": "Smiju li psi jesti listove cvjetače?"
       },
       "a": {
         "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
@@ -123,7 +132,8 @@
         "pt": "Sim. As folhas são seguras para os cães e têm nutrientes valiosos; a maioria dos cães gosta delas ligeiramente cozidas a vapor, por cima da comida.",
         "nl": "Ja. De bladeren zijn veilig voor honden en bevatten waardevolle voedingsstoffen; de meeste honden vinden ze lekker, licht gestoomd als topping op hun eten.",
         "pl": "Tak. Liście są dla psów bezpieczne i zawierają cenne składniki odżywcze; większość psów chętnie je zje lekko podgotowane na parze, jako dodatek do posiłku.",
-        "cs": "Ano. Listy jsou pro psy bezpečné a obsahují cenné živiny; většině psů chutnají lehce napařené jako přídavek ke krmivu."
+        "cs": "Ano. Listy jsou pro psy bezpečné a obsahují cenné živiny; většině psů chutnají lehce napařené jako přídavek ke krmivu.",
+        "hr": "Da. Listovi su sigurni za pse i sadrže vrijedne hranjive tvari; većina pasa rado jede listove lagano kuhane na pari kao dodatak obroku."
       }
     }
   ],
@@ -273,6 +283,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0fed7de523b2788cd3ff05cad68693612d1baf4bb117da426ca5aad6e99e6394"
+    },
+    "hr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8a02613ce5bea6ccea497dc13242a96b2d7d80f865e15c45f438a5bc654a6f91"
     }
   }
 }
