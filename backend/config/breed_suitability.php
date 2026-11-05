@@ -2381,5 +2381,24 @@ return [
                 ['tag' => 'sheds', 'source_ids' => ['S710'], 'refs' => ['keeshond.suitability.vca_shedding']],
             ],
         ],
+        // M5-R10-95 Standard Schnauzer — not a flat-faced breed (FCI muzzle "Ending in a blunt wedge", S712); RKC Breed Watch
+        // Category 1 (S714). RKC "Size of home: Small house" → no apartment / large_home chip; shedding sources conflict (RKC
+        // "Sheds: Yes" vs VCA "below average" / PetMD "minimal") → neither sheds nor low_shedding. No new vocabulary key.
+        'standard_schnauzer' => [
+            'suits' => [
+                // S717 "devoted to their family, including other family pets and children."
+                ['tag' => 'family_pet', 'source_ids' => ['S717'], 'refs' => ['standard_schnauzer.behaviour.family']],
+                // S715 "… will get on well with children if they're introduced at an early age."; S716 "Playful and good with children."
+                ['tag' => 'children', 'source_ids' => ['S715', 'S716'], 'refs' => ['standard_schnauzer.suitability.pdsa_children', 'standard_schnauzer.suitability.vca_children', 'standard_schnauzer.behaviour.children']],
+            ],
+            'consider' => [
+                // S717 "This breed does best with patient, experienced pet parents."
+                ['tag' => 'experienced_owner', 'source_ids' => ['S717'], 'refs' => ['standard_schnauzer.behaviour.experienced_owner']],
+                // S716 "Games and tricks provide needed mental exercise."
+                ['tag' => 'needs_mental_stimulation', 'source_ids' => ['S716'], 'refs' => ['standard_schnauzer.behaviour.mental_stimulation']],
+                // S714 "Grooming: More than once a week"; S715 "Grooming is needed 2-3 times a week"
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S714', 'S715'], 'refs' => ['standard_schnauzer.suitability.rkc_grooming', 'standard_schnauzer.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

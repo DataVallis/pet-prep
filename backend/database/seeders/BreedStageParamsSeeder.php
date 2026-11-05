@@ -1172,6 +1172,16 @@ class BreedStageParamsSeeder extends Seeder
     public const PROPOSED_R10_KEESHOND_SENIOR = 'predlog Claude 2026-11-05 (najbližja vrstica pravila runbooka, M5-R10-94) — čaka Davida';
 
     /**
+     * M5-R10-95 Standard Schnauzer (unattended run 2026-11-05, data.json proposed_game_parameters.standard_schnauzer.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 60 min (RKC S714 "Exercise: Up to 1 hour per day"), senior 45 min, puppy 10 min × age capped at 60, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S714 — McMillan 2024's breed value not reachable,
+     * 13 y only via Wikipedia S719, tier C), arrival 2 / 9 / 36 / 90, learning multiplier 1.5 (Coren rank 18, Excellent); care
+     * rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_STANDARD_SCHNAUZER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-95)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1476,6 +1486,12 @@ class BreedStageParamsSeeder extends Seeder
         'keeshond' => [
             'bath' => [1, 'month', 'S710', 'It needs bathing every month or so.', 'keeshond.suitability.vca_bath', '"every month or so" → every 4 weeks (no tooth / ear / nail / groomer frequency → no task)'],
         ],
+        'standard_schnauzer' => [
+            'nail_trim' => [1, 'week', 'S717', 'nail trims and ear cleanings every one to two weeks.', 'proposed_game_parameters.standard_schnauzer.nail_trimming', '"every one to two weeks" → the lower bound, once a week'],
+            'ear_cleaning' => [1, 'week', 'S717', 'nail trims and ear cleanings every one to two weeks.', 'proposed_game_parameters.standard_schnauzer.ear_care', '"every one to two weeks" → the lower bound, once a week'],
+            'bath' => [1, 'month', 'S717', 'Monthly bathing with oatmeal-based dog shampoos is recommended.', 'proposed_game_parameters.standard_schnauzer.bathing', '"Monthly" → every 4 weeks'],
+            'groomer_visit' => [1, 'three_months', 'S717', 'quarterly professional appointments with an experienced Schnauzer groomer.', 'proposed_game_parameters.standard_schnauzer.professional_grooming', '"quarterly" → 12 program weeks (VCA S716 clip "every two to three months" — alternative; teeth have no frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1589,6 +1605,7 @@ class BreedStageParamsSeeder extends Seeder
         'chow_chow' => [7, 'S700', 'Chow Chows need brushing every day to keep their fur in good condition.', 'high', false],
         'old_english_sheepdog' => [7, 'S705', 'They have long fur which will need a daily brush to make sure it doesn\'t get matted and tangled.', 'high', false],
         'keeshond' => [7, 'S709', 'Grooming is a daily requirement to keep their thick double coat in good condition.', 'high', false],
+        'standard_schnauzer' => [3, 'S715', 'Grooming is needed 2-3 times a week', 'high', false],
     ];
 
     /**
@@ -1741,13 +1758,14 @@ class BreedStageParamsSeeder extends Seeder
         'pekingese' => ['S693', 'It’s important to socialise your Pekingese from a young age with lots of different people, dogs and experiences.'],
         'chow_chow' => ['S700', "it's really important to make sure your Chow Chow is well-socialised from a young age"],
         'old_english_sheepdog' => ['S705', 'a well-socialised Old English Sheepdog is likely to grow into a happy and confident dog.'],
+        'standard_schnauzer' => ['S717', 'early socialization and training is necessary.'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2561,6 +2579,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::ChowChow => self::chowChowProfile(),
             BreedType::OldEnglishSheepdog => self::oldEnglishSheepdogProfile(),
             BreedType::Keeshond => self::keeshondProfile(),
+            BreedType::StandardSchnauzer => self::standardSchnauzerProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9204,6 +9223,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'keeshond.lifespan.pdsa',
                 'quote' => 'Over 10 years',
                 'notes' => 'PDSA key fact lower bound (S709); VCA 12–14 years (S710) is consistent. No McMillan 2024 value reachable. Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * Standard Schnauzer (M5-R10-95). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_STANDARD_SCHNAUZER); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function standardSchnauzerProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_STANDARD_SCHNAUZER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S714', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.standard_schnauzer.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a medium dog is full-grown at 12–15 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S714) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 117 (McMillan 13 y only via Wikipedia S719, tier C), 108 (VCA 12 y, S716), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_schnauzer.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (12–15 months for a medium dog, S10); capped at the adult 60 minutes, which 10 × age reaches at 6 months.',
+            'adult_minutes' => [60, [
+                'unit' => 'minutes/day', 'source_id' => 'S714', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_schnauzer.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'Exercise: Up to 1 hour per day',
+                'notes' => 'RKC breed page key fact "Exercise: Up to 1 hour per day" (S714) → 60 min = 6,000 steps (runbook rule: "up to N" → N). PDSA (S715) "around an hour of exercise daily" agrees; PetMD "at least 30 minutes" (S717) is an alternative.',
+            ]],
+            'senior_minutes' => [45, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_schnauzer.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 60 minutes = 45 min = 4,500 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[14, 20], [
+                'unit' => 'kg', 'source_id' => 'S712', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'standard_schnauzer.adult_weight.fci',
+                'quote' => 'Weight : Dogs and bitches: 14 to 20 kg.',
+                'notes' => 'FCI-Standard N° 182 (S712), one range for both sexes; the RKC (S713) and AKC (S718) standards give no weight. PDSA 16–20 kg (S715) is an alternative.',
+            ]],
+            'growth_end' => [[12, 15], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_schnauzer.growth.adult_weight_reached',
+                'quote' => 'Medium (24–59 pounds): 12–15 months',
+                'notes' => 'Size-class value, not breed-specific (FCI 14–20 kg ≈ 31–44 lb, S712 → the Medium class of S10).',
+            ]],
+            'coren_rank' => [18, [
+                'unit' => 'rank', 'source_id' => 'S35', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_schnauzer.trainability.coren_rank',
+                'notes' => 'Coren rank 18 "Standard Schnauzer" (with the Flat-Coated Retriever and the English Cocker Spaniel), tier Excellent Working Dogs (ranks 11–26) — Wikipedia table (S35, checked 2026-11-05).',
+            ]],
+            'learning_multiplier' => [1.5, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S35', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.standard_schnauzer.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 18 = Excellent (S35) → 1.5 (VCA S716: learns quickly, but also bores quickly and can be headstrong). Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S714', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'standard_schnauzer.lifespan.rkc',
+                'quote' => 'Lifespan: Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S714); PDSA "Over 10 years" (S715), VCA 12–14 y (S716) and PetMD 13–16 y (S717) are consistent. No McMillan 2024 value reachable (13 y only via Wikipedia S719, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

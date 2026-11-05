@@ -96,6 +96,7 @@ return [
     'chow_chow' => 'Chow Chow',
     'old_english_sheepdog' => 'Old English Sheepdog',
     'keeshond' => 'Keeshond',
+    'standard_schnauzer' => 'Standard Schnauzer',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',

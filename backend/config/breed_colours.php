@@ -620,6 +620,12 @@ return [
     'keeshond' => [
         ['key' => 'grey-shaded', 'value' => 'grey-shaded: silver-grey with black hair tips, dark muzzle and ears, pencilled spectacles around the eyes, lighter mane and shoulder ring, silver-grey legs, black tail tip', 'en' => 'Grey-shaded (wolf grey)', 'sl' => 'Volčje siv'],
     ],
+    // M5-R10-95: FCI-Standard N° 182 (S712) "pepper and salt" / "Pure black with black undercoat." — never black and silver
+    // (Miniature / Giant only). Keys, values and labels as the Miniature / Giant Schnauzer.
+    'standard_schnauzer' => [
+        ['key' => 'pepper-salt', 'value' => 'pepper and salt (banded grey) with a dark facial mask', 'en' => 'Pepper and salt', 'sl' => 'Poper in sol'],
+        ['key' => 'black', 'value' => 'solid black', 'en' => 'Black', 'sl' => 'Črn'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
