@@ -6,21 +6,24 @@
     "sl": "Cvetača",
     "de": "Blumenkohl",
     "fr": "Chou-fleur",
-    "es": "Coliflor"
+    "es": "Coliflor",
+    "it": "Cavolfiore"
   },
   "question": {
     "en": "Can dogs eat cauliflower?",
     "sl": "Ali lahko psi jedo cvetačo?",
     "de": "Dürfen Hunde Blumenkohl fressen?",
     "fr": "Les chiens peuvent-ils manger du chou-fleur ?",
-    "es": "¿Pueden los perros comer coliflor?"
+    "es": "¿Pueden los perros comer coliflor?",
+    "it": "I cani possono mangiare il cavolfiore?"
   },
   "url_slug": {
     "en": "cauliflower",
     "sl": "cvetaca",
     "de": "blumenkohl",
     "fr": "chou-fleur",
-    "es": "coliflor"
+    "es": "coliflor",
+    "it": "cavolfiore"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, kot občasen priboljšek. Cvetača je za pse varna, če jo pravilno pripravite: kuhano brez dodatkov, brez začimb in narezano na koščke za en grižljaj. Velike količine lahko povzročijo vetrove, napihnjenost in drisko.",
     "de": "Ja, als gelegentliches Leckerli. Blumenkohl ist für Hunde unbedenklich, wenn er richtig zubereitet ist: ohne Gewürze gekocht und in mundgerechte Stücke geschnitten. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen.",
     "fr": "Oui, comme friandise occasionnelle. Le chou-fleur est sans danger pour les chiens lorsqu’il est bien préparé : cuit nature, sans assaisonnement, et coupé en morceaux de la taille d’une bouchée. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée.",
-    "es": "Sí, como premio ocasional. La coliflor es segura para los perros si se sirve bien: cocida sin nada añadido, sin condimentos y cortada en trozos del tamaño de un bocado. Las raciones grandes pueden causar gases, hinchazón y diarrea."
+    "es": "Sí, como premio ocasional. La coliflor es segura para los perros si se sirve bien: cocida sin nada añadido, sin condimentos y cortada en trozos del tamaño de un bocado. Las raciones grandes pueden causar gases, hinchazón y diarrea.",
+    "it": "Sì, come premio occasionale. Il cavolfiore è sicuro per i cani se preparato nel modo giusto: cotto, senza condimenti e tagliato in pezzetti da un boccone. Le porzioni abbondanti possono causare gas, gonfiore e diarrea."
   },
   "why": {
     "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
     "sl": "Cvetača vsebuje vlaknine ter vitamina C in K in je dober prigrizek, kadar pes hujša. Iste vlaknine pa lahko pri preveliki količini povzročijo vetrove, napihnjenost in drisko. Surova cvetača je v majhnih količinah varna, a je lahko težko prebavljiva, veliki surovi kosi pa se lahko psu zataknejo; kuhanje na pari ali v vodi jo zmehča, zato jo pes lažje žveči in prebavi. Nekateri psi so lahko nanjo alergični ali občutljivi.",
     "de": "Blumenkohl enthält Ballaststoffe, Vitamin C und Vitamin K und ist ein guter Snack für Hunde, die abnehmen sollen. Dieselben Ballaststoffe können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, wenn zu viel gefressen wird. Roher Blumenkohl ist in kleinen Mengen unbedenklich, kann aber schwer verdaulich sein, und große rohe Stücke können zum Ersticken führen; Dämpfen oder Kochen macht ihn weicher und leichter zu kauen und zu verdauen. Manche Hunde können allergisch oder empfindlich darauf reagieren.",
     "fr": "Le chou-fleur contient des fibres, de la vitamine C et de la vitamine K, et constitue un bon en-cas pour aider les chiens à perdre du poids. Ces mêmes fibres peuvent provoquer des gaz, des ballonnements et de la diarrhée quand on en donne trop. Le chou-fleur cru est sans danger en petite quantité mais peut être difficile à digérer, et de gros morceaux crus peuvent présenter un risque d’étouffement ; la cuisson à la vapeur ou à l’eau le rend plus tendre, plus facile à mâcher et à digérer. Certains chiens peuvent y être allergiques ou sensibles.",
-    "es": "La coliflor aporta fibra, vitamina C y vitamina K, y es un buen tentempié cuando se quiere ayudar a un perro a perder peso. Esa misma fibra puede causar gases, hinchazón y diarrea si se come demasiada. La coliflor cruda es segura en pequeñas cantidades, pero puede ser difícil de digerir, y los trozos grandes crudos pueden provocar atragantamiento; al vapor o hervida queda más blanda y es más fácil de masticar y digerir. Algunos perros pueden tener reacciones alérgicas o sensibilidad a la coliflor."
+    "es": "La coliflor aporta fibra, vitamina C y vitamina K, y es un buen tentempié cuando se quiere ayudar a un perro a perder peso. Esa misma fibra puede causar gases, hinchazón y diarrea si se come demasiada. La coliflor cruda es segura en pequeñas cantidades, pero puede ser difícil de digerir, y los trozos grandes crudos pueden provocar atragantamiento; al vapor o hervida queda más blanda y es más fácil de masticar y digerir. Algunos perros pueden tener reacciones alérgicas o sensibilidad a la coliflor.",
+    "it": "Il cavolfiore contiene fibre, vitamina C e vitamina K ed è uno spuntino adatto ai cani che devono perdere peso. Le stesse fibre, se ne viene mangiato troppo, possono causare gas, gonfiore e diarrea. Il cavolfiore crudo è sicuro in piccole quantità, ma può essere difficile da digerire, e i pezzi grandi, se crudi, possono far soffocare; cuocerlo al vapore o lessarlo lo rende più morbido, più facile da masticare e da digerire. Alcuni cani possono avere reazioni allergiche o essere sensibili al cavolfiore."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Surovo cvetačo uvajajte počasi, v majhnih koščkih. Velike količine lahko povzročijo vetrove, napihnjenost in drisko, nekateri psi pa so nanjo lahko občutljivi.",
     "de": "Führen Sie rohen Blumenkohl langsam ein und geben Sie ihn nur in kleinen Stücken. Große Portionen können Blähungen, einen aufgeblähten Bauch und Durchfall verursachen, und manche Hunde reagieren empfindlich darauf.",
     "fr": "Donnez le chou-fleur cru progressivement, en petits morceaux. De grosses portions peuvent provoquer des gaz, des ballonnements et de la diarrhée, et certains chiens peuvent y être sensibles.",
-    "es": "Dale la coliflor cruda poco a poco y en trozos pequeños. Las raciones grandes pueden causar gases, hinchazón y diarrea, y algunos perros pueden ser sensibles a ella."
+    "es": "Dale la coliflor cruda poco a poco y en trozos pequeños. Las raciones grandes pueden causar gases, hinchazón y diarrea, y algunos perros pueden ser sensibles a ella.",
+    "it": "Se lo dai crudo, introducilo gradualmente e a pezzetti piccoli. Le porzioni abbondanti possono causare gas, gonfiore e diarrea, e alcuni cani possono essere sensibili."
   },
   "serving": {
     "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
     "sl": "Skuhajte jo na pari ali v vodi brez dodatkov, brez soli, olja, masla, česna ali čebule, in jo narežite na koščke za en grižljaj. Trda stebla skuhajte v vodi ali na pari. Občasen priboljšek, ne vsakodnevni prigrizek.",
     "de": "Dämpfen oder kochen Sie ihn pur, ohne Salz, Öl, Butter, Knoblauch oder Zwiebeln, und schneiden Sie ihn mundgerecht klein. Auch die zähen Strünke sollten Sie kochen oder dämpfen. Ein gelegentliches Leckerli, kein täglicher Snack.",
     "fr": "Faites-le cuire à la vapeur ou à l’eau, nature, sans sel, huile, beurre, ail ni oignon, et coupez-le en morceaux de la taille d’une bouchée. Les tiges dures doivent aussi être bouillies ou cuites à la vapeur. Une friandise occasionnelle, pas un en-cas quotidien.",
-    "es": "Cuécela al vapor o hiérvela, sin sal, aceite, mantequilla, ajo ni cebolla, y córtala en trozos del tamaño de un bocado. Cuece también los tallos duros, al vapor o hervidos. Es un premio ocasional, no un tentempié diario."
+    "es": "Cuécela al vapor o hiérvela, sin sal, aceite, mantequilla, ajo ni cebolla, y córtala en trozos del tamaño de un bocado. Cuece también los tallos duros, al vapor o hervidos. Es un premio ocasional, no un tentempié diario.",
+    "it": "Cuocilo al vapore o lessalo, senza sale, olio, burro, aglio o cipolla, e taglialo in pezzetti da un boccone. Cuoci i gambi duri al vapore o lessali. Un premio occasionale, non uno spuntino quotidiano."
   },
   "child": {
     "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
     "sl": "Psi lahko dobijo nekaj majhnih koščkov navadne cvetače. Preveč jim lahko napihne trebušček!",
     "de": "Hunde dürfen ein paar kleine Stücke Blumenkohl ohne Gewürze fressen. Zu viel davon gibt einen Blähbauch!",
     "fr": "Les chiens peuvent avoir quelques petits morceaux de chou-fleur nature. Trop de chou-fleur peut leur donner un ventre plein de gaz !",
-    "es": "Los perros pueden tomar unos pocos trocitos de coliflor sin condimentar. ¡Si comen demasiada, les puede doler la barriguita por los gases!"
+    "es": "Los perros pueden tomar unos pocos trocitos de coliflor sin condimentar. ¡Si comen demasiada, les puede doler la barriguita por los gases!",
+    "it": "I cani possono mangiare qualche pezzettino di cavolfiore senza condimenti. Se ne mangiano troppo, però, gli può venire la pancia gonfia e tante puzzette!"
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo liste cvetače?",
         "de": "Dürfen Hunde Blumenkohlblätter fressen?",
         "fr": "Les chiens peuvent-ils manger les feuilles de chou-fleur ?",
-        "es": "¿Pueden los perros comer hojas de coliflor?"
+        "es": "¿Pueden los perros comer hojas de coliflor?",
+        "it": "I cani possono mangiare le foglie del cavolfiore?"
       },
       "a": {
         "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
         "sl": "Da. Listi so za pse varni in vsebujejo dragocena hranila; večina psov jih rada je, če so rahlo kuhani na pari, kot dodatek k obroku.",
         "de": "Ja. Die Blätter sind für Hunde unbedenklich und enthalten wertvolle Nährstoffe; die meisten Hunde mögen sie leicht gedämpft als Zugabe zum Futter.",
         "fr": "Oui. Les feuilles sont sans danger pour les chiens et contiennent de précieux nutriments ; la plupart des chiens les apprécient légèrement cuites à la vapeur, en complément du repas.",
-        "es": "Sí. Las hojas son seguras para los perros y contienen nutrientes valiosos; a la mayoría de los perros les gustan ligeramente cocidas al vapor, como complemento de su comida."
+        "es": "Sí. Las hojas son seguras para los perros y contienen nutrientes valiosos; a la mayoría de los perros les gustan ligeramente cocidas al vapor, como complemento de su comida.",
+        "it": "Sì. Le foglie sono sicure per i cani e ricche di sostanze nutritive; a molti cani piacciono leggermente cotte al vapore, come aggiunta al pasto."
       }
     }
   ],
@@ -198,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "70f1e053595c23b53d9ed7ec0433158940efa4d006a536d977948d1859f59743"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed43bd6ae5e6f32f5b048ca8e8aba3c6cd47e541567f5ffd3168bdd8c33b2be7"
     }
   }
 }

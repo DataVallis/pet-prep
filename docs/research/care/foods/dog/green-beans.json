@@ -6,21 +6,24 @@
     "sl": "Stročji fižol",
     "de": "Grüne Bohnen",
     "fr": "Haricots verts",
-    "es": "Judías verdes"
+    "es": "Judías verdes",
+    "it": "Fagiolini"
   },
   "question": {
     "en": "Can dogs eat green beans?",
     "sl": "Ali lahko psi jedo stročji fižol?",
     "de": "Dürfen Hunde grüne Bohnen fressen?",
     "fr": "Les chiens peuvent-ils manger des haricots verts ?",
-    "es": "¿Pueden los perros comer judías verdes?"
+    "es": "¿Pueden los perros comer judías verdes?",
+    "it": "I cani possono mangiare i fagiolini?"
   },
   "url_slug": {
     "en": "green-beans",
     "sl": "strocji-fizol",
     "de": "gruene-bohnen",
     "fr": "haricots-verts",
-    "es": "judias-verdes"
+    "es": "judias-verdes",
+    "it": "fagiolini"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da. Navaden stročji fižol, surov ali kuhan, je za večino psov v zmernih količinah varen in je nizkokaloričen priboljšek. Nikoli ne dajajte stročjega fižola z dodano soljo, maslom, česnom ali drugimi začimbami.",
     "de": "Ja. Grüne Bohnen pur, roh oder gekocht, sind für die meisten Hunde in Maßen unbedenklich und ein kalorienarmes Leckerli. Geben Sie niemals grüne Bohnen mit Salz, Butter, Knoblauch oder anderen Gewürzen.",
     "fr": "Oui. Les haricots verts nature, crus ou cuits, sont sans danger, avec modération, pour la plupart des chiens et constituent une friandise peu calorique. Ne donnez jamais de haricots verts additionnés de sel, de beurre, d’ail ou d’autres assaisonnements.",
-    "es": "Sí. Las judías verdes sin condimentar, crudas o cocidas, son seguras con moderación para la mayoría de los perros y constituyen un premio bajo en calorías. Nunca des judías verdes con sal, mantequilla, ajo u otros condimentos añadidos."
+    "es": "Sí. Las judías verdes sin condimentar, crudas o cocidas, son seguras con moderación para la mayoría de los perros y constituyen un premio bajo en calorías. Nunca des judías verdes con sal, mantequilla, ajo u otros condimentos añadidos.",
+    "it": "Sì. I fagiolini senza condimenti, crudi o cotti, sono sicuri per la maggior parte dei cani in quantità moderate e sono un premio poco calorico. Non dare mai fagiolini con sale, burro, aglio o altri condimenti."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
     "sl": "Stročji fižol vsebuje vitamine, minerale in vlaknine ter ima malo kalorij; dodatna prostornina in vlaknine psu pomagajo, da se počuti sitega, ne da bi dobil veliko kalorij. Veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli, običajni recepti s stročjim fižolom za ljudi pa za pse niso varni.",
     "de": "Grüne Bohnen liefern Vitamine, Mineralstoffe und Ballaststoffe und sind kalorienarm; die Masse und die Ballaststoffe sorgen dafür, dass ein Hund sich satt fühlt, ohne viele Kalorien aufzunehmen. Viele Dosenbohnen enthalten viel zugesetztes Salz, und gängige Rezepte für grüne Bohnen aus der Menschenküche sind für Hunde nicht unbedenklich.",
     "fr": "Les haricots verts apportent des vitamines, des minéraux et des fibres et sont peu caloriques ; leur volume et leurs fibres aident le chien à se sentir rassasié sans ajouter beaucoup de calories. Beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté, et les recettes de haricots verts que l’on prépare habituellement pour soi ne sont pas sans danger pour les chiens.",
-    "es": "Las judías verdes aportan vitaminas, minerales y fibra y tienen pocas calorías; el volumen y la fibra extra ayudan al perro a sentirse saciado sin añadir muchas calorías. Muchas judías verdes en conserva llevan mucha sal añadida, y las recetas habituales de judías verdes para personas no son seguras para los perros."
+    "es": "Las judías verdes aportan vitaminas, minerales y fibra y tienen pocas calorías; el volumen y la fibra extra ayudan al perro a sentirse saciado sin añadir muchas calorías. Muchas judías verdes en conserva llevan mucha sal añadida, y las recetas habituales de judías verdes para personas no son seguras para los perros.",
+    "it": "I fagiolini forniscono vitamine, minerali e fibre e hanno poche calorie; il volume e le fibre aiutano il cane a sentirsi sazio senza aggiungere molte calorie. Molti fagiolini in scatola contengono molto sale aggiunto, e le ricette di fagiolini più comuni per le persone non sono sicure per i cani."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Preden psu ponudite stročji fižol, se posvetujte z veterinarjem. Nikoli mu ne dajajte stročjega fižola, kuhanega s česnom ali česnovo soljo.",
     "de": "Fragen Sie Ihren Tierarzt, bevor Sie Ihrem Hund grüne Bohnen geben. Geben Sie niemals grüne Bohnen, die mit Knoblauch oder Knoblauchsalz zubereitet wurden.",
     "fr": "Demandez conseil à votre vétérinaire avant de donner des haricots verts à votre chien. Ne donnez jamais de haricots verts cuits avec de l’ail ou du sel d’ail.",
-    "es": "Pregunta a tu veterinario antes de darle judías verdes a tu perro. Nunca le des judías verdes cocinadas con ajo o sal de ajo."
+    "es": "Pregunta a tu veterinario antes de darle judías verdes a tu perro. Nunca le des judías verdes cocinadas con ajo o sal de ajo.",
+    "it": "Chiedi al veterinario prima di dare fagiolini al tuo cane. Non dare mai fagiolini cotti con aglio o sale all’aglio."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
     "sl": "Ponudite ga surovega ali kuhanega v vodi ali na pari, a vedno navadnega. Izogibajte se stročjemu fižolu iz pločevinke in fižolu, pripravljenemu z maslom, česnom, česnovo soljo ali drugimi začimbami.",
     "de": "Roh, in Wasser gekocht oder gedämpft, aber pur. Vermeiden Sie Dosenbohnen und alles, was mit Butter, Knoblauch, Knoblauchsalz oder anderen Gewürzen zubereitet wurde.",
     "fr": "Servez-les crus, bouillis à l’eau ou cuits à la vapeur, mais gardez-les nature. Évitez les haricots verts en conserve et ceux préparés avec du beurre, de l’ail, du sel d’ail ou d’autres assaisonnements.",
-    "es": "Sírvelas crudas, hervidas en agua o al vapor, pero siempre sin condimentar. Evita las judías verdes en conserva y las preparadas con mantequilla, ajo, sal de ajo u otros condimentos."
+    "es": "Sírvelas crudas, hervidas en agua o al vapor, pero siempre sin condimentar. Evita las judías verdes en conserva y las preparadas con mantequilla, ajo, sal de ajo u otros condimentos.",
+    "it": "Servili crudi, lessati in acqua o cotti al vapore, ma sempre senza condimenti. Evita i fagiolini in scatola e quelli preparati con burro, aglio, sale all’aglio o altri condimenti."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
     "sl": "Navaden stročji fižol je hrustljav pasji priboljšek. Fižol, kuhan s česnom ali maslom, ni za pse.",
     "de": "Grüne Bohnen pur sind ein knackiges Leckerli für Hunde. Bohnen mit Knoblauch oder Butter sind nichts für Hunde.",
     "fr": "Les haricots verts nature sont une friandise croquante pour le chien. Les haricots cuisinés avec de l’ail ou du beurre ne sont pas faits pour les chiens.",
-    "es": "Las judías verdes sin condimentar son un premio crujiente para perros. Las judías cocinadas con ajo o mantequilla no son para perros."
+    "es": "Las judías verdes sin condimentar son un premio crujiente para perros. Las judías cocinadas con ajo o mantequilla no son para perros.",
+    "it": "I fagiolini senza condimenti sono un premio croccante per i cani. Quelli cotti con aglio o burro non vanno bene per loro."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo stročji fižol iz pločevinke?",
         "de": "Dürfen Hunde grüne Bohnen aus der Dose fressen?",
         "fr": "Les chiens peuvent-ils manger des haricots verts en conserve ?",
-        "es": "¿Pueden los perros comer judías verdes en conserva?"
+        "es": "¿Pueden los perros comer judías verdes en conserva?",
+        "it": "I cani possono mangiare i fagiolini in scatola?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
         "sl": "Najbolje se mu je izogniti, ker veliko stročjega fižola iz pločevinke vsebuje veliko dodane soli.",
         "de": "Besser nicht, denn viele Dosenbohnen enthalten viel zugesetztes Salz.",
         "fr": "Il vaut mieux les éviter, car beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté.",
-        "es": "Es mejor evitarlas, porque muchas judías verdes en conserva llevan mucha sal añadida."
+        "es": "Es mejor evitarlas, porque muchas judías verdes en conserva llevan mucha sal añadida.",
+        "it": "Meglio evitarli, perché molti fagiolini in scatola contengono molto sale aggiunto."
       }
     }
   ],
@@ -166,6 +176,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0ab6fa04d6289112ac50de824fb649abfe78a7b0bec06d3b411f03bc2ff3d207"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c85694d72a624a8df1a15055644731d105375ea38358eecd01aec18f2345f333"
     }
   }
 }
