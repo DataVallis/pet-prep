@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "f82089bd4ebfd9eae6cc01cd91cf377d1b2e67b745672bbfd80b3be6c52f6928"
+      "sha256": "1ce8db49617fb397b6e28a76d418cd48162f0b4aebdef688d7189b7c8a5e94cd"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "26b13fbf9036b83367f748053b50291d76c1ce7f6f6566df48ee857ac3b7a6d5"
+      "sha256": "105be43507dcec4802fb0855ecfec6aa39578bc0c9811988afa525bb876ddb82"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "9bc6b12eb49cb6c9753a16fd78dedb9c215271db1aa5155c1dc3f0e468e193fc"
+      "sha256": "ff495cb7956d0d1005ec821c4dd576a4218d24a9941db93bd33564f1d5a73ced"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "859dc7d19f4dde089a65adaee06d0c8752c261e5669a629aa39d06676f49dfb5"
+      "sha256": "5381ab75f5c6952bbba5d6a693995b1c0500e785c0b7a753e62064b3496620f4"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "6ae6de7a05d45e01940dfd9b3d303b3c5a28faee45ea2d6817b29a5e2b4944da"
+      "sha256": "57a60dd95a021415ddd0d57b9fbdd5f67298a4f50c46f821bdb3f26bb4fe9602"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "c502ad393b552ea9a1315b601f8cf58996be976e469672f66ab63175cb46b20e"
+      "sha256": "0a418b7f17a9870814ca0864b51ca5dfcbe97ff79016078a5d981c16a2e1c141"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "5a7675f27e19522bf65c5a0bb703d0f3afb5c373d20b36abeeb5d34771d20e96"
+      "sha256": "7c6207b27025024552d72f19f3c750b4cadb9a1870dee7037d1036001c4479fa"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 89,
+      "breed_count": 90,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -53891,6 +53891,579 @@
       ]
     },
     {
+      "id": "coton_de_tulear",
+      "species": "dog",
+      "order": 89,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Coton de Tulear",
+        "sl": "Coton de Tulear"
+      },
+      "slug": {
+        "en": "coton-de-tulear",
+        "sl": "coton-de-tulear"
+      },
+      "synonyms": {
+        "en": [
+          "Coton",
+          "Coton de Tuléar",
+          "Royal Dog of Madagascar"
+        ],
+        "sl": [
+          "coton",
+          "cotonček",
+          "coton de tuléar"
+        ]
+      },
+      "facets": {
+        "size": "small",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "small",
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              26,
+              28
+            ],
+            "female": [
+              23,
+              25
+            ]
+          },
+          "source_ids": [
+            "S722"
+          ],
+          "ref": "coton_de_tulear.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              4,
+              6
+            ],
+            "female": [
+              3.5,
+              5
+            ]
+          },
+          "source_ids": [
+            "S722"
+          ],
+          "ref": "coton_de_tulear.adult_weight.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            8,
+            12
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "coton_de_tulear.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 12,
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.lifespan.rkc",
+          "confidence": "high"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 30,
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "long"
+          ],
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.suitability.rkc_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.suitability.rkc_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "shedding",
+          "kind": "category",
+          "value": "no",
+          "source_ids": [
+            "S724"
+          ],
+          "ref": "coton_de_tulear.suitability.rkc_shedding",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 283,
+            "group": 9,
+            "section": 1,
+            "origin": "MG"
+          },
+          "source_ids": [
+            "S721"
+          ],
+          "ref": "coton_de_tulear.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 5,
+        "grooming_frequency": 7,
+        "shedding": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S725"
+          ],
+          "ref": "coton_de_tulear.health.hip_dysplasia",
+          "confidence": "high"
+        },
+        {
+          "key": "bleeding_disorder_vwd",
+          "source_ids": [
+            "S725"
+          ],
+          "ref": "coton_de_tulear.health.von_willebrand",
+          "confidence": "high"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S726"
+          ],
+          "ref": "coton_de_tulear.health.luxating_patella",
+          "confidence": "medium"
+        },
+        {
+          "key": "pra_inherited_blindness",
+          "source_ids": [
+            "S726"
+          ],
+          "ref": "coton_de_tulear.health.eyes",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "apartment",
+            "source_ids": [
+              "S724"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_size_of_home",
+              "coton_de_tulear.suitability.rkc_garden"
+            ]
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S725"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.pdsa_family",
+              "coton_de_tulear.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.petmd_children",
+              "coton_de_tulear.behaviour.children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.petmd_children",
+              "coton_de_tulear.behaviour.other_pets"
+            ]
+          },
+          {
+            "tag": "low_shedding",
+            "source_ids": [
+              "S724"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_shedding"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S724",
+              "S725"
+            ],
+            "refs": [
+              "coton_de_tulear.suitability.rkc_grooming",
+              "coton_de_tulear.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S726"
+            ],
+            "refs": [
+              "coton_de_tulear.behaviour.time_alone"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 3000,
+              "cap_month": 3
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 3000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 108
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 2300
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 3000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 30,
+              "steps": 3000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 108
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "ear_cleaning",
+              "actor": "child",
+              "times": 1,
+              "period_days": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S724"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 30 min/day (RKC S724 'Up to 30 minutes per day')"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 23 min → 2,300 steps (75 % of 30, half up)"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S724"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 108 (0.75 × 12 y, RKC lower bound S724)"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.0 (not in Coren's ranking, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.grooming",
+            "basis_source_ids": [
+              "S724"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): »Every day« → 7 (RKC S724, PDSA S725); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.ear_care",
+            "basis_source_ids": [
+              "S726"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »at least once a week« → 1× na teden"
+          },
+          {
+            "ref": "proposed_game_parameters.coton_de_tulear.bathing",
+            "basis_source_ids": [
+              "S726"
+            ],
+            "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »once-a-month« → vsake 4 tedne"
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S724",
+          "S726"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "listed",
+        "tests": [
+          {
+            "key": "inbreeding_coi",
+            "level": "minimum",
+            "source_ids": [
+              "S724"
+            ]
+          },
+          {
+            "key": "eye_scheme",
+            "level": "best_practice",
+            "source_ids": [
+              "S724"
+            ]
+          }
+        ],
+        "basis_source_ids": [
+          "S724"
+        ]
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S721",
+        "S722",
+        "S724",
+        "S725",
+        "S726",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -59510,6 +60083,41 @@
       "publisher": "PetMD — Katie Grzyb, DVM (published Oct. 14, 2022)",
       "title": "Standard Schnauzer",
       "url": "https://petmd.com/dog/breeds/standard-schnauzer"
+    },
+    {
+      "id": "S721",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI breeds nomenclature — COTON DE TULEAR (283)",
+      "url": "https://www.fci.be/en/nomenclature/COTON-DE-TULEAR-283.html"
+    },
+    {
+      "id": "S722",
+      "tier": "A",
+      "publisher": "FCI",
+      "title": "FCI-Standard N° 283 — Coton de Tuléar (English PDF, 04.02.2000/EN)",
+      "url": "https://WWW.FCI.BE/Nomenclature/Standards/283g09-en.pdf"
+    },
+    {
+      "id": "S724",
+      "tier": "B",
+      "publisher": "The Royal Kennel Club",
+      "title": "Breeds A to Z — Coton De Tulear",
+      "url": "https://www.royalkennelclub.com/search/breeds-a-to-z/breeds/toy/coton-de-tulear/"
+    },
+    {
+      "id": "S725",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Coton De Tulears breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/small-dogs/coton-de-tulear"
+    },
+    {
+      "id": "S726",
+      "tier": "B",
+      "publisher": "PetMD — Elise Schmelzer, reviewed by Barri J. Morrison, DVM (updated May 16, 2023)",
+      "title": "Coton de Tulear",
+      "url": "https://www.petmd.com/dog/breeds/coton-de-tulear"
     },
     {
       "id": "C1",
