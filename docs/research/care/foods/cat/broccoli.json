@@ -7,7 +7,8 @@
     "de": "Brokkoli",
     "fr": "Brocoli",
     "es": "Brócoli",
-    "it": "Broccoli"
+    "it": "Broccoli",
+    "pt": "Brócolos"
   },
   "question": {
     "en": "Can cats eat broccoli?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Brokkoli fressen?",
     "fr": "Les chats peuvent-ils manger du brocoli ?",
     "es": "¿Pueden los gatos comer brócoli?",
-    "it": "I gatti possono mangiare i broccoli?"
+    "it": "I gatti possono mangiare i broccoli?",
+    "pt": "Os gatos podem comer brócolos?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -23,7 +25,8 @@
     "de": "brokkoli",
     "fr": "brocoli",
     "es": "brocoli",
-    "it": "broccoli"
+    "it": "broccoli",
+    "pt": "brocolos"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein kleines Stück ungewürzter Brokkoli ist als gelegentliches Leckerli in Ordnung. Cats Protection führt Brokkoli unter den Gemüsesorten auf, die Sie Ihrer Katze geben können, die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA rät zu gekochtem oder gedämpftem Brokkoli.",
     "fr": "Oui, un petit morceau de brocoli nature convient comme friandise occasionnelle. Cats Protection cite le brocoli parmi les légumes que l’on peut donner à un chat, l’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA conseille de le faire bouillir ou cuire à la vapeur.",
     "es": "Sí, un trocito de brócoli sin condimentar está bien como premio ocasional. Cats Protection incluye el brócoli entre las verduras que se pueden dar a un gato, la ASPCA sugiere ramilletes de brócoli para gatos y la RSPCA aconseja darlo hervido o al vapor.",
-    "it": "Sì, un pezzettino di broccolo senza condimenti va bene come premio occasionale. Cats Protection mette i broccoli tra le verdure che si possono dare al gatto, l’ASPCA consiglia le cimette di broccolo e la RSPCA li suggerisce lessati o cotti al vapore."
+    "it": "Sì, un pezzettino di broccolo senza condimenti va bene come premio occasionale. Cats Protection mette i broccoli tra le verdure che si possono dare al gatto, l’ASPCA consiglia le cimette di broccolo e la RSPCA li suggerisce lessati o cotti al vapore.",
+    "pt": "Sim, um pedacinho de brócolos sem tempero não faz mal como guloseima ocasional. A Cats Protection inclui os brócolos entre os legumes que se podem dar a um gato, a ASPCA sugere floretes de brócolos para gatos e a RSPCA aconselha-os cozidos em água ou a vapor."
   },
   "why": {
     "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "de": "Cats Protection zählt Brokkoli zu den wenigen Gemüsesorten, die Sie einer Katze geben können, wenn sie Interesse zeigt. Die ASPCA empfiehlt Brokkoliröschen für Katzen, und die RSPCA führt gekochten oder gedämpften Brokkoli unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
     "fr": "Cats Protection cite le brocoli parmi les rares légumes que l’on peut donner à un chat, si votre chat y goûte volontiers. L’ASPCA suggère des bouquets de brocoli pour les chats, et la RSPCA range le brocoli, bouilli ou cuit à la vapeur, parmi les aliments qui conviennent aux chats et aux chiens avec modération. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "Cats Protection cita el brócoli entre las pocas verduras que se pueden dar a un gato, si le apetece. La ASPCA sugiere ramilletes de brócoli para gatos, y la RSPCA incluye el brócoli, hervido o al vapor, entre los alimentos adecuados para gatos y perros con moderación. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
-    "it": "Cats Protection cita i broccoli tra le poche verdure che si possono dare a un gatto, se li gradisce. L’ASPCA consiglia le cimette di broccolo per i gatti, e la RSPCA elenca i broccoli, lessati o cotti al vapore, tra gli alimenti adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco."
+    "it": "Cats Protection cita i broccoli tra le poche verdure che si possono dare a un gatto, se li gradisce. L’ASPCA consiglia le cimette di broccolo per i gatti, e la RSPCA elenca i broccoli, lessati o cotti al vapore, tra gli alimenti adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
+    "pt": "A Cats Protection inclui os brócolos entre os poucos legumes que se podem dar a um gato, se ele gostar. A ASPCA sugere floretes de brócolos para gatos, e a RSPCA refere os brócolos, cozidos em água ou a vapor, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
   },
   "serving": {
     "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
@@ -57,7 +63,8 @@
     "de": "Ein kleines Röschen, gekocht oder gedämpft, ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit bouquet, bouilli ou cuit à la vapeur, sans beurre, sel ni assaisonnement.",
     "es": "Un ramillete pequeño, hervido o al vapor, sin mantequilla, sal ni condimentos.",
-    "it": "Una cimetta piccola, lessata o cotta al vapore, senza burro, sale o condimenti."
+    "it": "Una cimetta piccola, lessata o cotta al vapore, senza burro, sale o condimenti.",
+    "pt": "Um florete pequeno, cozido em água ou a vapor, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -65,7 +72,8 @@
     "de": "Ein kleines Stück gekochter Brokkoli kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de brocoli cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
     "es": "Un trocito de brócoli cocido puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di broccolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di broccolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de brócolos cozidos pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan verdura los gatos?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -83,7 +92,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
       }
     }
   ],
@@ -170,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "88c9119d1ca70b66bdaffc5e1e03d5bc48db252bbeb08e021ac372620690e32c"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7a2933c3ecc00705ddf16abeddcc3d85000b914bac4e2c5119c158efec700ae4"
     }
   }
 }
