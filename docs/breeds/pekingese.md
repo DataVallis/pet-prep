@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `pekingese` (viri S690–S695; ponovno S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: seznam pasem RKC za oceno dihanja prek Dogs NSW (K40) |
 | Izvor | FCI št. 207, skupina 9, sekcija 8 (japonski čin in pekinezer), Kitajska, pokroviteljstvo Velika Britanija (S691, S690) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 87. mesto »Pekingese« (S174, prebrano 2026-11-04) |
-| PR-ji | pet-prep #671 (pasma, združen `7e275db`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-pekingese` (PR sledi) |
+| PR-ji | pet-prep #671 (pasma, združen `7e275db`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website #253 (skupaj s pekinezerjem, čau čaujem in staroangleškim ovčarjem, združen `15cb95e`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -44,7 +44,7 @@
 | Ščetkanje zob vsak dan in čiščenje ušes 1× na teden (mini igri), opomnik za frizerja vsakih 6 tednov, opozorilo za sprehod poleti opoldne | 🛠 | 💶 izziv | M5-R14 / M5-R15 / M5-R18 / M5-R20 | 2026-11-04 |
 | Barva (izbirnik: 8 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-04 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«) | — | M5-R11-04 | 2026-11-05 |
-| Stran na petprep.si (`/animals/dogs/pekingese`, `/sl/zivali/psi/pekinezer`) | 🛠 s portretom (spletni PR sledi); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/pekingese`, `/sl/zivali/psi/pekinezer`) | 🛠 s portretom (pet-prep-website #253, v živo z naslednjo dnevno objavo spletne strani); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 

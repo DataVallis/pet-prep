@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `chow_chow` (viri S696–S702; ponovno S10, S11, S14, S24, S35, S45, S54, S174); seznam za vzreditelja: ni najden (`not_found`) |
 | Izvor | FCI št. 205, skupina 5, sekcija 5 (azijski špici in sorodne pasme), Kitajska, pokroviteljstvo Velika Britanija (S697, S696) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 88. mesto »Chow Chow« (S174, prebrano 2026-11-04) |
-| PR-ji | pet-prep #682 (pasma, združen `388a153`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-chow-chow` (PR sledi) |
+| PR-ji | pet-prep #682 (pasma, združen `388a153`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website #253 (skupaj s pekinezerjem, čau čaujem in staroangleškim ovčarjem, združen `15cb95e`) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-11-04 |
 | Barva (izbirnik: 6 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-04 |
 | AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«) | — | M5-R11-04 | 2026-11-05 |
-| Stran na petprep.si (`/animals/dogs/chow-chow`, `/sl/zivali/psi/cau-cau`) | 🛠 s portretom (spletni PR sledi); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| Stran na petprep.si (`/animals/dogs/chow-chow`, `/sl/zivali/psi/cau-cau`) | 🛠 s portretom (pet-prep-website #253, v živo z naslednjo dnevno objavo spletne strani); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
