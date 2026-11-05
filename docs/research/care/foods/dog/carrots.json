@@ -12,7 +12,8 @@
     "nl": "Wortels",
     "pl": "Marchewka",
     "cs": "Mrkev",
-    "hr": "Mrkva"
+    "hr": "Mrkva",
+    "sv": "Morötter"
   },
   "question": {
     "en": "Can dogs eat carrots?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden wortels eten?",
     "pl": "Czy psy mogą jeść marchewkę?",
     "cs": "Mohou psi jíst mrkev?",
-    "hr": "Smiju li psi jesti mrkvu?"
+    "hr": "Smiju li psi jesti mrkvu?",
+    "sv": "Får hundar äta morötter?"
   },
   "url_slug": {
     "en": "carrots",
@@ -38,7 +40,8 @@
     "nl": "wortels",
     "pl": "marchewka",
     "cs": "mrkev",
-    "hr": "mrkva"
+    "hr": "mrkva",
+    "sv": "morotter"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen.",
     "pl": "Tak. Marchewka jest dla psów bezpieczna – to zdrowa, niskokaloryczna przekąska, surowa lub gotowana. Najpierw pokrój ją na kawałki wielkości jednego kęsa, żeby pies się nie zadławił.",
     "cs": "Ano. Mrkev je pro psy bezpečná a je zdravým nízkokalorickým pamlskem, syrová i tepelně upravená. Nejdřív ji nakrájejte na kousky na jedno sousto, aby se pes neudusil.",
-    "hr": "Da. Mrkva je sigurna za pse i zdrava je užina s malo kalorija, sirova ili termički obrađena. Prvo je nareži na komadiće veličine zalogaja da se pas ne uguši."
+    "hr": "Da. Mrkva je sigurna za pse i zdrava je užina s malo kalorija, sirova ili termički obrađena. Prvo je nareži na komadiće veličine zalogaja da se pas ne uguši.",
+    "sv": "Ja. Morötter är säkra för hundar och ett nyttigt, kalorisnålt mellanmål, råa eller kokta. Skär dem först i munsbitar för att undvika kvävning."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -65,7 +69,8 @@
     "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden.",
     "pl": "Marchewka jest doskonałym źródłem witaminy A, potasu i błonnika, a do tego zawiera dużo beta-karotenu. Gryzienie marchewki może też pomagać w dbaniu o zdrowie zębów psa. Głównym zagrożeniem jest zadławienie, dlatego całą marchewkę, a nawet paluszki marchewkowe, trzeba kroić na kawałki wielkości jednego kęsa.",
     "cs": "Mrkev je vynikajícím zdrojem vitaminu A, draslíku a vlákniny a obsahuje hodně beta-karotenu. Žvýkání mrkve může také prospívat zubům vašeho psa. Hlavním rizikem je dušení, proto by se celé mrkve a dokonce i mrkvové tyčinky měly nakrájet na kousky na jedno sousto.",
-    "hr": "Mrkva je odličan izvor vitamina A, kalija i vlakana te sadrži mnogo beta-karotena. Grickanje mrkve može pomoći i zdravlju psećih zubi. Glavni je rizik gušenje, zato cijelu mrkvu, pa i štapiće mrkve, treba narezati na komadiće veličine zalogaja."
+    "hr": "Mrkva je odličan izvor vitamina A, kalija i vlakana te sadrži mnogo beta-karotena. Grickanje mrkve može pomoći i zdravlju psećih zubi. Glavni je rizik gušenje, zato cijelu mrkvu, pa i štapiće mrkve, treba narezati na komadiće veličine zalogaja.",
+    "sv": "Morötter är en utmärkt källa till A-vitamin, kalium och fibrer och innehåller mycket betakaroten. Att gnaga på morötter kan också förbättra hundens tandhälsa. Den största risken är kvävning, så hela morötter och till och med morotsstavar bör skäras i munsbitar."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen.",
     "pl": "Zapytaj weterynarza, ile marchewki dziennie możesz dać swojemu psu.",
     "cs": "Poraďte se s veterinářem, kolik mrkve denně je pro vašeho psa vhodné.",
-    "hr": "Pitaj veterinara koliko mrkve dnevno odgovara tvom psu."
+    "hr": "Pitaj veterinara koliko mrkve dnevno odgovara tvom psu.",
+    "sv": "Prata med din veterinär om hur många morötter som passar din hund per dag."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -92,7 +98,8 @@
     "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima.",
     "pl": "Umyj lub obierz marchewkę i pokrój ją na kawałki wielkości jednego kęsa – dotyczy to także całych marchewek i paluszków marchewkowych. Zarówno surowa, jak i gotowana marchewka jest w porządku.",
     "cs": "Mrkev umyjte, případně oloupejte, a celé mrkve i mrkvové tyčinky nakrájejte na kousky na jedno sousto. Syrová i tepelně upravená mrkev je v pořádku.",
-    "hr": "Mrkvu operi ili oguli, a zatim cijelu mrkvu, pa i štapiće mrkve, nareži na komadiće veličine zalogaja. Sirova i termički obrađena mrkva jednako su dobre."
+    "hr": "Mrkvu operi ili oguli, a zatim cijelu mrkvu, pa i štapiće mrkve, nareži na komadiće veličine zalogaja. Sirova i termički obrađena mrkva jednako su dobre.",
+    "sv": "Tvätta och/eller skala morötterna. Skär sedan hela morötter, och till och med morotsstavar, i munsbitar. Både råa och kokta morötter går bra."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -105,7 +112,8 @@
     "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes.",
     "pl": "Chrupiąca marchewka to zdrowa przekąska dla psa! Dorosły najpierw ją myje i kroi na małe kawałki.",
     "cs": "Křupavá mrkev je zdravý pamlsek pro psy! Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
-    "hr": "Hrskava mrkva zdrava je užina za pse! Odrasla osoba je prvo opere i nareže na male komadiće."
+    "hr": "Hrskava mrkva zdrava je užina za pse! Odrasla osoba je prvo opere i nareže na male komadiće.",
+    "sv": "Knapriga morötter är ett nyttigt hundmellanmål! En vuxen tvättar dem och skär dem i små bitar först."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?",
         "pl": "Czy ząbkującym szczeniakom można dać zimną lub mrożoną marchewkę?",
         "cs": "Mohou štěňata, kterým se prořezávají zuby, dostat studenou nebo mraženou mrkev?",
-        "hr": "Smiju li štenci kojima izbijaju zubi dobiti hladnu ili smrznutu mrkvu?"
+        "hr": "Smiju li štenci kojima izbijaju zubi dobiti hladnu ili smrznutu mrkvu?",
+        "sv": "Får valpar som håller på att byta tänder kalla eller frysta morötter?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -133,7 +142,8 @@
         "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten.",
         "pl": "Niektórzy weterynarze zalecają ząbkującym szczeniakom zimną lub mrożoną marchewkę, bo może przynosić ulgę.",
         "cs": "Někteří veterináři doporučují štěňatům, kterým se prořezávají zuby, studenou nebo mraženou mrkev, která jim může ulevit.",
-        "hr": "Neki veterinari preporučuju hladnu ili smrznutu mrkvu za štence kojima izbijaju zubi, kao način da im se ublaži nelagoda."
+        "hr": "Neki veterinari preporučuju hladnu ili smrznutu mrkvu za štence kojima izbijaju zubi, kao način da im se ublaži nelagoda.",
+        "sv": "Vissa veterinärer rekommenderar kalla eller frysta morötter till valpar som byter tänder, för att lindra obehaget."
       }
     }
   ],
@@ -240,6 +250,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e758ff9125661cbaf65094691f317342b21492e562f920f6708ed111596add78"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8aebf20dc3e76fbaff89da0f9a3b259c4ca619425341bf057a7caf2dd08de7a8"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Komkommer",
     "pl": "Ogórek",
     "cs": "Okurka",
-    "hr": "Krastavac"
+    "hr": "Krastavac",
+    "sv": "Gurka"
   },
   "question": {
     "en": "Can dogs eat cucumber?",
@@ -25,7 +26,8 @@
     "nl": "Mogen honden komkommer eten?",
     "pl": "Czy psy mogą jeść ogórek?",
     "cs": "Mohou psi jíst okurku?",
-    "hr": "Smiju li psi jesti krastavac?"
+    "hr": "Smiju li psi jesti krastavac?",
+    "sv": "Får hundar äta gurka?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -38,7 +40,8 @@
     "nl": "komkommer",
     "pl": "ogorek",
     "cs": "okurka",
-    "hr": "krastavac"
+    "hr": "krastavac",
+    "sv": "gurka"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja. Komkommer is helemaal veilig voor honden en een caloriearm, knapperig tussendoortje. Geef hem zonder iets erbij, gewassen en in kleine stukjes, laat je hond er rustig aan wennen en geef nooit augurken.",
     "pl": "Tak. Ogórki są dla psów całkowicie bezpieczne – to niskokaloryczna, chrupiąca przekąska. Podawaj je bez dodatków, umyte i pokrojone na małe kawałki, wprowadzaj stopniowo i nigdy nie dawaj ogórków kiszonych ani konserwowych.",
     "cs": "Ano. Okurky jsou pro psy naprosto bezpečné a jsou nízkokalorickým, křupavým pamlskem. Podávejte je bez dodatků, umyté a nakrájené na malé kousky, zařazujte je do jídelníčku postupně a nikdy nedávejte nakládané okurky.",
-    "hr": "Da. Krastavci su potpuno sigurni za pse i hrskava su užina s malo kalorija. Daj ih bez dodataka, oprane i narezane na male komadiće, uvodi ih postupno i nikad ne daj kisele krastavce."
+    "hr": "Da. Krastavci su potpuno sigurni za pse i hrskava su užina s malo kalorija. Daj ih bez dodataka, oprane i narezane na male komadiće, uvodi ih postupno i nikad ne daj kisele krastavce.",
+    "sv": "Ja. Gurka är helt säker för hundar och ett kalorisnålt, knaprigt mellanmål. Servera den utan tillsatser, tvättad och skuren i små bitar, introducera den gradvis och ge aldrig inlagd gurka."
   },
   "why": {
     "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
@@ -65,7 +69,8 @@
     "nl": "Komkommer bevat weinig calorieën, heel weinig natrium en geen vet, en bestaat voor een groot deel uit water; daarom is hij vooral goed voor honden die moeten afvallen. De twee belangrijkste aandachtspunten zijn te veel eten, wat de maag van streek kan maken, en verstikking, vooral bij kleinere honden of honden die snel eten.",
     "pl": "Ogórki mają mało kalorii, bardzo mało sodu, nie zawierają tłuszczu i składają się głównie z wody, więc są szczególnie dobre dla psów, które mają schudnąć. Warto uważać na dwie rzeczy: przejedzenie, które może rozstroić żołądek, i zadławienie, zwłaszcza u małych psów albo psów jedzących łapczywie.",
     "cs": "Okurky mají málo kalorií, velmi málo sodíku, neobsahují tuk a mají vysoký obsah vody, proto jsou zvlášť vhodné pro psy, kteří potřebují zhubnout. Rizika jsou dvě: přejedení, které může podráždit žaludek, a dušení, zejména u menších psů nebo psů, kteří hltají.",
-    "hr": "Krastavci imaju malo kalorija, vrlo malo natrija, ne sadrže masti i imaju mnogo vode, pa su osobito dobri za pse koji moraju smršaviti. Dva su glavna problema prejedanje, koje može nadražiti želudac, i gušenje, osobito kod manjih pasa ili pasa koji jedu brzo."
+    "hr": "Krastavci imaju malo kalorija, vrlo malo natrija, ne sadrže masti i imaju mnogo vode, pa su osobito dobri za pse koji moraju smršaviti. Dva su glavna problema prejedanje, koje može nadražiti želudac, i gušenje, osobito kod manjih pasa ili pasa koji jedu brzo.",
+    "sv": "Gurka är kalorisnål, innehåller mycket lite natrium och inget fett och har ett högt vatteninnehåll, så den passar särskilt bra för hundar som behöver gå ner i vikt. De två största riskerna är att hunden äter för mycket, vilket kan ge orolig mage, och kvävning, särskilt hos små hundar och hundar som äter snabbt."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Laat je hond rustig aan komkommer wennen en let goed op als hij iets nieuws probeert. Te veel geven of er te snel mee beginnen kan een milde maagklacht veroorzaken.",
     "pl": "Wprowadzaj ogórek stopniowo i obserwuj psa, gdy próbuje czegoś nowego. Zbyt duża porcja albo zbyt szybkie wprowadzenie ogórka do diety może wywołać łagodny rozstrój żołądka.",
     "cs": "Okurku zařazujte do jídelníčku postupně a psa při zkoušení nových potravin sledujte. Příliš velké množství nebo příliš rychlé zařazení může způsobit mírné podráždění žaludku.",
-    "hr": "Krastavac uvodi postupno i pazi na psa kad proba nešto novo. Ako ga daš previše ili ga uvedeš prebrzo, može doći do blagih želučanih tegoba."
+    "hr": "Krastavac uvodi postupno i pazi na psa kad proba nešto novo. Ako ga daš previše ili ga uvedeš prebrzo, može doći do blagih želučanih tegoba.",
+    "sv": "Introducera gurkan gradvis och håll koll på hunden när den får prova något nytt. Om du ger för mycket, eller introducerar den för snabbt, kan hunden få lindriga magbesvär."
   },
   "serving": {
     "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
@@ -92,7 +98,8 @@
     "nl": "Was de komkommer grondig en snijd hem in kleine, handzame stukjes die passen bij de grootte en het kauwgedrag van je hond; geef geen hele komkommer. Alleen komkommer zonder toevoegingen.",
     "pl": "Dokładnie umyj ogórek i pokrój go na małe kawałki, które pies łatwo pogryzie – dopasuj je do jego wielkości i do tego, jak gryzie. Nie dawaj całego ogórka. Tylko ogórek bez żadnych dodatków.",
     "cs": "Okurku důkladně omyjte a nakrájejte na malé kousky, které pes snadno zvládne, podle jeho velikosti a způsobu žvýkání; celou okurku nedávejte. Jen okurky bez dodatků.",
-    "hr": "Temeljito ga operi i nareži na male komade, prilagođene veličini psa i načinu na koji žvače; ne daj cijeli krastavac. Samo krastavci bez dodataka."
+    "hr": "Temeljito ga operi i nareži na male komade, prilagođene veličini psa i načinu na koji žvače; ne daj cijeli krastavac. Samo krastavci bez dodataka.",
+    "sv": "Tvätta noga och skär i små bitar som passar hundens storlek och sätt att tugga; ge inte en hel gurka. Bara gurka utan tillsatser."
   },
   "child": {
     "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
@@ -105,7 +112,8 @@
     "nl": "Honden mogen knabbelen op een paar stukjes komkommer. Een volwassene wast de komkommer en snijdt hem eerst klein.",
     "pl": "Psy mogą schrupać kilka kawałków ogórka. Dorosły najpierw myje ogórek i kroi go na małe kawałki.",
     "cs": "Psi si můžou pochutnat na pár kouscích okurky. Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
-    "hr": "Psi smiju pojesti nekoliko komadića krastavca. Odrasla osoba krastavac opere i prvo ga nareže na sitne komadiće."
+    "hr": "Psi smiju pojesti nekoliko komadića krastavca. Odrasla osoba krastavac opere i prvo ga nareže na sitne komadiće.",
+    "sv": "Hundar kan knapra på några gurkbitar. En vuxen tvättar gurkan och skär den i små bitar först."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Mogen honden augurken eten?",
         "pl": "Czy psy mogą jeść ogórki kiszone?",
         "cs": "Mohou psi jíst nakládané okurky?",
-        "hr": "Smiju li psi jesti kisele krastavce?"
+        "hr": "Smiju li psi jesti kisele krastavce?",
+        "sv": "Får hundar äta inlagd gurka?"
       },
       "a": {
         "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Geef je hond geen augurken, want die bevatten meestal extra zout, specerijen en andere ingrediënten.",
         "pl": "Nie. Nie podawaj psu ogórków kiszonych ani konserwowych, bo zwykle zawierają sól, przyprawy i inne dodatki.",
         "cs": "Ne. Nakládané okurky psovi nedávejte, protože obvykle obsahují přidanou sůl, koření a další přísady.",
-        "hr": "Ne. Psu ne daj kisele krastavce, jer obično sadrže dodanu sol, začine i druge sastojke."
+        "hr": "Ne. Psu ne daj kisele krastavce, jer obično sadrže dodanu sol, začine i druge sastojke.",
+        "sv": "Nej. Ge inte hunden inlagd gurka, eftersom den oftast innehåller tillsatt salt, kryddor och andra ingredienser."
       }
     }
   ],
@@ -256,6 +266,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c74d63f66cd3e0e3fe4ab7ff34dd0791921a72bf31bfacd7f021cb93aa4faa27"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4f17b82b3dae41ddd7c4dd2db762b56f88e6a92242a6bfa0d02f3fb69d931d02"
     }
   }
 }

@@ -12,7 +12,8 @@
     "nl": "Erwten",
     "pl": "Groszek",
     "cs": "Hrášek",
-    "hr": "Grašak"
+    "hr": "Grašak",
+    "sv": "Ärtor"
   },
   "question": {
     "en": "Can cats eat peas?",
@@ -25,7 +26,8 @@
     "nl": "Mogen katten erwten eten?",
     "pl": "Czy koty mogą jeść groszek?",
     "cs": "Mohou kočky jíst hrášek?",
-    "hr": "Smiju li mačke jesti grašak?"
+    "hr": "Smiju li mačke jesti grašak?",
+    "sv": "Får katter äta ärtor?"
   },
   "url_slug": {
     "en": "peas",
@@ -38,7 +40,8 @@
     "nl": "erwten",
     "pl": "groszek",
     "cs": "hrasek",
-    "hr": "grasak"
+    "hr": "grasak",
+    "sv": "artor"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "nl": "Ja, een paar ongekruide erwten zijn af en toe prima als traktatie. Cats Protection en de ASPCA noemen allebei erwten als groente die je een kat kunt geven, en volgens de RSPCA mogen katten er maar een klein beetje van krijgen, als traktatie.",
     "pl": "Tak, od czasu do czasu kilka groszków bez dodatków jest w porządku. Cats Protection i ASPCA wymieniają groszek wśród warzyw, które można zaproponować kotu, a RSPCA podaje, że kot może dostać tylko niewielką ilość, jako smakołyk.",
     "cs": "Ano, pár zrnek hrášku bez dodatků je jako občasný pamlsek v pořádku. Cats Protection i ASPCA uvádějí hrášek jako zeleninu, kterou můžete kočce nabídnout, a RSPCA říká, že kočky ho mají dostat jen v malém množství jako pamlsek.",
-    "hr": "Da, nekoliko zrna graška bez dodataka u redu je kao povremena poslastica. Cats Protection i ASPCA navode grašak kao povrće koje možeš ponuditi mački, a RSPCA kaže da mačke smiju dobiti samo malu količinu kao poslasticu."
+    "hr": "Da, nekoliko zrna graška bez dodataka u redu je kao povremena poslastica. Cats Protection i ASPCA navode grašak kao povrće koje možeš ponuditi mački, a RSPCA kaže da mačke smiju dobiti samo malu količinu kao poslasticu.",
+    "sv": "Ja, några få ärtor utan tillsatser går bra som en godbit då och då. Cats Protection och ASPCA nämner båda ärtor som en grönsak du kan erbjuda katten, och RSPCA skriver att katter bara ska få en liten mängd som godbit."
   },
   "why": {
     "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -65,7 +69,8 @@
     "nl": "Cats Protection noemt erwten als een van de weinige groenten die je een kat kunt geven en adviseert gestoomde of gekookte groente zonder boter, zout of kruiden. De ASPCA stelt erwten voor katten voor, en volgens de RSPCA mogen katten ongekruide erwten, maar alleen een klein beetje als traktatie. Katten hebben geen groente nodig, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
     "pl": "Cats Protection wymienia groszek wśród niewielu warzyw, które można podawać kotu, i radzi gotować warzywa na parze lub w wodzie, bez masła, soli i przypraw. ASPCA poleca kotom groszek, a RSPCA podaje, że koty mogą jeść zwykły groszek, ale tylko w niewielkiej ilości, jako smakołyk. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "Cats Protection řadí hrášek mezi několik druhů zeleniny, které můžete kočce dát, a doporučuje zeleninu napařenou nebo vařenou, bez másla, soli a koření. ASPCA hrášek pro kočky navrhuje a RSPCA uvádí, že kočky mohou dostat hrášek bez dodatků, ale jen v malém množství jako pamlsek. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
-    "hr": "Cats Protection grašak ubraja među nekoliko vrsta povrća koje možeš dati mački i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. ASPCA za mačke predlaže grašak, a RSPCA kaže da mačke smiju jesti grašak bez dodataka, ali samo malu količinu kao poslasticu. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe."
+    "hr": "Cats Protection grašak ubraja među nekoliko vrsta povrća koje možeš dati mački i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. ASPCA za mačke predlaže grašak, a RSPCA kaže da mačke smiju jesti grašak bez dodataka, ali samo malu količinu kao poslasticu. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
+    "sv": "Cats Protection räknar ärtor bland de få grönsaker du kan ge en katt och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. ASPCA föreslår ärtor till katter, och RSPCA skriver att katter kan få ärtor utan tillsatser, men bara en liten mängd som godbit. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
-    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara."
+    "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
   },
   "serving": {
     "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
@@ -92,7 +98,8 @@
     "nl": "Een paar ongekruide erwten, gestoomd of gekookt, zonder boter, zout of kruiden.",
     "pl": "Kilka groszków bez dodatków, ugotowanych na parze lub w wodzie, bez masła, soli i przypraw.",
     "cs": "Pár zrnek hrášku, napařených nebo vařených, bez másla, soli a koření.",
-    "hr": "Nekoliko zrna graška bez dodataka, kuhanih na pari ili u vodi, bez maslaca, soli i začina."
+    "hr": "Nekoliko zrna graška bez dodataka, kuhanih na pari ili u vodi, bez maslaca, soli i začina.",
+    "sv": "Några få ärtor, ångade eller kokta, utan smör, salt eller kryddor."
   },
   "child": {
     "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -105,7 +112,8 @@
     "nl": "Een paar ongekruide erwten kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
     "pl": "Kilkoma zwykłymi groszkami można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Pár zrnek hrášku bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
-    "hr": "Nekoliko zrna graška bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak."
+    "hr": "Nekoliko zrna graška bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
+    "sv": "Några få ärtor utan tillsatser kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
-        "hr": "Treba li mačkama povrće?"
+        "hr": "Treba li mačkama povrće?",
+        "sv": "Behöver katter grönsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -133,7 +142,8 @@
         "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
-        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
       }
     }
   ],
@@ -249,6 +259,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b36cdd3d646648f6cb5ac9bb3735bb88692f99e8f3c8ee07c2a748b971056c28"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "eeb6756662655a0d7296d1319fc9f5d541e06e16cbbe07f3d3c222724d8658a7"
     }
   }
 }
