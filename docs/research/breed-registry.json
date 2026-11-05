@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "58879af4ba9957c100f1ebbc7ca9cc1a89284046032243d028699b0e26f6dedd"
+      "sha256": "c82b1153a3554cb5cb097755c965e7449e1eea96d25e0980b06d1fb9cc7d2a5b"
     }
   },
   "suitability_vocabulary": {
@@ -53826,7 +53826,12 @@
           "S717"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "standard-schnauzer.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
