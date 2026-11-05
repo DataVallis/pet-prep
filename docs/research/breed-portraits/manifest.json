@@ -1143,6 +1143,19 @@
             "prompt_hash": "sha256:625fbd06a35dcad7d329a4b2c6d039d0b4e029b155060a23d2b4d538b1ff879e",
             "generated_at": "2026-11-05T00:14:09+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "keeshond",
+            "species": "dog",
+            "colour": "grey-shaded",
+            "file": "dog/keeshond.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:abecdd14a25f4c45e988f4578e43c100b24b340b851ee3b3e1965a8046b4f033",
+            "generated_at": "2026-11-05T00:59:17+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
