@@ -4,56 +4,66 @@
   "name": {
     "en": "Green beans",
     "sl": "Stročji fižol",
-    "de": "Grüne Bohnen"
+    "de": "Grüne Bohnen",
+    "fr": "Haricots verts"
   },
   "question": {
     "en": "Can cats eat green beans?",
     "sl": "Ali lahko mačke jedo stročji fižol?",
-    "de": "Dürfen Katzen grüne Bohnen fressen?"
+    "de": "Dürfen Katzen grüne Bohnen fressen?",
+    "fr": "Les chats peuvent-ils manger des haricots verts ?"
   },
   "url_slug": {
     "en": "green-beans",
     "sl": "strocji-fizol",
-    "de": "gruene-bohnen"
+    "de": "gruene-bohnen",
+    "fr": "haricots-verts"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain green bean is fine as an occasional treat. The ASPCA says green beans can be a great green snack for a dog or cat, and Cats Protection suggests steamed or boiled green beans with no butter, salt or seasoning.",
     "sl": "Da, majhen košček navadnega stročjega fižola je v redu kot občasen priboljšek. ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko, Cats Protection pa predlaga stročji fižol, kuhan na pari ali v vodi, brez masla, soli in začimb.",
-    "de": "Ja, ein kleines Stück ungewürzte grüne Bohne ist als gelegentliches Leckerli in Ordnung. Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein, und Cats Protection empfiehlt gedämpfte oder gekochte grüne Bohnen ohne Butter, Salz oder Gewürze."
+    "de": "Ja, ein kleines Stück ungewürzte grüne Bohne ist als gelegentliches Leckerli in Ordnung. Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein, und Cats Protection empfiehlt gedämpfte oder gekochte grüne Bohnen ohne Butter, Salz oder Gewürze.",
+    "fr": "Oui, un petit morceau de haricot vert nature convient comme friandise occasionnelle. L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat, et Cats Protection suggère des haricots verts cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement."
   },
   "why": {
     "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
     "sl": "ASPCA navaja, da je stročji fižol lahko odličen zelen prigrizek za psa ali mačko. Cats Protection predlaga zelenjavo, kot je stročji fižol, kuhano na pari ali v vodi, brez masla, soli in začimb, RSPCA pa stročji fižol navaja kot primeren za mačke in pse v zmernih količinah, surov ali kuhan, a nezačinjen. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
-    "de": "Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein. Cats Protection empfiehlt gedämpftes oder gekochtes Gemüse wie grüne Bohnen ohne Butter, Salz oder Gewürze, und laut RSPCA sind grüne Bohnen in Maßen für Katzen und Hunde geeignet, roh oder gekocht, aber ungewürzt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen."
+    "de": "Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein. Cats Protection empfiehlt gedämpftes oder gekochtes Gemüse wie grüne Bohnen ohne Butter, Salz oder Gewürze, und laut RSPCA sind grüne Bohnen in Maßen für Katzen und Hunde geeignet, roh oder gekocht, aber ungewürzt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
+    "fr": "L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat. Cats Protection suggère des légumes cuits à la vapeur ou bouillis, comme les haricots verts, sans beurre, sel ni assaisonnement, et la RSPCA range les haricots verts parmi les aliments qui conviennent aux chats et aux chiens avec modération, crus ou cuits mais sans assaisonnement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt."
+    "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
   },
   "serving": {
     "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
     "sl": "Majhen košček, kuhan na pari ali v vodi, brez masla, soli in začimb.",
-    "de": "Ein kleines Stück, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze."
+    "de": "Ein kleines Stück, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
+    "fr": "Un petit morceau, cuit à la vapeur ou bouilli, sans beurre, sel ni assaisonnement."
   },
   "child": {
     "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček navadnega stročjega fižola je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-    "de": "Ein ungewürztes Stück grüne Bohne kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra."
+    "de": "Ein ungewürztes Stück grüne Bohne kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
+    "fr": "Un petit morceau de haricot vert nature fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
-        "de": "Brauchen Katzen Gemüse?"
+        "de": "Brauchen Katzen Gemüse?",
+        "fr": "Les chats ont-ils besoin de légumes ?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
       }
     }
   ],
@@ -125,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e980cde5cb92f7a2c78387e81d901c988bcfa65162d7f77fd0d5d231a6a0543f"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d8772a1f04c1adb78242df73542cc9ca8785c6505ead40ac4f2f58875b9068f"
     }
   }
 }
