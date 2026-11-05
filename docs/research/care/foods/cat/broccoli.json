@@ -13,7 +13,8 @@
     "pl": "Brokuły",
     "cs": "Brokolice",
     "hr": "Brokula",
-    "sv": "Broccoli"
+    "sv": "Broccoli",
+    "da": "Broccoli"
   },
   "question": {
     "en": "Can cats eat broccoli?",
@@ -27,7 +28,8 @@
     "pl": "Czy koty mogą jeść brokuły?",
     "cs": "Mohou kočky jíst brokolici?",
     "hr": "Smiju li mačke jesti brokulu?",
-    "sv": "Får katter äta broccoli?"
+    "sv": "Får katter äta broccoli?",
+    "da": "Må katte spise broccoli?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -41,7 +43,8 @@
     "pl": "brokuly",
     "cs": "brokolice",
     "hr": "brokula",
-    "sv": "broccoli"
+    "sv": "broccoli",
+    "da": "broccoli"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, od czasu do czasu mały kawałek brokuła bez dodatków jest w porządku. Cats Protection wymienia brokuły wśród warzyw, które można dawać kotu, ASPCA poleca kotom różyczki brokułów, a RSPCA radzi podawać je gotowane w wodzie lub na parze.",
     "cs": "Ano, malý kousek brokolice bez dodatků je jako občasný pamlsek v pořádku. Cats Protection řadí brokolici mezi zeleninu, kterou můžete kočce dát, ASPCA pro kočky navrhuje růžičky brokolice a RSPCA radí brokolici vařenou nebo napařenou.",
     "hr": "Da, mali komadić brokule bez dodataka u redu je kao povremena poslastica. Cats Protection brokulu navodi među povrćem koje možeš dati mački, ASPCA za mačke predlaže cvjetiće brokule, a RSPCA savjetuje da bude kuhana u vodi ili na pari.",
-    "sv": "Ja, en liten bit broccoli utan tillsatser går bra som en godbit då och då. Cats Protection räknar broccoli bland de grönsaker du kan ge katten, ASPCA föreslår broccolibuketter till katter och RSPCA rekommenderar kokt eller ångad broccoli."
+    "sv": "Ja, en liten bit broccoli utan tillsatser går bra som en godbit då och då. Cats Protection räknar broccoli bland de grönsaker du kan ge katten, ASPCA föreslår broccolibuketter till katter och RSPCA rekommenderar kokt eller ångad broccoli.",
+    "da": "Ja, et lille stykke naturel broccoli er fint som godbid af og til. Cats Protection nævner broccoli blandt de grøntsager, man kan give sin kat, ASPCA foreslår broccolibuketter til katte, og RSPCA anbefaler kogt eller dampet broccoli."
   },
   "why": {
     "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -70,7 +74,8 @@
     "pl": "Cats Protection wymienia brokuły wśród niewielu warzyw, które można podawać kotu, jeśli ma na nie ochotę. ASPCA poleca kotom różyczki brokułów, a RSPCA wymienia brokuły gotowane w wodzie lub na parze wśród pokarmów odpowiednich w umiarkowanych ilościach dla kotów i psów. Koty nie potrzebują warzyw, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka.",
     "cs": "Cats Protection uvádí brokolici mezi několika druhy zeleniny, které můžete kočce dát, pokud o ni stojí. ASPCA pro kočky navrhuje růžičky brokolice a RSPCA řadí vařenou nebo napařenou brokolici mezi potraviny vhodné pro kočky i psy s mírou. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "Cats Protection brokulu ubraja među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede. ASPCA za mačke predlaže cvjetiće brokule, a RSPCA brokulu kuhanu u vodi ili na pari navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
-    "sv": "Cats Protection nämner broccoli bland de få grönsaker du kan ge en katt, om den visar intresse. ASPCA föreslår broccolibuketter till katter, och RSPCA nämner broccoli, kokt eller ångad, bland maten som passar katter och hundar med måtta. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage."
+    "sv": "Cats Protection nämner broccoli bland de få grönsaker du kan ge en katt, om den visar intresse. ASPCA föreslår broccolibuketter till katter, och RSPCA nämner broccoli, kokt eller ångad, bland maten som passar katter och hundar med måtta. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
+    "da": "Cats Protection nævner broccoli blandt de få grøntsager, man kan give en kat, hvis den har lyst. ASPCA foreslår broccolibuketter til katte, og RSPCA har kogt eller dampet broccoli på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
   },
   "serving": {
     "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
@@ -99,7 +105,8 @@
     "pl": "Mała różyczka, ugotowana w wodzie lub na parze, bez masła, soli i przypraw.",
     "cs": "Malá růžička, vařená nebo napařená, bez másla, soli a koření.",
     "hr": "Mali cvjetić, kuhan u vodi ili na pari, bez maslaca, soli i začina.",
-    "sv": "En liten bukett, kokt eller ångad, utan smör, salt eller kryddor."
+    "sv": "En liten bukett, kokt eller ångad, utan smör, salt eller kryddor.",
+    "da": "En lille buket, kogt eller dampet, uden smør, salt eller krydderier."
   },
   "child": {
     "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -113,7 +120,8 @@
     "pl": "Małym kawałkiem ugotowanych brokułów można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Kousek uvařené brokolice může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
     "hr": "Komadić kuhane brokule mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-    "sv": "En liten bit kokt broccoli kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+    "sv": "En liten bit kokt broccoli kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+    "da": "Et lille stykke kogt broccoli kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
-        "sv": "Behöver katter grönsaker?"
+        "sv": "Behöver katter grönsaker?",
+        "da": "Har katte brug for grøntsager?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -143,7 +152,8 @@
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
       }
     }
   ],
@@ -260,6 +270,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ecb58e2fdb1cca9d34423dafac3165887d23faec0a3a65b0ec8290e6c3831345"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a29cd28b7afcc763687818d621ec7fd0e0b0ac1fcc442107033c2dd2c6394260"
     }
   }
 }

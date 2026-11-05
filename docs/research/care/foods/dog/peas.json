@@ -13,7 +13,8 @@
     "pl": "Groszek",
     "cs": "Hrášek",
     "hr": "Grašak",
-    "sv": "Ärtor"
+    "sv": "Ärtor",
+    "da": "Ærter"
   },
   "question": {
     "en": "Can dogs eat peas?",
@@ -27,7 +28,8 @@
     "pl": "Czy psy mogą jeść groszek?",
     "cs": "Mohou psi jíst hrášek?",
     "hr": "Smiju li psi jesti grašak?",
-    "sv": "Får hundar äta ärtor?"
+    "sv": "Får hundar äta ärtor?",
+    "da": "Må hunde spise ærter?"
   },
   "url_slug": {
     "en": "peas",
@@ -41,7 +43,8 @@
     "pl": "groszek",
     "cs": "hrasek",
     "hr": "grasak",
-    "sv": "artor"
+    "sv": "artor",
+    "da": "aerter"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "pl": "Tak, jako okazjonalny smakołyk. Groszek zielony, w tym groszek cukrowy, groszek sugar snap i zwykły groszek ogrodowy, nie jest dla psów toksyczny. Podawaj go świeży lub mrożony, ale nie z puszki, bo groszek z puszki zwykle ma dużo dodanego sodu.",
     "cs": "Ano, jako občasný pamlsek. Zelený hrášek, včetně hrášku s plochými jedlými lusky, cukrového hrášku a zahradního hrášku, není pro psy toxický. Dávejte ho čerstvý nebo mražený, ale ne z konzervy, protože konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku.",
     "hr": "Da, kao povremena poslastica. Zeleni grašak nije otrovan za pse, ni onaj čija se mahuna jede, ni vrtni grašak koji se ljušti. Daj ga svježeg ili smrznutog, ali ne iz konzerve, jer grašak iz konzerve obično sadrži mnogo dodanog natrija.",
-    "sv": "Ja, som en godbit då och då. Gröna ärtor, även sockerärtor, snöärtor och trädgårdsärtor, är inte giftiga för hundar. Ge dem färska eller frysta, men inte ärtor på burk, eftersom de oftast innehåller mycket tillsatt natrium."
+    "sv": "Ja, som en godbit då och då. Gröna ärtor, även sockerärtor, snöärtor och trädgårdsärtor, är inte giftiga för hundar. Ge dem färska eller frysta, men inte ärtor på burk, eftersom de oftast innehåller mycket tillsatt natrium.",
+    "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -70,7 +74,8 @@
     "pl": "Groszek nie jest dla psów trujący ani toksyczny, ale pies nie potrzebuje w diecie owoców ani warzyw, więc traktuj je jako okazjonalny smakołyk. Groszek z puszki zwykle ma dużo dodanego sodu, który szkodzi psom. Strąki mogą utknąć psu w gardle i spowodować zadławienie.",
     "cs": "Hrášek není pro psy toxický ani jedovatý, ale ovoce a zelenina nejsou ve stravě psa nutné a měly by být jen občasným pamlskem. Konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku, který je pro psy škodlivý. Lusky mohou psovi uvíznout v krku a způsobit dušení.",
     "hr": "Grašak nije otrovan za pse, ali voće i povrće nisu nužni u prehrani psa i trebaju biti samo povremena poslastica. Grašak iz konzerve obično sadrži mnogo dodanog natrija, koji je štetan za pse. Mahune graška mogu zaglaviti psu u grlu i izazvati gušenje.",
-    "sv": "Ärtor är inte giftiga för hundar, men frukt och grönsaker behövs inte i hundens kost och bör ses som en godbit då och då. Ärtor på burk innehåller oftast mycket tillsatt natrium, vilket är skadligt för hundar. Ärtskidor kan fastna i hundens hals och orsaka kvävning."
+    "sv": "Ärtor är inte giftiga för hundar, men frukt och grönsaker behövs inte i hundens kost och bör ses som en godbit då och då. Ärtor på burk innehåller oftast mycket tillsatt natrium, vilket är skadligt för hundar. Ärtskidor kan fastna i hundens hals och orsaka kvävning.",
+    "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "pl": "Jak przy każdym nowym pokarmie obserwuj psa, czy nie pojawiają się reakcje, takie jak biegunka lub wymioty.",
     "cs": "Jako u každé nové potraviny sledujte, zda se u psa neobjeví reakce, například průjem nebo zvracení.",
     "hr": "Kao i kod svake nove hrane, prati ima li pas reakcije poput proljeva ili povraćanja.",
-    "sv": "Som med all ny mat: håll utkik efter reaktioner som diarré eller kräkningar."
+    "sv": "Som med all ny mat: håll utkik efter reaktioner som diarré eller kräkningar.",
+    "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -99,7 +105,8 @@
     "pl": "Tylko świeży, mrożony lub rozmrożony groszek, nigdy z puszki. Groszek ogrodowy zawsze wyłuskuj ze strąków i uważaj, bo strąki mogą spowodować zadławienie.",
     "cs": "Jen čerstvý, mražený nebo rozmražený hrášek, nikdy z konzervy. Zahradní hrášek vždy vyluštěte a s lusky buďte opatrní, protože mohou způsobit dušení.",
     "hr": "Samo svjež, smrznut ili odmrznut grašak, nikad iz konzerve. Vrtni grašak uvijek oljušti, a s mahunama pazi, jer mogu izazvati gušenje.",
-    "sv": "Bara färska, frysta eller upptinade ärtor, aldrig ärtor på burk. Ta alltid ut trädgårdsärtorna ur skidorna och var försiktig med ärtskidor, som kan orsaka kvävning."
+    "sv": "Bara färska, frysta eller upptinade ärtor, aldrig ärtor på burk. Ta alltid ut trädgårdsärtorna ur skidorna och var försiktig med ärtskidor, som kan orsaka kvävning.",
+    "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -113,7 +120,8 @@
     "pl": "Psy mogą dostać kilka groszków jako smakołyk. Dorosły najpierw wyłuskuje groszek ze strąków.",
     "cs": "Psi můžou dostat pár zrnek hrášku jako pamlsek. Dospělý nejdřív zahradní hrášek vyluští z lusků.",
     "hr": "Psi smiju dobiti nekoliko zrna graška kao poslasticu. Odrasla osoba prvo oljušti vrtni grašak.",
-    "sv": "Hundar kan få några ärtor som godbit. En vuxen tar först ut trädgårdsärtorna ur skidorna."
+    "sv": "Hundar kan få några ärtor som godbit. En vuxen tar först ut trädgårdsärtorna ur skidorna.",
+    "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "pl": "Czy psy mogą jeść strąki groszku?",
         "cs": "Mohou psi jíst hrachové lusky?",
         "hr": "Smiju li psi jesti mahune graška?",
-        "sv": "Får hundar äta ärtskidor?"
+        "sv": "Får hundar äta ärtskidor?",
+        "da": "Må hunde spise ærtebælge?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -143,7 +152,8 @@
         "pl": "Jeśli strąki są jadalne dla ludzi, pies też może je zjeść, ale zachowaj ostrożność: mogą utknąć w gardle i spowodować zadławienie. Groszek ogrodowy zawsze trzeba wyłuskać.",
         "cs": "Pokud lusk mohou jíst lidé, může ho dostat i pes, ale pozor: lusky mohou uvíznout v krku a způsobit dušení. Zahradní hrášek je třeba vždy vyluštit.",
         "hr": "Ako ljudi mogu jesti mahunu, može je jesti i tvoj pas, ali pazi: mahune mogu zaglaviti u grlu i izazvati gušenje. Vrtni grašak uvijek treba oljuštiti.",
-        "sv": "Om skidan går att äta för människor går den också bra för hunden, men var försiktig: ärtskidor kan fastna i halsen och orsaka kvävning. Trädgårdsärtor ska alltid tas ur skidorna."
+        "sv": "Om skidan går att äta för människor går den också bra för hunden, men var försiktig: ärtskidor kan fastna i halsen och orsaka kvävning. Trädgårdsärtor ska alltid tas ur skidorna.",
+        "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles."
       }
     },
     {
@@ -159,7 +169,8 @@
         "pl": "Czy groszek w karmie dla psów jest problemem?",
         "cs": "Vadí hrášek v psím krmivu?",
         "hr": "Je li grašak u hrani za pse problem?",
-        "sv": "Är ärtor i hundfoder ett problem?"
+        "sv": "Är ärtor i hundfoder ett problem?",
+        "da": "Er ærter i hundefoder et problem?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -173,7 +184,8 @@
         "pl": "Trwają badania, czy groszek w karmie ma związek z chorobami serca u psów. Jeśli twój pies jadł karmę, w której groszek jest jednym z głównych składników, warto porozmawiać z weterynarzem.",
         "cs": "Probíhá výzkum, zda hrášek nehraje roli při srdečních onemocněních psů. Pokud váš pes snědl krmivo, v němž je hrášek hlavní složkou, může být dobré promluvit si s veterinářem.",
         "hr": "Istraživanja o tome ima li grašak ulogu u bolestima srca kod pasa još traju. Ako je tvoj pas jeo hranu u kojoj je grašak glavni sastojak, možda želiš razgovarati s veterinarom.",
-        "sv": "Forskning pågår om huruvida ärtor kan bidra till hjärtsjukdom hos hundar. Om hunden har ätit foder med ärtor som huvudingrediens kan det vara bra att prata med veterinären."
+        "sv": "Forskning pågår om huruvida ärtor kan bidra till hjärtsjukdom hos hundar. Om hunden har ätit foder med ärtor som huvudingrediens kan det vara bra att prata med veterinären.",
+        "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge."
       }
     }
   ],
@@ -289,6 +301,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f72dadc406dcb458c660965bf5e3b2a7b581b97f86227737b0c9ad1c0239bfe5"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e43580524b70e13f889bd14c29ec5f89cb5c34290fd1e05bdde1978f03f86a51"
     }
   }
 }
