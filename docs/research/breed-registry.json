@@ -9,7 +9,7 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "1c41a882ad37596ff2c0b96a0cf31f520e60efa8bfd9095f9d6df1e28665374d"
+      "sha256": "f82089bd4ebfd9eae6cc01cd91cf377d1b2e67b745672bbfd80b3be6c52f6928"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "d7e6035bfeb9964d55d82864e44a04ac26f386a9fe6163a23fae5b2f32cd1b15"
+      "sha256": "9bc6b12eb49cb6c9753a16fd78dedb9c215271db1aa5155c1dc3f0e468e193fc"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -53545,15 +53545,6 @@
           }
         ],
         "consider": [
-          {
-            "tag": "experienced_owner",
-            "source_ids": [
-              "S717"
-            ],
-            "refs": [
-              "standard_schnauzer.behaviour.experienced_owner"
-            ]
-          },
           {
             "tag": "needs_mental_stimulation",
             "source_ids": [

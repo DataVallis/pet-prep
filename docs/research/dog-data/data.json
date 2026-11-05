@@ -49376,7 +49376,7 @@
         "source_id": "S717",
         "quote": "This breed does best with patient, experienced pet parents.",
         "confidence": "high",
-        "notes": "PetMD (S717). PDSA (S715): 'They can be stubborn so will need patience and commitment when training.' VCA (S716): 'can be quite headstrong' (fragment). Basis of experienced_owner."
+        "notes": "PetMD (S717). PDSA (S715): 'They can be stubborn so will need patience and commitment when training.' VCA (S716): 'can be quite headstrong' (fragment). Not a chip: experienced_owner names a powerful dog (wording does not match) — open for David."
       },
       "time_alone": {
         "value": "prefers to be with its family rather than isolated",
@@ -74374,16 +74374,6 @@
         ],
         "consider": [
           {
-            "tag": "experienced_owner",
-            "source_ids": [
-              "S717"
-            ],
-            "refs": [
-              "standard_schnauzer.behaviour.experienced_owner"
-            ],
-            "quote": "S717 'This breed does best with patient, experienced pet parents.'"
-          },
-          {
             "tag": "needs_mental_stimulation",
             "source_ids": [
               "S716"
@@ -74410,7 +74400,8 @@
           "apartment": "RKC 'Size of home: Small house' (S714) — runbook: only from RKC 'Flat/ Apartment'.",
           "large_home": "RKC 'Small house' (S714).",
           "small_children": "No explicit small-children rating; PDSA is conditional (early introduction, S715).",
-          "first_time_owner": "PetMD: does best with patient, experienced pet parents (S717) → experienced_owner.",
+          "experienced_owner": "Review 2026-11-05: the chip names a powerful dog; PetMD 'This breed does best with patient, experienced pet parents.' (S717) does not match its wording (German Wirehaired Pointer precedent). independent_experienced_owner neither: no single quote names a stubborn dog for an experienced owner (Shiba Inu precedent; VCA 'can be quite headstrong', S716, is a training note). Open for David.",
+          "first_time_owner": "PetMD: does best with patient, experienced pet parents (S717) — no owner chip (see experienced_owner).",
           "active_family": "RKC 'Up to 1 hour per day' (S714).",
           "long_daily_exercise": "60 minutes a day (S714, S715).",
           "other_pets": "VCA 'Usually gets along with household pets.' is hedged and VCA 'Can be aggressive toward strange dogs.' / PetMD 'reserved around … other animals' (S716, S717) point the other way.",
@@ -74425,7 +74416,7 @@
           "hypoallergenic": "Never a tag (runbook).",
           "welfare": "RKC Breed Watch Category 1 (S714), no conformation welfare statement → no welfare chip; skin (comedo syndrome), hip dysplasia, DCM, eye conditions, pulmonic stenosis, hypothyroidism, haemophilia A and bladder stones are register health keys / breeder-checklist items only."
         },
-        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider experienced_owner, needs_mental_stimulation, frequent_grooming"
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider needs_mental_stimulation, frequent_grooming (no owner chip — review 2026-11-05)"
       },
       "marketing": {
         "value": "in the app: yes; in marketing: yes (not a welfare breed)",

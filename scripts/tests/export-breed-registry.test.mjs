@@ -3034,7 +3034,7 @@ test('Standard Schnauzer (M5-R10-95): RKC up to 1 hour, FCI 182 height 45–50 c
   ]);
   assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
   assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['family_pet', 'children']);
-  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['experienced_owner', 'needs_mental_stimulation', 'frequent_grooming']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['needs_mental_stimulation', 'frequent_grooming']);
   // Only existing register health keys; pulmonic stenosis / haemophilia A have no key with website words → research only.
   assert.deepEqual(d.health.map((h) => h.key), ['hip_dysplasia', 'heart_muscle_disease', 'skin_comedo_allergy', 'pra_inherited_blindness', 'hypothyroidism', 'bladder_stones']);
   assert.equal(d.breeder_checklist.status, 'listed');

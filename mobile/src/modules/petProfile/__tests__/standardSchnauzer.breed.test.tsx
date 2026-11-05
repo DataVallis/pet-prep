@@ -59,7 +59,7 @@ describe('M5-R10-95 Standard Schnauzer', () => {
     expect(dog?.search_keywords).toEqual(['standard schnauzer', 'srednji šnavcer', 'srednji snavcer', 'mittelschnauzer', 'schnauzer', 'šnavcer']);
     expect(dog?.suitability).toEqual({
       suits: ['family_pet', 'children'],
-      consider: ['experienced_owner', 'needs_mental_stimulation', 'frequent_grooming'],
+      consider: ['needs_mental_stimulation', 'frequent_grooming'],
     });
   });
 
@@ -84,7 +84,7 @@ describe('M5-R10-95 Standard Schnauzer', () => {
     expect(suits).toHaveTextContent(/družino z otroki/);
     expect(suits).not.toHaveTextContent(/dom z drugimi ljubljenčki/);
     const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
-    expect(consider).toHaveTextContent(/potrebuje izkušenega lastnika/);
+    expect(consider).not.toHaveTextContent(/izkušen/);
     expect(consider).toHaveTextContent(/potrebuje miselne izzive/);
     expect(consider).toHaveTextContent(/potrebuje česanje večkrat na teden/);
     expect(consider).not.toHaveTextContent(/izpada mu dlaka/);
@@ -110,7 +110,7 @@ describe('M5-R10-95 Standard Schnauzer', () => {
     await inEnglish(() => {
       renderPicker(FALLBACK_CATALOGUE);
       const consider = screen.getByTestId(`breed-suitability-${KEY}-consider`);
-      expect(consider).toHaveTextContent(/needs an experienced owner/);
+      expect(consider).not.toHaveTextContent(/experienced owner/);
       expect(consider).toHaveTextContent(/needs mental challenges/);
       expect(consider).toHaveTextContent(/needs brushing several times a week/);
       expect(consider).not.toHaveTextContent(/hypoallergenic/i);

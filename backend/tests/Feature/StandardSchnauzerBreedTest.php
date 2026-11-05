@@ -40,7 +40,7 @@ use function Pest\Laravel\postJson;
 | week (PDSA "2-3 times a week", M5-R13), puppy socialisation with the PetMD quote (S717, M5-R17), the child's nail trim and
 | ear cleaning once a week (PetMD "every one to two weeks", M5-R19 / M5-R20), the parent's bath reminder every 4 weeks and
 | groomer reminder every 12 weeks (PetMD "Monthly" / "quarterly", M5-R19 / M5-R18). RKC Breed Watch Category 1 → in
-| marketing; suits family_pet / children; consider experienced_owner / needs_mental_stimulation / frequent_grooming;
+| marketing; suits family_pet / children; consider needs_mental_stimulation / frequent_grooming (no owner chip);
 | pepper-and-salt portrait.
 */
 
@@ -424,7 +424,7 @@ describe('GET /api/breeds', function () {
             'search_keywords' => seededBreedConfig('standard_schnauzer')['search_keywords'], 'sort_order' => 890,
             'suitability' => [
                 'suits' => ['family_pet', 'children'],
-                'consider' => ['experienced_owner', 'needs_mental_stimulation', 'frequent_grooming'],
+                'consider' => ['needs_mental_stimulation', 'frequent_grooming'],
             ],
         ]);
     });
@@ -507,10 +507,12 @@ describe('no health statistics in the app; in marketing (runbook §1, §3)', fun
 });
 
 describe('suitability tags (own file, runbook "Own files only")', function () {
-    it('suits a family with children; consider an experienced owner, mental stimulation and grooming', function () {
+    it('suits a family with children; consider mental stimulation and grooming — no owner chip', function () {
         $tags = app(BreedSuitability::class)->for(BreedType::StandardSchnauzer);
         expect($tags['suits'])->toBe(['family_pet', 'children'])
-            ->and($tags['consider'])->toBe(['experienced_owner', 'needs_mental_stimulation', 'frequent_grooming'])
+            ->and($tags['consider'])->toBe(['needs_mental_stimulation', 'frequent_grooming'])
+            // The "powerful dog" chip does not match PetMD's wording; no single quote names a stubborn dog for an experienced owner.
+            ->and($tags['consider'])->not->toContain('experienced_owner')->not->toContain('independent_experienced_owner')
             ->and($tags['suits'])->not->toContain('small_children')->not->toContain('apartment')->not->toContain('large_home')
             ->not->toContain('low_shedding')->not->toContain('other_pets')->not->toContain('first_time_owner')
             ->and($tags['consider'])->not->toContain('sheds')->not->toContain('shorter_lifespan')->not->toContain('chases_small_pets');
