@@ -7,7 +7,8 @@
     "de": "Gurke",
     "fr": "Concombre",
     "es": "Pepino",
-    "it": "Cetriolo"
+    "it": "Cetriolo",
+    "pt": "Pepino"
   },
   "question": {
     "en": "Can cats eat cucumber?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Gurken fressen?",
     "fr": "Les chats peuvent-ils manger du concombre ?",
     "es": "¿Pueden los gatos comer pepino?",
-    "it": "I gatti possono mangiare il cetriolo?"
+    "it": "I gatti possono mangiare il cetriolo?",
+    "pt": "Os gatos podem comer pepino?"
   },
   "url_slug": {
     "en": "cucumber",
@@ -23,7 +25,8 @@
     "de": "gurke",
     "fr": "concombre",
     "es": "pepino",
-    "it": "cetriolo"
+    "it": "cetriolo",
+    "pt": "pepino"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein kleines Stück pure Gurke ist als gelegentliches Leckerli in Ordnung. Die ASPCA stuft Gurke als ungiftig für Katzen ein. Katzen brauchen jedoch kein Gemüse, und jedes Pflanzenmaterial kann den Magen verstimmen – bleiben Sie also bei einem winzigen Extra.",
     "fr": "Oui, un petit morceau de concombre nature convient comme friandise occasionnelle. L’ASPCA classe le concombre parmi les aliments non toxiques pour les chats, mais les chats n’ont pas besoin de légumes et toute matière végétale peut irriter l’estomac : gardez-le pour un tout petit extra.",
     "es": "Sí, un trocito de pepino sin condimentar está bien como premio ocasional. La ASPCA considera el pepino no tóxico para los gatos, pero los gatos no necesitan verdura y cualquier materia vegetal puede sentarles mal al estómago, así que ofrécelo solo como un pequeño extra.",
-    "it": "Sì, un pezzettino di cetriolo al naturale va bene come premio occasionale. Per l’ASPCA il cetriolo non è tossico per i gatti, ma i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può far venire mal di stomaco: consideralo solo un piccolissimo extra."
+    "it": "Sì, un pezzettino di cetriolo al naturale va bene come premio occasionale. Per l’ASPCA il cetriolo non è tossico per i gatti, ma i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può far venire mal di stomaco: consideralo solo un piccolissimo extra.",
+    "pt": "Sim, um pedacinho de pepino natural não faz mal como guloseima ocasional. A ASPCA considera o pepino não tóxico para os gatos, mas os gatos não precisam de legumes e qualquer matéria vegetal pode causar indisposição de estômago, por isso deve ser só um extra pequenino."
   },
   "why": {
     "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -40,7 +44,8 @@
     "de": "Die ASPCA stuft die Gartengurke als ungiftig für Katzen ein. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten sparsam bleiben, und laut ASPCA kann Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe le concombre de jardin parmi les plantes non toxiques pour les chats. Les chats n’ont pas besoin de fruits ni de légumes dans leur alimentation, les friandises doivent rester peu nombreuses, et l’ASPCA précise que toute matière végétale peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "La ASPCA considera el pepino de huerta no tóxico para los gatos. Los gatos no necesitan fruta ni verdura en su dieta, los premios deben ser pocos y la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
-    "it": "L’ASPCA indica il cetriolo comune come non tossico per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
+    "it": "L’ASPCA indica il cetriolo comune come non tossico per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
+    "pt": "A ASPCA considera o pepino de horta não tóxico para os gatos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e indisposição de estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
   },
   "serving": {
     "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -57,7 +63,8 @@
     "de": "Ab und zu ein kleines Stück pur; es zählt zur täglichen Futtermenge Ihrer Katze.",
     "fr": "Un petit morceau nature de temps en temps, compté dans la ration quotidienne de votre chat.",
     "es": "Un trocito pequeño, sin condimentar y de vez en cuando; cuéntalo dentro de la comida diaria de tu gato.",
-    "it": "Ogni tanto un pezzettino di cetriolo al naturale, da conteggiare nella razione giornaliera del gatto."
+    "it": "Ogni tanto un pezzettino di cetriolo al naturale, da conteggiare nella razione giornaliera del gatto.",
+    "pt": "Um pedacinho natural, de vez em quando, a contar para a ração diária do teu gato."
   },
   "child": {
     "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -65,7 +72,8 @@
     "de": "Ein kleines Stück Gurke kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de concombre fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
     "es": "Un trocito de pepino puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di cetriolo come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di cetriolo come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de pepino pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan verdura los gatos?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -83,7 +92,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
       }
     }
   ],
@@ -162,6 +172,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dcb436b4fef689a79262bc1195a8df9f99e2c542d2ef2296dfbb6c4763496eff"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d829554f43d9d329ecc5eb7729c84bc7b2b6012513f4618c522c92ad94b58412"
     }
   }
 }

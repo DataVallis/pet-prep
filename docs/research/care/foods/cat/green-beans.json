@@ -7,7 +7,8 @@
     "de": "Grüne Bohnen",
     "fr": "Haricots verts",
     "es": "Judías verdes",
-    "it": "Fagiolini"
+    "it": "Fagiolini",
+    "pt": "Feijão-verde"
   },
   "question": {
     "en": "Can cats eat green beans?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen grüne Bohnen fressen?",
     "fr": "Les chats peuvent-ils manger des haricots verts ?",
     "es": "¿Pueden los gatos comer judías verdes?",
-    "it": "I gatti possono mangiare i fagiolini?"
+    "it": "I gatti possono mangiare i fagiolini?",
+    "pt": "Os gatos podem comer feijão-verde?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -23,7 +25,8 @@
     "de": "gruene-bohnen",
     "fr": "haricots-verts",
     "es": "judias-verdes",
-    "it": "fagiolini"
+    "it": "fagiolini",
+    "pt": "feijao-verde"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein kleines Stück ungewürzte grüne Bohne ist als gelegentliches Leckerli in Ordnung. Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein, und Cats Protection empfiehlt gedämpfte oder gekochte grüne Bohnen ohne Butter, Salz oder Gewürze.",
     "fr": "Oui, un petit morceau de haricot vert nature convient comme friandise occasionnelle. L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat, et Cats Protection suggère des haricots verts cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement.",
     "es": "Sí, un trocito de judía verde sin condimentar está bien como premio ocasional. La ASPCA dice que las judías verdes pueden ser un estupendo tentempié verde para perros y gatos, y Cats Protection sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos.",
-    "it": "Sì, un pezzettino di fagiolino senza condimenti va bene come premio occasionale. L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti, e Cats Protection consiglia fagiolini cotti al vapore o lessati, senza burro, sale o condimenti."
+    "it": "Sì, un pezzettino di fagiolino senza condimenti va bene come premio occasionale. L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti, e Cats Protection consiglia fagiolini cotti al vapore o lessati, senza burro, sale o condimenti.",
+    "pt": "Sim, um pedacinho de feijão-verde sem tempero não faz mal como guloseima ocasional. A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos, e a Cats Protection sugere-o cozido a vapor ou em água, sem manteiga, sal nem temperos."
   },
   "why": {
     "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "de": "Laut ASPCA können grüne Bohnen ein toller grüner Snack für Hunde und Katzen sein. Cats Protection empfiehlt gedämpftes oder gekochtes Gemüse wie grüne Bohnen ohne Butter, Salz oder Gewürze, und laut RSPCA sind grüne Bohnen in Maßen für Katzen und Hunde geeignet, roh oder gekocht, aber ungewürzt. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
     "fr": "L’ASPCA indique que les haricots verts peuvent être un excellent en-cas vert pour un chien ou un chat. Cats Protection suggère des légumes cuits à la vapeur ou bouillis, comme les haricots verts, sans beurre, sel ni assaisonnement, et la RSPCA range les haricots verts parmi les aliments qui conviennent aux chats et aux chiens avec modération, crus ou cuits mais sans assaisonnement. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "La ASPCA dice que las judías verdes pueden ser un estupendo tentempié verde para perros y gatos. Cats Protection sugiere dar verduras como las judías verdes al vapor o hervidas, sin mantequilla, sal ni condimentos, y la RSPCA incluye las judías verdes entre los alimentos adecuados para gatos y perros con moderación, crudas o cocidas pero sin condimentar. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
-    "it": "L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti. Cats Protection consiglia verdure cotte al vapore o lessate, come i fagiolini, senza burro, sale o condimenti, e la RSPCA mette i fagiolini tra gli alimenti adatti a gatti e cani in piccole quantità, crudi o cotti ma senza condimenti. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco."
+    "it": "L’ASPCA dice che i fagiolini possono essere un ottimo spuntino verde per cani e gatti. Cats Protection consiglia verdure cotte al vapore o lessate, come i fagiolini, senza burro, sale o condimenti, e la RSPCA mette i fagiolini tra gli alimenti adatti a gatti e cani in piccole quantità, crudi o cotti ma senza condimenti. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
+    "pt": "A ASPCA diz que o feijão-verde pode ser uma ótima guloseima verde para cães e gatos. A Cats Protection sugere legumes como o feijão-verde cozidos a vapor ou em água, sem manteiga, sal nem temperos, e a RSPCA refere o feijão-verde, cru ou cozinhado mas sem temperos, entre os alimentos que gatos e cães podem comer com moderação. Os gatos não precisam de legumes, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselas y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
   },
   "serving": {
     "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
@@ -57,7 +63,8 @@
     "de": "Ein kleines Stück, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit morceau, cuit à la vapeur ou bouilli, sans beurre, sel ni assaisonnement.",
     "es": "Un trocito, al vapor o hervido, sin mantequilla, sal ni condimentos.",
-    "it": "Un pezzettino, cotto al vapore o lessato, senza burro, sale o condimenti."
+    "it": "Un pezzettino, cotto al vapore o lessato, senza burro, sale o condimenti.",
+    "pt": "Um pedacinho, cozido a vapor ou em água, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -65,7 +72,8 @@
     "de": "Ein ungewürztes Stück grüne Bohne kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de haricot vert nature fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
     "es": "Un trocito de judía verde sin condimentar puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di fagiolino senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di fagiolino senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de feijão-verde sem tempero pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan verdura los gatos?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -83,7 +92,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
       }
     }
   ],
@@ -170,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bfed4ed4b0d4c6c39cb827b84ef4e10cee04f85899c8dd3d881bbcd792ca9b7e"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c6c0327053d7cda14e7880f6c58ab10c00e94c9ac5df0910ae4851c13cfc813"
     }
   }
 }

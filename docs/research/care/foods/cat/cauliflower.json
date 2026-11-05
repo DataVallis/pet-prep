@@ -7,7 +7,8 @@
     "de": "Blumenkohl",
     "fr": "Chou-fleur",
     "es": "Coliflor",
-    "it": "Cavolfiore"
+    "it": "Cavolfiore",
+    "pt": "Couve-flor"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Katzen Blumenkohl fressen?",
     "fr": "Les chats peuvent-ils manger du chou-fleur ?",
     "es": "¿Pueden los gatos comer coliflor?",
-    "it": "I gatti possono mangiare il cavolfiore?"
+    "it": "I gatti possono mangiare il cavolfiore?",
+    "pt": "Os gatos podem comer couve-flor?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -23,7 +25,8 @@
     "de": "blumenkohl",
     "fr": "chou-fleur",
     "es": "coliflor",
-    "it": "cavolfiore"
+    "it": "cavolfiore",
+    "pt": "couve-flor"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, ein kleines Stück ungewürzter, gekochter Blumenkohl ist als gelegentliches Leckerli in Ordnung. Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind.",
     "fr": "Oui, un petit morceau de chou-fleur cuit nature convient comme friandise occasionnelle. La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments qui conviennent aux chats et aux chiens avec modération.",
     "es": "Sí, un trocito de coliflor cocida y sin condimentar está bien como premio ocasional. La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos adecuados para gatos y perros con moderación.",
-    "it": "Sì, un pezzettino di cavolfiore cotto, senza condimenti, va bene come premio occasionale. La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti adatti a gatti e cani in piccole quantità."
+    "it": "Sì, un pezzettino di cavolfiore cotto, senza condimenti, va bene come premio occasionale. La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti adatti a gatti e cani in piccole quantità.",
+    "pt": "Sim, um pedacinho de couve-flor cozinhada e sem tempero não faz mal como guloseima ocasional. A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos que gatos e cães podem comer com moderação."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -40,7 +44,8 @@
     "de": "Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Cats Protection rät zu Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen kein Gemüse, Leckerlis sollten sparsam bleiben, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
     "fr": "La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments sans danger qui conviennent aux chats et aux chiens avec modération. Cats Protection recommande des légumes sans beurre, sel ni assaisonnement. Les chats n’ont pas besoin de légumes, les friandises doivent rester peu nombreuses, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
     "es": "La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos seguros para mascotas, adecuados para gatos y perros con moderación. Cats Protection aconseja dar la verdura sin mantequilla, sal ni condimentos. Los gatos no necesitan verdura, los premios deben ser pocos y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
-    "it": "La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti sicuri per gatti e cani in piccole quantità. Cats Protection consiglia verdure senza burro, sale o condimenti. I gatti non hanno bisogno di verdure, i premi vanno dati con parsimonia e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco."
+    "it": "La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti sicuri per gatti e cani in piccole quantità. Cats Protection consiglia verdure senza burro, sale o condimenti. I gatti non hanno bisogno di verdure, i premi vanno dati con parsimonia e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
+    "pt": "A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos seguros que gatos e cães podem comer com moderação. A Cats Protection aconselha legumes sem manteiga, sal nem temperos. Os gatos não precisam de legumes, as guloseimas devem ser poucas, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dársela y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -57,7 +63,8 @@
     "de": "Gekocht und in kleine Stücke geschnitten, ohne Butter, Salz oder Gewürze.",
     "fr": "Cuit et coupé en petits morceaux, sans beurre, sel ni assaisonnement.",
     "es": "Cocida y cortada en trozos pequeños, sin mantequilla, sal ni condimentos.",
-    "it": "Cotto e tagliato a pezzetti, senza burro, sale o condimenti."
+    "it": "Cotto e tagliato a pezzetti, senza burro, sale o condimenti.",
+    "pt": "Cozinhada e cortada em pedaços pequenos, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -65,7 +72,8 @@
     "de": "Ein kleines Stück gekochter Blumenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de chou-fleur cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
     "es": "Un trocito de coliflor cocida puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di cavolfiore cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di cavolfiore cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de couve-flor cozinhada pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan verdura los gatos?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -83,7 +92,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra."
       }
     }
   ],
@@ -158,6 +168,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2826b564269955022a26ae4a302bf1256e5edaf3d8dfe354c4ed53320c1f08f2"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "67247af1914237fa316d04518bbd4fc97a6221adf7efb73104def423dd1d37de"
     }
   }
 }

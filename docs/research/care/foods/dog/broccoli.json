@@ -7,7 +7,8 @@
     "de": "Brokkoli",
     "fr": "Brocoli",
     "es": "Brócoli",
-    "it": "Broccoli"
+    "it": "Broccoli",
+    "pt": "Brócolos"
   },
   "question": {
     "en": "Can dogs eat broccoli?",
@@ -15,7 +16,8 @@
     "de": "Dürfen Hunde Brokkoli fressen?",
     "fr": "Les chiens peuvent-ils manger du brocoli ?",
     "es": "¿Pueden los perros comer brócoli?",
-    "it": "I cani possono mangiare i broccoli?"
+    "it": "I cani possono mangiare i broccoli?",
+    "pt": "Os cães podem comer brócolos?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -23,7 +25,8 @@
     "de": "brokkoli",
     "fr": "brocoli",
     "es": "brocoli",
-    "it": "broccoli"
+    "it": "broccoli",
+    "pt": "brocolos"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "de": "Ja, in kleinen Mengen als gelegentliches Leckerli, roh oder gekocht, ohne Gewürze oder Öle. Schneiden Sie ihn mundgerecht klein: Die Röschen können den Magen reizen, und zähe Stiele können die Speiseröhre verstopfen, vor allem bei kleinen Hunden.",
     "fr": "Oui, en petite quantité comme friandise occasionnelle, cru ou cuit, sans assaisonnement ni huile. Coupez-le en morceaux de la taille d’une bouchée : les bouquets peuvent irriter l’estomac, et les tiges dures peuvent obstruer l’œsophage, surtout chez les petits chiens.",
     "es": "Sí, en pequeñas cantidades y como premio ocasional, crudo o cocido, sin condimentos ni aceites. Córtalo en trozos del tamaño de un bocado: los ramilletes pueden irritar el estómago y los tallos duros pueden obstruir el esófago, sobre todo en perros pequeños.",
-    "it": "Sì, in piccole quantità come premio occasionale, crudi o cotti, senza condimenti e senza olio. Tagliali in pezzetti da un boccone: le cimette possono irritare lo stomaco e i gambi duri possono ostruire l’esofago, soprattutto nei cani di piccola taglia."
+    "it": "Sì, in piccole quantità come premio occasionale, crudi o cotti, senza condimenti e senza olio. Tagliali in pezzetti da un boccone: le cimette possono irritare lo stomaco e i gambi duri possono ostruire l’esofago, soprattutto nei cani di piccola taglia.",
+    "pt": "Sim, em pequenas quantidades e como guloseima ocasional, crus ou cozinhados, sem temperos nem óleos. Corta-os em pedaços que caibam numa dentada: os floretes podem irritar o estômago e os talos duros podem obstruir o esófago, sobretudo nos cães pequenos."
   },
   "why": {
     "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
@@ -40,7 +44,8 @@
     "de": "Brokkoliröschen enthalten Isothiocyanate, die leichte bis unter Umständen starke Magenreizungen verursachen können. Zähe Brokkolistiele haben bekanntermaßen schon Verstopfungen der Speiseröhre ausgelöst, vor allem bei kleinen Hunden. Gekochter Brokkoli in mundgerechten Stücken ist deshalb die bessere Wahl.",
     "fr": "Les bouquets de brocoli contiennent des isothiocyanates, qui peuvent provoquer une irritation de l’estomac légère à potentiellement sévère. Les tiges dures du brocoli sont connues pour provoquer des obstructions de l’œsophage, surtout chez les petits chiens ; le brocoli cuit, coupé en morceaux de la taille d’une bouchée, est donc le meilleur choix.",
     "es": "Los ramilletes de brócoli contienen isotiocianatos, que pueden causar una irritación de estómago que va de leve a potencialmente grave. Los tallos duros del brócoli han llegado a obstruir el esófago, sobre todo en perros pequeños, así que lo mejor es dárselo cocido y cortado en trozos del tamaño de un bocado.",
-    "it": "Le cimette di broccolo contengono isotiocianati, che possono causare un’irritazione gastrica da lieve a potenzialmente grave. I gambi duri dei broccoli possono provocare un’ostruzione dell’esofago, soprattutto nei cani di piccola taglia, quindi i broccoli cotti e tagliati in pezzetti da un boccone sono la scelta migliore."
+    "it": "Le cimette di broccolo contengono isotiocianati, che possono causare un’irritazione gastrica da lieve a potenzialmente grave. I gambi duri dei broccoli possono provocare un’ostruzione dell’esofago, soprattutto nei cani di piccola taglia, quindi i broccoli cotti e tagliati in pezzetti da un boccone sono la scelta migliore.",
+    "pt": "Os floretes de brócolos contêm isotiocianatos, que podem causar uma irritação do estômago, de ligeira a possivelmente grave. Os talos duros de brócolos já provocaram obstruções no esófago, sobretudo em cães pequenos, por isso os brócolos cozinhados e cortados em pedaços de uma dentada são a melhor escolha."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "de": "Beobachten Sie, wie Ihr Hund Brokkoli verträgt, und geben Sie erst mehr, wenn keine schlechte Reaktion auftritt.",
     "fr": "Observez la réaction de votre chien au brocoli et assurez-vous qu’il n’y a pas de mauvaise réaction avant d’en donner davantage.",
     "es": "Observa cómo reacciona tu perro al brócoli y asegúrate de que no le sienta mal antes de darle más.",
-    "it": "Osserva come reagisce il tuo cane e dagliene ancora solo se non ha nessuna reazione negativa."
+    "it": "Osserva come reagisce il tuo cane e dagliene ancora solo se non ha nessuna reazione negativa.",
+    "pt": "Vê como o teu cão reage aos brócolos e confirma que não há nenhuma reação adversa antes de lhe dares mais."
   },
   "serving": {
     "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
@@ -57,7 +63,8 @@
     "de": "Pur, roh oder besser gekocht, ohne Gewürze oder Öle und in mundgerechte Stücke geschnitten. Nur kleine Mengen als gelegentliches Leckerli.",
     "fr": "Nature, cru ou de préférence cuit, sans assaisonnement ni huile, coupé en morceaux de la taille d’une bouchée. Seulement de petites quantités, en friandise occasionnelle.",
     "es": "Crudo o, mejor, cocido, sin condimentos ni aceites y cortado en trozos del tamaño de un bocado. Solo en pequeñas cantidades como premio ocasional.",
-    "it": "Crudi o, meglio ancora, cotti, senza condimenti e senza olio, tagliati in pezzetti da un boccone. Solo in piccole quantità, come premio occasionale."
+    "it": "Crudi o, meglio ancora, cotti, senza condimenti e senza olio, tagliati in pezzetti da un boccone. Solo in piccole quantità, come premio occasionale.",
+    "pt": "Sem tempero nem óleos, crus ou, de preferência, cozinhados, cortados em pedaços de uma dentada. Apenas em pequenas quantidades, como guloseima ocasional."
   },
   "child": {
     "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
@@ -65,7 +72,8 @@
     "de": "Hunde dürfen ein bisschen Brokkoli probieren. Ein Erwachsener kocht ihn pur und schneidet ihn klein.",
     "fr": "Les chiens peuvent goûter un peu de brocoli. Un adulte le fait cuire nature et le coupe en petits morceaux.",
     "es": "Los perros pueden probar un poco de brócoli. Un adulto lo cocina sin nada añadido y lo corta en trocitos.",
-    "it": "I cani possono assaggiare qualche pezzetto di broccolo. Prima un adulto lo cuoce senza condimenti e lo taglia in pezzetti piccoli."
+    "it": "I cani possono assaggiare qualche pezzetto di broccolo. Prima un adulto lo cuoce senza condimenti e lo taglia in pezzetti piccoli.",
+    "pt": "Os cães podem provar um bocadinho de brócolos. Um adulto cozinha-os sem tempero e corta-os em pedaços pequenos."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "de": "Sind Brokkolistiele für Hunde unbedenklich?",
         "fr": "Les tiges de brocoli sont-elles sans danger pour les chiens ?",
         "es": "¿Son seguros los tallos de brócoli para los perros?",
-        "it": "I gambi dei broccoli sono sicuri per i cani?"
+        "it": "I gambi dei broccoli sono sicuri per i cani?",
+        "pt": "Os talos de brócolos são seguros para os cães?"
       },
       "a": {
         "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
@@ -83,7 +92,8 @@
         "de": "Zähe Stiele können die Speiseröhre eines Hundes verstopfen, vor allem bei kleinen Hunden. Schneiden Sie Brokkoli mundgerecht klein; mit gekochtem Brokkoli lässt sich dieses Problem vermeiden.",
         "fr": "Les tiges dures peuvent obstruer l’œsophage d’un chien, surtout chez les petits chiens. Coupez le brocoli en morceaux de la taille d’une bouchée ; le brocoli cuit aide à éviter ce problème.",
         "es": "Los tallos duros pueden obstruir el esófago de un perro, sobre todo en perros pequeños. Corta el brócoli en trozos del tamaño de un bocado; el brócoli cocido ayuda a evitar este problema.",
-        "it": "I gambi duri possono ostruire l’esofago del cane, soprattutto se è di piccola taglia. Taglia i broccoli in pezzetti da un boccone; con i broccoli cotti questo problema si evita."
+        "it": "I gambi duri possono ostruire l’esofago del cane, soprattutto se è di piccola taglia. Taglia i broccoli in pezzetti da un boccone; con i broccoli cotti questo problema si evita.",
+        "pt": "Os talos duros podem obstruir o esófago de um cão, sobretudo nos cães pequenos. Corta os brócolos em pedaços de uma dentada; se estiverem cozinhados, evita-se este problema."
       }
     }
   ],
@@ -169,6 +179,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "95e9557a939429e1e2f6158dd093d675460aacc98a8d04c894dee97e3eda5eff"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3addefed84f98d09a2a44360c8082d20de9d3009ba92feefdb809e7d6923264c"
     }
   }
 }
