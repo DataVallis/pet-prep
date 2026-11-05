@@ -1,0 +1,115 @@
+{
+  "country": "EE",
+  "checked": "2026-11-05",
+  "sources": [
+    {
+      "name": "Estonian University of Life Sciences - Small Animal Clinic, Emergency care",
+      "url": "https://loomakliinik.emu.ee/en/emergency-care",
+      "note": "Opened: 24/7 emergency, day/night phones, address."
+    },
+    {
+      "name": "Estonian University of Life Sciences - Small Animal Clinic contact",
+      "url": "https://loomakliinik.emu.ee/en/contact-0",
+      "note": "Opened: address and the two phone numbers."
+    },
+    {
+      "name": "German Embassy Tallinn - list of doctors (veterinarians section)",
+      "url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "note": "Opened: three Tallinn vets with address, phone, website; list undated, no hours."
+    },
+    {
+      "name": "Astri Keskus - PetCity Loomakliinik",
+      "url": "https://en.astri.ee/astri-keskus/petcity-loomakliinik",
+      "note": "Opened: hours E-L 10-20, P 10-18; emergency line 15222 (PetCity lemmikute kiirabi, Rannamõisa)."
+    },
+    {
+      "name": "Baltic Guide - PetCity",
+      "url": "https://balticguide.ee/en/petcity",
+      "note": "Opened: Rannamõisa tee 8, Tallinn; no hours or phone."
+    },
+    {
+      "name": "ERR - Lemmikloomaga arsti juures käimine eeldab paksu rahakotti",
+      "url": "https://www.err.ee/1609283562/lemmikloomaga-arsti-juures-kaimine-eeldab-paksu-rahakotti",
+      "note": "Opened: news article; names Evidensia chain and Loomade kiirabikliinik as night/weekend emergency clinic; no contact data, not used as an entry source."
+    }
+  ],
+  "entries": [
+    {
+      "kind": "clinic",
+      "name": "Eesti Maaülikool Väikeloomakliinik (Small Animal Clinic, Estonian University of Life Sciences)",
+      "city": "Tartu",
+      "region": "Tartu maakond",
+      "address": "F. R. Kreutzwaldi 62, Tartu",
+      "phone": "+372 731 3224",
+      "emergency_24h": true,
+      "duty": "Emergency care 24/7. Phone 09:00-20:00 +372 731 3224, night 20:00-09:00 +372 503 3878 (on-duty vet). Call before coming; critical patients are seen first and you may be referred elsewhere if the clinic is full.",
+      "small_animals": true,
+      "url": "https://loomakliinik.emu.ee/en",
+      "source_url": "https://loomakliinik.emu.ee/en/emergency-care",
+      "checked": "2026-11-05",
+      "note": "Emergency-care page confirms 24/7 and both phones and address.",
+      "quote": "emergency care 24/7"
+    },
+    {
+      "kind": "clinic",
+      "name": "PetCity Loomakliinik Rannamõisa (PetCity lemmikute kiirabi)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Rannamõisa tee 8, Tallinn",
+      "phone": "15222",
+      "emergency_24h": true,
+      "duty": "Pet emergency service (PetCity lemmikute kiirabi) at the Rannamõisa clinic provides round-the-clock help, short number 15222. Regular clinic hours Mon-Sat 10:00-20:00, Sun 10:00-18:00.",
+      "small_animals": true,
+      "url": "https://www.petcity.ee",
+      "source_url": "https://en.astri.ee/astri-keskus/petcity-loomakliinik",
+      "checked": "2026-11-05",
+      "note": "Astri page states verbatim: 'PetCity Rannamõisa loomakliinikus töötab ka ööpäevaringset abi pakkuv PetCity lemmikute kiirabi, mille lühinumber on 15222.' Address from balticguide.ee/en/petcity; Astri page gives no address. Own site petcity.ee not fetchable."
+    },
+    {
+      "kind": "clinic",
+      "name": "Loomade Kiirabikliinik (Evidensia)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Mustamäe tee 44/2, 10621 Tallinn",
+      "phone": "+372 502 3191",
+      "emergency_24h": false,
+      "duty": "Animal emergency clinic; call ahead. Out-of-hours visits carry a surcharge.",
+      "small_animals": true,
+      "url": "https://www.loomakiirabi.ee",
+      "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "checked": "2026-11-05",
+      "note": "Verified on German embassy list (name, address, phone 502 3191): labelled Notdienst, no hours, so emergency_24h false. Own site loomakiirabi.ee not fetchable; ERR article says it takes night/weekend patients, not stated as 24h."
+    },
+    {
+      "kind": "clinic",
+      "name": "Västriku Loomakliinik",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Västriku 2b, 11315 Tallinn",
+      "phone": "+372 655 3366",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "http://www.vastriku.ee",
+      "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "checked": "2026-11-05",
+      "note": "Verified on German embassy list (name, address, phone 655 3366); no hours. Clinic site not fetchable. Named in ERR article as Evidensia clinic."
+    },
+    {
+      "kind": "clinic",
+      "name": "Tierklinik Dr. Tiia Toomet (Toometi kliinik)",
+      "city": "Tallinn",
+      "region": "Harju maakond",
+      "address": "Sõle 3, 10614 Tallinn",
+      "phone": "+372 641 3110",
+      "emergency_24h": false,
+      "duty": "Call ahead for opening hours.",
+      "small_animals": true,
+      "url": "http://www.toometikliinik.ee",
+      "source_url": "https://tallinn.diplo.de/resource/blob/2479740/c593ee7dc2faa4fbdfc3b82e951f1c31/liste-aerzte-data.pdf",
+      "checked": "2026-11-05",
+      "note": "Verified on German embassy list (name, address, phone 641 3110); no hours. Clinic site not fetchable."
+    }
+  ],
+  "notes": "Estonia run 2026-11-05 was heavily limited: WebFetch only accepted URLs that appeared in search results or earlier fetches, and web search returned few clinic sites. Not reachable/not found: Veterinaar- ja Toiduamet (no duty list or poison line found), Eesti Loomaarstide Koda/Ühing, clinics' own sites (petcity.ee, evidensia.ee, loomakiirabi.ee, vastriku.ee, toometikliinik.ee). No animal poison information line found for Estonia (the university clinic treats poisoning as an emergency, 24/7). No duty rota page found. Names without contact data (not added): Anivet Veterinary Hospital, Väike-Sõjamäe Animal Clinic (Tallinn), Tartu Loomakliinik OÜ, Pärnu väikeloomakliinik, Evidensia clinics Billy/Fahle/Timmu/Viimsi/Rakvere. Left: other 24-h clinics (Tallinn, Pärnu, Narva, Saaremaa, Haapsalu, Viljandi), tourist-area clinics (Saaremaa, Lahemaa, Otepää, Hiiumaa), a rerun is needed with direct clinic site access."
+}
