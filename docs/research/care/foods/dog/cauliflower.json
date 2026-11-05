@@ -14,7 +14,8 @@
     "cs": "Květák",
     "hr": "Cvjetača",
     "sv": "Blomkål",
-    "da": "Blomkål"
+    "da": "Blomkål",
+    "fi": "Kukkakaali"
   },
   "question": {
     "en": "Can dogs eat cauliflower?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst květák?",
     "hr": "Smiju li psi jesti cvjetaču?",
     "sv": "Får hundar äta blomkål?",
-    "da": "Må hunde spise blomkål?"
+    "da": "Må hunde spise blomkål?",
+    "fi": "Saako koira syödä kukkakaalia?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -44,7 +46,8 @@
     "cs": "kvetak",
     "hr": "cvjetaca",
     "sv": "blomkal",
-    "da": "blomkal"
+    "da": "blomkal",
+    "fi": "kukkakaali"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, jako občasný pamlsek. Květák je pro psy bezpečný, pokud se správně připraví: tepelně upravený bez koření a nakrájený na kousky na jedno sousto. Velké porce mohou způsobit plynatost, nadýmání a průjem.",
     "hr": "Da, kao povremena poslastica. Cvjetača je sigurna za pse ako je pravilno pripremljena: termički obrađena bez dodataka i začina te narezana na komadiće veličine zalogaja. Velike količine mogu izazvati plinove, nadutost i proljev.",
     "sv": "Ja, som en godbit då och då. Blomkål är säker för hundar när den serveras på rätt sätt: tillagad utan tillsatser eller kryddor och skuren i munsbitar. Stora portioner kan ge gaser, uppblåsthet och diarré.",
-    "da": "Ja, som godbid af og til. Blomkål er ufarligt for hunde, når det tilberedes rigtigt: kogt uden tilsætninger og krydderier og skåret i mundrette stykker. Store portioner kan give luft i maven, oppustethed og diarré."
+    "da": "Ja, som godbid af og til. Blomkål er ufarligt for hunde, når det tilberedes rigtigt: kogt uden tilsætninger og krydderier og skåret i mundrette stykker. Store portioner kan give luft i maven, oppustethed og diarré.",
+    "fi": "Saa, satunnaisena herkkuna. Kukkakaali on koirille turvallinen, kun se valmistetaan oikein: kypsennetään ilman mausteita ja pilkotaan suupalan kokoisiksi paloiksi. Suuret annokset voivat aiheuttaa ilmavaivoja, turvotusta ja ripulia."
   },
   "why": {
     "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
@@ -75,7 +79,8 @@
     "cs": "Květák obsahuje vlákninu, vitamin C a vitamin K a je dobrým pamlskem, když chcete psovi pomoci zhubnout. Stejná vláknina může při přejedení způsobit plynatost, nadýmání a průjem. Syrový květák je v malém množství bezpečný, ale může se hůře trávit a velké syrové kousky mohou způsobit dušení; napařením nebo uvařením se stane měkčím a snáze se žvýká i tráví. Někteří psi na něj mohou mít alergickou reakci nebo citlivost.",
     "hr": "Cvjetača sadrži vlakna, vitamin C i vitamin K te je dobra užina kad psu pomažeš smršaviti. Ista vlakna mogu izazvati plinove, nadutost i proljev ako se pojede previše. Sirova cvjetača u malim je količinama sigurna, ali može biti teško probavljiva, a veliki sirovi komadi mogu izazvati gušenje; kuhanje na pari ili u vodi čini je mekšom pa se lakše žvače i probavlja. Neki psi mogu imati alergijske reakcije ili osjetljivost na nju.",
     "sv": "Blomkål innehåller fibrer, C-vitamin och K-vitamin och är ett bra mellanmål för hundar som ska gå ner i vikt. Samma fibrer kan ge gaser, uppblåsthet och diarré om hunden får i sig för mycket. Rå blomkål är säker i små mängder men kan vara svår att smälta, och stora råa bitar kan vara en kvävningsrisk; ångkokning eller kokning gör den mjukare och lättare att tugga och smälta. Vissa hundar kan få allergiska reaktioner eller vara känsliga för den.",
-    "da": "Blomkål indeholder fibre, C-vitamin og K-vitamin og er en god snack, når en hund skal tabe sig. De samme fibre kan give luft i maven, oppustethed og diarré, hvis hunden spiser for meget. Rå blomkål er ufarligt i små mængder, men kan være svært at fordøje, og store rå stykker kan sætte sig fast i halsen. Dampning eller kogning gør blomkålen blødere og lettere at tygge og fordøje. Nogle hunde kan få allergiske reaktioner eller være følsomme over for den."
+    "da": "Blomkål indeholder fibre, C-vitamin og K-vitamin og er en god snack, når en hund skal tabe sig. De samme fibre kan give luft i maven, oppustethed og diarré, hvis hunden spiser for meget. Rå blomkål er ufarligt i små mængder, men kan være svært at fordøje, og store rå stykker kan sætte sig fast i halsen. Dampning eller kogning gør blomkålen blødere og lettere at tygge og fordøje. Nogle hunde kan få allergiske reaktioner eller være følsomme over for den.",
+    "fi": "Kukkakaalissa on kuitua, C-vitamiinia ja K-vitamiinia, ja se sopii hyvin laihduttavan koiran välipalaksi. Sama kuitu voi aiheuttaa ilmavaivoja, turvotusta ja ripulia, jos kukkakaalia syödään liikaa. Raaka kukkakaali on pieninä määrinä turvallista mutta voi olla vaikeasti sulavaa, ja isot raa’at palat voivat aiheuttaa tukehtumisvaaran; höyryttäminen tai keittäminen pehmentää sitä ja tekee siitä helpommin pureskeltavaa ja sulavaa. Jotkin koirat voivat saada kukkakaalista allergisia reaktioita tai olla sille yliherkkiä."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Syrový květák dávejte opatrně a po malých kouscích. Velké porce mohou způsobit plynatost, nadýmání a průjem a někteří psi na něj mohou být citliví.",
     "hr": "Sirovu cvjetaču uvodi postupno, u malim komadićima. Velike količine mogu izazvati plinove, nadutost i proljev, a neki psi mogu biti osjetljivi na nju.",
     "sv": "Ge rå blomkål lite i taget och i små bitar. Stora portioner kan ge gaser, uppblåsthet och diarré, och vissa hundar kan vara känsliga för den.",
-    "da": "Giv rå blomkål langsomt og i små stykker. Store portioner kan give luft i maven, oppustethed og diarré, og nogle hunde kan være følsomme over for blomkål."
+    "da": "Giv rå blomkål langsomt og i små stykker. Store portioner kan give luft i maven, oppustethed og diarré, og nogle hunde kan være følsomme over for blomkål.",
+    "fi": "Anna raakaa kukkakaalia vähitellen ja pieninä paloina. Suuret annokset voivat aiheuttaa ilmavaivoja, turvotusta ja ripulia, ja jotkut koirat voivat olla sille herkkiä."
   },
   "serving": {
     "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
@@ -106,7 +112,8 @@
     "cs": "Květák napařte nebo uvařte bez soli, oleje, másla, česneku a cibule a nakrájejte na kousky na jedno sousto. Tuhé košťály uvařte nebo napařte. Občasný pamlsek, ne denní svačina.",
     "hr": "Skuhaj je u vodi ili na pari, bez soli, ulja, maslaca, češnjaka i luka, i nareži na komadiće veličine zalogaja. Žilave stabljike skuhaj u vodi ili na pari. Povremena poslastica, a ne svakodnevna užina.",
     "sv": "Ångkoka eller koka den utan salt, olja, smör, vitlök eller lök och skär den i munsbitar. Koka eller ångkoka de sega stjälkarna. En godbit då och då, inget dagligt mellanmål.",
-    "da": "Damp eller kog blomkålen uden salt, olie, smør, hvidløg eller løg, og skær den i mundrette stykker. Kog eller damp de seje stilke. En godbid en gang imellem, ikke en daglig snack."
+    "da": "Damp eller kog blomkålen uden salt, olie, smør, hvidløg eller løg, og skær den i mundrette stykker. Kog eller damp de seje stilke. En godbid en gang imellem, ikke en daglig snack.",
+    "fi": "Höyrytä tai keitä kukkakaali ilman suolaa, öljyä, voita, valkosipulia tai sipulia ja pilko se suupalan kokoisiksi paloiksi. Sitkeät varret pitää keittää tai höyryttää. Satunnainen herkku, ei päivittäinen välipala."
   },
   "child": {
     "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
@@ -121,7 +128,8 @@
     "cs": "Psi můžou dostat pár malých kousků květáku bez dodatků. Když ho sní moc, budou mít v bříšku plyny!",
     "hr": "Psi smiju dobiti nekoliko malih komadića cvjetače bez dodataka. Previše cvjetače može im napuhati trbuščić!",
     "sv": "Hundar kan få några små bitar blomkål utan tillsatser. För mycket kan ge gaser i magen!",
-    "da": "Hunde kan få nogle få små stykker naturel blomkål. For meget kan give dem luft i maven!"
+    "da": "Hunde kan få nogle få små stykker naturel blomkål. For meget kan give dem luft i maven!",
+    "fi": "Koira saa muutaman pienen palan maustamatonta kukkakaalia. Liiasta kukkakaalista koiran masu voi tulla täyteen ilmaa!"
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou psi jíst květákové listy?",
         "hr": "Smiju li psi jesti listove cvjetače?",
         "sv": "Får hundar äta blomkålsblad?",
-        "da": "Må hunde spise blomkålsblade?"
+        "da": "Må hunde spise blomkålsblade?",
+        "fi": "Saako koira syödä kukkakaalin lehtiä?"
       },
       "a": {
         "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
@@ -153,7 +162,8 @@
         "cs": "Ano. Listy jsou pro psy bezpečné a obsahují cenné živiny; většině psů chutnají lehce napařené jako přídavek ke krmivu.",
         "hr": "Da. Listovi su sigurni za pse i sadrže vrijedne hranjive tvari; većina pasa rado jede listove lagano kuhane na pari kao dodatak obroku.",
         "sv": "Ja. Bladen är säkra för hundar och innehåller värdefulla näringsämnen; de flesta hundar gillar dem lätt ångade, strödda över maten.",
-        "da": "Ja. Bladene er ufarlige for hunde og indeholder værdifulde næringsstoffer; de fleste hunde kan lide dem let dampede ovenpå maden."
+        "da": "Ja. Bladene er ufarlige for hunde og indeholder værdifulde næringsstoffer; de fleste hunde kan lide dem let dampede ovenpå maden.",
+        "fi": "Saa. Lehdet ovat koirille turvallisia, ja niissä on arvokkaita ravintoaineita; useimmat koirat syövät niitä mielellään kevyesti höyrytettyinä ruokansa päällä."
       }
     }
   ],
@@ -318,6 +328,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "67df3be2d606d9ca1ac5da9fce459d33b5c4885903b8f770e261191663f99c50"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "40354fa0f6331aaf898a4ef79fc61cd8952fb5f2a60e5f21126387659be31887"
     }
   }
 }

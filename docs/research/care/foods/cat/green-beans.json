@@ -14,7 +14,8 @@
     "cs": "Zelené fazolky",
     "hr": "Zelene mahune",
     "sv": "Gröna bönor",
-    "da": "Grønne bønner"
+    "da": "Grønne bønner",
+    "fi": "Vihreät pavut"
   },
   "question": {
     "en": "Can cats eat green beans?",
@@ -29,7 +30,8 @@
     "cs": "Mohou kočky jíst zelené fazolky?",
     "hr": "Smiju li mačke jesti zelene mahune?",
     "sv": "Får katter äta gröna bönor?",
-    "da": "Må katte spise grønne bønner?"
+    "da": "Må katte spise grønne bønner?",
+    "fi": "Saako kissa syödä vihreitä papuja?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -44,7 +46,8 @@
     "cs": "zelene-fazolky",
     "hr": "zelene-mahune",
     "sv": "grona-bonor",
-    "da": "gronne-bonner"
+    "da": "gronne-bonner",
+    "fi": "vihreat-pavut"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, malý kousek zelené fazolky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku, a Cats Protection doporučuje zelené fazolky napařené nebo vařené, bez másla, soli a koření.",
     "hr": "Da, mali komadić zelene mahune bez dodataka u redu je kao povremena poslastica. ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku, a Cats Protection predlaže zelene mahune kuhane na pari ili u vodi, bez maslaca, soli i začina.",
     "sv": "Ja, en liten bit grön böna utan tillsatser går bra som en godbit då och då. ASPCA skriver att gröna bönor kan vara ett utmärkt grönt mellanmål för hund eller katt, och Cats Protection föreslår ångade eller kokta gröna bönor utan smör, salt eller kryddor.",
-    "da": "Ja, nogle få grønne bønner uden tilsætninger er fine som godbid af og til. ASPCA skriver at grønne bønner kan være en god grøn snack til både hunde og katte, og Cats Protection foreslår dampede eller kogte grønne bønner uden smør, salt eller krydderier."
+    "da": "Ja, nogle få grønne bønner uden tilsætninger er fine som godbid af og til. ASPCA skriver at grønne bønner kan være en god grøn snack til både hunde og katte, og Cats Protection foreslår dampede eller kogte grønne bønner uden smør, salt eller krydderier.",
+    "fi": "Saa, pieni pala maustamatonta vihreää papua sopii satunnaiseksi herkuksi. ASPCA:n mukaan vihreät pavut voivat olla koiralle tai kissalle mainio kasvisvälipala, ja Cats Protection suosittelee höyrytettyjä tai keitettyjä vihreitä papuja ilman voita, suolaa tai mausteita."
   },
   "why": {
     "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -75,7 +79,8 @@
     "cs": "ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku. Cats Protection doporučuje zeleninu, například zelené fazolky, napařenou nebo vařenou, bez másla, soli a koření, a RSPCA řadí zelené fazolky mezi potraviny vhodné pro kočky i psy s mírou, syrové nebo tepelně upravené, ale bez koření. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
     "hr": "ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku. Cats Protection predlaže povrće poput zelenih mahuna kuhano na pari ili u vodi, bez maslaca, soli i začina, a RSPCA zelene mahune ubraja među hranu prikladnu za mačke i pse u umjerenim količinama, sirovu ili termički obrađenu, ali bez začina. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
     "sv": "ASPCA skriver att gröna bönor kan vara ett utmärkt grönt mellanmål för hund eller katt. Cats Protection föreslår ångade eller kokta grönsaker, som gröna bönor, utan smör, salt eller kryddor, och RSPCA anger gröna bönor som lämpliga för katter och hundar med måtta, råa eller kokta men okryddade. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-    "da": "ASPCA skriver at grønne bønner kan være en god grøn snack til hunde og katte. Cats Protection foreslår dampede eller kogte grøntsager som grønne bønner uden smør, salt eller krydderier, og RSPCA har grønne bønner på sin liste over fødevarer, der egner sig til katte og hunde i moderate mængder, rå eller kogte, men uden krydderier. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+    "da": "ASPCA skriver at grønne bønner kan være en god grøn snack til hunde og katte. Cats Protection foreslår dampede eller kogte grøntsager som grønne bønner uden smør, salt eller krydderier, og RSPCA har grønne bønner på sin liste over fødevarer, der egner sig til katte og hunde i moderate mængder, rå eller kogte, men uden krydderier. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+    "fi": "ASPCA:n mukaan vihreät pavut voivat olla koiralle tai kissalle mainio kasvisvälipala. Cats Protection suosittelee höyrytettyjä tai keitettyjä kasviksia, kuten vihreitä papuja, ilman voita, suolaa tai mausteita, ja RSPCA:n listalla vihreät pavut sopivat kohtuudella kissoille ja koirille raakoina tai kypsennettyinä mutta maustamattomina. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
@@ -106,7 +112,8 @@
     "cs": "Malý kousek, napařený nebo vařený, bez másla, soli a koření.",
     "hr": "Mali komadić, kuhan na pari ili u vodi, bez maslaca, soli i začina.",
     "sv": "En liten bit, ångad eller kokt, utan smör, salt eller kryddor.",
-    "da": "Nogle få bønner, dampede eller kogte, uden smør, salt eller krydderier."
+    "da": "Nogle få bønner, dampede eller kogte, uden smør, salt eller krydderier.",
+    "fi": "Pieni pala höyrytettynä tai keitettynä, ilman voita, suolaa tai mausteita."
   },
   "child": {
     "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -121,7 +128,8 @@
     "cs": "Kousek zelené fazolky bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
     "hr": "Komadić zelene mahune bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "En bit grön böna utan tillsatser kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-    "da": "Nogle få grønne bønner uden tilsætninger kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+    "da": "Nogle få grønne bønner uden tilsætninger kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+    "fi": "Pala maustamatonta vihreää papua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
-        "da": "Har katte brug for grøntsager?"
+        "da": "Har katte brug for grøntsager?",
+        "fi": "Tarvitsevatko kissat kasviksia?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -153,7 +162,8 @@
         "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -275,6 +285,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8b76521594251a8bf15b473754a5f3de5fe34926b771b3e9f8e0a3fa20bac9d3"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0f25f4920389d6bb1bbee72f47fd3851019d30058a86d83aedb3065c0164d7f4"
     }
   }
 }

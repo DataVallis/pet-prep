@@ -2370,7 +2370,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Broccoli",
@@ -2385,7 +2386,8 @@
         "cs": "Brokolice",
         "hr": "Brokula",
         "sv": "Broccoli",
-        "da": "Broccoli"
+        "da": "Broccoli",
+        "fi": "Parsakaali"
       },
       "question": {
         "en": "Can cats eat broccoli?",
@@ -2400,7 +2402,8 @@
         "cs": "Mohou kočky jíst brokolici?",
         "hr": "Smiju li mačke jesti brokulu?",
         "sv": "Får katter äta broccoli?",
-        "da": "Må katte spise broccoli?"
+        "da": "Må katte spise broccoli?",
+        "fi": "Saako kissa syödä parsakaalia?"
       },
       "url_slug": {
         "en": "broccoli",
@@ -2415,7 +2418,8 @@
         "cs": "brokolice",
         "hr": "brokula",
         "sv": "broccoli",
-        "da": "broccoli"
+        "da": "broccoli",
+        "fi": "parsakaali"
       },
       "answer": {
         "en": "Yes, a small piece of plain broccoli is fine as an occasional treat. Cats Protection lists broccoli among vegetables you can feed your cat, the ASPCA suggests broccoli florets for cats, and the RSPCA advises boiled or steamed.",
@@ -2430,7 +2434,8 @@
         "cs": "Ano, malý kousek brokolice bez dodatků je jako občasný pamlsek v pořádku. Cats Protection řadí brokolici mezi zeleninu, kterou můžete kočce dát, ASPCA pro kočky navrhuje růžičky brokolice a RSPCA radí brokolici vařenou nebo napařenou.",
         "hr": "Da, mali komadić brokule bez dodataka u redu je kao povremena poslastica. Cats Protection brokulu navodi među povrćem koje možeš dati mački, ASPCA za mačke predlaže cvjetiće brokule, a RSPCA savjetuje da bude kuhana u vodi ili na pari.",
         "sv": "Ja, en liten bit broccoli utan tillsatser går bra som en godbit då och då. Cats Protection räknar broccoli bland de grönsaker du kan ge katten, ASPCA föreslår broccolibuketter till katter och RSPCA rekommenderar kokt eller ångad broccoli.",
-        "da": "Ja, et lille stykke naturel broccoli er fint som godbid af og til. Cats Protection nævner broccoli blandt de grøntsager, man kan give sin kat, ASPCA foreslår broccolibuketter til katte, og RSPCA anbefaler kogt eller dampet broccoli."
+        "da": "Ja, et lille stykke naturel broccoli er fint som godbid af og til. Cats Protection nævner broccoli blandt de grøntsager, man kan give sin kat, ASPCA foreslår broccolibuketter til katte, og RSPCA anbefaler kogt eller dampet broccoli.",
+        "fi": "Saa, pieni pala maustamatonta parsakaalia sopii satunnaiseksi herkuksi. Cats Protection mainitsee parsakaalin kasvisten joukossa, joita kissalle voi antaa. ASPCA ehdottaa kissoille parsakaalin kukintoja, ja RSPCA neuvoo antamaan parsakaalin keitettynä tai höyrytettynä."
       },
       "why": {
         "en": "Cats Protection names broccoli among the few vegetables you can feed a cat, if they're keen. The ASPCA suggests broccoli florets for cats, and the RSPCA lists broccoli, boiled or steamed, among foods suitable for cats and dogs in moderation. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -2445,7 +2450,8 @@
         "cs": "Cats Protection uvádí brokolici mezi několika druhy zeleniny, které můžete kočce dát, pokud o ni stojí. ASPCA pro kočky navrhuje růžičky brokolice a RSPCA řadí vařenou nebo napařenou brokolici mezi potraviny vhodné pro kočky i psy s mírou. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Cats Protection brokulu ubraja među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede. ASPCA za mačke predlaže cvjetiće brokule, a RSPCA brokulu kuhanu u vodi ili na pari navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
         "sv": "Cats Protection nämner broccoli bland de få grönsaker du kan ge en katt, om den visar intresse. ASPCA föreslår broccolibuketter till katter, och RSPCA nämner broccoli, kokt eller ångad, bland maten som passar katter och hundar med måtta. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-        "da": "Cats Protection nævner broccoli blandt de få grøntsager, man kan give en kat, hvis den har lyst. ASPCA foreslår broccolibuketter til katte, og RSPCA har kogt eller dampet broccoli på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+        "da": "Cats Protection nævner broccoli blandt de få grøntsager, man kan give en kat, hvis den har lyst. ASPCA foreslår broccolibuketter til katte, og RSPCA har kogt eller dampet broccoli på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+        "fi": "Cats Protection mainitsee parsakaalin yhtenä niistä harvoista kasviksista, joita kissalle voi antaa, jos kissa niistä innostuu. ASPCA ehdottaa kissoille parsakaalin kukintoja, ja RSPCA:n listalla keitetty tai höyrytetty parsakaali kuuluu ruokiin, jotka sopivat kohtuudella kissoille ja koirille. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -2461,7 +2467,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "A small floret, boiled or steamed, with no butter, salt or seasoning.",
@@ -2476,7 +2483,8 @@
         "cs": "Malá růžička, vařená nebo napařená, bez másla, soli a koření.",
         "hr": "Mali cvjetić, kuhan u vodi ili na pari, bez maslaca, soli i začina.",
         "sv": "En liten bukett, kokt eller ångad, utan smör, salt eller kryddor.",
-        "da": "En lille buket, kogt eller dampet, uden smør, salt eller krydderier."
+        "da": "En lille buket, kogt eller dampet, uden smør, salt eller krydderier.",
+        "fi": "Pieni kukinto keitettynä tai höyrytettynä, ilman voita, suolaa tai mausteita."
       },
       "child": {
         "en": "A little piece of cooked broccoli can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -2491,7 +2499,8 @@
         "cs": "Kousek uvařené brokolice může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Komadić kuhane brokule mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "En liten bit kokt broccoli kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Et lille stykke kogt broccoli kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Et lille stykke kogt broccoli kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Pieni pala kypsennettyä parsakaalia voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -2508,7 +2517,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -2523,7 +2533,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -3014,7 +3025,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Carrots",
@@ -3029,7 +3041,8 @@
         "cs": "Mrkev",
         "hr": "Mrkva",
         "sv": "Morötter",
-        "da": "Gulerødder"
+        "da": "Gulerødder",
+        "fi": "Porkkanat"
       },
       "question": {
         "en": "Can cats eat carrots?",
@@ -3044,7 +3057,8 @@
         "cs": "Mohou kočky jíst mrkev?",
         "hr": "Smiju li mačke jesti mrkvu?",
         "sv": "Får katter äta morötter?",
-        "da": "Må katte spise gulerødder?"
+        "da": "Må katte spise gulerødder?",
+        "fi": "Saako kissa syödä porkkanaa?"
       },
       "url_slug": {
         "en": "carrots",
@@ -3059,7 +3073,8 @@
         "cs": "mrkev",
         "hr": "mrkva",
         "sv": "morotter",
-        "da": "gulerodder"
+        "da": "gulerodder",
+        "fi": "porkkanat"
       },
       "answer": {
         "en": "Yes, a small piece of plain carrot is fine as an occasional treat. Cats Protection lists carrots among vegetables you can feed your cat. Cook it until soft, or chop raw carrot into small chunks to prevent choking.",
@@ -3074,7 +3089,8 @@
         "cs": "Ano, malý kousek mrkve bez dodatků je jako občasný pamlsek v pořádku. Cats Protection řadí mrkev mezi zeleninu, kterou můžete kočce dát. Uvařte ji do měkka, nebo syrovou mrkev nakrájejte na malé kousky, aby se kočka neudusila.",
         "hr": "Da, mali komadić mrkve bez dodataka u redu je kao povremena poslastica. Cats Protection mrkvu navodi među povrćem koje možeš dati mački. Skuhaj je dok ne omekša ili sirovu mrkvu nareži na sitne komadiće, jer veliki komadi mogu izazvati gušenje.",
         "sv": "Ja, en liten bit morot utan tillsatser går bra som en godbit då och då. Cats Protection räknar morötter bland de grönsaker du kan ge katten. Koka moroten tills den är mjuk, eller skär rå morot i små bitar för att undvika kvävning.",
-        "da": "Ja, et lille stykke naturel gulerod er fint som godbid af og til. Cats Protection nævner gulerødder blandt de grøntsager, man kan give sin kat. Kog gulerodden, til den er blød, eller skær den rå i små stykker, så den ikke kan sætte sig fast i halsen."
+        "da": "Ja, et lille stykke naturel gulerod er fint som godbid af og til. Cats Protection nævner gulerødder blandt de grøntsager, man kan give sin kat. Kog gulerodden, til den er blød, eller skær den rå i små stykker, så den ikke kan sætte sig fast i halsen.",
+        "fi": "Saa, pieni pala maustamatonta porkkanaa sopii satunnaiseksi herkuksi. Cats Protection mainitsee porkkanan kasvisten joukossa, joita kissalle voi antaa. Kypsennä porkkana pehmeäksi tai pilko raaka porkkana pieniksi paloiksi, ettei kissa tukehdu."
       },
       "why": {
         "en": "Cats Protection names carrots among the few vegetables you can feed a cat, and suggests steamed or boiled vegetables with no butter, salt or seasoning. The RSPCA says cats can only eat carrots raw if chopped into small chunks, otherwise cook them until soft to prevent choking. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -3089,7 +3105,8 @@
         "cs": "Cats Protection uvádí mrkev mezi několika druhy zeleniny, které můžete kočce dát, a doporučuje zeleninu napařenou nebo vařenou, bez másla, soli a koření. Podle RSPCA mohou kočky dostat syrovou mrkev jen nakrájenou na malé kousky; jinak ji uvařte do měkka, aby se kočka neudusila. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Cats Protection mrkvu ubraja među nekoliko vrsta povrća koje možeš dati mački i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. RSPCA navodi da mačke sirovu mrkvu smiju jesti samo ako je narezana na sitne komadiće, a inače je treba kuhati dok ne omekša, jer veliki komadi mogu izazvati gušenje. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
         "sv": "Cats Protection nämner morötter bland de få grönsaker du kan ge en katt och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. RSPCA skriver att katter bara kan äta råa morötter om de skärs i små bitar, annars ska de kokas tills de är mjuka för att undvika kvävning. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-        "da": "Cats Protection nævner gulerødder blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker, ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+        "da": "Cats Protection nævner gulerødder blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker, ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+        "fi": "Cats Protection mainitsee porkkanan yhtenä niistä harvoista kasviksista, joita kissalle voi antaa, ja suosittelee höyrytettyjä tai keitettyjä kasviksia ilman voita, suolaa tai mausteita. RSPCA:n mukaan kissa voi syödä porkkanaa raakana vain pieniksi paloiksi pilkottuna; muuten porkkana pitää kypsentää pehmeäksi, ettei kissa tukehdu. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -3105,7 +3122,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "Steamed or boiled until soft, or raw only in small chunks. No butter, salt or seasoning.",
@@ -3120,7 +3138,8 @@
         "cs": "Napařená nebo vařená do měkka, nebo syrová jen v malých kouscích. Bez másla, soli a koření.",
         "hr": "Kuhana na pari ili u vodi dok ne omekša, a sirova samo narezana na sitne komadiće. Bez maslaca, soli i začina.",
         "sv": "Ångad eller kokt tills den är mjuk, eller rå bara i små bitar. Inget smör, salt eller kryddor.",
-        "da": "Dampet eller kogt, til den er blød, eller kun rå i små stykker. Uden smør, salt eller krydderier."
+        "da": "Dampet eller kogt, til den er blød, eller kun rå i små stykker. Uden smør, salt eller krydderier.",
+        "fi": "Höyrytettynä tai keitettynä pehmeäksi – tai raakana vain pieninä paloina. Ilman voita, suolaa tai mausteita."
       },
       "child": {
         "en": "A soft cooked carrot piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -3135,7 +3154,8 @@
         "cs": "Kousek měkce uvařené mrkve může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Komadić meke kuhane mrkve mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "En mjuk bit kokt morot kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Et blødt, kogt stykke gulerod kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Et blødt, kogt stykke gulerod kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Pehmeäksi kypsennetty porkkanapala voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -3152,7 +3172,8 @@
             "cs": "Mohou kočky jíst syrovou mrkev?",
             "hr": "Smiju li mačke jesti sirovu mrkvu?",
             "sv": "Får katter äta rå morot?",
-            "da": "Må katte spise rå gulerod?"
+            "da": "Må katte spise rå gulerod?",
+            "fi": "Saako kissa syödä raakaa porkkanaa?"
           },
           "a": {
             "en": "The RSPCA says cats can only eat carrots raw if they are chopped into small chunks; otherwise cook them until soft to prevent choking.",
@@ -3167,7 +3188,8 @@
             "cs": "Podle RSPCA mohou kočky dostat syrovou mrkev jen nakrájenou na malé kousky; jinak ji uvařte do měkka, aby se kočka neudusila.",
             "hr": "RSPCA navodi da mačke sirovu mrkvu smiju jesti samo ako je narezana na sitne komadiće; inače je treba kuhati dok ne omekša, jer veliki komadi mogu izazvati gušenje.",
             "sv": "RSPCA skriver att katter bara kan äta råa morötter om de skärs i små bitar; annars ska de kokas tills de är mjuka för att undvika kvävning.",
-            "da": "RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker; ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen."
+            "da": "RSPCA skriver at katte kun kan få gulerødder rå, hvis de er skåret i små stykker; ellers skal de koges, til de er bløde, så de ikke kan sætte sig fast i halsen.",
+            "fi": "RSPCA:n mukaan kissa voi syödä porkkanaa raakana vain pieniksi paloiksi pilkottuna; muuten porkkana pitää kypsentää pehmeäksi, ettei kissa tukehdu."
           }
         },
         {
@@ -3184,7 +3206,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3199,7 +3222,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -3242,7 +3266,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Cauliflower",
@@ -3257,7 +3282,8 @@
         "cs": "Květák",
         "hr": "Cvjetača",
         "sv": "Blomkål",
-        "da": "Blomkål"
+        "da": "Blomkål",
+        "fi": "Kukkakaali"
       },
       "question": {
         "en": "Can cats eat cauliflower?",
@@ -3272,7 +3298,8 @@
         "cs": "Mohou kočky jíst květák?",
         "hr": "Smiju li mačke jesti cvjetaču?",
         "sv": "Får katter äta blomkål?",
-        "da": "Må katte spise blomkål?"
+        "da": "Må katte spise blomkål?",
+        "fi": "Saako kissa syödä kukkakaalia?"
       },
       "url_slug": {
         "en": "cauliflower",
@@ -3287,7 +3314,8 @@
         "cs": "kvetak",
         "hr": "cvjetaca",
         "sv": "blomkal",
-        "da": "blomkal"
+        "da": "blomkal",
+        "fi": "kukkakaali"
       },
       "answer": {
         "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
@@ -3302,7 +3330,8 @@
         "cs": "Ano, malý kousek tepelně upraveného květáku bez dodatků je jako občasný pamlsek v pořádku. RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny vhodné pro kočky i psy s mírou.",
         "hr": "Da, mali komadić termički obrađene cvjetače bez dodataka u redu je kao povremena poslastica. RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, navodi među namirnicama prikladnima za mačke i pse u umjerenim količinama.",
         "sv": "Ja, en liten bit kokt blomkål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt blomkål, skuren i små bitar, bland maten som passar katter och hundar med måtta.",
-        "da": "Ja, et lille stykke kogt blomkål uden tilsætninger er fint som godbid af og til. RSPCA har kogt blomkål skåret i små stykker på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde."
+        "da": "Ja, et lille stykke kogt blomkål uden tilsætninger er fint som godbid af og til. RSPCA har kogt blomkål skåret i små stykker på sin liste over fødevarer, der i moderate mængder egner sig til både katte og hunde.",
+        "fi": "Saa, pieni pala maustamatonta kypsennettyä kukkakaalia sopii satunnaiseksi herkuksi. RSPCA:n listalla kypsennetty ja pieniksi paloiksi leikattu kukkakaali kuuluu ruokiin, jotka sopivat kohtuudella kissoille ja koirille."
       },
       "why": {
         "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -3317,7 +3346,8 @@
         "cs": "RSPCA řadí květák, tepelně upravený a nakrájený na malé kousky, mezi potraviny bezpečné pro domácí zvířata, vhodné pro kočky i psy s mírou. Cats Protection doporučuje zeleninu bez másla, soli a koření. Kočky zeleninu nepotřebují, pamlsků má být málo a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "RSPCA cvjetaču, termički obrađenu i narezanu na male komadiće, ubraja među hranu sigurnu za ljubimce, prikladnu za mačke i pse u umjerenim količinama. Cats Protection savjetuje povrće bez maslaca, soli i začina. Mačkama povrće nije potrebno, poslastica ne bi smjelo biti mnogo, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
         "sv": "RSPCA nämner kokt blomkål, skuren i små bitar, bland husdjurssäker mat som passar katter och hundar med måtta. Cats Protection rekommenderar grönsaker utan smör, salt eller kryddor. Katter behöver inte grönsaker, godbitar ska ges sparsamt och allt växtmaterial kan ge kräkningar eller orolig mage.",
-        "da": "RSPCA har kogt blomkål skåret i små stykker på sin liste over sikre fødevarer, der i moderate mængder egner sig til både katte og hunde. Cats Protection anbefaler grøntsager uden smør, salt eller krydderier. Katte har ikke brug for grøntsager, godbidder bør begrænses, og planteføde generelt kan give opkast eller ondt i maven."
+        "da": "RSPCA har kogt blomkål skåret i små stykker på sin liste over sikre fødevarer, der i moderate mængder egner sig til både katte og hunde. Cats Protection anbefaler grøntsager uden smør, salt eller krydderier. Katte har ikke brug for grøntsager, godbidder bør begrænses, og planteføde generelt kan give opkast eller ondt i maven.",
+        "fi": "RSPCA:n listalla kypsennetty ja pieniksi paloiksi leikattu kukkakaali kuuluu lemmikeille turvallisiin ruokiin, jotka sopivat kohtuudella kissoille ja koirille. Cats Protection suosittelee kasviksia ilman voita, suolaa tai mausteita. Kissat eivät tarvitse kasviksia, herkkuja pitää antaa vain vähän, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -3333,7 +3363,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -3348,7 +3379,8 @@
         "cs": "Květák tepelně upravený a nakrájený na malé kousky, bez másla, soli a koření.",
         "hr": "Termički obrađena i narezana na male komadiće, bez maslaca, soli i začina.",
         "sv": "Kokt och skuren i små bitar, utan smör, salt eller kryddor.",
-        "da": "Kogt og skåret i små stykker, uden smør, salt eller krydderier."
+        "da": "Kogt og skåret i små stykker, uden smør, salt eller krydderier.",
+        "fi": "Kypsennettynä ja pieniksi paloiksi leikattuna, ilman voita, suolaa tai mausteita."
       },
       "child": {
         "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -3363,7 +3395,8 @@
         "cs": "Kousek uvařeného květáku může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Komadić kuhane cvjetače mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "En liten bit kokt blomkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Et lille stykke kogt blomkål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Et lille stykke kogt blomkål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Pieni pala kypsennettyä kukkakaalia voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -3380,7 +3413,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3395,7 +3429,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -6072,7 +6107,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Cucumber",
@@ -6087,7 +6123,8 @@
         "cs": "Okurka",
         "hr": "Krastavac",
         "sv": "Gurka",
-        "da": "Agurk"
+        "da": "Agurk",
+        "fi": "Kurkku"
       },
       "question": {
         "en": "Can cats eat cucumber?",
@@ -6102,7 +6139,8 @@
         "cs": "Mohou kočky jíst okurku?",
         "hr": "Smiju li mačke jesti krastavac?",
         "sv": "Får katter äta gurka?",
-        "da": "Må katte spise agurk?"
+        "da": "Må katte spise agurk?",
+        "fi": "Saako kissa syödä kurkkua?"
       },
       "url_slug": {
         "en": "cucumber",
@@ -6117,7 +6155,8 @@
         "cs": "okurka",
         "hr": "krastavac",
         "sv": "gurka",
-        "da": "agurk"
+        "da": "agurk",
+        "fi": "kurkku"
       },
       "answer": {
         "en": "Yes, a small piece of plain cucumber is fine as an occasional treat. The ASPCA lists cucumber as non-toxic to cats, but cats don't need vegetables and any plant material can upset the stomach, so keep it to a tiny extra.",
@@ -6132,7 +6171,8 @@
         "cs": "Ano, malý kousek okurky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí okurku jako netoxickou pro kočky, ale kočky zeleninu nepotřebují a jakákoli rostlinná potrava může podráždit žaludek, takže ať je to jen malinký doplněk.",
         "hr": "Da, mali komadić krastavca bez dodataka u redu je kao povremena poslastica. ASPCA krastavac navodi kao neotrovan za mačke, ali mačkama povrće nije potrebno i bilo koja biljna tvar može nadražiti želudac, zato neka to bude samo sasvim mali dodatak.",
         "sv": "Ja, en liten bit gurka utan tillsatser går bra som en godbit då och då. ASPCA anger att gurka inte är giftig för katter, men katter behöver inte grönsaker och allt växtmaterial kan ge orolig mage, så se det som ett litet extra.",
-        "da": "Ja, et lille stykke agurk uden tilsætninger er fint som godbid af og til. ASPCA klassificerer agurk som ugiftig for katte, men katte har ikke brug for grøntsager, og planteføde generelt kan give ondt i maven, så giv kun lidt som ekstra."
+        "da": "Ja, et lille stykke agurk uden tilsætninger er fint som godbid af og til. ASPCA klassificerer agurk som ugiftig for katte, men katte har ikke brug for grøntsager, og planteføde generelt kan give ondt i maven, så giv kun lidt som ekstra.",
+        "fi": "Saa, pieni pala maustamatonta kurkkua sopii satunnaiseksi herkuksi. ASPCA luokittelee kurkun kissoille myrkyttömäksi, mutta kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa vatsavaivoja, joten pidä se vain pienenä lisänä."
       },
       "why": {
         "en": "The ASPCA lists the garden cucumber as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -6147,7 +6187,8 @@
         "cs": "ASPCA uvádí okurku setou jako netoxickou pro kočky. Kočky ovoce ani zeleninu ve stravě nepotřebují, pamlsků má být málo a podle ASPCA může jakákoli rostlinná potrava u koček vyvolat zvracení a podráždění žaludku.",
         "hr": "ASPCA vrtni krastavac navodi kao neotrovan za mačke. Mačkama voće i povrće nisu potrebni u prehrani, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
         "sv": "ASPCA anger att trädgårdsgurka inte är giftig för katter. Katter behöver varken frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA noterar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
-        "da": "ASPCA klassificerer almindelig agurk som ugiftig for katte. Katte har ikke brug for frugt og grønt i kosten, godbidder bør begrænses, og ASPCA bemærker at planteføde generelt kan give opkast og ondt i maven hos katte."
+        "da": "ASPCA klassificerer almindelig agurk som ugiftig for katte. Katte har ikke brug for frugt og grønt i kosten, godbidder bør begrænses, og ASPCA bemærker at planteføde generelt kan give opkast og ondt i maven hos katte.",
+        "fi": "ASPCA luokittelee tavallisen kurkun kissoille myrkyttömäksi. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja pitää antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissoille oksentelua ja vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -6163,7 +6204,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "A small plain piece now and then, counted in your cat's daily food.",
@@ -6178,7 +6220,8 @@
         "cs": "Občas malý kousek bez dodatků, započítaný do denní dávky krmiva vaší kočky.",
         "hr": "Povremeno mali komadić bez dodataka, uračunan u dnevnu količinu hrane tvoje mačke.",
         "sv": "En liten bit gurka utan tillsatser då och då. Räkna in den i kattens dagliga matportion.",
-        "da": "Et lille stykke naturel agurk en gang imellem. Tæl det med i kattens daglige foder."
+        "da": "Et lille stykke naturel agurk en gang imellem. Tæl det med i kattens daglige foder.",
+        "fi": "Silloin tällöin pieni maustamaton pala; laske se mukaan kissasi päivittäiseen ruokamäärään."
       },
       "child": {
         "en": "A little piece of cucumber can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -6193,7 +6236,8 @@
         "cs": "Kousek okurky může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Komadić krastavca mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "En liten bit gurka kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Et lille stykke agurk kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Et lille stykke agurk kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Pieni pala kurkkua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -6210,7 +6254,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -6225,7 +6270,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -8418,7 +8464,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Green beans",
@@ -8433,7 +8480,8 @@
         "cs": "Zelené fazolky",
         "hr": "Zelene mahune",
         "sv": "Gröna bönor",
-        "da": "Grønne bønner"
+        "da": "Grønne bønner",
+        "fi": "Vihreät pavut"
       },
       "question": {
         "en": "Can cats eat green beans?",
@@ -8448,7 +8496,8 @@
         "cs": "Mohou kočky jíst zelené fazolky?",
         "hr": "Smiju li mačke jesti zelene mahune?",
         "sv": "Får katter äta gröna bönor?",
-        "da": "Må katte spise grønne bønner?"
+        "da": "Må katte spise grønne bønner?",
+        "fi": "Saako kissa syödä vihreitä papuja?"
       },
       "url_slug": {
         "en": "green-beans",
@@ -8463,7 +8512,8 @@
         "cs": "zelene-fazolky",
         "hr": "zelene-mahune",
         "sv": "grona-bonor",
-        "da": "gronne-bonner"
+        "da": "gronne-bonner",
+        "fi": "vihreat-pavut"
       },
       "answer": {
         "en": "Yes, a small piece of plain green bean is fine as an occasional treat. The ASPCA says green beans can be a great green snack for a dog or cat, and Cats Protection suggests steamed or boiled green beans with no butter, salt or seasoning.",
@@ -8478,7 +8528,8 @@
         "cs": "Ano, malý kousek zelené fazolky bez dodatků je jako občasný pamlsek v pořádku. ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku, a Cats Protection doporučuje zelené fazolky napařené nebo vařené, bez másla, soli a koření.",
         "hr": "Da, mali komadić zelene mahune bez dodataka u redu je kao povremena poslastica. ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku, a Cats Protection predlaže zelene mahune kuhane na pari ili u vodi, bez maslaca, soli i začina.",
         "sv": "Ja, en liten bit grön böna utan tillsatser går bra som en godbit då och då. ASPCA skriver att gröna bönor kan vara ett utmärkt grönt mellanmål för hund eller katt, och Cats Protection föreslår ångade eller kokta gröna bönor utan smör, salt eller kryddor.",
-        "da": "Ja, nogle få grønne bønner uden tilsætninger er fine som godbid af og til. ASPCA skriver at grønne bønner kan være en god grøn snack til både hunde og katte, og Cats Protection foreslår dampede eller kogte grønne bønner uden smør, salt eller krydderier."
+        "da": "Ja, nogle få grønne bønner uden tilsætninger er fine som godbid af og til. ASPCA skriver at grønne bønner kan være en god grøn snack til både hunde og katte, og Cats Protection foreslår dampede eller kogte grønne bønner uden smør, salt eller krydderier.",
+        "fi": "Saa, pieni pala maustamatonta vihreää papua sopii satunnaiseksi herkuksi. ASPCA:n mukaan vihreät pavut voivat olla koiralle tai kissalle mainio kasvisvälipala, ja Cats Protection suosittelee höyrytettyjä tai keitettyjä vihreitä papuja ilman voita, suolaa tai mausteita."
       },
       "why": {
         "en": "The ASPCA says green beans can be a great green snack for a dog or cat. Cats Protection suggests steamed or boiled vegetables such as green beans with no butter, salt or seasoning, and the RSPCA lists green beans as suitable for cats and dogs in moderation, raw or cooked but unseasoned. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -8493,7 +8544,8 @@
         "cs": "ASPCA uvádí, že zelené fazolky mohou být skvělou zelenou svačinkou pro psa i kočku. Cats Protection doporučuje zeleninu, například zelené fazolky, napařenou nebo vařenou, bez másla, soli a koření, a RSPCA řadí zelené fazolky mezi potraviny vhodné pro kočky i psy s mírou, syrové nebo tepelně upravené, ale bez koření. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "ASPCA navodi da zelene mahune mogu biti odlična zelena užina za psa ili mačku. Cats Protection predlaže povrće poput zelenih mahuna kuhano na pari ili u vodi, bez maslaca, soli i začina, a RSPCA zelene mahune ubraja među hranu prikladnu za mačke i pse u umjerenim količinama, sirovu ili termički obrađenu, ali bez začina. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
         "sv": "ASPCA skriver att gröna bönor kan vara ett utmärkt grönt mellanmål för hund eller katt. Cats Protection föreslår ångade eller kokta grönsaker, som gröna bönor, utan smör, salt eller kryddor, och RSPCA anger gröna bönor som lämpliga för katter och hundar med måtta, råa eller kokta men okryddade. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-        "da": "ASPCA skriver at grønne bønner kan være en god grøn snack til hunde og katte. Cats Protection foreslår dampede eller kogte grøntsager som grønne bønner uden smør, salt eller krydderier, og RSPCA har grønne bønner på sin liste over fødevarer, der egner sig til katte og hunde i moderate mængder, rå eller kogte, men uden krydderier. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+        "da": "ASPCA skriver at grønne bønner kan være en god grøn snack til hunde og katte. Cats Protection foreslår dampede eller kogte grøntsager som grønne bønner uden smør, salt eller krydderier, og RSPCA har grønne bønner på sin liste over fødevarer, der egner sig til katte og hunde i moderate mængder, rå eller kogte, men uden krydderier. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+        "fi": "ASPCA:n mukaan vihreät pavut voivat olla koiralle tai kissalle mainio kasvisvälipala. Cats Protection suosittelee höyrytettyjä tai keitettyjä kasviksia, kuten vihreitä papuja, ilman voita, suolaa tai mausteita, ja RSPCA:n listalla vihreät pavut sopivat kohtuudella kissoille ja koirille raakoina tai kypsennettyinä mutta maustamattomina. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -8509,7 +8561,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "A small piece, steamed or boiled, with no butter, salt or seasoning.",
@@ -8524,7 +8577,8 @@
         "cs": "Malý kousek, napařený nebo vařený, bez másla, soli a koření.",
         "hr": "Mali komadić, kuhan na pari ili u vodi, bez maslaca, soli i začina.",
         "sv": "En liten bit, ångad eller kokt, utan smör, salt eller kryddor.",
-        "da": "Nogle få bønner, dampede eller kogte, uden smør, salt eller krydderier."
+        "da": "Nogle få bønner, dampede eller kogte, uden smør, salt eller krydderier.",
+        "fi": "Pieni pala höyrytettynä tai keitettynä, ilman voita, suolaa tai mausteita."
       },
       "child": {
         "en": "A plain green bean piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -8539,7 +8593,8 @@
         "cs": "Kousek zelené fazolky bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Komadić zelene mahune bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "En bit grön böna utan tillsatser kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Nogle få grønne bønner uden tilsætninger kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Nogle få grønne bønner uden tilsætninger kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Pala maustamatonta vihreää papua voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -8556,7 +8611,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -8571,7 +8627,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -13343,7 +13400,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Peas",
@@ -13358,7 +13416,8 @@
         "cs": "Hrášek",
         "hr": "Grašak",
         "sv": "Ärtor",
-        "da": "Ærter"
+        "da": "Ærter",
+        "fi": "Herneet"
       },
       "question": {
         "en": "Can cats eat peas?",
@@ -13373,7 +13432,8 @@
         "cs": "Mohou kočky jíst hrášek?",
         "hr": "Smiju li mačke jesti grašak?",
         "sv": "Får katter äta ärtor?",
-        "da": "Må katte spise ærter?"
+        "da": "Må katte spise ærter?",
+        "fi": "Saako kissa syödä herneitä?"
       },
       "url_slug": {
         "en": "peas",
@@ -13388,7 +13448,8 @@
         "cs": "hrasek",
         "hr": "grasak",
         "sv": "artor",
-        "da": "aerter"
+        "da": "aerter",
+        "fi": "herneet"
       },
       "answer": {
         "en": "Yes, a few plain peas are fine as an occasional treat. Cats Protection and the ASPCA both name peas as a vegetable you can offer a cat, and the RSPCA says cats should only have a small amount as a treat.",
@@ -13403,7 +13464,8 @@
         "cs": "Ano, pár zrnek hrášku bez dodatků je jako občasný pamlsek v pořádku. Cats Protection i ASPCA uvádějí hrášek jako zeleninu, kterou můžete kočce nabídnout, a RSPCA říká, že kočky ho mají dostat jen v malém množství jako pamlsek.",
         "hr": "Da, nekoliko zrna graška bez dodataka u redu je kao povremena poslastica. Cats Protection i ASPCA navode grašak kao povrće koje možeš ponuditi mački, a RSPCA kaže da mačke smiju dobiti samo malu količinu kao poslasticu.",
         "sv": "Ja, några få ärtor utan tillsatser går bra som en godbit då och då. Cats Protection och ASPCA nämner båda ärtor som en grönsak du kan erbjuda katten, och RSPCA skriver att katter bara ska få en liten mängd som godbit.",
-        "da": "Ja, nogle få ærter uden tilsætninger er fine som godbid af og til. Cats Protection og ASPCA nævner begge ærter som en grøntsag, man kan give en kat, og RSPCA skriver at katte kun bør få en lille mængde som godbid."
+        "da": "Ja, nogle få ærter uden tilsætninger er fine som godbid af og til. Cats Protection og ASPCA nævner begge ærter som en grøntsag, man kan give en kat, og RSPCA skriver at katte kun bør få en lille mængde som godbid.",
+        "fi": "Saa, muutama maustamaton herne sopii satunnaiseksi herkuksi. Sekä Cats Protection että ASPCA mainitsevat herneet kasviksena, jota kissalle voi tarjota, ja RSPCA:n mukaan kissalle saa antaa niitä vain vähän ja herkkuna."
       },
       "why": {
         "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
@@ -13418,7 +13480,8 @@
         "cs": "Cats Protection řadí hrášek mezi několik druhů zeleniny, které můžete kočce dát, a doporučuje zeleninu napařenou nebo vařenou, bez másla, soli a koření. ASPCA hrášek pro kočky navrhuje a RSPCA uvádí, že kočky mohou dostat hrášek bez dodatků, ale jen v malém množství jako pamlsek. Kočky zeleninu nepotřebují a jakákoli rostlinná potrava může vyvolat zvracení nebo podráždění žaludku.",
         "hr": "Cats Protection grašak ubraja među nekoliko vrsta povrća koje možeš dati mački i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. ASPCA za mačke predlaže grašak, a RSPCA kaže da mačke smiju jesti grašak bez dodataka, ali samo malu količinu kao poslasticu. Mačkama povrće nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe.",
         "sv": "Cats Protection räknar ärtor bland de få grönsaker du kan ge en katt och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. ASPCA föreslår ärtor till katter, och RSPCA skriver att katter kan få ärtor utan tillsatser, men bara en liten mängd som godbit. Katter behöver inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage.",
-        "da": "Cats Protection nævner ærter blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. ASPCA foreslår ærter til katte, og RSPCA skriver at katte kan få ærter uden tilsætninger, men kun en lille mængde som godbid. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven."
+        "da": "Cats Protection nævner ærter blandt de få grøntsager, man kan give en kat, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. ASPCA foreslår ærter til katte, og RSPCA skriver at katte kan få ærter uden tilsætninger, men kun en lille mængde som godbid. Katte har ikke brug for grøntsager, og planteføde generelt kan give opkast eller ondt i maven.",
+        "fi": "Cats Protection mainitsee herneet yhtenä niistä harvoista kasviksista, joita kissalle voi antaa, ja suosittelee höyrytettyjä tai keitettyjä kasviksia ilman voita, suolaa tai mausteita. ASPCA ehdottaa kissoille herneitä, ja RSPCA:n mukaan kissalle voi antaa maustamattomia herneitä, mutta vain vähän ja herkkuna. Kissat eivät tarvitse kasviksia, ja mikä tahansa kasviaines voi aiheuttaa oksentelua tai vatsavaivoja."
       },
       "signs": null,
       "what_to_do": {
@@ -13434,7 +13497,8 @@
         "cs": "Začněte malým kouskem. Pokud kočka potom zvrací nebo má podrážděný žaludek, přestaňte a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
         "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-        "da": "Start med nogle få ærter. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+        "da": "Start med nogle få ærter. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+        "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai sen vatsa menee sen jälkeen sekaisin, lopeta ja kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
@@ -13449,7 +13513,8 @@
         "cs": "Pár zrnek hrášku, napařených nebo vařených, bez másla, soli a koření.",
         "hr": "Nekoliko zrna graška bez dodataka, kuhanih na pari ili u vodi, bez maslaca, soli i začina.",
         "sv": "Några få ärtor, ångade eller kokta, utan smör, salt eller kryddor.",
-        "da": "Nogle få ærter, dampede eller kogte, uden smør, salt eller krydderier."
+        "da": "Nogle få ærter, dampede eller kogte, uden smør, salt eller krydderier.",
+        "fi": "Muutama maustamaton herne höyrytettynä tai keitettynä, ilman voita, suolaa tai mausteita."
       },
       "child": {
         "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -13464,7 +13529,8 @@
         "cs": "Pár zrnek hrášku bez dodatků může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen malý přídavek.",
         "hr": "Nekoliko zrna graška bez dodataka mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
         "sv": "Några få ärtor utan tillsatser kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-        "da": "Nogle få ærter kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+        "da": "Nogle få ærter kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+        "fi": "Muutama maustamaton herne voi joskus olla kissan herkku. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
       },
       "faq": [
         {
@@ -13481,7 +13547,8 @@
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
             "sv": "Behöver katter grönsaker?",
-            "da": "Har katte brug for grøntsager?"
+            "da": "Har katte brug for grøntsager?",
+            "fi": "Tarvitsevatko kissat kasviksia?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -13496,7 +13563,8 @@
             "cs": "Ne. Podle Cats Protection kočky zeleninu v přírodě jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malým doplňkem.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
             "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra."
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er nogen grund til at give dem grøntsager. Grøntsager er højst et lille ekstra.",
+            "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
           }
         }
       ],
@@ -15783,7 +15851,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Rhubarb",
@@ -15798,7 +15867,8 @@
         "cs": "Rebarbora",
         "hr": "Rabarbara",
         "sv": "Rabarber",
-        "da": "Rabarber"
+        "da": "Rabarber",
+        "fi": "Raparperi"
       },
       "question": {
         "en": "Can cats eat rhubarb?",
@@ -15813,7 +15883,8 @@
         "cs": "Mohou kočky jíst rebarboru?",
         "hr": "Smiju li mačke jesti rabarbaru?",
         "sv": "Får katter äta rabarber?",
-        "da": "Må katte spise rabarber?"
+        "da": "Må katte spise rabarber?",
+        "fi": "Saako kissa syödä raparperia?"
       },
       "url_slug": {
         "en": "rhubarb",
@@ -15828,7 +15899,8 @@
         "cs": "rebarbora",
         "hr": "rabarbara",
         "sv": "rabarber",
-        "da": "rabarber"
+        "da": "rabarber",
+        "fi": "raparperi"
       },
       "answer": {
         "en": "No. The ASPCA lists rhubarb as toxic to cats because it contains soluble calcium oxalates. The leaves and roots are the most toxic parts. Don't share rhubarb with your cat, and call your vet if your cat chews any.",
@@ -15843,7 +15915,8 @@
         "cs": "Ne. ASPCA uvádí rebarboru jako toxickou pro kočky, protože obsahuje rozpustné šťavelany vápenaté. Nejtoxičtější jsou listy a kořeny. Kočce rebarboru nedávejte, a pokud ji kočka okusila, zavolejte veterináři.",
         "hr": "Ne. ASPCA rabarbaru navodi kao otrovnu za mačke, jer sadrži topive kalcijeve oksalate. Najotrovniji su listovi i korijenje. Ne daj mački rabarbaru, a ako mačka požvače bilo koji njezin dio, nazovi veterinara.",
         "sv": "Nej. ASPCA anger rabarber som giftig för katter eftersom den innehåller lösliga kalciumoxalater. Bladen och rötterna är de mest giftiga delarna. Dela inte rabarber med katten, och ring veterinären om katten tuggar på rabarber.",
-        "da": "Nej. ASPCA klassificerer rabarber som giftig for katte, fordi den indeholder opløselige calciumoxalater. Bladene og rødderne er de giftigste dele. Giv ikke din kat rabarber, og ring til din dyrlæge, hvis din kat har tygget på den."
+        "da": "Nej. ASPCA klassificerer rabarber som giftig for katte, fordi den indeholder opløselige calciumoxalater. Bladene og rødderne er de giftigste dele. Giv ikke din kat rabarber, og ring til din dyrlæge, hvis din kat har tygget på den.",
+        "fi": "Ei saa. ASPCA luokittelee raparperin kissoille myrkylliseksi, koska siinä on liukoisia kalsiumoksalaatteja. Lehdet ja juuret ovat kasvin myrkyllisimmät osat. Älä anna raparperia kissallesi ja soita eläinlääkärille, jos kissasi pureskelee sitä."
       },
       "why": {
         "en": "Rhubarb contains soluble calcium oxalates, and the ASPCA lists it as toxic to cats, with the leaves and roots as the most toxic parts. ASPCA's two rhubarb entries differ: one lists kidney failure, tremors and salivation, the other lists vomiting and salivation in dogs and cats and kidney failure in grazing animals. We follow the stricter entry and list kidney failure too.",
@@ -15858,7 +15931,8 @@
         "cs": "Rebarbora obsahuje rozpustné šťavelany vápenaté a ASPCA ji uvádí jako toxickou pro kočky; nejtoxičtější jsou listy a kořeny. Dva záznamy ASPCA o rebarboře se liší: jeden uvádí selhání ledvin, třes a slinění, druhý zvracení a slinění u psů a koček a selhání ledvin u pasoucích se zvířat. Řídíme se přísnějším záznamem, a proto uvádíme i selhání ledvin.",
         "hr": "Rabarbara sadrži topive kalcijeve oksalate, a ASPCA je navodi kao otrovnu za mačke, pri čemu su listovi i korijenje najotrovniji dijelovi. Dva ASPCA-ina zapisa o rabarbari razlikuju se: jedan navodi zatajenje bubrega, drhtanje i slinjenje, a drugi povraćanje i slinjenje kod pasa i mačaka te zatajenje bubrega kod životinja koje pasu. Mi slijedimo stroži zapis pa navodimo i zatajenje bubrega.",
         "sv": "Rabarber innehåller lösliga kalciumoxalater, och ASPCA anger den som giftig för katter, med bladen och rötterna som de mest giftiga delarna. ASPCA:s två uppgifter om rabarber skiljer sig åt: den ena anger njursvikt, darrningar och dregling, den andra kräkningar och dregling hos hundar och katter samt njursvikt hos betesdjur. Vi följer den strängare uppgiften och tar också med njursvikt.",
-        "da": "Rabarber indeholder opløselige calciumoxalater, og ASPCA klassificerer den som giftig for katte, hvor blade og rødder er de giftigste dele. ASPCAs to opslag om rabarber er ikke helt ens: den ene nævner nyresvigt, rysten og savlen, den anden opkast og savlen hos hunde og katte og nyresvigt hos græssende dyr. Vi følger det strengeste opslag og nævner også nyresvigt."
+        "da": "Rabarber indeholder opløselige calciumoxalater, og ASPCA klassificerer den som giftig for katte, hvor blade og rødder er de giftigste dele. ASPCAs to opslag om rabarber er ikke helt ens: den ene nævner nyresvigt, rysten og savlen, den anden opkast og savlen hos hunde og katte og nyresvigt hos græssende dyr. Vi følger det strengeste opslag og nævner også nyresvigt.",
+        "fi": "Raparperissa on liukoisia kalsiumoksalaatteja, ja ASPCA luokittelee sen kissoille myrkylliseksi; myrkyllisimpiä osia ovat lehdet ja juuret. ASPCA:n kaksi raparperia koskevaa merkintää eroavat toisistaan: toisessa mainitaan munuaisten vajaatoiminta, vapina ja kuolaaminen, toisessa koirien ja kissojen oksentelu ja kuolaaminen sekä laiduneläinten munuaisten vajaatoiminta. Noudatamme tiukempaa merkintää ja mainitsemme myös munuaisten vajaatoiminnan."
       },
       "signs": {
         "en": [
@@ -15938,6 +16012,12 @@
           "Savlen",
           "Rysten",
           "Nyreproblemer (nyresvigt)"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Kuolaaminen",
+          "Vapina",
+          "Munuaisongelmat (munuaisten vajaatoiminta)"
         ]
       },
       "what_to_do": {
@@ -15953,7 +16033,8 @@
         "cs": "Pokud kočka okusila jakoukoli část rostliny rebarbory, zejména listy nebo kořeny, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata. Poznamenejte si, co kočka snědla a kdy. Nesnažte se u kočky doma vyvolat zvracení.",
         "hr": "Ako je mačka žvakala bilo koji dio biljke rabarbare, osobito listove ili korijenje, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja. Zapiši što je i kada pojela. Ne pokušavaj kod kuće izazvati povraćanje.",
         "sv": "Om katten har tuggat på någon del av en rabarberväxt, särskilt bladen eller rötterna, kontakta veterinären eller en giftrådgivning för djur direkt. Notera vad katten åt och när. Försök inte få katten att kräkas hemma.",
-        "da": "Hvis din kat har tygget på en del af en rabarberplante, især bladene eller rødderne, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad den har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op."
+        "da": "Hvis din kat har tygget på en del af en rabarberplante, især bladene eller rødderne, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme. Skriv ned hvad den har spist, og hvornår. Prøv ikke selv at få din kat til at kaste op.",
+        "fi": "Jos kissasi on pureskellut mitä tahansa raparperin osaa, etenkin lehtiä tai juuria, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Kirjaa ylös, mitä kissa söi ja milloin. Älä yritä itse oksennuttaa kissaasi."
       },
       "serving": null,
       "child": {
@@ -15969,7 +16050,8 @@
         "cs": "Rebarbora není jídlo pro kočky. Rostlina rebarbory pro kočky není bezpečná, takže když ji kočička okusuje, řekni to dospělému.",
         "hr": "Rabarbara nije hrana za mačke. Biljka rabarbare nije sigurna za mačke, zato reci odrasloj osobi ako mačka nešto od nje požvače.",
         "sv": "Rabarber är ingen kattmat. Rabarberväxten är inte säker för katter, så säg till en vuxen om katten tuggar på den.",
-        "da": "Rabarber er ikke mad til katte. Rabarberplanten er ikke sikker for katte, så sig det til en voksen, hvis katten tygger på den."
+        "da": "Rabarber er ikke mad til katte. Rabarberplanten er ikke sikker for katte, så sig det til en voksen, hvis katten tygger på den.",
+        "fi": "Raparperi ei ole kissanruokaa. Raparperikasvi ei ole turvallinen kissoille, joten kerro aikuiselle, jos kisu pureskelee sitä."
       },
       "faq": [
         {
@@ -15986,7 +16068,8 @@
             "cs": "Která část rebarbory je nebezpečná?",
             "hr": "Koji je dio rabarbare problematičan?",
             "sv": "Vilken del av rabarbern är problemet?",
-            "da": "Hvilken del af rabarberen er farlig?"
+            "da": "Hvilken del af rabarberen er farlig?",
+            "fi": "Mikä raparperin osa aiheuttaa ongelmia?"
           },
           "a": {
             "en": "The ASPCA lists the rhubarb plant as toxic to cats and says the leaves and roots are the most toxic parts.",
@@ -16001,7 +16084,8 @@
             "cs": "ASPCA označuje rebarboru za toxickou pro kočky a uvádí, že nejtoxičtější jsou listy a kořeny.",
             "hr": "ASPCA biljku rabarbare navodi kao otrovnu za mačke i kaže da su listovi i korijenje najotrovniji dijelovi.",
             "sv": "ASPCA anger rabarberväxten som giftig för katter och skriver att bladen och rötterna är de mest giftiga delarna.",
-            "da": "ASPCA klassificerer rabarberplanten som giftig for katte og skriver at bladene og rødderne er de giftigste dele."
+            "da": "ASPCA klassificerer rabarberplanten som giftig for katte og skriver at bladene og rødderne er de giftigste dele.",
+            "fi": "ASPCA luokittelee raparperikasvin kissoille myrkylliseksi, ja sen mukaan lehdet ja juuret ovat kasvin myrkyllisimmät osat."
           }
         }
       ],
@@ -21621,7 +21705,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Broccoli",
@@ -21636,7 +21721,8 @@
         "cs": "Brokolice",
         "hr": "Brokula",
         "sv": "Broccoli",
-        "da": "Broccoli"
+        "da": "Broccoli",
+        "fi": "Parsakaali"
       },
       "question": {
         "en": "Can dogs eat broccoli?",
@@ -21651,7 +21737,8 @@
         "cs": "Mohou psi jíst brokolici?",
         "hr": "Smiju li psi jesti brokulu?",
         "sv": "Får hundar äta broccoli?",
-        "da": "Må hunde spise broccoli?"
+        "da": "Må hunde spise broccoli?",
+        "fi": "Saako koira syödä parsakaalia?"
       },
       "url_slug": {
         "en": "broccoli",
@@ -21666,7 +21753,8 @@
         "cs": "brokolice",
         "hr": "brokula",
         "sv": "broccoli",
-        "da": "broccoli"
+        "da": "broccoli",
+        "fi": "parsakaali"
       },
       "answer": {
         "en": "Yes, in small amounts as an occasional treat, raw or cooked, with no seasonings or oils. Cut it into bite-size pieces: the florets can irritate the stomach, and tough stalks can block the oesophagus, especially in small dogs.",
@@ -21681,7 +21769,8 @@
         "cs": "Ano, v malém množství jako občasný pamlsek, syrová nebo tepelně upravená, bez koření a oleje. Nakrájejte ji na kousky na jedno sousto: růžičky mohou dráždit žaludek a tuhé stonky mohou ucpat jícen, zejména u malých psů.",
         "hr": "Da, u malim količinama kao povremena poslastica, sirova ili termički obrađena, bez začina i ulja. Nareži je na komadiće veličine zalogaja: cvjetići mogu nadražiti želudac, a žilave stabljike mogu začepiti jednjak, osobito kod malih pasa.",
         "sv": "Ja, i små mängder som en godbit då och då, rå eller kokt och utan kryddor eller olja. Skär broccolin i munsbitar: buketterna kan irritera magen och hårda stjälkar kan blockera matstrupen, särskilt hos små hundar.",
-        "da": "Ja, i små mængder som godbid af og til, rå eller kogt og uden krydderier eller olie. Skær den i mundrette stykker: buketterne kan irritere maven, og seje stilke kan blokere spiserøret, især hos små hunde."
+        "da": "Ja, i små mængder som godbid af og til, rå eller kogt og uden krydderier eller olie. Skær den i mundrette stykker: buketterne kan irritere maven, og seje stilke kan blokere spiserøret, især hos små hunde.",
+        "fi": "Saa, pieninä määrinä satunnaisena herkkuna, raakana tai kypsennettynä, ilman mausteita ja öljyjä. Leikkaa se suupalan kokoisiksi paloiksi: kukinnot voivat ärsyttää vatsaa, ja sitkeät varret voivat tukkia ruokatorven etenkin pienillä koirilla."
       },
       "why": {
         "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
@@ -21696,7 +21785,8 @@
         "cs": "Růžičky brokolice obsahují isothiokyanáty, které mohou způsobit mírné až potenciálně závažné podráždění žaludku. U tuhých stonků brokolice jsou známy případy ucpání jícnu, zejména u malých psů, proto je lepší volbou tepelně upravená brokolice nakrájená na kousky na jedno sousto.",
         "hr": "Cvjetići brokule sadrže izotiocijanate, koji mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Poznato je da žilave stabljike brokule mogu uzrokovati začepljenje jednjaka, osobito kod malih pasa, pa je bolji izbor termički obrađena brokula narezana na komadiće veličine zalogaja.",
         "sv": "Broccolibuketter innehåller isotiocyanater, som kan ge allt från lindrig till kraftig irritation i magen. Hårda broccolistjälkar är kända för att orsaka stopp i matstrupen, särskilt hos små hundar, så kokt broccoli skuren i munsbitar är det bättre valet.",
-        "da": "Broccolibuketter indeholder isothiocyanater, som kan irritere maven, fra let til potentielt kraftigt. Seje broccolistilke er kendt for at kunne blokere spiserøret, især hos små hunde, så kogt broccoli skåret i mundrette stykker er det bedste valg."
+        "da": "Broccolibuketter indeholder isothiocyanater, som kan irritere maven, fra let til potentielt kraftigt. Seje broccolistilke er kendt for at kunne blokere spiserøret, især hos små hunde, så kogt broccoli skåret i mundrette stykker er det bedste valg.",
+        "fi": "Parsakaalin kukinnoissa on isotiosyanaatteja, jotka voivat aiheuttaa lievää tai jopa vakavaa vatsan ärsytystä. Sitkeiden parsakaalinvarsien tiedetään aiheuttaneen ruokatorven tukoksia etenkin pienillä koirilla, joten kypsennetty, suupalan kokoisiksi paloiksi leikattu parsakaali on parempi valinta."
       },
       "signs": null,
       "what_to_do": {
@@ -21712,7 +21802,8 @@
         "cs": "Sledujte, jak pes na brokolici reaguje, a než mu dáte víc, ujistěte se, že se neobjevila žádná nežádoucí reakce.",
         "hr": "Prati kako pas reagira na brokulu i prije nego što mu daš više, provjeri je li se javila neželjena reakcija.",
         "sv": "Se hur hunden reagerar på broccolin och kontrollera att den inte får någon dålig reaktion innan du ger mer.",
-        "da": "Se, hvordan hunden tager imod broccolien, og giv først mere, når den ikke har reageret dårligt."
+        "da": "Se, hvordan hunden tager imod broccolien, og giv først mere, når den ikke har reageret dårligt.",
+        "fi": "Seuraa, miten koirasi reagoi parsakaaliin, ja varmista, ettei haitallisia reaktioita ilmene, ennen kuin annat lisää."
       },
       "serving": {
         "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
@@ -21727,7 +21818,8 @@
         "cs": "Syrová nebo raději tepelně upravená, bez dodatků, koření a oleje, nakrájená na kousky na jedno sousto. Jen v malém množství jako občasný pamlsek.",
         "hr": "Bez dodataka, sirova ili po mogućnosti termički obrađena, bez začina i ulja, narezana na komadiće veličine zalogaja. Samo male količine kao povremena poslastica.",
         "sv": "Naturell, rå eller helst kokt, utan kryddor eller olja och skuren i munsbitar. Bara små mängder som en godbit då och då.",
-        "da": "Naturel, rå eller helst kogt, uden krydderier eller olie og skåret i mundrette stykker. Kun små mængder som godbid af og til."
+        "da": "Naturel, rå eller helst kogt, uden krydderier eller olie og skåret i mundrette stykker. Kun små mængder som godbid af og til.",
+        "fi": "Maustamattomana, raakana tai mieluiten kypsennettynä, ilman mausteita ja öljyjä, suupalan kokoisiksi paloiksi leikattuna. Vain pieniä määriä satunnaisena herkkuna."
       },
       "child": {
         "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
@@ -21742,7 +21834,8 @@
         "cs": "Psi si můžou dát trochu brokolice. Dospělý ji uvaří bez dodatků a nakrájí na malé kousky.",
         "hr": "Psi smiju probati malo brokule. Odrasla osoba je skuha bez dodataka i nareže na male komadiće.",
         "sv": "Hundar kan få smaka lite broccoli. En vuxen kokar den utan kryddor och skär den i små bitar.",
-        "da": "Hunde kan prøve lidt broccoli. En voksen koger den uden tilsætninger og skærer den i små stykker."
+        "da": "Hunde kan prøve lidt broccoli. En voksen koger den uden tilsætninger og skærer den i små stykker.",
+        "fi": "Koira saa maistaa vähän parsakaalia. Aikuinen kypsentää sen ilman mausteita ja leikkaa pieniksi paloiksi."
       },
       "faq": [
         {
@@ -21759,7 +21852,8 @@
             "cs": "Jsou stonky brokolice pro psy bezpečné?",
             "hr": "Jesu li stabljike brokule sigurne za pse?",
             "sv": "Är broccolistjälkar säkra för hundar?",
-            "da": "Er broccolistilke ufarlige for hunde?"
+            "da": "Er broccolistilke ufarlige for hunde?",
+            "fi": "Ovatko parsakaalin varret turvallisia koirille?"
           },
           "a": {
             "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
@@ -21774,7 +21868,8 @@
             "cs": "Tuhé stonky mohou psovi ucpat jícen, zejména malému psovi. Brokolici nakrájejte na kousky na jedno sousto; tepelně upravená brokolice pomáhá tomuto problému předejít.",
             "hr": "Žilave stabljike mogu začepiti jednjak psa, osobito kod malih pasa. Brokulu nareži na komadiće veličine zalogaja; termički obrađena brokula pomaže izbjeći taj problem.",
             "sv": "Hårda stjälkar kan blockera matstrupen hos en hund, särskilt hos små hundar. Skär broccolin i munsbitar; kokt broccoli hjälper till att undvika problemet.",
-            "da": "Seje stilke kan blokere en hunds spiserør, især hos små hunde. Skær broccoli i mundrette stykker; kogt broccoli mindsker risikoen."
+            "da": "Seje stilke kan blokere en hunds spiserør, især hos små hunde. Skær broccoli i mundrette stykker; kogt broccoli mindsker risikoen.",
+            "fi": "Sitkeät varret voivat tukkia koiran ruokatorven etenkin pienillä koirilla. Leikkaa parsakaali suupalan kokoisiksi paloiksi; kypsentäminen auttaa ehkäisemään ongelmaa."
           }
         }
       ],
@@ -22319,7 +22414,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Carrots",
@@ -22334,7 +22430,8 @@
         "cs": "Mrkev",
         "hr": "Mrkva",
         "sv": "Morötter",
-        "da": "Gulerødder"
+        "da": "Gulerødder",
+        "fi": "Porkkanat"
       },
       "question": {
         "en": "Can dogs eat carrots?",
@@ -22349,7 +22446,8 @@
         "cs": "Mohou psi jíst mrkev?",
         "hr": "Smiju li psi jesti mrkvu?",
         "sv": "Får hundar äta morötter?",
-        "da": "Må hunde spise gulerødder?"
+        "da": "Må hunde spise gulerødder?",
+        "fi": "Saako koira syödä porkkanaa?"
       },
       "url_slug": {
         "en": "carrots",
@@ -22364,7 +22462,8 @@
         "cs": "mrkev",
         "hr": "mrkva",
         "sv": "morotter",
-        "da": "gulerodder"
+        "da": "gulerodder",
+        "fi": "porkkanat"
       },
       "answer": {
         "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
@@ -22379,7 +22478,8 @@
         "cs": "Ano. Mrkev je pro psy bezpečná a je zdravým nízkokalorickým pamlskem, syrová i tepelně upravená. Nejdřív ji nakrájejte na kousky na jedno sousto, aby se pes neudusil.",
         "hr": "Da. Mrkva je sigurna za pse i zdrava je užina s malo kalorija, sirova ili termički obrađena. Prvo je nareži na komadiće veličine zalogaja da se pas ne uguši.",
         "sv": "Ja. Morötter är säkra för hundar och ett nyttigt, kalorisnålt mellanmål, råa eller kokta. Skär dem först i munsbitar för att undvika kvävning.",
-        "da": "Ja. Gulerødder er ufarlige for hunde og en sund snack med få kalorier, rå eller kogte. Skær dem først i mundrette stykker, så de ikke kan sætte sig fast i halsen."
+        "da": "Ja. Gulerødder er ufarlige for hunde og en sund snack med få kalorier, rå eller kogte. Skær dem først i mundrette stykker, så de ikke kan sætte sig fast i halsen.",
+        "fi": "Saa. Porkkana on koirille turvallinen ja terveellinen, vähäkalorinen välipala raakana tai kypsennettynä. Leikkaa se ensin suupalan kokoisiksi paloiksi, ettei koira tukehdu."
       },
       "why": {
         "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -22394,7 +22494,8 @@
         "cs": "Mrkev je vynikajícím zdrojem vitaminu A, draslíku a vlákniny a obsahuje hodně beta-karotenu. Žvýkání mrkve může také prospívat zubům vašeho psa. Hlavním rizikem je dušení, proto by se celé mrkve a dokonce i mrkvové tyčinky měly nakrájet na kousky na jedno sousto.",
         "hr": "Mrkva je odličan izvor vitamina A, kalija i vlakana te sadrži mnogo beta-karotena. Grickanje mrkve može pomoći i zdravlju psećih zubi. Glavni je rizik gušenje, zato cijelu mrkvu, pa i štapiće mrkve, treba narezati na komadiće veličine zalogaja.",
         "sv": "Morötter är en utmärkt källa till A-vitamin, kalium och fibrer och innehåller mycket betakaroten. Att gnaga på morötter kan också förbättra hundens tandhälsa. Den största risken är kvävning, så hela morötter och till och med morotsstavar bör skäras i munsbitar.",
-        "da": "Gulerødder er en fremragende kilde til A-vitamin, kalium og fibre og har et højt indhold af betacaroten. Når hunden tygger på gulerødder, kan det også være godt for tænderne. Den største risiko er at de sætter sig fast i halsen, og derfor bør hele gulerødder og også gulerodsstave skæres i mundrette stykker."
+        "da": "Gulerødder er en fremragende kilde til A-vitamin, kalium og fibre og har et højt indhold af betacaroten. Når hunden tygger på gulerødder, kan det også være godt for tænderne. Den største risiko er at de sætter sig fast i halsen, og derfor bør hele gulerødder og også gulerodsstave skæres i mundrette stykker.",
+        "fi": "Porkkana on erinomainen A-vitamiinin, kaliumin ja kuidun lähde, ja siinä on runsaasti beetakaroteenia. Porkkanan pureskelu voi myös edistää koirasi hammasterveyttä. Suurin riski on tukehtuminen, minkä vuoksi kokonaiset porkkanat ja jopa porkkanatikut pitää leikata suupalan kokoisiksi paloiksi."
       },
       "signs": null,
       "what_to_do": {
@@ -22410,7 +22511,8 @@
         "cs": "Poraďte se s veterinářem, kolik mrkve denně je pro vašeho psa vhodné.",
         "hr": "Pitaj veterinara koliko mrkve dnevno odgovara tvom psu.",
         "sv": "Prata med din veterinär om hur många morötter som passar din hund per dag.",
-        "da": "Tal med din dyrlæge om hvor mange gulerødder der passer til din hund hver dag."
+        "da": "Tal med din dyrlæge om hvor mange gulerødder der passer til din hund hver dag.",
+        "fi": "Kysy eläinlääkäriltä, kuinka paljon porkkanaa koirallesi sopii päivässä."
       },
       "serving": {
         "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -22425,7 +22527,8 @@
         "cs": "Mrkev umyjte, případně oloupejte, a celé mrkve i mrkvové tyčinky nakrájejte na kousky na jedno sousto. Syrová i tepelně upravená mrkev je v pořádku.",
         "hr": "Mrkvu operi ili oguli, a zatim cijelu mrkvu, pa i štapiće mrkve, nareži na komadiće veličine zalogaja. Sirova i termički obrađena mrkva jednako su dobre.",
         "sv": "Tvätta och/eller skala morötterna. Skär sedan hela morötter, och till och med morotsstavar, i munsbitar. Både råa och kokta morötter går bra.",
-        "da": "Vask eller skræl gulerødderne, og skær derefter både hele gulerødder og gulerodsstave i mundrette stykker. Både rå og kogte gulerødder er fine."
+        "da": "Vask eller skræl gulerødderne, og skær derefter både hele gulerødder og gulerodsstave i mundrette stykker. Både rå og kogte gulerødder er fine.",
+        "fi": "Pese tai kuori porkkanat. Leikkaa sekä kokonaiset porkkanat että porkkanatikut suupalan kokoisiksi paloiksi. Porkkanan voi antaa raakana tai kypsennettynä."
       },
       "child": {
         "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -22440,7 +22543,8 @@
         "cs": "Křupavá mrkev je zdravý pamlsek pro psy! Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
         "hr": "Hrskava mrkva zdrava je užina za pse! Odrasla osoba je prvo opere i nareže na male komadiće.",
         "sv": "Knapriga morötter är ett nyttigt hundmellanmål! En vuxen tvättar dem och skär dem i små bitar först.",
-        "da": "Sprøde gulerødder er en sund snack til hunde! En voksen vasker dem og skærer dem først i små stykker."
+        "da": "Sprøde gulerødder er en sund snack til hunde! En voksen vasker dem og skærer dem først i små stykker.",
+        "fi": "Rapea porkkana on terveellinen koiran välipala! Aikuinen pesee sen ensin ja leikkaa pieniksi paloiksi."
       },
       "faq": [
         {
@@ -22457,7 +22561,8 @@
             "cs": "Mohou štěňata, kterým se prořezávají zuby, dostat studenou nebo mraženou mrkev?",
             "hr": "Smiju li štenci kojima izbijaju zubi dobiti hladnu ili smrznutu mrkvu?",
             "sv": "Får valpar som håller på att byta tänder kalla eller frysta morötter?",
-            "da": "Kan hvalpe i tandskifte få kolde eller frosne gulerødder?"
+            "da": "Kan hvalpe i tandskifte få kolde eller frosne gulerødder?",
+            "fi": "Saako hampaita vaihtava pentu kylmää tai pakastettua porkkanaa?"
           },
           "a": {
             "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -22472,7 +22577,8 @@
             "cs": "Někteří veterináři doporučují štěňatům, kterým se prořezávají zuby, studenou nebo mraženou mrkev, která jim může ulevit.",
             "hr": "Neki veterinari preporučuju hladnu ili smrznutu mrkvu za štence kojima izbijaju zubi, kao način da im se ublaži nelagoda.",
             "sv": "Vissa veterinärer rekommenderar kalla eller frysta morötter till valpar som byter tänder, för att lindra obehaget.",
-            "da": "Nogle dyrlæger anbefaler kolde eller frosne gulerødder til hvalpe i tandskifte for at lindre ubehaget."
+            "da": "Nogle dyrlæger anbefaler kolde eller frosne gulerødder til hvalpe i tandskifte for at lindre ubehaget.",
+            "fi": "Jotkut eläinlääkärit suosittelevat hampaita vaihtaville pennuille kylmää tai pakastettua porkkanaa helpottamaan oloa."
           }
         }
       ],
@@ -22731,7 +22837,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Cauliflower",
@@ -22746,7 +22853,8 @@
         "cs": "Květák",
         "hr": "Cvjetača",
         "sv": "Blomkål",
-        "da": "Blomkål"
+        "da": "Blomkål",
+        "fi": "Kukkakaali"
       },
       "question": {
         "en": "Can dogs eat cauliflower?",
@@ -22761,7 +22869,8 @@
         "cs": "Mohou psi jíst květák?",
         "hr": "Smiju li psi jesti cvjetaču?",
         "sv": "Får hundar äta blomkål?",
-        "da": "Må hunde spise blomkål?"
+        "da": "Må hunde spise blomkål?",
+        "fi": "Saako koira syödä kukkakaalia?"
       },
       "url_slug": {
         "en": "cauliflower",
@@ -22776,7 +22885,8 @@
         "cs": "kvetak",
         "hr": "cvjetaca",
         "sv": "blomkal",
-        "da": "blomkal"
+        "da": "blomkal",
+        "fi": "kukkakaali"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Cauliflower is safe for dogs when served properly: cooked plainly, without seasonings, and chopped into bite-size pieces. Large portions may cause gas, bloating and diarrhoea.",
@@ -22791,7 +22901,8 @@
         "cs": "Ano, jako občasný pamlsek. Květák je pro psy bezpečný, pokud se správně připraví: tepelně upravený bez koření a nakrájený na kousky na jedno sousto. Velké porce mohou způsobit plynatost, nadýmání a průjem.",
         "hr": "Da, kao povremena poslastica. Cvjetača je sigurna za pse ako je pravilno pripremljena: termički obrađena bez dodataka i začina te narezana na komadiće veličine zalogaja. Velike količine mogu izazvati plinove, nadutost i proljev.",
         "sv": "Ja, som en godbit då och då. Blomkål är säker för hundar när den serveras på rätt sätt: tillagad utan tillsatser eller kryddor och skuren i munsbitar. Stora portioner kan ge gaser, uppblåsthet och diarré.",
-        "da": "Ja, som godbid af og til. Blomkål er ufarligt for hunde, når det tilberedes rigtigt: kogt uden tilsætninger og krydderier og skåret i mundrette stykker. Store portioner kan give luft i maven, oppustethed og diarré."
+        "da": "Ja, som godbid af og til. Blomkål er ufarligt for hunde, når det tilberedes rigtigt: kogt uden tilsætninger og krydderier og skåret i mundrette stykker. Store portioner kan give luft i maven, oppustethed og diarré.",
+        "fi": "Saa, satunnaisena herkkuna. Kukkakaali on koirille turvallinen, kun se valmistetaan oikein: kypsennetään ilman mausteita ja pilkotaan suupalan kokoisiksi paloiksi. Suuret annokset voivat aiheuttaa ilmavaivoja, turvotusta ja ripulia."
       },
       "why": {
         "en": "Cauliflower has fibre, vitamin C and vitamin K, and is a good snack when helping dogs lose weight. The same fibre can cause gas, bloating and diarrhoea when too much is eaten. Raw cauliflower is safe in small amounts but can be hard to digest, and large raw pieces can be a choking hazard; steaming or boiling makes it softer and easier to chew and digest. Some dogs can have allergic reactions or sensitivities to it.",
@@ -22806,7 +22917,8 @@
         "cs": "Květák obsahuje vlákninu, vitamin C a vitamin K a je dobrým pamlskem, když chcete psovi pomoci zhubnout. Stejná vláknina může při přejedení způsobit plynatost, nadýmání a průjem. Syrový květák je v malém množství bezpečný, ale může se hůře trávit a velké syrové kousky mohou způsobit dušení; napařením nebo uvařením se stane měkčím a snáze se žvýká i tráví. Někteří psi na něj mohou mít alergickou reakci nebo citlivost.",
         "hr": "Cvjetača sadrži vlakna, vitamin C i vitamin K te je dobra užina kad psu pomažeš smršaviti. Ista vlakna mogu izazvati plinove, nadutost i proljev ako se pojede previše. Sirova cvjetača u malim je količinama sigurna, ali može biti teško probavljiva, a veliki sirovi komadi mogu izazvati gušenje; kuhanje na pari ili u vodi čini je mekšom pa se lakše žvače i probavlja. Neki psi mogu imati alergijske reakcije ili osjetljivost na nju.",
         "sv": "Blomkål innehåller fibrer, C-vitamin och K-vitamin och är ett bra mellanmål för hundar som ska gå ner i vikt. Samma fibrer kan ge gaser, uppblåsthet och diarré om hunden får i sig för mycket. Rå blomkål är säker i små mängder men kan vara svår att smälta, och stora råa bitar kan vara en kvävningsrisk; ångkokning eller kokning gör den mjukare och lättare att tugga och smälta. Vissa hundar kan få allergiska reaktioner eller vara känsliga för den.",
-        "da": "Blomkål indeholder fibre, C-vitamin og K-vitamin og er en god snack, når en hund skal tabe sig. De samme fibre kan give luft i maven, oppustethed og diarré, hvis hunden spiser for meget. Rå blomkål er ufarligt i små mængder, men kan være svært at fordøje, og store rå stykker kan sætte sig fast i halsen. Dampning eller kogning gør blomkålen blødere og lettere at tygge og fordøje. Nogle hunde kan få allergiske reaktioner eller være følsomme over for den."
+        "da": "Blomkål indeholder fibre, C-vitamin og K-vitamin og er en god snack, når en hund skal tabe sig. De samme fibre kan give luft i maven, oppustethed og diarré, hvis hunden spiser for meget. Rå blomkål er ufarligt i små mængder, men kan være svært at fordøje, og store rå stykker kan sætte sig fast i halsen. Dampning eller kogning gør blomkålen blødere og lettere at tygge og fordøje. Nogle hunde kan få allergiske reaktioner eller være følsomme over for den.",
+        "fi": "Kukkakaalissa on kuitua, C-vitamiinia ja K-vitamiinia, ja se sopii hyvin laihduttavan koiran välipalaksi. Sama kuitu voi aiheuttaa ilmavaivoja, turvotusta ja ripulia, jos kukkakaalia syödään liikaa. Raaka kukkakaali on pieninä määrinä turvallista mutta voi olla vaikeasti sulavaa, ja isot raa’at palat voivat aiheuttaa tukehtumisvaaran; höyryttäminen tai keittäminen pehmentää sitä ja tekee siitä helpommin pureskeltavaa ja sulavaa. Jotkin koirat voivat saada kukkakaalista allergisia reaktioita tai olla sille yliherkkiä."
       },
       "signs": null,
       "what_to_do": {
@@ -22822,7 +22934,8 @@
         "cs": "Syrový květák dávejte opatrně a po malých kouscích. Velké porce mohou způsobit plynatost, nadýmání a průjem a někteří psi na něj mohou být citliví.",
         "hr": "Sirovu cvjetaču uvodi postupno, u malim komadićima. Velike količine mogu izazvati plinove, nadutost i proljev, a neki psi mogu biti osjetljivi na nju.",
         "sv": "Ge rå blomkål lite i taget och i små bitar. Stora portioner kan ge gaser, uppblåsthet och diarré, och vissa hundar kan vara känsliga för den.",
-        "da": "Giv rå blomkål langsomt og i små stykker. Store portioner kan give luft i maven, oppustethed og diarré, og nogle hunde kan være følsomme over for blomkål."
+        "da": "Giv rå blomkål langsomt og i små stykker. Store portioner kan give luft i maven, oppustethed og diarré, og nogle hunde kan være følsomme over for blomkål.",
+        "fi": "Anna raakaa kukkakaalia vähitellen ja pieninä paloina. Suuret annokset voivat aiheuttaa ilmavaivoja, turvotusta ja ripulia, ja jotkut koirat voivat olla sille herkkiä."
       },
       "serving": {
         "en": "Steam or boil it plainly, with no salt, oil, butter, garlic or onion, and chop it into bite-size chunks. Boil or steam the tough stems. An occasional treat, not a daily snack.",
@@ -22837,7 +22950,8 @@
         "cs": "Květák napařte nebo uvařte bez soli, oleje, másla, česneku a cibule a nakrájejte na kousky na jedno sousto. Tuhé košťály uvařte nebo napařte. Občasný pamlsek, ne denní svačina.",
         "hr": "Skuhaj je u vodi ili na pari, bez soli, ulja, maslaca, češnjaka i luka, i nareži na komadiće veličine zalogaja. Žilave stabljike skuhaj u vodi ili na pari. Povremena poslastica, a ne svakodnevna užina.",
         "sv": "Ångkoka eller koka den utan salt, olja, smör, vitlök eller lök och skär den i munsbitar. Koka eller ångkoka de sega stjälkarna. En godbit då och då, inget dagligt mellanmål.",
-        "da": "Damp eller kog blomkålen uden salt, olie, smør, hvidløg eller løg, og skær den i mundrette stykker. Kog eller damp de seje stilke. En godbid en gang imellem, ikke en daglig snack."
+        "da": "Damp eller kog blomkålen uden salt, olie, smør, hvidløg eller løg, og skær den i mundrette stykker. Kog eller damp de seje stilke. En godbid en gang imellem, ikke en daglig snack.",
+        "fi": "Höyrytä tai keitä kukkakaali ilman suolaa, öljyä, voita, valkosipulia tai sipulia ja pilko se suupalan kokoisiksi paloiksi. Sitkeät varret pitää keittää tai höyryttää. Satunnainen herkku, ei päivittäinen välipala."
       },
       "child": {
         "en": "Dogs can have a few small pieces of plain cauliflower. Too much can give them a windy tummy!",
@@ -22852,7 +22966,8 @@
         "cs": "Psi můžou dostat pár malých kousků květáku bez dodatků. Když ho sní moc, budou mít v bříšku plyny!",
         "hr": "Psi smiju dobiti nekoliko malih komadića cvjetače bez dodataka. Previše cvjetače može im napuhati trbuščić!",
         "sv": "Hundar kan få några små bitar blomkål utan tillsatser. För mycket kan ge gaser i magen!",
-        "da": "Hunde kan få nogle få små stykker naturel blomkål. For meget kan give dem luft i maven!"
+        "da": "Hunde kan få nogle få små stykker naturel blomkål. For meget kan give dem luft i maven!",
+        "fi": "Koira saa muutaman pienen palan maustamatonta kukkakaalia. Liiasta kukkakaalista koiran masu voi tulla täyteen ilmaa!"
       },
       "faq": [
         {
@@ -22869,7 +22984,8 @@
             "cs": "Mohou psi jíst květákové listy?",
             "hr": "Smiju li psi jesti listove cvjetače?",
             "sv": "Får hundar äta blomkålsblad?",
-            "da": "Må hunde spise blomkålsblade?"
+            "da": "Må hunde spise blomkålsblade?",
+            "fi": "Saako koira syödä kukkakaalin lehtiä?"
           },
           "a": {
             "en": "Yes. The leaves are safe for dogs and contain valuable nutrients; most dogs enjoy them lightly steamed as a meal topper.",
@@ -22884,7 +23000,8 @@
             "cs": "Ano. Listy jsou pro psy bezpečné a obsahují cenné živiny; většině psů chutnají lehce napařené jako přídavek ke krmivu.",
             "hr": "Da. Listovi su sigurni za pse i sadrže vrijedne hranjive tvari; većina pasa rado jede listove lagano kuhane na pari kao dodatak obroku.",
             "sv": "Ja. Bladen är säkra för hundar och innehåller värdefulla näringsämnen; de flesta hundar gillar dem lätt ångade, strödda över maten.",
-            "da": "Ja. Bladene er ufarlige for hunde og indeholder værdifulde næringsstoffer; de fleste hunde kan lide dem let dampede ovenpå maden."
+            "da": "Ja. Bladene er ufarlige for hunde og indeholder værdifulde næringsstoffer; de fleste hunde kan lide dem let dampede ovenpå maden.",
+            "fi": "Saa. Lehdet ovat koirille turvallisia, ja niissä on arvokkaita ravintoaineita; useimmat koirat syövät niitä mielellään kevyesti höyrytettyinä ruokansa päällä."
           }
         }
       ],
@@ -27042,7 +27159,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Cucumber",
@@ -27057,7 +27175,8 @@
         "cs": "Okurka",
         "hr": "Krastavac",
         "sv": "Gurka",
-        "da": "Agurk"
+        "da": "Agurk",
+        "fi": "Kurkku"
       },
       "question": {
         "en": "Can dogs eat cucumber?",
@@ -27072,7 +27191,8 @@
         "cs": "Mohou psi jíst okurku?",
         "hr": "Smiju li psi jesti krastavac?",
         "sv": "Får hundar äta gurka?",
-        "da": "Må hunde spise agurk?"
+        "da": "Må hunde spise agurk?",
+        "fi": "Saako koira syödä kurkkua?"
       },
       "url_slug": {
         "en": "cucumber",
@@ -27087,7 +27207,8 @@
         "cs": "okurka",
         "hr": "krastavac",
         "sv": "gurka",
-        "da": "agurk"
+        "da": "agurk",
+        "fi": "kurkku"
       },
       "answer": {
         "en": "Yes. Cucumbers are perfectly safe for dogs and make a low-calorie, crunchy snack. Serve them plain, washed and cut into small pieces, introduce them gradually, and never give pickles.",
@@ -27102,7 +27223,8 @@
         "cs": "Ano. Okurky jsou pro psy naprosto bezpečné a jsou nízkokalorickým, křupavým pamlskem. Podávejte je bez dodatků, umyté a nakrájené na malé kousky, zařazujte je do jídelníčku postupně a nikdy nedávejte nakládané okurky.",
         "hr": "Da. Krastavci su potpuno sigurni za pse i hrskava su užina s malo kalorija. Daj ih bez dodataka, oprane i narezane na male komadiće, uvodi ih postupno i nikad ne daj kisele krastavce.",
         "sv": "Ja. Gurka är helt säker för hundar och ett kalorisnålt, knaprigt mellanmål. Servera den utan tillsatser, tvättad och skuren i små bitar, introducera den gradvis och ge aldrig inlagd gurka.",
-        "da": "Ja. Agurker er helt ufarlige for hunde og en sprød snack med få kalorier. Server dem uden tilsætninger, vasket og skåret i små stykker, vænn hunden langsomt til dem, og giv aldrig syltede agurker."
+        "da": "Ja. Agurker er helt ufarlige for hunde og en sprød snack med få kalorier. Server dem uden tilsætninger, vasket og skåret i små stykker, vænn hunden langsomt til dem, og giv aldrig syltede agurker.",
+        "fi": "Saa. Kurkku on koirille täysin turvallinen ja vähäkalorinen, rapea välipala. Anna se maustamattomana, pestynä ja pieniksi paloiksi leikattuna, totuta koira siihen vähitellen äläkä koskaan anna säilöttyjä kurkkuja."
       },
       "why": {
         "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
@@ -27117,7 +27239,8 @@
         "cs": "Okurky mají málo kalorií, velmi málo sodíku, neobsahují tuk a mají vysoký obsah vody, proto jsou zvlášť vhodné pro psy, kteří potřebují zhubnout. Rizika jsou dvě: přejedení, které může podráždit žaludek, a dušení, zejména u menších psů nebo psů, kteří hltají.",
         "hr": "Krastavci imaju malo kalorija, vrlo malo natrija, ne sadrže masti i imaju mnogo vode, pa su osobito dobri za pse koji moraju smršaviti. Dva su glavna problema prejedanje, koje može nadražiti želudac, i gušenje, osobito kod manjih pasa ili pasa koji jedu brzo.",
         "sv": "Gurka är kalorisnål, innehåller mycket lite natrium och inget fett och har ett högt vatteninnehåll, så den passar särskilt bra för hundar som behöver gå ner i vikt. De två största riskerna är att hunden äter för mycket, vilket kan ge orolig mage, och kvävning, särskilt hos små hundar och hundar som äter snabbt.",
-        "da": "Agurker har få kalorier, meget lidt natrium og intet fedt, og de har et højt vandindhold, så de er især gode til hunde, der skal tabe sig. De to største risici er, at hunden spiser for meget, hvilket kan give ondt i maven, og at stykkerne sætter sig fast i halsen, især hos mindre hunde eller hunde der spiser hurtigt."
+        "da": "Agurker har få kalorier, meget lidt natrium og intet fedt, og de har et højt vandindhold, så de er især gode til hunde, der skal tabe sig. De to største risici er, at hunden spiser for meget, hvilket kan give ondt i maven, og at stykkerne sætter sig fast i halsen, især hos mindre hunde eller hunde der spiser hurtigt.",
+        "fi": "Kurkussa on vähän kaloreita ja hyvin vähän natriumia, ei lainkaan rasvaa ja paljon vettä, joten se sopii erityisen hyvin koirille, joiden pitää laihtua. Suurimmat riskit ovat liika syöminen, josta voi tulla vatsavaivoja, ja tukehtuminen, etenkin pienillä tai nopeasti syövillä koirilla."
       },
       "signs": null,
       "what_to_do": {
@@ -27133,7 +27256,8 @@
         "cs": "Okurku zařazujte do jídelníčku postupně a psa při zkoušení nových potravin sledujte. Příliš velké množství nebo příliš rychlé zařazení může způsobit mírné podráždění žaludku.",
         "hr": "Krastavac uvodi postupno i pazi na psa kad proba nešto novo. Ako ga daš previše ili ga uvedeš prebrzo, može doći do blagih želučanih tegoba.",
         "sv": "Introducera gurkan gradvis och håll koll på hunden när den får prova något nytt. Om du ger för mycket, eller introducerar den för snabbt, kan hunden få lindriga magbesvär.",
-        "da": "Vænn hunden langsomt til agurk, og hold øje med den, når den prøver noget nyt. Hvis du giver for meget eller for hurtigt, kan hunden få lidt ondt i maven."
+        "da": "Vænn hunden langsomt til agurk, og hold øje med den, når den prøver noget nyt. Hvis du giver for meget eller for hurtigt, kan hunden få lidt ondt i maven.",
+        "fi": "Totuta koira kurkkuun vähitellen ja seuraa koiraa aina, kun se maistaa jotain uutta. Liian suuri määrä tai liian nopea totuttaminen voi aiheuttaa lieviä vatsavaivoja."
       },
       "serving": {
         "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
@@ -27148,7 +27272,8 @@
         "cs": "Okurku důkladně omyjte a nakrájejte na malé kousky, které pes snadno zvládne, podle jeho velikosti a způsobu žvýkání; celou okurku nedávejte. Jen okurky bez dodatků.",
         "hr": "Temeljito ga operi i nareži na male komade, prilagođene veličini psa i načinu na koji žvače; ne daj cijeli krastavac. Samo krastavci bez dodataka.",
         "sv": "Tvätta noga och skär i små bitar som passar hundens storlek och sätt att tugga; ge inte en hel gurka. Bara gurka utan tillsatser.",
-        "da": "Vask agurken grundigt, og skær den i små stykker, der passer til hundens størrelse og måde at tygge på; giv ikke en hel agurk. Kun agurk uden tilsætninger."
+        "da": "Vask agurken grundigt, og skær den i små stykker, der passer til hundens størrelse og måde at tygge på; giv ikke en hel agurk. Kun agurk uden tilsætninger.",
+        "fi": "Pese kurkku huolellisesti ja viipaloi se pieniksi, helposti syötäviksi paloiksi koirasi koon ja pureskelutapojen mukaan; älä anna kokonaista kurkkua. Vain maustamatonta kurkkua."
       },
       "child": {
         "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
@@ -27163,7 +27288,8 @@
         "cs": "Psi si můžou pochutnat na pár kouscích okurky. Dospělý ji nejdřív umyje a nakrájí na malé kousky.",
         "hr": "Psi smiju pojesti nekoliko komadića krastavca. Odrasla osoba krastavac opere i prvo ga nareže na sitne komadiće.",
         "sv": "Hundar kan knapra på några gurkbitar. En vuxen tvättar gurkan och skär den i små bitar först.",
-        "da": "Hunde kan gnaske nogle få stykker agurk. En voksen vasker agurken og skærer den først i små stykker."
+        "da": "Hunde kan gnaske nogle få stykker agurk. En voksen vasker agurken og skærer den først i små stykker.",
+        "fi": "Koira saa mutustella muutaman kurkkupalan. Aikuinen pesee kurkun ja viipaloi sen ensin pieniksi paloiksi."
       },
       "faq": [
         {
@@ -27180,7 +27306,8 @@
             "cs": "Mohou psi jíst nakládané okurky?",
             "hr": "Smiju li psi jesti kisele krastavce?",
             "sv": "Får hundar äta inlagd gurka?",
-            "da": "Må hunde spise syltede agurker?"
+            "da": "Må hunde spise syltede agurker?",
+            "fi": "Saako koira syödä säilöttyjä kurkkuja?"
           },
           "a": {
             "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
@@ -27195,7 +27322,8 @@
             "cs": "Ne. Nakládané okurky psovi nedávejte, protože obvykle obsahují přidanou sůl, koření a další přísady.",
             "hr": "Ne. Psu ne daj kisele krastavce, jer obično sadrže dodanu sol, začine i druge sastojke.",
             "sv": "Nej. Ge inte hunden inlagd gurka, eftersom den oftast innehåller tillsatt salt, kryddor och andra ingredienser.",
-            "da": "Nej. Undgå at give hunden syltede agurker, da de som regel indeholder tilsat salt, krydderier og andre ingredienser."
+            "da": "Nej. Undgå at give hunden syltede agurker, da de som regel indeholder tilsat salt, krydderier og andre ingredienser.",
+            "fi": "Ei saa. Älä anna koiralle säilöttyjä kurkkuja, koska niissä on yleensä lisättyä suolaa, mausteita ja muita ainesosia."
           }
         }
       ],
@@ -30251,7 +30379,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Green beans",
@@ -30266,7 +30395,8 @@
         "cs": "Zelené fazolky",
         "hr": "Zelene mahune",
         "sv": "Gröna bönor",
-        "da": "Grønne bønner"
+        "da": "Grønne bønner",
+        "fi": "Vihreät pavut"
       },
       "question": {
         "en": "Can dogs eat green beans?",
@@ -30281,7 +30411,8 @@
         "cs": "Mohou psi jíst zelené fazolky?",
         "hr": "Smiju li psi jesti zelene mahune?",
         "sv": "Får hundar äta gröna bönor?",
-        "da": "Må hunde spise grønne bønner?"
+        "da": "Må hunde spise grønne bønner?",
+        "fi": "Saako koira syödä vihreitä papuja?"
       },
       "url_slug": {
         "en": "green-beans",
@@ -30296,7 +30427,8 @@
         "cs": "zelene-fazolky",
         "hr": "zelene-mahune",
         "sv": "grona-bonor",
-        "da": "gronne-bonner"
+        "da": "gronne-bonner",
+        "fi": "vihreat-pavut"
       },
       "answer": {
         "en": "Yes. Plain green beans, raw or cooked, are safe for most dogs in moderation and make a low-calorie treat. Never give green beans with added salt, butter, garlic or other seasonings.",
@@ -30311,7 +30443,8 @@
         "cs": "Ano. Zelené fazolky bez dodatků, syrové i tepelně upravené, jsou pro většinu psů s mírou bezpečné a jsou nízkokalorickým pamlskem. Nikdy nedávejte zelené fazolky s přidanou solí, máslem, česnekem nebo jiným kořením.",
         "hr": "Da. Zelene mahune bez dodataka, sirove ili termički obrađene, sigurne su za većinu pasa u umjerenim količinama i poslastica su s malo kalorija. Nikad ne daj zelene mahune s dodanom soli, maslacem, češnjakom ili drugim začinima.",
         "sv": "Ja. Gröna bönor utan tillsatser, råa eller kokta, är säkra för de flesta hundar med måtta och ger en kalorisnål godbit. Ge aldrig gröna bönor med tillsatt salt, smör, vitlök eller andra kryddor.",
-        "da": "Ja. Grønne bønner uden tilsætninger, rå eller kogte, er ufarlige for de fleste hunde i moderate mængder og en godbid med få kalorier. Giv aldrig grønne bønner med tilsat salt, smør, hvidløg eller andre krydderier."
+        "da": "Ja. Grønne bønner uden tilsætninger, rå eller kogte, er ufarlige for de fleste hunde i moderate mængder og en godbid med få kalorier. Giv aldrig grønne bønner med tilsat salt, smør, hvidløg eller andre krydderier.",
+        "fi": "Saa. Maustamattomat vihreät pavut ovat kohtuullisina määrinä turvallisia useimmille koirille raakoina tai kypsennettyinä, ja ne ovat vähäkalorinen herkku. Älä koskaan anna vihreitä papuja, joihin on lisätty suolaa, voita, valkosipulia tai muita mausteita."
       },
       "why": {
         "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -30326,7 +30459,8 @@
         "cs": "Zelené fazolky obsahují vitaminy, minerály a vlákninu a mají málo kalorií; díky objemu a vláknině se pes cítí sytý, aniž by dostal mnoho kalorií. Mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli a běžné recepty na zelené fazolky pro lidi nejsou pro psy bezpečné.",
         "hr": "Zelene mahune sadrže vitamine, minerale i vlakna te imaju malo kalorija; dodatni volumen i vlakna pomažu psu da se osjeća sit, a da ne unese mnogo kalorija. Mnoge zelene mahune iz konzerve sadrže mnogo dodane soli, a uobičajena jela od zelenih mahuna za ljude nisu sigurna za pse.",
         "sv": "Gröna bönor innehåller vitaminer, mineraler och fibrer och är kalorisnåla; volymen och fibrerna hjälper hunden att känna sig mätt utan att tillföra många kalorier. Många gröna bönor på burk innehåller mycket tillsatt salt, och vanliga recept på gröna bönor för människor passar inte hundar.",
-        "da": "Grønne bønner indeholder vitaminer, mineraler og fibre og har få kalorier. Volumen og fibrene gør at hunden føler sig mæt uden at få mange kalorier. Mange grønne bønner på dåse indeholder store mængder tilsat salt, og almindelige opskrifter med grønne bønner til mennesker er ikke ufarlige for hunde."
+        "da": "Grønne bønner indeholder vitaminer, mineraler og fibre og har få kalorier. Volumen og fibrene gør at hunden føler sig mæt uden at få mange kalorier. Mange grønne bønner på dåse indeholder store mængder tilsat salt, og almindelige opskrifter med grønne bønner til mennesker er ikke ufarlige for hunde.",
+        "fi": "Vihreissä pavuissa on vitamiineja, kivennäisaineita ja kuitua mutta vähän kaloreita; niiden täyttävyys ja kuitu auttavat koiraa pysymään kylläisenä ilman paljon lisäkaloreita. Monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa, eivätkä ihmisille tehdyt tavalliset papuruoat ole koirille turvallisia."
       },
       "signs": null,
       "what_to_do": {
@@ -30342,7 +30476,8 @@
         "cs": "Než psovi zelené fazolky dáte, zeptejte se veterináře. Nikdy nedávejte zelené fazolky vařené s česnekem nebo česnekovou solí.",
         "hr": "Prije nego što psu daš zelene mahune, pitaj veterinara. Nikad ne daj zelene mahune kuhane s češnjakom ili solju od češnjaka.",
         "sv": "Fråga din veterinär innan du ger hunden gröna bönor. Ge aldrig gröna bönor som har tillagats med vitlök eller vitlökssalt.",
-        "da": "Spørg din dyrlæge før du giver hunden grønne bønner. Giv aldrig grønne bønner, der er tilberedt med hvidløg eller hvidløgssalt."
+        "da": "Spørg din dyrlæge før du giver hunden grønne bønner. Giv aldrig grønne bønner, der er tilberedt med hvidløg eller hvidløgssalt.",
+        "fi": "Kysy eläinlääkäriltä, ennen kuin annat koirallesi vihreitä papuja. Älä koskaan anna vihreitä papuja, jotka on kypsennetty valkosipulin tai valkosipulisuolan kanssa."
       },
       "serving": {
         "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -30357,7 +30492,8 @@
         "cs": "Podávejte je syrové, vařené ve vodě nebo napařené, ale vždy bez dodatků. Vyhněte se konzervovaným zeleným fazolkám a těm, které jsou připravené s máslem, česnekem, česnekovou solí nebo jiným kořením.",
         "hr": "Daj ih sirove, kuhane u vodi ili na pari, ali neka ostanu bez dodataka. Izbjegavaj zelene mahune iz konzerve i sve pripremljene s maslacem, češnjakom, solju od češnjaka ili drugim začinima.",
         "sv": "Servera dem råa, kokta i vatten eller ångade, men utan tillsatser. Undvik gröna bönor på burk och bönor som har tillagats med smör, vitlök, vitlökssalt eller andra kryddor.",
-        "da": "Server dem rå, kogt i vand eller dampet, men uden tilsætninger. Undgå grønne bønner på dåse og bønner tilberedt med smør, hvidløg, hvidløgssalt eller andre krydderier."
+        "da": "Server dem rå, kogt i vand eller dampet, men uden tilsætninger. Undgå grønne bønner på dåse og bønner tilberedt med smør, hvidløg, hvidløgssalt eller andre krydderier.",
+        "fi": "Anna ne raakoina, vedessä keitettyinä tai höyrytettyinä, mutta maustamattomina. Vältä säilöttyjä vihreitä papuja ja papuja, joiden valmistuksessa on käytetty voita, valkosipulia, valkosipulisuolaa tai muita mausteita."
       },
       "child": {
         "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -30372,7 +30508,8 @@
         "cs": "Zelené fazolky bez dodatků jsou křupavý pamlsek pro psy. Fazolky vařené s česnekem nebo máslem psům nepatří.",
         "hr": "Zelene mahune bez dodataka hrskava su poslastica za pse. Zelene mahune kuhane s češnjakom ili maslacem nisu za pse.",
         "sv": "Gröna bönor utan tillsatser är en knaprig hundgodbit. Bönor som har tillagats med vitlök eller smör passar inte hundar.",
-        "da": "Grønne bønner uden tilsætninger er en sprød godbid til hunde. Bønner kogt med hvidløg eller smør er ikke til hunde."
+        "da": "Grønne bønner uden tilsætninger er en sprød godbid til hunde. Bønner kogt med hvidløg eller smør er ikke til hunde.",
+        "fi": "Maustamattomat vihreät pavut ovat koiralle rapea herkku. Valkosipulin tai voin kanssa kypsennetyt pavut eivät ole koirille."
       },
       "faq": [
         {
@@ -30389,7 +30526,8 @@
             "cs": "Mohou psi jíst konzervované zelené fazolky?",
             "hr": "Smiju li psi jesti zelene mahune iz konzerve?",
             "sv": "Får hundar äta gröna bönor på burk?",
-            "da": "Må hunde spise grønne bønner på dåse?"
+            "da": "Må hunde spise grønne bønner på dåse?",
+            "fi": "Saako koira syödä vihreitä papuja purkista?"
           },
           "a": {
             "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -30404,7 +30542,8 @@
             "cs": "Raději je nedávejte, protože mnoho konzervovaných zelených fazolek obsahuje hodně přidané soli.",
             "hr": "Najbolje ih je izbjegavati, jer mnoge zelene mahune iz konzerve sadrže mnogo dodane soli.",
             "sv": "Det är bäst att undvika dem, eftersom många gröna bönor på burk innehåller mycket tillsatt salt.",
-            "da": "Det er bedst at undgå dem, fordi mange grønne bønner på dåse indeholder store mængder tilsat salt."
+            "da": "Det er bedst at undgå dem, fordi mange grønne bønner på dåse indeholder store mængder tilsat salt.",
+            "fi": "Niitä on parasta välttää, koska monissa säilötyissä vihreissä pavuissa on paljon lisättyä suolaa."
           }
         }
       ],
@@ -34281,7 +34420,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Olives",
@@ -34296,7 +34436,8 @@
         "cs": "Olivy",
         "hr": "Masline",
         "sv": "Oliver",
-        "da": "Oliven"
+        "da": "Oliven",
+        "fi": "Oliivit"
       },
       "question": {
         "en": "Can dogs eat olives?",
@@ -34311,7 +34452,8 @@
         "cs": "Mohou psi jíst olivy?",
         "hr": "Smiju li psi jesti masline?",
         "sv": "Får hundar äta oliver?",
-        "da": "Må hunde spise oliven?"
+        "da": "Må hunde spise oliven?",
+        "fi": "Saako koira syödä oliiveja?"
       },
       "url_slug": {
         "en": "olives",
@@ -34326,7 +34468,8 @@
         "cs": "olivy",
         "hr": "masline",
         "sv": "oliver",
-        "da": "oliven"
+        "da": "oliven",
+        "fi": "oliivit"
       },
       "answer": {
         "en": "Yes, in moderation, if they are plain, unsalted and pitted. Olives aren't toxic to dogs, but the pits can cause choking or a blockage, and canned or pickled olives often contain too much sodium.",
@@ -34341,7 +34484,8 @@
         "cs": "Ano, s mírou, pokud jsou bez dodatků, nesolené a vypeckované. Olivy nejsou pro psy toxické, ale pecky mohou způsobit dušení nebo ucpání a olivy z konzervy nebo nakládané často obsahují příliš mnoho sodíku.",
         "hr": "Da, umjereno, ako su bez dodataka, nesoljene i bez koštica. Masline nisu otrovne za pse, ali koštice mogu izazvati gušenje ili začepljenje, a masline iz konzerve ili u salamuri često sadrže previše natrija.",
         "sv": "Ja, med måtta, om de är osaltade, utan tillsatser och urkärnade. Oliver är inte giftiga för hundar, men kärnorna kan orsaka kvävning eller stopp, och oliver på burk eller inlagda oliver innehåller ofta för mycket natrium.",
-        "da": "Ja, i moderate mængder, hvis de er naturelle, usaltede og uden sten. Oliven er ikke giftige for hunde, men stenene kan sætte sig fast i halsen eller give blokering, og oliven på dåse eller syltede oliven indeholder ofte for meget natrium."
+        "da": "Ja, i moderate mængder, hvis de er naturelle, usaltede og uden sten. Oliven er ikke giftige for hunde, men stenene kan sætte sig fast i halsen eller give blokering, og oliven på dåse eller syltede oliven indeholder ofte for meget natrium.",
+        "fi": "Saa, kohtuudella, jos oliivit ovat maustamattomia, suolaamattomia ja kivettömiä. Oliivit eivät ole koirille myrkyllisiä, mutta kivet voivat aiheuttaa tukehtumisen tai tukoksen, ja purkissa tai liemessä säilötyissä oliiveissa on usein liikaa natriumia."
       },
       "why": {
         "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
@@ -34356,7 +34500,8 @@
         "cs": "Samotné olivy neobsahují toxické látky, ale pecky mohou způsobit dušení, ucpat dýchací cesty a uvíznout psovi ve střevech. Olivy z konzervy nebo nakládané často obsahují nadměrné množství sodíku a příliš mnoho sodíku může vést k dehydrataci a ve vzácných případech k otravě solí. Olivy obalené v česneku, koření nebo oleji představují další rizika a olivy naložené v alkoholu se psovi nesmějí dávat nikdy.",
         "hr": "Masline same po sebi ne sadrže otrovne sastojke, ali koštice mogu izazvati gušenje, začepiti dišne putove i zaglaviti se u psećim crijevima. Masline iz konzerve ili u salamuri često sadrže previše natrija, a previše natrija može dovesti do dehidracije i, u rijetkim slučajevima, do otrovanja solju. Masline s češnjakom, začinima ili uljem nose dodatne rizike, a masline namočene u alkohol psu se nikad ne smiju davati.",
         "sv": "Själva oliverna innehåller inga giftiga ämnen, men kärnorna kan orsaka kvävning, blockera luftvägarna och fastna i hundens tarmkanal. Oliver på burk eller inlagda oliver innehåller ofta alldeles för mycket natrium, och för mycket natrium kan leda till uttorkning och i sällsynta fall saltförgiftning. Oliver med vitlök, kryddor eller olja medför ytterligare risker, och oliver som legat i alkohol ska aldrig ges till en hund.",
-        "da": "Oliven indeholder ikke selv giftige stoffer, men stenene kan give kvælning, blokere luftvejene og sætte sig fast i hundens tarmkanal. Oliven på dåse eller syltede oliven indeholder ofte alt for meget natrium, og for meget natrium kan føre til væskemangel og i sjældne tilfælde saltforgiftning. Oliven overtrukket med hvidløg, krydderier eller olie indebærer yderligere risici, og oliven i alkohol må aldrig gives til en hund."
+        "da": "Oliven indeholder ikke selv giftige stoffer, men stenene kan give kvælning, blokere luftvejene og sætte sig fast i hundens tarmkanal. Oliven på dåse eller syltede oliven indeholder ofte alt for meget natrium, og for meget natrium kan føre til væskemangel og i sjældne tilfælde saltforgiftning. Oliven overtrukket med hvidløg, krydderier eller olie indebærer yderligere risici, og oliven i alkohol må aldrig gives til en hund.",
+        "fi": "Oliiveissa itsessään ei ole myrkyllisiä ainesosia, mutta kivet voivat aiheuttaa tukehtumisen, tukkia hengitystiet ja juuttua koiran suolistoon. Purkissa tai liemessä säilötyissä oliiveissa on usein liikaa natriumia, ja liika natrium voi johtaa nestehukkaan ja harvinaisissa tapauksissa suolamyrkytykseen. Oliiveissa, joissa on valkosipulia, mausteita tai öljyä, on lisäriskejä, eikä alkoholissa liotettuja oliiveja saa koskaan antaa koiralle."
       },
       "signs": null,
       "what_to_do": {
@@ -34372,7 +34517,8 @@
         "cs": "Pokud pes sní hodně oliv, zejména s peckami, poraďte se s veterinářem.",
         "hr": "Ako je pas pojeo mnogo maslina, osobito s košticama, obrati se veterinaru za savjet.",
         "sv": "Om hunden äter många oliver, särskilt med kärnorna kvar, kontakta din veterinär för råd.",
-        "da": "Hvis din hund har spist mange oliven, især med sten, skal du kontakte din dyrlæge for at få råd."
+        "da": "Hvis din hund har spist mange oliven, især med sten, skal du kontakte din dyrlæge for at få råd.",
+        "fi": "Jos koirasi syö paljon oliiveja, etenkin kivineen, kysy neuvoa eläinlääkäriltä."
       },
       "serving": {
         "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
@@ -34387,7 +34533,8 @@
         "cs": "Jen olivy bez dodatků, nesolené a vypeckované, v malém množství. Vyhněte se olivám z konzervy nebo nakládaným a olivám s česnekem, kořením, olejem nebo alkoholem.",
         "hr": "Samo masline bez dodataka, nesoljene i bez koštica, u malim količinama. Izbjegavaj masline iz konzerve ili u salamuri te masline s češnjakom, začinima, uljem ili alkoholom.",
         "sv": "Bara osaltade, urkärnade oliver utan tillsatser, i små mängder. Undvik oliver på burk, inlagda oliver och oliver med vitlök, kryddor, olja eller alkohol.",
-        "da": "Kun naturelle, usaltede oliven uden sten og i små mængder. Undgå oliven på dåse eller syltede oliven og oliven med hvidløg, krydderier, olie eller alkohol."
+        "da": "Kun naturelle, usaltede oliven uden sten og i små mængder. Undgå oliven på dåse eller syltede oliven og oliven med hvidløg, krydderier, olie eller alkohol.",
+        "fi": "Vain pieniä määriä maustamattomia, suolaamattomia ja kivettömiä oliiveja. Vältä purkissa tai liemessä säilöttyjä oliiveja sekä oliiveja, joissa on valkosipulia, mausteita, öljyä tai alkoholia."
       },
       "child": {
         "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
@@ -34402,7 +34549,8 @@
         "cs": "Pes může občas dostat olivu bez dodatků, ze které dospělý vyndá pecku. Slané olivy psům nepatří.",
         "hr": "Psi povremeno smiju dobiti maslinu bez dodataka, a odrasla osoba prvo izvadi košticu. Slane masline nisu za pse.",
         "sv": "Hundar kan få en oliv utan tillsatser då och då, när en vuxen först har tagit bort kärnan. Salta oliver passar inte hundar.",
-        "da": "Hunde kan få en naturel oliven en gang imellem, når en voksen har taget stenen ud. Salte oliven er ikke til hunde."
+        "da": "Hunde kan få en naturel oliven en gang imellem, når en voksen har taget stenen ud. Salte oliven er ikke til hunde.",
+        "fi": "Koira saa joskus yhden maustamattoman oliivin, kun aikuinen on ottanut kiven pois. Suolaiset oliivit eivät ole koirille."
       },
       "faq": [
         {
@@ -34419,7 +34567,8 @@
             "cs": "Jsou olivové pecky pro psy nebezpečné?",
             "hr": "Jesu li koštice maslina opasne za pse?",
             "sv": "Är olivkärnor farliga för hundar?",
-            "da": "Er olivensten farlige for hunde?"
+            "da": "Er olivensten farlige for hunde?",
+            "fi": "Ovatko oliivinkivet vaarallisia koirille?"
           },
           "a": {
             "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
@@ -34434,7 +34583,8 @@
             "cs": "Ano. Olivové pecky mohou způsobit dušení nebo ucpání dýchacích cest a mohou psovi uvíznout ve střevech.",
             "hr": "Da. Koštice maslina mogu izazvati gušenje ili začepljenje dišnih putova te se mogu zaglaviti u psećim crijevima.",
             "sv": "Ja. Olivkärnor kan orsaka kvävning eller blockera luftvägarna, och de kan fastna i hundens tarmkanal.",
-            "da": "Ja. Olivensten kan give kvælning eller blokering af luftvejene, og de kan sætte sig fast i hundens tarmkanal."
+            "da": "Ja. Olivensten kan give kvælning eller blokering af luftvejene, og de kan sætte sig fast i hundens tarmkanal.",
+            "fi": "Ovat. Oliivinkivet voivat aiheuttaa tukehtumisen tai hengitystietukoksen, ja ne voivat juuttua koiran suolistoon."
           }
         }
       ],
@@ -36401,7 +36551,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Peas",
@@ -36416,7 +36567,8 @@
         "cs": "Hrášek",
         "hr": "Grašak",
         "sv": "Ärtor",
-        "da": "Ærter"
+        "da": "Ærter",
+        "fi": "Herneet"
       },
       "question": {
         "en": "Can dogs eat peas?",
@@ -36431,7 +36583,8 @@
         "cs": "Mohou psi jíst hrášek?",
         "hr": "Smiju li psi jesti grašak?",
         "sv": "Får hundar äta ärtor?",
-        "da": "Må hunde spise ærter?"
+        "da": "Må hunde spise ærter?",
+        "fi": "Saako koira syödä herneitä?"
       },
       "url_slug": {
         "en": "peas",
@@ -36446,7 +36599,8 @@
         "cs": "hrasek",
         "hr": "grasak",
         "sv": "artor",
-        "da": "aerter"
+        "da": "aerter",
+        "fi": "herneet"
       },
       "answer": {
         "en": "Yes, as an occasional treat. Green peas, including snow peas, sugar snap peas and garden peas, are not toxic to dogs. Give them fresh or frozen, but not canned, because canned peas usually contain a lot of added sodium.",
@@ -36461,7 +36615,8 @@
         "cs": "Ano, jako občasný pamlsek. Zelený hrášek, včetně hrášku s plochými jedlými lusky, cukrového hrášku a zahradního hrášku, není pro psy toxický. Dávejte ho čerstvý nebo mražený, ale ne z konzervy, protože konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku.",
         "hr": "Da, kao povremena poslastica. Zeleni grašak nije otrovan za pse, ni onaj čija se mahuna jede, ni vrtni grašak koji se ljušti. Daj ga svježeg ili smrznutog, ali ne iz konzerve, jer grašak iz konzerve obično sadrži mnogo dodanog natrija.",
         "sv": "Ja, som en godbit då och då. Gröna ärtor, även sockerärtor, snöärtor och trädgårdsärtor, är inte giftiga för hundar. Ge dem färska eller frysta, men inte ärtor på burk, eftersom de oftast innehåller mycket tillsatt natrium.",
-        "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium."
+        "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium.",
+        "fi": "Saa, satunnaisena herkkuna. Vihreät herneet, kuten lumi-, sokeri- ja silpoherneet, eivät ole koirille myrkyllisiä. Anna niitä tuoreina tai pakastettuina mutta ei säilykkeinä, koska säilykeherneissä on yleensä paljon lisättyä natriumia."
       },
       "why": {
         "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -36476,7 +36631,8 @@
         "cs": "Hrášek není pro psy toxický ani jedovatý, ale ovoce a zelenina nejsou ve stravě psa nutné a měly by být jen občasným pamlskem. Konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku, který je pro psy škodlivý. Lusky mohou psovi uvíznout v krku a způsobit dušení.",
         "hr": "Grašak nije otrovan za pse, ali voće i povrće nisu nužni u prehrani psa i trebaju biti samo povremena poslastica. Grašak iz konzerve obično sadrži mnogo dodanog natrija, koji je štetan za pse. Mahune graška mogu zaglaviti psu u grlu i izazvati gušenje.",
         "sv": "Ärtor är inte giftiga för hundar, men frukt och grönsaker behövs inte i hundens kost och bör ses som en godbit då och då. Ärtor på burk innehåller oftast mycket tillsatt natrium, vilket är skadligt för hundar. Ärtskidor kan fastna i hundens hals och orsaka kvävning.",
-        "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals."
+        "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals.",
+        "fi": "Herneet eivät ole koirille myrkyllisiä, mutta hedelmät ja kasvikset eivät ole koiran ruokavaliossa välttämättömiä, ja niitä kannattaa pitää satunnaisena herkkuna. Säilykeherneissä on yleensä paljon lisättyä natriumia, joka on koirille haitallista. Palot voivat juuttua koiran kurkkuun ja aiheuttaa tukehtumisen."
       },
       "signs": null,
       "what_to_do": {
@@ -36492,7 +36648,8 @@
         "cs": "Jako u každé nové potraviny sledujte, zda se u psa neobjeví reakce, například průjem nebo zvracení.",
         "hr": "Kao i kod svake nove hrane, prati ima li pas reakcije poput proljeva ili povraćanja.",
         "sv": "Som med all ny mat: håll utkik efter reaktioner som diarré eller kräkningar.",
-        "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast."
+        "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast.",
+        "fi": "Kun koira syö jotain uutta, seuraa aina, ilmeneekö sillä reaktioita, kuten ripulia tai oksentelua."
       },
       "serving": {
         "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -36507,7 +36664,8 @@
         "cs": "Jen čerstvý, mražený nebo rozmražený hrášek, nikdy z konzervy. Zahradní hrášek vždy vyluštěte a s lusky buďte opatrní, protože mohou způsobit dušení.",
         "hr": "Samo svjež, smrznut ili odmrznut grašak, nikad iz konzerve. Vrtni grašak uvijek oljušti, a s mahunama pazi, jer mogu izazvati gušenje.",
         "sv": "Bara färska, frysta eller upptinade ärtor, aldrig ärtor på burk. Ta alltid ut trädgårdsärtorna ur skidorna och var försiktig med ärtskidor, som kan orsaka kvävning.",
-        "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen."
+        "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen.",
+        "fi": "Vain tuoreita, pakastettuja tai sulatettuja herneitä, ei koskaan säilykkeitä. Silpoherneet pitää aina kuoria, ja palkojen kanssa kannattaa olla varovainen, koska ne voivat aiheuttaa tukehtumisen."
       },
       "child": {
         "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -36522,7 +36680,8 @@
         "cs": "Psi můžou dostat pár zrnek hrášku jako pamlsek. Dospělý nejdřív zahradní hrášek vyluští z lusků.",
         "hr": "Psi smiju dobiti nekoliko zrna graška kao poslasticu. Odrasla osoba prvo oljušti vrtni grašak.",
         "sv": "Hundar kan få några ärtor som godbit. En vuxen tar först ut trädgårdsärtorna ur skidorna.",
-        "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene."
+        "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene.",
+        "fi": "Koira saa muutaman herneen herkuksi. Aikuinen ottaa ensin silpoherneet pois palkojen sisältä."
       },
       "faq": [
         {
@@ -36539,7 +36698,8 @@
             "cs": "Mohou psi jíst hrachové lusky?",
             "hr": "Smiju li psi jesti mahune graška?",
             "sv": "Får hundar äta ärtskidor?",
-            "da": "Må hunde spise ærtebælge?"
+            "da": "Må hunde spise ærtebælge?",
+            "fi": "Saako koira syödä herneenpalkoja?"
           },
           "a": {
             "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -36554,7 +36714,8 @@
             "cs": "Pokud lusk mohou jíst lidé, může ho dostat i pes, ale pozor: lusky mohou uvíznout v krku a způsobit dušení. Zahradní hrášek je třeba vždy vyluštit.",
             "hr": "Ako ljudi mogu jesti mahunu, može je jesti i tvoj pas, ali pazi: mahune mogu zaglaviti u grlu i izazvati gušenje. Vrtni grašak uvijek treba oljuštiti.",
             "sv": "Om skidan går att äta för människor går den också bra för hunden, men var försiktig: ärtskidor kan fastna i halsen och orsaka kvävning. Trädgårdsärtor ska alltid tas ur skidorna.",
-            "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles."
+            "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles.",
+            "fi": "Jos palko on ihmiselle syötävä, myös koira voi syödä sen, mutta ole varovainen: palot voivat juuttua kurkkuun ja aiheuttaa tukehtumisen. Silpoherneet pitää aina kuoria."
           }
         },
         {
@@ -36571,7 +36732,8 @@
             "cs": "Vadí hrášek v psím krmivu?",
             "hr": "Je li grašak u hrani za pse problem?",
             "sv": "Är ärtor i hundfoder ett problem?",
-            "da": "Er ærter i hundefoder et problem?"
+            "da": "Er ærter i hundefoder et problem?",
+            "fi": "Ovatko koiranruoan herneet ongelma?"
           },
           "a": {
             "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -36586,7 +36748,8 @@
             "cs": "Probíhá výzkum, zda hrášek nehraje roli při srdečních onemocněních psů. Pokud váš pes snědl krmivo, v němž je hrášek hlavní složkou, může být dobré promluvit si s veterinářem.",
             "hr": "Istraživanja o tome ima li grašak ulogu u bolestima srca kod pasa još traju. Ako je tvoj pas jeo hranu u kojoj je grašak glavni sastojak, možda želiš razgovarati s veterinarom.",
             "sv": "Forskning pågår om huruvida ärtor kan bidra till hjärtsjukdom hos hundar. Om hunden har ätit foder med ärtor som huvudingrediens kan det vara bra att prata med veterinären.",
-            "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge."
+            "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge.",
+            "fi": "Edelleen tutkitaan, onko herneillä osuutta koirien sydänsairauksiin. Jos koirasi on syönyt ruokaa, jonka pääainesosa on herne, voi olla hyvä keskustella asiasta eläinlääkärin kanssa."
           }
         }
       ],
@@ -40852,7 +41015,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Rhubarb",
@@ -40867,7 +41031,8 @@
         "cs": "Rebarbora",
         "hr": "Rabarbara",
         "sv": "Rabarber",
-        "da": "Rabarber"
+        "da": "Rabarber",
+        "fi": "Raparperi"
       },
       "question": {
         "en": "Can dogs eat rhubarb?",
@@ -40882,7 +41047,8 @@
         "cs": "Mohou psi jíst rebarboru?",
         "hr": "Smiju li psi jesti rabarbaru?",
         "sv": "Får hundar äta rabarber?",
-        "da": "Må hunde spise rabarber?"
+        "da": "Må hunde spise rabarber?",
+        "fi": "Saako koira syödä raparperia?"
       },
       "url_slug": {
         "en": "rhubarb",
@@ -40897,7 +41063,8 @@
         "cs": "rebarbora",
         "hr": "rabarbara",
         "sv": "rabarber",
-        "da": "rabarber"
+        "da": "rabarber",
+        "fi": "raparperi"
       },
       "answer": {
         "en": "No. Keep rhubarb away from dogs. Rhubarb is listed as toxic to dogs, and its leaves contain soluble oxalates in dangerous concentrations. Eating it can cause vomiting, drooling, trembling, low blood calcium and kidney injury.",
@@ -40912,7 +41079,8 @@
         "cs": "Ne. Rebarboru držte mimo dosah psů. Rebarbora je uváděna jako toxická pro psy a její listy obsahují rozpustné šťavelany v nebezpečných koncentracích. Po snědení může způsobit zvracení, slinění, třes, nízkou hladinu vápníku v krvi a poškození ledvin.",
         "hr": "Ne. Rabarbaru drži podalje od pasa. Rabarbara se vodi kao otrovna za pse, a njezini listovi sadrže topive oksalate u opasnim koncentracijama. Ako je pas pojede, može doći do povraćanja, slinjenja, drhtanja, niske razine kalcija u krvi i oštećenja bubrega.",
         "sv": "Nej. Håll rabarber borta från hundar. Rabarber anges som giftig för hundar, och bladen innehåller lösliga oxalater i farliga koncentrationer. Om hunden äter rabarber kan det ge kräkningar, dregling, darrningar, lågt kalcium i blodet och njurskada.",
-        "da": "Nej. Hold rabarber væk fra hunde. Rabarber er klassificeret som giftig for hunde, og bladene indeholder opløselige oxalater i farlige mængder. Hvis en hund spiser rabarber, kan det give opkast, savlen, rysten, lavt calciumindhold i blodet og nyreskade."
+        "da": "Nej. Hold rabarber væk fra hunde. Rabarber er klassificeret som giftig for hunde, og bladene indeholder opløselige oxalater i farlige mængder. Hvis en hund spiser rabarber, kan det give opkast, savlen, rysten, lavt calciumindhold i blodet og nyreskade.",
+        "fi": "Ei saa. Pidä raparperi poissa koiran ulottuvilta. Raparperi on luokiteltu koirille myrkylliseksi, ja sen lehdissä on liukoisia oksalaatteja vaarallisina pitoisuuksina. Raparperin syöminen voi aiheuttaa oksentelua, kuolaamista, vapinaa, veren kalsiumpitoisuuden laskua ja munuaisvaurioita."
       },
       "why": {
         "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
@@ -40927,7 +41095,8 @@
         "cs": "Listy rebarbory obsahují rozpustné šťavelany (kyselinu šťavelovou), které mohou způsobit potíže s nervovou soustavou, trávicím traktem a ledvinami psa a snížit hladinu vápníku. Podle Pet Poison Helpline obsahují řapíky šťavelanů velmi málo a jsou netoxické, ale ASPCA uvádí rebarboru jako toxickou pro psy, proto používáme přísnější hodnocení a doporučujeme držet mimo dosah všechny její části. Psy tato rostlina zajímá jen zřídka, protože listy chutnají hořce.",
         "hr": "Listovi rabarbare sadrže topive oksalate (oksalnu kiselinu), koji mogu uzrokovati tegobe živčanog i probavnog sustava te bubrega i sniziti razinu kalcija. Pet Poison Helpline navodi da stabljike sadrže vrlo malo oksalata i da nisu otrovne, ali ASPCA rabarbaru navodi kao otrovnu za pse, pa primjenjujemo strožu razinu i savjetujemo da psu ne daješ nijedan dio rabarbare. Psi se rijetko zanimaju za tu biljku, jer su listovi gorki.",
         "sv": "Rabarberblad innehåller lösliga oxalater (oxalsyra), som kan påverka hundens nervsystem, matsmältningskanal och njurar och sänka kalciumnivån. Pet Poison Helpline skriver att stjälkarna innehåller mycket lite oxalat och inte är giftiga, men ASPCA anger rabarber som giftig för hundar, så vi använder den strängare nivån och rekommenderar att du håller allt borta. Hundar är sällan intresserade av växten, eftersom bladen smakar bittert.",
-        "da": "Rabarberblade indeholder opløselige oxalater (oxalsyre), som kan påvirke hundens nervesystem, fordøjelse og nyrer og sænke calciumniveauet. Pet Poison Helpline skriver at stilkene indeholder meget lidt oxalat og ikke er giftige, men ASPCA klassificerer rabarber som giftig for hunde, så vi følger den strengeste vurdering og anbefaler at holde hunden væk fra hele planten. Hunde interesserer sig sjældent for planten, fordi bladene smager bittert."
+        "da": "Rabarberblade indeholder opløselige oxalater (oxalsyre), som kan påvirke hundens nervesystem, fordøjelse og nyrer og sænke calciumniveauet. Pet Poison Helpline skriver at stilkene indeholder meget lidt oxalat og ikke er giftige, men ASPCA klassificerer rabarber som giftig for hunde, så vi følger den strengeste vurdering og anbefaler at holde hunden væk fra hele planten. Hunde interesserer sig sjældent for planten, fordi bladene smager bittert.",
+        "fi": "Raparperin lehdissä on liukoisia oksalaatteja (oksaalihappoa), jotka voivat aiheuttaa ongelmia koiran hermostolle, ruoansulatuskanavalle ja munuaisille ja laskea veren kalsiumpitoisuutta. Pet Poison Helplinen mukaan varsissa on hyvin vähän oksalaattia eivätkä ne ole myrkyllisiä, mutta ASPCA luokittelee raparperin koirille myrkylliseksi, joten noudatamme tiukempaa luokitusta ja neuvomme pitämään koko kasvin poissa koiran ulottuvilta. Koirat ovat harvoin kiinnostuneita kasvista, koska sen lehdet maistuvat kitkerältä."
       },
       "signs": {
         "en": [
@@ -41033,6 +41202,14 @@
           "Rysten",
           "Lavt calciumindhold i blodet",
           "Tegn på nyreskade, fx at hunden tisser meget"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Kuolaaminen",
+          "Heikkous",
+          "Vapina",
+          "Veren kalsiumpitoisuuden lasku",
+          "Munuaisvaurion oireet, kuten runsas virtsaaminen"
         ]
       },
       "what_to_do": {
@@ -41048,7 +41225,8 @@
         "cs": "Pokud pes snědl rebarboru, zejména listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
         "hr": "Ako je pas pojeo rabarbaru, osobito listove, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
         "sv": "Om hunden har ätit rabarber, särskilt bladen, kontakta veterinären eller en giftrådgivning för djur direkt.",
-        "da": "Hvis din hund har spist rabarber, især bladene, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme."
+        "da": "Hvis din hund har spist rabarber, især bladene, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme.",
+        "fi": "Jos koirasi söi raparperia, etenkin lehtiä, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan."
       },
       "serving": null,
       "child": {
@@ -41064,7 +41242,8 @@
         "cs": "Rebarbora a její listy psům nepatří. Když ji pes okusuje, hned to řekni dospělému.",
         "hr": "Rabarbara i njezini listovi nisu za pse. Ako pas nešto od toga zagrize, odmah reci odrasloj osobi.",
         "sv": "Rabarber och rabarberblad passar inte hundar. Om hunden knaprar på rabarber, säg till en vuxen direkt.",
-        "da": "Rabarber og rabarberblade er ikke til hunde. Hvis din hund nasker af dem, så sig det til en voksen med det samme."
+        "da": "Rabarber og rabarberblade er ikke til hunde. Hvis din hund nasker af dem, så sig det til en voksen med det samme.",
+        "fi": "Raparperi ja sen lehdet eivät ole koirille. Jos koirasi näykkii niitä, kerro heti aikuiselle."
       },
       "faq": [
         {
@@ -41081,7 +41260,8 @@
             "cs": "Jsou řapíky rebarbory pro psy bezpečné?",
             "hr": "Jesu li stabljike rabarbare sigurne za pse?",
             "sv": "Är rabarberstjälkar säkra för hundar?",
-            "da": "Er rabarberstilke ufarlige for hunde?"
+            "da": "Er rabarberstilke ufarlige for hunde?",
+            "fi": "Ovatko raparperin varret turvallisia koirille?"
           },
           "a": {
             "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
@@ -41096,7 +41276,8 @@
             "cs": "Řapíky obsahují velmi málo šťavelanů a Pet Poison Helpline je označuje za netoxické. ASPCA ale uvádí rebarboru jako toxickou pro psy, proto je nejlepší držet mimo dosah všechny její části.",
             "hr": "Stabljike sadrže vrlo malo oksalata, a Pet Poison Helpline ih smatra neotrovnima. No ASPCA rabarbaru navodi kao otrovnu za pse, pa je najbolje psu ne davati nijedan dio.",
             "sv": "Stjälkarna innehåller mycket lite oxalat, och Pet Poison Helpline beskriver dem som ogiftiga. Men ASPCA anger rabarber som giftig för hundar, så det är bäst att hålla allt borta.",
-            "da": "Stilkene indeholder meget lidt oxalat, og Pet Poison Helpline kalder dem ugiftige. Men ASPCA klassificerer rabarber som giftig for hunde, så det er bedst at holde hunden væk fra hele planten."
+            "da": "Stilkene indeholder meget lidt oxalat, og Pet Poison Helpline kalder dem ugiftige. Men ASPCA klassificerer rabarber som giftig for hunde, så det er bedst at holde hunden væk fra hele planten.",
+            "fi": "Varsissa on hyvin vähän oksalaattia, ja Pet Poison Helplinen mukaan ne eivät ole myrkyllisiä. ASPCA kuitenkin luokittelee raparperin koirille myrkylliseksi, joten koko kasvi on parasta pitää poissa koiran ulottuvilta."
           }
         }
       ],
@@ -42502,7 +42683,8 @@
         "cs",
         "hr",
         "sv",
-        "da"
+        "da",
+        "fi"
       ],
       "name": {
         "en": "Star fruit",
@@ -42517,7 +42699,8 @@
         "cs": "Karambola",
         "hr": "Karambola",
         "sv": "Stjärnfrukt",
-        "da": "Stjernefrugt"
+        "da": "Stjernefrugt",
+        "fi": "Tähtihedelmä"
       },
       "question": {
         "en": "Can dogs eat star fruit?",
@@ -42532,7 +42715,8 @@
         "cs": "Mohou psi jíst karambolu?",
         "hr": "Smiju li psi jesti karambolu?",
         "sv": "Får hundar äta stjärnfrukt?",
-        "da": "Må hunde spise stjernefrugt?"
+        "da": "Må hunde spise stjernefrugt?",
+        "fi": "Saako koira syödä tähtihedelmää?"
       },
       "url_slug": {
         "en": "star-fruit",
@@ -42547,7 +42731,8 @@
         "cs": "karambola",
         "hr": "karambola",
         "sv": "stjarnfrukt",
-        "da": "stjernefrugt"
+        "da": "stjernefrugt",
+        "fi": "tahtihedelma"
       },
       "answer": {
         "en": "No. Keep star fruit away from dogs. Sour star fruit contains soluble oxalate in dangerous concentrations, which can cause vomiting, drooling, weakness, trembling, low blood calcium and kidney injury.",
@@ -42562,7 +42747,8 @@
         "cs": "Ne. Karambolu držte mimo dosah psů. Kyselá karambola obsahuje rozpustný šťavelan v nebezpečných koncentracích, který může způsobit zvracení, slinění, slabost, třes, nízkou hladinu vápníku v krvi a poškození ledvin.",
         "hr": "Ne. Karambolu drži podalje od pasa. Kisela karambola sadrži topivi oksalat u opasnim koncentracijama, koji može izazvati povraćanje, slinjenje, slabost, drhtanje, nisku razinu kalcija u krvi i oštećenje bubrega.",
         "sv": "Nej. Håll stjärnfrukt borta från hundar. Sur stjärnfrukt innehåller lösligt oxalat i farliga koncentrationer, vilket kan ge kräkningar, dregling, svaghet, darrningar, lågt kalcium i blodet och njurskada.",
-        "da": "Nej. Hold stjernefrugt væk fra hunde. Sur stjernefrugt indeholder opløseligt oxalat i farlige mængder, som kan give opkast, savlen, svaghed, rysten, lavt calciumindhold i blodet og nyreskade."
+        "da": "Nej. Hold stjernefrugt væk fra hunde. Sur stjernefrugt indeholder opløseligt oxalat i farlige mængder, som kan give opkast, savlen, svaghed, rysten, lavt calciumindhold i blodet og nyreskade.",
+        "fi": "Ei saa. Pidä tähtihedelmä poissa koiran ulottuvilta. Happamassa tähtihedelmässä on liukoista oksalaattia vaarallisina pitoisuuksina, ja se voi aiheuttaa oksentelua, kuolaamista, heikkoutta, vapinaa, veren kalsiumpitoisuuden laskua ja munuaisvaurioita."
       },
       "why": {
         "en": "Pet Poison Helpline says star fruit can result in poisoning in dogs. The main concern is soluble oxalate (oxalic acid), found in dangerous concentrations in sour star fruit. Pet Poison Helpline also notes that sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide says star fruit is not safe for dogs, so we use the stricter level. Even small amounts can lead to health problems, particularly in dogs with kidney issues, and star fruit can make existing kidney problems worse.",
@@ -42577,7 +42763,8 @@
         "cs": "Podle Pet Poison Helpline může karambola u psů vést k otravě. Hlavním problémem je rozpustný šťavelan (kyselina šťavelová), který se v nebezpečných koncentracích vyskytuje v kyselé karambole. Pet Poison Helpline také uvádí, že sladká karambola obsahuje jen velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři říká, že karambola pro psy není bezpečná, proto používáme přísnější hodnocení. I malé množství může vést ke zdravotním potížím, zejména u psů s nemocnými ledvinami, a karambola může stávající potíže s ledvinami zhoršit.",
         "hr": "Pet Poison Helpline navodi da karambola kod pasa može dovesti do otrovanja. Glavni je problem topivi oksalat (oksalna kiselina), koji se u opasnim koncentracijama nalazi u kiseloj karamboli. Pet Poison Helpline također napominje da slatka karambola sadrži vrlo malo topivog oksalata i nije otrovna za ljubimce sa zdravim bubrezima, ali vodič koji je pregledao veterinar navodi da karambola nije sigurna za pse, pa primjenjujemo strožu razinu. Čak i male količine mogu dovesti do zdravstvenih problema, osobito kod pasa s tegobama s bubrezima, a karambola može pogoršati postojeće probleme s bubrezima.",
         "sv": "Pet Poison Helpline skriver att stjärnfrukt kan leda till förgiftning hos hundar. Det största problemet är lösligt oxalat (oxalsyra), som finns i farliga koncentrationer i sur stjärnfrukt. Pet Poison Helpline noterar också att söt stjärnfrukt innehåller mycket lite lösligt oxalat och inte är giftig för djur med friska njurar, men en veterinärgranskad guide skriver att stjärnfrukt inte är säker för hundar, så vi använder den strängare nivån. Redan små mängder kan ge hälsoproblem, särskilt hos hundar med njurproblem, och stjärnfrukt kan förvärra befintliga njurproblem.",
-        "da": "Pet Poison Helpline skriver at stjernefrugt kan give forgiftning hos hunde. Den største risiko er opløseligt oxalat (oxalsyre), som findes i farlige mængder i sur stjernefrugt. Pet Poison Helpline bemærker også at sød stjernefrugt indeholder meget lidt opløseligt oxalat og ikke er giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver at stjernefrugt ikke er sikker at give hunde, så vi følger den strengeste vurdering. Selv små mængder kan give helbredsproblemer, især hos hunde med nyreproblemer, og stjernefrugt kan forværre eksisterende nyreproblemer."
+        "da": "Pet Poison Helpline skriver at stjernefrugt kan give forgiftning hos hunde. Den største risiko er opløseligt oxalat (oxalsyre), som findes i farlige mængder i sur stjernefrugt. Pet Poison Helpline bemærker også at sød stjernefrugt indeholder meget lidt opløseligt oxalat og ikke er giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver at stjernefrugt ikke er sikker at give hunde, så vi følger den strengeste vurdering. Selv små mængder kan give helbredsproblemer, især hos hunde med nyreproblemer, og stjernefrugt kan forværre eksisterende nyreproblemer.",
+        "fi": "Pet Poison Helplinen mukaan tähtihedelmä voi aiheuttaa koiralle myrkytyksen. Suurin huolenaihe on liukoinen oksalaatti (oksaalihappo), jota on vaarallisina pitoisuuksina happamassa tähtihedelmässä. Pet Poison Helpline toteaa myös, että makeassa tähtihedelmässä on hyvin vähän liukoista oksalaattia eikä se ole myrkyllinen lemmikeille, joiden munuaiset ovat terveet, mutta eläinlääkärin tarkastaman oppaan mukaan tähtihedelmä ei ole koirille turvallinen, joten noudatamme tiukempaa luokitusta. Jo pienet määrät voivat aiheuttaa terveysongelmia etenkin koirille, joilla on munuaisvaivoja, ja tähtihedelmä voi pahentaa olemassa olevia munuaisongelmia."
       },
       "signs": {
         "en": [
@@ -42683,6 +42870,14 @@
           "Rysten",
           "Lavt calciumindhold i blodet",
           "Tegn på nyreskade, fx at hunden tisser meget"
+        ],
+        "fi": [
+          "Oksentelu",
+          "Kuolaaminen",
+          "Heikkous",
+          "Vapina",
+          "Veren kalsiumpitoisuuden lasku",
+          "Munuaisvaurion oireet, kuten runsas virtsaaminen"
         ]
       },
       "what_to_do": {
@@ -42698,7 +42893,8 @@
         "cs": "Odstraňte zbylou karambolu a okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata, zejména pokud má pes potíže s ledvinami. Příznaky se mohou objevit během několika hodin.",
         "hr": "Ukloni preostalu karambolu i odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja, osobito ako pas ima tegobe s bubrezima. Znakovi se mogu pojaviti u roku od nekoliko sati.",
         "sv": "Ta bort eventuella rester av stjärnfrukten och kontakta veterinären eller en giftrådgivning för djur direkt, särskilt om hunden har njurproblem. Tecken kan visa sig inom några timmar.",
-        "da": "Fjern resterne af stjernefrugten, og kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, især hvis din hund har nyreproblemer. Symptomer kan opstå inden for et par timer."
+        "da": "Fjern resterne af stjernefrugten, og kontakt din dyrlæge eller en giftrådgivning for dyr med det samme, især hvis din hund har nyreproblemer. Symptomer kan opstå inden for et par timer.",
+        "fi": "Vie jäljellä oleva tähtihedelmä pois koiran ulottuvilta ja ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan, etenkin jos koirallasi on munuaisongelmia. Oireet voivat ilmaantua muutaman tunnin kuluessa."
       },
       "serving": null,
       "child": {
@@ -42714,7 +42910,8 @@
         "cs": "Karambola není pamlsek pro psy. Když ji pes sní, hned to řekni dospělému.",
         "hr": "Karambola nije poslastica za pse. Ako pas pojede malo, odmah reci odrasloj osobi.",
         "sv": "Stjärnfrukt är ingen hundgodbit. Om hunden äter av den, säg till en vuxen direkt.",
-        "da": "Stjernefrugt er ikke en godbid til hunde. Hvis din hund spiser noget af den, så sig det til en voksen med det samme."
+        "da": "Stjernefrugt er ikke en godbid til hunde. Hvis din hund spiser noget af den, så sig det til en voksen med det samme.",
+        "fi": "Tähtihedelmä ei ole koiran herkku. Jos koirasi syö sitä, kerro heti aikuiselle."
       },
       "faq": [
         {
@@ -42731,7 +42928,8 @@
             "cs": "Je sladká karambola pro psy bezpečná?",
             "hr": "Je li slatka karambola sigurna za pse?",
             "sv": "Är söt stjärnfrukt säker för hundar?",
-            "da": "Er sød stjernefrugt ufarlig for hunde?"
+            "da": "Er sød stjernefrugt ufarlig for hunde?",
+            "fi": "Onko makea tähtihedelmä turvallinen koirille?"
           },
           "a": {
             "en": "Sweet star fruit contains very little soluble oxalate and is not poisonous to pets with healthy kidneys, but a vet-reviewed guide still says star fruit is not safe for dogs, so it is best avoided.",
@@ -42746,7 +42944,8 @@
             "cs": "Sladká karambola obsahuje velmi málo rozpustného šťavelanu a pro zvířata se zdravými ledvinami není jedovatá, ale příručka zkontrolovaná veterináři přesto říká, že karambola pro psy není bezpečná, proto je nejlepší se jí vyhnout.",
             "hr": "Slatka karambola sadrži vrlo malo topivog oksalata i nije otrovna za ljubimce sa zdravim bubrezima, ali vodič koji je pregledao veterinar ipak navodi da karambola nije sigurna za pse, pa je najbolje izbjegavati je.",
             "sv": "Söt stjärnfrukt innehåller mycket lite lösligt oxalat och är inte giftig för djur med friska njurar, men en veterinärgranskad guide skriver ändå att stjärnfrukt inte är säker för hundar, så det är bäst att undvika den.",
-            "da": "Sød stjernefrugt indeholder meget lidt opløseligt oxalat og er ikke giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver alligevel at stjernefrugt ikke er sikker at give hunde, så den bør undgås."
+            "da": "Sød stjernefrugt indeholder meget lidt opløseligt oxalat og er ikke giftig for dyr med sunde nyrer, men en vejledning, som dyrlæger har gennemgået, skriver alligevel at stjernefrugt ikke er sikker at give hunde, så den bør undgås.",
+            "fi": "Makeassa tähtihedelmässä on hyvin vähän liukoista oksalaattia, eikä se ole myrkyllinen lemmikeille, joiden munuaiset ovat terveet. Eläinlääkärin tarkastaman oppaan mukaan tähtihedelmä ei silti ole koirille turvallinen, joten sitä on parasta välttää."
           }
         }
       ],

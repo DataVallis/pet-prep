@@ -14,7 +14,8 @@
     "cs": "Rebarbora",
     "hr": "Rabarbara",
     "sv": "Rabarber",
-    "da": "Rabarber"
+    "da": "Rabarber",
+    "fi": "Raparperi"
   },
   "question": {
     "en": "Can dogs eat rhubarb?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst rebarboru?",
     "hr": "Smiju li psi jesti rabarbaru?",
     "sv": "Får hundar äta rabarber?",
-    "da": "Må hunde spise rabarber?"
+    "da": "Må hunde spise rabarber?",
+    "fi": "Saako koira syödä raparperia?"
   },
   "url_slug": {
     "en": "rhubarb",
@@ -44,7 +46,8 @@
     "cs": "rebarbora",
     "hr": "rabarbara",
     "sv": "rabarber",
-    "da": "rabarber"
+    "da": "rabarber",
+    "fi": "raparperi"
   },
   "level": "toxic",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ne. Rebarboru držte mimo dosah psů. Rebarbora je uváděna jako toxická pro psy a její listy obsahují rozpustné šťavelany v nebezpečných koncentracích. Po snědení může způsobit zvracení, slinění, třes, nízkou hladinu vápníku v krvi a poškození ledvin.",
     "hr": "Ne. Rabarbaru drži podalje od pasa. Rabarbara se vodi kao otrovna za pse, a njezini listovi sadrže topive oksalate u opasnim koncentracijama. Ako je pas pojede, može doći do povraćanja, slinjenja, drhtanja, niske razine kalcija u krvi i oštećenja bubrega.",
     "sv": "Nej. Håll rabarber borta från hundar. Rabarber anges som giftig för hundar, och bladen innehåller lösliga oxalater i farliga koncentrationer. Om hunden äter rabarber kan det ge kräkningar, dregling, darrningar, lågt kalcium i blodet och njurskada.",
-    "da": "Nej. Hold rabarber væk fra hunde. Rabarber er klassificeret som giftig for hunde, og bladene indeholder opløselige oxalater i farlige mængder. Hvis en hund spiser rabarber, kan det give opkast, savlen, rysten, lavt calciumindhold i blodet og nyreskade."
+    "da": "Nej. Hold rabarber væk fra hunde. Rabarber er klassificeret som giftig for hunde, og bladene indeholder opløselige oxalater i farlige mængder. Hvis en hund spiser rabarber, kan det give opkast, savlen, rysten, lavt calciumindhold i blodet og nyreskade.",
+    "fi": "Ei saa. Pidä raparperi poissa koiran ulottuvilta. Raparperi on luokiteltu koirille myrkylliseksi, ja sen lehdissä on liukoisia oksalaatteja vaarallisina pitoisuuksina. Raparperin syöminen voi aiheuttaa oksentelua, kuolaamista, vapinaa, veren kalsiumpitoisuuden laskua ja munuaisvaurioita."
   },
   "why": {
     "en": "Rhubarb leaves contain soluble oxalates (oxalic acid), which can cause problems with a dog's nervous system, digestive tract and kidneys and can lower calcium levels. Pet Poison Helpline says the stalks contain very little oxalate and are nontoxic, but the ASPCA lists rhubarb as toxic to dogs, so we use the stricter level and advise keeping all of it away. Dogs are rarely interested in the plant, because the leaves taste bitter.",
@@ -75,7 +79,8 @@
     "cs": "Listy rebarbory obsahují rozpustné šťavelany (kyselinu šťavelovou), které mohou způsobit potíže s nervovou soustavou, trávicím traktem a ledvinami psa a snížit hladinu vápníku. Podle Pet Poison Helpline obsahují řapíky šťavelanů velmi málo a jsou netoxické, ale ASPCA uvádí rebarboru jako toxickou pro psy, proto používáme přísnější hodnocení a doporučujeme držet mimo dosah všechny její části. Psy tato rostlina zajímá jen zřídka, protože listy chutnají hořce.",
     "hr": "Listovi rabarbare sadrže topive oksalate (oksalnu kiselinu), koji mogu uzrokovati tegobe živčanog i probavnog sustava te bubrega i sniziti razinu kalcija. Pet Poison Helpline navodi da stabljike sadrže vrlo malo oksalata i da nisu otrovne, ali ASPCA rabarbaru navodi kao otrovnu za pse, pa primjenjujemo strožu razinu i savjetujemo da psu ne daješ nijedan dio rabarbare. Psi se rijetko zanimaju za tu biljku, jer su listovi gorki.",
     "sv": "Rabarberblad innehåller lösliga oxalater (oxalsyra), som kan påverka hundens nervsystem, matsmältningskanal och njurar och sänka kalciumnivån. Pet Poison Helpline skriver att stjälkarna innehåller mycket lite oxalat och inte är giftiga, men ASPCA anger rabarber som giftig för hundar, så vi använder den strängare nivån och rekommenderar att du håller allt borta. Hundar är sällan intresserade av växten, eftersom bladen smakar bittert.",
-    "da": "Rabarberblade indeholder opløselige oxalater (oxalsyre), som kan påvirke hundens nervesystem, fordøjelse og nyrer og sænke calciumniveauet. Pet Poison Helpline skriver at stilkene indeholder meget lidt oxalat og ikke er giftige, men ASPCA klassificerer rabarber som giftig for hunde, så vi følger den strengeste vurdering og anbefaler at holde hunden væk fra hele planten. Hunde interesserer sig sjældent for planten, fordi bladene smager bittert."
+    "da": "Rabarberblade indeholder opløselige oxalater (oxalsyre), som kan påvirke hundens nervesystem, fordøjelse og nyrer og sænke calciumniveauet. Pet Poison Helpline skriver at stilkene indeholder meget lidt oxalat og ikke er giftige, men ASPCA klassificerer rabarber som giftig for hunde, så vi følger den strengeste vurdering og anbefaler at holde hunden væk fra hele planten. Hunde interesserer sig sjældent for planten, fordi bladene smager bittert.",
+    "fi": "Raparperin lehdissä on liukoisia oksalaatteja (oksaalihappoa), jotka voivat aiheuttaa ongelmia koiran hermostolle, ruoansulatuskanavalle ja munuaisille ja laskea veren kalsiumpitoisuutta. Pet Poison Helplinen mukaan varsissa on hyvin vähän oksalaattia eivätkä ne ole myrkyllisiä, mutta ASPCA luokittelee raparperin koirille myrkylliseksi, joten noudatamme tiukempaa luokitusta ja neuvomme pitämään koko kasvin poissa koiran ulottuvilta. Koirat ovat harvoin kiinnostuneita kasvista, koska sen lehdet maistuvat kitkerältä."
   },
   "signs": {
     "en": [
@@ -181,6 +186,14 @@
       "Rysten",
       "Lavt calciumindhold i blodet",
       "Tegn på nyreskade, fx at hunden tisser meget"
+    ],
+    "fi": [
+      "Oksentelu",
+      "Kuolaaminen",
+      "Heikkous",
+      "Vapina",
+      "Veren kalsiumpitoisuuden lasku",
+      "Munuaisvaurion oireet, kuten runsas virtsaaminen"
     ]
   },
   "what_to_do": {
@@ -196,7 +209,8 @@
     "cs": "Pokud pes snědl rebarboru, zejména listy, okamžitě se obraťte na veterináře nebo na toxikologickou linku pro zvířata.",
     "hr": "Ako je pas pojeo rabarbaru, osobito listove, odmah se obrati veterinaru ili telefonskoj liniji za otrovanja životinja.",
     "sv": "Om hunden har ätit rabarber, särskilt bladen, kontakta veterinären eller en giftrådgivning för djur direkt.",
-    "da": "Hvis din hund har spist rabarber, især bladene, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme."
+    "da": "Hvis din hund har spist rabarber, især bladene, skal du kontakte din dyrlæge eller en giftrådgivning for dyr med det samme.",
+    "fi": "Jos koirasi söi raparperia, etenkin lehtiä, ota heti yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan."
   },
   "serving": null,
   "child": {
@@ -212,7 +226,8 @@
     "cs": "Rebarbora a její listy psům nepatří. Když ji pes okusuje, hned to řekni dospělému.",
     "hr": "Rabarbara i njezini listovi nisu za pse. Ako pas nešto od toga zagrize, odmah reci odrasloj osobi.",
     "sv": "Rabarber och rabarberblad passar inte hundar. Om hunden knaprar på rabarber, säg till en vuxen direkt.",
-    "da": "Rabarber og rabarberblade er ikke til hunde. Hvis din hund nasker af dem, så sig det til en voksen med det samme."
+    "da": "Rabarber og rabarberblade er ikke til hunde. Hvis din hund nasker af dem, så sig det til en voksen med det samme.",
+    "fi": "Raparperi ja sen lehdet eivät ole koirille. Jos koirasi näykkii niitä, kerro heti aikuiselle."
   },
   "faq": [
     {
@@ -229,7 +244,8 @@
         "cs": "Jsou řapíky rebarbory pro psy bezpečné?",
         "hr": "Jesu li stabljike rabarbare sigurne za pse?",
         "sv": "Är rabarberstjälkar säkra för hundar?",
-        "da": "Er rabarberstilke ufarlige for hunde?"
+        "da": "Er rabarberstilke ufarlige for hunde?",
+        "fi": "Ovatko raparperin varret turvallisia koirille?"
       },
       "a": {
         "en": "The stalks contain very little oxalate, and Pet Poison Helpline calls them nontoxic. But the ASPCA lists rhubarb as toxic to dogs, so it is best to keep all of it away.",
@@ -244,7 +260,8 @@
         "cs": "Řapíky obsahují velmi málo šťavelanů a Pet Poison Helpline je označuje za netoxické. ASPCA ale uvádí rebarboru jako toxickou pro psy, proto je nejlepší držet mimo dosah všechny její části.",
         "hr": "Stabljike sadrže vrlo malo oksalata, a Pet Poison Helpline ih smatra neotrovnima. No ASPCA rabarbaru navodi kao otrovnu za pse, pa je najbolje psu ne davati nijedan dio.",
         "sv": "Stjälkarna innehåller mycket lite oxalat, och Pet Poison Helpline beskriver dem som ogiftiga. Men ASPCA anger rabarber som giftig för hundar, så det är bäst att hålla allt borta.",
-        "da": "Stilkene indeholder meget lidt oxalat, og Pet Poison Helpline kalder dem ugiftige. Men ASPCA klassificerer rabarber som giftig for hunde, så det er bedst at holde hunden væk fra hele planten."
+        "da": "Stilkene indeholder meget lidt oxalat, og Pet Poison Helpline kalder dem ugiftige. Men ASPCA klassificerer rabarber som giftig for hunde, så det er bedst at holde hunden væk fra hele planten.",
+        "fi": "Varsissa on hyvin vähän oksalaattia, ja Pet Poison Helplinen mukaan ne eivät ole myrkyllisiä. ASPCA kuitenkin luokittelee raparperin koirille myrkylliseksi, joten koko kasvi on parasta pitää poissa koiran ulottuvilta."
       }
     }
   ],
@@ -373,6 +390,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "c68c3d38582c2ac64757426cc27b845038f32a524da8da44d6db6f894e64afdd"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f9a0464cb1ebd44643997d8f2b5797740b6194bf1275d8e38dda706af7658fce"
     }
   }
 }

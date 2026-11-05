@@ -14,7 +14,8 @@
     "cs": "Olivy",
     "hr": "Masline",
     "sv": "Oliver",
-    "da": "Oliven"
+    "da": "Oliven",
+    "fi": "Oliivit"
   },
   "question": {
     "en": "Can dogs eat olives?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst olivy?",
     "hr": "Smiju li psi jesti masline?",
     "sv": "Får hundar äta oliver?",
-    "da": "Må hunde spise oliven?"
+    "da": "Må hunde spise oliven?",
+    "fi": "Saako koira syödä oliiveja?"
   },
   "url_slug": {
     "en": "olives",
@@ -44,7 +46,8 @@
     "cs": "olivy",
     "hr": "masline",
     "sv": "oliver",
-    "da": "oliven"
+    "da": "oliven",
+    "fi": "oliivit"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, s mírou, pokud jsou bez dodatků, nesolené a vypeckované. Olivy nejsou pro psy toxické, ale pecky mohou způsobit dušení nebo ucpání a olivy z konzervy nebo nakládané často obsahují příliš mnoho sodíku.",
     "hr": "Da, umjereno, ako su bez dodataka, nesoljene i bez koštica. Masline nisu otrovne za pse, ali koštice mogu izazvati gušenje ili začepljenje, a masline iz konzerve ili u salamuri često sadrže previše natrija.",
     "sv": "Ja, med måtta, om de är osaltade, utan tillsatser och urkärnade. Oliver är inte giftiga för hundar, men kärnorna kan orsaka kvävning eller stopp, och oliver på burk eller inlagda oliver innehåller ofta för mycket natrium.",
-    "da": "Ja, i moderate mængder, hvis de er naturelle, usaltede og uden sten. Oliven er ikke giftige for hunde, men stenene kan sætte sig fast i halsen eller give blokering, og oliven på dåse eller syltede oliven indeholder ofte for meget natrium."
+    "da": "Ja, i moderate mængder, hvis de er naturelle, usaltede og uden sten. Oliven er ikke giftige for hunde, men stenene kan sætte sig fast i halsen eller give blokering, og oliven på dåse eller syltede oliven indeholder ofte for meget natrium.",
+    "fi": "Saa, kohtuudella, jos oliivit ovat maustamattomia, suolaamattomia ja kivettömiä. Oliivit eivät ole koirille myrkyllisiä, mutta kivet voivat aiheuttaa tukehtumisen tai tukoksen, ja purkissa tai liemessä säilötyissä oliiveissa on usein liikaa natriumia."
   },
   "why": {
     "en": "Olives themselves don't contain toxic ingredients, but the pits can cause choking, block airways and lodge in a dog's intestinal tract. Canned or pickled olives often contain excessive sodium, and too much sodium can lead to dehydration and, in rare cases, salt toxicosis. Olives coated in garlic, seasonings or oils carry additional risks, and olives soaked in alcohol should never be given to a dog.",
@@ -75,7 +79,8 @@
     "cs": "Samotné olivy neobsahují toxické látky, ale pecky mohou způsobit dušení, ucpat dýchací cesty a uvíznout psovi ve střevech. Olivy z konzervy nebo nakládané často obsahují nadměrné množství sodíku a příliš mnoho sodíku může vést k dehydrataci a ve vzácných případech k otravě solí. Olivy obalené v česneku, koření nebo oleji představují další rizika a olivy naložené v alkoholu se psovi nesmějí dávat nikdy.",
     "hr": "Masline same po sebi ne sadrže otrovne sastojke, ali koštice mogu izazvati gušenje, začepiti dišne putove i zaglaviti se u psećim crijevima. Masline iz konzerve ili u salamuri često sadrže previše natrija, a previše natrija može dovesti do dehidracije i, u rijetkim slučajevima, do otrovanja solju. Masline s češnjakom, začinima ili uljem nose dodatne rizike, a masline namočene u alkohol psu se nikad ne smiju davati.",
     "sv": "Själva oliverna innehåller inga giftiga ämnen, men kärnorna kan orsaka kvävning, blockera luftvägarna och fastna i hundens tarmkanal. Oliver på burk eller inlagda oliver innehåller ofta alldeles för mycket natrium, och för mycket natrium kan leda till uttorkning och i sällsynta fall saltförgiftning. Oliver med vitlök, kryddor eller olja medför ytterligare risker, och oliver som legat i alkohol ska aldrig ges till en hund.",
-    "da": "Oliven indeholder ikke selv giftige stoffer, men stenene kan give kvælning, blokere luftvejene og sætte sig fast i hundens tarmkanal. Oliven på dåse eller syltede oliven indeholder ofte alt for meget natrium, og for meget natrium kan føre til væskemangel og i sjældne tilfælde saltforgiftning. Oliven overtrukket med hvidløg, krydderier eller olie indebærer yderligere risici, og oliven i alkohol må aldrig gives til en hund."
+    "da": "Oliven indeholder ikke selv giftige stoffer, men stenene kan give kvælning, blokere luftvejene og sætte sig fast i hundens tarmkanal. Oliven på dåse eller syltede oliven indeholder ofte alt for meget natrium, og for meget natrium kan føre til væskemangel og i sjældne tilfælde saltforgiftning. Oliven overtrukket med hvidløg, krydderier eller olie indebærer yderligere risici, og oliven i alkohol må aldrig gives til en hund.",
+    "fi": "Oliiveissa itsessään ei ole myrkyllisiä ainesosia, mutta kivet voivat aiheuttaa tukehtumisen, tukkia hengitystiet ja juuttua koiran suolistoon. Purkissa tai liemessä säilötyissä oliiveissa on usein liikaa natriumia, ja liika natrium voi johtaa nestehukkaan ja harvinaisissa tapauksissa suolamyrkytykseen. Oliiveissa, joissa on valkosipulia, mausteita tai öljyä, on lisäriskejä, eikä alkoholissa liotettuja oliiveja saa koskaan antaa koiralle."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Pokud pes sní hodně oliv, zejména s peckami, poraďte se s veterinářem.",
     "hr": "Ako je pas pojeo mnogo maslina, osobito s košticama, obrati se veterinaru za savjet.",
     "sv": "Om hunden äter många oliver, särskilt med kärnorna kvar, kontakta din veterinär för råd.",
-    "da": "Hvis din hund har spist mange oliven, især med sten, skal du kontakte din dyrlæge for at få råd."
+    "da": "Hvis din hund har spist mange oliven, især med sten, skal du kontakte din dyrlæge for at få råd.",
+    "fi": "Jos koirasi syö paljon oliiveja, etenkin kivineen, kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "Only plain, unsalted, pitted olives, in small quantities. Avoid canned or pickled olives and olives with garlic, seasonings, oils or alcohol.",
@@ -106,7 +112,8 @@
     "cs": "Jen olivy bez dodatků, nesolené a vypeckované, v malém množství. Vyhněte se olivám z konzervy nebo nakládaným a olivám s česnekem, kořením, olejem nebo alkoholem.",
     "hr": "Samo masline bez dodataka, nesoljene i bez koštica, u malim količinama. Izbjegavaj masline iz konzerve ili u salamuri te masline s češnjakom, začinima, uljem ili alkoholom.",
     "sv": "Bara osaltade, urkärnade oliver utan tillsatser, i små mängder. Undvik oliver på burk, inlagda oliver och oliver med vitlök, kryddor, olja eller alkohol.",
-    "da": "Kun naturelle, usaltede oliven uden sten og i små mængder. Undgå oliven på dåse eller syltede oliven og oliven med hvidløg, krydderier, olie eller alkohol."
+    "da": "Kun naturelle, usaltede oliven uden sten og i små mængder. Undgå oliven på dåse eller syltede oliven og oliven med hvidløg, krydderier, olie eller alkohol.",
+    "fi": "Vain pieniä määriä maustamattomia, suolaamattomia ja kivettömiä oliiveja. Vältä purkissa tai liemessä säilöttyjä oliiveja sekä oliiveja, joissa on valkosipulia, mausteita, öljyä tai alkoholia."
   },
   "child": {
     "en": "Dogs can have a plain olive now and then, with the stone taken out by a grown-up. Salty olives are not for dogs.",
@@ -121,7 +128,8 @@
     "cs": "Pes může občas dostat olivu bez dodatků, ze které dospělý vyndá pecku. Slané olivy psům nepatří.",
     "hr": "Psi povremeno smiju dobiti maslinu bez dodataka, a odrasla osoba prvo izvadi košticu. Slane masline nisu za pse.",
     "sv": "Hundar kan få en oliv utan tillsatser då och då, när en vuxen först har tagit bort kärnan. Salta oliver passar inte hundar.",
-    "da": "Hunde kan få en naturel oliven en gang imellem, når en voksen har taget stenen ud. Salte oliven er ikke til hunde."
+    "da": "Hunde kan få en naturel oliven en gang imellem, når en voksen har taget stenen ud. Salte oliven er ikke til hunde.",
+    "fi": "Koira saa joskus yhden maustamattoman oliivin, kun aikuinen on ottanut kiven pois. Suolaiset oliivit eivät ole koirille."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Jsou olivové pecky pro psy nebezpečné?",
         "hr": "Jesu li koštice maslina opasne za pse?",
         "sv": "Är olivkärnor farliga för hundar?",
-        "da": "Er olivensten farlige for hunde?"
+        "da": "Er olivensten farlige for hunde?",
+        "fi": "Ovatko oliivinkivet vaarallisia koirille?"
       },
       "a": {
         "en": "Yes. Olive pits can cause choking or breathing obstructions, and they can lodge in a dog's intestinal tract.",
@@ -153,7 +162,8 @@
         "cs": "Ano. Olivové pecky mohou způsobit dušení nebo ucpání dýchacích cest a mohou psovi uvíznout ve střevech.",
         "hr": "Da. Koštice maslina mogu izazvati gušenje ili začepljenje dišnih putova te se mogu zaglaviti u psećim crijevima.",
         "sv": "Ja. Olivkärnor kan orsaka kvävning eller blockera luftvägarna, och de kan fastna i hundens tarmkanal.",
-        "da": "Ja. Olivensten kan give kvælning eller blokering af luftvejene, og de kan sætte sig fast i hundens tarmkanal."
+        "da": "Ja. Olivensten kan give kvælning eller blokering af luftvejene, og de kan sætte sig fast i hundens tarmkanal.",
+        "fi": "Ovat. Oliivinkivet voivat aiheuttaa tukehtumisen tai hengitystietukoksen, ja ne voivat juuttua koiran suolistoon."
       }
     }
   ],
@@ -283,6 +293,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1eb6eecdd6b492128cc681d44b1239a46791e9176927dd89b7afd3e9487db1cd"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f311efefada6616ac9217be75c1218ec584fec26e92356d74525eeea951d73c2"
     }
   }
 }

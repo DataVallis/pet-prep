@@ -14,7 +14,8 @@
     "cs": "Hrášek",
     "hr": "Grašak",
     "sv": "Ärtor",
-    "da": "Ærter"
+    "da": "Ærter",
+    "fi": "Herneet"
   },
   "question": {
     "en": "Can dogs eat peas?",
@@ -29,7 +30,8 @@
     "cs": "Mohou psi jíst hrášek?",
     "hr": "Smiju li psi jesti grašak?",
     "sv": "Får hundar äta ärtor?",
-    "da": "Må hunde spise ærter?"
+    "da": "Må hunde spise ærter?",
+    "fi": "Saako koira syödä herneitä?"
   },
   "url_slug": {
     "en": "peas",
@@ -44,7 +46,8 @@
     "cs": "hrasek",
     "hr": "grasak",
     "sv": "artor",
-    "da": "aerter"
+    "da": "aerter",
+    "fi": "herneet"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "cs": "Ano, jako občasný pamlsek. Zelený hrášek, včetně hrášku s plochými jedlými lusky, cukrového hrášku a zahradního hrášku, není pro psy toxický. Dávejte ho čerstvý nebo mražený, ale ne z konzervy, protože konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku.",
     "hr": "Da, kao povremena poslastica. Zeleni grašak nije otrovan za pse, ni onaj čija se mahuna jede, ni vrtni grašak koji se ljušti. Daj ga svježeg ili smrznutog, ali ne iz konzerve, jer grašak iz konzerve obično sadrži mnogo dodanog natrija.",
     "sv": "Ja, som en godbit då och då. Gröna ärtor, även sockerärtor, snöärtor och trädgårdsärtor, är inte giftiga för hundar. Ge dem färska eller frysta, men inte ärtor på burk, eftersom de oftast innehåller mycket tillsatt natrium.",
-    "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium."
+    "da": "Ja, som godbid af og til. Grønne ærter, herunder sneærter, sukkerærter og haveærter, er ikke giftige for hunde. Giv dem friske eller frosne, men ikke på dåse, fordi ærter på dåse som regel indeholder meget tilsat natrium.",
+    "fi": "Saa, satunnaisena herkkuna. Vihreät herneet, kuten lumi-, sokeri- ja silpoherneet, eivät ole koirille myrkyllisiä. Anna niitä tuoreina tai pakastettuina mutta ei säilykkeinä, koska säilykeherneissä on yleensä paljon lisättyä natriumia."
   },
   "why": {
     "en": "Peas are not toxic or poisonous to dogs, but fruit and vegetables are not necessary in a dog's diet and should be thought of as an occasional treat. Canned peas typically have a lot of added sodium, which is harmful to dogs. Pods can get stuck in a dog's throat and cause choking.",
@@ -75,7 +79,8 @@
     "cs": "Hrášek není pro psy toxický ani jedovatý, ale ovoce a zelenina nejsou ve stravě psa nutné a měly by být jen občasným pamlskem. Konzervovaný hrášek obvykle obsahuje hodně přidaného sodíku, který je pro psy škodlivý. Lusky mohou psovi uvíznout v krku a způsobit dušení.",
     "hr": "Grašak nije otrovan za pse, ali voće i povrće nisu nužni u prehrani psa i trebaju biti samo povremena poslastica. Grašak iz konzerve obično sadrži mnogo dodanog natrija, koji je štetan za pse. Mahune graška mogu zaglaviti psu u grlu i izazvati gušenje.",
     "sv": "Ärtor är inte giftiga för hundar, men frukt och grönsaker behövs inte i hundens kost och bör ses som en godbit då och då. Ärtor på burk innehåller oftast mycket tillsatt natrium, vilket är skadligt för hundar. Ärtskidor kan fastna i hundens hals och orsaka kvävning.",
-    "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals."
+    "da": "Ærter er ikke giftige for hunde, men frugt og grønt er ikke nødvendigt i en hunds kost og bør ses som godbid af og til. Ærter på dåse har typisk meget tilsat natrium, hvilket er skadeligt for hunde. Bælge kan sætte sig fast i hundens hals.",
+    "fi": "Herneet eivät ole koirille myrkyllisiä, mutta hedelmät ja kasvikset eivät ole koiran ruokavaliossa välttämättömiä, ja niitä kannattaa pitää satunnaisena herkkuna. Säilykeherneissä on yleensä paljon lisättyä natriumia, joka on koirille haitallista. Palot voivat juuttua koiran kurkkuun ja aiheuttaa tukehtumisen."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "cs": "Jako u každé nové potraviny sledujte, zda se u psa neobjeví reakce, například průjem nebo zvracení.",
     "hr": "Kao i kod svake nove hrane, prati ima li pas reakcije poput proljeva ili povraćanja.",
     "sv": "Som med all ny mat: håll utkik efter reaktioner som diarré eller kräkningar.",
-    "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast."
+    "da": "Som med al ny mad skal du holde øje med, om hunden reagerer, fx med diarré eller opkast.",
+    "fi": "Kun koira syö jotain uutta, seuraa aina, ilmeneekö sillä reaktioita, kuten ripulia tai oksentelua."
   },
   "serving": {
     "en": "Fresh, frozen or thawed peas only, never canned. Always shell garden peas, and be careful with pods, which can cause choking.",
@@ -106,7 +112,8 @@
     "cs": "Jen čerstvý, mražený nebo rozmražený hrášek, nikdy z konzervy. Zahradní hrášek vždy vyluštěte a s lusky buďte opatrní, protože mohou způsobit dušení.",
     "hr": "Samo svjež, smrznut ili odmrznut grašak, nikad iz konzerve. Vrtni grašak uvijek oljušti, a s mahunama pazi, jer mogu izazvati gušenje.",
     "sv": "Bara färska, frysta eller upptinade ärtor, aldrig ärtor på burk. Ta alltid ut trädgårdsärtorna ur skidorna och var försiktig med ärtskidor, som kan orsaka kvävning.",
-    "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen."
+    "da": "Kun friske, frosne eller optøede ærter, aldrig fra dåse. Pil altid haveærterne ud af bælgen, og vær forsigtig med bælge, som kan sætte sig fast i halsen.",
+    "fi": "Vain tuoreita, pakastettuja tai sulatettuja herneitä, ei koskaan säilykkeitä. Silpoherneet pitää aina kuoria, ja palkojen kanssa kannattaa olla varovainen, koska ne voivat aiheuttaa tukehtumisen."
   },
   "child": {
     "en": "Dogs can have a few peas as a treat. A grown-up takes garden peas out of their pods first.",
@@ -121,7 +128,8 @@
     "cs": "Psi můžou dostat pár zrnek hrášku jako pamlsek. Dospělý nejdřív zahradní hrášek vyluští z lusků.",
     "hr": "Psi smiju dobiti nekoliko zrna graška kao poslasticu. Odrasla osoba prvo oljušti vrtni grašak.",
     "sv": "Hundar kan få några ärtor som godbit. En vuxen tar först ut trädgårdsärtorna ur skidorna.",
-    "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene."
+    "da": "Hunde kan få nogle få ærter som godbid. En voksen piller først haveærterne ud af bælgene.",
+    "fi": "Koira saa muutaman herneen herkuksi. Aikuinen ottaa ensin silpoherneet pois palkojen sisältä."
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "cs": "Mohou psi jíst hrachové lusky?",
         "hr": "Smiju li psi jesti mahune graška?",
         "sv": "Får hundar äta ärtskidor?",
-        "da": "Må hunde spise ærtebælge?"
+        "da": "Må hunde spise ærtebælge?",
+        "fi": "Saako koira syödä herneenpalkoja?"
       },
       "a": {
         "en": "If people can eat the pod, so can your dog, but be careful: pods can get stuck in the throat and cause choking. Garden peas must always be shelled.",
@@ -153,7 +162,8 @@
         "cs": "Pokud lusk mohou jíst lidé, může ho dostat i pes, ale pozor: lusky mohou uvíznout v krku a způsobit dušení. Zahradní hrášek je třeba vždy vyluštit.",
         "hr": "Ako ljudi mogu jesti mahunu, može je jesti i tvoj pas, ali pazi: mahune mogu zaglaviti u grlu i izazvati gušenje. Vrtni grašak uvijek treba oljuštiti.",
         "sv": "Om skidan går att äta för människor går den också bra för hunden, men var försiktig: ärtskidor kan fastna i halsen och orsaka kvävning. Trädgårdsärtor ska alltid tas ur skidorna.",
-        "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles."
+        "da": "Hvis mennesker kan spise bælgen, kan din hund også, men vær forsigtig: bælge kan sætte sig fast i halsen. Haveærter skal altid pilles.",
+        "fi": "Jos palko on ihmiselle syötävä, myös koira voi syödä sen, mutta ole varovainen: palot voivat juuttua kurkkuun ja aiheuttaa tukehtumisen. Silpoherneet pitää aina kuoria."
       }
     },
     {
@@ -170,7 +180,8 @@
         "cs": "Vadí hrášek v psím krmivu?",
         "hr": "Je li grašak u hrani za pse problem?",
         "sv": "Är ärtor i hundfoder ett problem?",
-        "da": "Er ærter i hundefoder et problem?"
+        "da": "Er ærter i hundefoder et problem?",
+        "fi": "Ovatko koiranruoan herneet ongelma?"
       },
       "a": {
         "en": "Research is ongoing into whether peas play a role in heart disease in dogs. If your dog has eaten a food with peas as a main ingredient, you may want to talk to your vet.",
@@ -185,7 +196,8 @@
         "cs": "Probíhá výzkum, zda hrášek nehraje roli při srdečních onemocněních psů. Pokud váš pes snědl krmivo, v němž je hrášek hlavní složkou, může být dobré promluvit si s veterinářem.",
         "hr": "Istraživanja o tome ima li grašak ulogu u bolestima srca kod pasa još traju. Ako je tvoj pas jeo hranu u kojoj je grašak glavni sastojak, možda želiš razgovarati s veterinarom.",
         "sv": "Forskning pågår om huruvida ärtor kan bidra till hjärtsjukdom hos hundar. Om hunden har ätit foder med ärtor som huvudingrediens kan det vara bra att prata med veterinären.",
-        "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge."
+        "da": "Der forskes stadig i, om ærter har betydning for hjertesygdom hos hunde. Hvis din hund har spist foder med ærter som hovedingrediens, kan det være en idé at tale med din dyrlæge.",
+        "fi": "Edelleen tutkitaan, onko herneillä osuutta koirien sydänsairauksiin. Jos koirasi on syönyt ruokaa, jonka pääainesosa on herne, voi olla hyvä keskustella asiasta eläinlääkärin kanssa."
       }
     }
   ],
@@ -306,6 +318,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e43580524b70e13f889bd14c29ec5f89cb5c34290fd1e05bdde1978f03f86a51"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c4fd43591ed66ae048ae8ad3e0657db53fc22783f3c29250ca4fb3885ba9e897"
     }
   }
 }
