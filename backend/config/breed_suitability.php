@@ -2401,5 +2401,27 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S714', 'S715'], 'refs' => ['standard_schnauzer.suitability.rkc_grooming', 'standard_schnauzer.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-96 Coton de Tulear — not a flat-faced breed (RKC muzzle "straight with definite underjaw", nose "with open
+        // nostrils", S723); RKC Breed Watch Category 1 (S724). Children / other pets with PetMD's introduction condition (never
+        // small_children); RKC "Sheds: No" + PetMD "low-shedding" → low_shedding (never hypoallergenic). No new vocabulary key.
+        'coton_de_tulear' => [
+            'suits' => [
+                // S724 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S724'], 'refs' => ['coton_de_tulear.suitability.rkc_size_of_home', 'coton_de_tulear.suitability.rkc_garden']],
+                // S725 "… loyal and loving dogs that thrive on family life, making them excellent family pets."
+                ['tag' => 'family_pet', 'source_ids' => ['S725'], 'refs' => ['coton_de_tulear.suitability.pdsa_family', 'coton_de_tulear.behaviour.family']],
+                // S726 "They generally get along great with children and other pets—especially when introductions are done properly—…"
+                ['tag' => 'children', 'source_ids' => ['S726'], 'refs' => ['coton_de_tulear.suitability.petmd_children', 'coton_de_tulear.behaviour.children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S726'], 'refs' => ['coton_de_tulear.suitability.petmd_children', 'coton_de_tulear.behaviour.other_pets']],
+                // S724 "Sheds: No".
+                ['tag' => 'low_shedding', 'source_ids' => ['S724'], 'refs' => ['coton_de_tulear.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S724 "Grooming: Every day"; S725 "Daily grooming is needed to keep their coat in tip-top condition."
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S724', 'S725'], 'refs' => ['coton_de_tulear.suitability.rkc_grooming', 'coton_de_tulear.suitability.pdsa_grooming']],
+                // S726 "a Coton de Tulear can develop separation anxiety if her pet parents leave her alone for more than a few hours at a time."
+                ['tag' => 'needs_company', 'source_ids' => ['S726'], 'refs' => ['coton_de_tulear.behaviour.time_alone']],
+            ],
+        ],
     ],
 ];

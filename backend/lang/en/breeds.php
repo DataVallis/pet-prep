@@ -97,6 +97,7 @@ return [
     'old_english_sheepdog' => 'Old English Sheepdog',
     'keeshond' => 'Keeshond',
     'standard_schnauzer' => 'Standard Schnauzer',
+    'coton_de_tulear' => 'Coton de Tulear',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
