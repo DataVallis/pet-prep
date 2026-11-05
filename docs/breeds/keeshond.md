@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `keeshond` (viri S709–S710; ponovno S10, S11, S14, S24, S35, S45, S54, S174, S245, S246); seznam za vzreditelja: ni najden (`not_found`) |
 | Izvor | FCI št. 97 (nemški špic, različica volčji špic / keeshond), skupina 5, sekcija 4 (evropski špici), Nemčija (S246, S245) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 90. mesto »Keeshond« (S174, prebrano 2026-11-05) |
-| PR-ji | pet-prep #749 (pasma) · portret: sledi po združitvi · spletna stran: šele s portretom |
+| PR-ji | pet-prep #749 (pasma, združen `5a29d95`) · portret pet-prep #754 (zagon `breed-portraits.yml` 41945256571, koda `5a29d95`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-keeshond` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca — predlog; 4 → 3 → 2 obroka; učenje 1,5×) | 🛠 | 💶 izziv | M5-R10-94 | 2026-11-05 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, opomnik staršu za kopanje vsake 4 tedne | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R20 | 2026-11-05 |
 | Barva (izbirnik: 1 barva standarda — volčje siva) | 🛠 | 💶 izziv | M5-R21 | 2026-11-05 |
-| AI portret v registru | 🗓 sledi po združitvi | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/keeshond`, `/sl/zivali/psi/keeshond`) | 🗓 le s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; volčje siva, »očala«, rep zavit čez hrbet) | — | M5-R11-04 | 2026-11-05 |
+| Stran na petprep.si (`/animals/dogs/keeshond`, `/sl/zivali/psi/keeshond`) | 🛠 s portretom (spletni PR sledi); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
