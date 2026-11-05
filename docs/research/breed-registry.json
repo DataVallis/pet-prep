@@ -9,11 +9,11 @@
   "inputs": {
     "dog_data": {
       "path": "docs/research/dog-data/data.json",
-      "sha256": "c5d9aceb371a4f91a6ec24b5de4418feb0082c3e64bb786307e2401298b5f7a2"
+      "sha256": "961f956234c91586298686770ba0b6e66e935475ab13830afbc52af7251ac93e"
     },
     "dog_sources": {
       "path": "docs/research/dog-data/sources.md",
-      "sha256": "d12e6bf08cf59fca9c88a612ec4028cc9b05b4970fc950fed5c4085e286d11a7"
+      "sha256": "826449226f70b4d3c6575b910da076865a44c47b6b1f4eaad8cef735de163b8f"
     },
     "cat_data": {
       "path": "docs/research/cat-data/data.json",
@@ -25,7 +25,7 @@
     },
     "suitability": {
       "path": "backend/config/breed_suitability.php",
-      "sha256": "14098d91eb0d5d12d6e02bfb21892b248cd3bed3d9f4ee464c475b2ff82f7ed2"
+      "sha256": "c2dcb807068ce11f6a7d3aba4f423c194d6f751710be862a2ba750669b384dd7"
     },
     "labels_en": {
       "path": "mobile/src/i18n/locales/en/pet.json",
@@ -40,16 +40,16 @@
     "family_en": {
       "path": "mobile/src/i18n/locales/en/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "3a80c6d6501fcfc201c3735fa37bd0291b54e102d5db8e9d8944340d9f0bd565"
+      "sha256": "62af06b43d823b37b0b84e141f7e1d822812d176c32e8952c0612bebfded56ae"
     },
     "family_sl": {
       "path": "mobile/src/i18n/locales/sl/family.json",
       "covers": "breeds.<id> of every register breed",
-      "sha256": "62da0a49fe38c5f8c8ee9220c7e1f43086f387b69d30ea0b573fefb301a7ede5"
+      "sha256": "d18c2d30be4eb6c06320a1159d6f392535cebb1e0fe190a2cbdf9ce3b12e3f52"
     },
     "checklist_data": {
       "path": "docs/research/breeder-checklist/data.json",
-      "sha256": "5fa3fa8fa8c12d06d3d292ee18fce9a6ab6d9c2a8b7443ea967399d0e42ce417"
+      "sha256": "5f6679428355fd6340d9f633fc6ef65554bc63620907cf60cada2d436ad2c7c0"
     },
     "checklist_sources": {
       "path": "docs/research/breeder-checklist/sources.md",
@@ -61,7 +61,7 @@
     },
     "breed_colours": {
       "path": "backend/config/breed_colours.php",
-      "sha256": "b59e781a5a310e17e78a0e3267462ba54dc01095915993b390585792af48ff36"
+      "sha256": "0df9415214b7d55c4d447ce1b35bff3ed1d7483a0ca14ead2a482a2eceab82e5"
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
@@ -225,7 +225,7 @@
         }
       },
       "status": "available",
-      "breed_count": 87,
+      "breed_count": 88,
       "fact_groups": [
         "exercise",
         "grooming",
@@ -52741,6 +52741,529 @@
       ]
     },
     {
+      "id": "keeshond",
+      "species": "dog",
+      "order": 87,
+      "availability": "coming_soon",
+      "name": {
+        "en": "Keeshond",
+        "sl": "Keeshond"
+      },
+      "slug": {
+        "en": "keeshond",
+        "sl": "keeshond"
+      },
+      "synonyms": {
+        "en": [
+          "Wolfsspitz",
+          "Wolfspitz",
+          "German Wolfspitz",
+          "Keeshonden"
+        ],
+        "sl": [
+          "volčji špic",
+          "nemški volčji špic",
+          "wolfspitz"
+        ]
+      },
+      "facets": {
+        "size": "medium",
+        "exercise": "under_1h",
+        "grooming": "daily"
+      },
+      "facts": [
+        {
+          "group": "size",
+          "field": "size",
+          "kind": "category",
+          "value": "medium",
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.size_class",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "height",
+          "kind": "quantity",
+          "unit": "cm",
+          "value": {
+            "male": [
+              43,
+              55
+            ],
+            "female": [
+              43,
+              55
+            ]
+          },
+          "source_ids": [
+            "S246"
+          ],
+          "ref": "keeshond.height.fci",
+          "confidence": "high"
+        },
+        {
+          "group": "size",
+          "field": "weight",
+          "kind": "quantity",
+          "unit": "kg",
+          "value": {
+            "male": [
+              16,
+              20
+            ],
+            "female": [
+              16,
+              20
+            ]
+          },
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.adult_weight.pdsa",
+          "confidence": "medium"
+        },
+        {
+          "group": "stages",
+          "field": "growth_end",
+          "kind": "quantity",
+          "unit": "months",
+          "qualifier": "about",
+          "note": "size_class_guidance",
+          "value": [
+            12,
+            15
+          ],
+          "source_ids": [
+            "S10"
+          ],
+          "ref": "keeshond.growth.adult_weight_reached",
+          "confidence": "medium"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "more_than",
+          "value": 10,
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.lifespan.pdsa",
+          "confidence": "high"
+        },
+        {
+          "group": "lifespan",
+          "field": "lifespan",
+          "kind": "quantity",
+          "unit": "years",
+          "qualifier": "span",
+          "value": [
+            12,
+            14
+          ],
+          "source_ids": [
+            "S710"
+          ],
+          "ref": "keeshond.lifespan.vca",
+          "confidence": "medium"
+        },
+        {
+          "group": "exercise",
+          "field": "exercise",
+          "kind": "quantity",
+          "unit": "min_per_day",
+          "qualifier": "up_to",
+          "value": 60,
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.exercise.adult",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "coat",
+          "kind": "category",
+          "value": [
+            "medium"
+          ],
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.suitability.pdsa_coat_length",
+          "confidence": "high"
+        },
+        {
+          "group": "grooming",
+          "field": "grooming_frequency",
+          "kind": "category",
+          "value": "every_day",
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.suitability.pdsa_grooming",
+          "confidence": "high"
+        },
+        {
+          "group": "training",
+          "field": "coren_rank",
+          "kind": "statement",
+          "value": 16,
+          "source_ids": [
+            "S35"
+          ],
+          "ref": "keeshond.trainability.coren_rank",
+          "confidence": "medium"
+        },
+        {
+          "group": "training",
+          "field": "fci_standard",
+          "kind": "statement",
+          "value": {
+            "number": 97,
+            "group": 5,
+            "section": 4,
+            "origin": "DE"
+          },
+          "source_ids": [
+            "S246"
+          ],
+          "ref": "keeshond.identity",
+          "confidence": "high"
+        }
+      ],
+      "compare": {
+        "size": 0,
+        "weight": 2,
+        "exercise": 6,
+        "grooming_frequency": 8,
+        "lifespan": 4
+      },
+      "health": [
+        {
+          "key": "hip_dysplasia",
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.health.hips",
+          "confidence": "medium"
+        },
+        {
+          "key": "epilepsy",
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.health.epilepsy",
+          "confidence": "medium"
+        },
+        {
+          "key": "kneecap_luxation",
+          "source_ids": [
+            "S709"
+          ],
+          "ref": "keeshond.health.patella",
+          "confidence": "medium"
+        }
+      ],
+      "suitability": {
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.behaviour.family"
+            ]
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S710"
+            ],
+            "refs": [
+              "keeshond.behaviour.children",
+              "keeshond.suitability.vca_children"
+            ]
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.behaviour.other_pets"
+            ]
+          }
+        ],
+        "consider": [
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S709"
+            ],
+            "refs": [
+              "keeshond.suitability.pdsa_grooming"
+            ]
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S710"
+            ],
+            "refs": [
+              "keeshond.suitability.vca_shedding"
+            ]
+          }
+        ]
+      },
+      "game": {
+        "stages": [
+          {
+            "stage": "puppy",
+            "starts": {
+              "arrival_months": 2
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 4
+              },
+              {
+                "from_months": 3,
+                "meals": 3
+              },
+              {
+                "from_months": 6,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps_growing",
+              "per_month": 1000,
+              "first": 2000,
+              "cap": 6000,
+              "cap_month": 6
+            }
+          },
+          {
+            "stage": "young",
+            "starts": {
+              "month": 9
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "adult",
+            "starts": {
+              "month": 36
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 6000
+            }
+          },
+          {
+            "stage": "senior",
+            "starts": {
+              "month": 90
+            },
+            "meals": [
+              {
+                "from_months": null,
+                "meals": 2
+              }
+            ],
+            "activity": {
+              "kind": "steps",
+              "value": 4500
+            }
+          }
+        ],
+        "adult_activity": {
+          "kind": "steps",
+          "value": 6000
+        },
+        "rules": [
+          {
+            "key": "steps_rule",
+            "params": {
+              "minutes": 60,
+              "steps": 6000,
+              "per_minute": 100
+            }
+          },
+          {
+            "key": "learning",
+            "params": {
+              "multiplier": 1.5
+            }
+          },
+          {
+            "key": "senior_share",
+            "params": {
+              "months": 90
+            }
+          },
+          {
+            "key": "walk_sensor",
+            "params": {}
+          },
+          {
+            "key": "grooming_rule",
+            "params": {
+              "per_week": 7
+            }
+          },
+          {
+            "key": "care_task",
+            "params": {
+              "task": "bath",
+              "actor": "parent",
+              "times": 1,
+              "period_days": 28
+            }
+          }
+        ],
+        "values": [
+          {
+            "ref": "general_by_size.exercise.steps_conversion",
+            "basis_source_ids": [
+              "S45"
+            ],
+            "decision": null
+          },
+          {
+            "ref": "proposed_game_parameters.walk_minutes_puppy",
+            "basis_source_ids": [
+              "S24"
+            ],
+            "decision": "potrdil David 2026-10-05: 10 min × age in months"
+          },
+          {
+            "ref": "proposed_game_parameters.feed_windows",
+            "basis_source_ids": [
+              "S14",
+              "S18",
+              "S19",
+              "S21"
+            ],
+            "decision": "potrdil David 2026-10-05: meal counts as listed; senior = 2"
+          },
+          {
+            "ref": "proposed_game_parameters.arrival_age_months",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-05: puppy 2 months, other stages the first month of the stage"
+          },
+          {
+            "ref": "proposed_game_parameters.keeshond.exercise_minutes_adult",
+            "basis_source_ids": [
+              "S709"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (PDSA S709 'up to an hour')"
+          },
+          {
+            "ref": "proposed_game_parameters.keeshond.exercise_minutes_senior",
+            "basis_source_ids": [],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+          },
+          {
+            "ref": "proposed_game_parameters.keeshond.stage_boundaries_months",
+            "basis_source_ids": [
+              "S10",
+              "S11",
+              "S709"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36 (all dogs). The senior boundary 90 is NOT covered by a confirmed rule — see senior_boundary_months (Claude's suggestion, open for David)."
+          },
+          {
+            "ref": "proposed_game_parameters.keeshond.learning_multiplier",
+            "basis_source_ids": [
+              "S35"
+            ],
+            "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 16, Excellent, S35)"
+          },
+          {
+            "ref": "proposed_game_parameters.keeshond.grooming",
+            "basis_source_ids": [
+              "S709"
+            ],
+            "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): vsak dan (7× na teden; PDSA »Grooming is a daily requirement«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+          },
+          {
+            "ref": "keeshond.suitability.vca_bath",
+            "basis_source_ids": [
+              "S710"
+            ],
+            "decision": null
+          }
+        ],
+        "basis_source_ids": [
+          "S10",
+          "S11",
+          "S14",
+          "S18",
+          "S19",
+          "S21",
+          "S24",
+          "S35",
+          "S45",
+          "S709",
+          "S710"
+        ]
+      },
+      "portrait": null,
+      "breeder_checklist": {
+        "status": "not_found",
+        "tests": [],
+        "basis_source_ids": []
+      },
+      "source_ids": [
+        "S10",
+        "S11",
+        "S14",
+        "S18",
+        "S19",
+        "S21",
+        "S24",
+        "S35",
+        "S45",
+        "S246",
+        "S709",
+        "S710",
+        "K1",
+        "K2",
+        "K3",
+        "K4",
+        "K5",
+        "K6",
+        "K7",
+        "K8",
+        "K9",
+        "K10",
+        "K19"
+      ]
+    },
+    {
       "id": "maine_coon",
       "species": "cat",
       "order": 0,
@@ -58304,6 +58827,20 @@
       "publisher": "PetMD — Sarah Mouton Dowdy, MA, reviewed by Barri J. Morrison, DVM (updated 2023-07-24)",
       "title": "Old English Sheepdog",
       "url": "https://www.petmd.com/dog/breeds/c_dg_old_english_sheepdog"
+    },
+    {
+      "id": "S709",
+      "tier": "B",
+      "publisher": "PDSA",
+      "title": "Keeshond breed information",
+      "url": "https://www.pdsa.org.uk/pet-help-and-advice/looking-after-your-pet/puppies-dogs/medium-dogs/keeshond"
+    },
+    {
+      "id": "S710",
+      "tier": "B",
+      "publisher": "VCA Animal Hospitals (LifeLearn; no author / date shown)",
+      "title": "Keeshond — dog breed page",
+      "url": "https://vcahospitals.com/know-your-pet/dog-breeds/keeshond"
     },
     {
       "id": "C1",
