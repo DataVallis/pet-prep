@@ -1169,6 +1169,19 @@
             "prompt_hash": "sha256:c5572d8d7d429e189f2edb1d66f83053563eaf5938b466281eb168295aeb3238",
             "generated_at": "2026-11-05T03:12:46+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "coton_de_tulear",
+            "species": "dog",
+            "colour": "white",
+            "file": "dog/coton-de-tulear.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c8b6881c5926302f6b6bbc0687f0a96565b53e0e06871efd17cd382a406a06c7",
+            "generated_at": "2026-11-05T06:49:48+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [

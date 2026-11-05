@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `coton_de_tulear` (viri S721–S728; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: RKC (`listed`) — genetska raznolikost (minimum), pregled oči BVA/KC/ISDS (dobra praksa) |
 | Izvor | FCI št. 283 »Coton de Tuléar«, skupina 9, sekcija 1 (bišoni in sorodne pasme), Madagaskar, pokroviteljstvo Francija (S721, S722) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 92. mesto »Coton de Tulear« (S174, prebrano 2026-11-05) |
-| PR-ji | pet-prep #773 (pasma) · portret pet-prep (sledi) · spletna stran pet-prep-website (sledi, šele s portretom) |
+| PR-ji | pet-prep #773 (pasma, združen `ce50ae6`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 41982964268, koda `ce50ae6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-coton-de-tulear` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Pravila po starosti (2.000 → 3.000 korakov pri 3 mesecih, odrasel 3.000, starejši 2.300 od 108. meseca; 4 → 3 → 2 obroka; učenje 1,0×) | 🛠 | 💶 izziv | M5-R10-96 | 2026-11-05 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, nega ušes 1× na teden, opomnik staršu za kopanje (4 tedni) | 🛠 | 💶 izziv | M5-R13 / M5-R17 / M5-R19 / M5-R20 | 2026-11-05 |
 | Barva (izbirnik: 1 barva standarda — bela) | 🛠 | 💶 izziv | M5-R21 | 2026-11-05 |
-| AI portret v registru | 🗓 sledi (po združitvi tega PR-ja) | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; bela, naravna nestrižena dlaka, rep čez hrbet) | — | M5-R11-04 | 2026-11-05 |
 | Stran na petprep.si (`/animals/dogs/coton-de-tulear`, `/sl/zivali/psi/coton-de-tulear`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -59,4 +59,4 @@
 - **Ušesa** slonijo na enem stavku PetMD (S726, tedenski pregled ušes, tier B); noben drug vir ne navaja pogostosti. Potrdite ali odstranite.
 - **Slovensko ime** »coton de tulear« je iz tiska (S728, tier C); strani KZS ali kluba nisem našel. Potrdite ali popravite.
 - **Degenerativna mielopatija** (PetMD S726) ni na spletni strani, ker skupni stavek obljublja DNA test, ki ga RKC za pasmo ne navaja. Odločite, ali želite ožji ključ brez obljube testa.
-- **Spletna stran:** Madagaskar je nov izvor — besede »Madagascar / Madagaskar« dodane v PR spletne strani.
+- **Portret:** narejen 2026-11-05 (zagon 41982964268, brez produkcijske namestitve), sprejet v prvem poskusu. **Spletna stran:** Madagaskar je nov izvor — besede »Madagascar / Madagaskar« dodane v PR spletne strani.

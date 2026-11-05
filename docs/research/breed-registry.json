@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "c82b1153a3554cb5cb097755c965e7449e1eea96d25e0980b06d1fb9cc7d2a5b"
+      "sha256": "4ffdf5ffaefb4087eeb20292bab00397d9719224dbd43d960020b9d1b91a06e2"
     }
   },
   "suitability_vocabulary": {
@@ -54412,7 +54412,12 @@
           "S726"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "coton-de-tulear.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
