@@ -1156,6 +1156,19 @@
             "prompt_hash": "sha256:abecdd14a25f4c45e988f4578e43c100b24b340b851ee3b3e1965a8046b4f033",
             "generated_at": "2026-11-05T00:59:17+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "standard_schnauzer",
+            "species": "dog",
+            "colour": "pepper-salt",
+            "file": "dog/standard-schnauzer.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:c5572d8d7d429e189f2edb1d66f83053563eaf5938b466281eb168295aeb3238",
+            "generated_at": "2026-11-05T03:12:46+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
