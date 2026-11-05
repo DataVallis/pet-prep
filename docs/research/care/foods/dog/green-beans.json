@@ -8,7 +8,8 @@
     "fr": "Haricots verts",
     "es": "Judías verdes",
     "it": "Fagiolini",
-    "pt": "Feijão-verde"
+    "pt": "Feijão-verde",
+    "nl": "Sperziebonen"
   },
   "question": {
     "en": "Can dogs eat green beans?",
@@ -17,7 +18,8 @@
     "fr": "Les chiens peuvent-ils manger des haricots verts ?",
     "es": "¿Pueden los perros comer judías verdes?",
     "it": "I cani possono mangiare i fagiolini?",
-    "pt": "Os cães podem comer feijão-verde?"
+    "pt": "Os cães podem comer feijão-verde?",
+    "nl": "Mogen honden sperziebonen eten?"
   },
   "url_slug": {
     "en": "green-beans",
@@ -26,7 +28,8 @@
     "fr": "haricots-verts",
     "es": "judias-verdes",
     "it": "fagiolini",
-    "pt": "feijao-verde"
+    "pt": "feijao-verde",
+    "nl": "sperziebonen"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "fr": "Oui. Les haricots verts nature, crus ou cuits, sont sans danger, avec modération, pour la plupart des chiens et constituent une friandise peu calorique. Ne donnez jamais de haricots verts additionnés de sel, de beurre, d’ail ou d’autres assaisonnements.",
     "es": "Sí. Las judías verdes sin condimentar, crudas o cocidas, son seguras con moderación para la mayoría de los perros y constituyen un premio bajo en calorías. Nunca des judías verdes con sal, mantequilla, ajo u otros condimentos añadidos.",
     "it": "Sì. I fagiolini senza condimenti, crudi o cotti, sono sicuri per la maggior parte dei cani in quantità moderate e sono un premio poco calorico. Non dare mai fagiolini con sale, burro, aglio o altri condimenti.",
-    "pt": "Sim. O feijão-verde sem tempero, cru ou cozinhado, é seguro para a maioria dos cães, com moderação, e é uma guloseima pouco calórica. Nunca dês feijão-verde com sal, manteiga, alho ou outros temperos."
+    "pt": "Sim. O feijão-verde sem tempero, cru ou cozinhado, é seguro para a maioria dos cães, com moderação, e é uma guloseima pouco calórica. Nunca dês feijão-verde com sal, manteiga, alho ou outros temperos.",
+    "nl": "Ja. Ongekruide sperziebonen, rauw of gaar, zijn met mate veilig voor de meeste honden en een caloriearm snoepje. Geef nooit sperziebonen met toegevoegd zout, boter, knoflook of andere kruiden."
   },
   "why": {
     "en": "Green beans provide vitamins, minerals and fibre and are low in calories; the added bulk and fibre help a dog feel full without adding many calories. Many canned green beans contain high amounts of added salt, and common human green bean recipes are not safe for dogs.",
@@ -45,7 +49,8 @@
     "fr": "Les haricots verts apportent des vitamines, des minéraux et des fibres et sont peu caloriques ; leur volume et leurs fibres aident le chien à se sentir rassasié sans ajouter beaucoup de calories. Beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté, et les recettes de haricots verts que l’on prépare habituellement pour soi ne sont pas sans danger pour les chiens.",
     "es": "Las judías verdes aportan vitaminas, minerales y fibra y tienen pocas calorías; el volumen y la fibra extra ayudan al perro a sentirse saciado sin añadir muchas calorías. Muchas judías verdes en conserva llevan mucha sal añadida, y las recetas habituales de judías verdes para personas no son seguras para los perros.",
     "it": "I fagiolini forniscono vitamine, minerali e fibre e hanno poche calorie; il volume e le fibre aiutano il cane a sentirsi sazio senza aggiungere molte calorie. Molti fagiolini in scatola contengono molto sale aggiunto, e le ricette di fagiolini più comuni per le persone non sono sicure per i cani.",
-    "pt": "O feijão-verde fornece vitaminas, minerais e fibra e tem poucas calorias; o volume e a fibra ajudam o cão a ficar saciado sem acrescentar muitas calorias. Muito do feijão-verde em conserva leva bastante sal, e as receitas habituais de feijão-verde para pessoas não são seguras para os cães."
+    "pt": "O feijão-verde fornece vitaminas, minerais e fibra e tem poucas calorias; o volume e a fibra ajudam o cão a ficar saciado sem acrescentar muitas calorias. Muito do feijão-verde em conserva leva bastante sal, e as receitas habituais de feijão-verde para pessoas não são seguras para os cães.",
+    "nl": "Sperziebonen leveren vitamines, mineralen en vezels en bevatten weinig calorieën; door het extra volume en de vezels voelt een hond zich verzadigd zonder veel extra calorieën binnen te krijgen. Veel sperziebonen uit blik bevatten veel toegevoegd zout, en gangbare sperziebonenrecepten voor mensen zijn niet veilig voor honden."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "fr": "Demandez conseil à votre vétérinaire avant de donner des haricots verts à votre chien. Ne donnez jamais de haricots verts cuits avec de l’ail ou du sel d’ail.",
     "es": "Pregunta a tu veterinario antes de darle judías verdes a tu perro. Nunca le des judías verdes cocinadas con ajo o sal de ajo.",
     "it": "Chiedi al veterinario prima di dare fagiolini al tuo cane. Non dare mai fagiolini cotti con aglio o sale all’aglio.",
-    "pt": "Pergunta ao teu veterinário antes de dares feijão-verde ao teu cão. Nunca dês feijão-verde cozinhado com alho ou sal de alho."
+    "pt": "Pergunta ao teu veterinário antes de dares feijão-verde ao teu cão. Nunca dês feijão-verde cozinhado com alho ou sal de alho.",
+    "nl": "Vraag je dierenarts om advies voordat je je hond sperziebonen geeft. Geef nooit sperziebonen die met knoflook of knoflookzout zijn bereid."
   },
   "serving": {
     "en": "Serve them raw, or boiled in water or steamed, but keep them plain. Avoid canned green beans and any prepared with butter, garlic, garlic salt or other seasonings.",
@@ -64,7 +70,8 @@
     "fr": "Servez-les crus, bouillis à l’eau ou cuits à la vapeur, mais gardez-les nature. Évitez les haricots verts en conserve et ceux préparés avec du beurre, de l’ail, du sel d’ail ou d’autres assaisonnements.",
     "es": "Sírvelas crudas, hervidas en agua o al vapor, pero siempre sin condimentar. Evita las judías verdes en conserva y las preparadas con mantequilla, ajo, sal de ajo u otros condimentos.",
     "it": "Servili crudi, lessati in acqua o cotti al vapore, ma sempre senza condimenti. Evita i fagiolini in scatola e quelli preparati con burro, aglio, sale all’aglio o altri condimenti.",
-    "pt": "Serve-o cru, cozido em água ou a vapor, mas sempre sem tempero. Evita o feijão-verde em conserva e o que for preparado com manteiga, alho, sal de alho ou outros temperos."
+    "pt": "Serve-o cru, cozido em água ou a vapor, mas sempre sem tempero. Evita o feijão-verde em conserva e o que for preparado com manteiga, alho, sal de alho ou outros temperos.",
+    "nl": "Geef ze rauw, gekookt in water of gestoomd, maar zonder toevoegingen. Vermijd sperziebonen uit blik en sperziebonen die met boter, knoflook, knoflookzout of andere kruiden zijn bereid."
   },
   "child": {
     "en": "Plain green beans are a crunchy dog treat. Beans cooked with garlic or butter are not for dogs.",
@@ -73,7 +80,8 @@
     "fr": "Les haricots verts nature sont une friandise croquante pour le chien. Les haricots cuisinés avec de l’ail ou du beurre ne sont pas faits pour les chiens.",
     "es": "Las judías verdes sin condimentar son un premio crujiente para perros. Las judías cocinadas con ajo o mantequilla no son para perros.",
     "it": "I fagiolini senza condimenti sono un premio croccante per i cani. Quelli cotti con aglio o burro non vanno bene per loro.",
-    "pt": "O feijão-verde sem tempero é uma guloseima estaladiça para cães. O feijão cozinhado com alho ou manteiga não é para cães."
+    "pt": "O feijão-verde sem tempero é uma guloseima estaladiça para cães. O feijão cozinhado com alho ou manteiga não é para cães.",
+    "nl": "Sperziebonen zonder toevoegingen zijn een knapperig snoepje voor honden. Bonen die met knoflook of boter zijn bereid, zijn niet voor honden."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "fr": "Les chiens peuvent-ils manger des haricots verts en conserve ?",
         "es": "¿Pueden los perros comer judías verdes en conserva?",
         "it": "I cani possono mangiare i fagiolini in scatola?",
-        "pt": "Os cães podem comer feijão-verde em conserva?"
+        "pt": "Os cães podem comer feijão-verde em conserva?",
+        "nl": "Mogen honden sperziebonen uit blik eten?"
       },
       "a": {
         "en": "It is best to avoid them, because many canned green beans contain high amounts of added salt.",
@@ -93,7 +102,8 @@
         "fr": "Il vaut mieux les éviter, car beaucoup de haricots verts en conserve contiennent de grandes quantités de sel ajouté.",
         "es": "Es mejor evitarlas, porque muchas judías verdes en conserva llevan mucha sal añadida.",
         "it": "Meglio evitarli, perché molti fagiolini in scatola contengono molto sale aggiunto.",
-        "pt": "O melhor é evitá-lo, porque muito do feijão-verde em conserva leva bastante sal."
+        "pt": "O melhor é evitá-lo, porque muito do feijão-verde em conserva leva bastante sal.",
+        "nl": "Je kunt ze beter vermijden, want veel sperziebonen uit blik bevatten veel toegevoegd zout."
       }
     }
   ],
@@ -196,6 +206,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fc1b615661228a117adfbc427322dcc8d3617320002e67ff6684569fe2e084c6"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "3c4f4d377095fd9247148c9369141a2883995fbf4e12cbd2954b4a0036323d0a"
     }
   }
 }
