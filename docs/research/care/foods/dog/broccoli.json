@@ -15,7 +15,8 @@
     "hr": "Brokula",
     "sv": "Broccoli",
     "da": "Broccoli",
-    "fi": "Parsakaali"
+    "fi": "Parsakaali",
+    "nb": "Brokkoli"
   },
   "question": {
     "en": "Can dogs eat broccoli?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti brokulu?",
     "sv": "Får hundar äta broccoli?",
     "da": "Må hunde spise broccoli?",
-    "fi": "Saako koira syödä parsakaalia?"
+    "fi": "Saako koira syödä parsakaalia?",
+    "nb": "Kan hunder spise brokkoli?"
   },
   "url_slug": {
     "en": "broccoli",
@@ -47,7 +49,8 @@
     "hr": "brokula",
     "sv": "broccoli",
     "da": "broccoli",
-    "fi": "parsakaali"
+    "fi": "parsakaali",
+    "nb": "brokkoli"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da, u malim količinama kao povremena poslastica, sirova ili termički obrađena, bez začina i ulja. Nareži je na komadiće veličine zalogaja: cvjetići mogu nadražiti želudac, a žilave stabljike mogu začepiti jednjak, osobito kod malih pasa.",
     "sv": "Ja, i små mängder som en godbit då och då, rå eller kokt och utan kryddor eller olja. Skär broccolin i munsbitar: buketterna kan irritera magen och hårda stjälkar kan blockera matstrupen, särskilt hos små hundar.",
     "da": "Ja, i små mængder som godbid af og til, rå eller kogt og uden krydderier eller olie. Skær den i mundrette stykker: buketterne kan irritere maven, og seje stilke kan blokere spiserøret, især hos små hunde.",
-    "fi": "Saa, pieninä määrinä satunnaisena herkkuna, raakana tai kypsennettynä, ilman mausteita ja öljyjä. Leikkaa se suupalan kokoisiksi paloiksi: kukinnot voivat ärsyttää vatsaa, ja sitkeät varret voivat tukkia ruokatorven etenkin pienillä koirilla."
+    "fi": "Saa, pieninä määrinä satunnaisena herkkuna, raakana tai kypsennettynä, ilman mausteita ja öljyjä. Leikkaa se suupalan kokoisiksi paloiksi: kukinnot voivat ärsyttää vatsaa, ja sitkeät varret voivat tukkia ruokatorven etenkin pienillä koirilla.",
+    "nb": "Ja, i små mengder som en godbit av og til, rå eller kokt, uten krydder eller olje. Skjær brokkolien i passe store biter, for buketter kan irritere magen, og harde stilker kan blokkere spiserøret, særlig hos små hunder."
   },
   "why": {
     "en": "Broccoli florets contain isothiocyanates, which can cause mild to potentially severe stomach irritation. Tough broccoli stalks have been known to cause obstruction in the oesophagus, especially in small dogs, so cooked broccoli cut into bite-size chunks is the better choice.",
@@ -80,7 +84,8 @@
     "hr": "Cvjetići brokule sadrže izotiocijanate, koji mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Poznato je da žilave stabljike brokule mogu uzrokovati začepljenje jednjaka, osobito kod malih pasa, pa je bolji izbor termički obrađena brokula narezana na komadiće veličine zalogaja.",
     "sv": "Broccolibuketter innehåller isotiocyanater, som kan ge allt från lindrig till kraftig irritation i magen. Hårda broccolistjälkar är kända för att orsaka stopp i matstrupen, särskilt hos små hundar, så kokt broccoli skuren i munsbitar är det bättre valet.",
     "da": "Broccolibuketter indeholder isothiocyanater, som kan irritere maven, fra let til potentielt kraftigt. Seje broccolistilke er kendt for at kunne blokere spiserøret, især hos små hunde, så kogt broccoli skåret i mundrette stykker er det bedste valg.",
-    "fi": "Parsakaalin kukinnoissa on isotiosyanaatteja, jotka voivat aiheuttaa lievää tai jopa vakavaa vatsan ärsytystä. Sitkeiden parsakaalinvarsien tiedetään aiheuttaneen ruokatorven tukoksia etenkin pienillä koirilla, joten kypsennetty, suupalan kokoisiksi paloiksi leikattu parsakaali on parempi valinta."
+    "fi": "Parsakaalin kukinnoissa on isotiosyanaatteja, jotka voivat aiheuttaa lievää tai jopa vakavaa vatsan ärsytystä. Sitkeiden parsakaalinvarsien tiedetään aiheuttaneen ruokatorven tukoksia etenkin pienillä koirilla, joten kypsennetty, suupalan kokoisiksi paloiksi leikattu parsakaali on parempi valinta.",
+    "nb": "Brokkolibuketter inneholder isotiocyanater, som kan gi mild til potensielt kraftig irritasjon i magen. Harde brokkolistilker har vært kjent for å blokkere spiserøret, særlig hos små hunder, så kokt brokkoli skåret i passe store biter er det beste valget."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Prati kako pas reagira na brokulu i prije nego što mu daš više, provjeri je li se javila neželjena reakcija.",
     "sv": "Se hur hunden reagerar på broccolin och kontrollera att den inte får någon dålig reaktion innan du ger mer.",
     "da": "Se, hvordan hunden tager imod broccolien, og giv først mere, når den ikke har reageret dårligt.",
-    "fi": "Seuraa, miten koirasi reagoi parsakaaliin, ja varmista, ettei haitallisia reaktioita ilmene, ennen kuin annat lisää."
+    "fi": "Seuraa, miten koirasi reagoi parsakaaliin, ja varmista, ettei haitallisia reaktioita ilmene, ennen kuin annat lisää.",
+    "nb": "Følg med på hvordan hunden reagerer på brokkoli, og gi ikke mer før du er sikker på at den tåler den."
   },
   "serving": {
     "en": "Plain, raw or preferably cooked, with no seasonings or oils, cut into bite-size chunks. Only small amounts as an occasional treat.",
@@ -113,7 +119,8 @@
     "hr": "Bez dodataka, sirova ili po mogućnosti termički obrađena, bez začina i ulja, narezana na komadiće veličine zalogaja. Samo male količine kao povremena poslastica.",
     "sv": "Naturell, rå eller helst kokt, utan kryddor eller olja och skuren i munsbitar. Bara små mängder som en godbit då och då.",
     "da": "Naturel, rå eller helst kogt, uden krydderier eller olie og skåret i mundrette stykker. Kun små mængder som godbid af og til.",
-    "fi": "Maustamattomana, raakana tai mieluiten kypsennettynä, ilman mausteita ja öljyjä, suupalan kokoisiksi paloiksi leikattuna. Vain pieniä määriä satunnaisena herkkuna."
+    "fi": "Maustamattomana, raakana tai mieluiten kypsennettynä, ilman mausteita ja öljyjä, suupalan kokoisiksi paloiksi leikattuna. Vain pieniä määriä satunnaisena herkkuna.",
+    "nb": "Uten tilsetninger, rå eller helst kokt, uten krydder eller olje, skåret i passe store biter. Bare små mengder som en godbit av og til."
   },
   "child": {
     "en": "Dogs can try a little broccoli. A grown-up cooks it plain and cuts it into small pieces.",
@@ -129,7 +136,8 @@
     "hr": "Psi smiju probati malo brokule. Odrasla osoba je skuha bez dodataka i nareže na male komadiće.",
     "sv": "Hundar kan få smaka lite broccoli. En vuxen kokar den utan kryddor och skär den i små bitar.",
     "da": "Hunde kan prøve lidt broccoli. En voksen koger den uden tilsætninger og skærer den i små stykker.",
-    "fi": "Koira saa maistaa vähän parsakaalia. Aikuinen kypsentää sen ilman mausteita ja leikkaa pieniksi paloiksi."
+    "fi": "Koira saa maistaa vähän parsakaalia. Aikuinen kypsentää sen ilman mausteita ja leikkaa pieniksi paloiksi.",
+    "nb": "Hunder kan smake litt brokkoli. En voksen koker den uten salt og krydder og skjærer den i små biter."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Jesu li stabljike brokule sigurne za pse?",
         "sv": "Är broccolistjälkar säkra för hundar?",
         "da": "Er broccolistilke ufarlige for hunde?",
-        "fi": "Ovatko parsakaalin varret turvallisia koirille?"
+        "fi": "Ovatko parsakaalin varret turvallisia koirille?",
+        "nb": "Er brokkolistilker trygge for hunder?"
       },
       "a": {
         "en": "Tough stalks can block a dog's oesophagus, especially in small dogs. Cut broccoli into bite-size chunks; cooked broccoli helps avoid this problem.",
@@ -163,7 +172,8 @@
         "hr": "Žilave stabljike mogu začepiti jednjak psa, osobito kod malih pasa. Brokulu nareži na komadiće veličine zalogaja; termički obrađena brokula pomaže izbjeći taj problem.",
         "sv": "Hårda stjälkar kan blockera matstrupen hos en hund, särskilt hos små hundar. Skär broccolin i munsbitar; kokt broccoli hjälper till att undvika problemet.",
         "da": "Seje stilke kan blokere en hunds spiserør, især hos små hunde. Skær broccoli i mundrette stykker; kogt broccoli mindsker risikoen.",
-        "fi": "Sitkeät varret voivat tukkia koiran ruokatorven etenkin pienillä koirilla. Leikkaa parsakaali suupalan kokoisiksi paloiksi; kypsentäminen auttaa ehkäisemään ongelmaa."
+        "fi": "Sitkeät varret voivat tukkia koiran ruokatorven etenkin pienillä koirilla. Leikkaa parsakaali suupalan kokoisiksi paloiksi; kypsentäminen auttaa ehkäisemään ongelmaa.",
+        "nb": "Harde stilker kan blokkere spiserøret hos en hund, særlig hos små hunder. Skjær brokkolien i passe store biter. Kokt brokkoli gjør det lettere å unngå problemet."
       }
     }
   ],
@@ -289,6 +299,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f36bb87dc9bc49ec2915827dfbe848a5a27e40960a62bdaa8e6c14ee56c6a786"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "df6d9142aa384be451ccdc5c6b1dbbd8a73a15677be93df4cde02c87053f0981"
     }
   }
 }

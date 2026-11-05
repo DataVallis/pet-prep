@@ -15,7 +15,8 @@
     "hr": "Mrkva",
     "sv": "Morötter",
     "da": "Gulerødder",
-    "fi": "Porkkanat"
+    "fi": "Porkkanat",
+    "nb": "Gulrøtter"
   },
   "question": {
     "en": "Can dogs eat carrots?",
@@ -31,7 +32,8 @@
     "hr": "Smiju li psi jesti mrkvu?",
     "sv": "Får hundar äta morötter?",
     "da": "Må hunde spise gulerødder?",
-    "fi": "Saako koira syödä porkkanaa?"
+    "fi": "Saako koira syödä porkkanaa?",
+    "nb": "Kan hunder spise gulrøtter?"
   },
   "url_slug": {
     "en": "carrots",
@@ -47,7 +49,8 @@
     "hr": "mrkva",
     "sv": "morotter",
     "da": "gulerodder",
-    "fi": "porkkanat"
+    "fi": "porkkanat",
+    "nb": "gulrotter"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "hr": "Da. Mrkva je sigurna za pse i zdrava je užina s malo kalorija, sirova ili termički obrađena. Prvo je nareži na komadiće veličine zalogaja da se pas ne uguši.",
     "sv": "Ja. Morötter är säkra för hundar och ett nyttigt, kalorisnålt mellanmål, råa eller kokta. Skär dem först i munsbitar för att undvika kvävning.",
     "da": "Ja. Gulerødder er ufarlige for hunde og en sund snack med få kalorier, rå eller kogte. Skær dem først i mundrette stykker, så de ikke kan sætte sig fast i halsen.",
-    "fi": "Saa. Porkkana on koirille turvallinen ja terveellinen, vähäkalorinen välipala raakana tai kypsennettynä. Leikkaa se ensin suupalan kokoisiksi paloiksi, ettei koira tukehdu."
+    "fi": "Saa. Porkkana on koirille turvallinen ja terveellinen, vähäkalorinen välipala raakana tai kypsennettynä. Leikkaa se ensin suupalan kokoisiksi paloiksi, ettei koira tukehdu.",
+    "nb": "Ja. Gulrøtter er trygge for hunder og en sunn, kalorifattig godbit, rå eller kokte. Skjær dem først i passe store biter for å unngå kvelningsfare."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -80,7 +84,8 @@
     "hr": "Mrkva je odličan izvor vitamina A, kalija i vlakana te sadrži mnogo beta-karotena. Grickanje mrkve može pomoći i zdravlju psećih zubi. Glavni je rizik gušenje, zato cijelu mrkvu, pa i štapiće mrkve, treba narezati na komadiće veličine zalogaja.",
     "sv": "Morötter är en utmärkt källa till A-vitamin, kalium och fibrer och innehåller mycket betakaroten. Att gnaga på morötter kan också förbättra hundens tandhälsa. Den största risken är kvävning, så hela morötter och till och med morotsstavar bör skäras i munsbitar.",
     "da": "Gulerødder er en fremragende kilde til A-vitamin, kalium og fibre og har et højt indhold af betacaroten. Når hunden tygger på gulerødder, kan det også være godt for tænderne. Den største risiko er at de sætter sig fast i halsen, og derfor bør hele gulerødder og også gulerodsstave skæres i mundrette stykker.",
-    "fi": "Porkkana on erinomainen A-vitamiinin, kaliumin ja kuidun lähde, ja siinä on runsaasti beetakaroteenia. Porkkanan pureskelu voi myös edistää koirasi hammasterveyttä. Suurin riski on tukehtuminen, minkä vuoksi kokonaiset porkkanat ja jopa porkkanatikut pitää leikata suupalan kokoisiksi paloiksi."
+    "fi": "Porkkana on erinomainen A-vitamiinin, kaliumin ja kuidun lähde, ja siinä on runsaasti beetakaroteenia. Porkkanan pureskelu voi myös edistää koirasi hammasterveyttä. Suurin riski on tukehtuminen, minkä vuoksi kokonaiset porkkanat ja jopa porkkanatikut pitää leikata suupalan kokoisiksi paloiksi.",
+    "nb": "Gulrøtter er en utmerket kilde til vitamin A, kalium og fiber og inneholder mye betakaroten. Å gnage på gulrøtter kan også bidra til bedre tannhelse hos hunden. Den største risikoen er kvelningsfare, og derfor bør hele gulrøtter og til og med gulrotstaver skjæres i passe store biter."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "hr": "Pitaj veterinara koliko mrkve dnevno odgovara tvom psu.",
     "sv": "Prata med din veterinär om hur många morötter som passar din hund per dag.",
     "da": "Tal med din dyrlæge om hvor mange gulerødder der passer til din hund hver dag.",
-    "fi": "Kysy eläinlääkäriltä, kuinka paljon porkkanaa koirallesi sopii päivässä."
+    "fi": "Kysy eläinlääkäriltä, kuinka paljon porkkanaa koirallesi sopii päivässä.",
+    "nb": "Spør dyrlegen hvor mange gulrøtter hunden din kan få hver dag."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -113,7 +119,8 @@
     "hr": "Mrkvu operi ili oguli, a zatim cijelu mrkvu, pa i štapiće mrkve, nareži na komadiće veličine zalogaja. Sirova i termički obrađena mrkva jednako su dobre.",
     "sv": "Tvätta och/eller skala morötterna. Skär sedan hela morötter, och till och med morotsstavar, i munsbitar. Både råa och kokta morötter går bra.",
     "da": "Vask eller skræl gulerødderne, og skær derefter både hele gulerødder og gulerodsstave i mundrette stykker. Både rå og kogte gulerødder er fine.",
-    "fi": "Pese tai kuori porkkanat. Leikkaa sekä kokonaiset porkkanat että porkkanatikut suupalan kokoisiksi paloiksi. Porkkanan voi antaa raakana tai kypsennettynä."
+    "fi": "Pese tai kuori porkkanat. Leikkaa sekä kokonaiset porkkanat että porkkanatikut suupalan kokoisiksi paloiksi. Porkkanan voi antaa raakana tai kypsennettynä.",
+    "nb": "Vask eller skrell gulrøttene, og skjær hele gulrøtter og til og med gulrotstaver i passe store biter. Både rå og kokte gulrøtter går fint."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -129,7 +136,8 @@
     "hr": "Hrskava mrkva zdrava je užina za pse! Odrasla osoba je prvo opere i nareže na male komadiće.",
     "sv": "Knapriga morötter är ett nyttigt hundmellanmål! En vuxen tvättar dem och skär dem i små bitar först.",
     "da": "Sprøde gulerødder er en sund snack til hunde! En voksen vasker dem og skærer dem først i små stykker.",
-    "fi": "Rapea porkkana on terveellinen koiran välipala! Aikuinen pesee sen ensin ja leikkaa pieniksi paloiksi."
+    "fi": "Rapea porkkana on terveellinen koiran välipala! Aikuinen pesee sen ensin ja leikkaa pieniksi paloiksi.",
+    "nb": "Sprø gulrøtter er en sunn godbit for hunder! En voksen vasker dem og skjærer dem i små biter først."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "hr": "Smiju li štenci kojima izbijaju zubi dobiti hladnu ili smrznutu mrkvu?",
         "sv": "Får valpar som håller på att byta tänder kalla eller frysta morötter?",
         "da": "Kan hvalpe i tandskifte få kolde eller frosne gulerødder?",
-        "fi": "Saako hampaita vaihtava pentu kylmää tai pakastettua porkkanaa?"
+        "fi": "Saako hampaita vaihtava pentu kylmää tai pakastettua porkkanaa?",
+        "nb": "Kan valper som tenner få kalde eller frosne gulrøtter?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -163,7 +172,8 @@
         "hr": "Neki veterinari preporučuju hladnu ili smrznutu mrkvu za štence kojima izbijaju zubi, kao način da im se ublaži nelagoda.",
         "sv": "Vissa veterinärer rekommenderar kalla eller frysta morötter till valpar som byter tänder, för att lindra obehaget.",
         "da": "Nogle dyrlæger anbefaler kolde eller frosne gulerødder til hvalpe i tandskifte for at lindre ubehaget.",
-        "fi": "Jotkut eläinlääkärit suosittelevat hampaita vaihtaville pennuille kylmää tai pakastettua porkkanaa helpottamaan oloa."
+        "fi": "Jotkut eläinlääkärit suosittelevat hampaita vaihtaville pennuille kylmää tai pakastettua porkkanaa helpottamaan oloa.",
+        "nb": "Noen dyrleger anbefaler kalde eller frosne gulrøtter til valper som tenner, for å lindre ubehaget."
       }
     }
   ],
@@ -285,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "04d21ee9e9bea36181d3c7149e2c8d6d636d891d3ab51a91d9236c62d2141c4e"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "8a7dba5d9b0ba968d95edda40af2c0d4389eea1a0a5ad81c8ca3ff1280e071dc"
     }
   }
 }
