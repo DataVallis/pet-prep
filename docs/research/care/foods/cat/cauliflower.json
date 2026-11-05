@@ -5,51 +5,59 @@
     "en": "Cauliflower",
     "sl": "Cvetača",
     "de": "Blumenkohl",
-    "fr": "Chou-fleur"
+    "fr": "Chou-fleur",
+    "es": "Coliflor"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
     "sl": "Ali lahko mačke jedo cvetačo?",
     "de": "Dürfen Katzen Blumenkohl fressen?",
-    "fr": "Les chats peuvent-ils manger du chou-fleur ?"
+    "fr": "Les chats peuvent-ils manger du chou-fleur ?",
+    "es": "¿Pueden los gatos comer coliflor?"
   },
   "url_slug": {
     "en": "cauliflower",
     "sl": "cvetaca",
     "de": "blumenkohl",
-    "fr": "chou-fleur"
+    "fr": "chou-fleur",
+    "es": "coliflor"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain cooked cauliflower is fine as an occasional treat. The RSPCA lists cauliflower, cooked and cut into small pieces, among foods suitable for cats and dogs in moderation.",
     "sl": "Da, majhen košček navadne kuhane cvetače je v redu kot občasen priboljšek. RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, primerno za mačke in pse v zmernih količinah.",
     "de": "Ja, ein kleines Stück ungewürzter, gekochter Blumenkohl ist als gelegentliches Leckerli in Ordnung. Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind.",
-    "fr": "Oui, un petit morceau de chou-fleur cuit nature convient comme friandise occasionnelle. La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments qui conviennent aux chats et aux chiens avec modération."
+    "fr": "Oui, un petit morceau de chou-fleur cuit nature convient comme friandise occasionnelle. La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments qui conviennent aux chats et aux chiens avec modération.",
+    "es": "Sí, un trocito de coliflor cocida y sin condimentar está bien como premio ocasional. La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos adecuados para gatos y perros con moderación."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
     "sl": "RSPCA cvetačo, kuhano in narezano na majhne koščke, navaja med hrano, ki je varna in primerna za mačke in pse v zmernih količinah. Cats Protection svetuje zelenjavo brez masla, soli in začimb. Mačke zelenjave ne potrebujejo, priboljškov naj bo malo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Die RSPCA führt Blumenkohl, gekocht und in kleine Stücke geschnitten, unter den Lebensmitteln auf, die für Katzen und Hunde in Maßen geeignet sind. Cats Protection rät zu Gemüse ohne Butter, Salz oder Gewürze. Katzen brauchen kein Gemüse, Leckerlis sollten sparsam bleiben, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
-    "fr": "La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments sans danger qui conviennent aux chats et aux chiens avec modération. Cats Protection recommande des légumes sans beurre, sel ni assaisonnement. Les chats n’ont pas besoin de légumes, les friandises doivent rester peu nombreuses, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs."
+    "fr": "La RSPCA range le chou-fleur, cuit et coupé en petits morceaux, parmi les aliments sans danger qui conviennent aux chats et aux chiens avec modération. Cats Protection recommande des légumes sans beurre, sel ni assaisonnement. Les chats n’ont pas besoin de légumes, les friandises doivent rester peu nombreuses, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
+    "es": "La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos seguros para mascotas, adecuados para gatos y perros con moderación. Cats Protection aconseja dar la verdura sin mantequilla, sal ni condimentos. Los gatos no necesitan verdura, los premios deben ser pocos y cualquier materia vegetal puede provocar vómitos o malestar de estómago."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
-    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire."
+    "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
+    "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dársela y consulta con tu veterinario."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
     "sl": "Kuhana in narezana na majhne koščke, brez masla, soli in začimb.",
     "de": "Gekocht und in kleine Stücke geschnitten, ohne Butter, Salz oder Gewürze.",
-    "fr": "Cuit et coupé en petits morceaux, sans beurre, sel ni assaisonnement."
+    "fr": "Cuit et coupé en petits morceaux, sans beurre, sel ni assaisonnement.",
+    "es": "Cocida y cortada en trozos pequeños, sin mantequilla, sal ni condimentos."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček kuhane cvetače je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
     "de": "Ein kleines Stück gekochter Blumenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
-    "fr": "Un petit morceau de chou-fleur cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra."
+    "fr": "Un petit morceau de chou-fleur cuit fait parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
+    "es": "Un trocito de coliflor cocida puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "de": "Brauchen Katzen Gemüse?",
-        "fr": "Les chats ont-ils besoin de légumes ?"
+        "fr": "Les chats ont-ils besoin de légumes ?",
+        "es": "¿Necesitan verdura los gatos?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
-        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra."
+        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
+        "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra."
       }
     }
   ],
@@ -128,6 +138,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f4732fea0ff1b7314efdb1f88b6245911022d1eefc316f7f44f116c50dd08178"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "bb1a60a7a81beaffc408edd15d7dc40a51ba69adf42a187e91f7f883b1781f18"
     }
   }
 }

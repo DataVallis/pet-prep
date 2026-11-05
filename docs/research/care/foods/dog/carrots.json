@@ -5,51 +5,59 @@
     "en": "Carrots",
     "sl": "Korenje",
     "de": "Karotten",
-    "fr": "Carottes"
+    "fr": "Carottes",
+    "es": "Zanahorias"
   },
   "question": {
     "en": "Can dogs eat carrots?",
     "sl": "Ali lahko psi jedo korenje?",
     "de": "Dürfen Hunde Karotten fressen?",
-    "fr": "Les chiens peuvent-ils manger des carottes ?"
+    "fr": "Les chiens peuvent-ils manger des carottes ?",
+    "es": "¿Pueden los perros comer zanahorias?"
   },
   "url_slug": {
     "en": "carrots",
     "sl": "korenje",
     "de": "karotten",
-    "fr": "carottes"
+    "fr": "carottes",
+    "es": "zanahorias"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes. Carrots are safe for dogs and make a healthy, low-calorie snack, raw or cooked. Cut them into bite-size chunks first to prevent choking.",
     "sl": "Da. Korenje je za pse varno in je zdrav, nizkokaloričen prigrizek, surovo ali kuhano. Najprej ga narežite na koščke za en grižljaj, da se pes ne zaduši.",
     "de": "Ja. Karotten sind für Hunde unbedenklich und ein gesunder, kalorienarmer Snack, roh oder gekocht. Schneiden Sie sie vorher mundgerecht klein, damit der Hund nicht daran erstickt.",
-    "fr": "Oui. Les carottes sont sans danger pour les chiens et constituent un en-cas sain et peu calorique, crues ou cuites. Coupez-les d’abord en morceaux de la taille d’une bouchée pour éviter l’étouffement."
+    "fr": "Oui. Les carottes sont sans danger pour les chiens et constituent un en-cas sain et peu calorique, crues ou cuites. Coupez-les d’abord en morceaux de la taille d’une bouchée pour éviter l’étouffement.",
+    "es": "Sí. Las zanahorias son seguras para los perros y un tentempié sano y bajo en calorías, crudas o cocidas. Córtalas antes en trozos del tamaño de un bocado para evitar atragantamientos."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
     "sl": "Korenje je odličen vir vitamina A, kalija in vlaknin ter vsebuje veliko betakarotena. Žvečenje korenja lahko tudi izboljša zdravje psovih zob. Glavno tveganje je dušenje, zato je treba celo korenje in tudi korenčkove paličice narezati na koščke za en grižljaj.",
     "de": "Karotten sind eine hervorragende Quelle für Vitamin A, Kalium und Ballaststoffe und enthalten viel Beta-Carotin. Auf Karotten herumzukauen kann außerdem die Zahngesundheit Ihres Hundes fördern. Das Hauptrisiko ist Ersticken; deshalb sollten ganze Karotten und sogar Karottenstifte in mundgerechte Stücke geschnitten werden.",
-    "fr": "Les carottes sont une excellente source de vitamine A, de potassium et de fibres, et sont riches en bêta-carotène. Croquer des carottes peut aussi contribuer à la santé dentaire de votre chien. Le principal risque est l’étouffement : c’est pourquoi les carottes entières, et même les bâtonnets de carotte, doivent être coupés en morceaux de la taille d’une bouchée."
+    "fr": "Les carottes sont une excellente source de vitamine A, de potassium et de fibres, et sont riches en bêta-carotène. Croquer des carottes peut aussi contribuer à la santé dentaire de votre chien. Le principal risque est l’étouffement : c’est pourquoi les carottes entières, et même les bâtonnets de carotte, doivent être coupés en morceaux de la taille d’une bouchée.",
+    "es": "Las zanahorias son una excelente fuente de vitamina A, potasio y fibra y tienen mucho betacaroteno. Además, masticarlas puede ayudar a mejorar la salud dental de tu perro. El principal riesgo es el atragantamiento, por lo que las zanahorias enteras, e incluso los palitos de zanahoria, deben cortarse en trozos del tamaño de un bocado."
   },
   "signs": null,
   "what_to_do": {
     "en": "Talk to your vet about how many carrots suit your dog each day.",
     "sl": "Z veterinarjem se posvetujte, koliko korenja na dan je primerno za vašega psa.",
     "de": "Besprechen Sie mit Ihrem Tierarzt, wie viele Karotten Ihr Hund täglich bekommen darf.",
-    "fr": "Demandez à votre vétérinaire quelle quantité de carottes convient à votre chien chaque jour."
+    "fr": "Demandez à votre vétérinaire quelle quantité de carottes convient à votre chien chaque jour.",
+    "es": "Consulta con tu veterinario cuántas zanahorias le convienen a tu perro cada día."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
     "sl": "Korenje operite in/ali olupite, nato celo korenje in tudi korenčkove paličice narežite na koščke za en grižljaj. Primerno je surovo ali kuhano.",
     "de": "Waschen und/oder schälen Sie die Karotten und schneiden Sie ganze Karotten und sogar Karottenstifte in mundgerechte Stücke. Rohe und gekochte Karotten sind beide in Ordnung.",
-    "fr": "Lavez et/ou épluchez les carottes, puis coupez les carottes entières, et même les bâtonnets, en morceaux de la taille d’une bouchée. Crues ou cuites, les carottes conviennent."
+    "fr": "Lavez et/ou épluchez les carottes, puis coupez les carottes entières, et même les bâtonnets, en morceaux de la taille d’une bouchée. Crues ou cuites, les carottes conviennent.",
+    "es": "Lava o pela las zanahorias y luego corta las enteras, e incluso los palitos, en trozos del tamaño de un bocado. Tanto crudas como cocidas están bien."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
     "sl": "Hrustljavo korenje je zdrav pasji prigrizek! Odrasli ga najprej opere in nareže na majhne koščke.",
     "de": "Knackige Karotten sind ein gesunder Snack für Hunde! Ein Erwachsener wäscht sie vorher und schneidet sie klein.",
-    "fr": "Les carottes croquantes sont un en-cas sain pour le chien ! Un adulte les lave et les coupe d’abord en petits morceaux."
+    "fr": "Les carottes croquantes sont un en-cas sain pour le chien ! Un adulte les lave et les coupe d’abord en petits morceaux.",
+    "es": "¡Las zanahorias crujientes son un tentempié sano para perros! Un adulto las lava y las corta antes en trocitos."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can teething puppies have cold or frozen carrots?",
         "sl": "Lahko mladiči med rastjo zob dobijo hladno ali zamrznjeno korenje?",
         "de": "Dürfen zahnende Welpen kalte oder gefrorene Karotten bekommen?",
-        "fr": "Les chiots qui font leurs dents peuvent-ils manger des carottes froides ou congelées ?"
+        "fr": "Les chiots qui font leurs dents peuvent-ils manger des carottes froides ou congelées ?",
+        "es": "¿Pueden los cachorros que están echando los dientes tomar zanahoria fría o congelada?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
         "sl": "Nekateri veterinarji mladičem, ki jim rastejo zobje, priporočajo hladno ali zamrznjeno korenje, da jim olajša nelagodje.",
         "de": "Manche Tierärzte empfehlen kalte oder gefrorene Karotten für zahnende Welpen, um Beschwerden zu lindern.",
-        "fr": "Certains vétérinaires recommandent des carottes froides ou congelées pour les chiots qui font leurs dents, afin de soulager leur inconfort."
+        "fr": "Certains vétérinaires recommandent des carottes froides ou congelées pour les chiots qui font leurs dents, afin de soulager leur inconfort.",
+        "es": "Algunos veterinarios recomiendan zanahorias frías o congeladas para los cachorros que están echando los dientes, como forma de aliviar las molestias."
       }
     }
   ],
@@ -135,6 +145,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "e7bad91e3f50793ca29816a67a970636b84272d1681d49981dc8f16564168363"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7654343014d52d87c094a83fe625028fff6a7fa9cc019b796dd63237dc32efd3"
     }
   }
 }
