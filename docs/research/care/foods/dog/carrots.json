@@ -9,7 +9,8 @@
     "es": "Zanahorias",
     "it": "Carote",
     "pt": "Cenouras",
-    "nl": "Wortels"
+    "nl": "Wortels",
+    "pl": "Marchewka"
   },
   "question": {
     "en": "Can dogs eat carrots?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los perros comer zanahorias?",
     "it": "I cani possono mangiare le carote?",
     "pt": "Os cães podem comer cenouras?",
-    "nl": "Mogen honden wortels eten?"
+    "nl": "Mogen honden wortels eten?",
+    "pl": "Czy psy mogą jeść marchewkę?"
   },
   "url_slug": {
     "en": "carrots",
@@ -29,7 +31,8 @@
     "es": "zanahorias",
     "it": "carote",
     "pt": "cenouras",
-    "nl": "wortels"
+    "nl": "wortels",
+    "pl": "marchewka"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí. Las zanahorias son seguras para los perros y un tentempié sano y bajo en calorías, crudas o cocidas. Córtalas antes en trozos del tamaño de un bocado para evitar atragantamientos.",
     "it": "Sì. Le carote sono sicure per i cani: uno spuntino sano e poco calorico, crude o cotte. Tagliale prima in pezzetti da un boccone per evitare il soffocamento.",
     "pt": "Sim. As cenouras são seguras para os cães e uma guloseima saudável e pouco calórica, cruas ou cozinhadas. Corta-as primeiro em pedaços de uma dentada, para o cão não se engasgar.",
-    "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen."
+    "nl": "Ja. Wortels zijn veilig voor honden en een gezond, caloriearm tussendoortje, rauw of gaar. Snijd ze eerst in hapklare stukjes om verstikking te voorkomen.",
+    "pl": "Tak. Marchewka jest dla psów bezpieczna – to zdrowa, niskokaloryczna przekąska, surowa lub gotowana. Najpierw pokrój ją na kawałki wielkości jednego kęsa, żeby pies się nie zadławił."
   },
   "why": {
     "en": "Carrots are an excellent source of vitamin A, potassium and fibre and are high in beta-carotene. Chewing on carrots can also help improve your dog's dental health. The main risk is choking, which is why whole carrots and even carrot sticks should be cut into bite-size chunks.",
@@ -50,7 +54,8 @@
     "es": "Las zanahorias son una excelente fuente de vitamina A, potasio y fibra y tienen mucho betacaroteno. Además, masticarlas puede ayudar a mejorar la salud dental de tu perro. El principal riesgo es el atragantamiento, por lo que las zanahorias enteras, e incluso los palitos de zanahoria, deben cortarse en trozos del tamaño de un bocado.",
     "it": "Le carote sono un’ottima fonte di vitamina A, potassio e fibre e sono ricche di betacarotene. Inoltre, masticarle può fare bene ai denti del cane. Il rischio principale è il soffocamento: per questo le carote intere, e perfino i bastoncini di carota, vanno tagliati in pezzetti da un boccone.",
     "pt": "As cenouras são uma excelente fonte de vitamina A, potássio e fibra, e são ricas em betacaroteno. Roer cenouras pode ainda contribuir para a saúde dentária do teu cão. O principal risco é o engasgamento, por isso as cenouras inteiras, e até os palitos de cenoura, devem ser cortados em pedaços de uma dentada.",
-    "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden."
+    "nl": "Wortels zijn een uitstekende bron van vitamine A, kalium en vezels en bevatten veel bètacaroteen. Op wortels kauwen kan ook helpen om het gebit van je hond gezond te houden. Het grootste risico is verstikking; daarom moeten hele wortels en zelfs wortelstaafjes in hapklare stukjes worden gesneden.",
+    "pl": "Marchewka jest doskonałym źródłem witaminy A, potasu i błonnika, a do tego zawiera dużo beta-karotenu. Gryzienie marchewki może też pomagać w dbaniu o zdrowie zębów psa. Głównym zagrożeniem jest zadławienie, dlatego całą marchewkę, a nawet paluszki marchewkowe, trzeba kroić na kawałki wielkości jednego kęsa."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Consulta con tu veterinario cuántas zanahorias le convienen a tu perro cada día.",
     "it": "Chiedi al veterinario quante carote al giorno puoi dare al tuo cane.",
     "pt": "Pergunta ao teu veterinário que quantidade de cenouras convém ao teu cão por dia.",
-    "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen."
+    "nl": "Vraag je dierenarts hoeveel wortels er per dag bij je hond passen.",
+    "pl": "Zapytaj weterynarza, ile marchewki dziennie możesz dać swojemu psu."
   },
   "serving": {
     "en": "Wash and/or peel the carrots, then cut whole carrots and even carrot sticks into bite-size chunks. Raw and cooked carrots are both fine.",
@@ -71,7 +77,8 @@
     "es": "Lava o pela las zanahorias y luego corta las enteras, e incluso los palitos, en trozos del tamaño de un bocado. Tanto crudas como cocidas están bien.",
     "it": "Lava o sbuccia le carote, poi tagliale in pezzetti da un boccone, anche se sono bastoncini. Vanno bene sia crude sia cotte.",
     "pt": "Lava as cenouras, descasca-as se quiseres e corta as cenouras inteiras, e até os palitos de cenoura, em pedaços de uma dentada. Servem tanto cruas como cozinhadas.",
-    "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima."
+    "nl": "Was of schil de wortels en snijd hele wortels en zelfs wortelstaafjes in hapklare stukjes. Rauwe en gare wortels zijn allebei prima.",
+    "pl": "Umyj lub obierz marchewkę i pokrój ją na kawałki wielkości jednego kęsa – dotyczy to także całych marchewek i paluszków marchewkowych. Zarówno surowa, jak i gotowana marchewka jest w porządku."
   },
   "child": {
     "en": "Crunchy carrots are a healthy dog snack! A grown-up washes them and cuts them into small pieces first.",
@@ -81,7 +88,8 @@
     "es": "¡Las zanahorias crujientes son un tentempié sano para perros! Un adulto las lava y las corta antes en trocitos.",
     "it": "Le carote croccanti sono uno spuntino sano per i cani! Prima un adulto le lava e le taglia in pezzetti piccoli.",
     "pt": "As cenouras estaladiças são uma guloseima saudável para cães! Um adulto lava-as e corta-as primeiro em pedaços pequenos.",
-    "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes."
+    "nl": "Knapperige wortels zijn een gezond tussendoortje voor honden! Een volwassene wast ze en snijdt ze eerst in kleine stukjes.",
+    "pl": "Chrupiąca marchewka to zdrowa przekąska dla psa! Dorosły najpierw ją myje i kroi na małe kawałki."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Pueden los cachorros que están echando los dientes tomar zanahoria fría o congelada?",
         "it": "I cuccioli che mettono i denti possono mangiare carote fredde o congelate?",
         "pt": "Os cachorros com os dentes a nascer podem comer cenouras frias ou congeladas?",
-        "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?"
+        "nl": "Mogen pups die tanden krijgen koude of bevroren wortels?",
+        "pl": "Czy ząbkującym szczeniakom można dać zimną lub mrożoną marchewkę?"
       },
       "a": {
         "en": "Some vets recommend cold or frozen carrots for teething puppies, as a way to relieve discomfort.",
@@ -103,7 +112,8 @@
         "es": "Algunos veterinarios recomiendan zanahorias frías o congeladas para los cachorros que están echando los dientes, como forma de aliviar las molestias.",
         "it": "Alcuni veterinari consigliano ai cuccioli che mettono i denti carote fredde o congelate, per alleviare il fastidio.",
         "pt": "Alguns veterinários recomendam cenouras frias ou congeladas aos cachorros com os dentes a nascer, para lhes aliviar o desconforto.",
-        "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten."
+        "nl": "Sommige dierenartsen raden koude of bevroren wortels aan voor pups die tanden krijgen, om het ongemak te verlichten.",
+        "pl": "Niektórzy weterynarze zalecają ząbkującym szczeniakom zimną lub mrożoną marchewkę, bo może przynosić ulgę."
       }
     }
   ],
@@ -195,6 +205,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6c74ad057d81aac0b75cccd34c84b483730203d1356105d7e91ba4696e295321"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cf635ac6dadd9a659a4d6f5dedf8ed8a189c70c44b7a361550adb270743019c5"
     }
   }
 }

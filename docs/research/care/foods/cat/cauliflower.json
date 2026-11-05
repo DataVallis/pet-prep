@@ -9,7 +9,8 @@
     "es": "Coliflor",
     "it": "Cavolfiore",
     "pt": "Couve-flor",
-    "nl": "Bloemkool"
+    "nl": "Bloemkool",
+    "pl": "Kalafior"
   },
   "question": {
     "en": "Can cats eat cauliflower?",
@@ -19,7 +20,8 @@
     "es": "¿Pueden los gatos comer coliflor?",
     "it": "I gatti possono mangiare il cavolfiore?",
     "pt": "Os gatos podem comer couve-flor?",
-    "nl": "Mogen katten bloemkool eten?"
+    "nl": "Mogen katten bloemkool eten?",
+    "pl": "Czy koty mogą jeść kalafior?"
   },
   "url_slug": {
     "en": "cauliflower",
@@ -29,7 +31,8 @@
     "es": "coliflor",
     "it": "cavolfiore",
     "pt": "couve-flor",
-    "nl": "bloemkool"
+    "nl": "bloemkool",
+    "pl": "kalafior"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "es": "Sí, un trocito de coliflor cocida y sin condimentar está bien como premio ocasional. La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos adecuados para gatos y perros con moderación.",
     "it": "Sì, un pezzettino di cavolfiore cotto, senza condimenti, va bene come premio occasionale. La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti adatti a gatti e cani in piccole quantità.",
     "pt": "Sim, um pedacinho de couve-flor cozinhada e sem tempero não faz mal como guloseima ocasional. A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos que gatos e cães podem comer com moderação.",
-    "nl": "Ja, een klein stukje gare, ongekruide bloemkool is af en toe prima als traktatie. De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het eten dat met mate geschikt is voor katten en honden."
+    "nl": "Ja, een klein stukje gare, ongekruide bloemkool is af en toe prima als traktatie. De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het eten dat met mate geschikt is voor katten en honden.",
+    "pl": "Tak, od czasu do czasu mały kawałek ugotowanego kalafiora bez dodatków jest w porządku. RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów, które w umiarkowanych ilościach nadają się dla kotów i psów."
   },
   "why": {
     "en": "The RSPCA lists cauliflower, cooked and cut into small pieces, among pet-safe foods suitable for cats and dogs in moderation. Cats Protection advises vegetables with no butter, salt or seasoning. Cats don't need vegetables, treats should be few, and any plant material can cause vomiting or stomach upset.",
@@ -50,7 +54,8 @@
     "es": "La RSPCA incluye la coliflor, cocida y cortada en trozos pequeños, entre los alimentos seguros para mascotas, adecuados para gatos y perros con moderación. Cats Protection aconseja dar la verdura sin mantequilla, sal ni condimentos. Los gatos no necesitan verdura, los premios deben ser pocos y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
     "it": "La RSPCA mette il cavolfiore, cotto e tagliato a pezzetti, tra gli alimenti sicuri per gatti e cani in piccole quantità. Cats Protection consiglia verdure senza burro, sale o condimenti. I gatti non hanno bisogno di verdure, i premi vanno dati con parsimonia e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco.",
     "pt": "A RSPCA refere a couve-flor, cozinhada e cortada em pedaços pequenos, entre os alimentos seguros que gatos e cães podem comer com moderação. A Cats Protection aconselha legumes sem manteiga, sal nem temperos. Os gatos não precisam de legumes, as guloseimas devem ser poucas, e qualquer matéria vegetal pode causar vómitos ou indisposição de estômago.",
-    "nl": "De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het voor huisdieren veilige eten dat met mate geschikt is voor katten en honden. Cats Protection adviseert groente zonder boter, zout of kruiden. Katten hebben geen groente nodig, geef traktaties spaarzaam, en elk plantaardig materiaal kan braken of maagklachten veroorzaken."
+    "nl": "De RSPCA rekent bloemkool, gaar en in kleine stukjes gesneden, tot het voor huisdieren veilige eten dat met mate geschikt is voor katten en honden. Cats Protection adviseert groente zonder boter, zout of kruiden. Katten hebben geen groente nodig, geef traktaties spaarzaam, en elk plantaardig materiaal kan braken of maagklachten veroorzaken.",
+    "pl": "RSPCA wymienia kalafior, ugotowany i pokrojony na małe kawałki, wśród pokarmów bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Cats Protection radzi podawać warzywa bez masła, soli i przypraw. Koty nie potrzebują warzyw, smakołyków powinno być mało, a każdy pokarm roślinny może wywołać wymioty lub rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "es": "Ofrécele primero un trocito. Si después vomita o tiene el estómago revuelto, deja de dársela y consulta con tu veterinario.",
     "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
     "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com o estômago indisposto depois, deixa de lho dar e pergunta ao veterinário.",
-    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "Cooked and cut into small pieces, with no butter, salt or seasoning.",
@@ -71,7 +77,8 @@
     "es": "Cocida y cortada en trozos pequeños, sin mantequilla, sal ni condimentos.",
     "it": "Cotto e tagliato a pezzetti, senza burro, sale o condimenti.",
     "pt": "Cozinhada e cortada em pedaços pequenos, sem manteiga, sal nem temperos.",
-    "nl": "Gaar en in kleine stukjes gesneden, zonder boter, zout of kruiden."
+    "nl": "Gaar en in kleine stukjes gesneden, zonder boter, zout of kruiden.",
+    "pl": "Ugotowany i pokrojony na małe kawałki, bez masła, soli i przypraw."
   },
   "child": {
     "en": "A little piece of cooked cauliflower can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -81,7 +88,8 @@
     "es": "Un trocito de coliflor cocida puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
     "it": "Ogni tanto il gatto può avere un pezzettino di cavolfiore cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
     "pt": "Um pedacinho de couve-flor cozinhada pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um extra.",
-    "nl": "Een klein stukje gekookte bloemkool kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
+    "nl": "Een klein stukje gekookte bloemkool kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
+    "pl": "Małym kawałkiem ugotowanego kalafiora można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "es": "¿Necesitan verdura los gatos?",
         "it": "I gatti hanno bisogno di verdure?",
         "pt": "Os gatos precisam de legumes?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -103,7 +112,8 @@
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
         "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
         "pt": "Não. A Cats Protection refere que os gatos raramente comem legumes na natureza e que não é preciso acrescentá-los à alimentação. Um legume só pode ser um pequeno extra.",
-        "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
+        "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente, en het is niet nodig om het aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -188,6 +198,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5ca0af96c5bbfd8a6cfc1be06b9613a17397cb3ce73f40c0aa16f458e06051db"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e9420ef1adf05ee44ac1026903a2ebe87029a6fc3c2950554b7c5c3382a5888e"
     }
   }
 }
