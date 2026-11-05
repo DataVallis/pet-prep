@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "065c58045328abf27f4bbebdcd04c10ebad968e393f4e0d84c5fda130d2a32f2"
+      "sha256": "f925bd409ead770e228fef10ab63ec23f3096098372c3943b7226292a2549bb3"
     }
   },
   "suitability_vocabulary": {
@@ -51511,7 +51511,12 @@
           "S694"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "pekingese.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [
@@ -52108,7 +52113,12 @@
           "S700"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "chow-chow.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "not_found",
         "tests": [],
@@ -52661,7 +52671,12 @@
           "S705"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "old-english-sheepdog.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

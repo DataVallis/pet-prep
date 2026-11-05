@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `old_english_sheepdog` (viri S703–S708; ponovno S10, S11, S14, S24, S35, S45, S54, S174); seznam za vzreditelja: testi kluba pasme iz AKC (K41, `other_scheme`) |
 | Izvor | FCI št. 16, skupina 1, sekcija 1 (ovčarski psi), Velika Britanija (S704, S703) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 89. mesto »Old English Sheepdog« (S174, prebrano 2026-11-04) |
-| PR-ji | pet-prep #697 (pasma, združen `80c604d`) · portret: **ni narejen** — zagon `breed-portraits.yml` 41788053301 je zavrnila produkcijska baza (manjka stolpec `item_media_id` v `ai_spend_ledger` — migracija iz `main`, PR #655, še ni na produkciji; brez klica fal, 0 $) · spletna stran: PR šele s portretom (besedila pripravljena na veji `feat/register-old-english-sheepdog`) |
+| PR-ji | pet-prep #697 (pasma, združen `80c604d`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-old-english-sheepdog` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,8 +43,8 @@
 | Pravila po starosti (2.000 → 12.000 korakov pri 12 mesecih, odrasel 12.000, starejši 9.000 od 90. meseca — predlog; 4 → 3 → 2 obroka; učenje 0,7×) | 🛠 | 💶 izziv | M5-R10-93 | 2026-11-04 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku, opomnik staršu za frizerja vsakih 6 tednov | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 / M5-R18 | 2026-11-04 |
 | Barva (izbirnik: 3 barve standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-04 |
-| AI portret v registru | 🗓 ni narejen (produkcijska baza še nima migracij iz `main` — po naslednji objavi) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/old-english-sheepdog`, `/sl/zivali/psi/staroangleski-ovcar`) | 🗓 sledi s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«) | — | M5-R11-04 | 2026-11-05 |
+| Stran na petprep.si (`/animals/dogs/old-english-sheepdog`, `/sl/zivali/psi/staroangleski-ovcar`) | 🛠 s portretom (spletni PR sledi); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -54,7 +54,7 @@
 
 ## Odprto za Davida
 
-- **Portret ni narejen (2026-11-04):** `breed-portraits.yml` (zagon 41788053301, skupaj s pekinezerjem in čau čaujem) zažene kodo iz `main` proti produkcijski bazi, ki še nima migracije M6-W03 (PR #655: stolpec `item_media_id` v `ai_spend_ledger`). Potrebna je naslednja objava na produkcijo — samodejna dnevna ob 03:17 ali vaša ročna (Actions → CI & Deploy → Run workflow na `main`, target `production`). Naslednji nočni zagon nato najprej naredi vse tri portrete (catch-up) in odpre PR-je spletne strani.
+- **Portret (prej ni bil narejen, 2026-11-04):** `breed-portraits.yml` (zagon 41788053301, skupaj s pekinezerjem in čau čaujem) zažene kodo iz `main` proti produkcijski bazi, ki še nima migracije M6-W03 (PR #655: stolpec `item_media_id` v `ai_spend_ledger`). Potrebna je naslednja objava na produkcijo — samodejna dnevna ob 03:17 ali vaša ročna (Actions → CI & Deploy → Run workflow na `main`, target `production`). Naslednji nočni zagon nato najprej naredi vse tri portrete (catch-up) in odpre PR-je spletne strani. **Rešeno 5. 11. 2026:** produkcija je migracije dobila z dnevno namestitvijo `bb3450c` (4. 11.); zagon `breed-portraits.yml` 41939632792 (koda `be67ea6`) je naredil portret, sprejet v prvem poskusu — pet-prep PR #750. Šele zdaj sledi spletna stran.
 - **Starejše obdobje od 90. meseca** je moj predlog (`verified=false`): runbook za življenjsko dobo našteje McMillan 2024, VetCompass in spodnjo mejo RKC — nič ni bilo dosegljivo; PDSA navaja »Over 10 years« (spodnja meja, enako kot pri basenjiju in pekinezerju), zato 0,75 × 10 let. Wikipedia navaja McMillan 2024 12,1 leta (to bi dalo 109). Potrdite ali določite drugo vrednost (seeder je samo-vstavljalni → sprememba prek Filamenta ali podatkovne migracije).
 - **Naraven rep:** standard FCI dovoli kupiran (»Customarily completely docked«) ali naraven rep; igra in portret rišeta naravnega (moj predlog, kot pri nemškem kratkodlakem ptičarju). Potrdite.
 - **Stran RKC ni bila dosegljiva** (preusmeritev na royalkennelclub.com zavrnjena): zato ni čipov »stanovanje« / »velika hiša«, ni kategorije Breed Watch (čip za kolke) in ni testov RKC za vzreditelja (uporabljen ameriški klub pasme prek AKC). Ob naslednji priložnosti preverite.
