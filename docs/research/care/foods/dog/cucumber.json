@@ -6,21 +6,24 @@
     "sl": "Kumare",
     "de": "Gurke",
     "fr": "Concombre",
-    "es": "Pepino"
+    "es": "Pepino",
+    "it": "Cetriolo"
   },
   "question": {
     "en": "Can dogs eat cucumber?",
     "sl": "Ali lahko psi jedo kumare?",
     "de": "Dürfen Hunde Gurken fressen?",
     "fr": "Les chiens peuvent-ils manger du concombre ?",
-    "es": "¿Pueden los perros comer pepino?"
+    "es": "¿Pueden los perros comer pepino?",
+    "it": "I cani possono mangiare il cetriolo?"
   },
   "url_slug": {
     "en": "cucumber",
     "sl": "kumare",
     "de": "gurke",
     "fr": "concombre",
-    "es": "pepino"
+    "es": "pepino",
+    "it": "cetriolo"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da. Kumare so za pse povsem varne in so nizkokaloričen, hrustljav prigrizek. Ponudite jih navadne, oprane in narezane na majhne koščke, uvajajte jih postopoma, kislih kumaric pa nikoli.",
     "de": "Ja. Gurken sind für Hunde völlig unbedenklich und ein kalorienarmer, knackiger Snack. Geben Sie sie pur, gewaschen und in kleine Stücke geschnitten, führen Sie sie nach und nach ein und geben Sie niemals Essiggurken.",
     "fr": "Oui. Les concombres sont tout à fait sans danger pour les chiens et constituent un en-cas croquant et peu calorique. Servez-les nature, lavés et coupés en petits morceaux, introduisez-les progressivement, et ne donnez jamais de cornichons.",
-    "es": "Sí. Los pepinos son totalmente seguros para los perros y un tentempié crujiente y bajo en calorías. Sírvelos sin condimentar, lavados y cortados en trozos pequeños, introdúcelos poco a poco y nunca des pepinillos."
+    "es": "Sí. Los pepinos son totalmente seguros para los perros y un tentempié crujiente y bajo en calorías. Sírvelos sin condimentar, lavados y cortados en trozos pequeños, introdúcelos poco a poco y nunca des pepinillos.",
+    "it": "Sì. I cetrioli sono del tutto sicuri per i cani: uno spuntino croccante e poco calorico. Servili al naturale, lavati e tagliati a pezzetti, introducili gradualmente e non dare mai i cetriolini sott’aceto."
   },
   "why": {
     "en": "Cucumbers are low in calories, very low in sodium and fat-free, with a high water content, so they are especially good for dogs that need to lose weight. The two main concerns are overeating, which can upset the stomach, and choking, particularly in smaller dogs or dogs that eat quickly.",
     "sl": "Kumare imajo malo kalorij, zelo malo natrija in nič maščob ter veliko vode, zato so še posebej primerne za pse, ki morajo shujšati. Glavni tveganji sta prenajedanje, ki lahko povzroči prebavne težave, in dušenje, zlasti pri manjših psih ali psih, ki jedo hitro.",
     "de": "Gurken sind kalorienarm, enthalten sehr wenig Natrium und kein Fett und haben einen hohen Wassergehalt; deshalb eignen sie sich besonders für Hunde, die abnehmen müssen. Die beiden Hauptrisiken sind zu große Mengen, die den Magen verstimmen können, und Ersticken, vor allem bei kleineren Hunden oder Hunden, die schnell fressen.",
     "fr": "Les concombres sont peu caloriques, très pauvres en sodium et sans matières grasses, avec une forte teneur en eau : ils conviennent donc particulièrement aux chiens qui doivent perdre du poids. Il y a deux points de vigilance : l’excès, qui peut perturber la digestion, et l’étouffement, en particulier chez les petits chiens ou les chiens qui mangent vite.",
-    "es": "Los pepinos tienen pocas calorías, muy poco sodio, no tienen grasa y contienen mucha agua, por lo que son especialmente buenos para los perros que necesitan adelgazar. Los dos riesgos principales son comer demasiado, lo que puede sentar mal al estómago, y el atragantamiento, sobre todo en perros pequeños o que comen muy deprisa."
+    "es": "Los pepinos tienen pocas calorías, muy poco sodio, no tienen grasa y contienen mucha agua, por lo que son especialmente buenos para los perros que necesitan adelgazar. Los dos riesgos principales son comer demasiado, lo que puede sentar mal al estómago, y el atragantamiento, sobre todo en perros pequeños o que comen muy deprisa.",
+    "it": "I cetrioli hanno poche calorie, pochissimo sodio, niente grassi e un alto contenuto d’acqua, quindi sono particolarmente adatti ai cani che devono perdere peso. I rischi principali sono due: mangiarne troppi, che può far venire mal di stomaco, e il soffocamento, in particolare nei cani di piccola taglia o che mangiano in fretta."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Kumare uvajajte postopoma in psa opazujte, ko poskusi nekaj novega. Preveč kumar ali prehitro uvajanje lahko povzroči blage prebavne težave.",
     "de": "Führen Sie Gurke nach und nach ein und beobachten Sie Ihren Hund, wenn er etwas Neues probiert. Zu große Mengen oder eine zu rasche Eingewöhnung können eine leichte Magenverstimmung verursachen.",
     "fr": "Introduisez le concombre progressivement et surveillez votre chien lorsqu’il goûte quelque chose de nouveau. En donner trop, ou l’introduire trop vite, peut provoquer de légers troubles digestifs.",
-    "es": "Introduce el pepino poco a poco y vigila a tu perro cuando pruebe algo nuevo. Darle demasiado, o dárselo demasiado deprisa, puede provocarle un ligero malestar de estómago."
+    "es": "Introduce el pepino poco a poco y vigila a tu perro cuando pruebe algo nuevo. Darle demasiado, o dárselo demasiado deprisa, puede provocarle un ligero malestar de estómago.",
+    "it": "Introduci il cetriolo gradualmente e osserva il tuo cane quando assaggia qualcosa di nuovo. Se ne dai troppo, o troppo in fretta, può venirgli un lieve mal di stomaco."
   },
   "serving": {
     "en": "Wash thoroughly and slice into small, manageable pieces suited to your dog's size and chewing habits; don't give a whole cucumber. Plain cucumbers only.",
     "sl": "Kumaro dobro operite in jo narežite na majhne koščke, prilagojene velikosti psa in njegovemu načinu žvečenja; cele kumare ne dajajte. Samo navadne kumare.",
     "de": "Gründlich waschen und in kleine, handliche Stücke schneiden, passend zu Größe und Kauverhalten Ihres Hundes. Keine ganze Gurke geben, nur Gurke pur.",
     "fr": "Lavez-le soigneusement et coupez-le en petits morceaux faciles à manger, adaptés à la taille de votre chien et à sa façon de mâcher ; ne donnez pas un concombre entier. Uniquement des concombres nature.",
-    "es": "Lávalo bien y córtalo en trozos pequeños y fáciles de manejar, adecuados para el tamaño de tu perro y su forma de masticar; no le des un pepino entero. Solo pepino natural, sin condimentar."
+    "es": "Lávalo bien y córtalo en trozos pequeños y fáciles de manejar, adecuados para el tamaño de tu perro y su forma de masticar; no le des un pepino entero. Solo pepino natural, sin condimentar.",
+    "it": "Lavalo bene e taglialo in pezzetti piccoli, adatti alla taglia del tuo cane e al suo modo di mangiare; non dare un cetriolo intero. Solo cetrioli al naturale, senza aggiunte."
   },
   "child": {
     "en": "Dogs can munch a few cucumber pieces. A grown-up washes the cucumber and slices it small first.",
     "sl": "Psi lahko pohrustajo nekaj koščkov kumare. Odrasli kumaro najprej opere in nareže na majhne koščke.",
     "de": "Hunde dürfen ein paar Gurkenstücke knabbern. Ein Erwachsener wäscht die Gurke und schneidet sie vorher klein.",
     "fr": "Les chiens peuvent croquer quelques morceaux de concombre. Un adulte lave le concombre et le coupe d’abord en petits morceaux.",
-    "es": "Los perros pueden mordisquear unos trocitos de pepino. Un adulto lava el pepino y lo corta antes en trocitos."
+    "es": "Los perros pueden mordisquear unos trocitos de pepino. Un adulto lava el pepino y lo corta antes en trocitos.",
+    "it": "I cani possono sgranocchiare qualche pezzetto di cetriolo. Prima un adulto lo lava e lo taglia in pezzetti piccoli."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali lahko psi jedo kisle kumarice?",
         "de": "Dürfen Hunde Essiggurken fressen?",
         "fr": "Les chiens peuvent-ils manger des cornichons ?",
-        "es": "¿Pueden los perros comer pepinillos?"
+        "es": "¿Pueden los perros comer pepinillos?",
+        "it": "I cani possono mangiare i cetriolini sott’aceto?"
       },
       "a": {
         "en": "No. Avoid giving your dog pickles, as they typically contain added salt, spices and other ingredients.",
         "sl": "Ne. Psu ne dajajte kislih kumaric, ker običajno vsebujejo dodano sol, začimbe in druge sestavine.",
         "de": "Nein. Geben Sie Ihrem Hund keine Essiggurken, denn sie enthalten meist zugesetztes Salz, Gewürze und andere Zutaten.",
         "fr": "Non. Évitez de donner des cornichons à votre chien, car ils contiennent généralement du sel ajouté, des épices et d’autres ingrédients.",
-        "es": "No. Evita dar pepinillos a tu perro, porque suelen llevar sal, especias y otros ingredientes añadidos."
+        "es": "No. Evita dar pepinillos a tu perro, porque suelen llevar sal, especias y otros ingredientes añadidos.",
+        "it": "No. Evita di dare al tuo cane i cetriolini sott’aceto, perché di solito contengono sale, spezie e altri ingredienti aggiunti."
       }
     }
   ],
@@ -166,6 +176,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ec8b8f05ee610f03dbd27d715535d98d6f53f901e13fbf67d74faf17ac602dab"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "861754a5090e9746981663b4506d64c3b6c912b82231cd2a8fbcae138d2c18f5"
     }
   }
 }

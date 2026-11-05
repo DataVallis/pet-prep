@@ -6,21 +6,24 @@
     "sl": "Grah",
     "de": "Erbsen",
     "fr": "Petits pois",
-    "es": "Guisantes"
+    "es": "Guisantes",
+    "it": "Piselli"
   },
   "question": {
     "en": "Can cats eat peas?",
     "sl": "Ali lahko mačke jedo grah?",
     "de": "Dürfen Katzen Erbsen fressen?",
     "fr": "Les chats peuvent-ils manger des petits pois ?",
-    "es": "¿Pueden los gatos comer guisantes?"
+    "es": "¿Pueden los gatos comer guisantes?",
+    "it": "I gatti possono mangiare i piselli?"
   },
   "url_slug": {
     "en": "peas",
     "sl": "grah",
     "de": "erbsen",
     "fr": "petits-pois",
-    "es": "guisantes"
+    "es": "guisantes",
+    "it": "piselli"
   },
   "level": "small_amounts",
   "answer": {
@@ -28,14 +31,16 @@
     "sl": "Da, nekaj zrn navadnega graha je v redu kot občasen priboljšek. Cats Protection in ASPCA grah navajata kot zelenjavo, ki jo lahko ponudite mački, RSPCA pa pravi, naj mačke dobijo le malo, kot priboljšek.",
     "de": "Ja, ein paar ungewürzte Erbsen sind als gelegentliches Leckerli in Ordnung. Cats Protection und die ASPCA nennen beide Erbsen unter dem Gemüse, das Sie einer Katze anbieten können, und laut RSPCA sollten Katzen nur eine kleine Menge als Leckerli bekommen.",
     "fr": "Oui, quelques petits pois nature conviennent comme friandise occasionnelle. Cats Protection et l’ASPCA citent tous deux les petits pois parmi les légumes que l’on peut proposer à un chat, et la RSPCA précise que les chats ne doivent en avoir qu’une petite quantité en friandise.",
-    "es": "Sí, unos pocos guisantes sin condimentar están bien como premio ocasional. Cats Protection y la ASPCA citan los guisantes como una verdura que se puede ofrecer a un gato, y la RSPCA indica que los gatos solo deben tomar una pequeña cantidad como premio."
+    "es": "Sí, unos pocos guisantes sin condimentar están bien como premio ocasional. Cats Protection y la ASPCA citan los guisantes como una verdura que se puede ofrecer a un gato, y la RSPCA indica que los gatos solo deben tomar una pequeña cantidad como premio.",
+    "it": "Sì, qualche pisello senza condimenti va bene come premio occasionale. Cats Protection e l’ASPCA citano entrambe i piselli tra le verdure che si possono offrire a un gatto, e la RSPCA precisa che se ne deve dare solo una piccola quantità, come premio."
   },
   "why": {
     "en": "Cats Protection lists peas among the few vegetables you can feed a cat and suggests steamed or boiled vegetables with no butter, salt or seasoning. The ASPCA suggests peas for cats, and the RSPCA says cats can have plain peas but only a small amount as a treat. Cats don't need vegetables, and any plant material can cause vomiting or stomach upset.",
     "sl": "Cats Protection grah uvršča med redko zelenjavo, ki jo lahko daste mački, in predlaga zelenjavo, kuhano na pari ali v vodi, brez masla, soli in začimb. ASPCA grah predlaga za mačke, RSPCA pa navaja, da lahko mačke dobijo navaden grah, vendar le malo, kot priboljšek. Mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave.",
     "de": "Cats Protection zählt Erbsen zu den wenigen Gemüsesorten, die Sie einer Katze geben können, und empfiehlt gedämpftes oder gekochtes Gemüse ohne Butter, Salz oder Gewürze. Die ASPCA empfiehlt Erbsen für Katzen, und laut RSPCA dürfen Katzen ungewürzte Erbsen fressen, aber nur in kleiner Menge als Leckerli. Katzen brauchen kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen.",
     "fr": "Cats Protection cite les petits pois parmi les rares légumes que l’on peut donner à un chat et suggère des légumes cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement. L’ASPCA suggère les petits pois pour les chats, et la RSPCA indique que les chats peuvent manger des petits pois nature, mais seulement en petite quantité, en friandise. Les chats n’ont pas besoin de légumes, et toute matière végétale peut provoquer des vomissements ou des troubles digestifs.",
-    "es": "Cats Protection incluye los guisantes entre las pocas verduras que se pueden dar a un gato y sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos. La ASPCA sugiere los guisantes para gatos, y la RSPCA indica que los gatos pueden tomar guisantes sin condimentar, pero solo una pequeña cantidad como premio. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago."
+    "es": "Cats Protection incluye los guisantes entre las pocas verduras que se pueden dar a un gato y sugiere darlas al vapor o hervidas, sin mantequilla, sal ni condimentos. La ASPCA sugiere los guisantes para gatos, y la RSPCA indica que los gatos pueden tomar guisantes sin condimentar, pero solo una pequeña cantidad como premio. Los gatos no necesitan verdura, y cualquier materia vegetal puede provocar vómitos o malestar de estómago.",
+    "it": "Cats Protection mette i piselli tra le poche verdure che si possono dare a un gatto e consiglia verdure cotte al vapore o lessate, senza burro, sale o condimenti. L’ASPCA consiglia i piselli per i gatti, e la RSPCA dice che i gatti possono mangiare piselli senza condimenti, ma solo in piccola quantità, come premio. I gatti non hanno bisogno di verdure, e qualsiasi alimento vegetale può causare vomito o disturbi di stomaco."
   },
   "signs": null,
   "what_to_do": {
@@ -43,21 +48,24 @@
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "de": "Beginnen Sie mit einer kleinen Menge. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Proposez d’abord un petit morceau. Si votre chat vomit ou présente des troubles digestifs ensuite, arrêtez et demandez conseil à votre vétérinaire.",
-    "es": "Empieza por un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselos y consulta con tu veterinario."
+    "es": "Empieza por un trocito. Si después vomita o tiene el estómago revuelto, deja de dárselos y consulta con tu veterinario.",
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
   },
   "serving": {
     "en": "A few plain peas, steamed or boiled, with no butter, salt or seasoning.",
     "sl": "Nekaj zrn navadnega graha, kuhanega na pari ali v vodi, brez masla, soli in začimb.",
     "de": "Ein paar ungewürzte Erbsen, gedämpft oder gekocht, ohne Butter, Salz oder Gewürze.",
     "fr": "Quelques petits pois nature, cuits à la vapeur ou bouillis, sans beurre, sel ni assaisonnement.",
-    "es": "Unos pocos guisantes sin condimentar, al vapor o hervidos, sin mantequilla, sal ni condimentos."
+    "es": "Unos pocos guisantes sin condimentar, al vapor o hervidos, sin mantequilla, sal ni condimentos.",
+    "it": "Qualche pisello, cotto al vapore o lessato, senza burro, sale o condimenti."
   },
   "child": {
     "en": "A few plain peas can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Nekaj zrn navadnega graha je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
     "de": "Ein paar ungewürzte Erbsen können ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Quelques petits pois nature font parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit extra.",
-    "es": "Unos pocos guisantes sin condimentar pueden ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra."
+    "es": "Unos pocos guisantes sin condimentar pueden ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
+    "it": "Ogni tanto il gatto può avere qualche pisello senza condimenti come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
   },
   "faq": [
     {
@@ -66,14 +74,16 @@
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
-        "es": "¿Necesitan verdura los gatos?"
+        "es": "¿Necesitan verdura los gatos?",
+        "it": "I gatti hanno bisogno di verdure?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes à l’état naturel et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne peut jamais être qu’un petit extra.",
-        "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra."
+        "es": "No. Según Cats Protection, los gatos rara vez comen verdura de forma natural y no hace falta añadirla a su dieta. La verdura solo puede ser un pequeño extra.",
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
       }
     }
   ],
@@ -159,6 +169,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "af5a191af5f315ab856cbef0095ef8e2822e87c85111bfc16bc9cb606ec6b418"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e85bb2ab50621b5597538b5806480f1fe7b50d06a51339ac34e71e028cbe8426"
     }
   }
 }
