@@ -3484,6 +3484,33 @@
         }
       ],
       "notes": "RKC Breeds A–Z page 'Schnauzer' (dog-data S714, 2026-11-05): minimum (Good Practice, 'as evidence indicates these conditions are a significant concern in the breed') — genetic diversity (inbreeding_coi); Best Practice — DNA test for DCM, BVA/KC hip scheme. No new test keys."
+    },
+    "coton_de_tulear": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S724",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "Best Practice"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S724",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "eye_scheme",
+          "level": "best_practice",
+          "name": "Eye testing using the BVA/KC/ISDS Eye Scheme",
+          "source_id": "S724",
+          "quote": "Eye testing using the BVA/KC/ISDS Eye Scheme"
+        }
+      ],
+      "notes": "RKC Breeds A–Z page 'Coton De Tulear' (dog-data S724, 2026-11-05): minimum (Good Practice, 'as evidence indicates these conditions are a significant concern in the breed') — genetic diversity (inbreeding_coi); Best Practice — BVA/KC/ISDS eye scheme (eye_scheme). The page also points to a breed club health scheme (cdtclubuk.org, not fetched). No new test keys."
     }
   }
 }
