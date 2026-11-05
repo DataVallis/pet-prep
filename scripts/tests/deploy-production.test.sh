@@ -14,10 +14,15 @@
 #           0 = none → no maintenance, other = unknown), REVERB_RUNNING=0, CADDY_RUNNING=0,
 #           PHP_BASE_ID / CADDY_BASE_ID (base image ids), BASE_BUILD_FAIL=1,
 #           LABEL_APP / LABEL_WEB (org.petprep.base-id of the pulled :next images, D28).
-#           D31 disk: $PETPREP_ROOT/images.txt = `docker image ls` rows (repo TAB tag TAB
-#           digest TAB id), containers.txt = `docker ps -aq`, container-images.txt =
-#           `docker inspect --format {{.Image}}`; PS_FAIL=1 (`ps -aq` fails); created.txt =
-#           "id RFC3339" lines for `image inspect --format {{.Created}}` (missing id → fails).
+#           D31 disk: $PETPREP_ROOT/images.txt = `docker image ls --no-trunc --format
+#           '{{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.CreatedAt}}'` rows exactly as Docker prints
+#           them (digest-pulled = `ghcr.io/… <none>`; any other format → the stub fails),
+#           containers.txt = `docker ps -aq`, container-images.txt = `docker inspect --format
+#           {{.Image}}`, ps-images.txt = `docker ps -a --format {{.Image}}` (names or short
+#           ids, resolved by `image inspect --format {{.Id}}` against images.txt); PS_FAIL=1
+#           (`ps -aq` fails); created.txt = "id RFC3339" lines for `image inspect --format
+#           {{.Created}}` (fallback when CreatedAt is unparseable; missing id → fails).
+#           `image rm` refusals: FAIL_MATCH='image rm …'.
 #   df      prints DF_AVAIL_KB (default 100 GB) as the free KiB and DF_USED_PCT (default 40);
 #           DF_AVAIL_KB_AFTER = the value from the second call on (after a full builder prune).
 #           PETPREP_IMAGE_TAG (compose against the new tree) is logged in front.
@@ -76,6 +81,14 @@ case "$args" in
         line=$(grep -F -- "$id " "${PETPREP_ROOT}/created.txt" 2>/dev/null | head -n1)
         [ -n "$line" ] || exit 1
         echo "${line#* }" ;;
+    # D31: resolve a container's image (name or short id, `docker ps -a {{.Image}}`) via images.txt.
+    "image inspect --format {{.Id}} "*)
+        ref="${args##* }"
+        id=$(awk -F'\t' -v r="$ref" '{ s = $1; sub(/^sha256:/, "", s)
+            if ($2 ":" $3 == r || $1 == r || index(s, r) == 1) { print $1; exit } }' \
+            "${PETPREP_ROOT}/images.txt" 2>/dev/null)
+        [ -n "$id" ] || exit 1
+        echo "$id" ;;
     "image inspect "*) [ "${NO_PREV_IMAGES:-0}" = "1" ] && exit 1 ;;
     "volume inspect "*) [ "${NO_VOLUME:-0}" = "1" ] && exit 1 ;;
     *" ps -q app"*) [ "${APP_RUNNING:-1}" = "1" ] && echo "c0ffee" ;;
@@ -93,7 +106,11 @@ case "$args" in
         [ "${PS_FAIL:-0}" = "1" ] && exit 1
         cat "${PETPREP_ROOT}/containers.txt" 2>/dev/null || true ;;
     "inspect --format {{.Image}} "*) cat "${PETPREP_ROOT}/container-images.txt" 2>/dev/null || true ;;
-    "image ls --no-trunc --format "*) cat "${PETPREP_ROOT}/images.txt" 2>/dev/null || true ;;
+    "ps -a --format {{.Image}}") cat "${PETPREP_ROOT}/ps-images.txt" 2>/dev/null || true ;;
+    # Exactly the format the script must ask for; any other format fails (format drift = red).
+    'image ls --no-trunc --format {{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.CreatedAt}}')
+        cat "${PETPREP_ROOT}/images.txt" 2>/dev/null || true ;;
+    "image ls "*) echo "stub: unexpected docker image ls format: ${args}" >&2; exit 1 ;;
     "info --format "*) echo "/" ;;
 esac
 exit 0
@@ -938,58 +955,152 @@ check "lock acquired" out_has "Ops lock acquired."
 finish
 
 # ---- D31: disk (release image retention, free-space preflight) --------------------
-write_images() { # rows "repo tag digest id" (space separated) → images.txt (tab separated)
-    : > "$ROOT/images.txt"
-    local row
-    for row in "$@"; do echo "$row" | tr ' ' '\t' >> "$ROOT/images.txt"; done
-}
+# Image rows exactly as `docker image ls --no-trunc --format '{{.ID}}\t{{.Repository}}\t{{.Tag}}\t{{.CreatedAt}}'`
+# prints them: fid = full id from a 12-hex short id, ago = {{.CreatedAt}} N hours ago.
+fid() { printf 'sha256:%s%s' "$1" "$(printf '0%.0s' $(seq 1 $((64 - ${#1}))))"; }
+ago() { date -d "-$1 hours" '+%Y-%m-%d %H:%M:%S %z %Z'; }
+img() { printf '%s\t%s\t%s\t%s\n' "$(fid "$1")" "$2" "$3" "$(ago "$4")"; } # short repo tag hours
+write_images() { : > "$ROOT/images.txt"; local r; for r in "$@"; do printf '%s\n' "$r" >> "$ROOT/images.txt"; done; }
 DG="sha256:$(printf 'a%.0s' $(seq 1 64))"
-start disk_prune "old release images pruned; :production, :previous and in-use images kept"
+
+# Regression (2026-11-05): the production listing (containerd image store — digest-pulled
+# images list as `ghcr.io/…:<none>`). The first prune version logged "removed 0" here.
+start disk_prune_prod "production listing (2026-11-05): old images removed BY ID, kept ones untouched"
 new_root dir
 write_images \
-    "petprep-app production <none> sha256:cur" \
-    "ghcr.io/datavallis/petprep-app <none> ${DG} sha256:cur" \
-    "petprep-app previous <none> sha256:prev" \
-    "ghcr.io/datavallis/petprep-app <none> sha256:p2 sha256:prev" \
-    "ghcr.io/datavallis/petprep-app <none> sha256:o1 sha256:old1" \
-    "ghcr.io/datavallis/petprep-app <none> sha256:o2 sha256:old2" \
-    "petprep-app next <none> sha256:stale" \
-    "ghcr.io/datavallis/petprep-web <none> sha256:w1 sha256:oldweb" \
-    "petprep-web production <none> sha256:curweb" \
-    "ghcr.io/datavallis/petprep-app <none> sha256:k1 sha256:inuse" \
-    "petprep-backend production <none> sha256:sail" \
-    "petprep-website previous <none> sha256:site" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:s1 sha256:siteold" \
-    "postgres 18-alpine <none> sha256:pg" \
-    "<none> <none> <none> sha256:dangling"
-printf 'c1\nc2\n' > "$ROOT/containers.txt"
-printf 'sha256:inuse\nsha256:pg\n' > "$ROOT/container-images.txt"
+    "$(img 1842eb84ba7c ghcr.io/datavallis/petprep-app '<none>' 9)" \
+    "$(img 4556526e7509 ghcr.io/datavallis/petprep-app '<none>' 18)" \
+    "$(img 769fddb117d5 ghcr.io/datavallis/petprep-app '<none>' 33)" \
+    "$(img 0ee1309b7eee ghcr.io/datavallis/petprep-web '<none>' 6)" \
+    "$(img a9f7c991bfd0 ghcr.io/datavallis/petprep-web '<none>' 22)" \
+    "$(img e01f2ff09279 ghcr.io/datavallis/petprep-web '<none>' 18)" \
+    "$(img fa752f43f1c1 ghcr.io/datavallis/petprep-web '<none>' 30)" \
+    "$(img e374e63eb021 ghcr.io/datavallis/petprep-website '<none>' 3)" \
+    "$(img 33df91cfc852 ghcr.io/datavallis/petprep-website '<none>' 20)" \
+    "$(img 233f540489d4 ghcr.io/datavallis/petprep-website '<none>' 30)" \
+    "$(img 5b1c0de0a001 ghcr.io/datavallis/petprep-website '<none>' 10)" \
+    "$(img 5b1c0de0a002 ghcr.io/datavallis/petprep-website '<none>' 14)" \
+    "$(img 5b1c0de0a003 ghcr.io/datavallis/petprep-website '<none>' 26)" \
+    "$(img 5b1c0de0a004 ghcr.io/datavallis/petprep-website '<none>' 40)" \
+    "$(img 5b1c0de0a005 ghcr.io/datavallis/petprep-website '<none>' 2)" \
+    "$(img 1842eb84ba7c petprep-app next 9)" \
+    "$(img 4556526e7509 petprep-app previous 18)" \
+    "$(img 1842eb84ba7c petprep-app production 9)" \
+    "$(img 0ee1309b7eee petprep-web next 6)" \
+    "$(img e01f2ff09279 petprep-web previous 18)" \
+    "$(img 0ee1309b7eee petprep-web production 6)" \
+    "$(img e374e63eb021 petprep-website next 3)" \
+    "$(img 33df91cfc852 petprep-website previous 20)" \
+    "$(img e374e63eb021 petprep-website production 3)" \
+    "$(img 9a9a9a9a9a01 postgres 18-alpine 900)" \
+    "$(img 9a9a9a9a9a02 redis 7-alpine 900)" \
+    "$(img 9a9a9a9a9a03 caddy 2.8-alpine 900)" \
+    "$(img 9a9a9a9a9a04 restic/restic latest 900)" \
+    "$(img 9a9a9a9a9a05 '<none>' '<none>' 900)"
+printf 'c1\nc2\nc3\n09f99b5f0cda\n' > "$ROOT/containers.txt"
+printf '%s\n' "$(fid 1842eb84ba7c)" "$(fid 0ee1309b7eee)" "$(fid 9a9a9a9a9a01)" "$(fid e374e63eb021)" > "$ROOT/container-images.txt"
+# The old web container prints its image as a bare short id (its names are gone).
+printf 'petprep-app:production\npetprep-web:production\npostgres:18-alpine\nfa752f43f1c1\npetprep-website:production\n' > "$ROOT/ps-images.txt"
 run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
-check "old ghcr app image removed by digest ref" called "image rm ghcr.io/datavallis/petprep-app@sha256:o1"
-check "second old app image removed" called "image rm ghcr.io/datavallis/petprep-app@sha256:o2"
-check "old web image removed" called "image rm ghcr.io/datavallis/petprep-web@sha256:w1"
-check "stale :next of a failed deploy removed" called "image rm petprep-app:next"
-check ":production kept (no name of its id removed)" not_called "image rm (petprep-app:production|ghcr.io/datavallis/petprep-app@${DG})"
-check ":previous kept (rollback)" not_called "image rm (petprep-app:previous|ghcr.io/datavallis/petprep-app@sha256:p2)"
-check "web :production kept" not_called "image rm petprep-web:production"
-check "image a container uses kept" not_called "image rm ghcr.io/datavallis/petprep-app@sha256:k1"
-check "other repositories untouched (Sail image, website, postgres)" not_called "image rm (petprep-backend|petprep-website|ghcr.io/datavallis/petprep-website|postgres)"
+check "old app image 769fddb117d5 removed by id" called "image rm $(fid 769fddb117d5)"
+check "old web image a9f7c991bfd0 removed by id" called "image rm $(fid a9f7c991bfd0)"
+for s in 233f540489d4 5b1c0de0a001 5b1c0de0a002 5b1c0de0a003 5b1c0de0a004; do
+    check "website image ${s} (> 6 h, not production/previous) removed" called "image rm $(fid "$s")"
+done
+for s in 1842eb84ba7c 4556526e7509; do check "app ${s} (:production/:previous) kept" not_called "image rm sha256:${s}"; done
+for s in 0ee1309b7eee e01f2ff09279; do check "web ${s} (:production/:previous) kept" not_called "image rm sha256:${s}"; done
+check "web fa752f43f1c1 kept (a container uses it, ps prints a short id)" not_called "image rm sha256:fa752f43f1c1"
+for s in e374e63eb021 33df91cfc852; do check "website ${s} (:production/:previous) kept" not_called "image rm sha256:${s}"; done
+check "website image younger than 6 h kept" not_called "image rm sha256:5b1c0de0a005"
+check "no local tag removed (all are kept ids)" not_called "image rm (ghcr|petprep-)"
+check "other images untouched (postgres, redis, caddy, restic, dangling)" not_called "image rm sha256:9a9a9a9a9a0"
+check "never forced" not_called "image rm (-f|--force)"
 check "no volume / system prune" not_called "volume (rm|prune)|system prune"
-check "prune in the preflight BEFORE the build" before "image rm ghcr.io/datavallis/petprep-app@sha256:o1" "build app caddy"
-check "prune again after success (after the health check)" after_last "image rm ghcr.io/datavallis/petprep-app@sha256:o1" "curl "
+check "age taken from the listing (no inspect needed)" not_called "image inspect --format \{\{.Created\}\}"
+check "log counts: 7 removed, 7 kept" out_has "Old release images: removed 7 image(s), kept 7 "
+check "log counts: 1 young website image" out_has "website images younger than 6 h kept: 1."
+check "no removal warning" not_out "could not be removed"
+check "prune in the preflight BEFORE the build" before "image rm $(fid 769fddb117d5)" "build app caddy"
+check "prune again after success (after the health check)" after_last "image rm $(fid 769fddb117d5)" "curl "
+finish
+
+start disk_prune_refused "docker refuses one removal → warning, the rest removed, deploy goes on"
+new_root dir
+write_images \
+    "$(img 769fddb117d5 ghcr.io/datavallis/petprep-app '<none>' 33)" \
+    "$(img a9f7c991bfd0 ghcr.io/datavallis/petprep-web '<none>' 22)"
+run_deploy FAIL_MATCH="image rm sha256:769f" -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "the other one removed" called "image rm $(fid a9f7c991bfd0)"
+check "counts" out_has "removed 1 image(s), kept 0 "
+check "warns" out_has "1 old release image(s) could not be removed"
+finish
+
+start disk_prune_tags "local tags + digest refs: tags removed first, then the id; :next kept; other repos untouched"
+new_root dir
+write_images \
+    "$(img c0c0c0c0c0c1 petprep-app production 1)" \
+    "$(img c0c0c0c0c0c1 ghcr.io/datavallis/petprep-app '<none>' 1)" \
+    "$(img c0c0c0c0c0c2 petprep-app previous 30)" \
+    "$(img c0c0c0c0c0c3 petprep-app next 2)" \
+    "$(img d0d0d0d0d0d1 petprep-app manual 50)" \
+    "$(img d0d0d0d0d0d1 ghcr.io/datavallis/petprep-app '<none>' 50)" \
+    "$(img d0d0d0d0d0d2 petprep-web old 50)" \
+    "$(img d0d0d0d0d0d3 ghcr.io/datavallis/petprep-app '<none>' 50)" \
+    "$(img d0d0d0d0d0d4 petprep-backend production 50)" \
+    "$(img d0d0d0d0d0d5 petprep-websitex old 50)" \
+    "$(img d0d0d0d0d0d6 ghcr.io/datavallis/petprep-app '<none>' 50)"
+printf 'c1\n' > "$ROOT/containers.txt"
+printf 'sha256:d0d0d0d0d0d6\n' > "$ROOT/container-images.txt"
+: > "$ROOT/ps-images.txt"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "tag of an old id removed" called "image rm petprep-app:manual"
+check "then its digest ref, by id" before "image rm petprep-app:manual" "image rm $(fid d0d0d0d0d0d1)"
+check "tag-only old image removed by its tag (no extra id rm)" called "image rm petprep-web:old"
+check "no id rm for a tag-only image" not_called "image rm $(fid d0d0d0d0d0d2)"
+check "digest-only old image removed by id" called "image rm $(fid d0d0d0d0d0d3)"
+check ":production / :previous / :next kept" not_called "image rm (petprep-app:(production|previous|next)|sha256:c0c0c0c0c0c)"
+check "image a container uses kept (short id from docker inspect)" not_called "image rm sha256:d0d0d0d0d0d6"
+check "other repositories untouched (Sail image, look-alike)" not_called "image rm (petprep-backend|petprep-websitex|sha256:d0d0d0d0d0d4|sha256:d0d0d0d0d0d5)"
+check "counts" out_has "removed 3 image(s), kept 4 "
 check "dangling images + capped build cache pruned" called "builder prune -af --keep-storage 2GB"
 check "full build cache NOT dropped with enough space" not_called "builder prune -af > |builder prune -af \[code"
 check "preflight reports free space" out_has "Disk preflight OK (100 GB free, need 5 GB)."
 finish
 
+start disk_inuse_by_name "a container's image known only by name (docker ps -a) → kept"
+new_root dir
+write_images \
+    "$(img e0e0e0e0e0e1 petprep-app old 50)" \
+    "$(img e0e0e0e0e0e1 ghcr.io/datavallis/petprep-app '<none>' 50)" \
+    "$(img e0e0e0e0e0e2 ghcr.io/datavallis/petprep-app '<none>' 50)"
+printf 'c1\n' > "$ROOT/containers.txt"
+printf 'sha256:ffffffffffff\n' > "$ROOT/container-images.txt"
+printf 'petprep-app:old\n' > "$ROOT/ps-images.txt"
+run_deploy -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "in-use (by name) kept" not_called "image rm (petprep-app:old|sha256:e0e0e0e0e0e1)"
+check "the unused one removed" called "image rm $(fid e0e0e0e0e0e2)"
+finish
+
 start disk_ps_fails "containers cannot be listed → no release image removed (fail safe), deploy goes on"
 new_root dir
-write_images "ghcr.io/datavallis/petprep-app <none> sha256:o1 sha256:old1"
+write_images "$(img 769fddb117d5 ghcr.io/datavallis/petprep-app '<none>' 33)"
 run_deploy PS_FAIL=1 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "nothing removed" not_called "image rm "
 check "warns" out_has "cannot list containers"
+finish
+
+start disk_ls_fails "images cannot be listed → nothing removed, deploy goes on"
+new_root dir
+write_images "$(img 769fddb117d5 ghcr.io/datavallis/petprep-app '<none>' 33)"
+run_deploy FAIL_MATCH='^image ls ' -- --from "$ROOT/incoming" sha-v2
+check "exit 0" rc_is 0
+check "nothing removed" not_called "image rm "
+check "warns" out_has "cannot list images"
 finish
 
 start disk_full "too little free space after pruning → refuse before pulling / building, nothing changed"
@@ -1034,45 +1145,21 @@ check "exit 2" rc_is 2
 check "no docker call" not_called "^docker "
 finish
 
-start disk_website "website images: old unused ones pruned; :production, :previous, in use, young and unknown-age kept"
+start disk_website_age_fallback "website image with an unparseable CreatedAt → docker image inspect {{.Created}}; unknown → kept"
 new_root dir
-OLD="$(date -u -d '-7 hours' +%Y-%m-%dT%H:%M:%S.123456789Z)"
-YOUNG="$(date -u -d '-2 hours' +%Y-%m-%dT%H:%M:%SZ)"
-write_images \
-    "petprep-website production <none> sha256:wcur" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:c1 sha256:wcur" \
-    "petprep-website previous <none> sha256:wprev" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:p1 sha256:wprev" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:o2 sha256:wold2" \
-    "petprep-website next <none> sha256:wnext" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:y1 sha256:wyoung" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:u1 sha256:wunknown" \
-    "ghcr.io/datavallis/petprep-website <none> sha256:r1 sha256:wrun" \
-    "petprep-websitex old <none> sha256:other"
-printf 'sha256:wcur %s\nsha256:wprev %s\nsha256:wold1 %s\nsha256:wold2 %s\nsha256:wnext %s\nsha256:wyoung %s\nsha256:wrun %s\nsha256:other %s\n' \
-    "$OLD" "$OLD" "$OLD" "$OLD" "$OLD" "$YOUNG" "$OLD" "$OLD" > "$ROOT/created.txt"
-printf 'c1\n' > "$ROOT/containers.txt"
-printf 'sha256:wrun\n' > "$ROOT/container-images.txt"
+printf '%s\t%s\t%s\t%s\n' "$(fid f0f0f0f0f0f1)" ghcr.io/datavallis/petprep-website '<none>' 'garbage' \
+    "$(fid f0f0f0f0f0f2)" ghcr.io/datavallis/petprep-website '<none>' '' > "$ROOT/images.txt"
+printf '%s %s\n' "$(fid f0f0f0f0f0f1)" "$(date -u -d '-9 hours' +%Y-%m-%dT%H:%M:%S.123456789Z)" > "$ROOT/created.txt"
 run_deploy -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
-check "old website image removed by digest ref" called "image rm ghcr.io/datavallis/petprep-website@sha256:o1"
-check "second old website image removed" called "image rm ghcr.io/datavallis/petprep-website@sha256:o2"
-check "old stale website :next removed" called "image rm petprep-website:next"
-check "website :production kept" not_called "image rm (petprep-website:production|ghcr.io/datavallis/petprep-website@sha256:c1)"
-check "website :previous kept (its rollback)" not_called "image rm (petprep-website:previous|ghcr.io/datavallis/petprep-website@sha256:p1)"
-check "website image younger than 6 h kept (concurrent website deploy)" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:y1"
-check "website image of unknown age kept (fail safe)" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:u1"
-check "website image a container runs kept" not_called "image rm ghcr.io/datavallis/petprep-website@sha256:r1"
-check "look-alike repository untouched" not_called "image rm petprep-websitex"
-check "age read only for website candidates" not_called "image inspect --format \{\{.Created\}\} sha256:(wcur|wprev|wrun|other)"
-check "reports the young ones" out_has "website images younger than 6 h: 2"
+check "old one (RFC3339 from inspect) removed" called "image rm $(fid f0f0f0f0f0f1)"
+check "unknown age kept (fail safe)" not_called "image rm sha256:f0f0f0f0f0f2"
+check "counts" out_has "website images younger than 6 h kept: 1."
 finish
 
 start disk_website_age "DEPLOY_WEBSITE_MIN_AGE_HOURS=8 keeps a 7 h old website image"
 new_root dir
-write_images "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1"
-printf 'sha256:wold1 %s\n' "$(date -u -d '-7 hours' +%Y-%m-%dT%H:%M:%SZ)" > "$ROOT/created.txt"
+write_images "$(img 5b1c0de0a001 ghcr.io/datavallis/petprep-website '<none>' 7)"
 run_deploy DEPLOY_WEBSITE_MIN_AGE_HOURS=8 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "kept" not_called "image rm "
@@ -1087,8 +1174,7 @@ finish
 
 start disk_website_psfail "containers cannot be listed → no website image removed either"
 new_root dir
-write_images "ghcr.io/datavallis/petprep-website <none> sha256:o1 sha256:wold1"
-printf 'sha256:wold1 %s\n' "$(date -u -d '-9 hours' +%Y-%m-%dT%H:%M:%SZ)" > "$ROOT/created.txt"
+write_images "$(img 5b1c0de0a001 ghcr.io/datavallis/petprep-website '<none>' 9)"
 run_deploy PS_FAIL=1 -- --from "$ROOT/incoming" sha-v2
 check "exit 0" rc_is 0
 check "nothing removed" not_called "image rm "

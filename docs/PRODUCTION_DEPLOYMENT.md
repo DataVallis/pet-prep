@@ -135,7 +135,7 @@ Docker images on the server (M4-05b):
 | `petprep-backend:production` | the old Sail runtime image (rollback to the pre-M4-05b compose file) — remove after a stable week |
 | `ghcr.io/datavallis/petprep-{app,web}@sha256:…` | the CI image pulled by a deploy (D28) — same image id as `:next` / `:production` |
 
-**Retention (D31):** every deploy (disk preflight + after success) removes all names of `petprep-app` / `petprep-web` images except the ids of `:production` and `:previous` and images a container uses — so exactly the current and the previous release stay on disk. Older releases: redeploy (GHCR keeps 60 versions).
+**Retention (D31, by image id since 2026-11-05):** every deploy (disk preflight + after success) removes every `petprep-app` / `petprep-web` image **id** except the ids tagged `:production`, `:previous` or `:next` and images a container uses — so the current and the previous release stay on disk (`:next` = `:production` after a successful deploy). `petprep-website` images follow the same rule but only when older than 6 h. Removal is `docker image rm <tag>` / `docker image rm <id>`, never `-f`; a refused removal (image in use) is a warning. Older releases: redeploy (GHCR keeps 60 versions). On the containerd image store a pulled image lists as `ghcr.io/…:<none>` — match images by **ID**, not by name.
 
 ---
 
@@ -567,7 +567,9 @@ Manual cleanup if ever needed (safe while the app runs; keeps the rollback image
 df -h /
 docker system df
 docker image ls 'petprep-*'; docker image ls 'ghcr.io/*/petprep-*'
-# old release images = everything the next deploy would prune (it runs the same rule first)
+# old release images = everything the next deploy would prune (it runs the same rule first).
+# By hand: compare IDs with `docker image ls 'petprep-*'` (:production/:previous/:next), then
+docker image rm <id> …           # never -f; »image is being used by running container« = keep it
 docker builder prune -af          # build cache
 docker image prune -f             # untagged images
 journalctl --vacuum-size=200M
