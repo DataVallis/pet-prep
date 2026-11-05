@@ -49123,6 +49123,663 @@
       }
     }
   },
+  "standard_schnauzer": {
+    "_note": "Added 2026-11-05 (M5-R10-95, unattended run — appended after the Keeshond: AKC 2024 No. 91 'Standard Schnauzer', S174 full-list table). Quotes as returned by the web-fetch tool on 2026-11-05; paraphrase only in notes, marked '(paraphrase)'. Sources S711–S720 (reused S10, S11, S14, S24, S35, S45, S54, S92, S174). No health percentages anywhere. Identity and colours from the FCI nomenclature (S711, 'SCHNAUZER' (182), varieties pepper and salt / pure black with black undercoat); weight and height from FCI-Standard N° 182 (S712, EN, 18.04.2007 — the only standard with a weight); RKC breed standard (S713, last updated 1 April 2026) and the AKC standard (S718, approved January 10, 2022) for ideal heights and appearance. The RKC Breeds A–Z page (S714) was reached via the royalkennelclub.com address with a trailing slash: key facts, Breed Watch Category 1 and the health tests. Lifespan: the Dogs Trust McMillan 2024 table (S123) was refused (not in provenance) and McMillan 2024 (S54) shows the breed only in Fig. 5 → RKC lower bound 'Over 10 years' (runbook order). The RKC and FCI name is 'Schnauzer'; EN app name 'Standard Schnauzer' (AKC S174 / S718; the RKC page title is 'Schnauzer'). Slovenian »srednji šnavcer« (Klub šnavcerjev in pinčev Slovenije, S720).",
+    "identity": {
+      "value": "FCI No. 182, Group 2 Section 1 (Pinscher and Schnauzer type), Germany",
+      "unit": "—",
+      "source_id": "S711",
+      "quote": "SCHNAUZER",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S711, as returned): breed name 'SCHNAUZER', English name 'SCHNAUZER', group 'n°2 - Pinscher and Schnauzer - Molossoid and Swiss Mountain and Cattledogs', section 'Pinscher and Schnauzer type', subsection 'Schnauzer', country of origin 'GERMANY', 'Not subject to a working trial according to the FCI breeds nomenclature', definitive acceptance '7/13/1955', valid standard '3/6/2007'. FCI-Standard N° 182 (S712): 'Group 2 Pinscher and Schnauzer- Molossoid breeds - Swiss Mountain and Cattle Dogs.' 'Section 1 Pinscher and Schnauzer type.' 'COUNTRY OF ORIGIN: Germany.' Germany is already in FCI_ORIGINS (DE). Wikipedia (S719, tier C) other names 'Standard Schnauzer; Mittelschnauzer; Rattenfänger; Rattler; Rauche Pinscher; Rauhaarige Pinscher; Wire-Haired Pinscher;'."
+    },
+    "size_class": {
+      "value": "medium",
+      "unit": "—",
+      "source_id": "S714",
+      "quote": "Size: Medium",
+      "confidence": "high",
+      "notes": "RKC breed page key fact (S714, value 'Medium' as returned); PDSA (S715) 'Medium' (its page sits under 'medium-dogs'). FCI 14–20 kg (S712) ≈ 31–44 lb → S10 class 'Medium (24–59 pounds)' for growth. RKC places the breed in the Utility group."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            45,
+            50
+          ],
+          "female": [
+            45,
+            50
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S712",
+        "quote": "Height at withers : Dogs and bitches: 45 to 50 cm",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 182 (S712), one range for both sexes (stored per sex); disqualifying fault 'Over- or undersize by more than 3 cm.' PDSA (S715) 'Average height' '45-48 cm'; VCA (S716) '18 - 20 inches'; PetMD (S717) '18-19 inches tall' (fragment); Wikipedia (S719, tier C) '45–50 cm (18–20 in)' — alternatives."
+      },
+      "rkc_standard": {
+        "value": {
+          "male": [
+            48,
+            48
+          ],
+          "female": [
+            45.7,
+            45.7
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S713",
+        "quote": "Ideal height at withers: dogs: 48 cms (19 ins).",
+        "confidence": "high",
+        "notes": "Royal Kennel Club breed standard (S713, last updated 1 April 2026): one ideal value per sex — dogs '48 cms (19 ins)', bitches 'bitches: 45.7 cms (18 ins).' (stored as a one-point range)."
+      },
+      "akc_standard": {
+        "value": {
+          "male": [
+            47.0,
+            49.5
+          ],
+          "female": [
+            44.5,
+            47.0
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S718",
+        "quote": "Ideal height at the highest point of the shoulder blades, 18½ to 19½ inches for males",
+        "confidence": "high",
+        "notes": "AKC standard (S718, approved January 10, 2022, effective March 30, 2022): males 18½–19½ in (≈ 47.0–49.5 cm), females '17½ inches to 18½ inches for females.' (≈ 44.5–47.0 cm); disqualification 'Males under 18 inches or over 20 inches in height.' / 'Females under 17 inches or over 19 inches in height.' Centimetres converted by Claude (1 in = 2.54 cm)."
+      }
+    },
+    "adult_weight": {
+      "fci": {
+        "value": {
+          "male": [
+            14,
+            20
+          ],
+          "female": [
+            14,
+            20
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S712",
+        "quote": "Weight : Dogs and bitches: 14 to 20 kg.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 182 (S712), one range for both sexes (stored per sex), the game range (adult_weight_kg). The RKC standard (S713) and the AKC standard (S718) give no weight. PDSA (S715) 'Average weight' '16-20 kg'; VCA (S716) '35 - 45 pounds' (≈ 16–20 kg); PetMD (S717) 'between 25-45 pounds' (fragment, ≈ 11–20 kg); Wikipedia (S719, tier C) '14–20 kg (30–45 lb)' — alternatives.",
+        "alternatives": [
+          {
+            "value": {
+              "male": [
+                16,
+                20
+              ],
+              "female": [
+                16,
+                20
+              ]
+            },
+            "unit": "kg",
+            "source_id": "S715",
+            "quote": "16-20 kg",
+            "notes": "PDSA key fact 'Average weight' (S715), one range for both sexes."
+          }
+        ]
+      },
+      "salt_category": {
+        "value": "III (10–<15 kg) / IV (15–<30 kg)",
+        "unit": "—",
+        "source_id": "S8",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Category assignment by weight is ours (general_by_size.size_classes.salt_2017_bands_kg, S8): 14–20 kg spans the bands (mostly IV). Salt 2017 breed list not checked."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "12–15 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Medium (24–59 pounds): 12–15 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: FCI 14–20 kg (S712) ≈ 31–44 lb → 'Medium (24–59 pounds)'. No breed source gives the age of full growth."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no Standard Schnauzer growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S714",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S714, value 'Over 10 years' as returned). PDSA (S715) 'Average lifespan' 'Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan (no upper bound ≤ 10)."
+      },
+      "pdsa": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S715",
+        "quote": "Over 10 years",
+        "confidence": "medium",
+        "notes": "PDSA key fact 'Average lifespan' (S715). Same lower bound as the RKC."
+      },
+      "vca": {
+        "value": "12–14",
+        "unit": "years",
+        "source_id": "S716",
+        "quote": "12 - 14 years",
+        "confidence": "medium",
+        "notes": "VCA key fact 'Lifespan' (S716, tier B, US). Would give 0.75 × 12 × 12 = 108 months (alternative)."
+      },
+      "petmd": {
+        "value": "13–16",
+        "unit": "years",
+        "source_id": "S717",
+        "quote": "The average Standard Schnauzer lifespan is 13-16 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S717). Would give 0.75 × 13 × 12 = 117 months (alternative)."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024 (S54, Nature PDF re-read 2026-11-05): 'Standard Schnauzer' appears only as a Fig. 5 phylogeny label (median shown by colour; overall 'median survival was estimated at 12.5 years'); the breed estimate is in Supplementary Table 3 (not reached); the Dogs Trust table (S123) was refused by the fetch tool. Wikipedia (S719, tier C): 'Median lifespan is reported to be 13 years, slightly greater than the median for all dogs, 12.5 years.' (cites a 2024 Scientific Reports study) — not verified in the paper → open for David (0.75 × 13 × 12 = 117 if confirmed)."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × RKC lower bound 10 y (S714) → 0.75 × 10 = 7.5 y = 90 months. Runbook order: McMillan 2024 (table not reachable; 13 y only via Wikipedia tier C) → VetCompass median (none found) → RKC lower bound. Alternatives: 117 (13 y, Wikipedia S719 / PetMD lower bound S717); 108 (VCA 12 y, S716); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S714"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "≤ 60",
+        "unit": "minutes/day",
+        "source_id": "S714",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact (S714, value 'Up to 1 hour per day' as returned), runbook first choice → 60 min. PDSA (S715) 'Minimum exercise (per day)' '1 hour' and 'Schnauzers are playful and inquisitive dogs that need around an hour of exercise daily to keep them happy.' agree. PetMD (S717): 'need to be kept busy with at least 30 minutes of activity every day' (fragment) — alternative (30). VCA (S716): 'Its exercise needs can be met with a long walk or run, along with a vigorous game.' (no number)."
+      },
+      "daily_text": {
+        "value": "around an hour of exercise daily",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "Schnauzers are playful and inquisitive dogs that need around an hour of exercise daily to keep them happy.",
+        "confidence": "high",
+        "notes": "PDSA (S715), exercise requirements."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No advice to leave a gap between eating and exercising found: PDSA (S715), VCA (S716) and PetMD (S717) do not name bloat / GDV; PetMD advises twice-daily meals for adults and slow feeders for dogs that eat too quickly (paraphrase) → no meal_exercise_gap row (never invent a quote)."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "alert, reliable and intelligent; primarily a companion dog; lively temperament with placid composure",
+        "unit": "—",
+        "source_id": "S713",
+        "quote": "Alert, reliable and intelligent. Primarily a companion dog.",
+        "confidence": "high",
+        "notes": "Royal Kennel Club standard (S713), Temperament; Characteristics: 'Strong, vigorous dog capable of great endurance.' FCI (S712): 'Typical characteristics are his lively temperament, coupled with placid composure.' AKC (S718): 'His nature combines high-spirited temperament with extreme reliability.'"
+      },
+      "family": {
+        "value": "devoted to its family, including other family pets and children",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "devoted to their family, including other family pets and children.",
+        "confidence": "medium",
+        "notes": "PetMD (S717, fragment as returned). Basis of family_pet. PetMD also: they 'prefer to be around their family rather than isolated in a kennel' (fragment)."
+      },
+      "children": {
+        "value": "gentle, patient, get on well with children if introduced early; playful and good with children",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "Schnauzers are gentle, patient dogs that will get on well with children if they're introduced at an early age.",
+        "confidence": "high",
+        "notes": "PDSA (S715) — an explicit statement with an early-introduction condition (kept here). VCA (S716): 'Playful and good with children.' An explicit statement → children (runbook). No statement about small children specifically → no small_children chip."
+      },
+      "experienced_owner": {
+        "value": "does best with patient, experienced owners; clever but headstrong",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "This breed does best with patient, experienced pet parents.",
+        "confidence": "high",
+        "notes": "PetMD (S717). PDSA (S715): 'They can be stubborn so will need patience and commitment when training.' VCA (S716): 'can be quite headstrong' (fragment). Basis of experienced_owner."
+      },
+      "time_alone": {
+        "value": "prefers to be with its family rather than isolated",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "prefer to be around their family rather than isolated in a kennel",
+        "confidence": "low",
+        "notes": "PetMD (S717, fragment) — about kennel isolation, not about being left alone at home → no needs_company / often_alone chip."
+      },
+      "other_pets": {
+        "value": "usually gets along with household pets; reserved with unfamiliar animals; can be aggressive toward strange dogs",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Usually gets along with household pets.",
+        "confidence": "medium",
+        "notes": "VCA (S716); also 'Can be aggressive toward strange dogs.' PetMD (S717): 'tend to be reserved around unfamiliar people and other animals' (fragment); historically 'as a ratter, hunter, and farm watch dog' (fragment). Hedged ('usually') and mixed → no other_pets chip; no source names a high prey drive → no chases_small_pets."
+      },
+      "socialisation": {
+        "value": "early socialisation and training are necessary",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "early socialization and training is necessary.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragment as returned, a need — runbook M5-R17). PetMD: training should start 'as soon as your Standard Schnauzer puppy is 8 weeks old' (fragment). → proposed_game_parameters.standard_schnauzer.socialisation (DOG_SOCIALISATION row, M5-R17)."
+      },
+      "mental_stimulation": {
+        "value": "games and tricks provide needed mental exercise; may be mischievous without enough exercise",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Games and tricks provide needed mental exercise.",
+        "confidence": "high",
+        "notes": "VCA (S716); also 'Makes a lively and alert housedog, but can be mischievous unless given enough exercise.' and 'Learns quickly, but also bores quickly, and can be quite headstrong.' PetMD (S717): 'require a moderate amount of exercise and mental games' (fragment). Basis of needs_mental_stimulation."
+      },
+      "strangers": {
+        "value": "aloof toward strangers",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Tends to be aloof toward strangers.",
+        "confidence": "medium",
+        "notes": "VCA (S716). Fact for the breed text only (no chip)."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No chewing statement found (PetMD: without enough activity they may become bored or destructive — paraphrase, no chewing word) → no chews_when_bored tag."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No food-motivation statement found. VCA (S716): 'Standard schnauzers tend to stay in good weight.' → no food_motivated_weight tag."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages are shown anywhere. RKC Breed Watch Category 1 (S714: no breed-specific points of concern) → no welfare chip. Breeder checklist: RKC minimum (Good Practice) — genetic diversity; Best Practice — DNA test for DCM, BVA/KC hip scheme (S714).",
+      "skin": {
+        "value": "skin — Schnauzer comedo syndrome (follicular dermatitis)",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "specific type of follicular dermatitis",
+        "confidence": "high",
+        "notes": "PDSA (S715, fragment after 'Schnauzer comedo syndrome'). PetMD (S717) lists 'Follicular dermatitis'. Not a Breed Watch point → no sensitive_skin chip. Register health key skin_comedo_allergy (Miniature Schnauzer precedent)."
+      },
+      "hip_dysplasia": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "hip joint laxity as a result of poor development, which will eventually lead to arthritis.",
+        "confidence": "high",
+        "notes": "PDSA (S715, fragment after 'Hip dysplasia'). PetMD (S717) names canine hip dysplasia. RKC Best Practice hip scheme (S714). No Breed Watch point → no hips_hind_legs chip. Register health key hip_dysplasia."
+      },
+      "cardiomyopathy": {
+        "value": "dilated cardiomyopathy (heart muscle) — DNA test for breeding dogs",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "DNA test for dilated cardiomyopathy (DCM)",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S714). Register health key heart_muscle_disease."
+      },
+      "eyes": {
+        "value": "eye conditions — cataracts, retinal dysplasia / progressive retinal atrophy",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S717) health list 'Cataracts', 'Retinal dysplasia (progressive retinal atrophy)' (headings only). Register health key pra_eye_disease."
+      },
+      "pulmonic_stenosis": {
+        "value": "pulmonic stenosis (heart valve)",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S717) health list 'Pulmonic stenosis' (heading only)."
+      },
+      "hypothyroidism": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S717) health list 'Hypothyroidism' (heading only). Register health key hypothyroidism."
+      },
+      "haemophilia_a": {
+        "value": "haemophilia A (blood clotting)",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S717) health list 'Hemophilia A' (heading only)."
+      },
+      "bladder_stones": {
+        "value": "bladder stones",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PetMD (S717) health list 'Bladder stones' (heading only). Register health key bladder_stones."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 18,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S35",
+        "quote": "Standard Schnauzer",
+        "confidence": "medium",
+        "notes": "Wikipedia table of Coren's ranking (S35, read 2026-11-05): 'Standard Schnauzer' listed under rank 18 together with '| 18 | Flat-Coated Retriever |' and 'English Cocker Spaniel' (as returned); tier 'Excellent Working Dogs' (ranks 11–26). Coren's own article (S34) not re-read. Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Excellent",
+        "unit": "—",
+        "source_id": "S35",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S35 tier label for ranks 11–26 (as returned: 'Excellent Working Dogs Understanding of new commands: 5 to 15 repetitions.; Obey first command: 85% of the time or better.;')."
+      },
+      "training_notes": {
+        "value": "learns quickly but bores quickly; headstrong; reward-based training with patience",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Learns quickly, but also bores quickly, and can be quite headstrong.",
+        "confidence": "high",
+        "notes": "VCA (S716); 'Does best with reward-based training involving food or games.' PDSA (S715): 'They can be stubborn so will need patience and commitment when training.' AKC (S718): 'highly developed senses, intelligence, aptitude for training,' (fragment). The game uses Coren's rank only."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.standard_schnauzer.learning_multiplier (1.5, runbook rule: Excellent tier, rank 18).",
+        "derived_from": [
+          "S35"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium sized, strong, stocky rather than slim, rough haired; sturdily built, nearly square",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Medium sized, strong, stocky rather than slim, rough haired.",
+        "confidence": "high",
+        "notes": "FCI (S712), General appearance. RKC standard (S713): 'Sturdily built, robust, sinewy, nearly square, (length of body equal to height at shoulders).'"
+      },
+      "colours": {
+        "value": [
+          "pepper_and_salt",
+          "black"
+        ],
+        "unit": "list (dark facial mask in pepper and salt)",
+        "source_id": "S712",
+        "quote": "Pure black with black undercoat.",
+        "confidence": "high",
+        "notes": "FCI (S712): pepper and salt — 'the aim is a medium shading with evenly distributed, well pigmented pepper colouring.', shades 'from dark iron grey to silver grey are all permitted' (fragment); 'Pure black with black undercoat.'; no other colour. FCI nomenclature (S711) varieties 'a) pepper and salt' and 'b) pure black with black undercoat'. RKC standard (S713): 'Pure black', 'Pepper and salt. Pepper and salt shades range from dark iron grey to light grey.', facial mask to 'harmonise with corresponding coat colour' (fragment), 'Good pigmentation essential in all colours.', 'Any other colour or combination of colours unacceptable.' AKC (S718): 'Pepper and salt or pure black.'; faults 'such as rust, brown, red, yellow or tan' and 'gray hairs in the coat of a black; in blacks, any undercoat color other than black.' Never black and silver (Miniature / Giant only), white, brown or patches."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php). Pepper and salt first with the highest weight (the portrait default; the FCI and AKC list it first), then pure black."
+      },
+      "coat": {
+        "value": "wiry, harsh, dense top coat; dense undercoat; longer on legs, muzzle and eyebrows",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "The coat should be wiry, harsh and dense.",
+        "confidence": "high",
+        "notes": "FCI (S712). RKC standard (S713): 'Harsh, wiry and short enough for smartness.' 'Dense undercoat essential.' VCA (S716): 'Coat is hard and wiry, longer on the legs, muzzle, and eyebrows.' RKC 'Coat length: Medium' (S714)."
+      },
+      "head": {
+        "value": "strong, long head without a marked occiput; stop defined by the brows; blunt wedge-shaped muzzle, straight bridge",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Strong, long without markedly protruding occiput.",
+        "confidence": "high",
+        "notes": "FCI (S712) skull; stop 'Appears well defined due to the brows.'; muzzle 'Ending in a blunt wedge. Bridge of nose straight.' RKC (S713): 'Head strong and of good length, narrowing from ears to eyes and then gradually forward toward end of nose.'"
+      },
+      "nose": {
+        "value": "well developed, large nostrils, always black",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Well developed nose leather with large nostrils, always black.",
+        "confidence": "high",
+        "notes": "FCI (S712)."
+      },
+      "ears": {
+        "value": "V-shaped drop ears, set high, dropping forward to the temple (natural, never cropped)",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Drop ears, set high, V-shaped with inner edges lying close to the cheeks.",
+        "confidence": "high",
+        "notes": "FCI (S712). RKC (S713): 'Neat, V-shaped, set high and dropping forward to temple.' The AKC standard (S718) also allows cropped ears ('carried erect when cropped') — never cropped in the game."
+      },
+      "eyes": {
+        "value": "medium sized, oval, dark, facing forward, arched bushy eyebrows",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Medium sized, oval, facing forward, dark with lively expression.",
+        "confidence": "high",
+        "notes": "FCI (S712). RKC (S713): 'Medium sized, dark, oval, set forward with arched bushy eyebrows.'"
+      },
+      "tail": {
+        "value": "natural tail, sabre or sickle carriage (never docked)",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "Natural; a sabre or sickle carriage is sought after.",
+        "confidence": "high",
+        "notes": "FCI (S712). RKC (S713) undocked: 'Set on and carried high, of moderate length to give general balance to the dog.' (also describes the previously docked tail); AKC (S718): 'When undocked, a Saber or Sickle tail is preferred.' Never docked in the game."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC breed page key facts (S714, reached 2026-11-05), PDSA (S715), VCA (S716), PetMD (S717). Dogs Trust / Woodgreen breed pages not found.",
+      "rkc_size": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Size: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S714)."
+      },
+      "rkc_exercise": {
+        "value": "Up to 1 hour per day",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC key fact (S714). Not a long-exercise breed (no active_family / long_daily_exercise)."
+      },
+      "rkc_size_of_home": {
+        "value": "Small house",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Size of home: Small house",
+        "confidence": "high",
+        "notes": "RKC key fact (S714) — not 'Flat/ Apartment' → no apartment chip; not 'Large house' → no large_home."
+      },
+      "rkc_garden": {
+        "value": "Small/ medium garden",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Size of garden: Small/ medium garden",
+        "confidence": "high",
+        "notes": "RKC key fact (S714)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Grooming: More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact (S714). No number → the most specific A/B number: PDSA (S715) 'Grooming is needed 2-3 times a week' → 3 (M5-R13 rule, Miniature Schnauzer precedent). VCA (S716) 'once or twice weekly' and PetMD (S717) 'Twice-weekly brushing' (fragment) → alternative (2). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Coat length: Medium",
+        "confidence": "high",
+        "notes": "RKC key fact (S714); PDSA (S715) 'Coat length' 'Medium'."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Sheds: Yes",
+        "confidence": "high",
+        "notes": "RKC key fact (S714). Conflicts with VCA (S716) 'Shedding is below average.' and PetMD (S717) 'Standard Schnauzer shedding is minimal.' → neither sheds nor low_shedding (runbook: conflicting sources → neither tag). Never hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Lifespan: Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact (S714). Not shorter_lifespan."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Town or country: Either",
+        "confidence": "high",
+        "notes": "RKC key fact (S714)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "No",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Vulnerable native breed: No",
+        "confidence": "high",
+        "notes": "RKC key fact (S714)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC Breed Watch (S714), Category 1, '… other than those covered routinely by The Kennel Club's breed standard.' (fragment) → no welfare chip."
+      },
+      "pdsa_children": {
+        "value": "gentle, patient, get on well with children if introduced at an early age",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "Schnauzers are gentle, patient dogs that will get on well with children if they're introduced at an early age.",
+        "confidence": "high",
+        "notes": "PDSA (S715). Basis of children (early-introduction condition in notes; never small_children)."
+      },
+      "pdsa_grooming": {
+        "value": "grooming 2–3 times a week; periodic professional clipping or stripping",
+        "unit": "—",
+        "source_id": "S715",
+        "quote": "Grooming is needed 2-3 times a week",
+        "confidence": "high",
+        "notes": "PDSA (S715, as returned); professional clipping or stripping needed 'periodically' (fragment, no number). → brushing 3× a week (M5-R13 range rule → upper bound)."
+      },
+      "vca_grooming": {
+        "value": "combing once or twice weekly; professional clip every two to three months",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "The coat needs combing once or twice weekly.",
+        "confidence": "high",
+        "notes": "VCA (S716); 'Many pet owners elect to have their dogs professionally groomed, or clipped into a trim that is more easily cared for.' 'This must be repeated every two to three months.' (clipping); 'Show dogs must have their coat plucked and stripped.' → groomer alternative 2 months (PetMD 'quarterly' chosen, see proposed_game_parameters.standard_schnauzer.professional_grooming)."
+      },
+      "vca_children": {
+        "value": "playful and good with children",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Playful and good with children.",
+        "confidence": "high",
+        "notes": "VCA (S716). Basis of children (with PDSA S715)."
+      },
+      "petmd_grooming": {
+        "value": "twice-weekly brushing and combing; quarterly professional grooming; monthly bath; nail trims and ear cleanings every one to two weeks",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "nail trims and ear cleanings every one to two weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragments as returned): 'Twice-weekly brushing with a pin brush' ; 'twice-weekly combing, quarterly trimming, and professional shaping.'; 'quarterly professional appointments with an experienced Schnauzer groomer.'; 'The undercoat may also need to be professionally stripped a few times a year.'; 'Monthly bathing with oatmeal-based dog shampoos is recommended.'; 'nail trims and ear cleanings every one to two weeks.' No tooth frequency. → nail_trim and ear_cleaning once a week, bath every 4 weeks, groomer every 12 weeks (M5-R18 / R19 / R20)."
+      },
+      "petmd_groomer": {
+        "value": "quarterly professional appointments with an experienced Schnauzer groomer",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "quarterly professional appointments with an experienced Schnauzer groomer.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragment). Basis of the groomer reminder (DOG_CARE_TASKS groomer_visit [1, three_months]). VCA (S716) 'every two to three months' — alternative."
+      },
+      "petmd_bath": {
+        "value": "monthly bath",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "Monthly bathing with oatmeal-based dog shampoos is recommended.",
+        "confidence": "high",
+        "notes": "PetMD (S717). Basis of the parent's bath reminder (DOG_CARE_TASKS bath [1, month])."
+      },
+      "petmd_shedding": {
+        "value": "minimal",
+        "unit": "—",
+        "source_id": "S717",
+        "quote": "Standard Schnauzer shedding is minimal.",
+        "confidence": "high",
+        "notes": "PetMD (S717). Conflicts with RKC 'Sheds: Yes' (S714) → no shedding chip."
+      },
+      "vca_shedding": {
+        "value": "below average",
+        "unit": "—",
+        "source_id": "S716",
+        "quote": "Shedding is below average.",
+        "confidence": "high",
+        "notes": "VCA (S716). Conflicts with RKC 'Sheds: Yes' (S714) → no shedding chip."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -73494,6 +74151,299 @@
         "confidence": "high",
         "notes": "FCI (S246). Not a welfare breed. One standard colour.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): grey-shaded is the only standard colour and the portrait default (FCI S246); never white markings, never another colour"
+      }
+    },
+    "standard_schnauzer": {
+      "_note": "Unattended run M5-R10-95 (2026-11-05): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from RKC (S714 'Up to 1 hour per day' → 60; PDSA S715 agrees). Senior 90 from the RKC lower bound 'Over 10 years' (S714; McMillan 2024 13 y only via Wikipedia S719 → 117, open for David). Coren rank 18 (Excellent) → 1.5. Built: brushing 3× a week (RKC 'More than once a week' + PDSA '2-3 times a week', M5-R13), puppy socialisation with the PetMD quote (S717, M5-R17), care tasks with a PetMD frequency (S717): nail trim and ear cleaning once a week ('every one to two weeks', M5-R19 / M5-R20), bath every 4 weeks ('Monthly', M5-R19), groomer reminder every 12 weeks ('quarterly', M5-R18). No tooth task (no frequency), no meal gap. RKC Breed Watch Category 1 → no welfare chip; in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": "S714",
+        "quote": "Exercise: Up to 1 hour per day",
+        "confidence": "high",
+        "notes": "RKC 'Up to 1 hour per day' (S714). Rule: one number N ('up to N') → N = 60. PDSA (S715) 'Minimum exercise (per day)' '1 hour' and 'around an hour of exercise daily' agree; PetMD (S717) 'at least 30 minutes' → alternative.",
+        "alternatives": [
+          {
+            "value": 30,
+            "source_id": "S717",
+            "notes": "PetMD 'need to be kept busy with at least 30 minutes of activity every day' (fragment)."
+          }
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min/day (RKC S714 'Up to 1 hour per day')"
+      },
+      "step_goal_adult": {
+        "value": 6000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 60 min × 100 steps/min (S45) = 6,000.",
+        "derived_from": [
+          "S714",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 60 min × 100 steps/min → 6,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 45,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 60) = 45 min → 4,500 steps.",
+        "steps": 4500,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 45 min → 4,500 steps (75 % of 60)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 60,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 60 reached at 6 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 60 min (reached at 6 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S714; PDSA 'Over 10 years', S715, agrees). The Dogs Trust McMillan 2024 table (S123) could not be fetched; McMillan 2024 (S54) names the breed only in Fig. 5; no VetCompass median found. Alternatives: 117 (13 y — Wikipedia S719 citing a 2024 study, tier C, and the PetMD lower bound S717 — open for David); 108 (VCA 12 y, S716); 84 (Dogs Trust > 7 y, S14).",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S714"
+        ],
+        "alternatives": {
+          "senior_wikipedia_13_y": 117,
+          "senior_vca_12_y": 108,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S714)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.5,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 18 'Standard Schnauzer' (S35, checked 2026-11-05) → tier Excellent (11–26) → 1.5. No individual variation (pedigree).",
+        "derived_from": [
+          "S35"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.5 (Coren rank 18, Excellent, S35)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S715",
+        "quote": "Grooming is needed 2-3 times a week",
+        "confidence": "high",
+        "notes": "standard_schnauzer.suitability.pdsa_grooming. RKC (S714) 'Grooming: More than once a week' has no number → the most specific A/B number: PDSA '2-3 times a week' → range rule → B = 3 (Miniature Schnauzer precedent). VCA (S716) 'once or twice weekly' and PetMD (S717) 'Twice-weekly brushing' → alternative (2). Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": 2,
+            "source_id": "S716",
+            "quote": "The coat needs combing once or twice weekly."
+          },
+          {
+            "value": 2,
+            "source_id": "S717",
+            "quote": "Twice-weekly brushing with a pin brush"
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 2–3× na teden → 3 (RKC »More than once a week« brez števila → PDSA »2-3 times a week«); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S717",
+        "quote": "early socialization and training is necessary.",
+        "confidence": "high",
+        "notes": "standard_schnauzer.behaviour.socialisation (PetMD S717, a need). PDSA (S715) 'if they're introduced at an early age' (children) agrees. Built in M5-R17.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17 — vsak mladiček, citat PetMD S717)"
+      },
+      "nail_trimming": {
+        "value": "nail trims every one to two weeks → once a week",
+        "unit": "nail trimming (sourced need)",
+        "source_id": "S717",
+        "quote": "nail trims and ear cleanings every one to two weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragment), standard_schnauzer.suitability.petmd_grooming. Built: the child's nail-trim mini-game once a program week (DOG_CARE_TASKS nail_trim [1, week], M5-R19).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every one to two weeks« → spodnja meja, 1× na teden"
+      },
+      "ear_care": {
+        "value": 1,
+        "unit": "ear-cleaning sessions per week (sourced need)",
+        "source_id": "S717",
+        "quote": "nail trims and ear cleanings every one to two weeks.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragment), standard_schnauzer.suitability.petmd_grooming. Built: the child's ear-cleaning mini-game once a program week (DOG_CARE_TASKS ear_cleaning [1, week], M5-R20).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R20): »every one to two weeks« → spodnja meja, 1× na teden"
+      },
+      "bathing": {
+        "value": "monthly bath",
+        "unit": "baths (sourced need)",
+        "source_id": "S717",
+        "quote": "Monthly bathing with oatmeal-based dog shampoos is recommended.",
+        "confidence": "high",
+        "notes": "PetMD (S717), standard_schnauzer.suitability.petmd_bath. Built: the parent's bath reminder every 4 program weeks (DOG_CARE_TASKS bath [1, month], M5-R19; never scored).",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »Monthly« → vsake 4 tedne"
+      },
+      "professional_grooming": {
+        "value": "quarterly professional grooming (trim / hand-stripping); a regular clip is fine for family pets",
+        "unit": "visits (sourced need)",
+        "source_id": "S717",
+        "quote": "quarterly professional appointments with an experienced Schnauzer groomer.",
+        "confidence": "high",
+        "notes": "PetMD (S717, fragment), standard_schnauzer.suitability.petmd_groomer; PetMD also 'a regular clipping is OK for Schnauzers who are family pets' (fragment). Built: the parent's groomer reminder every 12 program weeks (DOG_CARE_TASKS groomer_visit [1, three_months], M5-R18; never scored). VCA (S716) clip 'every two to three months' → lower bound 2 months (8 weeks) — alternative, open for David; PDSA (S715) 'periodically' (no number).",
+        "alternatives": [
+          {
+            "value": "1 per two_months",
+            "source_id": "S716",
+            "quote": "This must be repeated every two to three months."
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »quarterly« → vsake 3 mesece = 12 tednov (84 dni)"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-95); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S717"
+            ],
+            "refs": [
+              "standard_schnauzer.behaviour.family"
+            ],
+            "quote": "S717 'devoted to their family, including other family pets and children.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S715",
+              "S716"
+            ],
+            "refs": [
+              "standard_schnauzer.suitability.pdsa_children",
+              "standard_schnauzer.suitability.vca_children",
+              "standard_schnauzer.behaviour.children"
+            ],
+            "quote": "S715 'Schnauzers are gentle, patient dogs that will get on well with children if they're introduced at an early age.'; S716 'Playful and good with children.' (early-introduction condition → never small_children)"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "experienced_owner",
+            "source_ids": [
+              "S717"
+            ],
+            "refs": [
+              "standard_schnauzer.behaviour.experienced_owner"
+            ],
+            "quote": "S717 'This breed does best with patient, experienced pet parents.'"
+          },
+          {
+            "tag": "needs_mental_stimulation",
+            "source_ids": [
+              "S716"
+            ],
+            "refs": [
+              "standard_schnauzer.behaviour.mental_stimulation"
+            ],
+            "quote": "S716 'Games and tricks provide needed mental exercise.'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S714",
+              "S715"
+            ],
+            "refs": [
+              "standard_schnauzer.suitability.rkc_grooming",
+              "standard_schnauzer.suitability.pdsa_grooming"
+            ],
+            "quote": "S714 'Grooming: More than once a week'; S715 'Grooming is needed 2-3 times a week'"
+          }
+        ],
+        "not_proposed": {
+          "apartment": "RKC 'Size of home: Small house' (S714) — runbook: only from RKC 'Flat/ Apartment'.",
+          "large_home": "RKC 'Small house' (S714).",
+          "small_children": "No explicit small-children rating; PDSA is conditional (early introduction, S715).",
+          "first_time_owner": "PetMD: does best with patient, experienced pet parents (S717) → experienced_owner.",
+          "active_family": "RKC 'Up to 1 hour per day' (S714).",
+          "long_daily_exercise": "60 minutes a day (S714, S715).",
+          "other_pets": "VCA 'Usually gets along with household pets.' is hedged and VCA 'Can be aggressive toward strange dogs.' / PetMD 'reserved around … other animals' (S716, S717) point the other way.",
+          "chases_small_pets": "No A/B source names a high prey drive (PetMD only the history as a ratter, S717) — runbook rule.",
+          "needs_company": "PetMD's 'rather than isolated in a kennel' (S717) is not a statement about being left alone.",
+          "often_alone": "No source.",
+          "sheds": "RKC 'Sheds: Yes' (S714) conflicts with VCA 'below average' (S716) and PetMD 'minimal' (S717) → neither tag.",
+          "low_shedding": "Conflicting sources (see sheds) → neither tag.",
+          "food_motivated_weight": "VCA: 'tend to stay in good weight' (S716) — no food-motivation statement.",
+          "chews_when_bored": "No chewing statement.",
+          "shorter_lifespan": "RKC 'Over 10 years' (S714).",
+          "hypoallergenic": "Never a tag (runbook).",
+          "welfare": "RKC Breed Watch Category 1 (S714), no conformation welfare statement → no welfare chip; skin (comedo syndrome), hip dysplasia, DCM, eye conditions, pulmonic stenosis, hypothyroidism, haemophilia A and bladder stones are register health keys / breeder-checklist items only."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits family_pet, children; consider experienced_owner, needs_mental_stimulation, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes (not a welfare breed)",
+        "unit": "—",
+        "source_id": "S714",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "RKC Breed Watch Category 1 (S714); no veterinary association advises against advertising the breed type (the only such advice is for flat-faced breeds, S92; FCI muzzle 'Ending in a blunt wedge', S712). Marketing never promises the breed's health, never shows it as hypoallergenic or as a dog for first-time owners, and never with cropped ears or a docked tail (S712, S717).",
+        "decision": "pravilo runbooka (David 2026-10-10): v aplikaciji da, v marketingu da (ni izrecnega veterinarskega odsvetovanja oglaševanja tega tipa psa)"
+      },
+      "ai_appearance": {
+        "value": "adult Standard Schnauzer, pepper and salt coat (default: medium, evenly distributed grey shading with a dark facial mask harmonising with the coat); medium sized, strong, stocky, nearly square; harsh wiry dense top coat with a dense undercoat, arched bushy eyebrows and a beard on a blunt wedge-shaped muzzle; strong long head; black nose; medium oval dark eyes; natural V-shaped drop ears folded forward (never cropped); natural sabre-shaped tail (never docked); never black and silver, white, brown, tan or patches",
+        "unit": "—",
+        "source_id": "S712",
+        "quote": "the aim is a medium shading with evenly distributed, well pigmented pepper colouring.",
+        "confidence": "high",
+        "notes": "Colours of the FCI standard (S712, S711) and RKC standard (S713): pepper and salt, pure black. Weights unsourced in prompts. Pepper and salt as the portrait default — Claude's choice (listed first by FCI S711 and AKC S718; the most typical colour).",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): pepper and salt is the portrait default; standard colours only (pepper and salt, pure black), natural ears and tail"
       }
     }
   }
