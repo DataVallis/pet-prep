@@ -101,7 +101,7 @@ Status: `[ ]` todo · `[~]` partial (follow-up line below) · `[x]` done · `[!]
 - [x] US United States — Florida — 42 entries (40 clinics, 2 US-wide poison lines), 35 × 24 h (incl. both poison lines; 13 VEG ER, 4 VECC, BluePearl, UF), no official FVMA duty rota found, check: 22 checked, 0 fixed, 0 removed, 1 downgraded (Allied eTown, future-tense source), 4 upgraded to 24 h, 2026-11-05
 - [!] US United States — New York — 0 entries, 2026-11-05: WebFetch refused every URL (PROVENANCE_REQUIRED: veg.com, amcny.org, bluepearlvet.com, vet.cornell.edu); no page opened, nothing invented; needs a manual run with the URLs supplied
 - [!] US United States — Texas — 0 entries, 2026-11-05: WebFetch refused every URL (PROVENANCE_REQUIRED: vetmed.tamu.edu, tvma.org); no page opened, nothing invented; needs a manual run with the URLs supplied
-- [ ] US United States — other states
+- [!] US United States — other states — 0 entries, 2026-11-05: WebFetch refused every URL (PROVENANCE_REQUIRED: petpoisonhelpline.com, aspca.org, vet.osu.edu, vet.cornell.edu, vetmed.illinois.edu); no page opened, nothing invented; needs a manual run with the URLs supplied
 - [ ] CA Canada — Ontario
 - [ ] CA Canada — Quebec
 - [ ] CA Canada — British Columbia
