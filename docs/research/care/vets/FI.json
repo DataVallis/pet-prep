@@ -88,6 +88,9 @@
       "phone": "0600 418 730",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 663",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 663"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-evidensia-tammisto/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-evidensia-tammisto/",
@@ -104,6 +107,9 @@
       "phone": "0600 418 801",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 669",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 669"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/espoon-elainsairaala/",
       "source_url": "https://evidensia.fi/elainlaakariasema/espoon-elainsairaala/",
@@ -120,6 +126,9 @@
       "phone": "0600 55 6500",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 664",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 664"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-mevet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-mevet/",
@@ -136,6 +145,9 @@
       "phone": "0600 417 231",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 666",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 666"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-veter/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-veter/",
@@ -152,6 +164,9 @@
       "phone": "0600 418 806",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 668",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 668"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-vettori/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-vettori/",
@@ -168,6 +183,9 @@
       "phone": "0600 417 230",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 654",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 654"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/pohjois-suomen-elainsairaala/",
       "source_url": "https://evidensia.fi/elainlaakariasema/pohjois-suomen-elainsairaala/",
@@ -184,6 +202,9 @@
       "phone": "0600 306 084",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 653",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 653"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/jyvaskylan-elainsairaala/",
       "source_url": "https://evidensia.fi/elainlaakariasema/jyvaskylan-elainsairaala/",
@@ -200,6 +221,9 @@
       "phone": "0600 306 088",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 665",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 665"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-savon-murre/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-savon-murre/",
@@ -216,6 +240,9 @@
       "phone": "0600 417 232",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 651",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 651"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/kouvolan-elainsairaala/",
       "source_url": "https://evidensia.fi/elainlaakariasema/kouvolan-elainsairaala/",
@@ -232,6 +259,9 @@
       "phone": "0300 472 202",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 661",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 661"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainklinikka-syke/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainklinikka-syke/",
@@ -248,6 +278,9 @@
       "phone": "0600 550 139",
       "emergency_24h": true,
       "duty": "Emergency open 24/7, every day of the year. Emergency line is premium-rate (2.30 EUR/min + network charge); general/booking line 0300 484 667",
+      "duty_i18n": {
+        "sl": "Nujna pomoč odprta 24 ur na dan, vse dni v letu. Nujna številka se zaračunava po posebni tarifi (2,30 €/min + omrežni stroški); splošna številka in številka za naročanje 0300 484 667"
+      },
       "small_animals": true,
       "url": "https://evidensia.fi/elainlaakariasema/elainsairaala-vethaus/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainsairaala-vethaus/",
@@ -263,6 +296,9 @@
       "address": "Koetilantie 2, 00790 Helsinki",
       "phone": "0600 97411",
       "duty": "Small-animal emergency (päivystys) by phone: weekdays 16:00-08:00, weekends and public holidays; covers Helsinki, Espoo, Kauniainen, Kirkkonummi. Booking 029 41 57201 Mon-Fri 08:00-15:30. Premium-rate emergency line.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč za male živali (päivystys) po telefonu: pon–pet 16–8, ob koncih tedna in praznikih; pokriva Helsinki, Espoo, Kauniainen, Kirkkonummi. Naročanje 029 41 57201 pon–pet 8–15.30. Nujna številka po posebni tarifi."
+      },
       "url": "https://www.helsinki.fi/fi/yliopistollinen-elainsairaala/paivystys",
       "source_url": "https://www.hel.fi/fi/kaupunkiymparisto-ja-liikenne/ympariston-ja-luonnon-suojelu/elaimet/elainten-suojelu-ja-terveys/elainlaakaripalvelut",
       "note": "City of Helsinki page says 'Eläinsairaalan päivystys toimii vuorokauden ympäri' and gives the number and address; the hospital's own emergency page (https://www.helsinki.fi/fi/yliopistollinen-elainsairaala/paivystys) states small-animal emergency hours klo 16-08 weekdays plus weekends/holidays (no 24 h for every day), so emergency_24h is left false. Phone and address come from the hel.fi page only.",
@@ -278,6 +314,9 @@
       "address": "Pispalan valtatie 2, Tampere",
       "phone": "+358 3 565 44777",
       "duty": "Weekdays 15:00-08:00 and all day on weekends and public holidays. Covers Tampere, Orivesi, Juupajoki, Kangasala, Pälkäne, Valkeakoski, Akaa, Urjala. Run by Papuvet from 1 Jan 2026.",
+      "duty_i18n": {
+        "sl": "pon–pet 15–8 in ves dan ob koncih tedna in praznikih. Pokriva Tampere, Orivesi, Juupajoki, Kangasala, Pälkäne, Valkeakoski, Akaa, Urjala. Od 1. 1. 2026 jo izvaja Papuvet."
+      },
       "url": "https://www.tampere.fi/en/current/2025/12/30/municipal-veterinary-emergency-service-small-animals-will-be-run",
       "source_url": "https://www.tampere.fi/en/current/2025/12/30/municipal-veterinary-emergency-service-small-animals-will-be-run",
       "note": "Not 24 h on weekdays. Page does not explicitly say emergency care is delivered at the Pispalan valtatie address.",
@@ -292,6 +331,9 @@
       "region": "Southwest Finland (Turku area)",
       "address": "Kappontie 4, 21210 Raisio",
       "duty": "Weekdays 16:00-08:00; weekends and holidays around the clock. Small-animal emergency by Papuvet for the region's municipalities.",
+      "duty_i18n": {
+        "sl": "pon–pet 16–8; ob koncih tedna in praznikih 24 ur na dan. Nujna pomoč za male živali, ki jo za občine v regiji izvaja Papuvet."
+      },
       "url": "https://www.turku.fi/en/places/call-veterinarian-pet-emergency-services",
       "source_url": "https://www.turku.fi/en/places/call-veterinarian-pet-emergency-services",
       "note": "No phone on the page. Yle (2 Dec 2025, https://yle.fi/a/74-20196785) reports daytime urgent care for Turku may move to Salo from May 2026 and the evening/night contract is under court appeal; verify current arrangement.",
@@ -307,6 +349,9 @@
       "address": "Leissantie 41, 04920 Saarentaus",
       "phone": "0600 97413",
       "duty": "After-hours emergency line for small animals in the Hyvinkää area since 2 Jan 2023; call before going, on-call vet is usually not on site. Premium-rate line. Daytime on weekdays 08:00-16:00 via the Hyvinkää city vet.",
+      "duty_i18n": {
+        "sl": "Nujna telefonska linija za male živali zunaj delovnega časa na območju Hyvinkääja od 2. 1. 2023; pokličite pred prihodom, dežurni veterinar običajno ni prisoten na kraju samem. Klic po posebni tarifi. Čez dan ob delavnikih 8–16 prek mestnega veterinarja Hyvinkää."
+      },
       "url": "https://www.hyvinkaa.fi/globalassets/asuminen-ja-ymparisto/ymparistoterveys/liitteet/paivystystiedote.pdf",
       "source_url": "https://www.hyvinkaa.fi/globalassets/asuminen-ja-ymparisto/ymparistoterveys/liitteet/paivystystiedote.pdf",
       "note": "Notice dated from 2023; may be outdated.",
@@ -321,6 +366,9 @@
       "region": "National",
       "phone": "029 530 0400",
       "duty": "Municipalities must provide urgent vet care for pets at all times, organised in regional on-call areas each with a central contact service; some private clinics also offer out-of-hours on-call.",
+      "duty_i18n": {
+        "sl": "Občine morajo ves čas zagotavljati nujno veterinarsko oskrbo za hišne ljubljenčke, organizirano v regionalnih dežurnih območjih, vsako s centralno kontaktno službo; nekatere zasebne klinike nudijo tudi dežurstvo zunaj delovnega časa."
+      },
       "url": "https://www.ruokavirasto.fi/elaimet/elainlaakaripalvelut/kiireellinen-elainlaakarinapu/",
       "source_url": "https://www.ruokavirasto.fi/elaimet/elainlaakaripalvelut/kiireellinen-elainlaakarinapu/",
       "note": "Phone is the Finnish Food Authority switchboard, not an emergency line. Page does not list rota numbers.",
@@ -336,6 +384,9 @@
       "address": "Norragatan 17, 22100 Mariehamn",
       "phone": "+358 18 21000",
       "duty": "For accidents or sudden illness on weekday evenings after 17:00 and weekends, call the same number to get the on-duty veterinarian's contact. Opening hours: Mon–Thu 9:00–10:00; confirm with clinic.",
+      "duty_i18n": {
+        "sl": "Za nesreče ali nenadne bolezni ob delavnikih zvečer po 17. uri in ob koncih tedna pokličite isto številko, da dobite kontaktne podatke dežurnega veterinarja. Ordinacijski čas: pon–čet 9–10; preverite pri kliniki."
+      },
       "url": "https://book.visitaland.com/en/small-animals-clinic-zoodiaken",
       "source_url": "https://book.visitaland.com/en/small-animals-clinic-zoodiaken",
       "note": "Visit Åland listing; phone on-call, not a staffed 24 h clinic. Hours as listed.",
@@ -351,6 +402,9 @@
       "address": "Ravitie 8 B, 60120 Seinäjoki",
       "phone": "0600 41 8823",
       "duty": "Daytime emergency service Mon–Sat 08:00–21:00, Sun 09:30–18:00. Booking 0300 484 655.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč čez dan pon–sob 8–21, ned 9.30–18. Naročanje 0300 484 655."
+      },
       "url": "https://evidensia.fi/klinikat/seinajoki/elainlaakariasema-evidensia-seinajoki",
       "source_url": "https://evidensia.fi/klinikat/seinajoki/elainlaakariasema-evidensia-seinajoki",
       "small_animals": true,
@@ -366,6 +420,9 @@
       "address": "Launeenkatu 4, 15100 Lahti",
       "phone": "0600 418 733",
       "duty": "Emergency care every day of the year; Mon–Sat 08:00–20:00, Sun 08:00–16:00 (hours may differ, confirm by phone). General line 0300 484 652.",
+      "duty_i18n": {
+        "sl": "Nujna oskrba vse dni v letu; pon–sob 8–20, ned 8–16 (ure se lahko razlikujejo, preverite po telefonu). Splošna številka 0300 484 652."
+      },
       "url": "https://evidensia.fi/elainlaakariasema/lahden-elainlaakariasema/",
       "source_url": "https://evidensia.fi/elainlaakariasema/lahden-elainlaakariasema/",
       "small_animals": true,
@@ -381,6 +438,9 @@
       "address": "Lampelankatu 25, 96320 Rovaniemi",
       "phone": "0300 484 662",
       "duty": "Mon–Fri 08:00–20:00, Sat 09:00–17:00, Sun closed. Out of hours the clinic points to Evidensia's 24-h hospitals.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 9–17, ned zaprto. Zunaj delovnega časa klinika napoti stranke v 24-urne bolnišnice Evidensia."
+      },
       "url": "https://evidensia.fi/elainlaakariasema/elainlaakarikeskus-kieppi/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainlaakarikeskus-kieppi/",
       "small_animals": true,
@@ -396,6 +456,9 @@
       "address": "Myllärinkatu 10, 53550 Lappeenranta",
       "phone": "0300 484 750",
       "duty": "Mon-Fri 07:30-20:00, Sat 08:30-15:30, Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 7.30–20, sob 8.30–15.30, ned zaprto."
+      },
       "url": "https://evidensia.fi/elainlaakariasema/villimys/",
       "source_url": "https://evidensia.fi/elainlaakariasema/villimys/",
       "small_animals": true,
@@ -410,6 +473,9 @@
       "address": "Teollisuustie 18 B, 60100 Seinäjoki",
       "phone": "0300 484 633",
       "duty": "Mon 8-18, Tue 8-16, Wed 12-19, Thu-Fri 8-15, weekend closed.",
+      "duty_i18n": {
+        "sl": "pon 8–18, tor 8–16, sre 12–19, čet–pet 8–15, ob koncih tedna zaprto."
+      },
       "url": "https://evidensia.fi/elainlaakariasema/lemmikkiklinikka-mai-vet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/lemmikkiklinikka-mai-vet/",
       "small_animals": true,
@@ -424,6 +490,9 @@
       "address": "Heinolankaari 4, 67600 Kokkola",
       "phone": "0300 484 612",
       "duty": "Weekday daytime hours only; weekend closed.",
+      "duty_i18n": {
+        "sl": "Samo čez dan ob delavnikih; ob koncih tedna zaprto."
+      },
       "url": "https://evidensia.fi/elainlaakariasema/elainklinikka-karlevet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainklinikka-karlevet/",
       "small_animals": true,
@@ -438,6 +507,9 @@
       "phone": "+358 6 325 1111",
       "emergency_24h": true,
       "duty": "Basic services on weekdays during office hours; emergency care available 24 hours a day. Phone is the City of Vaasa switchboard.",
+      "duty_i18n": {
+        "sl": "Osnovne storitve ob delavnikih v uradnih urah; nujna oskrba na voljo 24 ur na dan. Telefon je centrala mesta Vaasa."
+      },
       "url": "https://www.vaasa.fi/en/news/the-city-of-vaasas-small-animal-clinic-is-relocating-to-the-barracks-area/",
       "source_url": "https://www.vaasa.fi/en/news/the-city-of-vaasas-small-animal-clinic-is-relocating-to-the-barracks-area/",
       "quote": "Emergency care is available 24 hours a day.",
@@ -453,6 +525,9 @@
       "region": "Ostrobothnia",
       "phone": "0600 399 299",
       "duty": "Weekdays 16:00-08:00; weekends Friday 16:00 to Monday 08:00; premium-rate (1.527 EUR/min 08-20, 3.551 EUR/min 20-08); for acute illness or accidents. Area 1 (Kaskö, Korsnäs, Kristinestad, Malax, Närpes): 0600 399 199",
+      "duty_i18n": {
+        "sl": "pon–pet 16–8; ob koncih tedna od petka 16 do ponedeljka 8; posebna tarifa (1,527 €/min 8–20, 3,551 €/min 20–8); za akutne bolezni ali nesreče. Območje 1 (Kaskö, Korsnäs, Kristinestad, Malax, Närpes): 0600 399 199"
+      },
       "url": "https://en.korsholm.fi/housing-and-environment/west-coast-environmental-unit/veterinary-care/veterinary-emergency-services",
       "source_url": "https://en.korsholm.fi/housing-and-environment/west-coast-environmental-unit/veterinary-care/veterinary-emergency-services",
       "quote": "On-call emergency services are intended for urgent cases, i.e. acute illness or accident victims.",
@@ -468,6 +543,9 @@
       "address": "Rauhankatu 10, 50100 Mikkeli (Lähemäki-talo)",
       "phone": "015 366 218",
       "duty": "Appointment booking Mon-Fri 8-11; weekdays 11-15 a phone message gives vets on duty; small animal vet line 015 366 218",
+      "duty_i18n": {
+        "sl": "Naročanje pon–pet 8–11; ob delavnikih 11–15 telefonsko sporočilo navede dežurne veterinarje; veterinarska linija za male živali 015 366 218"
+      },
       "url": "https://mikkeli.fi/en/services/veterinary-services",
       "source_url": "https://mikkeli.fi/en/services/veterinary-services",
       "note": "Municipal clinic; also Mäntyharju (Sairaalantie 3 C, +358 40 129 5185) and Kangasniemi (Sairaalantie 15, +358 400 151 422) clinics listed on the same page.",
@@ -483,6 +561,9 @@
       "region": "South Savo",
       "phone": "+358 600 13436",
       "duty": "Weekdays 15:00-08:00; weekends Friday 15:00 to Monday 08:00; premium-rate (1.51 EUR/min, 3.02 EUR/min 22-08). Private small-animal 24/7 on-call: Jyväskylä Animal Hospital (Evidensia), Vapaaherrantie 2, Jyväskylä, +358 600 306 084",
+      "duty_i18n": {
+        "sl": "pon–pet 15–8; ob koncih tedna od petka 15 do ponedeljka 8; posebna tarifa (1,51 €/min, 3,02 €/min 22–8). Zasebna dežurna služba za male živali 24 ur na dan: Jyväskylä Animal Hospital (Evidensia), Vapaaherrantie 2, Jyväskylä, +358 600 306 084"
+      },
       "url": "https://mikkeli.fi/en/services/veterinary-services",
       "source_url": "https://mikkeli.fi/en/services/veterinary-services",
       "quote": "Private small animal on-call (24/7): Jyväskylä Animal Hospital (Evidensia)",
@@ -498,6 +579,9 @@
       "address": "Kivirannantie 3, Tornio",
       "phone": "0600 19030",
       "duty": "Treatment weekdays 8-15; phone bookings and counselling weekday mornings 8-9; outside office hours and weekends emergency only via the same number (charged) to the on-call vet. Serves Tornio, Kemi, Keminmaa, Simo, Tervola",
+      "duty_i18n": {
+        "sl": "Zdravljenje pon–pet 8–15; telefonsko naročanje in svetovanje ob delavnikih zjutraj 8–9; zunaj uradnih ur in ob koncih tedna samo nujni primeri prek iste številke (plačljivo) pri dežurnem veterinarju. Pokriva Tornio, Kemi, Keminmaa, Simo, Tervola"
+      },
       "url": "https://www.tornio.fi/en/housing-and-environment/environment/veterinary-services/",
       "source_url": "https://www.tornio.fi/en/housing-and-environment/environment/veterinary-services/",
       "note": "Kemi city vets page (https://www.kemi.fi/en/living-and-environment/vets/) opened too: same Sea Lapland service, small animals by appointment, one on-call vet for Tornio, Tervola, Keminmaa, Simo and Kemi; no Kemi clinic address or vet phone published there.",
@@ -513,6 +597,9 @@
       "address": "Sairaalantie 2 D, 99100 Kittilä",
       "phone": "040 655 1926",
       "duty": "Call for appointments and information weekdays 8-9; weekday emergencies 8-15 to the vet's work number. Second vet 0400 393 503",
+      "duty_i18n": {
+        "sl": "Za naročanje in informacije pokličite ob delavnikih 8–9; nujni primeri ob delavnikih 8–15 na službeno številko veterinarja. Drugi veterinar 0400 393 503"
+      },
       "url": "https://kittila.fi/en/living-and-environment/animals/veterinary-and-animal-protection-services",
       "source_url": "https://kittila.fi/en/living-and-environment/animals/veterinary-and-animal-protection-services",
       "note": "Page does not mention small animals explicitly and names no Levi clinic; Levi resort is in Kittilä municipality.",
@@ -528,6 +615,9 @@
       "region": "Lapland",
       "phone": "020 692 699",
       "duty": "Weekdays 15:00-08:00; weekends Friday 15:00 to Monday 08:00; holidays from 15:00 the previous working day until 08:00 next workday; one vet for the four municipalities; no text/voice messages",
+      "duty_i18n": {
+        "sl": "pon–pet 15–8; ob koncih tedna od petka 15 do ponedeljka 8; ob praznikih od 15. ure prejšnjega delovnega dne do 8. ure naslednjega delovnika; en veterinar za štiri občine; brez SMS in glasovnih sporočil"
+      },
       "url": "https://kittila.fi/en/living-and-environment/animals/veterinary-and-animal-protection-services",
       "source_url": "https://kittila.fi/en/living-and-environment/animals/veterinary-and-animal-protection-services",
       "quote": "The emergency number is meant only for urgent matters.",
@@ -543,6 +633,9 @@
       "address": "Takilatie 5, 80100 Joensuu",
       "phone": "+358 133301900",
       "duty": "Small animals: appointment calls 8-10; calls 10-16 only for urgent cases. Other appointment numbers +358 133308233, +358 133308237, +358 133308214",
+      "duty_i18n": {
+        "sl": "Male živali: klici za naročanje 8–10; klici 10–16 samo za nujne primere. Druge številke za naročanje +358 133308233, +358 133308237, +358 133308214"
+      },
       "url": "https://www.suomi.fi/services/veterinary-emergency-clinic-outside-office-hours-wellbeing-services-county-of-north-karelia-siun-sote/2c4552a5-12aa-41e7-b517-984733605691",
       "source_url": "https://www.suomi.fi/services/veterinary-emergency-clinic-outside-office-hours-wellbeing-services-county-of-north-karelia-siun-sote/2c4552a5-12aa-41e7-b517-984733605691",
       "quote": "You are usually expected to take small animals to the veterinarian",
@@ -558,6 +651,9 @@
       "region": "North Karelia",
       "phone": "+358 10084502",
       "duty": "Out-of-hours urgent veterinary care for Heinävesi, Ilomantsi, Joensuu, Juuka, Kitee, Kontiolahti, Lieksa, Liperi, Nurmes, Outokumpu, Polvijärvi, Rääkkylä, Tohmajärvi; charged call; if not called back within 30 minutes call again. Exact hours not published; the number shown is for the Kitee/Rääkkylä/Tohmajärvi area",
+      "duty_i18n": {
+        "sl": "Nujna veterinarska oskrba zunaj delovnega časa za Heinävesi, Ilomantsi, Joensuu, Juuka, Kitee, Kontiolahti, Lieksa, Liperi, Nurmes, Outokumpu, Polvijärvi, Rääkkylä, Tohmajärvi; plačljiv klic; če vas ne pokličejo nazaj v 30 minutah, pokličite znova. Točen delovni čas ni objavljen; prikazana številka velja za območje Kitee/Rääkkylä/Tohmajärvi"
+      },
       "url": "https://www.suomi.fi/services/veterinary-emergency-clinic-outside-office-hours-wellbeing-services-county-of-north-karelia-siun-sote/2c4552a5-12aa-41e7-b517-984733605691",
       "source_url": "https://www.suomi.fi/services/veterinary-emergency-clinic-outside-office-hours-wellbeing-services-county-of-north-karelia-siun-sote/2c4552a5-12aa-41e7-b517-984733605691",
       "note": "suomi.fi service description; the list of per-area numbers was cut off on the page.",
@@ -573,6 +669,9 @@
       "phone": "0600 393 960",
       "emergency_24h": true,
       "duty": "Open at all times every day; pets 0600 393 960 (3.60 EUR/min plus network charge); livestock and horses 044 703 6781. Pets treated at the Oulu veterinary office after agreeing a time by phone",
+      "duty_i18n": {
+        "sl": "Odprto ves čas, vsak dan; hišni ljubljenčki 0600 393 960 (3,60 €/min + omrežni stroški); živina in konji 044 703 6781. Hišne ljubljenčke obravnavajo v veterinarski pisarni v Oulu po telefonskem dogovoru o terminu"
+      },
       "url": "https://www.ouka.fi/en/veterinary-services/veterinary-emergency-call-service",
       "source_url": "https://www.ouka.fi/en/veterinary-services/veterinary-emergency-call-service",
       "quote": "The emergency on-call service is open at all times every day.",
@@ -586,6 +685,9 @@
       "address": "Solvikinkatu 13, 00990 Helsinki",
       "phone": "0300 484 710",
       "duty": "Mon-Thu 08:00-19:30, Fri 08:00-17:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–čet 8–19.30, pet 8–17, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/aurinkolahden-elainklinikka/",
       "source_url": "https://evidensia.fi/elainlaakariasema/aurinkolahden-elainklinikka/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -601,6 +703,9 @@
       "address": "Soittajantie 1, 00420 Helsinki",
       "phone": "0300 484 744",
       "duty": "Mon-Fri 08:00-19:30, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19.30, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/kannelmaki/",
       "source_url": "https://evidensia.fi/elainlaakariasema/kannelmaki/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -616,6 +721,9 @@
       "address": "Hämeentie 68 C, 00550 Helsinki",
       "phone": "0300 484 788",
       "duty": "Mon-Wed and Fri 08:00-20:00, Thu 08:00-18:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–sre in pet 8–20, čet 8–18, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/vallilavet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/vallilavet/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -631,6 +739,9 @@
       "address": "Hietaniemenkatu 7, 00100 Helsinki",
       "phone": "0300 484 722",
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun closed; also takes small mammals, pet birds and reptiles. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob in ned zaprto; sprejemajo tudi male sesalce, hišne ptice in plazilce. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/haumau/",
       "source_url": "https://evidensia.fi/elainlaakariasema/haumau/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -646,6 +757,9 @@
       "address": "Kullervonkatu 20, 00610 Helsinki",
       "phone": "0300 484 755",
       "duty": "Mon-Thu 08:00-20:00, Fri 08:00-18:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–čet 8–20, pet 8–18, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/kapalamaki/",
       "source_url": "https://evidensia.fi/elainlaakariasema/kapalamaki/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -661,6 +775,9 @@
       "address": "Kiviparintie 2, 00920 Helsinki",
       "phone": "0300 484 766",
       "duty": "Mon-Thu 08:00-20:00, Fri 08:00-16:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–čet 8–20, pet 8–16, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/myllyvet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/myllyvet/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -676,6 +793,9 @@
       "address": "Työmiehenkatu 4, 00180 Helsinki",
       "phone": "0300 484 622",
       "duty": "Mon-Fri 08:00-18:00, Sat-Sun closed; cats only. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob in ned zaprto; samo mačke. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/kissaklinikka-felina/",
       "source_url": "https://evidensia.fi/elainlaakariasema/kissaklinikka-felina/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -691,6 +811,9 @@
       "address": "Kirkonkyläntie 15, 00700 Helsinki",
       "phone": "0300 484 657",
       "duty": "Mon-Fri 07:30-20:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 7.30–20, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/malmin-elainklinikka-apex/",
       "source_url": "https://evidensia.fi/elainlaakariasema/malmin-elainklinikka-apex/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -706,6 +829,9 @@
       "address": "Telakkakatu 3, 00150 Helsinki",
       "phone": "0300 484 620",
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/elainklinikka-eiranranta/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainklinikka-eiranranta/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -721,6 +847,9 @@
       "address": "Brahenkatu 20, 20100 Turku",
       "phone": "0300 484 670",
       "duty": "Mon-Fri 08:00-19:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/brahenkulman-elainlaakarit/",
       "source_url": "https://evidensia.fi/elainlaakariasema/brahenkulman-elainlaakarit/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -736,6 +865,9 @@
       "address": "Itäinen Rantakatu 66, 20810 Turku",
       "phone": "0300 484 780",
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/jokirannan-elainlaakarit/",
       "source_url": "https://evidensia.fi/elainlaakariasema/jokirannan-elainlaakarit/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -751,6 +883,9 @@
       "address": "Satakunnantie 162, 20320 Turku",
       "phone": "0300 484 640",
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/lansikeskuksen-elainlaakarit/",
       "source_url": "https://evidensia.fi/elainlaakariasema/lansikeskuksen-elainlaakarit/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -766,6 +901,9 @@
       "address": "Leinikkitie 20, 01350 Vantaa",
       "phone": "0300 484 600",
       "duty": "Mon-Tue 12:00-20:00, Wed-Fri 08:00-16:00, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–tor 12–20, sre–pet 8–16, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/elainlaakariasema-peninkulma/",
       "source_url": "https://evidensia.fi/elainlaakariasema/elainlaakariasema-peninkulma/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -781,6 +919,9 @@
       "address": "Kurjenkellontie 14, 02270 Espoo",
       "phone": "0300 484 700",
       "duty": "Mon-Fri 07:30-20:00, Sat-Sun closed; sporting dogs. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon–pet 7.30–20, sob in ned zaprto; športni psi. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/urheilukoiraklinikka/",
       "source_url": "https://evidensia.fi/elainlaakariasema/urheilukoiraklinikka/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",
@@ -796,6 +937,9 @@
       "address": "Horninkatu 7, 24100 Salo",
       "phone": "0300 484 777",
       "duty": "Mon 08-19, Tue 08-16, Wed 08-18, Thu-Fri 08-17, Sat-Sun closed. Phone 0.59 EUR/min plus network charge",
+      "duty_i18n": {
+        "sl": "pon 8–19, tor 8–16, sre 8–18, čet–pet 8–17, sob in ned zaprto. Telefon 0,59 €/min + omrežni stroški"
+      },
       "url": "https://evidensia.fi/elainlaakariasema/salovet/",
       "source_url": "https://evidensia.fi/elainlaakariasema/salovet/",
       "note": "Evidensia clinic; page does not claim 24-h or emergency care (only a footer link to Evidensia's separate 24-h hospital list). Not a 24-h clinic.",

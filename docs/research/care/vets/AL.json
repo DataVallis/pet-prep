@@ -31,6 +31,9 @@
       "region": "Tirana",
       "emergency_24h": true,
       "duty": "Emergency service available 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "sl": "Nujna pomoč je na voljo 24 ur na dan, 7 dni v tednu."
+      },
       "small_animals": true,
       "url": "https://vethospitaltirana.com",
       "source_url": "https://kryeministria.al/en/newsroom/vet-hospital-nje-destinacion-humanizmi-dhe-kujdesi-shendetesor/",

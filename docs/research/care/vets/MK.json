@@ -40,6 +40,9 @@
       "phone": "+389 70 237 222",
       "emergency_24h": true,
       "duty": "Urgent cases and on-call vet open 24/7. Regular hours Mon-Fri 10:00-14:00 and 17:00-19:00, Sat 10:00-14:00, Sun closed.",
+      "duty_i18n": {
+        "sl": "Nujni primeri in dežurni veterinar 24 ur na dan. Redni delovni čas pon–pet 10–14 in 17–19, sob 10–14, ob nedeljah zaprto."
+      },
       "url": "https://drcupona.mk/",
       "source_url": "https://drcupona.mk/",
       "note": "Own page quotes: \"Ургентна услуга и дежурен ветеринар 24/7\" and \"За ургентни случаеви:Отворено 24/7\". Page itself has no address; address from FVA microchipping list (row 12, Др. Чупона, Бошко Најдовски бр. 44) and pets.mk directory."
@@ -55,6 +58,9 @@
       "phone": "+389 70 234 323",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-14:00, Sun 10:00-14:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 9–14, ned 10–14."
+      },
       "url": "https://veterinarencentar.mk/",
       "source_url": "https://veterinarencentar.mk/kontakt/",
       "note": "Own contact page heading says open every day except Sunday but lists Sunday 10:00-14:00 (conflict). No 24h/emergency statement. Phone as on own page."
@@ -70,6 +76,9 @@
       "phone": "+389 70 722 967",
       "emergency_24h": false,
       "duty": "Mon-Fri 8:00-19:00, Sat 8:00-15:00. Phone 070 722 967 answered 9:00-19:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–19, sob 8–15. Na telefon 070 722 967 se oglasijo 9–19."
+      },
       "url": "https://www.manopetvet.com/",
       "source_url": "https://www.manopetvet.com/contact/",
       "note": "No emergency statement; \"24-hour veterinary supervision\" on /za-nas/ refers to boarding only. Second phone +389 75 841 284."
@@ -85,6 +94,9 @@
       "phone": "+389 78 206 972",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, Sat 09:00-16:00, Sun closed.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob 9–16, ob nedeljah zaprto."
+      },
       "url": "https://remediumvet.mk/",
       "source_url": "https://remediumvet.mk/",
       "note": "Own page says urgent cases are seen but gives no emergency hours; FAQ on emergency service is placeholder text. Not 24h."
@@ -100,6 +112,9 @@
       "phone": "+389 2 245 1099",
       "emergency_24h": false,
       "duty": "Second phone +389 70 265 872.",
+      "duty_i18n": {
+        "sl": "Druga telefonska številka +389 70 265 872."
+      },
       "url": "https://petvetaerodrom.mk/",
       "source_url": "https://petvetaerodrom.mk/",
       "note": "Own page has no hours or 24h statement; FAQ only advises contacting a vet in emergencies. Hours Mon-Fri 10-18, Sat 10-13 appear only on zk.mk directory (not used)."
@@ -129,6 +144,9 @@
       "phone": "+389 2 3115 756",
       "emergency_24h": false,
       "duty": "Separate duty line may exist; call ahead.",
+      "duty_i18n": {
+        "sl": "Morda obstaja ločena dežurna številka; vnaprej pokličite."
+      },
       "url": "http://www.veterinarnabolnica.com.mk/",
       "source_url": "https://fva.gov.mk/images/2018/08/tabela-mikro-cipiranje.pdf",
       "note": "FVA row 87: 02/3115-756; 075/404-200. Own site (incl. /dezurna-sluzba \"Дежурна служба\" page) blocked by robots.txt, so not read; zk.mk directory lists \"Ветеринарна болница - дежурна служба\" Lazar Pop Trajkov 5/8, 075 404 221 / 075 404 222 with no hours and no 24h statement (aggregator, not used). Needs manual check of /dezurna-sluzba; emergency_24h left false."

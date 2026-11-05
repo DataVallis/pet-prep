@@ -128,6 +128,9 @@
       "phone": "+36 1 350 0361",
       "emergency_24h": true,
       "duty": "Dogs and cats 0-24 every day: day service 08:00-20:00, night duty 20:00-08:00, weekend duty 08:00-20:00; night surcharge.",
+      "duty_i18n": {
+        "sl": "Psi in mačke 0–24 vsak dan: dnevna služba 8–20, nočno dežurstvo 20–8, dežurstvo ob vikendih 8–20; nočno doplačilo."
+      },
       "small_animals": true,
       "url": "https://budapestiallatkorhaz.hu/",
       "source_url": "https://budapestiallatkorhaz.hu/korhaz-rendje/",
@@ -144,6 +147,9 @@
       "phone": "+36 1 310 1106",
       "emergency_24h": true,
       "duty": "Open 0-24, 365 days a year; emergency duty 20:00-08:00.",
+      "duty_i18n": {
+        "sl": "Odprto 0–24, 365 dni v letu; nujno dežurstvo 20–8."
+      },
       "small_animals": true,
       "url": "https://juhaszallatkorhaz.hu/",
       "source_url": "https://juhaszallatkorhaz.hu/",
@@ -160,6 +166,9 @@
       "phone": "+36 1 814 2800",
       "emergency_24h": true,
       "duty": "Open day and night every day; emergency service daily 18:00-06:00 and non-stop at weekends.",
+      "duty_i18n": {
+        "sl": "Odprto podnevi in ponoči vsak dan; nujna služba vsak dan 18–6 in neprekinjeno ob vikendih."
+      },
       "small_animals": true,
       "url": "https://ivartalanitas.supervet.hu/",
       "source_url": "https://ivartalanitas.supervet.hu/",
@@ -176,6 +185,9 @@
       "phone": "+36 1 478 4290",
       "emergency_24h": false,
       "duty": "Mon-Fri check-in from 08:00, patient care 09:00-19:00. Since 1 March 2024 no new patients are admitted 20:00-08:00 (inpatients continue).",
+      "duty_i18n": {
+        "sl": "pon–pet sprejem od 8, oskrba pacientov 9–19. Od 1. marca 2024 od 20 do 8 ne sprejemajo novih pacientov (hospitalizirani pacienti se obravnavajo naprej)."
+      },
       "small_animals": true,
       "url": "https://univet.hu/hu/klinikak/kisallatklinika/",
       "source_url": "https://univet.hu/hu/klinikak/kisallatklinika/",
@@ -191,6 +203,9 @@
       "phone": "+36 1 246 6945",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-22:00 (20:00-22:00 duty with surcharge after 19:45); Sat-Sun and holidays 09:00-18:00 (admission until 17:00).",
+      "duty_i18n": {
+        "sl": "pon–pet 8–22 (20–22 dežurstvo z doplačilom po 19.45); sob–ned in prazniki 9–18 (sprejem do 17)."
+      },
       "small_animals": true,
       "url": "https://fuziovet.hu/",
       "source_url": "https://fuziovet.hu/elerhetoseg/",
@@ -206,6 +221,9 @@
       "phone": "+36 1 290 8970",
       "emergency_24h": false,
       "duty": "Every day incl. holidays 08:00-21:00; emergency duty 21:00-22:00.",
+      "duty_i18n": {
+        "sl": "Vsak dan, tudi ob praznikih, 8–21; nujno dežurstvo 21–22."
+      },
       "small_animals": true,
       "url": "https://csipetcsapatallatorvos.hu/",
       "source_url": "https://csipetcsapatallatorvos.hu/",
@@ -221,6 +239,9 @@
       "phone": "+36 1 362 2643",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00; weekends and holidays open according to schedule.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20; ob vikendih in praznikih odprto po razporedu."
+      },
       "small_animals": true,
       "url": "https://budatetenyiallatkorhaz.hu/en/",
       "source_url": "https://budatetenyiallatkorhaz.hu/en/contact/",
@@ -236,6 +257,9 @@
       "phone": "+36 1 306 1364",
       "emergency_24h": false,
       "duty": "Weekdays 08:00-20:00; duty-type hours weekdays 20:00-22:00, Sat-Sun and holidays 09:00-20:00.",
+      "duty_i18n": {
+        "sl": "Med tednom 8–20; dežurni čas med tednom 20–22, sob–ned in prazniki 9–20."
+      },
       "small_animals": true,
       "url": "https://www.primavetrendelo.hu/",
       "source_url": "https://www.primavetrendelo.hu/elerhetosegeink.php",
@@ -250,6 +274,9 @@
       "phone": "+36 30 408 2125",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun 09:00-12:00 (by appointment).",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob–ned 9–12 (po dogovoru)."
+      },
       "small_animals": true,
       "url": "https://www.rexrendelo.hu/",
       "source_url": "https://www.rexrendelo.hu/hu/kapcsolat",
@@ -265,6 +292,9 @@
       "phone": "+36 1 294 2518",
       "emergency_24h": false,
       "duty": "Weekdays 09:00-20:00.",
+      "duty_i18n": {
+        "sl": "Med tednom 9–20."
+      },
       "small_animals": true,
       "url": "https://murmuczok.hu/",
       "source_url": "https://murmuczok.hu/kapcsolat/ugyelet/",
@@ -422,6 +452,9 @@
       "phone": "+36 30 565 9255",
       "emergency_24h": false,
       "duty": "Every day until midnight; the line connects to the clinic on duty that week (backup number +36 20 350 6656).",
+      "duty_i18n": {
+        "sl": "Vsak dan do polnoči; linija vas poveže s kliniko, ki je ta teden dežurna (rezervna številka +36 20 350 6656)."
+      },
       "small_animals": true,
       "source_url": "https://kutyadoktor.hu/ugyelet/",
       "checked": "2026-11-02",
@@ -437,6 +470,9 @@
       "phone": "+36 52 485 203",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun and holidays 09:00-12:00; own duty Mon-Fri 19:00-22:00, Sat-Sun and holidays 12:00-16:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob–ned in prazniki 9–12; lastno dežurstvo pon–pet 19–22, sob–ned in prazniki 12–16."
+      },
       "small_animals": true,
       "url": "https://allatkorhazdebrecen.hu/",
       "source_url": "https://allatkorhazdebrecen.hu/",
@@ -503,6 +539,9 @@
       "region": "Csongrád-Csanád",
       "emergency_24h": false,
       "duty": "Weekdays 20:00-22:00; weekends 08:00-22:00; long weekends/holidays 08:00-20:00. Phone ahead. For 30 Oct-5 Nov 2026 the duty is at Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371).",
+      "duty_i18n": {
+        "sl": "Med tednom 20–22; ob vikendih 8–22; ob podaljšanih vikendih in praznikih 8–20. Vnaprej pokličite. Od 30. oktobra do 5. novembra 2026 je dežurstvo v Móravárosi Állatgyógyászati Központ, Farkas utca 4 (+36 30 539 1371)."
+      },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
       "source_url": "https://kisallat-ambulancia.hu/ugyelet/",
@@ -518,6 +557,9 @@
       "phone": "+36 62 543 855",
       "emergency_24h": false,
       "duty": "Takes part in the Szeged duty rota (weekdays 20:00-22:00, weekends 08:00-22:00 when on duty).",
+      "duty_i18n": {
+        "sl": "Sodeluje v dežurnem sistemu Szegeda (med tednom 20–22, ob vikendih 8–22, ko je na vrsti)."
+      },
       "small_animals": true,
       "url": "https://kisallat-ambulancia.hu/",
       "source_url": "https://kisallat-ambulancia.hu/ugyelet/",
@@ -532,6 +574,9 @@
       "phone": "+36 62 652 371",
       "emergency_24h": false,
       "duty": "Takes part in the Szeged small-animal standby duty: Sat-Sun 08:00-22:00, weekdays 20:00-22:00 (phone first).",
+      "duty_i18n": {
+        "sl": "Sodeluje v dežurni pripravljenosti za male živali v Szegedu: sob–ned 8–22, med tednom 20–22 (najprej pokličite)."
+      },
       "small_animals": true,
       "url": "https://www.szegediallatorvos.hu/",
       "source_url": "https://www.szegediallatorvos.hu/kisallat-ugyelet/",
@@ -572,6 +617,9 @@
       "phone": "+36 20 482 4101",
       "emergency_24h": false,
       "duty": "Weekdays 18:00-22:00, weekends 10:00-22:00; the group's own site lists Mon-Fri 18:00-20:00, Sat-Sun and holidays 12:00-18:00.",
+      "duty_i18n": {
+        "sl": "Med tednom 18–22, ob vikendih 10–22; spletna stran skupine navaja pon–pet 18–20, sob–ned in prazniki 12–18."
+      },
       "small_animals": true,
       "url": "https://allatorvosiugyeletmiskolc.webnode.hu/",
       "source_url": "https://www.nepkertiallatklinika.hu/kapcsolat",
@@ -587,6 +635,9 @@
       "phone": "+36 46 555 433",
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-18:00; closed Sat-Sun.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–18; sob–ned zaprto."
+      },
       "small_animals": true,
       "url": "https://www.nepkertiallatklinika.hu/",
       "source_url": "https://www.nepkertiallatklinika.hu/kapcsolat",
@@ -615,6 +666,9 @@
       "phone": "+36 30 970 5419",
       "emergency_24h": false,
       "duty": "Weekdays 20:00-22:00 by phone with on-site visits; weekends (and holidays) 08:00-20:00 for urgent, life-threatening cases. Surcharge.",
+      "duty_i18n": {
+        "sl": "Med tednom 20–22 po telefonu z obiski na kraju samem; ob vikendih (in praznikih) 8–20 za nujne, življenjsko ogrožajoče primere. Doplačilo."
+      },
       "small_animals": true,
       "url": "https://pecs.hu/allatorvosi-ugyelet/",
       "source_url": "https://pecs.hu/allatorvosi-ugyelet/",
@@ -725,6 +779,9 @@
       "phone": "+36 30 206 0969",
       "emergency_24h": true,
       "duty": "Weekdays 08:00-20:00 outpatients and surgery; nights and weekends emergency duty.",
+      "duty_i18n": {
+        "sl": "Med tednom 8–20 ambulanta in kirurgija; ponoči in ob vikendih nujno dežurstvo."
+      },
       "small_animals": true,
       "url": "https://allatkorhaznyiregyhaza.hu/",
       "source_url": "https://allatkorhaznyiregyhaza.hu/a-nyiregyhazi-allatkorhaz.html",
@@ -741,6 +798,9 @@
       "phone": "+36 94 310 034",
       "emergency_24h": false,
       "duty": "Receives animals on weekdays, weekends and public holidays (hours on its 'Nyitva tartás' page).",
+      "duty_i18n": {
+        "sl": "Sprejema živali med tednom, ob vikendih in praznikih (delovni čas na strani „Nyitva tartás“)."
+      },
       "small_animals": true,
       "url": "https://allatorvos-szombathely.hu/hu/",
       "source_url": "https://allatorvos-szombathely.hu/hu/",
@@ -886,6 +946,9 @@
       "phone": "+36 20 418 3405",
       "emergency_24h": false,
       "duty": "Mon, Wed, Thu 10:30-12:00 and 16:00-18:00; Tue, Fri 10:30-12:00; weekends closed except announced short duty slots (phone first, surcharge).",
+      "duty_i18n": {
+        "sl": "pon, sre, čet 10.30–12 in 16–18; tor, pet 10.30–12; ob vikendih zaprto, razen objavljenih kratkih dežurnih terminov (najprej pokličite, doplačilo)."
+      },
       "small_animals": true,
       "url": "https://nemes.vet/",
       "source_url": "https://nemes.vet/",
@@ -979,6 +1042,9 @@
       "phone": "+36 20 346 1988",
       "emergency_24h": false,
       "duty": "Saturdays 13:00-18:00; Sundays and public holidays 08:00-18:00. Visit at the animal's location or at a clinic, arranged by phone.",
+      "duty_i18n": {
+        "sl": "Ob sobotah 13–18; ob nedeljah in praznikih 8–18. Obisk na kraju, kjer je žival, ali v kliniki, po dogovoru po telefonu."
+      },
       "small_animals": true,
       "url": "https://www.szolnok.hu/2026/05/19/allatorvosi-ugyelet/",
       "source_url": "https://www.szolnok.hu/2026/05/19/allatorvosi-ugyelet/",
@@ -994,6 +1060,9 @@
       "phone": "+36 30 119 8739",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-18:00; Sat, Sun and public holidays 09:00-16:00. No house calls, no out-of-hours duty.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–18; sob, ned in prazniki 9–16. Brez obiskov na domu, brez dežurstva zunaj delovnega časa."
+      },
       "small_animals": true,
       "url": "https://petcity.hu/",
       "source_url": "https://petcity.hu/",
@@ -1006,6 +1075,9 @@
       "region": "Győr-Moson-Sopron",
       "emergency_24h": false,
       "duty": "One member clinic on duty each day: weekdays 19:00-22:00, weekends 8:00-22:00, public holidays 8:00-19:00; duty surcharge; call before setting out",
+      "duty_i18n": {
+        "sl": "Vsak dan je dežurna ena od klinik članic: med tednom 19–22, ob vikendih 8–22, ob praznikih 8–19; dežurno doplačilo; pokličite, preden se odpravite"
+      },
       "small_animals": true,
       "url": "https://allatorvosiugyeletgyor.hu/",
       "source_url": "https://szigetkoziallatorvos.hu/szolgaltatasok/haznal-torteno-betegellatas/",
@@ -1022,6 +1094,9 @@
       "phone": "+36 96 686 833",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "url": "https://szigetkoziallatorvos.hu/",
       "source_url": "https://szigetkoziallatorvos.hu/szolgaltatasok/haznal-torteno-betegellatas/",
@@ -1037,6 +1112,9 @@
       "phone": "+36 30 218 6339",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
       "checked": "2026-11-02",
@@ -1051,6 +1129,9 @@
       "phone": "+36 20 389 3451",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
       "checked": "2026-11-02",
@@ -1065,6 +1146,9 @@
       "phone": "+36 20 438 7731",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
       "checked": "2026-11-02",
@@ -1079,6 +1163,9 @@
       "phone": "+36 20 953 5126",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
       "checked": "2026-11-02",
@@ -1093,6 +1180,9 @@
       "phone": "+36 30 235 8679",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://maok.hu/storage/uploads/0c56c7ce-2af2-4baa-8e0e-db4f244a8670/aeu_intezmenyek_gyms_honlapra_2024januar4.pdf",
       "checked": "2026-11-02",
@@ -1107,6 +1197,9 @@
       "phone": "+36 20 976 6504",
       "emergency_24h": false,
       "duty": "Member of the Győr duty group (rotating)",
+      "duty_i18n": {
+        "sl": "Članica dežurne skupine Győr (izmenično)"
+      },
       "small_animals": true,
       "source_url": "https://allatorvosiugyeletgyor.hu/csoport.html",
       "checked": "2026-11-02",
@@ -1252,6 +1345,9 @@
       "phone": "+36 70 643 2431",
       "emergency_24h": false,
       "duty": "Central phone; weekdays 6:00-9:00 and 18:00-22:00, weekends and public holidays 6:00-22:00; 8 participating Kecskemét clinics; urgent companion-animal cases only",
+      "duty_i18n": {
+        "sl": "Centralna telefonska številka; med tednom 6–9 in 18–22, ob vikendih in praznikih 6–22; 8 sodelujočih klinik v Kecskemétu; samo nujni primeri pri hišnih ljubljenčkih"
+      },
       "small_animals": true,
       "url": "https://www.allatorvosiugyeletkecskemet.hu/",
       "source_url": "https://www.ebklinika.hu/ugyelet.html",
@@ -1268,6 +1364,9 @@
       "phone": "+36 70 776 5920",
       "emergency_24h": false,
       "duty": "Participates in the Kecskemét duty service",
+      "duty_i18n": {
+        "sl": "Sodeluje v dežurni službi v Kecskemétu"
+      },
       "small_animals": true,
       "url": "https://allatorvoskecskemet.hu/",
       "source_url": "https://allatorvoskecskemet.hu/",

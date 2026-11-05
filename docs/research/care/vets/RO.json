@@ -52,6 +52,9 @@
       "phone": "+40 21 410 8455",
       "emergency_24h": true,
       "duty": "University emergency hospital, open 24/7. Phone ahead if you can.",
+      "duty_i18n": {
+        "sl": "Univerzitetna nujna bolnišnica, odprta 24/7. Če lahko, vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
       "source_url": "https://fmvb.ro/site-vechi/english/articles/252-veterinary-emergency-university-hospital-prof-univ-dr-alin-birtoiu.html",
@@ -66,6 +69,9 @@
       "phone": "+40 232 407 362",
       "emergency_24h": true,
       "duty": "University hospital emergency department, open non-stop 24/7.",
+      "duty_i18n": {
+        "sl": "Nujni oddelek univerzitetne bolnišnice, odprt neprekinjeno 24/7."
+      },
       "small_animals": true,
       "url": "https://iuls.ro/medicina/en/emergency-service/",
       "source_url": "https://iuls.ro/medicina/en/emergency-service/",
@@ -80,6 +86,9 @@
       "phone": "+40 264 431 910",
       "emergency_24h": false,
       "duty": "University emergency line, for emergencies only. Call ahead for hours.",
+      "duty_i18n": {
+        "sl": "Univerzitetna linija za nujne primere, samo za nujne primere. Za delovni čas vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
       "source_url": "https://fmv.usamvcluj.ro/index.php/component/content/article/11-demo-content/6-tutorials-and-guides",
@@ -95,6 +104,9 @@
       "phone": "+40 731 803 803",
       "emergency_24h": false,
       "duty": "Same-day urgent evaluations may be possible during opening hours. Call ahead.",
+      "duty_i18n": {
+        "sl": "Nujni pregledi še isti dan so morda mogoči v delovnem času. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://joyvet.ro/",
       "source_url": "https://joyvet.ro/?p=5749",
@@ -110,6 +122,9 @@
       "phone": "+40 745 306 272",
       "emergency_24h": false,
       "duty": "Emergency veterinary service. Call ahead to confirm hours.",
+      "duty_i18n": {
+        "sl": "Veterinarska nujna služba. Za potrditev delovnega časa vnaprej pokličite."
+      },
       "small_animals": true,
       "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
       "checked": "2026-11-04",
@@ -124,6 +139,9 @@
       "phone": "+40 722 517 821",
       "emergency_24h": false,
       "duty": "Veterinary clinic. Call ahead to confirm hours.",
+      "duty_i18n": {
+        "sl": "Veterinarska ambulanta. Za potrditev delovnega časa vnaprej pokličite."
+      },
       "small_animals": true,
       "source_url": "https://www.bzi.ro/farmacii-non-stop-in-iasi-unde-trebuie-sa-apelezi-in-caz-de-urgenta-4169662",
       "checked": "2026-11-04",
@@ -138,6 +156,9 @@
       "phone": "+40 21 434 5370",
       "emergency_24h": true,
       "duty": "Veterinary hospital, open non-stop. WhatsApp 0762 762 762.",
+      "duty_i18n": {
+        "sl": "Veterinarska bolnišnica, odprta neprekinjeno. WhatsApp 0762 762 762."
+      },
       "small_animals": true,
       "url": "https://pet-stuff.ro/contact/",
       "source_url": "https://pet-stuff.ro/contact/",
@@ -154,6 +175,9 @@
       "phone": "+40 374 541 903",
       "emergency_24h": true,
       "duty": "Clinic open non-stop.",
+      "duty_i18n": {
+        "sl": "Ambulanta je odprta neprekinjeno."
+      },
       "small_animals": true,
       "url": "https://vet4life.ro/contact/",
       "source_url": "https://partnervet.ro/urgente/",
@@ -170,6 +194,9 @@
       "phone": "+40 374 541 904",
       "emergency_24h": true,
       "duty": "Veterinary hospital, open non-stop.",
+      "duty_i18n": {
+        "sl": "Veterinarska bolnišnica, odprta neprekinjeno."
+      },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
       "source_url": "https://partnervet.ro/urgente/",
@@ -186,6 +213,9 @@
       "phone": "+40 374 541 905",
       "emergency_24h": true,
       "duty": "Clinic open non-stop; veterinary ambulance offered.",
+      "duty_i18n": {
+        "sl": "Ambulanta je odprta neprekinjeno; ponujajo veterinarsko reševalno službo."
+      },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
       "source_url": "https://partnervet.ro/urgente/",
@@ -202,6 +232,9 @@
       "phone": "+40 374 541 907",
       "emergency_24h": true,
       "duty": "Veterinary hospital, open non-stop.",
+      "duty_i18n": {
+        "sl": "Veterinarska bolnišnica, odprta neprekinjeno."
+      },
       "small_animals": true,
       "url": "https://partnervet.ro/urgente/",
       "source_url": "https://partnervet.ro/urgente/",
@@ -218,6 +251,9 @@
       "phone": "+40 369 991",
       "emergency_24h": true,
       "duty": "Hospital open non-stop 24/7, including weekends and public holidays.",
+      "duty_i18n": {
+        "sl": "Bolnišnica je odprta neprekinjeno 24/7, tudi ob vikendih in praznikih."
+      },
       "small_animals": true,
       "url": "https://svtransilvania.ro/spital-veterinar-timisoara-iulius-town/",
       "source_url": "https://svtransilvania.ro/spital-veterinar-timisoara-iulius-town/",
@@ -234,6 +270,9 @@
       "phone": "+40 369 991",
       "emergency_24h": true,
       "duty": "Hospital with non-stop 24/7 emergencies; clinic hours Mon-Sat 08:00-20:00.",
+      "duty_i18n": {
+        "sl": "Bolnišnica z neprekinjeno nujno pomočjo 24/7; delovni čas ambulante pon–sob 8–20."
+      },
       "small_animals": true,
       "url": "https://svtransilvania.ro/cluj/",
       "source_url": "https://svtransilvania.ro/cluj/",
@@ -250,6 +289,9 @@
       "phone": "+40 369 991",
       "emergency_24h": true,
       "duty": "Hospital with non-stop 24/7 emergencies; clinic hours Mon-Sat 08:00-20:00.",
+      "duty_i18n": {
+        "sl": "Bolnišnica z neprekinjeno nujno pomočjo 24/7; delovni čas ambulante pon–sob 8–20."
+      },
       "small_animals": true,
       "url": "https://svtransilvania.ro/",
       "source_url": "https://svtransilvania.ro/",
@@ -266,6 +308,9 @@
       "phone": "+40 256 277 012",
       "emergency_24h": true,
       "duty": "University clinics with an emergency service, non-stop. Call ahead.",
+      "duty_i18n": {
+        "sl": "Univerzitetne klinike z nujno službo, neprekinjeno. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.usab-tm.ro/ro/clinicile-veterinare-universitare-8981",
       "source_url": "https://www.usab-tm.ro/ro/clinicile-veterinare-universitare-8981",
@@ -282,6 +327,9 @@
       "phone": "+40 770 365 365",
       "emergency_24h": true,
       "duty": "Emergency service advertised 24/7, 365 days a year. Call ahead.",
+      "duty_i18n": {
+        "sl": "Nujna služba oglaševana kot 24/7, 365 dni v letu. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://vet365.ro/",
       "source_url": "https://vet365.ro/",
@@ -298,6 +346,9 @@
       "phone": "+40 732 115 982",
       "emergency_24h": true,
       "duty": "Clinic open non-stop, 24 hours a day, 7 days a week.",
+      "duty_i18n": {
+        "sl": "Ambulanta je odprta neprekinjeno, 24 ur na dan, 7 dni v tednu."
+      },
       "small_animals": true,
       "url": "https://aristocratvet.ro/",
       "source_url": "https://aristocratvet.ro/",
@@ -312,6 +363,9 @@
       "region": "Constanța",
       "emergency_24h": true,
       "duty": "Veterinary hospital advertising non-stop service and 24/7 emergencies. Call ahead.",
+      "duty_i18n": {
+        "sl": "Veterinarska bolnišnica oglašuje neprekinjeno delovanje in nujno pomoč 24/7. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://vet-zone.ro/",
       "source_url": "https://vet-zone.ro/",
@@ -328,6 +382,9 @@
       "phone": "+40 774 031 609",
       "emergency_24h": false,
       "duty": "Clinic Mon-Fri 10:00-19:00, Sat 10:00-14:00; non-stop emergency phone line 24/7.",
+      "duty_i18n": {
+        "sl": "Ambulanta pon–pet 10–19, sob 10–14; telefonska linija za nujne primere neprekinjeno 24/7."
+      },
       "small_animals": true,
       "url": "https://vetricare.ro/servicii/urgente/",
       "source_url": "https://vetricare.ro/servicii/urgente/",
@@ -344,6 +401,9 @@
       "phone": "+40 374 541 924",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat-Sun 09:00-13:00. Call the clinic number for emergencies.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20, sob–ned 9–13. Za nujne primere pokličite številko ambulante."
+      },
       "small_animals": true,
       "url": "https://partnervet.ro/retea/clinica-veterinara-cluj/",
       "source_url": "https://partnervet.ro/retea/clinica-veterinara-cluj/",
@@ -359,6 +419,9 @@
       "phone": "+40 787 396 275",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00. Call ahead.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://cvscluj.ro/",
       "source_url": "https://cvscluj.ro/",
@@ -372,6 +435,9 @@
       "phone": "+40 264 414 526",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-21:00, Sat 09:00-16:00, Sun 10:00-14:00. Urgent lines 0745 010 539 / 0745 640 764.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–21, sob 9–16, ned 10–14. Številki za nujne primere 0745 010 539 / 0745 640 764."
+      },
       "small_animals": true,
       "url": "https://sanvete.ro/",
       "source_url": "https://sanvete.ro/",
@@ -387,6 +453,9 @@
       "phone": "+40 771 355 315",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-21:00, Sat 09:00-14:00; non-stop emergency line 0771 355 315.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–21, sob 9–14; neprekinjena linija za nujne primere 0771 355 315."
+      },
       "small_animals": true,
       "url": "https://genesis-vet.ro/contact/",
       "source_url": "https://genesis-vet.ro/contact/",
@@ -402,6 +471,9 @@
       "phone": "+40 723 143 405",
       "emergency_24h": false,
       "duty": "Emergencies on call 24/7 by phone. Call ahead.",
+      "duty_i18n": {
+        "sl": "Nujni primeri so po telefonu na voljo 24/7. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://clinica-veterinara-timisoara.ro/",
       "source_url": "https://clinica-veterinara-timisoara.ro/",
@@ -418,6 +490,9 @@
       "phone": "+40 752 129 129",
       "emergency_24h": false,
       "duty": "Mon-Fri 9:00-17:00 (Take Ionescu), 15:00-20:00 (Rebreanu). Non-stop emergencies for the clinic's own clients only: 0721 635 466.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–17 (Take Ionescu), 15–20 (Rebreanu). Neprekinjena nujna pomoč samo za stranke ambulante: 0721 635 466."
+      },
       "small_animals": true,
       "url": "https://veterinartimisoara.ro/",
       "source_url": "https://veterinartimisoara.ro/",
@@ -433,6 +508,9 @@
       "phone": "+40 722 719 438",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-14:00, Sun closed. For emergencies call the clinic.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 9–14, ned zaprto. Za nujne primere pokličite ambulanto."
+      },
       "small_animals": true,
       "url": "https://daroczivet.ro/",
       "source_url": "https://daroczivet.ro/",
@@ -447,6 +525,9 @@
       "phone": "+40 268 337 000",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat-Sun 09:00-16:00; night emergencies 20:00-08:00 on 0765 289 462.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob–ned 9–16; nočni nujni primeri 20–8 na 0765 289 462."
+      },
       "small_animals": true,
       "url": "https://www.kronveter.ro/",
       "source_url": "https://www.kronveter.ro/",
@@ -462,6 +543,9 @@
       "phone": "+40 723 664 555",
       "emergency_24h": false,
       "duty": "Clinic Mon-Fri 10:00-18:00; emergency ambulance service stated as non-stop.",
+      "duty_i18n": {
+        "sl": "Ambulanta pon–pet 10–18; nujna reševalna služba je navedena kot neprekinjena."
+      },
       "small_animals": true,
       "url": "https://vetlabus.ro/ambulanta-veterinara-brasov/",
       "source_url": "https://vetlabus.ro/ambulanta-veterinara-brasov/",
@@ -478,6 +562,9 @@
       "phone": "+40 752 298 138",
       "emergency_24h": false,
       "duty": "Emergency line 0746 028 320 outside working hours, answered by vets on rotation who come to the clinic.",
+      "duty_i18n": {
+        "sl": "Linija za nujne primere 0746 028 320 zunaj delovnega časa, na njej odgovarjajo veterinarji po izmenah, ki pridejo v ambulanto."
+      },
       "small_animals": true,
       "url": "https://www.ceres-vet.ro/urgente-veterinare",
       "source_url": "https://www.ceres-vet.ro/urgente-veterinare",
@@ -492,6 +579,9 @@
       "phone": "+40 268 418 956",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat-Sun 09:00-16:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20, sob–ned 9–16."
+      },
       "small_animals": true,
       "url": "https://www.hvet.ro/en-us/contact",
       "source_url": "https://www.hvet.ro/en-us/contact",
@@ -506,6 +596,9 @@
       "phone": "+40 745 999 124",
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-20:00, Sat 10:00-14:00; emergency line 0720 051 513 advertised as non-stop.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–20, sob 10–14; linija za nujne primere 0720 051 513 oglaševana kot neprekinjena."
+      },
       "small_animals": true,
       "url": "https://elmonvet.ro/",
       "source_url": "https://elmonvet.ro/",
@@ -521,6 +614,9 @@
       "phone": "+40 741 781 283",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-15:00. Emergencies offered; call ahead.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20, sob 9–15. Nujni primeri so možni; vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://clinica-veterinara-brasov.ro/",
       "source_url": "https://clinica-veterinara-brasov.ro/",
@@ -535,6 +631,9 @@
       "phone": "+40 752 210 071",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-14:00. Emergencies advertised 24/7 by appointment only; call ahead.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–20, sob 9–14. Nujni primeri oglaševani 24/7, samo po dogovoru; vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.vethouse.ro/contact-veterinar-sibiu",
       "source_url": "https://www.vethouse.ro/contact-veterinar-sibiu",
@@ -551,6 +650,9 @@
       "phone": "+40 753 634 748",
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-18:00; emergencies said to be handled non-stop by phone.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–18; nujne primere naj bi neprekinjeno obravnavali po telefonu."
+      },
       "small_animals": true,
       "url": "https://vetdoctorpets.com/urgente/",
       "source_url": "https://vetdoctorpets.com/urgente/",
@@ -566,6 +668,9 @@
       "phone": "+40 374 541 921",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-15:00, Sun 09:00-13:00; out-of-hours emergency number 0742 832 972.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–20, sob 9–15, ned 9–13; številka za nujne primere zunaj delovnega časa 0742 832 972."
+      },
       "small_animals": true,
       "url": "https://www.skyvet.ro/",
       "source_url": "https://www.skyvet.ro/",
@@ -580,6 +685,9 @@
       "phone": "+40 788 233 324",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00; will travel to the patient for emergencies. Call ahead.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19; v nujnih primerih pridejo k pacientu. Vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://www.buneavet.ro/",
       "source_url": "https://www.buneavet.ro/",
@@ -595,6 +703,9 @@
       "phone": "+40 761 663 577",
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-18:00, Sat 08:00-11:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 8–18, sob 8–11."
+      },
       "small_animals": true,
       "url": "https://www.clinica.vetcon.ro/",
       "source_url": "https://www.clinica.vetcon.ro/",
@@ -609,6 +720,9 @@
       "phone": "+40 374 541 926",
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00, Sat 09:00-15:00, Sun 09:00-13:00. Emergencies via clinic number.",
+      "duty_i18n": {
+        "sl": "pon–pet 9–19, sob 9–15, ned 9–13. Nujni primeri prek številke ambulante."
+      },
       "small_animals": true,
       "url": "https://partnervet.ro/retea/clinica-veterinara-constanta/",
       "source_url": "https://partnervet.ro/retea/clinica-veterinara-constanta/",
@@ -624,6 +738,9 @@
       "phone": "+40 241 650 296",
       "emergency_24h": false,
       "duty": "Emergencies handled; call ahead for hours.",
+      "duty_i18n": {
+        "sl": "Nujne primere obravnavajo; za delovni čas vnaprej pokličite."
+      },
       "small_animals": true,
       "url": "https://helpvetconstanta.ro/",
       "source_url": "https://helpvetconstanta.ro/",
@@ -638,6 +755,9 @@
       "phone": "+40 341 173 355",
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-18:00, Sat 10:00-15:00, Sun 10:00-12:00.",
+      "duty_i18n": {
+        "sl": "pon–pet 10–18, sob 10–15, ned 10–12."
+      },
       "small_animals": true,
       "url": "https://www.megavet.ro/",
       "source_url": "https://www.megavet.ro/",

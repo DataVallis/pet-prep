@@ -333,6 +333,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -348,6 +351,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -363,6 +369,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -378,6 +387,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number; the centres page gives no centre-specific number.",
       "checked": "2026-11-03"
     },
@@ -393,6 +405,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -408,6 +423,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -423,6 +441,9 @@
       "url": "https://www.vetandgo.be/fr/centres/",
       "source_url": "https://www.vetandgo.be/fr/infos-pratiques/",
       "duty": "Out-of-hours emergency centre: weekdays 19:00 - 07:30, Saturday 12:00 - Monday 07:30, public holidays 24h/24",
+      "duty_i18n": {
+        "sl": "Center za nujno pomoč izven delovnega časa: ob delavnikih 19–7.30, od sobote ob 12 do ponedeljka ob 7.30, ob praznikih 24 ur na dan"
+      },
       "note": "Night/weekend emergency centre, not 24 h every day (24h/24 only on public holidays). Phone is the VET&GO general number unless centre-specific.",
       "checked": "2026-11-03"
     },
@@ -462,6 +483,9 @@
       "phone": "02 221 08 40",
       "emergency_24h": true,
       "duty": "BeVet clinics with Urgences 24/7 or 24/24 (Boitsfort, Manage, Wanze, Florenville) and an on-call emergency vet service for Brabant wallon and periphery",
+      "duty_i18n": {
+        "sl": "Ambulante BeVet z nujno pomočjo 24 ur na dan, 7 dni v tednu (Boitsfort, Manage, Wanze, Florenville) ter dežurna služba nujne veterinarske pomoči za Brabant wallon in okolico"
+      },
       "url": "https://bevet.be/veterinaire-de-garde/",
       "source_url": "https://bevet.be/veterinaire-de-garde/",
       "quote": "Urgences 24/24",
@@ -476,6 +500,9 @@
       "phone": "0904 88 548",
       "emergency_24h": true,
       "duty": "Operator looks up vets on duty near you (about 20 km) and gives their numbers by voice or SMS; Dutch, French, English",
+      "duty_i18n": {
+        "sl": "Operater poišče dežurne veterinarje v vaši bližini (do približno 20 km) in vam posreduje njihove številke po telefonu ali SMS; v nizozemščini, francoščini in angleščini"
+      },
       "url": "https://dierenarts-van-wacht.be/",
       "source_url": "https://dierenarts-van-wacht.be/",
       "quote": "24/7/365",
@@ -494,7 +521,10 @@
       "quote": "Heb je het antwoord hier niet gevonden, dan kan je ons steeds bellen op 070 245 245.",
       "note": "Belgian Poison Centre (human centre) also takes enquiries about animals; page says: if you suspect poisoning in your pet, call your vet first, and only your vet can confirm the advice. Annual report 2025 (poisoncentre.be) records 5 190 calls about animals. Main line 02 264 96 36.",
       "checked": "2026-11-03",
-      "duty": "For animals the centre answers on 070 245 245 weekdays 8:00-16:00 and weekends/public holidays 10:00-16:00 (human emergencies take priority); otherwise call your vet"
+      "duty": "For animals the centre answers on 070 245 245 weekdays 8:00-16:00 and weekends/public holidays 10:00-16:00 (human emergencies take priority); otherwise call your vet",
+      "duty_i18n": {
+        "sl": "Za hišne ljubljenčke se center oglasi na 070 245 245 ob delavnikih 8–16 ter ob koncih tedna in praznikih 10–16 (nujni primeri pri ljudeh imajo prednost); sicer pokličite svojega veterinarja"
+      }
     }
   ],
   "notes": "Researched 2026-11-03 with WebFetch only; WebSearch just to find URLs. Independently checked 2026-11-03 (runbook section 3). emergency_24h=true only where the page says 24/7, 24/24 or 'Heures d'urgence 00 - 24'. LEFT: (1) No official Orde der Dierenartsen / Ordre des medecins veterinaires / FAVV duty-rota page was found or fetchable (Belgian vets have no public official rota; searches returned none). (2) Belgian coast (Oostende, Knokke, De Panne, Blankenberge): no clinic's own page stating 24 h was found; only a blog list (hondenaanzee.be, not used as data) and AniCura WEST Oudenburg 19-22h. Coast vets still to look up on own sites. (3) BeVet-listed emergency clinic pages for Wanze and Florenville not opened individually (data from bevet.be find-a-vet page). (4) Not reachable or not in the fetch provenance set: shu-veterinaires.be (SHU Ath, 24h/24 claim only in l'Avenir 2023 article) and Animavet Cuesmes - own sites not found, so skipped; Cabinet de l'Orient Tournai refers night emergencies to Nordvet in La Madeleine (France), skipped. (5) Evidensia/other Flemish 24 h hospitals, Antwerp/Ghent/Bruges/Kortrijk independent 24 h clinics, Liege/Luxembourg province beyond Verviers/Herstal/Florenville not yet covered. (6) AniCura clinics without emergency hours (Meerhout, Westmalle, Hulshout etc. with 08-20h) omitted."
