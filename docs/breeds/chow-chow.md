@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `chow_chow` (viri S696–S702; ponovno S10, S11, S14, S24, S35, S45, S54, S174); seznam za vzreditelja: ni najden (`not_found`) |
 | Izvor | FCI št. 205, skupina 5, sekcija 5 (azijski špici in sorodne pasme), Kitajska, pokroviteljstvo Velika Britanija (S697, S696) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 88. mesto »Chow Chow« (S174, prebrano 2026-11-04) |
-| PR-ji | pet-prep #682 (pasma, združen `388a153`) · portret: **ni narejen** — zagon `breed-portraits.yml` 41764816596 dvakrat neuspešen (na produkcijskem strežniku »No space left on device« in baza `postgres` ni dosegljiva v enkratnem vsebniku) · spletna stran: PR šele s portretom |
+| PR-ji | pet-prep #682 (pasma, združen `388a153`) · portret pet-prep #750 (zagon `breed-portraits.yml` 41939632792 5. 11. 2026, koda `be67ea6`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-chow-chow` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -42,8 +42,8 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 90. meseca — predlog; 4 → 3 → 2 obroka; učenje 0,5×) | 🛠 | 💶 izziv | M5-R10-92 | 2026-11-04 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, opozorilo »počakaj s sprehodom« po obroku | 🛠 | 💶 izziv | M5-R13 / M5-R16 / M5-R17 | 2026-11-04 |
 | Barva (izbirnik: 6 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-04 |
-| AI portret v registru | 🗓 ni narejen (napaka strežnika 2026-11-04 — čaka Davida) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/chow-chow`, `/sl/zivali/psi/cau-cau`) | 🗓 sledi s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«) | — | M5-R11-04 | 2026-11-05 |
+| Stran na petprep.si (`/animals/dogs/chow-chow`, `/sl/zivali/psi/cau-cau`) | 🛠 s portretom (spletni PR sledi); »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
@@ -53,7 +53,7 @@
 
 ## Odprto za Davida
 
-- **Portret ni narejen (2026-11-04):** `breed-portraits.yml` (zagon 41764816596, dva poskusa, skupaj s pekinezerjem) se je na produkcijskem strežniku ustavil z »No space left on device« in »could not translate host name "postgres"«. Sprostite prostor na disku strežnika (in preverite, ali vsebnik baze teče); naslednji nočni zagon nato najprej naredi oba portreta (catch-up) in odpre PR spletne strani.
+- **Portret (prej ni bil narejen, 2026-11-04):** `breed-portraits.yml` (zagon 41764816596, dva poskusa, skupaj s pekinezerjem) se je na produkcijskem strežniku ustavil z »No space left on device« in »could not translate host name "postgres"«. Sprostite prostor na disku strežnika (in preverite, ali vsebnik baze teče); naslednji nočni zagon nato najprej naredi oba portreta (catch-up) in odpre PR spletne strani. **Rešeno 5. 11. 2026:** produkcija je migracije dobila z dnevno namestitvijo `bb3450c` (4. 11.); zagon `breed-portraits.yml` 41939632792 (koda `be67ea6`) je naredil portret, sprejet v prvem poskusu — pet-prep PR #750. Šele zdaj sledi spletna stran.
 - **Starejše obdobje od 90. meseca** je moj predlog (`verified=false`): runbook za življenjsko dobo našteje McMillan 2024, VetCompass in spodnjo mejo RKC — nič ni bilo dosegljivo; PDSA navaja »Under 10 years« (le zgornja meja), zato 0,75 × 10 let. Wikipedia navaja McMillan 2024 12,1 leta (to bi dalo 109) — kar je v nasprotju s PDSA. Potrdite ali določite drugo vrednost (seeder je samo-vstavljalni → sprememba prek Filamenta ali podatkovne migracije).
 - **Čip »krajša življenjska doba«** sledi pravilu (PDSA »Under 10 years«), čeprav McMillan 2024 prek Wikipedie navaja 12,1 leta. Če McMillan potrdite, čip odstranite.
 - **Stran RKC ni bila dosegljiva** (preusmeritev na royalkennelclub.com zavrnjena): zato ni čipa »življenje v stanovanju«, ni kategorije Breed Watch (čip za kolke / zadnje noge) in ni testov RKC za vzreditelja. Ob naslednji priložnosti preverite.
