@@ -2445,5 +2445,22 @@ return [
                 ['tag' => 'frequent_grooming', 'source_ids' => ['S731', 'S732'], 'refs' => ['english_setter.suitability.rkc_grooming', 'english_setter.suitability.pdsa_grooming']],
             ],
         ],
+        // M5-R10-98 Lhasa Apso — not a welfare breed (RKC Breed Watch Category 1, S740; muzzle about one-third of the head,
+        // S738). No new vocabulary key.
+        'lhasa_apso' => [
+            'suits' => [
+                // S740 "Size of home: Flat/ Apartment" / "Size of garden: Small/ medium garden".
+                ['tag' => 'apartment', 'source_ids' => ['S740'], 'refs' => ['lhasa_apso.suitability.rkc_size_of_home', 'lhasa_apso.suitability.rkc_garden']],
+                // S741 "… get along well with children and other pets in the household, given the right socialisation as puppies."; S742 "Playful and good with children."
+                ['tag' => 'children', 'source_ids' => ['S741', 'S742'], 'refs' => ['lhasa_apso.suitability.pdsa_children', 'lhasa_apso.suitability.vca_children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S741'], 'refs' => ['lhasa_apso.suitability.pdsa_children', 'lhasa_apso.behaviour.other_pets']],
+                // S740 "Sheds: No" (VCA S742 "Shedding is below average.").
+                ['tag' => 'low_shedding', 'source_ids' => ['S740'], 'refs' => ['lhasa_apso.suitability.rkc_shedding']],
+            ],
+            'consider' => [
+                // S740 "Grooming: Every day"; S741 grooming on a daily basis.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S740', 'S741'], 'refs' => ['lhasa_apso.suitability.rkc_grooming', 'lhasa_apso.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

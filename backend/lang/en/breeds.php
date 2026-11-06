@@ -99,6 +99,7 @@ return [
     'standard_schnauzer' => 'Standard Schnauzer',
     'coton_de_tulear' => 'Coton de Tulear',
     'english_setter' => 'English Setter',
+    'lhasa_apso' => 'Lhasa Apso',
     'domestic_cat' => 'Domestic cat',
     'maine_coon' => 'Maine Coon',
     'british_shorthair' => 'British Shorthair',
