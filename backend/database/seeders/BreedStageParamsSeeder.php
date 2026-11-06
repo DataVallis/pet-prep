@@ -1192,6 +1192,16 @@ class BreedStageParamsSeeder extends Seeder
     public const CONFIRMED_R10_COTON_DE_TULEAR = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-96)';
 
     /**
+     * M5-R10-97 English Setter (unattended run 2026-11-06, data.json proposed_game_parameters.english_setter.*.decision):
+     * every value follows a standing rule of docs/engineering/ADD_BREED_RUNBOOK.md §3, which David confirmed on 2026-10-10 —
+     * exercise 120 min (RKC S731 "More than 2 hours per day"), senior 90 min, puppy 10 min × age capped at 120, stages
+     * young 9 / adult 36 / senior 90 (0.75 × RKC lower bound "Over 10 years", S731 — McMillan 2024's breed value not
+     * reachable, 13.1 y only via Wikipedia S735, tier C), arrival 2 / 9 / 36 / 90, learning multiplier 1.2 (Coren rank 37,
+     * Above average, S735); care rates the Border Collie's.
+     */
+    public const CONFIRMED_R10_ENGLISH_SETTER = 'potrdil David 2026-10-10 (pravilo runbooka, M5-R10-97)';
+
+    /**
      * M5-R10-14 British Shorthair (unattended run 2026-10-11, runbook §3 standing rules
      * confirmed by David 2026-10-10; cat-data british_shorthair.*.decision): the
      * pedigree kitten arrives at 3 months (CAT_SPEC Q4 rule, C13). Everything else is
@@ -1506,6 +1516,10 @@ class BreedStageParamsSeeder extends Seeder
             'ear_cleaning' => [1, 'week', 'S726', "Check your Coton de Tulear's ears at least once a week for signs of infection.", 'proposed_game_parameters.coton_de_tulear.ear_care', '"at least once a week" → once a week'],
             'bath' => [1, 'month', 'S726', "Cotons don't usually require special skin care aside from a once-a-month bath.", 'proposed_game_parameters.coton_de_tulear.bathing', '"once-a-month" → every 4 weeks (no tooth / nail / groomer frequency → no task)'],
         ],
+        'english_setter' => [
+            'bath' => [1, 'six_weeks', 'S733', 'Bathe your English Setter every six to eight weeks or whenever they get dirty outside.', 'proposed_game_parameters.english_setter.bathing', '"every six to eight weeks" → the lower bound, every 6 weeks (VCA S734 "monthly bathing" — alternative)'],
+            'groomer_visit' => [1, 'month', 'S734', 'Some clipping and trimming is needed every month to maintain optimal looks.', 'proposed_game_parameters.english_setter.professional_grooming', '"every month" → every 4 weeks (ears "regularly", no tooth / nail frequency → no task)'],
+        ],
     ];
 
     /**
@@ -1621,6 +1635,7 @@ class BreedStageParamsSeeder extends Seeder
         'keeshond' => [7, 'S709', 'Grooming is a daily requirement to keep their thick double coat in good condition.', 'high', false],
         'standard_schnauzer' => [3, 'S715', 'Grooming is needed 2-3 times a week', 'high', false],
         'coton_de_tulear' => [7, 'S724', 'Grooming: Every day', 'high', false],
+        'english_setter' => [3, 'S732', "They'll need grooming 2-3 times per week, and occasional clipping and trimming.", 'high', false],
     ];
 
     /**
@@ -1775,13 +1790,14 @@ class BreedStageParamsSeeder extends Seeder
         'old_english_sheepdog' => ['S705', 'a well-socialised Old English Sheepdog is likely to grow into a happy and confident dog.'],
         'standard_schnauzer' => ['S717', 'early socialization and training is necessary.'],
         'coton_de_tulear' => ['S726', "With proper training and early socialization, however, your Coton de Tulear puppy will learn that every passing person isn't something to be concerned about."],
+        'english_setter' => ['S732', 'As with all breeds, early socialisation and training is still important to ensure they grow up into confident, sociable dogs'],
     ];
 
     /** Cat breeds of catRows() (domestic cat = the free cat). */
     public const CAT_BREEDS = [BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal];
 
     /** Dog breeds of rows(), in seeding order (M5-R10: one profile per breed, dogProfile()). */
-    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear];
+    public const DOG_BREEDS = [BreedType::Mutt, BreedType::BorderCollie, BreedType::LabradorRetriever, BreedType::GoldenRetriever, BreedType::FrenchBulldog, BreedType::GermanShepherd, BreedType::CavalierKingCharlesSpaniel, BreedType::Beagle, BreedType::StandardPoodle, BreedType::Dachshund, BreedType::AustralianShepherd, BreedType::Havanese, BreedType::WestHighlandWhiteTerrier, BreedType::BerneseMountainDog, BreedType::SiberianHusky, BreedType::Rottweiler, BreedType::Bulldog, BreedType::GermanShorthairedPointer, BreedType::YorkshireTerrier, BreedType::CaneCorso, BreedType::PembrokeWelshCorgi, BreedType::Dobermann, BreedType::Boxer, BreedType::MiniatureSchnauzer, BreedType::ShihTzu, BreedType::GreatDane, BreedType::Pomeranian, BreedType::BostonTerrier, BreedType::MiniatureAmericanShepherd, BreedType::Chihuahua, BreedType::EnglishSpringerSpaniel, BreedType::ShetlandSheepdog, BreedType::Brittany, BreedType::AmericanCockerSpaniel, BreedType::BelgianMalinois, BreedType::BassetHound, BreedType::HungarianVizsla, BreedType::EnglishCockerSpaniel, BreedType::Maltese, BreedType::Pug, BreedType::RoughCollie, BreedType::Mastiff, BreedType::ShibaInu, BreedType::RhodesianRidgeback, BreedType::Papillon, BreedType::PortugueseWaterDog, BreedType::BichonFrise, BreedType::Newfoundland, BreedType::Dalmatian, BreedType::AustralianCattleDog, BreedType::Whippet, BreedType::WirehairedPointingGriffon, BreedType::ChesapeakeBayRetriever, BreedType::Samoyed, BreedType::ScottishTerrier, BreedType::Weimaraner, BreedType::ItalianGreyhound, BreedType::GiantSchnauzer, BreedType::Bloodhound, BreedType::Akita, BreedType::CardiganWelshCorgi, BreedType::GermanWirehairedPointer, BreedType::SaintBernard, BreedType::StaffordshireBullTerrier, BreedType::AiredaleTerrier, BreedType::RussellTerrier, BreedType::Bullmastiff, BreedType::ChineseCrested, BreedType::NovaScotiaDuckTollingRetriever, BreedType::CairnTerrier, BreedType::BullTerrier, BreedType::MiniaturePinscher, BreedType::PyreneanMountainDog, BreedType::SoftCoatedWheatenTerrier, BreedType::IrishWolfhound, BreedType::AmericanStaffordshireTerrier, BreedType::LagottoRomagnolo, BreedType::AlaskanMalamute, BreedType::Basenji, BreedType::RatTerrier, BreedType::GreaterSwissMountainDog, BreedType::SharPei, BreedType::BrusselsGriffon, BreedType::IrishSetter, BreedType::AnatolianShepherdDog, BreedType::Pekingese, BreedType::ChowChow, BreedType::OldEnglishSheepdog, BreedType::Keeshond, BreedType::StandardSchnauzer, BreedType::CotonDeTulear, BreedType::EnglishSetter];
 
     /** Prefix of a cat row's `data_ref` (path into docs/research/cat-data/data.json). */
     public const CAT_REF = 'cat-data:';
@@ -2597,6 +2613,7 @@ class BreedStageParamsSeeder extends Seeder
             BreedType::Keeshond => self::keeshondProfile(),
             BreedType::StandardSchnauzer => self::standardSchnauzerProfile(),
             BreedType::CotonDeTulear => self::cotonDeTulearProfile(),
+            BreedType::EnglishSetter => self::englishSetterProfile(),
 
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new InvalidArgumentException("{$breed->value} is not a dog breed (see catRows())."),
         };
@@ -9384,6 +9401,78 @@ class BreedStageParamsSeeder extends Seeder
                 'ref' => 'coton_de_tulear.lifespan.rkc',
                 'quote' => 'Lifespan: Over 12 years',
                 'notes' => 'RKC Breeds A–Z lower bound (S724); PDSA "Over 12 years" (S725) agrees, PetMD 15–19 y (S726, citing a US breed club) is consistent. No McMillan 2024 value reachable (14.2 y only via Wikipedia S727, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
+            ]],
+        ];
+    }
+
+    /**
+     * English Setter (M5-R10-97). Stage boundaries, arrival ages, exercise minutes and the learning multiplier follow the
+     * runbook's standing rules (CONFIRMED_R10_ENGLISH_SETTER); weight, growth, Coren rank and lifespan are sourced.
+     *
+     * @return array<string, mixed>
+     */
+    private static function englishSetterProfile(): array
+    {
+        $decided = self::CONFIRMED_R10_ENGLISH_SETTER;
+        $boundary = fn (string $note): array => [
+            'unit' => 'months', 'source_id' => 'S11,S10,S731', 'confidence' => 'medium', 'verified' => true,
+            'ref' => 'proposed_game_parameters.english_setter.stage_boundaries_months', 'decision' => $decided,
+            'notes' => $note,
+        ];
+
+        return [
+            'starts_at' => [
+                'young' => [9, $boundary('Game boundary (no exact month in the literature): AAHA\'s young adult starts at the cessation of rapid growth (~6–9 months, S11); a large dog reaches adult weight at 15–18 months (S10). Same 9 as the other dogs.')],
+                'adult' => [36, $boundary('Game boundary (no exact month in the literature): maturation completes at 3–4 years (S11); 36 months = lower end, same as the other dogs.')],
+                'senior' => [90, $boundary('Derived game boundary: last 25 % of lifespan (S11) × RKC lower bound "Over 10 years" (S731) = 7.5 y = 90 months. No McMillan 2024 / VetCompass median reachable — provisional. Not chosen: 118 (McMillan 13.1 y only via Wikipedia S735, tier C), 84 (Dogs Trust > 7 y, S14).')],
+            ],
+            'arrival' => ['young' => 9, 'adult' => 36, 'senior' => 90],
+            'arrival_meta' => [
+                'unit' => 'months', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_setter.arrival_age_months', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): first month of the stage (rule of 2026-10-05), so the dog stays in this stage for the 12-week challenge.',
+            ],
+            'young_per_age_notes' => 'Game rule; applies "until full-grown" (15–18 months for a large dog, S10); capped at the adult 120 minutes, which 10 × age reaches at 12 months.',
+            'adult_minutes' => [120, [
+                'unit' => 'minutes/day', 'source_id' => 'S731', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_setter.exercise_minutes_adult', 'decision' => $decided,
+                'quote' => 'More than 2 hours per day',
+                'notes' => 'RKC breed page key fact "Exercise: More than 2 hours per day" (S731) → 120 min = 12,000 steps (runbook rule: "more than N" → N). PDSA (S732) "over 2 hours of exercise per day" agrees.',
+            ]],
+            'senior_minutes' => [90, [
+                'unit' => 'minutes/day', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_setter.exercise_minutes_senior', 'decision' => $decided,
+                'notes' => 'Game value (no literature number): 75 % of the adult 120 minutes = 90 min = 9,000 steps. Sources only say "frequent short walks instead of one long one" (S14).',
+            ]],
+            'adult_weight' => [[22.0, 29.0], [
+                'unit' => 'kg', 'source_id' => 'S732', 'confidence' => 'high', 'verified' => true,
+                'ref' => 'english_setter.adult_weight.pdsa',
+                'quote' => '22-29 kg',
+                'notes' => 'PDSA key fact "Average weight" (S732), one range for both sexes. The FCI standard (S730) gives height only; PetMD 45–80 lb (S733) is an alternative.',
+            ]],
+            'growth_end' => [[15, 18], [
+                'unit' => 'months', 'source_id' => 'S10', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_setter.growth.adult_weight_reached',
+                'quote' => 'Large (59–99 pounds): 15–18 months',
+                'notes' => 'Size-class value, not breed-specific (RKC "Large", S731 → the Large class of S10).',
+            ]],
+            'coren_rank' => [37, [
+                'unit' => 'rank', 'source_id' => 'S735', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_setter.trainability.coren_rank',
+                'notes' => 'Coren rank 37 "English Setter", above average working/obedience intelligence (ranks 27–39) — Wikipedia English Setter article (S735, citing Coren 1995, checked 2026-11-06).',
+            ]],
+            'learning_multiplier' => [1.2, [
+                'unit' => '× mixed-breed learning speed', 'source_id' => 'S735', 'confidence' => 'low', 'verified' => true,
+                'ref' => 'proposed_game_parameters.english_setter.learning_multiplier', 'decision' => $decided,
+                'notes' => 'Game value (no literature factor): Coren rank 37 = Above average (S735) → 1.2. Multiplies the progress per correctly timed praise.',
+            ]],
+            // Like the other pedigree breeds: no individual variation row.
+            'individual_variation' => null,
+            'lifespan' => [10, [
+                'unit' => 'years', 'source_id' => 'S731', 'confidence' => 'medium', 'verified' => true,
+                'ref' => 'english_setter.lifespan.rkc',
+                'quote' => 'Over 10 years',
+                'notes' => 'RKC Breeds A–Z lower bound (S731); PDSA "Over 10 years" (S732), PetMD average 12 y (S733) and VCA 10–12 y (S734) are consistent. No McMillan 2024 value reachable (13.1 y only via Wikipedia S735, tier C). Background for the senior boundary only — never shown as a statistic in the app.',
             ]],
         ];
     }

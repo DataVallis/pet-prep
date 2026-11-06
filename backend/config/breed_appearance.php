@@ -775,6 +775,14 @@
 | patches. Coat never trimmed except the feet (S723). One standard colour (weight 100); `verified => false` like every
 | new breed.
 |
+| English Setter (M5-R10-97, docs/research/dog-data english_setter.appearance):
+| "Of medium height, clean in outline, elegant in appearance and movement." (FCI-Standard N° 2, S730); colours blue,
+| orange, lemon and liver belton or tricolour (blue / liver belton and tan), "Any other colour or combination of colours
+| unacceptable." (S730); muzzle "Moderately deep and fairly square", eyes hazel to dark brown, ears "set on low, and hanging
+| in neat folds close to cheek", coat "slightly wavy, not curly, long and silky", tail of medium length, slightly curved
+| (S730; natural). Not a welfare breed (RKC Breed Watch Category 1, S731). Blue belton first with the highest weight
+| (the portrait default); weights unsourced → `verified => false`.
+|
 | Standard Schnauzer (M5-R10-95, docs/research/dog-data standard_schnauzer.appearance): "Medium sized, strong, stocky
 | rather than slim, rough haired." (FCI-Standard N° 182, S712); colours "pepper and salt" — "the aim is a medium shading with
 | evenly distributed, well pigmented pepper colouring." — and "Pure black with black undercoat." (S712; FCI nomenclature S711,
@@ -4252,6 +4260,43 @@ return [
             'tail' => ['low-set, well-feathered tail curved over the back'],
         ],
         'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'head', 'ear_carriage', 'eye_color', 'tail'],
+    ],
+    // M5-R10-97 (docs/research/dog-data/data.json english_setter.appearance; runbook rules 2026-10-10: the six standard colours
+    // of FCI-Standard N° 2 (S730), blue belton first = the portrait default; natural tail; never solid coloured).
+    'english_setter' => [
+        'display_name' => 'English Setter',
+        // Colour frequencies are in no source (english_setter.appearance.colour_weights UNSOURCED) → draft.
+        'verified' => false,
+        'source' => 'FCI-Standard N° 2 (S730) and the RKC breed page (S731) — for the traits listed in `sources`. The colour weights are unsourced.',
+        'sources' => [
+            'size' => 'S730 "Males: 65-68 cm / Females: 61-65 cm."; RKC S731 "Large"; PDSA S732 22-29 kg',
+            'build' => 'S730 "Of medium height, clean in outline, elegant in appearance and movement."',
+            'coat_length' => 'S730 "From back of head in line with ears slightly wavy, not curly, long and silky, as is coat generally, breeches and forelegs nearly down to feet well feathered."',
+            'coat_color' => 'S730 "Black and white (blue belton), orange and white (orange belton), lemon and white (lemon belton), liver and white (liver belton) or tricolour, that is blue belton and tan or liver belton and tan" (weights unsourced)',
+            'muzzle' => 'S730 "Moderately deep and fairly square"; nose "black or liver, according to colour of coat."',
+            'ear_carriage' => 'S730 "Moderate length, set on low, and hanging in neat folds close to cheek, tip velvety, upper part clothed in fine silky hair."',
+            'eye_color' => 'S730 "Colour ranging between hazel and dark brown, the darker the better." / "Eyes oval and not protruding."',
+            'tail' => 'S730 "Set almost in line with back, medium length, not reaching below hock, neither curly nor ropy, slightly curved or scimitar-shaped" (natural)',
+        ],
+        'traits' => [
+            'size' => ['large'],
+            'build' => [['value' => 'elegant, clean-outlined gundog of medium height', 'weight' => 3], 'graceful, athletic gundog'],
+            'coat_length' => ['slightly wavy, long silky coat with well-feathered breeches, forelegs, belly and tail'],
+            // Standard colours (FCI S730); blue belton first with the highest weight → the register portrait.
+            'coat_color' => [
+                ['value' => 'blue belton (white evenly flecked with black)', 'weight' => 35],
+                ['value' => 'orange belton (white evenly flecked with orange)', 'weight' => 20],
+                ['value' => 'tricolour (blue belton with tan markings)', 'weight' => 15],
+                ['value' => 'lemon belton (white evenly flecked with lemon)', 'weight' => 10],
+                ['value' => 'liver belton (white evenly flecked with liver)', 'weight' => 10],
+                ['value' => 'tricolour (liver belton with tan markings)', 'weight' => 10],
+            ],
+            'muzzle' => ['moderately deep, fairly square muzzle with a nose matching the coat colour'],
+            'ear_carriage' => ['low-set ears of moderate length hanging in neat folds, with fine silky hair'],
+            'eye_color' => ['bright, mild, dark brown oval eyes'],
+            'tail' => ['natural tail of medium length, slightly curved, carried level with the back, with long feathering'],
+        ],
+        'prompt_order' => ['size', 'build', 'coat_length', 'coat_color', 'muzzle', 'ear_carriage', 'eye_color', 'tail'],
     ],
     'maine_coon' => [
         'display_name' => 'Maine Coon cat',
