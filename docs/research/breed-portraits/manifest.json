@@ -1182,6 +1182,19 @@
             "prompt_hash": "sha256:c8b6881c5926302f6b6bbc0687f0a96565b53e0e06871efd17cd382a406a06c7",
             "generated_at": "2026-11-05T06:49:48+00:00",
             "cost_usd": 0.15
+        },
+        {
+            "breed": "english_setter",
+            "species": "dog",
+            "colour": "blue-belton",
+            "file": "dog/english-setter.webp",
+            "width": 1024,
+            "height": 1024,
+            "kind": "ai_photo",
+            "profile": "nano_banana_pro",
+            "prompt_hash": "sha256:d17596c37befd6c67b53ef5727a27f9fc01a3d3e40e4b49ed2adc26bdfbc05db",
+            "generated_at": "2026-11-06T00:50:37+00:00",
+            "cost_usd": 0.15
         }
     ],
     "colour_variants": [
