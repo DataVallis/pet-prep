@@ -65,7 +65,7 @@
     },
     "portraits": {
       "path": "docs/research/breed-portraits/manifest.json",
-      "sha256": "4ffdf5ffaefb4087eeb20292bab00397d9719224dbd43d960020b9d1b91a06e2"
+      "sha256": "9fe1c9e81f8f568ba04a5a3cecdfaeac20a8694936a85fe263820d908b7cfa12"
     }
   },
   "suitability_vocabulary": {
@@ -55043,7 +55043,12 @@
           "S735"
         ]
       },
-      "portrait": null,
+      "portrait": {
+        "file": "english-setter.webp",
+        "width": 1024,
+        "height": 1024,
+        "kind": "ai_photo"
+      },
       "breeder_checklist": {
         "status": "listed",
         "tests": [

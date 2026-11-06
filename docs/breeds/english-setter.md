@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `english_setter` (viri S729–S736; ponovno S10, S11, S14, S24, S45, S54, S174); seznam za vzreditelja: stran RKC (S731) |
 | Izvor | FCI št. 2, skupina 7, sekcija 2 (britanski in irski ptičarji in setri), Velika Britanija (S729, S730) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 93. mesto »English Setter« (S174, prebrano 2026-11-06) |
-| PR-ji | pet-prep #821 (pasma) · portret: sledi · spletna stran: sledi |
+| PR-ji | pet-prep #821 (pasma, združen `bff550e`) · portret pet-prep PR `feat/M5-R10-97-english-setter-portrait` (zagon `breed-portraits.yml` 42139655708, sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-english-setter` |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -41,8 +41,8 @@
 | Česanje 3× na teden, »Nova izkušnja« za mladička | 🛠 | 💶 izziv | M5-R13 / M5-R17 | 2026-11-06 |
 | Opomnik staršem: kopanje vsakih 6 tednov, frizer vsake 4 tedne | 🛠 | 💶 izziv | M5-R18 / M5-R19 | 2026-11-06 |
 | Barva (izbirnik: šest barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-06 |
-| AI portret v registru | 🗓 sledi (portret po združitvi) | — | M5-R11-04 | — |
-| Stran na petprep.si (`/animals/dogs/english-setter`, `/sl/zivali/psi/angleski-seter`) | 🗓 šele s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«), modri belton, naraven rep | — | M5-R11-04 | 2026-11-06 |
+| Stran na petprep.si (`/animals/dogs/english-setter`, `/sl/zivali/psi/angleski-seter`) | 🛠 s portretom; »Kmalu«, dokler pasma ni v izdaji aplikacije | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
 
