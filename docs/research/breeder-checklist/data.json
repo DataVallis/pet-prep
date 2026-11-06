@@ -3511,6 +3511,54 @@
         }
       ],
       "notes": "RKC Breeds A–Z page 'Coton De Tulear' (dog-data S724, 2026-11-05): minimum (Good Practice, 'as evidence indicates these conditions are a significant concern in the breed') — genetic diversity (inbreeding_coi); Best Practice — BVA/KC/ISDS eye scheme (eye_scheme). The page also points to a breed club health scheme (cdtclubuk.org, not fetched). No new test keys."
+    },
+    "english_setter": {
+      "status": "listed",
+      "basis": {
+        "source_id": "S731",
+        "level_quotes": {
+          "minimum": "We strongly recommend that breeders, at a minimum, conduct these tests before breeding",
+          "best_practice": "These tests address conditions that are still significant for the breed"
+        }
+      },
+      "tests": [
+        {
+          "key": "inbreeding_coi",
+          "level": "minimum",
+          "name": "Prioritising genetic diversity",
+          "source_id": "S731",
+          "quote": "Prioritising genetic diversity"
+        },
+        {
+          "key": "hip_scheme",
+          "level": "minimum",
+          "name": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme",
+          "source_id": "S731",
+          "quote": "Hip testing (for hip dysplasia) using the BVA/RKC Hip Dysplasia Scheme"
+        },
+        {
+          "key": "dna_ncl8",
+          "level": "best_practice",
+          "name": "DNA test - NCL8",
+          "source_id": "S731",
+          "quote": "DNA test - NCL8"
+        },
+        {
+          "key": "elbow_scheme",
+          "level": "best_practice",
+          "name": "Elbow testing (for elbow dysplasia) using the BVA/RKC Elbow Dysplasia Scheme",
+          "source_id": "S731",
+          "quote": "Elbow testing (for elbow dysplasia) using the BVA/RKC Elbow Dysplasia Scheme"
+        },
+        {
+          "key": "hearing_baer",
+          "level": "best_practice",
+          "name": "Hearing testing (for deafness) using the RKC BAER Scheme (including litter screening)",
+          "source_id": "S731",
+          "quote": "Hearing testing (for deafness) using the RKC BAER Scheme (including litter screening)"
+        }
+      ],
+      "notes": "RKC breed page (dog-data S731, 2026-11-06; 'Good Practice' tests = minimum, 'Best Practice'): minimum genetic diversity (inbreeding_coi) and the BVA/RKC hip scheme (hip_scheme); Best Practice NCL8 DNA test (new key dna_ncl8), elbow scheme and the BAER hearing test (hearing_baer, existing key)."
     }
   }
 }

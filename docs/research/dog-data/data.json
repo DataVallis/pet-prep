@@ -50355,6 +50355,551 @@
       }
     }
   },
+  "english_setter": {
+    "_note": "Added 2026-11-06 (M5-R10-97, unattended run — appended after the Coton de Tulear: AKC 2024 No. 93 'English Setter', S174 full-list table '93 | English Setter'). Quotes as returned by the web-fetch tool on 2026-11-06 (fragments marked as such); paraphrase only in notes. Sources S729–S736 (+ S10 growth, S11 AAHA, S14 Dogs Trust, S45 steps, S54 McMillan). No health percentages anywhere. A large gundog (FCI Group 7, pointing dogs), RKC Breed Watch Category 1, an RKC vulnerable native breed.",
+    "identity": {
+      "value": "FCI No. 2, Group 7 Section 2 (British and Irish Pointers and Setters), Great Britain",
+      "unit": "—",
+      "source_id": "S729",
+      "quote": "ENGLISH SETTER (2)",
+      "confidence": "high",
+      "notes": "FCI nomenclature (S729): 'Group : n°7 - Pointing Dogs', section 'British and Irish Pointers and Setters', subsection 'Setter', country of origin 'GREAT BRITAIN', 'Subject to a working trial', accepted on a definitive basis 3/6/1963, valid standard published 9/8/2026. FCI-Standard N° 2 (S730): 'FCI-CLASSIFICATION: Group 7 Pointing Dogs / Section 2.2 British and Irish Pointers and Setters, Setter. / With working trial.', 'ORIGIN: Great Britain.'."
+    },
+    "size_class": {
+      "value": "large",
+      "unit": "—",
+      "source_id": "S731",
+      "quote": "Large",
+      "confidence": "high",
+      "notes": "RKC Breeds A–Z key fact 'Size' (S731, value as returned); PDSA (S732) 'Size: Large' agrees. PDSA 22–29 kg (≈ 49–64 lb) and PetMD 45–80 lb (S733) span the 'Medium (26–58 pounds)' / 'Large (59–99 pounds)' classes of S10 → 'Large' (RKC) used for growth."
+    },
+    "height": {
+      "fci": {
+        "value": {
+          "male": [
+            65,
+            68
+          ],
+          "female": [
+            61,
+            65
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S730",
+        "quote": "Males: 65-68 cm",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730): 'Males: 65-68 cm / Females: 61-65 cm.' (as returned). The game range. PDSA (S732) average 61–69 cm; PetMD (S733) 23–27 in; Wikipedia (S735) 61–69 cm — alternatives."
+      }
+    },
+    "adult_weight": {
+      "pdsa": {
+        "value": {
+          "male": [
+            22,
+            29
+          ],
+          "female": [
+            22,
+            29
+          ]
+        },
+        "unit": "kg",
+        "source_id": "S732",
+        "quote": "22-29 kg",
+        "confidence": "high",
+        "notes": "PDSA key facts 'Average weight' (S732, value as returned), one range for both sexes — the game range 22–29 kg (adult_weight_kg). The FCI standard (S730) gives height only, no weight. PetMD (S733) 'can weigh anywhere between 45–80 pounds' (≈ 20–36 kg) — alternative."
+      }
+    },
+    "growth": {
+      "adult_weight_reached": {
+        "value": "15–18 months",
+        "unit": "age",
+        "source_id": "S10",
+        "quote": "Large (59–99 pounds): 15–18 months",
+        "confidence": "medium",
+        "notes": "Size-class value (PetMD S10), not breed-specific: RKC 'Large' (S731); PDSA 22–29 kg (S732) sits on the Medium / Large border → the RKC class (Irish Setter precedent). The game is unaffected (the puppy cap of 120 min is reached at 12 months)."
+      },
+      "weight_by_month_kg": {
+        "value": null,
+        "unit": "kg",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — no English Setter growth curve found."
+      }
+    },
+    "lifespan": {
+      "rkc": {
+        "value": "> 10",
+        "unit": "years",
+        "source_id": "S731",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Lifespan' (S731, value as returned); PDSA (S732) 'Average lifespan: Over 10 years' agrees. The basis of the senior boundary (runbook: RKC lower bound when no McMillan 2024 / VetCompass value is reachable). Not shorter_lifespan."
+      },
+      "petmd": {
+        "value": "average 12",
+        "unit": "years",
+        "source_id": "S733",
+        "quote": "English Setters are generally a healthy breed with an average lifespan of 12 years.",
+        "confidence": "medium",
+        "notes": "PetMD (S733, tier B, US). VCA (S734) 'Lifespan 10 - 12 years'. Consistent with the RKC lower bound."
+      },
+      "mcmillan_2024": {
+        "value": null,
+        "unit": "years",
+        "source_id": "S54",
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — McMillan et al. 2024: no breed value reachable (the Dogs Trust breed table S123 was not in the fetch tool's provenance). Wikipedia (S735, tier C): 'A 2024 UK study found a life expectancy of 13.1 years for the breed compared to an average of 12.7 for purebreeds and 12 for crossbreeds.' — would give 0.75 × 13.1 × 12 = 117.9 → 118. Verify in S123 before replacing the RKC lower bound."
+      },
+      "senior_from": {
+        "value": 7.5,
+        "unit": "years",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Derived: AAHA senior = last 25 % of lifespan (S11) × 10 y (RKC lower bound 'Over 10 years', S731) → 0.75 × 10 = 7.5 y = 90 months. McMillan 13.1 y via Wikipedia (tier C) would give 118; PetMD 12 y (S733) 108. Dogs Trust rule of thumb > 7 y = 84 months (S14). Provisional until McMillan 2024 is checked.",
+        "derived_from": [
+          "S11",
+          "S731"
+        ],
+        "months": 90,
+        "alternative": {
+          "value_years": 7,
+          "months": 84,
+          "derived_from": [
+            "S14"
+          ]
+        }
+      }
+    },
+    "exercise": {
+      "adult": {
+        "value": "> 120",
+        "unit": "minutes/day",
+        "source_id": "S731",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC Breeds A–Z key fact 'Exercise' (S731, value as returned) — the runbook's preferred source. PDSA (S732): 'Known to have high energy levels, English Setters will need over 2 hours of exercise per day to keep them physically and mentally fit.' and key fact 'Minimum exercise (per day): 2 hours'; PetMD (S733) and VCA (S734) give no number — the sources agree on 120."
+      },
+      "pdsa": {
+        "value": "over 2 hours a day",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "Known to have high energy levels, English Setters will need over 2 hours of exercise per day to keep them physically and mentally fit.",
+        "confidence": "high",
+        "notes": "PDSA (S732). Agrees with 120."
+      },
+      "petmd": {
+        "value": "low-impact exercise to protect elbows and hips",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "You can help minimize stress on your English Setter's elbows and hips by providing low-impact exercise (such as walking and swimming instead of running), and helping them maintain a healthy weight.",
+        "confidence": "high",
+        "notes": "PetMD (S733). Background for the care guide (walking is the game's exercise)."
+      },
+      "after_meals": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No A/B source found advising a gap between meals and exercise for this breed (PDSA S732, PetMD S733, VCA S734 do not mention bloat / GDV) → no meal_exercise_gap row."
+      }
+    },
+    "behaviour": {
+      "temperament": {
+        "value": "very active with a keen game sense; intensely friendly and good natured",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Very active with a keen game sense. Intensely friendly and good natured.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730) 'BEHAVIOUR / TEMPERAMENT'. PDSA (S732) 'English Setters are lively, happy, easy-going dogs that tend to get on well with everyone.'; PetMD (S733) 'gentle, friendly, and easygoing'."
+      },
+      "family": {
+        "value": "perfect for families",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "They love children and other pets, making them perfect for families.",
+        "confidence": "high",
+        "notes": "PDSA (S732) — a breed-specific family statement, basis of the family_pet chip (the RKC page's 'ideal all-round family dogs' sentence describes the whole Gundog group)."
+      },
+      "children": {
+        "value": "love children",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "They love children and other pets, making them perfect for families.",
+        "confidence": "high",
+        "notes": "PDSA (S732) — an explicit statement, basis of the children chip. PetMD (S733) 'They are also good with children and, when properly socialized and introduced, get along well with other pets.'; VCA (S734) 'Usually very good with children.'. No explicit small-children rating → never small_children."
+      },
+      "other_pets": {
+        "value": "love other pets; a home with pet birds may not suit",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "They love children and other pets, making them perfect for families.",
+        "confidence": "high",
+        "notes": "PDSA (S732). PetMD (S733) '(though, because of their history as bird dogs, a home with feathered pets might not be a good fit)'; VCA (S734) 'Gets along well with other pets and dogs.'. No 'high prey drive' wording → no chases_small_pets chip. Basis of the other_pets chip."
+      },
+      "time_alone": {
+        "value": "don't like being left alone for long",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "They don’t like being left alone for long and just want to be by their human’s side.",
+        "confidence": "high",
+        "notes": "PetMD (S733). Basis of the needs_company chip (Irish Setter precedent); never often_alone."
+      },
+      "socialisation": {
+        "value": "early socialisation and training",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "As with all breeds, early socialisation and training is still important to ensure they grow up into confident, sociable dogs",
+        "confidence": "high",
+        "notes": "PDSA (S732) fragment as returned (continues '– for more information on how to socialise your English Setter …'). PetMD (S733) 'Socializing English Setter puppies is essential to ensure they grow up to be well-adjusted companions.'. Basis of the breed's own socialisation quote (M5-R17)."
+      },
+      "training": {
+        "value": "reward-based training with consistency and patience",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "Train your English Setter with positive reinforcement methods, using praise, treats, and rewards to motivate and encourage desired behaviors.",
+        "confidence": "medium",
+        "notes": "PetMD (S733); 'When training any dog, including English Setters, consistency and patience are key.'."
+      },
+      "chewing": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific chewing statement found."
+      },
+      "food_motivation": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific food-motivation statement found."
+      }
+    },
+    "health": {
+      "_note": "Parent-facing background only, recorded factually with sources; no percentages anywhere. RKC Breed Watch Category 1 (S731). Conditions named by PDSA (S732) and PetMD (S733).",
+      "breed_watch": {
+        "value": "RKC Breed Watch Category 1",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Currently no points of concern specific to this breed have been identified for special attention by judges",
+        "confidence": "high",
+        "notes": "RKC breed page (S731) Breed Watch, Category 1 (fragment as returned). Not a conformation welfare breed."
+      },
+      "hips": {
+        "value": "hip dysplasia",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list item 'Hip dysplasia'; PetMD (S733) 'Hip dysplasia and elbow dysplasia are both genetic conditions that can affect English Setters.'. RKC minimum hip scheme (S731, breeder checklist)."
+      },
+      "elbows": {
+        "value": "elbow dysplasia",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list item; PetMD (S733) agrees; RKC Best Practice elbow scheme (S731)."
+      },
+      "deafness": {
+        "value": "congenital deafness (linked to the mostly white coat)",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "And because English Setter puppies have a mostly white coat, deafness is a hereditary condition that can affect the breed.",
+        "confidence": "high",
+        "notes": "PetMD (S733). RKC Best Practice BAER hearing test incl. litter screening (S731, breeder checklist)."
+      },
+      "ears": {
+        "value": "ear infections (floppy ears)",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "Like many breeds with floppy ears, English Setters are prone to ear infections because moisture and debris can become trapped in the ear canal.",
+        "confidence": "high",
+        "notes": "PetMD (S733); ear checks 'regularly' (no frequency → no ear task)."
+      },
+      "skin": {
+        "value": "atopy (skin allergy) and skin problems",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list items 'Atopy', 'Skin problems'."
+      },
+      "eyes": {
+        "value": "ectropion (outward-turning eyelids)",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list item 'Ectropion – outward turning eyelids'."
+      },
+      "thyroid": {
+        "value": "hypothyroidism",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list item; PetMD (S733) agrees."
+      },
+      "cancer": {
+        "value": "cancer",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "PDSA (S732) list item 'Cancer'."
+      },
+      "ncl": {
+        "value": "neuronal ceroid lipofuscinosis (NCL8) — DNA test available",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "DNA test - NCL8",
+        "confidence": "high",
+        "notes": "RKC Best Practice test (S731); breeder checklist."
+      }
+    },
+    "trainability": {
+      "coren_rank": {
+        "value": 37,
+        "unit": "rank (working/obedience intelligence)",
+        "source_id": "S735",
+        "quote": "They rank 37th in Stanley Coren's The Intelligence of Dogs, being of above average working/obedience intelligence.",
+        "confidence": "medium",
+        "notes": "Wikipedia English Setter article (S735, tier C; cites Coren 1995 p. 182) — Coren's rank may come from Wikipedia (runbook §2.1; S35 is the Wikipedia table used before). Rank 37 → tier 'Above average' (ranks 27–39). Verify in The Intelligence of Dogs."
+      },
+      "coren_tier": {
+        "value": "Above average",
+        "unit": "—",
+        "source_id": "S735",
+        "quote": null,
+        "confidence": "medium",
+        "notes": "S735 'being of above average working/obedience intelligence' (ranks 27–39)."
+      },
+      "training_notes": {
+        "value": "positive reinforcement, consistency and patience",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "When training any dog, including English Setters, consistency and patience are key.",
+        "confidence": "medium",
+        "notes": "PetMD (S733)."
+      },
+      "learning_multiplier": {
+        "value": null,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value — see proposed_game_parameters.english_setter.learning_multiplier (1.2, runbook rule: Above average tier, rank 37).",
+        "derived_from": [
+          "S735"
+        ]
+      }
+    },
+    "appearance": {
+      "general": {
+        "value": "medium height, clean in outline, elegant in appearance and movement",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Of medium height, clean in outline, elegant in appearance and movement.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730)."
+      },
+      "colours": {
+        "value": [
+          "blue belton",
+          "orange belton",
+          "lemon belton",
+          "liver belton",
+          "tricolour (blue belton and tan)",
+          "tricolour (liver belton and tan)"
+        ],
+        "unit": "list",
+        "source_id": "S730",
+        "quote": "Black and white (blue belton), orange and white (orange belton), lemon and white (lemon belton), liver and white (liver belton) or tricolour, that is blue belton and tan or liver belton and tan, those without heavy patches of colour on body but flecked (belton) all over preferable. Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730) 'Colour'. Belton = the breed's flecked coat ticking on white ('« Belton » is the customary term used for the description of the distinctive coat-ticking of the English Setter.'). Flecked all over preferred to heavy patches. Never solid colours, never merle."
+      },
+      "colour_weights": {
+        "value": null,
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "UNSOURCED — game draft (verified=false in breed_appearance.php): blue belton 0.35 (the most typical; the Wikipedia caption 'A blue belton English Setter', S735), orange belton 0.2, tricolour (blue belton and tan) 0.15, lemon belton 0.1, liver belton 0.1, tricolour (liver belton and tan) 0.1. Portrait default = blue belton."
+      },
+      "coat": {
+        "value": "slightly wavy, long and silky; well-feathered breeches and forelegs",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "From back of head in line with ears slightly wavy, not curly, long and silky, as is coat generally, breeches and forelegs nearly down to feet well feathered.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730) 'Hair'."
+      },
+      "muzzle": {
+        "value": "moderately deep and fairly square",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Moderately deep and fairly square, from stop to point of nose should be equal to length of skull from occiput to eyes.",
+        "confidence": "high",
+        "notes": "FCI (S730). Nose black or liver according to coat colour ('Colour of nose black or liver, according to colour of coat. Nostrils wide.')."
+      },
+      "eyes": {
+        "value": "bright, mild and expressive; hazel to dark brown, oval",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Bright, mild and expressive. Colour ranging between hazel and dark brown, the darker the better.",
+        "confidence": "high",
+        "notes": "FCI (S730); 'In liver beltons only, a lighter eye acceptable. Eyes oval and not protruding.'."
+      },
+      "ears": {
+        "value": "moderate length, set low, hanging in neat folds, upper part clothed in fine silky hair",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Moderate length, set on low, and hanging in neat folds close to cheek, tip velvety, upper part clothed in fine silky hair.",
+        "confidence": "high",
+        "notes": "FCI (S730)."
+      },
+      "tail": {
+        "value": "medium length, slightly curved, with long feathering (natural)",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Set almost in line with back, medium length, not reaching below hock, neither curly nor ropy, slightly curved or scimitar-shaped but with no tendency to turn upwards",
+        "confidence": "high",
+        "notes": "FCI (S730) fragment; 'flag or feathers hanging in long pendant flakes'. Never docked."
+      }
+    },
+    "suitability": {
+      "_note": "Source = RKC Breeds A–Z key facts (S731, returned as values — quoted here as the value), PDSA (S732), PetMD (S733), VCA (S734). The RKC page shows no 'Good with children' field.",
+      "rkc_size": {
+        "value": "Large",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Large",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size' (S731)."
+      },
+      "rkc_exercise": {
+        "value": "More than 2 hours per day",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "Basis of 120 min (PDSA S732 'over 2 hours of exercise per day' agrees). Basis of long_daily_exercise / active_family."
+      },
+      "rkc_size_of_home": {
+        "value": "Large house",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Large house",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of home' (S731). Basis of the large_home chip; never apartment."
+      },
+      "rkc_size_of_garden": {
+        "value": "Large garden",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Large garden",
+        "confidence": "high",
+        "notes": "RKC key fact 'Size of garden' (S731)."
+      },
+      "rkc_grooming": {
+        "value": "More than once a week",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "More than once a week",
+        "confidence": "high",
+        "notes": "RKC key fact 'Grooming' (S731). No number → runbook dog-grooming rule: the most specific number of another A/B source — PDSA (S732) '2-3 times per week' → 3 (range → upper bound). Basis of frequent_grooming."
+      },
+      "rkc_coat_length": {
+        "value": "Medium",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Medium",
+        "confidence": "high",
+        "notes": "RKC key fact 'Coat length' (S731); PDSA (S732) 'Medium' agrees."
+      },
+      "rkc_shedding": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Sheds' (S731); PetMD (S733) 'English Setters are moderate shedders.' agrees. Basis of the sheds chip; never low_shedding / hypoallergenic."
+      },
+      "rkc_lifespan": {
+        "value": "Over 10 years",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Over 10 years",
+        "confidence": "high",
+        "notes": "RKC key fact 'Lifespan' (S731)."
+      },
+      "rkc_town_or_country": {
+        "value": "Either",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Either",
+        "confidence": "high",
+        "notes": "RKC key fact 'Town or country' (S731)."
+      },
+      "rkc_vulnerable_native_breed": {
+        "value": "Yes",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Yes",
+        "confidence": "high",
+        "notes": "RKC key fact 'Vulnerable native breed' (S731) — a UK native breed with few registrations (background, no chip)."
+      },
+      "rkc_breed_watch": {
+        "value": "Category 1",
+        "unit": "—",
+        "source_id": "S731",
+        "quote": "Category 1",
+        "confidence": "high",
+        "notes": "RKC breed page (S731) Breed Watch category."
+      },
+      "pdsa_grooming": {
+        "value": "grooming 2–3 times a week, occasional clipping and trimming",
+        "unit": "—",
+        "source_id": "S732",
+        "quote": "They'll need grooming 2-3 times per week, and occasional clipping and trimming.",
+        "confidence": "high",
+        "notes": "PDSA (S732). The basis of brushing 3× a week (M5-R13, range → upper bound). PetMD (S733) 'Brushing this dog at least two to three times a week is necessary to prevent knots and tangles.' and VCA (S734) 'The coat needs brushing and combing two to three times a week to prevent mats.' agree."
+      },
+      "petmd_bath": {
+        "value": "bath every six to eight weeks",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "Bathe your English Setter every six to eight weeks or whenever they get dirty outside.",
+        "confidence": "high",
+        "notes": "PetMD (S733). Basis of the parent's bath reminder every 6 program weeks (M5-R19). VCA (S734) 'It needs monthly bathing.' — alternative (4 weeks), open for David."
+      },
+      "petmd_ears": {
+        "value": "check and clean the ears regularly",
+        "unit": "—",
+        "source_id": "S733",
+        "quote": "Check and clean your dog’s ears regularly, as the English Setter’s floppy ears can trap moisture and lead to ear infections.",
+        "confidence": "high",
+        "notes": "PetMD (S733). No frequency → no ear-cleaning task (runbook »Breed care tasks«); stays a fact in the care guide."
+      },
+      "vca_grooming": {
+        "value": "brushing and combing 2–3× a week; clipping and trimming every month; monthly bath",
+        "unit": "—",
+        "source_id": "S734",
+        "quote": "Some clipping and trimming is needed every month to maintain optimal looks.",
+        "confidence": "high",
+        "notes": "VCA (S734): 'The coat needs brushing and combing two to three times a week to prevent mats.', 'It needs monthly bathing.', 'Some clipping and trimming is needed every month to maintain optimal looks.'. The clipping sentence is the basis of the parent's groomer reminder every 4 program weeks (M5-R18); PDSA (S732) 'occasional clipping and trimming' gives no number."
+      }
+    }
+  },
   "proposed_game_parameters": {
     "_note": "Everything here is a PROPOSAL derived from the values above; see README for the derivation. Not facts.",
     "feed_windows": {
@@ -75290,6 +75835,321 @@
         "confidence": "high",
         "notes": "Colour of the FCI standard (S722) and RKC standard (S723): white. Weights unsourced in prompts. White as the portrait default — the only standard colour.",
         "decision": "potrdil David 2026-10-10 (pravilo runbooka): white is the portrait default (the only standard colour); natural, untrimmed cotton coat"
+      }
+    },
+    "english_setter": {
+      "_note": "Unattended run M5-R10-97 (2026-11-06): every value follows a standing decision rule of docs/engineering/ADD_BREED_RUNBOOK.md §3 (confirmed by David 2026-10-10 / 2026-10-11 / 2026-10-12 / 2026-10-24); recorded as `decision` per entry. Exercise from the RKC breed page (S731 'More than 2 hours per day' → 120; PDSA S732 agrees). Senior 90 from the RKC lower bound 'Over 10 years' (S731; McMillan 2024 not reachable → provisional, 118 via Wikipedia open for David). Coren rank 37 (Above average) → 1.2. Built: brushing 3× a week (PDSA S732 '2-3 times per week' → upper bound, M5-R13), puppy socialisation with the PDSA quote (S732, M5-R17), care tasks with a frequency: bath every 6 weeks (PetMD S733, M5-R19), groomer visit every month (VCA S734 clipping and trimming, M5-R18). No ear task (PetMD 'regularly'), no tooth / nail task (no frequency), no meal gap, no heat warning. Not a welfare breed (RKC Breed Watch Category 1) → in marketing. No new vocabulary key. Never hypoallergenic.",
+      "exercise_minutes_adult": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": "S731",
+        "quote": "More than 2 hours per day",
+        "confidence": "high",
+        "notes": "RKC breed page key fact 'Exercise: More than 2 hours per day' (S731) → rule 'more than N' → 120. PDSA (S732) 'over 2 hours of exercise per day' agrees.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min/day (RKC S731 'More than 2 hours per day')"
+      },
+      "step_goal_adult": {
+        "value": 12000,
+        "unit": "child steps/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value (no literature number). 120 min × 100 steps/min (S45) = 12,000.",
+        "derived_from": [
+          "S731",
+          "S45"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 120 min × 100 steps/min → 12,000 steps"
+      },
+      "exercise_minutes_senior": {
+        "value": 90,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game value. round(0.75 × 120) = 90 min → 9,000 steps.",
+        "steps": 9000,
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 min → 9,000 steps (75 % of 120)"
+      },
+      "walk_minutes_puppy_cap": {
+        "value": 120,
+        "unit": "minutes/day",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Game rule: 10 min × age in months, capped at the adult minutes → 120 reached at 12 months.",
+        "derived_from": [
+          "S24"
+        ],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): puppy 10 min × age in months, capped at 120 min (reached at 12 months)"
+      },
+      "stage_boundaries_months": {
+        "value": {
+          "puppy": 0,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months (start of stage)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "young 9 / adult 36 (AAHA S11, all breeds). senior 90 = round(0.75 × 10 y × 12) (S11 + RKC lower bound 'Over 10 years', S731). No McMillan 2024 / VetCompass value reachable. Alternatives: 118 (McMillan 13.1 y via Wikipedia S735, tier C), 84 (Dogs Trust > 7 y, S14). Provisional until McMillan 2024 / the Dogs Trust breed table (S123) is checked.",
+        "derived_from": [
+          "S11",
+          "S10",
+          "S731"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 118,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): young 9, adult 36, senior 90 (0.75 × 10 y, RKC lower bound S731)"
+      },
+      "senior_boundary_months": {
+        "value": 90,
+        "unit": "months (start of senior)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "round(0.75 × 10 y × 12) = 90 (AAHA last 25 % of lifespan S11 × RKC lower bound S731). Runbook order: McMillan 2024 (not reachable) → a VetCompass median (none found) → the RKC lower bound (this).",
+        "derived_from": [
+          "S11",
+          "S731"
+        ],
+        "alternatives": {
+          "senior_mcmillan_via_wikipedia": 118,
+          "senior_dogs_trust_7_y": 84
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 90 (RKC lower bound 10 y, S731)"
+      },
+      "arrival_age_months": {
+        "value": {
+          "puppy": 2,
+          "young": 9,
+          "adult": 36,
+          "senior": 90
+        },
+        "unit": "months",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "First month of each stage.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): first month of each stage (2 / 9 / 36 / 90)"
+      },
+      "learning_multiplier": {
+        "value": 1.2,
+        "unit": "× mixed-breed learning speed (game)",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "Coren rank 37 'English Setter' (S735, checked 2026-11-06) → tier Above average (27–39) → 1.2. No individual variation (pedigree).",
+        "derived_from": [
+          "S735"
+        ],
+        "alternatives": [],
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): 1.2 (Coren rank 37, Above average, S735)"
+      },
+      "care_rates": {
+        "value": {
+          "hunger_decay_per_hour": 12,
+          "thirst_decay_per_hour": 15,
+          "poops_per_day": 2,
+          "water_per_day": 3,
+          "water_min_gap_minutes": 180
+        },
+        "unit": "% per hour / count per day / minutes",
+        "source_id": null,
+        "quote": null,
+        "confidence": "low",
+        "notes": "No breed-specific number in the sources.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): same as the Border Collie — hunger −12 %/h, thirst −15 %/h, 2 poops/day, water 3×/day ≥ 180 min apart"
+      },
+      "grooming": {
+        "value": 3,
+        "unit": "brushing sessions per week (sourced need)",
+        "source_id": "S732",
+        "quote": "They'll need grooming 2-3 times per week, and occasional clipping and trimming.",
+        "confidence": "high",
+        "notes": "english_setter.suitability.pdsa_grooming. RKC 'Grooming: More than once a week' (S731) has no number → runbook dog-grooming rule: the most specific number of another A/B source — PDSA (S732) '2-3 times per week' → 3 (range → upper bound); PetMD (S733) and VCA (S734) 'two to three times a week' agree. Built in M5-R13; matted coat at ceil(3 / 2) = 2 missed.",
+        "alternatives": [
+          {
+            "value": null,
+            "source_id": "S731",
+            "quote": "More than once a week",
+            "notes": "RKC key fact — no number."
+          }
+        ],
+        "decision": "potrdil David 2026-10-11 (pravilo runbooka, vsaka potreba z virom): 3× na teden (RKC »More than once a week« brez števila → PDSA »2-3 times per week«, zgornja meja); mehanika česanja psa zgrajena v ROADMAP M5-R13 (David 2026-10-12, »kot pri mački«)"
+      },
+      "socialisation": {
+        "value": 1,
+        "unit": "new-experience tasks per program week while a puppy (game stage puppy, under 9 months; one tap, never scored)",
+        "source_id": "S732",
+        "quote": "As with all breeds, early socialisation and training is still important to ensure they grow up into confident, sociable dogs",
+        "confidence": "high",
+        "notes": "english_setter.behaviour.socialisation (PDSA S732). Built in M5-R17: one \"new experience\" per program week while a puppy, never scored.",
+        "decision": "potrdil David 2026-10-12: 1 nova izkušnja na teden, dokler je mladiček; brez kazni (ROADMAP M5-R17, socializacija, PDSA S732)"
+      },
+      "bathing": {
+        "value": "bath every six to eight weeks",
+        "unit": "baths (sourced need)",
+        "source_id": "S733",
+        "quote": "Bathe your English Setter every six to eight weeks or whenever they get dirty outside.",
+        "confidence": "high",
+        "notes": "PetMD (S733), english_setter.suitability.petmd_bath. Built: the parent's bath reminder every 6 program weeks (DOG_CARE_TASKS bath [1, six_weeks], M5-R19; never scored). VCA (S734) 'It needs monthly bathing.' → 4 weeks — alternative, open for David.",
+        "alternatives": [
+          {
+            "value": "1 per month",
+            "source_id": "S734",
+            "quote": "It needs monthly bathing."
+          }
+        ],
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R19): »every six to eight weeks« → spodnja meja, vsakih 6 tednov"
+      },
+      "professional_grooming": {
+        "value": "clipping and trimming every month",
+        "unit": "visits (sourced need)",
+        "source_id": "S734",
+        "quote": "Some clipping and trimming is needed every month to maintain optimal looks.",
+        "confidence": "high",
+        "notes": "VCA (S734), english_setter.suitability.vca_grooming. Built: the parent's groomer reminder every 4 program weeks (DOG_CARE_TASKS groomer_visit [1, month], M5-R18; never scored). PDSA (S732) 'occasional clipping and trimming' (no number). Reading the clip as a groomer visit = runbook rule (Standard Schnauzer precedent, VCA clip); open for David.",
+        "decision": "potrdil David 2026-10-24 (pravilo runbooka, M5-R18): »every month« → vsake 4 tedne"
+      },
+      "suitability_tags": {
+        "_note": "Tags shipped in backend/config/breed_suitability.php (M5-R10-97); refs = JSON paths in this file. No new vocabulary key. No percentages in the app. Never hypoallergenic.",
+        "suits": [
+          {
+            "tag": "active_family",
+            "source_ids": [
+              "S731"
+            ],
+            "refs": [
+              "english_setter.exercise.adult",
+              "english_setter.suitability.rkc_exercise"
+            ],
+            "quote": "S731 'More than 2 hours per day'"
+          },
+          {
+            "tag": "family_pet",
+            "source_ids": [
+              "S732"
+            ],
+            "refs": [
+              "english_setter.behaviour.family"
+            ],
+            "quote": "S732 'They love children and other pets, making them perfect for families.'"
+          },
+          {
+            "tag": "children",
+            "source_ids": [
+              "S732"
+            ],
+            "refs": [
+              "english_setter.behaviour.children"
+            ],
+            "quote": "S732 'They love children and other pets, making them perfect for families.'",
+            "note": "No explicit small-children rating → never small_children."
+          },
+          {
+            "tag": "other_pets",
+            "source_ids": [
+              "S732"
+            ],
+            "refs": [
+              "english_setter.behaviour.other_pets"
+            ],
+            "quote": "S732 'They love children and other pets, making them perfect for families.'",
+            "note": "PetMD (S733): a home with feathered pets might not be a good fit — kept in notes."
+          },
+          {
+            "tag": "large_home",
+            "source_ids": [
+              "S731"
+            ],
+            "refs": [
+              "english_setter.suitability.rkc_size_of_home"
+            ],
+            "quote": "S731 'Large house'"
+          }
+        ],
+        "consider": [
+          {
+            "tag": "long_daily_exercise",
+            "source_ids": [
+              "S731"
+            ],
+            "refs": [
+              "english_setter.exercise.adult",
+              "english_setter.suitability.rkc_exercise"
+            ],
+            "quote": "S731 'More than 2 hours per day'"
+          },
+          {
+            "tag": "needs_company",
+            "source_ids": [
+              "S733"
+            ],
+            "refs": [
+              "english_setter.behaviour.time_alone"
+            ],
+            "quote": "S733 'They don’t like being left alone for long and just want to be by their human’s side.'",
+            "note": "Breed-specific statement (Irish Setter precedent); never often_alone."
+          },
+          {
+            "tag": "sheds",
+            "source_ids": [
+              "S731"
+            ],
+            "refs": [
+              "english_setter.suitability.rkc_shedding"
+            ],
+            "quote": "S731 'Yes'"
+          },
+          {
+            "tag": "frequent_grooming",
+            "source_ids": [
+              "S731",
+              "S732"
+            ],
+            "refs": [
+              "english_setter.suitability.rkc_grooming",
+              "english_setter.suitability.pdsa_grooming"
+            ],
+            "quote": "S731 'More than once a week'; S732 'They'll need grooming 2-3 times per week, and occasional clipping and trimming.'"
+          }
+        ],
+        "not_proposed": {
+          "small_children": "No explicit small-children rating (PDSA S732 says children, not small children).",
+          "apartment": "RKC 'Large house' (S731).",
+          "first_time_owner": "No source.",
+          "experienced_owner": "No source.",
+          "often_alone": "PetMD (S733) the opposite → needs_company.",
+          "low_shedding": "RKC 'Sheds: Yes' (S731).",
+          "shorter_lifespan": "RKC 'Over 10 years' (S731).",
+          "chases_small_pets": "No 'high prey drive' wording (PetMD S733 only: a home with feathered pets might not be a good fit).",
+          "hips_hind_legs": "RKC Breed Watch Category 1 (S731) — hip dysplasia only as a PDSA list item, no welfare chip.",
+          "hypoallergenic": "Never a tag (runbook)."
+        },
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): suits active_family, family_pet, children, other_pets, large_home; consider long_daily_exercise, needs_company, sheds, frequent_grooming"
+      },
+      "marketing": {
+        "value": "in the app: yes; in marketing: yes",
+        "unit": "—",
+        "source_id": null,
+        "quote": null,
+        "confidence": "medium",
+        "notes": "Not a welfare breed: RKC Breed Watch Category 1 (S731), no BVA / UFAW / VetCompass conformation concern found. Never promise the breed's health.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): in the app yes, in marketing yes (no welfare concern found)"
+      },
+      "ai_appearance": {
+        "value": "adult English Setter, blue belton (white coat evenly flecked with black ticking): elegant, clean-outlined large gundog of medium height; long head with a moderately deep, fairly square muzzle and a black nose; bright, mild, dark brown oval eyes; low-set ears of moderate length hanging in neat folds with fine silky hair; slightly wavy, long silky coat with well-feathered breeches, forelegs and belly; natural tail of medium length, slightly curved, carried level with the back, with long feathering — never solid coloured, never docked",
+        "unit": "—",
+        "source_id": "S730",
+        "quote": "Black and white (blue belton), orange and white (orange belton), lemon and white (lemon belton), liver and white (liver belton) or tricolour, that is blue belton and tan or liver belton and tan, those without heavy patches of colour on body but flecked (belton) all over preferable. Any other colour or combination of colours unacceptable.",
+        "confidence": "high",
+        "notes": "FCI-Standard N° 2 (S730). Six standard colours; blue belton (the most typical, S735 caption) first with the highest unsourced weight → portrait default.",
+        "decision": "potrdil David 2026-10-10 (pravilo runbooka): blue belton (FCI S730) is the portrait default; natural tail; only the six standard belton / tricolour colours"
       }
     }
   }
