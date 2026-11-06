@@ -480,6 +480,7 @@ const SPECIES = [
       { id: 'keeshond', synonyms: { en: ['Wolfsspitz', 'Wolfspitz', 'German Wolfspitz', 'Keeshonden'], sl: ['volčji špic', 'nemški volčji špic', 'wolfspitz'] } },
       { id: 'standard_schnauzer', synonyms: { en: ['Schnauzer', 'Mittelschnauzer', 'Wire-Haired Pinscher'], sl: ['srednji snavcer', 'šnavcer', 'mittelschnauzer'] } },
       { id: 'coton_de_tulear', synonyms: { en: ['Coton', 'Coton de Tuléar', 'Royal Dog of Madagascar'], sl: ['coton', 'cotonček', 'coton de tuléar'] } },
+      { id: 'english_setter', synonyms: { en: ['Laverack Setter', 'Llewellin Setter', 'Setter'], sl: ['angleški seter', 'seter'] } },
     ],
   },
   {
@@ -2546,6 +2547,30 @@ const DOG_FACTS = {
       ['pra_inherited_blindness', 'health.eyes'],
     ],
   },
+  // M5-R10-97. RKC page (S731): exercise 'More than 2 hours per day', coat 'Medium', grooming 'More than once a week',
+  // sheds 'Yes', lifespan 'Over 10 years'; FCI N° 2 (S730) height males 65–68 / females 61–65 cm; weight PDSA 22–29 kg
+  // (S732; the FCI standard gives none). Coren rank 37 (S735). FCI origin Great Britain (GB). Not exported:
+  // lifespan.petmd / mcmillan_2024 (null; 13.1 y only via Wikipedia, tier C) / senior_from (derived), health.breed_watch
+  // (Category 1), health.elbows (inside hip_elbow_dysplasia), health.ncl (breeder checklist). No new health key.
+  english_setter: {
+    height: ['height.fci'],
+    weight: [['adult_weight.pdsa', null]],
+    lifespan: [['lifespan.rkc', 'more_than']],
+    exercise: [['exercise.adult', 'more_than']],
+    coat: ['suitability.rkc_coat_length'],
+    grooming: [['suitability.rkc_grooming', 'grooming_frequency']],
+    shedding: ['suitability.rkc_shedding'],
+    food_motivation: null,
+    health: [
+      ['hip_elbow_dysplasia', 'health.hips'],
+      ['deafness', 'health.deafness'],
+      ['ear_infections_long_ears', 'health.ears'],
+      ['itchy_skin_allergy', 'health.skin'],
+      ['eyelids_turned', 'health.eyes'],
+      ['hypothyroidism', 'health.thyroid'],
+      ['certain_cancers', 'health.cancer'],
+    ],
+  },
 
 
 };
@@ -2606,6 +2631,7 @@ export const DOG_CARE_TASKS = {
   keeshond: [['bath', 1, 28, 'keeshond.suitability.vca_bath']],
   standard_schnauzer: [['nail_trim', 1, 7, 'proposed_game_parameters.standard_schnauzer.nail_trimming'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.standard_schnauzer.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.standard_schnauzer.bathing'], ['groomer_visit', 1, 84, 'proposed_game_parameters.standard_schnauzer.professional_grooming']],
   coton_de_tulear: [['ear_cleaning', 1, 7, 'proposed_game_parameters.coton_de_tulear.ear_care'], ['bath', 1, 28, 'proposed_game_parameters.coton_de_tulear.bathing']],
+  english_setter: [['bath', 1, 42, 'proposed_game_parameters.english_setter.bathing'], ['groomer_visit', 1, 28, 'proposed_game_parameters.english_setter.professional_grooming']],
   pekingese: [['tooth_brushing', 7, 7, 'proposed_game_parameters.pekingese.tooth_brushing'], ['ear_cleaning', 1, 7, 'proposed_game_parameters.pekingese.ear_care'], ['groomer_visit', 1, 42, 'proposed_game_parameters.pekingese.professional_grooming']],
 };
 
@@ -3348,6 +3374,14 @@ const DOG_GAME = {
     learning: ['proposed_game_parameters.coton_de_tulear.learning_multiplier'],
     step_goal_check: 'proposed_game_parameters.coton_de_tulear.step_goal_adult',
     senior_steps_check: 'proposed_game_parameters.coton_de_tulear.exercise_minutes_senior',
+  },
+  english_setter: {
+    adult_minutes: ['proposed_game_parameters.english_setter.exercise_minutes_adult'],
+    senior_minutes: ['proposed_game_parameters.english_setter.exercise_minutes_senior'],
+    senior_from: ['proposed_game_parameters.english_setter.stage_boundaries_months', (e) => e.value.senior],
+    learning: ['proposed_game_parameters.english_setter.learning_multiplier'],
+    step_goal_check: 'proposed_game_parameters.english_setter.step_goal_adult',
+    senior_steps_check: 'proposed_game_parameters.english_setter.exercise_minutes_senior',
   },
 
 

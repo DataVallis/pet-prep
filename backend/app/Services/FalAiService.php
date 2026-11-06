@@ -784,6 +784,13 @@ class FalAiService
                 .'short triangular head with a slightly rounded skull, black nose, round dark eyes with black rims, '
                 .'high-set pendulous ears covered with white hair, low-set well-feathered tail curved over the back, '
                 .'photorealistic, studio quality, natural lighting',
+            // M5-R10-97: FCI-Standard N° 2 (S730) — an elegant gundog, blue belton (white flecked with black), long silky
+            // slightly wavy coat with feathering, natural tail.
+            BreedType::EnglishSetter => 'An elegant, clean-outlined English Setter gundog of medium height, blue belton: a white coat evenly flecked with black ticking, '
+                .'a slightly wavy, long silky coat with well-feathered breeches, forelegs, belly and tail, '
+                .'a long head with a moderately deep, fairly square muzzle and a black nose, bright, mild dark brown oval eyes, '
+                .'low-set ears of moderate length hanging in neat folds, a natural slightly curved tail of medium length carried level with the back, '
+                .'gentle and friendly expression, photorealistic, studio quality, natural lighting',
 
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 prompt for {$breed->value}."),
@@ -1893,6 +1900,13 @@ class FalAiService
                 'eye_color' => 'dark',
                 'fur_texture' => 'long, very soft, cotton-textured coat, slightly wavy',
                 'markings' => 'black nose and black eye rims, no coloured patches',
+            ],
+            // M5-R10-97: standard belton colours only (FCI S730); never solid coloured.
+            BreedType::EnglishSetter => [
+                'color_scheme' => 'blue belton (white evenly flecked with black)',
+                'eye_color' => 'dark brown',
+                'fur_texture' => 'slightly wavy, long silky coat with feathering',
+                'markings' => 'flecked (belton) all over rather than heavy patches, never solid coloured',
             ],
             // Unreachable: generateInitialPetDna() refuses non-dogs.
             BreedType::DomesticCat, BreedType::MaineCoon, BreedType::BritishShorthair, BreedType::Ragdoll, BreedType::SiberianCat, BreedType::NorwegianForestCat, BreedType::Bengal => throw new \InvalidArgumentException("No DNA v1 traits for {$breed->value}."),

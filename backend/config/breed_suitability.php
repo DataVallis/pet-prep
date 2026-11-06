@@ -2423,5 +2423,27 @@ return [
                 ['tag' => 'needs_company', 'source_ids' => ['S726'], 'refs' => ['coton_de_tulear.behaviour.time_alone']],
             ],
         ],
+        // M5-R10-97 English Setter — not a welfare breed (RKC Breed Watch Category 1, S731). No new vocabulary key.
+        'english_setter' => [
+            'suits' => [
+                // S731 "Exercise: More than 2 hours per day"
+                ['tag' => 'active_family', 'source_ids' => ['S731'], 'refs' => ['english_setter.exercise.adult', 'english_setter.suitability.rkc_exercise']],
+                // S732 "They love children and other pets, making them perfect for families."
+                ['tag' => 'family_pet', 'source_ids' => ['S732'], 'refs' => ['english_setter.behaviour.family']],
+                ['tag' => 'children', 'source_ids' => ['S732'], 'refs' => ['english_setter.behaviour.children']],
+                ['tag' => 'other_pets', 'source_ids' => ['S732'], 'refs' => ['english_setter.behaviour.other_pets']],
+                // S731 "Size of home: Large house"
+                ['tag' => 'large_home', 'source_ids' => ['S731'], 'refs' => ['english_setter.suitability.rkc_size_of_home']],
+            ],
+            'consider' => [
+                ['tag' => 'long_daily_exercise', 'source_ids' => ['S731'], 'refs' => ['english_setter.exercise.adult', 'english_setter.suitability.rkc_exercise']],
+                // S733 "They don't like being left alone for long and just want to be by their human's side."
+                ['tag' => 'needs_company', 'source_ids' => ['S733'], 'refs' => ['english_setter.behaviour.time_alone']],
+                // S731 "Sheds: Yes"
+                ['tag' => 'sheds', 'source_ids' => ['S731'], 'refs' => ['english_setter.suitability.rkc_shedding']],
+                // S731 "Grooming: More than once a week"; S732 grooming 2-3 times per week.
+                ['tag' => 'frequent_grooming', 'source_ids' => ['S731', 'S732'], 'refs' => ['english_setter.suitability.rkc_grooming', 'english_setter.suitability.pdsa_grooming']],
+            ],
+        ],
     ],
 ];

@@ -630,6 +630,15 @@ return [
     'coton_de_tulear' => [
         ['key' => 'white', 'value' => 'pure white', 'en' => 'White', 'sl' => 'Bel'],
     ],
+    // M5-R10-97: FCI-Standard N° 2 (S730) — the six standard colours, same order and values as breed_appearance.php.
+    'english_setter' => [
+        ['key' => 'blue-belton', 'value' => 'blue belton (white evenly flecked with black)', 'en' => 'Blue belton', 'sl' => 'Modri belton'],
+        ['key' => 'orange-belton', 'value' => 'orange belton (white evenly flecked with orange)', 'en' => 'Orange belton', 'sl' => 'Oranžni belton'],
+        ['key' => 'blue-belton-tan', 'value' => 'tricolour (blue belton with tan markings)', 'en' => 'Tricolour (blue belton and tan)', 'sl' => 'Tribarven (modri belton z rjavim)'],
+        ['key' => 'lemon-belton', 'value' => 'lemon belton (white evenly flecked with lemon)', 'en' => 'Lemon belton', 'sl' => 'Limonin belton'],
+        ['key' => 'liver-belton', 'value' => 'liver belton (white evenly flecked with liver)', 'en' => 'Liver belton', 'sl' => 'Jetrni belton'],
+        ['key' => 'liver-belton-tan', 'value' => 'tricolour (liver belton with tan markings)', 'en' => 'Tricolour (liver belton and tan)', 'sl' => 'Tribarven (jetrni belton z rjavim)'],
+    ],
     'maine_coon' => [
         ['key' => 'brown', 'value' => 'brown', 'en' => 'Brown', 'sl' => 'Rjav'],
         ['key' => 'red', 'value' => 'red', 'en' => 'Red', 'sl' => 'Rdeč'],
