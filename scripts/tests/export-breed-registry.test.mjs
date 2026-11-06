@@ -205,6 +205,7 @@ test('species → breeds model: slugs, availability, groups', () => {
   assert.deepEqual(byId.standard_schnauzer.slug, { en: 'standard-schnauzer', sl: 'srednji-snavcer' });
   assert.deepEqual(byId.coton_de_tulear.slug, { en: 'coton-de-tulear', sl: 'coton-de-tulear' });
   assert.deepEqual(byId.english_setter.slug, { en: 'english-setter', sl: 'angleski-seter' });
+  assert.deepEqual(byId.lhasa_apso.slug, { en: 'lhasa-apso', sl: 'lhasa-apso' });
   assert.deepEqual(byId.british_shorthair.slug, { en: 'british-shorthair', sl: 'britanska-kratkodlaka-macka' });
   assert.deepEqual(byId.ragdoll.slug, { en: 'ragdoll', sl: 'ragdoll' });
   // M5-R10-16: "Siberian cat" in EN, so the slug never reads as the Siberian Husky's.
@@ -392,6 +393,7 @@ test('game values carry a decision or a source; dog step goals = minutes × 100'
     standard_schnauzer: { adult: 6000, senior: 4500, seniorFrom: 90, learning: 1.5 },
     coton_de_tulear: { adult: 3000, senior: 2300, seniorFrom: 108, learning: 1.0 },
     english_setter: { adult: 12000, senior: 9000, seniorFrom: 90, learning: 1.2 },
+    lhasa_apso: { adult: 6000, senior: 4500, seniorFrom: 108, learning: 0.7 },
   };
   for (const b of registry.breeds) {
     const g = b.game;
@@ -626,7 +628,7 @@ test('the app\'s brushed-cat and brushed-dog lists equal the seeded grooming row
   assert.deepEqual([...cats, ...dogs].sort(), seeded);
   assert.deepEqual(cats, ['bengal', 'british_shorthair', 'maine_coon', 'norwegian_forest_cat', 'ragdoll', 'siberian_cat']);
   // M5-R13: every dog breed of the app except the mutt and the Border Collie (no grooming statement).
-  assert.equal(dogs.length, 90);
+  assert.equal(dogs.length, 91);
   assert.ok(!dogs.includes('mutt') && !dogs.includes('border_collie'));
 });
 
@@ -3103,4 +3105,31 @@ test('English Setter (M5-R10-97): RKC more than 2 hours, FCI 2 height, PDSA weig
   const json = JSON.stringify(d);
   // Never "hypoallergenic", never a percentage, never the Wikipedia McMillan figure, never merle / brindle.
   assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|13\.1|merle|brindle/i);
+});
+
+test('Lhasa Apso (M5-R10-98): RKC up to 1 hour, VCA height / weight, group 9 section 5 Tibet, RKC "over 12", Coren 68 → 0.7, brushing every day, tooth / nail / bath tasks, no welfare chip, RKC breeder tests', () => {
+  const d = registry.breeds.find((b) => b.id === 'lhasa_apso');
+  assert.deepEqual(d.name, { en: 'Lhasa Apso', sl: 'Lhasa apso' });
+  assert.equal(d.availability, expectedAvailability(d.id));
+  assert.ok(d.synonyms.en.includes('Lhasa'));
+  assert.deepEqual(d.facts.filter((f) => f.field === 'exercise').map((f) => [f.value, f.qualifier, f.source_ids]), [[60, 'up_to', ['S740']]]);
+  assert.deepEqual(d.facts.find((f) => f.field === 'fci_standard').value, { number: 227, group: 9, section: 5, origin: 'CN-XZ' });
+  assert.deepEqual(d.facts.filter((f) => f.field === 'weight').map((f) => [f.value, f.source_ids]), [[{ male: [5.9, 6.8], female: [5.9, 6.8] }, ['S742']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'height').map((f) => [f.value, f.source_ids]), [[{ male: [25, 28], female: [25, 28] }, ['S742']]]);
+  assert.deepEqual(d.facts.filter((f) => f.field === 'lifespan').map((f) => [f.qualifier, f.value, f.source_ids]), [['more_than', 12, ['S740']]]);
+  assert.equal(d.facts.find((f) => f.field === 'coren_rank').value, 68);
+  assert.equal(d.facts.find((f) => f.field === 'grooming_frequency').value, 'every_day');
+  assert.deepEqual(d.game.stages[3], { stage: 'senior', starts: { month: 108 }, meals: [{ from_months: null, meals: 2 }], activity: { kind: 'steps', value: 4500 } });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'learning').params, { multiplier: 0.7 });
+  assert.deepEqual(d.game.rules.find((r) => r.key === 'grooming_rule').params, { per_week: 7 });
+  assert.deepEqual(d.game.rules.filter((r) => r.key === 'care_task').map((r) => [r.params.task, r.params.times, r.params.period_days]), [['tooth_brushing', 7, 7], ['nail_trim', 1, 28], ['bath', 1, 14]]);
+  assert.ok(!d.game.rules.some((r) => r.key === 'no_walk_in_heat'));
+  assert.deepEqual(d.suitability.suits.map((t) => t.tag), ['apartment', 'children', 'other_pets', 'low_shedding']);
+  assert.deepEqual(d.suitability.consider.map((t) => t.tag), ['frequent_grooming']);
+  assert.deepEqual(d.health.map((h) => h.key), ['kneecap_luxation', 'pra_inherited_blindness', 'cataracts', 'glaucoma', 'dry_eye', 'itchy_skin_allergy', 'back_disc_disease', 'hydrocephalus']);
+  assert.equal(d.breeder_checklist.status, 'listed');
+  assert.deepEqual(d.breeder_checklist.tests.map((t) => t.key), ['dna_pra4', 'eye_scheme']);
+  const json = JSON.stringify(d);
+  // Never "hypoallergenic", never a percentage, never the Wikipedia McMillan figure, never merle / brachycephalic.
+  assert.doesNotMatch(json, /hypoallergenic|odds ratio|\d %\)|merle|brachycephalic/i);
 });

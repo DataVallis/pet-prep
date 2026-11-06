@@ -50934,7 +50934,24 @@
         "source_id": "S738",
         "quote": "Ideal height at withers: Males: 25cm (approx. 10”). Females: slightly smaller.",
         "confidence": "high",
-        "notes": "FCI-Standard N° 227 (S738), Size — an ideal height for males only; 'Females: slightly smaller.' has no number, so the female value repeats the male ideal as an upper reference (the register shows the FCI ideal). Kennel Club standard (S739): 'Height at withers: Males: 25cm (approx. 10”). Females: slightly smaller.'; UKC (S745): 'the desired height at the withers is about ten inches for males, with females being slightly smaller.'; VCA (S742) 'Height 10 - 11 inches' (≈ 25–28 cm); PDSA (S741) 'Average height' '25 cm' — alternatives."
+        "notes": "FCI-Standard N° 227 (S738), Size — an ideal height for males only; 'Females: slightly smaller.' has no number, so the female value repeats the male ideal as an upper reference — not exported (the register shows the VCA range, height.vca). Kennel Club standard (S739): 'Height at withers: Males: 25cm (approx. 10”). Females: slightly smaller.'; UKC (S745): 'the desired height at the withers is about ten inches for males, with females being slightly smaller.'; VCA (S742) 'Height 10 - 11 inches' (≈ 25–28 cm); PDSA (S741) 'Average height' '25 cm' — alternatives."
+      },
+      "vca": {
+        "value": {
+          "male": [
+            25,
+            28
+          ],
+          "female": [
+            25,
+            28
+          ]
+        },
+        "unit": "cm",
+        "source_id": "S742",
+        "quote": "Height 10 - 11 inches",
+        "confidence": "medium",
+        "notes": "VCA key fact (S742, one range for both sexes; 10 / 11 in = 25.4 / 27.9 cm → 25–28 cm, our conversion). The register range: the FCI standard (S738) gives only the males' ideal 25 cm and 'Females: slightly smaller.' (no number)."
       }
     },
     "adult_weight": {
