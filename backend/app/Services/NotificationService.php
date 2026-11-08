@@ -227,6 +227,51 @@ class NotificationService
     }
 
     /**
+     * M5-R02 morning rule (David 2026-11-08): the night's quiet stretch ended
+     * and the puppy's due instant is the morning take-out deadline — one push
+     * to the caretaker children (»Dobro jutro! Kuža mora ven …«). Called by
+     * EscalationService outside quiet hours for every unfrozen pet; decided
+     * once per pet and family-local day (metric `morning:<Y-m-d>`, any status
+     * counts) between the night's end and the deadline. Dropped at send time
+     * when the morning deadline no longer stands (taken out, accident).
+     */
+    public function takeOutReminder(Pet $pet): ?PushNotification
+    {
+        if (! config('push.enabled')) {
+            return null;
+        }
+        $metric = $this->morningTakeOutMetric($pet);
+        if ($metric === null) {
+            return null;
+        }
+        $decided = PushNotification::where('pet_id', $pet->id)
+            ->where('type', PushType::TakeOutReminder->value)
+            ->where('metric', $metric)
+            ->exists();
+
+        return $decided ? null : $this->escalation($pet, PushType::TakeOutReminder, $metric);
+    }
+
+    /**
+     * `morning:<local date of the night's end>` while the puppy's clock waits
+     * for its morning take-out and the deadline lies ahead; null otherwise.
+     */
+    private function morningTakeOutMetric(Pet $pet): ?string
+    {
+        if ($pet->isCat()) {
+            return null;
+        }
+        $clock = app(BehaviourEventService::class)->pottyClock($pet, $pet->quietHours());
+        $now = now();
+        if ($clock === null || $clock['morning'] === null
+            || $clock['morning']->greaterThan($now) || ! $clock['due_at']->greaterThan($now)) {
+            return null;
+        }
+
+        return 'morning:'.$pet->localDate($clock['morning']);
+    }
+
+    /**
      * M2-01d (CERTIFICATE_SPEC): one child's 12-week challenge ended — one push
      * to the family's parents (metric `certificate` | `report`). Called by
      * ChallengeCertificateService inside the transaction that creates the row
@@ -454,6 +499,12 @@ class NotificationService
 
             return;
         }
+        // M5-R02 morning rule: the puppy was taken out (or had its accident) since the decision.
+        if ($type === PushType::TakeOutReminder && $this->morningTakeOutMetric($pet) !== $notification->metric) {
+            $this->markSuppressed($notification, 'taken_out');
+
+            return;
+        }
         // M5-R18 / R20: the parent confirmed the groomer / bath meanwhile (or the period is over).
         if ($type === PushType::CareReminder && ! app(CareReminderPushService::class)->stillDue($pet, (string) $notification->metric)) {
             $this->markSuppressed($notification, 'already_done');
@@ -651,7 +702,7 @@ class NotificationService
             ->map(fn (User $u): array => ['user_id' => $u->id, 'audience' => PushNotification::AUDIENCE_PARENT]);
 
         $list = match ($type) {
-            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder, PushType::LitterReminder => $children(),
+            PushType::SoftWarning, PushType::CriticalAlert, PushType::WalkReminder, PushType::PlayReminder, PushType::LitterReminder, PushType::TakeOutReminder => $children(),
             PushType::ParentAlarm => $parents(),
             PushType::Illness, PushType::GameOver, PushType::PaymentRequired => $parents()->concat($children()),
             // M3-11: billing is the parent's business.
@@ -681,8 +732,8 @@ class NotificationService
     private function isDuplicate(Pet $pet, PushType $type, CarbonInterface $now): bool
     {
         // QA M5-R06-05 m2: the litter reminder is once per litter use (litterReminder), not per type.
-        if ($type === PushType::LitterReminder) {
-            return false;
+        if ($type === PushType::LitterReminder || $type === PushType::TakeOutReminder) {
+            return false; // M5-R02: the morning reminder is once per day (takeOutReminder, metric)
         }
         // M2-01d: once per certificate row (ChallengeCertificateService guards with
         // `notified_at`); two children of a shared pet may finish within minutes.

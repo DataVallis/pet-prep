@@ -401,11 +401,12 @@ describe('bladder clock', function () {
     it('is DST safe: on 2026-10-25 (25-hour day) the clock follows the wall clock and real hours', function () {
         [, , $pet] = beFamily('2026-10-24 18:00:00', 2);  // 20:00 CEST, quiet 22–06 / 08–13
 
-        // Night of the change: bedtime until 06:00 CET = 05:00 UTC; 2 h → 08:00 CET = school
-        // start → 13:00 CET = 12:00 UTC (in summer the same wall time was 11:00 UTC).
+        // Night of the change: bedtime until 06:00 CET = 05:00 UTC. Morning rule (David
+        // 2026-11-08): out within 30 min after the night → 06:30 CET = 05:30 UTC (in summer
+        // the same wall time was 04:30 UTC); without it 2 h → 08:00 school → 13:00 CET.
         beAt('2026-10-25 05:00:00');
         expect(app(BehaviourEventService::class)->pottyClock($pet->fresh(), $pet->quietHours())['due_at']->toDateTimeString())
-            ->toBe('2026-10-25 12:00:00');
+            ->toBe('2026-10-25 05:30:00');
 
         // Without quiet hours: born 23:00 CEST; 23:00 + 2 h runs over midnight, so the
         // clock restarts at 00:00 CEST (22:00 UTC on the 24th) → 00:00 UTC (02:00 CEST);
