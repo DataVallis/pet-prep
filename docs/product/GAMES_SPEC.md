@@ -25,9 +25,9 @@
 ## 1. Popis današnjega stanja (iz kode, `main` @ b721460)
 
 ### 1.1 Skupno: posnetki faz in poze
-- `backend/app/Enums/PetPhaseClip.php`: 18 posnetkov faz — šola `school_<sit|come|place|potty>_<attention|performing|success>`, žoga `ball_<waiting|running|fetching>`, palica `wand_<stalking|pouncing|catching>`. Dolžine: `config/media.php` `state_media.clip_seconds` — šola 3 s, **performing 5 s**, igre 3 s. Kling 3.0 Pro: 3 s = 0,336 $, 5 s = 0,56 $ (ARCHITECTURE »School and game phase clips«).
+- `backend/app/Enums/PetPhaseClip.php`: 18 posnetkov faz — šola `school_<sit|come|place|potty>_<attention|performing|success>`, žoga `ball_<waiting|running|fetching>`, palica `wand_<stalking|pouncing|catching>` (`wand_pouncing` se od 8. 11. 2026 ne ustvarja več — `PetPhaseClip::RETIRED`, David »ok ja daj«; strežnik zdaj ustvari 17). Dolžine: `config/media.php` `state_media.clip_seconds` — šola 3 s, **performing 5 s**, igre 3 s. Kling 3.0 Pro: 3 s = 0,336 $, 5 s = 0,56 $ (ARCHITECTURE »School and game phase clips«).
 - Začetna / končna slika = poza (`startPose()` / `endPose()`; `null` = referenčna slika, stoječa poza). Poze: `backend/app/Enums/PetPose.php` — pes `sit`, `come`, `place`, `door`, `empty` (prazna soba); muca `crouch`, `catch`. Nano Banana Pro Edit, 0,15 $ na sliko. `PetMedia::frames()` (`backend/app/Models/PetMedia.php`) vrne začetni / končni okvir posnetka.
-- **Posnetki z isto začetno in končno pozo** (`sharesFrames()`: `school_*_attention`, `school_*_success`, `ball_waiting`, `wand_pouncing`) se pošljejo **samo z začetno sliko** (Kling z isto sliko na obeh koncih zamrzne) → **zadnji okvir ni zagotovljeno enak prvemu**. To je eden od virov skokov.
+- **Posnetki z isto začetno in končno pozo** (`sharesFrames()`: `school_*_attention`, `school_*_success`, `ball_waiting`, `wand_pouncing` — slednji se od 8. 11. 2026 ne ustvarja več) se pošljejo **samo z začetno sliko** (Kling z isto sliko na obeh koncih zamrzne) → **zadnji okvir ni zagotovljeno enak prvemu**. To je eden od virov skokov.
 - Izpeljani posnetki (ffmpeg, 0 $, `SchoolClipDerivativeService`, SCHOOL_SMOOTH_PLAYBACK §A): `school_<cmd>_attention_loop` in `_success_loop` (naprej + nazaj, brezšivna zanka), `school_<cmd>_release` (performing **nazaj**, ≤ 2,5 s).
 - Varčni posnetki (`MediaEntitlementService::FRUGAL_PHASE_SOURCES`, stikalo `frugal_clips`, privzeto izklopljeno, samo pes): pozornost za pridi / prostor / potrebico = posnetek pozornosti »sedi«.
 - Aplikacija: `mobile/src/modules/petMedia/phasePlayer.ts` (kateri posnetek kdaj), `mobile/src/modules/training/SchoolStage.tsx` (šola: do 4 trajni predvajalniki, menjava ob `onFirstFrameRender`, brez prelivanja). **Žoga in palica ne uporabljata odra** — `PetMediaView phase={…}` z novim ključem za vsako fazo → predvajalnik se naloži šele ob menjavi, vmes se pokaže `still` = **končna** poza faze.
@@ -54,7 +54,7 @@
 
 ### 1.5 Palica s peresom (muca)
 - **Pravila** (`backend/app/Services/WandPlayService.php`, `backend/config/wand.php`, CAT_SPEC §5.2, PRODUCT_SPEC §13): igra **60 s** (David 8. 10.), konec z »ulovom«; cilj 2 / dan (mucek 3), **2 h** med uspešnima igrama; merilnik »Igra« (`energy_level`); **rutina »Igra«** v Care Score; zamujen dan → naslednji dan »opraskala je kavč«. Ocena `WandPlayService::score` — igra šteje samo, če velja **vse**: ≥ 8 premikov »stran« (`min_away_moves`), vsaj en v vsaki od 4 četrtin (`segments`), ≥ 50 % premikov stran, **po vsakem skoku premik stran v 2 s** (`pounce_window_ms`), razmiki niso strojno enakomerni (`uniform_*`). Premiki bližje kot 300 ms se štejejo enkrat. Skoki: 3–5 naključno, ne v prvih / zadnjih 8 s.
-- **Potek** (`mobile/src/modules/catCare/WandOverlay.tsx`, `catGames.ts`, `phasePlayer.ts#wandMomentAt`): `wand_stalking` (stoji → pritajena) → med skoki **mirna slika** pritajene poze (`clip: null`) → `wand_pouncing` ob skoku → `wand_catching` zadnji 2 s. Aplikacija iz prsta naredi en premik na potezo (`moveWandStroke`).
+- **Potek** (`mobile/src/modules/catCare/WandOverlay.tsx`, `catGames.ts`, `phasePlayer.ts#wandMomentAt`): `wand_stalking` (stoji → pritajena) → med skoki **mirna slika** pritajene poze (`clip: null`) → `wand_pouncing` ob skoku (le, če je posnetek iz časa pred 8. 11. 2026; nov videz ga nima → poza pritajene) → `wand_catching` zadnji 2 s. Aplikacija iz prsta naredi en premik na potezo (`moveWandStroke`).
 - **Besedila** (`cat.json` `wand.*`): »Muca opazuje pero …« → »Pripravlja se na skok …« (**0,7 s**, `CROUCH_MS`) → »Skok! Umakni pero!« (**0,8 s**, `POUNCE_MS`) → »Zdaj ga bo ujela …«; povratne vrstice 1,5 s (`WAND_FEEDBACK_MS`); razlog neuspeha šele po minuti.
 - **Roke:** vlečenje peresa po odru; »Lažje kretnje«: pero beži samo (premik vsakih 0,56–0,90 s).
 
@@ -99,7 +99,7 @@ Potrjeno v kodi:
 - Ulov je samodejen v zadnjih 2 s, ne glede na otroka — »dober ulov« ni nekaj, kar otrok naredi.
 
 ### 2.3 Dodatno najdeno v kodi
-1. `wand_pouncing` in `ball_waiting` sta poslana samo z začetno sliko → konec ni nujno na osrednji pozi; ob naslednji menjavi je skok.
+1. `wand_pouncing` (od 8. 11. 2026 se ne ustvarja več) in `ball_waiting` sta poslana samo z začetno sliko → konec ni nujno na osrednji pozi; ob naslednji menjavi je skok.
 2. Žoga: `PHASE_CLIP_MS` 3000 je privzeta dolžina; strežnik pošilja dejansko (`media.phase_seconds`), igra je ne uporabi.
 3. Šola: »Ukaz n od 6« + »še N s« + pike + vrstica psa + povratna vrstica + oblaček = **šest** sočasnih virov besedila.
 4. Ni zvoka in haptike nikjer (`expo-haptics` ni nameščen; PLAY_CUDDLE §4.3).
@@ -318,7 +318,7 @@ Konfiguracija `config/wand.php` → `simple`: `stalk_ms` 3000, `first_cue_ms` [4
 | `result.learn` | Muca mora plen na koncu ujeti – tako je lov zanjo srečen. | A cat needs to catch its prey at the end – that makes the hunt a happy one. |
 | `hint.letGo` | Ko se pritaji 👀, spusti pero. | When she crouches 👀, let go. |
 
-**Posnetki:** obstoječi `wand_stalking`, `wand_catching` in izpeljan `wand_crouch_loop` (0 $). `wand_pouncing` aplikacija ne predvaja več (strežnik ga še ustvarja — dolg v HANDOFF).
+**Posnetki:** obstoječi `wand_stalking`, `wand_catching` in izpeljan `wand_crouch_loop` (0 $). `wand_pouncing` aplikacija ne predvaja več in ga strežnik od 8. 11. 2026 tudi **ne ustvarja več** (David »ok ja daj«; `PetPhaseClip::RETIRED`): ni v naboru novega videza / obdobja, ni pogoj za »pripravlja se«, ni v samodejnih ponovitvah, v nočnem `media:retry` ne v ocenah stroška — **≈ 0,34 $ manj na videz muce × obdobje**. Obstoječi posnetki in vrstice ostanejo (nič se ne briše); muca brez njega ni zaklenjena.
 
 **Dostopnost:** »Lažje kretnje« / bralnik: pero samo plava v polju, izpust = velik gumb **»Pusti!«** (dvig prsta deluje tudi). Bralnik napove »Pritaja se. Spusti pero.«, »Skok!«, »Ujela ga je!«. »Zmanjšaj gibanje«: brez sledi peresa in loka šape (statična ikona ⚡), brez pulza. Način »Slika«: poze.
 
@@ -438,7 +438,8 @@ Brez spremembe pravil; prestavitev na `GameScreen`: besedilo zgoraj, celozaslons
 | šola `*_release` | obstoječi izpeljani — se ne predvaja več (Š2) | 0 $ |
 | `ball_waiting`, `ball_running`, `ball_fetching` | obstoječi | 0 $ |
 | **`ball_waiting_loop`** | **nov izpeljan** (ffmpeg) | 0 $ |
-| `wand_stalking`, `wand_pouncing`, `wand_catching` | obstoječi | 0 $ |
+| `wand_stalking`, `wand_catching` | obstoječi | 0 $ |
+| `wand_pouncing` | **se ne ustvarja več** (David 8. 11. 2026; stari ostanejo) | **−0,336 $** na videz muce × obdobje |
 | **`wand_crouch_loop`** | **nov izpeljan** (ffmpeg) | 0 $ |
 | `playing`, `idle` | obstoječi | 0 $ |
 

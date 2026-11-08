@@ -153,7 +153,7 @@ return [
         /*
         | M5-T09 / M5-T10 (APP_REFINEMENT_SPEC §3 / §10, David 2026-10-21): PHASE clips of
         | the school (per command: attention → performing → success) and the games (dog
-        | ball: waiting → running → fetching; cat wand: stalking → pouncing → catching),
+        | ball: waiting → running → fetching; cat wand: stalking → catching — `wand_pouncing` retired 2026-11-08, PetPhaseClip::RETIRED),
         | from / to POSE images (Nano Banana Pro Edit of the reference image). Order =
         | queue order after every home item (David 2026-10-28: home first — pose images
         | right behind the home key images, the clips once no home key image is on its way):
