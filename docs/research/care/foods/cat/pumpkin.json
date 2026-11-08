@@ -1,0 +1,137 @@
+{
+  "slug": "pumpkin",
+  "species": "cat",
+  "name": {
+    "en": "Pumpkin",
+    "sl": "Buča"
+  },
+  "question": {
+    "en": "Can cats eat pumpkin?",
+    "sl": "Ali lahko mačke jedo bučo?"
+  },
+  "url_slug": {
+    "en": "pumpkin",
+    "sl": "buca"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a little plain cooked pumpkin is fine as an occasional treat. Pet Poison Helpline calls pumpkin safe for dogs and cats, but VCA notes that pumpkin and its seeds can upset a cat's stomach in large amounts, so skip the seeds and rind.",
+    "sl": "Da, malo navadne kuhane buče je v redu kot občasen priboljšek. Pet Poison Helpline bučo označuje kot varno za pse in mačke, VCA pa opozarja, da lahko buča in njena semena v velikih količinah mački razdražijo želodec, zato semena in lupino izpustite."
+  },
+  "why": {
+    "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
+    "sl": "Pet Poison Helpline navaja, da je buča varna za pse in mačke ter da je kuhana ali predelana buča veliko lažje prebavljiva od surove. VCA dodaja, da lahko buča in bučna semena kljub nestrupenosti mački razdražijo želodec, zlasti v velikih količinah. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov pa naj bo malo."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
+    "sl": "Majhen košček navadne kuhane buče ali navaden bučni pire iz pločevinke, v katerem je buča edina sestavina. Brez semen, lupine, soli in začimb."
+  },
+  "child": {
+    "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
+    "sl": "Malo kuhane buče je lahko občasno priboljšek za muco. Brez semen in lupine. Muce pa potrebujejo predvsem meso."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "What about Halloween pumpkins?",
+        "sl": "Kaj pa buče za noč čarovnic?"
+      },
+      "a": {
+        "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
+        "sl": "Sveže buče niso škodljive, Blue Cross pa opozarja, da lahko gnile buče mački razdražijo trebušček, zato izrezljane buče hranite izven njenega dosega ali jih odstranite, ko niso več sveže."
+      }
+    },
+    {
+      "q": {
+        "en": "Do cats need vegetables?",
+        "sl": "Ali mačke potrebujejo zelenjavo?"
+      },
+      "a": {
+        "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KC64",
+      "quote": "Not only is it amazing in pies and lattes, but it is also very nutritious and safe for dogs and cats!"
+    },
+    {
+      "id": "KC64",
+      "quote": "The fruit is safe to eat raw but is more difficult to digest and not very appealing."
+    },
+    {
+      "id": "KC64",
+      "quote": "Cooked or processed pumpkin is much more digestible and typically more enjoyable to our furry friends."
+    },
+    {
+      "id": "KC64",
+      "quote": "If you are buying preprocessed pumpkin, such as canned pumpkin puree, be sure to verify pumpkin is the only ingredient."
+    },
+    {
+      "id": "KC64",
+      "quote": "The seeds and rind should not be fed to your pet, as they are very tough and pose a risk of choking"
+    },
+    {
+      "id": "KC80",
+      "quote": "While non-toxic, pumpkin and pumpkin seeds can upset a cat’s stomach, especially when consumed in large quantities."
+    },
+    {
+      "id": "KC81",
+      "quote": "While fresh pumpkins are not harmful, your cat may be tempted to eat them even when they have started to rot."
+    },
+    {
+      "id": "KC81",
+      "quote": "Rotten pumpkins can cause an upset tummy, so it's best to keep them out of your cat's reach"
+    },
+    {
+      "id": "KC81",
+      "quote": "or to remove the pumpkin as soon as it's no longer fresh."
+    },
+    {
+      "id": "KC26",
+      "quote": "Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC49",
+      "quote": "it’s fine for them to enjoy the occasional treat as long as they don’t have too many"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats are carnivores (meat eaters) because they require specific nutrients found in meat such as Taurine and Arginine."
+    }
+  ],
+  "related": [
+    "zucchini",
+    "sweet-potato",
+    "carrots",
+    "cucumber"
+  ],
+  "updated": "2026-11-08",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9c697fa057d14681f59be651b647f57c918a634dad3312ce153819fb6ae8bac8"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5318d991a57707e7f432ae858fdf7b83d2b82a9d64fcf47274e089117061456e"
+    }
+  }
+}
