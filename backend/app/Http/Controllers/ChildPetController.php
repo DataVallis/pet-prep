@@ -207,10 +207,11 @@ class ChildPetController extends Controller
      * needs_cleaning | wand_too_soon (next_allowed_at = end of the 2 h gap
      * after the last successful session) | wand_session_active (another
      * child's game; next_allowed_at = its expiry) | wand_day_ending
-     * (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2}`
-     * (GAMES_SPEC §7.2): 2 = the ~25 s v2 hunt scored in stars — `session`
-     * then carries `rules_version: 2` and the v2 schedule keys; without it the
-     * v1 minute is unchanged.
+     * (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2|3}`
+     * (GAMES_SPEC §7.2): 3 = the simple hunt (let go when the cat crouches,
+     * David 2026-11-08; 2 = an older build, gets the same) — `session` then
+     * carries `rules_version: 3` and the simple-hunt keys; without it the v1
+     * minute is unchanged.
      *
      * POST /api/child/pet/wand/start
      */
@@ -231,10 +232,11 @@ class ChildPetController extends Controller
      * → `unchanged` with the same result. 422 wand_not_available |
      * wand_session_invalid | wand_session_expired | wand_session_not_over |
      * wand_invalid_moves | wand_session_interrupted; 423 while locked.
-     * A rules-v2 session (GAMES_SPEC §5.3) is judged in stars from the moves'
-     * extra `in_zone` / `speed_ok`; `result` then also carries `rules_version`,
-     * `stars`, `min_stars`, `max_stars`, `dodges`, `catch`, `hint`
-     * (reason `too_few_stars`).
+     * A simple-hunt session (rules 3, GAMES_SPEC §5.3, David 2026-11-08) is
+     * judged on `releases` (the let-go moments): one ★ per 👀 cue caught;
+     * `result` then also carries `rules_version`, `stars`, `min_stars`,
+     * `max_stars`, `cues`, `hint` (reason `too_few_catches`). It may finish
+     * as soon as the last needed catch happened.
      *
      * POST /api/child/pet/wand/finish
      */
@@ -242,7 +244,7 @@ class ChildPetController extends Controller
     {
         $pet = $this->childPet($request);
 
-        return $this->actionResponse($this->activities->finishWand($pet, $request->user(), $request->sessionId(), $request->moves()), $pet, $request);
+        return $this->actionResponse($this->activities->finishWand($pet, $request->user(), $request->sessionId(), $request->moves(), $request->releases()), $pet, $request);
     }
 
     /**

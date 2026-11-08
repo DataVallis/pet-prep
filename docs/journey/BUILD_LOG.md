@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Palica s peresom: ko se muca pritaji, spusti pero
+
+**Kaj:** igro s palico smo naredili čisto preprosto — ko se muca pritaji (👀), otrok spusti pero in muca ga ujame ★; trije ulovi in igra je končana (~20–30 s), brez kazni za prezgodnji ali zamujen izpust.
+**Zakaj je pomembno:** David je igro preizkusil na iPhonu in nihče ni dobil točke (pero je moralo popolnoma mirovati že pol sekunde po znaku, nato pa hitro, a ne prehitro stran); zdaj jo mlajši otrok razume v prvem poskusu, učna točka — muca mora lov končati z ulovom — pa ostane.
+**Kako povedati:** 🧒 »Ko se muca pritaji, spusti pero — ujela ga bo!« · 👩 »Igra je kratka in jasna: otrok se nauči, da mora muca plen na koncu ujeti.« · 🛠 »Ko testiranje pokaže, da pravila nihče ne zna, pravilo poenostaviš — ne razlagaš ga.«
+
 ## 2026-11-08 — Mladiček mora zjutraj takoj ven
 
 **Kaj:** po noči (tihe ure) mora mladiček ven v 30 minutah — 5-mesečna Suki z nočjo do 7:00 mora ven najkasneje ob 7:30 (prej je aplikacija rekla »najkasneje ob 12:00«), otrok pa ob koncu noči dobi obvestilo »Dobro jutro! Kuža mora po noči čim prej ven.«

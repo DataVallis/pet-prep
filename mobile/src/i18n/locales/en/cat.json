@@ -75,42 +75,39 @@
   "wandV2": {
     "title": "Feather wand",
     "preparing": "Getting your kitty ready …",
-    "ruleLine": "Crouch: freeze! Pounce: away!",
-    "intro": "Move the feather inside the bright area.",
+    "ruleLine": "When she crouches, let go!",
+    "intro": "Drag the feather around. Your kitty stalks it.",
     "rules": {
-      "crouch": "She crouches: keep the feather still.",
-      "pounce": "She pounces: pull it away fast!",
-      "catch": "At the end, let her catch it."
+      "crouch": "When she crouches 👀, let go.",
+      "pounce": "She pounces and catches it.",
+      "catch": "A cat needs to catch its prey."
     },
-    "easyIntro": "The feather floats by itself. When she pounces, tap »Pull away!«.",
+    "easyIntro": "The feather floats by itself. When she crouches 👀, tap »Let go!«.",
     "start": "Start the hunt",
-    "freeze": "Freeze!",
+    "letGo": "Let go now!",
     "fb": {
-      "dodge": "Escaped!",
       "caught": "She caught it!"
     },
-    "catchCue": "Let her catch it!",
     "saving": "Saving the hunt …",
-    "dodgeButton": "Pull away!",
+    "letGoButton": "Let go!",
     "result": {
       "success": "What a hunt!",
       "again": "One more hunt?",
       "counts": "This game counts for today.",
       "stored": "This hunt is already saved.",
+      "learn": "A cat needs to catch its prey at the end – that makes the hunt a happy one.",
       "againButton": "One more hunt",
       "done": "Done"
     },
     "hint": {
-      "calm": "When she crouches, keep the feather still.",
-      "dodge": "When she pounces, pull it away fast.",
-      "catch": "At the end, let her catch it."
+      "letGo": "When she crouches 👀, let go."
     },
     "a11y": {
-      "crouch": "She's crouching. Keep still.",
+      "crouch": "She's crouching. Let go.",
       "pounce": "Pounce!",
       "field": "Play area with the feather",
-      "dodgeHint": "Tap when your kitty pounces.",
-      "progress": "Hunt: {{done}} of {{total}}, stars: {{stars}}",
+      "letGoHint": "Tap when your kitty crouches.",
+      "progress": "Catches: {{done}} of {{total}}",
       "stars": "Stars: {{stars}} of {{max}}"
     }
   },

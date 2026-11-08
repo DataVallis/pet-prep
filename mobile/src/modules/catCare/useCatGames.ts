@@ -11,13 +11,13 @@ import {
   useFinishChore,
   useFinishScratching,
   useFinishWand,
-  useFinishWandV2,
+  useFinishWandHunt,
   useStartChore,
   useStartScratching,
   useStartWand,
-  useStartWandV2,
+  useStartWandHunt,
 } from '@/hooks/queries/useCatCare';
-import { canWandV2StillCount, wandV2FinishAt, type WandV2Move, type WandV2Result, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
+import { canWandV2StillCount, wandHuntFinishAt, type WandHuntResult, type WandHuntSession } from '@/modules/catCare/wandV2/wandRules';
 import {
   onlyScratchingOpen,
   ownSession,
@@ -81,33 +81,34 @@ export function useWandGame(view: ChildPetView, { clock }: CatGameHookOptions = 
   });
 }
 
-const NO_V2_MOVES: readonly WandV2Move[] = [];
+const NO_RELEASES: readonly number[] = [];
 
-export type WandGameV2 = CatSessionGame<WandV2Session, readonly WandV2Move[], WandV2Result>;
+export type WandGameV2 = CatSessionGame<WandHuntSession, readonly number[], WandHuntResult>;
 
 /**
- * GAMES_SPEC §5 — the v2 hunt (`rules: 2`), game-layer builds only (`WandGameV2`). Same session
- * flow as v1; the finish is sent when the catch clip has played out (`wandV2FinishAt`). A running
- * v2 hunt is never resumed after an app restart (the deck must be ready before the hunt clock
- * starts — `canWandV2StillCount`); a new start replaces it on the server without penalty.
+ * GAMES_SPEC §5 — the simple hunt (`rules: 3`, David 2026-11-08), game-layer builds only
+ * (`WandGameV2`). The input = the let-go moments. Same session flow as v1; the finish is sent
+ * once the hunt is over — the third catch played out, or the last cue passed (`wandHuntFinishAt`).
+ * A running hunt is never resumed after an app restart (the deck must be ready before the hunt
+ * clock starts — `canWandV2StillCount`); a new start replaces it on the server without penalty.
  */
 export function useWandGameV2(view: ChildPetView, { clock }: CatGameHookOptions = {}): WandGameV2 {
-  const { mutate: startMutate } = useStartWandV2();
-  const { mutate: finish } = useFinishWandV2();
+  const { mutate: startMutate } = useStartWandHunt();
+  const { mutate: finish } = useFinishWandHunt();
   const finishMutate = useCallback(
-    (v: { session: WandV2Session; input: readonly WandV2Move[] }, callbacks: Parameters<typeof finish>[1]) =>
-      finish({ sessionId: v.session.id, moves: v.input }, callbacks),
+    (v: { session: WandHuntSession; input: readonly number[] }, callbacks: Parameters<typeof finish>[1]) =>
+      finish({ sessionId: v.session.id, releases: v.input }, callbacks),
     [finish],
   );
   const refusal = useMemo(() => refusalContext(view), [view]);
-  return useCatSessionGame<WandV2Session, readonly WandV2Move[], WandV2Result>({
+  return useCatSessionGame<WandHuntSession, readonly number[], WandHuntResult>({
     clockSkewMs: view.clockSkewMs,
     refusal,
     clock,
     resume: null,
     ...useAbandoned(),
-    emptyInput: NO_V2_MOVES,
-    finishAtMs: wandV2FinishAt,
+    emptyInput: NO_RELEASES,
+    finishAtMs: wandHuntFinishAt,
     canStillCount: canWandV2StillCount,
     startMutate,
     finishMutate,

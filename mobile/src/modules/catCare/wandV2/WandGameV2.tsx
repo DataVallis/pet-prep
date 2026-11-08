@@ -1,6 +1,7 @@
 /**
- * »Palica s peresom« v2 — one ~25 s hunt on the native game layer (GAMES_SPEC §5, phase 2;
- * David 2026-10-30 P1 / P2, strict calm rule 2026-10-31).
+ * »Palica s peresom« — the simple hunt on the native game layer (GAMES_SPEC §5; David 2026-11-08
+ * »naredi bolj preprosto igro«, the rule designed by Claude — it replaced the strict stillness /
+ * pull-away rule of 2026-10-30 / 31, which nobody could score).
  *
  * Reached ONLY through `loadWandGameV2()` when `gameLayerAvailable()` — this file imports
  * gesture-handler, reanimated, skia, expo-audio and expo-haptics (an older binary keeps the v1
@@ -9,28 +10,30 @@
  * - Full screen (`GameScreen`): the cat edge to edge on a `ClipDeck` (every wand clip preloaded
  *   ONCE when the game opens; »Začni lov« only once the deck is ready, 12 s → »Slika«), so the
  *   hunt clock (= the session clock, started by the start response) and the first clip begin
- *   together. The chain comes from `useClipQueue`: stalk → crouch loop ⇄ pounce → catch
- *   (`wandDeck.ts`, `wandStageAt`).
- * - The schedule is the SERVER's (`POST /wand/start {rules: 2}`): every cue, window and limit
- *   is read from the session — none is a constant here.
- * - A Skia feather springs after the finger (lifted above the thumb) inside a visible play zone;
- *   one move per stroke (`wandStroke.ts`) with `in_zone` / `speed_ok`. The 👀 cue badge pulses
- *   with a countdown ring from the cue to the pounce and turns amber when the feather moved in
- *   the calm window. ★ per dodge and for the catch (the child LETS the cat catch it).
- * - Instant feedback from the pure mirror (`wandLive` / `wandCues`); the finish response wins
- *   (result screen: the server's stars and its one `hint`).
+ *   together. The chain comes from `useClipQueue`: stalk → crouch loop ⇄ catch (`wandDeck.ts`,
+ *   `wandStageAt`); after each catch the ★ masks the cut back to the crouch loop.
+ * - The numbers are the SERVER's (`POST /wand/start {rules: 3}`): the first cue, the 2 s window,
+ *   the gaps, 3 catches — read from the session, none is a constant here.
+ * - A Skia feather springs after the finger (lifted above the thumb) — only so the cat has
+ *   something to stalk; its moves are not scored. What counts: LETTING GO (the finger lifted —
+ *   any lift, also a finger that rested without moving — or »Pusti!« in »Lažje kretnje«) while
+ *   the 👀 badge shows (a countdown ring around it). The cat pounces at once and catches the
+ *   feather (the catch clip; ★ »Ujela ga je!« when it has played). Too early / never: nothing —
+ *   no ✗, no text but the rule line; the next 👀 comes. 3 catches = done → the result screen.
+ * - Instant feedback from the pure mirror (`wandHuntAt` / `wandCues`); the finish response wins
+ *   (result screen: the server's stars and its hint). One finish call per hunt.
  * - Text only on the one top line (≤ 32 chars, ≥ 2 s); ★ in the middle; nothing under the thumb.
- * - »Lažje kretnje« / screen reader (`inputMode === 'hold'`): the feather floats by itself, holds
- *   still at the cue, »Umakni!« = one clean away move; the swipe stays on.
- * - Reduce motion: no spring, no trail, no float, no shake, no paw arc (a static ⚡), no pulse.
+ * - »Lažje kretnje« / screen reader (`inputMode === 'hold'`): the feather floats by itself;
+ *   »Pusti!« is the let-go; lifting a finger still works.
+ * - Reduce motion: no spring, no trail, no float, no paw arc (a static ⚡), no pulse.
  */
 
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type ReactNode } from 'react';
 import { AccessibilityInfo, ActivityIndicator, Platform, Pressable, StyleSheet, View } from 'react-native';
-import { Circle, Group, Line, Path, RoundedRect } from '@shopify/react-native-skia';
+import { Circle, Group, Line, Path } from '@shopify/react-native-skia';
 import Animated, { useAnimatedStyle, useDerivedValue, useSharedValue, withRepeat, withSequence, withSpring, withTiming, Easing, cancelAnimation, type SharedValue } from 'react-native-reanimated';
 import { scheduleOnRN } from 'react-native-worklets';
-import { Hand, MoveUpRight, Star, Zap } from 'lucide-react-native';
+import { Hand, Star, Zap } from 'lucide-react-native';
 import { useQueryClient } from '@tanstack/react-query';
 
 import { Text } from '@/components/ui/Text';
@@ -38,34 +41,20 @@ import { childPetKey } from '@/hooks/queries/useChildPet';
 import { CAT_COMMON_STRINGS, WAND_STRINGS, catRefusalMessage, onlyScratchingOpen } from '@/modules/catCare/catCare';
 import type { Point } from '@/modules/catCare/catGames';
 import { useWandGameV2 } from '@/modules/catCare/useCatGames';
-import { wandDeck, wandPounceClipMs } from '@/modules/catCare/wandV2/wandDeck';
+import { wandDeck } from '@/modules/catCare/wandV2/wandDeck';
 import {
-  WAND_GRAB_SHAKE_MS,
   WAND_PAW_AFTER_MS,
-  addWandV2Move,
+  addWandRelease,
   wandCues,
   wandDots,
-  wandLive,
+  wandHuntAt,
   wandNextBoundary,
   wandStageAt,
-  type WandLive,
-  type WandV2Move,
+  wandStars,
+  type WandHuntState,
 } from '@/modules/catCare/wandV2/wandRules';
 import { WAND_V2_STRINGS } from '@/modules/catCare/wandV2/wandStrings';
-import {
-  FLOAT_STEP_MS,
-  beginStroke,
-  dodgeButtonMove,
-  endStroke,
-  featherForFinger,
-  floatPoint,
-  inZone,
-  moveStroke,
-  strokeToMove,
-  wandCatAt,
-  wandZone,
-  type StrokeTracker,
-} from '@/modules/catCare/wandV2/wandStroke';
+import { FLOAT_STEP_MS, featherForFinger, floatPoint, wandZone } from '@/modules/catCare/wandV2/wandStroke';
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 import { mediaModeOf } from '@/modules/display/display';
 import ClipDeck from '@/modules/gameLayer/ClipDeck';
@@ -104,7 +93,8 @@ const SPRING = { damping: 14, stiffness: 160, mass: 0.6 };
 const TRAIL_SPRING = { damping: 18, stiffness: 70, mass: 0.8 };
 /** Three soft selection taps at the cue (GAMES_SPEC §5.2 »selection × 3«). */
 const CUE_HAPTIC_GAPS_MS = [0, 180, 360];
-const STAR_MS = 1_000;
+/** The ★ after a catch; it also masks the cut from the catch pose back to the crouch loop. */
+const STAR_MS = 1_200;
 const WAND_SOUNDS: readonly GameSound[] = ['crouch', 'swish', 'chime'];
 
 /** A feather: a leaf with a spine, tip up, centred on its quill (0, 0). */
@@ -130,34 +120,18 @@ function featherAt(size: FieldSizeValue, x: number, y: number): Point {
  * Colours used inside UI-thread worklets are computed HERE, on the JS thread: `alpha()` is not a
  * worklet, and calling it from a `useDerivedValue` on the UI runtime is a fatal crash of the
  * whole app in a release build (the cat wand crash, David 2026-11-02). Never call a non-worklet
- * helper inside a worklet — the reanimated Jest mock (`assertUiWorklet`) now fails such a test.
+ * helper inside a worklet — the reanimated Jest mock (`assertUiWorklet`) fails such a test.
  */
-const ZONE_ON = alpha(palette.mint, 0.55);
-const ZONE_OFF = alpha(palette.white, 0.3);
-const ZONE_FILL = alpha(palette.white, 0.06);
-
-function ZoneRing({ size, fx, fy }: { size: SharedValue<FieldSizeValue>; fx: SharedValue<number>; fy: SharedValue<number> }) {
-  const x = useDerivedValue(() => wandZone(size.value).x);
-  const y = useDerivedValue(() => wandZone(size.value).y);
-  const w = useDerivedValue(() => wandZone(size.value).width);
-  const h = useDerivedValue(() => wandZone(size.value).height);
-  const color = useDerivedValue(() => {
-    const p = featherAt(size.value, fx.value, fy.value);
-    return inZone(p, wandZone(size.value)) ? ZONE_ON : ZONE_OFF;
-  });
-  return (
-    <Group>
-      <RoundedRect x={x} y={y} width={w} height={h} r={28} color={ZONE_FILL} />
-      <RoundedRect x={x} y={y} width={w} height={h} r={28} color={color} style="stroke" strokeWidth={3} />
-    </Group>
-  );
-}
+const STRING_COLOUR = alpha(palette.white, 0.5);
+const TRAIL_NEAR = alpha(palette.mint, 0.55);
+const TRAIL_FAR = alpha(palette.mint, 0.35);
+const SPINE_COLOUR = alpha(palette.graphite, 0.45);
+const RING_TRACK = alpha(palette.white, 0.18);
 
 function FeatherSprite({
   size,
   fx,
   fy,
-  shake,
   trail,
   showTrail,
   paw,
@@ -165,13 +139,12 @@ function FeatherSprite({
   size: SharedValue<FieldSizeValue>;
   fx: SharedValue<number>;
   fy: SharedValue<number>;
-  shake: SharedValue<number>;
   trail: readonly { x: SharedValue<number>; y: SharedValue<number> }[];
   showTrail: boolean;
   paw: SharedValue<number>;
 }) {
-  const pos = useDerivedValue(() => featherAt(size.value, fx.value + shake.value, fy.value));
-  const transform = useDerivedValue(() => [{ translateX: pos.value.x }, { translateY: pos.value.y }, { rotate: shake.value * 0.04 }]);
+  const pos = useDerivedValue(() => featherAt(size.value, fx.value, fy.value));
+  const transform = useDerivedValue(() => [{ translateX: pos.value.x }, { translateY: pos.value.y }]);
   const handle = useDerivedValue(() => ({ x: size.value.width * 0.9, y: size.value.height + 10 }));
   const quill = useDerivedValue(() => ({ x: pos.value.x, y: pos.value.y + 6 }));
   const t0x = useDerivedValue(() => featherAt(size.value, trail[0].x.value, trail[0].y.value).x);
@@ -180,28 +153,27 @@ function FeatherSprite({
   const t1y = useDerivedValue(() => featherAt(size.value, trail[1].x.value, trail[1].y.value).y - 30);
   return (
     <Group>
-      <Line p1={handle} p2={quill} color={alpha(palette.white, 0.5)} strokeWidth={2} />
-      {showTrail && <Circle cx={t0x} cy={t0y} r={4} color={alpha(palette.mint, 0.55)} />}
-      {showTrail && <Circle cx={t1x} cy={t1y} r={3} color={alpha(palette.mint, 0.35)} />}
+      <Line p1={handle} p2={quill} color={STRING_COLOUR} strokeWidth={2} />
+      {showTrail && <Circle cx={t0x} cy={t0y} r={4} color={TRAIL_NEAR} />}
+      {showTrail && <Circle cx={t1x} cy={t1y} r={3} color={TRAIL_FAR} />}
       <Group transform={transform}>
         <Path path={FEATHER_PATH} color={palette.mint} />
-        <Path path={FEATHER_SPINE} color={alpha(palette.graphite, 0.45)} style="stroke" strokeWidth={2} />
+        <Path path={FEATHER_SPINE} color={SPINE_COLOUR} style="stroke" strokeWidth={2} />
         <Path path={PAW_PATH} color={palette.warnDark} style="stroke" strokeWidth={6} strokeCap="round" opacity={paw} />
       </Group>
     </Group>
   );
 }
 
-function CueRing({ size, progress, broken }: { size: SharedValue<FieldSizeValue>; progress: SharedValue<number>; broken: SharedValue<number> }) {
+function CueRing({ size, progress }: { size: SharedValue<FieldSizeValue>; progress: SharedValue<number> }) {
   const path = useDerivedValue(() => circlePath(size.value.width * CUE_X, size.value.height * CUE_Y, CUE_R + 6));
   const cx = useDerivedValue(() => size.value.width * CUE_X);
   const cy = useDerivedValue(() => size.value.height * CUE_Y);
   const shown = useDerivedValue(() => (progress.value > 0 ? 1 : 0));
-  const color = useDerivedValue(() => (broken.value > 0 ? palette.warnDark : palette.mint));
   return (
     <Group opacity={shown}>
-      <Circle cx={cx} cy={cy} r={CUE_R + 6} color={alpha(palette.white, 0.18)} style="stroke" strokeWidth={6} />
-      <Path path={path} color={color} style="stroke" strokeWidth={6} strokeCap="round" start={0} end={progress} />
+      <Circle cx={cx} cy={cy} r={CUE_R + 6} color={RING_TRACK} style="stroke" strokeWidth={6} />
+      <Path path={path} color={palette.mint} style="stroke" strokeWidth={6} strokeCap="round" start={0} end={progress} />
     </Group>
   );
 }
@@ -215,7 +187,6 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   // A new hunt remounts the deck (fresh players, fresh instances) — clips never change under a hunt.
   const [hunt, setHunt] = useState(0);
   const plan = useMemo(() => wandDeck(media, mode), [hunt]); // eslint-disable-line react-hooks/exhaustive-deps
-  const pounceMs = useMemo(() => wandPounceClipMs(media), [hunt]); // eslint-disable-line react-hooks/exhaustive-deps
   const [deckMode, setDeckMode] = useState<MediaMode | null>(null);
   const msAt = game.msAt;
   const now = useCallback(() => msAt(null), [msAt]);
@@ -226,17 +197,17 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const onMediaExpired = useCallback(() => void queryClient.invalidateQueries({ queryKey: childPetKey }), [queryClient]);
 
   const session = phase.kind === 'running' || phase.kind === 'finishing' ? phase.session : null;
-  const moves: readonly WandV2Move[] = phase.kind === 'running' || phase.kind === 'finishing' ? phase.input : [];
+  const releases: readonly number[] = phase.kind === 'running' || phase.kind === 'finishing' ? phase.input : [];
   const running = phase.kind === 'running';
   const runningRef = useRef(running);
   runningRef.current = running;
   const sessionRef = useRef(session);
   sessionRef.current = session;
 
-  // ── The hunt clock: the 100 ms game tick plus one timer to the next schedule boundary ──
+  // ── The hunt clock: the 100 ms game tick plus one timer to the next timeline boundary ──
   const [, force] = useReducer((n: number) => n + 1, 0);
   const t = session === null ? 0 : Math.max(game.elapsedMs, msAt(null));
-  const next = session === null ? null : wandNextBoundary(session, t, pounceMs);
+  const next = session === null ? null : wandNextBoundary(session, releases, t);
   useEffect(() => {
     if (next === null || !running) return;
     const timer = setTimeout(force, Math.max(0, next - msAt(null)));
@@ -251,7 +222,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     const specs = deckMode === plan.mode ? plan.specs : wandDeck(media, deckMode).specs;
     queue.start(specs, plan.initial);
   }, [sessionId]); // eslint-disable-line react-hooks/exhaustive-deps
-  const role = session === null ? null : wandStageAt(session, t, pounceMs);
+  const role = session === null ? null : wandStageAt(session, releases, t);
   const request = queue.request;
   useEffect(() => {
     if (role !== null) request(role);
@@ -261,7 +232,6 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const size = useFieldSize();
   const fxv = useSharedValue(-1);
   const fyv = useSharedValue(-1);
-  const shake = useSharedValue(0);
   const paw = useSharedValue(0);
   const t0x = useSharedValue(-1);
   const t0y = useSharedValue(-1);
@@ -269,47 +239,15 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const t1y = useSharedValue(-1);
   const trail = useMemo(() => [{ x: t0x, y: t0y }, { x: t1x, y: t1y }], [t0x, t0y, t1x, t1y]);
   const cueProgress = useSharedValue(0);
-  const cueBroken = useSharedValue(0);
   const cuePulse = useSharedValue(1);
 
-  // ── Moves (JS): one per stroke ──
-  const tracker = useRef<StrokeTracker | null>(null);
-  const record = useCallback(
-    (move: WandV2Move) => {
-      const s = sessionRef.current;
-      if (s === null || !runningRef.current) return;
-      game.setInput((list) => addWandV2Move(list, move, s.duration_ms));
-    },
-    [game],
-  );
-  const onBegin = useCallback(
-    (x: number, y: number, w: number, h: number) => {
-      tracker.current = beginStroke({ x, y }, msAt(null), wandCatAt({ width: w, height: h }));
-    },
-    [msAt],
-  );
-  const onSample = useCallback(
-    (x: number, y: number, speed: number, w: number, h: number) => {
-      const tr = tracker.current;
-      if (tr === null) return;
-      const s = sessionRef.current;
-      const step = moveStroke(tr, { x, y }, msAt(null), wandCatAt({ width: w, height: h }), speed);
-      tracker.current = step.tracker;
-      if (step.stroke !== null && s !== null) record(strokeToMove(step.stroke, wandZone({ width: w, height: h }), s));
-    },
-    [msAt, record],
-  );
-  const onEnd = useCallback(
-    (x: number, y: number, speed: number, w: number, h: number) => {
-      const tr = tracker.current;
-      tracker.current = null;
-      const s = sessionRef.current;
-      if (tr === null || s === null) return;
-      const stroke = endStroke(tr, { x, y }, msAt(null), wandCatAt({ width: w, height: h }), speed);
-      if (stroke !== null) record(strokeToMove(stroke, wandZone({ width: w, height: h }), s));
-    },
-    [msAt, record],
-  );
+  // ── Let-go (JS): every finger lift, and »Pusti!» ──
+  const letGo = useCallback(() => {
+    const s = sessionRef.current;
+    if (s === null || !runningRef.current) return;
+    const at = msAt(null);
+    game.setInput((list) => addWandRelease(list, at, s.duration_ms));
+  }, [game, msAt]);
 
   const handlers = useMemo<GameGestureHandlers>(() => {
     const place = (p: Point) => {
@@ -329,29 +267,24 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     return {
       onPanBegin: (e) => {
         'worklet';
-        const p = featherForFinger({ x: e.x, y: e.y });
-        place(p);
-        scheduleOnRN(onBegin, p.x, p.y, size.value.width, size.value.height);
+        place(featherForFinger({ x: e.x, y: e.y }));
       },
       onPanUpdate: (e) => {
         'worklet';
-        const p = featherForFinger({ x: e.x, y: e.y });
-        place(p);
-        scheduleOnRN(onSample, p.x, p.y, Math.hypot(e.velocityX, e.velocityY), size.value.width, size.value.height);
+        place(featherForFinger({ x: e.x, y: e.y }));
       },
-      onPanEnd: (e) => {
+      onPanFinalize: () => {
         'worklet';
-        const p = featherForFinger({ x: e.x, y: e.y });
-        scheduleOnRN(onEnd, p.x, p.y, Math.hypot(e.velocityX, e.velocityY), size.value.width, size.value.height);
+        scheduleOnRN(letGo);
       },
     };
-  }, [reduceMotion, fxv, fyv, t0x, t0y, t1x, t1y, size, onBegin, onSample, onEnd]);
+  }, [reduceMotion, fxv, fyv, t0x, t0y, t1x, t1y, letGo]);
   const gestures = useGameGestures(view, handlers);
   const easy = gestures.inputMode === 'hold';
 
   // ── Live mirror → cues ──
-  const live: WandLive | null = session === null ? null : wandLive(session, moves, t);
-  const prevLive = useRef<WandLive | null>(null);
+  const live: WandHuntState | null = session === null ? null : wandHuntAt(session, releases, t);
+  const prevLive = useRef<WandHuntState | null>(null);
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
   useEffect(
     () => () => {
@@ -368,6 +301,12 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     if (Platform.OS === 'ios') AccessibilityInfo.announceForAccessibility(text);
   };
   const [staticPaw, setStaticPaw] = useState(false);
+  const endCue = () => {
+    cancelAnimation(cuePulse);
+    cancelAnimation(cueProgress);
+    cuePulse.value = 1;
+    cueProgress.value = 0;
+  };
   useEffect(() => {
     if (live === null || session === null) return;
     const cues = wandCues(prevLive.current, live);
@@ -376,22 +315,19 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
       if (cue.kind === 'crouch') {
         fx.sound('crouch');
         for (const gap of CUE_HAPTIC_GAPS_MS) timers.current.push(setTimeout(() => fx.haptic('cue'), gap));
-        say(S.freeze);
+        say(S.letGo);
         announce(S.a11y.crouch);
-        const p = session.pounces_ms[cue.pounce];
-        const cueAt = session.crouch_cues_ms[cue.pounce];
-        const left = Math.max(0, p - t);
-        cueBroken.value = 0;
-        cueProgress.value = Math.max(0.001, Math.min(1, (t - cueAt) / Math.max(1, p - cueAt)));
-        cueProgress.value = withTiming(1, { duration: left, easing: Easing.linear });
-        if (!reduceMotion) cuePulse.value = withRepeat(withSequence(withTiming(1.12, { duration: 260 }), withTiming(1, { duration: 260 })), -1);
-      } else if (cue.kind === 'calmBroken') {
-        cueBroken.value = 1;
+        const m = live.moment;
+        if (m.kind === 'cue') {
+          cueProgress.value = Math.max(0.001, Math.min(1, (t - m.cueMs) / Math.max(1, m.endsMs - m.cueMs)));
+          cueProgress.value = withTiming(1, { duration: Math.max(0, m.endsMs - t), easing: Easing.linear });
+          if (!reduceMotion) cuePulse.value = withRepeat(withSequence(withTiming(1.12, { duration: 260 }), withTiming(1, { duration: 260 })), -1);
+        }
       } else if (cue.kind === 'pounce') {
-        cancelAnimation(cuePulse);
-        cuePulse.value = 1;
-        cueProgress.value = 0;
+        endCue();
+        fx.sound('swish');
         announce(S.a11y.pounce);
+        const release = live.decided[cue.index]?.release_ms ?? t;
         timers.current.push(
           setTimeout(() => {
             if (reduceMotion) {
@@ -400,32 +336,18 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
             } else {
               paw.value = withSequence(withTiming(1, { duration: 120 }), withTiming(0, { duration: 380 }));
             }
-          }, Math.max(0, session.pounces_ms[cue.pounce] + WAND_PAW_AFTER_MS - t)),
+          }, Math.max(0, release + WAND_PAW_AFTER_MS - t)),
         );
-      } else if (cue.kind === 'dodged') {
-        void feedback.current?.show('star', { totalMs: STAR_MS });
-        fx.sound('swish');
-        fx.haptic('success');
-        say(S.fb.dodge);
-      } else if (cue.kind === 'grabbed') {
-        // Caught in the paw: the feather shakes, then wriggles free — no ✗, no text (§5.2).
-        if (!reduceMotion) {
-          const at = Math.max(0, session.pounces_ms[cue.pounce] + WAND_PAW_AFTER_MS - t);
-          timers.current.push(
-            setTimeout(() => {
-              shake.value = withRepeat(withSequence(withTiming(-9, { duration: 50 }), withTiming(9, { duration: 50 })), Math.round(WAND_GRAB_SHAKE_MS / 100), true);
-              timers.current.push(setTimeout(() => (shake.value = 0), WAND_GRAB_SHAKE_MS));
-            }, at),
-          );
-        }
-      } else if (cue.kind === 'catchCue') {
-        say(S.catchCue);
-        announce(S.catchCue);
       } else if (cue.kind === 'caught') {
-        void feedback.current?.show('star', { totalMs: STAR_MS });
+        void feedback.current?.show('star', { mask: true, totalMs: STAR_MS });
         fx.sound('chime');
         fx.haptic('success');
         say(S.fb.caught);
+        announce(S.fb.caught);
+      } else if (cue.kind === 'lostInterest') {
+        // No ✗, no fault: the cat just looks away; the rule line comes back for the next 👀.
+        endCue();
+        say(S.ruleLine);
       }
     }
   });
@@ -441,10 +363,9 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     if (sessionId !== null) say(S.ruleLine);
   }, [sessionId, say]);
 
-  // ── Hold mode: the feather floats by itself, still from the 👀 cue until the pounce ──
-  const crouching = live?.pounces.some((p) => p.state === 'cue') === true;
+  // ── Hold mode: the feather floats by itself ──
   useEffect(() => {
-    if (!easy || !running || reduceMotion || crouching) return;
+    if (!easy || !running || reduceMotion) return;
     let i = 0;
     const step = () => {
       const p = floatPoint(wandZone(size.value), i++);
@@ -454,15 +375,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
     step();
     const id = setInterval(step, FLOAT_STEP_MS);
     return () => clearInterval(id);
-  }, [easy, running, reduceMotion, crouching, size, fxv, fyv]);
-  const dodgeTap = () => {
-    if (!runningRef.current) return;
-    record(dodgeButtonMove(msAt(null)));
-    const z = wandZone(size.value);
-    const away = { x: z.x + z.width * 0.85, y: z.y + z.height * 0.15 };
-    fxv.value = reduceMotion ? away.x : withTiming(away.x, { duration: 220 });
-    fyv.value = reduceMotion ? away.y : withTiming(away.y, { duration: 220 });
-  };
+  }, [easy, running, reduceMotion, size, fxv, fyv]);
 
   // ── Start / again ──
   const wand = view.cat.wand;
@@ -479,8 +392,8 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const deckCurrent = useMemo(() => (q === null ? null : { role: q.current, instance: q.instance, lastSwitch: q.lastSwitch }), [q]);
 
   const serverResult = phase.kind === 'result' ? phase.result : null;
-  const stars = serverResult?.stars ?? live?.stars ?? 0;
-  const dots = live === null ? [] : wandDots(live);
+  const stars = serverResult?.stars ?? (live === null ? 0 : wandStars(live));
+  const dots = live === null || session === null ? [] : wandDots(live, session);
   const close = phase.kind === 'running' ? game.stop : phase.kind === 'starting' || phase.kind === 'finishing' ? undefined : onClose;
 
   const card = (children: ReactNode, id: string) => (
@@ -541,10 +454,14 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
         {phase.status === 'unchanged' && <Text style={styles.muted}>{S.result.stored}</Text>}
         {r.success && phase.status !== 'unchanged' && <Text style={styles.body}>{S.result.counts}</Text>}
         {r.hint !== null && (
-          <Text style={r.success ? styles.muted : styles.bodyStrong} testID={`${testID}-result-hint`}>
-            {S.hint[r.hint]}
+          <Text style={styles.bodyStrong} testID={`${testID}-result-hint`}>
+            {S.hint.letGo}
           </Text>
         )}
+        {/* The learning point (GAMES_SPEC §5.1, CAT_SPEC C11 / G1): the hunt must end with the catch. */}
+        <Text style={styles.muted} testID={`${testID}-result-learn`}>
+          {S.result.learn}
+        </Text>
         {!r.success && <Text style={styles.muted}>{C.noPenalty}</Text>}
         {!r.success && (
           <Pressable testID={`${testID}-again`} accessibilityRole="button" onPress={again} style={({ pressed }) => [styles.primary, pressed && styles.pressed]}>
@@ -585,15 +502,15 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
   const dock =
     running && easy ? (
       <Pressable
-        testID={`${testID}-dodge`}
+        testID={`${testID}-let-go`}
         accessibilityRole="button"
-        accessibilityLabel={S.dodgeButton}
-        accessibilityHint={S.a11y.dodgeHint}
-        onPress={dodgeTap}
+        accessibilityLabel={S.letGoButton}
+        accessibilityHint={S.a11y.letGoHint}
+        onPress={letGo}
         style={({ pressed }) => [styles.primary, pressed && styles.pressed]}
       >
-        <MoveUpRight color={palette.graphite} size={24} />
-        <Text style={styles.primaryText}>{S.dodgeButton}</Text>
+        <Hand color={palette.graphite} size={24} />
+        <Text style={styles.primaryText}>{S.letGoButton}</Text>
       </Pressable>
     ) : null;
 
@@ -615,9 +532,8 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
       }
       field={
         <PlayField size={size} gesture={gestures.gesture} testID={`${testID}-field`}>
-          <ZoneRing size={size} fx={fxv} fy={fyv} />
-          <CueRing size={size} progress={cueProgress} broken={cueBroken} />
-          <FeatherSprite size={size} fx={fxv} fy={fyv} shake={shake} trail={trail} showTrail={!reduceMotion} paw={paw} />
+          <CueRing size={size} progress={cueProgress} />
+          <FeatherSprite size={size} fx={fxv} fy={fyv} trail={trail} showTrail={!reduceMotion} paw={paw} />
         </PlayField>
       }
       feedback={
@@ -635,7 +551,7 @@ export default function WandGameV2({ view, onClose, reduceMotion, clock, testID 
           stars={stars}
           line={line.text}
           closeLabel={phase.kind === 'running' ? C.stopA11y : C.close}
-          progressLabel={S.a11y.progress(dots.filter(Boolean).length, dots.length, stars)}
+          progressLabel={S.a11y.progress(stars, dots.length)}
           onClose={close ?? onClose}
           closeLocked={close === undefined}
           testID={`${testID}-top`}

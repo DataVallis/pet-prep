@@ -1,15 +1,16 @@
 /**
- * Wand v2 — the clips of the stage (GAMES_SPEC §5.2, §8.1), pure.
+ * The cat wand hunt — the clips of the stage (GAMES_SPEC §5.2, §8.1), pure.
  *
  * Chain (hub = the crouch):
  *   `stalking` = `wand_stalking` once — stand → crouch (0 … `stalk_ms`);
  *   `crouch`   = `wand_crouch_loop` (server-derived ping-pong of the last ~1 s of the stalk, 0 $),
- *                looping between pounces; missing → `wand_stalking` itself loops as the hub (it
- *                then opens the hunt too — one player, no separate stalk role; GAMES_SPEC §7.3
- *                »nadomestilo: zanka iz izvirnika«);
- *   `pounce`   = `wand_pouncing` once from each pounce — crouch → ≈ crouch (sent start-only);
- *                its end goes straight back into the crouch loop (same pose);
- *   `catching` = `wand_catching` once from `catch_at_ms` — crouch → catch, holds the catch pose.
+ *                looping while the cat watches the feather and during each 👀 cue; missing →
+ *                `wand_stalking` itself loops as the hub (it then opens the hunt too — one player,
+ *                no separate stalk role; GAMES_SPEC §7.3 »nadomestilo: zanka iz izvirnika«);
+ *   `catching` = `wand_catching` once from each let-go during a cue — crouch → catch (the pounce
+ *                and the catch in one clip), holds the catch pose; the ★ mask then cuts back to
+ *                the crouch loop (simple rule, David 2026-11-08). `wand_pouncing` (the old dodge
+ *                rule's miss) is not mounted any more.
  * Lengths = the server's `phase_seconds` (`phaseClipMs`, default 3 s).
  *
  * Without the `wand` phase group (an older media set) the cat's `playing` (else `idle`) state loop
@@ -28,7 +29,6 @@ import type { MediaMode } from '@/modules/petMedia/statePlayer';
 const POSE: Readonly<Record<WandRole, { start: string; end: string }>> = {
   stalking: { start: 'stand', end: 'crouch' },
   crouch: { start: 'crouch', end: 'crouch' },
-  pounce: { start: 'crouch', end: 'crouch' },
   catching: { start: 'crouch', end: 'catch' },
 };
 
@@ -43,9 +43,9 @@ export function wandHubKey(media: Pick<PetMediaInfo, 'phases'>): 'wand_crouch_lo
   return null;
 }
 
-/** Stored length of the pounce clip (the stage shows it this long from each pounce). */
-export function wandPounceClipMs(media: Pick<PetMediaInfo, 'phaseMs'>): number {
-  return phaseClipMs(media, 'wand_pouncing');
+/** Stored length of the catch clip (the ★ comes when it has played). */
+export function wandCatchClipMs(media: Pick<PetMediaInfo, 'phaseMs'>): number {
+  return phaseClipMs(media, 'wand_catching');
 }
 
 /** The stage plan of the hunt for this cat and display mode. */
@@ -61,7 +61,7 @@ export function wandDeck(media: PetMediaInfo, mode: MediaMode, toy = pickToy(med
   const hub = wandHubKey(media);
   // The stalk is its own role only when the hub is the derived loop (else the stalk IS the hub).
   const separateStalk = phased && hub === 'wand_crouch_loop';
-  const roles: WandRole[] = separateStalk ? ['stalking', 'crouch', 'pounce', 'catching'] : ['crouch', 'pounce', 'catching'];
+  const roles: WandRole[] = separateStalk ? ['stalking', 'crouch', 'catching'] : ['crouch', 'catching'];
 
   const stateLoop = (() => {
     if (toyStage?.url) return toyStage.url;
@@ -73,7 +73,7 @@ export function wandDeck(media: PetMediaInfo, mode: MediaMode, toy = pickToy(med
     if (!video) return { url: null, loop: false };
     if (!phased) return { url: stateLoop, loop: true };
     if (role === 'crouch') return { url: hub === null ? null : media.phases[hub], loop: true };
-    const key = role === 'stalking' ? 'wand_stalking' : role === 'pounce' ? 'wand_pouncing' : 'wand_catching';
+    const key = role === 'stalking' ? 'wand_stalking' : 'wand_catching';
     const url = media.phases[key];
     return { url: present(url) ? url : null, loop: false };
   };
@@ -92,7 +92,7 @@ export function wandDeck(media: PetMediaInfo, mode: MediaMode, toy = pickToy(med
   const specs: ClipSpec[] = clips.map((clip) => {
     const role = clip.role as WandRole;
     const ownOncePlayer = clip.url !== null && !clip.loop;
-    const key = role === 'stalking' ? 'wand_stalking' : role === 'pounce' ? 'wand_pouncing' : 'wand_catching';
+    const key = role === 'stalking' ? 'wand_stalking' : 'wand_catching';
     return {
       role,
       loop: role === 'crouch',

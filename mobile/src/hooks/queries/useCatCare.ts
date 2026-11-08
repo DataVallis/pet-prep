@@ -45,7 +45,7 @@ import {
 import type { ChildPetView } from '@/modules/childPet/childPetView';
 
 import type { WandMove } from '@/modules/catCare/catGames';
-import { readWandV2Result, readWandV2Session, type WandV2Move, type WandV2Result, type WandV2Session } from '@/modules/catCare/wandV2/wandRules';
+import { readWandHuntResult, readWandHuntSession, type WandHuntResult, type WandHuntSession } from '@/modules/catCare/wandV2/wandRules';
 import { classifyActionError } from '@/modules/childPet/actionMessages';
 
 /** A 200 whose body isn't what the contract promises (never guess a schedule / verdict). */
@@ -103,23 +103,23 @@ export const useFinishWand = () =>
     (raw) => readCatFinishResponse(raw, readWandResult),
   );
 
-// ── Wand play v2 (GAMES_SPEC §5, game-layer builds only) ─────────
+// ── Wand hunt — the simple rule (GAMES_SPEC §5, game-layer builds only) ─────────
 
-export const useStartWandV2 = () =>
-  useSessionMutation<void, CatStartResponse<WandV2Session>>(['wand', 'start', 'v2'], () => api.startWandV2(), (raw) =>
-    readCatStartResponse(raw, readWandV2Session),
+export const useStartWandHunt = () =>
+  useSessionMutation<void, CatStartResponse<WandHuntSession>>(['wand', 'start', 'hunt'], () => api.startWandHunt(), (raw) =>
+    readCatStartResponse(raw, readWandHuntSession),
   );
 
-export interface FinishWandV2Variables {
+export interface FinishWandHuntVariables {
   sessionId: string;
-  moves: readonly WandV2Move[];
+  releases: readonly number[];
 }
 
-export const useFinishWandV2 = () =>
-  useSessionMutation<FinishWandV2Variables, CatFinishResponse<WandV2Result>>(
-    ['wand', 'finish', 'v2'],
-    ({ sessionId, moves }) => api.finishWandV2(sessionId, moves),
-    (raw) => readCatFinishResponse(raw, readWandV2Result),
+export const useFinishWandHunt = () =>
+  useSessionMutation<FinishWandHuntVariables, CatFinishResponse<WandHuntResult>>(
+    ['wand', 'finish', 'hunt'],
+    ({ sessionId, releases }) => api.finishWandHunt(sessionId, releases),
+    (raw) => readCatFinishResponse(raw, readWandHuntResult),
   );
 
 // ── Grooming / weekly litter change ───────────────────────────
