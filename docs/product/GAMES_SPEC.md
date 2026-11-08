@@ -257,7 +257,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 **Potek:**
 | Korak | Ljubljenček | Sloj | Otrok |
 |---|---|---|---|
-| začetek | zanka `playing` (sicer `idle`) | vrstica »Boži počasi, 3 sekunde.« (≥ 2,5 s); tri srca ♡♡♡ zgoraj | — |
+| začetek | zanka `playing` (sicer `idle`) | vrstica »Božaj počasi, 3 sekunde.« (≥ 2,5 s); tri srca ♡♡♡ zgoraj | — |
 | božanje | zanka | sled srčkov za prstom (skia), srce se polni 0 → 3 s; tiho »predenje«/mehka haptika vsakih 0,5 s | počasi vleče prst po ljubljenčku |
 | prehitro (hitrost > 900 pt/s) | zanka | srce se ne polni; ikona 🐢 (≥ 2 s) | upočasni |
 | po 3 s | zanka | srce polno → ikona ✋ »Počakaj …« (≥ 2 s) | **dvigne prst** |
@@ -266,7 +266,7 @@ Pravila (verjetnost, napredek, učinki potty / place) se med ukazi ne razlikujej
 | 3 srca | zanka | »Uživa! ♥♥♥« → konec, `POST play {kind:"cuddle"}` | — |
 
 **Posnetki:** obstoječi (`playing` / `idle`). Izbirni nov posnetek C (§8.3).
-**Besedila:** `cuddle.slow` »Boži počasi, 3 sekunde.« / »Stroke slowly, 3 seconds.« · `cuddle.wait` »Počakaj …« / »Wait …« · `cuddle.more` »Še!« / »More!« · `cuddle.done` »Uživa! Hvala za crkljanje.« / »It loves it! Thanks for the cuddles.«
+**Besedila:** `cuddle.slow` »Božaj počasi, 3 sekunde.« / »Stroke slowly, 3 seconds.« · `cuddle.wait` »Počakaj …« / »Wait …« · `cuddle.more` »Še!« / »More!« · `cuddle.done` »Uživa! Hvala za crkljanje.« / »It loves it! Thanks for the cuddles.«
 **Dostopnost:** »Lažje kretnje« / bralnik: gumb »Pobožaj« — držanje polni srce 3 s, spust = premor; »zmanjšaj gibanje«: srčki brez sledi in letenja.
 
 ---
