@@ -1,6 +1,6 @@
 {
   "country": "CA",
-  "checked": "2026-11-05",
+  "checked": "2026-11-08",
   "sources": [
     {
       "name": "VCA Canada hospital pages (Toronto, Oakville, Newmarket, Ottawa, London)",
@@ -126,6 +126,38 @@
       "name": "Alpine Veterinary Medical Centre (Whitehorse)",
       "url": "https://alpinevet.squarespace.com",
       "note": "Own page opened."
+    },
+    {
+      "name": "Town of Riverview business listings (Riverview Animal Health Centre, Moncton Veterinary Walk In & Urgent Care)",
+      "url": "https://www.townofriverview.ca/riverview-businesses/riverview-animal-health-centre"
+    },
+    {
+      "name": "VetStrategy clinic listings (New Brunswick, Saskatchewan, Nova Scotia)",
+      "url": "https://www.vetstrategy.com/our-clinics/new-brunswick/"
+    },
+    {
+      "name": "Family Pet Hospital & 24 Hour Pet Emergency Centre (Lethbridge)",
+      "url": "https://www.familypet.ca/emergency"
+    },
+    {
+      "name": "Animal Emergency Clinic of the Fraser Valley (Langley)",
+      "url": "https://www.animalemerg.com/about-us"
+    },
+    {
+      "name": "Boundary Bay Veterinary Specialty Hospital - company press release (Surrey)",
+      "url": "https://www.businesswire.com/news/home/20230509005384/en/Boundary-Bay-Veterinary-Specialty-Hospital-Moves-to-Surrey"
+    },
+    {
+      "name": "Bowmanville Veterinary Clinic and Northumberland Animal Hospital emergency pages (Durham/Peterborough/Northumberland area)",
+      "url": "https://www.bowmanvilleveterinaryclinic.com/emergency"
+    },
+    {
+      "name": "Durham Region business directory",
+      "url": "https://directory.durham.ca/Home/View/animal-emergency-clinic-of-durham-region"
+    },
+    {
+      "name": "City of Medicine Hat news",
+      "url": "https://www.medicinehat.ca/news/posts/for-the-love-of-animals/"
     }
   ],
   "entries": [
@@ -1665,7 +1697,364 @@
       "source_url": "https://alpinevet.squarespace.com",
       "note": "'24 hour emergency care' on-call arrangement, not a staffed 24 h hospital.",
       "checked": "2026-11-05"
+    },
+    {
+      "kind": "clinic",
+      "name": "Riverview Animal Health Centre",
+      "city": "Riverview",
+      "region": "New Brunswick",
+      "address": "550 Pine Glen Road, Riverview, NB E1B 4X2",
+      "phone": "506-387-4015",
+      "emergency_24h": true,
+      "duty": "Open 24 hours, 7 days a week for emergencies, urgent care and walk-ins; regular appointments in clinic hours.",
+      "small_animals": true,
+      "url": "https://www.riverviewanimalhealthcentre.ca/",
+      "source_url": "https://www.townofriverview.ca/riverview-businesses/riverview-animal-health-centre",
+      "checked": "2026-11-08",
+      "note": "24 h wording on the Town of Riverview business page; VetStrategy NB page lists it under 24 Hour Hospitals. Own site not opened (URL only seen in that page)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Moncton Veterinary Walk In & Urgent Care",
+      "city": "Riverview",
+      "region": "New Brunswick",
+      "address": "30 Trites Road, Riverview, NB E1B 2V6",
+      "phone": "506-777-1235",
+      "emergency_24h": false,
+      "duty": "Walk-in urgent care, 12 pm to 12 am, 7 days a week.",
+      "small_animals": true,
+      "url": "http://monctonurgentcare.ca/",
+      "source_url": "https://www.townofriverview.ca/riverview-businesses/moncton-veterinary-walk-urgent-care",
+      "checked": "2026-11-08",
+      "note": "Hours 12 PM-12 AM per Town of Riverview page, so not 24 h. monctonurgentcare.ca refused (PROVENANCE_REQUIRED)."
+    },
+    {
+      "kind": "clinic",
+      "name": "Acadia Veterinary Hospital",
+      "city": "Dieppe",
+      "region": "New Brunswick",
+      "address": "101-323 Champlain St, Dieppe, NB E1A 1P2",
+      "phone": "(506) 384-4838",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Elmwood Veterinary Hospital",
+      "city": "Moncton",
+      "region": "New Brunswick",
+      "address": "130 MacAleese Lane, Moncton, NB E1A 3L9",
+      "phone": "(506) 858-9900",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Moncton Animal Hospital",
+      "city": "Moncton",
+      "region": "New Brunswick",
+      "address": "771 Mountain Road, Moncton, NB E1C 2R3",
+      "phone": "(506) 857-4271",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Mountain Road Animal Hospital",
+      "city": "Moncton",
+      "region": "New Brunswick",
+      "address": "1750 Mountain Road, Moncton, NB E1G 1A6",
+      "phone": "(506) 382-0061",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Fredericton Animal Hospital",
+      "city": "Fredericton",
+      "region": "New Brunswick",
+      "address": "1012 Prospect Street, Fredericton, NB E3B 3C1",
+      "phone": "(506) 455-1700",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Waterview Animal Hospital",
+      "city": "Miramichi",
+      "region": "New Brunswick",
+      "address": "810 Water Street, Miramichi, NB E1N 4B8",
+      "phone": "(506) 622-2355",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Mayfield Veterinary Clinic",
+      "city": "Dufferin",
+      "region": "New Brunswick",
+      "address": "1 Happy Valley Road, Dufferin, NB E3L 2Y9",
+      "phone": "(506) 466-2543",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/new-brunswick/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Family Pet Hospital & 24 Hour Pet Emergency Centre",
+      "city": "Lethbridge",
+      "region": "Alberta",
+      "address": "2303 6th Avenue South, Lethbridge, AB T1J 1C5",
+      "phone": "(403) 320-5200",
+      "emergency_24h": false,
+      "duty": "Regular hours Mon-Fri 7:30 am-10 pm, Sat-Sun 9 am-9 pm; after-hours emergency line (403) 320-5200. Round-the-clock service not stated on source page.",
+      "small_animals": true,
+      "url": "https://www.familypet.ca/",
+      "source_url": "https://www.familypet.ca/emergency",
+      "checked": "2026-11-08",
+      "note": "24 h claim rests on the clinic's own name 'Family Pet Hospital & 24 Hour Pet Emergency Centre' and a '24/7 Emergency Care' menu link; the opened pages list 7:30-22:00 / 9-21 as hours and say 'If you have an after hours emergency, please call'. Verify in independent check."
+    },
+    {
+      "kind": "clinic",
+      "name": "Boundary Bay Veterinary Specialty Hospital",
+      "city": "Surrey",
+      "region": "British Columbia",
+      "address": "10436 173rd St, Surrey, BC",
+      "emergency_24h": true,
+      "duty": "Emergency and specialty hospital, open 24/7.",
+      "small_animals": true,
+      "url": "https://bbvsh.com/",
+      "source_url": "https://www.businesswire.com/news/home/20230509005384/en/Boundary-Bay-Veterinary-Specialty-Hospital-Moves-to-Surrey",
+      "checked": "2026-11-08",
+      "note": "24/7 from the company's 2023 BusinessWire release ('Open 24/7') and a 2025 release headline; no clinic phone on opened pages; bbvsh.com refused (PROVENANCE_REQUIRED). Verify in independent check."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Emergency Clinic of the Fraser Valley (AECFV)",
+      "city": "Langley",
+      "region": "British Columbia",
+      "address": "6325 204th Street, Unit 302, Langley, BC V2Y 3B3",
+      "phone": "(604) 514-1711",
+      "emergency_24h": true,
+      "duty": "Open 24 hours a day, 7 days a week, 365 days a year.",
+      "small_animals": true,
+      "url": "https://animalemerg.com/",
+      "source_url": "https://www.animalemerg.com/about-us",
+      "checked": "2026-11-08",
+      "note": "Own site: about-us says 'Open 24/7/365', home page 'Open 24 hrs' every day."
+    },
+    {
+      "kind": "clinic",
+      "name": "Kawartha Veterinary Emergency Clinic (KVEC)",
+      "city": "Peterborough",
+      "region": "Ontario",
+      "address": "1840 Lansdowne St W, Peterborough, ON K9K 2M9",
+      "phone": "705-741-5832",
+      "emergency_24h": true,
+      "duty": "Open 24/7 for emergencies.",
+      "small_animals": true,
+      "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
+      "checked": "2026-11-08",
+      "note": "Unit number differs between referring pages (1B vs 20), omitted. 24 h from Northumberland Animal Hospital ('two 24-hour emergency hospitals') and Bowmanville Veterinary Clinic ('Open 24/7') pages; own site not opened."
+    },
+    {
+      "kind": "clinic",
+      "name": "Port Hope Veterinary Emergency Clinic",
+      "city": "Port Hope",
+      "region": "Ontario",
+      "address": "6597 Dale Road, Port Hope, ON L1A 3V6",
+      "phone": "905-885-5321",
+      "emergency_24h": true,
+      "duty": "Open 24/7 for emergencies.",
+      "small_animals": true,
+      "source_url": "https://www.bowmanvilleveterinaryclinic.com/emergency",
+      "checked": "2026-11-08",
+      "note": "Only a referring clinic's page (Bowmanville Veterinary Clinic) opened; own site not found."
+    },
+    {
+      "kind": "clinic",
+      "name": "Pet Hospital of Prince Edward and Hastings County (PEHC)",
+      "city": "Belleville",
+      "region": "Ontario",
+      "address": "5529 Hwy 62, Belleville, ON K8N 4Z7",
+      "phone": "613-968-9956",
+      "emergency_24h": true,
+      "duty": "Open 24 hours for emergencies.",
+      "small_animals": true,
+      "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
+      "checked": "2026-11-08",
+      "note": "Described as a 24-hour emergency hospital on the Northumberland Animal Hospital page only."
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Emergency Clinic of Durham Region",
+      "city": "Whitby",
+      "region": "Ontario",
+      "address": "1910 Dundas Street East, Unit B101, Whitby, ON L1N 2L6",
+      "phone": "905-576-3031",
+      "emergency_24h": false,
+      "duty": "Night-time emergency clinic; hours not listed on source page, call ahead.",
+      "small_animals": true,
+      "url": "http://www.animalemergencydurham.com",
+      "source_url": "https://directory.durham.ca/Home/View/animal-emergency-clinic-of-durham-region",
+      "checked": "2026-11-08",
+      "note": "Durham Region directory page gives phone/address (hours: 'night time'); 'evenings, weekends, and holidays only' from Bowmanville Veterinary Clinic page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Haliburton Veterinary Services",
+      "city": "Haliburton",
+      "region": "Ontario",
+      "address": "1014 Peninsula Road, Haliburton, ON K0M 1S0",
+      "phone": "705-457-2087",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8:00-4:30, Sat 8:00-1:00; after-hours emergencies go to Kawartha Veterinary Emergency Clinic, 705-741-5832.",
+      "small_animals": true,
+      "url": "https://haliburtonvets.squarespace.com",
+      "source_url": "https://haliburtonvets.squarespace.com",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Northumberland Animal Hospital",
+      "city": "Colborne",
+      "region": "Ontario",
+      "address": "86 Big Apple Dr, Colborne, ON K0K 1S0",
+      "phone": "905-355-1622",
+      "emergency_24h": false,
+      "duty": "Emergencies during clinic hours only; after hours see Kawartha or Belleville 24-hour emergency hospitals.",
+      "small_animals": true,
+      "source_url": "https://vcacanada.com/northumberland/our-hospital/in-an-emergency",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Bowmanville Veterinary Clinic",
+      "city": "Bowmanville",
+      "region": "Ontario",
+      "address": "2826 Highway 2, Bowmanville, ON L1C 6C9",
+      "phone": "(905) 623-4431",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.bowmanvilleveterinaryclinic.com/emergency",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Central Animal Hospital (VCA Canada)",
+      "city": "Saskatoon",
+      "region": "Saskatchewan",
+      "address": "#106, 103 Street East, Saskatoon, SK S7N 1Y7",
+      "phone": "306-374-5252",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 8 am-6 pm; closed weekends. Call for urgent needs.",
+      "small_animals": true,
+      "source_url": "https://vcacanada.com/centralsk/contact-us",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Cumberland Veterinary Clinic",
+      "city": "Saskatoon",
+      "region": "Saskatchewan",
+      "address": "1010 Taylor Street East, Saskatoon, SK S7H 1W5",
+      "phone": "(306) 373-3500",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/saskatchewan/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Albert North Veterinary Clinic",
+      "city": "Regina",
+      "region": "Saskatchewan",
+      "address": "219 Albert St N, Regina, SK S4R 3C2",
+      "phone": "(306) 545-7211",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/saskatchewan/",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Animal Medical Centre",
+      "city": "Sydney",
+      "region": "Nova Scotia",
+      "address": "642 Kings Rd, Sydney, NS B1S 1B9",
+      "phone": "(902) 564-8356",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/nova-scotia/",
+      "checked": "2026-11-08",
+      "note": "VetStrategy page lists 'After Hours Services'; no 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Sydney Animal Hospital",
+      "city": "Sydney",
+      "region": "Nova Scotia",
+      "address": "609 Grand Lake Road, Sydney, NS B1P 5T3",
+      "phone": "(902) 562-5551",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/nova-scotia/",
+      "checked": "2026-11-08",
+      "note": "VetStrategy page lists 'After Hours Services'; no 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Northside Animal Hospital",
+      "city": "North Sydney",
+      "region": "Nova Scotia",
+      "address": "91 Regent Street, North Sydney, NS B2A 2G6",
+      "phone": "(902) 794-7387",
+      "emergency_24h": false,
+      "small_animals": true,
+      "source_url": "https://www.vetstrategy.com/our-clinics/nova-scotia/",
+      "checked": "2026-11-08",
+      "note": "VetStrategy page lists 'After Hours Services'; no 24 h claim."
+    },
+    {
+      "kind": "clinic",
+      "name": "Carnegy Animal Hospital",
+      "city": "Halifax",
+      "region": "Nova Scotia",
+      "address": "7 Langbrae Drive, Halifax, NS B3M 4N7",
+      "phone": "902-457-1575",
+      "emergency_24h": false,
+      "duty": "Mon-Thu 8 am-8 pm, Fri 8-7:30, Sat 8-1, closed Sun; after-hours emergencies via Metro Animal Emergency Clinic, 902-468-0674.",
+      "small_animals": true,
+      "source_url": "https://web4q.lifelearn.com/carnegyah/?p=26",
+      "checked": "2026-11-08"
+    },
+    {
+      "kind": "clinic",
+      "name": "Horizon Veterinary Services",
+      "city": "Medicine Hat",
+      "region": "Alberta",
+      "address": "2201 Box Springs Blvd NW, Medicine Hat, AB",
+      "emergency_24h": false,
+      "duty": "Dental and emergency services.",
+      "small_animals": true,
+      "url": "http://horizonveterinaryservices.com",
+      "source_url": "https://www.medicinehat.ca/news/posts/for-the-love-of-animals/",
+      "checked": "2026-11-08",
+      "note": "City of Medicine Hat news item (Jan 2023); no phone on page, no hours."
     }
   ],
-  "notes": "Run 2026-11-05, partial. College of Veterinarians of Ontario (cvo.org): only the 'Find a Veterinarian' page opened; it links to a JS register (cvo.ca.thentiacloud.net) that gives no usable list. ovma.com, ovchsc.ca (OVC Health Sciences Centre emergencies page), animalhealthpartners.com, ctvrc.ca, vectoronto.com and hamiltonevc.ca/contact were refused or not reachable (PROVENANCE_REQUIRED / fetch failure) and skipped, so OVC Guelph is NOT included; uoguelph.ca/ovc/care only said hospitals need a referral. Several hospitals therefore rely on referring clinics' pages (noted per entry). Not covered: Windsor (news item about a planned 24-hour ER could not be opened), Kingston, Sudbury, Thunder Bay, Collingwood/Blue Mountains, Niagara Falls, Guelph (Campus Estates Animal Hospital, 519-837-1212, only seen as a referral name), rest of Muskoka. No duty_rota entries: no opened page states who is on duty. Check: 16 checked, 0 fixed, 0 downgraded, 0 removed (independent check 2026-11-05: all 12 emergency_24h entries incl. both poison lines confirmed on their source pages; 4 of 17 others sampled: Burlington VERH, Animal Health Services, Secord, Kingsway; no duty rotas present).\n\nRun 2026-11-05, Quebec, partial: Not covered (left): Gatineau/Outaouais, Sherbrooke, Saguenay beyond Chicoutimi, Mont-Tremblant/Laurentides, Gaspé, Quebec City Vet et nous clinics (Cimon, Beaumont, Ormière, Laurentides), Montréal/North Shore Vet et nous clinics (Verdun, Pierrefonds, Ville St-Laurent, Blainville, Ste-Thérèse, Saint-Jérôme) - addresses/phones are on the Vet et nous region pages but individual pages were refused (PROVENANCE_REQUIRED). OMVQ site and the OMVQ 1-844-ANIMAUX press release (newswire) were refused; centredmvet.com/en/nous-joindre blocked by robots. Search found no official sites for Gatineau, Sherbrooke, Mont-Tremblant, Gaspé clinics. Poison lines: not duplicated (ASPCA, Pet Poison Helpline already in CA.json under Ontario; the exporter should show them for Quebec too if region-specific). Daubigny and CHUV hours rest on their own pages; CHUV contact page itself lists weekday office hours only.\n\nRun 2026-11-05, British Columbia, partial: 24 h entries: Vancouver Animal Emergency & Referral Centre, Central Victoria Veterinary Hospital, Tri Lake (Winfield/Kelowna, emergencies 24/7/365 per its page), Phases Veterinary Emergency Hospital (Kamloops; its own site not openable, 24 h from iNFOnews/CBC articles and its recruitment ad, phone from an aggregator). Deliberately excluded: Mountainside 24/7 Animal Emergency, North Vancouver (CVBC lists it closed 5 Dec 2025); WAVES Langford (CHEK News: emergency services paused, date not shown; wavesvet.com unreachable); Nanaimo Urgent Pet Care Centre kept as non-24 h (CVBC removed its emergency designation 1 Oct 2026); Intercity Animal Emergency Clinic Vancouver (only found on a pages.dev mirror with a placeholder phone - not official); Burrard Animal Hospital + Emergency (only an aggregator listing says 24 h; burrardvet.com refused). Unreachable (PROVENANCE_REQUIRED): cvbc.ca home, vaerc.com, phasesvetemerg.com, mountainside24er.ca, wavesvet.com, civeh.com, burrardvet.com, vcacanada pages for Yaletown, Vancouver Animal Wellness, Ross Bay, Newton, North Shore. Not covered: Kelowna and Penticton general practices (no own pages opened; Penticton has no 24 h care), Prince George (Prince George Urgent Care Group reduced to 10 pm hours per Citizen article; nearest 24 h hospitals Kelowna/Vancouver; no clinic pages opened), Whistler/Squamish/Pemberton (only an undated Pique article about a Creekside after-hours service, no phone or site - omitted), Surrey, Burnaby, Richmond, Abbotsford, Fraser Valley, Vernon, Cranbrook, rest of Vancouver Island, BC SPCA Kelowna. Canada West Veterinary Specialists (Vancouver, 604-473-4882) and Burrard are named by a Vancouver clinic page as 24/7 but not opened by themselves. No poison line duplicated. No independent check done yet.\n\nRun 2026-11-05, other provinces (AB, SK, MB, NS, PE, NL, YT), partial: 24 h entries: CARE Centre and Calgary North (Calgary), Guardian (Edmonton), Edmonton Vet ER (referring-clinic page only), Pulse (Sherwood Park; VetStrategy tag only), WCVM Saskatoon, Bridgwater Winnipeg (VetStrategy tag), Winnipeg Animal Emergency Hospital (employer notice; no phone), Coastal Care and Maritime Veterinary ER (Halifax/Dartmouth; referring pages), Alpine Whitehorse (24 h on-call). One duty_rota-type entry (NL shared after-hours group, 709-754-1750). No poison line added (Pet Poison Helpline 1-855-764-7661 on the WCVM page; already covered). Deliberately not 24 h: South Saskatchewan Animal Hospital Regina (24 HR Animal Care Centre ended overnight service Oct 2023), AVC Charlottetown (conflicting pages, 8am-11pm call hours), Metro Animal Emergency Clinic (closed 24 h Wednesdays), Western Vet Calgary (ER 8-22), VSC Newfoundland (8-19 since July 2024). Not included: New Brunswick (The Oaks Moncton said to be 24 h only on websites.ca, no phone/url; Moncton Veterinary Walk In & Urgent Care Riverview has no phone/url on opened page; Quispamsis urgent care no details; Fredericton found only on aggregators), Nunavut, NWT (Yellowknife: Great Slave paused emergency, Yellowknife Vet Clinic closed Aug 2025, Aurora YK no page opened), Saskatchewan clinics beyond Saskatoon/Regina, Alberta Lethbridge/Medicine Hat/Fort McMurray, Banff (no own page), Moncton/Fredericton/Saint John, PEI other clinics, Cape Breton other clinics. Ontario/Quebec/BC leftovers not attempted. Unreachable (PROVENANCE_REQUIRED, guessed URLs): bridgwatervet.com, winnipeganimalemergency.ca, metroanimalemergency.ca, maritimeveterinaryer.ca, coastalcarevet.ca, maritimevet.ca, vscnl.ca, pembinavethosp.ca. No independent check done yet.\n\nRun 2026-11-05, other provinces: independent check covered 17 of 45 new entries (all 12 first-flagged 24 h, the St. John's after-hours group, 7 random others); the remaining 28 carry the collector's fetch date only. Pulse (Sherwood Park) and Bridgwater (Winnipeg) downgraded to not 24 h (corporate listing tag only)."
+  "notes": "Run 2026-11-05, partial. College of Veterinarians of Ontario (cvo.org): only the 'Find a Veterinarian' page opened; it links to a JS register (cvo.ca.thentiacloud.net) that gives no usable list. ovma.com, ovchsc.ca (OVC Health Sciences Centre emergencies page), animalhealthpartners.com, ctvrc.ca, vectoronto.com and hamiltonevc.ca/contact were refused or not reachable (PROVENANCE_REQUIRED / fetch failure) and skipped, so OVC Guelph is NOT included; uoguelph.ca/ovc/care only said hospitals need a referral. Several hospitals therefore rely on referring clinics' pages (noted per entry). Not covered: Windsor (news item about a planned 24-hour ER could not be opened), Kingston, Sudbury, Thunder Bay, Collingwood/Blue Mountains, Niagara Falls, Guelph (Campus Estates Animal Hospital, 519-837-1212, only seen as a referral name), rest of Muskoka. No duty_rota entries: no opened page states who is on duty. Check: 16 checked, 0 fixed, 0 downgraded, 0 removed (independent check 2026-11-05: all 12 emergency_24h entries incl. both poison lines confirmed on their source pages; 4 of 17 others sampled: Burlington VERH, Animal Health Services, Secord, Kingsway; no duty rotas present).\n\nRun 2026-11-05, Quebec, partial: Not covered (left): Gatineau/Outaouais, Sherbrooke, Saguenay beyond Chicoutimi, Mont-Tremblant/Laurentides, Gaspé, Quebec City Vet et nous clinics (Cimon, Beaumont, Ormière, Laurentides), Montréal/North Shore Vet et nous clinics (Verdun, Pierrefonds, Ville St-Laurent, Blainville, Ste-Thérèse, Saint-Jérôme) - addresses/phones are on the Vet et nous region pages but individual pages were refused (PROVENANCE_REQUIRED). OMVQ site and the OMVQ 1-844-ANIMAUX press release (newswire) were refused; centredmvet.com/en/nous-joindre blocked by robots. Search found no official sites for Gatineau, Sherbrooke, Mont-Tremblant, Gaspé clinics. Poison lines: not duplicated (ASPCA, Pet Poison Helpline already in CA.json under Ontario; the exporter should show them for Quebec too if region-specific). Daubigny and CHUV hours rest on their own pages; CHUV contact page itself lists weekday office hours only.\n\nRun 2026-11-05, British Columbia, partial: 24 h entries: Vancouver Animal Emergency & Referral Centre, Central Victoria Veterinary Hospital, Tri Lake (Winfield/Kelowna, emergencies 24/7/365 per its page), Phases Veterinary Emergency Hospital (Kamloops; its own site not openable, 24 h from iNFOnews/CBC articles and its recruitment ad, phone from an aggregator). Deliberately excluded: Mountainside 24/7 Animal Emergency, North Vancouver (CVBC lists it closed 5 Dec 2025); WAVES Langford (CHEK News: emergency services paused, date not shown; wavesvet.com unreachable); Nanaimo Urgent Pet Care Centre kept as non-24 h (CVBC removed its emergency designation 1 Oct 2026); Intercity Animal Emergency Clinic Vancouver (only found on a pages.dev mirror with a placeholder phone - not official); Burrard Animal Hospital + Emergency (only an aggregator listing says 24 h; burrardvet.com refused). Unreachable (PROVENANCE_REQUIRED): cvbc.ca home, vaerc.com, phasesvetemerg.com, mountainside24er.ca, wavesvet.com, civeh.com, burrardvet.com, vcacanada pages for Yaletown, Vancouver Animal Wellness, Ross Bay, Newton, North Shore. Not covered: Kelowna and Penticton general practices (no own pages opened; Penticton has no 24 h care), Prince George (Prince George Urgent Care Group reduced to 10 pm hours per Citizen article; nearest 24 h hospitals Kelowna/Vancouver; no clinic pages opened), Whistler/Squamish/Pemberton (only an undated Pique article about a Creekside after-hours service, no phone or site - omitted), Surrey, Burnaby, Richmond, Abbotsford, Fraser Valley, Vernon, Cranbrook, rest of Vancouver Island, BC SPCA Kelowna. Canada West Veterinary Specialists (Vancouver, 604-473-4882) and Burrard are named by a Vancouver clinic page as 24/7 but not opened by themselves. No poison line duplicated. No independent check done yet.\n\nRun 2026-11-05, other provinces (AB, SK, MB, NS, PE, NL, YT), partial: 24 h entries: CARE Centre and Calgary North (Calgary), Guardian (Edmonton), Edmonton Vet ER (referring-clinic page only), Pulse (Sherwood Park; VetStrategy tag only), WCVM Saskatoon, Bridgwater Winnipeg (VetStrategy tag), Winnipeg Animal Emergency Hospital (employer notice; no phone), Coastal Care and Maritime Veterinary ER (Halifax/Dartmouth; referring pages), Alpine Whitehorse (24 h on-call). One duty_rota-type entry (NL shared after-hours group, 709-754-1750). No poison line added (Pet Poison Helpline 1-855-764-7661 on the WCVM page; already covered). Deliberately not 24 h: South Saskatchewan Animal Hospital Regina (24 HR Animal Care Centre ended overnight service Oct 2023), AVC Charlottetown (conflicting pages, 8am-11pm call hours), Metro Animal Emergency Clinic (closed 24 h Wednesdays), Western Vet Calgary (ER 8-22), VSC Newfoundland (8-19 since July 2024). Not included: New Brunswick (The Oaks Moncton said to be 24 h only on websites.ca, no phone/url; Moncton Veterinary Walk In & Urgent Care Riverview has no phone/url on opened page; Quispamsis urgent care no details; Fredericton found only on aggregators), Nunavut, NWT (Yellowknife: Great Slave paused emergency, Yellowknife Vet Clinic closed Aug 2025, Aurora YK no page opened), Saskatchewan clinics beyond Saskatoon/Regina, Alberta Lethbridge/Medicine Hat/Fort McMurray, Banff (no own page), Moncton/Fredericton/Saint John, PEI other clinics, Cape Breton other clinics. Ontario/Quebec/BC leftovers not attempted. Unreachable (PROVENANCE_REQUIRED, guessed URLs): bridgwatervet.com, winnipeganimalemergency.ca, metroanimalemergency.ca, maritimeveterinaryer.ca, coastalcarevet.ca, maritimevet.ca, vscnl.ca, pembinavethosp.ca. No independent check done yet.\n\nRun 2026-11-05, other provinces: independent check covered 17 of 45 new entries (all 12 first-flagged 24 h, the St. John's after-hours group, 7 random others); the remaining 28 carry the collector's fetch date only. Pulse (Sherwood Park) and Bridgwater (Winnipeg) downgraded to not 24 h (corporate listing tag only).\n\nRun 2026-11-08, follow-up (NB, Lethbridge/Medicine Hat, Cape Breton, SK/ON/BC leftovers), partial: 27 new entries, 7 x 24 h (Riverview Animal Health Centre NB, Family Pet Lethbridge, AECFV Langley, KVEC Peterborough, Port Hope, PEHC Belleville, Boundary Bay Surrey; Family Pet and Boundary Bay rest on clinic name/press release, need independent check). Covered: Moncton/Dieppe/Fredericton/Miramichi (VetStrategy NB), Cape Breton (VetStrategy NS: 3 clinics, 'After Hours Services' only), Saskatoon/Regina (3 clinics), Peterborough/Belleville/Port Hope/Whitby/Haliburton. Medicine Hat: Chat News article says the city has no after-hours emergency clinic (Crossroads, Cypress View phones not on opened pages) - only Horizon listed. Not found/unreachable: OVC Guelph (ovchsc.ca/emergencies refused; uoguelph.ca/ovc/care gives no hours; 2015 bulletin gives 519-823-8830 only for holiday emergencies - not used), Campus Estates Animal Hospital Guelph (exotics, Open 24/7 per Bowmanville page - skipped), Windsor (Lauzon/Walker Road listed by VetStrategy as 24-hour but own sites refused), Kingston, Sudbury, Thunder Bay, Niagara Falls, Collingwood, Gatineau, Sherbrooke, Laurentides, Gaspe, OMVQ, Kelowna/Penticton, Prince George, Whistler/Squamish, Burnaby/Richmond/Abbotsford, Vernon, rest of Vancouver Island, Fort McMurray, Banff, PEI rest, rest of NB (Saint John/Fredericton urgent care only on aggregators; The Oaks Moncton only on aggregators; Quispamsis Urgent Care no contact data). Also not added: SAVE Okotoks (24 h article undated, search shows a farewell event - possibly closed), Fish Creek 24 Hour Pet Hospital Calgary, 4 Paws 24 h Halifax (career page only, no phone), Cavan Hills, North Town Brampton (VetStrategy 24-hour list, own sites refused: PROVENANCE_REQUIRED for riverviewanimalhealthcentre.ca, fishcreekpethospital.com, saveveterinary.com, kvec.ca, lauzonvet.ca, walkerroadanimalhospital.com, cavanhillsvet.com, northtownvethospital.com, 4pawsveterinaryhospital.com, bbvsh.com, monctonurgentcare.ca, vetstrategy NB/SK/PEI pages until surfaced by search). No independent check done yet. Check 2026-11-08: independent agent opened 15 source pages (7 of 7 new 24-h entries plus 4 others; the vetstrategy NB page also confirmed 6 more phones), confirmed names and phones; 1 downgraded (Family Pet Hospital Lethbridge, 24 h not explicit on page), 1 duty text corrected (Durham), 0 phones fixed, 0 removed; 11 other new entries not independently opened."
 }
