@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exceptions\TimezoneChangeTooSoonException;
 use App\Http\Requests\UpdateQuietHoursRequest;
 use App\Models\QuietHours;
+use App\Models\User;
 use App\Services\FamilyService;
 use App\Services\FamilySettingsService;
 use Illuminate\Http\JsonResponse;
@@ -56,7 +58,26 @@ class QuietHoursController extends Controller
             return response()->json(['message' => 'Only parent profiles can manage quiet hours.'], 403);
         }
 
-        $quietHours = DB::transaction(function () use ($request, $parent): QuietHours {
+        try {
+            $quietHours = $this->save($request, $parent);
+        } catch (TimezoneChangeTooSoonException $e) {
+            // Same 24 h limit as PUT /api/parent/settings; nothing is saved.
+            return response()->json($e->body(), 422);
+        }
+
+        return response()->json([
+            'message' => 'Quiet hours updated successfully.',
+            'quiet_hours' => $this->formatQuietHours($quietHours),
+            'timezone' => $parent->familyTimezone(),
+        ], 200);
+    }
+
+    /**
+     * @throws TimezoneChangeTooSoonException
+     */
+    private function save(UpdateQuietHoursRequest $request, User $parent): QuietHours
+    {
+        return DB::transaction(function () use ($request, $parent): QuietHours {
             if ($request->has('timezone')) {
                 $this->settings->updateTimezone($parent, $request->validated('timezone'));
             }
@@ -87,12 +108,6 @@ class QuietHoursController extends Controller
                 'parent_id' => $parent->id,
             ]));
         });
-
-        return response()->json([
-            'message' => 'Quiet hours updated successfully.',
-            'quiet_hours' => $this->formatQuietHours($quietHours),
-            'timezone' => $parent->familyTimezone(),
-        ], 200);
     }
 
     /**

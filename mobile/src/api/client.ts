@@ -149,6 +149,19 @@ export interface PetNameErrorBody extends ValidationErrorBody {
 
 /** `PATCH /api/parent/pets/{pet}/name` 200 body: the name as stored (null = none). */
 export type PetNameResponse = operations['petName.update']['responses'][200]['content']['application/json'];
+/** PUT /api/parent/settings (family time zone, David 2026-11-08). */
+export type UpdateFamilySettingsResponse =
+  operations['parentSettings.update']['responses'][200]['content']['application/json'];
+/**
+ * 422 body of PUT /api/parent/settings when the family zone changed less than 24 h ago
+ * (FamilySettingsService). Hand-typed: Scramble doesn't infer this caught-exception body.
+ */
+export interface TimezoneChangeTooSoonBody {
+  message: string;
+  reason: 'timezone_change_too_soon';
+  /** ISO 8601 in the current family zone. */
+  next_allowed_at: string;
+}
 
 /** `GET /api/parent/certificates` 200 body (M2-01d). */
 export type CertificatesResponse =
@@ -1302,9 +1315,20 @@ export const api = {
   /** GET /api/parent/dashboard — pet metrics, traffic light, quiet hours, activities. */
   getParentDashboard: () => apiRequest<ParentDashboardResponse>('/api/parent/dashboard'),
 
-  /** GET /api/parent/quiet-hours — Get quiet hours config. */
+  /** GET /api/parent/quiet-hours — quiet hours config + the family zone they are read in. */
   getQuietHours: () =>
-    apiRequest<{ quiet_hours: QuietHours | null }>('/api/parent/quiet-hours'),
+    apiRequest<{ quiet_hours: QuietHours | null; timezone?: string }>('/api/parent/quiet-hours'),
+
+  /**
+   * PUT /api/parent/settings {timezone} — change the family time zone (David 2026-11-08).
+   * Same zone again = no-op; a change at most once per 24 h → 422 `timezone_change_too_soon`
+   * (`TimezoneChangeTooSoonBody`), an invalid IANA name → 422 validation.
+   */
+  updateFamilyTimezone: (timezone: string) =>
+    apiRequest<UpdateFamilySettingsResponse>('/api/parent/settings', {
+      method: 'PUT',
+      body: { timezone },
+    }),
 
   /** PUT /api/parent/quiet-hours — Update quiet hours config. */
   updateQuietHours: (data: Partial<QuietHours>) =>

@@ -73,6 +73,7 @@
 - Izziv (12 tednov, certifikat) se šteje od rojstva ne glede na starost psa — brez časa zaklepa do plačila (M3-11b): pes, ki je čakal zaklenjen 10 dni, konča izziv 10 dni pozneje. Pretekli dnevi se zaradi poznejšega zaklepa nikoli ne spremenijo.
 - Simulacija traja **12 realnih tednov** → pes dopolni 1 leto → **Certifikat odgovornosti** s končno oceno.
 - Vsi časi (tihe ure, polnoč, okna hranjenja) so v **lokalnem časovnem pasu družine**.
+- **Časovni pas družine lahko spremeni starš** (David 8. 11. 2026, »kar B«): v Nadzoru (»Časovni pas družine«, nad tihimi urami), z opozorilom, da se premaknejo polnoč, obroki, tihe ure in dan za korake, zato je današnji dan lahko krajši ali daljši. **Dovoljeno tudi med 12-tedenskim izzivom.** Največ **enkrat na 24 ur** na družino (privzeto Claude, da pasu ni mogoče menjati za premikanje oken obrokov); isti pas znova ne šteje. Ob menjavi: dan, ki se je v starem pasu že končal, se najprej zaključi; če je v obeh pasovih isti datum, tekoči dan za korake teče naprej do polnoči novega pasu (koraki in energija se sredi dneva ne izbrišejo); pri pasu daleč na vzhodu se dan konča prej, pri pasu daleč na zahodu se datum ponovi — za že zaključen datum nikoli druga bolezen zaradi sprehoda. Če je telefon starša v drugem pasu (drug trenutni UTC-zamik) kot družina, mu aplikacija na pregledu predlaga menjavo (opozorilo zapre za ta pas telefona; spet se pokaže šele v naslednjem pasu), pri tihih urah pa piše »po času družine (Ljubljana)«. Otroku tega ne kažemo.
 
 ## 5. Metrike in hitrost upadanja
 

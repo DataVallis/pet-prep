@@ -21,6 +21,10 @@ import { Card, ErrorBanner, PARENT_COLORS as C, SectionTitle } from '@/component
 import type { QuietHours } from '@/types';
 import { palette } from '@/theme';
 import { strings } from '@/i18n/strings';
+import { currentLanguage } from '@/i18n';
+import { phoneDiffersFromFamily, zoneCity } from '@/modules/familyZone/familyZone';
+import { FAMILY_ZONE_STRINGS } from '@/modules/familyZone/strings';
+import { usePhoneZone } from '@/modules/familyZone/usePhoneZone';
 
 
 /** All user-visible strings (`parent:quietHours`, M1-18). */
@@ -63,8 +67,18 @@ function TimeInput({ label, value, onChange, testID }: { label: string; value: s
   );
 }
 
-export default function QuietHoursCard() {
+interface QuietHoursCardProps {
+  /**
+   * The family zone (dashboard `family.timezone`, else the quiet-hours answer). When the phone's
+   * clock differs from it, a small »po času družine (Ljubljana)« note says how the times are read
+   * (David 2026-11-08).
+   */
+  familyZone?: string | null;
+}
+
+export default function QuietHoursCard({ familyZone = null }: QuietHoursCardProps) {
   const query = useQuietHours();
+  const phoneZone = usePhoneZone();
   const update = useUpdateQuietHours();
   const [times, setTimes] = useState<Times>(DEFAULT_TIMES);
   // Loaded, and no parent has saved quiet hours yet (server defaults, or an older server's null).
@@ -127,6 +141,11 @@ export default function QuietHoursCard() {
         {S.title}
       </SectionTitle>
       <Text style={styles.muted}>{S.hint}</Text>
+      {familyZone !== null && phoneDiffersFromFamily(familyZone, phoneZone, Date.now()) && (
+        <Text style={styles.zoneNote} testID="qh-family-time">
+          {FAMILY_ZONE_STRINGS.familyTimeNote(zoneCity(familyZone, currentLanguage()))}
+        </Text>
+      )}
 
       {notSaved && (
         <View style={styles.notSaved} testID="qh-not-saved" accessibilityRole="alert">
@@ -172,6 +191,7 @@ const styles = StyleSheet.create({
   flex: { flex: 1 },
   row: { flexDirection: 'row', alignItems: 'center', gap: 10 },
   muted: { fontSize: 13, color: C.muted, lineHeight: 18 },
+  zoneNote: { fontSize: 13, fontWeight: '700', color: C.text },
   group: { fontSize: 13, fontWeight: '700', color: C.text, marginTop: 4 },
   inputLabel: { fontSize: 12, color: C.muted, marginBottom: 4 },
   input: {
