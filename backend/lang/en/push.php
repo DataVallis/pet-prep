@@ -78,6 +78,10 @@ return [
     // pushes), because push texts pass Expo / APNs / FCM and show on the lock screen.
     'walk_reminder' => 'Your pup is longing for a proper walk. Shall we go?',
 
+    // M5-R02 (David 2026-11-08): the night's quiet hours ended, the puppy must go out soon.
+    // Children only, no names; no minute count (the deadline is counted outside quiet hours).
+    'take_out_reminder' => 'Good morning! After the night your pup needs to go out soon. Press “Take out”.',
+
     'parent_alarm' => 'Your child hasn’t looked after the dog today.',
 
     'parent_alarm_detail' => [

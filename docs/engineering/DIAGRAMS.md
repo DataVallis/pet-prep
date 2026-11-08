@@ -435,7 +435,7 @@ flowchart TD
   HA -- yes --> H0["Hygiene → 0 %<br/>zero_since = event time"]
   HA -- "no / skipped" --> AC
   H0 --> AC{"M5-R02: puppy bladder clock<br/>due in (last_decay_at, now]?"}
-  AC -- yes --> A0["Accident at the due instant<br/>hygiene → 0 % · clock restarts"]
+  AC -- yes --> A0["Accident at the due instant<br/>(after the night: night end + 30 min)<br/>hygiene → 0 % · clock restarts"]
   AC -- no --> Z
   A0 --> Z
   Z["Zero tracking (hunger · thirst · hygiene — not energy)<br/>& pet_state on displayed (rounded) values"] --> W{Displayed value changed?}
@@ -631,15 +631,17 @@ sequenceDiagram
   participant API as Laravel API
   participant B as BehaviourEventService
   participant T as Decay tick (every minute)
-  Note over B: only pets with behaviour_events_enabled (app sent generate-pin features ["behaviour_events"], PR #42)<br/>clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours · tick gap > 5 min → no accident, clock restarts
-  C->>API: POST /api/child/pet/take-out (06:30)
+  Note over B: only pets with behaviour_events_enabled (app sent generate-pin features ["behaviour_events"], PR #42)<br/>clock start = max(take-out / accident / end of freeze, birth, local midnight)<br/>due = start + hold hours counted ONLY outside quiet hours · tick gap > 5 min → no accident, clock restarts<br/>morning rule (David 2026-11-08): start before the night's last 60 min → due = min(due, night end + 30 min)
+  Note over B: night 22–06, clock restarted at midnight → due 06:30 (not 06:00 + 2 h → school → 13:00)
+  T->>C: 06:00 first tick after the night → push take_out_reminder (caretaker children, once per day)
+  C->>API: POST /api/child/pet/take-out (06:20)
   API->>B: catch-up (a due accident happens first) · puppy? else 422 take_out_not_needed
-  B-->>API: clock start = 06:30 → due 13:30 (1.5 h before school + 0.5 h after)
-  API-->>C: 200 {status: accepted, state.behaviour.take_out {hold_hours: 2, next_due_at: 13:30}}
-  T->>B: 13:31 — due passed, no take-out
-  B->>B: accident at 13:30 (applied) · clock restarts at 13:30 · timeline row pet_accident
-  T-->>C: PetUpdated {hygiene 0, behaviour.scene: accident, active_events[accident, due 15:30]}
-  C->>API: POST /api/child/pet/clean (≤ 15:30 = done routine, later = missed)
+  B-->>API: clock start = 06:20 (after the night) → normal hold → due 13:20 (100 min before school + 20 min after)
+  API-->>C: 200 {status: accepted, state.behaviour.take_out {hold_hours: 2, next_due_at: 13:20}}
+  T->>B: 13:21 — due passed, no take-out
+  B->>B: accident at 13:20 (applied) · clock restarts at 13:20 · timeline row pet_accident
+  T-->>C: PetUpdated {hygiene 0, behaviour.scene: accident, active_events[accident, due 15:20]}
+  C->>API: POST /api/child/pet/clean (≤ 15:20 = done routine, later = missed)
 ```
 
 Chewing and how each mess is resolved:

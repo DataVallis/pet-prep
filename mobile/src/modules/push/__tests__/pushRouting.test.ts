@@ -35,6 +35,8 @@ describe('parsePushData', () => {
     expect(parsePushData({ type: 'critical_alert', pet_id: 7 })).toEqual({ type: 'critical_alert', petId: 7 });
     expect(parsePushData({ type: 'soft_warning', pet_id: '12' })).toEqual({ type: 'soft_warning', petId: 12 });
     expect(parsePushData({ type: 'walk_reminder', pet_id: 3 })).toEqual({ type: 'walk_reminder', petId: 3 });
+    // M5-R02 morning rule: the puppy must go out after the night.
+    expect(parsePushData({ type: 'take_out_reminder', pet_id: 4 })).toEqual({ type: 'take_out_reminder', petId: 4 });
     // M2-01d
     expect(parsePushData({ type: 'challenge_completed', pet_id: 5 })).toEqual({ type: 'challenge_completed', petId: 5 });
     // M5-R18 / R20: the parent's groomer / bath reminder.
@@ -52,6 +54,7 @@ describe('parsePushData', () => {
     expect(isUrgentPush('soft_warning')).toBe(false);
     expect(isUrgentPush('critical_alert')).toBe(true);
     expect(isUrgentPush('walk_reminder')).toBe(false);
+    expect(isUrgentPush('take_out_reminder')).toBe(false);
     // M2-01d: good news — no alarm sound.
     expect(isUrgentPush('challenge_completed')).toBe(false);
     expect(isUrgentPush('care_reminder')).toBe(false);
