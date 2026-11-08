@@ -4,7 +4,7 @@
  * confirmation), family quiet hours, the family's parents with the second-parent
  * invite, and — while the family is empty — joining another family by code; push
  * "Obvestila" status (M3-02); last the "Račun" section (M2-08): data export and account
- * deletion. M5-F01: a "Purchases / challenge" row (while the family has a challenge dog)
+ * deletion. Family time zone (David 2026-11-08) sits right above the quiet hours. M5-F01: a "Purchases / challenge" row (while the family has a challenge dog)
  * opens the paywall. Last, "O aplikaciji": `AppVersionCard` (version line + update check).
  */
 
@@ -22,6 +22,7 @@ import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
+import FamilyTimezoneCard from '@/components/parent/FamilyTimezoneCard';
 import PurchasesRow from '@/components/parent/PurchasesRow';
 import { showPurchasesRow } from '@/modules/plan/purchaseEntry';
 import { NoticeBanner, PARENT_COLORS as C } from '@/components/parent/ParentUi';
@@ -50,6 +51,9 @@ interface ControlsScreenProps {
   /** Kept as data, translated at render (follows a language switch). */
   notice?: JoinNotice | null;
   onNotice?: (notice: JoinNotice | null) => void;
+  /** Bumped by the dashboard's time zone banner (»Zamenjam«): opens the family time zone sheet. */
+  timezoneRequest?: number;
+  onTimezoneRequestHandled?: () => void;
 }
 
 export default function ControlsScreen({
@@ -61,6 +65,8 @@ export default function ControlsScreen({
   onOpenChallenge,
   notice = null,
   onNotice,
+  timezoneRequest = 0,
+  onTimezoneRequestHandled,
 }: ControlsScreenProps) {
   const isEmpty = !family || (family.children.length === 0 && family.pets.length === 0);
 
@@ -92,7 +98,9 @@ export default function ControlsScreen({
 
         {family && onOpenChallenge && showPurchasesRow(family) && <PurchasesRow family={family} onPress={onOpenChallenge} />}
 
-        <QuietHoursCard />
+        {/* David 2026-11-08: the zone every time below is read in. */}
+        <FamilyTimezoneCard familyZone={family?.timezone ?? null} openRequest={timezoneRequest} onOpenRequestHandled={onTimezoneRequestHandled} />
+        <QuietHoursCard familyZone={family?.timezone ?? null} />
         <NotificationsCard />
 
         {family && <FamilyParentsCard family={family} />}

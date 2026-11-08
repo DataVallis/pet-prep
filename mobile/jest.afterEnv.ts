@@ -9,6 +9,8 @@ import { setMediaFileStoreForTests } from '@/modules/petMedia/mediaFileCache';
 import { resetTopStackPrefsForTests, setTopStackPrefsStoreForTests } from '@/modules/hud/topStackPrefs';
 import { memoryPendingStore, setPendingPurchaseStoreForTests } from '@/modules/wishes/pendingPurchases';
 import { setGameLayerAvailableForTests } from '@/modules/gameLayer/capability';
+import { resetZoneSuggestionForTests, setZoneSuggestionStoreForTests } from '@/modules/familyZone/zoneSuggestionPrefs';
+import { setPhoneZoneForTests } from '@/modules/familyZone/familyZone';
 
 beforeEach(() => {
   childPetFetchGate.reset();
@@ -24,4 +26,9 @@ beforeEach(() => {
   setPendingPurchaseStoreForTests(memoryPendingStore());
   // GAMES_SPEC §7.4: the native game layer is off (like an older binary) unless a test opts in.
   setGameLayerAvailableForTests(false);
+  // David 2026-11-08: the zone banner's dismissal is a device store; the phone zone is unknown (no banner / note)
+  // unless a test sets one — Jest runs in UTC, which differs from every Ljubljana fixture.
+  setZoneSuggestionStoreForTests({ getItemAsync: async () => null, setItemAsync: async () => undefined });
+  resetZoneSuggestionForTests();
+  setPhoneZoneForTests(null);
 });

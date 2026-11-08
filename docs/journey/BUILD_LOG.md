@@ -8,6 +8,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Časovni pas družine se da zamenjati (in aplikacija ga predlaga na potovanju)
+
+**Kaj:** starš v Nadzoru zamenja časovni pas družine (z opozorilom, največ enkrat na dan, tudi med izzivom), pregled mu menjavo predlaga, ko je telefon v drugem pasu, ob tem pa smo popravili napako, zaradi katere bi menjava proti zahodu (npr. Ljubljana → Lizbona) sredi dneva izbrisala današnje korake.
+**Kako povedati:** 👩 »Na dopustu v tujini kuža spi po vašem času, ne po domačem — en dotik v Nadzoru.«
+
 ## 2026-11-08 — Mladiček mora zjutraj takoj ven
 
 **Kaj:** po noči (tihe ure) mora mladiček ven v 30 minutah — 5-mesečna Suki z nočjo do 7:00 mora ven najkasneje ob 7:30 (prej je aplikacija rekla »najkasneje ob 12:00«), otrok pa ob koncu noči dobi obvestilo »Dobro jutro! Kuža mora po noči čim prej ven.«

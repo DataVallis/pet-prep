@@ -258,10 +258,13 @@ describe('device timezone aliases (PR #25)', function () {
         putJson('/api/parent/settings', ['timezone' => 'Asia/Calcutta'])->assertOk();
         expect($parent->fresh()->familyTimezone())->toBe('Asia/Kolkata');
 
+        // One real change per 24 h (FamilySettingsService, 2026-11-08).
+        $this->travel(25)->hours();
         putJson('/api/parent/quiet-hours', ['bedtime_start' => '21:00', 'bedtime_end' => '07:00', 'is_active' => true, 'timezone' => 'Europe/Kiev'])
             ->assertOk();
         expect($parent->fresh()->familyTimezone())->toBe('Europe/Kyiv');
 
+        $this->travel(25)->hours();
         putJson('/api/parent/settings', ['timezone' => 'europe/vienna'])->assertOk();
         expect($parent->fresh()->familyTimezone())->toBe('Europe/Vienna');
 

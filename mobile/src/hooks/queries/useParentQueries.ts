@@ -19,6 +19,7 @@ import {
   type JoinFamilyResponse,
   type PetActivitiesResponse,
   type PetNameResponse,
+  type UpdateFamilySettingsResponse,
 } from '@/api/client';
 import {
   childReportKey,
@@ -138,6 +139,22 @@ export function useUpdateQuietHours() {
       queryClient.setQueryData(quietHoursKey, res.quiet_hours);
       // Quiet hours change what is expected today (routines, light).
       void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+    },
+  });
+}
+
+/**
+ * Change the family time zone (»Časovni pas družine«, David 2026-11-08). Not optimistic: the
+ * server decides every wall-clock rule, so the dashboard and quiet hours are refetched after it.
+ */
+export function useUpdateFamilyTimezone() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdateFamilySettingsResponse, unknown, string>({
+    mutationFn: (timezone) => api.updateFamilyTimezone(timezone),
+    retry: false,
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
+      void queryClient.invalidateQueries({ queryKey: quietHoursKey });
     },
   });
 }
