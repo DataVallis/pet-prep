@@ -44,6 +44,8 @@ use Illuminate\Support\Str;
 /** Keys whose text names the dog but that a cat can never be sent (walk, chewing). */
 const CPT_DOG_ONLY = [
     'walk_reminder',
+    // M5-R02 morning rule (David 2026-11-08): only a dog puppy has a bladder clock.
+    'take_out_reminder',
     'tidy.soft', 'tidy.critical',
     'clean_and_tidy.soft', 'clean_and_tidy.critical',
     // M5-R06-06b (David 2026-10-09): food / water wait for a chewed item to be tidied up.
@@ -315,7 +317,7 @@ describe('rendering per species (EN + SL)', function () {
     ]);
 
     it('never sends a cat a dog word, whatever the type, metric, audience, variant or language', function () {
-        $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::WalkReminder, PushType::CareReminder], true)));
+        $types = array_values(array_filter(PushType::cases(), fn (PushType $t): bool => ! in_array($t, [PushType::WalkReminder, PushType::CareReminder, PushType::TakeOutReminder], true)));
         $variants = [null, PushCopy::VARIANT_WAIT, PushCopy::VARIANT_CLEAN_FIRST, PushCopy::VARIANT_SCRATCHER_FIRST,
             PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST, PushCopy::VARIANT_SCRATCHER, PushCopy::VARIANT_CLEAN_AND_SCRATCHER,
             PushCopy::VARIANT_CLEAN_FIRST_WAIT, PushCopy::VARIANT_SCRATCHER_FIRST_WAIT, PushCopy::VARIANT_CLEAN_AND_SCRATCHER_FIRST_WAIT];

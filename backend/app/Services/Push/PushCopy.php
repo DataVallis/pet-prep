@@ -173,6 +173,8 @@ final class PushCopy
             PushType::PlayReminder => $line('play_reminder'),
             // M5-R06-05: an open litter use is due within the hour (push.cat.litter_reminder).
             PushType::LitterReminder => $line('litter_reminder'),
+            // M5-R02 morning rule (dog puppy only): the night ended, take the puppy out.
+            PushType::TakeOutReminder => $line('take_out_reminder'),
             PushType::ParentAlarm => trim($line('parent_alarm').' '.(in_array($metric, self::METRICS, true)
                 ? $line("parent_alarm_detail.{$metric}")
                 : '')),

@@ -8,6 +8,10 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Mladiček mora zjutraj takoj ven
+
+**Kaj:** po noči (tihe ure) mora mladiček ven v 30 minutah — 5-mesečna Suki z nočjo do 7:00 mora ven najkasneje ob 7:30 (prej je aplikacija rekla »najkasneje ob 12:00«), otrok pa ob koncu noči dobi obvestilo »Dobro jutro! Kuža mora po noči čim prej ven.«
+
 ## 2026-11-05 — Čiščenje diska po deployu zdaj res briše stare slike
 
 **Kaj:** samodejno čiščenje starih Docker slik ob deployu na produkciji ni odstranilo ničesar (disk je bil spet na 89 %), ker produkcijski Docker prenesene slike izpiše brez oznake (`ghcr.io/…:<none>`); zdaj jih briše po ID-ju slike, ohrani trenutno, prejšnjo in vse, kar teče, test pa preverja točno tak izpis kot na strežniku.
