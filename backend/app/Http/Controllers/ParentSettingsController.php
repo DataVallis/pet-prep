@@ -19,7 +19,6 @@ class ParentSettingsController extends Controller
      * most once per 24 h per family → otherwise 422 `timezone_change_too_soon`
      * with `next_allowed_at` (ISO 8601 in the current family zone). On success
      * every family pet gets a `family_timezone_changed` broadcast.
-     *
      */
     public function update(UpdateParentSettingsRequest $request): JsonResponse
     {
