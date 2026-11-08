@@ -48,7 +48,7 @@
     "done": "Kuža uživa. Hvala za crkljanje!"
   },
   "cuddleV2": {
-    "slow": "Boži počasi, 3 sekunde.",
+    "slow": "Božaj počasi, 3 sekunde.",
     "wait": "Počakaj …",
     "more": "Še!",
     "doneLine": "Uživa! ♥♥♥",
@@ -58,7 +58,7 @@
     "tooFastA11y": "Počasneje.",
     "a11y": {
       "progress": "Srca: {{n}} od 3",
-      "area": "Počasi boži s prstom."
+      "area": "Počasi božaj s prstom."
     }
   },
   "mood": {
