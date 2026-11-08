@@ -8,6 +8,11 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-08 — Časovni pas družine se da zamenjati (in aplikacija ga predlaga na potovanju)
+
+**Kaj:** starš v Nadzoru zamenja časovni pas družine (z opozorilom, največ enkrat na dan, tudi med izzivom), pregled mu menjavo predlaga, ko je telefon v drugem pasu, ob tem pa smo popravili napako, zaradi katere bi menjava proti zahodu (npr. Ljubljana → Lizbona) sredi dneva izbrisala današnje korake.
+**Kako povedati:** 👩 »Na dopustu v tujini kuža spi po vašem času, ne po domačem — en dotik v Nadzoru.«
+
 ## 2026-11-05 — Čiščenje diska po deployu zdaj res briše stare slike
 
 **Kaj:** samodejno čiščenje starih Docker slik ob deployu na produkciji ni odstranilo ničesar (disk je bil spet na 89 %), ker produkcijski Docker prenesene slike izpiše brez oznake (`ghcr.io/…:<none>`); zdaj jih briše po ID-ju slike, ohrani trenutno, prejšnjo in vse, kar teče, test pa preverja točno tak izpis kot na strežniku.

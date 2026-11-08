@@ -245,6 +245,34 @@
     "saveError": "Saving didn't work. Check the times and try again.",
     "offline": "Can't reach the server. Please try again."
   },
+  "familyZone": {
+    "title": "Family time zone",
+    "hint": "Every time follows this zone: quiet hours, meals, midnight and the step day.",
+    "change": "Change",
+    "changeA11y": "Change the family time zone",
+    "sheetTitle": "Choose a time zone",
+    "search": "Search for a city",
+    "phone": "This phone",
+    "current": "Current",
+    "noResults": "No results.",
+    "confirmTitle": "Change the time zone?",
+    "warning": "Midnight, meals, quiet hours and the step day move, so today can be shorter or longer. This is allowed during the 12-week challenge too. You can change the zone once every 24 hours.",
+    "confirm": "Change",
+    "back": "Back",
+    "close": "Close",
+    "saved": "The time zone has been changed.",
+    "errors": {
+      "tooSoon": "You can change the zone once every 24 hours. Next {{when}}.",
+      "tooSoonNoTime": "You can change the zone once every 24 hours.",
+      "invalid": "The server doesn't know this time zone. Please pick another one.",
+      "offline": "Can't reach the server. Please try again.",
+      "failed": "The change didn't work. Please try again."
+    },
+    "banner": "This phone is in a different time zone ({{phone}}) than the family ({{family}}). Change it?",
+    "bannerAction": "Change",
+    "bannerClose": "Not now",
+    "familyTimeNote": "in family time ({{city}})"
+  },
   "notifications": {
     "title": "Notifications",
     "status": {
