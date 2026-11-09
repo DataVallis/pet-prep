@@ -7,7 +7,8 @@
     "nl": "Spinazie",
     "pl": "Szpinak",
     "cs": "Špenát",
-    "hr": "Špinat"
+    "hr": "Špinat",
+    "sv": "Spenat"
   },
   "question": {
     "en": "Can dogs eat spinach?",
@@ -15,7 +16,8 @@
     "nl": "Mogen honden spinazie eten?",
     "pl": "Czy psy mogą jeść szpinak?",
     "cs": "Mohou psi jíst špenát?",
-    "hr": "Smiju li psi jesti špinat?"
+    "hr": "Smiju li psi jesti špinat?",
+    "sv": "Får hundar äta spenat?"
   },
   "url_slug": {
     "en": "spinach",
@@ -23,7 +25,8 @@
     "nl": "spinazie",
     "pl": "szpinak",
     "cs": "spenat",
-    "hr": "spinat"
+    "hr": "spinat",
+    "sv": "spenat"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "nl": "Honden mogen spinazie eten, maar het is niet een van de beste groenten om aan ze te geven. Spinazie bevat veel oxaalzuur, dat de opname van calcium blokkeert en tot nierschade kan leiden. Een hond moet er veel van eten om er schade van te krijgen, maar een andere groente is een betere keuze.",
     "pl": "Psy mogą jeść szpinak, ale to nie najlepszy wybór spośród warzyw. Zawiera dużo kwasu szczawiowego, który blokuje wchłanianie wapnia i może prowadzić do uszkodzenia nerek. Pies musiałby zjeść go bardzo dużo, żeby sobie zaszkodzić, ale lepiej wybrać inne warzywo.",
     "cs": "Psi špenát jíst mohou, ale není to nejlepší zelenina, kterou s nimi můžete sdílet. Obsahuje hodně kyseliny šťavelové, která blokuje vstřebávání vápníku a může vést k poškození ledvin. Pes by musel sníst hodně, aby mu uškodil, ale jiná zelenina je lepší volbou.",
-    "hr": "Psi smiju jesti špinat, ali nije među najboljim povrćem koje možeš dijeliti s njima. Sadrži mnogo oksalne kiseline, koja blokira apsorpciju kalcija i može dovesti do oštećenja bubrega. Pas bi morao pojesti mnogo da bi mu naštetilo, ali drugo je povrće bolji izbor."
+    "hr": "Psi smiju jesti špinat, ali nije među najboljim povrćem koje možeš dijeliti s njima. Sadrži mnogo oksalne kiseline, koja blokira apsorpciju kalcija i može dovesti do oštećenja bubrega. Pas bi morao pojesti mnogo da bi mu naštetilo, ali drugo je povrće bolji izbor.",
+    "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak."
   },
   "why": {
     "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
@@ -40,7 +44,8 @@
     "nl": "Spinazie bevat veel oxaalzuur, dat het vermogen van het lichaam om calcium op te nemen blokkeert en tot nierschade kan leiden. Honden met gezonde nieren kunnen kleine hoeveelheden aan en een hond zou erg veel moeten eten om er schade van te krijgen, maar krijgt een hond lange tijd spinazie, dan kan dat de nieren belasten. Omdat bronnen aanraden een andere groente te kiezen, beoordelen wij spinazie als niet aanbevolen.",
     "pl": "Szpinak zawiera dużo kwasu szczawiowego, który blokuje zdolność organizmu do wchłaniania wapnia i może prowadzić do uszkodzenia nerek. Psy ze zdrowymi nerkami radzą sobie z małymi ilościami i musiałyby zjeść bardzo duże ilości, żeby sobie zaszkodzić, ale jedzenie go przez długi czas może obciążać nerki. Ponieważ źródła radzą wybrać inne warzywo, uznajemy go za niezalecany.",
     "cs": "Špenát obsahuje hodně kyseliny šťavelové, která brání tělu ve vstřebávání vápníku a může vést k poškození ledvin. Psi se zdravýma ledvinama zvládnou malé množství zpracovat a pes by musel sníst opravdu velké množství, aby mu uškodil, ale dlouhodobé krmení špenátem může ledviny zatěžovat. Protože zdroje radí zvolit raději jinou zeleninu, řadíme ho mezi nedoporučované.",
-    "hr": "Špinat sadrži mnogo oksalne kiseline, koja tijelu otežava apsorpciju kalcija i može dovesti do oštećenja bubrega. Psi sa zdravim bubrezima mogu preraditi male količine, a pas bi morao pojesti vrlo velike količine da bi mu naštetilo, ali dugotrajno jedenje špinata može opteretiti bubrege. Budući da izvori savjetuju drugo povrće, ocjenjujemo ga kao namirnicu koju ne preporučujemo."
+    "hr": "Špinat sadrži mnogo oksalne kiseline, koja tijelu otežava apsorpciju kalcija i može dovesti do oštećenja bubrega. Psi sa zdravim bubrezima mogu preraditi male količine, a pas bi morao pojesti vrlo velike količine da bi mu naštetilo, ali dugotrajno jedenje špinata može opteretiti bubrege. Budući da izvori savjetuju drugo povrće, ocjenjujemo ga kao namirnicu koju ne preporučujemo.",
+    "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”."
   },
   "signs": {
     "en": [
@@ -66,6 +71,10 @@
     "hr": [
       "Slabost mišića (nakon dugotrajnog jedenja špinata)",
       "Nepravilan srčani ritam (nakon dugotrajnog jedenja špinata)"
+    ],
+    "sv": [
+      "Muskelsvaghet (efter att ha ätit spenat under lång tid)",
+      "Onormal hjärtrytm (efter att ha ätit spenat under lång tid)"
     ]
   },
   "what_to_do": {
@@ -74,7 +83,8 @@
     "nl": "Vraag altijd je dierenarts om advies voordat je spinazie aan de voeding van je hond toevoegt, ook als tussendoortje. Is je hond vatbaar voor nierstenen of blaasstenen, geef dan geen spinazie.",
     "pl": "Zawsze zapytaj weterynarza, zanim dodasz szpinak do psiej diety, nawet jako przekąskę. Jeśli twój pies jest skłonny do kamieni nerkowych lub pęcherzowych, unikaj szpinaku.",
     "cs": "Před zařazením špenátu do jídelníčku psa, i jako pamlsku, se vždy poraďte s veterinářem. Pokud je váš pes náchylný ke kamenům v ledvinách nebo močovém měchýři, špenátu se vyhněte.",
-    "hr": "Uvijek pitaj veterinara prije nego što špinat uvedeš u prehranu svog psa, čak i kao užinu. Ako je tvoj pas sklon kamencima u bubrezima ili mokraćnom mjehuru, izbjegavaj špinat."
+    "hr": "Uvijek pitaj veterinara prije nego što špinat uvedeš u prehranu svog psa, čak i kao užinu. Ako je tvoj pas sklon kamencima u bubrezima ili mokraćnom mjehuru, izbjegavaj špinat.",
+    "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat."
   },
   "serving": {
     "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
@@ -82,7 +92,8 @@
     "nl": "Alleen als je dierenarts het goedvindt en de nieren van je hond gezond zijn: zelden en in kleine hoeveelheden, gestoomd, zonder kruiden, zout, olie, ui of knoflook.",
     "pl": "Tylko za zgodą weterynarza i gdy nerki psa są zdrowe: małe ilości, rzadko, gotowany na parze, bez przypraw, ziół, soli, oleju, cebuli i czosnku.",
     "cs": "Jen pokud s tím veterinář souhlasí a pes má zdravé ledviny: malé množství, zřídka, spařený, bez koření, bylinek, soli, oleje, cibule a česneku.",
-    "hr": "Samo ako se veterinar slaže i ako pas ima zdrave bubrege: male količine, rijetko, kuhan na pari, bez začina, začinskog bilja, soli, ulja, luka i češnjaka."
+    "hr": "Samo ako se veterinar slaže i ako pas ima zdrave bubrege: male količine, rijetko, kuhan na pari, bez začina, začinskog bilja, soli, ulja, luka i češnjaka.",
+    "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök."
   },
   "child": {
     "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
@@ -90,7 +101,8 @@
     "nl": "Spinazie is geen goed tussendoortje voor honden. Vraag een volwassene om een andere groente voor je hond uit te zoeken.",
     "pl": "Szpinak nie jest świetną przekąską dla psów. Poproś dorosłego, żeby wybrał dla twojego psa inne warzywo.",
     "cs": "Špenát není pro psy skvělá svačinka. Požádej dospělého, ať pejskovi vybere jinou zeleninu.",
-    "hr": "Špinat nije sjajna užina za pse. Zamoli odraslu osobu da za tvog psa odabere neko drugo povrće."
+    "hr": "Špinat nije sjajna užina za pse. Zamoli odraslu osobu da za tvog psa odabere neko drugo povrće.",
+    "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden."
   },
   "faq": [
     {
@@ -100,7 +112,8 @@
         "nl": "Is rauwe of gare spinazie beter voor honden?",
         "pl": "Czy dla psa lepszy jest szpinak surowy, czy gotowany?",
         "cs": "Je pro psy lepší syrový, nebo tepelně upravený špenát?",
-        "hr": "Je li psima bolji sirov ili termički obrađen špinat?"
+        "hr": "Je li psima bolji sirov ili termički obrađen špinat?",
+        "sv": "Är rå eller kokt spenat bättre för hundar?"
       },
       "a": {
         "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
@@ -108,7 +121,8 @@
         "nl": "Als je er toch wat van geeft, stoom de spinazie dan: rauwe spinazie is moeilijk te verteren voor een hond, en gekookte spinazie verliest het grootste deel van haar voedingsstoffen.",
         "pl": "Jeśli już go dajesz, ugotuj go na parze: surowy szpinak jest dla psa trudny do strawienia, a szpinak gotowany w wodzie traci większość składników odżywczych.",
         "cs": "Pokud ho psovi přesto dáváte, spařte ho: syrový se špatně tráví a vařený přichází o většinu živin.",
-        "hr": "Ako ga već daješ, skuhaj ga na pari: sirov se psu teško probavlja, a špinat kuhan u vodi gubi većinu hranjivih tvari."
+        "hr": "Ako ga već daješ, skuhaj ga na pari: sirov se psu teško probavlja, a špinat kuhan u vodi gubi većinu hranjivih tvari.",
+        "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen."
       }
     }
   ],
@@ -199,6 +213,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7aad8da41723d8b44a3240de052100cf49e8d9730fa60bfe9552cca3542d9118"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c0d38197a1637f5dee5204f12f3f652e8170c5dc801d961cccb3d7db7fc7dd02"
     }
   }
 }
