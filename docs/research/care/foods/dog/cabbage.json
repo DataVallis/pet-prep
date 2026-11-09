@@ -10,7 +10,8 @@
     "hr": "Kupus",
     "sv": "Kål",
     "da": "Kål",
-    "fi": "Kaali"
+    "fi": "Kaali",
+    "nb": "Kål"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti kupus?",
     "sv": "Får hundar äta kål?",
     "da": "Må hunde spise kål?",
-    "fi": "Saako koira syödä kaalia?"
+    "fi": "Saako koira syödä kaalia?",
+    "nb": "Kan hunder spise kål?"
   },
   "url_slug": {
     "en": "cabbage",
@@ -32,7 +34,8 @@
     "hr": "kupus",
     "sv": "kal",
     "da": "kal",
-    "fi": "kaali"
+    "fi": "kaali",
+    "nb": "kal"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, u malim količinama. Sve vrste kupusa u redu su za pse, ali kupus stvara mnogo plinova, zato ga uvodi polako. Kuhan u vodi ili na pari kupus psu će rjeđe uznemiriti želudac nego sirov.",
     "sv": "Ja, i små mängder. Alla sorters kål går bra för hundar, men kål ger mycket gaser, så börja försiktigt. Kokt eller ångad kål retar magen mindre än rå kål.",
     "da": "Ja, i små mængder. Alle slags kål er fine for hunde, men kål giver meget luft i maven, så vænn hunden langsomt til den. Kogt eller dampet kål giver sjældnere mavegener end rå kål.",
-    "fi": "Saa, pieninä määrinä. Kaikki kaalilajit sopivat koirille, mutta kaalista tulee paljon ilmavaivoja, joten totuta koira siihen vähitellen. Keitetty tai höyrytetty kaali on vatsalle lempeämpää kuin raaka."
+    "fi": "Saa, pieninä määrinä. Kaikki kaalilajit sopivat koirille, mutta kaalista tulee paljon ilmavaivoja, joten totuta koira siihen vähitellen. Keitetty tai höyrytetty kaali on vatsalle lempeämpää kuin raaka.",
+    "nb": "Ja, i små mengder. Alle slags kål er greit for hunder, men kål gir mye gass, så innfør den langsomt. Kokt eller dampet kål gir sjeldnere urolig mage enn rå kål."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
@@ -55,7 +59,8 @@
     "hr": "Kupus je zdrav za pse, ali stvara velike količine plinova, a mnogi psi to možda neće dobro podnijeti. Veći je problem ono čime se kupus začini: maslac i druga masna hrana mogu dovesti do upale gušterače, a luk i češnjak otrovni su za pse.",
     "sv": "Kål är nyttig för hundar, men den ger mycket gaser, och många hundar tål det inte så bra. Kryddorna är det större problemet: smör och andra feta livsmedel kan leda till bukspottkörtelinflammation (pankreatit), och lök och vitlök är giftiga för hundar.",
     "da": "Kål er sundt for hunde, men giver en stor mængde luft i maven, og mange hunde tåler det måske ikke så godt. Krydderier er det største problem: smør og andre fede fødevarer kan give betændelse i bugspytkirtlen (pankreatitis), og løg og hvidløg er giftige for hunde.",
-    "fi": "Kaali on koirille terveellistä, mutta siitä muodostuu paljon kaasua, ja monet koirat eivät siedä sitä hyvin. Mausteet ovat suurempi ongelma: voi ja muut rasvaiset ruoat voivat aiheuttaa haimatulehduksen, ja sipuli ja valkosipuli ovat koirille myrkyllisiä."
+    "fi": "Kaali on koirille terveellistä, mutta siitä muodostuu paljon kaasua, ja monet koirat eivät siedä sitä hyvin. Mausteet ovat suurempi ongelma: voi ja muut rasvaiset ruoat voivat aiheuttaa haimatulehduksen, ja sipuli ja valkosipuli ovat koirille myrkyllisiä.",
+    "nb": "Kål er sunt for hunder, men den gir mye gass, og mange hunder tåler det kanskje ikke så godt. Krydder og tilsetninger er det største problemet: Smør og annen fet mat kan gi betennelse i bukspyttkjertelen (pankreatitt), og løk og hvitløk er giftig for hunder."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Nakon prvog zalogaja kupusa pažljivo prati psa. Ako tvoj pas često ima mnogo plinova ili je sklon nadutosti, pitaj veterinara prije nego što mu daš kupus.",
     "sv": "Ha ett extra öga på hunden när den smakat kål för första gången. Om hunden ofta har mycket gaser eller löper risk för magomvridning, fråga veterinären innan du ger kål.",
     "da": "Hold nøje øje med din hund efter den første smagsprøve på kål. Hvis din hund ofte har meget luft i maven eller er udsat for mavedrejning, skal du spørge din dyrlæge, før du giver kål.",
-    "fi": "Seuraa koiraasi tarkasti ensimmäisen kaalimaistiaisen jälkeen. Jos koirallasi on usein paljon ilmavaivoja tai se on altis mahan turpoamiselle, kysy eläinlääkäriltä, ennen kuin annat kaalia."
+    "fi": "Seuraa koiraasi tarkasti ensimmäisen kaalimaistiaisen jälkeen. Jos koirallasi on usein paljon ilmavaivoja tai se on altis mahan turpoamiselle, kysy eläinlääkäriltä, ennen kuin annat kaalia.",
+    "nb": "Følg nøye med på hunden etter at den har smakt på kål første gang. Hvis hunden ofte har mye gass eller er utsatt for oppblåst mage, bør du spørre dyrlegen før du gir kål."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
@@ -78,7 +84,8 @@
     "hr": "Opran, bez kocena i jezgre, kuhan u vodi ili na pari i narezan na male komadiće. Bez začina: bez maslaca, luka i češnjaka. Samo u malim količinama.",
     "sv": "Tvättad, med stjälk och kärna borttagna, kokt eller ångad och tärnad i små bitar. Utan kryddor: inget smör, ingen lök och ingen vitlök. Bara små mängder.",
     "da": "Vasket, med stok og kerne fjernet, kogt eller dampet og skåret i små stykker. Uden krydderier: intet smør, løg eller hvidløg. Kun små mængder.",
-    "fi": "Pestynä, varsi ja kantaosa poistettuina, keitettynä tai höyrytettynä ja pieniksi paloiksi pilkottuna. Mausteettomana: ei voita, sipulia eikä valkosipulia. Vain pieniä määriä."
+    "fi": "Pestynä, varsi ja kantaosa poistettuina, keitettynä tai höyrytettynä ja pieniksi paloiksi pilkottuna. Mausteettomana: ei voita, sipulia eikä valkosipulia. Vain pieniä määriä.",
+    "nb": "Vasket, med stokken og kjernen fjernet, kokt eller dampet og skåret i små terninger. Uten krydder: ikke smør, løk eller hvitløk. Bare små mengder."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
@@ -89,7 +96,8 @@
     "hr": "Psi smiju probati malo kuhanog kupusa bez dodataka. Može im izazvati plinove, zato samo mali komadić!",
     "sv": "Hundar kan få smaka lite kokt kål utan tillsatser. Den kan göra dem gasiga, så bara en liten bit!",
     "da": "Hunde må gerne smage lidt kogt kål uden tilsætninger. Den kan give luft i maven, så kun et lille stykke!",
-    "fi": "Koira saa maistaa vähän maustamatonta kypsennettyä kaalia. Siitä voi tulla ilmavaivoja, joten vain pieni pala!"
+    "fi": "Koira saa maistaa vähän maustamatonta kypsennettyä kaalia. Siitä voi tulla ilmavaivoja, joten vain pieni pala!",
+    "nb": "Hunder kan smake litt kokt kål uten tilsetninger. Den kan gi dem mye luft i magen, så bare en liten bit!"
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li psi jesti sirov kupus?",
         "sv": "Får hundar äta rå kål?",
         "da": "Må hunde spise rå kål?",
-        "fi": "Saako koira syödä raakaa kaalia?"
+        "fi": "Saako koira syödä raakaa kaalia?",
+        "nb": "Kan hunder spise rå kål?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
@@ -113,7 +122,8 @@
         "hr": "Smiju, ali kupus kuhan u vodi ili na pari manje će nadražiti pasju probavu. U oba ga slučaja nareži na male komadiće.",
         "sv": "Ja, men kokt eller ångad kål retar hundens mage mindre. Tärna den i små bitar oavsett hur den serveras.",
         "da": "Det kan de godt, men kogt eller dampet kål giver sjældnere fordøjelsesproblemer hos hunde. Skær den under alle omstændigheder i små stykker.",
-        "fi": "Saa, mutta keitetty tai höyrytetty kaali on koiran ruoansulatukselle lempeämpää. Pilko se joka tapauksessa pieniksi paloiksi."
+        "fi": "Saa, mutta keitetty tai höyrytetty kaali on koiran ruoansulatukselle lempeämpää. Pilko se joka tapauksessa pieniksi paloiksi.",
+        "nb": "Det kan de, men kokt eller dampet kål gir sjeldnere urolig mage hos hunder. Skjær den i små biter uansett."
       }
     }
   ],
@@ -224,6 +234,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "49c231e3df2ceaaf6742a9f31c40d65d685e0dfb1ec36b7c6cbde60e170bd0b4"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fd4bc2a5b66d6a5961017adb64cdf293dfa9571f4d25e378ffe572a136c53cb8"
     }
   }
 }

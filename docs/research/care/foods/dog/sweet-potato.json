@@ -10,7 +10,8 @@
     "hr": "Batat",
     "sv": "Sötpotatis",
     "da": "Søde kartofler",
-    "fi": "Bataatti"
+    "fi": "Bataatti",
+    "nb": "Søtpotet"
   },
   "question": {
     "en": "Can dogs eat sweet potato?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti batat?",
     "sv": "Får hundar äta sötpotatis?",
     "da": "Må hunde spise søde kartofler?",
-    "fi": "Saako koira syödä bataattia?"
+    "fi": "Saako koira syödä bataattia?",
+    "nb": "Kan hunder spise søtpotet?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -32,7 +34,8 @@
     "hr": "batat",
     "sv": "sotpotatis",
     "da": "soede-kartofler",
-    "fi": "bataatti"
+    "fi": "bataatti",
+    "nb": "sotpotet"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, u malim količinama, termički obrađen i oguljen. Batat kuhan do mekoće u vodi ili na pari u redu je kao poslastica, ali psu nikad ne daj sirov batat: teško se žvače, može nadražiti želudac i izazvati začepljenje crijeva.",
     "sv": "Ja, i små mängder, kokt och skalad. Mjukkokt eller ångad sötpotatis går bra som godbit, men ge aldrig rå sötpotatis: den är svår att tugga, kan ge orolig mage och kan orsaka stopp i tarmen.",
     "da": "Ja, i små mængder, kogt og skrællet. Sød kartoffel, der er kogt eller dampet blød, er fin som godbid, men giv aldrig rå sød kartoffel: den er svær at tygge, kan give ondt i maven og kan give tarmblokering.",
-    "fi": "Saa, pieninä määrinä, kypsennettynä ja kuorittuna. Pehmeäksi keitetty tai höyrytetty bataatti sopii herkuksi, mutta älä koskaan anna raakaa bataattia: sitä on vaikea pureskella, se voi ärsyttää vatsaa ja aiheuttaa suolitukoksen."
+    "fi": "Saa, pieninä määrinä, kypsennettynä ja kuorittuna. Pehmeäksi keitetty tai höyrytetty bataatti sopii herkuksi, mutta älä koskaan anna raakaa bataattia: sitä on vaikea pureskella, se voi ärsyttää vatsaa ja aiheuttaa suolitukoksen.",
+    "nb": "Ja, i små mengder, kokt og skrellet. Myk, kokt eller dampet søtpotet er greit som en godbit, men gi aldri rå søtpotet: Den er vanskelig å tygge, kan gi urolig mage og kan føre til tarmblokkering."
   },
   "why": {
     "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
@@ -55,7 +59,8 @@
     "hr": "Batat nije otrovan, ali se sirov teško žvače i može izazvati začepljenje crijeva, a s korom se teže probavlja. Previše batata može zbog viška vitamina A uzrokovati slabost kostiju i mišića, a zbog visokog glikemijskog indeksa potreban je oprez kod pasa s dijabetesom. Nedavna istraživanja upućuju na to da se možda ne uklapa u prehranu psa, a nikad ne smije biti glavni dio prehrane.",
     "sv": "Sötpotatis är inte giftig, men rå sötpotatis är svår att tugga och kan orsaka stopp i tarmen, och skalet gör den svårare att smälta. För mycket kan ge försvagade ben och muskler på grund av för mycket vitamin A, och eftersom sötpotatis har högt glykemiskt index behöver man vara extra försiktig med hundar som har diabetes. Ny forskning tyder på att sötpotatis kanske inte passar i hundars kost, och den ska aldrig vara den främsta näringskällan.",
     "da": "Søde kartofler er ikke giftige, men rå søde kartofler er svære at tygge og kan give tarmblokering, og skrællen gør dem sværere at fordøje. For meget kan give svaghed i knogler og muskler på grund af for meget vitamin A, og det høje glykæmiske indeks betyder, at hunde med diabetes kræver forsigtighed. Nyere forskning tyder på at de måske ikke passer til en hunds kost, og de bør aldrig være hundens vigtigste kilde til ernæring.",
-    "fi": "Bataatti ei ole myrkyllistä, mutta raakaa bataattia on vaikea pureskella ja se voi aiheuttaa suolitukoksen, ja kuori tekee siitä vaikeammin sulavaa. Liian suuri määrä voi aiheuttaa luiden ja lihasten heikkoutta, koska A-vitamiinia tulee liikaa, ja korkean glykeemisen indeksin vuoksi diabetesta sairastavien koirien kanssa on oltava varovainen. Tuoreen tutkimuksen perusteella bataatti ei välttämättä sovi koiran ruokavalioon, eikä sen pidä koskaan olla pääasiallinen ravinnonlähde."
+    "fi": "Bataatti ei ole myrkyllistä, mutta raakaa bataattia on vaikea pureskella ja se voi aiheuttaa suolitukoksen, ja kuori tekee siitä vaikeammin sulavaa. Liian suuri määrä voi aiheuttaa luiden ja lihasten heikkoutta, koska A-vitamiinia tulee liikaa, ja korkean glykeemisen indeksin vuoksi diabetesta sairastavien koirien kanssa on oltava varovainen. Tuoreen tutkimuksen perusteella bataatti ei välttämättä sovi koiran ruokavalioon, eikä sen pidä koskaan olla pääasiallinen ravinnonlähde.",
+    "nb": "Søtpoteter er ikke giftige, men rå søtpoteter er vanskelige å tygge og kan gi tarmblokkering, og skallet gjør dem tyngre å fordøye. For mye kan gi svake bein og muskler på grunn av for mye vitamin A, og på grunn av den høye glykemiske indeksen må du være forsiktig hvis hunden har diabetes. Nyere forskning tyder på at søtpoteter kanskje ikke egner seg i hundens kosthold, og de bør aldri utgjøre hovedkilden til næring."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Prije promjene prehrane svog psa pitaj veterinara, a zatim počni s malom količinom da vidiš kako pas reagira.",
     "sv": "Fråga veterinären innan du ändrar hundens kost och börja sedan med en liten mängd för att se hur hunden reagerar.",
     "da": "Spørg din dyrlæge, før du ændrer din hunds kost, og start med en lille mængde for at se, hvordan din hund reagerer.",
-    "fi": "Kysy eläinlääkäriltä ennen kuin muutat koirasi ruokavaliota. Aloita sitten pienellä määrällä ja seuraa, miten koirasi reagoi."
+    "fi": "Kysy eläinlääkäriltä ennen kuin muutat koirasi ruokavaliota. Aloita sitten pienellä määrällä ja seuraa, miten koirasi reagoi.",
+    "nb": "Spør dyrlegen før du endrer hundens kosthold, og begynn med en liten mengde for å se hvordan hunden reagerer."
   },
   "serving": {
     "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
@@ -78,7 +84,8 @@
     "hr": "Kuhan u vodi ili na pari do mekoće, bez kore, u malim količinama. Nikad sirov i nikad kao glavni dio prehrane.",
     "sv": "Kokt eller ångad tills den är mjuk, med skalet borttaget, i små mängder. Aldrig rå och aldrig huvuddelen av kosten.",
     "da": "Kogt eller dampet, til de er bløde, med skrællen fjernet og i små mængder. Aldrig rå og aldrig hovedparten af kosten.",
-    "fi": "Keitettynä tai höyrytettynä pehmeäksi, kuori poistettuna, pieninä määrinä. Ei koskaan raakana eikä ruokavalion pääosana."
+    "fi": "Keitettynä tai höyrytettynä pehmeäksi, kuori poistettuna, pieninä määrinä. Ei koskaan raakana eikä ruokavalion pääosana.",
+    "nb": "Kokt eller dampet til den er myk, uten skall, i små mengder. Aldri rå, og aldri hoveddelen av kostholdet."
   },
   "child": {
     "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
@@ -89,7 +96,8 @@
     "hr": "Psi smiju dobiti malo mekog, kuhanog batata. Odrasla osoba ga prvo oguli i skuha.",
     "sv": "Hundar kan få lite mjuk, kokt sötpotatis. En vuxen skalar och kokar den först.",
     "da": "Hunde må gerne få lidt blød, kogt sød kartoffel. En voksen skræller og koger den først.",
-    "fi": "Koira saa syödä vähän pehmeää, kypsennettyä bataattia. Aikuinen kuorii ja kypsentää sen ensin."
+    "fi": "Koira saa syödä vähän pehmeää, kypsennettyä bataattia. Aikuinen kuorii ja kypsentää sen ensin.",
+    "nb": "Hunder kan få litt myk, kokt søtpotet. En voksen skreller og koker den først."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li psi jesti koru batata?",
         "sv": "Får hundar äta sötpotatisskal?",
         "da": "Må hunde spise skrællen fra søde kartofler?",
-        "fi": "Saako koira syödä bataatin kuorta?"
+        "fi": "Saako koira syödä bataatin kuorta?",
+        "nb": "Kan hunder spise søtpotetskall?"
       },
       "a": {
         "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
@@ -113,7 +122,8 @@
         "hr": "Najbolje je ukloniti je: s korom se batat psu teže probavlja.",
         "sv": "Det är bäst att ta bort det: om skalet sitter kvar blir sötpotatisen svårare för hunden att smälta.",
         "da": "Det er bedst at fjerne den: hvis skrællen sidder på, er sød kartoffel sværere for din hund at fordøje.",
-        "fi": "Se kannattaa poistaa: kuori tekee bataatista koiralle vaikeammin sulavaa."
+        "fi": "Se kannattaa poistaa: kuori tekee bataatista koiralle vaikeammin sulavaa.",
+        "nb": "Det er best å fjerne det: Med skallet på blir søtpoteten vanskeligere for hunden å fordøye."
       }
     },
     {
@@ -126,7 +136,8 @@
         "hr": "Smiju li psi jesti sirov batat?",
         "sv": "Får hundar äta rå sötpotatis?",
         "da": "Må hunde spise rå sød kartoffel?",
-        "fi": "Saako koira syödä raakaa bataattia?"
+        "fi": "Saako koira syödä raakaa bataattia?",
+        "nb": "Kan hunder spise rå søtpotet?"
       },
       "a": {
         "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
@@ -137,7 +148,8 @@
         "hr": "Ne. Sirov se batat teško žvače, može psu nadražiti želudac i izazvati začepljenje crijeva. Termički ga obradi do mekoće.",
         "sv": "Nej. Rå sötpotatis är svår att tugga, kan ge hunden orolig mage och kan orsaka stopp i tarmen. Koka den tills den är mjuk.",
         "da": "Nej. Rå sød kartoffel er svær at tygge, kan give din hund ondt i maven og kan give tarmblokering. Kog den, til den er blød.",
-        "fi": "Ei. Raakaa bataattia on vaikea pureskella, ja se voi ärsyttää koiran vatsaa ja aiheuttaa suolitukoksen. Kypsennä se pehmeäksi."
+        "fi": "Ei. Raakaa bataattia on vaikea pureskella, ja se voi ärsyttää koiran vatsaa ja aiheuttaa suolitukoksen. Kypsennä se pehmeäksi.",
+        "nb": "Nei. Rå søtpotet er vanskelig å tygge, kan gi hunden urolig mage og kan føre til tarmblokkering. Kok den til den er myk."
       }
     }
   ],
@@ -250,6 +262,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "41dc0f736ec965acf9db2ce0cb757bf4e2d1a8eaef1e704370a2bd889c8c6278"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b9d0a2ff6910f3f3c6be756ea00b266c7e87081221c2375ad8593c0a425f22ab"
     }
   }
 }

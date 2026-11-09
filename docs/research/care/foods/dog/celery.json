@@ -10,7 +10,8 @@
     "hr": "Celer",
     "sv": "Stjälkselleri",
     "da": "Selleri",
-    "fi": "Varsiselleri"
+    "fi": "Varsiselleri",
+    "nb": "Stangselleri"
   },
   "question": {
     "en": "Can dogs eat celery?",
@@ -21,7 +22,8 @@
     "hr": "Smiju li psi jesti celer?",
     "sv": "Får hundar äta stjälkselleri?",
     "da": "Må hunde spise selleri?",
-    "fi": "Saako koira syödä varsiselleriä?"
+    "fi": "Saako koira syödä varsiselleriä?",
+    "nb": "Kan hunder spise stangselleri?"
   },
   "url_slug": {
     "en": "celery",
@@ -32,7 +34,8 @@
     "hr": "celer",
     "sv": "stjalkselleri",
     "da": "selleri",
-    "fi": "varsiselleri"
+    "fi": "varsiselleri",
+    "nb": "stangselleri"
   },
   "level": "small_amounts",
   "answer": {
@@ -44,7 +47,8 @@
     "hr": "Da, celer je općenito siguran za pse kao povremena poslastica. Operi ga i uvijek ga nareži na komadiće veličine zalogaja jer može izazvati gušenje, osobito kod malih pasa.",
     "sv": "Ja, stjälkselleri är i allmänhet säker för hundar som en godbit då och då. Tvätta den och skär den alltid i munsbitar, eftersom selleri kan ge kvävning, särskilt hos små hundar.",
     "da": "Ja, selleri er som regel ufarligt for hunde som godbid af og til. Vask den, og skær den altid i mundrette stykker, for selleri kan sætte sig fast i halsen, især hos små hunde.",
-    "fi": "Saa, varsiselleri on yleensä turvallista koiralle satunnaisena herkkuna. Pese se ja leikkaa aina suupalan kokoisiksi paloiksi, sillä se voi aiheuttaa tukehtumisvaaran, etenkin pienillä koirilla."
+    "fi": "Saa, varsiselleri on yleensä turvallista koiralle satunnaisena herkkuna. Pese se ja leikkaa aina suupalan kokoisiksi paloiksi, sillä se voi aiheuttaa tukehtumisvaaran, etenkin pienillä koirilla.",
+    "nb": "Ja, stangselleri er som regel trygt for hunder som en godbit av og til. Vask den og skjær den alltid i passe store biter, for stangselleri kan være en kvelningsfare, særlig for små hunder."
   },
   "why": {
     "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
@@ -55,7 +59,8 @@
     "hr": "Celer je siguran za većinu pasa, a poznato je i da osvježava pseći dah. Glavni je rizik gušenje zbog većih komada, osobito kod malih pasa. To je poslastica, a ne osnova prehrane, i nikad ne smije zamijeniti potpun i uravnotežen obrok.",
     "sv": "Stjälkselleri är säker för de flesta hundar och sägs till och med friska upp hundens andedräkt. Den största risken är att hunden sätter stora bitar i halsen, särskilt små hundar. Det är en godbit, inte basfoder, och ska aldrig ersätta en komplett och balanserad måltid.",
     "da": "Selleri er ufarligt for de fleste hunde og kan ligefrem give friskere hundeånde. Den største risiko er, at store stykker sætter sig fast i halsen, især hos små hunde. Det er en godbid og ikke en fast del af kosten, og den må aldrig erstatte et komplet og afbalanceret måltid.",
-    "fi": "Varsiselleri on turvallista useimmille koirille, ja sen tiedetään jopa raikastavan koiran hengitystä. Suurin riski on tukehtuminen isoon palaan, etenkin pienillä koirilla. Se on herkku eikä perusruoka, eikä sillä saa koskaan korvata täysipainoista ja tasapainoista ateriaa."
+    "fi": "Varsiselleri on turvallista useimmille koirille, ja sen tiedetään jopa raikastavan koiran hengitystä. Suurin riski on tukehtuminen isoon palaan, etenkin pienillä koirilla. Se on herkku eikä perusruoka, eikä sillä saa koskaan korvata täysipainoista ja tasapainoista ateriaa.",
+    "nb": "Stangselleri er trygt for de fleste hunder og er til og med kjent for å friske opp hundens ånde. Den største risikoen er at hunden setter en stor bit i halsen, særlig små hunder. Stangselleri er en godbit, ikke fast mat, og bør aldri erstatte et komplett og balansert måltid."
   },
   "signs": null,
   "what_to_do": {
@@ -67,7 +72,8 @@
     "hr": "Uvodi celer polako i nakon prvog zalogaja prati ima li pas probavnih tegoba ili drugih promjena.",
     "sv": "Börja med lite och håll utkik efter magbesvär eller andra förändringar hos hunden när den smakat första gången.",
     "da": "Vænn hunden langsomt til selleri, og hold øje med mavegener eller andre ændringer efter den første smagsprøve.",
-    "fi": "Totuta koira varsiselleriin vähitellen ja tarkkaile ensimmäisen maistelun jälkeen, ilmaantuuko vatsavaivoja tai muita muutoksia."
+    "fi": "Totuta koira varsiselleriin vähitellen ja tarkkaile ensimmäisen maistelun jälkeen, ilmaantuuko vatsavaivoja tai muita muutoksia.",
+    "nb": "Innfør stangselleri langsomt, og følg med på om hunden får urolig mage eller andre endringer etter den første smaken."
   },
   "serving": {
     "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
@@ -78,7 +84,8 @@
     "hr": "Opran, može i sirov, uvijek narezan na komadiće veličine zalogaja. Mala poslastica, a ne obrok.",
     "sv": "Tvättad och rå, alltid skuren i munsbitar. En liten godbit, inte en måltid.",
     "da": "Vasket og altid skåret i mundrette stykker. Rå er fint. En lille godbid og ikke et måltid.",
-    "fi": "Pestynä ja aina suupalan kokoisiksi paloiksi leikattuna; raakana käy hyvin. Pieni herkku, ei ateria."
+    "fi": "Pestynä ja aina suupalan kokoisiksi paloiksi leikattuna; raakana käy hyvin. Pieni herkku, ei ateria.",
+    "nb": "Vasket og alltid skåret i passe store biter; rå er greit. En liten godbit, ikke et måltid."
   },
   "child": {
     "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
@@ -89,7 +96,8 @@
     "hr": "Psi smiju grickati malo celera! Odrasla osoba ga prvo opere i nareže na sitne komadiće.",
     "sv": "Hundar kan knapra lite stjälkselleri! En vuxen tvättar den och skär den i små bitar först.",
     "da": "Hunde må gerne knase lidt selleri! En voksen vasker den og skærer den først i helt små stykker.",
-    "fi": "Koira saa rouskuttaa vähän varsiselleriä! Aikuinen pesee sen ja leikkaa ensin pikkuruisiksi paloiksi."
+    "fi": "Koira saa rouskuttaa vähän varsiselleriä! Aikuinen pesee sen ja leikkaa ensin pikkuruisiksi paloiksi.",
+    "nb": "Hunder kan knaske litt stangselleri! En voksen vasker den og skjærer den i bitte små biter først."
   },
   "faq": [
     {
@@ -102,7 +110,8 @@
         "hr": "Smiju li štenci jesti celer?",
         "sv": "Får valpar äta stjälkselleri?",
         "da": "Må hvalpe spise selleri?",
-        "fi": "Saavatko pennut syödä varsiselleriä?"
+        "fi": "Saavatko pennut syödä varsiselleriä?",
+        "nb": "Kan valper spise stangselleri?"
       },
       "a": {
         "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
@@ -113,7 +122,8 @@
         "hr": "Štenci smiju jesti male količine celera ako je narezan na komadiće prikladne veličine.",
         "sv": "Valpar kan få små mängder stjälkselleri om den skärs i lagom stora bitar.",
         "da": "Hvalpe kan spise små mængder selleri, hvis det er skåret i stykker af passende størrelse.",
-        "fi": "Pennut voivat syödä vähän varsiselleriä, kun se on leikattu sopivan kokoisiksi paloiksi."
+        "fi": "Pennut voivat syödä vähän varsiselleriä, kun se on leikattu sopivan kokoisiksi paloiksi.",
+        "nb": "Valper kan spise små mengder stangselleri hvis den er skåret i passe store biter."
       }
     }
   ],
@@ -210,6 +220,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cf998d7c1f3e9227d4cda4e153149ebd876487c4d89153cbf7c5a6d159266c6a"
+    },
+    "nb": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d1d5bc89d8b64f072812f86fa053759095abe23ce7b1485508aa841d25e7bcd7"
     }
   }
 }
