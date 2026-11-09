@@ -8,7 +8,8 @@
     "pl": "Batat",
     "cs": "Batáty",
     "hr": "Batat",
-    "sv": "Sötpotatis"
+    "sv": "Sötpotatis",
+    "da": "Søde kartofler"
   },
   "question": {
     "en": "Can cats eat sweet potato?",
@@ -17,7 +18,8 @@
     "pl": "Czy koty mogą jeść batat?",
     "cs": "Mohou kočky jíst batáty?",
     "hr": "Smiju li mačke jesti batat?",
-    "sv": "Får katter äta sötpotatis?"
+    "sv": "Får katter äta sötpotatis?",
+    "da": "Må katte spise søde kartofler?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -26,7 +28,8 @@
     "pl": "batat",
     "cs": "bataty",
     "hr": "batat",
-    "sv": "sotpotatis"
+    "sv": "sotpotatis",
+    "da": "soede-kartofler"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pl": "Batat nie jest toksyczny dla kotów: ASPCA uznaje roślinę batata za nietoksyczną dla nich. Koty nie potrzebują jednak warzyw, a zjedzenie jakiegokolwiek materiału roślinnego może wywołać wymioty lub rozstrój żołądka, więc niech to będzie malutki, okazjonalny dodatek.",
     "cs": "Batáty nejsou pro kočky toxické: ASPCA řadí rostlinu batát mezi netoxické pro kočky. Kočky ale zeleninu nepotřebují a jakákoli rostlinná hmota může způsobit zvracení nebo potíže se žaludkem, proto je dávejte jen jako drobný, občasný doplněk.",
     "hr": "Batat nije otrovan za mačke: ASPCA biljku batat navodi kao neotrovnu. Mačkama povrće ipak nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe, zato neka to bude samo sasvim mali, povremeni dodatak.",
-    "sv": "Sötpotatis är inte giftig för katter: ASPCA anger sötpotatisplantan som ogiftig för dem. Katter behöver dock inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage, så se det som ett litet extra, bara då och då."
+    "sv": "Sötpotatis är inte giftig för katter: ASPCA anger sötpotatisplantan som ogiftig för dem. Katter behöver dock inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage, så se det som ett litet extra, bara då och då.",
+    "da": "Søde kartofler er ikke giftige for katte: ASPCA betragter planten sød kartoffel som ugiftig for dem. Katte har dog ikke brug for grøntsager, og al planteføde kan give opkast eller ondt i maven, så det bør kun være et lille ekstra en gang imellem."
   },
   "why": {
     "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -45,7 +49,8 @@
     "pl": "ASPCA uznaje roślinę batata (Ipomoea batatas) za nietoksyczną dla kotów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
     "cs": "ASPCA řadí rostlinu batát (Ipomoea batatas) mezi netoxické pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
     "hr": "ASPCA navodi biljku batat (Ipomoea batatas) kao neotrovnu za mačke. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-    "sv": "ASPCA anger sötpotatisplantan (Ipomoea batatas) som ogiftig för katter. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+    "sv": "ASPCA anger sötpotatisplantan (Ipomoea batatas) som ogiftig för katter. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+    "da": "ASPCA betragter planten sød kartoffel (Ipomoea batatas) som ugiftig for katte. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte batáty podávat a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
   },
   "serving": {
     "en": "A small plain piece now and then, with no butter, salt or seasoning.",
@@ -64,7 +70,8 @@
     "pl": "Mały zwykły kawałek od czasu do czasu, bez masła, soli i przypraw.",
     "cs": "Malý kousek jen občas, bez dalších přísad, másla, soli a koření.",
     "hr": "Povremeno mali običan komadić, bez maslaca, soli i začina.",
-    "sv": "En liten bit då och då, utan smör, salt eller kryddor."
+    "sv": "En liten bit då och då, utan smör, salt eller kryddor.",
+    "da": "Et lille stykke naturel sød kartoffel af og til, uden smør, salt eller krydderier."
   },
   "child": {
     "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -73,7 +80,8 @@
     "pl": "Batat nie jest dla kotów trujący. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
     "cs": "Batáty nejsou pro kočky jedovaté. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
     "hr": "Batat nije otrovan za mačke. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-    "sv": "Sötpotatis är inte giftig för katter. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+    "sv": "Sötpotatis är inte giftig för katter. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+    "da": "Søde kartofler er ikke giftige for katte. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pl": "Czy batat to to samo co zwykły ziemniak?",
         "cs": "Jsou batáty totéž co běžné brambory?",
         "hr": "Je li batat isto što i običan krumpir?",
-        "sv": "Är sötpotatis samma sak som vanlig potatis?"
+        "sv": "Är sötpotatis samma sak som vanlig potatis?",
+        "da": "Er søde kartofler det samme som almindelige kartofler?"
       },
       "a": {
         "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
@@ -93,7 +102,8 @@
         "pl": "Nie. ASPCA podaje, że batat to inna roślina (Ipomoea batatas, rodzina powojowatych). Surowe zwykłe ziemniaki to inna sprawa: według ASPCA mogą być problematyczne dla zwierząt.",
         "cs": "Ne. ASPCA vede batáty jako jinou rostlinu (Ipomoea batatas, čeleď Convolvulaceae). Syrové běžné brambory jsou něco jiného: podle ASPCA mohou být pro zvířata problematické.",
         "hr": "Ne. ASPCA navodi batat kao drugu biljku (Ipomoea batatas, porodica Convolvulaceae). Sirov običan krumpir druga je stvar: prema ASPCA može biti problematičan za ljubimce.",
-        "sv": "Nej. ASPCA anger sötpotatis som en annan växt (Ipomoea batatas, familjen Convolvulaceae). Rå vanlig potatis är en annan sak: ASPCA skriver att den kan vara problematisk för husdjur."
+        "sv": "Nej. ASPCA anger sötpotatis som en annan växt (Ipomoea batatas, familjen Convolvulaceae). Rå vanlig potatis är en annan sak: ASPCA skriver att den kan vara problematisk för husdjur.",
+        "da": "Nej. ASPCA betragter sød kartoffel som en anden plante (Ipomoea batatas, familien Convolvulaceae). Rå almindelige kartofler er noget andet: ASPCA skriver at de kan være et problem for kæledyr."
       }
     },
     {
@@ -104,7 +114,8 @@
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
-        "sv": "Behöver katter grönsaker?"
+        "sv": "Behöver katter grönsaker?",
+        "da": "Har katte brug for grøntsager?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +124,8 @@
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
       }
     }
   ],
@@ -205,6 +217,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f8aac6386d144a3ae6fb1e95f5f8414c7a5574e40ebc56eed02fda9ca43b13ed"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "10700eeb0f10cce4a87b90fbe11f066508baa6f1a80ff9ee0e8de5b5d874d2b8"
     }
   }
 }

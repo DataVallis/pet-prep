@@ -8,7 +8,8 @@
     "pl": "Surowe ziemniaki",
     "cs": "Syrové brambory",
     "hr": "Sirovi krumpir",
-    "sv": "Rå potatis"
+    "sv": "Rå potatis",
+    "da": "Rå kartofler"
   },
   "question": {
     "en": "Can dogs eat raw potatoes?",
@@ -17,7 +18,8 @@
     "pl": "Czy psy mogą jeść surowe ziemniaki?",
     "cs": "Mohou psi jíst syrové brambory?",
     "hr": "Smiju li psi jesti sirovi krumpir?",
-    "sv": "Får hundar äta rå potatis?"
+    "sv": "Får hundar äta rå potatis?",
+    "da": "Må hunde spise rå kartofler?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -26,7 +28,8 @@
     "pl": "surowe-ziemniaki",
     "cs": "syrove-brambory",
     "hr": "sirovi-krumpir",
-    "sv": "ra-potatis"
+    "sv": "ra-potatis",
+    "da": "raa-kartofler"
   },
   "level": "dangerous",
   "answer": {
@@ -36,7 +39,8 @@
     "pl": "Nie, nie dawaj psu surowych ziemniaków. Surowe i zazielenione ziemniaki są niebezpieczne i potencjalnie toksyczne, bo zawierają solaninę, naturalną toksynę. Co innego zwykły, dobrze ugotowany ziemniak – w umiarkowanej ilości jest w porządku.",
     "cs": "Ne, nedávejte psovi syrové brambory. Syrové a zelené brambory jsou nebezpečné a potenciálně toxické, protože obsahují solanin, přírodní toxin. Brambory bez dalších přísad, důkladně uvařené, jsou jiná věc a v mírném množství jsou v pořádku.",
     "hr": "Ne, ne daj psu sirov krumpir. Sirov i zelen krumpir nije siguran i potencijalno je otrovan jer sadrži solanin, prirodni toksin. Običan, dobro termički obrađen krumpir druga je stvar i u umjerenim je količinama u redu.",
-    "sv": "Nej, ge inte hunden rå potatis. Rå och grön potatis är inte säker och kan vara giftig, eftersom den innehåller solanin, ett naturligt gift. Väl kokt potatis utan tillsatser är en annan sak och går bra med måtta."
+    "sv": "Nej, ge inte hunden rå potatis. Rå och grön potatis är inte säker och kan vara giftig, eftersom den innehåller solanin, ett naturligt gift. Väl kokt potatis utan tillsatser är en annan sak och går bra med måtta.",
+    "da": "Nej, giv ikke din hund rå kartofler. Rå og grønne kartofler er ikke sikre og kan være giftige, fordi de indeholder solanin, et naturligt giftstof. Gennemkogte kartofler uden tilsætninger er noget andet og fine i moderate mængder."
   },
   "why": {
     "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
@@ -45,7 +49,8 @@
     "pl": "Surowe ziemniaki oraz ziemniaki z zieloną skórką lub zielonymi plamami zawierają solaninę, naturalnie występującą toksynę roślin z rodziny psiankowatych. Zielone plamy pojawiają się, gdy niektóre ziemniaki są wystawione na światło, i oznaczają, że poziom solaniny wzrósł. Kawałki surowego lub niedogotowanego ziemniaka mogą też grozić zadławieniem.",
     "cs": "Syrové brambory a brambory se zelenou slupkou nebo zelenými skvrnami obsahují solanin, přirozeně se vyskytující toxin z rostlin čeledi lilkovitých. Zelené skvrny se objevují, když jsou některé brambory vystaveny světlu, a ukazují, že se zvýšil obsah solaninu. Kousky syrových nebo nedovařených brambor mohou také představovat riziko zadušení.",
     "hr": "Sirov krumpir te krumpir sa zelenom korom ili zelenim mrljama sadrže solanin, prirodno prisutan toksin u biljkama iz porodice pomoćnica. Zelene se mrlje pojavljuju kad je krumpir izložen svjetlu i pokazuju da se količina solanina povećala. Komadi sirovog ili napola kuhanog krumpira mogu uzrokovati i gušenje.",
-    "sv": "Rå potatis, och potatis med grönt skal eller gröna fläckar, innehåller solanin, ett naturligt gift som finns i växter inom familjen potatisväxter. Gröna fläckar uppstår när potatis utsätts för ljus och visar att solaninhalten har ökat. Bitar av rå eller halvkokt potatis kan dessutom ge kvävning."
+    "sv": "Rå potatis, och potatis med grönt skal eller gröna fläckar, innehåller solanin, ett naturligt gift som finns i växter inom familjen potatisväxter. Gröna fläckar uppstår när potatis utsätts för ljus och visar att solaninhalten har ökat. Bitar av rå eller halvkokt potatis kan dessutom ge kvävning.",
+    "da": "Rå kartofler og kartofler med grøn skal eller grønne pletter indeholder solanin, et naturligt giftstof, som findes i planter i natskyggefamilien. Grønne pletter opstår, når nogle kartofler udsættes for lys, og viser at indholdet af solanin er steget. Stykker af rå eller halvkogt kartoffel kan også sætte sig fast i halsen."
   },
   "signs": {
     "en": [
@@ -89,6 +94,12 @@
       "Diarré",
       "Slöhet",
       "Muskelsvaghet"
+    ],
+    "da": [
+      "Opkast",
+      "Diarré",
+      "Sløvhed",
+      "Muskelsvaghed"
     ]
   },
   "what_to_do": {
@@ -98,7 +109,8 @@
     "pl": "Jeśli pies zjadł surowy lub zielony ziemniak, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Dalsze postępowanie zależy od wielkości psa, ilości zjedzonego ziemniaka i tego, czy pojawiły się objawy. Jeśli pies wymiotuje, ma biegunkę, wydaje się ospały lub osłabiony, od razu jedź z nim do weterynarza.",
     "cs": "Pokud váš pes snědl syrovou nebo zelenou bramboru, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Další postup závisí na velikosti psa, na tom, kolik snědl, a na tom, zda má příznaky. Pokud pes zvrací, má průjem, působí malátně nebo slabě, jděte okamžitě k veterináři.",
     "hr": "Ako je tvoj pas pojeo sirov ili zelen krumpir, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Što dalje, ovisi o veličini psa, pojedenoj količini i o tome ima li znakova. Ako pas povraća, ima proljev, djeluje malaksalo ili slabo, odmah ga odvedi veterinaru.",
-    "sv": "Om hunden har ätit rå eller grön potatis, kontakta veterinären eller en giftrådgivning för djur. Vad du ska göra beror på hundens storlek, hur mycket den har ätit och om den har symtom. Om hunden kräks, har diarré eller verkar slö eller svag ska du kontakta veterinär direkt."
+    "sv": "Om hunden har ätit rå eller grön potatis, kontakta veterinären eller en giftrådgivning för djur. Vad du ska göra beror på hundens storlek, hur mycket den har ätit och om den har symtom. Om hunden kräks, har diarré eller verkar slö eller svag ska du kontakta veterinär direkt.",
+    "da": "Hvis din hund har spist rå eller grøn kartoffel, skal du kontakte din dyrlæge eller en giftrådgivning for dyr. Hvad du skal gøre derefter, afhænger af hundens størrelse, hvor meget den har spist, og om den har symptomer. Hvis hunden kaster op, har diarré eller virker sløv eller svag, skal du straks tage til dyrlæge."
   },
   "serving": null,
   "child": {
@@ -108,7 +120,8 @@
     "pl": "Surowe ziemniaki nie są dla psów. Jeśli twój pies capnie kawałek, od razu powiedz dorosłemu.",
     "cs": "Syrové brambory nejsou pro psy. Pokud pes nějaký popadne, hned to řekni dospělému.",
     "hr": "Sirov krumpir nije za pse. Ako ga pas zgrabi, odmah reci odrasloj osobi.",
-    "sv": "Rå potatis är inte för hundar. Om en hund får tag i en bit, säg det till en vuxen direkt."
+    "sv": "Rå potatis är inte för hundar. Om en hund får tag i en bit, säg det till en vuxen direkt.",
+    "da": "Rå kartofler er ikke til hunde. Hvis en hund snupper en, så sig det til en voksen med det samme."
   },
   "faq": [
     {
@@ -119,7 +132,8 @@
         "pl": "Czy ugotowane ziemniaki są dla psów w porządku?",
         "cs": "Jsou uvařené brambory pro psy v pořádku?",
         "hr": "Je li termički obrađen krumpir u redu za pse?",
-        "sv": "Går kokt potatis bra för hundar?"
+        "sv": "Går kokt potatis bra för hundar?",
+        "da": "Er kogte kartofler i orden for hunde?"
       },
       "a": {
         "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
@@ -128,7 +142,8 @@
         "pl": "Tak, zwykłe ugotowane ziemniaki w umiarkowanych ilościach są w porządku, o ile są na tyle miękkie, że da się je rozgnieść – wtedy pies się nie zadławi. Upewnij się, że nie są zielone.",
         "cs": "Ano, brambory bez dalších přísad jsou v mírném množství v pořádku, pokud jsou uvařené tak, aby se daly rozmačkat a pes se jimi nezadusil. Dbejte na to, aby nebyly zelené.",
         "hr": "Da, običan termički obrađen krumpir u umjerenim je količinama u redu, ako je obrađen toliko da se može zgnječiti kako se pas ne bi ugušio. Pazi da nije zelen.",
-        "sv": "Ja, kokt potatis utan tillsatser går bra med måtta. Koka den så mjuk att den går att mosa, så att hunden inte sätter den i halsen. Kontrollera att den inte är grön."
+        "sv": "Ja, kokt potatis utan tillsatser går bra med måtta. Koka den så mjuk att den går att mosa, så att hunden inte sätter den i halsen. Kontrollera att den inte är grön.",
+        "da": "Ja, kogte kartofler uden tilsætninger er fine i moderate mængder. Kog dem så møre, at de kan moses, så de ikke sætter sig fast i halsen. Sørg for, at de ikke er grønne."
       }
     },
     {
@@ -139,7 +154,8 @@
         "pl": "Czy psy mogą jeść skórki ziemniaków?",
         "cs": "Mohou psi jíst bramborové slupky?",
         "hr": "Smiju li psi jesti koru krumpira?",
-        "sv": "Får hundar äta potatisskal?"
+        "sv": "Får hundar äta potatisskal?",
+        "da": "Må hunde spise kartoffelskræl?"
       },
       "a": {
         "en": "Potato skins are okay, but not if they are green.",
@@ -148,7 +164,8 @@
         "pl": "Skórki ziemniaków są w porządku, ale nie wtedy, gdy są zielone.",
         "cs": "Bramborové slupky jsou v pořádku, ale ne zelené.",
         "hr": "Kora krumpira je u redu, ali ne ako je zelena.",
-        "sv": "Potatisskal går bra, men inte om de är gröna."
+        "sv": "Potatisskal går bra, men inte om de är gröna.",
+        "da": "Skrællen er i orden, men ikke hvis den er grøn."
       }
     }
   ],
@@ -254,6 +271,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a8ef2bb8c388ab25798927f651afddfdb27b8859de7cd92ff1a902695214a007"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6184ae030d522578a2c5fef7ab1f543b697acecc172a40436a1c0809fdc1ac74"
     }
   }
 }

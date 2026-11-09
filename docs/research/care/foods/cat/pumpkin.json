@@ -8,7 +8,8 @@
     "pl": "Dynia",
     "cs": "Dýně",
     "hr": "Bundeva",
-    "sv": "Pumpa"
+    "sv": "Pumpa",
+    "da": "Græskar"
   },
   "question": {
     "en": "Can cats eat pumpkin?",
@@ -17,7 +18,8 @@
     "pl": "Czy koty mogą jeść dynię?",
     "cs": "Mohou kočky jíst dýni?",
     "hr": "Smiju li mačke jesti bundevu?",
-    "sv": "Får katter äta pumpa?"
+    "sv": "Får katter äta pumpa?",
+    "da": "Må katte spise græskar?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -26,7 +28,8 @@
     "pl": "dynia",
     "cs": "dyne",
     "hr": "bundeva",
-    "sv": "pumpa"
+    "sv": "pumpa",
+    "da": "graeskar"
   },
   "level": "small_amounts",
   "answer": {
@@ -36,7 +39,8 @@
     "pl": "Tak, odrobina zwykłej ugotowanej dyni jest w porządku jako okazjonalny smakołyk. Pet Poison Helpline uznaje dynię za bezpieczną dla psów i kotów, ale VCA zaznacza, że dynia i jej pestki w dużych ilościach mogą rozstroić kotu żołądek, więc pomiń pestki i skórkę.",
     "cs": "Ano, trochu tepelně upravené dýně bez dalších přísad je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje dýni za bezpečnou pro psy i kočky, ale VCA upozorňuje, že dýně a její semínka mohou ve velkém množství kočce podráždit žaludek, proto semínka a slupku vynechte.",
     "hr": "Da, malo obične termički obrađene bundeve u redu je kao povremena poslastica. Pet Poison Helpline navodi da je bundeva sigurna za pse i mačke, ali VCA napominje da bundeva i njezine sjemenke u velikim količinama mogu mački nadražiti želudac, pa izostavi sjemenke i koru.",
-    "sv": "Ja, lite kokt pumpa utan tillsatser går bra som en godbit då och då. Pet Poison Helpline kallar pumpa säker för hundar och katter, men VCA påpekar att pumpa och pumpafrön kan ge katter orolig mage i stora mängder, så hoppa över frön och skal."
+    "sv": "Ja, lite kokt pumpa utan tillsatser går bra som en godbit då och då. Pet Poison Helpline kallar pumpa säker för hundar och katter, men VCA påpekar att pumpa och pumpafrön kan ge katter orolig mage i stora mängder, så hoppa över frön och skal.",
+    "da": "Ja, lidt kogt græskar uden tilsætninger er fint som godbid af og til. Pet Poison Helpline kalder græskar ufarligt for hunde og katte, men VCA skriver at græskar og græskarkerner kan give en kat ondt i maven i store mængder, så spring kernerne og skallen over."
   },
   "why": {
     "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
@@ -45,7 +49,8 @@
     "pl": "Pet Poison Helpline podaje, że dynia jest bezpieczna dla psów i kotów, a gotowana lub przetworzona dynia jest znacznie łatwiejsza do strawienia niż surowa. VCA dodaje, że choć dynia i jej pestki są nietoksyczne, mogą rozstroić kotu żołądek, zwłaszcza w dużych ilościach. Koty nie potrzebują w diecie owoców ani warzyw, a smakołyków powinno być mało.",
     "cs": "Pet Poison Helpline uvádí, že dýně je bezpečná pro psy i kočky a že tepelně upravená nebo zpracovaná dýně se tráví mnohem snáz než syrová. VCA dodává, že ačkoli je dýně netoxická, dýně a dýňová semínka mohou kočce podráždit žaludek, zejména ve větším množství. Kočky ve stravě ovoce ani zeleninu nepotřebují a pamlsků by mělo být málo.",
     "hr": "Pet Poison Helpline navodi da je bundeva sigurna za pse i mačke te da se termički obrađena ili prerađena bundeva mnogo lakše probavlja od sirove. VCA dodaje da bundeva i sjemenke bundeve, iako nisu otrovne, mogu mački nadražiti želudac, osobito u većim količinama. Mačkama u prehrani ne trebaju voće ni povrće, a poslastica ne bi smjelo biti mnogo.",
-    "sv": "Pet Poison Helpline skriver att pumpa är säker för hundar och katter och att kokt eller bearbetad pumpa är mycket lättare att smälta än rå. VCA tillägger att pumpa och pumpafrön, även om de inte är giftiga, kan ge katter orolig mage, särskilt i stora mängder. Katter behöver inte frukt eller grönsaker i kosten, och godbitar ska ges sparsamt."
+    "sv": "Pet Poison Helpline skriver att pumpa är säker för hundar och katter och att kokt eller bearbetad pumpa är mycket lättare att smälta än rå. VCA tillägger att pumpa och pumpafrön, även om de inte är giftiga, kan ge katter orolig mage, särskilt i stora mängder. Katter behöver inte frukt eller grönsaker i kosten, och godbitar ska ges sparsamt.",
+    "da": "Pet Poison Helpline skriver at græskar er ufarligt for hunde og katte, og at kogt eller forarbejdet græskar er meget lettere at fordøje end råt. VCA tilføjer at græskar og græskarkerner ikke er giftige, men kan give en kat ondt i maven, især i store mængder. Katte har ikke brug for frugt og grøntsager i kosten, og godbidder bør gives sparsomt."
   },
   "signs": null,
   "what_to_do": {
@@ -55,7 +60,8 @@
     "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
     "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte dýni podávat a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+    "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
   },
   "serving": {
     "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
@@ -64,7 +70,8 @@
     "pl": "Mały kawałek zwykłej ugotowanej dyni albo zwykłe puree z dyni z puszki, w którym dynia jest jedynym składnikiem. Bez pestek, bez skórki, bez soli i przypraw.",
     "cs": "Malý kousek tepelně upravené dýně bez dalších přísad, nebo čisté dýňové pyré z konzervy, jehož jedinou složkou je dýně. Žádná semínka, žádná slupka, žádná sůl ani koření.",
     "hr": "Mali komadić obične termički obrađene bundeve ili običan pire od bundeve iz konzerve, u kojem je bundeva jedini sastojak. Bez sjemenki, bez kore, bez soli i začina.",
-    "sv": "En liten bit kokt pumpa utan tillsatser, eller ren pumpapuré på burk där pumpa är den enda ingrediensen. Inga frön, inget skal, inget salt eller kryddor."
+    "sv": "En liten bit kokt pumpa utan tillsatser, eller ren pumpapuré på burk där pumpa är den enda ingrediensen. Inga frön, inget skal, inget salt eller kryddor.",
+    "da": "Et lille stykke naturel, kogt græskar eller græskarpuré på dåse, hvor græskar er den eneste ingrediens. Ingen kerner, ingen skal og intet salt eller krydderier."
   },
   "child": {
     "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
@@ -73,7 +80,8 @@
     "pl": "Odrobiną ugotowanej dyni można czasem poczęstować kota. Bez pestek i skórki. Koty potrzebują głównie mięsa.",
     "cs": "Trocha uvařené dýně může být pro kočku občas pamlsek. Jen bez semínek a slupky. Kočky potřebují hlavně maso.",
     "hr": "Malo kuhane bundeve mačka povremeno smije dobiti kao poslasticu. Bez sjemenki i kore. Mačkama uglavnom treba meso.",
-    "sv": "Lite kokt pumpa kan vara en kattgodbit då och då. Inga frön eller skal, och katter behöver framför allt kött."
+    "sv": "Lite kokt pumpa kan vara en kattgodbit då och då. Inga frön eller skal, och katter behöver framför allt kött.",
+    "da": "Lidt kogt græskar kan være en godbid til katten en gang imellem. Ingen kerner eller skal, og katte har mest brug for kød."
   },
   "faq": [
     {
@@ -84,7 +92,8 @@
         "pl": "A co z dyniami na Halloween?",
         "cs": "A co dýně na Halloween?",
         "hr": "A što s bundevama za Noć vještica?",
-        "sv": "Hur är det med halloweenpumpor?"
+        "sv": "Hur är det med halloweenpumpor?",
+        "da": "Hvad med halloweengræskar?"
       },
       "a": {
         "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
@@ -93,7 +102,8 @@
         "pl": "Świeże dynie nie szkodzą, ale według Blue Cross zgniłe mogą rozstroić kotu brzuszek, więc trzymaj wydrążone dynie poza zasięgiem kota albo wyrzuć je, gdy przestaną być świeże.",
         "cs": "Čerstvé dýně nejsou škodlivé, ale Blue Cross uvádí, že shnilé mohou kočce podráždit bříško, proto vydlabané dýně uložte mimo dosah nebo je odstraňte, jakmile přestanou být čerstvé.",
         "hr": "Svježe bundeve nisu štetne, ali Blue Cross navodi da trule mogu mački poremetiti probavu, zato izdubljene bundeve drži izvan dosega ili ih ukloni čim više nisu svježe.",
-        "sv": "Färska pumpor är inte skadliga, men Blue Cross skriver att ruttna pumpor kan ge katter ont i magen. Håll utskurna pumpor utom räckhåll eller ta bort dem när de inte längre är färska."
+        "sv": "Färska pumpor är inte skadliga, men Blue Cross skriver att ruttna pumpor kan ge katter ont i magen. Håll utskurna pumpor utom räckhåll eller ta bort dem när de inte längre är färska.",
+        "da": "Friske græskar er ikke skadelige, men Blue Cross skriver at rådne græskar kan give katten ondt i maven. Hold derfor udskårne græskar uden for kattens rækkevidde, eller fjern dem, når de ikke længere er friske."
       }
     },
     {
@@ -104,7 +114,8 @@
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
-        "sv": "Behöver katter grönsaker?"
+        "sv": "Behöver katter grönsaker?",
+        "da": "Har katte brug for grøntsager?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +124,8 @@
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
       }
     }
   ],
@@ -217,6 +229,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "bcbe192f7cec35938f50d6ba9b11016a93ec2c31cb95b16a011dd3c71459c1c3"
+    },
+    "da": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a8d72af0199047ab0e00c0123936530c8859970b3ebf8c9d242a5c0547764e48"
     }
   }
 }

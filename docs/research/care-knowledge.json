@@ -2581,7 +2581,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Brussels sprouts",
@@ -2590,7 +2591,8 @@
         "pl": "Brukselka",
         "cs": "Růžičková kapusta",
         "hr": "Prokulice",
-        "sv": "Brysselkål"
+        "sv": "Brysselkål",
+        "da": "Rosenkål"
       },
       "question": {
         "en": "Can cats eat Brussels sprouts?",
@@ -2599,7 +2601,8 @@
         "pl": "Czy koty mogą jeść brukselkę?",
         "cs": "Mohou kočky jíst růžičkovou kapustu?",
         "hr": "Smiju li mačke jesti prokulice?",
-        "sv": "Får katter äta brysselkål?"
+        "sv": "Får katter äta brysselkål?",
+        "da": "Må katte spise rosenkål?"
       },
       "url_slug": {
         "en": "brussels-sprouts",
@@ -2608,7 +2611,8 @@
         "pl": "brukselka",
         "cs": "ruzickova-kapusta",
         "hr": "prokulice",
-        "sv": "brysselkal"
+        "sv": "brysselkal",
+        "da": "rosenkal"
       },
       "answer": {
         "en": "Yes, a small piece of plain Brussels sprout, cooked until soft, is fine as an occasional treat. The RSPCA lists Brussels sprouts among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
@@ -2617,7 +2621,8 @@
         "pl": "Tak, mały kawałek zwykłej brukselki, ugotowanej do miękkości, jest w porządku jako okazjonalny smakołyk. RSPCA wymienia brukselkę wśród pokarmów odpowiednich dla kotów w umiarkowanych ilościach. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek.",
         "cs": "Ano, malý kousek růžičkové kapusty bez dalších přísad, uvařený do měkka, je jako občasný pamlsek v pořádku. RSPCA uvádí růžičkovou kapustu mezi potravinami, které jsou pro kočky vhodné v mírném množství. Kočky zeleninu nepotřebují, proto ji dávejte jen jako drobný doplněk.",
         "hr": "Da, mali komadić obične prokulice, termički obrađen do mekoće, u redu je kao povremena poslastica. RSPCA navodi prokulice među namirnicama prikladnima za mačke u umjerenim količinama. Mačkama povrće nije potrebno, pa neka bude samo sasvim mali dodatak.",
-        "sv": "Ja, en liten bit brysselkål utan tillsatser, kokt tills den är mjuk, går bra som en godbit då och då. RSPCA nämner brysselkål bland maten som passar katter med måtta. Katter behöver inte grönsaker, så se det som ett litet extra."
+        "sv": "Ja, en liten bit brysselkål utan tillsatser, kokt tills den är mjuk, går bra som en godbit då och då. RSPCA nämner brysselkål bland maten som passar katter med måtta. Katter behöver inte grönsaker, så se det som ett litet extra.",
+        "da": "Ja, et lille stykke naturel rosenkål, kogt blød, er fint som godbid af og til. RSPCA nævner rosenkål blandt de fødevarer, der passer til katte i moderate mængder. Katte har ikke brug for grøntsager, så det bør kun være et lille ekstra."
       },
       "why": {
         "en": "The RSPCA lists Brussels sprouts, cooked until soft, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -2626,7 +2631,8 @@
         "pl": "RSPCA wymienia brukselkę, ugotowaną do miękkości, wśród świątecznych potraw bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "RSPCA uvádí růžičkovou kapustu, uvařenou do měkka, mezi vánočními jídly bezpečnými pro zvířata, vhodnými pro kočky a psy v mírném množství. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
         "hr": "RSPCA navodi prokulice, termički obrađene do mekoće, među božićnim namirnicama sigurnima za ljubimce, prikladnima za mačke i pse u umjerenim količinama. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-        "sv": "RSPCA nämner brysselkål, kokt tills den är mjuk, bland julmat som passar katter och hundar med måtta. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+        "sv": "RSPCA nämner brysselkål, kokt tills den är mjuk, bland julmat som passar katter och hundar med måtta. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+        "da": "RSPCA nævner rosenkål, kogt blød, blandt julemad, der er ufarlig for kæledyr og passer til katte og hunde i moderate mængder. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
       },
       "signs": null,
       "what_to_do": {
@@ -2636,7 +2642,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte růžičkovou kapustu podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small piece, cooked until soft, with no butter, salt or seasoning.",
@@ -2645,7 +2652,8 @@
         "pl": "Mały kawałek, ugotowany do miękkości, bez masła, soli i przypraw.",
         "cs": "Malý kousek uvařený do měkka, bez másla, soli a koření.",
         "hr": "Mali komadić, termički obrađen do mekoće, bez maslaca, soli i začina.",
-        "sv": "En liten bit, kokt tills den är mjuk, utan smör, salt eller kryddor."
+        "sv": "En liten bit, kokt tills den är mjuk, utan smör, salt eller kryddor.",
+        "da": "Et lille stykke, kogt blødt, uden smør, salt eller krydderier."
       },
       "child": {
         "en": "A soft cooked sprout piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -2654,7 +2662,8 @@
         "pl": "Miękkim kawałkiem ugotowanej brukselki można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Kousek měkce uvařené růžičkové kapusty může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
         "hr": "Komadić meko kuhane prokulice mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-        "sv": "En mjuk, kokt bit brysselkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+        "sv": "En mjuk, kokt bit brysselkål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+        "da": "Et blødt, kogt stykke rosenkål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
       },
       "faq": [
         {
@@ -2665,7 +2674,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -2674,7 +2684,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -2943,7 +2954,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Cabbage",
@@ -2952,7 +2964,8 @@
         "pl": "Kapusta",
         "cs": "Zelí",
         "hr": "Kupus",
-        "sv": "Kål"
+        "sv": "Kål",
+        "da": "Kål"
       },
       "question": {
         "en": "Can cats eat cabbage?",
@@ -2961,7 +2974,8 @@
         "pl": "Czy koty mogą jeść kapustę?",
         "cs": "Mohou kočky jíst zelí?",
         "hr": "Smiju li mačke jesti kupus?",
-        "sv": "Får katter äta kål?"
+        "sv": "Får katter äta kål?",
+        "da": "Må katte spise kål?"
       },
       "url_slug": {
         "en": "cabbage",
@@ -2970,7 +2984,8 @@
         "pl": "kapusta",
         "cs": "zeli",
         "hr": "kupus",
-        "sv": "kal"
+        "sv": "kal",
+        "da": "kal"
       },
       "answer": {
         "en": "Yes, a small piece of plain cooked cabbage is fine as an occasional treat. The RSPCA lists cooked red or green cabbage among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
@@ -2979,7 +2994,8 @@
         "pl": "Tak, mały kawałek zwykłej ugotowanej kapusty jest w porządku jako okazjonalny smakołyk. RSPCA wymienia ugotowaną kapustę czerwoną lub zieloną wśród pokarmów odpowiednich dla kotów w umiarkowanych ilościach. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek.",
         "cs": "Ano, malý kousek tepelně upraveného zelí bez dalších přísad je jako občasný pamlsek v pořádku. RSPCA uvádí vařené červené nebo bílé zelí mezi potravinami, které jsou pro kočky vhodné v mírném množství. Kočky zeleninu nepotřebují, proto ji dávejte jen jako drobný doplněk.",
         "hr": "Da, mali komadić običnog termički obrađenog kupusa u redu je kao povremena poslastica. RSPCA navodi termički obrađen crveni ili zeleni kupus među namirnicama prikladnima za mačke u umjerenim količinama. Mačkama povrće nije potrebno, pa neka bude samo sasvim mali dodatak.",
-        "sv": "Ja, en liten bit kokt kål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt rödkål eller vitkål bland maten som passar katter med måtta. Katter behöver inte grönsaker, så se det som ett litet extra."
+        "sv": "Ja, en liten bit kokt kål utan tillsatser går bra som en godbit då och då. RSPCA nämner kokt rödkål eller vitkål bland maten som passar katter med måtta. Katter behöver inte grönsaker, så se det som ett litet extra.",
+        "da": "Ja, et lille stykke kogt kål uden tilsætninger er fint som godbid af og til. RSPCA nævner kogt rødkål eller hvidkål blandt de fødevarer, der passer til katte i moderate mængder. Katte har ikke brug for grøntsager, så det bør kun være et lille ekstra."
       },
       "why": {
         "en": "The RSPCA lists cooked cabbage, red or green, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -2988,7 +3004,8 @@
         "pl": "RSPCA wymienia ugotowaną kapustę, czerwoną lub zieloną, wśród świątecznych potraw bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "RSPCA uvádí vařené zelí, červené nebo bílé, mezi vánočními jídly bezpečnými pro zvířata, vhodnými pro kočky a psy v mírném množství. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
         "hr": "RSPCA navodi termički obrađen kupus, crveni ili zeleni, među božićnim namirnicama sigurnima za ljubimce, prikladnima za mačke i pse u umjerenim količinama. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-        "sv": "RSPCA nämner kokt kål, röd eller vit, bland julmat som passar katter och hundar med måtta. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+        "sv": "RSPCA nämner kokt kål, röd eller vit, bland julmat som passar katter och hundar med måtta. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+        "da": "RSPCA nævner kogt kål, rød eller hvid, blandt julemad, der er ufarlig for kæledyr og passer til katte og hunde i moderate mængder. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
       },
       "signs": null,
       "what_to_do": {
@@ -2998,7 +3015,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte zelí podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small piece of cooked red or green cabbage, with no butter, salt or seasoning.",
@@ -3007,7 +3025,8 @@
         "pl": "Mały kawałek ugotowanej kapusty czerwonej lub zielonej, bez masła, soli i przypraw.",
         "cs": "Malý kousek vařeného červeného nebo bílého zelí, bez másla, soli a koření.",
         "hr": "Mali komadić termički obrađenog crvenog ili zelenog kupusa, bez maslaca, soli i začina.",
-        "sv": "En liten bit kokt rödkål eller vitkål, utan smör, salt eller kryddor."
+        "sv": "En liten bit kokt rödkål eller vitkål, utan smör, salt eller kryddor.",
+        "da": "Et lille stykke kogt rødkål eller hvidkål, uden smør, salt eller krydderier."
       },
       "child": {
         "en": "A little piece of cooked cabbage can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -3016,7 +3035,8 @@
         "pl": "Małym kawałkiem ugotowanej kapusty można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Kousek uvařeného zelí může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
         "hr": "Komadić kuhanog kupusa mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-        "sv": "En liten bit kokt kål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+        "sv": "En liten bit kokt kål kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+        "da": "Et lille stykke kogt kål kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
       },
       "faq": [
         {
@@ -3027,7 +3047,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3036,7 +3057,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -3750,7 +3772,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Celery",
@@ -3759,7 +3782,8 @@
         "pl": "Seler naciowy",
         "cs": "Řapíkatý celer",
         "hr": "Celer",
-        "sv": "Stjälkselleri"
+        "sv": "Stjälkselleri",
+        "da": "Selleri"
       },
       "question": {
         "en": "Can cats eat celery?",
@@ -3768,7 +3792,8 @@
         "pl": "Czy koty mogą jeść seler naciowy?",
         "cs": "Mohou kočky jíst řapíkatý celer?",
         "hr": "Smiju li mačke jesti celer?",
-        "sv": "Får katter äta stjälkselleri?"
+        "sv": "Får katter äta stjälkselleri?",
+        "da": "Må katte spise selleri?"
       },
       "url_slug": {
         "en": "celery",
@@ -3777,7 +3802,8 @@
         "pl": "seler-naciowy",
         "cs": "rapikaty-celer",
         "hr": "celer",
-        "sv": "stjalkselleri"
+        "sv": "stjalkselleri",
+        "da": "selleri"
       },
       "answer": {
         "en": "It's best not to offer celery. International Cat Care warns that contact with the leaves of food plants such as celery may cause blistering or itching of a cat's mouth and gums, and any plant can upset a cat's stomach. Cats don't need vegetables.",
@@ -3786,7 +3812,8 @@
         "pl": "Lepiej nie podawać selera naciowego. International Cat Care ostrzega, że kontakt z liśćmi roślin spożywczych, takich jak seler naciowy, może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, a każda roślina może rozstroić kotu żołądek. Koty nie potrzebują warzyw.",
         "cs": "Řapíkatý celer raději nenabízejte. International Cat Care varuje, že kontakt s listy jedlých rostlin, jako je celer, může kočce způsobit puchýře nebo svědění v tlamičce a na dásních a jakákoli rostlina může kočce podráždit žaludek. Kočky zeleninu nepotřebují.",
         "hr": "Celer je bolje ne nuditi. International Cat Care upozorava da dodir s listovima jestivih biljaka poput celera može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, a svaka biljka može mački uznemiriti želudac. Mačkama povrće nije potrebno.",
-        "sv": "Det är bäst att inte ge katten selleri. International Cat Care varnar för att kontakt med bladen på matväxter som selleri kan ge blåsor eller klåda i munnen och på tandköttet, och alla växter kan ge katten orolig mage. Katter behöver inte grönsaker."
+        "sv": "Det är bäst att inte ge katten selleri. International Cat Care varnar för att kontakt med bladen på matväxter som selleri kan ge blåsor eller klåda i munnen och på tandköttet, och alla växter kan ge katten orolig mage. Katter behöver inte grönsaker.",
+        "da": "Det er bedst ikke at give selleri. International Cat Care advarer om at kontakt med bladene fra grøntsagsplanter som selleri kan give blærer eller kløe i kattens mund og på tandkødet, og alle planter kan give en kat ondt i maven. Katte har ikke brug for grøntsager."
       },
       "why": {
         "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
@@ -3795,7 +3822,8 @@
         "pl": "International Cat Care wymienia seler naciowy wśród roślin spożywczych, których liście mogą wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami, i podaje, że wszystkie rośliny, nawet trawa, mogą podrażniać żołądek i jelita kota oraz wywoływać wymioty. Artykuł ASPCA o ogrodzie wymienia seler naciowy wśród przekąsek dla zwierząt w umiarkowanych ilościach, ale kierujemy się ostrzejszą radą dotyczącą kotów. Koty nie potrzebują w diecie owoców ani warzyw.",
         "cs": "International Cat Care řadí celer mezi jedlé rostliny, jejichž listy mohou způsobit puchýře nebo svědění v tlamičce a na dásních, kýchání a potíže s očima, a upozorňuje, že všechny rostliny, dokonce i tráva, mohou kočce dráždit žaludek a střeva a vyvolat zvracení. Článek ASPCA o zahradě řadí celer mezi pamlsky pro zvířata, které jsou vhodné v mírném množství, ale my se řídíme přísnější radou, která platí přímo pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují.",
         "hr": "International Cat Care navodi celer među jestivim biljkama čiji listovi mogu izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima, a kaže i da sve biljke, čak i trava, mogu mački nadražiti želudac i crijeva te izazvati povraćanje. ASPCA u jednom članku o vrtu navodi celer među užinama za ljubimce u umjerenim količinama, ali držimo se strožeg savjeta koji vrijedi posebno za mačke. Mačkama u prehrani ne trebaju voće ni povrće.",
-        "sv": "International Cat Care nämner selleri bland matväxter vars blad kan ge blåsor eller klåda i munnen och på tandköttet, nysningar och ögonproblem, och skriver att alla växter, även gräs, kan irritera kattens mage och tarmar och ge kräkningar. En ASPCA-artikel om trädgården nämner selleri bland mellanmål som husdjur kan få med måtta, men vi följer det strängare rådet som gäller just katter. Katter behöver inte frukt eller grönsaker i kosten."
+        "sv": "International Cat Care nämner selleri bland matväxter vars blad kan ge blåsor eller klåda i munnen och på tandköttet, nysningar och ögonproblem, och skriver att alla växter, även gräs, kan irritera kattens mage och tarmar och ge kräkningar. En ASPCA-artikel om trädgården nämner selleri bland mellanmål som husdjur kan få med måtta, men vi följer det strängare rådet som gäller just katter. Katter behöver inte frukt eller grönsaker i kosten.",
+        "da": "International Cat Care nævner selleri blandt de grøntsagsplanter, hvis blade kan give blærer eller kløe i kattens mund og på tandkødet, nysen og øjenproblemer, og skriver at alle planter, selv græs, kan irritere kattens mave og tarme og give opkast. En ASPCA-artikel om planter i haven nævner selleri blandt de snacks, kæledyr kan få i moderate mængder, men vi følger det strengere råd, der gælder specifikt for katte. Katte har ikke brug for frugt og grøntsager i kosten."
       },
       "signs": {
         "en": [
@@ -3839,6 +3867,12 @@
           "Klåda eller blåsor i munnen och på tandköttet",
           "Nysningar",
           "Ögonproblem"
+        ],
+        "da": [
+          "Opkast",
+          "Kløe eller blærer i munden og på tandkødet",
+          "Nysen",
+          "Øjenproblemer"
         ]
       },
       "what_to_do": {
@@ -3848,7 +3882,8 @@
         "pl": "Jeśli kot pogryzł seler naciowy i źle się czuje, na przykład wymiotuje albo swędzi go pysk, zadzwoń do weterynarza po radę. Nie próbuj wywoływać u kota wymiotów w domu.",
         "cs": "Pokud kočka celer okusovala a působí nemocně, například zvrací nebo ji svědí tlamička, zavolejte veterináři a poraďte se s ním. Nesnažte se kočku doma přimět ke zvracení.",
         "hr": "Ako je mačka žvakala celer i djeluje bolesno, na primjer povraća ili ima svrbež u ustima, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje.",
-        "sv": "Om katten har tuggat på selleri och verkar må dåligt, till exempel kräks eller har klåda i munnen, ring veterinären för råd. Försök inte få katten att kräkas hemma."
+        "sv": "Om katten har tuggat på selleri och verkar må dåligt, till exempel kräks eller har klåda i munnen, ring veterinären för råd. Försök inte få katten att kräkas hemma.",
+        "da": "Hvis din kat har tygget på selleri og virker utilpas, for eksempel kaster op eller har kløe i munden, så ring til din dyrlæge og få råd. Prøv ikke selv at få katten til at kaste op."
       },
       "serving": null,
       "child": {
@@ -3858,7 +3893,8 @@
         "pl": "Seler naciowy nie jest przekąską dla kotów. Jego liście mogą sprawić, że kotu zaswędzi pysk, więc niech seler naciowy zostanie dla ludzi.",
         "cs": "Řapíkatý celer není pro kočky pamlsek. Jeho listy mohou kočce způsobit svědění v tlamičce, takže ho nech raději lidem.",
         "hr": "Celer nije poslastica za mačke. Njegovi listovi mogu mački izazvati svrbež u ustima, pa je celer bolje ostaviti ljudima.",
-        "sv": "Selleri är ingen godbit för katter. Bladen kan klia i kattens mun, så selleri är bäst att lämna åt människor."
+        "sv": "Selleri är ingen godbit för katter. Bladen kan klia i kattens mun, så selleri är bäst att lämna åt människor.",
+        "da": "Selleri er ikke en kattesnack. Bladene kan give kløe i kattens mund, så selleri er bedre til mennesker."
       },
       "faq": [
         {
@@ -3869,7 +3905,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -3878,7 +3915,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -14566,7 +14604,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Raw potatoes",
@@ -14575,7 +14614,8 @@
         "pl": "Surowe ziemniaki",
         "cs": "Syrové brambory",
         "hr": "Sirovi krumpir",
-        "sv": "Rå potatis"
+        "sv": "Rå potatis",
+        "da": "Rå kartofler"
       },
       "question": {
         "en": "Can cats eat raw potatoes?",
@@ -14584,7 +14624,8 @@
         "pl": "Czy koty mogą jeść surowe ziemniaki?",
         "cs": "Mohou kočky jíst syrové brambory?",
         "hr": "Smiju li mačke jesti sirovi krumpir?",
-        "sv": "Får katter äta rå potatis?"
+        "sv": "Får katter äta rå potatis?",
+        "da": "Må katte spise rå kartofler?"
       },
       "url_slug": {
         "en": "raw-potatoes",
@@ -14593,7 +14634,8 @@
         "pl": "surowe-ziemniaki",
         "cs": "syrove-brambory",
         "hr": "sirovi-krumpir",
-        "sv": "ra-potatis"
+        "sv": "ra-potatis",
+        "da": "raa-kartofler"
       },
       "answer": {
         "en": "No, don't give your cat raw potato. The RSPCA lists potato as suitable for cats only when mashed or boiled with no butter or cheese, and the ASPCA says raw potatoes may be problematic for pets. If your cat eats raw potato, contact your vet.",
@@ -14602,7 +14644,8 @@
         "pl": "Nie, nie dawaj kotu surowego ziemniaka. RSPCA wymienia ziemniaki jako odpowiednie dla kotów tylko w formie puree lub gotowane, bez masła i sera, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt. Jeśli kot zje surowy ziemniak, skontaktuj się z weterynarzem.",
         "cs": "Ne, nedávejte kočce syrové brambory. RSPCA uvádí brambory jako vhodné pro kočky jen rozmačkané nebo vařené bez másla a sýra a ASPCA říká, že syrové brambory mohou být pro zvířata problematické. Pokud kočka snědla syrovou bramboru, obraťte se na veterináře.",
         "hr": "Ne, ne daj mački sirov krumpir. RSPCA navodi krumpir kao prikladan za mačke samo ako je zgnječen ili kuhan, bez maslaca i sira, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce. Ako mačka pojede sirov krumpir, obrati se veterinaru.",
-        "sv": "Nej, ge inte katten rå potatis. RSPCA nämner potatis som lämplig för katter bara som mos eller kokt, utan smör eller ost, och ASPCA skriver att rå potatis kan vara problematisk för husdjur. Om katten har ätit rå potatis, kontakta veterinären."
+        "sv": "Nej, ge inte katten rå potatis. RSPCA nämner potatis som lämplig för katter bara som mos eller kokt, utan smör eller ost, och ASPCA skriver att rå potatis kan vara problematisk för husdjur. Om katten har ätit rå potatis, kontakta veterinären.",
+        "da": "Nej, giv ikke din kat rå kartofler. RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og ASPCA skriver at rå kartofler kan være et problem for kæledyr. Hvis din kat spiser rå kartoffel, skal du kontakte din dyrlæge."
       },
       "why": {
         "en": "The RSPCA and Cats Protection only suggest potato for cats when it is boiled or plain mashed, and the ASPCA says raw potatoes may be problematic for pets, while cooked potatoes are fine in moderation. A vet-written PetMD article goes further: it calls raw potatoes, green potatoes and the potato plant toxic to cats and says potato skins contain the toxin solanine.",
@@ -14611,7 +14654,8 @@
         "pl": "RSPCA i Cats Protection proponują ziemniaki dla kotów tylko gotowane lub w postaci zwykłego puree, a ASPCA podaje, że surowe ziemniaki mogą być problematyczne dla zwierząt, natomiast ugotowane są w porządku w umiarkowanych ilościach. Artykuł PetMD napisany przez weterynarza idzie dalej: nazywa surowe ziemniaki, zielone ziemniaki i roślinę ziemniaka toksycznymi dla kotów i podaje, że skórki ziemniaków zawierają toksynę solaninę.",
         "cs": "RSPCA a Cats Protection doporučují brambory pro kočky jen vařené nebo rozmačkané bez dalších přísad a ASPCA uvádí, že syrové brambory mohou být pro zvířata problematické, zatímco uvařené brambory jsou v mírném množství v pořádku. Článek PetMD, který napsali veterináři, jde ještě dál: syrové brambory, zelené brambory i bramborovou nať označuje za toxické pro kočky a uvádí, že bramborové slupky obsahují toxin solanin.",
         "hr": "RSPCA i Cats Protection krumpir mačkama predlažu samo kuhan ili kao običan pire, a ASPCA kaže da sirov krumpir može biti problematičan za ljubimce, dok je termički obrađen krumpir u umjerenim količinama u redu. Članak PetMD-a, koji su napisali veterinari, ide i dalje: sirov krumpir, zeleni krumpir i biljku krumpira naziva otrovnima za mačke i navodi da kora krumpira sadrži toksin solanin.",
-        "sv": "RSPCA och Cats Protection föreslår bara potatis till katter när den är kokt eller som enkelt mos, och ASPCA skriver att rå potatis kan vara problematisk för husdjur medan tillagad potatis går bra med måtta. En veterinärskriven artikel på PetMD går längre: den kallar rå potatis, grön potatis och potatisplantan giftiga för katter och skriver att potatisskal innehåller giftet solanin."
+        "sv": "RSPCA och Cats Protection föreslår bara potatis till katter när den är kokt eller som enkelt mos, och ASPCA skriver att rå potatis kan vara problematisk för husdjur medan tillagad potatis går bra med måtta. En veterinärskriven artikel på PetMD går längre: den kallar rå potatis, grön potatis och potatisplantan giftiga för katter och skriver att potatisskal innehåller giftet solanin.",
+        "da": "RSPCA og Cats Protection foreslår kun kartofler til katte, hvis de er kogte eller moste uden tilsætninger, og ASPCA skriver at rå kartofler kan være et problem for kæledyr, mens kogte kartofler er fine i moderate mængder. En artikel fra PetMD, skrevet af en dyrlæge, går længere: den kalder rå kartofler, grønne kartofler og selve kartoffelplanten giftige for katte og skriver at kartoffelskræl indeholder giftstoffet solanin."
       },
       "signs": {
         "en": [
@@ -14648,6 +14692,11 @@
           "Illamående",
           "Kräkningar",
           "Diarré"
+        ],
+        "da": [
+          "Kvalme",
+          "Opkast",
+          "Diarré"
         ]
       },
       "what_to_do": {
@@ -14657,7 +14706,8 @@
         "pl": "Jeśli kot zjadł surowy ziemniak albo skórkę ziemniaka, od razu skontaktuj się z weterynarzem po radę. Zanotuj, co kot zjadł i kiedy. Nie próbuj wywoływać u kota wymiotów w domu.",
         "cs": "Pokud kočka snědla syrovou bramboru nebo bramborovou slupku, ihned se obraťte na veterináře. Poznamenejte si, co snědla a kdy. Nesnažte se kočku doma přimět ke zvracení.",
         "hr": "Ako je mačka pojela sirov krumpir ili koru krumpira, odmah se obrati veterinaru za savjet. Zapiši što je pojedeno i kada. Ne pokušavaj kod kuće izazvati povraćanje.",
-        "sv": "Om katten har ätit rå potatis eller potatisskal, kontakta veterinären för råd direkt. Notera vad katten åt och när. Försök inte få katten att kräkas hemma."
+        "sv": "Om katten har ätit rå potatis eller potatisskal, kontakta veterinären för råd direkt. Notera vad katten åt och när. Försök inte få katten att kräkas hemma.",
+        "da": "Hvis din kat har spist rå kartoffel eller kartoffelskræl, skal du straks kontakte din dyrlæge og få råd. Skriv ned, hvad katten har spist, og hvornår. Prøv ikke selv at få katten til at kaste op."
       },
       "serving": null,
       "child": {
@@ -14667,7 +14717,8 @@
         "pl": "Surowe ziemniaki nie są dla kotów. Jeśli kotek skubnie kawałek, powiedz dorosłemu, żeby zadzwonił do weterynarza.",
         "cs": "Syrové brambory nejsou pro kočky. Pokud kočka nějakou okousá, řekni to dospělému, ať zavolá veterináři.",
         "hr": "Sirov krumpir nije za mačke. Ako maca pogrize sirov krumpir, reci odrasloj osobi da nazove veterinara.",
-        "sv": "Rå potatis är inget för katter. Om katten nafsar på en bit, berätta det för en vuxen, som kan ringa veterinären."
+        "sv": "Rå potatis är inget för katter. Om katten nafsar på en bit, berätta det för en vuxen, som kan ringa veterinären.",
+        "da": "Rå kartofler er ikke til katte. Hvis katten nasker af en, så sig det til en voksen, som kan ringe til dyrlægen."
       },
       "faq": [
         {
@@ -14678,7 +14729,8 @@
             "pl": "Czy koty mogą jeść ugotowane ziemniaki?",
             "cs": "Mohou kočky jíst uvařené brambory?",
             "hr": "Smiju li mačke jesti termički obrađen krumpir?",
-            "sv": "Får katter äta kokt potatis?"
+            "sv": "Får katter äta kokt potatis?",
+            "da": "Må katte spise kogte kartofler?"
           },
           "a": {
             "en": "The RSPCA lists potatoes for cats only if they are mashed or boiled with no butter or cheese, and Cats Protection suggests plain mashed potato with no butter, cream or garlic. Leave out the skin.",
@@ -14687,7 +14739,8 @@
             "pl": "RSPCA wymienia ziemniaki dla kotów tylko w formie puree lub gotowane, bez masła i sera, a Cats Protection proponuje zwykłe puree ziemniaczane bez masła, śmietanki i czosnku. Pomiń skórkę.",
             "cs": "RSPCA uvádí brambory pro kočky jen rozmačkané nebo vařené bez másla a sýra a Cats Protection doporučuje bramborovou kaši bez dalších přísad, bez másla, smetany a česneku. Slupku vynechte.",
             "hr": "RSPCA krumpir za mačke navodi samo ako je zgnječen ili kuhan, bez maslaca i sira, a Cats Protection predlaže običan pire bez maslaca, vrhnja i češnjaka. Koru izostavi.",
-            "sv": "RSPCA nämner potatis till katter bara som mos eller kokt, utan smör eller ost, och Cats Protection föreslår enkelt potatismos utan smör, grädde eller vitlök. Ta bort skalet."
+            "sv": "RSPCA nämner potatis till katter bara som mos eller kokt, utan smör eller ost, och Cats Protection föreslår enkelt potatismos utan smör, grädde eller vitlök. Ta bort skalet.",
+            "da": "RSPCA nævner kun kartofler til katte, hvis de er moste eller kogte uden smør eller ost, og Cats Protection foreslår kartoffelmos uden smør, fløde eller hvidløg. Brug ikke skrællen."
           }
         }
       ],
@@ -14722,7 +14775,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Pumpkin",
@@ -14731,7 +14785,8 @@
         "pl": "Dynia",
         "cs": "Dýně",
         "hr": "Bundeva",
-        "sv": "Pumpa"
+        "sv": "Pumpa",
+        "da": "Græskar"
       },
       "question": {
         "en": "Can cats eat pumpkin?",
@@ -14740,7 +14795,8 @@
         "pl": "Czy koty mogą jeść dynię?",
         "cs": "Mohou kočky jíst dýni?",
         "hr": "Smiju li mačke jesti bundevu?",
-        "sv": "Får katter äta pumpa?"
+        "sv": "Får katter äta pumpa?",
+        "da": "Må katte spise græskar?"
       },
       "url_slug": {
         "en": "pumpkin",
@@ -14749,7 +14805,8 @@
         "pl": "dynia",
         "cs": "dyne",
         "hr": "bundeva",
-        "sv": "pumpa"
+        "sv": "pumpa",
+        "da": "graeskar"
       },
       "answer": {
         "en": "Yes, a little plain cooked pumpkin is fine as an occasional treat. Pet Poison Helpline calls pumpkin safe for dogs and cats, but VCA notes that pumpkin and its seeds can upset a cat's stomach in large amounts, so skip the seeds and rind.",
@@ -14758,7 +14815,8 @@
         "pl": "Tak, odrobina zwykłej ugotowanej dyni jest w porządku jako okazjonalny smakołyk. Pet Poison Helpline uznaje dynię za bezpieczną dla psów i kotów, ale VCA zaznacza, że dynia i jej pestki w dużych ilościach mogą rozstroić kotu żołądek, więc pomiń pestki i skórkę.",
         "cs": "Ano, trochu tepelně upravené dýně bez dalších přísad je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje dýni za bezpečnou pro psy i kočky, ale VCA upozorňuje, že dýně a její semínka mohou ve velkém množství kočce podráždit žaludek, proto semínka a slupku vynechte.",
         "hr": "Da, malo obične termički obrađene bundeve u redu je kao povremena poslastica. Pet Poison Helpline navodi da je bundeva sigurna za pse i mačke, ali VCA napominje da bundeva i njezine sjemenke u velikim količinama mogu mački nadražiti želudac, pa izostavi sjemenke i koru.",
-        "sv": "Ja, lite kokt pumpa utan tillsatser går bra som en godbit då och då. Pet Poison Helpline kallar pumpa säker för hundar och katter, men VCA påpekar att pumpa och pumpafrön kan ge katter orolig mage i stora mängder, så hoppa över frön och skal."
+        "sv": "Ja, lite kokt pumpa utan tillsatser går bra som en godbit då och då. Pet Poison Helpline kallar pumpa säker för hundar och katter, men VCA påpekar att pumpa och pumpafrön kan ge katter orolig mage i stora mängder, så hoppa över frön och skal.",
+        "da": "Ja, lidt kogt græskar uden tilsætninger er fint som godbid af og til. Pet Poison Helpline kalder græskar ufarligt for hunde og katte, men VCA skriver at græskar og græskarkerner kan give en kat ondt i maven i store mængder, så spring kernerne og skallen over."
       },
       "why": {
         "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
@@ -14767,7 +14825,8 @@
         "pl": "Pet Poison Helpline podaje, że dynia jest bezpieczna dla psów i kotów, a gotowana lub przetworzona dynia jest znacznie łatwiejsza do strawienia niż surowa. VCA dodaje, że choć dynia i jej pestki są nietoksyczne, mogą rozstroić kotu żołądek, zwłaszcza w dużych ilościach. Koty nie potrzebują w diecie owoców ani warzyw, a smakołyków powinno być mało.",
         "cs": "Pet Poison Helpline uvádí, že dýně je bezpečná pro psy i kočky a že tepelně upravená nebo zpracovaná dýně se tráví mnohem snáz než syrová. VCA dodává, že ačkoli je dýně netoxická, dýně a dýňová semínka mohou kočce podráždit žaludek, zejména ve větším množství. Kočky ve stravě ovoce ani zeleninu nepotřebují a pamlsků by mělo být málo.",
         "hr": "Pet Poison Helpline navodi da je bundeva sigurna za pse i mačke te da se termički obrađena ili prerađena bundeva mnogo lakše probavlja od sirove. VCA dodaje da bundeva i sjemenke bundeve, iako nisu otrovne, mogu mački nadražiti želudac, osobito u većim količinama. Mačkama u prehrani ne trebaju voće ni povrće, a poslastica ne bi smjelo biti mnogo.",
-        "sv": "Pet Poison Helpline skriver att pumpa är säker för hundar och katter och att kokt eller bearbetad pumpa är mycket lättare att smälta än rå. VCA tillägger att pumpa och pumpafrön, även om de inte är giftiga, kan ge katter orolig mage, särskilt i stora mängder. Katter behöver inte frukt eller grönsaker i kosten, och godbitar ska ges sparsamt."
+        "sv": "Pet Poison Helpline skriver att pumpa är säker för hundar och katter och att kokt eller bearbetad pumpa är mycket lättare att smälta än rå. VCA tillägger att pumpa och pumpafrön, även om de inte är giftiga, kan ge katter orolig mage, särskilt i stora mängder. Katter behöver inte frukt eller grönsaker i kosten, och godbitar ska ges sparsamt.",
+        "da": "Pet Poison Helpline skriver at græskar er ufarligt for hunde og katte, og at kogt eller forarbejdet græskar er meget lettere at fordøje end råt. VCA tilføjer at græskar og græskarkerner ikke er giftige, men kan give en kat ondt i maven, især i store mængder. Katte har ikke brug for frugt og grøntsager i kosten, og godbidder bør gives sparsomt."
       },
       "signs": null,
       "what_to_do": {
@@ -14777,7 +14836,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte dýni podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
@@ -14786,7 +14846,8 @@
         "pl": "Mały kawałek zwykłej ugotowanej dyni albo zwykłe puree z dyni z puszki, w którym dynia jest jedynym składnikiem. Bez pestek, bez skórki, bez soli i przypraw.",
         "cs": "Malý kousek tepelně upravené dýně bez dalších přísad, nebo čisté dýňové pyré z konzervy, jehož jedinou složkou je dýně. Žádná semínka, žádná slupka, žádná sůl ani koření.",
         "hr": "Mali komadić obične termički obrađene bundeve ili običan pire od bundeve iz konzerve, u kojem je bundeva jedini sastojak. Bez sjemenki, bez kore, bez soli i začina.",
-        "sv": "En liten bit kokt pumpa utan tillsatser, eller ren pumpapuré på burk där pumpa är den enda ingrediensen. Inga frön, inget skal, inget salt eller kryddor."
+        "sv": "En liten bit kokt pumpa utan tillsatser, eller ren pumpapuré på burk där pumpa är den enda ingrediensen. Inga frön, inget skal, inget salt eller kryddor.",
+        "da": "Et lille stykke naturel, kogt græskar eller græskarpuré på dåse, hvor græskar er den eneste ingrediens. Ingen kerner, ingen skal og intet salt eller krydderier."
       },
       "child": {
         "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
@@ -14795,7 +14856,8 @@
         "pl": "Odrobiną ugotowanej dyni można czasem poczęstować kota. Bez pestek i skórki. Koty potrzebują głównie mięsa.",
         "cs": "Trocha uvařené dýně může být pro kočku občas pamlsek. Jen bez semínek a slupky. Kočky potřebují hlavně maso.",
         "hr": "Malo kuhane bundeve mačka povremeno smije dobiti kao poslasticu. Bez sjemenki i kore. Mačkama uglavnom treba meso.",
-        "sv": "Lite kokt pumpa kan vara en kattgodbit då och då. Inga frön eller skal, och katter behöver framför allt kött."
+        "sv": "Lite kokt pumpa kan vara en kattgodbit då och då. Inga frön eller skal, och katter behöver framför allt kött.",
+        "da": "Lidt kogt græskar kan være en godbid til katten en gang imellem. Ingen kerner eller skal, og katte har mest brug for kød."
       },
       "faq": [
         {
@@ -14806,7 +14868,8 @@
             "pl": "A co z dyniami na Halloween?",
             "cs": "A co dýně na Halloween?",
             "hr": "A što s bundevama za Noć vještica?",
-            "sv": "Hur är det med halloweenpumpor?"
+            "sv": "Hur är det med halloweenpumpor?",
+            "da": "Hvad med halloweengræskar?"
           },
           "a": {
             "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
@@ -14815,7 +14878,8 @@
             "pl": "Świeże dynie nie szkodzą, ale według Blue Cross zgniłe mogą rozstroić kotu brzuszek, więc trzymaj wydrążone dynie poza zasięgiem kota albo wyrzuć je, gdy przestaną być świeże.",
             "cs": "Čerstvé dýně nejsou škodlivé, ale Blue Cross uvádí, že shnilé mohou kočce podráždit bříško, proto vydlabané dýně uložte mimo dosah nebo je odstraňte, jakmile přestanou být čerstvé.",
             "hr": "Svježe bundeve nisu štetne, ali Blue Cross navodi da trule mogu mački poremetiti probavu, zato izdubljene bundeve drži izvan dosega ili ih ukloni čim više nisu svježe.",
-            "sv": "Färska pumpor är inte skadliga, men Blue Cross skriver att ruttna pumpor kan ge katter ont i magen. Håll utskurna pumpor utom räckhåll eller ta bort dem när de inte längre är färska."
+            "sv": "Färska pumpor är inte skadliga, men Blue Cross skriver att ruttna pumpor kan ge katter ont i magen. Håll utskurna pumpor utom räckhåll eller ta bort dem när de inte längre är färska.",
+            "da": "Friske græskar er ikke skadelige, men Blue Cross skriver at rådne græskar kan give katten ondt i maven. Hold derfor udskårne græskar uden for kattens rækkevidde, eller fjern dem, når de ikke længere er friske."
           }
         },
         {
@@ -14826,7 +14890,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -14835,7 +14900,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -17651,7 +17717,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Spinach",
@@ -17660,7 +17727,8 @@
         "pl": "Szpinak",
         "cs": "Špenát",
         "hr": "Špinat",
-        "sv": "Spenat"
+        "sv": "Spenat",
+        "da": "Spinat"
       },
       "question": {
         "en": "Can cats eat spinach?",
@@ -17669,7 +17737,8 @@
         "pl": "Czy koty mogą jeść szpinak?",
         "cs": "Mohou kočky jíst špenát?",
         "hr": "Smiju li mačke jesti špinat?",
-        "sv": "Får katter äta spenat?"
+        "sv": "Får katter äta spenat?",
+        "da": "Må katte spise spinat?"
       },
       "url_slug": {
         "en": "spinach",
@@ -17678,7 +17747,8 @@
         "pl": "szpinak",
         "cs": "spenat",
         "hr": "spinat",
-        "sv": "spenat"
+        "sv": "spenat",
+        "da": "spinat"
       },
       "answer": {
         "en": "Yes, a small bit of plain spinach is fine as an occasional treat. Cats Protection lists spinach among the few vegetables you can feed your cat, if they're keen. Cats don't need vegetables, so keep it a tiny extra.",
@@ -17687,7 +17757,8 @@
         "pl": "Tak, odrobina zwykłego szpinaku jest w porządku jako okazjonalny smakołyk. Cats Protection wymienia szpinak wśród niewielu warzyw, które można dawać kotu, jeśli ma na nie ochotę. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek.",
         "cs": "Ano, trocha špenátu bez dalších přísad je jako občasný pamlsek v pořádku. Cats Protection řadí špenát mezi několik druhů zeleniny, které můžete kočce dát, pokud o ni stojí. Kočky zeleninu nepotřebují, proto ji dávejte jen jako drobný doplněk.",
         "hr": "Da, malo običnog špinata u redu je kao povremena poslastica. Cats Protection navodi špinat među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede. Mačkama povrće nije potrebno, pa neka bude samo sasvim mali dodatak.",
-        "sv": "Ja, en liten bit spenat utan tillsatser går bra som en godbit då och då. Cats Protection nämner spenat bland de få grönsaker du kan ge katten, om den visar intresse. Katter behöver inte grönsaker, så se det som ett litet extra."
+        "sv": "Ja, en liten bit spenat utan tillsatser går bra som en godbit då och då. Cats Protection nämner spenat bland de få grönsaker du kan ge katten, om den visar intresse. Katter behöver inte grönsaker, så se det som ett litet extra.",
+        "da": "Ja, lidt naturel spinat er fint som godbid af og til. Cats Protection nævner spinat blandt de få grøntsager, man kan give sin kat, hvis den har lyst. Katte har ikke brug for grøntsager, så det bør kun være et lille ekstra."
       },
       "why": {
         "en": "Cats Protection names spinach among the few vegetables you can feed a cat, if they're keen, and suggests steamed or boiled vegetables with no butter, salt or seasoning. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -17696,7 +17767,8 @@
         "pl": "Cats Protection wymienia szpinak wśród niewielu warzyw, które można podawać kotu, jeśli ma na nie ochotę, i radzi warzywa gotowane na parze lub w wodzie, bez masła, soli i przypraw. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "Cats Protection uvádí špenát mezi několika druhy zeleniny, které můžete kočce dát, pokud o ni stojí, a doporučuje zeleninu spařenou nebo vařenou, bez másla, soli a koření. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
         "hr": "Cats Protection navodi špinat među nekoliko vrsta povrća koje možeš dati mački, ako ga rado jede, i predlaže povrće kuhano na pari ili u vodi, bez maslaca, soli i začina. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-        "sv": "Cats Protection nämner spenat bland de få grönsaker du kan ge en katt, om den visar intresse, och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+        "sv": "Cats Protection nämner spenat bland de få grönsaker du kan ge en katt, om den visar intresse, och föreslår ångade eller kokta grönsaker utan smör, salt eller kryddor. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+        "da": "Cats Protection nævner spinat blandt de få grøntsager, man kan give en kat, hvis den har lyst, og foreslår dampede eller kogte grøntsager uden smør, salt eller krydderier. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
       },
       "signs": null,
       "what_to_do": {
@@ -17706,7 +17778,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte špenát podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small bit, steamed or boiled, with no butter, salt or seasoning.",
@@ -17715,7 +17788,8 @@
         "pl": "Odrobina, gotowana na parze lub w wodzie, bez masła, soli i przypraw.",
         "cs": "Malé množství, spařené nebo vařené, bez másla, soli a koření.",
         "hr": "Malo špinata, kuhanog na pari ili u vodi, bez maslaca, soli i začina.",
-        "sv": "En liten bit, ångad eller kokt, utan smör, salt eller kryddor."
+        "sv": "En liten bit, ångad eller kokt, utan smör, salt eller kryddor.",
+        "da": "Lidt spinat, dampet eller kogt, uden smør, salt eller krydderier."
       },
       "child": {
         "en": "A tiny bit of spinach can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -17724,7 +17798,8 @@
         "pl": "Odrobiną szpinaku można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Troška špenátu může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
         "hr": "Sasvim malo špinata mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-        "sv": "Lite spenat kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+        "sv": "Lite spenat kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+        "da": "Lidt spinat kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
       },
       "faq": [
         {
@@ -17735,7 +17810,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -17744,7 +17820,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -17994,7 +18071,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Sweet potato",
@@ -18003,7 +18081,8 @@
         "pl": "Batat",
         "cs": "Batáty",
         "hr": "Batat",
-        "sv": "Sötpotatis"
+        "sv": "Sötpotatis",
+        "da": "Søde kartofler"
       },
       "question": {
         "en": "Can cats eat sweet potato?",
@@ -18012,7 +18091,8 @@
         "pl": "Czy koty mogą jeść batat?",
         "cs": "Mohou kočky jíst batáty?",
         "hr": "Smiju li mačke jesti batat?",
-        "sv": "Får katter äta sötpotatis?"
+        "sv": "Får katter äta sötpotatis?",
+        "da": "Må katte spise søde kartofler?"
       },
       "url_slug": {
         "en": "sweet-potato",
@@ -18021,7 +18101,8 @@
         "pl": "batat",
         "cs": "bataty",
         "hr": "batat",
-        "sv": "sotpotatis"
+        "sv": "sotpotatis",
+        "da": "soede-kartofler"
       },
       "answer": {
         "en": "Sweet potato is not toxic to cats: the ASPCA lists the sweet potato plant as non-toxic to them. Cats don't need vegetables, though, and any plant material can cause vomiting or stomach upset, so keep it a tiny, occasional extra.",
@@ -18030,7 +18111,8 @@
         "pl": "Batat nie jest toksyczny dla kotów: ASPCA uznaje roślinę batata za nietoksyczną dla nich. Koty nie potrzebują jednak warzyw, a zjedzenie jakiegokolwiek materiału roślinnego może wywołać wymioty lub rozstrój żołądka, więc niech to będzie malutki, okazjonalny dodatek.",
         "cs": "Batáty nejsou pro kočky toxické: ASPCA řadí rostlinu batát mezi netoxické pro kočky. Kočky ale zeleninu nepotřebují a jakákoli rostlinná hmota může způsobit zvracení nebo potíže se žaludkem, proto je dávejte jen jako drobný, občasný doplněk.",
         "hr": "Batat nije otrovan za mačke: ASPCA biljku batat navodi kao neotrovnu. Mačkama povrće ipak nije potrebno, a bilo koja biljna tvar može izazvati povraćanje ili želučane tegobe, zato neka to bude samo sasvim mali, povremeni dodatak.",
-        "sv": "Sötpotatis är inte giftig för katter: ASPCA anger sötpotatisplantan som ogiftig för dem. Katter behöver dock inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage, så se det som ett litet extra, bara då och då."
+        "sv": "Sötpotatis är inte giftig för katter: ASPCA anger sötpotatisplantan som ogiftig för dem. Katter behöver dock inte grönsaker, och allt växtmaterial kan ge kräkningar eller orolig mage, så se det som ett litet extra, bara då och då.",
+        "da": "Søde kartofler er ikke giftige for katte: ASPCA betragter planten sød kartoffel som ugiftig for dem. Katte har dog ikke brug for grøntsager, og al planteføde kan give opkast eller ondt i maven, så det bør kun være et lille ekstra en gang imellem."
       },
       "why": {
         "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -18039,7 +18121,8 @@
         "pl": "ASPCA uznaje roślinę batata (Ipomoea batatas) za nietoksyczną dla kotów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "ASPCA řadí rostlinu batát (Ipomoea batatas) mezi netoxické pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
         "hr": "ASPCA navodi biljku batat (Ipomoea batatas) kao neotrovnu za mačke. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-        "sv": "ASPCA anger sötpotatisplantan (Ipomoea batatas) som ogiftig för katter. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+        "sv": "ASPCA anger sötpotatisplantan (Ipomoea batatas) som ogiftig för katter. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+        "da": "ASPCA betragter planten sød kartoffel (Ipomoea batatas) som ugiftig for katte. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
       },
       "signs": null,
       "what_to_do": {
@@ -18049,7 +18132,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte batáty podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small plain piece now and then, with no butter, salt or seasoning.",
@@ -18058,7 +18142,8 @@
         "pl": "Mały zwykły kawałek od czasu do czasu, bez masła, soli i przypraw.",
         "cs": "Malý kousek jen občas, bez dalších přísad, másla, soli a koření.",
         "hr": "Povremeno mali običan komadić, bez maslaca, soli i začina.",
-        "sv": "En liten bit då och då, utan smör, salt eller kryddor."
+        "sv": "En liten bit då och då, utan smör, salt eller kryddor.",
+        "da": "Et lille stykke naturel sød kartoffel af og til, uden smør, salt eller krydderier."
       },
       "child": {
         "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -18067,7 +18152,8 @@
         "pl": "Batat nie jest dla kotów trujący. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Batáty nejsou pro kočky jedovaté. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
         "hr": "Batat nije otrovan za mačke. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-        "sv": "Sötpotatis är inte giftig för katter. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+        "sv": "Sötpotatis är inte giftig för katter. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+        "da": "Søde kartofler er ikke giftige for katte. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
       },
       "faq": [
         {
@@ -18078,7 +18164,8 @@
             "pl": "Czy batat to to samo co zwykły ziemniak?",
             "cs": "Jsou batáty totéž co běžné brambory?",
             "hr": "Je li batat isto što i običan krumpir?",
-            "sv": "Är sötpotatis samma sak som vanlig potatis?"
+            "sv": "Är sötpotatis samma sak som vanlig potatis?",
+            "da": "Er søde kartofler det samme som almindelige kartofler?"
           },
           "a": {
             "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
@@ -18087,7 +18174,8 @@
             "pl": "Nie. ASPCA podaje, że batat to inna roślina (Ipomoea batatas, rodzina powojowatych). Surowe zwykłe ziemniaki to inna sprawa: według ASPCA mogą być problematyczne dla zwierząt.",
             "cs": "Ne. ASPCA vede batáty jako jinou rostlinu (Ipomoea batatas, čeleď Convolvulaceae). Syrové běžné brambory jsou něco jiného: podle ASPCA mohou být pro zvířata problematické.",
             "hr": "Ne. ASPCA navodi batat kao drugu biljku (Ipomoea batatas, porodica Convolvulaceae). Sirov običan krumpir druga je stvar: prema ASPCA može biti problematičan za ljubimce.",
-            "sv": "Nej. ASPCA anger sötpotatis som en annan växt (Ipomoea batatas, familjen Convolvulaceae). Rå vanlig potatis är en annan sak: ASPCA skriver att den kan vara problematisk för husdjur."
+            "sv": "Nej. ASPCA anger sötpotatis som en annan växt (Ipomoea batatas, familjen Convolvulaceae). Rå vanlig potatis är en annan sak: ASPCA skriver att den kan vara problematisk för husdjur.",
+            "da": "Nej. ASPCA betragter sød kartoffel som en anden plante (Ipomoea batatas, familien Convolvulaceae). Rå almindelige kartofler er noget andet: ASPCA skriver at de kan være et problem for kæledyr."
           }
         },
         {
@@ -18098,7 +18186,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -18107,7 +18196,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -19707,7 +19797,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Zucchini",
@@ -19716,7 +19807,8 @@
         "pl": "Cukinia",
         "cs": "Cuketa",
         "hr": "Tikvice",
-        "sv": "Zucchini"
+        "sv": "Zucchini",
+        "da": "Zucchini"
       },
       "question": {
         "en": "Can cats eat zucchini?",
@@ -19725,7 +19817,8 @@
         "pl": "Czy koty mogą jeść cukinię?",
         "cs": "Mohou kočky jíst cuketu?",
         "hr": "Smiju li mačke jesti tikvice?",
-        "sv": "Får katter äta zucchini?"
+        "sv": "Får katter äta zucchini?",
+        "da": "Må katte spise zucchini?"
       },
       "url_slug": {
         "en": "zucchini",
@@ -19734,7 +19827,8 @@
         "pl": "cukinia",
         "cs": "cuketa",
         "hr": "tikvice",
-        "sv": "zucchini"
+        "sv": "zucchini",
+        "da": "zucchini"
       },
       "answer": {
         "en": "Yes, a small plain piece of zucchini is fine as an occasional treat. The ASPCA lists zucchini squash as non-toxic to cats. Keep the plant's leaves away, though: International Cat Care says contact with them can irritate a cat's mouth.",
@@ -19743,7 +19837,8 @@
         "pl": "Tak, mały zwykły kawałek cukinii jest w porządku jako okazjonalny smakołyk. ASPCA uznaje cukinię za nietoksyczną dla kotów. Trzymaj jednak kota z dala od liści rośliny: International Cat Care podaje, że kontakt z nimi może podrażnić kotu pysk.",
         "cs": "Ano, malý kousek cukety bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA uvádí cuketu jako pro kočky netoxickou. Držte ale kočku dál od listů rostliny: International Cat Care uvádí, že kontakt s nimi může kočce podráždit tlamičku.",
         "hr": "Da, mali komadić obične tikvice u redu je kao povremena poslastica. ASPCA navodi tikvice kao neotrovne za mačke. Listove biljke ipak drži podalje od mačke: International Cat Care navodi da dodir s njima može nadražiti mačja usta.",
-        "sv": "Ja, en liten bit zucchini utan tillsatser går bra som en godbit då och då. ASPCA anger zucchini som ogiftig för katter. Håll dock växtens blad borta: International Cat Care skriver att kontakt med dem kan irritera kattens mun."
+        "sv": "Ja, en liten bit zucchini utan tillsatser går bra som en godbit då och då. ASPCA anger zucchini som ogiftig för katter. Håll dock växtens blad borta: International Cat Care skriver att kontakt med dem kan irritera kattens mun.",
+        "da": "Ja, et lille stykke zucchini uden tilsætninger er fint som godbid af og til. ASPCA betragter zucchini som ugiftig for katte. Hold dog plantens blade væk: International Cat Care skriver at kontakt med dem kan irritere kattens mund."
       },
       "why": {
         "en": "The ASPCA lists zucchini squash as non-toxic to cats. International Cat Care warns that contact with the leaves of food plants, including zucchini, can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -19752,7 +19847,8 @@
         "pl": "ASPCA uznaje cukinię za nietoksyczną dla kotów. International Cat Care ostrzega, że kontakt z liśćmi roślin spożywczych, w tym cukinii, może wywołać pęcherze lub swędzenie w pysku i na dziąsłach, kichanie i problemy z oczami. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
         "cs": "ASPCA uvádí cuketu jako pro kočky netoxickou. International Cat Care varuje, že kontakt s listy potravinových rostlin, včetně cukety, může způsobit puchýře nebo svědění v tlamičce a na dásních, kýchání a potíže s očima. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
         "hr": "ASPCA navodi tikvice kao neotrovne za mačke. International Cat Care upozorava da dodir s listovima jestivih biljaka, uključujući tikvice, može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
-        "sv": "ASPCA anger zucchini som ogiftig för katter. International Cat Care varnar för att kontakt med bladen på matväxter, bland annat zucchini, kan ge blåsor eller klåda i kattens mun och på tandköttet, nysningar och ögonproblem. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter."
+        "sv": "ASPCA anger zucchini som ogiftig för katter. International Cat Care varnar för att kontakt med bladen på matväxter, bland annat zucchini, kan ge blåsor eller klåda i kattens mun och på tandköttet, nysningar och ögonproblem. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
+        "da": "ASPCA betragter zucchini som ugiftig for katte. International Cat Care advarer om at kontakt med bladene fra grøntsagsplanter, herunder zucchini, kan give blærer eller kløe i kattens mund og på tandkødet, nysen og øjenproblemer. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
       },
       "signs": null,
       "what_to_do": {
@@ -19762,7 +19858,8 @@
         "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
         "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte cuketu podávat a poraďte se s veterinářem.",
         "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
-        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären."
+        "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
+        "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
       },
       "serving": {
         "en": "A small plain piece of the zucchini itself, with no butter, salt or seasoning. Keep the plant's leaves away from your cat.",
@@ -19771,7 +19868,8 @@
         "pl": "Mały zwykły kawałek samej cukinii, bez masła, soli i przypraw. Trzymaj liście rośliny z dala od kota.",
         "cs": "Malý kousek samotné cukety bez dalších přísad, bez másla, soli a koření. Listy rostliny držte mimo dosah kočky.",
         "hr": "Mali običan komadić same tikvice, bez maslaca, soli i začina. Listove biljke drži podalje od mačke.",
-        "sv": "En liten bit av själva zucchinin utan tillsatser, utan smör, salt eller kryddor. Håll växtens blad borta från katten."
+        "sv": "En liten bit av själva zucchinin utan tillsatser, utan smör, salt eller kryddor. Håll växtens blad borta från katten.",
+        "da": "Et lille stykke af selve zucchinien, uden smør, salt eller krydderier. Hold plantens blade væk fra din kat."
       },
       "child": {
         "en": "A little piece of zucchini can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -19780,7 +19878,8 @@
         "pl": "Małym kawałkiem cukinii można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
         "cs": "Kousek cukety může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
         "hr": "Komadić tikvice mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
-        "sv": "Lite zucchini kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra."
+        "sv": "Lite zucchini kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
+        "da": "Et lille stykke zucchini kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
       },
       "faq": [
         {
@@ -19791,7 +19890,8 @@
             "pl": "Czy koty potrzebują warzyw?",
             "cs": "Potřebují kočky zeleninu?",
             "hr": "Treba li mačkama povrće?",
-            "sv": "Behöver katter grönsaker?"
+            "sv": "Behöver katter grönsaker?",
+            "da": "Har katte brug for grøntsager?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -19800,7 +19900,8 @@
             "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
             "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
             "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
-            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
+            "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
+            "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
           }
         }
       ],
@@ -23126,7 +23227,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Brussels sprouts",
@@ -23135,7 +23237,8 @@
         "pl": "Brukselka",
         "cs": "Růžičková kapusta",
         "hr": "Prokulice",
-        "sv": "Brysselkål"
+        "sv": "Brysselkål",
+        "da": "Rosenkål"
       },
       "question": {
         "en": "Can dogs eat Brussels sprouts?",
@@ -23144,7 +23247,8 @@
         "pl": "Czy psy mogą jeść brukselkę?",
         "cs": "Mohou psi jíst růžičkovou kapustu?",
         "hr": "Smiju li psi jesti prokulice?",
-        "sv": "Får hundar äta brysselkål?"
+        "sv": "Får hundar äta brysselkål?",
+        "da": "Må hunde spise rosenkål?"
       },
       "url_slug": {
         "en": "brussels-sprouts",
@@ -23153,7 +23257,8 @@
         "pl": "brukselka",
         "cs": "ruzickova-kapusta",
         "hr": "prokulice",
-        "sv": "brysselkal"
+        "sv": "brysselkal",
+        "da": "rosenkal"
       },
       "answer": {
         "en": "Yes, with a few precautions. Plain cooked Brussels sprouts are fine for dogs in small amounts, but too many can cause lots of gas, stomach upset and diarrhoea. Don't serve them raw: they are too hard for dogs to digest.",
@@ -23162,7 +23267,8 @@
         "pl": "Tak, ale z kilkoma zastrzeżeniami. Zwykła ugotowana brukselka w małych ilościach jest dla psów w porządku, ale zbyt duża porcja może wywołać dużo gazów, rozstrój żołądka i biegunkę. Nie podawaj jej surowej – jest dla psów zbyt twarda, by ją strawić.",
         "cs": "Ano, s několika opatřeními. Tepelně upravená růžičková kapusta bez dalších přísad je pro psy v malém množství v pořádku, ale příliš velké množství může způsobit nadměrnou plynatost, potíže se žaludkem a průjem. Nedávejte ji syrovou: je pro psy příliš tvrdá a špatně se jim tráví.",
         "hr": "Da, uz nekoliko mjera opreza. Obične termički obrađene prokulice u malim su količinama u redu za pse, ali previše njih može izazvati mnogo plinova, želučane tegobe i proljev. Ne daj ih sirove: pretvrde su, pa ih pas teško probavlja.",
-        "sv": "Ja, med några försiktighetsåtgärder. Kokt brysselkål utan tillsatser går bra för hundar i små mängder, men för mycket kan ge kraftiga gaser, orolig mage och diarré. Ge den inte rå: den är för hård för att hunden ska kunna smälta den."
+        "sv": "Ja, med några försiktighetsåtgärder. Kokt brysselkål utan tillsatser går bra för hundar i små mängder, men för mycket kan ge kraftiga gaser, orolig mage och diarré. Ge den inte rå: den är för hård för att hunden ska kunna smälta den.",
+        "da": "Ja, men med visse forholdsregler. Kogt rosenkål uden tilsætninger er fint for hunde i små mængder, men for meget kan give meget luft i maven, mavegener og diarré. Giv dem ikke rå, for de er for hårde for hunde at fordøje."
       },
       "why": {
         "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
@@ -23171,7 +23277,8 @@
         "pl": "Brukselka jest pełna składników odżywczych i przeciwutleniaczy i nie zawiera toksyn ani trucizn. Zawiera jednak dużo substancji zwanych izotiocyjanianami, a zbyt duża ilość może prowadzić do nadmiaru gazów, rozstroju żołądka i biegunki, więc nie przekarmiaj psa.",
         "cs": "Růžičková kapusta je plná živin a antioxidantů a neobsahuje žádné toxiny ani jedy. Obsahuje ale vysoké množství látky zvané izotiokyanát a příliš velké množství může vést k nadměrné plynatosti, potížím se žaludkem a průjmu, proto psa nepřekrmujte.",
         "hr": "Prokulice su pune hranjivih tvari i antioksidansa te ne sadrže toksine ni otrove. Sadrže, međutim, visoku razinu tvari koja se zove izotiocijanat, a previše prokulica može dovesti do mnogo plinova, želučanih tegoba i proljeva, zato ih ne daj previše.",
-        "sv": "Brysselkål är full av näringsämnen och antioxidanter och innehåller inga gifter. Den innehåller dock mycket av ett ämne som kallas isotiocyanat, och för mycket kan ge kraftiga gaser, orolig mage och diarré, så ge inte för stora portioner."
+        "sv": "Brysselkål är full av näringsämnen och antioxidanter och innehåller inga gifter. Den innehåller dock mycket av ett ämne som kallas isotiocyanat, och för mycket kan ge kraftiga gaser, orolig mage och diarré, så ge inte för stora portioner.",
+        "da": "Rosenkål er fyldt med næringsstoffer og antioxidanter og indeholder ingen giftstoffer. Den indeholder til gengæld meget af stoffet isothiocyanat, og for meget kan give luft i maven, mavegener og diarré, så undgå at give for meget."
       },
       "signs": null,
       "what_to_do": {
@@ -23181,7 +23288,8 @@
         "pl": "Podaj tylko odrobinę i nie przekarmiaj. Jeśli twój pies ma problemy żywieniowe lub alergie, przed poczęstowaniem go brukselką porozmawiaj z weterynarzem.",
         "cs": "Dávejte jen trochu a nepřekrmujte. Pokud má váš pes stravovací potíže nebo alergie, poraďte se před podáním růžičkové kapusty nejdřív s veterinářem.",
         "hr": "Daj samo malo i nemoj pretjerati. Ako tvoj pas ima tegobe s prehranom ili alergije, razgovaraj s veterinarom prije nego što mu ponudiš prokulice.",
-        "sv": "Ge bara lite och ge inte för mycket. Om hunden har kostrelaterade problem eller allergier bör du prata med veterinären innan du ger brysselkål."
+        "sv": "Ge bara lite och ge inte för mycket. Om hunden har kostrelaterade problem eller allergier bör du prata med veterinären innan du ger brysselkål.",
+        "da": "Giv kun lidt, og undgå at overfodre. Hvis din hund har særlige kostbehov eller allergi, skal du tale med din dyrlæge, før du giver rosenkål."
       },
       "serving": {
         "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
@@ -23190,7 +23298,8 @@
         "pl": "Umyta, z odciętą większością głąbka, ale z liśćmi, ugotowana (gotowanie na parze zachowuje najwięcej składników odżywczych). Zwykła, bez ziół i przypraw, w małych ilościach.",
         "cs": "Omytá, s odříznutou větší částí košťálu a s ponechanými listy, a tepelně upravená (při spaření se zachová nejvíc živin). Bez dodatků, bez bylinek a koření, v malém množství.",
         "hr": "Oprane, s odrezanim većim dijelom stabljike (listovi ostaju) i termički obrađene (kuhanje na pari sačuva najviše hranjivih tvari). Obične, bez začinskog bilja i začina, u malim količinama.",
-        "sv": "Tvättad, med det mesta av stammen bortskuren och bladen kvar, och tillagad (ångkokning bevarar mest näring). Utan örter eller kryddor, i små mängder."
+        "sv": "Tvättad, med det mesta av stammen bortskuren och bladen kvar, och tillagad (ångkokning bevarar mest näring). Utan örter eller kryddor, i små mängder.",
+        "da": "Vasket, med det meste af stilken skåret af, men bladene på, og kogt (dampning bevarer mest af næringsstofferne). Uden krydderurter og krydderier og kun i små mængder."
       },
       "child": {
         "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
@@ -23199,7 +23308,8 @@
         "pl": "Psy mogą dostać odrobinę ugotowanej brukselki jako smakołyk. Ale uwaga: od nadmiaru brukselki w brzuszku robi się pełno bąków!",
         "cs": "Pejsek může dostat jako pamlsek trochu uvařené růžičkové kapusty. Při příliš velkém množství bude mít bříško plné plynů!",
         "hr": "Psi smiju dobiti malo kuhanih prokulica kao poslasticu. Ako ih pojedu previše, trbuščić će im biti pun plinova!",
-        "sv": "Hundar kan få lite kokt brysselkål som godbit. Får de för mycket blir magen väldigt gasig!"
+        "sv": "Hundar kan få lite kokt brysselkål som godbit. Får de för mycket blir magen väldigt gasig!",
+        "da": "Hunde må gerne få lidt kogt rosenkål som godbid. For meget giver en mave fuld af luft!"
       },
       "faq": [
         {
@@ -23210,7 +23320,8 @@
             "pl": "Czy psy mogą jeść surową brukselkę?",
             "cs": "Mohou psi jíst syrovou růžičkovou kapustu?",
             "hr": "Smiju li psi jesti sirove prokulice?",
-            "sv": "Får hundar äta rå brysselkål?"
+            "sv": "Får hundar äta rå brysselkål?",
+            "da": "Må hunde spise rå rosenkål?"
           },
           "a": {
             "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
@@ -23219,7 +23330,8 @@
             "pl": "Lepiej nie: surowa brukselka jest dla psów zbyt twarda, by ją strawić. Najpierw ją ugotuj; gotowanie na parze zachowuje najwięcej składników odżywczych.",
             "cs": "Raději ne: syrová kapusta je pro psy příliš tvrdá a špatně se jim tráví. Nejdřív ji tepelně upravte; při spaření se zachová nejvíc živin.",
             "hr": "Bolje ne: sirove su prokulice pretvrde da bi ih pas probavio. Prvo ih termički obradi; kuhanje na pari sačuva najviše hranjivih tvari.",
-            "sv": "Det är bäst att låta bli: rå brysselkål är för hård för att hunden ska kunna smälta den. Koka den först; ångkokning bevarar mest näring."
+            "sv": "Det är bäst att låta bli: rå brysselkål är för hård för att hunden ska kunna smälta den. Koka den först; ångkokning bevarar mest näring.",
+            "da": "Det er bedst at lade være: rå rosenkål er for hård for hunde at fordøje. Kog den først – dampning bevarer mest af næringsstofferne."
           }
         }
       ],
@@ -23544,7 +23656,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Cabbage",
@@ -23553,7 +23666,8 @@
         "pl": "Kapusta",
         "cs": "Zelí",
         "hr": "Kupus",
-        "sv": "Kål"
+        "sv": "Kål",
+        "da": "Kål"
       },
       "question": {
         "en": "Can dogs eat cabbage?",
@@ -23562,7 +23676,8 @@
         "pl": "Czy psy mogą jeść kapustę?",
         "cs": "Mohou psi jíst zelí?",
         "hr": "Smiju li psi jesti kupus?",
-        "sv": "Får hundar äta kål?"
+        "sv": "Får hundar äta kål?",
+        "da": "Må hunde spise kål?"
       },
       "url_slug": {
         "en": "cabbage",
@@ -23571,7 +23686,8 @@
         "pl": "kapusta",
         "cs": "zeli",
         "hr": "kupus",
-        "sv": "kal"
+        "sv": "kal",
+        "da": "kal"
       },
       "answer": {
         "en": "Yes, in small amounts. All kinds of cabbage are fine for dogs, but cabbage makes a lot of gas, so introduce it slowly. Boiled or steamed cabbage is less likely to upset the stomach than raw cabbage.",
@@ -23580,7 +23696,8 @@
         "pl": "Tak, w małych ilościach. Każdy rodzaj kapusty jest dla psów w porządku, ale kapusta powoduje dużo gazów, więc wprowadzaj ją powoli. Kapusta gotowana w wodzie lub na parze rzadziej rozstraja żołądek niż surowa.",
         "cs": "Ano, v malém množství. Všechny druhy zelí jsou pro psy v pořádku, ale zelí způsobuje nadýmání, proto ho zařazujte postupně. Vařené nebo spařené zelí psovi žaludek podráždí méně než syrové.",
         "hr": "Da, u malim količinama. Sve vrste kupusa u redu su za pse, ali kupus stvara mnogo plinova, zato ga uvodi polako. Kuhan u vodi ili na pari kupus psu će rjeđe uznemiriti želudac nego sirov.",
-        "sv": "Ja, i små mängder. Alla sorters kål går bra för hundar, men kål ger mycket gaser, så börja försiktigt. Kokt eller ångad kål retar magen mindre än rå kål."
+        "sv": "Ja, i små mängder. Alla sorters kål går bra för hundar, men kål ger mycket gaser, så börja försiktigt. Kokt eller ångad kål retar magen mindre än rå kål.",
+        "da": "Ja, i små mængder. Alle slags kål er fine for hunde, men kål giver meget luft i maven, så vænn hunden langsomt til den. Kogt eller dampet kål giver sjældnere mavegener end rå kål."
       },
       "why": {
         "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
@@ -23589,7 +23706,8 @@
         "pl": "Kapusta jest dla psów zdrowa, ale wytwarza dużo gazów, a wiele psów źle to znosi. Większym problemem są przyprawy: masło i inne tłuste dodatki mogą prowadzić do zapalenia trzustki, a cebula i czosnek są dla psów toksyczne.",
         "cs": "Zelí je pro psy zdravé, ale vytváří velké množství plynů, které mnoho psů nemusí dobře snášet. Větším problémem je ochucení: máslo a další tučná jídla mohou vést k zánětu slinivky břišní a cibule a česnek jsou pro psy toxické.",
         "hr": "Kupus je zdrav za pse, ali stvara velike količine plinova, a mnogi psi to možda neće dobro podnijeti. Veći je problem ono čime se kupus začini: maslac i druga masna hrana mogu dovesti do upale gušterače, a luk i češnjak otrovni su za pse.",
-        "sv": "Kål är nyttig för hundar, men den ger mycket gaser, och många hundar tål det inte så bra. Kryddorna är det större problemet: smör och andra feta livsmedel kan leda till bukspottkörtelinflammation (pankreatit), och lök och vitlök är giftiga för hundar."
+        "sv": "Kål är nyttig för hundar, men den ger mycket gaser, och många hundar tål det inte så bra. Kryddorna är det större problemet: smör och andra feta livsmedel kan leda till bukspottkörtelinflammation (pankreatit), och lök och vitlök är giftiga för hundar.",
+        "da": "Kål er sundt for hunde, men giver en stor mængde luft i maven, og mange hunde tåler det måske ikke så godt. Krydderier er det største problem: smør og andre fede fødevarer kan give betændelse i bugspytkirtlen (pankreatitis), og løg og hvidløg er giftige for hunde."
       },
       "signs": null,
       "what_to_do": {
@@ -23599,7 +23717,8 @@
         "pl": "Po pierwszej próbce kapusty uważnie obserwuj psa. Jeśli twój pies ma skłonność do nadmiernych gazów lub wzdęć, zapytaj weterynarza, zanim dasz mu kapustę.",
         "cs": "Po prvním ochutnání zelí psa pozorně sledujte. Pokud má váš pes často hodně plynů nebo je náchylný k torzi žaludku, poraďte se před podáním zelí s veterinářem.",
         "hr": "Nakon prvog zalogaja kupusa pažljivo prati psa. Ako tvoj pas često ima mnogo plinova ili je sklon nadutosti, pitaj veterinara prije nego što mu daš kupus.",
-        "sv": "Ha ett extra öga på hunden när den smakat kål för första gången. Om hunden ofta har mycket gaser eller löper risk för magomvridning, fråga veterinären innan du ger kål."
+        "sv": "Ha ett extra öga på hunden när den smakat kål för första gången. Om hunden ofta har mycket gaser eller löper risk för magomvridning, fråga veterinären innan du ger kål.",
+        "da": "Hold nøje øje med din hund efter den første smagsprøve på kål. Hvis din hund ofte har meget luft i maven eller er udsat for mavedrejning, skal du spørge din dyrlæge, før du giver kål."
       },
       "serving": {
         "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
@@ -23608,7 +23727,8 @@
         "pl": "Umyta, bez głąba, ugotowana w wodzie lub na parze i pokrojona na małe kawałki. Bez przypraw: bez masła, cebuli i czosnku. Tylko małe ilości.",
         "cs": "Omyté, bez košťálu a jádra, vařené nebo spařené a nakrájené na malé kousky. Bez ochucení: žádné máslo, cibule ani česnek. Jen v malém množství.",
         "hr": "Opran, bez kocena i jezgre, kuhan u vodi ili na pari i narezan na male komadiće. Bez začina: bez maslaca, luka i češnjaka. Samo u malim količinama.",
-        "sv": "Tvättad, med stjälk och kärna borttagna, kokt eller ångad och tärnad i små bitar. Utan kryddor: inget smör, ingen lök och ingen vitlök. Bara små mängder."
+        "sv": "Tvättad, med stjälk och kärna borttagna, kokt eller ångad och tärnad i små bitar. Utan kryddor: inget smör, ingen lök och ingen vitlök. Bara små mängder.",
+        "da": "Vasket, med stok og kerne fjernet, kogt eller dampet og skåret i små stykker. Uden krydderier: intet smør, løg eller hvidløg. Kun små mængder."
       },
       "child": {
         "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
@@ -23617,7 +23737,8 @@
         "pl": "Psy mogą spróbować odrobiny zwykłej ugotowanej kapusty. Po niej łatwo o bąki, więc tylko mały kawałek!",
         "cs": "Pejsek může zkusit trochu uvařeného zelí bez dalších přísad. Může z něj mít nadýmání, tak jen malý kousek!",
         "hr": "Psi smiju probati malo kuhanog kupusa bez dodataka. Može im izazvati plinove, zato samo mali komadić!",
-        "sv": "Hundar kan få smaka lite kokt kål utan tillsatser. Den kan göra dem gasiga, så bara en liten bit!"
+        "sv": "Hundar kan få smaka lite kokt kål utan tillsatser. Den kan göra dem gasiga, så bara en liten bit!",
+        "da": "Hunde må gerne smage lidt kogt kål uden tilsætninger. Den kan give luft i maven, så kun et lille stykke!"
       },
       "faq": [
         {
@@ -23628,7 +23749,8 @@
             "pl": "Czy psy mogą jeść surową kapustę?",
             "cs": "Mohou psi jíst syrové zelí?",
             "hr": "Smiju li psi jesti sirov kupus?",
-            "sv": "Får hundar äta rå kål?"
+            "sv": "Får hundar äta rå kål?",
+            "da": "Må hunde spise rå kål?"
           },
           "a": {
             "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
@@ -23637,7 +23759,8 @@
             "pl": "Mogą, ale kapusta gotowana w wodzie lub na parze rzadziej zaburza psu trawienie. Tak czy inaczej pokrój ją na małe kawałki.",
             "cs": "Mohou, ale vařené nebo spařené zelí psovi trávení podráždí méně. Nakrájejte ho na malé kousky tak či onak.",
             "hr": "Smiju, ali kupus kuhan u vodi ili na pari manje će nadražiti pasju probavu. U oba ga slučaja nareži na male komadiće.",
-            "sv": "Ja, men kokt eller ångad kål retar hundens mage mindre. Tärna den i små bitar oavsett hur den serveras."
+            "sv": "Ja, men kokt eller ångad kål retar hundens mage mindre. Tärna den i små bitar oavsett hur den serveras.",
+            "da": "Det kan de godt, men kogt eller dampet kål giver sjældnere fordøjelsesproblemer hos hunde. Skær den under alle omstændigheder i små stykker."
           }
         }
       ],
@@ -24552,7 +24675,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Celery",
@@ -24561,7 +24685,8 @@
         "pl": "Seler naciowy",
         "cs": "Řapíkatý celer",
         "hr": "Celer",
-        "sv": "Stjälkselleri"
+        "sv": "Stjälkselleri",
+        "da": "Selleri"
       },
       "question": {
         "en": "Can dogs eat celery?",
@@ -24570,7 +24695,8 @@
         "pl": "Czy psy mogą jeść seler naciowy?",
         "cs": "Mohou psi jíst řapíkatý celer?",
         "hr": "Smiju li psi jesti celer?",
-        "sv": "Får hundar äta stjälkselleri?"
+        "sv": "Får hundar äta stjälkselleri?",
+        "da": "Må hunde spise selleri?"
       },
       "url_slug": {
         "en": "celery",
@@ -24579,7 +24705,8 @@
         "pl": "seler-naciowy",
         "cs": "rapikaty-celer",
         "hr": "celer",
-        "sv": "stjalkselleri"
+        "sv": "stjalkselleri",
+        "da": "selleri"
       },
       "answer": {
         "en": "Yes, celery is generally safe for dogs as an occasional treat. Wash it and always cut it into bite-size pieces, because celery can be a choking hazard, especially for small dogs.",
@@ -24588,7 +24715,8 @@
         "pl": "Tak, seler naciowy jest na ogół bezpieczny dla psów jako okazjonalny smakołyk. Umyj go i zawsze pokrój na kawałki wielkości jednego kęsa, bo kawałki selera naciowego mogą spowodować zadławienie, zwłaszcza u małych psów.",
         "cs": "Ano, řapíkatý celer je pro psy obvykle bezpečný jako občasný pamlsek. Omyjte ho a vždy ho nakrájejte na kousky na jedno sousto, protože celer může způsobit zadušení, zejména u malých psů.",
         "hr": "Da, celer je općenito siguran za pse kao povremena poslastica. Operi ga i uvijek ga nareži na komadiće veličine zalogaja jer može izazvati gušenje, osobito kod malih pasa.",
-        "sv": "Ja, stjälkselleri är i allmänhet säker för hundar som en godbit då och då. Tvätta den och skär den alltid i munsbitar, eftersom selleri kan ge kvävning, särskilt hos små hundar."
+        "sv": "Ja, stjälkselleri är i allmänhet säker för hundar som en godbit då och då. Tvätta den och skär den alltid i munsbitar, eftersom selleri kan ge kvävning, särskilt hos små hundar.",
+        "da": "Ja, selleri er som regel ufarligt for hunde som godbid af og til. Vask den, og skær den altid i mundrette stykker, for selleri kan sætte sig fast i halsen, især hos små hunde."
       },
       "why": {
         "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
@@ -24597,7 +24725,8 @@
         "pl": "Seler naciowy jest bezpieczny dla większości psów i jest znany z tego, że odświeża psi oddech. Głównym ryzykiem jest zadławienie się dużymi kawałkami, zwłaszcza u małych psów. To smakołyk, a nie podstawa diety, i nigdy nie powinien zastępować pełnowartościowego, zbilansowanego posiłku.",
         "cs": "Řapíkatý celer je bezpečný pro většinu psů a prý dokonce osvěžuje psí dech. Hlavním rizikem je zadušení velkými kousky, zejména u malých psů. Je to pamlsek, ne základ jídelníčku, a nikdy by neměl nahradit plnohodnotné vyvážené jídlo.",
         "hr": "Celer je siguran za većinu pasa, a poznato je i da osvježava pseći dah. Glavni je rizik gušenje zbog većih komada, osobito kod malih pasa. To je poslastica, a ne osnova prehrane, i nikad ne smije zamijeniti potpun i uravnotežen obrok.",
-        "sv": "Stjälkselleri är säker för de flesta hundar och sägs till och med friska upp hundens andedräkt. Den största risken är att hunden sätter stora bitar i halsen, särskilt små hundar. Det är en godbit, inte basfoder, och ska aldrig ersätta en komplett och balanserad måltid."
+        "sv": "Stjälkselleri är säker för de flesta hundar och sägs till och med friska upp hundens andedräkt. Den största risken är att hunden sätter stora bitar i halsen, särskilt små hundar. Det är en godbit, inte basfoder, och ska aldrig ersätta en komplett och balanserad måltid.",
+        "da": "Selleri er ufarligt for de fleste hunde og kan ligefrem give friskere hundeånde. Den største risiko er, at store stykker sætter sig fast i halsen, især hos små hunde. Det er en godbid og ikke en fast del af kosten, og den må aldrig erstatte et komplet og afbalanceret måltid."
       },
       "signs": null,
       "what_to_do": {
@@ -24607,7 +24736,8 @@
         "pl": "Wprowadzaj seler naciowy powoli i po pierwszej próbce obserwuj, czy pies nie ma problemów z trawieniem ani innych zmian.",
         "cs": "Celer zařazujte pomalu a po prvním ochutnání sledujte, zda pes nemá potíže s trávením nebo jiné změny.",
         "hr": "Uvodi celer polako i nakon prvog zalogaja prati ima li pas probavnih tegoba ili drugih promjena.",
-        "sv": "Börja med lite och håll utkik efter magbesvär eller andra förändringar hos hunden när den smakat första gången."
+        "sv": "Börja med lite och håll utkik efter magbesvär eller andra förändringar hos hunden när den smakat första gången.",
+        "da": "Vænn hunden langsomt til selleri, og hold øje med mavegener eller andre ændringer efter den første smagsprøve."
       },
       "serving": {
         "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
@@ -24616,7 +24746,8 @@
         "pl": "Umyty, może być surowy; zawsze pokrojony na kawałki wielkości jednego kęsa. Mały smakołyk, a nie posiłek.",
         "cs": "Omytý a syrový je v pořádku, vždy nakrájený na kousky na jedno sousto. Malý pamlsek, ne jídlo.",
         "hr": "Opran, može i sirov, uvijek narezan na komadiće veličine zalogaja. Mala poslastica, a ne obrok.",
-        "sv": "Tvättad och rå, alltid skuren i munsbitar. En liten godbit, inte en måltid."
+        "sv": "Tvättad och rå, alltid skuren i munsbitar. En liten godbit, inte en måltid.",
+        "da": "Vasket og altid skåret i mundrette stykker. Rå er fint. En lille godbid og ikke et måltid."
       },
       "child": {
         "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
@@ -24625,7 +24756,8 @@
         "pl": "Psy mogą pochrupać odrobinę selera naciowego! Dorosły najpierw go myje i kroi na malutkie kawałki.",
         "cs": "Pejsek může chroupat trochu řapíkatého celeru! Dospělý ho nejdřív omyje a nakrájí na drobné kousky.",
         "hr": "Psi smiju grickati malo celera! Odrasla osoba ga prvo opere i nareže na sitne komadiće.",
-        "sv": "Hundar kan knapra lite stjälkselleri! En vuxen tvättar den och skär den i små bitar först."
+        "sv": "Hundar kan knapra lite stjälkselleri! En vuxen tvättar den och skär den i små bitar först.",
+        "da": "Hunde må gerne knase lidt selleri! En voksen vasker den og skærer den først i helt små stykker."
       },
       "faq": [
         {
@@ -24636,7 +24768,8 @@
             "pl": "Czy szczeniaki mogą jeść seler naciowy?",
             "cs": "Mohou štěňata jíst celer?",
             "hr": "Smiju li štenci jesti celer?",
-            "sv": "Får valpar äta stjälkselleri?"
+            "sv": "Får valpar äta stjälkselleri?",
+            "da": "Må hvalpe spise selleri?"
           },
           "a": {
             "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
@@ -24645,7 +24778,8 @@
             "pl": "Szczeniaki mogą jeść małe ilości selera naciowego, jeśli jest pokrojony na kawałki odpowiedniej wielkości.",
             "cs": "Štěňata mohou jíst malé množství celeru, pokud je nakrájený na vhodně velké kousky.",
             "hr": "Štenci smiju jesti male količine celera ako je narezan na komadiće prikladne veličine.",
-            "sv": "Valpar kan få små mängder stjälkselleri om den skärs i lagom stora bitar."
+            "sv": "Valpar kan få små mängder stjälkselleri om den skärs i lagom stora bitar.",
+            "da": "Hvalpe kan spise små mængder selleri, hvis det er skåret i stykker af passende størrelse."
           }
         }
       ],
@@ -33364,7 +33498,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Kale",
@@ -33373,7 +33508,8 @@
         "pl": "Jarmuż",
         "cs": "Kadeřávek",
         "hr": "Kovrčavi kelj",
-        "sv": "Grönkål"
+        "sv": "Grönkål",
+        "da": "Grønkål"
       },
       "question": {
         "en": "Can dogs eat kale?",
@@ -33382,7 +33518,8 @@
         "pl": "Czy psy mogą jeść jarmuż?",
         "cs": "Mohou psi jíst kadeřávek?",
         "hr": "Smiju li psi jesti kovrčavi kelj?",
-        "sv": "Får hundar äta grönkål?"
+        "sv": "Får hundar äta grönkål?",
+        "da": "Må hunde spise grønkål?"
       },
       "url_slug": {
         "en": "kale",
@@ -33391,7 +33528,8 @@
         "pl": "jarmuz",
         "cs": "kaderavek",
         "hr": "kovrcavi-kelj",
-        "sv": "gronkal"
+        "sv": "gronkal",
+        "da": "gronkal"
       },
       "answer": {
         "en": "Better not as a regular treat. A little kale now and then is unlikely to harm most dogs, but some vets caution against it: kale contains calcium oxalate, linked to kidney and bladder stones, and isothiocyanates, which can irritate the stomach.",
@@ -33400,7 +33538,8 @@
         "pl": "Lepiej nie dawać go regularnie. Odrobina jarmużu od czasu do czasu raczej nie zaszkodzi większości psów, ale niektórzy weterynarze go odradzają: jarmuż zawiera szczawian wapnia, który wiąże się z kamieniami nerkowymi i pęcherzowymi, oraz izotiocyjaniany, które mogą podrażniać żołądek.",
         "cs": "Raději ne jako pravidelný pamlsek. Trocha kadeřávku jednou za čas většině psů pravděpodobně neublíží, ale někteří veterináři před ním varují: kadeřávek obsahuje šťavelan vápenatý, který souvisí s tvorbou kamenů v ledvinách a močovém měchýři, a izotiokyanáty, které mohou dráždit žaludek.",
         "hr": "Bolje ga ne davati kao redovitu poslasticu. Malo kovrčavog kelja povremeno vjerojatno neće naštetiti većini pasa, ali neki veterinari savjetuju oprez: kovrčavi kelj sadrži kalcijev oksalat, povezan s kamencima u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji mogu nadražiti želudac.",
-        "sv": "Helst inte som en vanlig godbit. Lite grönkål då och då skadar sannolikt inte de flesta hundar, men en del veterinärer avråder: grönkål innehåller kalciumoxalat, som har kopplats till njur- och blåsstenar, och isotiocyanater, som kan irritera magen."
+        "sv": "Helst inte som en vanlig godbit. Lite grönkål då och då skadar sannolikt inte de flesta hundar, men en del veterinärer avråder: grönkål innehåller kalciumoxalat, som har kopplats till njur- och blåsstenar, och isotiocyanater, som kan irritera magen.",
+        "da": "Hellere ikke som fast godbid. Lidt grønkål af og til skader næppe de fleste hunde, men nogle dyrlæger advarer imod det: grønkål indeholder calciumoxalat, som sættes i forbindelse med nyre- og blæresten, og isothiocyanater, som kan irritere maven."
       },
       "why": {
         "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
@@ -33409,7 +33548,8 @@
         "pl": "Jarmuż zawiera szczawian wapnia, który może powodować kamienie nerkowe i pęcherzowe, oraz izotiocyjaniany, które u psów mogą wywołać podrażnienie żołądka od łagodnego do potencjalnie silnego. Podawany regularnie może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy. Małe ilości mogą być w porządku, ale ponieważ niektórzy weterynarze jarmuż odradzają, kierujemy się ostrzejszą radą.",
         "cs": "Kadeřávek obsahuje šťavelan vápenatý, který může způsobit kameny v ledvinách a močovém měchýři, a izotiokyanáty, které mohou u psů způsobit podráždění žaludku, od mírného až po potenciálně závažné. Při pravidelném krmení může také narušovat funkci štítné žlázy, zejména u psů s hypotyreózou. Malé množství může být v pořádku, ale protože někteří veterináři před kadeřávkem varují, řídíme se přísnější radou.",
         "hr": "Kovrčavi kelj sadrži kalcijev oksalat, koji može uzrokovati kamence u bubrezima i mokraćnom mjehuru, te izotiocijanate, koji kod pasa mogu izazvati nadraženje želuca, od blagog do potencijalno jakog. Ako se daje redovito, može ometati i rad štitnjače, osobito kod pasa s hipotireozom. Male količine možda su u redu, ali budući da neki veterinari savjetuju oprez s kovrčavim keljom, držimo se strožeg savjeta.",
-        "sv": "Grönkål innehåller kalciumoxalat, som kan ge njur- och blåsstenar, och isotiocyanater, som kan ge lindrig till potentiellt kraftig irritation i hundens mage. Om den ges regelbundet kan den också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln. Små mängder kan gå bra, men eftersom en del veterinärer avråder från grönkål följer vi det strängare rådet."
+        "sv": "Grönkål innehåller kalciumoxalat, som kan ge njur- och blåsstenar, och isotiocyanater, som kan ge lindrig till potentiellt kraftig irritation i hundens mage. Om den ges regelbundet kan den också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln. Små mängder kan gå bra, men eftersom en del veterinärer avråder från grönkål följer vi det strängare rådet.",
+        "da": "Grønkål indeholder calciumoxalat, som kan give nyre- og blæresten, og isothiocyanater, som kan give fra let til potentielt alvorlig irritation af maven hos hunde. Hvis hunden får det jævnligt, kan det også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose). Små mængder kan være i orden, men fordi nogle dyrlæger advarer imod grønkål, følger vi det strengere råd."
       },
       "signs": {
         "en": [
@@ -33453,6 +33593,12 @@
           "Diarré",
           "Svårigheter att kissa",
           "Förändrade kissvanor"
+        ],
+        "da": [
+          "Opkast",
+          "Diarré",
+          "Besvær med at tisse",
+          "Enhver ændring i hundens tissevaner"
         ]
       },
       "what_to_do": {
@@ -33462,7 +33608,8 @@
         "pl": "Jeśli pies zjadł jarmuż, uważnie obserwuj, czy nie ma rozstroju żołądka ani objawów kamieni nerkowych lub pęcherzowych. Skontaktuj się z weterynarzem, jeśli zauważysz wymioty, biegunkę, trudności z oddawaniem moczu lub jakąkolwiek zmianę w oddawaniu moczu.",
         "cs": "Pokud váš pes snědl kadeřávek, pozorně ho sledujte, zda nemá potíže s trávením nebo příznaky kamenů v ledvinách a močovém měchýři. Obraťte se na veterináře, pokud si všimnete zvracení, průjmu, potíží s močením nebo jakékoli změny v močení.",
         "hr": "Ako je tvoj pas pojeo kovrčavi kelj, pažljivo prati ima li probavnih tegoba ili znakova kamenaca u bubrezima i mokraćnom mjehuru. Obrati se veterinaru ako primijetiš povraćanje, proljev, poteškoće s mokrenjem ili bilo kakvu promjenu u mokrenju.",
-        "sv": "Om hunden har ätit grönkål bör du hålla noga utkik efter magbesvär eller tecken på njur- och blåsstenar. Kontakta veterinären om du ser kräkningar, diarré, svårigheter att kissa eller ändrade kissvanor."
+        "sv": "Om hunden har ätit grönkål bör du hålla noga utkik efter magbesvär eller tecken på njur- och blåsstenar. Kontakta veterinären om du ser kräkningar, diarré, svårigheter att kissa eller ändrade kissvanor.",
+        "da": "Hvis din hund har spist grønkål, så hold nøje øje med mavegener eller tegn på nyre- og blæresten. Kontakt din dyrlæge, hvis du bemærker opkast, diarré, besvær med at tisse eller enhver ændring i hundens tissevaner."
       },
       "serving": null,
       "child": {
@@ -33472,7 +33619,8 @@
         "pl": "Jarmuż nie jest dobrą przekąską dla psów. Lepiej poczęstuj psa fasolką szparagową albo ogórkiem – z pomocą dorosłego.",
         "cs": "Kadeřávek není pro psy dobrá svačinka. Lepší je dát pejskovi s pomocí dospělého zelené fazolky nebo okurku.",
         "hr": "Kovrčavi kelj nije dobra užina za pse. Zelene mahune ili krastavac bolje su poslastice za dijeljenje, uz pomoć odrasle osobe.",
-        "sv": "Grönkål är ingen bra godbit för hundar. Gröna bönor eller gurka är bättre godbitar att dela med dem. Be en vuxen hjälpa dig."
+        "sv": "Grönkål är ingen bra godbit för hundar. Gröna bönor eller gurka är bättre godbitar att dela med dem. Be en vuxen hjälpa dig.",
+        "da": "Grønkål er ikke en god snack til hunde. Grønne bønner eller agurk er bedre godbidder at dele, når en voksen hjælper."
       },
       "faq": [
         {
@@ -33483,7 +33631,8 @@
             "pl": "Które psy powinny unikać jarmużu?",
             "cs": "Kteří psi by se měli kadeřávku vyhnout?",
             "hr": "Koji psi trebaju izbjegavati kovrčavi kelj?",
-            "sv": "Vilka hundar bör undvika grönkål?"
+            "sv": "Vilka hundar bör undvika grönkål?",
+            "da": "Hvilke hunde bør undgå grønkål?"
           },
           "a": {
             "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
@@ -33492,7 +33641,8 @@
             "pl": "Psy skłonne do kamieni nerkowych lub pęcherzowych powinny unikać pokarmów bogatych w szczawian wapnia, w tym jarmużu. Jarmuż może też zaburzać pracę tarczycy, zwłaszcza u psów z niedoczynnością tarczycy.",
             "cs": "Psi náchylní ke kamenům v ledvinách nebo močovém měchýři by se měli vyhýbat potravinám s vysokým obsahem šťavelanu vápenatého, mezi které patří i kadeřávek. Kadeřávek také může narušovat funkci štítné žlázy, zejména u psů s hypotyreózou.",
             "hr": "Psi skloni kamencima u bubrezima ili mokraćnom mjehuru trebaju izbjegavati hranu s mnogo kalcijeva oksalata, što uključuje i kovrčavi kelj. Kovrčavi kelj može ometati i rad štitnjače, osobito kod pasa s hipotireozom.",
-            "sv": "Hundar som är benägna att få njur- eller blåsstenar bör undvika livsmedel med mycket kalciumoxalat, till exempel grönkål. Grönkål kan också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln."
+            "sv": "Hundar som är benägna att få njur- eller blåsstenar bör undvika livsmedel med mycket kalciumoxalat, till exempel grönkål. Grönkål kan också störa sköldkörtelfunktionen, särskilt hos hundar med underfunktion i sköldkörteln.",
+            "da": "Hunde, der er udsat for nyre- eller blæresten, bør undgå fødevarer med meget calciumoxalat, herunder grønkål. Grønkål kan også forstyrre skjoldbruskkirtlens funktion, især hos hunde med lavt stofskifte (hypothyreose)."
           }
         },
         {
@@ -33503,7 +33653,8 @@
             "pl": "Co mogę dać psu zamiast jarmużu?",
             "cs": "Co mohu dát psovi místo kadeřávku?",
             "hr": "Što mogu dati psu umjesto kovrčavog kelja?",
-            "sv": "Vad kan jag ge hunden i stället för grönkål?"
+            "sv": "Vad kan jag ge hunden i stället för grönkål?",
+            "da": "Hvad kan jeg give min hund i stedet for grønkål?"
           },
           "a": {
             "en": "Green beans and cucumbers are safe for most dogs.",
@@ -33512,7 +33663,8 @@
             "pl": "Fasolka szparagowa i ogórek są bezpieczne dla większości psów.",
             "cs": "Zelené fazolky a okurky jsou bezpečné pro většinu psů.",
             "hr": "Zelene mahune i krastavci sigurni su za većinu pasa.",
-            "sv": "Gröna bönor och gurka är säkra för de flesta hundar."
+            "sv": "Gröna bönor och gurka är säkra för de flesta hundar.",
+            "da": "Grønne bønner og agurk er ufarlige for de fleste hunde."
           }
         }
       ],
@@ -34605,7 +34757,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Lettuce",
@@ -34614,7 +34767,8 @@
         "pl": "Sałata",
         "cs": "Hlávkový salát",
         "hr": "Zelena salata",
-        "sv": "Sallat"
+        "sv": "Sallat",
+        "da": "Salat"
       },
       "question": {
         "en": "Can dogs eat lettuce?",
@@ -34623,7 +34777,8 @@
         "pl": "Czy psy mogą jeść sałatę?",
         "cs": "Mohou psi jíst hlávkový salát?",
         "hr": "Smiju li psi jesti zelenu salatu?",
-        "sv": "Får hundar äta sallat?"
+        "sv": "Får hundar äta sallat?",
+        "da": "Må hunde spise salat?"
       },
       "url_slug": {
         "en": "lettuce",
@@ -34632,7 +34787,8 @@
         "pl": "salata",
         "cs": "hlavkovy-salat",
         "hr": "zelena-salata",
-        "sv": "sallat"
+        "sv": "sallat",
+        "da": "salat"
       },
       "answer": {
         "en": "Yes, plain lettuce is generally safe for dogs in moderation. Romaine, iceberg and arugula are non-toxic. Wash it well and chop it up, and don't share your leftover salad, which often contains onions.",
@@ -34641,7 +34797,8 @@
         "pl": "Tak, zwykła sałata jest na ogół bezpieczna dla psów w umiarkowanych ilościach. Sałata rzymska, lodowa i rukola nie są toksyczne. Umyj ją dokładnie i posiekaj, ale nie dawaj psu resztek ze swojej sałatki, bo często zawierają cebulę.",
         "cs": "Ano, salát bez dalších přísad je pro psy obvykle bezpečný, pokud ho dostávají s mírou. Římský salát, ledový salát i rukola nejsou toxické. Dobře ho omyjte, nakrájejte a nedávejte psovi zbytky vlastního salátu, které často obsahují cibuli.",
         "hr": "Da, obična zelena salata općenito je sigurna za pse ako je jedu umjereno. Rimska salata, ledena salata i rikula nisu otrovne. Dobro je operi i nasjeckaj te psu ne daj ostatke svoje salate, jer često sadrže luk.",
-        "sv": "Ja, sallat utan tillsatser är i allmänhet säker för hundar med måtta. Romansallat, isbergssallat och ruccola är ogiftiga. Tvätta den ordentligt och hacka den, och ge inte hunden rester av sallad, som ofta innehåller lök."
+        "sv": "Ja, sallat utan tillsatser är i allmänhet säker för hundar med måtta. Romansallat, isbergssallat och ruccola är ogiftiga. Tvätta den ordentligt och hacka den, och ge inte hunden rester av sallad, som ofta innehåller lök.",
+        "da": "Ja, salat uden tilsætninger er som regel ufarligt for hunde i moderate mængder. Romainesalat, icebergsalat og rucola er ugiftige. Vask den godt og hak den, og giv ikke hunden rester af din egen salat, som ofte indeholder løg."
       },
       "why": {
         "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
@@ -34650,7 +34807,8 @@
         "pl": "Sałata jest na ogół bezpieczna dla psów, ale ma dużo błonnika i w dużych kawałkach trudno ją strawić, a jej nadmiar może wywołać biegunkę. W sałatkach często są składniki toksyczne dla psów, na przykład cebula. Sałata bywała też wycofywana ze sprzedaży z powodu skażenia bakteriami E. coli lub listerią, więc dobrze ją myj i kupuj z rozwagą.",
         "cs": "Hlávkový salát je pro psy obvykle bezpečný, ale je velmi vláknitý a ve velkých kusech se špatně tráví a při větším množství může způsobit průjem. Saláty často obsahují přísady, které jsou pro psy toxické, například cibuli. Salát byl také stahován z prodeje kvůli kontaminaci bakteriemi E. coli nebo listerií, proto ho důkladně omyjte a nakupujte pečlivě.",
         "hr": "Zelena je salata općenito sigurna za pse, ali je vrlo vlaknasta i u velikim se komadima teško probavlja, a previše je može izazvati proljev. Salate često sadrže sastojke koji su otrovni za pse, poput luka. Zelena je salata povlačena iz prodaje i zbog onečišćenja bakterijom E. coli ili listerijom, zato je temeljito operi i kupuj pažljivo.",
-        "sv": "Sallat är i allmänhet säker för hundar, men den är mycket fiberrik och svår att smälta i stora bitar, och för mycket kan ge diarré. Sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. Sallat har dessutom återkallats på grund av E. coli eller listeria, så tvätta den noga och var noga med var du köper den."
+        "sv": "Sallat är i allmänhet säker för hundar, men den är mycket fiberrik och svår att smälta i stora bitar, och för mycket kan ge diarré. Sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. Sallat har dessutom återkallats på grund av E. coli eller listeria, så tvätta den noga och var noga med var du köper den.",
+        "da": "Salat er som regel ufarligt for hunde, men det er meget fibrøst og svært at fordøje i store stykker, og for meget kan give diarré. Salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Salat er også blevet kaldt tilbage på grund af forurening med E. coli eller listeria, så vask den grundigt, og køb den med omtanke."
       },
       "signs": null,
       "what_to_do": {
@@ -34660,7 +34818,8 @@
         "pl": "Ogranicz się do zwykłego kawałka od czasu do czasu: za dużo może wywołać biegunkę. Nie dawaj psu resztek sałatki, bo często zawierają cebulę, która jest dla psów toksyczna.",
         "cs": "Dopřejte psovi jen kousek salátu bez dalších přísad, a to občas: při větším množství může dostat průjem. Nedávejte mu zbytky salátu, protože saláty často obsahují cibuli, která je pro psy toxická.",
         "hr": "Daj samo običan komadić s vremena na vrijeme: previše može izazvati proljev. Ne daj ostatke salate jer takve salate često sadrže luk, koji je otrovan za pse.",
-        "sv": "Ge bara en bit utan tillsatser då och då: för mycket kan ge diarré. Ge inte hunden rester av sallad, eftersom sallader ofta innehåller lök, som är giftig för hundar."
+        "sv": "Ge bara en bit utan tillsatser då och då: för mycket kan ge diarré. Ge inte hunden rester av sallad, eftersom sallader ofta innehåller lök, som är giftig för hundar.",
+        "da": "Hold dig til et stykke salat uden tilsætninger en gang imellem: for meget kan give diarré. Giv ikke hunden rester af en blandet salat, for salater indeholder ofte løg, som er giftige for hunde."
       },
       "serving": {
         "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
@@ -34669,7 +34828,8 @@
         "pl": "Zwykły, dokładnie umyty kawałek od czasu do czasu, posiekany, a nie cały liść. Nigdy z sałatki mieszanej.",
         "cs": "Občas kousek salátu bez dalších přísad, důkladně omytý a nakrájený, ne vcelý list. Nikdy ne ze smíchaného salátu.",
         "hr": "Običan, temeljito opran komadić s vremena na vrijeme, nasjeckan, a ne cijeli list. Nikad iz miješane salate.",
-        "sv": "En bit utan tillsatser, ordentligt tvättad, då och då, hackad i stället för ett helt blad. Aldrig ur en blandad sallad."
+        "sv": "En bit utan tillsatser, ordentligt tvättad, då och då, hackad i stället för ett helt blad. Aldrig ur en blandad sallad.",
+        "da": "Af og til et stykke salat uden tilsætninger, grundigt vasket og hakket i stedet for et helt blad. Aldrig fra en blandet salat."
       },
       "child": {
         "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
@@ -34678,7 +34838,8 @@
         "pl": "Psy mogą schrupać odrobinę zwykłej sałaty. Dorosły dokładnie ją myje i drobno kroi. Żadnych resztek sałatki, proszę!",
         "cs": "Pejsek může chroupnout trochu salátu bez dalších přísad. Dospělý ho omyje a nakrájí na malé kousky. Zbytky salátu ale ne, prosím!",
         "hr": "Psi smiju grickati malo obične zelene salate. Odrasla osoba je opere i nasjecka na sitno. Ostatke salate ne, molim te!",
-        "sv": "Hundar kan mumsa på lite sallat utan tillsatser. En vuxen tvättar den och hackar den smått. Inga rester av sallad, tack!"
+        "sv": "Hundar kan mumsa på lite sallat utan tillsatser. En vuxen tvättar den och hackar den smått. Inga rester av sallad, tack!",
+        "da": "Hunde må gerne gnaske lidt salat uden tilsætninger. En voksen vasker den og hakker den i små stykker. Ingen salatrester, tak!"
       },
       "faq": [
         {
@@ -34689,7 +34850,8 @@
             "pl": "Czy psy mogą jeść sałatkę?",
             "cs": "Mohou psi jíst salát?",
             "hr": "Smiju li psi jesti salatu?",
-            "sv": "Får hundar äta sallad?"
+            "sv": "Får hundar äta sallad?",
+            "da": "Må hunde spise en blandet salat?"
           },
           "a": {
             "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
@@ -34698,7 +34860,8 @@
             "pl": "Resztek z twojej sałatki lepiej nie dawać: sałatki często zawierają składniki toksyczne dla psów, na przykład cebulę. Zwykły kawałek sałaty od czasu do czasu jest w porządku.",
             "cs": "Zbytky vašeho salátu ne: saláty často obsahují přísady, které jsou pro psy toxické, například cibuli. Občas kousek hlávkového salátu bez dalších přísad je v pořádku.",
             "hr": "Ne ostatke tvoje salate: salate često sadrže sastojke otrovne za pse, poput luka. Običan komadić zelene salate povremeno je u redu.",
-            "sv": "Inte rester av din sallad: sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. En bit sallat utan tillsatser då och då går bra."
+            "sv": "Inte rester av din sallad: sallader innehåller ofta ingredienser som är giftiga för hundar, till exempel lök. En bit sallat utan tillsatser då och då går bra.",
+            "da": "Ikke rester af din egen salat: salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Et stykke salat uden tilsætninger af og til er fint."
           }
         }
       ],
@@ -40736,7 +40899,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Raw potatoes",
@@ -40745,7 +40909,8 @@
         "pl": "Surowe ziemniaki",
         "cs": "Syrové brambory",
         "hr": "Sirovi krumpir",
-        "sv": "Rå potatis"
+        "sv": "Rå potatis",
+        "da": "Rå kartofler"
       },
       "question": {
         "en": "Can dogs eat raw potatoes?",
@@ -40754,7 +40919,8 @@
         "pl": "Czy psy mogą jeść surowe ziemniaki?",
         "cs": "Mohou psi jíst syrové brambory?",
         "hr": "Smiju li psi jesti sirovi krumpir?",
-        "sv": "Får hundar äta rå potatis?"
+        "sv": "Får hundar äta rå potatis?",
+        "da": "Må hunde spise rå kartofler?"
       },
       "url_slug": {
         "en": "raw-potatoes",
@@ -40763,7 +40929,8 @@
         "pl": "surowe-ziemniaki",
         "cs": "syrove-brambory",
         "hr": "sirovi-krumpir",
-        "sv": "ra-potatis"
+        "sv": "ra-potatis",
+        "da": "raa-kartofler"
       },
       "answer": {
         "en": "No, don't give your dog raw potatoes. Raw and green potatoes are unsafe and potentially toxic because they contain solanine, a natural toxin. Plain, well-cooked potato is different and is fine in moderation.",
@@ -40772,7 +40939,8 @@
         "pl": "Nie, nie dawaj psu surowych ziemniaków. Surowe i zazielenione ziemniaki są niebezpieczne i potencjalnie toksyczne, bo zawierają solaninę, naturalną toksynę. Co innego zwykły, dobrze ugotowany ziemniak – w umiarkowanej ilości jest w porządku.",
         "cs": "Ne, nedávejte psovi syrové brambory. Syrové a zelené brambory jsou nebezpečné a potenciálně toxické, protože obsahují solanin, přírodní toxin. Brambory bez dalších přísad, důkladně uvařené, jsou jiná věc a v mírném množství jsou v pořádku.",
         "hr": "Ne, ne daj psu sirov krumpir. Sirov i zelen krumpir nije siguran i potencijalno je otrovan jer sadrži solanin, prirodni toksin. Običan, dobro termički obrađen krumpir druga je stvar i u umjerenim je količinama u redu.",
-        "sv": "Nej, ge inte hunden rå potatis. Rå och grön potatis är inte säker och kan vara giftig, eftersom den innehåller solanin, ett naturligt gift. Väl kokt potatis utan tillsatser är en annan sak och går bra med måtta."
+        "sv": "Nej, ge inte hunden rå potatis. Rå och grön potatis är inte säker och kan vara giftig, eftersom den innehåller solanin, ett naturligt gift. Väl kokt potatis utan tillsatser är en annan sak och går bra med måtta.",
+        "da": "Nej, giv ikke din hund rå kartofler. Rå og grønne kartofler er ikke sikre og kan være giftige, fordi de indeholder solanin, et naturligt giftstof. Gennemkogte kartofler uden tilsætninger er noget andet og fine i moderate mængder."
       },
       "why": {
         "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
@@ -40781,7 +40949,8 @@
         "pl": "Surowe ziemniaki oraz ziemniaki z zieloną skórką lub zielonymi plamami zawierają solaninę, naturalnie występującą toksynę roślin z rodziny psiankowatych. Zielone plamy pojawiają się, gdy niektóre ziemniaki są wystawione na światło, i oznaczają, że poziom solaniny wzrósł. Kawałki surowego lub niedogotowanego ziemniaka mogą też grozić zadławieniem.",
         "cs": "Syrové brambory a brambory se zelenou slupkou nebo zelenými skvrnami obsahují solanin, přirozeně se vyskytující toxin z rostlin čeledi lilkovitých. Zelené skvrny se objevují, když jsou některé brambory vystaveny světlu, a ukazují, že se zvýšil obsah solaninu. Kousky syrových nebo nedovařených brambor mohou také představovat riziko zadušení.",
         "hr": "Sirov krumpir te krumpir sa zelenom korom ili zelenim mrljama sadrže solanin, prirodno prisutan toksin u biljkama iz porodice pomoćnica. Zelene se mrlje pojavljuju kad je krumpir izložen svjetlu i pokazuju da se količina solanina povećala. Komadi sirovog ili napola kuhanog krumpira mogu uzrokovati i gušenje.",
-        "sv": "Rå potatis, och potatis med grönt skal eller gröna fläckar, innehåller solanin, ett naturligt gift som finns i växter inom familjen potatisväxter. Gröna fläckar uppstår när potatis utsätts för ljus och visar att solaninhalten har ökat. Bitar av rå eller halvkokt potatis kan dessutom ge kvävning."
+        "sv": "Rå potatis, och potatis med grönt skal eller gröna fläckar, innehåller solanin, ett naturligt gift som finns i växter inom familjen potatisväxter. Gröna fläckar uppstår när potatis utsätts för ljus och visar att solaninhalten har ökat. Bitar av rå eller halvkokt potatis kan dessutom ge kvävning.",
+        "da": "Rå kartofler og kartofler med grøn skal eller grønne pletter indeholder solanin, et naturligt giftstof, som findes i planter i natskyggefamilien. Grønne pletter opstår, når nogle kartofler udsættes for lys, og viser at indholdet af solanin er steget. Stykker af rå eller halvkogt kartoffel kan også sætte sig fast i halsen."
       },
       "signs": {
         "en": [
@@ -40825,6 +40994,12 @@
           "Diarré",
           "Slöhet",
           "Muskelsvaghet"
+        ],
+        "da": [
+          "Opkast",
+          "Diarré",
+          "Sløvhed",
+          "Muskelsvaghed"
         ]
       },
       "what_to_do": {
@@ -40834,7 +41009,8 @@
         "pl": "Jeśli pies zjadł surowy lub zielony ziemniak, skontaktuj się z weterynarzem lub zadzwoń na telefon informacji toksykologicznej dla zwierząt. Dalsze postępowanie zależy od wielkości psa, ilości zjedzonego ziemniaka i tego, czy pojawiły się objawy. Jeśli pies wymiotuje, ma biegunkę, wydaje się ospały lub osłabiony, od razu jedź z nim do weterynarza.",
         "cs": "Pokud váš pes snědl syrovou nebo zelenou bramboru, obraťte se na veterináře nebo na toxikologickou linku pro zvířata. Další postup závisí na velikosti psa, na tom, kolik snědl, a na tom, zda má příznaky. Pokud pes zvrací, má průjem, působí malátně nebo slabě, jděte okamžitě k veterináři.",
         "hr": "Ako je tvoj pas pojeo sirov ili zelen krumpir, obrati se veterinaru ili telefonskoj liniji za otrovanja životinja. Što dalje, ovisi o veličini psa, pojedenoj količini i o tome ima li znakova. Ako pas povraća, ima proljev, djeluje malaksalo ili slabo, odmah ga odvedi veterinaru.",
-        "sv": "Om hunden har ätit rå eller grön potatis, kontakta veterinären eller en giftrådgivning för djur. Vad du ska göra beror på hundens storlek, hur mycket den har ätit och om den har symtom. Om hunden kräks, har diarré eller verkar slö eller svag ska du kontakta veterinär direkt."
+        "sv": "Om hunden har ätit rå eller grön potatis, kontakta veterinären eller en giftrådgivning för djur. Vad du ska göra beror på hundens storlek, hur mycket den har ätit och om den har symtom. Om hunden kräks, har diarré eller verkar slö eller svag ska du kontakta veterinär direkt.",
+        "da": "Hvis din hund har spist rå eller grøn kartoffel, skal du kontakte din dyrlæge eller en giftrådgivning for dyr. Hvad du skal gøre derefter, afhænger af hundens størrelse, hvor meget den har spist, og om den har symptomer. Hvis hunden kaster op, har diarré eller virker sløv eller svag, skal du straks tage til dyrlæge."
       },
       "serving": null,
       "child": {
@@ -40844,7 +41020,8 @@
         "pl": "Surowe ziemniaki nie są dla psów. Jeśli twój pies capnie kawałek, od razu powiedz dorosłemu.",
         "cs": "Syrové brambory nejsou pro psy. Pokud pes nějaký popadne, hned to řekni dospělému.",
         "hr": "Sirov krumpir nije za pse. Ako ga pas zgrabi, odmah reci odrasloj osobi.",
-        "sv": "Rå potatis är inte för hundar. Om en hund får tag i en bit, säg det till en vuxen direkt."
+        "sv": "Rå potatis är inte för hundar. Om en hund får tag i en bit, säg det till en vuxen direkt.",
+        "da": "Rå kartofler er ikke til hunde. Hvis en hund snupper en, så sig det til en voksen med det samme."
       },
       "faq": [
         {
@@ -40855,7 +41032,8 @@
             "pl": "Czy ugotowane ziemniaki są dla psów w porządku?",
             "cs": "Jsou uvařené brambory pro psy v pořádku?",
             "hr": "Je li termički obrađen krumpir u redu za pse?",
-            "sv": "Går kokt potatis bra för hundar?"
+            "sv": "Går kokt potatis bra för hundar?",
+            "da": "Er kogte kartofler i orden for hunde?"
           },
           "a": {
             "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
@@ -40864,7 +41042,8 @@
             "pl": "Tak, zwykłe ugotowane ziemniaki w umiarkowanych ilościach są w porządku, o ile są na tyle miękkie, że da się je rozgnieść – wtedy pies się nie zadławi. Upewnij się, że nie są zielone.",
             "cs": "Ano, brambory bez dalších přísad jsou v mírném množství v pořádku, pokud jsou uvařené tak, aby se daly rozmačkat a pes se jimi nezadusil. Dbejte na to, aby nebyly zelené.",
             "hr": "Da, običan termički obrađen krumpir u umjerenim je količinama u redu, ako je obrađen toliko da se može zgnječiti kako se pas ne bi ugušio. Pazi da nije zelen.",
-            "sv": "Ja, kokt potatis utan tillsatser går bra med måtta. Koka den så mjuk att den går att mosa, så att hunden inte sätter den i halsen. Kontrollera att den inte är grön."
+            "sv": "Ja, kokt potatis utan tillsatser går bra med måtta. Koka den så mjuk att den går att mosa, så att hunden inte sätter den i halsen. Kontrollera att den inte är grön.",
+            "da": "Ja, kogte kartofler uden tilsætninger er fine i moderate mængder. Kog dem så møre, at de kan moses, så de ikke sætter sig fast i halsen. Sørg for, at de ikke er grønne."
           }
         },
         {
@@ -40875,7 +41054,8 @@
             "pl": "Czy psy mogą jeść skórki ziemniaków?",
             "cs": "Mohou psi jíst bramborové slupky?",
             "hr": "Smiju li psi jesti koru krumpira?",
-            "sv": "Får hundar äta potatisskal?"
+            "sv": "Får hundar äta potatisskal?",
+            "da": "Må hunde spise kartoffelskræl?"
           },
           "a": {
             "en": "Potato skins are okay, but not if they are green.",
@@ -40884,7 +41064,8 @@
             "pl": "Skórki ziemniaków są w porządku, ale nie wtedy, gdy są zielone.",
             "cs": "Bramborové slupky jsou v pořádku, ale ne zelené.",
             "hr": "Kora krumpira je u redu, ali ne ako je zelena.",
-            "sv": "Potatisskal går bra, men inte om de är gröna."
+            "sv": "Potatisskal går bra, men inte om de är gröna.",
+            "da": "Skrællen er i orden, men ikke hvis den er grøn."
           }
         }
       ],
@@ -40922,7 +41103,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Pumpkin",
@@ -40931,7 +41113,8 @@
         "pl": "Dynia",
         "cs": "Dýně",
         "hr": "Bundeva",
-        "sv": "Pumpa"
+        "sv": "Pumpa",
+        "da": "Græskar"
       },
       "question": {
         "en": "Can dogs eat pumpkin?",
@@ -40940,7 +41123,8 @@
         "pl": "Czy psy mogą jeść dynię?",
         "cs": "Mohou psi jíst dýni?",
         "hr": "Smiju li psi jesti bundevu?",
-        "sv": "Får hundar äta pumpa?"
+        "sv": "Får hundar äta pumpa?",
+        "da": "Må hunde spise græskar?"
       },
       "url_slug": {
         "en": "pumpkin",
@@ -40949,7 +41133,8 @@
         "pl": "dynia",
         "cs": "dyne",
         "hr": "bundeva",
-        "sv": "pumpa"
+        "sv": "pumpa",
+        "da": "graeskar"
       },
       "answer": {
         "en": "Yes, plain cooked pumpkin is a healthy food for dogs. Choose fresh cooked pumpkin or plain canned pumpkin puree, never pumpkin pie filling, and don't share uncooked rinds.",
@@ -40958,7 +41143,8 @@
         "pl": "Tak, zwykła ugotowana dynia jest dla psów zdrowa. Wybierz świeżą ugotowaną dynię albo zwykłe puree z dyni z puszki – nigdy nadzienia do placka z dyni. Nie dawaj też nieugotowanej skórki.",
         "cs": "Ano, tepelně upravená dýně bez dalších přísad je pro psy zdravá. Vyberte čerstvou uvařenou dýni nebo čisté dýňové pyré z konzervy, nikdy ne náplň do dýňového koláče, a nedávejte psovi nevařenou slupku.",
         "hr": "Da, obična termički obrađena bundeva zdrava je hrana za pse. Odaberi svježu termički obrađenu bundevu ili običan pire od bundeve iz konzerve, nikad nadjev za pitu od bundeve, i ne daj psu sirovu koru.",
-        "sv": "Ja, kokt pumpa utan tillsatser är nyttigt för hundar. Välj nykokt pumpa eller ren pumpapuré på burk, aldrig fyllning till pumpapaj, och ge inte hunden okokta skal."
+        "sv": "Ja, kokt pumpa utan tillsatser är nyttigt för hundar. Välj nykokt pumpa eller ren pumpapuré på burk, aldrig fyllning till pumpapaj, och ge inte hunden okokta skal.",
+        "da": "Ja, kogt græskar uden tilsætninger er sund mad for hunde. Vælg friskt kogt græskar eller græskarpuré på dåse uden tilsætninger, aldrig fyld til græskartærte, og del ikke rå græskarskal."
       },
       "why": {
         "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
@@ -40967,7 +41153,8 @@
         "pl": "Czysta dynia jest pełna przeciwutleniaczy i może pomagać psom zarówno przy biegunce, jak i przy zaparciach. Nadzienie do placka z dyni może zawierać ksylitol, który jest toksyczny, a także inne przyprawy i dodatki, które mogą szkodzić. Nieugotowana skórka jest twarda i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
         "cs": "Čistá dýně je plná antioxidantů a psům může pomáhat při průjmu i při zácpě. Náplň do dýňového koláče může obsahovat xylitol, který je toxický, a také koření a další přísady, které by mohly škodit. Nevařená slupka je tvrdá a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
         "hr": "Čista je bundeva puna antioksidansa i može pomoći psima i kod proljeva i kod zatvora. Nadjev za pitu od bundeve može sadržavati ksilitol, koji je otrovan, te druge začine i dodatke koji bi mogli biti štetni. Sirova je kora žilava i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
-        "sv": "Ren pumpa är full av antioxidanter och kan hjälpa vid både diarré och förstoppning hos hundar. Fyllning till pumpapaj kan innehålla xylitol, som är giftigt, samt kryddor och andra tillsatser som kan vara skadliga. Okokta skal är sega och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen."
+        "sv": "Ren pumpa är full av antioxidanter och kan hjälpa vid både diarré och förstoppning hos hundar. Fyllning till pumpapaj kan innehålla xylitol, som är giftigt, samt kryddor och andra tillsatser som kan vara skadliga. Okokta skal är sega och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen.",
+        "da": "Rent græskar er fyldt med antioxidanter og kan hjælpe mod både diarré og forstoppelse hos hunde. Fyld til græskartærte kan indeholde xylitol, som er giftigt, samt andre krydderier og tilsætningsstoffer, der kan være skadelige. Rå græskarskal er hård og fibrøs: den kan sætte sig fast i halsen, er svær at fordøje og kan give tarmblokering."
       },
       "signs": null,
       "what_to_do": {
@@ -40977,7 +41164,8 @@
         "pl": "Jak przy każdym nowym pokarmie, zapytaj weterynarza, zanim dodasz dynię do psiego jadłospisu.",
         "cs": "Jako u každé nové potraviny se před zařazením dýně do jídelníčku psa poraďte s veterinářem.",
         "hr": "Kao i kod svake nove hrane, pitaj veterinara prije nego što bundevu uvedeš u prehranu svog psa.",
-        "sv": "Som med all ny mat: fråga veterinären innan du lägger till pumpa i hundens vanliga kost."
+        "sv": "Som med all ny mat: fråga veterinären innan du lägger till pumpa i hundens vanliga kost.",
+        "da": "Som med alle nye fødevarer: spørg din dyrlæge, før du begynder at give din hund græskar."
       },
       "serving": {
         "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
@@ -40986,7 +41174,8 @@
         "pl": "Świeża, obrana i ugotowana, bez dodatków, albo zwykłe puree z dyni z puszki, bez dodatku cukru, przypraw ani sztucznych aromatów. Bez nadzienia do placka i bez surowej skórki.",
         "cs": "Čerstvá, uvařená, bez dodatků a oloupaná, nebo čisté dýňové pyré z konzervy bez přidaného cukru, koření a umělých aromat. Žádná náplň do koláče a žádná syrová slupka.",
         "hr": "Svježa, termički obrađena, obična i oguljena, ili običan pire od bundeve iz konzerve, bez dodanog šećera, začina i umjetnih aroma. Bez nadjeva za pitu i bez sirove kore.",
-        "sv": "Nykokt, skalad och utan tillsatser, eller ren pumpapuré på burk, utan tillsatt socker, kryddor eller konstgjorda smaker. Ingen pajfyllning och inget rått skal."
+        "sv": "Nykokt, skalad och utan tillsatser, eller ren pumpapuré på burk, utan tillsatt socker, kryddor eller konstgjorda smaker. Ingen pajfyllning och inget rått skal.",
+        "da": "Friskt græskar, kogt, skrællet og uden tilsætninger, eller græskarpuré på dåse uden tilsat sukker, krydderier eller kunstige smagsstoffer. Intet tærtefyld og ingen rå skal."
       },
       "child": {
         "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
@@ -40995,7 +41184,8 @@
         "pl": "Psy mogą zjeść odrobinę zwykłej ugotowanej dyni. Dorosły dopilnuje, żeby to nie było słodkie nadzienie do placka!",
         "cs": "Pejsek si může pochutnat na troše uvařené dýně bez dalších přísad. Dospělý dohlédne, aby to nebyla sladká náplň do koláče!",
         "hr": "Psi mogu uživati u malo obične kuhane bundeve. Odrasla osoba neka pripazi da to nije slatki nadjev za pitu!",
-        "sv": "Hundar kan njuta av lite kokt pumpa utan tillsatser. En vuxen ser till att det inte är söt pajfyllning!"
+        "sv": "Hundar kan njuta av lite kokt pumpa utan tillsatser. En vuxen ser till att det inte är söt pajfyllning!",
+        "da": "Hunde må gerne få lidt kogt græskar uden tilsætninger. En voksen sørger for, at det ikke er sødt tærtefyld!"
       },
       "faq": [
         {
@@ -41006,7 +41196,8 @@
             "pl": "Czy psy mogą jeść nadzienie do placka z dyni?",
             "cs": "Mohou psi jíst náplň do dýňového koláče?",
             "hr": "Smiju li psi jesti nadjev za pitu od bundeve?",
-            "sv": "Får hundar äta fyllning till pumpapaj?"
+            "sv": "Får hundar äta fyllning till pumpapaj?",
+            "da": "Må hunde spise fyld til græskartærte?"
           },
           "a": {
             "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
@@ -41015,7 +41206,8 @@
             "pl": "Nie. Nadzienie do placka z dyni może zawierać ksylitol, słodzik toksyczny dla psów, oraz inne przyprawy i dodatki, które mogą szkodzić.",
             "cs": "Ne. Náplň do dýňového koláče může obsahovat xylitol, sladidlo toxické pro psy, a také koření a další přísady, které by mohly škodit.",
             "hr": "Ne. Nadjev za pitu od bundeve može sadržavati ksilitol, sladilo otrovno za pse, te druge začine i dodatke koji bi mogli biti štetni.",
-            "sv": "Nej. Fyllning till pumpapaj kan innehålla xylitol, ett sötningsmedel som är giftigt för hundar, samt kryddor och andra tillsatser som kan vara skadliga."
+            "sv": "Nej. Fyllning till pumpapaj kan innehålla xylitol, ett sötningsmedel som är giftigt för hundar, samt kryddor och andra tillsatser som kan vara skadliga.",
+            "da": "Nej. Fyld til græskartærte kan indeholde xylitol, et sødemiddel, som er giftigt for hunde, samt andre krydderier og tilsætningsstoffer, der kan være skadelige."
           }
         },
         {
@@ -41026,7 +41218,8 @@
             "pl": "Czy psy mogą jeść surową skórkę dyni?",
             "cs": "Mohou psi jíst syrovou dýňovou slupku?",
             "hr": "Smiju li psi jesti sirovu koru bundeve?",
-            "sv": "Får hundar äta rått pumpaskal?"
+            "sv": "Får hundar äta rått pumpaskal?",
+            "da": "Må hunde spise rå græskarskal?"
           },
           "a": {
             "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
@@ -41035,7 +41228,8 @@
             "pl": "Nie. Nieugotowana skórka jest twarda, zbita i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
             "cs": "Ne. Nevařená slupka je tvrdá, hutná a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
             "hr": "Ne. Sirova je kora žilava, gusta i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
-            "sv": "Nej. Okokta skal är sega, täta och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen."
+            "sv": "Nej. Okokta skal är sega, täta och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen.",
+            "da": "Nej. Rå græskarskal er hård, tæt og fibrøs: den kan sætte sig fast i halsen, er svær at fordøje og kan give tarmblokering."
           }
         }
       ],
@@ -45022,7 +45216,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Spinach",
@@ -45031,7 +45226,8 @@
         "pl": "Szpinak",
         "cs": "Špenát",
         "hr": "Špinat",
-        "sv": "Spenat"
+        "sv": "Spenat",
+        "da": "Spinat"
       },
       "question": {
         "en": "Can dogs eat spinach?",
@@ -45040,7 +45236,8 @@
         "pl": "Czy psy mogą jeść szpinak?",
         "cs": "Mohou psi jíst špenát?",
         "hr": "Smiju li psi jesti špinat?",
-        "sv": "Får hundar äta spenat?"
+        "sv": "Får hundar äta spenat?",
+        "da": "Må hunde spise spinat?"
       },
       "url_slug": {
         "en": "spinach",
@@ -45049,7 +45246,8 @@
         "pl": "szpinak",
         "cs": "spenat",
         "hr": "spinat",
-        "sv": "spenat"
+        "sv": "spenat",
+        "da": "spinat"
       },
       "answer": {
         "en": "Dogs can eat spinach, but it isn't one of the best vegetables to share with them. It is high in oxalic acid, which blocks calcium absorption and can lead to kidney damage. A dog would have to eat a lot to be harmed, but another vegetable is a better choice.",
@@ -45058,7 +45256,8 @@
         "pl": "Psy mogą jeść szpinak, ale to nie najlepszy wybór spośród warzyw. Zawiera dużo kwasu szczawiowego, który blokuje wchłanianie wapnia i może prowadzić do uszkodzenia nerek. Pies musiałby zjeść go bardzo dużo, żeby sobie zaszkodzić, ale lepiej wybrać inne warzywo.",
         "cs": "Psi špenát jíst mohou, ale není to nejlepší zelenina, kterou s nimi můžete sdílet. Obsahuje hodně kyseliny šťavelové, která blokuje vstřebávání vápníku a může vést k poškození ledvin. Pes by musel sníst hodně, aby mu uškodil, ale jiná zelenina je lepší volbou.",
         "hr": "Psi smiju jesti špinat, ali nije među najboljim povrćem koje možeš dijeliti s njima. Sadrži mnogo oksalne kiseline, koja blokira apsorpciju kalcija i može dovesti do oštećenja bubrega. Pas bi morao pojesti mnogo da bi mu naštetilo, ali drugo je povrće bolji izbor.",
-        "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak."
+        "sv": "Hundar kan äta spenat, men det är inte en av de bästa grönsakerna att dela med dem. Spenat innehåller mycket oxalsyra, som hindrar upptaget av kalcium och kan leda till njurskador. En hund skulle behöva äta mycket för att skadas, men välj hellre en annan grönsak.",
+        "da": "Hunde kan spise spinat, men det er ikke en af de bedste grøntsager at dele med dem. Spinat indeholder meget oxalsyre, som blokerer for optagelsen af calcium og kan give nyreskader. En hund skal spise store mængder for at tage skade, men en anden grøntsag er et bedre valg."
       },
       "why": {
         "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
@@ -45067,7 +45266,8 @@
         "pl": "Szpinak zawiera dużo kwasu szczawiowego, który blokuje zdolność organizmu do wchłaniania wapnia i może prowadzić do uszkodzenia nerek. Psy ze zdrowymi nerkami radzą sobie z małymi ilościami i musiałyby zjeść bardzo duże ilości, żeby sobie zaszkodzić, ale jedzenie go przez długi czas może obciążać nerki. Ponieważ źródła radzą wybrać inne warzywo, uznajemy go za niezalecany.",
         "cs": "Špenát obsahuje hodně kyseliny šťavelové, která brání tělu ve vstřebávání vápníku a může vést k poškození ledvin. Psi se zdravýma ledvinama zvládnou malé množství zpracovat a pes by musel sníst opravdu velké množství, aby mu uškodil, ale dlouhodobé krmení špenátem může ledviny zatěžovat. Protože zdroje radí zvolit raději jinou zeleninu, řadíme ho mezi nedoporučované.",
         "hr": "Špinat sadrži mnogo oksalne kiseline, koja tijelu otežava apsorpciju kalcija i može dovesti do oštećenja bubrega. Psi sa zdravim bubrezima mogu preraditi male količine, a pas bi morao pojesti vrlo velike količine da bi mu naštetilo, ali dugotrajno jedenje špinata može opteretiti bubrege. Budući da izvori savjetuju drugo povrće, ocjenjujemo ga kao namirnicu koju ne preporučujemo.",
-        "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”."
+        "sv": "Spenat innehåller mycket oxalsyra, som försämrar kroppens upptag av kalcium och kan leda till njurskador. Hundar med friska njurar klarar små mängder, och en hund skulle behöva äta mycket stora mängder för att skadas, men om den äter spenat under lång tid kan det belasta njurarna. Eftersom källorna rekommenderar att man väljer en annan grönsak bedömer vi spenat som ”rekommenderas inte”.",
+        "da": "Spinat indeholder meget oxalsyre, som blokerer for kroppens optagelse af calcium og kan give nyreskader. Hunde med sunde nyrer kan klare små mængder, og en hund skal spise meget store mængder for at tage skade, men hvis den får spinat over lang tid, kan nyrerne blive belastet. Fordi kilderne anbefaler at vælge en anden grøntsag, vurderer vi spinat som ikke anbefalet."
       },
       "signs": {
         "en": [
@@ -45097,6 +45297,10 @@
         "sv": [
           "Muskelsvaghet (efter att ha ätit spenat under lång tid)",
           "Onormal hjärtrytm (efter att ha ätit spenat under lång tid)"
+        ],
+        "da": [
+          "Muskelsvaghed (hvis hunden får spinat over lang tid)",
+          "Unormal hjerterytme (hvis hunden får spinat over lang tid)"
         ]
       },
       "what_to_do": {
@@ -45106,7 +45310,8 @@
         "pl": "Zawsze zapytaj weterynarza, zanim dodasz szpinak do psiej diety, nawet jako przekąskę. Jeśli twój pies jest skłonny do kamieni nerkowych lub pęcherzowych, unikaj szpinaku.",
         "cs": "Před zařazením špenátu do jídelníčku psa, i jako pamlsku, se vždy poraďte s veterinářem. Pokud je váš pes náchylný ke kamenům v ledvinách nebo močovém měchýři, špenátu se vyhněte.",
         "hr": "Uvijek pitaj veterinara prije nego što špinat uvedeš u prehranu svog psa, čak i kao užinu. Ako je tvoj pas sklon kamencima u bubrezima ili mokraćnom mjehuru, izbjegavaj špinat.",
-        "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat."
+        "sv": "Fråga alltid veterinären innan du lägger till spenat i hundens kost, även som lite extra godbit. Om hunden lätt får njur- eller blåsstenar bör du undvika spenat.",
+        "da": "Spørg altid din dyrlæge, før du giver din hund spinat, også som snack. Hvis din hund er udsat for nyre- eller blæresten, skal du undgå spinat."
       },
       "serving": {
         "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
@@ -45115,7 +45320,8 @@
         "pl": "Tylko za zgodą weterynarza i gdy nerki psa są zdrowe: małe ilości, rzadko, gotowany na parze, bez przypraw, ziół, soli, oleju, cebuli i czosnku.",
         "cs": "Jen pokud s tím veterinář souhlasí a pes má zdravé ledviny: malé množství, zřídka, spařený, bez koření, bylinek, soli, oleje, cibule a česneku.",
         "hr": "Samo ako se veterinar slaže i ako pas ima zdrave bubrege: male količine, rijetko, kuhan na pari, bez začina, začinskog bilja, soli, ulja, luka i češnjaka.",
-        "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök."
+        "sv": "Bara om veterinären tycker att det är okej och hundens njurar är friska: små mängder, sällan, ångad, utan kryddor, örter, salt, olja, lök eller vitlök.",
+        "da": "Kun hvis din dyrlæge er enig, og hundens nyrer er sunde: små mængder, sjældent, dampet, uden krydderier, krydderurter, salt, olie, løg eller hvidløg."
       },
       "child": {
         "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
@@ -45124,7 +45330,8 @@
         "pl": "Szpinak nie jest świetną przekąską dla psów. Poproś dorosłego, żeby wybrał dla twojego psa inne warzywo.",
         "cs": "Špenát není pro psy skvělá svačinka. Požádej dospělého, ať pejskovi vybere jinou zeleninu.",
         "hr": "Špinat nije sjajna užina za pse. Zamoli odraslu osobu da za tvog psa odabere neko drugo povrće.",
-        "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden."
+        "sv": "Spenat är ingen bra godbit för hundar. Be en vuxen välja en annan grönsak åt hunden.",
+        "da": "Spinat er ikke nogen god snack til hunde. Bed en voksen vælge en anden grøntsag til din hund."
       },
       "faq": [
         {
@@ -45135,7 +45342,8 @@
             "pl": "Czy dla psa lepszy jest szpinak surowy, czy gotowany?",
             "cs": "Je pro psy lepší syrový, nebo tepelně upravený špenát?",
             "hr": "Je li psima bolji sirov ili termički obrađen špinat?",
-            "sv": "Är rå eller kokt spenat bättre för hundar?"
+            "sv": "Är rå eller kokt spenat bättre för hundar?",
+            "da": "Er rå eller kogt spinat bedst for hunde?"
           },
           "a": {
             "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
@@ -45144,7 +45352,8 @@
             "pl": "Jeśli już go dajesz, ugotuj go na parze: surowy szpinak jest dla psa trudny do strawienia, a szpinak gotowany w wodzie traci większość składników odżywczych.",
             "cs": "Pokud ho psovi přesto dáváte, spařte ho: syrový se špatně tráví a vařený přichází o většinu živin.",
             "hr": "Ako ga već daješ, skuhaj ga na pari: sirov se psu teško probavlja, a špinat kuhan u vodi gubi većinu hranjivih tvari.",
-            "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen."
+            "sv": "Om du ger spenat, ånga den: rå spenat är svår för en hund att smälta, och kokt spenat förlorar det mesta av näringen.",
+            "da": "Hvis du giver spinat, så damp den: rå spinat er svær for en hund at fordøje, og kogt spinat mister det meste af sit næringsindhold."
           }
         }
       ],
@@ -45760,7 +45969,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Sweet potato",
@@ -45769,7 +45979,8 @@
         "pl": "Batat",
         "cs": "Batáty",
         "hr": "Batat",
-        "sv": "Sötpotatis"
+        "sv": "Sötpotatis",
+        "da": "Søde kartofler"
       },
       "question": {
         "en": "Can dogs eat sweet potato?",
@@ -45778,7 +45989,8 @@
         "pl": "Czy psy mogą jeść batat?",
         "cs": "Mohou psi jíst batáty?",
         "hr": "Smiju li psi jesti batat?",
-        "sv": "Får hundar äta sötpotatis?"
+        "sv": "Får hundar äta sötpotatis?",
+        "da": "Må hunde spise søde kartofler?"
       },
       "url_slug": {
         "en": "sweet-potato",
@@ -45787,7 +45999,8 @@
         "pl": "batat",
         "cs": "bataty",
         "hr": "batat",
-        "sv": "sotpotatis"
+        "sv": "sotpotatis",
+        "da": "soede-kartofler"
       },
       "answer": {
         "en": "Yes, in small amounts, cooked and peeled. Soft boiled or steamed sweet potato is fine as a treat, but never give raw sweet potato: it is hard to chew, can upset the stomach and may cause an intestinal blockage.",
@@ -45796,7 +46009,8 @@
         "pl": "Tak, w małych ilościach, ugotowany i obrany. Miękki batat gotowany w wodzie lub na parze jest w porządku jako smakołyk, ale nigdy nie dawaj surowego: jest twardy i trudno go pogryźć, może rozstroić żołądek i spowodować niedrożność jelit.",
         "cs": "Ano, v malém množství, tepelně upravené a oloupané. Měkce uvařený nebo spařený batát je jako pamlsek v pořádku, ale syrový batát psovi nikdy nedávejte: špatně se kouše, může dráždit žaludek a způsobit ucpání střev.",
         "hr": "Da, u malim količinama, termički obrađen i oguljen. Batat kuhan do mekoće u vodi ili na pari u redu je kao poslastica, ali psu nikad ne daj sirov batat: teško se žvače, može nadražiti želudac i izazvati začepljenje crijeva.",
-        "sv": "Ja, i små mängder, kokt och skalad. Mjukkokt eller ångad sötpotatis går bra som godbit, men ge aldrig rå sötpotatis: den är svår att tugga, kan ge orolig mage och kan orsaka stopp i tarmen."
+        "sv": "Ja, i små mängder, kokt och skalad. Mjukkokt eller ångad sötpotatis går bra som godbit, men ge aldrig rå sötpotatis: den är svår att tugga, kan ge orolig mage och kan orsaka stopp i tarmen.",
+        "da": "Ja, i små mængder, kogt og skrællet. Sød kartoffel, der er kogt eller dampet blød, er fin som godbid, men giv aldrig rå sød kartoffel: den er svær at tygge, kan give ondt i maven og kan give tarmblokering."
       },
       "why": {
         "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
@@ -45805,7 +46019,8 @@
         "pl": "Bataty nie są trujące, ale surowe są twarde i trudno je pogryźć, a mogą spowodować niedrożność jelit, a skórka utrudnia ich trawienie. Zbyt duża ilość może powodować osłabienie kości i mięśni z powodu nadmiaru witaminy A, a ich wysoki indeks glikemiczny oznacza, że u psów z cukrzycą trzeba zachować ostrożność. Najnowsze badania sugerują, że mogą nie pasować do psiej diety, a w żadnym razie nie powinny być jej głównym źródłem pożywienia.",
         "cs": "Batáty nejsou jedovaté, ale syrové se špatně kousají a mohou způsobit ucpání střev; se slupkou se navíc hůř tráví. Příliš mnoho může kvůli nadbytku vitaminu A způsobit slabost kostí a svalů a kvůli vysokému glykemickému indexu je u psů s cukrovkou potřeba opatrnost. Nedávný výzkum naznačuje, že se do psího jídelníčku nemusí hodit, a hlavním zdrojem výživy by nikdy neměly být.",
         "hr": "Batat nije otrovan, ali se sirov teško žvače i može izazvati začepljenje crijeva, a s korom se teže probavlja. Previše batata može zbog viška vitamina A uzrokovati slabost kostiju i mišića, a zbog visokog glikemijskog indeksa potreban je oprez kod pasa s dijabetesom. Nedavna istraživanja upućuju na to da se možda ne uklapa u prehranu psa, a nikad ne smije biti glavni dio prehrane.",
-        "sv": "Sötpotatis är inte giftig, men rå sötpotatis är svår att tugga och kan orsaka stopp i tarmen, och skalet gör den svårare att smälta. För mycket kan ge försvagade ben och muskler på grund av för mycket vitamin A, och eftersom sötpotatis har högt glykemiskt index behöver man vara extra försiktig med hundar som har diabetes. Ny forskning tyder på att sötpotatis kanske inte passar i hundars kost, och den ska aldrig vara den främsta näringskällan."
+        "sv": "Sötpotatis är inte giftig, men rå sötpotatis är svår att tugga och kan orsaka stopp i tarmen, och skalet gör den svårare att smälta. För mycket kan ge försvagade ben och muskler på grund av för mycket vitamin A, och eftersom sötpotatis har högt glykemiskt index behöver man vara extra försiktig med hundar som har diabetes. Ny forskning tyder på att sötpotatis kanske inte passar i hundars kost, och den ska aldrig vara den främsta näringskällan.",
+        "da": "Søde kartofler er ikke giftige, men rå søde kartofler er svære at tygge og kan give tarmblokering, og skrællen gør dem sværere at fordøje. For meget kan give svaghed i knogler og muskler på grund af for meget vitamin A, og det høje glykæmiske indeks betyder, at hunde med diabetes kræver forsigtighed. Nyere forskning tyder på at de måske ikke passer til en hunds kost, og de bør aldrig være hundens vigtigste kilde til ernæring."
       },
       "signs": null,
       "what_to_do": {
@@ -45815,7 +46030,8 @@
         "pl": "Zanim zmienisz psu dietę, zapytaj weterynarza, a potem zacznij od małej ilości, żeby zobaczyć, jak pies zareaguje.",
         "cs": "Než psovi změníte jídelníček, poraďte se s veterinářem, a pak začněte malým množstvím a sledujte, jak pes reaguje.",
         "hr": "Prije promjene prehrane svog psa pitaj veterinara, a zatim počni s malom količinom da vidiš kako pas reagira.",
-        "sv": "Fråga veterinären innan du ändrar hundens kost och börja sedan med en liten mängd för att se hur hunden reagerar."
+        "sv": "Fråga veterinären innan du ändrar hundens kost och börja sedan med en liten mängd för att se hur hunden reagerar.",
+        "da": "Spørg din dyrlæge, før du ændrer din hunds kost, og start med en lille mængde for at se, hvordan din hund reagerer."
       },
       "serving": {
         "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
@@ -45824,7 +46040,8 @@
         "pl": "Gotowany w wodzie lub na parze do miękkości, bez skórki, w małych ilościach. Nigdy surowy i nigdy jako główna część diety.",
         "cs": "Uvařený nebo spařený do měkka, bez slupky, v malém množství. Nikdy syrový a nikdy jako hlavní součást jídelníčku.",
         "hr": "Kuhan u vodi ili na pari do mekoće, bez kore, u malim količinama. Nikad sirov i nikad kao glavni dio prehrane.",
-        "sv": "Kokt eller ångad tills den är mjuk, med skalet borttaget, i små mängder. Aldrig rå och aldrig huvuddelen av kosten."
+        "sv": "Kokt eller ångad tills den är mjuk, med skalet borttaget, i små mängder. Aldrig rå och aldrig huvuddelen av kosten.",
+        "da": "Kogt eller dampet, til de er bløde, med skrællen fjernet og i små mængder. Aldrig rå og aldrig hovedparten af kosten."
       },
       "child": {
         "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
@@ -45833,7 +46050,8 @@
         "pl": "Psy mogą zjeść odrobinę miękkiego, ugotowanego batata. Dorosły najpierw go obiera i gotuje.",
         "cs": "Pejsek může dostat trochu měkce uvařeného batátu. Dospělý ho nejdřív oloupe a uvaří.",
         "hr": "Psi smiju dobiti malo mekog, kuhanog batata. Odrasla osoba ga prvo oguli i skuha.",
-        "sv": "Hundar kan få lite mjuk, kokt sötpotatis. En vuxen skalar och kokar den först."
+        "sv": "Hundar kan få lite mjuk, kokt sötpotatis. En vuxen skalar och kokar den först.",
+        "da": "Hunde må gerne få lidt blød, kogt sød kartoffel. En voksen skræller og koger den først."
       },
       "faq": [
         {
@@ -45844,7 +46062,8 @@
             "pl": "Czy psy mogą jeść skórkę batata?",
             "cs": "Mohou psi jíst slupku z batátů?",
             "hr": "Smiju li psi jesti koru batata?",
-            "sv": "Får hundar äta sötpotatisskal?"
+            "sv": "Får hundar äta sötpotatisskal?",
+            "da": "Må hunde spise skrællen fra søde kartofler?"
           },
           "a": {
             "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
@@ -45853,7 +46072,8 @@
             "pl": "Najlepiej ją usunąć: batat ze skórką jest dla psa trudniejszy do strawienia.",
             "cs": "Nejlépe ji odstraňte: se slupkou se batát psovi hůř tráví.",
             "hr": "Najbolje je ukloniti je: s korom se batat psu teže probavlja.",
-            "sv": "Det är bäst att ta bort det: om skalet sitter kvar blir sötpotatisen svårare för hunden att smälta."
+            "sv": "Det är bäst att ta bort det: om skalet sitter kvar blir sötpotatisen svårare för hunden att smälta.",
+            "da": "Det er bedst at fjerne den: hvis skrællen sidder på, er sød kartoffel sværere for din hund at fordøje."
           }
         },
         {
@@ -45864,7 +46084,8 @@
             "pl": "Czy psy mogą jeść surowy batat?",
             "cs": "Mohou psi jíst syrové batáty?",
             "hr": "Smiju li psi jesti sirov batat?",
-            "sv": "Får hundar äta rå sötpotatis?"
+            "sv": "Får hundar äta rå sötpotatis?",
+            "da": "Må hunde spise rå sød kartoffel?"
           },
           "a": {
             "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
@@ -45873,7 +46094,8 @@
             "pl": "Nie. Surowy batat jest trudny do pogryzienia, może rozstroić psu żołądek i spowodować niedrożność jelit. Ugotuj go do miękkości.",
             "cs": "Ne. Syrový batát se špatně kouše, může psovi podráždit žaludek a způsobit ucpání střev. Uvařte ho do měkka.",
             "hr": "Ne. Sirov se batat teško žvače, može psu nadražiti želudac i izazvati začepljenje crijeva. Termički ga obradi do mekoće.",
-            "sv": "Nej. Rå sötpotatis är svår att tugga, kan ge hunden orolig mage och kan orsaka stopp i tarmen. Koka den tills den är mjuk."
+            "sv": "Nej. Rå sötpotatis är svår att tugga, kan ge hunden orolig mage och kan orsaka stopp i tarmen. Koka den tills den är mjuk.",
+            "da": "Nej. Rå sød kartoffel er svær at tygge, kan give din hund ondt i maven og kan give tarmblokering. Kog den, til den er blød."
           }
         }
       ],
@@ -47905,7 +48127,8 @@
         "pl",
         "cs",
         "hr",
-        "sv"
+        "sv",
+        "da"
       ],
       "name": {
         "en": "Zucchini",
@@ -47914,7 +48137,8 @@
         "pl": "Cukinia",
         "cs": "Cuketa",
         "hr": "Tikvice",
-        "sv": "Zucchini"
+        "sv": "Zucchini",
+        "da": "Zucchini"
       },
       "question": {
         "en": "Can dogs eat zucchini?",
@@ -47923,7 +48147,8 @@
         "pl": "Czy psy mogą jeść cukinię?",
         "cs": "Mohou psi jíst cuketu?",
         "hr": "Smiju li psi jesti tikvice?",
-        "sv": "Får hundar äta zucchini?"
+        "sv": "Får hundar äta zucchini?",
+        "da": "Må hunde spise zucchini?"
       },
       "url_slug": {
         "en": "zucchini",
@@ -47932,7 +48157,8 @@
         "pl": "cukinia",
         "cs": "cuketa",
         "hr": "tikvice",
-        "sv": "zucchini"
+        "sv": "zucchini",
+        "da": "zucchini"
       },
       "answer": {
         "en": "Yes, zucchini is perfectly safe for dogs. Plain raw, steamed or cooked zucchini is fine in moderation. Chop it into small pieces, as large pieces can be a choking hazard, and skip oil, salt and seasonings.",
@@ -47941,7 +48167,8 @@
         "pl": "Tak, cukinia jest dla psów całkowicie bezpieczna. Zwykła cukinia – surowa, gotowana na parze lub gotowana w wodzie – jest w porządku w umiarkowanych ilościach. Pokrój ją na małe kawałki, bo duże mogą grozić zadławieniem, i pomiń olej, sól i przyprawy.",
         "cs": "Ano, cuketa je pro psy naprosto bezpečná. Syrová, spařená nebo tepelně upravená cuketa bez dalších přísad je v mírném množství v pořádku. Nakrájejte ji na malé kousky, protože velké kusy mohou způsobit zadušení, a vynechte olej, sůl a koření.",
         "hr": "Da, tikvice su za pse potpuno sigurne. Obične tikvice, sirove, kuhane na pari ili termički obrađene, u umjerenim su količinama u redu. Nareži ih na male komadiće jer veliki komadi mogu izazvati gušenje, a ulje, sol i začine izostavi.",
-        "sv": "Ja, zucchini är helt säker för hundar. Zucchini utan tillsatser, rå, ångad eller kokt, går bra med måtta. Hacka den i små bitar, eftersom stora bitar kan ge kvävning, och låt bli olja, salt och kryddor."
+        "sv": "Ja, zucchini är helt säker för hundar. Zucchini utan tillsatser, rå, ångad eller kokt, går bra med måtta. Hacka den i små bitar, eftersom stora bitar kan ge kvävning, och låt bli olja, salt och kryddor.",
+        "da": "Ja, zucchini er helt ufarlig for hunde. Rå, dampet eller kogt zucchini uden tilsætninger er fin i moderate mængder. Skær den i små stykker, da store stykker kan sætte sig fast i halsen, og undlad olie, salt og krydderier."
       },
       "why": {
         "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
@@ -47950,7 +48177,8 @@
         "pl": "Wszystkie części rośliny są nietoksyczne. Ryzyko wynika ze sposobu podania: duże kawałki mogą spowodować zadławienie, duża ilość może zaburzyć trawienie, a olej, sól, przyprawy, czosnek i cebula szkodzą psom.",
         "cs": "Všechny části rostliny cukety jsou netoxické. Rizika vyplývají ze způsobu podání: velké kusy mohou způsobit zadušení, větší množství může podráždit trávení a olej, sůl, koření, česnek a cibule jsou pro psy škodlivé.",
         "hr": "Svi su dijelovi biljke tikvice neotrovni. Rizici dolaze od načina posluživanja: veliki komadi mogu izazvati gušenje, velika količina može uznemiriti probavu, a ulja, sol, začini, češnjak i luk štetni su za pse.",
-        "sv": "Alla delar av zucchiniplantan är ogiftiga. Riskerna beror på hur den serveras: stora bitar kan ge kvävning, en stor mängd kan ge orolig mage, och olja, salt, kryddor, vitlök och lök är skadliga för hundar."
+        "sv": "Alla delar av zucchiniplantan är ogiftiga. Riskerna beror på hur den serveras: stora bitar kan ge kvävning, en stor mängd kan ge orolig mage, och olja, salt, kryddor, vitlök och lök är skadliga för hundar.",
+        "da": "Alle dele af zucchiniplanten er ugiftige. Risikoen ligger i, hvordan den serveres: store stykker kan sætte sig fast i halsen, en stor mængde kan give fordøjelsesproblemer, og olie, salt, krydderier, hvidløg og løg er skadelige for hunde."
       },
       "signs": null,
       "what_to_do": {
@@ -47960,7 +48188,8 @@
         "pl": "Podawaj cukinię w małych ilościach: duża porcja czegokolwiek może wywołać rozstrój trawienia. Nigdy nie dawaj psu całej cukinii.",
         "cs": "Dávejte cuketu v malém množství: velké množství čehokoli může u psa vést k potížím s trávením. Nikdy nedávejte psovi celou cuketu.",
         "hr": "Tikvice daj u malim količinama: velika količina bilo čega može kod psa dovesti do probavnih smetnji. Nikad psu ne daj cijelu tikvicu.",
-        "sv": "Ge bara små mängder zucchini: om en hund får i sig en stor mängd av vad som helst kan det ge orolig mage. Ge aldrig en hel zucchini."
+        "sv": "Ge bara små mängder zucchini: om en hund får i sig en stor mängd av vad som helst kan det ge orolig mage. Ge aldrig en hel zucchini.",
+        "da": "Hold dig til små mængder zucchini: hvis en hund får en stor mængde af hvad som helst, kan det give fordøjelsesproblemer. Giv aldrig en hel zucchini."
       },
       "serving": {
         "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
@@ -47969,7 +48198,8 @@
         "pl": "Zwykła, surowa, gotowana na parze lub w wodzie, pokrojona na małe kawałki; dla psów, które mają trudności z gryzieniem, ugotuj ją na parze. Bez oleju, soli, przypraw, czosnku i cebuli.",
         "cs": "Bez dodatků, syrová, spařená nebo tepelně upravená, nakrájená na malé kousky; psům, kteří mají potíže s kousáním, ji spařte. Bez oleje, soli, koření, česneku a cibule.",
         "hr": "Obične, sirove, kuhane na pari ili termički obrađene, narezane na male komadiće; za pse koji teško žvaču skuhaj ih na pari. Bez ulja, soli, začina, češnjaka i luka.",
-        "sv": "Utan tillsatser, rå, ångad eller kokt, hackad i små bitar; ånga den till hundar som har svårt att tugga. Ingen olja, inget salt, inga kryddor, ingen vitlök och ingen lök."
+        "sv": "Utan tillsatser, rå, ångad eller kokt, hackad i små bitar; ånga den till hundar som har svårt att tugga. Ingen olja, inget salt, inga kryddor, ingen vitlök och ingen lök.",
+        "da": "Rå, dampet eller kogt og skåret i små stykker, uden tilsætninger. Damp den til hunde, der har svært ved at tygge. Ingen olie, salt, krydderier, hvidløg eller løg."
       },
       "child": {
         "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
@@ -47978,7 +48208,8 @@
         "pl": "Psy mogą skubnąć odrobinę zwykłej cukinii. Dorosły najpierw kroi ją na małe kawałki.",
         "cs": "Pejsek může okusovat trochu cukety bez dalších přísad. Dospělý ji nejdřív nakrájí na malé kousky.",
         "hr": "Psi smiju grickati malo običnih tikvica. Odrasla osoba ih prvo nareže na male komadiće.",
-        "sv": "Hundar kan knapra på lite zucchini utan tillsatser. En vuxen hackar den i små bitar först."
+        "sv": "Hundar kan knapra på lite zucchini utan tillsatser. En vuxen hackar den i små bitar först.",
+        "da": "Hunde må gerne nippe til lidt zucchini uden tilsætninger. En voksen skærer den først i små stykker."
       },
       "faq": [
         {
@@ -47989,7 +48220,8 @@
             "pl": "Czy psy mogą jeść chleb z cukinii?",
             "cs": "Mohou psi jíst cuketový chlebíček?",
             "hr": "Smiju li psi jesti kruh od tikvica?",
-            "sv": "Får hundar äta zucchinibröd?"
+            "sv": "Får hundar äta zucchinibröd?",
+            "da": "Må hunde spise zucchinibrød?"
           },
           "a": {
             "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
@@ -47998,7 +48230,8 @@
             "pl": "Nie. Chleb z cukinii i inne wypieki z cukinią są problematyczne. Uważaj zwłaszcza na ksylitol, słodzik toksyczny dla psów.",
             "cs": "Ne. Cuketový chlebíček a další pečivo s cuketou jsou problematické. Dejte pozor hlavně na xylitol, sladidlo toxické pro psy.",
             "hr": "Ne. Kruh od tikvica i druga pečena jela s tikvicama problematični su. Pazi osobito na ksilitol, sladilo otrovno za pse.",
-            "sv": "Nej. Zucchinibröd och andra bakverk med zucchini är problematiska. Se framför allt upp för xylitol, ett sötningsmedel som är giftigt för hundar."
+            "sv": "Nej. Zucchinibröd och andra bakverk med zucchini är problematiska. Se framför allt upp för xylitol, ett sötningsmedel som är giftigt för hundar.",
+            "da": "Nej. Zucchinibrød og andet bagværk med zucchini er problematiske. Pas især på xylitol, et sødemiddel, der er giftigt for hunde."
           }
         }
       ],
