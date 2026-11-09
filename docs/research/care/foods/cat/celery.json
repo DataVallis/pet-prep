@@ -7,7 +7,8 @@
     "nl": "Bleekselderij",
     "pl": "Seler naciowy",
     "cs": "Řapíkatý celer",
-    "hr": "Celer"
+    "hr": "Celer",
+    "sv": "Stjälkselleri"
   },
   "question": {
     "en": "Can cats eat celery?",
@@ -15,7 +16,8 @@
     "nl": "Mogen katten bleekselderij eten?",
     "pl": "Czy koty mogą jeść seler naciowy?",
     "cs": "Mohou kočky jíst řapíkatý celer?",
-    "hr": "Smiju li mačke jesti celer?"
+    "hr": "Smiju li mačke jesti celer?",
+    "sv": "Får katter äta stjälkselleri?"
   },
   "url_slug": {
     "en": "celery",
@@ -23,7 +25,8 @@
     "nl": "bleekselderij",
     "pl": "seler-naciowy",
     "cs": "rapikaty-celer",
-    "hr": "celer"
+    "hr": "celer",
+    "sv": "stjalkselleri"
   },
   "level": "not_recommended",
   "answer": {
@@ -32,7 +35,8 @@
     "nl": "Geef je kat liever geen bleekselderij. International Cat Care waarschuwt dat de bladeren van eetbare planten als bleekselderij blaren of jeuk in de mond en op het tandvlees van een kat kunnen veroorzaken, en elke plant kan de maag van een kat van streek maken. Katten hebben geen groente nodig.",
     "pl": "Lepiej nie podawać selera naciowego. International Cat Care ostrzega, że kontakt z liśćmi roślin spożywczych, takich jak seler naciowy, może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, a każda roślina może rozstroić kotu żołądek. Koty nie potrzebują warzyw.",
     "cs": "Řapíkatý celer raději nenabízejte. International Cat Care varuje, že kontakt s listy jedlých rostlin, jako je celer, může kočce způsobit puchýře nebo svědění v tlamičce a na dásních a jakákoli rostlina může kočce podráždit žaludek. Kočky zeleninu nepotřebují.",
-    "hr": "Celer je bolje ne nuditi. International Cat Care upozorava da dodir s listovima jestivih biljaka poput celera može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, a svaka biljka može mački uznemiriti želudac. Mačkama povrće nije potrebno."
+    "hr": "Celer je bolje ne nuditi. International Cat Care upozorava da dodir s listovima jestivih biljaka poput celera može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, a svaka biljka može mački uznemiriti želudac. Mačkama povrće nije potrebno.",
+    "sv": "Det är bäst att inte ge katten selleri. International Cat Care varnar för att kontakt med bladen på matväxter som selleri kan ge blåsor eller klåda i munnen och på tandköttet, och alla växter kan ge katten orolig mage. Katter behöver inte grönsaker."
   },
   "why": {
     "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
@@ -40,7 +44,8 @@
     "nl": "International Cat Care rekent bleekselderij tot de eetbare planten waarvan de bladeren bij een kat blaren of jeuk in de mond en op het tandvlees, niezen en oogklachten kunnen geven. Volgens dezelfde organisatie kunnen alle planten, zelfs gras, de maag en darmen van een kat irriteren en braken veroorzaken. In een artikel van de ASPCA over tuinieren staat bleekselderij tussen de tussendoortjes die met mate geschikt zijn voor huisdieren, maar wij volgen het strengere advies dat specifiek voor katten geldt. Katten hebben geen fruit of groente nodig in hun voeding.",
     "pl": "International Cat Care wymienia seler naciowy wśród roślin spożywczych, których liście mogą wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami, i podaje, że wszystkie rośliny, nawet trawa, mogą podrażniać żołądek i jelita kota oraz wywoływać wymioty. Artykuł ASPCA o ogrodzie wymienia seler naciowy wśród przekąsek dla zwierząt w umiarkowanych ilościach, ale kierujemy się ostrzejszą radą dotyczącą kotów. Koty nie potrzebują w diecie owoców ani warzyw.",
     "cs": "International Cat Care řadí celer mezi jedlé rostliny, jejichž listy mohou způsobit puchýře nebo svědění v tlamičce a na dásních, kýchání a potíže s očima, a upozorňuje, že všechny rostliny, dokonce i tráva, mohou kočce dráždit žaludek a střeva a vyvolat zvracení. Článek ASPCA o zahradě řadí celer mezi pamlsky pro zvířata, které jsou vhodné v mírném množství, ale my se řídíme přísnější radou, která platí přímo pro kočky. Kočky ve stravě ovoce ani zeleninu nepotřebují.",
-    "hr": "International Cat Care navodi celer među jestivim biljkama čiji listovi mogu izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima, a kaže i da sve biljke, čak i trava, mogu mački nadražiti želudac i crijeva te izazvati povraćanje. ASPCA u jednom članku o vrtu navodi celer među užinama za ljubimce u umjerenim količinama, ali držimo se strožeg savjeta koji vrijedi posebno za mačke. Mačkama u prehrani ne trebaju voće ni povrće."
+    "hr": "International Cat Care navodi celer među jestivim biljkama čiji listovi mogu izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima, a kaže i da sve biljke, čak i trava, mogu mački nadražiti želudac i crijeva te izazvati povraćanje. ASPCA u jednom članku o vrtu navodi celer među užinama za ljubimce u umjerenim količinama, ali držimo se strožeg savjeta koji vrijedi posebno za mačke. Mačkama u prehrani ne trebaju voće ni povrće.",
+    "sv": "International Cat Care nämner selleri bland matväxter vars blad kan ge blåsor eller klåda i munnen och på tandköttet, nysningar och ögonproblem, och skriver att alla växter, även gräs, kan irritera kattens mage och tarmar och ge kräkningar. En ASPCA-artikel om trädgården nämner selleri bland mellanmål som husdjur kan få med måtta, men vi följer det strängare rådet som gäller just katter. Katter behöver inte frukt eller grönsaker i kosten."
   },
   "signs": {
     "en": [
@@ -78,6 +83,12 @@
       "Svrbež ili mjehurići u ustima i na desnima",
       "Kihanje",
       "Tegobe s očima"
+    ],
+    "sv": [
+      "Kräkningar",
+      "Klåda eller blåsor i munnen och på tandköttet",
+      "Nysningar",
+      "Ögonproblem"
     ]
   },
   "what_to_do": {
@@ -86,7 +97,8 @@
     "nl": "Heeft je kat op bleekselderij gekauwd en voelt hij zich niet lekker, bijvoorbeeld omdat hij braakt of jeuk in zijn mond lijkt te hebben, bel dan je dierenarts voor advies. Probeer je kat thuis niet zelf te laten braken.",
     "pl": "Jeśli kot pogryzł seler naciowy i źle się czuje, na przykład wymiotuje albo swędzi go pysk, zadzwoń do weterynarza po radę. Nie próbuj wywoływać u kota wymiotów w domu.",
     "cs": "Pokud kočka celer okusovala a působí nemocně, například zvrací nebo ji svědí tlamička, zavolejte veterináři a poraďte se s ním. Nesnažte se kočku doma přimět ke zvracení.",
-    "hr": "Ako je mačka žvakala celer i djeluje bolesno, na primjer povraća ili ima svrbež u ustima, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje."
+    "hr": "Ako je mačka žvakala celer i djeluje bolesno, na primjer povraća ili ima svrbež u ustima, nazovi veterinara za savjet. Ne pokušavaj kod kuće izazvati povraćanje.",
+    "sv": "Om katten har tuggat på selleri och verkar må dåligt, till exempel kräks eller har klåda i munnen, ring veterinären för råd. Försök inte få katten att kräkas hemma."
   },
   "serving": null,
   "child": {
@@ -95,7 +107,8 @@
     "nl": "Bleekselderij is niets voor katten. De bladeren kunnen jeuk in de mond geven, dus bewaar de bleekselderij maar voor mensen.",
     "pl": "Seler naciowy nie jest przekąską dla kotów. Jego liście mogą sprawić, że kotu zaswędzi pysk, więc niech seler naciowy zostanie dla ludzi.",
     "cs": "Řapíkatý celer není pro kočky pamlsek. Jeho listy mohou kočce způsobit svědění v tlamičce, takže ho nech raději lidem.",
-    "hr": "Celer nije poslastica za mačke. Njegovi listovi mogu mački izazvati svrbež u ustima, pa je celer bolje ostaviti ljudima."
+    "hr": "Celer nije poslastica za mačke. Njegovi listovi mogu mački izazvati svrbež u ustima, pa je celer bolje ostaviti ljudima.",
+    "sv": "Selleri är ingen godbit för katter. Bladen kan klia i kattens mun, så selleri är bäst att lämna åt människor."
   },
   "faq": [
     {
@@ -105,7 +118,8 @@
         "nl": "Hebben katten groente nodig?",
         "pl": "Czy koty potrzebują warzyw?",
         "cs": "Potřebují kočky zeleninu?",
-        "hr": "Treba li mačkama povrće?"
+        "hr": "Treba li mačkama povrće?",
+        "sv": "Behöver katter grönsaker?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -113,7 +127,8 @@
         "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
         "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
         "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
-        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak."
+        "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
+        "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra."
       }
     }
   ],
@@ -192,6 +207,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4cbac1ffc064f370d6a95e0da639be32956b56e37694b72dae2afe074d759a0d"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "79ea6955bd7c12eca7b9ee62643be91aba29bcf268071a956393f5144eedc3f7"
     }
   }
 }

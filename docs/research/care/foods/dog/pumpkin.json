@@ -7,7 +7,8 @@
     "nl": "Pompoen",
     "pl": "Dynia",
     "cs": "Dýně",
-    "hr": "Bundeva"
+    "hr": "Bundeva",
+    "sv": "Pumpa"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
@@ -15,7 +16,8 @@
     "nl": "Mogen honden pompoen eten?",
     "pl": "Czy psy mogą jeść dynię?",
     "cs": "Mohou psi jíst dýni?",
-    "hr": "Smiju li psi jesti bundevu?"
+    "hr": "Smiju li psi jesti bundevu?",
+    "sv": "Får hundar äta pumpa?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -23,7 +25,8 @@
     "nl": "pompoen",
     "pl": "dynia",
     "cs": "dyne",
-    "hr": "bundeva"
+    "hr": "bundeva",
+    "sv": "pumpa"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "nl": "Ja, naturel gare pompoen is gezond voor honden. Kies verse, gare pompoen of naturel pompoenpuree uit blik, nooit vulling voor pompoentaart, en geef geen ongekookte schil.",
     "pl": "Tak, zwykła ugotowana dynia jest dla psów zdrowa. Wybierz świeżą ugotowaną dynię albo zwykłe puree z dyni z puszki – nigdy nadzienia do placka z dyni. Nie dawaj też nieugotowanej skórki.",
     "cs": "Ano, tepelně upravená dýně bez dalších přísad je pro psy zdravá. Vyberte čerstvou uvařenou dýni nebo čisté dýňové pyré z konzervy, nikdy ne náplň do dýňového koláče, a nedávejte psovi nevařenou slupku.",
-    "hr": "Da, obična termički obrađena bundeva zdrava je hrana za pse. Odaberi svježu termički obrađenu bundevu ili običan pire od bundeve iz konzerve, nikad nadjev za pitu od bundeve, i ne daj psu sirovu koru."
+    "hr": "Da, obična termički obrađena bundeva zdrava je hrana za pse. Odaberi svježu termički obrađenu bundevu ili običan pire od bundeve iz konzerve, nikad nadjev za pitu od bundeve, i ne daj psu sirovu koru.",
+    "sv": "Ja, kokt pumpa utan tillsatser är nyttigt för hundar. Välj nykokt pumpa eller ren pumpapuré på burk, aldrig fyllning till pumpapaj, och ge inte hunden okokta skal."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
@@ -40,7 +44,8 @@
     "nl": "Naturel pompoen zit vol antioxidanten en kan bij honden helpen bij zowel diarree als verstopping. Vulling voor pompoentaart kan xylitol bevatten, dat giftig is, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn. Ongekookte schillen zijn taai en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
     "pl": "Czysta dynia jest pełna przeciwutleniaczy i może pomagać psom zarówno przy biegunce, jak i przy zaparciach. Nadzienie do placka z dyni może zawierać ksylitol, który jest toksyczny, a także inne przyprawy i dodatki, które mogą szkodzić. Nieugotowana skórka jest twarda i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
     "cs": "Čistá dýně je plná antioxidantů a psům může pomáhat při průjmu i při zácpě. Náplň do dýňového koláče může obsahovat xylitol, který je toxický, a také koření a další přísady, které by mohly škodit. Nevařená slupka je tvrdá a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
-    "hr": "Čista je bundeva puna antioksidansa i može pomoći psima i kod proljeva i kod zatvora. Nadjev za pitu od bundeve može sadržavati ksilitol, koji je otrovan, te druge začine i dodatke koji bi mogli biti štetni. Sirova je kora žilava i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva."
+    "hr": "Čista je bundeva puna antioksidansa i može pomoći psima i kod proljeva i kod zatvora. Nadjev za pitu od bundeve može sadržavati ksilitol, koji je otrovan, te druge začine i dodatke koji bi mogli biti štetni. Sirova je kora žilava i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
+    "sv": "Ren pumpa är full av antioxidanter och kan hjälpa vid både diarré och förstoppning hos hundar. Fyllning till pumpapaj kan innehålla xylitol, som är giftigt, samt kryddor och andra tillsatser som kan vara skadliga. Okokta skal är sega och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "nl": "Zoals bij elk nieuw voedsel: vraag je dierenarts om advies voordat je pompoen aan de voeding van je hond toevoegt.",
     "pl": "Jak przy każdym nowym pokarmie, zapytaj weterynarza, zanim dodasz dynię do psiego jadłospisu.",
     "cs": "Jako u každé nové potraviny se před zařazením dýně do jídelníčku psa poraďte s veterinářem.",
-    "hr": "Kao i kod svake nove hrane, pitaj veterinara prije nego što bundevu uvedeš u prehranu svog psa."
+    "hr": "Kao i kod svake nove hrane, pitaj veterinara prije nego što bundevu uvedeš u prehranu svog psa.",
+    "sv": "Som med all ny mat: fråga veterinären innan du lägger till pumpa i hundens vanliga kost."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
@@ -57,7 +63,8 @@
     "nl": "Verse pompoen, gaar gemaakt en geschild, of naturel pompoenpuree uit blik, zonder toegevoegde suiker, kruiden of kunstmatige smaakstoffen. Geen taartvulling en geen rauwe schil.",
     "pl": "Świeża, obrana i ugotowana, bez dodatków, albo zwykłe puree z dyni z puszki, bez dodatku cukru, przypraw ani sztucznych aromatów. Bez nadzienia do placka i bez surowej skórki.",
     "cs": "Čerstvá, uvařená, bez dodatků a oloupaná, nebo čisté dýňové pyré z konzervy bez přidaného cukru, koření a umělých aromat. Žádná náplň do koláče a žádná syrová slupka.",
-    "hr": "Svježa, termički obrađena, obična i oguljena, ili običan pire od bundeve iz konzerve, bez dodanog šećera, začina i umjetnih aroma. Bez nadjeva za pitu i bez sirove kore."
+    "hr": "Svježa, termički obrađena, obična i oguljena, ili običan pire od bundeve iz konzerve, bez dodanog šećera, začina i umjetnih aroma. Bez nadjeva za pitu i bez sirove kore.",
+    "sv": "Nykokt, skalad och utan tillsatser, eller ren pumpapuré på burk, utan tillsatt socker, kryddor eller konstgjorda smaker. Ingen pajfyllning och inget rått skal."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
@@ -65,7 +72,8 @@
     "nl": "Honden mogen genieten van een beetje naturel gare pompoen. Een volwassene let erop dat het geen zoete taartvulling is!",
     "pl": "Psy mogą zjeść odrobinę zwykłej ugotowanej dyni. Dorosły dopilnuje, żeby to nie było słodkie nadzienie do placka!",
     "cs": "Pejsek si může pochutnat na troše uvařené dýně bez dalších přísad. Dospělý dohlédne, aby to nebyla sladká náplň do koláče!",
-    "hr": "Psi mogu uživati u malo obične kuhane bundeve. Odrasla osoba neka pripazi da to nije slatki nadjev za pitu!"
+    "hr": "Psi mogu uživati u malo obične kuhane bundeve. Odrasla osoba neka pripazi da to nije slatki nadjev za pitu!",
+    "sv": "Hundar kan njuta av lite kokt pumpa utan tillsatser. En vuxen ser till att det inte är söt pajfyllning!"
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "nl": "Mogen honden vulling voor pompoentaart eten?",
         "pl": "Czy psy mogą jeść nadzienie do placka z dyni?",
         "cs": "Mohou psi jíst náplň do dýňového koláče?",
-        "hr": "Smiju li psi jesti nadjev za pitu od bundeve?"
+        "hr": "Smiju li psi jesti nadjev za pitu od bundeve?",
+        "sv": "Får hundar äta fyllning till pumpapaj?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
@@ -83,7 +92,8 @@
         "nl": "Nee. Vulling voor pompoentaart kan xylitol bevatten, een zoetstof die giftig is voor honden, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn.",
         "pl": "Nie. Nadzienie do placka z dyni może zawierać ksylitol, słodzik toksyczny dla psów, oraz inne przyprawy i dodatki, które mogą szkodzić.",
         "cs": "Ne. Náplň do dýňového koláče může obsahovat xylitol, sladidlo toxické pro psy, a také koření a další přísady, které by mohly škodit.",
-        "hr": "Ne. Nadjev za pitu od bundeve može sadržavati ksilitol, sladilo otrovno za pse, te druge začine i dodatke koji bi mogli biti štetni."
+        "hr": "Ne. Nadjev za pitu od bundeve može sadržavati ksilitol, sladilo otrovno za pse, te druge začine i dodatke koji bi mogli biti štetni.",
+        "sv": "Nej. Fyllning till pumpapaj kan innehålla xylitol, ett sötningsmedel som är giftigt för hundar, samt kryddor och andra tillsatser som kan vara skadliga."
       }
     },
     {
@@ -93,7 +103,8 @@
         "nl": "Mogen honden rauwe pompoenschil eten?",
         "pl": "Czy psy mogą jeść surową skórkę dyni?",
         "cs": "Mohou psi jíst syrovou dýňovou slupku?",
-        "hr": "Smiju li psi jesti sirovu koru bundeve?"
+        "hr": "Smiju li psi jesti sirovu koru bundeve?",
+        "sv": "Får hundar äta rått pumpaskal?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
@@ -101,7 +112,8 @@
         "nl": "Nee. Ongekookte schillen zijn taai, stevig en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken.",
         "pl": "Nie. Nieugotowana skórka jest twarda, zbita i włóknista: grozi zadławieniem, jest trudna do strawienia i może spowodować niedrożność jelit.",
         "cs": "Ne. Nevařená slupka je tvrdá, hutná a vláknitá: hrozí zadušení, je těžko stravitelná a může způsobit ucpání střev.",
-        "hr": "Ne. Sirova je kora žilava, gusta i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva."
+        "hr": "Ne. Sirova je kora žilava, gusta i vlaknasta: može izazvati gušenje, teško se probavlja i može začepiti crijeva.",
+        "sv": "Nej. Okokta skal är sega, täta och fibrösa: de ger risk för kvävning, är svåra att smälta och kan orsaka stopp i tarmen."
       }
     }
   ],
@@ -196,6 +208,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "05f14b59dd3a904aedecef18060dac6c658f2b299d5e27ded0743973b58a32b7"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "932e3bd175fd5d0c0df2a921fa32f620ff2f5ade46e31c020c303e6ce409f90f"
     }
   }
 }

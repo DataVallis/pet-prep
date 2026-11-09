@@ -7,7 +7,8 @@
     "nl": "Spruitjes",
     "pl": "Brukselka",
     "cs": "Růžičková kapusta",
-    "hr": "Prokulice"
+    "hr": "Prokulice",
+    "sv": "Brysselkål"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
@@ -15,7 +16,8 @@
     "nl": "Mogen honden spruitjes eten?",
     "pl": "Czy psy mogą jeść brukselkę?",
     "cs": "Mohou psi jíst růžičkovou kapustu?",
-    "hr": "Smiju li psi jesti prokulice?"
+    "hr": "Smiju li psi jesti prokulice?",
+    "sv": "Får hundar äta brysselkål?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -23,7 +25,8 @@
     "nl": "spruitjes",
     "pl": "brukselka",
     "cs": "ruzickova-kapusta",
-    "hr": "prokulice"
+    "hr": "prokulice",
+    "sv": "brysselkal"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "nl": "Ja, als je een paar dingen in acht neemt. Naturel gaar gemaakte spruitjes zijn in kleine hoeveelheden prima voor honden, maar van te veel kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef ze niet rauw: dan zijn ze te hard om goed te verteren.",
     "pl": "Tak, ale z kilkoma zastrzeżeniami. Zwykła ugotowana brukselka w małych ilościach jest dla psów w porządku, ale zbyt duża porcja może wywołać dużo gazów, rozstrój żołądka i biegunkę. Nie podawaj jej surowej – jest dla psów zbyt twarda, by ją strawić.",
     "cs": "Ano, s několika opatřeními. Tepelně upravená růžičková kapusta bez dalších přísad je pro psy v malém množství v pořádku, ale příliš velké množství může způsobit nadměrnou plynatost, potíže se žaludkem a průjem. Nedávejte ji syrovou: je pro psy příliš tvrdá a špatně se jim tráví.",
-    "hr": "Da, uz nekoliko mjera opreza. Obične termički obrađene prokulice u malim su količinama u redu za pse, ali previše njih može izazvati mnogo plinova, želučane tegobe i proljev. Ne daj ih sirove: pretvrde su, pa ih pas teško probavlja."
+    "hr": "Da, uz nekoliko mjera opreza. Obične termički obrađene prokulice u malim su količinama u redu za pse, ali previše njih može izazvati mnogo plinova, želučane tegobe i proljev. Ne daj ih sirove: pretvrde su, pa ih pas teško probavlja.",
+    "sv": "Ja, med några försiktighetsåtgärder. Kokt brysselkål utan tillsatser går bra för hundar i små mängder, men för mycket kan ge kraftiga gaser, orolig mage och diarré. Ge den inte rå: den är för hård för att hunden ska kunna smälta den."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
@@ -40,7 +44,8 @@
     "nl": "Spruitjes zitten vol voedingsstoffen en antioxidanten en bevatten geen gifstoffen. Ze bevatten wel veel isothiocyanaten, en van te veel spruitjes kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef dus niet te veel.",
     "pl": "Brukselka jest pełna składników odżywczych i przeciwutleniaczy i nie zawiera toksyn ani trucizn. Zawiera jednak dużo substancji zwanych izotiocyjanianami, a zbyt duża ilość może prowadzić do nadmiaru gazów, rozstroju żołądka i biegunki, więc nie przekarmiaj psa.",
     "cs": "Růžičková kapusta je plná živin a antioxidantů a neobsahuje žádné toxiny ani jedy. Obsahuje ale vysoké množství látky zvané izotiokyanát a příliš velké množství může vést k nadměrné plynatosti, potížím se žaludkem a průjmu, proto psa nepřekrmujte.",
-    "hr": "Prokulice su pune hranjivih tvari i antioksidansa te ne sadrže toksine ni otrove. Sadrže, međutim, visoku razinu tvari koja se zove izotiocijanat, a previše prokulica može dovesti do mnogo plinova, želučanih tegoba i proljeva, zato ih ne daj previše."
+    "hr": "Prokulice su pune hranjivih tvari i antioksidansa te ne sadrže toksine ni otrove. Sadrže, međutim, visoku razinu tvari koja se zove izotiocijanat, a previše prokulica može dovesti do mnogo plinova, želučanih tegoba i proljeva, zato ih ne daj previše.",
+    "sv": "Brysselkål är full av näringsämnen och antioxidanter och innehåller inga gifter. Den innehåller dock mycket av ett ämne som kallas isotiocyanat, och för mycket kan ge kraftiga gaser, orolig mage och diarré, så ge inte för stora portioner."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "nl": "Geef maar een klein beetje en niet te veel. Heeft je hond problemen met bepaalde voeding of allergieën, overleg dan eerst met je dierenarts voordat je spruitjes geeft.",
     "pl": "Podaj tylko odrobinę i nie przekarmiaj. Jeśli twój pies ma problemy żywieniowe lub alergie, przed poczęstowaniem go brukselką porozmawiaj z weterynarzem.",
     "cs": "Dávejte jen trochu a nepřekrmujte. Pokud má váš pes stravovací potíže nebo alergie, poraďte se před podáním růžičkové kapusty nejdřív s veterinářem.",
-    "hr": "Daj samo malo i nemoj pretjerati. Ako tvoj pas ima tegobe s prehranom ili alergije, razgovaraj s veterinarom prije nego što mu ponudiš prokulice."
+    "hr": "Daj samo malo i nemoj pretjerati. Ako tvoj pas ima tegobe s prehranom ili alergije, razgovaraj s veterinarom prije nego što mu ponudiš prokulice.",
+    "sv": "Ge bara lite och ge inte för mycket. Om hunden har kostrelaterade problem eller allergier bör du prata med veterinären innan du ger brysselkål."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
@@ -57,7 +63,8 @@
     "nl": "Gewassen, met het grootste deel van de stronk eraf gesneden (de blaadjes blijven eraan) en gaar gemaakt; stomen behoudt de meeste voedingsstoffen. Naturel, zonder kruiden en in kleine hoeveelheden.",
     "pl": "Umyta, z odciętą większością głąbka, ale z liśćmi, ugotowana (gotowanie na parze zachowuje najwięcej składników odżywczych). Zwykła, bez ziół i przypraw, w małych ilościach.",
     "cs": "Omytá, s odříznutou větší částí košťálu a s ponechanými listy, a tepelně upravená (při spaření se zachová nejvíc živin). Bez dodatků, bez bylinek a koření, v malém množství.",
-    "hr": "Oprane, s odrezanim većim dijelom stabljike (listovi ostaju) i termički obrađene (kuhanje na pari sačuva najviše hranjivih tvari). Obične, bez začinskog bilja i začina, u malim količinama."
+    "hr": "Oprane, s odrezanim većim dijelom stabljike (listovi ostaju) i termički obrađene (kuhanje na pari sačuva najviše hranjivih tvari). Obične, bez začinskog bilja i začina, u malim količinama.",
+    "sv": "Tvättad, med det mesta av stammen bortskuren och bladen kvar, och tillagad (ångkokning bevarar mest näring). Utan örter eller kryddor, i små mängder."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
@@ -65,7 +72,8 @@
     "nl": "Honden mogen af en toe een beetje gaar spruitje als traktatie. Van te veel krijgen ze een heel winderige buik!",
     "pl": "Psy mogą dostać odrobinę ugotowanej brukselki jako smakołyk. Ale uwaga: od nadmiaru brukselki w brzuszku robi się pełno bąków!",
     "cs": "Pejsek může dostat jako pamlsek trochu uvařené růžičkové kapusty. Při příliš velkém množství bude mít bříško plné plynů!",
-    "hr": "Psi smiju dobiti malo kuhanih prokulica kao poslasticu. Ako ih pojedu previše, trbuščić će im biti pun plinova!"
+    "hr": "Psi smiju dobiti malo kuhanih prokulica kao poslasticu. Ako ih pojedu previše, trbuščić će im biti pun plinova!",
+    "sv": "Hundar kan få lite kokt brysselkål som godbit. Får de för mycket blir magen väldigt gasig!"
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "nl": "Mogen honden rauwe spruitjes eten?",
         "pl": "Czy psy mogą jeść surową brukselkę?",
         "cs": "Mohou psi jíst syrovou růžičkovou kapustu?",
-        "hr": "Smiju li psi jesti sirove prokulice?"
+        "hr": "Smiju li psi jesti sirove prokulice?",
+        "sv": "Får hundar äta rå brysselkål?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
@@ -83,7 +92,8 @@
         "nl": "Liever niet: rauwe spruitjes zijn te hard voor honden om goed te verteren. Maak ze eerst gaar; stomen behoudt de meeste voedingsstoffen.",
         "pl": "Lepiej nie: surowa brukselka jest dla psów zbyt twarda, by ją strawić. Najpierw ją ugotuj; gotowanie na parze zachowuje najwięcej składników odżywczych.",
         "cs": "Raději ne: syrová kapusta je pro psy příliš tvrdá a špatně se jim tráví. Nejdřív ji tepelně upravte; při spaření se zachová nejvíc živin.",
-        "hr": "Bolje ne: sirove su prokulice pretvrde da bi ih pas probavio. Prvo ih termički obradi; kuhanje na pari sačuva najviše hranjivih tvari."
+        "hr": "Bolje ne: sirove su prokulice pretvrde da bi ih pas probavio. Prvo ih termički obradi; kuhanje na pari sačuva najviše hranjivih tvari.",
+        "sv": "Det är bäst att låta bli: rå brysselkål är för hård för att hunden ska kunna smälta den. Koka den först; ångkokning bevarar mest näring."
       }
     }
   ],
@@ -170,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "1aa4f4972e8900d53a1a4279a6bccda2364ab9b76d3e8116ee0ffc058f5011da"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4640fbe610bdf2b6ea14895a4fc516c4521867e91af287c4afd24bef061ef6a0"
     }
   }
 }

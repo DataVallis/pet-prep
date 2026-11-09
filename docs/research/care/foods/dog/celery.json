@@ -7,7 +7,8 @@
     "nl": "Bleekselderij",
     "pl": "Seler naciowy",
     "cs": "Řapíkatý celer",
-    "hr": "Celer"
+    "hr": "Celer",
+    "sv": "Stjälkselleri"
   },
   "question": {
     "en": "Can dogs eat celery?",
@@ -15,7 +16,8 @@
     "nl": "Mogen honden bleekselderij eten?",
     "pl": "Czy psy mogą jeść seler naciowy?",
     "cs": "Mohou psi jíst řapíkatý celer?",
-    "hr": "Smiju li psi jesti celer?"
+    "hr": "Smiju li psi jesti celer?",
+    "sv": "Får hundar äta stjälkselleri?"
   },
   "url_slug": {
     "en": "celery",
@@ -23,7 +25,8 @@
     "nl": "bleekselderij",
     "pl": "seler-naciowy",
     "cs": "rapikaty-celer",
-    "hr": "celer"
+    "hr": "celer",
+    "sv": "stjalkselleri"
   },
   "level": "small_amounts",
   "answer": {
@@ -32,7 +35,8 @@
     "nl": "Ja, bleekselderij is over het algemeen veilig voor honden, als af en toe een traktatie. Was de bleekselderij en snijd hem altijd in hapklare stukjes, want bleekselderij kan een verstikkingsgevaar zijn, vooral voor kleine honden.",
     "pl": "Tak, seler naciowy jest na ogół bezpieczny dla psów jako okazjonalny smakołyk. Umyj go i zawsze pokrój na kawałki wielkości jednego kęsa, bo kawałki selera naciowego mogą spowodować zadławienie, zwłaszcza u małych psów.",
     "cs": "Ano, řapíkatý celer je pro psy obvykle bezpečný jako občasný pamlsek. Omyjte ho a vždy ho nakrájejte na kousky na jedno sousto, protože celer může způsobit zadušení, zejména u malých psů.",
-    "hr": "Da, celer je općenito siguran za pse kao povremena poslastica. Operi ga i uvijek ga nareži na komadiće veličine zalogaja jer može izazvati gušenje, osobito kod malih pasa."
+    "hr": "Da, celer je općenito siguran za pse kao povremena poslastica. Operi ga i uvijek ga nareži na komadiće veličine zalogaja jer može izazvati gušenje, osobito kod malih pasa.",
+    "sv": "Ja, stjälkselleri är i allmänhet säker för hundar som en godbit då och då. Tvätta den och skär den alltid i munsbitar, eftersom selleri kan ge kvävning, särskilt hos små hundar."
   },
   "why": {
     "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
@@ -40,7 +44,8 @@
     "nl": "Bleekselderij is veilig voor de meeste honden en kan zelfs de adem van je hond frisser maken. Het grootste risico is verstikking door grote stukken, vooral bij kleine honden. Het is een traktatie en geen basisvoedsel, en het mag nooit een complete, evenwichtige maaltijd vervangen.",
     "pl": "Seler naciowy jest bezpieczny dla większości psów i jest znany z tego, że odświeża psi oddech. Głównym ryzykiem jest zadławienie się dużymi kawałkami, zwłaszcza u małych psów. To smakołyk, a nie podstawa diety, i nigdy nie powinien zastępować pełnowartościowego, zbilansowanego posiłku.",
     "cs": "Řapíkatý celer je bezpečný pro většinu psů a prý dokonce osvěžuje psí dech. Hlavním rizikem je zadušení velkými kousky, zejména u malých psů. Je to pamlsek, ne základ jídelníčku, a nikdy by neměl nahradit plnohodnotné vyvážené jídlo.",
-    "hr": "Celer je siguran za većinu pasa, a poznato je i da osvježava pseći dah. Glavni je rizik gušenje zbog većih komada, osobito kod malih pasa. To je poslastica, a ne osnova prehrane, i nikad ne smije zamijeniti potpun i uravnotežen obrok."
+    "hr": "Celer je siguran za većinu pasa, a poznato je i da osvježava pseći dah. Glavni je rizik gušenje zbog većih komada, osobito kod malih pasa. To je poslastica, a ne osnova prehrane, i nikad ne smije zamijeniti potpun i uravnotežen obrok.",
+    "sv": "Stjälkselleri är säker för de flesta hundar och sägs till och med friska upp hundens andedräkt. Den största risken är att hunden sätter stora bitar i halsen, särskilt små hundar. Det är en godbit, inte basfoder, och ska aldrig ersätta en komplett och balanserad måltid."
   },
   "signs": null,
   "what_to_do": {
@@ -49,7 +54,8 @@
     "nl": "Laat je hond rustig aan wennen aan bleekselderij en let na de eerste hap op spijsverteringsklachten of andere veranderingen bij je hond.",
     "pl": "Wprowadzaj seler naciowy powoli i po pierwszej próbce obserwuj, czy pies nie ma problemów z trawieniem ani innych zmian.",
     "cs": "Celer zařazujte pomalu a po prvním ochutnání sledujte, zda pes nemá potíže s trávením nebo jiné změny.",
-    "hr": "Uvodi celer polako i nakon prvog zalogaja prati ima li pas probavnih tegoba ili drugih promjena."
+    "hr": "Uvodi celer polako i nakon prvog zalogaja prati ima li pas probavnih tegoba ili drugih promjena.",
+    "sv": "Börja med lite och håll utkik efter magbesvär eller andra förändringar hos hunden när den smakat första gången."
   },
   "serving": {
     "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
@@ -57,7 +63,8 @@
     "nl": "Gewassen en altijd in hapklare stukjes gesneden; rauw is prima. Een kleine traktatie, geen maaltijd.",
     "pl": "Umyty, może być surowy; zawsze pokrojony na kawałki wielkości jednego kęsa. Mały smakołyk, a nie posiłek.",
     "cs": "Omytý a syrový je v pořádku, vždy nakrájený na kousky na jedno sousto. Malý pamlsek, ne jídlo.",
-    "hr": "Opran, može i sirov, uvijek narezan na komadiće veličine zalogaja. Mala poslastica, a ne obrok."
+    "hr": "Opran, može i sirov, uvijek narezan na komadiće veličine zalogaja. Mala poslastica, a ne obrok.",
+    "sv": "Tvättad och rå, alltid skuren i munsbitar. En liten godbit, inte en måltid."
   },
   "child": {
     "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
@@ -65,7 +72,8 @@
     "nl": "Honden mogen best een beetje bleekselderij knabbelen! Een volwassene wast de bleekselderij eerst en snijdt hem in piepkleine stukjes.",
     "pl": "Psy mogą pochrupać odrobinę selera naciowego! Dorosły najpierw go myje i kroi na malutkie kawałki.",
     "cs": "Pejsek může chroupat trochu řapíkatého celeru! Dospělý ho nejdřív omyje a nakrájí na drobné kousky.",
-    "hr": "Psi smiju grickati malo celera! Odrasla osoba ga prvo opere i nareže na sitne komadiće."
+    "hr": "Psi smiju grickati malo celera! Odrasla osoba ga prvo opere i nareže na sitne komadiće.",
+    "sv": "Hundar kan knapra lite stjälkselleri! En vuxen tvättar den och skär den i små bitar först."
   },
   "faq": [
     {
@@ -75,7 +83,8 @@
         "nl": "Mogen pups bleekselderij eten?",
         "pl": "Czy szczeniaki mogą jeść seler naciowy?",
         "cs": "Mohou štěňata jíst celer?",
-        "hr": "Smiju li štenci jesti celer?"
+        "hr": "Smiju li štenci jesti celer?",
+        "sv": "Får valpar äta stjälkselleri?"
       },
       "a": {
         "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
@@ -83,7 +92,8 @@
         "nl": "Pups mogen kleine hoeveelheden bleekselderij eten, mits die in passende stukjes is gesneden.",
         "pl": "Szczeniaki mogą jeść małe ilości selera naciowego, jeśli jest pokrojony na kawałki odpowiedniej wielkości.",
         "cs": "Štěňata mohou jíst malé množství celeru, pokud je nakrájený na vhodně velké kousky.",
-        "hr": "Štenci smiju jesti male količine celera ako je narezan na komadiće prikladne veličine."
+        "hr": "Štenci smiju jesti male količine celera ako je narezan na komadiće prikladne veličine.",
+        "sv": "Valpar kan få små mängder stjälkselleri om den skärs i lagom stora bitar."
       }
     }
   ],
@@ -165,6 +175,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a464c266031359c6813681f90b069ac9f4b6edbc174d371f814c04382a69d0ca"
+    },
+    "sv": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b934d1d500c3293e180999818fb8ca1b4fe2c3ce8d2393869c911364d131667b"
     }
   }
 }
