@@ -3,47 +3,57 @@
   "species": "dog",
   "name": {
     "en": "Cabbage",
-    "sl": "Zelje"
+    "sl": "Zelje",
+    "nl": "Kool"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
-    "sl": "Ali lahko psi jedo zelje?"
+    "sl": "Ali lahko psi jedo zelje?",
+    "nl": "Mogen honden kool eten?"
   },
   "url_slug": {
     "en": "cabbage",
-    "sl": "zelje"
+    "sl": "zelje",
+    "nl": "kool"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. All kinds of cabbage are fine for dogs, but cabbage makes a lot of gas, so introduce it slowly. Boiled or steamed cabbage is less likely to upset the stomach than raw cabbage.",
-    "sl": "Da, v majhnih količinah. Vse vrste zelja so za pse v redu, vendar zelje povzroča veliko vetrov, zato ga uvajajte postopoma. Kuhano ali na pari pripravljeno zelje manj verjetno razdraži prebavo kot surovo."
+    "sl": "Da, v majhnih količinah. Vse vrste zelja so za pse v redu, vendar zelje povzroča veliko vetrov, zato ga uvajajte postopoma. Kuhano ali na pari pripravljeno zelje manj verjetno razdraži prebavo kot surovo.",
+    "nl": "Ja, in kleine hoeveelheden. Alle soorten kool zijn prima voor honden, maar kool geeft veel gasvorming, dus laat je hond er rustig aan wennen. Van gekookte of gestoomde kool krijgt een hond minder snel maagklachten dan van rauwe kool."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
-    "sl": "Zelje je za pse zdravo, vendar povzroča veliko vetrov, česar mnogi psi ne prenašajo dobro. Večja težava so dodatki: maslo in druga mastna hrana lahko povzročita vnetje trebušne slinavke, čebula in česen pa sta za pse strupena."
+    "sl": "Zelje je za pse zdravo, vendar povzroča veliko vetrov, česar mnogi psi ne prenašajo dobro. Večja težava so dodatki: maslo in druga mastna hrana lahko povzročita vnetje trebušne slinavke, čebula in česen pa sta za pse strupena.",
+    "nl": "Kool is gezond voor honden, maar geeft veel gasvorming, en daar hebben veel honden last van. Kruiden en andere toevoegingen zijn een groter probleem: boter en andere vette producten kunnen een alvleesklierontsteking veroorzaken, en ui en knoflook zijn giftig voor honden."
   },
   "signs": null,
   "what_to_do": {
     "en": "Watch your dog closely after the first taste of cabbage. If your dog tends to have a lot of gas or is prone to bloat, ask your vet before giving cabbage.",
-    "sl": "Po prvem okušanju zelja psa pozorno opazujte. Če ima pes pogosto veliko vetrov ali je nagnjen k napihnjenosti, se pred tem posvetujte z veterinarjem."
+    "sl": "Po prvem okušanju zelja psa pozorno opazujte. Če ima pes pogosto veliko vetrov ali je nagnjen k napihnjenosti, se pred tem posvetujte z veterinarjem.",
+    "nl": "Let goed op je hond na de eerste hap kool. Heeft je hond vaak last van gasvorming of loopt hij een verhoogd risico op maagtorsie, vraag het dan eerst aan je dierenarts voordat je kool geeft."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
-    "sl": "Oprano, brez stebla in kocena, kuhano ali pripravljeno na pari in narezano na majhne koščke. Brez dodatkov: brez masla, čebule in česna. Le v majhnih količinah."
+    "sl": "Oprano, brez stebla in kocena, kuhano ali pripravljeno na pari in narezano na majhne koščke. Brez dodatkov: brez masla, čebule in česna. Le v majhnih količinah.",
+    "nl": "Gewassen, zonder stronk en kern, gekookt of gestoomd en in kleine stukjes gesneden. Ongekruid, dus geen boter, ui of knoflook. Alleen in kleine hoeveelheden."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
-    "sl": "Psi lahko poskusijo malo navadnega kuhanega zelja. Lahko jim povzroči vetrove, zato le majhen košček!"
+    "sl": "Psi lahko poskusijo malo navadnega kuhanega zelja. Lahko jim povzroči vetrove, zato le majhen košček!",
+    "nl": "Honden mogen een beetje naturel gare kool proberen. Het kan winderigheid geven, dus geef maar een klein stukje!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat raw cabbage?",
-        "sl": "Ali lahko psi jedo surovo zelje?"
+        "sl": "Ali lahko psi jedo surovo zelje?",
+        "nl": "Mogen honden rauwe kool eten?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
-        "sl": "Lahko, vendar kuhano ali na pari pripravljeno zelje manj verjetno razdraži pasjo prebavo. V vsakem primeru ga narežite na majhne koščke."
+        "sl": "Lahko, vendar kuhano ali na pari pripravljeno zelje manj verjetno razdraži pasjo prebavo. V vsakem primeru ga narežite na majhne koščke.",
+        "nl": "Dat kan, maar van gekookte of gestoomde kool krijgt een hond minder snel last van zijn spijsvertering. Snijd de kool hoe dan ook in kleine stukjes."
       }
     }
   ],
@@ -119,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "591074a84594e1fc82b3b5085d09a479e30195a4a1f5db2b01a93fd528de3bc8"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "fb0dac87712264ce48280af0753f1b53b64939534e1a99bf063860e3f147bbf9"
     }
   }
 }

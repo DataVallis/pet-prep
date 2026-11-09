@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Spinach",
-    "sl": "Špinača"
+    "sl": "Špinača",
+    "nl": "Spinazie"
   },
   "question": {
     "en": "Can dogs eat spinach?",
-    "sl": "Ali lahko psi jedo špinačo?"
+    "sl": "Ali lahko psi jedo špinačo?",
+    "nl": "Mogen honden spinazie eten?"
   },
   "url_slug": {
     "en": "spinach",
-    "sl": "spinaca"
+    "sl": "spinaca",
+    "nl": "spinazie"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Dogs can eat spinach, but it isn't one of the best vegetables to share with them. It is high in oxalic acid, which blocks calcium absorption and can lead to kidney damage. A dog would have to eat a lot to be harmed, but another vegetable is a better choice.",
-    "sl": "Psi lahko jedo špinačo, vendar ni med najboljšo zelenjavo, ki bi jo delili z njimi. Vsebuje veliko oksalne kisline, ki zavira vsrkavanje kalcija in lahko škodi ledvicam. Pes bi jo moral pojesti veliko, da bi mu škodila, a druga zelenjava je boljša izbira."
+    "sl": "Psi lahko jedo špinačo, vendar ni med najboljšo zelenjavo, ki bi jo delili z njimi. Vsebuje veliko oksalne kisline, ki zavira vsrkavanje kalcija in lahko škodi ledvicam. Pes bi jo moral pojesti veliko, da bi mu škodila, a druga zelenjava je boljša izbira.",
+    "nl": "Honden mogen spinazie eten, maar het is niet een van de beste groenten om aan ze te geven. Spinazie bevat veel oxaalzuur, dat de opname van calcium blokkeert en tot nierschade kan leiden. Een hond moet er veel van eten om er schade van te krijgen, maar een andere groente is een betere keuze."
   },
   "why": {
     "en": "Spinach is high in oxalic acid, which blocks the body's ability to absorb calcium and can lead to kidney damage. Dogs with healthy kidneys can process small amounts, and a dog would have to eat very large quantities to be harmed, but eating it over a long time can stress the kidneys. Because sources advise choosing another vegetable, we rate it not recommended.",
-    "sl": "Špinača vsebuje veliko oksalne kisline, ki telesu zavira vsrkavanje kalcija in lahko škodi ledvicam. Psi z zdravimi ledvicami majhne količine predelajo, pes pa bi je moral pojesti zelo veliko, da bi mu škodila, vendar lahko dolgotrajno uživanje obremeni ledvice. Ker viri svetujejo drugo zelenjavo, je ne priporočamo."
+    "sl": "Špinača vsebuje veliko oksalne kisline, ki telesu zavira vsrkavanje kalcija in lahko škodi ledvicam. Psi z zdravimi ledvicami majhne količine predelajo, pes pa bi je moral pojesti zelo veliko, da bi mu škodila, vendar lahko dolgotrajno uživanje obremeni ledvice. Ker viri svetujejo drugo zelenjavo, je ne priporočamo.",
+    "nl": "Spinazie bevat veel oxaalzuur, dat het vermogen van het lichaam om calcium op te nemen blokkeert en tot nierschade kan leiden. Honden met gezonde nieren kunnen kleine hoeveelheden aan en een hond zou erg veel moeten eten om er schade van te krijgen, maar krijgt een hond lange tijd spinazie, dan kan dat de nieren belasten. Omdat bronnen aanraden een andere groente te kiezen, beoordelen wij spinazie als niet aanbevolen."
   },
   "signs": {
     "en": [
@@ -30,29 +35,38 @@
     "sl": [
       "Mišična šibkost (po dolgotrajnem uživanju špinače)",
       "Nenormalen srčni ritem (po dolgotrajnem uživanju špinače)"
+    ],
+    "nl": [
+      "Spierzwakte (na langdurig spinazie eten)",
+      "Afwijkend hartritme (na langdurig spinazie eten)"
     ]
   },
   "what_to_do": {
     "en": "Always ask your vet before adding spinach to your dog's diet, even as a snack. If your dog is prone to kidney or bladder stones, avoid spinach.",
-    "sl": "Preden psu v prehrano dodate špinačo, tudi kot prigrizek, se vedno posvetujte z veterinarjem. Če je pes nagnjen k ledvičnim ali mehurnim kamnom, se špinači izogibajte."
+    "sl": "Preden psu v prehrano dodate špinačo, tudi kot prigrizek, se vedno posvetujte z veterinarjem. Če je pes nagnjen k ledvičnim ali mehurnim kamnom, se špinači izogibajte.",
+    "nl": "Vraag altijd je dierenarts om advies voordat je spinazie aan de voeding van je hond toevoegt, ook als tussendoortje. Is je hond vatbaar voor nierstenen of blaasstenen, geef dan geen spinazie."
   },
   "serving": {
     "en": "Only if your vet agrees and your dog's kidneys are healthy: small amounts, infrequently, steamed, with no spices, herbs, salt, oil, onion or garlic.",
-    "sl": "Le če veterinar soglaša in ima pes zdrave ledvice: majhne količine, poredko, pripravljeno na pari, brez začimb, zelišč, soli, olja, čebule in česna."
+    "sl": "Le če veterinar soglaša in ima pes zdrave ledvice: majhne količine, poredko, pripravljeno na pari, brez začimb, zelišč, soli, olja, čebule in česna.",
+    "nl": "Alleen als je dierenarts het goedvindt en de nieren van je hond gezond zijn: zelden en in kleine hoeveelheden, gestoomd, zonder kruiden, zout, olie, ui of knoflook."
   },
   "child": {
     "en": "Spinach isn't a great snack for dogs. Ask a grown-up to pick a different vegetable for your dog.",
-    "sl": "Špinača ni dober prigrizek za pse. Prosi odraslega, naj za psa izbere drugo zelenjavo."
+    "sl": "Špinača ni dober prigrizek za pse. Prosi odraslega, naj za psa izbere drugo zelenjavo.",
+    "nl": "Spinazie is geen goed tussendoortje voor honden. Vraag een volwassene om een andere groente voor je hond uit te zoeken."
   },
   "faq": [
     {
       "q": {
         "en": "Is raw or cooked spinach better for dogs?",
-        "sl": "Je za pse boljša surova ali kuhana špinača?"
+        "sl": "Je za pse boljša surova ali kuhana špinača?",
+        "nl": "Is rauwe of gare spinazie beter voor honden?"
       },
       "a": {
         "en": "If you give any, steam it: raw spinach is difficult for a dog to digest, and boiled spinach loses most of its nutrients.",
-        "sl": "Če jo že ponudite, jo pripravite na pari: surovo špinačo psi težko prebavijo, kuhana v vodi pa izgubi večino hranil."
+        "sl": "Če jo že ponudite, jo pripravite na pari: surovo špinačo psi težko prebavijo, kuhana v vodi pa izgubi večino hranil.",
+        "nl": "Als je er toch wat van geeft, stoom de spinazie dan: rauwe spinazie is moeilijk te verteren voor een hond, en gekookte spinazie verliest het grootste deel van haar voedingsstoffen."
       }
     }
   ],
@@ -123,6 +137,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "f7ec00e5bc71892a9db7c92ecd64496a72e7868ed54c62065575be010bd72899"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7c4c2b0812aa90aa739e38d90fdafdde1645a3bc915865d8e7eba377a33a0c70"
     }
   }
 }

@@ -3,57 +3,69 @@
   "species": "cat",
   "name": {
     "en": "Sweet potato",
-    "sl": "Sladki krompir"
+    "sl": "Sladki krompir",
+    "nl": "Zoete aardappel"
   },
   "question": {
     "en": "Can cats eat sweet potato?",
-    "sl": "Ali lahko mačke jedo sladki krompir?"
+    "sl": "Ali lahko mačke jedo sladki krompir?",
+    "nl": "Mogen katten zoete aardappel eten?"
   },
   "url_slug": {
     "en": "sweet-potato",
-    "sl": "sladki-krompir"
+    "sl": "sladki-krompir",
+    "nl": "zoete-aardappel"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Sweet potato is not toxic to cats: the ASPCA lists the sweet potato plant as non-toxic to them. Cats don't need vegetables, though, and any plant material can cause vomiting or stomach upset, so keep it a tiny, occasional extra.",
-    "sl": "Sladki krompir za mačke ni strupen: ASPCA rastlino sladkega krompirja navaja kot nestrupeno za mačke. Vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave, zato naj bo le majhen, občasen dodatek."
+    "sl": "Sladki krompir za mačke ni strupen: ASPCA rastlino sladkega krompirja navaja kot nestrupeno za mačke. Vendar mačke zelenjave ne potrebujejo, vsaka rastlinska hrana pa lahko povzroči bruhanje ali želodčne težave, zato naj bo le majhen, občasen dodatek.",
+    "nl": "Zoete aardappel is niet giftig voor katten: volgens de ASPCA is de zoete-aardappelplant niet giftig voor katten. Katten hebben echter geen groente nodig en van elk plantaardig materiaal kunnen ze gaan braken of maagklachten krijgen, dus houd het bij een klein extraatje, en alleen af en toe."
   },
   "why": {
     "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
-    "sl": "ASPCA rastlino sladkega krompirja (Ipomoea batatas) navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+    "sl": "ASPCA rastlino sladkega krompirja (Ipomoea batatas) navaja kot nestrupeno za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "nl": "De ASPCA noemt de zoete-aardappelplant (Ipomoea batatas) niet giftig voor katten. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
   },
   "serving": {
     "en": "A small plain piece now and then, with no butter, salt or seasoning.",
-    "sl": "Občasno majhen navaden košček, brez masla, soli in začimb."
+    "sl": "Občasno majhen navaden košček, brez masla, soli in začimb.",
+    "nl": "Af en toe een klein naturel stukje, zonder boter, zout of kruiden."
   },
   "child": {
     "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Sladki krompir za muce ni strupen. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Sladki krompir za muce ni strupen. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "nl": "Zoete aardappel is niet giftig voor katten. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
   },
   "faq": [
     {
       "q": {
         "en": "Is sweet potato the same as a normal potato?",
-        "sl": "Ali je sladki krompir enak navadnemu krompirju?"
+        "sl": "Ali je sladki krompir enak navadnemu krompirju?",
+        "nl": "Is zoete aardappel hetzelfde als gewone aardappel?"
       },
       "a": {
         "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
-        "sl": "Ne. ASPCA sladki krompir navaja kot drugo rastlino (Ipomoea batatas, družina slakovk). Surov navaden krompir je nekaj drugega: ASPCA navaja, da je za hišne živali lahko problematičen."
+        "sl": "Ne. ASPCA sladki krompir navaja kot drugo rastlino (Ipomoea batatas, družina slakovk). Surov navaden krompir je nekaj drugega: ASPCA navaja, da je za hišne živali lahko problematičen.",
+        "nl": "Nee. Volgens de ASPCA is de zoete aardappel een andere plant (Ipomoea batatas, familie Convolvulaceae). Met rauwe gewone aardappelen ligt dat anders: die kunnen volgens de ASPCA problematisch zijn voor huisdieren."
       }
     },
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "nl": "Hebben katten groente nodig?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
       }
     }
   ],
@@ -120,6 +132,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fddbe4d640283fae794ea6449f676a880cbec04ea2222bf4c715843aa4d008be"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "531c0d89e5dda483fd5c2c89ccd6cf4845c68f8cf294bf0a300a1e4d00e96f1d"
     }
   }
 }

@@ -3,24 +3,29 @@
   "species": "dog",
   "name": {
     "en": "Kale",
-    "sl": "Listnati ohrovt"
+    "sl": "Listnati ohrovt",
+    "nl": "Boerenkool"
   },
   "question": {
     "en": "Can dogs eat kale?",
-    "sl": "Ali lahko psi jedo listnati ohrovt?"
+    "sl": "Ali lahko psi jedo listnati ohrovt?",
+    "nl": "Mogen honden boerenkool eten?"
   },
   "url_slug": {
     "en": "kale",
-    "sl": "listnati-ohrovt"
+    "sl": "listnati-ohrovt",
+    "nl": "boerenkool"
   },
   "level": "not_recommended",
   "answer": {
     "en": "Better not as a regular treat. A little kale now and then is unlikely to harm most dogs, but some vets caution against it: kale contains calcium oxalate, linked to kidney and bladder stones, and isothiocyanates, which can irritate the stomach.",
-    "sl": "Raje ne kot reden priboljšek. Malo listnatega ohrovta občasno večini psov verjetno ne škodi, nekateri veterinarji pa odsvetujejo: vsebuje kalcijev oksalat, povezan z ledvičnimi in mehurnimi kamni, ter izotiocianate, ki lahko dražijo želodec."
+    "sl": "Raje ne kot reden priboljšek. Malo listnatega ohrovta občasno večini psov verjetno ne škodi, nekateri veterinarji pa odsvetujejo: vsebuje kalcijev oksalat, povezan z ledvičnimi in mehurnimi kamni, ter izotiocianate, ki lahko dražijo želodec.",
+    "nl": "Liever niet als vaste traktatie. Af en toe een beetje boerenkool is voor de meeste honden waarschijnlijk niet schadelijk, maar sommige dierenartsen raden het af: boerenkool bevat calciumoxalaat, dat in verband wordt gebracht met nierstenen en blaasstenen, en isothiocyanaten, die de maag kunnen irriteren."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
-    "sl": "Listnati ohrovt vsebuje kalcijev oksalat, ki lahko povzroči ledvične in mehurne kamne, ter izotiocianate, ki lahko pri psih povzročijo blago do potencialno hudo draženje želodca. Če ga pes dobiva redno, lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom. Majhne količine so morda v redu, ker pa ga nekateri veterinarji odsvetujejo, sledimo strožjemu nasvetu."
+    "sl": "Listnati ohrovt vsebuje kalcijev oksalat, ki lahko povzroči ledvične in mehurne kamne, ter izotiocianate, ki lahko pri psih povzročijo blago do potencialno hudo draženje želodca. Če ga pes dobiva redno, lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom. Majhne količine so morda v redu, ker pa ga nekateri veterinarji odsvetujejo, sledimo strožjemu nasvetu.",
+    "nl": "Boerenkool bevat calciumoxalaat, dat nierstenen en blaasstenen kan veroorzaken, en isothiocyanaten, die bij honden maagirritatie kunnen geven, van licht tot mogelijk ernstig. Krijgt een hond boerenkool regelmatig, dan kan het ook de werking van de schildklier verstoren, vooral bij honden met hypothyreoïdie. Kleine hoeveelheden zijn mogelijk prima, maar omdat sommige dierenartsen boerenkool afraden, volgen wij het strengere advies."
   },
   "signs": {
     "en": [
@@ -34,36 +39,48 @@
       "Driska",
       "Težave z uriniranjem",
       "Kakršna koli sprememba pri uriniranju"
+    ],
+    "nl": [
+      "Braken",
+      "Diarree",
+      "Moeite met plassen",
+      "Veranderingen in het plasgedrag"
     ]
   },
   "what_to_do": {
     "en": "If your dog ate kale, watch closely for tummy upset or signs of kidney and bladder stones. Contact your vet if you notice vomiting, diarrhoea, difficulty urinating or any change in urination habits.",
-    "sl": "Če je pes pojedel listnati ohrovt, ga pozorno opazujte, ali ima prebavne težave ali znake ledvičnih in mehurnih kamnov. Če opazite bruhanje, drisko, težave z uriniranjem ali kakršno koli spremembo pri uriniranju, se obrnite na veterinarja."
+    "sl": "Če je pes pojedel listnati ohrovt, ga pozorno opazujte, ali ima prebavne težave ali znake ledvičnih in mehurnih kamnov. Če opazite bruhanje, drisko, težave z uriniranjem ali kakršno koli spremembo pri uriniranju, se obrnite na veterinarja.",
+    "nl": "Heeft je hond boerenkool gegeten, let dan goed op maagklachten of tekenen van nierstenen en blaasstenen. Neem contact op met je dierenarts als je braken, diarree, moeite met plassen of een verandering in het plasgedrag opmerkt."
   },
   "serving": null,
   "child": {
     "en": "Kale is not a good snack for dogs. Green beans or cucumber are better treats to share, with a grown-up's help.",
-    "sl": "Listnati ohrovt ni dober prigrizek za pse. Stročji fižol ali kumara sta boljša priboljška, ki ju ponudite s pomočjo odraslega."
+    "sl": "Listnati ohrovt ni dober prigrizek za pse. Stročji fižol ali kumara sta boljša priboljška, ki ju ponudite s pomočjo odraslega.",
+    "nl": "Boerenkool is geen goed tussendoortje voor honden. Sperziebonen of komkommer zijn betere traktaties om te delen, met hulp van een volwassene."
   },
   "faq": [
     {
       "q": {
         "en": "Which dogs should avoid kale?",
-        "sl": "Kateri psi naj se izogibajo listnatemu ohrovtu?"
+        "sl": "Kateri psi naj se izogibajo listnatemu ohrovtu?",
+        "nl": "Welke honden moeten boerenkool vermijden?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
-        "sl": "Psi, nagnjeni k ledvičnim ali mehurnim kamnom, naj se izogibajo hrani z veliko kalcijevega oksalata, tudi listnatemu ohrovtu. Ta lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom."
+        "sl": "Psi, nagnjeni k ledvičnim ali mehurnim kamnom, naj se izogibajo hrani z veliko kalcijevega oksalata, tudi listnatemu ohrovtu. Ta lahko vpliva tudi na delovanje ščitnice, zlasti pri psih s hipotiroidizmom.",
+        "nl": "Honden die vatbaar zijn voor nierstenen of blaasstenen moeten voeding met veel calciumoxalaat vermijden, boerenkool inbegrepen. Boerenkool kan ook de werking van de schildklier verstoren, vooral bij honden met hypothyreoïdie."
       }
     },
     {
       "q": {
         "en": "What can I give my dog instead of kale?",
-        "sl": "Kaj lahko psu ponudim namesto listnatega ohrovta?"
+        "sl": "Kaj lahko psu ponudim namesto listnatega ohrovta?",
+        "nl": "Wat kan ik mijn hond geven in plaats van boerenkool?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
-        "sl": "Stročji fižol in kumare so za večino psov varni."
+        "sl": "Stročji fižol in kumare so za večino psov varni.",
+        "nl": "Sperziebonen en komkommer zijn voor de meeste honden veilig."
       }
     }
   ],
@@ -127,6 +144,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8ddf71d2677e27a4450caeb599bfdbdefeb52efcae20f0bfc1d0bbe2c50a4b90"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f83b956cf999b5d0dc6f3b1375408a1337ba4be27626d9ccd7486226589aa49e"
     }
   }
 }

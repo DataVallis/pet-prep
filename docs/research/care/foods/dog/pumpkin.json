@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Pumpkin",
-    "sl": "Buča"
+    "sl": "Buča",
+    "nl": "Pompoen"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
-    "sl": "Ali lahko psi jedo bučo?"
+    "sl": "Ali lahko psi jedo bučo?",
+    "nl": "Mogen honden pompoen eten?"
   },
   "url_slug": {
     "en": "pumpkin",
-    "sl": "buca"
+    "sl": "buca",
+    "nl": "pompoen"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, plain cooked pumpkin is a healthy food for dogs. Choose fresh cooked pumpkin or plain canned pumpkin puree, never pumpkin pie filling, and don't share uncooked rinds.",
-    "sl": "Da, navadna kuhana buča je za pse zdrava hrana. Izberite svežo kuhano bučo ali navaden bučni pire iz pločevinke, nikoli nadeva za bučno pito, in psu ne dajajte surove lupine."
+    "sl": "Da, navadna kuhana buča je za pse zdrava hrana. Izberite svežo kuhano bučo ali navaden bučni pire iz pločevinke, nikoli nadeva za bučno pito, in psu ne dajajte surove lupine.",
+    "nl": "Ja, naturel gare pompoen is gezond voor honden. Kies verse, gare pompoen of naturel pompoenpuree uit blik, nooit vulling voor pompoentaart, en geef geen ongekookte schil."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
-    "sl": "Čista buča je polna antioksidantov in psom lahko pomaga tako pri driski kot pri zaprtju. Nadev za bučno pito lahko vsebuje strupeni ksilitol ter druge začimbe in dodatke, ki bi lahko škodili. Surove lupine so trde in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil."
+    "sl": "Čista buča je polna antioksidantov in psom lahko pomaga tako pri driski kot pri zaprtju. Nadev za bučno pito lahko vsebuje strupeni ksilitol ter druge začimbe in dodatke, ki bi lahko škodili. Surove lupine so trde in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
+    "nl": "Naturel pompoen zit vol antioxidanten en kan bij honden helpen bij zowel diarree als verstopping. Vulling voor pompoentaart kan xylitol bevatten, dat giftig is, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn. Ongekookte schillen zijn taai en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken."
   },
   "signs": null,
   "what_to_do": {
     "en": "As with any new food, ask your vet before adding pumpkin to your dog's routine.",
-    "sl": "Kot pri vsaki novi hrani se tudi pred uvedbo buče v pasji jedilnik posvetujte z veterinarjem."
+    "sl": "Kot pri vsaki novi hrani se tudi pred uvedbo buče v pasji jedilnik posvetujte z veterinarjem.",
+    "nl": "Zoals bij elk nieuw voedsel: vraag je dierenarts om advies voordat je pompoen aan de voeding van je hond toevoegt."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
-    "sl": "Sveža, kuhana, navadna in olupljena ali navaden bučni pire iz pločevinke, brez dodanega sladkorja, začimb in umetnih arom. Brez nadeva za pito in brez surove lupine."
+    "sl": "Sveža, kuhana, navadna in olupljena ali navaden bučni pire iz pločevinke, brez dodanega sladkorja, začimb in umetnih arom. Brez nadeva za pito in brez surove lupine.",
+    "nl": "Verse pompoen, gaar gemaakt en geschild, of naturel pompoenpuree uit blik, zonder toegevoegde suiker, kruiden of kunstmatige smaakstoffen. Geen taartvulling en geen rauwe schil."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
-    "sl": "Psi se lahko posladkajo z malo navadne kuhane buče. Odrasli poskrbi, da to ni sladek nadev za pito!"
+    "sl": "Psi se lahko posladkajo z malo navadne kuhane buče. Odrasli poskrbi, da to ni sladek nadev za pito!",
+    "nl": "Honden mogen genieten van een beetje naturel gare pompoen. Een volwassene let erop dat het geen zoete taartvulling is!"
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat pumpkin pie filling?",
-        "sl": "Ali lahko psi jedo nadev za bučno pito?"
+        "sl": "Ali lahko psi jedo nadev za bučno pito?",
+        "nl": "Mogen honden vulling voor pompoentaart eten?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
-        "sl": "Ne. Nadev za bučno pito lahko vsebuje ksilitol, sladilo, ki je za pse strupeno, ter druge začimbe in dodatke, ki bi lahko škodili."
+        "sl": "Ne. Nadev za bučno pito lahko vsebuje ksilitol, sladilo, ki je za pse strupeno, ter druge začimbe in dodatke, ki bi lahko škodili.",
+        "nl": "Nee. Vulling voor pompoentaart kan xylitol bevatten, een zoetstof die giftig is voor honden, en daarnaast kruiden en andere toevoegingen die schadelijk kunnen zijn."
       }
     },
     {
       "q": {
         "en": "Can dogs eat raw pumpkin rind?",
-        "sl": "Ali lahko psi jedo surovo bučno lupino?"
+        "sl": "Ali lahko psi jedo surovo bučno lupino?",
+        "nl": "Mogen honden rauwe pompoenschil eten?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
-        "sl": "Ne. Surove lupine so trde, goste in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil."
+        "sl": "Ne. Surove lupine so trde, goste in vlaknate: pes se z njimi lahko zaduši, težko jih prebavi in lahko povzročijo zamašitev prebavil.",
+        "nl": "Nee. Ongekookte schillen zijn taai, stevig en vezelig: ze vormen een verstikkingsgevaar, zijn moeilijk te verteren en kunnen een verstopping in de darmen veroorzaken."
       }
     }
   ],
@@ -128,6 +140,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "644dfffb08e524ec5941fab2ef10babf5e0151d014e5302068c5c45f3f51d2c8"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "46d0a42e2dcaee2e8a615baac9ae184e3f0012fe29072cc5d661f9bf6040e2e2"
     }
   }
 }
