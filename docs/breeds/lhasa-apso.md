@@ -10,7 +10,7 @@
 | Vir podatkov | `docs/research/dog-data/data.json` → `lhasa_apso` (viri S737–S745; ponovno S8, S10, S11, S14, S24, S35, S45, S54, S92, S174); seznam za vzreditelja: RKC (`listed`) — DNA test PRA4 (minimum), pregled oči BVA/KC/ISDS (dobra praksa) |
 | Izvor | FCI št. 227 »Lhasa Apso«, skupina 9, sekcija 5 (tibetanske pasme), Tibet (Kitajska), pokroviteljstvo Velika Britanija (S737, S738) |
 | Zakaj ta pasma | naslednja najbolj priljubljena po registracijah AKC 2024, ki je še ni bilo v aplikaciji — 94. mesto »Lhasa Apso« (S174, zapisano 2026-11-05) |
-| PR-ji | pet-prep #825 (pasma) · portret pet-prep (sledi) · spletna stran pet-prep-website (sledi) |
+| PR-ji | pet-prep #825 (pasma, združen `6eef5cc`) · portret pet-prep (ta PR; zagon `breed-portraits.yml` 42605444780, koda `6eef5cc`, brez namestitve; sprejet v prvem poskusu) · spletna stran: pet-prep-website `feat/register-lhasa-apso` (PR sledi) |
 
 ## Odločitve (z viri in kdo je odločil)
 
@@ -43,7 +43,7 @@
 | Pravila po starosti (2.000 → 6.000 korakov pri 6 mesecih, odrasel 6.000, starejši 4.500 od 108. meseca; 4 → 3 → 2 obroka; učenje 0,7×) | 🛠 | 💶 izziv | M5-R10-98 | 2026-11-06 |
 | Česanje vsak dan, »Nova izkušnja« za mladička, zobje vsak dan, kremplji vsake 4 tedne, opomnik staršu za kopanje (2 tedna) | 🛠 | 💶 izziv | M5-R13 / M5-R15 / M5-R17 / M5-R18 / M5-R19 | 2026-11-06 |
 | Barva (izbirnik: 10 barv standarda) | 🛠 | 💶 izziv | M5-R21 | 2026-11-06 |
-| AI portret v registru | 🗓 sledi takoj po združitvi (`breed-portraits.yml`) | — | M5-R11-04 | — |
+| AI portret v registru | ✅ AI fotografija (oznaka »AI-generated photo«; zlata dolga dlaka, temnejše konice brade, rep čez hrbet, siva studijska podlaga) | — | M5-R11-04 | 2026-11-09 |
 | Stran na petprep.si (`/animals/dogs/lhasa-apso`, `/sl/zivali/psi/lhasa-apso`) | 🗓 »Kmalu«, dokler pasma ni v izdaji aplikacije (le s portretom) | — | M5-R11 | — |
 
 ## Zgodba (v slogu BUILD_LOG)
@@ -60,3 +60,4 @@
 - **Teža** je iz VCA (S742, 13–15 lb); noben standard (FCI, KC, UKC) teže ne navaja. **Višina samic** v standardu nima številke (»slightly smaller«).
 - **Slovensko ime** »lhasa apso« — strani KZS ali kluba nisem odprl. Potrdite ali popravite.
 - **Coren 68** je le prek Wikipedije (S744, tier C, s sklicem na Corena) — kot pri angleškem setru.
+- **Portret:** narejen 2026-11-09 (zagon 42605444780, brez produkcijske namestitve), sprejet v prvem poskusu; dlaka je nekoliko krajša od razstavne (do tal) — po potrebi ga ponovno ustvarite s `force`.
