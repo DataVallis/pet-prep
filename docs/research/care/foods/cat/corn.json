@@ -3,47 +3,57 @@
   "species": "cat",
   "name": {
     "en": "Corn (sweetcorn kernels)",
-    "sl": "Koruza (zrna sladke koruze)"
+    "sl": "Koruza (zrna sladke koruze)",
+    "pt": "Milho (grãos de milho doce)"
   },
   "question": {
     "en": "Can cats eat corn?",
-    "sl": "Ali lahko mačke jedo koruzo?"
+    "sl": "Ali lahko mačke jedo koruzo?",
+    "pt": "Os gatos podem comer milho?"
   },
   "url_slug": {
     "en": "corn",
-    "sl": "koruza"
+    "sl": "koruza",
+    "pt": "milho"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
-    "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb."
+    "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb.",
+    "pt": "Sim, alguns grãos de milho simples são aceitáveis como guloseima ocasional, se o teu gato gostar. A Cats Protection inclui o milho entre os poucos legumes que se podem dar a um gato. Serve-o sem manteiga, sal nem temperos."
   },
   "why": {
     "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
-    "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+    "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
+    "pt": "A Cats Protection diz que há alguns legumes que podes dar ao teu gato, se ele gostar, incluindo o milho, mas que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. A PDSA diz que muitas frutas e legumes podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a few kernels. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "pt": "Começa com alguns grãos. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
-    "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj."
+    "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj.",
+    "pt": "Alguns grãos de milho simples, cozinhados, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
-    "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek."
+    "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
+    "pt": "Alguns grãos de milho podem ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
-        "sl": "Ali mačke potrebujejo zelenjavo?"
+        "sl": "Ali mačke potrebujejo zelenjavo?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
-        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek."
+        "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -98,6 +108,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ca0f34a528f64de5add9deadd3390c0937cc8211bf1ac073be3051376b0a5e58"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d790002467173986c0b78b3d6b6ebf66d850fe5c9289b8495e6e82fa7b07aa3b"
     }
   }
 }

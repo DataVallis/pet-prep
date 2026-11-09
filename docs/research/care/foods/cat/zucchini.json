@@ -15,7 +15,8 @@
     "de": "Zucchini",
     "fr": "Courgette",
     "es": "Calabacín",
-    "it": "Zucchine"
+    "it": "Zucchine",
+    "pt": "Curgete"
   },
   "question": {
     "en": "Can cats eat zucchini?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen Zucchini fressen?",
     "fr": "Les chats peuvent-ils manger de la courgette ?",
     "es": "¿Pueden los gatos comer calabacín?",
-    "it": "I gatti possono mangiare le zucchine?"
+    "it": "I gatti possono mangiare le zucchine?",
+    "pt": "Os gatos podem comer curgete?"
   },
   "url_slug": {
     "en": "zucchini",
@@ -47,7 +49,8 @@
     "de": "zucchini",
     "fr": "courgette",
     "es": "calabacin",
-    "it": "zucchine"
+    "it": "zucchine",
+    "pt": "curgete"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, ein kleines Stück ungewürzte Zucchini ist als gelegentliches Leckerli in Ordnung. Die ASPCA führt Zucchini als ungiftig für Katzen auf. Halten Sie die Blätter der Pflanze aber von Ihrer Katze fern: Laut International Cat Care kann der Kontakt mit ihnen das Maul einer Katze reizen.",
     "fr": "Oui, un petit morceau de courgette nature peut être donné de temps en temps en friandise. L’ASPCA classe la courgette parmi les plantes non toxiques pour les chats. Tenez toutefois les feuilles de la plante à l’écart : selon International Cat Care, leur contact peut irriter la bouche d’un chat.",
     "es": "Sí, un trocito de calabacín sin condimentar está bien como premio ocasional. La ASPCA incluye el calabacín entre las plantas no tóxicas para los gatos. Eso sí, mantén las hojas de la planta lejos de tu gato: International Cat Care advierte de que el contacto con ellas puede irritarle la boca.",
-    "it": "Sì, un pezzettino di zucchina al naturale va bene come premio occasionale. L’ASPCA indica la zucchina come non tossica per i gatti. Tieni però lontane le foglie della pianta: secondo International Cat Care il contatto con le foglie può irritare la bocca del gatto."
+    "it": "Sì, un pezzettino di zucchina al naturale va bene come premio occasionale. L’ASPCA indica la zucchina come non tossica per i gatti. Tieni però lontane le foglie della pianta: secondo International Cat Care il contatto con le foglie può irritare la bocca del gatto.",
+    "pt": "Sim, um pedacinho de curgete simples não tem problema como guloseima ocasional. A ASPCA classifica a curgete como não tóxica para os gatos. Mantém, no entanto, as folhas da planta fora do alcance: a International Cat Care diz que o contacto com elas pode irritar a boca do gato."
   },
   "why": {
     "en": "The ASPCA lists zucchini squash as non-toxic to cats. International Cat Care warns that contact with the leaves of food plants, including zucchini, can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "de": "Die ASPCA führt Zucchini als ungiftig für Katzen auf. International Cat Care warnt, dass der Kontakt mit den Blättern von Nutzpflanzen, auch von Zucchini, Blasen oder Juckreiz im Maul und am Zahnfleisch, Niesen und Augenprobleme verursachen kann. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe la courgette parmi les plantes non toxiques pour les chats. International Cat Care avertit que le contact avec les feuilles de plantes potagères, dont la courgette, peut provoquer des cloques ou des démangeaisons dans la bouche et sur les gencives d’un chat, des éternuements et des troubles oculaires. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "La ASPCA incluye el calabacín entre las plantas no tóxicas para los gatos. International Cat Care advierte de que el contacto con las hojas de plantas comestibles, calabacín incluido, puede provocar ampollas o picor en la boca y las encías del gato, estornudos y problemas en los ojos. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
-    "it": "L’ASPCA indica la zucchina come non tossica per i gatti. International Cat Care avverte che il contatto con le foglie di piante alimentari, zucchine comprese, può causare vesciche o prurito alla bocca e alle gengive, starnuti e problemi agli occhi. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
+    "it": "L’ASPCA indica la zucchina come non tossica per i gatti. International Cat Care avverte che il contatto con le foglie di piante alimentari, zucchine comprese, può causare vesciche o prurito alla bocca e alle gengive, starnuti e problemi agli occhi. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
+    "pt": "A ASPCA classifica a curgete como não tóxica para os gatos. A International Cat Care avisa que o contacto com as folhas das plantas hortícolas, incluindo a curgete, pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho pequeno. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A small plain piece of the zucchini itself, with no butter, salt or seasoning. Keep the plant's leaves away from your cat.",
@@ -113,7 +119,8 @@
     "de": "Ein kleines Stück der Zucchini selbst, pur und ohne Butter, Salz oder Gewürze. Halten Sie die Blätter der Pflanze von Ihrer Katze fern.",
     "fr": "Un petit morceau de courgette nature, sans beurre, sel ni assaisonnement. Gardez les feuilles de la plante hors de portée de votre chat.",
     "es": "Un trocito de calabacín, sin mantequilla, sal ni condimentos. Mantén las hojas de la planta lejos de tu gato.",
-    "it": "Un pezzettino di zucchina al naturale, senza burro, sale o condimenti. Tieni le foglie della pianta lontane dal gatto."
+    "it": "Un pezzettino di zucchina al naturale, senza burro, sale o condimenti. Tieni le foglie della pianta lontane dal gatto.",
+    "pt": "Um pedacinho pequeno da própria curgete, simples, sem manteiga, sal nem temperos. Mantém as folhas da planta longe do teu gato."
   },
   "child": {
     "en": "A little piece of zucchini can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "de": "Ein Stück Zucchini kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de courgette, c’est parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit plus.",
     "es": "Un trocito de calabacín puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es solo un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di zucchina come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di zucchina come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um bocadinho de curgete pode ser uma guloseima para o teu gato de vez em quando. Os gatos precisam sobretudo de carne; os legumes são só um extra minúsculo."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan los gatos verdura?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -163,7 +172,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes na natureza e que não há necessidade de os incluir na sua alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -290,6 +300,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "6d23182cb718714c96216ee0436dedf9a35e287381be1f0db496fb2395be8c90"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d2b4c1f380b44cc36b289e4971486a9da8832b4c68befddb440335f35b71978d"
     }
   }
 }

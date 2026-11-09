@@ -15,7 +15,8 @@
     "de": "Rohe Kartoffeln",
     "fr": "Pommes de terre crues",
     "es": "Patatas crudas",
-    "it": "Patate crude"
+    "it": "Patate crude",
+    "pt": "Batatas cruas"
   },
   "question": {
     "en": "Can dogs eat raw potatoes?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde rohe Kartoffeln fressen?",
     "fr": "Les chiens peuvent-ils manger des pommes de terre crues ?",
     "es": "¿Pueden los perros comer patatas crudas?",
-    "it": "I cani possono mangiare le patate crude?"
+    "it": "I cani possono mangiare le patate crude?",
+    "pt": "Os cães podem comer batatas cruas?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -47,7 +49,8 @@
     "de": "rohe-kartoffeln",
     "fr": "pommes-de-terre-crues",
     "es": "patatas-crudas",
-    "it": "patate-crude"
+    "it": "patate-crude",
+    "pt": "batatas-cruas"
   },
   "level": "dangerous",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Nein, geben Sie Ihrem Hund keine rohen Kartoffeln. Rohe und grüne Kartoffeln sind nicht sicher und können giftig sein, weil sie Solanin enthalten, einen natürlichen Giftstoff. Ungewürzte, gut gekochte Kartoffeln sind etwas anderes und in Maßen in Ordnung.",
     "fr": "Non, ne donnez pas de pommes de terre crues à votre chien. Les pommes de terre crues et vertes sont dangereuses et potentiellement toxiques, car elles contiennent de la solanine, une toxine naturelle. La pomme de terre nature bien cuite, c’est différent : elle convient avec modération.",
     "es": "No, no le des patatas crudas a tu perro. Las patatas crudas y las verdes no son seguras y pueden ser tóxicas porque contienen solanina, una toxina natural. La patata cocida sin condimentar, bien cocinada, es otra cosa y está bien con moderación.",
-    "it": "No, non dare patate crude al tuo cane. Le patate crude e quelle verdi non sono sicure e possono essere tossiche perché contengono solanina, una tossina naturale. La patata semplice e ben cotta è un’altra cosa e va bene in quantità moderate."
+    "it": "No, non dare patate crude al tuo cane. Le patate crude e quelle verdi non sono sicure e possono essere tossiche perché contengono solanina, una tossina naturale. La patata semplice e ben cotta è un’altra cosa e va bene in quantità moderate.",
+    "pt": "Não, não dês batatas cruas ao teu cão. As batatas cruas e as verdes não são seguras e podem ser tóxicas, porque contêm solanina, uma toxina natural. A batata simples e bem cozida é diferente e não tem problema com moderação."
   },
   "why": {
     "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
@@ -80,7 +84,8 @@
     "de": "Rohe Kartoffeln und Kartoffeln mit grüner Schale oder grünen Stellen enthalten Solanin, einen natürlich vorkommenden Giftstoff der Nachtschattengewächse. Grüne Stellen entstehen, wenn manche Kartoffeln dem Licht ausgesetzt sind, und zeigen an, dass der Solaningehalt gestiegen ist. Auch Stücke roher oder halb gegarter Kartoffeln können zum Ersticken führen.",
     "fr": "Les pommes de terre crues, ainsi que celles dont la peau est verte ou qui présentent des taches vertes, contiennent de la solanine, une toxine naturellement présente dans les plantes de la famille des solanacées. Les taches vertes apparaissent quand certaines pommes de terre sont exposées à la lumière et indiquent que la teneur en solanine a augmenté. Des morceaux de pomme de terre crue ou mal cuite peuvent aussi présenter un risque d’étouffement.",
     "es": "Las patatas crudas, y las que tienen la piel verde o manchas verdes, contienen solanina, una toxina natural presente en las plantas de la familia de las solanáceas. Las manchas verdes aparecen cuando algunas patatas se exponen a la luz y indican que ha aumentado la solanina. Los trozos de patata cruda o a medio cocer también pueden suponer un riesgo de atragantamiento.",
-    "it": "Le patate crude, e quelle con la buccia verde o con macchie verdi, contengono solanina, una tossina naturale presente nelle piante della famiglia delle solanacee. Le macchie verdi compaiono quando alcune patate sono esposte alla luce e indicano che la solanina è aumentata. Anche i pezzi di patata cruda o poco cotta possono far soffocare."
+    "it": "Le patate crude, e quelle con la buccia verde o con macchie verdi, contengono solanina, una tossina naturale presente nelle piante della famiglia delle solanacee. Le macchie verdi compaiono quando alcune patate sono esposte alla luce e indicano che la solanina è aumentata. Anche i pezzi di patata cruda o poco cotta possono far soffocare.",
+    "pt": "As batatas cruas, e as batatas com casca verde ou manchas verdes, contêm solanina, uma toxina natural presente nas plantas da família das solanáceas. As manchas verdes aparecem quando algumas batatas ficam expostas à luz e mostram que a solanina aumentou. Pedaços de batata crua ou mal cozida também podem causar engasgo."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Diarrea",
       "Letargia",
       "Debolezza muscolare"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Letargia",
+      "Fraqueza muscular"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "de": "Wenn Ihr Hund rohe oder grüne Kartoffeln gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Wie es weitergeht, hängt von der Größe Ihres Hundes, der gefressenen Menge und davon ab, ob Symptome auftreten. Wenn Ihr Hund erbricht, Durchfall hat oder lethargisch oder schwach wirkt, gehen Sie sofort zum Tierarzt.",
     "fr": "Si votre chien a mangé de la pomme de terre crue ou verte, contactez votre vétérinaire ou un centre antipoison vétérinaire. La suite dépend de la taille de votre chien, de la quantité ingérée et de la présence ou non de signes. Si votre chien vomit, a de la diarrhée ou semble léthargique ou faible, consultez immédiatement un vétérinaire.",
     "es": "Si tu perro ha comido patata cruda o verde, contacta con tu veterinario o con una línea de información toxicológica para animales. Qué conviene hacer después depende del tamaño de tu perro, de cuánto haya comido y de si hay síntomas. Si tu perro vomita, tiene diarrea, está apático o débil, acude enseguida al veterinario.",
-    "it": "Se il tuo cane ha mangiato patata cruda o verde, contatta il veterinario o un centro antiveleni veterinario. Che cosa fare dopo dipende dalla taglia del cane, da quanta patata ha mangiato e dalla presenza di sintomi. Se il cane vomita, ha la diarrea o sembra letargico o debole, rivolgiti subito a un veterinario."
+    "it": "Se il tuo cane ha mangiato patata cruda o verde, contatta il veterinario o un centro antiveleni veterinario. Che cosa fare dopo dipende dalla taglia del cane, da quanta patata ha mangiato e dalla presenza di sintomi. Se il cane vomita, ha la diarrea o sembra letargico o debole, rivolgiti subito a un veterinario.",
+    "pt": "Se o teu cão comeu batata crua ou verde, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais. O que fazer a seguir depende do tamanho do teu cão, da quantidade ingerida e de haver ou não sinais. Se o teu cão vomitar, tiver diarreia ou parecer letárgico ou fraco, leva-o imediatamente ao veterinário."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "de": "Rohe Kartoffeln sind nichts für Hunde. Wenn sich ein Hund eine schnappt, sag sofort einem Erwachsenen Bescheid.",
     "fr": "Les pommes de terre crues ne sont pas pour les chiens. Si un chien en attrape une, préviens tout de suite un adulte.",
     "es": "Las patatas crudas no son para los perros. Si un perro coge una, avisa enseguida a un adulto.",
-    "it": "Le patate crude non sono per i cani. Se un cane ne afferra una, dillo subito a un adulto."
+    "it": "Le patate crude non sono per i cani. Se un cane ne afferra una, dillo subito a un adulto.",
+    "pt": "As batatas cruas não são para os cães. Se um cão pegar numa, avisa logo um adulto."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "de": "Dürfen Hunde gekochte Kartoffeln fressen?",
         "fr": "Les pommes de terre cuites conviennent-elles aux chiens ?",
         "es": "¿Pueden los perros comer patatas cocidas?",
-        "it": "Le patate cotte vanno bene per i cani?"
+        "it": "Le patate cotte vanno bene per i cani?",
+        "pt": "Os cães podem comer batata cozida?"
       },
       "a": {
         "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
@@ -233,7 +247,8 @@
         "de": "Ja, ungewürzte gekochte Kartoffeln sind in Maßen in Ordnung – so weich gekocht, dass sie sich zerdrücken lassen, damit der Hund nicht daran erstickt. Achten Sie darauf, dass sie nicht grün sind.",
         "fr": "Oui, les pommes de terre cuites nature conviennent avec modération, à condition d’être assez cuites pour s’écraser en purée, afin que le chien ne s’étouffe pas. Vérifiez qu’elles ne sont pas vertes.",
         "es": "Sí, las patatas cocidas sin condimentar están bien con moderación, siempre que estén lo bastante cocidas como para hacerlas puré y no haya riesgo de atragantamiento. Asegúrate de que no estén verdes.",
-        "it": "Sì, le patate cotte senza condimenti vanno bene in quantità moderate, cotte fino a poterle schiacciare, per evitare che il cane si soffochi. Assicurati che non siano verdi."
+        "it": "Sì, le patate cotte senza condimenti vanno bene in quantità moderate, cotte fino a poterle schiacciare, per evitare che il cane si soffochi. Assicurati che non siano verdi.",
+        "pt": "Sim, a batata cozida simples não tem problema com moderação, desde que esteja cozida o suficiente para se poder esmagar, para o cão não se engasgar. Confirma que não está verde."
       }
     },
     {
@@ -251,7 +266,8 @@
         "de": "Dürfen Hunde Kartoffelschalen fressen?",
         "fr": "Les chiens peuvent-ils manger des peaux de pomme de terre ?",
         "es": "¿Pueden los perros comer piel de patata?",
-        "it": "I cani possono mangiare le bucce di patata?"
+        "it": "I cani possono mangiare le bucce di patata?",
+        "pt": "Os cães podem comer a casca da batata?"
       },
       "a": {
         "en": "Potato skins are okay, but not if they are green.",
@@ -267,7 +283,8 @@
         "de": "Kartoffelschalen sind in Ordnung, aber nicht, wenn sie grün sind.",
         "fr": "Les peaux de pomme de terre ne posent pas de problème, sauf si elles sont vertes.",
         "es": "La piel de patata está bien, pero no si está verde.",
-        "it": "Le bucce vanno bene, ma non se sono verdi."
+        "it": "Le bucce vanno bene, ma non se sono verdi.",
+        "pt": "A casca não faz mal, desde que não esteja verde."
       }
     }
   ],
@@ -408,6 +425,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "995edb85ae9ab2e9ef129f9c0f98ae603a260d52ee067abc790f1fb35ac9390b"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f774c1762bcacc679be22c10e4fb6545202f4ab6baf16954808509ac20afb41c"
     }
   }
 }

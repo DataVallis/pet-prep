@@ -3,24 +3,29 @@
   "species": "cat",
   "name": {
     "en": "Wild mushrooms",
-    "sl": "Divje gobe"
+    "sl": "Divje gobe",
+    "pt": "Cogumelos silvestres"
   },
   "question": {
     "en": "Are wild mushrooms dangerous for cats?",
-    "sl": "Ali so divje gobe nevarne za mačke?"
+    "sl": "Ali so divje gobe nevarne za mačke?",
+    "pt": "Os cogumelos silvestres são perigosos para os gatos?"
   },
   "url_slug": {
     "en": "wild-mushrooms",
-    "sl": "divje-gobe"
+    "sl": "divje-gobe",
+    "pt": "cogumelos-silvestres"
   },
   "level": "toxic",
   "answer": {
     "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
-    "sl": "Da. Pet Poison Helpline svetuje, naj vsako gobo, ki ni kupljena za ljudi, obravnavamo kot strupeno za mačke, saj so številne strupene gobe videti enako kot neškodljive. Če mačka poje gobo, ki jo je našla zunaj, jo takoj odpeljite k veterinarju."
+    "sl": "Da. Pet Poison Helpline svetuje, naj vsako gobo, ki ni kupljena za ljudi, obravnavamo kot strupeno za mačke, saj so številne strupene gobe videti enako kot neškodljive. Če mačka poje gobo, ki jo je našla zunaj, jo takoj odpeljite k veterinarju.",
+    "pt": "Sim. A Pet Poison Helpline aconselha a tratar como tóxico qualquer cogumelo que não tenha sido comprado para consumo humano, porque muitos cogumelos venenosos têm exatamente o mesmo aspeto que os inofensivos. Se o teu gato comer um cogumelo encontrado no exterior, leva-o imediatamente ao veterinário."
   },
   "why": {
     "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
-    "sl": "Pet Poison Helpline navaja, da samo v Severni Ameriki raste več kot 100 vrst strupenih gob, med njimi Amanita, Galerina in Lepiota, in da so številne videti enako kot nestrupene gobe. Nekatere gobe na hišne živali učinkujejo v 15 do 30 minutah, druge šele po največ 24 urah. Odvisno od gobe in pojedene količine so lahko prizadeti prebavila, živčevje, jetra ali ledvice."
+    "sl": "Pet Poison Helpline navaja, da samo v Severni Ameriki raste več kot 100 vrst strupenih gob, med njimi Amanita, Galerina in Lepiota, in da so številne videti enako kot nestrupene gobe. Nekatere gobe na hišne živali učinkujejo v 15 do 30 minutah, druge šele po največ 24 urah. Odvisno od gobe in pojedene količine so lahko prizadeti prebavila, živčevje, jetra ali ledvice.",
+    "pt": "A Pet Poison Helpline diz que só na América do Norte existem mais de 100 espécies de cogumelos venenosos, incluindo Amanita, Galerina e Lepiota, e que muitos têm o mesmo aspeto que os cogumelos não tóxicos. Alguns cogumelos fazem efeito em 15 a 30 minutos; noutros, os efeitos só surgem até 24 horas depois. Consoante o cogumelo e a quantidade ingerida, podem ser afetados o estômago e os intestinos, o sistema nervoso, o fígado ou os rins."
   },
   "signs": {
     "en": [
@@ -42,26 +47,40 @@
       "Krči (napadi)",
       "Težave z vidom",
       "Napadalnost ali zmedenost"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Fezes negras, como alcatrão",
+      "Andar cambaleante",
+      "Tremores",
+      "Convulsões",
+      "Problemas de visão",
+      "Agressividade ou confusão"
     ]
   },
   "what_to_do": {
     "en": "Take your cat to your vet immediately, even before any signs appear. If you can do it safely, bring a sample of the mushroom so a specialist can identify it. Don't try to make your cat sick without asking the vet.",
-    "sl": "Mačko takoj odpeljite k veterinarju, tudi če še nima znakov. Če lahko to storite varno, s seboj vzemite vzorec gobe, da jo strokovnjak prepozna. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+    "sl": "Mačko takoj odpeljite k veterinarju, tudi če še nima znakov. Če lahko to storite varno, s seboj vzemite vzorec gobe, da jo strokovnjak prepozna. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
+    "pt": "Leva o teu gato imediatamente ao veterinário, mesmo antes de aparecerem sinais. Se o puderes fazer em segurança, leva uma amostra do cogumelo para que um especialista o possa identificar. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
   },
   "serving": null,
   "child": {
     "en": "Mushrooms growing outside are not for cats. If kitty sniffs or nibbles one, tell a grown-up right away.",
-    "sl": "Gobe, ki rastejo zunaj, niso za muce. Če muca kakšno povoha ali pogrizlja, takoj povej odraslemu."
+    "sl": "Gobe, ki rastejo zunaj, niso za muce. Če muca kakšno povoha ali pogrizlja, takoj povej odraslemu.",
+    "pt": "Os cogumelos que crescem no exterior não são para os gatos. Se o teu gatinho cheirar ou trincar um, avisa logo um adulto."
   },
   "faq": [
     {
       "q": {
         "en": "How can I keep my cat away from wild mushrooms?",
-        "sl": "Kako mačko obvarujem pred divjimi gobami?"
+        "sl": "Kako mačko obvarujem pred divjimi gobami?",
+        "pt": "Como posso manter o meu gato longe dos cogumelos silvestres?"
       },
       "a": {
         "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
-        "sl": "Pet Poison Helpline svetuje, naj mačko pozorno spremljate, ko je zunaj, in ji ne dovolite do divjih gob ali katerekoli gobe, za katero ne veste, od kod je."
+        "sl": "Pet Poison Helpline svetuje, naj mačko pozorno spremljate, ko je zunaj, in ji ne dovolite do divjih gob ali katerekoli gobe, za katero ne veste, od kod je.",
+        "pt": "A Pet Poison Helpline aconselha a vigiar de perto o gato quando está no exterior e a não o deixar chegar perto de cogumelos silvestres, nem de qualquer cogumelo cuja origem desconheças."
       }
     }
   ],
@@ -147,6 +166,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "5e9a1448b9c06a081d70ff572aac894ed653214df5ead7a500e4b858fc62f690"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "41b92c3738d897b226424f3ff64759e54f242ad658b99d51624fdd577150fad3"
     }
   }
 }

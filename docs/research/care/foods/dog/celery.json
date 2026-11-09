@@ -15,7 +15,8 @@
     "de": "Stangensellerie",
     "fr": "Céleri",
     "es": "Apio",
-    "it": "Sedano"
+    "it": "Sedano",
+    "pt": "Aipo"
   },
   "question": {
     "en": "Can dogs eat celery?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Stangensellerie fressen?",
     "fr": "Les chiens peuvent-ils manger du céleri ?",
     "es": "¿Pueden los perros comer apio?",
-    "it": "I cani possono mangiare il sedano?"
+    "it": "I cani possono mangiare il sedano?",
+    "pt": "Os cães podem comer aipo?"
   },
   "url_slug": {
     "en": "celery",
@@ -47,7 +49,8 @@
     "de": "stangensellerie",
     "fr": "celeri",
     "es": "apio",
-    "it": "sedano"
+    "it": "sedano",
+    "pt": "aipo"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, Stangensellerie ist für Hunde als gelegentliches Leckerli in der Regel unbedenklich. Waschen Sie ihn und schneiden Sie ihn immer mundgerecht klein, denn Stangensellerie kann eine Erstickungsgefahr sein, besonders bei kleinen Hunden.",
     "fr": "Oui, le céleri est généralement sans danger pour les chiens comme friandise occasionnelle. Lavez-le et coupez-le toujours en morceaux de la taille d’une bouchée, car le céleri peut présenter un risque d’étouffement, surtout chez les petits chiens.",
     "es": "Sí, el apio es en general seguro para los perros como premio ocasional. Lávalo y córtalo siempre en trozos del tamaño de un bocado, porque el apio puede provocar atragantamiento, sobre todo en perros pequeños.",
-    "it": "Sì, il sedano è in genere sicuro per i cani come premio occasionale. Lavalo e taglialo sempre in pezzetti da un boccone, perché il sedano può far soffocare, soprattutto i cani di piccola taglia."
+    "it": "Sì, il sedano è in genere sicuro per i cani come premio occasionale. Lavalo e taglialo sempre in pezzetti da un boccone, perché il sedano può far soffocare, soprattutto i cani di piccola taglia.",
+    "pt": "Sim, o aipo é geralmente seguro para os cães como guloseima ocasional. Lava-o e corta-o sempre em pedaços pequenos, porque o aipo pode causar engasgo, sobretudo nos cães pequenos."
   },
   "why": {
     "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
@@ -80,7 +84,8 @@
     "de": "Stangensellerie ist für die meisten Hunde unbedenklich und ist sogar dafür bekannt, den Atem des Hundes zu erfrischen. Das Hauptrisiko ist, dass ein Hund an großen Stücken erstickt, vor allem ein kleiner. Stangensellerie ist ein Leckerli, kein Grundnahrungsmittel, und ersetzt niemals eine vollwertige, ausgewogene Mahlzeit.",
     "fr": "Le céleri est sans danger pour la plupart des chiens et passe même pour rafraîchir leur haleine. Le principal risque est l’étouffement avec de gros morceaux, surtout chez les petits chiens. C’est une friandise, pas un aliment de base : il ne doit jamais remplacer un repas complet et équilibré.",
     "es": "El apio es seguro para la mayoría de los perros e incluso se sabe que ayuda a refrescar el aliento. El principal riesgo es atragantarse con trozos grandes, sobre todo en perros pequeños. Es un premio, no un alimento básico, y nunca debe sustituir a una comida completa y equilibrada.",
-    "it": "Il sedano è sicuro per la maggior parte dei cani ed è persino noto per rinfrescare l’alito. Il rischio principale è il soffocamento con i pezzi grandi, soprattutto nei cani di piccola taglia. È un premio, non un alimento base, e non deve mai sostituire un pasto completo e bilanciato."
+    "it": "Il sedano è sicuro per la maggior parte dei cani ed è persino noto per rinfrescare l’alito. Il rischio principale è il soffocamento con i pezzi grandi, soprattutto nei cani di piccola taglia. È un premio, non un alimento base, e non deve mai sostituire un pasto completo e bilanciato.",
+    "pt": "O aipo é seguro para a maioria dos cães e até se diz que refresca o hálito. O principal risco é o engasgo com pedaços grandes, sobretudo nos cães pequenos. É uma guloseima, não um alimento de base, e nunca deve substituir uma refeição completa e equilibrada."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Führen Sie Stangensellerie langsam ein und beobachten Sie Ihren Hund nach dem ersten Probieren auf Magen-Darm-Beschwerden oder andere Veränderungen.",
     "fr": "Introduisez le céleri progressivement et surveillez votre chien après la première bouchée : troubles digestifs ou autres changements.",
     "es": "Introduce el apio poco a poco y vigila si tu perro tiene molestias digestivas u otros cambios después de probarlo por primera vez.",
-    "it": "Introduci il sedano gradualmente e, dopo il primo assaggio, osserva il tuo cane per vedere se compaiono disturbi digestivi o altri cambiamenti."
+    "it": "Introduci il sedano gradualmente e, dopo il primo assaggio, osserva il tuo cane per vedere se compaiono disturbi digestivi o altri cambiamenti.",
+    "pt": "Introduz o aipo aos poucos e observa se o teu cão tem mal-estar digestivo ou outras alterações depois da primeira prova."
   },
   "serving": {
     "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
@@ -113,7 +119,8 @@
     "de": "Gewaschen, auch roh in Ordnung, immer mundgerecht klein geschnitten. Ein kleines Leckerli, keine Mahlzeit.",
     "fr": "Lavé ; cru, c’est très bien, mais toujours coupé en morceaux de la taille d’une bouchée. Une petite friandise, pas un repas.",
     "es": "Lavado; crudo está bien, siempre cortado en trozos del tamaño de un bocado. Un premio pequeño, no una comida.",
-    "it": "Lavato; va bene anche crudo, ma sempre tagliato in pezzetti da un boccone. Un piccolo premio, non un pasto."
+    "it": "Lavato; va bene anche crudo, ma sempre tagliato in pezzetti da un boccone. Un piccolo premio, non un pasto.",
+    "pt": "Lavado, pode ser cru, sempre cortado em pedaços pequenos, do tamanho de uma dentada. Uma pequena guloseima, não uma refeição."
   },
   "child": {
     "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein bisschen Stangensellerie knabbern! Ein Erwachsener wäscht ihn und schneidet ihn vorher in winzige Stücke.",
     "fr": "Les chiens peuvent croquer un peu de céleri ! Un adulte le lave et le coupe d’abord en tout petits morceaux.",
     "es": "¡Los perros pueden mordisquear un poquito de apio crujiente! Un adulto lo lava y lo corta antes en trocitos muy pequeños.",
-    "it": "I cani possono sgranocchiare un po’ di sedano! Prima un adulto lo lava e lo taglia in pezzetti piccoli."
+    "it": "I cani possono sgranocchiare un po’ di sedano! Prima un adulto lo lava e lo taglia in pezzetti piccoli.",
+    "pt": "Os cães podem trincar um bocadinho de aipo! Um adulto lava-o e corta-o primeiro em pedacinhos."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Welpen Stangensellerie fressen?",
         "fr": "Les chiots peuvent-ils manger du céleri ?",
         "es": "¿Pueden los cachorros comer apio?",
-        "it": "I cuccioli possono mangiare il sedano?"
+        "it": "I cuccioli possono mangiare il sedano?",
+        "pt": "Os cachorros podem comer aipo?"
       },
       "a": {
         "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
@@ -163,7 +172,8 @@
         "de": "Welpen dürfen kleine Mengen Stangensellerie fressen, wenn er in passend kleine Stücke geschnitten wird.",
         "fr": "Oui, en petite quantité, à condition de couper le céleri en morceaux adaptés à leur taille.",
         "es": "Sí, los cachorros pueden comer pequeñas cantidades de apio si se corta en trozos del tamaño adecuado.",
-        "it": "I cuccioli possono mangiare piccole quantità di sedano se è tagliato in pezzetti di dimensioni adeguate."
+        "it": "I cuccioli possono mangiare piccole quantità di sedano se è tagliato in pezzetti di dimensioni adeguate.",
+        "pt": "Os cachorros podem comer pequenas quantidades de aipo, se estiver cortado em pedaços de tamanho adequado."
       }
     }
   ],
@@ -285,6 +295,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "d0b9eafc690f226691db4e2931bcd09c75d663bc9f6b931637b9d05ab9006619"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4369732bd3005c5462efb196d03328fd87886466574244669867d775ca3aa024"
     }
   }
 }

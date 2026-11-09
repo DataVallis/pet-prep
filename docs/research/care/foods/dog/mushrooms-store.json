@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Store-bought mushrooms",
-    "sl": "Kupljene gobe"
+    "sl": "Kupljene gobe",
+    "pt": "Cogumelos comprados no supermercado"
   },
   "question": {
     "en": "Can dogs eat store-bought mushrooms?",
-    "sl": "Ali lahko psi jedo kupljene gobe?"
+    "sl": "Ali lahko psi jedo kupljene gobe?",
+    "pt": "Os cães podem comer cogumelos comprados no supermercado?"
   },
   "url_slug": {
     "en": "store-bought-mushrooms",
-    "sl": "kupljene-gobe"
+    "sl": "kupljene-gobe",
+    "pt": "cogumelos-do-supermercado"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
-    "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek."
+    "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek.",
+    "pt": "Os cogumelos simples vendidos nas grandes superfícies podem ser, em geral, seguros para os cães. Ainda assim, os cães não precisam de cogumelos e convém evitar pratos que os levem; um pauzinho de cenoura ou uma fatia de maçã é uma guloseima melhor."
   },
   "why": {
     "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
-    "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne."
+    "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne.",
+    "pt": "Os cogumelos do supermercado são geralmente considerados seguros, mas os pratos de cogumelos levam muitas vezes óleo, manteiga, temperos, alho e cebola, que podem ser prejudiciais para os cães. Os cogumelos silvestres são outra questão: é difícil distinguir os tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos."
   },
   "signs": null,
   "what_to_do": {
     "en": "If you do share, give only plain store-bought mushrooms. Never let your dog eat mushrooms found outside; if that happens, contact your vet, an animal poison centre or an emergency vet hospital immediately.",
-    "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico."
+    "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico.",
+    "pt": "Se quiseres partilhar, dá apenas cogumelos simples comprados numa loja. Nunca deixes o teu cão comer cogumelos encontrados no exterior; se isso acontecer, liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência."
   },
   "serving": {
     "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
-    "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami."
+    "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami.",
+    "pt": "Apenas simples, de uma grande superfície. Sem óleo, manteiga, temperos, alho nem cebola, e sem pratos de cogumelos."
   },
   "child": {
     "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
-    "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj."
+    "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj.",
+    "pt": "Os cães não precisam de cogumelos. Uma cenoura ou uma fatia de maçã é uma guloseima melhor. Nunca deixes um cão comer cogumelos encontrados no exterior."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat mushroom sauce or other mushroom dishes?",
-        "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?"
+        "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?",
+        "pt": "Os cães podem comer molho de cogumelos ou outros pratos com cogumelos?"
       },
       "a": {
         "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
-        "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo."
+        "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo.",
+        "pt": "É mais seguro evitá-los. O óleo, a manteiga, os temperos, o alho e a cebola nestes pratos podem ser prejudiciais para os cães."
       }
     },
     {
       "q": {
         "en": "What about mushrooms growing in the garden?",
-        "sl": "Kaj pa gobe, ki rastejo na vrtu?"
+        "sl": "Kaj pa gobe, ki rastejo na vrtu?",
+        "pt": "E os cogumelos que crescem no jardim?"
       },
       "a": {
         "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
-        "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja."
+        "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja.",
+        "pt": "Trata todos os cogumelos silvestres como potencialmente tóxicos. Se o teu cão comer um, liga imediatamente ao teu veterinário."
       }
     }
   ],
@@ -117,6 +129,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "40de6b0b43af87e2ee11cdf4cb71200d1e094d31a5d1b7d4262545588397c70a"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b22ef79ed500956478e07d3134be1b5820d7d637ed23204adb873e86502b842b"
     }
   }
 }

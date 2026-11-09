@@ -15,7 +15,8 @@
     "de": "Rosenkohl",
     "fr": "Choux de Bruxelles",
     "es": "Coles de Bruselas",
-    "it": "Cavoletti di Bruxelles"
+    "it": "Cavoletti di Bruxelles",
+    "pt": "Couves-de-bruxelas"
   },
   "question": {
     "en": "Can cats eat Brussels sprouts?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen Rosenkohl fressen?",
     "fr": "Les chats peuvent-ils manger des choux de Bruxelles ?",
     "es": "¿Pueden los gatos comer coles de Bruselas?",
-    "it": "I gatti possono mangiare i cavoletti di Bruxelles?"
+    "it": "I gatti possono mangiare i cavoletti di Bruxelles?",
+    "pt": "Os gatos podem comer couves-de-bruxelas?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -47,7 +49,8 @@
     "de": "rosenkohl",
     "fr": "choux-de-bruxelles",
     "es": "coles-de-bruselas",
-    "it": "cavoletti-di-bruxelles"
+    "it": "cavoletti-di-bruxelles",
+    "pt": "couves-de-bruxelas"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, ein kleines Stück ungewürzter, weich gekochter Rosenkohl ist als gelegentliches Leckerli in Ordnung. Laut RSPCA ist Rosenkohl für Katzen in Maßen geeignet. Katzen brauchen kein Gemüse, deshalb sollte es nur ein winziges Extra bleiben.",
     "fr": "Oui, un petit morceau de chou de Bruxelles nature, cuit jusqu’à ce qu’il soit tendre, peut être donné de temps en temps en friandise. La RSPCA classe les choux de Bruxelles parmi les aliments que les chats peuvent manger avec modération. Comme les chats n’ont pas besoin de légumes, réservez-le à un petit plus occasionnel.",
     "es": "Sí, un trocito de col de Bruselas sin condimentar, cocida hasta que esté blanda, está bien como premio ocasional. La RSPCA incluye las coles de Bruselas entre los alimentos adecuados para gatos con moderación. Los gatos no necesitan verdura, así que dale solo una pequeña cantidad como extra.",
-    "it": "Sì, un pezzettino di cavoletto di Bruxelles senza condimenti, cotto fino a diventare morbido, va bene come premio occasionale. La RSPCA mette i cavoletti di Bruxelles tra gli alimenti adatti ai gatti in piccole quantità. I gatti non hanno bisogno di verdure, quindi consideralo soltanto un piccolissimo extra."
+    "it": "Sì, un pezzettino di cavoletto di Bruxelles senza condimenti, cotto fino a diventare morbido, va bene come premio occasionale. La RSPCA mette i cavoletti di Bruxelles tra gli alimenti adatti ai gatti in piccole quantità. I gatti non hanno bisogno di verdure, quindi consideralo soltanto un piccolissimo extra.",
+    "pt": "Sim, um pedacinho de couve-de-bruxelas simples, cozida até ficar macia, é aceitável como guloseima ocasional. A RSPCA inclui as couves-de-bruxelas nos alimentos adequados para gatos com moderação. Os gatos não precisam de legumes, por isso deve ser só um pequeno extra."
   },
   "why": {
     "en": "The RSPCA lists Brussels sprouts, cooked until soft, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "de": "Die RSPCA nennt weich gekochten Rosenkohl unter den Weihnachtsspeisen, die für Haustiere unbedenklich sind und Katzen wie Hunden in Maßen gegeben werden können. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "La RSPCA classe les choux de Bruxelles, cuits jusqu’à ce qu’ils soient tendres, parmi les aliments de Noël sans danger que les chats et les chiens peuvent manger avec modération. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "La RSPCA incluye las coles de Bruselas, cocidas hasta que estén blandas, entre los alimentos navideños seguros para mascotas que son adecuados para gatos y perros con moderación. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
-    "it": "La RSPCA elenca i cavoletti di Bruxelles, cotti fino a diventare morbidi, tra gli alimenti natalizi sicuri per gli animali domestici, adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
+    "it": "La RSPCA elenca i cavoletti di Bruxelles, cotti fino a diventare morbidi, tra gli alimenti natalizi sicuri per gli animali domestici, adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
+    "pt": "A RSPCA inclui as couves-de-bruxelas, cozidas até ficarem macias, entre os alimentos de Natal seguros para animais de estimação, adequados para gatos e cães com moderação. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A small piece, cooked until soft, with no butter, salt or seasoning.",
@@ -113,7 +119,8 @@
     "de": "Ein kleines Stück, weich gekocht, ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit morceau, cuit jusqu’à ce qu’il soit tendre, sans beurre, sel ni assaisonnement.",
     "es": "Un trocito, cocido hasta que esté blando, sin mantequilla, sal ni condimentos.",
-    "it": "Un pezzettino, cotto fino a diventare morbido, senza burro, sale o condimenti."
+    "it": "Un pezzettino, cotto fino a diventare morbido, senza burro, sale o condimenti.",
+    "pt": "Um pedacinho, cozido até ficar macio, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A soft cooked sprout piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "de": "Ein Stück weich gekochter Rosenkohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un morceau de chou de Bruxelles cuit et tendre, c’est parfois une friandise pour un chat. Les chats mangent surtout de la viande : les légumes, c’est un petit plus.",
     "es": "Un trocito de col de Bruselas cocida y blandita puede ser un premio de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di cavoletto cotto e morbido come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di cavoletto cotto e morbido come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de couve-de-bruxelas cozida e macia pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan los gatos verdura?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -163,7 +172,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -278,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0063e3b903e32c667d57f36e271d55c57b188e2ff79eab79c8ee648d3066b847"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "f2a98a961f1a7cb945f26dbd27903f0d904b4126e97b12f46e78d0c47992ce9c"
     }
   }
 }

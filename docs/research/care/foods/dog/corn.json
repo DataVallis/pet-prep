@@ -3,57 +3,69 @@
   "species": "dog",
   "name": {
     "en": "Corn kernels",
-    "sl": "Koruzna zrna"
+    "sl": "Koruzna zrna",
+    "pt": "Grãos de milho"
   },
   "question": {
     "en": "Can dogs eat corn?",
-    "sl": "Ali lahko psi jedo koruzo?"
+    "sl": "Ali lahko psi jedo koruzo?",
+    "pt": "Os cães podem comer milho?"
   },
   "url_slug": {
     "en": "corn",
-    "sl": "koruza"
+    "sl": "koruza",
+    "pt": "milho"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
-    "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte."
+    "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte.",
+    "pt": "Sim, os cães podem comer sem problema grãos de milho simples, retirados da espiga, em pequenas quantidades como guloseima ocasional. Dispensa a manteiga, o sal e os temperos, e nunca dês ao teu cão a espiga de milho."
   },
   "why": {
     "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
-    "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja."
+    "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja.",
+    "pt": "O milho não é um problema para a maioria dos cães e pode até fazer parte de uma alimentação equilibrada, fornecendo energia e ajudando a digestão. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão. O verdadeiro perigo é a espiga: os cães podem engolir pedaços ou a espiga inteira, o que pode causar engasgo ou obstruções intestinais."
   },
   "signs": null,
   "what_to_do": {
     "en": "Offer only plain kernels, cut off the cob, now and then. Before offering corn, make sure your dog doesn't have a corn allergy. Keep corn cobs well out of reach.",
-    "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega."
+    "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega.",
+    "pt": "Dá apenas grãos simples, retirados da espiga, de vez em quando. Antes de dares milho, confirma que o teu cão não tem alergia ao milho. Mantém as espigas de milho bem fora do alcance."
   },
   "serving": {
     "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
-    "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb."
+    "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb.",
+    "pt": "Grãos de milho doce simples, retirados da espiga. Sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
-    "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi."
+    "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi.",
+    "pt": "Os cães podem comer alguns grãos de milho simples. A espiga não é para cães, por isso um adulto trata de a pôr de parte."
   },
   "faq": [
     {
       "q": {
         "en": "Can dogs eat buttered corn?",
-        "sl": "Ali lahko psi jedo koruzo z maslom?"
+        "sl": "Ali lahko psi jedo koruzo z maslom?",
+        "pt": "Os cães podem comer milho com manteiga?"
       },
       "a": {
         "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
-        "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec."
+        "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec.",
+        "pt": "É melhor evitar. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão."
       }
     },
     {
       "q": {
         "en": "Is corn in dog food bad?",
-        "sl": "Je koruza v pasji hrani slaba?"
+        "sl": "Je koruza v pasji hrani slaba?",
+        "pt": "O milho na ração é mau para o cão?"
       },
       "a": {
         "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
-        "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane."
+        "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane.",
+        "pt": "Muitos nutricionistas veterinários concordam que o milho não é um problema para a maioria dos cães e pode fazer parte de uma alimentação bem equilibrada."
       }
     }
   ],
@@ -123,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "a206a5aab6e4f9fea69714a3a628f158da044209fef33e69e814c990519f3237"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7f6ed230a61382c4a6eea8371cb1de8caf2ca8af1a2d434de499657747b5e362"
     }
   }
 }

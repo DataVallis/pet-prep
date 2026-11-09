@@ -15,7 +15,8 @@
     "de": "Zucchini",
     "fr": "Courgette",
     "es": "Calabacín",
-    "it": "Zucchine"
+    "it": "Zucchine",
+    "pt": "Curgete"
   },
   "question": {
     "en": "Can dogs eat zucchini?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Zucchini fressen?",
     "fr": "Les chiens peuvent-ils manger de la courgette ?",
     "es": "¿Pueden los perros comer calabacín?",
-    "it": "I cani possono mangiare le zucchine?"
+    "it": "I cani possono mangiare le zucchine?",
+    "pt": "Os cães podem comer curgete?"
   },
   "url_slug": {
     "en": "zucchini",
@@ -47,7 +49,8 @@
     "de": "zucchini",
     "fr": "courgette",
     "es": "calabacin",
-    "it": "zucchine"
+    "it": "zucchine",
+    "pt": "curgete"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, Zucchini sind für Hunde völlig unbedenklich. Ungewürzt – roh, gedämpft oder gekocht – sind sie in Maßen in Ordnung. Schneiden Sie sie in kleine Stücke, denn große Stücke können zum Ersticken führen, und verzichten Sie auf Öl, Salz und Gewürze.",
     "fr": "Oui, la courgette est sans danger pour les chiens. Nature, crue ou cuite (à la vapeur, par exemple), elle convient avec modération. Coupez-la en petits morceaux, car de gros morceaux peuvent présenter un risque d’étouffement, et évitez l’huile, le sel et les assaisonnements.",
     "es": "Sí, el calabacín es totalmente seguro para los perros. El calabacín sin condimentar, crudo, al vapor o cocinado, está bien con moderación. Córtalo en trozos pequeños, porque los trozos grandes pueden provocar atragantamiento, y evita el aceite, la sal y los condimentos.",
-    "it": "Sì, le zucchine sono del tutto sicure per i cani. Le zucchine al naturale, crude, cotte al vapore o cotte vanno bene in quantità moderate. Tagliale a pezzetti piccoli, perché quelli grandi possono far soffocare, ed evita olio, sale e condimenti."
+    "it": "Sì, le zucchine sono del tutto sicure per i cani. Le zucchine al naturale, crude, cotte al vapore o cotte vanno bene in quantità moderate. Tagliale a pezzetti piccoli, perché quelli grandi possono far soffocare, ed evita olio, sale e condimenti.",
+    "pt": "Sim, a curgete é perfeitamente segura para os cães. A curgete simples, crua, cozida a vapor ou cozinhada, não tem problema com moderação. Corta-a em pedaços pequenos, porque os pedaços grandes podem causar engasgo, e evita o óleo, o sal e os temperos."
   },
   "why": {
     "en": "All parts of the zucchini plant are non-toxic. The risks come from how it is served: large pieces can cause choking, a large amount can upset digestion, and oils, salt, seasonings, garlic and onions are harmful to dogs.",
@@ -80,7 +84,8 @@
     "de": "Alle Teile der Zucchinipflanze sind ungiftig. Die Risiken liegen in der Zubereitung: Große Stücke können zum Ersticken führen, eine große Menge kann die Verdauung stören, und Öl, Salz, Gewürze, Knoblauch und Zwiebeln sind für Hunde schädlich.",
     "fr": "Aucune partie du plant de courgette n’est toxique. Les risques tiennent à la façon de la servir : de gros morceaux peuvent provoquer un étouffement, une grande quantité peut perturber la digestion, et l’huile, le sel, les assaisonnements, l’ail et l’oignon sont nocifs pour les chiens.",
     "es": "Ninguna parte de la planta del calabacín es tóxica. Los riesgos dependen de cómo se sirva: los trozos grandes pueden provocar atragantamiento, una cantidad grande puede sentarle mal a la digestión, y los aceites, la sal, los condimentos, el ajo y la cebolla son dañinos para los perros.",
-    "it": "Nessuna parte della pianta di zucchina è tossica. I rischi dipendono da come vengono servite: i pezzi grandi possono far soffocare, una grande quantità può disturbare la digestione, e olio, sale, condimenti, aglio e cipolla fanno male ai cani."
+    "it": "Nessuna parte della pianta di zucchina è tossica. I rischi dipendono da come vengono servite: i pezzi grandi possono far soffocare, una grande quantità può disturbare la digestione, e olio, sale, condimenti, aglio e cipolla fanno male ai cani.",
+    "pt": "Nenhuma parte da planta da curgete é tóxica. Os riscos dependem da forma como é servida: os pedaços grandes podem causar engasgo, uma grande quantidade pode perturbar a digestão, e os óleos, o sal, os temperos, o alho e a cebola são prejudiciais para os cães."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Geben Sie Zucchini nur in kleinen Mengen: Große Mengen von irgendetwas können bei einem Hund zu Verdauungsbeschwerden führen. Geben Sie niemals eine ganze Zucchini.",
     "fr": "Limitez la courgette à de petites quantités : donner une grande quantité de n’importe quel aliment à un chien peut entraîner des troubles digestifs. Ne donnez jamais une courgette entière.",
     "es": "Dale solo pequeñas cantidades de calabacín: dar a un perro una cantidad grande de cualquier alimento puede provocarle molestias digestivas. Nunca le des un calabacín entero.",
-    "it": "Dai le zucchine solo in piccole quantità: dare al cane una grande quantità di qualsiasi alimento può causare disturbi digestivi. Non dare mai una zucchina intera."
+    "it": "Dai le zucchine solo in piccole quantità: dare al cane una grande quantità di qualsiasi alimento può causare disturbi digestivi. Non dare mai una zucchina intera.",
+    "pt": "Dá curgete só em pequenas quantidades: uma grande quantidade de qualquer alimento pode causar problemas digestivos ao cão. Nunca dês uma curgete inteira."
   },
   "serving": {
     "en": "Plain, raw, steamed or cooked, chopped into small pieces; steam it for dogs that have difficulty chewing. No oil, salt, seasonings, garlic or onion.",
@@ -113,7 +119,8 @@
     "de": "Pur, roh, gedämpft oder gekocht, in kleine Stücke geschnitten; bei Hunden, die schlecht kauen, am besten dämpfen. Ohne Öl, Salz, Gewürze, Knoblauch oder Zwiebeln.",
     "fr": "Nature, crue, cuite à la vapeur ou cuite, coupée en petits morceaux ; faites-la cuire à la vapeur pour les chiens qui ont du mal à mâcher. Sans huile, sel, assaisonnement, ail ni oignon.",
     "es": "Sin condimentar, crudo, al vapor o cocinado, cortado en trozos pequeños; hazlo al vapor si tu perro tiene dificultades para masticar. Sin aceite, sal, condimentos, ajo ni cebolla.",
-    "it": "Al naturale, crude, cotte al vapore o cotte, tagliate a pezzetti piccoli; cuocile al vapore per i cani che fanno fatica a masticare. Senza olio, sale, condimenti, aglio né cipolla."
+    "it": "Al naturale, crude, cotte al vapore o cotte, tagliate a pezzetti piccoli; cuocile al vapore per i cani che fanno fatica a masticare. Senza olio, sale, condimenti, aglio né cipolla.",
+    "pt": "Simples, crua, cozida a vapor ou cozinhada, cortada em pedaços pequenos; cozinha-a a vapor se o teu cão tiver dificuldade em mastigar. Sem óleo, sal, temperos, alho nem cebola."
   },
   "child": {
     "en": "Dogs can nibble a little plain zucchini. A grown-up chops it into small pieces first.",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein bisschen ungewürzte Zucchini knabbern. Ein Erwachsener schneidet sie vorher in kleine Stücke.",
     "fr": "Les chiens peuvent grignoter un peu de courgette nature. Un adulte la coupe d’abord en petits morceaux.",
     "es": "Los perros pueden mordisquear un poco de calabacín sin condimentar. Un adulto lo corta antes en trocitos pequeños.",
-    "it": "I cani possono sgranocchiare un po’ di zucchina al naturale. Prima un adulto la taglia a pezzetti piccoli."
+    "it": "I cani possono sgranocchiare un po’ di zucchina al naturale. Prima un adulto la taglia a pezzetti piccoli.",
+    "pt": "Os cães podem trincar um bocadinho de curgete simples. Um adulto corta-a primeiro em pedacinhos pequenos."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde Zucchinibrot fressen?",
         "fr": "Les chiens peuvent-ils manger du gâteau à la courgette ?",
         "es": "¿Pueden los perros comer pan de calabacín?",
-        "it": "I cani possono mangiare il pane alle zucchine?"
+        "it": "I cani possono mangiare il pane alle zucchine?",
+        "pt": "Os cães podem comer bolo de curgete?"
       },
       "a": {
         "en": "No. Zucchini bread and other baked goods with zucchini are problematic. Watch out especially for xylitol, a sweetener that is toxic to dogs.",
@@ -163,7 +172,8 @@
         "de": "Nein. Zucchinibrot und andere Backwaren mit Zucchini sind problematisch. Achten Sie dabei besonders auf Xylit, einen Süßstoff, der für Hunde giftig ist.",
         "fr": "Non. Le gâteau à la courgette et les autres pâtisseries qui en contiennent sont à éviter. Méfiez-vous surtout du xylitol, un édulcorant toxique pour les chiens.",
         "es": "No. El pan de calabacín y otros productos de repostería con calabacín plantean problemas. Cuidado sobre todo con el xilitol, un edulcorante tóxico para los perros.",
-        "it": "No. Il pane alle zucchine e altri prodotti da forno con le zucchine sono problematici. Attenzione soprattutto allo xilitolo, un dolcificante tossico per i cani."
+        "it": "No. Il pane alle zucchine e altri prodotti da forno con le zucchine sono problematici. Attenzione soprattutto allo xilitolo, un dolcificante tossico per i cani.",
+        "pt": "Não. O bolo de curgete e outros produtos de pastelaria com curgete são problemáticos. Atenção sobretudo ao xilitol, um adoçante tóxico para os cães."
       }
     }
   ],
@@ -290,6 +300,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8891a1e53d04c7d274721868859d5887959951ba37bb2c88a7884e6cadfae4b8"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0c313521d4bf0610e5e3fd488931ab2e80d2bb05392b9b82bd4921e1bc65d25b"
     }
   }
 }

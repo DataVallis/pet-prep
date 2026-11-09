@@ -3,57 +3,69 @@
   "species": "cat",
   "name": {
     "en": "Cooked potatoes",
-    "sl": "Kuhan krompir"
+    "sl": "Kuhan krompir",
+    "pt": "Batata cozida"
   },
   "question": {
     "en": "Can cats eat cooked potatoes?",
-    "sl": "Ali lahko mačke jedo kuhan krompir?"
+    "sl": "Ali lahko mačke jedo kuhan krompir?",
+    "pt": "Os gatos podem comer batata cozida?"
   },
   "url_slug": {
     "en": "cooked-potatoes",
-    "sl": "kuhan-krompir"
+    "sl": "kuhan-krompir",
+    "pt": "batata-cozida"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
-    "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite."
+    "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite.",
+    "pt": "Sim, um pouco de batata cozida simples não faz mal como guloseima ocasional. A RSPCA indica a batata como adequada para gatos com moderação, se for cozida ou em puré, sem manteiga nem queijo. Tira a pele e não juntes sal nem temperos."
   },
   "why": {
     "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
-    "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek."
+    "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek.",
+    "pt": "A RSPCA inclui o puré ou a batata cozida, sem manteiga nem queijo, entre os alimentos adequados para gatos com moderação, a Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho, e a ASPCA diz que a batata cozida não faz mal aos animais de estimação com moderação. Um artigo da PetMD, escrito por veterinários, acrescenta que a batata cozida não é tóxica para os gatos, mas também não lhes faz bem, e que as peles da batata contêm solanina, uma toxina. Os gatos não precisam de legumes na alimentação, por isso limita-te a uma pequena guloseima."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small taste. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
-    "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+    "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
+    "pt": "Começa por uma pequena prova. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
-    "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja."
+    "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja.",
+    "pt": "Batata cozida ou em puré simples, sem pele, sem manteiga, queijo, natas, alho, sal nem temperos. Nunca crua nem esverdeada."
   },
   "child": {
     "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
-    "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce."
+    "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce.",
+    "pt": "Um bocadinho de batata cozida simples pode ser uma guloseima para o gato de vez em quando. A batata crua não é para gatos."
   },
   "faq": [
     {
       "q": {
         "en": "Can cats eat potato skins?",
-        "sl": "Ali lahko mačke jedo krompirjeve olupke?"
+        "sl": "Ali lahko mačke jedo krompirjeve olupke?",
+        "pt": "Os gatos podem comer peles de batata?"
       },
       "a": {
         "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
-        "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati."
+        "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati.",
+        "pt": "Não. Um artigo da PetMD, escrito por veterinários, diz que as peles da batata, cruas ou cozinhadas, contêm solanina, uma toxina, e devem ser evitadas."
       }
     },
     {
       "q": {
         "en": "Can cats eat mashed potatoes?",
-        "sl": "Ali lahko mačke jedo krompirjev pire?"
+        "sl": "Ali lahko mačke jedo krompirjev pire?",
+        "pt": "Os gatos podem comer puré de batata?"
       },
       "a": {
         "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
-        "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna."
+        "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna.",
+        "pt": "O puré de batata simples não faz mal como pequena guloseima. A Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho."
       }
     }
   ],
@@ -124,6 +136,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0c0a09c14c9a58f9d7ba4fc68eb8fdcf89c7cf019567a0f7f181443b71d74b61"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "06134a788ddc134639e6ad87bc6a2644b1d2329a792af8875ddfee592e08f975"
     }
   }
 }

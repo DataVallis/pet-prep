@@ -15,7 +15,8 @@
     "de": "Süßkartoffel",
     "fr": "Patate douce",
     "es": "Boniato",
-    "it": "Patata dolce"
+    "it": "Patata dolce",
+    "pt": "Batata-doce"
   },
   "question": {
     "en": "Can cats eat sweet potato?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen Süßkartoffeln fressen?",
     "fr": "Les chats peuvent-ils manger de la patate douce ?",
     "es": "¿Pueden los gatos comer boniato?",
-    "it": "I gatti possono mangiare la patata dolce?"
+    "it": "I gatti possono mangiare la patata dolce?",
+    "pt": "Os gatos podem comer batata-doce?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -47,7 +49,8 @@
     "de": "suesskartoffel",
     "fr": "patate-douce",
     "es": "boniato",
-    "it": "patata-dolce"
+    "it": "patata-dolce",
+    "pt": "batata-doce"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Süßkartoffeln sind für Katzen nicht giftig: Die ASPCA führt die Süßkartoffelpflanze als ungiftig für Katzen auf. Katzen brauchen aber kein Gemüse, und jedes Pflanzenmaterial kann Erbrechen oder eine Magenverstimmung auslösen – bleiben Sie also bei einem winzigen, gelegentlichen Extra.",
     "fr": "La patate douce n’est pas toxique pour les chats : l’ASPCA classe la plante parmi les plantes non toxiques pour eux. Mais les chats n’ont pas besoin de légumes, et tout végétal peut provoquer des vomissements ou des troubles digestifs : gardez-la pour un tout petit extra, occasionnel.",
     "es": "El boniato no es tóxico para los gatos: la ASPCA incluye la planta del boniato entre las no tóxicas para ellos. Aun así, los gatos no necesitan verdura y cualquier materia vegetal puede provocar vómitos o malestar de estómago, así que dale solo una pequeña cantidad como extra ocasional.",
-    "it": "La patata dolce non è tossica per i gatti: l’ASPCA indica la pianta della patata dolce come non tossica per loro. Tuttavia i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può causare vomito o mal di stomaco, quindi consideralo solo un piccolissimo extra, ogni tanto."
+    "it": "La patata dolce non è tossica per i gatti: l’ASPCA indica la pianta della patata dolce come non tossica per loro. Tuttavia i gatti non hanno bisogno di verdure e qualsiasi alimento vegetale può causare vomito o mal di stomaco, quindi consideralo solo un piccolissimo extra, ogni tanto.",
+    "pt": "A batata-doce não é tóxica para os gatos: a ASPCA indica a planta da batata-doce como não tóxica para eles. No entanto, os gatos não precisam de legumes e qualquer matéria vegetal pode causar vómitos ou mal-estar no estômago, por isso limita-te a um pequeno extra ocasional."
   },
   "why": {
     "en": "The ASPCA lists the sweet potato plant (Ipomoea batatas) as non-toxic to cats. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "de": "Die ASPCA führt die Süßkartoffelpflanze (Ipomoea batatas) als ungiftig für Katzen auf. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "L’ASPCA classe la patate douce (Ipomoea batatas) parmi les plantes non toxiques pour les chats. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "La ASPCA incluye la planta del boniato (Ipomoea batatas) entre las no tóxicas para los gatos. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
-    "it": "L’ASPCA indica la pianta della patata dolce (Ipomoea batatas) come non tossica per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
+    "it": "L’ASPCA indica la pianta della patata dolce (Ipomoea batatas) come non tossica per i gatti. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
+    "pt": "A ASPCA indica a planta da batata-doce (Ipomoea batatas) como não tóxica para os gatos. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA lembra que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago dos gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa por um pequeno pedaço. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A small plain piece now and then, with no butter, salt or seasoning.",
@@ -113,7 +119,8 @@
     "de": "Ab und zu ein kleines Stück, pur und ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit morceau nature de temps en temps, sans beurre, sel ni assaisonnement.",
     "es": "Un trocito de vez en cuando, sin mantequilla, sal ni condimentos.",
-    "it": "Ogni tanto un pezzettino al naturale, senza burro, sale o condimenti."
+    "it": "Ogni tanto un pezzettino al naturale, senza burro, sale o condimenti.",
+    "pt": "Um pequeno pedaço simples de vez em quando, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "Sweet potato is not poisonous for cats. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "de": "Süßkartoffeln sind für Katzen nicht giftig. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "La patate douce n’est pas toxique pour les chats. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit plus.",
     "es": "El boniato no es venenoso para los gatos. Los gatos necesitan sobre todo carne: la verdura es solo un pequeño extra.",
-    "it": "La patata dolce non è velenosa per i gatti. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "La patata dolce non è velenosa per i gatti. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "A batata-doce não é venenosa para os gatos. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Ist eine Süßkartoffel dasselbe wie eine normale Kartoffel?",
         "fr": "La patate douce est-elle la même chose qu’une pomme de terre ordinaire ?",
         "es": "¿El boniato es lo mismo que la patata normal?",
-        "it": "La patata dolce è la stessa cosa della patata comune?"
+        "it": "La patata dolce è la stessa cosa della patata comune?",
+        "pt": "A batata-doce é o mesmo que a batata comum?"
       },
       "a": {
         "en": "No. The ASPCA lists the sweet potato as a different plant (Ipomoea batatas, family Convolvulaceae). Raw normal potatoes are a different matter: the ASPCA says they may be problematic for pets.",
@@ -163,7 +172,8 @@
         "de": "Nein. Die ASPCA führt die Süßkartoffel als eigene Pflanze auf (Ipomoea batatas, Familie Convolvulaceae). Bei rohen gewöhnlichen Kartoffeln sieht es anders aus: Laut ASPCA können sie für Haustiere problematisch sein.",
         "fr": "Non. L’ASPCA classe la patate douce comme une plante différente (Ipomoea batatas, famille des Convolvulacées). Les pommes de terre ordinaires crues, c’est une autre affaire : l’ASPCA indique qu’elles peuvent poser problème aux animaux.",
         "es": "No. La ASPCA incluye el boniato como una planta distinta (Ipomoea batatas, familia Convolvulaceae). Con las patatas normales crudas es otra historia: la ASPCA dice que pueden ser problemáticas para las mascotas.",
-        "it": "No. L’ASPCA indica la patata dolce come una pianta diversa (Ipomoea batatas, famiglia Convolvulaceae). Con le patate comuni crude il discorso cambia: secondo l’ASPCA possono essere problematiche per gli animali domestici."
+        "it": "No. L’ASPCA indica la patata dolce come una pianta diversa (Ipomoea batatas, famiglia Convolvulaceae). Con le patate comuni crude il discorso cambia: secondo l’ASPCA possono essere problematiche per gli animali domestici.",
+        "pt": "Não. A ASPCA indica a batata-doce como uma planta diferente (Ipomoea batatas, família Convolvulaceae). A batata comum crua é outra questão: a ASPCA diz que pode ser problemática para os animais de estimação."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan los gatos verdura?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -197,7 +208,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não há necessidade de os acrescentar à alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -324,6 +336,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "237bcd59907ff564d04e8ea1585ba0498f5d65875ee502463ed16b0c145441ed"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "13d6f86fc9e8765a537e22537e2f092b33c0cdf340871b216aa858ac34ba9b02"
     }
   }
 }

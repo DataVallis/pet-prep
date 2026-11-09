@@ -15,7 +15,8 @@
     "de": "Grünkohl",
     "fr": "Chou frisé",
     "es": "Col rizada (kale)",
-    "it": "Cavolo riccio"
+    "it": "Cavolo riccio",
+    "pt": "Couve kale"
   },
   "question": {
     "en": "Can dogs eat kale?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Grünkohl fressen?",
     "fr": "Les chiens peuvent-ils manger du chou frisé ?",
     "es": "¿Pueden los perros comer col rizada (kale)?",
-    "it": "I cani possono mangiare il cavolo riccio?"
+    "it": "I cani possono mangiare il cavolo riccio?",
+    "pt": "Os cães podem comer couve kale?"
   },
   "url_slug": {
     "en": "kale",
@@ -47,7 +49,8 @@
     "de": "gruenkohl",
     "fr": "chou-frise",
     "es": "col-rizada",
-    "it": "cavolo-riccio"
+    "it": "cavolo-riccio",
+    "pt": "couve-kale"
   },
   "level": "not_recommended",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Besser nicht als regelmäßiges Leckerli. Ein bisschen Grünkohl ab und zu schadet den meisten Hunden wahrscheinlich nicht, aber manche Tierärzte raten davon ab: Grünkohl enthält Calciumoxalat, das mit Nieren- und Blasensteinen in Verbindung gebracht wird, und Isothiocyanate, die den Magen reizen können.",
     "fr": "Mieux vaut ne pas en faire une friandise régulière. Un peu de chou frisé de temps en temps ne risque guère de nuire à la plupart des chiens, mais certains vétérinaires le déconseillent : il contient de l’oxalate de calcium, associé aux calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent irriter l’estomac.",
     "es": "Mejor no darla como premio habitual. Un poco de col rizada de vez en cuando es poco probable que dañe a la mayoría de los perros, pero algunos veterinarios lo desaconsejan: contiene oxalato de calcio, relacionado con los cálculos en el riñón y en la vejiga, e isotiocianatos, que pueden irritar el estómago.",
-    "it": "Meglio non darlo come premio abituale. Un po’ di cavolo riccio ogni tanto difficilmente fa male alla maggior parte dei cani, ma alcuni veterinari lo sconsigliano: contiene ossalato di calcio, associato ai calcoli renali e della vescica, e isotiocianati, che possono irritare lo stomaco."
+    "it": "Meglio non darlo come premio abituale. Un po’ di cavolo riccio ogni tanto difficilmente fa male alla maggior parte dei cani, ma alcuni veterinari lo sconsigliano: contiene ossalato di calcio, associato ai calcoli renali e della vescica, e isotiocianati, che possono irritare lo stomaco.",
+    "pt": "É melhor não a dar como guloseima habitual. Um pouco de couve kale de vez em quando dificilmente fará mal à maioria dos cães, mas alguns veterinários desaconselham-na: contém oxalato de cálcio, associado a pedras nos rins e na bexiga, e isotiocianatos, que podem irritar o estômago."
   },
   "why": {
     "en": "Kale contains calcium oxalate, which can cause kidney and bladder stones, and isothiocyanates, which can cause mild to potentially severe stomach irritation in dogs. Fed regularly, it can also interfere with thyroid function, especially in dogs with hypothyroidism. Small amounts may be fine, but because some vets caution against kale, we follow the stricter advice.",
@@ -80,7 +84,8 @@
     "de": "Grünkohl enthält Calciumoxalat, das Nieren- und Blasensteine verursachen kann, und Isothiocyanate, die bei Hunden eine leichte bis möglicherweise starke Magenreizung auslösen können. Regelmäßig gefüttert, kann er außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion. Kleine Mengen sind womöglich unproblematisch, aber weil manche Tierärzte von Grünkohl abraten, folgen wir dem strengeren Rat.",
     "fr": "Le chou frisé contient de l’oxalate de calcium, qui peut provoquer des calculs rénaux et vésicaux, et des isothiocyanates, qui peuvent provoquer chez le chien une irritation de l’estomac légère à potentiellement sévère. Donné régulièrement, il peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie. De petites quantités peuvent convenir, mais comme certains vétérinaires déconseillent le chou frisé, nous suivons l’avis le plus strict.",
     "es": "La col rizada contiene oxalato de calcio, que puede provocar cálculos en el riñón y en la vejiga, e isotiocianatos, que en los perros pueden causar una irritación de estómago de leve a potencialmente grave. Si se da con regularidad, también puede interferir en el funcionamiento de la tiroides, sobre todo en perros con hipotiroidismo. Las cantidades pequeñas pueden estar bien, pero como algunos veterinarios desaconsejan la col rizada, seguimos el consejo más estricto.",
-    "it": "Il cavolo riccio contiene ossalato di calcio, che può causare calcoli ai reni e alla vescica, e isotiocianati, che nei cani possono provocare un’irritazione gastrica da lieve a potenzialmente grave. Se viene dato con regolarità, può anche interferire con la funzione tiroidea, soprattutto nei cani con ipotiroidismo. Piccole quantità possono andare bene, ma poiché alcuni veterinari sconsigliano il cavolo riccio, seguiamo il consiglio più severo."
+    "it": "Il cavolo riccio contiene ossalato di calcio, che può causare calcoli ai reni e alla vescica, e isotiocianati, che nei cani possono provocare un’irritazione gastrica da lieve a potenzialmente grave. Se viene dato con regolarità, può anche interferire con la funzione tiroidea, soprattutto nei cani con ipotiroidismo. Piccole quantità possono andare bene, ma poiché alcuni veterinari sconsigliano il cavolo riccio, seguiamo il consiglio più severo.",
+    "pt": "A couve kale contém oxalato de cálcio, que pode causar pedras nos rins e na bexiga, e isotiocianatos, que podem causar uma irritação do estômago de ligeira a potencialmente grave nos cães. Se for dada com regularidade, pode também interferir com o funcionamento da tiroide, sobretudo em cães com hipotiroidismo. Pequenas quantidades podem ser aceitáveis, mas, como alguns veterinários desaconselham a couve kale, seguimos o conselho mais prudente."
   },
   "signs": {
     "en": [
@@ -166,6 +171,12 @@
       "Diarrea",
       "Difficoltà a urinare",
       "Qualsiasi cambiamento nel modo di urinare"
+    ],
+    "pt": [
+      "Vómitos",
+      "Diarreia",
+      "Dificuldade em urinar",
+      "Qualquer alteração nos hábitos urinários"
     ]
   },
   "what_to_do": {
@@ -182,7 +193,8 @@
     "de": "Wenn Ihr Hund Grünkohl gefressen hat, beobachten Sie ihn genau auf Magenbeschwerden oder Anzeichen von Nieren- und Blasensteinen. Wenden Sie sich an Ihren Tierarzt, wenn Sie Erbrechen, Durchfall, Schwierigkeiten beim Urinieren oder eine Veränderung beim Urinieren bemerken.",
     "fr": "Si votre chien a mangé du chou frisé, surveillez-le de près : troubles digestifs ou signes de calculs rénaux et vésicaux. Contactez votre vétérinaire si vous constatez des vomissements, de la diarrhée, une difficulté à uriner ou tout changement dans ses habitudes urinaires.",
     "es": "Si tu perro ha comido col rizada, obsérvalo con atención por si tiene molestias de estómago o síntomas de cálculos en el riñón y en la vejiga. Contacta con tu veterinario si notas vómitos, diarrea, dificultad para orinar o cualquier cambio en los hábitos urinarios.",
-    "it": "Se il tuo cane ha mangiato cavolo riccio, osservalo con attenzione: controlla se compaiono disturbi di pancia o segni di calcoli ai reni e alla vescica. Contatta il veterinario se noti vomito, diarrea, difficoltà a urinare o qualsiasi cambiamento nel modo di urinare."
+    "it": "Se il tuo cane ha mangiato cavolo riccio, osservalo con attenzione: controlla se compaiono disturbi di pancia o segni di calcoli ai reni e alla vescica. Contatta il veterinario se noti vomito, diarrea, difficoltà a urinare o qualsiasi cambiamento nel modo di urinare.",
+    "pt": "Se o teu cão comeu couve kale, observa-o com atenção para ver se tem mal-estar no estômago ou sinais de pedras nos rins e na bexiga. Liga ao teu veterinário se notares vómitos, diarreia, dificuldade em urinar ou qualquer alteração nos hábitos urinários."
   },
   "serving": null,
   "child": {
@@ -199,7 +211,8 @@
     "de": "Grünkohl ist kein guter Snack für Hunde. Grüne Bohnen oder Gurkenstücke sind bessere Leckerlis zum Teilen – mit Hilfe eines Erwachsenen.",
     "fr": "Le chou frisé n’est pas une bonne friandise pour les chiens. Les haricots verts ou le concombre sont de meilleures friandises à partager, avec l’aide d’un adulte.",
     "es": "La col rizada no es un buen tentempié para los perros. Las judías verdes o el pepino son mejores premios para compartir, con la ayuda de un adulto.",
-    "it": "Il cavolo riccio non è uno spuntino adatto ai cani. Fagiolini o cetriolo sono premi migliori da condividere, con l’aiuto di un adulto."
+    "it": "Il cavolo riccio non è uno spuntino adatto ai cani. Fagiolini o cetriolo sono premi migliori da condividere, con l’aiuto di un adulto.",
+    "pt": "A couve kale não é uma boa guloseima para cães. O feijão-verde ou o pepino são melhores guloseimas para partilhar, com a ajuda de um adulto."
   },
   "faq": [
     {
@@ -217,7 +230,8 @@
         "de": "Welche Hunde sollten Grünkohl meiden?",
         "fr": "Quels chiens doivent éviter le chou frisé ?",
         "es": "¿Qué perros deben evitar la col rizada?",
-        "it": "Quali cani dovrebbero evitare il cavolo riccio?"
+        "it": "Quali cani dovrebbero evitare il cavolo riccio?",
+        "pt": "Que cães devem evitar a couve kale?"
       },
       "a": {
         "en": "Dogs prone to kidney or bladder stones should avoid foods high in calcium oxalate, including kale. Kale can also interfere with thyroid function, especially in dogs with hypothyroidism.",
@@ -233,7 +247,8 @@
         "de": "Hunde, die zu Nieren- oder Blasensteinen neigen, sollten Lebensmittel mit viel Calciumoxalat meiden, darunter auch Grünkohl. Grünkohl kann außerdem die Schilddrüsenfunktion beeinträchtigen, besonders bei Hunden mit Schilddrüsenunterfunktion.",
         "fr": "Les chiens sujets aux calculs rénaux ou vésicaux doivent éviter les aliments riches en oxalate de calcium, dont le chou frisé. Le chou frisé peut aussi perturber le fonctionnement de la thyroïde, surtout chez les chiens atteints d’hypothyroïdie.",
         "es": "Los perros propensos a los cálculos en el riñón o en la vejiga deben evitar los alimentos con mucho oxalato de calcio, entre ellos la col rizada. La col rizada también puede interferir en el funcionamiento de la tiroides, sobre todo en perros con hipotiroidismo.",
-        "it": "I cani predisposti ai calcoli renali o della vescica dovrebbero evitare gli alimenti ricchi di ossalato di calcio, cavolo riccio compreso. Il cavolo riccio può anche interferire con la funzione tiroidea, soprattutto nei cani con ipotiroidismo."
+        "it": "I cani predisposti ai calcoli renali o della vescica dovrebbero evitare gli alimenti ricchi di ossalato di calcio, cavolo riccio compreso. Il cavolo riccio può anche interferire con la funzione tiroidea, soprattutto nei cani con ipotiroidismo.",
+        "pt": "Os cães com tendência para pedras nos rins ou na bexiga devem evitar alimentos ricos em oxalato de cálcio, incluindo a couve kale. A couve kale pode também interferir com o funcionamento da tiroide, sobretudo em cães com hipotiroidismo."
       }
     },
     {
@@ -251,7 +266,8 @@
         "de": "Was kann ich meinem Hund statt Grünkohl geben?",
         "fr": "Que donner à mon chien à la place du chou frisé ?",
         "es": "¿Qué puedo darle a mi perro en lugar de col rizada?",
-        "it": "Che cosa posso dare al mio cane al posto del cavolo riccio?"
+        "it": "Che cosa posso dare al mio cane al posto del cavolo riccio?",
+        "pt": "O que posso dar ao meu cão em vez de couve kale?"
       },
       "a": {
         "en": "Green beans and cucumbers are safe for most dogs.",
@@ -267,7 +283,8 @@
         "de": "Grüne Bohnen und Gurken sind für die meisten Hunde unbedenklich.",
         "fr": "Les haricots verts et les concombres sont sans danger pour la plupart des chiens.",
         "es": "Las judías verdes y los pepinos son seguros para la mayoría de los perros.",
-        "it": "I fagiolini e i cetrioli sono sicuri per la maggior parte dei cani."
+        "it": "I fagiolini e i cetrioli sono sicuri per la maggior parte dei cani.",
+        "pt": "O feijão-verde e o pepino são seguros para a maioria dos cães."
       }
     }
   ],
@@ -391,6 +408,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "519eca54f5591411d9ecb0016b21254c6da98d2737bc9f9dc6c22efef8156f37"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a2840cfd7651f92aa29b592f18323cd03321fcd39d57d05876f127a4bed320d8"
     }
   }
 }

@@ -15,7 +15,8 @@
     "de": "Kürbis",
     "fr": "Citrouille",
     "es": "Calabaza",
-    "it": "Zucca"
+    "it": "Zucca",
+    "pt": "Abóbora"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Hunde Kürbis fressen?",
     "fr": "Les chiens peuvent-ils manger de la citrouille ?",
     "es": "¿Pueden los perros comer calabaza?",
-    "it": "I cani possono mangiare la zucca?"
+    "it": "I cani possono mangiare la zucca?",
+    "pt": "Os cães podem comer abóbora?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -47,7 +49,8 @@
     "de": "kuerbis",
     "fr": "citrouille",
     "es": "calabaza",
-    "it": "zucca"
+    "it": "zucca",
+    "pt": "abobora"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, ungewürzter, gekochter Kürbis ist gesund für Hunde. Wählen Sie frisch gekochten Kürbis oder reines Kürbispüree aus der Dose, niemals Kürbiskuchenfüllung, und geben Sie keine ungekochte Schale.",
     "fr": "Oui, la citrouille cuite nature est un aliment sain pour les chiens. Choisissez de la citrouille fraîche cuite ou de la purée de citrouille en conserve nature, jamais de la préparation pour tarte à la citrouille, et ne donnez pas d’écorce crue.",
     "es": "Sí, la calabaza cocida sin condimentar es un alimento saludable para los perros. Elige calabaza fresca cocinada o puré de calabaza en conserva sin nada añadido, nunca relleno para tarta de calabaza, y no les des cortezas crudas.",
-    "it": "Sì, la zucca cotta senza condimenti è un alimento sano per i cani. Scegli zucca fresca cotta o purea di zucca in scatola al naturale, mai il ripieno per torta di zucca, e non dare le bucce crude."
+    "it": "Sì, la zucca cotta senza condimenti è un alimento sano per i cani. Scegli zucca fresca cotta o purea di zucca in scatola al naturale, mai il ripieno per torta di zucca, e non dare le bucce crude.",
+    "pt": "Sim, a abóbora cozida simples é um alimento saudável para os cães. Escolhe abóbora fresca cozida ou puré de abóbora simples em lata, nunca recheio de tarte de abóbora, e não partilhes cascas cruas."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
@@ -80,7 +84,8 @@
     "de": "Reiner Kürbis steckt voller Antioxidantien und kann bei Hunden sowohl bei Durchfall als auch bei Verstopfung helfen. Kürbiskuchenfüllung kann Xylit enthalten, das giftig ist, außerdem Gewürze und Zusatzstoffe, die schädlich sein können. Ungekochte Schalen sind zäh und faserig: Sie können zum Ersticken führen, sind schwer verdaulich und können im Darm einen Verschluss verursachen.",
     "fr": "La citrouille pure regorge d’antioxydants et peut aider en cas de diarrhée comme de constipation chez le chien. La préparation pour tarte à la citrouille peut contenir du xylitol, qui est toxique, ainsi que d’autres épices et additifs potentiellement nocifs. L’écorce crue est dure et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale.",
     "es": "La calabaza pura está llena de antioxidantes y puede ayudar tanto con la diarrea como con el estreñimiento de los perros. El relleno para tarta de calabaza puede contener xilitol, que es tóxico, además de otras especias y aditivos que podrían ser dañinos. Las cortezas crudas son duras y fibrosas: suponen un riesgo de atragantamiento, son difíciles de digerir y pueden provocar una obstrucción en el intestino.",
-    "it": "La zucca pura è ricca di antiossidanti e può aiutare sia contro la diarrea sia contro la stitichezza nei cani. Il ripieno per torta di zucca può contenere xilitolo, che è tossico, oltre a spezie e additivi che potrebbero far male. Le bucce crude sono dure e fibrose: possono far soffocare, sono difficili da digerire e possono causare un’ostruzione intestinale."
+    "it": "La zucca pura è ricca di antiossidanti e può aiutare sia contro la diarrea sia contro la stitichezza nei cani. Il ripieno per torta di zucca può contenere xilitolo, che è tossico, oltre a spezie e additivi che potrebbero far male. Le bucce crude sono dure e fibrose: possono far soffocare, sono difficili da digerire e possono causare un’ostruzione intestinale.",
+    "pt": "A abóbora pura é rica em antioxidantes e pode ajudar tanto na diarreia como na prisão de ventre dos cães. O recheio de tarte de abóbora pode conter xilitol, que é tóxico, além de especiarias e aditivos que podem ser prejudiciais. As cascas cruas são duras e fibrosas: podem causar engasgo, são difíceis de digerir e podem provocar uma obstrução intestinal."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Wie bei jedem neuen Lebensmittel: Fragen Sie Ihren Tierarzt, bevor Sie Kürbis in den Speiseplan Ihres Hundes aufnehmen.",
     "fr": "Comme pour tout nouvel aliment, demandez conseil à votre vétérinaire avant d’ajouter de la citrouille à l’alimentation de votre chien.",
     "es": "Como con cualquier alimento nuevo, consulta con tu veterinario antes de incluir la calabaza en la rutina de tu perro.",
-    "it": "Come per qualsiasi alimento nuovo, chiedi al veterinario prima di introdurre la zucca nell’alimentazione del tuo cane."
+    "it": "Come per qualsiasi alimento nuovo, chiedi al veterinario prima di introdurre la zucca nell’alimentazione del tuo cane.",
+    "pt": "Como com qualquer alimento novo, pergunta ao teu veterinário antes de incluir abóbora na rotina do teu cão."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
@@ -113,7 +119,8 @@
     "de": "Frisch, gekocht, pur und geschält, oder reines Kürbispüree aus der Dose, ohne Zuckerzusatz, Gewürze oder künstliche Aromen. Keine Kuchenfüllung und keine rohe Schale.",
     "fr": "Fraîche, cuite, nature et pelée, ou purée de citrouille en conserve nature, sans sucre ajouté, épices ni arômes artificiels. Pas de préparation pour tarte, pas d’écorce crue.",
     "es": "Fresca, cocinada, sin condimentar y pelada, o puré de calabaza en conserva sin nada añadido, sin azúcar, especias ni aromas artificiales. Sin relleno de tarta y sin corteza cruda.",
-    "it": "Fresca, cotta, al naturale e sbucciata, oppure purea di zucca in scatola al naturale, senza zucchero, spezie né aromi artificiali aggiunti. Niente ripieno per torta e niente buccia cruda."
+    "it": "Fresca, cotta, al naturale e sbucciata, oppure purea di zucca in scatola al naturale, senza zucchero, spezie né aromi artificiali aggiunti. Niente ripieno per torta e niente buccia cruda.",
+    "pt": "Fresca, cozida, simples e sem casca, ou puré de abóbora simples em lata, sem açúcar, especiarias nem aromas artificiais. Sem recheio de tarte e sem casca crua."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
@@ -129,7 +136,8 @@
     "de": "Hunde dürfen ein bisschen ungewürzten, gekochten Kürbis genießen. Ein Erwachsener achtet darauf, dass es keine süße Kuchenfüllung ist!",
     "fr": "Les chiens peuvent se régaler d’un peu de citrouille cuite nature. Un adulte vérifie que ce n’est pas de la préparation sucrée pour tarte !",
     "es": "Los perros pueden disfrutar de un poquito de calabaza cocida sin condimentar. ¡Un adulto se asegura de que no sea relleno dulce de tarta!",
-    "it": "I cani possono gustare un po’ di zucca cotta senza condimenti. Un adulto controlla che non sia il ripieno dolce per torta!"
+    "it": "I cani possono gustare un po’ di zucca cotta senza condimenti. Un adulto controlla che non sia il ripieno dolce per torta!",
+    "pt": "Os cães podem gostar de um bocadinho de abóbora cozida simples. Um adulto garante que não é recheio doce de tarte!"
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Dürfen Hunde Kürbiskuchenfüllung fressen?",
         "fr": "Les chiens peuvent-ils manger de la préparation pour tarte à la citrouille ?",
         "es": "¿Pueden los perros comer relleno para tarta de calabaza?",
-        "it": "I cani possono mangiare il ripieno per torta di zucca?"
+        "it": "I cani possono mangiare il ripieno per torta di zucca?",
+        "pt": "Os cães podem comer recheio de tarte de abóbora?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
@@ -163,7 +172,8 @@
         "de": "Nein. Kürbiskuchenfüllung kann Xylit enthalten, einen Süßstoff, der für Hunde giftig ist, sowie Gewürze und Zusatzstoffe, die schädlich sein können.",
         "fr": "Non. La préparation pour tarte à la citrouille peut contenir du xylitol, un édulcorant toxique pour les chiens, ainsi que d’autres épices et additifs potentiellement nocifs.",
         "es": "No. El relleno para tarta de calabaza puede contener xilitol, un edulcorante tóxico para los perros, y otras especias y aditivos que podrían ser dañinos.",
-        "it": "No. Il ripieno per torta di zucca può contenere xilitolo, un dolcificante tossico per i cani, oltre a spezie e additivi che potrebbero far male."
+        "it": "No. Il ripieno per torta di zucca può contenere xilitolo, un dolcificante tossico per i cani, oltre a spezie e additivi che potrebbero far male.",
+        "pt": "Não. O recheio de tarte de abóbora pode conter xilitol, um adoçante tóxico para os cães, além de especiarias e aditivos que podem ser prejudiciais."
       }
     },
     {
@@ -181,7 +191,8 @@
         "de": "Dürfen Hunde rohe Kürbisschale fressen?",
         "fr": "Les chiens peuvent-ils manger de l’écorce de citrouille crue ?",
         "es": "¿Pueden los perros comer corteza de calabaza cruda?",
-        "it": "I cani possono mangiare la buccia di zucca cruda?"
+        "it": "I cani possono mangiare la buccia di zucca cruda?",
+        "pt": "Os cães podem comer casca de abóbora crua?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
@@ -197,7 +208,8 @@
         "de": "Nein. Ungekochte Schalen sind zäh, dicht und faserig: Sie können zum Ersticken führen, sind schwer verdaulich und können im Darm einen Verschluss verursachen.",
         "fr": "Non. L’écorce crue est dure, dense et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale.",
         "es": "No. Las cortezas crudas son duras, densas y fibrosas: suponen un riesgo de atragantamiento, son difíciles de digerir y pueden provocar una obstrucción en el intestino.",
-        "it": "No. Le bucce crude sono dure, compatte e fibrose: possono far soffocare, sono difficili da digerire e possono causare un’ostruzione intestinale."
+        "it": "No. Le bucce crude sono dure, compatte e fibrose: possono far soffocare, sono difficili da digerire e possono causare un’ostruzione intestinale.",
+        "pt": "Não. As cascas cruas são duras, densas e fibrosas: podem causar engasgo, são difíceis de digerir e podem provocar uma obstrução intestinal."
       }
     }
   ],
@@ -332,6 +344,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "dc3f6e134ba6a218afd1b9c15055386eb5ae795149dd58d942b15cb2cbfebf58"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5a025c6df012e9703fa2abd7a0bca1a9bfffffe75cd673130bc1b4ddfd8d4382"
     }
   }
 }

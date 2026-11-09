@@ -15,7 +15,8 @@
     "de": "Kohl",
     "fr": "Chou",
     "es": "Col",
-    "it": "Cavolo"
+    "it": "Cavolo",
+    "pt": "Couve"
   },
   "question": {
     "en": "Can cats eat cabbage?",
@@ -31,7 +32,8 @@
     "de": "Dürfen Katzen Kohl fressen?",
     "fr": "Les chats peuvent-ils manger du chou ?",
     "es": "¿Pueden los gatos comer col?",
-    "it": "I gatti possono mangiare il cavolo?"
+    "it": "I gatti possono mangiare il cavolo?",
+    "pt": "Os gatos podem comer couve?"
   },
   "url_slug": {
     "en": "cabbage",
@@ -47,7 +49,8 @@
     "de": "kohl",
     "fr": "chou",
     "es": "col",
-    "it": "cavolo"
+    "it": "cavolo",
+    "pt": "couve"
   },
   "level": "small_amounts",
   "answer": {
@@ -64,7 +67,8 @@
     "de": "Ja, ein kleines Stück ungewürzter, gekochter Kohl ist als gelegentliches Leckerli in Ordnung. Laut RSPCA ist gekochter roter oder grüner Kohl für Katzen in Maßen geeignet. Katzen brauchen kein Gemüse, deshalb sollte es nur ein winziges Extra bleiben.",
     "fr": "Oui, un petit morceau de chou cuit nature peut être donné de temps en temps en friandise. La RSPCA classe le chou rouge ou vert cuit parmi les aliments que les chats peuvent manger avec modération. Comme les chats n’ont pas besoin de légumes, réservez-le à un petit plus occasionnel.",
     "es": "Sí, un trocito de col cocida sin condimentar está bien como premio ocasional. La RSPCA incluye la col lombarda o verde cocida entre los alimentos adecuados para gatos con moderación. Los gatos no necesitan verdura, así que dale solo una pequeña cantidad como extra.",
-    "it": "Sì, un pezzettino di cavolo cotto senza condimenti va bene come premio occasionale. La RSPCA mette il cavolo rosso o verde cotto tra gli alimenti adatti ai gatti in piccole quantità. I gatti non hanno bisogno di verdure, quindi consideralo solo un piccolissimo extra."
+    "it": "Sì, un pezzettino di cavolo cotto senza condimenti va bene come premio occasionale. La RSPCA mette il cavolo rosso o verde cotto tra gli alimenti adatti ai gatti in piccole quantità. I gatti non hanno bisogno di verdure, quindi consideralo solo un piccolissimo extra.",
+    "pt": "Sim, um pedacinho de couve simples cozida é aceitável como guloseima ocasional. A RSPCA inclui a couve roxa ou verde cozida nos alimentos adequados para gatos com moderação. Os gatos não precisam de legumes, por isso deve ser só um pequeno extra."
   },
   "why": {
     "en": "The RSPCA lists cooked cabbage, red or green, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -80,7 +84,8 @@
     "de": "Die RSPCA nennt gekochten Kohl (roter oder grüner Kohl) unter den Weihnachtsspeisen, die für Haustiere unbedenklich sind und Katzen wie Hunden in Maßen gegeben werden können. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung, Leckerlis sollten selten sein, und laut ASPCA kann jedes Pflanzenmaterial bei Katzen Erbrechen und Magenverstimmungen auslösen.",
     "fr": "La RSPCA classe le chou cuit, rouge ou vert, parmi les aliments de Noël sans danger que les chats et les chiens peuvent manger avec modération. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation, les friandises doivent rester occasionnelles, et l’ASPCA précise que tout végétal peut provoquer des vomissements et des troubles digestifs chez le chat.",
     "es": "La RSPCA incluye la col cocida, lombarda o verde, entre los alimentos navideños seguros para mascotas que son adecuados para gatos y perros con moderación. Los gatos no necesitan fruta ni verdura en su dieta y los premios deben ser pocos. Además, la ASPCA señala que cualquier materia vegetal puede provocar vómitos y malestar de estómago en los gatos.",
-    "it": "La RSPCA elenca il cavolo cotto, rosso o verde, tra gli alimenti natalizi sicuri per gli animali domestici, adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti."
+    "it": "La RSPCA elenca il cavolo cotto, rosso o verde, tra gli alimenti natalizi sicuri per gli animali domestici, adatti a gatti e cani in piccole quantità. I gatti non hanno bisogno di frutta né di verdura nella loro alimentazione, i premi vanno dati con parsimonia e, come ricorda l’ASPCA, qualsiasi alimento vegetale può causare vomito e disturbi di stomaco nei gatti.",
+    "pt": "A RSPCA inclui a couve cozida, roxa ou verde, entre os alimentos de Natal seguros para animais de estimação, adequados para gatos e cães com moderação. Os gatos não precisam de fruta nem de legumes na alimentação, as guloseimas devem ser poucas, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
   },
   "signs": null,
   "what_to_do": {
@@ -97,7 +102,8 @@
     "de": "Beginnen Sie mit einem kleinen Stück. Erbricht Ihre Katze danach oder bekommt sie eine Magenverstimmung, geben Sie nichts mehr davon und fragen Sie Ihren Tierarzt.",
     "fr": "Commencez par un petit morceau. Si votre chat vomit ou a des troubles digestifs par la suite, arrêtez et demandez conseil à votre vétérinaire.",
     "es": "Empieza con un trocito. Si después tu gato vomita o tiene el estómago revuelto, deja de dárselo y consulta con tu veterinario.",
-    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario."
+    "it": "Comincia con un pezzettino. Se in seguito il tuo gatto vomita o ha mal di stomaco, smetti di dargliene e chiedi al veterinario.",
+    "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
   },
   "serving": {
     "en": "A small piece of cooked red or green cabbage, with no butter, salt or seasoning.",
@@ -113,7 +119,8 @@
     "de": "Ein kleines Stück gekochter roter oder grüner Kohl, ohne Butter, Salz oder Gewürze.",
     "fr": "Un petit morceau de chou rouge ou vert cuit, sans beurre, sel ni assaisonnement.",
     "es": "Un trocito de col lombarda o verde cocida, sin mantequilla, sal ni condimentos.",
-    "it": "Un pezzettino di cavolo rosso o verde cotto, senza burro, sale o condimenti."
+    "it": "Un pezzettino di cavolo rosso o verde cotto, senza burro, sale o condimenti.",
+    "pt": "Um pedacinho de couve roxa ou verde cozida, sem manteiga, sal nem temperos."
   },
   "child": {
     "en": "A little piece of cooked cabbage can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -129,7 +136,8 @@
     "de": "Ein Stück gekochter Kohl kann ab und zu ein Leckerli für Katzen sein. Katzen brauchen vor allem Fleisch – Gemüse ist nur ein winziges Extra.",
     "fr": "Un petit morceau de chou cuit, c’est parfois une friandise pour un chat. Les chats ont surtout besoin de viande : les légumes ne sont qu’un petit plus.",
     "es": "Un poquito de col cocida puede ser un premio para un gato de vez en cuando. Los gatos necesitan sobre todo carne: la verdura es solo un pequeño extra.",
-    "it": "Ogni tanto il gatto può avere un pezzettino di cavolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra."
+    "it": "Ogni tanto il gatto può avere un pezzettino di cavolo cotto come premietto. I gatti hanno bisogno soprattutto di carne, quindi la verdura è solo un piccolissimo extra.",
+    "pt": "Um pedacinho de couve cozida pode ser uma guloseima de vez em quando. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra."
   },
   "faq": [
     {
@@ -147,7 +155,8 @@
         "de": "Brauchen Katzen Gemüse?",
         "fr": "Les chats ont-ils besoin de légumes ?",
         "es": "¿Necesitan los gatos verdura?",
-        "it": "I gatti hanno bisogno di verdure?"
+        "it": "I gatti hanno bisogno di verdure?",
+        "pt": "Os gatos precisam de legumes?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -163,7 +172,8 @@
         "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
         "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus.",
         "es": "No. Según Cats Protection, los gatos rara vez comen verdura por instinto y no hace falta añadírsela a su dieta. La verdura solo puede ser un pequeño extra.",
-        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra."
+        "it": "No. Secondo Cats Protection in natura i gatti mangiano di rado verdure, quindi non serve aggiungerle alla loro alimentazione. La verdura può essere al massimo un piccolo extra.",
+        "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra."
       }
     }
   ],
@@ -278,6 +288,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "2a18143ce30771bfdff02f5244c549bd8d679cee658db48e4e098ff042ec4011"
+    },
+    "pt": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d7f6bae3ccde97cede17323e17ccfef5084c0d69af2676436c9df55c46eea690"
     }
   }
 }
