@@ -4,68 +4,80 @@
   "name": {
     "en": "Beetroot",
     "sl": "Rdeča pesa",
-    "pt": "Beterraba"
+    "pt": "Beterraba",
+    "nl": "Rode biet"
   },
   "question": {
     "en": "Can dogs eat beetroot?",
     "sl": "Ali lahko psi jedo rdečo peso?",
-    "pt": "Os cães podem comer beterraba?"
+    "pt": "Os cães podem comer beterraba?",
+    "nl": "Mogen honden rode biet eten?"
   },
   "url_slug": {
     "en": "beetroot",
     "sl": "rdeca-pesa",
-    "pt": "beterraba"
+    "pt": "beterraba",
+    "nl": "rode-biet"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
     "sl": "Da, rdeča pesa je za pse v redu, če je sveža in v zmernih količinah, kot občasen priboljšek. Vsebuje veliko sladkorja in oksalne kisline, zato naj bodo porcije majhne; če je pes nagnjen k ledvičnim kamnom, se najprej posvetujte z veterinarjem.",
-    "pt": "Sim, a beterraba é aceitável para os cães quando servida fresca e com moderação, como guloseima ocasional. Tem muito açúcar e ácido oxálico, por isso mantém as porções pequenas e fala primeiro com o teu veterinário se o teu cão tiver tendência para pedras nos rins."
+    "pt": "Sim, a beterraba é aceitável para os cães quando servida fresca e com moderação, como guloseima ocasional. Tem muito açúcar e ácido oxálico, por isso mantém as porções pequenas e fala primeiro com o teu veterinário se o teu cão tiver tendência para pedras nos rins.",
+    "nl": "Ja, rode biet is prima voor honden als je hem vers en met mate geeft: af en toe een snoepje. Rode biet bevat veel suiker en oxaalzuur, dus houd de porties klein en overleg eerst met je dierenarts als je hond gevoelig is voor nierstenen."
   },
   "why": {
     "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
     "sl": "Pesa vsebuje veliko ogljikovih hidratov in sladkorja, preveč sladkorja pa lahko prispeva k vnetju trebušne slinavke ali debelosti. Vsebuje tudi veliko oksalne kisline, ki lahko tvori kamne v mehurju, kristale v urinu in ledvične kamne ter povzroči pomanjkanje kalcija. Ker je kisla, lahko pri nekaterih psih povzroči vetrove in drisko.",
-    "pt": "A beterraba é rica em hidratos de carbono e açúcar, e demasiado açúcar pode contribuir para pancreatite ou obesidade. Também é rica em ácido oxálico, que pode formar pedras na bexiga, cristais urinários e pedras nos rins, e pode causar deficiências de cálcio. Por ser ácida, a beterraba pode causar gases e diarreia em alguns cães."
+    "pt": "A beterraba é rica em hidratos de carbono e açúcar, e demasiado açúcar pode contribuir para pancreatite ou obesidade. Também é rica em ácido oxálico, que pode formar pedras na bexiga, cristais urinários e pedras nos rins, e pode causar deficiências de cálcio. Por ser ácida, a beterraba pode causar gases e diarreia em alguns cães.",
+    "nl": "Bieten bevatten veel koolhydraten en suiker, en te veel suiker kan bijdragen aan alvleesklierontsteking of obesitas. Ze bevatten ook veel oxaalzuur, dat blaasstenen, urinekristallen en nierstenen kan vormen en een calciumtekort kan veroorzaken. Omdat bieten zuur zijn, kunnen ze bij sommige honden winderigheid en diarree veroorzaken."
   },
   "signs": null,
   "what_to_do": {
     "en": "Beetroot can turn your dog's urine dark pink or red, so don't panic. If the colour doesn't go away after a day, something else may be going on, such as a urinary tract infection or stones, so talk to your vet.",
     "sl": "Pesa lahko psu obarva urin temno roza ali rdeče, zato ne paničarite. Če barva po enem dnevu ne izgine, gre morda za kaj drugega, na primer okužbo sečil ali kamne, zato se posvetujte z veterinarjem.",
-    "pt": "A beterraba pode deixar a urina do teu cão rosa-escura ou vermelha, por isso não entres em pânico. Se a cor não desaparecer ao fim de um dia, pode haver outra causa, como uma infeção urinária ou pedras, por isso fala com o teu veterinário."
+    "pt": "A beterraba pode deixar a urina do teu cão rosa-escura ou vermelha, por isso não entres em pânico. Se a cor não desaparecer ao fim de um dia, pode haver outra causa, como uma infeção urinária ou pedras, por isso fala com o teu veterinário.",
+    "nl": "Rode biet kan de urine van je hond donkerroze of rood kleuren, dus schrik daar niet van. Is de kleur na een dag nog niet weg, dan kan er iets anders aan de hand zijn, zoals een urineweginfectie of stenen. Overleg dan met je dierenarts."
   },
   "serving": {
     "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
     "sl": "Sveža, dobro očiščena in olupljena, surova ali kuhana, naribana ali narezana na majhne koščke. Pesa iz pločevinke le brez dodane soli in drugih dodatkov.",
-    "pt": "Fresca, bem lavada e descascada, crua ou cozinhada, ralada ou cortada em pedaços pequenos, do tamanho de uma dentada. A beterraba em conserva só se não tiver sal nem outros aditivos."
+    "pt": "Fresca, bem lavada e descascada, crua ou cozinhada, ralada ou cortada em pedaços pequenos, do tamanho de uma dentada. A beterraba em conserva só se não tiver sal nem outros aditivos.",
+    "nl": "Vers, goed schoongeboend en geschild, rauw of gekookt, geraspt of in kleine, hapklare stukjes gesneden. Bieten uit blik alleen zonder zout en zonder andere toevoegingen."
   },
   "child": {
     "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
     "sl": "Psi lahko občasno dobijo malo rdeče pese. Lulanje je lahko potem rožnato, in to je v redu.",
-    "pt": "Os cães podem comer um bocadinho de beterraba de vez em quando. Pode deixar o xixi cor-de-rosa, e não faz mal."
+    "pt": "Os cães podem comer um bocadinho de beterraba de vez em quando. Pode deixar o xixi cor-de-rosa, e não faz mal.",
+    "nl": "Honden mogen af en toe een beetje rode biet. Het kan hun plas roze maken, en dat is niet erg."
   },
   "faq": [
     {
       "q": {
         "en": "Raw or cooked beetroot?",
         "sl": "Surova ali kuhana pesa?",
-        "pt": "Beterraba crua ou cozinhada?"
+        "pt": "Beterraba crua ou cozinhada?",
+        "nl": "Rauwe of gekookte rode biet?"
       },
       "a": {
         "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
         "sl": "Obe sta v redu. Surova pesa ohrani največ hranil, kuhana pa je najbolj vsestranska izbira.",
-        "pt": "Ambas servem. A beterraba crua conserva mais nutrientes, e a cozinhada é a opção mais versátil."
+        "pt": "Ambas servem. A beterraba crua conserva mais nutrientes, e a cozinhada é a opção mais versátil.",
+        "nl": "Beide zijn prima. Rauwe bieten behouden de meeste voedingsstoffen en gekookte bieten zijn het veelzijdigst."
       }
     },
     {
       "q": {
         "en": "Can dogs eat canned beetroot?",
         "sl": "Ali lahko psi jedo peso iz pločevinke?",
-        "pt": "Os cães podem comer beterraba em conserva?"
+        "pt": "Os cães podem comer beterraba em conserva?",
+        "nl": "Mogen honden rode biet uit blik eten?"
       },
       "a": {
         "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
         "sl": "Da, vendar izbirajte previdno: izberite izdelek brez dodane soli in drugih dodatkov.",
-        "pt": "Sim, mas escolhe com cuidado: opta por uma marca sem sal adicionado e sem outros aditivos."
+        "pt": "Sim, mas escolhe com cuidado: opta por uma marca sem sal adicionado e sem outros aditivos.",
+        "nl": "Ja, maar kies zorgvuldig: neem een merk zonder toegevoegd zout en zonder andere toevoegingen."
       }
     }
   ],
@@ -168,6 +180,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "95dc6106f532c3da896980681a7ad79827b1ab0cbe87fe38da84d6f53d6e2538"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "d5341a51153b4acc8d6f8c77a1daa8dd6c7f02018ba66f2a5039874f1fd2d721"
     }
   }
 }

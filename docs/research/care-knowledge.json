@@ -2146,48 +2146,57 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Beetroot",
         "sl": "Rdeča pesa",
-        "pt": "Beterraba"
+        "pt": "Beterraba",
+        "nl": "Rode biet"
       },
       "question": {
         "en": "Can cats eat beetroot?",
         "sl": "Ali lahko mačke jedo rdečo peso?",
-        "pt": "Os gatos podem comer beterraba?"
+        "pt": "Os gatos podem comer beterraba?",
+        "nl": "Mogen katten rode biet eten?"
       },
       "url_slug": {
         "en": "beetroot",
         "sl": "rdeca-pesa",
-        "pt": "beterraba"
+        "pt": "beterraba",
+        "nl": "rode-biet"
       },
       "answer": {
         "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
         "sl": "Da, majhen navaden košček rdeče pese je v redu kot občasen priboljšek. ASPCA peso, tudi rdečo peso, navaja kot nestrupeno za mačke. Velikih listov pa mački ne dajajte: ASPCA navaja, da veliki zreli listi vsebujejo oksalno kislino.",
-        "pt": "Sim, um pedacinho de beterraba simples é aceitável como guloseima ocasional. A ASPCA classifica a beterraba como não tóxica para os gatos. Mantém, no entanto, as folhas grandes fora do alcance: a ASPCA refere que as folhas grandes e maduras contêm ácido oxálico."
+        "pt": "Sim, um pedacinho de beterraba simples é aceitável como guloseima ocasional. A ASPCA classifica a beterraba como não tóxica para os gatos. Mantém, no entanto, as folhas grandes fora do alcance: a ASPCA refere que as folhas grandes e maduras contêm ácido oxálico.",
+        "nl": "Ja, een klein stukje naturele rode biet is af en toe prima als traktatie. De ASPCA noemt bieten, waaronder rode biet, niet giftig voor katten. Houd de grote bladeren wel uit de buurt: volgens de ASPCA bevatten grote, volgroeide bladeren oxaalzuur."
       },
       "why": {
         "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
         "sl": "ASPCA peso (Beta vulgaris, imenovano tudi rdeča pesa) navaja kot nestrupeno za mačke in opozarja, da veliki zreli listi vsebujejo oksalno kislino. Mačke sadja in zelenjave v prehrani ne potrebujejo, PDSA pa navaja, da jim lahko veliko vrst damo v zelo majhnih količinah kot občasen priboljšek. ASPCA še opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-        "pt": "A ASPCA classifica a beterraba (Beta vulgaris) como não tóxica para os gatos e refere que as folhas grandes e maduras contêm ácido oxálico. Os gatos não precisam de fruta nem de legumes na alimentação, mas a PDSA diz que muitos podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere ainda que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
+        "pt": "A ASPCA classifica a beterraba (Beta vulgaris) como não tóxica para os gatos e refere que as folhas grandes e maduras contêm ácido oxálico. Os gatos não precisam de fruta nem de legumes na alimentação, mas a PDSA diz que muitos podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere ainda que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
+        "nl": "De ASPCA noemt bieten (Beta vulgaris, ook wel rode biet genoemd) niet giftig voor katten en meldt dat grote, volgroeide bladeren oxaalzuur bevatten. Katten hebben geen fruit of groente nodig in hun voeding, maar volgens PDSA kun je veel soorten in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt ook op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
+        "pt": "Começa com um pedacinho. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
+        "nl": "Begin met een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
         "sl": "Majhen košček navadne rdeče pese za en grižljaj, brez masla, soli in začimb. Velikih listov mački ne dajajte.",
-        "pt": "Um pedacinho de beterraba simples, do tamanho de uma dentada, sem manteiga, sal nem temperos. Mantém as folhas grandes longe do teu gato."
+        "pt": "Um pedacinho de beterraba simples, do tamanho de uma dentada, sem manteiga, sal nem temperos. Mantém as folhas grandes longe do teu gato.",
+        "nl": "Een klein, hapklaar stukje naturele rode biet, zonder boter, zout of kruiden. Houd de grote bladeren uit de buurt van je kat."
       },
       "child": {
         "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
         "sl": "Majhen košček rdeče pese je lahko občasno priboljšek za muco. Muce potrebujejo predvsem svojo mačjo hrano.",
-        "pt": "Um pedacinho de beterraba pode ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo da sua própria comida de gato."
+        "pt": "Um pedacinho de beterraba pode ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo da sua própria comida de gato.",
+        "nl": "Een heel klein stukje rode biet kan af en toe een traktatie voor je kat zijn. Katten hebben vooral hun eigen kattenvoer nodig."
       },
       "faq": [],
       "source_ids": [
@@ -4921,32 +4930,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Chilli peppers",
         "sl": "Čili papričice",
-        "pt": "Malaguetas"
+        "pt": "Malaguetas",
+        "nl": "Chilipepers"
       },
       "question": {
         "en": "Can cats eat chilli peppers?",
         "sl": "Ali lahko mačke jedo čili papričice?",
-        "pt": "Os gatos podem comer malaguetas?"
+        "pt": "Os gatos podem comer malaguetas?",
+        "nl": "Mogen katten chilipepers eten?"
       },
       "url_slug": {
         "en": "chilli-peppers",
         "sl": "cili-papricice",
-        "pt": "malaguetas"
+        "pt": "malaguetas",
+        "nl": "chilipepers"
       },
       "answer": {
         "en": "No, don't share chilli peppers or other spicy food with your cat. VCA Animal Hospitals says spicy foods may not be toxic to cats, but they are certain to cause stomach upset.",
         "sl": "Ne, čili papričic in druge pekoče hrane ne delite z mačko. VCA Animal Hospitals navaja, da pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave.",
-        "pt": "Não, não partilhes malaguetas nem outra comida picante com o teu gato. Os VCA Animal Hospitals dizem que a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago."
+        "pt": "Não, não partilhes malaguetas nem outra comida picante com o teu gato. Os VCA Animal Hospitals dizem que a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago.",
+        "nl": "Nee, deel chilipepers of ander pittig eten niet met je kat. Volgens VCA Animal Hospitals zijn pittige gerechten misschien niet giftig voor katten, maar ze veroorzaken zeker maagklachten."
       },
       "why": {
         "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
         "sl": "VCA Animal Hospitals svetuje, naj pekoče hrane ne delimo z mačko in naj polnjene jalapeño papričice ostanejo nam: pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave. Mačke zelenjave v prehrani ne potrebujejo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-        "pt": "Os VCA Animal Hospitals aconselham a não partilhar comida picante com o gato e a guardar os jalapeño poppers para ti: a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago. Os gatos não precisam de legumes na alimentação, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
+        "pt": "Os VCA Animal Hospitals aconselham a não partilhar comida picante com o gato e a guardar os jalapeño poppers para ti: a comida picante pode não ser tóxica para os gatos, mas certamente causa mal-estar no estômago. Os gatos não precisam de legumes na alimentação, e a ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
+        "nl": "VCA Animal Hospitals raadt af om pittig eten met je kat te delen en adviseert de gevulde jalapeños voor jezelf te houden: pittig eten is misschien niet giftig voor katten, maar het veroorzaakt zeker maagklachten. Katten hebben geen groente nodig in hun voeding en de ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken."
       },
       "signs": {
         "en": [
@@ -4960,18 +4975,24 @@
         "pt": [
           "Mal-estar no estômago",
           "Vómitos"
+        ],
+        "nl": [
+          "Maagklachten",
+          "Braken"
         ]
       },
       "what_to_do": {
         "en": "If your cat ate chilli or spicy food and then vomits or has an upset stomach, contact your vet for advice. Don't try to make your cat sick without asking the vet.",
         "sl": "Če je mačka pojedla čili ali pekočo hrano in nato bruha ali ima prebavne težave, se za nasvet obrnite na veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-        "pt": "Se o teu gato comeu malagueta ou comida picante e depois vomita ou fica com mal-estar no estômago, liga ao teu veterinário para pedir conselho. Não tentes fazer o teu gato vomitar sem perguntar ao veterinário."
+        "pt": "Se o teu gato comeu malagueta ou comida picante e depois vomita ou fica com mal-estar no estômago, liga ao teu veterinário para pedir conselho. Não tentes fazer o teu gato vomitar sem perguntar ao veterinário.",
+        "nl": "Als je kat chilipeper of pittig eten heeft gegeten en daarna braakt of maagklachten krijgt, neem dan contact op met je dierenarts voor advies. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
       },
       "serving": null,
       "child": {
         "en": "Spicy chilli peppers are for people, not cats. They can give kitty a sore tummy.",
         "sl": "Pekoče čili papričice so za ljudi, ne za muce. Muco lahko zaboli trebušček.",
-        "pt": "As malaguetas picantes são para as pessoas, não para os gatos. Podem dar dor de barriga ao gatinho."
+        "pt": "As malaguetas picantes são para as pessoas, não para os gatos. Podem dar dor de barriga ao gatinho.",
+        "nl": "Pittige chilipepers zijn voor mensen, niet voor katten. Je kat kan er buikpijn van krijgen."
       },
       "faq": [],
       "source_ids": [
@@ -6743,60 +6764,71 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Corn (sweetcorn kernels)",
         "sl": "Koruza (zrna sladke koruze)",
-        "pt": "Milho (grãos de milho doce)"
+        "pt": "Milho (grãos de milho doce)",
+        "nl": "Maïs (maïskorrels)"
       },
       "question": {
         "en": "Can cats eat corn?",
         "sl": "Ali lahko mačke jedo koruzo?",
-        "pt": "Os gatos podem comer milho?"
+        "pt": "Os gatos podem comer milho?",
+        "nl": "Mogen katten maïs eten?"
       },
       "url_slug": {
         "en": "corn",
         "sl": "koruza",
-        "pt": "milho"
+        "pt": "milho",
+        "nl": "mais"
       },
       "answer": {
         "en": "Yes, a few plain corn kernels are fine as an occasional treat if your cat is keen. Cats Protection names corn among the few vegetables you can feed a cat. Serve it with no butter, salt or seasoning.",
         "sl": "Da, nekaj navadnih koruznih zrn je v redu kot občasen priboljšek, če jih mačka mara. Cats Protection koruzo navaja med redkimi vrstami zelenjave, ki jih lahko damo mački. Ponudite jo brez masla, soli in začimb.",
-        "pt": "Sim, alguns grãos de milho simples são aceitáveis como guloseima ocasional, se o teu gato gostar. A Cats Protection inclui o milho entre os poucos legumes que se podem dar a um gato. Serve-o sem manteiga, sal nem temperos."
+        "pt": "Sim, alguns grãos de milho simples são aceitáveis como guloseima ocasional, se o teu gato gostar. A Cats Protection inclui o milho entre os poucos legumes que se podem dar a um gato. Serve-o sem manteiga, sal nem temperos.",
+        "nl": "Ja, een paar naturele maïskorrels zijn af en toe prima als traktatie, als je kat ze lekker vindt. Cats Protection noemt maïs een van de weinige groenten die je een kat kunt geven. Geef het zonder boter, zout of kruiden."
       },
       "why": {
         "en": "Cats Protection says there are a few vegetables you can feed your cat if they are keen, including corn, but cats rarely eat vegetables naturally and there is no need to add them to their diet. PDSA says many fruits and vegetables can be given in very small quantities as an occasional treat. The ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
         "sl": "Cats Protection navaja, da lahko mački, če jo mara, damo nekaj vrst zelenjave, med njimi koruzo, vendar mačke v naravi redko jedo zelenjavo in je ni treba dodajati v njihovo prehrano. PDSA navaja, da lahko veliko vrst sadja in zelenjave damo v zelo majhnih količinah kot občasen priboljšek. ASPCA opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-        "pt": "A Cats Protection diz que há alguns legumes que podes dar ao teu gato, se ele gostar, incluindo o milho, mas que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. A PDSA diz que muitas frutas e legumes podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos."
+        "pt": "A Cats Protection diz que há alguns legumes que podes dar ao teu gato, se ele gostar, incluindo o milho, mas que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. A PDSA diz que muitas frutas e legumes podem ser dados em quantidades muito pequenas, como guloseima ocasional. A ASPCA refere que qualquer matéria vegetal pode causar vómitos e mal-estar no estômago nos gatos.",
+        "nl": "Cats Protection zegt dat er een paar groenten zijn die je je kat kunt geven als die er zin in heeft, waaronder maïs, maar katten eten van nature zelden groente en je hoeft het niet aan hun voeding toe te voegen. Volgens PDSA kun je veel soorten fruit en groente in heel kleine hoeveelheden af en toe als traktatie geven. De ASPCA merkt op dat elk plantaardig materiaal bij katten braken en maagklachten kan veroorzaken."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a few kernels. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z nekaj zrni. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "pt": "Começa com alguns grãos. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
+        "pt": "Começa com alguns grãos. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
+        "nl": "Begin met een paar korrels. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "A few plain cooked corn kernels with no butter, salt or seasoning, in bite-sized pieces.",
         "sl": "Nekaj navadnih kuhanih koruznih zrn brez masla, soli in začimb, v koščkih za en grižljaj.",
-        "pt": "Alguns grãos de milho simples, cozinhados, sem manteiga, sal nem temperos."
+        "pt": "Alguns grãos de milho simples, cozinhados, sem manteiga, sal nem temperos.",
+        "nl": "Een paar naturele, gekookte maïskorrels, zonder boter, zout of kruiden, in hapklare stukjes."
       },
       "child": {
         "en": "A few corn kernels can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
         "sl": "Nekaj koruznih zrn je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-        "pt": "Alguns grãos de milho podem ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra."
+        "pt": "Alguns grãos de milho podem ser uma guloseima de vez em quando para o gato. Os gatos precisam sobretudo de carne, por isso os legumes são só um pequeno extra.",
+        "nl": "Een paar maïskorrels kunnen af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
       },
       "faq": [
         {
           "q": {
             "en": "Do cats need vegetables?",
             "sl": "Ali mačke potrebujejo zelenjavo?",
-            "pt": "Os gatos precisam de legumes?"
+            "pt": "Os gatos precisam de legumes?",
+            "nl": "Hebben katten groente nodig?"
           },
           "a": {
             "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
             "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-            "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra."
+            "pt": "Não. A Cats Protection diz que os gatos raramente comem legumes naturalmente e que não é preciso juntá-los à alimentação. Os legumes são sempre só um pequeno extra.",
+            "nl": "Nee. Volgens Cats Protection eten katten van nature zelden groente en hoef je het niet aan hun voeding toe te voegen. Groente kan hooguit een klein extraatje zijn."
           }
         }
       ],
@@ -13040,32 +13072,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Store-bought mushrooms",
         "sl": "Kupljene gobe",
-        "pt": "Cogumelos comprados no supermercado"
+        "pt": "Cogumelos comprados no supermercado",
+        "nl": "Champignons uit de winkel"
       },
       "question": {
         "en": "Can cats eat store-bought mushrooms?",
         "sl": "Ali lahko mačke jedo kupljene gobe?",
-        "pt": "Os gatos podem comer cogumelos comprados no supermercado?"
+        "pt": "Os gatos podem comer cogumelos comprados no supermercado?",
+        "nl": "Mogen katten champignons uit de winkel eten?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
         "sl": "kupljene-gobe",
-        "pt": "cogumelos-do-supermercado"
+        "pt": "cogumelos-do-supermercado",
+        "nl": "champignons"
       },
       "answer": {
         "en": "It's best not to share mushrooms with your cat. Pet Poison Helpline says some mushrooms are safe for cats but urges caution, and cats don't need anything beyond a complete cat food. Never give mushrooms cooked with garlic or onion.",
         "sl": "Gob je bolje ne deliti z mačko. Pet Poison Helpline navaja, da so nekatere gobe za mačke varne, a svetuje previdnost, mačke pa poleg popolne mačje hrane ne potrebujejo ničesar drugega. Nikoli ne dajajte gob, kuhanih s česnom ali čebulo.",
-        "pt": "É melhor não dar cogumelos ao teu gato. A Pet Poison Helpline refere que alguns cogumelos são seguros para gatos, mas aconselha cautela, e os gatos não precisam de nada além de uma alimentação completa. Nunca dês cogumelos cozinhados com alho ou cebola."
+        "pt": "É melhor não dar cogumelos ao teu gato. A Pet Poison Helpline refere que alguns cogumelos são seguros para gatos, mas aconselha cautela, e os gatos não precisam de nada além de uma alimentação completa. Nunca dês cogumelos cozinhados com alho ou cebola.",
+        "nl": "Deel liever geen champignons met je kat. Pet Poison Helpline zegt dat sommige paddenstoelen veilig zijn voor katten, maar roept op tot voorzichtigheid, en katten hebben niets nodig behalve een compleet kattenvoer. Geef nooit champignons die met knoflook of ui zijn bereid."
       },
       "why": {
         "en": "Pet Poison Helpline says that while some mushrooms are safe for cats, the topic needs caution, and it advises treating all mushrooms not bought for people to eat as toxic. It also says to stay away from adding mushrooms to a cat's diet. PDSA says cats need nothing other than a complete diet, and Cats Protection warns that garlic and onion can make cats very ill, so mushroom dishes made for people are not suitable.",
         "sl": "Pet Poison Helpline navaja, da so nekatere gobe za mačke sicer varne, a da je pri tem potrebna previdnost, in svetuje, naj vse gobe, ki niso kupljene za ljudi, obravnavamo kot strupene. Svetuje tudi, naj gob ne dodajamo v mačjo prehrano. PDSA navaja, da mačke ne potrebujejo ničesar drugega kot popolno prehrano, Cats Protection pa opozarja, da lahko česen in čebula mačkam zelo škodita, zato gobje jedi za ljudi niso primerne.",
-        "pt": "A Pet Poison Helpline refere que, embora alguns cogumelos sejam seguros para os gatos, convém ter cautela, e aconselha tratar como tóxicos todos os cogumelos que não tenham sido comprados para consumo humano. Aconselha ainda a não acrescentar cogumelos à alimentação do gato. A PDSA diz que os gatos não precisam de nada além de uma alimentação completa, e a Cats Protection avisa que o alho e a cebola podem deixar os gatos muito doentes, pelo que os pratos de cogumelos feitos para pessoas não são adequados."
+        "pt": "A Pet Poison Helpline refere que, embora alguns cogumelos sejam seguros para os gatos, convém ter cautela, e aconselha tratar como tóxicos todos os cogumelos que não tenham sido comprados para consumo humano. Aconselha ainda a não acrescentar cogumelos à alimentação do gato. A PDSA diz que os gatos não precisam de nada além de uma alimentação completa, e a Cats Protection avisa que o alho e a cebola podem deixar os gatos muito doentes, pelo que os pratos de cogumelos feitos para pessoas não são adequados.",
+        "nl": "Pet Poison Helpline zegt dat sommige paddenstoelen weliswaar veilig zijn voor katten, maar dat je er voorzichtig mee moet zijn, en adviseert om alle paddenstoelen die niet als voedsel voor mensen zijn gekocht als giftig te beschouwen. Ook raadt de organisatie af om paddenstoelen aan het voer van een kat toe te voegen. Volgens PDSA hebben katten niets nodig behalve een compleet voer, en Cats Protection waarschuwt dat knoflook en ui katten erg ziek kunnen maken, dus gerechten met paddenstoelen die voor mensen zijn gemaakt zijn niet geschikt."
       },
       "signs": {
         "en": [
@@ -13079,30 +13117,38 @@
         "pt": [
           "Vómitos",
           "Diarreia"
+        ],
+        "nl": [
+          "Braken",
+          "Diarree"
         ]
       },
       "what_to_do": {
         "en": "If you are not sure the mushroom came from a shop, treat it as toxic and take your cat to the vet straight away. If your cat eats a mushroom and then vomits or has diarrhoea, seek veterinary care straight away.",
         "sl": "Če niste prepričani, da je bila goba kupljena v trgovini, jo obravnavajte kot strupeno in mačko takoj odpeljite k veterinarju. Če mačka poje gobo in nato bruha ali ima drisko, takoj poiščite veterinarsko pomoč.",
-        "pt": "Se não tens a certeza de que o cogumelo foi comprado numa loja, trata-o como tóxico e leva imediatamente o teu gato ao veterinário. Se o teu gato comer um cogumelo e depois tiver vómitos ou diarreia, procura imediatamente assistência veterinária."
+        "pt": "Se não tens a certeza de que o cogumelo foi comprado numa loja, trata-o como tóxico e leva imediatamente o teu gato ao veterinário. Se o teu gato comer um cogumelo e depois tiver vómitos ou diarreia, procura imediatamente assistência veterinária.",
+        "nl": "Weet je niet zeker of de paddenstoel uit de winkel komt? Behandel hem dan als giftig en ga meteen met je kat naar de dierenarts. Als je kat een paddenstoel eet en daarna braakt of diarree krijgt, zoek dan meteen dierenartshulp."
       },
       "serving": null,
       "child": {
         "en": "Mushrooms are people food, not cat food. Cats get everything they need from their own cat food.",
         "sl": "Gobe so hrana za ljudi, ne za muce. Muce dobijo vse, kar potrebujejo, iz svoje mačje hrane.",
-        "pt": "Os cogumelos são comida de pessoas, não de gatos. A comida própria para gatos já tem tudo o que eles precisam."
+        "pt": "Os cogumelos são comida de pessoas, não de gatos. A comida própria para gatos já tem tudo o que eles precisam.",
+        "nl": "Champignons zijn voor mensen, niet voor katten. Katten krijgen alles wat ze nodig hebben uit hun eigen kattenvoer."
       },
       "faq": [
         {
           "q": {
             "en": "What if my cat ate a mushroom from the garden?",
             "sl": "Kaj, če je mačka pojedla gobo z vrta?",
-            "pt": "E se o meu gato comeu um cogumelo do jardim?"
+            "pt": "E se o meu gato comeu um cogumelo do jardim?",
+            "nl": "Wat als mijn kat een paddenstoel uit de tuin heeft gegeten?"
           },
           "a": {
             "en": "Treat it as toxic. Pet Poison Helpline says to take your cat to your vet immediately and, if possible, carefully bring a sample of the mushroom so a specialist can identify it.",
             "sl": "Obravnavajte jo kot strupeno. Pet Poison Helpline svetuje, naj mačko takoj odpeljete k veterinarju in s seboj, če je mogoče, previdno vzamete vzorec gobe, da jo strokovnjak prepozna.",
-            "pt": "Trata-o como tóxico. A Pet Poison Helpline aconselha a levar imediatamente o gato ao veterinário e, se possível, a recolher com cuidado uma amostra do cogumelo, para que um especialista o possa identificar."
+            "pt": "Trata-o como tóxico. A Pet Poison Helpline aconselha a levar imediatamente o gato ao veterinário e, se possível, a recolher com cuidado uma amostra do cogumelo, para que um especialista o possa identificar.",
+            "nl": "Behandel hem als giftig. Pet Poison Helpline zegt dat je meteen met je kat naar de dierenarts moet gaan en, als dat kan, voorzichtig een monster van de paddenstoel moet meenemen, zodat een specialist hem kan identificeren."
           }
         }
       ],
@@ -15188,72 +15234,85 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cooked potatoes",
         "sl": "Kuhan krompir",
-        "pt": "Batata cozida"
+        "pt": "Batata cozida",
+        "nl": "Gekookte aardappelen"
       },
       "question": {
         "en": "Can cats eat cooked potatoes?",
         "sl": "Ali lahko mačke jedo kuhan krompir?",
-        "pt": "Os gatos podem comer batata cozida?"
+        "pt": "Os gatos podem comer batata cozida?",
+        "nl": "Mogen katten gekookte aardappelen eten?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
         "sl": "kuhan-krompir",
-        "pt": "batata-cozida"
+        "pt": "batata-cozida",
+        "nl": "gekookte-aardappelen"
       },
       "answer": {
         "en": "Yes, a little plain cooked potato is fine as an occasional treat. The RSPCA lists potatoes as suitable for cats in moderation if they are mashed or boiled with no butter or cheese. Leave out the skin, salt and seasoning.",
         "sl": "Da, malo navadnega kuhanega krompirja je v redu kot občasen priboljšek. RSPCA krompir navaja kot primeren za mačke v zmernih količinah, če je pretlačen ali kuhan v vodi ter brez masla in sira. Olupke, sol in začimbe izpustite.",
-        "pt": "Sim, um pouco de batata cozida simples não faz mal como guloseima ocasional. A RSPCA indica a batata como adequada para gatos com moderação, se for cozida ou em puré, sem manteiga nem queijo. Tira a pele e não juntes sal nem temperos."
+        "pt": "Sim, um pouco de batata cozida simples não faz mal como guloseima ocasional. A RSPCA indica a batata como adequada para gatos com moderação, se for cozida ou em puré, sem manteiga nem queijo. Tira a pele e não juntes sal nem temperos.",
+        "nl": "Ja, een beetje naturele gekookte aardappel is af en toe prima als traktatie. De RSPCA noemt aardappelen met mate geschikt voor katten, als ze gepureerd of gekookt zijn zonder boter of kaas. Laat de schil, zout en kruiden weg."
       },
       "why": {
         "en": "The RSPCA lists mashed or boiled potatoes without butter or cheese among foods suitable for cats in moderation, Cats Protection suggests plain mashed potato with no butter, cream or garlic, and the ASPCA says cooked potatoes are fine for pets in moderation. A vet-written PetMD article adds that cooked potatoes are not toxic to cats but are not good for them either, and that potato skins contain the toxin solanine. Cats don't need vegetables in their diet, so keep it to a small treat.",
         "sl": "RSPCA pretlačen ali v vodi kuhan krompir brez masla in sira navaja med živili, primernimi za mačke v zmernih količinah, Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna, ASPCA pa navaja, da je kuhan krompir za hišne živali v zmernih količinah v redu. Članek veterinarke za PetMD dodaja, da kuhan krompir za mačke ni strupen, a jim tudi ne koristi, in da krompirjevi olupki vsebujejo strup solanin. Mačke zelenjave v prehrani ne potrebujejo, zato naj ostane le majhen priboljšek.",
-        "pt": "A RSPCA inclui o puré ou a batata cozida, sem manteiga nem queijo, entre os alimentos adequados para gatos com moderação, a Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho, e a ASPCA diz que a batata cozida não faz mal aos animais de estimação com moderação. Um artigo da PetMD, escrito por veterinários, acrescenta que a batata cozida não é tóxica para os gatos, mas também não lhes faz bem, e que as peles da batata contêm solanina, uma toxina. Os gatos não precisam de legumes na alimentação, por isso limita-te a uma pequena guloseima."
+        "pt": "A RSPCA inclui o puré ou a batata cozida, sem manteiga nem queijo, entre os alimentos adequados para gatos com moderação, a Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho, e a ASPCA diz que a batata cozida não faz mal aos animais de estimação com moderação. Um artigo da PetMD, escrito por veterinários, acrescenta que a batata cozida não é tóxica para os gatos, mas também não lhes faz bem, e que as peles da batata contêm solanina, uma toxina. Os gatos não precisam de legumes na alimentação, por isso limita-te a uma pequena guloseima.",
+        "nl": "De RSPCA noemt gepureerde of gekookte aardappelen zonder boter of kaas als voedsel dat met mate geschikt is voor katten, Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook, en de ASPCA zegt dat gekookte aardappelen met mate prima zijn voor huisdieren. Een artikel op PetMD, geschreven door een dierenarts, voegt eraan toe dat gekookte aardappelen niet giftig zijn voor katten maar ook niet goed voor ze, en dat aardappelschillen de gifstof solanine bevatten. Katten hebben geen groente nodig in hun voeding, dus houd het bij een kleine traktatie."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with a small taste. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
         "sl": "Začnite z majhnim grižljajem. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-        "pt": "Começa por uma pequena prova. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário."
+        "pt": "Começa por uma pequena prova. Se o teu gato vomitar ou ficar com mal-estar no estômago depois, para e pergunta ao teu veterinário.",
+        "nl": "Begin met een klein hapje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
       },
       "serving": {
         "en": "Plain boiled or mashed potato, peeled, with no butter, cheese, cream, garlic, salt or seasoning. Never raw or green potato.",
         "sl": "Navaden v vodi kuhan ali pretlačen krompir, olupljen, brez masla, sira, smetane, česna, soli in začimb. Nikoli surovega ali zelenega krompirja.",
-        "pt": "Batata cozida ou em puré simples, sem pele, sem manteiga, queijo, natas, alho, sal nem temperos. Nunca crua nem esverdeada."
+        "pt": "Batata cozida ou em puré simples, sem pele, sem manteiga, queijo, natas, alho, sal nem temperos. Nunca crua nem esverdeada.",
+        "nl": "Naturel gekookte of gepureerde aardappel, geschild, zonder boter, kaas, room, knoflook, zout of kruiden. Nooit rauwe of groene aardappel."
       },
       "child": {
         "en": "A tiny bit of plain cooked potato can be a cat treat now and then. Raw potato is not for cats.",
         "sl": "Malo navadnega kuhanega krompirja je lahko občasno priboljšek za muco. Surov krompir pa ni za muce.",
-        "pt": "Um bocadinho de batata cozida simples pode ser uma guloseima para o gato de vez em quando. A batata crua não é para gatos."
+        "pt": "Um bocadinho de batata cozida simples pode ser uma guloseima para o gato de vez em quando. A batata crua não é para gatos.",
+        "nl": "Een heel klein beetje naturel gekookte aardappel kan af en toe een traktatie voor je kat zijn. Rauwe aardappel is niet voor katten."
       },
       "faq": [
         {
           "q": {
             "en": "Can cats eat potato skins?",
             "sl": "Ali lahko mačke jedo krompirjeve olupke?",
-            "pt": "Os gatos podem comer peles de batata?"
+            "pt": "Os gatos podem comer peles de batata?",
+            "nl": "Mogen katten aardappelschillen eten?"
           },
           "a": {
             "en": "No. A vet-written PetMD article says potato skins, raw or cooked, contain the toxin solanine and should be avoided.",
             "sl": "Ne. Članek veterinarke za PetMD navaja, da krompirjevi olupki, surovi ali kuhani, vsebujejo strup solanin in se jim je treba izogibati.",
-            "pt": "Não. Um artigo da PetMD, escrito por veterinários, diz que as peles da batata, cruas ou cozinhadas, contêm solanina, uma toxina, e devem ser evitadas."
+            "pt": "Não. Um artigo da PetMD, escrito por veterinários, diz que as peles da batata, cruas ou cozinhadas, contêm solanina, uma toxina, e devem ser evitadas.",
+            "nl": "Nee. Een artikel op PetMD, geschreven door een dierenarts, zegt dat aardappelschillen, rauw of gekookt, de gifstof solanine bevatten en vermeden moeten worden."
           }
         },
         {
           "q": {
             "en": "Can cats eat mashed potatoes?",
             "sl": "Ali lahko mačke jedo krompirjev pire?",
-            "pt": "Os gatos podem comer puré de batata?"
+            "pt": "Os gatos podem comer puré de batata?",
+            "nl": "Mogen katten aardappelpuree eten?"
           },
           "a": {
             "en": "Plain mashed potato is fine as a small treat. Cats Protection suggests plain mashed potato with no butter, cream or garlic.",
             "sl": "Navaden krompirjev pire je v redu kot majhen priboljšek. Cats Protection predlaga navaden krompirjev pire brez masla, smetane in česna.",
-            "pt": "O puré de batata simples não faz mal como pequena guloseima. A Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho."
+            "pt": "O puré de batata simples não faz mal como pequena guloseima. A Cats Protection sugere puré de batata simples, sem manteiga, natas nem alho.",
+            "nl": "Naturel aardappelpuree is prima als kleine traktatie. Cats Protection stelt naturel aardappelpuree voor, zonder boter, room of knoflook."
           }
         }
       ],
@@ -19574,32 +19633,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Tomato plant (leaves, stems, green tomatoes)",
         "sl": "Paradižnikova rastlina (listi, stebla, zeleni paradižniki)",
-        "pt": "Tomateiro (folhas, caules, tomates verdes)"
+        "pt": "Tomateiro (folhas, caules, tomates verdes)",
+        "nl": "Tomatenplant (bladeren, stengels, groene tomaten)"
       },
       "question": {
         "en": "Is the tomato plant safe for cats?",
         "sl": "Ali je paradižnikova rastlina varna za mačke?",
-        "pt": "O tomateiro é seguro para os gatos?"
+        "pt": "O tomateiro é seguro para os gatos?",
+        "nl": "Is de tomatenplant veilig voor katten?"
       },
       "url_slug": {
         "en": "tomato-plant",
         "sl": "paradiznikova-rastlina",
-        "pt": "tomateiro"
+        "pt": "tomateiro",
+        "nl": "tomatenplant"
       },
       "answer": {
         "en": "No. The ASPCA lists the tomato plant as toxic to cats because it contains solanine; only the ripe fruit is non-toxic. Keep leaves, stems and green tomatoes away from your cat, and call your vet if your cat chews any.",
         "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, ker vsebuje solanin; nestrupeni so le zreli plodovi. Listi, stebla in zeleni paradižniki naj bodo zunaj mačkinega dosega. Če jih mačka pogrizlja, pokličite veterinarja.",
-        "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos porque contém solanina; só o fruto maduro não é tóxico. Mantém as folhas, os caules e os tomates verdes longe do teu gato e liga ao teu veterinário se ele mastigar alguma parte."
+        "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos porque contém solanina; só o fruto maduro não é tóxico. Mantém as folhas, os caules e os tomates verdes longe do teu gato e liga ao teu veterinário se ele mastigar alguma parte.",
+        "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten, omdat hij solanine bevat; alleen de rijpe vrucht is niet giftig. Houd bladeren, stengels en groene tomaten uit de buurt van je kat en bel je dierenarts als je kat ergens aan heeft gekauwd."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats, names solanine as the toxic substance and notes that the ripe fruit is non-toxic. Agriculture Victoria also says only ripe tomato fruit is non-toxic. The ASPCA's garden advice for pets adds that the plant and small green tomatoes contain tomatine. International Cat Care warns that even contact with tomato leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems.",
         "sl": "ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, kot strupeno snov navaja solanin in pojasnjuje, da zreli plodovi niso strupeni. Tudi Agriculture Victoria navaja, da so nestrupeni le zreli plodovi paradižnika. ASPCA v nasvetih o vrtu za hišne živali dodaja, da rastlina in majhni zeleni paradižniki vsebujejo tomatin. International Cat Care opozarja, da lahko že stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi.",
-        "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos, indica a solanina como a substância tóxica e refere que o fruto maduro não é tóxico. A Agriculture Victoria também diz que só o tomate maduro não é tóxico. Nos conselhos da ASPCA para jardins com animais, acrescenta-se que a planta e os tomates verdes pequenos contêm tomatina. A International Cat Care avisa que até o simples contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos."
+        "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos, indica a solanina como a substância tóxica e refere que o fruto maduro não é tóxico. A Agriculture Victoria também diz que só o tomate maduro não é tóxico. Nos conselhos da ASPCA para jardins com animais, acrescenta-se que a planta e os tomates verdes pequenos contêm tomatina. A International Cat Care avisa que até o simples contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato, espirros e problemas nos olhos.",
+        "nl": "De ASPCA noemt de tomatenplant giftig voor katten, noemt solanine als de giftige stof en merkt op dat de rijpe vrucht niet giftig is. Ook Agriculture Victoria zegt dat alleen rijpe tomaten niet giftig zijn. Het tuinadvies van de ASPCA voor huisdieren voegt eraan toe dat de plant en kleine groene tomaten tomatine bevatten. International Cat Care waarschuwt dat zelfs contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat, niezen en oogklachten kan veroorzaken."
       },
       "signs": {
         "en": [
@@ -19628,30 +19693,43 @@
           "Fraqueza",
           "Pupilas dilatadas",
           "Batimento cardíaco lento"
+        ],
+        "nl": [
+          "Kwijlen",
+          "Verlies van eetlust",
+          "Ernstige maagklachten",
+          "Sombere stemming of vermoeidheid",
+          "Zwakte",
+          "Wijde pupillen",
+          "Trage hartslag"
         ]
       },
       "what_to_do": {
         "en": "If your cat chewed tomato leaves, stems or green tomatoes, contact your vet right away. Note what was eaten and when. Don't try to make your cat sick without asking the vet.",
         "sl": "Če je mačka grizljala paradižnikove liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Zapišite si, kaj je pojedla in kdaj. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-        "pt": "Se o teu gato mastigou folhas, caules ou tomates verdes, liga imediatamente ao teu veterinário. Anota o que ele comeu e quando. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+        "pt": "Se o teu gato mastigou folhas, caules ou tomates verdes, liga imediatamente ao teu veterinário. Anota o que ele comeu e quando. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+        "nl": "Heeft je kat op tomatenbladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Noteer wat je kat heeft gegeten en wanneer. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
       },
       "serving": null,
       "child": {
         "en": "Tomato plants are not for cats. If kitty nibbles a leaf, tell a grown-up so they can call the vet.",
         "sl": "Paradižnikove rastline niso za muce. Če muca pogrizlja list, povej odraslemu, da lahko pokliče veterinarja.",
-        "pt": "Os tomateiros não são para os gatos. Se o teu gatinho trincar uma folha, avisa um adulto para ligar ao veterinário."
+        "pt": "Os tomateiros não são para os gatos. Se o teu gatinho trincar uma folha, avisa um adulto para ligar ao veterinário.",
+        "nl": "Tomatenplanten zijn niet voor katten. Knabbelt je kat aan een blaadje, vertel het dan aan een volwassene. Die kan de dierenarts bellen."
       },
       "faq": [
         {
           "q": {
             "en": "Can cats eat ripe tomatoes?",
             "sl": "Ali lahko mačke jedo zrele paradižnike?",
-            "pt": "Os gatos podem comer tomates maduros?"
+            "pt": "Os gatos podem comer tomates maduros?",
+            "nl": "Mogen katten rijpe tomaten eten?"
           },
           "a": {
             "en": "The ASPCA says ripe tomato fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, so it's best not to share them.",
             "sl": "ASPCA navaja, da zreli plodovi paradižnika za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, zato jih je bolje ne deliti z mačko.",
-            "pt": "A ASPCA diz que o tomate maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos; por isso, o melhor é não os partilhar."
+            "pt": "A ASPCA diz que o tomate maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos; por isso, o melhor é não os partilhar.",
+            "nl": "De ASPCA zegt dat de rijpe tomatenvrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft, dus deel ze liever niet."
           }
         }
       ],
@@ -19682,32 +19760,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Tomatoes",
         "sl": "Paradižnik",
-        "pt": "Tomates"
+        "pt": "Tomates",
+        "nl": "Tomaten"
       },
       "question": {
         "en": "Can cats eat tomatoes?",
         "sl": "Ali lahko mačke jedo paradižnik?",
-        "pt": "Os gatos podem comer tomate?"
+        "pt": "Os gatos podem comer tomate?",
+        "nl": "Mogen katten tomaten eten?"
       },
       "url_slug": {
         "en": "tomatoes",
         "sl": "paradiznik",
-        "pt": "tomates"
+        "pt": "tomates",
+        "nl": "tomaten"
       },
       "answer": {
         "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
         "sl": "Mački je bolje ne dajati paradižnika. ASPCA navaja, da zreli plodovi za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati. Sama paradižnikova rastlina je za mačke strupena, zato naj bo zunaj njihovega dosega.",
-        "pt": "O melhor é não dar tomate ao teu gato. A ASPCA diz que o fruto maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos. O próprio tomateiro é tóxico para os gatos, por isso mantém-no fora do alcance."
+        "pt": "O melhor é não dar tomate ao teu gato. A ASPCA diz que o fruto maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos. O próprio tomateiro é tóxico para os gatos, por isso mantém-no fora do alcance.",
+        "nl": "Geef je kat liever geen tomaten. De ASPCA zegt dat de rijpe vrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft. De tomatenplant zelf is giftig voor katten, dus houd hem buiten bereik."
       },
       "why": {
         "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
         "sl": "ASPCA paradižnikovo rastlino zaradi solanina navaja kot strupeno za mačke in pojasnjuje, da zreli plodovi niso strupeni. Agriculture Victoria paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, ker vsebuje snov, ki povzroča hude prebavne težave, zreli plodovi pa niso strupeni. Ker ga en vir uvršča med živila, ki se jim je treba izogibati, upoštevamo strožji nasvet. Mačke zelenjave v prehrani tako ali tako ne potrebujejo.",
-        "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos por causa da solanina e refere que o fruto maduro não é tóxico. A Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos, porque contêm uma substância que causa problemas graves no estômago e nos intestinos, embora o fruto maduro não seja tóxico. Como uma das fontes inclui o tomate nos alimentos a evitar, seguimos o conselho mais prudente. De qualquer forma, os gatos não precisam de legumes na alimentação."
+        "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos por causa da solanina e refere que o fruto maduro não é tóxico. A Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos, porque contêm uma substância que causa problemas graves no estômago e nos intestinos, embora o fruto maduro não seja tóxico. Como uma das fontes inclui o tomate nos alimentos a evitar, seguimos o conselho mais prudente. De qualquer forma, os gatos não precisam de legumes na alimentação.",
+        "nl": "De ASPCA noemt de tomatenplant giftig voor katten vanwege solanine en merkt op dat de rijpe vrucht niet giftig is. Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft; volgens die bron bevatten ze een stof die ernstige maag- en darmklachten veroorzaakt, terwijl rijpe vruchten niet giftig zijn. Omdat één bron tomaten als te vermijden voedsel noemt, volgen wij het strengere advies. Katten hebben sowieso geen groente nodig in hun voeding."
       },
       "signs": {
         "en": [
@@ -19721,30 +19805,38 @@
         "pt": [
           "Vómitos",
           "Mal-estar no estômago"
+        ],
+        "nl": [
+          "Braken",
+          "Maagklachten"
         ]
       },
       "what_to_do": {
         "en": "If your cat ate tomato and then vomits or seems unwell, contact your vet. If your cat chewed the leaves, stems or green tomatoes, contact your vet right away. Don't try to make your cat sick without asking the vet.",
         "sl": "Če je mačka pojedla paradižnik in nato bruha ali se ne počuti dobro, pokličite veterinarja. Če je grizljala liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-        "pt": "Se o teu gato comeu tomate e depois vomita ou parece indisposto, liga ao teu veterinário. Se mastigou as folhas, os caules ou tomates verdes, liga imediatamente ao teu veterinário. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+        "pt": "Se o teu gato comeu tomate e depois vomita ou parece indisposto, liga ao teu veterinário. Se mastigou as folhas, os caules ou tomates verdes, liga imediatamente ao teu veterinário. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+        "nl": "Als je kat tomaat heeft gegeten en daarna braakt of er ziek uitziet, neem dan contact op met je dierenarts. Heeft je kat op de bladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
       },
       "serving": null,
       "child": {
         "en": "Tomatoes are people food, not cat food. Keep tomato plants away from kitty and tell a grown-up if kitty nibbles one.",
         "sl": "Paradižnik je hrana za ljudi, ne za muce. Paradižnikove rastline naj bodo stran od muce. Če muca katero pogrizlja, povej odraslemu.",
-        "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum."
+        "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum.",
+        "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt."
       },
       "faq": [
         {
           "q": {
             "en": "Are tomato leaves and green tomatoes safe for cats?",
             "sl": "Ali so paradižnikovi listi in zeleni paradižniki varni za mačke?",
-            "pt": "As folhas e os tomates verdes são seguros para os gatos?"
+            "pt": "As folhas e os tomates verdes são seguros para os gatos?",
+            "nl": "Zijn tomatenbladeren en groene tomaten veilig voor katten?"
           },
           "a": {
             "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
             "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, nestrupeni so le zreli plodovi. International Cat Care dodaja, da lahko stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih.",
-            "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos; só o fruto maduro não é tóxico. A International Cat Care acrescenta que o contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato."
+            "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos; só o fruto maduro não é tóxico. A International Cat Care acrescenta que o contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato.",
+            "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten; alleen de rijpe vrucht is niet giftig. International Cat Care voegt eraan toe dat contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat kan veroorzaken."
           }
         }
       ],
@@ -20755,32 +20847,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Wild mushrooms",
         "sl": "Divje gobe",
-        "pt": "Cogumelos silvestres"
+        "pt": "Cogumelos silvestres",
+        "nl": "Wilde paddenstoelen"
       },
       "question": {
         "en": "Are wild mushrooms dangerous for cats?",
         "sl": "Ali so divje gobe nevarne za mačke?",
-        "pt": "Os cogumelos silvestres são perigosos para os gatos?"
+        "pt": "Os cogumelos silvestres são perigosos para os gatos?",
+        "nl": "Zijn wilde paddenstoelen gevaarlijk voor katten?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
         "sl": "divje-gobe",
-        "pt": "cogumelos-silvestres"
+        "pt": "cogumelos-silvestres",
+        "nl": "wilde-paddenstoelen"
       },
       "answer": {
         "en": "Yes. Pet Poison Helpline advises treating every mushroom not bought for people to eat as toxic to cats, because many poisonous mushrooms look the same as harmless ones. If your cat eats a mushroom found outside, take your cat to the vet straight away.",
         "sl": "Da. Pet Poison Helpline svetuje, naj vsako gobo, ki ni kupljena za ljudi, obravnavamo kot strupeno za mačke, saj so številne strupene gobe videti enako kot neškodljive. Če mačka poje gobo, ki jo je našla zunaj, jo takoj odpeljite k veterinarju.",
-        "pt": "Sim. A Pet Poison Helpline aconselha a tratar como tóxico qualquer cogumelo que não tenha sido comprado para consumo humano, porque muitos cogumelos venenosos têm exatamente o mesmo aspeto que os inofensivos. Se o teu gato comer um cogumelo encontrado no exterior, leva-o imediatamente ao veterinário."
+        "pt": "Sim. A Pet Poison Helpline aconselha a tratar como tóxico qualquer cogumelo que não tenha sido comprado para consumo humano, porque muitos cogumelos venenosos têm exatamente o mesmo aspeto que os inofensivos. Se o teu gato comer um cogumelo encontrado no exterior, leva-o imediatamente ao veterinário.",
+        "nl": "Ja. Pet Poison Helpline adviseert elke paddenstoel die niet als voedsel voor mensen is gekocht als giftig voor katten te beschouwen, omdat veel giftige paddenstoelen er precies zo uitzien als onschuldige. Heeft je kat een paddenstoel gegeten die buiten groeide, ga dan meteen met je kat naar de dierenarts."
       },
       "why": {
         "en": "Pet Poison Helpline says North America alone has over 100 poisonous mushroom species, including Amanita, Galerina and Lepiota, and many look the same as non-toxic mushrooms. Some mushrooms affect pets within 15 to 30 minutes, others only after up to 24 hours. Depending on the mushroom and how much was eaten, the stomach and gut, the nervous system, the liver or the kidneys can be affected.",
         "sl": "Pet Poison Helpline navaja, da samo v Severni Ameriki raste več kot 100 vrst strupenih gob, med njimi Amanita, Galerina in Lepiota, in da so številne videti enako kot nestrupene gobe. Nekatere gobe na hišne živali učinkujejo v 15 do 30 minutah, druge šele po največ 24 urah. Odvisno od gobe in pojedene količine so lahko prizadeti prebavila, živčevje, jetra ali ledvice.",
-        "pt": "A Pet Poison Helpline diz que só na América do Norte existem mais de 100 espécies de cogumelos venenosos, incluindo Amanita, Galerina e Lepiota, e que muitos têm o mesmo aspeto que os cogumelos não tóxicos. Alguns cogumelos fazem efeito em 15 a 30 minutos; noutros, os efeitos só surgem até 24 horas depois. Consoante o cogumelo e a quantidade ingerida, podem ser afetados o estômago e os intestinos, o sistema nervoso, o fígado ou os rins."
+        "pt": "A Pet Poison Helpline diz que só na América do Norte existem mais de 100 espécies de cogumelos venenosos, incluindo Amanita, Galerina e Lepiota, e que muitos têm o mesmo aspeto que os cogumelos não tóxicos. Alguns cogumelos fazem efeito em 15 a 30 minutos; noutros, os efeitos só surgem até 24 horas depois. Consoante o cogumelo e a quantidade ingerida, podem ser afetados o estômago e os intestinos, o sistema nervoso, o fígado ou os rins.",
+        "nl": "Pet Poison Helpline zegt dat alleen al in Noord-Amerika meer dan 100 giftige paddenstoelsoorten voorkomen, waaronder Amanita, Galerina en Lepiota, en dat veel ervan er net zo uitzien als niet-giftige paddenstoelen. Sommige paddenstoelen kunnen binnen 15 tot 30 minuten effect hebben op huisdieren, andere pas na maximaal 24 uur. Afhankelijk van de paddenstoel en de hoeveelheid die is gegeten, kunnen maag en darmen, het zenuwstelsel, de lever of de nieren worden aangetast."
       },
       "signs": {
         "en": [
@@ -20812,30 +20910,44 @@
           "Convulsões",
           "Problemas de visão",
           "Agressividade ou confusão"
+        ],
+        "nl": [
+          "Braken",
+          "Diarree",
+          "Zwarte, teerachtige ontlasting",
+          "Wankel lopen",
+          "Trillen",
+          "Toevallen",
+          "Problemen met zien",
+          "Agressie of verwardheid"
         ]
       },
       "what_to_do": {
         "en": "Take your cat to your vet immediately, even before any signs appear. If you can do it safely, bring a sample of the mushroom so a specialist can identify it. Don't try to make your cat sick without asking the vet.",
         "sl": "Mačko takoj odpeljite k veterinarju, tudi če še nima znakov. Če lahko to storite varno, s seboj vzemite vzorec gobe, da jo strokovnjak prepozna. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-        "pt": "Leva o teu gato imediatamente ao veterinário, mesmo antes de aparecerem sinais. Se o puderes fazer em segurança, leva uma amostra do cogumelo para que um especialista o possa identificar. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+        "pt": "Leva o teu gato imediatamente ao veterinário, mesmo antes de aparecerem sinais. Se o puderes fazer em segurança, leva uma amostra do cogumelo para que um especialista o possa identificar. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+        "nl": "Ga meteen met je kat naar de dierenarts, ook voordat er verschijnselen zijn. Als je dat veilig kunt doen, neem dan een monster van de paddenstoel mee, zodat een specialist hem kan identificeren. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
       },
       "serving": null,
       "child": {
         "en": "Mushrooms growing outside are not for cats. If kitty sniffs or nibbles one, tell a grown-up right away.",
         "sl": "Gobe, ki rastejo zunaj, niso za muce. Če muca kakšno povoha ali pogrizlja, takoj povej odraslemu.",
-        "pt": "Os cogumelos que crescem no exterior não são para os gatos. Se o teu gatinho cheirar ou trincar um, avisa logo um adulto."
+        "pt": "Os cogumelos que crescem no exterior não são para os gatos. Se o teu gatinho cheirar ou trincar um, avisa logo um adulto.",
+        "nl": "Paddenstoelen die buiten groeien zijn niet voor katten. Snuffelt of knabbelt je kat aan een paddenstoel, vertel het dan meteen aan een volwassene."
       },
       "faq": [
         {
           "q": {
             "en": "How can I keep my cat away from wild mushrooms?",
             "sl": "Kako mačko obvarujem pred divjimi gobami?",
-            "pt": "Como posso manter o meu gato longe dos cogumelos silvestres?"
+            "pt": "Como posso manter o meu gato longe dos cogumelos silvestres?",
+            "nl": "Hoe houd ik mijn kat uit de buurt van wilde paddenstoelen?"
           },
           "a": {
             "en": "Pet Poison Helpline advises keeping a close eye on your cat's outdoor activities and not letting your cat near wild mushrooms or any mushroom whose origin you don't know.",
             "sl": "Pet Poison Helpline svetuje, naj mačko pozorno spremljate, ko je zunaj, in ji ne dovolite do divjih gob ali katerekoli gobe, za katero ne veste, od kod je.",
-            "pt": "A Pet Poison Helpline aconselha a vigiar de perto o gato quando está no exterior e a não o deixar chegar perto de cogumelos silvestres, nem de qualquer cogumelo cuja origem desconheças."
+            "pt": "A Pet Poison Helpline aconselha a vigiar de perto o gato quando está no exterior e a não o deixar chegar perto de cogumelos silvestres, nem de qualquer cogumelo cuja origem desconheças.",
+            "nl": "Pet Poison Helpline adviseert goed in de gaten te houden wat je kat buiten doet en je kat niet in de buurt te laten komen van wilde paddenstoelen of paddenstoelen waarvan je niet weet waar ze vandaan komen."
           }
         }
       ],
@@ -22923,72 +23035,85 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Asparagus",
         "sl": "Beluši",
-        "pt": "Espargos"
+        "pt": "Espargos",
+        "nl": "Asperges"
       },
       "question": {
         "en": "Can dogs eat asparagus?",
         "sl": "Ali lahko psi jedo beluše?",
-        "pt": "Os cães podem comer espargos?"
+        "pt": "Os cães podem comer espargos?",
+        "nl": "Mogen honden asperges eten?"
       },
       "url_slug": {
         "en": "asparagus",
         "sl": "belusi",
-        "pt": "espargos"
+        "pt": "espargos",
+        "nl": "asperges"
       },
       "answer": {
         "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
         "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti.",
-        "pt": "Sim, os espargos não são tóxicos para os cães. Os espargos cozinhados são a melhor opção, porque são mais fáceis de mastigar. Serve-os simples, cozidos em água ou a vapor, e mantém os cães longe da folhagem do espargo."
+        "pt": "Sim, os espargos não são tóxicos para os cães. Os espargos cozinhados são a melhor opção, porque são mais fáceis de mastigar. Serve-os simples, cozidos em água ou a vapor, e mantém os cães longe da folhagem do espargo.",
+        "nl": "Ja, asperges zijn niet giftig voor honden. Gekookte asperges zijn de betere keuze, omdat ze makkelijker te kauwen zijn. Geef ze naturel, gekookt of gestoomd, en houd je hond uit de buurt van het aspergeloof."
       },
       "why": {
         "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
         "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena.",
-        "pt": "Os espargos crus são muito difíceis de mastigar, e o cão pode tentar engoli-los inteiros e engasgar-se. Alguns cães têm dificuldade em digerir espargos crus. A manteiga ou o óleo de cozinha podem fazer mal ao cão. A folhagem do espargo, a parte não comestível da planta, é tóxica para os cães."
+        "pt": "Os espargos crus são muito difíceis de mastigar, e o cão pode tentar engoli-los inteiros e engasgar-se. Alguns cães têm dificuldade em digerir espargos crus. A manteiga ou o óleo de cozinha podem fazer mal ao cão. A folhagem do espargo, a parte não comestível da planta, é tóxica para os cães.",
+        "nl": "Rauwe asperges zijn heel moeilijk te kauwen en een hond kan proberen ze in één keer door te slikken en zich te verslikken. Sommige honden kunnen rauwe asperges moeilijk verteren. Boter of bakolie kan een hond ziek maken. Het aspergeloof, het oneetbare deel van de plant, is giftig voor honden."
       },
       "signs": null,
       "what_to_do": {
         "en": "If your dog has vomiting, gas or diarrhoea after raw asparagus, try lightly cooking it next time. Eating the asparagus fern can cause vomiting, diarrhoea and severe abdominal pain, so keep your dog away from the plant.",
         "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline.",
-        "pt": "Se o teu cão tiver vómitos, gases ou diarreia depois de comer espargos crus, experimenta cozê-los ligeiramente da próxima vez. Comer a folhagem do espargo pode causar vómitos, diarreia e dores abdominais fortes, por isso mantém o teu cão afastado da planta."
+        "pt": "Se o teu cão tiver vómitos, gases ou diarreia depois de comer espargos crus, experimenta cozê-los ligeiramente da próxima vez. Comer a folhagem do espargo pode causar vómitos, diarreia e dores abdominais fortes, por isso mantém o teu cão afastado da planta.",
+        "nl": "Krijgt je hond na rauwe asperges last van braken, winderigheid of diarree, bereid ze dan de volgende keer licht gaar. Als een hond aspergeloof eet, kan hij gaan braken, diarree krijgen en hevige buikpijn krijgen, dus houd je hond uit de buurt van de plant."
       },
       "serving": {
         "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
         "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj.",
-        "pt": "Cozidos em água ou a vapor, sem manteiga nem óleo. Se os servires crus, corta-os em pedaços pequenos, do tamanho de uma dentada."
+        "pt": "Cozidos em água ou a vapor, sem manteiga nem óleo. Se os servires crus, corta-os em pedaços pequenos, do tamanho de uma dentada.",
+        "nl": "Naturel gekookt of gestoomd, zonder boter of olie. Geef je ze rauw, snijd ze dan in kleine, hapklare stukjes."
       },
       "child": {
         "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
         "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse.",
-        "pt": "Os cães podem comer um bocadinho de espargo cozinhado, dado por um adulto. A parte da planta com folhagem não é para os cães."
+        "pt": "Os cães podem comer um bocadinho de espargo cozinhado, dado por um adulto. A parte da planta com folhagem não é para os cães.",
+        "nl": "Honden mogen een beetje gekookte asperges, als een volwassene die geeft. Het bladerige loof van de plant is niet voor honden."
       },
       "faq": [
         {
           "q": {
             "en": "Why does my dog's pee smell after asparagus?",
             "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?",
-            "pt": "Porque é que a urina do meu cão cheira mal depois de comer espargos?"
+            "pt": "Porque é que a urina do meu cão cheira mal depois de comer espargos?",
+            "nl": "Waarom ruikt de plas van mijn hond na asperges?"
           },
           "a": {
             "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
             "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava.",
-            "pt": "Os espargos podem dar um cheiro desagradável à urina, tanto nos cães como nas pessoas. Se o teu cão já estiver completamente habituado a fazer as necessidades no sítio certo, isto não deve ser um problema."
+            "pt": "Os espargos podem dar um cheiro desagradável à urina, tanto nos cães como nas pessoas. Se o teu cão já estiver completamente habituado a fazer as necessidades no sítio certo, isto não deve ser um problema.",
+            "nl": "Van asperges kan urine onaangenaam gaan ruiken, bij honden net als bij mensen. Is je hond helemaal zindelijk, dan zou dat geen probleem moeten zijn."
           }
         },
         {
           "q": {
             "en": "Is the asparagus fern safe?",
             "sl": "Je belušna praprot varna?",
-            "pt": "A folhagem do espargo é segura?"
+            "pt": "A folhagem do espargo é segura?",
+            "nl": "Is aspergeloof veilig?"
           },
           "a": {
             "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
             "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu.",
-            "pt": "Não. A folhagem do espargo é tóxica para os cães e pode causar vómitos, diarreia e dores abdominais fortes."
+            "pt": "Não. A folhagem do espargo é tóxica para os cães e pode causar vómitos, diarreia e dores abdominais fortes.",
+            "nl": "Nee. Aspergeloof is giftig voor honden en kan braken, diarree en hevige buikpijn veroorzaken."
           }
         }
       ],
@@ -24121,72 +24246,85 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Beetroot",
         "sl": "Rdeča pesa",
-        "pt": "Beterraba"
+        "pt": "Beterraba",
+        "nl": "Rode biet"
       },
       "question": {
         "en": "Can dogs eat beetroot?",
         "sl": "Ali lahko psi jedo rdečo peso?",
-        "pt": "Os cães podem comer beterraba?"
+        "pt": "Os cães podem comer beterraba?",
+        "nl": "Mogen honden rode biet eten?"
       },
       "url_slug": {
         "en": "beetroot",
         "sl": "rdeca-pesa",
-        "pt": "beterraba"
+        "pt": "beterraba",
+        "nl": "rode-biet"
       },
       "answer": {
         "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
         "sl": "Da, rdeča pesa je za pse v redu, če je sveža in v zmernih količinah, kot občasen priboljšek. Vsebuje veliko sladkorja in oksalne kisline, zato naj bodo porcije majhne; če je pes nagnjen k ledvičnim kamnom, se najprej posvetujte z veterinarjem.",
-        "pt": "Sim, a beterraba é aceitável para os cães quando servida fresca e com moderação, como guloseima ocasional. Tem muito açúcar e ácido oxálico, por isso mantém as porções pequenas e fala primeiro com o teu veterinário se o teu cão tiver tendência para pedras nos rins."
+        "pt": "Sim, a beterraba é aceitável para os cães quando servida fresca e com moderação, como guloseima ocasional. Tem muito açúcar e ácido oxálico, por isso mantém as porções pequenas e fala primeiro com o teu veterinário se o teu cão tiver tendência para pedras nos rins.",
+        "nl": "Ja, rode biet is prima voor honden als je hem vers en met mate geeft: af en toe een snoepje. Rode biet bevat veel suiker en oxaalzuur, dus houd de porties klein en overleg eerst met je dierenarts als je hond gevoelig is voor nierstenen."
       },
       "why": {
         "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
         "sl": "Pesa vsebuje veliko ogljikovih hidratov in sladkorja, preveč sladkorja pa lahko prispeva k vnetju trebušne slinavke ali debelosti. Vsebuje tudi veliko oksalne kisline, ki lahko tvori kamne v mehurju, kristale v urinu in ledvične kamne ter povzroči pomanjkanje kalcija. Ker je kisla, lahko pri nekaterih psih povzroči vetrove in drisko.",
-        "pt": "A beterraba é rica em hidratos de carbono e açúcar, e demasiado açúcar pode contribuir para pancreatite ou obesidade. Também é rica em ácido oxálico, que pode formar pedras na bexiga, cristais urinários e pedras nos rins, e pode causar deficiências de cálcio. Por ser ácida, a beterraba pode causar gases e diarreia em alguns cães."
+        "pt": "A beterraba é rica em hidratos de carbono e açúcar, e demasiado açúcar pode contribuir para pancreatite ou obesidade. Também é rica em ácido oxálico, que pode formar pedras na bexiga, cristais urinários e pedras nos rins, e pode causar deficiências de cálcio. Por ser ácida, a beterraba pode causar gases e diarreia em alguns cães.",
+        "nl": "Bieten bevatten veel koolhydraten en suiker, en te veel suiker kan bijdragen aan alvleesklierontsteking of obesitas. Ze bevatten ook veel oxaalzuur, dat blaasstenen, urinekristallen en nierstenen kan vormen en een calciumtekort kan veroorzaken. Omdat bieten zuur zijn, kunnen ze bij sommige honden winderigheid en diarree veroorzaken."
       },
       "signs": null,
       "what_to_do": {
         "en": "Beetroot can turn your dog's urine dark pink or red, so don't panic. If the colour doesn't go away after a day, something else may be going on, such as a urinary tract infection or stones, so talk to your vet.",
         "sl": "Pesa lahko psu obarva urin temno roza ali rdeče, zato ne paničarite. Če barva po enem dnevu ne izgine, gre morda za kaj drugega, na primer okužbo sečil ali kamne, zato se posvetujte z veterinarjem.",
-        "pt": "A beterraba pode deixar a urina do teu cão rosa-escura ou vermelha, por isso não entres em pânico. Se a cor não desaparecer ao fim de um dia, pode haver outra causa, como uma infeção urinária ou pedras, por isso fala com o teu veterinário."
+        "pt": "A beterraba pode deixar a urina do teu cão rosa-escura ou vermelha, por isso não entres em pânico. Se a cor não desaparecer ao fim de um dia, pode haver outra causa, como uma infeção urinária ou pedras, por isso fala com o teu veterinário.",
+        "nl": "Rode biet kan de urine van je hond donkerroze of rood kleuren, dus schrik daar niet van. Is de kleur na een dag nog niet weg, dan kan er iets anders aan de hand zijn, zoals een urineweginfectie of stenen. Overleg dan met je dierenarts."
       },
       "serving": {
         "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
         "sl": "Sveža, dobro očiščena in olupljena, surova ali kuhana, naribana ali narezana na majhne koščke. Pesa iz pločevinke le brez dodane soli in drugih dodatkov.",
-        "pt": "Fresca, bem lavada e descascada, crua ou cozinhada, ralada ou cortada em pedaços pequenos, do tamanho de uma dentada. A beterraba em conserva só se não tiver sal nem outros aditivos."
+        "pt": "Fresca, bem lavada e descascada, crua ou cozinhada, ralada ou cortada em pedaços pequenos, do tamanho de uma dentada. A beterraba em conserva só se não tiver sal nem outros aditivos.",
+        "nl": "Vers, goed schoongeboend en geschild, rauw of gekookt, geraspt of in kleine, hapklare stukjes gesneden. Bieten uit blik alleen zonder zout en zonder andere toevoegingen."
       },
       "child": {
         "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
         "sl": "Psi lahko občasno dobijo malo rdeče pese. Lulanje je lahko potem rožnato, in to je v redu.",
-        "pt": "Os cães podem comer um bocadinho de beterraba de vez em quando. Pode deixar o xixi cor-de-rosa, e não faz mal."
+        "pt": "Os cães podem comer um bocadinho de beterraba de vez em quando. Pode deixar o xixi cor-de-rosa, e não faz mal.",
+        "nl": "Honden mogen af en toe een beetje rode biet. Het kan hun plas roze maken, en dat is niet erg."
       },
       "faq": [
         {
           "q": {
             "en": "Raw or cooked beetroot?",
             "sl": "Surova ali kuhana pesa?",
-            "pt": "Beterraba crua ou cozinhada?"
+            "pt": "Beterraba crua ou cozinhada?",
+            "nl": "Rauwe of gekookte rode biet?"
           },
           "a": {
             "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
             "sl": "Obe sta v redu. Surova pesa ohrani največ hranil, kuhana pa je najbolj vsestranska izbira.",
-            "pt": "Ambas servem. A beterraba crua conserva mais nutrientes, e a cozinhada é a opção mais versátil."
+            "pt": "Ambas servem. A beterraba crua conserva mais nutrientes, e a cozinhada é a opção mais versátil.",
+            "nl": "Beide zijn prima. Rauwe bieten behouden de meeste voedingsstoffen en gekookte bieten zijn het veelzijdigst."
           }
         },
         {
           "q": {
             "en": "Can dogs eat canned beetroot?",
             "sl": "Ali lahko psi jedo peso iz pločevinke?",
-            "pt": "Os cães podem comer beterraba em conserva?"
+            "pt": "Os cães podem comer beterraba em conserva?",
+            "nl": "Mogen honden rode biet uit blik eten?"
           },
           "a": {
             "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
             "sl": "Da, vendar izbirajte previdno: izberite izdelek brez dodane soli in drugih dodatkov.",
-            "pt": "Sim, mas escolhe com cuidado: opta por uma marca sem sal adicionado e sem outros aditivos."
+            "pt": "Sim, mas escolhe com cuidado: opta por uma marca sem sal adicionado e sem outros aditivos.",
+            "nl": "Ja, maar kies zorgvuldig: neem een merk zonder toegevoegd zout en zonder andere toevoegingen."
           }
         }
       ],
@@ -27387,32 +27525,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Chili peppers",
         "sl": "Pekoča paprika (čili)",
-        "pt": "Malaguetas"
+        "pt": "Malaguetas",
+        "nl": "Chilipepers"
       },
       "question": {
         "en": "Can dogs eat chili peppers?",
         "sl": "Ali lahko psi jedo pekočo papriko?",
-        "pt": "Os cães podem comer malaguetas?"
+        "pt": "Os cães podem comer malaguetas?",
+        "nl": "Mogen honden chilipepers eten?"
       },
       "url_slug": {
         "en": "chili-peppers",
         "sl": "pekoca-paprika",
-        "pt": "malaguetas"
+        "pt": "malaguetas",
+        "nl": "chilipepers"
       },
       "answer": {
         "en": "No, never give your dog spicy peppers such as jalapeños or chili peppers. Hot peppers are irritants: they cause a burning feeling in the mouth and, in larger amounts, can cause vomiting and diarrhoea.",
         "sl": "Ne, psu nikoli ne dajajte pekoče paprike, kot sta jalapeño ali čili. Pekoča paprika je dražilna: v ustih povzroči pekoč občutek, v večjih količinah pa lahko povzroči bruhanje in drisko.",
-        "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia."
+        "pt": "Não, nunca dês ao teu cão pimentos picantes, como jalapeños ou malaguetas. Os pimentos picantes são irritantes: causam sensação de ardor na boca e, em maiores quantidades, podem causar vómitos e diarreia.",
+        "nl": "Nee, geef je hond nooit pittige pepers zoals jalapeños of chilipepers. Hete pepers zijn irriterend: ze geven een brandend gevoel in de mond en kunnen in grotere hoeveelheden braken en diarree veroorzaken."
       },
       "why": {
         "en": "Hot peppers contain capsaicin, a strong irritant, with the highest amounts in the fruit and especially the seeds. It can affect dogs that chew and swallow the peppers. Problems in household pets are rare, but the AKC says never to give spicy peppers to dogs.",
         "sl": "Pekoča paprika vsebuje kapsaicin, močno dražilno snov, ki je je največ v plodu in še posebej v semenih. Lahko prizadene pse, ki papriko prežvečijo in pogoltnejo. Pri domačih živalih so težave redke, vendar AKC svetuje, da psom pekoče paprike nikoli ne dajemo.",
-        "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães."
+        "pt": "Os pimentos picantes contêm capsaicina, um irritante forte, com as maiores quantidades no fruto e sobretudo nas sementes. Pode afetar os cães que mastigam e engolem os pimentos. Em animais de estimação que vivem em casa, os problemas são raros, mas a AKC diz que nunca se deve dar pimentos picantes aos cães.",
+        "nl": "Hete pepers bevatten capsaïcine, een sterk irriterende stof, met de hoogste concentraties in de vrucht en vooral in de zaadjes. Honden die op pepers kauwen en ze doorslikken, kunnen daar last van krijgen. Bij huisdieren zijn problemen zeldzaam, maar de AKC zegt dat je honden nooit pittige pepers moet geven."
       },
       "signs": {
         "en": [
@@ -27432,30 +27576,40 @@
           "Ardor e irritação nos olhos",
           "Vómitos",
           "Diarreia"
+        ],
+        "nl": [
+          "Brandend gevoel in de mond",
+          "Brandende, geïrriteerde ogen",
+          "Braken",
+          "Diarree"
         ]
       },
       "what_to_do": {
         "en": "Keep spicy peppers and dishes with them out of your dog's reach. The burning effect of capsaicin is usually short-lived and can be eased by rinsing the mouth with water.",
         "sl": "Pekočo papriko in jedi z njo hranite zunaj dosega psa. Pekoč učinek kapsaicina je običajno kratkotrajen in ga lahko omilite z izpiranjem ust z vodo.",
-        "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água."
+        "pt": "Mantém os pimentos picantes e os pratos que os contenham fora do alcance do teu cão. O efeito de ardor da capsaicina costuma ser curto e pode ser aliviado enxaguando a boca com água.",
+        "nl": "Houd pittige pepers en gerechten met pepers buiten het bereik van je hond. Het brandende gevoel van capsaïcine gaat meestal snel over en wordt minder als je de mond van je hond met water spoelt."
       },
       "serving": null,
       "child": {
         "en": "Spicy peppers are not for dogs. They make a dog's mouth feel hot. Sweet peppers are the dog-friendly kind.",
         "sl": "Pekoča paprika ni za pse. V gobčku jih peče. Sladka paprika je tista, ki je primerna za pse.",
-        "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães."
+        "pt": "Os pimentos picantes não são para os cães. Fazem a boca do cão arder. Já os pimentos doces podem ser comidos pelos cães.",
+        "nl": "Pittige pepers zijn niet voor honden. Ze geven een hond een brandend gevoel in de mond. Paprika is de hondvriendelijke variant."
       },
       "faq": [
         {
           "q": {
             "en": "Are sweet bell peppers okay?",
             "sl": "Je sladka paprika v redu?",
-            "pt": "Os pimentos doces são aceitáveis?"
+            "pt": "Os pimentos doces são aceitáveis?",
+            "nl": "Is zoete paprika oké?"
           },
           "a": {
             "en": "Yes, plain bell peppers are safe for most dogs in moderation, with the seeds and stem removed.",
             "sl": "Da, navadna sladka paprika je za večino psov v zmernih količinah varna, če odstranite semena in pecelj.",
-            "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo."
+            "pt": "Sim, os pimentos doces simples são seguros para a maioria dos cães com moderação, sem sementes nem pedúnculo.",
+            "nl": "Ja, naturele paprika is voor de meeste honden met mate veilig, mits je de zaadjes en de steel verwijdert."
           }
         }
       ],
@@ -30637,72 +30791,85 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Corn kernels",
         "sl": "Koruzna zrna",
-        "pt": "Grãos de milho"
+        "pt": "Grãos de milho",
+        "nl": "Maïskorrels"
       },
       "question": {
         "en": "Can dogs eat corn?",
         "sl": "Ali lahko psi jedo koruzo?",
-        "pt": "Os cães podem comer milho?"
+        "pt": "Os cães podem comer milho?",
+        "nl": "Mogen honden maïs eten?"
       },
       "url_slug": {
         "en": "corn",
         "sl": "koruza",
-        "pt": "milho"
+        "pt": "milho",
+        "nl": "mais"
       },
       "answer": {
         "en": "Yes, dogs can safely eat plain corn kernels removed from the cob, in small amounts as an occasional treat. Skip butter, salt and seasonings, and never give your dog corn on the cob.",
         "sl": "Da, psi lahko varno jedo navadna koruzna zrna, odstranjena s storža, v majhnih količinah kot občasen priboljšek. Brez masla, soli in začimb, koruze na storžu pa psu nikoli ne dajajte.",
-        "pt": "Sim, os cães podem comer sem problema grãos de milho simples, retirados da espiga, em pequenas quantidades como guloseima ocasional. Dispensa a manteiga, o sal e os temperos, e nunca dês ao teu cão a espiga de milho."
+        "pt": "Sim, os cães podem comer sem problema grãos de milho simples, retirados da espiga, em pequenas quantidades como guloseima ocasional. Dispensa a manteiga, o sal e os temperos, e nunca dês ao teu cão a espiga de milho.",
+        "nl": "Ja, honden mogen naturele maïskorrels eten die van de kolf zijn gehaald, in kleine hoeveelheden en af en toe als snoepje. Laat boter, zout en kruiden weg en geef je hond nooit een maïskolf."
       },
       "why": {
         "en": "Corn isn't a problem for most dogs and can even be part of a balanced diet, providing energy and helping digestion. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach. The cob is the real danger: dogs may swallow pieces or the whole cob, which can cause choking or intestinal blockages.",
         "sl": "Koruza za večino psov ni težava in je lahko celo del uravnotežene prehrane, saj daje energijo in podpira prebavo. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec. Prava nevarnost je storž: pes lahko pogoltne koščke ali cel storž, kar lahko povzroči dušenje ali zaporo črevesja.",
-        "pt": "O milho não é um problema para a maioria dos cães e pode até fazer parte de uma alimentação equilibrada, fornecendo energia e ajudando a digestão. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão. O verdadeiro perigo é a espiga: os cães podem engolir pedaços ou a espiga inteira, o que pode causar engasgo ou obstruções intestinais."
+        "pt": "O milho não é um problema para a maioria dos cães e pode até fazer parte de uma alimentação equilibrada, fornecendo energia e ajudando a digestão. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão. O verdadeiro perigo é a espiga: os cães podem engolir pedaços ou a espiga inteira, o que pode causar engasgo ou obstruções intestinais.",
+        "nl": "Maïs is voor de meeste honden geen probleem en kan zelfs deel uitmaken van een evenwichtige voeding, omdat het energie levert en de spijsvertering ondersteunt. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken. De kolf is het echte gevaar: honden kunnen stukken of de hele kolf doorslikken, wat verstikking of een darmverstopping kan veroorzaken."
       },
       "signs": null,
       "what_to_do": {
         "en": "Offer only plain kernels, cut off the cob, now and then. Before offering corn, make sure your dog doesn't have a corn allergy. Keep corn cobs well out of reach.",
         "sl": "Ponudite le navadna zrna, odrezana s storža, in to le občasno. Preden psu ponudite koruzo, se prepričajte, da nanjo ni alergičen. Koruzne storže hranite zunaj njegovega dosega.",
-        "pt": "Dá apenas grãos simples, retirados da espiga, de vez em quando. Antes de dares milho, confirma que o teu cão não tem alergia ao milho. Mantém as espigas de milho bem fora do alcance."
+        "pt": "Dá apenas grãos simples, retirados da espiga, de vez em quando. Antes de dares milho, confirma que o teu cão não tem alergia ao milho. Mantém as espigas de milho bem fora do alcance.",
+        "nl": "Geef alleen naturele korrels, van de kolf gesneden, en niet te vaak. Controleer eerst of je hond niet allergisch is voor maïs. Houd maïskolven ver buiten bereik."
       },
       "serving": {
         "en": "Plain sweet corn kernels, removed from the cob. No butter, salt or seasonings.",
         "sl": "Navadna zrna sladke koruze, odstranjena s storža. Brez masla, soli in začimb.",
-        "pt": "Grãos de milho doce simples, retirados da espiga. Sem manteiga, sal nem temperos."
+        "pt": "Grãos de milho doce simples, retirados da espiga. Sem manteiga, sal nem temperos.",
+        "nl": "Naturele suikermaïskorrels, van de kolf gehaald. Zonder boter, zout of kruiden."
       },
       "child": {
         "en": "Dogs can have a few plain corn kernels. The cob is not for dogs, so a grown-up keeps it away.",
         "sl": "Psi lahko dobijo nekaj navadnih koruznih zrn. Storž ni za pse, zato ga odrasli pospravi.",
-        "pt": "Os cães podem comer alguns grãos de milho simples. A espiga não é para cães, por isso um adulto trata de a pôr de parte."
+        "pt": "Os cães podem comer alguns grãos de milho simples. A espiga não é para cães, por isso um adulto trata de a pôr de parte.",
+        "nl": "Honden mogen een paar naturele maïskorrels. De kolf is niet voor honden, dus een volwassene houdt die uit de buurt."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat buttered corn?",
             "sl": "Ali lahko psi jedo koruzo z maslom?",
-            "pt": "Os cães podem comer milho com manteiga?"
+            "pt": "Os cães podem comer milho com manteiga?",
+            "nl": "Mogen honden maïs met boter eten?"
           },
           "a": {
             "en": "It's best to avoid it. Butter, salt and seasonings add fat and sodium that may upset your dog's stomach.",
             "sl": "Bolje ne. Maslo, sol in začimbe dodajo maščobo in natrij, ki lahko psu razdražijo želodec.",
-            "pt": "É melhor evitar. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão."
+            "pt": "É melhor evitar. A manteiga, o sal e os temperos acrescentam gordura e sódio que podem irritar o estômago do cão.",
+            "nl": "Dat kun je beter vermijden. Boter, zout en kruiden voegen vet en natrium toe die de maag van je hond van streek kunnen maken."
           }
         },
         {
           "q": {
             "en": "Is corn in dog food bad?",
             "sl": "Je koruza v pasji hrani slaba?",
-            "pt": "O milho na ração é mau para o cão?"
+            "pt": "O milho na ração é mau para o cão?",
+            "nl": "Is maïs in hondenvoer slecht?"
           },
           "a": {
             "en": "Many veterinary nutritionists agree that corn isn't a problem for most dogs and can be part of a well-balanced diet.",
             "sl": "Mnogi veterinarski nutricionisti se strinjajo, da koruza za večino psov ni težava in je lahko del dobro uravnotežene prehrane.",
-            "pt": "Muitos nutricionistas veterinários concordam que o milho não é um problema para a maioria dos cães e pode fazer parte de uma alimentação bem equilibrada."
+            "pt": "Muitos nutricionistas veterinários concordam que o milho não é um problema para a maioria dos cães e pode fazer parte de uma alimentação bem equilibrada.",
+            "nl": "Veel dierenartsen met een specialisatie in voeding zijn het erover eens dat maïs voor de meeste honden geen probleem is en deel kan uitmaken van een evenwichtige voeding."
           }
         }
       ],
@@ -38819,72 +38986,85 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Store-bought mushrooms",
         "sl": "Kupljene gobe",
-        "pt": "Cogumelos comprados no supermercado"
+        "pt": "Cogumelos comprados no supermercado",
+        "nl": "Champignons uit de winkel"
       },
       "question": {
         "en": "Can dogs eat store-bought mushrooms?",
         "sl": "Ali lahko psi jedo kupljene gobe?",
-        "pt": "Os cães podem comer cogumelos comprados no supermercado?"
+        "pt": "Os cães podem comer cogumelos comprados no supermercado?",
+        "nl": "Mogen honden champignons uit de winkel eten?"
       },
       "url_slug": {
         "en": "store-bought-mushrooms",
         "sl": "kupljene-gobe",
-        "pt": "cogumelos-do-supermercado"
+        "pt": "cogumelos-do-supermercado",
+        "nl": "champignons"
       },
       "answer": {
         "en": "Plain mushrooms sold in large grocery stores may be generally safe for dogs. Still, dogs don't need mushrooms, and dishes with mushrooms are best avoided, so a carrot stick or a slice of apple is a better treat.",
         "sl": "Navadne gobe iz velikih trgovin so za pse načeloma lahko varne. Kljub temu jih psi ne potrebujejo, jedem z gobami pa se je bolje izogniti, zato je korenček ali rezina jabolka boljši priboljšek.",
-        "pt": "Os cogumelos simples vendidos nas grandes superfícies podem ser, em geral, seguros para os cães. Ainda assim, os cães não precisam de cogumelos e convém evitar pratos que os levem; um pauzinho de cenoura ou uma fatia de maçã é uma guloseima melhor."
+        "pt": "Os cogumelos simples vendidos nas grandes superfícies podem ser, em geral, seguros para os cães. Ainda assim, os cães não precisam de cogumelos e convém evitar pratos que os levem; um pauzinho de cenoura ou uma fatia de maçã é uma guloseima melhor.",
+        "nl": "Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden. Toch hebben honden geen paddenstoelen nodig en geef je gerechten met paddenstoelen beter niet, dus een wortelstaafje of een schijfje appel is een beter snoepje."
       },
       "why": {
         "en": "Grocery-store mushrooms are generally considered safe, but mushroom dishes often contain oils, butter, seasoning, garlic and onions, which can be harmful to dogs. Wild mushrooms are a different matter: it is hard to tell toxic from non-toxic ones, and the toxic ones are extremely dangerous.",
         "sl": "Gobe iz trgovine načeloma veljajo za varne, jedi z gobami pa pogosto vsebujejo olje, maslo, začimbe, česen in čebulo, ki psu lahko škodijo. Gozdne gobe so nekaj drugega: strupene je težko ločiti od nestrupenih, strupene pa so izjemno nevarne.",
-        "pt": "Os cogumelos do supermercado são geralmente considerados seguros, mas os pratos de cogumelos levam muitas vezes óleo, manteiga, temperos, alho e cebola, que podem ser prejudiciais para os cães. Os cogumelos silvestres são outra questão: é difícil distinguir os tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos."
+        "pt": "Os cogumelos do supermercado são geralmente considerados seguros, mas os pratos de cogumelos levam muitas vezes óleo, manteiga, temperos, alho e cebola, que podem ser prejudiciais para os cães. Os cogumelos silvestres são outra questão: é difícil distinguir os tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos.",
+        "nl": "Champignons uit de supermarkt worden over het algemeen als veilig beschouwd, maar gerechten met paddenstoelen bevatten vaak olie, boter, kruiden, knoflook en ui, die schadelijk kunnen zijn voor honden. Wilde paddenstoelen zijn een ander verhaal: giftige en niet-giftige soorten zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk."
       },
       "signs": null,
       "what_to_do": {
         "en": "If you do share, give only plain store-bought mushrooms. Never let your dog eat mushrooms found outside; if that happens, contact your vet, an animal poison centre or an emergency vet hospital immediately.",
         "sl": "Če že delite, dajte le navadne gobe iz trgovine. Psu nikoli ne dovolite jesti gob, ki jih najde zunaj; če se to zgodi, se takoj obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico.",
-        "pt": "Se quiseres partilhar, dá apenas cogumelos simples comprados numa loja. Nunca deixes o teu cão comer cogumelos encontrados no exterior; se isso acontecer, liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência."
+        "pt": "Se quiseres partilhar, dá apenas cogumelos simples comprados numa loja. Nunca deixes o teu cão comer cogumelos encontrados no exterior; se isso acontecer, liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência.",
+        "nl": "Als je ze toch deelt, geef dan alleen naturele champignons uit de winkel. Laat je hond nooit paddenstoelen eten die buiten zijn gevonden; gebeurt dat toch, neem dan meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren."
       },
       "serving": {
         "en": "Plain only, from a large grocery store. No oil, butter, seasoning, garlic or onion, and no mushroom dishes.",
         "sl": "Le navadne, iz velike trgovine. Brez olja, masla, začimb, česna in čebule ter brez jedi z gobami.",
-        "pt": "Apenas simples, de uma grande superfície. Sem óleo, manteiga, temperos, alho nem cebola, e sem pratos de cogumelos."
+        "pt": "Apenas simples, de uma grande superfície. Sem óleo, manteiga, temperos, alho nem cebola, e sem pratos de cogumelos.",
+        "nl": "Alleen naturel, uit een grote supermarkt. Zonder olie, boter, kruiden, knoflook of ui en geen gerechten met paddenstoelen."
       },
       "child": {
         "en": "Dogs don't need mushrooms. A carrot or apple slice is a better treat. Never let a dog eat mushrooms from outside.",
         "sl": "Psi gob ne potrebujejo. Korenček ali rezina jabolka je boljši priboljšek. Pes nikoli ne sme jesti gob, ki rastejo zunaj.",
-        "pt": "Os cães não precisam de cogumelos. Uma cenoura ou uma fatia de maçã é uma guloseima melhor. Nunca deixes um cão comer cogumelos encontrados no exterior."
+        "pt": "Os cães não precisam de cogumelos. Uma cenoura ou uma fatia de maçã é uma guloseima melhor. Nunca deixes um cão comer cogumelos encontrados no exterior.",
+        "nl": "Honden hebben geen paddenstoelen nodig. Een wortel of een schijfje appel is een beter snoepje. Laat een hond nooit paddenstoelen van buiten eten."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat mushroom sauce or other mushroom dishes?",
             "sl": "Ali lahko psi jedo gobovo omako ali druge jedi z gobami?",
-            "pt": "Os cães podem comer molho de cogumelos ou outros pratos com cogumelos?"
+            "pt": "Os cães podem comer molho de cogumelos ou outros pratos com cogumelos?",
+            "nl": "Mogen honden champignonsaus of andere gerechten met paddenstoelen eten?"
           },
           "a": {
             "en": "It is safer to avoid them. Oils, butter, seasoning, garlic and onions in these dishes can be harmful to dogs.",
             "sl": "Varneje se jim je izogniti. Olje, maslo, začimbe, česen in čebula v takih jedeh psu lahko škodijo.",
-            "pt": "É mais seguro evitá-los. O óleo, a manteiga, os temperos, o alho e a cebola nestes pratos podem ser prejudiciais para os cães."
+            "pt": "É mais seguro evitá-los. O óleo, a manteiga, os temperos, o alho e a cebola nestes pratos podem ser prejudiciais para os cães.",
+            "nl": "Dat kun je beter vermijden. Olie, boter, kruiden, knoflook en ui in zulke gerechten kunnen schadelijk zijn voor honden."
           }
         },
         {
           "q": {
             "en": "What about mushrooms growing in the garden?",
             "sl": "Kaj pa gobe, ki rastejo na vrtu?",
-            "pt": "E os cogumelos que crescem no jardim?"
+            "pt": "E os cogumelos que crescem no jardim?",
+            "nl": "En paddenstoelen die in de tuin groeien?"
           },
           "a": {
             "en": "Treat every wild mushroom as potentially toxic. If your dog eats one, contact your vet immediately.",
             "sl": "Vsako gobo, ki raste v naravi, obravnavajte kot morebiti strupeno. Če jo pes poje, se takoj obrnite na veterinarja.",
-            "pt": "Trata todos os cogumelos silvestres como potencialmente tóxicos. Se o teu cão comer um, liga imediatamente ao teu veterinário."
+            "pt": "Trata todos os cogumelos silvestres como potencialmente tóxicos. Se o teu cão comer um, liga imediatamente ao teu veterinário.",
+            "nl": "Beschouw elke wilde paddenstoel als mogelijk giftig. Eet je hond er een, neem dan meteen contact op met je dierenarts."
           }
         }
       ],
@@ -41601,84 +41781,99 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Bell peppers",
         "sl": "Paprika",
-        "pt": "Pimentos"
+        "pt": "Pimentos",
+        "nl": "Paprika’s"
       },
       "question": {
         "en": "Can dogs eat bell peppers?",
         "sl": "Ali lahko psi jedo papriko?",
-        "pt": "Os cães podem comer pimentos?"
+        "pt": "Os cães podem comer pimentos?",
+        "nl": "Mogen honden paprika eten?"
       },
       "url_slug": {
         "en": "bell-peppers",
         "sl": "paprika",
-        "pt": "pimentos"
+        "pt": "pimentos",
+        "nl": "paprika"
       },
       "answer": {
         "en": "Yes, bell peppers are safe for most dogs in moderation. They are non-toxic, and green, yellow, orange and red peppers are all fine when served plain. Remove the seeds and stem, and never give spicy peppers.",
         "sl": "Da, sladka paprika je za večino psov v zmernih količinah varna. Ni strupena, zelena, rumena, oranžna in rdeča pa so vse v redu, če so navadne. Odstranite semena in pecelj in nikoli ne dajajte pekoče paprike.",
-        "pt": "Sim, os pimentos são seguros para a maioria dos cães, com moderação. Não são tóxicos, e os pimentos verdes, amarelos, laranja e vermelhos servem todos, desde que simples. Tira as sementes e o pedúnculo, e nunca dês pimentos picantes."
+        "pt": "Sim, os pimentos são seguros para a maioria dos cães, com moderação. Não são tóxicos, e os pimentos verdes, amarelos, laranja e vermelhos servem todos, desde que simples. Tira as sementes e o pedúnculo, e nunca dês pimentos picantes.",
+        "nl": "Ja, paprika’s zijn voor de meeste honden met mate veilig. Ze zijn niet giftig en groene, gele, oranje en rode paprika’s zijn allemaal prima als je ze naturel geeft. Verwijder de zaadjes en de steel en geef nooit pittige pepers."
       },
       "why": {
         "en": "Bell peppers are non-toxic and provide nutrients that can support your dog's health. Too much can lead to digestive upset, including vomiting or diarrhoea, and the outer skin can be hard for some dogs to chew and digest. Some dogs will be fine with it, and some won't.",
         "sl": "Sladka paprika ni strupena in vsebuje hranila, ki lahko podprejo zdravje psa. Preveč lahko povzroči prebavne težave, tudi bruhanje ali drisko, zunanjo kožico pa nekateri psi težko prežvečijo in prebavijo. Nekaterim psom ustreza, drugim ne.",
-        "pt": "Os pimentos não são tóxicos e fornecem nutrientes que podem ajudar a saúde do teu cão. Em excesso podem causar mal-estar digestivo, incluindo vómitos ou diarreia, e a pele pode ser difícil de mastigar e digerir para alguns cães. Alguns cães não têm qualquer problema; outros têm."
+        "pt": "Os pimentos não são tóxicos e fornecem nutrientes que podem ajudar a saúde do teu cão. Em excesso podem causar mal-estar digestivo, incluindo vómitos ou diarreia, e a pele pode ser difícil de mastigar e digerir para alguns cães. Alguns cães não têm qualquer problema; outros têm.",
+        "nl": "Paprika’s zijn niet giftig en leveren voedingsstoffen die de gezondheid van je hond kunnen ondersteunen. Te veel kan leiden tot spijsverteringsklachten, zoals braken of diarree, en de buitenste schil kan voor sommige honden moeilijk te kauwen en te verteren zijn. Sommige honden hebben er geen last van, andere wel."
       },
       "signs": null,
       "what_to_do": {
         "en": "Introduce bell pepper gradually so you can see whether it agrees with your dog's digestion, and don't overdo it. Never give peppers mixed with onions or garlic, as those are toxic to dogs.",
         "sl": "Papriko uvajajte postopoma, da vidite, ali psu ustreza, in ne pretiravajte. Nikoli ne dajajte paprike, pomešane s čebulo ali česnom, saj sta ta za pse strupena.",
-        "pt": "Introduz o pimento aos poucos, para veres se o teu cão o digere bem, e não exageres. Nunca dês pimentos misturados com cebola ou alho, porque são tóxicos para os cães."
+        "pt": "Introduz o pimento aos poucos, para veres se o teu cão o digere bem, e não exageres. Nunca dês pimentos misturados com cebola ou alho, porque são tóxicos para os cães.",
+        "nl": "Laat je hond geleidelijk aan paprika wennen, zodat je kunt zien of het goed bij zijn spijsvertering past, en overdrijf niet. Geef nooit paprika’s die met ui of knoflook zijn gemengd, want die zijn giftig voor honden."
       },
       "serving": {
         "en": "Plain, raw or cooked, with the seeds and stem removed. Steaming or pureeing makes it easier to eat. No salt, seasonings or other ingredients.",
         "sl": "Navadna, surova ali kuhana, brez semen in peclja. Na pari ali pretlačeno jo pes laže poje. Brez soli, začimb in drugih sestavin.",
-        "pt": "Simples, crus ou cozinhados, sem sementes nem pedúnculo. Cozer a vapor ou fazer em puré torna-o mais fácil de comer. Sem sal, temperos nem outros ingredientes."
+        "pt": "Simples, crus ou cozinhados, sem sementes nem pedúnculo. Cozer a vapor ou fazer em puré torna-o mais fácil de comer. Sem sal, temperos nem outros ingredientes.",
+        "nl": "Naturel, rauw of gekookt, zonder zaadjes en steel. Stomen of pureren maakt het makkelijker te eten. Geen zout, kruiden of andere ingrediënten."
       },
       "child": {
         "en": "Dogs can have a little plain sweet pepper. A grown-up takes out the seeds first. Spicy peppers are not for dogs.",
         "sl": "Psi lahko dobijo malo navadne sladke paprike. Odrasli najprej odstrani semena. Pekoča paprika ni za pse.",
-        "pt": "Os cães podem comer um pouco de pimento doce simples. Um adulto tira primeiro as sementes. Os pimentos picantes não são para cães."
+        "pt": "Os cães podem comer um pouco de pimento doce simples. Um adulto tira primeiro as sementes. Os pimentos picantes não são para cães.",
+        "nl": "Honden mogen een beetje naturele paprika. Een volwassene haalt eerst de zaadjes eruit. Pittige pepers zijn niet voor honden."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat raw bell peppers?",
             "sl": "Ali lahko psi jedo surovo papriko?",
-            "pt": "Os cães podem comer pimentos crus?"
+            "pt": "Os cães podem comer pimentos crus?",
+            "nl": "Mogen honden rauwe paprika eten?"
           },
           "a": {
             "en": "Yes, though some dogs find cooked, steamed or pureed peppers easier to chew and digest.",
             "sl": "Da, čeprav nekateri psi laže prežvečijo in prebavijo kuhano, na pari pripravljeno ali pretlačeno papriko.",
-            "pt": "Sim, embora alguns cães lidem melhor com pimentos cozinhados, a vapor ou em puré, que são mais fáceis de mastigar e digerir."
+            "pt": "Sim, embora alguns cães lidem melhor com pimentos cozinhados, a vapor ou em puré, que são mais fáceis de mastigar e digerir.",
+            "nl": "Ja, al vinden sommige honden gekookte, gestoomde of gepureerde paprika makkelijker te kauwen en te verteren."
           }
         },
         {
           "q": {
             "en": "Which colour is best?",
             "sl": "Katera barva je najboljša?",
-            "pt": "Qual é a melhor cor?"
+            "pt": "Qual é a melhor cor?",
+            "nl": "Welke kleur is het beste?"
           },
           "a": {
             "en": "All colours are safe. Red bell peppers contain the most vitamins and antioxidants.",
             "sl": "Vse barve so varne. Rdeča paprika vsebuje največ vitaminov in antioksidantov.",
-            "pt": "Todas as cores são seguras. Os pimentos vermelhos são os que contêm mais vitaminas e antioxidantes."
+            "pt": "Todas as cores são seguras. Os pimentos vermelhos são os que contêm mais vitaminas e antioxidantes.",
+            "nl": "Alle kleuren zijn veilig. Rode paprika’s bevatten de meeste vitamines en antioxidanten."
           }
         },
         {
           "q": {
             "en": "What about jalapeños or chili peppers?",
             "sl": "Kaj pa jalapeño ali čili?",
-            "pt": "E os jalapeños ou as malaguetas?"
+            "pt": "E os jalapeños ou as malaguetas?",
+            "nl": "En jalapeños of chilipepers?"
           },
           "a": {
             "en": "Never give your dog spicy pepper varieties such as jalapeños or chili peppers.",
             "sl": "Psu nikoli ne dajajte pekočih vrst paprike, kot sta jalapeño ali čili.",
-            "pt": "Nunca dês ao teu cão variedades picantes, como jalapeños ou malaguetas."
+            "pt": "Nunca dês ao teu cão variedades picantes, como jalapeños ou malaguetas.",
+            "nl": "Geef je hond nooit pittige pepersoorten zoals jalapeños of chilipepers."
           }
         }
       ],
@@ -43386,84 +43581,99 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Cooked potatoes",
         "sl": "Kuhan krompir",
-        "pt": "Batata cozida"
+        "pt": "Batata cozida",
+        "nl": "Gekookte aardappelen"
       },
       "question": {
         "en": "Can dogs eat cooked potatoes?",
         "sl": "Ali lahko psi jedo kuhan krompir?",
-        "pt": "Os cães podem comer batata cozida?"
+        "pt": "Os cães podem comer batata cozida?",
+        "nl": "Mogen honden gekookte aardappelen eten?"
       },
       "url_slug": {
         "en": "cooked-potatoes",
         "sl": "kuhan-krompir",
-        "pt": "batata-cozida"
+        "pt": "batata-cozida",
+        "nl": "gekookte-aardappelen"
       },
       "answer": {
         "en": "Yes, dogs can eat cooked potatoes in moderation when they are served plain. Boiled or baked potato without butter, milk, salt or seasonings is fine in small amounts, as long as it is soft and not green.",
         "sl": "Da, psi lahko v zmernih količinah jedo kuhan krompir, če je navaden. Kuhan ali pečen krompir brez masla, mleka, soli in začimb je v majhnih količinah v redu, če je mehak in ni zelen.",
-        "pt": "Sim, os cães podem comer batata cozida com moderação, desde que simples. A batata cozida ou assada, sem manteiga, leite, sal nem temperos, não faz mal em pequenas quantidades, desde que esteja mole e não esteja esverdeada."
+        "pt": "Sim, os cães podem comer batata cozida com moderação, desde que simples. A batata cozida ou assada, sem manteiga, leite, sal nem temperos, não faz mal em pequenas quantidades, desde que esteja mole e não esteja esverdeada.",
+        "nl": "Ja, honden mogen met mate gare aardappelen eten, als ze naturel zijn. Gekookte of gebakken aardappel zonder boter, melk, zout of kruiden is in kleine hoeveelheden prima, zolang hij zacht is en niet groen."
       },
       "why": {
         "en": "Plain cooked potato is fine for dogs, but it should be a treat, not a meal replacement, and only a small part of the diet. Too many helpings can lead to obesity, and lots of butter can trigger pancreatitis. Raw or green potatoes are unsafe and potentially toxic.",
         "sl": "Navaden kuhan krompir je za pse v redu, vendar naj bo priboljšek, ne nadomestek obroka, in le majhen del prehrane. Preveč porcij lahko vodi v debelost, veliko masla pa lahko sproži vnetje trebušne slinavke. Surov ali zelen krompir je nevaren in potencialno strupen.",
-        "pt": "A batata cozida simples não faz mal aos cães, mas deve ser uma guloseima, não substituir uma refeição, e ocupar apenas uma pequena parte da alimentação. Doses demasiado grandes podem levar à obesidade, e muita manteiga pode desencadear pancreatite. A batata crua ou esverdeada não é segura e é potencialmente tóxica."
+        "pt": "A batata cozida simples não faz mal aos cães, mas deve ser uma guloseima, não substituir uma refeição, e ocupar apenas uma pequena parte da alimentação. Doses demasiado grandes podem levar à obesidade, e muita manteiga pode desencadear pancreatite. A batata crua ou esverdeada não é segura e é potencialmente tóxica.",
+        "nl": "Naturel gare aardappel is prima voor honden, maar zie het als een snoepje en niet als maaltijdvervanger, en geef er slechts een klein deel van het voer aan. Te grote porties kunnen tot obesitas leiden en veel boter kan alvleesklierontsteking uitlokken. Rauwe of groene aardappelen zijn onveilig en mogelijk giftig."
       },
       "signs": null,
       "what_to_do": {
         "en": "Keep cooked potato as an occasional treat in small amounts. Never give raw potato or potato with green spots, and skip potato dishes made with butter, milk, salt or spices.",
         "sl": "Kuhan krompir ponudite le občasno in v majhnih količinah. Nikoli ne dajajte surovega krompirja ali krompirja z zelenimi lisami in se izogibajte krompirjevim jedem z maslom, mlekom, soljo ali začimbami.",
-        "pt": "Dá a batata cozida como guloseima ocasional, em pequenas quantidades. Nunca dês batata crua nem com manchas verdes, e dispensa pratos de batata feitos com manteiga, leite, sal ou especiarias."
+        "pt": "Dá a batata cozida como guloseima ocasional, em pequenas quantidades. Nunca dês batata crua nem com manchas verdes, e dispensa pratos de batata feitos com manteiga, leite, sal ou especiarias.",
+        "nl": "Geef gare aardappel af en toe en in kleine hoeveelheden. Geef nooit rauwe aardappel of aardappel met groene plekken en laat aardappelgerechten met boter, melk, zout of kruiden staan."
       },
       "serving": {
         "en": "Plain boiled or baked, cooked until soft enough to mash so your dog doesn't choke. No butter, milk, salt or seasonings. Skins are okay if they are not green.",
         "sl": "Navaden, kuhan ali pečen, dovolj mehak, da se ga da pretlačiti, da se pes ne zaduši. Brez masla, mleka, soli in začimb. Olupki so v redu, če niso zeleni.",
-        "pt": "Simples, cozida ou assada, até ficar tão mole que se possa esmagar, para que o cão não se engasgue. Sem manteiga, leite, sal nem temperos. As peles não fazem mal se não estiverem esverdeadas."
+        "pt": "Simples, cozida ou assada, até ficar tão mole que se possa esmagar, para que o cão não se engasgue. Sem manteiga, leite, sal nem temperos. As peles não fazem mal se não estiverem esverdeadas.",
+        "nl": "Naturel gekookt of gebakken, zo gaar dat je hem kunt prakken, zodat je hond zich er niet in verslikt. Geen boter, melk, zout of kruiden. De schil mag erbij, zolang die niet groen is."
       },
       "child": {
         "en": "Dogs can have a little plain cooked potato as a treat. A grown-up makes sure it is soft and has no butter or salt.",
         "sl": "Psi lahko za priboljšek dobijo malo navadnega kuhanega krompirja. Odrasli poskrbi, da je mehak ter brez masla in soli.",
-        "pt": "Os cães podem comer um pouco de batata cozida simples como guloseima. Um adulto confirma que está mole e sem manteiga nem sal."
+        "pt": "Os cães podem comer um pouco de batata cozida simples como guloseima. Um adulto confirma que está mole e sem manteiga nem sal.",
+        "nl": "Honden mogen een beetje naturel gare aardappel als snoepje. Een volwassene zorgt dat hij zacht is en zonder boter of zout."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat mashed potatoes?",
             "sl": "Ali lahko psi jedo pire krompir?",
-            "pt": "Os cães podem comer puré de batata?"
+            "pt": "Os cães podem comer puré de batata?",
+            "nl": "Mogen honden aardappelpuree eten?"
           },
           "a": {
             "en": "Only plain mashed potato, in small amounts, without butter, milk, salt or seasonings.",
             "sl": "Le navaden pretlačen krompir, v majhnih količinah, brez masla, mleka, soli in začimb.",
-            "pt": "Apenas puré de batata simples, em pequenas quantidades, sem manteiga, leite, sal nem temperos."
+            "pt": "Apenas puré de batata simples, em pequenas quantidades, sem manteiga, leite, sal nem temperos.",
+            "nl": "Alleen naturel aardappelpuree, in kleine hoeveelheden en zonder boter, melk, zout of kruiden."
           }
         },
         {
           "q": {
             "en": "Can dogs eat potato skins?",
             "sl": "Ali lahko psi jedo krompirjeve olupke?",
-            "pt": "Os cães podem comer peles de batata?"
+            "pt": "Os cães podem comer peles de batata?",
+            "nl": "Mogen honden aardappelschillen eten?"
           },
           "a": {
             "en": "Yes, potato skins are okay too, but not if they are green.",
             "sl": "Da, tudi krompirjevi olupki so v redu, vendar ne, če so zeleni.",
-            "pt": "Sim, as peles também não fazem mal, desde que não estejam esverdeadas."
+            "pt": "Sim, as peles também não fazem mal, desde que não estejam esverdeadas.",
+            "nl": "Aardappelschillen zijn ook prima, maar niet als ze groen zijn."
           }
         },
         {
           "q": {
             "en": "Are French fries okay for dogs?",
             "sl": "Je pomfri primeren za pse?",
-            "pt": "As batatas fritas são adequadas para cães?"
+            "pt": "As batatas fritas são adequadas para cães?",
+            "nl": "Is friet oké voor honden?"
           },
           "a": {
             "en": "It's easy to have too much of a good thing with French fries, hash browns and other potato dishes. Potatoes should be treats, not meal replacements.",
             "sl": "Pri pomfriju, krompirjevih ploščicah in drugih krompirjevih jedeh hitro pretiravamo. Krompir naj bo priboljšek, ne nadomestek obroka.",
-            "pt": "É fácil exagerar com batatas fritas, rösti e outros pratos de batata. As batatas devem ser guloseimas, não substituir refeições."
+            "pt": "É fácil exagerar com batatas fritas, rösti e outros pratos de batata. As batatas devem ser guloseimas, não substituir refeições.",
+            "nl": "Bij friet, hashbrowns en andere aardappelgerechten krijgt een hond al snel te veel van het goede. Aardappel is bedoeld als snoepje, niet als maaltijdvervanger."
           }
         }
       ],
@@ -49507,32 +49717,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Tomato plant and green tomatoes",
         "sl": "Paradižnikova rastlina in zelen paradižnik",
-        "pt": "Tomateiro e tomates verdes"
+        "pt": "Tomateiro e tomates verdes",
+        "nl": "Tomatenplant en groene tomaten"
       },
       "question": {
         "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
         "sl": "Ali lahko psi jedo paradižnikove liste, stebla ali zelen paradižnik?",
-        "pt": "Os cães podem comer folhas, caules ou tomates verdes do tomateiro?"
+        "pt": "Os cães podem comer folhas, caules ou tomates verdes do tomateiro?",
+        "nl": "Mogen honden tomatenbladeren, tomatenstengels of groene tomaten eten?"
       },
       "url_slug": {
         "en": "tomato-plant",
         "sl": "paradiznikova-rastlina",
-        "pt": "tomateiro"
+        "pt": "tomateiro",
+        "nl": "tomatenplant"
       },
       "answer": {
         "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
         "sl": "Ne. Zeleni deli paradižnikove rastline, vključno z nezrelimi plodovi, listi, stebli, poganjki in cvetovi, so za pse strupeni. Pes nikoli ne sme jesti listov in stebel, izogibati pa se mora tudi mladim, zelenim paradižnikom.",
-        "pt": "Não. As partes verdes do tomateiro, incluindo os tomates ainda verdes, as folhas, os caules, as ramas e as flores, são tóxicas para os cães. O teu cão nunca deve comer as folhas e os caules e deve evitar os tomates verdes e ainda novos."
+        "pt": "Não. As partes verdes do tomateiro, incluindo os tomates ainda verdes, as folhas, os caules, as ramas e as flores, são tóxicas para os cães. O teu cão nunca deve comer as folhas e os caules e deve evitar os tomates verdes e ainda novos.",
+        "nl": "Nee. De groene delen van de tomatenplant, waaronder onrijpe tomaten, bladeren, stengels, ranken en bloemen, zijn giftig voor honden. Je hond mag nooit de bladeren en stengels eten en moet jonge, groene tomaten vermijden."
       },
       "why": {
         "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
         "sl": "Listi, stebla, poganjki in cvetovi vsebujejo tomatin in solanin, naravni obrambni snovi rastline; zelen paradižnik ju vsebuje več kot zrel. ASPCA paradižnikovo rastlino uvršča med strupene za pse. Huda zastrupitev je razmeroma redka in večina primerov ob hitrem ukrepanju mine, zato jo uvrščamo med nevarne, ne strupene.",
-        "pt": "As folhas, os caules, as ramas e as flores contêm tomatina e solanina, substâncias naturais de defesa da planta; os tomates verdes contêm mais do que os maduros. A ASPCA classifica o tomateiro como tóxico para os cães. A intoxicação grave é relativamente rara e a maioria dos casos resolve-se quando é tratada rapidamente, por isso classificamos como perigoso e não como tóxico."
+        "pt": "As folhas, os caules, as ramas e as flores contêm tomatina e solanina, substâncias naturais de defesa da planta; os tomates verdes contêm mais do que os maduros. A ASPCA classifica o tomateiro como tóxico para os cães. A intoxicação grave é relativamente rara e a maioria dos casos resolve-se quando é tratada rapidamente, por isso classificamos como perigoso e não como tóxico.",
+        "nl": "De bladeren, stengels, ranken en bloemen bevatten tomatine en solanine, natuurlijke afweerstoffen van de plant; groene tomaten bevatten er meer van dan rijpe. De ASPCA noemt de tomatenplant giftig voor honden. Ernstige vergiftiging komt relatief zelden voor en de meeste gevallen verlopen goed als je er snel op reageert, daarom beoordelen wij de tomatenplant als gevaarlijk en niet als giftig."
       },
       "signs": {
         "en": [
@@ -49570,42 +49786,60 @@
           "Pupilas dilatadas",
           "Letargia",
           "Batimento cardíaco lento ou irregular"
+        ],
+        "nl": [
+          "Braken",
+          "Diarree",
+          "Kwijlen",
+          "Verlies van eetlust",
+          "Spierzwakte",
+          "Trillen",
+          "Verlies van coördinatie",
+          "Wijde pupillen",
+          "Lusteloosheid",
+          "Trage of onregelmatige hartslag"
         ]
       },
       "what_to_do": {
         "en": "If your dog ate parts of the tomato plant or green tomatoes, call your vet or a pet poison helpline for guidance. If your dog is already showing symptoms, contact your vet; it is important to get them checked as soon as possible.",
         "sl": "Če je pes pojedel dele paradižnikove rastline ali zelen paradižnik, za nasvet pokličite veterinarja ali center za zastrupitve živali. Če pes že kaže znake, se obrnite na veterinarja; pomembno je, da ga čim prej pregleda.",
-        "pt": "Se o teu cão comeu partes do tomateiro ou tomates verdes, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais para obteres orientação. Se o teu cão já apresenta sinais, liga ao teu veterinário: convém que seja visto o mais depressa possível."
+        "pt": "Se o teu cão comeu partes do tomateiro ou tomates verdes, liga ao teu veterinário ou a uma linha de apoio toxicológico para animais para obteres orientação. Se o teu cão já apresenta sinais, liga ao teu veterinário: convém que seja visto o mais depressa possível.",
+        "nl": "Heeft je hond delen van de tomatenplant of groene tomaten gegeten, bel dan je dierenarts of een vergiftigingenlijn voor dieren voor advies. Vertoont je hond al verschijnselen, neem dan contact op met je dierenarts; het is belangrijk dat je hond zo snel mogelijk wordt onderzocht."
       },
       "serving": null,
       "child": {
         "en": "Tomato leaves, stems and green tomatoes are not for dogs. If a dog nibbles the plant, tell a grown-up straight away.",
         "sl": "Paradižnikovi listi, stebla in zeleni plodovi niso za pse. Če pes gricka rastlino, takoj povej odraslemu.",
-        "pt": "As folhas, os caules e os tomates verdes do tomateiro não são para os cães. Se um cão trincar a planta, avisa logo um adulto."
+        "pt": "As folhas, os caules e os tomates verdes do tomateiro não são para os cães. Se um cão trincar a planta, avisa logo um adulto.",
+        "nl": "Tomatenbladeren, tomatenstengels en groene tomaten zijn niet voor honden. Knabbelt een hond aan de plant, vertel het dan meteen aan een volwassene."
       },
       "faq": [
         {
           "q": {
             "en": "Are ripe red tomatoes okay?",
             "sl": "Je zrel rdeč paradižnik v redu?",
-            "pt": "Os tomates maduros e vermelhos não têm problema?"
+            "pt": "Os tomates maduros e vermelhos não têm problema?",
+            "nl": "Zijn rijpe rode tomaten oké?"
           },
           "a": {
             "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
             "sl": "Da. Zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah.",
-            "pt": "Não têm. Os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades."
+            "pt": "Não têm. Os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades.",
+            "nl": "Ja. Rijpe, rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven."
           }
         },
         {
           "q": {
             "en": "How do I keep my dog safe in a vegetable garden?",
             "sl": "Kako psa zavarujem na zelenjavnem vrtu?",
-            "pt": "Como mantenho o meu cão em segurança numa horta?"
+            "pt": "Como mantenho o meu cão em segurança numa horta?",
+            "nl": "Hoe houd ik mijn hond veilig in de moestuin?"
           },
           "a": {
             "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
             "sl": "Postavite fizične ovire ali vrt ogradite in pomnite, da zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse.",
-            "pt": "Cria barreiras físicas ou veda a horta e lembra-te de que os tomates verdes que caem da planta podem atrair os cães."
+            "pt": "Cria barreiras físicas ou veda a horta e lembra-te de que os tomates verdes que caem da planta podem atrair os cães.",
+            "nl": "Zorg voor een afscheiding of zet een hek om de tuin, en houd er rekening mee dat groene tomaten die van de plant vallen honden kunnen aantrekken."
           }
         }
       ],
@@ -49649,84 +49883,99 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Tomatoes",
         "sl": "Paradižnik",
-        "pt": "Tomates"
+        "pt": "Tomates",
+        "nl": "Tomaten"
       },
       "question": {
         "en": "Can dogs eat tomatoes?",
         "sl": "Ali lahko psi jedo paradižnik?",
-        "pt": "Os cães podem comer tomate?"
+        "pt": "Os cães podem comer tomate?",
+        "nl": "Mogen honden tomaten eten?"
       },
       "url_slug": {
         "en": "tomatoes",
         "sl": "paradiznik",
-        "pt": "tomates"
+        "pt": "tomates",
+        "nl": "tomaten"
       },
       "answer": {
         "en": "Yes, ripe red tomatoes are not toxic to dogs and can be an occasional treat in small amounts. Green, unripe tomatoes and the green parts of the plant are a different story and should be avoided.",
         "sl": "Da, zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah. Zelen, nezrel paradižnik in zeleni deli rastline pa so nekaj drugega in se jim je treba izogibati.",
-        "pt": "Sim, os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades. Os tomates verdes, ainda por amadurecer, e as partes verdes da planta são outra questão e devem ser evitados."
+        "pt": "Sim, os tomates maduros e vermelhos não são tóxicos para os cães e podem ser uma guloseima ocasional, em pequenas quantidades. Os tomates verdes, ainda por amadurecer, e as partes verdes da planta são outra questão e devem ser evitados.",
+        "nl": "Ja, rijpe rode tomaten zijn niet giftig voor honden en je mag ze in kleine hoeveelheden af en toe als snoepje geven. Groene, onrijpe tomaten en de groene delen van de plant zijn een ander verhaal: vermijd die."
       },
       "why": {
         "en": "The main toxic compounds in tomatoes are tomatine and solanine, found mostly in the green parts of the plant. As a tomato ripens and turns red, their levels drop significantly, so ripe tomatoes are considered non-toxic. Tomato-based products often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
         "sl": "Glavni strupeni snovi v paradižniku sta tomatin in solanin, ki ju je največ v zelenih delih rastline. Ko paradižnik dozori in postane rdeč, se njuna količina močno zmanjša, zato zrel paradižnik velja za nestrupenega. Izdelki iz paradižnika pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo.",
-        "pt": "Os principais compostos tóxicos do tomate são a tomatina e a solanina, presentes sobretudo nas partes verdes da planta. À medida que o tomate amadurece e fica vermelho, os níveis baixam muito, por isso os tomates maduros são considerados não tóxicos. Os produtos à base de tomate contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães."
+        "pt": "Os principais compostos tóxicos do tomate são a tomatina e a solanina, presentes sobretudo nas partes verdes da planta. À medida que o tomate amadurece e fica vermelho, os níveis baixam muito, por isso os tomates maduros são considerados não tóxicos. Os produtos à base de tomate contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães.",
+        "nl": "De belangrijkste giftige stoffen in tomaten zijn tomatine en solanine, die vooral in de groene delen van de plant zitten. Naarmate een tomaat rijpt en rood wordt, daalt het gehalte aanzienlijk, daarom worden rijpe tomaten als niet giftig beschouwd. Producten op basis van tomaat bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden."
       },
       "signs": null,
       "what_to_do": {
         "en": "Start with small amounts to see how your dog reacts, and only give tomato in moderation under supervision. If you think your dog ate a large amount of tomatoes or the tomato plant itself, call your vet for guidance.",
         "sl": "Začnite z majhnimi količinami, da vidite, kako se pes odzove, in paradižnik ponujajte le zmerno in pod nadzorom. Če mislite, da je pes pojedel veliko paradižnika ali samo rastlino, pokličite veterinarja za nasvet.",
-        "pt": "Começa com pequenas quantidades para ver como o teu cão reage e dá tomate só com moderação e sob vigilância. Se achas que o teu cão comeu uma grande quantidade de tomates ou o próprio tomateiro, liga ao teu veterinário para obteres orientação."
+        "pt": "Começa com pequenas quantidades para ver como o teu cão reage e dá tomate só com moderação e sob vigilância. Se achas que o teu cão comeu uma grande quantidade de tomates ou o próprio tomateiro, liga ao teu veterinário para obteres orientação.",
+        "nl": "Begin met kleine hoeveelheden om te zien hoe je hond reageert en geef tomaat alleen met mate en onder toezicht. Denk je dat je hond veel tomaten of de tomatenplant zelf heeft gegeten, bel dan je dierenarts voor advies."
       },
       "serving": {
         "en": "Ripe, red and plain only. Remove all the green parts and dice the flesh; cut cherry tomatoes into small pieces. Never tomatoes seasoned with salt, garlic, onion or other additions.",
         "sl": "Le zrel, rdeč in navaden. Odstranite vse zelene dele in meso narežite na kocke; češnjeve paradižnike narežite na majhne koščke. Nikoli paradižnika, začinjenega s soljo, česnom, čebulo ali drugimi dodatki.",
-        "pt": "Só maduro, vermelho e simples. Retira todas as partes verdes e corta a polpa em cubinhos; corta os tomates-cereja em pedaços pequenos. Nunca tomates temperados com sal, alho, cebola ou outros ingredientes."
+        "pt": "Só maduro, vermelho e simples. Retira todas as partes verdes e corta a polpa em cubinhos; corta os tomates-cereja em pedaços pequenos. Nunca tomates temperados com sal, alho, cebola ou outros ingredientes.",
+        "nl": "Alleen rijp, rood en naturel. Haal alle groene delen weg en snijd het vruchtvlees in blokjes; snijd cherrytomaatjes in kleine stukjes. Nooit tomaten die met zout, knoflook, ui of andere toevoegingen zijn gekruid."
       },
       "child": {
         "en": "Dogs can have a little ripe red tomato. A grown-up takes off the green bits and cuts it small.",
         "sl": "Psi lahko dobijo malo zrelega rdečega paradižnika. Odrasli odstrani zelene dele in ga nareže na majhne koščke.",
-        "pt": "Os cães podem comer um bocadinho de tomate maduro e vermelho. Um adulto tira as partes verdes e corta-o em bocadinhos."
+        "pt": "Os cães podem comer um bocadinho de tomate maduro e vermelho. Um adulto tira as partes verdes e corta-o em bocadinhos.",
+        "nl": "Honden mogen een beetje rijpe rode tomaat. Een volwassene haalt de groene stukjes eraf en snijdt hem klein."
       },
       "faq": [
         {
           "q": {
             "en": "Can dogs eat green tomatoes?",
             "sl": "Ali lahko psi jedo zelen paradižnik?",
-            "pt": "Os cães podem comer tomates verdes?"
+            "pt": "Os cães podem comer tomates verdes?",
+            "nl": "Mogen honden groene tomaten eten?"
           },
           "a": {
             "en": "No. Green tomatoes contain more tomatine and solanine than ripe ones, and eating an unripe tomato can lead to symptoms of tomatine poisoning.",
             "sl": "Ne. Zelen paradižnik vsebuje več tomatina in solanina kot zrel, nezrel paradižnik pa lahko povzroči znake zastrupitve s tomatinom.",
-            "pt": "Não. Os tomates verdes contêm mais tomatina e solanina do que os maduros, e comer um tomate verde pode levar a sinais de intoxicação por tomatina."
+            "pt": "Não. Os tomates verdes contêm mais tomatina e solanina do que os maduros, e comer um tomate verde pode levar a sinais de intoxicação por tomatina.",
+            "nl": "Nee. Groene tomaten bevatten meer tomatine en solanine dan rijpe, en van het eten van een onrijpe tomaat kan een hond verschijnselen van tomatinevergiftiging krijgen."
           }
         },
         {
           "q": {
             "en": "Can dogs eat tomato sauce or ketchup?",
             "sl": "Ali lahko psi jedo paradižnikovo omako ali kečap?",
-            "pt": "Os cães podem comer molho de tomate ou ketchup?"
+            "pt": "Os cães podem comer molho de tomate ou ketchup?",
+            "nl": "Mogen honden tomatensaus of ketchup eten?"
           },
           "a": {
             "en": "It's best to avoid them. Tomato-based products like sauce, ketchup and soup often contain garlic, onions, salt or sugar, which can be harmful or irritating to dogs.",
             "sl": "Bolje se jim je izogniti. Paradižnikovi izdelki, kot so omaka, kečap in juha, pogosto vsebujejo česen, čebulo, sol ali sladkor, ki psu lahko škodijo ali ga dražijo.",
-            "pt": "O melhor é evitá-los. Os produtos à base de tomate, como o molho, o ketchup e a sopa, contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães."
+            "pt": "O melhor é evitá-los. Os produtos à base de tomate, como o molho, o ketchup e a sopa, contêm muitas vezes alho, cebola, sal ou açúcar, que podem ser prejudiciais ou irritantes para os cães.",
+            "nl": "Dat kun je beter vermijden. Producten op basis van tomaat, zoals saus, ketchup en soep, bevatten vaak knoflook, ui, zout of suiker, die schadelijk of irriterend kunnen zijn voor honden."
           }
         },
         {
           "q": {
             "en": "I grow tomatoes. What should I watch for?",
             "sl": "Gojim paradižnik. Na kaj moram paziti?",
-            "pt": "Cultivo tomates. A que devo estar atento?"
+            "pt": "Cultivo tomates. A que devo estar atento?",
+            "nl": "Ik kweek tomaten. Waar moet ik op letten?"
           },
           "a": {
             "en": "Green tomatoes that fall from the vine can attract dogs. Fence off the garden so your dog can't sample the plants.",
             "sl": "Zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse. Vrt ogradite, da pes ne more pokusiti rastlin.",
-            "pt": "Os tomates verdes que caem da planta podem atrair os cães. Veda a horta para que o teu cão não possa provar as plantas."
+            "pt": "Os tomates verdes que caem da planta podem atrair os cães. Veda a horta para que o teu cão não possa provar as plantas.",
+            "nl": "Groene tomaten die van de plant vallen, kunnen honden aantrekken. Zet een hek om de tuin, zodat je hond niet van de planten kan proeven."
           }
         }
       ],
@@ -50793,32 +51042,38 @@
       "locales": [
         "en",
         "sl",
-        "pt"
+        "pt",
+        "nl"
       ],
       "name": {
         "en": "Wild mushrooms",
         "sl": "Gobe iz narave",
-        "pt": "Cogumelos silvestres"
+        "pt": "Cogumelos silvestres",
+        "nl": "Wilde paddenstoelen"
       },
       "question": {
         "en": "Can dogs eat wild mushrooms?",
         "sl": "Ali lahko psi jedo gobe, ki jih najdejo zunaj?",
-        "pt": "Os cães podem comer cogumelos silvestres?"
+        "pt": "Os cães podem comer cogumelos silvestres?",
+        "nl": "Mogen honden wilde paddenstoelen eten?"
       },
       "url_slug": {
         "en": "wild-mushrooms",
         "sl": "gobe-iz-narave",
-        "pt": "cogumelos-silvestres"
+        "pt": "cogumelos-silvestres",
+        "nl": "wilde-paddenstoelen"
       },
       "answer": {
         "en": "No. Treat every mushroom your dog finds outside as toxic. Toxic and non-toxic mushrooms are hard to tell apart, and the toxic ones are extremely dangerous. If your dog ate a wild mushroom, contact your vet immediately.",
         "sl": "Ne. Vsako gobo, ki jo pes najde zunaj, obravnavajte kot strupeno. Strupene in nestrupene gobe je težko ločiti, strupene pa so izjemno nevarne. Če je pes pojedel gobo iz narave, se takoj obrnite na veterinarja.",
-        "pt": "Não. Trata como tóxico qualquer cogumelo que o teu cão encontre no exterior. É difícil distinguir os cogumelos tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos. Se o teu cão comeu um cogumelo silvestre, liga imediatamente ao teu veterinário."
+        "pt": "Não. Trata como tóxico qualquer cogumelo que o teu cão encontre no exterior. É difícil distinguir os cogumelos tóxicos dos não tóxicos, e os tóxicos são extremamente perigosos. Se o teu cão comeu um cogumelo silvestre, liga imediatamente ao teu veterinário.",
+        "nl": "Nee. Beschouw elke paddenstoel die je hond buiten vindt als giftig. Giftige en niet-giftige paddenstoelen zijn moeilijk uit elkaar te houden en de giftige zijn extreem gevaarlijk. Heeft je hond een wilde paddenstoel gegeten, neem dan meteen contact op met je dierenarts."
       },
       "why": {
         "en": "There are thousands of mushroom species, and many can cause serious illness in dogs. Some cause mild vomiting or diarrhoea, while others can lead to liver and kidney failure or seizures. Symptoms depend on the species, and it is not always possible to know which mushroom your dog ate.",
         "sl": "Vrst gob je na tisoče in mnoge lahko pri psih povzročijo resno bolezen. Nekatere povzročijo blago bruhanje ali drisko, druge lahko vodijo v odpoved jeter in ledvic ali v krče. Znaki so odvisni od vrste gobe, ni pa vedno mogoče vedeti, katero gobo je pes pojedel.",
-        "pt": "Existem milhares de espécies de cogumelos e muitas podem causar doença grave nos cães. Alguns provocam vómitos ou diarreia ligeiros, enquanto outros podem causar falência do fígado e dos rins ou convulsões. Os sinais dependem da espécie e nem sempre é possível saber que cogumelo o teu cão comeu."
+        "pt": "Existem milhares de espécies de cogumelos e muitas podem causar doença grave nos cães. Alguns provocam vómitos ou diarreia ligeiros, enquanto outros podem causar falência do fígado e dos rins ou convulsões. Os sinais dependem da espécie e nem sempre é possível saber que cogumelo o teu cão comeu.",
+        "nl": "Er bestaan duizenden paddenstoelsoorten en veel ervan kunnen honden ernstig ziek maken. Sommige veroorzaken licht braken of diarree, andere kunnen leiden tot lever- en nierfalen of toevallen. De verschijnselen hangen af van de soort en het is niet altijd mogelijk te weten welke paddenstoel je hond heeft gegeten."
       },
       "signs": {
         "en": [
@@ -50856,54 +51111,74 @@
           "Convulsões",
           "Dor abdominal",
           "Icterícia"
+        ],
+        "nl": [
+          "Braken",
+          "Diarree",
+          "Kwijlen",
+          "Zwakte",
+          "Lusteloosheid of slaperigheid",
+          "Verwardheid of wankel lopen",
+          "Trillen",
+          "Toevallen",
+          "Buikpijn",
+          "Geelzucht"
         ]
       },
       "what_to_do": {
         "en": "Contact your vet, an animal poison centre or an emergency vet hospital immediately, even before any signs appear. If you can, bring a sample of the mushroom, wrapped in a damp paper towel in a paper bag, to help the vet.",
         "sl": "Takoj se obrnite na veterinarja, center za zastrupitve živali ali dežurno veterinarsko bolnišnico, tudi preden se pojavijo znaki. Če lahko, prinesite vzorec gobe, zavit v vlažno papirnato brisačo v papirnati vrečki, da bo veterinar lažje pomagal.",
-        "pt": "Liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência, mesmo antes de aparecerem sinais. Se puderes, leva uma amostra do cogumelo, embrulhada num papel de cozinha húmido e dentro de um saco de papel, para ajudar o veterinário."
+        "pt": "Liga imediatamente ao teu veterinário, a uma linha de apoio toxicológico para animais ou a um hospital veterinário de urgência, mesmo antes de aparecerem sinais. Se puderes, leva uma amostra do cogumelo, embrulhada num papel de cozinha húmido e dentro de um saco de papel, para ajudar o veterinário.",
+        "nl": "Neem meteen contact op met je dierenarts, een vergiftigingenlijn voor dieren of een spoedkliniek voor dieren, ook voordat er verschijnselen zijn. Kun je dat, neem dan een monster van de paddenstoel mee, verpakt in een vochtig stuk keukenpapier in een papieren zak. Dat helpt de dierenarts verder."
       },
       "serving": null,
       "child": {
         "en": "Mushrooms outside are not for dogs. If you see a dog eat one, tell a grown-up straight away.",
         "sl": "Gobe zunaj niso za pse. Če vidiš, da pes poje gobo, takoj povej odraslemu.",
-        "pt": "Os cogumelos que crescem no exterior não são para os cães. Se vires um cão comer um, avisa logo um adulto."
+        "pt": "Os cogumelos que crescem no exterior não são para os cães. Se vires um cão comer um, avisa logo um adulto.",
+        "nl": "Paddenstoelen buiten zijn niet voor honden. Zie je een hond er een eten, vertel het dan meteen aan een volwassene."
       },
       "faq": [
         {
           "q": {
             "en": "Should I wait to see if my dog gets sick?",
             "sl": "Naj počakam, ali bo pes zbolel?",
-            "pt": "Devo esperar para ver se o meu cão fica doente?"
+            "pt": "Devo esperar para ver se o meu cão fica doente?",
+            "nl": "Moet ik afwachten of mijn hond ziek wordt?"
           },
           "a": {
             "en": "No. Don't wait for signs to develop. Responding fast is the best thing you can do for your dog.",
             "sl": "Ne. Ne čakajte, da se pojavijo znaki. Hiter odziv je najboljše, kar lahko storite za psa.",
-            "pt": "Não. Não esperes que apareçam sinais. Agir depressa é o melhor que podes fazer pelo teu cão."
+            "pt": "Não. Não esperes que apareçam sinais. Agir depressa é o melhor que podes fazer pelo teu cão.",
+            "nl": "Nee. Wacht niet tot er verschijnselen komen. Snel reageren is het beste wat je voor je hond kunt doen."
           }
         },
         {
           "q": {
             "en": "How can I prevent it?",
             "sl": "Kako to preprečim?",
-            "pt": "Como posso evitar que aconteça?"
+            "pt": "Como posso evitar que aconteça?",
+            "nl": "Hoe kan ik het voorkomen?"
           },
           "a": {
             "en": "Assume any mushroom your dog finds is unsafe, and keep an eye on your dog when it is outside.",
             "sl": "Predpostavite, da je vsaka goba, ki jo pes najde, nevarna, in psa zunaj spremljajte.",
-            "pt": "Parte do princípio de que nenhum cogumelo que o teu cão encontre é seguro e vigia-o quando está no exterior."
+            "pt": "Parte do princípio de que nenhum cogumelo que o teu cão encontre é seguro e vigia-o quando está no exterior.",
+            "nl": "Ga ervan uit dat elke paddenstoel die je hond vindt onveilig is en houd je hond in de gaten als hij buiten is."
           }
         },
         {
           "q": {
             "en": "Are store-bought mushrooms different?",
             "sl": "So gobe iz trgovine drugačne?",
-            "pt": "Os cogumelos comprados em lojas são diferentes?"
+            "pt": "Os cogumelos comprados em lojas são diferentes?",
+            "nl": "Zijn champignons uit de winkel anders?"
           },
           "a": {
             "en": "Yes. Plain mushrooms from large grocery stores may be generally safe for dogs, though dogs don't need them.",
             "sl": "Da. Navadne gobe iz velikih trgovin so za pse načeloma lahko varne, čeprav jih psi ne potrebujejo.",
-            "pt": "Sim. Os cogumelos simples das grandes superfícies podem, em geral, ser seguros para os cães, embora os cães não precisem deles."
+            "pt": "Sim. Os cogumelos simples das grandes superfícies podem, em geral, ser seguros para os cães, embora os cães não precisem deles.",
+            "nl": "Ja. Naturele champignons uit grote supermarkten kunnen doorgaans veilig zijn voor honden, al hebben honden ze niet nodig."
           }
         }
       ],

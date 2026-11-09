@@ -4,28 +4,33 @@
   "name": {
     "en": "Tomatoes",
     "sl": "Paradižnik",
-    "pt": "Tomates"
+    "pt": "Tomates",
+    "nl": "Tomaten"
   },
   "question": {
     "en": "Can cats eat tomatoes?",
     "sl": "Ali lahko mačke jedo paradižnik?",
-    "pt": "Os gatos podem comer tomate?"
+    "pt": "Os gatos podem comer tomate?",
+    "nl": "Mogen katten tomaten eten?"
   },
   "url_slug": {
     "en": "tomatoes",
     "sl": "paradiznik",
-    "pt": "tomates"
+    "pt": "tomates",
+    "nl": "tomaten"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to give your cat tomatoes. The ASPCA says the ripe fruit is non-toxic to cats, but Agriculture Victoria lists tomatoes among human foods to avoid feeding cats. The tomato plant itself is toxic to cats, so keep it out of reach.",
     "sl": "Mački je bolje ne dajati paradižnika. ASPCA navaja, da zreli plodovi za mačke niso strupeni, Agriculture Victoria pa paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati. Sama paradižnikova rastlina je za mačke strupena, zato naj bo zunaj njihovega dosega.",
-    "pt": "O melhor é não dar tomate ao teu gato. A ASPCA diz que o fruto maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos. O próprio tomateiro é tóxico para os gatos, por isso mantém-no fora do alcance."
+    "pt": "O melhor é não dar tomate ao teu gato. A ASPCA diz que o fruto maduro não é tóxico para os gatos, mas a Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos. O próprio tomateiro é tóxico para os gatos, por isso mantém-no fora do alcance.",
+    "nl": "Geef je kat liever geen tomaten. De ASPCA zegt dat de rijpe vrucht niet giftig is voor katten, maar Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft. De tomatenplant zelf is giftig voor katten, dus houd hem buiten bereik."
   },
   "why": {
     "en": "The ASPCA lists the tomato plant as toxic to cats because of solanine and notes that the ripe fruit is non-toxic. Agriculture Victoria lists tomatoes among human foods to avoid feeding cats, saying they contain a substance that causes severe stomach and gut problems, while ripe fruit is non-toxic. Because one source lists tomatoes as a food to avoid, we follow the stricter advice. Cats don't need vegetables in their diet anyway.",
     "sl": "ASPCA paradižnikovo rastlino zaradi solanina navaja kot strupeno za mačke in pojasnjuje, da zreli plodovi niso strupeni. Agriculture Victoria paradižnik uvršča med človeško hrano, ki je mačkam ne smemo dajati, ker vsebuje snov, ki povzroča hude prebavne težave, zreli plodovi pa niso strupeni. Ker ga en vir uvršča med živila, ki se jim je treba izogibati, upoštevamo strožji nasvet. Mačke zelenjave v prehrani tako ali tako ne potrebujejo.",
-    "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos por causa da solanina e refere que o fruto maduro não é tóxico. A Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos, porque contêm uma substância que causa problemas graves no estômago e nos intestinos, embora o fruto maduro não seja tóxico. Como uma das fontes inclui o tomate nos alimentos a evitar, seguimos o conselho mais prudente. De qualquer forma, os gatos não precisam de legumes na alimentação."
+    "pt": "A ASPCA classifica o tomateiro como tóxico para os gatos por causa da solanina e refere que o fruto maduro não é tóxico. A Agriculture Victoria inclui os tomates nos alimentos humanos que não se devem dar aos gatos, porque contêm uma substância que causa problemas graves no estômago e nos intestinos, embora o fruto maduro não seja tóxico. Como uma das fontes inclui o tomate nos alimentos a evitar, seguimos o conselho mais prudente. De qualquer forma, os gatos não precisam de legumes na alimentação.",
+    "nl": "De ASPCA noemt de tomatenplant giftig voor katten vanwege solanine en merkt op dat de rijpe vrucht niet giftig is. Agriculture Victoria noemt tomaten bij het voedsel voor mensen dat je katten beter niet geeft; volgens die bron bevatten ze een stof die ernstige maag- en darmklachten veroorzaakt, terwijl rijpe vruchten niet giftig zijn. Omdat één bron tomaten als te vermijden voedsel noemt, volgen wij het strengere advies. Katten hebben sowieso geen groente nodig in hun voeding."
   },
   "signs": {
     "en": [
@@ -39,30 +44,38 @@
     "pt": [
       "Vómitos",
       "Mal-estar no estômago"
+    ],
+    "nl": [
+      "Braken",
+      "Maagklachten"
     ]
   },
   "what_to_do": {
     "en": "If your cat ate tomato and then vomits or seems unwell, contact your vet. If your cat chewed the leaves, stems or green tomatoes, contact your vet right away. Don't try to make your cat sick without asking the vet.",
     "sl": "Če je mačka pojedla paradižnik in nato bruha ali se ne počuti dobro, pokličite veterinarja. Če je grizljala liste, stebla ali zelene paradižnike, takoj pokličite veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja.",
-    "pt": "Se o teu gato comeu tomate e depois vomita ou parece indisposto, liga ao teu veterinário. Se mastigou as folhas, os caules ou tomates verdes, liga imediatamente ao teu veterinário. Não tentes fazer o teu gato vomitar sem falares com o veterinário."
+    "pt": "Se o teu gato comeu tomate e depois vomita ou parece indisposto, liga ao teu veterinário. Se mastigou as folhas, os caules ou tomates verdes, liga imediatamente ao teu veterinário. Não tentes fazer o teu gato vomitar sem falares com o veterinário.",
+    "nl": "Als je kat tomaat heeft gegeten en daarna braakt of er ziek uitziet, neem dan contact op met je dierenarts. Heeft je kat op de bladeren, stengels of groene tomaten gekauwd, neem dan meteen contact op met je dierenarts. Probeer je kat niet zelf te laten braken zonder het eerst aan de dierenarts te vragen."
   },
   "serving": null,
   "child": {
     "en": "Tomatoes are people food, not cat food. Keep tomato plants away from kitty and tell a grown-up if kitty nibbles one.",
     "sl": "Paradižnik je hrana za ljudi, ne za muce. Paradižnikove rastline naj bodo stran od muce. Če muca katero pogrizlja, povej odraslemu.",
-    "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum."
+    "pt": "Os tomates são comida de pessoas, não de gatos. Mantém os tomateiros longe do teu gatinho e avisa um adulto se ele trincar algum.",
+    "nl": "Tomaten zijn voor mensen, niet voor katten. Houd tomatenplanten uit de buurt van je kat en vertel het aan een volwassene als je kat eraan knabbelt."
   },
   "faq": [
     {
       "q": {
         "en": "Are tomato leaves and green tomatoes safe for cats?",
         "sl": "Ali so paradižnikovi listi in zeleni paradižniki varni za mačke?",
-        "pt": "As folhas e os tomates verdes são seguros para os gatos?"
+        "pt": "As folhas e os tomates verdes são seguros para os gatos?",
+        "nl": "Zijn tomatenbladeren en groene tomaten veilig voor katten?"
       },
       "a": {
         "en": "No. The ASPCA lists the tomato plant as toxic to cats; only the ripe fruit is non-toxic. International Cat Care adds that contact with tomato leaves can cause blistering or itching of a cat's mouth and gums.",
         "sl": "Ne. ASPCA paradižnikovo rastlino navaja kot strupeno za mačke, nestrupeni so le zreli plodovi. International Cat Care dodaja, da lahko stik s paradižnikovimi listi mački povzroči mehurje ali srbenje v ustih in na dlesnih.",
-        "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos; só o fruto maduro não é tóxico. A International Cat Care acrescenta que o contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato."
+        "pt": "Não. A ASPCA classifica o tomateiro como tóxico para os gatos; só o fruto maduro não é tóxico. A International Cat Care acrescenta que o contacto com as folhas do tomateiro pode provocar bolhas ou comichão na boca e nas gengivas do gato.",
+        "nl": "Nee. De ASPCA noemt de tomatenplant giftig voor katten; alleen de rijpe vrucht is niet giftig. International Cat Care voegt eraan toe dat contact met tomatenbladeren blaarvorming of jeuk aan de mond en het tandvlees van een kat kan veroorzaken."
       }
     }
   ],
@@ -141,6 +154,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "05a8b233bd99e7f736b04831de8d0adfec2331a058eeee3409e0179b83fc76d6"
+    },
+    "nl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5c9d8b5b1ca6c29c12f5c388363c49d12b28c7eb35c418d14ad375739a7b35c1"
     }
   }
 }
