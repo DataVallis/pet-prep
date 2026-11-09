@@ -1,0 +1,201 @@
+{
+  "slug": "tomato-plant",
+  "species": "dog",
+  "name": {
+    "en": "Tomato plant and green tomatoes",
+    "sl": "Paradižnikova rastlina in zelen paradižnik"
+  },
+  "question": {
+    "en": "Can dogs eat tomato leaves, stems or green tomatoes?",
+    "sl": "Ali lahko psi jedo paradižnikove liste, stebla ali zelen paradižnik?"
+  },
+  "url_slug": {
+    "en": "tomato-plant",
+    "sl": "paradiznikova-rastlina"
+  },
+  "level": "dangerous",
+  "answer": {
+    "en": "No. The green parts of the tomato plant, including unripe tomatoes, leaves, stems, vines and flowers, are toxic to dogs. Your dog should never eat the leaves and stems and should avoid young, green tomatoes.",
+    "sl": "Ne. Zeleni deli paradižnikove rastline, vključno z nezrelimi plodovi, listi, stebli, poganjki in cvetovi, so za pse strupeni. Pes nikoli ne sme jesti listov in stebel, izogibati pa se mora tudi mladim, zelenim paradižnikom."
+  },
+  "why": {
+    "en": "The leaves, stems, vines and flowers contain tomatine and solanine, natural defence substances of the plant; green tomatoes contain more of them than ripe ones. The ASPCA lists the tomato plant as toxic to dogs. Severe poisoning is relatively uncommon, and most cases resolve when addressed promptly, so we rate it dangerous rather than toxic.",
+    "sl": "Listi, stebla, poganjki in cvetovi vsebujejo tomatin in solanin, naravni obrambni snovi rastline; zelen paradižnik ju vsebuje več kot zrel. ASPCA paradižnikovo rastlino uvršča med strupene za pse. Huda zastrupitev je razmeroma redka in večina primerov ob hitrem ukrepanju mine, zato jo uvrščamo med nevarne, ne strupene."
+  },
+  "signs": {
+    "en": [
+      "Vomiting",
+      "Diarrhoea",
+      "Drooling",
+      "Loss of appetite",
+      "Muscle weakness",
+      "Tremors",
+      "Loss of coordination",
+      "Dilated pupils",
+      "Lethargy",
+      "Slow or irregular heartbeat"
+    ],
+    "sl": [
+      "Bruhanje",
+      "Driska",
+      "Slinjenje",
+      "Izguba apetita",
+      "Mišična šibkost",
+      "Tresenje",
+      "Slaba koordinacija gibov",
+      "Razširjene zenice",
+      "Zaspanost in brezvoljnost",
+      "Počasen ali nepravilen srčni utrip"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your dog ate parts of the tomato plant or green tomatoes, call your vet or a pet poison helpline for guidance. If your dog is already showing symptoms, contact your vet; it is important to get them checked as soon as possible.",
+    "sl": "Če je pes pojedel dele paradižnikove rastline ali zelen paradižnik, za nasvet pokličite veterinarja ali center za zastrupitve živali. Če pes že kaže znake, se obrnite na veterinarja; pomembno je, da ga čim prej pregleda."
+  },
+  "serving": null,
+  "child": {
+    "en": "Tomato leaves, stems and green tomatoes are not for dogs. If a dog nibbles the plant, tell a grown-up straight away.",
+    "sl": "Paradižnikovi listi, stebla in zeleni plodovi niso za pse. Če pes gricka rastlino, takoj povej odraslemu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Are ripe red tomatoes okay?",
+        "sl": "Je zrel rdeč paradižnik v redu?"
+      },
+      "a": {
+        "en": "Yes. Ripe, red tomatoes are not toxic to dogs and can be an occasional treat in small amounts.",
+        "sl": "Da. Zrel rdeč paradižnik za pse ni strupen in je lahko občasen priboljšek v majhnih količinah."
+      }
+    },
+    {
+      "q": {
+        "en": "How do I keep my dog safe in a vegetable garden?",
+        "sl": "Kako psa zavarujem na zelenjavnem vrtu?"
+      },
+      "a": {
+        "en": "Create physical barriers or fence the garden off, and remember that green tomatoes that fall from the vine can attract dogs.",
+        "sl": "Postavite fizične ovire ali vrt ogradite in pomnite, da zeleni plodovi, ki padejo z rastline, lahko pritegnejo pse."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD152",
+      "quote": "The leaves, stems, vines, and flowers of the tomato plant contain tomatine and solanine, which are toxic to dogs."
+    },
+    {
+      "id": "KD152",
+      "quote": "the green parts of the tomato plant — including unripe tomatoes, leaves, stems, vines, and flowers — are toxic"
+    },
+    {
+      "id": "KD152",
+      "quote": "These substances act as a natural defense mechanism for the plant"
+    },
+    {
+      "id": "KD152",
+      "quote": "Green tomatoes contain higher levels of tomatine and solanine than ripe tomatoes."
+    },
+    {
+      "id": "KD152",
+      "quote": "The good news is that severe poisoning is relatively uncommon"
+    },
+    {
+      "id": "KD152",
+      "quote": "Most cases of tomato plant exposure, when addressed promptly, resolve without lasting complications."
+    },
+    {
+      "id": "KD152",
+      "quote": "Mild to moderate signs may include gastrointestinal upset such as vomiting, diarrhea, drooling, and loss of appetite."
+    },
+    {
+      "id": "KD152",
+      "quote": "More significant signs, associated with larger exposures, can include muscle weakness, tremors, loss of coordination"
+    },
+    {
+      "id": "KD152",
+      "quote": "Contact your veterinarian if your dog is already showing symptoms"
+    },
+    {
+      "id": "KD152",
+      "quote": "Call Pet Poison Helpline at (855) 764-7661."
+    },
+    {
+      "id": "KD152",
+      "quote": "Ripe, red tomatoes are not toxic to dogs and can be offered as an occasional treat in small amounts."
+    },
+    {
+      "id": "KD152",
+      "quote": "Green or partially ripened tomatoes that fall from the vine can be attractive to dogs"
+    },
+    {
+      "id": "KD152",
+      "quote": "Create physical barriers."
+    },
+    {
+      "id": "KD153",
+      "quote": "Toxic to Dogs, Toxic to Cats, Toxic to Horses"
+    },
+    {
+      "id": "KD153",
+      "quote": "Hypersalivation, inappetence, severe gastrointestinal upset, depression, weakness, dilated pupils, slow heart rate"
+    },
+    {
+      "id": "KD154",
+      "quote": "That means that your dog should never ingest the leaves and stems of tomato plants and should avoid young, green tomatoes."
+    },
+    {
+      "id": "KD154",
+      "quote": "Symptoms of tomatine poisoning in dogs to look for include:"
+    },
+    {
+      "id": "KD154",
+      "quote": "Lethargy"
+    },
+    {
+      "id": "KD154",
+      "quote": "Dilated pupils"
+    },
+    {
+      "id": "KD154",
+      "quote": "Cardiac effects (arrhythmia, irregular heartbeats)"
+    },
+    {
+      "id": "KD154",
+      "quote": "Ingesting an unripe (green) tomato or any of the green parts of the tomato can lead to symptoms of tomatine poisoning."
+    },
+    {
+      "id": "KD154",
+      "quote": "Thankfully, tomatine poisoning is rare in dogs and usually isn’t fatal."
+    },
+    {
+      "id": "KD154",
+      "quote": "If you think your dog has eaten a large amount of tomatoes or the tomato plant itself, call your veterinarian for guidance."
+    },
+    {
+      "id": "KD154",
+      "quote": "If you’re concerned your dog may have tomatine poisoning, it’s important to get them checked out as soon as possible."
+    },
+    {
+      "id": "KD154",
+      "quote": "If you have a garden at home, keep it fenced off so your dog can’t access it and won’t be tempted to sample the produce."
+    }
+  ],
+  "related": [
+    "tomatoes",
+    "potatoes-raw"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "022fd5f562376edc85433c2b195e294629a919d88d14ede3c1e665e3a2b42680"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "9f29205386174d27cb20d6be385c5b83bbbcf7e590a4601d0b0342c231b76b66"
+    }
+  }
+}

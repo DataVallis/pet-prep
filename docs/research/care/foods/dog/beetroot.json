@@ -1,0 +1,156 @@
+{
+  "slug": "beetroot",
+  "species": "dog",
+  "name": {
+    "en": "Beetroot",
+    "sl": "Rdeča pesa"
+  },
+  "question": {
+    "en": "Can dogs eat beetroot?",
+    "sl": "Ali lahko psi jedo rdečo peso?"
+  },
+  "url_slug": {
+    "en": "beetroot",
+    "sl": "rdeca-pesa"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, beetroot is fine for dogs when served fresh and in moderation, as an occasional treat. It is high in sugar and oxalic acid, so keep portions small, and check with your vet first if your dog is prone to kidney stones.",
+    "sl": "Da, rdeča pesa je za pse v redu, če je sveža in v zmernih količinah, kot občasen priboljšek. Vsebuje veliko sladkorja in oksalne kisline, zato naj bodo porcije majhne; če je pes nagnjen k ledvičnim kamnom, se najprej posvetujte z veterinarjem."
+  },
+  "why": {
+    "en": "Beets are high in carbs and sugar, and too much sugar can contribute to pancreatitis or obesity. They are also high in oxalic acid, which can form bladder stones, urinary crystals and kidney stones, and can cause calcium deficiencies. Being acidic, beets can cause gas and diarrhoea in some dogs.",
+    "sl": "Pesa vsebuje veliko ogljikovih hidratov in sladkorja, preveč sladkorja pa lahko prispeva k vnetju trebušne slinavke ali debelosti. Vsebuje tudi veliko oksalne kisline, ki lahko tvori kamne v mehurju, kristale v urinu in ledvične kamne ter povzroči pomanjkanje kalcija. Ker je kisla, lahko pri nekaterih psih povzroči vetrove in drisko."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Beetroot can turn your dog's urine dark pink or red, so don't panic. If the colour doesn't go away after a day, something else may be going on, such as a urinary tract infection or stones, so talk to your vet.",
+    "sl": "Pesa lahko psu obarva urin temno roza ali rdeče, zato ne paničarite. Če barva po enem dnevu ne izgine, gre morda za kaj drugega, na primer okužbo sečil ali kamne, zato se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "Fresh, scrubbed clean and peeled, raw or cooked, grated or cut into small bite-sized pieces. Canned beets only with no salt and no other additives.",
+    "sl": "Sveža, dobro očiščena in olupljena, surova ali kuhana, naribana ali narezana na majhne koščke. Pesa iz pločevinke le brez dodane soli in drugih dodatkov."
+  },
+  "child": {
+    "en": "Dogs can have a little beetroot now and then. It might make their pee look pink, and that's okay.",
+    "sl": "Psi lahko občasno dobijo malo rdeče pese. Lulanje je lahko potem rožnato, in to je v redu."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Raw or cooked beetroot?",
+        "sl": "Surova ali kuhana pesa?"
+      },
+      "a": {
+        "en": "Both are fine. Raw beets keep the most nutrients, and cooked beets are the most versatile choice.",
+        "sl": "Obe sta v redu. Surova pesa ohrani največ hranil, kuhana pa je najbolj vsestranska izbira."
+      }
+    },
+    {
+      "q": {
+        "en": "Can dogs eat canned beetroot?",
+        "sl": "Ali lahko psi jedo peso iz pločevinke?"
+      },
+      "a": {
+        "en": "Yes, but choose carefully: pick a brand with no salt added and no other additives.",
+        "sl": "Da, vendar izbirajte previdno: izberite izdelek brez dodane soli in drugih dodatkov."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD161",
+      "quote": "Yes, they are, when served fresh and in moderation."
+    },
+    {
+      "id": "KD161",
+      "quote": "so we recommend using them only as the occasional treat or snack."
+    },
+    {
+      "id": "KD161",
+      "quote": "Fresh beets are the best option, and you can feed them to your dog either cooked or raw."
+    },
+    {
+      "id": "KD161",
+      "quote": "As with all vegetables, raw beets will have the most nutritional bang for your buck."
+    },
+    {
+      "id": "KD161",
+      "quote": "Cooked beets are the most versatile choice."
+    },
+    {
+      "id": "KD161",
+      "quote": "Then, you can grate them and use them as a topping on your dog's food or cut them into small, bite-sized pieces."
+    },
+    {
+      "id": "KD161",
+      "quote": "Even so, the beets should be scrubbed clean and peeled."
+    },
+    {
+      "id": "KD161",
+      "quote": "Dogs can also eat canned beats, but be very careful when selecting them."
+    },
+    {
+      "id": "KD161",
+      "quote": "Find a brand with no salt added and no other additives."
+    },
+    {
+      "id": "KD161",
+      "quote": "Beets are high in oxalic acid, which can form bladder stones, urinary crystals, and kidney stones."
+    },
+    {
+      "id": "KD161",
+      "quote": "Oxalic acid can also cause calcium deficiencies."
+    },
+    {
+      "id": "KD161",
+      "quote": "If your dog is prone to kidney stones or has a calcium deficiency condition like osteoporosis,"
+    },
+    {
+      "id": "KD161",
+      "quote": "check with your vet before giving your dog beets."
+    },
+    {
+      "id": "KD161",
+      "quote": "Beets are also high in carbs and sugar, so your dog should eat only small quantities."
+    },
+    {
+      "id": "KD161",
+      "quote": "Too much sugar in their diet can contribute to pancreatitis or obesity."
+    },
+    {
+      "id": "KD161",
+      "quote": "Beets are an acidic vegetable, which can cause digestive trouble in some dogs, including gas and diarrhea."
+    },
+    {
+      "id": "KD161",
+      "quote": "Beets can also turn your dog's urine red, so don't panic if your dog pees dark pink or red for the next 12 to 24 hours after eating beets."
+    },
+    {
+      "id": "KD161",
+      "quote": "But if the color doesn't disappear after a day, there may be something else going on,"
+    },
+    {
+      "id": "KD161",
+      "quote": "such as a urinary tract infection, kidney or bladder stones, or cystitis."
+    }
+  ],
+  "related": [
+    "carrots",
+    "spinach",
+    "sweet-potato"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "363e9604b16496fc47f31c0dd185aec6f0b6fd4ff2da1eb1c937649e1027065c"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "53debd3a387fda3c1ef59ac843fe672f5d3bc8fa586134185544c9156887d2bf"
+    }
+  }
+}

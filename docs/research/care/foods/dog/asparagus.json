@@ -1,0 +1,144 @@
+{
+  "slug": "asparagus",
+  "species": "dog",
+  "name": {
+    "en": "Asparagus",
+    "sl": "Beluši"
+  },
+  "question": {
+    "en": "Can dogs eat asparagus?",
+    "sl": "Ali lahko psi jedo beluše?"
+  },
+  "url_slug": {
+    "en": "asparagus",
+    "sl": "belusi"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, asparagus isn't toxic to dogs. Cooked asparagus is the better choice because it is easier to chew. Serve it plain, boiled or steamed, and keep dogs away from the asparagus fern.",
+    "sl": "Da, beluši za pse niso strupeni. Kuhani beluši so boljša izbira, ker jih pes laže prežveči. Ponudite jih navadne, kuhane ali na pari, psa pa držite stran od belušne praproti."
+  },
+  "why": {
+    "en": "Raw asparagus is very hard to chew, and a dog may try to swallow it whole and choke. Some dogs find raw asparagus hard to digest. Butter or cooking oil can make a dog sick. The asparagus fern, the inedible part of the plant, is toxic for dogs.",
+    "sl": "Surove beluše je zelo težko prežvečiti, pes pa jih lahko poskuša pogoltniti cele in se zaduši. Nekateri psi surove beluše težko prebavijo. Maslo ali olje za kuhanje lahko psu škodi. Belušna praprot, neužitni del rastline, je za pse strupena."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "If your dog has vomiting, gas or diarrhoea after raw asparagus, try lightly cooking it next time. Eating the asparagus fern can cause vomiting, diarrhoea and severe abdominal pain, so keep your dog away from the plant.",
+    "sl": "Če ima pes po surovih beluših bruhanje, vetrove ali drisko, jih naslednjič rahlo skuhajte. Uživanje belušne praproti lahko povzroči bruhanje, drisko in hude bolečine v trebuhu, zato psa držite stran od rastline."
+  },
+  "serving": {
+    "en": "Cooked by simply boiling or steaming, with no butter or oil. If you serve it raw, chop it into small, bite-sized pieces.",
+    "sl": "Preprosto kuhani v vodi ali na pari, brez masla in olja. Če jih ponudite surove, jih narežite na majhne koščke za en grižljaj."
+  },
+  "child": {
+    "en": "Dogs can have a little cooked asparagus from a grown-up. The leafy fern part of the plant is not for dogs.",
+    "sl": "Psi lahko od odraslega dobijo malo kuhanih belušev. Listnati del rastline ni za pse."
+  },
+  "faq": [
+    {
+      "q": {
+        "en": "Why does my dog's pee smell after asparagus?",
+        "sl": "Zakaj ima pes po beluših neprijetno dišeč urin?"
+      },
+      "a": {
+        "en": "Asparagus can make urine smell unpleasant, in dogs as in humans. If your dog is fully house-trained, this shouldn't be a problem.",
+        "sl": "Beluši lahko, tako kot pri ljudeh, povzročijo neprijeten vonj urina. Če je pes povsem navajen na čistočo, to ne bi smelo biti težava."
+      }
+    },
+    {
+      "q": {
+        "en": "Is the asparagus fern safe?",
+        "sl": "Je belušna praprot varna?"
+      },
+      "a": {
+        "en": "No. The asparagus fern is toxic for dogs and can cause vomiting, diarrhoea and severe abdominal pain.",
+        "sl": "Ne. Belušna praprot je za pse strupena in lahko povzroči bruhanje, drisko in hude bolečine v trebuhu."
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "KD160",
+      "quote": "Asparagus isn't toxic to dogs, but there are a few things you should keep in mind before feeding them this vegetable."
+    },
+    {
+      "id": "KD160",
+      "quote": "We humans don't usually eat raw asparagus because it would be very difficult to chew."
+    },
+    {
+      "id": "KD160",
+      "quote": "This is also an issue for dogs."
+    },
+    {
+      "id": "KD160",
+      "quote": "To avoid the risk of your dog trying to swallow the asparagus whole and possibly choking, it's better to feed your dog cooked asparagus,"
+    },
+    {
+      "id": "KD160",
+      "quote": "which is easier to chew."
+    },
+    {
+      "id": "KD160",
+      "quote": "If you want to serve this veggie raw, be sure to chop it up into small, bite-sized pieces before you feed it to your dog."
+    },
+    {
+      "id": "KD160",
+      "quote": "Your dog might also have difficulty digesting raw asparagus."
+    },
+    {
+      "id": "KD160",
+      "quote": "If your dog experiences vomiting, gas, or diarrhea after eating raw asparagus,"
+    },
+    {
+      "id": "KD160",
+      "quote": "next time try cooking it lightly before feeding it to them."
+    },
+    {
+      "id": "KD160",
+      "quote": "Feeding your dog asparagus can result in urine that smells unpleasant (this happens in humans, as well)."
+    },
+    {
+      "id": "KD160",
+      "quote": "But if your dog is fully housebroken, this shouldn't be a problem."
+    },
+    {
+      "id": "KD160",
+      "quote": "When cooking asparagus for your dog, do not use any butter or cooking oil, as these can make a dog sick."
+    },
+    {
+      "id": "KD160",
+      "quote": "Simply boil or steam the vegetable."
+    },
+    {
+      "id": "KD160",
+      "quote": "Be aware that asparagus fern, the inedible part of the asparagus plant, is toxic for dogs."
+    },
+    {
+      "id": "KD160",
+      "quote": "Ingesting this part of the plant can cause vomiting, diarrhea, and severe abdominal pain."
+    },
+    {
+      "id": "KD160",
+      "quote": "Many dogs enjoy small amounts of canine-friendly fruits and vegetables as a snack."
+    }
+  ],
+  "related": [
+    "green-beans",
+    "broccoli",
+    "butter"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "cd96959a14b923253319cbb7e17c4a085250bd7b7f34934b2364f4cf114e3102"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "e1995ffd753e209eb8a3a85f1e9720143949f62f8e0a3c3838d60fd7f2564244"
+    }
+  }
+}

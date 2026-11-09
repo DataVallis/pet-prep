@@ -1,0 +1,94 @@
+{
+  "slug": "chili-peppers",
+  "species": "cat",
+  "name": {
+    "en": "Chilli peppers",
+    "sl": "Čili papričice"
+  },
+  "question": {
+    "en": "Can cats eat chilli peppers?",
+    "sl": "Ali lahko mačke jedo čili papričice?"
+  },
+  "url_slug": {
+    "en": "chilli-peppers",
+    "sl": "cili-papricice"
+  },
+  "level": "not_recommended",
+  "answer": {
+    "en": "No, don't share chilli peppers or other spicy food with your cat. VCA Animal Hospitals says spicy foods may not be toxic to cats, but they are certain to cause stomach upset.",
+    "sl": "Ne, čili papričic in druge pekoče hrane ne delite z mačko. VCA Animal Hospitals navaja, da pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave."
+  },
+  "why": {
+    "en": "VCA Animal Hospitals advises not to share spicy foods with your cat and to keep jalapeño poppers to yourself: spicy foods may not be toxic to cats, but they are certain to cause stomach upset. Cats don't need vegetables in their diet, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
+    "sl": "VCA Animal Hospitals svetuje, naj pekoče hrane ne delimo z mačko in naj polnjene jalapeño papričice ostanejo nam: pekoča hrana za mačke morda ni strupena, zagotovo pa jim povzroči prebavne težave. Mačke zelenjave v prehrani ne potrebujejo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+  },
+  "signs": {
+    "en": [
+      "Stomach upset",
+      "Vomiting"
+    ],
+    "sl": [
+      "Prebavne težave",
+      "Bruhanje"
+    ]
+  },
+  "what_to_do": {
+    "en": "If your cat ate chilli or spicy food and then vomits or has an upset stomach, contact your vet for advice. Don't try to make your cat sick without asking the vet.",
+    "sl": "Če je mačka pojedla čili ali pekočo hrano in nato bruha ali ima prebavne težave, se za nasvet obrnite na veterinarja. Mačke ne poskušajte sami pripraviti do bruhanja, ne da bi vprašali veterinarja."
+  },
+  "serving": null,
+  "child": {
+    "en": "Spicy chilli peppers are for people, not cats. They can give kitty a sore tummy.",
+    "sl": "Pekoče čili papričice so za ljudi, ne za muce. Muco lahko zaboli trebušček."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC44",
+      "quote": "Don't share spicy or fatty foods with your cat."
+    },
+    {
+      "id": "KC44",
+      "quote": "While spicy foods may not be toxic to your cat, they're certain to cause stomach upset"
+    },
+    {
+      "id": "KC44",
+      "quote": "keep the jalapeño poppers to yourself!"
+    },
+    {
+      "id": "KC5",
+      "quote": "they rarely eat vegetables naturally, and there is no need for you to add them to their diet."
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    },
+    {
+      "id": "KC8",
+      "quote": "Contact your veterinary team for advice immediately; make sure you know when, where, and how the poisoning occurred."
+    },
+    {
+      "id": "KC22",
+      "quote": "Don’t try to make your cat sick without asking the vet and never given them medicines designed for humans."
+    }
+  ],
+  "related": [
+    "onion",
+    "garlic",
+    "salt",
+    "tomatoes"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "86a40837d1c89291df3ecaeefe8405d7e6eb5227672182be7fc6295a0a7bac91"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4824dd8c2d61d425dcb80080b52f57da6d4e4c90cba317f5699e4b3800affbd6"
+    }
+  }
+}

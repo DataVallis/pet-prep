@@ -1,0 +1,100 @@
+{
+  "slug": "beetroot",
+  "species": "cat",
+  "name": {
+    "en": "Beetroot",
+    "sl": "Rdeča pesa"
+  },
+  "question": {
+    "en": "Can cats eat beetroot?",
+    "sl": "Ali lahko mačke jedo rdečo peso?"
+  },
+  "url_slug": {
+    "en": "beetroot",
+    "sl": "rdeca-pesa"
+  },
+  "level": "small_amounts",
+  "answer": {
+    "en": "Yes, a small plain piece of beetroot is fine as an occasional treat. The ASPCA lists beets, including beetroot, as non-toxic to cats. Keep the big leaves away, though: the ASPCA notes that large mature leaves contain oxalic acid.",
+    "sl": "Da, majhen navaden košček rdeče pese je v redu kot občasen priboljšek. ASPCA peso, tudi rdečo peso, navaja kot nestrupeno za mačke. Velikih listov pa mački ne dajajte: ASPCA navaja, da veliki zreli listi vsebujejo oksalno kislino."
+  },
+  "why": {
+    "en": "The ASPCA lists beets (Beta vulgaris, also called beetroot) as non-toxic to cats and notes that large mature leaves contain oxalic acid. Cats don't need fruit or vegetables in their diet, but PDSA says many can be given in very small quantities as an occasional treat. The ASPCA also notes that any plant material may cause vomiting and stomach upset in cats.",
+    "sl": "ASPCA peso (Beta vulgaris, imenovano tudi rdeča pesa) navaja kot nestrupeno za mačke in opozarja, da veliki zreli listi vsebujejo oksalno kislino. Mačke sadja in zelenjave v prehrani ne potrebujejo, PDSA pa navaja, da jim lahko veliko vrst damo v zelo majhnih količinah kot občasen priboljšek. ASPCA še opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave."
+  },
+  "signs": null,
+  "what_to_do": {
+    "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
+    "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem."
+  },
+  "serving": {
+    "en": "A small, bite-sized piece of plain beetroot with no butter, salt or seasoning. Keep the large leaves away from your cat.",
+    "sl": "Majhen košček navadne rdeče pese za en grižljaj, brez masla, soli in začimb. Velikih listov mački ne dajajte."
+  },
+  "child": {
+    "en": "A tiny piece of beetroot can be a cat treat now and then. Cats mostly need their own cat food.",
+    "sl": "Majhen košček rdeče pese je lahko občasno priboljšek za muco. Muce potrebujejo predvsem svojo mačjo hrano."
+  },
+  "faq": [],
+  "sources": [
+    {
+      "id": "KC88",
+      "quote": "Beet Root, Red Beet, Swiss Chard, Roman Kale, Sugar Beet"
+    },
+    {
+      "id": "KC88",
+      "quote": "Beta vulgaris"
+    },
+    {
+      "id": "KC88",
+      "quote": "Non-Toxic to Dogs, Non-Toxic to Cats, Non-Toxic to Horses"
+    },
+    {
+      "id": "KC88",
+      "quote": "Large mature leaves contain oxalic acid"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need fruit or vegetables as part of their diet"
+    },
+    {
+      "id": "KC49",
+      "quote": "many can be given in very small quantities as an occasional treat."
+    },
+    {
+      "id": "KC49",
+      "quote": "make sure whatever you give is in bite-sized pieces"
+    },
+    {
+      "id": "KC49",
+      "quote": "Cats don’t need anything other than a complete diet to meet their nutritional needs"
+    },
+    {
+      "id": "KC26",
+      "quote": "Steamed or boiled vegetables such as carrots, peas or green beans. Make sure there is no butter, salt or seasoning"
+    },
+    {
+      "id": "KC62",
+      "quote": "Also, be advised that the consumption of any plant material may cause vomiting and gastrointestinal upset for dogs and cats."
+    }
+  ],
+  "related": [
+    "carrots",
+    "spinach",
+    "zucchini",
+    "sweet-potato"
+  ],
+  "updated": "2026-11-09",
+  "verification": {
+    "en": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c3fd4507977151f0bfb72df323a97eec56d1ba4cc4159b726e53a3f01d9a6ede"
+    },
+    "sl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "01d148725dcb3fff81256a61023a4c9880bae8711e989c8f8e10179054edc673"
+    }
+  }
+}
