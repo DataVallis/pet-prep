@@ -5,51 +5,59 @@
     "en": "Sweet potato",
     "sl": "Sladki krompir",
     "nl": "Zoete aardappel",
-    "pl": "Batat"
+    "pl": "Batat",
+    "cs": "Batáty"
   },
   "question": {
     "en": "Can dogs eat sweet potato?",
     "sl": "Ali lahko psi jedo sladki krompir?",
     "nl": "Mogen honden zoete aardappel eten?",
-    "pl": "Czy psy mogą jeść batat?"
+    "pl": "Czy psy mogą jeść batat?",
+    "cs": "Mohou psi jíst batáty?"
   },
   "url_slug": {
     "en": "sweet-potato",
     "sl": "sladki-krompir",
     "nl": "zoete-aardappel",
-    "pl": "batat"
+    "pl": "batat",
+    "cs": "bataty"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts, cooked and peeled. Soft boiled or steamed sweet potato is fine as a treat, but never give raw sweet potato: it is hard to chew, can upset the stomach and may cause an intestinal blockage.",
     "sl": "Da, v majhnih količinah, kuhan in olupljen. Mehak sladki krompir, kuhan v vodi ali na pari, je v redu kot priboljšek, nikoli pa ne ponudite surovega: težko se žveči, lahko razdraži želodec in povzroči zamašitev črevesja.",
     "nl": "Ja, in kleine hoeveelheden, gaar en geschild. Zachtgekookte of gestoomde zoete aardappel is prima als traktatie, maar geef nooit rauwe zoete aardappel: die is moeilijk te kauwen, kan maagklachten geven en kan een darmverstopping veroorzaken.",
-    "pl": "Tak, w małych ilościach, ugotowany i obrany. Miękki batat gotowany w wodzie lub na parze jest w porządku jako smakołyk, ale nigdy nie dawaj surowego: jest twardy i trudno go pogryźć, może rozstroić żołądek i spowodować niedrożność jelit."
+    "pl": "Tak, w małych ilościach, ugotowany i obrany. Miękki batat gotowany w wodzie lub na parze jest w porządku jako smakołyk, ale nigdy nie dawaj surowego: jest twardy i trudno go pogryźć, może rozstroić żołądek i spowodować niedrożność jelit.",
+    "cs": "Ano, v malém množství, tepelně upravené a oloupané. Měkce uvařený nebo spařený batát je jako pamlsek v pořádku, ale syrový batát psovi nikdy nedávejte: špatně se kouše, může dráždit žaludek a způsobit ucpání střev."
   },
   "why": {
     "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
     "sl": "Sladki krompir ni strupen, vendar se surov težko žveči in lahko povzroči zamašitev črevesja, lupina pa otežuje prebavo. Preveč ga lahko zaradi prevelike količine vitamina A povzroči šibkost kosti in mišic, zaradi visokega glikemičnega indeksa pa je pri psih s sladkorno boleznijo potrebna previdnost. Nedavne raziskave nakazujejo, da morda ni primeren za pasjo prehrano, in nikoli ne sme biti glavni vir hrane.",
     "nl": "Zoete aardappelen zijn niet giftig, maar rauwe zijn moeilijk te kauwen en kunnen een darmverstopping veroorzaken, en met schil zijn ze moeilijker te verteren. Te veel zoete aardappel kan door een overschot aan vitamine A botten en spieren verzwakken, en vanwege de hoge glykemische index is voorzichtigheid geboden bij honden met diabetes. Recent onderzoek suggereert dat ze mogelijk niet geschikt zijn voor de voeding van een hond, en ze mogen nooit de belangrijkste voedingsbron zijn.",
-    "pl": "Bataty nie są trujące, ale surowe są twarde i trudno je pogryźć, a mogą spowodować niedrożność jelit, a skórka utrudnia ich trawienie. Zbyt duża ilość może powodować osłabienie kości i mięśni z powodu nadmiaru witaminy A, a ich wysoki indeks glikemiczny oznacza, że u psów z cukrzycą trzeba zachować ostrożność. Najnowsze badania sugerują, że mogą nie pasować do psiej diety, a w żadnym razie nie powinny być jej głównym źródłem pożywienia."
+    "pl": "Bataty nie są trujące, ale surowe są twarde i trudno je pogryźć, a mogą spowodować niedrożność jelit, a skórka utrudnia ich trawienie. Zbyt duża ilość może powodować osłabienie kości i mięśni z powodu nadmiaru witaminy A, a ich wysoki indeks glikemiczny oznacza, że u psów z cukrzycą trzeba zachować ostrożność. Najnowsze badania sugerują, że mogą nie pasować do psiej diety, a w żadnym razie nie powinny być jej głównym źródłem pożywienia.",
+    "cs": "Batáty nejsou jedovaté, ale syrové se špatně kousají a mohou způsobit ucpání střev; se slupkou se navíc hůř tráví. Příliš mnoho může kvůli nadbytku vitaminu A způsobit slabost kostí a svalů a kvůli vysokému glykemickému indexu je u psů s cukrovkou potřeba opatrnost. Nedávný výzkum naznačuje, že se do psího jídelníčku nemusí hodit, a hlavním zdrojem výživy by nikdy neměly být."
   },
   "signs": null,
   "what_to_do": {
     "en": "Ask your vet before changing your dog's diet, then start with a small amount to see how your dog reacts.",
     "sl": "Pred spremembo pasje prehrane se posvetujte z veterinarjem, nato začnite z majhno količino in opazujte, kako se pes odzove.",
     "nl": "Vraag je dierenarts om advies voordat je de voeding van je hond aanpast, en begin dan met een klein beetje om te zien hoe je hond reageert.",
-    "pl": "Zanim zmienisz psu dietę, zapytaj weterynarza, a potem zacznij od małej ilości, żeby zobaczyć, jak pies zareaguje."
+    "pl": "Zanim zmienisz psu dietę, zapytaj weterynarza, a potem zacznij od małej ilości, żeby zobaczyć, jak pies zareaguje.",
+    "cs": "Než psovi změníte jídelníček, poraďte se s veterinářem, a pak začněte malým množstvím a sledujte, jak pes reaguje."
   },
   "serving": {
     "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
     "sl": "Kuhan v vodi ali na pari, dokler ni mehak, olupljen, v majhnih količinah. Nikoli surov in nikoli kot glavni del prehrane.",
     "nl": "Gekookt of gestoomd tot het zacht is, zonder schil, in kleine hoeveelheden. Nooit rauw, en nooit als hoofdbestanddeel van het voer.",
-    "pl": "Gotowany w wodzie lub na parze do miękkości, bez skórki, w małych ilościach. Nigdy surowy i nigdy jako główna część diety."
+    "pl": "Gotowany w wodzie lub na parze do miękkości, bez skórki, w małych ilościach. Nigdy surowy i nigdy jako główna część diety.",
+    "cs": "Uvařený nebo spařený do měkka, bez slupky, v malém množství. Nikdy syrový a nikdy jako hlavní součást jídelníčku."
   },
   "child": {
     "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
     "sl": "Psi lahko dobijo malo mehkega kuhanega sladkega krompirja. Odrasli ga najprej olupi in skuha.",
     "nl": "Honden mogen een beetje zachte, gare zoete aardappel eten. Een volwassene schilt en kookt hem eerst.",
-    "pl": "Psy mogą zjeść odrobinę miękkiego, ugotowanego batata. Dorosły najpierw go obiera i gotuje."
+    "pl": "Psy mogą zjeść odrobinę miękkiego, ugotowanego batata. Dorosły najpierw go obiera i gotuje.",
+    "cs": "Pejsek může dostat trochu měkce uvařeného batátu. Dospělý ho nejdřív oloupe a uvaří."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat sweet potato skin?",
         "sl": "Ali lahko psi jedo lupino sladkega krompirja?",
         "nl": "Mogen honden de schil van zoete aardappel eten?",
-        "pl": "Czy psy mogą jeść skórkę batata?"
+        "pl": "Czy psy mogą jeść skórkę batata?",
+        "cs": "Mohou psi jíst slupku z batátů?"
       },
       "a": {
         "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
         "sl": "Najbolje jo je odstraniti: z lupino pes sladki krompir težje prebavi.",
         "nl": "Schil de zoete aardappel het liefst: met schil is hij moeilijker te verteren voor je hond.",
-        "pl": "Najlepiej ją usunąć: batat ze skórką jest dla psa trudniejszy do strawienia."
+        "pl": "Najlepiej ją usunąć: batat ze skórką jest dla psa trudniejszy do strawienia.",
+        "cs": "Nejlépe ji odstraňte: se slupkou se batát psovi hůř tráví."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Can dogs eat raw sweet potato?",
         "sl": "Ali lahko psi jedo surov sladki krompir?",
         "nl": "Mogen honden rauwe zoete aardappel eten?",
-        "pl": "Czy psy mogą jeść surowy batat?"
+        "pl": "Czy psy mogą jeść surowy batat?",
+        "cs": "Mohou psi jíst syrové batáty?"
       },
       "a": {
         "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
         "sl": "Ne. Surov sladki krompir se težko žveči, lahko razdraži pasji želodec in povzroči zamašitev črevesja. Skuhajte ga, da se zmehča.",
         "nl": "Nee. Rauwe zoete aardappel is moeilijk te kauwen, kan de maag van je hond van streek maken en kan een darmverstopping veroorzaken. Maak hem gaar tot hij zacht is.",
-        "pl": "Nie. Surowy batat jest trudny do pogryzienia, może rozstroić psu żołądek i spowodować niedrożność jelit. Ugotuj go do miękkości."
+        "pl": "Nie. Surowy batat jest trudny do pogryzienia, może rozstroić psu żołądek i spowodować niedrożność jelit. Ugotuj go do miękkości.",
+        "cs": "Ne. Syrový batát se špatně kouše, může psovi podráždit žaludek a způsobit ucpání střev. Uvařte ho do měkka."
       }
     }
   ],
@@ -165,6 +177,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "aca25c945dffe2c8ef223c0a635cb08b3526d3895857e9888df192eb8e611ae0"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "5f8eb5ab55bf3d9ee8cad7526bc98422d59dea2c2af5aa6574d36edb762d62f6"
     }
   }
 }

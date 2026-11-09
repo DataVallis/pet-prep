@@ -5,51 +5,59 @@
     "en": "Cabbage",
     "sl": "Zelje",
     "nl": "Kool",
-    "pl": "Kapusta"
+    "pl": "Kapusta",
+    "cs": "Zelí"
   },
   "question": {
     "en": "Can dogs eat cabbage?",
     "sl": "Ali lahko psi jedo zelje?",
     "nl": "Mogen honden kool eten?",
-    "pl": "Czy psy mogą jeść kapustę?"
+    "pl": "Czy psy mogą jeść kapustę?",
+    "cs": "Mohou psi jíst zelí?"
   },
   "url_slug": {
     "en": "cabbage",
     "sl": "zelje",
     "nl": "kool",
-    "pl": "kapusta"
+    "pl": "kapusta",
+    "cs": "zeli"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, in small amounts. All kinds of cabbage are fine for dogs, but cabbage makes a lot of gas, so introduce it slowly. Boiled or steamed cabbage is less likely to upset the stomach than raw cabbage.",
     "sl": "Da, v majhnih količinah. Vse vrste zelja so za pse v redu, vendar zelje povzroča veliko vetrov, zato ga uvajajte postopoma. Kuhano ali na pari pripravljeno zelje manj verjetno razdraži prebavo kot surovo.",
     "nl": "Ja, in kleine hoeveelheden. Alle soorten kool zijn prima voor honden, maar kool geeft veel gasvorming, dus laat je hond er rustig aan wennen. Van gekookte of gestoomde kool krijgt een hond minder snel maagklachten dan van rauwe kool.",
-    "pl": "Tak, w małych ilościach. Każdy rodzaj kapusty jest dla psów w porządku, ale kapusta powoduje dużo gazów, więc wprowadzaj ją powoli. Kapusta gotowana w wodzie lub na parze rzadziej rozstraja żołądek niż surowa."
+    "pl": "Tak, w małych ilościach. Każdy rodzaj kapusty jest dla psów w porządku, ale kapusta powoduje dużo gazów, więc wprowadzaj ją powoli. Kapusta gotowana w wodzie lub na parze rzadziej rozstraja żołądek niż surowa.",
+    "cs": "Ano, v malém množství. Všechny druhy zelí jsou pro psy v pořádku, ale zelí způsobuje nadýmání, proto ho zařazujte postupně. Vařené nebo spařené zelí psovi žaludek podráždí méně než syrové."
   },
   "why": {
     "en": "Cabbage is healthy for dogs, but it produces a large amount of gas, and many dogs may not handle that well. Seasonings are the bigger problem: butter and other fatty foods can lead to pancreatitis, and onions and garlic are toxic to dogs.",
     "sl": "Zelje je za pse zdravo, vendar povzroča veliko vetrov, česar mnogi psi ne prenašajo dobro. Večja težava so dodatki: maslo in druga mastna hrana lahko povzročita vnetje trebušne slinavke, čebula in česen pa sta za pse strupena.",
     "nl": "Kool is gezond voor honden, maar geeft veel gasvorming, en daar hebben veel honden last van. Kruiden en andere toevoegingen zijn een groter probleem: boter en andere vette producten kunnen een alvleesklierontsteking veroorzaken, en ui en knoflook zijn giftig voor honden.",
-    "pl": "Kapusta jest dla psów zdrowa, ale wytwarza dużo gazów, a wiele psów źle to znosi. Większym problemem są przyprawy: masło i inne tłuste dodatki mogą prowadzić do zapalenia trzustki, a cebula i czosnek są dla psów toksyczne."
+    "pl": "Kapusta jest dla psów zdrowa, ale wytwarza dużo gazów, a wiele psów źle to znosi. Większym problemem są przyprawy: masło i inne tłuste dodatki mogą prowadzić do zapalenia trzustki, a cebula i czosnek są dla psów toksyczne.",
+    "cs": "Zelí je pro psy zdravé, ale vytváří velké množství plynů, které mnoho psů nemusí dobře snášet. Větším problémem je ochucení: máslo a další tučná jídla mohou vést k zánětu slinivky břišní a cibule a česnek jsou pro psy toxické."
   },
   "signs": null,
   "what_to_do": {
     "en": "Watch your dog closely after the first taste of cabbage. If your dog tends to have a lot of gas or is prone to bloat, ask your vet before giving cabbage.",
     "sl": "Po prvem okušanju zelja psa pozorno opazujte. Če ima pes pogosto veliko vetrov ali je nagnjen k napihnjenosti, se pred tem posvetujte z veterinarjem.",
     "nl": "Let goed op je hond na de eerste hap kool. Heeft je hond vaak last van gasvorming of loopt hij een verhoogd risico op maagtorsie, vraag het dan eerst aan je dierenarts voordat je kool geeft.",
-    "pl": "Po pierwszej próbce kapusty uważnie obserwuj psa. Jeśli twój pies ma skłonność do nadmiernych gazów lub wzdęć, zapytaj weterynarza, zanim dasz mu kapustę."
+    "pl": "Po pierwszej próbce kapusty uważnie obserwuj psa. Jeśli twój pies ma skłonność do nadmiernych gazów lub wzdęć, zapytaj weterynarza, zanim dasz mu kapustę.",
+    "cs": "Po prvním ochutnání zelí psa pozorně sledujte. Pokud má váš pes často hodně plynů nebo je náchylný k torzi žaludku, poraďte se před podáním zelí s veterinářem."
   },
   "serving": {
     "en": "Washed, with the stem and core removed, boiled or steamed, and diced into small pieces. Unseasoned: no butter, onion or garlic. Small amounts only.",
     "sl": "Oprano, brez stebla in kocena, kuhano ali pripravljeno na pari in narezano na majhne koščke. Brez dodatkov: brez masla, čebule in česna. Le v majhnih količinah.",
     "nl": "Gewassen, zonder stronk en kern, gekookt of gestoomd en in kleine stukjes gesneden. Ongekruid, dus geen boter, ui of knoflook. Alleen in kleine hoeveelheden.",
-    "pl": "Umyta, bez głąba, ugotowana w wodzie lub na parze i pokrojona na małe kawałki. Bez przypraw: bez masła, cebuli i czosnku. Tylko małe ilości."
+    "pl": "Umyta, bez głąba, ugotowana w wodzie lub na parze i pokrojona na małe kawałki. Bez przypraw: bez masła, cebuli i czosnku. Tylko małe ilości.",
+    "cs": "Omyté, bez košťálu a jádra, vařené nebo spařené a nakrájené na malé kousky. Bez ochucení: žádné máslo, cibule ani česnek. Jen v malém množství."
   },
   "child": {
     "en": "Dogs can try a little plain cooked cabbage. It can make them windy, so just a small piece!",
     "sl": "Psi lahko poskusijo malo navadnega kuhanega zelja. Lahko jim povzroči vetrove, zato le majhen košček!",
     "nl": "Honden mogen een beetje naturel gare kool proberen. Het kan winderigheid geven, dus geef maar een klein stukje!",
-    "pl": "Psy mogą spróbować odrobiny zwykłej ugotowanej kapusty. Po niej łatwo o bąki, więc tylko mały kawałek!"
+    "pl": "Psy mogą spróbować odrobiny zwykłej ugotowanej kapusty. Po niej łatwo o bąki, więc tylko mały kawałek!",
+    "cs": "Pejsek může zkusit trochu uvařeného zelí bez dalších přísad. Může z něj mít nadýmání, tak jen malý kousek!"
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat raw cabbage?",
         "sl": "Ali lahko psi jedo surovo zelje?",
         "nl": "Mogen honden rauwe kool eten?",
-        "pl": "Czy psy mogą jeść surową kapustę?"
+        "pl": "Czy psy mogą jeść surową kapustę?",
+        "cs": "Mohou psi jíst syrové zelí?"
       },
       "a": {
         "en": "They can, but boiled or steamed cabbage is less likely to upset a dog's digestion. Dice it into small pieces either way.",
         "sl": "Lahko, vendar kuhano ali na pari pripravljeno zelje manj verjetno razdraži pasjo prebavo. V vsakem primeru ga narežite na majhne koščke.",
         "nl": "Dat kan, maar van gekookte of gestoomde kool krijgt een hond minder snel last van zijn spijsvertering. Snijd de kool hoe dan ook in kleine stukjes.",
-        "pl": "Mogą, ale kapusta gotowana w wodzie lub na parze rzadziej zaburza psu trawienie. Tak czy inaczej pokrój ją na małe kawałki."
+        "pl": "Mogą, ale kapusta gotowana w wodzie lub na parze rzadziej zaburza psu trawienie. Tak czy inaczej pokrój ją na małe kawałki.",
+        "cs": "Mohou, ale vařené nebo spařené zelí psovi trávení podráždí méně. Nakrájejte ho na malé kousky tak či onak."
       }
     }
   ],
@@ -149,6 +159,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "66287f8eeb91ff85a1a998666e61545de46d9335e02a9df8219fd48ada6bd299"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "2bf455dcb846a7050e29004573a98b4cc657e46162fbfbfa621290cc05107829"
     }
   }
 }

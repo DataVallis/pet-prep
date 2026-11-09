@@ -5,51 +5,59 @@
     "en": "Brussels sprouts",
     "sl": "Brstični ohrovt",
     "nl": "Spruitjes",
-    "pl": "Brukselka"
+    "pl": "Brukselka",
+    "cs": "Růžičková kapusta"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
     "sl": "Ali lahko psi jedo brstični ohrovt?",
     "nl": "Mogen honden spruitjes eten?",
-    "pl": "Czy psy mogą jeść brukselkę?"
+    "pl": "Czy psy mogą jeść brukselkę?",
+    "cs": "Mohou psi jíst růžičkovou kapustu?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
     "sl": "brsticni-ohrovt",
     "nl": "spruitjes",
-    "pl": "brukselka"
+    "pl": "brukselka",
+    "cs": "ruzickova-kapusta"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, with a few precautions. Plain cooked Brussels sprouts are fine for dogs in small amounts, but too many can cause lots of gas, stomach upset and diarrhoea. Don't serve them raw: they are too hard for dogs to digest.",
     "sl": "Da, z nekaj previdnosti. Navaden kuhan brstični ohrovt je za pse v majhnih količinah v redu, preveč pa lahko povzroči močne vetrove, želodčne težave in drisko. Ne ponudite ga surovega: psi ga težko prebavijo.",
     "nl": "Ja, als je een paar dingen in acht neemt. Naturel gaar gemaakte spruitjes zijn in kleine hoeveelheden prima voor honden, maar van te veel kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef ze niet rauw: dan zijn ze te hard om goed te verteren.",
-    "pl": "Tak, ale z kilkoma zastrzeżeniami. Zwykła ugotowana brukselka w małych ilościach jest dla psów w porządku, ale zbyt duża porcja może wywołać dużo gazów, rozstrój żołądka i biegunkę. Nie podawaj jej surowej – jest dla psów zbyt twarda, by ją strawić."
+    "pl": "Tak, ale z kilkoma zastrzeżeniami. Zwykła ugotowana brukselka w małych ilościach jest dla psów w porządku, ale zbyt duża porcja może wywołać dużo gazów, rozstrój żołądka i biegunkę. Nie podawaj jej surowej – jest dla psów zbyt twarda, by ją strawić.",
+    "cs": "Ano, s několika opatřeními. Tepelně upravená růžičková kapusta bez dalších přísad je pro psy v malém množství v pořádku, ale příliš velké množství může způsobit nadměrnou plynatost, potíže se žaludkem a průjem. Nedávejte ji syrovou: je pro psy příliš tvrdá a špatně se jim tráví."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
     "sl": "Brstični ohrovt je poln hranil in antioksidantov ter ne vsebuje strupov. Vsebuje pa veliko snovi, imenovane izotiocianat, in preveč ga lahko povzroči močne vetrove, želodčne težave in drisko, zato ga psu ne dajajte preveč.",
     "nl": "Spruitjes zitten vol voedingsstoffen en antioxidanten en bevatten geen gifstoffen. Ze bevatten wel veel isothiocyanaten, en van te veel spruitjes kan een hond veel gasvorming, maagklachten en diarree krijgen. Geef dus niet te veel.",
-    "pl": "Brukselka jest pełna składników odżywczych i przeciwutleniaczy i nie zawiera toksyn ani trucizn. Zawiera jednak dużo substancji zwanych izotiocyjanianami, a zbyt duża ilość może prowadzić do nadmiaru gazów, rozstroju żołądka i biegunki, więc nie przekarmiaj psa."
+    "pl": "Brukselka jest pełna składników odżywczych i przeciwutleniaczy i nie zawiera toksyn ani trucizn. Zawiera jednak dużo substancji zwanych izotiocyjanianami, a zbyt duża ilość może prowadzić do nadmiaru gazów, rozstroju żołądka i biegunki, więc nie przekarmiaj psa.",
+    "cs": "Růžičková kapusta je plná živin a antioxidantů a neobsahuje žádné toxiny ani jedy. Obsahuje ale vysoké množství látky zvané izotiokyanát a příliš velké množství může vést k nadměrné plynatosti, potížím se žaludkem a průjmu, proto psa nepřekrmujte."
   },
   "signs": null,
   "what_to_do": {
     "en": "Give only a little and don't overfeed. If your dog has dietary issues or allergies, talk to your vet first before offering Brussels sprouts.",
     "sl": "Ponudite le malo in ne pretiravajte. Če ima pes težave s prehrano ali alergije, se pred tem posvetujte z veterinarjem.",
     "nl": "Geef maar een klein beetje en niet te veel. Heeft je hond problemen met bepaalde voeding of allergieën, overleg dan eerst met je dierenarts voordat je spruitjes geeft.",
-    "pl": "Podaj tylko odrobinę i nie przekarmiaj. Jeśli twój pies ma problemy żywieniowe lub alergie, przed poczęstowaniem go brukselką porozmawiaj z weterynarzem."
+    "pl": "Podaj tylko odrobinę i nie przekarmiaj. Jeśli twój pies ma problemy żywieniowe lub alergie, przed poczęstowaniem go brukselką porozmawiaj z weterynarzem.",
+    "cs": "Dávejte jen trochu a nepřekrmujte. Pokud má váš pes stravovací potíže nebo alergie, poraďte se před podáním růžičkové kapusty nejdřív s veterinářem."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
     "sl": "Opran, z odrezanim večjim delom peclja in ohranjenimi listi, kuhan (kuhanje na pari ohrani največ hranil). Navaden, brez zelišč in začimb, v majhnih količinah.",
     "nl": "Gewassen, met het grootste deel van de stronk eraf gesneden (de blaadjes blijven eraan) en gaar gemaakt; stomen behoudt de meeste voedingsstoffen. Naturel, zonder kruiden en in kleine hoeveelheden.",
-    "pl": "Umyta, z odciętą większością głąbka, ale z liśćmi, ugotowana (gotowanie na parze zachowuje najwięcej składników odżywczych). Zwykła, bez ziół i przypraw, w małych ilościach."
+    "pl": "Umyta, z odciętą większością głąbka, ale z liśćmi, ugotowana (gotowanie na parze zachowuje najwięcej składników odżywczych). Zwykła, bez ziół i przypraw, w małych ilościach.",
+    "cs": "Omytá, s odříznutou větší částí košťálu a s ponechanými listy, a tepelně upravená (při spaření se zachová nejvíc živin). Bez dodatků, bez bylinek a koření, v malém množství."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
     "sl": "Psi lahko za priboljšek dobijo malo kuhanega brstičnega ohrovta. Če ga pojedo preveč, imajo poln trebušček vetrov!",
     "nl": "Honden mogen af en toe een beetje gaar spruitje als traktatie. Van te veel krijgen ze een heel winderige buik!",
-    "pl": "Psy mogą dostać odrobinę ugotowanej brukselki jako smakołyk. Ale uwaga: od nadmiaru brukselki w brzuszku robi się pełno bąków!"
+    "pl": "Psy mogą dostać odrobinę ugotowanej brukselki jako smakołyk. Ale uwaga: od nadmiaru brukselki w brzuszku robi się pełno bąków!",
+    "cs": "Pejsek může dostat jako pamlsek trochu uvařené růžičkové kapusty. Při příliš velkém množství bude mít bříško plné plynů!"
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Can dogs eat raw Brussels sprouts?",
         "sl": "Ali lahko psi jedo surov brstični ohrovt?",
         "nl": "Mogen honden rauwe spruitjes eten?",
-        "pl": "Czy psy mogą jeść surową brukselkę?"
+        "pl": "Czy psy mogą jeść surową brukselkę?",
+        "cs": "Mohou psi jíst syrovou růžičkovou kapustu?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
         "sl": "Raje ne: surov ohrovt psi težko prebavijo. Najprej ga skuhajte; kuhanje na pari ohrani največ hranil.",
         "nl": "Liever niet: rauwe spruitjes zijn te hard voor honden om goed te verteren. Maak ze eerst gaar; stomen behoudt de meeste voedingsstoffen.",
-        "pl": "Lepiej nie: surowa brukselka jest dla psów zbyt twarda, by ją strawić. Najpierw ją ugotuj; gotowanie na parze zachowuje najwięcej składników odżywczych."
+        "pl": "Lepiej nie: surowa brukselka jest dla psów zbyt twarda, by ją strawić. Najpierw ją ugotuj; gotowanie na parze zachowuje najwięcej składników odżywczych.",
+        "cs": "Raději ne: syrová kapusta je pro psy příliš tvrdá a špatně se jim tráví. Nejdřív ji tepelně upravte; při spaření se zachová nejvíc živin."
       }
     }
   ],
@@ -140,6 +150,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0cee0b082d85581ff7544a80714fb2bb632d5cd2c0a19041846612409d994a0f"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4d121cd9603a94bda631e44083724986ca22aa9a2acd23f8079ca59f8e72cd9e"
     }
   }
 }
