@@ -34,7 +34,8 @@
       "emergency_24h": true,
       "duty": "Open 24 hours, every day. Duty phone 063 241-668; you can call at any time.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan, vsak dan. Dežurni telefon 063 241-668; pokličete lahko kadar koli."
+        "sl": "Odprto 24 ur na dan, vsak dan. Dežurni telefon 063 241-668; pokličete lahko kadar koli.",
+        "hr": "Otvoreno 24 sata, svaki dan. Dežurni telefon 063 241-668; možeš nazvati u bilo koje doba."
       },
       "small_animals": true,
       "url": "https://www.vetboban.rs/",
@@ -51,7 +52,8 @@
       "emergency_24h": true,
       "duty": "Office hours Mon-Fri 10:00-19:00; 24-hour duty for emergencies - call first and book by phone.",
       "duty_i18n": {
-        "sl": "Delovni čas pon–pet 10–19; 24-urno dežurstvo za nujne primere – najprej pokličite in se naročite po telefonu."
+        "sl": "Delovni čas pon–pet 10–19; 24-urno dežurstvo za nujne primere – najprej pokličite in se naročite po telefonu.",
+        "hr": "Radno vrijeme pon–pet 10:00–19:00; 24-satno dežurstvo za hitne slučajeve – prvo nazovi i naruči se telefonom."
       },
       "small_animals": true,
       "url": "https://dezurniveterinarbgd.com/",
@@ -69,7 +71,8 @@
       "emergency_24h": true,
       "duty": "Clinic open 09:00-20:00; emergency duty service 00-24 every day of the year. Duty phone 063 34 22 35.",
       "duty_i18n": {
-        "sl": "Ambulanta odprta 9–20; nujna dežurna služba 0–24 vsak dan v letu. Dežurni telefon 063 34 22 35."
+        "sl": "Ambulanta odprta 9–20; nujna dežurna služba 0–24 vsak dan v letu. Dežurni telefon 063 34 22 35.",
+        "hr": "Klinika radi 09:00–20:00; hitna dežurna služba 0–24 svaki dan u godini. Dežurni telefon 063 34 22 35."
       },
       "small_animals": true,
       "url": "https://veturgent.rs/",
@@ -87,7 +90,8 @@
       "emergency_24h": true,
       "duty": "Clinic Mon-Fri 09:00-20:00, Sat-Sun 09:00-14:00; emergency interventions 0-24 on 064 1157 802.",
       "duty_i18n": {
-        "sl": "Ambulanta pon–pet 9–20, sob–ned 9–14; nujni posegi 0–24 na 064 1157 802."
+        "sl": "Ambulanta pon–pet 9–20, sob–ned 9–14; nujni posegi 0–24 na 064 1157 802.",
+        "hr": "Klinika pon–pet 09:00–20:00, sub–ned 09:00–14:00; hitne intervencije 0–24 na 064 1157 802."
       },
       "small_animals": true,
       "url": "https://vetnovak.com/",
@@ -104,7 +108,8 @@
       "emergency_24h": true,
       "duty": "24/7 emergency care (call ahead).",
       "duty_i18n": {
-        "sl": "Nujna pomoč 24/7 (vnaprej pokličite)."
+        "sl": "Nujna pomoč 24/7 (vnaprej pokličite).",
+        "hr": "Hitna skrb 24/7 (nazovi unaprijed)."
       },
       "small_animals": true,
       "url": "https://zootopija.rs/contact",
@@ -122,7 +127,8 @@
       "emergency_24h": false,
       "duty": "Weekdays 11:00-19:00, Saturday 10:00-14:00; emergency interventions around the clock - call first.",
       "duty_i18n": {
-        "sl": "Ob delavnikih 11–19, ob sobotah 10–14; nujni posegi 24 ur na dan – najprej pokličite."
+        "sl": "Ob delavnikih 11–19, ob sobotah 10–14; nujni posegi 24 ur na dan – najprej pokličite.",
+        "hr": "Radnim danom 11:00–19:00, subotom 10:00–14:00; hitne intervencije danonoćno – prvo nazovi."
       },
       "small_animals": true,
       "url": "https://www.myvet.rs/",
@@ -140,7 +146,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 09:00-19:00, Sat 10:00-13:00; duty phone 069 27-26-350 available 24/7, 365 days a year.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 10–13; dežurni telefon 069 27-26-350 dosegljiv 24/7, 365 dni v letu."
+        "sl": "pon–pet 9–19, sob 10–13; dežurni telefon 069 27-26-350 dosegljiv 24/7, 365 dni v letu.",
+        "hr": "pon–pet 09:00–19:00, sub 10:00–13:00; dežurni telefon 069 27-26-350 dostupan 24/7, 365 dana u godini."
       },
       "small_animals": true,
       "url": "https://azvet.rs/",
@@ -158,7 +165,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00, Sat 10:00-14:00, Sun 10:00-12:00; duty veterinarian 00-24h - call first.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 10–14, ned 10–12; dežurni veterinar 0–24 – najprej pokličite."
+        "sl": "pon–pet 9–19, sob 10–14, ned 10–12; dežurni veterinar 0–24 – najprej pokličite.",
+        "hr": "pon–pet 09:00–19:00, sub 10:00–14:00, ned 10:00–12:00; dežurni veterinar 0–24 – prvo nazovi."
       },
       "small_animals": true,
       "url": "https://locovet.rs/",
@@ -175,7 +183,8 @@
       "emergency_24h": true,
       "duty": "Emergency service 00-24h for clinic clients; on-call vet phone 064 365 5547.",
       "duty_i18n": {
-        "sl": "Nujna služba 0–24 za stranke ambulante; telefon dežurnega veterinarja 064 365 5547."
+        "sl": "Nujna služba 0–24 za stranke ambulante; telefon dežurnega veterinarja 064 365 5547.",
+        "hr": "Hitna služba 0–24 za klijente klinike; telefon dežurnog veterinara 064 365 5547."
       },
       "small_animals": true,
       "url": "https://vetvozdovac.weebly.com/",
@@ -193,7 +202,8 @@
       "emergency_24h": false,
       "duty": "Emergency hours Mon-Sat 20:00-08:00, Sunday 14:00-02:00. Ophthalmology line 066 240 373.",
       "duty_i18n": {
-        "sl": "Nujna služba pon–sob 20–8, ned 14–2. Linija za oftalmologijo 066 240 373."
+        "sl": "Nujna služba pon–sob 20–8, ned 14–2. Linija za oftalmologijo 066 240 373.",
+        "hr": "Hitno radno vrijeme pon–sub 20:00–08:00, ned 14:00–02:00. Oftalmološka linija 066 240 373."
       },
       "small_animals": true,
       "url": "https://urgentnaveterinaoculus.rs/",
@@ -211,7 +221,8 @@
       "emergency_24h": false,
       "duty": "Novi Beograd Mon-Fri 09:00-21:00, Sat-Sun 10:00-20:00. Second clinic at Vidikovački venac 2a (011 4386 279).",
       "duty_i18n": {
-        "sl": "Novi Beograd pon–pet 9–21, sob–ned 10–20. Druga ambulanta na naslovu Vidikovački venac 2a (011 4386 279)."
+        "sl": "Novi Beograd pon–pet 9–21, sob–ned 10–20. Druga ambulanta na naslovu Vidikovački venac 2a (011 4386 279).",
+        "hr": "Novi Beograd pon–pet 09:00–21:00, sub–ned 10:00–20:00. Druga klinika: Vidikovački venac 2a (011 4386 279)."
       },
       "small_animals": true,
       "url": "https://petvetcare.rs/",
@@ -229,7 +240,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-14:00 and 16:00-20:00, Sat-Sun 09:00-14:00. Mobile 062 800 9160. Exotic pets by appointment.",
       "duty_i18n": {
-        "sl": "pon–pet 9–14 in 16–20, sob–ned 9–14. Mobilna številka 062 800 9160. Eksotični hišni ljubljenčki po dogovoru."
+        "sl": "pon–pet 9–14 in 16–20, sob–ned 9–14. Mobilna številka 062 800 9160. Eksotični hišni ljubljenčki po dogovoru.",
+        "hr": "pon–pet 09:00–14:00 i 16:00–20:00, sub–ned 09:00–14:00. Mobitel 062 800 9160. Egzotični kućni ljubimci uz prethodnu najavu."
       },
       "small_animals": true,
       "url": "https://vet.bg.ac.rs/en/klinike-i-laboratorije/klinike",
@@ -245,14 +257,14 @@
       "address": "Lilike Bem 1, Novi Sad",
       "phone": "+381 21 443137",
       "emergency_24h": true,
-      "duty": "Open 24 hours (page: 'FamilyVet radi 24h'); mobile +381 60 0575721.",
+      "duty": "Open 24 hours; mobile +381 60 0575721.",
       "duty_i18n": {
-        "sl": "Odprto 24 ur na dan (stran: „FamilyVet radi 24h“); mobilna številka +381 60 0575721."
+        "hr": "Otvoreno 24 sata; mobitel +381 60 0575721."
       },
       "small_animals": true,
       "url": "https://familyvet.rs/veterinar-novi-sad/",
       "source_url": "https://familyvet.rs/veterinar-novi-sad/",
-      "note": "Own page 'FamilyVet radi 24h'; no further detail on emergency arrangements.",
+      "note": "Own page 'FamilyVet radi 24h'; no further detail on emergency arrangements. Source page says 'FamilyVet radi 24h'.",
       "checked": "2026-11-04"
     },
     {
@@ -265,7 +277,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 09:00-20:00, Sat-Sun 09:00-12:00; emergencies 0-24h on 064 93-77-000.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20, sob–ned 9–12; nujni primeri 0–24 na 064 93-77-000."
+        "sl": "pon–pet 9–20, sob–ned 9–12; nujni primeri 0–24 na 064 93-77-000.",
+        "hr": "pon–pet 09:00–20:00, sub–ned 09:00–12:00; hitni slučajevi 0–24 na 064 93-77-000."
       },
       "small_animals": true,
       "url": "https://cityvet.rs/",
@@ -283,7 +296,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-13:00, Sun closed; emergency interventions 00-24h - call first.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20, sob 9–13, ned zaprto; nujni posegi 0–24 – najprej pokličite."
+        "sl": "pon–pet 9–20, sob 9–13, ned zaprto; nujni posegi 0–24 – najprej pokličite.",
+        "hr": "pon–pet 09:00–20:00, sub 09:00–13:00, ned zatvoreno; hitne intervencije 00–24 – prvo nazovi."
       },
       "small_animals": true,
       "url": "https://www.diamondpet.rs/",
@@ -301,7 +315,8 @@
       "emergency_24h": true,
       "duty": "Mon-Sat 09:00-21:00, Sun 10:00-15:00; duty vet 24/7 for emergencies on 064 25-63-541.",
       "duty_i18n": {
-        "sl": "pon–sob 9–21, ned 10–15; dežurni veterinar 24/7 za nujne primere na 064 25-63-541."
+        "sl": "pon–sob 9–21, ned 10–15; dežurni veterinar 24/7 za nujne primere na 064 25-63-541.",
+        "hr": "pon–sub 09:00–21:00, ned 10:00–15:00; dežurni veterinar 24/7 za hitne slučajeve na 064 25-63-541."
       },
       "small_animals": true,
       "url": "https://pvabenezan.rs/",
@@ -319,7 +334,8 @@
       "emergency_24h": true,
       "duty": "Office 09:00-20:00, Sat-Sun 09:00-12:00; emergencies 0-24h (mobile 063 85-86-007).",
       "duty_i18n": {
-        "sl": "Ambulanta 9–20, sob–ned 9–12; nujni primeri 0–24 (mobilna številka 063 85-86-007)."
+        "sl": "Ambulanta 9–20, sob–ned 9–12; nujni primeri 0–24 (mobilna številka 063 85-86-007).",
+        "hr": "Ambulanta 09:00–20:00, sub–ned 09:00–12:00; hitni slučajevi 0–24 (mobitel 063 85-86-007)."
       },
       "small_animals": true,
       "url": "https://www.petvetnovisad.com/",
@@ -337,7 +353,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat-Sun 09:00-12:00; emergency interventions weekdays 20:00-00:00, weekends 09:00-00:00. Mobile 065 90 20 357.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20, sob–ned 9–12; nujni posegi ob delavnikih 20–24, ob vikendih 9–24. Mobilna številka 065 90 20 357."
+        "sl": "pon–pet 9–20, sob–ned 9–12; nujni posegi ob delavnikih 20–24, ob vikendih 9–24. Mobilna številka 065 90 20 357.",
+        "hr": "pon–pet 09:00–20:00, sub–ned 09:00–12:00; hitne intervencije radnim danom 20:00–00:00, vikendom 09:00–00:00. Mobitel 065 90 20 357."
       },
       "small_animals": true,
       "url": "https://www.timvet.rs/",
@@ -355,7 +372,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00, Sat 09:00-14:00, Sun 09:00-12:00. Mobile 063 500 700.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20, sob 9–14, ned 9–12. Mobilna številka 063 500 700."
+        "sl": "pon–pet 9–20, sob 9–14, ned 9–12. Mobilna številka 063 500 700.",
+        "hr": "pon–pet 09:00–20:00, sub 09:00–14:00, ned 09:00–12:00. Mobitel 063 500 700."
       },
       "small_animals": true,
       "url": "https://www.veterinarnovisad.com/",
@@ -373,7 +391,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-20:00; Saturday two shifts; Sunday duty slots - call ahead. Mobile 066 858-58-54.",
       "duty_i18n": {
-        "sl": "pon–pet 9–20; ob sobotah dve izmeni; ob nedeljah dežurni termini – vnaprej pokličite. Mobilna številka 066 858-58-54."
+        "sl": "pon–pet 9–20; ob sobotah dve izmeni; ob nedeljah dežurni termini – vnaprej pokličite. Mobilna številka 066 858-58-54.",
+        "hr": "pon–pet 09:00–20:00; subotom dvije smjene; nedjeljom dežurni termini – nazovi unaprijed. Mobitel 066 858-58-54."
       },
       "small_animals": true,
       "url": "https://www.021.rs/novi-sad/vesti/360585/foto-ovo-je-basna-veterinarska-ambulanta-u-kojoj-se-vasi-ljubimci-osecaju-kao-kod-kuce",
@@ -391,7 +410,8 @@
       "emergency_24h": true,
       "duty": "Duty phone 24/7 (also outside working hours, weekends and holidays) - call before coming. Landline +381 18 220111.",
       "duty_i18n": {
-        "sl": "Dežurni telefon 24/7 (tudi zunaj delovnega časa, ob vikendih in praznikih) – pokličite, preden pridete. Stacionarni telefon +381 18 220111."
+        "sl": "Dežurni telefon 24/7 (tudi zunaj delovnega časa, ob vikendih in praznikih) – pokličite, preden pridete. Stacionarni telefon +381 18 220111.",
+        "hr": "Dežurni telefon 24/7 (i izvan radnog vremena, vikendom i blagdanima) – nazovi prije dolaska. Fiksni telefon +381 18 220111."
       },
       "small_animals": true,
       "url": "https://vetmedica.rs/",
@@ -409,7 +429,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 08:00-20:00, Sat 08:00-14:00, Sun 09:00-13:00. Mobile 063 41 85 42.",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 8–14, ned 9–13. Mobilna številka 063 41 85 42."
+        "sl": "pon–pet 8–20, sob 8–14, ned 9–13. Mobilna številka 063 41 85 42.",
+        "hr": "pon–pet 08:00–20:00, sub 08:00–14:00, ned 09:00–13:00. Mobitel 063 41 85 42."
       },
       "small_animals": true,
       "url": "https://veterinarskastanicanis.rs/",
@@ -427,7 +448,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-20:00, Sat 09:00-15:00, Sun and holidays by phone. Emergency interventions 064 061-58-58.",
       "duty_i18n": {
-        "sl": "pon–pet 10–20, sob 9–15, ned in prazniki po telefonu. Nujni posegi 064 061-58-58."
+        "sl": "pon–pet 10–20, sob 9–15, ned in prazniki po telefonu. Nujni posegi 064 061-58-58.",
+        "hr": "pon–pet 10:00–20:00, sub 09:00–15:00, ned i blagdanima po telefonskom dogovoru. Hitne intervencije 064 061-58-58."
       },
       "small_animals": true,
       "url": "https://vethealth.rs/",
@@ -445,7 +467,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-18:00, Sat 09:00-15:00; emergency service by phone 062 517-528.",
       "duty_i18n": {
-        "sl": "pon–pet 10–18, sob 9–15; nujna pomoč po telefonu 062 517-528."
+        "sl": "pon–pet 10–18, sob 9–15; nujna pomoč po telefonu 062 517-528.",
+        "hr": "pon–pet 10:00–18:00, sub 09:00–15:00; hitna služba telefonom 062 517-528."
       },
       "small_animals": true,
       "url": "https://www.vetimpuls.com/",
@@ -463,7 +486,8 @@
       "emergency_24h": true,
       "duty": "Mon-Fri 08:00-20:00, Sat 09:00-15:00; emergencies: call 063 303 476 at any hour (0-24h).",
       "duty_i18n": {
-        "sl": "pon–pet 8–20, sob 9–15; nujni primeri: pokličite 063 303 476 kadar koli (0–24)."
+        "sl": "pon–pet 8–20, sob 9–15; nujni primeri: pokličite 063 303 476 kadar koli (0–24).",
+        "hr": "pon–pet 08:00–20:00, sub 09:00–15:00; hitni slučajevi: nazovi 063 303 476 u bilo koje doba (0–24)."
       },
       "small_animals": true,
       "url": "https://veterinarkragujevac.rs/",
@@ -479,14 +503,14 @@
       "address": "Hadži Milentijeva 3, Kragujevac",
       "phone": "034 355-325",
       "emergency_24h": true,
-      "duty": "Landline 08:00-20:00; mobile 064 12-68-424 marked 00-24h.",
+      "duty": "Landline 08:00-20:00; mobile 064 12-68-424 00-24h.",
       "duty_i18n": {
-        "sl": "Stacionarni telefon 8–20; mobilni 064 12-68-424 z oznako 0–24."
+        "hr": "Fiksni telefon 08:00–20:00; mobitel 064 12-68-424 00–24h."
       },
       "small_animals": true,
       "url": "https://medikavet.rs/",
       "source_url": "https://medikavet.rs/",
-      "note": "Own page labels the mobile '00-24h'; no wording about emergency service. Weak claim - verify by phone.",
+      "note": "Own page labels the mobile '00-24h'; no wording about emergency service. Weak claim - verify by phone. Mobile 'marked' 00-24h (per source).",
       "checked": "2026-11-04"
     },
     {
@@ -499,7 +523,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-19:00, Sat 09:00-14:00, Sun closed. Mobile 065 364 6333.",
       "duty_i18n": {
-        "sl": "pon–pet 9–19, sob 9–14, ned zaprto. Mobilni telefon 065 364 6333."
+        "sl": "pon–pet 9–19, sob 9–14, ned zaprto. Mobilni telefon 065 364 6333.",
+        "hr": "pon–pet 09:00–19:00, sub 09:00–14:00, ned zatvoreno. Mobitel 065 364 6333."
       },
       "small_animals": true,
       "url": "https://lavvet.rs/",
@@ -515,14 +540,14 @@
       "address": "Trg Paje Kujundžića 2/a, Subotica",
       "phone": "024 671 060",
       "emergency_24h": false,
-      "duty": "Mon-Fri 07:00-19:00, Sat 07:00-14:00; Sunday hours unclear - call ahead. Mobile 060 671 0600.",
+      "duty": "Mon-Fri 07:00-19:00, Sat 07:00-14:00; Sunday: call ahead for hours. Mobile 060 671 0600.",
       "duty_i18n": {
-        "sl": "pon–pet 7–19, sob 7–14; delovni čas ob nedeljah ni znan – vnaprej pokličite. Mobilni telefon 060 671 0600."
+        "hr": "pon–pet 07:00–19:00, sub 07:00–14:00; ned: nazovi unaprijed za radno vrijeme. Mobitel 060 671 0600."
       },
       "small_animals": true,
       "url": "https://www.veterinar.co.rs/kontakt",
       "source_url": "https://www.veterinar.co.rs/kontakt",
-      "note": "Own page contradicts itself on Sunday (closed vs 08:00-11:00); no emergency wording.",
+      "note": "Own page contradicts itself on Sunday (closed vs 08:00-11:00); no emergency wording. Sunday hours unclear on source.",
       "checked": "2026-11-04"
     },
     {
@@ -535,7 +560,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 09:00-17:00, Sat-Sun 09:00-14:00; home visits available.",
       "duty_i18n": {
-        "sl": "pon–pet 9–17, sob–ned 9–14; možni so obiski na domu."
+        "sl": "pon–pet 9–17, sob–ned 9–14; možni so obiski na domu.",
+        "hr": "pon–pet 09:00–17:00, sub–ned 09:00–14:00; moguće su kućne posjete."
       },
       "small_animals": true,
       "url": "https://www.vivavet.rs/",
@@ -553,7 +579,8 @@
       "emergency_24h": false,
       "duty": "Mon-Fri 10:00-18:00, Sat 09:00-11:00; Sunday by call only. Second location in Zemun (Ševina 37a, 011 37 30 565).",
       "duty_i18n": {
-        "sl": "pon–pet 10–18, sob 9–11; ob nedeljah samo po telefonskem dogovoru. Druga lokacija v Zemunu (Ševina 37a, 011 37 30 565)."
+        "sl": "pon–pet 10–18, sob 9–11; ob nedeljah samo po telefonskem dogovoru. Druga lokacija v Zemunu (Ševina 37a, 011 37 30 565).",
+        "hr": "pon–pet 10:00–18:00, sub 09:00–11:00; nedjeljom samo na poziv. Druga lokacija u Zemunu (Ševina 37a, 011 37 30 565)."
       },
       "small_animals": true,
       "url": "https://www.veterinarbozinovic.rs/kontakt/",
