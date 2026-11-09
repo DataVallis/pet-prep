@@ -9,7 +9,8 @@
     "cs": "Cuketa",
     "hr": "Tikvice",
     "sv": "Zucchini",
-    "da": "Zucchini"
+    "da": "Zucchini",
+    "fi": "Kesäkurpitsa"
   },
   "question": {
     "en": "Can cats eat zucchini?",
@@ -19,7 +20,8 @@
     "cs": "Mohou kočky jíst cuketu?",
     "hr": "Smiju li mačke jesti tikvice?",
     "sv": "Får katter äta zucchini?",
-    "da": "Må katte spise zucchini?"
+    "da": "Må katte spise zucchini?",
+    "fi": "Saako kissa syödä kesäkurpitsaa?"
   },
   "url_slug": {
     "en": "zucchini",
@@ -29,7 +31,8 @@
     "cs": "cuketa",
     "hr": "tikvice",
     "sv": "zucchini",
-    "da": "zucchini"
+    "da": "zucchini",
+    "fi": "kesakurpitsa"
   },
   "level": "small_amounts",
   "answer": {
@@ -40,7 +43,8 @@
     "cs": "Ano, malý kousek cukety bez dalších přísad je jako občasný pamlsek v pořádku. ASPCA uvádí cuketu jako pro kočky netoxickou. Držte ale kočku dál od listů rostliny: International Cat Care uvádí, že kontakt s nimi může kočce podráždit tlamičku.",
     "hr": "Da, mali komadić obične tikvice u redu je kao povremena poslastica. ASPCA navodi tikvice kao neotrovne za mačke. Listove biljke ipak drži podalje od mačke: International Cat Care navodi da dodir s njima može nadražiti mačja usta.",
     "sv": "Ja, en liten bit zucchini utan tillsatser går bra som en godbit då och då. ASPCA anger zucchini som ogiftig för katter. Håll dock växtens blad borta: International Cat Care skriver att kontakt med dem kan irritera kattens mun.",
-    "da": "Ja, et lille stykke zucchini uden tilsætninger er fint som godbid af og til. ASPCA betragter zucchini som ugiftig for katte. Hold dog plantens blade væk: International Cat Care skriver at kontakt med dem kan irritere kattens mund."
+    "da": "Ja, et lille stykke zucchini uden tilsætninger er fint som godbid af og til. ASPCA betragter zucchini som ugiftig for katte. Hold dog plantens blade væk: International Cat Care skriver at kontakt med dem kan irritere kattens mund.",
+    "fi": "Saa, pieni pala maustamatonta kesäkurpitsaa kelpaa satunnaiseksi herkuksi. ASPCA luokittelee kesäkurpitsan kissoille myrkyttömäksi. Pidä kasvin lehdet kuitenkin poissa kissan ulottuvilta: International Cat Caren mukaan lehtien kanssa kosketuksiin joutuminen voi ärsyttää kissan suuta."
   },
   "why": {
     "en": "The ASPCA lists zucchini squash as non-toxic to cats. International Cat Care warns that contact with the leaves of food plants, including zucchini, can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
@@ -50,7 +54,8 @@
     "cs": "ASPCA uvádí cuketu jako pro kočky netoxickou. International Cat Care varuje, že kontakt s listy potravinových rostlin, včetně cukety, může způsobit puchýře nebo svědění v tlamičce a na dásních, kýchání a potíže s očima. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem.",
     "hr": "ASPCA navodi tikvice kao neotrovne za mačke. International Cat Care upozorava da dodir s listovima jestivih biljaka, uključujući tikvice, može izazvati mjehuriće ili svrbež u ustima i na desnima mačke, kihanje i tegobe s očima. Mačkama u prehrani ne trebaju voće ni povrće, poslastica ne bi smjelo biti mnogo, a ASPCA napominje da bilo koja biljna tvar kod mačaka može izazvati povraćanje i želučane tegobe.",
     "sv": "ASPCA anger zucchini som ogiftig för katter. International Cat Care varnar för att kontakt med bladen på matväxter, bland annat zucchini, kan ge blåsor eller klåda i kattens mun och på tandköttet, nysningar och ögonproblem. Katter behöver inte frukt eller grönsaker i kosten, godbitar ska ges sparsamt och ASPCA påpekar att allt växtmaterial kan ge kräkningar och orolig mage hos katter.",
-    "da": "ASPCA betragter zucchini som ugiftig for katte. International Cat Care advarer om at kontakt med bladene fra grøntsagsplanter, herunder zucchini, kan give blærer eller kløe i kattens mund og på tandkødet, nysen og øjenproblemer. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte."
+    "da": "ASPCA betragter zucchini som ugiftig for katte. International Cat Care advarer om at kontakt med bladene fra grøntsagsplanter, herunder zucchini, kan give blærer eller kløe i kattens mund og på tandkødet, nysen og øjenproblemer. Katte har ikke brug for frugt og grøntsager i kosten, godbidder bør gives sparsomt, og ASPCA skriver at al planteføde kan give opkast og ondt i maven hos katte.",
+    "fi": "ASPCA luokittelee kesäkurpitsan kissoille myrkyttömäksi. International Cat Care varoittaa, että ruokakasvien, myös kesäkurpitsan, lehtien kanssa kosketuksiin joutuminen voi aiheuttaa rakkuloita tai kutinaa kissan suussa ja ikenissä sekä aivastelua ja silmävaivoja. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia, herkkuja kuuluu antaa vain vähän, ja ASPCA huomauttaa, että mikä tahansa kasviaines voi aiheuttaa kissalle oksentelua ja vatsavaivoja."
   },
   "signs": null,
   "what_to_do": {
@@ -61,7 +66,8 @@
     "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte cuketu podávat a poraďte se s veterinářem.",
     "hr": "Počni s malim komadićem. Ako mačka nakon toga povraća ili dobije želučane tegobe, prestani i pitaj veterinara.",
     "sv": "Börja med en liten bit. Om katten kräks eller får orolig mage efteråt, sluta ge den och fråga veterinären.",
-    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds."
+    "da": "Start med et lille stykke. Hvis din kat kaster op eller får ondt i maven bagefter, skal du stoppe og spørge din dyrlæge til råds.",
+    "fi": "Aloita pienellä palalla. Jos kissasi oksentaa tai saa sen jälkeen vatsavaivoja, lopeta ja kysy neuvoa eläinlääkäriltä."
   },
   "serving": {
     "en": "A small plain piece of the zucchini itself, with no butter, salt or seasoning. Keep the plant's leaves away from your cat.",
@@ -71,7 +77,8 @@
     "cs": "Malý kousek samotné cukety bez dalších přísad, bez másla, soli a koření. Listy rostliny držte mimo dosah kočky.",
     "hr": "Mali običan komadić same tikvice, bez maslaca, soli i začina. Listove biljke drži podalje od mačke.",
     "sv": "En liten bit av själva zucchinin utan tillsatser, utan smör, salt eller kryddor. Håll växtens blad borta från katten.",
-    "da": "Et lille stykke af selve zucchinien, uden smør, salt eller krydderier. Hold plantens blade væk fra din kat."
+    "da": "Et lille stykke af selve zucchinien, uden smør, salt eller krydderier. Hold plantens blade væk fra din kat.",
+    "fi": "Pieni maustamaton pala itse kesäkurpitsaa, ilman voita, suolaa tai mausteita. Pidä kasvin lehdet poissa kissan ulottuvilta."
   },
   "child": {
     "en": "A little piece of zucchini can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
@@ -81,7 +88,8 @@
     "cs": "Kousek cukety může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk.",
     "hr": "Komadić tikvice mačka povremeno smije dobiti kao poslasticu. Mačkama uglavnom treba meso, pa je povrće samo sasvim mali dodatak.",
     "sv": "Lite zucchini kan vara en kattgodbit då och då. Katter behöver framför allt kött, så grönsaker är bara ett litet extra.",
-    "da": "Et lille stykke zucchini kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra."
+    "da": "Et lille stykke zucchini kan være en godbid til katten en gang imellem. Katte har mest brug for kød. Grøntsager er kun et lille ekstra.",
+    "fi": "Pienen palan kesäkurpitsaa voi joskus antaa kissalle herkuksi. Kissat tarvitsevat enimmäkseen lihaa, joten kasvikset ovat vain pieni lisä."
   },
   "faq": [
     {
@@ -93,7 +101,8 @@
         "cs": "Potřebují kočky zeleninu?",
         "hr": "Treba li mačkama povrće?",
         "sv": "Behöver katter grönsaker?",
-        "da": "Har katte brug for grøntsager?"
+        "da": "Har katte brug for grøntsager?",
+        "fi": "Tarvitsevatko kissat kasviksia?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -103,7 +112,8 @@
         "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk.",
         "hr": "Ne. Cats Protection navodi da mačke u prirodi rijetko jedu povrće i da ga ne treba dodavati u njihovu prehranu. Povrće je uvijek samo mali dodatak.",
         "sv": "Nej. Cats Protection skriver att katter sällan äter grönsaker av sig själva och att man inte behöver lägga till dem i kattens kost. En grönsak är aldrig mer än ett litet extra.",
-        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra."
+        "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
+        "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä."
       }
     }
   ],
@@ -200,6 +210,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ebc98ae8b5ee774e694d56e4037f8031222e42ed990eda694b7ed89b56c5b971"
+    },
+    "fi": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "7da8eb0640f810077d4500f95562c797ab24764867b9e960f2a9826acee1a648"
     }
   }
 }
