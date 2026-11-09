@@ -21,6 +21,26 @@
       "name": "Time Out México / ADN40 (leads only)",
       "url": "https://www.timeoutmexico.mx/ciudad-de-mexico/mascotas/hospitales-veterinarios-abiertos-las-24-horas-en-la-cdmx",
       "note": "Used only to find clinic names; no entry relies on it as source."
+    },
+    {
+      "name": "Clínica Animal del Puente (CAP Veterinaria Cancún)",
+      "url": "https://capcancun.com/",
+      "note": "Own pages opened (home + urgencias); explicit '24 horas, 7 días' statement."
+    },
+    {
+      "name": "Mundo Animal (own site, 5 Quintana Roo branches)",
+      "url": "https://mundoanimal.com.mx/contacto/",
+      "note": "Branch table with addresses, phones and hours opened; no 24 h statement."
+    },
+    {
+      "name": "VetCancun, Kolitas Veterinaria, Clinic Vet PDC (own sites)",
+      "url": "https://vetcancun.com/",
+      "note": "Own pages opened; VetCancun shows only 24 h meta text, Kolitas and Clinic Vet PDC do not claim 24 h."
+    },
+    {
+      "name": "Local news / directories (leads only)",
+      "url": "https://www.theplayatimes.com/2016/02/17/emergency-vets-who-you-gonna-call/amp",
+      "note": "Used only to find clinic names; no entry relies on them as source (Riviera Maya News, Playa Times, ruptura360, BringFido, Cronoshare, veterinariocerca, tributulum)."
     }
   ],
   "entries": [
@@ -454,7 +474,140 @@
       "source_url": "https://www.bruselas.com.mx/",
       "checked": "2026-11-09",
       "note": "Page gives only 'Coyoacán, CDMX' (map link); read first 100000 of 118526 characters. Number also given as 'Emergencias'."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clínica Animal del Puente (CAP Veterinaria Cancún)",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "address": "Calle Monte Vinsón, SM 310, Mz. 111, Lote 3-1, Cumbres, 77560 Cancún",
+      "phone": "+52 998 361 1641",
+      "emergency_24h": true,
+      "duty": "Emergency care 24 hours, 7 days a week. Consultations Mon-Sat 9:00-20:00; Sundays emergencies only.",
+      "small_animals": true,
+      "url": "https://capcancun.com/",
+      "source_url": "https://capcancun.com/",
+      "checked": "2026-11-09",
+      "note": "Both pages opened; page says 'Atención las 24 horas del día, los 7 días de la semana, los 365 días del año' and 'Urgencias 24/7'. The urgencias page also links to +52 998 354 4140 (differs from displayed 998 361 1641). Same group has a clinic in Estado de México (not listed)."
+    },
+    {
+      "kind": "clinic",
+      "name": "VetCancun",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "emergency_24h": false,
+      "duty": "Veterinary clinics in the Hotel Zone, Downtown and Puerto Cancún. Opening hours not published on the page; call ahead.",
+      "small_animals": true,
+      "url": "https://vetcancun.com/",
+      "source_url": "https://vetcancun.com/",
+      "checked": "2026-11-09",
+      "note": "Page opened but only title/meta rendered: 'Clínica Veterinaria 24 Horas' and 'Atención 24 horas, urgencias, vacunas y más. Clínicas en Zona Hotelera, Downtown y Puerto Cancún'. No phone/address/hours on the fetched page; /contacto could not be opened (not retrievable). Needs a follow-up for branch addresses and phones."
+    },
+    {
+      "kind": "clinic",
+      "name": "Kolitas Veterinaria Cancún",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "address": "Av. 135, Mz. 69, Lote 21, locales 3 y 4, SM 320, Jardines del Sur, 77536 Cancún",
+      "phone": "+52 998 273 1184",
+      "emergency_24h": false,
+      "duty": "Small-animal clinic in Jardines del Sur. Opening hours not published; call ahead.",
+      "small_animals": true,
+      "url": "https://www.kolitas.net/",
+      "source_url": "https://www.kolitas.net/index.html",
+      "checked": "2026-11-09",
+      "note": "Home page opened. Visible text does not state 24 h; only an image alt text reads 'Urgencias veterinarias 24 horas Cancún', so emergency_24h left false. Email info@kolitas.net."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mundo Animal La Luna",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "address": "Av. La Luna esq. Tunich, Fracc. Ek Balam, Cancún",
+      "phone": "+52 998 898 8931",
+      "emergency_24h": false,
+      "duty": "Clinic and pet store: Mon-Sat 9:00-21:00, Sun 10:00-20:00. Weekday clinic visits by appointment; weekends first come, first served. Not a 24-hour clinic.",
+      "small_animals": true,
+      "url": "https://mundoanimal.com.mx/",
+      "source_url": "https://mundoanimal.com.mx/contacto/",
+      "checked": "2026-11-09",
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mundo Animal Polígono",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "address": "Av. 135, SM 325, Mz. 87, Lt. 4, Cancún",
+      "phone": "+52 998 209 5201",
+      "emergency_24h": false,
+      "duty": "Clinic and pet store: Mon-Sat 9:00-21:00, Sun 10:00-20:00. Weekday clinic visits by appointment; weekends first come, first served. Not a 24-hour clinic.",
+      "small_animals": true,
+      "url": "https://mundoanimal.com.mx/",
+      "source_url": "https://mundoanimal.com.mx/contacto/",
+      "checked": "2026-11-09",
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mundo Animal Las Avenidas",
+      "city": "Cancún",
+      "region": "Quintana Roo",
+      "address": "Av. Yaxchilán, Local 3, Cancún",
+      "phone": "+52 998 887 6855",
+      "emergency_24h": false,
+      "duty": "Clinic and pet store: Mon-Sat 9:00-21:00, Sun 10:00-21:00. Weekday clinic visits by appointment; weekends first come, first served. Not a 24-hour clinic.",
+      "small_animals": true,
+      "url": "https://mundoanimal.com.mx/",
+      "source_url": "https://mundoanimal.com.mx/contacto/",
+      "checked": "2026-11-09",
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mundo Animal La Toscana",
+      "city": "Playa del Carmen",
+      "region": "Quintana Roo",
+      "address": "Av. Chemuyil, Mz. 14, Lt. 21, SM 70, Fracc. Toscana, Playa del Carmen",
+      "phone": "+52 984 147 0376",
+      "emergency_24h": false,
+      "duty": "Clinic and pet store: Mon-Sat 9:00-21:00, Sun 10:00-20:00. Weekday clinic visits by appointment; weekends first come, first served. Not a 24-hour clinic.",
+      "small_animals": true,
+      "url": "https://mundoanimal.com.mx/",
+      "source_url": "https://mundoanimal.com.mx/contacto/",
+      "checked": "2026-11-09",
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Mundo Animal Centro Maya",
+      "city": "Playa del Carmen",
+      "region": "Quintana Roo",
+      "address": "Carr. Fed. Cancún-Chetumal 2100, Local 50, Playa del Carmen",
+      "phone": "+52 984 803 9380",
+      "emergency_24h": false,
+      "duty": "Clinic and pet store: Mon-Sat 9:00-21:00, Sun 10:00-21:00. Weekday clinic visits by appointment; weekends first come, first served. Not a 24-hour clinic.",
+      "small_animals": true,
+      "url": "https://mundoanimal.com.mx/",
+      "source_url": "https://mundoanimal.com.mx/contacto/",
+      "checked": "2026-11-09",
+      "note": "Branch table on the chain's own contact page opened; no 24 h wording on the site. Branch list also confirmed on the home page."
+    },
+    {
+      "kind": "clinic",
+      "name": "Clinic Vet PDC",
+      "city": "Playa del Carmen",
+      "region": "Quintana Roo",
+      "address": "Calle 30 Nte 304, Local 1, entre 32 Nte y 34 Nte, Col. Gonzalo Guerrero, 77720 Playa del Carmen",
+      "phone": "+52 984 803 6212",
+      "emergency_24h": false,
+      "duty": "Mon-Fri 9:00-19:00 (contact page) and Sat 9:00-16:00; closed Sunday. After-hours emergencies: call first for guidance. English and Spanish.",
+      "small_animals": true,
+      "url": "https://clinicvetpdc.com/",
+      "source_url": "https://clinicvetpdc.com/contacto/",
+      "checked": "2026-11-09",
+      "note": "Contact page and home page opened. Contact page says Mon-Fri 9-19 on home, 9-19 on contact; no 24 h. Phone is also WhatsApp. Home page says urgencias only within regular hours for non-critical cases."
     }
   ],
-  "notes": "Mexico City only (queue line 'MX Mexico — Mexico City'). Not done: public Hospital Veterinario de la Ciudad de México (agatan.cdmx.gob.mx and sedema.cdmx.gob.mx blocked by robots.txt; only news articles, not used), Hospital Veterinario CDMX (hospitalveterinariocdmx.com, no address/phone on page), Shiko (placeholder phone), Animal Home and Medipet home pages (redirect loop), Oftalvet, Banfield/UNAM, Peques (no own-site page found). No official duty rota and no animal poison line found; no official national animal poison line page located."
+  "notes": "Mexico City only (queue line 'MX Mexico — Mexico City'). Not done: public Hospital Veterinario de la Ciudad de México (agatan.cdmx.gob.mx and sedema.cdmx.gob.mx blocked by robots.txt; only news articles, not used), Hospital Veterinario CDMX (hospitalveterinariocdmx.com, no address/phone on page), Shiko (placeholder phone), Animal Home and Medipet home pages (redirect loop), Oftalvet, Banfield/UNAM, Peques (no own-site page found). No official duty rota and no animal poison line found; no official national animal poison line page located. QUINTANA ROO run (2026-11-09): 9 entries added, 2 x 24 h (CAP Cancún, VetCancun). Not reachable/not done: sacvetcancun.com, veterinaria24.com.mx, infoveterinarias.com.mx and Facebook pages blocked by robots.txt (skipped); WebFetch could only open URLs that appeared in search results or page links, so own sites found only in third-party articles (Hospipet, Sanimal, Coco's Animal Welfare Clinic, Playa Pet, Playa Pet Tulum, Cozumel Pet Center, Animalia Tulum, Ambulacia Veterinaria 24 h Cancún, Urgencias Veterinarias Exóticos Cancún, Clínica Veterinaria Tulum, Petventiva Akumal, Vitanimal) could not be opened and are NOT included (leads only: Ambulacia, Palenque 71-3, 998 166 2632; Animalia Tulum, Av. La Selva 460, 984 317 5058). VetCancun branch addresses/phones missing. No clinic pages found for Cozumel, Chetumal, Isla Mujeres, Puerto Morelos, Bacalar, Holbox, Akumal, Tulum. Public animal welfare hospitals (Cancún, Playa del Carmen Cencaaz) were still under construction per news; Cancún Centro de Bienestar Animal is a municipal shelter, not listed. No Colegio de MVZ Quintana Roo directory, official duty rota or animal poison line found."
 }
