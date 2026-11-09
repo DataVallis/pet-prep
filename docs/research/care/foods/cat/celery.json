@@ -4,28 +4,33 @@
   "name": {
     "en": "Celery",
     "sl": "Zelena",
-    "nl": "Bleekselderij"
+    "nl": "Bleekselderij",
+    "pl": "Seler naciowy"
   },
   "question": {
     "en": "Can cats eat celery?",
     "sl": "Ali lahko mačke jedo zeleno?",
-    "nl": "Mogen katten bleekselderij eten?"
+    "nl": "Mogen katten bleekselderij eten?",
+    "pl": "Czy koty mogą jeść seler naciowy?"
   },
   "url_slug": {
     "en": "celery",
     "sl": "zelena",
-    "nl": "bleekselderij"
+    "nl": "bleekselderij",
+    "pl": "seler-naciowy"
   },
   "level": "not_recommended",
   "answer": {
     "en": "It's best not to offer celery. International Cat Care warns that contact with the leaves of food plants such as celery may cause blistering or itching of a cat's mouth and gums, and any plant can upset a cat's stomach. Cats don't need vegetables.",
     "sl": "Zelene je bolje ne ponujati. International Cat Care opozarja, da lahko stik z listi užitnih rastlin, kot je zelena, mački povzroči mehurje ali srbenje v ustih in na dlesnih, vsaka rastlina pa ji lahko razdraži želodec. Mačke zelenjave ne potrebujejo.",
-    "nl": "Geef je kat liever geen bleekselderij. International Cat Care waarschuwt dat de bladeren van eetbare planten als bleekselderij blaren of jeuk in de mond en op het tandvlees van een kat kunnen veroorzaken, en elke plant kan de maag van een kat van streek maken. Katten hebben geen groente nodig."
+    "nl": "Geef je kat liever geen bleekselderij. International Cat Care waarschuwt dat de bladeren van eetbare planten als bleekselderij blaren of jeuk in de mond en op het tandvlees van een kat kunnen veroorzaken, en elke plant kan de maag van een kat van streek maken. Katten hebben geen groente nodig.",
+    "pl": "Lepiej nie podawać selera naciowego. International Cat Care ostrzega, że kontakt z liśćmi roślin spożywczych, takich jak seler naciowy, może wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, a każda roślina może rozstroić kotu żołądek. Koty nie potrzebują warzyw."
   },
   "why": {
     "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
     "sl": "International Cat Care zeleno navaja med užitnimi rastlinami, katerih listi lahko mački povzročijo mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi, ter pravi, da lahko vse rastline, celo trava, razdražijo mačji želodec in črevesje ter povzročijo bruhanje. Članek ASPCA o vrtovih zeleno navaja med zmernimi prigrizki za hišne živali, vendar sledimo strožjemu nasvetu, ki velja posebej za mačke. Mačke sadja in zelenjave v prehrani ne potrebujejo.",
-    "nl": "International Cat Care rekent bleekselderij tot de eetbare planten waarvan de bladeren bij een kat blaren of jeuk in de mond en op het tandvlees, niezen en oogklachten kunnen geven. Volgens dezelfde organisatie kunnen alle planten, zelfs gras, de maag en darmen van een kat irriteren en braken veroorzaken. In een artikel van de ASPCA over tuinieren staat bleekselderij tussen de tussendoortjes die met mate geschikt zijn voor huisdieren, maar wij volgen het strengere advies dat specifiek voor katten geldt. Katten hebben geen fruit of groente nodig in hun voeding."
+    "nl": "International Cat Care rekent bleekselderij tot de eetbare planten waarvan de bladeren bij een kat blaren of jeuk in de mond en op het tandvlees, niezen en oogklachten kunnen geven. Volgens dezelfde organisatie kunnen alle planten, zelfs gras, de maag en darmen van een kat irriteren en braken veroorzaken. In een artikel van de ASPCA over tuinieren staat bleekselderij tussen de tussendoortjes die met mate geschikt zijn voor huisdieren, maar wij volgen het strengere advies dat specifiek voor katten geldt. Katten hebben geen fruit of groente nodig in hun voeding.",
+    "pl": "International Cat Care wymienia seler naciowy wśród roślin spożywczych, których liście mogą wywołać pęcherze lub swędzenie w pysku i na dziąsłach kota, kichanie i problemy z oczami, i podaje, że wszystkie rośliny, nawet trawa, mogą podrażniać żołądek i jelita kota oraz wywoływać wymioty. Artykuł ASPCA o ogrodzie wymienia seler naciowy wśród przekąsek dla zwierząt w umiarkowanych ilościach, ale kierujemy się ostrzejszą radą dotyczącą kotów. Koty nie potrzebują w diecie owoców ani warzyw."
   },
   "signs": {
     "en": [
@@ -45,30 +50,40 @@
       "Jeuk of blaren in de mond en op het tandvlees",
       "Niezen",
       "Oogklachten"
+    ],
+    "pl": [
+      "Wymioty",
+      "Swędzenie lub pęcherze w pysku i na dziąsłach",
+      "Kichanie",
+      "Problemy z oczami"
     ]
   },
   "what_to_do": {
     "en": "If your cat chewed celery and seems unwell, for example vomits or has an itchy mouth, call your vet for advice. Don't try to make your cat sick at home.",
     "sl": "Če je mačka grizljala zeleno in se ne počuti dobro, na primer bruha ali jo srbijo usta, pokličite veterinarja za nasvet. Mački ne poskušajte sami izzvati bruhanja.",
-    "nl": "Heeft je kat op bleekselderij gekauwd en voelt hij zich niet lekker, bijvoorbeeld omdat hij braakt of jeuk in zijn mond lijkt te hebben, bel dan je dierenarts voor advies. Probeer je kat thuis niet zelf te laten braken."
+    "nl": "Heeft je kat op bleekselderij gekauwd en voelt hij zich niet lekker, bijvoorbeeld omdat hij braakt of jeuk in zijn mond lijkt te hebben, bel dan je dierenarts voor advies. Probeer je kat thuis niet zelf te laten braken.",
+    "pl": "Jeśli kot pogryzł seler naciowy i źle się czuje, na przykład wymiotuje albo swędzi go pysk, zadzwoń do weterynarza po radę. Nie próbuj wywoływać u kota wymiotów w domu."
   },
   "serving": null,
   "child": {
     "en": "Celery is not a cat snack. Its leaves can make a cat's mouth itchy, so celery is better for people.",
     "sl": "Zelena ni prigrizek za muce. Njeni listi lahko muci povzročijo srbenje v ustih, zato je zelena raje za ljudi.",
-    "nl": "Bleekselderij is niets voor katten. De bladeren kunnen jeuk in de mond geven, dus bewaar de bleekselderij maar voor mensen."
+    "nl": "Bleekselderij is niets voor katten. De bladeren kunnen jeuk in de mond geven, dus bewaar de bleekselderij maar voor mensen.",
+    "pl": "Seler naciowy nie jest przekąską dla kotów. Jego liście mogą sprawić, że kotu zaswędzi pysk, więc niech seler naciowy zostanie dla ludzi."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -132,6 +147,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "7a2c135b7810cc43ad79917ba460660bbb9b90f8011bbfa8f0d41f5ebd44d24d"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "de6c0f292d02202c42274eca094e9928e56bf7fe9c9cf345faba8ea6da6766c6"
     }
   }
 }

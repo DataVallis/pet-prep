@@ -4,56 +4,66 @@
   "name": {
     "en": "Brussels sprouts",
     "sl": "Brstični ohrovt",
-    "nl": "Spruitjes"
+    "nl": "Spruitjes",
+    "pl": "Brukselka"
   },
   "question": {
     "en": "Can cats eat Brussels sprouts?",
     "sl": "Ali lahko mačke jedo brstični ohrovt?",
-    "nl": "Mogen katten spruitjes eten?"
+    "nl": "Mogen katten spruitjes eten?",
+    "pl": "Czy koty mogą jeść brukselkę?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
     "sl": "brsticni-ohrovt",
-    "nl": "spruitjes"
+    "nl": "spruitjes",
+    "pl": "brukselka"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain Brussels sprout, cooked until soft, is fine as an occasional treat. The RSPCA lists Brussels sprouts among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
     "sl": "Da, majhen košček navadnega brstičnega ohrovta, kuhanega do mehkega, je v redu kot občasen priboljšek. RSPCA brstični ohrovt navaja med hrano, primerno za mačke v zmernih količinah. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek.",
-    "nl": "Ja, af en toe een klein stukje naturel spruitje, gaar tot het zacht is, is prima als traktatie. Volgens de RSPCA kunnen katten met mate spruitjes eten. Katten hebben geen groente nodig, dus houd het bij een klein extraatje."
+    "nl": "Ja, af en toe een klein stukje naturel spruitje, gaar tot het zacht is, is prima als traktatie. Volgens de RSPCA kunnen katten met mate spruitjes eten. Katten hebben geen groente nodig, dus houd het bij een klein extraatje.",
+    "pl": "Tak, mały kawałek zwykłej brukselki, ugotowanej do miękkości, jest w porządku jako okazjonalny smakołyk. RSPCA wymienia brukselkę wśród pokarmów odpowiednich dla kotów w umiarkowanych ilościach. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek."
   },
   "why": {
     "en": "The RSPCA lists Brussels sprouts, cooked until soft, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "RSPCA brstični ohrovt, kuhan do mehkega, navaja med božično hrano, ki je v zmernih količinah primerna za mačke in pse. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-    "nl": "De RSPCA noemt spruitjes, gaar tot ze zacht zijn, onder het eten voor de kerstdagen dat veilig is voor huisdieren en met mate geschikt voor katten en honden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken."
+    "nl": "De RSPCA noemt spruitjes, gaar tot ze zacht zijn, onder het eten voor de kerstdagen dat veilig is voor huisdieren en met mate geschikt voor katten en honden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken.",
+    "pl": "RSPCA wymienia brukselkę, ugotowaną do miękkości, wśród świątecznych potraw bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "A small piece, cooked until soft, with no butter, salt or seasoning.",
     "sl": "Majhen košček, kuhan do mehkega, brez masla, soli in začimb.",
-    "nl": "Een klein stukje, gaar tot het zacht is, zonder boter, zout of kruiden."
+    "nl": "Een klein stukje, gaar tot het zacht is, zonder boter, zout of kruiden.",
+    "pl": "Mały kawałek, ugotowany do miękkości, bez masła, soli i przypraw."
   },
   "child": {
     "en": "A soft cooked sprout piece can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček mehkega kuhanega brstičnega ohrovta je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-    "nl": "Een zacht gekookt stukje spruitje kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
+    "nl": "Een zacht gekookt stukje spruitje kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
+    "pl": "Miękkim kawałkiem ugotowanej brukselki można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -113,6 +123,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "196737bfe49bb8861be65769410f572372803a252a74ddc796fa7bf068ac90c6"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4336ce8790dd320e32405ea916c38b41477acf8ef6e9c13feb63388432f6b609"
     }
   }
 }

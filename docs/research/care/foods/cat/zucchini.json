@@ -4,56 +4,66 @@
   "name": {
     "en": "Zucchini",
     "sl": "Bučke",
-    "nl": "Courgette"
+    "nl": "Courgette",
+    "pl": "Cukinia"
   },
   "question": {
     "en": "Can cats eat zucchini?",
     "sl": "Ali lahko mačke jedo bučke?",
-    "nl": "Mogen katten courgette eten?"
+    "nl": "Mogen katten courgette eten?",
+    "pl": "Czy koty mogą jeść cukinię?"
   },
   "url_slug": {
     "en": "zucchini",
     "sl": "bucke",
-    "nl": "courgette"
+    "nl": "courgette",
+    "pl": "cukinia"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small plain piece of zucchini is fine as an occasional treat. The ASPCA lists zucchini squash as non-toxic to cats. Keep the plant's leaves away, though: International Cat Care says contact with them can irritate a cat's mouth.",
     "sl": "Da, majhen navaden košček bučke je v redu kot občasen priboljšek. ASPCA bučke navaja kot nestrupene za mačke. Listov rastline pa mački ne dajajte: International Cat Care opozarja, da lahko stik z njimi razdraži mačja usta.",
-    "nl": "Ja, een klein naturel stukje courgette is af en toe prima als traktatie. De ASPCA noemt courgette niet giftig voor katten. Houd de bladeren van de plant wel uit de buurt van je kat: volgens International Cat Care kan aanraking ervan de mond van een kat irriteren."
+    "nl": "Ja, een klein naturel stukje courgette is af en toe prima als traktatie. De ASPCA noemt courgette niet giftig voor katten. Houd de bladeren van de plant wel uit de buurt van je kat: volgens International Cat Care kan aanraking ervan de mond van een kat irriteren.",
+    "pl": "Tak, mały zwykły kawałek cukinii jest w porządku jako okazjonalny smakołyk. ASPCA uznaje cukinię za nietoksyczną dla kotów. Trzymaj jednak kota z dala od liści rośliny: International Cat Care podaje, że kontakt z nimi może podrażnić kotu pysk."
   },
   "why": {
     "en": "The ASPCA lists zucchini squash as non-toxic to cats. International Cat Care warns that contact with the leaves of food plants, including zucchini, can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "ASPCA bučke navaja kot nestrupene za mačke. International Cat Care opozarja, da lahko stik z listi užitnih rastlin, tudi bučk, mački povzroči mehurje ali srbenje v ustih in na dlesnih, kihanje in težave z očmi. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
-    "nl": "De ASPCA noemt courgette niet giftig voor katten. International Cat Care waarschuwt dat de bladeren van eetbare planten, courgette inbegrepen, bij een kat blaren of jeuk in de mond en op het tandvlees, niezen en oogklachten kunnen veroorzaken. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken."
+    "nl": "De ASPCA noemt courgette niet giftig voor katten. International Cat Care waarschuwt dat de bladeren van eetbare planten, courgette inbegrepen, bij een kat blaren of jeuk in de mond en op het tandvlees, niezen en oogklachten kunnen veroorzaken. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken.",
+    "pl": "ASPCA uznaje cukinię za nietoksyczną dla kotów. International Cat Care ostrzega, że kontakt z liśćmi roślin spożywczych, w tym cukinii, może wywołać pęcherze lub swędzenie w pysku i na dziąsłach, kichanie i problemy z oczami. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
-    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies."
+    "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
   },
   "serving": {
     "en": "A small plain piece of the zucchini itself, with no butter, salt or seasoning. Keep the plant's leaves away from your cat.",
     "sl": "Majhen navaden košček same bučke, brez masla, soli in začimb. Listov rastline mački ne dajajte.",
-    "nl": "Een klein naturel stukje van de courgette zelf, zonder boter, zout of kruiden. Houd de bladeren van de plant uit de buurt van je kat."
+    "nl": "Een klein naturel stukje van de courgette zelf, zonder boter, zout of kruiden. Houd de bladeren van de plant uit de buurt van je kat.",
+    "pl": "Mały zwykły kawałek samej cukinii, bez masła, soli i przypraw. Trzymaj liście rośliny z dala od kota."
   },
   "child": {
     "en": "A little piece of zucchini can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček bučke je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
-    "nl": "Een klein stukje courgette kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje."
+    "nl": "Een klein stukje courgette kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
+    "pl": "Małym kawałkiem cukinii można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
   },
   "faq": [
     {
       "q": {
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
-        "nl": "Hebben katten groente nodig?"
+        "nl": "Hebben katten groente nodig?",
+        "pl": "Czy koty potrzebują warzyw?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
-        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje."
+        "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
       }
     }
   ],
@@ -125,6 +135,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "71795a31b80743f12ab241646542758c2e4d378b552721863db8f09249fe445e"
+    },
+    "pl": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ed7448f09150377cc3bcb78254f0de1141367edbf0dc6c8fe9bf5ba8a8cce6cc"
     }
   }
 }
