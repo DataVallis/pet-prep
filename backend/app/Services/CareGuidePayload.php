@@ -105,7 +105,7 @@ final class CareGuidePayload
                 $careTasks[] = ['task' => $task->value, 'actor' => $task->actor(), 'times' => $frequency['times'], 'period_days' => $frequency['period_days']];
             }
         }
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $walkHeat = app(WalkHeatService::class)->appliesTo($pet, $today) ? [
             'months' => array_map('intval', (array) config(WalkHeatService::isSouthern($tz) ? 'care_tasks.heat.summer_months_south' : 'care_tasks.heat.summer_months_north')),
             'from' => (string) config('care_tasks.heat.from', '11:00'),

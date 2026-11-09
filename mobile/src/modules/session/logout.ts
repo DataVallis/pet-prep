@@ -91,7 +91,7 @@ export async function logout({ revoke = true }: LogoutOptions = {}): Promise<voi
   await clearLiveSteps(userId, SecureStore);
   // M3-06: no background step sync for a signed-out phone (never throws).
   await unregisterStepSyncTask();
-  await forgetFamilyTimezone(SecureStore);
+  await forgetFamilyTimezone(SecureStore, userId);
   // M2-10c: the next parent on this phone states their own sign-in method.
   await forgetSignInMethod(SecureStore);
   // The next user starts with a fresh fetch budget (the server limit is per user).

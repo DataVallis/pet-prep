@@ -20,6 +20,7 @@ import {
   type PetActivitiesResponse,
   type PetNameResponse,
   type UpdateFamilySettingsResponse,
+  type UpdatePetTimezoneResponse,
 } from '@/api/client';
 import {
   childReportKey,
@@ -155,6 +156,22 @@ export function useUpdateFamilyTimezone() {
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
       void queryClient.invalidateQueries({ queryKey: quietHoursKey });
+    },
+  });
+}
+
+/**
+ * Time zone per pet (David 2026-11-09): the pet's own zone, or null = back to the family zone.
+ * Not optimistic; the dashboard is refetched once the server saved it (it also broadcasts
+ * `pet_timezone_changed`).
+ */
+export function useUpdatePetTimezone() {
+  const queryClient = useQueryClient();
+  return useMutation<UpdatePetTimezoneResponse, unknown, { petId: number; timezone: string | null }>({
+    mutationFn: ({ petId, timezone }) => api.updatePetTimezone(petId, timezone),
+    retry: false,
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: parentDashboardKey });
     },
   });
 }

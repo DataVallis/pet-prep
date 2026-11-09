@@ -37,6 +37,7 @@ import ControlsScreen from '@/screens/parent/ControlsScreen';
 import ChallengeScreen from '@/screens/parent/ChallengeScreen';
 import ChallengeBanner from '@/components/parent/ChallengeBanner';
 import TimezoneSuggestionBanner from '@/components/parent/TimezoneSuggestionBanner';
+import { petZoneOf } from '@/modules/familyZone/familyZone';
 import AddChildScreen from '@/screens/parent/AddChildScreen';
 import ChildDetailScreen from '@/screens/parent/ChildDetailScreen';
 import WishesScreen from '@/screens/parent/WishesScreen';
@@ -116,8 +117,6 @@ export default function ParentDashboardScreen() {
   const [overlay, setOverlay] = useState<Overlay>({ kind: 'none' });
   // A code, not text: translated at render so it follows a language switch (M1-18 review).
   const [notice, setNotice] = useState<JoinNotice | null>(null);
-  // David 2026-11-08: »Zamenjam« on the time zone banner → Nadzor with the zone sheet open.
-  const [timezoneRequest, setTimezoneRequest] = useState(0);
   const dashboard = useParentDashboard();
   // M5-F13: during a deploy the calm banner replaces error banners; the last data stays.
   const serverUpdating = useServerOutage();
@@ -253,8 +252,6 @@ export default function ParentDashboardScreen() {
             onOpenChallenge={() => openChallenge()}
             notice={notice}
             onNotice={setNotice}
-            timezoneRequest={timezoneRequest}
-            onTimezoneRequestHandled={() => setTimezoneRequest(0)}
           />
           <BottomNavBar activeTab={activeTab} onSelect={setActiveTab} onHeight={setTabBarHeight} />
         </>
@@ -289,13 +286,8 @@ export default function ParentDashboardScreen() {
 
         <ScrollView style={styles.flex} contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
           <ChallengeBanner family={family} onOpen={() => openChallenge()} />
-          <TimezoneSuggestionBanner
-            familyZone={family?.timezone ?? null}
-            onChange={() => {
-              setTimezoneRequest((n) => n + 1);
-              setActiveTab('controls');
-            }}
-          />
+          {/* David 2026-11-09: per pet — only the pets cared for on this phone are suggested. */}
+          <TimezoneSuggestionBanner familyZone={family?.timezone ?? null} pets={family?.pets ?? []} />
           {wishesOpenCount !== null && children.length > 0 && (
             <WishesRow count={wishesOpenCount} onPress={() => setOverlay({ kind: 'wishes' })} />
           )}
@@ -329,7 +321,8 @@ export default function ParentDashboardScreen() {
                 key={child.id}
                 child={child}
                 pet={family ? petOfChild(child, family) : null}
-                timezone={family?.timezone ?? 'Europe/Ljubljana'}
+                // David 2026-11-09: the child's pet's own clock (else the family default).
+                timezone={petZoneOf(family ? petOfChild(child, family) : null, family?.timezone ?? null) ?? 'Europe/Ljubljana'}
                 onOpen={openChild}
                 onLogWalk={openLogWalk}
                 onChildPin={openChildPin}

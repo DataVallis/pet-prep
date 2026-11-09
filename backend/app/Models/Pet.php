@@ -305,6 +305,8 @@ class Pet extends Model
         'care_reminder_check_at',
         // David 2026-11-02 (self-healing activity clips): activities in simple mode (GameMediaReadiness::simpleGames()).
         'simple_activities',
+        // David 2026-11-09: last change of the pet's own time zone (24 h limit, PetTimezoneService).
+        'timezone_changed_at',
     ];
 
     /**
@@ -320,6 +322,8 @@ class Pet extends Model
             'pet_state' => PetStateEnum::class,
             'pet_dna' => 'array',
             'born_at' => 'datetime',
+            // David 2026-11-09: last change of the pet's own zone (PetTimezoneService, once per 24 h).
+            'timezone_changed_at' => 'datetime',
             'illness_until' => 'datetime',
             'walk_illness_due_at' => 'datetime',
             'last_step_reset_at' => 'datetime',
@@ -791,7 +795,7 @@ class Pet extends Model
             return true;
         }
 
-        return CarbonImmutable::parse($localDate, $this->familyTimezone())->startOfDay()->getTimestamp() >= $since->getTimestamp();
+        return CarbonImmutable::parse($localDate, $this->effectiveTimezone())->startOfDay()->getTimestamp() >= $since->getTimestamp();
     }
 
     /** M5-R06: the dog rules (walk / steps, training, ball play) apply. */
@@ -1035,7 +1039,7 @@ class Pet extends Model
      */
     public function trialEndFor(CarbonInterface $birth): CarbonInterface
     {
-        return $birth->copy()->setTimezone($this->familyTimezone())->addDays(self::TRIAL_DAYS)->utc();
+        return $birth->copy()->setTimezone($this->effectiveTimezone())->addDays(self::TRIAL_DAYS)->utc();
     }
 
     /**
@@ -1264,11 +1268,12 @@ class Pet extends Model
     }
 
     /**
-     * The family-local calendar date (Y-m-d) of an instant.
+     * The pet-local calendar date (Y-m-d) of an instant — in the pet's
+     * effective zone (effectiveTimezone(), David 2026-11-09).
      */
     public function localDate(CarbonInterface $at): string
     {
-        return $at->copy()->setTimezone($this->familyTimezone())->toDateString();
+        return $at->copy()->setTimezone($this->effectiveTimezone())->toDateString();
     }
 
     /**
@@ -1454,20 +1459,54 @@ class Pet extends Model
     {
         $quietHours = QuietHours::where('family_id', $this->family_id)->first();
         if ($quietHours === null) {
-            return QuietHours::defaultFor($this->family);
+            return QuietHours::defaultFor($this->family)->readIn($this->effectiveTimezone());
         }
 
-        // QuietHours evaluates its windows in the family timezone; hand it
-        // the family we already have.
+        // QuietHours keeps its windows per family, but they are read on this
+        // pet's wall clock (David 2026-11-09: 21–07 in Lisbon for a Lisbon
+        // pet); hand it the family we already have.
         if ($this->family !== null) {
             $quietHours->setRelation('family', $this->family);
         }
 
-        return $quietHours;
+        return $quietHours->readIn($this->effectiveTimezone());
+    }
+
+    /**
+     * The pet's effective IANA time zone (David 2026-11-09, family members
+     * in different places): its own `pets.timezone`, or — null — the family
+     * zone (familyTimezone()). EVERY wall-clock rule of a pet (meal windows,
+     * quiet hours / sleep, midnight, step day, routines / Care Score day,
+     * behaviour events, hygiene schedule, training / play budgets, pushes,
+     * report and timeline dates, certificates) reads this — never
+     * familyTimezone() directly. Only PetTimezoneService writes the column.
+     *
+     * Trap: a model loaded with a partial column list (`->with('pet:id,name')`,
+     * `->get(['id', …])`) has no `timezone` attribute and SILENTLY falls back to
+     * the family zone — select `timezone` (and `family_id`) wherever the zone of
+     * such a model is read.
+     */
+    public function effectiveTimezone(): string
+    {
+        $own = $this->getAttribute('timezone');
+
+        return is_string($own) && $own !== '' ? $own : $this->familyTimezone();
+    }
+
+    /**
+     * True when the pet has its own zone (`pets.timezone` set) instead of
+     * following the family's.
+     */
+    public function hasOwnTimezone(): bool
+    {
+        $own = $this->getAttribute('timezone');
+
+        return is_string($own) && $own !== '';
     }
 
     /**
      * The family timezone (families.timezone, M2-01), see User::familyTimezone().
+     * The DEFAULT for the pet — rules read effectiveTimezone().
      */
     public function familyTimezone(): string
     {

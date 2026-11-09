@@ -48,7 +48,19 @@ class FamilyDashboardService
      */
     public static function historyStart(Pet $pet): Carbon
     {
-        return Carbon::now($pet->familyTimezone())->startOfDay()->subDays(self::FREE_HISTORY_DAYS - 1)->utc();
+        return Carbon::now($pet->effectiveTimezone())->startOfDay()->subDays(self::FREE_HISTORY_DAYS - 1)->utc();
+    }
+
+    /**
+     * Free-plan rows of $free pets only from each pet's own history start.
+     *
+     * @param  Collection<int, Pet>  $free
+     */
+    private function sinceHistoryStart(mixed $query, Collection $free): void
+    {
+        foreach ($free as $pet) {
+            $query->orWhere(fn ($w) => $w->where('pet_id', $pet->id)->where('created_at', '>=', self::historyStart($pet)));
+        }
     }
 
     public function __construct(
@@ -102,8 +114,11 @@ class FamilyDashboardService
      */
     public function family(Family $family, User $viewer): array
     {
+        // The family zone = the default for pets without their own (David 2026-11-09);
+        // every per-pet date below reads the pet's effective zone.
         $tz = $family->timezone;
-        $pets = Pet::where('family_id', $family->id)->orderBy('id')->with(['media', 'paymentLockPeriods'])->get();
+        $pets = Pet::where('family_id', $family->id)->orderBy('id')->with(['media', 'paymentLockPeriods'])->get()
+            ->each(fn (Pet $p) => $p->setRelation('family', $family));
         $caretakers = PetCaretaker::whereIn('pet_id', $pets->pluck('id'))->orderBy('id')->get();
         $contracts = PetContract::whereIn('pet_id', $pets->pluck('id'))->get(['pet_id', 'user_id', 'signed_at']);
         $children = $family->children()->get(['users.id', 'users.name', 'users.birth_year', 'users.adapted_mode', 'users.media_display', 'users.easy_gestures', 'users.game_feedback', DB::raw('(users.password IS NULL) AS pin_only')]);
@@ -127,22 +142,28 @@ class FamilyDashboardService
             ->each(fn (ChallengeCertificate $c) => $c->setRelation('child', $children->firstWhere('id', $c->child_user_id))
                 ->setRelation('pet', $pets->firstWhere('id', $c->pet_id)));
 
-        $from = now()->setTimezone($tz)->startOfDay()->subDays(self::STATS_DAYS - 1);
-        $fromUtc = $from->copy()->utc();
+        // Last 7 local days of each pet, in that pet's own zone (David 2026-11-09).
+        $statsFrom = $pets->mapWithKeys(fn (Pet $p) => [$p->id => now()->setTimezone($p->effectiveTimezone())->startOfDay()->subDays(self::STATS_DAYS - 1)])->all();
 
-        $actionCounts = ActivityLog::query()
+        $actionCounts = $pets->isEmpty() ? collect() : ActivityLog::query()
             ->whereIn('actor_user_id', $children->pluck('id'))
-            ->whereIn('pet_id', $pets->pluck('id'))
-            ->where('created_at', '>=', $fromUtc)
+            ->where(function ($q) use ($statsFrom): void {
+                foreach ($statsFrom as $petId => $from) {
+                    $q->orWhere(fn ($w) => $w->where('pet_id', $petId)->where('created_at', '>=', $from->copy()->utc()));
+                }
+            })
             ->selectRaw('actor_user_id, activity_type, count(*) as n')
             ->groupBy('actor_user_id', 'activity_type')
             ->get()
             ->groupBy('actor_user_id');
 
-        $steps = PetDailyStep::query()
+        $steps = $pets->isEmpty() ? collect() : PetDailyStep::query()
             ->whereIn('user_id', $children->pluck('id'))
-            ->whereIn('pet_id', $pets->pluck('id'))
-            ->where('local_date', '>=', $from->toDateString())
+            ->where(function ($q) use ($statsFrom): void {
+                foreach ($statsFrom as $petId => $from) {
+                    $q->orWhere(fn ($w) => $w->where('pet_id', $petId)->where('local_date', '>=', $from->toDateString()));
+                }
+            })
             ->selectRaw('user_id, sum(steps) as total, count(*) filter (where steps > 0) as days')
             ->groupBy('user_id')
             ->get()
@@ -156,7 +177,7 @@ class FamilyDashboardService
                 'name' => $p->name,
                 'is_me' => $p->id === $viewer->id,
             ])->values()->all(),
-            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts, $devices, $board, $certificates, $tz) {
+            'children' => $children->map(function (User $child) use ($caretakers, $pets, $actionCounts, $steps, $contracts, $devices, $board, $certificates) {
                 $petIds = $caretakers->where('user_id', $child->id)->pluck('pet_id');
                 $current = $pets->whereIn('id', $petIds)->sortByDesc(fn (Pet $p) => [(int) $p->is_active, $p->id])->first();
                 $counts = $this->countsByType($actionCounts->get($child->id, collect()));
@@ -225,10 +246,10 @@ class FamilyDashboardService
                     ...$this->scores->childSummary($board, $child->id, $current),
                     // M2-01d: how this child's 12-week challenge on `pet_id` ended (certificate /
                     // report, same shape as a GET /api/parent/certificates item); null while it runs.
-                    'certificate' => $certificate !== null ? $this->certificates->payload($certificate, $tz)->toArray() : null,
+                    'certificate' => $certificate !== null ? $this->certificates->payload($certificate, $current->effectiveTimezone())->toArray() : null,
                 ];
             })->values()->all(),
-            'pets' => $pets->map(function (Pet $pet) use ($playToday, $tz, $caretakers, $contracts, $timelines, $board) {
+            'pets' => $pets->map(function (Pet $pet) use ($playToday, $caretakers, $contracts, $timelines, $board) {
                 // M5-R01 profile, shared with the care guide (one computation per pet).
                 $profile = PetProfilePayload::for($pet);
 
@@ -241,6 +262,20 @@ class FamilyDashboardService
                      */
                     'play_today' => $playToday[$pet->id] ?? null,
                     'id' => $pet->id,
+                    /**
+                     * The pet's effective IANA time zone (David 2026-11-09): its own zone,
+                     * else the family's. Every time of this pet is read on this clock.
+                     *
+                     * @var string
+                     */
+                    'timezone' => $pet->effectiveTimezone(),
+                    /**
+                     * True when the pet follows the family zone (`pets.timezone` null) —
+                     * the app shows »po družini«.
+                     *
+                     * @var bool
+                     */
+                    'timezone_follows_family' => ! $pet->hasOwnTimezone(),
                     'breed_type' => $pet->breed_type->value,
                     // M5-R06-01: dog | cat.
                     'species' => $pet->speciesValue()->value,
@@ -257,7 +292,7 @@ class FamilyDashboardService
                     // the child state and the PetUpdated broadcast carry — the app never re-derives it.
                     'pet_state' => $pet->pet_state->value,
                     // M3-11: plan + payment status (paywall per pet).
-                    'plan' => PetPlanPayload::for($pet, $tz)->toArray(),
+                    'plan' => PetPlanPayload::for($pet, $pet->effectiveTimezone())->toArray(),
                     // M5-R01: origin, age, life stage and today's rules (meals by
                     // child / by parent in quiet hours, step goal).
                     'profile' => $profile->toArray(),
@@ -309,13 +344,16 @@ class FamilyDashboardService
      */
     public function childReport(Family $family, User $child, int $days): array
     {
-        $tz = $family->timezone;
         $caretakers = PetCaretaker::where('user_id', $child->id)->orderBy('id')->get();
         $pet = Pet::where('family_id', $family->id)
             ->whereIn('id', $caretakers->pluck('pet_id'))
             ->get()
             ->sortByDesc(fn (Pet $p) => [(int) $p->is_active, $p->id])
             ->first();
+        $pet?->setRelation('family', $family);
+        // The report covers the child's (current) pet: its days are that pet's
+        // local days (David 2026-11-09); no pet → the family zone.
+        $tz = $pet?->effectiveTimezone() ?? $family->timezone;
 
         // M3-11: a free-plan pet's history is limited to 7 days (30 / 84 → 7).
         $limited = $pet !== null && $pet->isFreePlan() && $days > self::FREE_HISTORY_DAYS;
@@ -339,7 +377,7 @@ class FamilyDashboardService
         ];
 
         $pets = $pet !== null ? collect([$pet]) : collect();
-        $board = $this->scores->board($pets, $tz);
+        $board = $this->scores->board($pets, $family->timezone);
         $summary = $this->scores->childSummary($board, $child->id, $pet);
 
         $byType = [];
@@ -442,7 +480,7 @@ class FamilyDashboardService
             ->selectRaw('row_number() over (partition by pet_id order by created_at desc, id desc) as rn')
             ->whereIn('pet_id', $pets->pluck('id'))
             ->when($freeIds !== [], fn ($q) => $q->where(fn ($w) => $w->whereNotIn('pet_id', $freeIds)
-                ->orWhere('created_at', '>=', self::historyStart($pets->first()))));
+                ->orWhere(fn ($f) => $this->sinceHistoryStart($f, $pets->filter(fn (Pet $p) => $p->isFreePlan())))));
 
         $rows = DB::query()->fromSub($ranked, 't')
             ->where('rn', '<=', $limit)
@@ -450,9 +488,11 @@ class FamilyDashboardService
             ->orderBy('rn')
             ->get();
 
-        $tz = $pets->first()->familyTimezone();
+        $zones = $pets->mapWithKeys(fn (Pet $p) => [$p->id => $p->effectiveTimezone()])->all();
         $out = [];
         foreach ($rows as $row) {
+            // Each row on its own pet's clock (David 2026-11-09).
+            $tz = $zones[(int) $row->pet_id];
             $actor = $row->actor_user_id !== null ? (int) $row->actor_user_id : null;
             $out[(int) $row->pet_id][] = [
                 'id' => (int) $row->id,

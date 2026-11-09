@@ -45,7 +45,7 @@ final class BehaviourPayload
         $now = CarbonImmutable::instance($now ?? now());
         $behaviour = app(BehaviourEventService::class);
         $ledger = app(RoutineLedgerService::class);
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $quiet = $pet->quietHours();
         $iso = fn (?CarbonInterface $at): ?string => $at === null ? null : CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
 

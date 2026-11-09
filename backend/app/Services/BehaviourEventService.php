@@ -285,7 +285,7 @@ class BehaviourEventService
             return null;
         }
 
-        $midnight = CarbonImmutable::parse($localDate, $pet->familyTimezone())->startOfDay()->utc();
+        $midnight = CarbonImmutable::parse($localDate, $pet->effectiveTimezone())->startOfDay()->utc();
         if (! $quiet->isQuietNow($midnight)) {
             return null;
         }
@@ -339,7 +339,7 @@ class BehaviourEventService
      */
     private function dueFrom(Pet $pet, CarbonImmutable $start, ?QuietHours $quiet): ?array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
 
         for ($hop = 0; $hop < self::MAX_HOPS; $hop++) {
             $hold = $this->holdHoursOn($pet, $pet->localDate($start));
@@ -389,7 +389,7 @@ class BehaviourEventService
             return;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $today = Carbon::parse($pet->localDate($now), $tz);
         $day = Carbon::parse($pet->localDate($from), $tz);
         // Scheduler outage (PR #42 M1): never back-schedule past days, and

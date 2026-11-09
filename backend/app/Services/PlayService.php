@@ -205,7 +205,7 @@ class PlayService
             return;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $today = Carbon::parse($pet->localDate($now), $tz);
         $day = Carbon::parse($pet->localDate($from), $tz);
         $outage = BehaviourEventService::isOutage($from, $now);
@@ -313,7 +313,7 @@ class PlayService
      */
     private function openMinutesOfBand(Pet $pet, string $localDate, QuietHours $quiet): array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         [$from, $to] = (array) config('play.day_band', ['07:00', '20:00']);
         $start = Carbon::parse($localDate.' '.$from, $tz)->utc();
         $end = Carbon::parse($localDate.' '.$to, $tz)->utc();

@@ -48,7 +48,7 @@ Brez zastavice `features` iz aplikacije: igra nima posledic, zato stara različi
 
 ### 3.2 Vabila (spodbuda)
 - **2 vabili na lokalni dan na psa: 1 igra z žogo + 1 crkljanje** **(D)**. Vrstni red naključen.
-- Čas: naključna cela minuta **izven tihih ur** v **dnevnem pasu 07:00–20:00** po času družine **(D)**; vsaj **3 h narazen** **(D)**. Če je netihega časa premalo, eno vabilo ali nobeno.
+- Čas: naključna cela minuta **izven tihih ur** v **dnevnem pasu 07:00–20:00** po času ljubljenčka (privzeto po času družine, PRODUCT_SPEC §4) **(D)**; vsaj **3 h narazen** **(D)**. Če je netihega časa premalo, eno vabilo ali nobeno.
 - Nikoli med tihimi urami, pred rojstvom, med hard stopom, pri veterinarju, po game overu ali med zaklepom do plačila. Vabilo, ki bi padlo v tak čas, odpade (se ne nadoknadi) — kot kakec.
 - **Kuža mora biti preskrbljen** (David 8. 10., Q4): **današnji sprehod je opravljen** — koraki ≥ dnevni cilj (energija kaže 100 %; isti prag kot rutina »Sprehod«, PRODUCT_SPEC §11.1) — in **(D)** ni odprtega nereda, lakota in žeja kažeta > 30 %. Če pogoj ob času vabila ne velja, vabilo **čaka skrito** in se pokaže, ko začne veljati — v okviru istih 2 ur. Na dan, ko otrok cilja sprehoda ne doseže, vabil ni (prosta igra je še vedno mogoča).
 - Vabilo čaka **2 uri** **(D)**; če se vmes začnejo tihe ure, se konča ob njihovem začetku.

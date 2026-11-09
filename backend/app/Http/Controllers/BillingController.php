@@ -87,7 +87,7 @@ class BillingController extends Controller
             /** @var 'activated'|'already_active' */
             'status' => $result['status'],
             'pet_id' => $result['pet']->id,
-            'plan' => PetPlanPayload::for($result['pet'], $family->timezone)->toArray(),
+            'plan' => PetPlanPayload::for($result['pet'], $result['pet']->timezone ?? $family->timezone)->toArray(),
             /** @var int */
             'credits_available' => (int) $billing['credits_available'],
         ]);

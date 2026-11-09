@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Log;
 /**
  * Family-wide settings, editable by any parent of the family (M1-03, M2-01).
  *
+ * Since David 2026-11-09 the family timezone is the DEFAULT zone of the
+ * family's pets: a pet with its own `pets.timezone` (PetTimezoneService)
+ * keeps it — a family change moves only the pets that follow the family
+ * (the steps below), never stamps their `timezone_changed_at`, and still
+ * broadcasts to every pet (the apps show the new default).
+ *
  * The family timezone is stored on `families.timezone`; every parent's
  * `users.timezone` is kept in sync (deprecated mirror). Changing it only
  * changes how wall clock rules are read from now on — stored timestamps
@@ -44,7 +50,7 @@ class FamilySettingsService
 
     public function __construct(
         private readonly FamilyService $families,
-        private readonly DailyWalkService $dailyWalks,
+        private readonly PetTimezoneService $petZones,
     ) {}
 
     /**
@@ -71,31 +77,26 @@ class FamilySettingsService
 
             $pets = Pet::where('family_id', $locked->id)->orderBy('id')->lockForUpdate()->get();
 
+            // Only pets that follow the family zone move (David 2026-11-09).
+            $following = $pets->filter(fn (Pet $p) => ! $p->hasOwnTimezone());
+
             // 1. Close a day that is already over in the old zone.
-            foreach ($pets as $pet) {
+            foreach ($following as $pet) {
                 $pet->setRelation('family', $locked);
-                $this->dailyWalks->closeDayIfNeeded($pet, $now, allowIllness: true);
+                $this->petZones->closeOldDay($pet, $now);
             }
 
             $this->families->updateTimezone($locked, $timezone);
             $locked->forceFill(['timezone_changed_at' => $now])->save();
-            $oldToday = $now->setTimezone($old)->toDateString();
-            $newToday = $now->setTimezone($timezone)->toDateString();
-            $newDayStart = CarbonImmutable::parse($newToday, $timezone)->startOfDay()->utc();
 
             foreach ($pets as $pet) {
                 $pet->setRelation('family', $locked);
-                // 2. Same date in both zones: the running step day continues.
-                if ($oldToday === $newToday && $pet->last_step_reset_at !== null
-                    && $pet->localDate($pet->last_step_reset_at) < $newToday) {
-                    $pet->last_step_reset_at = $newDayStart;
+                if (! $pet->hasOwnTimezone()) {
+                    // 2. Same date in both zones: the running step day continues;
+                    // 3. re-evaluate the routine close pointer on the next tick.
+                    $this->petZones->settleNewZone($pet, $old, $now);
+                    $pet->save();
                 }
-                // 3. Re-evaluate the routine close pointer on the next tick.
-                $nextClose = $pet->routines_next_close_at; // uncast column (UTC)
-                if ($nextClose !== null && CarbonImmutable::parse((string) $nextClose, 'UTC')->greaterThan($now)) {
-                    $pet->routines_next_close_at = $now->toDateTimeString();
-                }
-                $pet->save();
                 PetUpdated::afterCommit($pet, 'family_timezone_changed');
             }
 

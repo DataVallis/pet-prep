@@ -23,6 +23,7 @@ use App\Http\Controllers\ParentSettingsController;
 use App\Http\Controllers\PetGrowthController;
 use App\Http\Controllers\PetMediaController;
 use App\Http\Controllers\PetNameController;
+use App\Http\Controllers\PetTimezoneController;
 use App\Http\Controllers\QuietHoursController;
 use App\Http\Controllers\RevenueCatWebhookController;
 use App\Http\Controllers\WishController;
@@ -206,6 +207,8 @@ Route::middleware(['auth:sanctum', 'ability:parent', 'throttle:api'])
 
         // Family settings (timezone, M1-03)
         Route::put('settings', [ParentSettingsController::class, 'update']);
+        // Time zone per pet (David 2026-11-09): own zone or back to the family zone.
+        Route::put('pets/{pet}/timezone', [PetTimezoneController::class, 'update'])->whereNumber('pet');
 
         // 12-week challenge billing (M3-11, PAYMENTS_SPEC): unused purchases + pet
         // payment status; assign a purchase (challenge credit) to a pet.

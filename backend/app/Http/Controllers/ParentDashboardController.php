@@ -122,7 +122,7 @@ class ParentDashboardController extends Controller
                 'escalation_level' => $pet->escalation_level,
                 'virtual_age_months' => $pet->virtualAgeInMonths(),
                 // M3-11: plan + payment status (paywall per pet).
-                'plan' => PetPlanPayload::for($pet, $family->timezone)->toArray(),
+                'plan' => PetPlanPayload::for($pet, $pet->effectiveTimezone())->toArray(),
                 // M5-R01: origin, age, life stage and today's rules.
                 'profile' => PetProfilePayload::for($pet)->toArray(),
                 // AI media (M4-05): signed URLs to our stored copies.
@@ -144,7 +144,7 @@ class ParentDashboardController extends Controller
                 ->orderBy('id', 'desc')
                 ->limit(20)
                 ->get()),
-            'weekly_performance' => $this->getWeeklyPerformance($pet, $family->timezone),
+            'weekly_performance' => $this->getWeeklyPerformance($pet, $pet->effectiveTimezone()),
             'family' => $familyData,
             // M6-W01 »Želje«: open wishes of all children, all pets of the family.
             'wishes_open_count' => app(WishService::class)->openCountOfFamily($family),

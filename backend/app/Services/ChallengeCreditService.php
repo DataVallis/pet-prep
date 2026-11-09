@@ -250,8 +250,9 @@ class ChallengeCreditService
                 'pet_id' => $pet->id,
                 'plan' => $pet->plan->value,
                 'status' => $pet->challengeStatus()?->value,
-                'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($tz)->toIso8601String(),
-                'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($tz)->toIso8601String(),
+                // The pet's own clock (David 2026-11-09): its zone, else the family's.
+                'trial_ends_at' => $pet->trial_ends_at?->copy()->setTimezone($pet->timezone ?? $tz)->toIso8601String(),
+                'paid_at' => $pet->challenge_paid_at?->copy()->setTimezone($pet->timezone ?? $tz)->toIso8601String(),
                 // M3-13: no free trial any more — true only for a pre-M3-13 pet whose
                 // 7-day trial ran (null for a free pet). Kept for old app builds.
                 'trial_available' => $this->trialAvailable($pet),

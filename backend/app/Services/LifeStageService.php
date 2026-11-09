@@ -127,7 +127,7 @@ class LifeStageService
      */
     public function ageMonthsOn(Pet $pet, string $localDate): ?int
     {
-        return $this->ageMonthsAt($pet, CarbonImmutable::parse($localDate, $pet->familyTimezone())->startOfDay());
+        return $this->ageMonthsAt($pet, CarbonImmutable::parse($localDate, $pet->effectiveTimezone())->startOfDay());
     }
 
     /**
@@ -146,7 +146,7 @@ class LifeStageService
             return 0;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $born = $pet->programBirthAt($at)->setTimezone($tz);
         $t = $pet->programInstantAt($at)->setTimezone($tz);
         if ($t->lessThanOrEqualTo($born)) {
@@ -203,7 +203,7 @@ class LifeStageService
         }
 
         $days = max(1, $days);
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $born = CarbonImmutable::instance($pet->born_at)->setTimezone($tz);
         $atTs = CarbonImmutable::instance($at)->getTimestamp();
         // Where the program clock stands at $at, as an instant on the lock-free timeline.
@@ -348,7 +348,7 @@ class LifeStageService
         $age = $this->ageMonthsOn($pet, $pet->localDate($now));
         foreach ($this->stageStarts($slug) as $value => $from) {
             if ($from > $age) {
-                $tz = $pet->familyTimezone();
+                $tz = $pet->effectiveTimezone();
                 // Effective birth (M3-11b): all payment-lock time up to now is
                 // skipped — while locked this assumes the clock resumes now.
                 $born = CarbonImmutable::instance($pet->born_at)->utc()

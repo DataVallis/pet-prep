@@ -124,7 +124,7 @@ class ChildPetStateResource extends JsonResource
     {
         $pet = $this->resource;
         $now = now()->startOfSecond();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $config = $pet->breedConfig();
         $schedule = app(CareScheduleService::class);
 

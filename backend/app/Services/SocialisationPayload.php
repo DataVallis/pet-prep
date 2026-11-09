@@ -56,7 +56,7 @@ final class SocialisationPayload
             return null;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (?CarbonInterface $at): ?string => $at === null ? null : CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
         $rows = $service->rowsBetween($pet, $week['start'], $now->addSecond());
         $last = $rows->last();

@@ -1,11 +1,14 @@
 /**
  * Family time zone setting (David 2026-11-08, »kar B«) — pure helpers.
  *
- * Every wall-clock rule (quiet hours, sleep, meal windows, midnight, step day) runs in the
- * family's IANA zone (`families.timezone`). A parent can change it (`PUT /api/parent/settings`,
- * at most once per 24 h), and the parent app suggests it when the PHONE's current UTC offset
- * differs from the family zone's current offset (travelling). Offsets, not names, decide:
- * Europe/Ljubljana and Europe/Vienna are the same clock, so no banner.
+ * Every wall-clock rule (quiet hours, sleep, meal windows, midnight, step day) of a pet runs in
+ * that PET's zone (David 2026-11-09): its own `pets.timezone`, else the family's
+ * (`families.timezone`, the default) — the dashboard sends it as `family.pets[].timezone`. A parent
+ * can change the family default (`PUT /api/parent/settings`) and each pet's zone
+ * (`PUT /api/parent/pets/{id}/timezone`, null = back to the family), each at most once per 24 h.
+ * The app suggests switching the pets cared for on this phone when the PHONE's current UTC
+ * offset differs from theirs (travelling). Offsets, not names, decide: Europe/Ljubljana and
+ * Europe/Vienna are the same clock, so no banner.
  *
  * Nothing here touches the network or storage; UI lives in `components/parent/FamilyTimezoneCard`
  * and `TimezoneSuggestionBanner`, dismissals in `zoneSuggestionPrefs.ts`.
@@ -230,7 +233,7 @@ export type TimezoneChangeError =
   | { kind: 'offline' }
   | { kind: 'failed' };
 
-/** Map a failed `PUT /api/parent/settings` to what the sheet says. */
+/** Map a failed `PUT /api/parent/settings` / `PUT /api/parent/pets/{id}/timezone` to what the sheet says. */
 export function readTimezoneChangeError(error: unknown): TimezoneChangeError {
   if (!(error instanceof ApiError)) return { kind: 'offline' };
   const data = error.data;
@@ -258,4 +261,91 @@ export function currentPhoneZone(): string | null {
 /** Test hook: pretend the phone is in `zone` (undefined = the real device zone). */
 export function setPhoneZoneForTests(zone: string | null | undefined): void {
   phoneZoneOverride = zone;
+}
+
+// ──────────────────────────────────────────────────────────────
+//  Time zone per pet (David 2026-11-09)
+// ──────────────────────────────────────────────────────────────
+
+/** What the per-pet helpers read of a dashboard pet (`family.pets[]`). */
+export interface ZonePet {
+  id: number;
+  /** The pet's effective zone (own, else the family's) — servers before 2026-11-09 send none. */
+  timezone?: unknown;
+  /** True = follows the family zone (`pets.timezone` null). */
+  timezone_follows_family?: unknown;
+  is_active?: unknown;
+  is_game_over?: unknown;
+  caretakers?: readonly { child_id: number | null }[] | null;
+}
+
+/**
+ * The zone every time of THIS pet is read in: the server's per-pet `timezone`, else the family
+ * zone (older server). Never the phone's zone.
+ */
+export function petZoneOf(pet: Pick<ZonePet, 'timezone'> | null | undefined, familyZone: string | null): string | null {
+  const own = pet?.timezone;
+  return typeof own === 'string' && own.length > 0 ? own : familyZone;
+}
+
+/** True when the pet follows the family zone (missing flag = older server = it does). */
+export function followsFamily(pet: Pick<ZonePet, 'timezone_follows_family'>): boolean {
+  return pet.timezone_follows_family !== false;
+}
+
+/**
+ * The pets the profiles signed in on THIS phone care for: the child sessions this parent opened
+ * here (shared phone, M2-11 — the children's profiles and the parent's own caretaker profile).
+ * Only active pets.
+ */
+export function phonePetIds(pets: readonly ZonePet[], phoneChildIds: readonly number[]): number[] {
+  if (phoneChildIds.length === 0) return [];
+  return pets
+    .filter((p) => p.is_active !== false && (p.caretakers ?? []).some((c) => c.child_id !== null && phoneChildIds.includes(c.child_id)))
+    .map((p) => p.id);
+}
+
+export interface PetZoneCandidate {
+  petId: number;
+  /** The pet's current effective zone. */
+  zone: string;
+  /** Pre-checked in the banner: only pets this phone cares for. */
+  preselected: boolean;
+}
+
+/**
+ * The dashboard banner, per pet (David 2026-11-09): every active pet whose clock now differs
+ * from the phone's — but only when at least one of them is cared for on this phone (otherwise
+ * no banner). This phone's pets first and pre-checked; pets cared for by other family members
+ * are listed unchecked. Hidden for a phone zone dismissed with »Ne zdaj«; unknown zones never
+ * differ.
+ */
+export function petZoneSuggestion(input: {
+  pets: readonly ZonePet[];
+  familyZone: string | null;
+  phoneZone: string | null;
+  phonePetIds: readonly number[];
+  dismissedZone: string | null;
+  atMs: number;
+}): PetZoneCandidate[] {
+  const { phoneZone } = input;
+  if (phoneZone === null || input.dismissedZone === phoneZone) return [];
+  const candidates: PetZoneCandidate[] = [];
+  for (const pet of input.pets) {
+    if (pet.is_active === false || pet.is_game_over === true) continue;
+    const zone = petZoneOf(pet, input.familyZone);
+    if (zone === null || !phoneDiffersFromFamily(zone, phoneZone, input.atMs)) continue;
+    candidates.push({ petId: pet.id, zone, preselected: input.phonePetIds.includes(pet.id) });
+  }
+  if (!candidates.some((c) => c.preselected)) return [];
+  return [...candidates.filter((c) => c.preselected), ...candidates.filter((c) => !c.preselected)];
+}
+
+/**
+ * Parent views: a pet's times carry its zone's city when that clock differs from the phone's
+ * (»Lizbona«); null = same clock (or unknown), no label.
+ */
+export function petZoneNote(petZone: string | null, phoneZone: string | null, atMs: number, language: Language): string | null {
+  if (petZone === null || !phoneDiffersFromFamily(petZone, phoneZone, atMs)) return null;
+  return zoneCity(petZone, language);
 }

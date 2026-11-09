@@ -247,7 +247,7 @@
   },
   "familyZone": {
     "title": "Family time zone",
-    "hint": "Every time follows this zone: quiet hours, meals, midnight and the step day.",
+    "hint": "The default zone for pets without their own: quiet hours, meals, midnight and the step day follow it.",
     "change": "Change",
     "changeA11y": "Change the family time zone",
     "sheetTitle": "Choose a time zone",
@@ -271,7 +271,22 @@
     "banner": "This phone is in a different time zone ({{phone}}) than the family ({{family}}). Change it?",
     "bannerAction": "Change",
     "bannerClose": "Not now",
-    "familyTimeNote": "in family time ({{city}})"
+    "familyTimeNote": "in family time ({{city}})",
+    "petTitle": "Time zone",
+    "followsFamily": "family zone",
+    "petChangeA11y": "Change the time zone for {{pet}}",
+    "followFamilyOption": "Family zone ({{city}})",
+    "followFamilyHint": "Follows the family time zone",
+    "petSaved": "The time zone for {{pet}} has been changed.",
+    "petBanner": "This phone is in a different time zone ({{phone}}) than {{pet}} ({{petZone}}). Change it for {{pet}}?",
+    "petBannerList": "This phone is in a different time zone ({{phone}}). Change the time zone for:",
+    "petBannerRow": "{{pet}} ({{petZone}})",
+    "petBannerNone": "Pick at least one pet.",
+    "petBannerDone": "The time zone has been changed.",
+    "petTimeNote": "in the pet's time ({{city}})",
+    "eachPetTimeNote": "on each pet's clock",
+    "petRefused": "{{pet}}: {{reason}}",
+    "tooSoonCity": "You can change the zone once every 24 hours. Next {{when}} ({{city}})."
   },
   "notifications": {
     "title": "Notifications",

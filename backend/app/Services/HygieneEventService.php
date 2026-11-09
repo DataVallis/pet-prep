@@ -73,7 +73,7 @@ class HygieneEventService
             return;
         }
 
-        $timezone = $pet->familyTimezone();
+        $timezone = $pet->effectiveTimezone();
         $today = Carbon::parse($pet->localDate($now), $timezone);
         $day = Carbon::parse($pet->localDate($from), $timezone);
 
@@ -162,7 +162,7 @@ class HygieneEventService
             return [];
         }
 
-        $timezone = $pet->familyTimezone();
+        $timezone = $pet->effectiveTimezone();
         $dayStart = Carbon::parse($localDate, $timezone)->startOfDay();
         $dayEnd = $dayStart->copy()->addDay(); // next local midnight (23 / 25 h on DST days)
 

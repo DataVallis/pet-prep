@@ -167,7 +167,7 @@ async function doSwitchToChild(child: { id: number }): Promise<void> {
 
   const session = fresh ? await sessionFromPinLogin(fresh) : childSessionFromUser(token, (existing as { user: UserResponse }).user);
   resetProfileCaches();
-  useAppStore.getState().signIn({ ...session, familyTimezone: await loadFamilyTimezone(), sharedSession: true });
+  useAppStore.getState().signIn({ ...session, familyTimezone: await loadFamilyTimezone(undefined, child.id), sharedSession: true });
 }
 
 /** »Starš?« / »Nazaj k staršu« in a shared child session: show the parent login. */

@@ -22,6 +22,7 @@ import LanguageCard from '@/components/parent/LanguageCard';
 import NotificationsCard from '@/components/parent/NotificationsCard';
 import PetControlsCard from '@/components/parent/PetControlsCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
+import { followsFamily } from '@/modules/familyZone/familyZone';
 import FamilyTimezoneCard from '@/components/parent/FamilyTimezoneCard';
 import PurchasesRow from '@/components/parent/PurchasesRow';
 import { showPurchasesRow } from '@/modules/plan/purchaseEntry';
@@ -51,9 +52,6 @@ interface ControlsScreenProps {
   /** Kept as data, translated at render (follows a language switch). */
   notice?: JoinNotice | null;
   onNotice?: (notice: JoinNotice | null) => void;
-  /** Bumped by the dashboard's time zone banner (»Zamenjam«): opens the family time zone sheet. */
-  timezoneRequest?: number;
-  onTimezoneRequestHandled?: () => void;
 }
 
 export default function ControlsScreen({
@@ -65,8 +63,6 @@ export default function ControlsScreen({
   onOpenChallenge,
   notice = null,
   onNotice,
-  timezoneRequest = 0,
-  onTimezoneRequestHandled,
 }: ControlsScreenProps) {
   const isEmpty = !family || (family.children.length === 0 && family.pets.length === 0);
 
@@ -98,9 +94,9 @@ export default function ControlsScreen({
 
         {family && onOpenChallenge && showPurchasesRow(family) && <PurchasesRow family={family} onPress={onOpenChallenge} />}
 
-        {/* David 2026-11-08: the zone every time below is read in. */}
-        <FamilyTimezoneCard familyZone={family?.timezone ?? null} openRequest={timezoneRequest} onOpenRequestHandled={onTimezoneRequestHandled} />
-        <QuietHoursCard familyZone={family?.timezone ?? null} />
+        {/* David 2026-11-08 / 2026-11-09: the default zone of pets without their own (each pet card has its own row). */}
+        <FamilyTimezoneCard familyZone={family?.timezone ?? null} />
+        <QuietHoursCard familyZone={family?.timezone ?? null} perPetZones={(family?.pets ?? []).some((p) => !followsFamily(p))} />
         <NotificationsCard />
 
         {family && <FamilyParentsCard family={family} />}

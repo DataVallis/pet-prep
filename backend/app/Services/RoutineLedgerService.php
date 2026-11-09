@@ -329,7 +329,7 @@ class RoutineLedgerService
             return 0;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $today = $pet->localDate($now);
         $todayEnd = CarbonImmutable::parse($today, $tz)->addDay()->startOfDay()->utc();
         $yesterday = CarbonImmutable::parse($today, 'UTC')->subDay()->toDateString();
@@ -410,7 +410,7 @@ class RoutineLedgerService
      */
     private function computeDay(Pet $pet, array $in, string $date, CarbonImmutable $now): array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $dayStart = CarbonImmutable::parse($date, $tz)->startOfDay();
         $dayEnd = $dayStart->addDay()->startOfDay();
         $dayStartUtc = $dayStart->utc();
@@ -729,7 +729,7 @@ class RoutineLedgerService
                 // (never missed only because of sleep; like the wand's feasibleSessions).
                 if ($goal > 0) {
                     $need = max(1, (int) config('cat_care.grooming.session_seconds', 30)) + CatChoreService::graceSeconds(CareSessionKind::Grooming);
-                    $goal = min($goal, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->familyTimezone(), $need, $goal));
+                    $goal = min($goal, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->effectiveTimezone(), $need, $goal));
                 }
             }
             if ($goal <= 0 || ! $opens->lessThan($due)) {
@@ -828,7 +828,7 @@ class RoutineLedgerService
                 continue;
             }
             // »Spečo žival ne motimo«: a slot the quiet hours leave no day for is not expected.
-            $goal = min($times, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->familyTimezone(), CareTaskService::neededSeconds($task), $times));
+            $goal = min($times, CatChoreService::feasibleGroomingDays($quiet, $opens, $due, $pet->effectiveTimezone(), CareTaskService::neededSeconds($task), $times));
             if ($goal <= 0) {
                 continue;
             }
@@ -935,7 +935,7 @@ class RoutineLedgerService
         // QA M1: a program week with a payment lock inside lasts longer than 7 real
         // days — reach back to the start of the period that ends on $fromDate.
         foreach ($pets->filter(fn (Pet $p) => ($p->isCat() || $this->hasWeeklyRoutines($p)) && ! $p->isUnborn()) as $cat) {
-            $before = CarbonImmutable::parse($fromDate, $cat->familyTimezone())->startOfDay()->subSecond();
+            $before = CarbonImmutable::parse($fromDate, $cat->effectiveTimezone())->startOfDay()->subSecond();
             $changeDays = $this->lifeStages->stageValueOn($cat, $fromDate, StageParamKey::LitterFullChangeDays)['value'] ?? 0;
             foreach (array_unique([7, is_int($changeDays) && $changeDays > 0 ? $changeDays : 7]) as $days) {
                 $period = $this->lifeStages->programPeriodAt($cat, $before, $days);
@@ -948,7 +948,7 @@ class RoutineLedgerService
         // M5-R14 / R15 / R19 / R20: a care task period can be up to 120 days long — reach
         // back to the start of every period that ends inside the range.
         foreach ($pets->filter(fn (Pet $p) => $this->hasCareTaskRoutines($p) && ! $p->isUnborn()) as $dog) {
-            $before = CarbonImmutable::parse($fromDate, $dog->familyTimezone())->startOfDay()->subSecond();
+            $before = CarbonImmutable::parse($fromDate, $dog->effectiveTimezone())->startOfDay()->subSecond();
             foreach (CareTask::childTasks() as $task) {
                 $frequency = $this->careTaskFrequency($dog, $fromDate, $task);
                 if ($frequency === null) {
@@ -1008,13 +1008,15 @@ class RoutineLedgerService
 
         $inputs = [];
         foreach ($pets as $pet) {
-            // Same rule as Pet::quietHours(): no row → QuietHours::DEFAULTS.
+            // Same rule as Pet::quietHours(): no row → QuietHours::DEFAULTS; the
+            // family's windows read on this pet's clock (David 2026-11-09).
             $q = $quiet->get($pet->family_id);
             if ($q === null) {
                 $q = QuietHours::defaultFor($pet->family);
             } elseif ($pet->family !== null) {
                 $q->setRelation('family', $pet->family);
             }
+            $q = $q->readIn($pet->effectiveTimezone());
 
             $inputs[$pet->id] = [
                 'quiet' => $q,

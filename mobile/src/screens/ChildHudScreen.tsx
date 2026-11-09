@@ -312,6 +312,7 @@ function useHudLayout(): {
 function useSessionSync(view: ChildPetView | undefined): void {
   const setLockState = useAppStore((s) => s.setLockState);
   const setAwaitingContract = useAppStore((s) => s.setAwaitingContract);
+  const childId = useAppStore((s) => s.user?.id ?? null);
   useEffect(() => {
     if (!view) return;
     setLockState(lockStateFromView(view), {
@@ -319,11 +320,12 @@ function useSessionSync(view: ChildPetView | undefined): void {
       timezone: view.timezone,
       challengeFinished: view.certificate !== null,
     });
-    // For the lock overlay after a relaunch, before this state loads (hotfix 2026-10-06).
-    rememberFamilyTimezone(view.timezone);
+    // For the lock overlay after a relaunch, before this state loads (hotfix 2026-10-06);
+    // per child — on a shared phone each child's pet may run on its own clock (QA #891 m6).
+    rememberFamilyTimezone(view.timezone, undefined, childId);
     // AppNavigator swaps the HUD for ContractScreen (M1-07b / M2-01).
     if (view.pet.awaiting_contract) setAwaitingContract(true);
-  }, [view, setLockState, setAwaitingContract]);
+  }, [view, setLockState, setAwaitingContract, childId]);
 }
 
 export default function ChildHudScreen() {

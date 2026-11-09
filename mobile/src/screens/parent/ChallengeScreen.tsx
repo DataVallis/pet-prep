@@ -17,6 +17,7 @@
  *   (`petGroup`: only dogs = the dog text, only cats = "cat" / "muca", both = neutral "pet").
  */
 
+import { petZoneOf } from '@/modules/familyZone/familyZone';
 import { useEffect, useRef, useState } from 'react';
 import { ActivityIndicator, BackHandler, Linking, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useQueryClient } from '@tanstack/react-query';
@@ -264,7 +265,7 @@ export default function ChallengeScreen({ family, onBack }: ChallengeScreenProps
                       : paused
                         ? tSpecies('paywall:challenge.paused', familyPet?.species)
                         : pet.trial_ends_at
-                          ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, timezone))
+                          ? S.pausesAt(formatTrialEnd(pet.trial_ends_at, petZoneOf(familyPet, timezone) ?? timezone))
                           : S.notBought}
                   </Text>
                   {credits > 0 ? (

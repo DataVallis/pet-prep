@@ -29,7 +29,7 @@ final class SleepPayload
 
         return new self(
             $wakes !== null,
-            $wakes?->setTimezone($pet->familyTimezone())->toIso8601String(),
+            $wakes?->setTimezone($pet->effectiveTimezone())->toIso8601String(),
         );
     }
 

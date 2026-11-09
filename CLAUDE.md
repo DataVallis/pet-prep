@@ -82,7 +82,7 @@ Exception: unattended breed runs document only in `docs/breeds/<slug>.md` (ADD_B
 Keep the claude.ai Project copies (`petprep/*.md`) in sync after merges. No child personal data in any doc.
 
 ## Engineering rules
-**Backend:** thin controllers → Service classes; FormRequest for every input; Policies/Sanctum abilities for authz (not ad-hoc `isParent()`); multi-row writes in `DB::transaction`; **no external HTTP inside transactions** — dispatch a queued Job; webhooks fail **closed** when the secret is missing; broadcasts on `PrivateChannel`; all wall-clock rules (quiet hours, midnight, feed windows) evaluated in the family's timezone; store UTC.
+**Backend:** thin controllers → Service classes; FormRequest for every input; Policies/Sanctum abilities for authz (not ad-hoc `isParent()`); multi-row writes in `DB::transaction`; **no external HTTP inside transactions** — dispatch a queued Job; webhooks fail **closed** when the secret is missing; broadcasts on `PrivateChannel`; every per-pet wall-clock rule (quiet hours, midnight, feed windows, step day …) evaluated in `Pet::effectiveTimezone()` (the pet's own zone, falling back to the family zone — David 2026-11-09); family-wide rules without a pet in the family zone; store UTC.
 **Mobile:** strict TS, no `any`; server state via TanStack Query, UI-only state in Zustand; types from `schema.ts`; every user-visible string through i18n (once M1-18 lands); test on a dev build for native modules (HealthKit, RevenueCat, notifications don't run in Expo Go).
 **Both:** the child is a minor — collect the minimum data, no analytics SDK without David's OK, no third-party calls carrying child PII.
 

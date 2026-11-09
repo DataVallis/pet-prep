@@ -142,7 +142,7 @@ class WishService
     public function childCatalogue(Pet $pet, User $child, ?CarbonInterface $now = null): array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $species = $pet->speciesValue();
         $owned = $this->ownedItems($pet);
         $treatsLeft = $this->treatsLeft($pet);
@@ -244,7 +244,7 @@ class WishService
             }
             if (($retryAt = $this->retryAt($locked, $child, $item->key, $now)) !== null) {
                 throw new WishException('declined_recently', 'Ask again later.', 422, [
-                    'retry_at' => $retryAt->copy()->setTimezone($locked->familyTimezone())->toIso8601String(),
+                    'retry_at' => $retryAt->copy()->setTimezone($locked->effectiveTimezone())->toIso8601String(),
                 ]);
             }
             if ($this->openCountOfChild($child) >= self::OPEN_LIMIT) {
@@ -293,7 +293,7 @@ class WishService
                 return $base + ['status' => 'refused', 'reason' => 'no_treats', 'next_at' => null];
             }
             if ($givenToday >= self::TREATS_PER_DAY) {
-                $midnight = $now->setTimezone($locked->familyTimezone())->addDay()->startOfDay()->utc();
+                $midnight = $now->setTimezone($locked->effectiveTimezone())->addDay()->startOfDay()->utc();
 
                 return $base + ['status' => 'refused', 'reason' => 'treat_limit_today', 'next_at' => $midnight];
             }
@@ -397,7 +397,8 @@ class WishService
                     'design' => $w->design,
                     'product_id' => $item !== null ? self::productFor($item) : null,
                     'status' => $w->status->value,
-                    'created_at' => $w->created_at->copy()->setTimezone($tz)->toIso8601String(),
+                    // On the wish's pet clock (David 2026-11-09: own zone, else the family's).
+                    'created_at' => $w->created_at->copy()->setTimezone($w->pet?->timezone ?? $tz)->toIso8601String(),
                     'bundle_product_id' => $bundle !== null && in_array($w->item_key, $bundle->covers, true) && $isEligible($w->pet)
                         ? self::productFor($bundle) : null,
                 ];

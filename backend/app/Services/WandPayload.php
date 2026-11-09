@@ -67,7 +67,7 @@ final class WandPayload
         }
 
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (?CarbonInterface $at): ?string => $at === null ? null : CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
         $today = $pet->localDate($now);
 

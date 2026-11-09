@@ -249,8 +249,8 @@ class CatChoreService
         if (! $this->isMatted($pet) && $this->groomingsBetween($pet, $period['start'], $now->addSecond()) >= $goal) {
             return $refuse(CareRefusal::GroomingWeekDone, $awake($period['end']));
         }
-        $dayStart = CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->startOfDay()->utc();
-        $dayEnd = CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->addDay()->startOfDay()->utc();
+        $dayStart = CarbonImmutable::parse($pet->localDate($now), $pet->effectiveTimezone())->startOfDay()->utc();
+        $dayEnd = CarbonImmutable::parse($pet->localDate($now), $pet->effectiveTimezone())->addDay()->startOfDay()->utc();
         if ($this->groomingsBetween($pet, $dayStart, $now->addSecond()) > 0) {
             return $refuse(CareRefusal::GroomingDoneToday, $awake($dayEnd));
         }

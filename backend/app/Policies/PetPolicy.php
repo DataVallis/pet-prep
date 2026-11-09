@@ -62,4 +62,14 @@ class PetPolicy
     {
         return $this->manage($user, $pet);
     }
+
+    /**
+     * Change the pet's own time zone or reset it to the family zone (David
+     * 2026-11-09, PUT /api/parent/pets/{pet}/timezone): any parent of the
+     * pet's family. Children never.
+     */
+    public function changeTimezone(User $user, Pet $pet): bool
+    {
+        return $this->manage($user, $pet);
+    }
 }

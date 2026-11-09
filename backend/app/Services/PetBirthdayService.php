@@ -83,7 +83,7 @@ class PetBirthdayService
         }
 
         $weeks = self::AGE_MONTHS - (int) $pet->arrival_age_months;
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $born = CarbonImmutable::instance($pet->born_at)->utc();
         $nowTs = $now->getTimestamp();
         $spans = $pet->paymentLockSpans();
@@ -187,7 +187,7 @@ class PetBirthdayService
             return false;
         }
         if ($date > $today) {
-            $this->setNextCheck($pet->id, CarbonImmutable::parse($date, $pet->familyTimezone())->startOfDay()->utc());
+            $this->setNextCheck($pet->id, CarbonImmutable::parse($date, $pet->effectiveTimezone())->startOfDay()->utc());
 
             return false;
         }

@@ -101,7 +101,7 @@ class WishController extends Controller
                 'design' => $wish->design,
                 /** @var 'open' */
                 'status' => $wish->status->value,
-                'created_at' => $wish->created_at->copy()->setTimezone($pet->familyTimezone())->toIso8601String(),
+                'created_at' => $wish->created_at->copy()->setTimezone($pet->effectiveTimezone())->toIso8601String(),
             ],
             /** @var int */
             'open_count' => $this->wishes->openCountOfChild($child),
@@ -122,7 +122,7 @@ class WishController extends Controller
     {
         $pet = $this->childPet($request);
         $result = $this->wishes->giveTreat($pet, $request->user());
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $state = (new ChildPetStateResource($pet->refresh()))->toArray($request);
         $counts = [
             /** @var int */

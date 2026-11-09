@@ -50,7 +50,7 @@ final class PlayPayload
             return null;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (CarbonInterface $at): string => CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
 
         $locked = $pet->actionLockReasonFor($viewer) !== null;

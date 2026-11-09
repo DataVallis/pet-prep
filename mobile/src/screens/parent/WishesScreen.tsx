@@ -14,6 +14,7 @@
  * and »Komu?« ask for the design(s) first (`DesignChoice`). A server without designs → as before.
  */
 
+import { petZoneOf } from '@/modules/familyZone/familyZone';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { ActivityIndicator, BackHandler, Platform, Pressable, ScrollView, StyleSheet, View } from 'react-native';
 import { useTranslation } from 'react-i18next';
@@ -429,7 +430,7 @@ export default function WishesScreen({ family, onBack }: WishesScreenProps) {
                             {t('wishes:designs.requested', { design: designLabel(design, wish.variant) })}
                           </Text>
                         )}
-                        <Text style={styles.muted}>{t('wishes:parent.wishMeta', { child: wish.child_name, pet, when: formatWishTime(wish.created_at, timezone) })}</Text>
+                        <Text style={styles.muted}>{t('wishes:parent.wishMeta', { child: wish.child_name, pet, when: formatWishTime(wish.created_at, petZoneOf(family?.pets.find((fp) => fp.id === wish.pet_id), timezone) ?? timezone) })}</Text>
                       </View>
                     </View>
                     {priceButton({

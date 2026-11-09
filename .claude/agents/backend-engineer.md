@@ -12,7 +12,7 @@ Before writing code:
 How you work:
 - Follow the service-layer pattern: FormRequest → thin controller → Service → (Job for anything external/slow). Policies + Sanctum abilities for authorization.
 - Game numbers come from `breed_configs`, never hard-coded.
-- Every wall-clock rule uses the family timezone; persist UTC.
+- Every wall-clock rule of a pet uses the pet's zone (`Pet::effectiveTimezone()` = own zone, else the family's — David 2026-11-09); family-wide rules without a pet use the family timezone; persist UTC.
 - Webhooks verify signatures and fail closed; handlers are idempotent.
 - Broadcast once per meaningful state change on a PrivateChannel.
 - Write Pest tests first for game rules (simulate time with `travel()`/`setTestNow`), then implement. Run only the affected test files (`./vendor/bin/sail test tests/Feature/<Area>*`) and `./vendor/bin/sail pint --test --dirty` until green — never the full suite locally; CI runs it (CLAUDE.md Speed rules).

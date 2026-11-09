@@ -183,7 +183,7 @@ class WandPlayService
     /** The family-local midnight ending the day of $now (UTC). */
     public function dayEndsAt(Pet $pet, CarbonInterface $now): CarbonImmutable
     {
-        return CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->addDay()->startOfDay()->utc();
+        return CarbonImmutable::parse($pet->localDate($now), $pet->effectiveTimezone())->addDay()->startOfDay()->utc();
     }
 
     /** A session started now would still run (TTL included) at the family-local midnight. */

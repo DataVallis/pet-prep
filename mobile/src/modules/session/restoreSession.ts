@@ -106,7 +106,7 @@ async function restoreOnce(): Promise<RestoreResult> {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { pet, awaiting_contract: awaitingContract, app_error_reports: _errorReports, ...user } = await api.getUser({ timeoutMs: USER_REQUEST_TIMEOUT_MS });
     // Hotfix 2026-10-06: the lock overlay needs the family zone before the child state loads.
-    const familyTimezone = user.role === 'child' ? await withTimeoutOr(loadFamilyTimezone(), OPTIONAL_READ_TIMEOUT_MS, null) : null;
+    const familyTimezone = user.role === 'child' ? await withTimeoutOr(loadFamilyTimezone(undefined, user.id), OPTIONAL_READ_TIMEOUT_MS, null) : null;
     // M2-10c: password vs. Google / Apple decides how a parent confirms a deletion.
     const signInMethod =
       user.role === 'parent' ? await withTimeoutOr(loadSignInMethod(), OPTIONAL_READ_TIMEOUT_MS, 'password' as const) : 'password';

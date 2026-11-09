@@ -152,9 +152,13 @@ export type PetNameResponse = operations['petName.update']['responses'][200]['co
 /** PUT /api/parent/settings (family time zone, David 2026-11-08). */
 export type UpdateFamilySettingsResponse =
   operations['parentSettings.update']['responses'][200]['content']['application/json'];
+/** PUT /api/parent/pets/{pet}/timezone (time zone per pet, David 2026-11-09). */
+export type UpdatePetTimezoneResponse =
+  operations['petTimezone.update']['responses'][200]['content']['application/json'];
 /**
- * 422 body of PUT /api/parent/settings when the family zone changed less than 24 h ago
- * (FamilySettingsService). Hand-typed: Scramble doesn't infer this caught-exception body.
+ * 422 body of PUT /api/parent/settings / PUT /api/parent/pets/{pet}/timezone when the family /
+ * pet zone changed less than 24 h ago (FamilySettingsService / PetTimezoneService). Hand-typed:
+ * Scramble doesn't infer this caught-exception body.
  */
 export interface TimezoneChangeTooSoonBody {
   message: string;
@@ -1326,6 +1330,17 @@ export const api = {
    */
   updateFamilyTimezone: (timezone: string) =>
     apiRequest<UpdateFamilySettingsResponse>('/api/parent/settings', {
+      method: 'PUT',
+      body: { timezone },
+    }),
+
+  /**
+   * PUT /api/parent/pets/{pet}/timezone {timezone} — the pet's own zone, or null = follow the
+   * family zone again (David 2026-11-09). Same as before = no-op; a move of the pet's clock at
+   * most once per 24 h per pet → 422 `timezone_change_too_soon` (`TimezoneChangeTooSoonBody`).
+   */
+  updatePetTimezone: (petId: number, timezone: string | null) =>
+    apiRequest<UpdatePetTimezoneResponse>(`/api/parent/pets/${petId}/timezone`, {
       method: 'PUT',
       body: { timezone },
     }),

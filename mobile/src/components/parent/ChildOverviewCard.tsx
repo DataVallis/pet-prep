@@ -51,9 +51,12 @@ import { normalizePetMedia } from '@/modules/petMedia/petMedia';
 import { PARENT_BEHAVIOUR_STRINGS, parentBehaviourLines } from '@/modules/behaviour/behaviour';
 import { playTodayLine } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t, tSpecies } from '@/i18n';
+import { currentLanguage, t, tSpecies } from '@/i18n';
 import { strings } from '@/i18n/strings';
 import { petLabel } from '@/modules/petName/petName';
+import { petZoneNote } from '@/modules/familyZone/familyZone';
+import { FAMILY_ZONE_STRINGS } from '@/modules/familyZone/strings';
+import { usePhoneZone } from '@/modules/familyZone/usePhoneZone';
 import NoPushesHint from '@/components/parent/NoPushesHint';
 import PetMoodLabel from '@/components/PetMoodLabel';
 import { familyPetMood } from '@/modules/petMood/petMood';
@@ -79,6 +82,7 @@ const S = CHILD_CARD_STRINGS;
 interface ChildOverviewCardProps {
   child: FamilyChild;
   pet: FamilyPet | null;
+  /** The pet's own zone (`petZoneOf`, David 2026-11-09), else the family's. */
   timezone: string;
   onOpen: (child: FamilyChild) => void;
   onChildPin: (child: FamilyChild) => void;
@@ -119,6 +123,8 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
   const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, timezone) : [];
   const behaviourStats = PARENT_BEHAVIOUR_STRINGS.stats(child.stats.taken_out, child.stats.chewing_resolved);
   const playToday = pet ? playTodayLine(pet.play_today) : null;
+  const phoneZone = usePhoneZone();
+  const zoneNote = pet ? petZoneNote(timezone, phoneZone, Date.now(), currentLanguage()) : null;
 
   return (
     <Card testID={`child-card-${id}`}>
@@ -129,6 +135,12 @@ export default function ChildOverviewCard({ child, pet, timezone, onOpen, onChil
         <View style={styles.flex}>
           <Text style={styles.name}>{child.name}</Text>
           {pet && <Text style={styles.muted} testID={`child-pet-label-${id}`}>{petLabel(pet)}</Text>}
+          {/* David 2026-11-09: the times on this card are on the pet's clock — say so when it isn't the phone's. */}
+          {zoneNote !== null && (
+            <Text style={styles.muted} testID={`child-pet-zone-${id}`}>
+              {FAMILY_ZONE_STRINGS.petTimeNote(zoneNote)}
+            </Text>
+          )}
           {pet && !pet.is_game_over && (
             <PlanBadge
               plan={pet.plan}
