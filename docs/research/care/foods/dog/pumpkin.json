@@ -13,7 +13,8 @@
     "fi": "Kurpitsa",
     "nb": "Gresskar",
     "de": "Kürbis",
-    "fr": "Citrouille"
+    "fr": "Citrouille",
+    "es": "Calabaza"
   },
   "question": {
     "en": "Can dogs eat pumpkin?",
@@ -27,7 +28,8 @@
     "fi": "Saako koira syödä kurpitsaa?",
     "nb": "Kan hunder spise gresskar?",
     "de": "Dürfen Hunde Kürbis fressen?",
-    "fr": "Les chiens peuvent-ils manger de la citrouille ?"
+    "fr": "Les chiens peuvent-ils manger de la citrouille ?",
+    "es": "¿Pueden los perros comer calabaza?"
   },
   "url_slug": {
     "en": "pumpkin",
@@ -41,7 +43,8 @@
     "fi": "kurpitsa",
     "nb": "gresskar",
     "de": "kuerbis",
-    "fr": "citrouille"
+    "fr": "citrouille",
+    "es": "calabaza"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "fi": "Saa, maustamaton kypsennetty kurpitsa on koirille terveellistä ruokaa. Valitse tuore, kypsennetty kurpitsa tai maustamaton purkitettu kurpitsasose. Älä koskaan anna kurpitsapiiraan täytettä, äläkä anna kypsentämätöntä kuorta.",
     "nb": "Ja, kokt gresskar uten tilsetninger er sunn mat for hunder. Velg ferskt, kokt gresskar eller gresskarpuré på boks uten tilsetninger, aldri fyll til gresskarpai, og ikke gi hunden rått skall.",
     "de": "Ja, ungewürzter, gekochter Kürbis ist gesund für Hunde. Wählen Sie frisch gekochten Kürbis oder reines Kürbispüree aus der Dose, niemals Kürbiskuchenfüllung, und geben Sie keine ungekochte Schale.",
-    "fr": "Oui, la citrouille cuite nature est un aliment sain pour les chiens. Choisissez de la citrouille fraîche cuite ou de la purée de citrouille en conserve nature, jamais de la préparation pour tarte à la citrouille, et ne donnez pas d’écorce crue."
+    "fr": "Oui, la citrouille cuite nature est un aliment sain pour les chiens. Choisissez de la citrouille fraîche cuite ou de la purée de citrouille en conserve nature, jamais de la préparation pour tarte à la citrouille, et ne donnez pas d’écorce crue.",
+    "es": "Sí, la calabaza cocida sin condimentar es un alimento saludable para los perros. Elige calabaza fresca cocinada o puré de calabaza en conserva sin nada añadido, nunca relleno para tarta de calabaza, y no les des cortezas crudas."
   },
   "why": {
     "en": "Pure pumpkin is full of antioxidants and can help with both diarrhoea and constipation in dogs. Pumpkin pie filling may contain xylitol, which is toxic, plus other spices and additives that could be harmful. Uncooked rinds are tough and fibrous: they pose a choking risk, are hard to digest and can cause a blockage in the gut.",
@@ -70,7 +74,8 @@
     "fi": "Puhdas kurpitsa on täynnä antioksidantteja ja voi auttaa koiraa sekä ripuliin että ummetukseen. Kurpitsapiiraan täytteessä voi olla ksylitolia, joka on myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia. Kypsentämättömät kuoret ovat sitkeitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen.",
     "nb": "Rent gresskar er fullt av antioksidanter og kan hjelpe hunder både ved diaré og ved forstoppelse. Fyll til gresskarpai kan inneholde xylitol, som er giftig, og dessuten krydder og andre tilsetninger som kan være skadelige. Rått skall er seigt og fiberrikt: Det er en kvelningsfare, er vanskelig å fordøye og kan gi tarmblokkering.",
     "de": "Reiner Kürbis steckt voller Antioxidantien und kann bei Hunden sowohl bei Durchfall als auch bei Verstopfung helfen. Kürbiskuchenfüllung kann Xylit enthalten, das giftig ist, außerdem Gewürze und Zusatzstoffe, die schädlich sein können. Ungekochte Schalen sind zäh und faserig: Sie können zum Ersticken führen, sind schwer verdaulich und können im Darm einen Verschluss verursachen.",
-    "fr": "La citrouille pure regorge d’antioxydants et peut aider en cas de diarrhée comme de constipation chez le chien. La préparation pour tarte à la citrouille peut contenir du xylitol, qui est toxique, ainsi que d’autres épices et additifs potentiellement nocifs. L’écorce crue est dure et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale."
+    "fr": "La citrouille pure regorge d’antioxydants et peut aider en cas de diarrhée comme de constipation chez le chien. La préparation pour tarte à la citrouille peut contenir du xylitol, qui est toxique, ainsi que d’autres épices et additifs potentiellement nocifs. L’écorce crue est dure et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale.",
+    "es": "La calabaza pura está llena de antioxidantes y puede ayudar tanto con la diarrea como con el estreñimiento de los perros. El relleno para tarta de calabaza puede contener xilitol, que es tóxico, además de otras especias y aditivos que podrían ser dañinos. Las cortezas crudas son duras y fibrosas: suponen un riesgo de atragantamiento, son difíciles de digerir y pueden provocar una obstrucción en el intestino."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "fi": "Kuten minkä tahansa uuden ruoan kanssa, kysy eläinlääkäriltä ennen kuin lisäät kurpitsaa koirasi ruokavalioon.",
     "nb": "Som med all ny mat: Spør dyrlegen før du begynner å gi hunden gresskar.",
     "de": "Wie bei jedem neuen Lebensmittel: Fragen Sie Ihren Tierarzt, bevor Sie Kürbis in den Speiseplan Ihres Hundes aufnehmen.",
-    "fr": "Comme pour tout nouvel aliment, demandez conseil à votre vétérinaire avant d’ajouter de la citrouille à l’alimentation de votre chien."
+    "fr": "Comme pour tout nouvel aliment, demandez conseil à votre vétérinaire avant d’ajouter de la citrouille à l’alimentation de votre chien.",
+    "es": "Como con cualquier alimento nuevo, consulta con tu veterinario antes de incluir la calabaza en la rutina de tu perro."
   },
   "serving": {
     "en": "Fresh, cooked, plain and peeled, or plain canned pumpkin puree, without added sugar, spices or artificial flavours. No pie filling and no raw rind.",
@@ -99,7 +105,8 @@
     "fi": "Tuore kurpitsa kypsennettynä, maustamattomana ja kuorittuna tai maustamaton purkitettu kurpitsasose, jossa ei ole lisättyä sokeria, mausteita eikä keinotekoisia makuaineita. Ei piiraan täytettä eikä raakaa kuorta.",
     "nb": "Ferskt, kokt, skrelt og uten tilsetninger, eller gresskarpuré på boks uten tilsatt sukker, krydder eller kunstige smaksstoffer. Ikke paifyll og ikke rått skall.",
     "de": "Frisch, gekocht, pur und geschält, oder reines Kürbispüree aus der Dose, ohne Zuckerzusatz, Gewürze oder künstliche Aromen. Keine Kuchenfüllung und keine rohe Schale.",
-    "fr": "Fraîche, cuite, nature et pelée, ou purée de citrouille en conserve nature, sans sucre ajouté, épices ni arômes artificiels. Pas de préparation pour tarte, pas d’écorce crue."
+    "fr": "Fraîche, cuite, nature et pelée, ou purée de citrouille en conserve nature, sans sucre ajouté, épices ni arômes artificiels. Pas de préparation pour tarte, pas d’écorce crue.",
+    "es": "Fresca, cocinada, sin condimentar y pelada, o puré de calabaza en conserva sin nada añadido, sin azúcar, especias ni aromas artificiales. Sin relleno de tarta y sin corteza cruda."
   },
   "child": {
     "en": "Dogs can enjoy a little plain cooked pumpkin. A grown-up makes sure it isn't sweet pie filling!",
@@ -113,7 +120,8 @@
     "fi": "Koira saa nauttia vähän maustamatonta kypsennettyä kurpitsaa. Aikuinen tarkistaa, ettei se ole makeaa piiraantäytettä!",
     "nb": "Hunder kan få litt kokt gresskar uten tilsetninger. En voksen passer på at det ikke er søtt paifyll!",
     "de": "Hunde dürfen ein bisschen ungewürzten, gekochten Kürbis genießen. Ein Erwachsener achtet darauf, dass es keine süße Kuchenfüllung ist!",
-    "fr": "Les chiens peuvent se régaler d’un peu de citrouille cuite nature. Un adulte vérifie que ce n’est pas de la préparation sucrée pour tarte !"
+    "fr": "Les chiens peuvent se régaler d’un peu de citrouille cuite nature. Un adulte vérifie que ce n’est pas de la préparation sucrée pour tarte !",
+    "es": "Los perros pueden disfrutar de un poquito de calabaza cocida sin condimentar. ¡Un adulto se asegura de que no sea relleno dulce de tarta!"
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "fi": "Saako koira syödä kurpitsapiiraan täytettä?",
         "nb": "Kan hunder spise fyll til gresskarpai?",
         "de": "Dürfen Hunde Kürbiskuchenfüllung fressen?",
-        "fr": "Les chiens peuvent-ils manger de la préparation pour tarte à la citrouille ?"
+        "fr": "Les chiens peuvent-ils manger de la préparation pour tarte à la citrouille ?",
+        "es": "¿Pueden los perros comer relleno para tarta de calabaza?"
       },
       "a": {
         "en": "No. Pumpkin pie filling may contain xylitol, a sweetener that is toxic to dogs, and other spices and additives that could be harmful.",
@@ -143,7 +152,8 @@
         "fi": "Ei. Kurpitsapiiraan täytteessä voi olla ksylitolia, makeutusainetta, joka on koirille myrkyllistä, sekä muita mausteita ja lisäaineita, jotka voivat olla haitallisia.",
         "nb": "Nei. Fyll til gresskarpai kan inneholde xylitol, et søtstoff som er giftig for hunder, og dessuten krydder og andre tilsetninger som kan være skadelige.",
         "de": "Nein. Kürbiskuchenfüllung kann Xylit enthalten, einen Süßstoff, der für Hunde giftig ist, sowie Gewürze und Zusatzstoffe, die schädlich sein können.",
-        "fr": "Non. La préparation pour tarte à la citrouille peut contenir du xylitol, un édulcorant toxique pour les chiens, ainsi que d’autres épices et additifs potentiellement nocifs."
+        "fr": "Non. La préparation pour tarte à la citrouille peut contenir du xylitol, un édulcorant toxique pour les chiens, ainsi que d’autres épices et additifs potentiellement nocifs.",
+        "es": "No. El relleno para tarta de calabaza puede contener xilitol, un edulcorante tóxico para los perros, y otras especias y aditivos que podrían ser dañinos."
       }
     },
     {
@@ -159,7 +169,8 @@
         "fi": "Saako koira syödä raakaa kurpitsankuorta?",
         "nb": "Kan hunder spise rått gresskarskall?",
         "de": "Dürfen Hunde rohe Kürbisschale fressen?",
-        "fr": "Les chiens peuvent-ils manger de l’écorce de citrouille crue ?"
+        "fr": "Les chiens peuvent-ils manger de l’écorce de citrouille crue ?",
+        "es": "¿Pueden los perros comer corteza de calabaza cruda?"
       },
       "a": {
         "en": "No. Uncooked rinds are tough, dense and fibrous: they pose a choking risk, are difficult to digest and can cause a blockage in the gut.",
@@ -173,7 +184,8 @@
         "fi": "Ei. Kypsentämättömät kuoret ovat sitkeitä, tiiviitä ja kuitupitoisia: ne aiheuttavat tukehtumisvaaran, ovat vaikeasti sulavia ja voivat aiheuttaa suolitukoksen.",
         "nb": "Nei. Rått skall er seigt, tett og fiberrikt: Det er en kvelningsfare, er vanskelig å fordøye og kan gi tarmblokkering.",
         "de": "Nein. Ungekochte Schalen sind zäh, dicht und faserig: Sie können zum Ersticken führen, sind schwer verdaulich und können im Darm einen Verschluss verursachen.",
-        "fr": "Non. L’écorce crue est dure, dense et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale."
+        "fr": "Non. L’écorce crue est dure, dense et fibreuse : elle présente un risque d’étouffement, est difficile à digérer et peut provoquer une occlusion intestinale.",
+        "es": "No. Las cortezas crudas son duras, densas y fibrosas: suponen un riesgo de atragantamiento, son difíciles de digerir y pueden provocar una obstrucción en el intestino."
       }
     }
   ],
@@ -298,6 +310,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4ed4806c6001b745a1404491b5b5d8912fa5ca9285130b1bec1cbaa665b950c3"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "ee698e153bda59a8400446f25d52c71469dbbd1e79ab83278daee661aa686a1b"
     }
   }
 }

@@ -13,7 +13,8 @@
     "fi": "Varsiselleri",
     "nb": "Stangselleri",
     "de": "Stangensellerie",
-    "fr": "Céleri"
+    "fr": "Céleri",
+    "es": "Apio"
   },
   "question": {
     "en": "Can dogs eat celery?",
@@ -27,7 +28,8 @@
     "fi": "Saako koira syödä varsiselleriä?",
     "nb": "Kan hunder spise stangselleri?",
     "de": "Dürfen Hunde Stangensellerie fressen?",
-    "fr": "Les chiens peuvent-ils manger du céleri ?"
+    "fr": "Les chiens peuvent-ils manger du céleri ?",
+    "es": "¿Pueden los perros comer apio?"
   },
   "url_slug": {
     "en": "celery",
@@ -41,7 +43,8 @@
     "fi": "varsiselleri",
     "nb": "stangselleri",
     "de": "stangensellerie",
-    "fr": "celeri"
+    "fr": "celeri",
+    "es": "apio"
   },
   "level": "small_amounts",
   "answer": {
@@ -56,7 +59,8 @@
     "fi": "Saa, varsiselleri on yleensä turvallista koiralle satunnaisena herkkuna. Pese se ja leikkaa aina suupalan kokoisiksi paloiksi, sillä se voi aiheuttaa tukehtumisvaaran, etenkin pienillä koirilla.",
     "nb": "Ja, stangselleri er som regel trygt for hunder som en godbit av og til. Vask den og skjær den alltid i passe store biter, for stangselleri kan være en kvelningsfare, særlig for små hunder.",
     "de": "Ja, Stangensellerie ist für Hunde als gelegentliches Leckerli in der Regel unbedenklich. Waschen Sie ihn und schneiden Sie ihn immer mundgerecht klein, denn Stangensellerie kann eine Erstickungsgefahr sein, besonders bei kleinen Hunden.",
-    "fr": "Oui, le céleri est généralement sans danger pour les chiens comme friandise occasionnelle. Lavez-le et coupez-le toujours en morceaux de la taille d’une bouchée, car le céleri peut présenter un risque d’étouffement, surtout chez les petits chiens."
+    "fr": "Oui, le céleri est généralement sans danger pour les chiens comme friandise occasionnelle. Lavez-le et coupez-le toujours en morceaux de la taille d’une bouchée, car le céleri peut présenter un risque d’étouffement, surtout chez les petits chiens.",
+    "es": "Sí, el apio es en general seguro para los perros como premio ocasional. Lávalo y córtalo siempre en trozos del tamaño de un bocado, porque el apio puede provocar atragantamiento, sobre todo en perros pequeños."
   },
   "why": {
     "en": "Celery is safe for most dogs and is even known to freshen doggy breath. The main risk is choking on large pieces, especially in small dogs. It is a treat, not a staple, and should never replace a complete and balanced meal.",
@@ -70,7 +74,8 @@
     "fi": "Varsiselleri on turvallista useimmille koirille, ja sen tiedetään jopa raikastavan koiran hengitystä. Suurin riski on tukehtuminen isoon palaan, etenkin pienillä koirilla. Se on herkku eikä perusruoka, eikä sillä saa koskaan korvata täysipainoista ja tasapainoista ateriaa.",
     "nb": "Stangselleri er trygt for de fleste hunder og er til og med kjent for å friske opp hundens ånde. Den største risikoen er at hunden setter en stor bit i halsen, særlig små hunder. Stangselleri er en godbit, ikke fast mat, og bør aldri erstatte et komplett og balansert måltid.",
     "de": "Stangensellerie ist für die meisten Hunde unbedenklich und ist sogar dafür bekannt, den Atem des Hundes zu erfrischen. Das Hauptrisiko ist, dass ein Hund an großen Stücken erstickt, vor allem ein kleiner. Stangensellerie ist ein Leckerli, kein Grundnahrungsmittel, und ersetzt niemals eine vollwertige, ausgewogene Mahlzeit.",
-    "fr": "Le céleri est sans danger pour la plupart des chiens et passe même pour rafraîchir leur haleine. Le principal risque est l’étouffement avec de gros morceaux, surtout chez les petits chiens. C’est une friandise, pas un aliment de base : il ne doit jamais remplacer un repas complet et équilibré."
+    "fr": "Le céleri est sans danger pour la plupart des chiens et passe même pour rafraîchir leur haleine. Le principal risque est l’étouffement avec de gros morceaux, surtout chez les petits chiens. C’est une friandise, pas un aliment de base : il ne doit jamais remplacer un repas complet et équilibré.",
+    "es": "El apio es seguro para la mayoría de los perros e incluso se sabe que ayuda a refrescar el aliento. El principal riesgo es atragantarse con trozos grandes, sobre todo en perros pequeños. Es un premio, no un alimento básico, y nunca debe sustituir a una comida completa y equilibrada."
   },
   "signs": null,
   "what_to_do": {
@@ -85,7 +90,8 @@
     "fi": "Totuta koira varsiselleriin vähitellen ja tarkkaile ensimmäisen maistelun jälkeen, ilmaantuuko vatsavaivoja tai muita muutoksia.",
     "nb": "Innfør stangselleri langsomt, og følg med på om hunden får urolig mage eller andre endringer etter den første smaken.",
     "de": "Führen Sie Stangensellerie langsam ein und beobachten Sie Ihren Hund nach dem ersten Probieren auf Magen-Darm-Beschwerden oder andere Veränderungen.",
-    "fr": "Introduisez le céleri progressivement et surveillez votre chien après la première bouchée : troubles digestifs ou autres changements."
+    "fr": "Introduisez le céleri progressivement et surveillez votre chien après la première bouchée : troubles digestifs ou autres changements.",
+    "es": "Introduce el apio poco a poco y vigila si tu perro tiene molestias digestivas u otros cambios después de probarlo por primera vez."
   },
   "serving": {
     "en": "Washed, raw is fine, always cut into bite-size pieces. A small treat, not a meal.",
@@ -99,7 +105,8 @@
     "fi": "Pestynä ja aina suupalan kokoisiksi paloiksi leikattuna; raakana käy hyvin. Pieni herkku, ei ateria.",
     "nb": "Vasket og alltid skåret i passe store biter; rå er greit. En liten godbit, ikke et måltid.",
     "de": "Gewaschen, auch roh in Ordnung, immer mundgerecht klein geschnitten. Ein kleines Leckerli, keine Mahlzeit.",
-    "fr": "Lavé ; cru, c’est très bien, mais toujours coupé en morceaux de la taille d’une bouchée. Une petite friandise, pas un repas."
+    "fr": "Lavé ; cru, c’est très bien, mais toujours coupé en morceaux de la taille d’une bouchée. Une petite friandise, pas un repas.",
+    "es": "Lavado; crudo está bien, siempre cortado en trozos del tamaño de un bocado. Un premio pequeño, no una comida."
   },
   "child": {
     "en": "Dogs can crunch a little celery! A grown-up washes it and cuts it into tiny pieces first.",
@@ -113,7 +120,8 @@
     "fi": "Koira saa rouskuttaa vähän varsiselleriä! Aikuinen pesee sen ja leikkaa ensin pikkuruisiksi paloiksi.",
     "nb": "Hunder kan knaske litt stangselleri! En voksen vasker den og skjærer den i bitte små biter først.",
     "de": "Hunde dürfen ein bisschen Stangensellerie knabbern! Ein Erwachsener wäscht ihn und schneidet ihn vorher in winzige Stücke.",
-    "fr": "Les chiens peuvent croquer un peu de céleri ! Un adulte le lave et le coupe d’abord en tout petits morceaux."
+    "fr": "Les chiens peuvent croquer un peu de céleri ! Un adulte le lave et le coupe d’abord en tout petits morceaux.",
+    "es": "¡Los perros pueden mordisquear un poquito de apio crujiente! Un adulto lo lava y lo corta antes en trocitos muy pequeños."
   },
   "faq": [
     {
@@ -129,7 +137,8 @@
         "fi": "Saavatko pennut syödä varsiselleriä?",
         "nb": "Kan valper spise stangselleri?",
         "de": "Dürfen Welpen Stangensellerie fressen?",
-        "fr": "Les chiots peuvent-ils manger du céleri ?"
+        "fr": "Les chiots peuvent-ils manger du céleri ?",
+        "es": "¿Pueden los cachorros comer apio?"
       },
       "a": {
         "en": "Puppies can eat small amounts of celery if it is cut into appropriately sized pieces.",
@@ -143,7 +152,8 @@
         "fi": "Pennut voivat syödä vähän varsiselleriä, kun se on leikattu sopivan kokoisiksi paloiksi.",
         "nb": "Valper kan spise små mengder stangselleri hvis den er skåret i passe store biter.",
         "de": "Welpen dürfen kleine Mengen Stangensellerie fressen, wenn er in passend kleine Stücke geschnitten wird.",
-        "fr": "Oui, en petite quantité, à condition de couper le céleri en morceaux adaptés à leur taille."
+        "fr": "Oui, en petite quantité, à condition de couper le céleri en morceaux adaptés à leur taille.",
+        "es": "Sí, los cachorros pueden comer pequeñas cantidades de apio si se corta en trozos del tamaño adecuado."
       }
     }
   ],
@@ -255,6 +265,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "cf2bcad17f492cbe545561576a72f566792a1fe22d188645e49c7a2fbfba3064"
+    },
+    "es": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "4bf7b234a998bf19a5bf344ea18a55707582e00215d42902fd970a43c75f0ceb"
     }
   }
 }
