@@ -14,7 +14,8 @@
     "nb": "Salat",
     "de": "Kopfsalat",
     "fr": "Laitue",
-    "es": "Lechuga"
+    "es": "Lechuga",
+    "it": "Lattuga"
   },
   "question": {
     "en": "Can dogs eat lettuce?",
@@ -29,7 +30,8 @@
     "nb": "Kan hunder spise salat?",
     "de": "Dürfen Hunde Kopfsalat fressen?",
     "fr": "Les chiens peuvent-ils manger de la laitue ?",
-    "es": "¿Pueden los perros comer lechuga?"
+    "es": "¿Pueden los perros comer lechuga?",
+    "it": "I cani possono mangiare la lattuga?"
   },
   "url_slug": {
     "en": "lettuce",
@@ -44,7 +46,8 @@
     "nb": "salat",
     "de": "kopfsalat",
     "fr": "laitue",
-    "es": "lechuga"
+    "es": "lechuga",
+    "it": "lattuga"
   },
   "level": "small_amounts",
   "answer": {
@@ -60,7 +63,8 @@
     "nb": "Ja, salat uten tilsetninger er som regel trygt for hunder i moderate mengder. Romanosalat, isbergsalat og ruccola er ikke giftige. Vask den godt og hakk den opp, og ikke gi hunden rester av salaten din, som ofte inneholder løk.",
     "de": "Ja, Kopfsalat pur ist für Hunde in Maßen in der Regel unbedenklich. Romanasalat, Eisbergsalat und Rucola sind ungiftig. Waschen Sie ihn gut und schneiden Sie ihn klein, und geben Sie Ihrem Hund keine Salatreste, denn die enthalten oft Zwiebeln.",
     "fr": "Oui, la laitue nature est généralement sans danger pour les chiens avec modération. La laitue romaine, la laitue iceberg et la roquette ne sont pas toxiques. Lavez-la bien et hachez-la, et ne partagez pas vos restes de salade, qui contiennent souvent de l’oignon.",
-    "es": "Sí, la lechuga sin aliñar es en general segura para los perros con moderación. La lechuga romana, la iceberg y la rúcula no son tóxicas. Lávala bien y trocéala, y no le des las sobras de tu ensalada, que a menudo lleva cebolla."
+    "es": "Sí, la lechuga sin aliñar es en general segura para los perros con moderación. La lechuga romana, la iceberg y la rúcula no son tóxicas. Lávala bien y trocéala, y no le des las sobras de tu ensalada, que a menudo lleva cebolla.",
+    "it": "Sì, la lattuga semplice è in genere sicura per i cani in quantità moderate. La romana, l’iceberg e la rucola non sono tossiche. Lavala bene e tagliala a pezzetti, e non dare al cane gli avanzi dell’insalata, che spesso contengono cipolla."
   },
   "why": {
     "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
@@ -75,7 +79,8 @@
     "nb": "Salat er som regel trygt for hunder, men den er veldig fiberrik og tung å fordøye i store biter, og for mye kan gi diaré. Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. Salat har også vært trukket tilbake fra markedet på grunn av E. coli- eller listeriasmitte, så vask den godt og velg med omhu når du handler.",
     "de": "Kopfsalat ist für Hunde in der Regel unbedenklich, enthält aber viele Ballaststoffe und ist in großen Stücken schwer verdaulich; zu viel kann Durchfall auslösen. Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Außerdem wurde Kopfsalat schon wegen einer Belastung mit E. coli oder Listerien zurückgerufen – waschen Sie ihn deshalb gut und kaufen Sie mit Bedacht.",
     "fr": "La laitue est généralement sans danger pour les chiens, mais elle est très fibreuse et difficile à digérer en gros morceaux, et en trop grande quantité elle peut provoquer de la diarrhée. Les salades contiennent souvent des ingrédients toxiques pour les chiens, comme l’oignon. De la laitue a aussi fait l’objet de rappels pour contamination à E. coli ou à listeria : lavez-la bien et achetez-la avec soin.",
-    "es": "La lechuga es en general segura para los perros, pero tiene mucha fibra y cuesta digerirla en trozos grandes, y si el perro come demasiada puede tener diarrea. Las ensaladas suelen llevar ingredientes tóxicos para los perros, como la cebolla. Además, se han retirado lechugas del mercado por contaminación con E. coli o listeria, así que lávala bien y compra con cuidado."
+    "es": "La lechuga es en general segura para los perros, pero tiene mucha fibra y cuesta digerirla en trozos grandes, y si el perro come demasiada puede tener diarrea. Las ensaladas suelen llevar ingredientes tóxicos para los perros, como la cebolla. Además, se han retirado lechugas del mercado por contaminación con E. coli o listeria, así que lávala bien y compra con cuidado.",
+    "it": "La lattuga è in genere sicura per i cani, ma è molto fibrosa e i pezzi grandi sono difficili da digerire; se ne mangiano troppa, possono avere la diarrea. Le insalate spesso contengono ingredienti tossici per i cani, come la cipolla. Inoltre sono state ritirate dal mercato alcune partite di lattuga contaminate da E. coli o listeria: lavala bene e comprala con attenzione."
   },
   "signs": null,
   "what_to_do": {
@@ -91,7 +96,8 @@
     "nb": "Hold deg til en bit uten tilsetninger nå og da: For mye kan gi diaré. Ikke gi hunden salatrester, for salater inneholder ofte løk, som er giftig for hunder.",
     "de": "Geben Sie nur ab und zu ein Stück pur: Zu viel kann Durchfall verursachen. Geben Sie keine Salatreste, denn Salate enthalten oft Zwiebeln, die für Hunde giftig sind.",
     "fr": "Limitez-vous à un morceau nature de temps en temps : en trop grande quantité, la laitue peut provoquer de la diarrhée. Ne partagez pas de restes de salade : les salades contiennent souvent de l’oignon, toxique pour les chiens.",
-    "es": "Dale solo un trozo sin aliñar de vez en cuando: si tu perro come demasiada, puede tener diarrea. No le des sobras de ensalada, porque las ensaladas suelen llevar cebolla, que es tóxica para los perros."
+    "es": "Dale solo un trozo sin aliñar de vez en cuando: si tu perro come demasiada, puede tener diarrea. No le des sobras de ensalada, porque las ensaladas suelen llevar cebolla, que es tóxica para los perros.",
+    "it": "Dagliene solo ogni tanto un pezzetto al naturale: se ne mangia troppa, può venirgli la diarrea. Niente avanzi di insalata: le insalate spesso contengono cipolla, che è tossica per i cani."
   },
   "serving": {
     "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
@@ -106,7 +112,8 @@
     "nb": "Nå og da en grundig vasket bit uten tilsetninger, hakket opp i stedet for et helt blad. Aldri fra en blandet salat.",
     "de": "Ab und zu ein Stück pur, gründlich gewaschen und klein geschnitten statt als ganzes Blatt. Nie aus einem gemischten Salat.",
     "fr": "Un morceau nature, soigneusement lavé, de temps en temps, haché plutôt qu’en feuille entière. Jamais prélevé dans une salade composée.",
-    "es": "Un trozo sin aliñar y muy bien lavado, de vez en cuando, mejor troceado que en hoja entera. Nunca de una ensalada mixta."
+    "es": "Un trozo sin aliñar y muy bien lavado, de vez en cuando, mejor troceado que en hoja entera. Nunca de una ensalada mixta.",
+    "it": "Ogni tanto un pezzetto al naturale e lavato con cura, tagliato a pezzi, non in foglia intera. Mai da un’insalata mista."
   },
   "child": {
     "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
@@ -121,7 +128,8 @@
     "nb": "Hunder kan knaske litt salat uten tilsetninger. En voksen vasker den og hakker den i små biter. Ingen salatrester, takk!",
     "de": "Hunde dürfen ein bisschen Kopfsalat mampfen. Ein Erwachsener wäscht ihn und schneidet ihn klein. Keine Salatreste, bitte!",
     "fr": "Les chiens peuvent grignoter un peu de laitue nature. Un adulte la lave et la hache menu. Pas de restes de salade, s’il te plaît !",
-    "es": "Los perros pueden mordisquear un poco de lechuga sin aliñar. Un adulto la lava y la corta en trocitos. ¡Y nada de sobras de ensalada!"
+    "es": "Los perros pueden mordisquear un poco de lechuga sin aliñar. Un adulto la lava y la corta en trocitos. ¡Y nada de sobras de ensalada!",
+    "it": "I cani possono sgranocchiare un po’ di lattuga semplice. Prima un adulto la lava e la taglia a pezzetti. Niente avanzi di insalata, per favore!"
   },
   "faq": [
     {
@@ -138,7 +146,8 @@
         "nb": "Kan hunder spise blandet salat?",
         "de": "Dürfen Hunde Salat fressen?",
         "fr": "Les chiens peuvent-ils manger de la salade ?",
-        "es": "¿Pueden los perros comer ensalada?"
+        "es": "¿Pueden los perros comer ensalada?",
+        "it": "I cani possono mangiare l’insalata?"
       },
       "a": {
         "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
@@ -153,7 +162,8 @@
         "nb": "Ikke salatrester fra middagen: Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. En bit salat uten tilsetninger nå og da er greit.",
         "de": "Nicht Ihre Salatreste: Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Ein Stück Kopfsalat pur ist dagegen ab und zu in Ordnung.",
         "fr": "Pas vos restes de salade : les salades contiennent souvent des ingrédients toxiques pour les chiens, comme l’oignon. Un morceau de laitue nature de temps en temps, en revanche, ne pose pas de problème.",
-        "es": "Las sobras de tu ensalada, no: las ensaladas suelen llevar ingredientes tóxicos para los perros, como la cebolla. Un trozo de lechuga sin aliñar de vez en cuando está bien."
+        "es": "Las sobras de tu ensalada, no: las ensaladas suelen llevar ingredientes tóxicos para los perros, como la cebolla. Un trozo de lechuga sin aliñar de vez en cuando está bien.",
+        "it": "Gli avanzi della tua insalata no: le insalate spesso contengono ingredienti tossici per i cani, come la cipolla. Un pezzetto di lattuga semplice ogni tanto va bene."
       }
     }
   ],
@@ -271,6 +281,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "45293997479dd21994a7985db3afb025645c48637091e6477a706c28133b763c"
+    },
+    "it": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b78eba04f7eafa2887306fa61357543b3dee42e38d88fddb2ae40790183e6ea6"
     }
   }
 }
