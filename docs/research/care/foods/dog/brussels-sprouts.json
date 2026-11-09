@@ -12,7 +12,8 @@
     "da": "Rosenkål",
     "fi": "Ruusukaali",
     "nb": "Rosenkål",
-    "de": "Rosenkohl"
+    "de": "Rosenkohl",
+    "fr": "Choux de Bruxelles"
   },
   "question": {
     "en": "Can dogs eat Brussels sprouts?",
@@ -25,7 +26,8 @@
     "da": "Må hunde spise rosenkål?",
     "fi": "Saako koira syödä ruusukaalia?",
     "nb": "Kan hunder spise rosenkål?",
-    "de": "Dürfen Hunde Rosenkohl fressen?"
+    "de": "Dürfen Hunde Rosenkohl fressen?",
+    "fr": "Les chiens peuvent-ils manger des choux de Bruxelles ?"
   },
   "url_slug": {
     "en": "brussels-sprouts",
@@ -38,7 +40,8 @@
     "da": "rosenkal",
     "fi": "ruusukaali",
     "nb": "rosenkal",
-    "de": "rosenkohl"
+    "de": "rosenkohl",
+    "fr": "choux-de-bruxelles"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Ja, men med visse forholdsregler. Kogt rosenkål uden tilsætninger er fint for hunde i små mængder, men for meget kan give meget luft i maven, mavegener og diarré. Giv dem ikke rå, for de er for hårde for hunde at fordøje.",
     "fi": "Saa, mutta muutama varotoimi on syytä muistaa. Maustamatonta, kypsennettyä ruusukaalia voi antaa koiralle pieninä määrinä, mutta liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia. Älä anna ruusukaalia raakana: koiran on vaikea sulattaa sitä.",
     "nb": "Ja, med noen forholdsregler. Kokt rosenkål uten tilsetninger er greit for hunder i små mengder, men for mye kan gi mye gass, urolig mage og diaré. Ikke server den rå: Den er for hard for hunder å fordøye.",
-    "de": "Ja, mit ein paar Vorsichtsmaßnahmen. Ungewürzter, gekochter Rosenkohl ist für Hunde in kleinen Mengen in Ordnung, zu viel kann aber starke Blähungen, Magenverstimmung und Durchfall verursachen. Füttern Sie ihn nicht roh: Er ist zu hart und für Hunde schwer verdaulich."
+    "de": "Ja, mit ein paar Vorsichtsmaßnahmen. Ungewürzter, gekochter Rosenkohl ist für Hunde in kleinen Mengen in Ordnung, zu viel kann aber starke Blähungen, Magenverstimmung und Durchfall verursachen. Füttern Sie ihn nicht roh: Er ist zu hart und für Hunde schwer verdaulich.",
+    "fr": "Oui, avec quelques précautions. Les choux de Bruxelles cuits nature conviennent aux chiens en petite quantité, mais en trop grande quantité ils peuvent provoquer beaucoup de gaz, des troubles digestifs et de la diarrhée. Ne les servez pas crus : ils sont trop difficiles à digérer pour les chiens."
   },
   "why": {
     "en": "Brussels sprouts are full of nutrients and antioxidants and contain no toxins or poisons. They do contain a high level of a substance called isothiocyanate, and too many can lead to lots of gas, stomach upset and diarrhoea, so don't overfeed them.",
@@ -65,7 +69,8 @@
     "da": "Rosenkål er fyldt med næringsstoffer og antioxidanter og indeholder ingen giftstoffer. Den indeholder til gengæld meget af stoffet isothiocyanat, og for meget kan give luft i maven, mavegener og diarré, så undgå at give for meget.",
     "fi": "Ruusukaali on täynnä ravintoaineita ja antioksidantteja, eikä siinä ole myrkkyjä. Siinä on kuitenkin runsaasti isotiosyanaatti-nimistä ainetta, ja liian suuri määrä voi aiheuttaa runsaasti ilmavaivoja, vatsavaivoja ja ripulia, joten älä anna sitä liikaa.",
     "nb": "Rosenkål er full av næringsstoffer og antioksidanter og inneholder ingen giftstoffer. Den inneholder mye av et stoff som heter isotiocyanat, og for mye kan gi mye gass, urolig mage og diaré, så ikke gi for mye.",
-    "de": "Rosenkohl steckt voller Nährstoffe und Antioxidantien und enthält keine Giftstoffe. Allerdings ist er reich an einer Substanz namens Isothiocyanat, und zu viel davon kann zu starken Blähungen, Magenverstimmung und Durchfall führen – füttern Sie also nicht zu viel davon."
+    "de": "Rosenkohl steckt voller Nährstoffe und Antioxidantien und enthält keine Giftstoffe. Allerdings ist er reich an einer Substanz namens Isothiocyanat, und zu viel davon kann zu starken Blähungen, Magenverstimmung und Durchfall führen – füttern Sie also nicht zu viel davon.",
+    "fr": "Les choux de Bruxelles regorgent de nutriments et d’antioxydants et ne contiennent ni toxines ni poisons. Ils sont en revanche riches en isothiocyanate, une substance qui, en trop grande quantité, peut provoquer beaucoup de gaz, des troubles digestifs et de la diarrhée : n’en donnez donc pas trop."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "da": "Giv kun lidt, og undgå at overfodre. Hvis din hund har særlige kostbehov eller allergi, skal du tale med din dyrlæge, før du giver rosenkål.",
     "fi": "Anna vain vähän, älä liikaa. Jos koirallasi on ruokavalioon liittyviä ongelmia tai allergioita, kysy neuvoa eläinlääkäriltä ennen kuin tarjoat ruusukaalia.",
     "nb": "Gi bare litt, og ikke overfôr. Hvis hunden har kostholdsproblemer eller allergier, bør du snakke med dyrlegen før du gir rosenkål.",
-    "de": "Geben Sie nur eine kleine Menge und nicht zu viel. Wenn Ihr Hund Futterunverträglichkeiten oder Allergien hat, sprechen Sie zuerst mit Ihrem Tierarzt, bevor Sie Rosenkohl anbieten."
+    "de": "Geben Sie nur eine kleine Menge und nicht zu viel. Wenn Ihr Hund Futterunverträglichkeiten oder Allergien hat, sprechen Sie zuerst mit Ihrem Tierarzt, bevor Sie Rosenkohl anbieten.",
+    "fr": "N’en donnez qu’un peu. Si votre chien a des problèmes alimentaires ou des allergies, parlez-en d’abord à votre vétérinaire avant de lui proposer des choux de Bruxelles."
   },
   "serving": {
     "en": "Washed, with most of the stem cut off and the leaves left on, and cooked (steaming keeps the most nutrients). Plain, without herbs or spices, in small amounts.",
@@ -92,7 +98,8 @@
     "da": "Vasket, med det meste af stilken skåret af, men bladene på, og kogt (dampning bevarer mest af næringsstofferne). Uden krydderurter og krydderier og kun i små mængder.",
     "fi": "Pestynä, varren suurin osa pois leikattuna ja lehdet paikoillaan, kypsennettynä (höyryttäminen säilyttää ravintoaineet parhaiten). Ilman yrttejä tai mausteita, pieninä määrinä.",
     "nb": "Vasket, med mesteparten av stilken skåret av og bladene på, og kokt (damping beholder mest næring). Uten tilsetninger, urter eller krydder, i små mengder.",
-    "de": "Gewaschen, der Strunk zum größten Teil abgeschnitten, die Blätter dran, und gekocht (Dämpfen erhält die meisten Nährstoffe). Pur, ohne Kräuter oder Gewürze, in kleinen Mengen."
+    "de": "Gewaschen, der Strunk zum größten Teil abgeschnitten, die Blätter dran, und gekocht (Dämpfen erhält die meisten Nährstoffe). Pur, ohne Kräuter oder Gewürze, in kleinen Mengen.",
+    "fr": "Lavés, en retirant l’essentiel du trognon mais en gardant les feuilles, puis cuits (la cuisson à la vapeur est celle qui préserve le mieux les nutriments). Nature, sans herbes ni épices, en petite quantité."
   },
   "child": {
     "en": "Dogs can have a little cooked Brussels sprout as a treat. Too many give them a very windy tummy!",
@@ -105,7 +112,8 @@
     "da": "Hunde må gerne få lidt kogt rosenkål som godbid. For meget giver en mave fuld af luft!",
     "fi": "Koira saa syödä vähän kypsennettyä ruusukaalia herkuksi. Liian monen jälkeen koiran masu on ihan ilmaa täynnä!",
     "nb": "Hunder kan få litt kokt rosenkål som godbit. For mye gir dem masse luft i magen!",
-    "de": "Hunde dürfen ein bisschen gekochten Rosenkohl als Leckerli bekommen. Von zu viel müssen sie ganz schön viel pupsen!"
+    "de": "Hunde dürfen ein bisschen gekochten Rosenkohl als Leckerli bekommen. Von zu viel müssen sie ganz schön viel pupsen!",
+    "fr": "Les chiens peuvent manger un peu de chou de Bruxelles cuit en friandise. Mais attention : s’ils en mangent trop, leur ventre se remplit de gaz !"
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "da": "Må hunde spise rå rosenkål?",
         "fi": "Saako koira syödä raakaa ruusukaalia?",
         "nb": "Kan hunder spise rå rosenkål?",
-        "de": "Dürfen Hunde rohen Rosenkohl fressen?"
+        "de": "Dürfen Hunde rohen Rosenkohl fressen?",
+        "fr": "Les chiens peuvent-ils manger des choux de Bruxelles crus ?"
       },
       "a": {
         "en": "It's better not to: raw sprouts are too hard for dogs to digest. Cook them first; steaming keeps the most nutrients.",
@@ -133,7 +142,8 @@
         "da": "Det er bedst at lade være: rå rosenkål er for hård for hunde at fordøje. Kog den først – dampning bevarer mest af næringsstofferne.",
         "fi": "Parempi olla antamatta: koiran on vaikea sulattaa raakaa ruusukaalia. Kypsennä se ensin, mieluiten höyryttämällä, sillä silloin ravintoaineita säilyy eniten.",
         "nb": "Det er best å la være: Rå rosenkål er for hard for hunder å fordøye. Kok den først. Damping beholder mest næring.",
-        "de": "Besser nicht: Roher Rosenkohl ist für Hunde zu hart und schwer verdaulich. Kochen Sie ihn vorher, am besten durch Dämpfen – so bleiben die meisten Nährstoffe erhalten."
+        "de": "Besser nicht: Roher Rosenkohl ist für Hunde zu hart und schwer verdaulich. Kochen Sie ihn vorher, am besten durch Dämpfen – so bleiben die meisten Nährstoffe erhalten.",
+        "fr": "Mieux vaut éviter : les choux de Bruxelles crus sont trop difficiles à digérer pour les chiens. Faites-les cuire d’abord ; la cuisson à la vapeur préserve le mieux les nutriments."
       }
     }
   ],
@@ -245,6 +255,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "8d12e170bf1a06cf3ecbd9fecb99e3e49bd7d30dbf789ac7424928d0b3cf4171"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "b1d3fb268fdbbfcef27d5a68f9ebe90e84ae615bd11e5640ab89122248de2396"
     }
   }
 }

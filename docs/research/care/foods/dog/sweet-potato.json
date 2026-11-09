@@ -12,7 +12,8 @@
     "da": "Søde kartofler",
     "fi": "Bataatti",
     "nb": "Søtpotet",
-    "de": "Süßkartoffel"
+    "de": "Süßkartoffel",
+    "fr": "Patate douce"
   },
   "question": {
     "en": "Can dogs eat sweet potato?",
@@ -25,7 +26,8 @@
     "da": "Må hunde spise søde kartofler?",
     "fi": "Saako koira syödä bataattia?",
     "nb": "Kan hunder spise søtpotet?",
-    "de": "Dürfen Hunde Süßkartoffeln fressen?"
+    "de": "Dürfen Hunde Süßkartoffeln fressen?",
+    "fr": "Les chiens peuvent-ils manger de la patate douce ?"
   },
   "url_slug": {
     "en": "sweet-potato",
@@ -38,7 +40,8 @@
     "da": "soede-kartofler",
     "fi": "bataatti",
     "nb": "sotpotet",
-    "de": "suesskartoffel"
+    "de": "suesskartoffel",
+    "fr": "patate-douce"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Ja, i små mængder, kogt og skrællet. Sød kartoffel, der er kogt eller dampet blød, er fin som godbid, men giv aldrig rå sød kartoffel: den er svær at tygge, kan give ondt i maven og kan give tarmblokering.",
     "fi": "Saa, pieninä määrinä, kypsennettynä ja kuorittuna. Pehmeäksi keitetty tai höyrytetty bataatti sopii herkuksi, mutta älä koskaan anna raakaa bataattia: sitä on vaikea pureskella, se voi ärsyttää vatsaa ja aiheuttaa suolitukoksen.",
     "nb": "Ja, i små mengder, kokt og skrellet. Myk, kokt eller dampet søtpotet er greit som en godbit, men gi aldri rå søtpotet: Den er vanskelig å tygge, kan gi urolig mage og kan føre til tarmblokkering.",
-    "de": "Ja, in kleinen Mengen, gekocht und geschält. Weich gekochte oder gedämpfte Süßkartoffel ist als Leckerli in Ordnung, geben Sie aber niemals rohe Süßkartoffel: Sie ist schwer zu kauen, kann den Magen verstimmen und möglicherweise einen Darmverschluss verursachen."
+    "de": "Ja, in kleinen Mengen, gekocht und geschält. Weich gekochte oder gedämpfte Süßkartoffel ist als Leckerli in Ordnung, geben Sie aber niemals rohe Süßkartoffel: Sie ist schwer zu kauen, kann den Magen verstimmen und möglicherweise einen Darmverschluss verursachen.",
+    "fr": "Oui, en petite quantité, cuite et pelée. La patate douce bouillie ou cuite à la vapeur jusqu’à ce qu’elle soit tendre convient comme friandise, mais ne donnez jamais de patate douce crue : elle est dure à mâcher, peut causer des troubles digestifs et risque de provoquer une occlusion intestinale."
   },
   "why": {
     "en": "Sweet potatoes are not poisonous, but raw ones are hard to chew and can cause an intestinal blockage, and the skin makes them harder to digest. Too much can cause bone and muscle weakness from excess vitamin A, and their high glycemic index means diabetic dogs need care. Recent research suggests they may not suit a dog's diet, and they should never be the main source of nutrition.",
@@ -65,7 +69,8 @@
     "da": "Søde kartofler er ikke giftige, men rå søde kartofler er svære at tygge og kan give tarmblokering, og skrællen gør dem sværere at fordøje. For meget kan give svaghed i knogler og muskler på grund af for meget vitamin A, og det høje glykæmiske indeks betyder, at hunde med diabetes kræver forsigtighed. Nyere forskning tyder på at de måske ikke passer til en hunds kost, og de bør aldrig være hundens vigtigste kilde til ernæring.",
     "fi": "Bataatti ei ole myrkyllistä, mutta raakaa bataattia on vaikea pureskella ja se voi aiheuttaa suolitukoksen, ja kuori tekee siitä vaikeammin sulavaa. Liian suuri määrä voi aiheuttaa luiden ja lihasten heikkoutta, koska A-vitamiinia tulee liikaa, ja korkean glykeemisen indeksin vuoksi diabetesta sairastavien koirien kanssa on oltava varovainen. Tuoreen tutkimuksen perusteella bataatti ei välttämättä sovi koiran ruokavalioon, eikä sen pidä koskaan olla pääasiallinen ravinnonlähde.",
     "nb": "Søtpoteter er ikke giftige, men rå søtpoteter er vanskelige å tygge og kan gi tarmblokkering, og skallet gjør dem tyngre å fordøye. For mye kan gi svake bein og muskler på grunn av for mye vitamin A, og på grunn av den høye glykemiske indeksen må du være forsiktig hvis hunden har diabetes. Nyere forskning tyder på at søtpoteter kanskje ikke egner seg i hundens kosthold, og de bør aldri utgjøre hovedkilden til næring.",
-    "de": "Süßkartoffeln sind nicht giftig, aber rohe sind schwer zu kauen und können einen Darmverschluss verursachen, und mit Schale sind sie schwerer verdaulich. Zu viel kann wegen des Überschusses an Vitamin A zu Knochen- und Muskelschwäche führen, und wegen ihres hohen glykämischen Index brauchen Hunde mit Diabetes besondere Vorsicht. Neuere Studien legen nahe, dass sie sich womöglich nicht für die Ernährung von Hunden eignen, und sie sollten nie die Hauptnahrungsquelle sein."
+    "de": "Süßkartoffeln sind nicht giftig, aber rohe sind schwer zu kauen und können einen Darmverschluss verursachen, und mit Schale sind sie schwerer verdaulich. Zu viel kann wegen des Überschusses an Vitamin A zu Knochen- und Muskelschwäche führen, und wegen ihres hohen glykämischen Index brauchen Hunde mit Diabetes besondere Vorsicht. Neuere Studien legen nahe, dass sie sich womöglich nicht für die Ernährung von Hunden eignen, und sie sollten nie die Hauptnahrungsquelle sein.",
+    "fr": "Les patates douces ne sont pas toxiques, mais crues elles sont dures à mâcher et peuvent provoquer une occlusion intestinale, et la peau les rend plus difficiles à digérer. Trop de patate douce peut entraîner une faiblesse des os et des muscles due à un excès de vitamine A, et son indice glycémique élevé impose de la prudence chez les chiens diabétiques. Des recherches récentes suggèrent qu’elle pourrait ne pas convenir à l’alimentation d’un chien, et elle ne doit jamais en être la source principale."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "da": "Spørg din dyrlæge, før du ændrer din hunds kost, og start med en lille mængde for at se, hvordan din hund reagerer.",
     "fi": "Kysy eläinlääkäriltä ennen kuin muutat koirasi ruokavaliota. Aloita sitten pienellä määrällä ja seuraa, miten koirasi reagoi.",
     "nb": "Spør dyrlegen før du endrer hundens kosthold, og begynn med en liten mengde for å se hvordan hunden reagerer.",
-    "de": "Fragen Sie Ihren Tierarzt, bevor Sie die Ernährung Ihres Hundes umstellen, und beginnen Sie dann mit einer kleinen Menge, um zu sehen, wie Ihr Hund reagiert."
+    "de": "Fragen Sie Ihren Tierarzt, bevor Sie die Ernährung Ihres Hundes umstellen, und beginnen Sie dann mit einer kleinen Menge, um zu sehen, wie Ihr Hund reagiert.",
+    "fr": "Demandez conseil à votre vétérinaire avant de modifier l’alimentation de votre chien, puis commencez par une petite quantité pour voir comment il réagit."
   },
   "serving": {
     "en": "Boiled or steamed until soft, with the skin removed, in small amounts. Never raw, and never the main part of the diet.",
@@ -92,7 +98,8 @@
     "da": "Kogt eller dampet, til de er bløde, med skrællen fjernet og i små mængder. Aldrig rå og aldrig hovedparten af kosten.",
     "fi": "Keitettynä tai höyrytettynä pehmeäksi, kuori poistettuna, pieninä määrinä. Ei koskaan raakana eikä ruokavalion pääosana.",
     "nb": "Kokt eller dampet til den er myk, uten skall, i små mengder. Aldri rå, og aldri hoveddelen av kostholdet.",
-    "de": "Gekocht oder gedämpft, bis sie weich ist, ohne Schale, in kleinen Mengen. Niemals roh und niemals als Hauptbestandteil der Ernährung."
+    "de": "Gekocht oder gedämpft, bis sie weich ist, ohne Schale, in kleinen Mengen. Niemals roh und niemals als Hauptbestandteil der Ernährung.",
+    "fr": "Bouillie ou cuite à la vapeur jusqu’à ce qu’elle soit tendre, sans la peau, en petite quantité. Jamais crue, et jamais la base de l’alimentation."
   },
   "child": {
     "en": "Dogs can have a little soft, cooked sweet potato. A grown-up peels and cooks it first.",
@@ -105,7 +112,8 @@
     "da": "Hunde må gerne få lidt blød, kogt sød kartoffel. En voksen skræller og koger den først.",
     "fi": "Koira saa syödä vähän pehmeää, kypsennettyä bataattia. Aikuinen kuorii ja kypsentää sen ensin.",
     "nb": "Hunder kan få litt myk, kokt søtpotet. En voksen skreller og koker den først.",
-    "de": "Hunde dürfen ein bisschen weiche, gekochte Süßkartoffel bekommen. Ein Erwachsener schält und kocht sie vorher."
+    "de": "Hunde dürfen ein bisschen weiche, gekochte Süßkartoffel bekommen. Ein Erwachsener schält und kocht sie vorher.",
+    "fr": "Les chiens peuvent manger un peu de patate douce tendre et cuite. Un adulte l’épluche et la fait cuire d’abord."
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "da": "Må hunde spise skrællen fra søde kartofler?",
         "fi": "Saako koira syödä bataatin kuorta?",
         "nb": "Kan hunder spise søtpotetskall?",
-        "de": "Dürfen Hunde Süßkartoffelschale fressen?"
+        "de": "Dürfen Hunde Süßkartoffelschale fressen?",
+        "fr": "Les chiens peuvent-ils manger la peau de la patate douce ?"
       },
       "a": {
         "en": "It's best to remove it: leaving the skin on makes sweet potato harder for your dog to digest.",
@@ -133,7 +142,8 @@
         "da": "Det er bedst at fjerne den: hvis skrællen sidder på, er sød kartoffel sværere for din hund at fordøje.",
         "fi": "Se kannattaa poistaa: kuori tekee bataatista koiralle vaikeammin sulavaa.",
         "nb": "Det er best å fjerne det: Med skallet på blir søtpoteten vanskeligere for hunden å fordøye.",
-        "de": "Am besten schälen Sie die Süßkartoffel: Mit Schale ist sie für Ihren Hund schwerer verdaulich."
+        "de": "Am besten schälen Sie die Süßkartoffel: Mit Schale ist sie für Ihren Hund schwerer verdaulich.",
+        "fr": "Mieux vaut la retirer : avec la peau, la patate douce est plus difficile à digérer pour votre chien."
       }
     },
     {
@@ -148,7 +158,8 @@
         "da": "Må hunde spise rå sød kartoffel?",
         "fi": "Saako koira syödä raakaa bataattia?",
         "nb": "Kan hunder spise rå søtpotet?",
-        "de": "Dürfen Hunde rohe Süßkartoffel fressen?"
+        "de": "Dürfen Hunde rohe Süßkartoffel fressen?",
+        "fr": "Les chiens peuvent-ils manger de la patate douce crue ?"
       },
       "a": {
         "en": "No. Raw sweet potato is difficult to chew, can upset your dog's stomach and may cause an intestinal blockage. Cook it until soft.",
@@ -161,7 +172,8 @@
         "da": "Nej. Rå sød kartoffel er svær at tygge, kan give din hund ondt i maven og kan give tarmblokering. Kog den, til den er blød.",
         "fi": "Ei. Raakaa bataattia on vaikea pureskella, ja se voi ärsyttää koiran vatsaa ja aiheuttaa suolitukoksen. Kypsennä se pehmeäksi.",
         "nb": "Nei. Rå søtpotet er vanskelig å tygge, kan gi hunden urolig mage og kan føre til tarmblokkering. Kok den til den er myk.",
-        "de": "Nein. Rohe Süßkartoffel ist schwer zu kauen, kann den Magen Ihres Hundes verstimmen und möglicherweise einen Darmverschluss verursachen. Kochen Sie sie, bis sie weich ist."
+        "de": "Nein. Rohe Süßkartoffel ist schwer zu kauen, kann den Magen Ihres Hundes verstimmen und möglicherweise einen Darmverschluss verursachen. Kochen Sie sie, bis sie weich ist.",
+        "fr": "Non. La patate douce crue est difficile à mâcher, peut causer des troubles digestifs chez votre chien et risque de provoquer une occlusion intestinale. Faites-la cuire jusqu’à ce qu’elle soit tendre."
       }
     }
   ],
@@ -284,6 +296,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "0b3d6f79ff3458e238db47f87fa875413e31b7e19282d64348471ebf824217b1"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a68ef8350924fe1eab2a31ce0bfe266ec2c398e94c44effb159ee02a84f80f75"
     }
   }
 }

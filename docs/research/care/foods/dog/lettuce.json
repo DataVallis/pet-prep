@@ -12,7 +12,8 @@
     "da": "Salat",
     "fi": "Lehtisalaatti",
     "nb": "Salat",
-    "de": "Kopfsalat"
+    "de": "Kopfsalat",
+    "fr": "Laitue"
   },
   "question": {
     "en": "Can dogs eat lettuce?",
@@ -25,7 +26,8 @@
     "da": "Må hunde spise salat?",
     "fi": "Saako koira syödä lehtisalaattia?",
     "nb": "Kan hunder spise salat?",
-    "de": "Dürfen Hunde Kopfsalat fressen?"
+    "de": "Dürfen Hunde Kopfsalat fressen?",
+    "fr": "Les chiens peuvent-ils manger de la laitue ?"
   },
   "url_slug": {
     "en": "lettuce",
@@ -38,7 +40,8 @@
     "da": "salat",
     "fi": "lehtisalaatti",
     "nb": "salat",
-    "de": "kopfsalat"
+    "de": "kopfsalat",
+    "fr": "laitue"
   },
   "level": "small_amounts",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Ja, salat uden tilsætninger er som regel ufarligt for hunde i moderate mængder. Romainesalat, icebergsalat og rucola er ugiftige. Vask den godt og hak den, og giv ikke hunden rester af din egen salat, som ofte indeholder løg.",
     "fi": "Saa, maustamaton lehtisalaatti on yleensä turvallista koirille kohtuudella. Romaine-, jäävuori- ja rucolasalaatti eivät ole myrkyllisiä. Pese salaatti hyvin ja pilko se. Älä anna koiralle ylijäänyttä salaattia, sillä siinä on usein sipulia.",
     "nb": "Ja, salat uten tilsetninger er som regel trygt for hunder i moderate mengder. Romanosalat, isbergsalat og ruccola er ikke giftige. Vask den godt og hakk den opp, og ikke gi hunden rester av salaten din, som ofte inneholder løk.",
-    "de": "Ja, Kopfsalat pur ist für Hunde in Maßen in der Regel unbedenklich. Romanasalat, Eisbergsalat und Rucola sind ungiftig. Waschen Sie ihn gut und schneiden Sie ihn klein, und geben Sie Ihrem Hund keine Salatreste, denn die enthalten oft Zwiebeln."
+    "de": "Ja, Kopfsalat pur ist für Hunde in Maßen in der Regel unbedenklich. Romanasalat, Eisbergsalat und Rucola sind ungiftig. Waschen Sie ihn gut und schneiden Sie ihn klein, und geben Sie Ihrem Hund keine Salatreste, denn die enthalten oft Zwiebeln.",
+    "fr": "Oui, la laitue nature est généralement sans danger pour les chiens avec modération. La laitue romaine, la laitue iceberg et la roquette ne sont pas toxiques. Lavez-la bien et hachez-la, et ne partagez pas vos restes de salade, qui contiennent souvent de l’oignon."
   },
   "why": {
     "en": "Lettuce is generally safe for dogs, but it is very fibrous and hard to digest in big pieces, and too much can cause diarrhoea. Salads often include ingredients that are toxic to dogs, such as onions. Lettuce has also been recalled for E. coli or listeria contamination, so wash it well and buy carefully.",
@@ -65,7 +69,8 @@
     "da": "Salat er som regel ufarligt for hunde, men det er meget fibrøst og svært at fordøje i store stykker, og for meget kan give diarré. Salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Salat er også blevet kaldt tilbage på grund af forurening med E. coli eller listeria, så vask den grundigt, og køb den med omtanke.",
     "fi": "Lehtisalaatti on yleensä turvallista koirille, mutta se on hyvin kuitupitoista ja isoina paloina vaikeasti sulavaa, ja liiasta voi tulla ripulia. Salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Lehtisalaattia on myös vedetty pois markkinoilta E. coli -bakteerin tai listerian aiheuttaman saastumisen vuoksi, joten pese se hyvin ja osta huolella.",
     "nb": "Salat er som regel trygt for hunder, men den er veldig fiberrik og tung å fordøye i store biter, og for mye kan gi diaré. Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. Salat har også vært trukket tilbake fra markedet på grunn av E. coli- eller listeriasmitte, så vask den godt og velg med omhu når du handler.",
-    "de": "Kopfsalat ist für Hunde in der Regel unbedenklich, enthält aber viele Ballaststoffe und ist in großen Stücken schwer verdaulich; zu viel kann Durchfall auslösen. Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Außerdem wurde Kopfsalat schon wegen einer Belastung mit E. coli oder Listerien zurückgerufen – waschen Sie ihn deshalb gut und kaufen Sie mit Bedacht."
+    "de": "Kopfsalat ist für Hunde in der Regel unbedenklich, enthält aber viele Ballaststoffe und ist in großen Stücken schwer verdaulich; zu viel kann Durchfall auslösen. Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Außerdem wurde Kopfsalat schon wegen einer Belastung mit E. coli oder Listerien zurückgerufen – waschen Sie ihn deshalb gut und kaufen Sie mit Bedacht.",
+    "fr": "La laitue est généralement sans danger pour les chiens, mais elle est très fibreuse et difficile à digérer en gros morceaux, et en trop grande quantité elle peut provoquer de la diarrhée. Les salades contiennent souvent des ingrédients toxiques pour les chiens, comme l’oignon. De la laitue a aussi fait l’objet de rappels pour contamination à E. coli ou à listeria : lavez-la bien et achetez-la avec soin."
   },
   "signs": null,
   "what_to_do": {
@@ -79,7 +84,8 @@
     "da": "Hold dig til et stykke salat uden tilsætninger en gang imellem: for meget kan give diarré. Giv ikke hunden rester af en blandet salat, for salater indeholder ofte løg, som er giftige for hunde.",
     "fi": "Anna vain silloin tällöin pieni, maustamaton pala: liiasta voi tulla ripulia. Älä anna ylijäänyttä salaattia, sillä salaateissa on usein sipulia, joka on koirille myrkyllistä.",
     "nb": "Hold deg til en bit uten tilsetninger nå og da: For mye kan gi diaré. Ikke gi hunden salatrester, for salater inneholder ofte løk, som er giftig for hunder.",
-    "de": "Geben Sie nur ab und zu ein Stück pur: Zu viel kann Durchfall verursachen. Geben Sie keine Salatreste, denn Salate enthalten oft Zwiebeln, die für Hunde giftig sind."
+    "de": "Geben Sie nur ab und zu ein Stück pur: Zu viel kann Durchfall verursachen. Geben Sie keine Salatreste, denn Salate enthalten oft Zwiebeln, die für Hunde giftig sind.",
+    "fr": "Limitez-vous à un morceau nature de temps en temps : en trop grande quantité, la laitue peut provoquer de la diarrhée. Ne partagez pas de restes de salade : les salades contiennent souvent de l’oignon, toxique pour les chiens."
   },
   "serving": {
     "en": "A plain, thoroughly washed piece from time to time, chopped up rather than as a whole leaf. Never from a mixed salad.",
@@ -92,7 +98,8 @@
     "da": "Af og til et stykke salat uden tilsætninger, grundigt vasket og hakket i stedet for et helt blad. Aldrig fra en blandet salat.",
     "fi": "Silloin tällöin maustamaton, huolellisesti pesty pala, pilkottuna eikä kokonaisena lehtenä. Ei koskaan sekasalaatista.",
     "nb": "Nå og da en grundig vasket bit uten tilsetninger, hakket opp i stedet for et helt blad. Aldri fra en blandet salat.",
-    "de": "Ab und zu ein Stück pur, gründlich gewaschen und klein geschnitten statt als ganzes Blatt. Nie aus einem gemischten Salat."
+    "de": "Ab und zu ein Stück pur, gründlich gewaschen und klein geschnitten statt als ganzes Blatt. Nie aus einem gemischten Salat.",
+    "fr": "Un morceau nature, soigneusement lavé, de temps en temps, haché plutôt qu’en feuille entière. Jamais prélevé dans une salade composée."
   },
   "child": {
     "en": "Dogs can munch a little plain lettuce. A grown-up washes it and chops it small. No salad leftovers, please!",
@@ -105,7 +112,8 @@
     "da": "Hunde må gerne gnaske lidt salat uden tilsætninger. En voksen vasker den og hakker den i små stykker. Ingen salatrester, tak!",
     "fi": "Koira saa mutustella vähän maustamatonta lehtisalaattia. Aikuinen pesee sen ja pilkkoo pieniksi paloiksi. Ei salaatintähteitä, kiitos!",
     "nb": "Hunder kan knaske litt salat uten tilsetninger. En voksen vasker den og hakker den i små biter. Ingen salatrester, takk!",
-    "de": "Hunde dürfen ein bisschen Kopfsalat mampfen. Ein Erwachsener wäscht ihn und schneidet ihn klein. Keine Salatreste, bitte!"
+    "de": "Hunde dürfen ein bisschen Kopfsalat mampfen. Ein Erwachsener wäscht ihn und schneidet ihn klein. Keine Salatreste, bitte!",
+    "fr": "Les chiens peuvent grignoter un peu de laitue nature. Un adulte la lave et la hache menu. Pas de restes de salade, s’il te plaît !"
   },
   "faq": [
     {
@@ -120,7 +128,8 @@
         "da": "Må hunde spise en blandet salat?",
         "fi": "Saako koira syödä salaattia?",
         "nb": "Kan hunder spise blandet salat?",
-        "de": "Dürfen Hunde Salat fressen?"
+        "de": "Dürfen Hunde Salat fressen?",
+        "fr": "Les chiens peuvent-ils manger de la salade ?"
       },
       "a": {
         "en": "Not your leftover salad: salads often include ingredients that are toxic to dogs, such as onions. A plain piece of lettuce now and then is fine.",
@@ -133,7 +142,8 @@
         "da": "Ikke rester af din egen salat: salater indeholder ofte ingredienser, som er giftige for hunde, fx løg. Et stykke salat uden tilsætninger af og til er fint.",
         "fi": "Ei sinun salaattisi tähteitä: salaateissa on usein aineksia, jotka ovat koirille myrkyllisiä, kuten sipulia. Maustamaton pala lehtisalaattia silloin tällöin sen sijaan sopii.",
         "nb": "Ikke salatrester fra middagen: Salater inneholder ofte ingredienser som er giftige for hunder, for eksempel løk. En bit salat uten tilsetninger nå og da er greit.",
-        "de": "Nicht Ihre Salatreste: Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Ein Stück Kopfsalat pur ist dagegen ab und zu in Ordnung."
+        "de": "Nicht Ihre Salatreste: Salate enthalten oft Zutaten, die für Hunde giftig sind, etwa Zwiebeln. Ein Stück Kopfsalat pur ist dagegen ab und zu in Ordnung.",
+        "fr": "Pas vos restes de salade : les salades contiennent souvent des ingrédients toxiques pour les chiens, comme l’oignon. Un morceau de laitue nature de temps en temps, en revanche, ne pose pas de problème."
       }
     }
   ],
@@ -241,6 +251,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "ec7ec043ec0c8c571d096ae3339f2824f60478196d15e616c1365e571bcbebb9"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "c994c20fac16a4e689483fb50b6bf1bd8498be4d01d3c54cf0b0be61dd4a3c9c"
     }
   }
 }

@@ -12,7 +12,8 @@
     "da": "Selleri",
     "fi": "Varsiselleri",
     "nb": "Stangselleri",
-    "de": "Stangensellerie"
+    "de": "Stangensellerie",
+    "fr": "Céleri"
   },
   "question": {
     "en": "Can cats eat celery?",
@@ -25,7 +26,8 @@
     "da": "Må katte spise selleri?",
     "fi": "Saako kissa syödä varsiselleriä?",
     "nb": "Kan katter spise stangselleri?",
-    "de": "Dürfen Katzen Stangensellerie fressen?"
+    "de": "Dürfen Katzen Stangensellerie fressen?",
+    "fr": "Les chats peuvent-ils manger du céleri ?"
   },
   "url_slug": {
     "en": "celery",
@@ -38,7 +40,8 @@
     "da": "selleri",
     "fi": "varsiselleri",
     "nb": "stangselleri",
-    "de": "stangensellerie"
+    "de": "stangensellerie",
+    "fr": "celeri"
   },
   "level": "not_recommended",
   "answer": {
@@ -52,7 +55,8 @@
     "da": "Det er bedst ikke at give selleri. International Cat Care advarer om at kontakt med bladene fra grøntsagsplanter som selleri kan give blærer eller kløe i kattens mund og på tandkødet, og alle planter kan give en kat ondt i maven. Katte har ikke brug for grøntsager.",
     "fi": "Ei kannata tarjota varsiselleriä. International Cat Care varoittaa, että ruokakasvien, kuten varsisellerin, lehtien kanssa kosketuksiin joutuminen voi aiheuttaa kissan suuhun ja ikeniin rakkuloita tai kutinaa, ja mikä tahansa kasvi voi ärsyttää kissan vatsaa. Kissat eivät tarvitse kasviksia.",
     "nb": "Det er best å la være å gi stangselleri. International Cat Care advarer om at kontakt med bladene på matplanter som stangselleri kan gi blemmer eller kløe i kattens munn og tannkjøtt, og alle planter kan gi katten urolig mage. Katter trenger ikke grønnsaker.",
-    "de": "Am besten geben Sie keinen Stangensellerie. International Cat Care warnt, dass der Kontakt mit den Blättern von Nutzpflanzen wie Stangensellerie Blasen oder Juckreiz im Maul und am Zahnfleisch einer Katze verursachen kann; außerdem kann jede Pflanze einer Katze auf den Magen schlagen. Katzen brauchen kein Gemüse."
+    "de": "Am besten geben Sie keinen Stangensellerie. International Cat Care warnt, dass der Kontakt mit den Blättern von Nutzpflanzen wie Stangensellerie Blasen oder Juckreiz im Maul und am Zahnfleisch einer Katze verursachen kann; außerdem kann jede Pflanze einer Katze auf den Magen schlagen. Katzen brauchen kein Gemüse.",
+    "fr": "Mieux vaut ne pas en donner. International Cat Care avertit que le contact avec les feuilles de plantes potagères comme le céleri peut provoquer des cloques ou des démangeaisons dans la bouche et sur les gencives du chat, et que n’importe quelle plante peut lui donner mal au ventre. Les chats n’ont pas besoin de légumes."
   },
   "why": {
     "en": "International Cat Care names celery among food plants whose leaves can cause blistering or itching of a cat's mouth and gums, sneezing and eye problems, and says all plants, even grass, can irritate a cat's stomach and intestines and cause vomiting. An ASPCA garden article lists celery among snacks for pets in moderation, but we follow the stricter cat-specific advice. Cats don't need fruit or vegetables in their diet.",
@@ -65,7 +69,8 @@
     "da": "International Cat Care nævner selleri blandt de grøntsagsplanter, hvis blade kan give blærer eller kløe i kattens mund og på tandkødet, nysen og øjenproblemer, og skriver at alle planter, selv græs, kan irritere kattens mave og tarme og give opkast. En ASPCA-artikel om planter i haven nævner selleri blandt de snacks, kæledyr kan få i moderate mængder, men vi følger det strengere råd, der gælder specifikt for katte. Katte har ikke brug for frugt og grøntsager i kosten.",
     "fi": "International Cat Care luettelee varsisellerin ruokakasveihin, joiden lehdet voivat aiheuttaa kissalle rakkuloita tai kutinaa suuhun ja ikeniin sekä aivastelua ja silmävaivoja. Järjestön mukaan kaikki kasvit, jopa ruoho, voivat ärsyttää kissan mahaa ja suolistoa ja aiheuttaa oksentelua. ASPCA:n puutarha-artikkelissa varsiselleri mainitaan kohtuudella sopivien lemmikkien välipalojen joukossa, mutta noudatamme tiukempaa, kissoille tarkoitettua ohjetta. Kissat eivät tarvitse ruokavaliossaan hedelmiä tai kasviksia.",
     "nb": "International Cat Care nevner stangselleri blant matplanter der bladene kan gi blemmer eller kløe i kattens munn og tannkjøtt, nysing og øyeproblemer, og skriver at alle planter, selv gress, kan irritere kattens mage og tarm og gi oppkast. En hageartikkel fra ASPCA oppgir stangselleri blant godbiter for kjæledyr som kan gis med måte, men vi følger det strengere rådet som gjelder katter spesielt. Katter trenger ikke frukt eller grønnsaker i kostholdet.",
-    "de": "International Cat Care nennt Stangensellerie unter den Nutzpflanzen, deren Blätter Blasen oder Juckreiz im Maul und am Zahnfleisch, Niesen und Augenprobleme auslösen können, und weist darauf hin, dass alle Pflanzen, selbst Gras, Magen und Darm einer Katze reizen und Erbrechen verursachen können. Ein ASPCA-Gartenartikel führt Stangensellerie unter den Snacks auf, die für Haustiere in Maßen in Ordnung sind, wir folgen aber dem strengeren, katzenspezifischen Rat. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung."
+    "de": "International Cat Care nennt Stangensellerie unter den Nutzpflanzen, deren Blätter Blasen oder Juckreiz im Maul und am Zahnfleisch, Niesen und Augenprobleme auslösen können, und weist darauf hin, dass alle Pflanzen, selbst Gras, Magen und Darm einer Katze reizen und Erbrechen verursachen können. Ein ASPCA-Gartenartikel führt Stangensellerie unter den Snacks auf, die für Haustiere in Maßen in Ordnung sind, wir folgen aber dem strengeren, katzenspezifischen Rat. Katzen brauchen weder Obst noch Gemüse in ihrer Ernährung.",
+    "fr": "International Cat Care cite le céleri parmi les plantes potagères dont les feuilles peuvent provoquer des cloques ou des démangeaisons dans la bouche et sur les gencives, des éternuements et des troubles oculaires, et indique que toutes les plantes, même l’herbe, peuvent irriter l’estomac et les intestins d’un chat et provoquer des vomissements. Un article de jardinage de l’ASPCA cite le céleri parmi les en-cas acceptables avec modération pour les animaux de compagnie, mais nous suivons l’avis le plus strict, propre aux chats. Les chats n’ont besoin ni de fruits ni de légumes dans leur alimentation."
   },
   "signs": {
     "en": [
@@ -133,6 +138,12 @@
       "Juckreiz oder Blasen im Maul und am Zahnfleisch",
       "Niesen",
       "Augenprobleme"
+    ],
+    "fr": [
+      "Vomissements",
+      "Démangeaisons ou cloques dans la bouche et sur les gencives",
+      "Éternuements",
+      "Troubles oculaires"
     ]
   },
   "what_to_do": {
@@ -146,7 +157,8 @@
     "da": "Hvis din kat har tygget på selleri og virker utilpas, for eksempel kaster op eller har kløe i munden, så ring til din dyrlæge og få råd. Prøv ikke selv at få katten til at kaste op.",
     "fi": "Jos kissasi pureskeli varsiselleriä ja vaikuttaa huonovointiselta, esimerkiksi oksentaa tai sen suu tuntuu kutiavan, pyydä neuvoa eläinlääkäriltä. Älä yritä itse oksennuttaa kissaasi.",
     "nb": "Hvis katten har tygget på stangselleri og virker uvel, for eksempel kaster opp eller har kløe i munnen, må du ringe dyrlegen for råd. Ikke prøv å få katten til å kaste opp selv.",
-    "de": "Wenn Ihre Katze Stangensellerie angeknabbert hat und sich unwohl fühlt, zum Beispiel erbricht oder sich am Maul kratzt, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen."
+    "de": "Wenn Ihre Katze Stangensellerie angeknabbert hat und sich unwohl fühlt, zum Beispiel erbricht oder sich am Maul kratzt, rufen Sie Ihren Tierarzt an und lassen Sie sich beraten. Versuchen Sie nicht, Ihre Katze zu Hause zum Erbrechen zu bringen.",
+    "fr": "Si votre chat a mâchonné du céleri et semble mal en point, par exemple s’il vomit ou a la bouche qui le démange, appelez votre vétérinaire pour lui demander conseil. N’essayez pas de le faire vomir vous-même."
   },
   "serving": null,
   "child": {
@@ -160,7 +172,8 @@
     "da": "Selleri er ikke en kattesnack. Bladene kan give kløe i kattens mund, så selleri er bedre til mennesker.",
     "fi": "Varsiselleri ei ole kissan välipala. Sen lehdet voivat saada kissan suun kutisemaan, joten se on parempi jättää ihmisille.",
     "nb": "Stangselleri er ikke noe for katter. Bladene kan gi katter kløe i munnen, så stangselleri er best for mennesker.",
-    "de": "Stangensellerie ist kein Snack für Katzen. Seine Blätter können bei Katzen Juckreiz im Maul auslösen, deshalb ist Stangensellerie besser für Menschen."
+    "de": "Stangensellerie ist kein Snack für Katzen. Seine Blätter können bei Katzen Juckreiz im Maul auslösen, deshalb ist Stangensellerie besser für Menschen.",
+    "fr": "Le céleri n’est pas un en-cas pour chat. Ses feuilles peuvent faire démanger la bouche d’un chat : le céleri, c’est mieux pour les humains."
   },
   "faq": [
     {
@@ -175,7 +188,8 @@
         "da": "Har katte brug for grøntsager?",
         "fi": "Tarvitsevatko kissat kasviksia?",
         "nb": "Trenger katter grønnsaker?",
-        "de": "Brauchen Katzen Gemüse?"
+        "de": "Brauchen Katzen Gemüse?",
+        "fr": "Les chats ont-ils besoin de légumes ?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
@@ -188,7 +202,8 @@
         "da": "Nej. Cats Protection skriver at katte sjældent spiser grøntsager i naturen, og at der ikke er behov for at tilføje dem til kosten. Grøntsager er højst et lille ekstra.",
         "fi": "Eivät. Cats Protectionin mukaan kissat syövät luonnostaan harvoin kasviksia, eikä niitä tarvitse lisätä kissan ruokavalioon. Kasvis voi olla korkeintaan pieni lisä.",
         "nb": "Nei. Cats Protection skriver at katter sjelden spiser grønnsaker av seg selv, og at det ikke er nødvendig å legge dem til i kostholdet. Grønnsaker kan aldri være mer enn et lite tillegg.",
-        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra."
+        "de": "Nein. Laut Cats Protection fressen Katzen von Natur aus kaum Gemüse, und es gibt keinen Grund, es auf ihren Speiseplan zu setzen. Gemüse bleibt immer nur ein kleines Extra.",
+        "fr": "Non. Selon Cats Protection, les chats mangent rarement des légumes dans la nature et il n’y a aucune raison d’en ajouter à leur alimentation. Un légume ne reste jamais qu’un petit plus."
       }
     }
   ],
@@ -292,6 +307,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "b31633971ac8d7420df10c9dca1af349a596da36a2134b6b04ca036fa976c517"
+    },
+    "fr": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "6af5e01195c0fb006987498d4b73fd59a003cecf43526ca2e48776dd3def577d"
     }
   }
 }
