@@ -1,0 +1,257 @@
+{
+  "country": "BR",
+  "checked": "2026-11-09",
+  "sources": [
+    {
+      "name": "Prefeitura de São Paulo - Hospitais veterinários públicos",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "Official page opened; 5 municipal hospitals, only Leste I stated 24 horas; no unit phones. Sampa News and Saúde news pages opened for the Leste 24 h announcement."
+    },
+    {
+      "name": "Pet Care (own site)",
+      "url": "https://petcare.com.br/unidades/sao-paulo/",
+      "note": "Units page opened; four Centro Veterinário 24h units say 'funcionamento 24 horas durante todos os dias da semana'; Pacaembu page also opened."
+    },
+    {
+      "name": "Veros Hospital Veterinário (own site)",
+      "url": "https://veros.vet/pronto-socorro",
+      "note": "Page says Pronto-socorro e Emergência veterinária 24 horas."
+    },
+    {
+      "name": "HOVET USP FMVZ",
+      "url": "https://hovet.fmvz.usp.br/atendimento/",
+      "note": "Official university pages opened; triage hours only, no 24 h or emergency statement."
+    },
+    {
+      "name": "Prefeitura de São José dos Campos",
+      "url": "https://www.sjc.sp.gov.br/noticias/2026/agosto/19/prefeitura-lanca-edital-para-a-gestao-do-hospital-veterinario/",
+      "note": "News pages opened 2026-11-09; hospital partly open, 24 h planned only."
+    },
+    {
+      "name": "Prefeitura de Sorocaba",
+      "url": "https://noticias.sorocaba.sp.gov.br/hospital-veterinario-municipal-cao-mayke-e-inaugurado-na-zona-norte-de-sorocaba/",
+      "note": "Official news pages opened for Cão Mayke hospital."
+    },
+    {
+      "name": "Prefeitura de Campinas - SAMU Animal",
+      "url": "https://portal-adm.campinas.sp.gov.br/servico/atendimento-emergencial-de-caes-e-gatos-samu-animal",
+      "note": "Opened; strays only (156 / (19) 99398-4517), not an owner clinic, so no entry. conheca.campinas.sp.gov.br blocked by robots."
+    },
+    {
+      "name": "Petz store pages (not used as entries)",
+      "url": "https://www.petz.com.br/loja/petz-centro-veterinario-24h",
+      "note": "Opened; lists 24h retail stores (Augusta, Bandeirantes, Marginal Tietê, Ricardo Jafet) but no veterinary text, so not entered."
+    },
+    {
+      "name": "Catraca Livre / Correio da Manhã (leads only)",
+      "url": "https://catracalivre.com.br/cidadania/veterinario-24-horas-confira-lista-das-clinicas-em-sao-paulo/",
+      "note": "Used only to find clinic names; no entry relies on them except Meu Pet (Correio da Manhã, noted)."
+    }
+  ],
+  "entries": [
+    {
+      "name": "Pet Care Centro Veterinário 24h Ibirapuera",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. República do Líbano, 270, Ibirapuera",
+      "phone": "+55 11 4673 0049",
+      "emergency_24h": true,
+      "duty": "Veterinary centre open 24 hours, every day, including emergencies. Specialties and imaging by appointment only.",
+      "url": "https://petcare.com.br/unidades/sao-paulo/",
+      "source_url": "https://petcare.com.br/unidades/sao-paulo/",
+      "note": "District: Ibirapuera.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Pet Care Centro Veterinário 24h Morumbi",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Avenida Giovanni Gronchi, 3001, Morumbi",
+      "phone": "+55 11 4673 0052",
+      "emergency_24h": true,
+      "duty": "Veterinary centre open 24 hours, every day, including emergencies. Specialties and imaging by appointment only.",
+      "url": "https://petcare.com.br/unidades/sao-paulo/",
+      "source_url": "https://petcare.com.br/unidades/sao-paulo/",
+      "note": "District: Morumbi.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Pet Care Centro Veterinário 24h Pacaembu",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Pacaembu, 1839, Pacaembu",
+      "phone": "+55 11 4673 0058",
+      "emergency_24h": true,
+      "duty": "Veterinary centre open 24 hours, every day, including emergencies. Specialties and imaging by appointment only.",
+      "url": "https://petcare.com.br/unidades/sao-paulo/",
+      "source_url": "https://petcare.com.br/unidades/sao-paulo/",
+      "note": "District: Pacaembu. Own unit page lists consultations 8-21h weekdays and on-call 21-8h; units list page states 24 horas. Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Pet Care Centro Veterinário 24h Tatuapé",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Rua Serra do Japi, 965, Tatuapé",
+      "phone": "+55 11 4673 0068",
+      "emergency_24h": true,
+      "duty": "Veterinary centre open 24 hours, every day, including emergencies. Specialties and imaging by appointment only.",
+      "url": "https://petcare.com.br/unidades/sao-paulo/",
+      "source_url": "https://petcare.com.br/unidades/sao-paulo/",
+      "note": "District: Tatuapé.  Mobile number (11) 94242-0894 shown on page; link targets differed, not used.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Veros Hospital Veterinário",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Brigadeiro Luís Antônio, 4643, Jardim Paulista, 01401-002",
+      "phone": "+55 11 3900 7000",
+      "emergency_24h": true,
+      "duty": "Emergency and general reception open 24 hours. Appointment desk Mon-Fri 8:00-21:00, Sat, Sun and holidays 8:00-20:00. WhatsApp +55 11 94107 9961.",
+      "url": "https://veros.vet/pronto-socorro",
+      "source_url": "https://veros.vet/pronto-socorro",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal Leste (Tatuapé)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Salim Farah Maluf, esquina com R. Ulisses Cruz, 285, Tatuapé",
+      "emergency_24h": true,
+      "duty": "Public hospital for dogs and cats of São Paulo residents enrolled in social programmes; open every day, 24 hours. Between 17:00 and 07:00 and on weekends and holidays only urgent and emergency cases. Free city line 156.",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "source_url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "No unit phone on official page; Secretaria Municipal da Saúde (11) 5461-5600 and 156 only. Confirmed also by prefeitura news pages (Leste 24 h).",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal Leste II (São Miguel Paulista)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Nordestina, 225, esquina com Rua Daniel Bernardo, 107, São Miguel Paulista",
+      "emergency_24h": false,
+      "duty": "Free public hospital for dogs and cats of low-income São Paulo residents (social programmes). Mon-Fri 7:00-17:00, except holidays. Not open 24 hours. City line 156.",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "source_url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "Social screening for residents without active benefits on Tuesdays from 14:00. No unit phone on official page.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal Sul (Jurubatuba)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Rua Agostino Togneri, 153, Jurubatuba",
+      "emergency_24h": false,
+      "duty": "Free public hospital for dogs and cats of low-income São Paulo residents (social programmes). Daily 7:00-17:00; weekends and holidays only urgent and emergency cases. Not open 24 hours. City line 156.",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "source_url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "Social screening for residents without active benefits on Mondays from 14:00. No unit phone on official page.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal Norte (Casa Verde)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Rua Atílio Piffer, 687, Casa Verde",
+      "emergency_24h": false,
+      "duty": "Free public hospital for dogs and cats of low-income São Paulo residents (social programmes). Mon-Fri 7:00-17:00, except holidays. Not open 24 hours. City line 156.",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "source_url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "Social screening for residents without active benefits on Wednesdays from 14:00. No unit phone on official page.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal Oeste (Butantã)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Professor Orlando Marques de Paiva, 87, Butantã (USP)",
+      "emergency_24h": false,
+      "duty": "Free public hospital for dogs and cats of low-income São Paulo residents (social programmes). Mon-Fri 7:00-17:00, except holidays; first come, first served from 07:00. Not open 24 hours. City line 156.",
+      "url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "source_url": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+      "note": "Non-emergency cases after social screening. No unit phone on official page.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário USP (HOVET FMVZ)",
+      "city": "São Paulo",
+      "region": "São Paulo",
+      "address": "Av. Prof. Dr. Orlando Marques de Paiva, 87, Cidade Universitária, 05508-270",
+      "phone": "+55 11 3091 1320",
+      "emergency_24h": false,
+      "duty": "University teaching hospital. Triage Mon-Fri 7:00-10:00 with tickets handed out at 07:00; consultations and tests are paid. Phone answered from 14:00, WhatsApp 8:00-16:30. No emergency or 24-hour service stated.",
+      "url": "https://hovet.fmvz.usp.br/",
+      "source_url": "https://hovet.fmvz.usp.br/atendimento/",
+      "note": "Home page lists (11) 3091-1320; atendimento page lists 11 3091-1306 for hospital-escola info and 156 for public free service.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal de São José dos Campos",
+      "city": "São José dos Campos",
+      "region": "São Paulo",
+      "address": "Rua Gisele Martins, 1031, Morumbi",
+      "phone": "+55 12 3947 8000",
+      "emergency_24h": false,
+      "duty": "Municipal hospital partly open: vaccination and microchipping Mon-Fri 8:30-16:00, no appointment. Full care and 24-hour emergency are planned but not yet available. Phone is the city hall line.",
+      "url": "https://www.sjc.sp.gov.br/noticias/2026/agosto/19/prefeitura-lanca-edital-para-a-gestao-do-hospital-veterinario/",
+      "source_url": "https://www.sjc.sp.gov.br/noticias/2026/agosto/19/prefeitura-lanca-edital-para-a-gestao-do-hospital-veterinario/",
+      "note": "Status 19/08/2026: management call published, proposals due 21/09/2026; recheck. Old Univap-based hospital details not confirmed.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Hospital Veterinário Municipal \"Cão Mayke\"",
+      "city": "Sorocaba",
+      "region": "São Paulo",
+      "address": "Rua Nelson Cardoso Marques, em frente ao nº 383, Jardim Betânia, Zona Norte",
+      "phone": "+55 15 99794 6155",
+      "emergency_24h": false,
+      "duty": "Municipal hospital. Mon-Fri 8:00-17:00 and Sat 8:00-13:00; outside these hours only urgent and emergency cases after triage. Urgent care free for Sorocaba residents; other care for registered low-income owners. Phone is WhatsApp.",
+      "url": "https://noticias.sorocaba.sp.gov.br/hospital-veterinario-municipal-cao-mayke-e-inaugurado-na-zona-norte-de-sorocaba/",
+      "source_url": "https://noticias.sorocaba.sp.gov.br/hospital-veterinario-municipal-cao-mayke-e-inaugurado-na-zona-norte-de-sorocaba/",
+      "note": "Opening-article hours; a second city article says urgent cases only 24 Dec-4 Jan (holiday rota). Not described as 24 h.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    },
+    {
+      "name": "Clínica Veterinária Meu Pet",
+      "city": "Ribeirão Preto",
+      "region": "São Paulo",
+      "address": "Avenida Luiz Galvão César, 50",
+      "emergency_24h": false,
+      "duty": "Free municipal clinic for dogs and cats of Ribeirão Preto residents. Mon-Sat 7:00-17:00; emergencies seen without appointment. Not open 24 hours.",
+      "url": "https://www.correiodamanha.com.br/nacional/sao-paulo/campinas/interior-de-sao-paulo/2026/05/289176-ribeirao-preto-abre-clinica-veterinaria.html",
+      "source_url": "https://www.correiodamanha.com.br/nacional/sao-paulo/campinas/interior-de-sao-paulo/2026/05/289176-ribeirao-preto-abre-clinica-veterinaria.html",
+      "note": "Official ribeiraopreto.sp.gov.br pages blocked by robots; data from Correio da Manhã news article only; no phone found. Verify hours.",
+      "kind": "clinic",
+      "small_animals": true,
+      "checked": "2026-11-09"
+    }
+  ],
+  "notes": "Region: São Paulo state. No official animal poison line found (CIATox/CEATOX are human lines). No duty rotas. Not done: many private 24 h hospitals in São Paulo city (Hospital Veterinário Rebouças, Pompeia, Prontvet, Santa Inês, Vet Popular, Dog Up, Vet Caldas, Vetnasa, Paes de Barros) because clinic sites could not be fetched (only URLs surfaced by search can be opened) - leads from Catraca Livre; Campinas private hospitals, Santos/Baixada (municipal hospital still under construction in 2025, Bom Retiro), Ribeirão Preto private 24 h (Marcovet, VFP, Bmvet), PUC-Campinas hospital (24 h contract with city for rescued animals, Campus II, Jardim Ipaussurama), UNESP Araçatuba/Botucatu/Jaboticabal, UNIP, Anhembi Morumbi, Guarujá, other states of Brazil."
+}
