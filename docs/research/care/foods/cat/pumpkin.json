@@ -5,51 +5,59 @@
     "en": "Pumpkin",
     "sl": "Buča",
     "nl": "Pompoen",
-    "pl": "Dynia"
+    "pl": "Dynia",
+    "cs": "Dýně"
   },
   "question": {
     "en": "Can cats eat pumpkin?",
     "sl": "Ali lahko mačke jedo bučo?",
     "nl": "Mogen katten pompoen eten?",
-    "pl": "Czy koty mogą jeść dynię?"
+    "pl": "Czy koty mogą jeść dynię?",
+    "cs": "Mohou kočky jíst dýni?"
   },
   "url_slug": {
     "en": "pumpkin",
     "sl": "buca",
     "nl": "pompoen",
-    "pl": "dynia"
+    "pl": "dynia",
+    "cs": "dyne"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a little plain cooked pumpkin is fine as an occasional treat. Pet Poison Helpline calls pumpkin safe for dogs and cats, but VCA notes that pumpkin and its seeds can upset a cat's stomach in large amounts, so skip the seeds and rind.",
     "sl": "Da, malo navadne kuhane buče je v redu kot občasen priboljšek. Pet Poison Helpline bučo označuje kot varno za pse in mačke, VCA pa opozarja, da lahko buča in njena semena v velikih količinah mački razdražijo želodec, zato semena in lupino izpustite.",
     "nl": "Ja, een beetje naturel gare pompoen is af en toe prima als traktatie. Volgens Pet Poison Helpline is pompoen veilig voor honden en katten, maar VCA waarschuwt dat pompoen en pompoenpitten in grote hoeveelheden de maag van een kat van streek kunnen maken. Laat de pitten en de schil dus weg.",
-    "pl": "Tak, odrobina zwykłej ugotowanej dyni jest w porządku jako okazjonalny smakołyk. Pet Poison Helpline uznaje dynię za bezpieczną dla psów i kotów, ale VCA zaznacza, że dynia i jej pestki w dużych ilościach mogą rozstroić kotu żołądek, więc pomiń pestki i skórkę."
+    "pl": "Tak, odrobina zwykłej ugotowanej dyni jest w porządku jako okazjonalny smakołyk. Pet Poison Helpline uznaje dynię za bezpieczną dla psów i kotów, ale VCA zaznacza, że dynia i jej pestki w dużych ilościach mogą rozstroić kotu żołądek, więc pomiń pestki i skórkę.",
+    "cs": "Ano, trochu tepelně upravené dýně bez dalších přísad je jako občasný pamlsek v pořádku. Pet Poison Helpline označuje dýni za bezpečnou pro psy i kočky, ale VCA upozorňuje, že dýně a její semínka mohou ve velkém množství kočce podráždit žaludek, proto semínka a slupku vynechte."
   },
   "why": {
     "en": "Pet Poison Helpline says pumpkin is safe for dogs and cats, and that cooked or processed pumpkin is much easier to digest than raw. VCA adds that, while non-toxic, pumpkin and pumpkin seeds can upset a cat's stomach, especially in large quantities. Cats don't need fruit or vegetables in their diet, and treats should be few.",
     "sl": "Pet Poison Helpline navaja, da je buča varna za pse in mačke ter da je kuhana ali predelana buča veliko lažje prebavljiva od surove. VCA dodaja, da lahko buča in bučna semena kljub nestrupenosti mački razdražijo želodec, zlasti v velikih količinah. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov pa naj bo malo.",
     "nl": "Pet Poison Helpline zegt dat pompoen veilig is voor honden en katten, en dat gekookte of bewerkte pompoen veel makkelijker te verteren is dan rauwe. VCA voegt daaraan toe dat pompoen en pompoenpitten weliswaar niet giftig zijn, maar de maag van een kat van streek kunnen maken, vooral in grote hoeveelheden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam.",
-    "pl": "Pet Poison Helpline podaje, że dynia jest bezpieczna dla psów i kotów, a gotowana lub przetworzona dynia jest znacznie łatwiejsza do strawienia niż surowa. VCA dodaje, że choć dynia i jej pestki są nietoksyczne, mogą rozstroić kotu żołądek, zwłaszcza w dużych ilościach. Koty nie potrzebują w diecie owoców ani warzyw, a smakołyków powinno być mało."
+    "pl": "Pet Poison Helpline podaje, że dynia jest bezpieczna dla psów i kotów, a gotowana lub przetworzona dynia jest znacznie łatwiejsza do strawienia niż surowa. VCA dodaje, że choć dynia i jej pestki są nietoksyczne, mogą rozstroić kotu żołądek, zwłaszcza w dużych ilościach. Koty nie potrzebują w diecie owoców ani warzyw, a smakołyków powinno być mało.",
+    "cs": "Pet Poison Helpline uvádí, že dýně je bezpečná pro psy i kočky a že tepelně upravená nebo zpracovaná dýně se tráví mnohem snáz než syrová. VCA dodává, že ačkoli je dýně netoxická, dýně a dýňová semínka mohou kočce podráždit žaludek, zejména ve větším množství. Kočky ve stravě ovoce ani zeleninu nepotřebují a pamlsků by mělo být málo."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
-    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
+    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte dýni podávat a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A small piece of plain cooked pumpkin, or plain canned pumpkin puree with pumpkin as the only ingredient. No seeds, no rind, no salt or seasoning.",
     "sl": "Majhen košček navadne kuhane buče ali navaden bučni pire iz pločevinke, v katerem je buča edina sestavina. Brez semen, lupine, soli in začimb.",
     "nl": "Een klein stukje naturel gare pompoen, of naturel pompoenpuree uit blik waarin pompoen het enige ingrediënt is. Geen pitten, geen schil, geen zout of kruiden.",
-    "pl": "Mały kawałek zwykłej ugotowanej dyni albo zwykłe puree z dyni z puszki, w którym dynia jest jedynym składnikiem. Bez pestek, bez skórki, bez soli i przypraw."
+    "pl": "Mały kawałek zwykłej ugotowanej dyni albo zwykłe puree z dyni z puszki, w którym dynia jest jedynym składnikiem. Bez pestek, bez skórki, bez soli i przypraw.",
+    "cs": "Malý kousek tepelně upravené dýně bez dalších přísad, nebo čisté dýňové pyré z konzervy, jehož jedinou složkou je dýně. Žádná semínka, žádná slupka, žádná sůl ani koření."
   },
   "child": {
     "en": "A little bit of cooked pumpkin can be a cat treat now and then. No seeds or skin, and cats mostly need meat.",
     "sl": "Malo kuhane buče je lahko občasno priboljšek za muco. Brez semen in lupine. Muce pa potrebujejo predvsem meso.",
     "nl": "Een klein beetje gare pompoen kan af en toe een traktatie voor je kat zijn. Geef geen pitten of schil, en denk eraan: katten hebben vooral vlees nodig.",
-    "pl": "Odrobiną ugotowanej dyni można czasem poczęstować kota. Bez pestek i skórki. Koty potrzebują głównie mięsa."
+    "pl": "Odrobiną ugotowanej dyni można czasem poczęstować kota. Bez pestek i skórki. Koty potrzebują głównie mięsa.",
+    "cs": "Trocha uvařené dýně může být pro kočku občas pamlsek. Jen bez semínek a slupky. Kočky potřebují hlavně maso."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "What about Halloween pumpkins?",
         "sl": "Kaj pa buče za noč čarovnic?",
         "nl": "Hoe zit het met pompoenen voor Halloween?",
-        "pl": "A co z dyniami na Halloween?"
+        "pl": "A co z dyniami na Halloween?",
+        "cs": "A co dýně na Halloween?"
       },
       "a": {
         "en": "Fresh pumpkins are not harmful, but Blue Cross says rotten ones can upset a cat's tummy, so keep carved pumpkins out of reach or remove them once they are no longer fresh.",
         "sl": "Sveže buče niso škodljive, Blue Cross pa opozarja, da lahko gnile buče mački razdražijo trebušček, zato izrezljane buče hranite izven njenega dosega ali jih odstranite, ko niso več sveže.",
         "nl": "Verse pompoenen zijn niet schadelijk, maar volgens Blue Cross kunnen verrotte pompoenen de maag van een kat van streek maken. Houd uitgesneden pompoenen daarom buiten het bereik van je kat en ruim ze op zodra ze niet meer vers zijn.",
-        "pl": "Świeże dynie nie szkodzą, ale według Blue Cross zgniłe mogą rozstroić kotu brzuszek, więc trzymaj wydrążone dynie poza zasięgiem kota albo wyrzuć je, gdy przestaną być świeże."
+        "pl": "Świeże dynie nie szkodzą, ale według Blue Cross zgniłe mogą rozstroić kotu brzuszek, więc trzymaj wydrążone dynie poza zasięgiem kota albo wyrzuć je, gdy przestaną być świeże.",
+        "cs": "Čerstvé dýně nejsou škodlivé, ale Blue Cross uvádí, že shnilé mohou kočce podráždit bříško, proto vydlabané dýně uložte mimo dosah nebo je odstraňte, jakmile přestanou být čerstvé."
       }
     },
     {
@@ -71,13 +81,15 @@
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "nl": "Hebben katten groente nodig?",
-        "pl": "Czy koty potrzebują warzyw?"
+        "pl": "Czy koty potrzebują warzyw?",
+        "cs": "Potřebují kočky zeleninu?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
-        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
+        "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk."
       }
     }
   ],
@@ -166,6 +178,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "fa726d07cbbe5e8581587c7be3c8eb954217b9b4e65b114064c0a1eedbbe7360"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "0791e6a3702bb0b9d2e791aad25f366468e7dec9f604a5c1c21920be4ac14748"
     }
   }
 }

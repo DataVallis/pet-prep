@@ -5,51 +5,59 @@
     "en": "Cabbage",
     "sl": "Zelje",
     "nl": "Kool",
-    "pl": "Kapusta"
+    "pl": "Kapusta",
+    "cs": "Zelí"
   },
   "question": {
     "en": "Can cats eat cabbage?",
     "sl": "Ali lahko mačke jedo zelje?",
     "nl": "Mogen katten kool eten?",
-    "pl": "Czy koty mogą jeść kapustę?"
+    "pl": "Czy koty mogą jeść kapustę?",
+    "cs": "Mohou kočky jíst zelí?"
   },
   "url_slug": {
     "en": "cabbage",
     "sl": "zelje",
     "nl": "kool",
-    "pl": "kapusta"
+    "pl": "kapusta",
+    "cs": "zeli"
   },
   "level": "small_amounts",
   "answer": {
     "en": "Yes, a small piece of plain cooked cabbage is fine as an occasional treat. The RSPCA lists cooked red or green cabbage among foods suitable for cats in moderation. Cats don't need vegetables, so keep it a tiny extra.",
     "sl": "Da, majhen košček navadnega kuhanega zelja je v redu kot občasen priboljšek. RSPCA kuhano rdeče ali zeleno zelje navaja med hrano, primerno za mačke v zmernih količinah. Mačke zelenjave ne potrebujejo, zato naj bo le majhen dodatek.",
     "nl": "Ja, een klein stukje naturel gare kool is af en toe prima als traktatie. Volgens de RSPCA kunnen katten met mate gare rode of groene kool eten. Katten hebben geen groente nodig, dus houd het bij een klein extraatje.",
-    "pl": "Tak, mały kawałek zwykłej ugotowanej kapusty jest w porządku jako okazjonalny smakołyk. RSPCA wymienia ugotowaną kapustę czerwoną lub zieloną wśród pokarmów odpowiednich dla kotów w umiarkowanych ilościach. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek."
+    "pl": "Tak, mały kawałek zwykłej ugotowanej kapusty jest w porządku jako okazjonalny smakołyk. RSPCA wymienia ugotowaną kapustę czerwoną lub zieloną wśród pokarmów odpowiednich dla kotów w umiarkowanych ilościach. Koty nie potrzebują warzyw, więc niech to będzie tylko malutki dodatek.",
+    "cs": "Ano, malý kousek tepelně upraveného zelí bez dalších přísad je jako občasný pamlsek v pořádku. RSPCA uvádí vařené červené nebo bílé zelí mezi potravinami, které jsou pro kočky vhodné v mírném množství. Kočky zeleninu nepotřebují, proto ji dávejte jen jako drobný doplněk."
   },
   "why": {
     "en": "The RSPCA lists cooked cabbage, red or green, among pet-safe Christmas foods suitable for cats and dogs in moderation. Cats don't need fruit or vegetables in their diet, treats should be few, and the ASPCA notes that any plant material may cause vomiting and stomach upset in cats.",
     "sl": "RSPCA kuhano zelje, rdeče ali zeleno, navaja med božično hrano, ki je v zmernih količinah primerna za mačke in pse. Mačke sadja in zelenjave v prehrani ne potrebujejo, priboljškov naj bo malo, ASPCA pa opozarja, da lahko vsaka rastlinska hrana pri mačkah povzroči bruhanje in želodčne težave.",
     "nl": "De RSPCA noemt gare kool, rood of groen, onder het eten voor de kerstdagen dat veilig is voor huisdieren en met mate geschikt voor katten en honden. Katten hebben geen fruit of groente nodig in hun voeding en traktaties geef je spaarzaam. Volgens de ASPCA kan elk plantaardig materiaal bij katten braken en maagklachten veroorzaken.",
-    "pl": "RSPCA wymienia ugotowaną kapustę, czerwoną lub zieloną, wśród świątecznych potraw bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka."
+    "pl": "RSPCA wymienia ugotowaną kapustę, czerwoną lub zieloną, wśród świątecznych potraw bezpiecznych dla zwierząt, które w umiarkowanych ilościach nadają się dla kotów i psów. Koty nie potrzebują w diecie owoców ani warzyw, smakołyków powinno być mało, a ASPCA zaznacza, że zjedzenie jakiegokolwiek materiału roślinnego może wywołać u kotów wymioty i rozstrój żołądka.",
+    "cs": "RSPCA uvádí vařené zelí, červené nebo bílé, mezi vánočními jídly bezpečnými pro zvířata, vhodnými pro kočky a psy v mírném množství. Kočky ve stravě ovoce ani zeleninu nepotřebují, pamlsků by mělo být málo a ASPCA upozorňuje, že jakákoli rostlinná hmota může u koček způsobit zvracení a potíže se žaludkem."
   },
   "signs": null,
   "what_to_do": {
     "en": "Start with a small piece. If your cat vomits or gets an upset stomach afterwards, stop and ask your vet.",
     "sl": "Začnite z majhnim koščkom. Če mačka po tem bruha ali ima prebavne težave, prenehajte in se posvetujte z veterinarjem.",
     "nl": "Geef eerst een klein stukje. Als je kat daarna braakt of maagklachten krijgt, stop dan en vraag je dierenarts om advies.",
-    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza."
+    "pl": "Zacznij od małego kawałka. Jeśli kot potem zwymiotuje albo będzie miał rozstrój żołądka, przestań i zapytaj weterynarza.",
+    "cs": "Začněte malým kouskem. Pokud kočka poté zvrací nebo má potíže se žaludkem, přestaňte zelí podávat a poraďte se s veterinářem."
   },
   "serving": {
     "en": "A small piece of cooked red or green cabbage, with no butter, salt or seasoning.",
     "sl": "Majhen košček kuhanega rdečega ali zelenega zelja, brez masla, soli in začimb.",
     "nl": "Een klein stukje gare rode of groene kool, zonder boter, zout of kruiden.",
-    "pl": "Mały kawałek ugotowanej kapusty czerwonej lub zielonej, bez masła, soli i przypraw."
+    "pl": "Mały kawałek ugotowanej kapusty czerwonej lub zielonej, bez masła, soli i przypraw.",
+    "cs": "Malý kousek vařeného červeného nebo bílého zelí, bez másla, soli a koření."
   },
   "child": {
     "en": "A little piece of cooked cabbage can be a cat treat now and then. Cats mostly need meat, so veggies are just a tiny extra.",
     "sl": "Majhen košček kuhanega zelja je lahko občasno priboljšek za muco. Muce potrebujejo predvsem meso, zato je zelenjava le majhen dodatek.",
     "nl": "Een klein stukje gare kool kan af en toe een traktatie voor je kat zijn. Katten hebben vooral vlees nodig, dus groente is maar een klein extraatje.",
-    "pl": "Małym kawałkiem ugotowanej kapusty można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek."
+    "pl": "Małym kawałkiem ugotowanej kapusty można czasem poczęstować kota. Koty potrzebują głównie mięsa, więc warzywa to tylko malutki dodatek.",
+    "cs": "Kousek uvařeného zelí může být pro kočku občas pamlsek. Kočky potřebují hlavně maso, takže zelenina je jen drobný doplněk."
   },
   "faq": [
     {
@@ -57,13 +65,15 @@
         "en": "Do cats need vegetables?",
         "sl": "Ali mačke potrebujejo zelenjavo?",
         "nl": "Hebben katten groente nodig?",
-        "pl": "Czy koty potrzebują warzyw?"
+        "pl": "Czy koty potrzebują warzyw?",
+        "cs": "Potřebují kočky zeleninu?"
       },
       "a": {
         "en": "No. Cats Protection says cats rarely eat vegetables naturally and there is no need to add them to their diet. A vegetable can only ever be a small extra.",
         "sl": "Ne. Cats Protection navaja, da mačke v naravi redko jedo zelenjavo in da je ni treba dodajati v njihovo prehrano. Zelenjava je lahko le majhen dodatek.",
         "nl": "Nee. Cats Protection geeft aan dat katten van nature zelden groente eten en dat je het niet aan hun voeding hoeft toe te voegen. Groente is hooguit een klein extraatje.",
-        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem."
+        "pl": "Nie. Według Cats Protection koty w naturze rzadko jedzą warzywa, więc nie trzeba ich dodawać do diety. Warzywa mogą być co najwyżej małym dodatkiem.",
+        "cs": "Ne. Cats Protection uvádí, že kočky zeleninu přirozeně jedí jen zřídka a není třeba ji do jejich stravy přidávat. Zelenina může být vždy jen malý doplněk."
       }
     }
   ],
@@ -128,6 +138,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4f6a0a53f1b8615fe133a16aa0b893bb4197f68ac8efceecb31bc7bc1138fe8b"
+    },
+    "cs": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "a27468eccca21f242f1ee7e96ebb7cbb6f36716867cd4cbc4891c32fbdffefd8"
     }
   }
 }
