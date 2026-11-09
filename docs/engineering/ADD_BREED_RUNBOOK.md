@@ -24,6 +24,8 @@ PetPrep unattended breed run. Repos: DataVallis/pet-prep (and DataVallis/pet-pre
 3. Take the FIRST row with status "todo" in docs/research/BREED_QUEUE.md (one breed per run).
 4. Research, build, test, review, PR, merge on green CI (deploys nothing), portrait right after the merge
    (§8, no deploy needed), website only with the portrait — per the runbook. Never dispatch a production deploy.
+   Wait for every CI in this same run: poll "CI OK" in a foreground loop (sleep 30 s, up to 45 min) and carry on
+   right after it — never end the turn or wait for a notification while CI runs (2026-11-06 a run stalled 3 days).
    Write only the breed's own files (runbook header "Own files only"): document in docs/breeds/<en-slug>.md,
    never in DECISIONS / FEATURES / HANDOFF / BUILD_LOG / PRODUCT_SPEC / audiences / ROADMAP / ARCHITECTURE / DIAGRAMS.
 5. Apply only the runbook's standing decision rules; never ask questions. On a stop condition mark the
@@ -207,8 +209,10 @@ Fix every finding in a `fix:` commit before merging.
 git fetch origin && git merge --ff-only origin/main 2>/dev/null || git rebase origin/main   # branch up to date with main
 git push -u origin feat/M5-R10-NN-<slug>
 gh api repos/DataVallis/pet-prep/pulls -f title="feat: <Breed> breed [M5-R10-NN]" -f head=feat/M5-R10-NN-<slug> -f base=main -F body=@pr.md --jq '.number, .head.sha'
-# poll until the "CI OK" check run on the HEAD SHA is completed (GraphQL is blocked — REST only)
-gh api "repos/DataVallis/pet-prep/commits/<sha>/check-runs?per_page=100" --jq '.check_runs[] | select(.name=="CI OK") | "\(.status) \(.conclusion)"'
+# poll until the "CI OK" check run on the HEAD SHA is completed (GraphQL is blocked — REST only).
+# Poll in a FOREGROUND loop in this same run and continue right after it — never end the turn while CI runs
+# (David 2026-11-09: run M5-R10-98 stopped after opening the PR and blocked every breed run for 3 days).
+for i in $(seq 1 90); do c=$(gh api "repos/DataVallis/pet-prep/commits/<sha>/check-runs?per_page=100" --jq '.check_runs[] | select(.name=="CI OK") | "\(.status) \(.conclusion)"'); echo "$c"; case "$c" in completed*) break;; esac; sleep 30; done
 # only if conclusion == success:
 gh api -X PUT repos/DataVallis/pet-prep/pulls/<n>/merge -f merge_method=merge --jq '.sha'
 # the merge runs CI only (D18) — wait for the main run of the merge SHA to be green
