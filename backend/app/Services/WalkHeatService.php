@@ -68,7 +68,7 @@ class WalkHeatService
      */
     public function windowOn(Pet $pet, CarbonInterface $now): ?array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $local = CarbonImmutable::instance($now)->setTimezone($tz);
         if (! $this->appliesTo($pet, $local->toDateString()) || ! self::isSummerMonth((int) $local->month, $tz)) {
             return null;

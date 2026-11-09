@@ -176,7 +176,7 @@ class PetActivityService
                 return $this->unchanged(ActionResult::UNCHANGED, $locked);
             }
 
-            $dayStart = Carbon::parse($today, $locked->familyTimezone())->startOfDay()->utc();
+            $dayStart = Carbon::parse($today, $locked->effectiveTimezone())->startOfDay()->utc();
             $reference = $row->last_sync_at !== null && $row->last_sync_at->greaterThan($dayStart)
                 ? $row->last_sync_at
                 : $dayStart;
@@ -486,7 +486,7 @@ class PetActivityService
             $locked->saveQuietly(); // learning factor drawn on the first session, decay pointer
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: [
-                'session' => self::sessionPayload($started['session'], $locked->familyTimezone()),
+                'session' => self::sessionPayload($started['session'], $locked->effectiveTimezone()),
             ]);
         });
     }
@@ -665,7 +665,7 @@ class PetActivityService
             }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: [
-                'session' => self::wandSessionPayload($started['session'], $locked->familyTimezone()),
+                'session' => self::wandSessionPayload($started['session'], $locked->effectiveTimezone()),
             ]);
         });
     }
@@ -797,7 +797,7 @@ class PetActivityService
             }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: [
-                'session' => CareSessionPayload::chore($started['session'], $locked->familyTimezone()),
+                'session' => CareSessionPayload::chore($started['session'], $locked->effectiveTimezone()),
             ]);
         });
     }
@@ -876,7 +876,7 @@ class PetActivityService
             }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: [
-                'session' => CareSessionPayload::careTask($started['session'], $locked->familyTimezone()),
+                'session' => CareSessionPayload::careTask($started['session'], $locked->effectiveTimezone()),
             ]);
         });
     }
@@ -977,7 +977,7 @@ class PetActivityService
             }
 
             return $this->result(ActionResult::ACCEPTED, $locked, extra: [
-                'session' => CareSessionPayload::scratching($started['session'], $locked->familyTimezone()),
+                'session' => CareSessionPayload::scratching($started['session'], $locked->effectiveTimezone()),
             ]);
         });
     }

@@ -8,6 +8,12 @@ Legenda publik: 📣 omrežja · 💼 investitorji · 🤝 partnerji (trgovine, 
 
 ---
 
+## 2026-11-09 — Vsak ljubljenček ima svoj časovni pas
+
+**Kaj:** vsak ljubljenček ima lahko svoj časovni pas (privzeto je pas družine), zato lahko David v Lizboni skrbi za svojega psa po lizbonskem času, žena in otroka v Sloveniji pa svoje pse hranijo ob 19:00 po ljubljanskem času.
+**Zakaj je pomembno:** en pas na družino ni ustrezal družinam, katerih člani so na različnih koncih; po menjavi pasu družine na Lizbono otroci v Ljubljani niso mogli nahraniti psov ob svoji večerji.
+**Kako povedati:** 👩 »Na poti? Vsak kuža lahko živi po uri tistega, ki zanj skrbi.« · 🛠 »En stolpec (`pets.timezone`) in en pomočnik (`Pet::effectiveTimezone()`) za vsa pravila po uri.«
+
 ## 2026-11-08 — Muca brez odvečnega posnetka skoka
 
 **Kaj:** strežnik za novo muco ne ustvari več posnetka skoka (`wand_pouncing`), ki ga preprosta igra s palico ne predvaja — vsak nov videz muce je zato ≈ 0,34 $ cenejši (7,40 → 7,06 $ po ceniku fal), obstoječi posnetki pa ostanejo.

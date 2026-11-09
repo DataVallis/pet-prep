@@ -425,9 +425,9 @@ flowchart TD
   RC -- no --> F
   REC --> F{Frozen?<br/>hard stop · ill · game over}
   F -- yes --> FC["Advance last_decay_at<br/>(no catch-up, neglect clocks paused)<br/>midnight: close day, no walk illness"]
-  F -- no --> SEG["Split elapsed time since last_decay_at<br/>into normal / quiet segments<br/>(family timezone, DST-aware)"]
+  F -- no --> SEG["Split elapsed time since last_decay_at<br/>into normal / quiet segments<br/>(pet zone = own or family, DST-aware)"]
   SEG --> D["Decay from breed_configs:<br/>hunger 8|12 %/h · thirst 10|15 %/h<br/>quiet hours ×0.10"]
-  D --> MN{"New family-local day?"}
+  D --> MN{"New pet-local day?<br/>(Pet::effectiveTimezone)"}
   MN -- yes --> RS["Close yesterday: pet_daily_walks row<br/>energy showed 0 % → walk_illness_due_at<br/>= end of the night's quiet hours<br/>Steps → 0, energy → 0 %"]
   MN -- no --> HS
   RS --> HS["Schedule today's hygiene events<br/>(poops_per_day, outside quiet hours)<br/>+ M5-R02: decide today's chewing<br/>(walk missed yesterday · teething roll)<br/>+ M5-R05: decide today's play invitations,<br/>expire old ones (mood only, §5f)"]
@@ -990,7 +990,7 @@ erDiagram
   BREED_CONFIGS ||--o{ PETS : "tunables by breed_slug"
   FAMILIES {
     bigint id
-    string timezone "family tz, every wall-clock rule"
+    string timezone "family tz = default for pets without their own"
   }
   CHALLENGE_CREDITS {
     bigint family_id
@@ -1087,6 +1087,8 @@ erDiagram
     string breed_type "every BreedType value - list in docs/breeds (generated)"
     string species "dog or cat, follows breed (M5-R06-01)"
     string name "optional label set by a parent, null = none (M5-R08)"
+    string timezone "own IANA zone, null = follows family (2026-11-09)"
+    timestamp timezone_changed_at "last own-zone change, 24 h limit"
     double hunger_level
     double thirst_level
     double energy_level
@@ -2531,3 +2533,31 @@ sequenceDiagram
     Q->>DB: promoteCandidate(original) as before
   end
 ```
+
+## Time zone per pet — change flow (David 2026-11-09)
+
+```mermaid
+sequenceDiagram
+  participant P as Parent app (Nadzor row / dashboard banner)
+  participant API as PUT /api/parent/pets/{pet}/timezone
+  participant S as PetTimezoneService
+  participant DB as PostgreSQL
+  P->>API: {timezone: "Europe/Lisbon"} or {timezone: null} (= po družini)
+  API->>API: UpdatePetTimezoneRequest (normalise, timezone:all)<br/>PetPolicy@changeTimezone (parent of the family, else 403)
+  API->>S: change(parent, pet, zone|null)
+  S->>DB: BEGIN · families row FOR UPDATE · pets row FOR UPDATE
+  alt same value
+    S-->>API: no-op (200)
+  else effective zone unchanged (pin / unpin)
+    S->>DB: pets.timezone = value (not counted)
+  else clock moves
+    S->>S: < 24 h since pets.timezone_changed_at → 422 timezone_change_too_soon
+    S->>S: closeOldDay (old zone: walk row, step reset)
+    S->>S: pets.timezone = value · settleNewZone<br/>(same date → step day continues; close pointer → now)
+    S->>DB: save · timezone_changed_at = now
+  end
+  S->>DB: COMMIT
+  S-->>P: PetUpdated pet_timezone_changed (after commit) · 200 {pet_id, timezone, timezone_follows_family}
+  Note over S,DB: PUT /api/parent/settings (family zone) moves only pets with pets.timezone null<br/>and never stamps pets.timezone_changed_at
+```
+

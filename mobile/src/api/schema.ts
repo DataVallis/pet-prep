@@ -882,10 +882,11 @@ export interface paths {
          *     needs_cleaning | wand_too_soon (next_allowed_at = end of the 2 h gap
          *     after the last successful session) | wand_session_active (another
          *     child's game; next_allowed_at = its expiry) | wand_day_ending
-         *     (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2}`
-         *     (GAMES_SPEC §7.2): 2 = the ~25 s v2 hunt scored in stars — `session`
-         *     then carries `rules_version: 2` and the v2 schedule keys; without it the
-         *     v1 minute is unchanged
+         *     (next_allowed_at = local midnight); 423 while locked. Body `{rules?: 1|2|3}`
+         *     (GAMES_SPEC §7.2): 3 = the simple hunt (let go when the cat crouches,
+         *     David 2026-11-08; 2 = an older build, gets the same) — `session` then
+         *     carries `rules_version: 3` and the simple-hunt keys; without it the v1
+         *     minute is unchanged
          * @description POST /api/child/pet/wand/start
          */
         post: operations["childPet.startWand"];
@@ -914,10 +915,11 @@ export interface paths {
          *     → `unchanged` with the same result. 422 wand_not_available |
          *     wand_session_invalid | wand_session_expired | wand_session_not_over |
          *     wand_invalid_moves | wand_session_interrupted; 423 while locked.
-         *     A rules-v2 session (GAMES_SPEC §5.3) is judged in stars from the moves'
-         *     extra `in_zone` / `speed_ok`; `result` then also carries `rules_version`,
-         *     `stars`, `min_stars`, `max_stars`, `dodges`, `catch`, `hint`
-         *     (reason `too_few_stars`)
+         *     A simple-hunt session (rules 3, GAMES_SPEC §5.3, David 2026-11-08) is
+         *     judged on `releases` (the let-go moments): one ★ per 👀 cue caught;
+         *     `result` then also carries `rules_version`, `stars`, `min_stars`,
+         *     `max_stars`, `cues`, `hint` (reason `too_few_catches`). It may finish
+         *     as soon as the last needed catch happened
          * @description POST /api/child/pet/wand/finish
          */
         post: operations["childPet.finishWand"];
@@ -1850,6 +1852,33 @@ export interface paths {
         patch: operations["petName.update"];
         trace?: never;
     };
+    "/parent/pets/{pet}/timezone": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        /**
+         * Set the pet's own time zone (`{"timezone": "Europe/Lisbon"}`) or make
+         *     it follow the family zone again (`{"timezone": null}`)
+         * @description PUT /api/parent/pets/{pet}/timezone — meal windows, quiet hours, the
+         *     midnight and the step day of THIS pet move; the family zone and the
+         *     other pets stay. A change of the pet's effective zone is allowed at
+         *     most once per 24 h per pet → otherwise 422 `timezone_change_too_soon`
+         *     with `next_allowed_at`; pinning / resetting without moving the clock is
+         *     free. One `pet_timezone_changed` broadcast. Child token or another
+         *     family's pet → 403; unknown pet → 404.
+         */
+        put: operations["petTimezone.update"];
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/parent/quiet-hours": {
         parameters: {
             query?: never;
@@ -2319,7 +2348,12 @@ export interface components {
          *     Rules v2 (GAMES_SPEC §5.3, additive — a v1 session ignores them): per move
          *     `in_zone` (the stroke ended inside the play zone) and `speed_ok` (peak speed
          *     ≤ max_speed_pt_s and length ≥ min_dodge_pt of the schedule). Both are
-         *     reported by the app; in a v2 session a move without them never earns a star.
+         *     reported by the app (the strict v2 hunt is gone — old TestFlight builds still
+         *     send them; they are validated and ignored).
+         *
+         *     Simple hunt (rules 3, David 2026-11-08): `releases` = the moments (ms since the
+         *     session start) the child let go of the feather (finger lifted / »Pusti!»).
+         *     Optional; `moves` stays required and is empty for a simple hunt.
          */
         FinishWandRequest: {
             /** Format: uuid */
@@ -2331,6 +2365,8 @@ export interface components {
                 in_zone?: boolean;
                 speed_ok?: boolean;
             }[];
+            /** @description The simple hunt's let-go moments (rules 3); a v1 session ignores them. */
+            releases?: number[];
         };
         /**
          * GenerateCertificateRequest
@@ -2780,6 +2816,7 @@ export interface components {
             coat_colour: string | null;
             state_media_version: number;
             care_tasks_enabled: boolean;
+            timezone: string | null;
         };
         /**
          * PetOrigin
@@ -3078,11 +3115,13 @@ export interface components {
          * StartWandRequest
          * @description POST /api/child/pet/wand/start (M5-R06-04): start the cat's ~60 s wand
          *     game. The server generates the session. Optional `rules` (GAMES_SPEC §7.2):
-         *     2 = the v2 hunt (~25 s, stars — a new app); missing / 1 = the v1 minute,
-         *     unchanged for old apps. Only children (PetPolicy).
+         *     3 = the simple hunt (let go when the cat crouches — a new app; David
+         *     2026-11-08); 2 = an older TestFlight build's strict hunt, which now gets the
+         *     simple hunt too; missing / 1 = the v1 minute, unchanged for old apps. Only
+         *     children (PetPolicy).
          */
         StartWandRequest: {
-            /** @description GAMES_SPEC §7.2: the game rules the app implements (1 = v1, 2 = the v2 hunt). */
+            /** @description GAMES_SPEC §7.2: the game rules the app implements (1 = v1, 3 = the simple hunt; 2 = legacy → simple). */
             rules?: number;
         };
         /**
@@ -3200,6 +3239,18 @@ export interface components {
              *     1–20 characters; null / "" = no name.
              */
             name: string | null;
+        };
+        /**
+         * UpdatePetTimezoneRequest
+         * @description PUT /api/parent/pets/{pet}/timezone (David 2026-11-09, time zone per pet).
+         *     Body `{"timezone": "Europe/Lisbon"}` = the pet's own zone; `{"timezone":
+         *     null}` = follow the family zone again. Authorized by
+         *     PetPolicy::changeTimezone (a parent of the pet's family; another family's
+         *     pet or a child → 403).
+         */
+        UpdatePetTimezoneRequest: {
+            /** @description IANA identifier (e.g. "Europe/Lisbon"); null = follow the family zone. */
+            timezone: string | null;
         };
         /** UpdateQuietHoursRequest */
         UpdateQuietHoursRequest: {
@@ -4095,6 +4146,7 @@ export interface operations {
                 };
                 content: {
                     "application/json": {
+                        /** @description Dates on each certificate's pet clock (David 2026-11-09: own zone, else the family's). */
                         certificates: {
                             id: number;
                             child_id: number;
@@ -29282,6 +29334,16 @@ export interface operations {
                                     cuddle: number;
                                 } | null;
                                 id: number;
+                                /**
+                                 * @description The pet's effective IANA time zone (David 2026-11-09): its own zone,
+                                 *     else the family's. Every time of this pet is read on this clock.
+                                 */
+                                timezone: string;
+                                /**
+                                 * @description True when the pet follows the family zone (`pets.timezone` null) —
+                                 *     the app shows »po družini«.
+                                 */
+                                timezone_follows_family: boolean;
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
@@ -29851,6 +29913,16 @@ export interface operations {
                                     cuddle: number;
                                 } | null;
                                 id: number;
+                                /**
+                                 * @description The pet's effective IANA time zone (David 2026-11-09): its own zone,
+                                 *     else the family's. Every time of this pet is read on this clock.
+                                 */
+                                timezone: string;
+                                /**
+                                 * @description True when the pet follows the family zone (`pets.timezone` null) —
+                                 *     the app shows »po družini«.
+                                 */
+                                timezone_follows_family: boolean;
                                 breed_type: string;
                                 /** @description M5-R06-01: dog | cat. */
                                 species: string;
@@ -30812,6 +30884,42 @@ export interface operations {
                     };
                 };
             };
+            422: components["responses"]["ValidationException"];
+        };
+    };
+    "petTimezone.update": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                /** @description The pet ID */
+                pet: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdatePetTimezoneRequest"];
+            };
+        };
+        responses: {
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": {
+                        pet_id: number;
+                        /** @description The pet's effective IANA zone (own, else the family's). */
+                        timezone: string;
+                        /** @description True = the pet follows the family zone (`pets.timezone` null). */
+                        timezone_follows_family: boolean;
+                    };
+                };
+            };
+            401: components["responses"]["AuthenticationException"];
+            403: components["responses"]["AuthorizationException"];
+            404: components["responses"]["ModelNotFoundException"];
             422: components["responses"]["ValidationException"];
         };
     };

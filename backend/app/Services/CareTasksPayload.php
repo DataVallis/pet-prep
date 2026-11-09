@@ -40,7 +40,7 @@ final class CareTasksPayload
         }
         $service = app(CareTaskService::class);
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (?CarbonInterface $at): ?string => $at === null ? null : CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
         $lock = $pet->actionLockReasonFor($viewer);
 
@@ -95,7 +95,7 @@ final class CareTasksPayload
         if ($window === null) {
             return null;
         }
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
 
         return [
             'starts_at' => $window['starts_at']->setTimezone($tz)->toIso8601String(),
@@ -113,7 +113,7 @@ final class CareTasksPayload
     public static function reminders(Pet $pet, ?CarbonInterface $now = null): array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $born = $pet->born_at !== null ? CarbonImmutable::instance($pet->born_at)->utc() : null;
 
         return array_map(fn (array $r): array => [

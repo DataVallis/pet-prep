@@ -185,7 +185,7 @@ class ChallengeCertificateService
             return 0;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $launch = self::launchedAt();
         $closedThrough = $pet->routines_closed_through !== null ? substr((string) $pet->routines_closed_through, 0, 10) : null;
         $caretakers = PetCaretaker::where('pet_id', $pet->id)->orderBy('id')->get();

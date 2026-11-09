@@ -626,6 +626,9 @@ export type FamilyPetFixture = FamilyPetRaw & { pet_state?: string };
 export function makeFamilyPet(overrides: Partial<FamilyPetFixture> = {}): FamilyPetFixture {
   return {
     id: 7,
+    // David 2026-11-09: the pet's effective zone; follows the family by default.
+    timezone: 'Europe/Ljubljana',
+    timezone_follows_family: true,
     breed_type: 'mutt',
     species: 'dog',
     // M5-R08: no name (the pre-M5-R08 label).

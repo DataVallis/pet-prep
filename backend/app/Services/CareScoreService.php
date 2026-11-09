@@ -70,14 +70,28 @@ class CareScoreService
         $ids = $pets->pluck('id');
         $caretakers ??= PetCaretaker::whereIn('pet_id', $ids)->orderBy('id')->get();
         $contracts ??= PetContract::whereIn('pet_id', $ids)->get(['pet_id', 'user_id', 'signed_at']);
+        // $timezone = the family zone (default); each pet's day is read in its
+        // own effective zone (David 2026-11-09, time zone per pet).
         $today = $now->setTimezone($timezone)->toDateString();
+        $zones = [];
+        $todays = [];
+        $todayStarts = [];
+        $todayEnds = [];
+        foreach ($pets as $pet) {
+            $zone = $pet->effectiveTimezone();
+            $zones[$pet->id] = $zone;
+            $todays[$pet->id] = $now->setTimezone($zone)->toDateString();
+            $todayStarts[$pet->id] = CarbonImmutable::parse($todays[$pet->id], $zone)->startOfDay()->utc();
+            $todayEnds[$pet->id] = CarbonImmutable::parse($todays[$pet->id], $zone)->addDay()->startOfDay()->utc();
+        }
+        $lastToday = $todays === [] ? $today : max(max($todays), $today);
 
         $born = $pets->filter(fn (Pet $p) => ! $p->isUnborn());
         $from = $born->isEmpty()
             ? $today
             : $born->map(fn (Pet $p) => $this->ledger->ledgerStartDate($p))->min();
 
-        $routines = $this->ledger->routinesFor($born, $from, $today, $now);
+        $routines = $this->ledger->routinesFor($born, $from, $lastToday, $now);
 
         // When each caretaker started: their own contract, or the birth for
         // grandfathered caretakers (no contract required). A deleted child's
@@ -114,7 +128,7 @@ class CareScoreService
         // it aren't scored either); per child additionally from their start.
         $ledgerStart = [];
         foreach ($pets as $pet) {
-            $ledgerStart[$pet->id] = CarbonImmutable::parse($this->ledger->ledgerStartDate($pet), $timezone)->startOfDay()->utc();
+            $ledgerStart[$pet->id] = CarbonImmutable::parse($this->ledger->ledgerStartDate($pet), $zones[$pet->id])->startOfDay()->utc();
         }
         $illnesses = PetStatusPeriod::whereIn('pet_id', $ids)
             ->where('kind', PetStatusPeriodKind::Illness->value)
@@ -144,14 +158,15 @@ class CareScoreService
         $plays = [];
         $catIds = $pets->filter(fn (Pet $p) => $p->isCat() && ! $p->isUnborn())->pluck('id');
         if ($catIds->isNotEmpty()) {
-            $fromUtc = CarbonImmutable::parse($from, $timezone)->startOfDay()->utc();
+            // A day early covers every pet zone; rows are keyed by each pet's local date.
+            $fromUtc = CarbonImmutable::parse($from, 'UTC')->subDay();
             foreach (ActivityLog::whereIn('pet_id', $catIds)
                 ->where('activity_type', ActivityType::PlayedWand->value)
                 ->where('created_at', '>=', $fromUtc)
                 ->whereNotNull('actor_user_id')
                 ->toBase()
                 ->get(['pet_id', 'actor_user_id', 'created_at']) as $row) {
-                $date = CarbonImmutable::parse((string) $row->created_at, 'UTC')->setTimezone($timezone)->toDateString();
+                $date = CarbonImmutable::parse((string) $row->created_at, 'UTC')->setTimezone($zones[(int) $row->pet_id])->toDateString();
                 $plays[(int) $row->pet_id][(int) $row->actor_user_id][$date] = ($plays[(int) $row->pet_id][(int) $row->actor_user_id][$date] ?? 0) + 1;
             }
         }
@@ -164,6 +179,12 @@ class CareScoreService
             // falls in (start, end] counts for today's light.
             'today_start' => CarbonImmutable::parse($today, $timezone)->startOfDay()->utc(),
             'today_end' => CarbonImmutable::parse($today, $timezone)->addDay()->startOfDay()->utc(),
+            // Per pet (David 2026-11-09): each pet's effective zone and its »today«.
+            // Read them through zoneOf() / todayOf() — the keys above are the family default.
+            'zones' => $zones,
+            'todays' => $todays,
+            'today_starts' => $todayStarts,
+            'today_ends' => $todayEnds,
             'pets' => $pets->keyBy('id'),
             'routines' => $routines,
             'starts' => $starts,
@@ -200,7 +221,7 @@ class CareScoreService
                 'illnesses' => $illnesses,
                 'since' => $pet->born_at?->toIso8601String(),
             ],
-            'today' => $this->dayBlock($board, $pet, null, $board['today']),
+            'today' => $this->dayBlock($board, $pet, null, self::todayOf($board, $pet)),
         ];
     }
 
@@ -242,7 +263,8 @@ class CareScoreService
         $start = $pet !== null ? ($board['starts'][$pet->id][$childId] ?? null) : null;
 
         $days = [];
-        $todayDate = CarbonImmutable::parse($board['today'], 'UTC');
+        $today = self::todayOf($board, $pet);
+        $todayDate = CarbonImmutable::parse($today, 'UTC');
         for ($i = 6; $i >= 0; $i--) {
             $days[] = $todayDate->subDays($i)->toDateString();
         }
@@ -251,8 +273,8 @@ class CareScoreService
             'traffic_light' => $this->childLight($board, $childId, $pet),
             'care_score' => $this->childScore($board, $childId, $pet),
             'today' => $pet !== null && $start !== null
-                ? $this->dayBlock($board, $pet, $childId, $board['today'])
-                : $this->emptyDay($board['today']),
+                ? $this->dayBlock($board, $pet, $childId, $today)
+                : $this->emptyDay($today),
             'last_7_days' => array_map(fn (string $date) => $this->dailyRow($board, $childId, $pet, $date), $days),
             // M3-11: the free plan has no 12-week program → no progress.
             'progress' => $pet !== null && $pet->isFreePlan() ? null : $this->progress($board, $start, $pet),
@@ -297,8 +319,8 @@ class CareScoreService
         $illnesses = count(array_filter(
             $board['illnesses'][$pet->id] ?? [],
             fn (CarbonImmutable $at) => $at->greaterThanOrEqualTo($start)
-                && ($fromDate === null || $at->setTimezone($board['timezone'])->toDateString() >= $fromDate)
-                && ($toDate === null || $at->setTimezone($board['timezone'])->toDateString() <= $toDate),
+                && ($fromDate === null || $at->setTimezone(self::zoneOf($board, $pet))->toDateString() >= $fromDate)
+                && ($toDate === null || $at->setTimezone(self::zoneOf($board, $pet))->toDateString() <= $toDate),
         ));
 
         return [
@@ -358,7 +380,7 @@ class CareScoreService
         $byChild = 0;
         $pending = 0;
         $missed = [];
-        $routines = $date === $board['today'] ? $this->todayRoutines($board, $pet) : $this->routinesOn($board, $pet, $date);
+        $routines = $date === self::todayOf($board, $pet) ? $this->todayRoutines($board, $pet) : $this->routinesOn($board, $pet, $date);
         foreach ($routines as $r) {
             $n = $childId !== null ? $this->sharers($board, $pet, $r, $childId) : 1;
             if ($n === 0) {
@@ -501,13 +523,15 @@ class CareScoreService
      */
     public function missedItem(array $board, Routine $r): array
     {
+        $zone = $board['zones'][$r->petId] ?? $board['timezone'];
+
         return [
             'type' => $r->type->value,
             // M5-R02: which mess a missed `clean` was (poop | accident | chewing); null for other types.
             'kind' => $r->eventKind?->value,
             'date' => $r->localDate,
-            'opens_at' => $r->opensAt->setTimezone($board['timezone'])->toIso8601String(),
-            'due_at' => $r->dueAt->setTimezone($board['timezone'])->toIso8601String(),
+            'opens_at' => $r->opensAt->setTimezone($zone)->toIso8601String(),
+            'due_at' => $r->dueAt->setTimezone($zone)->toIso8601String(),
         ];
     }
 
@@ -531,11 +555,38 @@ class CareScoreService
      */
     public function todayRoutines(array $board, Pet $pet): array
     {
+        $today = self::todayOf($board, $pet);
+        $start = $board['today_starts'][$pet->id] ?? $board['today_start'];
+        $end = $board['today_ends'][$pet->id] ?? $board['today_end'];
+
         return array_values(array_filter(
             $board['routines'][$pet->id] ?? [],
-            fn (Routine $r) => $r->localDate === $board['today']
-                || ($r->isMissed() && $r->dueAt->greaterThan($board['today_start']) && $r->dueAt->lessThanOrEqualTo($board['today_end'])),
+            fn (Routine $r) => $r->localDate === $today
+                || ($r->isMissed() && $r->dueAt->greaterThan($start) && $r->dueAt->lessThanOrEqualTo($end)),
         ));
+    }
+
+    /**
+     * The pet's effective zone on the board (David 2026-11-09); the family
+     * zone for no pet.
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function zoneOf(array $board, ?Pet $pet): string
+    {
+        return $pet !== null ? ($board['zones'][$pet->id] ?? $pet->effectiveTimezone()) : $board['timezone'];
+    }
+
+    /**
+     * The pet's local »today« on the board (its own zone); the family's for no pet.
+     *
+     * @param  array<string, mixed>  $board
+     */
+    public static function todayOf(array $board, ?Pet $pet): string
+    {
+        return $pet !== null
+            ? ($board['todays'][$pet->id] ?? $board['now']->setTimezone($pet->effectiveTimezone())->toDateString())
+            : $board['today'];
     }
 
     /**
@@ -611,7 +662,7 @@ class CareScoreService
         }
 
         foreach ($board['illnesses'][$pet->id] ?? [] as $at) {
-            if ($at->setTimezone($board['timezone'])->toDateString() === $board['today'] && $at->lessThanOrEqualTo($board['now'])) {
+            if ($at->setTimezone(self::zoneOf($board, $pet))->toDateString() === self::todayOf($board, $pet) && $at->lessThanOrEqualTo($board['now'])) {
                 $reasons[] = 'fell_ill_today';
                 break;
             }

@@ -45,7 +45,7 @@ final class ScratchingPayload
 
         $service = app(ScratchingService::class);
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (CarbonInterface $at): string => CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
 
         $event = $service->openEvent($pet);

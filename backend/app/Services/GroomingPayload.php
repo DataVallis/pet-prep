@@ -61,7 +61,7 @@ final class GroomingPayload
             return null;
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (?CarbonInterface $at): ?string => $at === null ? null : CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
         $refusal = $chores->startRefusal($pet, $viewer, CareSessionKind::Grooming, $now);
         $live = $chores->liveSession($pet, CareSessionKind::Grooming, $now);

@@ -166,7 +166,7 @@ class NotificationService
             return null;
         }
 
-        $dayStart = now()->setTimezone($pet->familyTimezone())->startOfDay()->utc();
+        $dayStart = now()->setTimezone($pet->effectiveTimezone())->startOfDay()->utc();
         $decidedToday = PushNotification::where('pet_id', $pet->id)
             ->where('type', PushType::WalkReminder->value)
             ->where('created_at', '>=', $dayStart)
@@ -195,7 +195,7 @@ class NotificationService
             return null;
         }
 
-        $dayStart = now()->setTimezone($pet->familyTimezone())->startOfDay()->utc();
+        $dayStart = now()->setTimezone($pet->effectiveTimezone())->startOfDay()->utc();
         $decidedToday = PushNotification::where('pet_id', $pet->id)
             ->where('type', PushType::PlayReminder->value)
             ->where('created_at', '>=', $dayStart)
@@ -542,7 +542,7 @@ class NotificationService
         if ($type === PushType::PlayReminder) {
             $refusal = $this->wand->startRefusal($pet, null, now());
             $next = $refusal['next_allowed_at'] ?? null;
-            $tz = $pet->familyTimezone();
+            $tz = $pet->effectiveTimezone();
             if ($next !== null && $next->copy()->setTimezone($tz)->toDateString() === now()->setTimezone($tz)->toDateString()) {
                 $notification->forceFill(['status' => PushNotification::STATUS_SCHEDULED, 'send_after' => $next->copy()->utc()])->save();
 
@@ -754,7 +754,7 @@ class NotificationService
         }
 
         $since = $type->isDailyReminder()
-            ? Carbon::instance($now)->setTimezone($pet->familyTimezone())->startOfDay()->utc()
+            ? Carbon::instance($now)->setTimezone($pet->effectiveTimezone())->startOfDay()->utc()
             : Carbon::instance($now)->subMinutes((int) config('push.dedupe_minutes', 30));
 
         return PushNotification::where('pet_id', $pet->id)
@@ -778,7 +778,7 @@ class NotificationService
     {
         $now = now();
         $quietHours = $pet->quietHours();
-        $timezone = $pet->familyTimezone();
+        $timezone = $pet->effectiveTimezone();
 
         if ($type->isDailyReminder()) {
             $earliest = PushTiming::walkReminderEarliest($quietHours, $now, $timezone);
@@ -900,7 +900,7 @@ class NotificationService
         if ($check->allowed) {
             return $plain;
         }
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         if ($check->refusal === CareRefusal::NeedsCleaning) {
             $variant = $this->messFirstVariant($pet);
             // M5-R06-06 (QA m1, cats) / M5-R06-06b (dogs, David 2026-10-09): would the meal / water

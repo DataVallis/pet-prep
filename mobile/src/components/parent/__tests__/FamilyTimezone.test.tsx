@@ -1,12 +1,14 @@
 /**
  * Family time zone setting UI (David 2026-11-08): the Nadzor card + sheet (pick → warning →
- * PUT /api/parent/settings), the dashboard suggestion banner (dismissed per phone zone) and
- * the quiet hours »po času družine« note.
+ * PUT /api/parent/settings), the quiet hours »po času družine« note; time zone per pet
+ * (David 2026-11-09): the pet's »Časovni pas« row (PUT /api/parent/pets/{id}/timezone, »Po
+ * družini« = null) and the per-pet dashboard banner (only this phone's pets pre-checked,
+ * dismissed per phone zone).
  */
 import { act, fireEvent, screen } from '@testing-library/react-native';
 
 import { ApiError, api } from '@/api/client';
-import FamilyTimezoneCard from '@/components/parent/FamilyTimezoneCard';
+import FamilyTimezoneCard, { PetTimezoneRow } from '@/components/parent/FamilyTimezoneCard';
 import QuietHoursCard from '@/components/parent/QuietHoursCard';
 import TimezoneSuggestionBanner from '@/components/parent/TimezoneSuggestionBanner';
 import { i18n } from '@/i18n';
@@ -18,11 +20,12 @@ jest.mock('@/api/client', () => {
   const actual = jest.requireActual<typeof import('@/api/client')>('@/api/client');
   return {
     ...actual,
-    api: { ...actual.api, updateFamilyTimezone: jest.fn(), getQuietHours: jest.fn() },
+    api: { ...actual.api, updateFamilyTimezone: jest.fn(), updatePetTimezone: jest.fn(), getQuietHours: jest.fn() },
   };
 });
 
 const updateFamilyTimezone = api.updateFamilyTimezone as jest.Mock;
+const updatePetTimezone = api.updatePetTimezone as jest.Mock;
 const getQuietHours = api.getQuietHours as jest.Mock;
 
 async function flush() {
@@ -34,6 +37,7 @@ async function flush() {
 beforeEach(async () => {
   await i18n.changeLanguage('sl');
   updateFamilyTimezone.mockReset();
+  updatePetTimezone.mockReset();
   getQuietHours.mockResolvedValue({ quiet_hours: null, timezone: 'Europe/Ljubljana' });
 });
 
@@ -78,40 +82,90 @@ describe('FamilyTimezoneCard', () => {
     expect(screen.getByTestId('family-zone-sheet')).toBeTruthy();
   });
 
-  it('opens the sheet when the dashboard banner asks, once', () => {
-    const handled = jest.fn();
-    renderWithQuery(<FamilyTimezoneCard familyZone="Europe/Ljubljana" openRequest={1} onOpenRequestHandled={handled} />);
-    expect(screen.getByTestId('family-zone-sheet')).toBeTruthy();
-    expect(handled).toHaveBeenCalledTimes(1);
-  });
-
   it('keeps »Spremeni« off while the family zone is unknown', () => {
     renderWithQuery(<FamilyTimezoneCard familyZone={null} />);
     expect(screen.getByTestId('family-zone-change').props.accessibilityState).toEqual({ disabled: true });
   });
 });
 
-describe('TimezoneSuggestionBanner', () => {
-  it('suggests the change when the phone clock differs, and opens the setting', async () => {
+describe('PetTimezoneRow', () => {
+  it('shows the effective zone with »po družini«, and resets to the family through the pet endpoint', async () => {
     setPhoneZoneForTests('Europe/Lisbon');
-    const onChange = jest.fn();
-    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={onChange} />);
+    updatePetTimezone.mockResolvedValue({ pet_id: 7, timezone: 'Europe/Ljubljana', timezone_follows_family: true });
+    const own = { id: 7, timezone: 'Europe/Lisbon', timezone_follows_family: false, breed_type: 'mutt', species: 'dog', name: 'Suki' };
+    renderWithQuery(<PetTimezoneRow pet={own} familyZone="Europe/Ljubljana" />);
+    expect(screen.getByTestId('pet-zone-value-7').props.children).toBe('Lizbona · UTC');
+
+    fireEvent.press(screen.getByTestId('pet-zone-change-7'));
+    expect(screen.getByText('Po družini (Ljubljana)')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('family-zone-option-follow-family'));
+    expect(screen.getByTestId('family-zone-warning')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('family-zone-confirm'));
     await flush();
 
-    expect(screen.getByText('Telefon je v drugem časovnem pasu (Lizbona) kot družina (Ljubljana). Zamenjam?')).toBeTruthy();
-    fireEvent.press(screen.getByTestId('zone-suggestion-change'));
-    expect(onChange).toHaveBeenCalled();
+    expect(updatePetTimezone).toHaveBeenCalledWith(7, null);
+    expect(updateFamilyTimezone).not.toHaveBeenCalled();
+    expect(screen.getByTestId('pet-zone-saved-7')).toBeTruthy();
   });
 
-  it('is hidden on the family clock and for an unknown phone zone', async () => {
-    setPhoneZoneForTests('Europe/Vienna');
-    const view = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={jest.fn()} />);
+  it('labels a pet that follows the family and sets its own zone', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    updatePetTimezone.mockResolvedValue({ pet_id: 8, timezone: 'Europe/Lisbon', timezone_follows_family: false });
+    const follower = { id: 8, timezone: 'Europe/Ljubljana', timezone_follows_family: true, breed_type: 'mutt', species: 'dog', name: null };
+    renderWithQuery(<PetTimezoneRow pet={follower} familyZone="Europe/Ljubljana" />);
+    expect(screen.getByTestId('pet-zone-value-8').props.children).toMatch(/^Ljubljana · UTC\+1 · po družini$/);
+
+    fireEvent.press(screen.getByTestId('pet-zone-change-8'));
+    fireEvent.press(screen.getByTestId('family-zone-option-Europe/Lisbon'));
+    fireEvent.press(screen.getByTestId('family-zone-confirm'));
+    await flush();
+    expect(updatePetTimezone).toHaveBeenCalledWith(8, 'Europe/Lisbon');
+  });
+});
+
+describe('TimezoneSuggestionBanner (per pet)', () => {
+  const suki = { id: 1, name: 'Suki', breed_type: 'mutt', species: 'dog', timezone: 'Europe/Ljubljana', is_active: true, is_game_over: false, caretakers: [{ child_id: 10 }] };
+  const bela = { id: 2, name: 'Bela', breed_type: 'mutt', species: 'dog', timezone: 'Europe/Ljubljana', is_active: true, is_game_over: false, caretakers: [{ child_id: 11 }] };
+
+  it('asks about the one pet this phone cares for, and switches it after the warning', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    updatePetTimezone.mockResolvedValue({ pet_id: 1, timezone: 'Europe/Lisbon', timezone_follows_family: false });
+    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki]} phoneChildIds={[10]} />);
+    await flush();
+
+    expect(screen.getByText('Telefon je v drugem časovnem pasu (Lizbona) kot Suki (Ljubljana). Zamenjam za Suki?')).toBeTruthy();
+    fireEvent.press(screen.getByTestId('zone-suggestion-change'));
+    expect(screen.getByTestId('zone-suggestion-warning')).toBeTruthy();
+    expect(updatePetTimezone).not.toHaveBeenCalled();
+    fireEvent.press(screen.getByTestId('zone-suggestion-confirm'));
+    await flush();
+    expect(updatePetTimezone).toHaveBeenCalledWith(1, 'Europe/Lisbon');
+  });
+
+  it('lists several pets, pre-checks only this phone\'s, and never changes the unchecked ones', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    updatePetTimezone.mockResolvedValue({ pet_id: 1, timezone: 'Europe/Lisbon', timezone_follows_family: false });
+    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[bela, suki]} phoneChildIds={[10]} />);
+    await flush();
+
+    expect(screen.getByTestId('zone-suggestion-pet-1').props.accessibilityState).toMatchObject({ checked: true });
+    expect(screen.getByTestId('zone-suggestion-pet-2').props.accessibilityState).toMatchObject({ checked: false });
+    fireEvent.press(screen.getByTestId('zone-suggestion-change'));
+    fireEvent.press(screen.getByTestId('zone-suggestion-confirm'));
+    await flush();
+    expect(updatePetTimezone).toHaveBeenCalledTimes(1);
+    expect(updatePetTimezone).toHaveBeenCalledWith(1, 'Europe/Lisbon');
+  });
+
+  it('is hidden when no pet of this phone is on another clock', async () => {
+    setPhoneZoneForTests('Europe/Lisbon');
+    const view = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki, bela]} phoneChildIds={[]} />);
     await flush();
     expect(screen.queryByTestId('zone-suggestion')).toBeNull();
     view.unmount();
 
-    setPhoneZoneForTests(null);
-    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={jest.fn()} />);
+    setPhoneZoneForTests('Europe/Vienna');
+    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki]} phoneChildIds={[10]} />);
     await flush();
     expect(screen.queryByTestId('zone-suggestion')).toBeNull();
   });
@@ -123,7 +177,7 @@ describe('TimezoneSuggestionBanner', () => {
       setItemAsync: async (key, value) => void saved.set(key, value),
     });
     setPhoneZoneForTests('Europe/Lisbon');
-    const view = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={jest.fn()} />);
+    const view = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki]} phoneChildIds={[10]} />);
     await flush();
 
     fireEvent.press(screen.getByTestId('zone-suggestion-dismiss'));
@@ -132,16 +186,14 @@ describe('TimezoneSuggestionBanner', () => {
     expect(saved.get(ZONE_SUGGESTION_KEY)).toBe('Europe/Lisbon');
     view.unmount();
 
-    // A fresh app run in the same zone: still hidden (read from the store).
     resetZoneSuggestionForTests();
-    const again = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={jest.fn()} />);
+    const again = renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki]} phoneChildIds={[10]} />);
     await flush();
     expect(screen.queryByTestId('zone-suggestion')).toBeNull();
     again.unmount();
 
-    // Yet another zone: back.
     setPhoneZoneForTests('America/New_York');
-    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" onChange={jest.fn()} />);
+    renderWithQuery(<TimezoneSuggestionBanner familyZone="Europe/Ljubljana" pets={[suki]} phoneChildIds={[10]} />);
     await flush();
     expect(screen.getByTestId('zone-suggestion')).toBeTruthy();
   });

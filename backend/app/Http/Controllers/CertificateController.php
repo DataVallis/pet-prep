@@ -40,14 +40,15 @@ class CertificateController extends Controller
         $family = $this->families->familyOf($parent);
 
         $rows = $family === null ? collect() : ChallengeCertificate::where('family_id', $family->id)
-            ->with(['child:id,name', 'pet:id,name'])
+            ->with(['child:id,name', 'pet:id,name,timezone'])
             ->orderByDesc('completed_at')
             ->orderByDesc('id')
             ->get();
         $tz = $family?->timezone ?? 'UTC';
 
         return response()->json([
-            'certificates' => $rows->map(fn (ChallengeCertificate $c) => $this->certificates->payload($c, $tz)->toArray())->values()->all(),
+            // Dates on each certificate's pet clock (David 2026-11-09: own zone, else the family's).
+            'certificates' => $rows->map(fn (ChallengeCertificate $c) => $this->certificates->payload($c, $c->pet?->timezone ?? $tz)->toArray())->values()->all(),
         ]);
     }
 
@@ -81,7 +82,7 @@ class CertificateController extends Controller
 
         $generated->setRelation('child', $row->child)->setRelation('pet', $row->pet);
 
-        return response()->json($this->certificates->payload($generated, $family->timezone)->toArray());
+        return response()->json($this->certificates->payload($generated, $row->pet?->timezone ?? $family->timezone)->toArray());
     }
 
     /**

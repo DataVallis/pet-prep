@@ -476,7 +476,7 @@ class TrainingService
      */
     public function dayEndsAt(Pet $pet, CarbonInterface $now): CarbonImmutable
     {
-        return CarbonImmutable::parse($pet->localDate($now), $pet->familyTimezone())->addDay()->startOfDay()->utc();
+        return CarbonImmutable::parse($pet->localDate($now), $pet->effectiveTimezone())->addDay()->startOfDay()->utc();
     }
 
     /** A session started now would still run (TTL included) at the family-local midnight. */
@@ -491,7 +491,7 @@ class TrainingService
     /** A completed session (any child) on the family-local day of $now. */
     public function doneOn(Pet $pet, CarbonInterface $now): bool
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $start = Carbon::parse($pet->localDate($now), $tz)->startOfDay();
 
         return ActivityLog::where('pet_id', $pet->id)
@@ -618,7 +618,7 @@ class TrainingService
             return $refuse(CareRefusal::TrainingNotAvailable);
         }
         $sessionSeconds = intdiv($sessionMs + 999, 1000);
-        $midnight = Carbon::parse($today, $pet->familyTimezone())->addDay()->startOfDay()->utc();
+        $midnight = Carbon::parse($today, $pet->effectiveTimezone())->addDay()->startOfDay()->utc();
         if ($this->usedSecondsOn($pet, $today) + $sessionSeconds > $budget) {
             return $refuse(CareRefusal::TrainingDailyBudgetUsed, $midnight);
         }

@@ -74,7 +74,7 @@ final class TrainingPayload
 
         $now = CarbonImmutable::instance($now ?? now());
         $service = app(TrainingService::class);
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $iso = fn (CarbonInterface $at): string => CarbonImmutable::instance($at)->setTimezone($tz)->toIso8601String();
         $today = $pet->localDate($now);
 
@@ -133,7 +133,7 @@ final class TrainingPayload
      */
     private static function commandsOf(Pet $pet, $skills, ?string $tz = null): array
     {
-        $tz ??= $pet->familyTimezone();
+        $tz ??= $pet->effectiveTimezone();
         $out = [];
         foreach (TrainingCommand::cases() as $command) {
             $skill = $skills->get($command->value);

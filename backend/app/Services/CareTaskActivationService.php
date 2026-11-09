@@ -190,7 +190,7 @@ class CareTaskActivationService
     /** The next family-local midnight after $now (UTC). */
     public static function nextMidnight(Pet $pet, CarbonInterface $now): CarbonImmutable
     {
-        return CarbonImmutable::instance($now)->setTimezone($pet->familyTimezone())->addDay()->startOfDay()->utc();
+        return CarbonImmutable::instance($now)->setTimezone($pet->effectiveTimezone())->addDay()->startOfDay()->utc();
     }
 
     /**

@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Log;
  *   midnight). `water_times_per_day` is only the score's expected minimum
  *   (RoutineLedgerService).
  *
- * Every wall-clock rule is evaluated in Pet::familyTimezone(); instants come
+ * Every wall-clock rule is evaluated in Pet::effectiveTimezone(); instants come
  * back in that zone, queries run in UTC. DST: windows follow the local wall
  * clock (06:00 is 04:00 UTC in summer, 05:00 UTC in winter); the water gap
  * counts real minutes; the fall-back day has 25 h, the spring-forward day 23 h.
@@ -89,7 +89,7 @@ class CareScheduleService
 
     public function feeding(Pet $pet, BreedConfig $config, CarbonInterface $now): FeedingStatus
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $windows = $this->windowsOn($pet, $config, $now->toDateString());
 
@@ -190,7 +190,7 @@ class CareScheduleService
 
     public function water(Pet $pet, BreedConfig $config, CarbonInterface $now): WaterStatus
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $timesPerDay = max(0, (int) $config->water_times_per_day);
         $gapMinutes = max(0, (int) $config->water_min_gap_minutes);
@@ -357,7 +357,7 @@ class CareScheduleService
         if ($check->allowed) {
             return true;
         }
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $next = $check->nextAllowedAt?->copy()->setTimezone($tz);
 
         return $next !== null && $next->toDateString() === $now->copy()->setTimezone($tz)->toDateString();
@@ -375,7 +375,7 @@ class CareScheduleService
      */
     public function feedWindowsStartingOn(Pet $pet, BreedConfig $config, string $date): array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $instances = [];
         foreach ($this->windowsOn($pet, $config, $date) as [$start, $end]) {
             $endDate = $end > $start
@@ -473,7 +473,7 @@ class CareScheduleService
      */
     public function windowCoveredAt(Pet $pet, BreedConfig $config, CarbonInterface $now): ?array
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $now = CarbonImmutable::instance($now)->setTimezone($tz);
         $previousEnd = null;
         foreach ($this->windowInstances($pet, $config, $now, $tz) as [$start, $end]) {
@@ -533,7 +533,7 @@ class CareScheduleService
             return [];
         }
 
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $fromUtc = CarbonImmutable::instance($from)->utc();
         $toUtc = CarbonImmutable::instance($to)->utc();
         $born = CarbonImmutable::instance($pet->born_at)->utc();

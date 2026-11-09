@@ -263,7 +263,7 @@ class CareTaskService
         if ($this->doneBetween($pet, $task, $period['start'], $now->addSecond()) >= $period['times']) {
             return $refuse(CareRefusal::CareTaskPeriodDone, $awake($period['end']));
         }
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $dayStart = CarbonImmutable::parse($pet->localDate($now), $tz)->startOfDay()->utc();
         $dayEnd = CarbonImmutable::parse($pet->localDate($now), $tz)->addDay()->startOfDay()->utc();
         if ($this->doneBetween($pet, $task, $dayStart, $now->addSecond()) > 0) {

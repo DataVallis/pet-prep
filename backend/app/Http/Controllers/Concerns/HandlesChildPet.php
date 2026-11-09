@@ -56,7 +56,7 @@ trait HandlesChildPet
      */
     protected function actionResponse(ActionResult $result, Pet $pet, Request $request, array $extra = [], int $successStatus = 200): JsonResponse
     {
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $state = (new ChildPetStateResource($pet->refresh()))->toArray($request);
 
         if ($result->status === ActionResult::LOCKED) {

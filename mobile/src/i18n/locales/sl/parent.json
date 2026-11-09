@@ -251,7 +251,7 @@
   },
   "familyZone": {
     "title": "Časovni pas družine",
-    "hint": "Po tem pasu veljajo vse ure: tihe ure, obroki, polnoč in dan za korake.",
+    "hint": "Privzeti pas za ljubljenčke, ki nimajo svojega: po njem veljajo tihe ure, obroki, polnoč in dan za korake.",
     "change": "Spremeni",
     "changeA11y": "Spremeni časovni pas družine",
     "sheetTitle": "Izberite časovni pas",
@@ -275,7 +275,19 @@
     "banner": "Telefon je v drugem časovnem pasu ({{phone}}) kot družina ({{family}}). Zamenjam?",
     "bannerAction": "Zamenjam",
     "bannerClose": "Ne zdaj",
-    "familyTimeNote": "po času družine ({{city}})"
+    "familyTimeNote": "po času družine ({{city}})",
+    "petTitle": "Časovni pas",
+    "followsFamily": "po družini",
+    "petChangeA11y": "Spremeni časovni pas za {{pet}}",
+    "followFamilyOption": "Po družini ({{city}})",
+    "followFamilyHint": "Sledi časovnemu pasu družine",
+    "petSaved": "Časovni pas za {{pet}} je spremenjen.",
+    "petBanner": "Telefon je v drugem časovnem pasu ({{phone}}) kot {{pet}} ({{petZone}}). Zamenjam za {{pet}}?",
+    "petBannerList": "Telefon je v drugem časovnem pasu ({{phone}}). Zamenjam časovni pas za:",
+    "petBannerRow": "{{pet}} ({{petZone}})",
+    "petBannerNone": "Izberite vsaj enega ljubljenčka.",
+    "petBannerDone": "Časovni pas je zamenjan.",
+    "petTimeNote": "po času ljubljenčka ({{city}})"
   },
   "notifications": {
     "title": "Obvestila",

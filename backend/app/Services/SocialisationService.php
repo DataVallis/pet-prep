@@ -294,7 +294,7 @@ class SocialisationService
     public function reportFor(Pet $pet, int $childId, string $fromDate, ?CarbonInterface $now = null, ?array $caretaker = null): ?array
     {
         $now = CarbonImmutable::instance($now ?? now())->utc();
-        $tz = $pet->familyTimezone();
+        $tz = $pet->effectiveTimezone();
         $fromUtc = CarbonImmutable::parse($fromDate, $tz)->startOfDay()->utc();
         $context = $this->weeksWithContext($pet, $now);
         $weeks = array_values(array_filter($context['weeks'], fn (array $w) => $w['end']->greaterThan($fromUtc)));

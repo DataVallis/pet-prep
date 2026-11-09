@@ -115,11 +115,33 @@ class QuietHours extends Model
     // ──────────────────────────────────────────────────────────────
 
     /**
-     * The timezone the windows are defined in: the family timezone.
+     * The zone this instance reads its windows in when set (readIn()) —
+     * a pet's effective zone. Never persisted.
+     */
+    private ?string $readZone = null;
+
+    /**
+     * A copy of these quiet hours read on another wall clock (David
+     * 2026-11-09, time zone per pet): the windows stay the family's, the
+     * clock is the pet's — 21–07 in Lisbon for a Lisbon pet. Pet::quietHours()
+     * returns its row through this; code that loads rows itself
+     * (RoutineLedgerService::loadInputs) calls it per pet.
+     */
+    public function readIn(?string $timezone): static
+    {
+        $copy = clone $this;
+        $copy->readZone = $timezone;
+
+        return $copy;
+    }
+
+    /**
+     * The timezone the windows are read in: the pet's zone when this copy
+     * came from Pet::quietHours() / readIn(), else the family timezone.
      */
     public function timezone(): string
     {
-        return $this->family?->timezone ?? $this->parent?->timezone ?? User::DEFAULT_TIMEZONE;
+        return $this->readZone ?? $this->family?->timezone ?? $this->parent?->timezone ?? User::DEFAULT_TIMEZONE;
     }
 
     /**

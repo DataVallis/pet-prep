@@ -8,6 +8,14 @@ import type { TimezoneChangeError } from './familyZone';
 export const FAMILY_ZONE_STRINGS = strings('parent', 'familyZone', {
   banner: (phone: string, family: string) => t('parent:familyZone.banner', { phone, family }),
   familyTimeNote: (city: string) => t('parent:familyZone.familyTimeNote', { city }),
+  // Time zone per pet (David 2026-11-09).
+  petChangeA11y: (pet: string) => t('parent:familyZone.petChangeA11y', { pet }),
+  followFamilyOption: (city: string) => t('parent:familyZone.followFamilyOption', { city }),
+  petSaved: (pet: string) => t('parent:familyZone.petSaved', { pet }),
+  petBanner: (phone: string, pet: string, petZone: string) => t('parent:familyZone.petBanner', { phone, pet, petZone }),
+  petBannerList: (phone: string) => t('parent:familyZone.petBannerList', { phone }),
+  petBannerRow: (pet: string, petZone: string) => t('parent:familyZone.petBannerRow', { pet, petZone }),
+  petTimeNote: (city: string) => t('parent:familyZone.petTimeNote', { city }),
 });
 
 /** The sheet's error line; »Znova jutri ob 19:30« read in the (current) family zone. */

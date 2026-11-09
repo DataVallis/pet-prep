@@ -59,6 +59,9 @@ import { parentPetGrowthKey, useGrowthRefresh, useParentPetGrowth } from '@/hook
 import PetAlbum from '@/components/PetAlbum';
 import PetNameRow from '@/components/parent/PetNameRow';
 import { readPetName } from '@/modules/petName/petName';
+import { petZoneNote, petZoneOf } from '@/modules/familyZone/familyZone';
+import { FAMILY_ZONE_STRINGS } from '@/modules/familyZone/strings';
+import { usePhoneZone } from '@/modules/familyZone/usePhoneZone';
 import { hasAlbum } from '@/modules/petMedia/album';
 import {
   REPORT_PERIODS,
@@ -87,7 +90,7 @@ import CareGuideSheet from '@/modules/careGuide/CareGuideSheet';
 import { PARENT_TRAINING_STRINGS, parentTrainingLines } from '@/modules/training/training';
 import { playKindOfActivity } from '@/modules/play/play';
 import { fonts, palette, tightTracking } from '@/theme';
-import { t, tSpecies } from '@/i18n';
+import { currentLanguage, t, tSpecies } from '@/i18n';
 import { formatThousands } from '@/i18n/format';
 import { strings } from '@/i18n/strings';
 
@@ -146,12 +149,13 @@ export function dayPlayText(day: Pick<DayRow, 'play_sessions' | 'play_goal'>): s
   return S.playDay(day.play_sessions ?? 0, day.play_goal);
 }
 
-function Timeline({ petId, family, species }: { petId: number; family: FamilyOverview; species: string | null }) {
+function Timeline({ petId, family, species, zone }: { petId: number; family: FamilyOverview; species: string | null; zone: string }) {
   const activities = usePetActivities(petId);
   const items = (activities.data?.pages ?? []).flatMap((page) => readTimeline(page.data));
   // M5-F13: during a deploy wait (spinner) instead of an error; it loads once the server is back.
   const waitingForServer = useServerOutage() && activities.isError && items.length === 0;
-  const today = localParts(new Date().toISOString(), family.timezone)?.date ?? null;
+  // David 2026-11-09: the pet's own clock (its zone, else the family's).
+  const today = localParts(new Date().toISOString(), zone)?.date ?? null;
 
   return (
     <Card testID="timeline">
@@ -180,7 +184,7 @@ function Timeline({ petId, family, species }: { petId: number; family: FamilyOve
               <Text style={styles.timelineText}>
                 {activityText({ activity_type: item.activity_type, actor_nickname: nickname, value: item.value }, species)}
               </Text>
-              <Text style={styles.muted}>{activityWhenText(item.created_at, family.timezone, today)}</Text>
+              <Text style={styles.muted}>{activityWhenText(item.created_at, zone, today)}</Text>
             </View>
           );
         })
@@ -208,12 +212,16 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const [days, setDays] = useState<ReportDays>(7);
   const report = useChildReport(child.id, days);
   const data = report.data;
-  const tz = data?.timezone ?? family.timezone;
+  const pet = petOfChild(child, family);
+  // David 2026-11-09: every time on this page is on the child's pet's clock (own zone, else the family's).
+  const petZone = petZoneOf(pet, family.timezone) ?? family.timezone;
+  const tz = data?.timezone ?? petZone;
   const petId = data?.pet_id ?? child.pet_id;
+  const phoneZone = usePhoneZone();
+  const zoneNote = pet !== null ? petZoneNote(petZone, phoneZone, Date.now(), currentLanguage()) : null;
   const offline = report.isError && !(report.error instanceof ApiError);
   // M5-F13: the deploy banner (on the dashboard root) explains it; the last report stays.
   const serverUpdating = useServerOutage();
-  const pet = petOfChild(child, family);
   const mood = pet !== null ? familyPetMood(pet) : null;
   const queryClient = useQueryClient();
   const [albumOpen, setAlbumOpen] = useState(false);
@@ -232,7 +240,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
   const careGuideRaw: unknown = (pet as { care_guide?: unknown } | null)?.care_guide;
   const careGuide = useMemo(() => readCareGuide(careGuideRaw), [careGuideRaw]);
   const [careGuideOpen, setCareGuideOpen] = useState(false);
-  const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, family.timezone) : [];
+  const behaviourLines = pet ? parentBehaviourLines(pet.behaviour, petZone) : [];
   const trainingLines = pet ? parentTrainingLines(pet.training) : [];
   const trainingEnabled = pet?.training.enabled ?? false;
   // M5-R06-08b: species-specific report rows and texts.
@@ -260,7 +268,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
     scrollToLogWalk();
   }, [focusLogWalk, logWalkY, scrollToLogWalk]);
   const showLogWalk = child.adapted_mode && pet !== null && !isCat;
-  const showNoPushes = showLogWalk && noPushesHintDue(child, pet, family.timezone);
+  const showNoPushes = showLogWalk && noPushesHintDue(child, pet, petZone);
 
   return (
     <View style={styles.root}>
@@ -278,6 +286,11 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           <Text style={styles.headerTitle}>{child.name}</Text>
           <TrafficLightBadge color={(data?.traffic_light ?? child.traffic_light).color} />
         </View>
+        {zoneNote !== null && (
+          <Text style={styles.zoneNote} testID="detail-pet-zone">
+            {FAMILY_ZONE_STRINGS.petTimeNote(zoneNote)}
+          </Text>
+        )}
 
         <ScrollView ref={scrollRef} style={styles.flex} contentContainerStyle={styles.content}>
           {/* M2-01d: the finished challenge first — certificate or report (→ the 84-day period). */}
@@ -292,7 +305,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           {/* M5-T12: in adapted mode the parent can log walk minutes (no Apple Watch needed). */}
           {showLogWalk && (
             <View onLayout={(e) => setLogWalkY(e.nativeEvent.layout.y)} testID="detail-log-walk-anchor">
-              <LogWalkCard childId={child.id} timezone={family.timezone} testID="detail-log-walk" />
+              <LogWalkCard childId={child.id} timezone={petZone} testID="detail-log-walk" />
             </View>
           )}
           {onOpenChallenge && canBuyChallenge(pet) && (
@@ -343,7 +356,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
 
           {/* M5-R18 / R20: groomer visit / bath reminders of breeds with a sourced frequency (never scored). */}
           {pet !== null && (
-            <CareRemindersCard petId={pet.id} reminders={(pet as { care_reminders?: unknown }).care_reminders} timezone={family.timezone} />
+            <CareRemindersCard petId={pet.id} reminders={(pet as { care_reminders?: unknown }).care_reminders} timezone={petZone} />
           )}
 
           {/* M5-R08: the parent sets / changes / removes the pet's name here (a label only). */}
@@ -574,7 +587,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
             </>
           )}
 
-          {petId !== null && <Timeline petId={petId} family={family} species={species} />}
+          {petId !== null && <Timeline petId={petId} family={family} species={species} zone={petZone} />}
         </ScrollView>
       </View>
 
@@ -587,7 +600,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
           onClose={() => setAlbumOpen(false)}
           onMediaExpired={onMediaExpired}
           growth={growth}
-          timeZone={family.timezone}
+          timeZone={petZone}
           onGrowthExpired={onGrowthExpired}
           testID="detail-album"
         />
@@ -609,6 +622,7 @@ export default function ChildDetailScreen({ child, family, onBack, onOpenChallen
 }
 
 const styles = StyleSheet.create({
+  zoneNote: { fontSize: 13, color: C.muted, paddingHorizontal: 20, paddingBottom: 6 },
   historyLimited: { padding: 12, borderRadius: 12, backgroundColor: palette.mintSoft, borderWidth: 1, borderColor: palette.mintBorder },
   root: { flex: 1, backgroundColor: C.bg },
   flex: { flex: 1 },

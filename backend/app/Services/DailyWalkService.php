@@ -91,7 +91,7 @@ class DailyWalkService
             return true;
         }
 
-        $timezone = $pet->familyTimezone();
+        $timezone = $pet->effectiveTimezone();
         $steps = (int) $pet->daily_step_count;
         // Goal of the closed day's life stage (M5-R01; pre-M5 breed goal without stage data).
         $config = $pet->breedConfig();
