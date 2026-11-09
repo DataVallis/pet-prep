@@ -11,7 +11,8 @@
     "sv": "Rå potatis",
     "da": "Rå kartofler",
     "fi": "Raa’at perunat",
-    "nb": "Rå poteter"
+    "nb": "Rå poteter",
+    "de": "Rohe Kartoffeln"
   },
   "question": {
     "en": "Can dogs eat raw potatoes?",
@@ -23,7 +24,8 @@
     "sv": "Får hundar äta rå potatis?",
     "da": "Må hunde spise rå kartofler?",
     "fi": "Saako koira syödä raakoja perunoita?",
-    "nb": "Kan hunder spise rå poteter?"
+    "nb": "Kan hunder spise rå poteter?",
+    "de": "Dürfen Hunde rohe Kartoffeln fressen?"
   },
   "url_slug": {
     "en": "raw-potatoes",
@@ -35,7 +37,8 @@
     "sv": "ra-potatis",
     "da": "raa-kartofler",
     "fi": "raaka-perunat",
-    "nb": "ra-poteter"
+    "nb": "ra-poteter",
+    "de": "rohe-kartoffeln"
   },
   "level": "dangerous",
   "answer": {
@@ -48,7 +51,8 @@
     "sv": "Nej, ge inte hunden rå potatis. Rå och grön potatis är inte säker och kan vara giftig, eftersom den innehåller solanin, ett naturligt gift. Väl kokt potatis utan tillsatser är en annan sak och går bra med måtta.",
     "da": "Nej, giv ikke din hund rå kartofler. Rå og grønne kartofler er ikke sikre og kan være giftige, fordi de indeholder solanin, et naturligt giftstof. Gennemkogte kartofler uden tilsætninger er noget andet og fine i moderate mængder.",
     "fi": "Ei saa. Älä anna koirallesi raakoja perunoita. Raa’at ja vihreät perunat eivät ole turvallisia ja voivat olla myrkyllisiä, koska niissä on solaniinia, luonnostaan esiintyvää myrkkyä. Maustamaton, hyvin kypsennetty peruna on eri asia: sitä voi antaa kohtuudella.",
-    "nb": "Nei, ikke gi hunden rå poteter. Rå og grønne poteter er ikke trygge og kan være giftige fordi de inneholder solanin, et naturlig giftstoff. Vanlig, godt kokt potet er noe annet og er greit i moderate mengder."
+    "nb": "Nei, ikke gi hunden rå poteter. Rå og grønne poteter er ikke trygge og kan være giftige fordi de inneholder solanin, et naturlig giftstoff. Vanlig, godt kokt potet er noe annet og er greit i moderate mengder.",
+    "de": "Nein, geben Sie Ihrem Hund keine rohen Kartoffeln. Rohe und grüne Kartoffeln sind nicht sicher und können giftig sein, weil sie Solanin enthalten, einen natürlichen Giftstoff. Ungewürzte, gut gekochte Kartoffeln sind etwas anderes und in Maßen in Ordnung."
   },
   "why": {
     "en": "Raw potatoes, and potatoes with green skin or green spots, contain solanine, a naturally occurring toxin found in plants of the nightshade family. Green spots appear when some potatoes are exposed to light and show that solanine has increased. Pieces of raw or half-cooked potato can also be a choking risk.",
@@ -60,7 +64,8 @@
     "sv": "Rå potatis, och potatis med grönt skal eller gröna fläckar, innehåller solanin, ett naturligt gift som finns i växter inom familjen potatisväxter. Gröna fläckar uppstår när potatis utsätts för ljus och visar att solaninhalten har ökat. Bitar av rå eller halvkokt potatis kan dessutom ge kvävning.",
     "da": "Rå kartofler og kartofler med grøn skal eller grønne pletter indeholder solanin, et naturligt giftstof, som findes i planter i natskyggefamilien. Grønne pletter opstår, når nogle kartofler udsættes for lys, og viser at indholdet af solanin er steget. Stykker af rå eller halvkogt kartoffel kan også sætte sig fast i halsen.",
     "fi": "Raa’at perunat sekä perunat, joiden kuori on vihreä tai joissa on vihreitä läikkiä, sisältävät solaniinia, joka on koisokasvien heimon kasveissa luonnostaan esiintyvä myrkky. Vihreät läikät syntyvät, kun jotkin perunat altistuvat valolle, ja ne osoittavat solaniinin määrän lisääntyneen. Raa’at tai puolikypsät perunanpalat voivat myös aiheuttaa tukehtumisvaaran.",
-    "nb": "Rå poteter, og poteter med grønt skall eller grønne flekker, inneholder solanin, et naturlig giftstoff som finnes i planter i nattskyggefamilien. Grønne flekker oppstår når enkelte poteter utsettes for lys, og viser at innholdet av solanin har økt. Biter av rå eller halvkokt potet kan også være en kvelningsfare."
+    "nb": "Rå poteter, og poteter med grønt skall eller grønne flekker, inneholder solanin, et naturlig giftstoff som finnes i planter i nattskyggefamilien. Grønne flekker oppstår når enkelte poteter utsettes for lys, og viser at innholdet av solanin har økt. Biter av rå eller halvkokt potet kan også være en kvelningsfare.",
+    "de": "Rohe Kartoffeln und Kartoffeln mit grüner Schale oder grünen Stellen enthalten Solanin, einen natürlich vorkommenden Giftstoff der Nachtschattengewächse. Grüne Stellen entstehen, wenn manche Kartoffeln dem Licht ausgesetzt sind, und zeigen an, dass der Solaningehalt gestiegen ist. Auch Stücke roher oder halb gegarter Kartoffeln können zum Ersticken führen."
   },
   "signs": {
     "en": [
@@ -122,6 +127,12 @@
       "Diaré",
       "Sløvhet",
       "Muskelsvakhet"
+    ],
+    "de": [
+      "Erbrechen",
+      "Durchfall",
+      "Lethargie",
+      "Muskelschwäche"
     ]
   },
   "what_to_do": {
@@ -134,7 +145,8 @@
     "sv": "Om hunden har ätit rå eller grön potatis, kontakta veterinären eller en giftrådgivning för djur. Vad du ska göra beror på hundens storlek, hur mycket den har ätit och om den har symtom. Om hunden kräks, har diarré eller verkar slö eller svag ska du kontakta veterinär direkt.",
     "da": "Hvis din hund har spist rå eller grøn kartoffel, skal du kontakte din dyrlæge eller en giftrådgivning for dyr. Hvad du skal gøre derefter, afhænger af hundens størrelse, hvor meget den har spist, og om den har symptomer. Hvis hunden kaster op, har diarré eller virker sløv eller svag, skal du straks tage til dyrlæge.",
     "fi": "Jos koirasi söi raakaa tai vihreää perunaa, ota yhteyttä eläinlääkäriin tai eläinten myrkytysneuvontaan. Jatkotoimet riippuvat koirasi koosta, syödystä määrästä ja siitä, onko oireita. Jos koirasi oksentaa, sillä on ripulia tai se vaikuttaa veltolta tai heikolta, mene heti eläinlääkäriin.",
-    "nb": "Hvis hunden har spist rå eller grønn potet, må du kontakte dyrlegen eller giftinformasjon for dyr. Hva du bør gjøre videre, avhenger av hundens størrelse, hvor mye den har spist og om den har symptomer. Hvis hunden kaster opp, har diaré eller virker sløv eller svak, må du til dyrlegen med en gang."
+    "nb": "Hvis hunden har spist rå eller grønn potet, må du kontakte dyrlegen eller giftinformasjon for dyr. Hva du bør gjøre videre, avhenger av hundens størrelse, hvor mye den har spist og om den har symptomer. Hvis hunden kaster opp, har diaré eller virker sløv eller svak, må du til dyrlegen med en gang.",
+    "de": "Wenn Ihr Hund rohe oder grüne Kartoffeln gefressen hat, wenden Sie sich an Ihren Tierarzt oder einen Giftnotruf für Tiere. Wie es weitergeht, hängt von der Größe Ihres Hundes, der gefressenen Menge und davon ab, ob Symptome auftreten. Wenn Ihr Hund erbricht, Durchfall hat oder lethargisch oder schwach wirkt, gehen Sie sofort zum Tierarzt."
   },
   "serving": null,
   "child": {
@@ -147,7 +159,8 @@
     "sv": "Rå potatis är inte för hundar. Om en hund får tag i en bit, säg det till en vuxen direkt.",
     "da": "Rå kartofler er ikke til hunde. Hvis en hund snupper en, så sig det til en voksen med det samme.",
     "fi": "Raa’at perunat eivät ole koirille. Jos koira nappaa sellaisen, kerro heti aikuiselle.",
-    "nb": "Rå poteter er ikke noe for hunder. Hvis en hund tar en, må du si fra til en voksen med en gang."
+    "nb": "Rå poteter er ikke noe for hunder. Hvis en hund tar en, må du si fra til en voksen med en gang.",
+    "de": "Rohe Kartoffeln sind nichts für Hunde. Wenn sich ein Hund eine schnappt, sag sofort einem Erwachsenen Bescheid."
   },
   "faq": [
     {
@@ -161,7 +174,8 @@
         "sv": "Går kokt potatis bra för hundar?",
         "da": "Er kogte kartofler i orden for hunde?",
         "fi": "Sopiiko kypsennetty peruna koirille?",
-        "nb": "Er kokte poteter greit for hunder?"
+        "nb": "Er kokte poteter greit for hunder?",
+        "de": "Dürfen Hunde gekochte Kartoffeln fressen?"
       },
       "a": {
         "en": "Yes, plain cooked potatoes are fine in moderation, cooked enough to be mashed so the dog doesn't choke. Make sure they are not green.",
@@ -173,7 +187,8 @@
         "sv": "Ja, kokt potatis utan tillsatser går bra med måtta. Koka den så mjuk att den går att mosa, så att hunden inte sätter den i halsen. Kontrollera att den inte är grön.",
         "da": "Ja, kogte kartofler uden tilsætninger er fine i moderate mængder. Kog dem så møre, at de kan moses, så de ikke sætter sig fast i halsen. Sørg for, at de ikke er grønne.",
         "fi": "Kyllä, maustamatonta kypsennettyä perunaa voi antaa kohtuudella. Keitä se niin pehmeäksi, että sen voi muussata, ettei koira tukehdu. Varmista, ettei peruna ole vihreä.",
-        "nb": "Ja, kokte poteter uten tilsetninger er greit i moderate mengder, kokt så møre at de kan moses, slik at hunden ikke setter dem i halsen. Pass på at de ikke er grønne."
+        "nb": "Ja, kokte poteter uten tilsetninger er greit i moderate mengder, kokt så møre at de kan moses, slik at hunden ikke setter dem i halsen. Pass på at de ikke er grønne.",
+        "de": "Ja, ungewürzte gekochte Kartoffeln sind in Maßen in Ordnung – so weich gekocht, dass sie sich zerdrücken lassen, damit der Hund nicht daran erstickt. Achten Sie darauf, dass sie nicht grün sind."
       }
     },
     {
@@ -187,7 +202,8 @@
         "sv": "Får hundar äta potatisskal?",
         "da": "Må hunde spise kartoffelskræl?",
         "fi": "Saako koira syödä perunankuoria?",
-        "nb": "Kan hunder spise potetskall?"
+        "nb": "Kan hunder spise potetskall?",
+        "de": "Dürfen Hunde Kartoffelschalen fressen?"
       },
       "a": {
         "en": "Potato skins are okay, but not if they are green.",
@@ -199,7 +215,8 @@
         "sv": "Potatisskal går bra, men inte om de är gröna.",
         "da": "Skrællen er i orden, men ikke hvis den er grøn.",
         "fi": "Perunankuoret kelpaavat, kunhan ne eivät ole vihreitä.",
-        "nb": "Potetskall er greit, men ikke hvis de er grønne."
+        "nb": "Potetskall er greit, men ikke hvis de er grønne.",
+        "de": "Kartoffelschalen sind in Ordnung, aber nicht, wenn sie grün sind."
       }
     }
   ],
@@ -320,6 +337,11 @@
       "status": "verified",
       "verified_by": "claude-verifier",
       "verified_hash": "4c7992196a2425d745d8a2e9b516cc361a9c67da1a216da194d60659a4897fc2"
+    },
+    "de": {
+      "status": "verified",
+      "verified_by": "claude-verifier",
+      "verified_hash": "36ec1bae1ea404ded7d7ae54c0bb09f4abdf90b15090be7c9a7601027875a0b3"
     }
   }
 }
